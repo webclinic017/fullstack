@@ -1,0 +1,53 @@
+//== alert
+@include b(alert) {
+    position: absolute;
+    top: 100%;
+    z-index: $zindex-alert;
+    margin: $alert-arrow-width 0 0;
+    padding: $alert-padding-vertical $alert-padding-horizontal;
+    border-radius: $border-radius-base;
+    color: $alert-color;
+    background-color: $alert-bg;
+
+    
+    // 箭头在提示框左上角
+    @include m(arrow_tp_lf) {
+        @extend .alert;
+        left: 0;
+        
+        &:before {
+            position: absolute;
+            top: -$alert-arrow-width;
+            border-bottom: $alert-arrow-width solid $alert-bg;
+            border-left: $alert-arrow-width solid transparent;
+            border-right: $alert-arrow-width solid transparent;
+            content: '';
+        }
+    }
+
+    // 箭头在提示框上方中间
+    @include m(arrow_tp) {
+        @extend .alert;
+        left: 50%;
+        text-align: center;
+
+        &:before {
+            position: absolute;
+            top: -$alert-arrow-width;
+            left: 50%;
+            margin-left: -$alert-arrow-width;
+            border-bottom: $alert-arrow-width solid $alert-bg;
+            border-left: $alert-arrow-width solid transparent;
+            border-right: $alert-arrow-width solid transparent;
+            content: '';
+        }
+    }
+
+    // 系统提示
+    @include m(system) {
+        @extend .alert;
+        position: static;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}

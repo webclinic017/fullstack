@@ -1,0 +1,94 @@
+.pagination {
+    display: inline-block;
+
+    > .previous,
+    > .next {
+        display: inline-block;
+        color: $gray;
+        padding: 0 10px;
+        height: 30px;
+        line-height: 30px;
+    }
+    > .pages {
+        display: inline-block;
+        position: relative;
+        // width: 60px;
+        padding: 0 10px;
+        height: 15px;
+        text-align: center;
+        line-height: 15px;
+        color: $gray;
+        border-left: 1px solid $gray-light;
+        border-right: 1px solid $gray-light;
+
+        > .now_page {
+            color: $brand-info;
+        }
+        
+        &.active {
+            > .pages_lst_box {
+                display: block;
+            }
+        }
+
+        > .pages_lst_box {
+            max-height: 150px;
+            overflow: hidden;
+            overflow-y: auto;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            margin-left: -30px;
+            display: none;
+            border: 1px solid $gray-light;
+            border-radius: $border-radius-base;
+            box-shadow: 0px 0px 2px 1px $gray-light;
+            z-index: 1000;
+
+            > .pages_lst {
+                > li {
+                    > a,
+                    > span {
+                        position: relative;
+                        float: left;
+                        width: 60px;
+                        height: 30px;
+                        text-align: center;
+                        line-height: 30px;
+                        text-decoration: none;
+                        font-size: 12px;
+                        color: $pagination-color;
+                        background-color: #fff;
+                    }
+                }
+
+                > li > a,
+                > li > span {
+                    &:hover,
+                    &:focus {
+                        color: $pagination-hover-color;
+                        background-color: $pagination-hover-bg;
+                        border-color: $pagination-hover-border;
+                    }
+                }
+
+                > .active > a,
+                > .active > span {
+                    &,
+                    &:hover,
+                    &:focus {
+                        z-index: 2;
+                        color: $pagination-active-color;
+                        background-color: $pagination-active-bg;
+                        border-color: $pagination-active-border;
+                        cursor: default;
+                    }
+                }
+            }
+        }
+    }
+
+    .disabled {
+        color: $pagination-disabled-color;
+    }
+}

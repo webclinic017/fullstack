@@ -1,0 +1,78 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+.btn {
+    display: inline-block;
+    height: $btn-height-base;
+    margin-bottom: 0; // For input.btn
+    border: 1px solid transparent;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    font-weight: $btn-font-weight;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+    cursor: pointer;
+    @include button-size($btn-padding-vertical, $btn-padding-horizontal, $btn-font-size, $line-height-base, $btn-border-radius);
+    @include user-select(none);
+
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+    }
+
+    &.disabled,
+    &[disabled] {
+        cursor: not-allowed;
+        pointer-events: none; // Future-proof disabling of clicks
+    }
+}
+
+.btn-default {
+    @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+}
+
+.btn-primary {
+    @include button-variant($btn-default-color, $btn-primary-bg, $btn-primary-border);
+}
+
+.btn-info {
+    @include button-variant($btn-default-color, $btn-info-bg, $btn-info-border);
+}
+
+.btn-warning {
+    @include button-variant($btn-default-color, $btn-warning-bg, $btn-warning-border);
+}
+
+.btn-lg {
+    width: $btn-width-large;
+    @include button-size($btn-padding-vertical, 0, $btn-font-size, $line-height-base, $btn-border-radius);
+}
+
+
+// 按钮点击后等待状态
+@include b(loading) {
+    @-webkit-keyframes rotate {
+        0% {
+            @include rotate(0deg);    
+        }
+        100% {
+            @include rotate(360deg);
+        }
+    }
+    @keyframes rotate {
+        0% {
+            @include rotate(0deg);    
+        }
+        100% {
+            @include rotate(360deg);
+        }
+    }
+
+    vertical-align: middle;
+    @include animation(rotate 1.5s infinite linear);
+}

@@ -1,0 +1,214 @@
+//== 定位
+.relative {
+    position: relative !important;
+}
+
+.absolute {
+    position: absolute !important;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.float-right {
+    float: right;
+}
+
+//== display
+.hidden {
+    display: none;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+//== text-align
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left !important;
+}
+
+.text-right {
+    text-align: right;
+}
+
+//== font
+.font-bold {
+    font-weight: 700;
+}
+
+.font-base{
+    color: $gray-base !important;
+}
+
+.font-primary {
+    color: $brand-primary !important;
+}
+
+.font-danger {
+    color: $brand-danger !important;
+}
+
+.font-info {
+    color: $brand-info !important;
+}
+
+.font-success {
+    color: $brand-success !important;
+}
+
+.font-warning {
+    color: $brand-warning !important;
+}
+
+.font-gray {
+    color: $gray !important;
+}
+
+//== margin
+.mg-tp-10 {
+    margin-top: 10px;
+}
+
+.mg-tp-15 {
+    margin-top: 15px;
+}
+
+.mg-tp-20 {
+    margin-top: 20px;
+}
+
+.mg-tp-25 {
+    margin-top: 25px;
+}
+
+.mg-tp-30 {
+    margin-top: 30px;
+}
+
+.mg-tp-48{
+    margin-top: 48px !important;
+}
+
+.mg-tp-50 {
+    margin-top: 50px;
+}
+
+.mg-tp-60 {
+    margin-top: 60px;
+}
+.mg-tp-100 {
+    margin-top: 100px;
+}
+
+.mg-bt-15 {
+    margin-bottom: 15px !important;
+}
+
+.mg-bt-20 {
+    margin-bottom: 20px !important;
+}
+
+.mg-bt-30 {
+    margin-bottom: 30px;
+}
+
+.mg-bt-40 {
+    margin-bottom: 40px;
+}
+
+.mg-bt-50 {
+    margin-bottom: 50px !important;
+}
+
+.mg-bt-100 {
+    margin-bottom: 100px !important;
+}
+
+.mg-lf-15 {
+    margin-left: 15px;
+}
+
+.mg-lf-25 {
+    margin-left: 25px;
+}
+
+//== padding
+.pd-tp-10 {
+    padding-top: 10px;
+}
+
+.pd-tp-30 {
+    padding-top: 30px;
+}
+
+.pd-bt-10 {
+    padding-bottom: 10px;
+}
+
+.pd-bt-25 {
+    padding-bottom: 25px;
+}
+
+.pd-lf-10 {
+    padding-left: 10px;
+}
+.pd-lf-40 {
+    padding-left: 40px !important;
+}
+
+
+
+.close {
+    float: right;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 1px 0 #fff;
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+    &:hover,
+    &:focus {
+        color: #ddd;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+.logo {
+    $logo_size: 80px;
+    
+    display: inline-block;
+    width: $logo_size;
+    height: $logo_size;
+    margin: 0;
+    padding: 0;
+    @include img-retina($image-path-base + "logo.png", $image-path-base + "logo@2x.png", $logo_size, $logo_size);
+}
+
+.clearfix {
+    &:before,
+    &:after {
+        content: ""; // 1
+        display: table; // 2
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.text-inline {
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

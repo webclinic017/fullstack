@@ -1,0 +1,142 @@
+@mixin form-control-focus($color: $input-border-focus) {
+    $color-rgba: rgba(red($color), green($color), blue($color), .6);
+    &:focus {
+        border-color: $color;
+        outline: 0;
+        @include box-shadow(inset 0 0 4px $color-rgba, 0 0 8px $color-rgba);
+    }
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: $input-height-base;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    padding-left: $input-padding-left;
+    border: 1px solid $input-border;
+    border-radius: $input-border-radius;
+    line-height: $line-height-base;
+    font-size: $font-size-base;
+    color: $input-color;
+    background-color: $input-bg;
+    @include transition(border-color ease .15s, box-shadow ease .15s);
+    @include form-control-focus;
+    @include placeholder;
+
+    &:focus {
+        & + .form-control-icon {
+            color: $gray-dark;
+        }
+    }
+}
+
+.form-control-error {
+    border-color: $brand-danger;
+    color: $brand-danger;
+    @include form-control-focus($brand-danger);
+    @include placeholder($brand-danger);
+
+    & + .form-control-icon {
+        color: $brand-danger;
+    }
+}
+
+.form-control-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-control-icon {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    font-size: 16px;
+    color: $gray;
+}
+
+.checkbox {
+    position: relative;
+    display: block;
+
+    label {
+        padding-left: 15px;
+        margin-bottom: 0;
+        font-weight: normal;
+        cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+        // position: absolute;
+        // margin-left: -20px;
+        // margin-top: 4px;
+        display: none;
+    }
+
+    .fa {
+        position: absolute;
+        top: 3px;
+        left: 0;
+        color: $brand-info;
+    }
+}
+
+//== 有白色背景、底边的 form
+@include b(form_pnl) {
+    @extend .container;
+
+    label {
+        line-height: 40px;
+        font-size: 16px;
+    }
+ 
+    @include e(row) {
+        @extend .row;
+        padding: 5px 0;
+        border-bottom: 1px solid $gray-lighter;
+        background-color: #fff;
+    }
+    
+    @include e(control_wrapper) {
+        position: relative;
+    }
+
+    @include e(control) {
+        @extend .form-control;
+        @include form-control-focus(#fff);
+        padding: $padding-base-vertical $padding-base-horizontal;
+        border: 0;
+
+        @include m(error) {
+            color: $brand-danger;
+        }
+    }
+}
+
+//== 高手简介等的 textarea
+@include b(editbox) {
+    position: relative;
+
+    $editbox-height: 60px;
+    
+    @include e(textarea) {
+        @extend .form-control;
+        @include form-control-focus(#fff);
+        height: $editbox-height;
+        padding: $padding-base-vertical $padding-base-horizontal;
+        border: 0;
+        resize: none;
+
+        @include m(error) {
+            color: $brand-danger;
+        }
+    }
+
+    @include e(words_limit) {
+        position: absolute;
+        top: $editbox-height + 2px;
+        right: 0px;
+        color: $gray;
+    }
+}

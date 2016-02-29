@@ -1,0 +1,47 @@
+@include b(dropdown) {
+    position: relative;
+    
+    &.open {
+        .dropdown-menu {
+            display: block;
+        }
+    }
+
+    @include m(toggle) {
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+@include b(dropdown-menu) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: $zindex-dropdown;
+    display: none;
+    font-size: $font-size-base;
+    text-align: left;
+    background-color: #fff;
+    border-radius: $border-radius-base;
+    overflow: hidden;
+    
+    // &.pull-right {
+    //     right: 0;
+    //     left: auto;
+    // }
+
+    > li > a {
+        display: block;
+        padding: 8px 10px;
+        clear: both;
+        line-height: $line-height-base;
+        white-space: nowrap;
+    }
+
+    > li:last-child {
+        > a {
+            border-bottom: none;
+        }
+    }
+}
