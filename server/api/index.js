@@ -3,8 +3,8 @@
 var express = require('express');
 var router = express.Router();
 
-var account = require('./account');
-var master = require('./master');
+var accountApi = require('./account');
+var masterApi = require('./master');
 
 
 router.get('/get_personal_info', function (req, res) {

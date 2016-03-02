@@ -8,11 +8,7 @@
 
     function master($http) {
         var service = {
-            getMasterInfo: getMasterInfo
         };
         return service;
-
-        function getMasterInfo() {
-        }
     }
 })();

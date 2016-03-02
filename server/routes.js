@@ -6,6 +6,7 @@
 
 var errors = require('./components/errors');
 var path = require('path');
+var masterApi = require('./api/master');
 
 module.exports = function (app) {
     app.use('/api', require('./api'));
@@ -26,19 +27,22 @@ module.exports = function (app) {
     });
 
     app.route('/master/list').get(function (req, res) {
+        var masters = [];
+
+        
         res.render('master_list.html', {
             pageInfo: {
             },
             masters: [
                 {
-                    username: '高手一号',
-                    usercode: '0001'
+                    username: '高手 1 号',
+                    usercode: '222'
                 }, {
-                    username: '高手二号',
-                    usercode: '0002'
+                    username: '高手 2 号',
+                    usercode: '222'
                 }, {
-                    username: '高手三xxx号',
-                    usercode: '0003'
+                    username: '高手 3 号',
+                    usercode: '222'
                 }
             ]
         });
