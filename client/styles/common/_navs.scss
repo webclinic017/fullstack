@@ -1,6 +1,4 @@
-//
-// Navs
-// --------------------------------------------------
+//== Navs
 .nav {
     @extend .clearfix;
     margin-bottom: 0;
@@ -27,9 +25,8 @@
     }
 }
 
-//
-// Navbars
-// --------------------------------------------------
+
+//== Navbars
 .navbar {
     @extend .clearfix;
     position: relative;
@@ -61,10 +58,10 @@
     @extend .clearfix;
     float: left;
 
-    .logo {
-        margin: 5px 10px 0 0;
-        vertical-align: middle;
-    }
+    // .logo {
+    //     margin: 5px 10px 0 0;
+    //     vertical-align: middle;
+    // }
 }
 
 .navbar-nav {
@@ -86,139 +83,5 @@
     
     > .active > a {
         color: $brand-primary;
-    }
-    
-    .dropdown-menu {
-        $menu-width: 100px;
-
-        //top: 48px;
-        left: 50%;
-        width: $menu-width;
-        margin-left: -$menu-width / 2;
-        text-align: center;
-        overflow: visible;
-
-        $arrow-width: 8px;
-        &:before {
-            position: absolute;
-            top: -$arrow-width;
-            left: 50%;
-            margin-left: -$arrow-width;
-            border-bottom: $arrow-width solid $brand-primary;
-            border-left: $arrow-width solid transparent;
-            border-right: $arrow-width solid transparent;
-            content: '';
-        }
-
-        > li > a {
-            color: $gray-base;
-            background-color: $brand-primary;
-        }
-        
-        >li:first-child > a {
-            border-top-left-radius: $border-radius-base;
-            border-top-right-radius: $border-radius-base;
-        }
-
-        > li:last-child > a {
-            border-bottom-left-radius: $border-radius-base;
-            border-bottom-right-radius: $border-radius-base;
-        }
-    }
-}
-
-// nav_more_bar
-@include b(nav_more_bar) {
-    font-size: 18px !important;
-}
-
-@include b(navbar_personal) {
-    font-size: 18px !important;   
-}
-
-// nav-tabs
-// --------------------------------------------------
-@include b(nav-tabs-wrapper) {
-    background-color: #fff;
-}
-
-@include b(nav-tabs) {
-    @extend .container;
-    padding-left: 0;
-    padding-right: 0;
-    border-bottom: 1px solid $gray-light;
-
-    > li {
-        position: relative;
-        float: left;
-        width: 50%;
-        padding: 0 20px;
-
-        > a {
-            display: inline-block;
-            width: 100%;
-            margin-bottom: -1px;
-            padding: 15px 0;
-            border-bottom: 2px solid transparent;
-            text-align: center;
-            color: $gray;
-        }    
-    }
-
-    > li.active {
-        > a {
-            border-bottom-color: $brand-info;
-            color: $brand-info;
-        }
-    }
-
-    @include e(divider) {
-        position: absolute;
-        top: 15px;
-        left: 0;
-        width: 1px;
-        height: 20px;
-        background-color: $gray-light;
-    }
-}
-
-@include b(nav-tabs-fixed) {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: $zindex-navbar - 10;
-}
-
-
-// 内容导航
-// --------------------------------------------------
-@include b(nav-content) {
-    background-color: #fff;
-    
-    > li {
-        @extend .container;
-
-        > a {
-            display: block;
-            padding-top: 15px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid $gray-lighter;
-            line-height: 20px;
-        }
-    }
-
-    > li:last-child > a {
-        border-bottom-width: 0;
-    }
-
-    @include e(title) {
-        font-size: 16px;
-        color: $gray-base;
-    }
-
-    @include e(enter) {
-        float: right;
-        color: $gray;
     }
 }
