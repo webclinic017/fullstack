@@ -1,11 +1,39 @@
 <div>
-    <h1>master list</h1>
+    <h1 class="title">master list</h1>
+    <ul>
+        <% if (pageInfo.rank_type == 'all') { %>
+            <li style="display: inline-block; border: 1px solid red;">
+                <a href="?type=all">综合排名</a>
+            </li>
+        <% }else { %>
+            <li style="display: inline-block">
+                <a href="?type=all">综合排名</a>
+            </li>
+        <% } %>
+
+        <% if (pageInfo.rank_type == 'copiers') { %>
+            <li style="display: inline-block; border: 1px solid red;">
+                <a href="?type=copiers">复制人数</a>
+            </li>
+        <% }else { %>
+            <li style="display: inline-block">
+                <a href="?type=copiers">复制人数</a>
+            </li>
+        <% } %>
+    </ul>
     <ul>
         <% masters.forEach(function (master) { %>
         <li>
+            <img src="<%= master.link %>">
             <a href="/space/detail/<%= master.usercode%>/moment">
                 <%= master.username %>
             </a>
+            <span>
+                #<%= master.number %>
+            </span>
+            <span>
+                <%= master.address %>
+            </span>
 
             <span tw-line-chart data-type="masterList" data-usercode="<%= master.usercode %>"></span>
             <span>复制人数：{{master.copier_sum || '0'}}</span>

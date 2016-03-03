@@ -6,6 +6,7 @@
 
 var errors = require('./components/errors');
 var path = require('path');
+var url = require('url');
 var masterApi = require('./api/master');
 
 module.exports = function (app) {
@@ -28,15 +29,25 @@ module.exports = function (app) {
 
     app.route('/master/list').get(function (req, res) {
         var masters = [];
+        var rank_type = url.parse(req.url, true).query.type;
+        // console.info(rank_type);
 
-        
         res.render('master_list.html', {
             pageInfo: {
+                rank_type: rank_type
             },
             masters: [
                 {
                     username: '高手 1 号',
-                    usercode: '222'
+                    usercode: '222',
+                    link: '/avatar/525091_150.jpg',
+                    number: 1,
+                    address: '中国',
+                    copiers_sum: 21,
+                    copy_money_min: '10.00',
+                    drawdown: 52,
+                    profit_rate: '122',
+                    profit_copiers: '8888.88'
                 }, {
                     username: '高手 2 号',
                     usercode: '222'
