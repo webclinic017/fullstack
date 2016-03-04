@@ -26,7 +26,17 @@ module.exports = function (app) {
         });
     });
 
-    app.route('/master/list').get(function (req, res) {
+    app.route('/').get(function (req, res) {
+        
+
+        res.render('home.html', {
+            pageInfo: {
+            }
+        });
+    });
+
+
+    app.route('/ranklist').get(function (req, res) {
         var masters = [];
 
         masters = [
@@ -42,31 +52,18 @@ module.exports = function (app) {
                 }
         ]
 
-        res.render('master_list.html', {
+        res.render('ranklist.html', {
             pageInfo: {
             },
             masters: masters
         });
     });
 
-    app.route('/').get(function (req, res) {
+    app.route('/web/copy').get(function (req, res) {
         
-
-        res.render('home.html', {
+        res.render('web_copy.html', {
             pageInfo: {
-            },
-            masters: [
-                {
-                    username: '高手 1 号',
-                    usercode: '222'
-                }, {
-                    username: '高手 2 号',
-                    usercode: '222'
-                }, {
-                    username: '高手 3 号',
-                    usercode: '222'
-                }
-            ]
+            }
         });
     });
 };

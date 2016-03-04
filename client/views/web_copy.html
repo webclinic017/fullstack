@@ -2,24 +2,26 @@
 <html>
     <head>
         <% include common/metas.html %>
-        <title>老虎金融｜排行榜</title>
-        <meta name="description" content="老虎金融高手排行榜，您可以根据自身需要按照复制人数、复制资金、最大回撤和总收益进行排序，让你轻松筛选高手。">
+        <title>老虎金融｜复制规则</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
 
-        <!-- build:css(.tmp) /styles/master_list.css -->
-        <link rel="stylesheet" href="/styles/master_list.css">
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
         <!-- endbuild -->
     </head>
     <body ng-app="fullstackApp">
-        <div class="header">
-            <% include common/navbar.html %>
+        <div ng-controller="GlobalController">
+            <div class="header">
+                <% include navbar/main.html %>
+            </div>
+            <div class="body">
+                <% include web/copy.html %>
+            </div>
+            <div class="footer">
+                <% include common/footer.html %>
+            </div>
         </div>
-        <div class="body">
-            <% include master/list.html %>
-        </div>
-        <div class="footer">
-            <% include common/footer.html %>
-        </div>
-        
         <!-- build:js(client) /scripts/vendor.js -->
         <!-- bower:js -->
         <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -33,11 +35,13 @@
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:js(client) /scripts/master_list.js -->
+        <!-- build:js(client) /scripts/web.js -->
         <script src="/scripts/app.js"></script>
 
         <script src="/scripts/common/config.service.js"></script>
-        <script src="/scripts/common/master.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+
+        <script src="/scripts/common/global.controller.js"></script>
 
         <script src="/scripts/common/line_chart.directive.js"></script>
         <!-- endbuild -->
