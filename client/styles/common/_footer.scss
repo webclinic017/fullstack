@@ -1,0 +1,30 @@
+.footer-wrap {
+    background-color: $gray-base;
+    color: $gray-light;
+
+    div > p > span {
+        font-size: $font-size-h4;
+        padding-bottom: 5px;
+        border-bottom: 1px solid $brand-primary;
+    }
+
+
+
+    .footer_con {
+        padding-top: 30px;
+        border-top: 1px solid $gray-darker;
+        color: $gray-darker;
+    }
+}
+
+
+
+
+.footer-bottom {
+    background-color: #111;
+    color: $gray-dark;
+
+    span {
+        color: $brand-primary;
+    }
+}
