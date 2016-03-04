@@ -26,14 +26,20 @@ module.exports = function (app) {
         });
     });
 
-    app.route('/master/list').get(function (req, res) {
+    app.route('/').get(function (req, res) {
+        
+
+        res.render('home.html', {
+            pageInfo: {
+            }
+        });
+    });
+
+
+    app.route('/ranklist').get(function (req, res) {
         var masters = [];
 
-        
-        res.render('master_list.html', {
-            pageInfo: {
-            },
-            masters: [
+        masters = [
                 {
                     username: '高手 1 号',
                     usercode: '222'
@@ -44,7 +50,20 @@ module.exports = function (app) {
                     username: '高手 3 号',
                     usercode: '222'
                 }
-            ]
+        ]
+
+        res.render('ranklist.html', {
+            pageInfo: {
+            },
+            masters: masters
+        });
+    });
+
+    app.route('/web/copy').get(function (req, res) {
+        
+        res.render('web_copy.html', {
+            pageInfo: {
+            }
         });
     });
 };

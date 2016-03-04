@@ -1,12 +1,12 @@
 //== Colors
-$brand-primary:             #dbb553 !default;
-$brand-primary-dark:        #c4a24b !default;
+$brand-primary:             #fedd0a !default;
+$brand-primary-dark:        darken($brand-primary, 10%);
 
-$brand-info:                #5d9cec !default;
+$brand-info:                #1fb7f6 !default;
 $brand-info-dark:           #4a89dc !default;
-$brand-danger:              #ed5565 !default;
+$brand-danger:              #ff4949 !default;
 $brand-danger-dark:         #da4453 !default;
-$brand-success:             #48cfad !default;
+$brand-success:             #45aa00 !default;
 $brand-success-dark:        #37bc9b !default;
 $brand-warning:             #ff8400 !default;
 
