@@ -29,8 +29,30 @@ module.exports = function (app) {
     app.route('/master/list').get(function (req, res) {
         var masters = [];
 
-        
+        masters = [
+                {
+                    username: '高手 1 号',
+                    usercode: '222'
+                }, {
+                    username: '高手 2 号',
+                    usercode: '222'
+                }, {
+                    username: '高手 3 号',
+                    usercode: '222'
+                }
+        ]
+
         res.render('master_list.html', {
+            pageInfo: {
+            },
+            masters: masters
+        });
+    });
+
+    app.route('/').get(function (req, res) {
+        
+
+        res.render('home.html', {
             pageInfo: {
             },
             masters: [
