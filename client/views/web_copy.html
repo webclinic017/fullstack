@@ -2,16 +2,12 @@
 <html>
     <head>
         <% include common/metas.html %>
-        <title>老虎金融｜个人中心</title>
+        <title>老虎金融｜复制规则</title>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
 
-        <!-- build:css(client) /styles/vendor.css -->
-        <!-- bower:css -->
-        <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css">
-        <!-- endbower -->
-        <!-- endbuild -->
-        
-        <!-- build:css(.tmp) /styles/space.css -->
-        <link rel="stylesheet" href="/styles/space.css">
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
         <!-- endbuild -->
     </head>
     <body ng-app="fullstackApp">
@@ -20,7 +16,7 @@
                 <% include navbar/main.html %>
             </div>
             <div class="body">
-                <div ui-view=""></div>
+                <% include web/copy.html %>
             </div>
             <div class="footer">
                 <% include common/footer.html %>
@@ -39,18 +35,15 @@
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:js(client) /scripts/space.js -->
+        <!-- build:js(client) /scripts/web.js -->
         <script src="/scripts/app.js"></script>
-        <script src="/scripts/routes.js"></script>
-        
-        <script src="/scripts/common/config.service.js"></script>        
-        <script src="/scripts/common/account.service.js"></script>
-        
-        <script src="/scripts/common/global.controller.js"></script>
-        
-        <script src="/scripts/space/info.controller.js"></script>
 
-        <script src="/scripts/invest/current.controller.js"></script>
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+
+        <script src="/scripts/common/global.controller.js"></script>
+
+        <script src="/scripts/common/line_chart.directive.js"></script>
         <!-- endbuild -->
     </body>
 </html>

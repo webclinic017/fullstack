@@ -27,35 +27,27 @@ module.exports = function (app) {
         });
     });
 
-    app.route('/master/list').get(function (req, res) {
-        var masters = [];
-        var rank_type = url.parse(req.url, true).query.type;
-        // console.info(rank_type);
+    app.route('/').get(function (req, res) {
+        
 
-        res.render('master_list.html', {
+        res.render('home.html', {
             pageInfo: {
-                rank_type: rank_type
-            },
-            masters: [
-                {
-                    username: '高手 1 号',
-                    usercode: '222',
-                    link: '/avatar/525091_150.jpg',
-                    number: 1,
-                    address: '中国',
-                    copiers_sum: 21,
-                    copy_money_min: '10.00',
-                    drawdown: 52,
-                    profit_rate: '122',
-                    profit_copiers: '8888.88'
-                }, {
-                    username: '高手 2 号',
-                    usercode: '222'
-                }, {
-                    username: '高手 3 号',
-                    usercode: '222'
-                }
-            ]
+            }
+        });
+    });
+
+
+    app.route('/ranklist').get(function (req, res) {
+
+        res.render('ranklist.html', {
+        });
+    });
+
+    app.route('/web/copy').get(function (req, res) {
+        
+        res.render('web_copy.html', {
+            pageInfo: {
+            }
         });
     });
 };
