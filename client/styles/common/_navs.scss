@@ -94,7 +94,7 @@
 }
 @include b(nav-tabs) {
     @extend .clearfix;
-    border: 1px solid #ebebeb;
+    border: 1px solid $gray;
     display: inline-block;
     vertical-align: middle;
 
@@ -126,20 +126,20 @@
             margin-top: -1px;
             padding: 15px 30px;
             text-align: center;
-            color: $gray; 
+            color: $gray-dark; 
         }    
     }
 
     > li.active {
         > a {
-            border-color: #ebebeb;
+            border-color: $gray;
             border-top-color: $brand-primary;
             color: $gray-base;
-            background-color: #fafafa;
+            background-color: $gray-lightest;
         }
 
         &:after {
-            background-color: #fafafa;
+            background-color: $gray-lightest;
         }
     }
 
@@ -149,13 +149,6 @@
         left: 0;
         width: 1px;
         height: 20px;
-        background-color: #ebebeb;
+        background-color: $gray;
     }
 }
-
-
-
-
-
-
-
