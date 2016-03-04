@@ -1,7 +1,21 @@
-<h1 class="title">排行榜页面</h1>    
-<div>
-    <a ui-sref="ranklist.subpage({subpage: 'all'})">全部高手</a>
-    <a ui-sref="ranklist.subpage({subpage: 'new'})">新晋高手</a>
-    <a ui-sref="ranklist.subpage({subpage: 'copiers'})">复制者排行</a>
+<div class="container">
+    <h1 class="title">排行榜页面</h1>
+
+    <div class="nav-tabs-wrapper">
+        <ul class="nav-tabs">
+            <li ui-sref-active="active">
+                <a ui-sref="ranklist.subpage({subpage: 'all'})">全部高手</a>
+            </li>
+            <li ui-sref-active="active">
+                <span class="nav-tabs__divider"></span>
+                <a ui-sref="ranklist.subpage({subpage: 'new'})">新晋高手</a>
+            </li>
+            <li ui-sref-active="active">
+                <span class="nav-tabs__divider"></span>
+                <a ui-sref="ranklist.subpage({subpage: 'copiers'})">复制者排行</a>
+            </li>
+        </ul>
+    </div>
 </div>
+
 <div ui-view="list"></div>

@@ -5,12 +5,14 @@
     angular.module('fullstackApp')
         .controller('RanklistAllController', RanklistAllController);
 
-    RanklistAllController.$inject = ['$scope', 'master'];
+    RanklistAllController.$inject = ['$scope', '$state', 'ranklist'];
 
-    function RanklistAllController($scope, master) {
+    function RanklistAllController($scope, $state, ranklist) {
         $scope.rankList = [];
 
-        master.getAllMastersList().then(function (data) {
+        var param = $state.params.subpage;
+
+        ranklist.getMastersList(param).then(function (data) {
             console.info(data);
             $scope.rankList = data;
         });

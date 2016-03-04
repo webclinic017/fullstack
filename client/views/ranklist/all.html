@@ -1,9 +1,61 @@
-<h1>全部高手</h1>
-
-<div class="container">
-    <ul class="master_lst__ranking">
-        <li ng-repeat="rank in rankList">
-            {{ rank.username }}
-        </li>
-    </ul>
+<div class="master_lst__bg master_lst__content">
+    <div class="container">
+        <div class="master_lst__nav">
+            <div class="row">
+                <div class="col-1-lg">
+                    <a class="master_lst__nav_item" href="">综合排名</a>
+                </div>
+                <div class="col-1-sm">
+                    <a class="master_lst__nav_item" href="">复制人数</a>
+                </div>
+                <div class="col-1">
+                    <a class="master_lst__nav_item" href="">最低复制金额</a>
+                </div>
+                <div class="col-1">
+                    <a class="master_lst__nav_item" href="">走势图</a>
+                </div>
+                <div class="col-1">
+                    <a class="master_lst__nav_item" href="">最大回撤</a>
+                </div>
+                <div class="col-1-sm">
+                    <a class="master_lst__nav_item" href="">收益率</a>
+                </div>
+                <div class="col-1">
+                    <a class="master_lst__nav_item" href="">复制者盈利</a>
+                </div>
+                <div class="col-1-lg">
+                </div>
+            </div>
+        </div>
+        <ul class="master_lst__ranking">
+            <li ng-repeat="rank in rankList" class="master_lst__ranking_item">
+                <div class="row">
+                    <div class="col-1-lg">
+                        {{ rank.username }}
+                    </div>
+                    <div class="col-1-sm">
+                        {{ rank.copiers_sum }}
+                    </div>
+                    <div class="col-1">
+                        ${{ rank.copy_money_min }}
+                    </div>
+                    <div class="col-1">
+                        
+                    </div>
+                    <div class="col-1">
+                        {{ rank.drawdown }}%
+                    </div>
+                    <div class="col-1-sm">
+                        {{ rank.profit_rate }}%
+                    </div>
+                    <div class="col-1">
+                        ${{ rank.profit_copiers }}
+                    </div>
+                    <div class="col-1-lg">
+                        <a href="">复制</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>
