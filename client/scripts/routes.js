@@ -11,10 +11,10 @@
                     views: {
                         '@': {
                             templateUrl: '/views/common/layout-2.html',
-                            controller: 'SpaceInfoController'
+                            controller: ''
                         },
                         'sidebar@space': {
-                            templateUrl: '/views/navbar/navbar.html',
+                            templateUrl: '/views/navbar/side.html',
                             controller: ''
                         }
                     }
@@ -46,13 +46,50 @@
                         }
                     }
                 })
-
                 .state('space.invite', {
                     url: '/space/invite',
                     views: {
                         'content@space': {
                             templateUrl: '/views/invite/index.html',
                             controller: ''
+                        }
+                    }
+                })
+
+                .state('ranklist', {
+                    views: {
+                        '@': {
+                            templateUrl: '/views/ranklist/index.html',
+                            controller: ''
+                        }
+                    }
+                })
+                .state('ranklist.subpage', {
+                    url: '/ranklist/:subpage',
+                    views: {
+                        'list@ranklist': {
+                            templateUrl: function ($stateParams) {
+                                var subpage;
+                                $stateParams.subpage = $stateParams.subpage || 'all';
+                                subpage = $stateParams.subpage;
+
+                                if (subpage === 'all' || subpage === 'new') {
+                                    return '/views/ranklist/masters.html';
+                                } else {
+                                    return '/views/ranklist/copiers.html';
+                                }
+                            },
+                            controllerProvider: function ($stateParams) {
+                                var subpage;
+                                $stateParams.subpage = $stateParams.subpage || 'all';
+                                subpage = $stateParams.subpage;
+
+                                if (subpage === 'all' || subpage === 'new') {
+                                    return 'RanklistMastersController';
+                                } else {
+                                    return 'RanklistCopiersController';
+                                }
+                            }
                         }
                     }
                 });
@@ -64,9 +101,8 @@
                     tmpStr = '',
                     newName = '';
 
-                for (i = 0;i < length;i++) {
-                    tmpStr = strArray[i].charAt(0).toUpperCase() +
-                            strArray[i].substring(1);
+                for (i = 0; i < length; i++) {
+                    tmpStr = strArray[i].charAt(0).toUpperCase() + strArray[i].substring(1);
                     newName += tmpStr;
                 }
 
