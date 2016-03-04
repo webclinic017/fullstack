@@ -185,7 +185,7 @@
 }
 
 .logo {
-    $logo_size: 80px;
+    $logo_size: 55px;
     
     display: inline-block;
     width: $logo_size;
@@ -193,6 +193,15 @@
     margin: 0;
     padding: 0;
     @include img-retina($image-path-base + "logo.png", $image-path-base + "logo@2x.png", $logo_size, $logo_size);
+}
+
+.logocctv {
+    display: inline-block;
+    width: 93px;
+    height: 58px;
+    background-size: 100%;
+    @include img-normal($image-path-base + "logocctv.png");
+
 }
 
 .clearfix {
