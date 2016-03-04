@@ -8,13 +8,13 @@ var masterApi = require('./master');
 
 
 router.get('/get_personal_info', function (req, res) {
-    // // 获取个人信息
-    // var personal = {
-    //     username: 'wxl',
-    //     usercode: '23703',
-    //     verified: true
-    // };
-    // res.json(personal);
+    // 获取个人信息
+    var personal = {
+        username: 'wxl',
+        usercode: '23703',
+        verified: true
+    };
+    res.json(personal);
 });
 
 
