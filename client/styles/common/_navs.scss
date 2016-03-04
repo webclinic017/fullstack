@@ -1,0 +1,211 @@
+//
+// Navs
+// --------------------------------------------------
+.nav {
+    @extend .clearfix;
+    margin-bottom: 0;
+    padding-left: 0; // Override default ul/ol
+    list-style: none;
+
+    > li {
+        position: relative;
+        display: block;
+
+        > a {
+            position: relative;
+            display: block;
+            
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+
+    > li > a > img {
+        max-width: none;
+    }
+}
+
+.navbar {
+    @extend .clearfix;
+    position: relative;
+    min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+    border-radius: 0;
+    background-color: #141414;
+}
+
+// Fix the top/bottom navbars when screen real estate supports it
+.navbar-fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $zindex-navbar;
+}
+
+.navbar-left {
+    float: left !important;
+}
+
+.navbar-right {
+    float: right !important;
+    > li > a:hover {
+        border-bottom-color: transparent;
+    }
+}
+
+// Navbar heading
+.navbar-header {
+    @extend .clearfix;
+    float: left;
+
+    .logo {
+        margin: 12px 15px 0 0;
+        vertical-align: middle;
+    }
+    
+    .cctv_con {
+        display: inline-block;
+        vertical-align: bottom;
+        padding-left: 15px;
+        border-left: 1px solid $gray-darker;
+
+    }
+
+    .logocctv {
+        vertical-align: bottom;
+    }
+}
+
+// Brand/project name
+.navbar-brand {
+    float: left;
+    padding: $navbar-padding-top $navbar-padding-horizontal;
+    font-size: 18px;
+    line-height: $line-height-computed;
+    height: $navbar-height;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    > img {
+        display: block;
+    }
+}
+
+
+.navbar-nav {
+    float: left;
+    margin: 0;
+  
+    &.navbar-right:last-child {
+        margin-right: -$navbar-padding-horizontal;
+    }
+
+    > li {
+        float: left;
+
+        > a {
+            margin: 0 $navbar-margin-horizontal;
+            padding: 33px 0 29px;
+            border-bottom: 2px solid transparent;
+            line-height: $line-height-computed;
+            text-decoration: none;
+            font-size: $font-size-large;
+            color: $gray-lighter;
+
+            &:hover,
+            &:active {
+                color: $brand-primary;
+                border-bottom-color: $brand-primary-dark;
+            }
+        }
+    }
+
+    .dropdown {
+        > a {
+            border-bottom: none;
+        }
+    }
+    
+    > .active > a {
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            color: $brand-primary;
+            border-bottom-color: $brand-primary;
+        }
+    }
+
+    .dropdown-menu {
+        top: 84px;
+    }
+}
+
+// 未登录时候 显示 注册登录 块
+.navbar-login {
+    float: left;
+    margin: 0px;
+
+    &.navbar-right:last-child {
+        margin-right: -$navbar-padding-horizontal;
+    }
+
+    > li {
+        float: left;
+
+        .login {
+            margin: 0 $navbar-margin-horizontal;
+            padding: 33px 0 $navbar-padding-bottom;
+            line-height: $line-height-computed;
+            text-decoration: none;
+            font-size: $font-size-large;
+            color: $brand-primary;
+        }
+
+        .signup {
+            margin: 32px 0;
+            width: 120px;
+            line-height: $line-height-computed;
+            text-decoration: none;
+            text-align: center;
+            font-size: $font-size-h3;
+            color: $gray-base;
+        }
+    }
+    > li:last-child {
+        margin-left: 10px;
+        height: 84px;
+        background-color: $brand-primary;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
