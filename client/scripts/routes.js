@@ -69,8 +69,14 @@
                     views: {
                         'list@ranklist': {
                             templateUrl: function ($stateParams) {
+                                var subpage;
                                 $stateParams.subpage = $stateParams.subpage || 'all';
-                                return '/views/ranklist/' + $stateParams.subpage + '.html';
+                                subpage = $stateParams.subpage;
+                                if (subpage === 'all' || subpage === 'new') {
+                                    return '/views/ranklist/masters.html';
+                                } else {
+                                    return '/views/ranklist/copiers.html';
+                                }
                             },
                             controllerProvider: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'all';
