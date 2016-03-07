@@ -1,0 +1,30 @@
+@include b(layout-1) {
+    @extend .container;
+    margin-top: $navbar-height;
+}
+
+@include b(layout-2) {
+    @extend .container;
+    margin-top: $navbar-height;
+    padding: 0;
+
+    @include e(side) {
+        @extend .col-xs-3;
+    }
+
+    @include e(content) {
+        @extend .col-xs-9;
+    }
+}
+
+@include b(layout-3) {
+
+    @include e(side) {
+    }
+
+    @include e(content) {
+    }
+
+    @include e(info) {
+    }
+}
