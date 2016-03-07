@@ -10,9 +10,8 @@
     function RanklistAllController($scope, $state, ranklist) {
         $scope.rankList = [];
 
-        var param = $state.params.subpage;
-        // console.info(param);
-        ranklist.getMastersList(param).then(function (data) {
+        // var param = $state.params.subpage;
+        ranklist.getMastersList().then(function (data) {
             // console.info(data);
             $scope.rankList = data;
         });

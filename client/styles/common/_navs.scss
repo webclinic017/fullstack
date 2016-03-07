@@ -251,28 +251,48 @@
     }
 }
 
+//== 侧边导航栏
+@include b(side_navbar) {
+    background-color: $gray-base;
+    border-radius: $border-radius-base;
+    overflow: hidden;
 
+    @include e(title) {
+        margin: 0;
+        padding: 15px 25px 10px;
+        background-color: $gray-darkest;
+        font-weight: 400;
+        color: $gray;
+    }
 
+    @include e(menu) {
+        & > li {
+            padding-left: 30px;
+        }
 
+        & > li.active {
+            background-color: $brand-primary;
 
+            > a {
+                color: $gray-base;
+                border-bottom-color: transparent;
+                cursor: default;
+            }
 
+            > a:hover {
+                color: $gray-base;
+            }
+        }
 
+        & > li > a {
+            display: block;
+            padding: 10px 0;
+            color: $gray-dark;
+            border-bottom: 1px solid $gray-darkest;
+        }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        & > li > a:hover {
+            color: $brand-primary;
+        }
+    }
+}

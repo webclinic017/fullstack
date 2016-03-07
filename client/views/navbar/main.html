@@ -1,10 +1,4 @@
-<!-- <a href="/">首页</a>
-<a href="/ranklist/#/ranklist/all">排行榜</a>
-<a href="/web/copy">复制交易</a>
-<a href="">交易品种</a>
-<a href="/space">个人中心</a> -->
-
-<div class="navbar navbar-fixed-top">
+<div class="navbar navbar-fixed-top" tw-navbar>
     <div class="container">
         <div class="navbar-header">
             <a class="logo" href="/"></a>
@@ -34,23 +28,29 @@
 
         <ul class="nav navbar-nav navbar-right">
             <li>
-                <a href="/">首页</a>
+                <a data-navbar-trigger data-navbar-level="1" href="/">
+                    首页
+                </a>
             </li>
             <li>
-                <a href="/ranklist/#/ranklist/all">排行榜</a>
+                <a data-navbar-trigger data-navbar-level="1" href="/ranklist/#/ranklist/masters">
+                    排行榜
+                </a>
             </li>
             <li class="dropdown" tw-dropdown>
-                <a href="/web/copy">复制交易</a>
+                <a data-navbar-trigger data-navbar-level="1" href="/web/copy/rules">
+                    复制交易
+                </a>
 
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="">复制规则</a>
+                        <a href="/web/copy/rules">复制规则</a>
                     </li>
                     <li>
-                        <a href="">如何选择高手</a>
+                        <a href="/web/copy/select">如何选择高手</a>
                     </li>
                     <li>
-                        <a href="">成为高手</a>
+                        <a href="/web/copy/become">成为高手</a>
                     </li>
                 </ul>
             </li>
@@ -112,7 +112,5 @@
                 </ul>
             </li>
         </ul>
-
-        
     </div>
 </div>

@@ -27,13 +27,18 @@
 $ranklist-item-height: 120px;
 @include b(ranklist) {
     margin-top: 84px;
-
+    
     @include e(bg) {
         background-color: $gray-lightest;
     }
 
     @include e(content) {
         border-top: 1px solid $gray;
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
     }
 
     @include e(nav) {

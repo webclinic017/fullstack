@@ -26,10 +26,32 @@
             <li ng-repeat="rank in rankList" class="ranklist__lst_item">
                 <div class="row">
                     <div class="col-1-lg">
-                        {{ rank.username }}
+                        <div class="ranklist_info">
+                            <div class="ranklist_info__wrapper">
+                                <a href="" class="ranklist_info__avatar" target="_blank">
+                                    <img src="{{ rank['avatar_path'] }}" alt="avatar">
+                                </a>
+                            </div>
+                            <div class="ranklist_info__wrapper">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <a class="ranklist_info__name" href="" target="_blank">
+                                            {{ rank.username }}
+                                        </a>
+                                        <span class="ranklist_info__number">
+                                            {{ rank.number }}#
+                                        </span>
+                                        <span class="ranklist_info__address">
+                                            <i class="fa fa-map-marker"></i>
+                                            {{ rank.address }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-1-sm">
-                        {{ rank.copiers_sum }}
+                        <i class="fa fa-users"></i>{{ rank.copiers_sum }}
                     </div>
                     <div class="col-1">
                         
@@ -41,7 +63,7 @@
                         {{ rank.profit_rate }}%
                     </div>
                     <div class="col-1">
-                        ${{ rank.profit_copiers }}
+                        <i class="fa fa-dollar"></i>{{ rank.profit_copiers }}
                     </div>
                 </div>
             </li>
