@@ -12,6 +12,7 @@ $brand-success-dark:        #37bc9b !default;
 $brand-warning:             #ff8400 !default;
 
 $gray-base:                 #222 !default;
+$gray-darkest:              #333 !default;
 $gray-darker:               #666 !default;
 $gray-dark:                 #999 !default;
 $gray:                      #ebebeb !default;
@@ -124,7 +125,7 @@ $color-xauusd:              #CB8787;
 
 //== Grid system
 $grid-columns:                      12 !default;
-$grid-gutter-width:                 20px !default;
+$grid-gutter-width:                 30px !default;
 
 //== Container sizes
 $screen-lg:                         1450px !default;

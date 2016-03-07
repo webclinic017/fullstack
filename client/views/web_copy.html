@@ -2,9 +2,9 @@
 <html>
     <head>
         <% include common/metas.html %>
-        <title>老虎金融｜复制规则</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
+        <title>老虎金融｜<%= pageInfo.title %></title>
+        <meta name="description" content="<%= pageInfo.description %>">
+        <meta name="keywords" content="<%= pageInfo.keywords %>">
 
         <!-- build:css(.tmp) /styles/web.css -->
         <link rel="stylesheet" href="/styles/web.css">
@@ -16,7 +16,7 @@
                 <% include navbar/main.html %>
             </div>
             <div class="body">
-                <% include web/copy.html %>
+                <% include web/copy-index.html %>
             </div>
             <div class="footer">
                 <% include common/footer.html %>
@@ -40,11 +40,11 @@
 
         <script src="/scripts/common/config.service.js"></script>
         <script src="/scripts/common/account.service.js"></script>
-
-        <script src="/scripts/common/global.controller.js"></script>
-
-        <script src="/scripts/common/line_chart.directive.js"></script>
+        
+        <script src="/scripts/common/navbar.directive.js"></script>
         <script src="/scripts/common/dropdown.directive.js"></script>
+        
+        <script src="/scripts/common/global.controller.js"></script>
         <!-- endbuild -->
     </body>
 </html>
