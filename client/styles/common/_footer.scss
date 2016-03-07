@@ -1,0 +1,60 @@
+.footer-wrap {
+    background-color: $gray-base;
+    color: $gray-light;
+
+    div > p > span {
+        font-size: $font-size-h4;
+        padding-bottom: 5px;
+        border-bottom: 1px solid $brand-primary;
+    }
+
+    .col-xs-2 > ul > li {
+        margin-bottom: 10px;
+    }
+
+    .col-xs-2 > ul > li > a{
+        color: $gray-dark;
+
+        &:hover {
+            color: $brand-primary;
+        }
+    }
+
+    a > i {
+        font-size: $font-size-h3;
+        vertical-align: top;
+    }
+
+    .col-xs-4 {
+        color: $gray-dark;
+
+        ul > li:first-child {
+            span {
+                font-size: $font-size-h1;
+                color: $brand-primary;
+            }
+        }
+
+        p > i {
+            margin-right: 5px;
+        }
+    }
+
+    .footer_con {
+        padding-top: 30px;
+        border-top: 1px solid $gray-darker;
+        color: $gray-darker;
+    }
+}
+
+
+
+
+.footer-bottom {
+    background-color: #111;
+    color: $gray-dark;
+
+    span {
+        color: $brand-primary;
+    }
+}
