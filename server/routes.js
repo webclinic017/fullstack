@@ -6,6 +6,7 @@
 
 var errors = require('./components/errors');
 var path = require('path');
+var url = require('url');
 var masterApi = require('./api/master');
 
 module.exports = function (app) {
@@ -37,25 +38,8 @@ module.exports = function (app) {
 
 
     app.route('/ranklist').get(function (req, res) {
-        var masters = [];
-
-        masters = [
-                {
-                    username: '高手 1 号',
-                    usercode: '222'
-                }, {
-                    username: '高手 2 号',
-                    usercode: '222'
-                }, {
-                    username: '高手 3 号',
-                    usercode: '222'
-                }
-        ]
 
         res.render('ranklist.html', {
-            pageInfo: {
-            },
-            masters: masters
         });
     });
 

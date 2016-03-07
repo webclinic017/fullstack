@@ -16,7 +16,7 @@
     font-weight: $btn-font-weight;
     background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
     cursor: pointer;
-    @include button-size($btn-padding-vertical, $btn-padding-horizontal, $btn-font-size, $btn-height-base, $line-height-base, $btn-border-radius);
+    @include button-size(0px, $btn-padding-horizontal, $btn-font-size, $btn-height-base, $btn-border-radius);
     @include user-select(none);
 
     &:active,
@@ -45,10 +45,10 @@
 }
 
 .btn-sm {
-    @include button-size($btn-padding-vertical, $btn-padding-horizontal-sm, $btn-font-size, $btn-height-sm, $line-height-base, $btn-border-radius);
+    @include button-size(0px, $btn-padding-horizontal-sm, $btn-font-size-sm, $btn-height-sm, $btn-border-radius);
 }
 .btn-lg {
-    @include button-size($btn-padding-vertical, $btn-padding-horizontal-lg, $btn-font-size, $btn-height-lg, $line-height-base, $btn-border-radius);
+    @include button-size(0px, $btn-padding-horizontal-lg, $btn-font-size-lg, $btn-height-lg, $btn-border-radius);
 }
 
 

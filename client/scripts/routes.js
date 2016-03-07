@@ -60,36 +60,40 @@
                     views: {
                         '@': {
                             templateUrl: '/views/ranklist/index.html',
-                            controller: ''
+                            controller: 'RanklistIndexController'
                         }
                     }
                 })
-                .state('ranklist.subpage', {
-                    url: '/ranklist/:subpage',
+                // .state('ranklist.subpage', {
+                //     url: '/ranklist/:subpage',
+                //     views: {
+                //         'list@ranklist': {
+                //             templateUrl: function ($stateParams) {
+                //                 var subpage;
+                //                 $stateParams.subpage = $stateParams.subpage || 'all';
+                //                 subpage = $stateParams.subpage;
+                //                 if (subpage === 'all' || subpage === 'new') {
+                //                     return '/views/ranklist/masters.html';
+                //                 } else {
+                //                     return '/views/ranklist/copiers.html';
+                //                 }
+                //             },
+                //             controllerProvider: function ($stateParams) {
+                //                 $stateParams.subpage = $stateParams.subpage || 'all';
+                //                 var ctrlPrefix = 'Ranklist';
+                //                 var ctrlSuffix = 'Controller';
+                //                 var ctrlRoot = modCtrlName($stateParams.subpage);
+                //                 return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                //             }
+                //         }
+                //     }
+                // })
+                .state('ranklist.masters', {
+                    url: '/ranklist/masters',
                     views: {
                         'list@ranklist': {
-                            templateUrl: function ($stateParams) {
-                                var subpage;
-                                $stateParams.subpage = $stateParams.subpage || 'all';
-                                subpage = $stateParams.subpage;
-
-                                if (subpage === 'all' || subpage === 'new') {
-                                    return '/views/ranklist/masters.html';
-                                } else {
-                                    return '/views/ranklist/copiers.html';
-                                }
-                            },
-                            controllerProvider: function ($stateParams) {
-                                var subpage;
-                                $stateParams.subpage = $stateParams.subpage || 'all';
-                                subpage = $stateParams.subpage;
-
-                                if (subpage === 'all' || subpage === 'new') {
-                                    return 'RanklistMastersController';
-                                } else {
-                                    return 'RanklistCopiersController';
-                                }
-                            }
+                            templateUrl: '/views/ranklist/masters.html',
+                            controller: 'RanklistAllController'
                         }
                     }
                 });
