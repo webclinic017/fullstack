@@ -1,0 +1,82 @@
+@include b (banner) {
+    @include img-normal($image-path-home + "home-banner.png");
+    background-position: center center;
+}
+
+@include b (section-gray) {
+    background: $gray;
+}
+
+@include b (section-white) {
+    background: #fff;
+}
+// 行业大师
+@include b (section-eg) {
+    @include img-normal($image-path-home + "home-eg-bg.png");
+    background-position: center center;
+}
+@include b (eg) {
+    @include e (photo) {
+        width: 374px;
+        height: 441px;
+        @include img-normal($image-path-home + "home-eg-person.png");
+        background-size: 100%;
+    }
+
+    @include e (con) {
+        color: $gray-light;
+
+        p {
+            font-size: $font-size-h3;
+        }
+    }
+}
+
+// 为什么选择老虎金融
+@include b (section-why) {
+    background-color: $brand-primary;
+}
+
+@include b (why-title) {
+    color: $gray-base;
+    font-size: 30px;
+
+    @include e (line) {
+        display: inline-block;
+        width: 40px;
+        border-top: 1px solid $gray-base;
+    }
+
+    
+}
+
+@include b (why-con) {
+
+    @include e (logo) {
+        display: inline-block;
+        width: 75px;
+        height: 75px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    @include e (logo1) {
+        @include img-normal($image-path-home + "why-logo1.png");       
+    }
+    @include e (logo2) {
+        @include img-normal($image-path-home + "why-logo2.png");       
+    }
+    @include e (logo3) {
+        @include img-normal($image-path-home + "why-logo3.png");       
+    }
+    @include e (logo4) {
+        @include img-normal($image-path-home + "why-logo4.png");       
+    }
+}
+
+.mg-rg-_20 {
+    margin-right: -20px;
+}
+.mg-lf-_20 {
+    margin-left: -20px;
+}
