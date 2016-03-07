@@ -8,7 +8,8 @@
 
     function ranklist($http) {
         var service = {
-            getMastersList: getMastersList
+            getMastersList: getMastersList,
+            getCopiersList: getCopiersList
         };
         return service;
 
@@ -18,6 +19,10 @@
                     type: type
                 }
             });
+        }
+
+        function getCopiersList (type) {
+            return $http.get('/data/copiers.json');
         }
     }
 })();

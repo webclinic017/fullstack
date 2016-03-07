@@ -1,5 +1,15 @@
 @include b(copiers_lst) {
-    @include e(bg) {
-        background-color: $gray-lightest;
+    
+    .col-1 {
+        width: percentage(1 / 6);
+    }
+
+    .col-1-lg {
+        @extend .col-1;
+        width: 20%;
+    }
+    .col-1-sm {
+        @extend .col-1;
+        width: 15%;
     }
 }

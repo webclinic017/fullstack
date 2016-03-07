@@ -9,7 +9,7 @@
 
 .container {
     @include container-fixed();
-    width: 100%;
+    width: $container-main;
 }
 
 // Row

@@ -1,4 +1,6 @@
-//== Navs
+//
+// Navs
+// --------------------------------------------------
 .nav {
     @extend .clearfix;
     margin-bottom: 0;
@@ -25,15 +27,12 @@
     }
 }
 
-
-//== Navbars
 .navbar {
     @extend .clearfix;
     position: relative;
     min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
-    border-bottom: 1px solid #222;
     border-radius: 0;
-    @include img-normal($image-path-base + "navbar-bg.png");
+    background-color: #141414;
 }
 
 // Fix the top/bottom navbars when screen real estate supports it
@@ -51,6 +50,9 @@
 
 .navbar-right {
     float: right !important;
+    > li > a:hover {
+        border-bottom-color: transparent;
+    }
 }
 
 // Navbar heading
@@ -58,31 +60,89 @@
     @extend .clearfix;
     float: left;
 
-    // .logo {
-    //     margin: 5px 10px 0 0;
-    //     vertical-align: middle;
-    // }
+    .logo {
+        margin: 12px 15px 0 0;
+        vertical-align: middle;
+    }
+    
+    .cctv_con {
+        display: inline-block;
+        vertical-align: bottom;
+        padding-left: 15px;
+        border-left: 1px solid $gray-darker;
+
+    }
+
+    .logocctv {
+        vertical-align: bottom;
+    }
 }
+
+// Brand/project name
+.navbar-brand {
+    float: left;
+    padding: $navbar-padding-top $navbar-padding-horizontal;
+    font-size: 18px;
+    line-height: $line-height-computed;
+    height: $navbar-height;
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+
+    > img {
+        display: block;
+    }
+}
+
 
 .navbar-nav {
     float: left;
     margin: 0;
+  
+    &.navbar-right:last-child {
+        margin-right: -$navbar-padding-horizontal;
+    }
 
     > li {
         float: left;
 
         > a {
             margin: 0 $navbar-margin-horizontal;
-            padding: $navbar-padding-vertical 0;
-            line-height: $navbar-line-height;
+            padding: 33px 0 29px;
+            border-bottom: 2px solid transparent;
+            line-height: $line-height-computed;
             text-decoration: none;
-            font-size: $navbar-font-size;
+            font-size: $font-size-large;
             color: $gray-lighter;
+
+            &:hover,
+            &:active {
+                color: $brand-primary;
+                border-bottom-color: $brand-primary-dark;
+            }
+        }
+    }
+
+    .dropdown {
+        > a {
+            border-bottom: none;
         }
     }
     
     > .active > a {
-        color: $brand-primary;
+        &,
+        &:hover,
+        &:active,
+        &:focus {
+            color: $brand-primary;
+            border-bottom-color: $brand-primary;
+        }
+    }
+
+    .dropdown-menu {
+        top: 84px;
     }
 }
 
@@ -99,8 +159,8 @@
     vertical-align: middle;
 
     > li {
-        position: relative;
-        float: left;
+    position: relative;
+    float: left;
         margin-right: -1px;
 
         &:first-child {
@@ -152,3 +212,67 @@
         background-color: $gray;
     }
 }
+
+// 未登录时候 显示 注册登录 块
+.navbar-login {
+    float: left;
+    margin: 0px;
+
+    &.navbar-right:last-child {
+        margin-right: -$navbar-padding-horizontal;
+    }
+
+    > li {
+        float: left;
+
+        .login {
+            margin: 0 $navbar-margin-horizontal;
+            padding: 33px 0 $navbar-padding-bottom;
+            line-height: $line-height-computed;
+            text-decoration: none;
+            font-size: $font-size-large;
+            color: $brand-primary;
+        }
+
+        .signup {
+            margin: 32px 0;
+            width: 120px;
+            line-height: $line-height-computed;
+            text-decoration: none;
+            text-align: center;
+            font-size: $font-size-h3;
+            color: $gray-base;
+        }
+    }
+    > li:last-child {
+        margin-left: 10px;
+        height: 84px;
+        background-color: $brand-primary;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 //== Colors
 $brand-primary:             #fedd0a !default;
 $brand-primary-lighter:     #ffed7b !default;
-$brand-primary-dark:        darken($brand-primary, 10%);
+$brand-primary-dark:        darker($brand-primary, 10%);
 
 $brand-info:                #1fb7f6 !default;
 $brand-info-dark:           #4a89dc !default;
@@ -9,7 +9,7 @@ $brand-danger:              #ff4949 !default;
 $brand-danger-dark:         #da4453 !default;
 $brand-success:             #45aa00 !default;
 $brand-success-dark:        #37bc9b !default;
-$brand-warning:             #fedd0a !default;
+$brand-warning:             #ff8400 !default;
 
 $gray-base:                 #222 !default;
 $gray-darker:               #666 !default;
@@ -132,8 +132,8 @@ $container-lg:                      1350px !default;
 $container-main:                    1060px !default;
 
 //== Navs
-$navbar-height:                     20px !default;
-$navbar-line-height:                20px !default;
+$navbar-height:                     84px !default;
+$navbar-line-height:                84px !default;
 $navbar-border-radius:              $border-radius-base !default;
 $navbar-margin-horizontal:          15px !default;
 $navbar-padding-horizontal:         0 !default;

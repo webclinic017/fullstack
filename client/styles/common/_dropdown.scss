@@ -18,12 +18,13 @@
     position: absolute;
     top: 100%;
     left: 0;
+    width: 100px;
     z-index: $zindex-dropdown;
     display: none;
     font-size: $font-size-base;
     text-align: left;
-    background-color: #fff;
-    border-radius: $border-radius-base;
+    background-color: rgba(34, 33, 33, 0.8);
+    border-radius: 0 0 2px 2px;
     overflow: hidden;
     
     // &.pull-right {
@@ -37,6 +38,15 @@
         clear: both;
         line-height: $line-height-base;
         white-space: nowrap;
+        color: $brand-primary;
+
+        &:hover,
+        &:focus {
+            text-decoration: none;
+            color: $gray-base;
+            background-color: $brand-primary;
+            border-bottom-color: $brand-primary;
+        }
     }
 
     > li:last-child {

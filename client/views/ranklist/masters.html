@@ -1,43 +1,65 @@
-<div class="master_lst__bg master_lst__content">
+<div class="ranklist__bg ranklist__content">
     <div class="container">
-        <div class="master_lst__nav">
+        <div class="ranklist__nav">
             <div class="row">
                 <div class="col-1-lg">
-                    <a class="master_lst__nav_item" href="">综合排名</a>
+                    <a class="nav_item" href="">综合排名</a>
                 </div>
                 <div class="col-1-sm">
-                    <a class="master_lst__nav_item" href="">复制人数</a>
+                    <a class="nav_item" href="">复制人数</a>
                 </div>
                 <div class="col-1">
-                    <a class="master_lst__nav_item" href="">最低复制金额</a>
+                    <a class="nav_item" href="">最低复制金额</a>
                 </div>
                 <div class="col-1">
-                    <a class="master_lst__nav_item" href="">走势图</a>
+                    <a class="nav_item" href="">走势图</a>
                 </div>
                 <div class="col-1">
-                    <a class="master_lst__nav_item" href="">最大回撤</a>
+                    <a class="nav_item" href="">最大回撤</a>
                 </div>
                 <div class="col-1-sm">
-                    <a class="master_lst__nav_item" href="">收益率</a>
+                    <a class="nav_item" href="">收益率</a>
                 </div>
                 <div class="col-1">
-                    <a class="master_lst__nav_item" href="">复制者盈利</a>
+                    <a class="nav_item" href="">复制者盈利</a>
                 </div>
                 <div class="col-1-lg">
                 </div>
             </div>
         </div>
-        <ul class="master_lst__ranking">
-            <li ng-repeat="rank in rankList" class="master_lst__ranking_item">
+        <ul class="ranklist__lst">
+            <li ng-repeat="rank in rankList" class="ranklist__lst_item">
                 <div class="row">
                     <div class="col-1-lg">
-                        {{ rank.username }}
+                        <div class="ranklist_info">
+                            <div class="ranklist_info__wrapper">
+                                <a href="" class="ranklist_info__avatar" target="_blank">
+                                    <img src="{{ rank['avatar_path'] }}" alt="avatar">
+                                </a>
+                            </div>
+                            <div class="ranklist_info__wrapper">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <a class="ranklist_info__name" href="" target="_blank">
+                                            {{ rank.username }}
+                                        </a>
+                                        <span class="ranklist_info__number">
+                                            {{ rank.number }}#
+                                        </span>
+                                        <span class="ranklist_info__address">
+                                            <i class="fa fa-map-marker"></i>
+                                            {{ rank.address }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-1-sm">
-                        {{ rank.copiers_sum }}
+                        <i class="fa fa-users"></i>{{ rank.copiers_sum }}
                     </div>
                     <div class="col-1">
-                        ${{ rank.copy_money_min }}
+                        <i class="fa fa-dollar"></i>{{ rank.copy_money_min }}
                     </div>
                     <div class="col-1">
                         
@@ -49,10 +71,10 @@
                         {{ rank.profit_rate }}%
                     </div>
                     <div class="col-1">
-                        ${{ rank.profit_copiers }}
+                        <i class="fa fa-dollar"></i>{{ rank.profit_copiers }}
                     </div>
                     <div class="col-1-lg">
-                        <a href="">复制</a>
+                        <a class="btn btn-primary" href="">复制</a>
                     </div>
                 </div>
             </li>
