@@ -8,7 +8,37 @@
         border-bottom: 1px solid $brand-primary;
     }
 
+    .col-xs-2 > ul > li {
+        margin-bottom: 10px;
+    }
 
+    .col-xs-2 > ul > li > a{
+        color: $gray-dark;
+
+        &:hover {
+            color: $brand-primary;
+        }
+    }
+
+    a > i {
+        font-size: $font-size-h3;
+        vertical-align: top;
+    }
+
+    .col-xs-4 {
+        color: $gray-dark;
+
+        ul > li:first-child {
+            span {
+                font-size: $font-size-h1;
+                color: $brand-primary;
+            }
+        }
+
+        p > i {
+            margin-right: 5px;
+        }
+    }
 
     .footer_con {
         padding-top: 30px;
