@@ -1,4 +1,4 @@
-@include b (banner) {
+@include b (home-banner) {
     @include img-normal($image-path-home + "home-banner.png");
     background-position: center center;
 }
