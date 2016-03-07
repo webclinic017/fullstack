@@ -146,26 +146,39 @@ $navbar-font-size:                  16px !default;
 
 //== Btns
 $btn-padding-vertical:              8px !default;
-$btn-padding-horizontal:            45px !default;
+$btn-padding-horizontal-sm:         45px !default;
+$btn-padding-horizontal:            70px !default;
+$btn-padding-horizontal-lg:         100px !default;
 $btn-border-radius:                 $border-radius-base !default;
 
-$btn-height-base:                   45px !default;
+$btn-height-sm:                     45px !default;
+$btn-height-base:                   50px !default;
+$btn-height-lg:                     68px !default;
 $btn-width-large:                   100% !default;
 $btn-border-radius-large:           $border-radius-base !default;
 $btn-font-size:                     16px !default;
-
 $btn-font-weight:                   normal !default;
+
 $btn-default-color:                 #fff !default;
-$btn-default-bg:                    #ccc !default;
-$btn-default-border:                #ebebeb !default;
+$btn-default-bg:                    $gray-base !default;
+$btn-default-border:                $gray-base !default;
+$btn-default-hover-color:           #fff !default;
+$btn-default-hover-bg:              $gray-darker !default;
+$btn-default-hover-border:          $gray-darker !default;
 
-$btn-info-color:                    $brand-info !default;
-$btn-info-bg:                       $brand-info !default;
-$btn-info-border:                   $brand-info-dark !default;
+$btn-info-color:                    $gray-base !default;
+$btn-info-bg:                       transparent !default;
+$btn-info-border:                   $gray-base !default;
+$btn-info-hover-color:              $gray-base !default;
+$btn-info-hover-bg:                 transparent !default;
+$btn-info-hover-border:             $brand-primary !default;
 
-$btn-primary-color:                    $brand-primary !default;
+$btn-primary-color:                    $gray-base !default;
 $btn-primary-bg:                       $brand-primary !default;
-$btn-primary-border:                   $brand-primary-dark !default;
+$btn-primary-border:                   $brand-primary !default;
+$btn-primary-hover-color:              $gray-base !default;
+$btn-primary-hover-bg:                 $brand-primary-lighter !default;
+$btn-primary-hover-border:             $brand-primary-lighter !default;
 
 $btn-warning-color:                    $brand-warning !default;
 $btn-warning-bg:                       $brand-warning !default;
