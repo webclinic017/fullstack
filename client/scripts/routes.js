@@ -13,8 +13,8 @@
                             templateUrl: '/views/common/layout-2.html',
                             controller: ''
                         },
-                        'sidebar@space': {
-                            templateUrl: '/views/navbar/side.html',
+                        'side@space': {
+                            templateUrl: '/views/space/sidebar.html',
                             controller: ''
                         }
                     }
@@ -22,7 +22,7 @@
                 .state('space.invest', {
                     views: {
                         'content@space': {
-                            templateUrl: '/views/invest/layout.html',
+                            templateUrl: '/views/invest/index.html',
                             controller: ''
                         }
                     }
