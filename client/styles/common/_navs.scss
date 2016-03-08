@@ -123,16 +123,6 @@
             }
         }
     }
-
-    .dropdown {
-        > a {
-            border-bottom: none;
-
-            &:hover {
-                border-bottom: none;
-            }
-        }
-    }
     
     > .active > a {
         &,
