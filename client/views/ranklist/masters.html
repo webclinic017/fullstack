@@ -14,10 +14,10 @@
                 <div class="col-1">
                     <a class="nav_item" href="">走势图</a>
                 </div>
-                <div class="col-1">
+                <div class="col-1-sm">
                     <a class="nav_item" href="">最大回撤</a>
                 </div>
-                <div class="col-1-sm">
+                <div class="col-1">
                     <a class="nav_item" href="">收益率</a>
                 </div>
                 <div class="col-1">
@@ -34,13 +34,13 @@
                         <div class="ranklist_info">
                             <div class="ranklist_info__wrapper">
                                 <a href="" class="ranklist_info__avatar" target="_blank">
-                                    <img src="{{ rank['avatar_path'] }}" alt="avatar">
+                                    <img src="{{ rank['link'] }}" alt="avatar">
                                 </a>
                             </div>
                             <div class="ranklist_info__wrapper">
                                 <div class="table">
                                     <div class="table-cell">
-                                        <a class="ranklist_info__name" href="" target="_blank">
+                                        <a class="ranklist_info__name" href="" title="{{ rank.username }}" target="_blank">
                                             {{ rank.username }}
                                         </a>
                                         <span class="ranklist_info__number">
@@ -62,13 +62,13 @@
                         <i class="fa fa-dollar"></i>{{ rank.copy_money_min }}
                     </div>
                     <div class="col-1">
-                        
-                    </div>
-                    <div class="col-1">
-                        {{ rank.drawdown }}%
+                        <div tw-line-chart data-type="masterList"></div>
                     </div>
                     <div class="col-1-sm">
-                        {{ rank.profit_rate }}%
+                        {{ rank.drawdown }}%
+                    </div>
+                    <div class="col-1">
+                        {{ rank.profit }}%
                     </div>
                     <div class="col-1">
                         <i class="fa fa-dollar"></i>{{ rank.profit_copiers }}

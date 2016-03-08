@@ -17,7 +17,11 @@ router.get('/get_personal_info', function (req, res) {
     res.json(personal);
 });
 
-
+router.get('/master/list', function (req, res) {
+    res.json({
+        usercode: '3303'
+    })
+});
 // router.post('/', controller.create);
 // router.put('/:id', controller.update);
 // router.patch('/:id', controller.update);
