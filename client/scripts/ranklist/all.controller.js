@@ -11,9 +11,10 @@
         $scope.rankList = [];
 
         // var param = $state.params.subpage;
-        ranklist.getMastersList().then(function (data) {
-            // console.info(data);
-            $scope.rankList = data;
+
+        ranklist.getMasters().then(function (data) {
+            console.info(data);
+            $scope.rankList = data.data;
         });
     }
 })();
