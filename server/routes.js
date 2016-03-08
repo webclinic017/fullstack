@@ -42,6 +42,15 @@ module.exports = function (app) {
         });
     });
 
+    app.route('/trader').get(function (req, res) {
+
+        res.render('trader.html', {
+            master: {
+                username: 'naaa'
+            }
+        });
+    });
+
     // 复制交易
     app.route('/web/copy/:subpage(rules|select|become)').get(function (req, res) {
         var subpage = req.params.subpage || 'rules';
