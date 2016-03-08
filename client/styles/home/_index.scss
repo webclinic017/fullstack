@@ -1,17 +1,42 @@
 @include b (home-banner) {
     @include img-normal($image-path-home + "home-banner.png");
     background-position: center center;
+    background-size: 100%;
+    text-align: center;
+
+    @include e (title) {
+        color: #fff;
+        font-size: 55px;
+        font-weight: normal;
+    }
+
+    @include e (tip) {
+        color: #fff;
+        font-size: $font-size-h3;
+    }
 }
 
-@include b (section-gray) {
+// 排行榜
+@include b (home-sec-master) {
     background: $gray;
+
+    @include e (text1) {
+        margin-top: -20px;
+        text-align: center;
+    }
 }
 
-@include b (section-white) {
+// 明星交易高手
+@include b (home-sec-starmaster) {
     background: #fff;
 }
+
+// 首页资产
+@include b (home-sec-asset) {
+    background: $gray;    
+}
 // 行业大师
-@include b (section-eg) {
+@include b (home-sec-eg) {
     @include img-normal($image-path-home + "home-eg-bg.png");
     background-position: center center;
 }
@@ -24,16 +49,43 @@
     }
 
     @include e (con) {
+        position: relative;
         color: $gray-light;
 
         p {
             font-size: $font-size-h3;
         }
+        span {
+            position: relative;
+            display: inline-block;
+            width: 45px;
+            height: 36px;
+            background-size: 100%;
+            @include img-normal($image-path-home + "home-quote.png");
+        }
+
     }
+
+    @include e (quote1) {
+        top: 20px;
+        left: -60px;
+    }
+
+    @include e (quote2) {
+        top: -20px;
+        left: 570px;
+    }
+
+    @include e (name) {
+        text-align: right;
+        font-size: $font-size-h2 !important;
+        color: $brand-primary;
+    }
+
 }
 
 // 为什么选择老虎金融
-@include b (section-why) {
+@include b (home-sec-why) {
     background-color: $brand-primary;
 }
 
@@ -45,6 +97,12 @@
         display: inline-block;
         width: 40px;
         border-top: 1px solid $gray-base;
+    }
+
+    @include e (line1) {
+        display: inline-block;
+        width: 40px;
+        border-top: 1px solid $brand-primary;
     }
 
     
