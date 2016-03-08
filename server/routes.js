@@ -8,6 +8,7 @@ var errors = require('./components/errors');
 var path = require('path');
 var url = require('url');
 var masterApi = require('./api/master');
+var accountApi = require('./api/account');
 
 module.exports = function (app) {
     app.use('/api', require('./api'));
@@ -54,45 +55,36 @@ module.exports = function (app) {
     // 复制交易
     app.route('/web/copy/:subpage(rules|select|become)').get(function (req, res) {
         var subpage = req.params.subpage || 'rules';
-        var pageInfo;
-
-        switch (subpage) {
-            case 'rules':
-                pageInfo = {
-                    id: 'rules',
-                    title: '复制规则',
-                    description: '',
-                    keywords: '' 
-                };
-                break;
-
-            case 'select':
-                pageInfo = {
-                    id: 'select',
-                    title: '选择高手',
-                    description: '',
-                    keywords: '' 
-                };
-                break;
-
-            case 'become':
-                pageInfo = {
-                    id: 'become',
-                    title: '成为高手',
-                    description: '',
-                    keywords: '' 
-                };
-                break;
-            default:
-                break;
-        }
-        
+        var pageInfo = {
+            id: subpage
+        };
 
         res.render('web_copy.html', {
             pageInfo: pageInfo
         });
     });
 
+    // 交易
+    app.route('/web/trade/:subpage(product|time|tool)').get(function (req, res) {
+        var subpage = req.params.subpage || 'product';
+        var pageInfo = {
+            id: subpage
+        };
+
+        res.render('web_trade.html', {
+            pageInfo: pageInfo
+        });
+    });
+
+    app.route('/test').get(function (req, res, next) {
+        accountApi.check(function (data) {
+            if (data.is_succ) {
+                res.json('sss');
+            } else {
+                next();
+            }
+        });
+    });
 
     app.route('/*').get(errors[404]);
 };

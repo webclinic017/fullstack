@@ -16,6 +16,7 @@
     > .item {
         display: none;
         position: relative;
+        width: 100%;
         @include transition(.6s ease-in-out left);
 
     // Account for jankitude on images
@@ -145,7 +146,7 @@
 
 .carousel-indicators {
     position: absolute;
-    bottom: -25px;
+    bottom: 0px;
     left: 50%;
     z-index: 15;
     width: 60%;
@@ -176,7 +177,7 @@
         background-color: #000 \9; // IE8
         background-color: rgba(0,0,0,0); // IE9
     }
-    .active {
+    .current {
         width:  12px;
         height: 12px;
         background-color: $carousel-indicator-active-bg;

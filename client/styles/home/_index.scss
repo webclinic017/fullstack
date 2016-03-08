@@ -1,0 +1,140 @@
+@include b (home-banner) {
+    @include img-normal($image-path-home + "home-banner.png");
+    background-position: center center;
+    background-size: 100%;
+    text-align: center;
+
+    @include e (title) {
+        color: #fff;
+        font-size: 55px;
+        font-weight: normal;
+    }
+
+    @include e (tip) {
+        color: #fff;
+        font-size: $font-size-h3;
+    }
+}
+
+// 排行榜
+@include b (home-sec-master) {
+    background: $gray;
+
+    @include e (text1) {
+        margin-top: -20px;
+        text-align: center;
+    }
+}
+
+// 明星交易高手
+@include b (home-sec-starmaster) {
+    background: #fff;
+}
+
+// 首页资产
+@include b (home-sec-asset) {
+    background: $gray;    
+}
+// 行业大师
+@include b (home-sec-eg) {
+    @include img-normal($image-path-home + "home-eg-bg.png");
+    background-position: center center;
+}
+@include b (eg) {
+    @include e (photo) {
+        width: 374px;
+        height: 441px;
+        @include img-normal($image-path-home + "home-eg-person.png");
+        background-size: 100%;
+    }
+
+    @include e (con) {
+        position: relative;
+        color: $gray-light;
+
+        p {
+            font-size: $font-size-h3;
+        }
+        span {
+            position: relative;
+            display: inline-block;
+            width: 45px;
+            height: 36px;
+            background-size: 100%;
+            @include img-normal($image-path-home + "home-quote.png");
+        }
+
+    }
+
+    @include e (quote1) {
+        top: 20px;
+        left: -60px;
+    }
+
+    @include e (quote2) {
+        top: -20px;
+        left: 570px;
+    }
+
+    @include e (name) {
+        text-align: right;
+        font-size: $font-size-h2 !important;
+        color: $brand-primary;
+    }
+
+}
+
+// 为什么选择老虎金融
+@include b (home-sec-why) {
+    background-color: $brand-primary;
+}
+
+@include b (why-title) {
+    color: $gray-base;
+    font-size: 30px;
+
+    @include e (line) {
+        display: inline-block;
+        width: 40px;
+        border-top: 1px solid $gray-base;
+    }
+
+    @include e (line1) {
+        display: inline-block;
+        width: 40px;
+        border-top: 1px solid $brand-primary;
+    }
+
+    
+}
+
+@include b (why-con) {
+
+    @include e (logo) {
+        display: inline-block;
+        width: 75px;
+        height: 75px;
+        background-repeat: no-repeat;
+        background-size: 100%;
+    }
+
+    @include e (logo1) {
+        @include img-normal($image-path-home + "why-logo1.png");       
+    }
+    @include e (logo2) {
+        @include img-normal($image-path-home + "why-logo2.png");       
+    }
+    @include e (logo3) {
+        @include img-normal($image-path-home + "why-logo3.png");       
+    }
+    @include e (logo4) {
+        @include img-normal($image-path-home + "why-logo4.png");       
+    }
+}
+
+.mg-rg-_20 {
+    margin-right: -20px;
+}
+.mg-lf-_20 {
+    margin-left: -20px;
+}

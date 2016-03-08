@@ -18,9 +18,11 @@ router.get('/get_personal_info', function (req, res) {
 });
 
 router.get('/master/list', function (req, res) {
-    res.json({
-        usercode: '3303'
-    })
+    masterApi.getMasters(function (data) {
+        if (data.is_succ) {
+            res.json(data);
+        }
+    });
 });
 // router.post('/', controller.create);
 // router.put('/:id', controller.update);
