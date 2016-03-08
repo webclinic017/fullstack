@@ -45,41 +45,23 @@ module.exports = function (app) {
     // 复制交易
     app.route('/web/copy/:subpage(rules|select|become)').get(function (req, res) {
         var subpage = req.params.subpage || 'rules';
-        var pageInfo;
-
-        switch (subpage) {
-            case 'rules':
-                pageInfo = {
-                    id: 'rules',
-                    title: '复制规则',
-                    description: '',
-                    keywords: '' 
-                };
-                break;
-
-            case 'select':
-                pageInfo = {
-                    id: 'select',
-                    title: '选择高手',
-                    description: '',
-                    keywords: '' 
-                };
-                break;
-
-            case 'become':
-                pageInfo = {
-                    id: 'become',
-                    title: '成为高手',
-                    description: '',
-                    keywords: '' 
-                };
-                break;
-            default:
-                break;
-        }
-        
+        var pageInfo = {
+            id: subpage
+        };
 
         res.render('web_copy.html', {
+            pageInfo: pageInfo
+        });
+    });
+
+    // 交易
+    app.route('/web/trade/:subpage(product|time|tool)').get(function (req, res) {
+        var subpage = req.params.subpage || 'product';
+        var pageInfo = {
+            id: subpage
+        };
+
+        res.render('web_trade.html', {
             pageInfo: pageInfo
         });
     });
