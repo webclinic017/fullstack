@@ -33,14 +33,14 @@
                     <div class="col-1-lg">
                         <div class="ranklist_info">
                             <div class="ranklist_info__wrapper">
-                                <a href="" class="ranklist_info__avatar" target="_blank">
-                                    <img src="{{ rank['link'] }}" alt="avatar">
+                                <a href="/trader/#/trader/{{rank.usercode}}/summary" class="ranklist_info__avatar" target="_blank">
+                                    <img ng-src="{{ rank['link'] }}" alt="avatar">
                                 </a>
                             </div>
                             <div class="ranklist_info__wrapper">
                                 <div class="table">
                                     <div class="table-cell">
-                                        <a class="ranklist_info__name" href="" title="{{ rank.username }}" target="_blank">
+                                        <a class="ranklist_info__name" href="/trader/#/trader/{{rank.usercode}}/summary" title="{{ rank.username }}" target="_blank">
                                             {{ rank.username }}
                                         </a>
                                         <span class="ranklist_info__number">
@@ -74,7 +74,7 @@
                         <i class="fa fa-dollar"></i>{{ rank.profit_copiers }}
                     </div>
                     <div class="col-1-lg">
-                        <a class="btn btn-primary btn-sm" href="">复制</a>
+                        <a class="btn btn-primary btn-sm" href="/trader/#/trader/{{rank.usercode}}/summary" target="_blank">复制</a>
                     </div>
                 </div>
             </li>

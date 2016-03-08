@@ -1,4 +1,21 @@
-<h1 style="margin-top: 200px;">高手主页</h1>
+<h1 class="title">高手主页</h1>
 
 <span><%= master.username%></span>
+
+<div class="nav-tabs-wrapper">
+    <ul class="nav-tabs">
+        <li ui-sref-active="active">
+            <a ui-sref="trader.subpage({subpage: 'summary'})">交易概况</a>
+        </li>
+        <li ui-sref-active="active">
+            <span class="nav-tabs__divider"></span>
+            <a ui-sref="trader.subpage({subpage: 'current'})">当前交易</a>
+        </li>
+        <li ui-sref-active="active">
+            <span class="nav-tabs__divider"></span>
+            <a ui-sref="trader.subpage({subpage: 'history'})">历史交易</a>
+        </li>
+    </ul>
+</div>
+
 
