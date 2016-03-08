@@ -17,10 +17,9 @@ var master = {
 
 module.exports = master;
 
-function getMasters(qsData, callback) {
+function getMasters(callback) {
     request(_.merge({
-        url: '/api/v3/master/list',
-        qs: qsData
+        url: '/api/v3/master/list'
     }, options), function (err, res, body) {
         if (err) {
            return console.error(err);
