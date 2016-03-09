@@ -56,6 +56,7 @@
                     }
                 })
 
+                // 排行榜
                 .state('ranklist', {
                     views: {
                         '@': {
@@ -94,6 +95,34 @@
                         'list@ranklist': {
                             templateUrl: '/views/ranklist/masters.html',
                             controller: 'RanklistAllController'
+                        }
+                    }
+                })
+
+                // 高手主页
+                .state('trader', {
+                    views: {
+                        '@': {
+                            templateUrl: '/views/trader/list.html',
+                            controller: ''
+                        }
+                    }
+                })
+                .state('trader.subpage', {
+                    url: '/trader/:subpage',
+                    views: {
+                        'list@trader': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'current';
+                                return '/views/trader/' + $stateParams.subpage + '.html';
+                            },
+                            controllerProvider: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'current';
+                                var ctrlPrefix = 'Trader';
+                                var ctrlSuffix = 'Controller';
+                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                            }
                         }
                     }
                 });
