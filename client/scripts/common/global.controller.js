@@ -12,7 +12,17 @@
      * @desc
      */ 
     function GlobalController($scope, account) {
-        account.getPersonalInfo().then(function () {
+        $scope.userstatus = {
+            logined: false
+        };
+
+        $scope.personal = {};
+
+        account.checkLogined().then(function (data) {
+            
+        });
+        account.getPersonalInfo().then(function (data) {
+            angular.extend($scope.personal, data);
         });
     }
 })();

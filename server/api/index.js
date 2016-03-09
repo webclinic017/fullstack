@@ -2,19 +2,27 @@
 
 var express = require('express');
 var router = express.Router();
-
 var accountApi = require('./account');
 var masterApi = require('./master');
 
 
-router.get('/get_personal_info', function (req, res) {
-    // 获取个人信息
-    var personal = {
-        username: 'wxl',
-        usercode: '23703',
-        verified: true
-    };
-    res.json(personal);
+/**
+ * account   
+ */
+router.get('/account/checkLogined', function (req, res) {
+    accountApi.checkLogined(function (data) {
+        if (data.is_succ) {
+            res.json(data);
+        }
+    });
+});
+
+router.get('/account/get_personal_info', function (req, res) {
+    accountApi.getPersonalInfo(function (data) {
+        if (data.is_succ) {
+            res.json(data);
+        }
+    });
 });
 
 router.get('/master/list', function (req, res) {

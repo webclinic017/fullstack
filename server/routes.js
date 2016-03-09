@@ -77,7 +77,8 @@ module.exports = function (app) {
     });
 
     app.route('/test').get(function (req, res, next) {
-        accountApi.check(function (data) {
+        accountApi.checkLogined(function (data) {
+            console.info(data);
             if (data.is_succ) {
                 res.json('sss');
             } else {
