@@ -18,8 +18,7 @@
          * 排行榜 
          *
          * @method getMasters
-         * @param {String} type
-         * @param {Number} pagesize
+         * 
          */
         function getMasters() {
             // return $http.get('/data/masters.json', {
