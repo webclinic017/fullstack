@@ -5,12 +5,16 @@
     angular.module('fullstackApp')
         .controller('TraderIndexController', TraderIndexController);
 
-    TraderIndexController.$inject = ['$scope', 'trader'];
+    TraderIndexController.$inject = ['$scope', '$state', 'trader'];
 
-    function TraderIndexController($scope, trader) {
+    function TraderIndexController($scope, $state, trader) {
         $scope.master = {};
+        var usercode;
 
-        trader.getMasterDetail().then(function (data) {
+        usercode = $state.params.usercode;
+        // console.info(usercode);     // undefined  ?
+
+        trader.getMasterDetail(usercode).then(function (data) {
             $scope.master = data;
         });
     }

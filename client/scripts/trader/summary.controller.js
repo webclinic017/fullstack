@@ -5,12 +5,13 @@
     angular.module('fullstackApp')
         .controller('TraderSummaryController', TraderSummaryController);
 
-    TraderSummaryController.$inject = ['$scope', 'trader', '$timeout'];
+    TraderSummaryController.$inject = ['$scope', '$state', 'trader', '$timeout'];
 
-    function TraderSummaryController($scope, trader, $timeout) {
+    function TraderSummaryController($scope, $state, trader, $timeout) {
         $scope.summary = {};
+        var usercode = $state.params.usercode;
 
-        trader.getMasterSummary().then(function (data) {
+        trader.getMasterSummary(usercode).then(function (data) {
             $scope.summary = data;
 
             // 饼图绘制
@@ -38,6 +39,11 @@
                 // console.info(profitSum);
                 $scope.$broadcast('paintPieChart', profitSum);
             }
+        });
+
+        trader.getMasterProfitLine(usercode).then(function (data) {
+            // console.info(data);
+            $scope.$broadcast('paintLineChart', data.data);
         });
     }
 })();

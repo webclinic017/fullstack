@@ -41,7 +41,13 @@
         height: 200px;
         margin-top: -40px;
         position: relative;
+        text-align: center;
+        line-height: 200px;
         z-index: 1;
+
+        > img {
+            width: 60px;
+        }
     }
 
     @include e(lt) {
@@ -114,9 +120,21 @@
 }
 
 @include b(trader_chart) {
-
+    .line_chart {
+        height: 400px;
+        padding: 40px 0;
+        text-align: center;
+        line-height: 400px;
+    }
 }
 
 @include b(trader_type) {
-
+    @include e(icon) {
+        background-image: url("/data/test.png");
+        display: inline-block;
+        width: 100px;
+        height: 80px;
+        vertical-align: middle;
+        background-position: 50%;
+    }
 }
