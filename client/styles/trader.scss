@@ -18,17 +18,13 @@
 @import "common/grid";
 
 // Components CSS
-@import "common/layout";
 @import "common/buttons";
 @import "common/navs";
 @import "common/footer";
 @import "common/dropdown";
-@import "common/carousel";
-@import "common/progress";
+
+// trader
+@import "trader/index";
+@import "trader/summary";
 
 // Module CSS
-@import "home/index";
-
-@import "ranklist/index";
-@import "ranklist/copiers";
-@import "ranklist/masters";

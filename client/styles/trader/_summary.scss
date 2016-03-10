@@ -1,0 +1,122 @@
+@include b(trader_summary) {
+    border: 1px solid $gray;
+    border-radius: $border-radius-base;
+    margin-top: 20px;
+
+    @include e(title) {
+        font-weight: normal;
+        margin: 0;
+        padding: 15px 0 15px 30px;
+        border-bottom: 1px solid $gray;
+    }
+
+    @include e(content) {
+        background-color: #fff;
+        padding: 0 40px;
+    }
+
+    @include e(divider) {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0px;
+        height: 100%;
+        border-left: 1px dashed $gray;
+    }
+}
+
+@include b(trader_main) {
+    padding: 60px 0;
+
+    .col-xs-4 {
+        position: relative;
+    }
+
+    .col-xs-6 {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    .pie_chart {
+        height: 200px;
+        margin-top: -40px;
+        position: relative;
+        z-index: 1;
+    }
+
+    @include e(lt) {
+        border-right: 1px solid $gray;
+        text-align: center;
+
+        @include m(item) {
+            padding: 10px 0;
+        }
+
+        @include m(num) {
+            > span {
+                font-size: 30px;
+            }
+        }
+    }
+
+    @include e(rt) {
+        text-align: center;
+        border-bottom: 1px dashed $gray;
+        padding: 10px 0;
+
+        &.no-border {
+            border-bottom: none;
+        }
+    }
+
+    @include e(order) {
+        padding-left: 75px;
+
+        >span {
+            position: relative;
+            display: inline-block;
+            padding-left: 20px;
+
+            &:before {
+                content: '';
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                position: absolute;
+                top: 2px;
+                left: 0;
+            }
+            &.trader_order_loss {
+                margin-left: 15px;
+            }
+            &.trader_order_profit:before {
+                background-color: $brand-primary;
+            }
+            &.trader_order_loss:before {
+                background-color: $gray;
+            }
+        }
+        
+    }
+ 
+    @include e(chart) {
+        width: 100px;
+        text-align: center;
+        position: absolute;
+        top: 40px;
+        left: 50%;
+        margin-left: -50px;
+
+        > .num {
+            font-size: 22px;
+        }
+    }
+}
+
+@include b(trader_chart) {
+
+}
+
+@include b(trader_type) {
+
+}

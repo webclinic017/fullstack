@@ -1,4 +1,121 @@
-<h1 style="margin-top: 200px;">高手主页</h1>
+<div class="container">
+    <div class="trader">
+        <div class="trader__basic">
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="trader_avatar">
+                        <span class="trader_avatar__wrapper">
+                            <img ng-src="{{ master.avatar_path }}" alt="avatar">
+                            <span class="trader_avatar__number">NO.<%= master.number%></span>
+                        </span>
+                    </div>
+                    <div class="trader_user">
+                        <span class="trader_user__username"><%= master.username%></span>
+                        <span class="trader_user__position trader_gray_color">
+                            <i class="fa fa-map-marker"></i>
+                            <%= master.position%>
+                        </span>
+                    </div>
+                    <div class="row trader_social trader_gray_color">
+                        <div class="col-xs-4">关注</div>
+                        <div class="col-xs-4">粉丝</div>
+                        <div class="col-xs-4">复制者</div>
+                    </div>
+                    <div class="row trader_social">
+                        <div class="col-xs-4"><%= master.follow%></div>
+                        <div class="col-xs-4"><%= master.fans%></div>
+                        <div class="col-xs-4"><%= master.copiers%></div>
+                    </div>
+                </div>
+                <ul class="col-xs-7 clearfix">
+                    <li class="trader_profit">
+                        <div class="trader_profit__item" ng-class="{'font-danger': master.profit_rate.indexOf('-') >= 0, 'font-success': master.profit_rate.indexOf('-') < 0}">
+                            <span>{{ master.profit_rate || '0.00' }}</span>%
+                        </div>
+                        <div class="trader_gray_color">总收益率</div>
+                    </li>
+                    <li class="trader_profit">
+                        <div class="trader_profit__item" ng-class="{'font-danger': master.profit_month.indexOf('-') >= 0, 'font-success': master.profit_month.indexOf('-') < 0}">
+                            <span>{{ master.profit_month || '0.00' }}</span>%
+                        </div>
+                        <div class="trader_gray_color">月回报率</div>
+                    </li>
+                    <li class="trader_profit">
+                        <div class="trader_profit__item">
+                            <span>{{ master.drawdown || '0.00' }}</span>%
+                            <i ng-show="master.drawdown_num === 0" class="font-success">低</i>
+                            <i ng-show="master.drawdown_num === 1" class="font-warning">中</i>
+                            <i ng-show="master.drawdown_num === 2" class="font-danger">高</i>
+                        </div>
+                        <div class="trader_gray_color">最大回撤</div>
+                    </li>
+                    <li class="trader_profit">
+                        <div class="trader_profit__item">
+                            <span>{{ master.profit_ratio || '0.00' }}</span>%
+                        </div>
+                        <div class="trader_gray_color">分成比例</div>
+                    </li>
+                    <li class="trader_profit">
+                        <div class="trader_profit__item">
+                            <span><i class="fa fa-dollar"></i>{{ master.copy_money_min || '0.00' }}</span>
+                        </div>
+                        <div class="trader_gray_color">最低复制金额</div>
+                    </li>
+                </ul>
+                <div class="col-xs-2">
+                    <div class="trader_btn">
+                        <div class="trader_gray_color trader_btn__profit">
+                            已帮{{ master.help_num || 0 }}人赚取
+                            <span><i class="fa fa-dollar"></i>{{ master.help_amount || 0 }}</span>
+                        </div>
+                        <button class="btn btn-sm btn-primary">复制</button><br>
+                        <button class="btn btn-sm btn-default">+ 关注</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="trader__info">
+            <ul>
+                <li class="trader_message clearfix">
+                    <strong class="trader_message__item">交易经验：</strong>
+                    <div class="trader_message__item trader_gray_color"><%= master.experience%></div>
+                </li>
+                <li class="trader_message clearfix">
+                    <strong class="trader_message__item">毕业院校：</strong>
+                    <div class="trader_message__item trader_gray_color"><%= master.education%></div>
+                </li>
+                <li class="trader_message clearfix">
+                    <strong class="trader_message__item">交易特色：</strong>
+                    <div class="trader_message__item trader_gray_color"><%= master.special%></div>
+                </li>
+                <li class="trader_message clearfix">
+                    <strong class="trader_message__item">交易策略：</strong>
+                    <div class="trader_message__item trader_gray_color"><%= master.strategy%></div>
+                </li>
+                <li class="trader_message clearfix">
+                    <strong class="trader_message__item">更多介绍：</strong>
+                    <div class="trader_message__item trader_gray_color"><%= master.desc%></div>
+                </li>
+            </ul>
+        </div>
 
-<span><%= master.username%></span>
+        <div class="nav-tabs-wrapper">
+            <ul class="nav-tabs">
+                <li ui-sref-active="active">
+                    <a ui-sref="trader.subpage({subpage: 'summary'})">交易概况</a>
+                </li>
+                <li ui-sref-active="active">
+                    <span class="nav-tabs__divider"></span>
+                    <a ui-sref="trader.subpage({subpage: 'current'})">当前交易</a>
+                </li>
+                <li ui-sref-active="active">
+                    <span class="nav-tabs__divider"></span>
+                    <a ui-sref="trader.subpage({subpage: 'history'})">历史交易</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
 
