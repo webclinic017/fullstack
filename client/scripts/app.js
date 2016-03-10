@@ -16,15 +16,15 @@
             return {
                 request: function (configParam) {       
                     configParam.timeout = config.httpTimeout;
-                    var reqUrl = configParam.url;
+                    // var reqUrl = configParam.url;
 
-                    if (/\.html$/.test(reqUrl) || /\.json$/.test(reqUrl)) {
+                    // if (/\.html$/.test(reqUrl) || /\.json$/.test(reqUrl)) {
 
-                    } else {
-                        reqUrl = '/api/' + reqUrl;
-                    }
+                    // } else {
+                    //     reqUrl = '/api/' + reqUrl;
+                    // }
 
-                    configParam.url = reqUrl;
+                    // configParam.url = reqUrl;
                     return configParam;
                 },
                 response: function (response) {
