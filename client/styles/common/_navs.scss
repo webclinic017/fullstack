@@ -289,3 +289,31 @@
         }
     }
 }
+
+//== 高手主页、个人中心 头部title
+@include b(navbar_summary) {
+    border: 1px solid $gray;
+    border-radius: $border-radius-base;
+    margin-top: 20px;
+
+    @include e(title) {
+        font-weight: normal;
+        margin: 0;
+        padding: 15px 0 15px 30px;
+        border-bottom: 1px solid $gray;
+    }
+
+    @include e(content) {
+        background-color: #fff;
+        padding: 0 40px;
+    }
+
+    @include e(divider) {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0px;
+        height: 100%;
+        border-left: 1px dashed $gray;
+    }
+}
