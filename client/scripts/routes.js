@@ -4,13 +4,41 @@
 
     angular.module('fullstackApp')
         .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-            $urlRouterProvider.otherwise('/invest/current');
+            $urlRouterProvider.otherwise('/404');
 
             $stateProvider
+                .state('account', {
+                    views: {
+                        '@': {
+                            templateUrl: '/views/account/layout.html',
+                            controller: '' 
+                        }
+                    }
+                })
+                .state('account.subpage', {
+                    url: '/account/:subpage',
+                    views: {
+                        'content@account': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'login';
+                                return '/views/account/' + $stateParams.subpage + '.html'; 
+                            },
+                            controllerProvider: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'login';
+                                var ctrlPrefix = 'Account';
+                                var ctrlSuffix = 'Controller';
+                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                return '';
+                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                            }
+                        }
+                    }
+                })
+
                 .state('space', {
                     views: {
                         '@': {
-                            templateUrl: '/views/common/layout-2.html',
+                            templateUrl: '/views/space/layout.html',
                             controller: ''
                         },
                         'side@space': {
@@ -28,10 +56,12 @@
                     }
                 })
                 .state('space.invest.subpage', {
-                    url: '/invest/:subpage',
+                    authenticated: true,
+                    url: '/space/invest/:subpage',
                     views: {
                         '@space.invest': {
                             templateUrl: function ($stateParams) {
+                                console.info($stateParams);
                                 $stateParams.subpage = $stateParams.subpage || 'current';
                                 return '/views/invest/' + $stateParams.subpage + '.html';
                             },
@@ -48,6 +78,7 @@
                 })
                 .state('space.invite', {
                     url: '/space/invite',
+                    authenticated: true,
                     views: {
                         'content@space': {
                             templateUrl: '/views/invite/index.html',
@@ -65,30 +96,6 @@
                         }
                     }
                 })
-                // .state('ranklist.subpage', {
-                //     url: '/ranklist/:subpage',
-                //     views: {
-                //         'list@ranklist': {
-                //             templateUrl: function ($stateParams) {
-                //                 var subpage;
-                //                 $stateParams.subpage = $stateParams.subpage || 'all';
-                //                 subpage = $stateParams.subpage;
-                //                 if (subpage === 'all' || subpage === 'new') {
-                //                     return '/views/ranklist/masters.html';
-                //                 } else {
-                //                     return '/views/ranklist/copiers.html';
-                //                 }
-                //             },
-                //             controllerProvider: function ($stateParams) {
-                //                 $stateParams.subpage = $stateParams.subpage || 'all';
-                //                 var ctrlPrefix = 'Ranklist';
-                //                 var ctrlSuffix = 'Controller';
-                //                 var ctrlRoot = modCtrlName($stateParams.subpage);
-                //                 return ctrlPrefix + ctrlRoot + ctrlSuffix;
-                //             }
-                //         }
-                //     }
-                // })
                 .state('ranklist.masters', {
                     url: '/ranklist/masters',
                     views: {
@@ -125,6 +132,10 @@
                             }
                         }
                     }
+                })
+
+                .state('404', {
+                    url: '/404'
                 });
 
             function modCtrlName(name) {

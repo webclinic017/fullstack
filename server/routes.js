@@ -4,7 +4,6 @@
 
 'use strict';
 
-var errors = require('./components/errors');
 var path = require('path');
 var url = require('url');
 var masterApi = require('./api/master');
@@ -98,5 +97,15 @@ module.exports = function (app) {
         next();
     });
 
-    app.route('/*').get(errors[404]);
+    app.route('/404').get(function (req, res) {
+        var viewFilePath = '404';
+        var statusCode = 404;
+        res.status(statusCode);
+        res.render(viewFilePath, {}, function (err, html) {
+            if (err) {
+                return res.json(statusCode);
+            }
+            res. send(html);
+        });
+    });
 };
