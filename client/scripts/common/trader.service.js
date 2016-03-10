@@ -2,32 +2,23 @@
 (function () {
     'use strict';
 
-    angular.module('fullstackApp').factory('ranklist', ranklist);
+    angular.module('fullstackApp').factory('trader', trader);
 
-    ranklist.$inject = ['$http'];
+    trader.$inject = ['$http'];
 
-    function ranklist($http) {
+    function trader($http) {
         var service = {
-            getMasters: getMasters,
-            getCopiersList: getCopiersList
+            getMasterDetail: getMasterDetail,
+            getMasterSummary: getMasterSummary
         };
         return service;
 
-        /**
-         * Ranklist Service 获取高手列表
-         * 排行榜 
-         *
-         * @method getMasters
-         * 
-         */
-        function getMasters() {
-            // return $http.get('/data/masters.json', {
-            return $http.get('v3/master/list');
-            // return $http.get('master/list');
+        function getMasterDetail () {
+            return $http.get('/data/master_detail.json');
         }
 
-        function getCopiersList (type) {
-            return $http.get('/data/copiers.json');
+        function getMasterSummary () {
+            return $http.get('/data/master_summary.json');
         }
     }
 })();

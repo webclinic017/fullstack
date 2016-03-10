@@ -1,4 +1,156 @@
-.title {
-    margin-top: 100px;
-    color: #699;
+$font-trader-size-sm: 12px;
+$font-trader-size-lg: 20px;
+$font-trader-gray-color: $gray-dark;
+
+.trader_gray_color {
+    color: $font-trader-gray-color;
+    font-size: $font-trader-size-sm;
+}
+
+@include b(trader) {
+    margin-top: 84px;
+
+    @include e(basic) {
+        padding: 30px 0;
+        border-bottom: 1px solid $gray;
+        
+        .col-xs-2 {
+            width: 16%;
+            text-align: center;
+        }
+        .col-xs-3 {
+            width: 20%;
+            text-align: center;
+        }
+        .col-xs-7 {
+            width: 64%;
+            padding-top: 62px;
+        }
+
+        .col-xs-4 {
+            padding-left: 0px;
+            padding-right: 0px;
+            text-align: center;
+        }
+    }
+
+    @include e(info) {
+        padding: 30px 0 60px;
+    }
+
+    @include e(bg) {
+        background-color: $gray-lightest;
+        border-top: 1px solid $gray;
+        padding-bottom: 200px;
+    }
+}
+
+@include b(trader_avatar) {
+    @include e(wrapper) {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        position: relative;
+
+        > img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    @include e(number) {
+        position: absolute;
+        right: -5px;
+        bottom: 3px;
+        padding: 4px;
+        background-color: $brand-info;
+        color: #fff;
+        font-size: $font-trader-size-sm;
+        line-height: 12px;
+        border-radius: $border-radius-base;
+    }
+}
+
+@include b(trader_user) {
+    margin-top: 10px;
+    margin-bottom: 5px;
+
+    @include e(username) {
+        display: inline-block;
+        width: 70%;
+        vertical-align: middle;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    @include e(position) {
+        display: inline-block;
+        vertical-align: middle;
+        width: 26%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}
+
+@include b(trader_social) {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@include b(trader_profit) {
+    float: left;
+    width: 20%;
+    text-align: center;
+    border-right: 1px solid $gray;
+
+    &:last-child {
+        border: none;
+    }
+
+    @include e(item) {
+        padding-bottom: 2px;
+
+        > span {
+            font-size: $font-trader-size-lg;
+        }
+
+        > i {
+            font-style: normal;
+        }
+    }
+}
+
+@include b(trader_btn) {
+    padding-top: 20px;
+
+    @include e(profit) {
+        width: 100%;
+        white-space: nowrap;
+        padding-bottom: 5px;
+
+        > span {
+            color: $brand-info;
+        }
+    }
+
+    > .btn-default {
+        margin-top: 20px;
+    }
+}
+
+@include b(trader_message) {
+    padding: 2px 0;
+
+    @include e(item) {
+        float: left;
+        line-height: 20px;
+
+        &.trader_gray_color {
+            width: 93%;
+        }
+    }
 }
