@@ -109,15 +109,15 @@
                     }
                 })
                 .state('trader.subpage', {
-                    url: '/trader/:subpage',
+                    url: '/trader/:usercode/:subpage',
                     views: {
                         'list@trader': {
                             templateUrl: function ($stateParams) {
-                                $stateParams.subpage = $stateParams.subpage || 'current';
+                                $stateParams.subpage = $stateParams.subpage || 'summary';
                                 return '/views/trader/' + $stateParams.subpage + '.html';
                             },
                             controllerProvider: function ($stateParams) {
-                                $stateParams.subpage = $stateParams.subpage || 'current';
+                                $stateParams.subpage = $stateParams.subpage || 'summary';
                                 var ctrlPrefix = 'Trader';
                                 var ctrlSuffix = 'Controller';
                                 var ctrlRoot = modCtrlName($stateParams.subpage);
