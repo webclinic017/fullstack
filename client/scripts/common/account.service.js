@@ -14,12 +14,17 @@
         return service;
 
         function checkLogined() {
-            return $http.get('account/check_logined').then(function (data) {
+            return $http.get('/api/v1/check').then(function (data) {
+                if (data.is_succ) {
+                    return true;
+                } else {
+                    return false;
+                }
             });
         }
 
         function getPersonalInfo() {
-            return $http.get('account/get_personal_info').then(function (data) {
+            return $http.get('/api/v1/get_info').then(function (data) {
                 var personal = {};
 
                 angular.forEach(data, function (value, key) {

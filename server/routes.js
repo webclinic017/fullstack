@@ -8,7 +8,6 @@ var errors = require('./components/errors');
 var path = require('path');
 var url = require('url');
 var masterApi = require('./api/master');
-var accountApi = require('./api/account');
 
 module.exports = function (app) {
     app.use('/api', require('./api'));
@@ -76,15 +75,16 @@ module.exports = function (app) {
         });
     });
 
-    app.route('/test').get(function (req, res, next) {
-        accountApi.checkLogined(function (data) {
-            console.info(data);
-            if (data.is_succ) {
-                res.json('sss');
-            } else {
-                next();
-            }
-        });
+    app.route('/api_test').get(function (req, res, next) {
+        // accountApi.checkLogined(function (data) {
+        //     console.info(data);
+        //     if (data.is_succ) {
+        //         res.json('sss');
+        //     } else {
+        //         next();
+        //     }
+        // });
+        next();
     });
 
     app.route('/*').get(errors[404]);

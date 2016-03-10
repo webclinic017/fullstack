@@ -12,19 +12,6 @@ request.debug = apiCfg.debug;
 var options = apiCfg.options;
 
 var master = {
-    getMasters: getMasters
 };
 
 module.exports = master;
-
-function getMasters(callback) {
-    request(_.merge({
-        url: '/api/v3/master/list'
-    }, options), function (err, res, body) {
-        if (err) {
-           return console.error(err);
-        }
-        var data = JSON.parse(body);
-        callback(data);
-    });
-}
