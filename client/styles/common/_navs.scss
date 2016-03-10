@@ -109,7 +109,7 @@
         float: left;
 
         > a {
-            margin: 0 $navbar-margin-horizontal;
+            margin: 0 10px;
             padding: 33px 0 29px;
             line-height: $line-height-computed;
             text-decoration: none;
@@ -243,6 +243,42 @@
         background-color: $brand-primary;
     }
 }
+// 登录后 显示的 消息通知 头像
+.navbar-logined {
+    > li {
+        float: left;
+    }
+    .navbar-message {
+        display: inline-block;
+        margin-top: 20px;
+        margin-left: 10px;
+        width: 45px;
+        height: 45px;
+        @include img-normal($image-path-base + "navbar-message.png");
+    }
+    .navbar-photo {
+        position: relative;
+        top: 20px;
+    }
+    .navbar-con {
+        margin-left: 5px;
+    }
+    .navbar-name {
+        position: relative;
+        top: 20px;
+        color: $brand-primary;
+        font-size: 16px;
+    }
+    .navbar-quit {
+        position: relative;
+        left: -66px;
+        top: 45px;
+        color: $gray-dark;
+        font-size: 16px;
+    }
+
+}
+
 
 //== 侧边导航栏
 @include b(side_navbar) {
