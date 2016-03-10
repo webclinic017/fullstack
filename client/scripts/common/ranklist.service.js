@@ -22,8 +22,8 @@
          */
         function getMasters() {
             // return $http.get('/data/masters.json', {
-            // return $http.get('v3/master/list');
-            return $http.get('master/list');
+            return $http.get('v3/master/list');
+            // return $http.get('master/list');
         }
 
         function getCopiersList (type) {
