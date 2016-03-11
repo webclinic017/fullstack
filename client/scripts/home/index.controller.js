@@ -13,6 +13,8 @@
         $scope.hotProduct =[];  // 首页 热门的投资产品类型
         $scope.starMaster =[];  // 首页 明星高手
 
+        
+
         $scope.$watch('ngRepeatFinished', function() {
             product.getHomeHotScale().then(function (data) {
                 $scope.hotScale = data;
@@ -26,7 +28,7 @@
 
         product.getHomeStarMaster().then(function (data) {
             $scope.starMaster = data;
-            console.info(data);
+            // console.info(data);
         });
     }
 })();
