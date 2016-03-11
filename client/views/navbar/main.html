@@ -8,33 +8,37 @@
         </div>
     
         <!-- 未登录时 -->
-        <!-- <ul class="nav navbar-login navbar-right" ng-if="!userstatus.logined">
+        <ul class="nav navbar-login navbar-right" ng-if="!userstatus.logined">
             <li>
                 <a class="login" href="/space/#/account/login">登录</a>
             </li>
             <li>
                 <a class="signup" href="#">注册</a>
             </li>
-        </ul> -->
+        </ul>
     
         <!-- 登录后 -->
-        <ul class="nav navbar-right navbar-logined">
+        <ul class="nav navbar-right navbar-logined" ng-if="userstatus.logined">
             <li>
                 <div class="relative">
                     <a class="navbar-message" href=""></a>
-                    
+
+                    <!-- 有新消息时  显示 -->
+                    <span class="navbar-mes-num">3</span>
                 </div>
             </li>
             <li>
                 <div class="navbar-con float-right relative">
-                    <a class="navbar-name" href="/space/#/space/invest/current">{{personal.username}}昵称名字</a>
+                    <a class="navbar-name" href="/space/#/space/invest/current">{{personal.username}}昵称名字</a><br>
                     <a class="navbar-quit" href="">
                         <i class="fa fa-sign-out"></i>
                         退出
                     </a>
                 </div>
                 <div class="navbar-con float-right relative">
-                    <a class="navbar-photo" href="/space/#/space/invest/current">头像位置</a>
+                    <a class="navbar-photo" href="/space/#/space/invest/current">
+                        <img src="images/logo.png" alt="">
+                    </a>
                 </div>
             </li>
         </ul>

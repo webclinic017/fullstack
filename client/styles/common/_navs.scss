@@ -247,6 +247,7 @@
 .navbar-logined {
     > li {
         float: left;
+        margin-left: 10px;
     }
     .navbar-message {
         display: inline-block;
@@ -256,23 +257,42 @@
         height: 45px;
         @include img-normal($image-path-base + "navbar-message.png");
     }
+    .navbar-mes-num {
+        position: absolute;
+        top: 17px;
+        right: -5px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: $brand-primary;
+        border-radius: 50%;
+        font-size: 14px;
+        text-align: center;
+        color: $gray-base;
+    }
     .navbar-photo {
-        position: relative;
-        top: 20px;
+        a {
+            border: none;
+            &:hover {
+                border: none;
+            }
+        }
+        img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid $brand-primary;
+        }
     }
     .navbar-con {
-        margin-left: 5px;
+        margin-left: 10px;
+        margin-top: 20px;
     }
     .navbar-name {
-        position: relative;
-        top: 20px;
         color: $brand-primary;
         font-size: 16px;
     }
     .navbar-quit {
-        position: relative;
-        left: -66px;
-        top: 45px;
         color: $gray-dark;
         font-size: 16px;
     }
