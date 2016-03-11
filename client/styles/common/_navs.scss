@@ -109,9 +109,8 @@
         float: left;
 
         > a {
-            margin: 0 $navbar-margin-horizontal;
+            margin: 0 10px;
             padding: 33px 0 29px;
-            border-bottom: 2px solid transparent;
             line-height: $line-height-computed;
             text-decoration: none;
             font-size: $font-size-large;
@@ -120,14 +119,8 @@
             &:hover,
             &:active {
                 color: $brand-primary;
-                border-bottom-color: $brand-primary-dark;
+                border-bottom: 2px solid $brand-primary;
             }
-        }
-    }
-
-    .dropdown {
-        > a {
-            border-bottom: none;
         }
     }
     
@@ -143,6 +136,73 @@
 
     .dropdown-menu {
         top: 84px;
+    }
+}
+
+//== nav-tabs
+// --------------------------------------------------
+@include b(nav-tabs-wrapper) {
+    margin-bottom: -1px;
+    background-color: #fff;
+}
+@include b(nav-tabs) {
+    @extend .clearfix;
+    border: 1px solid $gray;
+    display: inline-block;
+    vertical-align: middle;
+
+    > li {
+    position: relative;
+    float: left;
+        margin-right: -1px;
+
+        &:first-child {
+            margin-left: -1px;
+        }
+
+        &:after {
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 100%;
+            height: 1px;
+            background-color: transparent;
+            content: '';
+        }
+
+        > a {
+            display: inline-block;
+            width: 100%;
+            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
+            border-top: 3px solid transparent;
+            margin-top: -1px;
+            padding: 15px 30px;
+            text-align: center;
+            color: $gray-dark; 
+        }    
+    }
+
+    > li.active {
+        > a {
+            border-color: $gray;
+            border-top-color: $brand-primary;
+            color: $gray-base;
+            background-color: $gray-lightest;
+        }
+
+        &:after {
+            background-color: $gray-lightest;
+        }
+    }
+
+    @include e(divider) {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 1px;
+        height: 20px;
+        background-color: $gray;
     }
 }
 
@@ -183,29 +243,133 @@
         background-color: $brand-primary;
     }
 }
+// 登录后 显示的 消息通知 头像
+.navbar-logined {
+    > li {
+        float: left;
+        margin-left: 10px;
+    }
+    .navbar-message {
+        display: inline-block;
+        margin-top: 20px;
+        margin-left: 10px;
+        width: 45px;
+        height: 45px;
+        @include img-normal($image-path-base + "navbar-message.png");
+    }
+    .navbar-mes-num {
+        position: absolute;
+        top: 17px;
+        right: -5px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: $brand-primary;
+        border-radius: 50%;
+        font-size: 14px;
+        text-align: center;
+        color: $gray-base;
+    }
+    .navbar-photo {
+        a {
+            border: none;
+            &:hover {
+                border: none;
+            }
+        }
+        img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 2px solid $brand-primary;
+        }
+    }
+    .navbar-con {
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    .navbar-name {
+        color: $brand-primary;
+        font-size: 16px;
+    }
+    .navbar-quit {
+        color: $gray-dark;
+        font-size: 16px;
+    }
+
+}
 
 
+//== 侧边导航栏
+@include b(side_navbar) {
+    background-color: $gray-base;
+    border-radius: $border-radius-base;
+    overflow: hidden;
 
+    @include e(title) {
+        margin: 0;
+        padding: 15px 25px 10px;
+        background-color: $gray-darkest;
+        font-weight: 400;
+        color: $gray;
+    }
 
+    @include e(menu) {
+        & > li {
+            padding-left: 30px;
+        }
 
+        & > li.active {
+            background-color: $brand-primary;
 
+            > a {
+                color: $gray-base;
+                border-bottom-color: transparent;
+                cursor: default;
+            }
 
+            > a:hover {
+                color: $gray-base;
+            }
+        }
 
+        & > li > a {
+            display: block;
+            padding: 10px 0;
+            color: $gray-dark;
+            border-bottom: 1px solid $gray-darkest;
+        }
 
+        & > li > a:hover {
+            color: $brand-primary;
+        }
+    }
+}
 
+//== 高手主页、个人中心 头部title
+@include b(navbar_summary) {
+    border: 1px solid $gray;
+    border-radius: $border-radius-base;
+    margin-top: 20px;
 
+    @include e(title) {
+        font-weight: normal;
+        margin: 0;
+        padding: 15px 0 15px 30px;
+        border-bottom: 1px solid $gray;
+    }
 
+    @include e(content) {
+        background-color: #fff;
+        padding: 0 40px;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @include e(divider) {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 0px;
+        height: 100%;
+        border-left: 1px dashed $gray;
+    }
+}

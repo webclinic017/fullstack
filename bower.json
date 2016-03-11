@@ -7,8 +7,8 @@
     "angular-resource": "1.2.16",
     "angular-cookies": "1.2.16",
     "angular-sanitize": "1.2.16",
-    "angular-route": "1.2.16",
     "angular-ui-router": "0.2.11",
+    "highcharts-release": "4.0.4",
     "bootstrap-datepicker": "~1.6.0"
   },
   "devDependencies": {

@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="trader_summary navbar_summary">
+        <h5 class="navbar_summary__title">交易概况</h5>
+        <div class="navbar_summary__content">
+            <div class="trader_main">
+                <div class="row">
+                    <div class="col-xs-4 trader_main__lt">
+                        <div class="trader_main__lt-item">
+                            <div class="trader_main__lt-num">
+                                <span>{{ summary.accuracy_rate || '0.00' }}</span>%
+                            </div>
+                            <div class="trader_gray_color">准确率</div>
+                        </div>
+                        <div class="trader_main__lt-item">
+                            <div class="trader_main__lt-num">
+                                <span>{{ summary.bond_max_rate || '0.00' }}</span>%
+                            </div>
+                            <div class="trader_gray_color">最大保证金占用</div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div tw-pie-chart data-pie-type="master"></div>
+                        <div class="trader_main__order">
+                            <span class="trader_order_profit">盈利订单</span>
+                            <span class="trader_order_loss">亏损订单</span>
+                        </div>
+                        <div class="trader_main__chart">
+                            <span class="num">{{ summary.order_sum }}</span>
+                            <br>
+                            <span class="trader_gray_color">平仓交易</span>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="trader_main__rt">
+                                    <div class="trader_gray_color">最大盈利</div>
+                                    <div>{{ summary.max_profit || '0.00' }}%</div>
+                                </div>
+                                <div class="trader_main__rt">
+                                    <div class="trader_gray_color">平均盈利</div>
+                                    <div>{{ summary.average_profit || '0.00'  }}%</div>
+                                </div>
+                                <div class="trader_main__rt no-border">
+                                    <div class="trader_gray_color">最小盈利</div>
+                                    <div>{{ summary.min_profit || '0.00' }}%</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <span class="navbar_summary__divider"></span>
+                                <div class="trader_main__rt">
+                                    <div class="trader_gray_color">最大亏损</div>
+                                    <div>{{ summary.max_loss || '0.00' }}%</div>
+                                </div>
+                                <div class="trader_main__rt">
+                                    <div class="trader_gray_color">平均亏损</div>
+                                    <div>{{ summary.average_loss || '0.00' }}%</div>
+                                </div>
+                                <div class="trader_main__rt no-border">
+                                    <div class="trader_gray_color">最小亏损</div>
+                                    <div>{{ summary.min_loss || '0.00' }}%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="navbar_summary">
+        <h5 class="navbar_summary__title">交易走势图</h5>
+        <div class="navbar_summary__content">
+            
+        </div>
+    </div>
+    <div class="navbar_summary">
+        <h5 class="navbar_summary__title">主要交易品种</h5>
+        <div class="navbar_summary__content">
+            
+        </div>
+    </div>
+</div>

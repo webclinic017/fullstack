@@ -10,7 +10,7 @@
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
-
+                
                 element.hover(function () {
                     $(this).addClass('open');
                 }, function () {

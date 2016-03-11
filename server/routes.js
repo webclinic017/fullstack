@@ -4,16 +4,15 @@
 
 'use strict';
 
-var errors = require('./components/errors');
 var path = require('path');
+var url = require('url');
 var masterApi = require('./api/master');
 
 module.exports = function (app) {
     app.use('/api', require('./api'));
     
     // All undefined asset or api routes should return a 404
-    app.route('/:url(api|auth|components|app|bower_components|assets)/*')
-        .get(errors[404]);
+    // app.route('/:url(api|auth|components|app|bower_components|assets)/*').get(errors[404]);
 
     // All other routes should redirect to the index.html
     // app.route('/*').get((req, res) => {
@@ -37,33 +36,76 @@ module.exports = function (app) {
 
 
     app.route('/ranklist').get(function (req, res) {
-        var masters = [];
-
-        masters = [
-                {
-                    username: '高手 1 号',
-                    usercode: '222'
-                }, {
-                    username: '高手 2 号',
-                    usercode: '222'
-                }, {
-                    username: '高手 3 号',
-                    usercode: '222'
-                }
-        ]
 
         res.render('ranklist.html', {
-            pageInfo: {
-            },
-            masters: masters
         });
     });
 
-    app.route('/web/copy').get(function (req, res) {
-        
-        res.render('web_copy.html', {
-            pageInfo: {
+    app.route('/trader').get(function (req, res) {
+
+        res.render('trader.html', {
+            master: {
+                username: '大洋彼岸的一条鱼',
+                avatar_path: '/avatar/525091_150.jpg',
+                position: '北京',
+                number: 1,
+                follow: 158,
+                fans: 1000,
+                copiers: 888,
+                experience: '10 年',
+                education: '东北亚皇家建筑大学梅河口分院三年十班最后一排靠窗户座位',
+                special: 'EA 加人工交易、短线交易',
+                strategy: '木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略',
+                desc: 'desc木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略'
             }
+        });
+    });
+
+    // 复制交易
+    app.route('/web/copy/:subpage(rules|select|become)').get(function (req, res) {
+        var subpage = req.params.subpage || 'rules';
+        var pageInfo = {
+            id: subpage
+        };
+
+        res.render('web_copy.html', {
+            pageInfo: pageInfo
+        });
+    });
+
+    // 交易
+    app.route('/web/trade/:subpage(product|time|tool)').get(function (req, res) {
+        var subpage = req.params.subpage || 'product';
+        var pageInfo = {
+            id: subpage
+        };
+
+        res.render('web_trade.html', {
+            pageInfo: pageInfo
+        });
+    });
+
+    app.route('/api_test').get(function (req, res, next) {
+        // accountApi.checkLogined(function (data) {
+        //     console.info(data);
+        //     if (data.is_succ) {
+        //         res.json('sss');
+        //     } else {
+        //         next();
+        //     }
+        // });
+        next();
+    });
+
+    app.route('/404').get(function (req, res) {
+        var viewFilePath = '404';
+        var statusCode = 404;
+        res.status(statusCode);
+        res.render(viewFilePath, {}, function (err, html) {
+            if (err) {
+                return res.json(statusCode);
+            }
+            res. send(html);
         });
     });
 };

@@ -1,1 +1,83 @@
-<h1>全部高手</h1>
+<div class="ranklist__bg ranklist__content">
+    <div class="container">
+        <div class="ranklist__nav">
+            <div class="row">
+                <div class="col-1-lg">
+                    <a class="nav_item" href="">综合排名</a>
+                </div>
+                <div class="col-1-sm">
+                    <a class="nav_item" href="">复制人数</a>
+                </div>
+                <div class="col-1">
+                    <a class="nav_item" href="">最低复制金额</a>
+                </div>
+                <div class="col-1">
+                    <a class="nav_item" href="">走势图</a>
+                </div>
+                <div class="col-1-sm">
+                    <a class="nav_item" href="">最大回撤</a>
+                </div>
+                <div class="col-1">
+                    <a class="nav_item" href="">收益率</a>
+                </div>
+                <div class="col-1">
+                    <a class="nav_item" href="">复制者盈利</a>
+                </div>
+                <div class="col-1-lg">
+                </div>
+            </div>
+        </div>
+        <ul class="ranklist__lst">
+            <li ng-repeat="rank in rankList" class="ranklist__lst_item">
+                <div class="row">
+                    <div class="col-1-lg">
+                        <div class="ranklist_info">
+                            <div class="ranklist_info__wrapper">
+                                <a href="/trader/#/trader/{{rank.usercode}}/summary" class="ranklist_info__avatar" target="_blank">
+                                    <img ng-src="{{ rank['link'] }}" alt="avatar">
+                                </a>
+                            </div>
+                            <div class="ranklist_info__wrapper">
+                                <div class="table">
+                                    <div class="table-cell">
+                                        <a class="ranklist_info__name" href="/trader/#/trader/{{rank.usercode}}/summary" title="{{ rank.username }}" target="_blank">
+                                            {{ rank.username || '**' }}
+                                        </a>
+                                        <span class="ranklist_info__number">
+                                            {{ rank.number }}#
+                                        </span>
+                                        <span class="ranklist_info__address">
+                                            <i class="fa fa-map-marker"></i>
+                                            {{ rank.address }}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-1-sm">
+                        <i class="fa fa-users"></i>{{ rank.copiers_sum || 0 }}
+                    </div>
+                    <div class="col-1">
+                        <i class="fa fa-dollar"></i>{{ rank.copy_money_min || '0.00' }}
+                    </div>
+                    <div class="col-1">
+                        <div tw-line-chart data-type="masterList"></div>
+                    </div>
+                    <div class="col-1-sm">
+                        {{ rank.drawdown || '0.00' }}%
+                    </div>
+                    <div class="col-1">
+                        {{ rank.profit || '0.00' }}%
+                    </div>
+                    <div class="col-1">
+                        <i class="fa fa-dollar"></i>{{ rank.profit_copiers || '0.00' }}
+                    </div>
+                    <div class="col-1-lg">
+                        <a class="btn btn-primary btn-sm" href="/trader/#/trader/{{rank.usercode}}/summary" target="_blank">复制</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>

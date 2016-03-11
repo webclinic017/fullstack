@@ -4,17 +4,45 @@
 
     angular.module('fullstackApp')
         .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-            $urlRouterProvider.otherwise('/invest/current');
+            $urlRouterProvider.otherwise('/404');
 
             $stateProvider
+                .state('account', {
+                    views: {
+                        '@': {
+                            templateUrl: '/views/account/layout.html',
+                            controller: '' 
+                        }
+                    }
+                })
+                .state('account.subpage', {
+                    url: '/account/:subpage',
+                    views: {
+                        'content@account': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'login';
+                                return '/views/account/' + $stateParams.subpage + '.html'; 
+                            },
+                            controllerProvider: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'login';
+                                var ctrlPrefix = 'Account';
+                                var ctrlSuffix = 'Controller';
+                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                return '';
+                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                            }
+                        }
+                    }
+                })
+
                 .state('space', {
                     views: {
                         '@': {
-                            templateUrl: '/views/common/layout-2.html',
+                            templateUrl: '/views/space/layout.html',
                             controller: ''
                         },
-                        'sidebar@space': {
-                            templateUrl: '/views/navbar/side.html',
+                        'side@space': {
+                            templateUrl: '/views/space/sidebar.html',
                             controller: ''
                         }
                     }
@@ -22,16 +50,18 @@
                 .state('space.invest', {
                     views: {
                         'content@space': {
-                            templateUrl: '/views/invest/layout.html',
+                            templateUrl: '/views/invest/index.html',
                             controller: ''
                         }
                     }
                 })
                 .state('space.invest.subpage', {
-                    url: '/invest/:subpage',
+                    authenticated: true,
+                    url: '/space/invest/:subpage',
                     views: {
                         '@space.invest': {
                             templateUrl: function ($stateParams) {
+                                console.info($stateParams);
                                 $stateParams.subpage = $stateParams.subpage || 'current';
                                 return '/views/invest/' + $stateParams.subpage + '.html';
                             },
@@ -48,6 +78,7 @@
                 })
                 .state('space.invite', {
                     url: '/space/invite',
+                    authenticated: true,
                     views: {
                         'content@space': {
                             templateUrl: '/views/invite/index.html',
@@ -56,42 +87,55 @@
                     }
                 })
 
+                // 排行榜
                 .state('ranklist', {
                     views: {
                         '@': {
                             templateUrl: '/views/ranklist/index.html',
+                            controller: 'RanklistIndexController'
+                        }
+                    }
+                })
+                .state('ranklist.masters', {
+                    url: '/ranklist/masters',
+                    views: {
+                        'list@ranklist': {
+                            templateUrl: '/views/ranklist/masters.html',
+                            controller: 'RanklistAllController'
+                        }
+                    }
+                })
+
+                // 高手主页
+                .state('trader', {
+                    views: {
+                        '@': {
+                            templateUrl: '/views/trader/list.html',
                             controller: ''
                         }
                     }
                 })
-                .state('ranklist.subpage', {
-                    url: '/ranklist/:subpage',
+                .state('trader.subpage', {
+                    url: '/trader/:usercode/:subpage',
                     views: {
-                        'list@ranklist': {
+                        'list@trader': {
                             templateUrl: function ($stateParams) {
-                                var subpage;
-                                $stateParams.subpage = $stateParams.subpage || 'all';
-                                subpage = $stateParams.subpage;
-
-                                if (subpage === 'all' || subpage === 'new') {
-                                    return '/views/ranklist/masters.html';
-                                } else {
-                                    return '/views/ranklist/copiers.html';
-                                }
+                                $stateParams.subpage = $stateParams.subpage || 'summary';
+                                return '/views/trader/' + $stateParams.subpage + '.html';
                             },
                             controllerProvider: function ($stateParams) {
-                                var subpage;
-                                $stateParams.subpage = $stateParams.subpage || 'all';
-                                subpage = $stateParams.subpage;
-
-                                if (subpage === 'all' || subpage === 'new') {
-                                    return 'RanklistMastersController';
-                                } else {
-                                    return 'RanklistCopiersController';
-                                }
+                                $stateParams.subpage = $stateParams.subpage || 'summary';
+                                var ctrlPrefix = 'Trader';
+                                var ctrlSuffix = 'Controller';
+                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
                             }
                         }
                     }
+                })
+
+                .state('404', {
+                    url: '/404'
                 });
 
             function modCtrlName(name) {
