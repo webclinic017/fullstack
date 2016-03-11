@@ -154,3 +154,15 @@ $font-trader-gray-color: $gray-dark;
         }
     }
 }
+
+@include b(trader_history) {
+    .table {
+        margin-top: 50px;
+    }
+}
+
+@include b(trader_current) {
+    .table {
+        margin-top: 50px;
+    }
+}

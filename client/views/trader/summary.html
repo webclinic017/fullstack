@@ -81,7 +81,7 @@
             <ul class="trader_type">
                 <li ng-repeat="bar in bars" class="trader_type__item row">
                     <div class="col-xs-4">
-                        <span class="trader_type__icon"></span>
+                        <span class="trader_type__icon icon-forex-{{ bar.symbol_mod.toLowerCase() }}"></span>
                         <span class="trader_type__tit">{{ bar.symbol_mod | symbolMod:'zh' }} ({{ bar.symbol_mod }})</span>
                     </div>
                     <div class="col-xs-8">

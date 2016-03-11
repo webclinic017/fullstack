@@ -10,12 +10,17 @@
     function TraderIndexController($scope, $state, trader) {
         $scope.master = {};
         var usercode;
-
-        usercode = $state.params.usercode;
-        // console.info(usercode);     // undefined  ?
+        
+        // usercode = $state.params.usercode;
+        // console.info(usercode);     // undefined  
 
         trader.getMasterDetail(usercode).then(function (data) {
             $scope.master = data;
+        });
+
+        $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
+            // console.info(toState);
+            // console.info(toParams);
         });
     }
 })();

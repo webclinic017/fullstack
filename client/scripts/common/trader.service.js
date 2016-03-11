@@ -10,6 +10,8 @@
         var service = {
             getMasterDetail: getMasterDetail,
             getMasterSummary: getMasterSummary,
+            getMasterCurrent: getMasterCurrent,
+            getMasterHistory: getMasterHistory,
             getMasterProfitLine: getMasterProfitLine,
             getMasterBarChart: getMasterBarChart
         };
@@ -42,6 +44,40 @@
                 params: {
                     user_code: usercode
                 }
+            });
+        }
+
+        /**
+         * Trader Service 获取高手持仓订单
+         * 高手主页
+         *
+         * @method getMasterHistory
+         * @param {Number} usercode
+         * @param {Number} page  第几页
+         * @param {Number} pagesize  单页订单数
+         */
+        function getMasterCurrent(usercode, page, pagesize) {
+            return $http.post('/action/public/v3/get_master_order_noauth', {
+                cros_user: usercode,
+                page: page,
+                pagesize: pagesize
+            });
+        }
+
+        /**
+         * Trader Service 获取高手历史交易
+         * 高手主页
+         *
+         * @method getMasterHistory
+         * @param {String} usercode
+         * @param {String} page         当前页
+         * @param {String} pagesize     每页显示数
+         */
+        function getMasterHistory (usercode, page, pagesize) {
+            return $http.post('/action/public/v3/get_history_noauth', {
+                cros_user: usercode,
+                page: page,
+                pagesize: pagesize
             });
         }
 

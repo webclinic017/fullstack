@@ -15,6 +15,18 @@
         font-size: $font-size-h3;
     }
 }
+// 文字滚动
+@include b (home-text-roll) {
+    height: 30px;
+    overflow: hidden;
+}
+.marquee {
+    overflow: hidden;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+}
+
 
 // 排行榜
 @include b (home-sec-master) {

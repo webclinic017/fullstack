@@ -111,12 +111,6 @@
     }
 
     @include e(icon) {
-        background-image: url("/data/test.png");
-        display: inline-block;
-        width: 50px;
-        height: 40px;
-        vertical-align: middle;
-        background-position: 50%;
         margin-right: 10px;
     }
 
