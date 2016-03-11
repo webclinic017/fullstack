@@ -1,94 +1,99 @@
 .pagination {
     display: inline-block;
+    padding-left: 0;
+    margin: $line-height-computed 0;
+    border-radius: $border-radius-lg;
 
-    > .previous,
-    > .next {
-        display: inline-block;
-        color: $gray;
-        padding: 0 10px;
-        height: 30px;
-        line-height: 30px;
-    }
-    > .pages {
-        display: inline-block;
-        position: relative;
-        // width: 60px;
-        padding: 0 10px;
-        height: 15px;
-        text-align: center;
-        line-height: 15px;
-        color: $gray;
-        border-left: 1px solid $gray-light;
-        border-right: 1px solid $gray-light;
+    > li {
+        display: inline;
+        > a,
+        > span {
+            position: relative;
+            float: left;
+            padding: $pagination-padding-vertical $pagination-padding-horizontal;
+            line-height: $line-height-base;
+            text-decoration: none;
+            color: $pagination-color;
+            background-color: $pagination-bg;
+            border: 1px solid $pagination-border;
+            margin-left: 6px;
+            border-radius: $border-radius-lg;
+        }
 
-        > .now_page {
-            color: $brand-info;
+        &:first-child,
+        &:last-child {
+            > a,
+            > span {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            &.disabled {
+                > span,
+                > span:hover,
+                > span:focus,
+                > a,
+                > a:hover,
+                > a:focus {
+                    color: $pagination-disabled-color;
+                    background-color: $pagination-disabled-bg;
+                    cursor: $cursor-disabled;
+                    border-color: $pagination-border;
+                }
+            }       
+        }
+        &:first-child {
+            > a,
+            > span {
+                margin-right: 20px;
+                background-color: $pagination-lg-bg;
+                border-color: $pagination-lg-bg;
+
+                &:hover,
+                &:focus {
+                    color: $pagination-color;
+                    background-color: $pagination-lg-hover-bg;
+                    border-color: $pagination-lg-hover-bg;
+                }
+            } 
+        }
+        &:last-child {
+            > a,
+            > span {
+                margin-left: 26px;
+                background-color: $pagination-lg-bg;
+                border-color: $pagination-lg-bg;
+
+                &:hover,
+                &:focus {
+                    color: $pagination-color;
+                    background-color: $pagination-lg-hover-bg;
+                    border-color: $pagination-lg-hover-bg;
+                }
+            }    
         }
         
-        &.active {
-            > .pages_lst_box {
-                display: block;
-            }
-        }
+    }
 
-        > .pages_lst_box {
-            max-height: 150px;
-            overflow: hidden;
-            overflow-y: auto;
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            margin-left: -30px;
-            display: none;
-            border: 1px solid $gray-light;
-            border-radius: $border-radius-base;
-            box-shadow: 0px 0px 2px 1px $gray-light;
-            z-index: 1000;
-
-            > .pages_lst {
-                > li {
-                    > a,
-                    > span {
-                        position: relative;
-                        float: left;
-                        width: 60px;
-                        height: 30px;
-                        text-align: center;
-                        line-height: 30px;
-                        text-decoration: none;
-                        font-size: 12px;
-                        color: $pagination-color;
-                        background-color: #fff;
-                    }
-                }
-
-                > li > a,
-                > li > span {
-                    &:hover,
-                    &:focus {
-                        color: $pagination-hover-color;
-                        background-color: $pagination-hover-bg;
-                        border-color: $pagination-hover-border;
-                    }
-                }
-
-                > .active > a,
-                > .active > span {
-                    &,
-                    &:hover,
-                    &:focus {
-                        z-index: 2;
-                        color: $pagination-active-color;
-                        background-color: $pagination-active-bg;
-                        border-color: $pagination-active-border;
-                        cursor: default;
-                    }
-                }
-            }
+    > li > a,
+    > li > span {
+        &:hover,
+        &:focus {
+            color: $pagination-hover-color;
+            background-color: $pagination-hover-bg;
+            border-color: $pagination-hover-border;
         }
     }
 
-    .disabled {
-        color: $pagination-disabled-color;
+    > .active > a,
+    > .active > span {
+        &,
+        &:hover,
+        &:focus {
+            z-index: 2;
+            color: $pagination-active-color;
+            background-color: $pagination-active-bg;
+            border-color: $pagination-active-border;
+            cursor: default;
+        }
     }
 }
