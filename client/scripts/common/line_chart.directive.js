@@ -4,7 +4,7 @@
 
     angular.module('fullstackApp').directive('twLineChart', twLineChart);
 
-    twLineChart.$inject = []
+    twLineChart.$inject = [];
 
     function twLineChart() {
         var options = {

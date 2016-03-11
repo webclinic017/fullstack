@@ -1,0 +1,73 @@
+   <!-- 热门交易资产 -->
+    <div class="home-sec-asset">
+        <div class="container">
+            <div class="why-title text-center mg-tp-50">
+                <p class="text-center">热门交易资产</p>
+                <span class="why-title__line1">&nbsp;&nbsp;</span>
+            </div>
+
+             <div class="home-asset mg-tp-50 mg-bt-100">
+                <div class="row home-asset">
+                    <div class="col-xs-5">
+                        <ul class="">
+                            <li>
+                                <div class="home-asset__gray">
+                                    <img src="" alt="">
+                                    <a class="btn btn-sm btn-primary" href="">fdfasfdaf</a>
+                                </div>
+                                <div class="home-asset__white">
+                                    <p>现货黄金（XAUUSD）</p>
+                                    <p>
+                                        <span class="font-danger">$1074.45</span>
+                                        <span class="font-success">$1074.45</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="home-asset__gray">
+                                    <img src="" alt="">
+                                    <a class="btn btn-sm btn-primary" href="">fdfasfdaf</a>
+                                </div>
+                                <div class="home-asset__white">
+                                    <p>现货黄金（XAUUSD）</p>
+                                    <p>
+                                        <span class="font-danger">$1074.45</span>
+                                        <span class="font-success">$1074.45</span>
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="home-asset__gray">
+                                    <img src="" alt="">
+                                    <a class="btn btn-sm btn-primary" href="">fdfasfdaf</a>
+                                </div>
+                                <div class="home-asset__white">
+                                    <p>现货黄金（XAUUSD）</p>
+                                    <p>
+                                        <span class="font-danger">$1074.45</span>
+                                        <span class="font-success">$1074.45</span>
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-6">
+                        <h2 class="mg-bt-30">投资者占比</h2>
+                        <!-- eg -->
+                        <div class="mg-bt-30" ng-repeat="scale in hotScale" tw-progress>
+                            <div class="progress-title">
+                                {{ scale.name }}
+                            </div>
+                            <div class="progress" >
+                                <div class="scale"></div>
+                                <div class="circle">
+                                    {{ scale.number }}%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

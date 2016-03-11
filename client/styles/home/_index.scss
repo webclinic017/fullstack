@@ -24,6 +24,18 @@
         margin-top: -20px;
         text-align: center;
     }
+
+    .ranklist__content {
+        padding-bottom: 0px;
+        background: $gray;
+    }
+    .ranklist__lst {
+        margin-bottom: 100px;
+        border: 1px solid #ddd;
+    }
+    .ranklist__lst_item {
+        background: #fafafa;
+    }
 }
 
 // 明星交易高手
@@ -31,10 +43,91 @@
     background: #fff;
 }
 
+@include b (home-star) {
+
+    @include e (title) {
+        text-align: center;
+        font-size: $font-size-h2;
+    }
+
+    @include e (tip) {
+        text-align: center;
+        color: $gray-dark;
+        font-size: $font-size-h5;
+    }
+    @include e (line) {
+        display: inline-block;
+        width: 100%;
+        height: 10px;
+        @include img-normal($image-path-home + "line.png");
+        background-size: 100%;
+    }
+    @include e (number) {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    @include e (tip1) {
+        font-size: 12px;
+        margin-top: -10px;
+    }
+    @include e (method) {
+        padding: 3px 6px;
+        border: 1px solid $gray-darker;
+        color: $gray-darker;
+    }
+}
+
 // 首页资产
 @include b (home-sec-asset) {
     background: $gray;    
 }
+@include b (home-asset) {
+    font-size: $font-size-base;
+
+    li {
+        float: left;
+
+        div:last-child {
+            text-align: left;
+            padding-left: 10px;
+        }
+    }
+
+    li:first-child {
+        width: 100%;
+
+        .home-asset__gray {
+            padding: 50px 0;
+        }
+    }
+    li:nth-child(2) {
+        width: 48%;
+    }
+    li:nth-child(3) {
+        width: 48%;
+        float: right;
+    }
+
+    @include e (gray) {
+        padding: 40px 0;
+        background: #363636;
+        text-align: center;
+    }
+
+    @include e (white) {
+        padding-top: 10px;
+        background: #fff;
+
+        p:last-child {
+            margin-top: -8px;
+            padding-bottom: 5px;
+        }
+    }
+
+
+}
+
+
 // 行业大师
 @include b (home-sec-eg) {
     @include img-normal($image-path-home + "home-eg-bg.png");

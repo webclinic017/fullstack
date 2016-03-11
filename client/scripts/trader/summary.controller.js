@@ -45,5 +45,10 @@
             // console.info(data);
             $scope.$broadcast('paintLineChart', data.data);
         });
+        
+        trader.getMasterBarChart(usercode).then(function (data) {
+            // console.info(data);
+            $scope.bars = data;
+        });
     }
 })();

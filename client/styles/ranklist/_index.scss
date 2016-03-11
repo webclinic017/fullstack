@@ -61,6 +61,10 @@ $ranklist-item-height: 120px;
             background-color: #fff;
         }
 
+        &:hover {
+            background-color: $gray;
+        }
+
         .col-1, .col-1-sm, .col-1-lg {
             white-space: nowrap;
             
