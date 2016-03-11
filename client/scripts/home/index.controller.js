@@ -15,7 +15,7 @@
 
         $scope.$watch('ngRepeatFinished', function() {
             product.getHomeHotScale().then(function (data) {
-                // $scope.hotScale = data;
+                $scope.hotScale = data;
             });
         });
 
