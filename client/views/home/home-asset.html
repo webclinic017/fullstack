@@ -1,3 +1,112 @@
+   <!-- 明星高手 -->
+    <div class="home-sec-starmaster">
+        <div class="container">
+            <div class="why-title text-center mg-tp-50">
+                <p class="text-center">谁是明星交易高手</p>
+                <span class="why-title__line1">&nbsp;&nbsp;</span>
+            </div>
+            <p class="home-sec-master__text1">
+                根据你自己的喜好从最受捧的交易高手中选择跟随，自动复制订单，像高手一样交易，才能成为高手。
+            </p>
+            
+            <div class="home-star row mg-tp-50">
+                <div class="col-xs-3" ng-repeat="star in starMaster">
+                    <img src="images/home/star-z.png" alt="">
+                    <!-- <p> {{star.code}} </p> -->
+                    <div class="mg-tp-20 text-center">
+                        <p class="home-star__title">{{star.name}}</p>
+                        <p class="home-star__tip">{{star.info}}</p>
+                        <span class="home-star__line"></span>
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-5">
+                                <p><span class="home-star__number">{{star.total}}</span>%</p>
+                                <p class="home-star__tip1">累计收益率</p>
+                                <a class="home-star__method" href="">投资策略</a>
+                            </div>
+                            <div class="col-xs-5">
+                                <p><span class="home-star__number">{{star.follow}}</span></p>
+                                <p class="home-star__tip1">跟随人数</p>
+                                <a class="home-star__method" href="">投资策略</a>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-xs-3">
+                    <img src="images/home/star-li.png" alt="">
+                    <div class="mg-tp-20 text-center">
+                        <p class="home-star__title">李小姐</p>
+                        <p class="home-star__tip">某公司创始人</p>
+                        <span class="home-star__line"></span>
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-5">
+                                <p><span class="home-star__number">150</span>%</p>
+                                <p class="home-star__tip1">累计收益率</p>
+                                <a class="home-star__method" href="">投资策略</a>
+                            </div>
+                            <div class="col-xs-5">
+                                <p><span class="home-star__number">980</span></p>
+                                <p class="home-star__tip1">跟随人数</p>
+                                <a class="home-star__method" href="">投资策略</a>
+                            </div>
+                            <div class="col-xs-1"></div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <img src="images/home/star-w.png" alt="">
+                    <div class="mg-tp-20 text-center">
+                        <p class="home-star__title">王先生</p>
+                        <p class="home-star__tip">某公司创始人</p>
+                        <span class="home-star__line"></span>
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-5">
+                                <p><span class="home-star__number">150</span>%</p>
+                                <p class="home-star__tip1">累计收益率</p>
+                                <a class="home-star__method" href="">投资策略</a>
+                            </div>
+                            <div class="col-xs-5">
+                                <p><span class="home-star__number">980</span></p>
+                                <p class="home-star__tip1">跟随人数</p>
+                                <a class="home-star__method" href="">投资策略</a>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <img src="images/home/star-zhang.png" alt="">
+                    <div class="mg-tp-20 text-center">
+                        <p class="home-star__title">张先生</p>
+                        <p class="home-star__tip">某公司创始人</p>
+                        <span class="home-star__line"></span>
+                        <div class="row">
+                            <div class="col-xs-1"></div>
+                            <div class="col-xs-5">
+                                <p><span class="home-star__number">150</span>%</p>
+                                <p class="home-star__tip1">累计收益率</p>
+                                <a class="home-star__method" href="">投资策略</a>
+                            </div>
+                            <div class="col-xs-5">
+                                <p><span class="home-star__number">980</span></p>
+                                <p class="home-star__tip1">跟随人数</p>
+                                <a class="home-star__method" href="">投资策略</a>
+                            </div>
+                            <div class="col-xs-1"></div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+            <div class="text-center mg-tp-50 mg-bt-100">
+                <a class="btn btn-primary btn-lg" href="">查看高手榜</a>
+            </div>
+        </div>
+    </div>
    <!-- 热门交易资产 -->
     <div class="home-sec-asset">
         <div class="container">
@@ -10,42 +119,18 @@
                 <div class="row home-asset">
                     <div class="col-xs-5">
                         <ul class="">
-                            <li>
+                            <li ng-repeat="product in hotProduct">
                                 <div class="home-asset__gray">
                                     <img src="" alt="">
-                                    <a class="btn btn-sm btn-primary" href="">fdfasfdaf</a>
+                                    <a class="btn btn-sm btn-primary" href="">
+                                        {{product.code}}
+                                    </a>
                                 </div>
                                 <div class="home-asset__white">
-                                    <p>现货黄金（XAUUSD）</p>
+                                    <p>{{product.name}}</p>
                                     <p>
-                                        <span class="font-danger">$1074.45</span>
-                                        <span class="font-success">$1074.45</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="home-asset__gray">
-                                    <img src="" alt="">
-                                    <a class="btn btn-sm btn-primary" href="">fdfasfdaf</a>
-                                </div>
-                                <div class="home-asset__white">
-                                    <p>现货黄金（XAUUSD）</p>
-                                    <p>
-                                        <span class="font-danger">$1074.45</span>
-                                        <span class="font-success">$1074.45</span>
-                                    </p>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="home-asset__gray">
-                                    <img src="" alt="">
-                                    <a class="btn btn-sm btn-primary" href="">fdfasfdaf</a>
-                                </div>
-                                <div class="home-asset__white">
-                                    <p>现货黄金（XAUUSD）</p>
-                                    <p>
-                                        <span class="font-danger">$1074.45</span>
-                                        <span class="font-success">$1074.45</span>
+                                        <span class="font-danger">${{product.profit}} &nbsp;&nbsp;</span>
+                                        <span class="font-success"> ${{product.loss}}</span>
                                     </p>
                                 </div>
                             </li>
