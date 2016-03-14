@@ -5,12 +5,13 @@
     angular.module('fullstackApp')
         .controller('TraderHistoryController', TraderHistoryController);
 
-    TraderHistoryController.$inject = ['$scope'];
+    TraderHistoryController.$inject = ['$scope', '$state', 'trader'];
 
-    function TraderHistoryController($scope) {
+    function TraderHistoryController($scope, $state, trader) {
+        $scope.orders = [];
         $scope.pagebar = {
             config: {
-                total: 2, // 总页数
+                // total: , // 总页数
                 page: 1    
             },
             pages: [],
@@ -19,23 +20,36 @@
             getList: getList           
         };
 
-        var pagesize = 5;
-        // var usercode = $state.params.usercode;
+        var pagesize = 8;
+        var usercode = $state.params.usercode;
 
-        // getList(1);
+        getList(1);
 
         function getList (page) {
-            // master.getMasterHistory(usercode, page, pagesize).then(function (data) {
-            //     // console.info(data);
-            //     $scope.orders = data.data;
+            trader.getMasterHistory(usercode, page, pagesize).then(function (data) {
+                // console.info(data);
+                $scope.orders = data.data;
 
-            //     $scope.$broadcast('hideLoadingImg');
+                // $scope.$broadcast('hideLoadingImg');
                 
-            //     angular.extend($scope.pagebar.config, {
-            //         total: utils.getTotal(data.sum, pagesize),
-            //         page: page
-            //     }); 
-            // });
+                angular.extend($scope.pagebar.config, {
+                    total: getTotal(data.sum, pagesize),
+                    page: page
+                }); 
+            });
+        }
+
+        function getTotal(sum, pagesize) {
+            var total;
+            sum = parseInt(sum, 10); // list item 总个数
+            pagesize = parseInt(pagesize, 10); // 单页显示数
+
+            if (sum % pagesize > 0) {
+                total = parseInt(sum / pagesize) + 1;
+            } else {
+                total = parseInt(sum / pagesize);
+            }
+            return total;
         }
     }
 })();

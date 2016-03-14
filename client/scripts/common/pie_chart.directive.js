@@ -61,7 +61,7 @@
         return {
             restrict: 'A',
             replace: true,
-            template: '<div class="pie_chart"></div>',
+            template: '<div class="pie_chart"><img src="/ngsrc/loading.gif"></div>',
             link: function (scope, element, attrs) {
                 var $el = $(element);
                 var type = attrs.pieType;

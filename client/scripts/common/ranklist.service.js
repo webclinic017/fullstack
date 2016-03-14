@@ -8,7 +8,7 @@
 
     function ranklist($http) {
         var service = {
-            getMasters: getMasters,
+            getMastersList: getMastersList,
             getCopiersList: getCopiersList
         };
         return service;
@@ -17,15 +17,21 @@
          * Ranklist Service 获取高手列表
          * 排行榜 
          *
-         * @method getMasters
+         * @method getMastersList
          * 
          */
-        function getMasters() {
+        function getMastersList() {
             // return $http.get('/data/masters.json', {
-            return $http.get('v3/master/list');
-            // return $http.get('master/list');
+            return $http.get('/api/v3/master/list');
         }
 
+        /**
+         * Ranklist Service 获取复制者列表
+         * 排行榜 
+         *
+         * @method getCopiersList
+         * 
+         */
         function getCopiersList (type) {
             return $http.get('/data/copiers.json');
         }
