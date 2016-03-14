@@ -12,21 +12,33 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>买入 EUR/USD</td>
-                    <td>$1.0344</td>
-                    <td>$1.0344</td>
-                    <td>365 天</td>
-                    <td>9999.00</td>
-                    <td>$123.22</td>
-                </tr>
-                <tr>
-                    <td>买入 EUR/USD</td>
-                    <td>$1.0344</td>
-                    <td>$1.0344</td>
-                    <td>365 天</td>
-                    <td>9999.00</td>
-                    <td>$123.22</td>
+                <tr ng-repeat="order in orders">
+                    <td>
+                        <span class="icon-forex-{{ order.symbol.toLowerCase() }}">
+                            
+                        </span>
+                        <span>
+                            &nbsp;&nbsp;{{ order.action ? '卖出' : '买入' }}
+                        </span>
+                        <span class="font-info">
+                            {{ order.symbol | symbolMod:'zh' }}
+                        </span>
+                    </td>
+                    <td>
+                        <i class="fa fa-dollar"></i>{{ order.open_price }}
+                    </td>
+                    <td>
+                        <i class="fa fa-dollar"></i>{{ order.close_price }}
+                    </td>
+                    <td>
+                        {{ order.ago | duration }}
+                    </td>
+                    <td ng-class="{'font-danger': order.profit.indexOf('-') >= 0, 'font-success': order.profit.indexOf('-') < 0}">
+                        {{ order.points }}
+                    </td>
+                    <td ng-class="{'font-danger': order.profit.indexOf('-') >= 0, 'font-success': order.profit.indexOf('-') < 0}">
+                        <i class="fa fa-dollar"></i>{{ order.profit }}
+                    </td>
                 </tr>
             </tbody>
         </table>

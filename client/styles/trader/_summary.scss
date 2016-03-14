@@ -17,7 +17,6 @@
     .pie_chart {
         height: 200px;
         margin-top: -40px;
-        position: relative;
         z-index: 1;
     }
 
@@ -91,9 +90,31 @@
 }
 
 @include b(trader_chart) {
-
+    .line_chart {
+        height: 400px;
+        padding: 40px 0;
+        text-align: center;
+        line-height: 400px;
+    }
 }
 
 @include b(trader_type) {
+    padding: 10px 0;
 
+    @include e(item) {
+        padding: 30px 0;
+        border-bottom: 1px solid $gray;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    @include e(icon) {
+        margin-right: 10px;
+    }
+
+    @include e(tit) {
+        color: $gray-darker;
+    }
 }
