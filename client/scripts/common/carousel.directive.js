@@ -11,6 +11,7 @@
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
+
                 
                 var interval,
                     i = 0,
@@ -30,27 +31,23 @@
                     interval = setInterval(slide, 2000);
                 });
 
-                 function slide () {
-                    var divStr = '.carousel-inner div:eq(' + i + ')';
-                    $(divStr).show().siblings().hide();
-                    var liStr = '.carousel-indicators li:eq(' + i + ')';
-                    $(liStr).addClass('current').siblings().removeClass('current');
+                function slide () {
+                    $('.carousel-inner div').eq(i).addClass('active').siblings().removeClass('active');
+                    $('.carousel-indicators li').eq(i).addClass('current').siblings().removeClass('current');
                     i++;
                     if (i >= inLength) {
                         i = 0;
                     }
                 }
 
-                $('.carousel-indicators li').click(function() {
+                $('.carousel-indicators li').mouseover(function() {
+                    clearInterval(interval);
+
                     var id = $(this).index();
+                    console.info(id);
 
-                    var divSlide = '.carousel-inner div:eq(' + id + ')';
-                    var liDot = '.carousel-indicators li:eq(' + id + ')';
-
-                    $(divSlide).addClass('active').siblings().removeClass('active');
-                    $(liDot).addClass('current').siblings().removeClass('current');
-
-
+                    $('.carousel-inner div').eq(id).addClass('active').siblings().removeClass('active');
+                    $('.carousel-indicators li').eq(id).addClass('current').siblings().removeClass('current');
                 });
  
             }

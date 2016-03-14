@@ -15,6 +15,18 @@
         font-size: $font-size-h3;
     }
 }
+// 文字滚动
+@include b (home-text-roll) {
+    height: 30px;
+    overflow: hidden;
+}
+.marquee {
+    overflow: hidden;
+    height: 30px;
+    width: 100%;
+    text-align: center;
+}
+
 
 // 排行榜
 @include b (home-sec-master) {
@@ -97,7 +109,7 @@
         width: 100%;
 
         .home-asset__gray {
-            padding: 50px 0;
+            // padding: 50px 0;
         }
     }
     li:nth-child(2) {
@@ -107,9 +119,14 @@
         width: 48%;
         float: right;
     }
+    @include e (icon) {
+        width: 100px;
+        height: 80px;
+        background-size: 100px 80px;
+    }
 
     @include e (gray) {
-        padding: 40px 0;
+        padding: 25px 0;
         background: #363636;
         text-align: center;
     }

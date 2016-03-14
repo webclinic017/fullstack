@@ -12,8 +12,8 @@
 
         // var param = $state.params.subpage;
 
-        ranklist.getMasters().then(function (data) {
-            console.info(data);
+        ranklist.getMastersList().then(function (data) {
+            // console.info(data);
             $scope.rankList = data.data;
         });
     }
