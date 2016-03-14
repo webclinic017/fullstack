@@ -51,10 +51,10 @@
          * Trader Service 获取高手持仓订单
          * 高手主页
          *
-         * @method getMasterHistory
+         * @method getMasterCurrent
          * @param {Number} usercode
-         * @param {Number} page  第几页
-         * @param {Number} pagesize  单页订单数
+         * @param {Number} page  当前页
+         * @param {Number} pagesize  每页显示数
          */
         function getMasterCurrent(usercode, page, pagesize) {
             return $http.post('/action/public/v3/get_master_order_noauth', {
@@ -69,9 +69,9 @@
          * 高手主页
          *
          * @method getMasterHistory
-         * @param {String} usercode
-         * @param {String} page         当前页
-         * @param {String} pagesize     每页显示数
+         * @param {Number} usercode
+         * @param {Number} page         当前页
+         * @param {Number} pagesize     每页显示数
          */
         function getMasterHistory (usercode, page, pagesize) {
             return $http.post('/action/public/v3/get_history_noauth', {

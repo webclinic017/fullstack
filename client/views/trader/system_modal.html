@@ -1,0 +1,71 @@
+<div class="system_modal">
+    <button class="close" ng-click="closeModal()">X</button>
+
+    <h5 class="system_modal__title">
+        系统提示
+    </h5>
+
+    <div class="system_modal__content" ng-if="modal.type === 'login'">
+        <p class="system_modal__info">
+            无法进行{{ modal.info }}操作
+        </p>
+        <p class="system_modal__tip">
+            由于您没有登录，无法{{ modal.info }}高手
+        </p>
+        
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()" href="">
+                立即登录
+            </a>
+        </p>
+    </div>
+
+    <div class="system_modal__content" ng-if="modal.type === 'verify'">
+        <p class="system_modal__info">
+            无法进行复制操作
+        </p>
+        <p class="system_modal__tip">
+            实名认证后才能复制高手
+        </p>
+        
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()" href="">
+                实名认证
+            </a>
+        </p>
+    </div>
+
+    <div class="system_modal__content" ng-if="modal.type === 'amount'">
+        <p class="system_modal__info">
+            无法进行复制操作
+        </p>
+        <p class="system_modal__tip">
+            您的可用复制金额不足，无法复制高手
+        </p>
+
+        <p class="system_modal__tip font-danger">
+            高手最低复制金额为 <i class="fa fa-dollar"></i>{{ modal.info.toFixed(2) }} 请先充值
+        </p>
+        
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()" href="">
+                立即充值
+            </a>
+        </p>
+    </div>
+
+    <div class="system_modal__content" ng-if="modal.type === 'isMaster'">
+        <p class="system_modal__info">
+            无法进行复制操作
+        </p>
+        <p class="system_modal__tip">
+            您已经是高手了，无法复制其他高手
+        </p>
+        
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()" href="">
+                确定
+            </a>
+        </p>
+    </div>
+</div>
