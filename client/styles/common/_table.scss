@@ -73,3 +73,22 @@ table {
         background-color: $table-bg-hover;
     }
 }
+
+
+// 如果是个人中心的table，就加 .table-personal 类
+// 已覆盖  table-hover 类
+.table-personal {
+
+    > thead > tr > th {
+        background-color: $gray-darker;
+        color: $gray-lightest;
+    }
+
+    > tbody {
+        color: $gray-base;
+    }
+
+    > tbody > tr:nth-child(2n) {
+        background-color: $gray-light; 
+    }
+}
