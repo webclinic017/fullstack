@@ -97,7 +97,7 @@ module.exports = function (app) {
         next();
     });
 
-    app.route('/404').get(function (req, res) {
+    app.route('/:url(404|*)').get(function (req, res) {
         var viewFilePath = '404';
         var statusCode = 404;
         res.status(statusCode);
