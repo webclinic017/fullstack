@@ -166,3 +166,9 @@ $font-trader-gray-color: $gray-dark;
         margin-top: 50px;
     }
 }
+
+@include b(trader_modal) {
+    @include e(label) {
+        font-size: 20px;
+    }
+}
