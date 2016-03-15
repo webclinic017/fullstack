@@ -13,7 +13,13 @@
             getMasterCurrent: getMasterCurrent,
             getMasterHistory: getMasterHistory,
             getMasterProfitLine: getMasterProfitLine,
-            getMasterBarChart: getMasterBarChart
+            getMasterBarChart: getMasterBarChart,
+            copy: copy,
+            cancelCopy: cancelCopy,
+            getAvaCopyAmount: getAvaCopyAmount,
+            getCopyRelation: getCopyRelation,
+            follow: follow,
+            getFollowRelation: getFollowRelation
         };
         return service;
 
@@ -108,6 +114,95 @@
             return $http.get('/data/bar_chart.json', {
                 params: {
                     user_code: usercode
+                }
+            });
+        }
+
+        /**
+         * Trader Service copy 某人
+         * 高手主页
+         *
+         * @method copy
+         * @param {String} usercode 复制高手的 usercode
+         * @param {Number} amount 复制金额
+         */
+        function copy(usercode, amount) {
+            return $http.post('/api/v1/copy', {
+                user_code: usercode,
+                amount: amount
+            });
+        }
+
+        /**
+         * Trader Service 取消 copy 某人
+         * 高手主页
+         *
+         * @method cancelCopy
+         * @param {String} usercode 复制高手的 user code
+         * @param {Boolean} isClose 是否平仓
+         * @param {String} copyType 模拟复制或者真实复制
+         */
+        function cancelCopy(usercode) {
+            return $http.post('/api/v1/uncopy', {
+                user_code: usercode,
+                auto_delete: true,
+                to: 'real'
+            });
+        }
+
+        /**
+         * Trader Service 获取可用复制金额
+         * 高手主页
+         *
+         * @method getAvaCopyAmount
+         */
+        function getAvaCopyAmount() {
+            return $http.get('/api/v1/copy_available_balance');
+        }
+
+        /**
+         * Trader Service 获取与高手的复制关系的相关信息
+         * 高手主页
+         *
+         * @method getCopyRelation
+         * @param {String} usercode 复制的高手的 usercode
+         */
+        function getCopyRelation(usercode) {
+            return $http.get('/api/v3/get_user_relationship', {
+                params: {
+                    cros_user: usercode
+                }
+            });
+        }
+
+        /**
+         * Trader Service 关注 & 取消关注
+         * 高手主页
+         *
+         * @method follow
+         * @param {String} usercode 关注的高手的 usercode
+         * @param {Number} action 0 取消关注 1 关注
+         */
+        function follow(usercode, action) {
+            return $http.get('/data/follow.json', {
+                params: {
+                    usercode: usercode,
+                    action: action
+                }
+            });
+        }
+
+        /**
+         * Trader Service 获取与高手的关注关系
+         * 高手主页
+         *
+         * @method getFollowRelation
+         * @param {String} usercode 关注的高手的 usercode
+         */
+        function getFollowRelation(usercode) {
+            return $http.get('/data/follow_relation.json', {
+                params: {
+                    usercode: usercode
                 }
             });
         }

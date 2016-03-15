@@ -1,0 +1,28 @@
+// 操作后的各种提示
+@include b(operate_tip) {
+    text-align: center;
+
+    @include e(title) {
+        margin-bottom: 20px;
+        line-height: 36px;
+        font-weight: 400;
+    }
+
+    @include e(succ_icon) {
+        vertical-align: bottom;
+        font-size: 36px;
+        color: $brand-info;
+    }
+
+    @include e(fail_icon) {
+        vertical-align: bottom;
+        font-size: 36px;
+        color: $brand-danger;
+    }
+
+
+    @include e(info) {
+        margin-bottom: 5px;
+        text-align: left;
+    }
+}
