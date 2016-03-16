@@ -1,0 +1,52 @@
+$font-space-size-sm: 12px;
+$font-space-size-lg: 20px;
+$font-space-gray-color: $gray-dark;
+
+.space_gray_color {
+    color: $font-space-gray-color;
+    font-size: $font-space-size-sm;
+}
+
+@include b(space_basic) {
+    margin-top: 50px;
+
+    .invite {
+        > .space_basic__item {
+            width: percentage(1 / 6);
+        }
+    }
+
+    @include e(info) {
+        margin-left: -20px;
+    }
+
+    @include e(item) {
+        float: left;
+        width: 16%;
+        text-align: center;
+        border-left: 1px solid $gray;
+        margin-top: 30px;
+
+        &:first-child {
+            border: none;
+        }
+
+        @include m(number) {
+            padding-bottom: 2px;
+
+            > span {
+                font-size: $font-space-size-lg;
+            }
+        }
+    }
+
+    @include e(btn) {
+        text-align: center;
+        float: left;
+        width: 20%;
+    }
+
+    @include e(notice) {
+        margin-top: 20px;
+    }
+}

@@ -142,6 +142,7 @@
 //== nav-tabs
 // --------------------------------------------------
 @include b(nav-tabs-wrapper) {
+    display: inline-block;
     margin-bottom: -1px;
     background-color: #fff;
 }
