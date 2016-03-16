@@ -10,13 +10,20 @@
     function TraderIndexController($scope, $state, trader, $timeout, $modal) {
         $scope.master = {};
         $scope.toCopy = toCopy;
+        $scope.toFollow = toFollow;
+        $scope.cancelFollow = cancelFollow;
+        $scope.isFollow = isFollow;
         var usercode,
-            detailId;
+            detailId,
+            avaCopyAmount;
 
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
             usercode = toParams.usercode;
             // console.info(usercode);
             getMasterDetail(usercode);
+            getCopyRelation(usercode);
+            getFollowRelation(usercode);
+            getAvaCopyAmount();
 
             $scope.$on('$stateChangeStart', function (event, toState, toParams) {
                 if (toParams.usercode !== usercode) {
@@ -25,12 +32,10 @@
             });
         });
 
-
-
         function getMasterDetail (usercode) {
             trader.getMasterDetail(usercode).then(function (data) {
                 // console.info(data);
-                $scope.master = data;
+                angular.extend($scope.master, data);
             });
 
             detailId = $timeout(function () {
@@ -38,8 +43,100 @@
             }, 5000);
         }
 
+        // 关注关系
+        function getFollowRelation (usercode) {
+            $scope.$watch('userstatus.logined', function (newVal, oldVal) {
+                if (newVal === true) {
+                    trader.getFollowRelation(usercode).then(function (data) {
+                        // console.info(data);
+                        $scope.master.follow = data.follow;
+                    });
+                }
+            });
+        }
+
+        function toFollow (action) {
+            // 判断是否登陆
+            if ($scope.userstatus.logined) {
+                trader.follow(usercode, action).then(function (data) {
+                    if (data.is_succ) {
+                        getFollowRelation(usercode);
+                    }
+                });
+            } else {
+                openSystemMdl('login', '关注');
+            }
+        }
+
+        function cancelFollow () {
+            $scope.master.follow_text = '取消关注';
+        }
+
+        function isFollow () {
+            $scope.master.follow_text = '已关注';
+        }
+
+        // 复制关系
+        function getCopyRelation(usercode) {
+            $scope.$watch('userstatus.logined', function (newVal, oldVal) {
+                if (newVal === true) {
+                    trader.getCopyRelation(usercode).then(function (data) {
+                        // 本人是否复制高手，值为 null（未复制）或者数字（复制金额）
+                        $scope.master.copied = data.copy_real;
+                    });
+                }
+            });
+        }
+
+        // 获取可用复制金额
+        function getAvaCopyAmount() {
+            $scope.$watch('userstatus.logined', function (newVal, oldVal) {
+
+                if (newVal === true) {
+                    trader.getAvaCopyAmount().then(function (data) {
+                        // console.info(data);
+                        if (data.is_succ) {
+                            avaCopyAmount = data.total_available;
+                        } else {
+                            avaCopyAmount = 0;
+                        }
+                    });
+                }
+            });
+        }
+
         function toCopy () {
-            openSystemMdl('verify');
+            // 判断是否登录
+            if ($scope.userstatus.logined) {
+                
+                // 判断是否是高手
+                if ($scope.personal.master !== true) {
+
+                    // 判断是否实名认证
+                    if ($scope.personal.verified === true) {
+                        var minCopyAmount = parseFloat($scope.master.copy_money_min, 10);
+
+                        if (typeof avaCopyAmount === 'undefined') {
+                            console.log('getting available copy amount');
+                            return;
+                        }
+                        avaCopyAmount = parseFloat(avaCopyAmount, 10);
+
+                        if (avaCopyAmount < minCopyAmount) {
+                            openSystemMdl('amount', minCopyAmount);
+                        } else {
+                            openCopyMdl();
+                        }
+
+                    } else {
+                        openSystemMdl('verify');
+                    }
+                } else {
+                    openSystemMdl('isMaster');
+                }
+            } else {
+                openSystemMdl('login', '复制');
+            }
         }
 
         function openSystemMdl(type, info) {
@@ -56,6 +153,28 @@
 
                     function closeModal() {
                         $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
+
+        function openCopyMdl() {
+
+            $modal.open({
+                templateUrl: '/views/trader/master_copy_modal.html',
+                controller: 'TraderCopyController',
+                size: 'sm',
+                backdrop: 'static',
+                resolve: {
+                    passedScope: function () {
+                        // 对传递的参数名称做修改
+                        $scope.master.minCopyAmount = $scope.master.copy_money_min;
+                        $scope.master.usercode = $scope.master.user_code;
+
+                        return {
+                            copiedTrader: $scope.master,
+                            avaCopyAmount: avaCopyAmount
+                        }
                     }
                 }
             });
