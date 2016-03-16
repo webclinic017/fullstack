@@ -1,0 +1,30 @@
+// deposit
+@include b(deposit) {
+    color: $gray-darker;
+
+    @include e (input-icon) {
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        font-size: 20px;
+        color: $brand-primary;
+    }
+
+    ul > li {
+        margin: 5px 0;
+    }
+
+    @include e(circle) {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border: 2px solid $brand-primary;
+        border-radius: 50%;
+    }
+
+    @include e (title-money) {
+        font-size: $font-size-h3;
+        line-height: 68px;
+    }
+
+}

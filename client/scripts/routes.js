@@ -56,7 +56,7 @@
                     }
                 })
                 .state('space.invest.subpage', {
-                    authenticated: true,
+                    // authenticated: true,
                     url: '/space/invest/:subpage',
                     views: {
                         '@space.invest': {
@@ -83,6 +83,34 @@
                         'content@space': {
                             templateUrl: '/views/invite/index.html',
                             controller: ''
+                        }
+                    }
+                })
+                .state('space.asset', {
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/asset/index.html',
+                            controller: ''
+                        }
+                    }
+                })
+                .state('space.asset.subpage', {
+                    // authenticated: true,
+                    url: '/space/asset/:subpage',
+                    views: {
+                        '@space.asset': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'deposit';
+                                return '/views/asset/' + $stateParams.subpage + '.html';
+                            },
+                            controllerProvider: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'deposit';
+                                var ctrlPrefix = 'Asset';
+                                var ctrlSuffix = 'Controller';
+                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                // return '';
+                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                            }
                         }
                     }
                 })

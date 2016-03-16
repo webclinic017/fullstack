@@ -1,0 +1,112 @@
+<div class="deposit mg-bt-100 pd-lf-20">
+    <div class="row">
+        <div class="col-xs-3 text-right deposit__title-money">充值金额</div>
+        <div class="col-xs-6">
+            <form name="depositForm" novalidate>
+                <div class="form-control-wrapper">
+                    <input class="form-control form-control-md"
+                           name="amount"
+                           type="text"
+                           required>
+
+                    <span class="deposit__input_icon" >$</span>
+
+                    <div ng-show="frontErr.amount.show">
+                        <p class="alert-error" ng-show="depositForm.amount.$error.required">
+                            请输入入金金额
+                        </p>
+
+                        <p class="alert-error" ng-show="depositForm.amount.$error.pattern">
+                            输入的金额为大于零的整数或者小数（小数点后最多两位数字）
+                        </p>
+
+                        <p class="alert-error" ng-show="depositForm.amount.$error.twformMin">
+                            入金金额最少为 {{deposit.minAmount}} 美金
+                        </p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-3">
+            <button class="btn btn-primary btn-md">充值</button>
+        </div>
+    </div>
+
+    <div class="mg-tp-30">
+        <p class="font-bold">赠金规则</p>
+        <ul>
+            <li>
+                <span class="deposit__circle"></span>
+                入金 2000 美金 - 4999 美金，赠金比例为入金金额的 10%，完成赠金金额除以 4 的标准手交易量后，可提取赠金；
+            </li>
+            <li>
+                <span class="deposit__circle"></span>
+                入金 5000 美金 - 9999 美金，赠金比例为入金金额的 12.5%，完成赠金金额除以 4 的标准手交易量后，可提取赠金；
+            </li>
+            <li>
+                <span class="deposit__circle"></span>
+                入金 10000 美金以上，赠金比例为入金金额的 15%，最高赠金不超过 10000 美金，完成赠金金额除以 4 标准手交易量后，可提取赠金。
+            </li>
+        </ul>
+    </div>
+    <div class="mg-tp-30">
+        <p class="font-bold">赠金提取条件</p>
+        <table class="table table-personal table-hover table-bordered">
+            <colgroup>
+                <col width="30%">
+                <col width="35%">
+                <col width="35%">
+            </colgroup>
+            <thead>
+                <th>入金金额</th>
+                <th>赠金比例</th>
+                <th>交易手数</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2000 - 4999 美金</td>
+                    <td>10.0%</td>
+                    <td>赠金金额 / 4</td>
+                </tr>
+                <tr>
+                    <td>5000 - 9999 美金</td>
+                    <td>12.5%</td>
+                    <td>赠金金额 / 4</td>
+                </tr>
+                <tr>
+                    <td>10000 美金以上</td>
+                    <td>15%，不超过 10000 美金</td>
+                    <td>赠金金额 / 4</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="mg-tp-20">举例：若某人入金8000美金，那么将会获得赠金数为1000美金（即8000*12.5%=1000），完成250手（1000/4=250）交易后，即可提取1000美金赠金。</p>
+    </div>
+    <div class="mg-tp-30">
+        <p class="font-bold">注意事项</p>
+        <ul>
+            <li>
+                1.完成规定交易手数之前，赠金不可抵消亏损若账户净值低于赠金金额的105%,TigerWit 老虎金融有权强行平仓；
+            </li>
+            <li>
+                2. 满足相应手数时，赠金可 100% 提取，若首次出金未完成相应的交易手数，则扣除相应赠金；
+            </li>
+            <li>
+                3. 本活动交易手数统计仅包含外汇，贵金属及能源类产品，CFD 股指产品交易手数不纳入统计范围；
+            </li>
+            <li>
+                4. 赠金政策仅限首次入金的用户；
+            </li>
+            <li>
+                5. 赠金将以 deposit bonus 的形式加入账户信用，扣除时将以 cancel deposit bonus 的形式扣除，客户接受赠金时视为了解相关信息、同意并授权 TigerWit 老虎金融相关权利。
+            </li>
+            <li>
+                6. 本活动最终解释权归 TigerWit 老虎金融所有。如有疑问，请咨询客服 400-809-8509。
+            </li>
+
+
+
+
+        </ul>
+    </div>
+</div>
