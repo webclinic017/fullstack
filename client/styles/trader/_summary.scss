@@ -117,4 +117,30 @@
     @include e(tit) {
         color: $gray-darker;
     }
+
+    .scale_bar {
+        height: 20px;
+        background-color: $gray;
+        border-radius: 2px;
+        margin-top: 10px;
+        position: relative;
+
+        .scale_bar__info {
+            position: absolute;
+            right: 10px;
+            top: -24px;
+            color: $gray-darker;
+        }
+
+        .scale_bar__item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 2px;
+            width: 0%;
+            height: 100%;
+            background-color: $brand-primary;
+            transition: width 1s ease-out;
+        }
+    }
 }

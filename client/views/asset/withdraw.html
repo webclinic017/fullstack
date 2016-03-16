@@ -1,15 +1,19 @@
-<div class="pd-lf-20 mg-tp-100">
+<div class="asset-public withdraw">
 
-    <div>如果未绑定银行卡显示这个</div>
+    <!-- <div>如果未绑定银行卡显示这个</div> -->
 
-    <div class="mg-tp-30">
+    <div>
         <div class="row">
+            <div class="col-xs-4 text-right">转入绑定银行卡：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+            <div class="col-xs-5 history__lt40">
+                <a class="font-info">点击绑定银行卡 ></a>
+            </div>
             <div class="col-xs-3"></div>
-            <div class="col-xs-6"></div>
         </div>
+        <br><br>
         <div class="row">
             <div class="col-xs-3 text-right deposit__title-money">提现金额</div>
-            <div class="col-xs-6">
+            <div class="col-xs-6 deposit__input">
                 <form name="withdrawForm" novalidate>
                     <div class="form-control-wrapper">
                         <input class="form-control"
@@ -23,7 +27,7 @@
                                ng-focus="hideErr('amount')"
                                ng-blur="showErr('amount')">
 
-                        <span class="asset__input_icon">$</span>
+                        <span class="asset__input-icon">$</span>
 
                         <div ng-show="frontErr.amount.show">
                             <p class="alert-error" ng-show="withdrawForm.amount.$error.required">
@@ -43,6 +47,14 @@
             </div>
             <div class="col-xs-3">
                 <button class="btn btn-primary btn-sm" ng-click="toWithdraw(amount)">提现</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-9 col-xs-offset-3">
+                <p>
+                    <span class="font-danger">*</span>
+                    可提取金额：<span>${{withdraw.maxAmount || '0.00'}}</span>
+                </p>
             </div>
         </div>
     </div>

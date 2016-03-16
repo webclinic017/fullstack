@@ -9,7 +9,9 @@
     function account($http) {
         var service = {
             checkLogined: checkLogined,
-            getPersonalInfo: getPersonalInfo
+            getPersonalInfo: getPersonalInfo,
+            getVerifyStatus: getVerifyStatus,
+            getAssetInfo: getAssetInfo
         };
         return service;
 
@@ -39,6 +41,35 @@
 
                 return personal;
             });
+        }
+
+        /**
+         * Account Service setting 获取实名认证状态
+         *
+         * @method getVerifyStatus
+         */
+        function getVerifyStatus() {
+            return $http.get('/api/v1/get_info', {
+                params: {
+                    type: 'Profile'
+                }
+            }).then(function (data) {
+                return {
+                    status: data.profile_check || 0,
+                    realname: data.realname,
+                    idNumber: data.id_no
+                }
+            });
+        }
+
+        /**
+         * Account Service 获取资产信息
+         * 余额、净值、浮动盈亏等
+         *
+         * @method getAssetInfo
+         */
+        function getAssetInfo() {
+            return $http.post('/action/public/v3/get_usercenter_asset');
         }
     }
 })();

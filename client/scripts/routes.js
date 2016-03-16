@@ -39,10 +39,14 @@
                     views: {
                         '@': {
                             templateUrl: '/views/space/layout.html',
-                            controller: ''
+                            controller: 'SpaceInfoController'
                         },
                         'side@space': {
                             templateUrl: '/views/space/sidebar.html',
+                            controller: ''
+                        },
+                        'basic@space': {
+                            templateUrl: '/views/space/basic.html',
                             controller: ''
                         }
                     }
@@ -61,7 +65,7 @@
                     views: {
                         '@space.invest': {
                             templateUrl: function ($stateParams) {
-                                console.info($stateParams);
+                                // console.info($stateParams);
                                 $stateParams.subpage = $stateParams.subpage || 'current';
                                 return '/views/invest/' + $stateParams.subpage + '.html';
                             },

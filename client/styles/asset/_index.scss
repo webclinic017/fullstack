@@ -1,7 +1,9 @@
 // asset
-@include b (asset) {
-    color: $gray-darker;
-    
+@include b (asset-public) {
+    color: $gray-darker;   
+    padding: 30px 20px 30px;
+    background-color: #fff;
+
     .form-control-wrapper {
         margin-bottom: 10px;
     }
@@ -18,7 +20,7 @@
 
 // deposit
 @include b(deposit) {
-
+    
 
     ul > li {
         margin: 5px 0;
@@ -41,4 +43,15 @@
         line-height: 40px;
     }
 
+}
+
+// @include b(withdraw) {
+
+// }
+
+@include b(history) {
+    
+    @include e (lt40) {
+        margin-left: -40px;
+    }  
 }

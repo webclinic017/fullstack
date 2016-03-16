@@ -23,7 +23,7 @@
             getList: getList
         };
 
-        var pagesize = 10; // 单页显示数
+        var pagesize = 20; // 单页显示数
 
 
         getList(1);
