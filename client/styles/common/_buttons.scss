@@ -44,6 +44,14 @@
     @include button-variant($btn-info-color, $btn-info-bg, $btn-info-border, $btn-info-hover-bg, $btn-info-hover-border);
 }
 
+.btn-gray {
+    @include button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border, $btn-gray-bg, $btn-gray-border);
+}
+
+.btn-gray-sm {
+    @include button-size(0px, 15px, 12px, 30px, $btn-border-radius);
+}
+
 .btn-sm {
     @include button-size(0px, $btn-padding-horizontal-sm, $btn-font-size-sm, $btn-height-sm, $btn-border-radius);
 }
