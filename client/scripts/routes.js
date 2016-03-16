@@ -114,6 +114,13 @@
                         }
                     }
                 })
+                .state('space.waiting', {
+                    url: '/space/waiting',
+                    views: {
+                        templateUrl: '/views/waiting.html',
+                        controller: ''
+                    }
+                })
 
                 // 排行榜
                 .state('ranklist', {

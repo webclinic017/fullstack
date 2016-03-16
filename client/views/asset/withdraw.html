@@ -1,10 +1,49 @@
 <div class="pd-lf-20 mg-tp-100">
-    <div>转入绑定银行卡：</div>
-    <div class="row">
-        <div class="col-xs-3"></div>
-        <div class="col-xs-6"></div>
-        <div class="col-xs-3">
-            <button class="btn btn-primary btn-md">提现</button>
+
+    <div>如果未绑定银行卡显示这个</div>
+
+    <div class="mg-tp-30">
+        <div class="row">
+            <div class="col-xs-3"></div>
+            <div class="col-xs-6"></div>
+        </div>
+        <div class="row">
+            <div class="col-xs-3 text-right deposit__title-money">提现金额</div>
+            <div class="col-xs-6">
+                <form name="withdrawForm" novalidate>
+                    <div class="form-control-wrapper">
+                        <input class="form-control"
+                               name="amount"
+                               type="text"
+                               required
+                               ng-class="{'form-control-error': frontErr.amount.show && withdrawForm.amount.$invalid}"
+                               ng-model="withdraw.amount"
+                               ng-pattern="frontErr.amount.reg"
+                               twform-max="{{personal.balance || 0}}"
+                               ng-focus="hideErr('amount')"
+                               ng-blur="showErr('amount')">
+
+                        <span class="asset__input_icon">$</span>
+
+                        <div ng-show="frontErr.amount.show">
+                            <p class="alert-error" ng-show="withdrawForm.amount.$error.required">
+                                请输入出金金额
+                            </p>
+
+                            <p class="alert-error" ng-show="withdrawForm.amount.$error.pattern">
+                                输入的金额为大于零的整数或者小数（小数点后最多两位数字）
+                            </p>
+
+                            <p class="alert-error" ng-show="withdrawForm.amount.$error.twformMax">
+                                出金金额最多为 {{personal.balance || 0}} 美金
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-3">
+                <button class="btn btn-primary btn-sm" ng-click="toWithdraw(amount)">提现</button>
+            </div>
         </div>
     </div>
 </div>

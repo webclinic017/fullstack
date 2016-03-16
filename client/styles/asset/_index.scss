@@ -1,14 +1,24 @@
-// deposit
-@include b(deposit) {
+// asset
+@include b (asset) {
     color: $gray-darker;
-
-    @include e (input-icon) {
+    
+    .form-control-wrapper {
+        margin-bottom: 10px;
+    }
+    .form-control {
+        padding-left: 30px;
+    }
+    .asset__input-icon {
         position: absolute;
         top: 10px;
         left: 15px;
-        font-size: 20px;
         color: $brand-primary;
     }
+}
+
+// deposit
+@include b(deposit) {
+
 
     ul > li {
         margin: 5px 0;
@@ -22,9 +32,13 @@
         border-radius: 50%;
     }
 
+    @include e (input) {
+        margin-top: 2px;
+    }
+
     @include e (title-money) {
         font-size: $font-size-h3;
-        line-height: 68px;
+        line-height: 40px;
     }
 
 }

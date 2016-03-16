@@ -11,11 +11,32 @@
     function utils($http, $window) {
 
         var service = {
+            getTotal: getTotal,
             formatDate: formatDate
         };
         return service;
 
-       
+
+        /*
+         * Utils Service 数据分页时获取总页数
+         *
+         * @method getTotal
+         * @param {Number} sum list item 总个数
+         * @param {Number} pagesize 单页显示数
+         */
+        function getTotal(sum, pagesize) {
+            var total;
+            sum = parseInt(sum, 10); // list item 总个数
+            pagesize = parseInt(pagesize, 10); // 单页显示数
+
+            if (sum % pagesize > 0) {
+                total = parseInt(sum / pagesize) + 1;
+            } else {
+                total = parseInt(sum / pagesize);
+            }
+            return total;
+        }
+
         /*
          * Utils Service 格式化日期
          *

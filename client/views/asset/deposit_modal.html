@@ -1,0 +1,45 @@
+<div class="system_modal">
+    <button class="close" ng-click="closeModal()">X</button>
+
+    <h5 class="system_modal__title">
+        系统提示
+    </h5>
+
+    <div class="system_modal__content" ng-if="type === 'needVerify'">
+        <p class="system_modal__info">
+            无法进行入金操作
+        </p>
+        <p class="system_modal__tip">
+            由于您没有完成开户，无法进行入金操作
+        </p>
+
+        <p class="system_modal__tip font-danger">
+            请进行实名认证完成开户
+        </p>
+        
+        <p class="system_modal__btn_wrapper">
+            <button class="btn btn-info active" ng-click="verify()">
+                实名认证
+            </button>
+        </p>
+    </div>
+
+    <div class="system_modal__content" ng-if="type === 'depositFinish'">
+        <p class="system_modal__info">
+            支付完成前，请不要关闭支付验证窗口
+        </p>
+        <p class="system_modal__tip">
+            支付完成后，请根据您支付的情况点击下面按钮
+        </p>
+        
+        <p class="system_modal__btn_wrapper">
+            <button class="btn btn-info active" ng-click="openChat()">
+                遇到问题
+            </button>
+
+            <button class="btn btn-info mg-lf-15" ng-click="closeModal()">
+                支付成功
+            </button>
+        </p>
+    </div>
+</div>
