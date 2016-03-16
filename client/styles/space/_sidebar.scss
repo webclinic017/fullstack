@@ -1,0 +1,119 @@
+@include b(space_bg) {
+    background-color: $gray-lightest;
+}
+
+@include b(space_sidebar) {
+    margin-bottom: 200px;
+
+    .side_navbar {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    @include e(info) {
+        background-color: $gray-base;
+        color: $gray-lightest;
+        border-top-left-radius: $border-radius-base;
+        border-top-right-radius: $border-radius-base;
+
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    @include e(avatar) {
+        text-align: center;
+        padding-top: 20px;
+
+        > img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 40%;
+            border-radius: 50%;
+        }
+    }
+
+    @include e(user) {
+        text-align: center;
+        padding-top: 15px;
+
+        @include m(username) {
+            display: inline-block;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            vertical-align: middle;
+            max-width: 100%;
+            padding-right: 5px;
+        }
+
+        @include m(position) {
+            display: inline-block;
+            vertical-align: middle;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: $gray-dark;
+            max-width: 100%;
+        }
+    }
+
+    @include e(verify) {
+        padding-top: 15px;
+
+        .col-xs-6 {
+            padding-left: 20px;
+            padding-right: 20px;
+
+            &.bar {
+                padding-left: 5px;
+            }
+        }
+        
+        .scale_bar {
+            height: 10px;
+            background-color: $gray-dark;
+            border-radius: 2px;
+            margin-top: 10px;
+            position: relative;
+
+            .scale_bar__info {
+                position: absolute;
+                right: -35px;
+                top: 0px;
+                color: $gray-dark;
+                font-size: 12px;
+                line-height: 12px;
+            }
+
+            .scale_bar__item {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-radius: 2px;
+                width: 0%;
+                height: 100%;
+                background-color: $brand-primary;
+                transition: width 1s ease-out;
+            }
+        }
+    }
+
+    @include e(data) {
+        text-align: center;
+        padding-top: 20px;
+
+        .btn {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+
+    @include e(real) {
+        text-align: center;
+        color: $gray-dark;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+}

@@ -79,20 +79,21 @@ $font-trader-gray-color: $gray-dark;
 
     @include e(username) {
         display: inline-block;
-        width: 70%;
         vertical-align: middle;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        max-width: 100%;
+        padding-right: 5px;
     }
 
     @include e(position) {
         display: inline-block;
         vertical-align: middle;
-        width: 26%;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        max-width: 100%;
     }
 }
 

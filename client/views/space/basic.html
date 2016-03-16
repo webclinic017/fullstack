@@ -1,0 +1,52 @@
+<div class="space_basic"
+     ng-if="personal.basic === 'invest.subpage' ||
+            personal.basic === 'asset.subpage' ||
+            personal.basic === 'invite'">
+
+    <ul class="space_basic__info clearfix" ng-class="{'invite': personal.basic === 'invite'}">
+        <li class="space_basic__item">
+            <div class="space_basic__item-number">
+                <span><i class="fa fa-dollar"></i>{{ personal.balance || '0.00' }}</span>
+            </div>
+            <div class="space_gray_color">资产余额</div>
+        </li>
+        <li class="space_basic__item">
+            <div class="space_basic__item-number">
+                <span><i class="fa fa-dollar"></i>{{ personal.equity || '0.00' }}</span>
+            </div>
+            <div class="space_gray_color">资产净值</div>
+        </li>
+        <li class="space_basic__item">
+            <div class="space_basic__item-number" ng-class="{'font-danger': personal.position_profit_asset.indexOf('-') >= 0, 'font-success': personal.position_profit_asset.indexOf('-') < 0}">
+                <span><i class="fa fa-dollar"></i>{{ personal.position_profit_asset || '0.00' }}</span>
+            </div>
+            <div class="space_gray_color">浮动盈亏</div>
+        </li>
+        <li class="space_basic__item">
+            <div class="space_basic__item-number">
+                <span><i class="fa fa-dollar"></i>{{ personal.aaa || '0.00' }}</span>
+            </div>
+            <div class="space_gray_color">可用保证金</div>
+        </li>
+        <li class="space_basic__item">
+            <div class="space_basic__item-number" ng-class="{'font-danger': personal.profit_rate.indexOf('-') >= 0, 'font-success': personal.profit_rate.indexOf('-') < 0}">
+                <span>{{ personal.profit_rate || '0.00' }}</span>%
+            </div>
+            <div class="space_gray_color">收益率</div>
+        </li>
+        <li class="space_basic__item"  ng-if="personal.basic === 'invite'">
+            <div class="space_basic__item-number">
+                <span>{{ personal.invite_sum || 0 }}</span>
+            </div>
+            <div class="space_gray_color">邀请人数</div>
+        </li>
+        <li class="space_basic__btn" ng-if="personal.basic === 'invest.subpage'">
+            <a ui-sref="space.asset.subpage({ subpage: 'deposit'})" class="btn btn-primary btn-sm">充值</a><br>
+            <a ui-sref="space.asset.subpage({ subpage: 'withdraw'})" class="btn btn-default btn-sm mg-tp-20">提现</a>
+        </li>
+    </ul>
+    <div class="space_basic__notice">
+        <span class="font-danger">消息通知：</span>
+        消息。。。。。。
+    </div>
+</div>

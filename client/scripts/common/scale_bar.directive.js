@@ -14,17 +14,29 @@
             replace: true,
             template: '<div class="scale_bar">'
                         + '<span class="scale_bar__info">'
-                            + '{{ bar.number }} 笔 &nbsp;&nbsp;{{ bar.scale }}%'
+                            // + '{{ bar.number }} 笔 &nbsp;&nbsp;{{ bar.scale }}%'
                         + '</span>'
                         + '<span class="scale_bar__item"></span>'
                       + '</div>',
             link: function (scope, element, attrs) {
-                // console.info(scope.bar);
-                scope.bar.scale = (scope.bar.number/scope.bar.total_num*100).toFixed(2);
+                var el = {
+                    info: element.find(".scale_bar__info"),
+                    item: element.find(".scale_bar__item")
+                }
+                var type = attrs.type;
+                // console.info(type);
 
-                var $el = element.find(".scale_bar__item");
+                if (type === 'masterDetail') {
+                    scope.bar.scale = (scope.bar.number/scope.bar.total_num*100).toFixed(2);
 
-                $el.width(scope.bar.scale + '%');
+                    el.item.width(scope.bar.scale + '%');
+                    el.info.html(scope.bar.number +' 笔 &nbsp;&nbsp;' + scope.bar.scale + '%');
+                }
+
+                if (type === 'spaceSidebar') {
+                    el.item.width('88%');
+                    el.info.html('88%');
+                }
             }
         }
     }
