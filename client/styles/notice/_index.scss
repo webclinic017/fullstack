@@ -1,0 +1,35 @@
+@include b (notice) {
+    
+    @include e (list) {
+        color: $gray-darkest;
+    }
+
+    @include e (list-li) {
+        padding: 20px 0 5px 20px;
+        background: #fff;
+        border: 1px solid $gray;
+
+        &:hover {
+            background: $gray-lightest;
+        }
+    }
+
+    @include e (li-photo) {
+        float: left;
+        margin-right: 20px;
+        width: 70px;
+        height: 70px;
+        border-radius: 4px;
+        background: #fdd;
+    }
+
+    @include e (li-title) {
+        margin-top: 5px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    @include e (li-info) {
+        margin-top: 5px;
+    }
+}

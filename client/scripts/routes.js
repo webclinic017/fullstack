@@ -118,6 +118,16 @@
                         }
                     }
                 })
+                .state('space.notice', {
+                    url: '/space/notice',
+                    // authenticated: true,
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/notice/index.html',
+                            controller: 'NoticeIndexController'
+                        }
+                    }
+                })
                 .state('space.waiting', {
                     url: '/space/waiting',
                     views: {
