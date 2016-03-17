@@ -1,14 +1,20 @@
 <div class="asset-public withdraw">
 
-    <!-- <div>如果未绑定银行卡显示这个</div> -->
-
     <div>
         <div class="row">
-            <div class="col-xs-4 text-right">转入绑定银行卡：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-            <div class="col-xs-5 history__lt40">
-                <a class="font-info">点击绑定银行卡 ></a>
+            <div class="col-xs-4 pd-tp-10 text-right">转入绑定银行卡：&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+            <div class="col-xs-8 pd-tp-10 history__lt40">
+                <span class="deposit__pointer font-info">点击绑定银行卡 ></span>
             </div>
-            <div class="col-xs-3"></div>
+
+            <!-- <div class="col-xs-8 history__lt40" ng-if="withdraw.card.id">
+                <span class="icon-banks-{{withdraw.card.bank}}"></span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <span>***********{{withdraw.card.number}}</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="deposit__pointer font-info">修改 ></span>
+            </div> -->
         </div>
         <br><br>
         <div class="row">
@@ -46,7 +52,7 @@
                 </form>
             </div>
             <div class="col-xs-3">
-                <button class="btn btn-primary btn-sm" ng-click="toWithdraw(amount)">提现</button>
+                <button class="btn btn-primary btn-sm">提现</button>
             </div>
         </div>
         <div class="row">
