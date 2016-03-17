@@ -25,7 +25,7 @@
                     <span ng-if="history.status === 5">开户赠金</span>
                     <span ng-if="history.status === -1">
                         提现申请<br>
-                        <a ng-click="cancelWithdraw(history.code)">撤销申请</a>
+                        <a class="deposit__pointer" ng-click="cancelWithdraw(history.code)">撤销申请</a>
                     </span>
                     <span ng-if="history.status === -2">提现已撤销</span>
                     <span ng-if="history.status === -4">拒绝提现</span>

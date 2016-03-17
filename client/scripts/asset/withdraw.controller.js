@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('AssetWithdrawController', AssetWithdrawController);
 
-    AssetWithdrawController.$inject = ['$scope', 'asset', 'validator', 'forex'];
+    AssetWithdrawController.$inject = ['$scope', '$modal', '$state', 'asset', 'validator', 'forex'];
 
-    function AssetWithdrawController($scope, asset, validator, forex) {
+    function AssetWithdrawController($scope, $modal, $state, asset, validator, forex) {
 
         $scope.withdraw = {
             // amount: ,
@@ -32,6 +32,9 @@
 
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
+        $scope.toWithdraw = toWithdraw;
+        $scope.openWithdrawMdl = openWithdrawMdl;
+        $scope.openCardMdl = openCardMdl;
 
 
         getCard();
@@ -51,6 +54,72 @@
                     $scope.withdraw.card.address = data.bank_addr;
                 }
             });
+        }
+
+        function openCardMdl() {
+            var personal = {
+                verified: $scope.personal.verified,
+                realname: $scope.personal.realname
+            };
+
+            $modal.open({
+                templateUrl: '/views/asset/card_modal.html',
+                size: 'md',
+                controller: 'AssetCardController',
+                resolve: {
+                    passedScope: function () {
+                        return {
+                            personal: personal,
+                            card: $scope.withdraw.card
+                        };
+                    }
+                }
+            });
+        }
+
+
+        // 提现相关的各种弹窗提示
+        function openWithdrawMdl() {
+            var withdraw = $scope.withdraw;
+
+            $modal.open({
+                templateUrl: '/views/asset/withdraw_modal.html',
+                size: 'sm',
+                controller: function ($scope, $modalInstance, $state) {
+                    $scope.isWithdrawSucc = withdraw.success;
+                    $scope.withdrawAmount = withdraw.amount;
+                    $scope.closeModal = closeModal;
+                    $scope.bindCard = bindCard;
+
+                    // 绑定银行卡
+                    function bindCard() {
+                        closeModal();
+                        openCardMdl();
+                    }
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
+
+        // 提现
+        function toWithdraw() {
+            if ($scope.withdraw.card.id === 'undefined') {
+                openWithdrawMdl();
+                return;
+            }
+
+            asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).
+                    then(function (data) {
+
+                if (data.is_succ) {
+                    $scope.withdraw.success = true;
+                    openWithdrawMdl();
+                }
+            });
+
         }
 
 

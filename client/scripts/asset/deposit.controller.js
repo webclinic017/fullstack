@@ -43,7 +43,7 @@
                 return;
             }
             amount = Number(amount).toFixed(2);
-            
+
             var w = $window.open('#/space/waiting');
 
             asset.deposit(amount).then(function(data) {
@@ -61,7 +61,7 @@
         // 入金相关的各种弹窗提示
         function openDepositMdl(type) {
             $modal.open({
-                templateUrl: 'views/asset/deposit_modal.html',
+                templateUrl: '/views/asset/deposit_modal.html',
                 size: 'sm',
                 backdrop: 'static',
                 controller: function ($scope, $modalInstance, $state) {
