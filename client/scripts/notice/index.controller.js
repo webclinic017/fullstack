@@ -31,6 +31,7 @@
         function getNoticeList(page) {
             $scope.page = page;
             account.getNoticeList(page, pagesize).then(function(data) {
+                console.info(data.data);
                 $scope.noticeList = data.data;
 
                 // $scope.$emit('showLoadingImg');
