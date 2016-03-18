@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('NoticeIndexController', NoticeIndexController);
 
-    NoticeIndexController.$inject = ['$scope', '$interval', '$state', 'utils', 'account'];
+    NoticeIndexController.$inject = ['$scope', '$location', '$interval', '$state', 'utils', 'account'];
 
-    function NoticeIndexController($scope, $interval, $state, utils, account) {
+    function NoticeIndexController($scope, $location, $interval, $state, utils, account) {
 
         $scope.pagebar = {
             config: {
@@ -26,27 +26,32 @@
 
         getNoticeList(1);
 
+        if ($location.path() === '/space/notice') {
+            // readAllNotice();
+            console.info("readAll");
+        }
 
         // 获取消息列表
         function getNoticeList(page) {
             $scope.page = page;
             account.getNoticeList(page, pagesize).then(function(data) {
-                console.info(data.data);
+                // console.info(data.data);
                 $scope.noticeList = data.data;
 
-                // $scope.$emit('showLoadingImg');
+                $scope.$emit('showLoadingImg');
 
                 angular.extend($scope.pagebar.config, {
                     total: utils.getTotal(data.num, pagesize),
                     page: page
                 });
 
-                angular.forEach($scope.noticeList, function(value, key) {
-                    $scope.noticeList[key].show = true;
-                });
-
-                // $scope.$broadcast('hideLoadingImg');
+                $scope.$broadcast('hideLoadingImg');
             });
+        }
+
+        // 所有消息设置为已读
+        function readAllNotice() {
+            account.getAllRead().then(function(data) {});
         }
 
     }

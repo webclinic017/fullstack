@@ -1,5 +1,6 @@
+<div tw-loading-img></div>
 <div class="asset-public history pd-tp-30" ng-if="historyList.length > 0">
-    <!-- <div tw-loading-img data-color="dark"></div> -->
+
 
     <table class="table table-personal table-hover table-bordered">
         <colgroup>
@@ -20,14 +21,16 @@
             <tr ng-repeat="history in historyList">
                 <td>{{ history.timestamp | dateFormatter}}</td>
                 <td>{{ history.status > 0 ? '充值' : '提现'}}</td>
-                <td>${{ history.amount }}</td>
+                <td ng-class="{'font-danger': history.status === 2, 'font-success': history.status === 4, 'font-base': history.status === -2}">
+                    ${{ history.amount }}
+                </td>
                 <td>
                     <span ng-if="history.status === 2">充值未完成</span>
                     <span ng-if="history.status === 4">充值成功</span>
                     <span ng-if="history.status === 5">开户赠金</span>
                     <span ng-if="history.status === -1">
                         提现申请<br>
-                        <a class="deposit__pointer" ng-click="cancelWithdraw(history.code)">撤销申请</a>
+                        <a class="deposit__pointer font-info" ng-click="cancelWithdraw(history.code)">撤销申请</a>
                     </span>
                     <span ng-if="history.status === -2">提现已撤销</span>
                     <span ng-if="history.status === -4">拒绝提现</span>
