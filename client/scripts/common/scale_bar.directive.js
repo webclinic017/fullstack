@@ -14,7 +14,6 @@
             replace: true,
             template: '<div class="scale_bar">'
                         + '<span class="scale_bar__info">'
-                            // + '{{ bar.number }} 笔 &nbsp;&nbsp;{{ bar.scale }}%'
                         + '</span>'
                         + '<span class="scale_bar__item"></span>'
                       + '</div>',
@@ -26,7 +25,7 @@
                 var type = attrs.type;
                 // console.info(type);
 
-                if (type === 'masterDetail') {
+                if (type === 'masterDetail' || type === 'investDetail') {
                     scope.bar.scale = (scope.bar.number/scope.bar.total_num*100).toFixed(2);
 
                     el.item.width(scope.bar.scale + '%');

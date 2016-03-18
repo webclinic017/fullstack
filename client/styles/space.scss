@@ -23,7 +23,13 @@
 @import "common/navs";
 @import "common/footer";
 @import "common/dropdown";
+@import "common/charts";
+@import "common/icons";
+@import "common/table";
 
 // Module CSS
 @import "space/sidebar";
 @import "space/basic";
+
+@import "invest/summary";
+@import "invest/index";
