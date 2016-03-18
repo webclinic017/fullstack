@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('AssetWithdrawController', AssetWithdrawController);
 
-    AssetWithdrawController.$inject = ['$scope', '$modal', '$state', 'asset', 'validator', 'forex'];
+    AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', 'forex'];
 
-    function AssetWithdrawController($scope, $modal, $state, asset, validator, forex) {
+    function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, forex) {
 
         $scope.withdraw = {
             // amount: ,
@@ -39,6 +39,11 @@
 
         getCard();
 
+        //绑定银行卡后获取银行卡信息
+        $rootScope.$on('bindCardSuccess', function() {
+            getCard();
+        });
+
         // 获取可提取的最大金额
         forex.getAsset().then(function(data) {
             $scope.withdraw.maxAmount = data.data.balance;
@@ -52,6 +57,7 @@
                     $scope.withdraw.card.number = data.card_id;
                     $scope.withdraw.card.bank = data.bank_name;
                     $scope.withdraw.card.address = data.bank_addr;
+
                 }
             });
         }
@@ -110,6 +116,10 @@
                 openWithdrawMdl();
                 return;
             }
+            showErr('amount');
+            if ($scope.withdrawForm.$invalid) {
+                return;
+            }
 
             asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).
                     then(function (data) {
@@ -117,6 +127,10 @@
                 if (data.is_succ) {
                     $scope.withdraw.success = true;
                     openWithdrawMdl();
+
+                    $state.go('space.asset.type', {
+                        type: 'withdraw'
+                    }, {reload: true});
                 }
             });
 

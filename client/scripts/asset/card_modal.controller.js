@@ -101,6 +101,11 @@
                 });
             }
         }
+        // 去实名认证
+        function verify() {
+            $state.go('');
+            closeModal();
+        }
 
         function closeModal() {
             $modalInstance.dismiss();

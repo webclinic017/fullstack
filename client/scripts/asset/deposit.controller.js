@@ -35,7 +35,7 @@
             $scope.deposit.FXRate.value = data.parity;
 
         });
-        // 充值
+        // 充值  还未完成s
         function toDeposit(amount) {
 
             if (typeof amount === 'undefined') {

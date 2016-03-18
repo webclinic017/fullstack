@@ -23,20 +23,25 @@
             getList: getList
         };
 
-        var pagesize = 20; // 单页显示数
+        var pagesize = 10; // 单页显示数
 
+        $scope.cancelWithdraw = cancelWithdraw;
 
         getList(1);
 
         // 获取交易历史
         function getList(page) {
             asset.getHistory(page, pagesize).then(function (data) {
+
                 $scope.historyList = data.records;
+                $scope.$emit('showLoadingImg');
+
                 angular.extend($scope.pagebar.config, {
                     total: utils.getTotal(data.sum, pagesize),
                     page: page
                 });
-                // $scope.$broadcast('hideLoadingImg');
+
+                $scope.$broadcast('hideLoadingImg');
 
             });
 
@@ -50,13 +55,6 @@
                 }
 
                 angular.forEach($scope.records, function (record) {
-
-                    if (record.code === code) {
-                        record.status = -2;
-                    }
-                });
-                angular.forEach($scope.recordsFinance, function (record) {
-
                     if (record.code === code) {
                         record.status = -2;
                     }

@@ -11,7 +11,7 @@
                     views: {
                         '@': {
                             templateUrl: '/views/account/layout.html',
-                            controller: '' 
+                            controller: ''
                         }
                     }
                 })
@@ -21,7 +21,7 @@
                         'content@account': {
                             templateUrl: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'login';
-                                return '/views/account/' + $stateParams.subpage + '.html'; 
+                                return '/views/account/' + $stateParams.subpage + '.html';
                             },
                             controllerProvider: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'login';
@@ -126,13 +126,6 @@
                             templateUrl: '/views/notice/index.html',
                             controller: 'NoticeIndexController'
                         }
-                    }
-                })
-                .state('space.waiting', {
-                    url: '/space/waiting',
-                    views: {
-                        templateUrl: '/views/waiting.html',
-                        controller: ''
                     }
                 })
 
