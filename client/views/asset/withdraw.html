@@ -1,0 +1,67 @@
+<div class="asset-public withdraw">
+
+    <div>
+        <div class="row">
+            <div class="col-xs-4 pd-tp-10 text-right">转入绑定银行卡：&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+            <div class="col-xs-8 pd-tp-10 history__lt40" ng-if="!withdraw.card.id">
+                <span class="deposit__pointer font-info" ng-click="openCardMdl()">点击绑定银行卡 ></span>
+            </div>
+
+            <div class="col-xs-8 history__lt40" ng-if="withdraw.card.id">
+                <span class="icon-banks-{{withdraw.card.bank}}"></span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <span>***********{{withdraw.card.number}}</span>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <span class="deposit__pointer font-info" ng-click="openCardMdl()">修改 ></span>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-xs-3 text-right deposit__title-money">提现金额</div>
+            <div class="col-xs-6 deposit__input">
+                <form name="withdrawForm" novalidate>
+                    <div class="form-control-wrapper">
+                        <input class="form-control"
+                               name="amount"
+                               type="text"
+                               required
+                               ng-class="{'form-control-error': frontErr.amount.show && withdrawForm.amount.$invalid}"
+                               ng-model="withdraw.amount"
+                               ng-pattern="frontErr.amount.reg"
+                               twform-max="{{personal.balance || 0}}"
+                               ng-focus="hideErr('amount')"
+                               ng-blur="showErr('amount')">
+
+                        <span class="asset__input-icon">$</span>
+
+                        <div ng-show="frontErr.amount.show">
+                            <p class="alert-error" ng-show="withdrawForm.amount.$error.required">
+                                请输入出金金额
+                            </p>
+
+                            <p class="alert-error" ng-show="withdrawForm.amount.$error.pattern">
+                                输入的金额为大于零的整数或者小数（小数点后最多两位数字）
+                            </p>
+
+                            <p class="alert-error" ng-show="withdrawForm.amount.$error.twformMax">
+                                出金金额最多为 {{personal.balance || 0}} 美金
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-3">
+                <button class="btn btn-primary btn-sm" ng-click="toWithdraw()">提现</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-9 col-xs-offset-3">
+                <p>
+                    <span class="font-danger">*</span>
+                    可提取金额：<span>${{withdraw.maxAmount || '0.00'}}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

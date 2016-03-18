@@ -21,15 +21,15 @@
         <ul class="nav navbar-right navbar-logined" ng-if="userstatus.logined">
             <li>
                 <div class="relative">
-                    <a class="navbar-message" href=""></a>
+                    <a class="navbar-message" href="/space/#/space/notice"></a>
 
                     <!-- 有新消息时  显示 -->
-                    <span class="navbar-mes-num">3</span>
+                    <a class="navbar-mes-num" ng-if="personal.unreadLength > 0">{{personal.unreadLength}}</a>
                 </div>
             </li>
             <li>
                 <div class="navbar-con float-right relative">
-                    <a class="navbar-name" href="/space/#/space/invest/current" target="_blank">{{personal.username}}昵称名字</a><br>
+                    <a class="navbar-name" href="/space/#/space/invest/current" target="_blank">{{personal.username}}</a><br>
                     <a class="navbar-quit" href="">
                         <i class="fa fa-sign-out"></i>
                         退出
@@ -37,7 +37,7 @@
                 </div>
                 <div class="navbar-con float-right relative">
                     <a class="navbar-photo" href="/space/#/space/invest/current" target="_blank">
-                        <img src="images/logo.png" alt="">
+                        <img src="{{personal.mdAvatar}}" alt="">
                     </a>
                 </div>
             </li>

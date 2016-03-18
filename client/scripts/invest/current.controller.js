@@ -44,6 +44,7 @@
 
         function getTraders() {
             invest.getInvestCurrentTraders().then(function (data) {
+                // console.info(data);
                 if (data.data.length <= 0) {
                     $scope.traders = [];
                     return;
@@ -82,6 +83,7 @@
                 trader.orders = [];
                 $timeout.cancel(detailsId);
             } else {
+                $scope.$emit('showLoadingImg');
                 trader.detailsShow = true;
                 getDetails(trader);
             }
@@ -91,6 +93,8 @@
         function getDetails(trader) {
             invest.getInvestCurrentDetails(trader.usercode).then(function (data) {
                 trader.orders = data.data;
+
+                $scope.$broadcast('hideLoadingImg');
             });
 
             detailsId = $timeout(function () {

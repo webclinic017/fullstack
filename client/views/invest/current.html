@@ -21,6 +21,7 @@
     </table>
 
     <div class="invest_table_wrapper">
+        <div tw-loading-img></div>
         <!-- 自主交易持仓订单 -->
         <table class="invest_table table table-striped table-hover">
             <colgroup>
@@ -161,6 +162,9 @@
                     </colgroup>
                     <!-- 复制交易持仓订单详情 -->
                     <tbody>
+                        <tr ng-show="!trader.orders">
+                            <div tw-loading-img></div>
+                        </tr>
                         <tr class="" ng-repeat="order in trader.orders">
                             <td class="text-left invest_orders__detail">
                                 <span class="invest_orders__trunk"></span>

@@ -4,10 +4,12 @@
 }
 
 @include b(invest_table_wrapper) {
+    position: relative;
     border-left: 1px solid $gray;
     border-right: 1px solid $gray;
 
     @include e(tbody) {
+        position: relative;
         max-height: 400px;
         border-bottom: 1px solid $gray;
         overflow-y: auto;

@@ -53,7 +53,7 @@
             if (trader.detailsShow) {
                 trader.detailsShow = false;
             } else {
-
+                $scope.$emit('showLoadingImg');
                 // 若 copied traders 所属的 orders 为空，则请求数据
                 if (!trader.orders) {
                     invest.getInvestHistoryDetails(trader.usercode).then(function (data) {
