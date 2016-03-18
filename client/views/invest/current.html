@@ -1,1 +1,203 @@
-<h1>当前</h1>
+<div class="invest_content">
+    <table>
+        <table class="table table-header">
+            <colgroup>
+                <col width="35%">
+                <col width="17%">
+                <col width="17%">
+                <col width="16%">
+                <col width="15%">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>操作</th>
+                    <th>开仓价</th>
+                    <th>现价</th>           
+                    <th>收益</th>
+                    <th></th>
+                </tr>
+            </thead>
+        </table>
+    </table>
+
+    <div class="invest_table_wrapper">
+        <div tw-loading-img></div>
+        <!-- 自主交易持仓订单 -->
+        <table class="invest_table table table-striped table-hover">
+            <colgroup>
+                <col width="35%">
+                <col width="17%">
+                <col width="17%">
+                <col width="16%">
+                <col width="15%">
+            </colgroup>
+            <!-- 自主交易持仓订单概况 -->
+            <thead>
+                <tr class="invest_orders" ng-if="orders.length > 0" ng-click="showOrders()">
+                    <th class="text-left invest_orders__user">
+                        <a href="" class="invest_orders__user-avatar">
+                            <img ng-src="/avatar/{{ personal.usercode }}_50.jpg" alt="personal 头像">
+                        </a>
+                        
+                        <div class="invest_orders__user-username">
+                            <a href="" ng-class="{'font-info': orderCurrent.detailsShow}">
+                                <span>{{ personal.username || '**' }}</span>
+                            </a>
+                            <i class="fa fa-chevron-right" ng-show="!orderCurrent.detailsShow"></i>
+                            <i class="fa fa-chevron-up font-info" ng-show="orderCurrent.detailsShow"></i><br>
+                            <span class="invest_orders__type own">自主交易</span>
+                        </div>
+                    </th>
+                    <th colspan="2" class="invest_orders__rate-promise">
+                        <span>保证金比例: 199.99%</span>
+                    </th>
+                    <th ng-class="{'font-success': orderCurrent.group_profit.indexOf('-') < 0, 'font-danger':  orderCurrent.group_profit.indexOf('-') >= 0}">
+                        <i class="fa fa-dollar"></i>{{ orderCurrent.group_profit }}
+                    </th>
+                    <th class="invest_orders__btn">
+                        <a href="" class="btn btn-primary btn-sm">详情</a>
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        <div class="invest_table_wrapper__tbody" ng-show="orderCurrent.detailsShow">
+            <table class="invest_table table table-striped table-hover">
+                <colgroup>
+                    <col width="35%">
+                    <col width="17%">
+                    <col width="17%">
+                    <col width="16%">
+                    <col width="15%">
+                </colgroup>
+                <!-- 自主交易持仓订单详情 -->
+                <tbody>
+                    <tr class="" ng-repeat="order in orders">
+                        <td class="text-left invest_orders__detail">
+                            <span class="invest_orders__trunk"></span>
+                            <span class="invest_orders__branch"></span>
+
+                            <span class="invest_orders__icon icon-forex-{{ order.symbol.toLowerCase() }} vertical-middle">
+                            </span>
+                            <div class="invest_orders__operate">
+                                <p>
+                                    <span class="invest_orders__action">
+                                        {{ order.action ? '做空' : '做多' }}
+                                    </span>
+                                    <a class="invest_orders__symbol" href="">
+                                        {{ order.symbol | symbolMod:'zh' }}
+                                    </a>        
+                                </p>
+                            </div>
+                        </td>
+                        <td><i class="fa fa-dollar"></i>{{ order.open_price }}</td>
+                        <td><i class="fa fa-dollar"></i>{{ order.close_price }}</td>
+                        <td ng-class="{'font-success': order.profit.indexOf('-') < 0, 'font-danger': order.profit.indexOf('-') >= 0}">
+                            <i class="fa fa-dollar"></i>{{ order.profit }}
+                        </td>
+                
+                        <td>
+                        </td>
+                    </tr>
+                    <tr ng-if="orders.length <= 0 && orderCurrent.detailsShow">
+                        <td colspan="5">无数据</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 复制交易持仓订单 -->
+        <div ng-if="traders.length > 0" ng-repeat="trader in traders">
+            <table class="invest_table table table-striped table-hover">
+                <colgroup>
+                    <col width=s"35%">
+                    <col width="17%">
+                    <col width="17%">
+                    <col width="16%">
+                    <col width="15%">
+                </colgroup>
+                <!-- 复制交易持仓订单概况 -->
+                <thead>
+                    <tr class="invest_orders" ng-click="showDetails(trader)">
+                        <th class="text-left invest_orders__user">
+                            <a href="" class="invest_orders__user-avatar">
+                                <img ng-src="/avatar/{{ trader.usercode }}_50.jpg" alt="trader 头像">
+                            </a>
+                            
+                            <div class="invest_orders__user-username">
+                                <a href="" ng-class="{'font-info': trader.detailsShow}">
+                                    <span>{{ trader.username || '**' }}</span>
+                                </a>
+                                <i class="fa fa-chevron-right" ng-show="!trader.detailsShow"></i>
+                                <i class="fa fa-chevron-up font-info" ng-show="trader.detailsShow"></i>
+                                <br>
+                                <span class="invest_orders__type copy">复制交易</span>
+                            </div>
+                        </th>
+                        <th colspan="2" class="invest_orders__rate-copy">
+                            <span class="number">
+                                复制金额: {{ trader.copy_asset }}
+                                <i class="fa fa-caret-down font-info"></i>
+                            </span>
+                            <br>
+                            <span class="rate">复制比例: 199.99%</span>
+                        </th>
+                        <th ng-class="{'font-success': trader.profit.indexOf('-') < 0, 'font-danger':  trader.profit.indexOf('-') >= 0}">
+                            <i class="fa fa-dollar"></i>{{ trader.profit }}
+                        </th>
+                        <th class="invest_orders__btn">
+                            <a href="" class="btn btn-primary btn-sm">详情</a>
+                            <a href="" class="btn btn-default btn-sm">取消复制</a>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="invest_table_wrapper__tbody" ng-show="trader.detailsShow">
+                <table class="invest_table table table-striped table-hover">
+                    <colgroup>
+                        <col width="35%">
+                        <col width="17%">
+                        <col width="17%">
+                        <col width="16%">
+                        <col width="15%">
+                    </colgroup>
+                    <!-- 复制交易持仓订单详情 -->
+                    <tbody>
+                        <tr ng-show="!trader.orders">
+                            <div tw-loading-img></div>
+                        </tr>
+                        <tr class="" ng-repeat="order in trader.orders">
+                            <td class="text-left invest_orders__detail">
+                                <span class="invest_orders__trunk"></span>
+                                <span class="invest_orders__branch"></span>
+
+                                <span class="invest_orders__icon icon-forex-{{ order.symbol.toLowerCase() }} vertical-middle">
+                                </span>
+                                <div class="invest_orders__operate">
+                                    <p>
+                                        <span class="invest_orders__action">
+                                            {{ order.action ? '做空' : '做多' }}
+                                        </span>
+                                        <a class="invest_orders__symbol" href="">
+                                            {{ order.symbol | symbolMod:'zh' }}
+                                        </a>        
+                                    </p>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-dollar"></i>{{ order.open_price }}</td>
+                            <td><i class="fa fa-dollar"></i>{{ order.close_price }}</td>
+                            <td ng-class="{'font-success': order.profit.indexOf('-') < 0, 'font-danger': order.profit.indexOf('-') >= 0}">
+                                <i class="fa fa-dollar"></i>{{ order.profit }}
+                            </td>
+                    
+                            <td>
+                            </td>
+                        </tr>
+                        <tr ng-if="trader.orders.length <= 0 && trader.detailsShow">
+                            <td colspan="5">该高手没有持仓订单</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

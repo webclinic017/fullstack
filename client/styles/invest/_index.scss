@@ -1,0 +1,162 @@
+@include b(invest_content) {
+    border: 1px solid $gray;
+    padding: 15px;
+}
+
+@include b(invest_table_wrapper) {
+    position: relative;
+    border-left: 1px solid $gray;
+    border-right: 1px solid $gray;
+
+    @include e(tbody) {
+        position: relative;
+        max-height: 400px;
+        border-bottom: 1px solid $gray;
+        overflow-y: auto;
+    }
+}
+
+@include b(invest_table) {
+    > thead > tr > th {
+        padding: 15px 8px;
+    }
+}
+
+@include b(invest_orders) {
+
+    background-color: #fff;
+    border-bottom: 1px solid $gray;
+
+    @include e(user) {
+        // text-align: left;
+
+        @include m(avatar) {
+            padding-right: 10px;
+
+            img {
+                position:relative;
+                z-index: 1;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                vertical-align: middle;
+            }
+        }
+
+        @include m(username) {
+            display: inline-block;
+            vertical-align: middle;
+
+            > a {
+                color: $gray-base;
+            }
+        }
+    }
+
+    @include e(type) {
+        border: 1px solid transparent;
+        border-radius: $border-radius-base;
+        padding: 2px;
+        font-size: 12px;
+        display: inline-block;
+        margin-top: 4px;
+
+        &.own {
+            color: $brand-warning;
+            border-color: $brand-warning;
+        }
+
+        &.copy {
+            color: $brand-info;
+            border-color: $brand-info;
+        }
+    }
+
+    @include e(rate) {
+        
+        @include m(promise) {
+
+            > span {
+                color: #fff;
+                padding: 4px;
+                background-color: $brand-warning;
+                border-radius: $border-radius-base;
+            }
+        }
+
+        @include m(copy) {
+
+            > span.number {
+                color: $gray-darker;
+                padding: 4px;
+                display: inline-block;
+                margin-bottom: 8px;
+                cursor: pointer;
+                border: 1px solid $gray;
+                border-radius: $border-radius-base;
+            }
+            
+            > span.rate {
+                color: #fff;
+                padding: 4px;
+                background-color: $brand-success;
+                border-radius: $border-radius-base;
+            }
+        }
+    }
+
+    @include e(btn) {
+
+        .btn {
+            padding: 0;
+            font-size: 12px;
+            width: 80%;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            margin-top: 4px;
+            margin-bottom: 4px; 
+        }
+    }
+
+    @include e(detail) {
+        padding-left: 50px !important; 
+        position: relative;
+    }
+
+    @include e(trunk) {
+        position: absolute;
+        top: -25px;
+        left: 30px;
+        width: 1px;
+        height: 100%;
+        background-color: darken($table-bg-hover, 10%);
+    }
+
+    @include e(branch) {
+        position: absolute;
+        top: 25px;
+        left: 30px;
+        width: 15px;
+        height: 1px;
+        background-color: darken($table-bg-hover, 10%);
+    }
+
+    @include e(operate) {
+        display: inline-block;
+        margin-left: 5px;
+    }
+
+    @include e(action) {
+        color: $gray-darker;
+    }
+
+    @include e(symbol) {
+        color: $gray-darker;
+    }
+}
+
+
+
+
+// invest current
