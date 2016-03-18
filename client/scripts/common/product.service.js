@@ -10,7 +10,8 @@
         var service = {
             getHomeHotProduct: getHomeHotProduct,
             getHomeHotScale: getHomeHotScale,
-            getHomeStarMaster: getHomeStarMaster
+            getHomeStarMaster: getHomeStarMaster,
+            getHomeMasters: getHomeMasters
         };
         return service;
 
@@ -40,6 +41,15 @@
          */
         function getHomeStarMaster() {
             return $http.get('/data/star-master.json');
+        }
+
+        /**
+         * Product Service 首页明星高手
+         *
+         * @method getHomeMasters
+         */
+        function getHomeMasters() {
+            return $http.get('/data/masters.json');
         }
     }
 })();

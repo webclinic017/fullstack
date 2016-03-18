@@ -13,11 +13,14 @@
      */ 
     function SpaceInfoController($scope, $location, account, invite, $timeout) {
         
+        $scope.unreadLength = 0;        // 未读消息
+
         var summaryId;
 
         getVerifyStatus();
         getAssetInfo();
         getInviteFriendsInfo(1);
+        getUnreadLength();
 
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
             angular.extend($scope.personal, {
@@ -32,6 +35,8 @@
                 $timeout.cancel(summaryId);
             }
         });
+
+        // 检查新消息
 
         // 获取实名认证状态
         function getVerifyStatus () {
@@ -63,6 +68,19 @@
                     invite_sum: data.sum
                 });
             }); 
+        }
+
+        // 获取新消息
+        function getUnreadLength () {
+            account.getUnreadLength().then(function(data) {
+                $scope.unreadLength = data.num;
+
+                angular.extend($scope.personal, {
+                    unreadLength: $scope.unreadLength
+                });
+            });
+
+            $scope.$emit('refreshNoticeList');
         }
     }
 })();

@@ -11,7 +11,12 @@
             checkLogined: checkLogined,
             getPersonalInfo: getPersonalInfo,
             getVerifyStatus: getVerifyStatus,
-            getAssetInfo: getAssetInfo
+            getAssetInfo: getAssetInfo,
+            getUnreadLength: getUnreadLength,
+            getNoticeCategory: getNoticeCategory,
+            getNoticeList: getNoticeList,
+            getOneRead: getOneRead,
+            getAllRead: getAllRead
         };
         return service;
 
@@ -70,6 +75,64 @@
          */
         function getAssetInfo() {
             return $http.post('/action/public/v3/get_usercenter_asset');
+        }
+        /**
+         * Account Service 获取未读消息数量
+         *
+         * @method getUnreadLength
+         *
+         */
+        function getUnreadLength() {
+            return  $http.get('/action/public/v3/get_notify_num');
+        }
+
+        /*
+         * Account Service 获取消息分类
+         *
+         * @method getNoticeCategory
+         *
+         */
+        function getNoticeCategory() {
+            return $http.get('/action/public/v3/get_notify_cate');
+        }
+
+        /*
+         * Account Service 获取消息通知列表
+         *
+         * @method getNoticeList
+         *
+         */
+        function getNoticeList(page, pagesize) {
+            return $http.get('/action/public/v3/get_notify_list', {
+                params: {
+                    page: page,
+                    pagesize: pagesize
+                }
+            });
+        }
+
+        /*
+         * Account Service 把单条消息标记为已读
+         *
+         * @method getOneRead
+         *
+         */
+        function getOneRead(id) {
+            return $http.get('/action/public/v3/notify_mark_read', {
+                params: {
+                    id: id     // 此id为获取消息通知列表中的id
+                }
+            });
+        }
+
+        /*
+         * Account Service 把所有消息标记为已读
+         *
+         * @method getAllRead
+         *
+         */
+        function getAllRead() {
+            return $http.get('/action/public/v3/notify_mark_all_read');
         }
     }
 })();

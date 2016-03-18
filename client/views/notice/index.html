@@ -1,0 +1,21 @@
+<div class="notice">
+    <ul class="notice__list">
+        <li class="notice__list-li" ng-repeat="notice in noticeList">
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class="notice__li-photo">照片</div>
+                </div>
+                <div class="col-xs-10 mg-lf-_30">
+                    <p class="notice__li-title">TIGERWIT</p>
+                    <p class="notice__li-info">
+                        系统通知： {{notice.content}}
+                    </p>
+                <p class="font-size-12">{{notice.send_time}}</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="text-center">
+        <p tw-pagination></p>
+    </div>
+</div>

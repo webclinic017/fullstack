@@ -1,0 +1,158 @@
+<div class="system_modal card_modal">
+    <button class="close" ng-click="closeModal()">X</button>
+
+    <div ng-if="!personal.verified">
+        <h5 class="system_modal__title">
+            系统提示
+        </h5>
+
+        <div class="system_modal__content">
+            <p class="system_modal__info">
+                无法绑定银行卡
+            </p>
+            <p class="system_modal__tip">
+                由于您没有完成开户，无法绑定银行卡。
+            </p>
+
+            <p class="system_modal__tip font-danger">
+                请进行实名认证完成开户。
+            </p>
+
+            <p class="system_modal__btn_wrapper">
+                <button class="btn btn-info active" ng-click="verify()">
+                    实名认证
+                </button>
+            </p>
+        </div>
+    </div>
+
+    <div ng-show="personal.verified">
+        <h5 class="system_modal__title">
+            绑定银行卡
+        </h5>
+        <div class="system_modal__content" ng-show="!card.binding">
+            <form name="cardForm" novalidate>
+                <div class="row">
+                    <div class="col-xs-4 text-right">
+                        <label>持卡人：</label>
+                    </div>
+
+                    <div class="col-xs-8">
+                        <label>{{personal.realname}}</label>
+                    </div>
+                </div>
+
+                <div class="row mg-tp-15">
+                    <div class="col-xs-4 text-right">
+                        <label>选择开户行：</label>
+                    </div>
+
+                    <div class="col-xs-8">
+                        <div class="form-control-wrapper">
+                            <select class="form-control"
+                                    name="bank"
+                                    required
+                                    ng-class="{'form-control-error': frontErr.bank.show && cardForm.bank.$invalid}"
+                                    ng-model="card.bank"
+                                    ng-options="bank.nameZH for bank in banks"
+                                    ng-focus="hideErr('bank')"
+                                    ng-blur="showErr('bank')">
+                                <option value="">请选择</option>
+                            </select>
+
+                            <div ng-show="frontErr.bank.show">
+                                <p class="alert-error" ng-show="cardForm.bank.$error.required">
+                                    请选择开户行
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4 text-right">
+                        <label>开户行全称：</label>
+                    </div>
+
+                    <div class="col-xs-8">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                   name="address"
+                                   type="text"
+                                   required
+                                   ng-class="{'form-control-error': frontErr.address.show && cardForm.address.$invalid}"
+                                   ng-model="card.address"
+                                   ng-focus="hideErr('address')"
+                                   ng-blur="showErr('address')">
+
+                            <div ng-show="frontErr.address.show">
+                                <p class="alert-error" ng-show="cardForm.address.$error.required">
+                                    请输入开户行全称
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4 text-right">
+                        <label>卡号：</label>
+                    </div>
+
+                    <div class="col-xs-8">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                   name="number"
+                                   type="text"
+                                   required
+                                   ng-class="{'form-control-error': frontErr.number.show && cardForm.number.$invalid}"
+                                   ng-model="card.number"
+                                   ng-pattern="frontErr.number.reg"
+                                   ng-focus="hideErr('number')"
+                                   ng-blur="showErr('number')">
+
+                            <div ng-show="frontErr.number.show">
+                                <p class="alert-error" ng-show="cardForm.number.$error.required">
+                                    请输入卡号
+                                </p>
+                                <p class="alert-error" ng-show="cardForm.number.$error.pattern">
+                                    {{frontErr.number.tip}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <p class="mg-tp-15">
+                <span class="font-danger">*</span>
+                出金银行卡用户姓名必须与开户姓名一致
+            </p>
+            <p>
+                <span class="font-danger">*</span>
+                开户行全称请精确到支行，如：中国工商银行 北京分行 清华园支行
+            </p>
+
+            <p class="system_modal__btn_wrapper">
+                <button class="btn btn-info active" ng-click="submitForm()">
+                    确定
+                </button>
+
+                <button class="btn mg-lf-15" ng-click="closeModal()">
+                    取消
+                </button>
+            </p>
+        </div>
+
+        <div class="system_modal__content" ng-if="card.binding">
+            <p class="system_modal__info">
+                银行卡 {{card.number}} 绑定成功
+            </p>
+            <p class="system_modal__btn_wrapper">
+                <button class="btn btn-info active" ng-click="closeModal()">
+                    确定
+                </button>
+            </p>
+        </div>
+    </div>
+</div>

@@ -45,8 +45,9 @@
             <a ui-sref="space.asset.subpage({ subpage: 'withdraw'})" class="btn btn-default btn-sm mg-tp-20">提现</a>
         </li>
     </ul>
-    <div class="space_basic__notice">
-        <span class="font-danger">消息通知：</span>
-        消息。。。。。。
+    <div class="space_basic__notice" ng-if="unreadLength > 0">
+        <a class="font-base" href="/space/#/space/notice">
+            <span class="font-danger">消息通知：</span>您有 <span>{{ unreadLength }}</span>条未读消息，请点击查看
+        </a>
     </div>
 </div>
