@@ -5,17 +5,18 @@
     angular.module('fullstackApp')
         .controller('SpaceInfoController', SpaceInfoController);
 
-    SpaceInfoController.$inject = ['$scope', '$location', 'account', 'invite', '$timeout'];
+    SpaceInfoController.$inject = ['$scope', '$location', '$interval', 'account', 'invite', '$timeout'];
 
     /**
      * @name SpaceInfoController
      * @desc
-     */ 
-    function SpaceInfoController($scope, $location, account, invite, $timeout) {
-        
+     */
+    function SpaceInfoController($scope, $location, $interval, account, invite, $timeout) {
+
         $scope.unreadLength = 0;        // 未读消息
 
         var summaryId;
+        var noticeId;
 
         getVerifyStatus();
         getAssetInfo();
@@ -37,6 +38,11 @@
         });
 
         // 检查新消息
+        $scope.$on('refreshNoticeList', function() {
+            noticeId = $interval(function() {
+                getUnreadLength();
+            },30000);
+        });
 
         // 获取实名认证状态
         function getVerifyStatus () {
@@ -67,7 +73,7 @@
                 angular.extend($scope.personal, {
                     invite_sum: data.sum
                 });
-            }); 
+            });
         }
 
         // 获取新消息
@@ -82,5 +88,6 @@
 
             $scope.$emit('refreshNoticeList');
         }
+
     }
 })();
