@@ -1,0 +1,20 @@
+<div class="">
+
+    <div class="nav-tabs-wrapper">
+        <ul class="nav-tabs">
+            <li ui-sref-active="active">
+                <a ui-sref="space.asset.subpage({subpage: 'deposit'})">&nbsp;&nbsp;&nbsp;充值&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li ui-sref-active="active">
+                <span class="nav-tabs__divider"></span>
+                <a ui-sref="space.asset.subpage({subpage: 'withdraw'})">&nbsp;&nbsp;&nbsp;提现&nbsp;&nbsp;&nbsp;</a>
+            </li>
+            <li ui-sref-active="active">
+                <span class="nav-tabs__divider"></span>
+                <a ui-sref="space.asset.subpage({subpage: 'history'})">历史记录</a>
+            </li>
+        </ul>
+    </div>
+    <div ui-view></div>
+
+</div>
