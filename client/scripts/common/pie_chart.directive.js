@@ -66,7 +66,7 @@
                 var $el = $(element);
                 var type = attrs.pieType;
 
-                if (type === 'master') {
+                if (type === 'master' || type === 'space') {
                     
                     angular.extend(options, {
                         tooltip: {

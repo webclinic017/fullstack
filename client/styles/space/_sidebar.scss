@@ -1,9 +1,9 @@
 @include b(space_bg) {
     background-color: $gray-lightest;
+    padding-bottom: 200px;
 }
 
 @include b(space_sidebar) {
-    margin-bottom: 200px;
 
     .side_navbar {
         border-top-left-radius: 0px;
