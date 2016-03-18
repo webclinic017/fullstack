@@ -8,7 +8,7 @@
     AssetHistoryController.$inject = ['$scope', 'asset', 'utils'];
 
     function AssetHistoryController($scope, asset, utils) {
-
+        $scope.records = [];
         $scope.historyList = [];
 
         $scope.pagebar = {
@@ -34,14 +34,15 @@
             asset.getHistory(page, pagesize).then(function (data) {
 
                 $scope.historyList = data.records;
-                $scope.$emit('showLoadingImg');
+
+                // $scope.$emit('showLoadingImg');
 
                 angular.extend($scope.pagebar.config, {
                     total: utils.getTotal(data.sum, pagesize),
                     page: page
                 });
 
-                $scope.$broadcast('hideLoadingImg');
+                // $scope.$broadcast('hideLoadingImg');
 
             });
 
