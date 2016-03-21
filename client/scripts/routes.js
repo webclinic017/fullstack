@@ -86,7 +86,15 @@
                     views: {
                         'content@space': {
                             templateUrl: '/views/invite/index.html',
-                            controller: ''
+                            controller: 'InviteIndexController'
+                        }
+                    }
+                })
+                .state('invite', {
+                    url: '/invite/come?usercode',
+                    views: {
+                        '@': {
+                            controller: 'InviteIndexBlankController'
                         }
                     }
                 })

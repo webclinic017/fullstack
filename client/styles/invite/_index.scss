@@ -1,0 +1,15 @@
+@include b (invite) {
+    padding: 30px 20px;
+    border: 1px solid $gray;
+    background: #fff;
+    color: $gray-darkest;
+
+    @include e (rules) {
+        color: $gray-darker;
+
+        li {
+            margin-bottom: 5px;
+        }
+    }
+
+}

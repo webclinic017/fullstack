@@ -1,4 +1,75 @@
 <!-- side navbar -->
-<h1>邀请了 124 位好友</h1>
-邀请链接<a href="">https://www.tigerwit.com/xxx/sss</a>
-<h2>邀请好友列表xxx</h2>
+<div class="invite">
+    <div class="row">
+        <div class="col-xs-9">
+            <input class="form-control form-control-md"
+                   name="link"
+                   type="text"
+                   readonly
+                   ng-model="invitation.link"
+                   ng-click="selectTxt()">
+            <br>
+            <p>
+                <span class="font-danger">*</span>
+                把你的邀请链接发送给好友，即可获得
+                <span class="font-danger">$20</span> 的奖励
+            </p>
+        </div>
+        <div class="col-xs-3">
+            <a class="btn btn-primary btn-sm" ng-click="selectTxt()">全选</a>
+        </div>
+    </div>
+
+    <div class="invite__rules mg-tp-30">
+        <p class="font-base font-bold font-size-18">邀请好友规则：</p>
+        <ul>
+            <li>
+                1、邀请好友成功注册、认证、入金并投资，即可获得 20 美元赠金。
+            </li>
+            <li>
+                2、只有通过邀请链接进行注册才算有效。
+            </li>
+            <li>
+                3、不限介绍好友的数量。
+            </li>
+            <li>
+                4、同一手机号码、身份证号和银行卡号视为同一用户。任何通过第三方作弊软件刷取好友邀请奖励的用户，一经发现，老虎金融有权取消所有奖励的承兑。20美金的介绍佣金将在30天后进行结算。
+            </li>
+            <li>
+                5、本活动长期有效，最终解释权归老虎金融所有。如有疑问，请咨询客服 400-809-8509。
+            </li>
+        </ul>
+    </div>
+
+    <table class="table table-personal table-hover table-bordered mg-tp-30">
+        <colgroup>
+            <col width="33.3%">
+            <col width="33.3%">
+            <col width="33.3%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>好友昵称</th>
+                <th>是否交易</th>
+                <th>我的佣金</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="bonus in bonusList">
+                <td>{{bonus.username}}</td>
+                <td>
+                    <span ng-if="bonus.status === 1">是</span>
+                    <span ng-if="bonus.status === 0">否</span>
+                </td>
+                <td>${{bonus.money || 0}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="text-center" ng-if="bonusList.length">
+        <p tw-pagination></p>
+    </div>
+
+    <div ng-if="bonusList.length <= 0">
+        <p class="text-center mg-tp-20">无数据！</p>
+    </div>
+</div>
