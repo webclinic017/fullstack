@@ -1,11 +1,11 @@
 @include b (notice) {
-    
+
     @include e (list) {
         color: $gray-darkest;
     }
 
     @include e (list-li) {
-        padding: 20px 0 5px 20px;
+        padding: 20px 20px 5px 20px;
         margin-bottom: 20px;
         overflow: hidden;
         background: #fff;
@@ -14,17 +14,6 @@
         &:hover {
             background: $gray-lightest;
         }
-    }
-
-    .mg-lf-_30 {
-        margin-left: -30px;
-    }
-
-    @include e (li-photo) {
-        width: 70px;
-        height: 70px;
-        border-radius: 4px;
-        background: #fdd;
     }
 
     @include e (li-title) {

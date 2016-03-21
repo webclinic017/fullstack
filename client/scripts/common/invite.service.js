@@ -8,7 +8,8 @@
 
     function invite($http) {
         var service = {
-            getInviteFriendsInfo: getInviteFriendsInfo
+            getInviteFriendsInfo: getInviteFriendsInfo,
+            setInviteFriendsLink: setInviteFriendsLink
         };
         return service;
 
@@ -28,6 +29,15 @@
                 }
             });
         }
-       
+
+        /*
+         *  邀请好友链接请求接口
+         */
+        function setInviteFriendsLink (usercode) {
+            return $http.post('/action/public/v3/set_invite_code', {
+                usercode: usercode
+            });
+        }
+
     }
 })();

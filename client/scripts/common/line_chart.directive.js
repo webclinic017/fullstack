@@ -171,7 +171,7 @@
                 }
 
                 // 高手主页
-                if (type === 'masterDetail') {
+                if (type === 'masterDetail' || type === 'investDetail') {
                     angular.extend(options, {
                         title: {
                             text: ''

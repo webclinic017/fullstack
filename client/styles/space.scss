@@ -23,6 +23,7 @@
 @import "common/navs";
 @import "common/footer";
 @import "common/dropdown";
+@import "common/charts";
 @import "common/table";
 @import "common/form";
 @import "common/pagination";
@@ -33,4 +34,9 @@
 @import "asset/index";
 @import "space/sidebar";
 @import "space/basic";
+
+@import "invest/summary";
+@import "invest/index";
 @import "notice/index";
+@import "invite/index";
+
