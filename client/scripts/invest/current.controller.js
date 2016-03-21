@@ -5,21 +5,25 @@
     angular.module('fullstackApp')
         .controller('InvestCurrentController', InvestCurrentController);
 
-    InvestCurrentController.$inject = ['$scope', 'invest', '$timeout'];
+    InvestCurrentController.$inject = ['$scope', 'invest', 'trader', '$timeout', '$modal', '$state'];
 
-    function InvestCurrentController($scope, invest, $timeout) {
+    function InvestCurrentController($scope, invest, trader, $timeout, $modal, $state) {
         $scope.orderCurrent = {};
         $scope.orders = [];
         $scope.traders = [];
         $scope.showOrders = showOrders;
         $scope.showDetails = showDetails;
+        $scope.openCopyMdl = openCopyMdl;
+        $scope.openCancelCopyMdl = openCancelCopyMdl;
 
         var dataId;
         var tradersId;
         var detailsId;
+        var avaCopyAmount;
 
         getData();
         getTraders();
+        getAvaCopyAmount();
 
         // 只要当前投资的所对应的 state 变化就要 cancel 轮询
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
@@ -100,6 +104,73 @@
             detailsId = $timeout(function () {
                 getDetails(trader);
             }, 5000);
+        }
+
+        // 获取可用复制金额
+        function getAvaCopyAmount() {
+            trader.getAvaCopyAmount().then(function (data) {
+                // 本人可用复制金额
+                avaCopyAmount = data.total_available;
+            });
+        }
+
+        function openCopyMdl(trader, event) {
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+
+            $modal.open({
+                templateUrl: '/views/invest/copy_modal.html',
+                controller: 'TraderCopyController',
+                size: 'sm',
+                backdrop: true,
+                resolve: {
+                    passedScope: function () {
+                        trader.copied = trader.copy_asset;
+                        trader.minCopyAmount = trader.min_copy_amount;
+                        return {
+                            copiedTrader: trader,
+                            avaCopyAmount: avaCopyAmount
+                        }
+                    }
+                }
+            });
+        }
+
+        function openCancelCopyMdl(trader, event) {
+            var usercode = trader.usercode;
+            var username = trader.username;
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+
+            $modal.open({
+                templateUrl: '/views/invest/cancel_copy_modal.html',
+                size: 'sm',
+                backdrop: true,
+                controller: function ($scope, trader, $modalInstance) {
+                    $scope.copyCancel = {
+                        username: username,
+                        success: false     // 是否取消复制成功
+                    };
+                    $scope.cancelCopy = cancelCopy;
+                    $scope.closeModal = closeModal;
+
+                    function cancelCopy() {
+                        trader.cancelCopy(usercode).then(function (data) {
+                            // console.info(data);
+                            if (data.is_succ) {
+                                $scope.copyCancel.success = true;
+                                $state.go('space.invest.subpage', {
+                                    subpage: 'current'
+                                }, {reload: true});
+                            }
+                        });
+                    }
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
         }
     }
 })();
