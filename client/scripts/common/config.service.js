@@ -14,6 +14,8 @@
                 md: '_80.jpg',
                 lg: '_150.jpg'
             },
+            server: 'dev',
+            getUrlPrefix: getUrlPrefix,
             banks: [
                 {nameEN: 'icbc', nameZH: '中国工商银行'},
                 {nameEN: 'ccb', nameZH: '中国建设银行'},
@@ -40,5 +42,21 @@
             ]
         };
         return service;
+
+        function getUrlPrefix(server) {
+            var urlPrefix = {
+                main: '',       // 官网
+                personal: '#',   // 个人中心
+            };
+
+            if (server === 'dev') {
+                urlPrefix.main = 'http://dev.tigerwit.com';
+            }
+
+            if (server === 'www') {
+                urlPrefix.main = 'https://www.tigerwit.com';
+            }
+            return urlPrefix;
+        }
     }
 })();
