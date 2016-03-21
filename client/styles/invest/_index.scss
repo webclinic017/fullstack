@@ -99,7 +99,7 @@
             > span.rate {
                 color: #fff;
                 padding: 4px;
-                background-color: $brand-success;
+                background-color: $brand-info;
                 border-radius: $border-radius-base;
             }
         }
@@ -156,7 +156,8 @@
     }
 }
 
-
-
-
-// invest current
+@include b(copy_modal) {
+    @include e(label) {
+        font-size: 20px;
+    }
+}
