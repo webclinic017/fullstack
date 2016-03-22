@@ -267,3 +267,32 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
+.loading_img {
+    $loading_img_width: 50px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: $zindex-loading_img;
+    display: none;
+    background-color: #fff;
+
+    &.active {
+        display: block;
+    }
+
+    & > img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $loading_img_width;
+        height: $loading_img_width;
+        margin-top: - ($loading_img_width / 2);
+        margin-left: - ($loading_img_width / 2);
+    }
+}
+
+

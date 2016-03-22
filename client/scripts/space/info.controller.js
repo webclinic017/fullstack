@@ -12,9 +12,7 @@
      * @desc
      */
     function SpaceInfoController($scope, $location, $interval, account, invite, $timeout) {
-
         $scope.unreadLength = 0;        // 未读消息
-
         var summaryId;
         var noticeId;
 
@@ -58,7 +56,6 @@
         function getAssetInfo() {
             account.getAssetInfo().then(function (data) {
                 angular.extend($scope.personal, data.data);
-                // console.info($scope.personal);
             });
 
             summaryId = $timeout(function () {

@@ -65,7 +65,6 @@
                     views: {
                         '@space.invest': {
                             templateUrl: function ($stateParams) {
-                                // console.info($stateParams);
                                 $stateParams.subpage = $stateParams.subpage || 'current';
                                 return '/views/invest/' + $stateParams.subpage + '.html';
                             },
@@ -74,7 +73,6 @@
                                 var ctrlPrefix = 'Invest';
                                 var ctrlSuffix = 'Controller';
                                 var ctrlRoot = modCtrlName($stateParams.subpage);
-                                // return '';
                                 return ctrlPrefix + ctrlRoot + ctrlSuffix;
                             }
                         }
