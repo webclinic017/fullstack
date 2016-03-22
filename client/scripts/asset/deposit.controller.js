@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('AssetDepositController', AssetDepositController);
 
-    AssetDepositController.$inject = ['$scope', '$window', '$state', 'asset', 'validator'];
+    AssetDepositController.$inject = ['$scope', '$window', '$modal', '$state', 'asset', 'validator'];
 
-    function AssetDepositController($scope, $window, $state, asset, validator) {
+    function AssetDepositController($scope, $window, $modal, $state, asset, validator) {
 
         $scope.deposit = {
             minAmount: 0,       // 最低充值金额
@@ -36,7 +36,7 @@
 
         });
         // 充值  还未完成s
-        function toDeposit() {
+        function toDeposit(amount) {
             var amount = $scope.deposit.amount;
 
             if (typeof amount === 'undefined') {
@@ -48,7 +48,7 @@
             var w = $window.open('/waiting');
 
             asset.deposit(amount).then(function(data) {
-                // openDepositMdl('depositFinish');
+                openDepositMdl('depositFinish');
                 w.location = data.url;
             });
         }
