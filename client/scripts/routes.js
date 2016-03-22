@@ -182,6 +182,16 @@
                     }
                 })
 
+                .state('waiting', {
+                    url: '/waiting',
+                    views: {
+                        '@': {
+                            templateUrl: '/views/waiting.html',
+                            controller: ''
+                        }
+                    }
+                })
+
                 .state('404', {
                     url: '/404'
                 });
