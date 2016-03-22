@@ -1,4 +1,4 @@
-<div class="space_sidebar mg-tp-30">    
+<div class="space_sidebar mg-tp-30">
     <div class="space_sidebar__info">
         <div class="space_sidebar__avatar">
             <img ng-src="{{ personal.lgAvatar }}">
@@ -34,7 +34,7 @@
             MT4 真实账户：{{ personal.real_id }}
         </div>
     </div>
-    
+
     <ul class="side_navbar">
         <li>
             <h4 class="side_navbar__title">账户</h4>
@@ -58,6 +58,7 @@
                 </li>
                 <li>
                     <a href="">系统消息</a>
+                    <a class="space_sidebar__mes-num" ng-if="personal.unreadLength > 0">{{personal.unreadLength}}</a>
                 </li>
             </ul>
         </li>
