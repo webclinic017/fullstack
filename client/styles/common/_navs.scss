@@ -142,6 +142,8 @@
 //== nav-tabs
 // --------------------------------------------------
 @include b(nav-tabs-wrapper) {
+    position: relative;
+    z-index: 1;
     display: inline-block;
     margin-bottom: -1px;
     background-color: #fff;
@@ -153,8 +155,8 @@
     vertical-align: middle;
 
     > li {
-    position: relative;
-    float: left;
+        position: relative;
+        float: left;
         margin-right: -1px;
 
         &:first-child {
@@ -206,6 +208,12 @@
         background-color: $gray;
     }
 }
+// tabs 的内容
+@include b(nav-tabs-content) {
+    z-index: 0;
+    border: 1px solid $gray;
+}
+
 
 // 未登录时候 显示 注册登录 块
 .navbar-login {
@@ -298,7 +306,6 @@
         color: $gray-dark;
         font-size: 16px;
     }
-
 }
 
 

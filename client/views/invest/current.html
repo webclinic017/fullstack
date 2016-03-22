@@ -21,7 +21,6 @@
     </table>
 
     <div class="invest_table_wrapper">
-        <div tw-loading-img></div>
         <!-- 自主交易持仓订单 -->
         <table class="invest_table table table-striped table-hover">
             <colgroup>
@@ -134,7 +133,7 @@
                             </div>
                         </th>
                         <th colspan="2" class="invest_orders__rate-copy">
-                            <span class="number">
+                            <span class="number" ng-click="openCopyMdl(trader, $event)">
                                 复制金额: {{ trader.copy_asset }}
                                 <i class="fa fa-caret-down font-info"></i>
                             </span>
@@ -146,7 +145,7 @@
                         </th>
                         <th class="invest_orders__btn">
                             <a href="" class="btn btn-primary btn-sm">详情</a>
-                            <a href="" class="btn btn-default btn-sm">取消复制</a>
+                            <button class="btn btn-default btn-sm" ng-click="openCancelCopyMdl(trader, $event)">取消复制</button>
                         </th>
                     </tr>
                 </thead>
@@ -198,6 +197,10 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+
+        <div class="text-center mg-bt-50" ng-if="orders.length <= 0 && traders.length <= 0">
+            <p class="">无数据</p>
         </div>
     </div>
 </div>

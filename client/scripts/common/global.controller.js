@@ -20,7 +20,6 @@
 
         account.checkLogined().then(function (logined) {
             $scope.userstatus.logined = logined;
-
             if (logined) {
                 initialize();
             }

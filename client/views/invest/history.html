@@ -21,7 +21,6 @@
     </table>
 
     <div class="invest_table_wrapper">
-        <div tw-loading-img></div>
         <!-- 自主交易历史订单 -->
         <table class="invest_table table table-striped table-hover">
             <colgroup>
@@ -36,7 +35,7 @@
                 <tr class="invest_orders" ng-if="orders.length > 0" ng-click="showOrders()">
                     <th class="text-left invest_orders__user">
                         <a href="" class="invest_orders__user-avatar">
-                            <img ng-src="/avatar/{{ personal.usercode }}_50.jpg" alt="personal 头像">
+                            <img ng-src="/avatar/{{ personal.usercode }}_80.jpg" alt="personal 头像">
                         </a>
                         
                         <div class="invest_orders__user-username">
@@ -120,7 +119,7 @@
                     <tr class="invest_orders" ng-click="showDetails(trader)">
                         <th class="text-left invest_orders__user">
                             <a href="" class="invest_orders__user-avatar">
-                                <img ng-src="/avatar/{{ trader.usercode }}_50.jpg" alt="trader 头像">
+                                <img ng-src="/avatar/{{ trader.usercode }}_80.jpg" alt="trader 头像">
                             </a>
                             
                             <div class="invest_orders__user-username">
@@ -146,6 +145,7 @@
                 </thead>
             </table>
             <div class="invest_table_wrapper__tbody" ng-show="trader.detailsShow">
+                <div tw-loading-img></div>
                 <table class="invest_table table table-striped table-hover">
                     <colgroup>
                         <col width="35%">
@@ -156,9 +156,6 @@
                     </colgroup>
                     <!-- 复制交易历史订单详情 -->
                     <tbody>
-                        <tr ng-show="!trader.orders">
-                            <div tw-loading-img></div>
-                        </tr>
                         <tr class="" ng-repeat="order in trader.orders">
                             <td class="text-left invest_orders__detail">
                                 <span class="invest_orders__trunk"></span>
@@ -192,6 +189,10 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+
+        <div class="text-center mg-bt-50" ng-if="orders.length <= 0 && traders.length <= 0">
+            <p class="">无数据</p>
         </div>
     </div>
 </div>
