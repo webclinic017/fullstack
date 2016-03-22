@@ -36,7 +36,8 @@
 
         });
         // 充值  还未完成s
-        function toDeposit(amount) {
+        function toDeposit() {
+            var amount = $scope.deposit.amount;
 
             if (typeof amount === 'undefined') {
                 showErr('amount');
@@ -44,10 +45,10 @@
             }
             amount = Number(amount).toFixed(2);
 
-            var w = $window.open('#/waiting');
+            var w = $window.open('/waiting');
 
             asset.deposit(amount).then(function(data) {
-                openDepositMdl('depositFinish');
+                // openDepositMdl('depositFinish');
                 w.location = data.url;
             });
         }

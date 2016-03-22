@@ -78,6 +78,7 @@
                         }
                     }
                 })
+
                 .state('space.invite', {
                     url: '/space/invite',
                     authenticated: true,
@@ -88,6 +89,7 @@
                         }
                     }
                 })
+                // 点击邀请链接对应的路由
                 .state('invite', {
                     url: '/invite/come?usercode',
                     views: {
@@ -96,6 +98,8 @@
                         }
                     }
                 })
+                
+
                 .state('space.asset', {
                     views: {
                         'content@space': {

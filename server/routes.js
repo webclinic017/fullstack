@@ -97,6 +97,12 @@ module.exports = function (app) {
         next();
     });
 
+    // 页面跳转中
+    app.route('/waiting').get(function (req, res) {
+        res.render('waiting', {
+        });
+    });
+
     app.route('/:url(404|*)').get(function (req, res) {
         var viewFilePath = '404';
         var statusCode = 404;
