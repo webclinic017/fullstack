@@ -44,7 +44,7 @@
             }
             amount = Number(amount).toFixed(2);
 
-            var w = $window.open('#/space/waiting');
+            var w = $window.open('#/waiting');
 
             asset.deposit(amount).then(function(data) {
                 openDepositMdl('depositFinish');
