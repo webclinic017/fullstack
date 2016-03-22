@@ -45,8 +45,7 @@
 
         function getUrlPrefix(server) {
             var urlPrefix = {
-                main: '',       // 官网
-                personal: '#',   // 个人中心
+                main: ''
             };
 
             if (server === 'dev') {
