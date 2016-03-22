@@ -9,6 +9,7 @@ $font-space-gray-color: $gray-dark;
 
 @include b(space_basic) {
     margin-top: 50px;
+    margin-left: 20px;
 
     .invite {
         > .space_basic__item {
