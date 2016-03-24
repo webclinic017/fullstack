@@ -1,0 +1,8 @@
+@include b(setting_pnl) {
+    padding: 15px;
+
+    label {
+        line-height: $input-height-base;
+        font-weight: 700;
+    }
+}

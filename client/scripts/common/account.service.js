@@ -16,7 +16,11 @@
             getNoticeCategory: getNoticeCategory,
             getNoticeList: getNoticeList,
             getOneRead: getOneRead,
-            getAllRead: getAllRead
+            getAllRead: getAllRead,
+            getLocation: getLocation,
+            getStates: getStates,
+            getCities: getCities,
+            getTradeInfo: getTradeInfo
         };
         return service;
 
@@ -133,6 +137,53 @@
          */
         function getAllRead() {
             return $http.get('/action/public/v3/notify_mark_all_read');
+        }
+
+        /**
+         * @name getLocation
+         * @desc 获取所在地
+         * @return {Object} {
+         *   username: ,
+         *   world_code: ,
+         *   world_name: ,
+         *   state_code: ,  // 若非中国，为 null
+         *   state_name: ,
+         *   city_code: ,   // 若非中国，为 null
+         *   city_name: ,
+         *   desc:          //个性签名
+         * }    
+         */
+        function getLocation() {
+            return $http.get('/api/v1/basic_settings');
+        }
+
+        function getStates(countryCode) {
+            return $http.get('/api/v1/statecode_list', {
+                params: {
+                    world_code: countryCode
+                }
+            });
+        }
+
+        function getCities(stateCode) {
+            return $http.get('/api/v1/citycode_list', {
+                params: {
+                    parent_code: stateCode
+                }
+            });
+        }
+
+        /**
+         * @name getTradeInfo
+         * @desc 获取交易特色、交易策略信息
+         * @param {String} usercode 高手的 usercode
+         */
+        function getTradeInfo(usercode) {
+            return $http.get('/api/v3/get_master_info', {
+                params: {
+                    cros_user: usercode
+                }
+            });
         }
     }
 })();

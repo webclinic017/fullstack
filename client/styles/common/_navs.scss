@@ -355,7 +355,7 @@
     }
 }
 
-//== 高手主页、个人中心 头部title
+//== 信息面板
 @include b(navbar_summary) {
     border: 1px solid $gray;
     border-radius: $border-radius-base;
@@ -366,6 +366,7 @@
         margin: 0;
         padding: 15px 0 15px 30px;
         border-bottom: 1px solid $gray;
+        background-color: $gray-lightest;
     }
 
     @include e(content) {

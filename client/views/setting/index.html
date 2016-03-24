@@ -1,0 +1,20 @@
+<div class="nav-tabs-wrapper">
+    <ul class="nav-tabs">
+        <li ui-sref-active="active">
+            <a ui-sref="space.setting.subpage({subpage: 'info'})">修改资料</a>
+        </li>
+        <li ui-sref-active="active">
+            <span class="nav-tabs__divider"></span>
+            <a ui-sref="space.setting.subpage({subpage: 'history'})">完善 KCY 认证</a>
+        </li>
+        <li ui-sref-active="active">
+            <span class="nav-tabs__divider"></span>
+            <a ui-sref="space.setting.subpage({subpage: 'summary'})">实名认证</a>
+        </li>
+    </ul>
+</div>
+
+<div class="nav-tabs-content relative mg-bt-50">
+    <div ui-view></div>
+    <!-- <div tw-loading-img></div> -->
+</div>

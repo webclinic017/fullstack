@@ -98,7 +98,6 @@
                         }
                     }
                 })
-                
 
                 .state('space.asset', {
                     views: {
@@ -122,7 +121,6 @@
                                 var ctrlPrefix = 'Asset';
                                 var ctrlSuffix = 'Controller';
                                 var ctrlRoot = modCtrlName($stateParams.subpage);
-                                // return '';
                                 return ctrlPrefix + ctrlRoot + ctrlSuffix;
                             }
                         }
@@ -135,6 +133,35 @@
                         'content@space': {
                             templateUrl: '/views/notice/index.html',
                             controller: 'NoticeIndexController'
+                        }
+                    }
+                })
+                
+                // setting
+                .state('space.setting', {
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/setting/index.html',
+                            controller: 'SettingIndexController'
+                        }
+                    }
+                })
+                .state('space.setting.subpage', {
+                    authenticated: true,
+                    url: '/space/setting/:subpage',
+                    views: {
+                        '@space.setting': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'info';
+                                return '/views/setting/' + $stateParams.subpage + '.html';
+                            },
+                            controllerProvider: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'info';
+                                var ctrlPrefix = 'Setting';
+                                var ctrlSuffix = 'Controller';
+                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                            }
                         }
                     }
                 })
