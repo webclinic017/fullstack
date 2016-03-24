@@ -21,7 +21,8 @@
             getStates: getStates,
             getCities: getCities,
             getTradeInfo: getTradeInfo,
-            setBasicInfo: setBasicInfo
+            setBasicInfo: setBasicInfo,
+            setPwd: setPwd
         };
         return service;
 
@@ -193,6 +194,17 @@
          */
         function setBasicInfo() {
             return $http.post('/xxx', {
+            });
+        }
+
+        /**
+         * @name setPwd
+         * @desc 设置密码
+         */
+        function setPwd(oldPwd, newPwd) {
+            return $http.post('/api/v1/change_password', {
+                password: oldPwd,
+                new_pwd: newPwd
             });
         }
     }

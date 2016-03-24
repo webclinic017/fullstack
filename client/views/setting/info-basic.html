@@ -1,5 +1,5 @@
 <div ng-controller="SettingInfoBasicController">
-    <form name="basicInfoForm">
+    <form name="basicInfoForm" novalidate>
         <div class="row">
             <div class="col-xs-2 pd-rg-0">
                 <label for="">昵称</label>
@@ -214,25 +214,25 @@
                 </div>
             </div>
         </div>
-    </form>
 
-    <div class="text-center mg-bt-20">
-        <div ng-show="backErr.system.show">
-            <p class="alert-system" ng-show="backErr.system.status === 1">
-                保存成功
-            </p>
-            <p class="alert-system" ng-show="backErr.system.status === 2">
-                系统繁忙
-            </p>
+        <div class="text-center mg-bt-20 mg-tp-20">
+            <div ng-show="backErr.system.show">
+                <p class="alert-system" ng-show="backErr.system.status === 1">
+                    保存成功
+                </p>
+                <p class="alert-system" ng-show="backErr.system.status === 2">
+                    系统繁忙
+                </p>
+            </div>
+            
+            <button class="btn btn-primary btn-sm" type="submit" ng-if="clickable" ng-click="submitForm('basicInfoForm')">
+                提交
+            </button>
+
+            <button class="btn btn-primary btn-sm" disabled ng-if="!clickable">
+                <i class="loading_spinner fa fa-spinner"></i>
+                提交中
+            </button>
         </div>
-        
-        <button class="btn btn-primary btn-sm" ng-if="clickable" ng-click="submitForm('basicInfoForm')">
-            提交
-        </button>
-
-        <button class="btn btn-primary btn-sm" disabled ng-if="!clickable">
-            <i class="loading_spinner fa fa-spinner"></i>
-            提交中
-        </button>
-    </div>
+    </form>
 </div>

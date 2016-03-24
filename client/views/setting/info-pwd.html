@@ -1,0 +1,99 @@
+<div ng-controller="SettingInfoPwdController">
+    <div class="row mg-tp-20">
+        <form name="pwdForm" novalidate>
+            <div class="col-xs-3">
+                <div class="form-control-wrapper">
+                    <input class="form-control" 
+                           name="pwdOld" 
+                           type="password"
+                           placeholder="原密码"
+                           required
+                           ng-class="{'form-control-error': (frontErr.pwdOld.show && pwdForm.pwdOld.$invalid) || (backErr.pwdOld.show && backErr.pwdOld.status > 0)}"
+                           ng-model="password.pwdOld"
+                           ng-focus="hideErr('pwdForm', 'pwdOld')"
+                           ng-blur="showErr('pwdForm', 'pwdOld')">
+
+                    <div ng-show="frontErr.pwdOld.show">
+                        <p class="alert-arrow_tp_lf" ng-show="pwdForm.pwdOld.$error.required">
+                            请输入原密码
+                        </p>
+                    </div>
+
+                    <div ng-show="backErr.pwdOld.show">
+                        <p class="alert-arrow_tp_lf" ng-show="backErr.pwdOld.status == 1">
+                            输入的原密码不正确
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="form-control-wrapper">
+                    <input class="form-control"
+                           name="pwdNew"
+                           type="password"
+                           placeholder="新密码"
+                           required
+                           ng-class="{'form-control-error': frontErr.pwdNew.show && pwdForm.pwdNew.$invalid}"
+                           ng-model="password.pwdNew"
+                           twform-valid-pwd
+                           ng-focus="hideErr('pwdForm', 'pwdNew')"
+                           ng-blur="showErr('pwdForm', 'pwdNew')">
+
+                    <div ng-show="frontErr.pwdNew.show">
+                        <p class="alert-arrow_tp_lf" ng-show="pwdForm.pwdNew.$error.required">
+                            请输入新密码
+                        </p>
+
+                        <p class="alert-arrow_tp_lf" ng-show="pwdForm.pwdNew.$error.twformValidPwd">
+                            {{frontErr.pwdNew.tip}}
+                        </p>
+                    </div>  
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="form-control-wrapper">
+                    <input class="form-control" 
+                           name="pwdConfirm" 
+                           type="password"
+                           placeholder="确认新密码"
+                           required
+                           ng-class="{'form-control-error': frontErr.pwdConfirm.show && pwdForm.pwdConfirm.$invalid}"
+                           ng-model="password.pwdConfirm"
+                           twform-repeat="{{password.pwdNew}}"
+                           ng-focus="hideErr('pwdForm', 'pwdConfirm')"
+                           ng-blur="showErr('pwdForm', 'pwdConfirm')">
+
+                    <div ng-show="frontErr.pwdConfirm.show">
+                        <p class="alert-arrow_tp_lf" ng-show="pwdForm.pwdConfirm.$error.required">
+                            请再次输入新密码
+                        </p>
+
+                        <p class="alert-arrow_tp_lf" ng-show="pwdForm.pwdConfirm.$error.twformRepeat">
+                            两次输入密码不一致
+                        </p>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="col-xs-3 text-center">
+                <button class="btn btn-primary btn-sm" type="submit" ng-if="clickable" ng-click="submitForm('pwdForm')">
+                    提交
+                </button>
+
+                <button class="btn btn-primary btn-sm" disabled ng-if="!clickable">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    提交中
+                </button>
+            </div>
+        </form>
+    </div>
+    
+    <div class="text-center" ng-show="backErr.system.show">
+        <p class="alert-system" ng-show="backErr.system.status === 1">
+            密码修改成功
+        </p>
+        <p class="alert-system" ng-show="backErr.system.status === 2">
+            系统繁忙
+        </p>
+    </div>
+</div>
