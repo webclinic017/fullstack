@@ -1,0 +1,12 @@
+//  复制我的
+@include b (bonus-cur) {
+
+
+    // 添加右边框
+    @include m (bor-rh) {
+        border-right: 1px solid $gray;
+    }
+}
+
+
+//  我的分成
