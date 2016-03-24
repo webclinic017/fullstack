@@ -1,220 +1,233 @@
-<form name="basicInfoForm">
-    <div class="row">
-        <div class="col-xs-2 pd-rg-0">
-            <label for="">昵称</label>
-        </div>
-        
-        <div class="col-xs-5">
-            <div class="form-control-wrapper">
-                <input class="form-control"
-                       name="username"
-                       type="text"
-                       placeholder="昵称"
-                       required
-                       ng-class="{'form-control-error': (frontErr.username.show && basicInfoForm.username.$invalid) || (backErr.username.show && backErr.username.status > 0)}"
-                       ng-model="basicInfo.username"
-                       twform-valid-txt
-                       data-type="username"
-                       data-min-len="4"
-                       data-max-len="16"
-                       ng-blur="showErr('basicInfoForm', 'username')"
-                       ng-focus="hideErr('basicInfoForm', 'username')">
+<div ng-controller="SettingInfoBasicController">
+    <form name="basicInfoForm">
+        <div class="row">
+            <div class="col-xs-2 pd-rg-0">
+                <label for="">昵称</label>
+            </div>
+            
+            <div class="col-xs-5">
+                <div class="form-control-wrapper">
+                    <input class="form-control"
+                           name="username"
+                           type="text"
+                           placeholder="昵称"
+                           required
+                           ng-class="{'form-control-error': (frontErr.username.show && basicInfoForm.username.$invalid) || (backErr.username.show && backErr.username.status > 0)}"
+                           ng-model="basicInfo.username"
+                           twform-valid-txt
+                           data-type="username"
+                           data-min-len="4"
+                           data-max-len="16"
+                           ng-blur="showErr('basicInfoForm', 'username')"
+                           ng-focus="hideErr('basicInfoForm', 'username')">
 
-                <div ng-show="frontErr.username.show">
-                    <p class="alert-error" ng-show="basicInfoForm.username.$error.required">
-                        请输入昵称
-                    </p>
-                    <p class="alert-error" ng-show="basicInfoForm.username.$error.twformValidTxt">
-                        {{frontErr.username.tip}}
-                    </p>
-                </div>
+                    <div ng-show="frontErr.username.show">
+                        <p class="alert-error" ng-show="basicInfoForm.username.$error.required">
+                            请输入昵称
+                        </p>
+                        <p class="alert-error" ng-show="basicInfoForm.username.$error.twformValidTxt">
+                            {{frontErr.username.tip}}
+                        </p>
+                    </div>
 
-                <div ng-show="backErr.username.show">
-                    <p class="alert-error" ng-show="backErr.username.status == 2">
-                        昵称已存在
-                    </p>
+                    <div ng-show="backErr.username.show">
+                        <p class="alert-error" ng-show="backErr.username.status == 2">
+                            昵称已存在
+                        </p>
 
-                    <p class="alert-error" ng-show="backErr.username.status == 3">
-                        昵称包含敏感词汇，请修改
-                    </p>
+                        <p class="alert-error" ng-show="backErr.username.status == 3">
+                            昵称包含敏感词汇，请修改
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="col-xs-2 pd-rg-0">
-            <label for="">所在地</label>
+        <div class="row">
+            <div class="col-xs-2 pd-rg-0">
+                <label for="">所在地</label>
+            </div>
+
+            <div class="col-xs-5">
+                <div class="form-control-wrapper">
+                    <div class="select">
+                        <input class="select__input"
+                               name="locationState"
+                               type="text"
+                               placeholder="请选择省/市"
+                               required
+                               ng-model="basicInfo.locationState.key"
+                               ng-class="{'form-control-error': frontErr.locationState.show && basicInfoForm.locationState.$invalid}"
+                               ng-blur="showErr('basicInfoForm', 'locationState')"
+                               ng-focus="hideErr('basicInfoForm', 'locationState')">
+                        
+                        <i class="select__icon fa fa-angle-down"></i>
+
+                        <ul class="select__dropdown" twform-select data-bind-model="basicInfo.locationState">
+                            
+                            <li ng-repeat="state in states" ng-class="{'selected': state.code === basicInfo.locationState.value}">
+                                <span data-value="{{state.code}}" ng-click="selectRegion('state', state.code)">{{state.name_cn}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div ng-show="frontErr.state.show">
+                        <p class="alert-error" ng-show="basicInfoForm.locationState.$error.required">
+                            请选择省/市
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-xs-5">
+                <div class="form-control-wrapper">
+                    <div class="select">
+                        <input class="select__input"
+                               name="locationCity"
+                               type="text"
+                               placeholder="请选择市/区"
+                               required
+                               ng-model="basicInfo.locationCity.key"
+                               ng-class="{'form-control-error': frontErr.locationCity.show && basicInfoForm.locationCity.$invalid}"
+                               ng-blur="showErr('basicInfoForm', 'locationCity')"
+                               ng-focus="hideErr('basicInfoForm', 'locationCity')">
+                        
+                        <i class="select__icon fa fa-angle-down"></i>
+
+                        <ul class="select__dropdown" twform-select data-bind-model="basicInfo.locationCity">
+                            
+                            <li ng-repeat="city in cities" ng-class="{'selected': city.code === basicInfo.locationCity.value}">
+                                <span data-value="{{city.code}}">{{city.name_cn}}</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div ng-show="frontErr.city.show">
+                        <p class="alert-error" ng-show="basicInfoForm.locationCity.$error.required">
+                            请选择市/区
+                        </p>
+                    </div>
+                </div>
+            </div>    
         </div>
 
-        <div class="col-xs-5">
-            <div class="form-control-wrapper">
-                <div class="select">
-                    <input class="select__input"
-                           name="locationState"
-                           type="text"
-                           placeholder="请选择省/市"
-                           required
-                           ng-model="basicInfo.locationState.key"
-                           ng-class="{'form-control-error': frontErr.locationState.show && basicInfoForm.locationState.$invalid}"
-                           ng-blur="showErr('basicInfoForm', 'locationState')"
-                           ng-focus="hideErr('basicInfoForm', 'locationState')">
-                    
-                    <i class="select__icon fa fa-angle-down"></i>
-
-                    <ul class="select__dropdown" twform-select data-bind-model="basicInfo.locationState">
+        <div class="row">
+            <div class="col-xs-2 pd-rg-0">
+                <label for="">交易特色</label>
+            </div>
+            <div class="col-xs-5">
+                <div class="form-control-wrapper">
+                    <div class="select">
+                        <input class="select__input"
+                               name="feature"
+                               type="text"
+                               placeholder="请选择"
+                               ng-model="basicInfo.feature.key"
+                               ng-class="{'form-control-error': frontErr.feature.show && basicInfoForm.feature.$invalid}"
+                               ng-blur="showErr('basicInfoForm', 'feature')"
+                               ng-focus="hideErr('basicInfoForm', 'feature')">
                         
-                        <li ng-repeat="state in states" ng-class="{'selected': state.code === basicInfo.locationState.value}">
-                            <span data-value="{{state.code}}" ng-click="selectRegion('state', state.code)">{{state.name_cn}}</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div ng-show="frontErr.state.show">
-                    <p class="alert-error" ng-show="basicInfoForm.locationState.$error.required">
-                        请选择省/市
-                    </p>
+                        <i class="select__icon fa fa-angle-down"></i>
+
+                        <ul class="select__dropdown" twform-select data-bind-model="basicInfo.feature">
+                            
+                            <li ng-repeat="feature in features" ng-class="{'selected': feature.value === basicInfo.feature.value}">
+                                <span data-value="{{feature.value}}">{{feature.key}}</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div ng-show="frontErr.city.show">
+                        <p class="alert-error" ng-show="basicInfoForm.feature.$error.required">
+                            请选择市/区
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <div class="col-xs-5">
-            <div class="form-control-wrapper">
-                <div class="select">
-                    <input class="select__input"
-                           name="locationCity"
-                           type="text"
-                           placeholder="请选择市/区"
-                           required
-                           ng-model="basicInfo.locationCity.key"
-                           ng-class="{'form-control-error': frontErr.locationCity.show && basicInfoForm.locationCity.$invalid}"
-                           ng-blur="showErr('basicInfoForm', 'locationCity')"
-                           ng-focus="hideErr('basicInfoForm', 'locationCity')">
+        <div class="row">
+            <div class="col-xs-2 pd-rg-0">
+                <label for="">交易策略</label>
+            </div>
+            <div class="col-xs-8">
+                <div class="editbox">
+                    <textarea class="editbox__textarea"
+                              name="policy"
+                              ng-class="{'editbox__textarea-error': (frontErr.policy.show && basicInfoForm.policy.$invalid) || (backErr.policy.show && backErr.policy.status > 0)}"
+                              ng-model="basicInfo.policy"
+                              twform-editbox
+                              data-words-limit="1000"
+                              data-words="words"
+                              ng-focus="hideErr('basicInfoForm', 'policy')"
+                              ng-blur="showErr('basicInfoForm', 'policy')"></textarea>
+
+                    <span class="editbox__words_limit">
+                        {{words}}/1000 字符
+                    </span>
                     
-                    <i class="select__icon fa fa-angle-down"></i>
+                    <div ng-show="frontErr.policy.show">
+                        <p class="alert-arrow_tp_lf" ng-show="basicInfoForm.policy.$error.twformEditbox">
+                            超出字符数限制
+                        </p>
+                    </div>
 
-                    <ul class="select__dropdown" twform-select data-bind-model="basicInfo.locationCity">
-                        
-                        <li ng-repeat="city in cities" ng-class="{'selected': city.code === basicInfo.locationCity.value}">
-                            <span data-value="{{city.code}}">{{city.name_cn}}</span>
-                        </li>
-                    </ul>
-                </div>
-
-                <div ng-show="frontErr.city.show">
-                    <p class="alert-error" ng-show="basicInfoForm.locationCity.$error.required">
-                        请选择市/区
-                    </p>
+                    <div ng-show="backErr.policy.show">
+                        <p class="alert-arrow_tp_lf" ng-show="backErr.policy.status === 1">
+                            包含敏感词汇，请修改
+                        </p>
+                    </div>          
                 </div>
             </div>
         </div>    
-    </div>
 
-    <div class="row">
-        <div class="col-xs-2 pd-rg-0">
-            <label for="">交易特色</label>
-        </div>
-        <div class="col-xs-5">
-            <div class="form-control-wrapper">
-                <div class="select">
-                    <input class="select__input"
-                           name="feature"
-                           type="text"
-                           placeholder="请选择"
-                           ng-model="basicInfo.feature.key"
-                           ng-class="{'form-control-error': frontErr.feature.show && basicInfoForm.feature.$invalid}"
-                           ng-blur="showErr('basicInfoForm', 'feature')"
-                           ng-focus="hideErr('basicInfoForm', 'feature')">
-                    
-                    <i class="select__icon fa fa-angle-down"></i>
+        <div class="row">
+            <div class="col-xs-2 pd-rg-0">
+                <label for="">更多介绍</label>
+            </div>
+            <div class="col-xs-8">
+                <div class="editbox">
+                    <textarea class="editbox__textarea"
+                              name="desc"
+                              ng-class="{'editbox__textarea-error': (frontErr.desc.show && basicInfoForm.desc.$invalid) || (backErr.desc.show && backErr.desc.status > 0)}"
+                              ng-model="info.desc"
+                              twform-editbox
+                              data-words-limit="1000"
+                              data-words="words"
+                              ng-focus="hideErr('basicInfoForm', 'desc')"
+                              ng-blur="showErr('basicInfoForm', 'desc')"></textarea>
 
-                    <ul class="select__dropdown" twform-select data-bind-model="basicInfo.feature">
-                        
-                        <li ng-repeat="feature in features" ng-class="{'selected': feature.value === basicInfo.feature.value}">
-                            <span data-value="{{feature.value}}">{{feature.key}}</span>
-                        </li>
-                    </ul>
-                </div>
+                    <span class="editbox__words_limit">
+                        {{words}}/1000 字符
+                    </span>
+                    <div ng-show="frontErr.desc.show">
+                        <p class="alert-arrow_tp_lf" ng-show="basicInfoForm.desc.$error.twformEditbox">
+                            超出字符数限制
+                        </p>
+                    </div>
 
-                <div ng-show="frontErr.city.show">
-                    <p class="alert-error" ng-show="basicInfoForm.feature.$error.required">
-                        请选择市/区
-                    </p>
+                    <div ng-show="backErr.desc.show">
+                        <p class="alert-arrow_tp_lf" ng-show="backErr.desc.status === 1">
+                            包含敏感词汇，请修改
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
+    </form>
+
+    <div class="text-center mg-bt-20">
+        <div ng-show="backErr.system.show">
+            <p class="alert-system" ng-show="backErr.system.status === 1">
+                保存成功
+            </p>
+            <p class="alert-system" ng-show="backErr.system.status === 2">
+                系统繁忙
+            </p>
+        </div>
+        
+        <button class="btn btn-primary btn-sm" ng-click="submitForm('basicInfoForm')">
+            提交
+        </button>
     </div>
-    
-    <div class="row">
-        <div class="col-xs-2 pd-rg-0">
-            <label for="">交易策略</label>
-        </div>
-        <div class="col-xs-8">
-            <div class="editbox">
-                <textarea class="editbox__textarea"
-                          name="policy"
-                          ng-class="{'editbox__textarea-error': (frontErr.policy.show && basicInfoForm.policy.$invalid) || (backErr.policy.show && backErr.policy.status > 0)}"
-                          ng-model="basicInfo.policy"
-                          twform-editbox
-                          data-words-limit="1000"
-                          data-words="words"
-                          ng-focus="hideErr('basicInfoForm', 'policy')"
-                          ng-blur="showErr('basicInfoForm', 'policy')"></textarea>
-
-                <span class="editbox__words_limit">
-                    {{words}}/1000 字符
-                </span>
-                
-                <div ng-show="frontErr.policy.show">
-                    <p class="alert-arrow_tp_lf" ng-show="basicInfoForm.policy.$error.twformEditbox">
-                        超出字符数限制
-                    </p>
-                </div>
-
-                <div ng-show="backErr.policy.show">
-                    <p class="alert-arrow_tp_lf" ng-show="backErr.policy.status === 1">
-                        包含敏感词汇，请修改
-                    </p>
-                </div>          
-            </div>
-        </div>
-    </div>    
-
-    <div class="row">
-        <div class="col-xs-2 pd-rg-0">
-            <label for="">更多介绍</label>
-        </div>
-        <div class="col-xs-8">
-            <div class="editbox">
-                <textarea class="editbox__textarea"
-                          name="desc"
-                          ng-class="{'editbox__textarea-error': (frontErr.desc.show && basicInfoForm.desc.$invalid) || (backErr.desc.show && backErr.desc.status > 0)}"
-                          ng-model="info.desc"
-                          twform-editbox
-                          data-words-limit="1000"
-                          data-words="words"
-                          ng-focus="hideErr('basicInfoForm', 'desc')"
-                          ng-blur="showErr('basicInfoForm', 'desc')"></textarea>
-
-                <span class="editbox__words_limit">
-                    {{words}}/1000 字符
-                </span>
-                <div ng-show="frontErr.desc.show">
-                    <p class="alert-arrow_tp_lf" ng-show="basicInfoForm.desc.$error.twformEditbox">
-                        超出字符数限制
-                    </p>
-                </div>
-
-                <div ng-show="backErr.desc.show">
-                    <p class="alert-arrow_tp_lf" ng-show="backErr.desc.status === 1">
-                        包含敏感词汇，请修改
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</form>
-
-<div class="row text-center">
-    <button class="btn btn-primary btn-sm">提交</button>
 </div>

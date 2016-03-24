@@ -20,7 +20,8 @@
             getLocation: getLocation,
             getStates: getStates,
             getCities: getCities,
-            getTradeInfo: getTradeInfo
+            getTradeInfo: getTradeInfo,
+            setBasicInfo: setBasicInfo
         };
         return service;
 
@@ -183,6 +184,15 @@
                 params: {
                     cros_user: usercode
                 }
+            });
+        }
+
+        /**
+         * @name setBasicInfo
+         * @desc setting 模块设置基本信息
+         */
+        function setBasicInfo() {
+            return $http.post('/xxx', {
             });
         }
     }
