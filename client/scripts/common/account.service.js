@@ -11,6 +11,10 @@
             encrypt: encrypt,
             login: login,
             checkLogined: checkLogined,
+            setToken: setToken,
+            checkExist: checkExist,
+            getRCaptcha: getRCaptcha,
+            getRVoiceCaptcha: getRVoiceCaptcha,
             getPersonalInfo: getPersonalInfo,
             getVerifyStatus: getVerifyStatus,
             getAssetInfo: getAssetInfo,
@@ -74,6 +78,55 @@
                 }
             });
         }
+
+        /**
+         * @name setToken
+         * @desc 进入注册页面设置 token 在获取手机验证码时回传
+         */
+        function setToken() {
+            return $http.post('/action/public/v3/set_token');
+        }
+
+        /**
+         * @name checkExist
+         * @desc 检查号码、昵称是否已存在
+         * @param {String} number 可以是手机号、电子邮箱、身份证号码
+         * @param {String} username 昵称
+         * @return {Object} {
+         *   is_succ: true,
+         *   data: true     // true 存在 false 不存在
+         * }
+         */
+        function checkExist(number, username) {
+            return $http.get('/api/v1/exists', {
+                params: {
+                    key: number,
+                    username: username
+                }
+            });
+        }
+
+        /**
+         * @name getRCaptcha 
+         * @desc 获取验证码（注册功能）
+         */
+        function getRCaptcha(phone, token) {
+            return $http.post('/action/public/v3/get_phone_reg_code', {
+                phone: phone,
+                token: token
+            });
+        }
+
+        /**
+         * @name getRVoiceCaptcha
+         * @desc 获取语音验证码（注册功能）
+         */
+        function getRVoiceCaptcha(phone) {
+            return $http.post('/action/public/v3/get_tigerwit_phone_sound_code', {
+                phone: phone
+            });
+        }
+
 
         function getPersonalInfo() {
             return $http.get('/api/v1/get_info').then(function (data) {
@@ -266,27 +319,6 @@
             return $http.post('/api/v1/change_password', {
                 password: oldPwd,
                 new_pwd: newPwd
-            });
-        }
-
-        /**
-         * @name getRCaptcha 
-         * @desc 获取验证码（注册功能）
-         */
-        function getRCaptcha(phone, token) {
-            return $http.post('/action/public/v3/get_phone_reg_code', {
-                phone: phone,
-                token: token
-            });
-        }
-
-        /**
-         * @name getRVoiceCaptcha
-         * @desc 获取语音验证码（注册功能）
-         */
-        function getRVoiceCaptcha(phone) {
-            return $http.post('/action/public/v3/get_tigerwit_phone_sound_code', {
-                phone: phone
             });
         }
 

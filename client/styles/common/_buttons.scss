@@ -58,3 +58,14 @@
 .btn-lg {
     @include button-size(0px, $btn-padding-horizontal-lg, $btn-font-size-lg, $btn-height-lg, $btn-border-radius);
 }
+
+// 获取验证码 btn
+.captcha_btn {
+    @extend .btn;
+    @extend .btn-info;
+    @extend .btn-sm;
+    width: 100%;
+    height: $input-height-base;
+    padding: 0;
+    line-height: $input-height-base;
+}
