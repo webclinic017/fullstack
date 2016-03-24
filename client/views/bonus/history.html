@@ -51,7 +51,7 @@
                 <tr>
                     <th>复制者</th>
                     <th>复制时间</th>
-                    <th>平仓总收益</th>
+                    <th>平仓收益</th>
                     <th>我的分成</th>
                     <th>上月分成</th>
                     <th></th>
@@ -68,9 +68,15 @@
                     <td>
                         {{bonus.timestamp | dateFormatter}}
                     </td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>
+                        ${{bonus.close_profit}}
+                    </td>
+                    <td>
+                        ${{bonus.bonus || 0}}
+                    </td>
+                    <td>
+                        上月分成
+                    </td>
                     <td>
                         <a class="btn btn-gray-sm btn-primary" href="" ng-click="openDetailMdl(bonus.user_code)">
                             详情
@@ -79,7 +85,7 @@
                 </tr>
             </tbody>
         </table>
-        <div class="text-right" ng-if="bonusList.length > 0">
+        <div class="text-center" ng-if="bonusList.length > 0">
             <p tw-pagination></p>
         </div>
 
