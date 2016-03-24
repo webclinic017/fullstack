@@ -16,7 +16,7 @@
                     }
                 })
                 .state('account.subpage', {
-                    url: '/account/:subpage',
+                    url: '/account/:subpage?back',
                     views: {
                         'content@account': {
                             templateUrl: function ($stateParams) {
@@ -28,7 +28,6 @@
                                 var ctrlPrefix = 'Account';
                                 var ctrlSuffix = 'Controller';
                                 var ctrlRoot = modCtrlName($stateParams.subpage);
-                                return '';
                                 return ctrlPrefix + ctrlRoot + ctrlSuffix;
                             }
                         }

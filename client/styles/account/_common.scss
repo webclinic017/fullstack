@@ -1,0 +1,32 @@
+@include b(account_pnl) {
+}
+
+@include b(account_login) {
+    width: 320px;
+    margin: 150px auto 200px;
+
+    .btn {
+        width: 100%;
+    }
+
+    @include e(title) {
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    @include e(forget) {
+        color: $brand-info;
+        float: right;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @include e(safe) {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        color: $gray-darker;
+    }
+}

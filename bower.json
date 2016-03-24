@@ -10,7 +10,8 @@
     "angular-ui-router": "0.2.11",
     "highcharts-release": "4.0.4",
     "bootstrap-datepicker": "~1.6.0",
-    "blueimp-file-upload": "jquery-file-upload#~9.12.1"
+    "blueimp-file-upload": "jquery-file-upload#~9.12.1",
+    "travist/jsencrypt": "jsencrypt#~2.1.0"
   },
   "devDependencies": {
     "angular-mocks": "1.2.16",
@@ -18,11 +19,11 @@
   },
   "overrides": {
     "blueimp-file-upload": {
-        "main": [
-            "js/vendor/jquery.ui.widget.js",
-            "js/jquery.iframe-transport.js",
-            "js/jquery.fileupload.js"
-        ]
+      "main": [
+        "js/vendor/jquery.ui.widget.js",
+        "js/jquery.iframe-transport.js",
+        "js/jquery.fileupload.js"
+      ]
     }
   }
 }

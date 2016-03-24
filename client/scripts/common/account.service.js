@@ -8,6 +8,8 @@
 
     function account($http) {
         var service = {
+            encrypt: encrypt,
+            login: login,
             checkLogined: checkLogined,
             getPersonalInfo: getPersonalInfo,
             getVerifyStatus: getVerifyStatus,
@@ -29,6 +31,39 @@
             setPhone: setPhone
         };
         return service;
+
+        /**
+         * @name encrypt
+         * @desc 密码加密
+         */
+        function encrypt(text) {
+            return $http.get('/files/pub_v1.json').then(function (data) {
+                var crypt = new JSEncrypt();
+                var key = data;
+                crypt.setKey(key);
+                var textEnc = crypt.encrypt(text);
+                return textEnc;
+            });
+        }
+
+        /**
+         * @name login
+         * @desc 登陆
+         */
+        function login(id, password, expires) {
+
+            if (expires) {
+                expires = 1;
+            } else {
+                expires = 0;
+            }
+
+            return $http.post('/action/public/v3/login', {
+                account: id,
+                password: password,
+                expires: expires
+            });
+        }
 
         function checkLogined() {
             return $http.get('/api/v1/check').then(function (data) {

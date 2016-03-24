@@ -64,17 +64,15 @@
     position: relative;
     display: block;
 
-    label {
-        padding-left: 15px;
+    > label {
         margin-bottom: 0;
+        padding-left: 15px;
         font-weight: normal;
+        color: $gray-darker;
         cursor: pointer;
     }
 
-    input[type="checkbox"] {
-        // position: absolute;
-        // margin-left: -20px;
-        // margin-top: 4px;
+    > label > input[type="checkbox"] {
         display: none;
     }
 
@@ -82,7 +80,7 @@
         position: absolute;
         top: 3px;
         left: 0;
-        color: $brand-info;
+        
     }
 }
 
