@@ -21,4 +21,22 @@
             <div ng-include="'/views/setting/info-pwd.html'"></div>
         </div>
     </div>
+
+    <div class="navbar_summary">
+        <h5 class="navbar_summary__title">手机号码设置</h5>
+        <div class="navbar_summary__content">
+            <div ng-include="'/views/setting/info-phone.html'"></div>
+        </div>
+    </div>
+
+    <div class="navbar_summary">
+        <h5 class="navbar_summary__title">电子邮箱管理</h5>
+        <div class="navbar_summary__content">
+            <p class="mg-tp-40 mg-bt-40">
+                您已经绑定了电子邮箱
+                <span class="font-info">{{settingInfo.email}}</span>
+                <span class="font-dark">（电子邮箱无法更改）</span>
+            </p>
+        </div>
+    </div>
 </div>

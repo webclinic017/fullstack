@@ -17,12 +17,16 @@
             getNoticeList: getNoticeList,
             getOneRead: getOneRead,
             getAllRead: getAllRead,
+            getSettingInfo: getSettingInfo,
             getLocation: getLocation,
             getStates: getStates,
             getCities: getCities,
             getTradeInfo: getTradeInfo,
             setBasicInfo: setBasicInfo,
-            setPwd: setPwd
+            setPwd: setPwd,
+            getSCaptcha: getSCaptcha,
+            getSVoiceCaptcha: getSVoiceCaptcha,
+            setPhone: setPhone
         };
         return service;
 
@@ -141,6 +145,28 @@
             return $http.get('/action/public/v3/notify_mark_all_read');
         }
 
+        /** 
+         * @name getSettingInfo
+         * @desc setting 获取手机号码、邮箱等加密信息
+         */
+        function getSettingInfo() {
+            return $http.get('/api/v1/get_info', {
+                params: {
+                    type: 'Profile'
+                }
+            }).then(function (data) {
+                if (data.is_succ) {
+                    return {
+                        username: data.username,
+                        location: data.region,
+                        phone: data.phone,
+                        email: data.email,
+                        verifiedStatus: data.profile_check || 0
+                    }
+                }
+            });
+        }
+
         /**
          * @name getLocation
          * @desc 获取所在地
@@ -205,6 +231,59 @@
             return $http.post('/api/v1/change_password', {
                 password: oldPwd,
                 new_pwd: newPwd
+            });
+        }
+
+        /**
+         * @name getRCaptcha 
+         * @desc 获取验证码（注册功能）
+         */
+        function getRCaptcha(phone, token) {
+            return $http.post('/action/public/v3/get_phone_reg_code', {
+                phone: phone,
+                token: token
+            });
+        }
+
+        /**
+         * @name getRVoiceCaptcha
+         * @desc 获取语音验证码（注册功能）
+         */
+        function getRVoiceCaptcha(phone) {
+            return $http.post('/action/public/v3/get_tigerwit_phone_sound_code', {
+                phone: phone
+            });
+        }
+
+        /**
+         * @name getSCaptcha
+         * @desc 获取验证码（setting 功能模块）
+         */
+        function getSCaptcha(phone) {
+            return $http.post('/action/public/v3/get_phone_code', {
+                phone: phone
+            });
+        }
+
+        /**
+         * @name getSVoiceCaptcha
+         * @desc 获取语音验证码（setting 功能模块）
+         */
+        function getSVoiceCaptcha(phone, type) {
+            return $http.post('/action/public/v3/get_phone_sound_code', {
+                phone: phone,
+                type: type
+            });
+        }
+
+        /**
+         * @name setPhone
+         * @desc setting 修改手机号码
+         */
+        function setPhone(phone, verifyCode) {
+            return $http.post('/action/public/v3/set_my_bind_phone', {
+                phone: phone,
+                phone_code: verifyCode
             });
         }
     }

@@ -11,8 +11,8 @@
     function SettingIndexController($scope, account) {
         $scope.settingInfo = {};
 
-        // account.getSettingInfo().then(function (data) {
-        //     $scope.settingInfo = data;
-        // });
+        account.getSettingInfo().then(function (data) {
+            $scope.settingInfo = data;
+        });
     }
 })();

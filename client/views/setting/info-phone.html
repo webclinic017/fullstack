@@ -1,0 +1,113 @@
+<div ng-controller="SettingInfoPhoneController">
+    <p class="mg-tp-20">您已经绑定了手机号码
+        <span class="font-info">{{settingInfo.phone}}</span>
+    </p>
+    <div class="row">
+        <form name="phoneForm" novalidate>
+            <div class="col-xs-3">
+                <div class="form-control-wrapper">
+                    <input class="form-control"
+                           name="phoneNew"
+                           type="text"
+                           placeholder="新手机号码"
+                           required
+                           ng-class="{'form-control-error': (frontErr.phoneNew.show && phoneForm.phoneNew.$invalid) || (backErr.phoneNew.show && backErr.phoneNew.status > 0)}"
+                           ng-model="phone.phoneNew"
+                           ng-pattern="frontErr.phoneNew.reg"
+                           ng-focus="hideErr('phoneForm', 'phoneNew')"
+                           ng-blur="showErr('phoneForm', 'phoneNew')">
+        
+                    <div ng-show="frontErr.phoneNew.show">
+                        <p class="alert-arrow_tp_lf" ng-show="phoneForm.phoneNew.$error.required">
+                            请输入新手机号码
+                        </p>
+
+                        <p class="alert-arrow_tp_lf" ng-show="phoneForm.phoneNew.$error.pattern">
+                            手机号码格式不正确
+                        </p>
+                    </div>
+
+                    <div ng-show="backErr.phoneNew.show">
+                        <p class="alert-arrow_tp_lf" ng-show="backErr.phoneNew.status == 1">
+                            手机号码已存在
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3">
+                <div class="form-control-wrapper">
+                    <input class="form-control" 
+                           name="captcha" 
+                           type="text"
+                           placeholder="验证码"
+                           required
+                           ng-class="{'form-control-error': (frontErr.captcha.show && phoneForm.captcha.$invalid) || (backErr.captcha.show && backErr.captcha.status > 0)}"
+                           ng-model="phone.captcha"
+                           ng-focus="hideErr('phoneForm', 'captcha')"
+                           ng-blur="showErr('phoneForm', 'captcha')">
+
+                    <div ng-show="frontErr.captcha.show">
+                        <p class="alert-arrow_tp_lf" ng-show="phoneForm.captcha.$error.required">
+                            请输入验证码
+                        </p>
+                    </div>
+
+                    <div ng-show="backErr.captcha.show">
+                        <p class="alert-arrow_tp_lf" ng-show="backErr.captcha.status === 1">
+                            验证码不正确
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3 text-center">
+                <div class="relative inline-block">
+                    <div class="btn btn-sm btn-info" 
+                            tw-captcha-timer 
+                            start-timer="startTimer" 
+                            voice-captcha="voiceCaptcha" 
+                            captcha-btn-clickable="clickable.captcha" 
+                            ng-disabled="!clickable.captcha" 
+                            ng-click="getCaptcha()">
+                        获取验证码
+                    </div>
+
+                    <div ng-show="backErr.captchaBtn.show">
+                        <p class="alert-arrow_tp_lf" ng-show="backErr.captchaBtn.status == 1">
+                            1 分钟内只可发送 1 次验证码
+                        </p>
+
+                        <p class="alert-arrow_tp_lf" ng-show="backErr.captchaBtn.status == 2">
+                            1 小时内只可发送 10 次验证码
+                        </p>
+
+                        <p class="alert-arrow_tp_lf" ng-show="backErr.captchaBtn.status == 5">
+                            验证码发送失败
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xs-3 text-center">
+                <button class="btn btn-primary btn-sm" type="submit" ng-if="clickable.submit" ng-click="submitForm('phoneForm')">
+                    提交
+                </button>
+
+                <button class="btn btn-primary btn-sm" ng-if="!clickable.submit">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    提交中
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <div class="text-center" ng-show="backErr.system.show">
+        <p class="alert-system" ng-show="backErr.system.status === 1">
+            手机号码修改成功
+        </p>
+        <p class="alert-system" ng-show="backErr.system.status === 2">
+            系统繁忙
+        </p>
+    </div>
+</div>
