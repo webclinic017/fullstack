@@ -1,0 +1,23 @@
+<div ng-controller="SettingInfoAvatarController">
+    <div class="upload_avatar text-center" tw-upload-avatar filename="personal.lgAvatar">
+
+        <img class="upload_avatar__avatar" ng-src="{{personal.lgAvatar}}" alt="头像">
+
+        <label class="upload_avatar__label" for="input">
+            <input id="input" class="upload_avatar__input" name="file" type="file" accept="image/jpeg,image/png">
+            
+            <i>选择图片</i>
+            
+            <span class="alert-arrow_tp_lf" ng-show="avatar.status === 1">
+                正在上传...
+            </span>
+            <span class="alert-arrow_tp_lf" ng-show="avatar.status === 3">
+                图片大小超过 2MB 请重新选择
+            </span>
+        </label>
+
+        <p class="upload_avatar__desc">
+            只支持 jpg、png 格式且大小在 2MB 以内
+        </p>
+    </div>
+</div>

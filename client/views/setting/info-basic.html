@@ -226,8 +226,13 @@
             </p>
         </div>
         
-        <button class="btn btn-primary btn-sm" ng-click="submitForm('basicInfoForm')">
+        <button class="btn btn-primary btn-sm" ng-if="clickable" ng-click="submitForm('basicInfoForm')">
             提交
+        </button>
+
+        <button class="btn btn-primary btn-sm" disabled ng-if="!clickable">
+            <i class="loading_spinner fa fa-spinner"></i>
+            提交中
         </button>
     </div>
 </div>

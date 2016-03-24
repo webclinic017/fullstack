@@ -1,8 +1,44 @@
 @include b(setting_pnl) {
     padding: 15px;
 
-    label {
+    form label {
         line-height: $input-height-base;
         font-weight: 700;
+    }
+}
+
+// 上传头像
+@include b(upload_avatar) {
+
+    @include e(avatar) {
+        width: 100px;
+        height: 100px;
+        border: 1px solid $gray;
+        border-radius: 50%;
+    }
+
+    @include e(label) {
+        position: relative;
+        display: inline-block;
+        padding: 6px 15px;
+        border-radius: $border-radius-base;
+        background-color: $gray-darkest;
+        color: $brand-primary;
+        cursor: pointer;
+        
+        > i {
+            font-style: normal;
+            font-size: 12px;
+        }
+    }
+
+    @include e(input) {
+        display: none;
+    }
+
+    @include e(desc) {
+        margin-top: 10px;
+        font-size: 12px;
+        color: $gray-dark;
     }
 }

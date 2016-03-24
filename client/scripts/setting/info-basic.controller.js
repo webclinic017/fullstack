@@ -100,6 +100,7 @@
         $scope.selectRegion = selectRegion;
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
+        $scope.submitForm = submitForm;
 
         initLocation();
 
@@ -204,6 +205,9 @@
                     }
                     $scope.clickable = true;
                 }
+            }, function (error) {
+                console.log(error);
+                $scope.clickable = true;
             });
         }
 
