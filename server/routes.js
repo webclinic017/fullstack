@@ -73,17 +73,6 @@ module.exports = function (app) {
         });
     });
 
-    // 交易
-    app.route('/web/trade/:subpage(product|time|tool)').get(function (req, res) {
-        var subpage = req.params.subpage || 'product';
-        var pageInfo = {
-            id: subpage
-        };
-
-        res.render('web_trade.html', {
-            pageInfo: pageInfo
-        });
-    });
 
     app.route('/api_test').get(function (req, res, next) {
         // accountApi.checkLogined(function (data) {
