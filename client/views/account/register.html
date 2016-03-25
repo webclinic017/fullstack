@@ -17,7 +17,6 @@
             <p>4. 完成注册</p>
         </div>
     </div>
-
     <div class="account_register__step-1" ng-show="step === 1">
         <h2 class="account_register__title">注册账户</h2>
         
@@ -256,8 +255,8 @@
         </div>
     </div>
     
-    <div ng-if="step === 2">
+    <div ng-show="step === 2">
         <h2 class="account_register__title">实名认证</h2>
-        <div ng-include="'/views/setting/verify.html'"></div>
+        <div ng-include="'/views/setting/verify.html'" ng-controller="SettingVerifyController"></div>
     </div>
 </div>

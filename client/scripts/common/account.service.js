@@ -32,7 +32,8 @@
             setPwd: setPwd,
             getSCaptcha: getSCaptcha,
             getSVoiceCaptcha: getSVoiceCaptcha,
-            setPhone: setPhone
+            setPhone: setPhone,
+            verify: verify
         };
         return service;
 
@@ -353,5 +354,16 @@
                 phone_code: verifyCode
             });
         }
+
+        /**
+         * @name verify
+         * @desc 实名认证
+         */
+        function verify(realname) {
+            return $http.post('/api/v3/set_info', {
+                real_name: realname
+            });
+        }
+
     }
 })();

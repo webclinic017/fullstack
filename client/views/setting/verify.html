@@ -1,4 +1,4 @@
-<div class="verify" ng-controller="SettingVerifyController">
+<div class="verify">
     <h3 class="verify__title">填写真实姓名</h3>
     <form name="verifyForm" novalidate>
         <div class="form-control-wrapper">
@@ -25,64 +25,63 @@
     </form>
     
     <h3 class="verify__title">上传证件照片</h3>
-    <div class="upload_id_card">
-        <div class="row">
-            <div class="col-xs-6">
-                <div class="upload_id_card__front" tw-upload-image>
-                    <i class="upload_id_card__icon fa fa-camera"></i>
-                    <h2 class="upload_id_card__title">
-                        点击上传证件正面
-                    </h2>
-                    <input class="upload_id_card__input"
-                           name="file"
-                           type="file"
-                           accept="image/jpeg,image/png"
-                           data-face="front">
-                </div>
-
-                <div class="upload_id_card__tip">
-                    <p class="alert" ng-if="verification.id.frontImgStatus === 0 && frontErr.idFrontImg.show">
-                        请上传证件正面
-                    </p>
-                    <p class="alert" ng-if="verification.id.frontImgStatus === 1">
-                        正在上传......
-                    </p>
-                    <p class="alert" ng-if="verification.id.frontImgStatus === 2">
-                        上传成功
-                    </p>
-                    <p class="alert" ng-if="verification.id.frontImgStatus === 3">
-                        上传失败！请上传小于 2MB 的图片
-                    </p>
-                </div>    
+    <div class="row">
+        <div class="col-xs-6">
+            <div class="upload_id_card" tw-upload-id-card>
+                <i class="upload_id_card__icon fa fa-camera"></i>
+                <h3 class="upload_id_card__title">
+                    点击上传证件正面
+                </h3>
+                
+                <input class="upload_id_card__input"
+                       name="file"
+                       type="file"
+                       accept="image/jpeg,image/png"
+                       data-face="front">
             </div>
-            
-            <div class="col-xs-6">
-                <div class="upload_id_card__back" tw-upload-image>
-                    <i class="upload_id_card__icon fa fa-camera"></i>
-                    <h2 class="upload_id_card__title">
-                        点击上传证件反面
-                    </h2>
-                    <input class="upload_id_card__input"
-                           name="file"
-                           type="file"
-                           accept="image/jpeg,image/png"
-                           data-face="back">
-                </div>
 
-                <div class="upload_id_card__tip">
-                    <p class="alert" ng-if="verification.id.backImgStatus === 0 && frontErr.idBackImg.show">
-                        请上传证件背面
-                    </p>
-                    <p class="alert" ng-if="verification.id.backImgStatus === 1">
-                        正在上传......
-                    </p>
-                    <p class="alert" ng-if="verification.id.backImgStatus === 2">
-                        上传成功
-                    </p>
-                    <p class="alert" ng-if="verification.id.backImgStatus === 3">
-                        上传失败！请上传小于 2MB 的图片
-                    </p>
-                </div>
+            <div class="upload_id_card-tip">
+                <p class="alert alert-arrow_tp_lf" ng-if="verification.id.frontStatus === 0 && frontErr.idFront.show">
+                    请上传证件正面
+                </p>
+                <p class="alert alert-arrow_tp_lf" ng-if="verification.id.frontStatus === 1">
+                    正在上传......
+                </p>
+                <p class="alert alert-arrow_tp_lf" ng-if="verification.id.frontStatus === 2">
+                    上传成功
+                </p>
+                <p class="alert alert-arrow_tp_lf" ng-if="verification.id.frontStatus === 3">
+                    上传失败！请上传小于 2MB 的图片
+                </p>
+            </div>    
+        </div>
+        
+        <div class="col-xs-6">
+            <div class="upload_id_card" tw-upload-id-card>
+                <i class="upload_id_card__icon fa fa-camera"></i>
+                <h2 class="upload_id_card__title">
+                    点击上传证件反面
+                </h2>
+                <input class="upload_id_card__input"
+                       name="file"
+                       type="file"
+                       accept="image/jpeg,image/png"
+                       data-face="back">
+            </div>
+
+            <div class="upload_id_card-tip">
+                <p class="alert alert-arrow_tp_lf" ng-if="verification.id.backStatus === 0 && frontErr.idBack.show">
+                    请上传证件背面
+                </p>
+                <p class="alert alert-arrow_tp_lf" ng-if="verification.id.backStatus === 1">
+                    正在上传......
+                </p>
+                <p class="alert alert-arrow_tp_lf" ng-if="verification.id.backStatus === 2">
+                    上传成功
+                </p>
+                <p class="alert alert-arrow_tp_lf" ng-if="verification.id.backStatus === 3">
+                    上传失败！请上传小于 2MB 的图片
+                </p>
             </div>
         </div>
     </div>
@@ -91,16 +90,26 @@
         目前只支持 png、jpg 格式，大小控制在 2MB 之内
     </p>
 
-    <p class="text-center mg-tp-50">
-        <button class="btn btn-sm btn-primary" ng-if="clickable.submit" ng-click="submitForm()">
+    <div class="text-center mg-tp-50">
+
+        <div ng-show="backErr.system.show">
+            <p class="alert-system" ng-show="backErr.system.status === 1">
+                信息提交成功
+            </p>
+            <p class="alert-system" ng-show="backErr.system.status === 2">
+                系统繁忙
+            </p>
+        </div>
+
+        <button class="btn btn-sm btn-primary" ng-if="clickable" ng-click="submitForm('verifyForm')">
             提交
         </button>
 
-        <button class="btn btn-lg btn-primary" ng-if="!clickable.submit">
-            <i class="loading fa fa-spinner"></i>
+        <button class="btn btn-sm btn-primary" ng-if="!clickable">
+            <i class="loading_spinner fa fa-spinner"></i>
             提交中
         </button>
 
-        <button class="btn btn-sm btn-info mg-lf-25">跳过</button>
-    </p>
+        <button class="btn btn-sm btn-info mg-lf-100" ng-click="goNextStep()">跳过</button>
+    </div>
 </div>
