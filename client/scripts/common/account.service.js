@@ -33,6 +33,7 @@
             getSCaptcha: getSCaptcha,
             getSVoiceCaptcha: getSVoiceCaptcha,
             setPhone: setPhone,
+            logout: logout
             verify: verify
         };
         return service;
@@ -356,6 +357,14 @@
         }
 
         /**
+         * Account Service 退出
+         *
+         * @method logout
+         */
+        function logout() {
+            return $http.get('/action/public/v3/logout');
+        }
+        /*
          * @name verify
          * @desc 实名认证
          */

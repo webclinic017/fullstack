@@ -156,6 +156,7 @@
          */
         function getBonus() {
             return $http.get('/action/public/v3/get_bonus');
+            // return $http.get('/data/bonus-summary.json');
         }
 
         /**
@@ -171,6 +172,14 @@
                     month: date
                 }
             });
+
+            // return $http.get('/data/bonus-list.json', {
+            //     params: {
+            //         page: page,
+            //         pagesize: pagesize,
+            //         month: date
+            //     }
+            // });
         }
 
         /**
@@ -186,6 +195,13 @@
                     month: date
                 }
             });
+
+            // return $http.get('/data/bonus-detail.json', {
+            //     params: {
+            //         copier: copierUsercode,
+            //         month: date
+            //     }
+            // });
         }
 
     }
