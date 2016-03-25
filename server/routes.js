@@ -83,6 +83,17 @@ module.exports = function (app) {
             pageInfo: pageInfo
         });
     });
+    // 关于老虎金融
+    app.route('/web/about/:subpage(stp|team|report|control|tigerwit)').get(function (req, res) {
+        var subpage = req.params.subpage || 'forex';
+        var pageInfo = {
+            id: subpage
+        };
+
+        res.render('web_about.html', {
+            pageInfo: pageInfo
+        });
+    });
 
     app.route('/api_test').get(function (req, res, next) {
         // accountApi.checkLogined(function (data) {

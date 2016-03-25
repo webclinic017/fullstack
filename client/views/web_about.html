@@ -1,13 +1,21 @@
-<% if (pageInfo.id === 'rules') { %>
-    <% var title = '复制规则' %>
+<% if (pageInfo.id === 'stp') { %>
+    <% var title = 'STP交易模式' %>
     <% var description = '' %>
     <% var keywords = '' %>
-<% } else if (pageInfo.id === 'select') { %>
-    <% var title = '选择高手' %>
+<% } else if (pageInfo.id === 'team') { %>
+    <% var title = '精英团队' %>
     <% var description = '' %>
     <% var keywords = '' %>
-<% } else if (pageInfo.id === 'become') { %>
-    <% var title = '成为高手' %>
+<% } else if (pageInfo.id === 'report') { %>
+    <% var title = '媒体报道' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'control') { %>
+    <% var title = '合规和监管' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'tigerwit') { %>
+    <% var title = '关于老虎金融' %>
     <% var description = '' %>
     <% var keywords = '' %>
 <% } %>
@@ -30,13 +38,13 @@
                 <% include navbar/main.html %>
             </div>
             
-            <div class="body">
+            <div class="body" style="background-color: #fafafa">
                 <div class="layout-2">
                     <div class="layout-2__side mg-tp-30">
-                        <%- include('web/copy-sidebar.html') %>
+                        <%- include('web/about-sidebar.html') %>
                     </div>
                     <div class="layout-2__content mg-tp-30">
-                        <%- include('web/copy-' + pageInfo.id + '.html') %>
+                        <%- include('web/about-' + pageInfo.id + '.html') %>
                     </div>
                 </div>
             </div>
