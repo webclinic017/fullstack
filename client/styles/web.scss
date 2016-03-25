@@ -26,6 +26,7 @@
 @import "common/carousel";
 @import "common/progress";
 @import "common/icons";
+@import "common/table";
 
 // Module CSS
 @import "home/index";
@@ -33,6 +34,11 @@
 @import "ranklist/index";
 @import "ranklist/copiers";
 @import "ranklist/masters";
+
+@import "web/copy";
+@import "web/product";
+@import "web/about";
+
 
 
 
