@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('BonusHistoryController', BonusHistoryController);
 
-    BonusHistoryController.$inject = ['$scope', 'utils', 'asset'];
+    BonusHistoryController.$inject = ['$scope', '$modal', 'utils', 'asset'];
 
-    function BonusHistoryController($scope, utils, asset) {
+    function BonusHistoryController($scope, $modal, utils, asset) {
 
         $scope.datepicker = {
             // date: ,
@@ -29,6 +29,7 @@
         };
 
         $scope.search = search;
+        $scope.openDetailMdl = openDetailMdl;
 
         var pagesize = 10;
 
@@ -47,15 +48,17 @@
                     $scope.bonusSummary.month_bonus * 100) / 100).toFixed(2);
         });
 
+
+        getList(1);
         // 获取分成列表
         function getList(page) {
             $scope.$broadcast('showLoadingImg');
 
             asset.getBonusList(page, pagesize, $scope.datepicker.date).then(function (data) {
                 $scope.bonusList = data.data;
-
+                console.info(data);
                 angular.extend($scope.pagebar.config, {
-                    total: utils.getTotal(data.sum, pagesize),
+                    total: utils.getTotal(data.length, pagesize),
                     page: page
                 });
 
@@ -71,7 +74,7 @@
         // open detail modal
         function openDetailMdl(copierUsercode) {
             $modal.open({
-                templateUrl: 'views/bonus/history_modal.html',
+                templateUrl: '/views/bonus/history_modal.html',
                 size: 'lg',
                 controller: 'BonusModalController',
                 resolve: {

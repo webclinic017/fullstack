@@ -5,18 +5,20 @@
     angular.module('fullstackApp')
         .controller('GlobalController', GlobalController);
 
-    GlobalController.$inject = ['$scope', 'config', 'account'];
+    GlobalController.$inject = ['$scope', '$state', 'config', 'account'];
 
     /**
      * @name GlobalController
      * @desc
      */ 
-    function GlobalController($scope, config, account) {
+    function GlobalController($scope, $state, config, account) {
         $scope.userstatus = {
             logined: false
         };
 
         $scope.personal = {};
+
+        $scope.logout = logout;
 
         account.checkLogined().then(function (logined) {
             $scope.userstatus.logined = logined;
@@ -37,5 +39,16 @@
                 });
             });
         }
+
+        // 退出
+        function logout() {
+            account.logout().then(function (data) {
+                if (data.is_succ) {
+                    $state.go('account.subpage', {subPage: 'login'});
+                }
+            });
+        }
+
+
     }
 })();

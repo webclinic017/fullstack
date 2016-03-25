@@ -32,7 +32,8 @@
             setPwd: setPwd,
             getSCaptcha: getSCaptcha,
             getSVoiceCaptcha: getSVoiceCaptcha,
-            setPhone: setPhone
+            setPhone: setPhone,
+            logout: logout
         };
         return service;
 
@@ -352,6 +353,15 @@
                 phone: phone,
                 phone_code: verifyCode
             });
+        }
+
+        /**
+         * Account Service 退出
+         *
+         * @method logout
+         */
+        function logout() {
+            return $http.get('/action/public/v3/logout');
         }
     }
 })();
