@@ -2,11 +2,32 @@
 @include b(pro-public) {
     color: $gray-darker;
     
-    @include e(banner) {
+    @include e(forex-banner) {
         height: 320px;
         width: 100%;
         background-size: 100%;
         @include img-normal($image-path-web + "forex-banner.jpg");
+    }
+
+    @include e(oil-banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "oil-banner.png");
+    }
+
+    @include e(metal-banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "metal-banner.jpg");
+    }
+
+    @include e(cfd-banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "cfd-banner.png");
     }
 
     @include e(con) {
