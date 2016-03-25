@@ -12,10 +12,16 @@
 //  我的分成
 @include b(bonus-his) {
 
-    @include b(photo) {
+    @include e(photo) {
         width: 45px;
         height: 45px;
         border-radius: 50%;
+    }
+
+    @include e(username) {
+        display: inline-block;
+        line-height: 50px;
+        vertical-align: top;
     }
 }
 

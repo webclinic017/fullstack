@@ -1,4 +1,4 @@
-<div class="asset-public">
+<div class="bonus-his asset-public">
     <div class="row text-center mg-tp-20 mg-bt-20">
         <div class="col-xs-1"></div>
         <div class="col-xs-3 mg-lf-30 bonus-cur-bor-rh">
@@ -40,12 +40,12 @@
         <!-- <div tw-loading-img></div> -->
         <table class="table table-header">
             <colgroup>
+                <col width="23%"></col>
                 <col width="20%"></col>
-                <col width="20%"></col>
                 <col width="15%"></col>
                 <col width="15%"></col>
                 <col width="15%"></col>
-                <col width="15%"></col>
+                <col width="12%"></col>
             </colgroup>
             <thead>
                 <tr>
@@ -60,10 +60,12 @@
             <tbody>
                 <tr ng-repeat="bonus in bonusList">
                     <td>
-                        <a href="" class="bonus-his__photo">
-                            <img ng-src="/avatar/{{ bonus.usercode }}_80.jpg">
+                        <a class="bonus-his__photo">
+                            <img ng-src="/avatar/{{ bonus.usercode }}_50.jpg">
                         </a>
-                        {{bonus.username}}
+                        <span class="bonus-his__username">
+                            {{bonus.username}}    
+                        </span>
                     </td>
                     <td>
                         {{bonus.timestamp | dateFormatter}}
@@ -86,7 +88,7 @@
             </tbody>
         </table>
         <div class="text-center" ng-if="bonusList.length > 0">
-            <p tw-pagination></p>
+            <!-- <p tw-pagination></p> -->
         </div>
 
         <div ng-if="bonusList.length == 0">
