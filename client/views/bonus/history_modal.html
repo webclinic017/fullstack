@@ -1,0 +1,41 @@
+<div tw-loading-img></div>
+<div class="system_modal">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <h5 class="system_modal__title">
+        分成详情
+    </h5>
+
+    <div class="system_modal__content">
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th>交易品种</th>
+                    <th>开仓时间</th>
+                    <th>平仓时间</th>
+                    <th>开仓价</th>
+                    <th>平仓价</th>
+                    <th>交易量</th>
+                    <th>收益</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="bonusDetail in bonusDetails">
+                    <td>
+                        <span class="icon-forex-{{ order.symbol.toLowerCase() }} vertical-middle">
+                        {{ bonusDetail.cmd ? '做多' : '做空'}}
+                        {{ bonusDetail.symbol | symbolMod: 'zh' }}
+                    </td>
+                    <td>{{ bonusDetail.open_timestamp | dateFormatter }}</td>
+                    <td>{{ bonusDetail.close_timestamp | dateFormatter }}</td>
+                    <td>{{ bonusDetail.open_price }}</td>
+                    <td>{{ bonusDetail.close_price }}</td>
+                    <td>{{ bonusDetail.volume }}</td>
+                    <td ng-class="{'font-success': bonusDetail.profit.indexOf('-') < 0, 'font-danger': bonusDetail.profit.indexOf('-') >= 0}">
+                        ${{ bonusDetail.profit }}
+                    </td>
+                </tr>
+            </tbody>
+        </table>        
+    </div>
+</div>

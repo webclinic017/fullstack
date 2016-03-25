@@ -1,5 +1,5 @@
 <div class="system_modal card_modal">
-    <button class="close" ng-click="closeModal()">X</button>
+    <button class="close" ng-click="closeModal()">&times;</button>
 
     <div ng-if="!personal.verified">
         <h5 class="system_modal__title">
@@ -19,7 +19,7 @@
             </p>
 
             <p class="system_modal__btn_wrapper">
-                <button class="btn btn-info btn-sm" ng-click="verify()">
+                <button class="btn btn-primary btn-sm" ng-click="verify()">
                     实名认证
                 </button>
             </p>
@@ -134,7 +134,7 @@
             </p>
 
             <p class="system_modal__btn_wrapper">
-                <button class="btn btn-info btn-sm" ng-click="submitForm()">
+                <button class="btn btn-primary btn-sm" ng-click="submitForm()">
                     确定
                 </button>
 
@@ -149,7 +149,7 @@
                 银行卡 {{card.number}} 绑定成功
             </p>
             <p class="system_modal__btn_wrapper">
-                <button class="btn btn-info btn-sm" ng-click="closeModal()">
+                <button class="btn btn-primary btn-sm" ng-click="closeModal()">
                     确定
                 </button>
             </p>

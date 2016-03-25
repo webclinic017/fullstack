@@ -1,5 +1,5 @@
 <div class="system_modal">
-    <button class="close" ng-click="closeModal()">X</button>
+    <button class="close" ng-click="closeModal()">&times;</button>
 
     <h5 class="system_modal__title">
         取消复制交易
@@ -12,13 +12,13 @@
         <p class="system_modal__tip">
             若取消复制关系，此高手仍有未平仓订单时，您复制此高手的订单将被系统强制平仓
         </p>
-        
+
         <p class="system_modal__btn_wrapper cancel_copy_modal__btn_wrapper">
             <button class="btn btn-primary btn-sm" ng-click="cancelCopy()">
                 取消复制并强制平仓
             </button>
 
-            <button class="btn btn-default btn-sm mg-tp-15" ng-click="closeModal()">
+            <button class="btn btn-info btn-sm mg-tp-15" ng-click="closeModal()">
                 返回
             </button>
         </p>
