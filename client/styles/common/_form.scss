@@ -61,26 +61,43 @@
 
 //== checkbox
 .checkbox {
-    position: relative;
-    display: block;
-
-    > label {
-        margin-bottom: 0;
-        padding-left: 15px;
-        font-weight: normal;
-        color: $gray-darker;
-        cursor: pointer;
+    cursor: pointer;
+    
+    > .fa {
+        width: 12px;
     }
 
-    > label > input[type="checkbox"] {
+    > .fa-square-o,
+    &.checked > .fa-check-square {
+        display: inline-block;
+    }
+
+    > .fa-check-square,
+    &.checked > .fa-square-o {
         display: none;
     }
 
-    .fa {
-        position: absolute;
-        top: 3px;
-        left: 0;
-        
+    > input[type="checkbox"] {
+        display: none;
+    }
+}
+
+//== radio
+.radio {
+    cursor: pointer;
+    
+    > .fa-circle-o,
+    &.checked > .fa-dot-circle-o {
+        display: inline-block;
+    }
+
+    > .fa-dot-circle-o,
+    &.checked > .fa-circle-o {
+        display: none;
+    }
+
+    > input[type="radio"] {
+        display: none;
     }
 }
 

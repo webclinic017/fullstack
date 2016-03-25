@@ -6,13 +6,14 @@
         .module('fullstackApp')
         .controller('SettingVerifyController', SettingVerifyController);
 
-    SettingVerifyController.$inject = ['$scope', '$modal', 'validator', 'account'];
+    SettingVerifyController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
 
-    function SettingVerifyController($scope, $modal, validator, account) {
+    function SettingVerifyController($scope, $state, $modal, validator, account) {
         $scope.verification = {
             realname: undefined,
+            status: 0,           // 实名认证状态
             id: {
-                // number: ,
+                number: undefined,
                 frontStatus: 0,
                 backStatus: 0
             }
@@ -42,7 +43,12 @@
         $scope.goNextStep = goNextStep;
         $scope.clickable = true;
 
-        var parentScope = $scope.$parent;
+        // 实名认证功能的位置：注册或者 setting
+        if ($state.current.name === 'space.setting.subpage') {
+            $scope.type = 'setting';
+        }
+
+        getVerifyStatus($scope.type);
 
         $scope.$on('uploadIdCardStart', function (event, data) {
             $scope.$apply(function () {
@@ -62,6 +68,17 @@
             });
         });
 
+        function getVerifyStatus(type) {
+            if (type === 'setting') {
+                account.getVerifyStatus().then(function (data) {
+                    $scope.verification.status = data.status;
+                    // $scope.verification.status = 1;
+                    $scope.verification.realname = data.realname || undefined;
+                    $scope.verification.id.number = data.idNumber;
+                });    
+            }
+        }
+
         function hideErr(formName, controlName) {
             if ($scope.frontErr[controlName]) {
                 $scope.frontErr[controlName].show = false;
@@ -75,11 +92,9 @@
         }
 
         function submitForm(formName) {
-            console.info($scope.$$childHead[formName]);
             showErr(formName, 'realname');
             showErr(formName, 'idFront');
             showErr(formName, 'idBack');
-
             
             if ($scope[formName].$invalid || 
                     $scope.verification.id.frontStatus !== 2 ||
@@ -96,15 +111,20 @@
                     // }
                     $scope.backErr.system.status = 1;
                     $scope.backErr.system.show = true;
-                    $scope.clickable = true;
+
+                    getVerifyStatus($scope.type);
+                    goNextStep($scope.type);
+                    
                 } else {
                     $scope.clickable = true;
                 }
             });
         }
 
-        function goNextStep() {
-            parentScope.step++;
+        function goNextStep(type) {
+            if (!type && $scope.progress) {
+                $scope.progress.step++;    
+            }
         }
     }
 })();

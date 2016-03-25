@@ -50,16 +50,17 @@
             </div>
         </div>
 
-        <div class="checkbox" twform-checkbox data-bind-model="account.autoLogin">
-            <a class="account_login__forget" ui-sref="account.subpage({subpage: 'forget'})">
-                忘记密码？
-            </a>
-
-            <label>
-                <input name="autoLogin" type="checkbox" ng-model="account.autoLogin">
-                下次自动登录
-            </label>
-        </div>
+        <label class="checkbox" ng-class="{'checked': account.autoLogin}">
+            <input name="autoLogin" 
+                   type="checkbox" 
+                   ng-model="account.autoLogin">
+            <i class="fa fa-square-o"></i>
+            <i class="fa fa-check-square"></i>
+            下次自动登录
+        </label>
+        <a class="account_login__forget" ui-sref="account.subpage({subpage: 'forget'})">
+            忘记密码？
+        </a>
 
         <p class="account_login__safe">
             您在老虎金融登录采用 SSL 登录方式数据传输安全

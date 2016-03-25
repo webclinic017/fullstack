@@ -33,7 +33,8 @@
             getSCaptcha: getSCaptcha,
             getSVoiceCaptcha: getSVoiceCaptcha,
             setPhone: setPhone,
-            verify: verify
+            verify: verify,
+            getVerifyStatus: getVerifyStatus
         };
         return service;
 
@@ -365,5 +366,22 @@
             });
         }
 
+        /**
+         * @name getVerifyStatus
+         * @desc 获取实名认证状态
+         */
+        function getVerifyStatus() {
+            return $http.get('/api/v1/get_info', {
+                params: {
+                    type: 'Profile'
+                }
+            }).then(function (data) {
+                return {
+                    status: data.profile_check || 0,
+                    realname: data.realname,
+                    idNumber: data.id_no
+                }
+            });
+        }
     }
 })();

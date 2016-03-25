@@ -1,4 +1,8 @@
 @include b(verify) {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
     @include e(title) {
         font-size: 16px;
         font-weight: 400;

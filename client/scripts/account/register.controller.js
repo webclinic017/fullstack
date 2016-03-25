@@ -9,7 +9,9 @@
     AccountRegisterController.$inject = ['$scope', '$timeout', '$state', '$cookies', 'account', 'validator'];
 
     function AccountRegisterController($scope, $timeout, $state, $cookies, account, validator) {
-        $scope.step = 2;
+        $scope.progress = {
+            step: 3
+        };
         $scope.account = {
             phone: undefined,
             captcha: undefined,
