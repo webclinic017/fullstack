@@ -33,7 +33,7 @@
             getSCaptcha: getSCaptcha,
             getSVoiceCaptcha: getSVoiceCaptcha,
             setPhone: setPhone,
-            logout: logout
+            logout: logout,
             verify: verify
         };
         return service;
