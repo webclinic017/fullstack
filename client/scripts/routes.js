@@ -165,6 +165,36 @@
                     }
                 })
 
+                // 我的分成
+                .state('space.bonus', {
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/bonus/index.html',
+                            controller: ''
+                        }
+                    }
+                })
+                .state('space.bonus.subpage', {
+                    // authenticated: true,
+                    url: '/space/bonus/:subpage',
+                    views: {
+                        '@space.bonus': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'deposit';
+                                return '/views/bonus/' + $stateParams.subpage + '.html';
+                            },
+                            controllerProvider: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'deposit';
+                                var ctrlPrefix = 'Bonus';
+                                var ctrlSuffix = 'Controller';
+                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                // return '';
+                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                            }
+                        }
+                    }
+                })
+
                 // 排行榜
                 .state('ranklist', {
                     views: {

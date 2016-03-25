@@ -15,7 +15,10 @@
             getHistory: getHistory,
             deposit: deposit,
             getDepositLimit: getDepositLimit,
-            getFXRate: getFXRate
+            getFXRate: getFXRate,
+            getBonus: getBonus,
+            getBonusList: getBonusList,
+            getBonusDetail: getBonusDetail
         };
         return service;
 
@@ -145,6 +148,45 @@
         function getFXRate() {
             return $http.get('/api/v1/get_parity');
         }
-       
+
+        /**
+         * Asset Service 获取分成信息概况
+         *
+         * @method getBonus
+         */
+        function getBonus() {
+            return $http.get('/action/public/v3/get_bonus');
+        }
+
+        /**
+         * Asset Service 获取我的分成列表
+         *
+         * @method getBonusList
+         */
+        function getBonusList(page, pagesize, date) {
+            return $http.get('/action/public/v3/get_bonus_list', {
+                params: {
+                    page: page,
+                    pagesize: pagesize,
+                    month: date
+                }
+            });
+        }
+
+        /**
+         * Asset Service 获取分成详情
+         *
+         * @method getBonusDetail
+         *
+         */
+        function getBonusDetail(copierUsercode, date) {
+            return $http.get('/action/public/v3/get_bonus_detail', {
+                params: {
+                    copier: copierUsercode,
+                    month: date
+                }
+            });
+        }
+
     }
 })();

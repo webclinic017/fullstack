@@ -1,10 +1,10 @@
 <div class="system_modal">
-    <button class="close" ng-click="closeModal()">X</button>
-    
+    <button class="close" ng-click="closeModal()">&times;</button>
+
     <h5 class="system_modal__title">
         复制 {{ copyTrade.username }}
     </h5>
-    
+
     <div class="system_modal__content" ng-show="!copyTrade.success">
         <form name="copyForm" class="mg-tp-30" novalidate>
             <div class="row">
@@ -12,7 +12,7 @@
                     <label>复制金额：</label>
                 </div>
                 <div class="col-xs-8">
-                    <div class="form-control-wrapper">                        
+                    <div class="form-control-wrapper">
                         <input class="form-control"
                                name="amount"
                                type="text"
@@ -25,7 +25,7 @@
                                ng-focus="hideErr('amount')"
                                ng-blur="showErr('amount')">
 
-                        <i class="fa fa-dollar form-control-icon font-primary"></i>                               
+                        <i class="fa fa-dollar form-control-icon font-primary"></i>
                         <div ng-show="frontErr.amount.show">
                             <p class="alert-arrow_tp_lf" ng-show="copyForm.amount.$error.required">
                                 请输入复制金额
@@ -34,7 +34,7 @@
                             <p class="alert-arrow_tp_lf" ng-show="copyForm.amount.$error.pattern">
                                 输入的金额为大于零的整数或者小数（小数点后最多两位数字）
                             </p>
-                            
+
                             <p class="alert-arrow_tp_lf" ng-show="copyForm.amount.$error.twformMax">
                                 复制金额不能超过可用复制金额
                             </p>
@@ -72,7 +72,7 @@
                     您已经是高手，不能复制高手
                 </p>
             </div>
-            
+
             <button class="btn btn-primary btn-sm" ng-click="submitForm()">
                 复制交易
             </button>
