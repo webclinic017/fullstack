@@ -75,10 +75,12 @@
         }
 
         function submitForm(formName) {
+            console.info($scope.$$childHead[formName]);
             showErr(formName, 'realname');
             showErr(formName, 'idFront');
             showErr(formName, 'idBack');
 
+            
             if ($scope[formName].$invalid || 
                     $scope.verification.id.frontStatus !== 2 ||
                     $scope.verification.id.backStatus !== 2) {
