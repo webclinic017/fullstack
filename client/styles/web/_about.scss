@@ -1,0 +1,166 @@
+@include b(about-public) {
+    color: $gray-darker;
+
+    @include e(stp-banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "stp-banner.jpg");
+    }
+
+    @include e(control-banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "control-banner.jpg");
+    }
+
+    @include e(team-banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "team-banner.jpg");
+    }
+
+    @include e(tigerwit-banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "tigerwit-banner.jpg");
+    }
+
+        @include e(report-banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "report-banner.jpg");
+    }
+
+    @include e(con) {
+        
+    }
+
+}
+
+// stp
+@include b(stp) {
+    padding: 20px 15px;
+    text-align: center !important;
+
+    @include e(black) {
+        height: 60px;
+        background-color: $gray-base;
+        border-radius: 10px;
+        line-height: 60px;
+        font-size: 20px;
+        text-align: center;
+        color: $brand-primary;
+    }
+
+    @include e(arrows1) {
+        margin-top: 10px;
+        display: inline-block;
+        width: 121px;
+        height: 71px;
+        background-size: 100%;
+        @include img-normal($image-path-web + "stp-two-arrows.jpg");
+
+    } 
+
+    @include e(arrows2) {
+        margin-top: 10px;
+        display: inline-block;
+        width: 99px;
+        height: 139px;
+        background-size: 100%;
+        @include img-normal($image-path-web + "stp-arrows.jpg");
+
+    } 
+
+    @include e(width-50) {
+        margin-left: 25%;
+        margin-top: 5px;
+        width: 50%;
+    }
+
+    @include e(mt4) {
+        margin: 0 100px;
+        padding: 20px 100px;
+        border: 2px dashed $gray-base;
+        border-radius: 10px;
+    }
+
+    @include e(tip1) {
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 60px;
+        color: $gray-base;
+    }
+
+    @include e(tip2) {
+        position: absolute;
+        right: 120px;
+        margin-top: 10px;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 60px;
+        color: $gray-base;
+    }
+
+    @include e(tip3) {
+        margin-left: -15px;
+        margin-right: -15px;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 60px;
+        color: $gray-base;
+    }
+}
+
+// team
+@include b(team) {
+    @include e(photo-y) {
+        width: 161px;
+        height: 231px;
+        background-size: 100%;
+        @include img-normal($image-path-web + "team-yang.jpg");
+        
+    }
+
+    @include e(photo-li) {
+        width: 161px;
+        height: 231px;
+        background-size: 100%;
+        @include img-normal($image-path-web + "team-lipeng.jpg");
+        
+    }
+
+    @include e(line) {
+        border-bottom: 1px solid $gray;
+    }
+
+    .col-xs-8 {
+        p {
+            line-height: 20px;
+            letter-spacing: 1px;
+        }
+    }
+
+    .mg-lf-_40 {
+        margin-left: -40px;
+    }
+}
+
+// tigerwit
+@include b(tigerwit) {
+    @include e(con1) {
+        margin-left: 75px;
+        height: 331px;
+        width: 616px;
+        text-align: center;
+        background-size: 100%;
+        @include img-normal($image-path-web + "tigerwit-con1.jpg");
+    }    
+}

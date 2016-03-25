@@ -16,7 +16,6 @@
             getRCaptcha: getRCaptcha,
             getRVoiceCaptcha: getRVoiceCaptcha,
             getPersonalInfo: getPersonalInfo,
-            getVerifyStatus: getVerifyStatus,
             getAssetInfo: getAssetInfo,
             getUnreadLength: getUnreadLength,
             getNoticeCategory: getNoticeCategory,
@@ -36,7 +35,8 @@
             verify: verify,
             getVerifyStatus: getVerifyStatus,
             setKyc: setKyc,
-            getKyc: getKyc
+            getKyc: getKyc,
+            logout: logout
         };
         return service;
 
@@ -147,25 +147,6 @@
                 }, personal);
 
                 return personal;
-            });
-        }
-
-        /**
-         * Account Service setting 获取实名认证状态
-         *
-         * @method getVerifyStatus
-         */
-        function getVerifyStatus() {
-            return $http.get('/api/v1/get_info', {
-                params: {
-                    type: 'Profile'
-                }
-            }).then(function (data) {
-                return {
-                    status: data.profile_check || 0,
-                    realname: data.realname,
-                    idNumber: data.id_no
-                }
             });
         }
 
@@ -359,6 +340,14 @@
         }
 
         /**
+         * Account Service 退出
+         *
+         * @method logout
+         */
+        function logout() {
+            return $http.get('/action/public/v3/logout');
+        }
+        /*
          * @name verify
          * @desc 实名认证
          */

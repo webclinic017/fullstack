@@ -1,17 +1,21 @@
-<% if (pageInfo.id === 'forex') { %>
-    <% var title = '外汇' %>
+<% if (pageInfo.id === 'stp') { %>
+    <% var title = 'STP交易模式' %>
     <% var description = '' %>
     <% var keywords = '' %>
-<% } else if (pageInfo.id === 'oil') { %>
-    <% var title = '原油' %>
+<% } else if (pageInfo.id === 'team') { %>
+    <% var title = '精英团队' %>
     <% var description = '' %>
     <% var keywords = '' %>
-<% } else if (pageInfo.id === 'metal') { %>
-    <% var title = '贵金属' %>
+<% } else if (pageInfo.id === 'report') { %>
+    <% var title = '媒体报道' %>
     <% var description = '' %>
     <% var keywords = '' %>
-<% } else if (pageInfo.id === 'cfd') {%>
-    <% var title = '差价合约' %>
+<% } else if (pageInfo.id === 'control') { %>
+    <% var title = '合规和监管' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'tigerwit') { %>
+    <% var title = '关于老虎金融' %>
     <% var description = '' %>
     <% var keywords = '' %>
 <% } %>
@@ -37,10 +41,10 @@
             <div class="body" style="background-color: #fafafa">
                 <div class="layout-2">
                     <div class="layout-2__side mg-tp-30">
-                        <%- include('web/product-sidebar.html') %>
+                        <%- include('web/about-sidebar.html') %>
                     </div>
                     <div class="layout-2__content mg-tp-30">
-                        <%- include('web/product-' + pageInfo.id + '.html') %>
+                        <%- include('web/about-' + pageInfo.id + '.html') %>
                     </div>
                 </div>
             </div>
