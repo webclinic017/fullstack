@@ -1,0 +1,96 @@
+<div class="asset-public">
+    <div class="row text-center mg-tp-20 mg-bt-20">
+        <div class="col-xs-1"></div>
+        <div class="col-xs-3 mg-lf-30 bonus-cur-bor-rh">
+            <p class="font-base font-size-20">
+                {{bonusSummary.copy_count || 0 }}
+            </p>
+            <p>当前复制人数</p>
+        </div>
+        <div class="col-xs-3 bonus-cur-bor-rh">
+            <p class="font-base font-size-20">
+                ${{bonusSummary.copy_amount || 0}}
+            </p>
+            <p>当前复制金额</p>
+        </div>
+        <div class="col-xs-3">
+            <p class="font-base font-size-20">
+                ${{bonusSummary.history_bonus || 0}}
+            </p>
+            <p>历史分成总额</p>
+        </div>
+        <div class="col-xs-1"></div>
+    </div>
+
+    <p class="font-base font-bold font-size-18 float-left">历史分成明细</p>
+    <div class="date_searchbar float-right">
+
+        <div class="form-control-wrapper">
+            <input class="form-control"
+                   name="date"
+                   type="text"
+                   required
+                   ng-model="datepicker.date"
+                   tw-datetimepicker
+                   datetimepicker-options="{{datepicker.options}}">
+        </div>
+        <button class="btn btn-info btn-sm date_searchbar__btn" ng-click="search()">查询</button>
+    </div>
+    <div class="position-relative clearfix">
+        <!-- <div tw-loading-img></div> -->
+        <table class="table table-header">
+            <colgroup>
+                <col width="20%"></col>
+                <col width="20%"></col>
+                <col width="15%"></col>
+                <col width="15%"></col>
+                <col width="15%"></col>
+                <col width="15%"></col>
+            </colgroup>
+            <thead>
+                <tr>
+                    <th>复制者</th>
+                    <th>复制时间</th>
+                    <th>平仓收益</th>
+                    <th>我的分成</th>
+                    <th>上月分成</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="bonus in bonusList">
+                    <td>
+                        <a href="" class="bonus-his__photo">
+                            <img ng-src="/avatar/{{ bonus.usercode }}_80.jpg">
+                        </a>
+                        {{bonus.username}}
+                    </td>
+                    <td>
+                        {{bonus.timestamp | dateFormatter}}
+                    </td>
+                    <td>
+                        ${{bonus.close_profit}}
+                    </td>
+                    <td>
+                        ${{bonus.bonus || 0}}
+                    </td>
+                    <td>
+                        上月分成
+                    </td>
+                    <td>
+                        <a class="btn btn-gray-sm btn-primary" href="" ng-click="openDetailMdl(bonus.user_code)">
+                            详情
+                        </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-center" ng-if="bonusList.length > 0">
+            <p tw-pagination></p>
+        </div>
+
+        <div ng-if="bonusList.length == 0">
+            <p class="text-center mg-tp-20">无数据!</p>
+        </div>
+    </div>
+</div>
