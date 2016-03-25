@@ -15,7 +15,7 @@
         &:before {
             position: absolute;
             top: -6px;
-            border-bottom: 6px solid rgba(0, 0, 0, 0.5);
+            border-bottom: 6px solid $alert-bg;
             border-left: 6px solid transparent;
             border-right: 6px solid transparent;
             content: '';

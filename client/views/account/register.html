@@ -1,0 +1,263 @@
+<div class="account_register">
+    <div class="step_by_step mg-bt-80">
+        <div class="step_by_step__step active">
+            <span></span>
+            <p>1. 注册账户</p>
+        </div>
+        <div class="step_by_step__step">
+            <span></span>
+            <p>2. 实名认证</p>
+        </div>
+        <div class="step_by_step__step">
+            <span></span>
+            <p>3. KYC 认证</p>
+        </div>
+        <div class="step_by_step__step">
+            <span></span>
+            <p>4. 完成注册</p>
+        </div>
+    </div>
+
+    <div class="account_register__step-1" ng-show="step === 1">
+        <h2 class="account_register__title">注册账户</h2>
+        
+        <form name="registerForm" novalidate>
+            <div class="form-control-wrapper">
+                <input class="form-control" 
+                       name="username"
+                       type="text"
+                       placeholder="昵称"
+                       required
+                       ng-class="{'form-control-error': (frontErr.username.show && registerForm.username.$invalid) || (backErr.username.show && backErr.username.status > 0)}"
+                       ng-model="account.username"
+                       twform-valid-txt
+                       data-type="username"
+                       data-min-len="4"
+                       data-max-len="16"
+                       ng-focus="hideErr('registerForm', 'username')"
+                       ng-blur="showErr('registerForm', 'username')">
+
+                <div ng-show="frontErr.username.show">
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm.username.$error.required">
+                        请输入昵称
+                    </p>
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm.username.$error.twformValidTxt">
+                        {{frontErr.username.tip}}
+                    </p>
+                </div>
+
+                <div ng-show="backErr.username.show">
+                    <p class="alert-arrow_tp_lf" ng-show="backErr.username.status == 1">
+                        该昵称已存在
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-control-wrapper">
+                <input class="form-control" 
+                       name="phone"
+                       type="text"
+                       placeholder="手机号码"
+                       required
+                       ng-class="{'form-control-error': (frontErr.phone.show && registerForm.phone.$invalid) || (backErr.phone.show && backErr.phone.status > 0)}"
+                       ng-model="account.phone"
+                       ng-pattern="frontErr.phone.reg"
+                       ng-focus="hideErr('registerForm', 'phone')"
+                       ng-blur="showErr('registerForm', 'phone')">
+
+                <div ng-show="frontErr.phone.show">
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm.phone.$error.required">
+                        请输入手机号码
+                    </p>
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm.phone.$error.pattern">
+                        输入的手机号码格式不正确
+                    </p>
+                </div>
+
+                <div ng-show="backErr.phone.show">
+                    <p class="alert-arrow_tp_lf" ng-show="backErr.phone.status == 1">
+                        该手机号码已注册
+                    </p>
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="form-control-wrapper">
+                        <input class="form-control"
+                               name="captcha"
+                               type="text"
+                               placeholder="验证码"
+                               required
+                               ng-class="{'form-control-error': (frontErr.captcha.show && registerForm.captcha.$invalid) || (backErr.captcha.show && backErr.captcha.status > 0)}"
+                               ng-model="account.captcha"
+                               ng-blur="showErr('registerForm', 'captcha')"
+                               ng-focus="hideErr('registerForm', 'captcha')">
+
+                        <div ng-show="frontErr.captcha.show">
+                            <p class="alert-arrow_tp_lf" ng-show="registerForm.captcha.$error.required">
+                                请输入验证码
+                            </p>
+                        </div>
+
+                        <div ng-show="backErr.captcha.show">
+                            <p class="alert-arrow_tp_lf" ng-show="backErr.captcha.status == 1">
+                                验证码不正确
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="relative">
+                        <div class="captcha_btn"
+                             tw-captcha-timer 
+                             start-timer="startTimer" 
+                             voice-captcha="voiceCaptcha" 
+                             captcha-btn-clickable="clickable.captcha" 
+                             ng-disabled="!clickable.captcha" 
+                             ng-click="getCaptcha('registerForm')">
+                            获取验证码
+                        </div>
+
+                        <div ng-show="backErr.captchaBtn.show">
+                            <p class="alert-arrow_tp_lf" ng-show="backErr.captchaBtn.status == 1">
+                                1 分钟内只可发送 1 次验证码
+                            </p>
+
+                            <p class="alert-arrow_tp_lf" ng-show="backErr.captchaBtn.status == 2">
+                                1 小时内只可发送 10 次验证码
+                            </p>
+
+                            <p class="alert-arrow_tp_lf" ng-show="backErr.captchaBtn.status == 5">
+                                验证码发送失败
+                            </p>
+
+                            <p class="alert-arrow_tp_lf" ng-show="backErr.captchaBtn.status == 8">
+                                请求超时，请刷新
+                            </p>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-control-wrapper">
+                <input class="form-control"
+                       name="email"
+                       type="text"
+                       placeholder="电子邮箱"
+                       required
+                       ng-class="{'form-control-error': (frontErr.email.show && registerForm.email.$invalid) || (backErr.email.show && backErr.email.status > 0)}"
+                       ng-model="account.email"
+                       ng-pattern="frontErr.email.reg"
+                       ng-blur="showErr('registerForm', 'email')"
+                       ng-focus="hideErr('registerForm', 'email')">
+
+                <div ng-show="frontErr.email.show">
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm.email.$error.required">
+                        请输入电子邮箱
+                    </p>
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm.email.$error.pattern">
+                        电子邮箱格式不正确
+                    </p>
+                </div>
+
+                <div ng-show="backErr.email.show">
+                    <p class="alert-arrow_tp_lf" ng-show="backErr.email.status == 1">
+                        电子邮箱已存在
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-control-wrapper">
+                <input class="form-control"
+                       name="password"
+                       type="password"
+                       placeholder="密码"
+                       required
+                       ng-class="{'form-control-error': frontErr.password.show && registerForm.password.$invalid}"
+                       ng-model="account.password"
+                       twform-valid-pwd
+                       ng-focus="hideErr('registerForm', 'password')"
+                       ng-blur="showErr('registerForm', 'password')">
+                
+                <div ng-show="frontErr.password.show">
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm.password.$error.required">
+                        请输入密码
+                    </p>
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm.password.$error.twformValidPwd">
+                        {{frontErr.password.tip}}
+                    </p>
+                </div>
+            </div>
+
+            <div class="form-control-wrapper">
+                <input class="form-control"
+                       name="pwdConfirm" 
+                       type="password"
+                       placeholder="确认密码"
+                       required
+                       ng-class="{'form-control-error': frontErr.pwdConfirm.show && registerForm.pwdConfirm.$invalid}"
+                       ng-model="account.pwdConfirm"
+                       twform-repeat="{{account.password}}"
+                       ng-focus="hideErr('registerForm', 'pwdConfirm')"
+                       ng-blur="showErr('registerForm', 'pwdConfirm')">
+
+                <div ng-show="frontErr.pwdConfirm.show">
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm.pwdConfirm.$error.required">
+                        请再次输入密码
+                    </p>
+
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm.pwdConfirm.$error.twformRepeat">
+                        两次输入的密码不一致
+                    </p>
+                </div>
+            </div>
+            
+            <div class="text-center" ng-show="backErr.system.show">
+                <p class="alert-system" ng-show="backErr.system.status === 1">
+                    注册次数过多，请稍候重试
+                </p>
+                <p class="alert-system" ng-show="backErr.system.status === 2">
+                    系统繁忙，请稍候重试
+                </p>
+            </div>
+
+            
+            <p class="font-dark mg-tp-10">
+                注册即同意
+                <a class="font-info" href="https://www.tigerwit.com/blog/support/risk">
+                    风险披露书、
+                </a>
+                <a class="font-info" href="https://www.tigerwit.com/blog/support/shengming">
+                    客户声明、
+                </a>
+                <a class="font-info" href="https://www.tigerwit.com/blog/support/notice">
+                    用户交易须知
+                </a>
+            </p>
+
+            <div class="text-center mg-tp-50 mg-bt-30">
+                <button class="btn btn-primary btn-sm" ng-if="clickable.submit"  ng-click="submitRegisterForm('registerForm')">
+                    30 秒注册 开启财富之旅
+                </button>
+
+                <button class="btn btn-primary btn-sm" disabled ng-if="!clickable.submit">
+                    <i class="loading fa fa-spinner"></i>
+                    提交中
+                </button>
+            </div>
+        </form>
+
+        <div class="text-center font-dark">
+            已有账户？
+            <a class="font-info" ui-sref="account.subpage({subpage: 'login'})">
+                立即登录
+            </a>
+        </div>
+    </div>
+    
+    <div ng-if="step === 2">
+        <h2 class="account_register__title">实名认证</h2>
+        <div ng-include="'/views/setting/verify.html'"></div>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+@include b(verify) {
+    @include e(title) {
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+//== 上传证件照
+@include b(upload_id_card) {
+
+    .alert {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    @include e(front) {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px dashed $gray;
+        border-radius: $border-radius-base;
+        text-align: center;
+        overflow: hidden;
+    }
+
+    @include e(tip) {
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include e(back) {
+        @extend .upload_id_card__front;
+        //@include img-normal($image-path-account + "id_card-back.png");
+    }
+
+    @include e(input) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        font-size: 200px;
+        opacity: 0;
+        filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+        cursor: pointer;
+    }
+
+    @include e(image) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: $border-radius-base;
+    }
+
+    @include e(icon) {
+        margin-top: 30px;
+        font-size: 36px;
+        color: $gray;
+    }
+
+    @include e(title) {
+        margin-top: 15px;
+        font-size: 16px;
+        font-weight: 400;
+        color: $gray-dark;
+    }
+}

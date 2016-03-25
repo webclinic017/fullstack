@@ -84,9 +84,8 @@
 
 
         /**
-         * Validator Service 验证输入的文本是否有效
-         *
-         * @method isValidTxt
+         * @name isValidTxt
+         * @desc 验证输入的文本是否有效
          * @param {String} type 类型（如：username）根据类型确定正则
          * @param {String} inputStr 输入文本
          * @param {Number} minLen maxLen 最小长度和最大长度

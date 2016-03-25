@@ -28,8 +28,8 @@ $link-hover-color:          $brand-info-dark !default;
 
 //== Z-index
 $zindex-loading_img:        100 !default;
-$zindex-dropdown:           1000 !default;
 $zindex-alert:              1000 !default;
+$zindex-dropdown:           1010 !default;
 $zindex-navbar:             1050 !default;
 $zindex-modal:              1070 !default;
 
@@ -206,9 +206,9 @@ $table-border-color:            #ebebeb !default;
 //== Forms
 $input-padding-left:            30px !default;
 $input-bg:                      rgba(0, 0, 0, 0) !default;
-$input-color:                   #555 !default;
-$input-color-placeholder:       $gray !default;
-$input-border:                  #ccc !default;
+$input-color:                   $gray-darker !default;
+$input-color-placeholder:       $gray-dark !default;
+$input-border:                  $gray !default;
 $input-border-focus:            $brand-info !default;
 $input-border-radius:           2px !default;
 $input-height-base:             40px !default;
@@ -227,7 +227,7 @@ $carousel-caption-color:                      #fff !default;
 $alert-padding-vertical:        8px;
 $alert-padding-horizontal:      10px;
 $alert-color:                   $brand-info;
-$alert-bg:                      rgba(0, 0, 0, 0.5);
+$alert-bg:                      rgba(0, 0, 0, 0.7);
 $alert-arrow-width:             6px;
 
 //== Modal
