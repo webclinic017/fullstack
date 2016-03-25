@@ -156,15 +156,16 @@
                             },
                             controllerProvider: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'info';
-
-                                // 实名认证的 controller 在模板中指定，因为注册中使用 ngInclude
-                                if ($stateParams.subpage === 'verify') {
+                                
+                                if ($stateParams.subpage === 'info') {
+                                    var ctrlPrefix = 'Setting';
+                                    var ctrlSuffix = 'Controller';
+                                    var ctrlRoot = modCtrlName($stateParams.subpage);
+                                    return ctrlPrefix + ctrlRoot + ctrlSuffix;    
+                                } else {
+                                    // controller 在模板中指定（为了使用 ng-include）
                                     return '';
                                 }
-                                var ctrlPrefix = 'Setting';
-                                var ctrlSuffix = 'Controller';
-                                var ctrlRoot = modCtrlName($stateParams.subpage);
-                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
                             }
                         }
                     }

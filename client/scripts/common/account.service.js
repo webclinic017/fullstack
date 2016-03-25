@@ -34,7 +34,9 @@
             getSVoiceCaptcha: getSVoiceCaptcha,
             setPhone: setPhone,
             verify: verify,
-            getVerifyStatus: getVerifyStatus
+            getVerifyStatus: getVerifyStatus,
+            setKyc: setKyc,
+            getKyc: getKyc
         };
         return service;
 
@@ -382,6 +384,14 @@
                     idNumber: data.id_no
                 }
             });
+        }
+
+        function getKyc() {
+
+        }
+
+        function setKyc() {
+            
         }
     }
 })();

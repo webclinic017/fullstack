@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('SettingKycController', SettingKycController);
 
-    SettingKycController.$inject = ['$scope'];
+    SettingKycController.$inject = ['$scope', '$state', '$timeout', 'account'];
 
-    function SettingKycController($scope) {
+    function SettingKycController($scope, $state, $timeout, account) {
         $scope.questions = [
             {
                 id: '01',
@@ -28,6 +28,94 @@
             }
         ];
 
-        $scope.option = {}
+        $scope.tip = {
+            questions: {
+                show: false,
+                msg: undefined,
+            },
+            system: {
+                show: false,
+                status: 0
+            }
+        };
+        $scope.clickable = true;
+        $scope.selectOption = selectOption;
+        $scope.submitForm = submitForm;
+        $scope.goNextStep = goNextStep;
+        var results = [];
+
+        if ($state.current.name === 'space.setting.subpage') {
+            $scope.type = 'setting';
+        }
+
+        if ($scope.type === 'setting') {
+            getKyc();
+        }
+
+        angular.forEach($scope.questions, function (question) {
+            results.push({
+                id: question.id,
+                answer: question.answer
+            });
+        });
+
+        function selectOption(question) {
+            $scope.tip.questions.show = false;
+            $scope.tip.questions.msg = undefined;
+
+            angular.forEach(results, function (result) {
+                if (result.id === question.id) {
+                    result.answer = question.answer;
+                }
+            });
+        }
+
+        function submitForm() {
+            var isBreak = false;
+            angular.forEach(results, function (result, index) {
+                if (isBreak) {
+                    return;
+                } 
+                
+                if (!result.answer) {
+                    $scope.tip.questions.show = true;
+                    $scope.tip.questions.msg = '请完成第 ' + (index + 1) + ' 题';
+                    isBreak = true;
+                } else {
+                    $scope.tip.questions.show = false;
+                    $scope.tip.questions.msg = undefined;
+                }
+            });
+
+            if ($scope.tip.questions.msg) {
+                return;
+            }
+            console.log(results);
+
+            $scope.clickable = false;
+            $timeout(function () {
+                $scope.tip.system.show = true;
+                $scope.tip.system.status = 1;
+                
+                if ($scope.type === 'setting') {
+                    $scope.clickable = true;
+                    $timeout(function () {
+                        $scope.tip.system.show = false;
+                        $scope.tip.system.status = 0;
+                    }, 3000);
+                } else {
+                    goNextStep();
+                }
+            }, 3000);
+        }
+
+        function getKyc() {
+        }
+
+        function goNextStep() {
+            if ($scope.progress) {
+                $scope.progress.step++;    
+            }
+        }
     }
 })();

@@ -48,7 +48,9 @@
             $scope.type = 'setting';
         }
 
-        getVerifyStatus($scope.type);
+        if ($scope.type === 'setting') {
+            getVerifyStatus();
+        }
 
         $scope.$on('uploadIdCardStart', function (event, data) {
             $scope.$apply(function () {
@@ -68,15 +70,13 @@
             });
         });
 
-        function getVerifyStatus(type) {
-            if (type === 'setting') {
-                account.getVerifyStatus().then(function (data) {
-                    $scope.verification.status = data.status;
-                    // $scope.verification.status = 1;
-                    $scope.verification.realname = data.realname || undefined;
-                    $scope.verification.id.number = data.idNumber;
-                });    
-            }
+        function getVerifyStatus() {
+            account.getVerifyStatus().then(function (data) {
+                $scope.verification.status = data.status;
+                // $scope.verification.status = 1;
+                $scope.verification.realname = data.realname || undefined;
+                $scope.verification.id.number = data.idNumber;
+            });    
         }
 
         function hideErr(formName, controlName) {
@@ -106,23 +106,22 @@
             account.verify($scope.verification.realname).then(function (data) {
 
                 if (data.is_succ) {
-                    // if (typeof $scope.step !== 'undefined') {
-                    //     goNextStep();
-                    // }
                     $scope.backErr.system.status = 1;
                     $scope.backErr.system.show = true;
 
-                    getVerifyStatus($scope.type);
-                    goNextStep($scope.type);
-                    
+                    if ($scope.type === 'setting') {
+                        getVerifyStatus();    
+                    } else {
+                        goNextStep();
+                    }
                 } else {
                     $scope.clickable = true;
                 }
             });
         }
 
-        function goNextStep(type) {
-            if (!type && $scope.progress) {
+        function goNextStep() {
+            if ($scope.progress) {
                 $scope.progress.step++;    
             }
         }
