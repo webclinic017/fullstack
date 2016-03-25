@@ -7,37 +7,21 @@
 
 //== 上传证件照
 @include b(upload_id_card) {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dashed $gray;
+    border-radius: $border-radius-base;
+    text-align: center;
+    overflow: hidden;
 
-    .alert {
-        position: relative;
-        width: 100%;
-        text-align: center;
+    &:hover {
+        border-color: $brand-primary;
     }
-
-    @include e(front) {
-        position: relative;
-        display: block;
-        width: 100%;
-        height: 150px;
-        margin-left: auto;
-        margin-right: auto;
-        border: 1px dashed $gray;
-        border-radius: $border-radius-base;
-        text-align: center;
-        overflow: hidden;
-    }
-
-    @include e(tip) {
-        width: 300px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    @include e(back) {
-        @extend .upload_id_card__front;
-        //@include img-normal($image-path-account + "id_card-back.png");
-    }
-
+    
     @include e(input) {
         position: absolute;
         top: 0;
@@ -49,7 +33,7 @@
         cursor: pointer;
     }
 
-    @include e(image) {
+    @include e(img) {
         position: absolute;
         top: 0;
         left: 0;
@@ -69,5 +53,9 @@
         font-size: 16px;
         font-weight: 400;
         color: $gray-dark;
+    }
+
+    @include m(tip) {
+        position: relative;
     }
 }

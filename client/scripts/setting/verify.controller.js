@@ -9,13 +9,12 @@
     SettingVerifyController.$inject = ['$scope', '$modal', 'validator', 'account'];
 
     function SettingVerifyController($scope, $modal, validator, account) {
-        $scope.step = 1;
         $scope.verification = {
-            //realname: ,
+            realname: undefined,
             id: {
-                //number: ,
-                frontImgStatus: 0,
-                backImgStatus: 0
+                // number: ,
+                frontStatus: 0,
+                backStatus: 0
             }
         };
         $scope.frontErr = {
@@ -23,75 +22,89 @@
                 show: false,
                 reg: validator.regType.realname.reg
             },
-            idFrontImg: {
+            idFront: {
                 show: false
             },
-            idBackImg: {
+            idBack: {
                 show: false
             }
         };
+
+        $scope.backErr = {
+            system: {
+                show: false,
+                status: 0
+            }
+        }
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
         $scope.submitForm = submitForm;
-        $scope.clickable = {
-            submit: true
-        };
+        $scope.goNextStep = goNextStep;
+        $scope.clickable = true;
 
-        $scope.$on('uploadImageStart', function (event, data) {
+        var parentScope = $scope.$parent;
+
+        $scope.$on('uploadIdCardStart', function (event, data) {
             $scope.$apply(function () {
-                $scope.verification.id[data.face + 'ImgStatus'] = 1;
+                $scope.verification.id[data.face + 'Status'] = 1;
             });
         });
 
-        $scope.$on('uploadImageSuccess', function (event, data) {
+        $scope.$on('uploadIdCardSuccess', function (event, data) {
             $scope.$apply(function () {
-                $scope.verification.id[data.face + 'ImgStatus'] = 2;
+                $scope.verification.id[data.face + 'Status'] = 2;
             });
         });
 
-        $scope.$on('uploadImageFail', function (event, data) {
+        $scope.$on('uploadIdCardFail', function (event, data) {
             $scope.$apply(function () {
-                $scope.verification.id[data.face + 'ImgStatus'] = 3;
+                $scope.verification.id[data.face + 'Status'] = 3;
             });
         });
 
-        function hideErr(name) {
-            if ($scope.frontErr[name]) {
-                $scope.frontErr[name].show = false;
+        function hideErr(formName, controlName) {
+            if ($scope.frontErr[controlName]) {
+                $scope.frontErr[controlName].show = false;
             }
         }
 
-        function showErr(name) {
-            if ($scope.frontErr[name]) {
-                $scope.frontErr[name].show = true;
+        function showErr(formName, controlName) {
+            if ($scope.frontErr[controlName]) {
+                $scope.frontErr[controlName].show = true;
             }
         }
 
-        function submitForm() {
-            showErr('realname');
-            showErr('idFrontImg');
-            showErr('idBackImg');
+        function submitForm(formName) {
+            console.info($scope.$$childHead[formName]);
+            showErr(formName, 'realname');
+            showErr(formName, 'idFront');
+            showErr(formName, 'idBack');
 
-            if ($scope.verifyForm.$invalid || 
-                    $scope.verification.id.frontImgStatus !== 2 ||
-                    $scope.verification.id.backImgStatus !== 2) {
+            
+            if ($scope[formName].$invalid || 
+                    $scope.verification.id.frontStatus !== 2 ||
+                    $scope.verification.id.backStatus !== 2) {
                 return;
             }
 
-            $scope.clickable.submit = false;
+            $scope.clickable = false;
             account.verify($scope.verification.realname).then(function (data) {
 
                 if (data.is_succ) {
-                    goNextStep();
+                    // if (typeof $scope.step !== 'undefined') {
+                    //     goNextStep();
+                    // }
+                    $scope.backErr.system.status = 1;
+                    $scope.backErr.system.show = true;
+                    $scope.clickable = true;
                 } else {
-                    $scope.clickable.submit = true;
+                    $scope.clickable = true;
                 }
             });
         }
 
         function goNextStep() {
-            $scope.step++;
+            parentScope.step++;
         }
     }
-
 })();
