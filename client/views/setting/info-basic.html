@@ -22,20 +22,20 @@
                            ng-focus="hideErr('basicInfoForm', 'username')">
 
                     <div ng-show="frontErr.username.show">
-                        <p class="alert-error" ng-show="basicInfoForm.username.$error.required">
+                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.username.$error.required">
                             请输入昵称
                         </p>
-                        <p class="alert-error" ng-show="basicInfoForm.username.$error.twformValidTxt">
+                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.username.$error.twformValidTxt">
                             {{frontErr.username.tip}}
                         </p>
                     </div>
 
                     <div ng-show="backErr.username.show">
-                        <p class="alert-error" ng-show="backErr.username.status == 2">
+                        <p class="alert alert-arrow_tp_lf" ng-show="backErr.username.status == 2">
                             昵称已存在
                         </p>
 
-                        <p class="alert-error" ng-show="backErr.username.status == 3">
+                        <p class="alert alert-arrow_tp_lf" ng-show="backErr.username.status == 3">
                             昵称包含敏感词汇，请修改
                         </p>
                     </div>
@@ -72,7 +72,7 @@
                     </div>
                     
                     <div ng-show="frontErr.state.show">
-                        <p class="alert-error" ng-show="basicInfoForm.locationState.$error.required">
+                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.locationState.$error.required">
                             请选择省/市
                         </p>
                     </div>
@@ -103,7 +103,7 @@
                     </div>
 
                     <div ng-show="frontErr.city.show">
-                        <p class="alert-error" ng-show="basicInfoForm.locationCity.$error.required">
+                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.locationCity.$error.required">
                             请选择市/区
                         </p>
                     </div>
@@ -138,7 +138,7 @@
                     </div>
 
                     <div ng-show="frontErr.city.show">
-                        <p class="alert-error" ng-show="basicInfoForm.feature.$error.required">
+                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.feature.$error.required">
                             请选择市/区
                         </p>
                     </div>

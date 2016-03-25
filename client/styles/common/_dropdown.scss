@@ -18,7 +18,8 @@
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100px;
+    // width: 100px;
+    min-width: 100%;
     z-index: $zindex-dropdown;
     display: none;
     font-size: $font-size-base;
