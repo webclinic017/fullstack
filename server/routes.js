@@ -72,7 +72,28 @@ module.exports = function (app) {
             pageInfo: pageInfo
         });
     });
+    // 交易品种
+    app.route('/web/product/:subpage(forex|metal|oil|cfd)').get(function (req, res) {
+        var subpage = req.params.subpage || 'forex';
+        var pageInfo = {
+            id: subpage
+        };
 
+        res.render('web_product.html', {
+            pageInfo: pageInfo
+        });
+    });
+    // 关于老虎金融
+    app.route('/web/about/:subpage(stp|team|report|control|tigerwit)').get(function (req, res) {
+        var subpage = req.params.subpage || 'forex';
+        var pageInfo = {
+            id: subpage
+        };
+
+        res.render('web_about.html', {
+            pageInfo: pageInfo
+        });
+    });
 
     app.route('/api_test').get(function (req, res, next) {
         // accountApi.checkLogined(function (data) {

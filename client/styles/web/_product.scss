@@ -1,0 +1,73 @@
+// 通用
+@include b(pro-public) {
+    color: $gray-darker;
+    
+    @include e(forex-banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "forex-banner.jpg");
+    }
+
+    @include e(oil-banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "oil-banner.png");
+    }
+
+    @include e(metal-banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "metal-banner.jpg");
+    }
+
+    @include e(cfd-banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "cfd-banner.png");
+    }
+
+    @include e(con) {
+
+    }
+
+    @include e(title) {
+        margin-top: 50px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid $gray;
+        text-align: center;
+        color: $gray-base;
+    }
+
+    @include e(star) {
+        display: inline-block;
+        width: 17px;
+        height: 15px;
+        @include img-normal($image-path-web + "forex-star.jpg");
+
+    }
+
+    @include e(forex-ul) {
+        margin-top: 30px;
+
+        > li {
+            margin-bottom: 25px;
+        }
+    }
+
+    @include e(logo) {
+        width: 100%;
+        height: 135px;
+        background-size: 100%;
+        @include img-normal($image-path-web + "forex-logo.png");
+
+    }
+
+    @include e(no-padding) {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+    }
+}
