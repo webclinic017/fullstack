@@ -18,32 +18,34 @@
         </ul>
 
         <!-- 登录后 -->
-        <ul class="nav navbar-right navbar-logined" ng-if="userstatus.logined">
-            <li>
-                <div class="relative">
-                    <a class="navbar-message" href="/space/#/space/notice"></a>
+        <div ng-if="userstatus.logined" ng-include="'navbar_info.html'"></div>
+        
+        <script id="navbar_info.html" type="text/ng-template">
+            <div class="navbar_info">
+                <a class="navbar_info__msg" href="/space/#/space/notice">
+                    <!-- 有新消息时显示 -->
+                    <span class="navbar_info__number" ng-if="personal.unreadLength > 0">
+                        {{personal.unreadLength}}
+                    </span>
+                </a>
 
-                    <!-- 有新消息时  显示 -->
-                    <a class="navbar-mes-num" ng-if="personal.unreadLength > 0">{{personal.unreadLength}}</a>
-                </div>
-            </li>
-            <li>
-                <div class="navbar-con float-right relative">
-                    <a class="navbar-name" href="/space/#/space/invest/current" target="_blank">{{personal.username}}</a><br>
-                    <a class="navbar-quit" ng-click="logout()">
+                <div class="navbar_info__psl">
+                    <a href="/space/#/space/invest/current">
+                        <img class="navbar_info__avatar" ng-src="{{personal.mdAvatar}}">
+                        <h4 class="navbar_info__username">{{personal.username || '**'}}</h4>
+                    </a>
+                    
+                    <a class="navbar_info__logout" href="" ng-click="logout()">
                         <i class="fa fa-sign-out"></i>
                         退出
                     </a>
                 </div>
-                <div class="navbar-con float-right relative">
-                    <a class="navbar-photo" href="/space/#/space/invest/current" target="_blank">
-                        <img ng-src="{{personal.mdAvatar}}" alt="">
-                    </a>
-                </div>
-            </li>
-        </ul>
+            </div>    
+        </script>    
+        
+        
 
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-left">
             <li>
                 <a data-navbar-trigger href="/">
                     首页
