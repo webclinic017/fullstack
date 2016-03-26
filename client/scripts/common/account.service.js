@@ -15,6 +15,7 @@
             checkExist: checkExist,
             getRCaptcha: getRCaptcha,
             getRVoiceCaptcha: getRVoiceCaptcha,
+            register: register,
             getPersonalInfo: getPersonalInfo,
             getAssetInfo: getAssetInfo,
             getUnreadLength: getUnreadLength,
@@ -131,6 +132,20 @@
             });
         }
 
+        /**
+         * @name register
+         * @desc 注册
+         */  
+        function register(username, phone, captcha, email, password) {
+            
+            return $http.post('/action/public/v3/register', {
+                username: username,
+                phone: phone,
+                verify_code: captcha,
+                email: email,
+                password: password
+            });
+        }
 
         function getPersonalInfo() {
             return $http.get('/api/v1/get_info').then(function (data) {

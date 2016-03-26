@@ -242,7 +242,7 @@
                 </button>
 
                 <button class="btn btn-primary btn-sm" disabled ng-if="!clickable.submit">
-                    <i class="loading fa fa-spinner"></i>
+                    <i class="loading_spinner fa fa-spinner"></i>
                     提交中
                 </button>
             </div>
@@ -264,5 +264,27 @@
     <div ng-if="progress.step === 3">
         <h2 class="account_register__title">KYC 认证</h2>
         <div ng-include="'/views/setting/kyc.html'"></div>
+    </div>
+
+    <div class="text-center" ng-if="progress.step === 4">
+        <h2 class="account_register__title">开户成功</h2>
+        <p>
+            <span class="font-dark">MT4 账号：</span>
+            {{account.realId || '******'}}
+        </p>
+        <p>
+            <span class="font-dark">MT4 服务器：</span>
+            TigerWit-Live
+        </p>
+        <p>
+            <span class="font-dark">MT4 密码：</span>
+            与网站密码相同
+        </p>    
+        
+        <a class="btn btn-primary btn-sm mg-tp-50 mg-bt-20" ui-sref="space.invest.subpage({subpage: 'current'})">进入个人中心</a>
+        <br>
+        <a class="btn btn-info btn-sm" href="" >
+            下载 MT4 软件 
+        </a>
     </div>
 </div>

@@ -10,7 +10,7 @@
 
     function AccountRegisterController($scope, $timeout, $state, $cookies, account, validator) {
         $scope.progress = {
-            step: 3
+            step: 4
         };
         $scope.account = {
             phone: undefined,
@@ -91,7 +91,6 @@
         
         // 设置 token 在获取手机验证码时提交该 token 解决更换 ip 批量注册的问题
         account.setToken();
-
         // 从 landing page 进入时
         // $scope.account.username = $state.params.name;
         // $scope.account.phone = $state.params.phone;
@@ -115,15 +114,15 @@
         //     }
         // }
 
-        // 监听 step 如果是注册成功则获取账户信息
-        // $scope.$watch('step', function (newVal) {
-        //     if (newVal === 2) {
-        //         account.getLayoutInfo().then(function (data) {
-        //             $scope.account.realId = data.real_id;
-        //             $scope.account.demoId = data.demo_id;
-        //         });
-        //     }
-        // });
+        // 监听 $scope.progress.step 如果是注册成功则获取账户信息
+        $scope.$watch('progress.step', function (newVal) {
+            if (newVal === 4) {
+                account.getPersonalInfo().then(function (data) {
+                    $scope.account.realId = data.real_id;
+                    $scope.account.demoId = data.demo_id;
+                });
+            }
+        });
 
 
         function checkUsernameExist() {
@@ -148,7 +147,6 @@
                 }
             });
         }
-
 
         function getCaptcha(formName) {
             showErr(formName, 'phone');
@@ -230,7 +228,7 @@
         }
 
         function goNextStep() {
-            $scope.step ++;    
+            $scope.process.step ++;    
         }
 
         function submitRegisterForm(formName) {
@@ -246,20 +244,23 @@
             }
 
             $scope.clickable.submit = false;
-            account.register($scope.account.username, 
-                    $scope.account.phone,
-                    $scope.account.captcha,
-                    $scope.account.email, 
-                    $scope.account.password).then(function (data) {
+            account.register(
+                $scope.account.username, 
+                $scope.account.phone,
+                $scope.account.captcha,
+                $scope.account.email, 
+                $scope.account.password
+            ).then(function (data) {
                     
                 if (data.is_succ) {
                     // 成功   
                     goNextStep();
-                    ga('send', 'event', 'register', 'register');
-                    // google adwords
-                    goog_report_conversion();
-                    _hmt.push(['_trackEvent', 'account', 'register']);
-                    _mvq.push(['$setGeneral', 'registered', '', $scope.account.username, $scope.account.phone]);
+                    
+                    // ga('send', 'event', 'register', 'register');
+                    // // google adwords
+                    // goog_report_conversion();
+                    // _hmt.push(['_trackEvent', 'account', 'register']);
+                    // _mvq.push(['$setGeneral', 'registered', '', $scope.account.username, $scope.account.phone]);
                 } else {
 
 
@@ -267,27 +268,23 @@
                     if (data.error_code === 7) {
                         $scope.backErr.username.show = true;
                         $scope.backErr.username.status = 1;
-                        $scope.clickable.submit = true;
                     }
 
                     if (data.error_code === 10) {
                         $scope.backErr.username.show = true;
                         $scope.backErr.username.status = 2;
-                        $scope.clickable.submit = true;
                     }
 
                     // phone
                     if (data.error_code === 6) {
                         $scope.backErr.phone.show = true;
                         $scope.backErr.phone.status = 1;
-                        $scope.clickable.submit = true;
                     }
 
                     // 验证码错误
                     if (data.error_code === 5 || data.error_code === 12) {
                         $scope.backErr.captcha.show = true;
                         $scope.backErr.captcha.status = 1;
-                        $scope.clickable.submit = true;
                     }
 
                     // 系统错误
@@ -298,7 +295,6 @@
                         $timeout(function () {
                             $scope.backErr.system.show = false;
                             $scope.backErr.system.status = 0;
-                            $scope.clickable.submit = true;
                         }, 3000);
                     }
 
@@ -309,9 +305,10 @@
                         $timeout(function () {
                             $scope.backErr.system.show = false;
                             $scope.backErr.system.status = 0;
-                            $scope.clickable.submit = true;
                         }, 3000);
                     }
+
+                    $scope.clickable.submit = true;
                 }
             }, function (error) {
                 console.log(error);
