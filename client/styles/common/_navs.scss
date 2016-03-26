@@ -62,7 +62,7 @@
     margin-right: 30px;
 
     .logo {
-        margin: 12px 15px 0 0;
+        margin: 15px 15px 0 0;
         vertical-align: middle;
     }
     
@@ -262,7 +262,7 @@
     @extend .clearfix;
     float: right;
     
-    margin-top: 18px;
+    margin-top: 20px;
     margin-left: 15px;
 
     @include e(psl) {
