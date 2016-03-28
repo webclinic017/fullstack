@@ -1,18 +1,21 @@
 // asset
 @include b (asset-public) {
-    position: relative;
-    padding: 30px 20px 30px;
-    margin-bottom: 10px;
-    border: 1px solid #ebebeb;
+    min-height: 500px;
+    padding: 30px 20px;
     color: $gray-darker;
-    background-color: #fff;
+    
+    .btn-primary {
+        margin-top: -3px;
+    }
 
     .form-control-wrapper {
         margin-bottom: 10px;
     }
+    
     .form-control {
         padding-left: 30px;
     }
+    
     .asset__input-icon {
         position: absolute;
         top: 10px;
@@ -23,8 +26,6 @@
 
 // deposit
 @include b(deposit) {
-
-
     ul > li {
         margin: 5px 0;
     }
@@ -38,7 +39,7 @@
     }
 
     @include e (input) {
-        margin-top: 2px;
+        // margin-top: 2px;
     }
 
     @include e (title-money) {
@@ -51,15 +52,9 @@
     }
 }
 
-// @include b(withdraw) {
-
-// }
-
 @include b(history) {
 
     @include e (lt40) {
         margin-left: -40px;
     }
 }
-
-//

@@ -32,7 +32,7 @@
 
 .modal-content {
     position: relative;
-    border-radius: $border-radius-lg;
+    border-radius: $border-radius-base;
     background-clip: padding-box;
     outline: 0;
     overflow: hidden;
@@ -106,7 +106,7 @@
         padding: 15px 40px;
     }
 
-    // 一般描述性信息
+    // 一级描述
     @include e(info) {
         margin-top: 50px;
         margin-bottom: 20px;
@@ -114,7 +114,7 @@
         font-size: 18px;
     }
 
-    // 提示信息
+    // 二级描述
     @include e(tip) {
         text-align: center;
         color: $gray-dark;

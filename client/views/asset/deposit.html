@@ -12,7 +12,6 @@
             <div class="col-xs-3 text-right deposit__title-money">充值金额</div>
             <div class="col-xs-6 deposit__input">
                 <form name="depositForm" novalidate>
-
                     <div class="form-control-wrapper">
                         <input class="form-control form-control-md"
                                name="amount"
@@ -28,33 +27,31 @@
                         <span class="asset__input-icon">$</span>
 
                         <div ng-show="frontErr.amount.show">
-                            <p class="alert-error" ng-show="depositForm.amount.$error.required">
+                            <p class="alert alert-arrow_tp_lf" ng-show="depositForm.amount.$error.required">
                                 请输入入金金额
                             </p>
 
-                            <p class="alert-error" ng-show="depositForm.amount.$error.pattern">
+                            <p class="alert alert-arrow_tp_lf" ng-show="depositForm.amount.$error.pattern">
                                 输入的金额为大于零的整数或者小数（小数点后最多两位数字）
                             </p>
 
-                            <p class="alert-error" ng-show="depositForm.amount.$error.twformMin">
+                            <p class="alert alert-arrow_tp_lf" ng-show="depositForm.amount.$error.twformMin">
                                 入金金额最少为 {{deposit.minAmount}} 美金
                             </p>
                         </div>
                     </div>
                 </form>
-
-
             </div>
             <div class="col-xs-3">
                 <button class="btn btn-primary btn-sm" ng-click="toDeposit()">充值</button>
             </div>
-
         </div>
+
         <div class="row">
             <div class="col-xs-9 col-xs-offset-3">
                 <p>
-                    <span class="font-danger">*</span>
-                    今日汇率： 1 美元 ＝ <span>{{deposit.FXRate.value}}</span> 人民币
+                    <span class="font-danger">＊</span>今日汇率：1 美元 =
+                    <span>{{deposit.FXRate.value}}</span> 人民币
                 </p>
             </div>
         </div>
@@ -76,6 +73,7 @@
                 </li>
             </ul>
         </div>
+        
         <div class="mg-tp-30">
             <p class="font-base font-bold font-size-18">赠金提取条件</p>
             <table class="table table-personal table-hover table-bordered">
@@ -130,10 +128,6 @@
                 <li>
                     6. 本活动最终解释权归 TigerWit 老虎金融所有。如有疑问，请咨询客服 400-809-8509。
                 </li>
-
-
-
-
             </ul>
         </div>
     </div>
