@@ -131,7 +131,7 @@
 
     @include e(photo-li) {
         width: 161px;
-        height: 231px;
+        height: 225px;
         background-size: 100%;
         @include img-normal($image-path-web + "team-lipeng.jpg");
         
