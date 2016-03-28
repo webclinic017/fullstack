@@ -102,6 +102,8 @@
         $scope.hideErr = hideErr;
         $scope.submitForm = submitForm;
 
+        $scope.sss = {name: 'xxx'};
+
         initLocation();
 
         function initLocation() {
