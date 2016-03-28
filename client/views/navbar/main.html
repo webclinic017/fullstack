@@ -6,44 +6,39 @@
                 <a class="logocctv" href="#"></a>
             </div>
         </div>
-
         <!-- 未登录时 -->
         <ul class="nav navbar-login navbar-right" ng-if="!userstatus.logined">
             <li>
                 <a class="login" href="/space/#/account/login">登录</a>
             </li>
             <li>
-                <a class="signup" href="#">注册</a>
+                <a class="signup" href="/space/#/account/register">注册</a>
             </li>
         </ul>
 
         <!-- 登录后 -->
-        <ul class="nav navbar-right navbar-logined" ng-if="userstatus.logined">
-            <li>
-                <div class="relative">
-                    <a class="navbar-message" href="/space/#/space/notice"></a>
+        <div class="navbar_info" ng-cloak ng-if="userstatus.logined">
+            <a class="navbar_info__msg" href="/space/#/space/notice">
+                <!-- 有新消息时显示 -->
+                <span class="navbar_info__number" ng-if="personal.unreadLength > 0">
+                    {{personal.unreadLength}}
+                </span>
+            </a>
 
-                    <!-- 有新消息时  显示 -->
-                    <a class="navbar-mes-num" ng-if="personal.unreadLength > 0">{{personal.unreadLength}}</a>
-                </div>
-            </li>
-            <li>
-                <div class="navbar-con float-right relative">
-                    <a class="navbar-name" href="/space/#/space/invest/current" target="_blank">{{personal.username}}</a><br>
-                    <a class="navbar-quit" ng-click="logout()">
-                        <i class="fa fa-sign-out"></i>
-                        退出
-                    </a>
-                </div>
-                <div class="navbar-con float-right relative">
-                    <a class="navbar-photo" href="/space/#/space/invest/current" target="_blank">
-                        <img ng-src="{{personal.mdAvatar}}" alt="">
-                    </a>
-                </div>
-            </li>
-        </ul>
-
-        <ul class="nav navbar-nav navbar-right">
+            <div class="navbar_info__psl">
+                <a href="/space/#/space/invest/current">
+                    <img class="navbar_info__avatar" ng-src="{{personal.mdAvatar}}">
+                    <h4 class="navbar_info__username">{{personal.username || '**'}}</h4>
+                </a>
+                
+                <a class="navbar_info__logout" href="" ng-click="logout()">
+                    <i class="fa fa-sign-out"></i>
+                    退出
+                </a>
+            </div>
+        </div>
+        
+        <ul class="nav navbar-nav navbar-left">
             <li>
                 <a data-navbar-trigger href="/">
                     首页

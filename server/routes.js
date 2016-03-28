@@ -124,5 +124,4 @@ module.exports = function (app) {
             res. send(html);
         });
     });
-
 };

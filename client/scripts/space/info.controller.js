@@ -20,9 +20,7 @@
         getVerifyStatus();
         getAssetInfo();
         getInviteFriendsInfo(1);
-        getUnreadLength();
-
-
+        
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
             angular.extend($scope.personal, {
                 basic: toState.name.substring(6)
@@ -75,20 +73,5 @@
                 });
             });
         }
-
-        // 获取新消息
-        function getUnreadLength () {
-            account.getUnreadLength().then(function(data) {
-                $scope.unreadLength = data.num;
-
-                angular.extend($scope.personal, {
-                    unreadLength: $scope.unreadLength
-                });
-            });
-
-            $scope.$emit('refreshNoticeList');
-        }
-        
-
     }
 })();

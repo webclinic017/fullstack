@@ -1,3 +1,7 @@
+//== 避免页面闪烁 flicker
+[ng-cloak] {
+    display: none !important;
+}
 //== 定位
 .relative {
     position: relative !important;

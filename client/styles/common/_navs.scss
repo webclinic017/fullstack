@@ -59,9 +59,10 @@
 .navbar-header {
     @extend .clearfix;
     float: left;
+    margin-right: 30px;
 
     .logo {
-        margin: 12px 15px 0 0;
+        margin: 15px 15px 0 0;
         vertical-align: middle;
     }
     
@@ -216,7 +217,7 @@
 }
 
 
-// 未登录时候 显示 注册登录 块
+//== 未登录时候 显示 注册登录 块
 .navbar-login {
     float: left;
     margin: 0px;
@@ -253,60 +254,67 @@
         background-color: $brand-primary;
     }
 }
-// 登录后 显示的 消息通知 头像
-.navbar-logined {
-    > li {
-        float: left;
-        margin-left: 10px;
-    }
-    .navbar-message {
+
+//== 导航条个人信息
+@include b(navbar_info) {
+    $navbar_info_height: 45px;
+
+    @extend .clearfix;
+    float: right;
+    
+    margin-top: 20px;
+    margin-left: 15px;
+
+    @include e(psl) {
         display: inline-block;
-        margin-top: 20px;
-        margin-left: 10px;
-        width: 45px;
-        height: 45px;
+        width: 160px;
+        height: $navbar_info_height;
+        vertical-align: middle;
+    }
+
+    @include e(avatar) {
+        float: left;
+        width: $navbar_info_height;
+        height: $navbar_info_height;
+        margin-right: 8px;
+        border: 2px solid $brand-primary;
+        border-radius: 50%;
+    }
+
+    @include e(username) {
+        @extend .text-inline;
+        margin-top: 0px;
+        margin-bottom: 2px;
+        font-weight: 400;
+        color: $brand-primary;
+    }
+
+    @include e(logout) {
+        color: $gray-dark;
+    }
+
+    @include e(msg) {
+        position: relative;
+        display: inline-block;
+        width: $navbar_info_height;
+        height: $navbar_info_height;
+        margin-right: 15px;
+        vertical-align: middle;
         @include img-normal($image-path-base + "navbar-message.png");
     }
-    .navbar-mes-num {
+
+    @include e(number) {
         position: absolute;
-        top: 17px;
+        top: 0;
         right: -5px;
-        display: inline-block;
         width: 20px;
-        height: 20px;
-        background: $brand-primary;
         border-radius: 50%;
-        font-size: 14px;
+        line-height: 20px;
         text-align: center;
+        font-size: 12px;
         color: $gray-base;
+        background: $brand-primary;
         cursor: pointer;
-    }
-    .navbar-photo {
-        a {
-            border: none;
-            &:hover {
-                border: none;
-            }
-        }
-        img {
-            width: 45px;
-            height: 45px;
-            border-radius: 50%;
-            border: 2px solid $brand-primary;
-        }
-    }
-    .navbar-con {
-        margin-left: 10px;
-        margin-top: 20px;
-    }
-    .navbar-name {
-        color: $brand-primary;
-        font-size: 16px;
-    }
-    .navbar-quit {
-        cursor: pointer;
-        color: $gray-dark;
-        font-size: 16px;
     }
 }
 

@@ -21,7 +21,6 @@
         var detailsId;
         var avaCopyAmount;
 
-        $scope.$emit('showLoadingImg');
         getData();
         getTraders();
         getAvaCopyAmount();
@@ -39,7 +38,7 @@
                 $scope.orders = data.data;
                 angular.extend($scope.orderCurrent, data.group_data);
 
-                $scope.$emit('hideLoadingImg');
+                $scope.$broadcast('hideLoadingImg');
             });
 
             dataId = $timeout(function () {

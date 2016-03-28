@@ -1,6 +1,9 @@
 @include b(setting_pnl) {
+    min-height: 650px;
     padding: 15px;
+}
 
+@include b(setting_info_pnl) {
     form label {
         line-height: $input-height-base;
         font-weight: 700;

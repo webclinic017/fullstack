@@ -15,8 +15,8 @@
             checkExist: checkExist,
             getRCaptcha: getRCaptcha,
             getRVoiceCaptcha: getRVoiceCaptcha,
+            register: register,
             getPersonalInfo: getPersonalInfo,
-            getVerifyStatus: getVerifyStatus,
             getAssetInfo: getAssetInfo,
             getUnreadLength: getUnreadLength,
             getNoticeCategory: getNoticeCategory,
@@ -33,8 +33,11 @@
             getSCaptcha: getSCaptcha,
             getSVoiceCaptcha: getSVoiceCaptcha,
             setPhone: setPhone,
-            logout: logout,
-            verify: verify
+            verify: verify,
+            getVerifyStatus: getVerifyStatus,
+            setKyc: setKyc,
+            getKyc: getKyc,
+            logout: logout
         };
         return service;
 
@@ -129,6 +132,20 @@
             });
         }
 
+        /**
+         * @name register
+         * @desc 注册
+         */  
+        function register(username, phone, captcha, email, password) {
+            
+            return $http.post('/action/public/v3/register', {
+                username: username,
+                phone: phone,
+                verify_code: captcha,
+                email: email,
+                password: password
+            });
+        }
 
         function getPersonalInfo() {
             return $http.get('/api/v1/get_info').then(function (data) {
@@ -145,25 +162,6 @@
                 }, personal);
 
                 return personal;
-            });
-        }
-
-        /**
-         * Account Service setting 获取实名认证状态
-         *
-         * @method getVerifyStatus
-         */
-        function getVerifyStatus() {
-            return $http.get('/api/v1/get_info', {
-                params: {
-                    type: 'Profile'
-                }
-            }).then(function (data) {
-                return {
-                    status: data.profile_check || 0,
-                    realname: data.realname,
-                    idNumber: data.id_no
-                }
             });
         }
 
@@ -374,5 +372,30 @@
             });
         }
 
+        /**
+         * @name getVerifyStatus
+         * @desc 获取实名认证状态
+         */
+        function getVerifyStatus() {
+            return $http.get('/api/v1/get_info', {
+                params: {
+                    type: 'Profile'
+                }
+            }).then(function (data) {
+                return {
+                    status: data.profile_check || 0,
+                    realname: data.realname,
+                    idNumber: data.id_no
+                }
+            });
+        }
+
+        function getKyc() {
+
+        }
+
+        function setKyc() {
+            
+        }
     }
 })();

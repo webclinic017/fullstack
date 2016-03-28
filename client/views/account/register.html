@@ -1,23 +1,24 @@
 <div class="account_register">
     <div class="step_by_step mg-bt-80">
+        
         <div class="step_by_step__step active">
             <span></span>
             <p>1. 注册账户</p>
         </div>
-        <div class="step_by_step__step">
+        <div class="step_by_step__step" ng-class="{'active': progress.step >= 2}">
             <span></span>
             <p>2. 实名认证</p>
         </div>
-        <div class="step_by_step__step">
+        <div class="step_by_step__step" ng-class="{'active': progress.step >= 3}">
             <span></span>
             <p>3. KYC 认证</p>
         </div>
-        <div class="step_by_step__step">
+        <div class="step_by_step__step" ng-class="{'active': progress.step >= 4}">
             <span></span>
             <p>4. 完成注册</p>
         </div>
     </div>
-    <div class="account_register__step-1" ng-show="step === 1">
+    <div class="account_register__step-1" ng-show="progress.step === 1">
         <h2 class="account_register__title">注册账户</h2>
         
         <form name="registerForm" novalidate>
@@ -241,7 +242,7 @@
                 </button>
 
                 <button class="btn btn-primary btn-sm" disabled ng-if="!clickable.submit">
-                    <i class="loading fa fa-spinner"></i>
+                    <i class="loading_spinner fa fa-spinner"></i>
                     提交中
                 </button>
             </div>
@@ -255,8 +256,35 @@
         </div>
     </div>
     
-    <div ng-show="step === 2">
+    <div ng-if="progress.step === 2">
         <h2 class="account_register__title">实名认证</h2>
-        <div ng-controller="SettingVerifyController" ng-include="'/views/setting/verify.html'"></div>
+        <div ng-include="'/views/setting/verify.html'"></div>    
+    </div>
+
+    <div ng-if="progress.step === 3">
+        <h2 class="account_register__title">KYC 认证</h2>
+        <div ng-include="'/views/setting/kyc.html'"></div>
+    </div>
+
+    <div class="text-center" ng-if="progress.step === 4">
+        <h2 class="account_register__title">开户成功</h2>
+        <p>
+            <span class="font-dark">MT4 账号：</span>
+            {{account.realId || '******'}}
+        </p>
+        <p>
+            <span class="font-dark">MT4 服务器：</span>
+            TigerWit-Live
+        </p>
+        <p>
+            <span class="font-dark">MT4 密码：</span>
+            与网站密码相同
+        </p>    
+        
+        <a class="btn btn-primary btn-sm mg-tp-50 mg-bt-20" ui-sref="space.invest.subpage({subpage: 'current'})">进入个人中心</a>
+        <br>
+        <a class="btn btn-info btn-sm" href="" >
+            下载 MT4 软件 
+        </a>
     </div>
 </div>

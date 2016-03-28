@@ -38,6 +38,19 @@
                     lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg
                 });
             });
+            getUnreadLength();
+        }
+
+        // 获取新消息
+        function getUnreadLength () {
+            account.getUnreadLength().then(function(data) {
+                $scope.unreadLength = data.num;
+
+                angular.extend($scope.personal, {
+                    unreadLength: $scope.unreadLength
+                });
+            });
+            $scope.$emit('refreshNoticeList');
         }
 
         // 退出

@@ -1,0 +1,16 @@
+@include b(kyc) {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    label {
+        color: $gray-darker;
+    }
+
+    @include e(title) {
+        margin-top: 30px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}

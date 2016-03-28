@@ -14,7 +14,6 @@
         $scope.showOrders = showOrders;
         $scope.showDetails = showDetails;
 
-        $scope.$emit('showLoadingImg');
         getInvestHistoryData();
         getInvestHistoryTraders();
 
@@ -24,7 +23,7 @@
                 $scope.orderHistory = data.group_data;
                 $scope.orders = data.data;
 
-                $scope.$emit('hideLoadingImg');
+                $scope.$broadcast('hideLoadingImg');
             });
             
         }
@@ -57,10 +56,10 @@
                 
                 // 若 copied traders 所属的 orders 为空，则请求数据
                 if (!trader.orders) {
-                    $scope.$broadcast('showLoadingImg');
+                    // $scope.$broadcast('showLoadingImg');
                     invest.getInvestHistoryDetails(trader.usercode).then(function (data) {
                         trader.orders = data.data;
-                        $scope.$broadcast('hideLoadingImg');
+                        // $scope.$broadcast('hideLoadingImg');
                     });    
                 }
                 trader.detailsShow = true;

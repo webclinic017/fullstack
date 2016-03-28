@@ -11,8 +11,8 @@
             restrict: 'A',
             replace: true,
             template: 
-                '<div class="loading_img active">' +
-                    '<img src="/ngsrc/loading.gif">' +
+                '<div class="loading_img active">' + 
+                    '<img src="/ngsrc/loading.gif">' + 
                 '</div>',
             link: function (scope, element, attrs) {
 
