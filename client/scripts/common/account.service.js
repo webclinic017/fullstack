@@ -37,7 +37,9 @@
             getVerifyStatus: getVerifyStatus,
             setKyc: setKyc,
             getKyc: getKyc,
-            logout: logout
+            logout: logout,
+            checkMaster: checkMaster,
+            applyBecomeMaster: applyBecomeMaster
         };
         return service;
 
@@ -396,6 +398,38 @@
 
         function setKyc() {
             
+        }
+
+        /**
+         * Account Service 是否是高手、有无复制关系、有无交易记录
+         * 申请成为高手
+         *
+         * @method checkMaster
+         */
+        function checkMaster () {
+            return $http.post('/action/public/v3/check_master');
+        }
+
+        /**
+         * Account Service 申请成为高手
+         * 申请成为高手
+         *
+         * @method applyBecomeMaster
+         *
+         * @param {String} trade_exp 交易经验
+         * @param {String} trade_model 交易方式
+         * @param {String} min_copy_asset 最低跟随资金
+         * @param {String} trade_desc 交易策略描述
+         * @param {file} history_file 上传文件  单独调接口
+         */
+        function applyBecomeMaster (trade_exp, trade_model, min_copy_asset, trade_desc, history_file) {
+            return $http.post('/action/public/v3/apply_to_master', {
+                trade_exp: trade_exp,
+                trade_model: trade_model,
+                min_copy_asset: min_copy_asset,
+                trade_desc: trade_desc,
+                history_file: history_file
+            });
         }
     }
 })();
