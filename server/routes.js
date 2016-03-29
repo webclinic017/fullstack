@@ -73,7 +73,7 @@ module.exports = function (app) {
         });
     });
     // 交易品种
-    app.route('/web/product/:subpage(forex|metal|oil|cfd)').get(function (req, res) {
+    app.route('/web/product/:subpage(forex|metal|oil|cfd|time|comment|market)').get(function (req, res) {
         var subpage = req.params.subpage || 'forex';
         var pageInfo = {
             id: subpage
@@ -94,6 +94,23 @@ module.exports = function (app) {
             pageInfo: pageInfo
         });
     });
+
+    // faq 常见问题在web文件下
+    app.route('/web/faq/:subpage(protect|simulate|real|wad|type|deal|platform|interest)').get(function (req, res) {
+        var subpage = req.params.subpage || 'protect';
+        var pageInfo = {
+            id: subpage
+        };
+
+        res.render('download-faq.html', {
+            pageInfo: pageInfo
+        });
+    });
+
+    app.route('/web/mt4').get(function (req, res) {
+        res.render('download-mt4.html');
+    });
+
 
     app.route('/api_test').get(function (req, res, next) {
         // accountApi.checkLogined(function (data) {
@@ -124,4 +141,5 @@ module.exports = function (app) {
             res. send(html);
         });
     });
+
 };

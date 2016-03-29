@@ -103,3 +103,12 @@
         }
     }
 }
+
+@include b(account_forget) {
+    @extend .account_login;
+
+    @include e(title) {
+        @extend .account_register__title;
+        text-align: center;
+    }
+}

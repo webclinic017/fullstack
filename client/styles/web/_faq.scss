@@ -1,0 +1,27 @@
+@include b(faq-public) {
+
+    @include e(question) {
+        font-size: 18px;
+        color: $gray-base;
+        cursor: pointer;
+
+        &:hover {
+            color: $brand-info;
+        }
+    }
+    @include e(answer) {
+        margin-top: 5px;
+        font-size: 16px;
+        color: $gray-darker;
+    }
+    
+    i {
+        font-size: 18px;
+    }
+
+    table, tr, td{
+        border: 1px solid $gray-dark;
+    }
+
+
+}

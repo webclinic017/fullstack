@@ -1,0 +1,44 @@
+@include b(mt4) {
+
+    @include e (title) {
+        text-align: center;
+        font-size: 35px;
+        color: $gray-base;
+    }
+
+    @include e(con1) {
+        padding: 0 50px;
+        line-height: 22px;
+    }
+
+    @include e(img-com) {
+        margin-top: 175px;
+    }
+
+    @include e(info) {
+        position: relative;
+        display: block;
+        margin: 50px 40px;
+        padding-bottom: 10px;
+        height: 65px;
+        border: 1px solid #222;
+        font-size: 22px;
+        color: #222;
+
+        &:hover, &:active {
+            color: #222;
+            border: 1px solid $brand-primary;
+        }
+
+        > img {
+            position: relative;
+            top: 10px;
+        }
+    }
+
+    @include e(link) {
+        color: $brand-info;
+        border-bottom: 1px solid $brand-info;
+    }
+
+}

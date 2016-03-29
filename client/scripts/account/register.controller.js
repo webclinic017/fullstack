@@ -10,7 +10,7 @@
 
     function AccountRegisterController($scope, $timeout, $state, $cookies, account, validator) {
         $scope.progress = {
-            step: 4
+            step: 1
         };
         $scope.account = {
             phone: undefined,

@@ -155,7 +155,7 @@
          * @method getBonus
          */
         function getBonus() {
-            return $http.get('/action/public/v3/get_bonus');
+            return $http.post('/action/public/v3/get_bonus');
             // return $http.get('/data/bonus-summary.json');
         }
 
@@ -165,12 +165,10 @@
          * @method getBonusList
          */
         function getBonusList(page, pagesize, date) {
-            return $http.get('/action/public/v3/get_bonus_list', {
-                params: {
-                    page: page,
-                    pagesize: pagesize,
-                    month: date
-                }
+            return $http.post('/action/public/v3/get_bonus_list', {
+                page: page,
+                pagesize: pagesize,
+                month: date
             });
 
             // return $http.get('/data/bonus-list.json', {
@@ -189,11 +187,9 @@
          *
          */
         function getBonusDetail(copierUsercode, date) {
-            return $http.get('/action/public/v3/get_bonus_detail', {
-                params: {
-                    copier: copierUsercode,
-                    month: date
-                }
+            return $http.post('/action/public/v3/get_bonus_detail', {
+                copier: copierUsercode,
+                month: date
             });
 
             // return $http.get('/data/bonus-detail.json', {
