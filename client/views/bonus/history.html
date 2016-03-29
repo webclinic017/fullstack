@@ -37,15 +37,15 @@
         <button class="btn btn-info btn-sm date_searchbar__btn" ng-click="search()">查询</button>
     </div>
     <div class="position-relative clearfix">
-        <!-- <div tw-loading-img></div> -->
+        <div tw-loading-img></div>
         <table class="table table-header">
             <colgroup>
-                <col width="23%"></col>
-                <col width="20%"></col>
-                <col width="15%"></col>
-                <col width="15%"></col>
-                <col width="15%"></col>
-                <col width="12%"></col>
+                <col width="29%"></col>
+                <col width="22%"></col>
+                <col width="13%"></col>
+                <col width="13%"></col>
+                <col width="13%"></col>
+                <col width="10%"></col>
             </colgroup>
             <thead>
                 <tr>
@@ -59,7 +59,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="bonus in bonusList">
-                    <td>
+                    <td class="text-left">
                         <a class="bonus-his__photo">
                             <img ng-src="/avatar/{{ bonus.usercode }}_50.jpg">
                         </a>
@@ -80,18 +80,18 @@
                         上月分成
                     </td>
                     <td>
-                        <a class="btn btn-gray-sm btn-primary" href="" ng-click="openDetailMdl(bonus.user_code)">
+                        <a class="btn btn-primary bonus-his__detail-btn" href="" ng-click="openDetailMdl(bonus.user_code)">
                             详情
                         </a>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <div class="text-center" ng-if="bonusList.length > 0">
-            <!-- <p tw-pagination></p> -->
+        <div class="text-center">
+            <p tw-pagination></p>
         </div>
 
-        <div ng-if="bonusList.length == 0">
+        <div ng-if="bonusList.length <= 0">
             <p class="text-center mg-tp-20">无数据!</p>
         </div>
     </div>
