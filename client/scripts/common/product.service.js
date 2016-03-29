@@ -11,7 +11,8 @@
             getHomeHotProduct: getHomeHotProduct,
             getHomeHotScale: getHomeHotScale,
             getHomeStarMaster: getHomeStarMaster,
-            getHomeMasters: getHomeMasters
+            getHomeMasters: getHomeMasters,
+            getProductComment: getProductComment
         };
         return service;
 
@@ -51,5 +52,21 @@
         function getHomeMasters() {
             return $http.get('/data/masters.json');
         }
+
+        /**
+         * Product Service 交易品种下的每日汇评
+         *
+         * @method getProductComment
+         */
+        function getProductComment(page, pagesize) {
+            return $http.get('/data/product-comment.json', {
+                params: {
+                    page: page,
+                    pagesize: pagesize
+                }
+            });
+            // return $http.get('/data/product-comment.json');
+        }
+
     }
 })();

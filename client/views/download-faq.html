@@ -1,8 +1,4 @@
-<% if (pageInfo.id === 'protect') { %>
-    <% var title = '资金保护' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'simulate') { %>
+<% if (pageInfo.id === 'simulate') { %>
     <% var title = '开立模拟帐户' %>
     <% var description = '' %>
     <% var keywords = '' %>
@@ -51,7 +47,7 @@
             </div>
             
             <div class="body" style="background-color: #fafafa">
-                <div class="layout-2">
+                <div class="layout-2" style="margin-bottom: 200px;">
                     <div class="layout-2__side mg-tp-30">
                         <%- include('web/faq-sidebar.html') %>
                     </div>

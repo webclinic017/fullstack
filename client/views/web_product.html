@@ -10,8 +10,20 @@
     <% var title = '贵金属' %>
     <% var description = '' %>
     <% var keywords = '' %>
-<% } else if (pageInfo.id === 'cfd') {%>
+<% } else if (pageInfo.id === 'cfd') { %>
     <% var title = '差价合约' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'time') { %>
+    <% var title = '交易时间' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'comment') { %>
+    <% var title = '每日汇评' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'market') { %>
+    <% var title = '市场分析' %>
     <% var description = '' %>
     <% var keywords = '' %>
 <% } %>
@@ -76,11 +88,16 @@
 
         <script src="/scripts/common/config.service.js"></script>
         <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/product.service.js"></script>
+        <script src="/scripts/common/utils.service.js"></script>
         
         <script src="/scripts/common/navbar.directive.js"></script>
         <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/pagination.directive.js"></script>
         
         <script src="/scripts/common/global.controller.js"></script>
+
+        <script src="/scripts/product/comment.controller.js"></script>
         <!-- endbuild -->
     </body>
 </html>
