@@ -58,7 +58,7 @@
                 $scope.bonusList = data.data;
                 console.info(data);
                 angular.extend($scope.pagebar.config, {
-                    total: utils.getTotal(data.length, pagesize),
+                    total: utils.getTotal(data.sum, pagesize),
                     page: page
                 });
 

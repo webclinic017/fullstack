@@ -25,7 +25,7 @@
             angular.extend($scope.personal, {
                 basic: toState.name.substring(6)
             });
-            console.info($scope.personal.basic);
+            // console.info($scope.personal.basic);
         });
 
         // 取消轮询

@@ -44,9 +44,9 @@
 
     @include e(star) {
         display: inline-block;
-        width: 17px;
+        width: 15px;
         height: 15px;
-        @include img-normal($image-path-web + "forex-star.jpg");
+        @include img-normal($image-path-web + "forex-star.png");
 
     }
 
