@@ -17,6 +17,7 @@
         
         asset.getBonusDetail(copierUsercode, date).then(function (data) {
             $scope.bonusDetails = data.data;
+            console.info(data.data);
             $scope.$broadcast('hideLoadingImg');
         });
 

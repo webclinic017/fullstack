@@ -95,6 +95,23 @@ module.exports = function (app) {
         });
     });
 
+    // faq 常见问题在web文件下
+    app.route('/web/faq/:subpage(protect|simulate|real|wad|type|deal|platform|interest)').get(function (req, res) {
+        var subpage = req.params.subpage || 'protect';
+        var pageInfo = {
+            id: subpage
+        };
+
+        res.render('download-faq.html', {
+            pageInfo: pageInfo
+        });
+    });
+
+    app.route('/web/mt4').get(function (req, res) {
+        res.render('download-mt4.html');
+    });
+
+
     app.route('/api_test').get(function (req, res, next) {
         // accountApi.checkLogined(function (data) {
         //     console.info(data);
@@ -124,4 +141,5 @@ module.exports = function (app) {
             res. send(html);
         });
     });
+
 };
