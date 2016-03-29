@@ -16,6 +16,9 @@
             getRCaptcha: getRCaptcha,
             getRVoiceCaptcha: getRVoiceCaptcha,
             register: register,
+            getCaptcha: getCaptcha,
+            checkPhoneAndCaptcha: checkPhoneAndCaptcha,
+            setNewPwd: setNewPwd,
             getPersonalInfo: getPersonalInfo,
             getAssetInfo: getAssetInfo,
             getUnreadLength: getUnreadLength,
@@ -144,6 +147,48 @@
                 verify_code: captcha,
                 email: email,
                 password: password
+            });
+        }
+
+        /**
+         * @name getCaptcha 
+         * @desc 忘记密码功能使用该接口获取验证码（python 接口）
+         * @return {Object} {
+         *   error_code: 1, 2, 4（您未注册）, 5（短信发送失败）, 6（手机号码不正确）
+         * }
+         */
+        function getCaptcha(phone) {
+            return $http.get('/api/v1/verify', {
+                params: {
+                    phone: phone,
+                    exists: true      // 给存在的手机发送验证码
+                }
+            });
+        }
+
+        /**
+         * @name checkPhoneAndCaptcha
+         * @desc 检查验手机号与验证码是否匹配，忘记密码功能第一步
+         * @return {Object} {
+         *   is_succ: true,    // true 验证码正确 false 未发送验证码或者验证码错误
+         * }
+         */
+        function checkPhoneAndCaptcha(phone, captcha) {
+            return $http.post('/api/v1/verifycode', {
+                phone: phone,
+                verify_code: captcha
+            });
+        }
+
+        /**
+         * @name setNewPwd
+         * @desc 通过手机号码和验证码来设置新密码，忘记密码功能的第二步
+         */
+        function setNewPwd(phone, captcha, newPwd) {
+            return $http.post('/api/v1/change_password', {
+                phone: phone,
+                code: captcha,
+                new_pwd: newPwd
             });
         }
 
@@ -347,10 +392,10 @@
          * @name setPhone
          * @desc setting 修改手机号码
          */
-        function setPhone(phone, verifyCode) {
+        function setPhone(phone, captcha) {
             return $http.post('/action/public/v3/set_my_bind_phone', {
                 phone: phone,
-                phone_code: verifyCode
+                phone_code: captcha
             });
         }
 

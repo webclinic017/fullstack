@@ -61,7 +61,7 @@
                             </select>
 
                             <div ng-show="frontErr.bank.show">
-                                <p class="alert-error" ng-show="cardForm.bank.$error.required">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bank.$error.required">
                                     请选择开户行
                                 </p>
                             </div>
@@ -86,7 +86,7 @@
                                    ng-blur="showErr('address')">
 
                             <div ng-show="frontErr.address.show">
-                                <p class="alert-error" ng-show="cardForm.address.$error.required">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.address.$error.required">
                                     请输入开户行全称
                                 </p>
                             </div>
@@ -112,10 +112,10 @@
                                    ng-blur="showErr('number')">
 
                             <div ng-show="frontErr.number.show">
-                                <p class="alert-error" ng-show="cardForm.number.$error.required">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.required">
                                     请输入卡号
                                 </p>
-                                <p class="alert-error" ng-show="cardForm.number.$error.pattern">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.pattern">
                                     {{frontErr.number.tip}}
                                 </p>
                             </div>
