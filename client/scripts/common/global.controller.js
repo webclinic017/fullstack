@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('GlobalController', GlobalController);
 
-    GlobalController.$inject = ['$scope', '$state', 'config', 'account'];
+    GlobalController.$inject = ['$scope', '$window', 'config', 'account'];
 
     /**
      * @name GlobalController
      * @desc
      */ 
-    function GlobalController($scope, $state, config, account) {
+    function GlobalController($scope, $window, config, account) {
         $scope.userstatus = {
             logined: false
         };
@@ -57,7 +57,7 @@
         function logout() {
             account.logout().then(function (data) {
                 if (data.is_succ) {
-                    $state.go('account.subpage', {subPage: 'login'});
+                    $window.location.href='/space/#/account/login';
                 }
             });
         }

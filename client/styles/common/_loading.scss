@@ -9,7 +9,7 @@
     bottom: 0;
     z-index: $zindex-loading_img;
     display: none;
-    background-color: #fff;
+    background-color: $gray-lightest;
 
     &.active {
         display: block;

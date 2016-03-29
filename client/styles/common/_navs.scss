@@ -126,7 +126,7 @@
         }
     }
     
-    > .active > a {
+    > li.active > a {
         &,
         &:hover,
         &:active,
@@ -361,6 +361,10 @@
 
         & > li > a:hover {
             color: $brand-primary;
+        }
+
+        & > li:last-child > a {
+            border-color: transparent;
         }
     }
 }
