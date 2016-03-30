@@ -1,0 +1,64 @@
+<div class="system_modal">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <h5 class="system_modal__title">
+        系统提示
+    </h5>
+
+    <div class="system_modal__content" ng-if="modal.type === 'login'">
+        <p class="system_modal__info">
+            无法申请成为高手
+        </p>
+        <p class="system_modal__tip">
+            由于您没有登录，无法申请成为高手
+        </p>
+
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()" href="">
+                立即登录
+            </a>
+        </p>
+    </div>
+    <div class="system_modal__content" ng-if="modal.type === 'master'">
+        <p class="system_modal__info">
+            无法申请成为高手
+        </p>
+        <p class="system_modal__tip">
+            您已经是高手了，无法申请成为高手
+        </p>
+
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()">
+                确定
+            </a>
+        </p>
+    </div>
+    <div class="system_modal__content" ng-if="modal.type === 'copy'">
+        <p class="system_modal__info">
+            无法申请成为高手
+        </p>
+        <p class="system_modal__tip">
+            您存在复制关系，请取消后再进行申请操作
+        </p>
+
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()">
+                确定
+            </a>
+        </p>
+    </div>
+    <div class="system_modal__content" ng-if="modal.type === 'audit'">
+        <p class="system_modal__info">
+            申请正在审核中
+        </p>
+        <p class="system_modal__tip">
+            您已提交申请，请耐心等待审核
+        </p>
+
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()">
+                确定
+            </a>
+        </p>
+    </div>
+</div>

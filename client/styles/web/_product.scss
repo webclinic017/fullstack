@@ -30,8 +30,15 @@
         @include img-normal($image-path-web + "cfd-banner.png");
     }
 
-    @include e(con) {
+    @include e(time-banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "cfd-banner.png");
+    }
 
+    @include e(con) {
+        
     }
 
     @include e(title) {
@@ -69,5 +76,49 @@
     @include e(no-padding) {
         padding-left: 0px !important;
         padding-right: 0px !important;
+    }
+
+    @include e(deal-title) {
+        margin-top: 50px;
+        margin-bottom: 1px;
+        padding:10px;
+        text-align: center;
+        border: 1px solid $gray;
+        border-bottom: none;
+        color: $brand-info;
+    }
+
+    @include e(bor-bt) {
+        border-bottom: 1px solid $gray;
+    }
+}
+
+@include b(pro-comment) {
+    @include e (com-title) {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        padding-bottom: 20px;
+        font-weight: bold;
+        font-size: 20px;
+        color: $gray-base;
+        border-bottom: 1px solid $gray;
+    }
+    @include e(con-ul) {
+        
+        >li {
+            padding-bottom: 40px;
+            margin-top: 20px;
+        }
+    }
+
+    @include e(li-title) {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    @include e(li-con) {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }
