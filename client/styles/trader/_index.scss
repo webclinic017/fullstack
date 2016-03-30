@@ -7,6 +7,10 @@ $font-trader-gray-color: $gray-dark;
     font-size: $font-trader-size-sm;
 }
 
+.col-fff {
+    background-color: #fff;
+}
+
 @include b(trader) {
     margin-top: 84px;
 

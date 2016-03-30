@@ -130,13 +130,13 @@
                         
                         <i>选择文件</i>
                         
-                        <span class="alert-arrow_tp_lf" ng-show="history.status === 1">
-                            正在上传...
-                        </span>
-                        <span class="alert-arrow_tp_lf" ng-show="history.status === 3">
-                            文件大小超过 2MB 请重新选择
-                        </span>
                     </label>
+                    <span class="alert-arrow_tp_lf" ng-show="history.status === 1">
+                        正在上传...
+                    </span>
+                    <span class="alert-arrow_tp_lf" ng-show="history.status === 3">
+                        文件大小超过 2MB 请重新选择
+                    </span>
 
                     <span class="alert-arrow_tp_lf" ng-show="becomeModal.code === 5">
                         请上传交易历史文件
