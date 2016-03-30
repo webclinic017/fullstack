@@ -1,0 +1,11 @@
+.mejs-controls .mejs-button button {
+    background-image: url($image-path-media + "controls.svg");
+}
+
+.mejs-overlay-button {
+    background-image: url($image-path-media + "bigplay.svg");
+}
+
+.mejs-overlay-loading span {
+    background-image: url($image-path-media + "loading.gif");
+}

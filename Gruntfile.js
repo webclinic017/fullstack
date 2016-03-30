@@ -72,7 +72,7 @@ module.exports = function (grunt) {
                 files: [
                     '<%= yeoman.client %>/{views,scripts}/**/*.{html,js}',
                     '.tmp/**/*.css',
-                    '<%= yeoman.client %>/{images,ngsrc}/**/*.{png,jpg,jpeg,gif}'
+                    '<%= yeoman.client %>/{images,ngsrc}/**/*.{png,jpg,jpeg,gif,svg}'
                 ],
                 options: {
                     livereload: true
@@ -164,7 +164,7 @@ module.exports = function (grunt) {
                 files: [{
                     expand: true,
                     cwd: '<%= yeoman.client %>',
-                    src: '{images,ngsrc}/{,*/}*.{png,jpg,jpeg,gif}',
+                    src: '{images,ngsrc}/{,*/}*.{png,jpg,jpeg,gif,svg}',
                     dest: '<%= yeoman.dist %>'
                 }]
             }
@@ -194,7 +194,7 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     '<%= yeoman.dist %>/!(bower_components){,*/}*.{js,css}',
-                    '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif}'
+                    '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,svg}'
                 ]
             }
         },
@@ -274,6 +274,11 @@ module.exports = function (grunt) {
                             '*.ico',
                             'fonts/*.*'
                         ]
+                    }, {
+                        expand: true,
+                        cwd: '<%= yeoman.client %>/bower_components/mediaelement/build/',
+                        src: 'flashmediaelement.swf',
+                        dest: '<%= yeoman.dist %>/scripts/'
                     }
                 ]
             }
