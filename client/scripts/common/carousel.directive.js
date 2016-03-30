@@ -11,12 +11,9 @@
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
-
-                
                 var interval,
                     i = 0,
                     inLength = $('.carousel-inner div').length;
-
 
                 slideRun();
 
