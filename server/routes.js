@@ -111,6 +111,17 @@ module.exports = function (app) {
         res.render('web_mt4.html');
     });
 
+    app.route('/study/:subpage(knowledge|video)').get(function (req, res) {
+        var subpage = req.params.subpage || 'knowledge';
+        var pageInfo = {
+            id: subpage
+        };
+
+        res.render('study.html', {
+            pageInfo: pageInfo
+        });
+    });
+
 
     app.route('/api_test').get(function (req, res, next) {
         // accountApi.checkLogined(function (data) {
