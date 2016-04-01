@@ -42,6 +42,13 @@
                 };
             }]);
         }])
+        .config(['$sceDelegateProvider', function($sceDelegateProvider) {
+           $sceDelegateProvider.resourceUrlWhitelist([
+               // Allow same origin resource loads.
+               'self',
+               // Allow loading from our assets domain.  Notice the difference between * and **.
+               'http://bd.tigerwit.com/**']);
+        }])
         .run(['$rootScope', '$state', '$window', 'account', 
                 function ($rootScope, $state, $window, account) {
             $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {

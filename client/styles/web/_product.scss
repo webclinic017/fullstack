@@ -34,7 +34,7 @@
         height: 320px;
         width: 100%;
         background-size: 100%;
-        @include img-normal($image-path-web + "cfd-banner.png");
+        @include img-normal($image-path-web + "deal-banner.png");
     }
 
     @include e(con) {
