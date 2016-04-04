@@ -1,0 +1,96 @@
+<% if (pageInfo.id === 'knowledge') { %>
+    <% var title = '基础知识' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'video') { %>
+    <% var title = '学习视频' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } %>
+<!doctype html>
+<html>
+    <head>
+        <% include common/metas.html %>
+    
+        <title>老虎金融｜<%= title %></title>
+        <meta name="description" content="<%= description %>">
+        <meta name="keywords" content="<%= keywords %>">
+
+        <!-- build:css(client) /styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css">
+        <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="/bower_components/mediaelement/build/mediaelementplayer.css">
+        <!-- endbower -->
+        <!-- endbuild -->
+        
+        <!-- build:css(.tmp) /styles/study.css -->
+        <link rel="stylesheet" href="/styles/study.css">
+        <!-- endbuild -->
+    </head>
+    <body ng-app="fullstackApp">
+        <div ng-controller="GlobalController">
+            <div class="header">
+                <% include navbar/main.html %>
+            </div>
+            
+            <div class="body">
+                <div class="layout-2">
+                    <div class="layout-2__side mg-tp-30">
+                        <%- include('study/sidebar.html') %>
+                    </div>
+                    <div class="layout-2__content mg-tp-30">
+                        <%- include('study/' + pageInfo.id + '.html') %>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <% include common/footer.html %>
+            </div>
+        </div>
+        <!-- build:js(client) /scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-resource/angular-resource.js"></script>
+        <script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="/bower_components/highcharts-release/highcharts.js"></script>
+        <script src="/bower_components/highcharts-release/highcharts-more.js"></script>
+        <script src="/bower_components/highcharts-release/modules/exporting.js"></script>
+        <script src="/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="/bower_components/moment/moment.js"></script>
+        <script src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="/bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
+        <script src="/bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+        <script src="/bower_components/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+        <script src="/bower_components/blueimp-file-upload/js/jquery.fileupload.js"></script>
+        <script src="/bower_components/jsencrypt/bin/jsencrypt.min.js"></script>
+        <script src="/bower_components/mediaelement/build/mediaelement-and-player.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js(client) /scripts/study.js -->
+        <script src="/scripts/app.js"></script>
+
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/transition.service.js"></script>
+        <script src="/scripts/common/validator.service.js"></script>
+        <script src="/scripts/common/market.service.js"></script>
+        
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/form_select.directive.js"></script>
+        <script src="/scripts/common/media.directive.js"></script>
+        <script src="/scripts/common/dropdown_knowledge.directive.js"></script>
+
+        <script src="/scripts/common/modal.js"></script>
+        
+        <script src="/scripts/common/global.controller.js"></script>
+        <script src="/scripts/study/video.controller.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

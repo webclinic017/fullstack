@@ -1,1 +1,144 @@
-<h1>成为高手</h1>
+<div class="become_master">
+    <div class="become_master__banner"></div>
+    <div class="become_master__content">
+        <h2 class="mg-tp-50">如何成为明星交易员</h2>
+        <h5>
+            <span class="become_master__star"></span>
+            <span class="become_master__tip">
+                开通 TigerWit 真实账户并完成实名认证
+            </span>
+        </h5>
+        <h5>
+            <span class="become_master__star"></span>
+            <span class="become_master__tip">
+                提交过往历史交易记录
+            </span>
+        </h5>
+        <p class="become_master__tip-detail">
+            <span class="font-info">support@tigerwit.com</span>
+            交易表现越优秀，审核通过几率越大
+        </p>
+        <h5>
+            <span class="become_master__star"></span>
+            <span class="become_master__tip">
+                交易考核
+            </span>
+        </h5>
+        <p class="become_master__tip-detail">
+            审核获得高手资质后，您将进入一个月考核期，考核期内，您需要在 TigerWit 交易平台入金至少 1000 美金并连续交易 20 个以上工作日，交易期间最大回撤率不超过 50%，账户整体表现优秀，即可通过 TigerWit 最终考核并获得上榜机会。
+        </p>
+        <h5>
+            <span class="become_master__star"></span>
+            <span class="become_master__tip">
+                上榜
+            </span>
+        </h5>
+        <p class="become_master__tip-detail">
+            TigerWit 排行榜是动态更新的，只有表现最好的交易高手才有机会出现在榜单上。
+        </p>
+        <div class="become_master__step">
+            <div class="become_master__step-info">
+                <div class="img step1"></div>
+                <div class="mg-tp-30">
+                    开通老虎金融真实账户
+                </div>
+            </div>
+            <div class="become_master__step-arrow">
+                <div class="arrow"></div>
+            </div>
+            <div class="become_master__step-info">
+                <div class="img step2"></div>
+                <div class="mg-tp-30">
+                    提供 2 个月的交易记录
+                </div>
+            </div>
+            <div class="become_master__step-arrow">
+                <div class="arrow"></div>
+            </div>
+            <div class="become_master__step-info">
+                <div class="img step3"></div>
+                <div class="mg-tp-30">
+                    通过 1 个月考核期
+                </div>
+            </div>
+            <div class="become_master__step-arrow">
+                <div class="arrow"></div>
+            </div>
+            <div class="become_master__step-info">
+                <div class="img step4"></div>
+                <div class="mg-tp-20">
+                    成为高手，获得复制者 20% 的盈利分成
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="become_master__content">
+        <h2 class="mg-tp-50">怎样在 TigerWit 高手榜获得展示</h2>
+        <h4>
+            TigerWit 对排行榜按照高手交易表现进行排名，表现越优秀的高手排名越居前端。
+        </h4>
+        <p class="mg-tp-50">
+            <span class="font-bold">初步-完善信息：</span>升级为 TigerWit 高手后，进入个人设置中心，完善个人基本资料，如设置高手个人头像，填写个人交易经历简介、交易策略、交易年限、教育背景、证件资料等。
+        </p>
+        <p class="mg-tp-30">
+            <span class="font-bold">进阶-业绩指标：</span>TigerWit 高手榜排名随着交易表现变动，影响排名的决定性因素有：
+        </p>
+        <p class="become_master__factor">
+            <span class="become_master__star"></span>
+            <span class="become_master__tip">
+                <span class="font-bold">总收益率：</span>高手交易累计的收益比率。即“总平仓收益/初始入金*100%”获得总收益率数值。
+            </span>
+        </p>
+        <p class="become_master__tip-detail">
+            注意：TigerWit 不建议高手追求 100% 高胜率，金融市场投资收益与风险并存，一味追求高收益可能具有潜在危险性策略，最终导致严重后果。
+        </p>
+        <p class="become_master__factor">
+            <span class="become_master__star"></span>
+            <span class="become_master__tip">
+                <span class="font-bold">最大回撤：</span>高手交易的最大浮动亏损占比。即“浮动亏损/余额*100%”获得最大回撤数值。
+            </span>
+        </p>
+        <p class="become_master__factor">
+            <span class="become_master__star"></span>
+            <span class="become_master__tip">
+                <span class="font-bold">复制人数：</span>高手当前被复制投资的人数。
+            </span>
+        </p>
+        <p class="become_master__factor">
+            <span class="become_master__star"></span>
+            <span class="become_master__tip">
+                <span class="font-bold">复制金额：</span>高手当前被复制跟随的资金总额
+            </span>
+        </p>
+        <p class="mg-tp-30">
+            影响排名因素最终以 TigerWit 官方统计数据为准。
+        </p>
+        <p class="mg-tp-30">
+            <span class="font-bold">终极-登上高手榜：</span>TigerWit 根据高手的收益率、最大回撤、复制人数、复制金额、交易活跃度等指标评选上榜高手，高手完成初级、进阶任务后，即可登入高手排行榜！
+        </p>
+    </div>
+    
+
+    <div ng-controller="WebBecomeMasterController" class="become_master__form">
+        <div class="become_master__title">报名成为高手</div>
+
+        <div class="become_master__checkbox">
+            <label class="checkbox" ng-class="{'checked': become.readAgreement}">
+                <input name="readAgreement"
+                       type="checkbox" 
+                       ng-model="become.readAgreement">
+                <i class="fa fa-check-square"></i>
+                <i class="fa fa-square-o"></i>
+                我已同意并阅读
+                <a class="font-info" href="https://www.tigerwit.com/blog/master/master" target="_blank">高手条款</a>
+            </label>
+        </div>
+        <div class="become_master__btn">
+            <button class="btn btn-primary" ng-click="becomeMaster()">我要成为交易高手</button>
+        </div>
+        <div class="mg-tp-10 text-center">
+            * 若需人工服务，请联系客服或者发邮件至：
+            <span class="font-info">ib@tigerwit.com</span>
+        </div>
+    </div>
+</div>

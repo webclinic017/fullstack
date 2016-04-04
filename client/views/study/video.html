@@ -1,0 +1,21 @@
+<div ng-controller="StudyVideoController" class="study_video">
+    <h3>学习视频</h3>
+
+    <p class="study_video__title">CCTV 证券资讯频道-老虎金融首席分析师杨少杰、首席策略分析师李彭为您解盘。</p>
+
+    <ul class="mg-bt-30">
+        <li ng-cloak ng-repeat="video in videos" class="study_video__content row">
+            <p class="col-xs-3 study_video__content-image">
+                <a href="" ng-click="openVideoMdl(video)">
+                    <img src="/images/media/video_poster.jpg">
+                </a>
+            </p>
+            <p class="col-xs-9 study_video__content-info">
+                <a href="">
+                    {{ video.title }}
+                    {{ video.content }}
+                </a>
+            </p>
+        </li>
+    </ul>
+</div>

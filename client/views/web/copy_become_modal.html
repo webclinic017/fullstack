@@ -1,0 +1,178 @@
+<div class="system_modal become_master__modal">
+    <button class="close" ng-click="closeModal();">X</button>
+
+    <h5 class="system_modal__title">
+        申请成为高手
+    </h5>
+    <form name="becomeMasterForm" novalidate>
+        <div class="system_modal__content" ng-if="!becomeModal.success">
+            <h5>基础信息</h5>
+            <div class="system_modal__content_wrapper">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <label>MT4 账号：</label>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="form-control-wrapper">
+                            <span class="become_master__modal-MT4">{{ becomeModal.personal.real_id }}</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <label>交易经验：</label>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="form-control-wrapper">
+                            <div class="select">
+                                <input class="select__input"
+                                       name="tradeExperience"
+                                       type="text"
+                                       placeholder="请选择"
+                                       required
+                                       ng-model="becomeModal.tradeExperience.key"
+                                       ng-class="{'form-control-error': error.tradeExperience.show && becomeMasterForm.tradeExperience.$invalid}"
+                                       ng-blur="showErr('tradeExperience')"
+                                       ng-focus="hideErr('tradeExperience')">
+                                
+                                <i class="select__icon fa fa-angle-down"></i>
+
+                                <ul class="select__dropdown" twform-select data-bind-model="becomeModal.tradeExperience">
+                                    
+                                    <li ng-repeat="tradeExperience in tradeExperiences" ng-class="{'selected': tradeExperience.value === becomeModal.tradeExperience.value}">
+                                        <span data-value="{{ tradeExperience.value }}">{{ tradeExperience.key }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div ng-show="error.tradeExperience.show">
+                                <p class="alert-arrow_tp_lf" ng-show="becomeMasterForm.tradeExperience.$error.required">
+                                    请选择交易经验
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <label>交易方式：</label>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="form-control-wrapper">
+                            <div class="select">
+                                <input class="select__input"
+                                       name="tradeWay"
+                                       type="text"
+                                       placeholder="请选择"
+                                       required
+                                       ng-model="becomeModal.tradeWay.key"
+                                       ng-class="{'form-control-error': error.tradeWay.show && becomeMasterForm.tradeWay.$invalid}"
+                                       ng-blur="showErr('tradeWay')"
+                                       ng-focus="hideErr('tradeWay')">
+                                
+                                <i class="select__icon fa fa-angle-down"></i>
+
+                                <ul class="select__dropdown" twform-select data-bind-model="becomeModal.tradeWay">
+                                    
+                                    <li ng-repeat="tradeWay in tradeWays" ng-class="{'selected': tradeWay.value === becomeModal.tradeWay.value}">
+                                        <span data-value="{{ tradeWay.value }}">{{ tradeWay.key }}</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div ng-show="error.tradeWay.show">
+                                <p class="alert-arrow_tp_lf" ng-show="becomeMasterForm.tradeWay.$error.required">
+                                    请选择交易方式
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <label>最低跟随资金：</label>
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="form-control-wrapper">
+                            <input class="form-control icon"
+                                   name="followFunds"
+                                   required
+                                   type="text"
+                                   ng-pattern="error.followFunds.reg"
+                                   ng-model="becomeModal.followFunds"
+                                   ng-class="{'form-control-error': error.followFunds.show && becomeMasterForm.followFunds.$invalid}"
+                                   ng-blur="showErr('followFunds')"
+                                   ng-focus="hideErr('followFunds')">
+                            <i class="fa fa-dollar form-control-icon font-primary"></i>
+                            <div ng-show="error.followFunds.show">
+                                <p class="alert-arrow_tp_lf" ng-show="becomeMasterForm.followFunds.$error.required">
+                                    请输入最低跟随资金
+                                </p>
+
+                                <p class="alert-arrow_tp_lf" ng-show="becomeMasterForm.followFunds.$error.pattern">
+                                    输入的资金金额为大于零的整数或者小数（小数点后最多两位数字）
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h5 ng-if="becomeModal.type === 'noHistory'">历史纪录</h5>
+            <div ng-if="becomeModal.type === 'noHistory'" class="system_modal__content_wrapper">
+                <div tw-upload-history-file class="relative">
+                    <input type="text"
+                           name="textfield" 
+                           id="textField" 
+                           class="upload_history_txt"
+                           placeholder="支持 csv、xls、htm、html（大小在 2MB 以内）" 
+                           readonly="readonly">
+                    
+                    <label class="upload_history_label" for="input">
+                        <input id="input" class="upload_history_input" name="file" type="file" accept="">
+                        
+                        <i>选择文件</i>
+                        
+                    </label>
+                    <span class="alert-arrow_tp_lf" ng-show="history.status === 1">
+                        正在上传...
+                    </span>
+                    <span class="alert-arrow_tp_lf" ng-show="history.status === 3">
+                        文件大小超过 2MB 请重新选择
+                    </span>
+
+                    <span class="alert-arrow_tp_lf" ng-show="becomeModal.code === 5">
+                        请上传交易历史文件
+                    </span>
+                </div>
+            </div>
+            <h5>交易策略介绍</h5>
+            <div class="system_modal__content_wrapper">
+                <div class="row">
+                    <textarea class="form-control trade-desc" 
+                              placeholder="如交易类型、偏好等。"
+                              ng-model="becomeModal.tradeDesc"></textarea>
+                </div>
+            </div>
+            <div class="system_modal__btn_wrapper">
+                <button class="btn btn-primary btn-sm" ng-click="submitForm();">确定</button>
+                <button class="btn btn-default btn-sm" ng-click="closeModal();">取消</button>
+            </div>
+        </div>
+    </form>
+    <div class="system_modal__content" ng-if="becomeModal.success && becomeModal.code === 0">
+        <p class="system_modal__info">申请已提交，请耐心等待审核</p>
+        <div class="system_modal__btn_wrapper">
+            <button class="btn btn-primary btn-sm" ng-click="closeModal();">确定</button>
+        </div>
+    </div>
+    <div class="system_modal__content" ng-if="becomeModal.success && becomeModal.code === 6">
+        <p class="system_modal__info">未登录或者登陆超时，请重新登录</p>
+        <div class="system_modal__btn_wrapper">
+            <button class="btn btn-primary btn-sm" ng-click="closeModal();">确定</button>
+        </div>
+    </div>
+    <div class="system_modal__content" ng-if="becomeModal.success && becomeModal.code === 1">
+        <p class="system_modal__info">申请提交失败，请稍候再试</p>
+        <div class="system_modal__btn_wrapper">
+            <button class="btn btn-primary btn-sm" ng-click="closeModal();">确定</button>
+        </div>
+    </div>
+</div>  

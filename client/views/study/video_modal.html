@@ -1,0 +1,19 @@
+<div class="system_modal video_modal">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <h5 class="system_modal__title">
+        {{ modal.title }}
+    </h5>
+
+    <div class="system_modal__content">
+        <video id="player" 
+               width="600" 
+               height="400" 
+               poster="/images/media/video_poster.jpg" 
+               ng-src="{{modal.src}}"
+               type="video/flv"
+               controls="controls"
+               tw-media data-type="studyVideo">
+        </video>
+    </div>
+</div>

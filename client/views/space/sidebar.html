@@ -6,7 +6,7 @@
         <div class="space_sidebar__user">
             <span class="space_sidebar__user-username">{{ personal.username }}</span>
             <span class="space_sidebar__user-position">
-                <i class="fa fa-map-marker"></i>{{ personal.position || '乌鲁木齐' }}
+                <i class="fa fa-map-marker"></i>{{ personal.position || '**' }}
             </span>
         </div>
         <div class="row space_sidebar__verify">
@@ -14,7 +14,7 @@
                 <div tw-scale-bar data-type="spaceSidebar"></div>
             </div>
             <div class="col-xs-6">
-                <a class="btn btn-gray btn-gray-sm" href="" ng-if="personal.verifiedStatus === 0 || verifiedStatus === 1">
+                <a class="btn btn-gray btn-gray-sm" ui-sref="space.setting.subpage({subpage: 'verify'})" ng-if="personal.verifiedStatus === 0 || verifiedStatus === 1">
                     实名认证
                 </a>
 
@@ -22,13 +22,13 @@
                     认证审核中
                 </a>
 
-                <a class="btn btn-gray btn-gray-sm" href="" ng-if="personal.verifiedStatus === 3">
+                <a class="btn btn-gray btn-gray-sm" ui-sref="space.asset.subpage({subpage: 'deposit'})" ng-if="personal.verifiedStatus === 3">
                     存入资金
                 </a>
             </div>
         </div>
         <div class="space_sidebar__data">
-            <a class="btn btn-primary btn-sm" href="">完善个人资料 ></a>
+            <a class="btn btn-primary btn-sm" ui-sref="space.setting.subpage({subpage: 'info'})">完善个人资料 ></a>
         </div>
         <div class="space_sidebar__real">
             MT4 真实账户：{{ personal.real_id }}

@@ -102,13 +102,24 @@ module.exports = function (app) {
             id: subpage
         };
 
-        res.render('download-faq.html', {
+        res.render('web_faq.html', {
             pageInfo: pageInfo
         });
     });
 
     app.route('/web/mt4').get(function (req, res) {
-        res.render('download-mt4.html');
+        res.render('web_mt4.html');
+    });
+
+    app.route('/study/:subpage(knowledge|video)').get(function (req, res) {
+        var subpage = req.params.subpage || 'knowledge';
+        var pageInfo = {
+            id: subpage
+        };
+
+        res.render('study.html', {
+            pageInfo: pageInfo
+        });
     });
 
 
