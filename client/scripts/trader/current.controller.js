@@ -25,7 +25,7 @@
                 // console.info(data);
                 $scope.orders = data.data;
 
-                // $scope.$broadcast('hideLoadingImg');
+                $scope.$broadcast('hideLoadingImg');
 
                 listId = $timeout(function () {                
                     getList();

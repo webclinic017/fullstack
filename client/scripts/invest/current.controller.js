@@ -90,7 +90,7 @@
                 trader.orders = [];
                 $timeout.cancel(detailsId);
             } else {
-                $scope.$emit('showLoadingImg');
+                // $scope.$emit('showLoadingImg');
                 trader.detailsShow = true;
                 getDetails(trader);
             }

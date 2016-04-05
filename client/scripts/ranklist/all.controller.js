@@ -14,6 +14,7 @@
 
         ranklist.getMastersList().then(function (data) {
             // console.info(data);
+            $scope.$broadcast("hideLoadingImg");
             $scope.rankList = data.data;
         });
     }

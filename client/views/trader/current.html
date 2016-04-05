@@ -1,5 +1,7 @@
 <div class="container">
     <div class="trader_current">
+        <div tw-loading-img></div>
+
         <table class="table table-header table-bordered table-striped table-hover">
             <thead>
                 <tr>
@@ -12,7 +14,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="order in orders">
+                <tr ng-repeat="order in orders" ng-if="orders.length > 0">
                     <td>
                         <span class="icon-forex-{{ order.symbol.toLowerCase() }}">
                             
@@ -38,6 +40,11 @@
                     </td>
                     <td ng-class="{'font-danger': order.profit.indexOf('-') >= 0, 'font-success': order.profit.indexOf('-') < 0}">
                         <i class="fa fa-dollar"></i>{{ order.profit }}
+                    </td>
+                </tr>
+                <tr ng-if="orders.length <= 0">
+                    <td colspan="6">
+                        无数据
                     </td>
                 </tr>
             </tbody>

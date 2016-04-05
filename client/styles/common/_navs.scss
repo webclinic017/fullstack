@@ -386,6 +386,8 @@
     @include e(content) {
         background-color: #fff;
         padding: 0 40px;
+        min-height: 100px;
+        position: relative;
     }
 
     @include e(divider) {

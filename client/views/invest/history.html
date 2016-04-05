@@ -1,24 +1,22 @@
 <div tw-loading-img></div>
 <div class="invest_content">
-    <table>
-        <table class="table table-header">
-            <colgroup>
-                <col width="35%">
-                <col width="17%">
-                <col width="17%">
-                <col width="16%">
-                <col width="15%">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th>操作</th>
-                    <th>交易量</th>
-                    <th>投入资金</th>           
-                    <th>收益</th>
-                    <th></th>
-                </tr>
-            </thead>
-        </table>
+    <table class="table table-header">
+        <colgroup>
+            <col width="35%">
+            <col width="17%">
+            <col width="17%">
+            <col width="16%">
+            <col width="15%">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>操作</th>
+                <th>交易量</th>
+                <th>投入资金</th>           
+                <th>收益</th>
+                <th></th>
+            </tr>
+        </thead>
     </table>
 
     <div class="invest_table_wrapper">
@@ -146,7 +144,8 @@
                 </thead>
             </table>
             <div class="invest_table_wrapper__tbody" ng-show="trader.detailsShow">
-                <!-- <div tw-loading-img></div> -->
+                <div tw-loading-img></div>
+                
                 <table class="invest_table table table-striped table-hover">
                     <colgroup>
                         <col width="35%">
@@ -191,9 +190,8 @@
                 </table>
             </div>
         </div>
-
-        <div class="text-center mg-bt-50" ng-if="orders.length <= 0 && traders.length <= 0">
-            <p class="">无数据</p>
-        </div>
+    </div>
+    <div class="text-center mg-tp-15" ng-if="orders.length <= 0 && traders.length <= 0">
+        <p class="">无数据</p>
     </div>
 </div>

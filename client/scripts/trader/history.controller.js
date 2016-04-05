@@ -30,7 +30,9 @@
                 // console.info(data);
                 $scope.orders = data.data;
 
-                // $scope.$broadcast('hideLoadingImg');
+                $scope.$broadcast('hideLoadingImg');
+
+                if ($scope.orders.length <= 0) return;
                 
                 angular.extend($scope.pagebar.config, {
                     total: getTotal(data.sum, pagesize),
