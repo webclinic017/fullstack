@@ -55,7 +55,7 @@
                         <i class="fa fa-dollar"></i>{{ orderCurrent.group_profit }}
                     </th>
                     <th class="invest_orders__btn">
-                        <a href="" class="btn btn-primary btn-sm">详情</a>
+                        <button href="" class="btn btn-primary btn-sm" ng-click="openInvestOwnDetailMdl($event)">详情</button>
                     </th>
                 </tr>
             </thead>
@@ -109,7 +109,7 @@
         <div ng-if="traders.length > 0" ng-repeat="trader in traders">
             <table class="invest_table table table-striped table-hover">
                 <colgroup>
-                    <col width=s"35%">
+                    <col width="35%">
                     <col width="17%">
                     <col width="17%">
                     <col width="16%">
@@ -145,7 +145,7 @@
                             <i class="fa fa-dollar"></i>{{ trader.profit }}
                         </th>
                         <th class="invest_orders__btn">
-                            <a href="" class="btn btn-primary btn-sm">详情</a>
+                            <button class="btn btn-primary btn-sm" ng-click="openInvestCopyDetailMdl(trader, $event)">详情</button>
                             <button class="btn btn-default btn-sm" ng-click="openCancelCopyMdl(trader, $event)">取消复制</button>
                         </th>
                     </tr>
