@@ -9,12 +9,15 @@
 
     function InvestCurrentController($scope, invest, trader, $timeout, $modal, $state) {
         $scope.orderCurrent = {};
-        $scope.orders = [];
+        $scope.orders = [];     
         $scope.traders = [];
+        $scope.modal = {};
         $scope.showOrders = showOrders;
         $scope.showDetails = showDetails;
         $scope.openCopyMdl = openCopyMdl;
         $scope.openCancelCopyMdl = openCancelCopyMdl;
+        $scope.openInvestCopyDetailMdl = openInvestCopyDetailMdl;
+        $scope.openInvestOwnDetailMdl = openInvestOwnDetailMdl;
 
         var dataId;
         var tradersId;
@@ -166,6 +169,69 @@
                         });
                     }
 
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
+
+        function openInvestOwnDetailMdl (event) {
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+
+            $modal.open({
+                templateUrl: '/views/invest/invest_detail_modal.html',
+                size: 'lg',
+                backdrop: true,
+                controller: function ($scope, invest, $modalInstance) {
+                    
+                    $scope.details = [];        // 交易详情 弹窗数据
+                    $scope.modal = {
+                        price: '现价',
+                        asset: '资金占用'
+                    };
+                    $scope.closeModal = closeModal;
+
+                    invest.getInvestCurrentData().then(function (data) {
+                        // console.info(data);
+                        $scope.$broadcast('hideLoadingImg');
+                        $scope.details = data.data;
+                        $scope.modal.show = true;
+                    });
+                    
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
+
+        function openInvestCopyDetailMdl (trader, event) {
+            var usercode = trader.usercode;
+            event.stopPropagation();
+            event.stopImmediatePropagation();
+
+            $modal.open({
+                templateUrl: '/views/invest/invest_detail_modal.html',
+                size: 'lg',
+                backdrop: true,
+                controller: function ($scope, invest, $modalInstance) {
+
+                    $scope.details = [];        // 交易详情 弹窗数据
+                    $scope.modal = {
+                        price: '现价',
+                        asset: '资金占用'
+                    };
+                    $scope.closeModal = closeModal;
+                    
+                    invest.getInvestCurrentDetails(usercode).then(function (data) {
+                        // console.info(data);
+                        $scope.$broadcast('hideLoadingImg');
+                        $scope.details = data.data;
+                        $scope.modal.show = true;
+                    });
+                    
                     function closeModal() {
                         $modalInstance.dismiss();
                     }
