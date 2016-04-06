@@ -162,3 +162,14 @@
         font-size: 20px;
     }
 }
+
+@include b(invest_detail_modal) {
+    background-color: $gray-lightest;
+
+    @include e(content) {
+        position: relative;
+        min-height: 100px;
+        max-height: 400px;
+        overflow-y: auto;
+    }
+}

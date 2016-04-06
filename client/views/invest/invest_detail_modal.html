@@ -1,0 +1,78 @@
+<div class="system_modal invest_detail_modal">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <h5 class="system_modal__title">
+        详情信息
+    </h5>
+
+    <div class="system_modal__content">
+        <table class="table table-header">
+            <colgroup>
+                <col width="22%">
+                <col width="13%">
+                <col width="13%">
+                <col width="13%">
+                <col width="13%">
+                <col width="13%">
+                <col width="13%">
+            </colgroup>
+
+            <thead>
+                <tr>
+                    <th>操作</th>
+                    <th>开仓价</th>
+                    <th>{{ modal.price }}</th>
+                    <th>交易量</th>
+                    <th>{{ modal.asset }}</th>
+                    <th>收益</th>
+                    <th>收益率</th>
+                </tr>
+            </thead>
+        </table>
+
+        <div class="invest_detail_modal__content">
+            <div tw-loading-img></div>
+
+            <table class="table table-hover table-striped table-bordered">
+                <colgroup>
+                    <col width="22%">
+                    <col width="13%">
+                    <col width="13%">
+                    <col width="13%">
+                    <col width="13%">
+                    <col width="13%">
+                    <col width="13%">
+                </colgroup>
+
+                <tbody>
+                    <tr ng-repeat="detail in details" ng-if="details.length > 0">
+                        <td>
+                            <span class="invest_orders__icon icon-forex-{{ detail.symbol.toLowerCase() }} vertical-middle">
+                            </span>
+                            <div class="invest_orders__operate">
+                                <p>
+                                    <span class="invest_orders__action">
+                                        {{ detail.action ? '做空' : '做多' }}
+                                    </span>
+                                    <a class="invest_orders__symbol" href="">
+                                        {{ detail.symbol | symbolMod:'zh' }}
+                                    </a>        
+                                </p>
+                            </div>
+                        </td>
+                        <td><i class="fa fa-dollar"></i>{{ detail.open_price }}</td>
+                        <td><i class="fa fa-dollar"></i>{{ detail.close_price }}</td>
+                        <td>{{ detail.volume }}</td>
+                        <td><i class="fa fa-dollar"></i>{{ detail.occupy_asset }}</td>
+                        <td ng-class="{'font-success': detail.profit.indexOf('-') < 0, 'font-danger': detail.profit.indexOf('-') >= 0}"><i class="fa fa-dollar"></i>{{ detail.profit }}</td>
+                        <td ng-class="{'font-success': detail.profit_rate.indexOf('-') < 0, 'font-danger': detail.profit_rate.indexOf('-') >= 0}">{{ detail.profit_rate }}%</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="text-center mg-tp-30" ng-if="details.length <= 0 && modal.show">
+                无数据
+            </div>
+        </div>
+    </div>
+</div>
