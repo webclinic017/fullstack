@@ -47,7 +47,7 @@ module.exports = function (app) {
             master: {
                 username: '大洋彼岸的一条鱼',
                 avatar_path: '/avatar/525091_150.jpg',
-                position: '北京',
+                address: '北京',
                 number: 1,
                 follow: 158,
                 fans: 1000,
@@ -105,6 +105,11 @@ module.exports = function (app) {
         res.render('web_faq.html', {
             pageInfo: pageInfo
         });
+    });
+
+    // 代理合作
+    app.route('/web/agent').get(function (req, res) {
+        res.render('web_agent.html');
     });
 
     app.route('/web/mt4').get(function (req, res) {

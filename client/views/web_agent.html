@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <% include common/metas.html %>
+    
+        <title>老虎金融｜代理合作</title>
+        <meta name="description" content="老虎金融倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+        <meta name="keywords" content="">
+        
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
+        <!-- endbuild -->
+    </head>
+    <body ng-app="fullstackApp">
+        <div ng-controller="GlobalController">
+            <div class="header">
+                <% include navbar/main.html %>
+            </div>
+            
+            <div class="body">
+                <div class="layout-2">
+                    <div class="layout-2__side mg-tp-30">
+                        <%- include('web/agent-sidebar.html') %>
+                    </div>
+                    <div class="layout-2__content mg-tp-30">
+                        <%- include('web/agent.html') %>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <% include common/footer.html %>
+            </div>
+        </div>
+        <!-- build:js(client) /scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-resource/angular-resource.js"></script>
+        <script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="/bower_components/highcharts-release/highcharts.js"></script>
+        <script src="/bower_components/highcharts-release/highcharts-more.js"></script>
+        <script src="/bower_components/highcharts-release/modules/exporting.js"></script>
+        <script src="/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="/bower_components/moment/moment.js"></script>
+        <script src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="/bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
+        <script src="/bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+        <script src="/bower_components/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+        <script src="/bower_components/blueimp-file-upload/js/jquery.fileupload.js"></script>
+        <script src="/bower_components/jsencrypt/bin/jsencrypt.min.js"></script>
+        <script src="/bower_components/mediaelement/build/mediaelement-and-player.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js(client) /scripts/web_copy.js -->
+        <script src="/scripts/app.js"></script>
+
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/transition.service.js"></script>
+        <script src="/scripts/common/validator.service.js"></script>
+        <script src="/scripts/common/market.service.js"></script>
+        
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/form_select.directive.js"></script>
+        <script src="/scripts/common/upload_history_file.directive.js"></script>
+
+        <script src="/scripts/common/modal.js"></script>
+        
+        <script src="/scripts/common/global.controller.js"></script>
+
+        <script src="/scripts/web/agent.controller.js"></script>
+        <!-- endbuild -->
+    </body>
+</html>

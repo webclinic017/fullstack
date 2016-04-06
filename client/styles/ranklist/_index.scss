@@ -8,10 +8,15 @@
     padding-left: 15px;
     padding-right: 15px;
 
+    &.active {
+        background-color: $gray-darkest;
+    }
+
     .nav_item {
         display: block;
         color: $gray-light;
         padding: 15px 0;
+        cursor: pointer;
     }
     
     @include m(lg) {

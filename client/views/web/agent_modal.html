@@ -1,0 +1,50 @@
+<div class="system_modal">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <h5 class="system_modal__title">
+        系统提示
+    </h5>
+
+    <div class="system_modal__content" ng-if="modal.type === 'success'">
+        <p class="system_modal__info">
+            代理申请成功
+        </p>
+        <p class="system_modal__tip">
+            我们已经收到您的信息，请保持手机畅通。
+        </p>
+
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()">
+                确定
+            </a>
+        </p>
+    </div>
+    <div class="system_modal__content" ng-if="modal.type === 'repeat'">
+        <p class="system_modal__info">
+            代理申请失败
+        </p>
+        <p class="system_modal__tip">
+            手机号码已提交过申请
+        </p>
+
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()">
+                确定
+            </a>
+        </p>
+    </div>
+    <div class="system_modal__content" ng-if="modal.type === 'frequent'">
+        <p class="system_modal__info">
+            代理申请失败
+        </p>
+        <p class="system_modal__tip">
+            提交过于频繁，请稍候再试。
+        </p>
+
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()">
+                确定
+            </a>
+        </p>
+    </div>
+</div>

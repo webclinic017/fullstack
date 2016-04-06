@@ -1,0 +1,177 @@
+@include b(agent) {
+    @include e(banner) {
+        height: 320px;
+        width: 100%;
+        background-size: 100%;
+        @include img-normal($image-path-web + "agent-banner.jpg");
+    }
+
+    @include e(title) {
+
+        > h2 {
+            border-bottom: 1px solid $gray;
+            margin-top: 75px;
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        > p {
+            line-height: 24px;
+        }
+    }
+
+    @include e(content) {
+
+        > h3 {
+            border-bottom: 1px solid $gray;
+            font-size: 22px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+    @include e(tip) {
+        color: $gray-darker;
+        line-height: 24px;
+        padding-bottom: 30px;
+
+        @include m(point) {
+            > i {
+                color: $brand-primary;
+            }
+
+            > span {
+                font-weight: bold;
+                padding-left: 4px;
+            }
+        }
+
+        @include m(cont) {
+            padding-left: 20px;
+        }
+    }
+
+    @include e(word) {
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        @include m(avatar) {
+            width: 160px;
+            height: 160px;
+            border: 2px solid $brand-primary;
+            border-radius: 50%;
+            overflow: hidden;
+
+            > img {
+                width: 100%;
+            }
+        }
+
+        @include m(cont) {
+            line-height: 24px;
+            margin-top: 20px;
+        }
+    }
+
+    @include e(step) {
+        float: left;
+
+        &.step_arrow {
+            padding-left: 12px;
+            padding-right: 12px;
+            padding-top: 55px;
+        }
+
+        p {
+            font-size: 16px;
+            text-align: center;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+        .step {
+            width: 220px;
+            height: 140px;
+
+
+
+            &.step-1 {
+                @include img-normal($image-path-web + "agent-step-1.png");
+            }
+            &.step-2 {
+                @include img-normal($image-path-web + "agent-step-2.png");
+            }
+            &.step-3 {
+                @include img-normal($image-path-web + "agent-step-3.png");
+            }
+        }
+        
+        .arrow {
+            width: 25px;
+            height: 30px;
+            @include img-normal($image-path-web + "agent-step-arrow.png");
+        }
+    }
+
+    @include e(phone) {
+        float: left;
+        padding-left: 170px;
+
+        @include m(img) {
+            float: left;
+            width: 60px;
+            height: 60px;
+            @include img-normal($image-path-web + "agent-phone.png");
+            background-size: 60px 60px;
+        }
+        @include m(tip) {
+            float: left;
+            padding-left: 10px;
+
+            .num {
+                font-size: 24px;
+                margin: 0;
+            }
+        }
+    }
+
+    @include e(form) {
+        width: 100%;
+        position: fixed;
+        left: 0px;
+        bottom: 0px;
+        background-color: rgba(0,0,0,0.5);
+        z-index: $zindex-dropdown;
+        padding-top: 30px;
+        padding-bottom: 30px;
+
+        .btn {
+            border-radius: 4px;
+        }
+        form {
+            float: left;
+            padding-left: 60px;
+            padding-top: 12px;
+        }
+        form > .form-control-wrapper {
+            display: inline-block;
+            width: 240px;
+            margin: 0 15px 0 0;
+
+            .form-control {
+                background-color: #fff;
+                padding-left: 36px;
+            }
+            .fa {
+                position: absolute;
+                top: 10px;
+                left: 15px;
+                font-size: 20px;
+                color: $gray;
+            }
+        }
+    }
+}

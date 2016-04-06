@@ -2,26 +2,26 @@
     <div class="container">
         <div class="ranklist__nav">
             <div class="row">
-                <div class="col-1-lg">
-                    <a class="nav_item" href="">综合排名</a>
+                <div class="col-1-lg" ng-class="{active: masters.type === 'all'}" ng-click="getMastersList('all')">
+                    <span class="nav_item">综合排名</span>
                 </div>
-                <div class="col-1-sm">
-                    <a class="nav_item" href="">复制人数</a>
+                <div class="col-1-sm" ng-class="{active: masters.type === 'copiers'}" ng-click="getMastersList('copiers')">
+                    <span class="nav_item">复制人数</span>
                 </div>
-                <div class="col-1">
-                    <a class="nav_item" href="">最低复制金额</a>
-                </div>
-                <div class="col-1">
-                    <a class="nav_item" href="">走势图</a>
-                </div>
-                <div class="col-1-sm">
-                    <a class="nav_item" href="">最大回撤</a>
+                <div class="col-1" ng-class="{active: masters.type === 'fund'}" ng-click="getMastersList('fund')">
+                    <span class="nav_item">最低复制金额</span>
                 </div>
                 <div class="col-1">
-                    <a class="nav_item" href="">收益率</a>
+                    <span class="nav_item">走势图</span>
                 </div>
-                <div class="col-1">
-                    <a class="nav_item" href="">复制者盈利</a>
+                <div class="col-1-sm" ng-class="{active: masters.type === 'drawdown'}" ng-click="getMastersList('drawdown')">
+                    <span class="nav_item">最大回撤</span>
+                </div>
+                <div class="col-1" ng-class="{active: masters.type === 'profit'}" ng-click="getMastersList('profit')">
+                    <span class="nav_item">收益率</span>
+                </div>
+                <div class="col-1" ng-class="{active: masters.type === 'profit_copiers'}" ng-click="getMastersList('profit_copiers')">
+                    <span class="nav_item">复制者盈利</span>
                 </div>
                 <div class="col-1-lg">
                 </div>
