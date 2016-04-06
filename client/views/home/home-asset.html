@@ -2,14 +2,14 @@
 
 <div class="home-sec-master">
     <div class="container">
-        <div class="why-title text-center mg-tp-50">
+        <div class="why-title text-center mg-tp-100">
             <p class="text-center">本期交易高手推荐</p>
             <span class="why-title__line1">&nbsp;&nbsp;</span>
         </div>
         <p class="home-sec-master__text1">
             社交投资是一种最创新、发展最快的在线金融投资交易模式，它连接了每个投资者，通过各个投资者的投资理念，投资技巧，
             <br>
-            互相获得的讯息的分享和交流传播，让交易变得更有趣，更具有时效性，分享性，参与性；每个投资者通过在整个社区里互动，拉近了彼此间的距离
+            互相获得的讯息分享和交流传播，让交易变得更有趣，更具有时效性，分享性，参与性；每个投资者通过在整个社区里互动，拉近了彼此间的距离
         </p>
 
         <div class="ranklist__bg ranklist__content">
@@ -104,7 +104,7 @@
 <!-- 明星高手 -->
 <div class="home-sec-starmaster">
     <div class="container">
-        <div class="why-title text-center mg-tp-50">
+        <div class="why-title text-center mg-tp-100">
             <p class="text-center">谁是明星交易高手</p>
             <span class="why-title__line1">&nbsp;&nbsp;</span>
         </div>
@@ -123,7 +123,7 @@
                     <div class="row">
                         <div class="col-xs-1"></div>
                         <div class="col-xs-5">
-                            <p><span class="home-star__number">{{star.total}}</span>%</p>
+                            <p><span class="home-star__number">{{star.total}}</span><span style="font-size: 25px;">%</span></p>
                             <p class="home-star__tip1">累计收益率</p>
                             <a class="home-star__method" href="">投资策略</a>
                         </div>
@@ -146,7 +146,7 @@
 <!-- 热门交易资产 -->
 <div class="home-sec-asset">
     <div class="container">
-        <div class="why-title text-center mg-tp-50">
+        <div class="why-title text-center mg-tp-100">
             <p class="text-center">热门交易资产</p>
             <span class="why-title__line1">&nbsp;&nbsp;</span>
         </div>
@@ -171,9 +171,9 @@
                 </div>
                 <div class="col-xs-1"></div>
                 <div class="col-xs-6">
-                    <h2 class="mg-bt-30">投资者占比</h2>
+                    <h2 class="home-asset__title">投资者占比</h2>
                     <!-- eg -->
-                    <div class="mg-bt-30" ng-repeat="scale in hotScale" tw-progress>
+                    <div class="mg-bt-20" ng-repeat="scale in hotScale" tw-progress>
                         <div class="progress-title">
                             {{ scale.name }}
                         </div>
