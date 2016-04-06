@@ -9,12 +9,22 @@
 
     function RanklistAllController($scope, $state, ranklist) {
         $scope.rankList = [];
+        $scope.masters = {
+            type: 'all'
+        };
+        $scope.getMastersList = getMastersList;
 
-        // var param = $state.params.subpage;
+        getMastersList('all');
 
-        ranklist.getMastersList().then(function (data) {
-            // console.info(data);
-            $scope.rankList = data.data;
-        });
+        function getMastersList (type) {
+            $scope.$emit("showLoadingImg");
+
+            ranklist.getMastersList(type).then(function (data) {
+                // console.info(data);
+                $scope.masters.type = type;
+                $scope.$broadcast("hideLoadingImg");
+                $scope.rankList = data.data;
+            });
+        }
     }
 })();

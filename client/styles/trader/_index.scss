@@ -161,12 +161,18 @@ $font-trader-gray-color: $gray-dark;
 }
 
 @include b(trader_history) {
+    position: relative;
+    min-height: 100px;
+    
     .table {
         margin-top: 50px;
     }
 }
 
 @include b(trader_current) {
+    position: relative;
+    min-height: 100px;
+
     .table {
         margin-top: 50px;
     }

@@ -44,6 +44,7 @@
             trader.getMasterBarChart(usercode).then(function (data) {
                 // console.info(data);
                 $scope.bars = data;
+                $scope.$broadcast('hideLoadingImg');
             });
         }
     }
