@@ -56,9 +56,9 @@
 
             asset.getBonusList(page, pagesize, $scope.datepicker.date).then(function (data) {
                 $scope.bonusList = data.data;
-                console.info(data);
+
                 angular.extend($scope.pagebar.config, {
-                    total: utils.getTotal(data.sum, pagesize),
+                    total: utils.getTotal(data.data.length, pagesize),
                     page: page
                 });
 
