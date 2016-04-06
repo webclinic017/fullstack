@@ -5,20 +5,74 @@
     text-align: center;
 
     @include e (title) {
+        margin-bottom: 0px;
         color: #fff;
-        font-size: 55px;
+        font-size: 90px;
         font-weight: normal;
+        font-family: "NotoSansHans Regular";
     }
 
     @include e (tip) {
         color: #fff;
-        font-size: $font-size-h3;
+        font-size: 21px;
+        font-family: "NotoSansHans Light";
     }
+
+
+    
+    .swiper-container {
+        width: 1000px;
+        height: 550px;
+    }
+
+    .pagination {
+        position: absolute;
+        left: 0;
+        bottom: 50px;
+        width: 100%;
+        z-index: 20;
+        text-align: center;
+        
+    }
+    .swiper-pagination-switch {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        border: 2px solid $brand-primary;
+        background: transparent;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    .swiper-active-switch {
+        background: $brand-primary;
+    }
+}
+
+.font-family-r {
+    font-family: "NotoSansHans Regular";
+}
+
+.font-family-l {
+    font-family: "NotoSansHans Light";
+    
 }
 // 文字滚动
 @include b (home-text-roll) {
     height: 30px;
     overflow: hidden;
+
+    @include e (title) {
+        font-size: 19px;
+        font-family: "NotoSansHans Regular";
+        color: $brand-warning;
+    }
+
+    @include e (tip) {
+        font-size: 16px;
+        font-family: "NotoSansHans Light";
+        color: #969696;
+    }
 }
 .marquee {
     overflow: hidden;
@@ -35,6 +89,8 @@
     @include e (text1) {
         margin-top: -20px;
         text-align: center;
+        color: $gray-darker;
+        font-size: 16px;
     }
 
     .ranklist__content {
@@ -75,17 +131,22 @@
         background-size: 100%;
     }
     @include e (number) {
-        font-size: 30px;
+        font-size: 41px;
         font-weight: 600;
     }
     @include e (tip1) {
-        font-size: 12px;
+        font-size: 14px;
         margin-top: -10px;
     }
     @include e (method) {
         padding: 3px 6px;
-        border: 1px solid $gray-darker;
-        color: $gray-darker;
+        border: 1px solid $gray-dark;
+        color: $gray-dark;
+    }
+
+    .col-xs-5 {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -119,6 +180,12 @@
         width: 48%;
         float: right;
     }
+    @include e (title) {
+        margin-bottom: 30px;
+        font-size: 33px;
+        font-family: "NotoSansHans Bold";
+    }
+
     @include e (icon) {
         width: 100px;
         height: 80px;
@@ -163,6 +230,9 @@
         color: $gray-light;
 
         p {
+            position: relative;
+            left: 50px;
+            width: 506px;
             font-size: $font-size-h3;
         }
         span {
@@ -178,18 +248,26 @@
 
     @include e (quote1) {
         top: 20px;
-        left: -60px;
+        left: -10px;
     }
 
     @include e (quote2) {
         top: -20px;
-        left: 570px;
+        left: 500px;
     }
 
     @include e (name) {
+        position: relative;
         text-align: right;
-        font-size: $font-size-h2 !important;
+        font-size: 27px !important;
+        font-family: "NotoSansHans Light";
         color: $brand-primary;
+    }
+
+    @include e (line1) {
+        position: relative;
+        top: -12px;
+        border-bottom: 1px solid $brand-primary;
     }
 
 }
@@ -200,8 +278,9 @@
 }
 
 @include b (why-title) {
-    color: $gray-base;
-    font-size: 30px;
+    color: $gray-darkest;
+    font-size: 41px;
+    font-family: "NotoSansHans Regular";
 
     @include e (line) {
         display: inline-block;
@@ -219,6 +298,17 @@
 }
 
 @include b (why-con) {
+    @include e (title) {
+        width: 400px;
+        font-size: 25px;
+        font-family: "NotoSansHans Regular";
+    }
+
+    @include e (con) {
+        width: 400px;
+        font-size: 16.6px;
+        font-family: "NotoSansHans Light";
+    }
 
     @include e (logo) {
         display: inline-block;
@@ -247,4 +337,7 @@
 }
 .mg-lf-_20 {
     margin-left: -20px;
+}
+.mg-lf-_50 {
+    margin-left: -50px;
 }
