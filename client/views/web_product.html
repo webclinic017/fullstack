@@ -26,16 +26,20 @@
     <% var title = '市场分析' %>
     <% var description = '' %>
     <% var keywords = '' %>
+<% } else if (pageInfo.id === 'trade') { %>
+    <% var title = '交易平台' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
 <% } %>
 <!doctype html>
 <html>
     <head>
         <% include common/metas.html %>
-    
+
         <title>老虎金融｜<%= title %></title>
         <meta name="description" content="<%= description %>">
         <meta name="keywords" content="<%= keywords %>">
-        
+
         <!-- build:css(.tmp) /styles/web.css -->
         <link rel="stylesheet" href="/styles/web.css">
         <!-- endbuild -->
@@ -45,7 +49,7 @@
             <div class="header">
                 <% include navbar/main.html %>
             </div>
-            
+
             <div class="body" style="background-color: #fafafa">
                 <div class="layout-2">
                     <div class="layout-2__side mg-tp-30">
@@ -56,7 +60,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="footer">
                 <% include common/footer.html %>
             </div>
@@ -92,11 +96,11 @@
         <script src="/scripts/common/account.service.js"></script>
         <script src="/scripts/common/product.service.js"></script>
         <script src="/scripts/common/utils.service.js"></script>
-        
+
         <script src="/scripts/common/navbar.directive.js"></script>
         <script src="/scripts/common/dropdown.directive.js"></script>
         <script src="/scripts/common/pagination.directive.js"></script>
-        
+
         <script src="/scripts/common/global.controller.js"></script>
 
         <script src="/scripts/product/comment.controller.js"></script>
