@@ -10,19 +10,19 @@
     function TraderIndexController($scope, $state, trader, $timeout, $modal) {
         $scope.master = {};
         $scope.toCopy = toCopy;
-        $scope.toFollow = toFollow;
-        $scope.cancelFollow = cancelFollow;
-        $scope.isFollow = isFollow;
+        // $scope.toFollow = toFollow;
+        // $scope.cancelFollow = cancelFollow;
+        // $scope.isFollow = isFollow;
         var usercode,
             detailId,
             avaCopyAmount;
 
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
             usercode = toParams.usercode;
-            // console.info(usercode);
+            
             getMasterDetail(usercode);
             getCopyRelation(usercode);
-            getFollowRelation(usercode);
+            // getFollowRelation(usercode);
             getAvaCopyAmount();
 
             $scope.$on('$stateChangeStart', function (event, toState, toParams) {

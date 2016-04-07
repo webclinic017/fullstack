@@ -1,4 +1,6 @@
 @include b(agent) {
+    margin-bottom: 50px;
+    
     @include e(banner) {
         height: 320px;
         width: 100%;

@@ -17,24 +17,12 @@ $font-trader-gray-color: $gray-dark;
     @include e(basic) {
         padding: 30px 0;
         border-bottom: 1px solid $gray;
-        
-        .col-xs-2 {
-            width: 16%;
-            text-align: center;
-        }
+    
         .col-xs-3 {
-            width: 20%;
             text-align: center;
         }
-        .col-xs-7 {
-            width: 64%;
+        .col-xs-9 {
             padding-top: 62px;
-        }
-
-        .col-xs-4 {
-            padding-left: 0px;
-            padding-right: 0px;
-            text-align: center;
         }
     }
 
@@ -101,14 +89,9 @@ $font-trader-gray-color: $gray-dark;
     }
 }
 
-@include b(trader_social) {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
 @include b(trader_profit) {
     float: left;
-    width: 20%;
+    width: percentage(1 / 6);
     text-align: center;
     border-right: 1px solid $gray;
 
@@ -130,20 +113,15 @@ $font-trader-gray-color: $gray-dark;
 }
 
 @include b(trader_btn) {
-    padding-top: 20px;
 
     @include e(profit) {
         width: 100%;
         white-space: nowrap;
-        padding-bottom: 5px;
+        padding-top: 5px;
 
         > span {
             color: $brand-info;
         }
-    }
-
-    > .btn-default {
-        margin-top: 20px;
     }
 }
 
