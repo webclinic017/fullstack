@@ -105,6 +105,26 @@
                                 $scope.backErr.system.status = 0;
                             }, 3000);
                         }
+
+                        if (data.err_code === 12) {
+                            $scope.backErr.system.show = true;
+                            $scope.backErr.system.status = 4;    // 可复制保证金过小
+
+                            $timeout(function () {
+                                $scope.backErr.system.show = false;
+                                $scope.backErr.system.status = 0;
+                            }, 3000);
+                        }
+
+                        if (data.errCode === 2) {
+                            $scope.backErr.system.show = true;
+                            $scope.backErr.system.status = 5;    // 余额不足
+
+                            $timeout(function () {
+                                $scope.backErr.system.show = false;
+                                $scope.backErr.system.status = 0;
+                            }, 3000);
+                        }
                     }
                 });
             }

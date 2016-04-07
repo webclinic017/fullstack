@@ -17,18 +17,18 @@
                                 <%= master.address%>
                             </span>
                         </div>
-                        <div class="row trader_social trader_gray_color">
-                            <div class="col-xs-4">关注</div>
-                            <div class="col-xs-4">粉丝</div>
-                            <div class="col-xs-4">复制者</div>
-                        </div>
-                        <div class="row trader_social">
-                            <div class="col-xs-4"><%= master.follow%></div>
-                            <div class="col-xs-4"><%= master.fans%></div>
-                            <div class="col-xs-4"><%= master.copiers%></div>
+                        <div class="trader_btn">
+
+                            <button class="btn btn-primary" ng-if="!master.copied" ng-click="toCopy()">复制</button>
+                            <button class="btn btn-primary" disabled ng-if="master.copied">已复制</button>
+                            
+                            <div class="trader_gray_color trader_btn__profit">
+                                已帮 {{ master.help_num || 0 }} 人赚取
+                                <span><i class="fa fa-dollar"></i>{{ master.help_amount || 0 }}</span>
+                            </div>
                         </div>
                     </div>
-                    <ul class="col-xs-7 clearfix">
+                    <ul class="col-xs-9 clearfix">
                         <li class="trader_profit">
                             <div class="trader_profit__item" ng-class="{'font-danger': master.profit_rate.indexOf('-') >= 0, 'font-success': master.profit_rate.indexOf('-') < 0}">
                                 <span>{{ master.profit_rate || '0.00' }}</span>%
@@ -62,23 +62,13 @@
                             </div>
                             <div class="trader_gray_color">最低复制金额</div>
                         </li>
-                    </ul>
-                    <div class="col-xs-2">
-                        <div class="trader_btn">
-                            
-                            <div class="trader_gray_color trader_btn__profit">
-                                已帮{{ master.help_num || 0 }}人赚取
-                                <span><i class="fa fa-dollar"></i>{{ master.help_amount || 0 }}</span>
+                        <li class="trader_profit">
+                            <div class="trader_profit__item">
+                                <span>{{ master.copiers_sum || '0' }}</span>
                             </div>
-
-                            <button class="btn btn-sm btn-primary" ng-if="!master.copied" ng-click="toCopy()">复制</button>
-                            <button class="btn btn-sm btn-primary" disabled ng-if="master.copied">已复制</button><br>
-
-                            <button class="btn btn-sm btn-default" ng-if="!master.follow || master.follow === 0" ng-click="toFollow(1)">+ 关注</button>
-                            <button class="btn btn-sm btn-default" ng-if="master.follow === 1" ng-click="toFollow(0)" ng-mouseenter="cancelFollow()" ng-mouseleave="isFollow()">{{ master.follow_text || '已关注' }}</button>
-
-                        </div>
-                    </div>
+                            <div class="trader_gray_color">复制者</div>
+                        </li>
+                    </ul>
                 </div>
             </div>
             
@@ -110,7 +100,7 @@
             <div class="nav-tabs-wrapper">
                 <ul class="nav-tabs">
                     <li ui-sref-active="active">
-                        <a ui-sref="trader.subpage({subpage: 'summary'})">交易概况</a>
+                        <a ui-sref="trader.subpage({subpage: 'summary'})">数据统计</a>
                     </li>
                     <li ui-sref-active="active">
                         <span class="nav-tabs__divider"></span>

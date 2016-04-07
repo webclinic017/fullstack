@@ -17,9 +17,9 @@
             copy: copy,
             cancelCopy: cancelCopy,
             getAvaCopyAmount: getAvaCopyAmount,
-            getCopyRelation: getCopyRelation,
-            follow: follow,
-            getFollowRelation: getFollowRelation
+            getCopyRelation: getCopyRelation
+            // follow: follow,
+            // getFollowRelation: getFollowRelation
         };
         return service;
 
@@ -181,14 +181,14 @@
          * @param {String} usercode 关注的高手的 usercode
          * @param {Number} action 0 取消关注 1 关注
          */
-        function follow(usercode, action) {
-            return $http.get('/data/follow.json', {
-                params: {
-                    usercode: usercode,
-                    action: action
-                }
-            });
-        }
+        // function follow(usercode, action) {
+        //     return $http.get('/data/follow.json', {
+        //         params: {
+        //             usercode: usercode,
+        //             action: action
+        //         }
+        //     });
+        // }
 
         /**
          * Trader Service 获取与高手的关注关系
@@ -197,12 +197,12 @@
          * @method getFollowRelation
          * @param {String} usercode 关注的高手的 usercode
          */
-        function getFollowRelation(usercode) {
-            return $http.get('/data/follow_relation.json', {
-                params: {
-                    usercode: usercode
-                }
-            });
-        }
+        // function getFollowRelation(usercode) {
+        //     return $http.get('/data/follow_relation.json', {
+        //         params: {
+        //             usercode: usercode
+        //         }
+        //     });
+        // }
     }
 })();
