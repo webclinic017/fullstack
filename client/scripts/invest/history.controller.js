@@ -21,6 +21,7 @@
 
         function getInvestHistoryData () {
             invest.getInvestHistoryData().then(function (data) {
+                // console.info(data);
                 $scope.orderHistory = data.group_data;
                 $scope.orders = data.data;
 
@@ -59,6 +60,7 @@
                 if (!trader.orders) {
                     
                     invest.getInvestHistoryDetails(trader.usercode).then(function (data) {
+                        // console.info(data);
                         trader.orders = data.data;
                         
                         $scope.$broadcast('hideLoadingImg');

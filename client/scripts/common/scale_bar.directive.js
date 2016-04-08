@@ -26,7 +26,6 @@
                 // console.info(type);
 
                 if (type === 'masterDetail' || type === 'investDetail') {
-                    scope.bar.scale = (scope.bar.number/scope.bar.total_num*100).toFixed(2);
 
                     el.item.width(scope.bar.scale + '%');
                     el.info.html(scope.bar.number +' 笔 &nbsp;&nbsp;' + scope.bar.scale + '%');

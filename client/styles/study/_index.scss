@@ -59,6 +59,14 @@
     @include e(content) {
         margin-top: 10px;
 
+        @include m(tit) {
+            
+        }
+
+        @include m(detail) {
+            padding-left: 22px;
+        }
+
         .title {
             cursor: pointer;
             display: inline-block;

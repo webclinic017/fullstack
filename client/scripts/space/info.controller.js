@@ -25,7 +25,6 @@
             angular.extend($scope.personal, {
                 basic: toState.name.substring(6)
             });
-            // console.info($scope.personal.basic);
         });
 
         // 取消轮询
@@ -56,6 +55,7 @@
         // 获取个人资产概况
         function getAssetInfo() {
             account.getAssetInfo().then(function (data) {
+                // console.info(data);
                 angular.extend($scope.personal, data.data);
             });
 

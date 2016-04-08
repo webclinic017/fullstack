@@ -95,9 +95,11 @@
          * @param {String} usercode 曲线所属用户的 user code
          */
         function getMasterProfitLine(usercode) {
-            return $http.post('/api/v3/get_assets_noauth', {
-                cros_user: usercode,
-                tiger_source: 'real'
+            return $http.get('/api/v3/get_assets_noauth', {
+                params: {
+                    cros_user: usercode,
+                    tiger_source: 'real'
+                }
             });
         }
 

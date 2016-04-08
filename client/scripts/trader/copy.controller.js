@@ -96,7 +96,7 @@
                             }, 3000);
                         }
 
-                        if (data.err_code === 6) {
+                        if (data.errCode === 6) {
                             $scope.backErr.system.show = true;
                             $scope.backErr.system.status = 3;    // 高手不能复制高手
 

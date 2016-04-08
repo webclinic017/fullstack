@@ -39,12 +39,7 @@
          * 
          */
         function getInvestProfitLine() {        
-            return $http.post('/api/v3/get_assets_noauth', {     // 假的数据
-                params: {
-                    cros_user: 525100,
-                    tiger_source: 'real'
-                }
-            });
+            return $http.get('/action/public/v4/get_user_line_chart');
         }
 
         /**
@@ -55,7 +50,8 @@
          * 
          */
         function getInvestBarChart() {
-            return $http.get('/data/bar_chart.json');
+            // return $http.get('/data/bar_chart.json');
+            return $http.get('/action/public/v4/get_user_symbol');
         }
 
         /*
@@ -65,7 +61,7 @@
          * @method getInvestCurrentData
          */
         function getInvestCurrentData() {
-            return $http.post('/action/public/v3/get_usercenter_my_order_auth_list', {
+            return $http.post('/action/public/v4/get_usercenter_my_order_auth_list', {
                   page: 1,
                   pagesize: 1000
             });
@@ -78,7 +74,7 @@
          * @method getInvestCurrentTraders
          */
         function getInvestCurrentTraders() {
-            return $http.post('/action/public/v3/get_usercenter_order_auth_group');
+            return $http.post('/action/public/v4/get_usercenter_order_auth_group');
         }
 
         /*
@@ -116,7 +112,7 @@
          * @method getCopiedTraders
          */
         function getInvestHistoryTraders() {
-            return $http.post('/action/public/v3/get_usercenter_history_auth_group');
+            return $http.get('/action/public/v4/get_usercenter_history_auth_group');
         }
 
         /*

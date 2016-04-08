@@ -108,7 +108,7 @@
         function toCopy () {
             // 判断是否登录
             if ($scope.userstatus.logined) {
-                
+                console.info($scope.personal);
                 // 判断是否是高手
                 if ($scope.personal.master !== true) {
 
