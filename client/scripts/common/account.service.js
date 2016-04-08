@@ -219,7 +219,7 @@
          * @method getAssetInfo
          */
         function getAssetInfo() {
-            return $http.post('/action/public/v3/get_usercenter_asset');
+            return $http.post('/action/public/v4/get_usercenter_asset');
         }
         /**
          * Account Service 获取未读消息数量
@@ -437,12 +437,16 @@
             });
         }
 
+        /**
+         * @name getKyc
+         * @desc 获取KYC认证列表
+         */
         function getKyc() {
-
+            return $http.get('/action/public/v4/get_kyc_info');
         }
 
-        function setKyc() {
-            
+        function setKyc(json) {
+            return $http.post('/action/public/v4/save_kyc_info', json);
         }
 
         /**

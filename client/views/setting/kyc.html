@@ -7,16 +7,16 @@
                 </h3>        
                 
                 <div class="row">
-                    <div class="col-xs-3" ng-repeat="(oId, option) in question.options" >
-                        <label class="radio" ng-class="{'checked': question.answer == oId}">
+                    <div class="col-xs-3" ng-repeat="option in question.data.list" >
+                        <label class="radio" ng-class="{'checked': question.answer == option.key}">
                             <input type="radio"
-                                   value="{{oId}}"
+                                   value="{{ option.key }}"
                                    required
                                    ng-model="question.answer"
                                    ng-change="selectOption(question)">
                             <i class="fa fa-circle-o"></i>
                             <i class="fa fa-dot-circle-o"></i>
-                            {{option}}
+                            {{ option.value }}
                         </label>
                     </div>
                 </div>
@@ -35,7 +35,10 @@
                         KYC 认证信息提交成功
                     </p>
                     <p class="alert-system" ng-show="tip.system.status === 2">
-                        系统繁忙
+                        登录超时或者没有登录
+                    </p>
+                    <p class="alert-system" ng-show="tip.system.status === 3">
+                        找不到用户信息
                     </p>
                 </div>
 

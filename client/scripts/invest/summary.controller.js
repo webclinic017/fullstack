@@ -36,14 +36,29 @@
 
         function getInvestProfitLine () {
             invest.getInvestProfitLine().then(function (data) {
+                // console.info(data);
                 $scope.$broadcast('paintLineChart', data.data);
             });
         }
 
         function getInvestBarChart () {
             invest.getInvestBarChart().then(function (data) {
-                // console.info(data);
-                $scope.bars = data;
+                console.info(data);
+                $scope.bars = [];
+                var symbolBar = {};
+                
+                angular.forEach(data.data, function(data,index,array){
+                    symbolBar[index] = {};
+                    symbolBar[index]["symbol_mod"] = index;
+                    symbolBar[index]["scale"] = data;
+                });
+                angular.forEach(data.data_num, function(data,index,array){
+                    symbolBar[index]["number"] = data;
+                });
+                angular.forEach(symbolBar, function(data,index,array){
+                    $scope.bars.push(data);
+                });
+                
                 $scope.$broadcast('hideLoadingImg');
             });
         }

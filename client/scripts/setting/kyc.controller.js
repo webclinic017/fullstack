@@ -9,24 +9,7 @@
     SettingKycController.$inject = ['$scope', '$state', '$timeout', 'account'];
 
     function SettingKycController($scope, $state, $timeout, account) {
-        $scope.questions = [
-            {
-                id: '01',
-                title: '您的交易经验如何？',
-                options: ['少于 1 年', '1-3 年', '3-6 年', '6 年以上'],
-                answer: undefined
-            }, {
-                id: '02',
-                title: '您在哪些市场进行过交易？',
-                options: ['股票', '期货', '银行理财', '衍生品'],
-                answer: undefined
-            }, {
-                id: '03',
-                title: '对于每年在此的投资，哪个风险/获利情景最符合您的期望？',
-                options: ['高风险，高收益', '中风险，中收益', '低风险，低收益'],
-                answer: undefined
-            }
-        ];
+        $scope.questions = [];
 
         $scope.tip = {
             questions: {
@@ -43,6 +26,7 @@
         $scope.submitForm = submitForm;
         $scope.goNextStep = goNextStep;
         var results = [];
+        var kycInfo = {};
 
         if ($state.current.name === 'space.setting.subpage') {
             $scope.type = 'setting';
@@ -52,13 +36,8 @@
             getKyc();
         }
 
-        angular.forEach($scope.questions, function (question) {
-            results.push({
-                id: question.id,
-                answer: question.answer
-            });
-        });
-
+        
+        
         function selectOption(question) {
             $scope.tip.questions.show = false;
             $scope.tip.questions.msg = undefined;
@@ -86,30 +65,81 @@
                     $scope.tip.questions.msg = undefined;
                 }
             });
+            // console.log(results);
 
             if ($scope.tip.questions.msg) {
                 return;
             }
-            console.log(results);
-
+            angular.forEach(results, function (data, index) {
+                kycInfo[data["id"]] = data.answer;
+            });
             $scope.clickable = false;
-            $timeout(function () {
-                $scope.tip.system.show = true;
-                $scope.tip.system.status = 1;
-                
-                if ($scope.type === 'setting') {
-                    $scope.clickable = true;
-                    $timeout(function () {
-                        $scope.tip.system.show = false;
-                        $scope.tip.system.status = 0;
-                    }, 3000);
-                } else {
-                    goNextStep();
+
+            account.setKyc(kycInfo).then(function (data) {
+                // console.info(data);
+                if (data.error_code === 0) {
+                    $scope.tip.system.show = true;
+                    $scope.tip.system.status = 1;
+                    
+                    if ($scope.type === 'setting') {
+                        $scope.clickable = true;
+                        $timeout(function () {
+                            $scope.tip.system.show = false;
+                            $scope.tip.system.status = 0;
+                        }, 3000);
+                    } else {
+                        goNextStep();
+                    }
+                } else if (data.error_code === 1) {
+                    $scope.tip.system.show = true;
+                    $scope.tip.system.status = 2;
+                    
+                    if ($scope.type === 'setting') {
+                        $scope.clickable = true;
+                        $timeout(function () {
+                            $scope.tip.system.show = false;
+                            $scope.tip.system.status = 0;
+                        }, 3000);
+                    } else {
+                        goNextStep();
+                    }
+                } else if (data.error_code === 2) {
+                    $scope.tip.system.show = true;
+                    $scope.tip.system.status = 3;
+                    
+                    if ($scope.type === 'setting') {
+                        $scope.clickable = true;
+                        $timeout(function () {
+                            $scope.tip.system.show = false;
+                            $scope.tip.system.status = 0;
+                        }, 3000);
+                    } else {
+                        goNextStep();
+                    }
                 }
-            }, 3000);
+            });
+            
         }
 
         function getKyc() {
+            account.getKyc().then(function (data){
+                // console.info(data);
+                angular.forEach(data.data, function (data, index, array) {
+                    var json = {};
+                    json["id"] = index;
+                    json["data"] = data;
+                    json["answer"] = undefined;
+                    json["title"] = data["title"];
+                    $scope.questions.push(json);
+                });
+
+                angular.forEach($scope.questions, function (question) {
+                    results.push({
+                        id: question.id,
+                        answer: question.answer
+                    });
+                });
+            });
         }
 
         function goNextStep() {
