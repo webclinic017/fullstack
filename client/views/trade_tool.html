@@ -1,11 +1,14 @@
-<!DOCTYPE html>
+<% var title = '交易平台' %>
+<% var description = '' %>
+<% var keywords = '' %>
+<!doctype html>
 <html>
     <head>
         <% include common/metas.html %>
 
-        <title>老虎金融｜代理合作</title>
-        <meta name="description" content="老虎金融倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
-        <meta name="keywords" content="">
+        <title>老虎金融｜<%= title %></title>
+        <meta name="description" content="<%= description %>">
+        <meta name="keywords" content="<%= keywords %>">
 
         <!-- build:css(.tmp) /styles/web.css -->
         <link rel="stylesheet" href="/styles/web.css">
@@ -17,15 +20,9 @@
                 <% include navbar/main.html %>
             </div>
 
-            <div class="body">
-                <div class="layout-2">
-                    <div class="layout-2__side mg-tp-30">
-                        <%- include('web/agent-sidebar.html') %>
-                    </div>
-                    <div class="layout-2__content mg-tp-30">
-                        <%- include('web/agent.html') %>
-                    </div>
-                </div>
+            <div class="body" style="background-color: #fafafa">
+              <p style="height:84px;"></p>
+              <iframe src="https://trade.mql5.com/trade?servers=TigerWit-Demo,TigerWit-Live&amp;trade_server=TigerWit-Live&amp;demo_server=TigerWit-Demo&amp;demo_type=&amp;demo_leverage=50,100,200,400&amp;startup_mode=open_live&amp;lang={{ language }}" allowfullscreen="allowfullscreen" style="width: 100%; height: 677px; border: none"></iframe>
             </div>
 
             <div class="footer">
@@ -56,25 +53,21 @@
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:js(client) /scripts/web_agent.js -->
+        <!-- build:js(client) /scripts/web_product.js -->
         <script src="/scripts/app.js"></script>
 
         <script src="/scripts/common/config.service.js"></script>
         <script src="/scripts/common/account.service.js"></script>
-        <script src="/scripts/common/transition.service.js"></script>
-        <script src="/scripts/common/validator.service.js"></script>
-        <script src="/scripts/common/market.service.js"></script>
+        <script src="/scripts/common/product.service.js"></script>
+        <script src="/scripts/common/utils.service.js"></script>
 
         <script src="/scripts/common/navbar.directive.js"></script>
         <script src="/scripts/common/dropdown.directive.js"></script>
-        <script src="/scripts/common/form_select.directive.js"></script>
-        <script src="/scripts/common/upload_history_file.directive.js"></script>
-
-        <script src="/scripts/common/modal.js"></script>
+        <script src="/scripts/common/pagination.directive.js"></script>
 
         <script src="/scripts/common/global.controller.js"></script>
 
-        <script src="/scripts/web/agent.controller.js"></script>
+        <script src="/scripts/product/comment.controller.js"></script>
         <!-- endbuild -->
     </body>
 </html>

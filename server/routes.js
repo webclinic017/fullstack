@@ -83,6 +83,9 @@ module.exports = function (app) {
             pageInfo: pageInfo
         });
     });
+    app.route('/web/product/trade').get(function(req,res){
+        res.render('trade_tool.html');
+    })
     // 关于老虎金融
     app.route('/web/about/:subpage(stp|team|report|control|tigerwit)').get(function (req, res) {
         var subpage = req.params.subpage || 'forex';
