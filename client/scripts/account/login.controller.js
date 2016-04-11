@@ -95,7 +95,7 @@
                             if (backUrl) {
                                 $window.location.href = backUrl;
                             } else {
-                                $state.go('space.invest.subpage');
+                                $state.go('space.invest.subpage', {subpage: 'current'}, {reload: true});
                             }
                         }
                     });

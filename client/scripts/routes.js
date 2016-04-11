@@ -59,7 +59,7 @@
                     }
                 })
                 .state('space.invest.subpage', {
-                    // authenticated: true,
+                    authenticated: true,
                     url: '/space/invest/:subpage',
                     views: {
                         '@space.invest': {
@@ -79,8 +79,8 @@
                 })
 
                 .state('space.invite', {
-                    url: '/space/invite',
                     authenticated: true,
+                    url: '/space/invite',
                     views: {
                         'content@space': {
                             templateUrl: '/views/invite/index.html',
@@ -107,7 +107,7 @@
                     }
                 })
                 .state('space.asset.subpage', {
-                    // authenticated: true,
+                    authenticated: true,
                     url: '/space/asset/:subpage',
                     views: {
                         '@space.asset': {
@@ -126,8 +126,8 @@
                     }
                 })
                 .state('space.notice', {
+                    authenticated: true,
                     url: '/space/notice',
-                    // authenticated: true,
                     views: {
                         'content@space': {
                             templateUrl: '/views/notice/index.html',
@@ -181,7 +181,7 @@
                     }
                 })
                 .state('space.bonus.subpage', {
-                    // authenticated: true,
+                    authenticated: true,
                     url: '/space/bonus/:subpage',
                     views: {
                         '@space.bonus': {
@@ -276,5 +276,16 @@
 
                 return newName;
             }
+        }])
+        .run(['$rootScope', '$state', '$window', 'authorization', function ($rootScope, $state, $window, authorization) {
+            $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
+                if (toState.authenticated) {
+                    authorization.authorize().then(function (isLogined) {
+                        if (!isLogined) {
+                            $state.go('account.subpage', {subpage: 'login'});
+                        }
+                    });
+                }
+            });
         }]);
 })();
