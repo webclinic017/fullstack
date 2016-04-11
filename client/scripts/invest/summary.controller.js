@@ -43,7 +43,7 @@
 
         function getInvestBarChart () {
             invest.getInvestBarChart().then(function (data) {
-                console.info(data);
+                // console.info(data);
                 $scope.bars = [];
                 var symbolBar = {};
                 

@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('GlobalController', GlobalController);
 
-    GlobalController.$inject = ['$scope', '$window', 'config', 'account'];
+    GlobalController.$inject = ['$scope', '$window', 'config', 'account', 'authorization'];
 
     /**
      * @name GlobalController
      * @desc
      */ 
-    function GlobalController($scope, $window, config, account) {
+    function GlobalController($scope, $window, config, account, authorization) {
         $scope.userstatus = {
             logined: false
         };
@@ -19,6 +19,12 @@
         $scope.personal = {};
 
         $scope.logout = logout;
+
+        $scope.$on('$stateChangeStart', function (event, toState, toParams) {
+            authorization.authorize().then(function (isLogined) {
+                $scope.userstatus.logined = isLogined;
+            });
+        });
 
         account.checkLogined().then(function (logined) {
             $scope.userstatus.logined = logined;

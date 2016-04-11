@@ -108,10 +108,10 @@
         function toCopy () {
             // 判断是否登录
             if ($scope.userstatus.logined) {
-                console.info($scope.personal);
                 // 判断是否是高手
-                if ($scope.personal.master !== true) {
-
+                if ($scope.personal.master === 1) {
+                    openSystemMdl('isMaster');
+                } else {
                     // 判断是否实名认证
                     if ($scope.personal.verified === true) {
                         var minCopyAmount = parseFloat($scope.master.copy_money_min, 10);
@@ -131,8 +131,6 @@
                     } else {
                         openSystemMdl('verify');
                     }
-                } else {
-                    openSystemMdl('isMaster');
                 }
             } else {
                 openSystemMdl('login', '复制');
