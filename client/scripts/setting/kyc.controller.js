@@ -123,6 +123,7 @@
 
         function getKyc() {
             account.getKyc().then(function (data){
+                $scope.$broadcast("hideLoadingImg");
                 // console.info(data);
                 angular.forEach(data.data, function (data, index, array) {
                     var json = {};

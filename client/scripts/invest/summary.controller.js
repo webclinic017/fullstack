@@ -46,6 +46,10 @@
                 // console.info(data);
                 $scope.bars = [];
                 var symbolBar = {};
+
+                $scope.$broadcast('hideLoadingImg');
+
+                if (data.data_num.length <= 0) return;
                 
                 angular.forEach(data.data, function(data,index,array){
                     symbolBar[index] = {};
@@ -58,8 +62,6 @@
                 angular.forEach(symbolBar, function(data,index,array){
                     $scope.bars.push(data);
                 });
-                
-                $scope.$broadcast('hideLoadingImg');
             });
         }
     }

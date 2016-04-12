@@ -20,10 +20,10 @@
             },
             link: function (scope, element, attrs, controller) {
                 scope.words = 0;
-                
+
                 var wordsLimit = parseInt(attrs.wordsLimit, 10);
                 var dbcsReg = /[^\x00-\xff]/g;
-
+                
                 if (typeof controller === 'undefined') return;
                     
                 if (controller.$isEmpty(wordsLimit)) return;
