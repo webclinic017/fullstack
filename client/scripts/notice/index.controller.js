@@ -27,8 +27,8 @@
         getNoticeList(1);
 
         if ($location.path() === '/space/notice') {
-            // readAllNotice();
-            console.info("readAll");
+            readAllNotice();
+            // console.info("readAll");
         }
 
         // 获取消息列表
