@@ -52,21 +52,23 @@
         function getTraders() {
             invest.getInvestCurrentTraders().then(function (data) {
                 // console.info(data);
-                if (data.data.length <= 0) {
-                    $scope.traders = [];
-                    return;
-                }
-
-                angular.forEach(data.data, function (item, index) {
-
-                    if (typeof $scope.traders[index] === 'undefined') {
-                        $scope.traders[index] = {};
+                if (data.is_succ) {
+                    if (data.data.length <= 0) {
+                        $scope.traders = [];
+                        return;
                     }
 
-                    angular.forEach(item, function (value, key) {
-                        $scope.traders[index][key] = value;
+                    angular.forEach(data.data, function (item, index) {
+
+                        if (typeof $scope.traders[index] === 'undefined') {
+                            $scope.traders[index] = {};
+                        }
+
+                        angular.forEach(item, function (value, key) {
+                            $scope.traders[index][key] = value;
+                        });
                     });
-                });
+                }
             });
 
             tradersId = $timeout(function () {

@@ -30,10 +30,13 @@
             height: 90px;
             margin-bottom: 0;
 
-            > a {
+            > p {
                 display: table-cell;
                 vertical-align: middle;
-                color: $gray-darker;
+
+                > a {
+                    color: $gray-darker;
+                }
             }
         }
     }
