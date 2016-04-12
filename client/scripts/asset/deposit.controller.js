@@ -73,7 +73,7 @@
 
                     // 去实名认证
                     function verify() {
-                        // $state.go('personal.setting');
+                        $state.go('personal.setting.subpage({subpage: verify})');
                         closeModal();
                     }
 
