@@ -425,6 +425,7 @@
 
             &:hover {
                 left: -2px;
+                top: 10px;
             }
         }
         @include m(icon2) {
@@ -437,6 +438,8 @@
 
             &:hover {
                 left: -2px;
+                top: 10px;
+
             }
         }
         @include m(icon3) {
@@ -449,6 +452,8 @@
 
             &:hover {
                 left: -2px;
+                top: 10px;
+
             }
         }
         @include m(icon4) {
@@ -461,6 +466,8 @@
 
             &:hover {
                 left: -2px;
+                top: 10px;
+
             }
         }
     }
