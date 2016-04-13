@@ -270,6 +270,10 @@
     padding-left: 40px !important;
 }
 
+.pd-lf-50 {
+    padding-left: 50px !important;
+}
+
 .pd-rg-0 {
     padding-right: 0 !important;
 }
@@ -308,7 +312,7 @@
 
 .logo {
     $logo_size: 55px;
-    
+
     display: inline-block;
     width: $logo_size;
     height: $logo_size;
