@@ -422,6 +422,10 @@
             width: 121px;
             height: 100px;
             @include img-normal($image-path-home + "index2-why-icon1.png");
+
+            &:hover {
+                left: -2px;
+            }
         }
         @include m(icon2) {
             position: relative;
@@ -430,6 +434,10 @@
             width: 90px;
             height: 100px;
             @include img-normal($image-path-home + "index2-why-icon2.png");
+
+            &:hover {
+                left: -2px;
+            }
         }
         @include m(icon3) {
             position: relative;
@@ -438,6 +446,10 @@
             width: 95px;
             height: 100px;
             @include img-normal($image-path-home + "index2-why-icon3.png");
+
+            &:hover {
+                left: -2px;
+            }
         }
         @include m(icon4) {
             position: relative;
@@ -446,6 +458,10 @@
             width: 120px;
             height: 100px;
             @include img-normal($image-path-home + "index2-why-icon4.png");
+
+            &:hover {
+                left: -2px;
+            }
         }
     }
 }
@@ -493,10 +509,12 @@
         margin-bottom: 77px;
         text-align: right;
 
+
         .index2-product__btn {
             &:hover {
                 border: 1px solid #0C0A09;
-                background: #F9FAFB;
+                background: #000;
+                color: $brand-primary;
             }
         }
     }
