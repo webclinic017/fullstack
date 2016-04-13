@@ -12,7 +12,8 @@
             getHomeHotScale: getHomeHotScale,
             getHomeStarMaster: getHomeStarMaster,
             getHomeMasters: getHomeMasters,
-            getProductComment: getProductComment
+            getProductComment: getProductComment,
+            getIndexMasters: getIndexMasters
         };
         return service;
 
@@ -66,6 +67,15 @@
                 }
             });
             // return $http.get('/data/product-comment.json');
+        }
+
+        /**
+         * Product Service 首页第二块高手
+         *
+         * @method getIndexMasters
+         */
+        function getIndexMasters() {
+            return $http.get('/data/index2-master.json');
         }
 
     }

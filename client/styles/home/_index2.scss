@@ -243,11 +243,26 @@
             width: 23px;
             height: 21px;
             @include img-normal($image-path-home + "index2-master-jia.png");
+
+            &:hover {
+
+            }
         }
         .mg-tp-_14 {
             margin-top: -14px;
         }
     }
+}
+
+.index2-master__col2-jia:hover {
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg); /* Internet Explorer */
+    -moz-transform:rotate(180deg); /* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(180deg); /* Opera */
+    -webkit-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
 }
 
 @include b(index2-product) {
@@ -364,6 +379,39 @@
     }
 }
 
+@include b(index2-trade) {
+    .row {
+        margin-top: 84px;
+        margin-bottom: 51px;
+    }
+    .col-xs-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include e(con1) {
+        margin-top: 32px;
+        padding-left: 32px;
+        padding-right: 40px;
+        line-height: 24px;
+        font-family: "MicrosoftYaHei";
+    }
+    @include e(btn-con) {
+        margin-top: 80px;
+        margin-bottom: 73px;
+        padding-left: 32px;
+        text-align: left;
+    }
+    @include e(img) {
+        background-size: 100%;
+        background-position: center center;
+        width: 550px;
+        height: 340px;
+        @include img-normal($image-path-home + "index2-trade-img.png");
+
+    }
+}
+
 @include b(index2-why) {
 
     @include e(up) {
@@ -404,4 +452,52 @@
 
 @include b(index2-info) {
     background: $brand-primary;
+
+    .row {
+        margin-top: 15px;
+    }
+    .col-xs-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include e(personal) {
+        margin-top: 77px;
+        width: 489px;
+        height: 432px;
+        @include img-normal($image-path-home + "index2-info-person.png");
+
+    }
+
+    @include e(title) {
+        margin-top: 80px;
+        line-height: 36px;
+        font-family: "MicrosoftYaHei Bold";
+        font-size: 30px;
+    }
+
+    @include e(con) {
+        margin-top: 44px;
+        line-height: 36px;
+        font-family: "MicrosoftYaHei";
+        font-size: 16px;
+    }
+    @include e(con) {
+        line-height: 36px;
+        font-family: "MicrosoftYaHei";
+        font-size: 16px;
+    }
+
+    @include e(btn-con) {
+        margin-top: 44px;
+        margin-bottom: 77px;
+        text-align: right;
+
+        .index2-product__btn {
+            &:hover {
+                border: 1px solid #0C0A09;
+                background: #F9FAFB;
+            }
+        }
+    }
 }

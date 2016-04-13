@@ -8,12 +8,15 @@
     HomeIndexController.$inject = ['$scope', 'product','ranklist'];
 
     function HomeIndexController($scope, product, ranklist) {
-        
+
         $scope.hotScale = [];   // 首页 投资者占比
         $scope.hotProduct =[];  // 首页 热门的投资产品类型
         $scope.starMaster =[];  // 首页 明星高手
         $scope.homeMasters = [];// 首页 推荐的高手
-        
+
+
+        $scope.indexMasters = [];// 首页 第二模块的高手
+
 
         $scope.$watch('ngRepeatFinished', function() {
             product.getHomeHotScale().then(function (data) {
@@ -28,6 +31,11 @@
 
         product.getHomeStarMaster().then(function (data) {
             $scope.starMaster = data;
+            // console.info(data);
+        });
+
+        product.getIndexMasters().then(function (data) {
+            $scope.indexMasters = data;
             // console.info(data);
         });
 
