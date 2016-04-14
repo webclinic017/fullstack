@@ -4,10 +4,10 @@
     <ul class="pro-comment__con-ul">
         <li class="clear pro-public__bor-bt" ng-repeat="comment in commentList">
             <p class="pro-comment__li-title" ng-clock>【TigerWit老虎金融】: {{comment.title}}</p>
-            <p class="font-bold">{{comment.tip}}</p>
-            <p class="pro-comment__li-con">{{comment.con}}</p>
-            <a class="font-info float-left" href="{{comment.link}}">详情></a>
-            <span class="font-info float-right" href="">{{comment.time}}</span>
+            <p class="font-bold">{{comment.title_plain}}</p>
+            <p class="pro-comment__li-con">{{comment.content}}</p>
+            <a class="font-info float-left" href="{{comment.url}}">详情></a>
+            <span class="font-info float-right" href="">{{comment.date}}</span>
         </li>
     </ul>
     <div class="text-center">

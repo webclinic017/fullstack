@@ -60,13 +60,20 @@
          * @method getProductComment
          */
         function getProductComment(page, pagesize) {
-            return $http.get('/data/product-comment.json', {
+            // return $http.get('/data/product-comment.json', {
+            //     params: {
+            //         page: page,
+            //         pagesize: pagesize
+            //     }
+            // });
+
+            return $http.get('https://www.tigerwit.com/blog/archives/category/market_comment/lipeng?json=1', {
                 params: {
                     page: page,
                     pagesize: pagesize
                 }
             });
-            // return $http.get('/data/product-comment.json');
+
         }
 
         /**

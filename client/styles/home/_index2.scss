@@ -7,7 +7,7 @@
         overflow: hidden;
         height: 592px !important;
         background-position: center center;
-        background-size: 100%;
+        background-size: cover;
         @include img-normal($image-path-home + "index2-banner1.png");
 
     }
@@ -15,13 +15,17 @@
         overflow: hidden;
         height: 592px !important;
         background-position: center center;
-        background-size: 100%;
+        background-size: cover;
+        @include img-normal($image-path-home + "index2-banner2.png");
+
     }
     .index2-slide3 {
         overflow: hidden;
         height: 592px !important;
         background-position: center center;
-        background-size: 100%;
+        background-size: cover;
+        @include img-normal($image-path-home + "index2-banner3.png");
+
     }
 
     .pagination {
@@ -50,6 +54,7 @@
         margin-top: 50px;
         font-family: "FZLTZCHK  GBK1 0";
         font-size: 60px;
+        line-height: 80px;
         color: $brand-primary;
     }
     @include e(tle2) {
@@ -73,6 +78,36 @@
         color: #FDFDFD;
     }
     @include e(btn1) {
+        margin-top: 68px;
+        padding: 19px 58px;
+        display: inline-block;
+        border: 1px solid $brand-primary;
+        border-radius: 4px;
+        background: transparent;
+        font-family: "MicrosoftYaHei Bold";
+        font-size: 24px;
+        color: $brand-primary;
+
+        &:hover {
+            background: $brand-primary;
+            color: #fff;
+        }
+    }
+
+    @include e(b2-tip2) {
+        line-height: 41px;
+        font-size: 24px;
+        color: #FDFDFD;
+    }
+    @include e(b3-p1) {
+        margin-top: 100px;
+        width: 504px;
+        height: 228px;
+        background-size: 100%;
+        @include img-normal($image-path-home + "index2-b3-con.png");
+
+    }
+    @include e(b3-btn1) {
         margin-top: 68px;
         padding: 19px 58px;
         display: inline-block;
