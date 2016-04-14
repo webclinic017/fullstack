@@ -5,17 +5,18 @@
 
     <ul class="mg-bt-30">
         <li ng-cloak ng-repeat="video in videos" class="study_video__content row">
-            <p class="col-xs-3 study_video__content-image">
+            <div class="col-xs-3 study_video__content-image">
                 <a href="" ng-click="openVideoMdl(video)">
                     <img src="/images/media/video_poster.jpg">
                 </a>
-            </p>
-            <p class="col-xs-9 study_video__content-info">
-                <a href="">
-                    {{ video.title }}
-                    {{ video.content }}
-                </a>
-            </p>
+            </div>
+            <div class="col-xs-9 study_video__content-info">
+                <p>
+                    <a href="" ng-click="openVideoMdl(video)">
+                        {{ video.title }}
+                    </a>
+                </p>
+            </div>
         </li>
     </ul>
 </div>

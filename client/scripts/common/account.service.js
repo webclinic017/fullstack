@@ -445,6 +445,10 @@
             return $http.get('/action/public/v4/get_kyc_info');
         }
 
+        /**
+         * @name setKyc
+         * @desc 设置KYC认证列表
+         */
         function setKyc(json) {
             return $http.post('/action/public/v4/save_kyc_info', json);
         }

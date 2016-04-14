@@ -70,6 +70,9 @@
             locationCity: {
                 show: false
             },
+            feature: {
+                show: false
+            },
             policy: {
                 show: false
             },
@@ -171,7 +174,7 @@
             showErr(formName, 'feature');
             showErr(formName, 'policy');
             showErr(formName, 'desc');
-
+            
             if ($scope[formName].$invalid) {
                 return;
             }

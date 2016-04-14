@@ -66,7 +66,7 @@
         <div class="navbar_summary__content">
             <div tw-loading-img></div>
             
-            <ul class="invest_type">
+            <ul class="invest_type" ng-if="bars.length > 0">
                 <li ng-repeat="bar in bars" class="invest_type__item row">
                     <div class="col-xs-5">
                         <span class="invest_type__icon icon-forex-{{ bar.symbol_mod.toLowerCase() }}"></span>
@@ -77,6 +77,9 @@
                     </div>
                 </li>
             </ul>
+            <div class="text-center pd-tp-30" ng-if="bars.length <= 0">
+                无数据
+            </div>
         </div>
     </div>
 </div>

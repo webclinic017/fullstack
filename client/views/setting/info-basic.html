@@ -122,6 +122,7 @@
                                name="feature"
                                type="text"
                                placeholder="请选择"
+                               required
                                ng-model="basicInfo.feature.key"
                                ng-class="{'form-control-error': frontErr.feature.show && basicInfoForm.feature.$invalid}"
                                ng-blur="showErr('basicInfoForm', 'feature')"
@@ -137,9 +138,9 @@
                         </ul>
                     </div>
 
-                    <div ng-show="frontErr.city.show">
+                    <div ng-show="frontErr.feature.show">
                         <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.feature.$error.required">
-                            请选择市/区
+                            请选择交易特色
                         </p>
                     </div>
                 </div>
@@ -158,12 +159,12 @@
                               ng-model="basicInfo.policy"
                               twform-editbox
                               data-words-limit="1000"
-                              data-words="words"
+                              data-words="policy.words"
                               ng-focus="hideErr('basicInfoForm', 'policy')"
                               ng-blur="showErr('basicInfoForm', 'policy')"></textarea>
 
                     <span class="editbox__words_limit">
-                        {{words}}/1000 字符
+                        {{ policy.words }}/1000 字符
                     </span>
                     
                     <div ng-show="frontErr.policy.show">
@@ -193,12 +194,12 @@
                               ng-model="info.desc"
                               twform-editbox
                               data-words-limit="1000"
-                              data-words="words"
+                              data-words="desc.words"
                               ng-focus="hideErr('basicInfoForm', 'desc')"
                               ng-blur="showErr('basicInfoForm', 'desc')"></textarea>
 
                     <span class="editbox__words_limit">
-                        {{words}}/1000 字符
+                        {{ desc.words }}/1000 字符
                     </span>
                     <div ng-show="frontErr.desc.show">
                         <p class="alert-arrow_tp_lf" ng-show="basicInfoForm.desc.$error.twformEditbox">

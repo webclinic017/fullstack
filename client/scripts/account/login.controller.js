@@ -52,7 +52,7 @@
 
             // 首先对 password 加密
             account.encrypt($scope.account.password).then(function (textEnc) {
-                console.info(textEnc);
+                // console.info(textEnc);
 
                 if (textEnc) {
                     account.login($scope.account.id, textEnc, $scope.account.autoLogin).then(function (data) {
@@ -95,7 +95,7 @@
                             if (backUrl) {
                                 $window.location.href = backUrl;
                             } else {
-                                $state.go('space.invest.subpage', {subpage: 'current'}, {reload: true});
+                                $state.go('space.invest.subpage', {subpage: 'current', back: 'login'}, {reload: true});
                             }
                         }
                     });
