@@ -128,8 +128,8 @@
                     $scope.withdraw.success = true;
                     openWithdrawMdl();
 
-                    $state.go('space.asset.type', {
-                        type: 'withdraw'
+                    $state.go('space.asset.subpage', {
+                        subpage: 'withdraw'
                     }, {reload: true});
                 }
             });

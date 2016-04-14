@@ -12,7 +12,8 @@
             getHomeHotScale: getHomeHotScale,
             getHomeStarMaster: getHomeStarMaster,
             getHomeMasters: getHomeMasters,
-            getProductComment: getProductComment
+            getProductComment: getProductComment,
+            getIndexMasters: getIndexMasters
         };
         return service;
 
@@ -59,13 +60,29 @@
          * @method getProductComment
          */
         function getProductComment(page, pagesize) {
-            return $http.get('/data/product-comment.json', {
+            // return $http.get('/data/product-comment.json', {
+            //     params: {
+            //         page: page,
+            //         pagesize: pagesize
+            //     }
+            // });
+
+            return $http.get('https://www.tigerwit.com/blog/archives/category/market_comment/lipeng?json=1', {
                 params: {
                     page: page,
                     pagesize: pagesize
                 }
             });
-            // return $http.get('/data/product-comment.json');
+
+        }
+
+        /**
+         * Product Service 首页第二块高手
+         *
+         * @method getIndexMasters
+         */
+        function getIndexMasters() {
+            return $http.get('/data/index2-master.json');
         }
 
     }

@@ -19,11 +19,11 @@
     }
 
 
-    
-    .swiper-container {
-        width: 1000px;
-        height: 550px;
-    }
+
+    // .swiper-container {
+    //     width: 1000px;
+    //     height: 550px;
+    // }
 
     .pagination {
         position: absolute;
@@ -32,7 +32,7 @@
         width: 100%;
         z-index: 20;
         text-align: center;
-        
+
     }
     .swiper-pagination-switch {
         display: inline-block;
@@ -55,7 +55,7 @@
 
 .font-family-l {
     font-family: "NotoSansHans Light";
-    
+
 }
 // 文字滚动
 @include b (home-text-roll) {
@@ -152,7 +152,7 @@
 
 // 首页资产
 @include b (home-sec-asset) {
-    background: $gray;    
+    background: $gray;
 }
 @include b (home-asset) {
     font-size: $font-size-base;
@@ -294,7 +294,7 @@
         border-top: 1px solid $brand-primary;
     }
 
-    
+
 }
 
 @include b (why-con) {
@@ -319,16 +319,16 @@
     }
 
     @include e (logo1) {
-        @include img-normal($image-path-home + "why-logo1.png");       
+        @include img-normal($image-path-home + "why-logo1.png");
     }
     @include e (logo2) {
-        @include img-normal($image-path-home + "why-logo2.png");       
+        @include img-normal($image-path-home + "why-logo2.png");
     }
     @include e (logo3) {
-        @include img-normal($image-path-home + "why-logo3.png");       
+        @include img-normal($image-path-home + "why-logo3.png");
     }
     @include e (logo4) {
-        @include img-normal($image-path-home + "why-logo4.png");       
+        @include img-normal($image-path-home + "why-logo4.png");
     }
 }
 
