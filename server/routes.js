@@ -6,6 +6,7 @@
 
 var path = require('path');
 var url = require('url');
+var request = require('request');
 var masterApi = require('./api/master');
 
 module.exports = function (app) {
@@ -41,22 +42,17 @@ module.exports = function (app) {
         });
     });
 
-    app.route('/trader').get(function (req, res) {
+    app.route('/trader/:usercode').get(function (req, res) {
+        var usercode = req.params.usercode;
 
-        res.render('trader.html', {
-            master: {
-                username: '大洋彼岸的一条鱼',
-                avatar_path: '/avatar/525091_150.jpg',
-                address: '北京',
-                number: 1,
-                follow: 158,
-                fans: 1000,
-                copiers: 888,
-                experience: '10 年',
-                education: '东北亚皇家建筑大学梅河口分院三年十班最后一排靠窗户座位',
-                special: 'EA 加人工交易、短线交易',
-                strategy: '木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略',
-                desc: 'desc木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略木有策略'
+        request('http://www.tigerwit.com/action/public/v4/get_master_info?usercode='+usercode, function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                // console.info(body);
+                body = JSON.parse(body);
+                res.render('trader.html', {
+                    master: body.data,
+                    usercode: usercode
+                });
             }
         });
     });

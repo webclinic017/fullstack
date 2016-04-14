@@ -49,6 +49,17 @@
                 });
             });
             getUnreadLength();
+            getPersonalInfoDegree();
+        }
+
+        // 获取基本信息完整度
+        function getPersonalInfoDegree () {
+            account.getPersonalInfoDegree().then(function (data) {
+                
+                angular.extend($scope.personal, {
+                    infoDegree: data.data.degree
+                });
+            });
         }
 
         // 获取新消息

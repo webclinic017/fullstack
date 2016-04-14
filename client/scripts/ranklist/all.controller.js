@@ -14,16 +14,20 @@
         };
         $scope.getMastersList = getMastersList;
 
-        getMastersList('all');
+        getMastersList();
 
         function getMastersList (type) {
+            type = type ? type : '';
             $scope.$emit("showLoadingImg");
+            $scope.masters.type = type;
 
             ranklist.getMastersList(type).then(function (data) {
-                // console.info(data);
-                $scope.masters.type = type;
-                $scope.$broadcast("hideLoadingImg");
-                $scope.rankList = data.data;
+                console.info(data);
+                
+                if (data.is_succ) {
+                    $scope.$broadcast("hideLoadingImg");
+                    $scope.rankList = data.data;
+                }
             });
         }
     }

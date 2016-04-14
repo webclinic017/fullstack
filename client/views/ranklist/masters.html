@@ -2,14 +2,14 @@
     <div class="container">
         <div class="ranklist__nav">
             <div class="row">
-                <div class="col-1-lg" ng-class="{active: masters.type === 'all'}" ng-click="getMastersList('all')">
+                <div class="col-1-lg" ng-class="{active: masters.type === ''}" ng-click="getMastersList()">
                     <span class="nav_item">综合排名</span>
                 </div>
-                <div class="col-1-sm" ng-class="{active: masters.type === 'copiers'}" ng-click="getMastersList('copiers')">
+                <div class="col-1-sm" ng-class="{active: masters.type === 'copiers_sum'}" ng-click="getMastersList('copiers_sum')">
                     <span class="nav_item">复制人数</span>
                 </div>
-                <div class="col-1" ng-class="{active: masters.type === 'fund'}" ng-click="getMastersList('fund')">
-                    <span class="nav_item">最低复制金额</span>
+                <div class="col-1" ng-class="{active: masters.type === 'copy_amount'}" ng-click="getMastersList('copy_amount')">
+                    <span class="nav_item">复制金额</span>
                 </div>
                 <div class="col-1">
                     <span class="nav_item">走势图</span>
@@ -17,10 +17,10 @@
                 <div class="col-1-sm" ng-class="{active: masters.type === 'drawdown'}" ng-click="getMastersList('drawdown')">
                     <span class="nav_item">最大回撤</span>
                 </div>
-                <div class="col-1" ng-class="{active: masters.type === 'profit'}" ng-click="getMastersList('profit')">
+                <div class="col-1" ng-class="{active: masters.type === 'profit_rate'}" ng-click="getMastersList('profit_rate')">
                     <span class="nav_item">收益率</span>
                 </div>
-                <div class="col-1" ng-class="{active: masters.type === 'profit_copiers'}" ng-click="getMastersList('profit_copiers')">
+                <div class="col-1" ng-class="{active: masters.type === 'copy_profit'}" ng-click="getMastersList('copy_profit')">
                     <span class="nav_item">复制者盈利</span>
                 </div>
                 <div class="col-1-lg">
@@ -35,22 +35,22 @@
                     <div class="col-1-lg">
                         <div class="ranklist_info">
                             <div class="ranklist_info__wrapper">
-                                <a href="/trader/#/trader/{{rank.usercode}}/summary" class="ranklist_info__avatar" target="_blank">
-                                    <img ng-src="{{ rank['link'] }}" alt="avatar">
+                                <a href="/trader/{{rank.usercode}}/#/trader/summary" class="ranklist_info__avatar" target="_blank">
+                                    <img ng-src="/avatar/{{ rank.usercode }}_150.jpg" alt="avatar">
                                 </a>
                             </div>
                             <div class="ranklist_info__wrapper">
                                 <div class="table">
                                     <div class="table-cell">
-                                        <a class="ranklist_info__name" href="/trader/#/trader/{{rank.usercode}}/summary" title="{{ rank.username }}" target="_blank">
+                                        <a class="ranklist_info__name" href="/trader/{{rank.usercode}}/#/trader/summary" title="{{ rank.username }}" target="_blank">
                                             {{ rank.username || '**' }}
                                         </a>
                                         <span class="ranklist_info__number">
-                                            {{ rank.number }}#
+                                            {{ rank.ranking }}#
                                         </span>
                                         <span class="ranklist_info__address">
                                             <i class="fa fa-map-marker"></i>
-                                            {{ rank.address }}
+                                            {{ rank.region_cn.world_name }}
                                         </span>
                                     </div>
                                 </div>
@@ -61,7 +61,7 @@
                         <i class="fa fa-users"></i>{{ rank.copiers_sum || 0 }}
                     </div>
                     <div class="col-1">
-                        <i class="fa fa-dollar"></i>{{ rank.copy_money_min || '0.00' }}
+                        <i class="fa fa-dollar"></i>{{ rank.copy_amount || '0.00' }}
                     </div>
                     <div class="col-1">
                         <div tw-line-chart data-type="masterList"></div>
@@ -73,13 +73,13 @@
                         <span ng-show="rank.drawdown_num === 2" class="font-danger">高</span>
                     </div>
                     <div class="col-1">
-                        {{ rank.profit || '0.00' }}%
+                        {{ rank.profit_rate || '0.00' }}%
                     </div>
                     <div class="col-1">
-                        <i class="fa fa-dollar"></i>{{ rank.profit_copiers || '0.00' }}
+                        <i class="fa fa-dollar"></i>{{ rank.copy_profit || '0.00' }}
                     </div>
                     <div class="col-1-lg">
-                        <a class="btn btn-primary btn-sm" href="/trader/#/trader/{{rank.usercode}}/summary" target="_blank">复制</a>
+                        <a class="btn btn-primary btn-sm" href="/trader/{{rank.usercode}}/#/trader/summary" target="_blank">复制</a>
                     </div>
                 </div>
             </li>

@@ -158,7 +158,7 @@
                         }
                     });
 
-                    var line_chart = JSON.parse(scope.rank.line_chart);
+                    var line_chart = scope.rank.line_chart;
                     var data = Highcharts.map(line_chart, function (config) {
                         return {
                             x: config.timestamp * 1000,

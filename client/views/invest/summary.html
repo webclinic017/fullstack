@@ -11,7 +11,7 @@
                             <span class="invest_order_loss">亏损订单</span>
                         </div>
                         <div class="invest_main__chart">
-                            <span class="num">{{ summary.order_sum }}</span>
+                            <span class="num">{{ summary.order_count.open_trade }}</span>
                             <br>
                             <span class="space_gray_color">平仓交易</span>
                         </div>
@@ -20,31 +20,31 @@
                         <div class="row">
                             <div class="col-xs-6 no_padding">
                                 <div class="invest_main__rt">
-                                    <div class="space_gray_color">最大盈利</div>
-                                    <div>{{ summary.max_profit || '0.00' }}%</div>
+                                    <div class="space_gray_color">平均持仓时间</div>
+                                    <div>{{ summary.statistic.holding_time || '0.00' | duration }}</div>
                                 </div>
                                 <div class="invest_main__rt">
-                                    <div class="space_gray_color">平均盈利</div>
-                                    <div>{{ summary.average_profit || '0.00'  }}%</div>
+                                    <div class="space_gray_color">月平均交易笔数</div>
+                                    <div>{{ summary.statistic.trader_num || '0'  }}</div>
                                 </div>
                                 <div class="invest_main__rt no-border">
-                                    <div class="space_gray_color">最小盈利</div>
-                                    <div>{{ summary.min_profit || '0.00' }}%</div>
+                                    <div class="space_gray_color">月回报率</div>
+                                    <div>{{ summary.statistic.month_profit || '0.00' }}%</div>
                                 </div>
                             </div>
                             <div class="col-xs-6 no_padding">
                                 <span class="navbar_summary__divider"></span>
                                 <div class="invest_main__rt">
-                                    <div class="space_gray_color">最大亏损</div>
-                                    <div>{{ summary.max_loss || '0.00' }}%</div>
+                                    <div class="space_gray_color">最大回撤</div>
+                                    <div>{{ summary.statistic.drawdown || '0.00' }}%</div>
                                 </div>
                                 <div class="invest_main__rt">
-                                    <div class="space_gray_color">平均亏损</div>
-                                    <div>{{ summary.average_loss || '0.00' }}%</div>
+                                    <div class="space_gray_color">最大盈利</div>
+                                    <div><i class="fa fa-dollar"></i>{{ summary.statistic.max_profit || '0.00' }}</div>
                                 </div>
                                 <div class="invest_main__rt no-border">
-                                    <div class="space_gray_color">最小亏损</div>
-                                    <div>{{ summary.min_loss || '0.00' }}%</div>
+                                    <div class="space_gray_color">总收益率</div>
+                                    <div>{{ summary.statistic.total_profit || '0.00' }}%</div>
                                 </div>
                             </div>
                         </div>
