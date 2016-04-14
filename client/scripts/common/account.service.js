@@ -20,6 +20,7 @@
             checkPhoneAndCaptcha: checkPhoneAndCaptcha,
             setNewPwd: setNewPwd,
             getPersonalInfo: getPersonalInfo,
+            getPersonalInfoDegree: getPersonalInfoDegree,
             getAssetInfo: getAssetInfo,
             getUnreadLength: getUnreadLength,
             getNoticeCategory: getNoticeCategory,
@@ -28,6 +29,7 @@
             getAllRead: getAllRead,
             getSettingInfo: getSettingInfo,
             getLocation: getLocation,
+            getWorlds: getWorlds,
             getStates: getStates,
             getCities: getCities,
             getTradeInfo: getTradeInfo,
@@ -213,6 +215,15 @@
         }
 
         /**
+         * Account Service 获取用户信息完整度
+         *
+         * @method getPersonalInfoDegree
+         */
+        function getPersonalInfoDegree () {
+            return $http.get('/action/public/v4/user_perfect_degree');
+        }
+
+        /**
          * Account Service 获取资产信息
          * 余额、净值、浮动盈亏等
          *
@@ -320,6 +331,10 @@
             return $http.get('/api/v1/basic_settings');
         }
 
+        function getWorlds() {
+            return $http.get('/api/v1/worldcode_list');
+        }
+
         function getStates(countryCode) {
             return $http.get('/api/v1/statecode_list', {
                 params: {
@@ -353,8 +368,15 @@
          * @name setBasicInfo
          * @desc setting 模块设置基本信息
          */
-        function setBasicInfo() {
-            return $http.post('/xxx', {
+        function setBasicInfo(username, world, state, city, special, strategy, desc) {
+            return $http.post('/action/public/v4/update_user_info', {
+                username: username,
+                world_code: world,
+                state_code: state,
+                city_code: city,
+                special: special,
+                strategy: strategy,
+                desc: desc
             });
         }
 

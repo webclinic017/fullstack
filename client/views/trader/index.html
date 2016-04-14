@@ -6,15 +6,15 @@
                     <div class="col-xs-3">
                         <div class="trader_avatar">
                             <span class="trader_avatar__wrapper">
-                                <img ng-src="{{ master.avatar_path }}" alt="avatar">
-                                <span class="trader_avatar__number">NO.<%= master.number%></span>
+                                <img ng-src="/avatar/<%= master.usercode%>_150.jpg" alt="avatar">
+                                <span class="trader_avatar__number">NO.<%= master.ranking%></span>
                             </span>
                         </div>
                         <div class="trader_user">
                             <span class="trader_user__username"><%= master.username%></span>
                             <span class="trader_user__position trader_gray_color">
                                 <i class="fa fa-map-marker"></i>
-                                <%= master.address%>
+                                <%= master.region_cn.world_name%>
                             </span>
                         </div>
                         <div class="trader_btn">
@@ -22,10 +22,10 @@
                             <button class="btn btn-primary" ng-if="!master.copied" ng-click="toCopy()">复制</button>
                             <button class="btn btn-primary" disabled ng-if="master.copied">已复制</button>
                             
-                            <div class="trader_gray_color trader_btn__profit">
+                            <!-- <div class="trader_gray_color trader_btn__profit">
                                 已帮 {{ master.help_num || 0 }} 人赚取
                                 <span><i class="fa fa-dollar"></i>{{ master.help_amount || 0 }}</span>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                     <ul class="col-xs-9 clearfix">
@@ -36,8 +36,8 @@
                             <div class="trader_gray_color">总收益率</div>
                         </li>
                         <li class="trader_profit">
-                            <div class="trader_profit__item" ng-class="{'font-danger': master.profit_month.indexOf('-') >= 0, 'font-success': master.profit_month.indexOf('-') < 0}">
-                                <span>{{ master.profit_month || '0.00' }}</span>%
+                            <div class="trader_profit__item" ng-class="{'font-danger': master.month_profit.indexOf('-') >= 0, 'font-success': master.month_profit.indexOf('-') < 0}">
+                                <span>{{ master.month_profit || '0.00' }}</span>%
                             </div>
                             <div class="trader_gray_color">月回报率</div>
                         </li>
@@ -52,21 +52,21 @@
                         </li>
                         <li class="trader_profit">
                             <div class="trader_profit__item">
-                                <span>{{ master.profit_ratio || '0.00' }}</span>%
+                                <span>{{ master.bonus || '0.00' }}</span>%
                             </div>
                             <div class="trader_gray_color">分成比例</div>
                         </li>
                         <li class="trader_profit">
                             <div class="trader_profit__item">
-                                <span><i class="fa fa-dollar"></i>{{ master.copy_money_min || '0.00' }}</span>
+                                <span><i class="fa fa-dollar"></i>{{ master.copy_amount || '0.00' }}</span>
                             </div>
-                            <div class="trader_gray_color">最低复制金额</div>
+                            <div class="trader_gray_color">复制金额</div>
                         </li>
                         <li class="trader_profit">
                             <div class="trader_profit__item">
-                                <span>{{ master.copiers_sum || '0' }}</span>
+                                <span><i class="fa fa-dollar"></i>{{ master.copy_profit || '0' }}</span>
                             </div>
-                            <div class="trader_gray_color">复制者</div>
+                            <div class="trader_gray_color">复制者盈利</div>
                         </li>
                     </ul>
                 </div>
@@ -76,11 +76,7 @@
                 <ul>
                     <li class="trader_message clearfix">
                         <strong class="trader_message__item">交易经验：</strong>
-                        <div class="trader_message__item trader_gray_color"><%= master.experience%></div>
-                    </li>
-                    <li class="trader_message clearfix">
-                        <strong class="trader_message__item">毕业院校：</strong>
-                        <div class="trader_message__item trader_gray_color"><%= master.education%></div>
+                        <div class="trader_message__item trader_gray_color"><%= master.experience%> 年</div>
                     </li>
                     <li class="trader_message clearfix">
                         <strong class="trader_message__item">交易特色：</strong>
@@ -88,7 +84,7 @@
                     </li>
                     <li class="trader_message clearfix">
                         <strong class="trader_message__item">交易策略：</strong>
-                        <div class="trader_message__item trader_gray_color"><%= master.strategy%></div>
+                        <div class="trader_message__item trader_gray_color"><%= master.trading_strategy%></div>
                     </li>
                     <li class="trader_message clearfix">
                         <strong class="trader_message__item">更多介绍：</strong>

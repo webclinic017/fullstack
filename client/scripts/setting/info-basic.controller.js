@@ -6,11 +6,15 @@
         .module('fullstackApp')
         .controller('SettingInfoBasicController', SettingInfoBasicController);
 
-    SettingInfoBasicController.$inject = ['$scope', 'account', 'validator'];
+    SettingInfoBasicController.$inject = ['$scope', 'account', '$timeout', 'validator'];
 
-    function SettingInfoBasicController($scope, account, validator) {
+    function SettingInfoBasicController($scope, account, $timeout, validator) {
         $scope.basicInfo = {
             username: undefined,
+            locationWorld: {
+                key: undefined,
+                value: undefined
+            },
             locationState: {
                 key: undefined,
                 value: undefined
@@ -19,17 +23,18 @@
                 key: undefined,
                 value: undefined
             },
-            feature: {
+            special: {
                 key: undefined,
                 value: undefined
             },
-            policy: undefined,
+            strategy: undefined,
             desc: undefined
         };
+        $scope.worlds = [];
         $scope.states = [];
         $scope.cities = [];   // 市/区
         // 交易特色选项
-        $scope.features = [
+        $scope.specials = [
             {
                 key: '长线交易',
                 value: '长线交易'
@@ -70,10 +75,10 @@
             locationCity: {
                 show: false
             },
-            feature: {
+            special: {
                 show: false
             },
-            policy: {
+            strategy: {
                 show: false
             },
             desc: {
@@ -86,7 +91,7 @@
                 show: false,
                 status: 0
             },
-            policy: {
+            strategy: {
                 show: false,
                 status: 0
             },
@@ -105,13 +110,30 @@
         $scope.hideErr = hideErr;
         $scope.submitForm = submitForm;
 
-        $scope.sss = {name: 'xxx'};
+        $scope.$watch('personal', function (newVal, oldVal, scope) {
+            if (newVal === oldVal) return;
+            if (newVal.username === undefined) return;
+            // console.info(newVal);
+            
+            $scope.basicInfo.username = newVal.username;
+            $scope.basicInfo.special = {
+                key: newVal.trading_type,
+                value: newVal.trading_type
+            };
+            $scope.basicInfo.strategy = newVal.trading_strategy;
+            $scope.basicInfo.desc = newVal.desc;
+        }, true);
 
         initLocation();
 
         function initLocation() {
             account.getLocation().then(function (data) {
+                // console.info(data);
                 angular.extend($scope.basicInfo, {
+                    locationWorld: {
+                        key: data.world_name,
+                        value: data.world_code
+                    },
                     locationState: {
                         key: data.state_name,
                         value: data.state_code
@@ -126,8 +148,12 @@
             });
 
             $scope.$on('locationInfoReady', function () {
-                getRegions('state', 'states', 'CN');
-                getRegions('city', 'cities', $scope.basicInfo.locationState.value);
+                getRegions('world', 'worlds');
+                
+                if ($scope.basicInfo.locationWorld.value == 'CN') {
+                    getRegions('state', 'states', $scope.basicInfo.locationWorld.value);
+                    getRegions('city', 'cities', $scope.basicInfo.locationState.value);
+                }
             });
         }
 
@@ -136,6 +162,9 @@
             var tmp;
             
             switch (regionName) {
+                case 'world':
+                    tmp = account.getWorlds();
+                    break;
                 case 'state':
                     tmp = account.getStates(upperRegionCode);
                     break;
@@ -158,8 +187,23 @@
         // 选择一个 region
         function selectRegion(regionName, regionCode) {
             switch (regionName) {
+                case 'world':
+                    $scope.basicInfo.locationState = {
+                        key: undefined,
+                        value: undefined
+                    };
+                    $scope.basicInfo.locationCity = {
+                        key: undefined,
+                        value: undefined
+                    };
+                    $scope.cities = [];
+                    getRegions('state', 'states', regionCode);
+                    break;
                 case 'state':
-                    $scope.basicInfo.locationCity = {};
+                    $scope.basicInfo.locationCity = {
+                        key: undefined,
+                        value: undefined
+                    };
                     getRegions('city', 'cities', regionCode);
                     break;
                 default:
@@ -169,44 +213,69 @@
 
         function submitForm(formName) {
             showErr(formName, 'username');
-            showErr(formName, 'locationState');
-            showErr(formName, 'locationCity');
-            showErr(formName, 'feature');
-            showErr(formName, 'policy');
+            showErr(formName, 'locationWorld');
+            showErr(formName, 'special');
+            showErr(formName, 'strategy');
             showErr(formName, 'desc');
+
+            if ($scope.basicInfo.locationWorld.value == 'CN') {
+                showErr(formName, 'locationState');
+                showErr(formName, 'locationCity');
+            }
             
             if ($scope[formName].$invalid) {
                 return;
             }
 
+            // console.info($scope.basicInfo.username);
+            // console.info($scope.basicInfo.locationWorld.value);
+            // console.info($scope.basicInfo.locationState.value);
+            // console.info($scope.basicInfo.locationCity.value);
+            // console.info($scope.basicInfo.special.value);
+            // console.info($scope.basicInfo.strategy);
+            // console.info($scope.basicInfo.desc);
+
             $scope.clickable = false;
             account.setBasicInfo(
-                $scope.basicInfo.username, 
-                $scope.basicInfo.locationState,
-                $scope.basicInfo.locationCity, 
-                $scope.basicInfo.feature, 
-                $scope.basicInfo.policy, 
+                $scope.basicInfo.username,
+                $scope.basicInfo.locationWorld.value,
+                $scope.basicInfo.locationState.value,
+                $scope.basicInfo.locationCity.value, 
+                $scope.basicInfo.special.value, 
+                $scope.basicInfo.strategy, 
                 $scope.basicInfo.desc
             ).then(function (data) {
-
+                // console.info(data);
                 // 成功
                 if (data.is_succ) {
                     $scope.backErr.system.show = true;
                     $scope.backErr.system.status = 1;
+                    $scope.clickable = true;
                     
                     $timeout(function () {
                         $scope.backErr.system.show = false;
                         $scope.backErr.system.status = 0;
-                        $scope.clickable = true;
                     }, 3000);
                 } else {
                     
-                    if (data.error_code === 8) {
-                        $scope.backErr.school.status = 1;
+                    if (data.error_code === 6) {
+                        $scope.backErr.username.show = true;
+                        $scope.backErr.username.status = 1;
                     }
 
-                    if (data.error_code === 12) {
-                        $scope.backErr.desc.status = 1;
+                    if (data.error_code === 3) {
+                        $scope.backErr.username.show = true;
+                        $scope.backErr.username.status = 2;
+                    }
+
+                    if (data.error_code === 1) {
+                        $scope.backErr.system.show = true;
+                        $scope.backErr.system.status = 2;
+                        
+                        $timeout(function () {
+                            $scope.backErr.system.show = false;
+                            $scope.backErr.system.status = 0;
+                        }, 3000);
                     }
                     $scope.clickable = true;
                 }

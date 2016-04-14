@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('TraderHistoryController', TraderHistoryController);
 
-    TraderHistoryController.$inject = ['$scope', '$state', 'trader'];
+    TraderHistoryController.$inject = ['$scope', '$location', '$state', 'trader'];
 
-    function TraderHistoryController($scope, $state, trader) {
+    function TraderHistoryController($scope, $location, $state, trader) {
         $scope.orders = [];
         $scope.pagebar = {
             config: {
@@ -21,7 +21,11 @@
         };
 
         var pagesize = 8;
-        var usercode = $state.params.usercode;
+        var usercode;
+        var absUrl = $location.absUrl();
+        var regUsercode = /trader\/(\d+)\/#/;
+
+        usercode = absUrl.match(regUsercode)[1];
 
         getList(1);
 

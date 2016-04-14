@@ -31,9 +31,9 @@
          * @param {String} usercode 
          */
         function getMasterDetail (usercode) {
-            return $http.get('/data/master_detail.json', {
+            return $http.get('/action/public/v4/get_master_info', {
                 params: {
-                    user_code: usercode
+                    usercode: usercode
                 }
             });
         }
@@ -46,9 +46,9 @@
          * @param {String} usercode
          */
         function getMasterSummary (usercode) {
-            return $http.get('/data/master_summary.json', {
+            return $http.get('/action/public/v4/get_master_data', {
                 params: {
-                    user_code: usercode
+                    usercode: usercode
                 }
             });
         }
@@ -111,10 +111,8 @@
          * @param {String} usercode 曲线所属用户的 user code
          */
         function getMasterBarChart(usercode) {
-            return $http.get('/data/bar_chart.json', {
-                params: {
-                    user_code: usercode
-                }
+            return $http.post('/action/public/v3/get_master_symbol_count', {
+                cros_user: usercode
             });
         }
 
