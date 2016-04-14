@@ -67,12 +67,24 @@
             //     }
             // });
 
-            return $http.get('https://www.tigerwit.com/blog/archives/category/market_comment/lipeng?json=1', {
-                params: {
-                    page: page,
-                    pagesize: pagesize
-                }
-            });
+            return $http.post('/blog/api/get_category_posts?id=86');
+
+        }
+
+        /**
+         * Product Service 交易品种下的市场分析
+         *
+         * @method getProductMarket
+         */
+        function getProductComment(page, pagesize) {
+            // return $http.get('/data/product-comment.json', {
+            //     params: {
+            //         page: page,
+            //         pagesize: pagesize
+            //     }
+            // });
+
+            return $http.post('/blog/api/get_category_posts?id=84');
 
         }
 

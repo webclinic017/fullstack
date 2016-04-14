@@ -1,0 +1,72 @@
+@include b(web-partner) {
+    margin-top: 84px;
+    overflow: hidden;
+
+    @include e(title) {
+        margin-top: 56px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid $gray;
+        font-size: 22px;
+        font-family: "MicrosoftYaHei Bold";
+        font-weight: bold;
+        line-height: 36px;
+        color: $gray-base;
+    }
+
+    @include e(ul) {
+        margin-top: 14px;
+
+        li {
+            overflow: hidden;
+            padding-top: 45px;
+            padding-bottom: 55px;
+            line-height: 24px;
+            color: #666;
+
+        }
+
+        li:nth-child(2n+1) {
+            background: #fff;
+        }
+
+        @include m(img) {
+            margin-left: 28px;
+            width: 152px;
+            height: 61px;
+            float: left;
+        }
+
+        @include m(con) {
+            padding-top: 3px;
+            padding-right: 43px;
+            margin-left: 222px;
+        }
+
+        @include m(icon1) {
+            @include img-normal($image-path-web + "partner-icon1.png");
+        }
+        @include m(icon2) {
+            height: 54px;
+            @include img-normal($image-path-web + "partner-icon2.png");
+        }
+        @include m(icon3) {
+            @include img-normal($image-path-web + "partner-icon3.png");
+        }
+        @include m(icon4) {
+            height: 55px;
+            @include img-normal($image-path-web + "partner-icon4.png");
+        }
+        @include m(icon5) {
+            @include img-normal($image-path-web + "partner-icon5.png");
+        }
+        @include m(icon6) {
+            @include img-normal($image-path-web + "partner-icon6.png");
+        }
+        @include m(icon7) {
+            @include img-normal($image-path-web + "partner-icon7.png");
+        }
+        @include m(icon8) {
+            @include img-normal($image-path-web + "partner-icon8.png");
+        }
+    }
+}
