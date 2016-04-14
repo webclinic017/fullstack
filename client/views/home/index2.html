@@ -1,0 +1,251 @@
+<section class="index2-banner">
+    <div class="swiper-container" style="height: 592px;" tw-carousel>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide index2-slide1">
+                <p class="index2-banner__tle1">复制跟单</p>
+                <p class="index2-banner__tle2">人人都是投资高手</p>
+                <span class="index2-banner__circle"></span>
+                <span class="index2-banner__info">无需24小时盯盘</span>
+                <span class="index2-banner__circle"></span>
+                <span class="index2-banner__info">一键复制</span>
+                <span class="index2-banner__circle"></span>
+                <span class="index2-banner__info">立享同步收益</span><br>
+                <a class="index2-banner__btn1" href="">立即复制</a>
+            </div>
+            <div class="swiper-slide index2-slide2" style="background-color: #662">
+                <p class="index2-banner__tle1"><span class="font-white">尊享</span>STP直通式<span class="font-white">交易模式</span></p>
+                <p class="index2-banner__b2-tip2 mg-tp-50">与多家国际银行对接</p>
+                <p class="index2-banner__b2-tip2">通过STP方式让用户订单在最短的时间内与最优的价格成交</p>
+                <a class="index2-banner__btn1" href="">立即复制</a>
+
+            </div>
+            <div class="swiper-slide index2-slide3 text-left" style="background-color: #a91">
+                <div class="container">
+                    <div class="index2-banner__b3-p1"></div>
+                    <a class="index2-banner__b3-btn1" href="">立即复制</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pagination"></div>
+</section>
+
+<section class="index2-master" ng-controller="HomeIndexController">
+    <div class="container">
+        <div class="index2-master__con">
+            <div class="row">
+                <div class="col-xs-3 index2-master__col1">
+                    <p class="index2-master__col1-tit">复制高手交易，立享同步收益</p>
+                    <ul class="index2-master__col1-ul">
+                        <li>
+                            <span class="index2-master__col1-circle">1</span>
+                            &nbsp;选择自己喜欢的高手
+                        </li>
+                        <li>
+                            <span class="index2-master__col1-circle">2</span>
+                            &nbsp;输入复制金额，点击复制
+                        </li>
+                        <li>
+                            <span class="index2-master__col1-circle">3</span>
+                            &nbsp;享受和高手同比例收益
+                        </li>
+                        <li>
+                            <span class="index2-master__col1-circle">4</span>
+                            &nbsp;成为高手，您将获得复制者盈利的20%
+                        </li>
+                        <a class="index2-master__col1-btn" href="">选择高手</a>
+                    </ul>
+                </div>
+                <div class="col-xs-3 index2-master__col2" ng-cloak ng-repeat="master in indexMasters">
+                    <ul>
+                        <li class="index2-master__col2-li1">
+                            <a class="index2-master__col2-photo" href="/trader/#/trader/{{master.usercode}}/summary" target="_blank">
+                              <img ng-src="{{ master['link'] }}" alt="avatar">
+                            </a>
+                            <span class="index2-master__col2-name">{{ master.username || '**' }}</span>
+                        </li>
+                        <li class="index2-master__col2-li2">
+                            <div class="index2-master__col2-div1">
+                                <span class="index2-master__col2-rate">{{ master.profit || '0.00' }}</span><span class="font-size-12">%</span><br>
+                                <span class="font-size-14">收益率</span>
+                            </div>
+                            <div class="index2-master__col2-div2">
+                                <span class="index2-master__col2-how">低</span>
+                                <span class="index2-master__col2-how" ng-show="master.drawdown_num === 1">中</span>
+                                <span class="index2-master__col2-how" ng-show="master.drawdown_num === 2">高</span>
+                                <br>
+                                <span class="index2-master__col2-how-c">风险</span>
+                            </div>
+                        </li>
+                        <li class="index2-master__col2-li3 clearfix">
+                            <div class="index2-master__col2-div1 mg-tp-_14">
+                                <span class="index2-master__col2-num">{{ master.copiers_sum || 0 }}</span><br>
+                                <span class="font-size-14">复制人数</span>
+                            </div>
+                            <div class="index2-master__col2-div3">
+                                <a class="index2-master__col2-copy" href="/trader/#/trader/{{master.usercode}}/summary" target="_blank">
+                                    <span class="index2-master__col2-jia"></span>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="index2-product clearfix">
+    <div class="container">
+        <h2 class="index2-product__title">多样化的交易产品</h2>
+        <p class="index2-product__tip">为出色的交易体验和优化用户价值提供保障</p>
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="index2-product__up">
+                    <div class="index2-product__up-circle index2-product__up-circle1">
+                        <span class="index2-product__up-icon1"></span>
+                    </div>
+                    <p class="index2-product__up-name">外汇</p>
+                </div>
+                <div class="index2-product__down pd-lf-50">
+                    <p>同时享受3种杠杆</p>
+                    <p>市场DMA直通式报价服务</p>
+                    <p>STP交易安全，透明，放心</p>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="index2-product__up">
+                    <div class="index2-product__up-circle">
+                        <span class="index2-product__up-icon2"></span>
+                    </div>
+                    <p class="index2-product__up-name">贵金属</p>
+                </div>
+                <div class="index2-product__down pd-lf-50">
+                    <p>杠杆高，交易成本低 </p>
+                    <p>一个帐户交易黄金、白银</p>
+                    <p>MT4 平台紧贴世界金融市场潮流</p>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="index2-product__up">
+                    <div class="index2-product__up-circle">
+                        <span class="index2-product__up-icon3"></span>
+                    </div>
+                    <p class="index2-product__up-name">原油</p>
+                </div>
+                <div class="index2-product__down pd-lf-40">
+                    <p>对冲交易，减少交易风险</p>
+                    <p>可同时操作布伦特原油和西德州原油</p>
+                    <p>采用数据平滑方式进行掉期处理</p>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="index2-product__up">
+                    <div class="index2-product__up-circle">
+                        <span class="index2-product__up-icon4"></span>
+                    </div>
+                    <p class="index2-product__up-name">CFD</p>
+                </div>
+                <div class="index2-product__down pd-lf-50">
+                    <p>产品丰富，资金利用率高  </p>
+                    <p>提供低至2%水平的保证金水平</p>
+                    <p>门槛较低，报价透明</p>
+                </div>
+            </div>
+        </div>
+        <div class="index2-product__btn-con">
+            <a class="index2-product__btn" href="space/#/account/register">立即注册</a>
+        </div>
+    </div>
+</section>
+
+<section class="index2-trade">
+    <div class="container">
+        <h2 class="index2-product__title">STP直通式交易模式</h2>
+        <p class="index2-product__tip">为出色的交易体验和优化用户价值提供保障</p>
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="index2-trade__con1">
+                    TigerWit老虎金融与多家知名机构合作，从多家国际银行等获得外汇报价和清算，并且通过STP的方式将用户的订单传输到国际间银行市场，从而让用户订单在最短的时间内与最优的价格成交。
+                </div>
+                <div class="index2-trade__btn-con">
+                    <a class="index2-product__btn" href="">了解详解</a>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="index2-trade__img">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="index2-why index2-product">
+    <div class="container">
+        <h2 class="index2-product__title">为什么选择TigerWit老虎金融</h2>
+        <p class="index2-product__tip">开立老虎金融账户，享受与众不同的交易体验</p>
+        <div class="row">
+            <div class="col-xs-3">
+                <div class="index2-product__up">
+                    <div class="index2-why__up-icon1"></div>
+                    <p class="index2-product__up-name">稳定的MT4平台</p>
+                </div>
+                <div class="index2-product__down pd-lf-50">
+                    <p>毫秒交易速度，稳定安全，保证顶级交易体验</p>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="index2-product__up">
+                    <div class="index2-why__up-icon2"></div>
+                    <p class="index2-product__up-name">一对一客服服务</p>
+                </div>
+                <div class="index2-product__down pd-lf-50">
+                    <p>一对一客服支持，VIP级专业服务</p>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="index2-product__up">
+                    <div class="index2-why__up-icon3"></div>
+                    <p class="index2-product__up-name">杠杆利用</p>
+                </div>
+                <div class="index2-product__down pd-lf-40">
+                    <p>50倍、100倍、200倍杠杆交易，灵活满足您对风险控制，资金管理的需求</p>
+                </div>
+            </div>
+            <div class="col-xs-3">
+                <div class="index2-product__up">
+                    <div class="index2-why__up-icon4"></div>
+                    <p class="index2-product__up-name">闪电出入金</p>
+                </div>
+                <div class="index2-product__down pd-lf-50">
+                    <p>入金即时到账，出金24小时到账</p>
+                </div>
+            </div>
+        </div>
+        <div class="index2-product__btn-con">
+            <a class="index2-product__btn" href="space/#/account/register">立即注册</a>
+        </div>
+    </div>
+</section>
+
+<section class="index2-info">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="index2-info__personal"></div>
+            </div>
+            <div class="col-xs-6">
+                <h2 class="index2-info__title">老虎金融 — 人人都是投资高手</h2>
+                <p class="index2-info__con">
+                    投资的秘诀、不是评估某一行业对社会的影响有多大、或它的发展前景有多好、而是一间公司有多强的竞争优势、这优势可以维持多久。产品和服务的优越性持久而深厚、才能给投资者带来优厚的回报。
+                </p>
+                <p class="index2-info__con1 text-right">—— 沃伦·巴菲特</p>
+                <div class="index2-info__btn-con">
+                    <a class="index2-product__btn" href="">立即注册</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

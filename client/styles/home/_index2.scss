@@ -1,0 +1,566 @@
+@include b(index2-banner) {
+    position: relative;
+    margin-top: 84px;
+    text-align: center;
+
+    .index2-slide1 {
+        overflow: hidden;
+        height: 592px !important;
+        background-position: center center;
+        background-size: cover;
+        @include img-normal($image-path-home + "index2-banner1.png");
+
+    }
+    .index2-slide2 {
+        overflow: hidden;
+        height: 592px !important;
+        background-position: center center;
+        background-size: cover;
+        @include img-normal($image-path-home + "index2-banner2.png");
+
+    }
+    .index2-slide3 {
+        overflow: hidden;
+        height: 592px !important;
+        background-position: center center;
+        background-size: cover;
+        @include img-normal($image-path-home + "index2-banner3.png");
+
+    }
+
+    .pagination {
+        position: absolute;
+        left: 0;
+        bottom: 60px;
+        width: 100%;
+        z-index: 20;
+        text-align: center;
+
+    }
+    .swiper-pagination-switch {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #fff;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+    .swiper-active-switch {
+        background: $brand-primary;
+    }
+
+    @include e(tle1) {
+        margin-top: 50px;
+        font-family: "FZLTZCHK  GBK1 0";
+        font-size: 60px;
+        line-height: 80px;
+        color: $brand-primary;
+    }
+    @include e(tle2) {
+        font-family: "FZLTZCHK  GBK1 0";
+        font-size: 60px;
+        color: #fff;
+    }
+    @include e(circle) {
+        margin-bottom: 3px;
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        line-height: 24px;
+        border-radius: 50%;
+        background: $brand-primary;
+    }
+    @include e(info) {
+        margin-right: 45px;
+        font-family: "MicrosoftYaHei";
+        font-size: 24px;
+        color: #FDFDFD;
+    }
+    @include e(btn1) {
+        margin-top: 68px;
+        padding: 19px 58px;
+        display: inline-block;
+        border: 1px solid $brand-primary;
+        border-radius: 4px;
+        background: transparent;
+        font-family: "MicrosoftYaHei Bold";
+        font-size: 24px;
+        color: $brand-primary;
+
+        &:hover {
+            background: $brand-primary;
+            color: #fff;
+        }
+    }
+
+    @include e(b2-tip2) {
+        line-height: 41px;
+        font-size: 24px;
+        color: #FDFDFD;
+    }
+    @include e(b3-p1) {
+        margin-top: 100px;
+        width: 504px;
+        height: 228px;
+        background-size: 100%;
+        @include img-normal($image-path-home + "index2-b3-con.png");
+
+    }
+    @include e(b3-btn1) {
+        margin-top: 68px;
+        padding: 19px 58px;
+        display: inline-block;
+        border: 1px solid $brand-primary;
+        border-radius: 4px;
+        background: transparent;
+        font-family: "MicrosoftYaHei Bold";
+        font-size: 24px;
+        color: $brand-primary;
+
+        &:hover {
+            background: $brand-primary;
+            color: #fff;
+        }
+    }
+}
+
+@include b(index2-master) {
+    position: relative;
+    height: 330px;
+    background: #F9FAFB;
+
+    @include e(con) {
+        .row {
+            position: relative;
+            top: -64px;
+            z-index: 22;
+        }
+        .col-xs-3 {
+            padding-left: 0px;
+            padding-right: 0px;
+            height: 338px;
+        }
+    }
+
+    @include e(col1) {
+        padding-top: 36px;
+        padding-left: 21px !important;
+        padding-right: 21px !important;
+        background: #fff;
+
+        @include m(tit) {
+            font-family: "MicrosoftYaHei Bold";
+            font-size: 20px;
+        }
+
+        @include m(circle) {
+            display: inline-block;
+            width: 17px;
+            height: 17px;
+            border-radius: 50%;
+            background: $brand-primary;
+            font-size: 12px;
+            line-height: 17px;
+            text-align: center;
+        }
+
+        @include m(ul) {
+            margin-top: 20px;
+
+            li {
+                // margin-bottom: 12px;
+                line-height: 30px;
+            }
+        }
+
+        @include m(btn) {
+            position: absolute;
+            bottom: 0;
+            left: 21%;
+            display: inline-block;
+            padding: 12px 40px;
+            background: #000;
+            font-size: 18px;
+            line-height: 30px;
+            color: $brand-primary;
+        }
+    }
+    @include e(col2) {
+        padding-top: 20px;
+        padding-left: 11px !important;
+        padding-right: 11px !important;
+        background-position: center center;
+        @include img-normal($image-path-home + "index2-master-bg.jpg");
+
+        @include m(li1) {
+            padding-bottom: 11px;
+            border-bottom: 1px solid #e7c908;
+        }
+
+        @include m(li2) {
+            padding-top: 35px;
+            padding-bottom: 19px;
+            overflow: hidden;
+        }
+
+
+        @include m(li3) {
+            padding-top: 26px;
+            border-top: 1px solid #e7c908;
+        }
+
+        @include m(photo) {
+            display: inline-block;
+            margin-left: 6px;
+            width: 53px;
+            height: 53px;
+            border: 1px solid #fff;
+            // background: #fdd;
+            img {
+              width: 100%;
+            }
+        }
+        @include m(name) {
+            display: inline-block;
+            margin-left: 18px;
+            vertical-align: top;
+            line-height: 55px;
+            font-size: 20px;
+
+        }
+        @include m(div1) {
+            float: left;
+            padding-left: 10px;
+        }
+        @include m(div2) {
+            float: right;
+            padding-top: 15px;
+            padding-right: 10px;
+            padding-left: 22px;
+            border-left: 1px solid #e7c908;
+
+        }
+        @include m(div3) {
+            float: right;
+            padding-right: 10px;
+            padding-left: 22px;
+
+        }
+        @include m(rate) {
+            font-size: 45px;
+        }
+        @include m(how) {
+            display: inline-block;
+            padding: 9px;
+            border: 1px solid #000;
+            font-family: "MicrosoftYaHei";
+            font-size: 24px;
+            line-height: 24px;
+        }
+        @include m(how-c) {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        @include m(num) {
+            font-size: 36px;
+        }
+        @include m(copy) {
+            display: inline-block;
+            position: relative;
+            width: 53px;
+            height: 53px;
+            background: #000;
+        }
+        @include m(jia) {
+            position: absolute;
+            top: 28%;
+            left: 29%;
+            display: inline-block;
+            width: 23px;
+            height: 21px;
+            @include img-normal($image-path-home + "index2-master-jia.png");
+
+            &:hover {
+
+            }
+        }
+        .mg-tp-_14 {
+            margin-top: -14px;
+        }
+    }
+}
+
+.index2-master__col2-jia:hover {
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg); /* Internet Explorer */
+    -moz-transform:rotate(180deg); /* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(180deg); /* Opera */
+    -webkit-transition:all 0.3s ease-in-out;
+    -o-transition:all 0.3s ease-in-out;
+    transition:all 0.3s ease-in-out;
+}
+
+@include b(index2-product) {
+    background: #fff;
+
+    .col-xs-3 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    // 通用
+    @include e(title) {
+        margin-top: 60px;
+        line-height: 48px;
+        text-align: center;
+        font-size: 32px;
+        font-family: "MicrosoftYaHei Bold";
+        color: #0C0A09;
+    }
+    @include e(tip) {
+        margin-top: 26px;
+        line-height: 20px;
+        text-align: center;
+        font-family: "M icrosoftYaHei";
+        font-size: 18px;
+        color: #0C0A09;
+    }
+    @include e(btn-con) {
+        margin-top: 80px;
+        padding-bottom: 70px;
+        text-align: center;
+    }
+    @include e(btn) {
+        display: inline-block;
+        padding: 20px 57px;
+        border: 1px solid #0C0A09;
+        border-radius: 4px;
+        font-family: "MicrosoftYaHei Bold";
+        font-size: 24px;
+        color: #0C0A09;
+        cursor: pointer;
+
+        &:hover {
+            background: $brand-primary;
+            border: 1px solid $brand-primary;
+        }
+    }
+
+    // product
+    @include e(up) {
+        margin-top: 80px;
+        text-align: center;
+
+        @include m(circle) {
+            position: relative;
+            margin: 0 auto;
+            width: 98px;
+            height: 98px;
+            border: 5px solid #F9FAFB;
+            border-radius: 50%;
+
+            &:hover {
+                background: $brand-primary;
+            }
+        }
+
+        @include m(circle1) {
+            background: $brand-primary;
+        }
+
+        @include m(icon1) {
+            position: relative;
+            top: 9px;
+            display: inline-block;
+            width: 70px;
+            height: 65px;
+            @include img-normal($image-path-home + "index2-product-icon1.png");
+        }
+        @include m(icon2) {
+            position: relative;
+            top: 9px;
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            @include img-normal($image-path-home + "index2-product-icon2.png");
+        }
+        @include m(icon3) {
+            position: relative;
+            top: 9px;
+            display: inline-block;
+            width: 70px;
+            height: 70px;
+            @include img-normal($image-path-home + "index2-product-icon3.png");
+        }
+        @include m(icon4) {
+            position: relative;
+            top: 9px;
+            display: inline-block;
+            width: 72px;
+            height: 70px;
+            @include img-normal($image-path-home + "index2-product-icon4.png");
+        }
+
+        @include m(name) {
+            margin-top: 26px;
+            line-height: 48px;
+            font-family: "MicrosoftYaHei Bold";
+            font-size: 20px;
+            color: #0C0A09;
+        }
+    }
+    @include e(down) {
+
+    }
+}
+
+@include b(index2-trade) {
+    .row {
+        margin-top: 84px;
+        margin-bottom: 51px;
+    }
+    .col-xs-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include e(con1) {
+        margin-top: 32px;
+        padding-left: 32px;
+        padding-right: 40px;
+        line-height: 24px;
+        font-family: "MicrosoftYaHei";
+    }
+    @include e(btn-con) {
+        margin-top: 80px;
+        margin-bottom: 73px;
+        padding-left: 32px;
+        text-align: left;
+    }
+    @include e(img) {
+        background-size: 100%;
+        background-position: center center;
+        width: 550px;
+        height: 340px;
+        @include img-normal($image-path-home + "index2-trade-img.png");
+
+    }
+}
+
+@include b(index2-why) {
+
+    @include e(up) {
+        @include m(icon1) {
+            position: relative;
+            top: 9px;
+            display: inline-block;
+            width: 121px;
+            height: 100px;
+            @include img-normal($image-path-home + "index2-why-icon1.png");
+
+            &:hover {
+                left: -2px;
+                top: 10px;
+            }
+        }
+        @include m(icon2) {
+            position: relative;
+            top: 9px;
+            display: inline-block;
+            width: 90px;
+            height: 100px;
+            @include img-normal($image-path-home + "index2-why-icon2.png");
+
+            &:hover {
+                left: -2px;
+                top: 10px;
+
+            }
+        }
+        @include m(icon3) {
+            position: relative;
+            top: 9px;
+            display: inline-block;
+            width: 95px;
+            height: 100px;
+            @include img-normal($image-path-home + "index2-why-icon3.png");
+
+            &:hover {
+                left: -2px;
+                top: 10px;
+
+            }
+        }
+        @include m(icon4) {
+            position: relative;
+            top: 9px;
+            display: inline-block;
+            width: 120px;
+            height: 100px;
+            @include img-normal($image-path-home + "index2-why-icon4.png");
+
+            &:hover {
+                left: -2px;
+                top: 10px;
+
+            }
+        }
+    }
+}
+
+@include b(index2-info) {
+    background: $brand-primary;
+
+    .row {
+        margin-top: 15px;
+    }
+    .col-xs-6 {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @include e(personal) {
+        margin-top: 77px;
+        width: 489px;
+        height: 432px;
+        @include img-normal($image-path-home + "index2-info-person.png");
+
+    }
+
+    @include e(title) {
+        margin-top: 80px;
+        line-height: 36px;
+        font-family: "MicrosoftYaHei Bold";
+        font-size: 30px;
+    }
+
+    @include e(con) {
+        margin-top: 44px;
+        line-height: 36px;
+        font-family: "MicrosoftYaHei";
+        font-size: 16px;
+    }
+    @include e(con) {
+        line-height: 36px;
+        font-family: "MicrosoftYaHei";
+        font-size: 16px;
+    }
+
+    @include e(btn-con) {
+        margin-top: 44px;
+        margin-bottom: 77px;
+        text-align: right;
+
+
+        .index2-product__btn {
+            &:hover {
+                border: 1px solid #0C0A09;
+                background: #000;
+                color: $brand-primary;
+            }
+        }
+    }
+}
