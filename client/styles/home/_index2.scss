@@ -181,7 +181,10 @@
             width: 53px;
             height: 53px;
             border: 1px solid #fff;
-            background: #fdd;
+            // background: #fdd;
+            img {
+              width: 100%;
+            }
         }
         @include m(name) {
             display: inline-block;

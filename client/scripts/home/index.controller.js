@@ -34,14 +34,15 @@
             // console.info(data);
         });
 
-        product.getIndexMasters().then(function (data) {
-            $scope.indexMasters = data;
-            // console.info(data);
+        // 此为index2 首页的高手信息
+        ranklist.getMastersList().then(function (data) {
+            console.info(data);
+            $scope.indexMasters = data.data.slice(0, 3);
         });
 
         ranklist.getMastersList().then(function (data) {
             console.info(data);
-            $scope.homeMasters = data.data.slice(0, 5);
+            $scope.homeMasters = data.data.slice(0, 3);
         });
     }
 })();

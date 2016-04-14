@@ -48,90 +48,38 @@
                 <div class="col-xs-3 index2-master__col2" ng-cloak ng-repeat="master in indexMasters">
                     <ul>
                         <li class="index2-master__col2-li1">
-                            <a class="index2-master__col2-photo" href=""></a>
-                            <span class="index2-master__col2-name">{{master.name}}</span>
+                            <a class="index2-master__col2-photo" href="/trader/#/trader/{{master.usercode}}/summary" target="_blank">
+                              <img ng-src="{{ master['link'] }}" alt="avatar">
+                            </a>
+                            <span class="index2-master__col2-name">{{ master.username || '**' }}</span>
                         </li>
                         <li class="index2-master__col2-li2">
                             <div class="index2-master__col2-div1">
-                                <span class="index2-master__col2-rate">{{master.total_rate}}</span><span class="font-size-12">%</span><br>
+                                <span class="index2-master__col2-rate">{{ master.profit || '0.00' }}</span><span class="font-size-12">%</span><br>
                                 <span class="font-size-14">收益率</span>
                             </div>
                             <div class="index2-master__col2-div2">
-                                <span class="index2-master__col2-how">{{master.how}}</span><br>
+                                <span class="index2-master__col2-how">低</span>
+                                <span class="index2-master__col2-how" ng-show="master.drawdown_num === 1">中</span>
+                                <span class="index2-master__col2-how" ng-show="master.drawdown_num === 2">高</span>
+                                <br>
                                 <span class="index2-master__col2-how-c">风险</span>
                             </div>
                         </li>
                         <li class="index2-master__col2-li3 clearfix">
                             <div class="index2-master__col2-div1 mg-tp-_14">
-                                <span class="index2-master__col2-num">{{master.follow}}</span><br>
+                                <span class="index2-master__col2-num">{{ master.copiers_sum || 0 }}</span><br>
                                 <span class="font-size-14">复制人数</span>
                             </div>
                             <div class="index2-master__col2-div3">
-                                <a class="index2-master__col2-copy" href="">
+                                <a class="index2-master__col2-copy" href="/trader/#/trader/{{master.usercode}}/summary" target="_blank">
                                     <span class="index2-master__col2-jia"></span>
                                 </a>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <!-- <div class="col-xs-3 index2-master__col2">
-                    <ul>
-                        <li class="index2-master__col2-li1">
-                            <a class="index2-master__col2-photo" href=""></a>
-                            <span class="index2-master__col2-name">ASS Eddd</span>
-                        </li>
-                        <li class="index2-master__col2-li2">
-                            <div class="index2-master__col2-div1">
-                                <span class="index2-master__col2-rate">-530</span><span class="font-size-12">%</span><br>
-                                <span class="font-size-14">收益率</span>
-                            </div>
-                            <div class="index2-master__col2-div2">
-                                <span class="index2-master__col2-how">低</span><br>
-                                <span class="index2-master__col2-how-c">风险</span>
-                            </div>
-                        </li>
-                        <li class="index2-master__col2-li3 clearfix">
-                            <div class="index2-master__col2-div1 mg-tp-_14">
-                                <span class="index2-master__col2-num">999</span><br>
-                                <span class="font-size-14">复制人数</span>
-                            </div>
-                            <div class="index2-master__col2-div3">
-                                <a class="index2-master__col2-copy" href="">
-                                    <span class="index2-master__col2-jia"></span>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-xs-3 index2-master__col2">
-                    <ul>
-                        <li class="index2-master__col2-li1">
-                            <a class="index2-master__col2-photo" href=""></a>
-                            <span class="index2-master__col2-name">ASS Eddd</span>
-                        </li>
-                        <li class="index2-master__col2-li2">
-                            <div class="index2-master__col2-div1">
-                                <span class="index2-master__col2-rate">-530</span><span class="font-size-12">%</span><br>
-                                <span class="font-size-14">收益率</span>
-                            </div>
-                            <div class="index2-master__col2-div2">
-                                <span class="index2-master__col2-how">低</span><br>
-                                <span class="index2-master__col2-how-c">风险</span>
-                            </div>
-                        </li>
-                        <li class="index2-master__col2-li3 clearfix">
-                            <div class="index2-master__col2-div1 mg-tp-_14">
-                                <span class="index2-master__col2-num">999</span><br>
-                                <span class="font-size-14">复制人数</span>
-                            </div>
-                            <div class="index2-master__col2-div3">
-                                <a class="index2-master__col2-copy" href="">
-                                    <span class="index2-master__col2-jia"></span>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div> -->
+
             </div>
         </div>
     </div>
