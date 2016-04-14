@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('TraderIndexController', TraderIndexController);
 
-    TraderIndexController.$inject = ['$scope', '$state', 'trader', '$timeout', '$modal'];
+    TraderIndexController.$inject = ['$scope', '$location', '$state', 'trader', '$timeout', '$modal'];
 
-    function TraderIndexController($scope, $state, trader, $timeout, $modal) {
+    function TraderIndexController($scope, $location, $state, trader, $timeout, $modal) {
         $scope.master = {};
         $scope.toCopy = toCopy;
         // $scope.toFollow = toFollow;
@@ -17,25 +17,28 @@
             detailId,
             avaCopyAmount;
 
-        $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
-            usercode = toParams.usercode;
-            
-            getMasterDetail(usercode);
-            getCopyRelation(usercode);
-            // getFollowRelation(usercode);
-            getAvaCopyAmount();
+        var absUrl = $location.absUrl();
+        var regUsercode = /trader\/(\d+)\/#/;
 
-            $scope.$on('$stateChangeStart', function (event, toState, toParams) {
-                if (toParams.usercode !== usercode) {
-                    $timeout.cancel(detailId);
-                }
-            });
-        });
+        usercode = absUrl.match(regUsercode)[1];
+
+        getMasterDetail(usercode);
+        getCopyRelation(usercode);
+        // getFollowRelation(usercode);
+        getAvaCopyAmount();
+
+        // $scope.$on('$stateChangeStart', function (event, toState, toParams) {
+        //     if (toParams.usercode !== usercode) {
+        //         $timeout.cancel(detailId);
+        //     }
+        // });
 
         function getMasterDetail (usercode) {
             trader.getMasterDetail(usercode).then(function (data) {
                 // console.info(data);
-                angular.extend($scope.master, data);
+                if (data.is_succ) {
+                    angular.extend($scope.master, data.data);
+                }
             });
 
             detailId = $timeout(function () {

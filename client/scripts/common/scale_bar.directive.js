@@ -32,8 +32,12 @@
                 }
 
                 if (type === 'spaceSidebar') {
-                    el.item.width('88%');
-                    el.info.html('88%');
+                    scope.$watch('personal.infoDegree', function (newVal, oldVal, scope) {
+                        if (newVal === oldVal) return;
+                        // console.info(scope.personal);
+                        el.item.width(scope.personal.infoDegree + '%');
+                        el.info.html(scope.personal.infoDegree + '%');
+                    });
                 }
             }
         }

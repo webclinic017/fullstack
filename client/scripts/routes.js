@@ -230,7 +230,7 @@
                     }
                 })
                 .state('trader.subpage', {
-                    url: '/trader/:usercode/:subpage',
+                    url: '/trader/:subpage',
                     views: {
                         'list@trader': {
                             templateUrl: function ($stateParams) {

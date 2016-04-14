@@ -7,7 +7,7 @@
             <span class="space_sidebar__user-username">{{ personal.username }}</span>
             <span class="space_sidebar__user-position">
                 <i class="fa fa-map-marker"></i>
-                {{ personal.region.state_name || '中国' }}
+                {{ personal.region.city_name || personal.region.state_name || personal.region.world_name || '中国' }}
             </span>
         </div>
         <div class="row space_sidebar__verify">

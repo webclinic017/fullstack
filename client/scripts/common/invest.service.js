@@ -28,7 +28,7 @@
          * 
          */
         function getInvestSummary () {
-            return $http.get('/data/master_summary.json');
+            return $http.get('/action/public/v4/get_user_data');
         }
 
         /**

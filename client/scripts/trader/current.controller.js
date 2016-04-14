@@ -5,13 +5,17 @@
     angular.module('fullstackApp')
         .controller('TraderCurrentController', TraderCurrentController);
 
-    TraderCurrentController.$inject = ['$scope', 'trader', '$state', '$timeout'];
+    TraderCurrentController.$inject = ['$scope', '$location', 'trader', '$state', '$timeout'];
 
-    function TraderCurrentController($scope, trader, $state, $timeout) {
+    function TraderCurrentController($scope, $location, trader, $state, $timeout) {
         $scope.orders = [];
 
-        var usercode = $state.params.usercode;
         var listId;
+        var usercode;
+        var absUrl = $location.absUrl();
+        var regUsercode = /trader\/(\d+)\/#/;
+
+        usercode = absUrl.match(regUsercode)[1];
 
         getList();
 

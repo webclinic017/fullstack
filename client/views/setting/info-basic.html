@@ -31,11 +31,11 @@
                     </div>
 
                     <div ng-show="backErr.username.show">
-                        <p class="alert alert-arrow_tp_lf" ng-show="backErr.username.status == 2">
+                        <p class="alert alert-arrow_tp_lf" ng-show="backErr.username.status == 1">
                             昵称已存在
                         </p>
 
-                        <p class="alert alert-arrow_tp_lf" ng-show="backErr.username.status == 3">
+                        <p class="alert alert-arrow_tp_lf" ng-show="backErr.username.status == 2">
                             昵称包含敏感词汇，请修改
                         </p>
                     </div>
@@ -48,6 +48,41 @@
                 <label for="">所在地</label>
             </div>
 
+            <div class="col-xs-5">
+                <div class="form-control-wrapper">
+                    <div class="select">
+                        <input class="select__input"
+                               name="locationWorld"
+                               type="text"
+                               placeholder="请选择国家"
+                               required
+                               ng-model="basicInfo.locationWorld.key"
+                               ng-class="{'form-control-error': frontErr.locationWorld.show && basicInfoForm.locationWorld.$invalid}"
+                               ng-blur="showErr('basicInfoForm', 'locationWorld')"
+                               ng-focus="hideErr('basicInfoForm', 'locationWorld')">
+                        
+                        <i class="select__icon fa fa-angle-down"></i>
+
+                        <ul class="select__dropdown" twform-select data-bind-model="basicInfo.locationWorld">
+                            
+                            <li ng-repeat="world in worlds" ng-class="{'selected': world.code === basicInfo.locationWorld.value}">
+                                <span data-value="{{world.code}}" ng-click="selectRegion('world', world.code)">{{world.name_cn}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div ng-show="frontErr.locationWorld.show">
+                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.locationWorld.$error.required">
+                            请选择国家
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" ng-if="basicInfo.locationWorld.value == 'CN'">
+            <div class="col-xs-2 pd-rg-0">
+                
+            </div>
             <div class="col-xs-5">
                 <div class="form-control-wrapper">
                     <div class="select">
@@ -71,14 +106,14 @@
                         </ul>
                     </div>
                     
-                    <div ng-show="frontErr.state.show">
+                    <div ng-show="frontErr.locationState.show">
                         <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.locationState.$error.required">
                             请选择省/市
                         </p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-xs-5">
                 <div class="form-control-wrapper">
                     <div class="select">
@@ -102,13 +137,13 @@
                         </ul>
                     </div>
 
-                    <div ng-show="frontErr.city.show">
+                    <div ng-show="frontErr.locationCity.show">
                         <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.locationCity.$error.required">
                             请选择市/区
                         </p>
                     </div>
                 </div>
-            </div>    
+            </div>   
         </div>
 
         <div class="row">
@@ -119,27 +154,27 @@
                 <div class="form-control-wrapper">
                     <div class="select">
                         <input class="select__input"
-                               name="feature"
+                               name="special"
                                type="text"
                                placeholder="请选择"
                                required
-                               ng-model="basicInfo.feature.key"
-                               ng-class="{'form-control-error': frontErr.feature.show && basicInfoForm.feature.$invalid}"
-                               ng-blur="showErr('basicInfoForm', 'feature')"
-                               ng-focus="hideErr('basicInfoForm', 'feature')">
+                               ng-model="basicInfo.special.key"
+                               ng-class="{'form-control-error': frontErr.special.show && basicInfoForm.special.$invalid}"
+                               ng-blur="showErr('basicInfoForm', 'special')"
+                               ng-focus="hideErr('basicInfoForm', 'special')">
                         
                         <i class="select__icon fa fa-angle-down"></i>
 
-                        <ul class="select__dropdown" twform-select data-bind-model="basicInfo.feature">
+                        <ul class="select__dropdown" twform-select data-bind-model="basicInfo.special">
                             
-                            <li ng-repeat="feature in features" ng-class="{'selected': feature.value === basicInfo.feature.value}">
-                                <span data-value="{{feature.value}}">{{feature.key}}</span>
+                            <li ng-repeat="special in specials" ng-class="{'selected': special.value === basicInfo.special.value}">
+                                <span data-value="{{special.value}}">{{special.key}}</span>
                             </li>
                         </ul>
                     </div>
 
-                    <div ng-show="frontErr.feature.show">
-                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.feature.$error.required">
+                    <div ng-show="frontErr.special.show">
+                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.special.$error.required">
                             请选择交易特色
                         </p>
                     </div>
@@ -154,27 +189,27 @@
             <div class="col-xs-8">
                 <div class="editbox">
                     <textarea class="editbox__textarea"
-                              name="policy"
-                              ng-class="{'editbox__textarea-error': (frontErr.policy.show && basicInfoForm.policy.$invalid) || (backErr.policy.show && backErr.policy.status > 0)}"
-                              ng-model="basicInfo.policy"
+                              name="strategy"
+                              ng-class="{'editbox__textarea-error': (frontErr.strategy.show && basicInfoForm.strategy.$invalid) || (backErr.strategy.show && backErr.strategy.status > 0)}"
+                              ng-model="basicInfo.strategy"
                               twform-editbox
                               data-words-limit="1000"
-                              data-words="policy.words"
-                              ng-focus="hideErr('basicInfoForm', 'policy')"
-                              ng-blur="showErr('basicInfoForm', 'policy')"></textarea>
+                              data-words="strategy.words"
+                              ng-focus="hideErr('basicInfoForm', 'strategy')"
+                              ng-blur="showErr('basicInfoForm', 'strategy')"></textarea>
 
                     <span class="editbox__words_limit">
-                        {{ policy.words }}/1000 字符
+                        {{ strategy.words }}/1000 字符
                     </span>
                     
-                    <div ng-show="frontErr.policy.show">
-                        <p class="alert-arrow_tp_lf" ng-show="basicInfoForm.policy.$error.twformEditbox">
+                    <div ng-show="frontErr.strategy.show">
+                        <p class="alert-arrow_tp_lf" ng-show="basicInfoForm.strategy.$error.twformEditbox">
                             超出字符数限制
                         </p>
                     </div>
 
-                    <div ng-show="backErr.policy.show">
-                        <p class="alert-arrow_tp_lf" ng-show="backErr.policy.status === 1">
+                    <div ng-show="backErr.strategy.show">
+                        <p class="alert-arrow_tp_lf" ng-show="backErr.strategy.status === 1">
                             包含敏感词汇，请修改
                         </p>
                     </div>          
@@ -191,7 +226,7 @@
                     <textarea class="editbox__textarea"
                               name="desc"
                               ng-class="{'editbox__textarea-error': (frontErr.desc.show && basicInfoForm.desc.$invalid) || (backErr.desc.show && backErr.desc.status > 0)}"
-                              ng-model="info.desc"
+                              ng-model="basicInfo.desc"
                               twform-editbox
                               data-words-limit="1000"
                               data-words="desc.words"
@@ -222,7 +257,7 @@
                     保存成功
                 </p>
                 <p class="alert-system" ng-show="backErr.system.status === 2">
-                    系统繁忙
+                    登录超时
                 </p>
             </div>
             
