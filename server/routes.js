@@ -119,6 +119,10 @@ module.exports = function (app) {
         res.render('web_mt4.html');
     });
 
+    app.route('/web/partner').get(function (req, res) {
+        res.render('web/web-partner.html');
+    });
+
     app.route('/study/:subpage(introduction|term|fundamental|skill|video)').get(function (req, res) {
         var subpage = req.params.subpage || 'skill';
         var pageInfo = {

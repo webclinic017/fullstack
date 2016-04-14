@@ -64,7 +64,7 @@
                             <img ng-src="/avatar/{{ bonus.usercode }}_50.jpg">
                         </a>
                         <span class="bonus-his__username">
-                            {{bonus.username}}    
+                            {{bonus.username}}
                         </span>
                     </td>
                     <td>
@@ -77,7 +77,7 @@
                         ${{bonus.bonus || 0}}
                     </td>
                     <td>
-                        上月分成
+                        ${{bonus.last_bonus || 0}}
                     </td>
                     <td>
                         <a class="btn btn-primary bonus-his__detail-btn" href="" ng-click="openDetailMdl(bonus.user_code)">

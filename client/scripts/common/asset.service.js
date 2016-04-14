@@ -18,7 +18,8 @@
             getFXRate: getFXRate,
             getBonus: getBonus,
             getBonusList: getBonusList,
-            getBonusDetail: getBonusDetail
+            getBonusDetail: getBonusDetail,
+            getCopyMyDetail: getCopyMyDetail
         };
         return service;
 
@@ -187,7 +188,7 @@
          *
          */
         function getBonusDetail(copierUsercode, date) {
-            return $http.post('/action/public/v3/get_bonus_detail', {
+            return $http.post('/action/public/v4/get_bonus', {
                 copier: copierUsercode,
                 month: date
             });
@@ -198,6 +199,17 @@
             //         month: date
             //     }
             // });
+        }
+
+        /**
+         * Asset Service 获取复制我的 详情
+         *
+         * @method getCopyMyDetail
+         *
+         */
+
+        function getCopyMyDetail() {
+            return $http.get('/action/public/v4/copy_my');
         }
 
     }

@@ -1,7 +1,7 @@
 // 通用
 @include b(pro-public) {
     color: $gray-darker;
-    
+
     @include e(forex-banner) {
         height: 320px;
         width: 100%;
@@ -38,7 +38,7 @@
     }
 
     @include e(con) {
-        
+
     }
 
     @include e(title) {
@@ -104,7 +104,7 @@
         border-bottom: 1px solid $gray;
     }
     @include e(con-ul) {
-        
+
         >li {
             padding-bottom: 40px;
             margin-top: 20px;
@@ -117,8 +117,12 @@
     }
 
     @include e(li-con) {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+
+
+        p {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
     }
 }
