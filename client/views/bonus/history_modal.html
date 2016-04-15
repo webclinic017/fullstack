@@ -36,6 +36,13 @@
                     </td>
                 </tr>
             </tbody>
-        </table>        
+        </table>
+        <div class="text-right">
+          <p tw-pagination></p>
+      </div>
+
+      <div ng-if="bonusDetails.length <= 0">
+          <p class="text-center">无数据!</p>
+      </div>
     </div>
 </div>

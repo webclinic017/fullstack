@@ -17,16 +17,16 @@
         };
         $scope.bonusSummary = {};
         $scope.bonusList = [];
-        $scope.pagebar = {
-            config: {
-                // total: , 总页数
-                size: 3,
-                page: 1
-            },
-            pages: [],
-            //selectPage: , bind to pagination.selectPage
-            getList: getList
-        };
+        // $scope.pagebar = {
+        //     config: {
+        //         // total: , 总页数
+        //         size: 3,
+        //         page: 1
+        //     },
+        //     pages: [],
+        //     //selectPage: , bind to pagination.selectPage
+        //     getList: getList
+        // };
 
         $scope.search = search;
         $scope.openDetailMdl = openDetailMdl;
@@ -42,35 +42,53 @@
         var dateString = year + '-' + month;
         $scope.datepicker.date = dateString;
 
+        // 获取分成上方概况
         asset.getBonus().then(function (data) {
             $scope.bonusSummary = data.data;
         });
 
+        getBonusList();
 
-        getList(1);
-        // 获取分成列表
-        function getList(page) {
-            $scope.$broadcast('showLoadingImg');
+        // 获取我的分成列表
+        function getBonusList () {
+            asset.getBonusList($scope.datepicker.date).then(function (data) {
+                $scope.$broadcast('showLoadingImg');
 
-            asset.getBonusList(page, pagesize, $scope.datepicker.date).then(function (data) {
                 $scope.bonusList = data.data;
-
-                angular.extend($scope.pagebar.config, {
-                    total: utils.getTotal(data.data.length, pagesize),
-                    page: page
-                });
-
+                console.info(data);
                 $scope.$broadcast('hideLoadingImg');
+
             });
         }
 
-        // 根据日期查询分成信息
         function search() {
-            getList(1);
+            getBonusList();
         }
 
+        // getList(1);
+        // // 获取分成列表
+        // function getList(page) {
+        //     $scope.$broadcast('showLoadingImg');
+
+        //     asset.getBonusList(page, pagesize, $scope.datepicker.date).then(function (data) {
+        //         $scope.bonusList = data.data;
+
+        //         angular.extend($scope.pagebar.config, {
+        //             total: utils.getTotal(data.data.length, pagesize),
+        //             page: page
+        //         });
+
+        //         $scope.$broadcast('hideLoadingImg');
+        //     });
+        // }
+
+        // // 根据日期查询分成信息
+        // function search() {
+        //     getList(1);
+        // }
+
         // open detail modal
-        function openDetailMdl(copierUsercode) {
+        function openDetailMdl(usercode) {
             $modal.open({
                 templateUrl: '/views/bonus/history_modal.html',
                 size: 'lg',
@@ -78,7 +96,7 @@
                 resolve: {
                     passedScope: function () {
                         return {
-                            copierUsercode: copierUsercode,
+                            usercode: usercode,
                             date: $scope.datepicker.date
                         }
                     }

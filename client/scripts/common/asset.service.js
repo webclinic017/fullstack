@@ -176,10 +176,14 @@
          * @method getBonusDetail
          *
          */
-        function getBonusDetail(copierUsercode, date) {
-            return $http.post('/action/public/v4/get_bonus', {
-                copier: copierUsercode,
-                month: date
+        function getBonusDetail(date, usercode, page, pagesize) {
+            return $http.get('/action/public/v4/get_bonus_list', {
+                params: {
+                    date: date,
+                    usercode: usercode,
+                    page: page,
+                    pagesize: pagesize
+                }
             });
         }
 
