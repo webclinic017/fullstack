@@ -156,8 +156,7 @@
          * @method getBonus
          */
         function getBonus() {
-            return $http.post('/action/public/v3/get_bonus');
-            // return $http.get('/data/bonus-summary.json');
+            return $http.get('/action/public/v4/get_copy_data');
         }
 
         /**
@@ -165,20 +164,10 @@
          *
          * @method getBonusList
          */
-        function getBonusList(page, pagesize, date) {
+        function getBonusList(date) {
             return $http.post('/action/public/v3/get_bonus_list', {
-                page: page,
-                pagesize: pagesize,
                 month: date
             });
-
-            // return $http.get('/data/bonus-list.json', {
-            //     params: {
-            //         page: page,
-            //         pagesize: pagesize,
-            //         month: date
-            //     }
-            // });
         }
 
         /**
@@ -192,13 +181,6 @@
                 copier: copierUsercode,
                 month: date
             });
-
-            // return $http.get('/data/bonus-detail.json', {
-            //     params: {
-            //         copier: copierUsercode,
-            //         month: date
-            //     }
-            // });
         }
 
         /**
