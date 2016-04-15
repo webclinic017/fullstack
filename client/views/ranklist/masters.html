@@ -68,9 +68,9 @@
                     </div>
                     <div class="col-1-sm">
                         {{ rank.drawdown || '0.00' }}%
-                        <span class="font-success">低</span>
-                        <span ng-show="rank.drawdown_num === 1" class="font-warning">中</span>
-                        <span ng-show="rank.drawdown_num === 2" class="font-danger">高</span>
+                        <span ng-show="rank.drawdown < 5" class="font-success">低</span>
+                        <span ng-show="rank.drawdown >= 5 && rank.drawdown <= 15" class="font-warning">中</span>
+                        <span ng-show="rank.drawdown > 15" class="font-danger">高</span>
                     </div>
                     <div class="col-1">
                         {{ rank.profit_rate || '0.00' }}%

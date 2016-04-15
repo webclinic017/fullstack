@@ -154,20 +154,34 @@
                 controller: function ($scope, trader, $modalInstance) {
                     $scope.copyCancel = {
                         username: username,
-                        success: false     // 是否取消复制成功
+                        success: false,     // 是否取消复制成功
+                        fail: false
                     };
+                    $scope.clickable = true;
                     $scope.cancelCopy = cancelCopy;
                     $scope.closeModal = closeModal;
 
                     function cancelCopy() {
+                        $scope.clickable = false;
+
                         trader.cancelCopy(usercode).then(function (data) {
                             // console.info(data);
                             if (data.is_succ) {
                                 $scope.copyCancel.success = true;
+                                $scope.clickable = true;
+
                                 $state.go('space.invest.subpage', {
                                     subpage: 'current'
                                 }, {reload: true});
                             }
+                        }, function (err) {
+                            $scope.clickable = true;
+                            $scope.copyCancel.fail = true;
+                            console.info(err);
+
+                            $timeout(function () {
+                                $scope.copyCancel.fail = false;
+                            }, 3000);
                         });
                     }
 
