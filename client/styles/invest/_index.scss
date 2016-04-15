@@ -163,6 +163,14 @@
     }
 }
 
+@include b(cancel_copy_modal) {
+    @include e(btn_wrapper) {
+        .btn {
+            width: 240px;
+        }
+    }
+}
+
 @include b(invest_detail_modal) {
     background-color: $gray-lightest;
 

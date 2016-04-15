@@ -68,15 +68,19 @@
             if ($scope.copyForm.$invalid) {
                 return;
             } else {
+                $scope.clickable.copy = false;
+
                 trader.copy(copiedTrader.usercode, $scope.copyTrade.amount).then(function (data) {
                     // console.info(data);
+                    $scope.clickable.copy = true;
+
                     if (data.is_succ) {
                         $scope.copyTrade.success = true;
                         copiedTrader.copied = $scope.copyTrade.amount;
                     } else {
                         $scope.copyTrade.success = false;
 
-                        if (data.err_code === 4) {
+                        if (data.errCode === 4) {
                             $scope.backErr.system.show = true;
                             $scope.backErr.system.status = 1;    // 复制人数已达上限
 
@@ -126,6 +130,9 @@
                             }, 3000);
                         }
                     }
+                }, function (err) {
+                    $scope.clickable.copy = true;
+                    console.info(err);
                 });
             }
         }
