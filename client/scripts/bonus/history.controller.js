@@ -45,6 +45,7 @@
         // 获取分成上方概况
         asset.getBonus().then(function (data) {
             $scope.bonusSummary = data.data;
+            // console.info(data);
         });
 
         getBonusList();

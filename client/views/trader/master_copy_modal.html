@@ -79,7 +79,12 @@
                 </p>
             </div>
 
-            <button class="btn btn-primary btn-sm" ng-click="submitForm()">
+            <button class="btn btn-primary btn-sm" ng-if="clickable.copy" ng-click="submitForm()">
+                复制交易
+            </button>
+
+            <button class="btn btn-primary btn-sm" disabled ng-if="!clickable.copy">
+                <i class="loading_spinner fa fa-spinner"></i>
                 复制交易
             </button>
         </div>

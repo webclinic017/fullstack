@@ -19,6 +19,7 @@
 
         asset.getCopyMyDetail().then(function (data) {
             $scope.currentList = data.data;
+            // console.info(data);
         });
 
     }

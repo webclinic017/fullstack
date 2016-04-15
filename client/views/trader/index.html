@@ -44,9 +44,9 @@
                         <li class="trader_profit">
                             <div class="trader_profit__item">
                                 <span>{{ master.drawdown || '0.00' }}</span>%
-                                <i ng-show="master.drawdown_num === 0" class="font-success">低</i>
-                                <i ng-show="master.drawdown_num === 1" class="font-warning">中</i>
-                                <i ng-show="master.drawdown_num === 2" class="font-danger">高</i>
+                                <i ng-show="master.drawdown < 5" class="font-success">低</i>
+                                <i ng-show="master.drawdown >= 5 && master.drawdown <= 15" class="font-warning">中</i>
+                                <i ng-show="master.drawdown > 15" class="font-danger">高</i>
                             </div>
                             <div class="trader_gray_color">最大回撤</div>
                         </li>
