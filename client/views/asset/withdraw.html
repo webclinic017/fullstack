@@ -1,5 +1,8 @@
-<div class="asset-public withdraw">
+<div class="asset-public" ng-if="!personal.verified">
+    <a class="font-info deposit__pointer" href="/space/#/space/setting/verify">您未实名认证，请去实名认证</a>
+</div>
 
+<div class="asset-public withdraw"  ng-if="personal.verified">
     <div>
         <div class="row">
             <div class="col-xs-4 pd-tp-10 text-right">转入绑定银行卡：&nbsp;&nbsp;&nbsp;&nbsp;</div>

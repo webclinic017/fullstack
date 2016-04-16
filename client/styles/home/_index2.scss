@@ -1,11 +1,10 @@
 @include b(index2-banner) {
     position: relative;
-    margin-top: 84px;
     text-align: center;
 
     .index2-slide1 {
         overflow: hidden;
-        height: 592px !important;
+        height: 818px !important;
         background-position: center center;
         background-size: cover;
         @include img-normal($image-path-home + "index2-banner1.png");
@@ -13,7 +12,7 @@
     }
     .index2-slide2 {
         overflow: hidden;
-        height: 592px !important;
+        height: 818px !important;
         background-position: center center;
         background-size: cover;
         @include img-normal($image-path-home + "index2-banner2.png");
@@ -21,7 +20,7 @@
     }
     .index2-slide3 {
         overflow: hidden;
-        height: 592px !important;
+        height: 818px !important;
         background-position: center center;
         background-size: cover;
         @include img-normal($image-path-home + "index2-banner3.png");
@@ -31,7 +30,7 @@
     .pagination {
         position: absolute;
         left: 0;
-        bottom: 60px;
+        bottom: 100px;
         width: 100%;
         z-index: 20;
         text-align: center;
@@ -51,15 +50,17 @@
     }
 
     @include e(tle1) {
-        margin-top: 50px;
+        margin-top: 224px;
         font-family: "FZLTZCHK  GBK1 0";
         font-size: 60px;
+        font-weight: bold;
         line-height: 80px;
         color: $brand-primary;
     }
     @include e(tle2) {
         font-family: "FZLTZCHK  GBK1 0";
         font-size: 60px;
+        font-weight: bold;
         color: #fff;
     }
     @include e(circle) {
@@ -79,19 +80,24 @@
     }
     @include e(btn1) {
         margin-top: 68px;
-        padding: 19px 58px;
+        padding: 19px 57px;
         display: inline-block;
         border: 1px solid $brand-primary;
         border-radius: 4px;
         background: transparent;
-        font-family: "MicrosoftYaHei Bold";
+        font-weight: bold;
         font-size: 24px;
+        line-height: 24px;
         color: $brand-primary;
 
         &:hover {
             background: $brand-primary;
-            color: #fff;
+            color: #000;
         }
+    }
+
+    @include e(b1-con) {
+        margin-top: 27px;
     }
 
     @include e(b2-tip2) {
@@ -100,22 +106,23 @@
         color: #FDFDFD;
     }
     @include e(b3-p1) {
-        margin-top: 100px;
-        width: 504px;
-        height: 228px;
+        margin-top: 190px;
+        width: 632px;
+        height: 282px;
         background-size: 100%;
         @include img-normal($image-path-home + "index2-b3-con.png");
 
     }
     @include e(b3-btn1) {
-        margin-top: 68px;
-        padding: 19px 58px;
+        margin-top: 70px;
+        padding: 19px 57px;
         display: inline-block;
         border: 1px solid $brand-primary;
         border-radius: 4px;
+        line-height: 24px;
         background: transparent;
-        font-family: "MicrosoftYaHei Bold";
         font-size: 24px;
+        font-weight: bold;
         color: $brand-primary;
 
         &:hover {
@@ -133,7 +140,7 @@
     @include e(con) {
         .row {
             position: relative;
-            top: -64px;
+            top: -84px;
             z-index: 22;
         }
         .col-xs-3 {
@@ -150,8 +157,9 @@
         background: #fff;
 
         @include m(tit) {
-            font-family: "MicrosoftYaHei Bold";
+            // font-family: "MicrosoftYaHei Bold", "Lantinghei SC";
             font-size: 20px;
+            font-weight: bold;
         }
 
         @include m(circle) {
@@ -191,7 +199,7 @@
         padding-left: 11px !important;
         padding-right: 11px !important;
         background-position: center center;
-        @include img-normal($image-path-home + "index2-master-bg.jpg");
+        // @include img-normal($image-path-home + "index2-master-bg.jpg");
 
         @include m(li1) {
             padding-bottom: 11px;
@@ -261,6 +269,7 @@
         @include m(how-c) {
             display: inline-block;
             margin-top: 10px;
+            margin-left: 8px;
             font-size: 14px;
         }
         @include m(num) {
@@ -291,7 +300,18 @@
         }
     }
 }
+.index2-master .col-xs-3:nth-child(2) {
+    @include img-normal($image-path-home + "master-bg1.jpg");
 
+}
+.index2-master .col-xs-3:nth-child(3){
+    @include img-normal($image-path-home + "master-bg2.jpg");
+
+}
+.index2-master .col-xs-3:last-child {
+    @include img-normal($image-path-home + "master-bg3.jpg");
+
+}
 .index2-master__col2-jia:hover {
     transform:rotate(180deg);
     -ms-transform:rotate(180deg); /* Internet Explorer */
@@ -317,14 +337,12 @@
         line-height: 48px;
         text-align: center;
         font-size: 32px;
-        font-family: "MicrosoftYaHei Bold";
         color: #0C0A09;
     }
     @include e(tip) {
         margin-top: 26px;
         line-height: 20px;
         text-align: center;
-        font-family: "M icrosoftYaHei";
         font-size: 18px;
         color: #0C0A09;
     }
@@ -335,10 +353,11 @@
     }
     @include e(btn) {
         display: inline-block;
-        padding: 20px 57px;
+        padding: 19px 57px;
         border: 1px solid #0C0A09;
         border-radius: 4px;
-        font-family: "MicrosoftYaHei Bold";
+        font-weight: bold;
+        line-height: 24px;
         font-size: 24px;
         color: #0C0A09;
         cursor: pointer;
@@ -357,6 +376,7 @@
         @include m(circle) {
             position: relative;
             margin: 0 auto;
+            display: inline-block;
             width: 98px;
             height: 98px;
             border: 5px solid #F9FAFB;
@@ -365,10 +385,6 @@
             &:hover {
                 background: $brand-primary;
             }
-        }
-
-        @include m(circle1) {
-            background: $brand-primary;
         }
 
         @include m(icon1) {
@@ -407,7 +423,7 @@
         @include m(name) {
             margin-top: 26px;
             line-height: 48px;
-            font-family: "MicrosoftYaHei Bold";
+            font-weight: bold;
             font-size: 20px;
             color: #0C0A09;
         }
@@ -432,7 +448,6 @@
         padding-left: 32px;
         padding-right: 40px;
         line-height: 24px;
-        font-family: "MicrosoftYaHei";
     }
     @include e(btn-con) {
         margin-top: 80px;
@@ -533,19 +548,17 @@
     @include e(title) {
         margin-top: 80px;
         line-height: 36px;
-        font-family: "MicrosoftYaHei Bold";
         font-size: 30px;
+        font-weight: bold;
     }
 
     @include e(con) {
         margin-top: 44px;
         line-height: 36px;
-        font-family: "MicrosoftYaHei";
         font-size: 16px;
     }
     @include e(con) {
         line-height: 36px;
-        font-family: "MicrosoftYaHei";
         font-size: 16px;
     }
 

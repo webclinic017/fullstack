@@ -21,11 +21,11 @@
     @include transition(border-color ease .15s, box-shadow ease .15s);
     @include form-control-focus;
     @include placeholder;
-    
+
     &.icon {
         padding-left: $input-padding-left;
     }
-    
+
     &:focus {
         & + .form-control-icon {
             color: $gray-dark;
@@ -62,7 +62,7 @@
 //== checkbox
 .checkbox {
     cursor: pointer;
-    
+
     > .fa {
         width: 12px;
     }
@@ -85,7 +85,7 @@
 //== radio
 .radio {
     cursor: pointer;
-    
+
     > .fa-circle-o,
     &.checked > .fa-dot-circle-o {
         display: inline-block;
@@ -108,7 +108,7 @@
     margin-bottom: 30px;
 
     $editbox-height: 60px;
-    
+
     @include e(textarea) {
         @extend .form-control;
         @include form-control-focus;
@@ -116,7 +116,7 @@
         padding: $padding-base-vertical $padding-base-horizontal;
         border: 1px solid $input-border;
         resize: none;
-        
+
 
         @include m(error) {
             color: $brand-danger;
@@ -155,7 +155,7 @@
         display: none;
         min-width: 100%;
         max-height: 300px;
-        border: 1px solid $gray;
+        border: 1px solid $gray-form-border;
         border-radius: $border-radius-base;
         background-color: #fff;
         overflow-y: auto;
@@ -167,11 +167,11 @@
         // & > li:last-child {
         //     border-bottom: 0;
         // }
-        
+
         &.active {
             display: block;
         }
-        
+
         & > li > span {
             display: block;
             padding: $padding-base-vertical $padding-base-horizontal;
