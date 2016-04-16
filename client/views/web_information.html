@@ -1,6 +1,16 @@
-<% var title = '交易平台' %>
-<% var description = '' %>
-<% var keywords = '' %>
+<% if (pageInfo.id === 'time') { %>
+    <% var title = '交易时间' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'comment') { %>
+    <% var title = '每日汇评' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'market') { %>
+    <% var title = '市场分析' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } %>
 <!doctype html>
 <html>
     <head>
@@ -21,8 +31,14 @@
             </div>
 
             <div class="body" style="background-color: #fafafa">
-              <p style="height:84px;"></p>
-              <iframe src="https://trade.mql5.com/trade?servers=TigerWit-Demo,TigerWit-Live&amp;trade_server=TigerWit-Live&amp;demo_server=TigerWit-Demo&amp;demo_type=&amp;demo_leverage=50,100,200,400&amp;startup_mode=open_live&amp;lang=zh" allowfullscreen="allowfullscreen" style="width: 100%; height: 677px; border: none"></iframe>
+                <div class="layout-2">
+                    <div class="layout-2__side mg-tp-30">
+                        <%- include('web/information-sidebar.html') %>
+                    </div>
+                    <div class="layout-2__content mg-tp-30">
+                        <%- include('web/information-' + pageInfo.id + '.html') %>
+                    </div>
+                </div>
             </div>
 
             <div class="footer">
@@ -53,7 +69,7 @@
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:js(client) /scripts/trade_tool.js -->
+        <!-- build:js(client) /scripts/web_information.js -->
         <script src="/scripts/app.js"></script>
 
         <script src="/scripts/common/config.service.js"></script>
@@ -67,6 +83,9 @@
         <script src="/scripts/common/pagination.directive.js"></script>
 
         <script src="/scripts/common/global.controller.js"></script>
+
+        <script src="/scripts/common/bind_html.filter.js"></script>
+
 
         <script src="/scripts/product/comment.controller.js"></script>
         <!-- endbuild -->
