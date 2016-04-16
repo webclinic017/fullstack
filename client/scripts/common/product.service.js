@@ -8,64 +8,18 @@
 
     function product($http) {
         var service = {
-            getHomeHotProduct: getHomeHotProduct,
-            getHomeHotScale: getHomeHotScale,
-            getHomeStarMaster: getHomeStarMaster,
-            getHomeMasters: getHomeMasters,
             getProductComment: getProductComment,
-            getIndexMasters: getIndexMasters
+            getProductMarket: getProductMarket
         };
         return service;
 
-        /**
-         * Product Service 首页热门交易产品
-         *
-         * @method getHomeHotProduct
-         */
-        function getHomeHotProduct() {
-            return $http.get('/data/home-product.json');
-        }
-
-
-        /**
-         * Product Service 首页进度条、热闹的投资占比
-         *
-         * @method getHomeHotScale
-         */
-        function getHomeHotScale() {
-            return $http.get('/data/asset-cate.json');
-        }
-
-        /**
-         * Product Service 首页明星高手
-         *
-         * @method getHomeStarMaster
-         */
-        function getHomeStarMaster() {
-            return $http.get('/data/star-master.json');
-        }
-
-        /**
-         * Product Service 首页明星高手
-         *
-         * @method getHomeMasters
-         */
-        function getHomeMasters() {
-            return $http.get('/data/masters.json');
-        }
 
         /**
          * Product Service 交易品种下的每日汇评
          *
          * @method getProductComment
          */
-        function getProductComment(page, pagesize) {
-            // return $http.get('/data/product-comment.json', {
-            //     params: {
-            //         page: page,
-            //         pagesize: pagesize
-            //     }
-            // });
+        function getProductComment() {
 
             return $http.post('/blog/api/get_category_posts?id=86');
 
@@ -76,25 +30,10 @@
          *
          * @method getProductMarket
          */
-        function getProductComment(page, pagesize) {
-            // return $http.get('/data/product-comment.json', {
-            //     params: {
-            //         page: page,
-            //         pagesize: pagesize
-            //     }
-            // });
+        function getProductMarket() {
 
             return $http.post('/blog/api/get_category_posts?id=84');
 
-        }
-
-        /**
-         * Product Service 首页第二块高手
-         *
-         * @method getIndexMasters
-         */
-        function getIndexMasters() {
-            return $http.get('/data/index2-master.json');
         }
 
     }

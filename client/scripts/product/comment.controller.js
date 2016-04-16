@@ -25,7 +25,7 @@
 
         // 获取市场分析
         function getMarketList() {
-            product.getProductComment().then(function (data) {
+            product.getProductMarket().then(function (data) {
                 $scope.marketList = data.posts;
 
             });
