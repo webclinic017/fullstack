@@ -92,7 +92,7 @@
 
         &:hover {
             background: $brand-primary;
-            color: #fff;
+            color: #000;
         }
     }
 
@@ -106,7 +106,7 @@
         color: #FDFDFD;
     }
     @include e(b3-p1) {
-        margin-top: 142px;
+        margin-top: 190px;
         width: 632px;
         height: 282px;
         background-size: 100%;
@@ -376,6 +376,7 @@
         @include m(circle) {
             position: relative;
             margin: 0 auto;
+            display: inline-block;
             width: 98px;
             height: 98px;
             border: 5px solid #F9FAFB;

@@ -36,12 +36,12 @@
 
         // 此为index2 首页的高手信息
         ranklist.getMastersList().then(function (data) {
-            console.info(data);
+            // console.info(data);
             $scope.indexMasters = data.data.slice(0, 3);
         });
 
         ranklist.getMastersList().then(function (data) {
-            console.info(data);
+            // console.info(data);
             $scope.homeMasters = data.data.slice(0, 3);
         });
     }
