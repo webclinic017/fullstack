@@ -14,7 +14,7 @@
         > a {
             position: relative;
             display: block;
-            
+
             &:hover,
             &:focus {
                 text-decoration: none;
@@ -30,9 +30,21 @@
 .navbar {
     @extend .clearfix;
     position: relative;
-    min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+    // min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+    height: 69px;
     border-radius: 0;
+    // background-color: #141414;
     background-color: #141414;
+
+}
+.navbar-2 {
+    @extend .clearfix;
+    position: relative;
+    // min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
+    height: 69px;
+    border-radius: 0;
+    @include img-normal($image-path-base + "navbar-bg.png");
+
 }
 
 // Fix the top/bottom navbars when screen real estate supports it
@@ -62,21 +74,37 @@
     margin-right: 30px;
 
     .logo {
-        margin: 15px 15px 0 0;
-        vertical-align: middle;
+        margin: 15px 0 0 0;
+        // vertical-align: middle;
     }
-    
-    .cctv_con {
+
+    .logo-con {
         display: inline-block;
-        vertical-align: bottom;
-        padding-left: 15px;
-        border-left: 1px solid $gray-darker;
+        width: 82px;
+        height: 45px;
+        @include img-normal($image-path-base + "logo-con.png");
 
     }
 
-    .logocctv {
-        vertical-align: bottom;
+    .logo-cctv {
+        display: inline-block;
+        width: 99px;
+        height: 45px;
+        @include img-normal($image-path-base + "logo-cctv.png");
+
     }
+
+    // .cctv_con {
+    //     display: inline-block;
+    //     vertical-align: bottom;
+    //     padding-left: 15px;
+    //     border-left: 1px solid $gray-darker;
+
+    // }
+
+    // .logocctv {
+    //     vertical-align: bottom;
+    // }
 }
 
 // Brand/project name
@@ -101,7 +129,7 @@
 .navbar-nav {
     float: left;
     margin: 0;
-  
+
     &.navbar-right:last-child {
         margin-right: -$navbar-padding-horizontal;
     }
@@ -110,14 +138,14 @@
         float: left;
 
         > a {
-            margin: 0 10px;
-            padding: 33px 0 29px;
+            margin: 0 15px;
+            padding: 28px 0 25px;
             border-bottom: 2px solid transparent;
-            line-height: $line-height-computed;
+            line-height: 14px;
             text-decoration: none;
-            font-size: $font-size-large;
+            font-size: 14px;
             color: $gray-lighter;
-            
+
             &:hover,
             &:active {
                 color: $brand-primary;
@@ -125,7 +153,7 @@
             }
         }
     }
-    
+
     > li.active > a {
         &,
         &:hover,
@@ -184,8 +212,8 @@
             margin-top: -1px;
             padding: 15px 30px;
             text-align: center;
-            color: $gray-dark; 
-        }    
+            color: $gray-dark;
+        }
     }
 
     > li.active {
@@ -231,27 +259,24 @@
 
         .login {
             margin: 0 $navbar-margin-horizontal;
-            padding: 33px 0 $navbar-padding-bottom;
-            line-height: $line-height-computed;
+            padding: 28px 0 27px;
+            line-height: 14px;
             text-decoration: none;
-            font-size: $font-size-large;
+            font-size: 14px;
             color: $brand-primary;
         }
 
         .signup {
-            margin: 34px 0 0 0;
-            width: 120px;
-            line-height: $line-height-computed;
+            padding: 11px 29px;
+            margin-top: 17px;
+            // width: 120px;
+            line-height: 14px;
+            background: $brand-primary;
             text-decoration: none;
             text-align: center;
-            font-size: $font-size-h3;
+            font-size: 14px;
             color: $gray-base;
         }
-    }
-    > li:last-child {
-        margin-left: 10px;
-        height: 84px;
-        background-color: $brand-primary;
     }
 }
 
@@ -261,7 +286,7 @@
 
     @extend .clearfix;
     float: right;
-    
+
     margin-top: 20px;
     margin-left: 15px;
 
