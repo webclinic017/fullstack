@@ -63,13 +63,13 @@
                     <ul>
                         <li class="index2-master__col2-li1">
                             <a class="index2-master__col2-photo" href="/trader/#/trader/{{master.usercode}}/summary" target="_blank">
-                              <img ng-src="{{ master['link'] }}" alt="avatar">
+                              <img ng-src="/avatar/{{ master.usercode }}_150.jpg" alt="avatar">
                             </a>
                             <span class="index2-master__col2-name">{{ master.username || '**' }}</span>
                         </li>
                         <li class="index2-master__col2-li2">
                             <div class="index2-master__col2-div1">
-                                <span class="index2-master__col2-rate">{{ master.profit || '0.00' }}</span><span class="font-size-12">%</span><br>
+                                <span class="index2-master__col2-rate">{{ master.profit_rate || '0.00' }}</span><span class="font-size-12">%</span><br>
                                 <span class="font-size-14">收益率</span>
                             </div>
                             <div class="index2-master__col2-div2">
