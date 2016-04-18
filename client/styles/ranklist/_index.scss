@@ -3,7 +3,7 @@
 @include b(col-1) {
     position: relative;
     float: left;
-    width: percentage(1 / 8);
+    width: 14%;
     min-height: 1px;
     padding-left: 15px;
     padding-right: 15px;
@@ -21,24 +21,23 @@
     
     @include m(lg) {
         @extend .col-1;
-        width: 16%;
+        width: 17%;
     }
     @include m(sm) {
         @extend .col-1;
-        width: 9%;
+        width: 10%;
     }
 }
 
 $ranklist-item-height: 120px;
 @include b(ranklist) {
-    margin-top: 84px;
+    margin-top: 69px;
     
     @include e(bg) {
         background-color: $gray-lightest;
     }
 
     @include e(content) {
-        border-top: 1px solid $gray;
         padding-bottom: 200px;
 
         .row {
