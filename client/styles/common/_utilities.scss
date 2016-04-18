@@ -328,6 +328,7 @@
     display: inline-block;
     width: $logo_size;
     height: $logo_size;
+    background-size: 100%;
     margin: 0;
     padding: 0;
     @include img-retina($image-path-base + "logo.png", $image-path-base + "logo@2x.png", $logo_size, $logo_size);

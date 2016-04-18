@@ -109,30 +109,36 @@
         }
 
         function toCopy () {
+            // console.info($scope.personal.isumam);
             // 判断是否登录
             if ($scope.userstatus.logined) {
-                // 判断是否是高手
-                if ($scope.personal.master === 1) {
-                    openSystemMdl('isMaster');
+                // 判断资金是否处于封闭期
+                if ($scope.personal.isumam) {
+                    openSystemMdl('isumam');
                 } else {
-                    // 判断是否实名认证
-                    if ($scope.personal.verified === true) {
-                        var minCopyAmount = parseFloat($scope.master.copy_money_min, 10);
-
-                        if (typeof avaCopyAmount === 'undefined') {
-                            console.log('getting available copy amount');
-                            return;
-                        }
-                        avaCopyAmount = parseFloat(avaCopyAmount, 10);
-
-                        if (avaCopyAmount < minCopyAmount) {
-                            openSystemMdl('amount', minCopyAmount);
-                        } else {
-                            openCopyMdl();
-                        }
-
+                    // 判断是否是高手
+                    if ($scope.personal.master === 1) {
+                        openSystemMdl('isMaster');
                     } else {
-                        openSystemMdl('verify');
+                        // 判断是否实名认证
+                        if ($scope.personal.verified === true) {
+                            var minCopyAmount = parseFloat($scope.master.copy_money_min, 10);
+
+                            if (typeof avaCopyAmount === 'undefined') {
+                                console.log('getting available copy amount');
+                                return;
+                            }
+                            avaCopyAmount = parseFloat(avaCopyAmount, 10);
+
+                            if (avaCopyAmount < minCopyAmount) {
+                                openSystemMdl('amount', minCopyAmount);
+                            } else {
+                                openCopyMdl();
+                            }
+
+                        } else {
+                            openSystemMdl('verify');
+                        }
                     }
                 }
             } else {
@@ -147,7 +153,7 @@
                 backdrop: true,
                 controller: function ($scope, $modalInstance) {
                     $scope.modal = {
-                        type: type, // 系统弹窗类型：login, verify, isMaster（已经是高手）, amount（可用复制金额不足）
+                        type: type, // 系统弹窗类型：login, verify, isumam（封闭期） isMaster（已经是高手）, amount（可用复制金额不足）
                         info: info
                     };
                     $scope.closeModal = closeModal;
