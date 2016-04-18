@@ -53,13 +53,28 @@
             </a>
         </p>
     </div>
-
+    
     <div class="system_modal__content" ng-if="modal.type === 'isMaster'">
         <p class="system_modal__info">
             无法进行复制操作
         </p>
         <p class="system_modal__tip">
             您已经是高手了，无法复制其他高手
+        </p>
+
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()" href="">
+                确定
+            </a>
+        </p>
+    </div>
+    
+    <div class="system_modal__content" ng-if="modal.type === 'isumam'">
+        <p class="system_modal__info">
+            无法进行复制操作
+        </p>
+        <p class="system_modal__tip">
+            您的资金处于封闭期，无法使用复制功能
         </p>
 
         <p class="system_modal__btn_wrapper">

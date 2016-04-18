@@ -1,7 +1,9 @@
 <div class="space_sidebar mg-tp-30">
     <div class="space_sidebar__info">
         <div class="space_sidebar__avatar">
-            <img ng-src="{{ personal.lgAvatar }}">
+            <a ui-sref="space.invest.subpage({subpage: 'current'})">
+                <img ng-src="{{ personal.lgAvatar }}">
+            </a>
         </div>
         <div class="space_sidebar__user">
             <span class="space_sidebar__user-username">{{ personal.username }}</span>

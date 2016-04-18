@@ -14,15 +14,15 @@
                 <div class="col-1">
                     <span class="nav_item">走势图</span>
                 </div>
-                <div class="col-1-sm" ng-class="{active: masters.type === 'drawdown'}" ng-click="getMastersList('drawdown')">
+                <div class="col-1" ng-class="{active: masters.type === 'drawdown'}" ng-click="getMastersList('drawdown')">
                     <span class="nav_item">最大回撤</span>
                 </div>
                 <div class="col-1" ng-class="{active: masters.type === 'profit_rate'}" ng-click="getMastersList('profit_rate')">
                     <span class="nav_item">收益率</span>
                 </div>
-                <div class="col-1" ng-class="{active: masters.type === 'copy_profit'}" ng-click="getMastersList('copy_profit')">
+                <!-- <div class="col-1" ng-class="{active: masters.type === 'copy_profit'}" ng-click="getMastersList('copy_profit')">
                     <span class="nav_item">复制者盈利</span>
-                </div>
+                </div> -->
                 <div class="col-1-lg">
                 </div>
             </div>
@@ -66,7 +66,7 @@
                     <div class="col-1">
                         <div tw-line-chart data-type="masterList"></div>
                     </div>
-                    <div class="col-1-sm">
+                    <div class="col-1">
                         {{ rank.drawdown || '0.00' }}%
                         <span ng-show="rank.drawdown < 5" class="font-success">低</span>
                         <span ng-show="rank.drawdown >= 5 && rank.drawdown <= 15" class="font-warning">中</span>
@@ -75,9 +75,9 @@
                     <div class="col-1">
                         {{ rank.profit_rate || '0.00' }}%
                     </div>
-                    <div class="col-1">
+                    <!-- <div class="col-1">
                         <i class="fa fa-dollar"></i>{{ rank.copy_profit || '0.00' }}
-                    </div>
+                    </div> -->
                     <div class="col-1-lg">
                         <a class="btn btn-primary btn-sm" href="/trader/{{rank.usercode}}/#/trader/summary" target="_blank">复制</a>
                     </div>
