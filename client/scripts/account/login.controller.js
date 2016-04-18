@@ -50,8 +50,9 @@
 
             $scope.clickable = false;
 
+            var textEnc = account.encrypt($scope.account.password);
             // 首先对 password 加密
-            account.encrypt($scope.account.password).then(function (textEnc) {
+            // account.encrypt($scope.account.password).then(function (textEnc) {
                 // console.info(textEnc);
 
                 if (textEnc) {
@@ -100,7 +101,7 @@
                         }
                     });
                 }
-            });
+            // });
         }
 
         function showErr(formName, controlName) {

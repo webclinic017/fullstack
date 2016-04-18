@@ -53,13 +53,11 @@
          * @desc 密码加密
          */
         function encrypt(text) {
-            return $http.get('/files/pub_v1.json').then(function (data) {
                 var crypt = new JSEncrypt();
-                var key = data;
+                var key = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDN67wAcj1WL/scb9TuvawbqMABg2sYXdmLkzXYUK/qbZI168gpM1t4SqS2qxYuEy+a/rOQ/YokJy0Q+dwQBEUmRWd4//64D3shkMMPZ0VuQ67LmVbFzbaly9dEYbAkoKvd4qcVxG1qAYlPGAKVZjRbf3q6d1CGeUGQqoynofTZNwIDAQAB-----END PUBLIC KEY-----';
                 crypt.setKey(key);
                 var textEnc = crypt.encrypt(text);
                 return textEnc;
-            });
         }
 
         /**
