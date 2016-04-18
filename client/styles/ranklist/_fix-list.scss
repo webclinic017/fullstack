@@ -1,0 +1,67 @@
+@include b(fix-list) {
+    background: #fff;
+
+    @include e(banner) {
+        @include img-normal($image-path-base + "ranklist/fix-list-bg.jpg");
+
+        .container {
+            height: 418px;
+            background-size: 100%;
+            @include img-normal($image-path-base + "ranklist/fix-list-banner.jpg");
+
+        }
+    }
+
+    @include e(con) {
+
+        .row {
+            margin-left: 0px;
+            margin-right: 0px;
+            padding-top: 33px;
+            border-top: 1px solid $brand-primary;
+            box-shadow: 3px 3px 5px #cacaca;
+        }
+    }
+
+    @include e(list) {
+        box-shadow: -1px 0 5px #cacaca;
+
+        @include m(title) {
+            margin-right: 76px;
+            display: inline-block;
+            width: 319px;
+            height: 54px;
+            @include img-normal($image-path-base + "ranklist/list-title-bg.jpg");
+            line-height: 38px;
+            text-align: center;
+            font-size: 18px;
+
+        }
+
+        ul>li {
+            float: left;
+            overflow: hidden;
+            height: 110px;
+            text-align: center;
+            vertical-align: middle;
+            border-right: 1px dotted #D3D2D1;
+        }
+        li:last-child {
+            border-right: none;
+        }
+
+        @include m(red) {
+            display: block;
+            font-size: 45px;
+            line-height: 45px;
+            color: #FD4006;
+        }
+
+        @include m(normal) {
+            display: block;
+
+            line-height: 24px;
+            font-size: 24px;
+        }
+    }
+}
