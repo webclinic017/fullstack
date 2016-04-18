@@ -4,7 +4,7 @@
     <ul class="pro-comment__con-ul">
         <li class="clear pro-public__bor-bt" ng-repeat="market in marketList" ng-cloak>
             <p class="pro-comment__li-title">{{market.title}}</p>
-            <p class="font-bold">{{market.title_plain}}</p>
+            <!-- <p class="font-bold">{{market.title_plain}}</p> -->
             <div class="pro-comment__li-con" ng-bind-html="market.excerpt | bindhtml"></div>
             <a class="font-info float-left" href="{{market.url}}">详情></a>
             <span class="font-info float-right" href="">{{market.date}}</span>
