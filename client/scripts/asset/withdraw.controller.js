@@ -117,9 +117,9 @@
                 return;
             }
             showErr('amount');
-            if ($scope.withdrawForm.$invalid) {
-                return;
-            }
+            // if ($scope.withdrawForm.$invalid) {
+            //     return;
+            // }
 
             asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).
                     then(function (data) {
