@@ -10,7 +10,7 @@
     function AssetDepositController($scope, $window, $modal, $state, asset, validator) {
 
         $scope.deposit = {
-            minAmount: 0,       // 最低充值金额
+            minAmount: 200,       // 最低充值金额
             FXRate: {
                 // value: ,     // 汇率值
                 // timestamp: ,
