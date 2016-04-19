@@ -19,6 +19,11 @@
                 // address:         // 开户行
                 // banken:          // 银行英文名
             },
+            FXRate: {
+                // value: ,     // 汇率值
+                // timestamp: ,
+                // RMB:         // 折合人民币
+            },
             success: false,
             minAmount: 0,
             maxAmount: 0
@@ -43,7 +48,11 @@
         $rootScope.$on('bindCardSuccess', function() {
             getCard();
         });
+        // 汇率
+        asset.getFXRate().then(function(data) {
+            $scope.withdraw.FXRate.value = data.parity;
 
+        });
         // 获取可提取的最大金额
         forex.getAsset().then(function(data) {
             $scope.withdraw.maxAmount = data.data.balance;
