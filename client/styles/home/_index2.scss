@@ -106,15 +106,17 @@
         color: #FDFDFD;
     }
     @include e(b3-p1) {
-        margin-top: 190px;
-        width: 632px;
-        height: 282px;
+        margin-top: 215px;
+        margin-left: 19px;
+        width: 488px;
+        height: 262px;
         background-size: 100%;
         @include img-normal($image-path-home + "index2-b3-con.png");
 
     }
     @include e(b3-btn1) {
         margin-top: 70px;
+        margin-left: 19px;
         padding: 19px 57px;
         display: inline-block;
         border: 1px solid $brand-primary;
