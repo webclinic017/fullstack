@@ -87,32 +87,33 @@
         $scope.hideErr = hideErr;
         $scope.submitRegisterForm = submitRegisterForm;
         $scope.getCaptcha = getCaptcha;
+        $scope.goNextStep = goNextStep;
         var token;
         
         // 设置 token 在获取手机验证码时提交该 token 解决更换 ip 批量注册的问题
         account.setToken();
         // 从 landing page 进入时
-        // $scope.account.username = $state.params.name;
-        // $scope.account.phone = $state.params.phone;
-        // $scope.account.email = $state.params.email;
+        $scope.account.username = $state.params.name;
+        $scope.account.phone = $state.params.phone;
+        $scope.account.email = $state.params.email;
 
-        // if ($scope.account.username) {
-        //     if (!validator.isValidTxt('username', $scope.account.username, 4, 20)) {
-        //         $scope.account.username = undefined;
-        //     }
-        // }
+        if ($scope.account.username) {
+            if (!validator.isValidTxt('username', $scope.account.username, 4, 20)) {
+                $scope.account.username = undefined;
+            }
+        }
 
-        // if ($scope.account.phone) {
-        //     if (!validator.regType.phone.reg.test($scope.account.phone)) {
-        //         $scope.account.phone = undefined;
-        //     }
-        // }
+        if ($scope.account.phone) {
+            if (!validator.regType.phone.reg.test($scope.account.phone)) {
+                $scope.account.phone = undefined;
+            }
+        }
 
-        // if ($scope.account.email) {
-        //     if (!validator.regType.email.reg.test($scope.account.email)) {
-        //         $scope.account.email = undefined;
-        //     }
-        // }
+        if ($scope.account.email) {
+            if (!validator.regType.email.reg.test($scope.account.email)) {
+                $scope.account.email = undefined;
+            }
+        }
 
         // 监听 $scope.progress.step 如果是注册成功则获取账户信息
         $scope.$watch('progress.step', function (newVal) {
@@ -166,6 +167,7 @@
             }
 
             tmp.then(function (data) {
+                // console.info(data);
                 if (data.is_succ) {
                     $scope.startTimer();
                 } else {
@@ -228,7 +230,7 @@
         }
 
         function goNextStep() {
-            $scope.process.step ++;    
+            $scope.progress.step ++;    
         }
 
         function submitRegisterForm(formName) {
@@ -256,11 +258,11 @@
                     // 成功   
                     goNextStep();
                     
-                    // ga('send', 'event', 'register', 'register');
-                    // // google adwords
-                    // goog_report_conversion();
-                    // _hmt.push(['_trackEvent', 'account', 'register']);
-                    // _mvq.push(['$setGeneral', 'registered', '', $scope.account.username, $scope.account.phone]);
+                    ga('send', 'event', 'register', 'register');
+                    // google adwords
+                    goog_report_conversion();
+                    _hmt.push(['_trackEvent', 'account', 'register']);
+                    _mvq.push(['$setGeneral', 'registered', '', $scope.account.username, $scope.account.phone]);
                 } else {
 
 

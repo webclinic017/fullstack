@@ -30,6 +30,12 @@
                     </div>
                     <ul class="col-xs-9 clearfix">
                         <li class="trader_profit">
+                            <div class="trader_profit__item">
+                                <span><i class="fa fa-dollar"></i>{{ master.copy_profit || '0' }}</span>
+                            </div>
+                            <div class="trader_gray_color">复制者盈利</div>
+                        </li>
+                        <li class="trader_profit">
                             <div class="trader_profit__item" ng-class="{'font-danger': master.profit_rate.indexOf('-') >= 0, 'font-success': master.profit_rate.indexOf('-') < 0}">
                                 <span>{{ master.profit_rate || '0.00' }}</span>%
                             </div>
@@ -58,16 +64,11 @@
                         </li>
                         <li class="trader_profit">
                             <div class="trader_profit__item">
-                                <span><i class="fa fa-dollar"></i>{{ master.copy_amount || '0.00' }}</span>
+                                <span><i class="fa fa-dollar"></i>{{ master.min_copy_amount || '0.00' }}</span>
                             </div>
-                            <div class="trader_gray_color">复制金额</div>
+                            <div class="trader_gray_color">最低复制金额</div>
                         </li>
-                        <li class="trader_profit">
-                            <div class="trader_profit__item">
-                                <span><i class="fa fa-dollar"></i>{{ master.copy_profit || '0' }}</span>
-                            </div>
-                            <div class="trader_gray_color">复制者盈利</div>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>

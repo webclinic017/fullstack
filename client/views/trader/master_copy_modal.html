@@ -18,6 +18,7 @@
                                type="text"
                                ng-class="{'form-control-error': frontErr.amount.show && copyForm.amount.$invalid}"
                                ng-model="copyTrade.amount"
+                               placeholder="最低复制金额为 {{ copyTrade.minCopyAmount }} 美金"
                                required
                                ng-pattern="frontErr.amount.reg"
                                twform-max="{{ copyTrade.avaCopyAmount }}"

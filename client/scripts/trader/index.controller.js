@@ -122,7 +122,7 @@
                     } else {
                         // 判断是否实名认证
                         if ($scope.personal.verified === true) {
-                            var minCopyAmount = parseFloat($scope.master.copy_money_min, 10);
+                            var minCopyAmount = parseFloat($scope.master.min_copy_amount, 10);
 
                             if (typeof avaCopyAmount === 'undefined') {
                                 console.log('getting available copy amount');
@@ -175,8 +175,7 @@
                 resolve: {
                     passedScope: function () {
                         // 对传递的参数名称做修改
-                        $scope.master.minCopyAmount = $scope.master.copy_money_min;
-                        $scope.master.usercode = $scope.master.user_code;
+                        $scope.master.minCopyAmount = $scope.master.min_copy_amount;
 
                         return {
                             copiedTrader: $scope.master,
