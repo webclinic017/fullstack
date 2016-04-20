@@ -32,11 +32,7 @@
             $scope.type = 'setting';
         }
 
-        if ($scope.type === 'setting') {
-            getKyc();
-        }
-
-        
+        getKyc();
         
         function selectOption(question) {
             $scope.tip.questions.show = false;
