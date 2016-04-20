@@ -25,10 +25,7 @@
             <div class="body">
                 <div ui-view></div>
             </div>
-            <div class="footer">
-                <% include common/footer.html %>
-            </div>
-        </div>
+            
         <!-- build:js(client) /scripts/vendor.js -->
         <!-- bower:js -->
         <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -133,5 +130,9 @@
         <script src="/scripts/account/register.controller.js"></script>
         <script src="/scripts/account/forget.controller.js"></script>
         <!-- endbuild -->
+        <div class="footer">
+                <% include common/footer.html %>
+            </div>
+        </div>
     </body>
 </html>
