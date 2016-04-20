@@ -259,8 +259,7 @@
                     goNextStep();
                     
                     ga('send', 'event', 'register', 'register');
-                    // google adwords
-                    goog_report_conversion();
+                    
                     _hmt.push(['_trackEvent', 'account', 'register']);
                     _mvq.push(['$setGeneral', 'registered', '', $scope.account.username, $scope.account.phone]);
                 } else {
