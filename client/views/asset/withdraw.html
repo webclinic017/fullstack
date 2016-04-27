@@ -1,9 +1,13 @@
-<div class="asset-public" ng-if="!personal.verified">
+<div class="asset-public" ng-if="personal.verified != undifined && !personal.verified">
     <a class="font-info deposit__pointer" href="/space/#/space/setting/verify">您未实名认证，请去实名认证</a>
 </div>
 
 <div class="asset-public withdraw"  ng-if="personal.verified">
-    <div>
+    <div ng-if="message.error_code != 0">
+        <p class="font-info">{{message.error_msg}}</p>
+    </div>
+
+    <div ng-if="message.error_code === 0">
         <div class="row">
             <div class="col-xs-4 pd-tp-10 text-right">转入绑定银行卡：&nbsp;&nbsp;&nbsp;&nbsp;</div>
 
@@ -33,6 +37,7 @@
                                ng-model="withdraw.amount"
                                ng-pattern="frontErr.amount.reg"
                                twform-max="{{personal.balance || 0}}"
+                               twform-min="{{withdraw.minAmount}}"
                                ng-focus="hideErr('amount')"
                                ng-blur="showErr('amount')">
 
@@ -49,6 +54,10 @@
 
                             <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.twformMax">
                                 出金金额最多为 {{personal.balance || 0}} 美金
+                            </p>
+
+                            <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.twformMin">
+                                出金金额最少为 {{withdraw.minAmount}} 美金
                             </p>
                         </div>
                     </div>
@@ -68,6 +77,13 @@
                     <span class="font-danger">*</span>
                     <span>今日汇率：1 美元 = {{withdraw.FXRate.value}}</span> 人民币
                 </p>
+                <p>
+                    <span class="font-danger">友情提示：</span>
+                </p>
+                <p>1. 通过实名认证后才可以进行资金提现。</p>
+                <p>2. 提现金额最少为20美金。</p>
+                <p>3. 未充值，体验资金和盈利不可提取。</p>
+                <p>4. 充值后交易未满 15 手，体验资金和充值前的盈利不可提取。</p>
             </div>
         </div>
     </div>

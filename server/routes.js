@@ -165,21 +165,30 @@ module.exports = function(app) {
         next();
     });
 
+    app.route('/activity').get(function(req, res) {
+        res.render('web-bonus1.html');
+    });
+
+    app.route('/activity/simulate426').get(function(req, res) {
+        res.render('simulate-426.html');
+    });
+
     // 页面跳转中
     app.route('/waiting').get(function(req, res) {
         res.render('waiting', {});
     });
 
     app.route('/:url(404|*)').get(function(req, res) {
-        var viewFilePath = '404';
-        var statusCode = 404;
-        res.status(statusCode);
-        res.render(viewFilePath, {}, function(err, html) {
-            if (err) {
-                return res.json(statusCode);
-            }
-            res.send(html);
-        });
+        // var viewFilePath = '404';
+        // var statusCode = 404;
+        // res.status(statusCode);
+        // res.render(viewFilePath, {}, function(err, html) {
+        //     if (err) {
+        //         return res.json(statusCode);
+        //     }
+        //     res.send(html);
+        // });
+        res.render('404.html', {});
     });
 
 };

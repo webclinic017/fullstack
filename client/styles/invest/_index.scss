@@ -80,8 +80,17 @@
             > span {
                 color: #fff;
                 padding: 4px;
-                background-color: $brand-warning;
                 border-radius: $border-radius-base;
+
+                &.green {
+                    background-color: $brand-success;
+                }
+                &.orange {
+                    background-color: $brand-warning;
+                }
+                &.red {
+                    background-color: $brand-danger;
+                }
             }
         }
 
@@ -100,8 +109,17 @@
             > span.rate {
                 color: #fff;
                 padding: 4px;
-                background-color: $brand-info;
                 border-radius: $border-radius-base;
+
+                &.green {
+                    background-color: $brand-success;
+                }
+                &.orange {
+                    background-color: $brand-warning;
+                }
+                &.red {
+                    background-color: $brand-danger;
+                }
             }
         }
     }

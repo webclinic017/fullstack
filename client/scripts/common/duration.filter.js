@@ -32,7 +32,15 @@
                 return Math.round((timestamp / (60 * 60 * 24))) + '天';
             }
 
-            return Math.round((timestamp / (60 * 60 * 24 * 7))) + '周';
+            if (timestamp < 60 * 60 * 24 * 7 * 30) {
+                return Math.round((timestamp / (60 * 60 * 24 * 7))) + '周';
+            }
+
+            if (timestamp < 60 * 60 * 24 * 7 * 30 * 12) {
+                return Math.round((timestamp / (60 * 60 * 24 * 7 * 30))) + '月';
+            }            
+
+            return Math.round((timestamp / (60 * 60 * 24 * 7 * 30 * 12))) + '年';
         }
     }
 })();

@@ -12,6 +12,7 @@
     @include e(title) {
         padding: 20px 0;
         border-bottom: 1px solid $gray;
+        font-weight: bold;
     }
 
     @include e(star) {
@@ -20,11 +21,13 @@
 
     @include e(tip) {
         padding-left: 6px;
+        font-weight: bold;
 
         @include m(detail) {
             color: $gray-darker;
             padding-left: 26px;
             line-height: 20px;
+            font-weight: normal;
         }
     }
 }
@@ -58,6 +61,7 @@
         float: left;
         width: 98%;
         padding-left: 6px;
+        font-weight: bold;
 
         > i {
             font-style: normal;
@@ -78,8 +82,8 @@
 
             .img {
                 height: 60px;
-                background-repeat-x: no-repeat;
-                background-position-x: center;
+                background-repeat: no-repeat;
+                background-position:center center;
 
                 &.step1 {
                     @include img-normal($image-path-web + "select-step1.png");
@@ -143,8 +147,10 @@
 
     @include e(tip) {
         padding-left: 6px;
+        font-weight: bold;
 
         @include m(detail) {
+            font-weight: normal;
             padding-left: 26px;
         }
     }
@@ -160,8 +166,8 @@
 
             .img {
                 height: 75px;
-                background-repeat-x: no-repeat;
-                background-position-x: center;
+                background-repeat: no-repeat;
+                background-position:center center;
 
                 &.step1 {
                     @include img-normal($image-path-web + "become-step1.png");

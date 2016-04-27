@@ -25,7 +25,7 @@
         getMasterDetail(usercode);
         getCopyRelation(usercode);
         // getFollowRelation(usercode);
-        getAvaCopyAmount();
+        getAvaCopyAmount(usercode);
 
         // $scope.$on('$stateChangeStart', function (event, toState, toParams) {
         //     if (toParams.usercode !== usercode) {
@@ -41,9 +41,9 @@
                 }
             });
 
-            detailId = $timeout(function () {
-                getMasterDetail(usercode);
-            }, 5000);
+            // detailId = $timeout(function () {
+            //     getMasterDetail(usercode);
+            // }, 5000);
         }
 
         // 关注关系
@@ -92,11 +92,11 @@
         }
 
         // 获取可用复制金额
-        function getAvaCopyAmount() {
+        function getAvaCopyAmount(usercode) {
             $scope.$watch('userstatus.logined', function (newVal, oldVal) {
 
                 if (newVal === true) {
-                    trader.getAvaCopyAmount().then(function (data) {
+                    trader.getAvaCopyAmount(usercode).then(function (data) {
                         // console.info(data);
                         if (data.is_succ) {
                             avaCopyAmount = data.total_available;

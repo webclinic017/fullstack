@@ -11,7 +11,7 @@
             <p class="font-base font-size-20">
                 ${{bonusSummary.copy_profit || 0}}
             </p>
-            <p>当前复制金额</p>
+            <p>当前复制总收益</p>
         </div>
         <div class="col-xs-3">
             <p class="font-base font-size-20">
@@ -38,26 +38,27 @@
     </div>
     <div class="position-relative clearfix">
         <div tw-loading-img></div>
-        <table class="table table-header">
-            <colgroup>
+        <table class="table table-header table-striped table-hover table-bordered">
+            <!-- <colgroup>
                 <col width="29%"></col>
                 <col width="22%"></col>
                 <col width="13%"></col>
                 <col width="13%"></col>
                 <col width="13%"></col>
                 <col width="10%"></col>
-            </colgroup>
+            </colgroup> -->
             <thead>
                 <tr>
                     <th>复制者</th>
                     <th>复制时间</th>
+                    <th>取消复制时间</th>
                     <th>平仓收益</th>
                     <th>我的分成</th>
                     <th>上月分成</th>
                     <th></th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="font-size-12">
                 <tr ng-repeat="bonus in bonusList">
                     <td class="text-left">
                         <a class="bonus-his__photo">
@@ -68,10 +69,13 @@
                         </span>
                     </td>
                     <td>
-                        {{bonus.timestamp | dateFormatter}}
+                        {{bonus.copy_time}}
                     </td>
                     <td>
-                        ${{bonus.close_profit}}
+                        {{bonus.cancel_time}}
+                    </td>
+                    <td>
+                        ${{bonus.profit || 0}}
                     </td>
                     <td>
                         ${{bonus.bonus || 0}}
@@ -87,12 +91,9 @@
                 </tr>
             </tbody>
         </table>
-        <!-- <div class="text-center">
-            <p tw-pagination></p>
-        </div> -->
 
         <div ng-if="bonusList.length <= 0">
-            <p class="text-center">无数据!</p>
+            <p class="text-center mg-tp-20">无数据!</p>
         </div>
     </div>
 </div>

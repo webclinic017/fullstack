@@ -83,6 +83,7 @@
 
                     if (lastSymbol === 'CNH') {
                         result = result + '人民币';
+                        return result;
                     }
 
                     if (lastSymbol === 'JPY') {
@@ -169,7 +170,7 @@
                 }
 
                 if (symbol === 'XTIUSD') {
-                    return '北海原油';
+                    return '西德州原油';
                 }
 
                 if (symbol === 'XBRUSD') {
@@ -177,7 +178,7 @@
                 }
 
                 if (symbol === 'XNGUSD') {
-                    return '天然气';
+                    return '美燃气';
                 }
             }
 

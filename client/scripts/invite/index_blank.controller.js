@@ -6,19 +6,22 @@
         .module('fullstackApp')
         .controller('InviteIndexBlankController', InviteIndexBlankController);
 
-    InviteIndexBlankController.$inject = ['$scope', 'config', 'invite', '$location', '$window'];
+    InviteIndexBlankController.$inject = ['$scope', '$location', 'config', 'invite', '$window'];
 
-    function InviteIndexBlankController ($scope, config, invite, $location, $window) {
+    function InviteIndexBlankController ($scope, $location, config, invite, $window) {
         var usercode = $location.search().usercode;
 
+        // alert(1);
         setInviteFriendsLink();
+
         function setInviteFriendsLink () {
             invite.setInviteFriendsLink(usercode).then(function (data) {
-                if (data.status === 0) {
-                    $window.location.replace(config.getUrlPrefix(config.server).main);
+
+                console.info($location.url());
+                if ($scope.userstatus.logined) {
+                    $location.url("/space/invest/current");
                 } else {
-                    console.log('记录邀请者的 usercode 失败');
-                    $window.location.replace(config.getUrlPrefix(config.server).main);
+                    $location.url("/account/register");
                 }
             });
         }

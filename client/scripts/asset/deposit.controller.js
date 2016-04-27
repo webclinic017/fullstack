@@ -10,7 +10,7 @@
     function AssetDepositController($scope, $window, $modal, $state, asset, validator) {
 
         $scope.deposit = {
-            minAmount: 200,       // 最低充值金额
+            minAmount: 0,       // 最低充值金额
             FXRate: {
                 // value: ,     // 汇率值
                 // timestamp: ,
@@ -33,10 +33,21 @@
         // 汇率
         asset.getFXRate().then(function(data) {
             $scope.deposit.FXRate.value = data.parity;
+        });
 
+        // 获取入金限制
+        asset.getDepositLimit().then(function(data) {
+            $scope.deposit.minAmount = parseInt(data.limit);
+            $scope.deposit.isumam = data.isumam;
+            
         });
         // 充值  还未完成s
         function toDeposit(amount) {
+
+            if ($scope.deposit.isumam === 1) {
+                openDepositMdl('isumam');
+                return;
+            }
             var amount = $scope.deposit.amount;
 
             if (typeof amount === 'undefined') {
@@ -54,8 +65,8 @@
         }
 
         function refresh() {
-            $state.go('space.asset.type', {
-                type: 'deposit'
+            $state.go('space.asset.subpage', {
+                subpage: 'deposit'
             }, {reload: true});
         }
 

@@ -26,8 +26,8 @@
                         {{ bonusDetail.cmd ? '做多' : '做空'}}
                         {{ bonusDetail.symbol | symbolMod: 'zh' }}
                     </td>
-                    <td>{{ bonusDetail.open_timestamp | dateFormatter }}</td>
-                    <td>{{ bonusDetail.close_timestamp | dateFormatter }}</td>
+                    <td>{{ bonusDetail.open_timestamp }}</td>
+                    <td>{{ bonusDetail.close_timestamp }}</td>
                     <td>{{ bonusDetail.open_price }}</td>
                     <td>{{ bonusDetail.close_price }}</td>
                     <td>{{ bonusDetail.volume }}</td>
@@ -42,7 +42,7 @@
       </div>
 
       <div ng-if="bonusDetails.length <= 0">
-          <p class="text-center">无数据!</p>
+          <p class="text-center mg-tp-20">无数据!</p>
       </div>
     </div>
 </div>

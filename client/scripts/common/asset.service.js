@@ -19,7 +19,8 @@
             getBonus: getBonus,
             getBonusList: getBonusList,
             getBonusDetail: getBonusDetail,
-            getCopyMyDetail: getCopyMyDetail
+            getCopyMyDetail: getCopyMyDetail,
+            getIsWithdraw: getIsWithdraw
         };
         return service;
 
@@ -165,8 +166,10 @@
          * @method getBonusList
          */
         function getBonusList(date) {
-            return $http.post('/action/public/v3/get_bonus_list', {
-                month: date
+            return $http.get('/action/public/v4/get_bonus', {
+                params: {
+                    date: date
+                }
             });
         }
 
@@ -198,5 +201,16 @@
             return $http.get('/action/public/v4/copy_my');
         }
 
+
+        /**
+         * Asset Service 获取是否可以出金
+         *
+         * @method getIsWithdraw
+         *
+         */
+
+        function getIsWithdraw () {
+            return $http.get("/action/public/v4/check_withdraw");
+        }
     }
 })();

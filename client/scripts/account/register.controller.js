@@ -76,7 +76,7 @@
                 status: 0    // 0, 1, 2
             }
         };
-        
+
         // 按钮是否可点击
         $scope.clickable = {
             captcha: true,  // 获取验证码按钮
@@ -89,7 +89,7 @@
         $scope.getCaptcha = getCaptcha;
         $scope.goNextStep = goNextStep;
         var token;
-        
+
         // 设置 token 在获取手机验证码时提交该 token 解决更换 ip 批量注册的问题
         account.setToken();
         // 从 landing page 进入时
@@ -116,7 +116,7 @@
         }
 
         // 监听 $scope.progress.step 如果是注册成功则获取账户信息
-        $scope.$watch('progress.step', function (newVal) {
+        $scope.$watch('$scope.progress.step', function (newVal) {
             if (newVal === 4) {
                 account.getPersonalInfo().then(function (data) {
                     $scope.account.realId = data.real_id;
@@ -163,7 +163,7 @@
                 tmp = account.getRVoiceCaptcha($scope.account.phone);
             } else {
                 token = $cookies['tiger_token'];
-                tmp = account.getRCaptcha($scope.account.phone, token);    
+                tmp = account.getRCaptcha($scope.account.phone, token);
             }
 
             tmp.then(function (data) {
@@ -230,6 +230,7 @@
         }
 
         function goNextStep() {
+            console.info($scope.progress.step);
             $scope.progress.step ++;    
         }
 
@@ -247,15 +248,19 @@
 
             $scope.clickable.submit = false;
             account.register(
-                $scope.account.username, 
+                $scope.account.username,
                 $scope.account.phone,
                 $scope.account.captcha,
                 $scope.account.email, 
-                $scope.account.password
+                $scope.account.password,
+                $state.params.lp,
+                $state.params.pid,
+                $state.params.unit,
+                $state.params.key
             ).then(function (data) {
-                    
+
                 if (data.is_succ) {
-                    // 成功   
+                    // 成功
                     goNextStep();
                     
                     ga('send', 'event', 'register', 'register');
@@ -265,7 +270,7 @@
                 } else {
 
 
-                    // username 
+                    // username
                     if (data.error_code === 7) {
                         $scope.backErr.username.show = true;
                         $scope.backErr.username.status = 1;

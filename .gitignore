@@ -6,5 +6,6 @@ node_modules
 client/bower_components
 client/data
 dist
+dist.tar
 /server/config
 npm-debug.log

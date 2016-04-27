@@ -127,7 +127,13 @@
     @include e(real) {
         text-align: center;
         color: $gray-dark;
-        padding-top: 15px;
+        padding-top: 10px;
         padding-bottom: 15px;
+    }
+
+    @include e(copy) {
+        text-align: center;
+        color: $gray-dark;
+        padding-top: 15px;
     }
 }

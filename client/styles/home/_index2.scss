@@ -54,14 +54,14 @@
 
     @include e(tle1) {
         margin-top: 224px;
-        font-family: "FZLTZCHK  GBK1 0";
+        // font-family: "FZLTZCHK  GBK1 0";
         font-size: 60px;
         font-weight: bold;
         line-height: 80px;
         color: $brand-primary;
     }
     @include e(tle2) {
-        font-family: "FZLTZCHK  GBK1 0";
+        // font-family: "FZLTZCHK  GBK1 0";
         font-size: 60px;
         font-weight: bold;
         color: #fff;
@@ -77,8 +77,8 @@
     }
     @include e(info) {
         margin-right: 45px;
-        font-family: "MicrosoftYaHei";
         font-size: 24px;
+        font-weight: bold;
         color: #FDFDFD;
     }
     @include e(btn1) {
@@ -342,6 +342,7 @@
         line-height: 48px;
         text-align: center;
         font-size: 32px;
+        font-weight: bold;
         color: #0C0A09;
     }
     @include e(tip) {

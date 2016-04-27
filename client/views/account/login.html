@@ -1,93 +1,96 @@
-<div class="account_login">
-    <h2 class="account_login__title">
-        登录
-    </h2>
+<div class="account_login-bg">
+    <div class="account_login account_login__white">
+        <h2 class="account_login__title">
+            登录
+        </h2>
 
-    <form name="loginForm" novalidate>
-        <div class="form-control-wrapper">
-            <input class="form-control "
-                   name="id"
-                   type="text"
-                   placeholder="手机号码/MT4 账号/电子邮箱"
-                   required
-                   ng-class="{'form-control-error': (frontErr.id.show && loginForm.id.$invalid) || (backErr.id.show && backErr.id.status > 0)}"
-                   ng-model="account.id"
-                   ng-blur="showErr('loginForm', 'id')"
-                   ng-focus="hideErr('loginForm', 'id')">
+        <form name="loginForm" novalidate>
+            <div class="form-control-wrapper">
+                <input class="form-control "
+                       name="id"
+                       type="text"
+                       placeholder="手机号码/MT4 账号/电子邮箱"
+                       required
+                       ng-class="{'form-control-error': (frontErr.id.show && loginForm.id.$invalid) || (backErr.id.show && backErr.id.status > 0)}"
+                       ng-model="account.id"
+                       ng-blur="showErr('loginForm', 'id')"
+                       ng-focus="hideErr('loginForm', 'id')">
 
 
-            <div ng-show="frontErr.id.show">
-                <p class="alert-arrow_tp_lf" ng-show="loginForm.id.$error.required">
-                    请输入账号
-                </p>
+                <div ng-show="frontErr.id.show">
+                    <p class="alert-arrow_tp_lf" ng-show="loginForm.id.$error.required">
+                        请输入账号
+                    </p>
+                </div>
+
+                <div ng-show="backErr.id.show">
+                    <p class="alert-arrow_tp_lf" ng-show="backErr.id.status === 1">
+                        账号格式不正确
+                    </p>
+                    <p class="alert-arrow_tp_lf" ng-show="backErr.id.status === 2">
+                        账号尚未注册
+                    </p>
+                </div>
             </div>
 
-            <div ng-show="backErr.id.show">
-                <p class="alert-arrow_tp_lf" ng-show="backErr.id.status === 1">
-                    账号格式不正确
-                </p>
-                <p class="alert-arrow_tp_lf" ng-show="backErr.id.status === 2">
-                    账号尚未注册
-                </p>
+            <div class="form-control-wrapper">
+                <input class="form-control form-control-primary form-control-md"
+                       name="password"
+                       type="password"
+                       placeholder="密码"
+                       required
+                       ng-class="{'form-control-error': frontErr.password.show && loginForm.password.$invalid}"
+                       ng-model="account.password"
+                       ng-focus="hideErr('loginForm', 'password')"
+                       ng-blur="showErr('loginForm', 'password')">
+                
+                <div ng-show="frontErr.password.show">
+                    <p class="alert-arrow_tp_lf" ng-show="loginForm.password.$error.required">
+                        请输入密码
+                    </p>
+                </div>
             </div>
-        </div>
 
-        <div class="form-control-wrapper">
-            <input class="form-control form-control-primary form-control-md"
-                   name="password"
-                   type="password"
-                   placeholder="密码"
-                   required
-                   ng-class="{'form-control-error': frontErr.password.show && loginForm.password.$invalid}"
-                   ng-model="account.password"
-                   ng-focus="hideErr('loginForm', 'password')"
-                   ng-blur="showErr('loginForm', 'password')">
-            
-            <div ng-show="frontErr.password.show">
-                <p class="alert-arrow_tp_lf" ng-show="loginForm.password.$error.required">
-                    请输入密码
-                </p>
-            </div>
-        </div>
-
-        <label class="checkbox" ng-class="{'checked': account.autoLogin}">
-            <input name="autoLogin" 
-                   type="checkbox" 
-                   ng-model="account.autoLogin">
-            <i class="fa fa-square-o"></i>
-            <i class="fa fa-check-square"></i>
-            下次自动登录
-        </label>
-        <a class="account_login__forget" ui-sref="account.subpage({subpage: 'forget'})">
-            忘记密码？
-        </a>
-
-        <p class="account_login__safe">
-            您在老虎金融登录采用 SSL 登录方式数据传输安全
-        </p>
-
-        <div class="text-center" ng-show="backErr.system.show">
-            <p class="alert-system" ng-show="backErr.system.status === 1">
-                登录次数过多，请 5 分钟后重试
-            </p>
-            <p class="alert-system" ng-show="backErr.system.status === 2">
-                用户名或者密码错误
-            </p>
-        </div>
-
-        <div class="text-center">
-            <button class="btn btn-primary btn-sm" ng-if="clickable" ng-click="submitForm('loginForm')">
-                登 录
-            </button>
-
-            <button class="btn btn-primary btn-sm" disabled ng-if="!clickable">
-                <i class="loading_spinner fa fa-spinner"></i>
-                登录中
-            </button>
-
-            <a class="btn btn-info btn-sm mg-tp-30" ui-sref="account.subpage({subpage: 'register'})">
-                注 册
+            <label class="checkbox" ng-class="{'checked': account.autoLogin}">
+                <input name="autoLogin" 
+                       type="checkbox" 
+                       ng-model="account.autoLogin">
+                <i class="fa fa-square-o"></i>
+                <i class="fa fa-check-square"></i>
+                下次自动登录
+            </label>
+            <a class="account_login__forget" ui-sref="account.subpage({subpage: 'forget'})">
+                忘记密码？
             </a>
-        </div>
-    </form>
+
+            <p class="account_login__safe">
+                <span class="account_login__safe-img"></span>
+                您在老虎金融登录采用 SSL 登录方式数据传输安全
+            </p>
+
+            <div class="text-center" ng-show="backErr.system.show">
+                <p class="alert-system" ng-show="backErr.system.status === 1">
+                    登录次数过多，请 5 分钟后重试
+                </p>
+                <p class="alert-system" ng-show="backErr.system.status === 2">
+                    用户名或者密码错误
+                </p>
+            </div>
+
+            <div class="text-center">
+                <button class="btn btn-primary btn-sm" ng-if="clickable" ng-click="submitForm('loginForm')">
+                    登 录
+                </button>
+
+                <button class="btn btn-primary btn-sm" disabled ng-if="!clickable">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    登录中
+                </button>
+
+                <a class="btn btn-info btn-sm mg-tp-30" ui-sref="account.subpage({subpage: 'register'})">
+                    注 册
+                </a>
+            </div>
+        </form>
+    </div>
 </div>

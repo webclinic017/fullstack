@@ -144,14 +144,18 @@
          * @name register
          * @desc 注册
          */  
-        function register(username, phone, captcha, email, password) {
+        function register(username, phone, captcha, email, password, lp, pid, unit, key) {
             
             return $http.post('/action/public/v3/register', {
                 username: username,
                 phone: phone,
                 verify_code: captcha,
                 email: email,
-                password: password
+                password: password,
+                lp: lp,
+                pid: pid,
+                unit: unit,
+                key: key
             });
         }
 

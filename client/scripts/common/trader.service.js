@@ -152,9 +152,14 @@
          * 高手主页
          *
          * @method getAvaCopyAmount
+         * @param usercode 复制的高手的 usercode
          */
-        function getAvaCopyAmount() {
-            return $http.get('/api/v1/copy_available_balance');
+        function getAvaCopyAmount(usercode) {
+            return $http.get('/api/v1/copy_available_balance', {
+                params: {
+                    from_code: usercode
+                }
+            });
         }
 
         /**

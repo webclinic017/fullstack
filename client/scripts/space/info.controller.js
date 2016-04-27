@@ -20,6 +20,7 @@
         getVerifyStatus();
         getAssetInfo();
         getInviteFriendsInfo(1);
+        getPersonalInfoDegree();
         
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
             angular.extend($scope.personal, {
@@ -41,6 +42,15 @@
             },30000);
         });
 
+        // 获取基本信息完整度
+        function getPersonalInfoDegree () {
+            account.getPersonalInfoDegree().then(function (data) {
+                // console.info(data);
+                angular.extend($scope.personal, {
+                    infoDegree: data.data.degree
+                });
+            });
+        }
 
         // 获取实名认证状态
         function getVerifyStatus () {

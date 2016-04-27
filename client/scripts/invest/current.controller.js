@@ -22,11 +22,11 @@
         var dataId;
         var tradersId;
         var detailsId;
-        var avaCopyAmount;
+        // var avaCopyAmount;
 
         getData();
         getTraders();
-        getAvaCopyAmount();
+        // getAvaCopyAmount();
 
         // 只要当前投资的所对应的 state 变化就要 cancel 轮询
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
@@ -38,6 +38,7 @@
         // 获取自主交易持仓订单和订单概况
         function getData() {
             invest.getInvestCurrentData().then(function (data) {
+                // console.info(data);
                 $scope.orders = data.data;
                 angular.extend($scope.orderCurrent, data.group_data);
 
@@ -112,12 +113,12 @@
         }
 
         // 获取可用复制金额
-        function getAvaCopyAmount() {
-            trader.getAvaCopyAmount().then(function (data) {
-                // 本人可用复制金额
-                avaCopyAmount = data.total_available;
-            });
-        }
+        // function getAvaCopyAmount() {
+        //     trader.getAvaCopyAmount().then(function (data) {
+        //         // 本人可用复制金额
+        //         avaCopyAmount = data.total_available;
+        //     });
+        // }
 
         function openCopyMdl(trader, event) {
             event.stopPropagation();
@@ -134,7 +135,7 @@
                         trader.minCopyAmount = trader.min_copy_amount;
                         return {
                             copiedTrader: trader,
-                            avaCopyAmount: avaCopyAmount
+                            // avaCopyAmount: avaCopyAmount
                         }
                     }
                 }

@@ -47,7 +47,9 @@
                         </div>
                     </th>
                     <th colspan="2" class="invest_orders__rate-promise">
-                        <span>保证金比例: {{ orderCurrent.margin_level }}%</span>
+                        <span ng-class="{'green': orderCurrent.margin_level > 200, 'orange': orderCurrent.margin_level > 150 && orderCurrent.margin_level <= 200, 'red': orderCurrent.margin_level <= 150}">
+                            保证金比例: {{ orderCurrent.margin_level }}%
+                        </span>
                     </th>
                     <th ng-class="{'font-success': orderCurrent.group_profit.indexOf('-') < 0, 'font-danger':  orderCurrent.group_profit.indexOf('-') >= 0}">
                         <i class="fa fa-dollar"></i>{{ orderCurrent.group_profit }}
@@ -137,7 +139,9 @@
                                 <i class="fa fa-caret-down font-info"></i>
                             </span>
                             <br>
-                            <span class="rate">复制比例: {{ trader.copy_ratio }}%</span>
+                            <span class="rate" ng-class="{'green': trader.copy_ratio > 200, 'orange': trader.copy_ratio > 150 && trader.copy_ratio <= 200, 'red': trader.copy_ratio <= 150}">
+                                复制比例: {{ trader.copy_ratio }}%
+                            </span>
                         </th>
                         <th ng-class="{'font-success': trader.profit.indexOf('-') < 0, 'font-danger':  trader.profit.indexOf('-') >= 0}">
                             <i class="fa fa-dollar"></i>{{ trader.profit }}

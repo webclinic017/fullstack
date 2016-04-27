@@ -6,26 +6,18 @@
         .module('fullstackApp')
         .directive('twProgress', twProgress);
 
-    function twProgress($timeout) {
+    function twProgress($document) {
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
-                
-                if (scope.$last === true) {
-                    $timeout(function() {
-                        var proLength = $('.progress').length;
+
+                var proLength = $('.progress').length;
                         var $scale = $('.scale');
-                        var $circle = $('.circle');                   
+                        var $num = $('.p-num');
 
-                        for (var i = 0;  i < proLength; i++) {
-                            $scale[i].style.height = "13px";
-                            $scale[i].style.width = $circle[i].innerHTML;
-                            $circle[i].style.left = $circle[i].innerHTML;
-                        }
-                        scope.$emit('ngRepeatFinished');
-                    });
+                for (var i = 0;  i < proLength; i++) {
+                    $scale[i].style.width = $num[i].innerHTML;
                 }
-
             }
         }
     }

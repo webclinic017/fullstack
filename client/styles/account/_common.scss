@@ -1,7 +1,8 @@
 //== 登录
 @include b(account_login) {
-    width: 320px;
+    width: 360px;
     margin: 150px auto 200px;
+    padding: 20px;
 
     .btn {
         width: 100%;
@@ -30,13 +31,39 @@
         margin-top: 10px;
         margin-bottom: 30px;
         color: $gray-darker;
+
+        @include m(img) {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            vertical-align: bottom;
+            background-size: 100%;
+            @include img-normal($image-path-base + "login_safe.png");
+
+        }
+    }
+
+    @include e(white) {
+        background-color: #fff;
     }
 }
+
+@include b(account_login-bg) {
+    max-width: 2560px;
+    max-height: 1440px;
+    overflow: hidden;
+    background-position: center center;
+    background-size: 100%;
+    @include img-normal($image-path-base + "login_bg.jpg");
+
+}
+
+
 
 //== 注册
 @include b(account_register) {
     width: 600px;
-    margin: 80px auto 200px;
+    margin: 160px auto 200px;
 
     @include e(title) {
         margin-top: 0;

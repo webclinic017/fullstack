@@ -7,10 +7,10 @@
         </div>
         <div class="space_sidebar__user">
             <span class="space_sidebar__user-username">{{ personal.username }}</span>
-            <span class="space_sidebar__user-position">
+            <!-- <span class="space_sidebar__user-position">
                 <i class="fa fa-map-marker"></i>
                 {{ personal.region.city_name || personal.region.state_name || personal.region.world_name || '中国' }}
-            </span>
+            </span> -->
         </div>
         <div class="row space_sidebar__verify">
             <div class="col-xs-6 bar">
@@ -21,17 +21,27 @@
                     实名认证
                 </a>
 
-                <a class="btn btn-gray btn-gray-sm" href="" ng-disabled="true" ng-if="personal.verifiedStatus === 2">
-                    认证审核中
+                <a class="btn btn-gray btn-gray-sm" ng-disabled="true" ng-if="personal.verifiedStatus === 2">
+                    审核中
                 </a>
 
-                <a class="btn btn-gray btn-gray-sm" ui-sref="space.asset.subpage({subpage: 'deposit'})" ng-if="personal.verifiedStatus === 3">
-                    存入资金
+                <a class="btn btn-gray btn-gray-sm" ui-sref="space.setting.subpage({subpage: 'info'})" ng-if="personal.verifiedStatus === 3 && personal.infoDegree < 100">
+                    完善资料
+                </a>
+
+                <a class="btn btn-gray btn-gray-sm" ng-if="personal.verifiedStatus === 3 && personal.infoDegree === 100">
+                    已认证
                 </a>
             </div>
         </div>
-        <div class="space_sidebar__data">
+        <!-- <div class="space_sidebar__data">
             <a class="btn btn-primary btn-sm" ui-sref="space.setting.subpage({subpage: 'info'})">完善个人资料 ></a>
+        </div> -->
+        <div ng-if="personal.master" class="space_sidebar__copy">
+            复制高手：0
+        </div>
+        <div ng-if="!personal.master" class="space_sidebar__copy">
+            复制高手：{{ personal.copy_num }}
         </div>
         <div class="space_sidebar__real">
             MT4 真实账户：{{ personal.real_id }}

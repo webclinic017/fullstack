@@ -9,7 +9,8 @@
     function ranklist($http) {
         var service = {
             getMastersList: getMastersList,
-            getCopiersList: getCopiersList
+            getCopiersList: getCopiersList,
+            getOrderInfo: getOrderInfo
         };
         return service;
 
@@ -38,6 +39,21 @@
          */
         function getCopiersList (type) {
             return $http.get('/data/copiers.json');
+        }
+
+        /**
+         * Ranklist Service 获取预约消息
+         * 排行榜 
+         *
+         * @method getOrderInfo
+         * 
+         */
+        function getOrderInfo(phone, title, username) {
+            return $http.post('/action/public/v3/closed_fund_leads', {
+                phone: phone,
+                title: title,
+                username: username
+            });
         }
     }
 })();

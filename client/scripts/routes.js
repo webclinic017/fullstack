@@ -16,7 +16,7 @@
                     }
                 })
                 .state('account.subpage', {
-                    url: '/account/:subpage?back',
+                    url: '/account/:subpage?name&phone&email&lp&pid&unit&key',
                     views: {
                         'content@account': {
                             templateUrl: function ($stateParams) {
@@ -89,8 +89,8 @@
                     }
                 })
                 // 点击邀请链接对应的路由
-                .state('invite', {
-                    url: '/invite/come?usercode',
+                .state('space.come', {
+                    url: '/space/invite/come?usercode',
                     views: {
                         '@': {
                             controller: 'InviteIndexBlankController'
@@ -135,7 +135,7 @@
                         }
                     }
                 })
-                
+
                 // setting
                 .state('space.setting', {
                     views: {
@@ -156,12 +156,12 @@
                             },
                             controllerProvider: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'info';
-                                
+
                                 if ($stateParams.subpage === 'info') {
                                     var ctrlPrefix = 'Setting';
                                     var ctrlSuffix = 'Controller';
                                     var ctrlRoot = modCtrlName($stateParams.subpage);
-                                    return ctrlPrefix + ctrlRoot + ctrlSuffix;    
+                                    return ctrlPrefix + ctrlRoot + ctrlSuffix;
                                 } else {
                                     // controller 在模板中指定（为了使用 ng-include）
                                     return '';
@@ -219,6 +219,62 @@
                         }
                     }
                 })
+                .state('ranklist.list', {
+                    url: '/ranklist/list',
+                    views: {
+                        'list@ranklist': {
+                            templateUrl: '/views/ranklist/list.html',
+                            controller: 'RanklistListController'
+                        }
+                    }
+                })
+
+                .state('ranklist.huiying1', {
+                    url: '/ranklist/huiying1',
+                    views: {
+                        '@': {
+                            templateUrl: '/views/ranklist/list-huiying401.html',
+                            controller: 'RanklistListController'
+                        }
+                    }
+                })
+                .state('ranklist.huiying2', {
+                    url: '/ranklist/huiying2',
+                    views: {
+                        '@': {
+                            templateUrl: '/views/ranklist/list-huiying402.html',
+                            controller: 'RanklistListController'
+                        }
+                    }
+                })
+                .state('ranklist.huiying3', {
+                    url: '/ranklist/huiying3',
+                    views: {
+                        '@': {
+                            templateUrl: '/views/ranklist/list-huiying403.html',
+                            controller: 'RanklistListController'
+                        }
+                    }
+                })
+                .state('ranklist.huiying-month', {
+                    url: '/ranklist/huiying-month',
+                    views: {
+                        '@': {
+                            templateUrl: '/views/ranklist/list-huiying-month.html',
+                            controller: 'RanklistListController'
+                        }
+                    }
+                })
+                .state('ranklist.huiying-agree', {
+                    url: '/ranklist/huiying-agree',
+                    views: {
+                        '@': {
+                            templateUrl: '/views/ranklist/list-huiying-agree.html',
+                            controller: 'RanklistListController'
+                        }
+                    }
+                })
+
 
                 // 高手主页
                 .state('trader', {
@@ -253,6 +309,16 @@
                     views: {
                         '@': {
                             templateUrl: '/views/waiting.html',
+                            controller: ''
+                        }
+                    }
+                })
+
+                .state('activity', {
+                    url: '/activity',
+                    views: {
+                        '@': {
+                            templateUrl: '/views/web-bonus1.html',
                             controller: ''
                         }
                     }

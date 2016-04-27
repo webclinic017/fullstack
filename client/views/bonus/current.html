@@ -12,7 +12,7 @@
             <p class="font-base font-size-20">
                 ${{bonusSummary2.copy_profit || 0}}
             </p>
-            <p>当前复制金额</p>
+            <p>当前复制总收益</p>
         </div>
         <div class="col-xs-3">
             <p class="font-base font-size-20">
@@ -41,8 +41,8 @@
             <tr ng-repeat="current in currentList">
                 <td class="font-info">{{current.username}}</td>
                 <td>{{current.copy_amount}}</td>
-                <td>{{current.time | duration}}</td>
-                <td class="font-success">{{current.profit}}</td>
+                <td>{{current.time | duration}}前</td>
+                <td class="font-success">${{current.profit}}</td>
             </tr>
         </tbody>
     </table>

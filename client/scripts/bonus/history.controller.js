@@ -17,16 +17,7 @@
         };
         $scope.bonusSummary = {};
         $scope.bonusList = [];
-        // $scope.pagebar = {
-        //     config: {
-        //         // total: , 总页数
-        //         size: 3,
-        //         page: 1
-        //     },
-        //     pages: [],
-        //     //selectPage: , bind to pagination.selectPage
-        //     getList: getList
-        // };
+        
 
         $scope.search = search;
         $scope.openDetailMdl = openDetailMdl;
@@ -48,45 +39,26 @@
             // console.info(data);
         });
 
+
         getBonusList();
 
         // 获取我的分成列表
-        function getBonusList () {
+        function getBonusList (date) {
             asset.getBonusList($scope.datepicker.date).then(function (data) {
                 $scope.$broadcast('showLoadingImg');
 
                 $scope.bonusList = data.data;
-                console.info(data);
+                // console.info(data.data.length);
+                
                 $scope.$broadcast('hideLoadingImg');
 
             });
         }
 
         function search() {
-            getBonusList();
+            getBonusList($scope.datepicker.date);
         }
 
-        // getList(1);
-        // // 获取分成列表
-        // function getList(page) {
-        //     $scope.$broadcast('showLoadingImg');
-
-        //     asset.getBonusList(page, pagesize, $scope.datepicker.date).then(function (data) {
-        //         $scope.bonusList = data.data;
-
-        //         angular.extend($scope.pagebar.config, {
-        //             total: utils.getTotal(data.data.length, pagesize),
-        //             page: page
-        //         });
-
-        //         $scope.$broadcast('hideLoadingImg');
-        //     });
-        // }
-
-        // // 根据日期查询分成信息
-        // function search() {
-        //     getList(1);
-        // }
 
         // open detail modal
         function openDetailMdl(usercode) {

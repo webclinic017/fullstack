@@ -25,7 +25,10 @@
                     ${{ history.amount }}
                 </td>
                 <td>
-                    <span ng-if="history.status === 2">充值未完成</span>
+                    <span ng-if="history.status === 2">
+                        充值未完成
+                        <a class="font-info" href="/pay_order/{{history.code}}" target="_blank">继续充值</a>
+                    </span>
                     <span ng-if="history.status === 4">充值成功</span>
                     <span ng-if="history.status === 5">开户赠金</span>
                     <span ng-if="history.status === -1">

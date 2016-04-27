@@ -1,0 +1,28 @@
+.hy-tabs {
+
+    .hy-tabs-ul {
+        overflow: hidden;
+        li {
+            float: left;
+            padding: 15px 30px;
+            margin-right: 1px;
+            font-size: 18px;
+            background: #eee;
+            cursor: pointer;
+        }
+    }
+    .hy-tabs-ul-active {
+        background: #fff !important;
+        border-top: 2px solid $brand-primary;
+    }
+    .hy-tabs-con {
+        padding: 0 15px;
+    }
+    .hy-tabs-con1{
+        display: none;
+    }
+    
+    .div-block {
+        display: block;
+    }    
+}

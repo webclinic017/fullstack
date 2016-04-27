@@ -9,6 +9,7 @@
 
     function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, forex) {
 
+        $scope.message = {};
         $scope.withdraw = {
             // amount: ,
             // succAmount: ,
@@ -25,7 +26,7 @@
                 // RMB:         // 折合人民币
             },
             success: false,
-            minAmount: 0,
+            minAmount: 20,
             maxAmount: 0
         };
         $scope.frontErr = {
@@ -50,13 +51,21 @@
         });
         // 汇率
         asset.getFXRate().then(function(data) {
-            $scope.withdraw.FXRate.value = data.parity;
+            $scope.withdraw.FXRate.value = data.outparity;
 
         });
+        
         // 获取可提取的最大金额
         forex.getAsset().then(function(data) {
             $scope.withdraw.maxAmount = data.data.balance;
         });
+
+        // 判断出金状态
+        asset.getIsWithdraw().then(function (data) {
+            $scope.message = data;
+            console.info($scope.message);
+        });
+        
 
         // 获取银行卡信息
         function getCard() {
@@ -93,13 +102,16 @@
         }
 
 
+
         // 提现相关的各种弹窗提示
         function openWithdrawMdl() {
             var withdraw = $scope.withdraw;
+            // var isMessage = $scope.message;
 
             $modal.open({
                 templateUrl: '/views/asset/withdraw_modal.html',
                 size: 'sm',
+                backdrop: 'static',
                 controller: function ($scope, $modalInstance, $state) {
                     $scope.isWithdrawSucc = withdraw.success;
                     $scope.withdrawAmount = withdraw.amount;
@@ -119,27 +131,53 @@
             });
         }
 
+        function openMessageMdl() {
+            var message = $scope.message;
+
+            $modal.open({
+                templateUrl: '/views/asset/withdraw_modal2.html',
+                size: 'sm',
+                backdrop: 'static',
+                controller: function ($scope, $modalInstance, $state) {
+                    $scope.closeModal = closeModal;
+                    $scope.message = message; 
+                    console.info(message);
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
+
         // 提现
         function toWithdraw() {
             if ($scope.withdraw.card.id === 'undefined') {
-                openWithdrawMdl();
+                openWithdrawMdl("withdrawCard");
                 return;
             }
             showErr('amount');
-            // if ($scope.withdrawForm.$invalid) {
-            //     return;
-            // }
 
-            asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).
+            // 判断是否可以出金
+            asset.getIsWithdraw().then(function(data) {
+                $scope.message = data;
+                // console.info(data);
+                if ($scope.message.error_code != 0) {
+                    console.info($scope.message);
+                    openMessageMdl(); 
+                } else {
+                    asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).
                     then(function (data) {
 
-                if (data.is_succ) {
-                    $scope.withdraw.success = true;
-                    openWithdrawMdl();
+                        if (data.is_succ) {
+                            $scope.withdraw.success = true;
+                            openWithdrawMdl("withdrawEnd");
 
-                    $state.go('space.asset.subpage', {
-                        subpage: 'withdraw'
-                    }, {reload: true});
+                            $state.go('space.asset.subpage', {
+                                subpage: 'withdraw'
+                            }, {reload: true});
+                        }
+                    });
                 }
             });
 

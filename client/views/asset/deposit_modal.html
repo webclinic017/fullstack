@@ -41,4 +41,19 @@
             </button>
         </p>
     </div>
+
+    <div class="system_modal__content" ng-if="type === 'isumam'">
+        <p class="system_modal__info">
+            无法进行充值操作
+        </p>
+        <p class="system_modal__tip">
+            您的资金处于封闭期，无法使用充值
+        </p>
+
+        <p class="system_modal__btn_wrapper">
+            <button class="btn btn-primary btn-sm" ng-click="closeModal()">
+                确定
+            </button>
+        </p>
+    </div>
 </div>

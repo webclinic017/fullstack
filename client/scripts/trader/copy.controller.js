@@ -20,7 +20,7 @@
             username: copiedTrader.username,          // 高手 username
             // avatar: copiedTrader.lgAvatar,         // 高手头像
             amount: copiedTrader.copied || undefined, // 需填写的复制金额，若已经复制则为本人复制高手的复制金额
-            avaCopyAmount: avaCopyAmount || 0,
+            avaCopyAmount: avaCopyAmount || undefined,
             minCopyAmount: copiedTrader.minCopyAmount
         };
 
@@ -50,20 +50,25 @@
                 parseInt($scope.copyTrade.amount) < parseInt($scope.copyTrade.minCopyAmount)) {
             $scope.copyTrade.amount = 1000;    
         }
-
+        
         if (typeof avaCopyAmount === 'undefined') {
-            getAvaCopyAmount();
+            getAvaCopyAmount(copiedTrader.usercode);
         }
         
         // 获取可用复制金额
-        function getAvaCopyAmount() {
-            trader.getAvaCopyAmount().then(function (data) {
+        function getAvaCopyAmount(usercode) {
+            trader.getAvaCopyAmount(usercode).then(function (data) {
                 $scope.copyTrade.avaCopyAmount = data.total_available;
             });
         }
 
         function submitForm() {
             showErr('amount');
+
+            if (typeof $scope.copyTrade.avaCopyAmount === 'undefined') {
+                console.log("getAvaCopyAmount");
+                return;
+            }
             
             if ($scope.copyForm.$invalid) {
                 return;

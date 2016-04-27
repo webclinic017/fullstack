@@ -12,7 +12,9 @@
         .module('fullstackApp')
         .config(['$httpProvider', function ($httpProvider) {
             // 解决 IE 缓存 Ajax 请求的问题
-            $httpProvider.defaults.headers.common['Cache-Control'] = 'no-cache';
+            //1，测试了IE并没有重现缓存ajax的情况
+            //2,如果加no-cache,则不会有if-modify-since参数，则会导致每次都请求200数据，速度变慢
+           // $httpProvider.defaults.headers.common['Cache-Control'] = 'no-cache';
 
             $httpProvider.interceptors.push(['$q', 'config', function ($q, config) {
                 return {

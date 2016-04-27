@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('InviteIndexController', InviteIndexController);
 
-    InviteIndexController.$inject = ['$scope', '$document', 'invite', 'utils', 'account', 'config'];
+    InviteIndexController.$inject = ['$scope', '$document', '$location', 'invite', 'utils', 'account', 'config'];
 
-    function InviteIndexController($scope, $document, invite, utils, account, config) {
+    function InviteIndexController($scope, $document, $location, invite, utils, account, config) {
 
         $scope.invitation = {
             // usercode: 3303,
@@ -45,10 +45,12 @@
             });
         }
 
+
+
         function getInfo () {
             account.getPersonalInfo().then(function (data) {
                 $scope.invitation.usercode = data.usercode;
-                $scope.invitation.link = config.getUrlPrefix(config.server).main + '/space/#/invite/come?usercode=' + data.usercode;
+                $scope.invitation.link = $location.protocol() + '://' + $location.host() + '/space/#/space/invite/come?usercode=' + data.usercode;
             });
         }
 
