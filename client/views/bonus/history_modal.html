@@ -22,12 +22,13 @@
             <tbody>
                 <tr ng-repeat="bonusDetail in bonusDetails">
                     <td>
-                        <span class="icon-forex-{{ order.symbol.toLowerCase() }} vertical-middle">
-                        {{ bonusDetail.cmd ? '做多' : '做空'}}
+                        {{ bonusDetail.action ? '卖出' : '买入'}}
                         {{ bonusDetail.symbol | symbolMod: 'zh' }}
+
+                        <!-- <span class="icon-forex-{{ bonusDetail.symbol.toLowerCase() }} vertical-middle"></span> -->
                     </td>
-                    <td>{{ bonusDetail.open_timestamp }}</td>
-                    <td>{{ bonusDetail.close_timestamp }}</td>
+                    <td>{{ bonusDetail.open_time }}</td>
+                    <td>{{ bonusDetail.close_time }}</td>
                     <td>{{ bonusDetail.open_price }}</td>
                     <td>{{ bonusDetail.close_price }}</td>
                     <td>{{ bonusDetail.volume }}</td>
@@ -39,10 +40,10 @@
         </table>
         <div class="text-right">
           <p tw-pagination></p>
-      </div>
+        </div>
 
-      <div ng-if="bonusDetails.length <= 0">
-          <p class="text-center mg-tp-20">无数据!</p>
-      </div>
+        <div ng-if="bonusDetails.length <= 0">
+            <p class="text-center mg-tp-20">无数据!</p>
+        </div>
     </div>
 </div>
