@@ -125,7 +125,7 @@
         height: 320px;
         width: 100%;
         background-size: 100%;
-        @include img-normal($image-path-web + "become-banner.jpg");
+        @include img-normal($image-path-web + "become-banner-nocctv.png");
     }
 
     @include e(content) {

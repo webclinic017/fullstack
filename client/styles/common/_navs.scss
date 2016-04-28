@@ -87,7 +87,8 @@
     }
 
     .logo-cctv {
-        display: inline-block;
+        display:none;
+        //display: inline-block;
         width: 99px;
         height: 45px;
         @include img-normal($image-path-base + "logo-cctv.png");
