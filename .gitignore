@@ -7,5 +7,6 @@ client/bower_components
 client/data
 dist
 dist.tar
+dist.tar.*
 /server/config
 npm-debug.log
