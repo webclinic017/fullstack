@@ -37,10 +37,11 @@
 
             asset.getBonusDetail(date, copierUsercode, page, pagesize).then(function (data) {
                 $scope.bonusDetails = data.data;
-                console.info(data.data.length);
+                console.info(data);
+                // console.info(data.data.length);
 
                 angular.extend($scope.pagebar.config, {
-                    total: utils.getTotal(data.data.length, pagesize),
+                    total: utils.getTotal(data.sum, pagesize),
                     page: page
                 });
                 $scope.$broadcast('hideLoadingImg');
