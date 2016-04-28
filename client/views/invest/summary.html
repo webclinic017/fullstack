@@ -39,8 +39,8 @@
                                     <div>{{ summary.statistic.drawdown || '0.00' }}%</div>
                                 </div>
                                 <div class="invest_main__rt">
-                                    <div class="space_gray_color">最大盈利</div>
-                                    <div><i class="fa fa-dollar"></i>{{ summary.statistic.max_profit || '0.00' }}</div>
+                                    <div class="space_gray_color">最大点差</div>
+                                    <div>{{ summary.statistic.max_profit || '0.00' }}</div>
                                 </div>
                                 <div class="invest_main__rt no-border">
                                     <div class="space_gray_color">总收益率</div>
@@ -65,7 +65,7 @@
         <h5 class="navbar_summary__title">主要交易品种</h5>
         <div class="navbar_summary__content">
             <div tw-loading-img></div>
-            
+
             <ul class="invest_type" ng-if="bars.length > 0">
                 <li ng-repeat="bar in bars" class="invest_type__item row">
                     <div class="col-xs-5">
