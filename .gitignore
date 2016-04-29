@@ -10,3 +10,4 @@ dist.tar
 dist.tar.*
 /server/config
 npm-debug.log
+*.swp
