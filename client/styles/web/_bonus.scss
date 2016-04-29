@@ -5,7 +5,7 @@
         position: relative;
         margin-top: 69px;
         height: 785px;
-        @include img-normal($image-path-base + "activity/new-banner.jpg");
+        @include img-normal($image-path-base + "activity/new-banner.png");
         background-position: center center;
     }
     @include e (btn) {
