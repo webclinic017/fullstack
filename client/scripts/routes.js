@@ -16,7 +16,7 @@
                     }
                 })
                 .state('account.subpage', {
-                    url: '/account/:subpage?name&phone&email&lp&pid&unit&key',
+                    url: '/account/:subpage?name&phone&email&lp&pid&unit&key&back',
                     views: {
                         'content@account': {
                             templateUrl: function ($stateParams) {
