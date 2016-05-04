@@ -1,21 +1,21 @@
-<div class="asset-public" ng-if="personal.verified != undifined && !personal.verified">
+<div class="asset-public" ng-show="personal.verified != undifined && !personal.verified">
     <a class="font-info deposit__pointer" href="/space/#/space/setting/verify">您未实名认证，请去实名认证</a>
 </div>
 
-<div class="asset-public withdraw"  ng-if="personal.verified">
-    <div ng-if="message.error_code != 0">
+<div class="asset-public withdraw"  ng-show="personal.verified">
+    <div ng-show="message.error_code != 0">
         <p class="font-info">{{message.error_msg}}</p>
     </div>
 
-    <div ng-if="message.error_code === 0">
+    <div ng-show="message.error_code === 0">
         <div class="row">
             <div class="col-xs-4 pd-tp-10 text-right">转入绑定银行卡：&nbsp;&nbsp;&nbsp;&nbsp;</div>
 
-            <div class="col-xs-8 pd-tp-10 history__lt40" ng-if="!withdraw.card.id">
+            <div class="col-xs-8 pd-tp-10 history__lt40" ng-show="!withdraw.card.id">
                 <span class="deposit__pointer font-info" ng-click="openCardMdl()">点击绑定银行卡 ></span>
             </div>
 
-            <div class="col-xs-8 history__lt40" ng-if="withdraw.card.id">
+            <div class="col-xs-8 history__lt40" ng-show="withdraw.card.id">
                 <span class="icon-banks-{{withdraw.card.bank}}"></span>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <span>***********{{withdraw.card.number}}</span>
@@ -64,7 +64,11 @@
                 </form>
             </div>
             <div class="col-xs-3">
-                <button class="btn btn-primary btn-sm" ng-click="toWithdraw()">提现</button>
+                <button class="btn btn-primary btn-sm" ng-show="clickable" ng-click="toWithdraw()">提现</button>
+                <button class="btn btn-primary btn-sm" disabled ng-show="!clickable">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                   提现中 
+                </button>
             </div>
         </div>
         <div class="row">

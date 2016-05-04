@@ -209,8 +209,13 @@
          *
          */
 
-        function getIsWithdraw () {
-            return $http.get("/action/public/v4/check_withdraw");
+        function getIsWithdraw (amount) {
+            console.info('getIsWithdraw is sending', amount);
+            return $http.get("/action/public/v4/check_withdraw",{
+              params : {
+                         amount : amount
+                       }
+            });
         }
     }
 })();

@@ -63,7 +63,6 @@
         // 判断出金状态
         asset.getIsWithdraw().then(function (data) {
             $scope.message = data;
-            console.info($scope.message);
         });
         
 
@@ -151,23 +150,34 @@
         }
 
         // 提现
+        $scope.clickable = true;
         function toWithdraw() {
             if ($scope.withdraw.card.id === 'undefined') {
                 openWithdrawMdl("withdrawCard");
                 return;
             }
             showErr('amount');
-
+            console.info($scope.withdrawForm.$invalid);
+            if($scope.withdrawForm.$invalid){
+              return;
+            }
+            if($scope.clickable == false){
+              return;
+            }
+            console.log('toWithdraw is click');
+            $scope.clickable = false;
             // 判断是否可以出金
-            asset.getIsWithdraw().then(function(data) {
+            asset.getIsWithdraw($scope.withdraw.amount).then(function(data) {
                 $scope.message = data;
                 // console.info(data);
                 if ($scope.message.error_code != 0) {
                     console.info($scope.message);
                     openMessageMdl(); 
+                    $scope.clickable = true;
                 } else {
                     asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).
                     then(function (data) {
+                      $scope.clickable = true;
 
                         if (data.is_succ) {
                             $scope.withdraw.success = true;
