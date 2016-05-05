@@ -1,0 +1,223 @@
+.t29_modal{
+  padding-top:40px;
+  color:#000;
+  font-size:14px;
+  .t29_close_modal{
+    position:absolute;
+    right:0;
+    top:30px;
+    background:url($image-path-base + "bd/t29/close.png") no-repeat;
+    width:70px;
+    height:48px;
+  }
+  .succ{
+    margin:40px 0;
+    font-size:24px;
+    font-weight:bold;
+  }
+  .sign{
+    text-align:right;
+  }
+  .confirm_box{
+    position:relative;
+    text-align:center;
+    background:#fedd0a;
+    height:110px;
+    margin:0;
+    padding:0;
+    .arrow{
+      position:absolute;
+      top:0px;
+      left:50%;
+      margin-left:-20px;
+      border : 20px solid transparent;
+      border-top-color:white;
+      border-bottom-width:0;
+    }
+  }
+  .confirm{
+    border:0;
+    background:#000;
+    color:#fedd0a;
+    width:231px;
+    height:50px;
+    margin-top:30px;
+    font-size:22px;
+  }
+}
+.modal-content{
+  border-radius:8px;
+}
+.act-sim {
+  background-color: #00162a;
+  margin-top:68px;
+}
+.act-sim__banner {
+  position: relative;
+  height: 1052px;
+  background-position: center center;
+  background-image: url($image-path-base + "bd/t29/act-sim-banner.jpg");
+}
+.act-sim__banner-btn {
+  position: relative;
+  padding: 30px 73px;
+  background-color: #fedd0a;
+  font-size: 30px;
+  line-height: 30px;
+  color: #000;
+}
+.act-sim__banner-btn1 {
+  top: 766px;
+  background-color: #f3f3f3;
+}
+.act-sim__banner-btn2 {
+  top: 766px;
+}
+.act-sim__banner {
+  position: relative;
+  height: 888px;
+  background-position: center center;
+  background-image: url($image-path-base + "/bd/t29/act-sim-banner.jpg");
+}
+.act-sim__contest {
+  position: relative;
+  top: -24px;
+  color: #fff;
+}
+.act-sim__contest-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.act-sim__contest-con1 {
+  margin-top: 30px;
+  font-size: 16px;
+  line-height: 27px;
+  letter-spacing: 0.85px;
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  text-align: center;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.act-sim__contest table > thead {
+  background-color: #fedd0a;
+  font-size: 18px;
+  color: #000;
+}
+.act-sim__contest table > thead th {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  border-right: 1px solid #00162a;
+}
+.act-sim__contest table > thead th:last-child {
+  border-right: 1px solid #fedd0a;
+}
+.act-sim__contest table > tbody {
+  color: #f3f3f3;
+}
+.act-sim__contest table > tbody tr {
+  border: 1px solid #314252;
+  border-top: none;
+}
+.act-sim__contest table > tbody td {
+  padding: 15px 10px;
+}
+.act-sim__contest table > tbody td:nth-child(2n) {
+  background-color: #192d3e;
+}
+.act-sim__rules {
+  background-color: #fff;
+}
+.act-sim__contest-tip {
+  margin-top: 35px;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+}
+.act-sim__contest ul {
+  font-size: 16px;
+}
+.act-sim__contest ul li {
+  line-height: 30px;
+}
+.act-sim__contest-gift {
+  position: relative;
+}
+.act-sim__contest-box {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 483px;
+  height: 432px;
+  background-size: 100%;
+  background-position: center center;
+  background-image: url($image-path-base + "bd/t29/act-sim-box.jpg");
+}
+.act-sim__rules .rule-container {
+  margin: 0 auto;
+  width: 1060px;
+}
+.hy-tabs .hy-tabs-ul {
+  margin-top: 80px;
+  margin-left: 164px;
+  display: inline-block;
+  text-align: center;
+  overflow: hidden;
+}
+.hy-tabs .hy-tabs-ul li {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: left;
+  width: 329px;
+  border: none !important;
+  font-size: 30px;
+  background-color: #00162a !important;
+  color: #fff !important;
+  cursor: pointer;
+  margin-right: -1px;
+}
+.hy-tabs .hy-tabs-ul .hy-tabs-ul-active {
+  background: #fedd0a !important;
+  color: #000 !important;
+}
+.hy-tabs .hy-tabs-con {
+  width: 100%;
+  color: #00162a;
+}
+.hy-tabs .hy-tabs-con1 {
+  display: none;
+}
+.hy-tabs .div-block {
+  display: block;
+}
+.act-sim__rules-title {
+  margin-top: 25px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 18px;
+}
+.act-sim__rules-con {
+  font-size: 14px;
+  line-height: 25px;
+}
+.act-sim__logo .act-sim__contest-title {
+  padding-top: 90px;
+}
+.act-sim__contest-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+.act-sim__logo-img {
+  display: inline-block;
+  margin-bottom: 180px;
+  width: 1000px;
+  height: 367px;
+  background-position: center center;
+  background-size: 100%;
+  background-image: url($image-path-base + "bd/t29/act-sim-logo.jpg");
+}
