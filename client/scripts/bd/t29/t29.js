@@ -24,6 +24,8 @@
           console.info('result', rs);
           if(rs && rs.is_succ){
             modalResult(game);
+          }else{
+            alert('报名失败,'+((rs && rs.error_msg) || "请联系客服"));
           }
       });
       }

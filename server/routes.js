@@ -178,7 +178,7 @@ module.exports = function(app) {
         res.render('waiting', {});
     });
     app.route('/bd/t29').get(function(req, res){
-        res.render('bd/t29/t29');
+        res.render('bd_t29');
     });
 
     app.route('/:url(404|*)').get(function(req, res) {
