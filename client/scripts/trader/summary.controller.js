@@ -31,7 +31,7 @@
 
                 function broadcastPieData () {
                     var profitSum = [
-                        ['盈利订单',$scope.summary.order_count.open_trade],
+                        ['盈利订单',$scope.summary.order_count.profit_order],
                         ['亏损订单',$scope.summary.order_count.loss_order]
                     ];
                     // console.info(profitSum);
