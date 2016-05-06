@@ -12,6 +12,8 @@
         $scope.progress = {
             step: 1
         };
+        //截止到16号，交易大赛不可报名。
+        $scope.showGame = new Date().getTime() < new Date(2015,4,16).getTime() ? true : false;
         $scope.account = {
             phone: undefined,
             captcha: undefined,
