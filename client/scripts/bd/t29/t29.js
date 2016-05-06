@@ -5,19 +5,36 @@
     angular.module('fullstackApp')
         .controller('BdT29Controller', BdT29Controller);
 
-    BdT29Controller.$inject = ['$scope', '$modal','$http'];
+    BdT29Controller.$inject = ['$scope', '$modal','$http','account'];
 
-    function BdT29Controller($scope, $modal,$http) {
+    function BdT29Controller($scope, $modal,$http,account) {
       var sending = false;
-      function enroll(game){
-       if(!isLogin()){
-          toLogin();
-          return;
-        }
-        console.info('aaa');
+      var _logined = false;
+      var _isChecked = false;
+      //检查是否登录
+      if(isLoginFromCookie()){
+        account.checkLogined().then(function(logined){
+          _isChecked = true;
+          _logined = logined;
+        });
+      }else{
+        _isChecked = true;
+        _logined =false;
+      }
+
+      function enroll(){
         if(sending){
           return;
         }
+        if(!_isChecked){
+          setTimeout(enroll,100);
+          return;
+        }
+        if(!_logined){
+          toLogin();
+          return;
+        }
+
         sending = true;
         $http.get('/action/public/v3/apply_to_game',{
           params : {
@@ -71,7 +88,7 @@
            return null;
          }
        }
-       function isLogin(){
+       function isLoginFromCookie(){
          var user_code = getCookie('user_code');
          if(user_code){
            return true;
