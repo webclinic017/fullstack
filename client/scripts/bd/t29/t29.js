@@ -22,12 +22,14 @@
         _logined =false;
       }
 
-      function enroll(){
+      function enroll(game){
         if(sending){
           return;
         }
         if(!_isChecked){
-          setTimeout(enroll,100);
+          setTimeout(function(){
+            enroll(game);
+          },100);
           return;
         }
         if(!_logined){
