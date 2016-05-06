@@ -13,7 +13,7 @@
             step: 1
         };
         //截止到16号，交易大赛不可报名。
-        $scope.showGame = new Date().getTime() < new Date(2015,4,16).getTime() ? true : false;
+        $scope.showGame = new Date().getTime() < new Date(2016,4,16).getTime() ? true : false;
         $scope.account = {
             phone: undefined,
             captcha: undefined,
@@ -237,6 +237,7 @@
         }
 
         function submitRegisterForm(formName) {
+
             showErr(formName, 'username');
             showErr(formName, 'phone');
             showErr(formName, 'captcha');
