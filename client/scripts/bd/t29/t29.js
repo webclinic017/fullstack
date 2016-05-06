@@ -10,6 +10,10 @@
     function BdT29Controller($scope, $modal,$http) {
       var sending = false;
       function enroll(game){
+       if(!isLogin()){
+          toLogin();
+          return;
+        }
         console.info('aaa');
         if(sending){
           return;
@@ -38,6 +42,7 @@
               $scope.username = $(".navbar_info__username").text();
               $scope.game_name = game == 1?"模拟盘":"实盘";
               $scope.closeModal = closeModal;
+              $scope.date = getDate();
 
               function closeModal() {
                   $modalInstance.dismiss();
@@ -45,25 +50,52 @@
           }
         });
       }
+      function getDate(){
+        var dDate = new Date();
+        var year = dDate.getFullYear();
+        var month = dDate.getMonth()+1;
+        var date = dDate.getDate();
+        var s = year + '年' + month + '月' + date + '日';
+        return s;
+      }
       $scope.enroll = enroll;
-    }
+   //   //方法获取cookie
+       function getCookie(name)
+       {
+         var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+         if(arr=document.cookie.match(reg)){
+           return unescape(arr[2]);
+         }
+         else{
+           return null;
+         }
+       }
+       function isLogin(){
+         var user_code = getCookie('user_code');
+         if(user_code){
+           return true;
+         }else{
+           return false;
+         }
+       }
+      function toLogin(){
+        if(confirm('需要登录后才可以报名！')){
+          location.href="/space/#/account/login?back="+location.href;
+        }
+      }
+ 
+
+         // layer.confirm('需要登录后才可以报名', {
+         //     btn: ['登录','注册','暂不'] //按钮
+         // }, function(){
+         //   location.href="https://www.tigerwit.com/space/#/account/login?back="+location.href;
+         // }, function(){
+         //   location.href="https://www.tigerwit.com/space/#/account/register";
+         // },function(){
+         // });
+         // $(".layui-layer-close1").remove();
+      }
 })();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -81,67 +113,3 @@
  });
 
 
- $(function(){
-
-   //方法获取cookie
-   function getCookie(name)
-   {
-     var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
-     if(arr=document.cookie.match(reg)){
-       return unescape(arr[2]);
-     }
-     else{
-       return null;
-     }
-   }
-   function isLogin(){
-     var user_code = getCookie('user_code');
-     if(user_code){
-       return true;
-     }else{
-       return false;
-     }
-   }
-   var dEnroll = $(".enroll");
-   dEnroll.click(function(){
-     if(!isLogin()){
-        toLogin();
-        return;
-     }else{
-       layer.msg('正在报名...', {icon: 16,time:0});
-       var game = $(this).attr('_type');
-       var varName = 'var' + new Date().getTime();
-       $.getScript('https://www.tigerwit.com/action/public/v3/apply_to_game?'+$.param({
-         game : game,
-         'var' : varName 
-       }),function(){
-         var rs = window[varName];
-         var msg = "失败";
-         if(rs && rs.is_succ){
-           msg = "报名成功";
-         }else{
-           msg = (rs && rs.error_msg) || "失败:"+(rs &&rs.error_code);
-         }
-         layer.closeAll();
-         layer.alert(msg, {
-             skin: 'layui-layer-molv' //样式类名
-             ,closeBtn: 0
-         }, function(){
-           layer.closeAll();
-         });
-       });
-     }
-     var _type = $(this).attr('_type');
-   });
-   function toLogin(){
-     layer.confirm('需要登录后才可以报名', {
-         btn: ['登录','注册','暂不'] //按钮
-     }, function(){
-       location.href="https://www.tigerwit.com/space/#/account/login?back="+location.href;
-     }, function(){
-       location.href="https://www.tigerwit.com/space/#/account/register";
-     },function(){
-     });
-     $(".layui-layer-close1").remove();
-   }
- });
