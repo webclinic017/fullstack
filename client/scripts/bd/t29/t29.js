@@ -92,6 +92,7 @@
                 location.href="/space/#/account/login?back="+location.href;
               }
               $scope.toLogin = toLogin;
+              $scope.closeModal = closeModal;
           }
         });
       }
