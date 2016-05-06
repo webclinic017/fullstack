@@ -116,7 +116,7 @@
         }
 
         // 监听 $scope.progress.step 如果是注册成功则获取账户信息
-        $scope.$watch('$scope.progress.step', function (newVal) {
+        $scope.$watch('progress.step', function (newVal) {
             if (newVal === 4) {
                 account.getPersonalInfo().then(function (data) {
                     $scope.account.realId = data.real_id;
