@@ -40,6 +40,7 @@
           backdrop: true,
           controller: function ($scope, $modalInstance) {
               $scope.username = $(".navbar_info__username").text();
+              $scope.game = game;
               $scope.game_name = game == 1?"模拟盘":"实盘";
               $scope.closeModal = closeModal;
               $scope.date = getDate();
@@ -79,9 +80,20 @@
          }
        }
       function toLogin(){
-        if(confirm('需要登录后才可以报名！')){
-          location.href="/space/#/account/login?back="+location.href;
-        }
+        $modal.open({
+          templateUrl: '/views/bd/t29/t29_login_modal.html',
+          size: 'sm',
+          backdrop: true,
+          controller: function ($scope, $modalInstance) {
+              function closeModal() {
+                  $modalInstance.dismiss();
+              }
+              function toLogin(){
+                location.href="/space/#/account/login?back="+location.href;
+              }
+              $scope.toLogin = toLogin;
+          }
+        });
       }
  
 
