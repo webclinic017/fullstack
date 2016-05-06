@@ -52,22 +52,18 @@
   background-color: #00162a;
   margin-top:68px;
 }
-.act-sim__banner {
-  position: relative;
-  height: 1052px;
-  background-position: center center;
-  background-image: url($image-path-base + "bd/act-sim-banner.jpg");
-}
+
 .act-sim__banner-btn {
-  position: relative;
+  margin:30px;
   padding: 30px 73px;
   background-color: #fedd0a;
+  display:block;
   font-size: 30px;
   line-height: 30px;
   color: #000;
 }
 .act-sim__banner-btn1 {
-  top: 766px;
+  margin-top:10px;
   background-color: #f3f3f3;
 }
 .act-sim__banner-btn2 {
@@ -75,14 +71,30 @@
 }
 .act-sim__banner {
   position: relative;
-  height: 888px;
-  background-position: center center;
-  background-image: url($image-path-base + "/bd/act-sim-banner.jpg");
+  margin-top:-80px;
+  height: 984px;
+  background: url($image-path-base + "/bd/act-sim-banner.jpg") #00162a no-repeat center center;
 }
 .act-sim__contest {
   position: relative;
-  top: -24px;
+  top: -100px;
   color: #fff;
+  .info-left{
+    width:528px;
+  }
+  .info-right{
+    float:right;
+    width:403px;
+    height:327px;
+    background:#1a2e40;
+    .enroll-count-box{
+      margin:10px 0 0;
+    }
+    .enroll-count{
+      color:#fedd0a;
+      font-size:40px;
+    }
+  }
 }
 .act-sim__contest-title {
   font-size: 30px;
@@ -160,6 +172,10 @@
 .act-sim__rules .rule-container {
   margin: 0 auto;
   width: 1060px;
+  .rule-title{
+    font-size:30px;
+    font-weight:bold;
+  }
 }
 .hy-tabs .hy-tabs-ul {
   margin-top: 80px;
@@ -188,9 +204,7 @@
   width: 100%;
   color: #00162a;
 }
-.hy-tabs .hy-tabs-con1 {
-  display: none;
-}
+
 .hy-tabs .div-block {
   display: block;
 }
@@ -198,7 +212,6 @@
   margin-top: 25px;
   margin-bottom: 5px;
   font-size: 18px;
-  font-weight: bold;
   line-height: 18px;
 }
 .act-sim__rules-con {
@@ -214,7 +227,7 @@
 }
 .act-sim__logo-img {
   display: inline-block;
-  margin-bottom: 180px;
+  margin-bottom: 100px;
   width: 1000px;
   height: 367px;
   background-position: center center;

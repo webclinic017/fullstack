@@ -1,16 +1,36 @@
+<%            
+ //从2016年5月6日17点15分开始 ,截止5月18日，每分钟增加两个人
+ var date = new Date();
+ var date_end = new Date(2016,4,18);
+ if(date > date_end){
+    date = date_end;
+ }
+ var enrollCount = 2423 + Math.floor((date - new Date(2016,4,6,17,15))/1000/60)*2;
+%>
 		<div class=" act-sim" ng-controller="BdT29Controller" style="position:relative">
             <div class="act-sim__banner">
-                <div class="container position-relative text-center">
-                  <a class="act-sim__banner-btn act-sim__banner-btn1" href="javascript:" ng-click="enroll(1)">报名模拟大赛</a>
-                  <a class="act-sim__banner-btn act-sim__banner-btn2" href="javascript:" ng-click="enroll(2)">报名实盘大赛</a>
-                </div>
+
             </div>
             <div class="act-sim__contest">
                 <div class="container">
-                    <p class="act-sim__contest-title">大赛介绍</p>
-                    <div class="act-sim__contest-con1">
-                        此次大赛由TigerWit老虎金融主办，凭借雄厚的资本，结合丰富的金融行业阅历与互联网产品创新能力，自主研发了国内第一款互联网外汇产品，吸引了众多顶尖的交易精英汇聚在此，普通投资者可通过复制交易系统，自动复制高手的交易订单，同比例获得盈利。在这里人人都是投资高手。老虎金融为大家提供一个互动的学习交易平台，可以让不会交易者跟随交易高手的交易，交易高手也可以成为上榜的明星交易达人。
+                    <div class="info clearfix">
+                        <div class="info-right">
+                            <div class="text-center">
+                              <p class="enroll-count-box">已有<span class="enroll-count"><%= enrollCount %></span>人报名</p>
+                              <a class="act-sim__banner-btn act-sim__banner-btn1" href="javascript:" ng-click="enroll(1)">报名模拟大赛</a>
+                              <a class="act-sim__banner-btn act-sim__banner-btn2" href="javascript:" ng-click="enroll(2)">报名实盘大赛</a>
+                            </div>
+                        </div>
+                        <div class="info-left">
+                            <p class="act-sim__contest-title">大赛介绍</p>
+                            <div class="act-sim__contest-con1">
+                                此次大赛由TigerWit老虎金融主办，凭借雄厚的资本，结合丰富的金融行业阅历与互联网产品创新能力，自主研发了国内第一款互联网外汇产品，吸引了众多顶尖的交易精英汇聚在此，普通投资者可通过复制交易系统，自动复制高手的交易订单，同比例获得盈利。在这里人人都是投资高手。老虎金融为大家提供一个互动的学习交易平台，可以让不会交易者跟随交易高手的交易，交易高手也可以成为上榜的明星交易达人。
+                            </div>
+                        </div>
                     </div>
+                    <p>&nbsp;</p>
+                    <p>&nbsp;</p>
+
                     <p class="act-sim__contest-title mg-tp-50">比赛时间</p>
                     <table class="table mg-tp-50">
                         <colgroup>
@@ -63,12 +83,9 @@
             <div class="act-sim__rules">
                 <div class="rule-container">
                     <div class="hy-tabs" tw-tabs>
-                        <ul class="hy-tabs-ul">
-                            <li class="hy-tabs-ul-active">模拟盘比赛规则</li>
-                            <li>实盘比赛规则</li>
-                        </ul>
                         <div class="hy-tabs-con clearfix">
-                            <div class="hy-tabs-con1 mg-tp-50 div-block">
+                            <div class=" mg-tp-50 div-block">
+                                <p class="rule-title">模拟盘比赛规则:</p>
                                 <p class="act-sim__rules-title">比赛资格</p>
                                 <p class="act-sim__rules-con">
                                     每位参赛者只能登记一个比赛账户（包括 ：姓名、电子邮箱、联络电话，等均不可重复使用），所填信息必须真实，否则将被取消参赛资格，支持EA交易，不支持EA剥头皮交易。
@@ -94,10 +111,12 @@
                                     收益率排名得分*收益率比重+月最大回撤排名得分*月最大回撤比例比重<br>
                                     比如： 小A当前收益率排名为第10名，回撤排名为第3名，小A的综合成绩为：(100-10)*7+（100-3）*3=921
                                 </p>
-                                <p class="font-bold mg-tp-20 mg-bt-80 inline">活动最终解释权归TigerWit老虎金融所有。</p>
+                                <p class=" mg-tp-20 mg-bt-80 inline">活动最终解释权归TigerWit老虎金融所有。</p>
 
                             </div>
-                            <div class="hy-tabs-con1 mg-tp-50">
+                            <div class=" mg-tp-50">
+                                <p class="rule-title">实盘比赛规则：</p>
+
                                 <p class="act-sim__rules-title">比赛资格</p>
                                 <p class="act-sim__rules-con">
                                     每位参赛者只能登记一个比赛账户（包括 ：姓名、电子邮箱、联络电话，等均不可重复使用），所填信息必须真实，否则将被取消参赛资格，支持EA交易，不支持EA剥头皮交易。
@@ -123,7 +142,7 @@
                                     收益率排名得分*收益率比重+月最大回撤排名得分*月最大回撤比例比重<br>
                                     比如： 小A当前收益率排名为第10名，回撤排名为第3名，小A的综合成绩为：n(100-10)*7+（100-3）*3=921
                                 </p>
-                                <p class="font-bold mg-tp-20 pd-bt-80 inline">活动最终解释权归TigerWit老虎金融所有。</p>
+                                <p class=" mg-tp-20 mg-bt-80 inline">活动最终解释权归TigerWit老虎金融所有。</p>
                             </div>
                         </div>
                     </div>
