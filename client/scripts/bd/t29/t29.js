@@ -91,8 +91,12 @@
               function toLogin(){
                 location.href="/space/#/account/login?back="+location.href;
               }
+              function toRegister(){
+                 location.href="/space/#/account/register?back="+location.href;;
+              }
               $scope.toLogin = toLogin;
               $scope.closeModal = closeModal;
+              $scope.toRegister = toRegister;
           }
         });
       }
