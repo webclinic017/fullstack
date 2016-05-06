@@ -8,8 +8,8 @@
                 <div class="col-1-sm" ng-class="{active: masters.type === 'copiers_sum'}" ng-click="getMastersList('copiers_sum')">
                     <span class="nav_item">复制人数</span>
                 </div>
-                <div class="col-1" ng-class="{active: masters.type === 'copy_amount'}" ng-click="getMastersList('copy_amount')">
-                    <span class="nav_item">复制金额</span>
+                <div class="col-1" ng-class="{active: masters.type === 'min_copy_amount'}" ng-click="getMastersList('min_copy_amount')">
+                    <span class="nav_item">最低复制金额</span>
                 </div>
                 <div class="col-1">
                     <span class="nav_item">走势图</span>
@@ -61,7 +61,7 @@
                         <i class="fa fa-users"></i>{{ rank.copiers_sum || 0 }}
                     </div>
                     <div class="col-1">
-                        <i class="fa fa-dollar"></i>{{ rank.copy_amount || '0.00' }}
+                        <i class="fa fa-dollar"></i>{{ rank.min_copy_amount || '0.00' }}
                     </div>
                     <div class="col-1">
                         <div tw-line-chart data-type="masterList"></div>
