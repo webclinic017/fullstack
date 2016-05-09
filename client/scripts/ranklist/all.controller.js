@@ -16,12 +16,11 @@
 
         getMastersList();
 
-        function getMastersList (type) {
+        function getMastersList (type, sort) {
             type = type ? type : '';
             $scope.$emit("showLoadingImg");
             $scope.masters.type = type;
-
-            ranklist.getMastersList(type).then(function (data) {
+            ranklist.getMastersList(type, sort).then(function (data) {
                 // console.info(data);
                 
                 if (data.is_succ) {

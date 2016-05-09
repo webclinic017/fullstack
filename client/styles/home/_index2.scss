@@ -29,6 +29,41 @@
         @include img-normal($image-path-home + "index2-banner3.png");
 
     }
+    .index2-slide4 {
+        overflow: hidden;
+        height: 818px !important;
+        background-position: center center;
+        background-size: cover;
+        @include img-normal($image-path-home + "index2-banner-game.png");
+        position:relative;
+        .enroll-game{
+            width : 212px;
+            height:64px;
+            font-size:24px;
+            line-height:64px;
+            text-align:center;
+            position:absolute;
+            border-radius : 4px;
+            border:1px solid #fedd0a;
+            color:#fedd0a;
+            font-weight:bold;
+        }
+        .enroll-game:hover{
+            color:#000;
+            background:#fedd0a;
+        }
+        .game-v{
+            right:50%;
+            bottom:160px;
+            margin-right : 180px;
+        }
+        .game-t{
+            left: 50%;
+            bottom:160px;
+            margin-left : 180px;
+        }
+
+    }
 
     .pagination {
         position: absolute;
