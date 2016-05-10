@@ -307,13 +307,13 @@
                 }
             }).then(function (data) {
                 if (data.is_succ) {
-                    return {
+                    return angular.extend(data, {
                         username: data.username,
                         location: data.region,
                         phone: data.phone,
                         email: data.email,
                         verifiedStatus: data.profile_check || 0
-                    }
+                    });
                 }
             });
         }

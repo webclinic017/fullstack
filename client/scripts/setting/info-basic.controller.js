@@ -109,21 +109,32 @@
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
         $scope.submitForm = submitForm;
+        console.info($scope.settingInfo);
 
-        $scope.$watch('personal', function (newVal, oldVal, scope) {
-            if (newVal === oldVal) return;
-            if (newVal.username === undefined) return;
-            // console.info(newVal);
+        // $scope.$watch('personal', function (newVal, oldVal, scope) {
+        //     debugger;
+        //     if (newVal === oldVal) return;
+        //     if (newVal.username === undefined) return;
+        //     // console.info(newVal);
             
+        //     $scope.basicInfo.username = newVal.username;
+        //     $scope.basicInfo.special = {
+        //         key: newVal.trading_type,
+        //         value: newVal.trading_type
+        //     };
+        //     $scope.basicInfo.strategy = newVal.trading_strategy;
+        //     $scope.basicInfo.desc = newVal.desc;
+        // }, true);
+        $scope.$watch('settingInfo', function(newVal, oldVal, scope){
             $scope.basicInfo.username = newVal.username;
             $scope.basicInfo.special = {
-                key: newVal.trading_type,
-                value: newVal.trading_type
+                key : newVal.trading_type,
+                value : newVal.trading_type
             };
             $scope.basicInfo.strategy = newVal.trading_strategy;
             $scope.basicInfo.desc = newVal.desc;
-        }, true);
 
+        },true);
         initLocation();
 
         function initLocation() {
