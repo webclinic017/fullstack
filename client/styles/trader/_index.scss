@@ -154,7 +154,12 @@ $font-trader-gray-color: $gray-dark;
     .table {
         margin-top: 50px;
     }
+    .trader_current_note{
+        text-align:right;
+        margin : 20px 0 20px 0;  
+    }
 }
+
 
 @include b(trader_modal) {
     @include e(label) {
