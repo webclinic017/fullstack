@@ -136,9 +136,20 @@
                         answer: question.answer
                     });
                 });
+                setUserLastKyc();
             });
         }
-
+        function setUserLastKyc(){
+            account.getUserKyc().then(function(rs){
+                var data = rs && rs.data || {};
+                if(data && data.interests_exp){
+                    angular.forEach($scope.questions, function(question, index){
+                        question.answer = data[question.id];
+                        results[index].answer = data[question.id];
+                    });
+                }
+            });
+        }
         function goNextStep() {
             if ($scope.progress) {
                 $scope.progress.step++;    

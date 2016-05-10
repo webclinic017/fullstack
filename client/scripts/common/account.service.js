@@ -42,6 +42,7 @@
             getVerifyStatus: getVerifyStatus,
             setKyc: setKyc,
             getKyc: getKyc,
+            getUserKyc : getUserKyc,
             logout: logout,
             checkMaster: checkMaster,
             applyBecomeMaster: applyBecomeMaster
@@ -470,6 +471,14 @@
          */
         function getKyc() {
             return $http.get('/action/public/v4/get_kyc_info');
+        }
+
+        /**
+         * @name getUserKyc
+         * @desc 获取KYC认证列表
+         */
+        function getUserKyc() {
+            return $http.get('/action/public/v4/get_user_kyc_info');
         }
 
         /**
