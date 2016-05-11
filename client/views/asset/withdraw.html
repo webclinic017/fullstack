@@ -36,7 +36,7 @@
                                ng-class="{'form-control-error': frontErr.amount.show && withdrawForm.amount.$invalid}"
                                ng-model="withdraw.amount"
                                ng-pattern="frontErr.amount.reg"
-                               twform-max="{{personal.balance || 0}}"
+                               twform-max="{{withdraw.maxAmount || 0}}"
                                twform-min="{{withdraw.minAmount}}"
                                ng-focus="hideErr('amount')"
                                ng-blur="showErr('amount')">
@@ -53,7 +53,7 @@
                             </p>
 
                             <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.twformMax">
-                                出金金额最多为 {{personal.balance || 0}} 美金
+                                出金金额最多为 {{withdraw.maxAmount || 0}} 美金
                             </p>
 
                             <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.twformMin">
