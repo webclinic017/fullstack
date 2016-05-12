@@ -37,14 +37,29 @@
                 $scope.$broadcast('hideLoadingImg');
 
                 if ($scope.orders.length <= 0) return;
-                
+
+                angular.forEach($scope.orders, function(order, index){
+                    order.close_type_name = formatCloseTypeName(order.close_type);
+                });
                 angular.extend($scope.pagebar.config, {
                     total: getTotal(data.sum, pagesize),
                     page: page
                 }); 
             });
         }
-
+        function formatCloseTypeName(type){
+            var type_name = "手动平仓";
+            if(type == "sl"){
+                type_name = "止损平仓";
+            }
+            if(type == "tp"){
+                type_name = "止盈平仓";
+            }
+            if(type == "so"){
+                type_name = "强制平仓";
+            }
+            return type_name;
+        }
         function getTotal(sum, pagesize) {
             var total;
             sum = parseInt(sum, 10); // list item 总个数
@@ -57,5 +72,8 @@
             }
             return total;
         }
+
     }
 })();
+
+;
