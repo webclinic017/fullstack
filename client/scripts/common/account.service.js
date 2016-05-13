@@ -45,9 +45,9 @@
             getUserKyc : getUserKyc,
             logout: logout,
             checkMaster: checkMaster,
-            applyBecomeMaster: applyBecomeMaster
+            applyBecomeMaster: applyBecomeMaster,
+            hasChecked : false
         };
-        var hasChecked = false;
         var resolveValue;
         return service;
 
@@ -119,15 +119,15 @@
 
 
             var deferred = $q.defer();
-            if(!$cookies["user_code"]){ //无cookie直接认为没登录
+            if(!getCookie("user_code")){ //无cookie直接认为没登录
                 setTimeout(function(){
                     deferred.resolve(false);
                 },100);
             }else{
-                if(hasChecked){  //发过请求，只等结果即可。
+                if(service.hasChecked){  //发过请求，只等结果即可。
                     checkResolve(deferred);
                 }else{   //有cookie时，只发一次请求
-                    hasChecked = true;
+                    service.hasChecked = true;
                     $http.get('/api/v1/check').then(function (data) {
                         if (data.is_succ) {
                             resolveValue = true;
@@ -146,6 +146,16 @@
             return deferred.promise;
 
         }
+       function getCookie(name)
+       {
+         var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+         if(arr=document.cookie.match(reg)){
+           return unescape(arr[2]);
+         }
+         else{
+           return null;
+         }
+       }
         function checkResolve(def){
             if(resolveValue == undefined){
                 setTimeout(function(){

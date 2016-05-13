@@ -74,6 +74,7 @@
         function logout() {
             account.logout().then(function (data) {
                 if (data.is_succ) {
+                    account.hasChecked = false;
                     $window.location.href='/space/#/account/login';
                 }
             });

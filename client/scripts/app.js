@@ -63,7 +63,6 @@
                 // 需要登录的调用 account 的 checkLogined 方法
                 if (toState.authenticated) {
                     account.checkLogined().then(function (logined) {
-                        console.log('app.js checkedLogin result:', logined,'toState',toState);
                         if (!logined) {
                             $window.location.replace('/space/#/account/login');
                         }
