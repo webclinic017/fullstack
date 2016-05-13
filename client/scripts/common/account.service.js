@@ -47,8 +47,8 @@
             checkMaster: checkMaster,
             applyBecomeMaster: applyBecomeMaster
         };
-        var deferred;
         var hasChecked = false;
+        var resolveValue;
         return service;
 
         /**
@@ -93,29 +93,69 @@
             //         return false;
             //     }
             // });
-            if(!deferred){
-                deferred = $q.defer();
-            }
-            if(!$cookies['user_code']){
-                deferred.resolve(false);
-                return deferred.promise;
-            }
-            if(hasChecked == true){
-                return deferred.promise;
-            }
-            hasChecked = true;
-            $http.get('/api/v1/check').then(function (data) {
-                if (data.is_succ) {
-                    deferred.resolve(true);
-                } else {
-                    deferred.resolve(false);
-                }
-            },function(){
-                deferred.resolve(false);
+            // if(!deferred){
+            //     deferred = $q.defer();
+            // }
+            // if(!$cookies['user_code']){
+            //     deferred.resolve(false);
+            //     return deferred.promise;
+            // }
+            // if(hasChecked == true){
+            //     return deferred.promise;
+            // }
+            // hasChecked = true;
+            // $http.get('/api/v1/check').then(function (data) {
+            //     if (data.is_succ) {
+            //         deferred.resolve(true);
+            //     } else {
+            //         deferred.resolve(false);
+            //     }
+            // },function(){
+            //     deferred.resolve(false);
 
-            });
+            // });
+            // return deferred.promise;
+
+
+
+            var deferred = $q.defer();
+            if(!$cookies["user_code"]){ //无cookie直接认为没登录
+                setTimeout(function(){
+                    deferred.resolve(false);
+                },100);
+            }else{
+                if(hasChecked){  //发过请求，只等结果即可。
+                    checkResolve(deferred);
+                }else{   //有cookie时，只发一次请求
+                    hasChecked = true;
+                    $http.get('/api/v1/check').then(function (data) {
+                        if (data.is_succ) {
+                            resolveValue = true;
+                            deferred.resolve(true);
+                        } else {
+                            resolveValue =false;
+                            deferred.resolve(false);
+                        }
+                    },function(){
+                        resolveValue = false;
+                        deferred.resolve(false);
+                    });
+                }
+            }
+
             return deferred.promise;
 
+        }
+        function checkResolve(def){
+            if(resolveValue == undefined){
+                setTimeout(function(){
+                    checkResolve(def);
+                },100);
+            }else{
+                setTimeout(function(){
+                    def.resolve(resolveValue);
+                },100)
+            }
         }
 
         /**
