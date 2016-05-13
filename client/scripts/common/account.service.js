@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('account', account);
 
-    account.$inject = ['$http'];
+    account.$inject = ['$http','$q','$cookies'];
 
-    function account($http) {
+    function account($http,$q,$cookies) {
         var service = {
             encrypt: encrypt,
             login: login,
@@ -47,6 +47,8 @@
             checkMaster: checkMaster,
             applyBecomeMaster: applyBecomeMaster
         };
+        var deferred;
+        var hasChecked = false;
         return service;
 
         /**
@@ -84,13 +86,36 @@
         }
 
         function checkLogined() {
-            return $http.get('/api/v1/check').then(function (data) {
+            // return $http.get('/api/v1/check').then(function (data) {
+            //     if (data.is_succ) {
+            //         return true;
+            //     } else {
+            //         return false;
+            //     }
+            // });
+            if(!deferred){
+                deferred = $q.defer();
+            }
+            if(!$cookies['user_code']){
+                deferred.resolve(false);
+                return deferred.promise;
+            }
+            if(hasChecked == true){
+                return deferred.promise;
+            }
+            hasChecked = true;
+            $http.get('/api/v1/check').then(function (data) {
                 if (data.is_succ) {
-                    return true;
+                    deferred.resolve(true);
                 } else {
-                    return false;
+                    deferred.resolve(false);
                 }
+            },function(){
+                deferred.resolve(false);
+
             });
+            return deferred.promise;
+
         }
 
         /**

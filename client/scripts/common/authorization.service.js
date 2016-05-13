@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .factory('principal', principal);
 
-    principal.$inject = ['$q', '$http', '$timeout'];
+    principal.$inject = ['$q', '$http', '$timeout','account'];
 
-    function principal($q, $http, $timeout) {
+    function principal($q, $http, $timeout,account) {
         var _identify = undefined;
         var _authenticated = false;
         var _apiCheckLogin = '/api/v1/check';
@@ -55,8 +55,9 @@
                     _identify = undefined;
                 }
 
-                $http.get(_apiCheckLogin).then(function (data) {
-                    if (data.is_succ) {
+                // $http.get(_apiCheckLogin).then(function (data) {
+                account.checkLogined().then(function(data){
+                    if (data) {
                         //_authenticated = true;
                         _identify = true;
                     } else {

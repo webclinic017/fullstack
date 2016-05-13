@@ -26,9 +26,10 @@
 
             account.checkLogined().then(function (logined) {
                 $scope.userstatus.logined = logined;
-                if (logined) {
-                    initialize();
-                }
+                // if (logined) {
+                //     // initialize();
+                //     getUnreadLength();
+                // }
             });
         });
 
@@ -50,7 +51,10 @@
                     lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg
                 });
             });
-            getUnreadLength();
+            // getUnreadLength();
+            setInterval(function() {
+                getUnreadLength();
+            },30000);
         }
 
         // 获取新消息
@@ -62,7 +66,8 @@
                     unreadLength: $scope.unreadLength
                 });
             });
-            $scope.$emit('refreshNoticeList');
+            // $scope.$emit('refreshNoticeList');
+
         }
 
         // 退出

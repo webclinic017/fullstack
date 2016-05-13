@@ -37,6 +37,7 @@
 
         // 检查新消息
         $scope.$on('refreshNoticeList', function() {
+            console.log('refreshNoticlist jihuo');
             noticeId = $interval(function() {
                 getUnreadLength();
             },30000);
