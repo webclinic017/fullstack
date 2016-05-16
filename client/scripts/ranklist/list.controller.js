@@ -20,9 +20,9 @@
 
         // 若显示交易中、已结束 表单禁用
         if ($("input[name=submit]").hasClass("hy-detail__con-btn-trade") || $("input[name=submit]").hasClass("hy-detail__con-btn-end")) {
-            $(this).attr("disabled", "true");
-            $(".order-info-name").attr("disabled", "true");
-            $(".order-info-tel").attr("disabled", "true");
+            $("input[name=submit]").attr("disabled", true);
+            $(".order-info-name").attr("disabled", true);
+            $(".order-info-tel").attr("disabled", true);
         }
         if(!$scope.title){
             if ($title.indexOf("汇赢季盈") != -1) {
