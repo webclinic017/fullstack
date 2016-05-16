@@ -62,11 +62,12 @@
          * @param {Number} page  当前页
          * @param {Number} pagesize  每页显示数
          */
-        function getMasterCurrent(usercode, page, pagesize) {
+        function getMasterCurrent(usercode, page, pagesize,type) {
             return $http.post('/action/public/v3/get_master_order_noauth', {
                 cros_user: usercode,
                 page: page,
-                pagesize: pagesize
+                pagesize: pagesize,
+                type : type
             });
         }
 
@@ -79,13 +80,15 @@
          * @param {Number} page         当前页
          * @param {Number} pagesize     每页显示数
          */
-        function getMasterHistory (usercode, page, pagesize) {
+        function getMasterHistory (usercode, page, pagesize,type) {
             return $http.post('/action/public/v3/get_history_noauth', {
                 cros_user: usercode,
                 page: page,
-                pagesize: pagesize
+                pagesize: pagesize,
+                type : type
             });
         }
+
 
         /**
          * Trader Service 获取高手收益率变化曲线

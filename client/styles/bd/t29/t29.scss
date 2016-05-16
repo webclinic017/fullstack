@@ -236,3 +236,54 @@
   background-size: 100%;
   background-image: url($image-path-base + "bd/act-sim-logo.jpg");
 }
+.act-sim__top{
+  color:#fff;
+}
+
+
+.table_top_result{
+  margin-top:30px;
+  tr:first-child{
+    background : #fedd0a;
+    color:#000;
+  }
+  tr:first-child th{
+    font-weight:bold;
+    font-size:18px;
+  }
+  td:nth-child(odd){
+  }
+  td:nth-child(even){
+    background:#192d3e;
+  }
+  td{
+    font-weight:normal;
+    font-size:14px;
+    border : 1px solid #314252;
+  }
+  th{
+    border : 1px solid #00162a;
+  }
+  .opration a{
+    color:#fedd0a;
+  }
+}
+.top15-title{
+  margin-top:60px;
+}
+.history-operation-box{
+    display:inline-block;
+}
+.icon-histroy{
+    vertical-align:sub;
+}
+.history-operation-way{
+    background : #ccc;
+    border-radius:4px;
+    padding:3px 5px;
+    display:inline-block;
+}
+.history-operation-td{
+    width:180px;
+    display:inline-block;
+}
