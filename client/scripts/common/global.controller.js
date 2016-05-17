@@ -33,17 +33,20 @@
             });
         });
 
-        $scope.$on('relogin',function(){
-            $scope.$broadcast('relogin');
-        });
 
         account.checkLogined().then(function (logined) {
             $scope.userstatus.logined = logined;
             if (logined) {
                 initialize();
+                setInterval(function() {
+                    getUnreadLength();
+                },30000);
             }
         });
 
+        $scope.$on('relogin_info', function(){
+            initialize();
+        });
 
         // 初始化所需的全局数据
         function initialize() {
@@ -55,10 +58,7 @@
                     lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg
                 });
             });
-            // getUnreadLength();
-            setInterval(function() {
-                getUnreadLength();
-            },30000);
+
         }
 
         // 获取新消息

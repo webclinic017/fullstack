@@ -5,20 +5,20 @@
     angular.module('fullstackApp')
         .controller('SpaceInfoController', SpaceInfoController);
 
-    SpaceInfoController.$inject = ['$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout'];
+    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout'];
 
     /**
      * @name SpaceInfoController
      * @desc
      */
-    function SpaceInfoController($scope, $location, $interval, $state, account, invite, $timeout) {
+    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout) {
         $scope.unreadLength = 0;        // 未读消息
         var summaryId;
         var noticeId;
 
 
        
-        $scope.$on('relogin', function(){
+        $rootScope.$on('relogin_info', function(){
             getOnceInfo();
         })
 
