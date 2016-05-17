@@ -22,6 +22,7 @@ $font-space-gray-color: $gray-dark;
     }
 
     @include e(item) {
+        position:relative;
         float: left;
         width: 20%;
         text-align: center;
@@ -30,6 +31,7 @@ $font-space-gray-color: $gray-dark;
 
         &:first-child {
             border: none;
+
         }
 
         @include m(number) {
@@ -52,3 +54,13 @@ $font-space-gray-color: $gray-dark;
         margin-top: 20px;
     }
 }
+.space_basic_hint{
+    position:absolute;
+    color:#23c3f4;
+    background:rgba(0,0,0,.7);
+    border-radius:4px;
+    padding:10px;
+    z-index:1000;
+    display:none;
+}
+.active .space_basic_hint{display:block}

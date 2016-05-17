@@ -21,11 +21,12 @@
             </div>
             <div class="space_gray_color">资产净值</div>
         </li>
-        <li class="space_basic__item"  title="用户入金>=2000$时得到的赠金 ">
+        <li class="space_basic__item" ng-mouseenter="show_credit=true" ng-mouseleave="show_credit=false" ng-class="{'active':show_credit}">
             <div class="space_basic__item-number">
                 <span><i class="fa fa-dollar"></i>{{ personal.credit || '0.00' }}</span>
             </div>
             <div class="space_gray_color">信用赠金</div>
+            <p class="space_basic_hint">用户入金>=2000$时得到的赠金</p>
         </li>    
         <li class="space_basic__item">
             <div class="space_basic__item-number">
@@ -33,17 +34,20 @@
             </div>
             <div class="space_gray_color">可用保证金</div>
         </li>
-         <li class="space_basic__item"  title="用户真实入金后的交易手数累计，包含复制交易，不包含CFD">
+         <li class="space_basic__item" ng-mouseenter="show_volume=true" ng-mouseleave="show_volume=false" ng-class="{'active':show_volume}">
             <div class="space_basic__item-number">
                 <span><i class="fa"></i>{{ personal.volume || '0.00' }}</span>
             </div>
             <div class="space_gray_color">交易手数</div>
+            <p class="space_basic_hint">用户真实入金后的交易手数累计，包含复制交易，不包含CFD</p>
         </li>
-        <li class="space_basic__item"  title="用户真实入金后平仓产生的收益总数">
+        <li class="space_basic__item" ng-mouseenter="show_close_profit=true" ng-mouseleave="show_close_profit=false" ng-class="{'active':show_close_profit}">
             <div class="space_basic__item-number">
                 <span><i class="fa fa-dollar"></i>{{ personal.close_profit || '0.00' }}</span>
             </div>
             <div class="space_gray_color">总收益</div>
+            <p class="space_basic_hint">用户真实入金后平仓产生的收益总数</p>
+
         </li>
         <li class="space_basic__item">
             <div class="space_basic__item-number" ng-class="{'font-danger': personal.position_profit_asset.indexOf('-') >= 0, 'font-success': personal.position_profit_asset.indexOf('-') < 0}">
