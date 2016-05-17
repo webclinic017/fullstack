@@ -33,6 +33,10 @@
             });
         });
 
+        $scope.$on('relogin',function(){
+            $scope.$broadcast('relogin');
+        });
+
         account.checkLogined().then(function (logined) {
             $scope.userstatus.logined = logined;
             if (logined) {

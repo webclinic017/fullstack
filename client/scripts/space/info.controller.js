@@ -17,11 +17,23 @@
         var noticeId;
 
 
-        getVerifyStatus();
+       
+        $scope.$on('relogin', function(){
+            getOnceInfo();
+        })
+
+        //一次性获取用户的相关信息。更换用户时需要触发重置。
+        getOnceInfo();
+
+        function getOnceInfo(){
+            getVerifyStatus();
+            getInviteFriendsInfo(1);
+            getPersonalInfoDegree();
+        }
+
+        //定时提取用户资产信息
         getAssetInfo();
-        getInviteFriendsInfo(1);
-        getPersonalInfoDegree();
-        
+
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
             angular.extend($scope.personal, {
                 basic: toState.name.substring(6)
