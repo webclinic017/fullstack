@@ -142,10 +142,10 @@
          * @param {Boolean} isClose 是否平仓
          * @param {String} copyType 模拟复制或者真实复制
          */
-        function cancelCopy(usercode) {
+        function cancelCopy(usercode, auto_delete) {
             return $http.post('/api/v1/uncopy', {
                 user_code: usercode,
-                auto_delete: true,
+                auto_delete: auto_delete,
                 to: 'real'
             });
         }

@@ -162,10 +162,10 @@
                     $scope.cancelCopy = cancelCopy;
                     $scope.closeModal = closeModal;
 
-                    function cancelCopy() {
+                    function cancelCopy(auto_delete) {
                         $scope.clickable = false;
 
-                        trader.cancelCopy(usercode).then(function (data) {
+                        trader.cancelCopy(usercode,auto_delete).then(function (data) {
                             // console.info(data);
                             if (data.is_succ) {
                                 $scope.copyCancel.success = true;
