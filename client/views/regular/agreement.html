@@ -1,0 +1,103 @@
+<% if (pageInfo.id === 'forex') { %>
+    <% var title = '外汇' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'oil') { %>
+    <% var title = '原油' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'metal') { %>
+    <% var title = '贵金属' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'cfd') { %>
+    <% var title = '差价合约' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'trade') { %>
+    <% var title = '交易平台' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } %>
+<!doctype html>
+<html>
+    <head>
+        <% include common/metas.html %>
+
+        <title>老虎金融｜<%= title %></title>
+        <meta name="description" content="<%= description %>">
+        <meta name="keywords" content="<%= keywords %>">
+
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
+        <!-- endbuild -->
+    </head>
+    <body ng-app="fullstackApp">
+        <div ng-controller="GlobalController">
+            <div class="header">
+                <% include navbar/main.html %>
+            </div>
+
+            <div class="body" style="background-color: #fafafa">
+                <div class="layout-2">
+                    <div class="layout-2__side mg-tp-30">
+                        <%- include('web/product-sidebar.html') %>
+                    </div>
+                    <div class="layout-2__content mg-tp-30">
+                        <%- include('web/product-' + pageInfo.id + '.html') %>
+                    </div>
+                </div>
+            </div>
+
+            
+        <!-- build:js(client) /scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/angular/angular.js"></script>
+        <script src="/bower_components/angular-resource/angular-resource.js"></script>
+        <script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="/bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="/bower_components/highcharts-release/highcharts.js"></script>
+        <script src="/bower_components/highcharts-release/highcharts-more.js"></script>
+        <script src="/bower_components/highcharts-release/modules/exporting.js"></script>
+        <script src="/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+        <script src="/bower_components/moment/moment.js"></script>
+        <script src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="/bower_components/eonasdan-bootstrap-datetimepicker/src/js/bootstrap-datetimepicker.js"></script>
+        <script src="/bower_components/blueimp-file-upload/js/vendor/jquery.ui.widget.js"></script>
+        <script src="/bower_components/blueimp-file-upload/js/jquery.iframe-transport.js"></script>
+        <script src="/bower_components/blueimp-file-upload/js/jquery.fileupload.js"></script>
+        <script src="/bower_components/jsencrypt/bin/jsencrypt.min.js"></script>
+        <script src="/bower_components/mediaelement/build/mediaelement-and-player.js"></script>
+        <script src="/bower_components/swiper/dist/idangerous.swiper.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
+
+        <!-- build:js(client) /scripts/web_product.js -->
+        <script src="/scripts/app.js"></script>
+
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/authorization.service.js"></script>
+        <script src="/scripts/common/product.service.js"></script>
+        <script src="/scripts/common/utils.service.js"></script>
+
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/pagination.directive.js"></script>
+
+        <script src="/scripts/common/global.controller.js"></script>
+
+        <script src="/scripts/common/bind_html.filter.js"></script>
+
+
+        <script src="/scripts/product/comment.controller.js"></script>
+        <!-- endbuild -->
+
+            <div class="footer">
+                <% include common/footer.html %>
+            </div>
+        </div>
+    </body>
+</html>
