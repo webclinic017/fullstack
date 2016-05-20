@@ -150,7 +150,7 @@
             </div>
             <div class="act-sim__top">
                 <div class="container">
-                    <!--
+                    
                     <h1 class="top15-title">实盘大赛<span class="font-primary mg-lf-15">TOP&nbsp;10</span><span class="font-size-12 mg-lf-15 font-normal">排行实时更新</span></h1>
                     <table class="table  table_top_result">
                         <tr>
@@ -159,21 +159,21 @@
                             <th>MT4账号</th>
                             <th>收益率</th>
                             <th>最大回撤</th>
-                            <th>交易记录</th>
+                            <!-- <th>交易记录</th> -->
                         </tr>
                         <tr ng-repeat="user in list_top15_firm">
                             <td>{{$index+1}}</td>
                             <td>{{user.username}}</td>
                             <td>{{user.mt4_id}}</td>
-                            <td>{{user.profit_rate}}%</td>
+                            <td>{{user.profit_rate | number:2}}%</td>
                             <td>{{user.drawdown}}%</td>
-                            <td class="opration">
+                     <!--        <td class="opration">
                                 <a href="javascript:" ng-click="lookTradeCurrent(user.usercode,'firm')">当前交易</a>
                                 <a href="javascript:" ng-click="lookTradeHistory(user.usercode,'firm')">历史交易</a>
-                            </td>
+                            </td> -->
                         </tr>
                     </table>
-                    -->
+                    
                     <h1 class="top15-title">模拟盘大赛<span class="font-primary mg-lf-15">TOP&nbsp;10</span><span class="font-size-12 mg-lf-15 font-normal">排行实时更新</span></h1>
                     <table class="table  table_top_result">
                         <tr>
@@ -184,19 +184,19 @@
                             <th>最大回撤</th>
                             <th>交易记录</th>
                         </tr>
-                        <!--
+                        
                         <tr ng-repeat="user in list_top15_demo">
                             <td>{{$index+1}}</td>
                             <td>{{user.username}}</td>
                             <td>{{user.mt4_id}}</td>
-                            <td>{{user.profit_rate}}%</td>
+                            <td>{{user.profit_rate | number:2}}%</td>
                             <td>{{user.drawdown}}%</td>
                             <td class="opration">
                                 <a href="javascript:" ng-click="lookTradeCurrent(user.usercode,'demo')">当前交易</a>
                                 <a href="javascript:" ng-click="lookTradeHistory(user.usercode,'demo')">历史交易</a>
                             </td>                       
                          </tr>
-                         -->
+                         
                     </table>
                     <p class="text-center mg-tp-30 font-warning font-size-16">排行榜信息近期放出</p>
                 </div>
