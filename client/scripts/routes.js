@@ -274,7 +274,24 @@
                         }
                     }
                 })
-
+                .state('ranklist.huiying-quarter', {
+                    url: '/ranklist/huiying-quarter',
+                    views: {
+                        '@': {
+                            templateUrl: '/views/ranklist/list-huiying-quarter.html',
+                            controller: 'RanklistListController'
+                        }
+                    }
+                })                
+                .state('ranklist.huiying-year', {
+                    url: '/ranklist/huiying-year',
+                    views: {
+                        '@': {
+                            templateUrl: '/views/ranklist/list-huiying-year.html',
+                            controller: 'RanklistListController'
+                        }
+                    }
+                })
 
                 // 高手主页
                 .state('trader', {
