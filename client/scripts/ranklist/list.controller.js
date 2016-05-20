@@ -5,9 +5,12 @@
     angular.module('fullstackApp')
         .controller('RanklistListController', RanklistListController);
 
-    RanklistListController.$inject = ['$scope', '$location', 'ranklist'];
+    RanklistListController.$inject = ['$scope', '$location', 'ranklist','$http'];
 
-    function RanklistListController($scope, $location, ranklist) {
+    function RanklistListController($scope, $location, ranklist, $http) {
+
+
+
 
 
         $scope.name = $location.search().name || '';
@@ -15,6 +18,10 @@
         $scope.submit = '';
         $scope.title = $location.search().title || '';
         var $title = $.trim($(".hy-detail__title-span1").text());
+
+
+
+
 
         $scope.submitOrder = submitOrder;
 
@@ -25,7 +32,7 @@
             $(".order-info-tel").attr("disabled", true);
         }
         if(!$scope.title){
-            if ($title.indexOf("汇赢季盈") != -1) {
+            if ($title.indexOf("老虎&汇赢") != -1) {
                 $scope.title = "赵海峰(主操盘手)";
             } else {
                 $scope.title = "张伟(主操盘手)";
@@ -52,6 +59,11 @@
 
 
         }
-
+        if($location.path() != "/ranklist/huiying-agree"){
+            $http.get('/api/v1/get_info?type=Profile').then(function(result){
+                $scope.name = result.realname;
+                $scope.tel = result.phone;
+            });
+        }        
     }
 })();
