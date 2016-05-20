@@ -51,6 +51,15 @@ module.exports = function(app) {
         res.render('ranklist.html', {});
     });
 
+    app.route('/regular').get(function(req, res){
+        res.render('regular/list.html',{});
+    });
+    app.route('/regular/detail/:subpage').get(function(req, res){
+        res.render('regular/detail.html',{
+            product_name : req.params.subpage || "",
+            abc : 123
+        })
+    });
     app.route('/trader/:usercode').get(function(req, res) {
         var usercode = req.params.usercode;
 
