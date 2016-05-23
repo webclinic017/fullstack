@@ -24,7 +24,7 @@
       }
 
       getTop15('firm');
-      // getTop15('demo');
+      getTop15('demo');
 
       //获取实盘和虚拟盘TOp15
       function getTop15(type){
