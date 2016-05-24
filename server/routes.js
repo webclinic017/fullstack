@@ -52,12 +52,13 @@ module.exports = function(app) {
     });
 
     app.route('/regular').get(function(req, res){
-        res.render('regular/list.html',{});
+        res.render('regular/list.html',{
+            model : require('./model/modelRegular')
+        });
     });
     app.route('/regular/detail/:subpage').get(function(req, res){
         res.render('regular/detail.html',{
-            product_name : req.params.subpage || "",
-            abc : 123
+            product_name : req.params.subpage || ""
         })
     });
     app.route('/trader/:usercode').get(function(req, res) {
