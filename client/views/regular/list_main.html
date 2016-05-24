@@ -28,7 +28,7 @@
         <div class="container">
 <% 
     model.products.forEach(function(product, index){
-        var status = model.utils.judgeStatus(product);
+        var status = model.judgeStatus(product);
 %>
         <%= status %>
             <!-- 汇赢三期 -->
@@ -95,7 +95,7 @@
 %>
 
 
-                            <span class="font-size-16">最高总复制金额：<%= product.money_copy_max %></span>
+                            <span class="font-size-16"><%= model.getMaxDesc(product) %></span>
 <%
         }
 %>
@@ -106,7 +106,7 @@
         }
         if(status == "appoint"){
 %>
-                            <a class="fix-list__reserve-btn fix-list__reserve-btn-order" href="/ranklist/#/ranklist/huiying3">查看详情 <span class="fix-list__reserve-triangle"></span>
+                            <a class="fix-list__reserve-btn fix-list__reserve-btn-order" href="/regular/detail/<%= product.id%>">查看详情 <span class="fix-list__reserve-triangle"></span>
 <%
         }
         if(status == "not_appoint"){
@@ -114,13 +114,13 @@
         }
         if(status == "tradding"){
 %>
-                            <a class="fix-list__reserve-btn fix-list__reserve-btn-order" href="/ranklist/#/ranklist/huiying3">正在交易 <span class="fix-list__reserve-triangle"></span>
+                            <a class="fix-list__reserve-btn fix-list__reserve-btn-order" href="/regular/detail/<%= product.id%>">正在交易 <span class="fix-list__reserve-triangle"></span>
 <%
     
         }
         if(status == "end_trade"){
 %>
-                            <a class="fix-list__reserve-btn fix-list__reserve-btn-end" href="/ranklist/#/ranklist/huiying3">已结束 <span class="fix-list__reserve-triangle-white"></span>
+                            <a class="fix-list__reserve-btn fix-list__reserve-btn-end" href="/regular/detail/<%= product.id%>">已结束 <span class="fix-list__reserve-triangle-white"></span>
 <%
         }
 %>

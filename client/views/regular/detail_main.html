@@ -1,39 +1,41 @@
-<%= product_name %>
+<%
+    var product = model.getProduct(detail_id);
+    var status = model.judgeStatus(product);
+ %>
 <div class="hy-detail">
-    <div class="container">
+    <div class="container" ng-controller="RegularController">
         <div class="row">
             <div class="col-xs-8">
                 <div class="hy-detail__title">
-                    <span class="hy-detail__title-span1">老虎&Elephant(Forex Management)</span>
+                    <span class="hy-detail__title-span1"><%= product.name %></span>
                 </div>
                 <div class="hy-detail__con">
                     <ul class="hy-detail__con-ul">
                         <li>
                             <span>复制金额</span>
-                            <p class="hy-detail__con-red">$100000</p>
+                            <p class="hy-detail__con-red"><%= product.money_copy %></p>
                         </li>
                         <li>
                             <span>预期年化收益率</span>
-                            <p>120%</p>
+                            <p><%= product.profit_rate_wish %></p>
                         </li>
                         <li>
                             <span>复制封闭期</span>
-                            <p>1个月</p>
+                            <p><%= product.period %></p>
                         </li>
                         <li>
                             <span>历史最高回撤</span>
-                            <p>30%</p>
+                            <p><%= product.withdraw_history %></p>
                         </li>
                     </ul>
                     <div class="hy-detail__con-progress">
                         <span class="hy-detail__con-circle"></span> 
-                        <!-- <span>最高总复制金额：$33万 &nbsp;&nbsp;</span>
+                        <span class="font-size-16"><%= model.getMaxDesc(product) %></span>
                         <div class="progress" tw-progress>
                             <div class="scale"></div>
                         </div>
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;已完成</span>
-                        <span class="p-num">66%</span> -->
-                        <span class="font-size-16"> 名额限制：最多支持50名复制者</span>
+                        <span class="p-num"><%= product.progress %>%</span>
                     </div>
                 </div>
             </div>
@@ -44,11 +46,51 @@
                 </div>
                 <div class="hy-detail__con">
                     <div>
+                    <%= status %>
+
+<%
+    if(status == "not_start"){
+
+    }
+    if(status == "appoint"){
+%>
+                        <form name="orderForm">
+                            <p class="pd-tp-15">
+                                <input name="name"
+                                       class="order-info-name mg-tp-20" 
+                                       type="text" 
+                                       placeholder="您的姓名"
+                                       ng-model="name">
+                            </p>
+                            <p>
+                                <input name="tel" 
+                                       class="order-info-tel mg-tp-10" 
+                                       type="text"  
+                                       placeholder="您的手机号" 
+                                       ng-model="tel">
+                            </p>
+                            <p class="mg-tp-20">
+                                <input class="check_agreement" type="checkbox" checked />同意并遵守
+                                <a href="/ranklist/#/ranklist/huiying-agree?name={{name}}&title={{title}}" target="_blank" class="font-info">委托协议书</a>
+                            </p>                        
+                            <input name="submit" 
+                                   class="hy-detail__con-btn hy-detail__con-btn-order" 
+                                   type="button" 
+                                   value="立即预约" 
+                                   ng-model="submit"
+                                   ng-click="submitOrder()">
+                        </form>
+<%
+    }
+    if(status == "not_appoint"){
+
+    }
+    if(status == "tradding"){
+%>
                         <form name="orderForm">
                         <p class="font-size-16 mg-tp-60 text-center">实时年化收益率</p>
-                        <p class="fix-list__list-red font-info text-center">128%</p>
+                        <p class="fix-list__list-red font-info text-center"><%= product.profit_rate_now %></p>
                         <p class="mg-tp-20" style="margin-top:44px;"> <span class="font-size-20 font-warning"></span></p>
-                                                
                             <input name="submit" 
                                    class="hy-detail__con-btn hy-detail__con-btn-trade" 
                                    type="button" 
@@ -56,6 +98,19 @@
                                    ng-model="submit"
                                    ng-click="submitOrder()">
                         </form>
+<%
+    }
+    if(status == "end_trade"){
+%>
+                        <div class="hy-detail__con-end">
+                            <p class="font-size-16 pd-tp-30">已结算年化收益率</p>
+                            <p class="fix-list__list-red font-info">0%</p>
+                            <p class="mg-tp-20">上期结算年化收益率 <span class="font-size-20 font-warning">98%</span></p>
+                            <p class="hy-detail__con-btn hy-detail__con-btn-end">交易已结束</p>
+                        </div>
+<%
+    }
+%>
                     </div>
                 </div>
             </div>
@@ -72,15 +127,23 @@
                     <tbody>
                         <tr>
                             <td>复制封闭期</td>
-                            <td>1个月（复制者在封闭期间不能操作账户，比如下单和平仓等，封闭期结束后拥有账户操作权）</td>
+                            <td><%= product.period %>（复制者在封闭期间不能操作账户，比如下单和平仓等，封闭期结束后拥有账户操作权）</td>
                         </tr>
                         <tr>
                             <td>预约复制时间</td>
-                            <td>即日起至2016.05.16</td>
+                            <td>即日起至<%= product.end_date_appoint %></td>
                         </tr>
                         <tr>
                             <td>账户交易时间</td>
-                            <td>充值成功并绑定成功后第二个工作日至下个自然月的同一天</td>
+                            <td><%= product.start_date_trade %>
+<%
+    if(product.end_date_trade){
+%>
+                                ~ <%= product.end_date_trade %>
+<%
+    }
+%>                               
+                            </td>
                         </tr>
                         <tr>
                             <td>风险控制机制</td>
@@ -92,7 +155,7 @@
                         </tr>
                         <tr>
                             <td>名额限制</td>
-                            <td>最多支持50名复制者。</td>
+                            <td><%= model.getMaxDesc(product) %></td>
                         </tr>
                         <tr>
                             <td>备注</td>

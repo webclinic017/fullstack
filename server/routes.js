@@ -58,8 +58,12 @@ module.exports = function(app) {
     });
     app.route('/regular/detail/:subpage').get(function(req, res){
         res.render('regular/detail.html',{
-            product_name : req.params.subpage || ""
+            model : require('./model/modelRegular'),
+            detail_id : req.params.subpage || ""
         })
+    });
+    app.route('/regular/agree').get(function(req, res){
+        res.render('regular/agree.html',{});
     });
     app.route('/trader/:usercode').get(function(req, res) {
         var usercode = req.params.usercode;
