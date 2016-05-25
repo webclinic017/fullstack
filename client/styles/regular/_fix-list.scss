@@ -167,12 +167,20 @@
         border-radius: 10px;
         background: #f7f7f7;
         color: #666;
+        position:relative;
 
         .progress {
             display: inline-block;
             width: 124px;
         }
-
+        .regular-list-btn{
+            position:absolute;
+            bottom:72px;
+            left : 26px;
+        }
+        .list-hint{
+            margin-top:20px;
+        }
         @include m(btn) {
             display: inline-block;
             position: relative;
@@ -291,7 +299,7 @@
         overflow: hidden;
         background: #fff;
         text-align: left;
-
+        height:240px;
         @include m(end) {
             text-align: center;
 
@@ -310,7 +318,7 @@
             li {
                 float: left;
                 padding-left: 20px;
-                padding-right: 30px;
+                padding-right: 20px;
                 border-right: 1px dotted #D3D2D1;
                 height: 110px;
             }

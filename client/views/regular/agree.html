@@ -1,3 +1,8 @@
+<%
+    var product = model.getProduct(detail_id);
+    var status = model.judgeStatus(product);
+    var profit_text = model.getProfitText(product);
+ %>
 <!doctype html>
 <html>
     <head>
@@ -16,13 +21,13 @@
             </div>
             <div class="body">
                 <div ui-view>
-                    <div class="container" ng-controller="RegularController">
+                    <div class="container" ng-controller="AgreeController">
                         <div class="hy-detail hy-detail__fix-box mg-bt-20">
                             <div class="title_box">
                                 <h3 class="text-center">委托协议书</h3>
                                 <hr class="hr_top"/>
                             </div>
-                            <p class="font-bold">甲方：<span id="agreement_jia">{{title}}</span></p>
+                            <p class="font-bold">甲方：<span id="agreement_jia"><%= product.jiafang %></span></p>
                             <p class="font-bold">乙方：<span id="agreement_yi">{{name}}</span></p>
                             <p class="font-bold">
                                 甲方和乙方就委托外汇交易等相关事宜，经友好协商一致后，签署《委托协议书》（以下简称“本协议”）。
@@ -43,7 +48,7 @@
                                 <em class="font-bold">第 5条：</em>委托期限届满之前，甲方需要把委托账户所有订单平仓，并且在委托期限届满之时保证所账户空仓，委托期满后，乙方的外汇交易账户自动解除与甲方的外汇交易账户的绑定，并终止委托交易关系。
                             </p>
                             <p>
-                                <em class="font-bold">第 6条：</em>委托结束后或者触发分红条件时，乙方的外汇交易账户产生盈余的，<span id="agreement_money"></span>如乙方的外汇交易账户发生亏损的，乙方无需向甲方支付委托费。不论乙方是否延长委托期限，本协议约定委托期限届满后，乙方应立即按照本协议的约定向甲方支付委托费。
+                                <em class="font-bold">第 6条：</em>委托结束后或者触发分红条件时，乙方的外汇交易账户产生盈余的，<%= model.getProfitText(product) %>如乙方的外汇交易账户发生亏损的，乙方无需向甲方支付委托费。不论乙方是否延长委托期限，本协议约定委托期限届满后，乙方应立即按照本协议的约定向甲方支付委托费。
                             </p>
                             <p>
                                 <em class="font-bold">第 7条：</em>乙方确认，签署以及履行本协议已经进行了充分的了解和认识，并且乙方确认，乙方按照本协议的约定委托甲方进行外汇交易操作可能会发生亏损或委托本金全部损失的结果，如发生该等结果，乙方不得向甲方或Tigerwit Prime Limited主张任何权利或要求赔偿损失等相关事宜。
@@ -90,7 +95,7 @@
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:js(client) /scripts/regular.js -->
+        <!-- build:js(client) /scripts/agree.js -->
         <script src="/scripts/app.js"></script>
 
         <script src="/scripts/common/config.service.js"></script>
@@ -104,9 +109,9 @@
         <script src="/scripts/common/loading_img.directive.js"></script>
         <script src="/scripts/common/progress.directive.js"></script>
         <script src="/scripts/common/tabs.directive.js"></script>
-
+5
         <script src="/scripts/common/global.controller.js"></script>
-        <script src="/scripts/regular/regular.controller.js"></script>
+        <script src="/scripts/regular/agree.controller.js"></script>
         <!-- endbuild -->
 
             <div class="footer">

@@ -47,7 +47,6 @@ module.exports = function(app) {
 
 
     app.route('/ranklist').get(function(req, res) {
-
         res.render('ranklist.html', {});
     });
 
@@ -62,8 +61,11 @@ module.exports = function(app) {
             detail_id : req.params.subpage || ""
         })
     });
-    app.route('/regular/agree').get(function(req, res){
-        res.render('regular/agree.html',{});
+    app.route('/regular/agree/:subpage').get(function(req, res){
+        res.render('regular/agree.html',{
+            model : require('./model/modelRegular'),
+            detail_id : req.params.subpage || ""
+        });
     });
     app.route('/trader/:usercode').get(function(req, res) {
         var usercode = req.params.usercode;
