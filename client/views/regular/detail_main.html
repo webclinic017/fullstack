@@ -168,19 +168,19 @@
                         </tr>
                         <tr>
                             <td>风险控制机制</td>
-                            <td>动用的杠杆不超过7倍，亏损超过账户初始资金的30%时触发预警，交易平台自动强制平掉所有头寸，停止交易，客户可以赎回剩余资金。</td>
+                            <td><%= product.desc_risk %></td>
                         </tr>
                         <tr>
                             <td>高手报酬分成</td>
-                            <td>客户收益的30%作为交易团队的收益报酬，由交易平台自动从用户账户余额中划转给交易团队。每个月的第一个交易日结算上个月的账户盈亏。</td>
+                            <td><%= product.desc_divide %></td>
                         </tr>
                         <tr>
-                            <td>名额限制</td>
+                            <td>报名限制</td>
                             <td><%= model.getMaxDesc(product) %></td>
                         </tr>
                         <tr>
                             <td>备注</td>
-                            <td>客户完全自负盈亏，经纪商与交易团队不对客户损失的资产做任何赔偿。</td>
+                            <td><%= product.note %></td>
                         </tr>
                     </tbody>
                 </table>
