@@ -1,0 +1,203 @@
+<%
+    var product = model.getProduct(detail_id);
+    var status = model.judgeStatus(product);
+ %>
+<div class="hy-detail">
+    <div class="container" ng-controller="RegularController">
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="hy-detail__title">
+                    <span class="hy-detail__title-span1" n><%= product.name %></span>
+                </div>
+                <div class="hy-detail__con">
+                    <ul class="hy-detail__con-ul">
+                        <li>
+                            <span>复制金额</span>
+                            <p class="hy-detail__con-red"><%= product.money_copy %></p>
+                        </li>
+                        <li>
+                            <span>预期年化收益率</span>
+                            <p><%= product.profit_rate_wish %></p>
+                        </li>
+                        <li>
+                            <span>复制封闭期</span>
+                            <p><%= product.period %></p>
+                        </li>
+                        <li>
+                            <span>历史最高回撤</span>
+                            <p><%= product.withdraw_history %></p>
+                        </li>
+                    </ul>
+                    <div class="hy-detail__con-progress">
+                        <span class="hy-detail__con-circle"></span> 
+                        <span class="font-size-16"><%= model.getMaxDesc(product) %></span>
+                        <div class="progress" tw-progress>
+                            <div class="scale"></div>
+                        </div>
+                        <span>&nbsp;&nbsp;&nbsp;&nbsp;已完成</span>
+                        <span class="p-num"><%= product.progress %>%</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="hy-detail__title">
+                    <span class="hy-detail__title-tel"></span>
+                    <span class="hy-detail__title-span2">产品咨询：400-809-8509</span>
+                </div>
+                <div class="hy-detail__con">
+                    <div>
+                        <form name="orderForm">
+
+<%  
+    if(status == "before_appoint" || status == "start_appoint" || status == "end_appoint"){
+%>
+                           <p class="">
+                                <input name="name"
+                                       class="order-info-name mg-tp-20" 
+                                       type="text" 
+                                       <%= status == 'before_appoint' || status == 'end_appoint' ? 'disabled' : '' %>
+                                       placeholder="您的姓名"
+                                       ng-model="name">
+                            </p>
+                            <p>
+                                <input name="tel" 
+                                       class="order-info-tel mg-tp-10" 
+                                       type="text"  
+                                       <%= status == 'before_appoint' || status == 'end_appoint' ? 'disabled' : '' %>
+                                       placeholder="您的手机号" 
+                                       ng-model="tel">
+                            </p>
+                            <p class="mg-tp-20">
+                                <input class="check_agreement" type="checkbox" checked />同意并遵守
+                                <a href="/regular/agree/<%= detail_id %>?name={{name}}" target="_blank" class="font-info">委托协议书</a>
+                            </p>                  
+<%
+    }
+    if(status == "before_appoint"){
+%>
+                            <input name="submit" 
+                                   class="hy-detail__con-btn hy-detail__con-btn-trade" 
+                                   type="button" 
+                                   disabled="disabled"
+                                   value="即将开始" 
+                                   ng-model="submit"
+                                   ng-click="submitOrder()"
+                            />
+<%
+    }
+    if(status == "start_appoint"){
+%>                      
+                            <input name="submit" 
+                                   class="hy-detail__con-btn hy-detail__con-btn-order" 
+                                   type="button" 
+                                   value="立即预约" 
+                                   ng-model="submit"
+                                   ng-click="submitOrder()"
+                            />
+<%
+    }
+    if(status == "end_appoint"){
+%>
+                               <input name="submit" 
+                                   class="hy-detail__con-btn hy-detail__con-btn-trade" 
+                                   type="button" 
+                                   disabled="disabled"
+                                   value="预约结束" 
+                                />
+<%
+    }
+    if(status == "tradding"){
+%>
+                            <p class="font-size-16 pd-tp-30  text-center">实时年化收益率</p>
+                            <p class="fix-list__list-red font-info  text-center"><%= product.profit_rate_now %></p>
+                            <input name="submit" 
+                                   class="hy-detail__con-btn hy-detail__con-btn-trade" 
+                                   type="button" 
+                                   value="交易中" 
+                                   disabled="disabled"
+                            />
+<%
+    }
+    if(status == "end_trade"){
+%>
+                            <p class="font-size-16 pd-tp-30 text-center">已结算年化收益率</p>
+                            <p class="fix-list__list-red font-info text-center"><%= product.profit_rate_now %></p>
+<%
+      if(product.profit_rate_last){
+%>
+                            <p class="mg-tp-20 text-center">上期年化收益率:<span class="font-size-20 font-warning"><%= product.profit_rate_last%></span></p>
+<%
+
+      }else{
+%>
+                            <p class="mg-tp-20 text-center">预期年化收益率:<span class="font-size-20 font-warning"><%= product.profit_rate_wish%></span></p>
+<%
+      }
+%>
+                            <input name="submit" 
+                                   class="hy-detail__con-btn hy-detail__con-btn-end" 
+                                   type="button" 
+                                   value="交易已结束" 
+                                   disabled="disabled"
+                            />
+<%
+    }
+%>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hy-detail__de">
+            <p class="hy-detail__de-title">详情</p>
+            <div class="hy-detail__de-table">
+                <table class="table table-border">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="80%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>复制封闭期</td>
+                            <td><%= product.period %>（复制者在封闭期间不能操作账户，比如下单和平仓等，封闭期结束后拥有账户操作权）</td>
+                        </tr>
+                        <tr>
+                            <td>预约复制时间</td>
+                            <td>即日起至<%= product.end_date_appoint %></td>
+                        </tr>
+                        <tr>
+                            <td>账户交易时间</td>
+                            <td><%= product.start_date_trade %>
+<%
+    if(product.end_date_trade){
+%>
+                                ~ <%= product.end_date_trade %>
+<%
+    }
+%>                               
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>风险控制机制</td>
+                            <td><%= product.desc_risk %></td>
+                        </tr>
+                        <tr>
+                            <td>高手报酬分成</td>
+                            <td><%= product.desc_divide %></td>
+                        </tr>
+                        <tr>
+                            <td>报名限制</td>
+                            <td><%= model.getMaxDesc(product) %></td>
+                        </tr>
+                        <tr>
+                            <td>备注</td>
+                            <td><%= product.note %></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <%- include('regular/' + product.team_intro+'.html') %>
+    </div>
+</div>

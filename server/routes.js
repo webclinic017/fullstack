@@ -47,10 +47,26 @@ module.exports = function(app) {
 
 
     app.route('/ranklist').get(function(req, res) {
-
         res.render('ranklist.html', {});
     });
 
+    app.route('/regular').get(function(req, res){
+        res.render('regular_list.html',{
+            model : require('./model/modelRegular')
+        });
+    });
+    app.route('/regular/detail/:subpage').get(function(req, res){
+        res.render('regular_detail.html',{
+            model : require('./model/modelRegular'),
+            detail_id : req.params.subpage || ""
+        })
+    });
+    app.route('/regular/agree/:subpage').get(function(req, res){
+        res.render('regular_agree.html',{
+            model : require('./model/modelRegular'),
+            detail_id : req.params.subpage || ""
+        });
+    });
     app.route('/trader/:usercode').get(function(req, res) {
         var usercode = req.params.usercode;
 

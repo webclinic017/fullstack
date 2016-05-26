@@ -1,0 +1,524 @@
+@include b(fix-list) {
+    background: #f1f0f0;
+
+    .container {
+        width: 1170px;
+        margin: 0 auto;
+    }
+
+    @include e(banner) {
+        @include img-normal($image-path-base + "ranklist/fix-list-bg.jpg");
+
+        .container {
+            position: relative;
+            height: 418px;
+            background-size: 100%;
+            @include img-normal($image-path-base + "ranklist/fix-list-banner.jpg");
+
+        }
+
+        @include m(ul) {
+            position: absolute;
+            left: 94px;
+            top: 194px;
+            overflow: hidden;
+
+            li {
+                position: relative;
+                float: left;
+                margin-right: 10px;
+                width: 96px;
+                height: 108px;
+                background-size: 100%;
+                @include img-normal($image-path-base + "ranklist/six-white.png");
+                color: #0f93aa;
+
+
+                &:hover {
+                    @include img-normal($image-path-base + "ranklist/six-yellow.png");
+                }
+                
+                div {
+                    position: relative;
+                    left: 30%;
+                    top: 25%;
+                    font-size: 19px;
+                }
+            }
+
+            span {
+                display: block;
+            }
+        }
+    }
+
+    @include e(con) {
+
+        .row {
+            margin-left: 0px;
+            margin-right: 0px;
+            padding-top: 33px;
+            border-top: 1px solid $brand-primary;
+            box-shadow: 3px 3px 5px #e7e7e7;
+        }
+        .col-xs-8 {
+            padding-bottom: 51px;
+        }
+    }
+
+    @include e(list) {
+        margin-bottom: 16px;
+        overflow: hidden;
+        border-top: 1px solid #fedd0a;
+        box-shadow: 3px 3px 5px #e7e7e7;
+        background: #fff;
+        @include img-normal($image-path-base + "ranklist/little-dq.jpg");
+        background-repeat: no-repeat;
+
+
+        @include m(con1) {
+            float: left;
+        }
+
+        @include m(con2) {
+            float: right;
+            margin-left: 17px;
+            margin-right: 17px;
+            margin-bottom: 24px;
+            padding-top: 29px;
+            width: 300px;
+            
+        }
+
+        @include m(title-con) {
+            margin-left: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            width: 770px;
+            border-bottom: 1px solid #eee;
+        }
+
+        @include m(title) {
+            //margin-right: 76px;
+            margin-top: 54px;
+            display: inline-block;
+            //width: 319px;
+            // height: 54px;
+            // @include img-normal($image-path-base + "ranklist/list-title-bg.jpg");
+            line-height: 38px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            color: $gray-darkest;
+
+        }
+
+        @include m(month) {
+            margin-right: 0px;
+            width: 412px;
+        }
+
+        ul {
+            overflow: hidden;
+            margin-bottom: 32px;
+        }
+
+        ul>li {
+            padding-left: 40px;
+            padding-right: 40px;
+            float: left;
+            overflow: hidden;
+            height: 110px;
+            text-align: center;
+            vertical-align: middle;
+            border-right: 1px dotted #D3D2D1;
+        }
+        li:first-child {
+            // padding-left: 20px;
+            width: 235px;
+        }
+        li:last-child {
+            border-right: none;
+            padding-right: 0px;
+        }
+
+        @include m(red) {
+            margin-top: 21px;
+            margin-bottom: 10px;
+            margin-left: -5px;
+            margin-right: -12px;
+            display: block;
+            font-size: 38px;
+            line-height: 45px;
+            color: #FD4006;
+        }
+
+        @include m(normal) {
+            margin-top: 33px;
+            display: block;
+            line-height: 24px;
+            font-size: 24px;
+        }
+    }
+
+    @include e(reserve) {
+        padding: 29px 30px;
+        height: 215px;
+        border-radius: 10px;
+        background: #f7f7f7;
+        color: #666;
+        position:relative;
+
+        .progress {
+            display: inline-block;
+            width: 124px;
+        }
+        .regular-list-btn{
+            position:absolute;
+            bottom:32px;
+            left : 26px;
+        }
+        .list-hint{
+            margin-top:20px;
+        }
+        @include m(btn) {
+            display: inline-block;
+            position: relative;
+            padding: 13px 75px;
+            width: 243px;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 10px;
+            font-size: 18px;
+            
+        }
+
+        @include m(btn-order) {
+            background: $brand-primary;
+            color: #020202;
+
+            &:hover {
+                background-color: #e4c70b;
+            }
+        }
+        @include m(btn-trade) {
+            background: $brand-info;
+            color: #fff;
+
+            &:hover {
+                background-color: #27abd4;
+            }
+        }
+        @include m(btn-end) {
+            background: #ccc;
+            color: #fff;
+
+            &:hover {
+                background-color: #bbb;
+            }
+        }
+        @include m(btn-hope) {
+            cursor: not-allowed;
+        }
+
+        @include m(triangle) {
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 8px solid #000;
+            border-right: 8px solid transparent;
+        }
+
+        @include m(triangle-white) {
+            position: relative;
+            top: 2px;
+            display: inline-block;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-left: 8px solid #fff;
+            border-right: 8px solid transparent;
+        }
+
+        @include m(copy) {
+            margin-top: 34px;
+            margin-bottom: 34px;
+        }
+
+        
+    }
+}
+
+@include b(hy-detail) {
+    margin-top: 97px;
+
+
+    .row {
+        .col-xs-8 {
+            padding-left: 0;
+        }
+        .col-xs-4 {
+            padding-left: 0;
+            padding-right: 0;
+            text-align: right;
+        }
+    }
+
+    @include e(title) {
+        width: 100%;
+        height: 55px;
+        background-color: #222;
+        color: $brand-primary;
+
+        @include m(span1) {
+            display: inline-block;
+            font-size: 18px;
+            line-height: 18px;
+            margin: 19px 0 17px 41px;
+        }
+
+        @include m(tel) {
+            position: relative;
+            top: 10px;
+            margin-right: 14px;
+            display: inline-block;
+            height: 34px;
+            width: 34px;
+            @include img-normal($image-path-base + "ranklist/huiying-tel.png");
+        }
+
+        @include m(span2) {
+            padding-right: 28px;
+        }
+    }
+
+    @include e(con) {
+        padding-left: 15px;
+        padding-right: 15px;
+        overflow: hidden;
+        background: #fff;
+        text-align: left;
+        height:240px;
+        @include m(end) {
+            text-align: center;
+
+            .hy-detail__con-btn {
+                margin-top: 20px;
+                margin-bottom: 29px;
+            }
+        }
+
+        @include m(ul) {
+            padding-top: 19px;
+            padding-bottom: 20px;
+            overflow: hidden;
+            border-bottom: 1px solid #c9c9c9;
+
+            li {
+                float: left;
+                padding-left: 20px;
+                padding-right: 20px;
+                border-right: 1px dotted #D3D2D1;
+                height: 110px;
+            }
+
+            li:last-child {
+                border-right: none;
+            }
+
+            span {
+                display: inline-block;
+                margin-top: 25px;
+                font-size: 16px;
+                line-height: 16px;
+                color: #666;
+            }
+
+            p {
+                margin-top: 27px;
+                font-size: 24px;
+                line-height: 24px;
+                color: #333;
+            }
+        }
+
+        @include m(red) {
+            color: #FC4607 !important;
+        }
+
+        @include m(circle) {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background: transparent;
+            border: 2px solid $brand-primary;
+            border-radius: 50%;
+        }
+
+        @include m(progress) {
+            padding-top: 43px;
+            padding-bottom: 39px;
+        }
+
+        @include m(btn) {
+            margin-top: 8px;
+            margin-bottom: 12px;
+            padding: 12px 0;
+            width: 100%;
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            font-size: 18px;
+            line-height: 18px;
+        }
+
+        @include m(btn-order) {
+            background: $brand-primary;
+        }
+        @include m(btn-trade) {
+            background: $brand-info;
+            color: #fff;
+        }
+        @include m(btn-end) {
+            background: #959595;
+            color: #fff;
+        }
+
+        .progress {
+            display: inline-block;
+            width: 170px;
+        }
+
+        p input[type=text] {
+            display: inline-block;
+            padding: 14px 0 14px 12px;
+            height: 43px;
+            width: 100%;
+        }
+
+    }
+
+    @include e(de) {
+        margin-top: 18px;
+        margin-left: -15px;
+        margin-right: -15px;
+        background: #fff;
+
+        table {
+            width: 100%;
+            border: 1px solid #d2d2d2;
+
+            tr:nth-child(2n-1){
+                background: #f1f1f1;
+            }
+
+            td:first-child {
+                padding:20px 35px;
+                border-right: 1px solid #ebebeb;
+                font-size: 18px;
+            }
+            td:last-child {
+                font-size: 16px;
+                padding-left: 20px;
+            }
+        }
+
+        @include m(table) {
+            margin: 27px 35px 40px;
+        }
+
+        @include m(title) {
+            padding-left: 42px; 
+            padding-bottom: 12px;
+            padding-top: 18px;
+            border-bottom: 1px solid $brand-primary;
+            font-size: 22px;
+            line-height: 22px;
+        }
+    }
+
+    @include e(team) {
+        padding: 25px 0 0 46px;
+    
+        ul {
+            margin-top: 15px;
+            padding-left: 5px;
+        }
+
+        ul>li {
+            line-height: 40px;
+        }
+    }
+
+    @include e(tabs) {
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: 15px;
+        background: #fff;
+
+        @include m(z-img1) {
+            width: 980px;
+            height: 650px;
+            background-size: 100%;
+            background-position: center center;
+            @include img-normal($image-path-base + "ranklist/huixin1.jpg");  
+        }
+        @include m(z-img2) {
+            width: 980px;
+            height: 650px;
+            background-size: 100%;
+            background-position: center center;
+            @include img-normal($image-path-base + "ranklist/huixin2.jpg");  
+        }
+        @include m(z-img3) {
+            width: 980px;
+            height: 650px;
+            background-size: 100%;
+            background-position: center center;
+            @include img-normal($image-path-base + "ranklist/huixin3.jpg");  
+        }
+        @include m(z-img4) {
+            width: 980px;
+            height: 650px;
+            background-size: 100%;
+            background-position: center center;
+            @include img-normal($image-path-base + "ranklist/huixin4.jpg");  
+        }
+        @include m(z-img5) {
+            width: 980px;
+            height: 650px;
+            background-size: 100%;
+            background-position: center center;
+            @include img-normal($image-path-base + "ranklist/huixin5.jpg");  
+        }
+
+        @include m(w-img1) {
+            width: 980px;
+            height: 650px;
+            background-size: 100%;
+            background-position: center center;
+            @include img-normal($image-path-base + "ranklist/zhangwei1.jpg");  
+        }
+        @include m(w-img2) {
+            width: 980px;
+            height: 650px;
+            background-size: 100%;
+            background-position: center center;
+            @include img-normal($image-path-base + "ranklist/zhangwei2.jpg");  
+        }
+    }
+
+    // tabs 切换图片
+
+    // 委托书
+    @include e(fix-box) {
+        p {
+            margin-top: 15px;
+            line-height: 30px;
+        }
+    }
+}
+
+
+

@@ -1,35 +1,12 @@
-<% if (pageInfo.id === 'forex') { %>
-    <% var title = '外汇' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'oil') { %>
-    <% var title = '原油' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'metal') { %>
-    <% var title = '贵金属' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'cfd') { %>
-    <% var title = '差价合约' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'trade') { %>
-    <% var title = '交易平台' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } %>
 <!doctype html>
 <html>
     <head>
         <% include common/metas.html %>
+        <title>老虎金融｜定期跟单</title>
+        <meta name="description" content="老虎金融高手排行榜，您可以根据自身需要按照复制人数、复制资金、最大回撤和总收益进行排序，让你轻松筛选高手。">
 
-        <title>老虎金融｜<%= title %></title>
-        <meta name="description" content="<%= description %>">
-        <meta name="keywords" content="<%= keywords %>">
-
-        <!-- build:css(.tmp) /styles/web.css -->
-        <link rel="stylesheet" href="/styles/web.css">
+        <!-- build:css(.tmp) /styles/regular.css -->
+        <link rel="stylesheet" href="/styles/regular.css">
         <!-- endbuild -->
     </head>
     <body ng-app="fullstackApp">
@@ -37,18 +14,11 @@
             <div class="header">
                 <% include navbar/main.html %>
             </div>
-
-            <div class="body" style="background-color: #fafafa">
-                <div class="layout-2">
-                    <div class="layout-2__side mg-tp-30">
-                        <%- include('web/product-sidebar.html') %>
-                    </div>
-                    <div class="layout-2__content mg-tp-30">
-                        <%- include('web/product-' + pageInfo.id + '.html') %>
-                    </div>
+            <div class="body">
+                <div ui-view>
+                    <% include regular/detail_main.html %>
                 </div>
             </div>
-
             
         <!-- build:js(client) /scripts/vendor.js -->
         <!-- bower:js -->
@@ -74,22 +44,24 @@
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:js(client) /scripts/web_product.js -->
+        <!-- build:js(client) /scripts/regular.js -->
         <script src="/scripts/app.js"></script>
 
         <script src="/scripts/common/config.service.js"></script>
         <script src="/scripts/common/account.service.js"></script>
         <script src="/scripts/common/authorization.service.js"></script>
-        <script src="/scripts/common/product.service.js"></script>
-        <script src="/scripts/common/utils.service.js"></script>
+        <script src="/scripts/common/ranklist.service.js"></script>
 
         <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/line_chart.directive.js"></script>
         <script src="/scripts/common/dropdown.directive.js"></script>
-        <script src="/scripts/common/pagination.directive.js"></script>
+        <script src="/scripts/common/loading_img.directive.js"></script>
+        <script src="/scripts/common/progress.directive.js"></script>
+        <script src="/scripts/common/tabs.directive.js"></script>
 
         <script src="/scripts/common/global.controller.js"></script>
+        <script src="/scripts/regular/regular.controller.js"></script>
 
-        <script src="/scripts/common/bind_html.filter.js"></script>
         <!-- endbuild -->
 
             <div class="footer">

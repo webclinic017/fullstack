@@ -1,0 +1,142 @@
+
+<div class="fix-list">
+    <div class="fix-list__banner">
+        <div class="container">
+            <ul class="fix-list__banner-ul">
+                <li>
+                    <div>
+                        <span>专业</span>
+                        <span>团队</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>灵活</span>
+                        <span>选择</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>坐享</span>
+                        <span>收益</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="fix-list__con mg-tp-20">
+        <div class="container">
+<% 
+    model.products.forEach(function(product, index){
+        var status = model.judgeStatus(product);
+%>
+            <div class="fix-list__list">
+                <div class="fix-list__list-con1">
+                    <div class="fix-list__list-title-con">
+                        <span class="fix-list__list-title"><%= product.name %></span>
+                        <span class="font-darker"><%= model.getTimeDesc(product) %></span>
+                    </div>
+                    <div class="clearfix">
+                        <ul>
+                            <li>
+<%
+        if(status == "before_appoint" || status == "start_appoint" || status == "end_appoint"){
+%>
+                                <span class="font-darker">预期年化收益率</span>
+                                <span class="fix-list__list-red"><%= product.profit_rate_wish %></span>
+<%
+        }
+        if(status == "tradding"){
+%>
+                                <span>实时年化收益率</span>
+                                <span class="fix-list__list-red font-info"><%= product.profit_rate_now %></span>
+                                <span class="font-darker">预期年化收益率<span class="font-warning"><%= product.profit_rate_wish %></span></span>
+<%
+        }
+        if(status == "end_trade"){
+%>
+                                <span>已结算年化收益率</span>
+                                <span class="fix-list__list-red font-info"><%= product.profit_rate_now %></span>
+                                <span class="font-darker">预期年化收益率<span class="font-warning"><%= product.profit_rate_wish %></span></span>
+<%
+        }
+%>
+                            </li>
+                            <li>
+                                <span class="font-darker">复制金额</span>
+                                <span class="fix-list__list-normal"><%= product.money_copy %></span>
+                            </li>
+                            <li>
+                                <span class="font-darker">复制封闭期</span>
+                                <span class="fix-list__list-normal"><%= product.period %></span>
+                            </li>
+                            <li>
+                                <span class="font-darker">历史最高回撤</span>
+                                <span class="fix-list__list-normal"><%= product.withdraw_history %></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="fix-list__list-con2">
+                    <div class="fix-list__reserve">
+                        <div class="list-hint">
+                            <span class="font-size-16"><%= model.getMaxDesc(product) %></span>
+                        </div>
+                        <div class="list-hint">
+                            <span>投资进度：</span>
+                            <div class="progress" tw-progress>
+                                <div class="scale"></div>
+                            </div>
+                            <span class="p-num"><%= status != "before_appoint" ? product.progress:0 %>%</span>
+                        </div>  
+<% 
+        if(status == "before_appoint"){
+%>
+
+                        <p class="regular-list-btn">
+                            <a class="fix-list__reserve-btn fix-list__reserve-btn-order" href="/regular/detail/<%= product.id%>">即将开始 <span class="fix-list__reserve-triangle"></span></a>
+                        </p>
+
+<%
+        }
+        if(status == "start_appoint"){
+%>
+
+                        <p class="regular-list-btn">
+                            <a class="fix-list__reserve-btn fix-list__reserve-btn-order" href="/regular/detail/<%= product.id%>">查看详情 <span class="fix-list__reserve-triangle"></span></a>
+                        </p>
+<%
+        }
+        if(status == "end_appoint"){
+%>
+                        <p class="regular-list-btn">
+                            <a class="fix-list__reserve-btn fix-list__reserve-btn-order" href="/regular/detail/<%= product.id%>">预约结束 <span class="fix-list__reserve-triangle"></span></a>
+                        </p>
+<%
+        }
+        if(status == "tradding"){
+%>
+                        <p class="regular-list-btn">
+                            <a class="fix-list__reserve-btn fix-list__reserve-btn-order" href="/regular/detail/<%= product.id%>">交易中 <span class="fix-list__reserve-triangle"></span></a>
+                        </p>
+<%
+    
+        }
+        if(status == "end_trade"){
+%>
+                        <p class="regular-list-btn">
+                            <a class="fix-list__reserve-btn fix-list__reserve-btn-end" href="/regular/detail/<%= product.id%>">已结束 <span class="fix-list__reserve-triangle-white"></span></a>
+                        </p>
+<%
+        }
+%>  
+                    </div>
+                </div>
+               
+            </div>
+<%
+    });
+%>        
+        </div>
+    </div>
+</div>
