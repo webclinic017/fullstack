@@ -66,7 +66,10 @@
 
         // 获取新消息
         function getUnreadLength () {
-            account.checkLogined().then(function(){
+            account.checkLogined().then(function (logined) {
+                if(!logined){
+                    return;
+                }
                 account.getUnreadLength().then(function(data) {
                     $scope.unreadLength = data.num;
 
