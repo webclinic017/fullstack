@@ -51,18 +51,18 @@ module.exports = function(app) {
     });
 
     app.route('/regular').get(function(req, res){
-        res.render('regular/list.html',{
+        res.render('regular_list.html',{
             model : require('./model/modelRegular')
         });
     });
     app.route('/regular/detail/:subpage').get(function(req, res){
-        res.render('regular/detail.html',{
+        res.render('regular_detail.html',{
             model : require('./model/modelRegular'),
             detail_id : req.params.subpage || ""
         })
     });
     app.route('/regular/agree/:subpage').get(function(req, res){
-        res.render('regular/agree.html',{
+        res.render('regular_agree.html',{
             model : require('./model/modelRegular'),
             detail_id : req.params.subpage || ""
         });
