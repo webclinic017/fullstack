@@ -21,6 +21,7 @@ module.exports = {
 			max_desc : "", //有该值时，替换最高复制金额
 			start_date_appoint : "", //开始预约时间 exam : "2016.5.12"
 			end_date_trade : "",  //结束交易时间  exam : '2016.5.19'
+			profit_rate_last : "",//上期年化收益率
 		}	
 	*/
 	products : [
@@ -103,7 +104,9 @@ module.exports = {
 			note : "客户交易成本为欧元4个点。", //备注			
 			team_intro : "team_huiying", //文件名，团队介绍模块
 			//Optional
+			profit_rate_last : "98%",//上期年化收益率
 			end_date_trade : "2016.04.30 00:00"  //结束交易时间  exam : '2016.5.19'
+
 		},	
 		{
 			id : "2",
@@ -124,6 +127,7 @@ module.exports = {
 			desc_divide : "无",//报酬分成
 			note : "客户交易成本为欧元4个点。", //备注			
 			//Optional
+			profit_rate_last : "805%",//上期年化收益率
 			end_date_trade : "2016.04.23 00:00"  //结束交易时间  exam : '2016.5.19'
 		},										
 		{

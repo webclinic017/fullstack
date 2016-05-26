@@ -109,7 +109,7 @@
     if(status == "tradding"){
 %>
                             <p class="font-size-16 pd-tp-30  text-center">实时年化收益率</p>
-                            <p class="fix-list__list-red font-info  text-center"><%= product.profit_rate_wish %></p>
+                            <p class="fix-list__list-red font-info  text-center"><%= product.profit_rate_now %></p>
                             <input name="submit" 
                                    class="hy-detail__con-btn hy-detail__con-btn-trade" 
                                    type="button" 
@@ -122,6 +122,18 @@
 %>
                             <p class="font-size-16 pd-tp-30 text-center">已结算年化收益率</p>
                             <p class="fix-list__list-red font-info text-center"><%= product.profit_rate_now %></p>
+<%
+      if(product.profit_rate_last){
+%>
+                            <p class="mg-tp-20 text-center">上期年化收益率:<span class="font-size-20 font-warning"><%= product.profit_rate_last%></span></p>
+<%
+
+      }else{
+%>
+                            <p class="mg-tp-20 text-center">预期年化收益率:<span class="font-size-20 font-warning"><%= product.profit_rate_wish%></span></p>
+<%
+      }
+%>
                             <input name="submit" 
                                    class="hy-detail__con-btn hy-detail__con-btn-end" 
                                    type="button" 
