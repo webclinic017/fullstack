@@ -33,9 +33,9 @@ module.exports = {
 			withdraw_history : "25%",    //历史最高回撤
 			profit_rate_wish : "60%",  //预期年化收益率
 			profit_rate_now : null, //实时年化收益率
-			end_date_appoint : "2016.6.12 18:00", //预约结束时间
-			start_date_trade : '2016.6.13 00:00',  //开始交易时间
-			end_date_trade : '2016.9.13 00:00',  //结束交易时间  exam : '2016.5.19'
+			end_date_appoint : "2016.06.12 18:00", //预约结束时间
+			start_date_trade : '2016.06.13 00:00',  //开始交易时间
+			end_date_trade : '2016.09.13 00:00',  //结束交易时间  exam : '2016.5.19'
 			team_intro : "team_huiying", //文件名，团队介绍模块
 			jiafang:"赵海峰(主操盘手)", //甲方，操盘手，出现在agree里
 			progress : 10, //投资进度 exam:50
@@ -52,9 +52,9 @@ module.exports = {
 			withdraw_history : "25%",    //历史最高回撤
 			profit_rate_wish : "60%~80%",  //预期年化收益率
 			profit_rate_now : null, //实时年化收益率
-			end_date_appoint : "2016.6.12 18:00", //预约结束时间
-			start_date_trade : '2016.6.13 00:00',  //开始交易时间
-			end_date_trade : '2017.6.13 00:00',  //结束交易时间  exam : '2016.5.19'
+			end_date_appoint : "2016.06.12 18:00", //预约结束时间
+			start_date_trade : '2016.06.13 00:00',  //开始交易时间
+			end_date_trade : '2017.06.13 00:00',  //结束交易时间  exam : '2016.5.19'
 			jiafang:"赵海峰(主操盘手)", //甲方，操盘手，出现在agree里
 			team_intro : "team_huiying", //文件名，团队介绍模块
 			desc_risk : "动用杠杆不超过10倍，亏损达到账户初始资金的30%时触发预警；在达到账户初始资金的40%时，触发熔断，交易将会停止一周，一周后再开始交易。账户的清盘线设置在50%，亏损的部分投资人承担30%（即投资人投资金额的15%）汇赢团队承担70%（即投资人投资金额的35%）", //风险控制
@@ -72,15 +72,15 @@ module.exports = {
 			withdraw_history : "30%",    //历史最高回撤
 			profit_rate_wish : "120%",  //预期年化收益率
 			profit_rate_now : "128%", //实时年化收益率
-			end_date_appoint : "2016.5.17",  //预约结束时间 exam:'2016.5.17'
-			start_date_trade : "2016.5.17",  //开始交易时间 exam:'2016.5.17'
+			end_date_appoint : "2016.05.16 18:00",  //预约结束时间 exam:'2016.5.17'
+			start_date_trade : "2016.05.17 00:00",  //开始交易时间 exam:'2016.5.17'
 			progress : 50 , //投资进度 exam:50
 			jiafang:"张伟(主操盘手)", //甲方，操盘手，出现在agree里
 			desc_risk : "动用的杠杆不超过7倍，亏损超过账户初始资金的30%时触发预警，交易平台自动强制平掉所有头寸，停止交易，客户可以赎回剩余资金。", //风险控制
 			desc_divide : "客户收益的30%作为交易团队的收益报酬，由交易平台自动从用户账户余额中划转给交易团队。每个月的第一个交易日结算上个月的账户盈亏。",//报酬分成
 			note : "客户完全自负盈亏，经纪商与交易团队不对客户损失的资产做任何赔偿。", //备注			
 			//Optional
-			end_date_trade : "2016.6.17",  //结束交易时间  exam : '2016.5.19'
+			end_date_trade : "2016.06.17 00:00",  //结束交易时间  exam : '2016.5.19'
 			team_intro : "team_zhangwei", //文件名，团队介绍模块
 			max_desc : "最多支持50名复制者"
 		},
@@ -94,8 +94,8 @@ module.exports = {
 			withdraw_history : "15%",    //历史最高回撤
 			profit_rate_wish : "120%",  //预期年化收益率
 			profit_rate_now : "0%", //实时年化收益率
-			end_date_appoint : "2016.4.14 18:00",  //预约结束时间 exam:'2016.5.17'
-			start_date_trade : "2016.4.25 00:00",  //开始交易时间 exam:'2016.5.17'
+			end_date_appoint : "2016.04.14 18:00",  //预约结束时间 exam:'2016.5.17'
+			start_date_trade : "2016.04.25 00:00",  //开始交易时间 exam:'2016.5.17'
 			progress : "100", //投资进度 exam:50
 			jiafang:"赵海峰(主操盘手)", //甲方，操盘手，出现在agree里
 			desc_risk : "动用杠杆不超过10倍，亏损达到账户初始资金的15%时，停止交易.", //风险控制
@@ -115,8 +115,8 @@ module.exports = {
 			withdraw_history : "15%",    //历史最高回撤
 			profit_rate_wish : "78%",  //预期年化收益率
 			profit_rate_now : "98%", //实时年化收益率
-			end_date_appoint : "2016.4.17 18:00",  //预约结束时间 exam:'2016.5.17'
-			start_date_trade : "2016.4.18 00:00",  //开始交易时间 exam:'2016.5.17'
+			end_date_appoint : "2016.04.17 18:00",  //预约结束时间 exam:'2016.5.17'
+			start_date_trade : "2016.04.18 00:00",  //开始交易时间 exam:'2016.5.17'
 			progress : "100", //投资进度 exam:50
 			jiafang:"赵海峰(主操盘手)", //甲方，操盘手，出现在agree里
 			team_intro : "team_huiying", //文件名，团队介绍模块
@@ -124,7 +124,7 @@ module.exports = {
 			desc_divide : "无",//报酬分成
 			note : "客户交易成本为欧元4个点。", //备注			
 			//Optional
-			end_date_trade : "2016.4.23 00:00"  //结束交易时间  exam : '2016.5.19'
+			end_date_trade : "2016.04.23 00:00"  //结束交易时间  exam : '2016.5.19'
 		},										
 		{
 			id : "1",
@@ -136,8 +136,8 @@ module.exports = {
 			withdraw_history : "15%",    //历史最高回撤
 			profit_rate_wish : "78%",  //预期年化收益率
 			profit_rate_now : "805%", //实时年化收益率
-			end_date_appoint : "2016.4.8 18:00",  //预约结束时间 exam:'2016.5.17'
-			start_date_trade : "2016.4.11 00:00",  //开始交易时间 exam:'2016.5.17'
+			end_date_appoint : "2016.04.08 18:00",  //预约结束时间 exam:'2016.5.17'
+			start_date_trade : "2016.04.11 00:00",  //开始交易时间 exam:'2016.5.17'
 			progress : "100", //投资进度 exam:50
 			jiafang:"赵海峰(主操盘手)", //甲方，操盘手，出现在agree里
 			team_intro : "team_huiying", //文件名，团队介绍模块
@@ -145,7 +145,7 @@ module.exports = {
 			desc_divide : "无",//报酬分成
 			note : "客户交易成本为欧元4个点。", //备注			
 			//Optional
-			end_date_trade : "2016.4.16 00:00"  //结束交易时间  exam : '2016.5.19'
+			end_date_trade : "2016.04.16 00:00"  //结束交易时间  exam : '2016.5.19'
 		}
 	],
 	//测试数据，各种状态
