@@ -79,12 +79,20 @@
                 </div>
                 <div class="fix-list__list-con2">
                     <div class="fix-list__reserve">
-<% 
-        if(status == "before_appoint"){
-%>
                         <div class="list-hint">
                             <span class="font-size-16"><%= model.getMaxDesc(product) %></span>
                         </div>
+                        <div class="list-hint">
+                            <span>投资进度：</span>
+                            <div class="progress" tw-progress>
+                                <div class="scale"></div>
+                            </div>
+                            <span class="p-num"><%= status != "before_appoint" ? product.progress:0 %>%</span>
+                        </div>  
+<% 
+        if(status == "before_appoint"){
+%>
+
                         <p class="regular-list-btn">
                             <a class="fix-list__reserve-btn fix-list__reserve-btn-order" href="/regular/detail/<%= product.id%>">即将开始 <span class="fix-list__reserve-triangle"></span></a>
                         </p>
@@ -93,13 +101,7 @@
         }
         if(status == "start_appoint"){
 %>
-                        <div class="list-hint">
-                            <span>投资进度：</span>
-                            <div class="progress" tw-progress>
-                                <div class="scale"></div>
-                            </div>
-                            <span class="p-num"><%= product.progress %>%</span>
-                        </div>  
+
                         <p class="regular-list-btn">
                             <a class="fix-list__reserve-btn fix-list__reserve-btn-order" href="/regular/detail/<%= product.id%>">查看详情 <span class="fix-list__reserve-triangle"></span></a>
                         </p>
