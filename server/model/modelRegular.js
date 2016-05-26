@@ -151,7 +151,7 @@ module.exports = {
 			team_intro : "team_huiying", //文件名，团队介绍模块
 			jiafang:"赵海峰(主操盘手)", //甲方，操盘手，出现在agree里
 			progress : 7, //投资进度 exam:50
-			start_date_appoint : "2016.5.30"
+			start_date_appoint : "2016.5.30 10:00:00"
 		},
 		{
 			id : "6",			
@@ -169,7 +169,7 @@ module.exports = {
 			jiafang:"赵海峰(主操盘手)", //甲方，操盘手，出现在agree里
 			team_intro : "team_huiying", //文件名，团队介绍模块
 			progress : 2, //投资进度 exam:50
-			start_date_appoint : "2016.5.10"
+			//start_date_appoint : "2016.5.10"
 
 		},
 		{
@@ -312,7 +312,7 @@ module.exports = {
 			desc = "开放购买："+product.start_date_appoint;
 		}
 		if(status == "start_appoint"){
-			desc = "预约复制时间：" + (product.start_date_appoint?product.start_date_appoint:"即日起至") + product.end_date_appoint;
+			desc = "预约复制时间：" + (product.start_date_appoint?product.start_date_appoint+' - ':"即日起至") + product.end_date_appoint;
 		}
 		if(status == "end_appoint"){
 			desc = "预约已结束，敬请期待下一期";
