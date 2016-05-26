@@ -33,19 +33,22 @@
             });
         });
 
+        getUnreadLength();
+        setInterval(function() {
+            getUnreadLength();
+        },30000);
 
         account.checkLogined().then(function (logined) {
             $scope.userstatus.logined = logined;
             if (logined) {
                 initialize();
-                setInterval(function() {
-                    getUnreadLength();
-                },30000);
+
             }
         });
 
         $scope.$on('relogin_info', function(){
             initialize();
+            getUnreadLength();
         });
 
         // 初始化所需的全局数据
@@ -63,11 +66,13 @@
 
         // 获取新消息
         function getUnreadLength () {
-            account.getUnreadLength().then(function(data) {
-                $scope.unreadLength = data.num;
+            account.checkLogined().then(function(){
+                account.getUnreadLength().then(function(data) {
+                    $scope.unreadLength = data.num;
 
-                angular.extend($scope.personal, {
-                    unreadLength: $scope.unreadLength
+                    angular.extend($scope.personal, {
+                        unreadLength: $scope.unreadLength
+                    });
                 });
             });
             // $scope.$emit('refreshNoticeList');

@@ -53,6 +53,9 @@
         function readAllNotice() {
             account.getAllRead().then(function(data) {});
         }
-
+        $scope.formatText = function(text){
+            var newText = text.replace(/\n/g,'<br>');
+            return newText;
+        }
     }
 })();
