@@ -154,7 +154,6 @@
                 </thead>
             </table>
             <div class="invest_table_wrapper__tbody" ng-show="trader.detailsShow">
-                <div tw-loading-img></div>
                 
                 <table class="invest_table table table-striped table-hover">
                     <colgroup>
@@ -198,6 +197,11 @@
                         </tr>
                     </tbody>
                 </table>
+                <div ng-show="trader.notFirstLoad != true">
+                    <div class="loading_img active">
+                        <img src="/ngsrc/loading.gif">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

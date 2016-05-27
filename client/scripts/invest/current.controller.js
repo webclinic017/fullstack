@@ -32,7 +32,9 @@
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
             $timeout.cancel(dataId);
             $timeout.cancel(tradersId);
-            $timeout.cancel(detailsId);
+            angular.forEach($scope.traders, function(value, key){
+                $timeout.cancel(value.detailsId);
+            });
         });
 
         // 获取自主交易持仓订单和订单概况
@@ -42,7 +44,7 @@
                 $scope.orders = data.data;
                 angular.extend($scope.orderCurrent, data.group_data);
 
-                $scope.$broadcast('hideLoadingImg');
+                // $scope.$broadcast('hideLoadingImg');
             });
 
             dataId = $timeout(function () {
@@ -52,6 +54,7 @@
 
         function getTraders() {
             invest.getInvestCurrentTraders().then(function (data) {
+                 $scope.$broadcast('hideLoadingImg');
                 // console.info(data);
                 if (data.is_succ) {
                     if (data.data.length <= 0) {
@@ -90,8 +93,7 @@
         function showDetails(trader) {
             if (trader.detailsShow) {
                 trader.detailsShow = false;
-                trader.orders = [];
-                $timeout.cancel(detailsId);
+                $timeout.cancel(trader.detailsId);
             } else {
                 // $scope.$emit('showLoadingImg');
                 trader.detailsShow = true;
@@ -102,12 +104,11 @@
         // 获取 copied traders 列表的详情（复制交易持仓订单）
         function getDetails(trader) {
             invest.getInvestCurrentDetails(trader.usercode).then(function (data) {
-                trader.orders = data.data;
-
-                $scope.$broadcast('hideLoadingImg');
+                trader.notFirstLoad = true;
+                trader.orders = data.data || [];
             });
 
-            detailsId = $timeout(function () {
+            trader.detailsId = $timeout(function () {
                 getDetails(trader);
             }, 5000);
         }
