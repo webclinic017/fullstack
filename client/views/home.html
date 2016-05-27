@@ -21,10 +21,12 @@
 <body ng-app="fullstackApp">
     <div ng-controller="GlobalController">
         <div class="header">
-            <% include navbar/main2.html %>
+            <%- include('navbar/main.html',{
+                navClass : 'navbar-2'
+            }) %>
         </div>
         <div class="body">
-            <% include home/index2.html %>
+            <% include home/index.html %>
         </div>
        
     <!-- build:js(client) /scripts/vendor.js -->

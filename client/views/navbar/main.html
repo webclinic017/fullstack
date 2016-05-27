@@ -1,4 +1,4 @@
-<div class="navbar navbar-fixed-top" tw-navbar>
+<div class="<%= typeof navClass == 'undefined'?'navbar':'navbar-2' %> navbar-fixed-top" tw-navbar>
     <div class="container">
         <div class="navbar-header">
             <a class="logo" href="/"></a>
@@ -48,11 +48,11 @@
             </li>
             <li class="dropdown" tw-dropdown>
                 <a data-navbar-trigger data-navbar-level="2" href="/ranklist/#/ranklist/masters">
-                    排行榜
+                    复制跟单
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="/ranklist/#/ranklist/masters">排行榜</a>
+                        <a href="/ranklist/#/ranklist/masters">高手跟单</a>
                     </li>
                     <li>
                         <a href="/regular">定期跟单</a>
@@ -60,8 +60,26 @@
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown>
+                <a data-navbar-trigger data-navbar-level="2" href="/web/product/forex">产品介绍</a>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="/web/product/forex">外汇交易</a>
+                    </li>
+                    <li>
+                        <a href="/web/product/oil">原油交易</a>
+                    </li>
+                    <li>
+                        <a href="/web/product/metal">贵金属交易</a>
+                    </li>
+                    <li>
+                      <a href="/web/product/cfd">差价合约</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown" tw-dropdown>
                 <a data-navbar-trigger data-navbar-level="2" href="/web/copy/rules">
-                    复制交易
+                    交易指南
                 </a>
 
                 <ul class="dropdown-menu">
@@ -72,53 +90,31 @@
                         <a href="/web/copy/select">如何选择高手</a>
                     </li>
                     <li>
+                        <a href="/web/information/comment">每日汇评</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown" tw-dropdown>
+                <a data-navbar-trigger data-navbar-level="2" href="/web/copy/rules">
+                    合作伙伴
+                </a>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="/web/agent">代理合作</a>
+                    </li>
+                    <li>
                         <a href="/web/copy/become">成为高手</a>
                     </li>
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown>
-                <a data-navbar-trigger data-navbar-level="2" href="/web/product/forex">交易产品</a>
-
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="/web/product/forex">外汇</a>
-                    </li>
-                    <li>
-                        <a href="/web/product/oil">原油</a>
-                    </li>
-                    <li>
-                        <a href="/web/product/metal">贵金属</a>
-                    </li>
-                    <li>
-                      <a href="/web/product/cfd">差价合约</a>
-                    </li>
-                    <li>
-                      <a href="/web/product/trade">交易平台</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="dropdown" tw-dropdown>
-                <a data-navbar-trigger data-navbar-level="2" href="/web/information/comment">资讯</a>
-
-                <ul class="dropdown-menu">
-                    <!-- <li>
-                        <a href="/web/information/time">交易时间</a>
-                    </li> -->
-                    <li>
-                        <a href="/web/information/comment">每日汇评</a>
-                    </li>
-                    <!-- <li>
-                        <a href="/web/information/market">市场分析</a>
-                    </li> -->
-                </ul>
-            </li>
-            <li>
-                <a data-navbar-trigger data-navbar-level="2" href="/web/agent">代理合作</a>
-            </li>
-            <li class="dropdown" tw-dropdown>
                 <a data-navbar-trigger data-navbar-level="2" href="/web/about/tigerwit">关于老虎</a>
 
                 <ul class="dropdown-menu">
+                    <li>
+                        <a href="/web/about/tigerwit">关于老虎金融</a>
+                    </li>
                     <li>
                         <a href="/web/about/stp">STP交易模式</a>
                     </li>
@@ -132,7 +128,7 @@
                         <a href="/web/about/control">合规和监管</a>
                     </li> -->
                     <li>
-                        <a href="/web/about/tigerwit">关于老虎金融</a>
+                        <a href="/web/partner">媒体合作</a>
                     </li>
                 </ul>
             </li>
