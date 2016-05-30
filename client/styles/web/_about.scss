@@ -1,3 +1,15 @@
+.test {
+    width: 100px;
+    height: 100px;
+    background-size: 100%;
+    @include img-normal($image-path-base + "test.png");
+
+    &.en {
+        @include img-normal($image-path-base + "test-en.png");        
+    }
+}
+
+
 @include b(about-public) {
     color: $gray-darker;
 

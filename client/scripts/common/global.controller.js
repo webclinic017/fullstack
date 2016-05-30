@@ -5,22 +5,25 @@
     angular.module('fullstackApp')
         .controller('GlobalController', GlobalController);
 
-    GlobalController.$inject = ['$scope', '$state', '$window', 'config', 'account', 'authorization'];
+    GlobalController.$inject = ['$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang'];
 
     /**
      * @name GlobalController
      * @desc
      */
-    function GlobalController($scope, $state, $window, config, account, authorization) {
+    function GlobalController($scope, $state, $window, config, account, authorization, lang) {
         $scope.userstatus = {
             logined: false
         };
+
+        $scope.lang = lang;
 
         $scope.personal = {};
 
         $scope.process = {};
 
         $scope.logout = logout;
+        $scope.reloadLanguage = reloadLanguage;
 
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
 
@@ -74,6 +77,11 @@
             });
         }
 
+        // change language into English or Chinese
+        function reloadLanguage (lang) {
+            document.cookie = 'lang=' + lang + '; path=/';
+            location.reload();
+        }
 
     }
 })();

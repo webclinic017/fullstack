@@ -8,8 +8,11 @@ var path = require('path');
 var url = require('url');
 var request = require('request');
 var masterApi = require('./api/master');
+var language = require('./lang');
 
 module.exports = function(app) {
+    var lang = language(app);
+
     app.use('/api', require('./api'));
 
     // All undefined asset or api routes should return a 404
@@ -106,13 +109,15 @@ module.exports = function(app) {
 
     // 关于老虎金融
     app.route('/web/about/:subpage(stp|team|report|control|tigerwit)').get(function(req, res) {
+        
         var subpage = req.params.subpage || 'forex';
         var pageInfo = {
             id: subpage
         };
 
         res.render('web_about.html', {
-            pageInfo: pageInfo
+            pageInfo: pageInfo,
+            lang: lang
         });
     });
 
