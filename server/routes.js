@@ -83,7 +83,7 @@ module.exports = function(app) {
     });
 
     // 复制交易
-    app.route('/web/copy/:subpage(rules|select|become)').get(function(req, res) {
+    app.route('/web/copy/:subpage(rules|select|become|comment)').get(function(req, res) {
         var subpage = req.params.subpage || 'rules';
         var pageInfo = {
             id: subpage
@@ -145,8 +145,14 @@ module.exports = function(app) {
     });
 
     // 代理合作
-    app.route('/web/agent').get(function(req, res) {
-        res.render('web_agent.html');
+    app.route('/web/agent/:subpage(proxy|become)').get(function(req, res) {
+        var subpage = req.params.subpage || 'skill';
+        var pageInfo = {
+            id: subpage
+        };
+        res.render('web_agent.html', {
+            pageInfo: pageInfo
+        });
     });
 
     app.route('/web/mt4').get(function(req, res) {
