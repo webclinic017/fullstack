@@ -349,6 +349,7 @@
     background-color: $gray-base;
     border-radius: $border-radius-base;
     overflow: hidden;
+    margin-bottom:20px;
 
     @include e(title) {
         margin: 0;

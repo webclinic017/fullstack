@@ -1,4 +1,4 @@
-<ul class="side_navbar" tw-navbar>
+<ul class="side_navbar" tw-navbar ng-controller="WebFaqController">
     <li>
         <h4 class="side_navbar__title">学习中心</h4>
         
@@ -7,8 +7,31 @@
                 <a data-navbar-trigger href="/study/introduction">基础知识</a>
             </li>
             <li>
-                <a data-navbar-trigger href="/web/faq/simulate">常见问题</a>
+                <a href="javascript:" ng-click="toggleNav($event)">常见问题 <i class="fa fa-angle-right"></i></a>
             </li>
+            <ul class="side_navbar__menu" ng-show="!show_faq">
+                <li>
+                    <a data-navbar-trigger class="font-size-12 mg-lf-15" href="/web/faq/simulate">开立模拟帐户</a>
+                </li>
+                <li>
+                    <a data-navbar-trigger class="font-size-12 mg-lf-15"  href="/web/faq/real">开立真实帐户</a>
+                </li>
+                <li>
+                    <a data-navbar-trigger class="font-size-12 mg-lf-15"  href="/web/faq/wad">出入金</a>
+                </li>
+                <li>
+                    <a data-navbar-trigger class="font-size-12 mg-lf-15"  href="/web/faq/type">帐户类型</a>
+                </li>
+                <li>
+                    <a data-navbar-trigger class="font-size-12 mg-lf-15"  href="/web/faq/deal">交易</a>
+                </li>
+                <li>
+                    <a data-navbar-trigger class="font-size-12 mg-lf-15"  href="/web/faq/platform">平台</a>
+                </li>
+                <li>
+                    <a data-navbar-trigger class="font-size-12 mg-lf-15"  href="/web/faq/interest">隔夜利息</a>
+                </li>
+            </ul>
             <li>
                 <a data-navbar-trigger href="/study/video">学习视频</a>
             </li>
