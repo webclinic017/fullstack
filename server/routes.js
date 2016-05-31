@@ -203,6 +203,61 @@ module.exports = function(app) {
         res.render('bd_t29');
     });
 
+    // nodeAPI
+    app.route('/napi').get(function(req, res){
+        var action = req.query.action;
+        var model = require('./model/modelRegular');
+        var page,pagesize,sum;
+        var page_total = 0;
+        var data = null;
+        var data_pre = model['products'];
+        var rs;
+        var oError = null;
+        if(action == "get_regular_list"){
+            page = req.query.page || 1;
+            pagesize = req.query.pagesize || 10;
+            sum = data_pre.length;
+            page_total = Math.ceil(sum/pagesize);
+            if(page > page_total){
+                oError = {
+                    error_msg : "错误的页码"
+                };
+            }else{
+                data = data_pre.slice((page-1)*pagesize, Math.min(page*pagesize, sum));
+            }
+        }
+        if(action == "get_regular_detail"){
+            var regular_id = req.query.regular_id;
+            data_pre.forEach(function(product, index){
+                if(product.id == regular_id){
+                    data = product;
+                }
+            });
+        }
+        if(data){
+            rs = {
+                is_succ : true,
+                error_code : 0,
+                error_msg : "获取成功",   
+                data : data            
+            }
+            if(page){
+                rs.page = page;
+                rs.sum = sum;
+            }
+        }else{
+            rs = {
+                is_succ : false,
+                error_code : 1,
+                error_msg : "获取失败"
+            }
+            if(oError){
+                rs.error_msg = oError.error_msg;
+            }
+        }
+        res.json(rs);
+    });
+
     app.route('/:url(404|*)').get(function(req, res) {
         // var viewFilePath = '404';
         // var statusCode = 404;
