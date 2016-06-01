@@ -55,10 +55,10 @@
         function initialize() {
             account.getPersonalInfo().then(function (data) {
                 angular.extend($scope.personal, data, {
-                    xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs,
-                    smAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.sm,
-                    mdAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.md,
-                    lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg
+                    xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs + '?timestamp=' + (+new Date()),
+                    smAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.sm + '?timestamp=' + (+new Date()),
+                    mdAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.md + '?timestamp=' + (+new Date()),
+                    lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg + '?timestamp=' + (+new Date())
                 });
             });
 
