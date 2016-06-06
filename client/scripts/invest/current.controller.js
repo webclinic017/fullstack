@@ -49,9 +49,11 @@
                 $scope.from_data = angular.extend(data.from_data);
                 angular.extend($scope.orderCurrent, data.group_data);
                 $scope.from_orders_profit = 0;
+                var nProfit = 0;
                 angular.forEach($scope.from_data, function(oData, index){
-                    $scope.from_orders_profit += (+oData.profit) || 0;
+                    nProfit += (+oData.profit) || 0;
                 });
+                $scope.from_orders_profit = nProfit.toFixed(2);
 
                 // $scope.$broadcast('hideLoadingImg');
             });
