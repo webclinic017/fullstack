@@ -9,11 +9,15 @@
 
     function InvestCurrentController($scope, invest, trader, $timeout, $modal, $state) {
         $scope.orderCurrent = {};
-        $scope.orders = [];     
+        $scope.orders = [];
+        $scope.from_data = [];
         $scope.traders = [];
         $scope.modal = {};
         $scope.showOrders = showOrders;
+        $scope.showFromOrders = showFromOrders;
         $scope.showDetails = showDetails;
+        $scope.from_orders_profit = 0;
+        $scope.fromDetailsShow = false;
         $scope.openCopyMdl = openCopyMdl;
         $scope.openCancelCopyMdl = openCancelCopyMdl;
         $scope.openInvestCopyDetailMdl = openInvestCopyDetailMdl;
@@ -42,7 +46,12 @@
             invest.getInvestCurrentData().then(function (data) {
                 // console.info(data);
                 $scope.orders = data.data;
+                $scope.from_data = angular.extend(data.from_data);
                 angular.extend($scope.orderCurrent, data.group_data);
+                $scope.from_orders_profit = 0;
+                angular.forEach($scope.from_data, function(oData, index){
+                    $scope.from_orders_profit += (+oData.profit) || 0;
+                });
 
                 // $scope.$broadcast('hideLoadingImg');
             });
@@ -87,6 +96,9 @@
             } else {
                 $scope.orderCurrent.detailsShow = true;
             }
+        }
+        function showFromOrders(){
+            $scope.fromDetailsShow = !$scope.fromDetailsShow;
         }
 
         // 显示或者隐藏 copied trader 的详情（复制交易持仓订单）
