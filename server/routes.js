@@ -8,10 +8,9 @@ var path = require('path');
 var url = require('url');
 var request = require('request');
 var masterApi = require('./api/master');
-var language = require('./lang');
+var Lang = require('./lang')();
 
 module.exports = function(app) {
-    var lang = language(app);
 
     app.use('/api', require('./api'));
 
@@ -25,7 +24,9 @@ module.exports = function(app) {
 
     // 个人中心
     app.route('/space/').get(function(req, res) {
-        res.render('space', {});
+        res.render('space', {
+            lang: new Lang(req)
+        });
     });
 
     app.route('/').get(function(req, res) {
@@ -38,11 +39,14 @@ module.exports = function(app) {
                     res.redirect('/wap/#');
                 } else {
                     res.render('home.html', {
-                        pageInfo: {}
+                        pageInfo: {},
+                        lang: new Lang(req)
                     });
                 }
             } else {
-                res.render('404')
+                res.render('404', {
+                    lang: new Lang(req)
+                })
             }
         })
 
@@ -51,7 +55,9 @@ module.exports = function(app) {
 
     app.route('/ranklist').get(function(req, res) {
 
-        res.render('ranklist.html', {});
+        res.render('ranklist.html', {
+            lang: new Lang(req)
+        });
     });
 
     app.route('/trader/:usercode').get(function(req, res) {
@@ -63,7 +69,8 @@ module.exports = function(app) {
                 body = JSON.parse(body);
                 res.render('trader.html', {
                     master: body.data,
-                    usercode: usercode
+                    usercode: usercode,
+                    lang: new Lang(req)
                 });
             }
         });
@@ -77,7 +84,8 @@ module.exports = function(app) {
         };
 
         res.render('web_copy.html', {
-            pageInfo: pageInfo
+            pageInfo: pageInfo,
+            lang: new Lang(req)
         });
     });
     // 交易品种
@@ -88,11 +96,14 @@ module.exports = function(app) {
         };
 
         res.render('web_product.html', {
-            pageInfo: pageInfo
+            pageInfo: pageInfo,
+            lang: new Lang(req)
         });
     });
     app.route('/web/product/trade').get(function(req, res) {
-        res.render('trade_tool.html');
+        res.render('trade_tool.html', {
+            lang: new Lang(req)
+        });
     })
 
     // 资讯
@@ -103,7 +114,8 @@ module.exports = function(app) {
         };
 
         res.render('web_information.html', {
-            pageInfo: pageInfo
+            pageInfo: pageInfo,
+            lang: new Lang(req)
         });
     });
 
@@ -117,7 +129,7 @@ module.exports = function(app) {
 
         res.render('web_about.html', {
             pageInfo: pageInfo,
-            lang: lang
+            lang: new Lang(req)
         });
     });
 
@@ -129,21 +141,28 @@ module.exports = function(app) {
         };
 
         res.render('web_faq.html', {
-            pageInfo: pageInfo
+            pageInfo: pageInfo,
+            lang: new Lang(req)
         });
     });
 
     // 代理合作
     app.route('/web/agent').get(function(req, res) {
-        res.render('web_agent.html');
+        res.render('web_agent.html', {
+            lang: new Lang(req)
+        });
     });
 
     app.route('/web/mt4').get(function(req, res) {
-        res.render('web_mt4.html');
+        res.render('web_mt4.html', {
+            lang: new Lang(req)
+        });
     });
 
     app.route('/web/partner').get(function(req, res) {
-        res.render('web/web-partner.html');
+        res.render('web/web-partner.html', {
+            lang: new Lang(req)
+        });
     });
 
     app.route('/study/:subpage(introduction|term|fundamental|skill|video)').get(function(req, res) {
@@ -153,7 +172,8 @@ module.exports = function(app) {
         };
 
         res.render('study.html', {
-            pageInfo: pageInfo
+            pageInfo: pageInfo,
+            lang: new Lang(req)
         });
     });
 
@@ -171,11 +191,15 @@ module.exports = function(app) {
     });
 
     app.route('/activity').get(function(req, res) {
-        res.render('web-bonus1.html');
+        res.render('web-bonus1.html', {
+            lang: new Lang(req)
+        });
     });
 
     app.route('/activity/simulate426').get(function(req, res) {
-        res.render('simulate-426.html');
+        res.render('simulate-426.html', {
+            lang: new Lang(req)
+        });
     });
 
     // 页面跳转中
@@ -183,7 +207,9 @@ module.exports = function(app) {
         res.render('waiting', {});
     });
     app.route('/bd/t29').get(function(req, res){
-        res.render('bd_t29');
+        res.render('bd_t29', {
+            lang: new Lang(req)
+        });
     });
 
     app.route('/:url(404|*)').get(function(req, res) {
@@ -196,7 +222,9 @@ module.exports = function(app) {
         //     }
         //     res.send(html);
         // });
-        res.render('404.html', {});
+        res.render('404.html', {
+            lang: new Lang(req)
+        });
     });
 
 };

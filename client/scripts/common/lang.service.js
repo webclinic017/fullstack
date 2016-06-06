@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('lang', lang);
 
-    lang.$inject = ['$cookies'];
+    lang.$inject = ['$cookies', 'langData'];
 
-    function lang ($cookies) {
+    function lang ($cookies, langData) {
         var language = 'zh';
         
         angular.forEach($cookies, function (value, index) {
@@ -16,11 +16,11 @@
                 language = value;
             }
         });
-        
+
         var lang = {
             text: function(name){
                 var text;
-                text = this[name][language];
+                text = langData[name][language];
                 return text;
             },
             image: function(name){
@@ -28,9 +28,7 @@
             },
             background: function () {
                 return language == 'en' ? true : false;
-            },
-            test: {en: "testaaa", zh: "测试的"},
-            language: {en: "english,hahaha...", zh: "我是中文"}
+            }
         };
         return lang;
     }

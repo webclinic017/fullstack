@@ -148,9 +148,24 @@
         margin-left: 19px;
         width: 488px;
         height: 262px;
-        background-size: 100%;
-        @include img-normal($image-path-home + "index2-b3-con.png");
+        // background-size: 100%;
+        // @include img-normal($image-path-home + "index2-b3-con.png");
+        color: #fff;
 
+        > h4 {
+            font-size: 50px;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        > h3 {
+            font-size: 92px;
+            line-height: 92px;
+            margin: 0;
+            margin-bottom: 36px;
+        }
+        > p {
+            font-size: 28px;
+        }
     }
     @include e(b3-btn1) {
         margin-top: 70px;
