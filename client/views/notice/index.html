@@ -5,11 +5,10 @@
         <li class="notice__list-li" ng-repeat="notice in noticeList">
             <div class="row">
                 <div class="col-xs-12">
-                    <p class="notice__li-title">TIGERWIT</p>
-                    <p class="notice__li-info">
-                        系统通知： {{notice.content}}
+                    <p class="notice__li-title">{{notice.title}}</p>
+                    <p class="notice__li-info" ng-bind-html="formatText(notice.content) | bindhtml">
                     </p>
-                <p class="font-size-12">{{notice.send_time}}</p>
+                <p class="font-size-12"> {{notice.send_time}}</p>
                 </div>
             </div>
         </li>

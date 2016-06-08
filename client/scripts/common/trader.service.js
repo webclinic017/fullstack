@@ -62,11 +62,12 @@
          * @param {Number} page  当前页
          * @param {Number} pagesize  每页显示数
          */
-        function getMasterCurrent(usercode, page, pagesize) {
+        function getMasterCurrent(usercode, page, pagesize,type) {
             return $http.post('/action/public/v3/get_master_order_noauth', {
                 cros_user: usercode,
                 page: page,
-                pagesize: pagesize
+                pagesize: pagesize,
+                type : type
             });
         }
 
@@ -79,13 +80,15 @@
          * @param {Number} page         当前页
          * @param {Number} pagesize     每页显示数
          */
-        function getMasterHistory (usercode, page, pagesize) {
+        function getMasterHistory (usercode, page, pagesize,type) {
             return $http.post('/action/public/v3/get_history_noauth', {
                 cros_user: usercode,
                 page: page,
-                pagesize: pagesize
+                pagesize: pagesize,
+                type : type
             });
         }
+
 
         /**
          * Trader Service 获取高手收益率变化曲线
@@ -139,10 +142,10 @@
          * @param {Boolean} isClose 是否平仓
          * @param {String} copyType 模拟复制或者真实复制
          */
-        function cancelCopy(usercode) {
+        function cancelCopy(usercode, auto_delete) {
             return $http.post('/api/v1/uncopy', {
                 user_code: usercode,
-                auto_delete: true,
+                auto_delete: auto_delete,
                 to: 'real'
             });
         }

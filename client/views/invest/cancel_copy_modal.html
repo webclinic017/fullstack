@@ -10,7 +10,7 @@
             是否确定取消复制 {{ copyCancel.username }}
         </p>
         <p class="system_modal__tip">
-            若取消复制关系，此高手仍有未平仓订单时，您复制此高手的订单将被系统强制平仓
+            若取消复制关系，您复制此高手的订单可以选择跟随高手平仓或立即强行平仓
         </p>
 
         <div class="system_modal__btn_wrapper cancel_copy_modal__btn_wrapper">
@@ -19,17 +19,16 @@
                 取消复制失败
             </p>
 
-            <button class="btn btn-primary btn-sm" ng-if="clickable" ng-click="cancelCopy()">
-                取消复制并强制平仓
+            <button class="btn btn-primary btn-sm" ng-if="clickable" ng-click="cancelCopy(false)">
+                取消复制并跟随高手平仓
             </button>
 
-            <button class="btn btn-primary btn-sm active" disabled ng-if="!clickable" ng-click="cancelCopy()">
+            <button class="btn btn-primary btn-sm mg-tp-15" ng-if="clickable" ng-click="cancelCopy(true)">
+                取消复制并强行平仓
+            </button>
+
+            <button class="btn btn-primary btn-sm active" disabled ng-if="!clickable">
                 <i class="loading_spinner fa fa-spinner"></i>
-                取消复制并强制平仓
-            </button>
-
-            <button class="btn btn-info btn-sm mg-tp-15" ng-click="closeModal()">
-                返回
             </button>
         </div>
     </div>

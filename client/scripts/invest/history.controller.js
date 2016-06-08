@@ -55,15 +55,13 @@
             if (trader.detailsShow) {
                 trader.detailsShow = false;
             } else {
-                
                 // 若 copied traders 所属的 orders 为空，则请求数据
                 if (!trader.orders) {
                     
                     invest.getInvestHistoryDetails(trader.usercode).then(function (data) {
+                        trader.notFirstLoad = true;
                         // console.info(data);
                         trader.orders = data.data;
-                        
-                        $scope.$broadcast('hideLoadingImg');
                     });    
                 }
                 trader.detailsShow = true;
@@ -83,7 +81,9 @@
                     $scope.details = [];        // 交易详情 弹窗数据
                     $scope.modal = {
                         price: '平仓价',
-                        asset: '投入资金'
+                        asset: '投入资金',
+                        usage : "history" //历史要做一些细节修改：平仓类型，时间
+
                     };
                     $scope.closeModal = closeModal;
                     
@@ -115,7 +115,8 @@
                     $scope.details = [];        // 交易详情 弹窗数据
                     $scope.modal = {
                         price: '平仓价',
-                        asset: '投入资金'
+                        asset: '投入资金',
+                        usage : "history" //历史要做一些细节修改：平仓类型，时间
                     };
                     $scope.closeModal = closeModal;
                     

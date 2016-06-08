@@ -6,10 +6,10 @@
         .module('fullstackApp')
         .directive('twCaptchaTimer', twCaptchaTimer);
 
-    twCaptchaTimer.$inject = ['$timeout'];
+    twCaptchaTimer.$inject = ['$timeout', 'lang'];
 
     // 获取手机验证码的计时器
-    function twCaptchaTimer($timeout) {
+    function twCaptchaTimer($timeout, lang) {
         return {
             restrict: 'A',
             replace: true,
@@ -20,7 +20,7 @@
             },
             template: 
                 '<div>' + 
-                    '<span ng-show="timer.start">' + '获取验证码' + '</span>' +
+                    '<span ng-show="timer.start">' + '{{ lang.text("register6") }}' + '</span>' +
                     '<span ng-show="timer.running">' + '{{timer.seconds}}' + ' 秒</span>' +
                     '<span ng-show="timer.restart && voiceCaptcha">' + 
                         '{{timer.voiceCaptchaTimes === 1 ? "获取语音验证码" : "再次获取语音"}}' + 
@@ -28,6 +28,8 @@
                 '</div>',
             link: function (scope, element, attrs) {
                 var totalSeconds = 61;
+
+                scope.lang = lang;
                 
                 scope.timer = {
                     seconds: totalSeconds,

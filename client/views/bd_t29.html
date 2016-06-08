@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="/styles/web.css">
         <!-- endbuild -->
     </head>
-    <body ng-app="fullstackApp">
+    <body ng-app="fullstackApp" class="<%= lang_class%>">
         <div ng-controller="GlobalController">
             <div class="header">
                 <% include navbar/main.html %>
@@ -56,7 +56,11 @@
         <script src="/scripts/common/global.controller.js"></script>
         <script src="/scripts/common/loading_img.directive.js"></script>
         <script src="/scripts/common/modal.js"></script>
+        <script src="/scripts/common/pagination.directive.js"></script>
+        <script src="/scripts/common/duration.filter.js"></script>
         <script src="/scripts/common/transition.service.js"></script>
+        <script src="/scripts/common/symbol_mod.filter.js"></script>
+        <script src="/scripts/common/trader.service.js"></script>
         <script src="/scripts/bd/t29/t29.js"></script>
         <script src="/scripts/common/lang.service.js"></script>
         <script src="/scripts/common/lang_data.service.js"></script>

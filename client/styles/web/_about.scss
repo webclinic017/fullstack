@@ -85,7 +85,10 @@
         width: 99px;
         height: 139px;
         background-size: 100%;
-        @include img-normal($image-path-web + "stp-arrows.jpg");
+        padding-top: 55px;
+        color: #fedd0a;
+        font-size: 20px;
+        @include img-normal($image-path-web + "stp-arrows.png");
 
     } 
 

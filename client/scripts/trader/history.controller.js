@@ -37,14 +37,12 @@
                 $scope.$broadcast('hideLoadingImg');
 
                 if ($scope.orders.length <= 0) return;
-                
                 angular.extend($scope.pagebar.config, {
                     total: getTotal(data.sum, pagesize),
                     page: page
                 }); 
             });
         }
-
         function getTotal(sum, pagesize) {
             var total;
             sum = parseInt(sum, 10); // list item 总个数
@@ -57,5 +55,8 @@
             }
             return total;
         }
+
     }
 })();
+
+;

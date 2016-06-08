@@ -75,8 +75,9 @@
     }
 
     @include e(no-padding) {
-        padding-left: 0px !important;
-        padding-right: 0px !important;
+        //padding-left: 0px !important;
+        //padding-right: 0px !important;
+        padding : 0 2px;
     }
 
     @include e(deal-title) {

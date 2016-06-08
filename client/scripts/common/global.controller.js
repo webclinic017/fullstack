@@ -29,49 +29,67 @@
 
             account.checkLogined().then(function (logined) {
                 $scope.userstatus.logined = logined;
-                if (logined) {
-                    initialize();
-                }
+                // if (logined) {
+                //     // initialize();
+                //     getUnreadLength();
+                // }
             });
         });
+
+        getUnreadLength();
+        setInterval(function() {
+            getUnreadLength();
+        },30000);
 
         account.checkLogined().then(function (logined) {
             $scope.userstatus.logined = logined;
             if (logined) {
                 initialize();
+
             }
         });
 
+        $scope.$on('relogin_info', function(){
+            initialize();
+            getUnreadLength();
+        });
 
         // 初始化所需的全局数据
         function initialize() {
             account.getPersonalInfo().then(function (data) {
                 angular.extend($scope.personal, data, {
-                    xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs,
-                    smAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.sm,
-                    mdAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.md,
-                    lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg
+                    xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs + '?timestamp=' + (+new Date()),
+                    smAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.sm + '?timestamp=' + (+new Date()),
+                    mdAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.md + '?timestamp=' + (+new Date()),
+                    lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg + '?timestamp=' + (+new Date())
                 });
             });
-            getUnreadLength();
+
         }
 
         // 获取新消息
         function getUnreadLength () {
-            account.getUnreadLength().then(function(data) {
-                $scope.unreadLength = data.num;
+            account.checkLogined().then(function (logined) {
+                if(!logined){
+                    return;
+                }
+                account.getUnreadLength().then(function(data) {
+                    $scope.unreadLength = data.num;
 
-                angular.extend($scope.personal, {
-                    unreadLength: $scope.unreadLength
+                    angular.extend($scope.personal, {
+                        unreadLength: $scope.unreadLength
+                    });
                 });
             });
-            $scope.$emit('refreshNoticeList');
+            // $scope.$emit('refreshNoticeList');
+
         }
 
         // 退出
         function logout() {
             account.logout().then(function (data) {
                 if (data.is_succ) {
+                    account.hasChecked = false;
                     $window.location.href='/space/#/account/login';
                 }
             });

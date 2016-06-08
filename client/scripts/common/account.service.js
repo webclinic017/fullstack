@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('account', account);
 
-    account.$inject = ['$http'];
+    account.$inject = ['$http','$q','$cookies'];
 
-    function account($http) {
+    function account($http,$q,$cookies) {
         var service = {
             encrypt: encrypt,
             login: login,
@@ -45,8 +45,10 @@
             getUserKyc : getUserKyc,
             logout: logout,
             checkMaster: checkMaster,
-            applyBecomeMaster: applyBecomeMaster
+            applyBecomeMaster: applyBecomeMaster,
+            hasChecked : false
         };
+        var resolveValue;
         return service;
 
         /**
@@ -56,7 +58,7 @@
         function encrypt(text) {
                 var crypt = new JSEncrypt();
                 var key = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDN67wAcj1WL/scb9TuvawbqMABg2sYXdmLkzXYUK/qbZI168gpM1t4SqS2qxYuEy+a/rOQ/YokJy0Q+dwQBEUmRWd4//64D3shkMMPZ0VuQ67LmVbFzbaly9dEYbAkoKvd4qcVxG1qAYlPGAKVZjRbf3q6d1CGeUGQqoynofTZNwIDAQAB-----END PUBLIC KEY-----';
-                if(location.hostname.indexOf('www.tigerwit.com')== -1){
+                if(location.hostname.indexOf('www.tigerwit.com')== -1 && location.hostname.indexOf('w.tigerwit.com')== -1){
                    key = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwyjx6cQ4AHOnmeIU15A+EvLk3V3oHv2YLp8nZBNqeg+uLPn2HyYF1/s/Mi2EZE2ypIFuvKiCX3ACrZuM55nJSTTjJzOfohh2tLMClLlbfHxdNyg8cotza4+iutrru2vy+kUWp0UuydNrjDJoVJwPXOkToLXjtOEofPmdzjLbE4QIDAQAB-----END PUBLIC KEY-----';
                 }
                 crypt.setKey(key);
@@ -84,13 +86,86 @@
         }
 
         function checkLogined() {
-            return $http.get('/api/v1/check').then(function (data) {
-                if (data.is_succ) {
-                    return true;
-                } else {
-                    return false;
+            // return $http.get('/api/v1/check').then(function (data) {
+            //     if (data.is_succ) {
+            //         return true;
+            //     } else {
+            //         return false;
+            //     }
+            // });
+            // if(!deferred){
+            //     deferred = $q.defer();
+            // }
+            // if(!$cookies['user_code']){
+            //     deferred.resolve(false);
+            //     return deferred.promise;
+            // }
+            // if(hasChecked == true){
+            //     return deferred.promise;
+            // }
+            // hasChecked = true;
+            // $http.get('/api/v1/check').then(function (data) {
+            //     if (data.is_succ) {
+            //         deferred.resolve(true);
+            //     } else {
+            //         deferred.resolve(false);
+            //     }
+            // },function(){
+            //     deferred.resolve(false);
+
+            // });
+            // return deferred.promise;
+
+
+
+            var deferred = $q.defer();
+            if(!getCookie("user_code")){ //无cookie直接认为没登录
+                setTimeout(function(){
+                    deferred.resolve(false);
+                },100);
+            }else{
+                if(service.hasChecked){  //发过请求，只等结果即可。
+                    checkResolve(deferred);
+                }else{   //有cookie时，只发一次请求
+                    service.hasChecked = true;
+                    $http.get('/api/v1/check').then(function (data) {
+                        if (data.is_succ) {
+                            resolveValue = true;
+                            deferred.resolve(true);
+                        } else {
+                            resolveValue =false;
+                            deferred.resolve(false);
+                        }
+                    },function(){
+                        resolveValue = false;
+                        deferred.resolve(false);
+                    });
                 }
-            });
+            }
+
+            return deferred.promise;
+
+        }
+       function getCookie(name)
+       {
+         var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+         if(arr=document.cookie.match(reg)){
+           return unescape(arr[2]);
+         }
+         else{
+           return null;
+         }
+       }
+        function checkResolve(def){
+            if(resolveValue == undefined){
+                setTimeout(function(){
+                    checkResolve(def);
+                },100);
+            }else{
+                setTimeout(function(){
+                    def.resolve(resolveValue);
+                },100)
+            }
         }
 
         /**

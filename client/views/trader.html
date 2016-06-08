@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="/styles/trader.css">
         <!-- endbuild -->
     </head>
-    <body ng-app="fullstackApp">
+    <body ng-app="fullstackApp" class="<%= lang_class%>">
         <div ng-controller="GlobalController">
             <div class="header">
                 <% include navbar/main.html %>
@@ -69,6 +69,7 @@
 
         <script src="/scripts/common/symbol_mod.filter.js"></script>
         <script src="/scripts/common/duration.filter.js"></script>
+        <script src="/scripts/common/close_type.filter.js"></script>
 
         <script src="/scripts/common/modal.js"></script>
 

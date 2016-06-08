@@ -15,16 +15,26 @@
             </thead>
             <tbody>
                 <tr ng-repeat="order in orders" ng-if="orders.length > 0">
-                    <td>
-                        <span class="icon-forex-{{ order.symbol.toLowerCase() }}">
+                    <td class=""> 
+                        <div class="history-operation-td text-left">
+                        <span class="icon-histroy icon-forex-{{ order.symbol.toLowerCase() }}">
                             
                         </span>
-                        <span>
-                            &nbsp;&nbsp;{{ order.action ? '卖出' : '买入' }}
-                        </span>
-                        <span class="font-info">
-                            {{ order.symbol | symbolMod:'zh' }}
-                        </span>
+                        <div class="history-operation-box">
+                            <p class="text-left">
+                                <span>
+                                    {{ order.action ? '卖出' : '买入' }}
+                                </span>
+                                <span class="font-info">
+                                    {{ order.symbol | symbolMod:'zh' }}
+                                </span>
+                            </p>
+                            <p class="text-left font-size-12">
+                                <span class="history-operation-way">{{order.close_type | close_type}}</span>
+                                <span>{{order.ago | duration}}前</span>
+                            </p>
+                        <div>
+                        <div>
                     </td>
                     <td>
                         <i class="fa fa-dollar"></i>{{ order.open_price }}
@@ -33,7 +43,7 @@
                         <i class="fa fa-dollar"></i>{{ order.close_price }}
                     </td>
                     <td>
-                        {{ order.ago | duration }}
+                        {{ order.position_time | duration }}
                     </td>
                     <td ng-class="{'font-danger': order.profit.indexOf('-') >= 0, 'font-success': order.profit.indexOf('-') < 0}">
                         {{ order.points }}

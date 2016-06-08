@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="/styles/web.css">
         <!-- endbuild -->
     </head>
-    <body ng-app="fullstackApp">
+    <body ng-app="fullstackApp" class="<%= lang_class%>">
         <div ng-controller="GlobalController">
             <div class="header">
                 <% include navbar/main.html %>
@@ -92,9 +92,6 @@
         <script src="/scripts/common/global.controller.js"></script>
 
         <script src="/scripts/common/bind_html.filter.js"></script>
-
-
-        <script src="/scripts/product/comment.controller.js"></script>
         <!-- endbuild -->
 
             <div class="footer">

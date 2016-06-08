@@ -1,4 +1,4 @@
-<div class="navbar navbar-fixed-top" tw-navbar>
+<div class="<%= typeof navClass == 'undefined'?'navbar':'navbar-2' %> navbar-fixed-top" tw-navbar>
     <div class="container">
         <div class="navbar-header">
             <a class="logo" href="/"></a>
@@ -12,10 +12,10 @@
         <!-- 未登录时 -->
         <ul class="nav navbar-login navbar-right" ng-if="!userstatus.logined">
             <li>
-                <a class="login" href="/space/#/account/login">登录</a>
+                <a class="login" href="/space/#/account/login"><%= lang.text("login")%></a>
             </li>
             <li>
-                <a class="signup" href="/space/#/account/register">注册</a>
+                <a class="signup" href="/space/#/account/register"><%= lang.text("register")%></a>
             </li>
         </ul>
 
@@ -36,7 +36,7 @@
 
                 <a class="navbar_info__logout" href="" ng-click="logout()">
                     <i class="fa fa-sign-out"></i>
-                    退出
+                    <%= lang.text("signout")%>
                 </a>
             </div>
         </div>
@@ -44,25 +44,43 @@
         <ul class="nav navbar-nav navbar-left">
             <li>
                 <a data-navbar-trigger href="/">
-                    首页
+                    <%= lang.text("navbar1")%>
                 </a>
             </li>
             <li class="dropdown" tw-dropdown>
                 <a data-navbar-trigger data-navbar-level="2" href="/ranklist/#/ranklist/masters">
-                    排行榜
+                    <%= lang.text("navbar2")%>
                 </a>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="/ranklist/#/ranklist/masters">排行榜</a>
+                        <a href="/ranklist/#/ranklist/masters"><%= lang.text("navbar3")%></a>
                     </li>
                     <li>
-                        <a href="/ranklist/#/ranklist/list">定期跟单</a>
+                        <a href="/regular"><%= lang.text("navbar4")%></a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dropdown" tw-dropdown>
+                <a data-navbar-trigger data-navbar-level="2" href="/web/product/forex"><%= lang.text("navbar5")%></a>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <a href="/web/product/forex"><%= lang.text("navbar6")%></a>
+                    </li>
+                    <li>
+                        <a href="/web/product/oil"><%= lang.text("navbar7")%></a>
+                    </li>
+                    <li>
+                        <a href="/web/product/metal"><%= lang.text("navbar8")%></a>
+                    </li>
+                    <li>
+                      <a href="/web/product/cfd"><%= lang.text("navbar9")%></a>
                     </li>
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown>
                 <a data-navbar-trigger data-navbar-level="2" href="/web/copy/rules">
-                    复制交易
+                    交易指南
                 </a>
 
                 <ul class="dropdown-menu">
@@ -73,55 +91,33 @@
                         <a href="/web/copy/select">如何选择高手</a>
                     </li>
                     <li>
-                        <a href="/web/copy/become">成为高手</a>
+                        <a href="/web/copy/comment">每日汇评</a>
                     </li>
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown>
-                <a data-navbar-trigger data-navbar-level="2" href="/web/product/forex">交易产品</a>
+                <a data-navbar-trigger data-navbar-level="2" href="/web/agent/proxy">
+                    合作伙伴
+                </a>
 
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="/web/product/forex">外汇</a>
+                        <a href="/web/agent/proxy">代理合作</a>
                     </li>
                     <li>
-                        <a href="/web/product/oil">原油</a>
-                    </li>
-                    <li>
-                        <a href="/web/product/metal">贵金属</a>
-                    </li>
-                    <li>
-                      <a href="/web/product/cfd">差价合约</a>
-                    </li>
-                    <li>
-                      <a href="/web/product/trade">交易平台</a>
+                        <a href="/web/agent/become">成为高手</a>
                     </li>
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown>
-                <a data-navbar-trigger data-navbar-level="2" href="/web/information/comment">资讯</a>
+                <a data-navbar-trigger data-navbar-level="2" href="/web/about/tigerwit"><%= lang.text("navbar10")%></a>
 
                 <ul class="dropdown-menu">
-                    <!-- <li>
-                        <a href="/web/information/time">交易时间</a>
-                    </li> -->
                     <li>
-                        <a href="/web/information/comment">每日汇评</a>
+                        <a href="/web/about/tigerwit"><%= lang.text("navbar11")%></a>
                     </li>
-                    <!-- <li>
-                        <a href="/web/information/market">市场分析</a>
-                    </li> -->
-                </ul>
-            </li>
-            <li>
-                <a data-navbar-trigger data-navbar-level="2" href="/web/agent">代理合作</a>
-            </li>
-            <li class="dropdown" tw-dropdown>
-                <a data-navbar-trigger data-navbar-level="2" href="/web/about/tigerwit">关于老虎</a>
-
-                <ul class="dropdown-menu">
                     <li>
-                        <a href="/web/about/stp">STP交易模式</a>
+                        <a href="/web/about/stp"><%= lang.text("navbar12")%></a>
                     </li>
                     <li>
                         <a href="/web/about/team">精英团队</a>
@@ -133,7 +129,7 @@
                         <a href="/web/about/control">合规和监管</a>
                     </li> -->
                     <li>
-                        <a href="/web/about/tigerwit">关于老虎金融</a>
+                        <a href="/web/partner">媒体合作</a>
                     </li>
                 </ul>
             </li>

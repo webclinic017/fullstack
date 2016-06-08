@@ -236,3 +236,136 @@
   background-size: 100%;
   background-image: url($image-path-base + "bd/act-sim-logo.jpg");
 }
+.act-sim__top{
+  color:#fff;
+}
+
+
+.table_top_result{
+  margin-top:30px;
+  tr:first-child{
+    background : #fedd0a;
+    color:#000;
+  }
+  tr:first-child th{
+    font-weight:bold;
+    font-size:18px;
+  }
+  td:nth-child(odd){
+  }
+  td:nth-child(even){
+    background:#192d3e;
+  }
+  td{
+    font-weight:normal;
+    font-size:14px;
+    border : 1px solid #314252;
+  }
+  th{
+    border : 1px solid #00162a;
+  }
+  .opration a{
+    color:#fedd0a;
+  }
+}
+.top15-title{
+  margin-top:60px;
+}
+.history-operation-box{
+    display:inline-block;
+}
+.icon-histroy{
+    vertical-align:sub;
+}
+.history-operation-way{
+    background : #ccc;
+    border-radius:4px;
+    padding:3px 5px;
+    display:inline-block;
+}
+.history-operation-td{
+    width:180px;
+    display:inline-block;
+}
+
+.game_reward_lst {
+
+    .game_reward_tit {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    ul {
+        margin-bottom: 130px;
+        
+        li {
+            width: 290px;
+            float: left;
+            border: 1px solid #1a2e40;
+            border-radius: 4px;
+            position: relative;
+
+            &.item {
+                margin: 0 80px;
+            }
+
+            h5 {
+                font-size: 22px;
+                color: #fff;
+                background: #1a2e40;
+                margin: 0;
+                padding: 20px 0 15px 15px;
+
+                span {
+                    color: #fedd0a;
+                    font-size: 30px;
+                    padding-left: 10px;
+                    padding-right: 10px;
+                }
+            }
+
+            .rank {
+                width: 74px;
+                height: 100px;
+                position: absolute;
+                top: -5px;
+                right: -5px;
+
+                &.rank-1 {
+                    background-image: url($image-path-base + "bd/game-1.png");
+                }
+                &.rank-2 {
+                    background-image: url($image-path-base + "bd/game-2.png");
+                }
+                &.rank-3 {
+                    background-image: url($image-path-base + "bd/game-3.png");
+                }
+            }
+
+            .content {
+                .name {
+                    padding: 60px 0 40px;
+                    text-align: center;
+
+                    a {
+                        color: #fedd0a;
+                    }
+                }
+                .avatar {
+                    text-align: center;
+
+                    img {
+                        width: 100px;
+                        border-radius: 50%;
+                    }
+                }
+                .number {
+                    text-align: center;
+                    font-size: 14px;
+                    margin-bottom: 36px;
+                }
+            }
+        }
+    }
+}

@@ -11,7 +11,6 @@ This project was generated with the [Angular Full-Stack Generator](https://githu
 - [Bower](bower.io) (`npm install --global bower`)
 - [Ruby](https://www.ruby-lang.org) and then `gem install sass`
 - [Grunt](http://gruntjs.com/) (`npm install --global grunt-cli`)
-- [SQLite](https://www.sqlite.org/quickstart.html)
 
 ### Developing
 
@@ -24,7 +23,5 @@ This project was generated with the [Angular Full-Stack Generator](https://githu
 ## Build & development
 
 Run `grunt build` for building and `grunt serve` for preview.
-
-## Testing
-
-Running `npm test` will run the unit tests with karma.
+## production
+Run `pm2 restart server/index.js`

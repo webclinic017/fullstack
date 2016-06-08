@@ -166,3 +166,19 @@ $font-trader-gray-color: $gray-dark;
         font-size: 20px;
     }
 }
+.history-operation-box{
+    display:inline-block;
+}
+.icon-histroy{
+    vertical-align:sub;
+}
+.history-operation-way{
+    background : #ccc;
+    border-radius:4px;
+    padding:3px 5px;
+    display:inline-block;
+}
+.history-operation-td{
+    width:180px;
+    display:inline-block;
+}

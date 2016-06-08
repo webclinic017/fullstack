@@ -1,0 +1,48 @@
+.tw_en {
+    // 首页 home
+    .index2-master__col1 {
+        padding-top: 10px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .index2-master__col1-tit {
+        font-size: 16px;
+        margin-bottom: 0;
+    }
+    .index2-master__col1-ul {
+        margin-top: 0;
+        font-size: 12px;
+    }
+    .index2-master__col1-btn {
+        left: 12%;
+    }
+    .index2-banner__b3-p1 > h4 {
+        font-size: 42px;
+    }
+    .index2-banner__b3-p1 > h3 {
+        font-size: 85px;
+        line-height: 85px;
+        margin-bottom: 30px;
+    }
+    .index2-master__col2-rate {
+        font-size: 30px;
+    }
+    .index2-master__col2-how {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    // 登录 login
+    .account_login__forget {
+        float: initial;
+        display: inline-block;
+        margin-top: 10px;
+    }
+    // 注册 register
+    .captcha_btn {
+        font-size: 12px;
+    }
+    .account_register__step-1 .btn-primary {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+}

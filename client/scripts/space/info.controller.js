@@ -5,23 +5,35 @@
     angular.module('fullstackApp')
         .controller('SpaceInfoController', SpaceInfoController);
 
-    SpaceInfoController.$inject = ['$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout'];
+    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout'];
 
     /**
      * @name SpaceInfoController
      * @desc
      */
-    function SpaceInfoController($scope, $location, $interval, $state, account, invite, $timeout) {
+    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout) {
         $scope.unreadLength = 0;        // 未读消息
         var summaryId;
         var noticeId;
 
 
-        getVerifyStatus();
+       
+        $rootScope.$on('relogin_info', function(){
+            getOnceInfo();
+        })
+
+        //一次性获取用户的相关信息。更换用户时需要触发重置。
+        getOnceInfo();
+
+        function getOnceInfo(){
+            getVerifyStatus();
+            getInviteFriendsInfo(1);
+            getPersonalInfoDegree();
+        }
+
+        //定时提取用户资产信息
         getAssetInfo();
-        getInviteFriendsInfo(1);
-        getPersonalInfoDegree();
-        
+
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
             angular.extend($scope.personal, {
                 basic: toState.name.substring(6)
@@ -37,6 +49,7 @@
 
         // 检查新消息
         $scope.$on('refreshNoticeList', function() {
+            console.log('refreshNoticlist jihuo');
             noticeId = $interval(function() {
                 getUnreadLength();
             },30000);

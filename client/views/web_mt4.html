@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/styles/web.css">
     <!-- endbuild -->
 </head>
-<body ng-app="fullstackApp">
+<body ng-app="fullstackApp" class="<%= lang_class%>">
     <div ng-controller="GlobalController">
         <div class="header">
             <% include navbar/main.html %>
@@ -26,19 +26,21 @@
                             <img src="../images/web/mt4-ios.png">
                             <a class="mt4__info" href="https://itunes.apple.com/cn/app/metatrader-4/id496212596?l=en&mt=8" target="_blank">
                                 <img src="../images/web/mt4-ios-s.png">
-                                 <span>IOS 下载</span>
+                                <span>IOS 下载</span>
+                                <span class="qr_code"><img src="../images/web/ios.png"></span>
                             </a>
                         </div>
                         <div class="col-xs-4">
                             <img src="../images/web/mt4-and.png">
                             <a class="mt4__info" href="http://zhushou.360.cn/detail/index/soft_id/260622?recrefer=SE_D_meta" target="_blank">
                                 <img src="../images/web/mt4-and-s.png">
-                                 <span>Android 下载</span>
+                                <span>Android 下载</span>
+                                <span class="qr_code"><img src="../images/web/android.png"></span>
                             </a>
                         </div>
                         <div class="col-xs-4">
                             <img class="mt4__img-com" src="../images/web/mt4-com.png">
-                            <a class="mt4__info" href="https://www.tigerwit.com/files/tigerwit_setup_150807.exe" target="_blank">
+                            <a class="mt4__info" href="https://www.tigerwit.com/files/tigerwit_setup_151111.exe" target="_blank">
                                 <img src="../images/web/mt4-com-s.png">
                                  <span>PC端下载</span>
                             </a>

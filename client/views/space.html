@@ -17,7 +17,7 @@
         <link rel="stylesheet" href="/styles/space.css">
         <!-- endbuild -->
     </head>
-    <body ng-app="fullstackApp">
+    <body ng-app="fullstackApp" class="<%= lang_class%>">
         <div ng-controller="GlobalController">
             <div class="header">
                 <% include navbar/main.html %>
@@ -90,7 +90,9 @@
 
         <script src="/scripts/common/symbol_mod.filter.js"></script>
         <script src="/scripts/common/duration.filter.js"></script>
+        <script src="/scripts/common/bind_html.filter.js"></script>
         <script src="/scripts/common/date_formatter.filter.js"></script>
+        <script src="/scripts/common/close_type.filter.js"></script>
 
 
         <script src="/scripts/common/global.controller.js"></script>

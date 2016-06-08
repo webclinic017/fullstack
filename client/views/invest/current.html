@@ -21,6 +21,92 @@
     </table>
 
     <div class="invest_table_wrapper">
+       <!-- 复制持仓单  - 取消跟单但不强平的单子 -->
+        <table class="invest_table table table-striped table-hover">
+            <colgroup>
+                <col width="35%">
+                <col width="17%">
+                <col width="17%">
+                <col width="16%">
+                <col width="15%">
+            </colgroup>
+            <!-- 复制持仓单  - 取消跟单但不强平的单子 -->
+            <thead>
+                <tr class="invest_orders" ng-if="from_data.length > 0" ng-click="showFromOrders()">
+                    <th class="text-left invest_orders__user">
+                        <a href="" class="invest_orders__user-avatar">
+                            <img ng-src="/avatar/{{ personal.usercode }}_50.jpg" alt="personal 头像">
+                        </a>
+                        
+                        <div class="invest_orders__user-username">
+                            <a href="" ng-class="{'font-info': orderCurrent.fromDetailsShow}">
+                                <span>{{ personal.username || '**' }}</span>
+                            </a>
+                            <i class="fa fa-chevron-right" ng-show="!orderCurrent.fromDetailsShow"></i>
+                            <i class="fa fa-chevron-up font-info" ng-show="orderCurrent.fromDetailsShow"></i><br>
+                            <span class="invest_orders__type own">复制持仓单</span>
+                        </div>
+                    </th>
+                    <th colspan="2" class="invest_orders__rate-promise">
+                        <!-- <span ng-class="{'green': orderCurrent.margin_level > 200, 'orange': orderCurrent.margin_level > 150 && orderCurrent.margin_level <= 200, 'red': orderCurrent.margin_level <= 150}">
+                            保证金比例: {{ orderCurrent.margin_level }}%
+                        </span> -->
+                    </th>
+                    <th ng-class="{'font-success': from_orders_profit >= 0, 'font-danger':  from_orders_profit < 0}">
+                        <i class="fa fa-dollar"></i>{{ from_orders_profit }}
+                    </th>
+                    <th class="invest_orders__btn">
+                        <!-- <button href="" class="btn btn-primary btn-sm" ng-click="openInvestOwnDetailMdl($event)">详情</button> -->
+                    </th>
+                </tr>
+            </thead>
+        </table>
+        <div class="invest_table_wrapper__tbody" ng-show="fromDetailsShow">
+            <table class="invest_table table table-striped table-hover">
+                <colgroup>
+                    <col width="35%">
+                    <col width="17%">
+                    <col width="17%">
+                    <col width="16%">
+                    <col width="15%">
+                </colgroup>
+                <!-- 复制持仓单 详情  - 取消跟单但不强平的单子 -->
+                <tbody>
+                    <tr class="" ng-repeat="order in from_data">
+                        <td class="text-left invest_orders__detail">
+                            <span class="invest_orders__trunk"></span>
+                            <span class="invest_orders__branch"></span>
+
+                            <span class="invest_orders__icon icon-forex-{{ order.symbol.toLowerCase() }} vertical-middle">
+                            </span>
+                            <div class="invest_orders__operate">
+                                <p>
+                                    <span class="invest_orders__action">
+                                        {{ order.action ? '做空' : '做多' }}
+                                    </span>
+                                    <a class="invest_orders__symbol" href="">
+                                        {{ order.symbol | symbolMod:'zh' }}
+                                    </a>        
+                                </p>
+                            </div>
+                        </td>
+                        <td><i class="fa fa-dollar"></i>{{ order.open_price }}</td>
+                        <td><i class="fa fa-dollar"></i>{{ order.close_price }}</td>
+                        <td ng-class="{'font-success': order.profit.indexOf('-') < 0, 'font-danger': order.profit.indexOf('-') >= 0}">
+                            <i class="fa fa-dollar"></i>{{ order.profit }}
+                        </td>
+                
+                        <td>
+                        </td>
+                    </tr>
+                    <tr ng-if="orders.length <= 0 && orderCurrent.detailsShow">
+                        <td colspan="5">无数据</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+
         <!-- 自主交易持仓订单 -->
         <table class="invest_table table table-striped table-hover">
             <colgroup>
@@ -155,7 +241,6 @@
                 </thead>
             </table>
             <div class="invest_table_wrapper__tbody" ng-show="trader.detailsShow">
-                <div tw-loading-img></div>
                 
                 <table class="invest_table table table-striped table-hover">
                     <colgroup>
@@ -199,6 +284,11 @@
                         </tr>
                     </tbody>
                 </table>
+                <div ng-show="trader.notFirstLoad != true">
+                    <div class="loading_img active">
+                        <img src="/ngsrc/loading.gif">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

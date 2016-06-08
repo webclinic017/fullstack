@@ -6,6 +6,10 @@
     <% var title = '选择高手' %>
     <% var description = '' %>
     <% var keywords = '' %>
+<% } else if (pageInfo.id === 'comment') { %>
+    <% var title = '每日汇评' %>
+    <% var description = '' %>
+    <% var keywords = '' %>    
 <% } else if (pageInfo.id === 'become') { %>
     <% var title = '成为高手' %>
     <% var description = '' %>
@@ -24,7 +28,7 @@
         <link rel="stylesheet" href="/styles/web.css">
         <!-- endbuild -->
     </head>
-    <body ng-app="fullstackApp">
+    <body ng-app="fullstackApp" class="<%= lang_class%>">
         <div ng-controller="GlobalController">
             <div class="header">
                 <% include navbar/main.html %>
@@ -81,6 +85,10 @@
         <script src="/scripts/common/dropdown.directive.js"></script>
         <script src="/scripts/common/form_select.directive.js"></script>
         <script src="/scripts/common/upload_history_file.directive.js"></script>
+        <script src="/scripts/common/utils.service.js"></script>
+        <script src="/scripts/common/product.service.js"></script>
+        <script src="/scripts/common/bind_html.filter.js"></script>
+
 
         <script src="/scripts/common/modal.js"></script>
         
@@ -88,6 +96,8 @@
 
         <script src="/scripts/web/become_master.controller.js"></script>
         <script src="/scripts/web/become_modal.controller.js"></script>
+        <script src="/scripts/product/comment.controller.js"></script>
+
         <!-- endbuild -->
 
             <div class="footer">

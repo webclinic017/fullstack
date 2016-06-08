@@ -47,7 +47,7 @@
                 <tbody>
                     <tr ng-repeat="detail in details" ng-if="details.length > 0">
                         <td>
-                            <span class="invest_orders__icon icon-forex-{{ detail.symbol.toLowerCase() }} vertical-middle">
+                            <span class="invest_orders__icon icon-forex-{{ detail.symbol.toLowerCase() }} {{modal.usage=='history'?'icon-history':'vertical-middle'}}">
                             </span>
                             <div class="invest_orders__operate">
                                 <p>
@@ -58,6 +58,11 @@
                                         {{ detail.symbol | symbolMod:'zh' }}
                                     </a>        
                                 </p>
+
+                                <p class="text-left font-size-12" ng-if="modal.usage =='history'" >
+                                    <span class="history-operation-way">{{detail.close_type | close_type}}</span>
+                                    <span>{{detail.ago | duration}}前</span>
+                                </p>  
                             </div>
                         </td>
                         <td><i class="fa fa-dollar"></i>{{ detail.open_price }}</td>

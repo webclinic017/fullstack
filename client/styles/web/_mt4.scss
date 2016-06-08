@@ -28,11 +28,27 @@
         &:hover, &:active {
             color: #222;
             border: 1px solid $brand-primary;
+
+            > .qr_code {
+                display: block;
+            }
         }
 
         > img {
             position: relative;
             top: 10px;
+        }
+        > .qr_code {
+            display: none;
+            position: absolute;
+            bottom: 110%;
+            left: 22px;
+            width: 200px;
+            height: 200px;
+
+            img {
+                width: 200px;
+            }
         }
     }
 

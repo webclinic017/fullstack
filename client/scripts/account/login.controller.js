@@ -96,7 +96,10 @@
                             if (backUrl) {
                                 $window.location.href = backUrl;
                             } else {
+                                account.hasChecked = false;
                                 $state.go('space.invest.subpage', {subpage: 'current', back: 'login'}, {reload: true});
+                                $scope.$emit('relogin_info');
+
                             }
                         }
                     });

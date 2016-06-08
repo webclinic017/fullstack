@@ -3,30 +3,30 @@
         
         <div class="step_by_step__step active">
             <span></span>
-            <p>1. 注册账户</p>
+            <p>1. {{ lang.text("register1") }}</p>
         </div>
         <div class="step_by_step__step" ng-class="{'active': progress.step >= 2}">
             <span></span>
-            <p>2. 实名认证</p>
+            <p>2. {{ lang.text("register2") }}</p>
         </div>
         <div class="step_by_step__step" ng-class="{'active': progress.step >= 3}">
             <span></span>
-            <p>3. KYC 认证</p>
+            <p>3. {{ lang.text("register3") }}</p>
         </div>
         <div class="step_by_step__step" ng-class="{'active': progress.step >= 4}">
             <span></span>
-            <p>4. 完成注册</p>
+            <p>4. {{ lang.text("register4") }}</p>
         </div>
     </div>
     <div class="account_register__step-1" ng-show="progress.step === 1">
-        <h2 class="account_register__title">注册账户</h2>
+        <h2 class="account_register__title">{{ lang.text("register1") }}</h2>
         
         <form name="registerForm" novalidate>
             <div class="form-control-wrapper">
                 <input class="form-control" 
                        name="username"
                        type="text"
-                       placeholder="昵称"
+                       placeholder="{{ lang.text('username') }}"
                        required
                        ng-class="{'form-control-error': (frontErr.username.show && registerForm.username.$invalid) || (backErr.username.show && backErr.username.status > 0)}"
                        ng-model="account.username"
@@ -39,7 +39,7 @@
 
                 <div ng-show="frontErr.username.show">
                     <p class="alert-arrow_tp_lf" ng-show="registerForm.username.$error.required">
-                        请输入昵称
+                        {{ lang.text("register7") }}
                     </p>
                     <p class="alert-arrow_tp_lf" ng-show="registerForm.username.$error.twformValidTxt">
                         {{frontErr.username.tip}}
@@ -57,7 +57,7 @@
                 <input class="form-control" 
                        name="phone"
                        type="text"
-                       placeholder="手机号码"
+                       placeholder="{{ lang.text('phone') }}"
                        required
                        ng-class="{'form-control-error': (frontErr.phone.show && registerForm.phone.$invalid) || (backErr.phone.show && backErr.phone.status > 0)}"
                        ng-model="account.phone"
@@ -67,7 +67,7 @@
 
                 <div ng-show="frontErr.phone.show">
                     <p class="alert-arrow_tp_lf" ng-show="registerForm.phone.$error.required">
-                        请输入手机号码
+                        {{ lang.text("register8") }}
                     </p>
                     <p class="alert-arrow_tp_lf" ng-show="registerForm.phone.$error.pattern">
                         输入的手机号码格式不正确
@@ -87,7 +87,7 @@
                         <input class="form-control"
                                name="captcha"
                                type="text"
-                               placeholder="验证码"
+                               placeholder="{{ lang.text('verifycode') }}"
                                required
                                ng-class="{'form-control-error': (frontErr.captcha.show && registerForm.captcha.$invalid) || (backErr.captcha.show && backErr.captcha.status > 0)}"
                                ng-model="account.captcha"
@@ -96,7 +96,7 @@
 
                         <div ng-show="frontErr.captcha.show">
                             <p class="alert-arrow_tp_lf" ng-show="registerForm.captcha.$error.required">
-                                请输入验证码
+                                {{ lang.text("register9") }}
                             </p>
                         </div>
 
@@ -112,11 +112,11 @@
                         <div class="captcha_btn"
                              tw-captcha-timer 
                              start-timer="startTimer" 
-                             voice-captcha="voiceCaptcha" 
+                             voice-captcha="voiceCaptcha"
                              captcha-btn-clickable="clickable.captcha" 
                              ng-disabled="!clickable.captcha" 
                              ng-click="getCaptcha('registerForm')">
-                            获取验证码
+                            {{ lang.text("register6") }}
                         </div>
 
                         <div ng-show="backErr.captchaBtn.show">
@@ -144,7 +144,7 @@
                 <input class="form-control"
                        name="email"
                        type="text"
-                       placeholder="电子邮箱"
+                       placeholder="{{ lang.text('email') }}"
                        required
                        ng-class="{'form-control-error': (frontErr.email.show && registerForm.email.$invalid) || (backErr.email.show && backErr.email.status > 0)}"
                        ng-model="account.email"
@@ -154,7 +154,7 @@
 
                 <div ng-show="frontErr.email.show">
                     <p class="alert-arrow_tp_lf" ng-show="registerForm.email.$error.required">
-                        请输入电子邮箱
+                        {{ lang.text("register10") }}
                     </p>
                     <p class="alert-arrow_tp_lf" ng-show="registerForm.email.$error.pattern">
                         电子邮箱格式不正确
@@ -172,7 +172,7 @@
                 <input class="form-control"
                        name="password"
                        type="password"
-                       placeholder="密码"
+                       placeholder="{{ lang.text('password') }}"
                        required
                        ng-class="{'form-control-error': frontErr.password.show && registerForm.password.$invalid}"
                        ng-model="account.password"
@@ -182,7 +182,7 @@
                 
                 <div ng-show="frontErr.password.show">
                     <p class="alert-arrow_tp_lf" ng-show="registerForm.password.$error.required">
-                        请输入密码
+                        {{ lang.text("register11") }}
                     </p>
                     <p class="alert-arrow_tp_lf" ng-show="registerForm.password.$error.twformValidPwd">
                         {{frontErr.password.tip}}
@@ -194,7 +194,7 @@
                 <input class="form-control"
                        name="pwdConfirm" 
                        type="password"
-                       placeholder="确认密码"
+                       placeholder="{{ lang.text('register5') }}"
                        required
                        ng-class="{'form-control-error': frontErr.pwdConfirm.show && registerForm.pwdConfirm.$invalid}"
                        ng-model="account.pwdConfirm"
@@ -204,7 +204,7 @@
 
                 <div ng-show="frontErr.pwdConfirm.show">
                     <p class="alert-arrow_tp_lf" ng-show="registerForm.pwdConfirm.$error.required">
-                        请再次输入密码
+                        {{ lang.text("register12") }}
                     </p>
 
                     <p class="alert-arrow_tp_lf" ng-show="registerForm.pwdConfirm.$error.twformRepeat">
@@ -225,21 +225,21 @@
             
             <p class="font-dark mg-tp-10">
                 <i class="fa fa-check-square" aria-hidden="true"></i>
-                注册即同意
+                {{ lang.text("register13") }}
                 <a class="font-info" href="https://www.tigerwit.com/blog/support/risk">
-                    风险披露书、
+                    {{ lang.text("register14") }}、
                 </a>
                 <a class="font-info" href="https://www.tigerwit.com/blog/support/shengming">
-                    客户声明、
+                    {{ lang.text("register15") }}、
                 </a>
                 <a class="font-info" href="https://www.tigerwit.com/blog/support/notice">
-                    用户交易须知
+                    {{ lang.text("register16") }}
                 </a>
             </p>
 
             <div class="text-center mg-tp-50 mg-bt-30">
                 <button class="btn btn-primary btn-sm" ng-if="clickable.submit"  ng-click="submitRegisterForm('registerForm')">
-                    30 秒注册 开启财富之旅
+                    {{ lang.text("register17") }}
                 </button>
 
                 <button class="btn btn-primary btn-sm" disabled ng-if="!clickable.submit">
@@ -250,9 +250,9 @@
         </form>
 
         <div class="text-center font-dark">
-            已有账户？
+            {{ lang.text("register18") }}
             <a class="font-info" ui-sref="account.subpage({subpage: 'login'})">
-                立即登录
+                {{ lang.text("register19") }}
             </a>
         </div>
     </div>

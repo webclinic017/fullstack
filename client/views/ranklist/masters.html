@@ -3,22 +3,22 @@
         <div class="ranklist__nav">
             <div class="row">
                 <div class="col-1-lg" ng-class="{active: masters.type === ''}" ng-click="getMastersList()">
-                    <span class="nav_item">综合排名</span>
+                    <span class="nav_item">{{ lang.text('rank1') }}</span>
                 </div>
                 <div class="col-1-sm" ng-class="{active: masters.type === 'copiers_sum'}" ng-click="getMastersList('copiers_sum')">
-                    <span class="nav_item">复制人数</span>
+                    <span class="nav_item">{{ lang.text('fuzhirenshu') }}</span>
                 </div>
                 <div class="col-1" ng-class="{active: masters.type === 'min_copy_amount'}" ng-click="getMastersList('min_copy_amount')">
-                    <span class="nav_item">最低复制金额</span>
+                    <span class="nav_item">{{ lang.text('zuidifuzhijine') }}</span>
                 </div>
                 <div class="col-1">
-                    <span class="nav_item">走势图</span>
+                    <span class="nav_item">{{ lang.text('zoushitu') }}</span>
                 </div>
                 <div class="col-1" ng-class="{active: masters.type === 'drawdown'}" ng-click="getMastersList('drawdown', 'asc')">
-                    <span class="nav_item">最大回撤</span>
+                    <span class="nav_item">{{ lang.text('zuidahuiche') }}</span>
                 </div>
                 <div class="col-1" ng-class="{active: masters.type === 'profit_rate'}" ng-click="getMastersList('profit_rate')">
-                    <span class="nav_item">收益率</span>
+                    <span class="nav_item">{{ lang.text('zongshouyilv') }}</span>
                 </div>
                 <!-- <div class="col-1" ng-class="{active: masters.type === 'copy_profit'}" ng-click="getMastersList('copy_profit')">
                     <span class="nav_item">复制者盈利</span>
@@ -68,9 +68,9 @@
                     </div>
                     <div class="col-1">
                         {{ rank.drawdown || '0.00' }}%
-                        <span ng-show="rank.drawdown < 5" class="font-success">低</span>
-                        <span ng-show="rank.drawdown >= 5 && rank.drawdown <= 15" class="font-warning">中</span>
-                        <span ng-show="rank.drawdown > 15" class="font-danger">高</span>
+                        <span ng-show="rank.drawdown < 5" class="font-success">{{ lang.text('low') }}</span>
+                        <span ng-show="rank.drawdown >= 5 && rank.drawdown <= 15" class="font-warning">{{ lang.text('middle') }}</span>
+                        <span ng-show="rank.drawdown > 15" class="font-danger">{{ lang.text('high') }}</span>
                     </div>
                     <div class="col-1">
                         {{ rank.profit_rate || '0.00' }}%
@@ -79,7 +79,7 @@
                         <i class="fa fa-dollar"></i>{{ rank.copy_profit || '0.00' }}
                     </div> -->
                     <div class="col-1-lg">
-                        <a class="btn btn-primary btn-sm" href="/trader/{{rank.usercode}}/#/trader/summary" target="_blank">复制</a>
+                        <a class="btn btn-primary btn-sm" href="/trader/{{rank.usercode}}/#/trader/summary" target="_blank">{{ lang.text('fuzhi') }}</a>
                     </div>
                 </div>
             </li>

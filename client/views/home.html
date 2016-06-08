@@ -18,13 +18,15 @@
     <link rel="stylesheet" href="/styles/web.css">
     <!-- endbuild -->
 </head>
-<body ng-app="fullstackApp">
+<body ng-app="fullstackApp" class="<%= lang_class%>">
     <div ng-controller="GlobalController">
         <div class="header">
-            <% include navbar/main2.html %>
+            <%- include('navbar/main.html',{
+                navClass : 'navbar-2'
+            }) %>
         </div>
         <div class="body">
-            <% include home/index2.html %>
+            <% include home/index.html %>
         </div>
        
     <!-- build:js(client) /scripts/vendor.js -->
