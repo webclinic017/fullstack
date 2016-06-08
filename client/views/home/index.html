@@ -76,9 +76,9 @@
                                 <span class="font-size-14">收益率</span>
                             </div>
                             <div class="index2-master__col2-div2">
-                                <span class="index2-master__col2-how" ng-show="master.drawdown < 5">低</span>
-                                <span class="index2-master__col2-how" ng-show="master.drawdown >= 5 && master.drawdown <= 15">中</span>
-                                <span class="index2-master__col2-how" ng-show="master.drawdown > 15">高</span>
+                                <span class="index2-master__col2-how" ng-show="-master.drawdown < 5">低</span>
+                                <span class="index2-master__col2-how" ng-show="-master.drawdown >= 5 && -master.drawdown < 10">中</span>
+                                <span class="index2-master__col2-how" ng-show="-master.drawdown >= 10">高</span>
                                 <br>
                                 <span class="index2-master__col2-how-c">风险</span>
                             </div>

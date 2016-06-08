@@ -17,7 +17,8 @@
             if ($scope.name == '') {
                 alert("请填写姓名或电话");
             } else {
-                ranklist.getOrderInfo($scope.tel, $scope.name, $scope.product_title).then(function (data) {
+                $scope.product_title = angular.element('.hy-detail__title-span1').text();
+                ranklist.getOrderInfo($scope.tel, $scope.product_title, $scope.name).then(function (data) {
                     if (data && data.error_code == 0) {
                         alert("预约成功！稍后会有工作人员联系您！");
                         $scope.submit = "预约成功";
