@@ -518,6 +518,10 @@
         height: 340px;
         @include img-normal($image-path-home + "index2-trade-img.png");
 
+        &.en {
+            @include img-normal($image-path-home + "index2-trade-img-en.png");
+        }
+
     }
 }
 

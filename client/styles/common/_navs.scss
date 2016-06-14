@@ -83,6 +83,9 @@
         width: 82px;
         height: 45px;
         @include img-normal($image-path-base + "logo-con.png");
+        &.en {
+            @include img-normal($image-path-base + "logo-con-en.png");
+        }
 
     }
 
@@ -168,6 +171,18 @@
     .dropdown-menu {
         top: 69px;
     }
+}
+
+#lang {
+    margin: 26px 25px 0 0;
+    color: #fff;
+    float:right;
+}
+#lang a {
+    color:#fff;
+}
+#lang a:hover {
+    color:#fedd0a;
 }
 
 //== nav-tabs

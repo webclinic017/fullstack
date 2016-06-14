@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-header">
             <a class="logo" href="/"></a>
-            <a class="logo-con" href="/"></a>
+            <a class="logo-con <% if(lang.background()){%>en<%}%>" href="/"></a>
             <!-- <div class="cctv_con">
                 <a class="logocctv" href="#"></a>
             </div> -->
@@ -55,7 +55,7 @@
                     <li>
                         <a href="/ranklist/#/ranklist/masters"><%= lang.text("navbar3")%></a>
                     </li>
-                    <li>
+                    <li <%= lang.text("navbar15")%>>
                         <a href="/regular"><%= lang.text("navbar4")%></a>
                     </li>
                 </ul>
@@ -78,7 +78,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="dropdown" tw-dropdown>
+            <li class="dropdown" tw-dropdown <%= lang.text("navbar15")%>>
                 <a data-navbar-trigger data-navbar-level="2" href="/web/copy/rules">
                     交易指南
                 </a>
@@ -95,7 +95,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="dropdown" tw-dropdown>
+            <li class="dropdown" tw-dropdown <%= lang.text("navbar15")%>>
                 <a data-navbar-trigger data-navbar-level="2" href="/web/agent/proxy">
                     合作伙伴
                 </a>
@@ -119,29 +119,25 @@
                     <li>
                         <a href="/web/about/stp"><%= lang.text("navbar12")%></a>
                     </li>
-                    <li>
+                    <li <%= lang.text("navbar15")%>>
                         <a href="/web/about/team">精英团队</a>
                     </li>
-                    <li>
+                    <li <%= lang.text("navbar15")%>>
                         <a href="/web/about/report">媒体报道</a>
                     </li>
                     <!-- <li>
                         <a href="/web/about/control">合规和监管</a>
                     </li> -->
-                    <li>
+                    <li <%= lang.text("navbar15")%>>
                         <a href="/web/partner">媒体合作</a>
                     </li>
                 </ul>
             </li>
         </ul>
-
-           
-
-
-
-        <div style="margin-top: 20px;">
-            <a href="" ng-click="reloadLanguage('en')" style="color: #fff; font-size: 18px;">English</a>
-            <a href="" ng-click="reloadLanguage('zh')" style="color: #fff; font-size: 18px;">中文</a>
+        <div id="lang">
+            <a href="?" ng-click="reloadLanguage('en')">English</a>
+            /
+            <a href="?" ng-click="reloadLanguage('zh')">中文</a>
         </div>
 
 
