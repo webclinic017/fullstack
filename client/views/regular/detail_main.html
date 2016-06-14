@@ -164,19 +164,11 @@
                         </tr>
                         <tr>
                             <td>预约复制时间</td>
-                            <td>即日起至<%= product.end_date_appoint %></td>
+                            <td><%= model.getAppointTime(product) %></td>
                         </tr>
                         <tr>
                             <td>账户交易时间</td>
-                            <td><%= product.start_date_trade %>
-<%
-    if(product.end_date_trade){
-%>
-                                ~ <%= product.end_date_trade %>
-<%
-    }
-%>                               
-                            </td>
+                            <td><%= model.getTradeTime(product) %></td>                           
                         </tr>
                         <tr>
                             <td>风险控制机制</td>

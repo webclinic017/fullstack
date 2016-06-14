@@ -5,8 +5,17 @@
         position: relative;
         margin-top: 69px;
         height: 785px;
-        @include img-normal($image-path-base + "activity/new-banner.png");
+        @include img-normal($image-path-base + "activity/banner-blank.png");
         background-position: center center;
+    }
+    @include e(date) {
+        position: absolute;
+        top: 327px;
+        left: 50%;
+        width: 300px;
+        font-size: 20px;
+        color: #fff;
+        margin-left: -150px;
     }
     @include e (btn) {
         position: relative;
