@@ -19,6 +19,13 @@
             color: $brand-primary;
         }
     }
+    .col-xs-3 > ul > li > a{
+        color: $gray-dark;
+
+        &:hover {
+            color: $brand-primary;
+        }
+    }
 
     a > i {
         font-size: $font-size-h3;

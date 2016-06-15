@@ -1,15 +1,25 @@
-<% var title = '交易平台' %>
-<% var description = '' %>
-<% var keywords = '' %>
+<% if (pageInfo.id === 'risk') { %>
+    <% var title = '风险披露书' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'statement') { %>
+    <% var title = '客户声明' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'notice') { %>
+    <% var title = '用户交易须知' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } %>
 <!doctype html>
 <html>
     <head>
         <% include common/metas.html %>
-
+    
         <title>老虎金融｜<%= title %></title>
         <meta name="description" content="<%= description %>">
         <meta name="keywords" content="<%= keywords %>">
-
+        
         <!-- build:css(.tmp) /styles/web.css -->
         <link rel="stylesheet" href="/styles/web.css">
         <!-- endbuild -->
@@ -19,12 +29,19 @@
             <div class="header">
                 <% include navbar/main.html %>
             </div>
-
-            <div class="body" style="background-color: #fafafa">
-              <p style="height:84px;"></p>
-              <iframe src="https://trade.mql5.com/trade?servers=TigerWit-Demo,TigerWit-Live&amp;trade_server=TigerWit-Live&amp;demo_server=TigerWit-Demo&amp;demo_type=&amp;demo_leverage=50,100,200,400&amp;startup_mode=open_live&amp;lang=<%= lang.text('trade_tool')%>" allowfullscreen="allowfullscreen" style="width: 100%; height: 677px; border: none"></iframe>
+            
+            <div class="body">
+                <div class="layout-2">
+                    <div class="layout-2__side mg-tp-30">
+                        <%- include('web/blog-sidebar.html') %>
+                    </div>
+                    <div class="layout-2__content mg-tp-30">
+                        <%- include('web/blog-' + pageInfo.id + '.html') %>
+                    </div>
+                </div>
             </div>
-
+            
+            
         <!-- build:js(client) /scripts/vendor.js -->
         <!-- bower:js -->
         <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -49,24 +66,34 @@
         <!-- endbower -->
         <!-- endbuild -->
 
-        <!-- build:js(client) /scripts/trade_tool.js -->
+        <!-- build:js(client) /scripts/web_blog.js -->
         <script src="/scripts/app.js"></script>
 
         <script src="/scripts/common/config.service.js"></script>
         <script src="/scripts/common/account.service.js"></script>
         <script src="/scripts/common/authorization.service.js"></script>
-        <script src="/scripts/common/product.service.js"></script>
-        <script src="/scripts/common/utils.service.js"></script>
+        <script src="/scripts/common/transition.service.js"></script>
+        <script src="/scripts/common/validator.service.js"></script>
         <script src="/scripts/common/lang.service.js"></script>
         <script src="/scripts/common/lang_data.service.js"></script>
-
+        
         <script src="/scripts/common/navbar.directive.js"></script>
         <script src="/scripts/common/dropdown.directive.js"></script>
-        <script src="/scripts/common/pagination.directive.js"></script>
+        <script src="/scripts/common/form_select.directive.js"></script>
+        <script src="/scripts/common/upload_history_file.directive.js"></script>
+        <script src="/scripts/common/utils.service.js"></script>
+        <script src="/scripts/common/product.service.js"></script>
+        <script src="/scripts/common/bind_html.filter.js"></script>
 
+
+        <script src="/scripts/common/modal.js"></script>
+        
         <script src="/scripts/common/global.controller.js"></script>
 
+        <script src="/scripts/web/become_master.controller.js"></script>
+        <script src="/scripts/web/become_modal.controller.js"></script>
         <script src="/scripts/product/comment.controller.js"></script>
+
         <!-- endbuild -->
 
             <div class="footer">

@@ -75,6 +75,56 @@
             "register17": {"en": "Register in 30s and open the journey to fortune", "zh": "30 秒注册 开启财富之旅"},
             "register18": {"en": "Registered?", "zh": "已有账户？"},
             "register19": {"en": "Log in now", "zh": "立即登录"},
+
+            // 复制跟单-数据统计 traderSummary
+            "traderSummary1": {"en": "Summary", "zh": "交易概况"},
+            "traderSummary2": {"en": "Accuracy", "zh": "准确率"},
+            "traderSummary3": {"en": "Margin Cost", "zh": "最大保证金占用"},
+            "traderSummary4": {"en": "Profit", "zh": "盈利订单"},
+            "traderSummary5": {"en": "Lose", "zh": "亏损订单"},
+            "traderSummary6": {"en": "Close Out", "zh": "平仓交易"},
+            "traderSummary7": {"en": "Avg. Holding time", "zh": "平均持仓时间"},
+            "traderSummary8": {"en": "Avg. Trades/Month", "zh": "月平均交易次数"},
+            "traderSummary9": {"en": "Profitable/Month", "zh": "月回报率"},
+            "traderSummary10": {"en": "Max Drawdown", "zh": "最大回撤"},
+            "traderSummary11": {"en": "Largest Profit Spread", "zh": "最大盈利点差"},
+            "traderSummary12": {"en": "Total Return", "zh": "总收益率"},
+            "traderSummary13": {"en": "Trading Chart", "zh": "交易走势图"},
+            "traderSummary14": {"en": "Main Symble", "zh": "主要交易品种"},
+            "traderSummary15": {"en": "No Data", "zh": "无数据"},
+
+            // 复制跟单-当前交易 HoldingTrades
+            "HoldingTrades1": {"en": "Operation", "zh": "操作"},
+            "HoldingTrades2": {"en": "Openning Price", "zh": "开仓价"},
+            "HoldingTrades3": {"en": "Current Price", "zh": "现价"},
+            "HoldingTrades4": {"en": "Holding Time", "zh": "持仓时间"},
+            "HoldingTrades5": {"en": "Spread", "zh": "点数"},
+            "HoldingTrades6": {"en": "Profit", "zh": "收益"},
+            "HoldingTrades7": {"en": "Sell", "zh": "卖出"},
+            "HoldingTrades8": {"en": "Buy", "zh": "买入"},
+            "HoldingTrades9": {"en": "No Data", "zh": "无数据"},
+            "HoldingTrades10": {"en": "Note：Trades won't be shown here before 7 days.", "zh": "注：当前交易仅显示高手最近一周持仓订单"},
+            "HoldingTrades11": {"en": "en", "zh": "zh"},
+            
+            // 复制跟单-历史交易 TradingHistory
+            "TradingHistory1": {"en": "Operation", "zh": "操作"},
+            "TradingHistory2": {"en": "Openning Price", "zh": "开仓价"},
+            "TradingHistory3": {"en": "Closing Price", "zh": "平仓价"},
+            "TradingHistory4": {"en": "Holding Time", "zh": "持仓时间"},
+            "TradingHistory5": {"en": "Spread", "zh": "点数"},
+            "TradingHistory6": {"en": "Profit", "zh": "收益"},
+            "TradingHistory7": {"en": "Sell", "zh": "卖出"},
+            "TradingHistory8": {"en": "Buy", "zh": "买入"},
+            "TradingHistory9": {"en": "No Data", "zh": "无数据"},
+            "TradingHistory10": {"en": "ago", "zh": "前"},
+            "TradingHistory11": {"en": "en", "zh": "zh"},
+
+
+
+
+
+
+
         };
 
         return data;

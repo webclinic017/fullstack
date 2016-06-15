@@ -1,0 +1,5 @@
+@include b(blog) {
+    @include e(test) {
+        color: red;
+    }
+}

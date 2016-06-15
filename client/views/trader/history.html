@@ -5,12 +5,12 @@
         <table class="table table-header table-striped table-hover table-bordered">
             <thead>
                 <tr>
-                    <th>操作</th>
-                    <th>开仓价</th>
-                    <th>平仓价</th>
-                    <th>持仓时间</th>
-                    <th>点数</th>
-                    <th>收益</th>
+                    <th>{{ lang.text("TradingHistory1") }}</th>
+                    <th>{{ lang.text("TradingHistory2") }}</th>
+                    <th>{{ lang.text("TradingHistory3") }}</th>
+                    <th>{{ lang.text("TradingHistory4") }}</th>
+                    <th>{{ lang.text("TradingHistory5") }}</th>
+                    <th>{{ lang.text("TradingHistory6") }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -23,15 +23,15 @@
                         <div class="history-operation-box">
                             <p class="text-left">
                                 <span>
-                                    {{ order.action ? '卖出' : '买入' }}
+                                    {{ order.action ? lang.text("TradingHistory7") : lang.text("TradingHistory8") }}
                                 </span>
                                 <span class="font-info">
-                                    {{ order.symbol | symbolMod:'zh' }}
+                                    {{ order.symbol | symbolMod:lang.text("TradingHistory11") }}
                                 </span>
                             </p>
                             <p class="text-left font-size-12">
                                 <span class="history-operation-way">{{order.close_type | close_type}}</span>
-                                <span>{{order.ago | duration}}前</span>
+                                <span>{{order.ago | duration}}{{ lang.text("TradingHistory10") }}</span>
                             </p>
                         <div>
                         <div>
@@ -54,7 +54,7 @@
                 </tr>
                 <tr ng-if="orders.length <= 0">
                     <td colspan="6">
-                        无数据
+                        {{ lang.text("TradingHistory9") }}
                     </td>
                 </tr>
             </tbody>

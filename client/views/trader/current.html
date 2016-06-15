@@ -4,12 +4,12 @@
         <table class="table table-header table-bordered table-striped table-hover">
             <thead>
                 <tr>
-                    <th>操作</th>
-                    <th>开仓价</th>
-                    <th>现价</th>
-                    <th>持仓时间</th>
-                    <th>点数</th>
-                    <th>收益</th>
+                    <th>{{ lang.text("HoldingTrades1") }}</th>
+                    <th>{{ lang.text("HoldingTrades2") }}</th>
+                    <th>{{ lang.text("HoldingTrades3") }}</th>
+                    <th>{{ lang.text("HoldingTrades4") }}</th>
+                    <th>{{ lang.text("HoldingTrades5") }}</th>
+                    <th>{{ lang.text("HoldingTrades6") }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,10 +19,10 @@
                             
                         </span>
                         <span>
-                            &nbsp;&nbsp;{{ order.action ? '卖出' : '买入' }}
+                            &nbsp;&nbsp;{{ order.action ? lang.text("HoldingTrades7") : lang.text("HoldingTrades8") }}
                         </span>
                         <span class="font-info">
-                            {{ order.symbol | symbolMod:'zh' }}
+                            {{ order.symbol | symbolMod:lang.text("HoldingTrades11") }}
                         </span>
                     </td>
                     <td>
@@ -43,11 +43,11 @@
                 </tr>
                 <tr ng-if="orders.length <= 0">
                     <td colspan="6">
-                        无数据
+                        {{ lang.text("HoldingTrades9") }}
                     </td>
                 </tr>
             </tbody>
         </table>
-        <p class="trader_current_note">注：当前交易仅显示高手最近一周持仓订单 </p>
+        <p class="trader_current_note">{{ lang.text("HoldingTrades10") }} </p>
     </div>
 </div>

@@ -1,10 +1,11 @@
 <section class="index2-banner">
     <div class="swiper-container" style="height: 818px;" tw-carousel>
         <div class="swiper-wrapper">
-<!--             <div class="swiper-slide index2-slide4">
+            
+            <div class="<%= lang.text('navbar14')%>swiper-slide index2-slide4" <%= lang.text('navbar15')%>>
                 <a class="enroll-game game-v" href="bd/t29">报名模拟大赛</a>
                 <a class="enroll-game game-t" href="bd/t29">报名实盘大赛</a>
-            </div> -->
+            </div>
             <div class="swiper-slide index2-slide1">
                 <!-- <p class="index2-banner__tle1">复制跟单</p> -->
                 <p class="index2-banner__tle1"><%= lang.text("home1")%></p>
@@ -185,7 +186,7 @@
                 </div>
             </div>
             <div class="col-xs-6">
-                <div class="index2-trade__img">
+                <div class="index2-trade__img <% if(lang.background()){%>en<%}%>">
 
                 </div>
             </div>

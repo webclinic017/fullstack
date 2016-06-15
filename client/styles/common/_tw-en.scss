@@ -7,11 +7,14 @@
     }
     .index2-master__col1-tit {
         font-size: 16px;
-        margin-bottom: 0;
+        margin:10px 7px;
     }
     .index2-master__col1-ul {
         margin-top: 0;
         font-size: 12px;
+    }
+    .index2-master__col1-ul li{
+        line-height:35px;
     }
     .index2-master__col1-btn {
         left: 12%;
@@ -44,5 +47,13 @@
     .account_register__step-1 .btn-primary {
         padding: 0 15px;
         font-size: 14px;
+    }
+
+    .footer-wrap .col-xs-3 a {
+        color: #999;
+    }
+
+    .footer-wrap .col-xs-3 ul li {
+        margin-bottom: 10px;
     }
 }

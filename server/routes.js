@@ -96,6 +96,17 @@ module.exports = function(app) {
         });
     });
 
+    // 条件和条款
+    app.route('/web/blog/:subpage(risk|statement|notice)').get(function(req, res) {
+        var subpage = req.params.subpage || 'risk';
+        var pageInfo = {
+            id: subpage
+        };
+
+        res.render('web_blog.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
     // 复制交易
     app.route('/web/copy/:subpage(rules|select|become|comment)').get(function(req, res) {
         var subpage = req.params.subpage || 'rules';
