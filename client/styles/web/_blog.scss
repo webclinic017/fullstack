@@ -1,5 +1,74 @@
-@include b(blog) {
-    @include e(test) {
-        color: red;
+@include b(blog_risk) {
+    padding-bottom: 40px;
+
+    @include e(title) {
+        text-align: center;
+    }
+
+    @include e(tip) {
+        font-weight: bold;
+    }
+
+    @include e(content) {
+        font: normal normal normal 14px / 22px "Arial", Helvetica, Arial, Verdana, sans-serif;
+        color: #838992;
+    }
+}
+
+@include b(blog_statement) {
+    padding-bottom: 40px;
+
+    @include e(title) {
+        text-align: center;
+        color: #000;
+    }
+    @include e(content) {
+        font: normal normal normal 14px / 22px "Arial", Helvetica, Arial, Verdana, sans-serif;
+        color: #838992;
+    }
+}
+
+@include b(blog_notice) {
+    padding-bottom: 40px;
+
+    @include e(title) {
+        text-align: center;
+    }
+
+    @include e(content) {
+        margin-top: 10px;
+
+        .title {
+            cursor: pointer;
+            display: inline-block;
+            color: #282e32;
+
+            &:hover {
+                color: $brand-info;
+            }
+
+            .fa {
+                display: none;
+
+                &.active {
+                    display: inline-block;
+                }
+            }
+        }
+
+        .info {
+            padding-left: 20px;
+            line-height: 22px;
+            margin-top: 20px;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+    @include e(gray) {
+        color: #838992;
     }
 }
