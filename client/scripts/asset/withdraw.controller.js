@@ -8,7 +8,6 @@
     AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', 'forex'];
 
     function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, forex) {
-
         $scope.message = {};
         $scope.withdraw = {
             // amount: ,
