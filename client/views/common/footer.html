@@ -1,5 +1,19 @@
 <div class="footer-wrap">
     <div class="container">
+        <div class="lang">
+            <div class="lang-toggle">
+                <%= lang.text("footlang")%>
+                <i class="fa fa-sort-down"></i>
+            </div>
+            <ul class="lang-menu">
+                <li>
+                    <a href="" ng-click="reloadLanguage('en')">English</a>
+                </li>
+                <li>
+                    <a href="" ng-click="reloadLanguage('zh')"><%= lang.text("footzh")%></a>
+                </li>
+            </ul>
+        </div>
         <div class="row mg-tp-50">
             <div class="col-xs-2">
                 <p class="mg-bt-20">

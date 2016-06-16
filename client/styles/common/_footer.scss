@@ -52,6 +52,58 @@
         border-top: 1px solid $gray-darker;
         color: $gray-darker;
     }
+
+    .lang {
+        float: right;
+        position: relative;
+        display: inline-block;
+        margin-top: 20px;
+
+        &:hover {
+            .lang-menu {
+                display: block;
+            }
+        }
+
+        .lang-toggle {
+            padding: 3px 10px;
+            border: 1px solid;
+            border-radius: 4px;
+            cursor: pointer;
+
+            .fa {
+                vertical-align: top;
+            }
+        }
+
+        .lang-menu {
+            position: absolute;
+            display: none;
+            top: 90%;
+            left: 0;
+            right: auto;
+            z-index: 1;
+            min-width: 100%;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            overflow: hidden;
+
+            li {
+                padding: 3px 6px;
+                background-color: #fff;
+
+                &:hover {
+                    a {
+                        color: #fedd0a;
+                    }
+                }
+
+                a {
+                    color: #000;
+                }
+            }
+        }
+    }
 }
 
 
