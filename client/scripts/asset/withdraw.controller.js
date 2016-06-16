@@ -63,6 +63,7 @@
         asset.getIsWithdraw().then(function (data) {
             $scope.message = data;
             $scope.withdraw.maxAmount = data.balance < 0 ? 0 : data.balance;
+
         });
         
 
@@ -186,6 +187,8 @@
                             $state.go('space.asset.subpage', {
                                 subpage: 'withdraw'
                             }, {reload: true});
+                        }else{
+                            alert((data && data.error_msg) || "提现失败，请联系客服。");//TODO 需正确提示。这是临时方案。
                         }
                     });
                 }
