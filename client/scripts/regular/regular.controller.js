@@ -23,7 +23,7 @@
                         alert("预约成功！稍后会有工作人员联系您！");
                         $scope.submit = "预约成功";
                     } else {
-                        alert("预约失败，请联系客服。");
+                        alert((data && data.error_msg) || "预约失败，请联系客服。");
                     }
                 });
             }
