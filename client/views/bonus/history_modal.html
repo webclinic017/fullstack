@@ -22,7 +22,7 @@
             <tbody>
                 <tr ng-repeat="bonusDetail in bonusDetails">
                     <td>
-                        {{ bonusDetail.action ? '卖出' : '买入'}}
+                        {{ bonusDetail.action ? '买跌' : '买涨'}}
                         {{ bonusDetail.symbol | symbolMod: 'zh' }}
 
                         <!-- <span class="icon-forex-{{ bonusDetail.symbol.toLowerCase() }} vertical-middle"></span> -->
