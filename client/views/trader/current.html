@@ -18,10 +18,10 @@
                         <span class="icon-forex-{{ order.symbol.toLowerCase() }}">
                             
                         </span>
-                        <span>
+                        <span ng-class="order.action?'font-down':'font-up'">
                             &nbsp;&nbsp;{{ order.action ? lang.text("HoldingTrades7") : lang.text("HoldingTrades8") }}
                         </span>
-                        <span class="font-info">
+                        <span class="">
                             {{ order.symbol | symbolMod:lang.text("HoldingTrades11") }}
                         </span>
                     </td>

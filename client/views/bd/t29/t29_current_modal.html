@@ -26,10 +26,10 @@
                         <span class="icon-forex-{{ order.symbol.toLowerCase() }}">
                             
                         </span>
-                        <span>
+                        <span ng-class="order.action?'font-down':'font-up'">
                             &nbsp;&nbsp;{{ order.action ? '买跌' : '买涨' }}
                         </span>
-                        <span class="font-info">
+                        <span class="">
                             {{ order.symbol | symbolMod:'zh' }}
                         </span>
                     </td>

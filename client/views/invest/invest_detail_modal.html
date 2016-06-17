@@ -51,7 +51,7 @@
                             </span>
                             <div class="invest_orders__operate">
                                 <p>
-                                    <span class="invest_orders__action">
+                                    <span class="invest_orders__action" ng-class="detail.action?'font-down':'font-up'">
                                         {{ detail.action ? '买跌' : '买涨' }}
                                     </span>
                                     <a class="invest_orders__symbol" href="">
