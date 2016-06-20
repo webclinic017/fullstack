@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    </head>
+    <% include ../common/css_vendor.html %>
+
+    <!-- build:css(.tmp) /styles/m_regular_detail.css -->
+        <link rel="stylesheet" href="/styles/m_regular_detail.css">
+    <!-- endbuild -->
+
+    <body>
+    	<section class="summary">
+    		<p class="summary__comment text-center">预期年化收益率</p>
+    		<p class="summary__profit text-center"><%= model.expect_year_profit %></p>
+    		<ul>
+    			<li>
+    				<p><%= model.money_copy %></p>
+                    <p>复制金额</p>
+    			</li>
+                <li>
+                    <p><%= model.period %></p>
+                    <p>封闭期</p>
+                </li>
+                <li>
+                    <p><%= model.withdraw_history %></p>
+                    <p>历史最高回撤</p>
+                </li>
+                <li>
+                    <p><%= model.profit_rate_last %></p>
+                    <p>上期收益率</p>
+                </li>                                
+    		</ul>
+    	</section>
+    	<section class="detail">
+    		<dl class="detail__dl">
+                <dt>复制封闭期</dt>
+                <dd><%= model.period %>（复制者在封闭期间不能操作账户，比如下单和平仓等，封闭期结束后拥有账户操作权）</dd>
+                <dt>预约复制时间</dt>
+                <dd><%= model.m_detail_appoint_time %> </dd>
+                <dt>账户交易时间</dt>
+                <dd><%= model.trade_time %></dd> 
+                <dt>风险控制机制</dt>
+                <dd><%= model.desc_risk %></dd>
+                <dt>高手报酬分成</dt>
+                <dd><%= model.desc_divide %></dd> 
+                <dt>报名限制</dt>
+                <dd><%= model.max_desc %></dd> 
+                <dt>备注</dt>
+                <dd><%= model.note %></dd> 
+            </dl>
+    	</section>
+    	<section class="tab">
+    		<p><a href="/m/regular/detail/team/<%= model.team%>">高手团队介绍</a></p>
+    		<p><a href="/m/regular/detail/history/<%= model.team%>">历史交易图标</a></p>
+    	</section>
+    	<section class="comment">
+    		温馨提示：本产品上收益率仅为过往情况评估，仅供参考，不代表未来收益情况
+    	</section>
+    	<section class="action">
+    		<input type="button" id="signup" value="立即预约" />
+    	</section>
+    </body>
+
+
+    <% include ../common/js_vendor.html %>
+
+    <!-- build:js(client) /scripts/m_regular_detail.js -->
+        <script src="/scripts/regular/m_regular_detail.js"></script>
+    <!-- endbuild -->
+</html>

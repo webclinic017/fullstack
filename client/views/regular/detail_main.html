@@ -1,41 +1,40 @@
 <%
-    var product = model.getProduct(detail_id);
-    var status = model.judgeStatus(product);
- %>
+    var status = model.status;
+%>
 <div class="hy-detail">
     <div class="container" ng-controller="RegularController">
         <div class="row">
             <div class="col-xs-8">
                 <div class="hy-detail__title">
-                    <span class="hy-detail__title-span1" ><%= product.name %></span>
+                    <span class="hy-detail__title-span1" ><%= model.name %></span>
                 </div>
                 <div class="hy-detail__con">
                     <ul class="hy-detail__con-ul">
                         <li>
                             <span>复制金额</span>
-                            <p class="hy-detail__con-red"><%= product.money_copy %></p>
+                            <p class="hy-detail__con-red"><%= model.money_copy %></p>
                         </li>
                         <li>
                             <span>预期年化收益率</span>
-                            <p><%= product.profit_rate_wish %></p>
+                            <p><%= model.expect_year_profit %></p>
                         </li>
                         <li>
                             <span>复制封闭期</span>
-                            <p><%= product.period %></p>
+                            <p><%= model.period %></p>
                         </li>
                         <li>
                             <span>历史最高回撤</span>
-                            <p><%= product.withdraw_history %></p>
+                            <p><%= model.withdraw_history %></p>
                         </li>
                     </ul>
                     <div class="hy-detail__con-progress">
                         <span class="hy-detail__con-circle"></span> 
-                        <span class="font-size-16"><%= model.getMaxDesc(product) %></span>
+                        <span class="font-size-16"><%= model.max_desc %></span>
                         <div class="progress" tw-progress>
                             <div class="scale"></div>
                         </div>
                         <span>&nbsp;&nbsp;&nbsp;&nbsp;已完成</span>
-                        <span class="p-num"><%= product.progress %>%</span>
+                        <span class="p-num"><%= model.progress %>%</span>
                     </div>
                 </div>
             </div>
@@ -109,7 +108,7 @@
     if(status == "tradding"){
 %>
                             <p class="font-size-16 pd-tp-30  text-center">实时年化收益率</p>
-                            <p class="fix-list__list-red font-info  text-center"><%= product.profit_rate_now %></p>
+                            <p class="fix-list__list-red font-info  text-center"><%= model.profit_rate_now %></p>
                             <input name="submit" 
                                    class="hy-detail__con-btn hy-detail__con-btn-trade" 
                                    type="button" 
@@ -121,16 +120,16 @@
     if(status == "end_trade"){
 %>
                             <p class="font-size-16 pd-tp-30 text-center">已结算年化收益率</p>
-                            <p class="fix-list__list-red font-info text-center"><%= product.profit_rate_now %></p>
+                            <p class="fix-list__list-red font-info text-center"><%= model.profit_rate_now %></p>
 <%
-      if(product.profit_rate_last){
+      if(model.profit_rate_last){
 %>
-                            <p class="mg-tp-20 text-center">上期年化收益率:<span class="font-size-20 font-warning"><%= product.profit_rate_last%></span></p>
+                            <p class="mg-tp-20 text-center">上期年化收益率:<span class="font-size-20 font-warning"><%= model.profit_rate_last%></span></p>
 <%
 
       }else{
 %>
-                            <p class="mg-tp-20 text-center">预期年化收益率:<span class="font-size-20 font-warning"><%= product.profit_rate_wish%></span></p>
+                            <p class="mg-tp-20 text-center">预期年化收益率:<span class="font-size-20 font-warning"><%= model.expect_year_profit%></span></p>
 <%
       }
 %>
@@ -160,36 +159,36 @@
                     <tbody>
                         <tr>
                             <td>复制封闭期</td>
-                            <td><%= product.period %>（复制者在封闭期间不能操作账户，比如下单和平仓等，封闭期结束后拥有账户操作权）</td>
+                            <td><%= model.period %>（复制者在封闭期间不能操作账户，比如下单和平仓等，封闭期结束后拥有账户操作权）</td>
                         </tr>
                         <tr>
                             <td>预约复制时间</td>
-                            <td><%= model.getAppointTime(product) %></td>
+                            <td><%= model.m_detail_appoint_time %></td>
                         </tr>
                         <tr>
                             <td>账户交易时间</td>
-                            <td><%= model.getTradeTime(product) %></td>                           
+                            <td><%= model.trade_time %></td>                           
                         </tr>
                         <tr>
                             <td>风险控制机制</td>
-                            <td><%= product.desc_risk %></td>
+                            <td><%= model.desc_risk %></td>
                         </tr>
                         <tr>
                             <td>高手报酬分成</td>
-                            <td><%= product.desc_divide %></td>
+                            <td><%= model.desc_divide %></td>
                         </tr>
                         <tr>
                             <td>报名限制</td>
-                            <td><%= model.getMaxDesc(product) %></td>
+                            <td><%= model.max_desc %></td>
                         </tr>
                         <tr>
                             <td>备注</td>
-                            <td><%= product.note %></td>
+                            <td><%= model.note %></td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <%- include('regular/' + product.team_intro+'.html') %>
+        <%- include('regular/' + model.team_intro+'.html') %>
     </div>
 </div>

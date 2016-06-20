@@ -1,0 +1,29 @@
+#signup{
+	border:red;
+}
+
+body{
+	font-size: px2rem(32);
+}
+@include b(summary){
+	@include e(comment){
+
+	}
+	@include e(profit){
+		font-size : px2rem(100)
+	}
+}
+@include b(detail){
+	@include e(dl){
+		margin:0 px2rem(35);
+		dt{
+			color:#222;
+			margin:px2rem(20) 0;
+		}
+		dd{
+			margin-left : 0;
+			color:#909090;
+			font-size: px2rem(28);
+		}
+	}
+}
