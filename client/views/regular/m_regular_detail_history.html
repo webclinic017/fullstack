@@ -1,0 +1,8 @@
+<% 
+	model.aImages.forEach(function(sImage, index){
+%>
+<p>交易图标<%= index+1 %></p>
+<img style="border:1px solid red" src="<%= sImage %>" />
+<%
+	})
+%>

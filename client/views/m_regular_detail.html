@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    </head>
+    <!-- build:css(.tmp) /styles/m_vendor.css -->
+        <link rel="stylesheet" href="/styles/m_vendor.css">
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp) /styles/m_regular_detail.css -->
+        <link rel="stylesheet" href="/styles/m_regular_detail.css">
+    <!-- endbuild -->
+    <% include common/m_css_vendor.html %>
+    <body>
+    	<div class="regular_detail_summary">
+    		<div class="regular_detail_summary__info text-center">
+                <p class="regular_detail_summary__info-tit">
+                    预期年化收益率
+                </p>
+                <p class="regular_detail_summary__info-profit">
+                    <%= model.expect_year_profit %>
+                </p>
+            </div>
+    		<ul class="regular_detail_summary__instr text-center clearfix">
+                <li>
+                    <p class="regular_detail_summary__instr-num">
+                        <%= model.period %>
+                    </p>
+                    <p class="regular_detail_summary__instr-tit">封闭期</p>
+                    <p class="regular_detail_summary__instr-num">
+                        <%= model.withdraw_history %>
+                    </p>
+                    <p class="regular_detail_summary__instr-tit">历史最高回撤</p>
+                </li>
+                <li>
+                    <p class="regular_detail_summary__instr-num">
+                        <%= model.money_copy %>
+                    </p>
+                    <p class="regular_detail_summary__instr-tit">复制金额</p>
+                    <p class="regular_detail_summary__instr-num">
+                        <%= model.profit_rate_last %>
+                    </p>
+                    <p class="regular_detail_summary__instr-tit">上期收益率</p>
+                </li>                                
+    		</ul>
+    	</div>
+        <div class="regular_detail_progress">
+            <div class="clearfix">
+                <p>
+                    <span>总复制金额</span>
+                    <span>
+                        <%= model.money_copy_max %>
+                    </span>  
+                </p>
+                <p>
+                    已完成 <%= model.progress %>%
+                </p>
+            </div>
+        </div>
+
+
+    	<div class="detail">
+    		<dl class="detail__dl">
+                <dt>复制封闭期</dt>
+                <dd><%= model.period %>（复制者在封闭期间不能操作账户，比如下单和平仓等，封闭期结束后拥有账户操作权）</dd>
+                <dt>预约复制时间</dt>
+                <dd><%= model.m_detail_appoint_time %> </dd>
+                <dt>账户交易时间</dt>
+                <dd><%= model.trade_time %></dd> 
+                <dt>风险控制机制</dt>
+                <dd><%= model.desc_risk %></dd>
+                <dt>高手报酬分成</dt>
+                <dd><%= model.desc_divide %></dd> 
+                <dt>报名限制</dt>
+                <dd><%= model.max_desc %></dd> 
+                <dt>备注</dt>
+                <dd><%= model.note %></dd> 
+            </dl>
+    	</div>
+    	<div class="tab">
+    		<p><a href="/m/regular/detail/team/<%= model.team%>">高手团队介绍</a></p>
+    		<p><a href="/m/regular/detail/history/<%= model.team%>">历史交易图标</a></p>
+    	</div>
+    	<div class="comment">
+    		温馨提示：本产品上收益率仅为过往情况评估，仅供参考，不代表未来收益情况
+    	</div>
+    	<div class="action">
+    		<input type="button" id="signup" value="立即预约" />
+    	</div>
+    </body>
+
+
+    <% include common/m_js_vendor.html %>
+    <!-- build:js(client) /scripts/m_vendor.js -->
+    <script src="/bower_components/jquery-3.0.0.min/index.js"></script>
+    <!-- endbuild -->
+    <!-- build:js(client) /scripts/m_regular_detail.js -->
+        <script src="/scripts/regular/m_regular_detail.js"></script>
+    <!-- endbuild -->
+</html>

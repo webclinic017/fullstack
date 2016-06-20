@@ -1,0 +1,56 @@
+@include b(regular_detail_summary){
+	@include e(info){
+        background-color: $brand-primary;
+        height: px2rem(228);
+
+        @include m(tit) {
+            color: $m-opacity-gray;
+            padding: px2rem(35) 0 px2rem(40);
+        }
+
+        @include m(profit){
+            font-size : px2rem(100);
+            line-height: px2rem(62);
+        }
+	}
+
+    @include e(instr) {
+        background-color: $brand-primary-dark;
+        padding: px2rem(20) 0;
+
+        > li {
+            float: left;
+            width: 50%;
+            height: px2rem(198);
+            border-left: 1px solid $m-opacity-border;
+
+            &:first-child {
+                border: none;
+            }
+        }
+
+        @include m(tit) {
+            font-size: px2rem(26);
+            color: $m-opacity-gray;
+            margin-bottom: px2rem(18);
+        }
+        @include m(num) {
+            font-size: px2rem(40);
+        }           
+    }
+	
+}
+@include b(detail){
+	@include e(dl){
+		margin:0 px2rem(35);
+		dt{
+			color:#222;
+			margin:px2rem(20) 0;
+		}
+		dd{
+			margin-left : 0;
+			color:#909090;
+			font-size: px2rem(28);
+		}
+	}
+}

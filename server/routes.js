@@ -64,23 +64,46 @@ module.exports = function(app) {
         res.render('ranklist.html', extendPublic({}, req));
     });
 
+    /*定期跟单开始*/
+    var global_modelRegular = require('./model/modelRegular');
+    var gloal_modelRegularDetail = require('./model/modelRegularDetail');
     app.route('/regular').get(function(req, res){
         res.render('regular_list.html', extendPublic({
-            model : require('./model/modelRegular')
+            model : global_modelRegular
+        }, req));
+    });
+    app.route('/regular/agree/:subpage').get(function(req, res){
+        res.render('regular_agree.html', extendPublic({
+            model : global_modelRegular,
+            detail_id : req.params.subpage || ""
         }, req));
     });
     app.route('/regular/detail/:subpage').get(function(req, res){
         res.render('regular_detail.html', extendPublic({
-            model : require('./model/modelRegular'),
-            detail_id : req.params.subpage || ""
-        }, req))
+            model : gloal_modelRegularDetail(req.params.subpage || "")
+        },req));
     });
-    app.route('/regular/agree/:subpage').get(function(req, res){
-        res.render('regular_agree.html', extendPublic({
-            model : require('./model/modelRegular'),
-            detail_id : req.params.subpage || ""
-        }, req));
+
+    app.route('/m/regular/detail/:subpage').get(function(req, res){
+        res.render('m_regular_detail.html',{
+            model : gloal_modelRegularDetail(req.params.subpage || "")
+        });
     });
+    app.route('/m/regular/detail/team/:subpage').get(function(req, res){
+        var team_html = global_modelRegular.getTeamHtmlName(req.params.subpage);
+        res.render('regular/'+ team_html +'.html',{});
+    });   
+    app.route('/m/regular/detail/history/:subpage').get(function(req, res){
+        var aImages = global_modelRegular.getTeamHistoryImages(req.params.subpage);
+        res.render('regular/m_regular_detail_history.html',{
+            model : {
+                aImages : aImages
+            }
+        });
+    });   
+    /*定期跟单结束开始*/
+
+
     app.route('/trader/:usercode').get(function(req, res) {
         var usercode = req.params.usercode;
 
@@ -228,6 +251,7 @@ module.exports = function(app) {
     app.route('/bd/t29').get(function(req, res){
         res.render('bd_t29', extendPublic({}, req));
     });
+
 
     // nodeAPI
     app.route('/napi').get(function(req, res){
