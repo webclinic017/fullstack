@@ -85,17 +85,17 @@ module.exports = function(app) {
     });
 
     app.route('/m/regular/detail/:subpage').get(function(req, res){
-        res.render('../../server/views/regular/m_regular_detail.html',{
+        res.render('m_regular_detail.html',{
             model : gloal_modelRegularDetail(req.params.subpage || "")
         });
     });
     app.route('/m/regular/detail/team/:subpage').get(function(req, res){
         var team_html = global_modelRegular.getTeamHtmlName(req.params.subpage);
-        res.render('../../server/views/regular/'+ team_html +'.html',{});
+        res.render('regular/'+ team_html +'.html',{});
     });   
     app.route('/m/regular/detail/history/:subpage').get(function(req, res){
         var aImages = global_modelRegular.getTeamHistoryImages(req.params.subpage);
-        res.render('../../server/views/regular/m_regular_detail_history.html',{
+        res.render('regular/m_regular_detail_history.html',{
             model : {
                 aImages : aImages
             }
