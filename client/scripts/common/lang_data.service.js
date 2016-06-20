@@ -100,8 +100,8 @@
             "HoldingTrades4": {"en": "Holding Time", "zh": "持仓时间"},
             "HoldingTrades5": {"en": "Spread", "zh": "点数"},
             "HoldingTrades6": {"en": "Profit", "zh": "收益"},
-            "HoldingTrades7": {"en": "Sell", "zh": "卖出"},
-            "HoldingTrades8": {"en": "Buy", "zh": "买入"},
+            "HoldingTrades7": {"en": "Sell", "zh": "买跌"},
+            "HoldingTrades8": {"en": "Buy", "zh": "买涨"},
             "HoldingTrades9": {"en": "No Data", "zh": "无数据"},
             "HoldingTrades10": {"en": "Note：Trades won't be shown here before 7 days.", "zh": "注：当前交易仅显示高手最近一周持仓订单"},
             "HoldingTrades11": {"en": "en", "zh": "zh"},
@@ -113,18 +113,11 @@
             "TradingHistory4": {"en": "Holding Time", "zh": "持仓时间"},
             "TradingHistory5": {"en": "Spread", "zh": "点数"},
             "TradingHistory6": {"en": "Profit", "zh": "收益"},
-            "TradingHistory7": {"en": "Sell", "zh": "卖出"},
-            "TradingHistory8": {"en": "Buy", "zh": "买入"},
+            "TradingHistory7": {"en": "Sell", "zh": "买跌"},
+            "TradingHistory8": {"en": "Buy", "zh": "买涨"},
             "TradingHistory9": {"en": "No Data", "zh": "无数据"},
             "TradingHistory10": {"en": "ago", "zh": "前"},
-            "TradingHistory11": {"en": "en", "zh": "zh"},
-
-
-
-
-
-
-
+            "TradingHistory11": {"en": "en", "zh": "zh"}
         };
 
         return data;
