@@ -68,7 +68,7 @@
                             </p>
                             <p class="mg-tp-20">
                                 <input class="check_agreement" type="checkbox" checked />同意并遵守
-                                <a href="/regular/agree/<%= detail_id %>?name={{name}}" target="_blank" class="font-info">委托协议书</a>
+                                <a href="/regular/agree/<%= model.id %>?name={{name}}" target="_blank" class="font-info">委托协议书</a>
                             </p>                  
 <%
     }
@@ -189,6 +189,6 @@
                 </table>
             </div>
         </div>
-        <%- include('regular/' + model.team_intro+'.html') %>
+        <%- include('regular/'+ model.team+'.html') %>
     </div>
 </div>
