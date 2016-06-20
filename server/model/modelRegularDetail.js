@@ -6,6 +6,7 @@ module.exports = function(regular_id){
 	var m_status = oModelRegular.judgeStatus(product);
 	var m_max_desc = oModelRegular.getMaxDesc(product);
 	return {
+		id : product.id,
 		name : product.name,
 		expect_year_profit : product.profit_rate_wish,
 		team : product.team_intro,
