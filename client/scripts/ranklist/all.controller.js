@@ -21,11 +21,15 @@
             $scope.$emit("showLoadingImg");
             $scope.masters.type = type;
             ranklist.getMastersList(type, sort).then(function (data) {
-                // console.info(data);
+                console.info(data);
                 
                 if (data.is_succ) {
                     $scope.$broadcast("hideLoadingImg");
                     $scope.rankList = data.data;
+
+                    angular.forEach($scope.rankList, function (value, index) {
+                        value.drawdown_abs = Math.abs(value.drawdown);
+                    });
                 }
             });
         }

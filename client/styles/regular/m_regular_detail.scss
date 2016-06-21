@@ -1,3 +1,6 @@
+@include b(regular_detail) {
+    background-color: $m-background-color;
+}
 @include b(regular_detail_summary){
 	@include e(info){
         background-color: $brand-primary;
