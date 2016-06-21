@@ -1,0 +1,23 @@
+.btn {
+    display: inline-block;
+    margin-bottom: 0; // For input.btn
+    border: 1px solid transparent;
+    border-radius: 2px;
+    font-size: px2rem(36);
+    color: $gray-darkest;
+    padding: px2rem(22) px2rem(48);
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+}
+
+.btn-primary {
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+}
+
+.btn-lg {
+    display: block;
+    width: 100%;
+}

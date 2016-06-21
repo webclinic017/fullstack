@@ -69,8 +69,8 @@
                     <div class="col-1">
                         {{ rank.drawdown || '0.00' }}%
                         <span ng-show="rank.drawdown_abs < 5" class="font-success">{{ lang.text('low') }}</span>
-                        <span ng-show="rank.drawdown_abs >= 5 && rank.drawdown_abs <= 15" class="font-warning">{{ lang.text('middle') }}</span>
-                        <span ng-show="rank.drawdown_abs > 15" class="font-danger">{{ lang.text('high') }}</span>
+                        <span ng-show="rank.drawdown_abs >= 5 && rank.drawdown_abs <= 10" class="font-warning">{{ lang.text('middle') }}</span>
+                        <span ng-show="rank.drawdown_abs > 10" class="font-danger">{{ lang.text('high') }}</span>
                     </div>
                     <div class="col-1">
                         {{ rank.profit_rate || '0.00' }}%

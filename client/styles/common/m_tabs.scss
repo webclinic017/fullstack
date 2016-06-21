@@ -1,0 +1,23 @@
+@include b(tab) {
+    margin-left: px2rem(35);
+
+    @include e(item) {
+        border-bottom: 1px solid $m-gray-lighter;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        > a {
+            color: $gray-darkest;
+            display: block;
+            padding: px2rem(32) 0;
+
+            > span {
+                float: right;
+                margin-right: px2rem(35);
+                color: $m-gray-border;
+            }
+        }
+    }
+}

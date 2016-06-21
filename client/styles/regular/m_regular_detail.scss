@@ -1,5 +1,9 @@
 @include b(regular_detail) {
     background-color: $m-background-color;
+
+    @include e(mar35) {
+        margin: 0 px2rem(35);
+    }
 }
 @include b(regular_detail_summary){
 	@include e(info){
@@ -43,17 +47,135 @@
     }
 	
 }
-@include b(detail){
+@include b(regular_detail_progress) {
+    background-color: #fff;
+    height: px2rem(110);
+
+    @include e(info) {
+        padding-top: px2rem(34);
+    }
+    @include e(total) {
+        float: left;
+
+        > .tip {
+            color: $m-gray-base;
+            font-size: px2rem(28);
+        }
+        > .num {
+            color: $m-brand-danger;
+            font-size: px2rem(30);
+        }
+    }
+    @include e(complete) {
+        float: right;
+        color: $m-gray-base;
+        font-size: px2rem(28);
+    }
+    @include e(bar) {
+        height: px2rem(4);
+        width: 100%;
+        background-color: $m-gray-light;
+        border-radius: px2rem(2);
+        position: relative;
+
+        > .bar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: $m-brand-info;
+            border-top-left-radius: px2rem(2);
+            border-bottom-left-radius: px2rem(2);
+        }
+    }
+}
+@include b(regular_detail_content){
+    margin-top: px2rem(20);
+    background-color: #fff;
+
 	@include e(dl){
-		margin:0 px2rem(35);
+        padding: px2rem(34) 0 px2rem(16);
+
 		dt{
-			color:#222;
-			margin:px2rem(20) 0;
+			color: $gray-base;
+			padding-bottom: px2rem(18);
 		}
 		dd{
-			margin-left : 0;
-			color:#909090;
+			padding-bottom: px2rem(40);
+			color: $m-gray-base;
 			font-size: px2rem(28);
 		}
 	}
+}
+@include b(regular_detail_tab) {
+    margin-top: px2rem(20);
+    background-color: #fff;
+}
+@include b(regular_detail_comment) {
+    padding: px2rem(20) 0 px2rem(43);
+    color: $m-gray-base;
+    font-size: px2rem(28);
+}
+@include b(regular_detail_btn) {
+    padding-bottom: px2rem(24);
+}
+
+@include b(regular_detail_team) {
+
+    @include e(title) {
+        color: $m-gray-base;
+        font-size: px2rem(34);
+        margin: px2rem(20) 0 px2rem(45);
+    }
+    @include e(content) {
+
+        > dt {
+            color: $gray-base;
+            font-size: px2rem(34);
+            margin-bottom: px2rem(20);
+            line-height: px2rem(34);
+            // font-weight: bold;
+
+            > span {
+                display: inline-block;
+                width: px2rem(20);
+                height: px2rem(20);
+                border: 2px solid $brand-primary;
+                border-radius: 50%;
+                margin-right: px2rem(10);
+            }
+        }
+        > dd {
+            color: $m-gray-base;
+            margin-bottom: px2rem(45);
+            line-height: px2rem(60);
+
+            > .list {
+                padding-top: px2rem(16);
+                padding-left: px2rem(40); 
+            }
+        }
+    }
+}
+@include b(regular_detail_history) {
+    padding-top: px2rem(20);
+}
+@include b(regular_detail_history_tab) {
+    background-color: #fff;
+
+    @include e(img) {
+        background-color: $m-gray-lightest;
+        padding: px2rem(46) px2rem(50);
+        margin-left: px2rem(-35);
+        display: none;
+
+        > img {
+            width: 100%;
+        }
+    }
+    .tab__item {
+        .fa-angle-down {
+            display: none;
+        }
+    }
 }

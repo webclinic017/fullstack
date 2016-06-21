@@ -1,8 +1,53 @@
-<% 
-	model.aImages.forEach(function(sImage, index){
-%>
-<p>交易图标<%= index+1 %></p>
-<img style="border:1px solid red" src="<%= sImage %>" />
-<%
-	})
-%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    </head>
+    <!-- build:css(.tmp) /styles/m_vendor.css -->
+        <link rel="stylesheet" href="/styles/m_vendor.css">
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp) /styles/m_regular_detail.css -->
+        <link rel="stylesheet" href="/styles/m_regular_detail.css">
+    <!-- endbuild -->
+    <% include ../common/m_css_vendor.html %>
+    <body>
+        <div class="regular_detail">
+            <div class="regular_detail_history">
+                <div class="regular_detail_history_tab">
+                    <div class="tab">
+                        <% 
+                            model.aImages.forEach(function(sImage, index){
+                        %>
+                        <div class="tab__item">
+                            <a href="javascript:;">
+                                交易图标<%= index+1 %>
+                                <span>
+                                    <i class="fa fa-angle-down"></i>
+                                    <i class="fa fa-angle-up"></i>
+                                </span>
+                            </a>
+                            <div class="regular_detail_history_tab__img">
+                                <img src="<%= sImage %>" />
+                            </div>
+                        </div>
+                        <%
+                            })
+                        %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+    <% include ../common/m_js_vendor.html %>
+    <!-- build:js(client) /scripts/m_vendor.js -->
+    <script src="/bower_components/jquery-3.0.0.min/index.js"></script>
+    <!-- endbuild -->
+    <!-- build:js(client) /scripts/m_regular_detail.js -->
+        <script src="/scripts/regular/m_regular_detail.js"></script>
+    <!-- endbuild -->
+</html>

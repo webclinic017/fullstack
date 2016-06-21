@@ -48,47 +48,78 @@
                 </ul>
             </div>
             <div class="regular_detail_progress">
-                <div class="clearfix">
-                    <p>
-                        <span>总复制金额</span>
-                        <span>
-                            <%= model.money_copy_max %>
-                        </span>  
+                <div class="regular_detail__mar35">
+                    <div class="regular_detail_progress__info clearfix">
+                        <p class="regular_detail_progress__total">
+                            <span class="tip">总复制金额</span>
+                            <span class="num">
+                                <%= model.money_copy_max %>
+                            </span>  
+                        </p>
+                        <p class="regular_detail_progress__complete">
+                            已完成 <%= model.progress %>%
+                        </p>
+                    </div>
+                    <div class="regular_detail_progress__bar">
+                        <span class="bar" style="width: <%= model.progress %>%"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="regular_detail_content">
+                <dl class="regular_detail_content__dl regular_detail__mar35">
+                    <dt>复制封闭期</dt>
+                    <dd>
+                        <%= model.period %>（复制者在封闭期间不能操作账户，比如下单和平仓等，封闭期结束后拥有账户操作权）
+                    </dd>
+                    <dt>预约复制时间</dt>
+                    <dd>
+                        <%= model.m_detail_appoint_time %>
+                    </dd>
+                    <dt>账户交易时间</dt>
+                    <dd>
+                        <%= model.trade_time %>
+                    </dd> 
+                    <dt>风险控制机制</dt>
+                    <dd>
+                        <%= model.desc_risk %>
+                    </dd>
+                    <dt>高手报酬分成</dt>
+                    <dd>
+                        <%= model.desc_divide %>
+                    </dd> 
+                    <dt>报名限制</dt>
+                    <dd>
+                        <%= model.max_desc %>
+                    </dd> 
+                    <dt>备注</dt>
+                    <dd>
+                        <%= model.note %>
+                    </dd> 
+                </dl>
+            </div>
+            <div class="regular_detail_tab">
+                <div class="tab">
+                    <p class="tab__item">
+                        <a href="/m/regular/detail/team/<%= model.team%>">
+                            高手团队介绍
+                            <span><i class="fa fa-angle-right"></i></span>
+                        </a>
                     </p>
-                    <p>
-                        已完成 <%= model.progress %>%
+                    <p class="tab__item">
+                        <a href="/m/regular/detail/history/<%= model.team%>">
+                            历史交易图表
+                            <span><i class="fa fa-angle-right"></i></span>
+                        </a>
                     </p>
                 </div>
             </div>
-
-
-            <div class="detail">
-                <dl class="detail__dl">
-                    <dt>复制封闭期</dt>
-                    <dd><%= model.period %>（复制者在封闭期间不能操作账户，比如下单和平仓等，封闭期结束后拥有账户操作权）</dd>
-                    <dt>预约复制时间</dt>
-                    <dd><%= model.m_detail_appoint_time %> </dd>
-                    <dt>账户交易时间</dt>
-                    <dd><%= model.trade_time %></dd> 
-                    <dt>风险控制机制</dt>
-                    <dd><%= model.desc_risk %></dd>
-                    <dt>高手报酬分成</dt>
-                    <dd><%= model.desc_divide %></dd> 
-                    <dt>报名限制</dt>
-                    <dd><%= model.max_desc %></dd> 
-                    <dt>备注</dt>
-                    <dd><%= model.note %></dd> 
-                </dl>
-            </div>
-            <div class="tab">
-                <p><a href="/m/regular/detail/team/<%= model.team%>">高手团队介绍</a></p>
-                <p><a href="/m/regular/detail/history/<%= model.team%>">历史交易图标</a></p>
-            </div>
-            <div class="comment">
+            <div class="regular_detail_comment regular_detail__mar35">
                 温馨提示：本产品上收益率仅为过往情况评估，仅供参考，不代表未来收益情况
             </div>
-            <div class="action">
-                <input type="button" id="signup" value="立即预约" />
+            <div class="regular_detail_btn regular_detail__mar35">
+                <button class="btn btn-primary btn-lg">
+                    立即预约
+                </button>
             </div>
         </div>
     </body>
