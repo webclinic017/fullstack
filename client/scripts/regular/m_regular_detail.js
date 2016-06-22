@@ -46,7 +46,7 @@ jQuery(function($){
     });
 
     // native 调用方法
-    function tigerwitWeb (oAction) {
+    window.tigerwitWeb = function (oAction) {
         var login = JSON.parse(oAction).type;
 
         openMdl(login);
