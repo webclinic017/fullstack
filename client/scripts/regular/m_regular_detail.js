@@ -23,4 +23,43 @@ jQuery(function($){
         }
         
     });
+
+    var $body = $("body"); 
+    var $regularBtn = $("#regular_detail_btn");
+    var $modalBackdrop = $(".regular_modal__backdrop");
+    var $modalWrapperLogin = $(".regular_modal__wrapper.is_login");
+    var $modalWrapperNotLogin = $(".regular_modal__wrapper.not_login");
+    var $modalBtn = $(".modal_btn");
+
+    $regularBtn.click(function () {
+        // tigerwitWeb("{\"type\": 1}");
+        callNative({
+          type:"checkLogin"
+        });
+    });
+
+    $modalBtn.click(function () {
+        $body.removeClass("modal-open");
+        $modalBackdrop.css("display", "none");
+        $modalWrapperLogin.css("display", "none");
+        $modalWrapperNotLogin.css("display", "none");
+    });
+
+    // native 调用方法
+    function tigerwitWeb (oAction) {
+        var login = JSON.parse(oAction).type;
+
+        openMdl(login);
+    }
+
+    function openMdl (login) {
+        $body.addClass("modal-open");
+        $modalBackdrop.css("display", "block");
+
+        if (login) {
+            $modalWrapperLogin.css("display", "block");
+        } else {
+            $modalWrapperNotLogin.css("display", "block");
+        }
+    }
 });

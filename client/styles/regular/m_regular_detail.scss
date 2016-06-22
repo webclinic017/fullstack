@@ -1,3 +1,6 @@
+.modal-open {
+    overflow: hidden;
+}
 @include b(regular_detail) {
     background-color: $m-background-color;
 
@@ -176,6 +179,56 @@
     .tab__item {
         .fa-angle-down {
             display: none;
+        }
+    }
+}
+@include b(regular_modal) {
+    @include e(backdrop) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1070;
+        height: 20000px;
+        background-color: #000;
+        opacity: 0.5;
+        z-index: 100;
+        display: none;
+    }
+    @include e(wrapper) {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 200;
+        display: none;
+    }
+    @include e(content) {
+        width: px2rem(480);
+        background-color: #fff;
+        position: absolute;
+        top: px2rem(100);
+        left: 50%;
+        margin-left: px2rem(-240);
+        border-radius: 4px;
+
+        > .title {
+            background-color: #cdcdd3;
+            color: #fff;
+            padding: px2rem(15) 0 px2rem(15) px2rem(30);
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+        }
+        > .content {
+            text-align: center;
+            padding: px2rem(60) px2rem(30);
+        }
+        > .modal_btn {
+            text-align: center;
+            padding-bottom: px2rem(30);
         }
     }
 }
