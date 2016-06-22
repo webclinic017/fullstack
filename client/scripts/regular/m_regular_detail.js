@@ -8,18 +8,20 @@ jQuery(function($){
         flagIndex[i] = true;
     }
 
-    $historyTab.click(function () {
+    $historyTab.on('click', function () {
         index = $(this).parent().index();
         if (flagIndex[index]) {
             flagIndex[index] = false;
-            $(this).find(".fa-angle-up").css("display", "none");
-            $(this).find(".fa-angle-down").css("display", "block");
-            $(this).parent().find(".regular_detail_history_tab__img").css("display", "block");
+            $(this).find(".fa-angle-up").removeClass('active');
+            $(this).find(".fa-angle-down").addClass('active');
+            $(this).parent().find(".regular_detail_history_tab__img").addClass('active');
+            $(this).parent().addClass("no-border");
         } else {
             flagIndex[index] = true;
-            $(this).find(".fa-angle-down").css("display", "none");
-            $(this).find(".fa-angle-up").css("display", "block");
-            $(this).parent().find(".regular_detail_history_tab__img").css("display", "none");
+            $(this).find(".fa-angle-down").removeClass('active');
+            $(this).find(".fa-angle-up").addClass('active');
+            $(this).parent().find(".regular_detail_history_tab__img").removeClass('active');
+            $(this).parent().removeClass("no-border");
         }
         
     });
@@ -27,39 +29,33 @@ jQuery(function($){
     var $body = $("body"); 
     var $regularBtn = $("#regular_detail_btn");
     var $modalBackdrop = $(".regular_modal__backdrop");
-    var $modalWrapperLogin = $(".regular_modal__wrapper.is_login");
-    var $modalWrapperNotLogin = $(".regular_modal__wrapper.not_login");
+    var $modalWrapperLogin = $(".regular_modal__wrapper");
     var $modalBtn = $(".modal_btn");
 
-    $regularBtn.click(function () {
-        // tigerwitWeb("{\"type\": 1}");
+    $regularBtn.on('click', function () {
         callNative({
           type:"checkLogin"
         });
     });
 
-    $modalBtn.click(function () {
+    $modalBtn.on('click', function () {
         $body.removeClass("modal-open");
-        $modalBackdrop.css("display", "none");
-        $modalWrapperLogin.css("display", "none");
-        $modalWrapperNotLogin.css("display", "none");
+        $modalBackdrop.removeClass("active");
+        $modalWrapperLogin.removeClass("active");
     });
 
     // native 调用方法
-    window.tigerwitWeb = function (oAction) {
-        var login = JSON.parse(oAction).type;
+    window.tigerwitWeb = function (sAction) {
 
-        openMdl(login);
-    }
+        openMdl(sAction);
+    };
 
     function openMdl (login) {
-        $body.addClass("modal-open");
-        $modalBackdrop.css("display", "block");
 
-        if (login) {
-            $modalWrapperLogin.css("display", "block");
-        } else {
-            $modalWrapperNotLogin.css("display", "block");
+        if (login == '1') {
+            $body.addClass("modal-open");
+            $modalBackdrop.addClass("active");
+            $modalWrapperLogin.addClass("active");
         }
     }
 });

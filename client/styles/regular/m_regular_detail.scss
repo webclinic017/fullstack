@@ -172,13 +172,33 @@
         margin-left: px2rem(-35);
         display: none;
 
+        &.active {
+            display: block;
+        }
+
         > img {
             width: 100%;
         }
     }
     .tab__item {
+        &.no-border {
+            border: none;
+        }
+        
         .fa-angle-down {
             display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        .fa-angle-up {
+            display: none;
+
+            &.active {
+                display: block;
+            }
         }
     }
 }
@@ -194,6 +214,10 @@
         opacity: 0.5;
         z-index: 100;
         display: none;
+
+        &.active {
+            display: block;
+        }
     }
     @include e(wrapper) {
         position: fixed;
@@ -205,6 +229,10 @@
         overflow-y: auto;
         z-index: 200;
         display: none;
+
+        &.active {
+            display: block;
+        }
     }
     @include e(content) {
         width: px2rem(480);
