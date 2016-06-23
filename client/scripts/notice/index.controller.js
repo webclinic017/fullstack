@@ -24,6 +24,8 @@
 
         var pagesize = 10;
 
+        $scope.openNotice = openNotice;
+
         getNoticeList(1);
 
         if ($location.path() === '/space/notice') {
@@ -35,8 +37,18 @@
         function getNoticeList(page) {
             $scope.page = page;
             account.getNoticeList(page, pagesize).then(function(data) {
-                // console.info(data.data);
+                
                 $scope.noticeList = data.data;
+
+                angular.forEach($scope.noticeList, function (value, index) {
+                    value.openOrClose = 'open';
+
+                    if (value.content.length > 150) {
+                        value.contentOmit = value.content.substring(0, 150) + '...';
+                    } else {
+                        value.contentOmit = value.content;
+                    }
+                });
 
                 $scope.$emit('showLoadingImg');
 
@@ -47,6 +59,17 @@
 
                 $scope.$broadcast('hideLoadingImg');
             });
+        }
+
+        // 展开/收起 消息 status-> 0 收起 1 展开
+        function openNotice (notice, status) {
+            if (status) {
+                notice.contentOmit = notice.content;
+                notice.openOrClose = 'close';
+            } else {
+                notice.contentOmit = notice.content.substring(0, 150) + '...';
+                notice.openOrClose = 'open';
+            }
         }
 
         // 所有消息设置为已读

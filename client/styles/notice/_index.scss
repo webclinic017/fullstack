@@ -25,4 +25,16 @@
     @include e (li-info) {
         margin-top: 5px;
     }
+
+    @include e(open) {
+        color: $brand-info;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    @include e(close) {
+        @extend .notice__open;
+    }
 }

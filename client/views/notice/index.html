@@ -6,8 +6,14 @@
             <div class="row">
                 <div class="col-xs-12">
                     <p class="notice__li-title">{{notice.title}}</p>
-                    <p class="notice__li-info" ng-bind-html="formatText(notice.content) | bindhtml">
+                    <p class="notice__li-info" ng-bind-html="formatText(notice.contentOmit) | bindhtml">
                     </p>
+                    <div ng-if="notice.content.length > 150 && notice.openOrClose == 'open'" class="text-right">
+                        <a class="notice__open" href="" ng-click="openNotice(notice, 1)">展开</a>
+                    </div>
+                    <div ng-if="notice.content.length > 150 && notice.openOrClose == 'close'" class="text-right">
+                        <a class="notice__close" href="" ng-click="openNotice(notice, 0)">收起</a>
+                    </div>
                 <p class="font-size-12"> {{notice.send_time}}</p>
                 </div>
             </div>
