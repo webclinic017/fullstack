@@ -72,9 +72,9 @@ module.exports = {
 			withdraw_history : "25%",    //历史最高回撤
 			profit_rate_wish : "60%",  //预期年化收益率
 			profit_rate_now : null, //实时年化收益率
-			end_date_appoint : "2016.07.12 18:00", //预约结束时间
-			start_date_trade : '2016.07.13 00:00',  //开始交易时间
-			end_date_trade : '2016.10.13 00:00',  //结束交易时间  exam : '2016.5.19'
+			end_date_appoint : "2017.07.12 18:00", //预约结束时间
+			start_date_trade : '2017.07.13 00:00',  //开始交易时间
+			end_date_trade : '2017.10.13 00:00',  //结束交易时间  exam : '2016.5.19'
 			team_intro : "team_huiying", //文件名，团队介绍模块
 			jiafang:"赵海峰(主操盘手)", //甲方，操盘手，出现在agree里
 			progress : 10, //投资进度 exam:50
@@ -93,9 +93,9 @@ module.exports = {
 			withdraw_history : "25%",    //历史最高回撤
 			profit_rate_wish : "60%~80%",  //预期年化收益率
 			profit_rate_now : null, //实时年化收益率
-			end_date_appoint : "2016.07.12 18:00", //预约结束时间
-			start_date_trade : '2016.07.13 00:00',  //开始交易时间
-			end_date_trade : '2017.07.13 00:00',  //结束交易时间  exam : '2016.5.19'
+			end_date_appoint : "2017.07.12 18:00", //预约结束时间
+			start_date_trade : '2017.07.13 00:00',  //开始交易时间
+			end_date_trade : '2018.07.13 00:00',  //结束交易时间  exam : '2016.5.19'
 			jiafang:"赵海峰(主操盘手)", //甲方，操盘手，出现在agree里
 			team_intro : "team_huiying", //文件名，团队介绍模块
 			desc_risk : "动用杠杆不超过10倍；亏损达到账户初始资金的30%时触发预警；亏损达到账户初始资金的40%时触发熔断，交易将会停止一周，一周后再开始交易；账户的清盘线设置在亏损50%；账户亏损的部分，投资人承担30%，汇赢团队承担70%", //风险控制
