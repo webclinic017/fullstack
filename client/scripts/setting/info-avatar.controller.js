@@ -31,14 +31,8 @@
         });
 
         function changeAvatar(personal) {
-            var mdAvatar = personal.mdAvatar;
-            var lgAvatar = personal.lgAvatar;
-            var index = mdAvatar.indexOf('?timestamp=');
-
-            if (index !== -1) {
-                mdAvatar = mdAvatar.slice(0, index);
-                lgAvatar = lgAvatar.slice(0, index);
-            }
+            var mdAvatar = personal.mdAvatar.replace(/\?timestamp=.*/g,'');
+            var lgAvatar = personal.lgAvatar.replace(/\?timestamp=.*/g,'');
             personal.mdAvatar = mdAvatar + '?timestamp=' + (+new Date());
             personal.lgAvatar = lgAvatar + '?timestamp=' + (+new Date());
         }
