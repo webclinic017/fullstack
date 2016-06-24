@@ -189,12 +189,14 @@ module.exports = function () {
         "oil33": {"en": "MBTU", "zh": "百万英国热量单位"},
         "oil34": {"en": "barrels", "zh": "桶"},
         "oil35": {"en": "USD", "zh": "美元"},
-        "oil36": {"en": "01:00 on Monday - 23:55 on Friday", "zh": "周一01:00-周五23:55"},
-        "oil37": {"en": "00:00-01:00 of platform time per day", "zh": "每日平台时间00:00-01:00"},
+        "oil36": {"en": "03:00 on Monday - 24:00 on Friday", "zh": "周一03:00-周五24:00"},
+        "oil37": {"en": "00:00-03:00 of platform time per day", "zh": "每日平台时间00:00-03:00"},
         "oil38": {"en": "As for energy contract taking NYMEX US natural gas products as the benchmark, natural gas satisfies about 1/4 energy demands of the US and can also be used as hedging tool for such products as electricity option.", "zh": "以NYMEX交易所美国天然气产品为基准的能源合约，天然气提供了美国四分之一左右的能源需求，同时可作为电力期权等产品的对冲工具"},
         "oil39": {"en": "Desulfurized light crude oil contract with NYMEX US crude oil as the benchmark is one of the two crude oil benchmarking products in the world and is applied by many countries as the pricing datum of crude oil products, which is also the energy contract with the largest trading volume in the world.", "zh": "以NYMEX交易所美国原油为基准的脱硫轻质原油合约，是全球两大原油基准产品之一，被用于多国原油产品的定价基准。也是世界上交易量最大的能源合约"},
         "oil40": {"en": "Commonly known as North Sea oil, which is also desulfurized light crude oil. Pricing datum of crude oil in Europe and one of the two major crude oil benchmarking products in the world, which can also be applied as hedging product against West Texas crude oil", "zh": "即是俗称的北海油，同样是脱硫轻质原油。是欧洲地区的原油定价基准，也是全球两大原油基准产品之一，可以用于与西德州原油进行对冲的产品"},
-        
+        "oil41": {"en": "01:00 on Monday - 24:00 on Friday", "zh": "周一01:00-周五24:00"},
+	"oil42": {"en": "00:00-01:00 of platform time per day", "zh": "每日平台时间00:00-01:00"},
+	
         // 产品介绍－贵金属交易 metal
         "metal1": {"en": "As the most ancient, most traditional and most widely recognized currency symbol, precious metals fall into the category of traditional safe-haven assets, which occupy an important position in industrial manufacture and have both the property and commodity property of safe-haven currencies. ", "zh": "作为人类文明最古老的最传统最被广泛认可的货币符号，属于传统的避险资产，同时随着科技的进步，也在工业生产中占据了重要的地位，同时具有避险货币的属性与商品属性 。"},
         "metal2": {"en": "What is spot gold and silver trading? ", "zh": "什么是现货黄金、白银交易"},
