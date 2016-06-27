@@ -26,6 +26,17 @@ jQuery(function($){
         
     });
 
+    var $tabItem = $(".regular_detail_tab .tab__item").find("a");
+
+    $tabItem.on('click', function  () {
+        callNative({
+            type:"openUrl",
+            url : $(this).href
+        });
+
+        return false;
+    });
+
     var $body = $("body"); 
     var $regularBtn = $("#regular_detail_btn");
     var $modalBackdrop = $(".regular_modal__backdrop");

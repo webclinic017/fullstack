@@ -284,6 +284,18 @@ module.exports = function(app) {
                 }
             });
         }
+
+        if (action == "version_check") {
+            var system = req.query.system;
+            var versionCode = req.query.version_code;
+            var currentVersion = {
+                version_name: "V3.0",
+                description: "全新产品。。",
+                url: "http://www.tigerwit.com/download",
+                force_update: false
+            };
+            data = currentVersion;
+        }
         if(data){
             rs = {
                 is_succ : true,
