@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('SettingInfoPwdController', SettingInfoPwdController);
 
-    SettingInfoPwdController.$inject = ['$scope', '$timeout', 'validator', 'account'];
+    SettingInfoPwdController.$inject = ['$scope', '$timeout', 'validator', 'account', '$window'];
 
-    function SettingInfoPwdController($scope, $timeout, validator, account) {
+    function SettingInfoPwdController($scope, $timeout, validator, account, $window) {
         $scope.password = {
             pwdOld: undefined,
             pwdNew: undefined,
@@ -68,6 +68,14 @@
                         $scope.backErr.system.show = false;
                         $scope.backErr.system.status = 0;
                         $scope.clickable = true;
+
+                        //修改完密码让用户重新登录
+                        account.logout().then(function (data) {
+                            if (data.is_succ) {
+                                account.hasChecked = false;
+                                $window.location.href='/space/#/account/login';
+                            }
+                        });                        
                     }, 3000);
                 }
             });
