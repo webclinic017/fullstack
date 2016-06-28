@@ -38,7 +38,7 @@ jQuery(function($){
     $tabItem.on('click', function  () {
         callNative({
             type: "openUrl",
-            url : $(this).href
+            url : $(this).get(0).href
         });
 
         return false;
