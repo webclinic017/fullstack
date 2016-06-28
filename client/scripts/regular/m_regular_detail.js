@@ -26,11 +26,18 @@ jQuery(function($){
         
     });
 
+    $(".native_open_img img").on('click', function () {
+        callNative({
+            type: "openImage",
+            url : $(this).attr("src")
+        });
+    });
+
     var $tabItem = $(".regular_detail_tab .tab__item").find("a");
 
     $tabItem.on('click', function  () {
         callNative({
-            type:"openUrl",
+            type: "openUrl",
             url : $(this).href
         });
 
