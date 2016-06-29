@@ -5,6 +5,7 @@ jQuery(function($){
     var index,
         name,
         phone;
+    var overHidden = false;
 
     for (var i=0; i<$historyTab.length; i++) {
         flagIndex[i] = true;
@@ -63,6 +64,7 @@ jQuery(function($){
         $body.removeClass("modal-open");
         $modalBackdrop.removeClass("active");
         $modalWrapperLogin.removeClass("active");
+        overHidden = false;
     });
 
     // native 调用方法
@@ -78,10 +80,17 @@ jQuery(function($){
         }
     }
 
+    $('body').on('touchmove', function (event) {
+        if (overHidden) {
+            event.preventDefault();
+        }
+    });
+
     function setMessage () {
         $body.addClass("modal-open");
         $modalBackdrop.addClass("active");
         $modalLoading.addClass("active");
+        overHidden = true;
 
         $.post('/action/public/v3/closed_fund_leads', {
             phone: phone,
@@ -100,5 +109,7 @@ jQuery(function($){
         result = JSON.parse(result);
         name = result.realname;
         phone = result.phone;
+    }, function (data) {
+        console.info(data);
     });
 });
