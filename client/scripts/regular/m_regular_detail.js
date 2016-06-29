@@ -2,7 +2,9 @@ jQuery(function($){
 	var $historyTab = $(".regular_detail_history_tab").find(".tab__item a");
     var $historyImg = $(".regular_detail_history_tab").find(".regular_detail_history_tab__img");
     var flagIndex = {};
-    var index;
+    var index,
+        name,
+        phone;
 
     for (var i=0; i<$historyTab.length; i++) {
         flagIndex[i] = true;
@@ -47,6 +49,7 @@ jQuery(function($){
     var $body = $("body"); 
     var $regularBtn = $("#regular_detail_btn");
     var $modalBackdrop = $(".regular_modal__backdrop");
+    var $modalLoading = $(".regular_modal__loading");
     var $modalWrapperLogin = $(".regular_modal__wrapper");
     var $modalBtn = $(".modal_btn");
 
@@ -71,9 +74,31 @@ jQuery(function($){
     function openMdl (login) {
 
         if (login == '1') {
-            $body.addClass("modal-open");
-            $modalBackdrop.addClass("active");
-            $modalWrapperLogin.addClass("active");
+            setMessage();
         }
     }
+
+    function setMessage () {
+        $body.addClass("modal-open");
+        $modalBackdrop.addClass("active");
+        $modalLoading.addClass("active");
+
+        $.post('/action/public/v3/closed_fund_leads', {
+            phone: phone,
+            title: $(".regular_detail").attr("data-title"),
+            username: name
+        }).then(function (data) {
+            // console.info(data);
+            if (data.error_code == 0) {
+                $modalLoading.removeClass("active");
+                $modalWrapperLogin.addClass("active");
+            }
+        });
+    }
+
+    $.get('/api/v1/get_info?type=Profile').then(function(result){
+        result = JSON.parse(result);
+        name = result.realname;
+        phone = result.phone;
+    });
 });

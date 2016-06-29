@@ -14,7 +14,7 @@
     <!-- endbuild -->
     <% include common/m_css_vendor.html %>
     <body>
-    	<div class="regular_detail">
+    	<div class="regular_detail" data-title="<%= model.name %>">
             <div class="regular_detail_summary">
                 <div class="regular_detail_summary__info text-center">
                     <p class="regular_detail_summary__info-tit">
@@ -123,6 +123,7 @@
             </div>
         </div>
         <div class="regular_modal__backdrop"></div>
+        <div class="regular_modal__loading">loading...</div>
         <div class="regular_modal__wrapper">
             <div class="regular_modal__content">
                 <div class="title">
