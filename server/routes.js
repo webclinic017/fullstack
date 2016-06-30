@@ -293,11 +293,17 @@ module.exports = function(app) {
         if (action == "version_check") {
             var system = req.query.system;
             var versionCode = req.query.version_code;
+            // var currentVersion = {
+            //     version_name: "V2.0",
+            //     description: "上线全新外汇产品，交互全新改版!",
+            //     url: "http://www.tigerwit.com/download",
+            //     force_update: true
+            // };
             var currentVersion = {
-                version_name: "V2.0",
-                description: "上线全新外汇产品，交互全新改版!",
-                url: "http://www.tigerwit.com/download",
-                force_update: true
+                version_name: "",
+                description: "",
+                url: "",
+                force_update: false
             };
             data = currentVersion;
         }

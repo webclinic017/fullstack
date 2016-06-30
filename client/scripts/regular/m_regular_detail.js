@@ -145,7 +145,7 @@ jQuery(function($){
     $agreementBtn.on('click', function () {
         callNative({
             type: "openUrl",
-            url : $(this).get(0).href + '?name=' + $username.val()
+            url : $(this).get(0).href + '?name=' + encodeURIComponent($username.val())
         });
 
         return false;
