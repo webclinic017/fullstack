@@ -123,19 +123,60 @@
             </div>
         </div>
         <div class="regular_modal__backdrop"></div>
-        <div class="regular_modal__loading">loading...</div>
         <div class="regular_modal__wrapper">
-            <div class="regular_modal__content">
+            <div class="regular_modal__content info active">
+                <div class="regular-close">
+                    <span>x</span>
+                </div>
                 <div class="title">
-                    系统提示
+                    <h4>预约资料：</h4>
+                    <span>客服咨询：400-809-8509</span>
                 </div>
                 <div class="content">
-                    预约成功，会有工作人员联系您，请您耐心等候。
+                    <div class="regular_detail_form__wrapper">
+                        <input type="text"
+                               class="regular_detail_form__input username"
+                               placeholder="您的姓名">
+                    </div>
+                    <div class="regular_detail_form__wrapper">
+                        <input type="text"
+                               class="regular_detail_form__input phone"
+                               placeholder="您的联系电话">
+                    </div>
                 </div>
+                <p class="checkbox-wrapper">
+                    <input class="check_agreement" type="checkbox" checked />
+                    同意并遵守
+                    <a href="/m/regular/agree/<%= model.id %>" class="font-info">
+                        委托协议书
+                    </a>
+                </p>
                 <div class="modal_btn">
-                    <button class="btn btn-primary">
-                    确定
-                </button>
+                    <button class="btn btn-primary btn-lg">
+                        立即预约
+                    </button>
+                </div>
+            </div>
+            <div class="regular_modal__content success">
+                <div class="regular-close">
+                    <span>x</span>
+                </div>
+                <div class="content">
+                    <h4 class="title">预约成功</h4>
+                    <p class="info">
+                        账户将在交易期间不能操作账户，比如下单和平仓等，请保持您的联系电话正常通信，老虎金融客服会尽快与您联系。
+                    </p>
+                </div>
+            </div>
+            <div class="regular_modal__content fail">
+                <div class="regular-close">
+                    <span>x</span>
+                </div>
+                <div class="content">
+                    <h4 class="title">预约失败</h4>
+                    <p class="info">
+                        请重新提交预约信息，或联系客服：400-809-8509
+                    </p>
                 </div>
             </div>
         </div>  

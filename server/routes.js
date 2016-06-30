@@ -78,6 +78,12 @@ module.exports = function(app) {
             detail_id : req.params.subpage || ""
         }, req));
     });
+    app.route('/m/regular/agree/:subpage').get(function(req, res){
+        res.render('m_regular_agree.html', extendPublic({
+            model : global_modelRegular,
+            detail_id : req.params.subpage || ""
+        }, req));
+    });
     app.route('/regular/detail/:subpage').get(function(req, res){
         res.render('regular_detail.html', extendPublic({
             model : gloal_modelRegularDetail(req.params.subpage || "")

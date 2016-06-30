@@ -56,7 +56,7 @@ module.exports = {
 			end_date_trade : '2016.08.18 00:00',  //结束交易时间  exam : '2016.5.19'
 			team_intro : "team_huiying", //文件名，团队介绍模块
 			jiafang:"汇赢全球基金管理公司", //甲方，操盘手，出现在agree里
-			progress : 3, //投资进度 exam:50
+			progress : 11, //投资进度 exam:50
 			desc_risk : "动用杠杆不超过10倍；亏损达到账户初始资金的10%时触发预警；亏损达到账户初始资金的15%时触发熔断，交易将会停止1-3天，然后再开始交易；账户的清盘线设置在亏损20%。", //风险控制
 			desc_divide : "盈利金额的30%(客户在该次复制交易中盈利达到10%时，结算一次)",//报酬分成
 			note : "无" //备注
@@ -77,7 +77,7 @@ module.exports = {
 			end_date_trade : '2017.10.13 00:00',  //结束交易时间  exam : '2016.5.19'
 			team_intro : "team_huiying", //文件名，团队介绍模块
 			jiafang:"汇赢全球基金管理公司", //甲方，操盘手，出现在agree里
-			progress : 10, //投资进度 exam:50
+			progress : 15, //投资进度 exam:50
 			desc_risk : "动用杠杆不超过10倍；亏损达到账户初始资金的15%时触发预警；亏损达到账户初始资金的20%时触发熔断，交易将会停止一周，一周后再开始交易；账户的清盘线设置在亏损30%。", //风险控制
 			desc_divide : "盈利金额的30%",//报酬分成
 			note : "无", //备注
@@ -101,7 +101,7 @@ module.exports = {
 			desc_risk : "动用杠杆不超过10倍；亏损达到账户初始资金的30%时触发预警；亏损达到账户初始资金的40%时触发熔断，交易将会停止一周，一周后再开始交易；账户的清盘线设置在亏损50%；账户亏损的部分，投资人承担30%，汇赢团队承担70%", //风险控制
 			desc_divide : "盈利金额的40%",//报酬分成
 			note : "无", //备注
-			progress : 5, //投资进度 exam:50
+			progress : 7, //投资进度 exam:50
 			spe_desc_time : "即日起至预约总金额达到$50W",//特殊产品的进展状态
 			spe_desc_trade : "预约总金额达到$50W后第二个交易日"//特殊产品的交易时间			
 		},
@@ -344,7 +344,7 @@ module.exports = {
 			desc = "账户交易时间：" + product.start_date_trade + ' - ' + product.end_date_trade;
 		}
 		if(product.spe_desc_time){
-			desc = this.getAppointTime(product);
+			desc = "预约复制时间：" + this.getAppointTime(product);
 		}		
 		return desc;
 	},

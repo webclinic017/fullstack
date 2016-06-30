@@ -50,35 +50,15 @@ jQuery(function($){
     var $body = $("body"); 
     var $regularBtn = $("#regular_detail_btn");
     var $modalBackdrop = $(".regular_modal__backdrop");
-    var $modalLoading = $(".regular_modal__loading");
     var $modalWrapperLogin = $(".regular_modal__wrapper");
-    var $modalBtn = $(".modal_btn");
-
-    $regularBtn.on('click', function () {
-        callNative({
-          type:"checkLogin"
-        });
-    });
-
-    $modalBtn.on('click', function () {
-        $body.removeClass("modal-open");
-        $modalBackdrop.removeClass("active");
-        $modalWrapperLogin.removeClass("active");
-        overHidden = false;
-    });
-
-    // native 调用方法
-    window.tigerwitWeb = function (sAction) {
-
-        openMdl(sAction);
-    };
-
-    function openMdl (login) {
-
-        if (login == '1') {
-            setMessage();
-        }
-    }
+    var $modalBtn = $(".modal_btn .btn");
+    var $closeModalBtn = $(".regular_modal__content .regular-close");
+    var $username = $(".regular_detail_form__input.username");
+    var $phone = $(".regular_detail_form__input.phone");
+    var $modalCont = $(".regular_modal__content"),
+        $modalInfo = $(".regular_modal__content.info"),
+        $modalSucc = $(".regular_modal__content.success"),
+        $modalFail = $(".regular_modal__content.fail");
 
     $('body').on('touchmove', function (event) {
         if (overHidden) {
@@ -86,21 +66,68 @@ jQuery(function($){
         }
     });
 
-    function setMessage () {
+    $regularBtn.on('click', function () {
+        // callNative({
+        //   type:"checkLogin"
+        // });
+        openMdl();
+    });
+
+    $closeModalBtn.on('click', function () {
+        closeMdl();
+    });
+
+    $modalBtn.on('click', function () {
+        submitForm();
+    });
+
+    // native 调用方法
+    // window.tigerwitWeb = function (sAction) {
+
+    //     openMdl(sAction);
+    // };
+
+    function openMdl () {
+        $modalCont.removeClass("active");
+        $modalInfo.addClass("active");
+
         $body.addClass("modal-open");
         $modalBackdrop.addClass("active");
-        $modalLoading.addClass("active");
+        $modalWrapperLogin.addClass("active");
         overHidden = true;
 
+        $username.val(name);
+        $phone.val(phone);
+    }
+
+    function closeMdl () {
+        $body.removeClass("modal-open");
+        $modalBackdrop.removeClass("active");
+        $modalWrapperLogin.removeClass("active");
+        overHidden = false;
+    }
+
+    function submitForm () {
+        if ($username.val() && $phone.val()) {
+            setMessage();
+        } else {
+            alert("姓名和手机号不能为空");
+        }
+    }
+
+    function setMessage () {
         $.post('/action/public/v3/closed_fund_leads', {
-            phone: phone,
+            phone: $phone.val(),
             title: $(".regular_detail").attr("data-title"),
-            username: name
+            username: $username.val()
         }).then(function (data) {
             // console.info(data);
             if (data.error_code == 0) {
-                $modalLoading.removeClass("active");
-                $modalWrapperLogin.addClass("active");
+                $modalCont.removeClass("active");
+                $modalSucc.addClass("active");
+            } else {
+                $modalCont.removeClass("active");
+                $modalFail.addClass("active");
             }
         });
     }
@@ -111,5 +138,16 @@ jQuery(function($){
         phone = result.phone;
     }, function (data) {
         console.info(data);
+    });
+
+    var $agreementBtn = $(".checkbox-wrapper a");
+
+    $agreementBtn.on('click', function () {
+        callNative({
+            type: "openUrl",
+            url : $(this).get(0).href + '?name=' + $username.val()
+        });
+
+        return false;
     });
 });
