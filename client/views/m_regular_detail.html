@@ -1,3 +1,6 @@
+<%
+    var status = model.status;
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -117,9 +120,43 @@
                 温馨提示：本产品上收益率仅为过往情况评估，仅供参考，不代表未来收益情况
             </div>
             <div class="regular_detail_btn regular_detail__mar35">
-                <button id="regular_detail_btn" class="btn btn-primary btn-lg">
-                    立即预约
-                </button>
+<%  
+    if(status == "before_appoint"){
+%>
+                    <button class="btn btn-primary btn-lg" disabled="disabled">
+                        即将开始
+                    </button>
+<%
+    }
+    if(status == "start_appoint"){
+%>     
+                    <button id="regular_detail_btn" class="btn btn-primary btn-lg">
+                        立即预约
+                    </button>
+<%
+    }
+    if(status == "end_appoint"){
+%>
+                    <button class="btn btn-primary btn-lg" disabled="disabled">
+                        预约结束
+                    </button>
+<%
+    }
+    if(status == "tradding"){
+%>
+                    <button class="btn btn-primary btn-lg" disabled="disabled">
+                        交易中
+                    </button>
+<%
+    }
+    if(status == "end_trade"){
+%>
+                    <button class="btn btn-primary btn-lg" disabled="disabled">
+                        交易已结束
+                    </button>
+<%
+      }
+%>
             </div>
         </div>
         <div class="regular_modal__backdrop"></div>
@@ -151,6 +188,7 @@
                         委托协议书
                     </a>
                 </p>
+
                 <div class="modal_btn">
                     <button class="btn btn-primary btn-lg">
                         立即预约
