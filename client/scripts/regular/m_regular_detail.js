@@ -52,7 +52,7 @@ jQuery(function($){
     var $modalBackdrop = $(".regular_modal__backdrop");
     var $modalWrapperLogin = $(".regular_modal__wrapper");
     var $modalBtn = $(".modal_btn .btn");
-    var $closeModalBtn = $(".regular_modal__content .regular-close");
+    var $closeModalBtn = $(".regular_modal__content .regular-close span");
     var $username = $(".regular_detail_form__input.username");
     var $phone = $(".regular_detail_form__input.phone");
     var $modalCont = $(".regular_modal__content"),
@@ -76,6 +76,9 @@ jQuery(function($){
     $closeModalBtn.on('click', function () {
         closeMdl();
     });
+    $modalBackdrop.on('click', function () {
+        closeMdl();
+    });
 
     $modalBtn.on('click', function () {
         submitForm();
@@ -96,15 +99,23 @@ jQuery(function($){
         $modalWrapperLogin.addClass("active");
         overHidden = true;
 
+        setTimeout(function () {
+            $modalWrapperLogin.addClass("in");
+        }, 1);
+
         $username.val(name);
         $phone.val(phone);
     }
 
     function closeMdl () {
-        $body.removeClass("modal-open");
-        $modalBackdrop.removeClass("active");
-        $modalWrapperLogin.removeClass("active");
-        overHidden = false;
+        $modalWrapperLogin.removeClass("in");
+
+        setTimeout(function () {
+            $body.removeClass("modal-open");
+            $modalBackdrop.removeClass("active");
+            $modalWrapperLogin.removeClass("active");
+            overHidden = false;
+        }, 350);
     }
 
     function submitForm () {

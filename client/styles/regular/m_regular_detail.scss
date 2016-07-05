@@ -255,7 +255,7 @@
     // }
     @include e(wrapper) {
         position: fixed;
-        top: 0;
+        top: 30%;
         right: 0;
         bottom: 0;
         left: 0;
@@ -267,15 +267,22 @@
         &.active {
             display: block;
         }
+        &.in {
+            .regular_modal__content {
+                transform: translate(0, 0);
+            }
+        }
     }
     @include e(content) {
         width: 100%;
-        height: 70%;
+        height: 100%;
         background-color: $m-gray-modal;
         position: absolute;
-        top: 30%;
+        top: 0;
         left: 0;
         display: none;
+        transition: transform .35s ease-out;
+        transform: translate(0, 100%);
 
         &.active {
             display: block;
@@ -323,7 +330,7 @@
             text-align: right;
 
             > span {
-                padding: px2rem(15) px2rem(15) 0 0;
+                padding: px2rem(15) px2rem(15);
                 display: inline-block;
             }
         }
