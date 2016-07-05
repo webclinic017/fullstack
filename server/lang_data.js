@@ -184,7 +184,7 @@ module.exports = function () {
         "oil28": {"en": "Maximum trading volume (lot)", "zh": "最大交易量(手)"},
         "oil29": {"en": "Commission charge ($)", "zh": "手续费($)"},
         "oil30": {"en": "Trading time (MT4 platform time)", "zh": "交易时间(MT4平台时间)"},
-        "oil31": {"en": "Quotation closing time (platform time)", "zh": "报价关闭时间(平台时间)"},
+        "oil31": {"en": "Quotation time (platform time)", "zh": "报价时间(平台时间)"},
         "oil32": {"en": "Product introduction", "zh": "产品简介"},
         "oil33": {"en": "MBTU", "zh": "百万英国热量单位"},
         "oil34": {"en": "barrels", "zh": "桶"},
@@ -195,7 +195,11 @@ module.exports = function () {
         "oil39": {"en": "Desulfurized light crude oil contract with NYMEX US crude oil as the benchmark is one of the two crude oil benchmarking products in the world and is applied by many countries as the pricing datum of crude oil products, which is also the energy contract with the largest trading volume in the world.", "zh": "以NYMEX交易所美国原油为基准的脱硫轻质原油合约，是全球两大原油基准产品之一，被用于多国原油产品的定价基准。也是世界上交易量最大的能源合约"},
         "oil40": {"en": "Commonly known as North Sea oil, which is also desulfurized light crude oil. Pricing datum of crude oil in Europe and one of the two major crude oil benchmarking products in the world, which can also be applied as hedging product against West Texas crude oil", "zh": "即是俗称的北海油，同样是脱硫轻质原油。是欧洲地区的原油定价基准，也是全球两大原油基准产品之一，可以用于与西德州原油进行对冲的产品"},
         "oil41": {"en": "01:00 on Monday - 24:00 on Friday", "zh": "周一01:00-周五24:00"},
-	"oil42": {"en": "00:00-01:00 of platform time per day", "zh": "每日平台时间00:00-01:00"},
+	    "oil42": {"en": "00:00-01:00 of platform time per day", "zh": "每日平台时间00:00-01:00"},
+        // 修改
+        "oil43": {"en": "on Monday", "zh": "周一"},
+        "oil44": {"en": "on Friday", "zh": "周五"},
+        "oil45": {"en": "per day", "zh": "每日"},
 	
         // 产品介绍－贵金属交易 metal
         "metal1": {"en": "As the most ancient, most traditional and most widely recognized currency symbol, precious metals fall into the category of traditional safe-haven assets, which occupy an important position in industrial manufacture and have both the property and commodity property of safe-haven currencies. ", "zh": "作为人类文明最古老的最传统最被广泛认可的货币符号，属于传统的避险资产，同时随着科技的进步，也在工业生产中占据了重要的地位，同时具有避险货币的属性与商品属性 。"},
@@ -258,7 +262,7 @@ module.exports = function () {
         "cfd26": {"en": "Minimum contract unit (standard lot)", "zh": "最小合约单位(标准手)"},
         "cfd27": {"en": "Maximum trading volume (lot)", "zh": "最大交易量(手)"},
         "cfd28": {"en": "Trading time (MT4 platform time)", "zh": "交易时间(MT4平台时间)"},
-        "cfd29": {"en": "Quotation closing time (platform time)", "zh": "报价关闭时间(平台时间)"},
+        "cfd29": {"en": "Quotation time (platform time)", "zh": "报价时间(平台时间)"},
         "cfd30": {"en": "Product introduction", "zh": "产品简介"},
         "cfd31": {"en": "lot", "zh": "手"},
         "cfd32": {"en": "contract", "zh": "合约"},
@@ -279,6 +283,11 @@ module.exports = function () {
         "cfd47": {"en": "Stock index of 30 major industrial enterprises of USA", "zh": "美国30家主要工业公司构成的股票指数"},
         "cfd48": {"en": "Stock index of 500 leading enterprises in USA", "zh": "美国500家领军企业构成的股票指数"},
         "cfd49": {"en": "Hang Seng Midcap 50 Index (HK50) is acquired from the weighted average of the market value of 50 largest enterprises listed in Hong Kong Stock Exchange. The index includes 60% market value and involves well-known enterprises, such as HSBC Group, China Construction Bank and China Mobile", "zh": "香港恒生 50 指数（HK50）由香港股票交易所上市的 50 家最大的上市公司的市值加权而得。该指数囊括 60% 的市值并包含了赫赫有名的公司，诸如汇丰集团、中国建设银行和中国移动"},
+        // 修改
+        "cfd50": {"en": "on Monday - on Thursday", "zh": "周一－周四"},
+        "cfd51": {"en": "on Monday - on Friday", "zh": "周一－周五"},
+        "cfd52": {"en": "xxx", "zh": "法国CAC40指数，代表的是法国巴黎证券交易所上市的股票中市值最高的100家大公司股票市值加权形成，所含成分股票每季度由独立委员会评选得出。"},
+        "cfd53": {"en": "", "zh": ""},
 
         // 关于老虎－关于老虎金融 about
         "about1": {"en": "About us", "zh": "关于我们"},
