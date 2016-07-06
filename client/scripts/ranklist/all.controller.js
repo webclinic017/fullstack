@@ -21,7 +21,7 @@
             $scope.$emit("showLoadingImg");
             $scope.masters.type = type;
             ranklist.getMastersList(type, sort).then(function (data) {
-                console.info(data);
+                // console.info(data);
                 
                 if (data.is_succ) {
                     $scope.$broadcast("hideLoadingImg");
