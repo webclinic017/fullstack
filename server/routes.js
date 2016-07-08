@@ -46,7 +46,7 @@ module.exports = function(app) {
         request('/api/v3/isblock?ip=' + ip, function(data) {
             if (!data.isblock) {
                 if (agentID) {
-                    res.redirect('/wap/#');
+                    res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
                 } else {
                     res.render('home.html', extendPublic({
                         pageInfo: {}
