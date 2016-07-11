@@ -279,7 +279,25 @@ module.exports = function(app) {
                     error_msg : "错误的页码"
                 };
             }else{
-                data = data_pre.slice((page-1)*pagesize, Math.min(page*pagesize, sum));
+                var data_pre_new = [];
+                var deepCopy = function(source) { 
+                    var result={};
+                    for (var key in source) {
+                      result[key] = typeof source[key]==='object'? deepCopy(source[key]): source[key];
+                    }
+                    return result; 
+                }
+
+                for (var i=0; i<data_pre.length; i++) {
+                    var data_new_item = deepCopy(data_pre[i]);
+
+                    data_new_item["profit_rate_wish_year"] = data_new_item["profit_rate_wish"];
+                    data_new_item["profit_rate_wish"] = Math.ceil(data_new_item["profit_rate_wish"].split("%")[0]/12)+'%';
+                    data_pre_new.push(data_new_item);
+                }
+                data = data_pre_new.slice((page-1)*pagesize, Math.min(page*pagesize, sum));
+
+
             }
         }
         if(action == "get_regular_detail"){
