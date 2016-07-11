@@ -435,6 +435,11 @@
             font-size: 22px;
             line-height: 22px;
         }
+
+        @include m(ps) {
+            margin-left: 35px;
+            padding-bottom: 10px;
+        }
     }
 
     @include e(team) {
