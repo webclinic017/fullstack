@@ -297,7 +297,6 @@ module.exports = function(app) {
                 }
                 data = data_pre_new.slice((page-1)*pagesize, Math.min(page*pagesize, sum));
 
-
             }
         }
         if(action == "get_regular_detail"){

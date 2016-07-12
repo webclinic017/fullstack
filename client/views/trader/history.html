@@ -23,7 +23,7 @@
                         <div class="history-operation-box">
                             <p class="text-left">
                                 <span ng-class="order.action?'font-down':'font-up'">
-                                    {{ order.action ? lang.text("TradingHistory7") : lang.text("TradingHistory8") }}
+                                    {{ order.action_name }}
                                 </span>
                                 <span class="">
                                     {{ order.symbol | symbolMod:lang.text("TradingHistory11") }}
