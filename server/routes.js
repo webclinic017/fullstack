@@ -280,8 +280,8 @@ module.exports = function(app) {
                 };
             }else{
                 var data_pre_new = [];
-                var deepCopy = function(source) { 
-                    var result={};
+                var deepCopy = function(source) {
+                    var result = source?{}:source; 
                     for (var key in source) {
                       result[key] = typeof source[key]==='object'? deepCopy(source[key]): source[key];
                     }
