@@ -1,19 +1,5 @@
 <div class="footer-wrap">
     <div class="container">
-        <div class="lang">
-            <div class="lang-toggle">
-                <%= lang.text("footlang")%>
-                <i class="fa fa-sort-down"></i>
-            </div>
-            <ul class="lang-menu">
-                <li>
-                    <a href="" ng-click="reloadLanguage('en')">English</a>
-                </li>
-                <li>
-                    <a href="" ng-click="reloadLanguage('zh')">中文</a>
-                </li>
-            </ul>
-        </div>
         <div class="row mg-tp-50">
             <div class="col-xs-2">
                 <p class="mg-bt-20">
@@ -141,6 +127,7 @@
             }
         </script>
         <div style="position: fixed; padding: 5px; line-height: 20px; color: #fff; bottom: 40px; right: 10px;z-index: 8888;" <%= lang.text("navbar15")%>>
+            <span style="position: absolute;font-size: 20px;color: #000; cursor: pointer;" onclick="this.parentNode.style.display='none';">x</span>
             <img src="https://chat8.live800.com/live800/SurferServer?cmd=111&amp;companyID=371437&amp;online=https%3A%2F%2Ficon.live800.com%2Ffileupload%2FCustomFileDownloadServer%3FcompanyID%3D371437%26fna%3D1433753733505371437&amp;offline=https%3A%2F%2Ficon.live800.com%2Ffileupload%2FCustomFileDownloadServer%3FcompanyID%3D371437%26fna%3D1433754373517371437&amp;tm=1434339880102"
         onclick="OpenChat();"
         border="0"  <%= lang.text("navbar15")%>>

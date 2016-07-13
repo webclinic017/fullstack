@@ -9,6 +9,21 @@
             <a class="logo-cctv" href=""></a>
         </div>
 
+        <div class="lang navbar-right">
+            <div class="lang-toggle">
+                <%= lang.text("footlang")%>
+                <i class="fa fa-sort-down"></i>
+            </div>
+            <ul class="lang-menu">
+                <li>
+                    <a href="" ng-click="reloadLanguage('en')">English</a>
+                </li>
+                <li>
+                    <a href="" ng-click="reloadLanguage('zh')">简体中文</a>
+                </li>
+            </ul>
+        </div>
+
         <!-- 未登录时 -->
         <ul class="nav navbar-login navbar-right" ng-if="!userstatus.logined">
             <li>
