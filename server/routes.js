@@ -26,6 +26,10 @@ module.exports = function(app) {
 
     app.use('/api', require('./api'));
 
+    //添加百度验证  --徐萌
+    app.route('/baidu_verify_qTHsV5cQAY.html').get(function(req, res){
+        res.render('../../client/baidu_verify_qTHsV5cQAY.html');
+    });
     // All undefined asset or api routes should return a 404
     // app.route('/:url(api|auth|components|app|bower_components|assets)/*').get(errors[404]);
 
