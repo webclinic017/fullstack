@@ -14,6 +14,7 @@ module.exports = function () {
         "middle": {"en": "middle", "zh": "中"},
         "high": {"en": "high", "zh": "高"},
         "fuzhirenshu": {"en": "Copiers", "zh": "复制人数"},
+        "lishifuzhirenshu": {"en": "Historical Copiers", "zh": "历史复制人数"},
         "zuidifuzhijine": {"en": "MIN copy", "zh": "最低复制金额"},
         "zoushitu": {"en": "Trend Chart", "zh": "走势图"},
         "zuidahuiche": {"en": "MAX drawdown", "zh": "最大回撤"},

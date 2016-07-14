@@ -50,9 +50,7 @@
                         <li class="trader_profit">
                             <div class="trader_profit__item">
                                 <span>{{ master.drawdown || '0.00' }}</span>%
-                                <i ng-show="-master.drawdown < 5" class="font-success"><%= lang.text("traderIndex6")%></i>
-                                <i ng-show="-master.drawdown >= 5 && -master.drawdown <10" class="font-info"><%= lang.text("traderIndex7")%></i>
-                                <i ng-show="-master.drawdown >= 10" class="font-danger"><%= lang.text("traderIndex8")%></i>
+                                
                             </div>
                             <div class="trader_gray_color"><%= lang.text("traderIndex9")%></div>
                         </li>
@@ -73,26 +71,7 @@
                 </div>
             </div>
             
-            <div class="trader__info">
-                <ul>
-                    <li class="trader_message clearfix">
-                        <strong class="trader_message__item"><%= lang.text("traderIndex12")%>：</strong>
-                        <div class="trader_message__item trader_gray_color"><%= master.experience%> <%= lang.text("traderIndex13")%></div>
-                    </li>
-                    <li class="trader_message clearfix">
-                        <strong class="trader_message__item"><%= lang.text("traderIndex14")%>：</strong>
-                        <div class="trader_message__item trader_gray_color"><%= master.special%></div>
-                    </li>
-                    <li class="trader_message clearfix">
-                        <strong class="trader_message__item"><%= lang.text("traderIndex15")%>：</strong>
-                        <div class="trader_message__item trader_gray_color"><%= master.trading_strategy%></div>
-                    </li>
-                    <li class="trader_message clearfix">
-                        <strong class="trader_message__item"><%= lang.text("traderIndex16")%>：</strong>
-                        <div class="trader_message__item trader_gray_color"><%= master.desc%></div>
-                    </li>
-                </ul>
-            </div>
+            
 
             <div class="nav-tabs-wrapper">
                 <ul class="nav-tabs">

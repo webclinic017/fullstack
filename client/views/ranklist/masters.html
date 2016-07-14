@@ -5,8 +5,8 @@
                 <div class="col-1-lg" ng-class="{active: masters.type === ''}" ng-click="getMastersList()">
                     <span class="nav_item">{{ lang.text('rank1') }}</span>
                 </div>
-                <div class="col-1-sm" ng-class="{active: masters.type === 'copiers_sum'}" ng-click="getMastersList('copiers_sum')">
-                    <span class="nav_item">{{ lang.text('fuzhirenshu') }}</span>
+                <div class="col-1" ng-class="{active: masters.type === 'copiers_sum'}" ng-click="getMastersList('copiers_sum')">
+                    <span class="nav_item">{{ lang.text('lishifuzhirenshu') }}</span>
                 </div>
                 <div class="col-1" ng-class="{active: masters.type === 'min_copy_amount'}" ng-click="getMastersList('min_copy_amount')">
                     <span class="nav_item">{{ lang.text('zuidifuzhijine') }}</span>
@@ -14,7 +14,7 @@
                 <div class="col-1">
                     <span class="nav_item">{{ lang.text('zoushitu') }}</span>
                 </div>
-                <div class="col-1" ng-class="{active: masters.type === 'drawdown'}" ng-click="getMastersList('drawdown', 'asc')">
+                <div class="col-1-sm" ng-class="{active: masters.type === 'drawdown'}" ng-click="getMastersList('drawdown', 'asc')">
                     <span class="nav_item">{{ lang.text('zuidahuiche') }}</span>
                 </div>
                 <div class="col-1" ng-class="{active: masters.type === 'profit_rate'}" ng-click="getMastersList('profit_rate')">
@@ -57,8 +57,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-1-sm">
-                        <i class="fa fa-users"></i>{{ rank.copiers_sum || 0 }}
+                    <div class="col-1">
+                        <i class="fa fa-users"></i>{{ rank.history_sum || 0 }}
                     </div>
                     <div class="col-1">
                         <i class="fa fa-dollar"></i>{{ rank.min_copy_amount || '0.00' }}
@@ -66,11 +66,11 @@
                     <div class="col-1">
                         <div tw-line-chart data-type="masterList"></div>
                     </div>
-                    <div class="col-1">
+                    <div class="col-1-sm">
                         {{ rank.drawdown || '0.00' }}%
-                        <span ng-show="rank.drawdown_abs < 5" class="font-success">{{ lang.text('low') }}</span>
+                        <!-- <span ng-show="rank.drawdown_abs < 5" class="font-success">{{ lang.text('low') }}</span>
                         <span ng-show="rank.drawdown_abs >= 5 && rank.drawdown_abs <= 10" class="font-warning">{{ lang.text('middle') }}</span>
-                        <span ng-show="rank.drawdown_abs > 10" class="font-danger">{{ lang.text('high') }}</span>
+                        <span ng-show="rank.drawdown_abs > 10" class="font-danger">{{ lang.text('high') }}</span> -->
                     </div>
                     <div class="col-1">
                         {{ rank.profit_rate || '0.00' }}%
