@@ -6,7 +6,7 @@
 
     function config() {
         var service = {
-            httpTimeout: 10000,
+            httpTimeout: 30000,
             avatarCfg: {
                 path: '/avatar/',
                 xs: '_28.jpg',
@@ -14,7 +14,7 @@
                 md: '_80.jpg',
                 lg: '_150.jpg'
             },
-            server: 'dev',
+            server: 'www',
             getUrlPrefix: getUrlPrefix,
             banks: [
                 {nameEN: 'icbc', nameZH: '中国工商银行'},
