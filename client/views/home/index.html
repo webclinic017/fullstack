@@ -46,7 +46,7 @@
     <div class="container">
         <div class="index2-master__con">
             <div class="row">
-                <div class="col-xs-3 index2-master__col1">
+                <div class="col-xs-3 index2-master__col1" ng-cloak ng-if="indexMasters.length > 0">
                     <p class="index2-master__col1-tit"><%= lang.text("home14")%></p>
                     <ul class="index2-master__col1-ul">
                         <li>
@@ -68,7 +68,7 @@
                         <a class="index2-master__col1-btn" href="/ranklist/#/ranklist/masters"><%= lang.text("xuanzegaoshou")%></a>
                     </ul>
                 </div>
-                <div class="col-xs-3 index2-master__col2" ng-cloak ng-repeat="master in indexMasters">
+                <div class="col-xs-3 index2-master__col2" ng-cloak ng-repeat="master in indexMasters" ng-if="indexMasters.length > 0">
                     <ul>
                         <li class="index2-master__col2-li1">
                             <a class="index2-master__col2-photo" href="/trader/{{master.usercode}}/#/trader/summary" target="_blank">
