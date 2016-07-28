@@ -11,3 +11,5 @@ dist.tar.*
 /server/config
 npm-debug.log
 *.swp
+*.log
+lanch.txt
