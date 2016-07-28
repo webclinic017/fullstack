@@ -261,6 +261,9 @@ module.exports = function(app) {
     app.route('/bd/t29').get(function(req, res){
         res.render('bd_t29', extendPublic({}, req));
     });
+    app.route('/bd/t30').get(function(req, res){
+        res.render('bd/t30/bd_t30', extendPublic({}, req));
+    });
 
 
     // nodeAPI
