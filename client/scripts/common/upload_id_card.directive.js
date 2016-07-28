@@ -12,7 +12,7 @@
             link: function (scope, element, attrs) {
                 var selector = {
                     fileInput: 'input[type="file"]',
-                    img: '.upload_id_card__img'
+                    img: 'upload_id_card__img'
                 };
                 var img,
                     imgSrc,
