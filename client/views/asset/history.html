@@ -1,7 +1,6 @@
 <div tw-loading-img></div>
 <div class="asset-public history pd-tp-30" ng-if="historyList.length > 0">
 
-
     <table class="table table-personal table-hover table-bordered">
         <colgroup>
             <col width="25%">
@@ -25,6 +24,7 @@
                     ${{ history.amount }}
                 </td>
                 <td>
+                    <span ng-if="history.status === 99">订单已超时</span>
                     <span ng-if="history.status === 2">
                         充值未完成
                         <a class="font-info" href="/pay_order/{{history.code}}" target="_blank">继续充值</a>
