@@ -173,6 +173,8 @@
 
                 // 我的分成
                 .state('space.bonus', {
+                    authenticated: true,
+                    url: '/space/bonus',
                     views: {
                         'content@space': {
                             templateUrl: '/views/bonus/index.html',
@@ -180,26 +182,28 @@
                         }
                     }
                 })
-                .state('space.bonus.subpage', {
-                    authenticated: true,
-                    url: '/space/bonus/:subpage',
-                    views: {
-                        '@space.bonus': {
-                            templateUrl: function ($stateParams) {
-                                $stateParams.subpage = $stateParams.subpage || 'deposit';
-                                return '/views/bonus/' + $stateParams.subpage + '.html';
-                            },
-                            controllerProvider: function ($stateParams) {
-                                $stateParams.subpage = $stateParams.subpage || 'deposit';
-                                var ctrlPrefix = 'Bonus';
-                                var ctrlSuffix = 'Controller';
-                                var ctrlRoot = modCtrlName($stateParams.subpage);
-                                // return '';
-                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
-                            }
-                        }
-                    }
-                })
+                // 复制分成页面暂时不予显示，提示系统升级. 
+
+                // .state('space.bonus.subpage', {
+                //     authenticated: true,
+                //     url: '/space/bonus/:subpage',
+                //     views: {
+                //         '@space.bonus': {
+                //             templateUrl: function ($stateParams) {
+                //                 $stateParams.subpage = $stateParams.subpage || 'deposit';
+                //                 return '/views/bonus/' + $stateParams.subpage + '.html';
+                //             },
+                //             controllerProvider: function ($stateParams) {
+                //                 $stateParams.subpage = $stateParams.subpage || 'deposit';
+                //                 var ctrlPrefix = 'Bonus';
+                //                 var ctrlSuffix = 'Controller';
+                //                 var ctrlRoot = modCtrlName($stateParams.subpage);
+                //                 // return '';
+                //                 return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                //             }
+                //         }
+                //     }
+                // })
 
                 // 排行榜
                 .state('ranklist', {
