@@ -262,7 +262,7 @@ module.exports = function(app) {
         res.render('bd_t29', extendPublic({}, req));
     });
     app.route('/bd/t30').get(function(req, res){
-        res.render('bd/t30/bd_t30', extendPublic({}, req));
+        res.render('bd_t30', extendPublic({}, req));
     });
 
 
