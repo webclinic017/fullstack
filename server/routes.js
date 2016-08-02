@@ -22,6 +22,12 @@ function extendPublic (data, req) {
     return data;
 }
 
+function isMobile(req){
+    var deviceAgent = req.headers["user-agent"].toLowerCase();
+    //var agentID = deviceAgent.match(/(iphone|ipod|ipad|android)/);
+    return deviceAgent.match(/(iphone|ipod|ipad|android)/);
+}
+
 module.exports = function(app) {
 
     app.use('/api', require('./api'));
@@ -45,11 +51,9 @@ module.exports = function(app) {
 
     app.route('/').get(function(req, res) {
         var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-        var deviceAgent = req.headers["user-agent"].toLowerCase();
-        var agentID = deviceAgent.match(/(iphone|ipod|ipad|android)/);
         request('/api/v3/isblock?ip=' + ip, function(data) {
             if (!data.isblock) {
-                if (agentID) {
+                if (isMobile(req)) {
                     res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
                 } else {
                     res.render('home.html', extendPublic({
@@ -262,9 +266,12 @@ module.exports = function(app) {
         res.render('bd_t29', extendPublic({}, req));
     });
     app.route('/bd/t30').get(function(req, res){
-        res.render('bd_t30', extendPublic({}, req));
+        if(isMobile(req)){
+            res.render('bd_m7', extendPublic({}, req))
+        } else {
+            res.render('bd_t30', extendPublic({}, req));
+        }
     });
-
 
     // nodeAPI
     app.route('/napi').get(function(req, res){
