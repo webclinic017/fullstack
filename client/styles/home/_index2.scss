@@ -10,7 +10,7 @@
         height: 818px !important;
         background-position: center center;
         background-size: cover;
-        @include img-normal($image-path-home + "index2-banner1.png");
+        @include img-normal($image-path-home + "index2-banner1.jpg");
 
     }
     .index2-slide2 {
@@ -18,7 +18,7 @@
         height: 818px !important;
         background-position: center center;
         background-size: cover;
-        @include img-normal($image-path-home + "index2-banner2.png");
+        @include img-normal($image-path-home + "index2-banner2.jpg");
 
     }
     .index2-slide3 {
@@ -26,7 +26,7 @@
         height: 818px !important;
         background-position: center center;
         background-size: cover;
-        @include img-normal($image-path-home + "index2-banner3.png");
+        @include img-normal($image-path-home + "index2-banner3.jpg");
 
     }
     .index2-slide4 {
