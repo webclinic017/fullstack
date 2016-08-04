@@ -50,21 +50,13 @@ module.exports = function(app) {
     });
 
     app.route('/').get(function(req, res) {
-        var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-        request('/api/v3/isblock?ip=' + ip, function(data) {
-            if (!data.isblock) {
-                if (isMobile(req)) {
-                    res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
-                } else {
-                    res.render('home.html', extendPublic({
-                        pageInfo: {}
-                    }, req));
-                }
-            } else {
-                res.render('404', extendPublic({}, req))
-            }
-        })
-
+        if (isMobile(req)) {
+            res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+        } else {
+            res.render('home.html', extendPublic({
+                pageInfo: {}
+            }, req));
+        }
     });
 
 
