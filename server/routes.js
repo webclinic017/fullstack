@@ -97,7 +97,6 @@ module.exports = function(app) {
             model : gloal_modelRegularDetail(req.params.subpage || "")
         },req));
     });
-
     app.route('/m/regular/detail/:subpage').get(function(req, res){
         res.render('m_regular_detail.html',{
             model : gloal_modelRegularDetail(req.params.subpage || "")
@@ -116,6 +115,17 @@ module.exports = function(app) {
         });
     });   
     /*定期跟单结束开始*/
+
+    /*H5页面重构*/
+    app.route('/m/register').get(function(req, res){
+        res.render("m_register01",{});
+    });
+    app.route('/m/register2').get(function(req, res){
+        res.render("m_register02",{});
+    });
+    app.route('/m/register3').get(function(req, res){
+        res.render("m_register03",{});
+    });
 
 
     app.route('/trader/:usercode').get(function(req, res) {
