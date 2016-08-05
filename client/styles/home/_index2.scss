@@ -10,7 +10,7 @@
         height: 818px !important;
         background-position: center center;
         background-size: cover;
-        @include img-normal($image-path-home + "index2-banner1.png");
+        @include img-normal($image-path-home + "index2-banner1.jpg");
 
     }
     .index2-slide2 {
@@ -18,7 +18,7 @@
         height: 818px !important;
         background-position: center center;
         background-size: cover;
-        @include img-normal($image-path-home + "index2-banner2.png");
+        @include img-normal($image-path-home + "index2-banner2.jpg");
 
     }
     .index2-slide3 {
@@ -26,7 +26,7 @@
         height: 818px !important;
         background-position: center center;
         background-size: cover;
-        @include img-normal($image-path-home + "index2-banner3.png");
+        @include img-normal($image-path-home + "index2-banner3.jpg");
 
     }
     .index2-slide4 {
@@ -93,13 +93,21 @@
         font-size: 60px;
         font-weight: bold;
         line-height: 80px;
-        color: $brand-primary;
+        color: #fff;
+
+        span {
+            color: $brand-primary;
+        }
     }
     @include e(tle2) {
         // font-family: "FZLTZCHK  GBK1 0";
         font-size: 60px;
         font-weight: bold;
         color: #fff;
+
+        span {
+            color: $brand-primary;
+        }
     }
     @include e(circle) {
         margin-bottom: 3px;
@@ -117,13 +125,13 @@
         color: #FDFDFD;
     }
     @include e(btn1) {
-        margin-top: 68px;
+        margin-top: 60px;
         padding: 19px 57px;
         display: inline-block;
         border: 1px solid $brand-primary;
         border-radius: 4px;
         background: transparent;
-        font-weight: bold;
+        // font-weight: bold;
         font-size: 24px;
         line-height: 24px;
         color: $brand-primary;
@@ -135,7 +143,8 @@
     }
 
     @include e(b1-con) {
-        margin-top: 27px;
+        font-size: 20px;
+        color: #fff;
     }
 
     @include e(b2-tip2) {
