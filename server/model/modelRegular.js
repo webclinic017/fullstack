@@ -43,8 +43,29 @@ module.exports = {
 
 	products : [
         {
+            id : "9",
+            name : "【汇赢全球月盈 201608-2】",    //产品标题
+            money_copy : "$5000-$20000",   //复制金额
+            money_copy_max : "$30万", //最高复制金额 exam : '$4000'
+            period : "1个月",      //复制封闭期
+            withdraw_history : "20%",    //历史最高回撤
+            profit_rate_wish : "60%",  //预期年化收益率
+            profit_rate_now : null, //实时年化收益率
+            end_date_appoint : "2016.08.19 18:00", //预约结束时间
+            start_date_trade : '2016.08.21 00:00',  //开始交易时间
+            end_date_trade : '2016.09.21 00:00',  //结束交易时间  exam : '2016.5.19'
+            team_intro : "team_huiying", //文件名，团队介绍模块
+            jiafang:"汇赢全球基金管理公司", //甲方，操盘手，出现在agree里
+            progress : 5, //投资进度 exam:50
+            desc_risk : "动用杠杆不超过10倍；亏损达到账户初始资金的10%时触发预警；亏损达到账户初始资金的15%时触发熔断，交易将会停止1-3天，然后再开始交易；账户的清盘线设置在亏损20%。", //风险控制
+            desc_divide : "盈利金额的30%(客户在该次复制交易中盈利达到10%时，结算一次)",//报酬分成
+            note : "无" //备注
+            // spe_desc_time : "即日起至预约总金额达到$30W",//特殊产品的进展状态
+            // spe_desc_trade : "预约总金额达到$30W后第二个交易日"//特殊产品的交易时间     
+        },
+        {
             id : "8",
-            name : "【老虎&汇赢月盈 201608-1】",    //产品标题
+            name : "【汇赢全球月盈 201608-1】",    //产品标题
             money_copy : "$5000-$20000",   //复制金额
             money_copy_max : "$30万", //最高复制金额 exam : '$4000'
             period : "1个月",      //复制封闭期
@@ -56,7 +77,7 @@ module.exports = {
             end_date_trade : '2016.09.01 00:00',  //结束交易时间  exam : '2016.5.19'
             team_intro : "team_huiying", //文件名，团队介绍模块
             jiafang:"汇赢全球基金管理公司", //甲方，操盘手，出现在agree里
-            progress : 94, //投资进度 exam:50
+            progress : 100, //投资进度 exam:50
             desc_risk : "动用杠杆不超过10倍；亏损达到账户初始资金的10%时触发预警；亏损达到账户初始资金的15%时触发熔断，交易将会停止1-3天，然后再开始交易；账户的清盘线设置在亏损20%。", //风险控制
             desc_divide : "盈利金额的30%(客户在该次复制交易中盈利达到10%时，结算一次)",//报酬分成
             note : "无" //备注
@@ -65,7 +86,7 @@ module.exports = {
         },
 		{
 			id : "7",
-			name : "【老虎&汇赢月盈 201606-1】",    //产品标题
+			name : "【汇赢全球月盈 201606-1】",    //产品标题
 			money_copy : "$5000-$20000",   //复制金额
 			money_copy_max : "$30万", //最高复制金额 exam : '$4000'
 			period : "1个月",      //复制封闭期
@@ -86,7 +107,7 @@ module.exports = {
 		},
 		{
 			id : "6",
-			name : "【老虎&汇赢季盈 201604-1】",    //产品标题
+			name : "【汇赢全球季盈 201604-1】",    //产品标题
 			money_copy : "$5000-$20000",   //复制金额
 			money_copy_max : "$100万", //最高复制金额 exam : '$4000'
 			period : "3个月",      //复制封闭期
@@ -107,7 +128,7 @@ module.exports = {
 		},
 		{
 			id : "5",			
-			name : "【老虎&汇赢年盈 201604-1】",    //产品标题
+			name : "【汇赢全球年盈 201604-1】",    //产品标题
 			money_copy : "$30000-$100000",   //复制金额
 			money_copy_max : "$500万", //最高复制金额 exam : '$4000'
 			period : "1年",      //复制封闭期
@@ -129,7 +150,7 @@ module.exports = {
 		{
 			id : "4",			
 			//require
-			name : "【老虎&Elephant(Forex Management)】",    //产品标题
+			name : "【Elephant(Forex Management)】",    //产品标题
 			money_copy : "$100000",   //复制金额   exam:'$10000'
 			money_copy_max : "", //最高复制金额 exam : '$4000'
 			period : "1个月",      //复制封闭期
@@ -151,7 +172,7 @@ module.exports = {
 		{
 			id : "3",
 			//require
-			name : "【老虎&汇赢周盈 201604-3】",    //产品标题
+			name : "【汇赢全球周盈 201604-3】",    //产品标题
 			money_copy : "$3000-$10000",   //复制金额   exam:'$10000'
 			money_copy_max : "$33万", //最高复制金额 exam : '$4000'
 			period : "1周",      //复制封闭期
@@ -174,7 +195,7 @@ module.exports = {
 		{
 			id : "2",
 			//require
-			name : "【老虎&汇赢周盈 201604-2】",    //产品标题
+			name : "【汇赢全球周盈 201604-2】",    //产品标题
 			money_copy : "$3000-$10000",   //复制金额   exam:'$10000'
 			money_copy_max : "$33万", //最高复制金额 exam : '$4000'
 			period : "1周",      //复制封闭期
@@ -196,7 +217,7 @@ module.exports = {
 		{
 			id : "1",
 			//require
-			name : "【老虎&汇赢周盈 201604-1】",    //产品标题
+			name : "【汇赢全球周盈 201604-1】",    //产品标题
 			money_copy : "$3000-$10000",   //复制金额   exam:'$10000'
 			money_copy_max : "$33万", //最高复制金额 exam : '$4000'
 			period : "1周",      //复制封闭期

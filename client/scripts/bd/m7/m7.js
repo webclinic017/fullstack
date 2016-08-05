@@ -1,0 +1,1 @@
+;(function(){    var swiper = new Swiper('.swiper-container', {        slidesPerView: 1,        loop: true,        autoplay: 3000,        autoplayDisableOnInteraction: false    });})();

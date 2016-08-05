@@ -577,7 +577,7 @@ module.exports = function () {
         "traderIndex2": {"en": "COPIED", "zh": "已复制"},
         "traderIndex3": {"en": "Copiers", "zh": "复制者"},
         "traderIndex4": {"en": "Total Return", "zh": "总收益率"},
-        "traderIndex5": {"en": "Monthly Return", "zh": "月回报率"},
+        "traderIndex5": {"en": "Current Monthly Return", "zh": "本月回报率"},
         "traderIndex6": {"en": "Low", "zh": "低"},
         "traderIndex7": {"en": "Medium", "zh": "中"},
         "traderIndex8": {"en": "High", "zh": "高"},
