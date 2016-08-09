@@ -89,7 +89,6 @@ module.exports = function(app) {
             model : gloal_modelRegularDetail(req.params.subpage || "")
         },req));
     });
-
     app.route('/m/regular/detail/:subpage').get(function(req, res){
         res.render('m_regular_detail.html',{
             model : gloal_modelRegularDetail(req.params.subpage || "")
@@ -108,6 +107,17 @@ module.exports = function(app) {
         });
     });   
     /*定期跟单结束开始*/
+
+    /*H5页面重构*/
+    app.route('/m/register').get(function(req, res){
+        res.render("m_register01",{});
+    });
+    app.route('/m/register2').get(function(req, res){
+        res.render("m_register02",{});
+    });
+    app.route('/m/register3').get(function(req, res){
+        res.render("m_register03",{});
+    });
 
 
     app.route('/trader/:usercode').get(function(req, res) {
@@ -329,6 +339,25 @@ module.exports = function(app) {
                 force_update: false
             };
             data = currentVersion;
+        }
+        if (action == "get_banner_info") {
+            data = [
+                {
+                    image: "https://www.tigerwit.com/images/app-images/banner1.png",
+                    url: "https://www.tigerwit.com/bd/t30",
+                    title: ""
+                },
+                {
+                    image: "https://www.tigerwit.com/images/app-images/banner2.png",
+                    url: "https://www.tigerwit.com/bd/t30",
+                    title: ""
+                },
+                {
+                    image: "https://www.tigerwit.com/images/app-images/banner3.png",
+                    url: "https://www.tigerwit.com/m/regular/detail/9",
+                    title: "【汇赢全球月盈 201608-2】"
+                }
+            ];
         }
         if(data){
             rs = {

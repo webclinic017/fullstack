@@ -115,7 +115,7 @@
         
         return {
             restrict: 'A',
-            template: 
+            template:
                 '<ul class="pagination">' +
                     '<li ng-repeat="page in pagebar.pages"' +
                     'ng-class="{active:page.active,disabled:page.disabled}">' +
