@@ -1,1 +1,197 @@
-@import "common/m_rem";html, body {  min-width: 300px;  width: 100%;  height: 100%;}/*状态样式*/.warning{  color: #ff464f!important;}.show {  display: inline-block!important;}.hide {  display: none!important;}.disable{  color: #ccc!important;  border: 1px solid #ccc!important;  font-size: px2rem(10)!important;  cursor: wait!important;}/*更改placeholder的默认颜色*/:-moz-placeholder { /* Mozilla Firefox 4 to 18 */  color: #c9c9ce;  font-family: "PingFangSC-Regular";  font-size: px2rem(30);  font-weight: 100;}::-moz-placeholder { /* Mozilla Firefox 19+ */  color: #c9c9ce;  font-family: "PingFangSC-Regular";  font-size: px2rem(30);  font-weight: 100;}input:-ms-input-placeholder,textarea:-ms-input-placeholder {  color: #c9c9ce;  font-family: "PingFangSC-Regular";  font-size: px2rem(30);  font-weight: 100;}input::-webkit-input-placeholder,textarea::-webkit-input-placeholder {  color: #c9c9ce;  font-family: "PingFangSC-Regular";  font-size: px2rem(30);  font-weight: 100;}.m_register_page1 {  width: 100%;  height: 100%;  background-color: #fff;  .reg_font {    font-weight: 200;    font-family: "PingFangSC-Regular";    font-size: px2rem(30);    color: #222222;  }  .reg_layout {    width: 100%;    height: 100%;    padding-top: px2rem(64);    padding-left: px2rem(30);    padding-right: px2rem(30);    text-align: left;    .reg_success_title{      display: block;      margin: 0 auto;      text-align: center;      font-size: px2rem(40);      margin-bottom:px2rem(80);      img{        width: px2rem(50);        display: inline-block;      }    }    .reg_success_tip1{      font-size: px2rem(30);      display: block;      margin-bottom: px2rem(50);      font-family: PingFangSC-Regular;      text-align: center;    }    .reg_success_tip2{      display: block;      margin:0 auto;      font-family: PingFangSC-Regular;      text-align: center;      font-size: px2rem(24);      color: #909090;    }    .reg_success_tip3{      font-family: PingFangSC-Regular;      font-size: px2rem(24);      color: #4c9df9    }    .reg_title{      text-align: center;      font-size: px2rem(36);      margin: 0 auto;      display: inline-block;      margin-bottom: px2rem(16);    }    form {      label:nth-child(1){        position: relative;      }      label:nth-child(3){        position: relative;      }      .reg_code{        width: 71%;      }      label {        display: inline-block;        width: 100%;        height: 2.5rem;        background-color: #fff;        margin-top: 0.8rem;        border-bottom: 1px solid #d8d8d8;          .code{            width: px2rem(190);            height:px2rem(90);            border-radius: 8px;            background-color: #ffffff;            border: solid 1px #4c9df9;            position: absolute;            right: px2rem(-200);            top: px2rem(-15);            line-height: px2rem(90);            font-size: px2rem(30);            color: #4c9df9;            font-family: PingFangSC-Regular;            text-align: center;          }          img ,.password_view {            height: px2rem(30);            width: px2rem(60);            display: inline-block;            position: absolute;            right: 0;            top: 0.32rem;          }      }      span, input {        display: inline-block;        background-color: #fff;        line-height: 2rem;        border: none;      }      span {        width: 3.8rem;      }      input {        width: 80%;        font-size: 0.7rem;      }      .verify_code{        width: 50%;      }    }    .reg_btn {      font-size: px2rem(36);      font-weight: 200;      display: block;      width: 90%;      height: px2rem(90);      line-height: px2rem(90);      text-align: center;      margin: 0 auto;      margin-top: 1rem;      background-color: #fedd0a;      margin-bottom: 1rem;      border: 1px solid #fedd0a;      -webkit-border-radius: px2rem(8);      -moz-border-radius: px2rem(8);      border-radius: px2rem(8);    }    p{      text-align: center;      font-size: px2rem(24);    }    .tiger_user_rule{      color: #4c9df9;    }  }}
+@import "common/m_rem";
+
+html, body {
+  min-width: 300px;
+  width: 100%;
+  height: 100%;
+}
+
+/*状态样式*/
+.warning{
+  color: #ff464f!important;
+}
+.show {
+  display: inline-block!important;
+}
+.hide {
+  display: none!important;
+}
+.disable{
+  color: #ccc!important;
+  border: 1px solid #ccc!important;
+  font-size: px2rem(10)!important;
+  cursor: wait!important;
+}
+
+/*更改placeholder的默认颜色*/
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #c9c9ce;
+  font-family: "PingFangSC-Regular";
+  font-size: px2rem(30);
+  font-weight: 100;
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #c9c9ce;
+  font-family: "PingFangSC-Regular";
+  font-size: px2rem(30);
+  font-weight: 100;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #c9c9ce;
+  font-family: "PingFangSC-Regular";
+  font-size: px2rem(30);
+  font-weight: 100;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #c9c9ce;
+  font-family: "PingFangSC-Regular";
+  font-size: px2rem(30);
+  font-weight: 100;
+}
+
+.m_register_page1 {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  .reg_font {
+    font-weight: 200;
+    font-family: "PingFangSC-Regular";
+    font-size: px2rem(30);
+    color: #222222;
+  }
+  .reg_layout {
+    width: 100%;
+    height: 100%;
+    padding-top: px2rem(64);
+    padding-left: px2rem(30);
+    padding-right: px2rem(30);
+    text-align: left;
+    .reg_success_title{
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      font-size: px2rem(40);
+      margin-bottom:px2rem(80);
+      img{
+        width: px2rem(50);
+        display: inline-block;
+      }
+    }
+    .reg_success_tip1{
+      font-size: px2rem(30);
+      display: block;
+      margin-bottom: px2rem(50);
+      font-family: PingFangSC-Regular;
+      text-align: center;
+    }
+    .reg_success_tip2{
+      display: block;
+      margin:0 auto;
+      font-family: PingFangSC-Regular;
+      text-align: center;
+      font-size: px2rem(24);
+      color: #909090;
+    }
+    .reg_success_tip3{
+      font-family: PingFangSC-Regular;
+      font-size: px2rem(24);
+      color: #4c9df9
+    }
+    .reg_title{
+      text-align: center;
+      font-size: px2rem(36);
+      margin: 0 auto;
+      display: inline-block;
+      margin-bottom: px2rem(16);
+    }
+    form {
+      label:nth-child(1){
+        position: relative;
+      }
+      label:nth-child(3){
+        position: relative;
+      }
+      .reg_code{
+        width: 71%;
+      }
+      label {
+        display: inline-block;
+        width: 100%;
+        height: 2.5rem;
+        background-color: #fff;
+        margin-top: 0.8rem;
+        border-bottom: 1px solid #d8d8d8;
+          .code{
+            width: px2rem(190);
+            height:px2rem(90);
+            border-radius: 8px;
+            background-color: #ffffff;
+            border: solid 1px #4c9df9;
+            position: absolute;
+            right: px2rem(-200);
+            top: px2rem(-15);
+            line-height: px2rem(90);
+            font-size: px2rem(30);
+            color: #4c9df9;
+            font-family: PingFangSC-Regular;
+            text-align: center;
+          }
+          img ,.password_view {
+            height: px2rem(30);
+            width: px2rem(60);
+            display: inline-block;
+            position: absolute;
+            right: 0;
+            top: 0.32rem;
+
+          }
+      }
+
+      span, input {
+        display: inline-block;
+        background-color: #fff;
+        line-height: 2rem;
+        border: none;
+      }
+      span {
+        width: 3.8rem;
+      }
+      input {
+        width: 80%;
+        font-size: 0.7rem;
+      }
+      .verify_code{
+        width: 50%;
+      }
+    }
+    .reg_btn {
+      font-size: px2rem(36);
+      font-weight: 200;
+      display: block;
+      width: 90%;
+      height: px2rem(90);
+      line-height: px2rem(90);
+      text-align: center;
+      margin: 0 auto;
+      margin-top: 1rem;
+      background-color: #fedd0a;
+      margin-bottom: 1rem;
+      border: 1px solid #fedd0a;
+      -webkit-border-radius: px2rem(8);
+      -moz-border-radius: px2rem(8);
+      border-radius: px2rem(8);
+    }
+    p{
+      text-align: center;
+      font-size: px2rem(24);
+    }
+    .tiger_user_rule{
+      color: #4c9df9;
+    }
+  }
+}

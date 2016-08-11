@@ -353,6 +353,25 @@ module.exports = function(app) {
             };
             data = currentVersion;
         }
+        if (action == "get_banner_info") {
+            data = [
+                {
+                    image: "https://www.tigerwit.com/activity/banner/banner1_20160810.png",
+                    url: "https://www.tigerwit.com/bd/t30",
+                    title: "活动详情"
+                },
+                {
+                    image: "https://www.tigerwit.com/activity/banner/banner2_20160810.png",
+                    url: "https://www.tigerwit.com/bd/t30",
+                    title: "活动详情"
+                },
+                {
+                    image: "https://www.tigerwit.com/activity/banner/banner3_20160810.png",
+                    url: "https://www.tigerwit.com/m/regular/detail/9",
+                    title: "【汇赢全球月盈 201608-2】"
+                }
+            ];
+        }
         if(data){
             rs = {
                 is_succ : true,
