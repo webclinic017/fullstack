@@ -34,7 +34,7 @@
         function withdraw(amount, cardId) {
             amount = Number(amount).toFixed(2);
 
-            return $http.post('/api/v3/withdraw', {
+            return $http.post('/action/public/v4/withdraw', {
                 amount: amount,
                 id: cardId
             });
