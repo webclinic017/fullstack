@@ -23,11 +23,10 @@ input, button, select, textarea {
 textarea {
   resize: none
 }
-
-.t30-footer-content{
-  display: none;
+.t30-footer-content {
+    display: none;
+    visibility: hidden;
 }
-
 //m7头部
 .m7_layout {
   margin: 0 auto;
@@ -217,5 +216,3 @@ textarea {
     }
   }
 }
-
-
