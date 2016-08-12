@@ -37,8 +37,6 @@
                 "type": "checkLogin"
             });
         }
-        /*重置TIP的文字*/
-        $("#modal_tips").html("必填项：交易经验、交易方式、最低跟随金额");
     });
 
     /*become_apply_btn方法*/
@@ -91,18 +89,20 @@
     /*-----------modal对象方法---------------*/
     /*关闭modal*/
     become_modal.closeModal = function () {
-        become_modal.stop().slideUp(500);
-        become_modal_mask.stop().fadeOut();
+        become_modal.stop().slideUp(300);
+        become_modal_mask.stop().fadeOut(300);
     };
     /*打开modal*/
     become_modal.openModal = function () {
-        become_modal_mask.stop().fadeIn(500);
-        become_modal.stop().slideDown(500);
+        become_modal_mask.stop().fadeIn(300);
+        become_modal.stop().slideDown(300);
     };
 
     /*cancel_btn*/
     cancel_btn.on("touchend", function () {
         become_modal_mask.closeModal();
+        /*重置TIP的文字*/
+        $("#modal_tips").html("必填项：交易经验、交易方式、最低跟随金额");
     });
 
     /*sure_btn*/
@@ -111,11 +111,11 @@
         console.log(trade_exp);
         var trade_way = $('#trade_ways option:selected').val();
         console.log(trade_way);
-        var input = document.querySelector("input");
+        var input = document.querySelector("#regular_money");
         if (trade_exp.trim() == "" || trade_way.trim() == "" || input.value.trim() == "") {
             return false;
-        } else if (/^\d*$/.test(input.value) == false) {
-            $("#modal_tips").html("跟随金额必须为数字哦~");
+        } else if (!(/^\d*$/.test(input.value)) || (input.value - 0) <= 0) {
+            $("#modal_tips").html("跟随金额必须为有效数字哦~");
             return false;
         } else {
             return true;
@@ -136,15 +136,15 @@
             $("#modal_tips").removeClass("warning").html("正在提交,请稍等...");
             /*发送到后台*/
             /*post('/action/public/v3/apply_to_master';*/
-            $.post("/action/public/v3/apply_to_master"
-                , {
+            $.post("/action/public/v3/apply_to_master",
+                {
                     trade_exp: $('#trade_exp option:selected').val(),
                     trade_model: $('#trade_ways option:selected').val(),
                     min_copy_asset: input.value
                 },
                 function (data) {
                     data = eval('(' + data + ')');
-                    $("#modal_tips").html(data);
+                    //$("#modal_tips").html(data);
                     switch (data.error_code) {
                         case 0:
                             /*成功提交之后,阻止二次提交*/
@@ -195,6 +195,7 @@
                 url: '/action/public/v3/check_master',
                 success: function (data) {
                     become_apply_btn.html("报名成为高手");
+                    data = eval("("+data+")");
                     console.log(data);
                     if (data.master) { /*是高手*/
                         become_apply_btn.addClass("disabble").html("您已经是高手!");
@@ -210,6 +211,10 @@
                             /*开启关闭modal功能*/
                             become_modal_mask.closeModal();
                         }
+                    } else if(data.status == 0){
+                        become_apply_btn.disable("您的资料正在审核中...");
+                    } else if(data.status == 2){
+                        become_apply_btn.disable("您已经是高手!");
                     }
                 },
                 error: function (err) {
