@@ -30,7 +30,7 @@
     /*点击调用原生方法,检测登录状态,APP会返回一个带true/false的函数调用*/
     /*window.tigerwitWeb(true/false)*/
     become_apply_btn.on("touchend", function () {
-        window.tigerwitWeb(true);
+        //window.tigerwitWeb(true);
         /*没有警告样式,或禁用,才能点击*/
         if (become_apply_btn.isOK()) {
             callNative({
