@@ -9,7 +9,7 @@
 <!-- build:css(.tmp) /styles/m_register.css -->
 <link rel="stylesheet" href="/styles/m_register.css">
 <!-- endbuild -->
-<!--引入原生借口-->
+<!--引入原生API-->
 <% include common/m_css_vendor.html %>
 <body>
 <div class="m_register_page1">
@@ -20,7 +20,7 @@
         <form>
             <label class="reg_code">
                 <span class="reg_font">验证码</span>
-                <input id="verify_code" class="verify_code" type="text" placeholder='请输入验证码'>
+                <input class="verify_code" id="verify_code" type="text" placeholder='请输入验证码'>
                 <span class="code send_code" id="verify_code_btn">获取验证码</span>
                 <br/>
             </label>
