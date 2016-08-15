@@ -8,6 +8,6 @@
     BonusIndexController.$inject = ['$scope', 'asset'];
 
     function BonusIndexController($scope, asset) {
-
+        
     }
 })();

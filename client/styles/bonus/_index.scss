@@ -1,71 +1,36 @@
 //  复制我的
-@include b (bonus-cur) {
+@include b(space_bonus) {
 
-
-    // 添加右边框
-    @include m (bor-rh) {
-        border-right: 1px solid $gray;
-    }
-}
-
-
-//  我的分成
-@include b(bonus-his) {
-
-    @include e(photo) {
-        width: 45px;
-        height: 45px;
-        border-radius: 50%;
-    }
-
-    @include e(username) {
-        display: inline-block;
-        line-height: 50px;
-        vertical-align: top;
-    }
-
-    @include e(detail-btn) {
-        padding: 0;
-        font-size: 12px;
-        width: 100%;
-        height: 30px;
+    @include e(total_box) {
         text-align: center;
-        line-height: 30px;
-        margin-top: 4px;
-        margin-bottom: 4px;
     }
-}
+    
+    @include e(total) {
+        border: 1px solid $gray;
+        width: 228px;
+        text-align: center;
 
-@include b(date_searchbar) {
-    margin-bottom: 10px;
+        &:first-child {
+            float: left;
+        }
+        &:last-child {
+            float: right;
+        }
+        &.mid {
+            display: inline-block;
+        }
 
-    > .form-control-wrapper {
-        display: inline-block;
-        width: 140px;
-        margin-bottom: 0;
-        vertical-align: top;
-    }
-
-    .bootstrap-datetimepicker-widget.dropdown-menu {
-        border: 1px solid #ccc;
-        border-radius: $border-radius-base;
-        background-color: #fff;
-    }
-
-    .bootstrap-datetimepicker-widget table td span:hover {
-        background: #eee;
-    }
-    .bootstrap-datetimepicker-widget table td span.active {
-        background-color: $brand-info;
-        color: #fff;
-        text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    }
-
-    @include e(btn) {
-        margin-top: 2px;
-        padding: 0 25px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 14px;
+        > .item-num {
+            height: 68px;
+            line-height: 68px;
+            font-size: 28px;
+            border-bottom: 1px solid $gray;
+        }
+        > .item-tip {
+            height: 44px;
+            line-height: 44px;
+            background-color: $gray-lighter;
+            color: $gray-darker;
+        }
     }
 }
