@@ -105,10 +105,12 @@ module.exports = function(app) {
                 aImages : aImages
             }
         });
-    });   
+    });
+
     /*定期跟单结束开始*/
 
-    /*H5页面重构*/
+    /*--------------------APP-Beagin---------------------*/
+    /*注册相关页面*/
     app.route('/m/register').get(function(req, res){
         res.render("m_register01",{});
     });
@@ -118,6 +120,17 @@ module.exports = function(app) {
     app.route('/m/register3').get(function(req, res){
         res.render("m_register03",{});
     });
+    /*成为高手*/
+    app.route('/m/agent/become').get(function(req, res){
+        res.render("m_agent_become",{});
+    });
+
+    /*定期跟单*/
+    app.route('/m/regular/how').get(function(req, res){
+        res.render("m_regular_how",{});
+    });
+
+    /*--------------------APP-End-------------------------*/
 
 
     app.route('/trader/:usercode').get(function(req, res) {

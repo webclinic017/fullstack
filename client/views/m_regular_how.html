@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--引入公用头部-->
+    <% include common/m_common_head.html %>
+    <!-- build:css(.tmp) /styles/m_vendor.css -->
+    <link rel="stylesheet" href="/styles/m_vendor.css">
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp) /styles/m_regular_how.css -->
+    <link rel="stylesheet" href="/styles/m_regular_how.css">
+    <!-- endbuild -->
+</head>
+<!--引入原生交互方法与根节点字体改变脚本-->
+<% include common/m_css_vendor.html %>
+<!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
+<% include common/m_css_vendor.html %>
+<body>
+<div class="m_regular_how">
+    <div class="how_banner">
+        <p>定 期 跟 单</p>
+        <p>专业外汇交易团队带你钱生钱</p>
+    </div>
+    <div class="how_detail">
+        <h4>如何进行定期跟单?</h4>
+        <p>1、在TigerWit注册开户并入金</p>
+        <p>2、选择好合适的定期产品,了解定期产品详情,确认无误后点击“立即预约”,根据提示进行操作</p>
+        <p>3、无需盯盘,定期产品募集成功后开始交易,封闭期内交易帐号被冻结无法操作</p>
+        <p>4、封闭期结束,高手获利,您将获得同比例的营收</p>
+        <p>老虎基金管理人账户是老虎金融为代理上和操盘手提供的高级解决方案。
+           由交易高手制定定投策略,融资后,在固定的封闭期内交易获利,
+           最终按约定进行分红</p>
+    </div>
+</div>
+<!-- build:js(client) /scripts/m_vendor.js -->
+<script src="/bower_components/jquery-3.0.0.min/index.js"></script>
+<script src="/scripts/plugins/base64code.js"></script>
+<!-- endbuild -->
+
+<!-- build:js(client) /scripts/m_regular_how.js -->
+<script src="/scripts/regular/m_regular_how.js"></script>
+<!-- endbuild -->
+</body>
+</html>

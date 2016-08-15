@@ -19,7 +19,7 @@ html, body {
 .disable{
   color: #ccc!important;
   border: 1px solid #ccc!important;
-  font-size: px2rem(24)!important;
+  font-size: px2rem(10)!important;
   cursor: wait!important;
 }
 
@@ -116,6 +116,9 @@ textarea::-webkit-input-placeholder {
       label:nth-child(3){
         position: relative;
       }
+      .reg_code{
+        width: 71%;
+      }
       label {
         display: inline-block;
         width: 100%;
@@ -130,7 +133,7 @@ textarea::-webkit-input-placeholder {
             background-color: #ffffff;
             border: solid 1px #4c9df9;
             position: absolute;
-            right: 0;
+            right: px2rem(-200);
             top: px2rem(-15);
             line-height: px2rem(90);
             font-size: px2rem(30);
