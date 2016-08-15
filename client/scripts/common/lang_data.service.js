@@ -49,7 +49,7 @@
             "login5": {"en": "Please enter your password", "zh": "请输入密码"},
             "login6": {"en": "Log in automatically next time", "zh": "下次自动登陆"},
             "login7": {"en": "Forgot password", "zh": "忘记密码"},
-            "login8": {"en": "SSL login is adopted in TigerWit and data transmission is safe.", "zh": "您在老虎金融登录采用 SSL 登录方式数据传输安全"},
+            "login8": {"en": "SSL login is adopted in TigerWit and data transmission is safe.", "zh": "您在老虎外汇登录采用 SSL 登录方式数据传输安全"},
             "login9": {"en": "Login", "zh": "登 录"},
             "login10": {"en": "Register", "zh": "注 册"},
             "login11": {"en": "Login...", "zh": "登录中"},
