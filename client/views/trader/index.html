@@ -1,5 +1,5 @@
 <div class="col-fff">
-    <div class="container">
+    <div ng-cloak class="container">
         <div ng-cloak class="trader">
             <div class="trader__basic">
                 <div class="row">
@@ -13,81 +13,111 @@
                         <div class="trader_user">
                             <span class="trader_user__username"><%= master.username%></span>
                             <span class="trader_user__position trader_gray_color">
-                                <i class="fa fa-map-marker"></i>
                                 <%= master.region_cn.world_name%>
                             </span>
                         </div>
-                        <div class="trader_btn">
-
-                            <button class="btn btn-primary" ng-if="!master.copied" ng-click="toCopy()"><%= lang.text("traderIndex1")%></button>
-                            <button class="btn btn-primary" disabled ng-if="master.copied"><%= lang.text("traderIndex2")%></button>
-                            
-                            <!-- <div class="trader_gray_color trader_btn__profit">
-                                已帮 {{ master.help_num || 0 }} 人赚取
-                                <span><i class="fa fa-dollar"></i>{{ master.help_amount || 0 }}</span>
-                            </div> -->
-                        </div>
                     </div>
-                    <ul class="col-xs-9 clearfix">
+                    <ul class="trader_userdata col-xs-9 clearfix">
                         <li class="trader_profit">
                             <div class="trader_profit__item">
-                                <span><i class="fa fa-users"></i>{{ master.history_sum || '0' }}</span>
+                                <span class="big-num-font">{{ master.history_sum || '0' }}</span>
                             </div>
-                            <div class="trader_gray_color"><%= lang.text("lishifuzhirenshu")%></div>
+                            <div class="trader_gray_color">复制者</div>
                         </li>
                         <li class="trader_profit">
-                            <div class="trader_profit__item" ng-class="{'font-danger': master.profit_rate.indexOf('-') >= 0, 'font-success': master.profit_rate.indexOf('-') < 0}">
-                                <span>{{ master.profit_rate || '0.00' }}</span>%
+                            <div class="trader_profit__item "
+                                 ng-class="{'font-danger': master.profit_rate.indexOf('-') >= 0, 'font-success': master.profit_rate.indexOf('-') < 0}">
+                                <span class="big-num-font trader_blue">{{ master.profit_rate || '0.00' }}</span>%
                             </div>
-                            <div class="trader_gray_color"><%= lang.text("traderIndex4")%></div>
-                        </li>
-                        <li class="trader_profit">
-                            <div class="trader_profit__item" ng-class="{'font-danger': master.month_profit.indexOf('-') >= 0, 'font-success': master.month_profit.indexOf('-') < 0}">
-                                <span>{{ master.month_profit || '0.00' }}</span>%
-                            </div>
-                            <div class="trader_gray_color"><%= lang.text("traderIndex5")%></div>
+                            <div class="trader_gray_color">最大涨幅</div>
                         </li>
                         <li class="trader_profit">
                             <div class="trader_profit__item">
-                                <span>{{ master.drawdown || '0.00' }}</span>%
-                                
+                                <span class="big-num-font trader_green">{{ master.drawdown || '0.00' }}</span>%
                             </div>
-                            <div class="trader_gray_color"><%= lang.text("traderIndex9")%></div>
+                            <div class="trader_gray_color">最大跌幅</div>
                         </li>
                         <li class="trader_profit">
                             <div class="trader_profit__item">
-                                <span>{{ master.bonus || '0.00' }}</span>%
+                                <span class="big-num-font">{{ master.bonus || '0.00' }}</span>%
                             </div>
                             <div class="trader_gray_color"><%= lang.text("traderIndex10")%></div>
                         </li>
-                        <li class="trader_profit">
-                            <div class="trader_profit__item">
-                                <span><i class="fa fa-dollar"></i>{{ master.min_copy_amount || '0.00' }}</span>
-                            </div>
-                            <div class="trader_gray_color"><%= lang.text("traderIndex11")%></div>
+                        <li class="trader_btn">
+                            <button class="btn btn-primary" ng-if="!master.copied" ng-click="toCopy()"><%=
+                                lang.text("traderIndex1")%>
+                            </button>
+                            <button class="btn btn-primary" disabled ng-if="master.copied"><%= lang.text("traderIndex2")%>
+                            </button>
+                            <!-- <div class="trader_gray_color trader_btn__profit">
+                            已帮 {{ master.help_num || 0 }} 人赚取
+                            <span><i class="fa fa-dollar"></i>{{ master.help_amount || 0 }}</span>
+                            </div> -->
                         </li>
-                        
                     </ul>
-                </div>
-            </div>
-            
-            
 
-            <div class="nav-tabs-wrapper">
-                <ul class="nav-tabs">
-                    <li ui-sref-active="active">
-                        <a ui-sref="trader.subpage({subpage: 'summary'})"><%= lang.text("traderIndex17")%></a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <span class="nav-tabs__divider"></span>
-                        <a ui-sref="trader.subpage({subpage: 'current'})"><%= lang.text("traderIndex18")%></a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <span class="nav-tabs__divider"></span>
-                        <a ui-sref="trader.subpage({subpage: 'history'})"><%= lang.text("traderIndex19")%></a>
-                    </li>
-                </ul>
+                </div>
             </div>
         </div>
     </div>
+    <!--<div ng-cloak= class="nav-tabs-wrapper">-->
+        <!--<ul class="nav-tabs">-->
+            <!--<li ui-sref-active="active">-->
+                <!--<a ui-sref="trader.subpage({subpage: 'summary'})"><%= lang.text("traderIndex17")%></a>-->
+            <!--</li>-->
+            <!--<li ui-sref-active="active">-->
+                <!--<span class="nav-tabs__divider"></span>-->
+                <!--<a ui-sref="trader.subpage({subpage: 'current'})"><%= lang.text("traderIndex18")%></a>-->
+            <!--</li>-->
+            <!--<li ui-sref-active="active">-->
+                <!--<span class="nav-tabs__divider"></span>-->
+                <!--<a ui-sref="trader.subpage({subpage: 'history'})"><%= lang.text("traderIndex19")%></a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <div ng-cloak class="nav_tabs">
+        <ul>
+            <li ui-sref-active="active">
+                <img src="" alt="">
+                <a ui-sref="trader.subpage({subpage: 'summary'})"><%= lang.text("traderIndex17")%></a>
+            </li>
+            <li ui-sref-active="active">
+                <img src="" alt="">
+                <a ui-sref="trader.subpage({subpage: 'current'})"><%= lang.text("traderIndex18")%></a>
+            </li>
+            <li ui-sref-active="active">
+                <img src="" alt="">
+                <a ui-sref="trader.subpage({subpage: 'history'})"><%= lang.text("traderIndex19")%></a>
+            </li>
+        </ul>
+    </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
