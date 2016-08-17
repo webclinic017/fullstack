@@ -143,8 +143,9 @@ jQuery(function($){
         });
     }
 
-    $.get('/api/v1/get_info?type=Profile').then(function(result){
+    $.get('/action/public/v4/get_info?type=Profile').then(function(result){
         result = JSON.parse(result);
+        result = result.data;
         name = result.realname;
         phone = result.phone;
     }, function (data) {
