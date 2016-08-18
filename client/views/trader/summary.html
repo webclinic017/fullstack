@@ -1,98 +1,105 @@
-<div class="container">
-    <div class="trader_summary navbar_summary">
-        <h5 class="navbar_summary__title">{{ lang.text("traderSummary1") }}</h5>
-        <div class="navbar_summary__content">
-            <div class="trader_main">
-                <div class="row">
-                    <div class="col-xs-4 trader_main__lt">
-                        <div class="trader_main__lt-item">
-                            <div class="trader_main__lt-num">
-                                <span>{{ summary.statistic.accuracy_rate || '0.00' }}</span>%
-                            </div>
-                            <div class="trader_gray_color">{{ lang.text("traderSummary2") }}</div>
-                        </div>
-                        <div class="trader_main__lt-item">
-                            <div class="trader_main__lt-num">
-                                <span>{{ summary.statistic.margin_level || '0.00' }}</span>$
-                            </div>
-                            <div class="trader_gray_color">{{ lang.text("traderSummary3") }}</div>
-                        </div>
+<div class="trade_container">
+    <div class="re_trader_chart trader_box">
+        <div class="bridge clearfix">
+            <span id="whichYear" class="re_trader_chart__whichYear">2016年表现</span>
+            <select
+                    class="re_trader_chart__changeYear"
+                    name="changeYear" id="changeYear"
+                    ng-model="selected"
+                    ng-options="item.year for item in testdata track by item.year"
+                    ng-change="changeYear(selected)"
+            ></select>
+            <span class="upData_tips">数据将于每天北京时间00:00更新</span>
+        </div>
+        <div tw-column-chart style="width: 100%; height: 350px;"></div>
+        <div class="re_trader_chart__chart_tips">
+            <div class="clearfix">
+                <i class="info_box"><i class="fa fa-info" aria-hidden="true"></i></i>
+                <span>过往表现并不能完全代表未来交易的成功率,您需要理智的做出判断</span>
+            </div>
+        </div>
+    </div>
+    <div class="re_trader_detail clearfix">
+        <div class="re_trader_detail__table trader_box">
+            <ul class="re_trader_detail__table-square small-text-font">
+                <li><span class="square_num trader_blue">378%</span><span class="span square_des">准确率</span></li>
+                <li><span class="square_num trader_blue">378%</span><span class="span square_des">准确率</span></li>
+                <li><span class="square_num">1128笔</span><span class="square_des">准确率</span></li>
+                <li><span class="square_num">378%</span><span class="square_des">准确率</span></li>
+                <li><span class="square_num">378%</span><span class="square_des">准确率</span></li>
+                <li><span class="square_num">378%</span><span class="square_des">准确率</span></li>
+                <li><span class="square_num">378%</span><span class="square_des">准确率</span></li>
+                <li><span class="square_num">378%</span><span class="square_des">准确率</span></li>
+                <li><span class="square_num">378%</span><span class="square_des">准确率</span></li>
+                <li><span class="square_num">378%</span><span class="square_des">准确率</span></li>
+                <li><span class="square_num">378%</span><span class="square_des">准确率</span></li>
+                <li><span class="square_num">378%</span><span class="square_des">准确率</span></li>
+            </ul>
+        </div>
+        <div class="re_trader_detail__areaChart trader_box">
+            <div class="re_trader_detail__areaChart-chart_box">
+                <div class="coopier_tip">
+                    <div>
+                        复制者变化
+                        <i class="info_box"><i class="fa fa-info" aria-hidden="true"></i></i>
                     </div>
-                    <div class="col-xs-4">
-                        <div tw-pie-chart data-pie-type="master"></div>
-                        <div class="trader_main__order">
-                            <span class="trader_order_profit">{{ lang.text("traderSummary4") }}</span>
-                            <span class="trader_order_loss">{{ lang.text("traderSummary5") }}</span>
-                        </div>
-                        <div class="trader_main__chart">
-                            <span class="num">{{ summary.order_count.profit_order + summary.order_count.loss_order }}</span>
-                            <br>
-                            <span class="trader_gray_color">{{ lang.text("traderSummary6") }}</span>
-                        </div>
-                    </div>
-                    <div class="col-xs-4">
-                        <div class="row">
-                            <div class="col-xs-6">
-                                <div class="trader_main__rt">
-                                    <div class="trader_gray_color">{{ lang.text("traderSummary7") }}</div>
-                                    <div>{{ summary.statistic.holding_time || '0.00' | duration }}</div>
-                                </div>
-                                <div class="trader_main__rt">
-                                    <div class="trader_gray_color ">{{ lang.text("traderSummary8") }}</div>
-                                    <div>{{ summary.statistic.trader_num || '0'  }}</div>
-                                </div>
-                                <div class="trader_main__rt no-border">
-                                    <div class="trader_gray_color">{{ lang.text("traderSummary9") }}</div>
-                                    <div>{{ summary.statistic.month_profit || '0.00' }}%</div>
-                                </div>
-                            </div>
-                            <div class="col-xs-6">
-                                <span class="navbar_summary__divider"></span>
-                                <div class="trader_main__rt">
-                                    <div class="trader_gray_color">{{ lang.text("traderSummary10") }}</div>
-                                    <div>{{ summary.statistic.drawdown || '0.00' }}%</div>
-                                </div>
-                                <div class="trader_main__rt">
-                                    <div class="trader_gray_color">{{ lang.text("traderSummary11") }}</div>
-                                    <div>{{ summary.statistic.max_profit || '0.00' }}</div>
-                                </div>
-                                <div class="trader_main__rt no-border">
-                                    <div class="trader_gray_color">{{ lang.text("traderSummary12") }}</div>
-                                    <div>{{ summary.statistic.total_profit || '0.00' }}%</div>
-                                </div>
-                            </div>
-                        </div>
+                    <div>
+                        <span class="tip_box"></span>
+                        复制者图表:显示过去一年复制者数量变化<br>资产管理:显示此交易者的总金额
                     </div>
                 </div>
+                <div class="coppier_area_chart">
+                    <div tw-area-chart style="width:100%;height:100%"></div>
+                </div>
+                <div class="coopier_total_change">最近几天复制者变化:<span class="trader_blue">700%</span></div>
+            </div>
+            <div class="re_trader_detail__areaChart-tip">
+                <span>&lt;$50K</span>
+                <span>资产管理</span>
             </div>
         </div>
     </div>
-    <div class="trader_summary navbar_summary">
-        <h5 class="navbar_summary__title">{{ lang.text("traderSummary13") }}</h5>
-        <div class="navbar_summary__content">
-            <div class="trader_chart">
-                <div tw-line-chart data-type="masterDetail"></div>
-            </div>
+    <div class="re_trader_trend trader_box">
+        <div class="re_trader_trend__title">
+            资金回撤率
+        </div>
+        <div class="re_trader_trend__line_chart">
+            <div tw-line-chart style="width:100%;height:285px" data-type="masterDetail"></div>
         </div>
     </div>
-    <div class="trader_summary navbar_summary">
-        <h5 class="navbar_summary__title">{{ lang.text("traderSummary14") }}</h5>
-        <div class="navbar_summary__content">
-            <div tw-loading-img></div>
-
-            <ul class="trader_type" ng-if="bars.length > 0">
-                <li ng-repeat="bar in bars" class="trader_type__item row">
-                    <div class="col-xs-4">
-                        <span class="trader_type__icon icon-forex-{{ bar.symbol_mod.toLowerCase() }}"></span>
-                        <span class="trader_type__tit">{{ bar.symbol_mod | symbolMod:'zh' }} ({{ bar.symbol_mod }})</span>
+    <div class="re_trader_type trader_box clearfix">
+        <div class="re_trader_type__title">
+            <span>月交易品种</span>
+            <select
+                    class="re_trader_chart__changeType"
+                    name="changeYearType"
+                    ng-model="selected"
+                    ng-options="item.year for item in testdata track by item.year"
+                    ng-change="changeYearType(selected)"
+            ></select>
+        </div>
+        <div class="re_trader_type__stack clearfix">
+            <div tw-bar-chart data-type='bar' style="width:100%;height:100px"></div>
+        </div>
+        <div class="re_trader_type__types ">
+            <div class="trader_summary navbar_summary">
+                <div class="navbar_summary__content">
+                    <div tw-loading-img></div>
+                    <ul class="trader_type" ng-if="bars.length > 0">
+                        <li ng-repeat="bar in bars" class="trader_type__item row">
+                            <div class="col-xs-4">
+                                <span class="trader_type__icon icon-forex-{{ bar.symbol_mod.toLowerCase() }}"></span>
+                                <span class="trader_type__tit">{{ bar.symbol_mod | symbolMod:'zh' }} ({{ bar.symbol_mod }})</span>
+                            </div>
+                            <div class="col-xs-8">
+                                <div tw-scale-bar data-type="masterDetail"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="text-center pd-tp-30" ng-if="bars.length <= 0">
+                        {{ lang.text("traderSummary15") }}
                     </div>
-                    <div class="col-xs-8">
-                        <div tw-scale-bar data-type="masterDetail"></div>
-                    </div>
-                </li>
-            </ul>
-            <div class="text-center pd-tp-30" ng-if="bars.length <= 0">
-                {{ lang.text("traderSummary15") }}
+                </div>
             </div>
         </div>
     </div>
