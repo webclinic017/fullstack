@@ -124,7 +124,7 @@
     border-radius: 2px;
     margin-top: 10px;
     position: relative;
-
+    cursor: pointer;
     .scale_bar__info {
       position: absolute;
       right: 10px;
@@ -138,11 +138,12 @@
       display: inline-block;
       width: 100px;
       height: 30px;
-      background-color: rgba(255,255,255,.7);
+      background-color: rgba(255,255,255,1);
       border: 1px solid $trader-gray;
       text-align: center;
       line-height: 30px;
       border-radius: 2px;
+      opacity: 0.6;
       transition: all 1s ease;
       > i{
         background-color: rgba(255,255,255,.7);
@@ -152,9 +153,10 @@
         width: 12px;
         height: 12px;
         left: 45px;
-        bottom: -6px;
+        bottom: -7px;
         border-left: 1px solid $trader-gray;
         border-bottom: 1px solid $trader-gray;
+        transition: all 1s ease;
       }
     }
     .scale_bar__info_multi{
@@ -175,6 +177,17 @@
       height: 100%;
       background-color: #75b110;
       transition: width 1s ease-out;
+    }
+  }
+
+  .scale_bar:hover{
+    > .scale_bar__info_multi, >.scale_bar__info_empty{
+      opacity: 10;
+      border: 1px solid #a0a0a0;
+      > i{
+        border-left: 1px solid #a0a0a0;
+        border-bottom: 1px solid #a0a0a0;
+      }
     }
   }
 }
@@ -254,7 +267,7 @@ $trader-width: 1030px;
 @include b(re_trader_chart) {
   background-color: #ffffff;
   width: 1030px;
-  height: 600px;
+  height: 580px;
   margin: 0 auto;
   padding-top: 50px;
   padding-left: 10px;
@@ -313,7 +326,7 @@ $ratio: 1.165;
     height: ratio(470);
   }
   @include e(table) {
-    background-color: #fff;
+    background-color: #f8f8f8;
     width: ratio(735);
     float: left;
     padding: ratio(45) 0;
@@ -353,13 +366,14 @@ $ratio: 1.165;
     }
   }
   @include e(areaChart) {
-    background-color: #fff;
+    background-color: #f8f8f8;
     width: ratio(445);
     float: right;
-    padding-top: 4px;
     @include m(chart_box) {
       border-bottom: 2px solid $trader-gray;
       padding-left: 18px;
+      background-color: #fff;
+      padding-top: 4px;
       .coopier_tip {
         width: 100%;
         height: ratio(80);
@@ -400,6 +414,7 @@ $ratio: 1.165;
         width: ratio(410);
         height: ratio(140);
         margin-top: 8px;
+        cursor: crosshair;
       }
       .coopier_total_change {
         width: ratio(410);

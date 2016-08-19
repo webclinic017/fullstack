@@ -18,8 +18,9 @@
 		getMasterSummary(usercode);
 		getMasterProfitLine(usercode);
 		getMasterBarChart(usercode);
+//--------------------------高手主页4.0重构--begin----------------------------------------
 
-		////////////////////////////////////////////////
+	/*----------------------------柱状图图-----------------------------*/
 		rendColumnChart();
 		function rendColumnChart() {
 			/*调接口获取数据*/
@@ -30,11 +31,11 @@
 				},
 				{
 					year: "2015年",
-					data: [0, 1, -6, 3, 4, 0, 6, 0, 5, 4, 2, -4]
+					data: [-1, 1, -6, 3, 4, 0, 6, 0, 5, 4, 2, -4]
 				},
 				{
 					year: "2014年",
-					data: [-50, 1, -6, 3, 4, -5, 6, -2, 5, 4, 2, -4]
+					data: [-5, 1, -6, 3, 4, -5, 6, -2, 5, 4, 2, -4]
 				}
 			];
 
@@ -66,7 +67,7 @@
 			});
 		}
 
-		/*-----------------------区域图------------------*/
+		/*----------------------------区域图-----------------------------*/
 		//function getAreaSummary(usercode) {
 		//    trader.getAreaData(usercode).then(function(data){
 		//
@@ -105,9 +106,10 @@
 		$scope.changeYearType = function () {
 			$scope.$broadcast('rendBarData', $scope.barData);
 			$scope.$broadcast('rendScaleBars', $scope.bars);
+			console.log($scope.bars);
 		};
 
-////////////////////////////////////////////////////////////////////////
+//---------------------------------end------------------------------------------
 		function getMasterSummary(usercode) {
 			trader.getMasterSummary(usercode).then(function (data) {
 				// console.info(data);

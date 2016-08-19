@@ -18,7 +18,6 @@
 				enabled: false
 			},
 			legend: {
-				itemDistance: 80,
 				align: 'center',
 				labelFormatter: function () {
 					return this.name + ' (点击以隐藏/显示)';

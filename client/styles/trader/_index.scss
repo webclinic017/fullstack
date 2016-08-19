@@ -230,6 +230,7 @@ $trader-width: 1030px;
     border-top: 1px solid $trader-gray;
     border-bottom: 1px solid $trader-gray;
     margin-top: 20px;
+    background: #fafafa;
     ul{
         width: 1030px;
         height: 50px;
@@ -245,8 +246,11 @@ $trader-width: 1030px;
             margin-bottom: -1.5px;
             line-height: 50px;
             cursor: pointer;
-            img{
-                display: inline-block;
+            > a{
+                color: #646464;
+            }
+            >i{
+                color: #646464;
             }
         }
         li.active{

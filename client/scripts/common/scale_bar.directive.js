@@ -13,16 +13,17 @@
 			restrict: 'A',
 			replace: true,
 			template: '<div class="scale_bar">'
-			+ '<span class="scale_bar__item"></span>'
-			+ '<span class="scale_bar__info_multi">多单'
-			+ '<i></i>'
-			+ '</span>'
-			+ '<span class="scale_bar__info_empty">空单'
-			+ '<i></i>'
-			+ '</span>'
-			+ '<span class="scale_bar__info">'
-			+ '</span>'
-			+ '</div>',
+					+ '<span class="scale_bar__item"></span>'
+					+ '<span class="scale_bar__info_multi">多单'
+					+ '<i></i>'
+					+ '</span>'
+					+ '<span class="scale_bar__info_empty">空单,15.5小时'
+					+ '<i></i>'
+					+ '</span>'
+					+ '<span class="scale_bar__info">'
+					+ '</span>'
+					+ '</div>',
+
 			link: function (scope, element, attrs) {
 				var el = {
 					info: element.find(".scale_bar__info"),
@@ -39,10 +40,10 @@
 
 						el.item.width(scope.bar.scale + '%');
 						el.info_multi.css({
-							'left':scope.bar.scale * 2 - 38 + 'px'
+							'left':scope.bar.scale * 2 - 50 + 'px'
 						});
 						el.info_empty.css({
-							'left':scope.bar.scale * 5.5 +  100 + 'px'
+							'left':scope.bar.scale * 3 +  140 + 'px'
 						});
 						el.info_multi.html(scope.bar.number + ' 笔 &nbsp;&nbsp;' + scope.bar.scale + '%' + '<i></i>');
 						//el.info.html(scope.bar.number + ' 笔 &nbsp;&nbsp;' + scope.bar.scale + '%');
