@@ -10,15 +10,53 @@
             </ul>
         </div>
         <div class="ranklist__search clearfix">
-            <div class="ranklist__search-item">
+            <div class="ranklist__search-item" ng-click="showSearchList($event, 'cycle')">
                 交易周期
                 <i class="fa fa-angle-down" aria-hidden="true"></i>
+                <div class="search-list" ng-show="search.cycle">
+                    <div class="tit">
+                        交易周期
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </div>
+                    <ul class="lst">
+                        <li>哟呦切克闹</li>
+                        <li>煎饼果子来一套</li>
+                        <li>哟呦切克闹</li>
+                        <li>煎饼果子来一套</li>
+                    </ul>
+                </div>
             </div>
-            <div class="ranklist__search-item">
+            <div class="ranklist__search-item" ng-click="showSearchList($event, 'preference')">
                 交易偏好
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                <div class="search-list" ng-show="search.preference">
+                    <div class="tit">
+                        交易偏好
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </div>
+                    <ul class="lst">
+                        <li>哟呦切克闹</li>
+                        <li>煎饼果子来一套</li>
+                        <li>哟呦切克闹</li>
+                        <li>煎饼果子来一套</li>
+                    </ul>
+                </div>
             </div>
-            <div class="ranklist__search-item">
+            <div class="ranklist__search-item" ng-click="showSearchList($event, 'forex')">
                 外汇交易
+                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                <div class="search-list" ng-show="search.forex">
+                    <div class="tit">
+                        外汇交易
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </div>
+                    <ul class="lst">
+                        <li>哟呦切克闹</li>
+                        <li>煎饼果子来一套</li>
+                        <li>哟呦切克闹</li>
+                        <li>煎饼果子来一套</li>
+                    </ul>
+                </div>
             </div>
 
             <div class="ranklist__search-box">
@@ -27,6 +65,60 @@
                        placeholder="搜索投资者">
                 <i class="fa fa-search" aria-hidden="true"></i>
             </div>
+        </div>
+        <div class="ranklist_cont clearfix">
+            <div class="ranklist_cont__master" ng-repeat="rank in ranklist">
+                <div class="ranklist_cont__master-info clearfix">
+                    <a class="avatar" href="" target="_blank">
+                        <img ng-src="/avatar/{{ rank.usercode }}_150.jpg" alt="avatar">
+                    </a>
+                    <div class="user">
+                        <a class="name" href="" target="_blank">
+                            {{ rank.name }}
+                        </a>
+                        <span class="intr">
+                            {{ rank.introduce }}
+                        </span>
+                    </div>
+                </div>
+                <div class="ranklist_cont__master-trade clearfix">
+                    <div class="profit">
+                        <div class="num">
+                            {{ rank.profit_rate }}<span>%</span>
+                        </div>
+                        <div class="tip">
+                            收益率
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <div class="num">
+                            {{ rank.dropdown_rate }}%
+                        </div>
+                        <div class="tip">
+                            最大跌幅
+                        </div>
+                    </div>
+                </div>
+                <div class="ranklist_cont__master-copy clearfix">
+                    <div class="info">
+                        <div class="copiers">
+                            <span class="num">
+                                {{ rank.copiers }}
+                            </span>
+                            <span class="tip">历史复制者</span>
+                        </div>
+                        <div class="rate">
+                            <span class="num">
+                                {{ rank.last_week_copy_rate }}%
+                            </span>
+                            <span class="tip">近七日复制变化率</span>
+                        </div>
+                    </div>
+                    <div class="copy_btn_wrapper">
+                        <button class="copy_btn">复制</button>
+                    </div>
+                </div>
+            </div>            
         </div>
     </div>
 </div>

@@ -5,33 +5,38 @@
     angular.module('fullstackApp')
         .controller('RanklistAllController', RanklistAllController);
 
-    RanklistAllController.$inject = ['$scope', '$state', 'ranklist'];
+    RanklistAllController.$inject = ['$scope', '$document', '$state', 'ranklist'];
 
-    function RanklistAllController($scope, $state, ranklist) {
-        $scope.rankList = [];
-        $scope.masters = {
-            type: 'all'
-        };
-        $scope.getMastersList = getMastersList;
+    function RanklistAllController($scope, $document, $state, ranklist) {
+        
+        $scope.search = {};
+        $scope.ranklist = [];
 
-        getMastersList();
+        $scope.showSearchList = showSearchList;
 
-        function getMastersList (type, sort) {
-            type = type ? type : '';
-            $scope.$emit("showLoadingImg");
-            $scope.masters.type = type;
-            ranklist.getMastersList(type, sort).then(function (data) {
-                // console.info(data);
-                
-                if (data.is_succ) {
-                    $scope.$broadcast("hideLoadingImg");
-                    $scope.rankList = data.data;
-
-                    angular.forEach($scope.rankList, function (value, index) {
-                        value.drawdown_abs = Math.abs(value.drawdown);
-                    });
-                }
-            });
+        for (var i=0; i<14; i++) {
+            var json = {
+                usercode: 525100,
+                name: "大洋彼岸的一条鱼",
+                introduce: "求的吗贷",
+                profit_rate: 300.58,
+                dropdown_rate: 80.74,
+                copiers: 245,
+                last_week_copy_rate: 266,
+            };
+            $scope.ranklist.push(json);
         }
+
+        function showSearchList (e, type) {
+            e.stopPropagation();
+            $scope.search = {};
+            $scope.search[type] = true;
+        }
+
+        $document.on('click', function () {
+            $scope.$apply(function () {
+                $scope.search = {};
+            });
+        });
     }
 })();

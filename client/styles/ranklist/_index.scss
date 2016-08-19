@@ -14,6 +14,7 @@
                 color: #222426;
                 background-color: #eff0f1;
                 font-weight: 600;
+                cursor: pointer;
 
                 &.active {
                     background-color: #ffde00;
@@ -28,9 +29,52 @@
 
         @include m(item) {
             float: left;
-            border: 1px solid #699;
             padding: 15px 25px;
             margin-top: 5px;
+            font-weight: 600;
+            position: relative;
+            margin-left: 30px;
+            cursor: pointer;
+
+            > i {
+                color: #999;
+            }
+
+            > .search-list {
+                position: absolute;
+                top: 0;
+                left: 0;
+                border: 1px solid #e6e7e8;
+                box-shadow: 0 0 3px #e6e7e8;
+                min-width: 150px;
+                background-color: #fff;
+                z-index: 100;
+
+                > .tit {
+                    padding: 14px 14px;
+                    margin: 0 10px;
+                    border-bottom: 1px solid #e6e7e8;
+
+                    > i {
+                        float: right;
+                        line-height: 20px;
+                        color: #999;
+                    }
+                }
+                > .lst {
+                    
+                    > li {
+                        padding: 10px 20px;
+                        color: #626364;
+                        font-weight: 400;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: #eff0f1;
+                        }
+                    }
+                }
+            }
         }
 
         @include m(box) {
@@ -57,6 +101,148 @@
             border-radius: 2px;
             color: #666;
             background-color: transparent;
+        }
+    }
+}
+@include b(ranklist_cont) {
+
+    margin-top: 50px;
+    margin-left: -16px;
+    margin-right: -16px;
+
+    @include e(master) {
+        float: left;
+        margin: 40px 16px 0;
+        width: 320px;
+        border: 1px solid #e6e7e8;
+        padding: 18px;
+        border-radius: 2px;
+
+        &:hover {
+            > .ranklist_cont__master-copy {
+                > .copy_btn_wrapper {
+                    > .copy_btn {
+                        background-color: #fedd0a;
+                        border-color: #fedd0a;
+                    }
+                }
+            }
+        }
+
+        @include m(info) {
+            padding: 8px 0 20px;
+            border-bottom: 1px solid #e6e7e8;
+
+            > .avatar {
+                float: left;
+                width: 58px;
+
+                > img {
+                    width: 100%;
+                    vertical-align: top;
+                }
+            }
+            > .user {
+                float: left;
+                margin-left: 10px;
+
+                > .name {
+                    font-size: 18px;
+                    display: block;
+                    color: #222;
+                    font-weight: 600;
+                    padding: 4px 0 10px;
+                }
+                > .intr {
+                    color: #626364;
+                }
+            }
+        }
+
+        @include m(trade) {
+            padding: 42px 0;
+            border-bottom: 1px solid #e6e7e8;
+
+            > .profit {
+                float: left;
+                border-right: 1px solid #e6e7e8;
+                width: 180px;
+
+                > .num {
+                    font-size: 26px;
+                    color: #ed0a0b;
+                    padding-bottom: 8px;
+
+                    > span {
+                        font-size: 16px;
+                    }
+                }
+                > .tip {
+                    color: #626364;
+                }
+            }
+            > .dropdown {
+                float: left;
+                padding-left: 20px;
+                color: #626364;
+
+                > .num {
+                    font-weight: 600;
+                    padding-top: 8px;
+                    font-size: 16px;
+                }
+                > .tip {
+                    padding-top: 10px;
+                }
+            }
+        }
+
+        @include m(copy) {
+            padding-top: 26px;
+
+            > .info {
+                float: left;
+                color: #626364;
+
+                > .copiers {
+                    padding-bottom: 14px;
+
+                    > .num {
+                        font-size: 16px;
+                        display: inline-block;
+                        min-width: 40px;
+                    }
+                }
+                > .rate {
+
+                    > .num {
+                        color: #49a3ff;
+                        display: inline-block;
+                        min-width: 40px;
+                    }
+                }
+            }
+            > .copy_btn_wrapper {
+                float: right;
+
+                > .copy_btn {
+                    margin-bottom: 0;
+                    border: 1px solid #e6e7e8;
+                    text-align: center;
+                    white-space: nowrap;
+                    font-weight: 600;
+                    background-color: transparent;
+                    cursor: pointer;
+                    padding: 14px 26px;
+                    font-size: 16px;
+                    border-radius: 4px;
+                    
+                    // &:hover {
+                    //     background-color: #ffed7b;
+                    //     border-color: #ffed7b;
+                    // }
+                }
+            }
         }
     }
 } 
