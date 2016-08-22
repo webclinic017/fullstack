@@ -58,9 +58,9 @@
 
             var w = $window.open('/waiting');
 
-            asset.deposit(amount).then(function(data) {
+            asset.deposit($scope.personal.real_id, amount).then(function(data) {
                 openDepositMdl('depositFinish');
-                w.location = data.url;
+                w.location = data.data.url;
             });
         }
 
