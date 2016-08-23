@@ -8,54 +8,60 @@
     BonusIndexController.$inject = ['$scope', 'asset'];
 
     function BonusIndexController($scope, asset) {
+
+        $scope.masterSummary = {};
+        $scope.copierSummary = {};
+        $scope.masterList = [];
+        $scope.copierList = [];
         
-        $scope.bonusInfo = {
-            bonus: {
-                key: undefined,
-                value: undefined
+        var date = new Date();
+        var year = date.getFullYear();
+        var lastMonth = date.getMonth();
+        var month = date.getMonth() + 1;
+        if (month < 10) {
+            month = '0' + month;
+        }
+        if (lastMonth < 10) {
+            lastMonth = '0' + lastMonth;
+        }
+        var endDateString = year + '-' + month;
+        var dateString = year + '-' + lastMonth;
+        
+        $scope.datepicker = {
+            date: dateString,
+            options: {
+                format: 'YYYY-MM',
+                date: dateString,
+                // endDate: endDateString,
             }
         };
-        $scope.bonusList = [
-            {
-                key: "上月分成",
-                value: "current"
-            },
-            {
-                key: "历史明细",
-                value: "history"
-            }
-        ];
-        $scope.currentList = [
-            {
-                username: "哈哈哈啦啦",
-                bonus: 11112.22,
-                date: "2016/07/01 07:22:10",
-                detail: {}
-            }
-        ];
-        $scope.historyList = [
-            {
-                bonus: 412.22,
-                date: "2016年8月"
-            },
-            {
-                bonus: 11112.22,
-                date: "2016年7月"
-            }
-        ];
-
-        getData();
         
-        function getData (value) {
-            value = value ? value : 'current';
-            var key = value == 'current' ? '上月分成' : '历史明细';
-
-            $scope.bonusInfo = {
-                bonus: {
-                    key: key,
-                    value: value
+        getMasterBonusSummary();
+        getCopierBonusSummary();
+        // getMasterBonusList();
+        
+        function getMasterBonusSummary () {
+            asset.getMasterBonusSummary().then(function (data) {
+                // console.info(data);
+                if (data.is_succ) {
+                    $scope.masterSummary = data.data;
                 }
-            };
+            });
+        }
+
+        function getCopierBonusSummary () {
+            asset.getCopierBonusSummary().then(function (data) {
+                // console.info(data);
+                if (data.is_succ) {
+                    $scope.copierSummary = data.data;
+                }
+            });
+        }
+
+        function getMasterBonusList () {
+            asset.getMasterBonusList($scope.datepicker.date).then(function (data) {
+                console.info(data);
+            });
         }
     }
 })();

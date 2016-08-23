@@ -16,11 +16,10 @@
             deposit: deposit,
             getDepositLimit: getDepositLimit,
             getFXRate: getFXRate,
-            getBonus: getBonus,
-            getBonusList: getBonusList,
-            getBonusDetail: getBonusDetail,
-            getCopyMyDetail: getCopyMyDetail,
-            getIsWithdraw: getIsWithdraw
+            getIsWithdraw: getIsWithdraw,
+            getMasterBonusSummary: getMasterBonusSummary,
+            getCopierBonusSummary: getCopierBonusSummary,
+            getMasterBonusList: getMasterBonusList
         };
         return service;
 
@@ -152,57 +151,6 @@
         }
 
         /**
-         * Asset Service 获取分成信息概况
-         *
-         * @method getBonus
-         */
-        function getBonus() {
-            return $http.get('/action/public/v4/get_copy_data');
-        }
-
-        /**
-         * Asset Service 获取我的分成列表
-         *
-         * @method getBonusList
-         */
-        function getBonusList(date) {
-            return $http.get('/action/public/v4/get_bonus', {
-                params: {
-                    date: date
-                }
-            });
-        }
-
-        /**
-         * Asset Service 获取分成详情
-         *
-         * @method getBonusDetail
-         *
-         */
-        function getBonusDetail(date, usercode, page, pagesize) {
-            return $http.get('/action/public/v4/get_bonus_list', {
-                params: {
-                    date: date,
-                    usercode: usercode,
-                    page: page,
-                    pagesize: pagesize
-                }
-            });
-        }
-
-        /**
-         * Asset Service 获取复制我的 详情
-         *
-         * @method getCopyMyDetail
-         *
-         */
-
-        function getCopyMyDetail() {
-            return $http.get('/action/public/v4/copy_my');
-        }
-
-
-        /**
          * Asset Service 获取是否可以出金
          *
          * @method getIsWithdraw
@@ -215,6 +163,37 @@
               params : {
                          amount : amount
                        }
+            });
+        }
+
+        /**
+         * Asset Service 获取高手分成数据总览
+         *
+         * @method getMasterBonusSummary
+         */
+        function getMasterBonusSummary() {
+            return $http.get('/action/public/v4/master/profile');
+        }
+
+        /**
+         * Asset Service 获取复制者分成数据总览
+         *
+         * @method getCopierBonusSummary
+         */
+        function getCopierBonusSummary() {
+            return $http.get('/action/public/v4/copier/profile');
+        }
+
+        /**
+         * Asset Service 获取高手分成列表
+         *
+         * @method getMasterBonusList
+         */
+        function getMasterBonusList(pay_zone) {
+            return $http.get('/action/public/v4/master/copy_pay_list', {
+                params: {
+                    pay_zone: pay_zone
+                }
             });
         }
     }

@@ -2,45 +2,52 @@
 <div class="space_bonus">
     <div class="space_bonus__total_box clearfix">
         <div class="space_bonus__total">
-            <div class="item-num"><span>980</span></div>
-            <div class="item-tip"><span>历史复制人数</span></div>
+            <div class="item-num">
+                <span ng-if="personal.disable">{{ masterSummary.copier_count }}</span>
+                <span ng-if="! personal.disable">{{ copierSummary.master_count }}</span>
+            </div>
+            <div class="item-tip">
+                <span ng-if="personal.disable">历史复制人数</span>
+                <span ng-if="! personal.disable">历史复制高手</span>
+            </div>
         </div>
         <div class="space_bonus__total mid">
-            <div class="item-num"><span><i class="fa fa-dollar"></i>800</span></div>
-            <div class="item-tip"><span>上月预估分成</span></div>
+            <div class="item-num">
+                <span ng-if="personal.disable"><i class="fa fa-dollar"></i>{{ masterSummary.last_pay_amount }}</span>
+                <span ng-if="! personal.disable"><i class="fa fa-dollar"></i>{{ copierSummary.last_pay_amount }}</span>
+            </div>
+            <div class="item-tip">
+                <span ng-if="personal.disable">上月分成</span>
+                <span ng-if="! personal.disable">上月扣除分成</span>
+            </div>
         </div>
         <div class="space_bonus__total">
-            <div class="item-num"><span><i class="fa fa-dollar"></i>980</span></div>
-            <div class="item-tip"><span>总计分成</span></div>
+            <div class="item-num">
+                <span ng-if="personal.disable"><i class="fa fa-dollar"></i>{{ masterSummary.total_pay_amount }}</span>
+                <span ng-if="! personal.disable"><i class="fa fa-dollar"></i>{{ copierSummary.total_pay_amount }}</span>
+            </div>
+            <div class="item-tip">
+                <span>总计</span>
+            </div>
         </div>
     </div>
     <div class="space_bonus__title_box clearfix">
         <h4 class="tit">我的复制情况</h4>
         <div class="form-control-wrapper">
-            <div class="select">
-                <input class="select__input"
-                       name="bonus"
-                       type="text"
-                       placeholder="请选择"
-                       required
-                       ng-model="bonusInfo.bonus.key">
-                
-                <i class="select__icon fa fa-angle-down"></i>
-
-                <ul class="select__dropdown" twform-select data-bind-model="bonusInfo.bonus">
-                    
-                    <li ng-repeat="bonus in bonusList" ng-class="{'selected': bonus.value === bonusInfo.bonus.value}">
-                        <span data-value="{{bonus.value}}">{{bonus.key}}</span>
-                    </li>
-                </ul>
-            </div>
+            <input class="form-control"
+                   name="date"
+                   type="text"
+                   required
+                   ng-model="datepicker.date"
+                   tw-datetimepicker
+                   datetimepicker-options="{{datepicker.options}}">
         </div>
         <div class="remark">
             <span class="font-info">注:</span>
             每月1号结算上一月分成
         </div>
     </div>
-    <div class="space_bonus__current" ng-if="bonusInfo.bonus.value === 'current'">
+    <div ng-if="personal.disable">
         <table class="table table-header table-hover table-striped table-bordered">
             <colgroup>
                 <col width="25%"></col>
@@ -57,38 +64,48 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="current in currentList">
-                    <td class="font-info">{{ current.username }}</td>
+                <tr ng-repeat="master in masterList" ng-if="masterList.length > 0">
+                    <td class="font-info">{{ master.username }}</td>
                     <td>
-                        <i class="fa fa-dollar"></i>{{ current.bonus }}
+                        <i class="fa fa-dollar"></i>{{ master.bonus }}
                     </td>
-                    <td>{{ current.date }}</td>
+                    <td>{{ master.date }}</td>
                     <td class="font-success">
                         <button class="btn btn-primary btn-sm">详情</button>
                     </td>
                 </tr>
+                <tr ng-if="masterList.length <= 0"><td colspan="4">无数据</td></tr>
             </tbody>
         </table>
     </div>
-    <div class="space_bonus__history" ng-if="bonusInfo.bonus.value === 'history'">
+    <div ng-if="! personal.disable">
         <table class="table table-header table-hover table-striped table-bordered">
             <colgroup>
-                <col width="50%"></col>
-                <col width="50%"></col>
+                <col width="25%"></col>
+                <col width="25%"></col>
+                <col width="25%"></col>
+                <col width="25%"></col>
             </colgroup>
             <thead>
                 <tr>
+                    <th>高手名称</th>
+                    <th>产生分成</th>
                     <th>结算时间</th>
-                    <th>分成收入</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="history in historyList">
-                    <td>{{ history.date }}</td>
+                <tr ng-repeat="copier in copierList" ng-if="copierList.length > 0">
+                    <td class="font-info">{{ copier.username }}</td>
                     <td>
-                        <i class="fa fa-dollar"></i>{{ history.bonus }}
+                        <i class="fa fa-dollar"></i>{{ copier.bonus }}
+                    </td>
+                    <td>{{ copier.date }}</td>
+                    <td class="font-success">
+                        <button class="btn btn-primary btn-sm">详情</button>
                     </td>
                 </tr>
+                <tr ng-if="copierList.length <= 0"><td colspan="4">无数据</td></tr>
             </tbody>
         </table>
     </div>
