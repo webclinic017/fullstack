@@ -114,6 +114,17 @@ module.exports = function () {
         "home46": {"en": "TigerWit-everyone is an investment master", "zh": "老虎外汇 — 人人都是投资高手"},
         "home47": {"en": "The secret of successful investment does not lie in the social influence and development prospect of a certain industry, but in a company's competitive edges and the sustainability of such edges. Only everlasting and profound product and service superiorities can generate generous returns for investors.", "zh": "投资的秘诀、不是评估某一行业对社会的影响有多大、或它的发展前景有多好、而是一间公司有多强的竞争优势、这优势可以维持多久。产品和服务的优越性持久而深厚、才能给投资者带来优厚的回报。"},
         "home48": {"en": "-Warren Buffett", "zh": "—— 沃伦·巴菲特"},
+        // home banner
+        "home49": {"en": "Our money, your earnings", "zh":"你投资 我出钱"},
+        "home50": {"en": "Register now and get", "zh":"注册送"},
+        "home51": {"en": "Register during Aug 1st to Aug 31st, chance to get Mi Band!", "zh":"2016.8.1到2016.8.31注册 有机会得小米手环哦"},
+        "home52": {"en": "first deposit bonus", "zh":"首充送高达"},
+        "home53": {"en": "Upto $10000", "zh":"10000美金"},
+        "home54": {"en": "More prize after trading! Ticktock! ", "zh":"交易可领大奖哦！快来抢！"},
+        "home55": {"en": "Happy hour: Aug 1st to Aug 31st", "zh":"活动时间：2016.8.1至2016.8.31"},
+        "home56": {"en": "Fixed copy trading", "zh":"定期跟单"},
+        "home57": {"en": "uptp 60% yearly return", "zh":"年化收益可达"},
+        "home58": {"en": "Monthly product is avaliable now!", "zh":"月盈产品火爆进行中"},
 
         // 产品介绍－外汇交易 forex
         "forex1": {"en": "Foreign exchange transaction involves buying and/or selling a kind of foreign currency. In terms of the largest single product market in the world, trades valuing over USD 5 trillion are achieved on the current foreign exchange market. The foreign exchange and price is mainly influenced by international trade, economy and policies of countries and investment flow direction and the foreign exchange market is featured as transparent information, tremendous turnover and great fairness and transparency.", "zh": "外汇交易涉及买入一个外国货币和/或卖出另一个外国货币。全球最大的单一产品市场，当今外汇市场每天拥有超过5万亿美元的成交额，外汇市场和价格主要受国际间的交易，各国经济和政策以及投资流向的影响，外汇市场信息透明，流通量巨大，公平透明。"},
