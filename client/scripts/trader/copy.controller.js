@@ -35,7 +35,8 @@
             system: {
                 valid: true,
                 show: false,
-                status: 0   // 0, 1
+                status: 0,   // 0, 1
+                msg: ''
             }
         };
         $scope.clickable = {
@@ -85,55 +86,14 @@
                     } else {
                         $scope.copyTrade.success = false;
 
-                        if (data.errCode === 4) {
-                            $scope.backErr.system.show = true;
-                            $scope.backErr.system.status = 1;    // 复制人数已达上限
+                        $scope.backErr.system.show = true;
+                        $scope.backErr.system.msg = data.error_msg;
 
-                            $timeout(function () {
-                                $scope.backErr.system.show = false;
-                                $scope.backErr.system.status = 0;
-                            }, 3000);
-                        }
-
-                        if (data.err_code === 7) {
-                            $scope.backErr.system.show = true;
-                            $scope.backErr.system.status = 2;    // 您没有权限复制该高手
-
-                            $timeout(function () {
-                                $scope.backErr.system.show = false;
-                                $scope.backErr.system.status = 0;
-                            }, 3000);
-                        }
-
-                        if (data.errCode === 6) {
-                            $scope.backErr.system.show = true;
-                            $scope.backErr.system.status = 3;    // 高手不能复制高手
-
-                            $timeout(function () {
-                                $scope.backErr.system.show = false;
-                                $scope.backErr.system.status = 0;
-                            }, 3000);
-                        }
-
-                        if (data.err_code === 12) {
-                            $scope.backErr.system.show = true;
-                            $scope.backErr.system.status = 4;    // 可复制保证金过小
-
-                            $timeout(function () {
-                                $scope.backErr.system.show = false;
-                                $scope.backErr.system.status = 0;
-                            }, 3000);
-                        }
-
-                        if (data.errCode === 2) {
-                            $scope.backErr.system.show = true;
-                            $scope.backErr.system.status = 5;    // 余额不足
-
-                            $timeout(function () {
-                                $scope.backErr.system.show = false;
-                                $scope.backErr.system.status = 0;
-                            }, 3000);
-                        }
+                        $timeout(function () {
+                            $scope.backErr.system.show = false;
+                            $scope.backErr.system.msg = '';
+                        }, 3000);
+                        
                     }
                 }, function (err) {
                     $scope.clickable.copy = true;
