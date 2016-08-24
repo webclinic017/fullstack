@@ -47,6 +47,7 @@
 			}, 1000);
 
 			$scope.changeYear = function (year) {
+				console.log(year);
 				$scope.$broadcast('rendColumnData', year.data);
 			};
 
