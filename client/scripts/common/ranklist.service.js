@@ -21,12 +21,13 @@
          * @method getMastersList
          * 
          */
-        function getMastersList(type, sort) {
+        function getMastersList(order, page, pagesize) {
             // return $http.get('/data/masters.json', {
-            return $http.get('/action/public/v4/get_master_list', {
+            return $http.get('/action/public/v5/get_master_list', {
                 params: {
-                    order: type,
-                    sort : sort
+                    order: order,
+                    page : page,
+                    pagesize: pagesize
                 }
             });
         }
