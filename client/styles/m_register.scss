@@ -19,7 +19,7 @@ html, body {
 .disable{
   color: #ccc!important;
   border: 1px solid #ccc!important;
-  font-size: px2rem(10)!important;
+  font-size: 0.9rem!important;
   cursor: wait!important;
 }
 
@@ -61,7 +61,7 @@ textarea::-webkit-input-placeholder {
   .reg_font {
     font-weight: 200;
     font-family: "PingFangSC-Regular";
-    font-size: px2rem(30);
+    font-size: px2rem(32);
     color: #222222;
   }
   .reg_layout {
@@ -163,7 +163,7 @@ textarea::-webkit-input-placeholder {
       }
       input {
         width: 80%;
-        font-size: 0.7rem;
+        font-size: 1rem;
       }
       .verify_code{
         width: 50%;
