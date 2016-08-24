@@ -19,7 +19,9 @@
             getIsWithdraw: getIsWithdraw,
             getMasterBonusSummary: getMasterBonusSummary,
             getCopierBonusSummary: getCopierBonusSummary,
-            getMasterBonusList: getMasterBonusList
+            getMasterBonusList: getMasterBonusList,
+            getCopierBonusList: getCopierBonusList,
+            getBonusDetailList: getBonusDetailList
         };
         return service;
 
@@ -193,6 +195,39 @@
             return $http.get('/action/public/v4/master/copy_pay_list', {
                 params: {
                     pay_zone: pay_zone
+                }
+            });
+        }
+
+        /**
+         * Asset Service 获取高手分成列表
+         *
+         * @method getCopierBonusList
+         */
+        function getCopierBonusList(pay_zone) {
+            return $http.get('/action/public/v4/copier/copy_pay_list', {
+                params: {
+                    pay_zone: pay_zone
+                }
+            });
+        }
+
+        /**
+         * Asset Service 获取分成结算订单详情列表
+         *
+         * @method getBonusDetailList
+         *
+         * @params ticket_noob 复制者分成结算订单id 
+         * @params mt4_from 高手MT4 
+         * @params mt4_to 复制者MT4 
+         *
+         */
+        function getBonusDetailList(ticket_noob, mt4_from, mt4_to) {
+            return $http.get('/action/public/v4/copy_pay_trade_list', {
+                params: {
+                    ticket_noob: ticket_noob,
+                    mt4_from: mt4_from,
+                    mt4_to: mt4_to
                 }
             });
         }

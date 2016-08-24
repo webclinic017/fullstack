@@ -153,20 +153,22 @@
             require: '?ngModel',
             restrict: 'AE',
             scope: {
-                datetimepickerOptions: '@'
+                datetimepickerOptions: '@',
+                getBonusList: '&'
             },
             link: function (scope, element, attrs, controller) {
                 var passedOptions = scope.$eval(attrs.datetimepickerOptions);
                 var options = $.extend({}, defaultOptions, passedOptions);
-                console.info(attrs.datetimepickerOptions);
-                console.info(options);
+                // console.info(attrs.datetimepickerOptions);
+                // console.info(options);
                 element
                     .on('dp.change', function (e) {
                         if (controller) {
                             $timeout(function () {
                                 controller.$setViewValue(e.target.value);
-                                console.info(controller);
+                                // console.info(controller);
                                 element.blur();
+                                scope.getBonusList();
                             });
                         }
                     })

@@ -1,5 +1,13 @@
 //  复制我的
 @include b(space_bonus) {
+    margin-bottom: 50px;
+
+    .btn {
+        padding: 0px 22px;
+        font-size: 14px;
+        height: 32px;
+        line-height: 32px;
+    }
 
     @include e(total_box) {
         text-align: center;
@@ -31,6 +39,50 @@
             line-height: 44px;
             background-color: $gray-lighter;
             color: $gray-darker;
+
+            &:hover {
+                .fa {
+                    span {
+                        display: block;
+                    }
+                }
+            }
+
+            .fa {
+                position: relative;
+
+                > span {
+                    display: none;
+                    position: absolute;
+                    top: 28px;
+                    left: -121px;;
+                    padding: 15px;
+                    border: 1px solid #ccc;
+                    width: 254px;
+                    background-color: #fff;
+
+                    &:before {
+                        content: '';
+                        border: 14px solid transparent;
+                        border-bottom-color: #fff;
+                        position: absolute;
+                        top: -28px;
+                        left: 50%;
+                        margin-left: -14px;
+                        z-index: 10;
+                    }
+                    &:after {
+                        content: '';
+                        border: 15px solid transparent;
+                        border-bottom-color: #ccc;
+                        position: absolute;
+                        top: -30px;
+                        left: 50%;
+                        margin-left: -15px;
+                        z-index: 8;
+                    }
+                }
+            }
         }
     }
     @include e(title_box) {
@@ -68,6 +120,13 @@
             background-color: $brand-info;
             color: #fff;
             text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    @include e(modal) {
+        @include m(content) {
+            padding: 20px 0;
+            background-color: #fafafa;
         }
     }
 }

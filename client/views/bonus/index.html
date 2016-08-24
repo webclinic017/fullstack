@@ -3,31 +3,48 @@
     <div class="space_bonus__total_box clearfix">
         <div class="space_bonus__total">
             <div class="item-num">
-                <span ng-if="personal.disable">{{ masterSummary.copier_count }}</span>
-                <span ng-if="! personal.disable">{{ copierSummary.master_count }}</span>
+                <span ng-if="personal && personal.master">{{ masterSummary.copier_count }}</span>
+                <span ng-if="personal && !personal.master">{{ copierSummary.master_count }}</span>
             </div>
             <div class="item-tip">
-                <span ng-if="personal.disable">历史复制人数</span>
-                <span ng-if="! personal.disable">历史复制高手</span>
+                <span ng-if="personal && personal.master">历史复制人数</span>
+                <span ng-if="personal && !personal.master">历史复制高手</span>
             </div>
         </div>
         <div class="space_bonus__total mid">
             <div class="item-num">
-                <span ng-if="personal.disable"><i class="fa fa-dollar"></i>{{ masterSummary.last_pay_amount }}</span>
-                <span ng-if="! personal.disable"><i class="fa fa-dollar"></i>{{ copierSummary.last_pay_amount }}</span>
+                <span ng-if="personal && personal.master"><i class="fa fa-dollar"></i>{{ masterSummary.last_pay_amount }}</span>
+                <span ng-if="personal && !personal.master"><i class="fa fa-dollar"></i>{{ copierSummary.last_pay_amount }}</span>
             </div>
             <div class="item-tip">
-                <span ng-if="personal.disable">上月分成</span>
-                <span ng-if="! personal.disable">上月扣除分成</span>
+                <span ng-if="personal && personal.master">
+                    上月分成
+                    <i class="fa fa-info-circle" aria-hidden="true">
+                        <span>上一个自然月的分成数据</span>
+                    </i>
+                </span>
+                <span ng-if="personal && !personal.master">
+                    上月扣除分成
+                    <i class="fa fa-info-circle" aria-hidden="true">
+                        <span>上一个自然月的分成数据</span>
+                    </i>
+                </span>
             </div>
         </div>
         <div class="space_bonus__total">
             <div class="item-num">
-                <span ng-if="personal.disable"><i class="fa fa-dollar"></i>{{ masterSummary.total_pay_amount }}</span>
-                <span ng-if="! personal.disable"><i class="fa fa-dollar"></i>{{ copierSummary.total_pay_amount }}</span>
+                <span ng-if="personal && personal.master"><i class="fa fa-dollar"></i>{{ masterSummary.total_pay_amount }}</span>
+                <span ng-if="personal && !personal.master"><i class="fa fa-dollar"></i>{{ copierSummary.total_pay_amount }}</span>
             </div>
             <div class="item-tip">
-                <span>总计</span>
+                <span>
+                    总计
+                    <i class="fa fa-info-circle" aria-hidden="true">
+                        <span>
+                            指从产生复制关系起至上一个自然月的分成总和，不包括本月分成。
+                        </span>
+                    </i>
+                </span>
             </div>
         </div>
     </div>
@@ -40,6 +57,7 @@
                    required
                    ng-model="datepicker.date"
                    tw-datetimepicker
+                   get-bonus-list="getBonusList()"
                    datetimepicker-options="{{datepicker.options}}">
         </div>
         <div class="remark">
@@ -47,7 +65,7 @@
             每月1号结算上一月分成
         </div>
     </div>
-    <div ng-if="personal.disable">
+    <div ng-if="personal && personal.master">
         <table class="table table-header table-hover table-striped table-bordered">
             <colgroup>
                 <col width="25%"></col>
@@ -78,7 +96,7 @@
             </tbody>
         </table>
     </div>
-    <div ng-if="! personal.disable">
+    <div ng-if="personal && !personal.master">
         <table class="table table-header table-hover table-striped table-bordered">
             <colgroup>
                 <col width="25%"></col>
@@ -95,17 +113,24 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="copier in copierList" ng-if="copierList.length > 0">
+                <tr ng-repeat="copier in copierList" ng-if="success && copierList.length > 0">
                     <td class="font-info">{{ copier.username }}</td>
                     <td>
-                        <i class="fa fa-dollar"></i>{{ copier.bonus }}
+                        <i class="fa fa-dollar"></i>{{ copier.pay_noob }}
                     </td>
-                    <td>{{ copier.date }}</td>
+                    <td>{{ copier.pay_time }}</td>
                     <td class="font-success">
-                        <button class="btn btn-primary btn-sm">详情</button>
+                        <button class="btn btn-primary btn-sm" ng-click="openBonusDetailMdl(copier)">详情</button>
                     </td>
                 </tr>
-                <tr ng-if="copierList.length <= 0"><td colspan="4">无数据</td></tr>
+                <tr ng-if="success && copierList.length > 0">
+                    <td>总计</td>
+                    <td><i class="fa fa-dollar"></i>{{ totalPay }}</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr ng-if="success && copierList.length <= 0"><td colspan="4">{{ backErr.msg || '无数据'}}</td></tr>
+                <tr ng-if="! success"><td colspan="4">加载中...</td></tr>
             </tbody>
         </table>
     </div>

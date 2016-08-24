@@ -5,10 +5,14 @@
     angular.module('fullstackApp')
         .controller('BonusIndexController', BonusIndexController);
 
-    BonusIndexController.$inject = ['$scope', 'asset'];
+    BonusIndexController.$inject = ['$scope', 'asset', '$modal'];
 
-    function BonusIndexController($scope, asset) {
+    function BonusIndexController($scope, asset, $modal) {
 
+        $scope.success = false;
+        $scope.backErr = {
+            msg: ''
+        };
         $scope.masterSummary = {};
         $scope.copierSummary = {};
         $scope.masterList = [];
@@ -35,10 +39,13 @@
                 // endDate: endDateString,
             }
         };
+
+        $scope.getBonusList = getBonusList;
+        $scope.openBonusDetailMdl = openBonusDetailMdl;
         
         getMasterBonusSummary();
         getCopierBonusSummary();
-        // getMasterBonusList();
+        // getBonusList();
         
         function getMasterBonusSummary () {
             asset.getMasterBonusSummary().then(function (data) {
@@ -58,10 +65,89 @@
             });
         }
 
+        function getBonusList () {
+            var watch = $scope.$watch('personal.master', function (newVal, oldVal, scope) {
+                // console.info(newVal, oldVal);
+                if (newVal !== oldVal) {
+                    if (newVal) {
+                        getMasterBonusList();
+                        $scope.getBonusList = getMasterBonusList;
+                    } else {
+                        getCopierBonusList();
+                        $scope.getBonusList = getCopierBonusList;
+                    }
+                    watch();
+                }
+            });
+            
+        }
+
         function getMasterBonusList () {
             asset.getMasterBonusList($scope.datepicker.date).then(function (data) {
                 console.info(data);
+                console.info($scope.personal);
             });
         }
+
+        function getCopierBonusList () {
+            $scope.copierList = [];
+            $scope.success = false;
+            $scope.backErr = {
+                msg: ''
+            };
+            asset.getCopierBonusList($scope.datepicker.date).then(function (data) {
+                console.info(data);
+                $scope.success = true;
+                if (data.is_succ) {
+                    $scope.copierList = data.data;
+
+                    var total = 0;
+                    angular.forEach($scope.copierList, function (value, index) {
+                        total += value.pay_noob;
+                    });
+                    $scope.totalPay = total;
+                } else {
+                    $scope.backErr.msg = data.error_msg;
+                }
+            });
+        }
+
+        function openBonusDetailMdl (trader) {
+            $modal.open({
+                templateUrl: '/views/bonus/detail_modal.html',
+                size: 'lg',
+                backdrop: true,
+                controller: function ($scope, $modalInstance) {
+                    
+                    $scope.success = false;
+                    $scope.username = trader.username;
+                    $scope.details = [];
+
+                    $scope.closeModal = closeModal;
+
+                    getBonusDetailList();
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+
+                    function getBonusDetailList () {
+                        asset.getBonusDetailList(trader.ticket_noob, trader.mt4_from, trader.mt4_to).then(function (data) {
+                            console.info(data);
+                            $scope.success = true;
+                            if (data.is_succ) {
+                                $scope.details = data.data.trade_list;
+                                $scope.total = {
+                                    sum_profit: data.data.sum_profit,
+                                    pay_noob: data.data.pay_noob
+                                };
+                            }
+                        });
+                    }
+                }
+            });
+        }
+
+        
     }
 })();
