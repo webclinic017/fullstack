@@ -38,7 +38,8 @@ module.exports = function(app) {
     });
     //爬虫配置
     app.route('/robots.txt').get(function(req, res){
-        res.render('../../client/robots.txt');
+        res.set('Content-Type', 'text/plain');
+        res.send('User-agent: *\nDisallow:\nAllow:/');
     });
     // All undefined asset or api routes should return a 404
     // app.route('/:url(api|auth|components|app|bower_components|assets)/*').get(errors[404]);
