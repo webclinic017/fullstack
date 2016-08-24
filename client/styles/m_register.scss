@@ -61,7 +61,7 @@ textarea::-webkit-input-placeholder {
   .reg_font {
     font-weight: 200;
     font-family: "PingFangSC-Regular";
-    font-size: px2rem(32);
+    font-size: 1.05rem;
     color: #222222;
   }
   .reg_layout {
@@ -104,7 +104,7 @@ textarea::-webkit-input-placeholder {
     }
     .reg_title{
       text-align: center;
-      font-size: px2rem(36);
+      font-size: 1.18rem;
       margin: 0 auto;
       display: inline-block;
       margin-bottom: px2rem(16);
@@ -163,7 +163,7 @@ textarea::-webkit-input-placeholder {
       }
       input {
         width: 80%;
-        font-size: 1rem;
+        font-size: 1.05rem;
       }
       .verify_code{
         width: 50%;
