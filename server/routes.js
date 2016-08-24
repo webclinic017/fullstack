@@ -36,6 +36,10 @@ module.exports = function(app) {
     app.route('/baidu_verify_qTHsV5cQAY.html').get(function(req, res){
         res.render('../../client/baidu_verify_qTHsV5cQAY.html');
     });
+    //爬虫配置
+    app.route('/robots.txt').get(function(req, res){
+        res.render('../../client/robots.txt');
+    });
     // All undefined asset or api routes should return a 404
     // app.route('/:url(api|auth|components|app|bower_components|assets)/*').get(errors[404]);
 
