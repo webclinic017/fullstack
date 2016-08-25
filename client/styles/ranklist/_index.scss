@@ -5,6 +5,18 @@
     background-position: center center;
     background-size: cover;
     @include img-normal($image-path-base + "ranklist/ranklist-banner.jpg");
+
+    @include e(tip) {
+        text-align: center;
+        color: #fff;
+        font-size: 50px;
+        padding-top: 80px;
+        font-weight: 600;
+
+        > p {
+            margin: 0;
+        }
+    }
 }
 @include b(ranklist) {
     margin-bottom: 100px;
@@ -134,8 +146,8 @@
             > .ranklist_cont__master-copy {
                 > .copy_btn_wrapper {
                     > .copy_btn {
-                        background-color: #fedd0a;
-                        border-color: #fedd0a;
+                        background-color: $brand-primary;
+                        border-color: $brand-primary;
                     }
                 }
             }
@@ -157,13 +169,13 @@
             > .user {
                 float: left;
                 margin-left: 10px;
+                line-height: 58px;
 
                 > .name {
                     font-size: 18px;
                     display: block;
                     color: #222;
                     font-weight: 600;
-                    padding: 4px 0 10px;
                 }
                 > .intr {
                     color: #626364;
@@ -238,6 +250,7 @@
                 float: right;
 
                 > .copy_btn {
+                    color: #000;
                     margin-bottom: 0;
                     border: 1px solid #e6e7e8;
                     text-align: center;

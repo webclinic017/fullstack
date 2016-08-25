@@ -1,12 +1,30 @@
-<div class="ranklist_banner"></div>
+<div class="ranklist_banner">
+    <div class="ranklist_banner__tip">
+        <p>TigerWit 复制跟单系统</p>
+        <p>人人都是投资高手</p>
+    </div>
+</div>
 <div class="container">
     <div class="ranklist">
         <div class="ranklist__navbar">
             <ul class="ranklist__navbar-lst clearfix">
-                <li ng-class="{active: rankOrder == ''}" ng-click="changeRankOrder()">收益率</li>
-                <li ng-class="{active: rankOrder == 'maxRetract'}" ng-click="changeRankOrder('maxRetract')">最大跌幅</li>
-                <li ng-class="{active: rankOrder == 'copyHistorySum'}" ng-click="changeRankOrder('copyHistorySum')">历史复制人数</li>
-                <li ng-class="{active: rankOrder == 'min_follow'}" ng-click="changeRankOrder('min_follow')">最低复制金额</li>
+                <li ng-class="{active: rankOrder == ''}" ng-click="changeRankOrder()">
+                    收益率
+                    <i class="fa fa-caret-down"></i>
+                </li>
+                <li ng-class="{active: rankOrder == 'maxRetract'}" ng-click="changeRankOrder('maxRetract')">
+                    最大跌幅
+                    <i class="fa fa-caret-down"></i>
+                </li>
+                <li ng-class="{active: rankOrder == 'copyHistorySum'}" ng-click="changeRankOrder('copyHistorySum')">
+                    历史复制人数
+                    <i class="fa fa-caret-down"></i>
+                </li>
+                <li ng-class="{active: rankOrder == 'min_follow'}" ng-click="changeRankOrder('min_follow')">
+                    <i class="fa fa-dollar"></i>
+                    最低复制金额
+                    <i class="fa fa-caret-down"></i>
+                </li>
             </ul>
         </div>
         <!-- <div class="ranklist__search clearfix">
@@ -70,16 +88,14 @@
             <div tw-loading-img></div>
             <div class="ranklist_cont__master" ng-repeat="rank in ranklist">
                 <div class="ranklist_cont__master-info clearfix">
-                    <a class="avatar" href="" target="_blank">
+                    <a class="avatar" href="/trader/{{rank.user_code}}/#/trader/summary" target="_blank">
                         <img ng-src="/avatar/{{ rank.user_code }}_150.jpg" alt="avatar">
                     </a>
                     <div class="user">
-                        <a class="name" href="" target="_blank">
+                        <a class="name" href="/trader/{{rank.user_code}}/#/trader/summary" target="_blank">
                             {{ rank.username || '-' }}
                         </a>
-                        <span class="intr">
-                            {{ rank.introduce || '-' }}
-                        </span>
+                        
                     </div>
                 </div>
                 <div class="ranklist_cont__master-trade clearfix">
@@ -110,13 +126,13 @@
                         </div>
                         <div class="rate">
                             <span class="num">
-                                <i class="fa fa-usd" aria-hidden="true"></i>{{ rank.min_copy_amount }}
+                                <i class="fa fa-dollar"></i>{{ rank.min_copy_amount }}
                             </span>
                             <span class="tip">最低复制金额</span>
                         </div>
                     </div>
                     <div class="copy_btn_wrapper">
-                        <button class="copy_btn">复制</button>
+                        <a href="/trader/{{rank.user_code}}/#/trader/summary" target="_blank" class="copy_btn">复制</a>
                     </div>
                 </div>
             </div>            
