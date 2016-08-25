@@ -54,9 +54,9 @@ module.exports = {
             withdraw_history : "20%",    //历史最高回撤
             profit_rate_wish : "60%",  //预期年化收益率
             profit_rate_now : null, //实时年化收益率
-            end_date_appoint : "2016.09.03 18:00:00", //预约结束时间
-            start_date_trade : '2016.09.05 00:00:00',  //开始交易时间
-            end_date_trade : '2016.10.04 23:59:59',  //结束交易时间  exam : '2016.5.19'
+            end_date_appoint : "2016.09.02 18:00", //预约结束时间
+            start_date_trade : '2016.09.05 00:00',  //开始交易时间
+            end_date_trade : '2016.10.04 24:00',  //结束交易时间  exam : '2016.5.19'
             team_intro : "team_macd", //文件名，团队介绍模块
             jiafang:"MACD", //甲方，操盘手，出现在agree里
             progress : 5, //投资进度 exam:50
