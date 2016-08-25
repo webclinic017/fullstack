@@ -356,14 +356,14 @@ module.exports = function(app) {
                 url: "",
                 force_update: false
             };
-            if(system == "android" && versionCode < 7){
-                currentVersion = {
-                    version_name : "V2.0.2",
-                    description : "改版，体验更流畅",
-                    url : "https://www.tigerwit.com/download/apk/tigerwit_v2.0.2.apk",
-                    force_update : false
-                }   
-            }            
+            // if(system == "android" && versionCode < 7){
+            //     currentVersion = {
+            //         version_name : "V2.0.2",
+            //         description : "改版，体验更流畅",
+            //         url : "https://www.tigerwit.com/download/apk/tigerwit_v2.0.2.apk",
+            //         force_update : false
+            //     }   
+            // }            
             data = currentVersion;
         }
         if (action == "get_banner_info") {
