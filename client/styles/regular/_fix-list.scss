@@ -511,6 +511,13 @@
             background-position: center center;
             @include img-normal($image-path-base + "ranklist/zhangwei2.jpg");  
         }
+        @include m(m-img1) {
+            width: 980px;
+            height: 650px;
+            background-size: 100%;
+            background-position: center center;
+            @include img-normal($image-path-base + "ranklist/MACD1.png");  
+        }
     }
 
     // tabs 切换图片
