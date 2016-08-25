@@ -18,7 +18,9 @@
             cancelCopy: cancelCopy,
             getAvaCopyAmount: getAvaCopyAmount,
             getCopyRelation: getCopyRelation,
-            getHistoricalRate:getHistoricalRate
+            getHistoricalRate:getHistoricalRate,
+            getCoopierChange:getCoopierChange,
+            getMasterInfo:getMasterInfo
             // follow: follow,
             // getFollowRelation: getFollowRelation
         };
@@ -220,6 +222,32 @@
          */
         function getHistoricalRate (user_code){
             return $http.get('/action/public/v5/historical_rate', {
+                params: {
+                    user_code: user_code
+                }
+            });
+        }
+
+		/**
+		 * trader 获取高手变化图表
+         * @param user_code
+         * @returns {*}
+         */
+        function getCoopierChange(user_code){
+            return $http.get('/action/public/v5/copy_change', {
+                params: {
+                    user_code: user_code
+                }
+            });
+        }
+
+		/**
+         * trader 获取高手的基本信息
+         * @param user_code
+         * @returns {*}
+         */
+        function getMasterInfo(user_code){
+            return $http.get('/action/public/v5/get_master_info', {
                 params: {
                     user_code: user_code
                 }
