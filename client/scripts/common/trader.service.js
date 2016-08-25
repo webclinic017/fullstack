@@ -17,7 +17,8 @@
             copy: copy,
             cancelCopy: cancelCopy,
             getAvaCopyAmount: getAvaCopyAmount,
-            getCopyRelation: getCopyRelation
+            getCopyRelation: getCopyRelation,
+            getHistoricalRate:getHistoricalRate
             // follow: follow,
             // getFollowRelation: getFollowRelation
         };
@@ -211,5 +212,18 @@
         //         }
         //     });
         // }
+
+		/**
+         * trader 获取历史收益率
+         * @param user_code
+         * @returns {*}
+         */
+        function getHistoricalRate (user_code){
+            return $http.get('/action/public/v5/historical_rate', {
+                params: {
+                    user_code: user_code
+                }
+            });
+        }
     }
 })();

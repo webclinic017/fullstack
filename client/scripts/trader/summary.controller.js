@@ -20,39 +20,108 @@
 		getMasterBarChart(usercode);
 //--------------------------高手主页4.0重构--begin----------------------------------------
 
-	/*----------------------------柱状图图-----------------------------*/
+		/*----------------------------柱状图图-----------------------------*/
 		rendColumnChart();
+		$scope.test = [];
+		var tw = [
+			{"t": "2015-10", "v": -11.22},
+			{"t": "2015-11", "v": 37.4},
+			{"t": "2015-12", "v": 116.84},
+			{"t": "2016-01", "v": 74.38},
+			{"t": "2016-02", "v": -3.64},
+			{"t": "2016-03", "v": -41.33},
+			{"t": "2016-04", "v": 0.37},
+			{"t": "2016-05", "v": -0.45},
+			{"t": "2016-06", "v": 6.17},
+			{"t": "2016-07", "v": -3.76},
+			{"t": "2016-08", "v": 6.26}
+		];
+
+		//var targetArr = [];
+		//var count = 0;
+		//var pin = tw[0].t.split("-")[0];
+		//tw.forEach(function (item, index) {
+		//	if (item.t.indexOf(pin) < 0) {
+		//		count++;
+		//		pin = item.t.split("-")[0];
+		//		targetArr[count] = {
+		//			year: pin,
+		//			data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		//		};
+		//	} else {
+		//		targetArr[count] = {
+		//			year: pin,
+		//			data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+		//		};
+		//
+		//		for (var i = 0; i < tw.length; i++) {
+		//
+		//			if (tw[i].t.indexOf(targetArr[count].year)) {
+		//
+		//				targetArr[count][parseInt(tw[i].t.split("-")[1]) - 1] = tw[i].v
+		//			}
+		//		}
+		//	}
+		//});
+		//
+		//console.log(targetArr);
+
+
+		function parseData (data) {
+			var arrData = [];
+			angular.forEach(data, function (value, index) {
+				var year = value.t.split('-')[0];
+				var month = Number(value.t.split('-')[1]);
+				var isHave = false;
+				// console.info(year, month);
+				angular.forEach(arrData, function (value2, index2) {
+					if (year === value2.key) {
+						isHave = true;
+						value2.data[month-1] = value.v;
+					}
+				});
+
+				if (!isHave) {
+					arrData.push({
+						key: year,
+						year: year+"年",
+						data: repeatArr(month, value.v)
+					});
+				}
+			});
+			return arrData;
+			function repeatArr (month, val) {
+				var arr = [];
+				for (var i=0; i<12; i++) {
+					arr.push(0);
+				}
+				arr[month-1] = val;
+				return arr;
+			}
+		}
+
 		function rendColumnChart() {
 			/*调接口获取数据*/
-			$scope.testdata = [
-				{
-					year: "2016年",
-					data: [6, 1, -6, 3, 4, -5, 6, -2, 5, 4, 2, -4]
-				},
-				{
-					year: "2015年",
-					data: [-1, 1, -6, 3, 4, 0, 6, 0, 5, 4, 2, -4]
-				},
-				{
-					year: "2014年",
-					data: [-5, 1, -6, 3, 4, -5, 6, -2, 5, 4, 2, -4]
+			trader.getHistoricalRate(usercode).then(function (return_data) {
+				if (return_data.is_succ) {
+					console.log(return_data);
+					var data = return_data.data;
+					$scope.columnData = parseData(data);
+					console.log($scope.columnData);
+					/*让下拉框默认选中*/
+					$scope.selected = $scope.columnData[0];
+
+					$scope.$broadcast('rendColumnData', $scope.columnData[0].data);
+
+					$scope.changeYear = function (year) {
+						console.log(year);
+						$scope.$broadcast('rendColumnData', year.data);
+					};
 				}
-			];
-
-			/*让下拉框默认选中*/
-			$scope.selected = $scope.testdata[0];
-
-			$timeout(function () {
-				$scope.$broadcast('rendColumnData', $scope.testdata[0].data);
-			}, 1000);
-
-			$scope.changeYear = function (year) {
-				console.log(year);
-				$scope.$broadcast('rendColumnData', year.data);
-			};
+			});
 
 			/*渲染表格*/
-			var data = $scope.testdata;
+			//var data = $scope.testdata;
 		}
 
 		function getYearAverage() {

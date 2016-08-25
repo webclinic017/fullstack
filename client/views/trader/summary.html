@@ -6,7 +6,7 @@
                     class="re_trader_chart__changeYear"
                     name="changeYear" id="changeYear"
                     ng-model="selected"
-                    ng-options="item.year for item in testdata track by item.year"
+                    ng-options="item.year for item in columnData track by item.year"
                     ng-change="changeYear(selected)"
             ></select>
             <span class="upData_tips">数据将于每天北京时间00:00更新</span>
