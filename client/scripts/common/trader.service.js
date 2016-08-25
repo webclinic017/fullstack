@@ -20,7 +20,8 @@
             getCopyRelation: getCopyRelation,
             getHistoricalRate:getHistoricalRate,
             getCoopierChange:getCoopierChange,
-            getMasterInfo:getMasterInfo
+            getMasterInfo:getMasterInfo,
+            getMonthlySymbols:getMonthlySymbols
             // follow: follow,
             // getFollowRelation: getFollowRelation
         };
@@ -248,6 +249,14 @@
          */
         function getMasterInfo(user_code){
             return $http.get('/action/public/v5/get_master_info', {
+                params: {
+                    user_code: user_code
+                }
+            });
+        }
+
+        function getMonthlySymbols (user_code){
+            return $http.get('/action/public/v5/monthly_symbols', {
                 params: {
                     user_code: user_code
                 }

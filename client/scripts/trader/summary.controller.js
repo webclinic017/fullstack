@@ -161,30 +161,58 @@
 			});
 		}
 
-		function getMasterBarChart(usercode) {
-			trader.getMasterBarChart(usercode).then(function (data) {
-
+		getMonthlySymbols(usercode);
+		function getMonthlySymbols(usercode) {
+			trader.getMonthlySymbols(usercode).then(function (data) {
+				console.log(data);
 				function parseBar(data){
 					var barData = [];
-					for(var key in data){
+					for(var i=0; i<data.length; i++){
 						var obj = {
 							name:'',
 							data:[]
 						};
-						(function(key){
-							obj.name = key;
-							obj.data[0] = data[key];
+						(function(item){
+							//console.log(key);
+							obj.name = item.symbol;
+							obj.data[0] = item.ratio;
 							console.log(obj);
 							barData.push(obj)
-						}(key))
+						}(data[i]))
 					}
 					console.log(barData);
 					return barData;
 				}
 
 				$scope.$broadcast('rendBarData', parseBar(data.data));
-
 				console.info(data);
+			});
+		}
+
+		function getMasterBarChart(usercode) {
+			trader.getMasterBarChart(usercode).then(function (data) {
+
+				//function parseBar(data){
+				//	var barData = [];
+				//	for(var key in data){
+				//		var obj = {
+				//			name:'',
+				//			data:[]
+				//		};
+				//		(function(key){
+				//			obj.name = key;
+				//			obj.data[0] = data[key];
+				//			console.log(obj);
+				//			barData.push(obj)
+				//		}(key))
+				//	}
+				//	console.log(barData);
+				//	return barData;
+				//}
+				//
+				//$scope.$broadcast('rendBarData', parseBar(data.data));
+				//
+				//console.info(data);
 				$scope.bars = [];
 				var symbolBar = {};
 

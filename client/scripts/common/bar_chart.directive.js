@@ -18,10 +18,7 @@
 				enabled: false
 			},
 			legend: {
-				align: 'center',
-				labelFormatter: function () {
-					return this.name + ' (点击以隐藏/显示)';
-				}
+				align: 'center'
 			},
 			xAxis: {
 				categories: ['交易品种:'],
