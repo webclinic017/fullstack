@@ -1,7 +1,15 @@
+@include b(ranklist_banner) {
+    overflow: hidden;
+    margin-top: 69px;
+    height: 432px;
+    background-position: center center;
+    background-size: cover;
+    @include img-normal($image-path-base + "ranklist/ranklist-banner.jpg");
+}
 @include b(ranklist) {
-    margin-top: 80px;
     margin-bottom: 100px;
-
+    margin-top: 40px;
+    
     @include e(navbar) {
 
         @include m(lst) {
@@ -12,12 +20,12 @@
                 height: 55px;
                 line-height: 55px;
                 color: #222426;
-                background-color: #eff0f1;
+                border-bottom: 1px solid #eff0f1;
                 font-weight: 600;
                 cursor: pointer;
 
                 &.active {
-                    background-color: #ffde00;
+                    color: $brand-info;
                 }
             }
         }
@@ -106,19 +114,23 @@
 }
 @include b(ranklist_cont) {
     position: relative;
-    margin-top: 50px;
+    margin-top: 25px;
     margin-left: -16px;
     margin-right: -16px;
 
     @include e(master) {
         float: left;
-        margin: 40px 16px 0;
+        margin: 0 16px 40px;
         width: 320px;
         border: 1px solid #e6e7e8;
         padding: 18px;
         border-radius: 2px;
+        background-color: #fff;
+        box-shadow: 0px 4px 3px #ccc;
 
         &:hover {
+            background-color: #fafafa;
+
             > .ranklist_cont__master-copy {
                 > .copy_btn_wrapper {
                     > .copy_btn {
@@ -170,7 +182,7 @@
 
                 > .num {
                     font-size: 26px;
-                    color: #ed0a0b;
+                    color: $brand-danger;
                     padding-bottom: 8px;
 
                     > span {
@@ -216,7 +228,7 @@
                 > .rate {
 
                     > .num {
-                        color: #49a3ff;
+                        color: $brand-info;
                         display: inline-block;
                         min-width: 40px;
                     }
