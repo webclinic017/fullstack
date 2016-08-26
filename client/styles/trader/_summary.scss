@@ -1,146 +1,499 @@
 @include b(trader_summary) {
-    
+
 }
 
 @include b(trader_main) {
-    padding: 60px 0;
+  padding: 60px 0;
 
-    .col-xs-4 {
-        position: relative;
+  .col-xs-4 {
+    position: relative;
+  }
+
+  .col-xs-6 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .pie_chart {
+    height: 200px;
+    margin-top: -40px;
+    z-index: 1;
+  }
+
+  @include e(lt) {
+    border-right: 1px solid $gray;
+    text-align: center;
+
+    @include m(item) {
+      padding: 10px 0;
     }
 
-    .col-xs-6 {
-        padding-left: 0px;
-        padding-right: 0px;
+    @include m(num) {
+      > span {
+        font-size: 30px;
+      }
     }
-    
-    .pie_chart {
-        height: 200px;
-        margin-top: -40px;
-        z-index: 1;
+  }
+
+  @include e(rt) {
+    text-align: center;
+    border-bottom: 1px dashed $gray;
+    padding: 10px 0;
+
+    &.no-border {
+      border-bottom: none;
     }
+  }
 
-    @include e(lt) {
-        border-right: 1px solid $gray;
-        text-align: center;
+  @include e(order) {
+    padding-left: 75px;
 
-        @include m(item) {
-            padding: 10px 0;
-        }
+    > span {
+      position: relative;
+      display: inline-block;
+      padding-left: 20px;
 
-        @include m(num) {
-            > span {
-                font-size: 30px;
-            }
-        }
-    }
-
-    @include e(rt) {
-        text-align: center;
-        border-bottom: 1px dashed $gray;
-        padding: 10px 0;
-
-        &.no-border {
-            border-bottom: none;
-        }
-    }
-
-    @include e(order) {
-        padding-left: 75px;
-
-        >span {
-            position: relative;
-            display: inline-block;
-            padding-left: 20px;
-
-            &:before {
-                content: '';
-                width: 12px;
-                height: 12px;
-                border-radius: 50%;
-                position: absolute;
-                top: 2px;
-                left: 0;
-            }
-            &.trader_order_loss {
-                margin-left: 15px;
-            }
-            &.trader_order_profit:before {
-                background-color: $brand-primary;
-            }
-            &.trader_order_loss:before {
-                background-color: $gray;
-            }
-        }
-        
-    }
- 
-    @include e(chart) {
-        width: 100px;
-        text-align: center;
+      &:before {
+        content: '';
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
         position: absolute;
-        top: 40px;
-        left: 50%;
-        margin-left: -50px;
-
-        > .num {
-            font-size: 22px;
-        }
+        top: 2px;
+        left: 0;
+      }
+      &.trader_order_loss {
+        margin-left: 15px;
+      }
+      &.trader_order_profit:before {
+        background-color: $brand-primary;
+      }
+      &.trader_order_loss:before {
+        background-color: $gray;
+      }
     }
+
+  }
+
+  @include e(chart) {
+    width: 100px;
+    text-align: center;
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    margin-left: -50px;
+
+    > .num {
+      font-size: 22px;
+    }
+  }
 }
 
 @include b(trader_chart) {
-    .line_chart {
-        height: 400px;
-        padding: 40px 0;
-        text-align: center;
-        line-height: 400px;
-    }
+  .line_chart {
+    height: 400px;
+    padding: 40px 0;
+    text-align: center;
+    line-height: 400px;
+  }
 }
 
 @include b(trader_type) {
-    padding: 10px 0;
+  padding: 10px 0;
 
-    @include e(item) {
-        padding: 30px 0;
-        border-bottom: 1px solid $gray;
+  @include e(item) {
+    padding: 30px 0;
+    border-bottom: 1px solid $gray;
 
-        &:last-child {
-            border-bottom: none;
-        }
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @include e(icon) {
+    margin-right: 10px;
+  }
+
+  @include e(tit) {
+    color: $gray-darker;
+  }
+
+  .scale_bar {
+    height: 20px;
+    background-color: #f23244;
+    border-radius: 2px;
+    margin-top: 10px;
+    position: relative;
+    cursor: pointer;
+    .scale_bar__info {
+      position: absolute;
+      right: 10px;
+      top: -24px;
+      color: $gray-darker;
     }
 
-    @include e(icon) {
-        margin-right: 10px;
+    .scale_bar__info_multi,.scale_bar__info_empty{
+      position: relative;
+      top: -32px;
+      display: inline-block;
+      width: 100px;
+      height: 30px;
+      background-color: rgba(255,255,255,1);
+      border: 1px solid $trader-gray;
+      text-align: center;
+      line-height: 30px;
+      border-radius: 2px;
+      opacity: 0.6;
+      transition: all 1s ease;
+      > i{
+        background-color: rgba(255,255,255,.7);
+        position: absolute;
+        transform: rotateZ(-45deg);
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        left: 45px;
+        bottom: -7px;
+        border-left: 1px solid $trader-gray;
+        border-bottom: 1px solid $trader-gray;
+        transition: all 1s ease;
+      }
     }
-
-    @include e(tit) {
-        color: $gray-darker;
+    .scale_bar__info_multi{
+      left: -35px;
     }
-
-    .scale_bar {
-        height: 20px;
-        background-color: $gray;
-        border-radius: 2px;
-        margin-top: 10px;
-        position: relative;
-
-        .scale_bar__info {
-            position: absolute;
-            right: 10px;
-            top: -24px;
-            color: $gray-darker;
-        }
-
-        .scale_bar__item {
-            position: absolute;
-            top: 0;
-            left: 0;
-            border-radius: 2px;
-            width: 0%;
-            height: 100%;
-            background-color: $brand-primary;
-            transition: width 1s ease-out;
-        }
+    .scale_bar__info_empty{
+      left: 400px;
     }
+    .scale_bar__item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius-topleft: 2px;
+      -moz-border-radius-topleft: 2px;
+      border-radius-bottomleft: 2px;
+      -moz-border-radius-bottomleft: 2px;
+      width: 0;
+      height: 100%;
+      background-color: #61cb28;
+      transition: width 1s ease-out;
+    }
+  }
+
+  .scale_bar:hover{
+    > .scale_bar__info_multi, >.scale_bar__info_empty{
+      opacity: 10;
+      border: 1px solid #a0a0a0;
+      > i{
+        border-left: 1px solid #a0a0a0;
+        border-bottom: 1px solid #a0a0a0;
+      }
+    }
+  }
 }
+
+//-----------高手主页4.0------------//
+
+$trader-blue: #188afa;
+$trader-green: #61cb28;
+$trader-gray: #e6e6e6;
+$tiger-yellow: #fff000;
+$trader-width: 1030px;
+.normal-font {
+  font-size: 12px;
+  color: #9e9e9e;
+}
+
+.big-num-font {
+  font-size: 28px;
+}
+
+.big-text-font {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.mid-text-font {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.small-text-font {
+  font-size: 12px;
+}
+
+.center {
+  margin: 0 auto;
+}
+
+.trader_blue {
+  color: $trader-blue;
+}
+
+.trader_green {
+  color: $trader-green;
+}
+
+.trader_box {
+  box-shadow: 1px 1px 1px #e4e4e4;
+  border: 1px solid #e4e4e4;
+  border-top: none;
+}
+
+.info_box {
+  display: inline-block;
+  height: 22px;
+  font-size: 14px;
+  width: 22px;
+  border-radius: 50%;
+  border: 1px solid $trader-blue;
+  color: $trader-blue;
+  line-height: 22px;
+  i {
+    color: $trader-blue;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+.trade_container {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding-top: 25px;
+  overflow: hidden;
+  font-size: 12px;
+}
+
+@include b(re_trader_chart) {
+  background-color: #ffffff;
+  width: 1030px;
+  height: 580px;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-left: 10px;
+
+  .bridge {
+    > span, > select {
+      display: inline-block;
+      float: left;
+      height: 35px;
+      line-height: 35px;
+      margin-bottom: 50px;
+    }
+
+    > span {
+      width: 110px;
+      margin-left: 10px;
+    }
+
+    > span.upData_tips {
+      width: 210px !important;
+    }
+
+    > select {
+      width: 110px;
+    }
+  }
+
+  @include e(chart_tips) {
+    text-align: center;
+    margin-top: 30px;
+    vertical-align: center;
+    > div {
+      margin: 0 auto;
+    }
+    span {
+      display: inline-block;
+      font-style: normal;
+      height: 25px;
+      line-height: 25px;
+    }
+  }
+}
+
+$ratio: 1.165;
+@function ratio($px) {
+  @return $px / $ratio * 1px;
+}
+
+@include b(re_trader_detail) {
+  background-color: #f0f0f0;
+  width: ratio(1200);
+  height: ratio(470);
+  margin: 0 auto;
+  margin-top: 30px;
+  > div {
+    height: ratio(470);
+  }
+  @include e(table) {
+    background-color: #f8f8f8;
+    width: ratio(735);
+    float: left;
+    padding: ratio(45) 0;
+    @include m(square) {
+      width: 100%;
+      height: 100%;
+      > li {
+        display: inline-block;
+        float: left;
+        width: 187.85px;
+        height: ratio(50);
+        border-right: 1px solid $trader-gray;
+        margin-left: ratio(25);
+        margin-top: ratio(60);
+        > span {
+          display: block;
+        }
+        > span:nth-child(1) {
+          font-size: ratio(22);
+        }
+        > span:nth-child(2) {
+
+        }
+      }
+      > li:nth-child(1) {
+        margin-top: 0;
+      }
+      > li:nth-child(2) {
+        margin-top: 0;
+      }
+      > li:nth-child(3) {
+        margin-top: 0;
+      }
+      > li:nth-child(3n) {
+        border: none;
+      }
+    }
+  }
+  @include e(areaChart) {
+    background-color: #f8f8f8;
+    width: ratio(445);
+    float: right;
+    @include m(chart_box) {
+      border-bottom: 2px solid $trader-gray;
+      padding-left: 18px;
+      background-color: #fff;
+      padding-top: 4px;
+      .coopier_tip {
+        width: 100%;
+        height: ratio(80);
+        div {
+          height: 100%;
+          display: inline-block;
+          vertical-align: center;
+        }
+        div:nth-child(1) {
+          width: ratio(120);
+          text-align: center;
+          line-height: ratio(80);
+          float: left;
+        }
+        div:nth-child(2) {
+          margin-left: 10px;
+          width: 193px;
+          border: 1px solid $trader-gray;
+          padding-top: ratio(12);
+          padding-left: ratio(12);
+          padding-right: ratio(10);
+          position: relative;
+        }
+        .tip_box {
+          position: absolute;
+          display: inline-block;
+          width: ratio(18);
+          height: ratio(18);
+          border-left: 1px solid $trader-gray;
+          border-top: 1px solid $trader-gray;
+          transform: rotateZ(-45deg);
+          left: -8px;
+          top: 40%;
+          background-color: #fff;
+        }
+      }
+      .coppier_area_chart {
+        width: ratio(410);
+        height: ratio(140);
+        margin-top: 8px;
+        cursor: crosshair;
+      }
+      .coopier_total_change {
+        width: ratio(410);
+        height: ratio(90);
+        margin-top: 20px;
+        text-align: center;
+        > span {
+          font-size: ratio(22);
+        }
+      }
+    }
+    @include m(tip) {
+      width: ratio(410);
+      height: ratio(90);
+      padding-left: ratio(25);
+      padding-top: 26px;
+      span:nth-child(1) {
+        font-size: 20px;
+        display: block;
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
+
+@include b(re_trader_trend) {
+  background-color: #ffffff;
+  width: ratio(1200);
+  height: ratio(410);
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-left: ratio(25);
+  padding-top: ratio(35);
+  padding-right: ratio(40);
+  @include e(title) {
+    width: 100%;
+    height: ratio(30);
+  }
+}
+
+@include b(re_trader_type) {
+  background-color: #ffffff;
+  width: ratio(1200);
+  margin: 0 auto;
+  margin-top: 30px;
+  padding-left: ratio(25);
+  padding-top: ratio(30);
+  padding-right: ratio(30);
+  margin-bottom: 45px;
+  @include e(title) {
+    width: 100%;
+    height: ratio(30);
+    > span, > select {
+      display: inline-block;
+      float: left;
+      height: 25px;
+      line-height: 25px;
+      margin-bottom: 25px;
+    }
+
+    > span {
+      width: 80px;
+    }
+
+    > select {
+      width: 80px;
+    }
+  }
+
+  @include e(stack) {
+    width: 100%;
+    height: 145px;
+  }
+
+  @include e(types) {
+    .navbar_summary {
+      border: none;
+    }
+  }
+}
+
+
