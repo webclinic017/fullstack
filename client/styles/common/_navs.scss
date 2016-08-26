@@ -136,9 +136,9 @@
 
     .logo-con {
         display: inline-block;
-        width: 82px;
-        height: 45px;
-        @include img-normal($image-path-base + "logo-con.png");
+        width: 100px;
+        height: 50px;
+        @include img-normal($image-path-base + "logo-con-tw.png");
         background-size: 100%;
         background-repeat: no-repeat;
         background-position-y: center;
