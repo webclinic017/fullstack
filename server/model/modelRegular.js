@@ -11,7 +11,10 @@ module.exports = {
 			'https://www.tigerwit.com/images/ranklist/huixin3.60915e4a.jpg',
 			'https://www.tigerwit.com/images/ranklist/huixin4.f0c9794f.jpg',
 			'https://www.tigerwit.com/images/ranklist/huixin5.9ea1c956.jpg'
-		]
+		],
+        "team_macd" : [
+            'https://www.tigerwit.com/images/ranklist/MACD1.139e7345.png'
+        ]
 	},	
 	/*
 		{
@@ -42,6 +45,27 @@ module.exports = {
 	*/
 
 	products : [
+        {
+            id : "10",
+            name : "【MACD月盈201609-01】",    //产品标题
+            money_copy : "$3000-$10000",   //复制金额
+            money_copy_max : "$30万", //最高复制金额 exam : '$4000'
+            period : "1个月",      //复制封闭期
+            withdraw_history : "20%",    //历史最高回撤
+            profit_rate_wish : "60%",  //预期年化收益率
+            profit_rate_now : null, //实时年化收益率
+            end_date_appoint : "2016.09.02 18:00", //预约结束时间
+            start_date_trade : '2016.09.05 00:00',  //开始交易时间
+            end_date_trade : '2016.10.04 24:00',  //结束交易时间  exam : '2016.5.19'
+            team_intro : "team_macd", //文件名，团队介绍模块
+            jiafang:"MACD", //甲方，操盘手，出现在agree里
+            progress : 5, //投资进度 exam:50
+            desc_risk : "动用杠杆不超过10倍；亏损达到账户初始资金的10%时触发预警；亏损达到账户初始资金的15%时触发熔断，交易将会停止1-3天，然后再开始交易；账户的清盘线设置在亏损20%。", //风险控制
+            desc_divide : "盈利金额的30%",//报酬分成
+            note : "无" //备注
+            // spe_desc_time : "即日起至预约总金额达到$30W",//特殊产品的进展状态
+            // spe_desc_trade : "预约总金额达到$30W后第二个交易日"//特殊产品的交易时间     
+        },
         {
             id : "9",
             name : "【汇赢全球月盈 201608-2】",    //产品标题

@@ -36,6 +36,11 @@ module.exports = function(app) {
     app.route('/baidu_verify_qTHsV5cQAY.html').get(function(req, res){
         res.render('../../client/baidu_verify_qTHsV5cQAY.html');
     });
+    //爬虫配置
+    app.route('/robots.txt').get(function(req, res){
+        res.set('Content-Type', 'text/plain');
+        res.send('User-agent: *\nDisallow:\nAllow:/');
+    });
     // All undefined asset or api routes should return a 404
     // app.route('/:url(api|auth|components|app|bower_components|assets)/*').get(errors[404]);
 
@@ -136,7 +141,7 @@ module.exports = function(app) {
     app.route('/trader/:usercode').get(function(req, res) {
         var usercode = req.params.usercode;
 
-        request('http://www.tigerwit.com/action/public/v4/get_master_info?usercode=' + usercode, function(error, response, body) {
+        request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
             if (!error && response.statusCode == 200) {
                 // console.info(body);
                 body = JSON.parse(body);
@@ -351,6 +356,14 @@ module.exports = function(app) {
                 url: "",
                 force_update: false
             };
+            if(system == "android" && versionCode < 8){
+                currentVersion = {
+                    version_name : "V2.0.3",
+                    description : "改版，体验更流畅",
+                    url : "https://www.tigerwit.com/download/apk/tigerwit_v2.0.3.apk",
+                    force_update : false
+                }   
+            }            
             data = currentVersion;
         }
         if (action == "get_banner_info") {
