@@ -17,7 +17,11 @@
             copy: copy,
             cancelCopy: cancelCopy,
             getAvaCopyAmount: getAvaCopyAmount,
-            getCopyRelation: getCopyRelation
+            getCopyRelation: getCopyRelation,
+            getHistoricalRate:getHistoricalRate,
+            getCoopierChange:getCoopierChange,
+            getMasterInfo:getMasterInfo,
+            getMonthlySymbols:getMonthlySymbols
             // follow: follow,
             // getFollowRelation: getFollowRelation
         };
@@ -31,9 +35,9 @@
          * @param {String} usercode 
          */
         function getMasterDetail (usercode) {
-            return $http.get('/action/public/v4/get_master_info', {
+            return $http.get('/action/public/v5/get_master_info', {
                 params: {
-                    usercode: usercode
+                    user_code: usercode
                 }
             });
         }
@@ -211,5 +215,52 @@
         //         }
         //     });
         // }
+
+		/**
+         * trader 获取历史收益率
+         * @param user_code
+         * @returns {*}
+         */
+        function getHistoricalRate (user_code){
+            return $http.get('/action/public/v5/historical_rate', {
+                params: {
+                    user_code: user_code
+                }
+            });
+        }
+
+		/**
+		 * trader 获取高手变化图表
+         * @param user_code
+         * @returns {*}
+         */
+        function getCoopierChange(user_code){
+            return $http.get('/action/public/v5/copy_change', {
+                params: {
+                    user_code: user_code
+                }
+            });
+        }
+
+		/**
+         * trader 获取高手的基本信息
+         * @param user_code
+         * @returns {*}
+         */
+        function getMasterInfo(user_code){
+            return $http.get('/action/public/v5/get_master_info', {
+                params: {
+                    user_code: user_code
+                }
+            });
+        }
+
+        function getMonthlySymbols (user_code){
+            return $http.get('/action/public/v5/monthly_symbols', {
+                params: {
+                    user_code: user_code
+                }
+            });
+        }
     }
 })();

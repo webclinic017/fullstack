@@ -141,7 +141,7 @@ module.exports = function(app) {
     app.route('/trader/:usercode').get(function(req, res) {
         var usercode = req.params.usercode;
 
-        request('http://www.tigerwit.com/action/public/v4/get_master_info?usercode=' + usercode, function(error, response, body) {
+        request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
             if (!error && response.statusCode == 200) {
                 // console.info(body);
                 body = JSON.parse(body);
@@ -356,14 +356,14 @@ module.exports = function(app) {
                 url: "",
                 force_update: false
             };
-            if(system == "android" && versionCode < 7){
-                currentVersion = {
-                    version_name : "V2.0.2",
-                    description : "改版，体验更流畅",
-                    url : "https://www.tigerwit.com/download/apk/tigerwit_v2.0.2.apk",
-                    force_update : false
-                }   
-            }            
+            // if(system == "android" && versionCode < 7){
+            //     currentVersion = {
+            //         version_name : "V2.0.2",
+            //         description : "改版，体验更流畅",
+            //         url : "https://www.tigerwit.com/download/apk/tigerwit_v2.0.2.apk",
+            //         force_update : false
+            //     }   
+            // }            
             data = currentVersion;
         }
         if (action == "get_banner_info") {
