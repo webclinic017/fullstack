@@ -139,6 +139,10 @@
         width: 82px;
         height: 45px;
         @include img-normal($image-path-base + "logo-con.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-position-y: center;
+        
         &.en {
             @include img-normal($image-path-base + "logo-con-en.png");
         }

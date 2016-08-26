@@ -23,7 +23,11 @@
                         %>
                         <div class="tab__item">
                             <a href="javascript:;">
-                                交易图标<%= index+1 %>
+                                <%if (model.aImages.length == 1){%>
+                                    交易图标
+                                <%} else {%>
+                                    交易图标<%= index+1 %>
+                                <%}%>
                                 <span>
                                     <i class="fa fa-angle-down"></i>
                                     <i class="fa fa-angle-up active"></i>
