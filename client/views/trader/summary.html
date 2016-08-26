@@ -52,7 +52,7 @@
                 <div class="coppier_area_chart">
                     <div tw-area-chart style="width:100%;height:100%"></div>
                 </div>
-                <div class="coopier_total_change">最近七天复制者变化:<span class="trader_blue">&nbsp;{{ areaDataInfo.last_week_profit_rate }}%</span></div>
+                <div class="coopier_total_change">最近七天复制者变化:<span class="trader_blue">&nbsp;{{ areaDataInfo.Last_week_copy_rate || 0 }}%</span></div>
             </div>
             <div class="re_trader_detail__areaChart-tip">
                 <span>{{ areaDataInfo.last_max_balance }}</span>
