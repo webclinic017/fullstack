@@ -28,6 +28,10 @@
         background-size: cover;
         @include img-normal($image-path-home + "index2-banner3.jpg");
 
+        &.en {
+            @include img-normal($image-path-home + "index2-banner3-en.jpg");
+        }
+
     }
     .index2-slide4 {
         overflow: hidden;
