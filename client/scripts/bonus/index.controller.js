@@ -43,14 +43,10 @@
         $scope.getBonusList = getBonusList;
         $scope.openBonusDetailMdl = openBonusDetailMdl;
         
-        getMasterBonusSummary();
-        getCopierBonusSummary();
-        // getBonusList();
-        
         function getMasterBonusSummary () {
             asset.getMasterBonusSummary().then(function (data) {
-                // console.info(data);
-                if (data.is_succ) {
+                console.info(22, data);
+                if (data && data.is_succ) {
                     $scope.masterSummary = data.data;
                 }
             });
@@ -58,8 +54,8 @@
 
         function getCopierBonusSummary () {
             asset.getCopierBonusSummary().then(function (data) {
-                // console.info(data);
-                if (data.is_succ) {
+                console.info(11, data);
+                if (data && data.is_succ) {
                     $scope.copierSummary = data.data;
                 }
             });
@@ -67,12 +63,16 @@
 
         function getBonusList () {
             var watch = $scope.$watch('personal.master', function (newVal, oldVal, scope) {
-                // console.info(newVal, oldVal);
+                console.info(333);
                 if (newVal !== oldVal) {
                     if (newVal) {
+                        console.info(4444);
+                        getMasterBonusSummary();
                         getMasterBonusList();
                         $scope.getBonusList = getMasterBonusList;
                     } else {
+                        console.info(555);
+                        getCopierBonusSummary();
                         getCopierBonusList();
                         $scope.getBonusList = getCopierBonusList;
                     }
@@ -84,8 +84,7 @@
 
         function getMasterBonusList () {
             asset.getMasterBonusList($scope.datepicker.date).then(function (data) {
-                console.info(data);
-                console.info($scope.personal);
+                console.info(2, data);
             });
         }
 
@@ -96,9 +95,9 @@
                 msg: ''
             };
             asset.getCopierBonusList($scope.datepicker.date).then(function (data) {
-                console.info(data);
+                console.info(1, data);
                 $scope.success = true;
-                if (data.is_succ) {
+                if (data && data.is_succ) {
                     $scope.copierList = data.data;
 
                     var total = 0;
