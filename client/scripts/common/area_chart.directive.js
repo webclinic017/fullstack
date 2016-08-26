@@ -52,11 +52,12 @@
                 tickWidth:0 //设置刻度标签宽
             },
             tooltip: {
-                borderColor: '#eeeeee',
-                name:'月收益率',
-                formatter: function () {
-                    return '<b style="color:#009dff;font-size:12px">选取以放大<br/>' + this.y + '</b>';
-                }
+                // borderColor: '#eeeeee',
+                // name:'月收益率',
+                // formatter: function () {
+                //     return '<b style="color:#009dff;font-size:12px">选取以放大<br/>' + this.y + '</b>';
+                // }
+                enabled: false
             },
             exporting: {
                 enabled:false
