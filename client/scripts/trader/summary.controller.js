@@ -9,6 +9,7 @@
 
 	function TraderSummaryController($scope, $location, $state, trader, $timeout) {
 		$scope.summary = {};
+        $scope.bars = [];
 		var usercode;
 		var absUrl = $location.absUrl();
 		var regUsercode = /trader\/(\d+)\/#/;
@@ -17,7 +18,7 @@
 
 		getMasterSummary(usercode);
 		getMasterProfitLine(usercode);
-		getMasterBarChart(usercode);
+		// getMasterBarChart(usercode);
 //--------------------------高手主页4.0重构--begin----------------------------------------
 		/*----------------------------柱状图图-----------------------------*/
 		rendColumnChart(usercode);
@@ -88,7 +89,8 @@
 		rendAreaChart(usercode);
 		function rendAreaChart(usercode) {
 			trader.getCoopierChange(usercode).then(function (return_data) {
-				//console.log(return_data);
+				// console.log(return_data);
+                $scope.areaDataInfo = return_data;
 				//console.log(parseData("area",return_data.data));
 				if(return_data.error_code == 0){
 					$scope.areaData = parseData("area",return_data.data);
@@ -102,7 +104,7 @@
 		rendMasterInfo(usercode);
 		function rendMasterInfo(usercode){
 			trader.getMasterInfo(usercode).then(function(return_data){
-				//console.log(return_data);
+				// console.log(return_data);
 				if(return_data.is_succ){
 					$scope.master_info = return_data.data;
 				}
@@ -125,11 +127,10 @@
 		//	data: [6]
 		//}];
 
-
 		$scope.changeYearType = function () {
 			$scope.$broadcast('rendBarData', $scope.barData);
 			$scope.$broadcast('rendScaleBars', $scope.bars);
-			console.log($scope.bars);
+			// console.log($scope.bars);
 		};
 
 //---------------------------------end------------------------------------------
@@ -164,7 +165,9 @@
 		getMonthlySymbols(usercode);
 		function getMonthlySymbols(usercode) {
 			trader.getMonthlySymbols(usercode).then(function (data) {
-				console.log(data);
+				// console.log(data);
+                var arrDate = data.now_date.split('-'); 
+                $scope.barsNowDate = arrDate[0]+'年'+arrDate[1]+'月';
 				function parseBar(data){
 					var barData = [];
 					for(var i=0; i<data.length; i++){
@@ -176,68 +179,77 @@
 							//console.log(key);
 							obj.name = item.symbol;
 							obj.data[0] = item.ratio;
-							console.log(obj);
+							// console.log(obj);
 							barData.push(obj)
 						}(data[i]))
 					}
-					console.log(barData);
+					// console.log(barData);
 					return barData;
 				}
-
-				$scope.$broadcast('rendBarData', parseBar(data.data));
-				console.info(data);
+                $scope.barData = parseBar(data.data);
+				$scope.$broadcast('rendBarData', $scope.barData);
+				
+                angular.forEach(data.data, function (value, index) {
+                    var scale = (value.symbol_cmd_zore / (value.symbol_cmd_zore + value.symbol_cmd_one) * 100).toFixed(2);
+                    value.scale = scale;
+                });
+                $scope.bars = data.data;
+                $scope.$broadcast('hideLoadingImg');
+                $timeout(function () {
+                    $scope.$broadcast('rendScaleBars', $scope.bars);
+                });
 			});
 		}
 
-		function getMasterBarChart(usercode) {
-			trader.getMasterBarChart(usercode).then(function (data) {
+		// function getMasterBarChart(usercode) {
+		// 	trader.getMasterBarChart(usercode).then(function (data) {
 
-				//function parseBar(data){
-				//	var barData = [];
-				//	for(var key in data){
-				//		var obj = {
-				//			name:'',
-				//			data:[]
-				//		};
-				//		(function(key){
-				//			obj.name = key;
-				//			obj.data[0] = data[key];
-				//			console.log(obj);
-				//			barData.push(obj)
-				//		}(key))
-				//	}
-				//	console.log(barData);
-				//	return barData;
-				//}
-				//
-				//$scope.$broadcast('rendBarData', parseBar(data.data));
-				//
-				//console.info(data);
-				$scope.bars = [];
-				var symbolBar = {};
+		// 		//function parseBar(data){
+		// 		//	var barData = [];
+		// 		//	for(var key in data){
+		// 		//		var obj = {
+		// 		//			name:'',
+		// 		//			data:[]
+		// 		//		};
+		// 		//		(function(key){
+		// 		//			obj.name = key;
+		// 		//			obj.data[0] = data[key];
+		// 		//			console.log(obj);
+		// 		//			barData.push(obj)
+		// 		//		}(key))
+		// 		//	}
+		// 		//	console.log(barData);
+		// 		//	return barData;
+		// 		//}
+		// 		//
+		// 		//$scope.$broadcast('rendBarData', parseBar(data.data));
+		// 		//
+		// 		//console.info(data);
+		// 		$scope.bars = [];
+		// 		var symbolBar = {};
 
-				$scope.$broadcast('hideLoadingImg');
+		// 		$scope.$broadcast('hideLoadingImg');
 
-				if (data.data_num.length <= 0) return;
+		// 		if (data.data_num.length <= 0) return;
 
-				angular.forEach(data.data, function (data, index, array) {
-					symbolBar[index] = {};
-					symbolBar[index]["symbol_mod"] = index;
-					symbolBar[index]["scale"] = data;
-				});
+		// 		angular.forEach(data.data, function (data, index, array) {
+		// 			symbolBar[index] = {};
+		// 			symbolBar[index]["symbol_mod"] = index;
+		// 			symbolBar[index]["scale"] = data;
+		// 		});
 
-				angular.forEach(data.data_num, function (data, index, array) {
-					symbolBar[index]["number"] = data;
-				});
+		// 		angular.forEach(data.data_num, function (data, index, array) {
+		// 			symbolBar[index]["number"] = data;
+		// 		});
 
-				angular.forEach(symbolBar, function (data, index, array) {
-					$scope.bars.push(data);
-				});
+		// 		angular.forEach(symbolBar, function (data, index, array) {
+		// 			$scope.bars.push(data);
+		// 		});
 
-				$timeout(function () {
-					$scope.$broadcast('rendScaleBars', $scope.bars);
-				});
-			});
-		}
+		// 		$timeout(function () {
+		// 			$scope.$broadcast('rendScaleBars', $scope.bars);
+		// 		});
+		// 	});
+		// }
 	}
 })();

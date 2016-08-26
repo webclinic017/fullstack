@@ -35,9 +35,9 @@
          * @param {String} usercode 
          */
         function getMasterDetail (usercode) {
-            return $http.get('/action/public/v4/get_master_info', {
+            return $http.get('/action/public/v5/get_master_info', {
                 params: {
-                    usercode: usercode
+                    user_code: usercode
                 }
             });
         }
