@@ -51,6 +51,11 @@
                     $scope.ranklist = data.data;
                     $scope.$broadcast('hideLoadingImg');
 
+                    // 最大跌幅＊100
+                    angular.forEach($scope.ranklist, function (value, index) {
+                        value.max_retract_percent = (value.max_retract * 100).toFixed(2);
+                    });
+
                     if ($scope.ranklist.length <= 0) return;
                     angular.extend($scope.pagebar.config, {
                         total: getTotal(data.sum, pagesize),
