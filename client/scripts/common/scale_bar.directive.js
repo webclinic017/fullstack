@@ -40,12 +40,22 @@
 					if (type === 'masterDetail' || type === 'investDetail') {
 
 						el.item.width(scope.bar.scale + '%');
-						el.info_multi.css({
-							'left':scope.bar.scale * 2 - 50 + 'px'
-						});
-						el.info_empty.css({
-							'left':scope.bar.scale * 3 +  140 + 'px'
-						});
+						if(scope.bar.scale <= 0){
+							el.info_multi.css("display","none");
+						} else {
+							el.info_multi.css({
+								'left':scope.bar.scale * 2 - 50 + 'px'
+							});
+						}
+
+						if(scope.bar.scale >= 100){
+							el.info_empty.css("display","none");
+						} else {
+							el.info_empty.css({
+								'left':scope.bar.scale * 3 +  140 + 'px'
+							});
+						}
+
 						// el.info_multi.html(scope.bar.number + ' 笔 &nbsp;&nbsp;' + scope.bar.scale + '%' + '<i></i>');
 						//el.info.html(scope.bar.number + ' 笔 &nbsp;&nbsp;' + scope.bar.scale + '%');
 					}
