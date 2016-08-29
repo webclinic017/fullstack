@@ -50,14 +50,24 @@
     </div>
     <div class="space_bonus__title_box clearfix">
         <h4 class="tit">我的复制情况</h4>
-        <div class="form-control-wrapper">
+        <div ng-if="personal && personal.master" class="form-control-wrapper">
             <input class="form-control"
                    name="date"
                    type="text"
                    required
                    ng-model="datepicker.date"
                    tw-datetimepicker
-                   get-bonus-list="getBonusList()"
+                   get-bonus-list="getMasterBonusList()"
+                   datetimepicker-options="{{datepicker.options}}">
+        </div>
+        <div ng-if="personal && !personal.master" class="form-control-wrapper">
+            <input class="form-control"
+                   name="date"
+                   type="text"
+                   required
+                   ng-model="datepicker.date"
+                   tw-datetimepicker
+                   get-bonus-list="getCopierBonusList()"
                    datetimepicker-options="{{datepicker.options}}">
         </div>
         <div class="remark">
@@ -85,14 +95,21 @@
                 <tr ng-repeat="master in masterList" ng-if="masterList.length > 0">
                     <td class="font-info">{{ master.username }}</td>
                     <td>
-                        <i class="fa fa-dollar"></i>{{ master.bonus }}
+                        <i class="fa fa-dollar"></i>{{ master.pay_noob }}
                     </td>
-                    <td>{{ master.date }}</td>
+                    <td>{{ master.pay_time }}</td>
                     <td class="font-success">
-                        <button class="btn btn-primary btn-sm">详情</button>
+                        <button class="btn btn-primary btn-sm" ng-click="openBonusDetailMdl(master)">详情</button>
                     </td>
                 </tr>
-                <tr ng-if="masterList.length <= 0"><td colspan="4">无数据</td></tr>
+                <tr ng-if="success && masterList.length > 0">
+                    <td>总计</td>
+                    <td><i class="fa fa-dollar"></i>{{ masterTotalPay.sum_pay }}</td>
+                    <td>{{ masterTotalPay.pay_time }}</td>
+                    <td></td>
+                </tr>
+                <tr ng-if="success && masterList.length <= 0"><td colspan="4">{{ backErr.msg || '无数据'}}</td></tr>
+                <tr ng-if="! success"><td colspan="4">加载中...</td></tr>
             </tbody>
         </table>
     </div>

@@ -40,12 +40,15 @@
             }
         };
 
-        $scope.getBonusList = getBonusList;
+        $scope.getMasterBonusList = getMasterBonusList;
+        $scope.getCopierBonusList = getCopierBonusList;
         $scope.openBonusDetailMdl = openBonusDetailMdl;
-        
+
+        getMasterBonusSummary();
+        getCopierBonusSummary();
+
         function getMasterBonusSummary () {
             asset.getMasterBonusSummary().then(function (data) {
-                console.info(22, data);
                 if (data && data.is_succ) {
                     $scope.masterSummary = data.data;
                 }
@@ -54,37 +57,28 @@
 
         function getCopierBonusSummary () {
             asset.getCopierBonusSummary().then(function (data) {
-                console.info(11, data);
                 if (data && data.is_succ) {
                     $scope.copierSummary = data.data;
                 }
             });
         }
 
-        function getBonusList () {
-            var watch = $scope.$watch('personal.master', function (newVal, oldVal, scope) {
-                console.info(333);
-                if (newVal !== oldVal) {
-                    if (newVal) {
-                        console.info(4444);
-                        getMasterBonusSummary();
-                        getMasterBonusList();
-                        $scope.getBonusList = getMasterBonusList;
-                    } else {
-                        console.info(555);
-                        getCopierBonusSummary();
-                        getCopierBonusList();
-                        $scope.getBonusList = getCopierBonusList;
-                    }
-                    watch();
-                }
-            });
-            
-        }
-
         function getMasterBonusList () {
+            $scope.masterList = [];
+            $scope.success = false;
+            $scope.backErr = {
+                msg: ''
+            };
             asset.getMasterBonusList($scope.datepicker.date).then(function (data) {
-                console.info(2, data);
+                // console.info(2, data);
+                $scope.success = true;
+                if (data && data.is_succ) {
+                    $scope.masterList = data.data.copy_pay_list;
+
+                    $scope.masterTotalPay = data.data.copy_pay_master;
+                } else {
+                    $scope.backErr.msg = data.error_msg;
+                }
             });
         }
 
@@ -95,7 +89,7 @@
                 msg: ''
             };
             asset.getCopierBonusList($scope.datepicker.date).then(function (data) {
-                console.info(1, data);
+                // console.info(1, data);
                 $scope.success = true;
                 if (data && data.is_succ) {
                     $scope.copierList = data.data;
@@ -132,7 +126,7 @@
 
                     function getBonusDetailList () {
                         asset.getBonusDetailList(trader.ticket_noob, trader.mt4_from, trader.mt4_to).then(function (data) {
-                            console.info(data);
+                            // console.info(data);
                             $scope.success = true;
                             if (data.is_succ) {
                                 $scope.details = data.data.trade_list;

@@ -35,7 +35,7 @@
 
         function getMasterDetail (usercode) {
             trader.getMasterDetail(usercode).then(function (data) {
-                // console.info(data);
+                console.info(data);
                 if (data.is_succ) {
                     angular.extend($scope.master, data.data);
                     $scope.master.max_retract_percent = ($scope.master.max_retract * 100).toFixed(2);
