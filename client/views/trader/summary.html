@@ -23,7 +23,7 @@
         <div class="re_trader_detail__table trader_box">
             <ul class="re_trader_detail__table-square small-text-font">
                 <li><span class="square_num trader_blue"><span ng-if="!master_info">__ __</span>{{ master_info.last_profit_close_rate }}%</span><span class="span square_des">准确率</span></li>
-                <li><span class="square_num trader_blue"><span ng-if="!master_info">__ __</span>{{ master_info.max_retract }}</span><span class="span square_des">最大盈利点差</span></li>
+                <!-- <li><span class="square_num trader_blue"><span ng-if="!master_info">__ __</span>{{ master_info.max_retract }}</span><span class="span square_des">最大盈利点差</span></li> -->
                 <li><span class="square_num"><span ng-if="!master_info">__ __</span>{{ master_info.last_max_volume }}手</span><span class="square_des">最大开仓</span></li>
                 <li><span class="square_num"><span ng-if="!master_info">__ __</span>{{ master_info.last_total_close }}笔</span><span class="square_des">总平仓交易</span></li>
                 <li><span class="square_num"><span ng-if="!master_info">__ __</span>{{ master_info.win_count }}笔</span><span class="square_des">盈利订单</span></li>
@@ -52,56 +52,56 @@
                 <div class="coppier_area_chart">
                     <div tw-area-chart style="width:100%;height:100%"></div>
                 </div>
-                <div class="coopier_total_change">最近七天复制者变化:<span class="trader_blue">&nbsp;{{ master_info.last_week_profit_rate }}%</span></div>
+                <div class="coopier_total_change">最近七天复制者变化:<span class="trader_blue">&nbsp;{{ areaDataInfo.Last_week_copy_rate || 0 }}%</span></div>
             </div>
             <div class="re_trader_detail__areaChart-tip">
-                <span>&lt;$50K</span>
+                <span>{{ areaDataInfo.last_max_balance }}</span>
                 <span>资产管理</span>
             </div>
         </div>
     </div>
-    <div class="re_trader_trend trader_box">
+    <!-- <div class="re_trader_trend trader_box">
         <div class="re_trader_trend__title">
             资金回撤率
         </div>
         <div class="re_trader_trend__line_chart">
             <div tw-line-chart style="width:100%;height:285px" data-type="masterDetail"></div>
         </div>
-    </div>
+    </div> -->
     <div class="re_trader_type trader_box clearfix">
         <div class="re_trader_type__title">
             <span>主要交易品种</span>
-            <!--<select-->
-                    <!--class="re_trader_chart__changeType"-->
-                    <!--name="changeYearType"-->
-                    <!--ng-model="selected"-->
-                    <!--ng-options="item.year for item in testdata track by item.year"-->
-                    <!--ng-change="changeYearType(selected)"-->
-            <!--&gt;</select>-->
+            <span>{{ barsNowDate }}</span>
+            <!-- <select class="re_trader_chart__changeType"
+                    name="changeYearType"
+                    ng-model="selected"
+                    ng-options="item.year for item in testdata track by item.year"
+                    ng-change="changeYearType(selected)"
+            </select> -->
         </div>
         <div class="re_trader_type__stack clearfix">
             <div tw-bar-chart data-type='bar' style="width:100%;height:120px"></div>
         </div>
-        <!--<div class="re_trader_type__types ">-->
-            <!--<div class="trader_summary navbar_summary">-->
-                <!--<div class="navbar_summary__content">-->
-                    <!--<div tw-loading-img></div>-->
-                    <!--<ul class="trader_type" ng-if="bars.length > 0">-->
-                        <!--<li ng-repeat="bar in bars" class="trader_type__item row">-->
-                            <!--<div class="col-xs-4">-->
-                                <!--<span class="trader_type__icon icon-forex-{{ bar.symbol_mod.toLowerCase() }}"></span>-->
-                                <!--<span class="trader_type__tit">{{ bar.symbol_mod | symbolMod:'zh' }} ({{ bar.symbol_mod }})</span>-->
-                            <!--</div>-->
-                            <!--<div class="col-xs-8">-->
-                                <!--<div tw-scale-bar data-type="masterDetail"></div>-->
-                            <!--</div>-->
-                        <!--</li>-->
-                    <!--</ul>-->
-                    <!--<div class="text-center pd-tp-30" ng-if="bars.length <= 0">-->
-                        <!--{{ lang.text("traderSummary15") }}-->
-                    <!--</div>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
+        <div class="re_trader_type__types ">
+            <div class="trader_summary navbar_summary">
+                <div class="navbar_summary__content">
+                    <div tw-loading-img></div>
+                    <ul class="trader_type" ng-if="bars.length > 0">
+                        <li ng-repeat="bar in bars" class="trader_type__item row">
+                            <div class="col-xs-4">
+                                <span class="trader_type__icon icon-forex-{{ bar.symbol.toLowerCase() }}"></span>
+                                <span class="trader_type__tit">{{ bar.symbol | symbolMod:'zh' }} ({{ bar.symbol }})</span>
+                            </div>
+                            <div class="col-xs-8">
+                                <div tw-scale-bar data-type="masterDetail"></div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="text-center pd-tp-30" ng-if="bars.length <= 0">
+                        {{ lang.text("traderSummary15") }}
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

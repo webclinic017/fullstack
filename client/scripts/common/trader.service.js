@@ -8,7 +8,6 @@
 
     function trader($http) {
         var service = {
-            getMasterDetail: getMasterDetail,
             getMasterSummary: getMasterSummary,
             getMasterCurrent: getMasterCurrent,
             getMasterHistory: getMasterHistory,
@@ -26,21 +25,6 @@
             // getFollowRelation: getFollowRelation
         };
         return service;
-
-        /**
-         * Trader Service 获取高手基本信息
-         * 高手主页
-         *
-         * @method getMasterDetail
-         * @param {String} usercode 
-         */
-        function getMasterDetail (usercode) {
-            return $http.get('/action/public/v4/get_master_info', {
-                params: {
-                    usercode: usercode
-                }
-            });
-        }
 
         /**
          * Trader Service 获取高手交易概况
@@ -252,6 +236,10 @@
                 params: {
                     user_code: user_code
                 }
+            }).then(function(data){
+                //console.log(data);
+                data.data.usercoder = data.data.user_code;
+                return data;
             });
         }
 

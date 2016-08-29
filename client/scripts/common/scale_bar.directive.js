@@ -14,10 +14,10 @@
 			replace: true,
 			template: '<div class="scale_bar">'
 					+ '<span class="scale_bar__item"></span>'
-					+ '<span class="scale_bar__info_multi">多单'
+					+ '<span class="scale_bar__info_multi">多单,{{ bar.symbol_cmd_zore_time | duration }}'
 					+ '<i></i>'
 					+ '</span>'
-					+ '<span class="scale_bar__info_empty">空单,15.5小时'
+					+ '<span class="scale_bar__info_empty">空单,{{ bar.symbol_cmd_one_time | duration }}'
 					+ '<i></i>'
 					+ '</span>'
 					+ '<span class="scale_bar__info">'
@@ -35,17 +35,28 @@
 				// console.info(type);
 
 				scope.$on("rendScaleBars",function(){
+                    // console.info(scope.bar);
 
 					if (type === 'masterDetail' || type === 'investDetail') {
 
 						el.item.width(scope.bar.scale + '%');
-						el.info_multi.css({
-							'left':scope.bar.scale * 2 - 50 + 'px'
-						});
-						el.info_empty.css({
-							'left':scope.bar.scale * 3 +  140 + 'px'
-						});
-						el.info_multi.html(scope.bar.number + ' 笔 &nbsp;&nbsp;' + scope.bar.scale + '%' + '<i></i>');
+						if(scope.bar.scale <= 0){
+							el.info_multi.css("display","none");
+						} else {
+							el.info_multi.css({
+								'left':scope.bar.scale * 2 - 50 + 'px'
+							});
+						}
+
+						if(scope.bar.scale >= 100){
+							el.info_empty.css("display","none");
+						} else {
+							el.info_empty.css({
+								'left':scope.bar.scale * 3 +  140 + 'px'
+							});
+						}
+
+						// el.info_multi.html(scope.bar.number + ' 笔 &nbsp;&nbsp;' + scope.bar.scale + '%' + '<i></i>');
 						//el.info.html(scope.bar.number + ' 笔 &nbsp;&nbsp;' + scope.bar.scale + '%');
 					}
 
