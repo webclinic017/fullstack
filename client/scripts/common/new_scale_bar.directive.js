@@ -21,7 +21,7 @@
                 var el = {
                     info: element.find(".scale_bar__info"),
                     item: element.find(".scale_bar__item")
-                }
+                };
                 var type = attrs.type;
                 // console.info(type);
 
