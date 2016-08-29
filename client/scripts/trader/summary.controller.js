@@ -79,12 +79,6 @@
 		}
 
 		/*----------------------------区域图-----------------------------*/
-		//function getAreaSummary(usercode) {
-		//    trader.getAreaData(usercode).then(function(data){
-		//
-		//    });
-		//}
-
 		rendAreaChart(usercode);
 		function rendAreaChart(usercode) {
 			trader.getCoopierChange(usercode).then(function (return_data) {
