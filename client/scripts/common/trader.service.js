@@ -238,7 +238,7 @@
                 }
             }).then(function(data){
                 //console.log(data);
-                data.data.usercoder = data.data.user_code;
+                data.data.usercode = data.data.user_code;
                 return data;
             });
         }
