@@ -16,29 +16,15 @@
     *display: inline-block;
 }
 
-footer {
-    display: none!important;
-}
-
-textarea,
-input,
-button {
-    outline: none;
-    font-family: "microsoft yahei", simhei, Helvetica, Arial, sans-serif;
-}
-
-a {
-    text-decoration: none;
-}
-
 .t27_layout {
     font-family: "microsoft yahei", simhei, Helvetica, Arial, sans-serif;
-    font-size: 20px;
     color: #252525;
     padding: 0;
     margin: 0;
-    line-height: 1.7;
     background: #fff7c1;
+    footer {
+        display: none!important;
+    }
 }
 
 .imgtopbg {
@@ -357,6 +343,7 @@ a {
     background: #fff url("/images/bd/hongbao-img10.png") repeat-x;
     padding-top: 130px;
     padding-bottom: 90px;
+    font-size: 20px;
     .get_award {
         width: 1030px;
         margin: 0 auto;
