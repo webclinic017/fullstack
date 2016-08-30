@@ -1,39 +1,3 @@
-ul,
-li {
-    list-style: none outside none;
-    margin: 0;
-    padding: 0;
-}
-
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-form,
-fieldset,
-p,
-blockquote,
-th,
-td,
-ol,
-ul,
-li,
-img {
-    margin: 0;
-    padding: 0;
-    border: 0;
-}
-
 .clear {
     clear: both;
     margin: 0;
@@ -59,7 +23,6 @@ footer {
 textarea,
 input,
 button {
-    resize: none;
     outline: none;
     font-family: "microsoft yahei", simhei, Helvetica, Arial, sans-serif;
 }
@@ -68,9 +31,9 @@ a {
     text-decoration: none;
 }
 
-body {
+.t27_layout {
     font-family: "microsoft yahei", simhei, Helvetica, Arial, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     color: #252525;
     padding: 0;
     margin: 0;
@@ -107,6 +70,36 @@ body {
     padding-right: 5px;
 }
 
+.imgtopbg {
+    background: url("/images/bd/header1.jpg") repeat-x;
+    height: 55px;
+}
+
+.imgtopbg .top-wrap {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 5px;
+    text-align: right;
+    color: #d5b153;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.imgtopbg .top-wrap a {
+    float: left;
+    vertical-align: middle;
+}
+
+.imgtopbg .top-wrap span {
+    background: url("/images/bd/header3.png") no-repeat 0 bottom;
+    padding-left: 22px;
+    position: relative;
+    top: 6px;
+    color: #fedd0a;
+    padding-right: 5px;
+}
+
 .banner-bg {
     background: url("/images/bd/hongbao-img1.png") no-repeat center 0;
 }
@@ -133,7 +126,6 @@ body {
     font-weight: 100;
     color: #fff832;
     padding-top: 58px;
-    padding-bottom: 12px;
 }
 
 .wrapbanner .login-wrap ul {
@@ -145,7 +137,7 @@ body {
     margin-bottom: 12px;
     background: #fff;
     border-radius: 5px;
-    height: 52px;
+    height: 48px;
 }
 
 .wrapbanner .login-wrap li .span-text {
@@ -454,6 +446,28 @@ body {
 
 .footerbg .footer-wrap p {
     padding-top: 45px;
+}
+
+.footerbg {
+    background: #fee734;
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+.footerbg .footer-wrap {
+    color: #222;
+    font-size: 14px;
+    width: 860px;
+    line-height: 2.25;
+    margin: 0 auto;
+    min-height: 140px;
+    background: url("/images/bd/t30_code_min.png") no-repeat center right;
+    padding-right: 140px;
+    padding-bottom: 30px;
+}
+
+.footerbg .footer-wrap p {
+    padding-top: 30px;
 }
 
 .warpbanner-nodate {
