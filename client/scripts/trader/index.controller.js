@@ -22,7 +22,7 @@
 
         usercode = absUrl.match(regUsercode)[1];
 
-        getMasterDetail(usercode);
+        getMasterInfo(usercode);
         getCopyRelation(usercode);
         // getFollowRelation(usercode);
         getAvaCopyAmount(usercode);
@@ -33,8 +33,9 @@
         //     }
         // });
 
-        function getMasterDetail (usercode) {
-            trader.getMasterDetail(usercode).then(function (data) {
+        function getMasterInfo (usercode) {
+            trader.getMasterInfo(usercode).then(function (data) {
+
                 console.info(data);
                 if (data.is_succ) {
                     angular.extend($scope.master, data.data);

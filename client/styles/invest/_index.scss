@@ -4,6 +4,10 @@
 
     @include e(tip) {
         padding: 15px;
+
+        > a {
+            color: $brand-info;
+        }
     }
 }
 
