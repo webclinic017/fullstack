@@ -24,7 +24,7 @@ $(document).ready(function() {
         if (unit != "") { document.cookie = 'unit=' + unit + ';path=/;domain=tigerwit.com'; }
         if (key != "") { document.cookie = 'key=' + key + ';path=/;domain=tigerwit.com'; }
     }
-    $('#regist_btn').click(function() {
+    $('#regist_btn').on("click",function() {
         var input = $('#username');
         var rName = input.val() ? input.val() : "";
         if(/^[\u4e00-\u9fa5A-Za-z\d]+$/.test(input.val())){
