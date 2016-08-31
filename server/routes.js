@@ -292,7 +292,13 @@ module.exports = function(app) {
             res.render('bd_t30', extendPublic({}, req));
         }
     });
-
+    app.route('/bd/t27').get(function(req, res){
+        if(isMobile(req)){
+            res.render('bd_t27', extendPublic({}, req))
+        } else {
+            res.render('bd_t27', extendPublic({}, req));
+        }
+    });
     // nodeAPI
     app.route('/napi').get(function(req, res){
         var action = req.query.action;

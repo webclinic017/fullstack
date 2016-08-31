@@ -1,0 +1,510 @@
+.clear {
+    clear: both;
+    margin: 0;
+    padding: 0;
+}
+
+.clearFix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.clearFix {
+    *display: inline-block;
+}
+
+.t27_layout {
+    font-family: "microsoft yahei", simhei, Helvetica, Arial, sans-serif;
+    color: #252525;
+    padding: 0;
+    margin: 0;
+    background: #fff7c1;
+    footer {
+        display: none!important;
+    }
+    .t27_box{
+        margin-top: 65px;
+    }
+}
+
+.imgtopbg {
+    background: #000;
+    height: 76px;
+}
+
+.imgtopbg .top-wrap {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 16px;
+    text-align: right;
+    color: #d5b153;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.imgtopbg .top-wrap a {
+    float: left;
+    vertical-align: middle;
+}
+
+.imgtopbg .top-wrap span {
+    background: url("/images/bd/imgtop-fan3.png") no-repeat 0 bottom;
+    padding-left: 22px;
+    position: relative;
+    top: 6px;
+    padding-right: 5px;
+}
+
+.imgtopbg {
+    background: url("/images/bd/header1.jpg") repeat-x;
+    height: 55px;
+}
+
+.imgtopbg .top-wrap {
+    width: 1000px;
+    margin: 0 auto;
+    padding-top: 5px;
+    text-align: right;
+    color: #d5b153;
+    font-weight: 900;
+    font-style: italic;
+    font-size: 18px;
+}
+
+.imgtopbg .top-wrap a {
+    float: left;
+    vertical-align: middle;
+}
+
+.imgtopbg .top-wrap span {
+    background: url("/images/bd/header3.png") no-repeat 0 bottom;
+    padding-left: 22px;
+    position: relative;
+    top: 6px;
+    color: #fedd0a;
+    padding-right: 5px;
+}
+
+.banner-bg {
+    background: url("/images/bd/hongbao-img1.png") no-repeat center 0;
+}
+
+.wrapbanner {
+    background: url("/images/bd/hongbao-img2_0601.png") no-repeat center 0;
+    width: 1000px;
+    margin: 0 auto;
+    height: 614px;
+}
+
+.wrapbanner .login-wrap {
+    float: right;
+    width: 320px;
+    padding-right: 4px;
+    padding-left: 1px;
+    padding-top: 50px;
+    padding-right: 24px;
+}
+
+.wrapbanner .login-wrap .div-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 100;
+    color: #fff832;
+    padding-top: 58px;
+}
+
+.wrapbanner .login-wrap ul {
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.wrapbanner .login-wrap li {
+    margin-bottom: 12px;
+    background: #fff;
+    border-radius: 5px;
+    height: 48px;
+}
+
+.wrapbanner .login-wrap li .span-text {
+    display: block;
+    float: left;
+    height: 38px;
+    width: 42px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 12px;
+    background: #ffef00;
+}
+
+.wrapbanner .login-wrap li input {
+    border-radius: 5px;
+    background: none;
+    width: 272px;
+    height: 50px;
+    font-size: 18px;
+    line-height: 50px;
+    padding-left: 8px;
+    border: 0;
+    outline: none;
+}
+
+.wrapbanner .login-wrap li input:hover {
+    border: 0;
+}
+
+.wrapbanner .login-wrap .p-btn {
+    padding-top: 5px;
+}
+
+.wrapbanner .login-wrap .t27_reg_tip {
+    color: #fedd0a;
+    font-size: 14px;
+    text-align: center;
+}
+
+.wrapbanner .login-wrap .p-btn button {
+    background: #ff3a3c;
+    text-align: center;
+    width: 100%;
+    height: 60px;
+    font-size: 32px;
+    color: #fff832;
+    border: 0;
+    border-radius: 10px;
+    border-bottom: 2px solid #cd2224;
+    cursor: pointer;
+}
+
+.wrapbanner .login-wrap .p-btn button:hover {
+    background: #fd3133;
+    border-bottom: 2px solid #cd2224;
+}
+
+.wrapbanner .login-wrap .logintext {
+    width: 262px;
+    margin: 0 auto;
+    color: #666666;
+    text-align: right;
+    padding-top: 13px;
+}
+
+.wrapbanner .login-wrap .logintext a {
+    color: #fe6147;
+    text-decoration: underline;
+}
+
+.wrapbanner .login-wrap .logintext a:hover {
+    color: #000;
+}
+
+.hongbao-ulList {
+    margin: 0 auto;
+    width: 1000px;
+    padding: 30px 0 60px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.hongbao-ulList li {
+    float: left;
+    width: 500px;
+}
+
+.hongbao-ulList li p {
+    padding-top: 35px;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.hongbao-ulList li p a {
+    display: block;
+    text-align: center;
+    background: #ee3615;
+    color: #fff832;
+    font-size: 33px;
+    padding: 5px 0;
+    border-radius: 5px;
+}
+
+.hongbao-ulList li p a:hover {
+    color: #fff;
+}
+
+.hongbao-ulList li p .jiajin {
+    padding: 3px 0;
+    border: 2px solid #ee3615;
+    background: #fff;
+    color: #ee3615;
+}
+
+.hongbao-ulList li p .jiajin:hover {
+    color: #c00;
+}
+
+.wrap {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 1000px;
+}
+
+.guizebg {
+    background: #ffdd80 url("/images/bd/hongbao-img5.png") repeat-x;
+    padding: 110px 0 35px;
+    overflow: hidden;
+    font-size: 20px;
+    color: #6b3d22;
+    line-height: 2;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+.pb40 {
+    padding-bottom: 40px;
+}
+
+.ptb30 {
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.pb30 {
+    padding-bottom: 30px;
+}
+
+.guize-table {
+    border-right: 1px solid #6B3D22;
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed;
+    width: 999px;
+}
+
+.guize-table th {
+    background: #8a5537;
+    color: #fff;
+    padding: 5px 0;
+    font-weight: 100;
+}
+
+.guize-table td {
+    border: 1px solid #8a5537;
+    padding: 5px 0;
+}
+
+.pb55 {
+    padding-bottom: 55px;
+}
+
+.guize-bottombg {
+    background: url("/images/bd/hongbao-img8.png") repeat-x;
+    height: 125px;
+}
+
+.tedian-wrap {
+    width: 990px;
+    border: 1px solid #ffdd80;
+    padding: 8px 0 8px;
+    overflow: hidden;
+    margin: 0 auto 30px;
+}
+
+.tedian-wrap li {
+    float: left;
+    background: #fff url("/images/bd/hongbao-img9.png") no-repeat 0 bottom;
+    width: 235px;
+    color: #030303;
+    font-size: 18px;
+    margin: 0 5px;
+    padding: 15px 25px 45px;
+}
+
+.tedian-wrap li .p-title {
+    text-align: center;
+    color: #000;
+    font-size: 30px;
+    font-weight: 600;
+    border-bottom: 1px dashed #999;
+    padding-bottom: 10px;
+}
+
+.tedian-wrap li .divlist-text {
+    padding-top: 10px;
+}
+
+.tedian-wrap li .divlist-text p {
+    padding-top: 10px;
+    line-height: 2;
+}
+
+.tedian-bottombg {
+    background: #fff url("/images/bd/hongbao-img10.png") repeat-x;
+    padding-top: 130px;
+    padding-bottom: 90px;
+    font-size: 20px;
+    .get_award {
+        width: 1030px;
+        margin: 0 auto;
+        ul{
+            display: block;
+            width: 80%;
+            margin: 0 auto;
+            .award{
+                width: 33.33%;
+                float: left;
+                text-align: center;
+                display: inline-block;
+                margin: 0 auto;
+                img{
+                    width: 70%;
+                    display: inline-block;
+                }
+                span{
+                    display: inline-block;
+                    width: 63%;
+                    height: 36px;
+                    line-height: 36px;
+                    border-radius: 18px;
+                    background-color: #6b3d22;
+                    text-align: center;
+                    color: #fff;
+                    font-size: 15px;
+                    position: relative;
+                    top: -8px;
+                }
+            }
+        }
+        .tiger_path {
+            background-color: #fff7c1;
+            margin-top: 40px;
+            padding: 40px;
+            padding-left: 52px;
+            font-size: 20px;
+            border-radius: 5px;
+            line-height: 45px;
+            color: #6b3d22;
+            box-shadow: 0 4px 4px #ccc;
+            .path_box {
+                height: 45px;
+                span {
+                    display: inline-block;
+                    padding-left: 2px;
+                }
+                .time {
+                    padding-right: 20px;
+                    width: 20%;
+                }
+                .des {
+                    width: 80%;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+}
+
+.tedian-bottombg .text-title {
+    text-align: center;
+    font-size: 46px;
+    color: #000;
+    padding-bottom: 24px;
+}
+
+.plr174 {
+    padding-left: 174px;
+    padding-right: 174px;
+}
+
+.video-wrap {
+    width: 774px;
+    margin: 35px auto 0;
+    background: url("/images/bd/hongbao-img-16.png") no-repeat center 0;
+    border-left: 4px solid #fde4a2;
+    border-right: 4px solid #fde4a2;
+}
+
+.video-wrap .video-text {
+    background: url("/images/bd/hongbao-img-16.png") no-repeat center bottom;
+}
+
+.hezuo-txt {
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 40px;
+    color: #002638;
+}
+
+.footerbg {
+    background: #dbb553;
+    overflow: hidden;
+}
+
+.footerbg .footer-wrap {
+    font-size: 14px;
+    width: 830px;
+    padding: 10px 0 45px;
+    margin: 0 auto;
+    min-height: 145px;
+    padding-right: 170px;
+}
+
+.footerbg .footer-wrap p {
+    padding-top: 45px;
+}
+
+.footerbg {
+    background: #fee734;
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+.footerbg .footer-wrap {
+    background: #fee734;
+    color: #233;
+    font-size: 14px;
+    width: 860px;
+    line-height: 2.25;
+    margin: 0 auto;
+    min-height: 140px;
+    padding-right: 140px;
+    padding-bottom: 30px;
+    position: relative;
+    .t27_code{
+        position: absolute;
+        right: 0;
+        top: 25px;
+        float: right;
+        >img{
+            display: block;
+        }
+        p{
+            text-align: center;
+            position: relative;
+            top: -30px;
+        }
+    }
+}
+
+.footerbg .footer-wrap p {
+    padding-top: 30px;
+}
+
+.warpbanner-nodate {
+    background-image: url("/images/bd/hongbao-img-nodate.png");
+}
+
+.bonus-date {
+    margin-left: 132px;
+    float: left;
+    margin-top: 250px;
+    color: white;
+    font-size: 22px;
+}
+
+
+/*# sourceMappingURL=index.css.map */
