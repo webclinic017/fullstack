@@ -160,7 +160,7 @@
 		function getMonthlySymbols(usercode) {
 			trader.getMonthlySymbols(usercode).then(function (data) {
 				// console.log(data);
-                var arrDate = data.now_date.split('-'); 
+                var arrDate = data.now_date.split('-');
                 $scope.barsNowDate = arrDate[0]+'年'+arrDate[1]+'月';
 				function parseBar(data){
 					var barData = [];
@@ -182,7 +182,7 @@
 				}
                 $scope.barData = parseBar(data.data);
 				$scope.$broadcast('rendBarData', $scope.barData);
-				
+
                 angular.forEach(data.data, function (value, index) {
                     var scale = (value.symbol_cmd_zore / (value.symbol_cmd_zore + value.symbol_cmd_one) * 100).toFixed(2);
                     value.scale = scale;
