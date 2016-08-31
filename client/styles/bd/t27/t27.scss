@@ -445,13 +445,11 @@
 }
 
 .footerbg .footer-wrap {
-    color: #232323;
     font-size: 14px;
     width: 830px;
     padding: 10px 0 45px;
     margin: 0 auto;
     min-height: 145px;
-    background: url("/images/bd/t30_code.png") no-repeat right center;
     padding-right: 170px;
 }
 
@@ -466,15 +464,30 @@
 }
 
 .footerbg .footer-wrap {
-    color: #222;
+    background: #fee734;
+    color: #233;
     font-size: 14px;
     width: 860px;
     line-height: 2.25;
     margin: 0 auto;
     min-height: 140px;
-    background: url("/images/bd/t30_code_min.png") no-repeat center right;
     padding-right: 140px;
     padding-bottom: 30px;
+    position: relative;
+    .t27_code{
+        position: absolute;
+        right: 0;
+        top: 25px;
+        float: right;
+        >img{
+            display: block;
+        }
+        p{
+            text-align: center;
+            position: relative;
+            top: -30px;
+        }
+    }
 }
 
 .footerbg .footer-wrap p {
