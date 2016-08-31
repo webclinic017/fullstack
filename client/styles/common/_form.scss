@@ -21,11 +21,9 @@
     @include transition(border-color ease .15s, box-shadow ease .15s);
     @include form-control-focus;
     @include placeholder;
-
     &.icon {
         padding-left: $input-padding-left;
     }
-
     &:focus {
         & + .form-control-icon {
             color: $gray-dark;
@@ -38,7 +36,6 @@
     color: $brand-danger;
     @include form-control-focus($brand-danger);
     @include placeholder($brand-danger);
-
     & + .form-control-icon {
         color: $brand-danger;
     }
@@ -62,21 +59,17 @@
 //== checkbox
 .checkbox {
     cursor: pointer;
-
     > .fa {
         width: 12px;
     }
-
     > .fa-square-o,
     &.checked > .fa-check-square {
         display: inline-block;
     }
-
     > .fa-check-square,
     &.checked > .fa-square-o {
         display: none;
     }
-
     > input[type="checkbox"] {
         display: none;
     }
@@ -85,30 +78,28 @@
 //== radio
 .radio {
     cursor: pointer;
-
     > .fa-circle-o,
     &.checked > .fa-dot-circle-o {
         display: inline-block;
     }
-
     > .fa-dot-circle-o,
     &.checked > .fa-circle-o {
         display: none;
     }
-
     > input[type="radio"] {
         display: none;
     }
 }
 
+.warning {
+    color: #fc575a;
+}
 
 //== 高手简介等的 textarea
 @include b(editbox) {
     position: relative;
     margin-bottom: 30px;
-
     $editbox-height: 60px;
-
     @include e(textarea) {
         @extend .form-control;
         @include form-control-focus;
@@ -116,13 +107,10 @@
         padding: $padding-base-vertical $padding-base-horizontal;
         border: 1px solid $input-border;
         resize: none;
-
-
         @include m(error) {
             color: $brand-danger;
         }
     }
-
     @include e(words_limit) {
         position: absolute;
         top: $editbox-height + 2px;
@@ -134,12 +122,10 @@
 //== select
 @include b(select) {
     position: relative;
-
     @include e(input) {
         @extend .form-control;
         padding-right: 30px;
     }
-
     @include e(icon) {
         position: absolute;
         top: 10px;
@@ -147,7 +133,6 @@
         font-size: 20px;
         color: $input-color-placeholder;
     }
-
     @include e(dropdown) {
         position: absolute;
         top: $input-height-base + 5px;
@@ -159,27 +144,23 @@
         border-radius: $border-radius-base;
         background-color: #fff;
         overflow-y: auto;
-
         // & > li {
         //     border-bottom: 1px solid $gray;
         // }
-
         // & > li:last-child {
         //     border-bottom: 0;
         // }
-
         &.active {
             display: block;
         }
-
         & > li > span {
             display: block;
             padding: $padding-base-vertical $padding-base-horizontal;
             color: $gray-dark;
             cursor: pointer;
         }
-
-        > li.selected > span, > li > span:hover {
+        > li.selected > span,
+        > li > span:hover {
             background-color: $gray-lighter;
         }
     }

@@ -1,22 +1,16 @@
 @import "compass";
-
 // Core variables and mixins
 @import "common/variables";
 @import "common/mixins";
-
 // Reset and dependencies
 @import "common/normalize";
-
 // Utilities CSS
 @import "common/utilities";
-
 // Font Awesome
 @import "common/font";
-
 // Core CSS
 @import "common/scaffolding";
 @import "common/grid";
-
 // Components CSS
 @import "common/layout";
 @import "common/buttons";
@@ -34,16 +28,12 @@
 @import "common/pagination";
 @import "common/tabs";
 @import "common/loading";
-
-
 // Module CSS
 // @import "home/index";
 @import "home/index2";
-
 @import "ranklist/index";
 @import "ranklist/copiers";
 @import "ranklist/masters";
-
 @import "web/copy";
 @import "web/product";
 @import "web/about";
@@ -53,16 +43,10 @@
 @import "web/partner";
 @import "web/bonus";
 @import "web/blog";
-
 //bd
 @import "bd/t29/t29";
 @import "bd/t30/t30";
 @import "bd/m7/m7";
-
+@import "bd/t27/t27";
 //english
 @import "common/tw-en";
-
-
-
-
-
