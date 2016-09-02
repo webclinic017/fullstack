@@ -4,9 +4,10 @@
 
     angular.module('fullstackApp').directive('twColumnChart', twColumnChart);
 
-    twColumnChart.$inject = [];
+    twColumnChart.$inject = ['config'];
 
-    function twColumnChart() {
+    function twColumnChart(config) {
+        var noData = config.highchartNoDataOptions;
         var options = {
             chart: {
                 type: 'column',
@@ -177,6 +178,9 @@
                 scope.$on('rendColumnData', function (event, data) {
                     options.series[0].data = data;
                     element.highcharts(options);
+                });
+                scope.$on('hideColumnData', function (event, data) {
+                    element.highcharts(noData);
                 });
             }
         }

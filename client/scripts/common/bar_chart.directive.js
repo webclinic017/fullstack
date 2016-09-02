@@ -3,9 +3,10 @@
 
 	angular.module('fullstackApp').directive('twBarChart', twBarChart);
 
-	twBarChart.$inject = [];
+	twBarChart.$inject = ['config'];
 
-	function twBarChart() {
+	function twBarChart(config) {
+		var noData = config.highchartNoDataOptions;
 		var options = {
 			colors: ['#bfe103', '#ffc601', '#fc5401', '#41b6ea', '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a','#101010','#61cb28','#fff230','#37bc9b','#AC9711','#188afa'],
 			chart: {
@@ -153,6 +154,10 @@
 						element.highcharts(options);
 					});
 				}
+				scope.$on('hideBarData', function (event, data) {
+					element.highcharts(noData);
+				});
+
 			}
 		}
 	}

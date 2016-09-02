@@ -9,7 +9,8 @@
 
 	function TraderSummaryController($scope, $location, $state, trader, $timeout) {
 		$scope.summary = {};
-        $scope.bars = [];
+		$scope.bars = [];
+		$scope.isFirstLoad = true;
 		var usercode;
 		var absUrl = $location.absUrl();
 		var regUsercode = /trader\/(\d+)\/#/;
@@ -26,7 +27,8 @@
 		function rendColumnChart(usercode) {
 			/*调接口获取数据*/
 			trader.getHistoricalRate(usercode).then(function (return_data) {
-				if (return_data.error_code == 0) {
+				//console.log(return_data);
+				if (return_data.error_code == 0 && return_data.data.length > 0) {
 					//console.log(return_data);
 					var data = return_data.data;
 					/*解析数据*/
@@ -42,6 +44,8 @@
 						$scope.selected = year;
 						$scope.$broadcast('rendColumnData', year.data);
 					};
+				} else {
+					$scope.$broadcast('hideColumnData');
 				}
 			});
 		}
@@ -73,7 +77,7 @@
 				for (var i = 0; i < data.length; i++) {
 					targetArr.push(parseFloat(data[i].v))
 				}
-			} else if(type == ""){
+			} else if (type == "") {
 
 			}
 			return targetArr;
@@ -84,10 +88,10 @@
 		function rendAreaChart(usercode) {
 			trader.getCoopierChange(usercode).then(function (return_data) {
 				// console.log(return_data);
-                $scope.areaDataInfo = return_data;
+				$scope.areaDataInfo = return_data;
 				//console.log(parseData("area",return_data.data));
-				if(return_data.error_code == 0){
-					$scope.areaData = parseData("area",return_data.data);
+				if (return_data.error_code == 0) {
+					$scope.areaData = parseData("area", return_data.data);
 					$scope.$broadcast('rendAreaData', $scope.areaData);
 				} else {
 					console.log(return_data.error_msg)
@@ -96,31 +100,16 @@
 		}
 
 		rendMasterInfo(usercode);
-		function rendMasterInfo(usercode){
-			trader.getMasterInfo(usercode).then(function(return_data){
+		function rendMasterInfo(usercode) {
+			trader.getMasterInfo(usercode).then(function (return_data) {
 				// console.log(return_data);
-				if(return_data.is_succ){
+				if (return_data.is_succ) {
 					$scope.master_info = return_data.data;
 				}
 			});
 		}
 
 		/*-----------------------BarChart------------------*/
-
-		//$scope.barData = [{
-		//	name: 'John',
-		//	data: [5]
-		//}, {
-		//	name: 'Jane',
-		//	data: [2]
-		//}, {
-		//	name: 'Joe',
-		//	data: [3]
-		//}, {
-		//	name: 'mali',
-		//	data: [6]
-		//}];
-
 		$scope.changeYearType = function () {
 			$scope.$broadcast('rendBarData', $scope.barData);
 			$scope.$broadcast('rendScaleBars', $scope.bars);
@@ -151,25 +140,76 @@
 
 		function getMasterProfitLine(usercode) {
 			trader.getMasterProfitLine(usercode).then(function (data) {
-				// console.info(data);
+				//console.info(data);
 				$scope.$broadcast('paintLineChart', data.data);
 			});
 		}
 
+		//getMonthlySymbols(usercode);
+
+		$scope.changeMonSymbols = function (mon) {
+			/*重置数据*/
+			$scope.bars = [];
+			$scope.barData = [];
+			/*loading*/
+			$scope.$broadcast('showLoadingImg');
+			/*数据处理*/
+			$scope.barsNowDate = mon;
+			var year = mon.month.split('年')[0];
+			var month = mon.month.split('年')[1].split('月')[0];
+			month = month < 10 ? '0' + month : month;
+			var date = year + '-' + month;
+			/*获取数据*/
+			getMonthlySymbols(usercode, date);
+			$scope.barsNowDate = mon;
+		};
+
 		getMonthlySymbols(usercode);
-		function getMonthlySymbols(usercode) {
-			trader.getMonthlySymbols(usercode).then(function (data) {
-				// console.log(data);
-                var arrDate = data.now_date.split('-');
-                $scope.barsNowDate = arrDate[0]+'年'+arrDate[1]+'月';
-				function parseBar(data){
-					var barData = [];
-					for(var i=0; i<data.length; i++){
-						var obj = {
-							name:'',
-							data:[]
+		function getMonthlySymbols(usercode, date) {
+			trader.getMonthlySymbols(usercode, date).then(function (data) {
+				console.log(data);
+				if (!data.is_succ) {
+					return false;
+				}
+				var arrDate = data.now_date.split('-');
+				var beginDate = data.time.split('-');
+				/*如果是首次加载,解析所有交易年份*/
+				if($scope.isFirstLoad){
+					$scope.monSymbols = parseMon(data.time, data.now_date);
+					$scope.barsNowDate = $scope.monSymbols[0];
+				}
+				/*数据解析函数*/
+				function parseMon(beginDate, nowDate) {
+					var begin_date_mon = parseInt(beginDate.split('-')[1]);
+					var beain_date_year = parseInt(beginDate.split('-')[0]);
+					var now_date_mon = parseInt(nowDate.split('-')[1]);
+					var now_date_year = parseInt(nowDate.split('-')[0]);
+					var months = [];
+					var year_pin = now_date_year - now_date_year;
+					for (i = now_date_mon; i > 0; i--) {
+						mon = {
+							month: now_date_year + '年' + i + '月'
 						};
-						(function(item){
+						months.push(mon);
+					}
+					for (var i = 0; i <= year_pin; i++) {
+						for (var j = 12; j > begin_date_mon; j--) {
+							var mon = {
+								month: beain_date_year + '年' + j + '月'
+							};
+							months.push(mon);
+						}
+					}
+					return months;
+				}
+				function parseBar(data) {
+					var barData = [];
+					for (var i = 0; i < data.length; i++) {
+						var obj = {
+							name: '',
+							data: []
+						};
+						(function (item) {
 							//console.log(key);
 							obj.name = item.symbol;
 							obj.data[0] = item.ratio;
@@ -180,18 +220,29 @@
 					// console.log(barData);
 					return barData;
 				}
-                $scope.barData = parseBar(data.data);
-				$scope.$broadcast('rendBarData', $scope.barData);
 
-                angular.forEach(data.data, function (value, index) {
-                    var scale = (value.symbol_cmd_zore / (value.symbol_cmd_zore + value.symbol_cmd_one) * 100).toFixed(2);
-                    value.scale = scale;
-                });
-                $scope.bars = data.data;
-                $scope.$broadcast('hideLoadingImg');
-                $timeout(function () {
-                    $scope.$broadcast('rendScaleBars', $scope.bars);
-                });
+				$scope.barData = parseBar(data.data);
+
+				if(data.data.length <= 0){
+					$scope.$broadcast('hideBarData', $scope.barData);
+				} else {
+					$scope.$broadcast('rendBarData', $scope.barData);
+				}
+				angular.forEach(data.data, function (value, index) {
+					var scale = (value.symbol_cmd_zore / (value.symbol_cmd_zore + value.symbol_cmd_one) * 100).toFixed(2);
+					value.scale = scale;
+				});
+
+				$scope.bars = data.data;
+
+				$scope.$broadcast('hideLoadingImg');
+
+				$timeout(function () {
+					$scope.$broadcast('rendScaleBars', $scope.bars);
+				});
+
+				/*修改首次加载状态*/
+				$scope.isFirstLoad = false;
 			});
 		}
 
