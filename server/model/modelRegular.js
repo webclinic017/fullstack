@@ -48,15 +48,15 @@ module.exports = {
         {
             id : "10",
             name : "【MACD月盈201609-01】",    //产品标题
-            money_copy : "$3000-$10000",   //复制金额
+            money_copy : "$2000-$10000",   //复制金额
             money_copy_max : "$30万", //最高复制金额 exam : '$4000'
             period : "1个月",      //复制封闭期
             withdraw_history : "20%",    //历史最高回撤
             profit_rate_wish : "60%",  //预期年化收益率
             profit_rate_now : null, //实时年化收益率
-            end_date_appoint : "2016.09.02 12:00", //预约结束时间
-            start_date_trade : '2016.09.05 00:00',  //开始交易时间
-            end_date_trade : '2016.10.04 24:00',  //结束交易时间  exam : '2016.5.19'
+            end_date_appoint : "2016.09.09 18:00", //预约结束时间
+            start_date_trade : '2016.09.12 00:00',  //开始交易时间
+            end_date_trade : '2016.10.11 24:00',  //结束交易时间  exam : '2016.5.19'
             team_intro : "team_macd", //文件名，团队介绍模块
             jiafang:"MACD", //甲方，操盘手，出现在agree里
             progress : 73, //投资进度 exam:50
@@ -80,7 +80,7 @@ module.exports = {
             end_date_trade : '2016.10.01 00:00',  //结束交易时间  exam : '2016.5.19'
             team_intro : "team_huiying", //文件名，团队介绍模块
             jiafang:"汇赢全球基金管理公司", //甲方，操盘手，出现在agree里
-            progress : 22, //投资进度 exam:50
+            progress : 83, //投资进度 exam:50
             desc_risk : "动用杠杆不超过10倍；亏损达到账户初始资金的10%时触发预警；亏损达到账户初始资金的15%时触发熔断，交易将会停止1-3天，然后再开始交易；账户的清盘线设置在亏损20%。", //风险控制
             desc_divide : "盈利金额的30%(客户在该次复制交易中盈利达到10%时，结算一次)",//报酬分成
             note : "无" //备注
