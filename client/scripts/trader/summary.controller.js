@@ -157,7 +157,6 @@
 			$scope.barsNowDate = mon;
 			var year = mon.month.split('年')[0];
 			var month = mon.month.split('年')[1].split('月')[0];
-			month = month < 10 ? '0' + month : month;
 			var date = year + '-' + month;
 			/*获取数据*/
 			getMonthlySymbols(usercode, date);
@@ -174,7 +173,7 @@
 				var arrDate = data.now_date.split('-');
 				var beginDate = data.time.split('-');
 				/*如果是首次加载,解析所有交易年份*/
-				if($scope.isFirstLoad){
+				if ($scope.isFirstLoad) {
 					$scope.monSymbols = parseMon(data.time, data.now_date);
 					$scope.barsNowDate = $scope.monSymbols[0];
 				}
@@ -187,6 +186,7 @@
 					var months = [];
 					var year_pin = now_date_year - now_date_year;
 					for (i = now_date_mon; i > 0; i--) {
+						i = i < 12 ? '0' + i : i;
 						mon = {
 							month: now_date_year + '年' + i + '月'
 						};
@@ -194,6 +194,7 @@
 					}
 					for (var i = 0; i <= year_pin; i++) {
 						for (var j = 12; j > begin_date_mon; j--) {
+							j = j < 10 ? '0' + j : j;
 							var mon = {
 								month: beain_date_year + '年' + j + '月'
 							};
@@ -202,6 +203,7 @@
 					}
 					return months;
 				}
+
 				function parseBar(data) {
 					var barData = [];
 					for (var i = 0; i < data.length; i++) {
@@ -223,7 +225,7 @@
 
 				$scope.barData = parseBar(data.data);
 
-				if(data.data.length <= 0){
+				if (data.data.length <= 0) {
 					$scope.$broadcast('hideBarData', $scope.barData);
 				} else {
 					$scope.$broadcast('rendBarData', $scope.barData);

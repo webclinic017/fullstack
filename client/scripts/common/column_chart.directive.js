@@ -146,14 +146,14 @@
                 name: ''
             },
             tooltip: {
-                borderColor: '#cccccc',
                 name: '月收益率',
                 formatter: function () {
                     return '<b style="color:#009dff;font-size:14px">' + this.y + '%<br>月收益率</b><br>' + this.x;
                 },
                 style: {
                     padding: 15
-                }
+                },
+                borderColor:'#188afa'
             },
             series: [{
                 color: '#f23244', /*正值的颜色*/

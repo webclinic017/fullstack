@@ -20,7 +20,7 @@
 			},
 			legend: {
 				align: 'center',
-				itemDistance:30,
+				itemWidth: 100,
 				reversed:true,
 				itemHoverStyle:{
 					color:'#ffdd80'
@@ -95,7 +95,7 @@
 							enabled: false
 						},
 						legend: {
-							enabled: false
+
 						},
 						xAxis: {
 							categories: ['trade types'],
