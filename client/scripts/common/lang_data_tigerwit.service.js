@@ -2,11 +2,11 @@
 (function () {
     'use strict';
 
-    angular.module('fullstackApp').factory('langData', langData);
+    angular.module('fullstackApp').factory('langData_tigerwit', langData_tigerwit);
 
-    langData.$inject = [];
+    langData_tigerwit.$inject = [];
 
-    function langData () {
+    function langData_tigerwit () {
         var data = {
             // 公用 public
             "lijifuzhi":{"en": "Copy now", "zh": "立即复制"},

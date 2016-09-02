@@ -1,6 +1,8 @@
 'use strict';
 
-var data = require('./lang_data.js')();
+var company_name = process.env.COMPANY_NAME;
+var data_name = './lang_data_'+company_name+'.js';
+var data = require(data_name)();
 var querystring = require('querystring');
 
 module.exports = function () {
@@ -19,6 +21,13 @@ module.exports = function () {
         // return this;         
     }
     Lang.prototype = {
+        isTiger: function () {
+            if (company_name === 'tigerwit') {
+                return true;
+            } else {
+                return false;
+            }
+        },
         text: function(name){
             var text;
             text = data[name][this.language];

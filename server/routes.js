@@ -9,6 +9,7 @@ var url = require('url');
 var request = require('request');
 var masterApi = require('./api/master');
 var Lang = require('./lang')();
+var setCompanyCookie = require('./set_company_cookie');
 
 function extendPublic (data, req) {
     var lang = new Lang(req);
@@ -51,6 +52,7 @@ module.exports = function(app) {
 
     // 个人中心
     app.route('/space/').get(function(req, res) {
+        setCompanyCookie(res);
         res.render('space', extendPublic({}, req));
     });
 
