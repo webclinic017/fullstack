@@ -10,8 +10,8 @@
   }
 
   .col-xs-6 {
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .pie_chart {
@@ -480,13 +480,13 @@ $ratio: 1.165;
     }
 
     > select {
-      width: 80px;
+      width: 95px;
     }
   }
 
   @include e(stack) {
     width: 100%;
-    height: 145px;
+    height: 100px;
   }
 
   @include e(types) {

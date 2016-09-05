@@ -3,11 +3,12 @@
 
 	angular.module('fullstackApp').directive('twBarChart', twBarChart);
 
-	twBarChart.$inject = [];
+	twBarChart.$inject = ['config'];
 
-	function twBarChart() {
+	function twBarChart(config) {
+		var noData = config.highchartNoDataOptions;
 		var options = {
-			colors: ['#bfe103', '#ffc601', '#fc5401', '#41b6ea', '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a'],
+			colors: ['#bfe103', '#ffc601', '#fc5401', '#41b6ea', '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a','#101010','#61cb28','#fff230','#37bc9b','#AC9711','#188afa'],
 			chart: {
 				type: 'bar'
 			},
@@ -18,7 +19,12 @@
 				enabled: false
 			},
 			legend: {
-				align: 'center'
+				align: 'center',
+				itemWidth: 100,
+				reversed:true,
+				itemHoverStyle:{
+					color:'#ffdd80'
+				}
 			},
 			xAxis: {
 				categories: ['交易品种:'],
@@ -51,7 +57,9 @@
 			},
 			tooltip: {
 				pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y}</b> ({point.percentage:.0f}%)<br/>',
-				shared: true
+				shared: false,
+				reversed:true,
+				hideDelay: 50
 			},
 			credits: {
 				enabled: false
@@ -87,7 +95,7 @@
 							enabled: false
 						},
 						legend: {
-							enabled: false
+
 						},
 						xAxis: {
 							categories: ['trade types'],
@@ -146,6 +154,10 @@
 						element.highcharts(options);
 					});
 				}
+				scope.$on('hideBarData', function (event, data) {
+					element.highcharts(noData);
+				});
+
 			}
 		}
 	}

@@ -243,10 +243,17 @@
             });
         }
 
-        function getMonthlySymbols (user_code){
+		/**
+         * trader 获取月交易品种
+         * @param user_code MT4_ID
+         * @param date 2016-9
+         * @returns {*}
+         */
+        function getMonthlySymbols (user_code,date){
             return $http.get('/action/public/v5/monthly_symbols', {
                 params: {
-                    user_code: user_code
+                    user_code: user_code,
+                    date:date
                 }
             });
         }

@@ -37,14 +37,14 @@
             <div class="space_basic__item-number">
                 <span><i class="fa"></i>{{ personal.volume || '0.00' }}</span>
             </div>
-            <div class="space_gray_color">交易手数</div>
+            <div class="space_gray_color">总交易手数</div>
             <p class="space_basic_hint">用户真实入金后的交易手数累计，包含复制交易，不包含CFD</p>
         </li>
         <li class="space_basic__item" ng-mouseenter="show_close_profit=true" ng-mouseleave="show_close_profit=false" ng-class="{'active':show_close_profit}">
             <div class="space_basic__item-number">
                 <span><i class="fa fa-dollar"></i>{{ personal.close_profit || '0.00' }}</span>
             </div>
-            <div class="space_gray_color">总收益</div>
+            <div class="space_gray_color">历史总收益</div>
             <p class="space_basic_hint">用户真实入金后平仓产生的收益总数</p>
 
         </li>
@@ -58,7 +58,7 @@
             <div class="space_basic__item-number" ng-class="{'font-danger': personal.profit_rate.indexOf('-') >= 0, 'font-success': personal.profit_rate.indexOf('-') < 0}">
                 <span>{{ personal.profit_rate || '0.00' }}</span>%
             </div>
-            <div class="space_gray_color">收益率</div>
+            <div class="space_gray_color">总收益率</div>
         </li>
         <li class="space_basic__item"  ng-if="personal.basic === 'invite'">
             <div class="space_basic__item-number">
