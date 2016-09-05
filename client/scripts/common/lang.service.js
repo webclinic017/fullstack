@@ -1,13 +1,7 @@
 ;
 (function () {
     'use strict';
-    // var langData;
-    // angular.forEach($cookies, function (value, index) {
-
-    //     if (index === 'company_name') {
-    //         langData = langData+'_'+value;
-    //     } 
-    // });
+    
     angular.module('fullstackApp').factory('lang', lang);
 
     lang.$inject = ['$cookies', 'langData_tigerwit', 'langData_pkds'];
@@ -22,11 +16,16 @@
                 // console.info(value, index);
                 language = value;
             }
-            // if (index === 'company_name') {
-            //     langData = langData+'_'+value;
-            // } 
+            if (index === 'company_name') {
+                
+                if (value === 'tigerwit') {
+                    langData = langData_tigerwit;
+                }
+                if (value === 'pkds') {
+                    langData = langData_pkds;
+                }
+            } 
         });
-        // console.info(langData);
 
         var lang = {
             text: function(name){
