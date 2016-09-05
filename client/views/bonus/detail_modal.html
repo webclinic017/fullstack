@@ -1,0 +1,51 @@
+<div class="system_modal">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <h5 ng-if="personal.disable" class="system_modal__title">
+        分成详情
+    </h5>
+    <h5 ng-if="! personal.disable" class="system_modal__title">
+        复制{{ username }}详情
+    </h5>
+
+    <div class="space_bonus__modal-content">
+        <table class="table table-header table-hover table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>操作</th>
+                    <th>开仓时间</th>
+                    <th>平仓时间</th>
+                    <th>开仓价</th>
+                    <th>平仓价</th>
+                    <th>交易量</th>
+                    <th>收益</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="detail in details" ng-if="success && details.length > 0">
+                    <td>{{ detail.CMD_DESC }} {{ detail.SYMBOL }}</td>
+                    <td>
+                        {{ detail.OPEN_TIME }}
+                    </td>
+                    <td>{{ detail.CLOSE_TIME }}</td>
+                    <td><i class="fa fa-dollar"></i>{{ detail.OPEN_PRICE }}</td>
+                    <td><i class="fa fa-dollar"></i>{{ detail.CLOSE_PRICE }}</td>
+                    <td>{{ detail.VOLUME }}</td>
+                    <td><i class="fa fa-dollar"></i>{{ detail.PROFIT }}</td>
+                </tr>
+                <tr ng-if="success && details.length > 0">
+                    <td>总计</td>
+                    <td colspan="5"></td>
+                    <td><i class="fa fa-dollar"></i>{{ total.sum_profit }}</td>
+                </tr>
+                <tr ng-if="success && details.length > 0">
+                    <td>分成</td>
+                    <td colspan="5"></td>
+                    <td><i class="fa fa-dollar"></i>{{ total.pay_noob }}</td>
+                </tr>
+                <tr ng-if="success && details.length <= 0"><td colspan="7">无数据</td></tr>
+                <tr ng-if="! success"><td colspan="7">加载中...</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
