@@ -276,13 +276,13 @@ $trader-width: 1030px;
     > span, > select {
       display: inline-block;
       float: left;
-      height: 35px;
-      line-height: 35px;
+      height: 25px;
+      line-height: 25px;
       margin-bottom: 50px;
     }
 
     > span {
-      width: 110px;
+      width: 85px;
       margin-left: 10px;
     }
 
@@ -291,7 +291,7 @@ $trader-width: 1030px;
     }
 
     > select {
-      width: 110px;
+      width: 60px;
     }
   }
 
