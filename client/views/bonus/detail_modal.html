@@ -23,7 +23,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="detail in details" ng-if="success && details.length > 0">
-                    <td>{{ detail.SYMBOL }}</td>
+                    <td>{{ detail.CMD_DESC }} {{ detail.SYMBOL }}</td>
                     <td>
                         {{ detail.OPEN_TIME }}
                     </td>

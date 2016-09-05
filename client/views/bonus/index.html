@@ -55,22 +55,26 @@
                    name="date"
                    type="text"
                    required
-                   ng-model="datepicker.date"
+                   ng-model="datepickerMaster.date"
                    tw-datetimepicker
                    get-bonus-list="getMasterBonusList()"
-                   datetimepicker-options="{{datepicker.options}}">
+                   datetimepicker-options="{{datepickerMaster.options}}">
         </div>
         <div ng-if="personal && !personal.master" class="form-control-wrapper">
             <input class="form-control"
                    name="date"
                    type="text"
                    required
-                   ng-model="datepicker.date"
+                   ng-model="datepickerCopier.date"
                    tw-datetimepicker
                    get-bonus-list="getCopierBonusList()"
-                   datetimepicker-options="{{datepicker.options}}">
+                   datetimepicker-options="{{datepickerCopier.options}}">
         </div>
-        <div class="remark">
+        <div ng-if="personal && personal.master" class="remark">
+            <span class="font-info">注:</span>
+            每月10号结算上一月分成
+        </div>
+        <div ng-if="personal && !personal.master" class="remark">
             <span class="font-info">注:</span>
             每月1号结算上一月分成
         </div>
@@ -116,22 +120,27 @@
     <div ng-if="personal && !personal.master">
         <table class="table table-header table-hover table-striped table-bordered">
             <colgroup>
-                <col width="25%"></col>
-                <col width="25%"></col>
-                <col width="25%"></col>
-                <col width="25%"></col>
+                <col width="20%"></col>
+                <col width="20%"></col>
+                <col width="20%"></col>
+                <col width="20%"></col>
+                <col width="20%"></col>
             </colgroup>
             <thead>
                 <tr>
                     <th>高手名称</th>
-                    <th>产生分成</th>
-                    <th>结算时间</th>
+                    <th>产生收益</th>
+                    <th>扣除分成</th>
+                    <th>扣除时间</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="copier in copierList" ng-if="success && copierList.length > 0">
                     <td class="font-info">{{ copier.username }}</td>
+                    <td>
+                        <i class="fa fa-dollar"></i>{{ copier.sum_profit }}
+                    </td>
                     <td>
                         <i class="fa fa-dollar"></i>{{ copier.pay_noob }}
                     </td>
@@ -142,12 +151,13 @@
                 </tr>
                 <tr ng-if="success && copierList.length > 0">
                     <td>总计</td>
+                    <td></td>
                     <td><i class="fa fa-dollar"></i>{{ totalPay }}</td>
                     <td></td>
                     <td></td>
                 </tr>
-                <tr ng-if="success && copierList.length <= 0"><td colspan="4">{{ backErr.msg || '无数据'}}</td></tr>
-                <tr ng-if="! success"><td colspan="4">加载中...</td></tr>
+                <tr ng-if="success && copierList.length <= 0"><td colspan="5">{{ backErr.msg || '无数据'}}</td></tr>
+                <tr ng-if="! success"><td colspan="5">加载中...</td></tr>
             </tbody>
         </table>
     </div>

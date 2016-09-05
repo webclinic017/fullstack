@@ -28,10 +28,18 @@
         if (lastMonth < 10) {
             lastMonth = '0' + lastMonth;
         }
-        var endDateString = year + '-' + month;
-        var dateString = year + '-' + lastMonth;
+        var dateString = year + '-' + month;
+        var lastDateString = year + '-' + lastMonth;
         
-        $scope.datepicker = {
+        $scope.datepickerMaster = {
+            date: lastDateString,
+            options: {
+                format: 'YYYY-MM',
+                date: lastDateString,
+                // endDate: endDateString,
+            }
+        };
+        $scope.datepickerCopier = {
             date: dateString,
             options: {
                 format: 'YYYY-MM',
@@ -69,7 +77,7 @@
             $scope.backErr = {
                 msg: ''
             };
-            asset.getMasterBonusList($scope.datepicker.date).then(function (data) {
+            asset.getMasterBonusList($scope.datepickerMaster.date).then(function (data) {
                 // console.info(2, data);
                 $scope.success = true;
                 if (data && data.is_succ) {
@@ -88,7 +96,7 @@
             $scope.backErr = {
                 msg: ''
             };
-            asset.getCopierBonusList($scope.datepicker.date).then(function (data) {
+            asset.getCopierBonusList($scope.datepickerCopier.date).then(function (data) {
                 // console.info(1, data);
                 $scope.success = true;
                 if (data && data.is_succ) {
