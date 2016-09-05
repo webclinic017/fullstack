@@ -1,8 +1,7 @@
 'use strict';
 
 var company_name = process.env.COMPANY_NAME;
-var data_name = './lang_data_'+company_name+'.js';
-var data = require(data_name)();
+var data = require('./lang_data.js')();
 var querystring = require('querystring');
 
 module.exports = function () {

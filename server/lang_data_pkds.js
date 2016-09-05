@@ -1,4 +1,3 @@
-
 module.exports = function () {
     var data = {
         // 公用 public

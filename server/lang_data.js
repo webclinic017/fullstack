@@ -1,3 +1,15 @@
+'use strict';
+var company_name = process.env.COMPANY_NAME;
+var companyNameZh, companyNameEn;
+
+if (company_name === 'tigerwit') {
+    companyNameZh = "老虎外汇";
+    companyNameEn = "TigerWit";
+}
+if (company_name === 'pkds') {
+    companyNameZh = "派克道森";
+    companyNameEn = "Pakerdawson";
+}
 
 module.exports = function () {
     var data = {
@@ -42,7 +54,7 @@ module.exports = function () {
         "navbar8": {"en": "Precious metals trading", "zh": "贵金属交易"},
         "navbar9": {"en": "Contracts for differences", "zh": "差价合约"},
         "navbar10": {"en": "About Tiger", "zh": "关于老虎"},
-        "navbar11": {"en": "About TigerWit", "zh": "关于老虎外汇"},
+        "navbar11": {"en": "About "+companyNameEn, "zh": "关于"+companyNameZh},
         "navbar12": {"en": "STP", "zh": "STP交易模式"},
         "navbar13": {"en": "", "zh": ""},
         "navbar14": {"en": "no-banner", "zh": ""},
