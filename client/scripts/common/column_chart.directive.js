@@ -4,9 +4,10 @@
 
     angular.module('fullstackApp').directive('twColumnChart', twColumnChart);
 
-    twColumnChart.$inject = [];
+    twColumnChart.$inject = ['config'];
 
-    function twColumnChart() {
+    function twColumnChart(config) {
+        var noData = config.highchartNoDataOptions;
         var options = {
             chart: {
                 type: 'column',
@@ -145,14 +146,14 @@
                 name: ''
             },
             tooltip: {
-                borderColor: '#cccccc',
                 name: '月收益率',
                 formatter: function () {
                     return '<b style="color:#009dff;font-size:14px">' + this.y + '%<br>月收益率</b><br>' + this.x;
                 },
                 style: {
                     padding: 15
-                }
+                },
+                borderColor:'#188afa'
             },
             series: [{
                 color: '#f23244', /*正值的颜色*/
@@ -177,6 +178,9 @@
                 scope.$on('rendColumnData', function (event, data) {
                     options.series[0].data = data;
                     element.highcharts(options);
+                });
+                scope.$on('hideColumnData', function (event, data) {
+                    element.highcharts(noData);
                 });
             }
         }
