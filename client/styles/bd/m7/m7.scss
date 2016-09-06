@@ -27,15 +27,24 @@ textarea {
     display: none;
     visibility: hidden;
 }
+.m_navbar {
+  margin: 0 auto;
+  width: 100%;
+}
+.m_footer{
+  margin: -35px auto;
+  display: inline-block;
+  font-size: 0;
+  width: 100%;
+}
+.has_footer{
+  padding-bottom: 35px;
+}
 //m7头部
 .m7_layout {
   margin: 0 auto;
   width: 100%;
   background-color: #ffe900;
-  .m7_navbar {
-    margin: 0 auto;
-    width: 100%;
-  }
   .main {
     background-color: #ffe900;
     .top_part {
@@ -209,10 +218,6 @@ textarea {
       padding-left: 15px;
       padding-right: 13px;
       background-color: #ffe900;
-    }
-    .m7_footer{
-      display: block;
-      width: 100%;
     }
   }
 }
