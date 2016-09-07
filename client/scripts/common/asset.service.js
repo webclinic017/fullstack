@@ -16,11 +16,12 @@
             deposit: deposit,
             getDepositLimit: getDepositLimit,
             getFXRate: getFXRate,
-            getBonus: getBonus,
-            getBonusList: getBonusList,
-            getBonusDetail: getBonusDetail,
-            getCopyMyDetail: getCopyMyDetail,
-            getIsWithdraw: getIsWithdraw
+            getIsWithdraw: getIsWithdraw,
+            getMasterBonusSummary: getMasterBonusSummary,
+            getCopierBonusSummary: getCopierBonusSummary,
+            getMasterBonusList: getMasterBonusList,
+            getCopierBonusList: getCopierBonusList,
+            getBonusDetailList: getBonusDetailList
         };
         return service;
 
@@ -47,9 +48,7 @@
          * @method getCard
          */
         function getCard() {
-            return $http.post('/api/v3/binding_bankcard', {
-                act: 'query'
-            });
+            return $http.get('/action/public/v4/query_bankcard');
         }
 
         /**
@@ -58,8 +57,8 @@
          * @method bindCard
          */
         function bindCard(number, name, address, id) {
-            return $http.post('/api/v3/binding_bankcard', {
-                card_id: number,
+            return $http.post('/action/public/v4/binding_bankcard', {
+                card_no: number,
                 bank_name: name,
                 bank_addr: address,
                 id: id
@@ -93,7 +92,7 @@
          * }
          */
         function getHistory(page, pagesize) {
-            return $http.get('/api/v3/pay_history', {
+            return $http.get('/action/public/v4/pay_history', {
                 params: {
                     page: page,
                     pagesize: pagesize
@@ -125,9 +124,10 @@
          *
          * @method deposit
          */
-        function deposit(amount) {
-            return $http.get('/api/v1/pay', {
+        function deposit(mt4_id, amount) {
+            return $http.get('/action/public/v4/pay', {
                 params: {
+                    mt4_id: mt4_id,
                     amount: amount
                 }
             });
@@ -139,7 +139,7 @@
          * @method getDepositLimit
          */
         function getDepositLimit() {
-            return $http.get('/api/v1/pay_limit');
+            return $http.get('/action/public/v4/pay_limit');
         }
 
         /**
@@ -150,57 +150,6 @@
         function getFXRate() {
             return $http.get('/api/v1/get_parity');
         }
-
-        /**
-         * Asset Service 获取分成信息概况
-         *
-         * @method getBonus
-         */
-        function getBonus() {
-            return $http.get('/action/public/v4/get_copy_data');
-        }
-
-        /**
-         * Asset Service 获取我的分成列表
-         *
-         * @method getBonusList
-         */
-        function getBonusList(date) {
-            return $http.get('/action/public/v4/get_bonus', {
-                params: {
-                    date: date
-                }
-            });
-        }
-
-        /**
-         * Asset Service 获取分成详情
-         *
-         * @method getBonusDetail
-         *
-         */
-        function getBonusDetail(date, usercode, page, pagesize) {
-            return $http.get('/action/public/v4/get_bonus_list', {
-                params: {
-                    date: date,
-                    usercode: usercode,
-                    page: page,
-                    pagesize: pagesize
-                }
-            });
-        }
-
-        /**
-         * Asset Service 获取复制我的 详情
-         *
-         * @method getCopyMyDetail
-         *
-         */
-
-        function getCopyMyDetail() {
-            return $http.get('/action/public/v4/copy_my');
-        }
-
 
         /**
          * Asset Service 获取是否可以出金
@@ -215,6 +164,70 @@
               params : {
                          amount : amount
                        }
+            });
+        }
+
+        /**
+         * Asset Service 获取高手分成数据总览
+         *
+         * @method getMasterBonusSummary
+         */
+        function getMasterBonusSummary() {
+            return $http.get('/action/public/v4/master/profile');
+        }
+
+        /**
+         * Asset Service 获取复制者分成数据总览
+         *
+         * @method getCopierBonusSummary
+         */
+        function getCopierBonusSummary() {
+            return $http.get('/action/public/v4/copier/profile');
+        }
+
+        /**
+         * Asset Service 获取高手分成列表
+         *
+         * @method getMasterBonusList
+         */
+        function getMasterBonusList(pay_zone) {
+            return $http.get('/action/public/v4/master/copy_pay_list', {
+                params: {
+                    pay_zone: pay_zone
+                }
+            });
+        }
+
+        /**
+         * Asset Service 获取高手分成列表
+         *
+         * @method getCopierBonusList
+         */
+        function getCopierBonusList(pay_zone) {
+            return $http.get('/action/public/v4/copier/copy_pay_list', {
+                params: {
+                    pay_zone: pay_zone
+                }
+            });
+        }
+
+        /**
+         * Asset Service 获取分成结算订单详情列表
+         *
+         * @method getBonusDetailList
+         *
+         * @params ticket_noob 复制者分成结算订单id 
+         * @params mt4_from 高手MT4 
+         * @params mt4_to 复制者MT4 
+         *
+         */
+        function getBonusDetailList(ticket_noob, mt4_from, mt4_to) {
+            return $http.get('/action/public/v4/copy_pay_trade_list', {
+                params: {
+                    ticket_noob: ticket_noob,
+                    mt4_from: mt4_from,
+                    mt4_to: mt4_to
+                }
             });
         }
     }

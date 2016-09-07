@@ -20,13 +20,14 @@
                     face = fileInput.attr('data-face');
 
                 fileInput.fileupload({
-                    url: '/api/v1/upload',
+                    url: '/action/public/v4/upload',
                     formData: {
                         face: face
                     },
                     done: function (e, data) {
-                        img = element.find(selector.img);
-                        imgSrc = JSON.parse(data.result).path;
+
+                        img = element.find('.'+selector.img);
+                        imgSrc = data.result.path;
                         
                         if (img.length > 0) {
                             img.remove();

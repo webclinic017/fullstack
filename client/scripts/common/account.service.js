@@ -278,10 +278,10 @@
         }
 
         function getPersonalInfo() {
-            return $http.get('/api/v1/get_info').then(function (data) {
+            return $http.get('/action/public/v4/get_info').then(function (data) {
                 var personal = {};
 
-                angular.forEach(data, function (value, key) {
+                angular.forEach(data.data, function (value, key) {
 
                     if (key === 'user_code') {
                         this['usercode'] = value;
@@ -377,12 +377,13 @@
          * @desc setting 获取手机号码、邮箱等加密信息
          */
         function getSettingInfo() {
-            return $http.get('/api/v1/get_info', {
+            return $http.get('/action/public/v4/get_info', {
                 params: {
                     type: 'Profile'
                 }
             }).then(function (data) {
                 if (data.is_succ) {
+                    data = data.data;
                     return angular.extend(data, {
                         username: data.username,
                         location: data.region,
@@ -517,7 +518,7 @@
          * @desc 实名认证
          */
         function verify(realname) {
-            return $http.post('/api/v3/set_info', {
+            return $http.post('/action/public/v4/set_info', {
                 real_name: realname
             });
         }
@@ -527,11 +528,12 @@
          * @desc 获取实名认证状态
          */
         function getVerifyStatus() {
-            return $http.get('/api/v1/get_info', {
+            return $http.get('/action/public/v4/get_info', {
                 params: {
                     type: 'Profile'
                 }
             }).then(function (data) {
+                data = data.data;
                 return {
                     status: data.profile_check || 0,
                     realname: data.realname,
