@@ -59,8 +59,17 @@
             var w = $window.open('/waiting');
 
             asset.deposit($scope.personal.real_id, amount).then(function(data) {
-                openDepositMdl('depositFinish');
-                w.location = data.data.url;
+                var url;
+                if(data && data.data && data.data.url){
+                    url = data.data.url;
+                }
+                if(url){
+                    openDepositMdl('depositFinish');
+                    w.location = data.data.url;
+                }else{
+                    alert( (data && data.error_msg) || '请求失败，请联系管理员。');
+                    w.close();
+                }
             });
         }
 
