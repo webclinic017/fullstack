@@ -70,11 +70,12 @@
         // 获取银行卡信息
         function getCard() {
             asset.getCard().then(function(data) {
+
                 if (data.is_succ) {
-                    $scope.withdraw.card.id = data.id;
-                    $scope.withdraw.card.number = data.card_id;
-                    $scope.withdraw.card.bank = data.bank_name;
-                    $scope.withdraw.card.address = data.bank_addr;
+                    $scope.withdraw.card.id = data.data.id;
+                    $scope.withdraw.card.number = data.data.card_no;
+                    $scope.withdraw.card.bank = data.data.bank_name;
+                    $scope.withdraw.card.address = data.data.bank_addr;
 
                 }
             });

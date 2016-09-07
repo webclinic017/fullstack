@@ -1,3 +1,8 @@
+$color-mt27bg:              #33325c;
+$color-h5regbtn:            #ff3333;
+$color-h5regbtnbd:          #c12729;
+$color-h5regbg:             #c1c1ce;
+$color-yellow:              #fff000;
 html,body{
   width: 100%;
   height: 100%;
@@ -59,3 +64,64 @@ select {
 			/*留出一点位置，避免被文字覆盖*/
 			padding-left: 12px;
 		}
+
+/*h5导航条样式*/
+.h5_nav{
+  width: 100%;
+  background-color: #222;
+  padding: 0.3rem px2rem(18);
+  img{
+    display: inline-block;
+    float: left;
+    height: 2rem;
+  }
+  span{
+    font-size: px2rem(36);
+    height: 2rem;
+    line-height: 2rem;
+    float: right;
+    color: $color-yellow;
+  }
+}
+
+.h5_regbox{
+  margin: 0 auto;
+  width: px2rem(500);
+  height:px2rem(465);
+  background-color: $color-h5regbg;
+  border-radius: px2rem(18);
+  .title{
+    text-align: center;
+    height:px2rem(100);
+    color: $color-mt27bg;
+    line-height:px2rem(100);
+    font-size: px2rem(45);
+    font-weight: 200;
+    margin-top: 0;
+    margin-bottom: px2rem(8);
+  }
+  input{
+    border: none;
+    height: px2rem(65);
+    width: 85.5%;
+    font-size: px2rem(22);
+    margin-left: px2rem(35);
+    padding-left: px2rem(20);
+    background-color: #fff;
+    border-radius: px2rem(6);
+    margin-bottom: px2rem(16);
+  }
+  .button{
+    display: block;
+    margin: 0 auto;
+    width: 85.5%;
+    height: px2rem(82);
+    text-align: center;
+    color: $color-yellow;
+    font-size: px2rem(30);
+    line-height:px2rem(82);
+    border-radius: px2rem(6);
+    border-bottom: px2rem(8) solid $color-h5regbtnbd;
+    background-color: $color-h5regbtn;
+  }
+}
