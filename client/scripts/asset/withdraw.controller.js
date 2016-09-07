@@ -73,7 +73,7 @@
 
                 if (data.is_succ) {
                     $scope.withdraw.card.id = data.data.id;
-                    $scope.withdraw.card.number = data.data.card_id;
+                    $scope.withdraw.card.number = data.data.card_no;
                     $scope.withdraw.card.bank = data.data.bank_name;
                     $scope.withdraw.card.address = data.data.bank_addr;
 
