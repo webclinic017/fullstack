@@ -48,9 +48,7 @@
          * @method getCard
          */
         function getCard() {
-            return $http.post('/api/v3/binding_bankcard', {
-                act: 'query'
-            });
+            return $http.get('/action/public/v4/query_bankcard');
         }
 
         /**
@@ -59,8 +57,8 @@
          * @method bindCard
          */
         function bindCard(number, name, address, id) {
-            return $http.post('/api/v3/binding_bankcard', {
-                card_id: number,
+            return $http.post('/action/public/v4/binding_bankcard', {
+                card_no: number,
                 bank_name: name,
                 bank_addr: address,
                 id: id
@@ -94,7 +92,7 @@
          * }
          */
         function getHistory(page, pagesize) {
-            return $http.get('/api/v3/pay_history', {
+            return $http.get('/action/public/v4/pay_history', {
                 params: {
                     page: page,
                     pagesize: pagesize
@@ -126,9 +124,10 @@
          *
          * @method deposit
          */
-        function deposit(amount) {
-            return $http.get('/api/v1/pay', {
+        function deposit(mt4_id, amount) {
+            return $http.get('/action/public/v4/pay', {
                 params: {
+                    mt4_id: mt4_id,
                     amount: amount
                 }
             });
@@ -140,7 +139,7 @@
          * @method getDepositLimit
          */
         function getDepositLimit() {
-            return $http.get('/api/v1/pay_limit');
+            return $http.get('/action/public/v4/pay_limit');
         }
 
         /**

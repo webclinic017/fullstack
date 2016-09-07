@@ -40,8 +40,9 @@
 @each $name in $bank-names {
     .icon-banks-#{$name} {
         @extend .icon-banks;
-        background-position-x: 0;
-        background-position-y: -(index($bank-names, $name) - 1) * 44px;
+        // background-position-x: 0;
+        // background-position-y: -(index($bank-names, $name) - 1) * 44px;
+        background-position:0px (-(index($bank-names, $name) - 1) * 44px);
     }
 }
 
