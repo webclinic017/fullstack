@@ -1,25 +1,25 @@
 var report_sites = [
   {
-    img_src:'/images/web/report-yinlv.png',
+    img_src:'/images/web/report-JRJ.jpg',
     address:'http://finance.jrj.com.cn/biz/2016/04/27112320886585.shtml?to=pc',
     description:'金融界资讯：中国本土外汇新势力 唐彬森首谈 “老虎金融”',
     date:'2016-04-27'
   },
   {
-    img_src:'/images/web/report-yinlv.png',
+    img_src:'/images/web/report-XLCJ.jpg',
     address:'http://finance.sina.com.cn/money/forex/datafx/2016-06-07/doc-ifxsvexw8653177.shtml',
     description:'新浪财经：老虎金融：忘记非农吧 耶伦力挺年内加息 ',
     date:'2016-06-07'
   },
   {
     img_src:'/images/web/report-netease.png',
-    address:'http://www.shfinancialnews.com/xww/2009jrb/node5019/node5051/xfsh/userobject1ai166248.html',
+    address:'http://news.163.com/16/0818/02/BUNGCEM700014AED.html',
     description:'网易新闻：本土外汇平台迈向国际化老虎外汇纳入ASIC监管 ',
     date:'2016-08-15'
   },
   {
-    img_src:'/images/web/report-yinlv.png',
-    address:'http://news.163.com/16/0818/02/BUNGCEM700014AED.html',
+    img_src:'/images/web/report-SHJR.png',
+    address:'http://www.shfinancialnews.com/xww/2009jrb/node5019/node5051/xfsh/userobject1ai166248.html',
     description:'上海金融报：老虎外汇纳入ASIC监管',
     date:'2016-08-18'
   },
@@ -72,3 +72,5 @@ var report_sites = [
     date:'2015-08-12'
   }
 ];
+
+module.exports = report_sites;
