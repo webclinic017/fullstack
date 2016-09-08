@@ -9,6 +9,7 @@ var url = require('url');
 var request = require('request');
 var masterApi = require('./api/master');
 var Lang = require('./lang')();
+var report_sites = require('./report_site');
 
 function extendPublic (data, req) {
     var lang = new Lang(req);
@@ -211,7 +212,8 @@ module.exports = function(app) {
         };
 
         res.render('web_about.html', extendPublic({
-            pageInfo: pageInfo
+            pageInfo: pageInfo,
+            report_sites: report_sites
         }, req));
     });
 

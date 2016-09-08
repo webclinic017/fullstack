@@ -2,7 +2,7 @@
     <div class="about-public__report-banner"></div>
 
     <div class="report about-public__con mg-bt-100">
-        
+
         <table class="table table-header table-striped">
             <colgroup>
                 <col width="30%">
@@ -17,118 +17,21 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <%for(var i=0; i< report_sites.length; i++){%>
+                  <tr>
                     <td>
-                        <img src="/images/web/report-sina.png">
+                      <img src="<%= report_sites[i].img_src %>">
                     </td>
                     <td>
-                        <a class="report__title" href="http://cs.sina.com.pt/minisite/news/2016/0406/1459909814.html" target="_blank">
-                            老虎外汇梅花三弄,互联网外汇温柔多情
-                        </a>
+                      <a class="report__title" href="<%= report_sites[i].address %>" target="_blank">
+                        <%= report_sites[i].description %>
+                      </a>
                     </td>
                     <td>
-                        2016-04-06
+                      <%= report_sites[i].date%>
                     </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <img src="/images/web/report-591hx.png">
-                    </td>
-                    <td>
-                        <a class="report__title" href="http://money.591hx.com/article/2016-03-02/0000388612s.shtml" target="_blank">
-                            老虎外汇：2016年如何在外汇市场“捡钱”？
-                        </a>
-                    </td>
-                    <td>
-                        2016-03-02
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <img src="/images/web/report-guangming.png">
-                    </td>
-                    <td>
-                        <a class="report__title" href="http://city.gmw.cn/2016-01/29/content_18714790.htm " target="_blank">
-                            TigerWit老虎外汇"傻瓜式"投资平台新用户竟以10倍速度递增？
-                        </a>
-                    </td>
-                    <td>
-                        2016-01-29
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <img src="/images/web/report-otcbeta.png">
-                    </td>
-                    <td>
-                        <a class="report__title" href="http://www.otcbeta.com/news/418411.html" target="_blank">
-                            TigerWit老虎外汇：恒生指数，离岸人民币1月25日即将上线
-                        </a>
-                    </td>
-                    <td>
-                        2016-01-23
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <img src="/images/web/report-xinmin.png">
-                    </td>
-                    <td>
-                        <a class="report__title" href="http://tech.xinmin.cn/internet/2016/01/11/29288149.html" target="_blank">
-                            TigerWit老虎外汇：产品上线7个月新客户量翻10倍
-                        </a>
-                    </td>
-                    <td>
-                        2016-01-11
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <img src="/images/web/report-netease.png">
-                    </td>
-                    <td>
-                        <a class="report__title" href="http://help.3g.163.com/0406/16/0104/14/BCGA6RMH0406002E.html" target="_blank">
-                            TigerWit老虎外汇：金融领域也有琅琊榜？
-                        </a>
-                    </td>
-                    <td>
-                        2016-01-04
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <img src="/images/web/report-caijing.png">
-                    </td>
-                    <td>
-                        <a class="report__title" href="http://www.cj1.com.cn/yes/2015-11-30/81937.html" target="_blank">
-                            老虎外汇智慧分享经济 变革传统外汇代理模式
-                        </a>
-                    </td>
-                    <td>
-                        2015-11-30
-                    </td>
-                </tr>
-                
-                <tr>
-                    <td>
-                        <img src="/images/web/report-yinlv.png">
-                    </td>
-                    <td>
-                        <a class="report__title" href="http://www.yinhang.com/a_2015_0812_374357.html" target="_blank">
-                            TigerWit老虎外汇发布新产品：3.0时代已经来临
-                        </a>
-                    </td>
-                    <td>
-                        2015-08-12
-                    </td>
-                </tr>
-                
+                  </tr>
+                <%}%>
             </tbody>
         </table>
     </div>

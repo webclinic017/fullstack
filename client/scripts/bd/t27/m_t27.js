@@ -1,13 +1,20 @@
 $(function () {
-  $("#reg_now").on('touchend', function () {
+  $(".reg_now").on('touchend', function () {
     $('html, body').animate({scrollTop: 222}, 'fast');
     setTimeout(function () {
       $("#username").focus();
     }, 100);
   });
-  function tigerwitWeb(isLogin) {
+
+  $(".deposit_now").on('touchend', function () {
+    callNative({
+      type: "checkLogin"
+    });
+  });
+
+  window.tigerwitWeb = function tigerwitWeb(isLogin) {
     /*已经登录*/
-    if (isLogin == '1') {
+    if (isLogin == 1) {
       callNative({
         type: 'deposit'
       });
@@ -16,11 +23,4 @@ $(function () {
       $("#username").focus();
     }
   }
-  window.tigerwitWeb = tigerwitWeb;  
-  $("#deposit_now").on('touchend', function () {
-    callNative({
-      type: "checkLogin"
-    });
-
-  });
 });
