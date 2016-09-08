@@ -184,23 +184,37 @@
 					var now_date_mon = parseInt(nowDate.split('-')[1]);
 					var now_date_year = parseInt(nowDate.split('-')[0]);
 					var months = [];
-					var year_pin = now_date_year - now_date_year;
-					for (i = now_date_mon; i > 0; i--) {
-						i = i < 12 ? '0' + i : i;
-						mon = {
-							month: now_date_year + '年' + i + '月'
-						};
-						months.push(mon);
-					}
-					for (var i = 0; i <= year_pin; i++) {
-						for (var j = 12; j > begin_date_mon; j--) {
-							j = j < 10 ? '0' + j : j;
-							var mon = {
-								month: beain_date_year + '年' + j + '月'
-							};
-							months.push(mon);
-						}
-					}
+					var year_pin = now_date_year - beain_date_year;
+          if(year_pin > 0){
+            var mon_pin = 0;
+          } else {
+            mon_pin = begin_date_mon;
+          }
+          if(year_pin > 1){
+            var pin = 0;
+          } else {
+            pin = begin_date_mon;
+          }
+          for (var k = now_date_mon; k > mon_pin; k--) {
+            console.log(1);
+            k = k < 12 ? '0' + k : k;
+            mon = {
+              month: now_date_year + '年' + k + '月'
+            };
+            months.push(mon);
+          }
+
+					if(year_pin > 0){
+            for (var i = 0; i < year_pin; i++) {
+              for (var j = 12; j > pin; j--) {
+                j = j < 10 ? '0' + j : j;
+                var mon = {
+                  month: beain_date_year + '年' + j + '月'
+                };
+                months.push(mon);
+              }
+            }
+          }
 					return months;
 				}
 
