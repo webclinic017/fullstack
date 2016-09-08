@@ -13,13 +13,14 @@
     <link rel="stylesheet" href="/bower_components/swiper/dist/idangerous.swiper.css">
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.tmp) /styles/h5_m7.css -->
-    <link rel="stylesheet" href="/styles/h5_m7.css">
+    <!-- build:css(.tmp) /styles/h5_common.css -->
+    <link rel="stylesheet" href="/styles/h5_common.css">
     <!-- endbuild -->
 </head>
 <body>
-<div class="m7_layout">
-    <img class="m7_navbar" src="/images/bd/m7_navbar.png" alt="">
+<!-- 引入H5导航条 -->
+<%- include('common/m_nav.html') %>
+<div class="m7_layout has_footer">
     <div class="main">
         <div class="top_part">
             <img class="m7_head_bg" width="100%" src="/images/bd/m7_head.png" alt="bg">
@@ -83,9 +84,9 @@
                 人人都是投资高手
             </p>
         </div>
-        <img class="m7_footer" src="/images/bd/m7_footer.png" alt="">
     </div>
 </div>
+<%- include('common/m_footer.html') %>
 <!-- build:js(client) /scripts/vendor.js -->
 <!-- bower:js -->
 <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -111,7 +112,6 @@
 <!-- endbuild -->
 <!-- build:js(client) /scripts/bd_m7.js -->
 <script src="/scripts/bd/m7/m7.js"></script>
-<script src="/scripts/bd/t30/check.js"></script>
 <!-- endbuild -->
 <%- include('bd/common/footer.html') %>
 </body>

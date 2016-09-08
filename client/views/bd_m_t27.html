@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include common/m_common_head.html %>
+<!-- build:css(.tmp) /styles/m_vendor.css -->
+<link rel="stylesheet" href="/styles/m_vendor.css">
+<!-- endbuild -->
+
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
+<% include common/m_css_vendor.html %>
+<body>
+<!-- 引入H5导航条 -->
+<%- include('common/m_nav.html') %>
+<div class="m_t27_layout">
+  <div class="m_t27__banner">
+    <img src="/images/bd/m_t27_banner.png" alt="banner">
+  </div>
+  <!-- 引入H5注册框 -->
+  <%- include('common/m_regbox.html') %>
+  <!-- 按钮 -->
+  <ul class="m_t27__btns">
+    <li><img src="/images/bd/m_t27_bag.png" alt="bag"><span id="reg_now">立即注册</span></li>
+    <li><img src="/images/bd/m_t27_bag.png" alt="bag"><span id="deposit_now">马上入金</span></li>
+  </ul>
+  <div class="m_t27__bag_use_rule">
+    <div class="m_t27__bag_use_rule-main">
+      <p>1.注册即可获得100美金体验金，可直接用于交易，体验资金即刻到账；</p>
+      <p>2.5个工作日内入金可额外获得50美金体验金(入金2000美金及以上者除外)，入金后交易满15手，可提取全部的体验资金和盈利，无时间限制；</p>
+      <p>3.任何时间内，首次充值大于2000美金，即可享受更优厚的赠金条件，如下：</p>
+      <table>
+        <thead>
+        <tr>
+          <td>入金金额</td>
+          <td>赠金比例</td>
+          <td>交易指数</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>2000-4999美金</td>
+          <td>10%</td>
+          <td>赠金金额 / 4</td>
+        </tr>
+        <tr>
+          <td>5000-9999美金</td>
+          <td>12.5%</td>
+          <td>赠金金额 / 4</td>
+        </tr>
+        <tr>
+          <td>2000-4999美金</td>
+          <td>10%</td>
+          <td>赠金金额 / 4</td>
+        </tr>
+        </tbody>
+      </table>
+      <br/>
+      <p>活动时间：2016年9月1日~9月30日</p><br/>
+      <p>举例：张先生8月1日在TigerWit老虎外汇平台注册，获得了100美金赠金，8月2日张先生入金2000美金，并获得赠金200美金（2000*10%），开始选择高手跟单交易，8月25日张先生交易满15手，并盈利了3000美
+        金，所以张先生的账户余额为：100+2200+3000=5300美金</p>
+      <br/>
+      <span>注意事项</span>
+      <br/>
+      <br/>
+      <p>1.入金后所有订单平仓体验金扣除，重新发放100美金体验金，100美金体验金以及50美金入金赠金都是以信用形式发放到客户账户；</p>
+      <p>2.超过5个工作日且充值小于2000美金的用户，只享受100美金的体验金，活动期间交易15手后可提取体验资金；</p>
+      <p>3.本活动的交易手数适用于外汇，贵金属以及能源类产品，CFD股指交易手数不计入统计范围；</p>
+      <p>4.本活动仅限首次入金的新用户，为了保证您的资金快速出入，请提交正确的开户信息；</p>
+      <p>5.完成规定交易手数之前，赠金不可抵消账户亏损，若账户净值低于赠金金额的105%，老虎外汇有权强行平仓；</p>
+      <p>6.老虎外汇享有最终解释权，若有疑问，请咨询在线客服，或者拨打400-809-8509</p>
+    </div>
+  </div>
+  <div class="m_t27__trade_point">
+    <h5>老虎外汇交易品种&特点</h5>
+    <ul>
+      <li>
+        <span class="title"><img src="/images/bd/m_t27_icon1.png" alt="">外汇</span>
+        <div class="des">
+          <i>●&nbsp;</i>最高400倍杠杆<br>
+          <i>●&nbsp;</i>复制跟单，即可盈利，无须盯盘<br>
+          <i>●&nbsp;</i>STP交易安全，透明，放心<br>
+        </div>
+      </li>
+      <li>
+        <span class="title"><img src="/images/bd/m_t27_icon2.png" alt="">贵金属</span>
+        <div class="des">
+          <i>●&nbsp;</i>杠杆高<br>
+          <i>●&nbsp;</i>交易成本低，黄金一手不到50美金<br>
+          <i>●&nbsp;</i>门槛低，保证金 仅为10美金<br>
+        </div>
+      </li>
+      <li>
+        <span class="title"><img src="/images/bd/m_t27_icon3.png" alt="">能源</span>
+        <div class="des">
+          <i>●&nbsp;</i>50倍以上杠杆<br>
+          <i>●&nbsp;</i>无手续费，仅收取点差<br>
+          <i>●&nbsp;</i>只需设置一次止损，隔天仍然有效<br>
+        </div>
+      </li>
+      <li>
+        <span class="title"><img src="/images/bd/m_t27_icon4.png" alt="">CFD</span>
+        <div class="des">
+          <i>●&nbsp;</i>提供全球主流股市交易品种<br>
+          <i>●&nbsp;</i>提供低至2%的保证金水平<br>
+          <i>●&nbsp;</i>入市门槛极低<br>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="m_t27__award">
+    <ul>
+      <li><img src="/images/bd/t27_award1.png" alt=""><span>最具创新力品牌将</span></li>
+      <li><img src="/images/bd/t27_award2.png" alt=""><span>最具创新经济奖</span></li>
+      <li><img src="/images/bd/t27_award3.png" alt=""><span>最佳推荐平台</span></li>
+    </ul>
+    <div class="m_t27__award-tigerRoad">
+      <p><i>●&nbsp;</i>2016年8月正式规范中文宣传名称为“老虎外汇”</p>
+      <p><i>●&nbsp;</i>2016年6月获取数千万人民币融资，APP2.0上线 支持微盘与定期跟单</p>
+      <p><i>●&nbsp;</i>2016年4月APP1.0上线 支持跟单交易，APP产品取代WAP</p>
+      <p><i>●&nbsp;</i>2016年3月WAP3.0上线 第一代定期跟单、微盘交易产品上线</p>
+      <p><i>●&nbsp;</i>2015年11月WAP2.0上线</p>
+      <p><i>●&nbsp;</i>2015年8月WAP第一代复制跟单产品上线</p>
+      <p><i>●&nbsp;</i>2015年8月WAP第一代复制跟单产品上线</p>
+    </div>
+  </div>
+</div>
+</body>
+<% include common/m_js_vendor.html %>
+<!-- build:js(client) /scripts/m_vendor.js -->
+<script src="/bower_components/jquery-3.0.0.min/index.js"></script>
+<script src="/scripts/plugins/base64code.js"></script>
+<!-- endbuild -->
+<!-- build:js(client) /scripts/m_t27.js -->
+<script src="/scripts/bd/t27/m_t27.js"></script>
+<!-- endbuild -->
+<!-- 推广脚本footer -->
+<%- include('bd/common/footer.html') %>
+<!-- H5公共footer -->
+<%- include('common/m_footer.html') %>
+</html>

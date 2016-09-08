@@ -3,13 +3,17 @@ $m-background-color:        #f0eff5 !default;
 $m-brand-info:              #bbd8f9 !default;
 $m-brand-danger:            #ff5e5e !default;
 $m-gray-base:               #909090 !default;
+$m-black-base:              #222222 !default;
 $m-gray-light:              #d8d8d8 !default;
 $m-gray-lighter:            #e5e5e5 !default;
 $m-gray-lightest:           #f9f9f9 !default;
-$m-gray-modal:              #f2f2f2 !default;  
-$m-gray-border:             #cccccc !default;    
+$m-gray-modal:              #f2f2f2 !default;
+$m-gray-border:             #cccccc !default;
 $m-opacity-gray:            #AC9711 !default;
 $m-opacity-border:          #CAAE00 !default;
+$m-tiger-border:            #ffcc33 !default;
+$m-activity-major:          #ff3333 !default;
+$m-activity-major2:         #e33e4e !default;
 
 //== Colors
 $brand-primary:             #fff000 !default;
@@ -98,6 +102,7 @@ $bank-names: icbc, ccb, cmb, abc, spdb, hxb, ceb, boc, psbc, bcm, other, cmbc, g
              sdb, cib, citic, pab, bob, srcb, bea, nbcb, bon;
 
 //== Forex color
+
 $color-audcad:              #FF0000;
 $color-audchf:              #FF7400;
 $color-audjpy:              #FFDF00;

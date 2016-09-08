@@ -1,0 +1,229 @@
+.m_t27_layout{
+  overflow: hidden;
+  width: 100%;
+  background-color: $color-mt27bg;
+  @include b(m_t27){
+    width: 100%;
+    @include e(banner){
+      width: 100%;
+      img{
+        display: inline-block;
+        width: 100%;
+      }
+    }
+    @include e(btns){
+      width:px2rem(415);
+      height:px2rem(380);
+      margin: 0 auto;
+      margin-top: px2rem(65);
+      display: block;
+      li{
+        width:px2rem(170);
+        img{
+          width: 100%;
+        }
+        span{
+          display: block;
+          width: 100%;
+          text-align: center;
+          height: 1.6rem;
+          line-height: 1.6rem;
+          border: 1px solid $m-activity-major;
+          border-radius: px2rem(4);
+          color: $m-activity-major;
+          font-size: px2rem(22);
+        }
+      }
+      li:nth-child(1){
+        float: left;
+        span{
+          background-color: $m-activity-major;
+          color: $color-yellow;
+        }
+      }
+      li:nth-child(2){
+        float: right;
+      }
+    }
+    @include e(bag_use_rule){
+      overflow: hidden;
+      width: px2rem(2140);
+      height:70rem;
+      margin-left: -21.63rem;
+      background-color: $m-activity-major2;
+      border-radius: 50%;
+      @include m(main){
+        color: $m-gray-light;
+        background: url("/images/bd/m_t27_bag_use_rule.png") no-repeat center top;
+        background-size:px2rem(750) px2rem(127);
+        width: px2rem(750);
+        height:px2rem(2140);
+        margin: 2.5rem auto;
+        padding: 0 px2rem(110);
+        padding-top: px2rem(180);
+        font-size: 0.82rem;
+        table{
+          width: 100%;
+          td{
+            font-size: 0.3rem;
+            text-align: center;
+            width: 33.33%;
+            height:2rem;
+            border: 1px solid $m-background-color;
+          }
+          thead{
+            background-color: $m-background-color;
+            color: $m-black-base;
+            font-weight: 400;
+          }
+        }
+        span{
+          display: block;
+          margin: 0 auto;
+          border-radius: px2rem(42.5);
+          width:px2rem(340);
+          height: px2rem(85);
+          line-height: 2.4rem;
+          text-align: center;
+          border: 2px solid $m-tiger-border;
+          color: $m-tiger-border;
+          font-size: px2rem(40);
+        }
+      }
+    }
+    @include e(trade_point){
+      padding:px2rem(10) px2rem(65);
+      h5{
+        font-size: px2rem(40);
+        color: $m-tiger-border;
+        text-align: center;
+      }
+      ul{
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: px2rem(24);
+        li{
+          display: inline-block;
+          background-color: #fff;
+          width: 48%;
+          height:9.5rem;
+          font-size: 0.6rem;
+          float: left;
+          padding-left: px2rem(35);
+          padding-right: px2rem(35);
+          span{
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: px2rem(15);
+            width:px2rem(210);
+            height:px2rem(90);
+            border-bottom: 1px dashed $m-gray-base;
+            margin-bottom: px2rem(12);
+            img{
+              width: px2rem(55);
+              height: px2rem(40);
+              display: block;
+              margin: 0 auto;
+              margin-bottom: px2rem(8);
+            }
+          }
+          .des{
+            i{
+              font-style: normal;
+              font-size: px2rem(12);
+              color: $m-tiger-border;
+            }
+          }
+        }
+        li:nth-child(2n){
+          margin-left:px2rem(16);
+        }
+        li:nth-child(1){
+          margin-bottom:px2rem(16);
+        }
+        li:nth-child(2){
+          margin-bottom:px2rem(16);
+        }
+      }
+    }
+    @include e(award){
+      background: url("/images/bd/m_t27_award_title.png") no-repeat top center;
+      background-size: px2rem(750) px2rem(133);
+      width: 100%;
+      padding: 0 px2rem(65);
+      padding-top:px2rem(158);
+      padding-bottom: 4.25rem;
+      background-color: #ffffcc;
+      overflow: hidden;
+      ul{
+        width: 100%;
+        overflow: hidden;
+        li{
+          display: inline-block;
+          float: left;
+          width: px2rem(200);
+          img{
+            height: 6.2rem;
+            border-radius: 50%;
+            border: 5px solid $m-tiger-border;
+            width: 100%;
+            overflow: hidden;
+          }
+          span{
+            width: 95%;
+            height:px2rem(50);
+            border-radius: px2rem(25);
+            text-align: center;
+            background-color: $m-tiger-border;
+            position: relative;
+            top: -0.8rem;
+            display: inline-block;
+            margin: 0 auto;
+            color: #fff;
+            font-size: 10px;
+            line-height:  px2rem(50);
+          }
+        }
+        li:nth-child(2){
+          margin-left: px2rem(10);
+        }
+        li:nth-child(3){
+          margin-left:px2rem(10);
+        }
+      }
+      @include m(tigerRoad){
+        width:px2rem(618);
+        background-color: #71707e;
+        color: #f0f0f0;
+        font-size: px2rem(15);
+        padding: px2rem(35) px2rem(30);
+        margin:  0 auto;
+        margin-top: px2rem(30);
+        border-radius: px2rem(10);
+        i{
+          color: #ffcc33;
+          font-style: normal;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
