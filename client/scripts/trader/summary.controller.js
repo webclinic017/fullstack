@@ -196,7 +196,6 @@
             pin = begin_date_mon;
           }
           for (var k = now_date_mon; k > mon_pin; k--) {
-            console.log(1);
             k = k < 12 ? '0' + k : k;
             mon = {
               month: now_date_year + '年' + k + '月'
