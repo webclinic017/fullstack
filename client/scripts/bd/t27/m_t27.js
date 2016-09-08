@@ -5,11 +5,13 @@ $(function () {
       $("#username").focus();
     }, 100);
   });
+
   $(".deposit_now").on('touchend', function () {
     callNative({
       type: "checkLogin"
     });
   });
+
   window.tigerwitWeb = function tigerwitWeb(isLogin) {
     /*已经登录*/
     if (isLogin == 1) {
