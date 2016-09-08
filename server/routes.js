@@ -405,8 +405,8 @@ module.exports = function(app) {
               },
               {
                 image: "https://www.tigerwit.com/activity/banner/banner3_20160810.png",
-                url: "https://www.tigerwit.com/m/regular/detail/9",
-                title: "【汇赢全球月盈 201608-2】"
+                url: "https://www.tigerwit.com/m/regular/detail/10",
+                title: "【MACD月盈201609-01】"
               }
             ];
         }
