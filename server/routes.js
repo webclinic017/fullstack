@@ -366,9 +366,9 @@ module.exports = function(app) {
             };
             if(system == "android" && versionCode < 8){
                 currentVersion = {
-                    version_name : "V2.0.3",
+                    version_name : "V2.1.0",
                     description : "改版，体验更流畅",
-                    url : "https://www.tigerwit.com/download/apk/tigerwit_v2.0.3.apk",
+                    url : "https://www.tigerwit.com/download/apk/tigerwit_v2.1.0.apk",
                     force_update : false
                 }
             }
