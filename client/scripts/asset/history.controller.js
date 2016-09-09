@@ -34,6 +34,7 @@
 
 
             asset.getHistory(page, pagesize).then(function (data) {
+              console.log(data);
                 $scope.historyList = data.records;
                 $scope.$emit('showLoadingImg');
 
@@ -50,6 +51,7 @@
 
         function cancelWithdraw(code) {
             asset.cancelWithdraw(code).then(function (data) {
+              console.log(data);
                 if (!data.is_succ) {
                     console.log(data.error_msg);
                     return;
