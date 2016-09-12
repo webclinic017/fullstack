@@ -37,7 +37,10 @@
                 <span ng-if="personal && !personal.master"><i class="fa fa-dollar"></i>{{ copierSummary.total_pay_amount }}</span>
             </div>
             <div class="item-tip">
-                <span>
+                <span ng-if="personal && personal.master">
+                    获得分成总计
+                </span>
+                <span ng-if="personal && !personal.master">
                     扣除分成总计
                     <i class="fa fa-info-circle" aria-hidden="true">
                         <span>
