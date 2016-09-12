@@ -357,8 +357,7 @@
             display: inline-block;
             width: 23px;
             height: 21px;
-            @include img-normal($image-path-home + "index2-master-cross-mid.png");
-
+            //@include img-normal($image-path-home + "index2-master-cross-mid.png");
             &:hover {
 
             }
@@ -618,8 +617,7 @@
         margin-top: 77px;
         width: 489px;
         height: 432px;
-        //@include img-normal($image-path-home + "person-new.jpg");
-        background: url($image-path-home + "person-new.jpg") no-repeat center bottom;
+        padding-top: 16.5px
     }
 
     @include e(title) {

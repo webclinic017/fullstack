@@ -83,7 +83,7 @@
                             </div>
                             <div class="index2-master__col2-div3">
                                 <a class="index2-master__col2-copy" href="/trader/{{master.user_code}}/#/trader/summary" target="_blank">
-                                    <span class="index2-master__col2-jia"></span>
+                                    <img class="index2-master__col2-jia" src=<%=lang.getCoInfo("plusImg")%> alt="plus">
                                 </a>
                             </div>
                         </li>
@@ -233,7 +233,9 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-6">
-                <div class="index2-info__personal"></div>
+                <div class="index2-info__personal">
+                    <img src=<%=lang.getCoInfo("indexPerson")%> alt="index_person">
+                </div>
             </div>
             <div class="col-xs-6 whiteLabelC">
                 <h2 class="index2-info__title"><%= lang.text("home46")%></h2>
