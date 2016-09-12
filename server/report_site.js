@@ -1,15 +1,9 @@
 var report_sites = [
   {
-    img_src:'/activity/web_about_report/report-JRJ.jpg',
-    address:'http://finance.jrj.com.cn/biz/2016/04/27112320886585.shtml?to=pc',
-    description:'金融界资讯：中国本土外汇新势力 唐彬森首谈 “老虎金融”',
-    date:'2016-04-27'
-  },
-  {
-    img_src:'/activity/web_about_report/report-XLCJ.jpg',
-    address:'http://finance.sina.com.cn/money/forex/datafx/2016-06-07/doc-ifxsvexw8653177.shtml',
-    description:'新浪财经：老虎金融：忘记非农吧 耶伦力挺年内加息 ',
-    date:'2016-06-07'
+    img_src:'/activity/web_about_report/report-SHJR.png',
+    address:'http://www.shfinancialnews.com/xww/2009jrb/node5019/node5051/xfsh/userobject1ai166248.html',
+    description:'上海金融报：老虎外汇纳入ASIC监管',
+    date:'2016-08-18'
   },
   {
     img_src:'/activity/web_about_report/report-netease.png',
@@ -18,10 +12,16 @@ var report_sites = [
     date:'2016-08-15'
   },
   {
-    img_src:'/activity/web_about_report/report-SHJR.png',
-    address:'http://www.shfinancialnews.com/xww/2009jrb/node5019/node5051/xfsh/userobject1ai166248.html',
-    description:'上海金融报：老虎外汇纳入ASIC监管',
-    date:'2016-08-18'
+    img_src:'/activity/web_about_report/report-XLCJ.jpg',
+    address:'http://finance.sina.com.cn/money/forex/datafx/2016-06-07/doc-ifxsvexw8653177.shtml',
+    description:'新浪财经：老虎金融：忘记非农吧 耶伦力挺年内加息 ',
+    date:'2016-06-07'
+  },
+  {
+    img_src:'/activity/web_about_report/report-JRJ.jpg',
+    address:'http://finance.jrj.com.cn/biz/2016/04/27112320886585.shtml?to=pc',
+    description:'金融界资讯：中国本土外汇新势力 唐彬森首谈 “老虎金融”',
+    date:'2016-04-27'
   },
   {
     img_src:'/activity/web_about_report/report-sina.png',
