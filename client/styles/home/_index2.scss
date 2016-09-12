@@ -142,7 +142,7 @@
 
         &:hover {
             background: $brand-primary;
-            color: #000;
+            color: $brand-index-hover;
         }
     }
 
@@ -195,7 +195,7 @@
 
         &:hover {
             background: $brand-primary;
-            color: #000;
+            color: $brand-index-hover;
         }
     }
 }
@@ -256,10 +256,10 @@
             left: 21%;
             display: inline-block;
             padding: 12px 40px;
-            background: #000;
+            background: $brand-index-select-btn-bg;
             font-size: 18px;
             line-height: 30px;
-            color: $brand-primary;
+            color: $brand-index-select-btn-c;
         }
     }
     @include e(col2) {
@@ -271,7 +271,7 @@
 
         @include m(li1) {
             padding-bottom: 11px;
-            border-bottom: 1px solid #e7c908;
+            border-bottom: 1px solid $brand-index-line;
         }
 
         @include m(li2) {
@@ -283,7 +283,7 @@
 
         @include m(li3) {
             padding-top: 26px;
-            border-top: 1px solid #e7c908;
+            border-top: 1px solid $brand-index-line;
         }
 
         @include m(photo) {
@@ -314,7 +314,7 @@
             padding-top: 15px;
             padding-right: 10px;
             padding-left: 22px;
-            border-left: 1px solid #e7c908;
+            border-left: 1px solid $brand-index-line;
 
         }
         @include m(div3) {
@@ -357,7 +357,7 @@
             display: inline-block;
             width: 23px;
             height: 21px;
-            @include img-normal($image-path-home + "index2-master-jia.png");
+            @include img-normal($image-path-home + "index2-master-cross-mid.png");
 
             &:hover {
 
@@ -368,16 +368,19 @@
         }
     }
 }
-.index2-master .col-xs-3:nth-child(2) {
-    @include img-normal($image-path-home + "master-bg1.jpg");
 
+//首页渐变
+.index2-master .col-xs-3:nth-child(2) {
+    //@include img-normal($image-path-home + "master-bg1.jpg");
+    background-color: $brand-index-lighter;
 }
 .index2-master .col-xs-3:nth-child(3){
-    @include img-normal($image-path-home + "master-bg2.jpg");
-
+    //@include img-normal($image-path-home + "master-bg2.jpg");
+    background-color: $brand-index-mid;
 }
 .index2-master .col-xs-3:last-child {
-    @include img-normal($image-path-home + "master-bg3.jpg");
+    //@include img-normal($image-path-home + "master-bg3.jpg");
+    background-color: $brand-index-dark;
 
 }
 .index2-master__col2-jia:hover {
@@ -434,6 +437,7 @@
         &:hover {
             background: $brand-primary;
             border: 1px solid $brand-primary;
+            color: $brand-index-hover;
         }
     }
 
@@ -452,7 +456,7 @@
             border-radius: 50%;
 
             &:hover {
-                background: $brand-primary;
+                background: $brand-product-hover;
             }
         }
 
@@ -529,7 +533,7 @@
         background-position: center center;
         width: 550px;
         height: 340px;
-        @include img-normal($image-path-home + "index2-trade-img.png");
+        //@include img-normal($image-path-home + "index2-trade-img-pkdss.png");
 
         &.en {
             @include img-normal($image-path-home + "index2-trade-img-en.png");
@@ -614,8 +618,8 @@
         margin-top: 77px;
         width: 489px;
         height: 432px;
-        @include img-normal($image-path-home + "person-new.jpg");
-
+        //@include img-normal($image-path-home + "person-new.jpg");
+        background: url($image-path-home + "person-new.jpg") no-repeat center bottom;
     }
 
     @include e(title) {
@@ -623,28 +627,27 @@
         line-height: 36px;
         font-size: 30px;
         font-weight: bold;
+        color: $brand-buttom-color;
     }
 
     @include e(con) {
         margin-top: 44px;
         line-height: 36px;
         font-size: 16px;
+        color: $brand-buttom-color;
     }
-    @include e(con) {
-        line-height: 36px;
-        font-size: 16px;
+    @include e(con1) {
+        color: $brand-buttom-color;
     }
 
     @include e(btn-con) {
         margin-top: 44px;
         margin-bottom: 77px;
         text-align: right;
-
-
         .index2-product__btn {
             &:hover {
-                border: 1px solid #0C0A09;
-                background: #000;
+                border: none;
+                background: #fff;
                 color: $brand-primary;
             }
         }
