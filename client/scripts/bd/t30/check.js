@@ -1,4 +1,10 @@
 $(document).ready(function() {
+    /*h5 - footer关闭按钮*/
+    $(".close").on('click',function(){
+        $(".h5_float_footer").fadeOut(500);
+    });
+
+    /*注册组件公用逻辑*/
     var lp = '';
     var pid = '';
     var unit = '';
