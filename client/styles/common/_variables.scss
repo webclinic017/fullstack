@@ -15,46 +15,76 @@ $m-tiger-border:            #ffcc33 !default;
 $m-activity-major:          #ff3333 !default;
 $m-activity-major2:         #e33e4e !default;
 
-//== Colors
-//$brand-primary:             #fff000 !default;
-$brand-primary-lighter:     #ffed7b !default;
-$brand-primary-dark:        #fad802 !default;
+//== Colors - tiger
+//首页 --------------start-----------------------------------
 
-//首页渐变 tiger
-//$brand-index-hover:         #000    !default;
-//$brand-index-dark:          #f3d40b!default;
-//$brand-index-mid:           #f3d40a !default;
-//$brand-index-lighter:       #ffdd0a !default;
+//$brand-primary:             #fff000 !default;
+////tiger主题色 - 浅
+//$brand-primary-lighter:     #ffed7b !default;
+////tiger主题色 - 深
+//$brand-primary-dark:        #fad802 !default;
+////首页渐变区线条颜色
 //$brand-index-line:          #f3d40a !default;
-//选择高手按钮颜色
+////首页渐变区三个颜色
+//$brand-index-lighter:       #ffdd0a !default;
+//$brand-index-mid:           #f3d40a !default;
+//$brand-index-dark:          #f3d40b!default;
+////首页hover颜色
+//$brand-index-hover:         #000    !default;
+////选择高手按钮颜色
 //$brand-index-select-btn-bg: #000 !default;
 //$brand-index-select-btn-c:  #fff000 !default;
-//首页产品hover
+////首页产品hover
 //$brand-product-hover:       #fff000 !default;
+//$brand-buttom-color:        #222 !default;
 
-//首页 pkds
-$brand-index-hover:         #fff    !default;
+//商标信息 --------------start-----------------
+//$brand-info:                #188afa !default;
+//$brand-info-dark:           #4a89dc !default;
+//$brand-danger:              #f23244 !default;
+//$brand-danger-dark:         #da4453 !default;
+//$brand-success:             #61cb28 !default;
+//$brand-success-dark:        #37bc9b !default;
+//$brand-warning:             #ff8400 !default;
+//商标信息 --------------end--------------------
+
+//tiger -------------end--------------------------------------
+
+
+
+//pkds - 首页 - -------------start----------------------------
+
 $brand-primary:             #c81527 !default;
-$brand-primary2:            #c81527 !default;
+$brand-primary-lighter:     #de737d !default;
+$brand-primary-dark:        #c81527 !default;
+//首页渐变区线条颜色
 $brand-index-line:          #e2a0a6 !default;
+//首页渐变区三个颜色
 $brand-index-lighter:       #de737d !default;
 $brand-index-mid:           #d24452 !default;
 $brand-index-dark:          #c81527 !default;
+//首页hover颜色
+$brand-index-hover:         #fff    !default;
 //选择高手按钮颜色
 $brand-index-select-btn-bg: #c81527 !default;
 $brand-index-select-btn-c:  #fff    !default;
 //首页产品hover
 $brand-product-hover:       #c2c6c7 !default;
 //首页底部字体颜色
-$brand-buttom-color:        #fff !default;
+$brand-buttom-color:        #fff    !default;
 
-$brand-info:                #188afa !default;
+
+//商标信息 --------------start-----------------
+$brand-info:                #d19b19 !default;
 $brand-info-dark:           #4a89dc !default;
-$brand-danger:              #f23244 !default;
+$brand-danger:              #c81527 !default;
 $brand-danger-dark:         #da4453 !default;
-$brand-success:             #61cb28 !default;
+$brand-success:             #06ba82 !default;
 $brand-success-dark:        #37bc9b !default;
 $brand-warning:             #ff8400 !default;
+//商标信息 --------------end--------------------
+
+//pkds - 首页 - -------------end---------------------------------
 
 $gray-base:                 #222 !default;
 $gray-darkest:              #333 !default;

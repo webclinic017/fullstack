@@ -56,7 +56,7 @@ $font-space-gray-color: $gray-dark;
 }
 .space_basic_hint{
     position:absolute;
-    color:#23c3f4;
+    color:$brand-info;
     background:rgba(0,0,0,.7);
     border-radius:4px;
     padding:10px;
