@@ -83,7 +83,11 @@
                             </div>
                             <div class="index2-master__col2-div3">
                                 <a class="index2-master__col2-copy" href="/trader/{{master.user_code}}/#/trader/summary" target="_blank">
-                                    <img class="index2-master__col2-jia" src=<%=lang.getCoInfo("plusImg")%> alt="plus">
+                                    <%if(lang.isCompany("tigerwit")){%>
+                                        <img  class="index2-master__col2-jia" src="/images/home/index2-master-jia-tiger.png" alt="">
+                                    <%} else if(lang.isCompany("pkds")){ %>
+                                        <img  class="index2-master__col2-jia" src="/images/home/index2-master-jia-pkds.png" alt="">
+                                    <%}%>
                                 </a>
                             </div>
                         </li>
@@ -173,8 +177,16 @@
                 </div>
             </div>
             <div class="col-xs-6">
-                <div class="index2-trade__img <% if(lang.background()){%>en<%}%>">
-                    <img src=<%=lang.getCoInfo("indexRoadImg")%> alt="">
+                <div class="index2-trade__img">
+                    <%if(lang.isCompany("tigerwit")){%>
+                        <%if(lang.background()){%>
+                            <img src="/images/home/index2-trade-img-tigerwit-en.png" alt="">
+                        <%} else { %>
+                            <img src="/images/home/index2-trade-img-tigerwit.png" alt="">
+                        <%}%>
+                    <%} else if(lang.isCompany("pkds")){ %>
+                        <img src="/images/home/index2-trade-img-pkds.png" alt="">
+                    <%}%>
                 </div>
             </div>
         </div>
@@ -234,7 +246,11 @@
         <div class="row">
             <div class="col-xs-6">
                 <div class="index2-info__personal">
-                    <img src=<%=lang.getCoInfo("indexPerson")%> alt="index_person">
+                    <%if(lang.isCompany("tigerwit")){%>
+                        <img src="/images/home/index-person-tiger.jpg" alt="">
+                    <%} else if(lang.isCompany("pkds")){ %>
+                        <img src="/images/home/index-person-pkds.jpg" alt="">
+                    <%}%>
                 </div>
             </div>
             <div class="col-xs-6 whiteLabelC">

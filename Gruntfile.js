@@ -466,6 +466,11 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('build', function () {
+        //change angular - whiteLabel.service.js
+        var AS = fs.readFileSync('./client/scripts/common/whiteLabel.service.origin', 'utf8');
+        AS = AS.replace('tigerwit',companyName);
+        fs.writeFileSync('./client/scripts/common/whiteLabel.service.js', AS, 'utf8');
+
         // param -> tigerwit, pkds
         var param = companyName || "tiger";
         console.info("tiger", location, param);
