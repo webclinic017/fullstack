@@ -15,35 +15,35 @@ $m-tiger-border:            #ffcc33 !default;
 $m-activity-major:          #ff3333 !default;
 $m-activity-major2:         #e33e4e !default;
 
-//== Colors - tiger
+//== Colors - pkds
 //首页 --------------start-----------------------------------
 
-$brand-primary:             #fff000 !default;
-//tiger主题色 - 浅
-$brand-primary-lighter:     #ffed7b !default;
-//tiger主题色 - 深
-$brand-primary-dark:        #fad802 !default;
+$brand-primary:             #c81527 !default;
+$brand-primary-lighter:     #de737d !default;
+$brand-primary-dark:        #c81527 !default;
 //首页渐变区线条颜色
-$brand-index-line:          #f3d40a !default;
+$brand-index-line:          #e2a0a6 !default;
 //首页渐变区三个颜色
-$brand-index-lighter:       #ffdd0a !default;
-$brand-index-mid:           #f3d40a !default;
-$brand-index-dark:          #f3d40b!default;
+$brand-index-lighter:       #de737d !default;
+$brand-index-mid:           #d24452 !default;
+$brand-index-dark:          #c81527 !default;
 //首页hover颜色
-$brand-index-hover:         #000    !default;
+$brand-index-hover:         #fff    !default;
 //选择高手按钮颜色
-$brand-index-select-btn-bg: #000 !default;
-$brand-index-select-btn-c:  #fff000 !default;
+$brand-index-select-btn-bg: #c81527 !default;
+$brand-index-select-btn-c:  #fff    !default;
 //首页产品hover
-$brand-product-hover:       #fff000 !default;
-$brand-buttom-color:        #222 !default;
+$brand-product-hover:       #c2c6c7 !default;
+//首页底部字体颜色
+$brand-buttom-color:        #fff    !default;
 
-// 商标信息 --------------start-----------------
-$brand-info:                #188afa !default;
+
+//商标信息 --------------start-----------------
+$brand-info:                #d19b19 !default;
 $brand-info-dark:           #4a89dc !default;
-$brand-danger:              #f23244 !default;
+$brand-danger:              #c81527 !default;
 $brand-danger-dark:         #da4453 !default;
-$brand-success:             #61cb28 !default;
+$brand-success:             #06ba82 !default;
 $brand-success-dark:        #37bc9b !default;
 $brand-warning:             #ff8400 !default;
 //商标信息 --------------end--------------------
@@ -106,7 +106,7 @@ $image-path-master:          "../images/master/";
 $image-path-account:         "../images/account/";
 $image-path-about_us:        "../images/about_us/";
 $image-path-web:             "../images/web/";
-$image-path-study:           "../images/study/";
+$image-path-study:             "../images/study/";
 $image-path-media:           "../images/media/";
 $icon-path-forex:            "../images/icons-forex/";
 $icon-path-bank:             "../images/icons-bank/";
