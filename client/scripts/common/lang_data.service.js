@@ -4,10 +4,33 @@
 
     angular.module('fullstackApp').factory('langData', langData);
 
-    langData.$inject = [];
+    langData.$inject = ['$cookies'];
 
-    function langData () {
+    function langData ($cookies) {
+        var language = 'zh';
+        var companyNameZh, companyNameEn;
+        
+        angular.forEach($cookies, function (value, index) {
+
+            if (index === 'lang') {
+                // console.info(value, index);
+                language = value;
+            }
+            if (index === 'company_name') {
+                
+                if (value === 'tigerwit') {
+                    companyNameZh = "老虎外汇";
+                    companyNameEn = "TigerWit";
+                }
+                if (value === 'pkds') {
+                    companyNameZh = "派克道森";
+                    companyNameEn = "Pakerdawson";
+                }
+            } 
+        });
+
         var data = {
+            "language": language,
             // 公用 public
             "lijifuzhi":{"en": "Copy now", "zh": "立即复制"},
             "fuzhi":{"zh": "复制", "en": "Copy"},
@@ -49,7 +72,7 @@
             "login5": {"en": "Please enter your password", "zh": "请输入密码"},
             "login6": {"en": "Log in automatically next time", "zh": "下次自动登陆"},
             "login7": {"en": "Forgot password", "zh": "忘记密码"},
-            "login8": {"en": "SSL login is adopted in TigerWit and data transmission is safe.", "zh": "您在老虎外汇登录采用 SSL 登录方式数据传输安全"},
+            "login8": {"en": "SSL login is adopted in "+companyNameEn+" and data transmission is safe.", "zh": "您在"+companyNameZh+"登录采用 SSL 登录方式数据传输安全"},
             "login9": {"en": "Login", "zh": "登 录"},
             "login10": {"en": "Register", "zh": "注 册"},
             "login11": {"en": "Login...", "zh": "登录中"},

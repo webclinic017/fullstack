@@ -1,7 +1,10 @@
 'use strict';
 
+var company_name = process.env.COMPANY_NAME;
 var data = require('./lang_data.js')();
 var querystring = require('querystring');
+var WLInfo_data = require("./whiteLabelInfo_data");
+console.log(WLInfo_data);
 
 module.exports = function () {
 
@@ -19,6 +22,17 @@ module.exports = function () {
         // return this;         
     }
     Lang.prototype = {
+        isCompany: function (name) {
+            if (company_name == name) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        //判断当前公司,返回传入参数信息
+        getCoInfo:function(info){
+            return WLInfo_data[info][company_name];
+        },
         text: function(name){
             var text;
             text = data[name][this.language];

@@ -10,6 +10,7 @@ var request = require('request');
 var masterApi = require('./api/master');
 var Lang = require('./lang')();
 var report_sites = require('./report_site');
+var setCompanyCookie = require('./set_company_cookie');
 
 function extendPublic (data, req) {
     var lang = new Lang(req);
@@ -52,6 +53,7 @@ module.exports = function(app) {
 
     // 个人中心
     app.route('/space/').get(function(req, res) {
+        setCompanyCookie(res);
         res.render('space', extendPublic({}, req));
     });
 
@@ -59,6 +61,7 @@ module.exports = function(app) {
         if (isMobile(req)) {
             res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
         } else {
+            setCompanyCookie(res);
             res.render('home.html', extendPublic({
                 pageInfo: {}
             }, req));
@@ -67,6 +70,7 @@ module.exports = function(app) {
 
 
     app.route('/ranklist').get(function(req, res) {
+        setCompanyCookie(res);
         res.render('ranklist.html', extendPublic({}, req));
     });
 
@@ -74,38 +78,45 @@ module.exports = function(app) {
     var global_modelRegular = require('./model/modelRegular');
     var gloal_modelRegularDetail = require('./model/modelRegularDetail');
     app.route('/regular').get(function(req, res){
+        setCompanyCookie(res);
         res.render('regular_list.html', extendPublic({
             model : global_modelRegular
         }, req));
     });
     app.route('/regular/agree/:subpage').get(function(req, res){
+        setCompanyCookie(res);
         res.render('regular_agree.html', extendPublic({
             model : global_modelRegular,
             detail_id : req.params.subpage || ""
         }, req));
     });
     app.route('/m/regular/agree/:subpage').get(function(req, res){
+        setCompanyCookie(res);
         res.render('m_regular_agree.html', extendPublic({
             model : global_modelRegular,
             detail_id : req.params.subpage || ""
         }, req));
     });
     app.route('/regular/detail/:subpage').get(function(req, res){
+        setCompanyCookie(res);
         res.render('regular_detail.html', extendPublic({
             model : gloal_modelRegularDetail(req.params.subpage || "")
         },req));
     });
     app.route('/m/regular/detail/:subpage').get(function(req, res){
+        setCompanyCookie(res);
         res.render('m_regular_detail.html',{
             model : gloal_modelRegularDetail(req.params.subpage || "")
         });
     });
     app.route('/m/regular/detail/team/:subpage').get(function(req, res){
         var team_html = global_modelRegular.getTeamHtmlName(req.params.subpage);
+        setCompanyCookie(res);
         res.render('regular/'+ team_html +'.html',{});
     });
     app.route('/m/regular/detail/history/:subpage').get(function(req, res){
         var aImages = global_modelRegular.getTeamHistoryImages(req.params.subpage);
+        setCompanyCookie(res);
         res.render('regular/m_regular_detail_history.html',{
             model : {
                 aImages : aImages
@@ -118,21 +129,26 @@ module.exports = function(app) {
     /*--------------------APP-Beagin---------------------*/
     /*注册相关页面*/
     app.route('/m/register').get(function(req, res){
+        setCompanyCookie(res);
         res.render("m_register01",{});
     });
     app.route('/m/register2').get(function(req, res){
+        setCompanyCookie(res);
         res.render("m_register02",{});
     });
     app.route('/m/register3').get(function(req, res){
+        setCompanyCookie(res);
         res.render("m_register03",{});
     });
     /*成为高手*/
     app.route('/m/agent/become').get(function(req, res){
+        setCompanyCookie(res);
         res.render("m_agent_become",{});
     });
 
     /*定期跟单*/
     app.route('/m/regular/how').get(function(req, res){
+        setCompanyCookie(res);
         res.render("m_regular_how",{});
     });
 
@@ -141,7 +157,7 @@ module.exports = function(app) {
 
     app.route('/trader/:usercode').get(function(req, res) {
         var usercode = req.params.usercode;
-
+        setCompanyCookie(res);
         request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
             if (!error && response.statusCode == 200) {
                 // console.info(body);
@@ -160,7 +176,7 @@ module.exports = function(app) {
         var pageInfo = {
             id: subpage
         };
-
+        setCompanyCookie(res);
         res.render('web_blog.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -171,7 +187,7 @@ module.exports = function(app) {
         var pageInfo = {
             id: subpage
         };
-
+        setCompanyCookie(res);
         res.render('web_copy.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -182,12 +198,13 @@ module.exports = function(app) {
         var pageInfo = {
             id: subpage
         };
-
+        setCompanyCookie(res);
         res.render('web_product.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
     app.route('/web/product/trade').get(function(req, res) {
+        setCompanyCookie(res);
         res.render('trade_tool.html', extendPublic({}, req));
     })
 
@@ -197,7 +214,7 @@ module.exports = function(app) {
         var pageInfo = {
             id: subpage
         };
-
+        setCompanyCookie(res);
         res.render('web_information.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -210,7 +227,7 @@ module.exports = function(app) {
         var pageInfo = {
             id: subpage
         };
-
+        setCompanyCookie(res);
         res.render('web_about.html', extendPublic({
             pageInfo: pageInfo,
             report_sites: report_sites
@@ -223,7 +240,7 @@ module.exports = function(app) {
         var pageInfo = {
             id: subpage
         };
-
+        setCompanyCookie(res);
         res.render('web_faq.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -235,16 +252,19 @@ module.exports = function(app) {
         var pageInfo = {
             id: subpage
         };
+        setCompanyCookie(res);
         res.render('web_agent.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
 
     app.route('/web/mt4').get(function(req, res) {
+        setCompanyCookie(res);
         res.render('web_mt4.html', extendPublic({}, req));
     });
 
     app.route('/web/partner').get(function(req, res) {
+        setCompanyCookie(res);
         res.render('web/web-partner.html', extendPublic({}, req));
     });
 
@@ -253,7 +273,7 @@ module.exports = function(app) {
         var pageInfo = {
             id: subpage
         };
-
+        setCompanyCookie(res);
         res.render('study.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -273,21 +293,26 @@ module.exports = function(app) {
     });
 
     app.route('/activity').get(function(req, res) {
+        setCompanyCookie(res);
         res.render('web-bonus1.html', extendPublic({}, req));
     });
 
     app.route('/activity/simulate426').get(function(req, res) {
+        setCompanyCookie(res);
         res.render('simulate-426.html', extendPublic({}, req));
     });
 
     // 页面跳转中
     app.route('/waiting').get(function(req, res) {
+        setCompanyCookie(res);
         res.render('waiting', {});
     });
     app.route('/bd/t29').get(function(req, res){
+        setCompanyCookie(res);
         res.render('bd_t29', extendPublic({}, req));
     });
     app.route('/bd/t30').get(function(req, res){
+        setCompanyCookie(res);
         if(isMobile(req)){
             res.render('bd_m7', extendPublic({}, req))
         } else {
@@ -295,6 +320,7 @@ module.exports = function(app) {
         }
     });
     app.route('/bd/t27').get(function(req, res){
+        setCompanyCookie(res);
         if(isMobile(req)){
             res.render('bd_m_t27', extendPublic({}, req))
         } else {

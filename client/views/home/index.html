@@ -29,7 +29,6 @@
     </div>
     <div class="pagination"></div>
 </section>
-
 <section class="index2-master" ng-controller="HomeIndexController">
     <div class="container">
         <div class="index2-master__con">
@@ -84,7 +83,7 @@
                             </div>
                             <div class="index2-master__col2-div3">
                                 <a class="index2-master__col2-copy" href="/trader/{{master.user_code}}/#/trader/summary" target="_blank">
-                                    <span class="index2-master__col2-jia"></span>
+                                    <img class="index2-master__col2-jia" src=<%=lang.getCoInfo("plusImg")%> alt="plus">
                                 </a>
                             </div>
                         </li>
@@ -175,7 +174,7 @@
             </div>
             <div class="col-xs-6">
                 <div class="index2-trade__img <% if(lang.background()){%>en<%}%>">
-
+                    <img src=<%=lang.getCoInfo("indexRoadImg")%> alt="">
                 </div>
             </div>
         </div>
@@ -234,9 +233,11 @@
     <div class="container">
         <div class="row">
             <div class="col-xs-6">
-                <div class="index2-info__personal"></div>
+                <div class="index2-info__personal">
+                    <img src=<%=lang.getCoInfo("indexPerson")%> alt="index_person">
+                </div>
             </div>
-            <div class="col-xs-6">
+            <div class="col-xs-6 whiteLabelC">
                 <h2 class="index2-info__title"><%= lang.text("home46")%></h2>
                 <p class="index2-info__con">
                     <%= lang.text("home47")%>
