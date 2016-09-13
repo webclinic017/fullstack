@@ -4,9 +4,10 @@
 
     angular.module('fullstackApp').directive('twColumnChart', twColumnChart);
 
-    twColumnChart.$inject = ['config'];
+    twColumnChart.$inject = ['config','whiteLabel'];
 
-    function twColumnChart(config) {
+    function twColumnChart(config,whiteLabel) {
+        var col_color = whiteLabel.columnChart;
         var noData = config.highchartNoDataOptions;
         var options = {
             chart: {
@@ -23,7 +24,7 @@
                 tickColor: '#eee',
                 labels: {
                     style: {
-                        color: '#101010'
+                        color: '#ccc'
                     }
                 },
                 plotLines: [{   //一条延伸到整个绘图区的线，标志着轴中一个特定值。
@@ -126,11 +127,11 @@
                     zIndex: 5
                 }],
                 plotBands: [{ //彩色带横跨绘图区，标志着轴间隔。
-                    color: '#fdf5f5',
+                    color: col_color.positiveBg,
                     from: 0,
                     to: 1000
                 },{ //彩色带横跨绘图区，标志着轴间隔。
-                    color: '#f9fbf4',
+                    color: col_color.negativeBg,
                     from: 0,
                     to: -1000
                 }]
@@ -152,12 +153,11 @@
                 },
                 style: {
                     padding: 15
-                },
-                borderColor:'#188afa'
+                }
             },
             series: [{
-                color: '#f23244', /*正值的颜色*/
-                negativeColor: '#61cb28',//负值的颜色
+                color: col_color.positive, /*正值的颜色*/
+                negativeColor: col_color.negative,//负值的颜色
                 pointPadding: 0, //数据点之间的距离值
                 groupPadding: 0, //分组之间的距离值
                 borderWidth: 0,

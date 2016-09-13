@@ -20,10 +20,6 @@ module.exports = function (grunt) {
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
 
-    // grunt serve or build need to update variables.scss
-    var fs = require("fs");
-    var location = './client/styles/common/';
-
     // Define the configuration for all the tasks
     grunt.initConfig({
 
@@ -446,26 +442,42 @@ module.exports = function (grunt) {
         'htmlmin'
     ]);
 
-    grunt.registerTask('serve', function (param) {
-        // param -> tiger, pkds
-        param = param || "tiger";
+    // grunt serve or build need to update variables.scss
+    var fs = require("fs");
+    var location = './client/styles/common/';
+
+    // grunt serve or build need to get companyName to run whiteLabel task;
+    var companyName = require('./server/config/whiteLabel.config');
+    //whiteLabel.service.origin
+
+    grunt.registerTask('serve', function () {
+        //change angular - whiteLabel.service.js
+        var AS = fs.readFileSync('./client/scripts/common/whiteLabel.service.origin', 'utf8');
+        AS = AS.replace('tigerwit',companyName);
+        fs.writeFileSync('./client/scripts/common/whiteLabel.service.js', AS, 'utf8');
+
+        // param -> tigerwit, pkds
+        var param = companyName || "tiger";
         console.info("tiger", location, param);
         var cont = fs.readFileSync(location + '_variables_'+ param +'.scss', 'utf8');
         // console.info("tiger", cont);
         fs.writeFileSync(location + '_variables.scss', cont, 'utf8');
         grunt.task.run(['serve-ing']);
-        
     });
 
-    grunt.registerTask('build', function (param) {
-        // param -> tiger, pkds
-        param = param || "tiger";
+    grunt.registerTask('build', function () {
+        //change angular - whiteLabel.service.js
+        var AS = fs.readFileSync('./client/scripts/common/whiteLabel.service.origin', 'utf8');
+        AS = AS.replace('tigerwit',companyName);
+        fs.writeFileSync('./client/scripts/common/whiteLabel.service.js', AS, 'utf8');
+
+        // param -> tigerwit, pkds
+        var param = companyName || "tiger";
         console.info("tiger", location, param);
         var cont = fs.readFileSync(location + '_variables_'+ param +'.scss', 'utf8');
         // console.info("tiger", cont);
         fs.writeFileSync(location + '_variables.scss', cont, 'utf8');
         grunt.task.run(['build-ing']);
-        
     });
 
     grunt.registerTask('server', function () {
