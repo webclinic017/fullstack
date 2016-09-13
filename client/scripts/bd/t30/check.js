@@ -1,4 +1,10 @@
 $(document).ready(function() {
+    /*h5 - footer关闭按钮*/
+    $(".close").on('click',function(){
+        $(".h5_float_footer").fadeOut(500);
+    });
+
+    /*注册组件公用逻辑*/
     var lp = '';
     var pid = '';
     var unit = '';
@@ -44,7 +50,7 @@ $(document).ready(function() {
                 input.val(" 昵称应在4到16个字符之间").addClass("warning");
             }
         } else if(!(/^[\u4e00-\u9fa5A-Za-z\d]+$/.test(input.val()))){
-            input.val(" 昵称不合法!").addClass("warning");
+            input.val(" 昵称不合法").addClass("warning");
         }
         if ((input.val() == "") || (input.val() == "请填写昵称")) {
             input.val(" 请填写昵称").addClass("warning");

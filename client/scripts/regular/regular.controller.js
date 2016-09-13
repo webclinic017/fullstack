@@ -31,7 +31,8 @@
 
         //更新用户名  
         //@TODO  需要根据cookie和登录状态判断是否发请求
-        $http.get('/api/v1/get_info?type=Profile').then(function(result){
+        $http.get('/action/public/v4/get_info?type=Profile').then(function(result){
+            result = result.data;
             $scope.name = result.realname;
             $scope.tel = result.phone;
         });

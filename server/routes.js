@@ -9,6 +9,7 @@ var url = require('url');
 var request = require('request');
 var masterApi = require('./api/master');
 var Lang = require('./lang')();
+var report_sites = require('./report_site');
 var setCompanyCookie = require('./set_company_cookie');
 
 function extendPublic (data, req) {
@@ -112,7 +113,7 @@ module.exports = function(app) {
         var team_html = global_modelRegular.getTeamHtmlName(req.params.subpage);
         setCompanyCookie(res);
         res.render('regular/'+ team_html +'.html',{});
-    });   
+    });
     app.route('/m/regular/detail/history/:subpage').get(function(req, res){
         var aImages = global_modelRegular.getTeamHistoryImages(req.params.subpage);
         setCompanyCookie(res);
@@ -221,14 +222,15 @@ module.exports = function(app) {
 
     // 关于老虎金融
     app.route('/web/about/:subpage(stp|team|report|control|tigerwit)').get(function(req, res) {
-        
+
         var subpage = req.params.subpage || 'forex';
         var pageInfo = {
             id: subpage
         };
         setCompanyCookie(res);
         res.render('web_about.html', extendPublic({
-            pageInfo: pageInfo
+            pageInfo: pageInfo,
+            report_sites: report_sites
         }, req));
     });
 
@@ -320,7 +322,7 @@ module.exports = function(app) {
     app.route('/bd/t27').get(function(req, res){
         setCompanyCookie(res);
         if(isMobile(req)){
-            res.render('bd_t27', extendPublic({}, req))
+            res.render('bd_m_t27', extendPublic({}, req))
         } else {
             res.render('bd_t27', extendPublic({}, req));
         }
@@ -347,11 +349,11 @@ module.exports = function(app) {
             }else{
                 var data_pre_new = [];
                 var deepCopy = function(source) {
-                    var result = source?{}:source; 
+                    var result = source?{}:source;
                     for (var key in source) {
                       result[key] = typeof source[key]==='object'? deepCopy(source[key]): source[key];
                     }
-                    return result; 
+                    return result;
                 }
 
                 for (var i=0; i<data_pre.length; i++) {
@@ -390,39 +392,56 @@ module.exports = function(app) {
             };
             if(system == "android" && versionCode < 8){
                 currentVersion = {
-                    version_name : "V2.0.3",
+                    version_name : "V2.1.0",
                     description : "改版，体验更流畅",
-                    url : "https://www.tigerwit.com/download/apk/tigerwit_v2.0.3.apk",
+                    url : "https://www.tigerwit.com/download/apk/tigerwit_v2.1.0.apk",
                     force_update : false
-                }   
-            }            
+                }
+            }
             data = currentVersion;
         }
         if (action == "get_banner_info") {
+            //data = [
+            //    {
+            //        image: "https://www.tigerwit.com/activity/banner/banner1_20160810.png",
+            //        url: "https://www.tigerwit.com/bd/t30",
+            //        title: "活动详情"
+            //    },
+            //    {
+            //        image: "https://www.tigerwit.com/activity/banner/banner2_20160810.png",
+            //        url: "https://www.tigerwit.com/bd/t30",
+            //        title: "活动详情"
+            //    },
+            //    {
+            //        image: "https://www.tigerwit.com/activity/banner/banner3_20160810.png",
+            //        url: "https://www.tigerwit.com/m/regular/detail/9",
+            //        title: "【汇赢全球月盈 201608-2】"
+            //    }
+            //];
             data = [
-                {
-                    image: "https://www.tigerwit.com/activity/banner/banner1_20160810.png",
-                    url: "https://www.tigerwit.com/bd/t30",
-                    title: "活动详情"
-                },
-                {
-                    image: "https://www.tigerwit.com/activity/banner/banner2_20160810.png",
-                    url: "https://www.tigerwit.com/bd/t30",
-                    title: "活动详情"
-                },
-                {
-                    image: "https://www.tigerwit.com/activity/banner/banner3_20160810.png",
-                    url: "https://www.tigerwit.com/m/regular/detail/9",
-                    title: "【汇赢全球月盈 201608-2】"
-                }
+              {
+                image: "https://www.tigerwit.com/activity/banner/banner1_20160908.png",
+                url: "https://www.tigerwit.com/bd/t27",
+                title: "活动详情"
+              },
+              {
+                image: "https://www.tigerwit.com/activity/banner/banner2_20160908.png",
+                url: "https://www.tigerwit.com/bd/t27",
+                title: "活动详情"
+              },
+              {
+                image: "https://www.tigerwit.com/activity/banner/banner3_20160810.png",
+                url: "https://www.tigerwit.com/m/regular/detail/10",
+                title: "【MACD月盈201609-01】"
+              }
             ];
         }
         if(data){
             rs = {
                 is_succ : true,
                 error_code : 0,
-                error_msg : "获取成功",   
-                data : data            
+                error_msg : "获取成功",
+                data : data
             }
             if(page){
                 rs.page = page;

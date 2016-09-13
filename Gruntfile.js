@@ -20,6 +20,10 @@ module.exports = function (grunt) {
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
 
+    // grunt serve or build need to update variables.scss
+    var fs = require("fs");
+    var location = './client/styles/common/';
+
     // Define the configuration for all the tasks
     grunt.initConfig({
 
@@ -401,7 +405,7 @@ module.exports = function (grunt) {
         this.async();
     });
 
-    grunt.registerTask('serve', function (target) {
+    grunt.registerTask('serve-ing', function (target) {
         if (target === 'dist') {
             return grunt.task.run([
                 // 'build',
@@ -426,12 +430,7 @@ module.exports = function (grunt) {
         ]);
     });
 
-    grunt.registerTask('server', function () {
-        grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
-        grunt.task.run(['serve']);
-    });
-
-    grunt.registerTask('build', [
+    grunt.registerTask('build-ing', [
         'clean:dist',
         'concurrent',
         'wiredep',
@@ -446,4 +445,32 @@ module.exports = function (grunt) {
         'usemin',
         'htmlmin'
     ]);
+
+    grunt.registerTask('serve', function (param) {
+        // param -> tiger, pkds
+        param = param || "tiger";
+        console.info("tiger", location, param);
+        var cont = fs.readFileSync(location + '_variables_'+ param +'.scss', 'utf8');
+        // console.info("tiger", cont);
+        fs.writeFileSync(location + '_variables.scss', cont, 'utf8');
+        grunt.task.run(['serve-ing']);
+        
+    });
+
+    grunt.registerTask('build', function (param) {
+        // param -> tiger, pkds
+        param = param || "tiger";
+        console.info("tiger", location, param);
+        var cont = fs.readFileSync(location + '_variables_'+ param +'.scss', 'utf8');
+        // console.info("tiger", cont);
+        fs.writeFileSync(location + '_variables.scss', cont, 'utf8');
+        grunt.task.run(['build-ing']);
+        
+    });
+
+    grunt.registerTask('server', function () {
+        grunt.log.warn('The `server` task has been deprecated. Use `grunt serve` to start a server.');
+        grunt.task.run(['serve']);
+    });
+
 };
