@@ -44,11 +44,22 @@ $m-opacity-border:          #CAAE00 !default;
 //$brand-warning:             #ff8400 !default;
 //商标信息 --------------end--------------------
 
+//高手主页 --------------start------------------
+//$trader-width:              1030px  !default;
+//$trader-bgc:                #f8f8f8 !default;
+//$trader-white:              #f0f0f0 !default;
+//$trader-gray:               #e6e6e6 !default;
+//$trader-green:              #61cb28 !default;
+//$trader-border:             #e4e4e4 !default;
+//$trader-scaleBar:           #f23144 !default;
+
+//高手主页 --------------end--------------------
+
 //tiger -------------end--------------------------------------
 
 
 
-//pkds - 首页 - -------------start----------------------------
+//pkds ----------------------start----------------------------
 
 $brand-primary:             #c81527 !default;
 $brand-primary-lighter:     #de737d !default;
@@ -80,7 +91,20 @@ $brand-success-dark:        #37bc9b !default;
 $brand-warning:             #ff8400 !default;
 //商标信息 --------------end--------------------
 
-//pkds - 首页 - -------------end---------------------------------
+//高手主页 --------------start------------------
+
+$trader-width:              1030px  !default;
+$trader-bgc:                #f8f8f8 !default;
+$trader-white:              #f0f0f0 !default;
+$trader-gray:               #e6e6e6 !default;
+$trader-green:              #06ba82 !default;
+$trader-border:             #e4e4e4 !default;
+$trader-scaleBar:           #c81527 !default;
+
+//高手主页 --------------end--------------------
+
+
+//pkds --------------------end--------------------------------
 
 $gray-base:                 #222 !default;
 $gray-darkest:              #333 !default;
@@ -307,7 +331,7 @@ $alert-arrow-width:             6px;
 //== Modal
 $modal-content-bg:              #fff;
 $modal-backdrop-bg:             #000;
-$modal-backdrop-opacity:        0.5 !default;
+$modal-backdrop-opacity:        0.5   !default;
 $modal-lg:                      900px !default;
 $modal-md:                      600px !default;
 $modal-sm:                      400px !default;

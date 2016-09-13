@@ -122,6 +122,7 @@
 				// console.info(data);
 				if (data.is_succ) {
 					$scope.summary = data.data;
+
 				}
 
 				// 饼图绘制
