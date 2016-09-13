@@ -366,8 +366,9 @@
     margin-top: 15px;
 
     @include e(psl) {
+        text-overflow:ellipsis;
         display: inline-block;
-        width: 160px;
+        width: 150px;
         height: $navbar_info_height;
         vertical-align: middle;
     }
