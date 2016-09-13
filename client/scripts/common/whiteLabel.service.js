@@ -1,1 +1,0 @@
-;(function(){    'use strict';    angular.module('fullstackApp').factory('whiteLabel',whiteLabel);    function whiteLabel(){        var companyName = 'tigerwit';        return companyName;    }}());
