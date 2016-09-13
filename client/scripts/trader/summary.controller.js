@@ -117,6 +117,7 @@
         };
 
 //---------------------------------end------------------------------------------
+
         function getMasterSummary(usercode) {
             trader.getMasterSummary(usercode).then(function (data) {
                 // console.info(data);
@@ -314,3 +315,4 @@
         // }
     }
 })();
+
