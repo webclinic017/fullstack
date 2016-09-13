@@ -1,33 +1,24 @@
 ;
 (function () {
     'use strict';
-
+    
     angular.module('fullstackApp').factory('lang', lang);
 
-    lang.$inject = ['$cookies', 'langData'];
+    lang.$inject = ['langData'];
 
-    function lang ($cookies, langData) {
-        var language = 'zh';
-        
-        angular.forEach($cookies, function (value, index) {
-
-            if (index === 'lang') {
-                // console.info(value, index);
-                language = value;
-            }
-        });
+    function lang (langData) {
 
         var lang = {
             text: function(name){
                 var text;
-                text = langData[name][language];
+                text = langData[name][langData["language"]];
                 return text;
             },
             image: function(name){
-                return language == 'zh' ? name : name + '-en';
+                return langData["language"] == 'zh' ? name : name + '-en';
             },
             background: function () {
-                return language == 'en' ? true : false;
+                return langData["language"] == 'en' ? true : false;
             }
         };
         return lang;
