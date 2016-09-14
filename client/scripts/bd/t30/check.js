@@ -1,6 +1,6 @@
 $(document).ready(function() {
     /*h5 - footer关闭按钮*/
-    $(".close").on('click',function(){
+    $(".close").on('tap',function(){
         $(".h5_float_footer").fadeOut(500);
     });
 

@@ -458,7 +458,7 @@ module.exports = function (grunt) {
 
         // param -> tigerwit, pkds
         var param = companyName || "tiger";
-        console.info("tiger", location, param);
+        console.info("tiger ->", location, param);
         var cont = fs.readFileSync(location + '_variables_'+ param +'.scss', 'utf8');
         // console.info("tiger", cont);
         fs.writeFileSync(location + '_variables.scss', cont, 'utf8');
@@ -466,9 +466,14 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('build', function () {
+        //change angular - whiteLabel.service.js
+        var AS = fs.readFileSync('./client/scripts/common/whiteLabel.service.origin', 'utf8');
+        AS = AS.replace('tigerwit',companyName);
+        fs.writeFileSync('./client/scripts/common/whiteLabel.service.js', AS, 'utf8');
+
         // param -> tigerwit, pkds
         var param = companyName || "tiger";
-        console.info("tiger", location, param);
+        console.info("tiger ->", location, param);
         var cont = fs.readFileSync(location + '_variables_'+ param +'.scss', 'utf8');
         // console.info("tiger", cont);
         fs.writeFileSync(location + '_variables.scss', cont, 'utf8');
