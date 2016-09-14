@@ -16,3 +16,4 @@ npm-debug.log
 lanch.txt
 /client/styles/common/_variables.scss
 /client/scripts/common/whiteLabel.service.js
+client/styles/common/_variables.scss
