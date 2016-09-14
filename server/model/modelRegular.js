@@ -56,7 +56,7 @@ module.exports = {
             profit_rate_now : null, //实时年化收益率
             end_date_appoint : "2016.09.09 18:00", //预约结束时间
             start_date_trade : '2016.09.12 00:00',  //开始交易时间
-            end_date_trade : '2016.10.11 24:00',  //结束交易时间  exam : '2016.5.19'
+            end_date_trade : "2016.10.12 00:00",  //结束交易时间  exam : '2016.5.19'
             team_intro : "team_macd", //文件名，团队介绍模块
             jiafang:"MACD", //甲方，操盘手，出现在agree里
             progress : 73, //投资进度 exam:50
@@ -363,6 +363,7 @@ module.exports = {
 	judgeStatus : function(product){
         var status;//预约开始前，查看详情
         var now = new Date();
+        
         if(product.start_date_appoint && now < new Date(product.start_date_appoint)){   //开始预约前
         	status = "before_appoint";
         }else{
