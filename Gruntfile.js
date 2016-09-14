@@ -458,7 +458,7 @@ module.exports = function (grunt) {
 
         // param -> tigerwit, pkds
         var param = companyName || "tiger";
-        console.info("tiger", location, param);
+        console.info("tiger ->", location, param);
         var cont = fs.readFileSync(location + '_variables_'+ param +'.scss', 'utf8');
         // console.info("tiger", cont);
         fs.writeFileSync(location + '_variables.scss', cont, 'utf8');
@@ -473,7 +473,7 @@ module.exports = function (grunt) {
 
         // param -> tigerwit, pkds
         var param = companyName || "tiger";
-        console.info("tiger", location, param);
+        console.info("tiger ->", location, param);
         var cont = fs.readFileSync(location + '_variables_'+ param +'.scss', 'utf8');
         // console.info("tiger", cont);
         fs.writeFileSync(location + '_variables.scss', cont, 'utf8');

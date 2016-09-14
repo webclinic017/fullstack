@@ -1,12 +1,12 @@
 $(function () {
-  $(".reg_now").on('click', function () {
+  $(".reg_now").on('tap', function () {
     $('html, body').animate({scrollTop: 222}, 'fast');
     setTimeout(function () {
       $("#username").focus();
     }, 100);
   });
 
-  $(".deposit_now").on('click', function () {
+  $(".deposit_now").on('tap', function () {
     callNative({
       type: "checkLogin"
     });
