@@ -127,7 +127,7 @@
 .navbar-header {
     @extend .clearfix;
     float: left;
-    margin-right: 30px;
+    margin-right: 20px;
 
     .logo {
         margin: 15px 0 0 0;
@@ -202,7 +202,7 @@
         float: left;
 
         > a {
-            margin: 0 15px;
+            margin: 0 12px;
             padding: 28px 0 25px;
             border-bottom: 2px solid transparent;
             line-height: 14px;
@@ -368,7 +368,7 @@
     @include e(psl) {
         text-overflow:ellipsis;
         display: inline-block;
-        width: 150px;
+        width: 125px;
         height: $navbar_info_height;
         vertical-align: middle;
     }
@@ -399,7 +399,7 @@
         display: inline-block;
         width: $navbar_info_height;
         height: $navbar_info_height;
-        margin-right: 15px;
+        margin-right: 2px;
         vertical-align: middle;
         @include img-normal($image-path-base + "navbar-message.png");
     }

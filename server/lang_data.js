@@ -59,6 +59,7 @@ module.exports = function () {
         "navbar13": {"en": "", "zh": ""},
         "navbar14": {"en": "no-banner", "zh": ""},
         "navbar15": {"en": "style=display:none;", "zh": ""},
+        "navbar16": {"en": "Download App", "zh": "下载APP"},
 
         // 底部 footer
         "foot1": {"en": "Trading Software", "zh": "交易工具"},
