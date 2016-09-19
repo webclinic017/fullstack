@@ -30,11 +30,22 @@ module.exports = function () {
         },
         //判断当前公司,返回传入参数信息
         getCoInfo:function(info){
-            return WLInfo_data[info][company_name];
+            if(WLInfo_data[info]){
+                return WLInfo_data[info][company_name];
+            } else {
+                console.info('load companyInfo error');
+                return 'error';
+            }
         },
         text: function(name){
             var text;
-            text = data[name][this.language];
+            if(data[name]){
+                //console.info('langData load successful!',data[name][this.language])
+                text = data[name][this.language] || 'loadERR';
+            } else {
+                console.info(' - - - langData load error! in word - ',name);
+                text = 'loadERR'
+            }
             return text;
         },
         image: function(name){
