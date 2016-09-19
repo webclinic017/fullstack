@@ -115,26 +115,33 @@
     </div>
 </div>
 <!-- Live800Online operator icon:online service(in use)[Floating icon] Start-->
-        <script language="javascript">
-            window.OpenChat = function (){
-                var chatUrl="http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&jid=2997261242";
-                chatUrl+="&enterurl="+encodeURIComponent(document.referrer||document.URL);
-                chatUrl+="&t="+new Date().getTime();
-                try{
-                    window.open(chatUrl,"chatbox79482","toolbar=0,scrollbars=0,location=0,menubar=0,resizable=1,width=570,height=424");
-                }catch(e){
-                    // browser blocked
-                    // do nothing;
-                }
-            }
-        </script>
-        <div style="position: fixed; padding: 5px; line-height: 20px; color: #fff; bottom: 40px; right: 10px;z-index: 8888;" <%= lang.text("navbar15")%>>
-            <span style="position: absolute;font-size: 20px;color: #000; cursor: pointer;" onclick="this.parentNode.style.display='none';">x</span>
-            <img src="https://chat8.live800.com/live800/SurferServer?cmd=111&amp;companyID=371437&amp;online=https%3A%2F%2Ficon.live800.com%2Ffileupload%2FCustomFileDownloadServer%3FcompanyID%3D371437%26fna%3D1433753733505371437&amp;offline=https%3A%2F%2Ficon.live800.com%2Ffileupload%2FCustomFileDownloadServer%3FcompanyID%3D371437%26fna%3D1433754373517371437&amp;tm=1434339880102"
-        onclick="OpenChat();"
-        border="0"  <%= lang.text("navbar15")%>>
-        </div>
-        <!-- Online operator icon:online service(in use) End-->
+<script language="javascript">
+    window.OpenChat = function (){
+        var chatUrl="http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&jid=2997261242";
+        chatUrl+="&enterurl="+encodeURIComponent(document.referrer||document.URL);
+        chatUrl+="&t="+new Date().getTime();
+        try{
+            window.open(chatUrl,"chatbox79482","toolbar=0,scrollbars=0,location=0,menubar=0,resizable=1,width=570,height=424");
+        }catch(e){
+            // browser blocked
+            // do nothing;
+        }
+    }
+</script>
+<div style="position: fixed; padding: 5px; line-height: 20px; color: #fff; bottom: 40px; right: 10px;z-index: 8888;" <%= lang.text("navbar15")%>>
+    <span style="position: absolute;font-size: 20px;color: #000; cursor: pointer;" onclick="this.parentNode.style.display='none';">x</span>
+    <img src="https://chat8.live800.com/live800/SurferServer?cmd=111&amp;companyID=371437&amp;online=https%3A%2F%2Ficon.live800.com%2Ffileupload%2FCustomFileDownloadServer%3FcompanyID%3D371437%26fna%3D1433753733505371437&amp;offline=https%3A%2F%2Ficon.live800.com%2Ffileupload%2FCustomFileDownloadServer%3FcompanyID%3D371437%26fna%3D1433754373517371437&amp;tm=1434339880102"
+onclick="OpenChat();"
+border="0"  <%= lang.text("navbar15")%>>
+</div>
+<!-- Online operator icon:online service(in use) End-->
+
+<!-- Ìí¼ÓÓÑÃË´úÂë 2016.09.15 -->
+<div style="display:none">
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260394016'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260394016' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</div>
 
 <script type="text/javascript">
     var _mvq = window._mvq || [];
