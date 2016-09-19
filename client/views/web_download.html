@@ -1,9 +1,34 @@
-<!DOCTYPE html><html lang="en"><head>    <% include common/metas.html %>    <title><%=lang.getCoInfo("Title")%> 直通全球资本市场</title>    <meta name="description" content="老虎外汇倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">    <!-- build:css(client) /styles/vendor.css -->    <!-- bower:css -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include common/metas.html %>
+    <title><%=lang.getCoInfo("Title")%> 直通全球资本市场</title>
+    <meta name="description" content="老虎外汇倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <!-- build:css(client) /styles/vendor.css -->
+    <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker3.css">
     <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
     <link rel="stylesheet" href="/bower_components/mediaelement/build/mediaelementplayer.css">
     <link rel="stylesheet" href="/bower_components/swiper/dist/idangerous.swiper.css">
-    <!-- endbower -->    <!-- endbuild -->    <!-- build:css(.tmp) /styles/web.css -->    <link rel="stylesheet" href="/styles/web.css">    <!-- endbuild --></head><body ng-app="fullstackApp" class="<%= lang_class%>"><div ng-controller="GlobalController">    <div class="header">        <%- include('navbar/main.html',{        navClass : 'navbar-2'        }) %>    </div>    <div class="body">        <% include web/download-index.html %>    </div>    <!-- build:js(client) /scripts/vendor.js -->    <!-- bower:js -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css(.tmp) /styles/web.css -->
+    <link rel="stylesheet" href="/styles/web.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="fullstackApp" class="<%= lang_class%>">
+    <div ng-controller="GlobalController">
+        <div class="header">
+            <%- include('navbar/main.html',{
+                navClass : 'navbar-2'
+            }) %>
+        </div>
+        <div class="body">
+            <% include web/download-index.html %>
+        </div>
+    <!-- build:js(client) /scripts/vendor.js -->
+    <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-resource/angular-resource.js"></script>
@@ -23,4 +48,36 @@
     <script src="/bower_components/jsencrypt/bin/jsencrypt.min.js"></script>
     <script src="/bower_components/mediaelement/build/mediaelement-and-player.js"></script>
     <script src="/bower_components/swiper/dist/idangerous.swiper.js"></script>
-    <!-- endbower -->    <!-- endbuild -->    <!-- build:js(client) /scripts/home.js -->    <script src="/scripts/app.js"></script>    <script src="/scripts/common/config.service.js"></script>    <script src="/scripts/common/account.service.js"></script>    <script src="/scripts/common/authorization.service.js"></script>    <script src="/scripts/common/ranklist.service.js"></script>    <script src="/scripts/common/product.service.js"></script>    <script src="/scripts/common/lang.service.js"></script>    <script src="/scripts/common/lang_data.service.js"></script>    <script src="/scripts/common/global.controller.js"></script>    <script src="/scripts/common/navbar.directive.js"></script>    <script src="/scripts/common/dropdown.directive.js"></script>    <script src="/scripts/common/carousel.directive.js"></script>    <script src="/scripts/common/line_chart.directive.js"></script>    <script src="/scripts/common/progress.directive.js"></script>    <script src="/scripts/ranklist/all.controller.js"></script>    <script src="/scripts/home/index.controller.js"></script>    <!-- endbuild -->    <div class="footer">        <% include common/footer.html %>    </div></div></body></html>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js(client) /scripts/home.js -->
+    <script src="/scripts/app.js"></script>
+
+    <script src="/scripts/common/config.service.js"></script>
+    <script src="/scripts/common/account.service.js"></script>
+    <script src="/scripts/common/authorization.service.js"></script>
+    <script src="/scripts/common/ranklist.service.js"></script>
+    <script src="/scripts/common/product.service.js"></script>
+    <script src="/scripts/common/lang.service.js"></script>
+    <script src="/scripts/common/lang_data.service.js"></script>
+
+    <script src="/scripts/common/global.controller.js"></script>
+
+    <script src="/scripts/common/navbar.directive.js"></script>
+    <script src="/scripts/common/dropdown.directive.js"></script>
+    <script src="/scripts/common/carousel.directive.js"></script>
+    <script src="/scripts/common/line_chart.directive.js"></script>
+    <script src="/scripts/common/progress.directive.js"></script>
+
+    <script src="/scripts/ranklist/all.controller.js"></script>
+
+    <script src="/scripts/home/index.controller.js"></script>
+    <!-- endbuild -->
+
+        <div class="footer">
+            <% include common/footer.html %>
+        </div>
+    </div>
+</body>
+</html>
