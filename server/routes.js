@@ -68,10 +68,14 @@ module.exports = function(app) {
         }
     });
 
-
     app.route('/ranklist').get(function(req, res) {
         setCompanyCookie(res);
         res.render('ranklist.html', extendPublic({}, req));
+    });
+
+    app.route('/download').get(function(req, res) {
+        setCompanyCookie(res);
+        res.render('web_download.html', extendPublic({}, req));
     });
 
     /*定期跟单开始*/
