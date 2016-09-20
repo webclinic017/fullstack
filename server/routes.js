@@ -156,6 +156,12 @@ module.exports = function(app) {
         res.render("m_regular_how",{});
     });
 
+    /*出入金流程*/
+    app.route('/m/asset').get(function(req, res){
+        setCompanyCookie(res);
+        res.render('m_asset', extendPublic({}, req));
+    });
+
     /*--------------------APP-End-------------------------*/
 
 
@@ -269,7 +275,7 @@ module.exports = function(app) {
 
     app.route('/web/partner').get(function(req, res) {
         setCompanyCookie(res);
-        res.render('web/web-partner.html', extendPublic({}, req));
+        res.render('web-partner.html', extendPublic({}, req));
     });
 
     app.route('/study/:subpage(introduction|term|fundamental|skill|video)').get(function(req, res) {
