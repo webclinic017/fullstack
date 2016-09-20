@@ -158,6 +158,13 @@ $(document).ready(function () {
         if ($(":input").hasClass("warning")) {
             return false;
         } else {
+            // umeng
+            callNative({
+                "type":"umeng",
+                "eventId":"banner",
+                "attributes" : {"order":"1"}
+            });
+
             /*获取当前input的值*/
             var username = $('#username').val();
             var telephone = $('#telephone').val();
