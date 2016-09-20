@@ -156,6 +156,12 @@ module.exports = function(app) {
         res.render("m_regular_how",{});
     });
 
+    /*出入金流程*/
+    app.route('/m/asset').get(function(req, res){
+        setCompanyCookie(res);
+        res.render('m_asset', extendPublic({}, req));
+    });
+
     /*--------------------APP-End-------------------------*/
 
 
