@@ -100,6 +100,7 @@
             }).then(function (data) {
                 // 要返回的历史记录
                 var records = [];
+                //console.log(data);
 
                 angular.forEach(data.data, function (item) {
                     var record = {};
@@ -108,6 +109,7 @@
                     record.status = item.status;
                     record.timestamp = item.order_date;
                     record.code = item.order_no;
+                    record.status_desc = item.status_desc;
 
                     this.push(record);
                 }, records);

@@ -34,8 +34,9 @@
 
 
             asset.getHistory(page, pagesize).then(function (data) {
-                console.log(data);
+                console.log(data,1);
                 $scope.historyList = data.records;
+                //console.log(data.records);
                 $scope.$emit('showLoadingImg');
 
                 angular.extend($scope.pagebar.config, {
