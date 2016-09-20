@@ -275,7 +275,7 @@ module.exports = function(app) {
 
     app.route('/web/partner').get(function(req, res) {
         setCompanyCookie(res);
-        res.render('web/web-partner.html', extendPublic({}, req));
+        res.render('web-partner.html', extendPublic({}, req));
     });
 
     app.route('/study/:subpage(introduction|term|fundamental|skill|video)').get(function(req, res) {

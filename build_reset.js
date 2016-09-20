@@ -1,0 +1,1 @@
+;(function(){    var fs = require('fs');    var path = require('path');    var location = __dirname + '/client/views';    //读取到文件    var file_name = fs.readdirSync(location);    console.log(file_name);}());
