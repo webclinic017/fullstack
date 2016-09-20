@@ -462,6 +462,7 @@ module.exports = function (grunt) {
         var cont = fs.readFileSync(location + '_variables_'+ param +'.scss', 'utf8');
         // console.info("tiger", cont);
         fs.writeFileSync(location + '_variables.scss', cont, 'utf8');
+        console.log('whiteLabel task finish');
         grunt.task.run(['serve-ing']);
     });
 
@@ -477,6 +478,7 @@ module.exports = function (grunt) {
         var cont = fs.readFileSync(location + '_variables_'+ param +'.scss', 'utf8');
         // console.info("tiger", cont);
         fs.writeFileSync(location + '_variables.scss', cont, 'utf8');
+        console.log('whiteLabel task finish');
         grunt.task.run(['build-ing']);
     });
 
