@@ -10,37 +10,39 @@
             <!-- <col width="35%"> -->
         </colgroup>
         <thead>
+        <tr>
             <th>日期</th>
             <th>全部类型</th>
             <th>金额</th>
             <th>状态</th>
-            <!-- <th>备注</th> -->
+        </tr>
+        <!-- <th>备注</th> -->
         </thead>
         <tbody>
-            <tr ng-repeat="history in historyList">
-                <td>{{ history.timestamp | dateFormatter}}</td>
-                <td>{{ history.status > 0 ? '充值' : '提现'}}</td>
-                <td ng-class="{'font-danger': history.status === 2, 'font-success': history.status === 4, 'font-base': history.status === -2}">
-                    ${{ history.amount }}
-                </td>
-                <td>
-                    <span ng-if="history.status === 99">订单已超时</span>
+        <tr ng-repeat="history in historyList">
+            <td>{{ history.timestamp | dateFormatter}}</td>
+            <td>{{ history.status > 0 ? '充值' : '提现'}}</td>
+            <td ng-class="{'font-danger': history.status === 2, 'font-success': history.status === 4, 'font-base': history.status === -2}">
+                ${{ history.amount }}
+            </td>
+            <td>
+                <span ng-if="history.status === 99">订单已超时</span>
                     <span ng-if="history.status === 2">
                         充值未完成
                         <a class="font-info" href="/pay_order/{{history.code}}" target="_blank">继续充值</a>
                     </span>
-                    <span ng-if="history.status === 4">充值成功</span>
-                    <span ng-if="history.status === 5">开户赠金</span>
+                <span ng-if="history.status === 4">充值成功</span>
+                <span ng-if="history.status === 5">开户赠金</span>
                     <span ng-if="history.status === -1">
                         提现申请<br>
                         <a class="deposit__pointer font-info" ng-click="cancelWithdraw(history.code)">撤销申请</a>
                     </span>
-                    <span ng-if="history.status === -2">提现已撤销</span>
-                    <span ng-if="history.status === -4">拒绝提现</span>
-                    <span ng-if="history.status === -5">提现处理完毕</span>
-                </td>
-                <!-- <td></td> -->
-            </tr>
+                <span ng-if="history.status === -2">提现已撤销</span>
+                <span ng-if="history.status === -4">拒绝提现</span>
+                <span ng-if="history.status === -5">提现处理完毕</span>
+            </td>
+            <!-- <td></td> -->
+        </tr>
         </tbody>
     </table>
 
