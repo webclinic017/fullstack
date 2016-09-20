@@ -57,10 +57,9 @@
          */
         function encrypt(text) {
                 var crypt = new JSEncrypt();
-                var key = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDN67wAcj1WL/scb9TuvawbqMABg2sYXdmLkzXYUK/qbZI168gpM1t4SqS2qxYuEy+a/rOQ/YokJy0Q+dwQBEUmRWd4//64D3shkMMPZ0VuQ67LmVbFzbaly9dEYbAkoKvd4qcVxG1qAYlPGAKVZjRbf3q6d1CGeUGQqoynofTZNwIDAQAB-----END PUBLIC KEY-----';
-                if(location.hostname.indexOf('www.tigerwit.com')== -1 && location.hostname.indexOf('w.tigerwit.com')== -1){
-                   key = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwyjx6cQ4AHOnmeIU15A+EvLk3V3oHv2YLp8nZBNqeg+uLPn2HyYF1/s/Mi2EZE2ypIFuvKiCX3ACrZuM55nJSTTjJzOfohh2tLMClLlbfHxdNyg8cotza4+iutrru2vy+kUWp0UuydNrjDJoVJwPXOkToLXjtOEofPmdzjLbE4QIDAQAB-----END PUBLIC KEY-----';
-                }
+                // var key = whiteLabel.loginKey;
+                var key = "-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9FbJMQ+lTpVqkfOctn2NSbVmuBHyZizR8L7CIe1e3SrSiIbqgjviMm4bU0acYYFHIp4n5fhnXQzumYJTNkS9yaXxH6Snkp+zXMDXWwKrE+bb3Q3N2L6JT4h3/BvMrl2wOSqdyy4RYryt5oGT8SGjoPK6pG00rs79FazaLvdeu4QIDAQAB-----END PUBLIC KEY-----"
+
                 crypt.setKey(key);
                 var textEnc = crypt.encrypt(text);
                 return textEnc;

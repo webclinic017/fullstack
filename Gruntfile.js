@@ -112,7 +112,7 @@ module.exports = function (grunt) {
                 exclude: []
             },
             app: {
-                src: '<%= yeoman.client %>/views/*.html',
+                src: ['<%= yeoman.client %>/views/*.html'],
                 fileTypes: {
                     html: {
                         replace: {
@@ -180,7 +180,7 @@ module.exports = function (grunt) {
                 flow: {
                     html: {
                         steps: {
-                            js: ['concat', 'uglifyjs'],
+                             js: ['concat', 'uglifyjs'],
                             css: ['cssmin']
                         },
                         post: {}
@@ -188,7 +188,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
         // Renames files for browser caching purposes
         filerev: {
             dist: {
@@ -452,7 +451,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('serve', function () {
         //change angular - whiteLabel.service.js
-        var AS = fs.readFileSync('./client/scripts/common/whiteLabel.service.origin', 'utf8');
+        var AS = fs.readFileSync('./client/scripts/common/whiteLabel.service.origin.js', 'utf8');
         AS = AS.replace('tigerwit',companyName);
         fs.writeFileSync('./client/scripts/common/whiteLabel.service.js', AS, 'utf8');
 
@@ -467,7 +466,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', function () {
         //change angular - whiteLabel.service.js
-        var AS = fs.readFileSync('./client/scripts/common/whiteLabel.service.origin', 'utf8');
+        var AS = fs.readFileSync('./client/scripts/common/whiteLabel.service.origin.js', 'utf8');
         AS = AS.replace('tigerwit',companyName);
         fs.writeFileSync('./client/scripts/common/whiteLabel.service.js', AS, 'utf8');
 

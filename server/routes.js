@@ -404,7 +404,7 @@ module.exports = function(app) {
                 currentVersion = {
                     version_name : "V2.1.0",
                     description : "改版，体验更流畅",
-                    url : "https://www.tigerwit.com/download/apk/tigerwit_v2.1.0.apk",
+                    url : "https://www.tigerwit.com/downloads/apk/tigerwit_v2.1.0.apk",
                     force_update : false
                 }
             }
