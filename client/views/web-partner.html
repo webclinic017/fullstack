@@ -8,7 +8,7 @@
     <% include vendor.css.html %>
 
     <!-- build:css(.tmp) /styles/web.css -->
-    <link rel="stylesheet" href="../styles/web.css">
+    <link rel="stylesheet" href="/styles/web.css">
     <!-- endbuild -->
 </head>
 <body ng-app="fullstackApp" class="<%= lang_class%>">
@@ -66,8 +66,6 @@
     <% include vendor.js.html %>
 
     <!-- build:js(client) /scripts/home.js -->
-    <script src="/scripts/app.js"></script>
-
     <script src="/scripts/common/config.service.js"></script>
     <script src="/scripts/common/account.service.js"></script>
     <script src="/scripts/common/authorization.service.js"></script>
@@ -80,6 +78,9 @@
 
     <script src="/scripts/common/navbar.directive.js"></script>
     <script src="/scripts/common/dropdown.directive.js"></script>
+    <script src="/scripts/common/carousel.directive.js"></script>
+    <script src="/scripts/common/line_chart.directive.js"></script>
+    <script src="/scripts/common/progress.directive.js"></script>
 
     <script src="/scripts/ranklist/all.controller.js"></script>
 
