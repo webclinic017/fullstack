@@ -8,14 +8,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
     </head>
-    <!-- build:css(.tmp) /styles/m_vendor.css -->
-        <link rel="stylesheet" href="/styles/m_vendor.css">
-    <!-- endbuild -->
-
-    <!-- build:css(.tmp) /styles/m_regular_detail.css -->
-        <link rel="stylesheet" href="/styles/m_regular_detail.css">
+    <!-- 引入H5 CSS -->
+    <!-- build:css(.tmp) /styles/h5_common.css -->
+    <link rel="stylesheet" href="/styles/h5_common.css">
     <!-- endbuild -->
     <% include common/m_css_vendor.html %>
+    <% include common/common_header.html %>
     <body>
          <div class="regular_detail" data-title="<%= model.name %>">
             <div class="regular_detail_summary">
@@ -230,4 +228,6 @@
     <!-- build:js(client) /scripts/m_regular_detail.js -->
         <script src="/scripts/regular/m_regular_detail.js"></script>
     <!-- endbuild -->
+
+    <%- include('bd/common/footer.html') %>
 </html>

@@ -158,6 +158,9 @@
                 return;
             }
 
+            // umeng
+            _czc.push(["_trackEvent","注册页","获取验证码"]);
+            
             $scope.clickable.captcha = false;
 
             var tmp;
@@ -263,6 +266,9 @@
             ).then(function (data) {
 
                 if (data.is_succ) {
+                    // umeng
+                    _czc.push(["_trackEvent","注册页","立即注册且成功"]);
+                    
                     // 成功
                     goNextStep();
                     

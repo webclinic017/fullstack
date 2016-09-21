@@ -91,6 +91,7 @@
                     $scope.closeModal = closeModal;
                     $scope.verify = verify;
                     $scope.openChat = openChat;
+                    $scope.depositSucc = depositSucc;
 
                     // 去实名认证
                     function verify() {
@@ -101,6 +102,14 @@
                     // 支付遇到问题
                     function openChat() {
                         OpenChat();
+                        closeModal();
+                    }
+
+                    // 支付成功
+                    function depositSucc() {
+                        // umeng
+                        _czc.push(["_trackEvent","入金页面","充值"]);
+
                         closeModal();
                     }
 
