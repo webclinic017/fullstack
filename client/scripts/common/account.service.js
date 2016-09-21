@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('account', account);
 
-    account.$inject = ['$http','$q','$cookies'];
+    account.$inject = ['$http', '$q', '$cookies', 'whiteLabel'];
 
-    function account($http,$q,$cookies) {
+    function account($http, $q, $cookies, whiteLabel) {
         var service = {
             encrypt: encrypt,
             login: login,
@@ -42,11 +42,11 @@
             getVerifyStatus: getVerifyStatus,
             setKyc: setKyc,
             getKyc: getKyc,
-            getUserKyc : getUserKyc,
+            getUserKyc: getUserKyc,
             logout: logout,
             checkMaster: checkMaster,
             applyBecomeMaster: applyBecomeMaster,
-            hasChecked : false
+            hasChecked: false
         };
         var resolveValue;
         return service;
@@ -56,14 +56,11 @@
          * @desc 密码加密
          */
         function encrypt(text) {
-                var crypt = new JSEncrypt();
-                var key = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDN67wAcj1WL/scb9TuvawbqMABg2sYXdmLkzXYUK/qbZI168gpM1t4SqS2qxYuEy+a/rOQ/YokJy0Q+dwQBEUmRWd4//64D3shkMMPZ0VuQ67LmVbFzbaly9dEYbAkoKvd4qcVxG1qAYlPGAKVZjRbf3q6d1CGeUGQqoynofTZNwIDAQAB-----END PUBLIC KEY-----';
-                if(location.hostname.indexOf('www.tigerwit.com')== -1 && location.hostname.indexOf('w.tigerwit.com')== -1){
-                   key = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwyjx6cQ4AHOnmeIU15A+EvLk3V3oHv2YLp8nZBNqeg+uLPn2HyYF1/s/Mi2EZE2ypIFuvKiCX3ACrZuM55nJSTTjJzOfohh2tLMClLlbfHxdNyg8cotza4+iutrru2vy+kUWp0UuydNrjDJoVJwPXOkToLXjtOEofPmdzjLbE4QIDAQAB-----END PUBLIC KEY-----';
-                }
-                crypt.setKey(key);
-                var textEnc = crypt.encrypt(text);
-                return textEnc;
+            var crypt = new JSEncrypt();
+            var key = whiteLabel.loginKey;
+            crypt.setKey(key);
+            var textEnc = crypt.encrypt(text);
+            return textEnc;
         }
 
         /**
@@ -117,26 +114,25 @@
             // return deferred.promise;
 
 
-
             var deferred = $q.defer();
-            if(!getCookie("user_code")){ //无cookie直接认为没登录
-                setTimeout(function(){
+            if (!getCookie("user_code")) { //无cookie直接认为没登录
+                setTimeout(function () {
                     deferred.resolve(false);
-                },100);
-            }else{
-                if(service.hasChecked){  //发过请求，只等结果即可。
+                }, 100);
+            } else {
+                if (service.hasChecked) {  //发过请求，只等结果即可。
                     checkResolve(deferred);
-                }else{   //有cookie时，只发一次请求
+                } else {   //有cookie时，只发一次请求
                     service.hasChecked = true;
                     $http.get('/api/v1/check').then(function (data) {
                         if (data.is_succ) {
                             resolveValue = true;
                             deferred.resolve(true);
                         } else {
-                            resolveValue =false;
+                            resolveValue = false;
                             deferred.resolve(false);
                         }
-                    },function(){
+                    }, function () {
                         resolveValue = false;
                         deferred.resolve(false);
                     });
@@ -146,25 +142,26 @@
             return deferred.promise;
 
         }
-       function getCookie(name)
-       {
-         var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
-         if(arr=document.cookie.match(reg)){
-           return unescape(arr[2]);
-         }
-         else{
-           return null;
-         }
-       }
-        function checkResolve(def){
-            if(resolveValue == undefined){
-                setTimeout(function(){
+
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg)) {
+                return unescape(arr[2]);
+            }
+            else {
+                return null;
+            }
+        }
+
+        function checkResolve(def) {
+            if (resolveValue == undefined) {
+                setTimeout(function () {
                     checkResolve(def);
-                },100);
-            }else{
-                setTimeout(function(){
+                }, 100);
+            } else {
+                setTimeout(function () {
                     def.resolve(resolveValue);
-                },100)
+                }, 100)
             }
         }
 
@@ -196,7 +193,7 @@
         }
 
         /**
-         * @name getRCaptcha 
+         * @name getRCaptcha
          * @desc 获取验证码（注册功能）
          */
         function getRCaptcha(phone, token) {
@@ -219,9 +216,9 @@
         /**
          * @name register
          * @desc 注册
-         */  
+         */
         function register(username, phone, captcha, email, password, lp, pid, unit, key) {
-            
+
             return $http.post('/action/public/v3/register', {
                 username: username,
                 phone: phone,
@@ -236,7 +233,7 @@
         }
 
         /**
-         * @name getCaptcha 
+         * @name getCaptcha
          * @desc 忘记密码功能使用该接口获取验证码（python 接口）
          * @return {Object} {
          *   error_code: 1, 2, 4（您未注册）, 5（短信发送失败）, 6（手机号码不正确）
@@ -285,7 +282,7 @@
 
                     if (key === 'user_code') {
                         this['usercode'] = value;
-                        
+
                     } else {
                         this[key] = value;
                     }
@@ -300,7 +297,7 @@
          *
          * @method getPersonalInfoDegree
          */
-        function getPersonalInfoDegree () {
+        function getPersonalInfoDegree() {
             return $http.get('/action/public/v4/user_perfect_degree');
         }
 
@@ -313,6 +310,7 @@
         function getAssetInfo() {
             return $http.post('/action/public/v4/get_usercenter_asset');
         }
+
         /**
          * Account Service 获取未读消息数量
          *
@@ -320,7 +318,7 @@
          *
          */
         function getUnreadLength() {
-            return  $http.get('/action/public/v3/get_notify_num');
+            return $http.get('/action/public/v3/get_notify_num');
         }
 
         /*
@@ -372,7 +370,7 @@
             return $http.get('/action/public/v3/notify_mark_all_read');
         }
 
-        /** 
+        /**
          * @name getSettingInfo
          * @desc setting 获取手机号码、邮箱等加密信息
          */
@@ -407,7 +405,7 @@
          *   city_code: ,   // 若非中国，为 null
          *   city_name: ,
          *   desc:          //个性签名
-         * }    
+         * }
          */
         function getLocation() {
             return $http.get('/api/v1/basic_settings');
@@ -513,6 +511,7 @@
         function logout() {
             return $http.get('/action/public/v3/logout');
         }
+
         /*
          * @name verify
          * @desc 实名认证
@@ -572,7 +571,7 @@
          *
          * @method checkMaster
          */
-        function checkMaster () {
+        function checkMaster() {
             return $http.post('/action/public/v3/check_master');
         }
 
@@ -588,7 +587,7 @@
          * @param {String} trade_desc 交易策略描述
          * @param {file} history_file 上传文件  单独调接口
          */
-        function applyBecomeMaster (trade_exp, trade_model, min_copy_asset, trade_desc, history_file) {
+        function applyBecomeMaster(trade_exp, trade_model, min_copy_asset, trade_desc, history_file) {
             return $http.post('/action/public/v3/apply_to_master', {
                 trade_exp: trade_exp,
                 trade_model: trade_model,
