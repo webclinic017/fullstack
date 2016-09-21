@@ -411,8 +411,7 @@ module.exports = function(app) {
             data = currentVersion;
         }
         if (action == "get_banner_info") {
-            var systemAgent = req.headers["user-agent"].toLowerCase();
-            var isAndroid = systemAgent.match(/android/);
+            var system = req.query.system;
             
             //data = [
             //    {
@@ -432,7 +431,7 @@ module.exports = function(app) {
             //    }
             //];
             
-            if (isAndroid) {
+            if (system == "android") {
                 data = [
                     {
                         image: "https://www.tigerwit.com/activity/banner/banner1_20160908.png",
