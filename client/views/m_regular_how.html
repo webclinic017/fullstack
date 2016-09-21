@@ -3,18 +3,14 @@
 <head>
     <!--引入公用头部-->
     <% include common/m_common_head.html %>
-    <!-- build:css(.tmp) /styles/m_vendor.css -->
-    <link rel="stylesheet" href="/styles/m_vendor.css">
-    <!-- endbuild -->
-
-    <!-- build:css(.tmp) /styles/m_regular_how.css -->
-    <link rel="stylesheet" href="/styles/m_regular_how.css">
+    <!-- 引入H5 CSS -->
+    <!-- build:css(.tmp) /styles/h5_common.css -->
+    <link rel="stylesheet" href="/styles/h5_common.css">
     <!-- endbuild -->
 </head>
 <!--引入原生交互方法与根节点字体改变脚本-->
 <% include common/m_css_vendor.html %>
-<!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
-<% include common/m_css_vendor.html %>
+<% include common/common_header.html %>
 <body>
 <div class="m_regular_how">
     <%if(false){%>
@@ -44,5 +40,7 @@
 <!-- build:js(client) /scripts/m_regular_how.js -->
 <script src="/scripts/regular/m_regular_how.js"></script>
 <!-- endbuild -->
+
+<%- include('bd/common/footer.html') %>
 </body>
 </html>

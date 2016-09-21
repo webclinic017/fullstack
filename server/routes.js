@@ -411,6 +411,9 @@ module.exports = function(app) {
             data = currentVersion;
         }
         if (action == "get_banner_info") {
+            var systemAgent = req.headers["user-agent"].toLowerCase();
+            var isAndroid = systemAgent.match(/android/);
+            
             //data = [
             //    {
             //        image: "https://www.tigerwit.com/activity/banner/banner1_20160810.png",
@@ -428,23 +431,44 @@ module.exports = function(app) {
             //        title: "【汇赢全球月盈 201608-2】"
             //    }
             //];
-            data = [
-              {
-                image: "https://www.tigerwit.com/activity/banner/banner1_20160908.png",
-                url: "https://www.tigerwit.com/bd/t27",
-                title: "活动详情"
-              },
-              {
-                image: "https://www.tigerwit.com/activity/banner/banner2_20160908.png",
-                url: "https://www.tigerwit.com/bd/t27",
-                title: "活动详情"
-              },
-              {
-                image: "https://www.tigerwit.com/activity/banner/banner3_20160810.png",
-                url: "https://www.tigerwit.com/m/regular/detail/10",
-                title: "【MACD月盈201609-01】"
-              }
-            ];
+            
+            if (isAndroid) {
+                data = [
+                    {
+                        image: "https://www.tigerwit.com/activity/banner/banner1_20160908.png",
+                        url: "https://www.tigerwit.com/bd/t27",
+                        title: "活动详情"
+                    },
+                    {
+                        image: "https://www.tigerwit.com/activity/banner/banner3_20160810.png",
+                        url: "https://www.tigerwit.com/m/regular/detail/10",
+                        title: "【MACD月盈201609-01】"
+                    },
+                    {
+                        image: "https://www.tigerwit.com/activity/banner/banner_android_20160921.jpg",
+                        url: "http://www.8yuu.com/down/dowd.html ",
+                        title: "活动详情"
+                    }
+                ];
+            } else {
+                data = [
+                  {
+                    image: "https://www.tigerwit.com/activity/banner/banner1_20160908.png",
+                    url: "https://www.tigerwit.com/bd/t27",
+                    title: "活动详情"
+                  },
+                  {
+                    image: "https://www.tigerwit.com/activity/banner/banner2_20160908.png",
+                    url: "https://www.tigerwit.com/bd/t27",
+                    title: "活动详情"
+                  },
+                  {
+                    image: "https://www.tigerwit.com/activity/banner/banner3_20160810.png",
+                    url: "https://www.tigerwit.com/m/regular/detail/10",
+                    title: "【MACD月盈201609-01】"
+                  }
+                ];
+            }
         }
         if(data){
             rs = {

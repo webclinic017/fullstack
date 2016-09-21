@@ -4,15 +4,12 @@
     <!--引入公用头部-->
     <% include common/m_common_head.html %>
 
-    <!--打包公用css-->
-    <!-- build:css(.tmp) /styles/m_vendor.css -->
-    <link rel="stylesheet" href="/styles/m_vendor.css">
+    <!-- 引入H5 CSS -->
+    <!-- build:css(.tmp) /styles/h5_common.css -->
+    <link rel="stylesheet" href="/styles/h5_common.css">
     <!-- endbuild -->
 
-    <!--打包本页样式-->
-    <!-- build:css(.tmp) /styles/m_agent_become.css -->
-    <link rel="stylesheet" href="/styles/m_agent_become.css">
-    <!-- endbuild -->
+    <% include common/common_header.html %>
 </head>
 <body>
 <div class="m_agent_become">
@@ -123,5 +120,7 @@
 <!-- build:js(client) /scripts/web/m_agent_become.js -->
 <script src="/scripts/web/m_agent_become.js"></script>
 <!-- endbuild -->
+
+<%- include('bd/common/footer.html') %>
 </body>
 </html>
