@@ -7,9 +7,11 @@ if (company_name === 'tigerwit') {
     companyConfig = {
         companyNameZh: "老虎外汇",
         companyNameEn: "TigerWit",
+        companyNickName: "小老虎",
         titleZh: "老虎外汇 - TigerWit",
         titleEn: "TigerWit",
         supportEmail: "support@tigerwit.com",
+        ibEmail: "ib@tigerwit.com",
         telephone: "400 - 809 - 8509",
         webSite: "www.tigerwit.com",
 
@@ -27,16 +29,18 @@ if (company_name === 'pkds') {
     companyConfig = {
         companyNameZh: "派克道森",
         companyNameEn: "Pakerdawson",
+        companyNickName: "派克道森",
         titleZh: "派克道森 - Parkerdawson",
         titleEn: "Parkerdawson",
         supportEmail: "info@pkdsfx.com",
+        ibEmail: "info@pkdsfx.com",
         telephone: "0064 - 21 - 2779989",
         webSite: "www.pkdsfx.com",
 
         // path
         logoPathZh: indexBasePath + "/pkds-logo.png",
         logoPathEn: indexBasePath + "/pkds-logo.png",
-        homePersonPath: indexBasePath + "/index-person-pkds.jpg",
+        homePersonPath: indexBasePath + "/index-person-tiger.jpg",
         homeTradePathZh: indexBasePath + "/index2-trade-img-pkds.png",
         homeTradePathEn: indexBasePath + "/index2-trade-img-pkds.png",
         homePlusPath: indexBasePath + "/index2-master-jia-pkds.png",
@@ -67,9 +71,12 @@ module.exports = function () {
         },
 
 
+        "companyNickName": {"zh": companyConfig.companyNickName, "en": ""},
+        "companyZhName": {"zh": companyConfig.companyNameZh, "en": companyConfig.companyNameEn},
         "companyEnName": {"zh": companyConfig.companyNameEn, "en": companyConfig.companyNameEn},
         "title": {"zh": companyConfig.titleZh, "en": companyConfig.titleEn},
         "supportEmail": {"zh": companyConfig.supportEmail, "en": companyConfig.supportEmail},
+        "ibEmail": {"zh": companyConfig.ibEmail, "en": companyConfig.ibEmail},
         "telephone": {"zh": companyConfig.telephone, "en": companyConfig.telephone},
         "webSite": {"zh": companyConfig.webSite, "en": companyConfig.webSite},
 

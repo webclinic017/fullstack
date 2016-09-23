@@ -43,25 +43,27 @@
             <span class="font-info">UBS </span> <%= lang.text("about7")%>
         </p>
         <div class="pro-public__logo"></div>
+        
 
-
-        <h2 class="font-base font-bold mg-tp-50">
-            <%= lang.text("about8")%>
-        </h2>
-        <p class="font-dark">
-            <%= lang.text("about9")%>
-        </p>
-        <div style="width:600px;margin:0 auto;">
-            <video id="player" 
-                   width="600" 
-                   height="400" 
-                   poster="/images/media/tang.jpg" 
-                   src="https://www.tigerwit.com/files/video/20160317.flv"
-                   type="video/flv"
-                   controls="controls"
-                   tw-media>
-            </video>
-        </div>
+        <%if(lang.isCompany("tigerwit")){%>
+            <h2 class="font-base font-bold mg-tp-50">
+                <%= lang.text("about8")%>
+            </h2>
+            <p class="font-dark">
+                <%= lang.text("about9")%>
+            </p>
+            <div style="width:600px;margin:0 auto;">
+                <video id="player" 
+                       width="600" 
+                       height="400" 
+                       poster="/images/media/tang.jpg" 
+                       src="https://www.tigerwit.com/files/video/20160317.flv"
+                       type="video/flv"
+                       controls="controls"
+                       tw-media>
+                </video>
+            </div>
+        <%}%>  
 
     </div>
 </div>
