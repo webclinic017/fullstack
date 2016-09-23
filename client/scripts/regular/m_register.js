@@ -69,6 +69,8 @@ $(document).ready(function () {
     });
 
     $("input").focus(function () {
+        //$(this).val("");
+        //console.log(this);
         if ($(this).hasClass("warning")) {
             $(this).val("");
             $(this).removeClass("warning");
@@ -101,8 +103,8 @@ $(document).ready(function () {
     function checkUserName(){
         var input = $('#username');
         var rName = input.val() ? input.val() : "";
-        if ((input.val() == "") || (input.val() == "请填写昵称")) {
-            input.val(" 请填写昵称").addClass("warning");
+        if ((input.val() == "")) {
+            input.val("请填写昵称").addClass("warning");
         }
     }
 
@@ -173,7 +175,7 @@ $(document).ready(function () {
 
     (function () {
         /*判断地址包含?并且是在第二注册页,此段js运行*/
-        if (window.location.href.indexOf("?") >= 0 && !!(document.getElementById("regist_btn2"))) {
+        if (!!(document.getElementById("regist_btn2"))) {
             /*第二注册页提交逻辑*/
             /*获取注册码*/
             /*获取url中的字段*/
@@ -203,7 +205,7 @@ $(document).ready(function () {
                         }
                     }, 1000);
 
-                    if (!verify_code_btn.hasClass("disable")) {
+                    if (!(verify_code_btn.hasClass("disable"))) {
                         /*请求后台接口*/
                         $.ajax({
                             type: "post",
@@ -220,6 +222,7 @@ $(document).ready(function () {
                 }
             });
 
+
             $('#regist_btn2').on("touchend", function () {
                 /*验证邮箱*/
                 var input = $('#email');
@@ -232,7 +235,7 @@ $(document).ready(function () {
                     $("#verify_code").addClass("warning").val("请您输入验证码");
                 }
 
-                if (!$(":input").hasClass("warning")) {
+                if (!($(":input").hasClass("warning"))) {
                     /*获取邮箱*/
                     email = $('#email').val();
                     verify_code = $("#verify_code").val();
@@ -251,7 +254,7 @@ $(document).ready(function () {
                             key: ""
                         },
                         success: function (data) {
-                            /*console.log(data);*/
+                            //console.log(data);
                             if (data.is_succ == true) {
                                 var action_address = window.location.href.replace("2", "3");
                                 skipTo(action_address);
@@ -259,6 +262,8 @@ $(document).ready(function () {
                                 $("#verify_code").addClass("warning").val("验证码不正确");
                             } else if (data.error_code == 3) {
                                 $("#verify_code").addClass("warning").val("手机号已存在");
+                            } else {
+                                alert(data.error_msg)
                             }
                         },
                         error: function (err) {
