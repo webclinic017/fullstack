@@ -86,6 +86,9 @@ module.exports = function (app) {
         app.use('/activity', express.static(config.root + '/activity', {
             maxage: "30d"
         }));
+        app.use('/white_label', express.static(config.root + '/server/config/white_label/images', {
+            maxage: "30d"
+        }));
         app.use(express.static(app.get('clientPath'),{
             maxage : "30d",
             setHeaders : function(res, path){
