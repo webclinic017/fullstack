@@ -9,9 +9,12 @@
             <li>
                 <a data-navbar-trigger href="/web/copy/select">如何选择高手？</a>
             </li>
-            <li>
-                <a data-navbar-trigger href="/web/copy/comment">每日汇评</a>
-            </li>
+            
+            <%if(lang.isCompany("tigerwit")){%>
+                <li>
+                    <a data-navbar-trigger href="/web/copy/comment">每日汇评</a>
+                </li>
+            <%}%>
         </ul>
     </li>
 </ul>
