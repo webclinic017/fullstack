@@ -482,10 +482,12 @@ module.exports = function (grunt) {
         grunt.task.run(['serve-ing']);
     });
 
-    grunt.registerTask('build', function (company, node_env) {
+    grunt.registerTask('build', function (company, node_env, url) {
         // change process env config
         if (node_env == "dev") node_env = "development";
         if (node_env == "pro") node_env = "production";
+
+        var url_path, login_public_key;
 
         url_path = companyInfo[company][url]["url_path"];
         login_public_key = companyInfo[company][url]["login_public_key"];
