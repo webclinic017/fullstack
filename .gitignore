@@ -9,7 +9,7 @@ client/data
 dist
 dist.tar
 dist.tar.*
-/server/config
+/server/config/environment
 npm-debug.log
 *.swp
 *.log
