@@ -207,7 +207,7 @@
 
                     if (year_pin > 0) {
                         for (var i = 0; i < year_pin; i++) {
-                            for (var j = 12; j > pin; j--) {
+                            for (var j = 12; j >= pin; j--) {
                                 j = j < 10 ? '0' + j : j;
                                 var mon = {
                                     month: beain_date_year + '年' + j + '月'

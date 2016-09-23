@@ -402,12 +402,7 @@ module.exports = function(app) {
                 force_update: false
             };
             if(system == "android" && versionCode < 8){
-                currentVersion = {
-                    version_name : "V2.1.0",
-                    description : "改版，体验更流畅",
-                    url : "https://www.tigerwit.com/downloads/apk/tigerwit_v2.1.0.apk",
-                    force_update : false
-                }
+                currentVersion = require('./app_ctrl.config')();
             }
             data = currentVersion;
         }

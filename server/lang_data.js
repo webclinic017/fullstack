@@ -560,7 +560,7 @@ module.exports = function () {
         "wad11": {"en": "Attention: we do not receive deposit and withdraw from any third party, please use your own bank card during withdrawal.", "zh": "请注意：我们不接受任何第三方出入金，请务必使用本人银行卡办理取款。"},
         "wad12": {"en": "Can I make withdrawal in case of pending transactions?", "zh": "Q：当我还有未结头寸时，是否能够提款？"},
         "wad13": {"en": "Yes, you can. One more thing, your free margin must be over the withdrawn amount. Otherwise, your application will be rejected, and you need to make application again.", "zh": "A：是的，您可以。 但是您需要注意，取款时您的可用保证金的金额必须要超出您提款指令所指定的金额。如果您没有足够的资金，那么您的请求将被视为取消，您需要重新提交新的提款请求。"},
-        "wad14": {"en": "Attention: In order to avoid the risk of low account margin, we suggest you should make withdrawal during short position or clear more positions for enough margins before withdrawal.", "zh": "请注意：为了防止出现账户保证金过低等风险，我们建议空仓取款，或者在取款前请减轻仓位，剩余足够保证金。"},
+        "wad14": {"en": "Attention: In order to avoid the risk of low account margin, we suggest you should make withdrawal during short position.", "zh": "请注意：为了防止出现账户保证金过低等风险，我们建议空仓取款。"},
         "wad15": {"en": "What is the minimum amount for opening a transaction account?", "zh": "Q：开立交易账户的最低金额是多少？"},
         "wad16": {"en": "Minimum amount is $200.", "zh": "A：最低金额为 200 美元。"},
         "wad17": {"en": "Why haven’t I received the withdrawn amount while the fund in transaction account is displayed removal?", "zh": "Q：交易账户中的资金已显示移除，为什么我还没有收到出金金额？"},
