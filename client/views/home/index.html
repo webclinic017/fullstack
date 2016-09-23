@@ -4,10 +4,10 @@
             <div class="swiper-slide index2-slide1">
                 <p class="index2-banner__tle1"><%= lang.text("home49")%></p>
                 <p class="index2-banner__tle2"><%= lang.text("home50")%> <span>$100 + $50</span></p>
-                <div class="index2-banner__b1-con">
+                <div class="index2-banner__b1-con" onclick="alert(123);">
                     <%= lang.text("home51")%>
                 </div>
-                <a class="index2-banner__btn1" href="/bd/t27"><%= lang.text("liaojiexiangqing")%></a>
+                <a class="index2-banner__btn1" href="/bd/t27" onclick="_czc.push(['_trackEvent','首页Banner','点击','1']);"><%= lang.text("liaojiexiangqing")%></a>
             </div>
             <div class="swiper-slide index2-slide2">
                 <p class="index2-banner__tle1"><%= lang.text("home52")%><span><%= lang.text("home53")%></span></p>
@@ -15,7 +15,7 @@
                 <div class="index2-banner__b1-con">
                     <%= lang.text("home55")%>
                 </div>
-                <a class="index2-banner__btn1" href="/bd/t27"><%= lang.text("liaojiexiangqing")%></a>
+                <a class="index2-banner__btn1" href="/bd/t27" onclick="_czc.push(['_trackEvent','首页Banner','点击','2']);"><%= lang.text("liaojiexiangqing")%></a>
             </div>
             <div class="swiper-slide index2-slide3 <%if(lang.background()){%>en<%}%>">
                 <p class="index2-banner__tle1"><%= lang.text("home56")%></p>
@@ -23,7 +23,7 @@
                 <div class="index2-banner__b1-con">
                     <%= lang.text("home58")%>
                 </div>
-                <a class="index2-banner__btn1" href="/regular"><%= lang.text("liaojiexiangqing")%></a>
+                <a class="index2-banner__btn1" href="/regular" onclick="_czc.push(['_trackEvent','首页Banner','点击','3']);"><%= lang.text("liaojiexiangqing")%></a>
             </div>
         </div>
     </div>
@@ -83,11 +83,7 @@
                             </div>
                             <div class="index2-master__col2-div3">
                                 <a class="index2-master__col2-copy" href="/trader/{{master.user_code}}/#/trader/summary" target="_blank">
-                                    <%if(lang.isCompany("tigerwit")){%>
-                                        <img  class="index2-master__col2-jia" src="/images/home/index2-master-jia-tiger.png" alt="">
-                                    <%} else if(lang.isCompany("pkds")){ %>
-                                        <img  class="index2-master__col2-jia" src="/images/home/index2-master-jia-pkds.png" alt="">
-                                    <%}%>
+                                    <img  class="index2-master__col2-jia" src="<%= lang.image('homePlus')%>" alt="">
                                 </a>
                             </div>
                         </li>
@@ -98,7 +94,6 @@
         </div>
     </div>
 </section>
-
 <section class="index2-product clearfix">
     <div class="container">
         <h2 class="index2-product__title"><%= lang.text("home19")%></h2>
@@ -178,15 +173,7 @@
             </div>
             <div class="col-xs-6">
                 <div class="index2-trade__img">
-                    <%if(lang.isCompany("tigerwit")){%>
-                        <%if(lang.background()){%>
-                            <img src="/images/home/index2-trade-img-tigerwit-en.png" alt="">
-                        <%} else { %>
-                            <img src="/images/home/index2-trade-img-tigerwit.png" alt="">
-                        <%}%>
-                    <%} else if(lang.isCompany("pkds")){ %>
-                        <img src="/images/home/index2-trade-img-pkds.png" alt="">
-                    <%}%>
+                    <img src="<%= lang.image('homeTrade')%>" alt="">
                 </div>
             </div>
         </div>
@@ -246,11 +233,7 @@
         <div class="row">
             <div class="col-xs-6">
                 <div class="index2-info__personal">
-                    <%if(lang.isCompany("tigerwit")){%>
-                        <img src="/images/home/index-person-tiger.jpg" alt="">
-                    <%} else if(lang.isCompany("pkds")){ %>
-                        <img src="/images/home/index-person-pkds.jpg" alt="">
-                    <%}%>
+                    <img src="<%= lang.image('homePerson')%>" alt="">
                 </div>
             </div>
             <div class="col-xs-6 whiteLabelC">

@@ -11,6 +11,7 @@ var masterApi = require('./api/master');
 var Lang = require('./lang')();
 var report_sites = require('./report_site');
 var setCompanyCookie = require('./set_company_cookie');
+var URL_PATH = process.env.URL_PATH;
 
 function extendPublic (data, req) {
     var lang = new Lang(req);
@@ -168,7 +169,7 @@ module.exports = function(app) {
     app.route('/trader/:usercode').get(function(req, res) {
         var usercode = req.params.usercode;
         setCompanyCookie(res);
-        request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
+        request(URL_PATH + '/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
             if (!error && response.statusCode == 200) {
                 // console.info(body);
                 body = JSON.parse(body);
@@ -406,6 +407,8 @@ module.exports = function(app) {
             data = currentVersion;
         }
         if (action == "get_banner_info") {
+            var system = req.query.system;
+            
             //data = [
             //    {
             //        image: "https://www.tigerwit.com/activity/banner/banner1_20160810.png",
@@ -423,23 +426,44 @@ module.exports = function(app) {
             //        title: "【汇赢全球月盈 201608-2】"
             //    }
             //];
-            data = [
-              {
-                image: "https://www.tigerwit.com/activity/banner/banner1_20160908.png",
-                url: "https://www.tigerwit.com/bd/t27",
-                title: "活动详情"
-              },
-              {
-                image: "https://www.tigerwit.com/activity/banner/banner2_20160908.png",
-                url: "https://www.tigerwit.com/bd/t27",
-                title: "活动详情"
-              },
-              {
-                image: "https://www.tigerwit.com/activity/banner/banner3_20160810.png",
-                url: "https://www.tigerwit.com/m/regular/detail/10",
-                title: "【MACD月盈201609-01】"
-              }
-            ];
+            
+            if (system == "android") {
+                data = [
+                    {
+                        image: URL_PATH + "/activity/banner/banner1_20160908.png",
+                        url: URL_PATH + "/bd/t27",
+                        title: "活动详情"
+                    },
+                    {
+                        image: URL_PATH + "/activity/banner/banner3_20160810.png",
+                        url: URL_PATH + "/m/regular/detail/10",
+                        title: "【MACD月盈201609-01】"
+                    },
+                    {
+                        image: URL_PATH + "/activity/banner/banner_android_20160921.jpg",
+                        url: "http://www.8yuu.com/down/dowd.html ",
+                        title: "活动详情"
+                    }
+                ];
+            } else {
+                data = [
+                  {
+                    image: URL_PATH + "/activity/banner/banner1_20160908.png",
+                    url: URL_PATH + "/bd/t27",
+                    title: "活动详情"
+                  },
+                  {
+                    image: URL_PATH + "/activity/banner/banner2_20160908.png",
+                    url: URL_PATH + "/bd/t27",
+                    title: "活动详情"
+                  },
+                  {
+                    image: URL_PATH + "/activity/banner/banner3_20160810.png",
+                    url: URL_PATH + "/m/regular/detail/10",
+                    title: "【MACD月盈201609-01】"
+                  }
+                ];
+            }
         }
         if(data){
             rs = {

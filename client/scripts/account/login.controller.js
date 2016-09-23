@@ -92,6 +92,8 @@
                             }
                             $scope.clickable = true;
                         } else {
+                            // umeng
+                            _czc.push(["_trackEvent","登录框","登录成功"]);
                             
                             if (backUrl) {
                                 $window.location.href = backUrl;

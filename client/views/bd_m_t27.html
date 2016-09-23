@@ -2,9 +2,6 @@
 <html>
 <!--引入公用头部-->
 <% include common/m_common_head.html %>
-<!-- build:css(.tmp) /styles/m_vendor.css -->
-<link rel="stylesheet" href="/styles/m_vendor.css">
-<!-- endbuild -->
 
 <!-- 引入H5 CSS -->
 <!-- build:css(.tmp) /styles/h5_common.css -->
@@ -12,6 +9,7 @@
 <!-- endbuild -->
 <!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
 <% include common/m_css_vendor.html %>
+<% include common/common_header.html %>
 <body>
 <!-- 引入H5导航条 -->
 <%- include('common/m_nav.html') %>

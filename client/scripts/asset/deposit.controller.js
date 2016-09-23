@@ -59,9 +59,11 @@
             var w = $window.open('/waiting');
 
             asset.deposit($scope.personal.real_id, amount).then(function(data) {
+
                 var url;
                 if(data && data.data && data.data.url){
                     //这里暂时写死，后面做白标需要写到配置里
+                    // url = location.origin+data.data.url;
                     url = 'https://www.tigerwit.com'+data.data.url;
                 }
                 if(url){
@@ -91,6 +93,7 @@
                     $scope.closeModal = closeModal;
                     $scope.verify = verify;
                     $scope.openChat = openChat;
+                    $scope.depositSucc = depositSucc;
 
                     // 去实名认证
                     function verify() {
@@ -101,6 +104,14 @@
                     // 支付遇到问题
                     function openChat() {
                         OpenChat();
+                        closeModal();
+                    }
+
+                    // 支付成功
+                    function depositSucc() {
+                        // umeng
+                        _czc.push(["_trackEvent","入金页面","充值"]);
+
                         closeModal();
                     }
 

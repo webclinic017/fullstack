@@ -1,20 +1,16 @@
 <div class="<%= typeof navClass == 'undefined' ? 'navbar' : 'navbar-2' %> navbar-fixed-top" tw-navbar>
     <div class="container">
         <div class="navbar-header">
-            <%if(lang.isCompany("tigerwit")){%>
-                <a class="logo" href="/"></a>
-                <a class="logo-con <% if(lang.background()){%>en<%}%>" href="/"></a>
-            <%} else if(lang.isCompany("pkds")){ %>
-                <a href="/" style="display: inline-block;padding-top: 4px">
-                    <img height="70px" src="/images/pkds-logo.png" alt="logo" draggable=false>
-                </a>
-            <%}%>
+            <a href="">
+                <img class="logo" src="<%= lang.image('logo')%>">
+            </a>
+            
             <!-- <div class="cctv_con">
                 <a class="logocctv" href="#"></a>
             </div> -->
             <!--<a class="logo-cctv" href=""></a>-->
         </div>
-
+    
         <%if(lang.isCompany("tigerwit")){%>
             <div class="lang navbar-right">
                 <div class="lang-toggle">
