@@ -3,7 +3,6 @@
 var company_name = process.env.COMPANY_NAME;
 var data = require('./lang_data.js')();
 var querystring = require('querystring');
-var WLInfo_data = require("./whiteLabelInfo_data");
 
 module.exports = function () {
 
@@ -28,15 +27,6 @@ module.exports = function () {
                 return false;
             }
         },
-        //判断当前公司,返回传入参数信息
-        getCoInfo:function(info){
-            if(WLInfo_data[info]){
-                return WLInfo_data[info][company_name];
-            } else {
-                console.info('load companyInfo error');
-                return 'error';
-            }
-        },
         text: function(name){
             var text;
             if(data[name]){
@@ -49,7 +39,13 @@ module.exports = function () {
             return text;
         },
         image: function(name){
-            return this.language === 'zh' ? name : name + '-en';
+            var path;
+            if(data["image"][name]){
+                path = data["image"][name][this.language];
+            } else {
+
+            }
+            return path;
         },
         background: function () {
             return this.language === 'en' ? true : false;
