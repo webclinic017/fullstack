@@ -388,6 +388,7 @@
     overflow: hidden;
 }
 
+//resetSwiperStyle
 .swiper-pagination-bullet-active {
     opacity: 1;
     background: $brand-primary;
@@ -409,4 +410,18 @@
     -ms-transform-origin: left top;
     -o-transform-origin: left top;
     transform-origin: left top;
+}
+
+.swiper-pagination{
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    width: 100%;
+    z-index: 20;
+    text-align: center;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
 }

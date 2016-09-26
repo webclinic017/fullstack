@@ -9,22 +9,51 @@
     function twCarousel($document) {
 
         var options = {
-            pagination: '.pagination',
+            pagination: '.swiper-pagination',
             paginationClickable: true,
             autoplay: 4000,
             speed: 400,
-            loop: true
+            loop: true,
+            lazyLoading : true,
+            lazyLoadingOnTransitionStart : true
         };
 
         return {
             restrict: 'A',
+            replace:true,
             link: function (scope, element, attrs) {
+                var type = attrs.type;
+                /**
+                 * README - type
+                 * @type {Window.Swiper|Swiper}
+                 * type 可选参数 normal | gradient
+                 * normal -> 普通的轮播图 -> [首页的banner,]
+                 * gradient -> 渐变消失 -> [下载页的banner,]
+                 */
+
+                //console.log(type);
+                if(type == 'normal') {
+                    //option 不变
+                    angular.extend(options,{
+                        effect: 'coverflow'
+                    });
+                } else if(type == 'gradient'){
+                    angular.extend(options,{
+                        //effect: 'coverflow',
+                        speed:1200,
+                        effect: 'cube',
+                        grabCursor: true,
+                        cube: {
+                            shadow: true,
+                            slideShadows: true,
+                            shadowOffset: 30,
+                            shadowScale: 0.94,
+                            parallax:true
+                        }
+                    });
+                }
 
                 var swiper = new Swiper('.swiper-container', options);
-
-
-
-
                 // var interval,
                 //     i = 0,
                 //     inLength = $('.carousel-inner div').length;
