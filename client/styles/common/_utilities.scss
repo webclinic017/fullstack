@@ -415,10 +415,12 @@
 .swiper-pagination{
     position: absolute;
     left: 0;
-    bottom: 100px;
     width: 100%;
     z-index: 20;
     text-align: center;
+}
+.swiper-pagination-home{
+    bottom: 100px !important;
 }
 
 .swiper-pagination-bullet {
