@@ -34,22 +34,10 @@
                 //console.log(type);
                 if(type == 'normal') {
                     //option 不变
-                    angular.extend(options,{
-                        effect: 'coverflow'
-                    });
                 } else if(type == 'gradient'){
                     angular.extend(options,{
                         //effect: 'coverflow',
-                        speed:1200,
-                        effect: 'cube',
-                        grabCursor: true,
-                        cube: {
-                            shadow: true,
-                            slideShadows: true,
-                            shadowOffset: 30,
-                            shadowScale: 0.94,
-                            parallax:true
-                        }
+
                     });
                 }
 
