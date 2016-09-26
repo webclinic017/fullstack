@@ -109,9 +109,11 @@
                     <li>
                         <a href="/web/copy/select">如何选择高手</a>
                     </li>
-                    <li>
-                        <a href="/web/copy/comment">每日汇评</a>
-                    </li>
+                    <%if(lang.isCompany("tigerwit")){%>
+                        <li>
+                            <a href="/web/copy/comment">每日汇评</a>
+                        </li>
+                    <%}%>
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown <%= lang.text("navbar15")%>>
@@ -129,28 +131,34 @@
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown>
-                <a data-navbar-trigger data-navbar-level="2" href="/web/about/tigerwit"><%= lang.text("navbar10")%></a>
+                <%if(lang.isCompany("tigerwit")){%>
+                    <a data-navbar-trigger data-navbar-level="2" href="/web/about/tigerwit"><%= lang.text("navbar10")%></a>
 
-                <ul class="dropdown-menu">
-                    <li>
-                        <a href="/web/about/tigerwit"><%= lang.text("navbar11")%></a>
-                    </li>
-                    <li>
-                        <a href="/web/about/stp"><%= lang.text("navbar12")%></a>
-                    </li>
-                    <li <%= lang.text("navbar15")%>>
-                        <a href="/web/about/team">精英团队</a>
-                    </li>
-                    <li <%= lang.text("navbar15")%>>
-                        <a href="/web/about/report">媒体报道</a>
-                    </li>
-                    <!-- <li>
-                        <a href="/web/about/control">合规和监管</a>
-                    </li> -->
-                    <li <%= lang.text("navbar15")%>>
-                        <a href="/web/partner">媒体合作</a>
-                    </li>
-                </ul>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="/web/about/tigerwit"><%= lang.text("navbar11")%></a>
+                        </li>
+                        <li>
+                            <a href="/web/about/stp"><%= lang.text("navbar12")%></a>
+                        </li>
+                    
+                        <li <%= lang.text("navbar15")%>>
+                            <a href="/web/about/team">精英团队</a>
+                        </li>
+                        <li <%= lang.text("navbar15")%>>
+                            <a href="/web/about/report">媒体报道</a>
+                        </li>
+                        <!-- <li>
+                            <a href="/web/about/control">合规和监管</a>
+                        </li> -->
+                        <li <%= lang.text("navbar15")%>>
+                            <a href="/web/partner">媒体合作</a>
+                        </li>
+                    </ul>
+                <%}%>
+                <%if(lang.isCompany("pkds")){%>
+                    <a data-navbar-trigger href="/web/about/stp"><%= lang.text("navbar12")%></a>
+                <%}%>
             </li>
             <li>
                 <a data-navbar-trigger href="/download">

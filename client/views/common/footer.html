@@ -12,12 +12,14 @@
                             &nbsp;<%= lang.text("foot2")%>
                         </a>
                     </li>
-                    <li>
-                        <a href="/web/product/trade">
-                            <i class="fa fa-angle-right"></i>
-                            &nbsp;<%= lang.text("foot3")%>
-                        </a>
-                    </li>
+                    <%if(lang.isCompany("tigerwit")){%>
+                        <li>
+                            <a href="/web/product/trade">
+                                <i class="fa fa-angle-right"></i>
+                                &nbsp;<%= lang.text("foot3")%>
+                            </a>
+                        </li>
+                    <%}%>
                 </ul>
             </div>
             <div class="col-xs-2">
@@ -36,13 +38,15 @@
                             <i class="fa fa-angle-right"></i>
                             &nbsp;<%= lang.text("faq")%>
                         </a>
-                    </li>                   
-                    <li>
-                        <a href="/study/video">
-                            <i class="fa fa-angle-right"></i>
-                            &nbsp;<%= lang.text("foot6")%>
-                        </a>
                     </li>
+                    <%if(lang.isCompany("tigerwit")){%>
+                        <li>
+                            <a href="/study/video">
+                                <i class="fa fa-angle-right"></i>
+                                &nbsp;<%= lang.text("foot6")%>
+                            </a>
+                        </li>
+                    <%}%>                   
                 </ul>
             </div>
             <div class="<%= lang.text('foot13')%>">
