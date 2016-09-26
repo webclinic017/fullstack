@@ -1,0 +1,1 @@
+;(function(){    'use strict';    var companyName = 'tigerwit';    module.exports = companyName;    /* README 可配置公司名:     *     * 老虎外汇 -> 'tigerwit'     * 派克道森 -> 'pkds'     * */}());
