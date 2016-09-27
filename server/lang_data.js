@@ -22,6 +22,8 @@ if (company_name === 'tigerwit') {
         homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
         homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
         homePlusPath: indexBasePath + "/index2-master-jia-tiger.png",
+
+        icoPath: indexBasePath + "/tigerwit.ico",
     };
     
 }
@@ -44,6 +46,8 @@ if (company_name === 'pkds') {
         homeTradePathZh: indexBasePath + "/index2-trade-img-pkds.png",
         homeTradePathEn: indexBasePath + "/index2-trade-img-pkds.png",
         homePlusPath: indexBasePath + "/index2-master-jia-pkds.png",
+
+        icoPath: indexBasePath + "/pkds.ico",
     };
     
 }
@@ -67,6 +71,10 @@ module.exports = function () {
             "homePlus": {
                 "en": companyConfig.homePlusPath,
                 "zh": companyConfig.homePlusPath
+            },
+            "ico": {
+                "en": companyConfig.icoPath,
+                "zh": companyConfig.icoPath
             }
         },
 
