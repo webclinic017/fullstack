@@ -63,8 +63,8 @@
                 var url;
                 if(data && data.data && data.data.url){
                     //这里暂时写死，后面做白标需要写到配置里
-                    // url = location.origin+data.data.url;
-                    url = 'https://www.tigerwit.com'+data.data.url;
+                    url = location.origin+data.data.url;
+                    // url = 'https://www.tigerwit.com'+data.data.url;
                 }
                 if(url){
                     openDepositMdl('depositFinish');
