@@ -6,9 +6,10 @@
         .module('fullstackApp')
         .directive('twPieChart', twPieChart);
 
-    twPieChart.$inject = [];    
+    twPieChart.$inject = ['whiteLabel'];    
 
-    function twPieChart() {
+    function twPieChart(whiteLabel) {
+        var col_color = whiteLabel.pieChart;
         var options = {
             chart: {
                 type: 'pie',
@@ -76,9 +77,7 @@
                             pointFormat: '<b>{point.y}</b>'
                         },
 
-                        colors: [
-                            '#fedd0a','#ebebeb'
-                        ],
+                        colors: col_color.colors,
 
                         legend: {
                             enabled: false

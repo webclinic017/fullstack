@@ -8,7 +8,7 @@
 
     function langData ($cookies) {
         var language = 'zh';
-        var companyNameZh, companyNameEn;
+        var companyConfig;
         
         angular.forEach($cookies, function (value, index) {
 
@@ -19,17 +19,27 @@
             if (index === 'company_name') {
                 
                 if (value === 'tigerwit') {
-                    companyNameZh = "老虎外汇";
-                    companyNameEn = "TigerWit";
+                    companyConfig = {
+                        companyNameZh: "老虎外汇",
+                        companyNameEn: "TigerWit",
+                        companyCopyRules: "https://www.tigerwit.com/web/copy/rules",
+                    };
                 }
                 if (value === 'pkds') {
-                    companyNameZh = "派克道森";
-                    companyNameEn = "Pakerdawson";
+                    companyConfig = {
+                        companyNameZh: "派克道森",
+                        companyNameEn: "Pakerdawson",
+                        companyCopyRules: "http://www.pkdsfx.com/web/copy/rules",
+                    };
                 }
             } 
         });
 
         var data = {
+
+            "companyCopyRules": {"zh": companyConfig.companyCopyRules, "en": companyConfig.companyCopyRules},
+
+
             "language": language,
             // 公用 public
             "lijifuzhi":{"en": "Copy now", "zh": "立即复制"},
@@ -72,7 +82,7 @@
             "login5": {"en": "Please enter your password", "zh": "请输入密码"},
             "login6": {"en": "Log in automatically next time", "zh": "下次自动登陆"},
             "login7": {"en": "Forgot password", "zh": "忘记密码"},
-            "login8": {"en": "SSL login is adopted in "+companyNameEn+" and data transmission is safe.", "zh": "您在"+companyNameZh+"登录采用 SSL 登录方式数据传输安全"},
+            "login8": {"en": "SSL login is adopted in "+companyConfig.companyNameEn+" and data transmission is safe.", "zh": "您在"+companyConfig.companyNameZh+"登录采用 SSL 登录方式数据传输安全"},
             "login9": {"en": "Login", "zh": "登 录"},
             "login10": {"en": "Register", "zh": "注 册"},
             "login11": {"en": "Login...", "zh": "登录中"},
