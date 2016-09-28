@@ -76,6 +76,8 @@
                 // $scope.verification.status = 1;
                 $scope.verification.realname = data.realname || undefined;
                 $scope.verification.id.number = data.idNumber;
+
+                console.info($scope.verification);
             });    
         }
 
