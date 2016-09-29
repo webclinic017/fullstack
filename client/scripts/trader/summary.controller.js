@@ -207,10 +207,6 @@
                         }
                     }
 
-                    if(start == end){
-                        result.push({month: endYear + '年' + endMon + '月'});
-                    }
-
                     result.reverse();
                     return result;
                 }
