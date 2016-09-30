@@ -338,12 +338,12 @@ module.exports = function(app) {
             res.render('bd_t27', extendPublic({}, req));
         }
     });
-    app.route('/bd/t1610').get(function(req, res){
+    app.route('/bd/t31').get(function(req, res){
         setCompanyCookie(res);
         if(isMobile(req)){
-            res.render('bd_m_t27', extendPublic({}, req))
+            res.render('bd_m_t31', extendPublic({}, req))
         } else {
-            res.render('bd_1610', extendPublic({}, req));
+            res.render('bd_t31', extendPublic({}, req));
         }
     });
     // nodeAPI
