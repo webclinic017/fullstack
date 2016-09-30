@@ -13,12 +13,12 @@
         isActive = ! isActive;
     });
 
-    $(document).scroll(function () {
+    // $(document).scroll(function () {
 
-        if ($(document).scrollTop() >= scrollHeight) {
-            $(".m_t31__rebox").addClass("active");
-        } else {
-            $(".m_t31__rebox").removeClass("active");
-        }
-    });
+    //     if ($(document).scrollTop() >= scrollHeight) {
+    //         $(".m_t31__rebox").addClass("active");
+    //     } else {
+    //         $(".m_t31__rebox").removeClass("active");
+    //     }
+    // });
 })();
