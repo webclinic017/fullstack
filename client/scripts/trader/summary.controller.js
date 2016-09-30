@@ -67,10 +67,6 @@
                             data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
                         };
                         for (var ii = 0; ii < data.length; ii++) {
-                            //处理小于1的数据
-                            if(Math.abs(data[ii].v) < 1){
-                                data[ii].v = data[ii].v > 0 ? 1 : -1;
-                            }
                             if (data[ii].t.indexOf(targetArr[count].year) >= 0) {
                                 targetArr[count].data[parseInt(data[ii].t.split("-")[1]) - 1] = data[ii].v
                             }
