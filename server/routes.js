@@ -338,6 +338,14 @@ module.exports = function(app) {
             res.render('bd_t27', extendPublic({}, req));
         }
     });
+    app.route('/bd/t31').get(function(req, res){
+        setCompanyCookie(res);
+        if(isMobile(req)){
+            res.render('bd_m_t31', extendPublic({}, req))
+        } else {
+            res.render('bd_t31', extendPublic({}, req));
+        }
+    });
     // nodeAPI
     app.route('/napi').get(function(req, res){
         var action = req.query.action;

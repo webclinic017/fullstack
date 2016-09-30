@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>老虎外汇｜注册送100＋50美金赠金，还有机会领取iphone7！</title>
+    <% include vendor.css.html %>
+    <!-- build:css(.tmp) /styles/web.css -->
+    <link rel="stylesheet" href="/styles/web.css">
+    <!-- endbuild -->
+
+    <% include common/common_header.html %>
+    <% include vendor.js.html %>
+</head>
+
+<body ng-app="fullstackApp" class="bd_t31">
+
+    <div ng-controller="GlobalController">
+        <% include navbar/main.html %>
+        <div class="t31_layout">
+            <%- include('bd/t31/t31.html')%>
+            <%- include('bd/common/footer.html') %>
+        </div>
+
+        <!-- build:js(client) /scripts/bd_t31.js -->
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/authorization.service.js"></script>
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/global.controller.js"></script>
+        <script src="/scripts/common/loading_img.directive.js"></script>
+        <script src="/scripts/common/modal.js"></script>
+        <script src="/scripts/common/pagination.directive.js"></script>
+        <script src="/scripts/common/duration.filter.js"></script>
+        <script src="/scripts/common/transition.service.js"></script>
+        <script src="/scripts/common/symbol_mod.filter.js"></script>
+        <script src="/scripts/common/trader.service.js"></script>
+        <script src="/scripts/bd/t30/check.js"></script>
+        <script src="/scripts/common/lang.service.js"></script>
+        <script src="/scripts/common/lang_data.service.js"></script>
+        <script src="/scripts/bd/t31/t31.js"></script>
+        <!-- endbuild -->
+    </div>
+</body>
+
+</html>
