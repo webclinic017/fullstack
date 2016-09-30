@@ -339,6 +339,14 @@ module.exports = function(app) {
             res.render('bd_t27', extendPublic({}, req));
         }
     });
+    app.route('/bd/t31').get(function(req, res){
+        setCompanyCookie(res);
+        if(isMobile(req)){
+            res.render('bd_m_t31', extendPublic({}, req))
+        } else {
+            res.render('bd_t31', extendPublic({}, req));
+        }
+    });
     // nodeAPI
     app.route('/napi').get(function(req, res){
         var action = req.query.action;
@@ -402,7 +410,7 @@ module.exports = function(app) {
                 url: "",
                 force_update: false
             };
-            if(system == "android" && versionCode < 8){
+            if(system == "android" && versionCode < 10){
                 currentVersion = require('./app_ctrl.config')();
             }
             data = currentVersion;
@@ -431,14 +439,14 @@ module.exports = function(app) {
             if (system == "android") {
                 data = [
                     {
-                        image: URL_PATH + "/activity/banner/banner1_20160908.png",
-                        url: URL_PATH + "/bd/t27",
+                        image: URL_PATH + "/activity/banner/banner1_20160930.png",
+                        url: URL_PATH + "/bd/t31",
                         title: "活动详情"
                     },
                     {
                         image: URL_PATH + "/activity/banner/banner3_20160810.png",
-                        url: URL_PATH + "/m/regular/detail/10",
-                        title: "【MACD月盈201609-01】"
+                        url: URL_PATH + "/m/regular/detail/11",
+                        title: "【MACD月盈201610-01】"
                     },
                     {
                         image: URL_PATH + "/activity/banner/banner_android_20160921.jpg",
@@ -449,13 +457,13 @@ module.exports = function(app) {
             } else {
                 data = [
                   {
-                    image: URL_PATH + "/activity/banner/banner1_20160908.png",
-                    url: URL_PATH + "/bd/t27",
+                    image: URL_PATH + "/activity/banner/banner1_20160930.png",
+                    url: URL_PATH + "/bd/t31",
                     title: "活动详情"
                   },
                   {
-                    image: URL_PATH + "/activity/banner/banner2_20160908.png",
-                    url: URL_PATH + "/bd/t27",
+                    image: URL_PATH + "/activity/banner/banner2_20160930.png",
+                    url: URL_PATH + "/bd/t31",
                     title: "活动详情"
                   },
                   {

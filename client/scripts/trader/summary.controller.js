@@ -178,45 +178,37 @@
                     $scope.monSymbols = parseMon(data.time, data.now_date);
                     $scope.barsNowDate = $scope.monSymbols[0];
                 }
-                /*数据解析函数*/
-                function parseMon(beginDate, nowDate) {
-                    var begin_date_mon = parseInt(beginDate.split('-')[1]);
-                    var beain_date_year = parseInt(beginDate.split('-')[0]);
-                    var now_date_mon = parseInt(nowDate.split('-')[1]);
-                    var now_date_year = parseInt(nowDate.split('-')[0]);
-                    var months = [];
-                    var year_pin = now_date_year - beain_date_year;
 
-                    if (year_pin > 0) {
-                        var mon_pin = 0;
-                    } else {
-                        mon_pin = begin_date_mon;
-                    }
-                    if (year_pin > 1) {
-                        var pin = 0;
-                    } else {
-                        pin = begin_date_mon;
-                    }
-                    for (var k = now_date_mon; k > mon_pin; k--) {
-                        k = k < 12 ? '0' + k : k;
-                        mon = {
-                            month: now_date_year + '年' + k + '月'
-                        };
-                        months.push(mon);
-                    }
+                function parseMon(start, end) {
+                    var result = [];
+                    var starts = start.split('-');
+                    var ends = end.split('-');
+                    var staYear = parseInt(starts[0]);
+                    var staMon = parseInt(starts[1]);
+                    var endYear = parseInt(ends[0]);
+                    var endMon = parseInt(ends[1]);
 
-                    if (year_pin > 0) {
-                        for (var i = 0; i < year_pin; i++) {
-                            for (var j = 12; j >= pin; j--) {
-                                j = j < 10 ? '0' + j : j;
-                                var mon = {
-                                    month: beain_date_year + '年' + j + '月'
-                                };
-                                months.push(mon);
+                    while (staYear <= endYear) {
+                        if (staYear == endYear) {
+                            while (staMon <= endMon) {
+                                staMon = staMon < 10 ? '0' + staMon : staMon;
+                                result.push({month: staYear + '年' + staMon + '月'});
+                                staMon++;
                             }
+                            staYear ++;
+                        } else {
+                            if (staMon > 12) {
+                                staMon = 1;
+                                staYear++;
+                            }
+                            staMon = staMon < 10 ? '0' + staMon : staMon;
+                            result.push({month: staYear + '年' + staMon + '月'});
+                            staMon++;
                         }
                     }
-                    return months;
+
+                    result.reverse();
+                    return result;
                 }
 
                 function parseBar(data) {
