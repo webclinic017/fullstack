@@ -30,7 +30,8 @@ $(document).ready(function() {
         if (unit != "") { document.cookie = 'unit=' + unit + ';path=/;domain=tigerwit.com'; }
         if (key != "") { document.cookie = 'key=' + key + ';path=/;domain=tigerwit.com'; }
     }
-    $('#regist_btn').on("click",function() {
+
+    function regist(){
         var input = $('#username');
         var rName = input.val() ? input.val() : "";
         if(/^[\u4e00-\u9fa5A-Za-z\d]+$/.test(input.val())){
@@ -116,8 +117,15 @@ $(document).ready(function() {
             });
             return true;
         }
+    }
+    $('#regist_btn').on("click",function() {
+        regist();
     });
-
+    $(document.body).on("keyup",function(e) {
+        if(e.keyCode == 13){
+            regist();
+        }
+    });
 
     $(":input").focus(function() {
         if ($(this).hasClass("warning")) {
