@@ -122,7 +122,7 @@
                 plotLines: [{   //一条延伸到整个绘图区的线，标志着轴中一个特定值。
                     color: '#fff',
                     dashStyle: 'solid', //Dash,Dot,Solid,默认Solid
-                    width: 0, // X中轴宽度,过大可能会遮挡真实数据
+                    width: 0.5, // X中轴宽度,过大可能会遮挡真实数据
                     value: -0.5,  //y轴显示位置，一个标记为1
                     zIndex: 0
                 }],
