@@ -410,7 +410,7 @@ module.exports = function(app) {
                 url: "",
                 force_update: false
             };
-            if(system == "android" && versionCode < 8){
+            if(system == "android" && versionCode < 10){
                 currentVersion = require('./app_ctrl.config')();
             }
             data = currentVersion;
