@@ -459,6 +459,11 @@ $ratio: 1.165;
   padding-top: ratio(30);
   padding-right: ratio(30);
   margin-bottom: 45px;
+  @include e(average_time){
+    margin-top: 25px;
+    font-size: 12px;
+    font-weight: 200;
+  }
   @include e(title) {
     width: 100%;
     height: ratio(30);
