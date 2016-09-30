@@ -22,18 +22,18 @@
     <div class="re_trader_detail clearfix">
         <div class="re_trader_detail__table trader_box">
             <ul class="re_trader_detail__table-square small-text-font">
-                <li><span class="square_num trader_blue"><span ng-if="!master_info">__ __</span>{{ master_info.last_profit_close_rate }}%</span><span class="span square_des">准确率</span></li>
+                <li><span class="square_num trader_blue"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_profit_close_rate }}%</span><span class="span square_des">准确率</span></li>
                 <!-- <li><span class="square_num trader_blue"><span ng-if="!master_info">__ __</span>{{ master_info.max_retract }}</span><span class="span square_des">最大盈利点差</span></li> -->
-                <li><span class="square_num"><span ng-if="!master_info">__ __</span>{{ master_info.last_max_volume }}手</span><span class="square_des">最大开仓</span></li>
-                <li><span class="square_num"><span ng-if="!master_info">__ __</span>{{ master_info.last_total_close }}笔</span><span class="square_des">总平仓交易</span></li>
-                <li><span class="square_num"><span ng-if="!master_info">__ __</span>{{ master_info.win_count }}笔</span><span class="square_des">盈利订单</span></li>
-                <li><span class="square_num"><span ng-if="!master_info">__ __</span>{{ master_info.lose_count }}笔</span><span class="square_des">亏损订单</span></li>
-                <li><span class="square_num"><span ng-if="!master_info">__ __</span>{{ master_info.avg_position_time }}</span><span class="square_des">平均持仓时间</span></li>
-                <li><span class="square_num"><span ng-if="!master_info">__ __</span>{{ master_info.win_buy_count }}笔</span><span class="square_des">成功做多交易</span></li>
-                <li><span class="square_num"><span ng-if="!master_info">__ __</span>{{ master_info.win_sell_count }}笔</span><span class="square_des">成功做空交易</span></li>
-                <li><span class="square_num"><span ng-if="!master_info">__ __</span>{{ master_info.last_profit_rate }}%</span><span class="square_des">上一日交易状况</span></li>
-                <li><span class="square_num"><span ng-if="!master_info">__ __</span>{{ master_info.last_week_profit_rate }}%</span><span class="square_des">近七日交易状况</span></li>
-                <li><span class="square_num"><span ng-if="!master_info">__ __</span>{{ master_info.avg_month_close }}笔</span><span class="square_des">月平均交易笔数</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_max_volume }}手</span><span class="square_des">最大开仓</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_total_close }}笔</span><span class="square_des">总平仓交易</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.win_count }}笔</span><span class="square_des">盈利订单</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.lose_count }}笔</span><span class="square_des">亏损订单</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.avg_position_time }}</span><span class="square_des">平均持仓时间</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.win_buy_count }}笔</span><span class="square_des">成功做多交易</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.win_sell_count }}笔</span><span class="square_des">成功做空交易</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_profit_rate }}%</span><span class="square_des">上一日交易状况</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_week_profit_rate }}%</span><span class="square_des">近七日交易状况</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.avg_month_close }}笔</span><span class="square_des">月平均交易笔数</span></li>
             </ul>
         </div>
         <div class="re_trader_detail__areaChart trader_box">
