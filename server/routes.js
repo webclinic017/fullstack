@@ -439,14 +439,14 @@ module.exports = function(app) {
             if (system == "android") {
                 data = [
                     {
-                        image: URL_PATH + "/activity/banner/banner1_20160908.png",
-                        url: URL_PATH + "/bd/t27",
+                        image: URL_PATH + "/activity/banner/banner1_20160930.png",
+                        url: URL_PATH + "/bd/t31",
                         title: "活动详情"
                     },
                     {
                         image: URL_PATH + "/activity/banner/banner3_20160810.png",
-                        url: URL_PATH + "/m/regular/detail/10",
-                        title: "【MACD月盈201609-01】"
+                        url: URL_PATH + "/m/regular/detail/11",
+                        title: "【MACD月盈201610-01】"
                     },
                     {
                         image: URL_PATH + "/activity/banner/banner_android_20160921.jpg",
@@ -457,13 +457,13 @@ module.exports = function(app) {
             } else {
                 data = [
                   {
-                    image: URL_PATH + "/activity/banner/banner1_20160908.png",
-                    url: URL_PATH + "/bd/t27",
+                    image: URL_PATH + "/activity/banner/banner1_20160930.png",
+                    url: URL_PATH + "/bd/t31",
                     title: "活动详情"
                   },
                   {
-                    image: URL_PATH + "/activity/banner/banner2_20160908.png",
-                    url: URL_PATH + "/bd/t27",
+                    image: URL_PATH + "/activity/banner/banner2_20160930.png",
+                    url: URL_PATH + "/bd/t31",
                     title: "活动详情"
                   },
                   {
