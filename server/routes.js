@@ -170,6 +170,7 @@ module.exports = function(app) {
         var usercode = req.params.usercode;
         setCompanyCookie(res);
         request(URL_PATH + '/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
+        // request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
             if (!error && response.statusCode == 200) {
                 // console.info(body);
                 body = JSON.parse(body);
@@ -467,8 +468,8 @@ module.exports = function(app) {
                   },
                   {
                     image: URL_PATH + "/activity/banner/banner3_20160810.png",
-                    url: URL_PATH + "/m/regular/detail/10",
-                    title: "【MACD月盈201609-01】"
+                    url: URL_PATH + "/m/regular/detail/11",
+                    title: "【MACD月盈201610-01】"
                   }
                 ];
             }
