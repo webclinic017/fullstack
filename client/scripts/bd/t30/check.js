@@ -9,8 +9,13 @@ $(document).ready(function() {
     var pid = '';
     var unit = '';
     var key = '';
+
+    var hostnameUrl = window.location.hostname;
+    var originUrl = window.location.origin;
+    var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.')+1) || "tigerwit.com";
+    console.info(originUrl);
     lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
-    if (lp != "") { document.cookie = 'lp=' + lp + ';path=/;domain=tigerwit.com'; }
+    if (lp != "") { document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl; }
 
     if (window.location.href.indexOf("?") >= 0) {
         var aQuery = window.location.href.split("?");
@@ -26,9 +31,9 @@ $(document).ready(function() {
         unit = aGET['unit'] ? aGET['unit'] : "";
         key = aGET['key'] ? aGET['key'] : "";
 
-        if (pid != "") { document.cookie = 'pid=' + pid + ';path=/;domain=tigerwit.com'; }
-        if (unit != "") { document.cookie = 'unit=' + unit + ';path=/;domain=tigerwit.com'; }
-        if (key != "") { document.cookie = 'key=' + key + ';path=/;domain=tigerwit.com'; }
+        if (pid != "") { document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl; }
+        if (unit != "") { document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl; }
+        if (key != "") { document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl; }
     }
 
     function regist(){
@@ -100,9 +105,9 @@ $(document).ready(function() {
             tmpForm.appendTo("body");
             var returnurl;
             if (isPC()) {
-                returnurl = "https://www.tigerwit.com/space/#/account/register?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
+                returnurl = originUrl + "/space/#/account/register?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
             } else {
-                returnurl = "https://www.tigerwit.com/wap/#/account/register?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
+                returnurl = originUrl + "/wap/#/account/register?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
             }
             jQuery.ajax({
                 url: '/action/public/v3/page_signup',
