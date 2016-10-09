@@ -351,6 +351,7 @@ module.exports = function(app) {
     app.route('/napi').get(function(req, res){
         var action = req.query.action;
         var model = require('./model/modelRegular');
+        var napiConfigInfo = require('./app_napi.config.js');
         var page,pagesize,sum;
         var page_total = 0;
         var data = null;
@@ -398,6 +399,7 @@ module.exports = function(app) {
         if (action == "version_check") {
             var system = req.query.system;
             var versionCode = req.query.version_code;
+            var versinInfo = require('./app_ctrl.config');
             // var currentVersion = {
             //     version_name: "V2.0",
             //     description: "上线全新外汇产品，交互全新改版!",
@@ -410,68 +412,19 @@ module.exports = function(app) {
                 url: "",
                 force_update: false
             };
-            if(system == "android" && versionCode < 10){
-                currentVersion = require('./app_ctrl.config')();
+            
+            if(system == "android" && versionCode < versinInfo.currentVersionCode){
+                currentVersion = versinInfo.getAppInfo();
             }
             data = currentVersion;
         }
         if (action == "get_banner_info") {
             var system = req.query.system;
             
-            //data = [
-            //    {
-            //        image: "https://www.tigerwit.com/activity/banner/banner1_20160810.png",
-            //        url: "https://www.tigerwit.com/bd/t30",
-            //        title: "活动详情"
-            //    },
-            //    {
-            //        image: "https://www.tigerwit.com/activity/banner/banner2_20160810.png",
-            //        url: "https://www.tigerwit.com/bd/t30",
-            //        title: "活动详情"
-            //    },
-            //    {
-            //        image: "https://www.tigerwit.com/activity/banner/banner3_20160810.png",
-            //        url: "https://www.tigerwit.com/m/regular/detail/9",
-            //        title: "【汇赢全球月盈 201608-2】"
-            //    }
-            //];
-            
             if (system == "android") {
-                data = [
-                    {
-                        image: URL_PATH + "/activity/banner/banner1_20160930.png",
-                        url: URL_PATH + "/bd/t31",
-                        title: "活动详情"
-                    },
-                    {
-                        image: URL_PATH + "/activity/banner/banner3_20160810.png",
-                        url: URL_PATH + "/m/regular/detail/11",
-                        title: "【MACD月盈201610-01】"
-                    },
-                    {
-                        image: URL_PATH + "/activity/banner/banner_android_20160921.jpg",
-                        url: "http://www.8yuu.com/down/dowd.html ",
-                        title: "活动详情"
-                    }
-                ];
+                data = napiConfigInfo.getBannerInfoAndroid();
             } else {
-                data = [
-                  {
-                    image: URL_PATH + "/activity/banner/banner1_20160930.png",
-                    url: URL_PATH + "/bd/t31",
-                    title: "活动详情"
-                  },
-                  {
-                    image: URL_PATH + "/activity/banner/banner2_20160930.png",
-                    url: URL_PATH + "/bd/t31",
-                    title: "活动详情"
-                  },
-                  {
-                    image: URL_PATH + "/activity/banner/banner3_20160810.png",
-                    url: URL_PATH + "/m/regular/detail/11",
-                    title: "【MACD月盈201610-01】"
-                  }
-                ];
+                data = napiConfigInfo.getBannerInfoIos();
             }
         }
         if(data){
