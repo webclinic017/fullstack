@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <% include ../common/metas.html %>
+    <% include common/metas.html %>
     <title><%=lang.text("title")%> 直通全球资本市场</title>
     <meta name="description" content="<%=lang.text("companyZhName")%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
 
@@ -16,7 +16,7 @@
 <body ng-app="fullstackApp" class="<%= lang_class%>">
     <div ng-controller="GlobalController">
         <div class="header">
-            <% include ../navbar/main.html %>
+            <% include navbar/main.html %>
         </div>
         <div class="body" style="background-color: #fafafa;">
             <div class="container">
@@ -62,7 +62,7 @@
             </div>
         </div>
         <div class="footer">
-            <% include ../common/footer.html %>
+            <% include common/footer.html %>
         </div>
     </div>
     <% include vendor.js.html %>
