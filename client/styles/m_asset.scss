@@ -1,0 +1,142 @@
+@include b(m_withdraw) {
+    font-family: PingFangSC;
+    @include e(home) {
+
+        @include m(rate) {
+            color: #666;
+            padding: px2rem(52) 0 px2rem(52) px2rem(52);
+            font-weight: 600;
+        }
+        @include m(info) {
+            background-color: #fff;
+            border-top: 1px solid #dfdfdf;
+            border-bottom: 1px solid #dfdfdf;
+            padding-left: px2rem(52);
+            padding-right: px2rem(52);
+
+            .tit {
+                color: #666;
+                padding-top: px2rem(30);
+                padding-bottom: px2rem(30);
+                font-weight: 600;
+            }
+
+            label {
+                display: block;
+                font-size: px2rem(80);
+                font-weight: 600;
+                color: #2b2b2b;
+                border-bottom: 1px solid #eee;
+                padding-bottom: px2rem(24);
+                margin-bottom: px2rem(32);
+
+                /*placeholder字体大小*/  
+                ::-webkit-input-placeholder { /* WebKit browsers */  
+                    font-size: px2rem(60);
+                }  
+                :-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
+                    font-size: px2rem(60);
+                }  
+                ::-moz-placeholder { /* Mozilla Firefox 19+ */  
+                    font-size: px2rem(60);
+                }  
+                :-ms-input-placeholder { /* Internet Explorer 10+ */  
+                    font-size: px2rem(60);
+                }  
+
+                .m_withdraw_num {
+                    width: 85%;
+                    border: none;
+                    padding-left: px2rem(8);
+                }
+            }
+
+            .tip {
+                color: #999;
+                margin-bottom: px2rem(32);
+            }
+        }
+        @include m(btn) {
+            padding: px2rem(60) px2rem(52) 0;
+
+            .m_withdraw_btn {
+                display: inline-block;
+                background-color: #fedd14;
+                font-size: px2rem(36);
+                font-weight: 600;
+                color: #000;
+                width: 100%;
+                height: px2rem(88);
+                line-height: px2rem(88);
+                text-align: center;
+            }
+        }
+    }
+
+    @include e(cardlist) {
+        .bankCard {
+            padding-top: px2rem(40);
+        }
+
+        .operateCard {
+            padding: 0 px2rem(56);
+            height: px2rem(88);
+            line-height: px2rem(88);
+            background-color: #fff;
+            font-size: px2rem(36);
+
+            .fa.fa-angle-right {
+                font-size: px2rem(36);
+                float: right;
+                line-height: px2rem(88);
+                font-size: 18px;
+            }
+
+            .tit {
+                color: #000;
+                font-weight: 600;
+                padding-left: px2rem(24);
+            }
+        }
+
+        @include m(bank) {
+            background-color: #fedd14;
+            border-radius: 8px;
+            height: px2rem(236);
+            margin: 0 px2rem(36) px2rem(40);
+            padding: px2rem(36);
+
+            .bank-icon {
+                width: px2rem(100);
+                height: px2rem(100);
+                float: left;
+            }
+            .bank-info {
+                float: left;
+                margin-left: px2rem(44);
+
+                span {
+                    display: block;
+                    color: #666;
+                    font-weight: 600;
+                    margin-top: 2px;
+
+                    &.num {
+                        font-size: px2rem(48);
+                        color: #2b2b2b;
+                    }
+                }
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+}

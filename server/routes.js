@@ -160,7 +160,11 @@ module.exports = function(app) {
     /*出入金流程*/
     app.route('/m/asset').get(function(req, res){
         setCompanyCookie(res);
-        res.render('m_asset', extendPublic({}, req));
+        res.render('m_asset', {});
+    });
+    app.route('/m/asset/cardlist').get(function(req, res){
+        setCompanyCookie(res);
+        res.render('m_asset_cardlist', {});
     });
 
     /*--------------------APP-End-------------------------*/

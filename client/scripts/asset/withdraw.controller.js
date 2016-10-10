@@ -61,6 +61,7 @@
 
         // 判断出金状态, 获取可提取的最大金额
         asset.getIsWithdraw().then(function (data) {
+            console.info(data);
             $scope.message = data;
             $scope.withdraw.maxAmount = data.balance < 0 ? 0 : data.balance;
 
