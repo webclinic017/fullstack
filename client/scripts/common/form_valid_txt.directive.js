@@ -18,7 +18,7 @@
             restrict: 'A',
             require: '?ngModel',
             link: function (scope, element, attrs, controller) {
-                var type = attrs.type,
+                var type = attrs.txtType,
                     minLen = attrs.minLen,
                     maxLen = attrs.maxLen;
 
