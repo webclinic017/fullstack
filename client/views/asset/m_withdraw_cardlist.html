@@ -16,10 +16,12 @@
     <ul>
         <$for(var i=0;i<cardList.length;i++){$>
             <li class="m_withdraw__cardlist-bank clearfix">
-                <div class="bank-icon bank-icon-<$= cardList[i].bank_name$>"></div>
+                <div class="bank-icon">
+                    <div class="m_icon-bank m_icon-bank-<$= cardList[i].bank_name$>"></div>
+                </div>
                 <div class="bank-info">
                     <span><$= cardList[i].bank_name_zh$></span>
-                    <span>持卡人：momom</span>
+                    <span>持卡人：<$= cardList[i].realname$></span>
                     <span class="num">**** **** **** <$= cardList[i].card_no.substring(1)$></span>
                 </div>
             </li>  

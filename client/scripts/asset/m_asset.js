@@ -5,11 +5,19 @@ $(document).ready(function () {
     var canWithdrawBalance = 0;
     // 提现金额
     var widthdrawNum = 0;
+    // 持卡人真实姓名
+    var realname;
 
     // 出金多个页面共用一个js文件，通过class为m_withdraw的data-page属性区分不同页面
-    var $mWithdraw = $(".m_withdraw");
-    var dataAttr = $mWithdraw.attr("data-page");
+    var dataAttr = $(".m_withdraw").attr("data-page");
     // console.info(dataAttr);
+
+    // 获取url search参数方法
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substring(1).match(reg);  //匹配目标参数
+        if (r != null) return decodeURIComponent(r[2]); return null; //返回参数值
+    }
 
     /*
      * page1
@@ -79,7 +87,7 @@ $(document).ready(function () {
     });
 
     function toCardList () {
-        var action_address = window.location.origin + "/m/asset/cardlist?amount="+widthdrawNum;
+        var action_address = window.location.origin + "/m/asset/cardlist?amount="+encodeURIComponent(widthdrawNum);
         console.info(action_address);
         callNative({
             type: "openUrl",
@@ -93,9 +101,36 @@ $(document).ready(function () {
      */
     if (dataAttr == "page2") {
         console.log("this is page2");
-        getCard();
+        getPersonalInfo();
     }
-    
+
+    // 跳转到绑定银行卡页面
+    var $toAddCardBtn = $(".m_withdraw__cardlist .operateCard");
+
+    $toAddCardBtn.on("touchend", function () {
+        widthdrawNum = getUrlParam("amount");
+        var action_address = window.location.origin + "/m/asset/addcard1?amount="+encodeURIComponent(widthdrawNum)+"&realname="+encodeURIComponent(realname);
+        console.info(action_address);
+        callNative({
+            type: "openUrl",
+            url: action_address
+        });
+    });
+
+    // 获取真实姓名以及银行卡信息
+    function getPersonalInfo () {
+        $.get('/action/public/v4/get_info').then(function (data) {
+            data = JSON.parse(data);
+            
+            if (data.is_succ) {
+                realname = data.data.realname;
+                getCard();
+            }
+        }, function (err) {
+            console.log(err);
+        });
+    }
+       
     function getCard() {
         $.get('/action/public/v4/query_bankcard').then(function (data) {
             console.info(data);
@@ -114,6 +149,7 @@ $(document).ready(function () {
             // 循环拿到的card信息，去和config中的bank信息比较，找到对应的中文name
             $.each(cardInfo.cardList, function (index, value) {
                 value.bank_name_zh = undefined;
+                value.realname = realname;
 
                 $.each(banks, function (index2, value2) {
                     if (value.bank_name === value2.nameEN) {
@@ -151,9 +187,35 @@ $(document).ready(function () {
             console.info(err);
         });
     }
-    
+ 
+    // getH5Config 方法是定义在window上的全局函数，用于获取一些公共的配置数据
     function getBanksInfo() {
         var banks = getH5Config().banks;
         return banks;
     }
+
+    /*
+     * page3
+     * 绑定银行卡
+     */
+    var $realname = $(".m_withdraw__addcard-info input[name='realname']");
+
+    if (dataAttr == "page3") {
+        console.log("this is page3");
+        getRealname();
+    }
+
+    function getRealname() {
+        realname = getUrlParam("realname");
+        console.info($realname);
+        $realname.val(realname);
+    }
+
+
+
+
+
+
+
+
 });

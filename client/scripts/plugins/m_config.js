@@ -1,3 +1,7 @@
+/*
+ *  getH5Config 定义在window上，用来配置H5页面公共的数据或方法
+ *  TODO 目前是H5的出金页面引用并调用方法，如有需要可以打包到vendor.js
+ */
 (function () {
     'use strict';
 

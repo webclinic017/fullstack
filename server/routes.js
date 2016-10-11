@@ -166,6 +166,14 @@ module.exports = function(app) {
         setCompanyCookie(res);
         res.render('m_asset_cardlist', {});
     });
+    app.route('/m/asset/addcard1').get(function(req, res){
+        setCompanyCookie(res);
+        res.render('m_asset_addcard01', {});
+    });
+    app.route('/m/asset/addcard2').get(function(req, res){
+        setCompanyCookie(res);
+        res.render('m_asset_addcard02', {});
+    });
 
     /*--------------------APP-End-------------------------*/
 
