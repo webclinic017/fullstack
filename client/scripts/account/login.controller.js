@@ -69,6 +69,11 @@
                                 $scope.backErr.id.show = true;
                                 $scope.backErr.id.status = 2;
                             }
+                            // 帐号注销
+                            if (data.error_code === 5) {
+                                $scope.backErr.id.show = true;
+                                $scope.backErr.id.status = 3;
+                            }
 
                             // 系统错误
                             if (data.error_code === 2) {
