@@ -347,6 +347,9 @@ module.exports = function(app) {
             res.render('bd_t31', extendPublic({}, req));
         }
     });
+    app.route('/bd/t31_game').get(function(req, res){
+        res.render('bd_mt31_game', extendPublic({}, req))
+    });
     // nodeAPI
     app.route('/napi').get(function(req, res){
         var action = req.query.action;
