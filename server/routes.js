@@ -174,6 +174,14 @@ module.exports = function(app) {
         setCompanyCookie(res);
         res.render('m_asset_addcard02', {});
     });
+    app.route('/m/asset/succ').get(function(req, res){
+        setCompanyCookie(res);
+        res.render('m_asset_succ', {});
+    });
+    app.route('/m/asset/fail').get(function(req, res){
+        setCompanyCookie(res);
+        res.render('m_asset_fail', {});
+    });
 
     /*--------------------APP-End-------------------------*/
 

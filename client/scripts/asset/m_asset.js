@@ -7,6 +7,25 @@ $(document).ready(function () {
     var widthdrawNum = 0;
     // 持卡人真实姓名
     var realname;
+    // 已经绑定过的银行卡id号，若未绑定过，id为'';
+    var id;
+    // 银行卡正则
+    var bankCardNumber = {
+        tip: '银行卡卡号为 12-19 位数字',
+        reg: /^\d{12,19}$/
+    };
+    // baiduTemplate 模版 http://baidufe.github.io/BaiduTemplate/
+    //可以设置分隔符
+    //bt.LEFT_DELIMITER='<!';
+    //bt.RIGHT_DELIMITER='!>';
+
+    //可以设置输出变量是否自动HTML转义
+    //bt.ESCAPE = false;
+
+    //使用baidu.template命名空间
+    var bt=baidu.template;
+    bt.LEFT_DELIMITER = '<$';
+    bt.RIGHT_DELIMITER = '$>';
 
     // 出金多个页面共用一个js文件，通过class为m_withdraw的data-page属性区分不同页面
     var dataAttr = $(".m_withdraw").attr("data-page");
@@ -19,10 +38,22 @@ $(document).ready(function () {
         if (r != null) return decodeURIComponent(r[2]); return null; //返回参数值
     }
 
+    // getH5Config 方法是定义在window上的全局函数，用于获取一些公共的配置数据
+    function getBanksInfo() {
+        var banks = getH5Config().banks;
+        return banks;
+    }
+
     /*
      * page1
      * 填写出金金额，获取当前汇率、可提现金额
      */
+    var $currentRate = $(".m_withdraw__home-rate span");
+    var $isWithdrawBalance = $(".m_withdraw__home-info .tip span");
+    var $withdrawErrMsg = $(".m_withdraw__home-info .err_msg");
+    var $toCardListBtn = $(".m_withdraw__home-btn .m_withdraw_btn");
+    var $withdrawNum = $(".m_withdraw__home-info label .m_withdraw_num");
+
     if (dataAttr == "page1") {
         console.log("this is page1");
         getCurrentRate();
@@ -30,8 +61,6 @@ $(document).ready(function () {
     }
     
     // 获取当前汇率
-    var $currentRate = $(".m_withdraw__home-rate span");
-
     function getCurrentRate () {
         $.get('/api/v1/get_parity').then(function (data) {
             console.info(data);
@@ -43,9 +72,6 @@ $(document).ready(function () {
         });
     }
     // 获取出金状态
-    var $isWithdrawBalance = $(".m_withdraw__home-info .tip span");
-    var $withdrawErrMsg = $(".m_withdraw__home-info .err_msg");
-
     function getIsWithdraw () {
         $.get('/action/public/v4/check_withdraw').then(function (data) {
             // console.info(data);
@@ -66,9 +92,6 @@ $(document).ready(function () {
     }
 
     // 跳转到银行卡列表页面
-    var $toCardListBtn = $(".m_withdraw__home-btn .m_withdraw_btn");
-    var $withdrawNum = $(".m_withdraw__home-info label .m_withdraw_num");
-
     $toCardListBtn.on("touchend", function () {
         if (isNext) {
             widthdrawNum = Number($withdrawNum.val());
@@ -87,7 +110,9 @@ $(document).ready(function () {
     });
 
     function toCardList () {
-        var action_address = window.location.origin + "/m/asset/cardlist?amount="+encodeURIComponent(widthdrawNum);
+        var action_address = window.location.origin +
+                             "/m/asset/cardlist?amount=" +
+                             encodeURIComponent(widthdrawNum);
         console.info(action_address);
         callNative({
             type: "openUrl",
@@ -99,23 +124,11 @@ $(document).ready(function () {
      * page2
      * 获取银行卡信息
      */
+
     if (dataAttr == "page2") {
         console.log("this is page2");
         getPersonalInfo();
     }
-
-    // 跳转到绑定银行卡页面
-    var $toAddCardBtn = $(".m_withdraw__cardlist .operateCard");
-
-    $toAddCardBtn.on("touchend", function () {
-        widthdrawNum = getUrlParam("amount");
-        var action_address = window.location.origin + "/m/asset/addcard1?amount="+encodeURIComponent(widthdrawNum)+"&realname="+encodeURIComponent(realname);
-        console.info(action_address);
-        callNative({
-            type: "openUrl",
-            url: action_address
-        });
-    });
 
     // 获取真实姓名以及银行卡信息
     function getPersonalInfo () {
@@ -142,8 +155,9 @@ $(document).ready(function () {
 
             if (data.is_succ) {
                 cardInfo.cardList.push(data.data);
+                id = data.data.id ? data.data.id : '';
             } else {
-
+                console.log("获取银行卡列表信息失败了");
             }
 
             // 循环拿到的card信息，去和config中的bank信息比较，找到对应的中文name
@@ -162,36 +176,73 @@ $(document).ready(function () {
                 }
             });
 
-            // baiduTemplate 模版 http://baidufe.github.io/BaiduTemplate/
-
-            //使用baidu.template命名空间
-            var bt=baidu.template;
-            bt.LEFT_DELIMITER = '<$';
-            bt.RIGHT_DELIMITER = '$>';
-
-            //可以设置分隔符
-            //bt.LEFT_DELIMITER='<!';
-            //bt.RIGHT_DELIMITER='!>';
-
-            //可以设置输出变量是否自动HTML转义
-            //bt.ESCAPE = false;
-
-            //最简使用方法
+            //使用template模版
             var html=bt('template_cardlist',cardInfo);
             // console.info(cardInfo);
 
             //渲染
-            $(".bankCard").html(html);
+            $(".m_withdraw__cardlist").html(html);
+
+            var $toAddCardBtn = $(".m_withdraw__cardlist .operateCard");
+            var $withdrawBtn = $(".m_withdraw__cardlist .m_withdraw__cardlist-bank");
+
+            // 跳转到绑定银行卡页面
+            $toAddCardBtn.on("touchend", function () {
+                widthdrawNum = getUrlParam("amount");
+                var action_address = window.location.origin + 
+                                     "/m/asset/addcard1?amount=" +
+                                     encodeURIComponent(widthdrawNum) +
+                                     "&realname="+encodeURIComponent(realname) +
+                                     "&id="+encodeURIComponent(id);
+                console.info(action_address);
+                callNative({
+                    type: "openUrl",
+                    url: action_address
+                });
+            });
+
+            // 出金
+            $withdrawBtn.on("touchend", function () {
+                widthdrawNum = getUrlParam("amount");
+                $.post('/action/public/v4/withdraw', {
+                    amount: widthdrawNum,
+                    id: id
+                }).then(function (data) {
+                    console.info(data);
+                    data = JSON.parse(data);
+                    if (data.is_succ) {
+                        var action_address = window.location.origin +
+                                     "/m/asset/succ";
+                        console.info(action_address);
+                        callNative({
+                            type: "openUrl",
+                            url: action_address
+                        });
+                    } else {
+                        var action_address = window.location.origin +
+                                     "/m/asset/fail?msg=" +
+                                     encodeURIComponent(data.error_msg);
+                        console.info(action_address);
+                        callNative({
+                            type: "openUrl",
+                            url: action_address
+                        });
+                    }
+                }, function (err) {
+                    console.log("出金申请提交失败");
+                    var action_address = window.location.origin +
+                                     "/m/asset/fail";
+                    console.info(action_address);
+                    callNative({
+                        type: "openUrl",
+                        url: action_address
+                    });
+                });
+            });
             
         }, function (err) {
             console.info(err);
         });
-    }
- 
-    // getH5Config 方法是定义在window上的全局函数，用于获取一些公共的配置数据
-    function getBanksInfo() {
-        var banks = getH5Config().banks;
-        return banks;
     }
 
     /*
@@ -199,23 +250,185 @@ $(document).ready(function () {
      * 绑定银行卡
      */
     var $realname = $(".m_withdraw__addcard-info input[name='realname']");
+    var $cardnum = $(".m_withdraw__addcard-info input[name='cardnum']");
+    var $addCardBtn1 = $(".m_withdraw__addcard-btn .card1_btn");
 
     if (dataAttr == "page3") {
         console.log("this is page3");
         getRealname();
     }
 
+    // 跳转到绑定银行卡页面2
+    $addCardBtn1.on("touchend", function () {
+        var cardNum = isSuccAddCard1();
+        
+        if (cardNum) {
+            widthdrawNum = getUrlParam("amount");
+            id = getUrlParam("id");
+            var action_address = window.location.origin + 
+                                 "/m/asset/addcard2?amount=" + 
+                                 encodeURIComponent(widthdrawNum) +
+                                 "&realname="+encodeURIComponent(realname) +
+                                 "&id="+encodeURIComponent(id) +
+                                 "&cardnum="+encodeURIComponent(cardNum);
+            console.info(action_address);
+            callNative({
+                type: "openUrl",
+                url: action_address
+            });
+        } else {
+            console.log("银行卡卡号输入不正确");
+        }
+    });
+
     function getRealname() {
         realname = getUrlParam("realname");
-        console.info($realname);
         $realname.val(realname);
     }
 
+    // 绑定银行卡第一步是否完成
+    function isSuccAddCard1() {
+        var cardNum = $cardnum.val();
+        var isLawful = cardNum.match(bankCardNumber.reg);
 
+        if (isLawful) {
+            return cardNum;
+        } else {
+            return false;
+        }
+    }
 
+    /*
+     * page4
+     * 绑定银行卡2
+     */
+    var $bank = $(".m_withdraw__addcard-info select");
+    var $branch = $(".m_withdraw__addcard-info input[name='branch']");
+    var $addCardBtn2 = $(".m_withdraw__addcard-btn .card2_btn");
 
+    if (dataAttr == "page4") {
+        console.log("this is page4");
+        setBankList();
+    }
 
+    // 选取时清除class
+    $bank.on("touchend", function () {
+        $(this).removeClass("init");
+        $(this).removeClass("err");
+    });
+    $branch.on("touchend", function () {
+        $(this).parent().removeClass("err");
+    });
 
+    // 跳转到银行卡列表页面
+    $addCardBtn2.on("touchend", function () {
+        var banksInfo = isSuccAddCard2();
+
+        if (banksInfo.bank && banksInfo.branch) {
+            var number = getUrlParam("cardnum");
+            var id = getUrlParam("id");
+            // 绑定银行卡
+            $.post('/action/public/v4/binding_bankcard', {
+                card_no: number,
+                bank_name: banksInfo.bank,
+                bank_addr: banksInfo.branch,
+                id: id
+            }).then(function (data) {
+                console.info(data);
+                data = JSON.parse(data);
+                if (data.is_succ) {
+                    widthdrawNum = getUrlParam("amount");
+                    var action_address = window.location.origin + 
+                             "/m/asset/cardlist?amount=" +
+                             encodeURIComponent(widthdrawNum);
+                    console.info(action_address);
+                    callNative({
+                        type: "openUrl",
+                        url: action_address
+                    });
+                } else {
+                    console.log(data.error_msg);
+                }
+            });
+        } else {
+            console.log("未填写银行名称、支行名称");
+        }
+    });
+
+    function setBankList() {
+        var banksInfoLst = {
+            banks: getBanksInfo()
+        };
+
+        //使用template模版
+        var html=bt('template_banklist',banksInfoLst);
+
+        $bank.html(html);
+    }
+
+    // 绑定银行卡第二步是否完成
+    function isSuccAddCard2() {
+        var bank = $bank.val();
+        var branch = $branch.val();
+        var isLawful = {
+            bank: false,
+            branch: false
+        };
+        
+        if (bank) {
+            isLawful.bank = bank;
+        } else {
+            $bank.addClass("err");
+            console.log("请选择发卡银行");
+        }
+
+        if (branch) {
+            isLawful.branch = branch;
+        } else {
+            $branch.parent().addClass("err");
+            console.log("请填写支行名称");
+        }
+
+        return isLawful;
+    }
+
+    /*
+     * page5
+     * 出金申请失败
+     */
+    var $succToPersonalPage = $(".m_withdraw__succ-btn .m_withdraw_btn");
+
+    if (dataAttr == "page5") {
+        console.log("this is page5");
+    }
+
+    $succToPersonalPage.on("touchend", function () {
+        console.log("成功了，前往个人中心");
+    });
+
+    /*
+     * page6
+     * 出金申请失败
+     */
+    var $failTip = $(".m_withdraw__fail-tip");
+    var $failToPersonalPage = $(".m_withdraw__fail-btn .m_withdraw_btn");
+
+    if (dataAttr == "page6") {
+        console.log("this is page6");
+        getFailMsg();
+    }
+
+    $failToPersonalPage.on("touchend", function () {
+        console.log("失败了，前往个人中心");
+    });
+
+    function getFailMsg () {
+        var msg = getUrlParam("msg");
+
+        if (msg) {
+            $failTip.html(msg);
+        }
+    }
 
 
 });
