@@ -31,7 +31,7 @@
                        ng-class="{'form-control-error': (frontErr.username.show && registerForm.username.$invalid) || (backErr.username.show && backErr.username.status > 0)}"
                        ng-model="account.username"
                        twform-valid-txt
-                       data-type="username"
+                       data-txt-type="username"
                        data-min-len="4"
                        data-max-len="16"
                        ng-focus="hideErr('registerForm', 'username')"

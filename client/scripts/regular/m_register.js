@@ -163,8 +163,7 @@ $(document).ready(function () {
             // umeng
             callNative({
                 "type":"umeng",
-                "eventId":"banner",
-                "attributes" : {"order":"1"}
+                "eventId":"register"
             });
 
             /*获取当前input的值*/
