@@ -128,7 +128,7 @@
                         game.wxshare_mask.css({
                             "display": "block",
                             "top": 2 * game.cur_h
-                        }).html("<img src='/images/bd/end_share.png'>");
+                        });
                     } else {
                         _this.wxshare_mask.css({
                             display: "block",
@@ -259,16 +259,28 @@
                                 if (data.is_succ == true) {
                                     game.award_tips.css({display: "block"}).html("<span class='close_award_tip' id='close_award_tips'>x</span>我们已将您的历史最好成绩存入数据库中,活动结束后会公布排名,奖品将在活动结束后10个工作日内进行派发,请耐心等候~<br/>");
                                 } else {
+
                                     if (data.error_msg == "登录超时或者没有登录") {
-                                        game.award_tips.css({display: "block"}).html(data.error_msg + ",即将返回首页");
-                                        setTimeout(function () {
-                                            game.game_box.css({
-                                                "top": "0"
-                                            });
-                                        }, 1000)
+
+                                        var tip = "由于您未登录，所示奖励仅为当前排名对应奖励，活动排名奖励根据活动结束时最终排名而定，为保证您获奖的权益，建议您关注公众号在微信中打开游戏并登录，及时更新游戏排名";
+                                        _this.award_tips.css({
+                                            display: "block"
+                                        }).html(tip);
+
                                     } else {
                                         game.award_tips.css({display: "block"}).html(data.error_msg + ",点我重新领取!");
                                     }
+
+                                    //if (data.error_msg == "登录超时或者没有登录") {
+                                    //    game.award_tips.css({display: "block"}).html(data.error_msg + ",即将返回首页");
+                                    //    setTimeout(function () {
+                                    //        game.game_box.css({
+                                    //            "top": "0"
+                                    //        });
+                                    //    }, 1000)
+                                    //} else {
+                                    //    game.award_tips.css({display: "block"}).html(data.error_msg + ",点我重新领取!");
+                                    //}
                                 }
                             },
                             error: function () {
@@ -376,11 +388,11 @@
                         type: "post",
                         data: {result_time: _this.score_sec},
 
-                        beforeSend: function () {
-                            _this.end_tips.css({
-                                display: "block"
-                            }).html("登录状态校验中...");
-                        },
+                        // beforeSend: function () {
+                        //     _this.end_tips.css({
+                        //         display: "block"
+                        //     }).html("登录状态校验中...");
+                        // },
 
                         success: function (data) {
                             data = JSON.parse(data);
@@ -389,6 +401,9 @@
                                 //将击败了多少人写入微信分享
                                 window.wx_game.hit_num = data.hit;
                                 $(window.document).trigger("hitDone");
+                                _this.end_tips.css({
+                                    display: "none"
+                                })
                             } else if (data.is_succ == false) {
 
                                 if(window.wx_game.isWeixin){
@@ -406,19 +421,19 @@
                                     });
                                 }
 
-                                if (data.error_msg == "登录超时或者没有登录") {
-                                    var tip = "由于您未登录，所示奖励仅为当前排名对应奖励，活动排名奖励根据活动结束时最终排名而定，为保证您获奖的权益，建议您关注公众号在微信中打开游戏并登录，及时更新游戏排名";
-                                    _this.end_tips.css({
-                                        display: "block"
-                                    }).html(tip);
+                                // if (data.error_msg == "登录超时或者没有登录") {
+                                //     var tip = "由于您未登录，所示奖励仅为当前排名对应奖励，活动排名奖励根据活动结束时最终排名而定，为保证您获奖的权益，建议您关注公众号在微信中打开游戏并登录，及时更新游戏排名";
+                                //     _this.end_tips.css({
+                                //         display: "block"
+                                //     }).html(tip);
 
-                                } else {
+                                // } else {
 
-                                    _this.end_tips.css({
-                                        display: "block"
-                                    }).html(data.error_msg + "<br/>本次成绩不记入排名<br/>点我返回首页");
+                                //     _this.end_tips.css({
+                                //         display: "block"
+                                //     }).html(data.error_msg + "<br/>本次成绩不记入排名<br/>点我返回首页");
 
-                                }
+                                // }
                             }
                         }
                     });

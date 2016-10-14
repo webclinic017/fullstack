@@ -51,10 +51,8 @@
                     window.wx_game.game_can_start = true;
 
                     //填入用户信息
-                    //头像
-                    $("#user_avator").css({
-                        background:"url("+info.headimgurl+") no-repeat!important"
-                    });
+                    //设置头像
+                    document.getElementById("user_avator").src = info.headimgurl;
 
                     //昵称
                     $("#username").html(info.nickname);
@@ -97,22 +95,29 @@
         console.log("用户还没有登录...")
     }
 
+    
     $(function() {
-        $.post("/action/public/wx/get_jssdk", function(data) {
-            var json = JSON.parse(data).data;
-            wx.config({
-                debug: true,
-                appId: json.appId,
-                timestamp: json.timestamp,
-                nonceStr: json.nonceStr,
-                signature: json.signature,
-                jsApiList: [
-                    'onMenuShareTimeline',
-                    'onMenuShareAppMessage',
-                    'onMenuShareQQ',
-                    'scanQRCode'
-                ]
-            });
+        $.ajax({
+            type:"post",
+            data:{
+                url:window.location.href
+            },
+            success:function(data){
+                var json = JSON.parse(data).data;
+                wx.config({
+                    debug: true,
+                    appId: json.appId,
+                    timestamp: json.timestamp,
+                    nonceStr: json.nonceStr,
+                    signature: json.signature,
+                    jsApiList: [
+                        'onMenuShareTimeline',
+                        'onMenuShareAppMessage',
+                        'onMenuShareQQ',
+                        'scanQRCode'
+                    ]
+                });
+            }
         });
     });
 
