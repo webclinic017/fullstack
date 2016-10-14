@@ -49,6 +49,7 @@
 
                     window.wx_game.userInfoHasLoaded = true;
                     window.wx_game.game_can_start = true;
+                    window.wx_game.hit_num = info.hit;
 
                     //填入用户信息
                     //设置头像
@@ -99,6 +100,7 @@
     $(function() {
         $.ajax({
             type:"post",
+            url:"/action/public/wx/get_jssdk",
             data:{
                 url:window.location.href
             },
@@ -122,8 +124,8 @@
     });
 
     wx.ready(function() {
-        console.log("wx_is_ready and hitDone event is binded");
-        $(document.body).bind("hitDone",function(){
+        //console.log("wx_is_ready and hitDone event is binded");
+        
             console.log("hitDone is loadding");
             //获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
             wx.onMenuShareAppMessage({
@@ -146,7 +148,7 @@
                 title: "我在“微盘大师”中击败了" + window.wx_game.hit_num + "%的用户，获得了"+ window.wx_game.awards +"。哇咔咔！！！",
                 desc: "快来比拼吧",
                 link: window.location.href,
-                imgUrl: "/activity/t31_game/share_pic.jpg",
+                imgUrl: "/activity/t31_game/share_pic_other.jpg",
                 trigger: function(res) {
 
                 },
@@ -164,7 +166,7 @@
                 title: "我在“微盘大师”中击败了" + window.wx_game.hit_num + "%的用户，获得了"+ window.wx_game.awards +"。哇咔咔！！！",
                 desc: "快来比拼吧",
                 link: window.location.href,
-                imgUrl: "/activity/t31_game/share_pic.jpg",
+                imgUrl: "/activity/t31_game/share_pic_other.jpg",
                 trigger: function(res) {
                 },
                 complete: function(res) {
@@ -186,6 +188,6 @@
                     var result = res.resultStr; // 当needResult 为 1 时，扫码返回的结果
                 }
             });
-        });
+        
     });
 }());

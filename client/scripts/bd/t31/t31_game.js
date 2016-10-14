@@ -399,8 +399,8 @@
                             console.log(data);
                             if (data.is_succ == true) {
                                 //将击败了多少人写入微信分享
-                                window.wx_game.hit_num = data.hit;
-                                $(window.document).trigger("hitDone");
+                                //window.wx_game.hit_num = data.hit;
+                                //$(window.document).trigger("hitDone");
                                 _this.end_tips.css({
                                     display: "none"
                                 })
