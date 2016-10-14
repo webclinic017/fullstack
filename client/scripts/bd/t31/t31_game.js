@@ -279,20 +279,21 @@
                 });
             }(this));
 
+
+
             // 自定义事件 开始游戏
             this.start_game.bind("start_game", function () {
 
                 if (window.wx_game.is_login) {
                     //绑定游戏可以开始事件 /因为要等待用户信息拉取成功才能开始
-                    _this.start_game.bind("game_can_start", function () {
+                    if(window.wx_game.game_can_start){
                         gaming();
-                    });
+                    }
                 } else {
                     gaming();
                 }
 
                 function gaming() {
-
                     //开启音乐
                     if (getStyle(_this.bgm_pause[0], "display") == "block") {
                         _this.audio.pause();

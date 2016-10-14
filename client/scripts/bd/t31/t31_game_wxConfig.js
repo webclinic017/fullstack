@@ -7,6 +7,7 @@
     window.wx_game.is_login = false;
     window.wx_game.userInfoHasLoaded = false;
     window.wx_game.awards = "";
+    window.wx_game.game_can_start = false;
     //检测微信环境
     window.wx_game.isWeixin = navigator.userAgent.toLowerCase().indexOf('micromessenger') != -1;
 
@@ -20,7 +21,7 @@
         });
     }
 
-    if(wx_token){ //已经登录
+    if(!!wx_token){ //已经登录
         window.wx_game.is_login = true;
         window.wx_game.wx_token = wx_token;
 
@@ -36,7 +37,7 @@
             url:"/action/public/wx/userinfo",
             type:"post",
             beforeSend:function(){
-                $("#land-tips").css("display","block");
+                $("#land-tips").css("display","block").html("正在获取您的信息!");
             },
 
             success:function(data){
@@ -44,8 +45,10 @@
                 var info = data.data;
                 if(data.is_succ == true){
 
-                    $("#land-tips").css("display","none");
+                    $("#land-tips").fadeOut(1000).html("您的信息已经获取成功!");
+
                     window.wx_game.userInfoHasLoaded = true;
+                    window.wx_game.game_can_start = true;
 
                     //填入用户信息
                     //头像
@@ -79,15 +82,14 @@
                     }
 
                     //触发游戏开始
-                    $("#start").trigger("game_can_start");
+                    //$("#start").trigger("start_game");
 
                 } else {
-
                     $("#land-tips").css("display","block").html(data.error_msg + "<br/>即将刷新");
 
                     setTimeout(function(){
                         window.location.href = window.location.href;
-                    },1000);
+                    },1500);
                 }
             }
         });
@@ -115,8 +117,9 @@
     });
 
     wx.ready(function() {
-
-        $(window.document).bind("hitDone",function(){
+        console.log("wx_is_ready and hitDone event is binded");
+        $(document.body).bind("hitDone",function(){
+            console.log("hitDone is loadding");
             //获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
             wx.onMenuShareAppMessage({
                 title: "我在“微盘大师”中击败了" + window.wx_game.hit_num + "%的用户，获得了"+ window.wx_game.awards +"。哇咔咔！！！",
@@ -180,5 +183,4 @@
             });
         });
     });
-
 }());
