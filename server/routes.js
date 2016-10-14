@@ -39,6 +39,10 @@ module.exports = function(app) {
     app.route('/baidu_verify_qTHsV5cQAY.html').get(function(req, res){
         res.render('../../client/baidu_verify_qTHsV5cQAY.html');
     });
+    //添加微信验证
+    app.route('/MP_verify_lcsRW9jGPf32n5Ka.txt').get(function(req, res){
+        res.render('../../client/MP_verify_lcsRW9jGPf32n5Ka.html');
+    });
     //爬虫配置
     app.route('/robots.txt').get(function(req, res){
         res.set('Content-Type', 'text/plain');
