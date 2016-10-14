@@ -184,12 +184,21 @@
 @include b(report) {
     margin-top: 30px;
 
-    > table > tbody > tr > td > img {
-        width: 175px;
+    > table > tbody > tr {
+        border-bottom: 1px solid #eee;
+
+        > td:first-child {
+            padding-left: 30px;
+            text-align: left;
+        }
     }
     
     @include e(title) {
-        color: $brand-info;
-        text-decoration: underline;
+        color: $gray-base;
+
+        &:hover {
+            color: $brand-info;
+            text-decoration: underline;
+        }
     }
 }
