@@ -30,15 +30,19 @@
             this.get_award = $("#get_award");
             this.get_award_now = $("#get_award_now");
             this.award_tips = $("#award_tips");
-            this.close_award_tips = $("#close_award_tips");
+            this.award_tips_words = $("#tip_words");
+            this.focus_tip = $("#focus_tip");
             this.end_tips = $("#end_tips");
+            this.close_tip = $(".close_tip");
+            this.close_award_tips = $("#close_award_tips");
             this.real_name = $("#real_name");
             this.real_tel = $("#real_tel");
             this.award_page = $("#award_page");
             this.focusWx = $("#focusWx");
-            this.focus_tip = $("#focus_tip");
             this.dowload_app_1 = $("#download_app_1");
             this.dowload_app_2 = $("#download_app_2");
+            this.award_tips_code = $("#award_tips_code");
+            this.award_wx_login = $("#award_wx_login");
 
             // 获取当前画布宽、高 --> 设置canvas的数据宽高;
             this.cur_w = parseInt(getStyle(this.cvs, 'width'));
@@ -56,9 +60,19 @@
                     return getComputedStyle(obj, false)[name];
                 }
             }
+            window.wx_game.login = function(){
+                var redirect_uri = window.location.protocol + "//" + window.location.hostname + '/action/public/wechat?redirect_url=' + encodeURIComponent(window.location.href);
+                var href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx6bbeaa275661873a&redirect_uri=" + encodeURIComponent(redirect_uri) + "&response_type=code&scope=snsapi_userinfo&state=#wechat_redirect";
+                window.location.href = href;
+            };
 
             //按钮控制
             (function (game) {
+                //关闭按钮
+                game.close_tip.on("touchend", function (e) {
+                    $(e.target).parent().fadeOut(400);
+                });
+
                 //为按钮添加激活样式
                 game.btns.on("touchstart", function (e) {
                     e.target.classList.add("active");
@@ -85,7 +99,7 @@
                     game.start_game.trigger("start_game");
                 });
 
-                //触发游戏开始
+                //游戏界面中的开始按钮
                 game.gp_start.on("touchend", function () {
                     //触发游戏开始
                     game.gpStart = true;
@@ -93,17 +107,9 @@
                     game.gp_game_rule.fadeOut(500);
                 });
 
-                //微信相关
-                game.wxlogin.on("tap", function () {
-                    var redirect_uri = window.location.protocol + "//" + window.location.hostname + '/action/public/wechat?redirect_url=' + encodeURIComponent(window.location.href);
-                    var href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx6bbeaa275661873a&redirect_uri=" + encodeURIComponent(redirect_uri) + "&response_type=code&scope=snsapi_userinfo&state=#wechat_redirect";
-                    window.location.href = href;
-                });
-
-                // 领取奖励相关
-                game.close_award_tips.on("tap", function () {
-                    game.award_tips.fadeOut(500);
-                    return false;
+                //微信登录
+                game.wxlogin.on("touchend", function () {
+                    window.wx_game.login();
                 });
 
                 // 游戏结束页 app下载按钮
@@ -147,9 +153,6 @@
                 game.wxshare_mask.on("touchend", function (e) {
                     //alert(game.wxshare_mask.touch_moved);
                     if (game.wxshare_mask.touch_moved == true) {
-                        setTimeout(function () {
-                            game.wxshare_mask.fadeOut(500);
-                        }, 8000);
                         return false;
                     } else {
                         setTimeout(function () {
@@ -162,9 +165,6 @@
                 game.focusWx.on("touchend", function (e) {
                     game.focus_tip.fadeIn(500);
                 });
-                game.focus_tip.on("touchend", function (e) {
-                    game.focus_tip.fadeOut(3000);
-                });
 
                 // 领取奖励按钮
                 game.get_award.on("touchend", function (e) {
@@ -172,14 +172,14 @@
                     // umeng
                     _czc.push(["_trackEvent","微盘大师游戏结束页","领取奖励按钮"]);
 
-                    //定位到游戏页面
+                    //定位到领取奖励页面
                     _this.game_box.css({
                         top: -_this.cur_h * 3
                     });
                     //做左右倾斜动画
                     game.award_page.css({
-                        "-webkit-transform": "rotate(45deg)", /* Safari 和 Chrome */
-                        "transform": "rotate(45deg)"
+                        "-webkit-transform": "rotate(25deg)", /* Safari 和 Chrome */
+                        "transform": "rotate(25deg)"
                     });
 
                     setTimeout(function () {
@@ -251,47 +251,48 @@
                                 phone: game.real_tel.val()
                             },
                             beforeSend: function () {
-                                game.award_tips.css({display: "block"}).html("领取中...");
+                                game.award_tips.css({display: "block"});
+                                game.award_tips_words.html("领取中...");
                             },
                             success: function (data) {
                                 data = JSON.parse(data);
                                 console.log(data);
                                 if (data.is_succ == true) {
-                                    game.award_tips.css({display: "block"}).html("<span class='close_award_tip' id='close_award_tips'>x</span>我们已将您的历史最好成绩存入数据库中,活动结束后会公布排名,奖品将在活动结束后10个工作日内进行派发,请耐心等候~<br/>");
+                                    game.award_tips.css({display: "block"});
+                                    game.award_tips_words.html("我们已将您的历史最好成绩存入数据库中,活动结束后会公布排名,奖品将在活动结束后10个工作日内进行派发,请耐心等候~<br/>");
                                 } else {
-
                                     if (data.error_msg == "登录超时或者没有登录") {
-
-                                        var tip = "由于您未登录，所示奖励仅为当前排名对应奖励，活动排名奖励根据活动结束时最终排名而定，为保证您获奖的权益，建议您关注公众号在微信中打开游戏并登录，及时更新游戏排名";
-                                        _this.award_tips.css({
-                                            display: "block"
-                                        }).html(tip);
-
+                                        var tip = "请微信登陆参与，<br/>活动奖励根据微信用户排名而定。";
+                                        if(window.wx_game.isWeixin){
+                                            //显示微信登录按钮
+                                            _this.award_wx_login.css("display","block");
+                                            //绑定事件 /跳回登录界面
+                                            _this.award_wx_login.on("touchend",function(){
+                                                window.wx_game.login()
+                                            });
+                                            _this.award_tips_words.html(tip);
+                                        } else {
+                                            _this.award_tips.css("top","20%");
+                                            //清空words
+                                            game.award_tips_words.html("");
+                                            //显示二维码
+                                            _this.award_tips_code.css("display","block");
+                                        }
+                                        _this.award_tips.css({display: "block"});
                                     } else {
-                                        game.award_tips.css({display: "block"}).html(data.error_msg + ",点我重新领取!");
+                                        game.award_tips.css({display: "block"});
+                                        game.award_tips_words.html(data.error_msg);
                                     }
-
-                                    //if (data.error_msg == "登录超时或者没有登录") {
-                                    //    game.award_tips.css({display: "block"}).html(data.error_msg + ",即将返回首页");
-                                    //    setTimeout(function () {
-                                    //        game.game_box.css({
-                                    //            "top": "0"
-                                    //        });
-                                    //    }, 1000)
-                                    //} else {
-                                    //    game.award_tips.css({display: "block"}).html(data.error_msg + ",点我重新领取!");
-                                    //}
                                 }
                             },
                             error: function () {
-                                game.award_tips.css({display: "block"}).html("网络错误,点我重新领取!");
+                                game.award_tips.css({display: "block"});
+                                game.award_tips_words.html("网络错误");
                             }
                         });
                     }
                 });
             }(this));
-
-
 
             // 自定义事件 开始游戏
             this.start_game.bind("start_game", function () {
@@ -387,20 +388,10 @@
                         url: "/action/public/wx/save_result",
                         type: "post",
                         data: {result_time: _this.score_sec},
-
-                        // beforeSend: function () {
-                        //     _this.end_tips.css({
-                        //         display: "block"
-                        //     }).html("登录状态校验中...");
-                        // },
-
                         success: function (data) {
                             data = JSON.parse(data);
                             console.log(data);
                             if (data.is_succ == true) {
-                                //将击败了多少人写入微信分享
-                                //window.wx_game.hit_num = data.hit;
-                                //$(window.document).trigger("hitDone");
                                 _this.end_tips.css({
                                     display: "none"
                                 })
@@ -420,24 +411,43 @@
                                         }).html("");
                                     });
                                 }
-
-                                // if (data.error_msg == "登录超时或者没有登录") {
-                                //     var tip = "由于您未登录，所示奖励仅为当前排名对应奖励，活动排名奖励根据活动结束时最终排名而定，为保证您获奖的权益，建议您关注公众号在微信中打开游戏并登录，及时更新游戏排名";
-                                //     _this.end_tips.css({
-                                //         display: "block"
-                                //     }).html(tip);
-
-                                // } else {
-
-                                //     _this.end_tips.css({
-                                //         display: "block"
-                                //     }).html(data.error_msg + "<br/>本次成绩不记入排名<br/>点我返回首页");
-
-                                // }
                             }
                         }
                     });
 
+                    //刷新成绩 /排行
+                    $.ajax({
+                        url: "/action/public/wx/userinfo",
+                        type: "post",
+                        success: function (data) {
+                            data = JSON.parse(data);
+                            var info = data.data;
+                            if (data.is_succ == true) {
+                                window.wx_game.hit_num = info.hit;
+                                //历史最好成绩
+                                $("#selfBst").html(info.best_result + "''");
+                                $("#user_bst_score").html(info.best_result + "''");
+                                //当前排名
+                                $("#curRange").html(info.rank);
+                                var rank = info.rank;
+                                //更改奖品图标
+                                //更改奖品图标
+                                if (rank == 1) {
+                                    $("#awardPic").attr("class","");
+                                    $("#awardPic").addClass("gameData_awardPic iphone");
+                                    window.wx_game.awards = "iPhone 7"
+                                } else if (rank > 1 && rank <= 10) {
+                                    $("#awardPic").attr("class","");
+                                    $("#awardPic").addClass("gameData_awardPic power");
+                                    window.wx_game.awards = "美国队长移动电源"
+                                } else {
+                                    $("#awardPic").attr("class","");
+                                    $("#awardPic").addClass("gameData_awardPic vip");
+                                    window.wx_game.awards = "爱奇艺3个月会员资格"
+                                }
+                            }
+                        }
+                    });
                 }, 800);
 
             });
@@ -1036,57 +1046,6 @@
                     //判断完成,清除第一个方块
                     _this.clear_RAM('now');
                 });
-            },
-            //键盘控制
-            key_ctrl: function () {
-                var MC = this.MainController();
-                var _this = this;
-                document.onkeydown = function (e) {
-                    if (e.keyCode == 37) { //跌
-                        //添加激活样式
-                        _this.fall_btn.classList.add("active");
-                        MC.judge_acMiss();
-                        var color_flag = MC.judge_color();
-                        var coord_flag = MC.judge_coord();
-
-                        if (color_flag == 0 && coord_flag) {
-                            //判断正确
-                            //alert('判断正确 颜色为绿色');
-                            MC.increase_score();
-                        } else {
-                            //alert('判断错误');
-                            //减分
-                            MC.decrease_blood();
-                        }
-                    }
-                    else if (e.keyCode == 39) {
-                        MC.judge_acMiss();
-                        //添加激活样式
-                        _this.rise_btn.classList.add("active");
-                        color_flag = MC.judge_color();
-                        coord_flag = MC.judge_coord();
-
-                        if (color_flag == 1 && coord_flag) {
-                            //判断正确
-                            //alert('判断正确 颜色为红色');
-                            MC.increase_score();
-                        } else {
-                            //alert('判断错误');
-                            MC.decrease_blood();
-                        }
-                    }
-                };
-
-                document.onkeyup = function (e) {
-                    if (e.keyCode == 37 || e.keyCode == 39) {
-                        //移除按键样式
-                        _this.fall_btn.classList.remove("active");
-                        _this.rise_btn.classList.remove("active");
-
-                        //判断完成,清除第一个方块
-                        _this.clear_RAM('now');
-                    }
-                }
             }
         };
 
@@ -1096,3 +1055,4 @@
         stock_game.initialRes();
     };
 }());
+
