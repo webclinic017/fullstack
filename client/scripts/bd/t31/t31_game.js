@@ -176,6 +176,9 @@
                     _this.game_box.css({
                         top: -_this.cur_h * 3
                     });
+                    //禁止光标获得焦点
+                    $("input").blur();
+
                     //做左右倾斜动画
                     game.award_page.css({
                         "-webkit-transform": "rotate(25deg)", /* Safari 和 Chrome */
