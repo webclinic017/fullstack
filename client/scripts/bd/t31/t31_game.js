@@ -60,12 +60,6 @@
                     return getComputedStyle(obj, false)[name];
                 }
             }
-            window.wx_game.login = function(){
-                var redirect_uri = window.location.protocol + "//" + window.location.hostname + '/action/public/wechat?redirect_url=' + encodeURIComponent(window.location.href);
-                var href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx6bbeaa275661873a&redirect_uri=" + encodeURIComponent(redirect_uri) + "&response_type=code&scope=snsapi_userinfo&state=#wechat_redirect";
-                window.location.href = href;
-            };
-
             //按钮控制
             (function (game) {
                 //关闭按钮
@@ -356,7 +350,7 @@
             this.game_box.bind("game_over", function () {
                 console.log(_this.create_timer);
                 //清理创建计时器
-                clearInterval(_this.create_timer);
+                _this.clear_TIMER();
                 console.log(_this.create_timer);
                 //显示分数
                 _this.end_score.html(_this.score_sec + "''");
@@ -750,7 +744,7 @@
                     //减少创建间隔时间
                     console.log("创建计时器更新");
                     //清理创建计时器
-                    clearInterval(_this.create_timer);
+                    this.clear_TIMER();
                     //更改间隔时间
                     _this.block.create_interval = _this.block.create_interval > _this.block.create_interval_min ? _this.block.create_interval -= _this.block.create_interval_cut : _this.block.create_interval;
                     console.log('当前创建时间为----' + _this.block.create_interval);
@@ -853,6 +847,16 @@
                 } else if (type == 'now') {
                     this.blocks.shift();
                 }
+            },
+            //清理计时器
+            clear_TIMER:function(){
+                var count = 2;
+                while(count > 0){
+                    console.log("计时器清理"+ count +"次");
+                    clearInterval(this.create_timer);
+                    count --;
+                }
+                count = 2;
             },
             // 渲染到画布，用于绘制景物
             render: function () {
@@ -982,9 +986,8 @@
                      * 收集游戏数据
                      */
                     gameOverChecker: function () {
-                        if (this.isGameOver) {
-                            //停止所有的计时器,updata
-                            clearInterval(_this.create_timer);
+                        if(_this.isGameOver){
+                            _this.clear_TIMER()
                         }
                     }
                 };
@@ -1043,9 +1046,6 @@
                 });
 
                 this.rise_btn.on('touchend', function () {
-                    //移除按键样式
-                    _this.rise_btn.removeClass("active");
-
                     //判断完成,清除第一个方块
                     _this.clear_RAM('now');
                 });
