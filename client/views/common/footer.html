@@ -13,12 +13,12 @@
                         </a>
                     </li>
                     <%if(lang.isCompany("tigerwit")){%>
-                        <li>
-                            <a href="/web/product/trade">
-                                <i class="fa fa-angle-right"></i>
-                                &nbsp;<%= lang.text("foot3")%>
-                            </a>
-                        </li>
+                    <li>
+                        <a href="/web/product/trade">
+                            <i class="fa fa-angle-right"></i>
+                            &nbsp;<%= lang.text("foot3")%>
+                        </a>
+                    </li>
                     <%}%>
                 </ul>
             </div>
@@ -40,13 +40,13 @@
                         </a>
                     </li>
                     <%if(lang.isCompany("tigerwit")){%>
-                        <li>
-                            <a href="/study/video">
-                                <i class="fa fa-angle-right"></i>
-                                &nbsp;<%= lang.text("foot6")%>
-                            </a>
-                        </li>
-                    <%}%>                   
+                    <li>
+                        <a href="/study/video">
+                            <i class="fa fa-angle-right"></i>
+                            &nbsp;<%= lang.text("foot6")%>
+                        </a>
+                    </li>
+                    <%}%>
                 </ul>
             </div>
             <div class="<%= lang.text('foot13')%>">
@@ -65,7 +65,7 @@
                             <i class="fa fa-angle-right"></i>
                             &nbsp;<%= lang.text("foot9")%>
                         </a>
-                    </li>                   
+                    </li>
                     <li>
                         <a href="/web/blog/notice">
                             <i class="fa fa-angle-right"></i>
@@ -120,76 +120,55 @@
 </div>
 <!-- Live800Online operator icon:online service(in use)[Floating icon] Start-->
 <script language="javascript">
-    window.OpenChat = function (){
-        var chatUrl="http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&jid=2997261242";
-        chatUrl+="&enterurl="+encodeURIComponent(document.referrer||document.URL);
-        chatUrl+="&t="+new Date().getTime();
-        try{
-            window.open(chatUrl,"chatbox79482","toolbar=0,scrollbars=0,location=0,menubar=0,resizable=1,width=570,height=424");
-        }catch(e){
+    window.OpenChat = function () {
+        var chatUrl = "http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&jid=2997261242";
+        chatUrl += "&enterurl=" + encodeURIComponent(document.referrer || document.URL);
+        chatUrl += "&t=" + new Date().getTime();
+        try {
+            window.open(chatUrl, "chatbox79482", "toolbar=0,scrollbars=0,location=0,menubar=0,resizable=1,width=570,height=424");
+        } catch (e) {
             // browser blocked
             // do nothing;
         }
     }
 </script>
 <div style="position: fixed; padding: 5px; line-height: 20px; color: #fff; bottom: 40px; right: 10px;z-index: 8888;" <%= lang.text("navbar15")%>>
-    <span style="position: absolute;font-size: 20px;color: #000; cursor: pointer;" onclick="this.parentNode.style.display='none';">x</span>
-    <img src="https://chat8.live800.com/live800/SurferServer?cmd=111&amp;companyID=371437&amp;online=https%3A%2F%2Ficon.live800.com%2Ffileupload%2FCustomFileDownloadServer%3FcompanyID%3D371437%26fna%3D1433753733505371437&amp;offline=https%3A%2F%2Ficon.live800.com%2Ffileupload%2FCustomFileDownloadServer%3FcompanyID%3D371437%26fna%3D1433754373517371437&amp;tm=1434339880102"
-onclick="OpenChat();"
-border="0"  <%= lang.text("navbar15")%>>
+<span style="position: absolute;font-size: 20px;color: #000; cursor: pointer;" onclick="this.parentNode.style.display='none';">x</span>
+<img src="https://chat8.live800.com/live800/SurferServer?cmd=111&amp;companyID=371437&amp;online=https%3A%2F%2Ficon.live800.com%2Ffileupload%2FCustomFileDownloadServer%3FcompanyID%3D371437%26fna%3D1433753733505371437&amp;offline=https%3A%2F%2Ficon.live800.com%2Ffileupload%2FCustomFileDownloadServer%3FcompanyID%3D371437%26fna%3D1433754373517371437&amp;tm=1434339880102"
+     onclick="OpenChat();"
+     border="0"  <%= lang.text("navbar15")%>>
 </div>
 <!-- Online operator icon:online service(in use) End-->
 
 <!-- 友盟统计 2016.09.21 -->
 <div style="display:none">
-<script type="text/javascript">
-    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260394016'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260394016' type='text/javascript'%3E%3C/script%3E"));
-</script>
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260394016'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260394016' type='text/javascript'%3E%3C/script%3E"));
+    </script>
 
 </div>
-
-<script type="text/javascript">
-    var _mvq = window._mvq || [];
-    window._mvq = _mvq;
-    _mvq.push(['$setAccount', 'm-202313-0']);
-    _mvq.push(['$logConversion']);
-    (function() {
-        var mvl = document.createElement('script');
-        mvl.type = 'text/javascript'; mvl.async = true;
-        mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(mvl, s);
-    })();
-</script>
 <script>
     var _hmt = _hmt || [];
-    (function() {
+    (function () {
         var hm = document.createElement("script");
         hm.src = "//hm.baidu.com/hm.js?e2d8c88ce38a79186b7acc81d614806c";
         var s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(hm, s);
     })();
 </script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-76560929-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
 <script type="text/javascript">
-var _py = _py || [];
-_py.push(['a', 'Hms..ZDXo82LhzxK1JTfTHaiAX0']);
-_py.push(['domain','stats.ipinyou.com']);
-_py.push(['e','']);
--function(d) {
-    var s = d.createElement('script'),
-    e = d.body.getElementsByTagName('script')[0]; e.parentNode.insertBefore(s, e),
-    f = 'https:' == location.protocol;
-    s.src = (f ? 'https' : 'http') + '://'+(f?'fm.ipinyou.com':'fm.p0y.cn')+'/j/adv.js';
-}(document);
+    var _py = _py || [];
+    _py.push(['a', 'Hms..ZDXo82LhzxK1JTfTHaiAX0']);
+    _py.push(['domain', 'stats.ipinyou.com']);
+    _py.push(['e', '']);
+    -function (d) {
+        var s = d.createElement('script'),
+                e = d.body.getElementsByTagName('script')[0];
+        e.parentNode.insertBefore(s, e),
+                f = 'https:' == location.protocol;
+        s.src = (f ? 'https' : 'http') + '://' + (f ? 'fm.ipinyou.com' : 'fm.p0y.cn') + '/j/adv.js';
+    }(document);
 </script>
 <noscript><img src="//stats.ipinyou.com/adv.gif?a=Hms..ZDXo82LhzxK1JTfTHaiAX0&e=" style="display:none;"/></noscript>
