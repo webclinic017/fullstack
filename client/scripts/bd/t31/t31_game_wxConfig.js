@@ -130,7 +130,7 @@
     wx.ready(function () {
         //console.log("wx_is_ready and hitDone event is binded");
         console.log("wechat share is ready");
-        //获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
+        //获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
             title: "厉害了word微盘大师！",
             desc: "我在“微盘大师”中击败了" + window.wx_game.hit_num + "%的用户，" + window.wx_game.awards + "。哇咔咔！！！",
@@ -146,9 +146,9 @@
             }
         });
 
-        //获取“分享给朋友”按钮点击状态及自定义分享内容接口
+        //获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: "厉害了word微盘大师！",
+            title: "我在“微盘大师”中击败了" + window.wx_game.hit_num + "%的用户，" + window.wx_game.awards + "。哇咔咔！！！",
             desc: "我在“微盘大师”中击败了" + window.wx_game.hit_num + "%的用户，" + window.wx_game.awards + "。哇咔咔！！！",
             link: window.location.href,
             imgUrl: window.location.protocol + "//" + window.location.hostname + "/activity/t31_game/share_pic.jpg",
