@@ -1,9 +1,19 @@
 ;(function () {
-    'use strict';
-
+    //截取url中的pid
+    var query_str = window.location.search;
+    if(query_str){
+        var pid = query_str.split("&")[0].split("?")[1].split("=")[1];
+        console.log("当前PID = " + pid);
+        $.cookie("wx_pid",pid);
+    }
     //获取cookie /判断用户是否已经登录
     var wx_token = $.cookie('wx_token');
     window.wx_game = {};
+    window.wx_game.login = function(){
+        var redirect_uri = window.location.protocol + "//" + window.location.hostname + '/action/public/wechat?redirect_url=' + encodeURIComponent(window.location.href);
+        var href = "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx6bbeaa275661873a&redirect_uri=" + encodeURIComponent(redirect_uri) + "&response_type=code&scope=snsapi_userinfo&state=#wechat_redirect";
+        window.location.href = href;
+    };
     window.wx_game.is_login = false;
     window.wx_game.userInfoHasLoaded = false;
     window.wx_game.awards = "";
