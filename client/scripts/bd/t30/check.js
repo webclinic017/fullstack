@@ -13,7 +13,7 @@ $(document).ready(function() {
     var hostnameUrl = window.location.hostname;
     var originUrl = window.location.origin;
     var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.')+1) || "tigerwit.com";
-    console.info(originUrl);
+    // console.info(originUrl);
     lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
     if (lp != "") { document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl; }
 
