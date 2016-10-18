@@ -109,20 +109,20 @@
                 // 游戏结束页 app下载按钮
                 game.dowload_app_1.on("touchend", function (e) {
                     // umeng
-                    _czc.push(["_trackEvent","微盘大师游戏结束页","APP下载按钮"]);
+                    _czc.push(["_trackEvent", "微盘大师游戏结束页", "APP下载按钮"]);
                 });
 
                 // 申领奖励页 app下载按钮
                 game.dowload_app_2.on("touchend", function (e) {
                     // umeng
-                    _czc.push(["_trackEvent","微盘大师申领奖励页","APP下载按钮"]);
+                    _czc.push(["_trackEvent", "微盘大师申领奖励页", "APP下载按钮"]);
                 });
 
                 //分享按钮
                 game.share.on("touchend", function (e) {
 
                     // umeng
-                    _czc.push(["_trackEvent","微盘大师游戏结束页","战绩分享按钮"]);
+                    _czc.push(["_trackEvent", "微盘大师游戏结束页", "战绩分享按钮"]);
 
                     if (window.wx_game.isWeixin) {
                         game.wxshare_mask.css({
@@ -164,7 +164,7 @@
                 game.get_award.on("touchend", function (e) {
 
                     // umeng
-                    _czc.push(["_trackEvent","微盘大师游戏结束页","领取奖励按钮"]);
+                    _czc.push(["_trackEvent", "微盘大师游戏结束页", "领取奖励按钮"]);
 
                     //定位到领取奖励页面
                     _this.game_box.css({
@@ -191,7 +191,7 @@
                 game.get_award_now.on("touchend", function () {
                     var input = game.real_name;
                     var rName = input.val() ? input.val() : "";
-                    $("input").focus(function (e) {
+                    $(":input").focus(function (e) {
                         $(e.target).removeClass("warning");
                         $(e.target).val("");
                     });
@@ -226,18 +226,25 @@
                     if ((input.val() == "") || (input.val() == "请填写有效的电话号码") || (!isMobile.test(input.val()) && !isPhone.test(input.val()))) {
                         input.val(" 请填写有效的电话号码").addClass("warning");
                     }
-                    var input = $('#email');
-                    var rEmail = input.val() ? input.val() : "";
-                    if ((input.val() == "") || (input.val() == "请填写有效的Email") || (!/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(input.val()))) {
-                        input.val(" 请填写有效的Email").addClass("warning");
-                    }
 
                     if ($(":input").hasClass("warning")) {
                         return false;
                     } else {
+                        /*
+                         品友DSP,负责人:蔡雪峰 添加日期：2016.7.12
+                         //删除此段代码时需要同时删除调用pyRegisterCvt (../t1/script/check.js)
+                         ==begin==
+                         */
+                        if (window.pyRegisterCvt) {
+                            window.pyRegisterCvt(rPhone);
+                        }
+                        /*
+                         品友DPS
+                         ==end==
+                         */
 
                         // umeng
-                        _czc.push(["_trackEvent","微盘大师申领奖励页","提交按钮"]);
+                        _czc.push(["_trackEvent", "微盘大师申领奖励页", "提交按钮"]);
 
                         //请求领取奖励接口
                         $.ajax({
@@ -245,7 +252,8 @@
                             type: "post",
                             data: {
                                 username: game.real_name.val(),
-                                phone: game.real_tel.val()
+                                phone: game.real_tel.val(),
+                                pid: window.location.search.split("pid=")[1].split("&")[0]
                             },
                             beforeSend: function () {
                                 game.award_tips.css({display: "block"});
@@ -260,20 +268,20 @@
                                 } else {
                                     if (data.error_msg == "登录超时或者没有登录") {
                                         var tip = "请微信登陆参与，<br/>活动奖励根据微信用户排名而定。";
-                                        if(window.wx_game.isWeixin){
+                                        if (window.wx_game.isWeixin) {
                                             //显示微信登录按钮
-                                            _this.award_wx_login.css("display","block");
+                                            _this.award_wx_login.css("display", "block");
                                             //绑定事件 /跳回登录界面
-                                            _this.award_wx_login.on("touchend",function(){
+                                            _this.award_wx_login.on("touchend", function () {
                                                 window.wx_game.login()
                                             });
                                             _this.award_tips_words.html(tip);
                                         } else {
-                                            _this.award_tips.css("top","20%");
+                                            _this.award_tips.css("top", "20%");
                                             //清空words
                                             game.award_tips_words.html("");
                                             //显示二维码
-                                            _this.award_tips_code.css("display","block");
+                                            _this.award_tips_code.css("display", "block");
                                         }
                                         _this.award_tips.css({display: "block"});
                                     } else {
@@ -296,7 +304,7 @@
 
                 if (window.wx_game.is_login) {
                     //绑定游戏可以开始事件 /因为要等待用户信息拉取成功才能开始
-                    if(window.wx_game.game_can_start){
+                    if (window.wx_game.game_can_start) {
                         gaming();
                     }
                 } else {
@@ -318,7 +326,7 @@
 
                     //重置内存数据
                     _this.isGameOver = false;
-                    _this.block.create_interval = 2000;
+                    _this.block.create_interval = 1800;
                     _this.block.speed = 1;
                     _this.score_sec = 0;
                     _this.blocks = [];
@@ -394,7 +402,7 @@
                                 })
                             } else if (data.is_succ == false) {
 
-                                if(window.wx_game.isWeixin){
+                                if (window.wx_game.isWeixin) {
                                     //绑定登录(跳转到首页)
                                     _this.end_tips.on("tap", function () {
                                         //定位到结束页
@@ -413,6 +421,12 @@
                     });
 
                     //刷新成绩 /排行
+                    //视图层
+                    if (parseInt(_this.score_sec) > parseInt($("#selfBst").html())) {
+                        $("#selfBst").html(info.best_result + "''");
+                        $("#user_bst_score").html(info.best_result + "''");
+                    }
+                    //数据库
                     $.ajax({
                         url: "/action/public/wx/userinfo",
                         type: "post",
@@ -430,15 +444,15 @@
                                 //更改奖品图标
                                 //更改奖品图标
                                 if (rank == 1) {
-                                    $("#awardPic").attr("class","");
+                                    $("#awardPic").attr("class", "");
                                     $("#awardPic").addClass("gameData_awardPic iphone");
                                     window.wx_game.awards = "iPhone 7"
                                 } else if (rank > 1 && rank <= 10) {
-                                    $("#awardPic").attr("class","");
+                                    $("#awardPic").attr("class", "");
                                     $("#awardPic").addClass("gameData_awardPic power");
                                     window.wx_game.awards = "美国队长移动电源"
                                 } else {
-                                    $("#awardPic").attr("class","");
+                                    $("#awardPic").attr("class", "");
                                     $("#awardPic").addClass("gameData_awardPic vip");
                                     window.wx_game.awards = "爱奇艺3个月会员资格"
                                 }
@@ -502,7 +516,7 @@
             //难度更新叠加时间初始值
             this.diff_wt = 0;
             //难度更新等待时间
-            this.diff_dt = 2000;
+            this.diff_dt = 3600;
             //速度更新叠加时间初始值
             this.diff_wt_v = 0;
             //速度更新时间
@@ -529,11 +543,11 @@
                 //下落速度增加值 /越大速度递增越快
                 speed_add: 0.02,
                 //创建方块间隔时间
-                create_interval: 2000,
+                create_interval: 1800,
                 //创建方块最小值
-                create_interval_min: 500,
+                create_interval_min: 520,
                 //每次创建时间递减值 /越大单位时间创建的方块数越多
-                create_interval_cut: 100,
+                create_interval_cut: 80,
                 //方块宽度区间
                 w_range: {
                     min: 40,
@@ -849,14 +863,14 @@
                 }
             },
             //清理计时器
-            clear_TIMER:function(){
-                var count = 2;
-                while(count > 0){
-                    console.log("计时器清理"+ count +"次");
+            clear_TIMER: function () {
+                var count = 1;
+                while (count > 0) {
+                    console.log("计时器清理" + count + "次");
                     clearInterval(this.create_timer);
-                    count --;
+                    count--;
                 }
-                count = 2;
+                count = 1;
             },
             // 渲染到画布，用于绘制景物
             render: function () {
@@ -986,7 +1000,7 @@
                      * 收集游戏数据
                      */
                     gameOverChecker: function () {
-                        if(_this.isGameOver){
+                        if (_this.isGameOver) {
                             _this.clear_TIMER()
                         }
                     }
@@ -1058,4 +1072,3 @@
         stock_game.initialRes();
     };
 }());
-

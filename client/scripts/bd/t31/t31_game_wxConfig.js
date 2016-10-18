@@ -1,11 +1,5 @@
 ;(function () {
-    //截取url中的pid
-    var query_str = window.location.search;
-    if(query_str){
-        var pid = query_str.split("&")[0].split("?")[1].split("=")[1];
-        console.log("当前PID = " + pid);
-        $.cookie("wx_pid",pid);
-    }
+
     //获取cookie /判断用户是否已经登录
     var wx_token = $.cookie('wx_token');
     window.wx_game = {};
