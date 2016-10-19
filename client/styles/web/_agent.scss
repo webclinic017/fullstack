@@ -2,10 +2,14 @@
     margin-bottom: 50px;
     
     @include e(banner) {
-        height: 320px;
-        width: 100%;
-        background-size: 100%;
-        @include img-normal($image-path-web + "agent-banner.jpg");
+        // height: 320px;
+        // width: 100%;
+        // background-size: 100%;
+        // @include img-normal($image-path-web + "agent-banner.jpg");
+
+        img {
+            height: 320px;
+        }
     }
 
     @include e(title) {

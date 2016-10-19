@@ -1,29 +1,39 @@
 
 <div class="fix-list">
-    <div class="fix-list__banner">
-        <div class="container">
-            <ul class="fix-list__banner-ul">
-                <li>
-                    <div>
-                        <span>专业</span>
-                        <span>团队</span>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span>灵活</span>
-                        <span>选择</span>
-                    </div>
-                </li>
-                <li>
-                    <div>
-                        <span>坐享</span>
-                        <span>收益</span>
-                    </div>
-                </li>
-            </ul>
+    <%if(lang.isCompany("tigerwit")){%>
+        <div class="fix-list__banner">
+            <div class="container">
+                <ul class="fix-list__banner-ul">
+                    <li>
+                        <div>
+                            <span>专业</span>
+                            <span>团队</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span>灵活</span>
+                            <span>选择</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div>
+                            <span>坐享</span>
+                            <span>收益</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
+    <%}%>
+    <%if(lang.isCompany("pkds")){%>
+        <div class="fix-list__banner_pkds">
+            <div class="container">
+                <img src="/images/ranklist/fix-list-banner-pkds.png">
+            </div>
+        </div>
+    <%}%>
+    
     <div class="fix-list__con mg-tp-20">
         <div class="container">
 <% 

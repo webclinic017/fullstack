@@ -24,6 +24,11 @@ if (company_name === 'tigerwit') {
         homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
         homePlusPath: indexBasePath + "/index2-master-jia-tiger.png",
 
+        webCopyRule: indexBasePath + "/rules-banner-tigerwit.jpg",
+        webCopySelect: indexBasePath + "/select-banner-tigerwit.jpg",
+        webAgentProxy: indexBasePath + "/agent-banner-tigerwit.jpg",
+        webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
+
         icoPath: indexBasePath + "/tigerwit.ico",
     };
     
@@ -49,6 +54,11 @@ if (company_name === 'pkds') {
         homeTradePathEn: indexBasePath + "/index2-trade-img-pkds.png",
         homePlusPath: indexBasePath + "/index2-master-jia-pkds.png",
 
+        webCopyRule: indexBasePath + "/rules-banner-pkds.jpg",
+        webCopySelect: indexBasePath + "/select-banner-pkds.jpg",
+        webAgentProxy: indexBasePath + "/agent-banner-pkds.jpg",
+        webAgentBecome: indexBasePath + "/become-banner-pkds.jpg",
+
         icoPath: indexBasePath + "/pkds.ico",
     };
     
@@ -73,6 +83,22 @@ module.exports = function () {
             "homePlus": {
                 "en": companyConfig.homePlusPath,
                 "zh": companyConfig.homePlusPath
+            },
+            "webCopyRule": {
+                "en": companyConfig.webCopyRule,
+                "zh": companyConfig.webCopyRule
+            },
+            "webCopySelect": {
+                "en": companyConfig.webCopySelect,
+                "zh": companyConfig.webCopySelect
+            },
+            "webAgentProxy": {
+                "en": companyConfig.webAgentProxy,
+                "zh": companyConfig.webAgentProxy
+            },
+            "webAgentBecome": {
+                "en": companyConfig.webAgentBecome,
+                "zh": companyConfig.webAgentBecome
             },
             "ico": {
                 "en": companyConfig.icoPath,
