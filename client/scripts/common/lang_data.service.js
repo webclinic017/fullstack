@@ -38,6 +38,7 @@
         var data = {
 
             "companyCopyRules": {"zh": companyConfig.companyCopyRules, "en": companyConfig.companyCopyRules},
+            "companyNameEn": {"zh":companyConfig.companyNameEn, "en": companyConfig.companyNameEn},
 
 
             "language": language,
