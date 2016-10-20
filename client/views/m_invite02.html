@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include common/m_common_head.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
+<% include common/m_css_vendor.html %>
+<% include common/common_header.html %>
+<body>
+<div class="m_share02_layout">
+    <div class="share02_main">
+        <div class="share02_main__banner"></div>
+        <div class="p share02_main__invite">
+            <div class="share02_main__invite-friends clearfix">
+                <div class="invite_amount">
+                    <p>已邀请人数</p>
+                    <span id="invited_amount">3</span>
+                </div>
+                <div class="invite_income">
+                    <p>累计邀请收益($)</p>
+                    <span id="invited_income">60.00</span>
+                </div>
+            </div>
+        </div>
+        <div class="bdt p share02_main__history">
+            <h5 class="title">邀请记录</h5>
+            <table>
+                <colgroup>
+                    <col width="30%"></col>
+                    <col width="40%"></col>
+                    <col width="30%"></col>
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>好友昵称</th>
+                    <th>是否交易</th>
+                    <th>我的佣金($)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>test</td>
+                    <td>是</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>是</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>是</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>是</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>是</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>是</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>是</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>是</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>test</td>
+                    <td>是</td>
+                    <td>20</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="bdt p share02_main__rule">
+            <h5 class="title">邀请好友规则</h5>
+            <p>1、邀请好友成功注册、入金并投资满足2标准手（不包含CFD），即可获得 20 美元赠金。</p>
+            <p>2、只有通过邀请链接进行注册才算有效。</p>
+            <p>3、不限介绍好友的数量。</p>
+            <p>4、同一手机号码、身份证号和银行卡号视为同一用户。任何通过第三方作弊软件刷取好友邀请奖励的用户，一经发现，老虎金融有权取消所有奖励的承兑。20美金的介绍佣金将在30天后进行结算。</p>
+            <p>5、本活动长期有效，最终解释权归老虎金融所有。如有疑问，请咨询客服 400-809-8509。</p>
+            <span id="send_invitation">发送邀请给好友</span>
+        </div>
+    </div>
+</div>
+</body>
+<!-- build:js(client) /scripts/m_vendor.js -->
+<script src="/bower_components/jquery-3.0.0.min/index.js"></script>
+<script src="/scripts/plugins/base64code.js"></script>
+<script src="/scripts/plugins/jquery.tap.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<!-- endbuild -->
+<!-- build:js(client) /scripts/m_invite.js -->
+<script src="/scripts/invite/m_invite.js"></script>
+<!-- endbuild -->
+
+<%- include('bd/common/footer.html') %>
+</html>
