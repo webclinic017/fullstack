@@ -51,6 +51,19 @@
             }
         }
     }
+    @include e(banner_pkds) {
+        @include img-normal($image-path-base + "ranklist/fix-list-bg-pkds.png");
+
+        .container {
+            height: 418px;
+            
+            img {
+                height: 100%;
+            }
+        }
+
+        
+    }
 
     @include e(con) {
 

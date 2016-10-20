@@ -32,9 +32,11 @@
                     <a data-navbar-trigger class="font-size-12 mg-lf-15"  href="/web/faq/interest"><%= lang.text("sidebar10")%></a>
                 </li>
             </ul>
-            <li>
-                <a data-navbar-trigger href="/study/video"><%= lang.text("sidebar11")%></a>
-            </li>
+            <%if(lang.isCompany("tigerwit")){%>
+                <li>
+                    <a data-navbar-trigger href="/study/video"><%= lang.text("sidebar11")%></a>
+                </li>
+            <%}%>
         </ul>
     </li>
 </ul>
