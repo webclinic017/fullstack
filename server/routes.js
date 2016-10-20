@@ -167,6 +167,17 @@ module.exports = function(app) {
         res.render('m_asset', extendPublic({}, req));
     });
 
+    /*邀请好友*/
+    app.route('/m/invite01').get(function(req, res){
+        setCompanyCookie(res);
+        res.render('m_invite01', extendPublic({}, req));
+    });
+
+    app.route('/m/invite02').get(function(req, res){
+        setCompanyCookie(res);
+        res.render('m_invite02', extendPublic({}, req));
+    });
+
     /*--------------------APP-End-------------------------*/
 
 
