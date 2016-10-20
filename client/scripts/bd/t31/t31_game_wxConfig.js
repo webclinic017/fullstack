@@ -89,7 +89,7 @@
                     } else {
                         $("#awardPic").attr("class","");
                         $("#awardPic").addClass("gameData_awardPic vip");
-                        window.wx_game.shareWords = "再接再厉!"+ window.wx_game.score_sec +"秒击败"+ window.wx_game.hit_num +'%用户，获得"美国队长"移动电源，哇咔咔！'
+                        window.wx_game.shareWords = "再接再厉!"+ window.wx_game.score_sec +"秒击败"+ window.wx_game.hit_num +'%用户，获得爱奇艺季卡抽奖机会,GBM!!!'
                     }
 
                 } else {
