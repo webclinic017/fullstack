@@ -1,8 +1,13 @@
 <%
     var status = model.status;
 %>
+<script type="text/javascript">
+    var countdownTime = <%= model.countdownTime %>
+</script>
+
+
 <div class="hy-detail">
-    <div class="container" ng-controller="RegularController">
+    <div class="container" ng-controller="RegularController" ng-cloak>
         <div class="row">
             <div class="col-xs-8">
                 <div class="hy-detail__title">
@@ -27,14 +32,27 @@
                             <p><%= model.withdraw_history %></p>
                         </li>
                     </ul>
-                    <div class="hy-detail__con-progress">
-                        <span class="hy-detail__con-circle"></span> 
-                        <span class="font-size-16"><%= model.max_desc %></span>
-                        <div class="progress" tw-progress>
-                            <div class="scale"></div>
+                    <div class="hy-detail__con-progress_box">
+                        <div class="hy-detail__con-progress">
+                            <span class="hy-detail__con-circle"></span> 
+                            <span class="font-size-16"><%= model.max_desc %></span>
+                            <div class="progress-box">
+                                <div class="progress" tw-progress>
+                                    <div class="scale"></div>
+                                </div>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;已完成</span>
+                                <span class="p-num"><%= status != "before_appoint" ? model.progress:0 %>%</span>
+                            </div>
                         </div>
-                        <span>&nbsp;&nbsp;&nbsp;&nbsp;已完成</span>
-                        <span class="p-num"><%= model.progress %>%</span>
+                        <%if(lang.isCompany("pkds")){%>
+                            <div class="hy-detail__con-progress">
+                                <span class="hy-detail__con-circle"></span> 
+                                <span class="font-size-16">开始预约倒计时</span>
+                                <div class="hy-detail__con-countdown">
+                                    <span>{{countdownTime.day || 0}}</span>天<span>{{countdownTime.hour || 0}}</span>时<span>{{countdownTime.minute || 0}}</span>分<span>{{countdownTime.second || 0}}</span>秒
+                                </div>
+                            </div>
+                        <%}%>
                     </div>
                 </div>
             </div>
@@ -44,7 +62,7 @@
                     <span class="hy-detail__title-span2">产品咨询：400-809-8509</span>
                 </div>
                 <div class="hy-detail__con">
-                    <div>
+                    <div class="hy-detail__con-form">
                         <form name="orderForm">
 
 <%  
@@ -63,8 +81,17 @@
                                        class="order-info-tel mg-tp-10" 
                                        type="text"  
                                        <%= status == 'before_appoint' || status == 'end_appoint' ? 'disabled' : '' %>
-                                       placeholder="您的手机号" 
+                                       placeholder="手机号码" 
                                        ng-model="tel">
+                            </p>
+                            <p class="amount-box">
+                                <span>预约金额</span>
+                                <input name="amount" 
+                                       class="order-info-tel mg-tp-10" 
+                                       type="text"  
+                                       <%= status == 'before_appoint' || status == 'end_appoint' ? 'disabled' : '' %>
+                                       placeholder="预约金额"
+                                       ng-model="amount">
                             </p>
                             <p class="mg-tp-20">
                                 <input class="check_agreement" type="checkbox" checked />同意并遵守

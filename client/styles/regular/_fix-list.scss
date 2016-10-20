@@ -306,12 +306,13 @@
     }
 
     @include e(con) {
-        padding-left: 15px;
-        padding-right: 15px;
+        // padding-left: 15px;
+        // padding-right: 15px;
         overflow: hidden;
-        background: #fff;
+        // background: #fff;
         text-align: left;
-        height:240px;
+        height: 270px;
+
         @include m(end) {
             text-align: center;
 
@@ -322,17 +323,15 @@
         }
 
         @include m(ul) {
-            padding-top: 19px;
-            padding-bottom: 20px;
+            padding: 20px 15px;
             overflow: hidden;
-            border-bottom: 1px solid #c9c9c9;
+            background: #fff;
 
             li {
                 float: left;
                 padding-left: 20px;
                 padding-right: 20px;
-                border-right: 1px dotted #D3D2D1;
-                height: 110px;
+                border-right: 1px solid #D3D2D1;
             }
 
             li:last-child {
@@ -341,7 +340,6 @@
 
             span {
                 display: inline-block;
-                margin-top: 25px;
                 font-size: 16px;
                 line-height: 16px;
                 color: #666;
@@ -368,9 +366,48 @@
             border-radius: 50%;
         }
 
+        @include m(progress_box) {
+            padding: 0 15px;
+            overflow: hidden;
+            background: #fff;
+            margin-top: 10px;
+            height: 150px;
+        }
+
         @include m(progress) {
-            padding-top: 43px;
-            padding-bottom: 39px;
+            padding-top: 15px;
+        }
+
+        @include m(countdown) {
+            padding-left: 12px;
+            color: #595757;
+            padding-top: 6px;
+
+            span {
+                font-size: 20px;
+                padding: 0 5px;
+            }
+        }
+
+        @include m(form) {
+            background-color: #fff;
+            padding: 0 15px;
+
+            .amount-box {
+                position: relative;
+
+                span {
+                    position: absolute;
+                    top: 23px;
+                    left: 30px;
+                    color: #666;
+                    border-right: 1px solid #ccc;
+                    padding-right: 20px;
+                }
+                input {
+                    padding-left: 125px !important;
+                }
+            }
         }
 
         @include m(btn) {
@@ -396,10 +433,15 @@
             background: #959595;
             color: #fff;
         }
+        
+        .progress-box {
+            padding-left: 12px;
+            padding-top: 10px;
+        }
 
         .progress {
             display: inline-block;
-            width: 170px;
+            width: 520px;
         }
 
         p input[type=text] {

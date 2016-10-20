@@ -50,11 +50,12 @@
          * @method getOrderInfo
          * 
          */
-        function getOrderInfo(phone, title, username) {
+        function getOrderInfo(phone, title, username, amount) {
             return $http.post('/action/public/v3/closed_fund_leads', {
                 phone: phone,
                 title: title,
-                username: username
+                username: username,
+                amount: amount
             });
         }
     }
