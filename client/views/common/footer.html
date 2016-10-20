@@ -118,6 +118,7 @@
         </p>
     </div>
 </div>
+<%if(lang.isCompany("tigerwit")){%>
 <!-- Live800Online operator icon:online service(in use)[Floating icon] Start-->
 <script language="javascript">
     window.OpenChat = function () {
@@ -138,7 +139,9 @@
      onclick="OpenChat();"
      border="0"  <%= lang.text("navbar15")%>>
 </div>
-<!-- Online operator icon:online service(in use) End-->
+<!-- Online operator icon:online service(in use) End-->            
+<%}%>
+
 
 <!-- 友盟统计 2016.09.21 -->
 <div style="display:none">
