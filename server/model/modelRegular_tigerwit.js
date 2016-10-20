@@ -50,6 +50,8 @@ module.exports = {
             id : "11",
             name : "【MACD月盈201610-01】",    //产品标题
             money_copy : "$2000-$10000",   //复制金额
+            money_copy_low : 2000,          // money_copy 的最低复制金
+            money_copy_high : 10000,          // money_copy 的最高复制金
             money_copy_max : "$30万", //最高复制金额 exam : '$4000'
             period : "1个月",      //复制封闭期
             withdraw_history : "20%",    //历史最高回撤
@@ -71,6 +73,8 @@ module.exports = {
             id : "10",
             name : "【MACD月盈201609-01】",    //产品标题
             money_copy : "$2000-$10000",   //复制金额
+            money_copy_low : 2000,          // money_copy 的最低复制金
+            money_copy_high : 10000,          // money_copy 的最高复制金
             money_copy_max : "$30万", //最高复制金额 exam : '$4000'
             period : "1个月",      //复制封闭期
             withdraw_history : "20%",    //历史最高回撤
@@ -92,6 +96,8 @@ module.exports = {
             id : "9",
             name : "【汇赢全球月盈 201608-2】",    //产品标题
             money_copy : "$5000-$20000",   //复制金额
+            money_copy_low : 5000,          // money_copy 的最低复制金
+            money_copy_high : 20000,          // money_copy 的最高复制金
             money_copy_max : "$30万", //最高复制金额 exam : '$4000'
             period : "1个月",      //复制封闭期
             withdraw_history : "20%",    //历史最高回撤
@@ -113,6 +119,8 @@ module.exports = {
             id : "8",
             name : "【汇赢全球月盈 201608-1】",    //产品标题
             money_copy : "$5000-$20000",   //复制金额
+            money_copy_low : 5000,          // money_copy 的最低复制金
+            money_copy_high : 20000,          // money_copy 的最高复制金
             money_copy_max : "$30万", //最高复制金额 exam : '$4000'
             period : "1个月",      //复制封闭期
             withdraw_history : "20%",    //历史最高回撤
@@ -134,6 +142,8 @@ module.exports = {
             id : "7",
             name : "【汇赢全球月盈 201606-1】",    //产品标题
             money_copy : "$5000-$20000",   //复制金额
+            money_copy_low : 5000,          // money_copy 的最低复制金
+            money_copy_high : 20000,          // money_copy 的最高复制金
             money_copy_max : "$30万", //最高复制金额 exam : '$4000'
             period : "1个月",      //复制封闭期
             withdraw_history : "20%",    //历史最高回撤
@@ -198,6 +208,8 @@ module.exports = {
             //require
             name : "【Elephant(Forex Management)】",    //产品标题
             money_copy : "$100000",   //复制金额   exam:'$10000'
+            money_copy_low : 100000,          // money_copy 的最低复制金
+            money_copy_high : 100000,          // money_copy 的最高复制金
             money_copy_max : "", //最高复制金额 exam : '$4000'
             period : "1个月",      //复制封闭期
             withdraw_history : "30%",    //历史最高回撤
@@ -220,6 +232,8 @@ module.exports = {
             //require
             name : "【汇赢全球周盈 201604-3】",    //产品标题
             money_copy : "$3000-$10000",   //复制金额   exam:'$10000'
+            money_copy_low : 3000,          // money_copy 的最低复制金
+            money_copy_high : 10000,          // money_copy 的最高复制金
             money_copy_max : "$33万", //最高复制金额 exam : '$4000'
             period : "1周",      //复制封闭期
             withdraw_history : "15%",    //历史最高回撤
@@ -243,6 +257,8 @@ module.exports = {
             //require
             name : "【汇赢全球周盈 201604-2】",    //产品标题
             money_copy : "$3000-$10000",   //复制金额   exam:'$10000'
+            money_copy_low : 3000,          // money_copy 的最低复制金
+            money_copy_high : 10000,          // money_copy 的最高复制金
             money_copy_max : "$33万", //最高复制金额 exam : '$4000'
             period : "1周",      //复制封闭期
             withdraw_history : "15%",    //历史最高回撤
@@ -265,6 +281,8 @@ module.exports = {
             //require
             name : "【汇赢全球周盈 201604-1】",    //产品标题
             money_copy : "$3000-$10000",   //复制金额   exam:'$10000'
+            money_copy_low : 3000,          // money_copy 的最低复制金
+            money_copy_high : 10000,          // money_copy 的最高复制金
             money_copy_max : "$33万", //最高复制金额 exam : '$4000'
             period : "1周",      //复制封闭期
             withdraw_history : "15%",    //历史最高回撤

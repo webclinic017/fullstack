@@ -39,6 +39,8 @@ module.exports = {
             id : "1",
             name : "【MACD月盈201611-01】",    //产品标题
             money_copy : "$2000-$10000",   //复制金额
+            money_copy_low : 2000,          // money_copy 的最低复制金
+            money_copy_high : 10000,          // money_copy 的最高复制金
             money_copy_max : "$30万", //最高复制金额 exam : '$4000'
             period : "1个月",      //复制封闭期
             withdraw_history : "20%",    //历史最高回撤
@@ -61,6 +63,8 @@ module.exports = {
             id : "2",
             name : "【MACD月盈201611-01】",    //产品标题
             money_copy : "$2000-$10000",   //复制金额
+            money_copy_low : 2000,          // money_copy 的最低复制金
+            money_copy_high : 10000,          // money_copy 的最高复制金
             money_copy_max : "$30万", //最高复制金额 exam : '$4000'
             period : "1个月",      //复制封闭期
             withdraw_history : "20%",    //历史最高回撤
@@ -84,6 +88,8 @@ module.exports = {
             //require
             name : "【汇赢全球周盈 201604-2】",    //产品标题
             money_copy : "$3000-$10000",   //复制金额   exam:'$10000'
+            money_copy_low : 3000,          // money_copy 的最低复制金
+            money_copy_high : 10000,          // money_copy 的最高复制金
             money_copy_max : "$33万", //最高复制金额 exam : '$4000'
             period : "1周",      //复制封闭期
             withdraw_history : "15%",    //历史最高回撤

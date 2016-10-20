@@ -90,7 +90,7 @@
                                        class="order-info-tel mg-tp-10" 
                                        type="text"  
                                        <%= status == 'before_appoint' || status == 'end_appoint' ? 'disabled' : '' %>
-                                       placeholder="预约金额"
+                                       placeholder="<%= model.money_copy %>"
                                        ng-model="amount">
                             </p>
                             <p class="mg-tp-20">
