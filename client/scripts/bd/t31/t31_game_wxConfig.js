@@ -13,6 +13,8 @@
     window.wx_game.awards = "";
     window.wx_game.game_can_start = false;
     window.wx_game.hit_num = 0;
+    window.wx_game.score_sec = 0;
+    window.wx_game.user_avator = "";
     //检测微信环境
     window.wx_game.isWeixin = navigator.userAgent.toLowerCase().indexOf('micromessenger') != -1;
 
@@ -26,6 +28,7 @@
         });
     }
 
+    //初始化用户信息
     if (!!wx_token) { //已经登录
         window.wx_game.is_login = true;
         window.wx_game.wx_token = wx_token;
@@ -59,6 +62,8 @@
                     //填入用户信息
                     //设置头像
                     document.getElementById("user_avator").src = info.headimgurl;
+                    //设置分享头像
+                    window.wx_game.user_avator = info.headimgurl;
                     //昵称
                     $("#username").html(info.nickname);
                     //历史最好成绩
@@ -68,19 +73,23 @@
                     $("#curRange").html(info.rank);
                     var rank = info.rank;
 
+                    window.wx_game.score_sec = info.best_result;
+                    window.wx_game.hit_num = info.hit;
+
                     //更改奖品图标
                     if (rank == 1) {
                         $("#awardPic").attr("class","");
                         $("#awardPic").addClass("gameData_awardPic iphone");
-                        window.wx_game.awards = "获得了iPhone 7"
+                        //window.wx_game.score_sec
+                        window.wx_game.shareWords = "专治各种不服，"+ window.wx_game.score_sec +"秒击败100%用户，获得iphone 7，还有谁？"
                     } else if (rank > 1 && rank <= 10) {
                         $("#awardPic").attr("class","");
                         $("#awardPic").addClass("gameData_awardPic power");
-                        window.wx_game.awards = "获得了美国队长移动电源"
+                        window.wx_game.shareWords = "轻轻松松"+ window.wx_game.score_sec +"秒击败"+ window.wx_game.hit_num +'%用户，获得"美国队长"移动电源，哇咔咔！'
                     } else {
                         $("#awardPic").attr("class","");
                         $("#awardPic").addClass("gameData_awardPic vip");
-                        window.wx_game.awards = "系统随机赠送爱奇艺3个月会员资格"
+                        window.wx_game.shareWords = "再接再厉!"+ window.wx_game.score_sec +"秒击败"+ window.wx_game.hit_num +'%用户，获得爱奇艺季卡抽奖机会,GBM!!!'
                     }
 
                 } else {
@@ -96,6 +105,7 @@
         console.log("用户还没有登录...")
     }
 
+    //获取微信SDK权限
     $(function () {
         $.ajax({
             type: "post",
@@ -121,36 +131,45 @@
         });
     });
 
+    //配置微信分享信息
     wx.ready(function () {
         //console.log("wx_is_ready and hitDone event is binded");
         console.log("wechat share is ready");
         //获取“分享给朋友”按钮点击状态及自定义分享内容接口
         wx.onMenuShareAppMessage({
             title: "厉害了word微盘大师！",
-            desc: "我在“微盘大师”中击败了" + window.wx_game.hit_num + "%的用户，" + window.wx_game.awards + "。哇咔咔！！！",
+            desc: window.wx_game.shareWords,
             link: window.location.href,
-            imgUrl: window.location.protocol + "//" + window.location.hostname + "/activity/t31_game/share_pic_other.jpg",
+            //imgUrl: window.location.protocol + "//" + window.location.hostname + "/activity/t31_game/share_pic_other.jpg",
+            imgUrl: window.wx_game.user_avator,
             trigger: function (res) {
+
             },
             success: function (res) {
+                // umeng
+                _czc.push(["_trackEvent", "微盘大师主页", "分享给朋友按钮"]);
             },
             cancel: function (res) {
+
             },
             fail: function (res) {
+
             }
         });
 
         //获取“分享到朋友圈”按钮点击状态及自定义分享内容接口
         wx.onMenuShareTimeline({
-            title: "我在“微盘大师”中击败了" + window.wx_game.hit_num + "%的用户，" + window.wx_game.awards + "。哇咔咔！！！",
-            desc: "我在“微盘大师”中击败了" + window.wx_game.hit_num + "%的用户，" + window.wx_game.awards + "。哇咔咔！！！",
+            title: window.wx_game.shareWords,
+            desc: window.wx_game.shareWords,
             link: window.location.href,
-            imgUrl: window.location.protocol + "//" + window.location.hostname + "/activity/t31_game/share_pic.jpg",
+            //imgUrl: window.location.protocol + "//" + window.location.hostname + "/activity/t31_game/share_pic_other.jpg",
+            imgUrl: window.wx_game.user_avator,
             trigger: function (res) {
 
             },
             success: function (res) {
-
+                // umeng
+                _czc.push(["_trackEvent", "微盘大师主页", "分享到朋友圈"]);
             },
             cancel: function (res) {
 
@@ -161,14 +180,17 @@
 
         wx.onMenuShareQQ({
             title: "厉害了word微盘大师！",
-            desc: "我在“微盘大师”中击败了" + window.wx_game.hit_num + "%的用户，" + window.wx_game.awards + "。哇咔咔！！！",
+            desc: window.wx_game.shareWords,
             link: window.location.href,
-            imgUrl: window.location.protocol + "//" + window.location.hostname + "/activity/t31_game/share_pic.jpg",
+            //imgUrl: window.location.protocol + "//" + window.location.hostname + "/activity/t31_game/share_pic_other.jpg",
+            imgUrl: window.wx_game.user_avator,
             trigger: function (res) {
             },
             complete: function (res) {
             },
             success: function (res) {
+                // umeng
+                _czc.push(["_trackEvent", "微盘大师主页", "分享给QQ好友"]);
             },
             cancel: function (res) {
             },

@@ -103,7 +103,9 @@
 
                 //微信登录
                 game.wxlogin.on("touchend", function () {
-                    window.wx_game.login();
+                    window.wx_game.login()
+                    // umeng
+                    _czc.push(["_trackEvent", "微盘大师游戏首页", "微信登录按钮"]);
                 });
 
                 // 游戏结束页 app下载按钮
@@ -155,9 +157,10 @@
                     }
                 });
 
-                //关注微信按钮
+                //关注微信按钮 ---> 变为t31活动页
                 game.focusWx.on("touchend", function (e) {
-                    game.focus_tip.fadeIn(500);
+                    //game.focus_tip.fadeIn(500);
+                    window.location.href = "https://www.tigerwit.com/bd/t31?pid=WPDS";
                 });
 
                 // 领取奖励按钮
@@ -188,14 +191,13 @@
                 });
 
                 //立即领取奖励按钮
+                $(":input").focus(function (e) {
+                    $(e.target).removeClass("warning");
+                    $(e.target).val("");
+                });
                 game.get_award_now.on("touchend", function () {
                     var input = game.real_name;
                     var rName = input.val() ? input.val() : "";
-                    $(":input").focus(function (e) {
-                        $(e.target).removeClass("warning");
-                        $(e.target).val("");
-                    });
-
                     if (/^[\u4e00-\u9fa5]+$/.test(input.val())) {
                         function checkLength(name) {
                             var num = 0;
@@ -246,6 +248,12 @@
                         // umeng
                         _czc.push(["_trackEvent", "微盘大师申领奖励页", "提交按钮"]);
 
+                        if(window.location.search){
+                            if(window.location.search.split("pid=")){
+                                _this.pid = _this.pid_words[1].split("&")[0] || null;
+                            }
+                        }
+
                         //请求领取奖励接口
                         $.ajax({
                             url: "/action/public/wx/game_winner",
@@ -253,7 +261,7 @@
                             data: {
                                 username: game.real_name.val(),
                                 phone: game.real_tel.val(),
-                                pid: window.location.search.split("pid=")[1].split("&")[0]
+                                pid: _this.pid
                             },
                             beforeSend: function () {
                                 game.award_tips.css({display: "block"});
@@ -273,7 +281,9 @@
                                             _this.award_wx_login.css("display", "block");
                                             //绑定事件 /跳回登录界面
                                             _this.award_wx_login.on("touchend", function () {
-                                                window.wx_game.login()
+                                                window.wx_game.login();
+                                                // umeng
+                                                _czc.push(["_trackEvent", "微盘大师游戏首页", "微信登录按钮"]);
                                             });
                                             _this.award_tips_words.html(tip);
                                         } else {
@@ -301,6 +311,8 @@
 
             // 自定义事件 开始游戏
             this.start_game.bind("start_game", function () {
+                // umeng
+                _czc.push(["_trackEvent", "微盘大师游戏页", "开始游戏按钮"]);
 
                 if (window.wx_game.is_login) {
                     //绑定游戏可以开始事件 /因为要等待用户信息拉取成功才能开始
@@ -359,7 +371,6 @@
                 console.log(_this.create_timer);
                 //清理创建计时器
                 _this.clear_TIMER();
-                console.log(_this.create_timer);
                 //显示分数
                 _this.end_score.html(_this.score_sec + "''");
                 //暂停音乐
@@ -420,12 +431,7 @@
                         }
                     });
 
-                    //刷新成绩 /排行
-                    //视图层
-                    if (parseInt(_this.score_sec) > parseInt($("#selfBst").html())) {
-                        $("#selfBst").html(info.best_result + "''");
-                        $("#user_bst_score").html(info.best_result + "''");
-                    }
+                    //刷新成绩 /排
                     //数据库
                     $.ajax({
                         url: "/action/public/wx/userinfo",
@@ -441,20 +447,28 @@
                                 //当前排名
                                 $("#curRange").html(info.rank);
                                 var rank = info.rank;
-                                //更改奖品图标
+
                                 //更改奖品图标
                                 if (rank == 1) {
-                                    $("#awardPic").attr("class", "");
+                                    $("#awardPic").attr("class","");
                                     $("#awardPic").addClass("gameData_awardPic iphone");
-                                    window.wx_game.awards = "iPhone 7"
+                                    window.wx_game.shareWords = "专治各种不服，"+ window.wx_game.score_sec +"秒击败100%用户，获得iphone 7，还有谁？"
                                 } else if (rank > 1 && rank <= 10) {
-                                    $("#awardPic").attr("class", "");
+                                    $("#awardPic").attr("class","");
                                     $("#awardPic").addClass("gameData_awardPic power");
-                                    window.wx_game.awards = "美国队长移动电源"
+                                    window.wx_game.shareWords = "轻轻松松"+ window.wx_game.score_sec +"秒击败"+ window.wx_game.hit_num +'%用户，获得"美国队长"移动电源，哇咔咔！'
                                 } else {
-                                    $("#awardPic").attr("class", "");
+                                    $("#awardPic").attr("class","");
                                     $("#awardPic").addClass("gameData_awardPic vip");
-                                    window.wx_game.awards = "爱奇艺3个月会员资格"
+                                    window.wx_game.shareWords = "再接再厉!"+ window.wx_game.score_sec +"秒击败"+ window.wx_game.hit_num +'%用户，获得爱奇艺季卡抽奖机会,GBM!!!'
+                                }
+
+                                //视图层
+                                if (parseInt(_this.score_sec) > parseInt($("#selfBst").html())) {
+                                    $("#selfBst").html(info.best_result + "''");
+                                    $("#user_bst_score").html(info.best_result + "''");
+                                    //将本次成绩挂到window上,用于成绩分享
+                                    window.wx_game.score_sec = _this.score_sec;
                                 }
                             }
                         }
