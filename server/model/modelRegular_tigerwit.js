@@ -1,20 +1,21 @@
+var URL_PATH = process.env.URL_PATH;
 module.exports = {
 
     //定期跟单团队对应的历史交易图标
     a_history_images : {
         "team_zhangwei" : [
-            'https://www.tigerwit.com/images/ranklist/zhangwei1.f0fb6efd.jpg',
-            'https://www.tigerwit.com/images/ranklist/zhangwei2.2b371b95.jpg'
+            URL_PATH + '/white_label/zhangwei1.jpg',
+            URL_PATH + '/white_label/zhangwei2.jpg'
         ],
         "team_huiying" : [
-            'https://www.tigerwit.com/images/ranklist/huixin1.96e5ad45.jpg',
-            'https://www.tigerwit.com/images/ranklist/huixin2.5dec193f.jpg',
-            'https://www.tigerwit.com/images/ranklist/huixin3.60915e4a.jpg',
-            'https://www.tigerwit.com/images/ranklist/huixin4.f0c9794f.jpg',
-            'https://www.tigerwit.com/images/ranklist/huixin5.9ea1c956.jpg'
+            URL_PATH + '/white_label/huixin1.jpg',
+            URL_PATH + '/white_label/huixin2.jpg',
+            URL_PATH + '/white_label/huixin3.jpg',
+            URL_PATH + '/white_label/huixin4.jpg',
+            URL_PATH + '/white_label/huixin5.jpg'
         ],
         "team_macd" : [
-            'https://www.tigerwit.com/images/ranklist/MACD1.139e7345.png'
+            URL_PATH + '/white_label/MACD1.png'
         ]
     },  
     /*

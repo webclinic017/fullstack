@@ -392,6 +392,7 @@
         @include m(form) {
             background-color: #fff;
             padding: 0 15px;
+            height: 100%;
 
             .amount-box {
                 position: relative;
@@ -444,7 +445,7 @@
             width: 520px;
         }
 
-        p input[type=text] {
+        input[type=text], input[type=number] {
             display: inline-block;
             padding: 14px 0 14px 12px;
             height: 43px;
@@ -521,35 +522,35 @@
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/huixin1.jpg");  
+            @include img-normal("/white_label/huixin1.jpg");  
         }
         @include m(z-img2) {
             width: 980px;
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/huixin2.jpg");  
+            @include img-normal("/white_label/huixin2.jpg");  
         }
         @include m(z-img3) {
             width: 980px;
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/huixin3.jpg");  
+            @include img-normal("/white_label/huixin3.jpg");  
         }
         @include m(z-img4) {
             width: 980px;
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/huixin4.jpg");  
+            @include img-normal("/white_label/huixin4.jpg");  
         }
         @include m(z-img5) {
             width: 980px;
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/huixin5.jpg");  
+            @include img-normal("/white_label/huixin5.jpg");  
         }
 
         @include m(w-img1) {
@@ -557,21 +558,21 @@
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/zhangwei1.jpg");  
+            @include img-normal("/white_label/zhangwei1.jpg");  
         }
         @include m(w-img2) {
             width: 980px;
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/zhangwei2.jpg");  
+            @include img-normal("/white_label/zhangwei2.jpg");  
         }
         @include m(m-img1) {
             width: 980px;
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/MACD1.png");  
+            @include img-normal("/white_label/MACD1.png");  
         }
     }
 

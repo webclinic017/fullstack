@@ -2,7 +2,11 @@
     var status = model.status;
 %>
 <script type="text/javascript">
-    var countdownTime = <%= model.countdownTime %>
+    var countdownTime = <%= model.countdownTime %>;
+    var appointAmount = {
+        min: <%= model.money_copy_low %>,
+        max: <%= model.money_copy_high %>
+    };
 </script>
 
 
@@ -68,31 +72,43 @@
 <%  
     if(status == "before_appoint" || status == "start_appoint" || status == "end_appoint"){
 %>
-                           <p class="">
+                           <div class="relative">
                                 <input name="name"
                                        class="order-info-name mg-tp-20" 
                                        type="text" 
                                        <%= status == 'before_appoint' || status == 'end_appoint' ? 'disabled' : '' %>
                                        placeholder="您的姓名"
-                                       ng-model="name">
-                            </p>
-                            <p>
+                                       ng-model="name"
+                                       ng-focus="hideErr('name')">
+                                <p ng-show="frontErr.name.show" class="alert-arrow_tp_lf">
+                                    姓名不能为空
+                                </p>
+                            </div>
+                            <div class="relative">
                                 <input name="tel" 
                                        class="order-info-tel mg-tp-10" 
-                                       type="text"  
+                                       type="number"  
                                        <%= status == 'before_appoint' || status == 'end_appoint' ? 'disabled' : '' %>
                                        placeholder="手机号码" 
-                                       ng-model="tel">
-                            </p>
-                            <p class="amount-box">
+                                       ng-model="tel"
+                                       ng-focus="hideErr('tel')">
+                                <p ng-show="frontErr.tel.show" class="alert-arrow_tp_lf">
+                                    手机号码不能为空
+                                </p>
+                            </div>
+                            <div class="amount-box relative">
                                 <span>预约金额</span>
                                 <input name="amount" 
                                        class="order-info-tel mg-tp-10" 
-                                       type="text"  
+                                       type="number"  
                                        <%= status == 'before_appoint' || status == 'end_appoint' ? 'disabled' : '' %>
                                        placeholder="<%= model.money_copy %>"
-                                       ng-model="amount">
-                            </p>
+                                       ng-model="amount"
+                                       ng-focus="hideErr('amount')">
+                                <p ng-show="frontErr.amount.show" class="alert-arrow_tp_lf">
+                                    复制金额为<%= model.money_copy %>
+                                </p>
+                            </div>
                             <p class="mg-tp-20">
                                 <input class="check_agreement" type="checkbox" checked />同意并遵守
                                 <a href="/regular/agree/<%= model.id %>?name={{name}}" target="_blank" class="font-info">委托协议书</a>

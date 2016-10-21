@@ -12,6 +12,8 @@ module.exports = function(regular_id){
 		expect_year_profit : product.profit_rate_wish,
 		team : product.team_intro,
 		money_copy : product.money_copy,
+        money_copy_low : product.money_copy_low,
+        money_copy_high : product.money_copy_high,          
         money_copy_max: product.money_copy_max,
 		period : product.period,
         progress: product.progress,

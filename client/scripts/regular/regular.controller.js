@@ -27,6 +27,11 @@
         $scope.submitOrder = submitOrder;
         $scope.countdownTime = {};
 
+        $scope.showErr = showErr;
+        $scope.hideErr = hideErr;
+
+        var isAppoint = false;
+
         countdownTime = parseInt(countdownTime / 1000);
 
         var timer = $interval(function () {
@@ -37,11 +42,11 @@
         }, 1000);
 
         function submitOrder () {
-            // console.info($scope.tel, $scope.product_title, $scope.name);
+            isAppoint = false;
+
+            checkForm();
             
-            if ($scope.name == '') {
-                alert("请填写姓名或电话");
-            } else {
+            if (isAppoint) {
                 $scope.product_title = angular.element('.hy-detail__title-span1').text();
                 ranklist.getOrderInfo($scope.tel, $scope.product_title, $scope.name, $scope.amount).then(function (data) {
                     if (data && data.error_code == 0) {
@@ -51,6 +56,38 @@
                         alert((data && data.error_msg) || "预约失败，请联系客服。");
                     }
                 });
+            }
+        }
+
+        function checkForm () {
+            var count = 0;
+            if (! $scope.name) {
+                count++;
+                showErr('name');
+            }
+            if (! $scope.tel) {
+                count++;
+                showErr('tel');
+            }
+            if (!$scope.amount || $scope.amount < appointAmount.min || $scope.amount > appointAmount.max) {
+                count++;
+                showErr('amount');
+            }
+
+            if (count === 0) {
+                isAppoint = true;
+            }
+        }
+
+        function showErr (name) {
+            if ($scope.frontErr[name]) {
+                $scope.frontErr[name].show = true;
+            }
+        }
+
+        function hideErr (name) {
+            if ($scope.frontErr[name]) {
+                $scope.frontErr[name].show = false;
             }
         }
 
