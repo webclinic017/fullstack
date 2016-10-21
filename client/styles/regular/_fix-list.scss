@@ -82,11 +82,17 @@
     @include e(list) {
         margin-bottom: 16px;
         overflow: hidden;
-        border-top: 1px solid #fedd0a;
+        border-top: 1px solid $brand-primary;
         box-shadow: 3px 3px 5px #e7e7e7;
         background: #fff;
-        @include img-normal($image-path-base + "ranklist/little-dq.jpg");
         background-repeat: no-repeat;
+
+        &.tigerwit {
+            @include img-normal($image-path-base + "ranklist/little-dq.jpg");
+        }
+        &.pkds {
+            @include img-normal($image-path-base + "ranklist/little-dq-pkds.png");
+        }
 
 
         @include m(con1) {
@@ -297,7 +303,13 @@
             display: inline-block;
             height: 34px;
             width: 34px;
-            @include img-normal($image-path-base + "ranklist/huiying-tel.png");
+
+            &.tigerwit {
+                @include img-normal($image-path-base + "ranklist/huiying-tel.png");
+            }
+            &.pkds {
+                @include img-normal($image-path-base + "ranklist/huiying-tel-pkds.png");
+            }
         }
 
         @include m(span2) {

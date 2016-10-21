@@ -48,7 +48,12 @@ module.exports = function () {
             return path;
         },
         background: function () {
-            return this.language === 'en' ? true : false;
+            var _this = this;
+            var backgroundName = {
+                en: _this.language === 'en' ? 'en' : '',
+                company: company_name
+            };
+            return backgroundName;
         }
     };
     return Lang;
