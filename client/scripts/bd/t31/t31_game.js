@@ -38,6 +38,7 @@
             this.real_name = $("#real_name");
             this.real_tel = $("#real_tel");
             this.award_page = $("#award_page");
+            this.award_back = $("#award_back");
             this.focusWx = $("#focusWx");
             this.dowload_app_1 = $("#download_app_1");
             this.dowload_app_2 = $("#download_app_2");
@@ -60,6 +61,7 @@
                     return getComputedStyle(obj, false)[name];
                 }
             }
+
             //按钮控制
             (function (game) {
                 //关闭按钮
@@ -120,6 +122,28 @@
                     _czc.push(["_trackEvent", "微盘大师申领奖励页", "APP下载按钮"]);
                 });
 
+                //返回上一页
+                game.award_back.on("tap", function () {
+                    //返回上一页
+                    game.award_page.css({
+                        "-webkit-transform": "rotate(-180deg)", /* Safari 和 Chrome */
+                        "transform": "rotate(-180deg)"
+                    });
+                    setTimeout(function(){
+                        game.game_box.css({
+                            top: -_this.cur_h * 2 //定位到领取奖励页面
+                        });
+                    },200);
+                    //恢复
+                    setTimeout(function(){
+                        game.award_page.css({
+                            "-webkit-transform": "rotate(-45deg)", /* Safari 和 Chrome */
+                            "transform": "rotate(-45deg)"
+                        });
+                    },500);
+                    return false;
+                });
+
                 //分享按钮
                 game.share.on("touchend", function (e) {
 
@@ -139,6 +163,7 @@
                     }
                     return false;
                 });
+
                 //分享按钮三个事件 /控制显示隐藏
                 game.wxshare_mask.on("touchstart", function (e) {
                     game.wxshare_mask.touch_moved = false;
@@ -178,8 +203,8 @@
 
                     //做左右倾斜动画
                     game.award_page.css({
-                        "-webkit-transform": "rotate(25deg)", /* Safari 和 Chrome */
-                        "transform": "rotate(25deg)"
+                        "-webkit-transform": "rotate(20deg)", /* Safari 和 Chrome */
+                        "transform": "rotate(20deg)"
                     });
 
                     setTimeout(function () {
@@ -248,8 +273,9 @@
                         // umeng
                         _czc.push(["_trackEvent", "微盘大师申领奖励页", "提交按钮"]);
 
-                        if(window.location.search){
-                            if(window.location.search.split("pid=")){
+                        if (window.location.search) {
+                            _this.pid_words = window.location.search.split("pid=");
+                            if (_this.pid_words) {
                                 _this.pid = _this.pid_words[1].split("&")[0] || null;
                             }
                         }
@@ -450,17 +476,17 @@
 
                                 //更改奖品图标
                                 if (rank == 1) {
-                                    $("#awardPic").attr("class","");
+                                    $("#awardPic").attr("class", "");
                                     $("#awardPic").addClass("gameData_awardPic iphone");
-                                    window.wx_game.shareWords = "专治各种不服，"+ window.wx_game.score_sec +"秒击败100%用户，获得iphone 7，还有谁？"
+                                    window.wx_game.shareWords = "专治各种不服，" + window.wx_game.score_sec + "秒击败100%用户，获得iphone 7，还有谁？"
                                 } else if (rank > 1 && rank <= 10) {
-                                    $("#awardPic").attr("class","");
+                                    $("#awardPic").attr("class", "");
                                     $("#awardPic").addClass("gameData_awardPic power");
-                                    window.wx_game.shareWords = "轻轻松松"+ window.wx_game.score_sec +"秒击败"+ window.wx_game.hit_num +'%用户，获得"美国队长"移动电源，哇咔咔！'
+                                    window.wx_game.shareWords = "轻轻松松" + window.wx_game.score_sec + "秒击败" + window.wx_game.hit_num + '%用户，获得"美国队长"移动电源，哇咔咔！'
                                 } else {
-                                    $("#awardPic").attr("class","");
+                                    $("#awardPic").attr("class", "");
                                     $("#awardPic").addClass("gameData_awardPic vip");
-                                    window.wx_game.shareWords = "再接再厉!"+ window.wx_game.score_sec +"秒击败"+ window.wx_game.hit_num +'%用户，获得爱奇艺季卡抽奖机会,GBM!!!'
+                                    window.wx_game.shareWords = "再接再厉!" + window.wx_game.score_sec + "秒击败" + window.wx_game.hit_num + '%用户，获得爱奇艺季卡抽奖机会,GBM!!!'
                                 }
 
                                 //视图层
