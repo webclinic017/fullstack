@@ -40,7 +40,7 @@
     model.products.forEach(function(product, index){
         var status = model.judgeStatus(product);
 %>
-            <div class="fix-list__list">
+            <div class="fix-list__list <%= lang.background().company %>">
                 <div class="fix-list__list-con1">
                     <div class="fix-list__list-title-con">
                         <a class="fix-list__list-title" href="/regular/detail/<%= product.id%>"><%= product.name %></a>
