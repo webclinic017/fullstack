@@ -82,11 +82,17 @@
     @include e(list) {
         margin-bottom: 16px;
         overflow: hidden;
-        border-top: 1px solid #fedd0a;
+        border-top: 1px solid $brand-primary;
         box-shadow: 3px 3px 5px #e7e7e7;
         background: #fff;
-        @include img-normal($image-path-base + "ranklist/little-dq.jpg");
         background-repeat: no-repeat;
+
+        &.tigerwit {
+            @include img-normal($image-path-base + "ranklist/little-dq.jpg");
+        }
+        &.pkds {
+            @include img-normal($image-path-base + "ranklist/little-dq-pkds.png");
+        }
 
 
         @include m(con1) {
@@ -297,7 +303,13 @@
             display: inline-block;
             height: 34px;
             width: 34px;
-            @include img-normal($image-path-base + "ranklist/huiying-tel.png");
+
+            &.tigerwit {
+                @include img-normal($image-path-base + "ranklist/huiying-tel.png");
+            }
+            &.pkds {
+                @include img-normal($image-path-base + "ranklist/huiying-tel-pkds.png");
+            }
         }
 
         @include m(span2) {
@@ -306,12 +318,13 @@
     }
 
     @include e(con) {
-        padding-left: 15px;
-        padding-right: 15px;
+        // padding-left: 15px;
+        // padding-right: 15px;
         overflow: hidden;
-        background: #fff;
+        // background: #fff;
         text-align: left;
-        height:240px;
+        height: 270px;
+
         @include m(end) {
             text-align: center;
 
@@ -322,17 +335,15 @@
         }
 
         @include m(ul) {
-            padding-top: 19px;
-            padding-bottom: 20px;
+            padding: 20px 15px;
             overflow: hidden;
-            border-bottom: 1px solid #c9c9c9;
+            background: #fff;
 
             li {
                 float: left;
                 padding-left: 20px;
                 padding-right: 20px;
-                border-right: 1px dotted #D3D2D1;
-                height: 110px;
+                border-right: 1px solid #D3D2D1;
             }
 
             li:last-child {
@@ -341,7 +352,6 @@
 
             span {
                 display: inline-block;
-                margin-top: 25px;
                 font-size: 16px;
                 line-height: 16px;
                 color: #666;
@@ -368,9 +378,49 @@
             border-radius: 50%;
         }
 
+        @include m(progress_box) {
+            padding: 0 15px;
+            overflow: hidden;
+            background: #fff;
+            margin-top: 10px;
+            height: 150px;
+        }
+
         @include m(progress) {
-            padding-top: 43px;
-            padding-bottom: 39px;
+            padding-top: 15px;
+        }
+
+        @include m(countdown) {
+            padding-left: 12px;
+            color: #595757;
+            padding-top: 6px;
+
+            span {
+                font-size: 20px;
+                padding: 0 5px;
+            }
+        }
+
+        @include m(form) {
+            background-color: #fff;
+            padding: 0 15px;
+            height: 100%;
+
+            .amount-box {
+                position: relative;
+
+                span {
+                    position: absolute;
+                    top: 23px;
+                    left: 30px;
+                    color: #666;
+                    border-right: 1px solid #ccc;
+                    padding-right: 20px;
+                }
+                input {
+                    padding-left: 125px !important;
+                }
+            }
         }
 
         @include m(btn) {
@@ -396,13 +446,18 @@
             background: #959595;
             color: #fff;
         }
+        
+        .progress-box {
+            padding-left: 12px;
+            padding-top: 10px;
+        }
 
         .progress {
             display: inline-block;
-            width: 170px;
+            width: 520px;
         }
 
-        p input[type=text] {
+        input[type=text], input[type=number] {
             display: inline-block;
             padding: 14px 0 14px 12px;
             height: 43px;
@@ -479,35 +534,35 @@
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/huixin1.jpg");  
+            @include img-normal("/white_label/huixin1.jpg");  
         }
         @include m(z-img2) {
             width: 980px;
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/huixin2.jpg");  
+            @include img-normal("/white_label/huixin2.jpg");  
         }
         @include m(z-img3) {
             width: 980px;
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/huixin3.jpg");  
+            @include img-normal("/white_label/huixin3.jpg");  
         }
         @include m(z-img4) {
             width: 980px;
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/huixin4.jpg");  
+            @include img-normal("/white_label/huixin4.jpg");  
         }
         @include m(z-img5) {
             width: 980px;
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/huixin5.jpg");  
+            @include img-normal("/white_label/huixin5.jpg");  
         }
 
         @include m(w-img1) {
@@ -515,21 +570,21 @@
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/zhangwei1.jpg");  
+            @include img-normal("/white_label/zhangwei1.jpg");  
         }
         @include m(w-img2) {
             width: 980px;
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/zhangwei2.jpg");  
+            @include img-normal("/white_label/zhangwei2.jpg");  
         }
         @include m(m-img1) {
             width: 980px;
             height: 650px;
             background-size: 100%;
             background-position: center center;
-            @include img-normal($image-path-base + "ranklist/MACD1.png");  
+            @include img-normal("/white_label/MACD1.png");  
         }
     }
 
