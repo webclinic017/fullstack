@@ -2,6 +2,11 @@
     'use strict';
     var DOM = {};
 
+    /**
+     * 通过传入id数组,返回以ID命名的jQuery对象
+     * @param oTarget {} 要绑定到的对象
+     * @param id_arr []
+     */
     function get_dom(oTarget, id_arr) {
         for (var i = 0; i < id_arr.length; i++) {
             oTarget["$" + id_arr[i]] = $("#" + id_arr[i])
@@ -17,7 +22,7 @@
         "get_award",
         "share_tel"
     ];
-    get_dom(DOM, id_arr);
+    get_dom(DOM || {}, id_arr);
 
     //红包页面
     DOM.$get_award.on("tap", function () {
@@ -83,6 +88,7 @@
     //发送到朋友圈
     DOM.$share_to_circle.on("tap", function () {
         //todo
+
 
 
         return false;
