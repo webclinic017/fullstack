@@ -1,5 +1,6 @@
 'use strict';
 var company_name = process.env.COMPANY_NAME;
+var url_path = process.env.URL_PATH;
 var companyConfig = {};
 var indexBasePath = "/white_label";
 
@@ -106,7 +107,7 @@ module.exports = function () {
             }
         },
 
-
+        "registerPath": {"zh": url_path+'/space/#/account/register', "en": url_path+'/space/#/account/register'},
         "companyNickName": {"zh": companyConfig.companyNickName, "en": ""},
         "companyZhName": {"zh": companyConfig.companyNameZh, "en": companyConfig.companyNameEn},
         "companyEnName": {"zh": companyConfig.companyNameEn, "en": companyConfig.companyNameEn},

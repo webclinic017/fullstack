@@ -12,6 +12,7 @@ var Lang = require('./lang')();
 var report_sites = require('./report_site');
 var setCompanyCookie = require('./set_company_cookie');
 var URL_PATH = process.env.URL_PATH;
+var COMPANY_NAME = process.env.COMPANY_NAME;
 
 function extendPublic (data, req) {
     var lang = new Lang(req);
@@ -64,7 +65,15 @@ module.exports = function(app) {
 
     app.route('/').get(function(req, res) {
         if (isMobile(req)) {
-            res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+            if (COMPANY_NAME === 'tigerwit') {
+                res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+            }
+            if (COMPANY_NAME === 'pkds') {
+                setCompanyCookie(res);
+                res.render('home.html', extendPublic({
+                    pageInfo: {}
+                }, req));
+            }
         } else {
             setCompanyCookie(res);
             res.render('home.html', extendPublic({
