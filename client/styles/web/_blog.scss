@@ -10,8 +10,11 @@
     }
 
     @include e(content) {
-        font: normal normal normal 14px / 22px "Arial", Helvetica, Arial, Verdana, sans-serif;
         color: #838992;
+
+        p {
+            line-height: 22px;
+        }
     }
 }
 
@@ -23,8 +26,11 @@
         color: #000;
     }
     @include e(content) {
-        font: normal normal normal 14px / 22px "Arial", Helvetica, Arial, Verdana, sans-serif;
         color: #838992;
+
+        p {
+            line-height: 22px;
+        }
     }
 }
 
