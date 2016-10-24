@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include common/m_common_head.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
+<% include common/m_css_vendor.html %>
+<% include common/common_header.html %>
+<body>
+<div class="m_download_layout">
+    <div class="m_download_layout__banner">
+        <img src="/images/mobile/m_download_banner.png">
+    </div>
+    <div class="m_download_layout__download clearfix">
+        <div class="download-logo">
+            <img src="/images/mobile/m_download_logo.png">
+        </div>
+        <div class="download-btn">
+            <p>真正带你赚钱的APP</p>
+            <a href="/">轻触下载</a>
+        </div>
+    </div>
+    <div class="m_download_layout__advantages clearfix">
+        <h4>六大投资优势,体验完美交易</h4>
+        <p class="sub_title">在老虎外汇,已经有86523人选择外汇跟单交易</p>
+        <ul class="clearfix">
+            <li>
+                <img src="/images/mobile/m_download_adv1.png" alt="">
+                <h5>门槛低</h5>
+                <p>开户就送100$体验金 <br>最低10$就能交易</p>
+            </li>
+            <li>
+                <img src="/images/mobile/m_download_adv2.png" alt="">
+                <h5>高收益</h5>
+                <p>多倍杠杆,<br>100当做2000花</p>
+            </li>
+            <li>
+                <img src="/images/mobile/m_download_adv3.png" alt="">
+                <h5>易操作</h5>
+                <p>微盘交易,简便易懂,<br>会炒股就会操作</p>
+            </li>
+            <li>
+                <img src="/images/mobile/m_download_adv4.png" alt="">
+                <h5>机会多</h5>
+                <p>24小时交易、T+0交易,<br>大小行情不错过</p>
+            </li>
+            <li>
+                <img src="/images/mobile/m_download_adv5.png" alt="">
+                <h5>高手跟单</h5>
+                <p>无需精通理财知识,<br>把握赚钱机会</p>
+
+            </li>
+            <li>
+                <img src="/images/mobile/m_download_adv6.png" alt="">
+                <h5>市场公平</h5>
+                <p>国际市场,<br/>每天2万亿成交量</p>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+<!-- build:js(client) /scripts/m_vendor.js -->
+<script src="/bower_components/jquery-3.0.0.min/index.js"></script>
+<script src="/scripts/plugins/base64code.js"></script>
+<script src="/scripts/plugins/jquery.tap.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<!-- endbuild -->
+
+<%- include('bd/common/footer.html') %>
+</html>

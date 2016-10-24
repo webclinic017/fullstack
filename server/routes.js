@@ -79,8 +79,13 @@ module.exports = function(app) {
     });
 
     app.route('/download').get(function(req, res) {
-        setCompanyCookie(res);
-        res.render('web_download.html', extendPublic({}, req));
+
+        if (isMobile(req)) {
+            res.render('m_download.html', extendPublic({}, req));
+        } else {
+            setCompanyCookie(res);
+            res.render('web_download.html', extendPublic({}, req));
+        }
     });
 
     /*定期跟单开始*/
