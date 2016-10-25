@@ -282,9 +282,9 @@
             与网站密码相同
         </p>    
         
-        <a class="btn btn-primary btn-sm mg-tp-50 mg-bt-20" ui-sref="space.invest.subpage({subpage: 'current'})">进入个人中心</a>
+        <a class="btn btn-primary btn-sm mg-tp-50 mg-bt-20" ui-sref="space.invest.subpage({subpage: 'current'})" ng-click="finishRegister()">进入个人中心</a>
         <br>
-        <a class="btn btn-info btn-sm" href="/web/mt4" >
+        <a class="btn btn-info btn-sm" href="/web/mt4" ng-click="finishRegister()">
             下载 MT4 软件 
         </a>
         <div ng-if="showGame">

@@ -24,6 +24,9 @@
 
         $scope.logout = logout;
         $scope.reloadLanguage = reloadLanguage;
+        $scope.toTrackRegisterSensorsdata = toTrackRegisterSensorsdata;
+        $scope.toTrackLoginSensorsdata = toTrackLoginSensorsdata;
+        $scope.toTrackBannerSensorsdata = toTrackBannerSensorsdata;
 
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
 
@@ -101,5 +104,24 @@
             location.reload();
         }
 
+        function toTrackRegisterSensorsdata () {
+            // 神策数据统计
+            sa.track('btn_register');
+        }
+        function toTrackLoginSensorsdata () {
+            // 神策数据统计
+            sa.track('btn_login');
+        }
+        function toTrackBannerSensorsdata (event, title, index) {
+            // console.info(event.target.href, title, index);
+            // umeng
+            _czc.push(['_trackEvent','首页Banner','点击',index]);
+            // 神策数据统计
+            sa.track('btn_banner', {
+                banner_title: title,
+                banner_url: event.target.href,
+                banner_index: index
+            });
+        }
     }
 })();
