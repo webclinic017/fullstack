@@ -83,6 +83,13 @@
                     if (data.is_succ) {
                         $scope.copyTrade.success = true;
                         copiedTrader.copied = $scope.copyTrade.amount;
+
+                        // 神策数据统计
+                        sa.track('btn_click', {
+                            btn_page: copiedTrader.usercode,
+                            btn_name: '复制'
+                        });
+
                     } else {
                         $scope.copyTrade.success = false;
 

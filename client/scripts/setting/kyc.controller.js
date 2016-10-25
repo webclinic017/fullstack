@@ -70,12 +70,22 @@
                 kycInfo[data["id"]] = data.answer;
             });
             $scope.clickable = false;
+            // console.info(kycInfo);
 
             account.setKyc(kycInfo).then(function (data) {
                 // console.info(data);
                 if (data.error_code === 0) {
                     $scope.tip.system.show = true;
                     $scope.tip.system.status = 1;
+
+                    // 神策数据统计
+                    sa.setProfile({
+                        key_experience: kycInfo.interests_exp,
+                        key_market: kycInfo.trading_market,
+                        key_risk: kycInfo.risk_tendency
+                    });
+                    // 神策数据统计
+                    sa.track('btn_kyc');
                     
                     if ($scope.type === 'setting') {
                         $scope.clickable = true;

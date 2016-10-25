@@ -4,3 +4,38 @@
     //绑定siteid
     _czc.push(["_setAccount", "1260394016"]);
 </script>
+<script>
+    (function(para) {
+      var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
+      w['sensorsDataAnalytic201505'] = n;
+      w[n] = w[n] || function(a) {return function() {(w[n]._q = w[n]._q || []).push([a, arguments]);}};
+      var ifs = ['track','quick','register','registerPage','registerOnce','registerSession','registerSessionOnce','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify'];
+      for (var i = 0; i < ifs.length; i++) {
+        w[n][ifs[i]] = w[n].call(null, ifs[i]);
+      }
+      if (!w[n]._t) {
+        x = d.createElement(s), y = d.getElementsByTagName(s)[0];
+        x.async = 1;
+        x.src = p;
+        y.parentNode.insertBefore(x, y);
+        w[n]._t = 1 * new Date();
+        w[n].para = para;
+      }
+    })({
+      sdk_url: '/sa-sdk-javascript-master/sensorsdata.min.js',
+      name: 'sa',
+      server_url:'http://tigerwit.cloud.sensorsdata.cn:8006/sa?token=900b8082c4583a40'
+    });
+    var user_id = undefined;
+    var cookiesArr = document.cookie.split('; ');
+    for (var i=0; i<cookiesArr.length; i++) {
+        var cookieArr = cookiesArr[i].split('=');
+        if(cookieArr[0] === 'user_code') {
+            user_id = cookieArr[1];
+        }
+    }
+    if (user_id) {  //此处user_id为tigerwit的用户id ,可在拿到后再调用
+       sa.identify(user_id);  //参数必须是字符串，且必须有值 
+    }  
+    sa.quick('autoTrack'); //神策系统必须是1.4最新版及以上
+</script>

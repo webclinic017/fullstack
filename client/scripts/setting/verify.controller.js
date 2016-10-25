@@ -77,7 +77,7 @@
                 $scope.verification.realname = data.realname || undefined;
                 $scope.verification.id.number = data.idNumber;
 
-                console.info($scope.verification);
+                // console.info($scope.verification);
             });    
         }
 
@@ -110,6 +110,9 @@
                 if (data.is_succ) {
                     $scope.backErr.system.status = 1;
                     $scope.backErr.system.show = true;
+
+                    // 神策数据统计
+                    sa.track('btn_verify');
 
                     if ($scope.type === 'setting') {
                         getVerifyStatus();    

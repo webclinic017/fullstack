@@ -7,7 +7,7 @@
                 <div class="index2-banner__b1-con">
                     <%= lang.text("home51")%>
                 </div>
-                <a class="index2-banner__btn1" href="/bd/t31" onclick="_czc.push(['_trackEvent','首页Banner','点击','1']);"><%= lang.text("liaojiexiangqing")%></a>
+                <a class="index2-banner__btn1" href="/bd/t31" ng-click="toTrackBannerSensorsdata($event, '赠金活动', '1');"><%= lang.text("liaojiexiangqing")%></a>
             </div>
             <div class="swiper-slide index2-slide2">
                 <p class="index2-banner__tle1"><%= lang.text("home52")%><span><%= lang.text("home53")%></span></p>
@@ -15,7 +15,7 @@
                 <div class="index2-banner__b1-con">
                     <%= lang.text("home55")%>
                 </div>
-                <a class="index2-banner__btn1" href="/bd/t31" onclick="_czc.push(['_trackEvent','首页Banner','点击','2']);"><%= lang.text("liaojiexiangqing")%></a>
+                <a class="index2-banner__btn1" href="/bd/t31" ng-click="toTrackBannerSensorsdata($event, '赠金活动', '2');"><%= lang.text("liaojiexiangqing")%></a>
             </div>
             <div class="swiper-slide index2-slide3 <%= lang.background().en %>">
                 <p class="index2-banner__tle1"><%= lang.text("home56")%></p>
@@ -23,7 +23,7 @@
                 <div class="index2-banner__b1-con">
                     <%= lang.text("home58")%>
                 </div>
-                <a class="index2-banner__btn1" href="/regular" onclick="_czc.push(['_trackEvent','首页Banner','点击','3']);"><%= lang.text("liaojiexiangqing")%></a>
+                <a class="index2-banner__btn1" href="/regular" ng-click="toTrackBannerSensorsdata($event, '定期跟单', '3');"><%= lang.text("liaojiexiangqing")%></a>
             </div>
             
             <%if(lang.isCompany("tigerwit")){%>
