@@ -94,6 +94,9 @@ $(document).ready(function() {
             // umeng
             _czc.push(["_trackEvent","活动页","免费注册"]);
 
+            // 神策数据统计
+            sa.track('btn_register');
+
             var tmpForm = $("<form></form>");
             tmpForm.append("<input type='hidden' value='" + rName + "' name='username'/>");
             tmpForm.append("<input type='hidden' value='" + rPhone + "' name='phone'/>");
