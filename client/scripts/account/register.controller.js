@@ -90,7 +90,6 @@
         $scope.submitRegisterForm = submitRegisterForm;
         $scope.getCaptcha = getCaptcha;
         $scope.goNextStep = goNextStep;
-        $scope.finishRegister = finishRegister;
         var token;
 
         // 设置 token 在获取手机验证码时提交该 token 解决更换 ip 批量注册的问题
@@ -127,11 +126,6 @@
                 });
             }
         });
-
-        function finishRegister () {
-            // 神策数据统计
-            sa.track('btn_register_finish');
-        }
 
         function checkUsernameExist() {
             account.checkExist('', $scope.account.username).then(function (data) {
@@ -260,6 +254,9 @@
                 return;
             }
 
+            // 神策数据统计
+            sa.track('btn_register_submit');
+
             $scope.clickable.submit = false;
             account.register(
                 $scope.account.username,
@@ -278,7 +275,7 @@
                     _czc.push(["_trackEvent","注册页","立即注册且成功"]);
 
                     // 神策数据统计
-                    sa.track('btn_register_submit');
+                    sa.track('btn_register_finish');
                     
                     // 成功
                     goNextStep();
