@@ -13,7 +13,7 @@ $(document).ready(function() {
     var hostnameUrl = window.location.hostname;
     var originUrl = window.location.origin;
     var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.')+1) || "tigerwit.com";
-    // console.info(originUrl);
+    console.info(window.location);
     lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
     if (lp != "") { document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl; }
 
@@ -110,7 +110,13 @@ $(document).ready(function() {
             if (isPC()) {
                 returnurl = originUrl + "/space/#/account/register?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
             } else {
-                returnurl = originUrl + "/wap/#/account/register?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
+
+                // pkds H5注册页暂时强跳到pc页
+                if (window.location.hostname === 'www.pkdsfx.com') {
+                    returnurl = originUrl + "/space/#/account/register?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
+                } else {
+                    returnurl = originUrl + "/wap/#/account/register?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
+                } 
             }
             jQuery.ajax({
                 url: '/action/public/v3/page_signup',

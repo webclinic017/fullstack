@@ -106,18 +106,29 @@ module.exports = {
 		return aImages;
 	},
     getAppointCountdownTime: function (product) {  //获取预约倒计时时间
-        var countdownTime = 0;
+        var countdownInfo = {   // 倒计时信息
+            "type": 1,       // 倒计时类型（satrt -> 开始预约，end -> 结束预约, over -> 预约结束）
+            "time": 0             // 倒计时时间
+        };
 
         if (product.start_date_appoint) {   // 存在开始预约时间 start_date_appoint
             var now = new Date();
             var startAppoint = new Date(product.start_date_appoint);
+            var endAppoint = new Date(product.end_date_appoint);
 
             if(now < startAppoint){   //开始预约前
-                countdownTime = startAppoint.getTime() - now.getTime();
-                // countdownTime = startAppoint - now;
+                countdownInfo = {
+                    type: 2,
+                    time: startAppoint.getTime() - now.getTime()
+                };
+            } else if (now < endAppoint){
+                countdownInfo = {
+                    type: 3,
+                    time: endAppoint.getTime() - now.getTime()
+                };
             }
         }
 
-        return countdownTime;
+        return countdownInfo;
     }
 };
