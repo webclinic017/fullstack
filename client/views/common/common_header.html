@@ -4,6 +4,8 @@
     //绑定siteid
     _czc.push(["_setAccount", "1260394016"]);
 </script>
+
+<%if(lang.isCompany("tigerwit")){%>
 <script>
     (function(para) {
       var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
@@ -39,3 +41,17 @@
     }  
     sa.quick('autoTrack'); //神策系统必须是1.4最新版及以上
 </script>
+<%} else {%>
+<script>
+    (function (w) {
+        w.sa = {
+            track: track
+        };
+
+        function track (param) {
+            // 只有tigerwit计算到神策统计中
+            console.info("not tiger", param);
+        }
+    })(window);
+</script>
+<%}%>
