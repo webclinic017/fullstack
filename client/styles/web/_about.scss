@@ -177,19 +177,37 @@
         text-align: center;
         background-size: 100%;
         @include img-normal($image-path-web + "tigerwit-con1.jpg");
-    }    
+    }
+    @include e(con2) {
+        width: 100%;
+        padding-top: 20px;
+        text-align: center;
+
+        > img {
+            width: 90%;
+        }
+    }        
 }
 
 // report
 @include b(report) {
     margin-top: 30px;
 
-    > table > tbody > tr > td > img {
-        width: 175px;
+    > table > tbody > tr {
+        border-bottom: 1px solid #eee;
+
+        > td:first-child {
+            padding-left: 30px;
+            text-align: left;
+        }
     }
     
     @include e(title) {
-        color: $brand-info;
-        text-decoration: underline;
+        color: $gray-base;
+
+        &:hover {
+            color: $brand-info;
+            text-decoration: underline;
+        }
     }
 }

@@ -3,10 +3,13 @@
     margin-bottom: 50px;
 
     @include e(banner) {
-        height: 320px;
-        width: 100%;
-        background-size: 100%;
-        @include img-normal($image-path-web + "rules-banner.jpg");
+        // height: 320px;
+        // width: 100%;
+        // background-size: 100%;
+        // @include img-normal($image-path-web + "rules-banner.jpg");
+        img {
+            height: 320px;
+        }
     }
 
     @include e(title) {
@@ -37,10 +40,13 @@
     margin-bottom: 50px;
 
     @include e(banner) {
-        height: 320px;
-        width: 100%;
-        background-size: 100%;
-        @include img-normal($image-path-web + "select-banner.jpg");
+        // height: 320px;
+        // width: 100%;
+        // background-size: 100%;
+        // @include img-normal($image-path-web + "select-banner.jpg");
+        img {
+            height: 320px;
+        }
     }
 
     @include e(title) {
@@ -122,10 +128,14 @@
 @include b(become_master) {
 
     @include e(banner) {
-        height: 320px;
-        width: 100%;
-        background-size: 100%;
-        @include img-normal($image-path-web + "become-banner-nocctv.png");
+        // height: 320px;
+        // width: 100%;
+        // background-size: 100%;
+        // @include img-normal($image-path-web + "become-banner-nocctv.png");
+
+        img {
+            height: 320px;
+        }
     }
 
     @include e(content) {

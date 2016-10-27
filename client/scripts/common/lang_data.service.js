@@ -38,6 +38,7 @@
         var data = {
 
             "companyCopyRules": {"zh": companyConfig.companyCopyRules, "en": companyConfig.companyCopyRules},
+            "companyNameEn": {"zh":companyConfig.companyNameEn, "en": companyConfig.companyNameEn},
 
 
             "language": language,
@@ -88,6 +89,7 @@
             "login11": {"en": "Login...", "zh": "登录中"},
             "login12": {"en": "Login too much, please try again after 5 minutes", "zh": "登录次数过多，请 5 分钟后重试"},
             "login13": {"en": "account No. or password is wrong", "zh": "用户名或者密码错误"},
+            "login14": {"en": "xx", "zh": "帐号已注销"},
 
             // 注册 register
             "register1": {"en": "Register an account", "zh": "注册账户"},

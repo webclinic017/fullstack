@@ -33,3 +33,12 @@ gem sources -l
 Run `grunt build` for building and `grunt serve` for preview.
 ## production
 Run `pm2 restart server/index.js`
+
+```
+#grunt serve or grunt build need 3 parameters
+1. 公司名  tigerwit/pkds
+2. 环境    dev/pro (开发环境和生产环境)
+3. 服务器  demo/www (测试服务器和线上服务器)
+
+ex: grunt serve:tigerwit:dev:demo or grunt build:pkds:pro:www
+```

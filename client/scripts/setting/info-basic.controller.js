@@ -109,7 +109,7 @@
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
         $scope.submitForm = submitForm;
-        console.info($scope.settingInfo);
+        // console.info($scope.settingInfo);
 
         // $scope.$watch('personal', function (newVal, oldVal, scope) {
         //     debugger;
@@ -262,6 +262,15 @@
                     $scope.backErr.system.show = true;
                     $scope.backErr.system.status = 1;
                     $scope.clickable = true;
+
+                    // 神策数据统计
+                    sa.setProfile({
+                        $name: $scope.basicInfo.username,
+                        country: $scope.basicInfo.locationWorld.value,
+                        $province: $scope.basicInfo.locationState.value,
+                        $city: $scope.basicInfo.locationCity.value,
+                        trade_feature: $scope.basicInfo.special.value
+                    });
                     
                     $timeout(function () {
                         $scope.backErr.system.show = false;

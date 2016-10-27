@@ -13,7 +13,7 @@ $(document).ready(function() {
     var hostnameUrl = window.location.hostname;
     var originUrl = window.location.origin;
     var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.')+1) || "tigerwit.com";
-    console.info(originUrl);
+    // console.info(originUrl);
     lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
     if (lp != "") { document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl; }
 
@@ -93,6 +93,9 @@ $(document).ready(function() {
 
             // umeng
             _czc.push(["_trackEvent","活动页","免费注册"]);
+
+            // 神策数据统计
+            sa.track('btn_register');
 
             var tmpForm = $("<form></form>");
             tmpForm.append("<input type='hidden' value='" + rName + "' name='username'/>");

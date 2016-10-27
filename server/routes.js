@@ -12,6 +12,7 @@ var Lang = require('./lang')();
 var report_sites = require('./report_site');
 var setCompanyCookie = require('./set_company_cookie');
 var URL_PATH = process.env.URL_PATH;
+var COMPANY_NAME = process.env.COMPANY_NAME;
 
 function extendPublic (data, req) {
     var lang = new Lang(req);
@@ -39,6 +40,10 @@ module.exports = function(app) {
     app.route('/baidu_verify_qTHsV5cQAY.html').get(function(req, res){
         res.render('../../client/baidu_verify_qTHsV5cQAY.html');
     });
+    //添加微信验证
+    app.route('/MP_verify_lcsRW9jGPf32n5Ka.txt').get(function(req, res){
+        res.render('../../client/MP_verify_lcsRW9jGPf32n5Ka.html');
+    });
     //爬虫配置
     app.route('/robots.txt').get(function(req, res){
         res.set('Content-Type', 'text/plain');
@@ -60,7 +65,15 @@ module.exports = function(app) {
 
     app.route('/').get(function(req, res) {
         if (isMobile(req)) {
-            res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+            if (COMPANY_NAME === 'tigerwit') {
+                res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+            }
+            if (COMPANY_NAME === 'pkds') {
+                setCompanyCookie(res);
+                res.render('home.html', extendPublic({
+                    pageInfo: {}
+                }, req));
+            }
         } else {
             setCompanyCookie(res);
             res.render('home.html', extendPublic({
@@ -181,6 +194,17 @@ module.exports = function(app) {
     app.route('/m/asset/fail').get(function(req, res){
         setCompanyCookie(res);
         res.render('m_asset_fail', {});
+    });
+
+    /*邀请好友*/
+    app.route('/m/invite01').get(function(req, res){
+        setCompanyCookie(res);
+        res.render('m_invite01', extendPublic({}, req));
+    });
+
+    app.route('/m/invite02').get(function(req, res){
+        setCompanyCookie(res);
+        res.render('m_invite02', extendPublic({}, req));
     });
 
     /*--------------------APP-End-------------------------*/
@@ -366,6 +390,9 @@ module.exports = function(app) {
         } else {
             res.render('bd_t31', extendPublic({}, req));
         }
+    });
+    app.route('/bd/t31_game').get(function(req, res){
+        res.render('bd_mt31_game', extendPublic({}, req))
     });
     // nodeAPI
     app.route('/napi').get(function(req, res){

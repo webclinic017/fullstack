@@ -30,6 +30,9 @@
                     <p class="alert-arrow_tp_lf" ng-show="backErr.id.status === 2">
                         {{ lang.text("login4") }}
                     </p>
+                    <p class="alert-arrow_tp_lf" ng-show="backErr.id.status === 3">
+                        {{ lang.text("login14") }}
+                    </p>
                 </div>
             </div>
 
@@ -87,7 +90,7 @@
                     {{ lang.text('login11') }}
                 </button>
 
-                <a class="btn btn-info btn-sm mg-tp-30" ui-sref="account.subpage({subpage: 'register'})">
+                <a class="btn btn-info btn-sm mg-tp-30" ng-click="toTrackRegisterSensorsdata()" ui-sref="account.subpage({subpage: 'register'})">
                     {{ lang.text('login10') }}
                 </a>
             </div>

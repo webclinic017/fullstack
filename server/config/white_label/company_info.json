@@ -11,11 +11,11 @@
     },
     "pkds": {
         "demo": {
-            "url_path": "http://www.pkdsfx.com",
+            "url_path": "https://www.pkdsfx.com",
             "login_public_key": "-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9FbJMQ+lTpVqkfOctn2NSbVmuBHyZizR8L7CIe1e3SrSiIbqgjviMm4bU0acYYFHIp4n5fhnXQzumYJTNkS9yaXxH6Snkp+zXMDXWwKrE+bb3Q3N2L6JT4h3/BvMrl2wOSqdyy4RYryt5oGT8SGjoPK6pG00rs79FazaLvdeu4QIDAQAB-----END PUBLIC KEY-----"
         },
         "www": {
-            "url_path": "http://www.pkdsfx.com",
+            "url_path": "https://www.pkdsfx.com",
             "login_public_key": "-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC9FbJMQ+lTpVqkfOctn2NSbVmuBHyZizR8L7CIe1e3SrSiIbqgjviMm4bU0acYYFHIp4n5fhnXQzumYJTNkS9yaXxH6Snkp+zXMDXWwKrE+bb3Q3N2L6JT4h3/BvMrl2wOSqdyy4RYryt5oGT8SGjoPK6pG00rs79FazaLvdeu4QIDAQAB-----END PUBLIC KEY-----"
         }
     }
