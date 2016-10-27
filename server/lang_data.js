@@ -43,7 +43,7 @@ if (company_name === 'pkds') {
         titleEn: "Parkerdawson",
         supportEmail: "info@pkdsfx.com",
         ibEmail: "info@pkdsfx.com",
-        telephone: "0064 - 21 - 2779989",
+        telephone: "400 - 900 - 9296",
         webSite: "www.pkdsfx.com",
         webMt4Download: "http://pkdsfx.com/downloads/mt4/parkerdawson4setup.exe",
 
