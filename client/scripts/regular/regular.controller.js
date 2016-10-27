@@ -25,14 +25,16 @@
             }
         };
         $scope.submitOrder = submitOrder;
-        $scope.countdownTime = {};
-
+        $scope.countdownTime = {
+            type: countdownInfo.type
+        };
+        
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
 
         var isAppoint = false;
 
-        countdownTime = parseInt(countdownTime / 1000);
+        var countdownTime = parseInt(countdownInfo["time"] / 1000);
 
         var timer = $interval(function () {
             if (countdownTime <= 0) $interval.cancel(timer);
