@@ -107,6 +107,8 @@ module.exports = function (grunt) {
         },
 
         // Automatically inject Bower components into the app
+        // you can inject wherever you want
+        // but you must put <!-- bower:js --> and <!-- endbower --> tags in which page you want inject into;
         wiredep: {
             options: {
                 exclude: []
@@ -117,6 +119,7 @@ module.exports = function (grunt) {
                     html: {
                         replace: {
                             js: function (filePath) {
+                                //../bower_components/jquery/dist/jquery.js
                                 var prefixPath = '..';
                                 var length = prefixPath.length;
                                 filePath = filePath.slice(length);

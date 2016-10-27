@@ -2,65 +2,52 @@
 <html>
 <!--引入公用头部-->
 <% include common/m_common_head.html %>
+
 <!-- 引入H5 CSS -->
 <!-- build:css(.tmp) /styles/h5_common.css -->
 <link rel="stylesheet" href="/styles/h5_common.css">
 <!-- endbuild -->
-
 <!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
 <% include common/m_css_vendor.html %>
 <% include common/common_header.html %>
 <body>
+<!-- 引入H5导航条 -->
+<%- include('common/m_nav.html') %>
 <div class="m_download_layout">
-    <div class="m_download_layout__banner">
-        <img src="/images/mobile/m_download_banner.png">
-    </div>
-    <div class="m_download_layout__download clearfix">
-        <div class="download-logo">
-            <img src="/images/mobile/m_download_logo.png">
-        </div>
-        <div class="download-btn">
-            <p>真正带你赚钱的APP</p>
-            <a href="/">轻触下载</a>
-        </div>
-    </div>
-    <div class="m_download_layout__advantages clearfix">
-        <h4>六大投资优势,体验完美交易</h4>
-        <p class="sub_title">在老虎外汇,已经有86523人选择外汇跟单交易</p>
-        <ul class="clearfix">
-            <li>
-                <img src="/images/mobile/m_download_adv1.png" alt="">
-                <h5>门槛低</h5>
-                <p>开户就送100$体验金 <br>最低10$就能交易</p>
-            </li>
-            <li>
-                <img src="/images/mobile/m_download_adv2.png" alt="">
-                <h5>高收益</h5>
-                <p>多倍杠杆,<br>100当做2000花</p>
-            </li>
-            <li>
-                <img src="/images/mobile/m_download_adv3.png" alt="">
-                <h5>易操作</h5>
-                <p>微盘交易,简便易懂,<br>会炒股就会操作</p>
-            </li>
-            <li>
-                <img src="/images/mobile/m_download_adv4.png" alt="">
-                <h5>机会多</h5>
-                <p>24小时交易、T+0交易,<br>大小行情不错过</p>
-            </li>
-            <li>
-                <img src="/images/mobile/m_download_adv5.png" alt="">
+    <ul>
+        <li>
+            <div class="download_des">
                 <h5>高手跟单</h5>
-                <p>无需精通理财知识,<br>把握赚钱机会</p>
-
-            </li>
-            <li>
-                <img src="/images/mobile/m_download_adv6.png" alt="">
-                <h5>市场公平</h5>
-                <p>国际市场,<br/>每天2万亿成交量</p>
-            </li>
-        </ul>
-    </div>
+                <p>鸟随鸾凤飞腾远，</p>
+                <p>这里有老司机带路</p>
+                <p>无需自己盯盘，选择高手，</p>
+                <p>一键复制，收益同步</p>
+            </div>
+        </li>
+        <li>
+            <div class="download_des">
+                <h5>微盘交易</h5>
+            </div>
+        </li>
+        <li>
+            <div class="download_des">
+                <h5>品种丰富</h5>
+                <p>瞬息万变随掌控，</p>
+                <p>这里都应有尽有</p>
+                <p>覆盖市场主流交易品种，</p>
+                <p>一个账户全搞定</p>
+            </div>
+        </li>
+        <li>
+            <div class="download_des">
+                <h5>出入金快</h5>
+                <p>出金入金一日达，</p>
+                <p>这里有高效资金通道</p>
+                <p>出入金24小时到账，</p>
+                <p>入金低门槛，出金无限制</p>
+            </div>
+        </li>
+    </ul>
 </div>
 </body>
 <!-- build:js(client) /scripts/m_vendor.js -->
@@ -70,5 +57,6 @@
 <script src="/scripts/plugins/plugins.js"></script>
 <!-- endbuild -->
 
+<!-- 推广脚本footer -->
 <%- include('bd/common/footer.html') %>
 </html>

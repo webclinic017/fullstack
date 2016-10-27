@@ -79,7 +79,6 @@ module.exports = function(app) {
     });
 
     app.route('/download').get(function(req, res) {
-
         if (isMobile(req)) {
             res.render('m_download.html', extendPublic({}, req));
         } else {
