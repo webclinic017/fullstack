@@ -123,23 +123,23 @@ module.exports = function(app) {
     });
     app.route('/m/regular/detail/:subpage').get(function(req, res){
         setCompanyCookie(res);
-        res.render('m_regular_detail.html',{
+        res.render('m_regular_detail.html',extendPublic({
             model : gloal_modelRegularDetail(req.params.subpage || "")
-        });
+        },req));
     });
     app.route('/m/regular/detail/team/:subpage').get(function(req, res){
         var team_html = global_modelRegular.getTeamHtmlName(req.params.subpage);
         setCompanyCookie(res);
-        res.render('regular/'+ team_html +'.html',{});
+        res.render('regular/'+ team_html +'.html',extendPublic({}, req));
     });
     app.route('/m/regular/detail/history/:subpage').get(function(req, res){
         var aImages = global_modelRegular.getTeamHistoryImages(req.params.subpage);
         setCompanyCookie(res);
-        res.render('regular/m_regular_detail_history.html',{
+        res.render('regular/m_regular_detail_history.html',extendPublic({
             model : {
                 aImages : aImages
             }
-        });
+        }, req));
     });
 
     /*定期跟单结束开始*/
@@ -148,52 +148,38 @@ module.exports = function(app) {
     /*注册相关页面*/
     app.route('/m/register').get(function(req, res){
         setCompanyCookie(res);
-        res.render("m_register01",{});
+        res.render("m_register01",extendPublic({}, req));
     });
     app.route('/m/register2').get(function(req, res){
         setCompanyCookie(res);
-        res.render("m_register02",{});
+        res.render("m_register02",extendPublic({}, req));
     });
     app.route('/m/register3').get(function(req, res){
         setCompanyCookie(res);
-        res.render("m_register03",{});
+        res.render("m_register03",extendPublic({}, req));
     });
     /*成为高手*/
     app.route('/m/agent/become').get(function(req, res){
         setCompanyCookie(res);
-        res.render("m_agent_become",{});
+        res.render("m_agent_become",extendPublic({}, req));
     });
 
     /*定期跟单*/
     app.route('/m/regular/how').get(function(req, res){
         setCompanyCookie(res);
-        res.render("m_regular_how",{});
+        res.render("m_regular_how",extendPublic({}, req));
     });
 
     /*出入金流程*/
-    app.route('/m/asset').get(function(req, res){
+    app.route('/m/asset/:subpage(withdraw|cardlist|addcard1|addcard2|succ|fail)').get(function(req, res) {
+        var subpage = req.params.subpage || 'withdraw';
+        var pageInfo = {
+            id: subpage
+        };
         setCompanyCookie(res);
-        res.render('m_asset', {});
-    });
-    app.route('/m/asset/cardlist').get(function(req, res){
-        setCompanyCookie(res);
-        res.render('m_asset_cardlist', {});
-    });
-    app.route('/m/asset/addcard1').get(function(req, res){
-        setCompanyCookie(res);
-        res.render('m_asset_addcard01', {});
-    });
-    app.route('/m/asset/addcard2').get(function(req, res){
-        setCompanyCookie(res);
-        res.render('m_asset_addcard02', {});
-    });
-    app.route('/m/asset/succ').get(function(req, res){
-        setCompanyCookie(res);
-        res.render('m_asset_succ', {});
-    });
-    app.route('/m/asset/fail').get(function(req, res){
-        setCompanyCookie(res);
-        res.render('m_asset_fail', {});
+        res.render('m_asset.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
     });
 
     /*邀请好友*/
@@ -361,7 +347,7 @@ module.exports = function(app) {
     // 页面跳转中
     app.route('/waiting').get(function(req, res) {
         setCompanyCookie(res);
-        res.render('waiting', {});
+        res.render('waiting', extendPublic({}, req));
     });
     app.route('/bd/t29').get(function(req, res){
         setCompanyCookie(res);
@@ -399,6 +385,7 @@ module.exports = function(app) {
         }
     });
     app.route('/bd/t31_game').get(function(req, res){
+        setCompanyCookie(res);
         res.render('bd_mt31_game', extendPublic({}, req))
     });
     // nodeAPI

@@ -10,12 +10,12 @@
             无法进行出金操作
         </p>
         <p class="system_modal__tip">
-            请先绑定银行卡再进行出金操作
+            {{message}}
         </p>
 
         <p class="system_modal__btn_wrapper">
-            <button class="btn btn-info btn-sm" ng-click="bindCard()">
-                绑定银行卡
+            <button class="btn btn-primary btn-sm" ng-click="closeModal()">
+                确定
             </button>
         </p>
     </div>

@@ -69,6 +69,9 @@
                 color: #999;
                 margin-bottom: px2rem(32);
             }
+            .err_msg {
+                margin-bottom: px2rem(32);
+            }
         }
         @include m(btn) {
             padding: px2rem(60) px2rem(52) 0;

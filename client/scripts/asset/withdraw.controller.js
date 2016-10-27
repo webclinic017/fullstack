@@ -34,6 +34,7 @@
                 reg: validator.regType.amount.reg
             }
         };
+        $scope.withdrawMessageSucc = false;     // 判断出金状态接口请求情况
 
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
@@ -61,10 +62,17 @@
 
         // 判断出金状态, 获取可提取的最大金额
         asset.getIsWithdraw().then(function (data) {
-            console.info(data);
+            // console.info(data);
+            $scope.withdrawMessageSucc = true; 
             $scope.message = data;
             $scope.withdraw.maxAmount = data.balance < 0 ? 0 : data.balance;
 
+        }, function (err) {
+            console.log(err);
+            $scope.message = {
+                is_succ: false,
+                error_msg: '系统错误，请联系管理员哦～'
+            };
         });
         
 
@@ -106,7 +114,7 @@
 
 
         // 提现相关的各种弹窗提示
-        function openWithdrawMdl() {
+        function openWithdrawMdl(message) {
             var withdraw = $scope.withdraw;
             // var isMessage = $scope.message;
 
@@ -119,6 +127,7 @@
                     $scope.withdrawAmount = withdraw.amount;
                     $scope.closeModal = closeModal;
                     $scope.bindCard = bindCard;
+                    $scope.message = message;
 
                     // 绑定银行卡
                     function bindCard() {
@@ -143,7 +152,7 @@
                 controller: function ($scope, $modalInstance, $state) {
                     $scope.closeModal = closeModal;
                     $scope.message = message; 
-                    console.info(message);
+                    // console.info(message);
 
                     function closeModal() {
                         $modalInstance.dismiss();
@@ -155,12 +164,8 @@
         // 提现
         $scope.clickable = true;
         function toWithdraw() {
-            if ($scope.withdraw.card.id === 'undefined') {
-                openWithdrawMdl("withdrawCard");
-                return;
-            }
             showErr('amount');
-            console.info($scope.withdrawForm.$invalid);
+            // console.info($scope.withdrawForm.$invalid);
             if($scope.withdrawForm.$invalid){
               return;
             }
@@ -173,26 +178,28 @@
             asset.getIsWithdraw($scope.withdraw.amount).then(function(data) {
                 $scope.message = data;
                 // console.info(data);
-                if ($scope.message.error_code != 0) {
-                    console.info($scope.message);
-                    openMessageMdl(); 
-                    $scope.clickable = true;
-                } else {
+                if ($scope.message.is_succ) {
                     asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).
                     then(function (data) {
                       $scope.clickable = true;
 
                         if (data.is_succ) {
                             $scope.withdraw.success = true;
-                            openWithdrawMdl("withdrawEnd");
+                            openWithdrawMdl("withdrawSucc");
 
                             $state.go('space.asset.subpage', {
                                 subpage: 'withdraw'
                             }, {reload: true});
                         }else{
-                            alert((data && data.error_msg) || "提现失败，请联系客服。");//TODO 需正确提示。这是临时方案。
+                            var msg = data.error_msg;
+                            openWithdrawMdl(msg);
                         }
                     });
+                } else {
+                    // console.info($scope.message);
+                    openMessageMdl(); 
+                    $scope.clickable = true;
+                    
                 }
             });
 

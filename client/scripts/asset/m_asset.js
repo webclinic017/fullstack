@@ -84,7 +84,8 @@ $(document).ready(function () {
                 isNext = true;
             } else {
                 isNext = false;
-                $withdrawErrMsg.html(data.error_msg);
+                var msg = "系统提示：" + data.error_msg;
+                $withdrawErrMsg.html(msg);
             }
         }, function (err) {
             console.info(err);

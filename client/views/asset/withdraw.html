@@ -1,9 +1,4 @@
 <div class="asset-public withdraw">
-    <div ng-show="message.error_code != 0">
-        <p class="font-info">{{message.error_msg}}</p>
-        <p ng-show="message.error_code == 8"><a href="javascript:" ng-click="openCardMdl()">去绑定银行卡</a></p>
-        <br><br>
-    </div>
     <div class="row">
         <div class="col-xs-4 pd-tp-10 text-right">转入绑定银行卡：&nbsp;&nbsp;&nbsp;&nbsp;</div>
 
@@ -19,8 +14,12 @@
             <span class="deposit__pointer font-info" ng-click="openCardMdl()">修改 ></span>
         </div>
     </div>
-    <br><br>
-    <div ng-show="message.error_code === 0">
+    <br>
+    <div ng-show="withdrawMessageSucc && !message.is_succ" class="withdraw__sys_tip">
+        <p class="font-info">系统提示：{{message.error_msg}}</p>
+    </div>
+    
+    <div ng-show="withdrawMessageSucc && message.is_succ">
 
         <div class="row">
             <div class="col-xs-3 text-right deposit__title-money">提现金额</div>
