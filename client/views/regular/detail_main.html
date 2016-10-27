@@ -2,7 +2,11 @@
     var status = model.status;
 %>
 <script type="text/javascript">
-    var countdownTime = <%= model.countdownTime %>;
+    var countdownInfo = {
+        type: <%= model.countdownInfo.type %>,
+        time: <%= model.countdownInfo.time %>
+    };
+    
     var appointAmount = {
         min: <%= model.money_copy_low %>,
         max: <%= model.money_copy_high %>
@@ -51,7 +55,9 @@
                         <%if(lang.isCompany("pkds")){%>
                             <div class="hy-detail__con-progress">
                                 <span class="hy-detail__con-circle"></span> 
-                                <span class="font-size-16">开始预约倒计时</span>
+                                <span class="font-size-16" ng-if="countdownTime.type === 1">预约已结束</span>
+                                <span class="font-size-16" ng-if="countdownTime.type === 2">开始预约倒计时</span>
+                                <span class="font-size-16" ng-if="countdownTime.type === 3">结束预约倒计时</span>
                                 <div class="hy-detail__con-countdown">
                                     <span>{{countdownTime.day || 0}}</span>天<span>{{countdownTime.hour || 0}}</span>时<span>{{countdownTime.minute || 0}}</span>分<span>{{countdownTime.second || 0}}</span>秒
                                 </div>

@@ -366,7 +366,14 @@ module.exports = function(app) {
     app.route('/bd/t31').get(function(req, res){
         setCompanyCookie(res);
         if(isMobile(req)){
-            res.render('bd_m_t31', extendPublic({}, req))
+
+            // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
+            if (COMPANY_NAME === 'tigerwit') {
+                res.render('bd_m_t31', extendPublic({}, req))
+            }
+            if (COMPANY_NAME === 'pkds') {
+                res.render('bd_t31', extendPublic({}, req));
+            }
         } else {
             res.render('bd_t31', extendPublic({}, req));
         }

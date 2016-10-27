@@ -28,6 +28,6 @@ module.exports = function(regular_id){
 		desc_risk : product.desc_risk,
 		desc_divide : product.desc_divide,
 		note : product.note,
-        countdownTime: m_countdown_time
+        countdownInfo: m_countdown_time
 	};
 };
