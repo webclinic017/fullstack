@@ -1,0 +1,34 @@
+<div class="m_withdraw" data-page="page2">
+    <div class="m_withdraw__cardlist">
+        
+    </div>
+</div>
+
+
+
+<script id="template_cardlist" type="text/html">
+    <ul class="bankCard">
+        <$for(var i=0;i<cardList.length;i++){$>
+        <li class="m_withdraw__cardlist-bank clearfix">
+            <div class="bank-icon">
+                <div class="m_icon-bank m_icon-bank-<$= cardList[i].bank_name$>"></div>
+            </div>
+            <div class="bank-info">
+                <span><$= cardList[i].bank_name_zh$></span>
+                <span>持卡人：<$= cardList[i].realname$></span>
+                <span class="num">**** **** **** <$= cardList[i].card_no.substring(1)$></span>
+            </div>
+        </li>  
+        <$}$>
+    </ul>
+    <div class="operateCard">
+        <$if(cardList.length){$>
+            <i class="fa fa-pencil"></i>
+            <span class="tit">修改银行卡</span>
+        <$} else {$>
+            <i class="fa fa-plus"></i>
+            <span class="tit">添加银行卡</span>
+        <$}$>
+        <i class="fa fa-angle-right"></i>
+    </div>
+</script>

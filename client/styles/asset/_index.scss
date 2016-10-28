@@ -53,6 +53,12 @@
 
 }
 
+@include b(withdraw) {
+    @include e(sys_tip) {
+        margin-left: 92px;
+    }
+}
+
 @include b(history) {
 
     @include e (lt40) {
