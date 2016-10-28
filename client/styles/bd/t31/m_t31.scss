@@ -1,159 +1,175 @@
+.scroll_top{
+  position: fixed;
+  bottom: 6rem;
+  right: px2rem(30);
+}
+.m_t31_layout{
+  transition: all 1s ease;
+}
 @include b(m_t31) {
-    @include e(banner) {
-        height: 480px;
-        background: url("/images/bd/m_t31_banner.png") no-repeat center top;
-    }
+  @include e(banner) {
+    height: 480px;
+    width: 100%;
+    background: url("/images/bd/m_t31_banner.png") no-repeat;
+    background-size: cover;
+    background-position: center top;
+  }
 
-    @include e(rebox_contanier) {
-        padding-top: 222px
-    }
+  @include e(rebox_contanier) {
+    padding-top: 222px
+  }
 
-    @include e(rebox) {
-        width: 250px;
-        height: 175px;
-        background-color: #fff;
+  @include e(rebox) {
+    width: 250px;
+    height: 175px;
+    background-color: #fff;
 
-        form {
-            padding-top: 25px;
+    form {
+      padding-top: 25px;
 
-            input {
-                height: 32px;
-                border: 1px solid #ccc;
-            }
+      input {
+        height: 32px;
+        border: 1px solid #ccc;
+      }
 
-            .button {
-                height: 40px;
-                border-bottom: 0px;
-                background-color: #ffdb15;
-                color: #000;
-            }
-        }
-
-        &.active {
-            position: fixed;
-            top:0;
-            left: 50%;
-            margin-left: -125px;
-            z-index: 1000;
-        }
-    }
-
-    @include e(rules) {
-        background-color: #fff;
-        padding: 0 px2rem(40);
-
-        .title {
-            text-align: center;
-            font-size: px2rem(36);
-            font-weight: 500;
-            padding: px2rem(40) 0;
-        }
-        .detail {
-            font-size: px2rem(30);
-            line-height: px2rem(50);
-            margin-bottom: px2rem(70);
-        }
-        table {
-            border-radius: 2px;
-            overflow: hidden;
-
-            thead tr th {
-                background-color: #ffdb15;
-                color: #000;
-                text-align: center;
-                font-size: px2rem(30);
-                padding: px2rem(20);
-            }
-            tbody tr td {
-                background-color: #f3f3f3;
-                border-bottom: 1px solid #fff;
-                text-align: center;
-                font-size: px2rem(30);
-                padding: px2rem(20);
-            }
-        }
-        .example {
-            p {
-                font-size: px2rem(30);
-                line-height: px2rem(50);
-            }
-        }
-    }
-
-    @include e(attention) {
-        position: relative;
-        text-align: center;
-        margin-top: px2rem(70);
-
-        .btn {
-            font-size: px2rem(30);
-            display: inline-block;
-            background-color: #ffdb15;
-            border-radius: 2px;
-            padding: px2rem(20) px2rem(90);
-            font-weight: 500;
-        }
-        .detail {
-            position: absolute;
-            top: px2rem(110);
-            left: 0;
-            background-color: #ffdb15;
-            padding: px2rem(42) px2rem(40);
-            font-size: px2rem(24);
-            text-align: left;
-            line-height: px2rem(40);
-            display: none;
-
-            &.active {
-                display: block;
-            }
-
-            &:before {
-                border: px2rem(20) solid transparent;
-                border-bottom-color: #ffdb15;
-                display: block;
-                content: '';
-                position: absolute;
-                top: px2rem(-36);
-                left: 50%;
-                margin-left: px2rem(-20);
-            }
-        }
-    }
-    @include e(production) {
-        background-color: #eee;
-        padding-top: px2rem(80);
-        padding-bottom: px2rem(100);
-        margin-top: px2rem(20);
-
-        h4 {
-            font-size: px2rem(34);
-            margin: 0;
-            text-align: center;
-        }
-        .list {
-            .item {
-                float: left;
-                width: 50%;
-                text-align: center;
-                margin-top: px2rem(80);
-
-                img {
-                    width: px2rem(140);
-                }
-                h4 {
-                    margin-bottom: px2rem(10);
-                }
-                p {
-                    font-size: px2rem(20);
-                }
-            }
-        }
-    }
-    @include e(footer) {
-        padding: px2rem(40);
+      .button {
+        height: 40px;
+        border-bottom: 0;
         background-color: #ffdb15;
-        font-size: px2rem(30);
+        color: #000;
+      }
     }
+
+    &.active {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      margin-left: -125px;
+      z-index: 1000;
+    }
+  }
+
+  @include e(rules) {
+    background-color: #fff;
+    padding: 0 px2rem(40);
+
+    .title {
+      text-align: center;
+      font-size: px2rem(36);
+      font-weight: 500;
+      padding: px2rem(40) 0;
+    }
+    .detail {
+      font-size: px2rem(30);
+      line-height: px2rem(50);
+      margin-bottom: px2rem(70);
+    }
+    table {
+      border-radius: 2px;
+      overflow: hidden;
+
+      thead tr th {
+        background-color: #ffdb15;
+        color: #000;
+        text-align: center;
+        font-size: px2rem(30);
+        padding: px2rem(20);
+      }
+      tbody tr td {
+        background-color: #f3f3f3;
+        border-bottom: 1px solid #fff;
+        text-align: center;
+        font-size: px2rem(30);
+        padding: px2rem(20);
+      }
+    }
+    .example {
+      p {
+        font-size: px2rem(30);
+        line-height: px2rem(50);
+      }
+    }
+    .tiger_help {
+      display: inline-block;
+      width: 100%;
+      margin-top: px2rem(35);
+    }
+  }
+
+  @include e(attention) {
+    position: relative;
+    text-align: center;
+    margin-top: px2rem(20);
+
+    .btn {
+      font-size: px2rem(30);
+      display: inline-block;
+      background-color: #ffdb15;
+      border-radius: 2px;
+      padding: px2rem(20) px2rem(90);
+      font-weight: 500;
+    }
+    .detail {
+      position: absolute;
+      top: px2rem(110);
+      left: 0;
+      background-color: #ffdb15;
+      padding: px2rem(42) px2rem(40);
+      font-size: px2rem(24);
+      text-align: left;
+      line-height: px2rem(40);
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      &:before {
+        border: px2rem(20) solid transparent;
+        border-bottom-color: #ffdb15;
+        display: block;
+        content: '';
+        position: absolute;
+        top: px2rem(-36);
+        left: 50%;
+        margin-left: px2rem(-20);
+      }
+    }
+  }
+  @include e(production) {
+    background-color: #eee;
+    padding-top: px2rem(80);
+    padding-bottom: px2rem(100);
+    margin-top: px2rem(20);
+
+    h4 {
+      font-size: px2rem(34);
+      margin: 0;
+      text-align: center;
+    }
+    .list {
+      .item {
+        float: left;
+        width: 50%;
+        text-align: center;
+        margin-top: px2rem(80);
+
+        img {
+          width: px2rem(140);
+        }
+        h4 {
+          margin-bottom: px2rem(10);
+        }
+        p {
+          font-size: px2rem(20);
+        }
+      }
+    }
+  }
+  @include e(footer) {
+    padding: px2rem(40);
+    background-color: #ffdb15;
+    font-size: px2rem(30);
+  }
 }
 
