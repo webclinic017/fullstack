@@ -22,6 +22,8 @@
                     companyConfig = {
                         companyNameZh: "老虎外汇",
                         companyNameEn: "TigerWit",
+                        telephone: "400 - 809 - 8509",
+                        mt4Live: "TigerWit-Live",
                         companyCopyRules: "https://www.tigerwit.com/web/copy/rules",
                     };
                 }
@@ -29,6 +31,8 @@
                     companyConfig = {
                         companyNameZh: "派克道森",
                         companyNameEn: "Pakerdawson",
+                        telephone: "400 - 900 - 9296",
+                        mt4Live: "Parkerdawson-Live",
                         companyCopyRules: "http://www.pkdsfx.com/web/copy/rules",
                     };
                 }
@@ -39,6 +43,9 @@
 
             "companyCopyRules": {"zh": companyConfig.companyCopyRules, "en": companyConfig.companyCopyRules},
             "companyNameEn": {"zh":companyConfig.companyNameEn, "en": companyConfig.companyNameEn},
+            "companyNameZh": {"zh":companyConfig.companyNameZh, "en": companyConfig.companyNameZh},
+            "telephone": {"zh": companyConfig.telephone, "en": companyConfig.telephone},
+            "mt4Live": {"zh": companyConfig.mt4Live, "en": companyConfig.mt4Live},
 
 
             "language": language,
