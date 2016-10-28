@@ -395,7 +395,7 @@ $(document).ready(function () {
 
     /*
      * page5
-     * 出金申请失败
+     * 出金申请成功
      */
     var $succToPersonalPage = $(".m_withdraw__succ-btn .m_withdraw_btn");
 
@@ -405,6 +405,10 @@ $(document).ready(function () {
 
     $succToPersonalPage.on("touchend", function () {
         console.log("成功了，前往个人中心");
+        callNative({
+            type: "back_personal",
+            url: ""
+        });
     });
 
     /*
@@ -421,6 +425,10 @@ $(document).ready(function () {
 
     $failToPersonalPage.on("touchend", function () {
         console.log("失败了，前往个人中心");
+        callNative({
+            type: "back_personal",
+            url: ""
+        });
     });
 
     function getFailMsg () {
