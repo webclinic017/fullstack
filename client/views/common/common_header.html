@@ -45,10 +45,15 @@
 <script>
     (function (w) {
         w.sa = {
-            track: track
+            track: track,
+            setProfile: setProfile
         };
 
         function track (param) {
+            // 只有tigerwit计算到神策统计中
+            console.info("not tiger", param);
+        }
+        function setProfile (param) {
             // 只有tigerwit计算到神策统计中
             console.info("not tiger", param);
         }
