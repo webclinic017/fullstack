@@ -27,7 +27,7 @@
                 select.on('blur', selector.input, function () {
                     setTimeout(function () {
                         dropdown.removeClass('active');    
-                    }, 100);
+                    }, 150);
                 });
 
                 select.on('click', selector.dropdown, function (e) {
