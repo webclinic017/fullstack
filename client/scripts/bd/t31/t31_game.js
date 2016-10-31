@@ -1,5 +1,6 @@
 ;(function () {
     window.onload = function () {
+        $("title").html("老虎外汇 - 微盘大师");
         function Stock_game(id) {
             //缓存this
             var _this = this;
@@ -777,7 +778,7 @@
             // 更新每个方块的数据
             updata_blocks: function () {
                 for (var i = 0; i < this.blocks.length; i++) {
-                    this.blocks[i].pos_y = this.block.pos_y > 0 ? this.blocks[i].pos_y += this.block.speed : this.blocks[i].pos_y -= 4;
+                    this.blocks[i].pos_y = this.block.pos_y > 0 ? this.blocks[i].pos_y += this.block.speed : this.blocks[i].pos_y -= this.blocks[i].pos_y;
                 }
             },
             updata_difficulty: function () {
@@ -792,7 +793,7 @@
                     console.log("当前速度----" + _this.block.speed)
                 }
 
-                this.diff_wt += 16.67;
+                this.diff_wt += 17;
                 if (this.diff_wt >= this.diff_dt) {
                     this.diff_wt -= this.diff_dt;
                     //减少创建间隔时间
@@ -809,8 +810,7 @@
             //创建方块
             create_blocks: function () {
                 var _this = this;
-                _this.create_timer = setInterval(function () {
-                    // 间隔一定时间新创建一个方块
+                function create(){
                     // 创建方块的颜色
                     var index = Math.round(Math.random());
                     var block_color = _this.block_colors[index];
@@ -827,6 +827,11 @@
                     _this.blocks.push(block);
                     //console.log(_this.block.create_interval);
                     console.log("当前方块数 -> " + _this.blocks.length);
+                }
+                //create();
+                _this.create_timer = setInterval(function () {
+                    // 间隔一定时间新创建一个方块
+                    create();
                 }, _this.block.create_interval)
             },
             //渲染每个方块
@@ -1106,9 +1111,42 @@
             }
         };
 
-        //游戏实例化 /传入画布id
-        var stock_game = new Stock_game('cvs');
-        //预加载资源 /不用使用loading
-        stock_game.initialRes();
+        //1477929600000 十一月一日时间戳
+        if(Date.parse("Nov 1, 2016") > Date.now()){
+            //游戏实例化 /传入画布id
+            var stock_game = new Stock_game('cvs');
+            //加载资源并开始游戏
+            stock_game.initialRes();
+        } else {
+            console.log("活动已结束!");
+            //更改land_page的样式 /land_page_end未公布
+            //$("#land_page").attr("class"," ");
+            //$("#land_page").attr("class","land_page_end clearfix");
+            ////$("#award_list").html();
+            //
+            ////如果公布名单,自动滚动
+            //if($("#land_page").hasClass("land_page_end_pub")){
+            //    function getStyle(obj, name) {
+            //        if (obj.currentStyle) {
+            //            return obj.currentStyle[name];
+            //        } else {
+            //            return getComputedStyle(obj, false)[name];
+            //        }
+            //    }
+            //    var scroll_box = $("#auto_scroll_box");
+            //    var box_height = getStyle(scroll_box[0],"top");
+            //    scroll_box.addClass("active");
+            //    scroll_box.on("touchstart",function(){
+            //        scroll_box.removeClass("active");
+            //        //console.log(getStyle(scroll_box[0],"top"));
+            //    });
+            //    scroll_box.on("touchmove",function(){
+            //        //scroll_box.addClass("active");
+            //    });
+            //    scroll_box.on("touchend",function(){
+            //        //scroll_box.css("top","0px");
+            //    });
+            //}
+        }
     };
 }());

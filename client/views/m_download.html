@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include common/m_common_head.html %>
+
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
+<% include common/m_css_vendor.html %>
+<% include common/common_header.html %>
+<body>
+<!-- 引入H5导航条 -->
+<%- include('common/m_nav.html') %>
+<div class="m_download_layout">
+    <ul>
+        <li>
+            <div class="download_des">
+                <h5>高手跟单</h5>
+                <p>鸟随鸾凤飞腾远，</p>
+                <p>这里有老司机带路</p>
+                <p>无需自己盯盘，选择高手，</p>
+                <p>一键复制，收益同步</p>
+            </div>
+        </li>
+        <li>
+            <div class="download_des">
+                <h5>微盘交易</h5>
+            </div>
+        </li>
+        <li>
+            <div class="download_des">
+                <h5>品种丰富</h5>
+                <p>瞬息万变随掌控，</p>
+                <p>这里都应有尽有</p>
+                <p>覆盖市场主流交易品种，</p>
+                <p>一个账户全搞定</p>
+            </div>
+        </li>
+        <li>
+            <div class="download_des">
+                <h5>出入金快</h5>
+                <p>出金入金一日达，</p>
+                <p>这里有高效资金通道</p>
+                <p>出入金24小时到账，</p>
+                <p>入金低门槛，出金无限制</p>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
+<!-- build:js(client) /scripts/m_vendor.js -->
+<script src="/bower_components/jquery-3.0.0.min/index.js"></script>
+<script src="/scripts/plugins/base64code.js"></script>
+<script src="/scripts/plugins/jquery.tap.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<!-- endbuild -->
+
+<!-- 推广脚本footer -->
+<%- include('bd/common/footer.html') %>
+</html>

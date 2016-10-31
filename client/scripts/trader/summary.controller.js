@@ -99,16 +99,6 @@
             });
         }
 
-        rendMasterInfo(usercode);
-        function rendMasterInfo(usercode) {
-            trader.getMasterInfo(usercode).then(function (return_data) {
-                // console.log(return_data);
-                if (return_data.is_succ) {
-                    $scope.master_info = return_data.data;
-                }
-            });
-        }
-
         /*-----------------------BarChart------------------*/
         $scope.changeYearType = function () {
             $scope.$broadcast('rendBarData', $scope.barData);

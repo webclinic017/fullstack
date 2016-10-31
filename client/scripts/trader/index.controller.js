@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('TraderIndexController', TraderIndexController);
 
-    TraderIndexController.$inject = ['$scope', '$location', '$state', 'trader', '$timeout', '$modal'];
+    TraderIndexController.$inject = ['$scope', '$location', '$state', 'trader', '$timeout', '$modal','$rootScope'];
 
-    function TraderIndexController($scope, $location, $state, trader, $timeout, $modal) {
+    function TraderIndexController($scope, $location, $state, trader, $timeout, $modal,$rootScope) {
         $scope.master = {};
         $scope.toCopy = toCopy;
         // $scope.toFollow = toFollow;
@@ -35,8 +35,8 @@
 
         function getMasterInfo (usercode) {
             trader.getMasterInfo(usercode).then(function (data) {
-                //console.info(data);
                 if (data.is_succ) {
+                    $rootScope.master_info = data.data;
                     angular.extend($scope.master, data.data);
                     $scope.master.max_retract_percent = ($scope.master.max_retract * 100).toFixed(2);
                 }

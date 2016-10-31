@@ -29,5 +29,7 @@
 <!-- 推广脚本footer -->
 <%- include('bd/common/footer.html') %>
 <!-- H5公共footer -->
-<%- include('common/m_footer.html') %>
+<%if(lang.isCompany("tigerwit")){%>
+    <%- include('common/m_footer.html') %>
+<%}%>
 </html>
