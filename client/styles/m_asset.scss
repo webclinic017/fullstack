@@ -43,25 +43,33 @@
                 border-bottom: 1px solid #eee;
                 padding-bottom: px2rem(24);
                 margin-bottom: px2rem(32);
+                font-family: "Helvetica Neue",Helvetica,"Lantinghei SC","Microsoft YaHei",Arial,sans-serif;
 
                 /*placeholder字体大小*/  
                 ::-webkit-input-placeholder { /* WebKit browsers */  
-                    font-size: px2rem(60);
+                    font-size: px2rem(48);
+                    padding-top: 10px;
                 }  
                 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
-                    font-size: px2rem(60);
+                    font-size: px2rem(48);
+                    padding-top: 10px;
                 }  
                 ::-moz-placeholder { /* Mozilla Firefox 19+ */  
-                    font-size: px2rem(60);
+                    font-size: px2rem(48);
+                    padding-top: 10px;
                 }  
                 :-ms-input-placeholder { /* Internet Explorer 10+ */  
-                    font-size: px2rem(60);
+                    font-size: px2rem(48);
+                    padding-top: 10px;
                 }  
 
                 .m_withdraw_num {
                     width: 85%;
                     border: none;
                     padding-left: px2rem(8);
+                    height: 100%;
+                    line-height: normal;
+                    font-size: px2rem(80);
                 }
             }
 
@@ -191,6 +199,7 @@
                 }
                 select {
                     width: 65%;
+                    height: 24px;
                     font-size: px2rem(36);
                     color: #2b2b2b;
                     padding: 0;

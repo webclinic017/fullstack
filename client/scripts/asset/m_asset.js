@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
     var isNext = false;
+    // 提示信息
+    var alert_msg = '操作失败，请稍后再试';
     // 可提现金额
     var canWithdrawBalance = 0;
     // 提现金额
@@ -85,6 +87,7 @@ $(document).ready(function () {
             } else {
                 isNext = false;
                 var msg = "系统提示：" + data.error_msg;
+                alert_msg = data.error_msg;
                 $withdrawErrMsg.html(msg);
             }
         }, function (err) {
@@ -100,14 +103,28 @@ $(document).ready(function () {
 
             if (widthdrawNum >= 20) {
                 if (widthdrawNum > canWithdrawBalance) {
-                    console.info("提现金额大于可提现金额");
+                    console.info("提现金额不能大于可提现金额");
+                    layer.open({
+                        content: "提现金额不能大于可提现金额",
+                        btn: "确定"
+                    });
                 } else {
                     toCardList();
                 }
             } else {
                 console.info("提现金额不能小于20美金");
+                layer.open({
+                    content: "提现金额不能小于20美金",
+                    btn: "确定"
+                });
             }
+        } else {
+            layer.open({
+                content: alert_msg,
+                btn: "确定"
+            });
         }
+        return false;
     });
 
     function toCardList () {
@@ -200,6 +217,7 @@ $(document).ready(function () {
                     type: "openUrl",
                     url: action_address
                 });
+                return false;
             });
 
             // 出金
@@ -239,6 +257,7 @@ $(document).ready(function () {
                         url: action_address
                     });
                 });
+                return false;
             });
             
         }, function (err) {
@@ -279,7 +298,12 @@ $(document).ready(function () {
             });
         } else {
             console.log("银行卡卡号输入不正确");
+            layer.open({
+                content: "银行卡卡号输入不正确",
+                btn: "确定"
+            });
         }
+        return false;
     });
 
     function getRealname() {
@@ -304,7 +328,7 @@ $(document).ready(function () {
      * 绑定银行卡2
      */
     var $bank = $(".m_withdraw__addcard-info select");
-    var $branch = $(".m_withdraw__addcard-info input[name='branch']");
+    var $branch = $(".m_withdraw__addcard-info input");
     var $addCardBtn2 = $(".m_withdraw__addcard-btn .card2_btn");
 
     if (dataAttr == "page4") {
@@ -313,12 +337,14 @@ $(document).ready(function () {
     }
 
     // 选取时清除class
-    $bank.on("touchend", function () {
-        $(this).removeClass("init");
-        $(this).removeClass("err");
+    $bank.on("change", function (e) {
+        $bank.removeClass("init");
+        $bank.removeClass("err");
+        return false;
     });
-    $branch.on("touchend", function () {
-        $(this).parent().removeClass("err");
+    $branch.on("focus", function () {
+        $branch.parent().removeClass("err");
+        return false;
     });
 
     // 跳转到银行卡列表页面
@@ -353,7 +379,12 @@ $(document).ready(function () {
             });
         } else {
             console.log("未填写银行名称、支行名称");
+            layer.open({
+                content: "信息填写不正确",
+                btn: "确定"
+            });
         }
+        return false;
     });
 
     function setBankList() {
@@ -409,6 +440,7 @@ $(document).ready(function () {
             type: "back_personal",
             url: ""
         });
+        return false;
     });
 
     /*
@@ -429,6 +461,7 @@ $(document).ready(function () {
             type: "back_personal",
             url: ""
         });
+        return false;
     });
 
     function getFailMsg () {
