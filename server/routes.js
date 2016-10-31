@@ -12,6 +12,7 @@ var Lang = require('./lang')();
 var report_sites = require('./report_site');
 var setCompanyCookie = require('./set_company_cookie');
 var URL_PATH = process.env.URL_PATH;
+var COMPANY_NAME = process.env.COMPANY_NAME;
 
 function extendPublic (data, req) {
     var lang = new Lang(req);
@@ -64,7 +65,15 @@ module.exports = function(app) {
 
     app.route('/').get(function(req, res) {
         if (isMobile(req)) {
-            res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+            if (COMPANY_NAME === 'tigerwit') {
+                res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+            }
+            if (COMPANY_NAME === 'pkds') {
+                setCompanyCookie(res);
+                res.render('home.html', extendPublic({
+                    pageInfo: {}
+                }, req));
+            }
         } else {
             setCompanyCookie(res);
             res.render('home.html', extendPublic({
@@ -120,23 +129,23 @@ module.exports = function(app) {
     });
     app.route('/m/regular/detail/:subpage').get(function(req, res){
         setCompanyCookie(res);
-        res.render('m_regular_detail.html',{
+        res.render('m_regular_detail.html',extendPublic({
             model : gloal_modelRegularDetail(req.params.subpage || "")
-        });
+        },req));
     });
     app.route('/m/regular/detail/team/:subpage').get(function(req, res){
         var team_html = global_modelRegular.getTeamHtmlName(req.params.subpage);
         setCompanyCookie(res);
-        res.render('regular/'+ team_html +'.html',{});
+        res.render('regular/'+ team_html +'.html',extendPublic({}, req));
     });
     app.route('/m/regular/detail/history/:subpage').get(function(req, res){
         var aImages = global_modelRegular.getTeamHistoryImages(req.params.subpage);
         setCompanyCookie(res);
-        res.render('regular/m_regular_detail_history.html',{
+        res.render('regular/m_regular_detail_history.html',extendPublic({
             model : {
                 aImages : aImages
             }
-        });
+        }, req));
     });
 
     /*定期跟单结束开始*/
@@ -145,32 +154,38 @@ module.exports = function(app) {
     /*注册相关页面*/
     app.route('/m/register').get(function(req, res){
         setCompanyCookie(res);
-        res.render("m_register01",{});
+        res.render("m_register01",extendPublic({}, req));
     });
     app.route('/m/register2').get(function(req, res){
         setCompanyCookie(res);
-        res.render("m_register02",{});
+        res.render("m_register02",extendPublic({}, req));
     });
     app.route('/m/register3').get(function(req, res){
         setCompanyCookie(res);
-        res.render("m_register03",{});
+        res.render("m_register03",extendPublic({}, req));
     });
     /*成为高手*/
     app.route('/m/agent/become').get(function(req, res){
         setCompanyCookie(res);
-        res.render("m_agent_become",{});
+        res.render("m_agent_become",extendPublic({}, req));
     });
 
     /*定期跟单*/
     app.route('/m/regular/how').get(function(req, res){
         setCompanyCookie(res);
-        res.render("m_regular_how",{});
+        res.render("m_regular_how",extendPublic({}, req));
     });
 
     /*出入金流程*/
-    app.route('/m/asset').get(function(req, res){
+    app.route('/m/asset/:subpage(withdraw|cardlist|addcard1|addcard2|succ|fail)').get(function(req, res) {
+        var subpage = req.params.subpage || 'withdraw';
+        var pageInfo = {
+            id: subpage
+        };
         setCompanyCookie(res);
-        res.render('m_asset', extendPublic({}, req));
+        res.render('m_asset.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
     });
 
     /*邀请好友*/
@@ -338,7 +353,7 @@ module.exports = function(app) {
     // 页面跳转中
     app.route('/waiting').get(function(req, res) {
         setCompanyCookie(res);
-        res.render('waiting', {});
+        res.render('waiting', extendPublic({}, req));
     });
     app.route('/bd/t29').get(function(req, res){
         setCompanyCookie(res);
@@ -363,12 +378,20 @@ module.exports = function(app) {
     app.route('/bd/t31').get(function(req, res){
         setCompanyCookie(res);
         if(isMobile(req)){
-            res.render('bd_m_t31', extendPublic({}, req))
+
+            // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
+            if (COMPANY_NAME === 'tigerwit') {
+                res.render('bd_m_t31', extendPublic({}, req))
+            }
+            if (COMPANY_NAME === 'pkds') {
+                res.render('bd_t31', extendPublic({}, req));
+            }
         } else {
             res.render('bd_t31', extendPublic({}, req));
         }
     });
     app.route('/bd/t31_game').get(function(req, res){
+        setCompanyCookie(res);
         res.render('bd_mt31_game', extendPublic({}, req))
     });
     // nodeAPI

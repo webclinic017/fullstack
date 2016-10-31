@@ -1,5 +1,6 @@
 'use strict';
 var company_name = process.env.COMPANY_NAME;
+var url_path = process.env.URL_PATH;
 var companyConfig = {};
 var indexBasePath = "/white_label";
 
@@ -42,7 +43,7 @@ if (company_name === 'pkds') {
         titleEn: "Parkerdawson",
         supportEmail: "info@pkdsfx.com",
         ibEmail: "info@pkdsfx.com",
-        telephone: "0064 - 21 - 2779989",
+        telephone: "400 - 900 - 9296",
         webSite: "www.pkdsfx.com",
         webMt4Download: "http://pkdsfx.com/downloads/mt4/parkerdawson4setup.exe",
 
@@ -106,7 +107,7 @@ module.exports = function () {
             }
         },
 
-
+        "registerPath": {"zh": url_path+'/space/#/account/register', "en": url_path+'/space/#/account/register'},
         "companyNickName": {"zh": companyConfig.companyNickName, "en": ""},
         "companyZhName": {"zh": companyConfig.companyNameZh, "en": companyConfig.companyNameEn},
         "companyEnName": {"zh": companyConfig.companyNameEn, "en": companyConfig.companyNameEn},
@@ -242,9 +243,10 @@ module.exports = function () {
         "home47": {"en": "The secret of successful investment does not lie in the social influence and development prospect of a certain industry, but in a company's competitive edges and the sustainability of such edges. Only everlasting and profound product and service superiorities can generate generous returns for investors.", "zh": "投资的秘诀、不是评估某一行业对社会的影响有多大、或它的发展前景有多好、而是一间公司有多强的竞争优势、这优势可以维持多久。产品和服务的优越性持久而深厚、才能给投资者带来优厚的回报。"},
         "home48": {"en": "-Warren Buffett", "zh": "—— 沃伦·巴菲特"},
         // home banner
-        "home49": {"en": "Double golden October ceremony increases", "zh":"金色十月 礼增翻倍"},
-        "home50": {"en": "Double give gold registration", "zh":"注册获双倍赠金"},
-        "home51": {"en": "Register during Oct 1st to Oct 31st", "zh":"活动时间:2016.10.1到2016.10.31"},
+        "home49": {"en": "In 11.11 to spend money for goods", "zh":"在11.11花钱抢货"},
+        "home50": {"en": "As to the " + companyConfig.companyNameEn + " free of foreign exchange brought the money", "zh":"不如来" + companyConfig.companyNameZh + "免费领钱"},
+        "home59": {"en": "Give gold can be extracted", "zh":"赠金可提取"},
+        "home51": {"en": "Register during Nov 1st to Nov 30st", "zh":"活动时间:2016.11.1到2016.11.30"},
         "home52": {"en": "first deposit bonus", "zh":"首充送高达"},
         "home53": {"en": "Upto $10000", "zh":"10000美金"},
         "home54": {"en": "More prize after trading! Ticktock! ", "zh":"交易可领大奖哦！快来抢！"},

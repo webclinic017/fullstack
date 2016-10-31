@@ -7,7 +7,7 @@
         <h2 class="font-bold">招募机构代理商</h2>
 
         <p class="font-darker">
-            <%= lang.text('companyZhName')%>代理商扶持计划正式启动，我们致力于帮助代理商增长业务量，获取更多的佣金回报。我们为投资者提供丰富多样的产品，包括外汇、黄金与白银、原油、股指、差价合约。我们的特别之处在于复制跟单系统，点击复制即可全自动跟单，方便了不懂交易的投资者，解决了您开发客户难以及成本高的问题。成为老虎外汇代理商，并在客户交易的过程中享受佣金回报，并且还可以享受独一无二的各种扶持计划。
+            <%= lang.text('companyZhName')%>代理商扶持计划正式启动，我们致力于帮助代理商增长业务量，获取更多的佣金回报。我们为投资者提供丰富多样的产品，包括外汇、黄金与白银、原油、股指、差价合约。我们的特别之处在于复制跟单系统，点击复制即可全自动跟单，方便了不懂交易的投资者，解决了您开发客户难以及成本高的问题。成为<%= lang.text('companyZhName')%>代理商，并在客户交易的过程中享受佣金回报，并且还可以享受独一无二的各种扶持计划。
         </p>
     </div>
 
@@ -41,7 +41,7 @@
                     <span>激励支持</span>
                 </div>
                 <div class="agent__tip-cont">
-                    根据代理商的运营情况和年均入金量，支付代理商员工年终畅游新西兰及参观老虎外汇总部。
+                    根据代理商的运营情况和年均入金量，支付代理商员工年终畅游新西兰及参观<%= lang.text('companyZhName')%>总部。
                 </div>
             </div>
             <div class="col-xs-6 agent__tip">
@@ -125,41 +125,43 @@
                 <span>其他方式</span>
             </div>
             <div class="agent__tip-cont">
-                老虎外汇正在全国范围招募独家渠道，留下联系方式，将有专业的渠道经理与您联系。
+                <%= lang.text('companyZhName')%>正在全国范围招募独家渠道，留下联系方式，将有专业的渠道经理与您联系。
             </div>
         </div>
     </div>
 
-    <div class="agent__content">
-        <h3 class="font-bold">合作代理商评价</h3>
+    <%if(lang.isCompany("tigerwit")){%>
+        <div class="agent__content">
+            <h3 class="font-bold">合作代理商评价</h3>
 
-        <div class="row agent__word">
-            <div class="col-xs-3">
-                <div class="agent__word-avatar">
-                    <img src="/images/web/agent-avatar-1.jpg">
+            <div class="row agent__word">
+                <div class="col-xs-3">
+                    <div class="agent__word-avatar">
+                        <img src="/images/web/agent-avatar-1.jpg">
+                    </div>
+                </div>
+                <div class="col-xs-9">
+                    <h4>王先生 某公司总经理</h4>
+                    <p class="agent__word-cont">
+                        我在外汇行业从业已经有 7，8 年了，自己也算有个不小的公司，代理过很多外汇平台，通过一次偶然间的机会知道了<%= lang.text('companyZhName')%>，被新颖独特的复制交易所吸引。复制跟单降低了投资者对外汇交易的门槛，并且也降低了我开发客户的成本。出入金很快，平台很稳定。虽然是新公司，但是我认为这种创新的模式很具有潜力有无限的发展空间。
+                    </p>
                 </div>
             </div>
-            <div class="col-xs-9">
-                <h4>王先生 某公司总经理</h4>
-                <p class="agent__word-cont">
-                    我在外汇行业从业已经有 7，8 年了，自己也算有个不小的公司，代理过很多外汇平台，通过一次偶然间的机会知道了<%= lang.text('companyZhName')%>，被新颖独特的复制交易所吸引。复制跟单降低了投资者对外汇交易的门槛，并且也降低了我开发客户的成本。出入金很快，平台很稳定。虽然是新公司，但是我认为这种创新的模式很具有潜力有无限的发展空间。
-                </p>
-            </div>
-        </div>
-        <div class="row agent__word">
-            <div class="col-xs-3">
-                <div class="agent__word-avatar">
-                    <img src="/images/web/agent-avatar-2.jpg">
+            <div class="row agent__word">
+                <div class="col-xs-3">
+                    <div class="agent__word-avatar">
+                        <img src="/images/web/agent-avatar-2.jpg">
+                    </div>
+                </div>
+                <div class="col-xs-9">
+                    <h4>张先生 某公司副总</h4>
+                    <p class="agent__word-cont">
+                        我在外汇代理这行差不多快10年的时间了，之前代理过好几家外汇平台，但是都是大同小异，没有什么新鲜感。后来通过一个朋友的介绍了解到了<%= lang.text('companyZhName')%>，看过之后觉得<%= lang.text('companyZhName')%>很有创新，高手排行榜可以让更多的交易高手上来展示自己并且找到愿意跟随自己的人。我决定试试，就先自己入金体验一下跟单，之后就签下了代理协议，在接下来的几个月里面，我介绍了很多客户过来，客户也帮我介绍客户过来。我的客户交易量不断上升，还享受到了<%= lang.text('companyZhName')%>独特的市场培训，线上线下扶持等等都做的非常到位。我现在的获客成本也越来越低，客户量越来越大。我会一直支持<%= lang.text('companyZhName')%>的。
+                    </p>
                 </div>
             </div>
-            <div class="col-xs-9">
-                <h4>张先生 某公司副总</h4>
-                <p class="agent__word-cont">
-                    我在外汇代理这行差不多快10年的时间了，之前代理过好几家外汇平台，但是都是大同小异，没有什么新鲜感。后来通过一个朋友的介绍了解到了<%= lang.text('companyZhName')%>，看过之后觉得<%= lang.text('companyZhName')%>很有创新，高手排行榜可以让更多的交易高手上来展示自己并且找到愿意跟随自己的人。我决定试试，就先自己入金体验一下跟单，之后就签下了代理协议，在接下来的几个月里面，我介绍了很多客户过来，客户也帮我介绍客户过来。我的客户交易量不断上升，还享受到了<%= lang.text('companyZhName')%>独特的市场培训，线上线下扶持等等都做的非常到位。我现在的获客成本也越来越低，客户量越来越大。我会一直支持<%= lang.text('companyZhName')%>的。
-                </p>
-            </div>
-        </div>
-    </div>
+        </div>    
+    <%}%>
 
     <div class="agent__content">
         <h3 class="font-bold">成为代理商流程</h3>

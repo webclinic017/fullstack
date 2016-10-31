@@ -61,15 +61,15 @@
                 </table>
             </div>
             <p class="pb30">活动时间：2016年9月1日~9月30日</p>
-            <p class="pb40">举例： 张先生8月1日在TigerWit老虎外汇平台注册，获得了100美金赠金，8月2日张先生入金2000美金， 并获得赠金200美金（2000*10%），开始选择高手跟单交易，8月25日张先生交易满65手，并盈利了3000美 金，所以张先生的账户余额为：100+2200+3000=5300美金</p>
+            <p class="pb40">举例： 张先生8月1日在<%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>平台注册，获得了100美金赠金，8月2日张先生入金2000美金， 并获得赠金200美金（2000*10%），开始选择高手跟单交易，8月25日张先生交易满65手，并盈利了3000美 金，所以张先生的账户余额为：100+2200+3000=5300美金</p>
             <p class="textcenter pb40"><img src="/images/bd/hongbao-img7.png" draggable="false" /></p>
             <p>1.入金后所有订单平仓赠金扣除，重新发放100美金赠金，100美金赠金以及50美金入金赠金都是以信用形式发放到客户账户；</p>
             <p>2.超过5个工作日且充值小于2000美金的用户，只享受100美金的赠金，活动期间交易15手后可提取赠金；</p>
             <p>3.本活动的交易手数适用于外汇，贵金属以及能源类产品，CFD股指交易手数不计入统计范围；</p>
             <p>4.定期跟单客户不参加任何赠金活动; </p>
             <p>5.本活动仅限首次入金的新用户，为了保证您的资金快速出入，请提交正确的开户信息；</p>
-            <p>6.完成规定交易手数之前，赠金不可抵消账户亏损，若账户净值低于赠金金额的105%，老虎外汇有权强行平仓；</p>
-            <p>7.老虎外汇享有最终解释权，若有疑问，请咨询在线客服，或者拨打400-809-8509</p>
+            <p>6.完成规定交易手数之前，赠金不可抵消账户亏损，若账户净值低于赠金金额的105%，<%= lang.text('companyZhName')%>有权强行平仓；</p>
+            <p>7.<%= lang.text('companyZhName')%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打<%= lang.text('telephone')%></p>
         </div>
     </div>
     <p class="guize-bottombg"></p>
@@ -123,6 +123,7 @@
         </li>
     </ul>
     <p class="clear"></p>
+    <%if(lang.isCompany("tigerwit")){%>
     <div class="tedian-bottombg">
         <div class="get_award">
             <p class="textcenter pb55">
@@ -134,26 +135,27 @@
                <li class="award"><img src="/images/bd/t27_award3.png" draggable="false"><span>最佳推荐平台</span></li>
            </ul>
             <div class="tiger_path">
-                <div class="path_box last"><span class="time">●&nbsp;&nbsp;&nbsp;2016年8月</span><span class="des">正式规范中文宣传名称为“老虎外汇”</span></div>
+                <div class="path_box last"><span class="time">●&nbsp;&nbsp;&nbsp;2016年8月</span><span class="des">正式规范中文宣传名称为“<%= lang.text('companyZhName')%>”</span></div>
                 <div class="path_box"><span class="time">●&nbsp;&nbsp;&nbsp;2016年6月</span><span class="des">获取数千万人民币融资，APP2.0上线 支持微盘与定期跟单</span></div>
                 <div class="path_box"><span class="time">●&nbsp;&nbsp;&nbsp;2016年4月</span><span class="des">APP1.0上线 支持跟单交易，APP产品取代WAP</span></div>
                 <div class="path_box"><span class="time">●&nbsp;&nbsp;&nbsp;2016年3月</span><span class="des">WAP3.0上线 第一代定期跟单、微盘交易产品上线</span></div>
                 <div class="path_box"><span class="time">●&nbsp;&nbsp;&nbsp;2015年11月</span><span class="des">WAP2.0上线</span></div>
                 <div class="path_box"><span class="time">●&nbsp;&nbsp;&nbsp;2015年8月</span><span class="des">WAP第一代复制跟单产品上线</span></div>
-                <div class="path_box"><span class="time">●&nbsp;&nbsp;&nbsp;2015年3月</span><span class="des">老虎外汇公司成立即获得上千万元天使投资</span></div>
+                <div class="path_box"><span class="time">●&nbsp;&nbsp;&nbsp;2015年3月</span><span class="des"><%= lang.text('companyZhName')%>公司成立即获得上千万元天使投资</span></div>
             </div>
         </div>
         <div>
-            <p class="hezuo-txt">TigerWit老虎外汇其他媒体合作伙伴</p>
+            <p class="hezuo-txt"><%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>其他媒体合作伙伴</p>
         </div>
         <div class="wrap">
             <img src="/images/bd/hongbao-img12.png" draggable="false" />
         </div>
     </div>
+    <%}%>
     <div class="footerbg">
         <div class="footer-wrap" data-scroll-reveal="enter bottom, move 40px, over 1s, wait 0.53s">
             <p>
-                风险警示：市场有风险，投资需谨慎。下载“老虎外汇”APP，随时随地监测交易状态，即时根据行情快速下单交易。微盘交易系统实时与国际大型银行报价无缝对接，可直接进行外汇、原油、贵金属、差价合约等品种交易；同时结合老虎外汇的跟单产品，推出更丰富的投资组合方式，满足投资人群的多样化需求；无论是有经验的交易员还是入门级的投资爱好者，无需MT4客户端，在“老虎外汇”APP完成注册即可立即下单操作。
+                风险警示：市场有风险，投资需谨慎。下载“<%= lang.text('companyZhName')%>”APP，随时随地监测交易状态，即时根据行情快速下单交易。微盘交易系统实时与国际大型银行报价无缝对接，可直接进行外汇、原油、贵金属、差价合约等品种交易；同时结合<%= lang.text('companyZhName')%>的跟单产品，推出更丰富的投资组合方式，满足投资人群的多样化需求；无论是有经验的交易员还是入门级的投资爱好者，无需MT4客户端，在“<%= lang.text('companyZhName')%>”APP完成注册即可立即下单操作。
             </p>
             <div class="t27_code">
                 <img src="/images/bd/t30_code_min.png" draggable="false"/>

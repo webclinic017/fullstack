@@ -110,6 +110,11 @@
                     $scope.backErr.system.show = true;
                     $scope.backErr.system.status = 1;
 
+                    // 神策数据统计
+                    sa.setProfile({
+                        phone: $scope.phone.phoneNew
+                    });
+
                     $timeout(function () {
                         $scope.backErr.system.show = false;
                         $scope.backErr.system.status = 0;

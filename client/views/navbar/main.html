@@ -1,7 +1,7 @@
 <div class="<%= typeof navClass == 'undefined' ? 'navbar' : 'navbar-2' %> navbar-fixed-top" tw-navbar>
     <div class="container">
         <div class="navbar-header">
-            <a href="">
+            <a href="/">
                 <img class="logo" src="<%= lang.image('logo')%>">
             </a>
             
@@ -31,10 +31,10 @@
         <!-- 未登录时 -->
         <ul class="nav navbar-login navbar-right" ng-if="!userstatus.logined">
             <li>
-                <a class="login" href="/space/#/account/login"><%= lang.text("login")%></a>
+                <a class="login" ng-click="toTrackLoginSensorsdata()" href="/space/#/account/login"><%= lang.text("login")%></a>
             </li>
             <li>
-                <a class="signup" href="/space/#/account/register"><%= lang.text("register")%></a>
+                <a class="signup" ng-click="toTrackRegisterSensorsdata()" href="/space/#/account/register"><%= lang.text("register")%></a>
             </li>
         </ul>
 

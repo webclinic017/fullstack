@@ -274,7 +274,8 @@ module.exports = function (grunt) {
                         src: [
                             'views/**/*.html',
                             '*.ico',
-                            'fonts/*.*'
+                            'fonts/*.*',
+                            'plugins/**'
                         ]
                     }, {
                         expand: true,
