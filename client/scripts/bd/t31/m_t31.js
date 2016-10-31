@@ -3,22 +3,12 @@
 
     var isActive = false;
     var $btn = $(".m_t31__attention .btn");
-    var $detail = $(".m_t31__attention .detail");
-
-    var scrollHeight = $(".m_t31__rebox").offset().top;
-
-    $btn.click(function () {
-        
-        isActive ? $detail.removeClass('active') : $detail.addClass('active');
-        isActive = ! isActive;
+    var $detail = $("#attention_detail");
+    $btn.on("touchend",function () {
+        console.log($detail[0].style.display == "block");
+        $detail[0].style.display == "block"
+            ? $detail.stop().slideUp(250)
+            : $detail.stop().slideDown(300);
+        return false;
     });
-
-    // $(document).scroll(function () {
-
-    //     if ($(document).scrollTop() >= scrollHeight) {
-    //         $(".m_t31__rebox").addClass("active");
-    //     } else {
-    //         $(".m_t31__rebox").removeClass("active");
-    //     }
-    // });
 })();

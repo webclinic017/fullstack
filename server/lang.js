@@ -31,10 +31,10 @@ module.exports = function () {
             var text;
             if(data[name]){
                 //console.info('langData load successful!',data[name][this.language])
-                text = data[name][this.language] || 'loadERR';
+                text = data[name][this.language] || 'NODE-loadERR';
             } else {
-                console.info(' - - - langData load error! in word - ',name);
-                text = 'loadERR'
+                console.error(' - - - langData load error! in word - ',name);
+                text = 'NODE-loadERR'
             }
             return text;
         },
