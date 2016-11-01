@@ -250,7 +250,7 @@ module.exports = function () {
         "home52": {"en": "first deposit bonus", "zh":"首充送高达"},
         "home53": {"en": "Upto $10000", "zh":"10000美金"},
         "home54": {"en": "More prize after trading! Ticktock! ", "zh":"交易可领大奖哦！快来抢！"},
-        "home55": {"en": "Happy hour: Oct 1st to Oct 31st", "zh":"活动时间：2016.10.1至2016.10.31"},
+        "home55": {"en": "Happy hour: Nov 1st to Nov 30st", "zh":"活动时间：2016.11.1至2016.11.30"},
         "home56": {"en": "Fixed copy trading", "zh":"定期跟单"},
         "home57": {"en": "upto 60% yearly return", "zh":"年化收益可达"},
         "home58": {"en": "Monthly product is avaliable now!", "zh":"月盈产品火爆进行中"},
