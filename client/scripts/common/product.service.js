@@ -32,7 +32,7 @@
          */
         function getProductMarket() {
 
-            return $http.post('/blog/api/get_category_posts?id=84');
+            return $http.post('/blog/api/get_category_posts?id=90');
 
         }
 
