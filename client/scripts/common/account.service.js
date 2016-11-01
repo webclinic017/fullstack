@@ -234,17 +234,15 @@
 
         /**
          * @name getCaptcha
-         * @desc 忘记密码功能使用该接口获取验证码（python 接口）
+         * @desc 忘记密码功能使用该接口获取验证码（python 接口）改为php接口 2016.11.01
          * @return {Object} {
          *   error_code: 1, 2, 4（您未注册）, 5（短信发送失败）, 6（手机号码不正确）
          * }
          */
         function getCaptcha(phone) {
-            return $http.get('/api/v1/verify', {
-                params: {
-                    phone: phone,
-                    exists: true      // 给存在的手机发送验证码
-                }
+            return $http.post('/action/public/v3/get_phone_code', {
+                phone: phone,
+                type: "pwd"      // 找回密码
             });
         }
 
