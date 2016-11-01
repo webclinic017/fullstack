@@ -1,5 +1,45 @@
 var report_sites = [
   {
+    address:'http://www.p5w.net/news/biz/201610/t20161028_1620244.htm',
+    description:'【全景网】老虎外汇：人民币走低投资人要学会“借力打力”',
+    date:'2016-10-28'
+  },
+  {
+    address:'http://news.sina.com.cn/o/2016-10-21/doc-ifxwzpsa8332983.shtml?qq-pf-to=pcqq.c2c',
+    description:'【新浪】为什么歌手也能拿诺贝尔文学奖？',
+    date:'2016-10-21'
+  },
+  {
+    address:'http://www.ibjqn.com/luoyang/2016-10-21/3486.html',
+    description:'【北京青年网】老虎外汇：人民币兑美元跌破6.7 除了坐等贬值我们还能做什么？',
+    date:'2016-10-21'
+  },
+  {
+    address:'http://industry.caijing.com.cn/20161021/4189282.shtml',
+    description:'【财经网】老虎外汇： 人民币持续贬值怎么办？',
+    date:'2016-10-21'
+  },
+  {
+    address:'http://focus.21cn.com/society/a/2016/1019/17/31629805.shtml',
+    description:'【21CN焦点】老虎外汇：投资和旅游一样，都需要优质的用户体验',
+    date:'2016-10-19'
+  },
+  {
+    address:'http://news.ifeng.com/a/20161014/50102251_0.shtml',
+    description:'【凤凰资讯】楼市限购令来袭 手中资金该何去何从？',
+    date:'2016-10-14'
+  },
+  {
+    address:'http://www.chinadaily.com.cn/micro-reading/2016-10/13/content_27054755.htm',
+    description:'【中国日报】TigerWit老虎外汇成立澳大利亚子公司',
+    date:'2016-10-13'
+  },
+  {
+    address:'http://economy.gmw.cn/2016-10/13/content_22446245.htm',
+    description:'【光明经济】在家月挣3000美金，自信生活“复制”而来',
+    date:'2016-10-13'
+  },
+  {
     address:'http://3g.k.sohu.com/t/n158898072',
     description:'【搜狐网】用户陈先生：老虎外汇帮我真正实现了财务自由',
     date:'2016-09-30'
