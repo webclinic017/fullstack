@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('GlobalController', GlobalController);
 
-    GlobalController.$inject = ['$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang'];
+    GlobalController.$inject = ['$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang', '$cookies', '$timeout'];
 
     /**
      * @name GlobalController
      * @desc
      */
-    function GlobalController($scope, $state, $window, config, account, authorization, lang) {
+    function GlobalController($scope, $state, $window, config, account, authorization, lang, $cookies, $timeout) {
         $scope.userstatus = {
             logined: false
         };
@@ -27,6 +27,8 @@
         $scope.toTrackRegisterSensorsdata = toTrackRegisterSensorsdata;
         $scope.toTrackLoginSensorsdata = toTrackLoginSensorsdata;
         $scope.toTrackBannerSensorsdata = toTrackBannerSensorsdata;
+
+        $scope.personalUserCode = $cookies["user_code"];
 
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
 
@@ -53,6 +55,12 @@
         });
 
         $scope.$on('relogin_info', function(){
+            $timeout(function () {
+                // console.info($cookies);
+                // console.info($cookies["user_code"]);
+
+                $scope.personalUserCode = $cookies["user_code"];
+            }, 100);
             initialize();
             getUnreadLength();
         });
@@ -94,6 +102,14 @@
                 if (data.is_succ) {
                     account.hasChecked = false;
                     $window.location.href='/space/#/account/login';
+
+                    $timeout(function () {
+                        // console.info($cookies);
+                        // console.info($cookies["user_code"]);
+
+                        $scope.personalUserCode = $cookies["user_code"];
+                    }, 100);
+                    
                 }
             });
         }
