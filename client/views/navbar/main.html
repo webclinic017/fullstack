@@ -29,7 +29,7 @@
         <%}%>
 
         <!-- 未登录时 -->
-        <ul class="nav navbar-login navbar-right" ng-if="!userstatus.logined">
+        <ul class="nav navbar-login navbar-right" ng-cloak ng-if="!personalUserCode">
             <li>
                 <a class="login" ng-click="toTrackLoginSensorsdata()" href="/space/#/account/login"><%= lang.text("login")%></a>
             </li>
@@ -39,7 +39,7 @@
         </ul>
 
         <!-- 登录后 -->
-        <div class="navbar_info" ng-cloak ng-if="userstatus.logined">
+        <div class="navbar_info" ng-cloak ng-if="personalUserCode">
             <a class="navbar_info__msg" href="/space/#/space/notice">
                 <!-- 有新消息时显示 -->
                 <span class="navbar_info__number" ng-if="personal.unreadLength > 0">
