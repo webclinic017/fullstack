@@ -64,22 +64,8 @@
             });
         } else {
             var user_code = window.location.search;
-            var redirectUrl = window.location.protocol +"//"+ window.location.hostname + "/m/h5_register" + user_code + "&telephone=" + telephone.val();
-            /*跳转到下载地址*/
+            var redirectUrl = window.location.protocol +"//"+ window.location.hostname + "/m/h5_register/reg?" + user_code + "&telephone=" + telephone.val();
             window.location = redirectUrl;
-            /*
-                 //关闭层
-                 layer.closeAll();
-                 //底部对话框
-                 layer.open({
-                 content: '恭喜提交成功!',
-                 btn: ['确认'],
-                 skin: 'footer',
-                 yes: function (index) {
-                 layer.close(index);
-                    }
-                 });
-             */
         }
         return false;
     });
