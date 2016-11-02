@@ -88,14 +88,12 @@ module.exports = function(app) {
     });
 
     app.route('/download').get(function(req, res) {
-        //if (isMobile(req)) {
-        //    res.render('m_download.html', extendPublic({}, req));
-        //} else {
-        //    setCompanyCookie(res);
-        //    res.render('web_download.html', extendPublic({}, req));
-        //}
-        setCompanyCookie(res);
-        res.render('web_download.html', extendPublic({}, req));
+        if (isMobile(req)) {
+            res.render('m_download.html', extendPublic({}, req));
+        } else {
+            setCompanyCookie(res);
+            res.render('web_download.html', extendPublic({}, req));
+        }
     });
 
     /*定期跟单开始*/
@@ -152,6 +150,16 @@ module.exports = function(app) {
 
     /*--------------------APP-Beagin---------------------*/
     /*注册相关页面*/
+    app.route('/m/h5_register/:status(reg|succ)').get(function(req, res){
+        var status = req.params.status || 'reg';
+        var pageInfo = {
+            status: status
+        };
+        setCompanyCookie(res);
+        res.render('h5_register.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
     app.route('/m/register').get(function(req, res){
         setCompanyCookie(res);
         res.render("m_register01",extendPublic({}, req));

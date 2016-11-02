@@ -49,6 +49,7 @@
 
         function getInfo () {
             account.getPersonalInfo().then(function (data) {
+                console.log(data);
                 $scope.invitation.usercode = data.usercode;
                 $scope.invitation.link = $location.protocol() + '://' + $location.host() + '/space/#/space/invite/come?usercode=' + data.usercode;
             });
