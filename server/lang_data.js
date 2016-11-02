@@ -244,8 +244,9 @@ module.exports = function () {
         "home48": {"en": "-Warren Buffett", "zh": "—— 沃伦·巴菲特"},
         // home banner
         "home49": {"en": "In 11.11 to spend money for goods", "zh":"在11.11花钱抢货"},
-        "home50": {"en": "As to the " + companyConfig.companyNameEn + " free of foreign exchange brought the money", "zh":"不如来" + companyConfig.companyNameZh + "免费领钱"},
+        "home50": {"en": "As to the " + companyConfig.companyNameEn + " ", "zh":"不如来" + companyConfig.companyNameZh},
         "home59": {"en": "Give gold can be extracted", "zh":"赠金可提取"},
+        "home60": {"en": "free of foreign exchange brought the money", "zh":"免费领钱"},
         "home51": {"en": "Register during Nov 1st to Nov 30st", "zh":"活动时间:2016.11.1到2016.11.30"},
         "home52": {"en": "first deposit bonus", "zh":"首充送高达"},
         "home53": {"en": "Upto $10000", "zh":"10000美金"},

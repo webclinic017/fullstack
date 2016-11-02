@@ -12,42 +12,69 @@
 <% include common/common_header.html %>
 <body>
 <!-- 引入H5导航条 -->
-<%- include('common/m_nav.html') %>
 <div class="m_download_layout">
-    <ul>
-        <li>
-            <div class="download_des">
-                <h5>高手跟单</h5>
-                <p>鸟随鸾凤飞腾远，</p>
-                <p>这里有老司机带路</p>
-                <p>无需自己盯盘，选择高手，</p>
-                <p>一键复制，收益同步</p>
-            </div>
-        </li>
-        <li>
-            <div class="download_des">
-                <h5>微盘交易</h5>
-            </div>
-        </li>
-        <li>
-            <div class="download_des">
-                <h5>品种丰富</h5>
-                <p>瞬息万变随掌控，</p>
-                <p>这里都应有尽有</p>
-                <p>覆盖市场主流交易品种，</p>
-                <p>一个账户全搞定</p>
-            </div>
-        </li>
-        <li>
-            <div class="download_des">
-                <h5>出入金快</h5>
-                <p>出金入金一日达，</p>
-                <p>这里有高效资金通道</p>
-                <p>出入金24小时到账，</p>
-                <p>入金低门槛，出金无限制</p>
-            </div>
-        </li>
-    </ul>
+    <!--<ul>-->
+        <!--<li>-->
+            <!--<div class="download_des">-->
+                <!--<h5>高手跟单</h5>-->
+                <!--<p>鸟随鸾凤飞腾远，</p>-->
+                <!--<p>这里有老司机带路</p>-->
+                <!--<p>无需自己盯盘，选择高手，</p>-->
+                <!--<p>一键复制，收益同步</p>-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<div class="download_des">-->
+                <!--<h5>微盘交易</h5>-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<div class="download_des">-->
+                <!--<h5>品种丰富</h5>-->
+                <!--<p>瞬息万变随掌控，</p>-->
+                <!--<p>这里都应有尽有</p>-->
+                <!--<p>覆盖市场主流交易品种，</p>-->
+                <!--<p>一个账户全搞定</p>-->
+            <!--</div>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<div class="download_des">-->
+                <!--<h5>出入金快</h5>-->
+                <!--<p>出金入金一日达，</p>-->
+                <!--<p>这里有高效资金通道</p>-->
+                <!--<p>出入金24小时到账，</p>-->
+                <!--<p>入金低门槛，出金无限制</p>-->
+            <!--</div>-->
+        <!--</li>-->
+    <!--</ul>-->
+
+    <div class="full_page" id="dowebok">
+        <div class="section section1">
+            <%- include('common/m_nav.html') %>
+            <h5>高手跟单</h5>
+            <p>鸟随鸾凤飞腾远，这里有老司机带路</p>
+            <p>无需自己盯盘，选择高手，一键复制，收益同步</p>
+        </div>
+        <div class="section section2">
+            <h5>微盘交易</h5>
+            <p>瞬息万变随掌控，这里随时完成交易</p>
+            <p>K线追踪实时行情,一键下单,快捷方便</p>
+        </div>
+        <div class="section section3">
+            <h3>品种丰富</h3>
+            <p>汇金油约全品类,这里应有尽有</p>
+            <p>覆盖市场主流交易品种,一个账户全搞定</p>
+        </div>
+        <div class="section section4">
+            <h5>出入金快</h5>
+            <p>出金入金一日达，这里有高效资金通道</p>
+            <p>出入金24小时到账，入金低门槛，出金无限制</p>
+        </div>
+        <div class="section section5">
+            <h3>第5屏</h3>
+            <p>滚动到第四屏后的回调函数执行的效果</p>
+        </div>
+    </div>
 </div>
 </body>
 <!-- build:js(client) /scripts/m_vendor.js -->
@@ -56,7 +83,9 @@
 <script src="/scripts/plugins/jquery.tap.js"></script>
 <script src="/scripts/plugins/plugins.js"></script>
 <!-- endbuild -->
-
+<!-- build:js(client) /scripts/m_download.js -->
+<script src="/scripts/product/m_download.js"></script>
+<!-- endbuild -->
 <!-- 推广脚本footer -->
 <%- include('bd/common/footer.html') %>
 </html>

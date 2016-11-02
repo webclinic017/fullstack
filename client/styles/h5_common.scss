@@ -1,4 +1,6 @@
+/*插件SCSS*/
 @import "common/layer";
+@import "common/jquery.fullPage";
 @import "common/m_common_style";
 
 // H5 CSS
@@ -10,6 +12,7 @@
 
 @import "m_agent_become";
 @import "m_register";
+@import "account/h5_register";
 @import "m_regular_how";
 @import "regular/m_regular_detail";
 

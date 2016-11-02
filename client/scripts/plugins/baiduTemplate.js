@@ -67,8 +67,8 @@
     bt.cache = {};
     
     //自定义分隔符，可以含有正则中的字符，可以是HTML注释开头 <! !>
-    bt.LEFT_DELIMITER = bt.LEFT_DELIMITER||'<%';
-    bt.RIGHT_DELIMITER = bt.RIGHT_DELIMITER||'%>';
+    bt.LEFT_DELIMITER = bt.LEFT_DELIMITER||'<$';
+    bt.RIGHT_DELIMITER = bt.RIGHT_DELIMITER||'$>';
 
     //自定义默认是否转义，默认为默认自动转义
     bt.ESCAPE = true;

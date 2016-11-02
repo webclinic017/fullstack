@@ -1133,18 +1133,20 @@
             //            return getComputedStyle(obj, false)[name];
             //        }
             //    }
+            //
+            //    var award_list = $("#award_list");
             //    var scroll_box = $("#auto_scroll_box");
-            //    var box_height = getStyle(scroll_box[0],"top");
-            //    scroll_box.addClass("active");
+            //
             //    scroll_box.on("touchstart",function(){
-            //        scroll_box.removeClass("active");
-            //        //console.log(getStyle(scroll_box[0],"top"));
+            //        award_list.css("overflow","scroll");
             //    });
+            //
             //    scroll_box.on("touchmove",function(){
-            //        //scroll_box.addClass("active");
+            //        award_list.css("overflow","scroll");
             //    });
+            //
             //    scroll_box.on("touchend",function(){
-            //        //scroll_box.css("top","0px");
+            //        award_list.css("overflow","scroll");
             //    });
             //}
         }

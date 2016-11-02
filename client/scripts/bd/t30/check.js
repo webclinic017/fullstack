@@ -115,7 +115,7 @@ $(document).ready(function() {
                 if (window.location.hostname === 'www.pkdsfx.com') {
                     returnurl = originUrl + "/space/#/account/register?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
                 } else {
-                    returnurl = originUrl + "/wap/#/account/register?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
+                    returnurl = originUrl + "/m/h5_register/reg?" + "name=" + rName + "&telephone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
                 } 
             }
             jQuery.ajax({
