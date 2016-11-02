@@ -39,49 +39,49 @@
         }
 
     }
-    .index2-slide4 {
-        overflow: hidden;
-        height: 818px !important;
-        background-position: center center;
-        background-size: cover;
-        @include img-normal($image-path-home + "index2-banner-weipan.png");
-        position:relative;
-        
-        .dec {
-            margin-top: 180px;
-            font-size: 40px;
-            color: #fff;
-        }
-        .tit {
-            color: $brand-primary;
-            font-size: 60px;
-            font-weight: bold;
-        }
-        .tip {
-            color: #fff;
-        }
-
-        .pic {
-            margin-top: 40px;
-
-            img {
-                width: 180px;
-            }
-        }
-        .game-btn {
-            margin-top: 20px;
-            padding: 15px 50px;
-            display: inline-block;
-            border: 1px solid $brand-primary;
-            border-radius: 4px;
-            background: transparent;
-            // font-weight: bold;
-            font-size: 22px;
-            line-height: 24px;
-            color: $brand-primary;
-        }
-
-    }
+    //.index2-slide4 {
+    //    overflow: hidden;
+    //    height: 818px !important;
+    //    background-position: center center;
+    //    background-size: cover;
+    //    @include img-normal($image-path-home + "index2-banner-weipan.png");
+    //    position:relative;
+    //
+    //    .dec {
+    //        margin-top: 180px;
+    //        font-size: 40px;
+    //        color: #fff;
+    //    }
+    //    .tit {
+    //        color: $brand-primary;
+    //        font-size: 60px;
+    //        font-weight: bold;
+    //    }
+    //    .tip {
+    //        color: #fff;
+    //    }
+    //
+    //    .pic {
+    //        margin-top: 40px;
+    //
+    //        img {
+    //            width: 180px;
+    //        }
+    //    }
+    //    .game-btn {
+    //        margin-top: 20px;
+    //        padding: 15px 50px;
+    //        display: inline-block;
+    //        border: 1px solid $brand-primary;
+    //        border-radius: 4px;
+    //        background: transparent;
+    //        // font-weight: bold;
+    //        font-size: 22px;
+    //        line-height: 24px;
+    //        color: $brand-primary;
+    //    }
+    //
+    //}
 
     .pagination {
         position: absolute;

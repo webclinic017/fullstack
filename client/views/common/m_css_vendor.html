@@ -25,11 +25,16 @@
     function callNative(oAction) {
         var sAction = JSON.stringify(oAction);
         //IOS和Android均会在页面写入该对象。只是调用方法略不同
-        if (isIOS()) {
-            TigerwitNative(sAction);    
-        } else {
-            TigerwitNative.jsCall(sAction);
-        }
+		if(TigerwitNative || TigerwitNative.jsCall){
+			if (isIOS()) {
+				TigerwitNative(sAction);
+			} else {
+				TigerwitNative.jsCall(sAction);
+			}
+			return true;
+		} else {
+			return false;
+		}
     } 
 
     function isIOS() {
