@@ -297,7 +297,7 @@
          */
         function getPersonalInfoDegree() {
             // console.info($rootScope.phpUrlOrigin);
-            return $http.get($rootScope.phpUrlOrigin + '/action/public/v4/user_perfect_degree');
+            return $http.get('/action/public/v4/user_perfect_degree');
         }
 
         /**

@@ -4,6 +4,17 @@
     }
 }
 
+.home_layer {
+    background-color: transparent !important;
+    box-shadow: none !important;
+
+    .layui-layer-content {
+        width: 800px;
+        height: 419px;
+        @include img-normal($image-path-home + "layer_bd.png");
+    }
+}
+
 @include b(index2-banner) {
     position: relative;
     text-align: center;

@@ -30,7 +30,7 @@
 
         $rootScope.personalCookiesInfo = {
             userCode: $cookies["user_code"],
-            userName: base64decode($cookies["username"]),
+            userName: base64decode($cookies["username"] || ''),
             userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md
         };
 
@@ -62,7 +62,7 @@
             if (is_login) {
                 $rootScope.personalCookiesInfo = {
                     userCode: $cookies["user_code"],
-                    userName: base64decode($cookies["username"]),
+                    userName: base64decode($cookies["username"] || ''),
                     userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md
                 };
             } else {
