@@ -9,6 +9,8 @@
 
     function HomeIndexController($scope, product, ranklist) {
 
+
+        
         $scope.indexMasters = [];// 首页 第二模块的高手
 
         // 此为index2 首页的高手信息
