@@ -271,6 +271,8 @@
             ).then(function (data) {
 
                 if (data.is_succ) {
+                    $scope.$emit('relogin_info');
+
                     // umeng
                     _czc.push(["_trackEvent","注册页","立即注册且成功"]);
 
@@ -280,10 +282,10 @@
                     // 成功
                     goNextStep();
                     
-                    ga('send', 'event', 'register', 'register');
-                    
                     _hmt.push(['_trackEvent', 'account', 'register']);
                     _mvq.push(['$setGeneral', 'registered', '', $scope.account.username, $scope.account.phone]);
+
+
                 } else {
 
 

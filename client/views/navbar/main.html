@@ -29,7 +29,7 @@
         <%}%>
 
         <!-- 未登录时 -->
-        <ul class="nav navbar-login navbar-right" ng-cloak ng-if="!personalUserCode">
+        <ul class="nav navbar-login navbar-right" ng-cloak ng-if="!personalCookiesInfo.userCode">
             <li>
                 <a class="login" ng-click="toTrackLoginSensorsdata()" href="/space/#/account/login"><%= lang.text("login")%></a>
             </li>
@@ -39,7 +39,7 @@
         </ul>
 
         <!-- 登录后 -->
-        <div class="navbar_info" ng-cloak ng-if="personalUserCode">
+        <div class="navbar_info" ng-cloak ng-if="personalCookiesInfo.userCode">
             <a class="navbar_info__msg" href="/space/#/space/notice">
                 <!-- 有新消息时显示 -->
                 <span class="navbar_info__number" ng-if="personal.unreadLength > 0">
@@ -49,8 +49,8 @@
 
             <div class="navbar_info__psl">
                 <a href="/space/#/space/invest/current">
-                    <img class="navbar_info__avatar" ng-src="{{personal.mdAvatar}}">
-                    <h4 class="navbar_info__username">{{personal.username || '**'}}</h4>
+                    <img class="navbar_info__avatar" ng-src="{{personalCookiesInfo.userAvatar}}">
+                    <h4 class="navbar_info__username">{{personalCookiesInfo.userName || '**'}}</h4>
                 </a>
 
                 <a class="navbar_info__logout" href="" ng-click="logout()">

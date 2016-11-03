@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('account', account);
 
-    account.$inject = ['$http', '$q', '$cookies', 'whiteLabel'];
+    account.$inject = ['$http', '$rootScope', '$q', '$cookies', 'whiteLabel'];
 
-    function account($http, $q, $cookies, whiteLabel) {
+    function account($http, $rootScope, $q, $cookies, whiteLabel) {
         var service = {
             encrypt: encrypt,
             login: login,
@@ -296,7 +296,8 @@
          * @method getPersonalInfoDegree
          */
         function getPersonalInfoDegree() {
-            return $http.get('/action/public/v4/user_perfect_degree');
+            // console.info($rootScope.phpUrlOrigin);
+            return $http.get($rootScope.phpUrlOrigin + '/action/public/v4/user_perfect_degree');
         }
 
         /**
