@@ -455,7 +455,7 @@ module.exports = function (grunt) {
 
     // grunt serve or build need to get companyName to run whiteLabel task;
 
-    grunt.registerTask('serve', function (company, node_env, url) {
+    function readAndwriteFile(company, node_env, url) {
         // change process env config
         if (node_env == "dev") node_env = "development";
         if (node_env == "pro") node_env = "production";
@@ -464,7 +464,6 @@ module.exports = function (grunt) {
 
         url_path = companyInfo[company][url]["url_path"];
         login_public_key = companyInfo[company][url]["login_public_key"];
-
 
         var envConfig = fs.readFileSync(envConfigPath + 'processENV.origin.config.js', 'utf8');
         envConfig = envConfig.replace('tigerwit',company).replace('development', node_env).replace('path', url_path);
@@ -478,41 +477,20 @@ module.exports = function (grunt) {
 
         // param -> tigerwit, pkds
         var param = companyName || "tiger";
-        console.info("tiger ->", stylePath, param);
+        // console.info("tiger ->", stylePath, param);
         var cont = fs.readFileSync(whiteLabelPath + '_variables_'+ param +'.scss', 'utf8');
         // console.info("tiger", cont);
         fs.writeFileSync(stylePath + '_variables.scss', cont, 'utf8');
         console.log('whiteLabel task finished...');
+    }
+
+    grunt.registerTask('serve', function (company, node_env, url) {
+        readAndwriteFile(company, node_env, url);
         grunt.task.run(['serve-ing']);
     });
 
     grunt.registerTask('build', function (company, node_env, url) {
-        // change process env config
-        if (node_env == "dev") node_env = "development";
-        if (node_env == "pro") node_env = "production";
-
-        var url_path, login_public_key;
-
-        url_path = companyInfo[company][url]["url_path"];
-        login_public_key = companyInfo[company][url]["login_public_key"];
-
-        var envConfig = fs.readFileSync(envConfigPath + 'processENV.origin.config.js', 'utf8');
-        envConfig = envConfig.replace('tigerwit',company).replace('development', node_env).replace('path', url_path);
-        fs.writeFileSync(envConfigPath + 'processENV.config.js', envConfig, 'utf8');
-        var companyName = require(envConfigPath + 'processENV.config').COMPANY_NAME;
-
-        //change angular - whiteLabel.service.js
-        var AS = fs.readFileSync(whiteLabelPath + 'whiteLabel.service.origin.js', 'utf8');
-        AS = AS.replace('tigerwit',companyName).replace('publicKey', login_public_key);
-        fs.writeFileSync(scriptPath + 'whiteLabel.service.js', AS, 'utf8');
-
-        // param -> tigerwit, pkds
-        var param = companyName || "tiger";
-        console.info("tiger ->", stylePath, param);
-        var cont = fs.readFileSync(whiteLabelPath + '_variables_'+ param +'.scss', 'utf8');
-        // console.info("tiger", cont);
-        fs.writeFileSync(stylePath + '_variables.scss', cont, 'utf8');
-        console.log('whiteLabel task finished...');
+        readAndwriteFile(company, node_env, url);
         grunt.task.run(['build-ing']);
     });
 
