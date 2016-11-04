@@ -30,8 +30,8 @@
 
         $rootScope.personalCookiesInfo = {
             userCode: $cookies["user_code"],
-            userName: base64decode($cookies["username"] || ''),
-            userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md
+            userName: decodeURIComponent($cookies["username"] || ''),
+            userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md + '?timestamp=' + (+new Date())
         };
 
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
@@ -59,10 +59,11 @@
         });
 
         $scope.$on('refresh_personal_cookies_info', function(event, is_login){
+            console.info('refresh_personal_cookies_info');
             if (is_login) {
                 $rootScope.personalCookiesInfo = {
                     userCode: $cookies["user_code"],
-                    userName: base64decode($cookies["username"] || ''),
+                    userName: decodeURIComponent($cookies["username"] || ''),
                     userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md
                 };
             } else {
