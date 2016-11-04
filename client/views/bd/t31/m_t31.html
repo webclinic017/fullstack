@@ -104,13 +104,28 @@
         </ul>
     </div>
     <div class="m_t31__regBox">
-        <div class="h5_regbox m_t31__rebox">
-            <form>
-                <input type="text" id="username" placeholder="姓名" oninvalid="this.setCustomValidity('昵称不合法');" required>
-                <input type="text" id="telephone" placeholder="手机号" oninvalid="this.setCustomValidity('手机号格式不正确');" required>
-                <span class="button" id="regist_btn">注册送200美金</span>
-            </form>
-        </div>
+
+            <!--<form>-->
+            <!--<input type="text" id="username" placeholder="姓名" oninvalid="this.setCustomValidity('昵称不合法');" required>-->
+            <!--<input type="text" id="telephone" placeholder="手机号" oninvalid="this.setCustomValidity('手机号格式不正确');" required>-->
+            <!--<span class="button" id="regist_btn">注册送200美金</span>-->
+            <!--</form>-->
+
+            <div class="h5_register_main">
+                <form>
+                    <div class="telephone"><span>+86</span><input id="telephone" type="tel" placeholder="手机号"></div>
+                    <div class="verify_code"><span>验证码</span><input type="number" placeholder="请输入验证码" id="verify_code"><span class="verify_code_btn" id="verify_code_btn">获取验证码</span></div>
+                    <div class="password">
+                        <span>密码</span>
+                        <input type="password" id="password" placeholder="组合,字母数字,不少于六位">
+                            <span class="password_btn" id="password_btn">
+                                <img id="show" class="hide" src="/images/mobile/reg_password_show.png">
+                                <img id="hide" src="/images/mobile/reg_password_hide.png">
+                            </span>
+                    </div>
+                </form>
+                <span class="submit_form" id="submit_form">注册送200美金</span>
+            </div>
     </div>
     <div class="m_t31__footer">
         风险警示：市场有风险，投资需谨慎。外汇商品、期权和差价合约（CFD交易）是杠杆产品，内含高达投入资本的重大损失风险，可能并不适合每个人。请确认您完全了解有关风险，请勿投入超过自己承担范围的金额。此处提供的信息仅出于告知性目的，无论如何不得视作建议参与某类交易。

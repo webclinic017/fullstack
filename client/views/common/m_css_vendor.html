@@ -1,41 +1,48 @@
 <script>
-	(function(doc, win) {
-	    //设计图的宽度
-	    var viewBase = 750;
-	    var fontBase = 32; //css文件中font-base ，基于该值计算rem值
-	    var docEl = doc.documentElement,
-	    resizeEvt = 'orientationchange' in window ? 'orientationchange': 'resize',
-	    recalc = function() {
-	        var clientWidth = docEl.clientWidth;
-	        if (!clientWidth) {
-	            return;
-	        }
-	        docEl.style.fontSize = fontBase * (clientWidth / viewBase) + 'px';
-	    };
-	    recalc();
-	    if (!doc.addEventListener) {
-	        return;
-	    }
-	    win.addEventListener(resizeEvt, recalc, false);
-	    doc.addEventListener('DOMContentLoaded', recalc, false);
-	})(document, window);
+    (function (doc, win) {
+        //设计图的宽度
+        var viewBase = 750;
+        var fontBase = 32; //css文件中font-base ，基于该值计算rem值
+        var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) {
+                        return;
+                    }
+                    docEl.style.fontSize = fontBase * (clientWidth / viewBase) + 'px';
+                };
+        recalc();
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
 
 
-	//native和h5通讯
+    //native和h5通讯
     function callNative(oAction) {
         var sAction = JSON.stringify(oAction);
         //IOS和Android均会在页面写入该对象。只是调用方法略不同
-		if(TigerwitNative || TigerwitNative.jsCall){
-			if (isIOS()) {
-				TigerwitNative(sAction);
-			} else {
-				TigerwitNative.jsCall(sAction);
-			}
-			return true;
-		} else {
-			return false;
-		}
-    } 
+        if (isIOS()) {
+            TigerwitNative(sAction);
+        } else {
+            TigerwitNative.jsCall(sAction);
+        }
+        return true;
+    }
+
+    /*判断是否在APP中*/
+    function isInTiger() {
+        var userPlatForm = window.navigator.userAgent;
+        var flag = userPlatForm.indexOf("tigerwit_app");
+        if (flag >= 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
     function isIOS() {
         return /like Mac OS X/.test(navigator.userAgent);

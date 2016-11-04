@@ -13,66 +13,58 @@
 <body>
 <!-- 引入H5导航条 -->
 <div class="m_download_layout">
-    <!--<ul>-->
-        <!--<li>-->
-            <!--<div class="download_des">-->
-                <!--<h5>高手跟单</h5>-->
-                <!--<p>鸟随鸾凤飞腾远，</p>-->
-                <!--<p>这里有老司机带路</p>-->
-                <!--<p>无需自己盯盘，选择高手，</p>-->
-                <!--<p>一键复制，收益同步</p>-->
-            <!--</div>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<div class="download_des">-->
-                <!--<h5>微盘交易</h5>-->
-            <!--</div>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<div class="download_des">-->
-                <!--<h5>品种丰富</h5>-->
-                <!--<p>瞬息万变随掌控，</p>-->
-                <!--<p>这里都应有尽有</p>-->
-                <!--<p>覆盖市场主流交易品种，</p>-->
-                <!--<p>一个账户全搞定</p>-->
-            <!--</div>-->
-        <!--</li>-->
-        <!--<li>-->
-            <!--<div class="download_des">-->
-                <!--<h5>出入金快</h5>-->
-                <!--<p>出金入金一日达，</p>-->
-                <!--<p>这里有高效资金通道</p>-->
-                <!--<p>出入金24小时到账，</p>-->
-                <!--<p>入金低门槛，出金无限制</p>-->
-            <!--</div>-->
-        <!--</li>-->
-    <!--</ul>-->
-
     <div class="full_page" id="dowebok">
+
         <div class="section section1">
             <%- include('common/m_nav.html') %>
-            <h5>高手跟单</h5>
-            <p>鸟随鸾凤飞腾远，这里有老司机带路</p>
-            <p>无需自己盯盘，选择高手，一键复制，收益同步</p>
+            <h5>
+                <span>高</span>
+                <span>手</span>
+                <span>跟</span>
+                <span>单</span>
+            </h5>
+            <p class="line1">鸟随鸾凤飞腾远，这里有老司机带路</p>
+            <p class="line2">无需盯盘，选择高手，一键复制，收益同步</p>
+            <p class="next" id="next">∨</p>
         </div>
         <div class="section section2">
+            <a class="download_btn" id="download_btn2" href="/">下载 APP</a>
             <h5>微盘交易</h5>
-            <p>瞬息万变随掌控，这里随时完成交易</p>
-            <p>K线追踪实时行情,一键下单,快捷方便</p>
+            <p class="line1">瞬息万变随掌控，这里随时完成交易</p>
+            <p class="line2">K线追踪实时行情,一键下单,快捷方便</p>
         </div>
         <div class="section section3">
-            <h3>品种丰富</h3>
+            <a class="download_btn" id="download_btn3" href="/">下载 APP</a>
+            <h5>品种丰富</h5>
             <p>汇金油约全品类,这里应有尽有</p>
             <p>覆盖市场主流交易品种,一个账户全搞定</p>
+            <ul class="clearfix">
+                <li><img src="/images/bd/adv_01.png"></li>
+                <li><img src="/images/bd/adv_02.png"></li>
+                <li><img src="/images/bd/adv_03.png"></li>
+                <li><img src="/images/bd/adv_04.png"></li>
+            </ul>
         </div>
         <div class="section section4">
+            <a class="download_btn" id="download_btn4" href="/">下载 APP</a>
             <h5>出入金快</h5>
             <p>出金入金一日达，这里有高效资金通道</p>
             <p>出入金24小时到账，入金低门槛，出金无限制</p>
+            <div class="circle" id="circle"></div>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="img_box">
+                <img src="/images/mobile/section4min.png">
+            </div>
         </div>
         <div class="section section5">
-            <h3>第5屏</h3>
-            <p>滚动到第四屏后的回调函数执行的效果</p>
+            <p>在老虎外汇</p>
+            <p>已经有 <span class="number">86523</span>人选择外汇跟单交易</p>
+            <a class="download_btn" id="download_btn5" href="/">下载 APP</a>
+            <span>登录电脑版  /  </span><a class="connect_us" href="tel:400 - 809 - 8509">联系我们</a>
+            <div class="tips">
+                风险警示：市场有风险，投资需谨慎。外汇商品、期权和差价合约（CFD交易）是杠杆产品，内含高达投入资本的重大损失风险，可能并不适合每个人。请确认您完全了解有关风险，请勿投入超过自己承担范围的金额。此处提供的信息仅出于告知性目的，无论如何不得视作建议参与某类交易。
+            </div>
         </div>
     </div>
 </div>
