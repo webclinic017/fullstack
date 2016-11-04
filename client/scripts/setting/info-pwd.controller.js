@@ -73,6 +73,7 @@
                         account.logout().then(function (data) {
                             if (data.is_succ) {
                                 account.hasChecked = false;
+                                $scope.$emit('refresh_personal_cookies_info');
                                 $window.location.href='/space/#/account/login';
                             }
                         });                        

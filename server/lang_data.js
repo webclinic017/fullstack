@@ -469,7 +469,7 @@ module.exports = function () {
         "stp10": {"en": "" + companyConfig.companyNameEn + "", "zh": "" + companyConfig.companyNameZh + ""},
 
         // 交易指南-复制规则 rules
-        "rules1": {"en": "xx", "zh": "您注册成功后即会得到100赠金进行真实交易，您可以去排行榜找到满意的交易高手进行复制跟单。"},
+        "rules1": {"en": "xx", "zh": "您注册成功后即会得到200赠金进行真实交易，您可以去排行榜找到满意的交易高手进行复制跟单。"},
         "rules2": {"en": "xx", "zh": "复制高手"},
         "rules3": {"en": "xx", "zh": "您最多可以复制 10 位高手。每位交易高手的可复制金额不同，您可以根据自己账户情况来选择高手进行复制。"},
         "rules4": {"en": "xx", "zh": "复制资金"},

@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('GlobalController', GlobalController);
 
-    GlobalController.$inject = ['$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang'];
+    GlobalController.$inject = ['$rootScope', '$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang', '$cookies', '$timeout'];
 
     /**
      * @name GlobalController
      * @desc
      */
-    function GlobalController($scope, $state, $window, config, account, authorization, lang) {
+    function GlobalController($rootScope, $scope, $state, $window, config, account, authorization, lang, $cookies, $timeout) {
         $scope.userstatus = {
             logined: false
         };
@@ -27,6 +27,12 @@
         $scope.toTrackRegisterSensorsdata = toTrackRegisterSensorsdata;
         $scope.toTrackLoginSensorsdata = toTrackLoginSensorsdata;
         $scope.toTrackBannerSensorsdata = toTrackBannerSensorsdata;
+
+        $rootScope.personalCookiesInfo = {
+            userCode: $cookies["user_code"],
+            userName: base64decode($cookies["username"] || ''),
+            userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md
+        };
 
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
 
@@ -52,7 +58,25 @@
             }
         });
 
+        $scope.$on('refresh_personal_cookies_info', function(event, is_login){
+            if (is_login) {
+                $rootScope.personalCookiesInfo = {
+                    userCode: $cookies["user_code"],
+                    userName: base64decode($cookies["username"] || ''),
+                    userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md
+                };
+            } else {
+                $rootScope.personalCookiesInfo.userCode = undefined;
+            }
+        });
+
         $scope.$on('relogin_info', function(){
+            
+            $timeout(function () {
+                // console.info($cookies);
+                // console.info($cookies["user_code"]);
+                $scope.$emit('refresh_personal_cookies_info', 'login');
+            }, 100);
             initialize();
             getUnreadLength();
         });
@@ -94,6 +118,9 @@
                 if (data.is_succ) {
                     account.hasChecked = false;
                     $window.location.href='/space/#/account/login';
+
+                    $scope.$emit('refresh_personal_cookies_info');
+                    
                 }
             });
         }

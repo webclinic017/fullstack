@@ -4,6 +4,62 @@
     }
 }
 
+.home_layer {
+    background-color: transparent !important;
+    box-shadow: none !important;
+
+    .layui-layer-content {
+        width: 800px;
+        height: 489px;
+        @include img-normal($image-path-home + "layer_bd.png");
+        background-repeat: no-repeat;
+
+        .content {
+            padding: 0 56px;
+            
+            p {
+                line-height: 24px;
+            }
+
+            h4 {
+                text-align: center;
+                font-size: 30px;
+                margin-bottom: 40px;
+                margin-top: 30px;
+
+                span {
+                    border-bottom: 3px solid #fff000;
+                    padding-bottom: 5px;
+                }
+            }
+            .info {
+                span {
+                    font-weight: 500;
+                }
+            }
+            .detail {
+                padding: 35px 0;
+                font-weight: 500;
+            }
+        }
+    }
+    .layui-layer-btn {
+
+        text-align: center;
+        .layui-layer-btn0 {
+            width: 316px;
+            height: 56px;
+            text-align: center;
+            line-height: 56px;
+            background-color: #fff000;
+            font-size: 20px;
+            border-radius: 2px;
+            border: none;
+            color: #222;
+        }
+    }
+}
+
 @include b(index2-banner) {
     position: relative;
     text-align: center;

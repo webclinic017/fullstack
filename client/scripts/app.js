@@ -51,8 +51,8 @@
                // Allow loading from our assets domain.  Notice the difference between * and **.
                'http://bd.tigerwit.com/**']);
         }])
-        .run(['$rootScope', '$state', '$window', 'account', 
-                function ($rootScope, $state, $window, account) {
+        .run(['$rootScope', '$state', '$window', 'account', '$cookies', 
+                function ($rootScope, $state, $window, account, $cookies) {
             $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
                 
                 // 未匹配的跳转到 404
@@ -69,6 +69,8 @@
                     });
                 }
             });
+            // php接口要用http://proxy.tigerwit.com请求
+            $rootScope.phpUrlOrigin = $cookies["company_name"] === 'tigerwit' ? 'https://proxy.tigerwit.com' : '';
 
             // pv 统计
             var pageUrl = $window.location.pathname + $window.location.hash;
