@@ -27,7 +27,6 @@
 
     /*红包页面*/
     $("#telephone").blur(function () {
-        checkTel();
         if (($("#telephone").val().trim() != "") && !($("#telephone").hasClass("warning"))) {
             $.ajax({
                 type: "get",
@@ -48,6 +47,7 @@
             })
         }
     });
+
     DOM.$get_award.on("touchend", function () {
         /*获取手机号*/
         var telephone = DOM.$share_tel;
@@ -83,24 +83,30 @@
         /*发送到微信好友*/
         $(".share_to_friends").on("touchend", function () {
             console.log("发送到微信好友");
-            callNative({
-                type: "wechat_friend",
-                title: "你投资，我出钱！注册就送200美金！",
-                description: "我刚刚在老虎外汇领了200美金，好东西必须分享，你也快来看看！",
-                url: window.location.hostname + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
-            });
+            if(isInTiger()){
+                callNative({
+                    type: "wechat_friend",
+                    title: "你投资，我出钱！注册就送200美金！",
+                    description: "我刚刚在老虎外汇领了200美金，好东西必须分享，你也快来看看！",
+                    url: window.location.hostname + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
+                });
+            }
+            layer.closeAll();
             return false;
         });
 
         /*发送到朋友圈*/
         $(".share_to_circle").on("touchend", function () {
             console.log("发送到微信朋友圈");
-            callNative({
-                type: "wechat_circle",
-                title: "你投资，我出钱！注册就送200美金！",
-                description: "我刚刚在老虎外汇领了200美金，好东西必须分享，你也快来看看！",
-                url: window.location.hostname + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
-            });
+            if(isInTiger()){
+                callNative({
+                    type: "wechat_circle",
+                    title: "你投资，我出钱！注册就送200美金！",
+                    description: "我刚刚在老虎外汇领了200美金，好东西必须分享，你也快来看看！",
+                    url: window.location.hostname + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
+                });
+            }
+            layer.closeAll();
             return false;
         });
         return false;
@@ -140,4 +146,6 @@
 
     }());
 
+    //alert(isInTiger());
+    //alert(window.navigator.userAgent);
 }(jQuery));
