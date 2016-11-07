@@ -189,21 +189,12 @@
         display: block;
         text-align: center;
         height: px2rem(96);
-        background-color: #fff;
+        background-color: $brand-primary-dark;
         line-height: 3rem;
         border: 1px solid #fff;
         border-radius: px2rem(8);
         font-size: px2rem(30);
         font-weight: 400;
-      }
-      .user_protocol {
-        margin-top: 6rem;
-        text-align: center;
-        font-size: px2rem(24);
-        color: #fff;
-        .protocol {
-          color: $brand-primary-dark;
-        }
       }
       form {
         height: px2rem(295);

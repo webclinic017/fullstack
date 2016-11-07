@@ -64,7 +64,7 @@
             });
         } else {
             var user_code = window.location.search;
-            var redirectUrl = window.location.protocol +"//"+ window.location.hostname + "/m/h5_register/reg?" + user_code + "&telephone=" + telephone.val();
+            var redirectUrl = window.location.protocol +"//"+ window.location.hostname + "/m/h5_register/reg" + user_code + "&telephone=" + telephone.val();
             window.location = redirectUrl;
         }
         return false;
@@ -127,7 +127,6 @@
                     pagesize: 20
                 },
                 success: function (data) {
-                    console.log(data);
                     if (data.is_succ == true) {
                         var list = {
                             list: data.data
