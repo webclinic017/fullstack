@@ -150,7 +150,7 @@ module.exports = function(app) {
 
     /*--------------------APP-Beagin---------------------*/
     /*注册相关页面*/
-    app.route('/m/h5_register/:status(reg|succ)').get(function(req, res){
+    app.route('/m/h5_register/:status(reg|succ|agreement)').get(function(req, res){
         var status = req.params.status || 'reg';
         var pageInfo = {
             status: status
