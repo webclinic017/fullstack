@@ -70,7 +70,9 @@
                 }
             });
             // php接口要用http://proxy.tigerwit.com请求
-            $rootScope.phpUrlOrigin = $cookies["company_name"] === 'tigerwit' ? 'https://proxy.tigerwit.com' : '';
+            var phpUrlOrigin = "https://proxy.tigerwit.com";
+            // var phpUrlOrigin = "http://wproxy.tigerwit.com";
+            $rootScope.phpUrlOrigin = $cookies["company_name"] === 'tigerwit' ? phpUrlOrigin : '';
 
             // pv 统计
             var pageUrl = $window.location.pathname + $window.location.hash;
