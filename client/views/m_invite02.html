@@ -68,9 +68,10 @@
 <script id="invite_table" type="text/template">
     <$if(list.length > 0){$>
         <$for(var i=0; i<list.length; i++){$>
+            <$if(list[i].status==0){list[i].status="否"}else{list[i].status="是"}$>
             <tr>
                 <td><$=list[i].username$></td>
-                <td>是</td>
+                <td><$=list[i].status$></td>
                 <td><$=list[i].money$></td>
             </tr>
         <$}$>

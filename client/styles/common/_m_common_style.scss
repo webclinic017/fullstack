@@ -85,6 +85,24 @@ select {
   padding-left: 12px;
 }
 
+button[class*="btn"]{
+  color: $brand-button-color;
+  font-size: px2rem(36);
+  font-weight: 400;
+  display: block;
+  width: 90%;
+  height: px2rem(90);
+  line-height: px2rem(90);
+  text-align: center;
+  margin: 0 auto;
+  background-color: $brand-primary-dark;
+  margin-bottom: 1rem;
+  border: 1px solid $brand-primary-dark;
+  -webkit-border-radius: px2rem(8);
+  -moz-border-radius: px2rem(8);
+  border-radius: px2rem(8);
+}
+
 /*h5导航条样式*/
 .h5_nav{
   width: 100%;
