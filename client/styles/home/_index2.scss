@@ -695,17 +695,17 @@
         line-height: 36px;
         font-size: 30px;
         font-weight: bold;
-        color: $brand-buttom-color;
+        color: $brand-button-color;
     }
 
     @include e(con) {
         margin-top: 44px;
         line-height: 36px;
         font-size: 16px;
-        color: $brand-buttom-color;
+        color: $brand-button-color;
     }
     @include e(con1) {
-        color: $brand-buttom-color;
+        color: $brand-button-color;
     }
 
     @include e(btn-con) {
