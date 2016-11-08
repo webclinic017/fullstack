@@ -4,7 +4,7 @@
     display: inline-block;
     background-color: #fedd14;
     font-size: px2rem(36);
-    font-weight: 600;
+    // font-weight: 600;
     color: #000;
     width: 100%;
     height: px2rem(88);
@@ -22,7 +22,7 @@
     @include e(home) {
 
         @include m(rate) {
-            color: #666;
+            // color: #666;
             padding: px2rem(30) 0 px2rem(30) px2rem(52);
         }
         @include m(info) {
@@ -33,7 +33,7 @@
             padding-right: px2rem(52);
 
             .tit {
-                color: #666;
+                // color: #666;
                 padding-top: px2rem(30);
             }
 
