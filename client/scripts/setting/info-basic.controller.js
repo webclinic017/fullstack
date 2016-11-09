@@ -263,8 +263,6 @@
                     $scope.backErr.system.status = 1;
                     $scope.clickable = true;
 
-                    $scope.$emit('refresh_personal_cookies_info', 'login');
-
                     // 神策数据统计
                     sa.setProfile({
                         $name: $scope.basicInfo.username,
@@ -273,6 +271,8 @@
                         $city: $scope.basicInfo.locationCity.value,
                         trade_feature: $scope.basicInfo.special.value
                     });
+                    
+                    window.location.reload();
                     
                     $timeout(function () {
                         $scope.backErr.system.show = false;
