@@ -1,18 +1,18 @@
 <div class="m_withdraw" data-page="page1">
     <div class="m_withdraw__home">
-        <div class="m_withdraw__home-rate">
+        <div class="m_withdraw__home-rate" <%= lang.text("navbar15")%>>
             当前汇率：1美元＝<span>*</span>人民币
         </div>
         <div class="m_withdraw__home-info">
-            <p class="tit">提现金额</p>
+            <p class="tit"><%= lang.text("mAssetWithdrawAmount")%></p>
             <label class="clearfix">
-                <span>$</span><input name="withdraw" type="number" class="m_withdraw_num" placeholder="最低20美元">
+                <span>$</span><input name="withdraw" type="number" class="m_withdraw_num" placeholder="<%= lang.text("mAssetWithdrawPlaceholder1")%>">
             </label>
-            <p class="tip">账户可提现金额：$<span>*</span></p>
-            <p class="err_msg"></p>
+            <p class="tip"><%= lang.text("mAssetWithdrawAmountAble")%>$<span>*</span></p>
+            <p class="err_msg" <%= lang.text("navbar15")%>></p>
         </div>
         <div class="m_withdraw__home-btn">
-            <span class="m_withdraw_btn">下一步</span>
+            <span class="m_withdraw_btn"><%= lang.text("mAssetWithdrawNext")%></span>
         </div>
     </div>
 </div>
