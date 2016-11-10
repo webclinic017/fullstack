@@ -13,7 +13,11 @@
 <body>
 <!-- 引入H5导航条 -->
 <%- include('common/m_nav.html') %>
-<%- include('bd/t31/m_t31.html')%>
+<%if(pageInfo == 't32'){%>
+    <%- include('bd/t32/m_t32.html')%>
+<% } else { %>
+    <%- include('bd/t31/m_t31.html')%>
+<%}%>
 </body>
 <% include common/m_js_vendor.html %>
 <!-- build:js(client) /scripts/m_vendor.js -->

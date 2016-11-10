@@ -19,6 +19,7 @@ if (company_name === 'tigerwit') {
 
         // path
         logoPathZh: indexBasePath + "/tigerwit-logo.png",
+        h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
         logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
         homePersonPath: indexBasePath + "/index-person-tiger.jpg",
         homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
@@ -49,6 +50,7 @@ if (company_name === 'pkds') {
 
         // path
         logoPathZh: indexBasePath + "/pkds-logo.png",
+        h5_register_logo: indexBasePath + "/h5_register_logo_Pakerdawson.png",
         logoPathEn: indexBasePath + "/pkds-logo.png",
         homePersonPath: indexBasePath + "/index-person-tiger.jpg",
         homeTradePathZh: indexBasePath + "/index2-trade-img-pkds.png",
@@ -104,6 +106,10 @@ module.exports = function () {
             "ico": {
                 "en": companyConfig.icoPath,
                 "zh": companyConfig.icoPath
+            },
+            h5RegisterLogo:{
+                "en": companyConfig.h5_register_logo,
+                "zh": companyConfig.h5_register_logo
             }
         },
 
