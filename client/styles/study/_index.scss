@@ -1,159 +1,191 @@
-
 // 学习视频
 @include b(study_video) {
 
-    @include e(title) {
-        color: $gray-darker;
-        border-bottom: 1px solid $gray;
-        padding-bottom: 20px;
+  @include e(title) {
+    color: $gray-darker;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 20px;
+  }
+
+  @include e(content) {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $gray;
+    margin-left: 0px;
+    margin-right: 0px;
+
+    @include m(image) {
+      margin-bottom: 0;
+      padding-left: 0px;
+
+      img {
+        height: 90px;
+        vertical-align: top;
+      }
     }
 
-    @include e(content) {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        border-bottom: 1px solid $gray;
-        margin-left: 0px;
-        margin-right: 0px;
+    @include m(info) {
+      display: table;
+      height: 90px;
+      margin-bottom: 0;
 
-        @include m(image) {
-            margin-bottom: 0;
-            padding-left: 0px;
+      > p {
+        display: table-cell;
+        vertical-align: middle;
 
-            img {
-                height: 90px;
-                vertical-align: top;
-            }
+        > a {
+          color: $gray-darker;
         }
-
-        @include m(info) {
-            display: table;
-            height: 90px;
-            margin-bottom: 0;
-
-            > p {
-                display: table-cell;
-                vertical-align: middle;
-
-                > a {
-                    color: $gray-darker;
-                }
-            }
-        }
+      }
     }
+  }
 }
 
 @include b(video_modal) {
 
-    .system_modal__content {
-        padding-left: 150px;
-        padding-right: 150px;
-    }
+  .system_modal__content {
+    padding-left: 150px;
+    padding-right: 150px;
+  }
 }
 
 // 基础知识
 @include b(study_knowledge) {
+  margin-bottom: 30px;
+
+  @include e(title) {
+    color: $gray-darker;
+    padding-bottom: 20px;
+  }
+
+  @include e(content) {
+    margin-top: 10px;
+
+    @include m(tit) {
+
+    }
+
+    @include m(detail) {
+      padding-left: 22px;
+    }
+
+    .title {
+      cursor: pointer;
+      display: inline-block;
+
+      &:hover {
+        color: $brand-info;
+      }
+
+      .fa {
+        display: none;
+
+        &.active {
+          display: inline-block;
+        }
+      }
+    }
+
+    .info {
+      color: $gray-darker;
+      padding-left: 20px;
+      line-height: 22px;
+      margin-top: 20px;
+      display: none;
+
+      &.active {
+        display: block;
+      }
+
+      .col-xs-6 {
+        padding-left: 100px;
+      }
+      .pad10 {
+        display: block;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  @include e(point) {
+    display: block;
+    padding-top: 20px;
+    i {
+      color: $brand-primary;
+    }
+  }
+
+  @include e(k_chart) {
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 30px;
     margin-bottom: 30px;
-    
-    @include e(title) {
-        color: $gray-darker;
-        padding-bottom: 20px;
+
+    &.k1 {
+      height: 290px;
+      @include img-normal($image-path-study + "k-1.png");
     }
-
-    @include e(content) {
-        margin-top: 10px;
-
-        @include m(tit) {
-            
-        }
-
-        @include m(detail) {
-            padding-left: 22px;
-        }
-
-        .title {
-            cursor: pointer;
-            display: inline-block;
-
-            &:hover {
-                color: $brand-info;
-            }
-
-            .fa {
-                display: none;
-
-                &.active {
-                    display: inline-block;
-                }
-            }
-        }
-        
-        .info {
-            color: $gray-darker;
-            padding-left: 20px;
-            line-height: 22px;
-            margin-top: 20px;
-            display: none;
-
-            &.active {
-                display: block;
-            }
-
-            .col-xs-6 {
-                padding-left: 100px;
-            }
-            .pad10 {
-                display: block;
-                padding-bottom: 10px;
-            }
-        }
+    &.k2 {
+      height: 140px;
+      @include img-normal($image-path-study + "k-2.png");
     }
-
-    @include e(point) {
-        display: block;
-        padding-top: 20px;
-        i {
-            color: $brand-primary;
-        }
+    &.k3 {
+      height: 240px;
+      @include img-normal($image-path-study + "k-3.png");
     }
-
-    @include e(k_chart) {
-        display: block;
-        background-size: contain;
-        background-repeat: no-repeat;
-        margin-top: 30px;
-        margin-bottom: 30px; 
-
-        &.k1 {
-            height: 290px;
-            @include img-normal($image-path-study + "k-1.png");
-        }
-        &.k2 {
-            height: 140px;
-            @include img-normal($image-path-study + "k-2.png");
-        }
-        &.k3 {
-            height: 240px;
-            @include img-normal($image-path-study + "k-3.png");
-        }
-        &.k4 {
-            height: 165px;
-            @include img-normal($image-path-study + "k-4.png");
-        }
-        &.k5 {
-            height: 166px;
-            @include img-normal($image-path-study + "k-5.png");
-        }
-        &.k6 {
-            height: 110px;
-            @include img-normal($image-path-study + "k-6.png");
-        }
-        &.k7 {
-            height: 110px;
-            @include img-normal($image-path-study + "k-7.png");
-        }
-        &.k8 {
-            height: 110px;
-            @include img-normal($image-path-study + "k-8.png");
-        }
+    &.k4 {
+      height: 165px;
+      @include img-normal($image-path-study + "k-4.png");
     }
+    &.k5 {
+      height: 166px;
+      @include img-normal($image-path-study + "k-5.png");
+    }
+    &.k6 {
+      height: 110px;
+      @include img-normal($image-path-study + "k-6.png");
+    }
+    &.k7 {
+      height: 110px;
+      @include img-normal($image-path-study + "k-7.png");
+    }
+    &.k8 {
+      height: 110px;
+      @include img-normal($image-path-study + "k-8.png");
+    }
+  }
 }
+.layout-2{
+  margin-top: 69px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
