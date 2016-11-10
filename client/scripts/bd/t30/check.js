@@ -1,8 +1,4 @@
 $(document).ready(function() {
-    /*h5 - footer关闭按钮*/
-    $(".close").on('tap',function(){
-        $(".h5_float_footer").fadeOut(500);
-    });
 
     /*判断是否在APP中,关闭相关层*/
     ;(function(){
