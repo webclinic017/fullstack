@@ -1,29 +1,29 @@
 <div class="m_withdraw" data-page="page4">
     <div class="m_withdraw__addcard">
         <div class="m_withdraw__addcard-tit">
-            请填写银行卡信息
+            <%= lang.text("mAssetWithdrawInfo2")%>
         </div>
         <div class="m_withdraw__addcard-info">
             <ul>
                <li class="detail">
-                   <span>银行名称</span>
+                   <span><%= lang.text("mAssetWithdrawBankName")%></span>
                    <!-- <input type="text" name="bank"> -->
                    <select class="init"></select>
                </li>
                <li class="detail">
-                   <span>支行名称</span>
-                   <input type="text" name="branch" placeholder="请填写支行名称">
+                   <span><%= lang.text("mAssetWithdrawBranchName")%></span>
+                   <input type="text" name="branch" placeholder="<%= lang.text("mAssetWithdrawPlaceholder2")%>">
                </li>  
             </ul>
         </div>
         <div class="m_withdraw__addcard-btn">
-            <span class="m_withdraw_btn card2_btn">下一步</span>
+            <span class="m_withdraw_btn card2_btn"><%= lang.text("mAssetWithdrawNext")%></span>
         </div>
     </div>
 </div>
 
 <script id="template_banklist" type="text/html">
-    <option value="">请选择发卡银行</option>
+    <option value=""></option>
     <$for(var i=0;i<banks.length;i++){$>
         <option value="<$= banks[i].nameEN$>"><$= banks[i].nameZH$></option>
     <$}$>

@@ -24,10 +24,10 @@
     <div class="operateCard">
         <$if(cardList.length){$>
             <i class="fa fa-pencil"></i>
-            <span class="tit">修改银行卡</span>
+            <span class="tit"><%= lang.text("mAssetWithdrawModify")%><%= lang.text("mAssetWithdrawBankCard")%></span>
         <$} else {$>
             <i class="fa fa-plus"></i>
-            <span class="tit">添加银行卡</span>
+            <span class="tit"><%= lang.text("mAssetWithdrawAdd")%><%= lang.text("mAssetWithdrawBankCard")%></span>
         <$}$>
         <i class="fa fa-angle-right"></i>
     </div>
