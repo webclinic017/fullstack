@@ -223,10 +223,19 @@ $(document).ready(function () {
             // 出金
             $withdrawBtn.on("touchend", function () {
                 widthdrawNum = getUrlParam("amount");
+
+                //loading
+                layer.open({
+                    type: 2,
+                    content: '加载中',
+                    shadeClose: false
+                });
+
                 $.post('/action/public/v4/withdraw', {
                     amount: widthdrawNum,
                     id: id
                 }).then(function (data) {
+                    layer.closeAll();
                     console.info(data);
                     data = JSON.parse(data);
                     if (data.is_succ) {
