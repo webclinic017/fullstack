@@ -25,6 +25,7 @@
                         telephone: "400 - 809 - 8509",
                         mt4Live: "TigerWit-Live",
                         companyCopyRules: "https://www.tigerwit.com/web/copy/rules",
+                        webSite:"www.tigerwit.com",
                     };
                 }
                 if (value === 'pkds') {
@@ -34,6 +35,7 @@
                         telephone: "400 - 900 - 9296",
                         mt4Live: "Parkerdawson-Live",
                         companyCopyRules: "http://www.pkdsfx.com/web/copy/rules",
+                        webSite:"www.pkdsfx.com",
                     };
                 }
             } 
@@ -46,6 +48,7 @@
             "companyNameZh": {"zh":companyConfig.companyNameZh, "en": companyConfig.companyNameZh},
             "telephone": {"zh": companyConfig.telephone, "en": companyConfig.telephone},
             "mt4Live": {"zh": companyConfig.mt4Live, "en": companyConfig.mt4Live},
+            "webSite": {"zh": companyConfig.webSite, "en": companyConfig.webSite},
 
 
             "language": language,

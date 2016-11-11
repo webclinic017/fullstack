@@ -45,6 +45,7 @@
 
                 .state('help.subpage', {
                     url: '/help/:subpage',
+                    replace:'false',
                     views: {
                         'content@help': {
                             templateUrl: function ($stateParams) {
