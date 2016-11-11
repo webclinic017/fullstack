@@ -8,6 +8,11 @@
 <!-- endbuild -->
 <% include common/m_css_vendor.html %>
 <% include common/common_header.html %>
+<script>
+    var nodeResponseInfo = {
+        language: '<%= lang.currentLanguage() %>'
+    };
+</script>
 <body>
 
 <%- include('asset/m_asset_' + pageInfo.id + '.html') %>
