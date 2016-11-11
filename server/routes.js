@@ -207,6 +207,12 @@ module.exports = function(app) {
         res.render('m_invite02', extendPublic({}, req));
     });
 
+    /*H5 web 关于我们 英文页面*/
+    app.route('/m/web/about/us').get(function(req, res){
+        setCompanyCookie(res);
+        res.render('m_about_us', extendPublic({}, req));
+    });
+
     /*--------------------APP-End-------------------------*/
 
 
