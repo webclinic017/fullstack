@@ -19,6 +19,7 @@ if (company_name === 'tigerwit') {
 
         // path
         logoPathZh: indexBasePath + "/tigerwit-logo.png",
+        helpLogo: indexBasePath + "/help-logo-tigerwit.png",
         logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
         homePersonPath: indexBasePath + "/index-person-tiger.jpg",
         homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
@@ -49,6 +50,7 @@ if (company_name === 'pkds') {
 
         // path
         logoPathZh: indexBasePath + "/pkds-logo.png",
+        helpLogo: indexBasePath + "/help-logo-tigerwit.png",
         logoPathEn: indexBasePath + "/pkds-logo.png",
         homePersonPath: indexBasePath + "/index-person-tiger.jpg",
         homeTradePathZh: indexBasePath + "/index2-trade-img-pkds.png",
@@ -72,6 +74,10 @@ module.exports = function () {
             "logo": {
                 "en": companyConfig.logoPathEn,
                 "zh": companyConfig.logoPathZh
+            },
+            "helpLogo":{
+                "en": companyConfig.helpLogo,
+                "zh": companyConfig.helpLogo
             },
             "homePerson": {
                 "en": companyConfig.homePersonPath,
