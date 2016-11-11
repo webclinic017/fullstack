@@ -3,6 +3,8 @@ $(document).ready(function () {
     var isNext = false;
     // 提示信息
     var alert_msg = '操作失败，请稍后再试';
+    // 英文版 提示信息 暂时都显示同一提示
+    var alert_msg_en = 'Operation Failed，please contact the admin';
     // 可提现金额
     var canWithdrawBalance = 0;
     // 提现金额
@@ -44,6 +46,10 @@ $(document).ready(function () {
     function getBanksInfo() {
         var banks = getH5Config().banks;
         return banks;
+    }
+    // 判断是不是英文版 nodeResponseInfo是node返回的信息 定义在m_asset.html中
+    function isEngLanguage () {
+        return nodeResponseInfo.language === 'en' ? true : false;
     }
 
     /*
@@ -104,25 +110,48 @@ $(document).ready(function () {
             if (widthdrawNum >= 20) {
                 if (widthdrawNum > canWithdrawBalance) {
                     console.info("提现金额不能大于可提现金额");
-                    layer.open({
-                        content: "提现金额不能大于可提现金额",
-                        btn: "确定"
-                    });
+                    if (isEngLanguage()) {
+                        layer.open({
+                            content: alert_msg_en,
+                            btn: "OK"
+                        });
+                    } else {
+                        layer.open({
+                            content: "提现金额不能大于可提现金额",
+                            btn: "确定"
+                        });
+                    }
+                    
                 } else {
                     toCardList();
                 }
             } else {
                 console.info("提现金额不能小于20美金");
+                
+                if (isEngLanguage()) {
+                    layer.open({
+                        content: alert_msg_en,
+                        btn: "OK"
+                    });
+                } else {
+                    layer.open({
+                        content: "提现金额不能小于20美金",
+                        btn: "确定"
+                    });
+                }
+            }
+        } else {
+            if (isEngLanguage()) {
                 layer.open({
-                    content: "提现金额不能小于20美金",
+                    content: alert_msg_en,
+                    btn: "OK"
+                });
+            } else {
+                layer.open({
+                    content: alert_msg,
                     btn: "确定"
                 });
             }
-        } else {
-            layer.open({
-                content: alert_msg,
-                btn: "确定"
-            });
         }
         return false;
     });
@@ -227,7 +256,7 @@ $(document).ready(function () {
                 //loading
                 layer.open({
                     type: 2,
-                    content: '加载中',
+                    content: 'loading',
                     shadeClose: false
                 });
 
@@ -307,10 +336,17 @@ $(document).ready(function () {
             });
         } else {
             console.log("银行卡卡号输入不正确");
-            layer.open({
-                content: "银行卡卡号输入不正确",
-                btn: "确定"
-            });
+            if (isEngLanguage()) {
+                layer.open({
+                    content: alert_msg_en,
+                    btn: "OK"
+                });
+            } else {
+                layer.open({
+                    content: "银行卡卡号输入不正确",
+                    btn: "确定"
+                });
+            }
         }
         return false;
     });
@@ -388,10 +424,17 @@ $(document).ready(function () {
             });
         } else {
             console.log("未填写银行名称、支行名称");
-            layer.open({
-                content: "信息填写不正确",
-                btn: "确定"
-            });
+            if (isEngLanguage()) {
+                layer.open({
+                    content: alert_msg_en,
+                    btn: "OK"
+                });
+            } else {
+                layer.open({
+                    content: "信息填写不正确",
+                    btn: "确定"
+                });
+            } 
         }
         return false;
     });
@@ -477,7 +520,11 @@ $(document).ready(function () {
         var msg = getUrlParam("msg");
 
         if (msg) {
-            $failTip.html(msg);
+            if (isEngLanguage()) {
+                $failTip.html(alert_msg_en);
+            } else {
+                $failTip.html(msg);
+            }
         }
     }
 
