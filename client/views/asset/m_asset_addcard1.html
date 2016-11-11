@@ -1,22 +1,22 @@
 <div class="m_withdraw" data-page="page3">
     <div class="m_withdraw__addcard">
         <div class="m_withdraw__addcard-tit">
-            请绑定持卡人本人的银行卡
+            <%= lang.text("mAssetWithdrawInfo1")%>
         </div>
         <div class="m_withdraw__addcard-info">
             <ul>
                <li class="detail">
-                   <span>持卡人</span>
+                   <span><%= lang.text("mAssetWithdrawCardholder")%></span>
                    <input type="text" name="realname" readonly>
                </li>
                <li class="detail">
-                   <span>卡号</span>
+                   <span><%= lang.text("mAssetWithdrawCardNo")%></span>
                    <input type="number" name="cardnum">
                </li>  
             </ul>
         </div>
         <div class="m_withdraw__addcard-btn">
-            <span class="m_withdraw_btn card1_btn">下一步</span>
+            <span class="m_withdraw_btn card1_btn"><%= lang.text("mAssetWithdrawNext")%></span>
         </div>
     </div>
 </div>

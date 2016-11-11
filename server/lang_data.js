@@ -753,7 +753,34 @@ module.exports = function () {
         "traderIndex16": {"en": "More Info", "zh": "更多介绍"},
         "traderIndex17": {"en": "Stats", "zh": "数据统计"},
         "traderIndex18": {"en": "Holding Trades", "zh": "当前交易"},
-        "traderIndex19": {"en": "Trading History", "zh": "历史交易"}
+        "traderIndex19": {"en": "Trading History", "zh": "历史交易"},
+
+        /*
+         *  H5 页面 变量名格式为 m + 名字 eg: mAssetWithdraw
+         */
+
+        // 提现页  /m/asset/
+        "mAssetWithdrawAmount": {"zh": "提现金额", "en": "Amount"},
+        "mAssetWithdrawAmountAble": {"zh": "账户可提现金额：", "en": "Withdrawable Balance:"},
+        "mAssetWithdrawNext": {"zh": "下一步", "en": "Next"},
+        "mAssetWithdrawBankCard": {"zh": "银行卡", "en": "Bank Card"},
+        "mAssetWithdrawAdd": {"zh": "添加", "en": "Add "},
+        "mAssetWithdrawModify": {"zh": "修改", "en": "Modify "},
+        "mAssetWithdrawCardholder": {"zh": "持卡人", "en": "Cardholder"},
+        "mAssetWithdrawCardNo": {"zh": "卡号", "en": "Card No"},
+        "mAssetWithdrawBankName": {"zh": "银行名称", "en": "Bank Name"},
+        "mAssetWithdrawBranchName": {"zh": "支行名称", "en": "Branch Name"},
+        "mAssetWithdrawSuccInfo": {"zh": "提现申请已提交成功", "en": "Submit successful"},
+        "mAssetWithdrawFailInfo": {"zh": "提现申请失败", "en": "Submit failed"},
+        "mAssetWithdrawSuccInfo2": {"zh": "请耐心等待，预计2个工作日内到账！", "en": "Withdraw will be processed in two days"},
+        "mAssetWithdrawFailInfo2": {"zh": "请返回重新提交", "en": "Please try again"},
+        "mAssetWithdrawPlaceholder1": {"zh": "最低20美元", "en": "A minimum of $20"},
+        "mAssetWithdrawPlaceholder2": {"zh": "请填写支行名称", "en": " "},
+        "mAssetWithdrawInfo1": {"zh": "请绑定持卡人本人的银行卡", "en": "Bank Account Information"},
+        "mAssetWithdrawInfo2": {"zh": "请填写银行卡信息", "en": "Bank Account Information"},
+        "mAssetWithdrawBackPersonal": {"zh": "返回个人中心", "en": "OK"},
+        "mAssetWithdrawBackPersonal2": {"zh": "返回个人中心", "en": "Back"},
+        "mAssetWithdrawService": {"zh": "客服帮助", "en": "Customer service"},
     };
 
     return data;
