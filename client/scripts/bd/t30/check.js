@@ -1,13 +1,4 @@
 $(document).ready(function() {
-
-    /*判断是否在APP中,关闭相关层*/
-    ;(function(){
-        if(isInTiger()){
-            $(".h5_nav").css("display","none");
-            $(".h5_float_footer").css("display","none");
-        }
-    }());
-
     /*注册组件公用逻辑*/
     var lp = '';
     var pid = '';
