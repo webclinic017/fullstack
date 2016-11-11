@@ -27,6 +27,9 @@ module.exports = function () {
                 return false;
             }
         },
+        currentLanguage: function () {
+            return this.language;
+        },
         text: function(name){
             var text;
             if(data[name]){
