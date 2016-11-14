@@ -16,6 +16,7 @@ if (company_name === 'tigerwit') {
         telephone: "400 - 809 - 8509",
         webSite: "www.tigerwit.com",
         webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
+        androidApp: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.2.1.apk",
 
         // path
         logoPathZh: indexBasePath + "/tigerwit-logo.png",
@@ -47,6 +48,7 @@ if (company_name === 'pkds') {
         telephone: "400 - 900 - 9296",
         webSite: "www.pkdsfx.com",
         webMt4Download: "http://pkdsfx.com/downloads/mt4/parkerdawson4setup.exe",
+        androidApp: "https://www.pkdsfx.com/downloads/apk/parkerdawson_v1.0.apk",
 
         // path
         logoPathZh: indexBasePath + "/pkds-logo.png",
@@ -123,6 +125,7 @@ module.exports = function () {
         "telephone": {"zh": companyConfig.telephone, "en": companyConfig.telephone},
         "webSite": {"zh": companyConfig.webSite, "en": companyConfig.webSite},
         "webMt4Download": {"zh": companyConfig.webMt4Download, "en": companyConfig.webMt4Download},
+        "androidApp": {"zh": companyConfig.androidApp, "en": companyConfig.androidApp},
 
         // 公用 public
         "lijifuzhi":{"en": "Copy now", "zh": "立即复制"},
