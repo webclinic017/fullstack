@@ -204,6 +204,7 @@ $(document).ready(function () {
                 cardInfo.cardList.push(data.data);
                 id = data.data.id ? data.data.id : '';
             } else {
+                id = '';
                 console.log("获取银行卡列表信息失败了");
             }
 
