@@ -341,6 +341,11 @@ module.exports = function(app) {
         }, req));
     });
 
+    app.route('/help').get(function(req, res) {
+        setCompanyCookie(res);
+        res.render('help_doc.html', extendPublic({}, req));
+    });
+
 
     app.route('/api_test').get(function(req, res, next) {
         // accountApi.checkLogined(function (data) {

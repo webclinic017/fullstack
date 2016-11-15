@@ -44,19 +44,23 @@
 
             <div class="body">
                 <div class="layout-2">
-                    <div class="layout-2__side mg-tp-30">
-                        <%- include('study/sidebar.html') %>
-                    </div>
-                    <div class="layout-2__content mg-tp-30">
-                        <%- include('study/' + pageInfo.id + '.html') %>
-                    </div>
+                    <%if(pageInfo.id != "help"){%>
+                        <div class="layout-2__side mg-tp-30">
+                            <%- include('study/sidebar.html') %>
+                        </div>
+                        <div class="layout-2__content mg-tp-30">
+                            <%- include('study/' + pageInfo.id + '.html') %>
+                        </div>
+                    <%} else {%>
+                        <div ui-view></div>
+                    <%}%>
                 </div>
             </div>
 
         <% include vendor.js.html %>
 
         <!-- build:js(client) /scripts/study.js -->
-
+        <script src="/scripts/routes.js"></script>
         <script src="/scripts/common/config.service.js"></script>
         <script src="/scripts/common/account.service.js"></script>
         <script src="/scripts/common/authorization.service.js"></script>
@@ -76,6 +80,7 @@
 
         <script src="/scripts/common/global.controller.js"></script>
         <script src="/scripts/study/video.controller.js"></script>
+        <script src="/scripts/study/HelpController.js"></script>
         <script src="/scripts/web/faq.controller.js"></script>
         <!-- endbuild -->
 

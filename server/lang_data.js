@@ -21,6 +21,7 @@ if (company_name === 'tigerwit') {
         // path
         logoPathZh: indexBasePath + "/tigerwit-logo.png",
         h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
+        helpLogo: indexBasePath + "/help-logo-tigerwit.png",
         logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
         homePersonPath: indexBasePath + "/index-person-tiger.jpg",
         homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
@@ -53,6 +54,7 @@ if (company_name === 'pkds') {
         // path
         logoPathZh: indexBasePath + "/pkds-logo.png",
         h5_register_logo: indexBasePath + "/h5_register_logo_Pakerdawson.png",
+        helpLogo: indexBasePath + "/help-logo-tigerwit.png",
         logoPathEn: indexBasePath + "/pkds-logo.png",
         homePersonPath: indexBasePath + "/index-person-tiger.jpg",
         homeTradePathZh: indexBasePath + "/index2-trade-img-pkds.png",
@@ -76,6 +78,10 @@ module.exports = function () {
             "logo": {
                 "en": companyConfig.logoPathEn,
                 "zh": companyConfig.logoPathZh
+            },
+            "helpLogo":{
+                "en": companyConfig.helpLogo,
+                "zh": companyConfig.helpLogo
             },
             "homePerson": {
                 "en": companyConfig.homePersonPath,
@@ -189,6 +195,7 @@ module.exports = function () {
         "foot11": {"en": "Contact Us", "zh": "联系我们"},
         "foot12": {"en": "Market risk, the investment need to be cautious.The margined transaction in financial market is full of higher risk and not suitable for all investors, and rising leverage means the coexistence of high risk and high profits. Before making deals, it is necessary to take your investment goals, investment experience and risk tolerance into prudent consideration and select the right investment style; and you need to learn that there are possibilities of all or part of losses in margined transaction in financial market. " + companyConfig.companyNameEn + " transaction platform provides trade leaders and common investors with copy information from websites and service, including real-time transaction prompt, investment articles and other resources from internet, and all clients need to think over and weigh investment risk and security. The historical transaction data of trade leaders doesn’t stand for their operational capacity in the future, and clients need to take any risk on their own.", "zh": "高风险投资警告：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险，不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前，应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式；您需要知晓金融市场的保证金交易具有全部或部分亏损的可能。" + companyConfig.companyNameZh + "交易平台为广大交易高手及普通投资者提供复制交易服务，网站发布的任何信息，包括实时交易提醒、投资文章及其他资源等均来自互联网所有用户需仔细考量并权衡投资风险及安全性。交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。"},
         "foot13": {"en": "col-xs-3", "zh": "col-xs-2"},
+        "foot14": {"en": "help document", "zh": "帮助文档"},
         "footlang": {"en": "English", "zh": "简体中文"},
         "footzh": {"en": "简体中文", "zh": "简体中文"},
 
