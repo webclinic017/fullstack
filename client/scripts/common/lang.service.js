@@ -9,6 +9,9 @@
     function lang (langData) {
 
         var lang = {
+            isCompany: function () {
+                return langData["company"];
+            },
             text: function(name){
                 var text;
                 text = langData[name][langData["language"]];
