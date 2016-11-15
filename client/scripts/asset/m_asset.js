@@ -70,10 +70,10 @@ $(document).ready(function () {
     
     // 获取当前汇率
     function getCurrentRate () {
-        $.get('/api/v1/get_parity').then(function (data) {
+        $.get('/action/public/v4/get_parity').then(function (data) {
             console.info(data);
             data = JSON.parse(data);
-            var rate = Number(data.outparity).toFixed(4);
+            var rate = Number(data.data.outparity).toFixed(4);
             $currentRate.html(rate);
         }, function (err) {
             console.info(err);

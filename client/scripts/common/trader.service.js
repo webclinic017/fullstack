@@ -146,7 +146,7 @@
          * @param usercode 复制的高手的 usercode
          */
         function getAvaCopyAmount(usercode) {
-            return $http.get('/api/v1/copy_available_balance', {
+            return $http.get('/action/public/v4/copy_avaiable_balance', {
                 params: {
                     from_code: usercode
                 }
@@ -161,7 +161,7 @@
          * @param {String} usercode 复制的高手的 usercode
          */
         function getCopyRelation(usercode) {
-            return $http.get('/api/v3/get_user_relationship', {
+            return $http.get('/action/public/v4/get_user_relationship', {
                 params: {
                     cros_user: usercode
                 }

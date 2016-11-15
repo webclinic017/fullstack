@@ -150,7 +150,7 @@
          * @method getFXRate
          */
         function getFXRate() {
-            return $http.get('/api/v1/get_parity');
+            return $http.get('/action/public/v4/get_parity');
         }
 
         /**
