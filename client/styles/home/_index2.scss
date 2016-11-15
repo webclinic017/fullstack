@@ -394,7 +394,7 @@
 
         }
         @include m(rate) {
-            font-size: 45px;
+            font-size: 36px;
         }
         @include m(how) {
             display: inline-block;
@@ -411,7 +411,7 @@
             font-size: 14px;
         }
         @include m(num) {
-            font-size: 36px;
+            font-size: 30px;
         }
         @include m(copy) {
             display: inline-block;
@@ -433,7 +433,7 @@
             }
         }
         .mg-tp-_14 {
-            margin-top: -14px;
+            margin-top: -8px;
         }
     }
 }
