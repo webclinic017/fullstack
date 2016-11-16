@@ -115,7 +115,7 @@
          * @param {Number} amount 复制金额
          */
         function copy(usercode, amount) {
-            return $http.post('/api/v1/copy', {
+            return $http.post('/action/public/v4/copy', {
                 user_code: usercode,
                 amount: amount
             });
@@ -131,7 +131,7 @@
          * @param {String} copyType 模拟复制或者真实复制
          */
         function cancelCopy(usercode, auto_delete) {
-            return $http.post('/api/v1/uncopy', {
+            return $http.post('/action/public/v4/uncopy', {
                 user_code: usercode,
                 auto_delete: auto_delete,
                 to: 'real'
@@ -146,7 +146,7 @@
          * @param usercode 复制的高手的 usercode
          */
         function getAvaCopyAmount(usercode) {
-            return $http.get('/action/public/v4/copy_avaiable_balance', {
+            return $http.get('/action/public/v4/copy_available_balance', {
                 params: {
                     from_code: usercode
                 }

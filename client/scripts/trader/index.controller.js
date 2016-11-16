@@ -100,7 +100,7 @@
                     trader.getAvaCopyAmount(usercode).then(function (data) {
                         // console.info(data);
                         if (data.is_succ) {
-                            avaCopyAmount = data.total_available;
+                            avaCopyAmount = data.data.total_available;
                         } else {
                             avaCopyAmount = 0;
                         }

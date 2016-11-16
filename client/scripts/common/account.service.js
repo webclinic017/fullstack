@@ -32,7 +32,6 @@
             getWorlds: getWorlds,
             getStates: getStates,
             getCities: getCities,
-            getTradeInfo: getTradeInfo,
             setBasicInfo: setBasicInfo,
             setPwd: setPwd,
             getSCaptcha: getSCaptcha,
@@ -396,19 +395,6 @@
             return $http.get('/action/public/v4/citycode_list', {
                 params: {
                     parent_code: stateCode
-                }
-            });
-        }
-
-        /**
-         * @name getTradeInfo
-         * @desc 获取交易特色、交易策略信息
-         * @param {String} usercode 高手的 usercode
-         */
-        function getTradeInfo(usercode) {
-            return $http.get('/api/v3/get_master_info', {
-                params: {
-                    cros_user: usercode
                 }
             });
         }
