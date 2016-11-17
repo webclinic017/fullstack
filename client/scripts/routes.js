@@ -34,6 +34,31 @@
                     }
                 })
 
+                .state('help', {
+                    views: {
+                        '@': {
+                            templateUrl: '/views/help/help.html',
+                            controller: ''
+                        }
+                    }
+                })
+
+                .state('help.subpage', {
+                    url: '/help/:subpage',
+                    replace:'false',
+                    views: {
+                        'content@help': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'introduce';
+                                return '/views/help/help_' + $stateParams.subpage + '.html';
+                            },
+                            controllerProvider: function () {
+                                return "HelpController";
+                            }
+                        }
+                    }
+                })
+
                 .state('space', {
                     views: {
                         '@': {

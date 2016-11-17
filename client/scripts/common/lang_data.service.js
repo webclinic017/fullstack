@@ -20,20 +20,24 @@
                 
                 if (value === 'tigerwit') {
                     companyConfig = {
+                        companyNickName: "tigerwit",
                         companyNameZh: "老虎外汇",
                         companyNameEn: "TigerWit",
                         telephone: "400 - 809 - 8509",
                         mt4Live: "TigerWit-Live",
                         companyCopyRules: "https://www.tigerwit.com/web/copy/rules",
+                        webSite:"www.tigerwit.com",
                     };
                 }
                 if (value === 'pkds') {
                     companyConfig = {
+                        companyNickName: "pkds",
                         companyNameZh: "派克道森",
                         companyNameEn: "Pakerdawson",
                         telephone: "400 - 900 - 9296",
                         mt4Live: "Parkerdawson-Live",
                         companyCopyRules: "http://www.pkdsfx.com/web/copy/rules",
+                        webSite:"www.pkdsfx.com",
                     };
                 }
             } 
@@ -46,8 +50,9 @@
             "companyNameZh": {"zh":companyConfig.companyNameZh, "en": companyConfig.companyNameZh},
             "telephone": {"zh": companyConfig.telephone, "en": companyConfig.telephone},
             "mt4Live": {"zh": companyConfig.mt4Live, "en": companyConfig.mt4Live},
+            "webSite": {"zh": companyConfig.webSite, "en": companyConfig.webSite},
 
-
+            "company": companyConfig.companyNickName,
             "language": language,
             // 公用 public
             "lijifuzhi":{"en": "Copy now", "zh": "立即复制"},

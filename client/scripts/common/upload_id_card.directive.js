@@ -28,11 +28,11 @@
 
                         img = element.find('.'+selector.img);
                         imgSrc = data.result.path;
-                        
+
                         if (img.length > 0) {
                             img.remove();
                         }
-                        element.prepend('<img class="' + selector.img + '" src="' + 
+                        element.prepend('<img class="' + selector.img + '" src="' +
                                 imgSrc + '?timestamp=' + e.timeStamp + '" alt="证件照片">');
 
                         scope.$emit('uploadIdCardSuccess', {
