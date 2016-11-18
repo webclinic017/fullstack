@@ -58,12 +58,12 @@ module.exports = {
             withdraw_history : "20%",    //历史最高回撤
             profit_rate_wish : "60%",  //预期年化收益率
             profit_rate_now : null, //实时年化收益率
-            end_date_appoint : "2016.11.18 18:00", //预约结束时间
-            start_date_trade : '2016.11.21 00:00',  //开始交易时间
-            end_date_trade : "2016.12.21 00:00",  //结束交易时间  exam : '2016.5.19'
+            end_date_appoint : "2016.11.25 18:00", //预约结束时间
+            start_date_trade : '2016.11.28 00:00',  //开始交易时间
+            end_date_trade : "2016.12.28 00:00",  //结束交易时间  exam : '2016.5.19'
             team_intro : "team_macd", //文件名，团队介绍模块
             jiafang:"MACD", //甲方，操盘手，出现在agree里
-            progress : 8, //投资进度 exam:50
+            progress : 22, //投资进度 exam:50
             desc_risk : "动用杠杆不超过10倍；亏损达到账户初始资金的10%时触发预警；亏损达到账户初始资金的15%时触发熔断，交易将会停止1-3天，然后再开始交易；账户的清盘线设置在亏损20%。", //风险控制
             desc_divide : "盈利金额的30%",//报酬分成
             note : "无" //备注
