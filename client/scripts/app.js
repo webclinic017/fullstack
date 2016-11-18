@@ -15,6 +15,9 @@
             //1，测试了IE并没有重现缓存ajax的情况
             //2,如果加no-cache,则不会有if-modify-since参数，则会导致每次都请求200数据，速度变慢
            // $httpProvider.defaults.headers.common['Cache-Control'] = 'no-cache';
+            
+            // 跨域请求资源携带cookie
+            $httpProvider.defaults.withCredentials = true;
 
             $httpProvider.interceptors.push(['$q', 'config', function ($q, config) {
                 return {
