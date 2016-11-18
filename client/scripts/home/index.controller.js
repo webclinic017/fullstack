@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('HomeIndexController', HomeIndexController);
 
-    HomeIndexController.$inject = ['$scope', 'product','ranklist', '$cookies'];
+    HomeIndexController.$inject = ['$scope', 'product','ranklist', '$cookies', '$location'];
 
-    function HomeIndexController($scope, product, ranklist, $cookies) {
+    function HomeIndexController($scope, product, ranklist, $cookies, $location) {
         var company = $cookies["company_name"];
 
         //if (company && company === 'tigerwit') {
@@ -21,6 +21,12 @@
         //        btn: '知道了'
         //    });
         //}
+        if (company && company === 'tigerwit') {
+            var pkdsSign = "label=Parkerdawson%20Co-operative%20Group%20Limited";
+            if (location.search.indexOf(pkdsSign) !== -1) {
+                window.location.href = "https://www.pkdsfx.com";
+            }
+        }
 
         $scope.indexMasters = [];// 首页 第二模块的高手
 
