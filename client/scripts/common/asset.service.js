@@ -73,7 +73,7 @@
          * @param {Number} code 出入金历史纪录的编号
          */
         function cancelWithdraw(code) {
-            return $http.post('/api/v1/cancel_withdraw', {
+            return $http.post('/action/public/v4/cancel_withdraw', {
                 order_no: code
             });
         }
