@@ -24,7 +24,9 @@
 <%- include('common/m_nav.html') %>
 <%if(pageInfo == 't32'){%>
     <%- include('bd/t32/m_t32.html')%>
-<% } else { %>
+<% } else if(pageInfo == 't32_t'){ %>
+    <%- include('bd/t32/m_t32_t.html')%>
+<%} else { %>
     <%- include('bd/t31/m_t31.html')%>
 <%}%>
 </body>
@@ -42,7 +44,7 @@
 <!-- 推广脚本footer -->
 <%- include('bd/common/footer.html') %>
 <!-- H5公共footer -->
-<%if(lang.isCompany("tigerwit") && pageInfo == 't31'){%>
+<%if(lang.isCompany("tigerwit") && pageInfo != 't32_t'){%>
     <%- include('common/m_footer.html') %>
 <%}%>
 </html>
