@@ -411,7 +411,7 @@ module.exports = function(app) {
             res.render('bd_t31', extendPublic({}, req));
         }
     });
-    app.route('/bd/t32').get(function(req, res){
+    app.route('/bd/t32_t').get(function(req, res){
         setCompanyCookie(res);
 
         // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
