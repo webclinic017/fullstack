@@ -62,8 +62,13 @@
 
                 var url;
                 if(data && data.data && data.data.url){
-                    //这里暂时写死，后面做白标需要写到配置里
-                    url = location.origin+data.data.url;
+                    // 兼容IE
+                    if (location.origin) {
+                        url = location.origin+data.data.url;
+                    } else {
+                        url = location.protocol + "//" + location.hostname + data.data.url;
+                    }
+                    
                     // url = 'https://www.tigerwit.com'+data.data.url;
                 }
                 if(url){
