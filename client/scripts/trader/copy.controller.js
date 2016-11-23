@@ -59,7 +59,7 @@
         // 获取可用复制金额
         function getAvaCopyAmount(usercode) {
             trader.getAvaCopyAmount(usercode).then(function (data) {
-                $scope.copyTrade.avaCopyAmount = data.total_available;
+                $scope.copyTrade.avaCopyAmount = data.data.total_available;
             });
         }
 

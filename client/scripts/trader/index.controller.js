@@ -86,7 +86,7 @@
                 if (newVal === true) {
                     trader.getCopyRelation(usercode).then(function (data) {
                         // 本人是否复制高手，值为 null（未复制）或者数字（复制金额）
-                        $scope.master.copied = data.copy_real;
+                        $scope.master.copied = data.data.copy_real;
                     });
                 }
             });
@@ -100,7 +100,7 @@
                     trader.getAvaCopyAmount(usercode).then(function (data) {
                         // console.info(data);
                         if (data.is_succ) {
-                            avaCopyAmount = data.total_available;
+                            avaCopyAmount = data.data.total_available;
                         } else {
                             avaCopyAmount = 0;
                         }
