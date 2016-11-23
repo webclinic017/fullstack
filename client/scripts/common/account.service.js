@@ -32,7 +32,6 @@
             getWorlds: getWorlds,
             getStates: getStates,
             getCities: getCities,
-            getTradeInfo: getTradeInfo,
             setBasicInfo: setBasicInfo,
             setPwd: setPwd,
             getSCaptcha: getSCaptcha,
@@ -83,36 +82,6 @@
         }
 
         function checkLogined() {
-            // return $http.get('/api/v1/check').then(function (data) {
-            //     if (data.is_succ) {
-            //         return true;
-            //     } else {
-            //         return false;
-            //     }
-            // });
-            // if(!deferred){
-            //     deferred = $q.defer();
-            // }
-            // if(!$cookies['user_code']){
-            //     deferred.resolve(false);
-            //     return deferred.promise;
-            // }
-            // if(hasChecked == true){
-            //     return deferred.promise;
-            // }
-            // hasChecked = true;
-            // $http.get('/api/v1/check').then(function (data) {
-            //     if (data.is_succ) {
-            //         deferred.resolve(true);
-            //     } else {
-            //         deferred.resolve(false);
-            //     }
-            // },function(){
-            //     deferred.resolve(false);
-
-            // });
-            // return deferred.promise;
-
 
             var deferred = $q.defer();
             if (!getCookie("user_code")) { //无cookie直接认为没登录
@@ -124,7 +93,7 @@
                     checkResolve(deferred);
                 } else {   //有cookie时，只发一次请求
                     service.hasChecked = true;
-                    $http.get('/api/v1/check').then(function (data) {
+                    $http.get('/action/public/v4/check').then(function (data) {
                         if (data.is_succ) {
                             resolveValue = true;
                             deferred.resolve(true);
@@ -184,7 +153,7 @@
          * }
          */
         function checkExist(number, username) {
-            return $http.get('/api/v1/exists', {
+            return $http.get('/action/public/v4/exists', {
                 params: {
                     key: number,
                     username: username
@@ -254,7 +223,7 @@
          * }
          */
         function checkPhoneAndCaptcha(phone, captcha) {
-            return $http.post('/api/v1/verifycode', {
+            return $http.post('/action/public/v4/verifycode', {
                 phone: phone,
                 verify_code: captcha
             });
@@ -265,7 +234,7 @@
          * @desc 通过手机号码和验证码来设置新密码，忘记密码功能的第二步
          */
         function setNewPwd(phone, captcha, newPwd) {
-            return $http.post('/api/v1/change_password', {
+            return $http.post('/action/public/v4/change_password', {
                 phone: phone,
                 code: captcha,
                 new_pwd: newPwd
@@ -407,15 +376,15 @@
          * }
          */
         function getLocation() {
-            return $http.get('/api/v1/basic_settings');
+            return $http.get('/action/public/v4/basic_settings');
         }
 
         function getWorlds() {
-            return $http.get('/api/v1/worldcode_list');
+            return $http.get('/action/public/v4/worldcode_list');
         }
 
         function getStates(countryCode) {
-            return $http.get('/api/v1/statecode_list', {
+            return $http.get('/action/public/v4/statecode_list', {
                 params: {
                     world_code: countryCode
                 }
@@ -423,22 +392,9 @@
         }
 
         function getCities(stateCode) {
-            return $http.get('/api/v1/citycode_list', {
+            return $http.get('/action/public/v4/citycode_list', {
                 params: {
                     parent_code: stateCode
-                }
-            });
-        }
-
-        /**
-         * @name getTradeInfo
-         * @desc 获取交易特色、交易策略信息
-         * @param {String} usercode 高手的 usercode
-         */
-        function getTradeInfo(usercode) {
-            return $http.get('/api/v3/get_master_info', {
-                params: {
-                    cros_user: usercode
                 }
             });
         }
@@ -464,8 +420,8 @@
          * @desc 设置密码
          */
         function setPwd(oldPwd, newPwd) {
-            return $http.post('/api/v1/change_password', {
-                password: oldPwd,
+            return $http.post('/action/public/v4/change_password', {
+                origin_pwd: oldPwd,
                 new_pwd: newPwd
             });
         }
