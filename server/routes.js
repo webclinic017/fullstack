@@ -89,10 +89,25 @@ module.exports = function(app) {
 
     app.route('/download').get(function(req, res) {
         if (isMobile(req)) {
-            res.render('m_download.html', extendPublic({}, req));
+            res.render('m_download.html', extendPublic({
+                regularTip:'收益同步',
+                download:'下载 APP',
+                coInfo:""
+            }, req));
         } else {
             setCompanyCookie(res);
             res.render('web_download.html', extendPublic({}, req));
+        }
+    });
+
+    /*市场部添加下载页*/
+    app.route('/download_t').get(function(req, res) {
+        if (COMPANY_NAME === 'tigerwit') {
+            res.render('m_download.html', extendPublic({
+                regularTip:'订单同步',
+                download:'下载APP 领$200体验金',
+                coInfo:"Tiger Financial Technology PTY. Ltd."
+            }, req));
         }
     });
 
