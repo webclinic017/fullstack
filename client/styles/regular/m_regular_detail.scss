@@ -21,6 +21,7 @@
         @include m(profit){
             font-size : px2rem(100);
             line-height: px2rem(62);
+            color: $brand-button-color;
         }
 	}
 
@@ -46,6 +47,7 @@
         }
         @include m(num) {
             font-size: px2rem(40);
+            color: $brand-button-color;
         }           
     }
 	
