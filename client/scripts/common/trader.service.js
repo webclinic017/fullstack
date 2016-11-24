@@ -4,9 +4,10 @@
 
     angular.module('fullstackApp').factory('trader', trader);
 
-    trader.$inject = ['$http'];
+    trader.$inject = ['$http', 'api'];
 
-    function trader($http) {
+    function trader($http, api) {
+        var o = api.trader;
         var service = {
             getMasterSummary: getMasterSummary,
             getMasterCurrent: getMasterCurrent,
@@ -34,7 +35,7 @@
          * @param {String} usercode
          */
         function getMasterSummary (usercode) {
-            return $http.get('/action/public/v4/get_master_data', {
+            return $http.get(o.getMasterSummaryApi, {
                 params: {
                     usercode: usercode
                 }
@@ -51,7 +52,7 @@
          * @param {Number} pagesize  每页显示数
          */
         function getMasterCurrent(usercode, page, pagesize,type) {
-            return $http.post('/action/public/v3/get_master_order_noauth', {
+            return $http.post(o.getMasterCurrentApi, {
                 cros_user: usercode,
                 page: page,
                 pagesize: pagesize,
@@ -69,7 +70,7 @@
          * @param {Number} pagesize     每页显示数
          */
         function getMasterHistory (usercode, page, pagesize,type) {
-            return $http.post('/action/public/v3/get_history_noauth', {
+            return $http.post(o.getMasterHistoryApi, {
                 cros_user: usercode,
                 page: page,
                 pagesize: pagesize,
@@ -86,7 +87,7 @@
          * @param {String} usercode 曲线所属用户的 user code
          */
         function getMasterProfitLine(usercode) {
-            return $http.get('/action/public/v4/get_master_line_chart', {
+            return $http.get(o.getMasterProfitLineApi, {
                 params: {
                     usercode: usercode
                 }
@@ -101,7 +102,7 @@
          * @param {String} usercode 曲线所属用户的 user code
          */
         function getMasterBarChart(usercode) {
-            return $http.post('/action/public/v3/get_master_symbol_count', {
+            return $http.post(o.getMasterBarChartApi, {
                 cros_user: usercode
             });
         }
@@ -115,7 +116,7 @@
          * @param {Number} amount 复制金额
          */
         function copy(usercode, amount) {
-            return $http.post('/action/public/v4/copy', {
+            return $http.post(o.copyApi, {
                 user_code: usercode,
                 amount: amount
             });
@@ -131,7 +132,7 @@
          * @param {String} copyType 模拟复制或者真实复制
          */
         function cancelCopy(usercode, auto_delete) {
-            return $http.post('/action/public/v4/uncopy', {
+            return $http.post(o.cancelCopyApi, {
                 user_code: usercode,
                 auto_delete: auto_delete,
                 to: 'real'
@@ -146,7 +147,7 @@
          * @param usercode 复制的高手的 usercode
          */
         function getAvaCopyAmount(usercode) {
-            return $http.get('/action/public/v4/copy_available_balance', {
+            return $http.get(o.getAvaCopyAmountApi, {
                 params: {
                     from_code: usercode
                 }
@@ -161,7 +162,7 @@
          * @param {String} usercode 复制的高手的 usercode
          */
         function getCopyRelation(usercode) {
-            return $http.get('/action/public/v4/get_user_relationship', {
+            return $http.get(o.getCopyRelationApi, {
                 params: {
                     cros_user: usercode
                 }
@@ -206,7 +207,7 @@
          * @returns {*}
          */
         function getHistoricalRate (user_code){
-            return $http.get('/action/public/v5/historical_rate', {
+            return $http.get(o.getHistoricalRateApi, {
                 params: {
                     user_code: user_code
                 }
@@ -219,7 +220,7 @@
          * @returns {*}
          */
         function getCoopierChange(user_code){
-            return $http.get('/action/public/v5/copy_change', {
+            return $http.get(o.getCoopierChangeApi, {
                 params: {
                     user_code: user_code
                 }
@@ -232,7 +233,7 @@
          * @returns {*}
          */
         function getMasterInfo(user_code){
-            return $http.get('/action/public/v5/get_master_info', {
+            return $http.get(o.getMasterInfoApi, {
                 params: {
                     user_code: user_code
                 }
@@ -250,7 +251,7 @@
          * @returns {*}
          */
         function getMonthlySymbols (user_code,date){
-            return $http.get('/action/public/v5/monthly_symbols', {
+            return $http.get(o.getMonthlySymbolsApi, {
                 params: {
                     user_code: user_code,
                     date:date

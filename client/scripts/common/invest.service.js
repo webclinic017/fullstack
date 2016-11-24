@@ -4,9 +4,10 @@
 
     angular.module('fullstackApp').factory('invest', invest);
 
-    invest.$inject = ['$http'];
+    invest.$inject = ['$http', 'api'];
 
-    function invest($http) {
+    function invest($http, api) {
+        var o = api.invest;
         var service = {
             getInvestSummary: getInvestSummary,
             getInvestProfitLine: getInvestProfitLine,
@@ -28,7 +29,7 @@
          * 
          */
         function getInvestSummary () {
-            return $http.get('/action/public/v4/get_user_data');
+            return $http.get(o.getInvestSummaryApi);
         }
 
         /**
@@ -39,7 +40,7 @@
          * 
          */
         function getInvestProfitLine() {        
-            return $http.get('/action/public/v4/get_user_line_chart');
+            return $http.get(o.getInvestProfitLineApi);
         }
 
         /**
@@ -51,7 +52,7 @@
          */
         function getInvestBarChart() {
             // return $http.get('/data/bar_chart.json');
-            return $http.get('/action/public/v4/get_user_symbol');
+            return $http.get(o.getInvestBarChartApi);
         }
 
         /*
@@ -61,7 +62,7 @@
          * @method getInvestCurrentData
          */
         function getInvestCurrentData() {
-            return $http.post('/action/public/v4/get_usercenter_my_order_auth_list', {
+            return $http.post(o.getInvestCurrentDataApi, {
                   page: 1,
                   pagesize: 1000
             });
@@ -74,7 +75,7 @@
          * @method getInvestCurrentTraders
          */
         function getInvestCurrentTraders() {
-            return $http.post('/action/public/v4/get_usercenter_order_auth_group');
+            return $http.post(o.getInvestCurrentTradersApi);
         }
 
         /*
@@ -84,7 +85,7 @@
          * @method getInvestCurrentDetails
          */
         function getInvestCurrentDetails(usercode) {
-            return $http.post('/action/public/v3/get_usercenter_order_auth_group_list', {
+            return $http.post(o.getInvestCurrentDetailsApi, {
                   user_code: usercode,
                   page: 1,
                   pagesize: 1000
@@ -100,7 +101,7 @@
          * @param {Number} pagesize 单页显示数
          */
         function getInvestHistoryData() {
-            return $http.post('/action/public/v3/get_usercenter_my_history_auth_list', {
+            return $http.post(o.getInvestHistoryDataApi, {
                 page: 1,
                 pagesize: 1000
             });
@@ -112,7 +113,7 @@
          * @method getCopiedTraders
          */
         function getInvestHistoryTraders() {
-            return $http.get('/action/public/v4/get_usercenter_history_auth_group');
+            return $http.get(o.getInvestHistoryTradersApi);
         }
 
         /*
@@ -121,7 +122,7 @@
          * @method getHistoryDetails
          */
         function getInvestHistoryDetails(usercode) {
-            return $http.post('/action/public/v3/get_usercenter_history_auth_group_list', {
+            return $http.post(o.getInvestHistoryDetailsApi, {
                 user_code: usercode,
                 page: 1,
                 pagesize: 1000

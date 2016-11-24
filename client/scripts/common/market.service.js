@@ -4,9 +4,10 @@
 
     angular.module('fullstackApp').factory('market', market);
 
-    market.$inject = ['$http'];
+    market.$inject = ['$http', 'api'];
 
-    function market ($http) {
+    function market ($http, api) {
+        var o = api.market;
         var service = {
             getVideoList: getVideoList,
             checkPhone: checkPhone
@@ -19,7 +20,7 @@
          *  method getVideoList   
          */
          function getVideoList () {
-            return $http.get('/data/video_list.json');
+            return $http.get(o.getVideoListApi);
          }
 
          /**
@@ -30,7 +31,7 @@
           * @param {Number} phone
           */
          function checkPhone (phone) {
-            return $.post('/action/public/v3/agent', {
+            return $.post(o.checkPhoneApi, {
                 phone: phone
             });
          }
