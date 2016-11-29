@@ -4,9 +4,10 @@
 
     angular.module('fullstackApp').factory('forex', forex);
 
-    forex.$inject = ['$http'];
+    forex.$inject = ['$http', 'api'];
 
-    function forex($http) {
+    function forex($http, api) {
+        var o = api.forex;
         var service = {
             getAsset: getAsset
         };
@@ -19,7 +20,7 @@
          * @method getAsset
          */
         function getAsset() {
-            return $http.post('/action/public/v3/get_usercenter_asset');
+            return $http.post(o.getAssetApi);
         }
        
     }

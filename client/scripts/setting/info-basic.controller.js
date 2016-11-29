@@ -140,22 +140,26 @@
         function initLocation() {
             account.getLocation().then(function (data) {
                 // console.info(data);
-                angular.extend($scope.basicInfo, {
-                    locationWorld: {
-                        key: data.world_name,
-                        value: data.world_code
-                    },
-                    locationState: {
-                        key: data.state_name,
-                        value: data.state_code
-                    },
-                    locationCity: {
-                        key: data.city_name,
-                        value: data.city_code
-                    }
-                });
+                if (data.is_succ) {
+                    data = data.data
+                    angular.extend($scope.basicInfo, {
+                        locationWorld: {
+                            key: data.world_name,
+                            value: data.world_code
+                        },
+                        locationState: {
+                            key: data.state_name,
+                            value: data.state_code
+                        },
+                        locationCity: {
+                            key: data.city_name,
+                            value: data.city_code
+                        }
+                    });
+                    
+                    $scope.$broadcast('locationInfoReady');
+                }
                 
-                $scope.$broadcast('locationInfoReady');
             });
 
             $scope.$on('locationInfoReady', function () {

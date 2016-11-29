@@ -51,7 +51,7 @@
         });
         // 汇率
         asset.getFXRate().then(function(data) {
-            $scope.withdraw.FXRate.value = data.outparity;
+            $scope.withdraw.FXRate.value = data.data.outparity;
 
         });
         

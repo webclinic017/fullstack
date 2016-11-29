@@ -4,9 +4,10 @@
 
     angular.module('fullstackApp').factory('product', product);
 
-    product.$inject = ['$http'];
+    product.$inject = ['$http', 'api'];
 
-    function product($http) {
+    function product($http, api) {
+        var o = api.product;
         var service = {
             getProductComment: getProductComment,
             getProductMarket: getProductMarket
@@ -21,7 +22,7 @@
          */
         function getProductComment() {
 
-            return $http.post('/blog/api/get_category_posts?id=86');
+            return $http.post(o.getProductCommentApi);
 
         }
 
@@ -32,7 +33,7 @@
          */
         function getProductMarket() {
 
-            return $http.post('/blog/api/get_category_posts?id=90');
+            return $http.post(o.getProductMarketApi);
 
         }
 

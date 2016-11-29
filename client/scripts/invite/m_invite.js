@@ -30,7 +30,7 @@
         if (($("#telephone").val().trim() != "") && !($("#telephone").hasClass("warning"))) {
             $.ajax({
                 type: "get",
-                url: "/api/v1/exists",
+                url: "/action/public/v4/exists",
                 data: {
                     key: $("#telephone").val(),
                     username: null
