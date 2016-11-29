@@ -105,7 +105,7 @@ module.exports = function(app) {
         if (COMPANY_NAME === 'tigerwit') {
             res.render('m_download.html', extendPublic({
                 regularTip:'订单同步',
-                download:'下载APP 领$200体验金',
+                download:'打开APP 领$200体验金',
                 coInfo:"Tiger Financial Technology PTY. Ltd."
             }, req));
         }
