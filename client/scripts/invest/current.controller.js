@@ -131,7 +131,7 @@
         // function getAvaCopyAmount() {
         //     trader.getAvaCopyAmount().then(function (data) {
         //         // 本人可用复制金额
-        //         avaCopyAmount = data.total_available;
+        //         avaCopyAmount = data.data.total_available;
         //     });
         // }
 

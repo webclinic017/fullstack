@@ -4,9 +4,10 @@
 
     angular.module('fullstackApp').factory('account', account);
 
-    account.$inject = ['$http', '$rootScope', '$q', '$cookies', 'whiteLabel'];
+    account.$inject = ['$http', '$rootScope', '$q', '$cookies', 'whiteLabel', 'api'];
 
-    function account($http, $rootScope, $q, $cookies, whiteLabel) {
+    function account($http, $rootScope, $q, $cookies, whiteLabel, api) {
+        var o = api.account;
         var service = {
             encrypt: encrypt,
             login: login,
@@ -32,7 +33,6 @@
             getWorlds: getWorlds,
             getStates: getStates,
             getCities: getCities,
-            getTradeInfo: getTradeInfo,
             setBasicInfo: setBasicInfo,
             setPwd: setPwd,
             getSCaptcha: getSCaptcha,
@@ -75,7 +75,7 @@
                 expires = 0;
             }
 
-            return $http.post('/action/public/v3/login', {
+            return $http.post(o.loginApi, {
                 account: id,
                 password: password,
                 expires: expires
@@ -83,36 +83,6 @@
         }
 
         function checkLogined() {
-            // return $http.get('/api/v1/check').then(function (data) {
-            //     if (data.is_succ) {
-            //         return true;
-            //     } else {
-            //         return false;
-            //     }
-            // });
-            // if(!deferred){
-            //     deferred = $q.defer();
-            // }
-            // if(!$cookies['user_code']){
-            //     deferred.resolve(false);
-            //     return deferred.promise;
-            // }
-            // if(hasChecked == true){
-            //     return deferred.promise;
-            // }
-            // hasChecked = true;
-            // $http.get('/api/v1/check').then(function (data) {
-            //     if (data.is_succ) {
-            //         deferred.resolve(true);
-            //     } else {
-            //         deferred.resolve(false);
-            //     }
-            // },function(){
-            //     deferred.resolve(false);
-
-            // });
-            // return deferred.promise;
-
 
             var deferred = $q.defer();
             if (!getCookie("user_code")) { //无cookie直接认为没登录
@@ -124,7 +94,7 @@
                     checkResolve(deferred);
                 } else {   //有cookie时，只发一次请求
                     service.hasChecked = true;
-                    $http.get('/api/v1/check').then(function (data) {
+                    $http.get(o.checkLoginedApi).then(function (data) {
                         if (data.is_succ) {
                             resolveValue = true;
                             deferred.resolve(true);
@@ -170,7 +140,7 @@
          * @desc 进入注册页面设置 token 在获取手机验证码时回传
          */
         function setToken() {
-            return $http.post('/action/public/v3/set_token');
+            return $http.post(o.setTokenApi);
         }
 
         /**
@@ -184,7 +154,7 @@
          * }
          */
         function checkExist(number, username) {
-            return $http.get('/api/v1/exists', {
+            return $http.get(o.checkExistApi, {
                 params: {
                     key: number,
                     username: username
@@ -197,7 +167,7 @@
          * @desc 获取验证码（注册功能）
          */
         function getRCaptcha(phone, token) {
-            return $http.post('/action/public/v3/get_phone_reg_code', {
+            return $http.post(o.getRCaptchaApi, {
                 phone: phone,
                 token: token
             });
@@ -208,7 +178,7 @@
          * @desc 获取语音验证码（注册功能）
          */
         function getRVoiceCaptcha(phone) {
-            return $http.post('/action/public/v3/get_tigerwit_phone_sound_code', {
+            return $http.post(o.getRVoiceCaptchaApi, {
                 phone: phone
             });
         }
@@ -219,7 +189,7 @@
          */
         function register(username, phone, captcha, email, password, lp, pid, unit, key) {
 
-            return $http.post('/action/public/v3/register', {
+            return $http.post(o.registerApi, {
                 username: username,
                 phone: phone,
                 verify_code: captcha,
@@ -240,7 +210,7 @@
          * }
          */
         function getCaptcha(phone) {
-            return $http.post('/action/public/v3/get_phone_code', {
+            return $http.post(o.getCaptchaApi, {
                 phone: phone,
                 type: "pwd"      // 找回密码
             });
@@ -254,7 +224,7 @@
          * }
          */
         function checkPhoneAndCaptcha(phone, captcha) {
-            return $http.post('/api/v1/verifycode', {
+            return $http.post(o.checkPhoneAndCaptchaApi, {
                 phone: phone,
                 verify_code: captcha
             });
@@ -265,7 +235,7 @@
          * @desc 通过手机号码和验证码来设置新密码，忘记密码功能的第二步
          */
         function setNewPwd(phone, captcha, newPwd) {
-            return $http.post('/api/v1/change_password', {
+            return $http.post(o.setNewPwdApi, {
                 phone: phone,
                 code: captcha,
                 new_pwd: newPwd
@@ -273,7 +243,7 @@
         }
 
         function getPersonalInfo() {
-            return $http.get('/action/public/v4/get_info').then(function (data) {
+            return $http.get(o.getPersonalInfoApi).then(function (data) {
                 var personal = {};
 
                 angular.forEach(data.data, function (value, key) {
@@ -296,8 +266,7 @@
          * @method getPersonalInfoDegree
          */
         function getPersonalInfoDegree() {
-            // console.info($rootScope.phpUrlOrigin);
-            return $http.get($rootScope.phpUrlOrigin + '/action/public/v4/user_perfect_degree');
+            return $http.get(o.getPersonalInfoDegreeApi);
         }
 
         /**
@@ -307,7 +276,7 @@
          * @method getAssetInfo
          */
         function getAssetInfo() {
-            return $http.post('/action/public/v4/get_usercenter_asset');
+            return $http.post(o.getAssetInfoApi);
         }
 
         /**
@@ -317,7 +286,7 @@
          *
          */
         function getUnreadLength() {
-            return $http.get('/action/public/v3/get_notify_num');
+            return $http.get(o.getUnreadLengthApi);
         }
 
         /*
@@ -327,7 +296,7 @@
          *
          */
         function getNoticeCategory() {
-            return $http.get('/action/public/v3/get_notify_cate');
+            return $http.get(o.getNoticeCategoryApi);
         }
 
         /*
@@ -337,7 +306,7 @@
          *
          */
         function getNoticeList(page, pagesize) {
-            return $http.get('/action/public/v3/get_notify_list', {
+            return $http.get(o.getNoticeListApi, {
                 params: {
                     page: page,
                     pagesize: pagesize
@@ -352,7 +321,7 @@
          *
          */
         function getOneRead(id) {
-            return $http.get('/action/public/v3/notify_mark_read', {
+            return $http.get(o.getOneReadApi, {
                 params: {
                     id: id     // 此id为获取消息通知列表中的id
                 }
@@ -366,7 +335,7 @@
          *
          */
         function getAllRead() {
-            return $http.get('/action/public/v3/notify_mark_all_read');
+            return $http.get(o.getAllReadApi);
         }
 
         /**
@@ -374,7 +343,7 @@
          * @desc setting 获取手机号码、邮箱等加密信息
          */
         function getSettingInfo() {
-            return $http.get('/action/public/v4/get_info', {
+            return $http.get(o.getSettingInfoApi, {
                 params: {
                     type: 'Profile'
                 }
@@ -407,15 +376,15 @@
          * }
          */
         function getLocation() {
-            return $http.get('/api/v1/basic_settings');
+            return $http.get(o.getLocationApi);
         }
 
         function getWorlds() {
-            return $http.get('/api/v1/worldcode_list');
+            return $http.get(o.getWorldsApi);
         }
 
         function getStates(countryCode) {
-            return $http.get('/api/v1/statecode_list', {
+            return $http.get(o.getStatesApi, {
                 params: {
                     world_code: countryCode
                 }
@@ -423,22 +392,9 @@
         }
 
         function getCities(stateCode) {
-            return $http.get('/api/v1/citycode_list', {
+            return $http.get(o.getCitiesApi, {
                 params: {
                     parent_code: stateCode
-                }
-            });
-        }
-
-        /**
-         * @name getTradeInfo
-         * @desc 获取交易特色、交易策略信息
-         * @param {String} usercode 高手的 usercode
-         */
-        function getTradeInfo(usercode) {
-            return $http.get('/api/v3/get_master_info', {
-                params: {
-                    cros_user: usercode
                 }
             });
         }
@@ -448,7 +404,7 @@
          * @desc setting 模块设置基本信息
          */
         function setBasicInfo(username, world, state, city, special, strategy, desc) {
-            return $http.post('/action/public/v4/update_user_info', {
+            return $http.post(o.setBasicInfoApi, {
                 username: username,
                 world_code: world,
                 state_code: state,
@@ -464,8 +420,8 @@
          * @desc 设置密码
          */
         function setPwd(oldPwd, newPwd) {
-            return $http.post('/api/v1/change_password', {
-                password: oldPwd,
+            return $http.post(o.setPwdApi, {
+                origin_pwd: oldPwd,
                 new_pwd: newPwd
             });
         }
@@ -475,7 +431,7 @@
          * @desc 获取验证码（setting 功能模块）
          */
         function getSCaptcha(phone) {
-            return $http.post('/action/public/v3/get_phone_code', {
+            return $http.post(o.getSCaptchaApi, {
                 phone: phone
             });
         }
@@ -485,7 +441,7 @@
          * @desc 获取语音验证码（setting 功能模块）
          */
         function getSVoiceCaptcha(phone, type) {
-            return $http.post('/action/public/v3/get_phone_sound_code', {
+            return $http.post(o.getSVoiceCaptchaApi, {
                 phone: phone,
                 type: type
             });
@@ -496,7 +452,7 @@
          * @desc setting 修改手机号码
          */
         function setPhone(phone, captcha) {
-            return $http.post('/action/public/v3/set_my_bind_phone', {
+            return $http.post(o.setPhoneApi, {
                 phone: phone,
                 phone_code: captcha
             });
@@ -508,7 +464,7 @@
          * @method logout
          */
         function logout() {
-            return $http.get('/action/public/v3/logout');
+            return $http.get(o.logoutApi);
         }
 
         /*
@@ -516,7 +472,7 @@
          * @desc 实名认证
          */
         function verify(realname) {
-            return $http.post('/action/public/v4/set_info', {
+            return $http.post(o.verifyApi, {
                 real_name: realname
             });
         }
@@ -526,7 +482,7 @@
          * @desc 获取实名认证状态
          */
         function getVerifyStatus() {
-            return $http.get('/action/public/v4/get_info', {
+            return $http.get(o.getVerifyStatusApi, {
                 params: {
                     type: 'Profile'
                 }
@@ -545,7 +501,7 @@
          * @desc 获取KYC认证列表
          */
         function getKyc() {
-            return $http.get('/action/public/v4/get_kyc_info');
+            return $http.get(o.getKycApi);
         }
 
         /**
@@ -553,7 +509,7 @@
          * @desc 获取KYC认证列表
          */
         function getUserKyc() {
-            return $http.get('/action/public/v4/get_user_kyc_info');
+            return $http.get(o.getUserKycApi);
         }
 
         /**
@@ -561,7 +517,7 @@
          * @desc 设置KYC认证列表
          */
         function setKyc(json) {
-            return $http.post('/action/public/v4/save_kyc_info', json);
+            return $http.post(o.setKycApi, json);
         }
 
         /**
@@ -571,7 +527,7 @@
          * @method checkMaster
          */
         function checkMaster() {
-            return $http.post('/action/public/v3/check_master');
+            return $http.post(o.checkMasterApi);
         }
 
         /**
@@ -587,7 +543,7 @@
          * @param {file} history_file 上传文件  单独调接口
          */
         function applyBecomeMaster(trade_exp, trade_model, min_copy_asset, trade_desc, history_file) {
-            return $http.post('/action/public/v3/apply_to_master', {
+            return $http.post(o.applyBecomeMasterApi, {
                 trade_exp: trade_exp,
                 trade_model: trade_model,
                 min_copy_asset: min_copy_asset,

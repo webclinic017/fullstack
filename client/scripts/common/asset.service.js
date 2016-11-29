@@ -4,9 +4,10 @@
 
     angular.module('fullstackApp').factory('asset', asset);
 
-    asset.$inject = ['$http'];
+    asset.$inject = ['$http', 'api'];
 
-    function asset($http) {
+    function asset($http, api) {
+        var o = api.asset;
         var service = {
             withdraw: withdraw,
             getCard: getCard,
@@ -35,7 +36,7 @@
         function withdraw(amount, cardId) {
             amount = Number(amount).toFixed(2);
 
-            return $http.post('/action/public/v4/withdraw', {
+            return $http.post(o.withdrawApi, {
                 amount: amount,
                 id: cardId
             });
@@ -48,7 +49,7 @@
          * @method getCard
          */
         function getCard() {
-            return $http.get('/action/public/v4/query_bankcard');
+            return $http.get(o.getCardApi);
         }
 
         /**
@@ -57,7 +58,7 @@
          * @method bindCard
          */
         function bindCard(number, name, address, id) {
-            return $http.post('/action/public/v4/binding_bankcard', {
+            return $http.post(o.bindCardApi, {
                 card_no: number,
                 bank_name: name,
                 bank_addr: address,
@@ -73,7 +74,7 @@
          * @param {Number} code 出入金历史纪录的编号
          */
         function cancelWithdraw(code) {
-            return $http.post('/api/v1/cancel_withdraw', {
+            return $http.post(o.cancelWithdrawApi, {
                 order_no: code
             });
         }
@@ -92,7 +93,7 @@
          * }
          */
         function getHistory(page, pagesize) {
-            return $http.get('/action/public/v4/pay_history', {
+            return $http.get(o.getHistoryApi, {
                 params: {
                     page: page,
                     pagesize: pagesize
@@ -127,7 +128,7 @@
          * @method deposit
          */
         function deposit(mt4_id, amount) {
-            return $http.get('/action/public/v4/pay', {
+            return $http.get(o.depositApi, {
                 params: {
                     mt4_id: mt4_id,
                     amount: amount
@@ -141,7 +142,7 @@
          * @method getDepositLimit
          */
         function getDepositLimit() {
-            return $http.get('/action/public/v4/pay_limit');
+            return $http.get(o.getDepositLimitApi);
         }
 
         /**
@@ -150,7 +151,7 @@
          * @method getFXRate
          */
         function getFXRate() {
-            return $http.get('/api/v1/get_parity');
+            return $http.get(o.getFXRateApi);
         }
 
         /**
@@ -162,7 +163,7 @@
 
         function getIsWithdraw (amount) {
             console.info('getIsWithdraw is sending', amount);
-            return $http.get("/action/public/v4/check_withdraw",{
+            return $http.get(o.getIsWithdrawApi,{
               params : {
                          amount : amount
                        }
@@ -175,7 +176,7 @@
          * @method getMasterBonusSummary
          */
         function getMasterBonusSummary() {
-            return $http.get('/action/public/v4/master/profile');
+            return $http.get(o.getMasterBonusSummaryApi);
         }
 
         /**
@@ -184,7 +185,7 @@
          * @method getCopierBonusSummary
          */
         function getCopierBonusSummary() {
-            return $http.get('/action/public/v4/copier/profile');
+            return $http.get(o.getCopierBonusSummaryApi);
         }
 
         /**
@@ -193,7 +194,7 @@
          * @method getMasterBonusList
          */
         function getMasterBonusList(pay_zone) {
-            return $http.get('/action/public/v4/master/copy_pay_list', {
+            return $http.get(o.getMasterBonusListApi, {
                 params: {
                     pay_zone: pay_zone
                 }
@@ -206,7 +207,7 @@
          * @method getCopierBonusList
          */
         function getCopierBonusList(pay_zone) {
-            return $http.get('/action/public/v4/copier/copy_pay_list', {
+            return $http.get(o.getCopierBonusListApi, {
                 params: {
                     pay_zone: pay_zone
                 }
@@ -224,7 +225,7 @@
          *
          */
         function getBonusDetailList(ticket_noob, mt4_from, mt4_to) {
-            return $http.get('/action/public/v4/copy_pay_trade_list', {
+            return $http.get(o.getBonusDetailListApi, {
                 params: {
                     ticket_noob: ticket_noob,
                     mt4_from: mt4_from,

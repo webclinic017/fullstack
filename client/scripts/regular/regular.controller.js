@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('RegularController', RegularController);
 
-    RegularController.$inject = ['$scope', '$location', 'ranklist','$http', '$interval'];
+    RegularController.$inject = ['$scope', '$location', 'ranklist', 'account', '$http', '$interval'];
 
-    function RegularController($scope, $location, ranklist, $http, $interval) {
+    function RegularController($scope, $location, ranklist, account, $http, $interval) {
 
         //登录
         $scope.frontErr = {
@@ -110,13 +110,10 @@
         }
         //更新用户名  
         //@TODO  需要根据cookie和登录状态判断是否发请求
-        $http.get('/action/public/v4/get_info?type=Profile').then(function(result){
+        account.getSettingInfo().then(function(result){
             // console.info(result);
-            if (result.is_succ) {
-                result = result.data;
-                $scope.name = result.realname;
-                $scope.tel = result.phone;
-            }
+            $scope.name = result.realname;
+            $scope.tel = result.phone;
         });
     }
 })();

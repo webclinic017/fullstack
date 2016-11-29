@@ -41,6 +41,29 @@ module.exports = {
 
     products : [
         {
+            id : "4",
+            name : "【派克道森201611-28-V4】",    //产品标题
+            money_copy : "$3000-$20000",   //复制金额   exam:'$10000'
+            money_copy_low : 3000,          // money_copy 的最低复制金
+            money_copy_high : 20000,          // money_copy 的最高复制金
+            money_copy_max : "$50万", //最高复制金额 exam : '$4000'
+            period : "5个交易日",      //复制封闭期
+            withdraw_history : "30%",    //历史最高回撤
+            profit_rate_wish : "80%",  //预期年化收益率
+            profit_rate_now : "", //实时年化收益率
+            start_date_appoint: "2016.11.26 20:00", //预约开始时间 exam:'2016.5.17'
+            end_date_appoint : "2016.11.27 20:00",  //预约结束时间 exam:'2016.5.17'
+            start_date_trade : "2016.11.28 00:00",  //开始交易时间 exam:'2016.5.17'
+            progress : "93", //投资进度 exam:50
+            jiafang:"派克道森", //甲方，操盘手，出现在agree里
+            team_intro : "team_pkds", //文件名，团队介绍模块
+            desc_risk : "动用杠杆不超过100倍，亏损达到账户初始资金的50%时，停止交易.", //风险控制
+            desc_divide : "盈利金额的30%",//报酬分成
+            note : "交易员主要交易货币英镑兑美元（GBPUSD）", //备注            
+            //Optional
+            end_date_trade : "2016.12.03 00:00"  //结束交易时间  exam : '2016.5.19'
+        },
+        {
             id : "3",
             name : "【派克道森201611-21-V3】",    //产品标题
             money_copy : "$3000-$10000",   //复制金额   exam:'$10000'
