@@ -143,6 +143,7 @@
 
 
 <!-- 友盟统计 2016.09.21 -->
+<%if(lang.isCompany("tigerwit")){%>
 <div style="display:none">
     <script type="text/javascript">
         var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
@@ -150,6 +151,17 @@
     </script>
 
 </div>
+<%}%>
+<!-- 友盟统计 pkds 2016.11.25 -->
+<%if(lang.isCompany("pkds")){%>
+<div style="display:none">
+    <script type="text/javascript">
+        var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cspan id='cnzz_stat_icon_1260871639'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/stat.php%3Fid%3D1260871639' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+</div>
+<%}%>
+
 <script>
     var _hmt = _hmt || [];
     (function () {
