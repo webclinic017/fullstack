@@ -34,6 +34,7 @@ if (company_name === 'tigerwit') {
         webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
 
         icoPath: indexBasePath + "/tigerwit.ico",
+        t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
     };
     
 }
@@ -67,6 +68,8 @@ if (company_name === 'pkds') {
         webAgentBecome: indexBasePath + "/become-banner-pkds.jpg",
 
         icoPath: indexBasePath + "/pkds.ico",
+        t33_logo: indexBasePath + "/pkds-logo.png"
+
     };
     
 }
@@ -118,6 +121,10 @@ module.exports = function () {
             h5RegisterLogo:{
                 "en": companyConfig.h5_register_logo,
                 "zh": companyConfig.h5_register_logo
+            },
+            t33_logo:{
+                "en": companyConfig.t33_logo,
+                "zh": companyConfig.t33_logo
             }
         },
 

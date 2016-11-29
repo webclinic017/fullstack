@@ -19,9 +19,20 @@
 <!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
 <% include common/m_css_vendor.html %>
 <% include common/common_header.html %>
-<body>
+<!-- build:js(client) /scripts/m_vendor.js -->
+<script src="/bower_components/jquery-3.0.0.min/index.js"></script>
+<script src="/scripts/plugins/base64code.js"></script>
+<script src="/scripts/plugins/jquery.tap.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<!-- endbuild -->
+<body class="m_download">
 <!-- 引入H5导航条 -->
 <div class="m_download_layout">
+    <!--<div class="m_download_layout__loading_mask">-->
+        <!--<div class="m_download_layout__loading_mask">-->
+            <!--<div class="loading_percentage"></div>-->
+        <!--</div>-->
+    <!--</div>-->
     <div class="full_page" id="dowebok">
 
         <div class="section section1">
@@ -79,12 +90,7 @@
     </div>
 </div>
 </body>
-<!-- build:js(client) /scripts/m_vendor.js -->
-<script src="/bower_components/jquery-3.0.0.min/index.js"></script>
-<script src="/scripts/plugins/base64code.js"></script>
-<script src="/scripts/plugins/jquery.tap.js"></script>
-<script src="/scripts/plugins/plugins.js"></script>
-<!-- endbuild -->
+
 <!-- build:js(client) /scripts/m_download.js -->
 <script src="/scripts/product/m_download.js"></script>
 <!-- endbuild -->
