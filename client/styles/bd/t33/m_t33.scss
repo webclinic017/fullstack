@@ -39,9 +39,10 @@
         p {
             font-size: px2rem(35);
             line-height: px2rem(90);
+            font-weight: 600;
             .text-shadow {
                 font-size: px2rem(55);
-                text-shadow: px2rem(-10) px2rem(10) 1px rgba(0, 0, 0, 0.4);
+                text-shadow: px2rem(-8) px2rem(8) 2px rgba(0, 0, 0, 0.4);
                 color: #f7c660;
             }
         }
@@ -124,7 +125,7 @@
             position: relative;
         }
         .section1 {
-            background: url("/images/bd/section1_bg.jpg") no-repeat;
+            background: url("/images/bd/section1_bg.png") no-repeat;
             background-position: center center;
             background-size: 100% 100%;
             position: relative;
@@ -188,7 +189,7 @@
             }
         }
         .section2 {
-            background: url("/images/bd/section_bg.jpg") no-repeat;
+            background: url("/images/bd/section_bg.png") no-repeat;
             background-position: center center;
             background-size: 100% 100%;
             color: #d31b13;
@@ -255,7 +256,7 @@
         }
         .section3 {
             background-color: #121212;
-            background: url("/images/bd/section_bg.jpg") no-repeat;
+            background: url("/images/bd/section_bg.png") no-repeat;
             background-position: center center;
             background-size: 100% 100%;
             .fresh_tips {
@@ -278,6 +279,7 @@
                     background-position: center top;
                     padding: 0 px2rem(75);
                     background-size: 100% 100%;
+                    background-color: #d31b12;
                     text-align: left;
                     margin-top: px2rem(30);
                     position: absolute;
@@ -309,7 +311,7 @@
             }
         }
         .section4 {
-            background: url("/images/bd/section4_bg.jpg") no-repeat;
+            background: url("/images/bd/section4_bg.png") no-repeat;
             background-position: center center;
             background-size: cover;
             .t33_logo {

@@ -32,7 +32,7 @@
             easing: 'easeOutBack',
             afterRender: function() {
                 layer.closeAll();
-                $(".m_t33_layout").fadeIn();
+                $(".m_t33_layout").fadeIn(50);
 
                 /*页面按钮事件*/
                 ;
@@ -47,10 +47,12 @@
                                 style: 'border:2px solid #e2aa6e; background-color:#d31b13; color:#fff;'
                             });
                             $(which).show().siblings().hide().siblings(".close_layer").show();
+                            $.fn.fullpage.setAllowScrolling(false)
                         }
 
                         if (action == "close") {
                             layer.closeAll();
+                            $.fn.fullpage.setAllowScrolling(true)
                         }
                         if (action == "matters") {
                             openLay(".matters_con")
@@ -76,10 +78,10 @@
                     $('.section2 h2 .five').addClass('active');
                     $('.section2 .five_ways .ways').addClass('active');
                     $('.section2 .five_ways .ways_1 .description').delay(500).fadeIn(500);
-                    $('.section2 .five_ways .ways_2 .description').delay(600).fadeIn(500);
-                    $('.section2 .five_ways .ways_3 .description').delay(700).fadeIn(500);
-                    $('.section2 .five_ways .ways_4 .description').delay(800).fadeIn(500);
-                    $('.section2 .five_ways .ways_5 .description').delay(900).fadeIn(500);
+                    $('.section2 .five_ways .ways_2 .description').delay(700).fadeIn(500);
+                    $('.section2 .five_ways .ways_3 .description').delay(900).fadeIn(500);
+                    $('.section2 .five_ways .ways_4 .description').delay(1100).fadeIn(500);
+                    $('.section2 .five_ways .ways_5 .description').delay(1300).fadeIn(500);
                 }
                 if (index == 3) {
                     $(".fresh_tip").each(function(index, item) {
