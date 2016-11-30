@@ -4,9 +4,10 @@
 
     angular.module('fullstackApp').factory('invite', invite);
 
-    invite.$inject = ['$http'];
+    invite.$inject = ['$http', 'api'];
 
-    function invite($http) {
+    function invite($http, api) {
+        var o = api.invite;
         var service = {
             getInviteFriendsInfo: getInviteFriendsInfo,
             setInviteFriendsLink: setInviteFriendsLink
@@ -22,7 +23,7 @@
          * @param {Number} pagesize 单页显示数
          */
         function getInviteFriendsInfo (page, pagesize) {
-            return $http.get('/action/public/v3/get_invite_friends_info', {
+            return $http.get(o.getInviteFriendsInfoApi, {
                 params: {
                     page: page,
                     pagesize: pagesize
@@ -34,7 +35,7 @@
          *  邀请好友链接请求接口
          */
         function setInviteFriendsLink (usercode) {
-            return $http.post('/action/public/v3/set_invite_code', {
+            return $http.post(o.setInviteFriendsLinkApi, {
                 usercode: usercode
             });
         }

@@ -4,9 +4,10 @@
 
     angular.module('fullstackApp').factory('ranklist', ranklist);
 
-    ranklist.$inject = ['$http'];
+    ranklist.$inject = ['$http', 'api'];
 
-    function ranklist($http) {
+    function ranklist($http, api) {
+        var o = api.ranklist;
         var service = {
             getMastersList: getMastersList,
             getCopiersList: getCopiersList,
@@ -23,7 +24,7 @@
          */
         function getMastersList(order, page, pagesize) {
             // return $http.get('/data/masters.json', {
-            return $http.get('/action/public/v5/get_master_list', {
+            return $http.get(o.getMastersListApi, {
                 params: {
                     order: order,
                     page : page,
@@ -40,7 +41,7 @@
          * 
          */
         function getCopiersList (type) {
-            return $http.get('/data/copiers.json');
+            return $http.get(o.getCopiersListApi);
         }
 
         /**
@@ -51,7 +52,7 @@
          * 
          */
         function getOrderInfo(phone, title, username, amount) {
-            return $http.post('/action/public/v3/closed_fund_leads', {
+            return $http.post(o.getOrderInfoApi, {
                 phone: phone,
                 title: title,
                 username: username,

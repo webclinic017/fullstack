@@ -1,9 +1,19 @@
+<%if(lang.isCompany("tigerwit")){%>
 <script>
     //声明_czc对象:
     var _czc = _czc || [];
     //绑定siteid
     _czc.push(["_setAccount", "1260394016"]);
 </script>
+<%}%>
+<%if(lang.isCompany("pkds")){%>
+<script>
+    //声明_czc对象:
+    var _czc = _czc || [];
+    //绑定siteid
+    _czc.push(["_setAccount", "1260871639"]);
+</script>
+<%}%>
 
 <%if(lang.isCompany("tigerwit")){%>
 <script>
@@ -11,7 +21,7 @@
       var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
       w['sensorsDataAnalytic201505'] = n;
       w[n] = w[n] || function(a) {return function() {(w[n]._q = w[n]._q || []).push([a, arguments]);}};
-      var ifs = ['track','quick','register','registerPage','registerOnce','registerSession','registerSessionOnce','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify'];
+      var ifs = ['track','quick','register','registerPage','registerOnce','registerSession','registerSessionOnce','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify','login','logout'];
       for (var i = 0; i < ifs.length; i++) {
         w[n][ifs[i]] = w[n].call(null, ifs[i]);
       }
@@ -20,13 +30,12 @@
         x.async = 1;
         x.src = p;
         y.parentNode.insertBefore(x, y);
-        w[n]._t = 1 * new Date();
         w[n].para = para;
       }
     })({
       sdk_url: '/plugins/sa-sdk-javascript-master/sensorsdata.min.js',
       name: 'sa',
-      server_url:'http://tigerwit.cloud.sensorsdata.cn:8006/sa?token=900b8082c4583a40'
+      server_url: 'http://tigerwit.cloud.sensorsdata.cn:8006/sa?token=9a71c145254dcdb4&project=production'
     });
     var user_id = undefined;
     var cookiesArr = document.cookie.split('; ');

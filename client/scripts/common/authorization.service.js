@@ -11,7 +11,6 @@
     function principal($q, $http, $timeout,account) {
         var _identify = undefined;
         var _authenticated = false;
-        var _apiCheckLogin = '/api/v1/check';
 
         return {
             isIdentityResolved: function () {
@@ -55,7 +54,6 @@
                     _identify = undefined;
                 }
 
-                // $http.get(_apiCheckLogin).then(function (data) {
                 account.checkLogined().then(function(data){
                     if (data) {
                         //_authenticated = true;

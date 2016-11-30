@@ -1,5 +1,4 @@
-;
-(function() {
+;(function () {
     /*生成token*/
     var token = null;
 
@@ -7,7 +6,7 @@
         $.ajax({
             type: "post",
             url: '/action/public/v3/set_token',
-            success: function() {
+            success: function () {
                 token = $.cookie("tiger_token");
             }
         });
@@ -16,11 +15,11 @@
     set_token();
 
     /*token 5分钟过期*/
-    setInterval(function() {
+    setInterval(function () {
         set_token();
     }, 30000);
 
-    $(function() {
+    $(function () {
         /*定义全局变量*/
         var oReg = {};
 
@@ -87,7 +86,7 @@
             _czc.push(["_trackEvent", "注册页", "获取验证码"]);
 
             /*loading层*/
-            layer.open({ type: 2, shadeClose: false });
+            layer.open({type: 2, shadeClose: false});
             $.ajax({
                 type: "post",
                 url: "/action/public/v3/get_phone_reg_code",
@@ -95,8 +94,9 @@
                     phone: $("#telephone").val(),
                     token: $.cookie("tiger_token")
                 },
-                success: function(data) {
+                success: function (data) {
                     layer.closeAll();
+                    data = JSON.parse(data);
                     if (data.is_succ) {
                         /*提示*/
                         layer.open({
@@ -109,7 +109,7 @@
                         /*倒计时*/
                         if (Boolean(interval) == false) {
                             var duration = 59;
-                            interval = setInterval(function() {
+                            interval = setInterval(function () {
                                 $("#verify_code_btn").addClass("disable").html(duration-- + "s");
                                 if (duration <= 0) {
                                     clearInterval(interval);
@@ -223,7 +223,7 @@
 
         /*判断是否在APP中,关闭相关层*/
         ;
-        (function() {
+        (function () {
             if (isInTiger()) {
                 $(".h5_nav").css("display", "none");
                 $(".h5_float_footer").css("display", "none");
@@ -232,16 +232,16 @@
 
         /*h5 - footer关闭按钮*/
         ;
-        (function() {
-            $(".close").on('touchend', function() {
+        (function () {
+            $(".close").on('touchend', function () {
                 $(".h5_float_footer").fadeOut(500);
             });
         }());
 
         /*密码可视按钮*/
         ;
-        (function() {
-            $(".password_btn").on("touchend", function() {
+        (function () {
+            $(".password_btn").on("touchend", function () {
                 /*切换试图可视状态*/
                 $(".password_btn img").toggleClass("hide");
                 /*更改input的type*/
@@ -260,7 +260,7 @@
 
         /*获取url中携带信息并进行相关操作*/
         ;
-        (function() {
+        (function () {
             /*获取查询字段*/
             function getSearch() {
                 var url = location.search;
@@ -304,20 +304,20 @@
 
         /*发送验证码*/
         ;
-        (function() {
+        (function () {
             var verify_code_btn = $("#verify_code_btn");
-            verify_code_btn.on("touchend", function() {
+            verify_code_btn.on("touchend", function () {
                 if (!checkTel()) return;
                 /*检测手机号是否已经存在*/
                 if (($("#telephone").val().trim() != "")) {
                     $.ajax({
                         type: "get",
-                        url: "/api/v1/exists",
+                        url: "/action/public/v4/exists",
                         data: {
                             key: $("#telephone").val(),
                             username: null
                         },
-                        success: function(data) {
+                        success: function (data) {
                             data = JSON.parse(data);
                             console.log(data);
                             if (data && data.data == true) {
@@ -338,14 +338,14 @@
 
         /*提交按钮*/
         ;
-        (function() {
-            $("#submit_form").on("touchend", function() {
+        (function () {
+            $("#submit_form").on("touchend", function () {
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
                 if (!checkPassword()) return;
 
                 /*loading层*/
-                layer.open({ type: 2, shadeClose: false });
+                layer.open({type: 2, shadeClose: false});
                 /*统计*/
                 statistics($("#telephone").val());
                 $.ajax({
@@ -361,7 +361,7 @@
                         key: oReg.search_arr.key || "",
                         email: oReg.search_arr.email || ""
                     },
-                    success: function(data) {
+                    success: function (data) {
                         data = JSON.parse(data);
                         if (data.is_succ) {
                             /*跳转到注册成功页面*/
@@ -384,11 +384,11 @@
         if (isRegSucceed()) {
             /*第三页注册逻辑 - 对象*/
             var regist_page3 = {
-                getMt4: function() {
+                getMt4: function () {
                     $.ajax({
                         type: "get",
                         url: "/action/public/v4/get_info",
-                        success: function(data) {
+                        success: function (data) {
                             data = JSON.parse(data);
                             data = data.data;
                             console.log(data);
@@ -398,13 +398,13 @@
                                 $("#reg_MT4_number").html("获取失败");
                             }
                         },
-                        error: function(err) {
+                        error: function (err) {
                             $("#reg_MT4_number").html("获取失败");
                         }
                     });
                 },
-                submit: function() {
-                    $("#regist_btn3").on("touchend", function() {
+                submit: function () {
+                    $("#regist_btn3").on("touchend", function () {
                         window.location.href = "/download";
                     });
                 }
@@ -423,7 +423,7 @@
                 var $items = $(".tips .tips_item");
                 $target.siblings().removeClass("active").end().addClass("active");
                 $items.removeClass("active");
-                $items.each(function(index, item) {
+                $items.each(function (index, item) {
                     var $item = $(item);
                     if ($item.attr("tabindex") == tab_attr) {
                         $item.addClass("active");
@@ -433,7 +433,7 @@
 
             $(".tabNav li").on("touchend", tabHandle);
 
-            $(".item3 h5").on("tap", function(e) {
+            $(".item3 h5").on("tap", function (e) {
                 $(e.target).find("span").toggleClass("active");
                 $(e.target).next().fadeToggle(200);
                 return false;
