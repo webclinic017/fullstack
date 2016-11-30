@@ -1,10 +1,10 @@
 ;
-(function() {
+(function () {
     'use strict';
     /*loading*/
-    layer.open({ type: 2, shadeClose: false });
+    layer.open({type: 2, shadeClose: false});
 
-    $(function() {
+    $(function () {
         function activePage1() {
             $('.section1 .matters_btn').fadeIn(500);
             $('.section1 .btn1').delay(100).fadeIn(500);
@@ -30,14 +30,14 @@
             sectionsColor: ['#ccc', '#121212', '#fff', '#0e0e0e', '#d850c'],
             verticalCentered: false,
             easing: 'easeOutBack',
-            afterRender: function() {
+            afterRender: function () {
                 layer.closeAll();
                 $(".m_t33_layout").fadeIn(50);
 
                 /*页面按钮事件*/
                 ;
-                (function() {
-                    $(document.body).on("touchend", function(e) {
+                (function () {
+                    $(document.body).on("touchend", function (e) {
                         var action = $(e.target).attr("data-action");
 
                         function openLay(which) {
@@ -68,7 +68,7 @@
 
                 window.removeEventListener('resize');
             },
-            afterLoad: function(anchorLink, index) {
+            afterLoad: function (anchorLink, index) {
                 showBtn(index);
                 if (index == 1) {
                     activePage1();
@@ -84,9 +84,9 @@
                     $('.section2 .five_ways .ways_5 .description').delay(1300).fadeIn(500);
                 }
                 if (index == 3) {
-                    $(".fresh_tip").each(function(index, item) {
+                    $(".fresh_tip").each(function (index, item) {
                         var height = $(item).height();
-                        setTimeout(function() {
+                        setTimeout(function () {
                             $(item).css({
                                 top: index == 0 ? '15%' : 15 + index * 20 + '%'
                             });
@@ -97,7 +97,7 @@
                     $('input').blur();
                 }
             },
-            onLeave: function(index, direction) {
+            onLeave: function (index, direction) {
                 hideBtn(index);
                 if (index == 1) {
                     activePage1();
