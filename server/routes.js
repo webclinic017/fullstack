@@ -457,18 +457,19 @@ module.exports = function(app) {
 
     });
 
-    // app.route('/bd/t33').get(function(req, res) {
-    //     setCompanyCookie(res);
-    //     if (isMobile(req)) {
-    //         res.render('bd_m_t33', extendPublic({
-    //             regBtn_text:'领取赠金',
-    //             coInfo: "",
-    //             page:'t33'
-    //         }, req));
-    //     } else {
-    //         res.render('bd_t33', extendPublic({}, req));
-    //     }
-    // });
+    app.route('/bd/t33').get(function(req, res) {
+        setCompanyCookie(res);
+        if (isMobile(req)) {
+            res.render('bd_m_t33', extendPublic({
+                regBtn_text:'领取赠金',
+                coInfo: "",
+                page:'t33',
+                sel_text:'首选'
+            }, req));
+        } else {
+            res.render('bd_t33', extendPublic({}, req));
+        }
+    });
 
     app.route('/bd/t33_t').get(function(req, res) {
         if (COMPANY_NAME === 'tigerwit') {
@@ -476,7 +477,8 @@ module.exports = function(app) {
             res.render('bd_m_t33', extendPublic({
                 regBtn_text:'前往领取赠金',
                 coInfo: "Tiger Financial Technology PTY. Ltd.",
-                page:'t33_t'
+                page:'t33_t',
+                sel_text:'优选'
             }, req));
         }
     });
