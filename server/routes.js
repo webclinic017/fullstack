@@ -457,18 +457,18 @@ module.exports = function(app) {
 
     });
 
-    // app.route('/bd/t33').get(function(req, res) {
-    //     setCompanyCookie(res);
-    //     if (isMobile(req)) {
-    //         res.render('bd_m_t33', extendPublic({
-    //             regBtn_text:'领取赠金',
-    //             coInfo: "",
-    //             page:'t33'
-    //         }, req));
-    //     } else {
-    //         res.render('bd_t33', extendPublic({}, req));
-    //     }
-    // });
+    app.route('/bd/t33').get(function(req, res) {
+        setCompanyCookie(res);
+        if (isMobile(req)) {
+            res.render('bd_m_t33', extendPublic({
+                regBtn_text:'领取赠金',
+                coInfo: "",
+                page:'t33'
+            }, req));
+        } else {
+            res.render('bd_t33', extendPublic({}, req));
+        }
+    });
 
     app.route('/bd/t33_t').get(function(req, res) {
         if (COMPANY_NAME === 'tigerwit') {
