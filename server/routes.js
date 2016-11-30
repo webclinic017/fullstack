@@ -14,7 +14,7 @@ var setCompanyCookie = require('./set_company_cookie');
 var URL_PATH = process.env.URL_PATH;
 var COMPANY_NAME = process.env.COMPANY_NAME;
 
-function extendPublic (data, req) {
+function extendPublic(data, req) {
     var lang = new Lang(req);
     data["lang"] = lang;
 
@@ -26,7 +26,7 @@ function extendPublic (data, req) {
     return data;
 }
 
-function isMobile(req){
+function isMobile(req) {
     var deviceAgent = req.headers["user-agent"].toLowerCase();
     //var agentID = deviceAgent.match(/(iphone|ipod|ipad|android)/);
     return deviceAgent.match(/(iphone|ipod|ipad|android)/);
@@ -37,15 +37,15 @@ module.exports = function(app) {
     app.use('/api', require('./api'));
 
     //添加百度验证  --徐萌
-    app.route('/baidu_verify_qTHsV5cQAY.html').get(function(req, res){
+    app.route('/baidu_verify_qTHsV5cQAY.html').get(function(req, res) {
         res.render('../../client/baidu_verify_qTHsV5cQAY.html');
     });
     //添加微信验证
-    app.route('/MP_verify_lcsRW9jGPf32n5Ka.txt').get(function(req, res){
+    app.route('/MP_verify_lcsRW9jGPf32n5Ka.txt').get(function(req, res) {
         res.render('../../client/MP_verify_lcsRW9jGPf32n5Ka.html');
     });
     //爬虫配置
-    app.route('/robots.txt').get(function(req, res){
+    app.route('/robots.txt').get(function(req, res) {
         res.set('Content-Type', 'text/plain');
         res.send('User-agent: *\nDisallow:\nAllow:/');
     });
@@ -90,9 +90,9 @@ module.exports = function(app) {
     app.route('/download').get(function(req, res) {
         if (isMobile(req)) {
             res.render('m_download.html', extendPublic({
-                regularTip:'收益同步',
-                download:'下载 APP',
-                coInfo:""
+                regularTip: '收益同步',
+                download: '下载 APP',
+                coInfo: ""
             }, req));
         } else {
             setCompanyCookie(res);
@@ -114,49 +114,49 @@ module.exports = function(app) {
     /*定期跟单开始*/
     var global_modelRegular = require('./model/modelRegular');
     var gloal_modelRegularDetail = require('./model/modelRegularDetail');
-    app.route('/regular').get(function(req, res){
+    app.route('/regular').get(function(req, res) {
         setCompanyCookie(res);
         res.render('regular_list.html', extendPublic({
-            model : global_modelRegular
+            model: global_modelRegular
         }, req));
     });
-    app.route('/regular/agree/:subpage').get(function(req, res){
+    app.route('/regular/agree/:subpage').get(function(req, res) {
         setCompanyCookie(res);
         res.render('regular_agree.html', extendPublic({
-            model : global_modelRegular,
-            detail_id : req.params.subpage || ""
+            model: global_modelRegular,
+            detail_id: req.params.subpage || ""
         }, req));
     });
-    app.route('/m/regular/agree/:subpage').get(function(req, res){
+    app.route('/m/regular/agree/:subpage').get(function(req, res) {
         setCompanyCookie(res);
         res.render('m_regular_agree.html', extendPublic({
-            model : global_modelRegular,
-            detail_id : req.params.subpage || ""
+            model: global_modelRegular,
+            detail_id: req.params.subpage || ""
         }, req));
     });
-    app.route('/regular/detail/:subpage').get(function(req, res){
+    app.route('/regular/detail/:subpage').get(function(req, res) {
         setCompanyCookie(res);
         res.render('regular_detail.html', extendPublic({
-            model : gloal_modelRegularDetail(req.params.subpage || "")
-        },req));
+            model: gloal_modelRegularDetail(req.params.subpage || "")
+        }, req));
     });
-    app.route('/m/regular/detail/:subpage').get(function(req, res){
+    app.route('/m/regular/detail/:subpage').get(function(req, res) {
         setCompanyCookie(res);
-        res.render('m_regular_detail.html',extendPublic({
-            model : gloal_modelRegularDetail(req.params.subpage || "")
-        },req));
+        res.render('m_regular_detail.html', extendPublic({
+            model: gloal_modelRegularDetail(req.params.subpage || "")
+        }, req));
     });
-    app.route('/m/regular/detail/team/:subpage').get(function(req, res){
+    app.route('/m/regular/detail/team/:subpage').get(function(req, res) {
         var team_html = global_modelRegular.getTeamHtmlName(req.params.subpage);
         setCompanyCookie(res);
-        res.render('regular/'+ team_html +'.html',extendPublic({}, req));
+        res.render('regular/' + team_html + '.html', extendPublic({}, req));
     });
-    app.route('/m/regular/detail/history/:subpage').get(function(req, res){
+    app.route('/m/regular/detail/history/:subpage').get(function(req, res) {
         var aImages = global_modelRegular.getTeamHistoryImages(req.params.subpage);
         setCompanyCookie(res);
-        res.render('regular/m_regular_detail_history.html',extendPublic({
-            model : {
-                aImages : aImages
+        res.render('regular/m_regular_detail_history.html', extendPublic({
+            model: {
+                aImages: aImages
             }
         }, req));
     });
@@ -165,7 +165,7 @@ module.exports = function(app) {
 
     /*--------------------APP-Beagin---------------------*/
     /*注册相关页面*/
-    app.route('/m/h5_register/:status(reg|succ|agreement)').get(function(req, res){
+    app.route('/m/h5_register/:status(reg|succ|agreement)').get(function(req, res) {
         var status = req.params.status || 'reg';
         var pageInfo = {
             status: status
@@ -175,28 +175,28 @@ module.exports = function(app) {
             pageInfo: pageInfo
         }, req));
     });
-    app.route('/m/register').get(function(req, res){
+    app.route('/m/register').get(function(req, res) {
         setCompanyCookie(res);
-        res.render("m_register01",extendPublic({}, req));
+        res.render("m_register01", extendPublic({}, req));
     });
-    app.route('/m/register2').get(function(req, res){
+    app.route('/m/register2').get(function(req, res) {
         setCompanyCookie(res);
-        res.render("m_register02",extendPublic({}, req));
+        res.render("m_register02", extendPublic({}, req));
     });
-    app.route('/m/register3').get(function(req, res){
+    app.route('/m/register3').get(function(req, res) {
         setCompanyCookie(res);
-        res.render("m_register03",extendPublic({}, req));
+        res.render("m_register03", extendPublic({}, req));
     });
     /*成为高手*/
-    app.route('/m/agent/become').get(function(req, res){
+    app.route('/m/agent/become').get(function(req, res) {
         setCompanyCookie(res);
-        res.render("m_agent_become",extendPublic({}, req));
+        res.render("m_agent_become", extendPublic({}, req));
     });
 
     /*定期跟单*/
-    app.route('/m/regular/how').get(function(req, res){
+    app.route('/m/regular/how').get(function(req, res) {
         setCompanyCookie(res);
-        res.render("m_regular_how",extendPublic({}, req));
+        res.render("m_regular_how", extendPublic({}, req));
     });
 
     /*出入金流程*/
@@ -212,18 +212,18 @@ module.exports = function(app) {
     });
 
     /*邀请好友*/
-    app.route('/m/invite01').get(function(req, res){
+    app.route('/m/invite01').get(function(req, res) {
         setCompanyCookie(res);
         res.render('m_invite01', extendPublic({}, req));
     });
 
-    app.route('/m/invite02').get(function(req, res){
+    app.route('/m/invite02').get(function(req, res) {
         setCompanyCookie(res);
         res.render('m_invite02', extendPublic({}, req));
     });
 
     /*H5 web 关于我们 英文页面*/
-    app.route('/m/web/about/us').get(function(req, res){
+    app.route('/m/web/about/us').get(function(req, res) {
         setCompanyCookie(res);
         res.render('m_about_us', extendPublic({}, req));
     });
@@ -235,7 +235,7 @@ module.exports = function(app) {
         var usercode = req.params.usercode;
         setCompanyCookie(res);
         request(URL_PATH + '/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
-        // request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
+            // request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
             if (!error && response.statusCode == 200) {
                 // console.info(body);
                 body = JSON.parse(body);
@@ -389,34 +389,34 @@ module.exports = function(app) {
         setCompanyCookie(res);
         res.render('waiting', extendPublic({}, req));
     });
-    app.route('/bd/t29').get(function(req, res){
+
+    app.route('/bd/t29').get(function(req, res) {
         setCompanyCookie(res);
         res.render('bd_t29', extendPublic({}, req));
     });
-    app.route('/bd/t30').get(function(req, res){
+    app.route('/bd/t30').get(function(req, res) {
         setCompanyCookie(res);
-        if(isMobile(req)){
+        if (isMobile(req)) {
             res.render('bd_m7', extendPublic({}, req))
         } else {
             res.render('bd_t30', extendPublic({}, req));
         }
     });
-    app.route('/bd/t27').get(function(req, res){
+    app.route('/bd/t27').get(function(req, res) {
         setCompanyCookie(res);
-        if(isMobile(req)){
+        if (isMobile(req)) {
             res.render('bd_m_t27', extendPublic({}, req))
         } else {
             res.render('bd_t27', extendPublic({}, req));
         }
     });
-    app.route('/bd/t31').get(function(req, res){
+    app.route('/bd/t31').get(function(req, res) {
         setCompanyCookie(res);
-        if(isMobile(req)){
-
+        if (isMobile(req)) {
             // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
             if (COMPANY_NAME === 'tigerwit') {
                 res.render('bd_m_t31', extendPublic({
-                    pageInfo:""
+                    pageInfo: ""
                 }, req))
             }
             if (COMPANY_NAME === 'pkds') {
@@ -427,13 +427,13 @@ module.exports = function(app) {
         }
     });
 
-    app.route('/bd/t32').get(function(req, res){
+    app.route('/bd/t32').get(function(req, res) {
         setCompanyCookie(res);
 
         // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
         if (COMPANY_NAME === 'tigerwit') {
             res.render('bd_m_t31', extendPublic({
-                pageInfo:"t32"
+                pageInfo: "t32"
             }, req))
         }
         if (COMPANY_NAME === 'pkds') {
@@ -442,13 +442,13 @@ module.exports = function(app) {
 
     });
 
-    app.route('/bd/t32_t').get(function(req, res){
+    app.route('/bd/t32_t').get(function(req, res) {
         setCompanyCookie(res);
 
         // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
         if (COMPANY_NAME === 'tigerwit') {
             res.render('bd_m_t31', extendPublic({
-                pageInfo:"t32_t"
+                pageInfo: "t32_t"
             }, req))
         }
         if (COMPANY_NAME === 'pkds') {
@@ -457,55 +457,79 @@ module.exports = function(app) {
 
     });
 
-    app.route('/bd/t31_game').get(function(req, res){
+    // app.route('/bd/t33').get(function(req, res) {
+    //     setCompanyCookie(res);
+    //     if (isMobile(req)) {
+    //         res.render('bd_m_t33', extendPublic({
+    //             regBtn_text:'领取赠金',
+    //             coInfo: "",
+    //             page:'t33'
+    //         }, req));
+    //     } else {
+    //         res.render('bd_t33', extendPublic({}, req));
+    //     }
+    // });
+
+    app.route('/bd/t33_t').get(function(req, res) {
+        if (COMPANY_NAME === 'tigerwit') {
+            setCompanyCookie(res);
+            res.render('bd_m_t33', extendPublic({
+                regBtn_text:'前往领取赠金',
+                coInfo: "Tiger Financial Technology PTY. Ltd.",
+                page:'t33_t'
+            }, req));
+        }
+    });
+
+    app.route('/bd/t31_game').get(function(req, res) {
         setCompanyCookie(res);
         res.render('bd_mt31_game', extendPublic({}, req))
     });
     // nodeAPI
-    app.route('/napi').get(function(req, res){
+    app.route('/napi').get(function(req, res) {
         var action = req.query.action;
         var model = require('./model/modelRegular');
         var napiConfigInfo = require('./app_napi.config.js');
-        var page,pagesize,sum;
+        var page, pagesize, sum;
         var page_total = 0;
         var data = null;
         var data_pre = model['products'];
         var rs;
         var oError = null;
-        if(action == "get_regular_list"){
+        if (action == "get_regular_list") {
             page = req.query.page || 1;
             pagesize = req.query.pagesize || 10;
             sum = data_pre.length;
-            page_total = Math.ceil(sum/pagesize);
-            if(page > page_total){
+            page_total = Math.ceil(sum / pagesize);
+            if (page > page_total) {
                 oError = {
-                    error_msg : "错误的页码"
+                    error_msg: "错误的页码"
                 };
-            }else{
+            } else {
                 var data_pre_new = [];
                 var deepCopy = function(source) {
-                    var result = source?{}:source;
+                    var result = source ? {} : source;
                     for (var key in source) {
-                      result[key] = typeof source[key]==='object'? deepCopy(source[key]): source[key];
+                        result[key] = typeof source[key] === 'object' ? deepCopy(source[key]) : source[key];
                     }
                     return result;
                 }
 
-                for (var i=0; i<data_pre.length; i++) {
+                for (var i = 0; i < data_pre.length; i++) {
                     var data_new_item = deepCopy(data_pre[i]);
 
                     data_new_item["profit_rate_wish_year"] = data_new_item["profit_rate_wish"];
-                    data_new_item["profit_rate_wish"] = Math.ceil(data_new_item["profit_rate_wish"].split("%")[0]/12)+'%';
+                    data_new_item["profit_rate_wish"] = Math.ceil(data_new_item["profit_rate_wish"].split("%")[0] / 12) + '%';
                     data_pre_new.push(data_new_item);
                 }
-                data = data_pre_new.slice((page-1)*pagesize, Math.min(page*pagesize, sum));
+                data = data_pre_new.slice((page - 1) * pagesize, Math.min(page * pagesize, sum));
 
             }
         }
-        if(action == "get_regular_detail"){
+        if (action == "get_regular_detail") {
             var regular_id = req.query.regular_id;
-            data_pre.forEach(function(product, index){
-                if(product.id == regular_id){
+            data_pre.forEach(function(product, index) {
+                if (product.id == regular_id) {
                     data = product;
                 }
             });
@@ -526,39 +550,39 @@ module.exports = function(app) {
                 url: "",
                 force_update: false
             };
-            
-            if(system == "android" && versionCode < versinInfo.currentVersionCode){
+
+            if (system == "android" && versionCode < versinInfo.currentVersionCode) {
                 currentVersion = versinInfo.getAppInfo();
             }
             data = currentVersion;
         }
         if (action == "get_banner_info") {
             var system = req.query.system;
-            
+
             if (system == "android") {
                 data = napiConfigInfo.getBannerInfoAndroid();
             } else {
                 data = napiConfigInfo.getBannerInfoIos();
             }
         }
-        if(data){
+        if (data) {
             rs = {
-                is_succ : true,
-                error_code : 0,
-                error_msg : "获取成功",
-                data : data
+                is_succ: true,
+                error_code: 0,
+                error_msg: "获取成功",
+                data: data
             }
-            if(page){
+            if (page) {
                 rs.page = page;
                 rs.sum = sum;
             }
-        }else{
+        } else {
             rs = {
-                is_succ : false,
-                error_code : 1,
-                error_msg : "获取失败"
+                is_succ: false,
+                error_code: 1,
+                error_msg: "获取失败"
             }
-            if(oError){
+            if (oError) {
                 rs.error_msg = oError.error_msg;
             }
         }
