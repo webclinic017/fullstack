@@ -160,6 +160,11 @@
       background: url("/images/bd/t33_section1Bg.jpg") no-repeat;
       background-position: center top;
       background-size: auto 100%;
+      &.t33_t{
+        background: url("/images/bd/t33_section1Bg_t.jpg") no-repeat;
+        background-position: center top;
+        background-size: auto 100%;
+      }
       position: relative;
       .layer_contentBox {
         display: none;
@@ -180,6 +185,9 @@
       .matters_btn {
         top: 32%;
         right: px2rem(145);
+        &.t33_t{
+          right: 40%;
+        }
       }
       .detail {
         top: 72.56%;

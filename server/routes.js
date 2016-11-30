@@ -463,7 +463,8 @@ module.exports = function(app) {
             res.render('bd_m_t33', extendPublic({
                 regBtn_text:'领取赠金',
                 coInfo: "",
-                page:'t33'
+                page:'t33',
+                sel_text:'首选'
             }, req));
         } else {
             res.render('bd_t33', extendPublic({}, req));
@@ -476,7 +477,8 @@ module.exports = function(app) {
             res.render('bd_m_t33', extendPublic({
                 regBtn_text:'前往领取赠金',
                 coInfo: "Tiger Financial Technology PTY. Ltd.",
-                page:'t33_t'
+                page:'t33_t',
+                sel_text:'优选'
             }, req));
         }
     });
