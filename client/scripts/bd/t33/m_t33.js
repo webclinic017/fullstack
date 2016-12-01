@@ -47,7 +47,7 @@
                 /*页面按钮事件*/
                 ;
                 (function () {
-                    $(document.body).on("touchend", function (e) {
+                    $(document.body).on("tap", function (e) {
                         var action = $(e.target).attr("data-action");
 
                         function openLay(which) {
