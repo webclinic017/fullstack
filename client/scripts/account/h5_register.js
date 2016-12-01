@@ -288,6 +288,10 @@
                 $("#telephone").val(oReg.search_arr.telephone)
             }
 
+            if(oReg.search_arr.floatbox && oReg.search_arr.floatbox == 'hide'){
+                $(".h5_float_footer").fadeOut(50);
+            }
+
             /*设置邀请源INVITE_CODE*/
             if (oReg.search_arr.user_code) {
                 $.ajax({

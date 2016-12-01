@@ -24,7 +24,7 @@
                 <input type="text" name="username" id="username" placeholder="昵称">
                 <input type="tel" name="tel" id="telephone" placeholder="电话">
                 <input type="text" name="email" id="email" placeholder="邮箱">
-                <span id="regist_btn">免费注册</span>
+                <span id="regist_btn">注册送200美金</span>
             </form>
         </div>
         <div class="t33_gifts clearfix">
@@ -88,6 +88,7 @@
         </div>
 
         <div class="t31_tiger_help <%= lang.background().company %>"></div>
+        <% include bd/common/float_register.html %>
         <%if(lang.isCompany("tigerwit")) {%>
         <div class="t33_report">
             <h2>媒体报道</h2>
