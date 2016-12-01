@@ -5,15 +5,25 @@
     layer.open({type: 2, shadeClose: false});
 
     $(function () {
+        /*微信分享配置*/
+        wxShareConfig({
+            title: '老虎外汇 年终钜献',
+            subTitle: '老虎外汇 年终钜献',
+            shareLink: window.location.href,
+            desc: '新用户注册可得200美金，交易可提取！',
+            img: window.location.origin + '/activity/logo.png',
+            trackPage: window.location.pathname.replace(/\//gi,''),
+            debug: false
+        });
+
         function activePage1() {
             $('.section1 .matters_btn').fadeIn(500);
             $('.section1 .btn1').delay(100).fadeIn(500);
             $('.section1 .btn2').delay(300).fadeIn(500);
-            $('.section1 .registerNow1').delay(500).fadeIn(500);
+            $('.section1 .registerNow1').delay(500).slideDown(500);
         }
 
         activePage1();
-
 
         function showBtn(index) {
             $(".registerNow" + index).fadeIn(300)
