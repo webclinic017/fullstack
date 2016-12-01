@@ -183,6 +183,17 @@
             color: $brand-primary;
         }
     }
+
+    @include e(tle3) {
+        // font-family: "FZLTZCHK  GBK1 0";
+        font-size: 40px;
+        font-weight: bold;
+        color: #fff;
+
+        span {
+            color: $brand-primary;
+        }
+    }
     @include e(circle) {
         margin-bottom: 3px;
         display: inline-block;
