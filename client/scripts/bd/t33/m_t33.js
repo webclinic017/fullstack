@@ -5,15 +5,22 @@
     layer.open({type: 2, shadeClose: false});
 
     $(function () {
-        /*微信分享配置*/
-        wxShareConfig({
-            title: '老虎外汇 年终钜献',
-            subTitle: '老虎外汇 年终钜献',
-            shareLink: window.location.href,
-            desc: '新用户注册可得200美金，交易可提取！',
-            img: window.location.origin + '/activity/logo.png',
-            trackPage: window.location.pathname.replace(/\//gi,''),
-            debug: false
+        $('#wx_jssdk').on('load',function(){
+            /*微信分享配置*/
+
+            if(wx){
+                wxShareConfig({
+                    title: '老虎外汇 年终钜献',
+                    subTitle: '老虎外汇 年终钜献',
+                    shareLink: window.location.href,
+                    desc: '新用户注册可得200美金，交易可提取！',
+                    img: window.location.origin + '/activity/logo.png',
+                    trackPage: window.location.pathname.replace(/\//gi,''),
+                    debug: false
+                });
+            } else {
+                console.log("微信配置错误")
+            }
         });
 
         function activePage1() {
