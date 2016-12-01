@@ -179,7 +179,7 @@
     }
   }
 
-  @include b(t31_report) {
+  @include b(t33_report) {
     width: 1030px;
     margin: 0 auto;
     margin-bottom: 100px;
@@ -188,6 +188,7 @@
       margin-top: 60px;
       margin-bottom: 50px;
       font-size: 50px;
+      color: #b80000;
     }
     ul {
       display: block;
