@@ -789,7 +789,7 @@ module.exports = function () {
         "mAssetWithdrawBranchName": {"zh": "支行名称", "en": "Branch Name"},
         "mAssetWithdrawSuccInfo": {"zh": "提现申请已提交成功", "en": "Submit successful"},
         "mAssetWithdrawFailInfo": {"zh": "提现申请失败", "en": "Submit failed"},
-        "mAssetWithdrawSuccInfo2": {"zh": "请耐心等待，预计2个工作日内到账！", "en": "Withdraw will be processed in two days"},
+        "mAssetWithdrawSuccInfo2": {"zh": "我们会在两个工作日内处理完毕", "en": "Withdraw will be processed in two days"},
         "mAssetWithdrawFailInfo2": {"zh": "请返回重新提交", "en": "Please try again"},
         "mAssetWithdrawPlaceholder1": {"zh": "最低20美元", "en": "A minimum of $20"},
         "mAssetWithdrawPlaceholder2": {"zh": "请填写支行名称", "en": " "},
