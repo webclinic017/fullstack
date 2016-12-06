@@ -298,7 +298,7 @@ module.exports = function(app) {
     });
 
     // 关于老虎金融
-    app.route('/web/about/:subpage(stp|team|report|control|tigerwit)').get(function(req, res) {
+    app.route('/web/about/:subpage(stp|team|report|control|tigerwit|partner)').get(function(req, res) {
 
         var subpage = req.params.subpage || 'forex';
         var pageInfo = {
@@ -340,10 +340,7 @@ module.exports = function(app) {
         res.render('web_mt4.html', extendPublic({}, req));
     });
 
-    app.route('/web/partner').get(function(req, res) {
-        setCompanyCookie(res);
-        res.render('web-partner.html', extendPublic({}, req));
-    });
+
 
     app.route('/study/:subpage(introduction|term|fundamental|skill|video)').get(function(req, res) {
         var subpage = req.params.subpage || 'skill';

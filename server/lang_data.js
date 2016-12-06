@@ -12,7 +12,7 @@ if (company_name === 'tigerwit') {
         titleZh: "老虎外汇 - TigerWit",
         titleEn: "TigerWit",
         supportEmail: "support@tigerwit.com",
-        ibEmail: "ib@tigerwit.com",
+        ibEmail: "support@tigerwit.com",
         telephone: "400 - 809 - 8509",
         webSite: "www.tigerwit.com",
         webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",

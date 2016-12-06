@@ -1,9 +1,7 @@
 @include b(web-partner) {
-    margin-top: 84px;
     overflow: hidden;
 
     @include e(title) {
-        margin-top: 56px;
         padding-bottom: 22px;
         border-bottom: 1px solid $gray;
         font-size: 22px;
