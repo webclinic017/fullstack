@@ -45,7 +45,7 @@
 
                     <div class="upload_id_card-tip">
                         <p class="alert alert-arrow_tp_lf" ng-if="verification.id.frontStatus === 0 && frontErr.idFront.show">
-                            请上传证件正面
+                            请提交证件正面
                         </p>
                         <p class="alert alert-arrow_tp_lf" ng-if="verification.id.frontStatus === 1">
                             正在上传......
@@ -54,7 +54,7 @@
                             上传成功
                         </p>
                         <p class="alert alert-arrow_tp_lf" ng-if="verification.id.frontStatus === 3">
-                            上传失败！请上传小于 2MB 的图片
+                            提交失败！请提交小于 2MB 的图片
                         </p>
                     </div>    
                 </div>
@@ -74,7 +74,7 @@
 
                     <div class="upload_id_card-tip">
                         <p class="alert alert-arrow_tp_lf" ng-if="verification.id.backStatus === 0 && frontErr.idBack.show">
-                            请上传证件背面
+                            请提交证件背面
                         </p>
                         <p class="alert alert-arrow_tp_lf" ng-if="verification.id.backStatus === 1">
                             正在上传......
@@ -83,7 +83,7 @@
                             上传成功
                         </p>
                         <p class="alert alert-arrow_tp_lf" ng-if="verification.id.backStatus === 3">
-                            上传失败！请上传小于 2MB 的图片
+                            提交失败！请提交小于 2MB 的图片
                         </p>
                     </div>
                 </div>
@@ -96,8 +96,12 @@
             <div class="text-center mg-tp-50">
 
                 <div ng-show="backErr.system.show">
+                    <p class="alert-system" ng-show="backErr.system.status === 3">
+                        {{ backErr.system.error_msg }}
+                    </p>
                     <p class="alert-system" ng-show="backErr.system.status === 1">
-                        信息提交成功
+                        文件上传中,请耐心等待
+                        <!--信息提交成功-->
                     </p>
                     <p class="alert-system" ng-show="backErr.system.status === 2">
                         系统繁忙

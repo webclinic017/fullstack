@@ -36,11 +36,13 @@
                 show: false,
                 status: 0
             }
-        }
+        };
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
         $scope.submitForm = submitForm;
         $scope.goNextStep = goNextStep;
+        $scope.readyToUpload = {};
+        $scope.uploadFinish = {};
         $scope.clickable = true;
 
         // 实名认证功能的位置：注册或者 setting
@@ -52,17 +54,50 @@
             getVerifyStatus();
         }
 
-        $scope.$on('uploadIdCardStart', function (event, data) {
-            $scope.$apply(function () {
-                $scope.verification.id[data.face + 'Status'] = 1;
+        $scope.$on('saveFile', function (event, data) {
+            $scope.$apply(function(){
+                $scope.verification.id[data.target.face + 'Status'] = 0;
+                hideErr('', 'idFront');
+                hideErr('', 'idBack');
+                /*去重*/
+                if(data.target.face == 'front'){
+                    $scope.readyToUpload.front = data.target
+                } else {
+                    $scope.readyToUpload.back = data.target
+                }
+                console.log($scope.readyToUpload);
             });
         });
 
+        $scope.$on('uploadIdCardStart', function (event, data) {
+            $scope.verification.id[data.face + 'Status'] = 1;
+            // $scope.$apply(function () {
+            //     $scope.verification.id[data.face + 'Status'] = 1;
+            // });
+        });
+
         $scope.$on('uploadIdCardSuccess', function (event, data) {
+            $scope.uploadFinish[data.face] = true;
             $scope.$apply(function () {
                 $scope.verification.id[data.face + 'Status'] = 2;
             });
+            if($scope.uploadFinish.hasOwnProperty('front') &&
+                $scope.uploadFinish.hasOwnProperty('back') &&
+                ($scope.backErr.system.status != 3)
+            ){
+                if ($scope.type === 'setting') {
+                    getVerifyStatus();
+                } else {
+                    goNextStep();
+                }
+            }
         });
+
+        function goNextStep() {
+            if ($scope.progress) {
+                $scope.progress.step++;
+            }
+        }
 
         $scope.$on('uploadIdCardFail', function (event, data) {
             $scope.$apply(function () {
@@ -78,7 +113,7 @@
                 $scope.verification.id.number = data.idNumber;
 
                 // console.info($scope.verification);
-            });    
+            });
         }
 
         function hideErr(formName, controlName) {
@@ -95,18 +130,22 @@
 
         function submitForm(formName) {
             showErr(formName, 'realname');
-            showErr(formName, 'idFront');
-            showErr(formName, 'idBack');
-            
-            if ($scope[formName].$invalid || 
-                    $scope.verification.id.frontStatus !== 2 ||
-                    $scope.verification.id.backStatus !== 2) {
-                return;
+            if (!$scope.readyToUpload.hasOwnProperty('front')) {
+                showErr(formName, 'idFront');
+                return
             }
+            if (!$scope.readyToUpload.hasOwnProperty('back')) {
+                showErr(formName, 'idBack');
+                return
+            }
+
+            /*遍历对象上传图片*/
+            angular.forEach($scope.readyToUpload, function (data, index, array) {
+                data.submit();
+            });
 
             $scope.clickable = false;
             account.verify($scope.verification.realname).then(function (data) {
-
                 if (data.is_succ) {
                     $scope.backErr.system.status = 1;
                     $scope.backErr.system.show = true;
@@ -114,21 +153,15 @@
                     // 神策数据统计
                     sa.track('btn_verify');
 
-                    if ($scope.type === 'setting') {
-                        getVerifyStatus();    
-                    } else {
-                        goNextStep();
-                    }
                 } else {
+                    $scope.backErr.system.show = true;
                     $scope.clickable = true;
+                    $scope.backErr.system.status = 3;
+                    $scope.backErr.system.error_msg = data.error_msg;
                 }
             });
         }
 
-        function goNextStep() {
-            if ($scope.progress) {
-                $scope.progress.step++;    
-            }
-        }
+
     }
 })();
