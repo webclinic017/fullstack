@@ -69,10 +69,7 @@ module.exports = function(app) {
                 res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
             }
             if (COMPANY_NAME === 'pkds') {
-                setCompanyCookie(res);
-                res.render('home.html', extendPublic({
-                    pageInfo: {}
-                }, req));
+                res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex');
             }
         } else {
             setCompanyCookie(res);
