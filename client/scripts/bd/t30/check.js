@@ -118,12 +118,7 @@ $(document).ready(function () {
                 returnurl = originUrl + "/space/#/account/register?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
             } else {
 
-                // pkds H5注册页暂时强跳到pc页
-                if (window.location.hostname === 'www.pkdsfx.com') {
-                    returnurl = originUrl + "/space/#/account/register?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
-                } else {
-                    returnurl = originUrl + "/m/h5_register/reg?" + "name=" + rName + "&telephone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
-                }
+                returnurl = originUrl + "/m/h5_register/reg?" + "name=" + rName + "&telephone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
             }
             jQuery.ajax({
                 url: '/action/public/v3/page_signup',
