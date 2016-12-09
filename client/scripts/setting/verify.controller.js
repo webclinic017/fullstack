@@ -1,5 +1,5 @@
 ;
-(function () {
+(function() {
     'use strict';
 
     angular
@@ -11,7 +11,7 @@
     function SettingVerifyController($scope, $state, $modal, validator, account) {
         $scope.verification = {
             realname: undefined,
-            status: 0,           // 实名认证状态
+            status: 0, // 实名认证状态
             id: {
                 number: undefined,
                 frontStatus: 0,
@@ -54,13 +54,13 @@
             getVerifyStatus();
         }
 
-        $scope.$on('saveFile', function (event, data) {
-            $scope.$apply(function(){
+        $scope.$on('saveFile', function(event, data) {
+            $scope.$apply(function() {
                 $scope.verification.id[data.target.face + 'Status'] = 0;
                 hideErr('', 'idFront');
                 hideErr('', 'idBack');
                 /*去重*/
-                if(data.target.face == 'front'){
+                if (data.target.face == 'front') {
                     $scope.readyToUpload.front = data.target
                 } else {
                     $scope.readyToUpload.back = data.target
@@ -69,22 +69,22 @@
             });
         });
 
-        $scope.$on('uploadIdCardStart', function (event, data) {
+        $scope.$on('uploadIdCardStart', function(event, data) {
             $scope.verification.id[data.face + 'Status'] = 1;
             // $scope.$apply(function () {
             //     $scope.verification.id[data.face + 'Status'] = 1;
             // });
         });
 
-        $scope.$on('uploadIdCardSuccess', function (event, data) {
+        $scope.$on('uploadIdCardSuccess', function(event, data) {
             $scope.uploadFinish[data.face] = true;
-            $scope.$apply(function () {
+            $scope.$apply(function() {
                 $scope.verification.id[data.face + 'Status'] = 2;
             });
-            if($scope.uploadFinish.hasOwnProperty('front') &&
+            if ($scope.uploadFinish.hasOwnProperty('front') &&
                 $scope.uploadFinish.hasOwnProperty('back') &&
                 ($scope.backErr.system.status != 3)
-            ){
+            ) {
                 if ($scope.type === 'setting') {
                     getVerifyStatus();
                 } else {
@@ -99,14 +99,14 @@
             }
         }
 
-        $scope.$on('uploadIdCardFail', function (event, data) {
-            $scope.$apply(function () {
+        $scope.$on('uploadIdCardFail', function(event, data) {
+            $scope.$apply(function() {
                 $scope.verification.id[data.face + 'Status'] = 3;
             });
         });
 
         function getVerifyStatus() {
-            account.getVerifyStatus().then(function (data) {
+            account.getVerifyStatus().then(function(data) {
                 $scope.verification.status = data.status;
                 // $scope.verification.status = 1;
                 $scope.verification.realname = data.realname || undefined;
@@ -129,7 +129,11 @@
         }
 
         function submitForm(formName) {
-            showErr(formName, 'realname');
+            if (!$scope.verification.realname) {
+                showErr(formName, 'realname');
+                return
+            }
+
             if (!$scope.readyToUpload.hasOwnProperty('front')) {
                 showErr(formName, 'idFront');
                 return
@@ -140,12 +144,12 @@
             }
 
             /*遍历对象上传图片*/
-            angular.forEach($scope.readyToUpload, function (data, index, array) {
+            angular.forEach($scope.readyToUpload, function(data, index, array) {
                 data.submit();
             });
 
             $scope.clickable = false;
-            account.verify($scope.verification.realname).then(function (data) {
+            account.verify($scope.verification.realname).then(function(data) {
                 if (data.is_succ) {
                     $scope.backErr.system.status = 1;
                     $scope.backErr.system.show = true;

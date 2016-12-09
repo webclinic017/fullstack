@@ -2,7 +2,6 @@
     width: 600px;
     margin-left: auto;
     margin-right: auto;
-    
     @include e(title) {
         font-size: 16px;
         font-weight: 400;
@@ -14,18 +13,16 @@
     position: relative;
     display: block;
     width: 100%;
-    height: 150px;
+    height: 190px;
     margin-left: auto;
     margin-right: auto;
     border: 1px dashed $gray;
     border-radius: $border-radius-base;
     text-align: center;
     overflow: hidden;
-
     &:hover {
         border-color: $brand-primary;
     }
-    
     @include e(input) {
         position: absolute;
         top: 0;
@@ -36,7 +33,6 @@
         filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
         cursor: pointer;
     }
-
     @include e(img) {
         position: absolute;
         top: 0;
@@ -45,20 +41,17 @@
         height: 100%;
         border-radius: $border-radius-base;
     }
-
     @include e(icon) {
-        margin-top: 30px;
+        margin-top: 55px;
         font-size: 36px;
         color: $gray;
     }
-
     @include e(title) {
         margin-top: 15px;
         font-size: 16px;
         font-weight: 400;
         color: $gray-dark;
     }
-
     @include m(tip) {
         position: relative;
     }
