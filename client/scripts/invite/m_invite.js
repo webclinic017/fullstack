@@ -1,6 +1,22 @@
 ;(function ($) {
     'use strict';
     var DOM = {};
+    var layIndex = undefined;
+
+    /*讲要获取的DOM对象ID放入此数组*/
+    var id_arr = [
+        "send_invitation",
+        "share_to_friends",
+        "share_to_circle",
+        "share_to_qFriend",
+        "share_to_qZone",
+        "share_to_microBlog",
+        "cancel_share",
+        "share02_box",
+        "get_award",
+        "share_tel",
+        "share02_modal"
+    ];
 
     /**
      * 通过传入id数组,返回以ID命名的jQuery对象
@@ -8,20 +24,10 @@
      * @param id_arr []
      */
     function get_dom(oTarget, id_arr) {
-        for (var i = 0; i < id_arr.length; i++) {
+        for (var i = 0, len = id_arr.length; i < len; i++) {
             oTarget["$" + id_arr[i]] = $("#" + id_arr[i])
         }
     }
-
-    /*讲要获取的DOM对象ID放入此数组*/
-    var id_arr = [
-        "send_invitation",
-        "share_to_friends",
-        "share_to_circle",
-        "share02_box",
-        "get_award",
-        "share_tel"
-    ];
 
     get_dom(DOM || {}, id_arr);
 
@@ -48,7 +54,7 @@
         }
     });
 
-    DOM.$get_award.on("touchend", function () {
+    DOM['$get_award'].on("touchend", function () {
         /*获取手机号*/
         var telephone = DOM.$share_tel;
         var rPhone = telephone.val() ? telephone.val() : "";
@@ -64,52 +70,61 @@
             });
         } else {
             var user_code = window.location.search || "?";
-            var redirectUrl = window.location.protocol +"//"+ window.location.hostname + "/m/h5_register/reg" + user_code + "&telephone=" + telephone.val();
+            var redirectUrl = window.location.protocol + "//" + window.location.hostname + "/m/h5_register/reg" + user_code + "&telephone=" + telephone.val();
             window.location = redirectUrl;
         }
         return false;
     });
 
     /*邀请页*/
-    DOM.$send_invitation.on("tap", function () {
+    DOM['$send_invitation'].on("tap", function () {
         /*页面层*/
-        layer.open({
+        layIndex = layer.open({
             type: 1
-            , content: DOM.$share02_box.html()
+            , content: DOM['$share02_box'].html()
             , anim: 'up'
-            , style: 'position:fixed; bottom:0; left:0; width: 100%; height: 200px; padding:10px 0; border:none;'
-        });
-
-        /*发送到微信好友*/
-        $(".share_to_friends").on("touchend", function () {
-            console.log("发送到微信好友");
-            if(isInTiger()){
-                callNative({
-                    type: "wechat_friend",
-                    title: "你投资，我出钱！注册就送200美金！",
-                    description: "我刚刚在老虎外汇领了200美金，好东西必须分享，你也快来看看！",
-                    url: window.location.hostname + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
-                });
-            }
-            layer.closeAll();
-            return false;
-        });
-
-        /*发送到朋友圈*/
-        $(".share_to_circle").on("touchend", function () {
-            console.log("发送到微信朋友圈");
-            if(isInTiger()){
-                callNative({
-                    type: "wechat_circle",
-                    title: "你投资，我出钱！注册就送200美金！",
-                    description: "我刚刚在老虎外汇领了200美金，好东西必须分享，你也快来看看！",
-                    url: window.location.hostname + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
-                });
-            }
-            layer.closeAll();
-            return false;
+            , style: 'position:fixed; bottom:0; left:0; width: 100%; height: 350px; padding:10px 0; border:none;'
         });
         return false;
+    });
+
+    function nativeShare(type) {
+        console.log(type);
+        if (!isInTiger()) {
+            console.log("当前不是APP环境");
+            return
+        }
+        callNative({
+            type: type,
+            title: "你投资，我出钱！注册就送200美金！",
+            description: "我刚刚在老虎外汇领了200美金，好东西必须分享，你也快来看看！",
+            url: window.location.hostname + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
+        });
+    }
+
+    $(document).on('touchend', '.share02_modal', function(e){
+        var id = $(e.target).parent('span').attr('id');
+        var type = undefined;
+        if (id == id_arr[1]) {
+            type = "wechat_friend";
+        }
+        else if (id == id_arr[2]) {
+            type = "wechat_circle";
+        }
+        else if (id == id_arr[3]) {
+            type = "qq";
+        }
+        else if (id == id_arr[4]) {
+            type = "qzone";
+        }
+        else if (id == id_arr[5]) {
+            type = "weibo";
+        } else if(id == id_arr[6]){
+            layer.close(layIndex);
+            return false;
+        }
+        nativeShare(type);
+        layer.close(layIndex);
     });
 
     /*请求已邀请好友数据*/
@@ -144,7 +159,4 @@
         }
 
     }());
-
-    //alert(isInTiger());
-    //alert(window.navigator.userAgent);
 }(jQuery));
