@@ -72,10 +72,22 @@ module.exports = function(app) {
                 res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex');
             }
         } else {
-            setCompanyCookie(res);
-            res.render('home.html', extendPublic({
-                pageInfo: {}
-            }, req));
+            if (COMPANY_NAME === 'tigerwit') {
+                if (req.query.label === 'Parkerdawson Co-operative Group Limited') {
+                    res.redirect('https://www.pkdsfx.com/space/#/account/register');
+                } else {
+                    setCompanyCookie(res);
+                    res.render('home.html', extendPublic({
+                        pageInfo: {}
+                    }, req));
+                }
+            }
+            if (COMPANY_NAME === 'pkds') {
+                setCompanyCookie(res);
+                res.render('home.html', extendPublic({
+                    pageInfo: {}
+                }, req));
+            } 
         }
     });
 
