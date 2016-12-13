@@ -93,7 +93,9 @@
             <thead>
                 <tr>
                     <th>复制者</th>
-                    <th>我的分成</th>
+                    <th>复制总收益</th>
+                    <th>历史最高收益</th>
+                    <th>分成</th>
                     <th>结算时间</th>
                     <th></th>
                 </tr>
@@ -104,6 +106,8 @@
                     <td>
                         <i class="fa fa-dollar"></i>{{ master.pay_noob }}
                     </td>
+                    <td></td>
+                    <td></td>
                     <td>{{ master.pay_time }}</td>
                     <td class="font-success">
                         <button class="btn btn-primary btn-sm" ng-click="openBonusDetailMdl(master)">详情</button>
