@@ -91,32 +91,32 @@
                 <col width="25%"></col>
             </colgroup>
             <thead>
-                <tr>
-                    <th>复制者</th>
-                    <th>我的分成</th>
-                    <th>结算时间</th>
-                    <th></th>
-                </tr>
+            <tr>
+                <th>复制者</th>
+                <th>我的分成</th>
+                <th>结算时间</th>
+                <th></th>
+            </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="master in masterList" ng-if="masterList.length > 0">
-                    <td class="font-info">{{ master.username }}</td>
-                    <td>
-                        <i class="fa fa-dollar"></i>{{ master.pay_noob }}
-                    </td>
-                    <td>{{ master.pay_time }}</td>
-                    <td class="font-success">
-                        <button class="btn btn-primary btn-sm" ng-click="openBonusDetailMdl(master)">详情</button>
-                    </td>
-                </tr>
-                <tr ng-if="success && masterList.length > 0">
-                    <td>总计</td>
-                    <td><i class="fa fa-dollar"></i>{{ masterTotalPay.sum_pay }}</td>
-                    <td>{{ masterTotalPay.pay_time }}</td>
-                    <td></td>
-                </tr>
-                <tr ng-if="success && masterList.length <= 0"><td colspan="4">{{ backErr.msg || '无数据'}}</td></tr>
-                <tr ng-if="! success"><td colspan="4">加载中...</td></tr>
+            <tr ng-repeat="master in masterList" ng-if="masterList.length > 0">
+                <td class="font-info">{{ master.username }}</td>
+                <td>
+                    <i class="fa fa-dollar"></i>{{ master.pay_noob }}
+                </td>
+                <td>{{ master.pay_time }}</td>
+                <td class="font-success">
+                    <button class="btn btn-primary btn-sm" ng-click="openBonusDetailMdl(master)">详情</button>
+                </td>
+            </tr>
+            <tr ng-if="success && masterList.length > 0">
+                <td>总计</td>
+                <td><i class="fa fa-dollar"></i>{{ masterTotalPay.sum_pay }}</td>
+                <td>{{ masterTotalPay.pay_time }}</td>
+                <td></td>
+            </tr>
+            <tr ng-if="success && masterList.length <= 0"><td colspan="4">{{ backErr.msg || '无数据'}}</td></tr>
+            <tr ng-if="! success"><td colspan="4">加载中...</td></tr>
             </tbody>
         </table>
     </div>
@@ -130,37 +130,37 @@
                 <col width="20%"></col>
             </colgroup>
             <thead>
-                <tr>
-                    <th>高手名称</th>
-                    <th>产生收益</th>
-                    <th>扣除分成</th>
-                    <th>扣除时间</th>
-                    <th></th>
-                </tr>
+            <tr>
+                <th>高手名称</th>
+                <th>产生收益</th>
+                <th>扣除分成</th>
+                <th>扣除时间</th>
+                <th></th>
+            </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="copier in copierList" ng-if="success && copierList.length > 0">
-                    <td class="font-info">{{ copier.username }}</td>
-                    <td>
-                        <i class="fa fa-dollar"></i>{{ copier.sum_profit }}
-                    </td>
-                    <td>
-                        <i class="fa fa-dollar"></i>{{ copier.pay_noob }}
-                    </td>
-                    <td>{{ copier.pay_time }}</td>
-                    <td class="font-success">
-                        <button class="btn btn-primary btn-sm" ng-click="openBonusDetailMdl(copier)">详情</button>
-                    </td>
-                </tr>
-                <tr ng-if="success && copierList.length > 0">
-                    <td>总计</td>
-                    <td></td>
-                    <td><i class="fa fa-dollar"></i>{{ totalPay }}</td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr ng-if="success && copierList.length <= 0"><td colspan="5">{{ backErr.msg || '无数据'}}</td></tr>
-                <tr ng-if="! success"><td colspan="5">加载中...</td></tr>
+            <tr ng-repeat="copier in copierList" ng-if="success && copierList.length > 0">
+                <td class="font-info">{{ copier.username }}</td>
+                <td>
+                    <i class="fa fa-dollar"></i>{{ copier.sum_profit }}
+                </td>
+                <td>
+                    <i class="fa fa-dollar"></i>{{ copier.pay_noob }}
+                </td>
+                <td>{{ copier.pay_time }}</td>
+                <td class="font-success">
+                    <button class="btn btn-primary btn-sm" ng-click="openBonusDetailMdl(copier)">详情</button>
+                </td>
+            </tr>
+            <tr ng-if="success && copierList.length > 0">
+                <td>总计</td>
+                <td></td>
+                <td><i class="fa fa-dollar"></i>{{ totalPay }}</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr ng-if="success && copierList.length <= 0"><td colspan="5">{{ backErr.msg || '无数据'}}</td></tr>
+            <tr ng-if="! success"><td colspan="5">加载中...</td></tr>
             </tbody>
         </table>
     </div>

@@ -107,6 +107,7 @@
 
         function getVerifyStatus() {
             account.getVerifyStatus().then(function(data) {
+                $scope.$broadcast("hideLoadingImg");
                 $scope.verification.status = data.status;
                 // $scope.verification.status = 1;
                 $scope.verification.realname = data.realname || undefined;
