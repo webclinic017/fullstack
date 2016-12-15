@@ -46,23 +46,22 @@
         }
     }
     if (user_id) {  //此处user_id为tigerwit的用户id ,可在拿到后再调用
-       sa.identify(user_id);  //参数必须是字符串，且必须有值 
+       sa.login(user_id);  //参数必须是字符串，且必须有值 
     }  
     sa.quick('autoTrack'); //神策系统必须是1.4最新版及以上
 </script>
 <%} else {%>
 <script>
     (function (w) {
-        w.sa = {
-            track: track,
-            setProfile: setProfile
-        };
+        var ifs = ['track','quick','register','registerPage','registerOnce','registerSession','registerSessionOnce','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify','login','logout'];
 
-        function track (param) {
-            // 只有tigerwit计算到神策统计中
-            console.info("not tiger", param);
+        w.sa = {};
+        for (var i = 0; i < ifs.length; i++) {
+            console.info(ifs[i]);
+            w["sa"][ifs[i]] = publicFunc;
         }
-        function setProfile (param) {
+
+        function publicFunc (param) {
             // 只有tigerwit计算到神策统计中
             console.info("not tiger", param);
         }

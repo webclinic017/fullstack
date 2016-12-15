@@ -117,6 +117,9 @@
         function logout() {
             account.logout().then(function (data) {
                 if (data.is_succ) {
+                    // 神策数据统计
+                    sa.logout(true);
+
                     account.hasChecked = false;
                     $window.location.href='/space/#/account/login';
 
