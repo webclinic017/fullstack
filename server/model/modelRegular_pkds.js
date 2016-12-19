@@ -54,7 +54,7 @@ module.exports = {
             start_date_appoint: "2016.12.17 20:00", //预约开始时间 exam:'2016.5.17'
             end_date_appoint : "2016.12.18 20:00",  //预约结束时间 exam:'2016.5.17'
             start_date_trade : "2016.12.19 00:00",  //开始交易时间 exam:'2016.5.17'
-            progress : "20", //投资进度 exam:50
+            progress : "100", //投资进度 exam:50
             jiafang:"派克道森", //甲方，操盘手，出现在agree里
             team_intro : "team_pkds", //文件名，团队介绍模块
             desc_risk : "动用杠杆不超过100倍，亏损达到账户初始资金的50%时，停止交易.", //风险控制
@@ -73,7 +73,7 @@ module.exports = {
             period : "5个交易日",      //复制封闭期
             withdraw_history : "30%",    //历史最高回撤
             profit_rate_wish : "80%",  //预期年化收益率
-            profit_rate_now : "", //实时年化收益率
+            profit_rate_now : "3.74%", //实时年化收益率
             start_date_appoint: "2016.12.10 20:00", //预约开始时间 exam:'2016.5.17'
             end_date_appoint : "2016.12.11 20:00",  //预约结束时间 exam:'2016.5.17'
             start_date_trade : "2016.12.12 00:00",  //开始交易时间 exam:'2016.5.17'
@@ -96,7 +96,7 @@ module.exports = {
             period : "5个交易日",      //复制封闭期
             withdraw_history : "30%",    //历史最高回撤
             profit_rate_wish : "100%",  //预期年化收益率
-            profit_rate_now : "3.74%", //实时年化收益率
+            profit_rate_now : "3.84%", //实时年化收益率
             start_date_appoint: "2016.12.03 20:00", //预约开始时间 exam:'2016.5.17'
             end_date_appoint : "2016.12.04 20:00",  //预约结束时间 exam:'2016.5.17'
             start_date_trade : "2016.12.05 00:00",  //开始交易时间 exam:'2016.5.17'
@@ -119,7 +119,7 @@ module.exports = {
             period : "5个交易日",      //复制封闭期
             withdraw_history : "30%",    //历史最高回撤
             profit_rate_wish : "80%",  //预期年化收益率
-            profit_rate_now : "3.84%", //实时年化收益率
+            profit_rate_now : "4.84%", //实时年化收益率
             start_date_appoint: "2016.11.26 20:00", //预约开始时间 exam:'2016.5.17'
             end_date_appoint : "2016.11.27 20:00",  //预约结束时间 exam:'2016.5.17'
             start_date_trade : "2016.11.28 00:00",  //开始交易时间 exam:'2016.5.17'
@@ -142,7 +142,7 @@ module.exports = {
             period : "5个交易日",      //复制封闭期
             withdraw_history : "30%",    //历史最高回撤
             profit_rate_wish : "120%",  //预期年化收益率
-            profit_rate_now : "4.84%", //实时年化收益率
+            profit_rate_now : "", //实时年化收益率
             start_date_appoint: "2016.11.19 20:00", //预约开始时间 exam:'2016.5.17'
             end_date_appoint : "2016.11.20 20:00",  //预约结束时间 exam:'2016.5.17'
             start_date_trade : "2016.11.21 00:00",  //开始交易时间 exam:'2016.5.17'
