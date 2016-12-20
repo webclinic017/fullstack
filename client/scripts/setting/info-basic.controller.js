@@ -243,9 +243,9 @@
             }
 
             // console.info($scope.basicInfo.username);
-            // console.info($scope.basicInfo.locationWorld.value);
-            // console.info($scope.basicInfo.locationState.value);
-            // console.info($scope.basicInfo.locationCity.value);
+            // console.info($scope.basicInfo.locationWorld.key);
+            // console.info($scope.basicInfo.locationState.key);
+            // console.info($scope.basicInfo.locationCity.key);
             // console.info($scope.basicInfo.special.value);
             // console.info($scope.basicInfo.strategy);
             // console.info($scope.basicInfo.desc);
@@ -270,9 +270,9 @@
                     // 神策数据统计
                     sa.setProfile({
                         $name: $scope.basicInfo.username,
-                        country: $scope.basicInfo.locationWorld.value,
-                        $province: $scope.basicInfo.locationState.value,
-                        $city: $scope.basicInfo.locationCity.value,
+                        $country: $scope.basicInfo.locationWorld.key,
+                        $province: $scope.basicInfo.locationState.key,
+                        $city: $scope.basicInfo.locationCity.key,
                         trade_feature: $scope.basicInfo.special.value
                     });
                     
