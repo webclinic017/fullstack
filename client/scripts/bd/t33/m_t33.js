@@ -27,6 +27,16 @@
             $('.section1 .registerNow1').delay(500).slideDown(500);
         }
 
+        function offsetAction(index){
+            /*debug*/
+            if(!isIOS() && isInTiger()){
+                callNative({
+                    type:'offset',
+                    offset: index - 1
+                })
+            }
+        }
+
         activePage1();
 
         function showBtn(index) {
@@ -87,6 +97,7 @@
                 if (index == 1) {
                     activePage1();
                     showBtn(1);
+
                 }
                 if (index == 2) {
                     $('.section2 h2 .five').addClass('active');
@@ -96,6 +107,7 @@
                     $('.section2 .five_ways .ways_3 .description').delay(900).fadeIn(500);
                     $('.section2 .five_ways .ways_4 .description').delay(1100).fadeIn(500);
                     $('.section2 .five_ways .ways_5 .description').delay(1300).fadeIn(500);
+                    offsetAction(index)
                 }
                 if (index == 3) {
                     $(".fresh_tip").each(function (index, item) {
@@ -106,9 +118,11 @@
                             });
                         }, index * 80);
                     });
+                    offsetAction(index)
                 }
                 if (index == 4) {
                     $('input').blur();
+                    offsetAction(index)
                 }
             },
             onLeave: function (index, direction) {
