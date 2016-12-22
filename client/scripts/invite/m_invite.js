@@ -1,4 +1,4 @@
-;(function ($) {
+; (function ($) {
     'use strict';
     var DOM = {};
     var layIndex = undefined;
@@ -78,30 +78,37 @@
 
     /*邀请页*/
     DOM['$send_invitation'].on("tap", function () {
-        callNative({
-           type:'checkLogin'
-        });
-
+        if (isInTiger()) {
+            callNative({
+                type: 'checkLogin'
+            });
+        } else {
+            invitation();
+        }
         return false;
     });
 
-    window.tigerwitWeb = function(isLogin){
-        if(isLogin == 1){
-            var versionName = getVersionName();
-            console.log('versionName='+versionName);
-            var modalHeight = '250px';
-            $('.new_share').hide();
-            if(versionName && parseFloat(versionName) >= 2.2){
-                modalHeight = '350px';
-                $('.new_share').show();
-            }
-            /*页面层*/
-            layIndex = layer.open({
-                type: 1
-                , content: DOM['$share02_box'].html()
-                , anim: 'up'
-                , style: 'position:fixed; bottom:0; left:0; width: 100%; height: '+ modalHeight +'; padding:10px 0; border:none;'
-            });
+    function invitation() {
+        var versionName = getVersionName();
+        console.log('versionName=' + versionName);
+        var modalHeight = '250px';
+        $('.new_share').hide();
+        if (versionName && parseFloat(versionName) >= 2.2) {
+            modalHeight = '350px';
+            $('.new_share').show();
+        }
+        /*页面层*/
+        layIndex = layer.open({
+            type: 1
+            , content: DOM['$share02_box'].html()
+            , anim: 'up'
+            , style: 'position:fixed; bottom:0; left:0; width: 100%; height: ' + modalHeight + '; padding:10px 0; border:none;'
+        });
+    }
+
+    window.tigerwitWeb = function (isLogin) {
+        if (isLogin == 1) {
+            invitation();
         }
     };
 
@@ -120,7 +127,7 @@
         callNative(callConfig);
     }
 
-    $(document).on('touchend', '.share02_modal', function(e){
+    $(document).on('touchend', '.share02_modal', function (e) {
         var id = $(e.target).parent('span').attr('id');
         var type = undefined;
         if (id == id_arr[1]) {
@@ -137,7 +144,7 @@
         }
         else if (id == id_arr[5]) {
             type = "weibo";
-        } else if(id == id_arr[6]){
+        } else if (id == id_arr[6]) {
             layer.close(layIndex);
             return false;
         } else {
@@ -178,5 +185,5 @@
             });
         }
 
-    }());
-}(jQuery));
+    } ());
+} (jQuery));
