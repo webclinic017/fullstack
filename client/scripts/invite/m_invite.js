@@ -78,23 +78,32 @@
 
     /*邀请页*/
     DOM['$send_invitation'].on("tap", function () {
-        var versionName = getVersionName();
-        console.log('versionName='+versionName);
-        var modalHeight = '250px';
-        $('.new_share').hide();
-        if(versionName && parseFloat(versionName) >= 2.2){
-            modalHeight = '350px';
-            $('.new_share').show();
-        }
-        /*页面层*/
-        layIndex = layer.open({
-            type: 1
-            , content: DOM['$share02_box'].html()
-            , anim: 'up'
-            , style: 'position:fixed; bottom:0; left:0; width: 100%; height: '+ modalHeight +'; padding:10px 0; border:none;'
+        callNative({
+           type:'checkLogin'
         });
+
         return false;
     });
+
+    window.tigerwitWeb = function(isLogin){
+        if(isLogin == 1){
+            var versionName = getVersionName();
+            console.log('versionName='+versionName);
+            var modalHeight = '250px';
+            $('.new_share').hide();
+            if(versionName && parseFloat(versionName) >= 2.2){
+                modalHeight = '350px';
+                $('.new_share').show();
+            }
+            /*页面层*/
+            layIndex = layer.open({
+                type: 1
+                , content: DOM['$share02_box'].html()
+                , anim: 'up'
+                , style: 'position:fixed; bottom:0; left:0; width: 100%; height: '+ modalHeight +'; padding:10px 0; border:none;'
+            });
+        }
+    };
 
     function nativeShare(type) {
         console.log(type);
