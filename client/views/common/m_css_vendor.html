@@ -44,6 +44,14 @@
         }
     }
 
+    function getVersionName(){
+        var userAgent = window.navigator.userAgent;
+        var targetStr = 'tiger_version=';
+        if(userAgent.indexOf(targetStr) != -1){
+            return userAgent.substr(userAgent.indexOf(targetStr)+targetStr.length,5);
+        }
+    }
+
     function isIOS() {
         return /like Mac OS X/.test(navigator.userAgent);
     }

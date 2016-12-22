@@ -78,12 +78,20 @@
 
     /*邀请页*/
     DOM['$send_invitation'].on("tap", function () {
+        var versionName = getVersionName();
+        console.log('versionName='+versionName);
+        var modalHeight = '250px';
+        $('.new_share').hide();
+        if(versionName && parseFloat(versionName) >= 2.2){
+            modalHeight = '350px';
+            $('.new_share').show();
+        }
         /*页面层*/
         layIndex = layer.open({
             type: 1
             , content: DOM['$share02_box'].html()
             , anim: 'up'
-            , style: 'position:fixed; bottom:0; left:0; width: 100%; height: 350px; padding:10px 0; border:none;'
+            , style: 'position:fixed; bottom:0; left:0; width: 100%; height: '+ modalHeight +'; padding:10px 0; border:none;'
         });
         return false;
     });
@@ -94,12 +102,13 @@
             console.log("当前不是APP环境");
             return
         }
-        callNative({
+        var callConfig = {
             type: type,
             title: "你投资，我出钱！注册就送200美金！",
             description: "我刚刚在老虎外汇领了200美金，好东西必须分享，你也快来看看！",
-            url: window.location.hostname + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
-        });
+            url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
+        };
+        callNative(callConfig);
     }
 
     $(document).on('touchend', '.share02_modal', function(e){
@@ -121,6 +130,8 @@
             type = "weibo";
         } else if(id == id_arr[6]){
             layer.close(layIndex);
+            return false;
+        } else {
             return false;
         }
         nativeShare(type);

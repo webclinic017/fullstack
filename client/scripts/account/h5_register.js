@@ -386,7 +386,7 @@
 
         /*注册成功页面*/
         if (isRegSucceed()) {
-            /*第三页注册逻辑 - 对象*/
+            /*第二页注册逻辑*/
             var regist_page3 = {
                 getMt4: function () {
                     $.ajax({
