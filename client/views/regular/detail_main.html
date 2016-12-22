@@ -168,8 +168,8 @@
     }
     if(status == "end_trade"){
 %>
-                            <p class="font-size-16 pd-tp-30 text-center">已结算年化收益率</p>
-                            <p class="fix-list__list-red font-info text-center"><%= model.profit_rate_now %></p>
+                            <p class="font-size-16 pd-tp-30 text-center">已结算周收益率</p>
+                            <p class="fix-list__list-red text-center"><%= model.profit_rate_now %></p>
 <%
       if(model.profit_rate_last){
 %>

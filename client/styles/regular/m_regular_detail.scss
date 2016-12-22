@@ -130,7 +130,7 @@
     @include e(title) {
         color: $m-gray-base;
         font-size: px2rem(34);
-        margin: px2rem(20) 0 px2rem(45);
+        padding: px2rem(20) 0 px2rem(45);
     }
     @include e(content) {
 
