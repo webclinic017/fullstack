@@ -323,6 +323,11 @@
             color: $m-gray-base;
             font-size: px2rem(20);
             text-align: center;
+
+            .check_agreement {
+                height: 12px;
+                vertical-align: middle;
+            }
         }
         > .modal_btn {
             text-align: center;
