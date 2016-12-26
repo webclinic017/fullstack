@@ -79,7 +79,7 @@ select {
     resize:none;
     /*去掉内阴影*/
     border: 0; /* 方法1 */
-    -webkit-appearance: none; /* 方法2 */
+    // -webkit-appearance: none; /* 方法2 */
 }
 legend {
     color:#000;
