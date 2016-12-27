@@ -108,10 +108,10 @@
                     <td></td>
                 </tr>
                 <tr ng-if="success && masterList.length <= 0">
-                    <td colspan="4">{{ backErr.msg || '无数据'}}</td>
+                    <td colspan="6">{{ backErr.msg || '无数据'}}</td>
                 </tr>
                 <tr ng-if="! success">
-                    <td colspan="4">加载中...</td>
+                    <td colspan="6">加载中...</td>
                 </tr>
             </tbody>
         </table>
@@ -162,10 +162,10 @@
                     <td></td>
                 </tr>
                 <tr ng-if="success && copierList.length <= 0">
-                    <td colspan="5">{{ backErr.msg || '无数据'}}</td>
+                    <td colspan="6">{{ backErr.msg || '无数据'}}</td>
                 </tr>
                 <tr ng-if="! success">
-                    <td colspan="5">加载中...</td>
+                    <td colspan="6">加载中...</td>
                 </tr>
             </tbody>
         </table>

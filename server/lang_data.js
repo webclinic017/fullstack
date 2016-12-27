@@ -3,6 +3,7 @@ var company_name = process.env.COMPANY_NAME;
 var url_path = process.env.URL_PATH;
 var companyConfig = {};
 var indexBasePath = "/white_label";
+var date = require('./tools').date
 
 if (company_name === 'tigerwit') {
     companyConfig = {
@@ -270,11 +271,11 @@ module.exports = function () {
         "home50": { "en": "The ritual increased double", "zh": "礼增双重" },
         "home59": { "en": "The new user registration can get", "zh": "新用户注册享" },
         "home60": { "en": "$200", "zh": " $200" },
-        "home51": { "en": "Register during Dec 1st to Dec 31st", "zh": "活动时间:2016.12.1到2016.12.31" },
+        "home51": { "en": "Register during " + date.during('en'), "zh": "活动时间：" + date.during('zh') },
         "home52": { "en": "first deposit bonus", "zh": "首充送高达" },
         "home53": { "en": "Upto $10000", "zh": "10000美金" },
         "home54": { "en": "More prize after trading! Ticktock! ", "zh": "交易可领大奖哦！快来抢！" },
-        "home55": { "en": "Happy hour: Dec 1st to Dec 31st", "zh": "活动时间：2016.12.1至2016.12.31" },
+        "home55": { "en": "Happy hour: " + date.during('en'), "zh": "活动时间：" + date.during('zh') },
         "home56": { "en": "Fixed copy trading", "zh": "定期跟单" },
         "home57": { "en": "upto 60% yearly return", "zh": "年化收益可达" },
         "home58": { "en": "Monthly product is avaliable now!", "zh": "月盈产品火爆进行中" },
