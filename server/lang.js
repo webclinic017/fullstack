@@ -6,7 +6,7 @@ var querystring = require('querystring');
 
 module.exports = function () {
 
-    function Lang (req){
+    function Lang(req) {
         var cookieList = querystring.parse(req.headers.cookie, '; ');
         var language = 'zh';
 
@@ -15,7 +15,7 @@ module.exports = function () {
             if (name === 'lang') {
                 language = cookieList[name];
             }
-        }     
+        }
         this.language = language;
         // return this;         
     }
@@ -30,20 +30,20 @@ module.exports = function () {
         currentLanguage: function () {
             return this.language;
         },
-        text: function(name){
+        text: function (name) {
             var text;
-            if(data[name]){
+            if (data[name]) {
                 //console.info('langData load successful!',data[name][this.language])
                 text = data[name][this.language] || 'NODE-loadERR';
             } else {
-                console.error(' - - - langData load error! in word - ',name);
+                console.error(' - - - langData load error! in word - ', name);
                 text = 'NODE-loadERR'
             }
             return text;
         },
-        image: function(name){
+        image: function (name) {
             var path;
-            if(data["image"][name]){
+            if (data["image"][name]) {
                 path = data["image"][name][this.language];
             } else {
 
