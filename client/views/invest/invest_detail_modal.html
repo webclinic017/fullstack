@@ -5,7 +5,8 @@
         详情信息
     </h5>
 
-    <div class="system_modal__content">
+    <div class="system_modal__content relative">
+        <div tw-loading-img></div>
         <table class="table table-header">
             <colgroup>
                 <col width="22%">
@@ -31,8 +32,7 @@
         </table>
 
         <div class="invest_detail_modal__content">
-            <div tw-loading-img></div>
-
+            
             <table class="table table-hover table-striped table-bordered">
                 <colgroup>
                     <col width="22%">
@@ -79,5 +79,8 @@
                 无数据
             </div>
         </div>
+    </div>
+    <div ng-if="modal.pageBar" class="text-center">
+        <div tw-pagination></div>
     </div>
 </div>

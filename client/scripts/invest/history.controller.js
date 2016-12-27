@@ -16,6 +16,20 @@
         $scope.openInvestOwnDetailMdl = openInvestOwnDetailMdl;
         $scope.openInvestCopyDetailMdl = openInvestCopyDetailMdl;
 
+        $scope.pagebar = {
+            config: {
+                // total: , // 总页数
+                page: 1    
+            },
+            pages: [],
+            pagesBtn: [],
+            // selectPage: , bind to pagination.selectPage
+            getList: getInvestHistoryDetails          
+        };
+
+        var pagesize = 10;
+        var nowTrader = {};          // 当前打开的copied trader
+
         getInvestHistoryData();
         getInvestHistoryTraders();
 
@@ -52,20 +66,47 @@
 
         // 显示/隐藏 copied traders 列表的详情（复制交易历史订单）
         function showDetails(trader) {
+
+            if (nowTrader.usercode && nowTrader.usercode !== trader.usercode) {
+                nowTrader.detailsShow = false;
+            }
+            nowTrader = trader;
+
             if (trader.detailsShow) {
                 trader.detailsShow = false;
             } else {
-                // 若 copied traders 所属的 orders 为空，则请求数据
-                if (!trader.orders) {
-                    
-                    invest.getInvestHistoryDetails(trader.usercode).then(function (data) {
-                        trader.notFirstLoad = true;
-                        // console.info(data);
-                        trader.orders = data.data;
-                    });    
-                }
                 trader.detailsShow = true;
+                nowTrader.notFirstLoad = false;
+                getInvestHistoryDetails();
             }
+        }
+
+        function getInvestHistoryDetails (page) {
+            page = page ? page : 1;
+
+            invest.getInvestHistoryDetails(nowTrader.usercode, page, pagesize).then(function (data) {
+                nowTrader.notFirstLoad = true;
+                // console.info(data);
+                nowTrader.orders = data.data;
+
+                angular.extend($scope.pagebar.config, {
+                    total: getTotal(data.sum, pagesize),
+                    page: page
+                });
+            }); 
+        }
+
+        function getTotal(sum, pagesize) {
+            var total;
+            sum = parseInt(sum, 10); // list item 总个数
+            pagesize = parseInt(pagesize, 10); // 单页显示数
+
+            if (sum % pagesize > 0) {
+                total = parseInt(sum / pagesize) + 1;
+            } else {
+                total = parseInt(sum / pagesize);
+            }
+            return total;
         }
 
         function openInvestOwnDetailMdl (event) {
@@ -82,8 +123,7 @@
                     $scope.modal = {
                         price: '平仓价',
                         asset: '投入资金',
-                        usage : "history" //历史要做一些细节修改：平仓类型，时间
-
+                        usage : "history", //历史要做一些细节修改：平仓类型，时间
                     };
                     $scope.closeModal = closeModal;
                     
@@ -106,6 +146,8 @@
             event.stopPropagation();
             event.stopImmediatePropagation();
 
+            nowTrader.detailsShow = false;
+
             $modal.open({
                 templateUrl: '/views/invest/invest_detail_modal.html',
                 size: 'lg',
@@ -116,17 +158,41 @@
                     $scope.modal = {
                         price: '平仓价',
                         asset: '投入资金',
-                        usage : "history" //历史要做一些细节修改：平仓类型，时间
+                        usage : "history", //历史要做一些细节修改：平仓类型，时间
+                        pageBar: true
                     };
+                    $scope.pagebar = {
+                        config: {
+                            total: 1, // 总页数
+                            page: 1    
+                        },
+                        pages: [],
+                        pagesBtn: [],
+                        // selectPage: , bind to pagination.selectPage
+                        getList: getInvestHistoryDetailsMdl          
+                    };
+
                     $scope.closeModal = closeModal;
+
+                    getInvestHistoryDetailsMdl();
                     
-                    invest.getInvestHistoryDetails(usercode).then(function (data) {
-                        // console.info(data);
-                        $scope.$broadcast('hideLoadingImg');
-                        $scope.details = data.data;
-                        $scope.modal.show = true;
-                    });
-                    
+                    function getInvestHistoryDetailsMdl (page) {
+                        page = page ? page : 1;
+                        $scope.$broadcast('showLoadingImg');
+
+                        invest.getInvestHistoryDetails(trader.usercode, page, pagesize).then(function (data) {
+                            // console.info(data);
+                            $scope.$broadcast('hideLoadingImg');
+                            $scope.details = data.data;
+                            $scope.modal.show = true;
+
+                            angular.extend($scope.pagebar.config, {
+                                total: getTotal(data.sum, pagesize),
+                                page: page
+                            });
+                        }); 
+                    }
+
                     function closeModal() {
                         $modalInstance.dismiss();
                     }

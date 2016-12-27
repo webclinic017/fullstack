@@ -121,11 +121,11 @@
          *
          * @method getHistoryDetails
          */
-        function getInvestHistoryDetails(usercode) {
+        function getInvestHistoryDetails(usercode, page, pagesize) {
             return $http.post(o.getInvestHistoryDetailsApi, {
                 user_code: usercode,
-                page: 1,
-                pagesize: 1000
+                page: page,
+                pagesize: pagesize
             });
         }
        
