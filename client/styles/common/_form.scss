@@ -125,6 +125,8 @@
     @include e(input) {
         @extend .form-control;
         padding-right: 30px;
+        position: relative;
+        z-index: 2;
     }
     @include e(icon) {
         position: absolute;

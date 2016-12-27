@@ -65,7 +65,12 @@
         }
         if(status == "end_trade"){
 %>
+                                <%if(lang.isCompany("tigerwit")){%>
+                                <span>已结算年化收益率</span>
+                                <%}%>
+                                <%if(lang.isCompany("pkds")){%>
                                 <span>已结算周收益率</span>
+                                <%}%>
                                 <span class="fix-list__list-red"><%= product.profit_rate_now %></span>
                                 <span class="font-darker">预期年化收益率<span class="font-warning"><%= product.profit_rate_wish %></span></span>
 <%
