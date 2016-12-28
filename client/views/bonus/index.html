@@ -92,8 +92,8 @@
                 <tr ng-repeat="master in masterList" ng-if="masterList.length > 0">
                     <td class="font-info">{{ master.username }}</td>
                     <td><i class="fa fa-dollar"></i>{{ master.pay_noob }}</td>
-                    <td>{{ master.max_profit }}</td>
-                    <td>{{ master.pay_master }}</td>
+                    <td><i class="fa fa-dollar"></i>{{ master.max_profit }}</td>
+                    <td><i class="fa fa-dollar"></i>{{ master.pay_master }}</td>
                     <td>{{ master.pay_time }}</td>
                     <td class="font-success">
                         <button class="btn btn-primary btn-sm" ng-click="openBonusDetailMdl(master)">详情</button>
