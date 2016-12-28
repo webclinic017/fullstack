@@ -93,8 +93,8 @@
                                 </p>
                             </div>
                         </td>
-                        <td><i class="fa fa-dollar"></i>{{ order.open_price }}</td>
-                        <td><i class="fa fa-dollar"></i>{{ order.close_price }}</td>
+                        <td></i>{{ order.open_price }}</td>
+                        <td>{{ order.close_price }}</td>
                         <td ng-class="{'font-success': order.profit.indexOf('-') < 0, 'font-danger': order.profit.indexOf('-') >= 0}">
                             <i class="fa fa-dollar"></i>{{ order.profit }}
                         </td>
