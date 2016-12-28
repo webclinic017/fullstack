@@ -32,7 +32,7 @@
         //2016.12.1到2016.12.31
         var stDate = this.getCurrentMonthFirst();
         var endDate = this.getCurrentMonthLast();
-        console.log(stDate);
+        //console.log(stDate);
         var month = (new Date()).getMonth() + 1;
         var startZh = stDate[3] + '.' + month + '.' + stDate[2];
         var endZh = endDate[3] + '.' + month + '.' + endDate[2];

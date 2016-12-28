@@ -481,11 +481,16 @@
         float: right;
         >img{
             display: block;
+            width: 115%;
+            position: absolute;
+            right: 0;
+            top: 18px;
         }
         p{
             text-align: center;
             position: relative;
-            top: -30px;
+            bottom: -105px;
+            left: -7px;
         }
     }
 }
