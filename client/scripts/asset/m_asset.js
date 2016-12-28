@@ -148,7 +148,7 @@ $(document).ready(function () {
                 });
             } else {
                 layer.open({
-                    content: alert_msg,
+                    content: alert_msg+'<br>'+'如有疑问，请联系您的客户经理或联系客服（'+nodeResponseInfo.telephone+'）',
                     btn: "确定"
                 });
             }

@@ -17,6 +17,7 @@
     <br>
     <div ng-show="withdrawMessageSucc && !message.is_succ" class="withdraw__sys_tip">
         <p class="font-info">系统提示：{{message.error_msg}}</p>
+        <p class="font-info">如有疑问，请联系您的客户经理或联系客服（{{lang.text('telephone')}}）</p>
     </div>
     
     <div ng-show="withdrawMessageSucc && message.is_succ">
