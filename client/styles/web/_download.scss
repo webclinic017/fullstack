@@ -394,7 +394,7 @@
       }
       .line1.active {
         transition: left 1s ease;
-        left: 3rem;
+        left: 3.6rem;
       }
       .line2 {
         position: absolute;
@@ -403,11 +403,11 @@
       }
       .line2.active {
         transition: right 1s 1s ease;
-        right: 0.8rem;
+        right: 2.5rem;
       }
     }
-    .section1.active {
-      transition: background-position 1.2s linear;
+    .section1._active {
+      transition: background-position 0.8s linear;
       background-position: bottom center;
     }
 
@@ -490,8 +490,8 @@
       }
 
     }
-    .section2.active {
-      transition: background-position 1.2s linear;
+    .section2._active {
+      transition: background-position 0.8s linear;
       background-position: bottom center;
     }
 
@@ -540,8 +540,8 @@
         right: 3.2rem;
       }
     }
-    .section3.active {
-      transition: background-position 1.2s linear;
+    .section3._active {
+      transition: background-position 0.8s ease;
       background-position: bottom center;
     }
 
@@ -609,8 +609,8 @@
         width: px2rem(330);
       }
     }
-    .section4.active {
-      transition: background-position 1.2s linear;
+    .section4._active {
+      transition: background-position 0.8s ease-out;
       background-position: bottom left;
     }
 
@@ -646,7 +646,7 @@
         color: #fff;
       }
     }
-    .section5.active {
+    .section5._active {
       transition: all 12s linear;
       background-size: 140% 140%;
     }
