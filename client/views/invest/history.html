@@ -52,7 +52,7 @@
                     <th class="">
                         <i class="fa fa-dollar"></i>{{ orderHistory.group_occupy_asset }}
                     </th>
-                    <th ng-class="{'font-success': orderHistory.group_profit.indexOf('-') < 0, 'font-danger':  orderHistory.group_profit.indexOf('-') >= 0}">
+                    <th ng-class="{'font-success': orderHistory.group_profit.indexOf('-') != -1, 'font-danger':  orderHistory.group_profit.indexOf('-') < 0}">
                         <i class="fa fa-dollar"></i>{{ orderHistory.group_profit }}
                     </th>
                     <th class="invest_orders__btn">
@@ -96,7 +96,7 @@
                         </td>
                         <td>{{ order.volume }}</td>
                         <td><i class="fa fa-dollar"></i>{{ order.occupy_asset }}</td>
-                        <td ng-class="{'font-success': order.profit.indexOf('-') < 0, 'font-danger': order.profit.indexOf('-') >= 0}">
+                        <td ng-class="{'font-success': order.profit.indexOf('-') != -1, 'font-danger': order.profit.indexOf('-') < 0}">
                             <i class="fa fa-dollar"></i>{{ order.profit }}
                         </td>
                 
@@ -144,7 +144,7 @@
                         <th class="">
                             <i class="fa fa-dollar"></i>{{ trader.amount }}
                         </th>
-                        <th ng-class="{'font-success': trader.profit.indexOf('-') < 0, 'font-danger':  trader.profit.indexOf('-') >= 0}">
+                        <th ng-class="{'font-success': trader.profit.indexOf('-') != -1, 'font-danger':  trader.profit.indexOf('-') < 0}">
                             <i class="fa fa-dollar"></i>{{ trader.profit }}
                         </th>
                         <th class="invest_orders__btn">
@@ -189,7 +189,7 @@
                             </td>
                             <td>{{ order.volume }}</td>
                             <td><i class="fa fa-dollar"></i>{{ order.occupy_asset }}</td>
-                            <td ng-class="{'font-success': order.profit.indexOf('-') < 0, 'font-danger': order.profit.indexOf('-') >= 0}">
+                            <td ng-class="{'font-success': order.profit.indexOf('-') != -1, 'font-danger': order.profit.indexOf('-') < 0}">
                                 <i class="fa fa-dollar"></i>{{ order.profit }}
                             </td>
                     

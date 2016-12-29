@@ -143,6 +143,11 @@
             margin-top: 4px;
             margin-bottom: 4px; 
         }
+
+        .btn-msg{
+            font-size: 13px;
+            color: $gray-dark;
+        }
     }
 
     @include e(detail) {

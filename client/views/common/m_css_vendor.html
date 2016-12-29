@@ -55,4 +55,15 @@
     function isIOS() {
         return /like Mac OS X/.test(navigator.userAgent);
     }
+
+    /*
+        判断是否在tigerwit公司
+    */
+    function isTigerCo(){
+        if($.cookie('company_name') == 'tigerwit'){
+            return true;
+        } else {
+            return false;
+        }
+    }
 </script>

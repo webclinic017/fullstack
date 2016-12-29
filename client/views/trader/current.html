@@ -34,10 +34,10 @@
                     <td>
                         {{ order.position_time | duration }}
                     </td>
-                    <td ng-class="{'font-danger': order.profit.indexOf('-') >= 0, 'font-success': order.profit.indexOf('-') < 0}">
+                    <td ng-class="{'font-danger': order.profit.indexOf('-') > 0, 'font-success': order.profit.indexOf('-') != -1}">
                         {{ order.points }}
                     </td>
-                    <td ng-class="{'font-danger': order.profit.indexOf('-') >= 0, 'font-success': order.profit.indexOf('-') < 0}">
+                    <td ng-class="{'font-danger': order.profit.indexOf('-') > 0, 'font-success': order.profit.indexOf('-') != -1}">
                         <i class="fa fa-dollar"></i>{{ order.profit }}
                     </td>
                 </tr>

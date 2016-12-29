@@ -69,8 +69,8 @@
                         <td>{{ detail.close_price }}</td>
                         <td>{{ detail.volume }}</td>
                         <td><i class="fa fa-dollar"></i>{{ detail.occupy_asset }}</td>
-                        <td ng-class="{'font-success': detail.profit.indexOf('-') < 0, 'font-danger': detail.profit.indexOf('-') >= 0}"><i class="fa fa-dollar"></i>{{ detail.profit }}</td>
-                        <td ng-class="{'font-success': detail.profit_rate.indexOf('-') < 0, 'font-danger': detail.profit_rate.indexOf('-') >= 0}">{{ detail.profit_rate }}%</td>
+                        <td ng-class="{'font-success': detail.profit.indexOf('-') != -1, 'font-danger': detail.profit.indexOf('-') < 0}"><i class="fa fa-dollar"></i>{{ detail.profit }}</td>
+                        <td ng-class="{'font-success': detail.profit_rate.indexOf('-') != -1, 'font-danger': detail.profit_rate.indexOf('-') < 0}">{{ detail.profit_rate }}%</td>
                     </tr>
                 </tbody>
             </table>
