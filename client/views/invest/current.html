@@ -132,7 +132,7 @@
                             </a>
                             <i class="fa fa-chevron-right" ng-show="!orderCurrent.fromDetailsShow"></i>
                             <i class="fa fa-chevron-up font-info" ng-show="orderCurrent.fromDetailsShow"></i><br>
-                            <span class="invest_orders__type own">复制持仓单</span>
+                            <span class="invest_orders__type copy">跟随持仓</span>
                         </div>
                     </th>
                     <th colspan="2" class="invest_orders__rate-promise">
@@ -144,7 +144,8 @@
                         <i class="fa fa-dollar"></i>{{ from_orders_profit }}
                     </th>
                     <th class="invest_orders__btn">
-                        <!-- <button href="" class="btn btn-primary btn-sm" ng-click="openInvestOwnDetailMdl($event)">详情</button> -->
+                         <button href="" class="btn btn-primary btn-sm" ng-click="openInvestOwnDetailMdl($event)">详情</button> 
+                         <p class="btn-msg">已取消复制</p>
                     </th>
                 </tr>
             </thead>
@@ -183,7 +184,6 @@
                         <td ng-class="{'font-success': order.profit.indexOf('-') != -1, 'font-danger': order.profit.indexOf('-') < 0}">
                             <i class="fa fa-dollar"></i>{{ order.profit }}
                         </td>
-                
                         <td>
                         </td>
                     </tr>
