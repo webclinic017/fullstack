@@ -298,7 +298,7 @@
           margin-top: px2rem(30);
           position: absolute;
           top: 15%;
-          transition: top 0.7s ease-in-out;
+          transition: top 0.7s linear;
           -moz-transition: top 0.7s linear;
           /* Firefox 4 */
           -webkit-transition: top 0.7s linear;

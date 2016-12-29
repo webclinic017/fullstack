@@ -2,7 +2,7 @@
 
     window.wxShareConfig = wxShareConfig;
     function wxShareConfig(config) {
-        console.log('wx_config:',config);
+        //console.log('wx_config:',config);
         config = config || {};
         var shareTitle = config.title;
         var shareSubTitle = config.subTitle;

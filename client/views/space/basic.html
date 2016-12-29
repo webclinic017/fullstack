@@ -49,13 +49,13 @@
 
         </li>
         <li class="space_basic__item">
-            <div class="space_basic__item-number" ng-class="{'font-danger': personal.position_profit_asset.indexOf('-') >= 0, 'font-success': personal.position_profit_asset.indexOf('-') < 0}">
+            <div class="space_basic__item-number" ng-class="{'font-danger': personal.position_profit_asset.indexOf('-') < 0, 'font-success': personal.position_profit_asset.indexOf('-') >= 0}">
                 <span><i class="fa fa-dollar"></i>{{ personal.position_profit_asset || '0.00' }}</span>
             </div>
             <div class="space_gray_color">浮动盈亏</div>
         </li>  
         <li class="space_basic__item">
-            <div class="space_basic__item-number" ng-class="{'font-danger': personal.profit_rate.indexOf('-') >= 0, 'font-success': personal.profit_rate.indexOf('-') < 0}">
+            <div class="space_basic__item-number" ng-class="{'font-danger': personal.profit_rate.indexOf('-') < 0, 'font-success': personal.profit_rate.indexOf('-') >= 0}">
                 <span>{{ personal.profit_rate || '0.00' }}</span>%
             </div>
             <div class="space_gray_color">总收益率</div>
