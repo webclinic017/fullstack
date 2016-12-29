@@ -72,6 +72,7 @@ $font-trader-gray-color: $gray-dark;
         //height: 100px;
         height: 80px;
         position: relative;
+        overflow: hidden;
 
         > img {
             display: inline-block;
