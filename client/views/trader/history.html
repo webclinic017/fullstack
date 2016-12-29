@@ -17,9 +17,7 @@
                 <tr ng-repeat="order in orders" ng-if="orders.length > 0">
                     <td class=""> 
                         <div class="history-operation-td text-left">
-                        <span class="icon-histroy icon-forex-{{ order.symbol.toLowerCase() }}">
-                            
-                        </span>
+                        <span class="icon-histroy icon-forex-{{ order.symbol.toLowerCase() }}"></span>
                         <div class="history-operation-box">
                             <p class="text-left">
                                 <span ng-class="order.action?'font-down':'font-up'">

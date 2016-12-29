@@ -126,7 +126,7 @@
                 }
 
                 if (symbol === 'US30') {
-                    return '道琼斯工业指数';
+                    return '道琼斯指数';
                 }
 
                 if (symbol === 'USA500') {
