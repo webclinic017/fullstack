@@ -111,9 +111,10 @@
                     $scope.backErr.system.status = 1;
 
                     // 神策数据统计
-                    sa.setProfile({
-                        phone: $scope.phone.phoneNew
-                    });
+                    // 不再统计phone 和 email
+                    // sa.setProfile({
+                    //     phone: $scope.phone.phoneNew
+                    // });
 
                     $timeout(function () {
                         $scope.backErr.system.show = false;
