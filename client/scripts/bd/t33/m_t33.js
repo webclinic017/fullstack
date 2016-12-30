@@ -7,11 +7,23 @@
     $(function () {
 
         if(wx){
+            // wxShareConfig({
+            //     title: '老虎外汇 年终钜献',
+            //     subTitle: '老虎外汇 年终钜献',
+            //     shareLink: window.location.href,
+            //     desc: '新用户注册可得200美金，交易可提取！',
+            //     img: window.location.origin + '/activity/logo.png',
+            //     trackPage: window.location.pathname.replace(/\//gi,''),
+            //     debug: false
+            // });
+
+            //-------- t33_sub ------
+
             wxShareConfig({
-                title: '老虎外汇 年终钜献',
-                subTitle: '老虎外汇 年终钜献',
+                title: '金鸡贺岁 吉兆满盈',
+                subTitle: '金鸡贺岁 吉兆满盈',
                 shareLink: window.location.href,
-                desc: '新用户注册可得200美金，交易可提取！',
+                desc: '老虎外汇壕礼大放送，注册送200美金，交易可提现！',
                 img: window.location.origin + '/activity/logo.png',
                 trackPage: window.location.pathname.replace(/\//gi,''),
                 debug: false
@@ -143,8 +155,5 @@
                 }
             }
         });
-
-
     });
-
 }());

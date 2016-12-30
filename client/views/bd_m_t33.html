@@ -1,35 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="keywords" content="<%= lang.text('companyZhName')%> <%= lang.text('companyEnName')%> 跟单交易 外汇 CFD 指数 股指 互联网金融">
     <meta name="description" content="<%= lang.text('companyZhName')%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
     <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyZhName')%>">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <title>
         <%= lang.text('companyZhName')%>
     </title>
-     <script type="text/javascript">;
-        (function(root) {
-            root._tt_config = true;
-            var tt_version = '1.2.6';
-            var ta = document.createElement('script'); ta.type = 'text/javascript'; ta.async = true;
-            ta.src = document.location.protocol + '//' + 's3.pstatp.com/adstatic/resource/landing_log/dist/' + tt_version + '/static/js/toutiao-tetris-analytics.js';
-            ta.onerror = function () {
-                var request = new XMLHttpRequest();
-                var web_url = window.encodeURIComponent(window.location.href);
-                var js_url  = ta.src;
-                var url = '//ad.toutiao.com/link_monitor/cdn_failed?web_url=' + web_url + '&js_url=' + js_url;
-                request.open('GET', url, true);
-                request.send(null);
-            }
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ta, s);
-        })(window);
-    </script>
+    <%if(page != 't33' && page != 't33_t'){%>
+        <% include bd/common/jrtt_script.html %>
+    <%}%>
 </head>
 <!-- 引入H5 CSS -->
 <!-- build:css(.tmp) /styles/h5_common.css -->
@@ -37,206 +24,204 @@
 <!-- endbuild -->
 <!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
 <% include common/m_css_vendor.html %>
-<% include common/common_header.html %>
-<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-<body>
-<div class="m_t33_layout">
-    <div class="full_page" id="dowebok">
-        <div class="section section1 <%=page%>">
-            <div class="t33_logo">
-                <img src="<%= lang.image('t33_logo')%>" alt="logo">
-            </div>
-            <button class="matters_btn <%=page%>" data-action="matters" id="test">注意事项</button>
-            <button class="detail btn1" data-action="detail1">详情</button>
-            <button class="detail btn2" data-action="detail2">详情</button>
-            <button class="registerNow registerNow1" data-action="registerNow"><%=regBtn_text%></button>
-            <div class="slide_arrow"></div>
-            <div class="layer_contentBox" id="layer_contentBox">
-                <div class="layer_content">
-                    <p class="close_layer" data-action="close">×</p>
-                    <div class="matters_con">
-                        <p><span>1</span>5天内入金200美金（包含）以上，所有订单平仓体验金扣除，重新发放200美金信用赠金，之后完成40手，可提取信用赠金+盈利；</p>
-                        <p><span>2</span>5天之后入金，只赠送100美金信用赠金，完成25手可取信用赠金+盈利；</p>
-                        <p><span>3</span>入金后所有订单平仓体验金扣除，重新发放相应信用赠金；</p>
-                        <%if(page == 't33'){%>
-                        <p><span>4</span>本活动的交易手数仅适用于外汇，贵金属以及能源类产品，CFD股指交易手数不计入统计范围；</p>
-                        <%} else if(page == 't33_t'){%>
-                        <p><span>4</span>本活动的交易手数仅适用于外汇，以及能源类产品，CFD股指交易手数不计入统计范围；</p>
-                        <%}%>
-                        <p><span>5</span>本活动仅限首次入金的新用户，为了保证您的资金快速出入，请提交正确的开户信息；</p>
-                        <p><span>6</span>定期跟单客户不参加以上任何活动;</p>
-                        <p><span>7</span>完成规定交易手数之前，赠金不可抵消账户亏损，若账户净值低于赠金金额的105%，
-                            <%= lang.text("companyZhName")%>有权强行平仓；</p>
-                        <p><span>8</span>所获赠金在首次出金时未完成相应手数将扣除所有赠金；</p>
-                        <p><span>9</span>用户需在活动期间完成首次入金方可获取信用赠金奖励；</p>
-                        <p><span>10</span>
-                            <%= lang.text("companyZhName")%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打
-                            <%= lang.text("telephone")%>.</p>
-                    </div>
-                    <div class="detail1_con">
-                        <p>注册可获得 <span class="text-shadow">200美金</span>体验资金</p>
-                        <p>可直接用于交易</p>
-                        <p>体验进即刻到账</p>
-                    </div>
-                    <div class="detail2_con">
-                        <p>首次充值大于2000美金（包含）</p>
-                        <p>可享用优厚的比例赠金,赠金计算方式如下</p>
-                        <table>
-                            <colgroup>
-                                <col width="30%"></col>
-                                <col width="40%"></col>
-                                <col width="30%"></col>
-                            </colgroup>
-                            <thead>
-                            <tr>
-                                <th>入金金额</th>
-                                <th>赠金比例</th>
-                                <th>交易手数</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>2000~4999美金</td>
-                                <td>10.0%</td>
-                                <td>赠金金额 / 4</td>
-                            </tr>
-                            <tr>
-                                <td>5000~9999美金</td>
-                                <td>12.5%</td>
-                                <td>赠金金额 / 4</td>
-                            </tr>
-                            <tr>
-                                <td>10000美金以上</td>
-                                <td>15.0% <br>(最多不超过10000美金)</td>
-                                <td>赠金金额 / 4</td>
-                            </tr>
-                            </tbody>
-                        </table>
+    <% include common/common_header.html %>
+        <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
+        <body>
+            <div class="m_t33_layout">
+                <div class="full_page" id="dowebok">
+                    <div class="section section1 <%=page%>">
+                        <div class="t33_logo">
+                            <img src="<%= lang.image('t33_logo')%>" alt="logo">
+                        </div>
+                        <button class="matters_btn <%=page%>" data-action="matters" id="test">注意事项</button>
+                        <button class="detail btn1" data-action="detail1">详情</button>
+                        <button class="detail btn2" data-action="detail2">详情</button>
+                        <button class="registerNow registerNow1" data-action="registerNow"><%=regBtn_text%></button>
+                        <div class="slide_arrow"></div>
+                        <div class="layer_contentBox" id="layer_contentBox">
+                            <div class="layer_content">
+                                <p class="close_layer" data-action="close">×</p>
+                                <div class="matters_con">
+                                    <p><span>1</span>5天内入金200美金（包含）以上，所有订单平仓体验金扣除，重新发放200美金信用赠金，之后完成40手，可提取信用赠金+盈利；</p>
+                                    <p><span>2</span>5天之后入金，只赠送100美金信用赠金，完成25手可取信用赠金+盈利；</p>
+                                    <p><span>3</span>入金后所有订单平仓体验金扣除，重新发放相应信用赠金；</p>
+                                    <%if(page == 't33'){%>
+                                        <p><span>4</span>本活动的交易手数仅适用于外汇，贵金属以及能源类产品，CFD股指交易手数不计入统计范围；</p>
+                                    <%} else if(page == 't33_t'){%>
+                                        <p><span>4</span>本活动的交易手数仅适用于外汇，以及能源类产品，CFD股指交易手数不计入统计范围；</p>
+                                    <%}%>
+                                        <p><span>5</span>本活动仅限首次入金的新用户，为了保证您的资金快速出入，请提交正确的开户信息；</p>
+                                        <p><span>6</span>定期跟单客户不参加以上任何活动；</p>
+                                        <p><span>7</span>完成规定交易手数之前，赠金不可抵消账户亏损，若账户净值低于赠金金额的105%，
+                                            <%= lang.text("companyZhName")%>有权强行平仓；</p>
+                                        <p><span>8</span>所获赠金在首次出金时未完成相应手数将扣除所有赠金；</p>
+                                        <p><span>9</span>用户需在活动期间完成首次入金方可获取信用赠金奖励；</p>
+                                        <p><span>10</span><%= lang.text("companyZhName")%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打<%= lang.text("telephone")%>.</p>
+                                </div>
+                                <div class="detail1_con">
+                                    <p>注册可获得 <span class="text-shadow">200美金</span>体验资金</p>
+                                    <p>可直接用于交易</p>
+                                    <p>体验进即刻到账</p>
+                                </div>
+                                <div class="detail2_con">
+                                    <p>首次充值大于2000美金（包含）</p>
+                                    <p>可享用优厚的比例赠金,赠金计算方式如下</p>
+                                    <table>
+                                        <colgroup>
+                                            <col width="30%"></col>
+                                            <col width="40%"></col>
+                                            <col width="30%"></col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>入金金额</th>
+                                                <th>赠金比例</th>
+                                                <th>交易手数</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>2000~4999美金</td>
+                                                <td>10.0%</td>
+                                                <td>赠金金额 / 4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5000~9999美金</td>
+                                                <td>12.5%</td>
+                                                <td>赠金金额 / 4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10000美金以上</td>
+                                                <td>15.0% <br>(最多不超过10000美金)</td>
+                                                <td>赠金金额 / 4</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <div class="section section2">
-            <div class="t33_logo">
-                <img src="<%= lang.image('t33_logo')%>" alt="logo">
-            </div>
-            <div class="five_ways">
-                <h2>外汇交易走红的 <img src="/images/bd/t33_5.png" alt="fiveWays">大秘籍</h2>
-                <div class="ways ways_1"><img src="/images/bd/t33_way1.png" alt="ways1">
-                    <div class="description">
-                        “T+0”交易。国内股民梦寐以求的模式
+                    <div class="section section2">
+                        <div class="t33_logo">
+                            <img src="<%= lang.image('t33_logo')%>" alt="logo">
+                        </div>
+                        <div class="five_ways">
+                            <h2>外汇交易走红的 <img src="/images/bd/t33_5.png" alt="fiveWays">大秘籍</h2>
+                            <div class="ways ways_1"><img src="/images/bd/t33_way1.png" alt="ways1">
+                                <div class="description">
+                                    “T+0”交易。国内股民梦寐以求的模式
+                                </div>
+                            </div>
+                            <div class="ways ways_2"><img src="/images/bd/t33_way2.png" alt="ways1">
+                                <div class="description">
+                                    双向交易模式，上涨或下跌时都能把握机会
+                                </div>
+                            </div>
+                            <div class="ways ways_3"><img src="/images/bd/t33_way3.png" alt="ways1">
+                                <div class="description">
+                                    日均数万亿美金交易量，涨跌都是市场行为
+                                </div>
+                            </div>
+                            <div class="ways ways_4"><img src="/images/bd/t33_way4.png" alt="ways1">
+                                <div class="description">
+                                    手里钱越来越潮了，换种方式进行全球资产配置
+                                </div>
+                            </div>
+                            <div class="ways ways_5"><img src="/images/bd/t33_way5.png" alt="ways1">
+                                <div class="description">
+                                    200美金即可开户交易，上班族也能轻松起步
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slide_arrow"></div>
+                        <button class="registerNow registerNow2" data-action="registerNow"><%=regBtn_text%></button>
                     </div>
-                </div>
-                <div class="ways ways_2"><img src="/images/bd/t33_way2.png" alt="ways1">
-                    <div class="description">
-                        双向交易模式，上涨或下跌时都能把握机会
+                    <div class="section section3">
+                        <div class="t33_logo">
+                            <img src="<%= lang.image('t33_logo')%>" alt="logo">
+                        </div>
+                        <div class="fresh_tips clearfix">
+                            <h2>外汇新鲜人 <img src="/images/bd/refresh_tip.png" alt="tip">速成</h2>
+                            <div class="fresh_tip tip1">
+                                <h3><span class="number">1</span>善选币种</h3>
+                                <p class="tip_con">
+                                    <%=sel_text%>主流货币，比如欧元兑美元(EURUSD)。优势:流通性好,波动能力强
+                                </p>
+                            </div>
+                            <div class="fresh_tip tip1">
+                                <h3><span class="number">2</span>止损止盈</h3>
+                                <p class="tip_con">
+                                    下单前一定要设置止损和止盈价位。开始阶段止损止盈点数控制在20点左右为宜
+                                </p>
+                            </div>
+                            <div class="fresh_tip tip1">
+                                <h3><span class="number">3</span>控制仓位</h3>
+                                <p class="tip_con">
+                                    外汇交易是保证金交易模式。新玩家初期资金仓位最好控制在3-4成左右。
+                                </p>
+                            </div>
+                            <div class="fresh_tip tip1">
+                                <h3><span class="number">4</span>资金分散</h3>
+                                <p class="tip_con">
+                                    若您的的账户有2000美金，可考虑1000美金用于“跟单”交易，另1000美金用于“微盘”交易
+                                </p>
+                            </div>
+                        </div>
+                        <div class="slide_arrow"></div>
+                        <button class="registerNow registerNow3" data-action="registerNow"><%=regBtn_text%></button>
                     </div>
-                </div>
-                <div class="ways ways_3"><img src="/images/bd/t33_way3.png" alt="ways1">
-                    <div class="description">
-                        日均数万亿美金交易量，涨跌都是市场行为
-                    </div>
-                </div>
-                <div class="ways ways_4"><img src="/images/bd/t33_way4.png" alt="ways1">
-                    <div class="description">
-                        手里钱越来越潮了，换种方式进行全球资产配置
-                    </div>
-                </div>
-                <div class="ways ways_5"><img src="/images/bd/t33_way5.png" alt="ways1">
-                    <div class="description">
-                        200美金即可开户交易，上班族也能轻松起步
-                    </div>
-                </div>
-            </div>
-            <div class="slide_arrow"></div>
-            <button class="registerNow registerNow2" data-action="registerNow"><%=regBtn_text%></button>
-        </div>
-        <div class="section section3">
-            <div class="t33_logo">
-                <img src="<%= lang.image('t33_logo')%>" alt="logo">
-            </div>
-            <div class="fresh_tips clearfix">
-                <h2>外汇新鲜人 <img src="/images/bd/refresh_tip.png" alt="tip">速成</h2>
-                <div class="fresh_tip tip1">
-                    <h3><span class="number">1</span>善选币种</h3>
-                    <p class="tip_con">
-                        <%=sel_text%>主流货币，比如欧元兑美元(EURUSD)。优势:流通性好,波动能力强
-                    </p>
-                </div>
-                <div class="fresh_tip tip1">
-                    <h3><span class="number">2</span>止损止盈</h3>
-                    <p class="tip_con">
-                        下单前一定要设置止损和止盈价位。开始阶段止损止盈点数控制在20点左右为宜
-                    </p>
-                </div>
-                <div class="fresh_tip tip1">
-                    <h3><span class="number">3</span>控制仓位</h3>
-                    <p class="tip_con">
-                        外汇交易是保证金交易模式。新玩家初期资金仓位最好控制在3-4成左右。
-                    </p>
-                </div>
-                <div class="fresh_tip tip1">
-                    <h3><span class="number">4</span>资金分散</h3>
-                    <p class="tip_con">
-                        若您的的账户有2000美金，可考虑1000美金用于“跟单”交易，另1000美金用于“微盘”交易
-                    </p>
-                </div>
-            </div>
-            <div class="slide_arrow"></div>
-            <button class="registerNow registerNow3" data-action="registerNow"><%=regBtn_text%></button>
-        </div>
-        <div class="section section4">
-            <div class="t33_logo">
-                <img src="<%= lang.image('t33_logo')%>" alt="logo">
-            </div>
-            <div class="t33_regBox">
-                <form>
-                    <div class="telephone">
-                        <input id="telephone" type="tel" placeholder="+86">
-                        <img src="/images/bd/t33_tel.png" alt="tel">
-                    </div>
-                    <div class="verify_code">
-                        <input type="number" placeholder="验证码" id="verify_code">
-                        <span class="verify_code_btn" id="verify_code_btn">获取验证码</span>
-                    </div>
-                    <div class="password">
-                        <input type="password" id="password" placeholder="组合字母数字,不少于六位">
-                        <span class="password_btn" id="password_btn">
+                    <div class="section section4">
+                        <div class="t33_logo">
+                            <img src="<%= lang.image('t33_logo')%>" alt="logo">
+                        </div>
+                        <div class="t33_regBox">
+                            <form>
+                                <div class="telephone">
+                                    <input id="telephone" type="tel" placeholder="+86">
+                                    <img src="/images/bd/t33_tel.png" alt="tel">
+                                </div>
+                                <div class="verify_code">
+                                    <input type="number" placeholder="验证码" id="verify_code">
+                                    <span class="verify_code_btn" id="verify_code_btn">获取验证码</span>
+                                </div>
+                                <div class="password">
+                                    <input type="password" id="password" placeholder="组合字母数字,不少于六位">
+                                    <span class="password_btn" id="password_btn">
                                             <img id="show" class="hide" src="/images/bd/t33_lock.jpg">
                                             <img id="hide" src="/images/bd/t33_lock.jpg">
                                         </span>
+                                </div>
+                            </form>
+                            <span class="submit_form" id="submit_form"><%=regBtn_text%></span>
+                        </div>
+                        <div class="m_t33_risk">
+                            风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。
+                            <%= lang.text("companyZhName")%>交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+                                <%=coInfo%>
+                        </div>
+                        <%if(page == 't33' && lang.isCompany("tigerwit")){%>
+                            <!-- H5公共footer -->
+                            <%- include('common/m_footer.html') %>
+                        <%}%>
                     </div>
-                </form>
-                <span class="submit_form" id="submit_form"><%=regBtn_text%></span>
+                </div>
             </div>
-            <div class="m_t33_risk">
-                风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。
-                <%= lang.text("companyZhName")%>交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
-                <%=coInfo%>
-            </div>
-            <%if(page == 't33' && lang.isCompany("tigerwit")){%>
-            <!-- H5公共footer -->
-            <%- include('common/m_footer.html') %>
-            <%}%>
-        </div>
-    </div>
-</div>
-</body>
-<% include common/m_js_vendor.html %>
+        </body>
+        <% include common/m_js_vendor.html %>
+        <!-- build:js(client) /scripts/m_vendor.js -->
+        <script src="/bower_components/jquery-3.0.0.min/index.js"></script>
+        <script src="/scripts/plugins/base64code.js"></script>
+        <script src="/scripts/plugins/jquery.tap.js"></script>
+        <script src="/scripts/plugins/plugins.js"></script>
+        <!-- endbuild -->
+        <!-- build:js(client) /scripts/m_t33.js -->
+        <script src="/scripts/bd/t33/m_t33.js"></script>
+        <script src="/scripts/account/h5_register.js"></script>
+        <script src="/scripts/bd/common/wx_share_config.js"></script>
+        <!-- endbuild -->
 
-<!-- build:js(client) /scripts/m_vendor.js -->
-<script src="/bower_components/jquery-3.0.0.min/index.js"></script>
-<script src="/scripts/plugins/base64code.js"></script>
-<script src="/scripts/plugins/jquery.tap.js"></script>
-<script src="/scripts/plugins/plugins.js"></script>
-<!-- endbuild -->
-<!-- build:js(client) /scripts/m_t33.js -->
-<script src="/scripts/bd/t33/m_t33.js"></script>
-<script src="/scripts/account/h5_register.js"></script>
-<script src="/scripts/bd/common/wx_share_config.js"></script>
-<!-- endbuild -->
-
-<!-- 推广脚本footer -->
-<%- include('bd/common/footer.html') %>
+        <!-- 推广脚本footer -->
+        <%- include('bd/common/footer.html') %>
 </html>

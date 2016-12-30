@@ -96,27 +96,27 @@ module.exports = function (app) {
         res.render('ranklist.html', extendPublic({}, req));
     });
 
-    app.route('/download').get(function (req, res) {
+    app.route('/:downloadPage(download|download_t)').get(function (req, res) {
+        var pageId = req.params.downloadPage;
         if (isMobile(req)) {
-            res.render('m_download.html', extendPublic({
-                regularTip: '收益同步',
-                download: '下载 APP',
-                coInfo: ""
-            }, req));
+            var extendObj = {};
+            if (pageId == 'download') {
+                extendObj = {
+                    regularTip: '收益同步',
+                    download: '下载 APP',
+                    coInfo: ""
+                }
+            } else {
+                extendObj = {
+                    regularTip: '订单同步',
+                    download: '打开APP 领$200体验金',
+                    coInfo: "Tiger Financial Technology PTY. Ltd."
+                }
+            }
+            res.render('m_download.html', extendPublic(extendObj, req));
         } else {
             setCompanyCookie(res);
             res.render('web_download.html', extendPublic({}, req));
-        }
-    });
-
-    /*市场部添加下载页*/
-    app.route('/download_t').get(function (req, res) {
-        if (COMPANY_NAME === 'tigerwit') {
-            res.render('m_download.html', extendPublic({
-                regularTip: '订单同步',
-                download: '打开APP 领$200体验金',
-                coInfo: "Tiger Financial Technology PTY. Ltd."
-            }, req));
         }
     });
 
@@ -433,6 +433,11 @@ module.exports = function (app) {
         }
     });
 
+    app.route('/bd/t31_game').get(function (req, res) {
+        setCompanyCookie(res);
+        res.render('bd_mt31_game', extendPublic({}, req))
+    });
+
     app.route('/bd/t32').get(function (req, res) {
         setCompanyCookie(res);
 
@@ -450,7 +455,6 @@ module.exports = function (app) {
 
     app.route('/bd/t32_t').get(function (req, res) {
         setCompanyCookie(res);
-
         // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
         if (COMPANY_NAME === 'tigerwit') {
             res.render('bd_m_t31', extendPublic({
@@ -463,37 +467,34 @@ module.exports = function (app) {
 
     });
 
-    app.route('/bd/t33').get(function (req, res) {
+    app.route('/bd/:page(t33|t33_t|t33_a|t33_b)').get(function (req, res) {
+        var pageId = req.params.page || 't33';
         setCompanyCookie(res);
         if (isMobile(req)) {
-            res.render('bd_m_t33', extendPublic({
-                regBtn_text: '领取赠金',
-                coInfo: "",
-                page: 't33',
-                sel_text: '首选'
-            }, req));
+            if (COMPANY_NAME === 'tigerwit') {
+                if (pageId == 't33') {
+                    res.render('bd_m_t33', extendPublic({
+                        regBtn_text: '领取赠金',
+                        coInfo: "",
+                        page: pageId,
+                        sel_text: '首选'
+                    }, req));
+                } else {
+                    res.render('bd_m_t33', extendPublic({
+                        regBtn_text: '前往领取赠金',
+                        coInfo: "Tiger Financial Technology PTY. Ltd.",
+                        page: pageId,
+                        sel_text: '优选'
+                    }, req));
+                }
+            } else {
+                res.render('bd_t33_sub', extendPublic({}, req));
+            }
         } else {
-            res.render('bd_t33', extendPublic({}, req));
+            res.render('bd_t33_sub', extendPublic({}, req));
         }
     });
 
-    app.route('/bd/:page(t33_t|t33_a|t33_b)').get(function (req, res) {
-        var page = req.params.page;
-        if (COMPANY_NAME === 'tigerwit') {
-            setCompanyCookie(res);
-            res.render('bd_m_t33', extendPublic({
-                regBtn_text: '前往领取赠金',
-                coInfo: "Tiger Financial Technology PTY. Ltd.",
-                page: page,
-                sel_text: '优选'
-            }, req));
-        }
-    });
-
-    app.route('/bd/t31_game').get(function (req, res) {
-        setCompanyCookie(res);
-        res.render('bd_mt31_game', extendPublic({}, req))
-    });
     // nodeAPI
     app.route('/napi').get(function (req, res) {
         var action = req.query.action;
