@@ -32,19 +32,20 @@
         //2016.12.1到2016.12.31
         var stDate = this.getCurrentMonthFirst();
         var endDate = this.getCurrentMonthLast();
-        console.log(stDate);
+        //console.log(stDate);
         var month = (new Date()).getMonth() + 1;
         var startZh = stDate[3] + '.' + month + '.' + stDate[2];
         var endZh = endDate[3] + '.' + month + '.' + endDate[2];
         var duringEn = stDate[1] + ' 1st To ' + stDate[1] + ' ' + endDate[2] + 'st';
         //Dec 1st to Dec 31st
         if (type == 'zh') {
-          return startZh + ' 到 ' + endZh
+          // return startZh + ' 到 ' + endZh
+          return '2017年1月1日 - 2017年2月28日'
         }
         else if (type == 'en') {
-          return duringEn;
+          //return duringEn;
+          return 'Jan 01st 2017 To Feb 28th 2017'
         }
-
       }
     }
   }

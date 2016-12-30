@@ -165,6 +165,7 @@
         background-position: center top;
         background-size: auto 100%;
       }
+      
       position: relative;
       .layer_contentBox {
         display: none;
@@ -183,10 +184,12 @@
         position: absolute;
       }
       .matters_btn {
-        top: 32%;
-        right: px2rem(145);
+
+        top: 37%;
+        right: 4rem;
         &.t33_t,&.t33_a,&.t33_b{
           right: 40%;
+          top: 38%!important;
         }
       }
       .detail {
