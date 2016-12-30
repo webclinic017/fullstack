@@ -34,7 +34,7 @@
 
 
             asset.getHistory(page, pagesize).then(function (data) {
-                //console.log(data,1);
+                // console.info(data.records[0]);
                 $scope.historyList = data.records;
                 //console.log(data.records);
                 $scope.$emit('showLoadingImg');
