@@ -27,7 +27,7 @@
             </td>
             <td>
                 <span>{{ history.status_desc }}</span>
-                <span ng-if="history.status === 2">
+                <span ng-if="history.status === 2 && history.type === 1">
                     <a class="font-info" href="/action/public/v4/pay_order/{{history.code}}" target="_blank">继续充值</a>
                 </span>
                  <span ng-if="history.status === -1">
