@@ -36,11 +36,11 @@
                 return Math.floor((timestamp / (60 * 60 * 24 * 7))) + '周';
             }
 
-            if (timestamp < 60 * 60 * 24 * 7 * 30 * 12) {
-                return Math.floor((timestamp / (60 * 60 * 24 * 7 * 30))) + '月';
+            if (timestamp < 60 * 60 * 24 * 30 * 12) {
+                return Math.floor((timestamp / (60 * 60 * 24 * 30))) + '月';
             }            
 
-            return Math.floor((timestamp / (60 * 60 * 24 * 7 * 30 * 12))) + '年';
+            return Math.floor((timestamp / (60 * 60 * 24 * 30 * 12))) + '年';
         }
     }
 })();
