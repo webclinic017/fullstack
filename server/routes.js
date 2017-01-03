@@ -528,6 +528,7 @@ module.exports = function (app) {
                 for (var i = 0; i < data_pre.length; i++) {
                     var data_new_item = deepCopy(data_pre[i]);
 
+                    data_new_item["name"] = data_new_item["name"].substring(1, data_new_item["name"].length-1);
                     data_new_item["profit_rate_wish_year"] = data_new_item["profit_rate_wish"];
                     data_new_item["profit_rate_wish"] = Math.ceil(data_new_item["profit_rate_wish"].split("%")[0] / 12) + '%';
                     data_pre_new.push(data_new_item);

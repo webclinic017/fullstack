@@ -54,7 +54,7 @@ module.exports = {
             start_date_appoint: "2016.12.31 20:00:00", //预约开始时间 exam:'2016.5.17'
             end_date_appoint : "2017.01.01 20:00:00",  //预约结束时间 exam:'2016.5.17'
             start_date_trade : "2017.01.02 00:00:00",  //开始交易时间 exam:'2016.5.17'
-            progress : "20", //投资进度 exam:50
+            progress : "100", //投资进度 exam:50
             jiafang:"派克道森", //甲方，操盘手，出现在agree里
             team_intro : "team_pkds", //文件名，团队介绍模块
             desc_risk : "动用杠杆不超过100倍，亏损达到账户初始资金的50%时，停止交易.", //风险控制
