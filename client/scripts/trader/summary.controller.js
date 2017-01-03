@@ -27,13 +27,13 @@
         function rendColumnChart(usercode) {
             /*调接口获取数据*/
             trader.getHistoricalRate(usercode).then(function (return_data) {
-                //console.log(return_data);
+                // console.log(return_data.data);
                 if (return_data.error_code == 0 && return_data.data.length > 0) {
                     //console.log(return_data);
                     var data = return_data.data;
                     /*解析数据*/
                     $scope.columnData = parseData("column", data);
-                    //console.log($scope.columnData);
+                    // console.log($scope.columnData);
                     /*让下拉框默认选中数据最后一项*/
                     $scope.selected = $scope.columnData[$scope.columnData.length - 1];
                     //渲染到图表
@@ -55,12 +55,11 @@
             var targetArr = [];
             if (type == "column") {
                 var count = 0;
-                var pin = data[0].t.split("-")[0];
+                // var pin = data[0].t.split("-")[0];
+                var pin = 2000; // 随便写的，确保先进入if
                 data.forEach(function (item, index) {
                     if (item.t.indexOf(pin) < 0) {
-                        count++;
                         pin = item.t.split("-")[0];
-                    } else {
                         /*往数组中新增一项*/
                         targetArr[count] = {
                             year: pin,
@@ -68,9 +67,13 @@
                         };
                         for (var ii = 0; ii < data.length; ii++) {
                             if (data[ii].t.indexOf(targetArr[count].year) >= 0) {
-                                targetArr[count].data[parseInt(data[ii].t.split("-")[1]) - 1] = data[ii].v
+                                targetArr[count].data[parseInt(data[ii].t.split("-")[1]) - 1] = data[ii].v;
                             }
                         }
+
+                        count++;
+                    } else {
+                        // 重复年份
                     }
                 });
             } else if (type == "area") {
@@ -157,7 +160,7 @@
         getMonthlySymbols(usercode);
         function getMonthlySymbols(usercode, date) {
             trader.getMonthlySymbols(usercode, date).then(function (data) {
-                console.log(data);
+                // console.log(data);
                 if (!data.is_succ) {
                     return false;
                 }
