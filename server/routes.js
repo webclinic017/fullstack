@@ -495,6 +495,18 @@ module.exports = function (app) {
         }
     });
 
+    // 从 wap 项目迁移过来的功能
+    app.route('/m/vue/:subpage(password)').get(function (req, res) {
+        var subpage = req.params.subpage || 'password';
+        var pageInfo = {
+            id: subpage
+        };
+        setCompanyCookie(res);
+        res.render('m_vue.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
+
     // nodeAPI
     app.route('/napi').get(function (req, res) {
         var action = req.query.action;
