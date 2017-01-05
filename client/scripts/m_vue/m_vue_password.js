@@ -45,9 +45,9 @@ if (pageType === "password") {
                     /*如果所有条件都是false*/
                     if(!self.$validatorMethod.invalid){
                         self.clickable.submit = false;
-                        console.info("success");
+                        // var test = self.$resource('/action/public/v4/change_password');
 
-                        self.$http.post('/action/public/v4/change_password', {
+                        apiUrlResource.changePwd.save({
                             origin_pwd: self.password.pwdOld,
                             new_pwd: self.password.pwdNew
                         }).then(function (response) {
