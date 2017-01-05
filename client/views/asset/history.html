@@ -21,7 +21,7 @@
         <tbody>
         <tr ng-repeat="history in historyList">
             <td>{{ history.timestamp | dateFormatter }}</td>
-            <td>{{ history.status }}</td>
+            <td>{{ history.status > 0 ? '充值' : '提现'}}</td>
             <td ng-class="{'font-danger': history.status === 2, 'font-success': history.status === 4, 'font-base': history.status === -2}">
                 ${{ history.amount }}
             </td>
