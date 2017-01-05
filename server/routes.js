@@ -396,10 +396,16 @@ module.exports = function (app) {
         res.render('waiting', extendPublic({}, req));
     });
 
+    app.route('/bd/yellow').get(function (req, res) {
+        setCompanyCookie(res);
+        res.render('bd_m_yellow', extendPublic({}, req));
+    });
+
     app.route('/bd/t29').get(function (req, res) {
         setCompanyCookie(res);
         res.render('bd_t29', extendPublic({}, req));
     });
+
     app.route('/bd/t30').get(function (req, res) {
         setCompanyCookie(res);
         if (isMobile(req)) {
