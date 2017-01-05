@@ -3,7 +3,8 @@ var company_name = process.env.COMPANY_NAME;
 var url_path = process.env.URL_PATH;
 var companyConfig = {};
 var indexBasePath = "/white_label";
-var date = require('./tools').date
+var date = require('./tools').date;
+var versionAndroidApp = require('./app_ctrl.config').getAppInfo().url;
 
 if (company_name === 'tigerwit') {
     companyConfig = {
@@ -17,7 +18,7 @@ if (company_name === 'tigerwit') {
         telephone: "400 - 809 - 8509",
         webSite: "www.tigerwit.com",
         webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
-        androidApp: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.2.1.apk",
+        androidApp: versionAndroidApp,
 
         // path
         logoPathZh: indexBasePath + "/tigerwit-logo.png",
@@ -51,7 +52,7 @@ if (company_name === 'pkds') {
         telephone: "400 - 900 - 9296",
         webSite: "www.pkdsfx.com",
         webMt4Download: "http://pkdsfx.com/downloads/mt4/parkerdawson4setup.exe",
-        androidApp: "https://www.pkdsfx.com/downloads/apk/parkerdawson_v1.0.apk",
+        androidApp: versionAndroidApp,
 
         // path
         logoPathZh: indexBasePath + "/pkds-logo.png",
