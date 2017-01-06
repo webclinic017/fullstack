@@ -503,6 +503,18 @@ module.exports = function (app) {
         }
     });
 
+    // 从 wap 项目迁移过来的功能 >> vue 项目
+    app.route('/m/wap/:subpage(info|password|phone|avatar|username|location|email)').get(function (req, res) {
+        var subpage = req.params.subpage || 'info';
+        var pageInfo = {
+            id: subpage
+        };
+        setCompanyCookie(res);
+        res.render('m_vue.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
+
     // nodeAPI
     app.route('/napi').get(function (req, res) {
         var action = req.query.action;
