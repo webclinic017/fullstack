@@ -1,6 +1,4 @@
-var pageType = $(".m_vue").attr("data-page");
-
-if (pageType === "password") {
+if ($(".m_vue").attr("data-page") === "password") {
 
     var passwordApp = new Vue({
         el: '#m_vue_password',
