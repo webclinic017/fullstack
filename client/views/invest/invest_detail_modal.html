@@ -92,7 +92,7 @@
                         <td><i class="fa fa-dollar"></i>{{ detail.occupy_asset }}</td>
                         <td ng-class="{'font-success': detail.profit.indexOf('-') != -1, 'font-danger': detail.profit.indexOf('-') < 0}"><i class="fa fa-dollar"></i>{{ detail.profit }}</td>
                         <td ng-class="{'font-success': detail.profit_rate.indexOf('-') != -1, 'font-danger': detail.profit_rate.indexOf('-') < 0}">{{ detail.profit_rate }}%</td>
-                        <td ng-if="follow_master">follow_master</td>
+                        <td ng-if="follow_master">{{ detail.master_name }}</td>
                     </tr>
                 </tbody>
             </table>
