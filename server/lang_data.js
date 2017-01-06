@@ -802,7 +802,7 @@ module.exports = function () {
         "mAssetWithdrawService": { "zh": "客服帮助", "en": "Customer service" },
 
         // 注册页 用户协议
-        "mAgreementTitle1": { "zh": "客户申明", "en": "DBC" },
+        "mAgreementTitle1": { "zh": "客户声明", "en": "DBC" },
         "mAgreementTitle2": { "zh": "风险披露书", "en": "RDS" },
         "mAgreementTitle3": { "zh": "交易须知条件", "en": "TNFU" },
         "mAgreementOne1": { "zh": "客户声明", "en": "DBC(Declaration by Client)" },

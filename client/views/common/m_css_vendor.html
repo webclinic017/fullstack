@@ -23,7 +23,7 @@
 
     //native和h5通讯
     function callNative(oAction) {
-        var sAction = JSON.stringify(oAction);
+        var sAction = JSONs.stringify(oAction);
         //IOS和Android均会在页面写入该对象。只是调用方法略不同
         if (isIOS()) {
             TigerwitNative(sAction);

@@ -396,10 +396,18 @@ module.exports = function (app) {
         res.render('waiting', extendPublic({}, req));
     });
 
+    app.route('/bd/yellow').get(function (req, res) {
+        if (COMPANY_NAME === 'tigerwit') {
+            setCompanyCookie(res);
+            res.render('bd_m_yellow', extendPublic({}, req));
+        }
+    });
+
     app.route('/bd/t29').get(function (req, res) {
         setCompanyCookie(res);
         res.render('bd_t29', extendPublic({}, req));
     });
+
     app.route('/bd/t30').get(function (req, res) {
         setCompanyCookie(res);
         if (isMobile(req)) {
@@ -528,7 +536,7 @@ module.exports = function (app) {
                 for (var i = 0; i < data_pre.length; i++) {
                     var data_new_item = deepCopy(data_pre[i]);
 
-                    data_new_item["name"] = data_new_item["name"].substring(1, data_new_item["name"].length-1);
+                    data_new_item["name"] = data_new_item["name"].substring(1, data_new_item["name"].length - 1);
                     data_new_item["profit_rate_wish_year"] = data_new_item["profit_rate_wish"];
                     data_new_item["profit_rate_wish"] = Math.ceil(data_new_item["profit_rate_wish"].split("%")[0] / 12) + '%';
                     data_pre_new.push(data_new_item);
