@@ -9,7 +9,6 @@ if ($(".m_vue").attr("data-page") === "info") {
                     state_name: '',
                     city_name: ''
                 },
-                email: '',
                 avatar: ''
             }
         },
@@ -30,20 +29,10 @@ if ($(".m_vue").attr("data-page") === "info") {
             }, function (error) {
                 console.info(error);
             });
-
-            apiUrlResource.getSettingInfo.get({type: 'Profile'}).then(function (response) {
-                var data = JSON.parse(response.data);
-                // console.info(data);
-                if (data.is_succ) {
-                    self.settingInfo.email = data.data.email;
-                }
-            }, function (error) {
-                console.info(error);
-            });
         },
         methods: {
             toStatePage: function (page) {
-                var action_address = window.location.origin + "/m/wap/" + page;
+                var action_address = window.location.origin + "/m/wap/info_" + page + "/index";
                 console.info(action_address);
                 callNative({
                     type: "openUrl",

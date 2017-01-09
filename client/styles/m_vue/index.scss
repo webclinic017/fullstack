@@ -2,6 +2,10 @@
     padding-left: 30px;
 }
 
+.primary-bg{
+    background: $brand-primary;
+}
+
 @include b(m_vue) {
     padding: 30px 10px 0px;
 
@@ -15,7 +19,7 @@
 
 // 内容导航
 // --------------------------------------------------
-@include b(m_vue_info_nav) {
+@include b(m_vue_nav) {
     background-color: #fff;
     padding-left: 10px;
     border-top: 1px solid #f0f0f0;
@@ -23,7 +27,7 @@
     
     > li {
 
-        &:first-child {
+        &.nav_avatar {
             a {
                 line-height: 50px;
             }
@@ -61,3 +65,4 @@
         color: #888;
     }
 }
+

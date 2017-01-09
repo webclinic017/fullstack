@@ -7,7 +7,7 @@
                        type="password"
                        placeholder="原密码"
                        initial="off"
-                       :class="{'form-control-error': frontErr.pwdOld.show &&$validatorMethod.pwdOld.noempty}"
+                       :class="{'form-control-error': frontErr.pwdOld.show && $validatorMethod.pwdOld.noempty}"
                        v-validate:pwd-old="['noempty']" 
                        v-model="password.pwdOld"
                        @focus="hideFrontErr('pwdOld')"
