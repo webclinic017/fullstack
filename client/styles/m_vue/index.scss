@@ -1,0 +1,68 @@
+.m_vue_form-control {
+    padding-left: 30px;
+}
+
+.primary-bg{
+    background: $brand-primary;
+}
+
+@include b(m_vue) {
+    padding: 30px 10px 0px;
+
+    &.m_vue_bgc {
+        margin-left: -10px;
+        margin-right: -10px;
+        background-color: #fafafa;
+        height: 100%;
+    }
+}
+
+// 内容导航
+// --------------------------------------------------
+@include b(m_vue_nav) {
+    background-color: #fff;
+    padding-left: 10px;
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+    
+    > li {
+
+        &.nav_avatar {
+            a {
+                line-height: 50px;
+            }
+        }
+        &:last-child {
+            a {
+                border-bottom: none;
+            }
+        }
+
+        > a {
+            display: block;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-right: 10px;
+            border-bottom: 1px solid #f0f0f0;
+            line-height: 20px;
+        }
+    }
+
+    @include e(avatar) {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        vertical-align: middle;
+    }
+
+    @include e(title) {
+        font-size: 16px;
+        color: #333;
+    }
+
+    @include e(enter) {
+        float: right;
+        color: #888;
+    }
+}
+
