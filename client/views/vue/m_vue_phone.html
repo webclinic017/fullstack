@@ -32,49 +32,42 @@
                 <div class="col-xs-6">
                     <div class="form-control-wrapper">
                         <input class="form-control m_vue_form-control" 
-                               name="verifyCode" 
+                               name="code"
                                type="text"
                                placeholder="验证码"
                                required
-                               ng-class="{'form-control-error': (frontErr.verifyCode.show && phoneForm.verifyCode.$invalid) || (backErr.verifyCode.show && backErr.verifyCode.status > 0)}"
-                               ng-model="phone.verifyCode"
-                               ng-focus="hideErr('verifyCode')"
-                               ng-blur="showErr('verifyCode')">
-                        
+                               :class="{'form-control-error': (frontErr.code.show && $checkTel.code.noempty) || (backErr.code.show && backErr.code.status > 0)}"
+                               :model="code"
+                               v-validate:code="['noempty']"
+                               @focus="hideFrontErr('code')"
+                               @blur="showFrontErr('code')">
                         <i class="form-control-icon fa fa-pencil"></i>
 
-                        <div ng-show="frontErr.verifyCode.show">
-                            <p class="alert-arrow_tp_lf" ng-show="phoneForm.verifyCode.$error.required">
+                        <div v-show="frontErr.code.show">
+                            <p class="alert-arrow_tp_lf" v-show="$checkTel.code.noempty">
                                 请输入验证码
                             </p>
                         </div>
 
-                        <div ng-show="backErr.verifyCode.show">
-                            <p class="alert-arrow_tp_lf" ng-show="backErr.verifyCode.status === 1">
+                        <div v-show="backErr.verifyCode.show">
+                            <p class="alert-arrow_tp_lf" v-show="backErr.code.status === 1">
                                 验证码不正确
                             </p>
                         </div>
+
                     </div>
                 </div>
+
                 <div class="col-xs-6">
                     <div class="relative">
-                        <button class="btn btn-lg primary-bg btn-info" tw-verify-timer start-timer="startTimer" is-voice-code="isVoiceCode" verify-code-btn-clickable="clickable.verifyCode" ng-disabled="!clickable.verifyCode" ng-click="getVerifyCode()">
-                            获取验证码
+                        <button class="btn btn-lg primary-bg btn-info" 
+                            start-timer="startTimer" 
+                            is-voice-code="isVoiceCode" 
+                            verify-code-btn-clickable="clickable.code"
+                            :disabled="!clickable.code"
+                            @click="getCode()">
+                            {{ codeBtn_msg }}
                         </button>
-
-                        <div ng-show="backErr.verifyCodeBtn.show">
-                            <p class="alert-arrow_tp_lf" ng-show="backErr.verifyCodeBtn.status == 1">
-                                1 分钟内只可发送 1 次验证码
-                            </p>
-
-                            <p class="alert-arrow_tp_lf" ng-show="backErr.verifyCodeBtn.status == 2">
-                                1 小时内只可发送 10 次验证码
-                            </p>
-
-                            <p class="alert-arrow_tp_lf" ng-show="backErr.verifyCodeBtn.status == 5">
-                                验证码发送失败
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -85,11 +78,11 @@
                 </p>
             </div>
 
-            <button @click="submitPhone" class="btn btn-primary primary-bg btn-lg mg-tp-20" v-if="clickable.submit">
+            <button @click="submitMethod()" class="btn btn-primary primary-bg btn-lg mg-tp-20" v-show="clickable.submit">
                 提交
             </button>
 
-            <button class="btn btn-info btn-lg primary-bg mg-tp-20" v-if="!clickable.submit">
+            <button class="btn btn-info btn-lg primary-bg mg-tp-20" v-show="!clickable.submit">
                 <i class="loading fa fa-spinner"></i>
                 提交中
             </button>
