@@ -1,7 +1,7 @@
-if ($(".m_vue").attr("data-page") === "phone") {
+if ($(".m_vue").attr("data-page") === "binding_phone") {
 
     var phoneApp = new Vue({
-        el: '#m_vue_phone',
+        el: '#m_vue_binding_phone',
         data: {
             phone: '',
             code: '',

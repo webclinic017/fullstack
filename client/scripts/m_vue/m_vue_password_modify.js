@@ -1,7 +1,7 @@
-if ($(".m_vue").attr("data-page") === "password") {
+if ($(".m_vue").attr("data-page") === "password_modify") {
 
     var passwordApp = new Vue({
-        el: '#m_vue_password',
+        el: '#m_vue_password_modify',
         data: {
             password: {
                 pwdOld: '',
