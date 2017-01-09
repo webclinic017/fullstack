@@ -1,9 +1,9 @@
-Vue.validator('noempty', function(val){
+Vue.validator('noempty', function (val) {
     var reg = /^\s*$/g, isFlag = true;
     if (val === "" || reg.test(val)) {
         isFlag = false;
     }
-    return  isFlag;
+    return isFlag;
 });
 
 Vue.validator('pwdNew', function (val) {
@@ -33,3 +33,14 @@ Vue.validator('pwdNew', function (val) {
         return true;
     }
 });
+
+Vue.validator('phoneErr', function (val) {
+    var isMobile = /^(13|14|15|17|18)\d{9}$/;
+    var isPhone = /^((0\d{2,4})-)?(\d{7,8})(-(\d{2,}))?$/;
+
+    if (isMobile.test(val)) {
+        return true;
+    } else {
+        return false;
+    }
+})
