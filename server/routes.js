@@ -503,8 +503,9 @@ module.exports = function (app) {
         }
     });
 
-    // 从 wap 项目迁移过来的功能 >> vue 项目
-    app.route('/m/wap/:subpage(info|password|phone|avatar|username|location|email)').get(function (req, res) {
+    /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
+    // list -> info, password, binding
+    app.route('/m/wap/:subpage(info|password|binding)').get(function (req, res) {
         var subpage = req.params.subpage || 'info';
         var pageInfo = {
             id: subpage
@@ -514,6 +515,77 @@ module.exports = function (app) {
             pageInfo: pageInfo
         }, req));
     });
+    // 基本信息修改 -> 头像、昵称、所在地
+    app.route('/m/wap/info_avatar/:subpage(index)').get(function (req, res) {
+        var subpage = req.params.subpage || 'index';
+        var pageInfo = {
+            page: 'avatar',
+            id: subpage
+        };
+        setCompanyCookie(res);
+        res.render('m_vue_info.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
+    app.route('/m/wap/info_username/:subpage(index)').get(function (req, res) {
+        var subpage = req.params.subpage || 'index';
+        var pageInfo = {
+            page: 'username',
+            id: subpage
+        };
+        setCompanyCookie(res);
+        res.render('m_vue_info.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
+    app.route('/m/wap/info_location/:subpage(index)').get(function (req, res) {
+        var subpage = req.params.subpage || 'index';
+        var pageInfo = {
+            page: 'location',
+            id: subpage
+        };
+        setCompanyCookie(res);
+        res.render('m_vue_info.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
+    // 密码管理 -> 修改密码
+    app.route('/m/wap/password_modify/:subpage(index)').get(function (req, res) {
+        var subpage = req.params.subpage || 'index';
+        var pageInfo = {
+            page: 'modify',
+            id: subpage
+        };
+        setCompanyCookie(res);
+        res.render('m_vue_password.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
+    // 绑定设置 -> 邮箱、手机号
+    app.route('/m/wap/binding_email/:subpage(old|old_code|new|new_code|succ|fail)').get(function (req, res) {
+        var subpage = req.params.subpage || 'old';
+        var pageInfo = {
+            page: 'email',
+            id: subpage
+        };
+        setCompanyCookie(res);
+        res.render('m_vue_binding.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
+    app.route('/m/wap/binding_phone/:subpage(index)').get(function (req, res) {
+        var subpage = req.params.subpage || 'index';
+        var pageInfo = {
+            page: 'phone',
+            id: subpage
+        };
+        setCompanyCookie(res);
+        res.render('m_vue_binding.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
+
+    /* end */
 
     // nodeAPI
     app.route('/napi').get(function (req, res) {
