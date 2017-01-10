@@ -50,9 +50,7 @@
             $scope.type = 'setting';
         }
 
-        if ($scope.type === 'setting') {
-            getVerifyStatus();
-        }
+        getVerifyStatus();
 
         $scope.$on('saveFile', function (event, data) {
             $scope.$apply(function () {
@@ -126,6 +124,7 @@
 
         function getVerifyStatus() {
             account.getVerifyStatus().then(function (data) {
+                console.info(data);
                 $scope.$broadcast("hideLoadingImg");
                 $scope.verification.status = data.status;
                 // $scope.verification.status = 1;
