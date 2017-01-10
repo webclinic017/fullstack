@@ -31,6 +31,11 @@ if ($(".m_vue").attr("data-page") === "binding") {
                     url: action_address
                 });
             }
+        },
+        computed: {
+            page: function () {
+                return this.settingInfo.email ? 'old' : 'new';
+            }
         }
     });
 
