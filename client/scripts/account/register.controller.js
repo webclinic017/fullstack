@@ -271,7 +271,7 @@
             ).then(function (data) {
 
                 if (data.is_succ) {
-                    $scope.$emit('relogin_info');
+                    $scope.$emit('relogin_info', 'is_register');
 
                     // umeng
                     _czc.push(["_trackEvent","注册页","立即注册且成功"]);
