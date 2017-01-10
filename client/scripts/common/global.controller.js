@@ -58,7 +58,7 @@
             }
         });
 
-        $scope.$on('refresh_personal_cookies_info', function(event, is_login){
+        $scope.$on('refresh_personal_cookies_info', function(event, is_login, is_register){
             console.info('refresh_personal_cookies_info');
             if (is_login) {
                 $rootScope.personalCookiesInfo = {
@@ -71,13 +71,24 @@
             }
         });
 
-        $scope.$on('relogin_info', function(){
-            
-            $timeout(function () {
-                // console.info($cookies);
-                // console.info($cookies["user_code"]);
-                $scope.$emit('refresh_personal_cookies_info', 'login');
-            }, 100);
+        $scope.$on('relogin_info', function(event, arg){
+            // 注册时获取默认头像
+            if (arg && arg === 'is_register') {
+                $timeout(function () {
+                    $rootScope.personalCookiesInfo = {
+                        userCode: $cookies["user_code"],
+                        userName: decodeURIComponent($cookies["username"] || ''),
+                        userAvatar: config.avatarCfg.path + 'male' + config.avatarCfg.md
+                    };
+                }, 100);
+            } else {
+                $timeout(function () {
+                    // console.info($cookies);
+                    // console.info($cookies["user_code"]);
+                    $scope.$emit('refresh_personal_cookies_info', 'login');
+                }, 100);
+            }
+
             initialize();
             getUnreadLength();
         });

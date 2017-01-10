@@ -487,12 +487,19 @@
                     type: 'Profile'
                 }
             }).then(function (data) {
-                data = data.data;
-                return {
-                    status: data.profile_check || 0,
-                    realname: data.realname,
-                    idNumber: data.id_no
+                
+                if (data.is_succ) {
+                    data = data.data;
+                    
+                    return {
+                        status: data.profile_check || 0,
+                        realname: data.realname,
+                        idNumber: data.id_no
+                    }
+                } else {
+                    return {};
                 }
+                
             });
         }
 
