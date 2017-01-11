@@ -44,3 +44,26 @@ Vue.validator('phoneErr', function (val) {
         return false;
     }
 })
+
+Vue.validator('nameErr',function(val){
+    val = val.toString();
+    var chExp = /[\u4e00-\u9fa5]/gi;
+    var numExp = /\d/gi;
+    var enExp = /[A-Za-z]/gi;
+    var count = 0;
+
+    if(chExp.test(val) || numExp.test(val) || enExp.test(val)){
+        for(var i=0;i<val.length;i++){
+            if(chExp.test(val[i])){
+                count += 2;
+            } else {
+                count += 1;
+            }
+        }
+        if(count >= 4 && count <= 16){
+            return true;
+        }
+    } else {
+        return false;
+    }
+})

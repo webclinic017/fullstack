@@ -33,10 +33,10 @@ if ($(".m_vue").attr("data-page") === "info_avatar") {
 					self.avatar.progress = false;
 				},
 				progressall: function (e, data) {
-					console.log(data);
-					self.avatar.progress = true;
-					var progress = parseInt(data.loaded / data.total * 5, 10);
-					$('.info_avatar__process_bar').css('width', progress + '%');
+					//todo 
+					// self.avatar.progress = true;
+					// var progress = parseInt(data.loaded / data.total * 5, 10);
+					// $('.info_avatar__process_bar').css('width', progress + '%');
 				}
 			});
 		},

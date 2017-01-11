@@ -1,1 +1,94 @@
-<h2>info - location - index</h2>
+<div class="setting content_wrapper" >
+    <div class="m_vue" id="m_vue_info_location" data-page="info_location" v-cloak>
+        <div v-show="step === 1">
+            <validator name="checkLoca">
+            <form name="locationForm">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-control-wrapper">
+                            <select class="form-control" 
+                                    :class="{'form-control-error': frontErr.state.show && $checkLoca.province.noempty }"
+                                    name="state"
+                                    initial="off"
+                                    required
+                                    v-validate:province="['noempty']"
+                                    v-model="province"
+                                    @change="getOriginList()"
+                                    @focus="hideFrontErr('state')"
+                                    @blur="showFrontErr('state')">
+                                <option value="">请选择省/市</option>
+                                <option v-if="location.state.length>0" v-for="option in location.state" v-bind:value="option.code">
+                                    {{ option.name_cn || '请选择省/市'}}
+                                </option>
+                                
+                            </select>
+
+                            <div v-show="frontErr.state.show">
+                                <p class="alert-arrow_tp_lf" v-show="$checkLoca.province.noempty">
+                                    请选择省/市
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-6">
+                        <div class="form-control-wrapper">
+                            <select class="form-control" 
+                                    name="city"
+                                    required
+                                    initial="off"                                    
+                                    v-validate:city="['noempty']"
+                                    :class="{'form-control-error': frontErr.city.show && $checkLoca.city.noempty }"
+                                    v-model="city"
+                                    @blur="showFrontErr('city')"
+                                    @focus="hideFrontErr('city')">
+
+                                <option value="">请选择市/区</option>
+                                <option v-if="location.citys.length>0" v-for="option in location.citys" v-bind:value="option.code">
+                                    {{ option.name_cn || '请选择省/市'}}
+                                </option>
+                                
+                            </select>
+
+                            <div v-show="frontErr.city.show">
+                                <p class="alert-arrow_tp_lf" v-show="$checkLoca.city.noempty">
+                                    请选择市/区
+                                </p>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+                
+            </form>
+
+            <div class="text-center" v-show="backErr.show">
+                <p class="alert-system">
+                    {{ backErr.msg || '提交失败' }}
+                </p>
+            </div>
+
+            <button class="btn btn-info btn-lg mg-tp-20 btn-primary" v-if="clickable.submit" @click="submitForm()">
+                提交
+            </button>
+
+            <button class="btn btn-info btn-lg mg-tp-20" v-if="!clickable.submit">
+                <i class="loading fa fa-spinner"></i>
+                提交中
+            </button>
+        </validator>
+        </div>
+
+        
+
+        <div class="operate_tip" v-show="step === 2">
+            <h3 class="operate_tip__title text-center">
+                <i class="operate_tip__succ_icon fa fa-check-circle"></i>
+                所在地修改成功
+            </h3>
+
+            <a class="btn btn-info btn-lg mg-tp-30 btn-primary" @click="">
+                确定
+            </a>
+        </div>
+    </div>
+</div>
