@@ -4,7 +4,6 @@ if ($(".m_vue").attr("data-page") === "info_location") {
         data: {
             location: {
                 state: [],
-                selected: '',
                 citys: [],
             }
             , province: ''

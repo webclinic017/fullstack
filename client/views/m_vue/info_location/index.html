@@ -17,7 +17,9 @@
                                     @focus="hideFrontErr('state')"
                                     @blur="showFrontErr('state')">
                                 <option value="">请选择省/市</option>
-                                <option v-if="location.state.length>0" v-for="option in location.state" v-bind:value="option.code">
+                                <option v-if="location.state.length>0" 
+                                        v-for="option in location.state" 
+                                        v-bind:value="option.code">
                                     {{ option.name_cn || '请选择省/市'}}
                                 </option>
                                 
