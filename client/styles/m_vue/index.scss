@@ -66,3 +66,50 @@
     }
 }
 
+// 上传头像
+.info_avatar__container{
+    padding-top: 20px;
+}
+
+.info_avatar__process_bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: $brand-primary;
+    transition: width 0.5s linear;
+    -webkit-transition: width 0.1s linear;
+}
+
+@include b(upload_avatar) {
+
+    @include e(avatar) {
+        width: 100px;
+        height: 100px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+    }
+
+    @include e(label) {
+        @extend .btn;
+        @extend .btn-lg;
+        font-size: px2rem(32);
+        background: $brand-primary;
+        width: 96%;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+
+    @include e(input) {
+        display: none;
+    }
+
+    @include e(tip) {
+        margin-top: 20px;
+        margin-bottom: 15px;
+        color: $gray;
+    }
+}
+

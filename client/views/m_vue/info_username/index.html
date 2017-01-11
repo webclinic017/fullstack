@@ -1,1 +1,67 @@
-<h2>info - username - index</h2>
+<div class="setting content_wrapper m_vue" data-page="info_username" id="m_vue_info_username">
+    <div class="" v-cloak>
+        <validator name="checkUsername">
+            <form name="infoForm" v-show="step === 1">
+                <div class="form-control-wrapper">
+                    <input class="form-control m_vue_form-control" 
+                        name="username" 
+                        type="text"
+                        placeholder="昵称"
+                        required
+                        :class="{'form-control-error': (frontErr.username.show && $checkUsername.username.noempty) || (backErr.username.show && backErr.username.status > 0)}"
+                        v-model="username"
+                        initial="off"
+                        v-validate:username="['noempty','nameErr']"
+                        @focus="hideFrontErr('username')"
+                        @blur="showFrontErr('username')">
+                    
+                    <i class="form-control-icon fa fa-user"></i>
+
+                    <div v-show="frontErr.username.show">
+                        <p class="alert-arrow_tp_lf" v-show="$checkUsername.username.noempty">
+                            请输入昵称
+                        </p>
+                         <p class="alert-arrow_tp_lf" v-show="$checkUsername.username.nameErr && !$checkUsername.username.noempty">
+                            昵称包含4-16个字符，由汉字、字母、数字组成
+                        </p>
+                    </div>
+
+                    <div v-show="backErr.username.show">
+                        <p class="alert-arrow_tp_lf" v-show="backErr.username.status == 7">
+                            昵称已存在
+                        </p>
+
+                        <p class="alert-arrow_tp_lf" v-show="backErr.username.status == 10">
+                            昵称包含敏感词汇，请修改
+                        </p>
+                    </div>
+                </div>
+
+                <div class="text-center" v-show="backErr.username.show">
+                    <p class="alert-system" v-show="backErr.username.status == -1">
+                        {{ backErr.username.tip }}
+                    </p>
+                </div>
+            </form>
+            <button class="btn btn-info btn-lg mg-tp-20 btn-primary" v-if="clickable.submit" @click="submitInfoForm()">
+                    提交
+                </button>
+
+                <button class="btn btn-info btn-lg mg-tp-20" v-if="!clickable.submit">
+                    <i class="loading fa fa-spinner"></i>
+                    提交中
+                </button>
+        </validator>
+
+        <div class="operate_tip" v-show="step === 2">
+            <h3 class="operate_tip__title text-center">
+                <i class="operate_tip__succ_icon fa fa-check-circle"></i>
+                昵称修改成功
+            </h3>
+
+            <a class="btn btn-info btn-lg mg-tp-30 btn-primary" ui-sref="setting.subpage({subpage: 'index'})">
+                确定
+            </a>
+        </div>
+    </div>
+</div>

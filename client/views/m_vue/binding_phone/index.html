@@ -61,6 +61,7 @@
                 <div class="col-xs-6">
                     <div class="relative">
                         <button class="btn btn-lg primary-bg btn-info" 
+                            :class="{'primary-bg': clickable.code ,'gray-bg': !clickable.code }"
                             start-timer="startTimer" 
                             is-voice-code="isVoiceCode" 
                             verify-code-btn-clickable="clickable.code"
@@ -78,7 +79,10 @@
                 </p>
             </div>
 
-            <button @click="submitMethod()" class="btn btn-primary primary-bg btn-lg mg-tp-20" v-show="clickable.submit">
+            <button @click="submitMethod()" 
+            class="btn btn-primary primary-bg btn-lg mg-tp-20" 
+            :class="{'primary-bg': clickable.submit ,'gray-bg': !clickable.submit }"
+            v-show="clickable.submit">
                 提交
             </button>
 
