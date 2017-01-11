@@ -13,6 +13,8 @@ var apiUrl = {
     getCodeApi: rootUrl + '/action/public/v3/get_phone_reg_code', //post
     set_token: rootUrl + '/action/public/v3/set_token',  //get
     changeTelBind: rootUrl + '/action/public/v3/set_my_bind_phone', //post
+    sendEmailCodeApi: rootUrl + '/action/public/v3/send_email_code', //post
+    checkEmailCodeApi: rootUrl + '/action/public/v3/check_email_code' // post
 };
 var apiUrlResource = {
     changePwd:  Vue.resource(apiUrl.changePwdApi),
@@ -20,4 +22,6 @@ var apiUrlResource = {
     getCode: Vue.resource(apiUrl.getCodeApi),
     set_token: Vue.resource(apiUrl.set_token),
     changeTelBind: Vue.resource(apiUrl.changeTelBind),
+    sendEmailCode: Vue.resource(apiUrl.sendEmailCodeApi),
+    checkEmailCode: Vue.resource(apiUrl.checkEmailCodeApi)
 };

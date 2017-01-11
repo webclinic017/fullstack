@@ -24,7 +24,11 @@ if ($(".m_vue").attr("data-page") === "binding") {
         },
         methods: {
             toStatePage: function (type, page) {
-                var action_address = window.location.origin + "/m/wap/binding_" + type + "/" + page;
+                if (page === 'old') {
+                    var action_address = window.location.origin + "/m/wap/binding_" + type + "/" + page + '?email=' + this.settingInfo.email;
+                } else {
+                    var action_address = window.location.origin + "/m/wap/binding_" + type + "/" + page;
+                }
                 console.info(action_address);
                 callNative({
                     type: "openUrl",
