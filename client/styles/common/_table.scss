@@ -55,6 +55,9 @@ table {
 
     > tbody > tr > td:last-child {
         position: relative;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 90px;
 
         &:after {
             content: '';

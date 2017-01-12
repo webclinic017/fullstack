@@ -1,5 +1,30 @@
 var report_sites = [
     {
+        address: 'http://zj.sina.com.cn/finance/xfgz/2016-12-29/detail_f-ifxzczfc6622934.shtml',
+        description: '【新浪】老虎外汇：“科技金融”用户体验是关键',
+        date: '2016-12-29'
+    },
+    {
+        address: 'http://finance.fecn.net/fund/2016/1226/1226175817175817.html',
+        description: '【中国财经】老虎外汇：智能理财让普通人也能“钱生钱”',
+        date: '2016-12-26'
+    },
+    {
+        address: 'http://finance.ifeng.com/a/20161221/15094200_0.shtml',
+        description: '【凤凰财经】在成为下一个风口前 智能理财还有多远的路要走？',
+        date: '2016-12-21'
+    },
+    {
+        address: 'http://hainan.ifeng.com/a/20161214/5230335_0.shtml',
+        description: '【凤凰网】社交投资成2016年上海理财博览会最大亮点',
+        date: '2016-12-14'
+    },
+    {
+        address: 'http://china.huanqiu.com/hot/2016-12/9795141.html',
+        description: '【环球网】羽化财经沙龙：探讨新时代下的互联网金融市场',
+        date: '2016-12-09'
+    },
+    {
         address: 'http://news.163.com/16/1212/22/C84A4DU000014Q4P.html',
         description: '【网易新闻】社交投资成2016年上海理财博览会最大亮点',
         date: '2016-12-12'
@@ -13,6 +38,16 @@ var report_sites = [
         address: 'http://www.toutiao.com/a6360554546495013121',
         description: '【今日头条】老虎外汇荣获2016年度创新服务经纪商大奖',
         date: '2016-12-06'
+    },
+    {
+        address: 'http://zj.sina.com.cn/finance/xfgz/2016-12-06/detail_f-ifxyiayq2490947.shtml',
+        description: '【新浪】老虎外汇荣获2016年度创新服务经纪商大奖',
+        date: '2016-12-06'
+    },
+    {
+        address: 'http://china.huanqiu.com/hot/2016-12/9774640.html',
+        description: '【环球网】老虎外汇受邀出席第五届FX168年度峰会',
+        date: '2016-12-5'
     },
     {
         address: 'http://www.p5w.net/news/biz/201610/t20161028_1620244.htm',

@@ -36,7 +36,7 @@
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
             $timeout.cancel(dataId);
             $timeout.cancel(tradersId);
-            angular.forEach($scope.traders, function(value, key){
+            angular.forEach($scope.traders, function (value, key) {
                 $timeout.cancel(value.detailsId);
             });
         });
@@ -50,7 +50,7 @@
                 angular.extend($scope.orderCurrent, data.group_data);
                 $scope.from_orders_profit = 0;
                 var nProfit = 0;
-                angular.forEach($scope.from_data, function(oData, index){
+                angular.forEach($scope.from_data, function (oData, index) {
                     nProfit += (+oData.profit) || 0;
                 });
                 $scope.from_orders_profit = nProfit.toFixed(2);
@@ -65,7 +65,7 @@
 
         function getTraders() {
             invest.getInvestCurrentTraders().then(function (data) {
-                 $scope.$broadcast('hideLoadingImg');
+                $scope.$broadcast('hideLoadingImg');
                 // console.info(data);
                 if (data.is_succ) {
                     if (data.data.length <= 0) {
@@ -99,7 +99,7 @@
                 $scope.orderCurrent.detailsShow = true;
             }
         }
-        function showFromOrders(){
+        function showFromOrders() {
             $scope.fromDetailsShow = !$scope.fromDetailsShow;
         }
 
@@ -180,7 +180,7 @@
                     function cancelCopy(auto_delete) {
                         $scope.clickable = false;
 
-                        trader.cancelCopy(usercode,auto_delete).then(function (data) {
+                        trader.cancelCopy(usercode, auto_delete).then(function (data) {
                             // console.info(data);
                             if (data.is_succ) {
                                 $scope.copyCancel.success = true;
@@ -188,7 +188,7 @@
 
                                 $state.go('space.invest.subpage', {
                                     subpage: 'current'
-                                }, {reload: true});
+                                }, { reload: true });
                             }
                         }, function (err) {
                             $scope.clickable = true;
@@ -208,7 +208,7 @@
             });
         }
 
-        function openInvestOwnDetailMdl (event) {
+        function openInvestOwnDetailMdl(type, event) {
             event.stopPropagation();
             event.stopImmediatePropagation();
 
@@ -217,21 +217,22 @@
                 size: 'lg',
                 backdrop: true,
                 controller: function ($scope, invest, $modalInstance) {
-                    
+
                     $scope.details = [];        // 交易详情 弹窗数据
                     $scope.modal = {
                         price: '现价',
                         asset: '资金占用'
                     };
+                    $scope.follow_master = type === 'own' ? false : true;
                     $scope.closeModal = closeModal;
 
                     invest.getInvestCurrentData().then(function (data) {
-                        // console.info(data);
+                        console.info(data);
                         $scope.$broadcast('hideLoadingImg');
-                        $scope.details = data.data;
+                        $scope.details = type === 'own' ? data.data : data.from_data;
                         $scope.modal.show = true;
                     });
-                    
+
                     function closeModal() {
                         $modalInstance.dismiss();
                     }
@@ -239,7 +240,7 @@
             });
         }
 
-        function openInvestCopyDetailMdl (trader, event) {
+        function openInvestCopyDetailMdl(trader, event) {
             var usercode = trader.usercode;
             event.stopPropagation();
             event.stopImmediatePropagation();
@@ -256,14 +257,14 @@
                         asset: '资金占用'
                     };
                     $scope.closeModal = closeModal;
-                    
+
                     invest.getInvestCurrentDetails(usercode).then(function (data) {
                         // console.info(data);
                         $scope.$broadcast('hideLoadingImg');
                         $scope.details = data.data;
                         $scope.modal.show = true;
                     });
-                    
+
                     function closeModal() {
                         $modalInstance.dismiss();
                     }

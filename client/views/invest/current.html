@@ -60,7 +60,7 @@
                         <i class="fa fa-dollar"></i>{{ orderCurrent.group_profit }}
                     </th>
                     <th class="invest_orders__btn">
-                        <button href="" class="btn btn-primary btn-sm" ng-click="openInvestOwnDetailMdl($event)">详情</button>
+                        <button href="" class="btn btn-primary btn-sm" ng-click="openInvestOwnDetailMdl('own', $event)">详情</button>
                     </th>
                 </tr>
             </thead>
@@ -144,7 +144,7 @@
                         <i class="fa fa-dollar"></i>{{ from_orders_profit }}
                     </th>
                     <th class="invest_orders__btn">
-                         <!-- <button href="" class="btn btn-primary btn-sm" ng-click="openInvestOwnDetailMdl($event)">详情</button> --> 
+                         <button href="" class="btn btn-primary btn-sm" ng-click="openInvestOwnDetailMdl('follow',$event)">详情</button>
                          <p class="btn-msg">已取消复制</p>
                     </th>
                 </tr>
