@@ -37,15 +37,16 @@ if ($(".m_vue").attr("data-page") === "info_username") {
                             username: self.username
                         }).then(function (response) {
                             self.clickable.submit = false;
-                            var data = response.data;
+                            var data = JSON.parse(response.data);
+                            console.log(data);
                             if (data.is_succ) {
                                 layer.open({
                                     content: '提交成功！',
                                     skin: 'msg',
                                     time: 2 //2秒后自动关闭
                                 });
+                                self.clickable.submit = true;
                             } else {
-
                                 self.backErr.username.show = true;
                                 self.backErr.username.status = -1;
                                 self.backErr.username.tip = data.error_msg;
@@ -57,7 +58,7 @@ if ($(".m_vue").attr("data-page") === "info_username") {
                                         status: null
                                     };
                                     self.clickable.submit = true;
-                                }, 3000);
+                                }, 2000);
                             }
                         }, function (error) {
                             self.clickable.submit = true;

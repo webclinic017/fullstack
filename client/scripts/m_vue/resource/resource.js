@@ -17,7 +17,7 @@ var apiUrl = {
     changeTelBind: rootUrl + '/action/public/v3/set_my_bind_phone', //post
     getInfo: rootUrl + '/action/public/v4/get_info',                //get
     upload_avatar: rootUrl + '/action/public/v3/user_upload',       //get
-    set_username: rootUrl + '/api/v3/set_username',                 //post - old
+    set_username: rootUrl + '/action/public/v4/set_username',       //post
     get_province: rootUrl + '/action/public/v4/statecode_list?world_code=CN', //get
     get_citys: rootUrl + '/action/public/v4/citycode_list',         //get
     set_region: rootUrl + '/api/v3/set_region',                     //post - old
