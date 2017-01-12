@@ -112,6 +112,8 @@
                     record.code = item.order_no;
                     record.status_desc = item.status_desc;
                     record.type = item.type;
+                    record.pay_again = item.pay_again;
+                    record.withdraw = item.withdraw;
 
                     this.push(record);
                 }, records);
