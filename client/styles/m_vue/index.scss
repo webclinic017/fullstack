@@ -81,6 +81,19 @@
         }
     }
 
+    @include e(icon) {
+        text-align: center;
+
+        img {
+            width: 80px;
+        }
+    }
+
+     @include e(tit) {
+        text-align: center;
+        padding-top: 20px;
+    }
+
     .form-control-wrapper {
         &.formWidth50 {
             width: 50%;

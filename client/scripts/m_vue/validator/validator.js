@@ -43,4 +43,14 @@ Vue.validator('phoneErr', function (val) {
     } else {
         return false;
     }
-})
+});
+
+Vue.validator('email', function (val) {
+    var reg = /^([a-z0-9+_-]+)(.[a-z0-9+_-]+)*@([a-z0-9-]+.)+[a-z]{2,6}$/i;
+
+    if (reg.test(val)) {
+        return true;
+    } else {
+        return false;
+    }
+});
