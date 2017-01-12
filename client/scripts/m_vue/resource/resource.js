@@ -21,6 +21,9 @@ var apiUrl = {
     get_province: rootUrl + '/action/public/v4/statecode_list?world_code=CN', //get
     get_citys: rootUrl + '/action/public/v4/citycode_list',         //get
     set_region: rootUrl + '/api/v3/set_region',                     //post - old
+    sendEmailCodeApi: rootUrl + '/action/public/v3/send_email_code', //post
+    checkEmailCodeApi: rootUrl + '/action/public/v3/check_email_code', // post
+    saveEmailApi: rootUrl + '/action/public/v3/set_my_bind_email', //post
 };
 var apiUrlResource = {
     changePwd:  Vue.resource(apiUrl.changePwdApi),
@@ -34,4 +37,7 @@ var apiUrlResource = {
     get_province: Vue.resource(apiUrl.get_province),
     get_citys: Vue.resource(apiUrl.get_citys),
     set_region: Vue.resource(apiUrl.set_region),
+    sendEmailCode: Vue.resource(apiUrl.sendEmailCodeApi),
+    checkEmailCode: Vue.resource(apiUrl.checkEmailCodeApi),
+    saveEmail: Vue.resource(apiUrl.saveEmailApi),
 };
