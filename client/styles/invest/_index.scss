@@ -54,6 +54,9 @@
         @include m(username) {
             display: inline-block;
             vertical-align: middle;
+            width: 70%;
+            overflow: hidden;
+            text-overflow: ellipsis;
 
             > a {
                 color: $gray-base;

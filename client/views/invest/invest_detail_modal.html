@@ -8,7 +8,17 @@
     <div class="system_modal__content relative">
         <div tw-loading-img></div>
         <table class="table table-header">
-            <colgroup>
+            <colgroup ng-if="follow_master">
+                <col width="22%">
+                <col width="11.15%">
+                <col width="11.15%">
+                <col width="11.15%">
+                <col width="11.15%">
+                <col width="11.15%">
+                <col width="11.15%">
+                <col width="11.15%">
+            </colgroup>
+             <colgroup ng-if="!follow_master">
                 <col width="22%">
                 <col width="13%">
                 <col width="13%">
@@ -27,6 +37,7 @@
                     <th>{{ modal.asset }}</th>
                     <th>收益</th>
                     <th>收益率</th>
+                    <th ng-if="follow_master">所跟高手</th>
                 </tr>
             </thead>
         </table>
@@ -34,15 +45,25 @@
         <div class="invest_detail_modal__content">
             
             <table class="table table-hover table-striped table-bordered">
-                <colgroup>
-                    <col width="22%">
-                    <col width="13%">
-                    <col width="13%">
-                    <col width="13%">
-                    <col width="13%">
-                    <col width="13%">
-                    <col width="13%">
-                </colgroup>
+                <colgroup ng-if="follow_master">
+                <col width="22%">
+                <col width="11.15%">
+                <col width="11.15%">
+                <col width="11.15%">
+                <col width="11.15%">
+                <col width="11.15%">
+                <col width="11.15%">
+                <col width="11.15%">
+            </colgroup>
+             <colgroup ng-if="!follow_master">
+                <col width="22%">
+                <col width="13%">
+                <col width="13%">
+                <col width="13%">
+                <col width="13%">
+                <col width="13%">
+                <col width="13%">
+            </colgroup>
 
                 <tbody>
                     <tr ng-repeat="detail in details" ng-if="details.length > 0">
@@ -71,6 +92,7 @@
                         <td><i class="fa fa-dollar"></i>{{ detail.occupy_asset }}</td>
                         <td ng-class="{'font-success': detail.profit.indexOf('-') != -1, 'font-danger': detail.profit.indexOf('-') < 0}"><i class="fa fa-dollar"></i>{{ detail.profit }}</td>
                         <td ng-class="{'font-success': detail.profit_rate.indexOf('-') != -1, 'font-danger': detail.profit_rate.indexOf('-') < 0}">{{ detail.profit_rate }}%</td>
+                        <td ng-if="follow_master">{{ detail.master_name }}</td>
                     </tr>
                 </tbody>
             </table>
