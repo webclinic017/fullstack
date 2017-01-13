@@ -80,7 +80,7 @@ module.exports = {
             period : "1个月",      //复制封闭期
             withdraw_history : "20%",    //历史最高回撤
             profit_rate_wish : "60%",  //预期年化收益率
-            profit_rate_now : null, //实时年化收益率
+            profit_rate_now : "0.00%", //实时年化收益率
             end_date_appoint : "2016.11.25 18:00", //预约结束时间
             start_date_trade : '2016.11.28 00:00',  //开始交易时间
             end_date_trade : "2016.12.28 00:00",  //结束交易时间  exam : '2016.5.19'
@@ -103,7 +103,7 @@ module.exports = {
             period : "1个月",      //复制封闭期
             withdraw_history : "20%",    //历史最高回撤
             profit_rate_wish : "60%",  //预期年化收益率
-            profit_rate_now : null, //实时年化收益率
+            profit_rate_now : "9.78%", //实时年化收益率
             end_date_appoint : "2016.10.14 18:00", //预约结束时间
             start_date_trade : '2016.10.17 00:00',  //开始交易时间
             end_date_trade : "2016.11.17 00:00",  //结束交易时间  exam : '2016.5.19'
@@ -126,7 +126,7 @@ module.exports = {
             period : "1个月",      //复制封闭期
             withdraw_history : "20%",    //历史最高回撤
             profit_rate_wish : "60%",  //预期年化收益率
-            profit_rate_now : null, //实时年化收益率
+            profit_rate_now : "1.54%", //实时年化收益率
             end_date_appoint : "2016.09.09 18:00", //预约结束时间
             start_date_trade : '2016.09.12 00:00',  //开始交易时间
             end_date_trade : "2016.10.12 00:00",  //结束交易时间  exam : '2016.5.19'
@@ -149,7 +149,7 @@ module.exports = {
             period : "1个月",      //复制封闭期
             withdraw_history : "20%",    //历史最高回撤
             profit_rate_wish : "60%",  //预期年化收益率
-            profit_rate_now : null, //实时年化收益率
+            profit_rate_now : "4.84%", //实时年化收益率
             end_date_appoint : "2016.08.31 18:00", //预约结束时间
             start_date_trade : '2016.09.01 00:00',  //开始交易时间
             end_date_trade : '2016.10.01 00:00',  //结束交易时间  exam : '2016.5.19'
@@ -172,7 +172,7 @@ module.exports = {
             period : "1个月",      //复制封闭期
             withdraw_history : "20%",    //历史最高回撤
             profit_rate_wish : "60%",  //预期年化收益率
-            profit_rate_now : "0%", //实时年化收益率
+            profit_rate_now : "0.00%", //实时年化收益率
             end_date_appoint : "2016.07.29 18:00", //预约结束时间
             start_date_trade : '2016.08.01 00:00',  //开始交易时间
             end_date_trade : '2016.09.01 00:00',  //结束交易时间  exam : '2016.5.19'
