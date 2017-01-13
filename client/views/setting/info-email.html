@@ -1,10 +1,10 @@
 <div ng-controller="SettingInfoEmailController">
     <div class="pd-tp-30">
-        <div ng-if="settingInfo.email">
+        <div ng-if="settingInfo.email" class="pd-bt-10">
             您已经绑定了电子邮箱
             <span class="font-info">{{ settingInfo.email }}</span>
         </div>
-        <div ng-if="!settingInfo.email">
+        <div ng-if="!settingInfo.email" class="pd-bt-10">
             您未绑定任何邮箱
         </div>
         <div ng-show="step === 1">
