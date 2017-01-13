@@ -4,6 +4,7 @@ $(document).ready(function () {
     var pid = '';
     var unit = '';
     var key = '';
+    var clickable = true;
 
     var hostnameUrl = window.location.hostname;
     var originUrl = window.location.origin;
@@ -82,6 +83,10 @@ $(document).ready(function () {
         if ($(":input").hasClass("warning")) {
             return false;
         } else {
+            //防止重复提交
+            clickable = false;
+            $('#'+info.targetId).html('<i class="loading fa fa-spinner"></i>正在跳转');
+ 
             /*
              品友DSP,负责人:蔡雪峰 添加日期：2016.7.12
              //删除此段代码时需要同时删除调用pyRegisterCvt (../t1/script/check.js)
@@ -135,19 +140,23 @@ $(document).ready(function () {
         }
     }
 
-    $('#regist_btn').on("click", function () {
+    $('#regist_btn').on("click", function (e) {
+        if(!clickable){return false}
         regist({
             usernameId: 'username',
             telephoneId: 'telephone',
-            emailId: 'email'
+            emailId: 'email',
+            targetId:'regist_btn'
         });
     });
 
     $('#float_regBtn').on("click", function () {
+        if(!clickable){return false}        
         regist({
             usernameId: 'float_username',
             telephoneId: 'float_telephone',
-            emailId: ''
+            emailId: '',
+            targetId:'float_regBtn'
         });
     });
 

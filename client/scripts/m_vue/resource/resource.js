@@ -20,7 +20,7 @@ var apiUrl = {
     set_username: rootUrl + '/action/public/v4/set_username',       //post
     get_province: rootUrl + '/action/public/v4/statecode_list?world_code=CN', //get
     get_citys: rootUrl + '/action/public/v4/citycode_list',         //get
-    set_region: rootUrl + '/api/v3/set_region',                     //post - old
+    set_region: rootUrl + '/action/public/v4/set_region',           //post
     sendEmailCodeApi: rootUrl + '/action/public/v3/send_email_code', //post
     checkEmailCodeApi: rootUrl + '/action/public/v3/check_email_code', // post
     saveEmailApi: rootUrl + '/action/public/v3/set_my_bind_email', //post

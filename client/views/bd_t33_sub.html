@@ -77,13 +77,10 @@
                     <p>4、本活动的交易手数仅适用于外汇，贵金属以及能源类产品，CFD股指交易手数不计入统计范围；</p>
                     <p>5、本活动仅限首次入金的新用户，为了保证您的资金快速出入，请提交正确的开户信息；</p>
                     <p>6、定期跟单客户不参加以上任何活动;</p>
-                    <p>7、完成规定交易手数之前，赠金不可抵消账户亏损，若账户净值低于赠金金额的105%，
-                        <%=lang.text("companyZhName")%>有权强行平仓；</p>
+                    <p>7、完成规定交易手数之前，赠金不可抵消账户亏损，若账户净值低于赠金金额的105%，<%=lang.text("companyZhName")%>有权强行平仓；</p>
                     <p>8、所获赠金在首次出金时未完成相应手数将扣除所有赠金；</p>
                     <p>9、用户需在活动期间完成首次入金方可获取信用赠金奖励；</p>
-                    <p>10、
-                        <%=lang.text("companyZhName")%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打
-                            <%=lang.text("telephone")%>.</p>
+                    <p>10、<%=lang.text("companyZhName")%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打<%=lang.text("telephone")%>.</p>
                 </div>
 
                 <div class="t33_sub_5Ways">
@@ -91,40 +88,40 @@
                 </div>
 
                 <div class="t31_tiger_help <%= lang.background().company %>"></div>
-                <%if(lang.isCompany("tigerwit")) {%>
-                <% include bd/common/float_register.html %>
-                    <div class="t33_sub_report">
-                        <h2>媒体报道</h2>
-                        <ul class="clearfix">
-                            <li><img src="/images/bd/report_01.png" alt="reports"></li>
-                            <li><img src="/images/bd/report_02.png" alt="reports"></li>
-                            <li><img src="/images/bd/report_03.png" alt="reports"></li>
-                        </ul>
-                    </div>
-                    <div class="footerbg clearfix">
-                        <div class="footer-wrap" data-scroll-reveal="enter bottom, move 40px, over 1s, wait 0.53s">
-                            <div class="t27_code">
-                                <img src="/images/bd/t30_code_min.png" draggable="false" />
-                                <p>APP下载二维码</p>
-                            </div>
-                            <p>
-                                风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险，不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前，应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式；您需要知晓金融市场的保证金交易具有全部或部分亏损的可能。
-                                <%= lang.text('companyZhName')%>交易平台为广大交易高手及普通投资者提供复制交易服务，网站发布的任何信息，包括实时交易提醒、投资文章及其他资源等均来自互联网所有用户需仔细考量并权衡投资风险及安全性。交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
-                            </p>
+                    <%if(lang.isCompany("tigerwit")) {%>
+                        <% include bd/common/float_register.html %>
+                        <div class="t33_sub_report">
+                            <h2>媒体报道</h2>
+                            <ul class="clearfix">
+                                <li><img src="/images/bd/report_01.png" alt="reports"></li>
+                                <li><img src="/images/bd/report_02.png" alt="reports"></li>
+                                <li><img src="/images/bd/report_03.png" alt="reports"></li>
+                            </ul>
                         </div>
-                    </div>
-                    <%- include('bd/common/footer.html') %>
-                        <%} else {%>
-                            <div class="footerbg clearfix">
-                                <div class="footer-wrap pkds" data-scroll-reveal="enter bottom, move 40px, over 1s, wait 0.53s">
-                                    <p>
-                                        风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险，不适合所有投资者，增大杠杆意味着高风险与高收益并存。 在您决定交易前，应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式；您需要知晓金融市场的保证金交易具有全部或部分亏损的可能。
-                                        <%= lang.text('companyZhName')%>交易平台为广大交易高手及普通投资者提供复制交易服务，网站发布的任何信息，包括实时交易提醒、 投资文章及其他资源等均来自互联网所有用户需仔细考量并权衡投资风险及安全性。交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
-                                    </p>
+                        <div class="footerbg clearfix">
+                            <div class="footer-wrap" data-scroll-reveal="enter bottom, move 40px, over 1s, wait 0.53s">
+                                <div class="t27_code">
+                                    <img src="/images/bd/t30_code_min.png" draggable="false" />
+                                    <p>APP下载二维码</p>
+                                </div>
+                                <p>
+                                    风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险，不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前，应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式；您需要知晓金融市场的保证金交易具有全部或部分亏损的可能。
+                                    <%= lang.text('companyZhName')%>交易平台为广大交易高手及普通投资者提供复制交易服务，网站发布的任何信息，包括实时交易提醒、投资文章及其他资源等均来自互联网所有用户需仔细考量并权衡投资风险及安全性。交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+                                </p>
                             </div>
-                    </div>
-                <%}%>
-            </div>
+                        </div>
+                        <%- include('bd/common/footer.html') %>
+                    <%} else {%>
+                        <div class="footerbg clearfix">
+                            <div class="footer-wrap pkds" data-scroll-reveal="enter bottom, move 40px, over 1s, wait 0.53s">
+                                <p>
+                                    风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险，不适合所有投资者，增大杠杆意味着高风险与高收益并存。 在您决定交易前，应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式；您需要知晓金融市场的保证金交易具有全部或部分亏损的可能。
+                                    <%= lang.text('companyZhName')%>交易平台为广大交易高手及普通投资者提供复制交易服务，网站发布的任何信息，包括实时交易提醒、 投资文章及其他资源等均来自互联网所有用户需仔细考量并权衡投资风险及安全性。交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+                                </p>
+                            </div>
+                        </div>
+                    <%}%>
+                </div>
 
             <!-- build:js(client) /scripts/bd_t33_sub.js -->
             <script src="/scripts/common/config.service.js"></script>
