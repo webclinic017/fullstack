@@ -51,7 +51,7 @@ if ($(".m_vue").attr("data-page") === "password_modify") {
                         }).then(function (response) {
                             self.clickable.submit = true;
                             var data = JSON.parse(response.data);
-                            
+                            // console.info(response.data, data);
                             if (data.is_succ) {
                                 layer.open({
                                     content: '修改成功',
