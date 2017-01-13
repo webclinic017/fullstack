@@ -49,7 +49,10 @@
             getUserKycApi: o + '/action/public/v4/get_user_kyc_info',
             setKycApi: o + '/action/public/v4/save_kyc_info',
             checkMasterApi: o + '/action/public/v3/check_master',
-            applyBecomeMasterApi: o + '/action/public/v3/apply_to_master'
+            applyBecomeMasterApi: o + '/action/public/v3/apply_to_master',
+            sendEmailCodeApi: o + '/action/public/v3/send_email_code',
+            checkEmailCodeApi: o + '/action/public/v3/check_email_code',
+            setBindEmailApi: o + '/action/public/v3/set_my_bind_email'
         };
         var asset = {
             withdrawApi: o + '/action/public/v4/withdraw',

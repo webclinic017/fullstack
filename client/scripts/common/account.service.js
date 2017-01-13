@@ -46,6 +46,9 @@
             logout: logout,
             checkMaster: checkMaster,
             applyBecomeMaster: applyBecomeMaster,
+            sendEmailCode: sendEmailCode,
+            checkEmailCode: checkEmailCode,
+            setBindEmail: setBindEmail,
             hasChecked: false
         };
         var resolveValue;
@@ -556,6 +559,48 @@
                 min_copy_asset: min_copy_asset,
                 trade_desc: trade_desc,
                 history_file: history_file
+            });
+        }
+
+        /**
+         * Account Service 发送邮箱验证码
+         *
+         * @method sendEmailCode
+         *
+         * @param {String} email 不传则向绑定邮箱发送
+         */
+        function sendEmailCode(email) {
+            return $http.post(o.sendEmailCodeApi, {
+                email: email
+            });
+        }
+
+        /**
+         * Account Service 检测邮箱验证码是否正确
+         *
+         * @method checkEmailCode
+         *
+         * @param {String} email 不传则向绑定邮箱发送
+         * @param {String} code 验证码
+         */
+        function checkEmailCode(code) {
+            return $http.post(o.checkEmailCodeApi, {
+                code: code
+            });
+        }
+
+        /**
+         * Account Service 修改绑定邮箱
+         *
+         * @method setBindEmail
+         *
+         * @param {String} email 邮箱
+         * @param {String} code 验证码
+         */
+        function setBindEmail(email, code) {
+            return $http.post(o.setBindEmailApi, {
+                email: email,
+                code: code
             });
         }
     }
