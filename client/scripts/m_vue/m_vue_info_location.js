@@ -1,5 +1,5 @@
 if ($(".m_vue").attr("data-page") === "info_location") {
-    var phoneApp = new Vue({
+    new Vue({
         el: '#m_vue_info_location',
         data: {
             location: {
@@ -42,29 +42,18 @@ if ($(".m_vue").attr("data-page") === "info_location") {
         methods: {
             getOriginList: function () {
                 var self = this;
-                if (self.province == '810000') { //香港
-                    self.location.citys = [{ code: '810000', name_cn: '香港特别行政区' }];
-                } else if (self.province == '710000') { //台湾
-                     self.location.citys = [{ code: '710000', name_cn: '台湾' }]
-                } else if (self.province == '820000') { //澳门
-                     self.location.citys = [{ code: '820000', name_cn: '澳门特别行政区' }]
-                } else {
-                    apiUrlResource.get_citys.get({
-                        parent_code: self.province
-                    }).then(function (response) {
-                        //  var data = response.data;
-                        var data = JSON.parse(response.data)
-
-                        if (data.is_succ) {
-                            self.location.citys = data.data;
-                        }
-                    }, function (error) {
-                        console.error(error);
-                        alert("请求失败");
-                    });
-                }
-                console.log(self.location.citys);
-
+                apiUrlResource.get_citys.get({
+                    parent_code: self.province
+                }).then(function (response) {
+                    //  var data = response.data;
+                    var data = JSON.parse(response.data)
+                    if (data.is_succ) {
+                        self.location.citys = data.data;
+                    }
+                }, function (error) {
+                    console.error(error);
+                    alert("请求失败");
+                });
             },
             submitForm: function () {
                 var self = this;
@@ -77,13 +66,15 @@ if ($(".m_vue").attr("data-page") === "info_location") {
                             world_code: "CN"
                         }).then(function (response) {
                             self.clickable.submit = false;
-                            var data = response.data;
+                            var data = JSON.parse(response.data);
                             if (data.is_succ) {
-                                layer.open({
-                                    content: '提交成功！',
-                                    skin: 'msg',
-                                    time: 2 //2秒后自动关闭
-                                });
+                                // layer.open({
+                                //     content: '提交成功！',
+                                //     skin: 'msg',
+                                //     time: 2 //2秒后自动关闭
+                                // });
+                                self.next()
+                                self.clickable.submit = true;
                             } else {
                                 self.backErr.show = true;
                                 self.backErr.msg = data.error_msg;
@@ -112,10 +103,12 @@ if ($(".m_vue").attr("data-page") === "info_location") {
             },
             hideFrontErr: function (name) {
                 var self = this;
-
                 if (self.frontErr[name]) {
                     self.frontErr[name]["show"] = false;
                 }
+            },
+            next:function(){
+                this.step ++;
             }
         },
     });

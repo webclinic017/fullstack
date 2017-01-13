@@ -20,7 +20,7 @@ var apiUrl = {
     set_username: rootUrl + '/action/public/v4/set_username',       //post
     get_province: rootUrl + '/action/public/v4/statecode_list?world_code=CN', //get
     get_citys: rootUrl + '/action/public/v4/citycode_list',         //get
-    set_region: rootUrl + 'action/public/v4/set_region',            //post
+    set_region: rootUrl + '/action/public/v4/set_region',           //post
 };
 var apiUrlResource = {
     changePwd:  Vue.resource(apiUrl.changePwdApi),
