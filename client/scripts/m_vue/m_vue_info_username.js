@@ -37,8 +37,7 @@ if ($(".m_vue").attr("data-page") === "info_username") {
                             username: self.username
                         }).then(function (response) {
                             self.clickable.submit = false;
-                            var data = JSON.parse(response.data);
-                            console.log(data);
+                            var data = typeof response.data === 'object' ? response.data : JSON.parse(response.data)
                             if (data.is_succ) {
                                 layer.open({
                                     content: '提交成功！',

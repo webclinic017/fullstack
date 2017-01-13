@@ -1,4 +1,57 @@
 var report_sites = [
+    /*添加时间 2017-1-12*/
+    {
+        address: 'http://finance.ifeng.com/a/20161221/15094200_0.shtml',
+        description: '【凤凰财经】在成为下一个风口前 智能理财还有多远的路要走？',
+        date: '2016-12-21'
+    },
+    {
+        address: 'http://finance.ifeng.com/a/20161223/15099482_0.shtml',
+        description: '【凤凰财经】徐慧：智能理财不仅是产品需要借鉴国外',
+        date: '2016-12-23'
+    },
+    {
+        address: 'http://finance.sina.com.cn/money/forex/datafx/2016-12-01/doc-ifxyicnf1323962.shtml?qq-pf-to=pcqq.c2c',
+        description: '【新浪财经】【FX168峰会现场访谈】我们只让用户做最简单的部分，最难的就让科技解决--老虎外汇',
+        date: '2016-12-01'
+    },
+    {
+        address: 'http://www.lieyunwang.com/archives/252499',
+        description: '【猎云网】猎云网年度CEO峰会进行中，四大榜单已揭晓',
+        date: '2016-12-22'
+    },
+    {
+        address: 'http://www.wtoutiao.com/mipp/608n5yi.html',
+        description: '【头条】互金大佬谈智能投顾：风险问卷答几题就配置资产，挺不负责的',
+        date: '2016-12-24'
+    },
+    {
+        address: 'http://v.fx168.com/conference/1612/2076021_app.shtml?from=singlemessage&isappinstalled=1 ',
+        description: '【FX168】FX168峰会现场访谈老虎外汇CEO徐慧和CTO宋伟龙',
+        date: '2016-12-01'
+    },
+    {
+        address: 'http://www.yocajr.com/video/192',
+        description: '【友财网】友财网专访TigerWit老虎外汇技术总监吴南亮',
+        date: '2016-12-15'
+    },
+    {
+        address: 'http://www.lieyunwang.com/archives/252941?winzoom=1',
+        description: '【猎云网】科技金融兴起之际，互联网金融行业要如何驶向新蓝海？',
+        date: '2016-12-22'
+    },
+    {
+        address: 'http://industry.fx168.com/news/broker/1612/2075797.shtml',
+        description: '【FX168峰会】“社区化交易的发展和未来”圆桌论坛实录',
+        date: '2016-12-01'
+    },
+    {
+        address: 'http://brokers.fx678.com/37961',
+        description: '【FX678经纪商频道】汇通财经专访：老虎外汇科技创始人兼CEO 徐慧',
+        date: '2016-12-07'
+    },
+
+    /*添加时间 2017-1-11*/
     {
         address: 'http://zj.sina.com.cn/finance/xfgz/2016-12-29/detail_f-ifxzczfc6622934.shtml',
         description: '【新浪】老虎外汇：“科技金融”用户体验是关键',
@@ -218,5 +271,18 @@ var report_sites = [
         date: '2015-08-12'
     }
 ];
+
+//按照时间排序
+for (var i = 0, len = report_sites.length; i < len; i++) {
+    for (var j = 0, leng = report_sites.length-i-1; j < leng; j++) {
+        var timeStamp1 = new Date(report_sites[j].date).getTime();
+        var timeStamp2 = new Date(report_sites[j+1].date).getTime();
+        if (timeStamp1 < timeStamp2) {
+            var temp = report_sites[j];
+            report_sites[j] = report_sites[j + 1];
+            report_sites[j + 1] = temp;
+        }
+    }
+}
 
 module.exports = report_sites;
