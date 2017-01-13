@@ -1,0 +1,127 @@
+<div ng-controller="SettingInfoEmailController">
+    <div class="pd-tp-30">
+        <div ng-if="settingInfo.email">
+            您已经绑定了电子邮箱
+            <span class="font-info">{{ settingInfo.email }}</span>
+        </div>
+        <div ng-if="!settingInfo.email">
+            您未绑定任何邮箱
+        </div>
+        <div ng-show="step === 1">
+            <div class="row">
+                <form name="oldEmailForm" novalidate>
+                    <div class="col-xs-3 text-center">
+                        <div class="relative">
+                            <div class="captcha_btn"  
+                                    ng-disabled="!clickable.oldCode" 
+                                    ng-click="getEmailCode('old')">
+                                {{ countDownMsg.oldMsg }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                   name="oldCode"
+                                   type="text"
+                                   placeholder="旧邮箱验证码"
+                                   required
+                                   ng-class="{'form-control-error': frontErr.oldCode.show && oldEmailForm.oldCode.$invalid}"
+                                   ng-model="emailInfo.oldCode"
+                                   ng-blur="showFrontErr('oldCode')"
+                                   ng-focus="hideFrontErr('oldCode')">
+
+                            <div ng-show="frontErr.oldCode.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="oldEmailForm.oldCode.$error.required">
+                                    请输入验证码
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 text-center">
+                        <button class="btn btn-primary btn-sm" type="submit" ng-if="clickable.oldSubmit" ng-click="checkEmailCode()">
+                            提交
+                        </button>
+
+                        <button class="btn btn-primary btn-sm" ng-if="!clickable.oldSubmit">
+                            <i class="loading_spinner fa fa-spinner"></i>
+                            提交中
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div ng-show="step === 2">
+            <div class="row">
+                <form name="newEmailForm" novalidate>
+                    <div class="col-xs-3">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                   name="newEmail"
+                                   type="text"
+                                   placeholder="新邮箱"
+                                   required
+                                   ng-class="{'form-control-error': frontErr.newEmail.show && newEmailForm.newEmail.$invalid}"
+                                   ng-model="emailInfo.newEmail"
+                                   ng-pattern="{{ emailInfo.emailPattern }}"
+                                   ng-blur="showFrontErr('newEmail')"
+                                   ng-focus="hideFrontErr('newEmail')">
+
+                            <div ng-show="frontErr.newEmail.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="newEmailForm.newEmail.$error.required">
+                                    请输入新邮箱
+                                </p>
+                                <p class="alert alert-arrow_tp_lf" ng-show="newEmailForm.newEmail.$error.pattern">
+                                    邮箱格式错误
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 text-center">
+                        <div class="relative">
+                            <div class="captcha_btn"  
+                                    ng-disabled="!clickable.newCode" 
+                                    ng-click="getEmailCode('new')">
+                                {{ countDownMsg.newMsg }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                   name="newCode"
+                                   type="text"
+                                   placeholder="新邮箱验证码"
+                                   required
+                                   ng-class="{'form-control-error': frontErr.newCode.show && newEmailForm.newCode.$invalid}"
+                                   ng-model="emailInfo.newCode"
+                                   ng-blur="showFrontErr('newCode')"
+                                   ng-focus="hideFrontErr('newCode')">
+
+                            <div ng-show="frontErr.newCode.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="newEmailForm.newCode.$error.required">
+                                    请输入验证码
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-3 text-center">
+                        <button class="btn btn-primary btn-sm" type="submit" ng-if="clickable.newSubmit" ng-click="setBindEmail()">
+                            提交
+                        </button>
+
+                        <button class="btn btn-primary btn-sm" ng-if="!clickable.newSubmit">
+                            <i class="loading_spinner fa fa-spinner"></i>
+                            提交中
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
