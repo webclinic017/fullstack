@@ -35,7 +35,7 @@
                     :class="{'primary-bg': clickable.code ,'gray-bg': !clickable.code }"
                     :disabled="!clickable.code"
                     @click="getCode()">
-                    <i class="loading fa fa-spinner" v-if="!clickable.code"></i>
+                    <i class="loading fa fa-spinner loading_spinner" v-if="!clickable.code"></i>
                     发送验证码
             </button>
 
@@ -114,7 +114,7 @@
                 <button
                     class="btn btn-info btn-lg mg-tp-20 gray-bg" 
                     v-show="!clickable.submit">
-                    <i class="loading fa fa-spinner"></i>
+                    <i class="loading fa fa-spinner loading_spinner"></i>
                     下一步
                 </button>
            </div>
