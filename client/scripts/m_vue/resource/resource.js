@@ -14,6 +14,7 @@ var apiUrl = {
     getSettingInfoApi: rootUrl + '/action/public/v4/get_info',      //get
     getCodeApi: rootUrl + '/action/public/v3/get_phone_reg_code',   //post
     set_token: rootUrl + '/action/public/v3/set_token',             //get
+    check_exsit: rootUrl + '/action/public/v4/exists',              //get
     changeTelBind: rootUrl + '/action/public/v3/set_my_bind_phone', //post
     getInfo: rootUrl + '/action/public/v4/get_info',                //get
     upload_avatar: rootUrl + '/action/public/v3/user_upload',       //get
@@ -30,6 +31,7 @@ var apiUrlResource = {
     getSettingInfo: Vue.resource(apiUrl.getSettingInfoApi),
     getCode: Vue.resource(apiUrl.getCodeApi),
     set_token: Vue.resource(apiUrl.set_token),
+    check_exsit: Vue.resource(apiUrl.check_exsit),
     changeTelBind: Vue.resource(apiUrl.changeTelBind),
     getInfo: Vue.resource(apiUrl.getInfo),
     upload_avatar: Vue.resource(apiUrl.upload_avatar),

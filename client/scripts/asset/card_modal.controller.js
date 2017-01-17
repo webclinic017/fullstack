@@ -102,8 +102,9 @@
             }
         }
         // 去实名认证
+        $scope.verify = verify;
         function verify() {
-            $state.go('');
+            $state.go('space.setting.subpage',{subpage:'verify'},{reload:true});
             closeModal();
         }
 

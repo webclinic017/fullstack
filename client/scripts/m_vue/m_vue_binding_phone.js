@@ -19,16 +19,19 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
             backErr: {
                 show: false,
                 msg: '',
-                code:{
-                    show:false,
-                    msg:''
+                code: {
+                    show: false,
+                    msg: ''
                 }
             },
             clickable: {
+                getCode: true,
                 submit: true,
                 code: true
             },
-            codeBtn_msg:'发送验证码'
+            step: 1,
+            codeBtn_msg: '重新获取',
+            exsit: true,
         },
         //生成token
         ready: function () {
@@ -39,37 +42,81 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
             });
         },
         methods: {
-            getCode: function () {
+            check_exsit: function () {
                 var self = this;
                 self.$validate('phone', function () {
-                    if (!self.$checkTel.phone.phoneErr) {
+                    if (!self.$checkTel.phone.phoneErr) { //指定通过校验的validator
+                        apiUrlResource.check_exsit.get({
+                            key: self.phone,
+                            username: null
+                        }).then(function (response) {
+
+                            var data = JSON.parse(response.data);
+
+                            if (data.data) {
+
+                                self.backErr = {
+                                    show: true,
+                                    msg: '此号码已存在！'
+                                }
+                                self.exsit = true;
+                                setTimeout(function () {
+                                    self.backErr = {
+                                        show: false,
+                                        msg: ''
+                                    };
+                                }, 3000);
+                            } else {
+                                self.exsit = false;
+                                self.getCode();
+                            }
+                        }, function (error) {
+                            console.log(error);
+                            alert("请求失败");
+                        });
+                    } else {
+                        self.showFrontErr('phone');
+                    }
+                });
+            },
+
+            getCode: function () {
+                var self = this;
+                //console.log(!self.$checkTel.phone.phoneErr);
+                self.$validate('phone', function () {
+                    if (!self.$checkTel.phone.phoneErr && !self.exsit) {
                         self.clickable.code = false;
                         apiUrlResource.getCode.save({
                             phone: self.phone,
                             token: self.token
                         }).then(function (response) {
                             var data = JSON.parse(response.data);
-
+                            self.clickable.code = false;
                             if (data.is_succ) {
-                                layer.open({
-                                    content: '验证码已发送',
-                                    skin: 'msg',
-                                    time: 2 //2秒后自动关闭
-                                });
-                                //倒计时
+
+                                if (self.step == 1) {
+                                    self.nextStep(2);
+                                } else if (self.step == 2) {
+                                    layer.open({
+                                        content: '验证码已发送！',
+                                        time: 2,
+                                        skin:'msg'
+                                    })
+                                }
                                 var count = 59;
-                                self.codeTimer = setInterval(function(){
+                                self.codeTimer = setInterval(function () {
                                     self.codeBtn_msg = count + 's';
-                                    count --;
-                                    if(count == 0){
+                                    count--;
+                                    if (count == 0) {
                                         clearInterval(self.codeTimer);
                                         self.clickable.code = true;
                                         self.codeBtn_msg = '重新获取'
                                     }
-                                },1000);
+                                }, 1000);
 
                             } else {
                                 self.clickable.code = true;
+
                                 self.backErr = {
                                     show: true,
                                     msg: data.error_msg
@@ -92,22 +139,19 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
                     }
                 });
             },
+
             submitMethod: function () {
                 var self = this;
                 self.$validate(true, function () {
                     if (!self.$checkTel.invalid) {
+                        self.clickable.submit = false;
                         apiUrlResource.changeTelBind.save({
                             phone: self.phone,
                             phone_code: self.code
                         }).then(function (response) {
-                            self.clickable.submit = false;
                             var data = response.data;
                             if (data.is_succ) {
-                                layer.open({
-                                    content: '提交成功！',
-                                    skin: 'msg',
-                                    time: 2 //2秒后自动关闭
-                                });
+                                self.nextStep(3);
                             } else {
 
                                 self.backErr.show = {
@@ -115,11 +159,15 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
                                     msg: data.error_msg
                                 };
 
+                                if (data.error_code === 1) {
+                                    self.backErr.msg = '参数错误';
+                                }
+
                                 if (data.error_code === 2) {
                                     self.backErr.msg = '请输入正确的手机号码';
                                 }
 
-                                if (data.error_code === 3 || data.error_code === 1) {
+                                if (data.error_code === 3) {
                                     self.backErr.msg = '验证码错误';
                                 }
 
@@ -159,6 +207,9 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
                 if (self.frontErr[name]) {
                     self.frontErr[name]["show"] = false;
                 }
+            },
+            nextStep: function (step) {
+                this.step = step;
             }
         },
     });
