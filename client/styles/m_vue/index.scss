@@ -1,9 +1,21 @@
 .m_vue_form-control {
     padding-left: 30px;
+    border: none;
+    border-bottom: 1px solid $gray;
+}
+
+.vue-form-control {
+    padding-left: 30px;
+    border: none;
+    border-bottom: 1px solid $gray;
 }
 
 .primary-bg{
-    background: $brand-primary;
+    background: $brand-primary-dark;
+}
+
+.pr-color{
+    color: $brand-primary-dark;
 }
 
 @include b(m_vue) {

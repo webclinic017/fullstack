@@ -89,7 +89,7 @@
                 }
             });
         }
-
+        
         function openCardMdl() {
             var personal = {
                 verified: $scope.personal.verified,

@@ -31,6 +31,14 @@ if ($(".m_vue").attr("data-page") === "info_avatar") {
 				done: function (e, data) {
 					self.avatar.status = 2;
 					self.avatar.progress = false;
+					layer.open({
+						skin: 'msg',
+						content: '更改头像成功',
+						time: 2
+					})
+					setTimeout(function () {
+						self.back_setting();
+					}, 1200)
 				},
 				progressall: function (e, data) {
 					//todo 
@@ -58,6 +66,12 @@ if ($(".m_vue").attr("data-page") === "info_avatar") {
 			},
 			chageUploadStatus: function () {
 				this.avatar.status = 0;
+			},
+			back_setting: function () {
+				callNative({
+					type: "back_setting",
+					url: ""
+				});
 			},
 			showFrontErr: function (name) {
 				var self = this;

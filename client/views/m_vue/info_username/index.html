@@ -3,10 +3,10 @@
         <validator name="checkUsername">
             <form name="infoForm" v-show="step === 1">
                 <div class="form-control-wrapper">
-                    <input class="form-control m_vue_form-control" 
+                    <input class="form-control vue-form-control pd-lf-5" 
                         name="username" 
                         type="text"
-                        placeholder="昵称"
+                        placeholder="请输入昵称"
                         required
                         :class="{'form-control-error': (frontErr.username.show && $checkUsername.username.noempty) || (backErr.username.show && backErr.username.status > 0)}"
                         v-model="username"
@@ -14,8 +14,6 @@
                         v-validate:username="['noempty','nameErr']"
                         @focus="hideFrontErr('username')"
                         @blur="showFrontErr('username')">
-                    
-                    <i class="form-control-icon fa fa-user"></i>
 
                     <div v-show="frontErr.username.show">
                         <p class="alert-arrow_tp_lf" v-show="$checkUsername.username.noempty">
@@ -45,12 +43,12 @@
             </form>
             <button class="btn btn-info btn-lg mg-tp-20 btn-primary" v-if="clickable.submit" @click="submitInfoForm()">
                     提交
-                </button>
+            </button>
 
-                <button class="btn btn-info btn-lg mg-tp-20" v-if="!clickable.submit">
-                    <i class="loading fa fa-spinner"></i>
-                    提交中
-                </button>
+            <button class="btn btn-info btn-lg mg-tp-20" v-if="!clickable.submit">
+                <i class="loading fa fa-spinner loading_spinner"></i>
+                提交中
+            </button>
         </validator>
 
         <div class="operate_tip" v-show="step === 2">
@@ -59,7 +57,7 @@
                 昵称修改成功
             </h3>
 
-            <a class="btn btn-info btn-lg mg-tp-30 btn-primary" ui-sref="setting.subpage({subpage: 'index'})">
+            <a class="btn btn-info btn-lg mg-tp-30 btn-primary" @click="back_setting()">
                 确定
             </a>
         </div>

@@ -33,7 +33,7 @@
                 3、不限介绍好友的数量。
             </li>
             <li>
-                4、同一手机号码、身份证号和银行卡号视为同一用户。任何通过第三方作弊软件刷取好友邀请奖励的用户，一经发现，{{lang.text('companyNameZh')}}有权取消所有奖励的承兑。20 美金的介绍佣金将在 30 天后进行结算。
+                4、同一手机号码、身份证号和银行卡号视为同一用户。任何通过第三方作弊软件刷取好友邀请奖励的用户，一经发现，{{lang.text('companyNameZh')}}有权取消所有奖励的承兑。20 美元佣金在被邀请人满足条件后次日结算。
             </li>
             <li>
                 5、本活动长期有效，最终解释权归{{lang.text('companyNameZh')}}所有。如有疑问，请咨询客服 {{lang.text('telephone')}}。
@@ -50,7 +50,7 @@
         <thead>
             <tr>
                 <th>好友昵称</th>
-                <th>是否交易</th>
+                <th>状态</th>
                 <th>我的佣金</th>
             </tr>
         </thead>
@@ -58,8 +58,9 @@
             <tr ng-repeat="bonus in bonusList">
                 <td>{{bonus.username}}</td>
                 <td>
-                    <span ng-if="bonus.status === 1">是</span>
-                    <span ng-if="bonus.status === 0">否</span>
+                    {{ bonus.status }}
+                    <!--<span ng-if="bonus.status === 1">是</span>
+                    <span ng-if="bonus.status === 0">否</span>-->
                 </td>
                 <td><i class="fa fa-dollar"></i>{{bonus.money || 0}}</td>
             </tr>

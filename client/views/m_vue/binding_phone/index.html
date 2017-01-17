@@ -1,19 +1,18 @@
 <div class="m_vue" data-page="binding_phone">
     <div id="m_vue_binding_phone" v-cloak>
         <validator name="checkTel">
-            <div class="form-control-wrapper">
-                <input class="form-control m_vue_form-control" 
+            <div class="form-control-wrapper" v-show="step==1">
+                <input class="form-control vue-form-control pd-lf-5" 
                        name="phone" 
                        type="number"
-                       placeholder="新手机号码"
+                       placeholder="请输入新手机号码"
                        initial="off"
                        :class="{'form-control-error': frontErr.phone.show && $checkTel.phone.noempty}"
                        v-validate:phone="['noempty','phoneErr']"
                        v-model="phone"
                        @focus="hideFrontErr('phone')"
-                       @blur="showFrontErr('phone')">
-                
-                <i class="form-control-icon fa fa-mobile-phone"></i>
+                       @blur="check_exsit()"
+                       >
 
                 <div v-show="frontErr.phone.show">
                     <p class="alert-arrow_tp_lf" v-show="$checkTel.phone.noempty">
@@ -22,26 +21,40 @@
                     <p class="alert-arrow_tp_lf" v-show="$checkTel.phone.phoneErr && !$checkTel.phone.noempty">
                         手机号码格式不正确
                     </p>
-                    <p class="alert-arrow_tp_lf" v-show="$checkTel.phone.exist">
-                        手机号码已存在
+                </div>
+
+                 <div class="text-center mg-tp-20" v-show="backErr.show">
+                    <p class="alert-system">
+                        {{ backErr.msg || '提交失败' }}
                     </p>
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="col-xs-6">
+
+            <button class="btn btn-lg mg-tp-20" 
+                    v-show="step==1"
+                    :class="{'primary-bg': clickable.code ,'gray-bg': !clickable.code }"
+                    :disabled="!clickable.code"
+                    @click="getCode()">
+                    <i class="loading fa fa-spinner loading_spinner" v-if="!clickable.code"></i>
+                    发送验证码
+            </button>
+
+            <div v-show="step==2">
+                <div class="text-center font-size-18">短信验证码已发送</div>
+                <div class="form-control-wrapper">
+                    <div class="col-xs-6 mg-tp-20 pd-lf-0">
                     <div class="form-control-wrapper">
-                        <input class="form-control m_vue_form-control" 
-                               name="code"
-                               type="text"
-                               placeholder="验证码"
-                               required
-                               :class="{'form-control-error': (frontErr.code.show && $checkTel.code.noempty) || (backErr.code.show && backErr.code.status > 0)}"
-                               :model="code"
-                               v-validate:code="['noempty']"
-                               @focus="hideFrontErr('code')"
-                               @blur="showFrontErr('code')">
-                        <i class="form-control-icon fa fa-pencil"></i>
+                        <input class="form-control vue-form-control pd-lf-5" 
+                            name="code"
+                            type="text"
+                            placeholder="验证码"
+                            required
+                            v-model="code"
+                            :class="{'form-control-error': (frontErr.code.show && $checkTel.code.noempty) || (backErr.code.show && backErr.code.status > 0)}"
+                            :model="code"
+                            v-validate:code="['noempty']"
+                            @focus="hideFrontErr('code')"
+                            @blur="showFrontErr('code')">
 
                         <div v-show="frontErr.code.show">
                             <p class="alert-arrow_tp_lf" v-show="$checkTel.code.noempty">
@@ -54,42 +67,72 @@
                                 验证码不正确
                             </p>
                         </div>
-
                     </div>
                 </div>
 
-                <div class="col-xs-6">
+                <div class="col-xs-6 mg-tp-20 pd-rg-0">
                     <div class="relative">
-                        <button class="btn btn-lg primary-bg btn-info" 
-                            :class="{'primary-bg': clickable.code ,'gray-bg': !clickable.code }"
-                            start-timer="startTimer" 
-                            is-voice-code="isVoiceCode" 
-                            verify-code-btn-clickable="clickable.code"
-                            :disabled="!clickable.code"
-                            @click="getCode()">
-                            {{ codeBtn_msg }}
+                        <button class="btn btn-lg btn-info"
+                                :class="{'primary-bg': clickable.code ,'gray-bg': !clickable.code }"
+                                :disabled="!clickable.code"
+                                @click="getCode()">
+                            {{ codeBtn_msg || "重新获取"}}
                         </button>
+
+                        <!--<div ng-show="backErr.verifyCodeBtn.show">
+                            <p class="alert-arrow_tp_lf" ng-show="backErr.verifyCodeBtn.status == 1">
+                                1 分钟内只可发送 1 次验证码
+                            </p>
+
+                            <p class="alert-arrow_tp_lf" ng-show="backErr.verifyCodeBtn.status == 2">
+                                1 小时内只可发送 10 次验证码
+                            </p>
+
+                            <p class="alert-arrow_tp_lf" ng-show="backErr.verifyCodeBtn.status == 5">
+                                验证码发送失败
+                            </p>
+                        </div>-->
                     </div>
                 </div>
             </div>
 
-            <div class="text-center" v-show="backErr.show">
-                <p class="alert-system">
-                    {{ backErr.msg || '提交失败' }}
-                </p>
-            </div>
+           <div v-show="step==2">
+                <div class="text-center mg-tp-100">
+                    <p class="alert-system" v-show="backErr.show">
+                        {{ backErr.msg || '提交失败' }}
+                    </p>
+                </div>
 
-            <button @click="submitMethod()" 
-            class="btn btn-primary primary-bg btn-lg mg-tp-20" 
-            :class="{'primary-bg': clickable.submit ,'gray-bg': !clickable.submit }"
-            v-show="clickable.submit">
-                提交
-            </button>
+                <button 
+                        @click="submitMethod()" 
+                        class="btn btn-primary primary-bg btn-lg pd-lf-20"
+                        v-show="clickable.submit"
+                        >
+                        下一步
+                </button>
 
-            <button class="btn btn-info btn-lg primary-bg mg-tp-20" v-show="!clickable.submit">
-                <i class="loading fa fa-spinner"></i>
-                提交中
-            </button>
+                <button
+                    class="btn btn-info btn-lg mg-tp-20 gray-bg" 
+                    v-show="!clickable.submit">
+                    <i class="loading fa fa-spinner loading_spinner"></i>
+                    下一步
+                </button>
+           </div>
         </validator>
+    </div>
+    <div class="operate_tip" v-show="step==3">
+        <h3 class="operate_tip__title text-center">
+            <i class="operate_tip__succ_icon fa fa-check-circle mg-bt-20 pr-color" style="font-size:4.5rem;font-weight:100;"></i><br>
+            新手机号绑定成功
+        </h3>
+
+        <p class="text-center font-light">
+            下次请使用新手机号登录<br>
+            登录密码不变
+        </p>
+
+        <a class="btn btn-info btn-lg mg-tp-30 primary-bg" @click="back_setting()">
+            确定
+        </a>
     </div>
 </div>

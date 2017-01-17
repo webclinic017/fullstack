@@ -45,6 +45,11 @@ if ($(".m_vue").attr("data-page") === "info_username") {
                                     time: 2 //2秒后自动关闭
                                 });
                                 self.clickable.submit = true;
+                                //告诉app更新username
+                                callNative({
+                                    type: "change_name",
+                                    url: ""
+                                });
                             } else {
                                 self.backErr.username.show = true;
                                 self.backErr.username.status = -1;
@@ -67,6 +72,12 @@ if ($(".m_vue").attr("data-page") === "info_username") {
                     }
                 });
 
+            },
+            back_setting: function () {
+                callNative({
+                    type: "back_setting",
+                    url: ""
+                });
             },
             showFrontErr: function (name) {
                 var self = this;

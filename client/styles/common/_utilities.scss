@@ -23,6 +23,14 @@
     float: right;
 }
 
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
 .center{
     margin: 0 auto;
 }
@@ -58,6 +66,10 @@
 }
 
 //== font
+.font-slim{
+    font-weight: 200;
+}
+
 .font-normal {
     font-weight: 400;
 }
@@ -293,6 +305,10 @@
 
 .pd-lf-0 {
     padding-left: 0 !important;
+}
+
+.pd-lf-5 {
+    padding-left: 5px !important;
 }
 
 .pd-lf-10 {
