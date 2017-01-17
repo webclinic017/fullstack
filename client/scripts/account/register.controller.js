@@ -75,7 +75,7 @@
             },
             system: {
                 show: false,
-                status: 0    // 0, 1, 2
+                msg: 0    // 0, 1, 2
             }
         };
 
@@ -289,49 +289,61 @@
                 } else {
 
 
+                    $scope.backErr.system = {
+                        show: true,
+                        msg: data.error_msg
+                    };
+
+                    $timeout(function () {
+                        $scope.backErr.system = {
+                            show: false,
+                            msg: ''
+                        };
+                    }, 3000);
+
                     // username
-                    if (data.error_code === 7) {
-                        $scope.backErr.username.show = true;
-                        $scope.backErr.username.status = 1;
-                    }
+                    // if (data.error_code === 7) {
+                    //     $scope.backErr.username.show = true;
+                    //     $scope.backErr.username.status = 1;
+                    // }
 
-                    if (data.error_code === 10) {
-                        $scope.backErr.username.show = true;
-                        $scope.backErr.username.status = 2;
-                    }
+                    // if (data.error_code === 10) {
+                    //     $scope.backErr.username.show = true;
+                    //     $scope.backErr.username.status = 2;
+                    // }
 
-                    // phone
-                    if (data.error_code === 6) {
-                        $scope.backErr.phone.show = true;
-                        $scope.backErr.phone.status = 1;
-                    }
+                    // // phone
+                    // if (data.error_code === 6) {
+                    //     $scope.backErr.phone.show = true;
+                    //     $scope.backErr.phone.status = 1;
+                    // }
 
-                    // 验证码错误
-                    if (data.error_code === 5 || data.error_code === 12) {
-                        $scope.backErr.captcha.show = true;
-                        $scope.backErr.captcha.status = 1;
-                    }
+                    // // 验证码错误
+                    // if (data.error_code === 5 || data.error_code === 12) {
+                    //     $scope.backErr.captcha.show = true;
+                    //     $scope.backErr.captcha.status = 1;
+                    // }
 
-                    // 系统错误
-                    if (data.error_code === 4) {
-                        $scope.backErr.system.show = true;
-                        $scope.backErr.system.status = 1;
+                    // // 系统错误
+                    // if (data.error_code === 4) {
+                    //     $scope.backErr.system.show = true;
+                    //     $scope.backErr.system.status = 1;
 
-                        $timeout(function () {
-                            $scope.backErr.system.show = false;
-                            $scope.backErr.system.status = 0;
-                        }, 3000);
-                    }
+                    //     $timeout(function () {
+                    //         $scope.backErr.system.show = false;
+                    //         $scope.backErr.system.status = 0;
+                    //     }, 3000);
+                    // }
 
-                    if (data.error_code === 11) {
-                        $scope.backErr.system.show = true;
-                        $scope.backErr.system.status = 2;
+                    // if (data.error_code === 11) {
+                    //     $scope.backErr.system.show = true;
+                    //     $scope.backErr.system.status = 2;
 
-                        $timeout(function () {
-                            $scope.backErr.system.show = false;
-                            $scope.backErr.system.status = 0;
-                        }, 3000);
-                    }
+                    //     $timeout(function () {
+                    //         $scope.backErr.system.show = false;
+                    //         $scope.backErr.system.status = 0;
+                    //     }, 3000);
+                    // }
 
                     $scope.clickable.submit = true;
                 }

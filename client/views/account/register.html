@@ -214,11 +214,8 @@
             </div>
             
             <div class="text-center" ng-show="backErr.system.show">
-                <p class="alert-system" ng-show="backErr.system.status === 1">
-                    注册次数过多，请稍候重试
-                </p>
-                <p class="alert-system" ng-show="backErr.system.status === 2">
-                    系统繁忙，请稍候重试
+                <p class="alert-system">
+                    {{ backErr.system.msg || '未知错误，请联系管理员' }}
                 </p>
             </div>
 
