@@ -195,6 +195,12 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
                     }
                 });
             },
+            back_setting:function(){
+                callNative({
+                    type: "back_setting",
+                    url: ""
+                });
+            },
             showFrontErr: function (name) {
                 var self = this;
                 if (self.frontErr[name]) {

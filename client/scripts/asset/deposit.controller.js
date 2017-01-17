@@ -122,7 +122,7 @@
 
                     function closeModal() {
                         $modalInstance.dismiss();
-                        refresh();
+                        //refresh();
                     }
 
                 }
