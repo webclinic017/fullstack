@@ -48,7 +48,7 @@ if ($(".m_vue").attr("data-page") === "info_username") {
                                 //告诉app更新username
                                 callNative({
                                     type: "change_name",
-                                    url: ""
+                                    name: self.username
                                 });
                             } else {
                                 self.backErr.username.show = true;
