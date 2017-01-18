@@ -59,11 +59,7 @@
                     return;
                 }
 
-                angular.forEach($scope.historyList, function (record) {
-                    if (record.code === code) {
-                        record.status = -2;
-                    }
-                });
+                getList(1);
 
             });
 
