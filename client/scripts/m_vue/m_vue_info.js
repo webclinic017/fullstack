@@ -35,7 +35,7 @@ if ($(".m_vue").attr("data-page") === "info") {
                 var action_address = window.location.origin + "/m/wap/info_" + page + "/index";
                 console.info(action_address);
                 callNative({
-                    type: "openUrl",
+                    type: "uploadAvatar",
                     url: action_address
                 });
             }
