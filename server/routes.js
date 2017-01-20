@@ -668,6 +668,10 @@ module.exports = function (app) {
                 data = napiConfigInfo.getBannerInfoIos();
             }
         }
+        // 媒体报道
+        if (action == "get_report_site") {
+            data = report_sites;
+        }
         if (data) {
             rs = {
                 is_succ: true,
