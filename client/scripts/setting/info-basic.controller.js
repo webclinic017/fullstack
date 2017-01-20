@@ -270,7 +270,7 @@
                     // 神策数据统计
                     sa.setProfile({
                         $name: $scope.basicInfo.username,
-                        $country: $scope.basicInfo.locationWorld.key,
+                        country: $scope.basicInfo.locationWorld.key,
                         $province: $scope.basicInfo.locationState.key,
                         $city: $scope.basicInfo.locationCity.key,
                         trade_feature: $scope.basicInfo.special.value
