@@ -219,6 +219,17 @@ module.exports = function (app) {
             pageInfo: pageInfo
         }, req));
     });
+    // test withdraw for app
+    app.route('/m/asset_test/:subpage(withdraw|cardlist|addcard1|addcard2|succ|fail)').get(function (req, res) {
+        var subpage = req.params.subpage || 'withdraw';
+        var pageInfo = {
+            id: subpage
+        };
+        setCompanyCookie(res);
+        res.render('m_asset_test.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
 
     /*邀请好友*/
     app.route('/m/invite01').get(function (req, res) {
