@@ -1,0 +1,29 @@
+<div class="m_withdraw" data-page="page4">
+    <div class="m_withdraw__addcard">
+        <div class="m_withdraw__addcard-tit">
+            <%= lang.text("mAssetWithdrawInfo2")%>
+        </div>
+        <div class="m_withdraw__addcard-info">
+            <ul>
+               <li class="detail">
+                   <span><%= lang.text("mAssetWithdrawBankName")%></span>
+                   <select></select>
+               </li>
+               <li class="detail">
+                   <span><%= lang.text("mAssetWithdrawBranchName")%></span>
+                   <input type="text" name="branch" placeholder="<%= lang.text("mAssetWithdrawPlaceholder2")%>">
+               </li>  
+            </ul>
+        </div>
+        <div class="m_withdraw__addcard-btn">
+            <span class="m_withdraw_btn card2_btn"><%= lang.text("mAssetWithdrawNext")%></span>
+        </div>
+    </div>
+</div>
+
+<script id="template_banklist" type="text/html">
+    <option disabled value="" selected ></option>
+    <$for(var i=0;i<banks.length;i++){$>
+        <option value="<$= banks[i].nameEN$>"><$= banks[i].nameZH$></option>
+    <$}$>
+</script>
