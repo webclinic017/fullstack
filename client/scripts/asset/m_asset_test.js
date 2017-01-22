@@ -158,7 +158,7 @@ $(document).ready(function () {
 
     function toCardList () {
         var action_address = window.location.origin +
-                             "/m/asset/cardlist?amount=" +
+                             "/m/asset_test/cardlist?amount=" +
                              encodeURIComponent(widthdrawNum);
         console.info(action_address);
         callNative({
@@ -238,7 +238,7 @@ $(document).ready(function () {
             $toAddCardBtn.on("touchend", function () {
                 widthdrawNum = getUrlParam("amount");
                 var action_address = window.location.origin + 
-                                     "/m/asset/addcard1?amount=" +
+                                     "/m/asset_test/addcard1?amount=" +
                                      encodeURIComponent(widthdrawNum) +
                                      "&realname="+encodeURIComponent(realname) +
                                      "&id="+encodeURIComponent(id);
@@ -270,7 +270,7 @@ $(document).ready(function () {
                     data = JSON.parse(data);
                     if (data.is_succ) {
                         var action_address = window.location.origin +
-                                     "/m/asset/succ";
+                                     "/m/asset_test/succ";
                         console.info(action_address);
                         callNative({
                             type: "openUrlRefresh",
@@ -278,7 +278,7 @@ $(document).ready(function () {
                         });
                     } else {
                         var action_address = window.location.origin +
-                                     "/m/asset/fail?msg=" +
+                                     "/m/asset_test/fail?msg=" +
                                      encodeURIComponent(data.error_msg);
                         console.info(action_address);
                         callNative({
@@ -289,7 +289,7 @@ $(document).ready(function () {
                 }, function (err) {
                     console.log("出金申请提交失败");
                     var action_address = window.location.origin +
-                                     "/m/asset/fail";
+                                     "/m/asset_test/fail";
                     console.info(action_address);
                     callNative({
                         type: "openUrlRefresh",
@@ -335,7 +335,7 @@ $(document).ready(function () {
             widthdrawNum = getUrlParam("amount");
             id = getUrlParam("id");
             var action_address = window.location.origin + 
-                                 "/m/asset/addcard2?amount=" + 
+                                 "/m/asset_test/addcard2?amount=" + 
                                  encodeURIComponent(widthdrawNum) +
                                  "&realname="+encodeURIComponent(realname) +
                                  "&id="+encodeURIComponent(id) +
@@ -421,7 +421,7 @@ $(document).ready(function () {
                 if (data.is_succ) {
                     widthdrawNum = getUrlParam("amount");
                     var action_address = window.location.origin + 
-                             "/m/asset/cardlist?amount=" +
+                             "/m/asset_test/cardlist?amount=" +
                              encodeURIComponent(widthdrawNum);
                     console.info(action_address);
                     callNative({
