@@ -50,6 +50,9 @@ if ($(".m_vue").attr("data-page") === "info_username") {
                                     type: "change_name",
                                     name: self.username
                                 });
+                                setTimeout(function(){
+                                    self.back_setting();
+                                },500)
                             } else {
                                 self.backErr.username.show = true;
                                 self.backErr.username.status = -1;
