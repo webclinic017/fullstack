@@ -33,9 +33,12 @@ if ($(".m_vue").attr("data-page") === "info") {
         methods: {
             toStatePage: function (page) {
                 var action_address = window.location.origin + "/m/wap/info_" + page + "/index";
-                console.info(action_address);
+                var type = 'openUrl';
+                if (page == 'avatar') {
+                    type = 'uploadAvatar';
+                }
                 callNative({
-                    type: "uploadAvatar",
+                    type: type,
                     url: action_address
                 });
             }
