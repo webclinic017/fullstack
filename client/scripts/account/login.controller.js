@@ -53,8 +53,8 @@
             var textEnc = account.encrypt($scope.account.password);
             // 首先对 password 加密
             // account.encrypt($scope.account.password).then(function (textEnc) {
-                // console.info(textEnc);
-
+                console.info($scope.account.id, textEnc, $scope.account.autoLogin);
+                
                 if (textEnc) {
                     account.login($scope.account.id, textEnc, $scope.account.autoLogin).then(function (data) {
                         if (!data.is_succ) {

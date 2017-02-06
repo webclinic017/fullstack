@@ -10,12 +10,14 @@
         // php接口要用http://proxy.tigerwit.com请求
 
         var urlOrigin = $cookies["access_origin"] || '';    // node 中写入cookie
+        var urlOrigin2 = $cookies["access_origin2"] || '';    // node 中写入cookie
         var o = urlOrigin;
         // console.info(o);
 
         var account = {
             getPersonalInfoDegreeApi: o + '/action/public/v4/user_perfect_degree',
-            loginApi: o + '/action/public/v3/login',
+            // loginApi: o + '/action/public/v3/login',
+            loginApi: urlOrigin2 + '/auth/login',
             checkLoginedApi: o + '/action/public/v4/check',
             setTokenApi: o + '/action/public/v3/set_token',
             checkExistApi: o + '/action/public/v4/exists',
