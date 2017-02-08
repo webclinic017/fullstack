@@ -1,0 +1,739 @@
+.layer_content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: left;
+  .close_layer {
+    text-align: center;
+    width: px2rem(50);
+    height: px2rem(50);
+    line-height: 1.4rem;
+    padding-left: 1px;
+    position: absolute;
+    margin-left: 2.5rem;
+    margin-bottom: 1rem;
+    top: -42px;
+    right: -22px;
+    font-size: px2rem(40);
+    border-radius: 50%;
+    color: #e3ab6e;
+    border: 1px solid #e3ab6e;
+  }
+  .matters_con {
+    display: none;
+    font-size: px2rem(24);
+    span {
+      display: inline-block;
+      width: 1rem;
+      line-height: 1.1rem;
+      height: 1rem;
+      border-radius: 50%;
+      margin-right: 5px;
+      background-color: #e2aa6e;
+      color: #d31b12;
+      text-align: center;
+      vertical-align: middle;
+    }
+    p {
+      line-height: 1.25rem;
+    }
+  }
+  .detail1_con {
+    display: none;
+    text-align: center;
+    p {
+      font-size: px2rem(35);
+      line-height: px2rem(90);
+      font-weight: 600;
+      .text-shadow {
+        font-size: px2rem(55);
+        text-shadow: px2rem(-8) px2rem(8) 2px rgba(0, 0, 0, 0.4);
+        color: #f7c660;
+      }
+    }
+  }
+  .detail2_con {
+    text-align: center;
+    font-size: px2rem(30);
+    p {
+      line-height: px2rem(60);
+    }
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+      margin-top: px2rem(20);
+      td {
+        font-size: px2rem(20);
+        padding: px2rem(20) auto;
+        border: 1px solid #e2aa6f;
+        height: px2rem(60);
+      }
+      thead {
+        background-color: #e2aa6f;
+        border: 1px solid #e2aa6f;
+        height: px2rem(60);
+        line-height: 2rem;
+        padding: px2rem(20) auto;
+      }
+    }
+  }
+}
+
+@include b(lake_layout) {
+  /*层级变量*/
+  $index_bg: 0 !default;
+  $index_logo: 1 !default;
+  $index_cloud: 2 !default;
+  $index_tree: 3 !default;
+  $index_title: 3 !default;
+  $index_flag: 4 !default;
+  $index_text: 5 !default;
+  $index_fr_cloud: 6 !default;
+  $index_slider: 10 !default;
+
+  .clouds {
+    width: 35%;
+    position: absolute;
+    z-index: $index_cloud;
+  }
+
+  .text {
+    z-index: $index-text;
+    width: 78%;
+    left: 11%;
+    top: 15%;
+  }
+
+  text-align: center;
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  /* Firefox 4 */
+  -webkit-transition: all 1s ease;
+  /* Safari and Chrome */
+  -o-transition: all 1s ease;
+  /* Opera */
+  display: none;
+  //定义通用样式
+  h5 {
+    color: $brand-primary-dark;
+    font-size: px2rem(64);
+    padding-top: px2rem(100) !important;
+    span {
+      font-size: px2rem(64);
+      color: $brand-primary-dark;
+    }
+  }
+  p {
+    color: #fff;
+    font-size: px2rem(35);
+    line-height: px2rem(50);
+  }
+  .t33_logo {
+    width: px2rem(190);
+    margin: 0 auto;
+    padding-top: 4%;
+    img {
+      width: 100%;
+    }
+  }
+  #dowebok {
+    .slide_arrow {
+      position: absolute;
+      bottom: 5%;
+      left: 52%;
+      margin: -14px 0 0 -25px;
+      width: 36px;
+      height: 38px;
+      background: url("/images/bd/change.png") no-repeat;
+      -webkit-animation: start 1.5s infinite ease-in-out;
+      -moz-animation: start 1.5s infinite ease-in-out;
+      animation: start 1.5s infinite ease-in-out;
+    }
+
+    .logo {
+      width: 25%;
+      position: relative;
+      left: -8rem;
+      top: px2rem(20);
+    }
+
+    @keyframes start {
+      0%,
+      30% {
+        opacity: 0;
+        transform: translate(0, 10px);
+      }
+      60% {
+        opacity: 1;
+        transform: translate(0, 0);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(0, -8px);
+      }
+    }
+    .section {
+      position: relative;
+    }
+    .section1 {
+      background: url("/images/bd/lake_sec1_bg.png") no-repeat;
+      background-position: center top;
+      background-size: auto 100%;
+      &.t33_t, &.t33_a, &.t33_b {
+        background: url("/images/bd/lake_sec1_bg.png") no-repeat;
+        background-position: center top;
+        background-size: auto 100%;
+      }
+
+      position: relative;
+
+      .logo {
+        width: 25%;
+        position: relative;
+        left: -8rem;
+        top: px2rem(20);
+      }
+
+      .sec1_clouds {
+        width: 35%;
+        position: absolute;
+        z-index: $index_cloud;
+        &.cloud_rg {
+          top: 0;
+          right: -10%;
+          -webkit-animation: cloud_rg 18s linear infinite;
+          -o-animation: cloud_rg 18s linear infinite;
+          animation: cloud_rg 18s linear infinite;
+        }
+        &.cloud_lf {
+          z-index: $index_cloud;
+          opacity: 0.8;
+          top: 10%;
+          left: -20%;
+          -webkit-animation: cloud_lf 30s linear infinite;
+          -o-animation: cloud_lf 30s linear infinite;
+          animation: cloud_lf 30s linear infinite;
+        }
+      }
+
+      @keyframes cloud_lf {
+        from {
+          left: -20%;
+        }
+
+        50% {
+          left: 20%;
+        }
+
+        to {
+          left: -20%;
+        }
+      }
+      @-webkit-keyframes cloud_lf {
+        from {
+          left: -20%;
+        }
+
+        50% {
+          left: 20%;
+        }
+
+        to {
+          left: -20;
+        }
+      }
+
+      @keyframes cloud_rg {
+        from {
+          right: -10%;
+        }
+
+        50% {
+          right: 10%;
+        }
+
+        to {
+          right: -10%;
+        }
+      }
+      @-webkit-keyframes cloud_rg {
+        from {
+          right: -10%;
+        }
+
+        50% {
+          right: 10%;
+        }
+
+        to {
+          right: -10%;
+        }
+      }
+
+      .title {
+        width: 85%;
+        position: absolute;
+        left: 7%;
+        top: 7%;
+        z-index: $index_title;
+      }
+
+      .five {
+        position: absolute;
+        width: 10%;
+        z-index: $index_flag;
+        &.stock {
+          left: 17%;
+          top: 33%;
+        }
+        &.fund {
+          right: 10%;
+          top: 33%;
+        }
+        &.p2p {
+          left: 10%;
+          top: 50%;
+        }
+        &.realty {
+          right: 10%;
+          top: 50%;
+        }
+        &.forex {
+          width: 12%;
+          left: 30%;
+          top: 78%;
+        }
+      }
+    }
+
+    .section2 {
+      background: url("/images/bd/lake_sec2_bg.png") no-repeat;
+      background-position: center center;
+      background-size: 100% 100%;
+
+      .cloud_lf {
+        top: 52%;
+        left: -10%;
+        -webkit-animation: sec2_cloud_lf 20s linear infinite;
+        -o-animation: sec2_cloud_lf 20s linear infinite;
+        animation: sec2_cloud_lf 20s linear infinite;
+        z-index: $index_cloud;
+      }
+
+      .cloud_rg {
+        top: 55%;
+        right: -10%;
+        -webkit-animation: sec2_cloud_rg 15s linear infinite;
+        -o-animation: sec2_cloud_rg 15s linear infinite;
+        animation: sec2_cloud_rg 15s linear infinite;
+      }
+
+      @keyframes sec2_cloud_lf {
+        from {
+          left: -10%;
+        }
+
+        50% {
+          left: 10%;
+        }
+
+        to {
+          left: -10%;
+        }
+      }
+      @-webkit-keyframes sec2_cloud_lf {
+        from {
+          left: -10%;
+        }
+
+        50% {
+          left: 10%;
+        }
+
+        to {
+          left: -10%;
+        }
+      }
+
+      @keyframes sec2_cloud_rg {
+        from {
+          right: -10%;
+        }
+
+        50% {
+          right: 0%;
+        }
+
+        to {
+          right: -10%;
+        }
+      }
+      @-webkit-keyframes sec2_cloud_rg {
+        from {
+          right: -10%;
+        }
+
+        50% {
+          right: 0%;
+        }
+
+        to {
+          right: -10%;
+        }
+      }
+
+      .tree {
+        height: 100%;
+        left: -8%;
+        z-index: $index_tree;
+      }
+
+      .slide_arrow {
+        z-index: $index_slider;
+      }
+    }
+
+    .section3 {
+      background-color: #121212;
+      background: url("/images/bd/lake_sec3_bg.png") no-repeat;
+      background-position: center center;
+      background-size: auto 100%;
+      .text {
+        top: 12%;
+      }
+      .lamp {
+        width: 30%;
+        left: -12%;
+        bottom: 2%;
+        -webkit-animation: sec3_lamp 3.5s linear infinite;
+        -o-animation: sec3_lamp 3.5s linear infinite;
+        animation: sec3_lamp 3.5s linear infinite;
+      }
+      @keyframes sec3_lamp {
+        from {
+          bottom: 2%;
+        }
+
+        50% {
+          bottom: 5%;
+        }
+
+        to {
+          bottom: 2%;
+        }
+      }
+      @-webkit-keyframes sec3_lamp {
+        from {
+          bottom: 2%;
+        }
+
+        50% {
+          bottom: 5%;
+        }
+
+        to {
+          bottom: 2%;
+        }
+      }
+      .sec3_clouds {
+        width: 55%;
+        &.cloud1 {
+          left: -15%;
+          top: 10%;
+          -webkit-animation: sec3_cloud1 30s linear infinite;
+          -o-animation: sec3_cloud1 30s linear infinite;
+          animation: sec3_cloud1 30s linear infinite;
+        }
+        &.cloud2 {
+          width: 35%;
+          right: 2%;
+          top: 5%;
+          -webkit-animation: sec3_cloud2 25s linear infinite;
+          -o-animation: sec3_cloud2 25s linear infinite;
+          animation: sec3_cloud2 25s linear infinite;
+        }
+        &.cloud3 {
+          left: -25%;
+          top: 42%;
+          opacity: 0.65;
+          z-index: $index_fr_cloud;
+          -webkit-animation: sec3_cloud3 20s linear infinite;
+          -o-animation: sec3_cloud3 20s linear infinite;
+          animation: sec3_cloud3 20s linear infinite;
+        }
+        &.cloud4 {
+          right: -40%;
+          top: 32%;
+          -webkit-animation: sec3_cloud4 20s linear infinite;
+          -o-animation: sec3_cloud4 20s linear infinite;
+          animation: sec3_cloud4 20s linear infinite;
+        }
+
+        @keyframes sec3_cloud1 {
+          from {
+            left: -15%;
+          }
+
+          50% {
+            left: 12%;
+          }
+
+          to {
+            left: -15%;
+          }
+        }
+        @-webkit-keyframes sec3_cloud1 {
+          from {
+            left: -15%;
+          }
+
+          50% {
+            left: 12%;
+          }
+
+          to {
+            left: -15%;
+          }
+        }
+        @keyframes sec3_cloud2 {
+          from {
+            right: 2%;
+          }
+
+          50% {
+            right: -5%;
+          }
+
+          to {
+            right: 2%;
+          }
+        }
+        @-webkit-keyframes sec3_cloud2 {
+          from {
+            right: 2%;
+          }
+
+          50% {
+            right: -5%;
+          }
+
+          to {
+            right: 2%;
+          }
+        }
+        @keyframes sec3_cloud3 {
+          from {
+            left: -25%;
+          }
+
+          50% {
+            left: -5%;
+          }
+
+          to {
+            left: -25%;
+          }
+        }
+        @-webkit-keyframes sec3_cloud3 {
+          from {
+            left: -25%;
+          }
+
+          50% {
+            left: -5%;
+          }
+
+          to {
+            left: -25%;
+          }
+        }
+        @keyframes sec3_cloud4 {
+          from {
+            right: -40%;
+          }
+
+          50% {
+            right: -30%;
+          }
+
+          to {
+            right: -40%;
+          }
+        }
+        @-webkit-keyframes sec3_cloud4 {
+          from {
+            right: -40%;
+          }
+
+          50% {
+            right: -30%;
+          }
+
+          to {
+            right: -40%;
+          }
+        }
+
+      }
+
+    }
+
+    .section4 {
+      background-color: #121212;
+      background: url("/images/bd/lake_sec3_bg.png") no-repeat;
+      background-position: center center;
+      background-size: auto 100%;
+    }
+
+    .section5 {
+      background-color: #121212;
+      background: url("/images/bd/lake_sec3_bg.png") no-repeat;
+      background-position: center center;
+      background-size: auto 100%;
+    }
+
+    .section6 {
+      background: url("/images/bd/lake_sec4_bg.png") no-repeat;
+      background-position: center center;
+      background-size: 100% 100%;
+      padding-top: 68%;
+
+      .h5_float_footer {
+        z-index: 100;
+        left: 0;
+        background-color: rgba(255, 255, 255, 0.85);
+        img {
+          width: 95%;
+        }
+        .text {
+          h6, p {
+            color: #d31b13;
+          }
+        }
+        .close {
+          color: #d31b13;
+        }
+      }
+
+      .t33_regBox {
+        width: 82%;
+        padding: 0 6%;
+        padding-bottom: 6%;
+        margin: 0 auto;
+        background: #fff;
+        -webkit-border-radius: px2rem(10);
+        -moz-border-radius: px2rem(10);
+        border-radius: px2rem(10);
+        -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+        -moz-box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+        box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+        .submit_form {
+          width: 80%;
+          margin: 0 auto;
+          margin-top: 5%;
+          display: block;
+          text-align: center;
+          padding: 4%;
+          background-color: $brand-primary;
+          border-radius: 0.2rem;
+          font-size: px2rem(30);
+          -webkit-touch-callout: none;
+          -webkit-user-select: none;
+          -khtml-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+        form {
+          height: 150px;
+          padding-top: px2rem(15);
+          padding-bottom: px2rem(15);
+          font-size: px2rem(30);
+          div {
+            width: 100%;
+            height: 30%;
+            line-height: 2.5rem;
+            display: flex;
+            border: 1px solid #727171;
+            border-radius: px2rem(8);
+            overflow: hidden;
+            margin-top: px2rem(15);
+            padding-right: px2rem(36);
+            input {
+              height: 100%;
+              width: 100%;
+              padding-left: px2rem(36);
+              font-size: px2rem(30);
+              flex: 1;
+            }
+            input::-webkit-input-placeholder,
+            textarea::-webkit-input-placeholder {
+              color: #727171;
+            }
+            input:-moz-placeholder,
+            textarea:-moz-placeholder {
+              color: #727171;
+            }
+            input::-moz-placeholder,
+            textarea::-moz-placeholder {
+              color: #727171;
+            }
+            input:-ms-input-placeholder,
+            textarea:-ms-input-placeholder {
+              color: #727171;
+            }
+          }
+          .telephone {
+            img {
+              width: 0.9rem;
+              height: 60%;
+              margin-left: px2rem(-10);
+              margin-top: 4%;
+            }
+          }
+          .verify_code {
+            padding-right: px2rem(16);
+            .verify_code_btn {
+              line-height: 1.8rem;
+              text-align: center;
+              display: inline-block;
+              width: px2rem(170);
+              height: 76%;
+              color: #222;
+              position: relative;
+              font-size: px2rem(24);
+              top: 12%;
+              background-color: $brand-primary;
+              border-radius: 0.2rem;
+              vertical-align: middle;
+            }
+          }
+          .password {
+            .password_btn {
+              display: inline-block;
+              width: 1.2rem;
+              text-align: center;
+              img {
+                width: px2rem(34);
+                vertical-align: middle;
+              }
+            }
+          }
+        }
+      }
+      .m_t33_risk {
+        color: #fff;
+        font-size: 0.65rem;
+        width: 80%;
+        margin: 0 auto;
+        text-align: left;
+        line-height: px2rem(32);
+        padding-bottom: 0.5rem;
+        padding-top: 0.5rem;
+        position: absolute;
+        left: 10%;
+        top: 77.5%;
+      }
+    }
+  }
+}
