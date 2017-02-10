@@ -12,7 +12,7 @@
                 title: '理财江湖之华山论剑',
                 subTitle: '理财江湖之华山论剑',
                 shareLink: window.location.href,
-                desc: '老虎外汇带你玩转全球量最大，信息最透明的投资市场，送你200美金，试试投资潜力！',
+                desc: '老虎外汇带你玩转全球体量最大、信息最透明的投资市场。送你200美金，试试投资潜力！！',
                 img: window.location.origin + '/activity/logo.png',
                 trackPage: window.location.pathname.replace(/\//gi, ''),
                 debug: false
