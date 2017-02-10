@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="<%= lang.text('companyZhName')%> <%= lang.text('companyEnName')%> 跟单交易 外汇 CFD 指数 股指 互联网金融">
+    <meta name="description" content="<%= lang.text('companyZhName')%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyZhName')%>">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>
+        <%= lang.text('companyZhName')%>
+    </title>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
+<% include common/m_css_vendor.html %>
+<% include common/common_header.html %>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<body>
+<div class="lake_layout">
+    <div class="full_page" id="dowebok">
+        <div class="section section1">
+            <div class="slide_arrow"></div>
+            <img src="/images/bd/lake_sec1_logo.png" class="logo">
+            <img src="/images/bd/lake_sec1_cloud_rg.png" alt="" class="cloud_rg sec1_clouds">
+            <img src="/images/bd/lake_sec1_cloud_lf.png" alt="" class="cloud_lf sec1_clouds">
+            <img src="/images/bd/lake_sec1_title.png" class="title">
+            <img src="/images/bd/lake_sec1_five-stock.png" class="five stock">
+            <img src="/images/bd/lake_sec1_five-fund.png" class="five fund">
+            <img src="/images/bd/lake_sec1_five-p2p.png" class="five p2p">
+            <img src="/images/bd/lake_sec1_five-realty.png" class="five realty">
+            <img src="/images/bd/lake_sec1_five-forex.png" class="five forex">
+        </div>
+
+        <div class="section section2">
+            <div class="slide_arrow"></div>
+            <img src="/images/bd/lake_sec2_cloud_rg.png" alt="" class="clouds sec2_clouds cloud_rg ">
+            <img src="/images/bd/lake_sec2_cloud_lf.png" alt="" class="clouds sec2_clouds cloud_lf ">
+            <img src="/images/bd/lake_sec2_tree.png"     alt="" class="absolute tree">
+            <img src="/images/bd/lake_sec2_text.png"     alt="" class="absolute text_ban">
+        </div>
+
+        <div class="section section3">
+            <div class="slide_arrow"></div>
+            <img src="/images/bd/lake_sec3_cloud2.png" alt="" class="clouds sec3_clouds cloud1">
+            <img src="/images/bd/lake_sec3_cloud1.png" alt="" class="clouds sec3_clouds cloud2">
+            <img src="/images/bd/lake_sec3_cloud3.png" alt="" class="clouds sec3_clouds cloud3 front">
+            <img src="/images/bd/lake_sec3_cloud4.png" alt="" class="clouds sec3_clouds cloud4">
+            <img src="/images/bd/lake_sec3_text.png"   alt="" class="absolute text_ban">
+            <img src="/images/bd/lake_sec3_lamp.png"   alt="" class="absolute lamp">
+        </div>
+
+        <div class="section section4">
+            <div class="slide_arrow"></div>
+            <img src="/images/bd/lake_sec4_cloud1.png" alt="" class="clouds sec4_clouds cloud1">
+            <img src="/images/bd/lake_sec4_cloud2.png" alt="" class="clouds sec4_clouds cloud2">
+            <img src="/images/bd/lake_sec4_cloud3.png" alt="" class="clouds sec4_clouds cloud3">
+            <img src="/images/bd/lake_sec4_cloud4.png" alt="" class="clouds sec4_clouds cloud4 front">
+            <img src="/images/bd/lake_sec4_text.png"   alt="" class="absolute text_ban">
+        </div>
+
+        <div class="section section5">
+            <div class="slide_arrow"></div>
+            <img src="/images/bd/lake_sec5_cloud1.png" alt="" class="clouds sec5_clouds cloud1">
+            <img src="/images/bd/lake_sec5_cloud2.png" alt="" class="clouds sec5_clouds cloud2">
+            <img src="/images/bd/lake_sec5_cloud3.png" alt="" class="clouds sec5_clouds cloud3">
+            <img src="/images/bd/lake_sec5_cloud4.png" alt="" class="clouds sec5_clouds cloud4">
+            <img src="/images/bd/lake_sec5_text.png"   alt="" class="absolute text_ban sp_pos">
+        </div>
+
+        <div class="section section6">
+            <div class="t33_regBox">
+                <form>
+                    <div class="telephone">
+                        <input id="telephone" type="tel" placeholder="+86">
+                    </div>
+                    <div class="verify_code">
+                        <input type="number" placeholder="验证码" id="verify_code">
+                        <span class="verify_code_btn" id="verify_code_btn">获取验证码</span>
+                    </div>
+                    <div class="password">
+                        <input type="password" id="password" placeholder="组合字母数字,不少于六位">
+
+                    </div>
+                </form>
+                <span class="submit_form" id="submit_form">注册可得200美金</span>
+            </div>
+            <div class="m_t33_risk">
+                风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。
+                <%= lang.text("companyZhName")%>交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+            </div>
+            <%if(lang.isCompany("tigerwit")){%>
+                <!-- H5公共footer -->
+                <%-include('common/m_footer.html')%>
+            <%}%>
+        </div>
+    </div>
+</div>
+</body>
+<% include common/m_js_vendor.html %>
+<!-- build:js(client) /scripts/m_vendor.js -->
+<script src="/bower_components/jquery-3.0.0.min/index.js"></script>
+<script src="/scripts/plugins/base64code.js"></script>
+<script src="/scripts/plugins/jquery.tap.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<!-- endbuild -->
+<!-- build:js(client) /scripts/lake.js -->
+<script src="/scripts/bd/common/wx_share_config.js"></script>
+<script src="/scripts/bd/lake/lake.js"></script>
+<script src="/scripts/account/h5_register.js"></script>
+<!-- endbuild -->
+
+<!-- 推广脚本footer -->
+<%- include('bd/common/footer.html') %>
+</html>
