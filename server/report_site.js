@@ -1,4 +1,15 @@
 var report_sites = [
+    /*添加时间 2017-2-10*/
+    {
+        address: 'http://news.ifeng.com/a/20170116/50583280_0.shtml',
+        description: '【凤凰资讯】老虎外汇投资交易双丰收 无忧汇率贬值',
+        date: '2017-01-16'
+    },
+    {
+        address: 'http://economy.china.com/jykx/news/11179727/20170123/23996591.html',
+        description: '【中国财经时报网】稳步向上 老虎外汇不忘初心 砥砺前行 ',
+        date: '2017-01-23'
+    },
     /*添加时间 2017-1-12*/
     {
         address: 'http://finance.ifeng.com/a/20161221/15094200_0.shtml',
