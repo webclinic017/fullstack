@@ -1,85 +1,6 @@
-.layer_content {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  text-align: left;
-  .close_layer {
-    text-align: center;
-    width: px2rem(50);
-    height: px2rem(50);
-    line-height: 1.4rem;
-    padding-left: 1px;
-    position: absolute;
-    margin-left: 2.5rem;
-    margin-bottom: 1rem;
-    top: -42px;
-    right: -22px;
-    font-size: px2rem(40);
-    border-radius: 50%;
-    color: #e3ab6e;
-    border: 1px solid #e3ab6e;
-  }
-  .matters_con {
-    display: none;
-    font-size: px2rem(24);
-    span {
-      display: inline-block;
-      width: 1rem;
-      line-height: 1.1rem;
-      height: 1rem;
-      border-radius: 50%;
-      margin-right: 5px;
-      background-color: #e2aa6e;
-      color: #d31b12;
-      text-align: center;
-      vertical-align: middle;
-    }
-    p {
-      line-height: 1.25rem;
-    }
-  }
-  .detail1_con {
-    display: none;
-    text-align: center;
-    p {
-      font-size: px2rem(35);
-      line-height: px2rem(90);
-      font-weight: 600;
-      .text-shadow {
-        font-size: px2rem(55);
-        text-shadow: px2rem(-8) px2rem(8) 2px rgba(0, 0, 0, 0.4);
-        color: #f7c660;
-      }
-    }
-  }
-  .detail2_con {
-    text-align: center;
-    font-size: px2rem(30);
-    p {
-      line-height: px2rem(60);
-    }
-    table {
-      border-collapse: collapse;
-      margin: 0 auto;
-      margin-top: px2rem(20);
-      td {
-        font-size: px2rem(20);
-        padding: px2rem(20) auto;
-        border: 1px solid #e2aa6f;
-        height: px2rem(60);
-      }
-      thead {
-        background-color: #e2aa6f;
-        border: 1px solid #e2aa6f;
-        height: px2rem(60);
-        line-height: 2rem;
-        padding: px2rem(20) auto;
-      }
-    }
-  }
-}
-
 @include b(lake_layout) {
+  max-width: 750px;
+
   /*层级变量*/
   $index_bg: 0 !default;
   $index_logo: 1 !default;
@@ -97,7 +18,7 @@
     z-index: $index_cloud;
   }
 
-  .text {
+  .text_ban {
     z-index: $index-text;
     width: 78%;
     left: 11%;
@@ -128,15 +49,10 @@
     font-size: px2rem(35);
     line-height: px2rem(50);
   }
-  .t33_logo {
-    width: px2rem(190);
-    margin: 0 auto;
-    padding-top: 4%;
-    img {
-      width: 100%;
-    }
-  }
+
   #dowebok {
+    max-width: 750px;
+    margin: 0 auto;
     .slide_arrow {
       position: absolute;
       bottom: 5%;
@@ -174,6 +90,7 @@
     }
     .section {
       position: relative;
+      max-width: 750px;
     }
     .section1 {
       background: url("/images/bd/lake_sec1_bg.png") no-repeat;
@@ -580,20 +497,303 @@
 
     .section4 {
       background-color: #121212;
-      background: url("/images/bd/lake_sec3_bg.png") no-repeat;
+      background: url("/images/bd/lake_sec4_bg.png") no-repeat;
       background-position: center center;
       background-size: auto 100%;
+
+      .sec4_clouds {
+        width: 50%;
+        &.cloud1 {
+          left: -15%;
+          top: 10%;
+          -webkit-animation: sec3_cloud1 30s linear infinite;
+          -o-animation: sec3_cloud1 30s linear infinite;
+          animation: sec3_cloud1 30s linear infinite;
+        }
+        &.cloud2 {
+          width: 35%;
+          right: 2%;
+          top: 5%;
+          -webkit-animation: sec3_cloud2 25s linear infinite;
+          -o-animation: sec3_cloud2 25s linear infinite;
+          animation: sec3_cloud2 25s linear infinite;
+        }
+        &.cloud3 {
+          left: -25%;
+          top: 42%;
+          opacity: 0.65;
+          z-index: $index_cloud;
+          -webkit-animation: sec3_cloud3 20s linear infinite;
+          -o-animation: sec3_cloud3 20s linear infinite;
+          animation: sec3_cloud3 20s linear infinite;
+        }
+        &.cloud4 {
+          width: 45%;
+          right: -35%;
+          top: 46%;
+          -webkit-animation: sec3_cloud4 20s linear infinite;
+          -o-animation: sec3_cloud4 20s linear infinite;
+          animation: sec3_cloud4 20s linear infinite;
+        }
+
+        @keyframes sec3_cloud1 {
+          from {
+            left: -15%;
+          }
+
+          50% {
+            left: 12%;
+          }
+
+          to {
+            left: -15%;
+          }
+        }
+        @-webkit-keyframes sec3_cloud1 {
+          from {
+            left: -15%;
+          }
+
+          50% {
+            left: 12%;
+          }
+
+          to {
+            left: -15%;
+          }
+        }
+        @keyframes sec3_cloud2 {
+          from {
+            right: 2%;
+          }
+
+          50% {
+            right: -5%;
+          }
+
+          to {
+            right: 2%;
+          }
+        }
+        @-webkit-keyframes sec3_cloud2 {
+          from {
+            right: 2%;
+          }
+
+          50% {
+            right: -5%;
+          }
+
+          to {
+            right: 2%;
+          }
+        }
+        @keyframes sec3_cloud3 {
+          from {
+            left: -25%;
+          }
+
+          50% {
+            left: -5%;
+          }
+
+          to {
+            left: -25%;
+          }
+        }
+        @-webkit-keyframes sec3_cloud3 {
+          from {
+            left: -25%;
+          }
+
+          50% {
+            left: -5%;
+          }
+
+          to {
+            left: -25%;
+          }
+        }
+        @keyframes sec3_cloud4 {
+          from {
+            right: -35%;
+          }
+
+          50% {
+            right: -25%;
+          }
+
+          to {
+            right: -35%;
+          }
+        }
+        @-webkit-keyframes sec3_cloud4 {
+          from {
+            right: -35%;
+          }
+
+          50% {
+            right: -25%;
+          }
+
+          to {
+            right: -35%;
+          }
+        }
+
+      }
     }
 
     .section5 {
       background-color: #121212;
-      background: url("/images/bd/lake_sec3_bg.png") no-repeat;
+      background: url("/images/bd/lake_sec5_bg.png") no-repeat;
       background-position: center center;
       background-size: auto 100%;
+
+      .sec5_clouds {
+        width: 50%;
+        &.cloud1 {
+          left: -15%;
+          top: 5%;
+          -webkit-animation: sec5_cloud1 30s linear infinite;
+          -o-animation: sec5_cloud1 30s linear infinite;
+          animation: sec5_cloud1 30s linear infinite;
+        }
+        &.cloud2 {
+          width: 50%;
+          right: 2%;
+          top: 8%;
+          -webkit-animation: sec5_cloud2 25s linear infinite;
+          -o-animation: sec5_cloud2 25s linear infinite;
+          animation: sec5_cloud2 25s linear infinite;
+        }
+        &.cloud3 {
+          left: -25%;
+          top: 42%;
+          opacity: 0.65;
+          -webkit-animation: sec5_cloud3 20s linear infinite;
+          -o-animation: sec5_cloud3 20s linear infinite;
+          animation: sec5_cloud3 20s linear infinite;
+        }
+        &.cloud4 {
+          width: 30%;
+          right: 2%;
+          top: 46%;
+          -webkit-animation: sec5_cloud4 20s linear infinite;
+          -o-animation: sec5_cloud4 20s linear infinite;
+          animation: sec5_cloud4 20s linear infinite;
+        }
+
+        @keyframes sec5_cloud1 {
+          from {
+            left: -15%;
+          }
+
+          50% {
+            left: 5%;
+          }
+
+          to {
+            left: -15%;
+          }
+        }
+        @-webkit-keyframes sec5_cloud1 {
+          from {
+            left: -15%;
+          }
+
+          50% {
+            left: 5%;
+          }
+
+          to {
+            left: -15%;
+          }
+        }
+        @keyframes sec5_cloud2 {
+          from {
+            right: 2%;
+          }
+
+          50% {
+            right: -5%;
+          }
+
+          to {
+            right: 2%;
+          }
+        }
+        @-webkit-keyframes sec5_cloud2 {
+          from {
+            right: 2%;
+          }
+
+          50% {
+            right: -5%;
+          }
+
+          to {
+            right: 2%;
+          }
+        }
+        @keyframes sec5_cloud3 {
+          from {
+            left: -25%;
+          }
+
+          50% {
+            left: -5%;
+          }
+
+          to {
+            left: -25%;
+          }
+        }
+        @-webkit-keyframes sec5_cloud3 {
+          from {
+            left: -25%;
+          }
+
+          50% {
+            left: -5%;
+          }
+
+          to {
+            left: -25%;
+          }
+        }
+        @keyframes sec5_cloud4 {
+          from {
+            right: 2%;
+          }
+
+          50% {
+            right: -10%;
+          }
+
+          to {
+            right: 2%;
+          }
+        }
+        @-webkit-keyframes sec5_cloud4 {
+          from {
+            right: 2%;
+          }
+
+          50% {
+            right: -10%;
+          }
+
+          to {
+            right: 2%;
+          }
+        }
+
+      }
     }
 
     .section6 {
-      background: url("/images/bd/lake_sec4_bg.png") no-repeat;
+      background: url("/images/bd/lake_sec6_bg.png") no-repeat;
       background-position: center center;
       background-size: 100% 100%;
       padding-top: 68%;
@@ -616,17 +816,17 @@
       }
 
       .t33_regBox {
-        width: 82%;
-        padding: 0 6%;
-        padding-bottom: 6%;
+        width: 75%;
+        padding: 0 4%;
+        padding-bottom: 3%;
         margin: 0 auto;
         background: #fff;
         -webkit-border-radius: px2rem(10);
         -moz-border-radius: px2rem(10);
         border-radius: px2rem(10);
-        -webkit-box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
-        -moz-box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
-        box-shadow: 3px 3px 3px rgba(0,0,0,0.4);
+        -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+        -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4);
         .submit_form {
           width: 80%;
           margin: 0 auto;
@@ -723,7 +923,7 @@
       }
       .m_t33_risk {
         color: #fff;
-        font-size: 0.65rem;
+        font-size: px2rem(18);
         width: 80%;
         margin: 0 auto;
         text-align: left;

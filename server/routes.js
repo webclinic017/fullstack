@@ -416,7 +416,7 @@ module.exports = function (app) {
     });
 
     //理财江湖
-    app.route('/bd/lake').get(function (req, res) {
+    app.route('/bd/t34').get(function (req, res) {
         if (COMPANY_NAME === 'tigerwit') {
             setCompanyCookie(res);
             res.render('bd_m_lake', extendPublic({}, req));

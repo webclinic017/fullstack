@@ -40,12 +40,12 @@
 
         function offsetAction(index) {
             /*debug*/
-            if (!isIOS() && isInTiger()) {
-                callNative({
-                    type: 'offset',
-                    offset: index - 1
-                })
-            }
+            // if (!isIOS() && isInTiger()) {
+            //     callNative({
+            //         type: 'offset',
+            //         offset: index - 1
+            //     })
+            // }
         }
 
         function removeEff(index, except) {
@@ -57,7 +57,7 @@
                 var effName = '';
                 var subIndex = null;
 
-                classNames.forEach(function (item, index) {
+                $.each(classNames,function (index, item) {
 
                     if (item == 'animated') {
                         subIndex = index;
@@ -92,22 +92,26 @@
 
                 if (index == 1) {
                     activePage1(index);
+
                 }
 
                 if (index == 2) {
                     offsetAction(index);
-
-                    $('.section2').find('.text').addClass('animated bounceIn')
-
+                    $('.section2').find('.text_ban').addClass('animated bounceIn')
                 }
 
                 if (index == 3) {
-                    $('.section3').find('.text').addClass('animated rubberBand');
+                    $('.section3').find('.text_ban').addClass('animated bounce');
                     offsetAction(index)
                 }
 
                 if (index == 4) {
-                    //$('input').blur();
+                    $('.section4').find('.text_ban').addClass('animated fadeInDown');
+                    offsetAction(index)
+                }
+
+                if(index == 5){
+                    $('.section5').find('.text_ban').addClass('animated zoomInDown');
                     offsetAction(index)
                 }
             },
