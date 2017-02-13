@@ -195,9 +195,9 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
                     }
                 });
             },
-            back_setting:function(){
+            re_login:function(){
                 callNative({
-                    type: "back_setting",
+                    type: "login",
                     url: ""
                 });
             },
