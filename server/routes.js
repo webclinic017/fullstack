@@ -66,10 +66,12 @@ module.exports = function (app) {
     app.route('/').get(function (req, res) {
         if (isMobile(req)) {
             if (COMPANY_NAME === 'tigerwit') {
-                res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+                res.redirect('https://www.tigerwit.com/download');
             }
             if (COMPANY_NAME === 'pkds') {
-                res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex');
+                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex');
+                res.redirect('https://www.pkdsfx.com/download');
             }
         } else {
             if (COMPANY_NAME === 'tigerwit') {
