@@ -291,7 +291,7 @@
 
                     $scope.backErr.system = {
                         show: true,
-                        msg: data.error_msg
+                        msg: data.message
                     };
 
                     $timeout(function () {

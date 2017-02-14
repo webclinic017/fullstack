@@ -11,7 +11,7 @@
                        type="text"
                        placeholder="{{ lang.text('login1') }}"
                        required
-                       ng-class="{'form-control-error': (frontErr.id.show && loginForm.id.$invalid) || (backErr.id.show && backErr.id.status > 0)}"
+                       ng-class="{'form-control-error': frontErr.id.show && loginForm.id.$invalid}"
                        ng-model="account.id"
                        ng-blur="showErr('loginForm', 'id')"
                        ng-focus="hideErr('loginForm', 'id')">
@@ -20,18 +20,6 @@
                 <div ng-show="frontErr.id.show">
                     <p class="alert-arrow_tp_lf" ng-show="loginForm.id.$error.required">
                         {{ lang.text("login2") }}
-                    </p>
-                </div>
-
-                <div ng-show="backErr.id.show">
-                    <p class="alert-arrow_tp_lf" ng-show="backErr.id.status === 1">
-                        {{ lang.text("login3") }}
-                    </p>
-                    <p class="alert-arrow_tp_lf" ng-show="backErr.id.status === 2">
-                        {{ lang.text("login4") }}
-                    </p>
-                    <p class="alert-arrow_tp_lf" ng-show="backErr.id.status === 3">
-                        {{ lang.text("login14") }}
                     </p>
                 </div>
             </div>
@@ -71,12 +59,9 @@
                 {{ lang.text('login8') }}
             </p>
 
-            <div class="text-center" ng-show="backErr.system.show">
-                <p class="alert-system" ng-show="backErr.system.status === 1">
-                    {{ lang.text('login12') }}
-                </p>
-                <p class="alert-system" ng-show="backErr.system.status === 2">
-                    {{ lang.text('login13') }}
+            <div class="text-center">
+                <p class="alert-system" ng-show="backErr.show">
+                    {{ backErr.msg }}
                 </p>
             </div>
 

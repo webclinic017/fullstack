@@ -81,7 +81,8 @@
             return $http.post(o.loginApi, {
                 account: id,
                 password: password,
-                expires: expires
+                // expires: expires
+                remember: expires
             });
         }
 

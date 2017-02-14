@@ -54,7 +54,7 @@
     overflow: hidden;
     background-position: center center;
     background-size: 100%;
-    @include img-normal($image-path-base + "login_bg.jpg");
+    @include img-normal($image-path-base + "login_bg.png");
 
 }
 
