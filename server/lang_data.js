@@ -19,6 +19,7 @@ if (company_name === 'tigerwit') {
         webSite: "www.tigerwit.com",
         webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
         androidApp: versionAndroidApp,
+        download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
 
         // path
         logoPathZh: indexBasePath + "/tigerwit-logo.png",
@@ -53,6 +54,7 @@ if (company_name === 'pkds') {
         webSite: "www.pkdsfx.com",
         webMt4Download: "http://pkdsfx.com/downloads/mt4/parkerdawson4setup.exe",
         androidApp: versionAndroidApp,
+        download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex",
 
         // path
         logoPathZh: indexBasePath + "/pkds-logo.png",
@@ -141,6 +143,7 @@ module.exports = function () {
         "webSite": { "zh": companyConfig.webSite, "en": companyConfig.webSite },
         "webMt4Download": { "zh": companyConfig.webMt4Download, "en": companyConfig.webMt4Download },
         "androidApp": { "zh": companyConfig.androidApp, "en": companyConfig.androidApp },
+        "download": {"zh": companyConfig.download, "en": companyConfig.download},
 
         // 公用 public
         "lijifuzhi": { "en": "Copy now", "zh": "立即复制" },
