@@ -7,11 +7,19 @@
             <ul>
                <li class="detail">
                    <span><%= lang.text("mAssetWithdrawBankName")%></span>
-                   <select></select>
+                   <select class="bank"></select>
                </li>
                <li class="detail">
                    <span><%= lang.text("mAssetWithdrawBranchName")%></span>
                    <input type="text" name="branch" placeholder="<%= lang.text("mAssetWithdrawPlaceholder2")%>">
+               </li>
+               <li class="detail">
+                   <span>开户省</span>
+                   <select class="state"></select>
+               </li>
+               <li class="detail">
+                   <span>开户市</span>
+                   <select class="city"></select>
                </li>  
             </ul>
         </div>
@@ -25,5 +33,17 @@
     <option disabled value="" selected ></option>
     <$for(var i=0;i<banks.length;i++){$>
         <option value="<$= banks[i].nameEN$>"><$= banks[i].nameZH$></option>
+    <$}$>
+</script>
+<script id="template_statelist" type="text/html">
+    <option disabled value="" selected ></option>
+    <$for(var i=0;i<state.length;i++){$>
+        <option value="<$= state[i].code$>"><$= state[i].name_cn$></option>
+    <$}$>
+</script>
+<script id="template_citylist" type="text/html">
+    <option disabled value="" selected ></option>
+    <$for(var i=0;i<city.length;i++){$>
+        <option value="<$= city[i].code$>"><$= city[i].name_cn$></option>
     <$}$>
 </script>
