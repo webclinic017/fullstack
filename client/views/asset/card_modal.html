@@ -71,7 +71,7 @@
 
                 <div class="row">
                     <div class="col-xs-4 text-right">
-                        <label>开户行全称：</label>
+                        <label>支行名称：</label>
                     </div>
 
                     <div class="col-xs-8">
@@ -87,7 +87,62 @@
 
                             <div ng-show="frontErr.address.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.address.$error.required">
-                                    请输入开户行全称
+                                    请输入支行名称
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4 text-right">
+                        <label>开户省：</label>
+                    </div>
+
+                    <div class="col-xs-8">
+                        <div class="form-control-wrapper">
+                            <select class="form-control"
+                                    name="province"
+                                    required
+                                    ng-class="{'form-control-error': frontErr.province.show && cardForm.province.$invalid}"
+                                    ng-model="card.province"
+                                    ng-options="province.name_cn for province in provinces"
+                                    ng-change="getCity()"
+                                    ng-focus="hideErr('province')"
+                                    ng-blur="showErr('province')">
+                                <option value="">请选择</option>
+                            </select>
+
+                            <div ng-show="frontErr.province.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.province.$error.required">
+                                    请选择开户省
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-4 text-right">
+                        <label>开户市：</label>
+                    </div>
+
+                    <div class="col-xs-8">
+                        <div class="form-control-wrapper">
+                            <select class="form-control"
+                                    name="city"
+                                    required
+                                    ng-class="{'form-control-error': frontErr.city.show && cardForm.city.$invalid}"
+                                    ng-model="card.city"
+                                    ng-options="city.name_cn for city in citys"
+                                    ng-focus="hideErr('city')"
+                                    ng-blur="showErr('city')">
+                                <option value="">请选择</option>
+                            </select>
+
+                            <div ng-show="frontErr.city.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.city.$error.required">
+                                    请选择开户市
                                 </p>
                             </div>
                         </div>
@@ -128,10 +183,10 @@
                 <span class="font-danger">*</span>
                 出金银行卡用户姓名必须与开户姓名一致
             </p>
-            <p>
+            <!-- <p>
                 <span class="font-danger">*</span>
                 开户行全称请精确到支行，如：中国工商银行 北京分行 清华园支行
-            </p>
+            </p> -->
 
             <p class="system_modal__btn_wrapper">
                 <button class="btn btn-primary btn-sm" ng-click="submitForm()">
