@@ -22,6 +22,46 @@
             console.log("微信配置错误")
         }
 
+        function getClientHeight() {
+            return (document.body.clientHeight || document.documentElement.clientHeight);
+        }
+
+        if (!isIOS()) {
+            var focusFlag = false;
+            var $element = $('.section6 input');
+            var initClientHeight = getClientHeight();
+            var focusClientHeight = null;
+
+            $element.focus(function () {
+                focusFlag = true;
+                focusClientHeight = getClientHeight();
+                $('.lake_regBox').css({
+                    top: '15%'
+                });
+            });
+            $element.blur(function () {
+                focusFlag = false;
+                $('.lake_regBox').css({
+                    top: '42%'
+                });
+            });
+
+            window.addEventListener('resize', function () {
+                // console.log(getClientHeight());
+                setTimeout(function(){
+                    if(getClientHeight() == focusClientHeight){
+                        $('.lake_regBox').css({
+                            top: '42%'
+                        });
+                    } else {
+                        $('.lake_regBox').css({
+                            top: '15%'
+                        });
+                    }
+                },10);
+            })
+        }
+
         function activePage1(when) {
             $('.section1').find('.title').delay('slow').addClass('animated flip');
 
@@ -52,12 +92,13 @@
             var hasEff = $('.section' + index + ' .animated');
 
             hasEff.each(function (index, item) {
-                var classNames = item.classList;
+                var classNames = $(item).attr('class').split(' ');
+
 
                 var effName = '';
                 var subIndex = null;
 
-                $.each(classNames,function (index, item) {
+                $.each(classNames, function (index, item) {
 
                     if (item == 'animated') {
                         subIndex = index;
@@ -66,7 +107,7 @@
                     effName = classNames[subIndex + 1];
                 });
 
-                if (classNames.value.indexOf(except) < 0) {
+                if (classNames.indexOf(except) < 0) {
                     $(item).removeClass('animated');
                     $(item).removeClass(effName);
                 }
@@ -87,6 +128,13 @@
             afterRender: function () {
                 layer.closeAll();
                 $(".lake_layout").fadeIn(50);
+                // window.addEventListener('resize',function(){
+                //
+                //     console.log('resizing...')
+                // })
+
+                // 兼容安卓键盘弹出
+                window.removeEventListener('resize');
             },
             afterLoad: function (anchorLink, index) {
 
@@ -110,9 +158,12 @@
                     offsetAction(index)
                 }
 
-                if(index == 5){
+                if (index == 5) {
                     $('.section5').find('.text_ban').addClass('animated zoomInDown');
                     offsetAction(index)
+                    $('input').focus(function () {
+
+                    });
                 }
             },
             onLeave: function (index, direction) {
