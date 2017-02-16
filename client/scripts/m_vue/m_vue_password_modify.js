@@ -58,6 +58,12 @@ if ($(".m_vue").attr("data-page") === "password_modify") {
                                     skin: 'msg',
                                     time: 2 //2秒后自动关闭
                                 });
+                                setTimeout(function(){
+                                    callNative({
+                                        type: "back_setting",
+                                        url: ""
+                                    });
+                                },500);
                             } else {
                                 self.backErr = {
                                     show: true,

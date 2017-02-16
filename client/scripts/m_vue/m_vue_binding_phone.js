@@ -151,6 +151,9 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
                         }).then(function (response) {
                             var data = response.data;
                             if (data.is_succ) {
+                                callNative({
+                                    type: "hide_back"
+                                });
                                 self.nextStep(3);
                             } else {
 
@@ -197,8 +200,7 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
             },
             re_login:function(){
                 callNative({
-                    type: "login",
-                    url: ""
+                    type: "back_setting"
                 });
             },
             showFrontErr: function (name) {

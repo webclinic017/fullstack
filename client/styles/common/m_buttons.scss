@@ -15,6 +15,11 @@
 .btn-primary {
     background-color: $brand-primary;
     border-color: $brand-primary;
+
+    &:active {
+        background-color: $brand-primary-dark;
+        border-color: $brand-primary-dark;
+    }
 }
 
 .btn-lg {
