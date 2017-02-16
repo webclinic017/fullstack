@@ -44,7 +44,7 @@ if (company_name === 'tigerwit') {
 if (company_name === 'pkds') {
     companyConfig = {
         companyNameZh: "派克道森",
-        companyNameEn: "Pakerdawson",
+        companyNameEn: "Parkerdawson",
         companyNickName: "派克道森",
         titleZh: "派克道森 - Parkerdawson",
         titleEn: "Parkerdawson",
