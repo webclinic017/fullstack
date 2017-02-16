@@ -200,7 +200,7 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
             },
             re_login:function(){
                 callNative({
-                    type: "back_setting"
+                    type: "back_personal_login"
                 });
             },
             showFrontErr: function (name) {

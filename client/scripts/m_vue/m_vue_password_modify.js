@@ -60,7 +60,7 @@ if ($(".m_vue").attr("data-page") === "password_modify") {
                                 });
                                 setTimeout(function(){
                                     callNative({
-                                        type: "back_setting",
+                                        type: "back_personal_login",
                                         url: ""
                                     });
                                 },500);
