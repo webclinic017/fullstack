@@ -66,10 +66,12 @@ module.exports = function (app) {
     app.route('/').get(function (req, res) {
         if (isMobile(req)) {
             if (COMPANY_NAME === 'tigerwit') {
-                res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+                res.redirect('https://www.tigerwit.com/download');
             }
             if (COMPANY_NAME === 'pkds') {
-                res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex');
+                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex');
+                res.redirect('https://www.pkdsfx.com/download');
             }
         } else {
             if (COMPANY_NAME === 'tigerwit') {
@@ -220,14 +222,14 @@ module.exports = function (app) {
             pageInfo: pageInfo
         }, req));
     });
-    // test withdraw for app
-    app.route('/m/asset_test/:subpage(withdraw|cardlist|addcard1|addcard2|succ|fail)').get(function (req, res) {
+    /*出入金流程 新版*/
+    app.route('/m/asset_new/:subpage(withdraw|cardlist|addcard1|addcard2|succ|fail)').get(function (req, res) {
         var subpage = req.params.subpage || 'withdraw';
         var pageInfo = {
             id: subpage
         };
         setCompanyCookie(res);
-        res.render('m_asset_test.html', extendPublic({
+        res.render('m_asset_new.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });

@@ -57,11 +57,13 @@
          *
          * @method bindCard
          */
-        function bindCard(number, name, address, id) {
+        function bindCard(number, name, address, province, city, id) {
             return $http.post(o.bindCardApi, {
                 card_no: number,
                 bank_name: name,
                 bank_addr: address,
+                province: province,
+                city: city,
                 id: id
             });
         }

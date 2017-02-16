@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('AssetCardController', AssetCardController);
 
-    AssetCardController.$inject = ['$scope', '$state', '$modalInstance', 'validator', 'asset', 'passedScope'];
+    AssetCardController.$inject = ['$scope', 'config', '$state', '$modalInstance', 'validator', 'account', 'asset', 'passedScope'];
 
-    function AssetCardController($scope, $state, $modalInstance, validator, asset, passedScope) {
+    function AssetCardController($scope, config, $state, $modalInstance, validator, account, asset, passedScope) {
         $scope.personal = passedScope.personal;
         $scope.card = {
             //number: ,         // 卡号
@@ -15,28 +15,10 @@
             // address: ,       // 开户行
             binding: false
         };
-        $scope.banks = [{nameEN: 'icbc', nameZH: '中国工商银行'},
-                {nameEN: 'ccb', nameZH: '中国建设银行'},
-                {nameEN: 'cmb', nameZH: '招商银行'},
-                {nameEN: 'abc', nameZH: '中国农业银行'},
-                {nameEN: 'spdb', nameZH: '浦发银行'},
-                {nameEN: 'hxb', nameZH: '华夏银行'},
-                {nameEN: 'ceb', nameZH: '中国光大银行'},
-                {nameEN: 'boc', nameZH: '中国银行'},
-                {nameEN: 'psbc', nameZH: '中国邮政储蓄银行'},
-                {nameEN: 'bcm', nameZH: '交通银行'},
-                {nameEN: 'cmbc', nameZH: '中国民生银行'},
-                {nameEN: 'gdb', nameZH: '广发银行'},
-                {nameEN: 'sdb', nameZH: '深圳发展银行'},
-                {nameEN: 'cib', nameZH: '兴业银行'},
-                {nameEN: 'citic', nameZH: '中信银行'},
-                {nameEN: 'pab', nameZH: '平安银行'},
-                {nameEN: 'bob', nameZH: '北京银行'},
-                {nameEN: 'srcb', nameZH: '上海农商银行'},
-                {nameEN: 'bea', nameZH: '东亚银行'},
-                {nameEN: 'nbcb', nameZH: '宁波银行'},
-                {nameEN: 'bon', nameZH: '南京银行'},
-                {nameEN: 'other', nameZH: '其他银行'}];
+        $scope.banks = config.banks;
+
+        $scope.provinces = [];
+        $scope.citys = [];
 
         $scope.frontErr = {
             number: {
@@ -49,6 +31,12 @@
             },
             address: {
                 show: false
+            },
+            province: {
+                show: false
+            },
+            city: {
+                show: false
             }
         };
 
@@ -56,6 +44,9 @@
         $scope.hideErr = hideErr;
         $scope.closeModal = closeModal;
         $scope.submitForm = submitForm;
+        $scope.getCity = getCity;
+
+        getProvince();
 
         // 如果是修改银行卡，要初始化表单元素数据
         if (typeof passedScope.card !== 'undefined') {
@@ -74,10 +65,26 @@
             });
         }
 
+        function getProvince () {
+            account.getStates('CN').then(function (data) {
+                // console.info(data);
+                $scope.provinces = data.data;
+            });
+        }
+
+        function getCity () {
+            account.getCities($scope.card.province.code).then(function (data) {
+                // console.info(data);
+                $scope.citys = data.data;
+            });
+        }
         function submitForm() {
             showErr('number');
             showErr('bank');
             showErr('address');
+            showErr('province');
+            showErr('city');
+            console.info($scope.cardForm.city);
 
             if ($scope.cardForm.$invalid) {
                 return;
@@ -85,7 +92,7 @@
 
             // 如果是第一次绑卡
             if (typeof $scope.card.id === 'undefined') {
-                asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address).then(function (data) {
+                asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address, $scope.card.province.code, $scope.card.city.code).then(function (data) {
                     if (data.is_succ) {
                         $scope.card.binding = true;
                         $scope.$emit('bindCardSuccess');
@@ -93,7 +100,7 @@
                 });
             } else {
                 // 修改银行卡
-                asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address, $scope.card.id).then(function (data) {
+                asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address, $scope.card.province.code, $scope.card.city.code, $scope.card.id).then(function (data) {
                     if (data.is_succ) {
                         $scope.card.binding = true;
                         $scope.$emit('bindCardSuccess');
