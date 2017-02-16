@@ -224,6 +224,12 @@
                         color: #ed5565;
                     }
                 }
+                
+                i.fa {
+                    float: right;
+                    padding-top: 3px;
+                    color: #aaa;
+                }
             } 
         }
         @include m(btn) {

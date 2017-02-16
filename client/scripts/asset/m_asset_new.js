@@ -44,7 +44,7 @@ $(document).ready(function () {
 
     // getH5Config 方法是定义在window上的全局函数，用于获取一些公共的配置数据
     function getBanksInfo() {
-        var banks = getH5Config().banks;
+        var banks = getH5Config().banks_new;
         return banks;
     }
     // 判断是不是英文版 nodeResponseInfo是node返回的信息 定义在m_asset.html中
@@ -158,7 +158,7 @@ $(document).ready(function () {
 
     function toCardList () {
         var action_address = window.location.origin +
-                             "/m/asset_test/cardlist?amount=" +
+                             "/m/asset/cardlist?amount=" +
                              encodeURIComponent(widthdrawNum);
         console.info(action_address);
         callNative({
@@ -238,7 +238,7 @@ $(document).ready(function () {
             $toAddCardBtn.on("touchend", function () {
                 widthdrawNum = getUrlParam("amount");
                 var action_address = window.location.origin + 
-                                     "/m/asset_test/addcard1?amount=" +
+                                     "/m/asset/addcard1?amount=" +
                                      encodeURIComponent(widthdrawNum) +
                                      "&realname="+encodeURIComponent(realname) +
                                      "&id="+encodeURIComponent(id);
@@ -270,7 +270,7 @@ $(document).ready(function () {
                     data = JSON.parse(data);
                     if (data.is_succ) {
                         var action_address = window.location.origin +
-                                     "/m/asset_test/succ";
+                                     "/m/asset/succ";
                         console.info(action_address);
                         callNative({
                             type: "openUrlRefresh",
@@ -278,7 +278,7 @@ $(document).ready(function () {
                         });
                     } else {
                         var action_address = window.location.origin +
-                                     "/m/asset_test/fail?msg=" +
+                                     "/m/asset/fail?msg=" +
                                      encodeURIComponent(data.error_msg);
                         console.info(action_address);
                         callNative({
@@ -289,7 +289,7 @@ $(document).ready(function () {
                 }, function (err) {
                     console.log("出金申请提交失败");
                     var action_address = window.location.origin +
-                                     "/m/asset_test/fail";
+                                     "/m/asset/fail";
                     console.info(action_address);
                     callNative({
                         type: "openUrlRefresh",
@@ -311,6 +311,7 @@ $(document).ready(function () {
     var $realname = $(".m_withdraw__addcard-info input[name='realname']");
     var $cardnum = $(".m_withdraw__addcard-info input[name='cardnum']");
     var $addCardBtn1 = $(".m_withdraw__addcard-btn .card1_btn");
+    var $realnameInfo = $(".m_withdraw__addcard-info i.fa");
 
     if (dataAttr == "page3") {
         console.log("this is page3");
@@ -327,6 +328,14 @@ $(document).ready(function () {
         }
     });
 
+    $realnameInfo.on("touchend", function () {
+        layer.open({
+            content: "<div style='padding-bottom: 10px;'>持卡人说明</div><div style='text-align: left; color: #666;'>为了您的账户资金安全，只能绑定持卡人本人的银行卡。<br>如有其它疑问，请联系"+nodeResponseInfo.company+"客服"+nodeResponseInfo.telephone+"</div>",
+            btn: "确定"
+        });
+        return false;
+    });
+
     // 跳转到绑定银行卡页面2
     $addCardBtn1.on("touchend", function () {
         var cardNum = isSuccAddCard1();
@@ -335,7 +344,7 @@ $(document).ready(function () {
             widthdrawNum = getUrlParam("amount");
             id = getUrlParam("id");
             var action_address = window.location.origin + 
-                                 "/m/asset_test/addcard2?amount=" + 
+                                 "/m/asset/addcard2?amount=" + 
                                  encodeURIComponent(widthdrawNum) +
                                  "&realname="+encodeURIComponent(realname) +
                                  "&id="+encodeURIComponent(id) +
@@ -383,21 +392,25 @@ $(document).ready(function () {
      * page4
      * 绑定银行卡2
      */
-    var $bank = $(".m_withdraw__addcard-info select");
+    var $bank = $(".m_withdraw__addcard-info select.bank");
     var $branch = $(".m_withdraw__addcard-info input[name='branch']");
     var $addCardBtn2 = $(".m_withdraw__addcard-btn .card2_btn");
+    var $state = $(".m_withdraw__addcard-info select.state");
+    var $city = $(".m_withdraw__addcard-info select.city");
 
     if (dataAttr == "page4") {
         console.log("this is page4");
         var number = getUrlParam("cardnum");
         setBankList();
+        setStateList();
     }
 
-    // 选取时清除class
-    $bank.on("change", function (e) {
-        $bank.removeClass("err");
+    $state.on("change", function () {
+        setCityList($state.val());
         return false;
     });
+
+    // 选取时清除class
     $branch.on("focus", function () {
         $branch.parent().removeClass("err");
         return false;
@@ -407,21 +420,23 @@ $(document).ready(function () {
     $addCardBtn2.on("touchend", function () {
         var banksInfo = isSuccAddCard2();
 
-        if (banksInfo.bank && banksInfo.branch) {
+        if (banksInfo.bank && banksInfo.branch && banksInfo.state && banksInfo.city) {
             var id = getUrlParam("id");
             // 绑定银行卡
             $.post('/action/public/v4/binding_bankcard', {
                 card_no: number,
                 bank_name: banksInfo.bank,
                 bank_addr: banksInfo.branch,
+                province: banksInfo.state,
+                city: banksInfo.city,
                 id: id
             }).then(function (data) {
                 console.info(data);
                 data = JSON.parse(data);
                 if (data.is_succ) {
                     widthdrawNum = getUrlParam("amount");
-                    var action_address = window.location.origin + 
-                             "/m/asset_test/cardlist?amount=" +
+                    var action_address = window.location.origin +
+                             "/m/asset/cardlist?amount=" +
                              encodeURIComponent(widthdrawNum);
                     console.info(action_address);
                     callNative({
@@ -430,10 +445,14 @@ $(document).ready(function () {
                     });
                 } else {
                     console.log(data.error_msg);
+                    layer.open({
+                        content: data.error_msg,
+                        btn: "确定"
+                    });
                 }
             });
         } else {
-            console.log("未填写银行名称、支行名称");
+            // console.log("未填写银行名称、支行名称");
             if (isEngLanguage()) {
                 layer.open({
                     content: alert_msg_en,
@@ -469,19 +488,52 @@ $(document).ready(function () {
         });
     }
 
+    function setStateList () {
+        $.get('/action/public/v4/statecode_list?world_code=CN', function (data) {
+            data = JSON.parse(data);
+            // console.info(data);
+            var stateInfoLst = {
+                state: data.data
+            };
+        
+            //使用template模版
+            var html=bt('template_statelist',stateInfoLst);
+
+            $state.html(html);
+        });
+    }
+
+    function setCityList (value) {
+        $.get('/action/public/v4/citycode_list', {parent_code: value}, function (data) {
+            data = JSON.parse(data);
+            // console.info(data);
+            var cityInfoLst = {
+                city: data.data
+            };
+            console.info(cityInfoLst);
+            //使用template模版
+            var html=bt('template_citylist',cityInfoLst);
+
+            $city.html(html);
+        });
+    }
+
     // 绑定银行卡第二步是否完成
     function isSuccAddCard2() {
         var bank = $bank.val();
         var branch = $branch.val();
+        var state = $state.val();
+        var city = $city.val();
         var isLawful = {
             bank: false,
-            branch: false
+            branch: false,
+            state: false,
+            city: false
         };
-        console.info(bank, branch);
+
         if (bank) {
             isLawful.bank = bank;
         } else {
-            $bank.addClass("err");
             console.log("请选择发卡银行");
         }
 
@@ -492,6 +544,18 @@ $(document).ready(function () {
             console.log("请填写支行名称");
         }
 
+        if (state) {
+            isLawful.state = state;
+        } else {
+            console.log("请选择开户省");
+        }
+
+        if (city) {
+            isLawful.city = city;
+        } else {
+            console.log("请选择开户市");
+        }
+        console.info(isLawful);
         return isLawful;
     }
 

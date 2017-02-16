@@ -8,8 +8,26 @@
     background-color: #fff;
 }
 
-@each $name in $bank-names {
+@each $name in $bank-names-old {
     .m_icon-bank-#{$name} {
+        // background-position-x: 0;
+        // background-position-y: -(index($bank-names, $name) - 1) * 44px;
+        background-position: 0px (-(index($bank-names-old, $name) - 1) * 58px);
+    }
+}
+
+.m_icon-bank-new {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    vertical-align: middle;
+    @include img-normal($icon-path-bank + "banks-logo-new.png");
+    background-color: #fff;
+}
+
+@each $name in $bank-names {
+    .m_icon-bank-new-#{$name} {
         // background-position-x: 0;
         // background-position-y: -(index($bank-names, $name) - 1) * 44px;
         background-position: 0px (-(index($bank-names, $name) - 1) * 58px);

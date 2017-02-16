@@ -19,14 +19,14 @@
     height: 50px;
     border-radius: 50%;
     vertical-align: middle;
-    @include img-normal($icon-path-bank + "banks.png");
+    @include img-normal($icon-path-bank + "banks.jpg");
     background-color: #fff;
 }
 
 @each $name in $bank-names {
     .icon-bank-#{$name} {
         @extend .icon-bank;
-        @include img-normal($icon-path-bank + "#{$name}.png");
+        @include img-normal($icon-path-bank + "#{$name}.jpg");
     }
 }
 
@@ -35,7 +35,7 @@
     width: 129px;
     height: 42px;
     vertical-align: middle;
-    @include img-normal($icon-path-bank + "banks.png");
+    @include img-normal($icon-path-bank + "banks.jpg");
 }
 @each $name in $bank-names {
     .icon-banks-#{$name} {

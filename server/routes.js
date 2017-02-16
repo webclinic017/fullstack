@@ -66,10 +66,12 @@ module.exports = function (app) {
     app.route('/').get(function (req, res) {
         if (isMobile(req)) {
             if (COMPANY_NAME === 'tigerwit') {
-                res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+                res.redirect('https://www.tigerwit.com/download');
             }
             if (COMPANY_NAME === 'pkds') {
-                res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex');
+                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex');
+                res.redirect('https://www.pkdsfx.com/download');
             }
         } else {
             if (COMPANY_NAME === 'tigerwit') {
@@ -174,6 +176,7 @@ module.exports = function (app) {
 
     /*--------------------APP-Beagin---------------------*/
     /*注册相关页面*/
+    /*注册相关页面*/
     app.route('/m/h5_register/:status(reg|succ|agreement)').get(function (req, res) {
         var status = req.params.status || 'reg';
         var pageInfo = {
@@ -219,14 +222,14 @@ module.exports = function (app) {
             pageInfo: pageInfo
         }, req));
     });
-    // test withdraw for app
-    app.route('/m/asset_test/:subpage(withdraw|cardlist|addcard1|addcard2|succ|fail)').get(function (req, res) {
+    /*出入金流程 新版*/
+    app.route('/m/asset_new/:subpage(withdraw|cardlist|addcard1|addcard2|succ|fail)').get(function (req, res) {
         var subpage = req.params.subpage || 'withdraw';
         var pageInfo = {
             id: subpage
         };
         setCompanyCookie(res);
-        res.render('m_asset_test.html', extendPublic({
+        res.render('m_asset_new.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
@@ -411,6 +414,14 @@ module.exports = function (app) {
         if (COMPANY_NAME === 'tigerwit') {
             setCompanyCookie(res);
             res.render('bd_m_yellow', extendPublic({}, req));
+        }
+    });
+
+    //理财江湖
+    app.route('/bd/t34').get(function (req, res) {
+        if (COMPANY_NAME === 'tigerwit') {
+            setCompanyCookie(res);
+            res.render('bd_m_lake', extendPublic({}, req));
         }
     });
 
