@@ -796,7 +796,6 @@
       background: url("/images/bd/lake_sec6_bg.png") no-repeat;
       background-position: center center;
       background-size: 100% 100%;
-      padding-top: 68%;
 
       .h5_float_footer {
         z-index: 100;
@@ -815,7 +814,14 @@
         }
       }
 
-      .t33_regBox {
+      .lake_regBox {
+        z-index: 1000;
+        position: relative;
+        top: 41%;
+        transition: top 0.1s linear;
+        -moz-transition: top 0.1s linear; /* Firefox 4 */
+        -webkit-transition: top 0.1s linear; /* Safari and Chrome */
+        -o-transition: top 0.1s linear; /* Opera */
         width: 75%;
         padding: 0 4%;
         padding-bottom: 3%;
