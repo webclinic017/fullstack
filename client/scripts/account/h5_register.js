@@ -88,7 +88,7 @@
 
             /*今日头条*/
             if (window.location.pathname.indexOf('t33_b') != -1) {
-                _taq.push({ convert_id: "53322635909", event_type: "view" })
+                _taq.push({convert_id:"55824901749", event_type:"view"})
             }
 
             /*loading层*/
@@ -359,9 +359,10 @@
                 layer.open({ type: 2, shadeClose: false });
                 /*统计*/
                 statistics($("#telephone").val());
+
                 /*今日头条统计表单提交*/
                 if (window.location.pathname.indexOf('t33_a') != -1) {
-                    _taq.push({ convert_id: "53322635907", event_type: "form" })
+                    _taq.push({convert_id:"55824929459", event_type:"form"})
                 }
 
                 $.ajax({

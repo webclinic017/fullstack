@@ -22,10 +22,10 @@
             console.log("微信配置错误")
         }
 
+        // 兼容安卓键盘弹出
         function getClientHeight() {
             return (document.body.clientHeight || document.documentElement.clientHeight);
         }
-
         if (!isIOS()) {
             var focusFlag = false;
             var $element = $('.section6 input');
@@ -63,7 +63,7 @@
         }
 
         function activePage1(when) {
-            $('.section1').find('.title').delay('slow').addClass('animated flip');
+            $('.section1').find('.title').addClass('animated flip');
 
             var flags = $('.section1 .five');
 
@@ -80,12 +80,12 @@
 
         function offsetAction(index) {
             /*debug*/
-            // if (!isIOS() && isInTiger()) {
-            //     callNative({
-            //         type: 'offset',
-            //         offset: index - 1
-            //     })
-            // }
+            if (!isIOS() && isInTiger()) {
+                callNative({
+                    type: 'offset',
+                    offset: index - 1
+                })
+            }
         }
 
         function removeEff(index, except) {
@@ -124,15 +124,10 @@
             navigationPosition: "right",
             sectionsColor: ['#ccc', '#121212', '#fff', '#000', '#e0e0e0'],
             verticalCentered: false,
-            easing: 'easeOutBack',
+            easing: 'easeInQuart',
             afterRender: function () {
                 layer.closeAll();
                 $(".lake_layout").fadeIn(50);
-                // window.addEventListener('resize',function(){
-                //
-                //     console.log('resizing...')
-                // })
-
                 // 兼容安卓键盘弹出
                 window.removeEventListener('resize');
             },
@@ -172,15 +167,6 @@
                 } else {
                     removeEff(index);
                 }
-                // if (index == 2) {
-                //     removeEff(index);
-                // }
-                // if (index == 3) {
-                //
-                // }
-                // if (index == 4) {
-                //
-                // }
             }
         });
     });
