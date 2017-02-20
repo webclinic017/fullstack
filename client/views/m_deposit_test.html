@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include common/m_common_head.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include common/m_css_vendor.html %>
+<% include common/common_header.html %>
+
+<body>
+<div style="margin-top: 50px; text-align: center;">
+    <input id="m_deposit_test_inp"><br>
+    <span id="m_deposit_test" style="color: #699; cursor: pointer; font-size: 18px;">充值</span>
+</div>
+
+
+</body>
+<% include common/m_js_vendor.html %>
+<!-- build:js(client) /scripts/m_vendor.js -->
+<script src="/bower_components/jquery-3.0.0.min/index.js"></script>
+<script src="/scripts/plugins/base64code.js"></script>
+<script src="/scripts/plugins/jquery.tap.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<!-- endbuild -->
+<!-- build:js(client) /scripts/m_deposit.js -->
+<script src="/scripts/asset/m_deposit.js"></script>
+<!-- endbuild -->
+
+<%- include('bd/common/footer.html') %>
+</html>

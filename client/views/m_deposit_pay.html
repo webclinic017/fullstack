@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include common/m_common_head.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include common/m_css_vendor.html %>
+<% include common/common_header.html %>
+
+<body>
+
+<ul id="m_deposit_pay" style="margin: 50px 100px;">
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="3">招商银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="4">建设银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="9">工商银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="14">平安银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="28">民生银行卡</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="33">兴业银行卡</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="43">农业银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="44">广东发展银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="50">北京银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="59">中国邮政</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="60">华夏银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="67">交通银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="69">浦发银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="74">光大银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="75">北京农村商业银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="83">渤海银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="84">中信银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="85">中国银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="121">上海银行</a>
+    </li>
+    <li style="padding: 5px 0;">
+        <a href="" data-pmode="126">银联支付</a>
+    </li>
+</ul>
+
+</body>
+<% include common/m_js_vendor.html %>
+<!-- build:js(client) /scripts/m_vendor.js -->
+<script src="/bower_components/jquery-3.0.0.min/index.js"></script>
+<script src="/scripts/plugins/base64code.js"></script>
+<script src="/scripts/plugins/jquery.tap.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<!-- endbuild -->
+<!-- build:js(client) /scripts/m_deposit.js -->
+<script src="/scripts/asset/m_deposit.js"></script>
+<!-- endbuild -->
+
+<%- include('bd/common/footer.html') %>
+</html>
