@@ -252,10 +252,6 @@ module.exports = function (app) {
     });
 
     /* H5 充值中转页面 */
-    app.route('/m/deposit/test').get(function (req, res) {
-        setCompanyCookie(res);
-        res.render('m_deposit_test', extendPublic({}, req));
-    });
     app.route('/m/deposit/pay').get(function (req, res) {
         setCompanyCookie(res);
         res.render('m_deposit_pay', extendPublic({}, req));
