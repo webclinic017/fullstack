@@ -18,10 +18,19 @@ $(document).ready(function () {
         order_no = doSearch(search, 'order_no');
         // console.info(order_no);
         $.each($pay, function (index, value) {
-            var pMode = $(value).attr("data-pmode")
+            var pMode = $(value).attr("data-pmode");
             $(value).attr("href", urlPath+"/action/public/v4/pay_order/"+order_no+"?pmode="+pMode);
         });
     }
+
+    $pay.on('click', function () {
+        var action_address = $(this).attr("href");
+        callNative({
+            type: "openUrl",
+            url: action_address
+        });
+        return false;
+    });
 
     function doSearch (str, i) {
         var arr = str.substring(1).split('&');
