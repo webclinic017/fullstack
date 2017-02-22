@@ -1,7 +1,7 @@
 ;
 (function () {
     'use strict';
-    var container = document.getElementById('dowebok');
+    var container = document.getElementById('img_detect_container');
 
     var imgLoad = imagesLoaded(container, {background: true});
 
@@ -15,12 +15,12 @@
 
     imgLoad.on('progress', function (imgLoad, image) {
         count++;
-        var ratio = parseInt(count / 29 * 100) + '%';
+        var ratio = parseInt(count / 10 * 100) + '%';
         loading_bar.style.width = ratio;
-        $('#loading_text').html(ratio);
-        console.log(ratio);
+        $('#loading_text').html('加载中...'+ratio);
+        console.log(count);
         if (ratio == '100%') {
-            $(load_wrapper).delay(200).fadeOut(400);
+            $(load_wrapper).delay(100).fadeOut(500);
             allLoaded();
         }
     });

@@ -86,7 +86,7 @@
         </div> -->
         <div class="ranklist_cont clearfix">
             <div tw-loading-img></div>
-            <div class="ranklist_cont__master" ng-repeat="rank in ranklist">
+            <div class="ranklist_cont__master" ng-repeat="rank in ranklist track by $index">
                 <div class="ranklist_cont__master-info clearfix">
                     <a class="avatar" href="/trader/{{rank.user_code}}/#/trader/summary" target="_blank">
                         <img ng-src="/avatar/{{ rank.user_code }}_150.jpg" alt="avatar">
@@ -99,7 +99,7 @@
                 </div>
                 <div class="ranklist_cont__master-trade clearfix">
                     <div class="profit">
-                        <div class="num">
+                        <div class="num" ng-class="{'font-danger': (rank.profit_rate + '').indexOf('-') < 0, 'font-success': (rank.profit_rate + '').indexOf('-') != -1}">
                             {{ rank.profit_rate }}<span>%</span>
                         </div>
                         <div class="tip">
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                     <div class="dropdown">
-                        <div class="num">
+                        <div class="num" ng-class="{'font-danger': (rank.max_retract_percent + '').indexOf('-') < 0, 'font-success': (rank.max_retract_percent + '').indexOf('-') != -1}">
                             {{ rank.max_retract_percent }}%
                         </div>
                         <div class="tip">
