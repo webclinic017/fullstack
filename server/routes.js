@@ -237,7 +237,15 @@ module.exports = function (app) {
     /*邀请好友*/
     app.route('/m/invite01').get(function (req, res) {
         setCompanyCookie(res);
-        res.render('m_invite01', extendPublic({}, req));
+        res.render('m_invite01', extendPublic({
+            page:'invite01'
+        }, req));
+    });
+    app.route('/m/register_coupon').get(function (req, res) {
+        setCompanyCookie(res);
+        res.render('m_invite01', extendPublic({
+            page:'register_coupon'
+        }, req));
     });
 
     app.route('/m/invite02').get(function (req, res) {
