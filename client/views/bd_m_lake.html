@@ -25,11 +25,17 @@
 <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
 <body>
-<div class="lake_layout" style="display: none">
+<div class="load_wrapper" id="load_wrapper">
+    <div class="load_wrapper__box">
+        <div class="load_wrapper__box-bar" id="loading_bar"></div>
+    </div>
+    <div class="load_wrapper__text" id="loading_text">0%</div>
+</div>
+<div class="lake_layout">
     <div class="full_page" id="dowebok">
-        <div class="section section1">
+        <div class="section section1" id="img_detect_container">
             <div class="slide_arrow"></div>
-            <img src="/images/bd/lake_sec1_logo.png" class="logo">
+            <img src="/images/bd/lake_sec1_bg.png" style="width: 0;height: 0;">
             <img src="/images/bd/lake_sec1_cloud_rg.png" alt="" class="cloud_rg sec1_clouds">
             <img src="/images/bd/lake_sec1_cloud_lf.png" alt="" class="cloud_lf sec1_clouds">
             <img src="/images/bd/lake_sec1_title.png" class="title">
@@ -44,8 +50,8 @@
             <div class="slide_arrow"></div>
             <img src="/images/bd/lake_sec2_cloud_rg.png" alt="" class="clouds sec2_clouds cloud_rg ">
             <img src="/images/bd/lake_sec2_cloud_lf.png" alt="" class="clouds sec2_clouds cloud_lf ">
-            <img src="/images/bd/lake_sec2_tree.png"     alt="" class="absolute tree">
-            <img src="/images/bd/lake_sec2_text.png"     alt="" class="absolute text_ban">
+            <img src="/images/bd/lake_sec2_tree.png" alt="" class="absolute tree">
+            <img src="/images/bd/lake_sec2_text.png" alt="" class="absolute text_ban">
         </div>
 
         <div class="section section3">
@@ -54,8 +60,8 @@
             <img src="/images/bd/lake_sec3_cloud1.png" alt="" class="clouds sec3_clouds cloud2">
             <img src="/images/bd/lake_sec3_cloud3.png" alt="" class="clouds sec3_clouds cloud3 front">
             <img src="/images/bd/lake_sec3_cloud4.png" alt="" class="clouds sec3_clouds cloud4">
-            <img src="/images/bd/lake_sec3_text.png"   alt="" class="absolute text_ban">
-            <img src="/images/bd/lake_sec3_lamp.png"   alt="" class="absolute lamp">
+            <img src="/images/bd/lake_sec3_text.png" alt="" class="absolute text_ban">
+            <img src="/images/bd/lake_sec3_lamp.png" alt="" class="absolute lamp">
         </div>
 
         <div class="section section4">
@@ -64,7 +70,7 @@
             <img src="/images/bd/lake_sec4_cloud2.png" alt="" class="clouds sec4_clouds cloud2">
             <img src="/images/bd/lake_sec4_cloud3.png" alt="" class="clouds sec4_clouds cloud3">
             <img src="/images/bd/lake_sec4_cloud4.png" alt="" class="clouds sec4_clouds cloud4 front">
-            <img src="/images/bd/lake_sec4_text.png"   alt="" class="absolute text_ban">
+            <img src="/images/bd/lake_sec4_text.png" alt="" class="absolute text_ban">
         </div>
 
         <div class="section section5">
@@ -73,7 +79,7 @@
             <img src="/images/bd/lake_sec5_cloud2.png" alt="" class="clouds sec5_clouds cloud2">
             <img src="/images/bd/lake_sec5_cloud3.png" alt="" class="clouds sec5_clouds cloud3">
             <img src="/images/bd/lake_sec5_cloud4.png" alt="" class="clouds sec5_clouds cloud4">
-            <img src="/images/bd/lake_sec5_text.png"   alt="" class="absolute text_ban sp_pos">
+            <img src="/images/bd/lake_sec5_text.png" alt="" class="absolute text_ban sp_pos">
         </div>
 
         <div class="section section6">
