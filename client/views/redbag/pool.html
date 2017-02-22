@@ -17,7 +17,7 @@
                 </div>
                 <div class="redbag_single__bottom">
                     <p class="redbag_single__bottom-tip">{{ pool.pay_condition_desc || '-' }}</p>
-                    <div class="redbag_single__bottom-btn" ng-if="pool.is_receive == 3">
+                    <div class="redbag_single__bottom-btn" ng-if="pool.is_receive == 2">
                         <button class="btn" ng-click="receiveRedbag(pool)" ng-show="!pool.receiveLoading">
                             立即领取
                         </button>
@@ -30,10 +30,10 @@
                             已领取
                         </span>
                     </div>
-                    <div class="redbag_single__bottom-sign" ng-if="pool.is_receive == 2">
+                    <!-- <div class="redbag_single__bottom-sign" ng-if="pool.is_receive == 2">
                         <span class="sign">达标自动发放</span>
-                    </div>
-                    <div class="redbag_single__bottom-mark" ng-if="pool.is_receive == 4">
+                    </div> -->
+                    <div class="redbag_single__bottom-mark" ng-if="pool.is_receive == 3">
                         <span class="mark">
                             已领完
                         </span>
