@@ -51,6 +51,21 @@
   }
 
   #dowebok {
+    .registerNow {
+      display: none;
+      color: $t33-button-color;
+      width: 100%;
+      padding: px2rem(20) px2rem(50);
+      text-align: center;
+      border: none;
+      font-size: px2rem(40);
+      background-color: $brand-primary;
+      opacity: 0.95;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+    }
     max-width: 750px;
     margin: 0 auto;
     .slide_arrow {
