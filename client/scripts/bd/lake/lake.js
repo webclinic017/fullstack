@@ -4,7 +4,7 @@
         'use strict';
         var container = document.getElementById('img_detect_container');
 
-        var imgLoad = imagesLoaded(container, {background: true});
+        var imgLoad = imagesLoaded(container, { background: true });
 
         var count = 0;
 
@@ -19,7 +19,7 @@
             var ratio = parseInt(count / 10 * 100) + '%';
             loading_bar.style.width = ratio;
             $('#loading_text').html('加载中...' + ratio);
-            console.log(count);
+            console.log('加载中...' + ratio);
             if (ratio == '100%') {
                 $(load_wrapper).delay(100).fadeOut(500);
                 allLoaded();
@@ -77,20 +77,14 @@
 
                     hasEff.each(function (index, item) {
                         var classNames = $(item).attr('class').split(' ');
-
-
                         var effName = '';
                         var subIndex = null;
-
                         $.each(classNames, function (index, item) {
-
                             if (item == 'animated') {
                                 subIndex = index;
                             }
-
                             effName = classNames[subIndex + 1];
                         });
-
                         if (classNames.indexOf(except) < 0) {
                             $(item).removeClass('animated');
                             $(item).removeClass(effName);
@@ -153,7 +147,7 @@
 
                 $('.registerNow').on('tap', function (e) {
                     var action = $(e.target).attr("data-action");
-                    if(action == "registerNow"){
+                    if (action == "registerNow") {
                         $.fn.fullpage.moveTo(6);
                     }
                 })
@@ -166,13 +160,9 @@
                     verticalCentered: false,
                     easing: 'easeInQuart',
                     afterRender: function () {
-                        //layer.closeAll();
-                        // $(".lake_layout").css('display','block');
                         $(".lake_layout").fadeIn(0);
                         // 兼容安卓键盘弹出
                         window.removeEventListener('resize');
-
-
                     },
                     afterLoad: function (anchorLink, index) {
                         showBtn(index);
@@ -198,14 +188,14 @@
                         if (index == 5) {
                             $('.section5').find('.text_ban').addClass('animated zoomInDown');
                             offsetAction(index)
-                            $('input').focus(function () {
-
+                            $('input').focus(function (e) {
+                                return false;
                             });
                         }
                     },
                     onLeave: function (index, direction) {
                         hideBtn(index);
-                        removeEff(index,(index == 1 ? 'title' : null));
+                        removeEff(index, (index == 1 ? 'title' : null));
                     }
                 });
             })
