@@ -2,59 +2,64 @@
     <div tw-loading-img></div>
     
     <div class="kyc">
-        <form name="kycForm" novalidate>
-            <div ng-repeat="(qId, question) in questions">
-                <h3 class="kyc__title">
-                    {{qId + 1}}. {{question.title}}
-                </h3>        
-                
-                <div class="row">
-                    <div class="col-xs-3" ng-repeat="option in question.data.list" >
-                        <label class="radio" ng-class="{'checked': question.answer == option.key}">
-                            <input type="radio"
-                                   value="{{ option.key }}"
-                                   required
-                                   ng-model="question.answer"
-                                   ng-change="selectOption(question)">
-                            <i class="fa fa-circle-o"></i>
-                            <i class="fa fa-dot-circle-o"></i>
-                            {{ option.value }}
-                        </label>
+        <div ng-show="!isSetKyc">
+            <form name="kycForm" novalidate>
+                <div ng-repeat="(qId, question) in questions">
+                    <h3 class="kyc__title">
+                        {{qId + 1}}. {{question.title}}
+                    </h3>        
+                    
+                    <div class="row">
+                        <div class="col-xs-3" ng-repeat="option in question.data.list" >
+                            <label class="radio" ng-class="{'checked': question.answer == option.key}">
+                                <input type="radio"
+                                       value="{{ option.key }}"
+                                       required
+                                       ng-model="question.answer"
+                                       ng-change="selectOption(question)">
+                                <i class="fa fa-circle-o"></i>
+                                <i class="fa fa-dot-circle-o"></i>
+                                {{ option.value }}
+                            </label>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="text-center mg-tp-50">
+                <div class="text-center mg-tp-50">
 
-                <div ng-show="tip.questions.show">
-                    <p class="alert-system">
-                        {{ tip.questions.msg }}
-                    </p>
-                </div>                
+                    <div ng-show="tip.questions.show">
+                        <p class="alert-system">
+                            {{ tip.questions.msg }}
+                        </p>
+                    </div>                
 
-                <div ng-show="tip.system.show">
-                    <p class="alert-system" ng-show="tip.system.status === 1">
-                        KYC 认证信息提交成功
-                    </p>
-                    <p class="alert-system" ng-show="tip.system.status === 2">
-                        登录超时或者没有登录
-                    </p>
-                    <p class="alert-system" ng-show="tip.system.status === 3">
-                        找不到用户信息
-                    </p>
+                    <div ng-show="tip.system.show">
+                        <p class="alert-system" ng-show="tip.system.status === 1">
+                            KYC 认证信息提交成功
+                        </p>
+                        <p class="alert-system" ng-show="tip.system.status === 2">
+                            登录超时或者没有登录
+                        </p>
+                        <p class="alert-system" ng-show="tip.system.status === 3">
+                            找不到用户信息
+                        </p>
+                    </div>
+
+                    <button class="btn btn-sm btn-primary" ng-if="clickable" ng-click="submitForm()">
+                        提交
+                    </button>
+
+                    <button class="btn btn-sm btn-primary" ng-if="!clickable">
+                        <i class="loading_spinner fa fa-spinner"></i>
+                        提交中
+                    </button>
+
+                    <button class="btn btn-sm btn-info mg-lf-100" ng-if="type !== 'setting'" ng-click="goNextStep()">跳过</button>
                 </div>
-
-                <button class="btn btn-sm btn-primary" ng-if="clickable" ng-click="submitForm()">
-                    提交
-                </button>
-
-                <button class="btn btn-sm btn-primary" ng-if="!clickable">
-                    <i class="loading_spinner fa fa-spinner"></i>
-                    提交中
-                </button>
-
-                <button class="btn btn-sm btn-info mg-lf-100" ng-if="type !== 'setting'" ng-click="goNextStep()">跳过</button>
-            </div>
-        </form>    
+            </form> 
+        </div>
+        <div ng-show="isSetKyc" class="mg-tp-20">
+            您已完成 kyc 认证，无需重复提交。
+        </div>
     </div>
 </div>
