@@ -238,13 +238,13 @@ module.exports = function (app) {
     app.route('/m/invite01').get(function (req, res) {
         setCompanyCookie(res);
         res.render('m_invite01', extendPublic({
-            page:'invite01'
+            page: 'invite01'
         }, req));
     });
     app.route('/m/register_coupon').get(function (req, res) {
         setCompanyCookie(res);
         res.render('m_invite01', extendPublic({
-            page:'register_coupon'
+            page: 'register_coupon'
         }, req));
     });
 
@@ -427,9 +427,13 @@ module.exports = function (app) {
 
     //理财江湖
     app.route('/bd/t34').get(function (req, res) {
+        setCompanyCookie(res);
         if (COMPANY_NAME === 'tigerwit') {
-            setCompanyCookie(res);
-            res.render('bd_m_lake', extendPublic({}, req));
+            if (isMobile(req)) {
+                res.render('bd_m_lake', extendPublic({}, req));
+            } else {
+                res.render('bd_lake', extendPublic({}, req));
+            }
         }
     });
 
