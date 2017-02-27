@@ -25,9 +25,27 @@
         //         allLoaded();
         //     }
         // });
+
         allLoaded()
         function allLoaded() {
             $(function () {
+                $('.register_btn').click(function () {
+                    console.log(1);
+                    layer.open({
+                        type: 1,
+                        skin: 'layui-layer-rim', //加上边框
+                        area: ['420px', '240px'], //宽高
+                        content: '<div class="lake_regForm">' +
+                                    '<h1>注册送200美金</h1>' + 
+                                    '<form>' +
+                                        '<input type="text" name="username" id="username" placeholder="昵称">' +
+                                        '<input type="tel" name="tel" id="telephone" placeholder="手机号">' +
+                                        '<span id="regist_btn">立即领取</span>' +
+                                    '</form>' + 
+                                  '</div>'
+                    });
+                });
+
                 function activePage1(when) {
                     $('.section1').find('.title').addClass('animated flip');
 
@@ -44,7 +62,7 @@
                     }, when ? 0 : 1000);
                     showBtn(1);
                 }
-                
+
                 function removeEff(index, except) {
                     var hasEff = $('.section' + index + ' .animated');
 
@@ -86,13 +104,24 @@
 
                 $('#dowebok').fullpage({
                     navigation: true,
-                    navigationColor: "#fbd71f",
+                    navigationColor: "#fff",
                     navigationPosition: "right",
-                    sectionsColor: ['aqua', '#121212', '#fff', '#000', '#e0e0e0'],
+                    sectionsColor: ['aqua', '#121212', '#fff', '#000', '#f44646', ''],
                     verticalCentered: false,
                     easing: 'easeInQuart',
+                    effect: {
+                        transform: {
+                            translate: 'Y',
+                            scale: [1, 1],
+                            rotate: [0, 0]
+                        },
+                        opacity: [0, 1]
+                    },
+
                     afterRender: function () {
                         $(".lake_layout").fadeIn(0);
+                        //$('.section').css('height','90%');
+                        //$('<div class="navLine"></div>').appendTo('#fp-nav ul');
                     },
                     afterLoad: function (anchorLink, index) {
                         showBtn(index);

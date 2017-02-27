@@ -44,6 +44,10 @@
 @import "web/bonus";
 @import "web/blog";
 @import "web/download";
+//fullpage
+@import "common/jquery.fullPage.pc";
+//amnimate
+@import "common/animate";
 //bd
 @import "bd/common/float_register";
 @import "bd/t29/t29";
@@ -58,5 +62,3 @@
 @import "common/tw-en";
 // layer
 @import "common/layer";
-//fullpage
-@import "common/jquery.fullPage"
