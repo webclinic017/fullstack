@@ -85,8 +85,8 @@ $(document).ready(function () {
         } else {
             //防止重复提交
             clickable = false;
-            $('#'+info.targetId).html('<i class="loading fa fa-spinner"></i>正在跳转');
- 
+            $('#' + info.targetId).html('<i class="loading fa fa-spinner"></i>正在跳转');
+
             /*
              品友DSP,负责人:蔡雪峰 添加日期：2016.7.12
              //删除此段代码时需要同时删除调用pyRegisterCvt (../t1/script/check.js)
@@ -103,8 +103,10 @@ $(document).ready(function () {
             // umeng
             _czc.push(["_trackEvent", "活动页", "免费注册"]);
 
-            // 360
-            _mvq.push(['$setGeneral', 'registered', '', rName, rPhone]);
+            // 360            
+            if (window._mvq) {
+                _mvq.push(['$setGeneral', 'registered', '', rName, rPhone]);
+            }
 
             // 神策数据统计
             sa.track('btn_register');
@@ -141,31 +143,35 @@ $(document).ready(function () {
     }
 
     $('#regist_btn').on("click", function (e) {
-        if(!clickable){return false}
+        if (!clickable) { return false }
         regist({
             usernameId: 'username',
             telephoneId: 'telephone',
             emailId: 'email',
-            targetId:'regist_btn'
+            targetId: 'regist_btn'
         });
     });
 
     $('#float_regBtn').on("click", function () {
-        if(!clickable){return false}        
+        if (!clickable) { return false }
         regist({
             usernameId: 'float_username',
             telephoneId: 'float_telephone',
             emailId: '',
-            targetId:'float_regBtn'
+            targetId: 'float_regBtn'
         });
     });
 
-    $(document.body).on("keyup", function (e) {
-        if (e.keyCode == 13) {
-            regist();
-        }
-    });
-
+    // $(document.body).on("keyup", function (e) {
+    //     if (e.keyCode == 13) {
+    //         regist({
+    //             usernameId: 'username',
+    //             telephoneId: 'telephone',
+    //             emailId: 'email',
+    //             targetId: 'regist_btn'
+    //         });
+    //     }
+    // });
 
     $(":input").focus(function () {
         if ($(this).hasClass("warning")) {
@@ -224,35 +230,35 @@ $(document).ready(function () {
     }
 });
 
-;(function(){
+; (function () {
     var floater = $('#float_register');
 
-    window.onscroll = function(e) {
+    window.onscroll = function (e) {
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if(!floater.hasClass('close')){
+        if (!floater.hasClass('close')) {
             if (scrollTop <= 450) {
                 floater.css({
-                    bottom:'-120px'
+                    bottom: '-120px'
                 });
             } else {
                 floater.css({
-                    bottom:'0'
+                    bottom: '0'
                 });
             }
         }
     };
 
-    $('#float_trigger').click(function(){
+    $('#float_trigger').click(function () {
         floater.toggleClass("close");
-        if(floater.hasClass('close')){
+        if (floater.hasClass('close')) {
             $(this).html("点击注册");
             floater.css({
-                bottom:'-98px'
+                bottom: '-98px'
             });
         } else {
             $(this).html("点击收起");
             floater.css({
-                bottom:'0'
+                bottom: '0'
             });
         }
     });
