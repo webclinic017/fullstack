@@ -1,4 +1,5 @@
-var URL_PATH = process.env.URL_PATH;
+var envConfig = require('./../get_env_config').envConfig;
+var URL_PATH = envConfig.url_path;
 module.exports = {
 
     //定期跟单团队对应的历史交易图标

@@ -1,84 +1,121 @@
 'use strict';
-var company_name = process.env.COMPANY_NAME;
-var url_path = process.env.URL_PATH;
-var companyConfig = {};
-var indexBasePath = "/white_label";
-var date = require('./tools').date;
-var versionAndroidApp = require('./app_ctrl.config').getAppInfo().url;
-
-if (company_name === 'tigerwit') {
-    companyConfig = {
-        companyNameZh: "老虎外汇",
-        companyNameEn: "TigerWit",
-        companyNickName: "小老虎",
-        titleZh: "老虎外汇 - TigerWit",
-        titleEn: "TigerWit",
-        supportEmail: "support@tigerwit.com",
-        ibEmail: "support@tigerwit.com",
-        telephone: "400 - 809 - 8509",
-        webSite: "www.tigerwit.com",
-        webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
-        androidApp: versionAndroidApp,
-        download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
-
-        // path
-        logoPathZh: indexBasePath + "/tigerwit-logo.png",
-        h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
-        helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-        logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
-        homePersonPath: indexBasePath + "/index-person-tiger.jpg",
-        homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
-        homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
-        homePlusPath: indexBasePath + "/index2-master-jia-tiger.png",
-
-        webCopyRule: indexBasePath + "/rules-banner-tigerwit.jpg",
-        webCopySelect: indexBasePath + "/select-banner-tigerwit.jpg",
-        webAgentProxy: indexBasePath + "/agent-banner-tigerwit.jpg",
-        webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
-
-        icoPath: indexBasePath + "/tigerwit.ico",
-        t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
-    };
-
-}
-if (company_name === 'pkds') {
-    companyConfig = {
-        companyNameZh: "派克道森",
-        companyNameEn: "Parkerdawson",
-        companyNickName: "派克道森",
-        titleZh: "派克道森 - Parkerdawson",
-        titleEn: "Parkerdawson",
-        supportEmail: "info@pkdsfx.com",
-        ibEmail: "info@pkdsfx.com",
-        telephone: "400 - 900 - 9296",
-        webSite: "www.pkdsfx.com",
-        webMt4Download: "http://pkdsfx.com/downloads/mt4/parkerdawson4setup.exe",
-        androidApp: versionAndroidApp,
-        download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex",
-
-        // path
-        logoPathZh: indexBasePath + "/pkds-logo.png",
-        h5_register_logo: indexBasePath + "/h5_register_logo_Pakerdawson.png",
-        helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-        logoPathEn: indexBasePath + "/pkds-logo.png",
-        homePersonPath: indexBasePath + "/index-person-tiger.jpg",
-        homeTradePathZh: indexBasePath + "/index2-trade-img-pkds.png",
-        homeTradePathEn: indexBasePath + "/index2-trade-img-pkds.png",
-        homePlusPath: indexBasePath + "/index2-master-jia-pkds.png",
-
-        webCopyRule: indexBasePath + "/rules-banner-pkds.jpg",
-        webCopySelect: indexBasePath + "/select-banner-pkds.jpg",
-        webAgentProxy: indexBasePath + "/agent-banner-pkds.jpg",
-        webAgentBecome: indexBasePath + "/become-banner-pkds.jpg",
-
-        icoPath: indexBasePath + "/pkds.ico",
-        t33_logo: indexBasePath + "/pkds-logo.png"
-
-    };
-
-}
 
 module.exports = function () {
+    var envConfig = require('./get_env_config').envConfig;
+    var company_name = envConfig.company_name;
+    var url_path = envConfig.url_path;
+    var companyConfig = {};
+    var indexBasePath = "/white_label";
+    var date = require('./tools').date;
+    var versionAndroidApp = require('./app_ctrl.config').getAppInfo().url;
+
+    if (company_name === 'tigerwit') {
+        companyConfig = {
+            companyNameZh: "老虎外汇",
+            companyNameEn: "TigerWit",
+            companyNickName: "小老虎",
+            titleZh: "老虎外汇 - TigerWit",
+            titleEn: "TigerWit",
+            supportEmail: "support@tigerwit.com",
+            ibEmail: "support@tigerwit.com",
+            telephone: "400 - 809 - 8509",
+            webSite: "www.tigerwit.com",
+            webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
+            androidApp: versionAndroidApp,
+            download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
+
+            // path
+            logoPathZh: indexBasePath + "/tigerwit-logo.png",
+            h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
+            helpLogo: indexBasePath + "/help-logo-tigerwit.png",
+            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            homePersonPath: indexBasePath + "/index-person-tiger.jpg",
+            homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
+            homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
+            homePlusPath: indexBasePath + "/index2-master-jia-tiger.png",
+
+            webCopyRule: indexBasePath + "/rules-banner-tigerwit.jpg",
+            webCopySelect: indexBasePath + "/select-banner-tigerwit.jpg",
+            webAgentProxy: indexBasePath + "/agent-banner-tigerwit.jpg",
+            webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
+
+            icoPath: indexBasePath + "/tigerwit.ico",
+            t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
+        };
+
+    }
+    if (company_name === 'lonfx') {
+        companyConfig = {
+            companyNameZh: "莱恩",
+            companyNameEn: "lonfx",
+            companyNickName: "莱恩",
+            titleZh: "莱恩 - lonfx",
+            titleEn: "lonfx",
+            supportEmail: "support@tigerwit.com",
+            ibEmail: "support@tigerwit.com",
+            telephone: "400 - 809 - 8509",
+            webSite: "www.tigerwit.com",
+            webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
+            androidApp: versionAndroidApp,
+            download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
+
+            // path
+            logoPathZh: indexBasePath + "/tigerwit-logo.png",
+            h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
+            helpLogo: indexBasePath + "/help-logo-tigerwit.png",
+            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            homePersonPath: indexBasePath + "/index-person-tiger.jpg",
+            homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
+            homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
+            homePlusPath: indexBasePath + "/index2-master-jia-tiger.png",
+
+            webCopyRule: indexBasePath + "/rules-banner-tigerwit.jpg",
+            webCopySelect: indexBasePath + "/select-banner-tigerwit.jpg",
+            webAgentProxy: indexBasePath + "/agent-banner-tigerwit.jpg",
+            webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
+
+            icoPath: indexBasePath + "/tigerwit.ico",
+            t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
+        };
+
+    }
+    if (company_name === 'pkds') {
+        companyConfig = {
+            companyNameZh: "派克道森",
+            companyNameEn: "Parkerdawson",
+            companyNickName: "派克道森",
+            titleZh: "派克道森 - Parkerdawson",
+            titleEn: "Parkerdawson",
+            supportEmail: "info@pkdsfx.com",
+            ibEmail: "info@pkdsfx.com",
+            telephone: "400 - 900 - 9296",
+            webSite: "www.pkdsfx.com",
+            webMt4Download: "http://pkdsfx.com/downloads/mt4/parkerdawson4setup.exe",
+            androidApp: versionAndroidApp,
+            download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex",
+
+            // path
+            logoPathZh: indexBasePath + "/pkds-logo.png",
+            h5_register_logo: indexBasePath + "/h5_register_logo_Pakerdawson.png",
+            helpLogo: indexBasePath + "/help-logo-tigerwit.png",
+            logoPathEn: indexBasePath + "/pkds-logo.png",
+            homePersonPath: indexBasePath + "/index-person-tiger.jpg",
+            homeTradePathZh: indexBasePath + "/index2-trade-img-pkds.png",
+            homeTradePathEn: indexBasePath + "/index2-trade-img-pkds.png",
+            homePlusPath: indexBasePath + "/index2-master-jia-pkds.png",
+
+            webCopyRule: indexBasePath + "/rules-banner-pkds.jpg",
+            webCopySelect: indexBasePath + "/select-banner-pkds.jpg",
+            webAgentProxy: indexBasePath + "/agent-banner-pkds.jpg",
+            webAgentBecome: indexBasePath + "/become-banner-pkds.jpg",
+
+            icoPath: indexBasePath + "/pkds.ico",
+            t33_logo: indexBasePath + "/pkds-logo.png"
+
+        };
+
+    }
+
     var data = {
         // image path
         "image": {

@@ -33,6 +33,10 @@
         $("#next").on("touchend", function () {
             $.fn.fullpage.moveSectionDown();
         });
+        // 回到电脑版，写入一个cookie
+        $(".turn_pc").on("touchend", function () {
+            document.cookie = "turnPC=true";
+        });
 
         function show_btn(index) {
             $("#download_btn" + index).delay(500).fadeIn(500);

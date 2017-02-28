@@ -90,6 +90,9 @@
         &.tigerwit {
             @include img-normal($image-path-base + "ranklist/little-dq.jpg");
         }
+        &.lonfx {
+            @include img-normal($image-path-base + "ranklist/little-dq.jpg");
+        }
         &.pkds {
             @include img-normal($image-path-base + "ranklist/little-dq-pkds.png");
         }

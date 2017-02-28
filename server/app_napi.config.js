@@ -1,8 +1,9 @@
 ;(function(){
     'use strict';
 
-    var URL_PATH = process.env.URL_PATH;
-    var COMPANY = process.env.COMPANY_NAME;
+    var envConfig = require('./get_env_config').envConfig;
+    var URL_PATH = envConfig.url_path;
+    var COMPANY = envConfig.company_name;
 
     function getBannerInfoAndroid () {
         var data = [
