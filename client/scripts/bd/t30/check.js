@@ -59,7 +59,7 @@ $(document).ready(function () {
 
             var username_length = parseInt(checkLength(input.val()));
             if (username_length < 4 || username_length > 16) {
-                input.val(" 昵称应在4到16个字符之间").addClass("warning");
+                input.val("昵称应在4到16个字符之间").addClass("warning");
             }
         } else if (!(/^[\u4e00-\u9fa5A-Za-z\d]+$/.test(input.val()))) {
             input.val("昵称不合法").addClass("warning");
@@ -71,8 +71,8 @@ $(document).ready(function () {
         var rPhone = input.val() ? input.val() : "";
         var isMobile = /^(13|14|15|17|18)\d{9}$/;
         var isPhone = /^((0\d{2,4})-)?(\d{7,8})(-(\d{2,}))?$/;
-        if ((input.val() == "") || (input.val() == "请填写有效的电话号码") || (!isMobile.test(input.val()) && !isPhone.test(input.val()))) {
-            input.val("请填写有效的电话号码").addClass("warning");
+        if ((input.val() == "") || (input.val() == "请填写有效的手机号码") || (!isMobile.test(input.val()))) {
+            input.val("请填写有效的手机号码").addClass("warning");
         }
         var input = $('#' + info.emailId);
         var rEmail = input.val() ? input.val() : "";
