@@ -1,7 +1,12 @@
-var company_name = process.env.COMPANY_NAME;
-var access_origin = process.env.ACCESS_ORIGIN || '';
+;(function () {
+    'use strict';
 
-module.exports = function (res) {
-    // console.info(res);
-    res.setHeader('Set-Cookie', [ 'company_name='+company_name+'; path=/',  'access_origin='+access_origin+'; path=/']);
-};
+    module.exports = function (res) {
+        var envConfig = require('./get_env_config').envConfig;
+        var company_name = envConfig.company_name;
+        var access_origin = envConfig.access_origin || '';
+        // console.log("cookies->"+company_name);
+        // console.info(res);
+        res.setHeader('Set-Cookie', [ 'company_name='+company_name+'; path=/',  'access_origin='+access_origin+'; path=/']);
+    };
+})();

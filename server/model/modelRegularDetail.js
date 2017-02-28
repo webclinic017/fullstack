@@ -1,5 +1,5 @@
-var oModelRegular = require('./modelRegular');
 module.exports = function(regular_id){
+    var oModelRegular = require('./modelRegular')();
 	var product = oModelRegular.getProduct(regular_id);
 	var m_profit_rate_last = product.profit_rate_last || '-';
 	var m_detail_appoint_time = oModelRegular.getAppointTime(product);

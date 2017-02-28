@@ -29,6 +29,17 @@
                         webSite:"www.tigerwit.com",
                     };
                 }
+                if (value === 'lonfx') {
+                    companyConfig = {
+                        companyNickName: "lonfx",
+                        companyNameZh: "莱恩",
+                        companyNameEn: "lonfx",
+                        telephone: "xxxx-xxx",
+                        mt4Live: "TigerWit-Live",
+                        companyCopyRules: "https://lonfx.tigerwit.com/web/copy/rules",
+                        webSite:"lonfx.tigerwit.com",
+                    };
+                }
                 if (value === 'pkds') {
                     companyConfig = {
                         companyNickName: "pkds",
