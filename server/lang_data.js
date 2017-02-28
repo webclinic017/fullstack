@@ -308,7 +308,7 @@ module.exports = function () {
         "home47": { "en": "The secret of successful investment does not lie in the social influence and development prospect of a certain industry, but in a company's competitive edges and the sustainability of such edges. Only everlasting and profound product and service superiorities can generate generous returns for investors.", "zh": "投资的秘诀、不是评估某一行业对社会的影响有多大、或它的发展前景有多好、而是一间公司有多强的竞争优势、这优势可以维持多久。产品和服务的优越性持久而深厚、才能给投资者带来优厚的回报。" },
         "home48": { "en": "-Warren Buffett", "zh": "—— 沃伦·巴菲特" },
         // home banner
-        "home49": { "en": "With the new year and Good omen full", "zh": "金鸡贺岁 吉兆满盈" },
+        "home49": { "en": "Gold house ceremony to send spring", "zh": "春季淘金 豪礼相送" },
         "home50": { "en": " ", "zh": " " },
         "home59": { "en": "The new user registration can get", "zh": "新用户注册享" },
         "home60": { "en": "$200", "zh": " $200" },
