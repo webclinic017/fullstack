@@ -7,6 +7,7 @@
 var path = require('path');
 var url = require('url');
 var request = require('request');
+var querystring = require('querystring');
 var masterApi = require('./api/master');
 var Lang = require('./lang')();
 var report_sites = require('./report_site');
@@ -65,13 +66,28 @@ module.exports = function (app) {
 
     app.route('/').get(function (req, res) {
         if (isMobile(req)) {
-            if (COMPANY_NAME === 'tigerwit') {
-                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
-                res.redirect('https://www.tigerwit.com/download');
+            var cookieList = querystring.parse(req.headers.cookie, '; ');
+            var trunPC = false;
+            for (var name in cookieList) {
+                // console.info(name);
+                if (name === 'turnPC') {
+                    trunPC = true;
+                }
             }
-            if (COMPANY_NAME === 'pkds') {
-                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex');
-                res.redirect('https://www.pkdsfx.com/download');
+            if (trunPC) {   // 回到电脑版
+                setCompanyCookie(res);
+                res.render('home.html', extendPublic({
+                    pageInfo: {}
+                }, req));
+            } else {
+                if (COMPANY_NAME === 'tigerwit') {
+                    // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+                    res.redirect('https://www.tigerwit.com/download');
+                }
+                if (COMPANY_NAME === 'pkds') {
+                    // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex');
+                    res.redirect('https://www.pkdsfx.com/download');
+                }
             }
         } else {
             if (COMPANY_NAME === 'tigerwit') {
