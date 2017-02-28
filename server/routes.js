@@ -7,12 +7,32 @@
 var path = require('path');
 var url = require('url');
 var request = require('request');
+var querystring = require('querystring');
 var masterApi = require('./api/master');
-var Lang = require('./lang')();
 var report_sites = require('./report_site');
-var setCompanyCookie = require('./set_company_cookie');
-var URL_PATH = process.env.URL_PATH;
-var COMPANY_NAME = process.env.COMPANY_NAME;
+var setCompanyCookie, 
+    envConfig, 
+    URL_PATH, 
+    COMPANY_NAME, 
+    Lang, 
+    global_modelRegular,
+    gloal_modelRegularDetail;
+
+var SetEnvConfig = require('./get_env_config').SetEnvConfig;
+
+function setEnvCf (req, res) {
+    new SetEnvConfig(req);
+
+    envConfig = require('./get_env_config').envConfig;
+    URL_PATH = envConfig.url_path;
+    COMPANY_NAME = envConfig.company_name;
+    Lang = require('./lang')();
+    setCompanyCookie = require('./set_company_cookie');
+    global_modelRegular = require('./model/modelRegular')();
+    gloal_modelRegularDetail = require('./model/modelRegularDetail');
+    // console.log(global_modelRegular);
+    setCompanyCookie(res);
+}
 
 function extendPublic(data, req) {
     var lang = new Lang(req);
@@ -59,33 +79,56 @@ module.exports = function (app) {
 
     // 个人中心
     app.route('/space/').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('space', extendPublic({}, req));
     });
 
     app.route('/').get(function (req, res) {
+        setEnvCf(req, res);
+
         if (isMobile(req)) {
-            if (COMPANY_NAME === 'tigerwit') {
-                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
-                res.redirect('https://www.tigerwit.com/download');
+            var cookieList = querystring.parse(req.headers.cookie, '; ');
+            var trunPC = false;
+            for (var name in cookieList) {
+                // console.info(name);
+                if (name === 'turnPC') {
+                    trunPC = true;
+                }
             }
-            if (COMPANY_NAME === 'pkds') {
-                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex');
-                res.redirect('https://www.pkdsfx.com/download');
+            if (trunPC) {   // 回到电脑版
+                res.render('home.html', extendPublic({
+                    pageInfo: {}
+                }, req));
+            } else {
+                if (COMPANY_NAME === 'tigerwit') {
+                    // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+                    res.redirect('https://www.tigerwit.com/download');
+                }
+                if (COMPANY_NAME === 'pkds') {
+                    // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex');
+                    res.redirect('https://www.pkdsfx.com/download');
+                }
+            }
+            if (COMPANY_NAME === 'lonfx') {
+                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+                res.redirect('https://lonfx.tigerwit.com/download');
             }
         } else {
             if (COMPANY_NAME === 'tigerwit') {
                 if (req.query.label === 'Parkerdawson Co-operative Group Limited') {
                     res.redirect('https://www.pkdsfx.com/space/#/account/register');
                 } else {
-                    setCompanyCookie(res);
                     res.render('home.html', extendPublic({
                         pageInfo: {}
                     }, req));
                 }
             }
             if (COMPANY_NAME === 'pkds') {
-                setCompanyCookie(res);
+                res.render('home.html', extendPublic({
+                    pageInfo: {}
+                }, req));
+            }
+            if (COMPANY_NAME === 'lonfx') {
                 res.render('home.html', extendPublic({
                     pageInfo: {}
                 }, req));
@@ -94,11 +137,12 @@ module.exports = function (app) {
     });
 
     app.route('/ranklist').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('ranklist.html', extendPublic({}, req));
     });
 
     app.route('/:downloadPage(download|download_t)').get(function (req, res) {
+        setEnvCf(req, res)
         var pageId = req.params.downloadPage;
         if (isMobile(req)) {
             var extendObj = {};
@@ -117,54 +161,52 @@ module.exports = function (app) {
             }
             res.render('m_download.html', extendPublic(extendObj, req));
         } else {
-            setCompanyCookie(res);
             res.render('web_download.html', extendPublic({}, req));
         }
     });
 
     /*定期跟单开始*/
-    var global_modelRegular = require('./model/modelRegular');
-    var gloal_modelRegularDetail = require('./model/modelRegularDetail');
     app.route('/regular').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
+
         res.render('regular_list.html', extendPublic({
             model: global_modelRegular
         }, req));
     });
     app.route('/regular/agree/:subpage').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('regular_agree.html', extendPublic({
             model: global_modelRegular,
             detail_id: req.params.subpage || ""
         }, req));
     });
     app.route('/m/regular/agree/:subpage').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_regular_agree.html', extendPublic({
             model: global_modelRegular,
             detail_id: req.params.subpage || ""
         }, req));
     });
     app.route('/regular/detail/:subpage').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res)
         res.render('regular_detail.html', extendPublic({
             model: gloal_modelRegularDetail(req.params.subpage || "")
         }, req));
     });
     app.route('/m/regular/detail/:subpage').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_regular_detail.html', extendPublic({
             model: gloal_modelRegularDetail(req.params.subpage || "")
         }, req));
     });
     app.route('/m/regular/detail/team/:subpage').get(function (req, res) {
         var team_html = global_modelRegular.getTeamHtmlName(req.params.subpage);
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('regular/' + team_html + '.html', extendPublic({}, req));
     });
     app.route('/m/regular/detail/history/:subpage').get(function (req, res) {
         var aImages = global_modelRegular.getTeamHistoryImages(req.params.subpage);
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('regular/m_regular_detail_history.html', extendPublic({
             model: {
                 aImages: aImages
@@ -182,32 +224,32 @@ module.exports = function (app) {
         var pageInfo = {
             status: status
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('h5_register.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
     app.route('/m/register').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render("m_register01", extendPublic({}, req));
     });
     app.route('/m/register2').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render("m_register02", extendPublic({}, req));
     });
     app.route('/m/register3').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render("m_register03", extendPublic({}, req));
     });
     /*成为高手*/
     app.route('/m/agent/become').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render("m_agent_become", extendPublic({}, req));
     });
 
     /*定期跟单*/
     app.route('/m/regular/how').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render("m_regular_how", extendPublic({}, req));
     });
 
@@ -217,7 +259,7 @@ module.exports = function (app) {
         var pageInfo = {
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_asset.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -228,7 +270,7 @@ module.exports = function (app) {
         var pageInfo = {
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_asset_new.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -236,26 +278,26 @@ module.exports = function (app) {
 
     /*邀请好友*/
     app.route('/m/invite01').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_invite01', extendPublic({
             page:'invite01'
         }, req));
     });
     app.route('/m/register_coupon').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_invite01', extendPublic({
             page:'register_coupon'
         }, req));
     });
 
     app.route('/m/invite02').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_invite02', extendPublic({}, req));
     });
 
     /*H5 web 关于我们 英文页面*/
     app.route('/m/web/about/us').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_about_us', extendPublic({}, req));
     });
 
@@ -264,7 +306,7 @@ module.exports = function (app) {
 
     app.route('/trader/:usercode').get(function (req, res) {
         var usercode = req.params.usercode;
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         request(URL_PATH + '/action/public/v5/get_master_info?user_code=' + usercode, function (error, response, body) {
             // request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
             if (!error && response.statusCode == 200) {
@@ -284,7 +326,7 @@ module.exports = function (app) {
         var pageInfo = {
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('web_blog.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -295,7 +337,7 @@ module.exports = function (app) {
         var pageInfo = {
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('web_copy.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -306,13 +348,13 @@ module.exports = function (app) {
         var pageInfo = {
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('web_product.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
     app.route('/web/product/trade').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('trade_tool.html', extendPublic({}, req));
     })
 
@@ -322,7 +364,7 @@ module.exports = function (app) {
         var pageInfo = {
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('web_information.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -335,7 +377,7 @@ module.exports = function (app) {
         var pageInfo = {
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('web_about.html', extendPublic({
             pageInfo: pageInfo,
             report_sites: report_sites
@@ -348,7 +390,7 @@ module.exports = function (app) {
         var pageInfo = {
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('web_faq.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -360,14 +402,14 @@ module.exports = function (app) {
         var pageInfo = {
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('web_agent.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
 
     app.route('/web/mt4').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('web_mt4.html', extendPublic({}, req));
     });
 
@@ -378,14 +420,14 @@ module.exports = function (app) {
         var pageInfo = {
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('study.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
 
     app.route('/help').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('help_doc.html', extendPublic({}, req));
     });
 
@@ -403,24 +445,24 @@ module.exports = function (app) {
     });
 
     app.route('/activity').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('web-bonus1.html', extendPublic({}, req));
     });
 
     app.route('/activity/simulate426').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('simulate-426.html', extendPublic({}, req));
     });
 
     // 页面跳转中
     app.route('/waiting').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('waiting', extendPublic({}, req));
     });
 
     app.route('/bd/yellow').get(function (req, res) {
         if (COMPANY_NAME === 'tigerwit') {
-            setCompanyCookie(res);
+            setEnvCf(req, res);
             res.render('bd_m_yellow', extendPublic({}, req));
         }
     });
@@ -428,18 +470,18 @@ module.exports = function (app) {
     //理财江湖
     app.route('/bd/t34').get(function (req, res) {
         if (COMPANY_NAME === 'tigerwit') {
-            setCompanyCookie(res);
+            setEnvCf(req, res);
             res.render('bd_m_lake', extendPublic({}, req));
         }
     });
 
     app.route('/bd/t29').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('bd_t29', extendPublic({}, req));
     });
 
     app.route('/bd/t30').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         if (isMobile(req)) {
             res.render('bd_m7', extendPublic({}, req))
         } else {
@@ -447,7 +489,7 @@ module.exports = function (app) {
         }
     });
     app.route('/bd/t27').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         if (isMobile(req)) {
             res.render('bd_m_t27', extendPublic({}, req))
         } else {
@@ -455,7 +497,7 @@ module.exports = function (app) {
         }
     });
     app.route('/bd/t31').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         if (isMobile(req)) {
             // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
             if (COMPANY_NAME === 'tigerwit') {
@@ -472,12 +514,12 @@ module.exports = function (app) {
     });
 
     app.route('/bd/t31_game').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('bd_mt31_game', extendPublic({}, req))
     });
 
     app.route('/bd/t32').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
 
         // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
         if (COMPANY_NAME === 'tigerwit') {
@@ -492,7 +534,7 @@ module.exports = function (app) {
     });
 
     app.route('/bd/t32_t').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
         if (COMPANY_NAME === 'tigerwit') {
             res.render('bd_m_t31', extendPublic({
@@ -507,7 +549,7 @@ module.exports = function (app) {
 
     app.route('/bd/:page(t33|t33_t|t33_a|t33_b)').get(function (req, res) {
         var pageId = req.params.page || 't33';
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         if (isMobile(req)) {
             if (COMPANY_NAME === 'tigerwit') {
                 if (pageId == 't33') {
@@ -540,7 +582,7 @@ module.exports = function (app) {
         var pageInfo = {
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_vue.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -552,7 +594,7 @@ module.exports = function (app) {
             page: 'avatar',
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_vue_info.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -563,7 +605,7 @@ module.exports = function (app) {
             page: 'username',
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_vue_info.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -574,7 +616,7 @@ module.exports = function (app) {
             page: 'location',
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_vue_info.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -586,7 +628,7 @@ module.exports = function (app) {
             page: 'modify',
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_vue_password.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -598,7 +640,7 @@ module.exports = function (app) {
             page: 'email',
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_vue_binding.html', extendPublic({
             pageInfo: pageInfo
         }, req));
@@ -609,7 +651,7 @@ module.exports = function (app) {
             page: 'phone',
             id: subpage
         };
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_vue_binding.html', extendPublic({
             pageInfo: pageInfo
         }, req));
