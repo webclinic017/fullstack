@@ -24,6 +24,11 @@
             envConfig.company_name = 'lonfx';
             envConfig.url_path = 'https://lonfx.tigerwit.com';
             envConfig.access_origin = '';
+        } else {
+            envConfig.company_name = process.env.COMPANY_NAME;
+            envConfig.url_path = process.env.URL_PATH;
+            envConfig.access_origin = process.env.ACCESS_ORIGIN;
+            envConfig.access_origin2 = process.env.ACCESS_ORIGIN2;
         }
         // console.log(envConfig.company_name);
     }
