@@ -29,21 +29,37 @@
         allLoaded()
         function allLoaded() {
             $(function () {
-                $('.register_btn').click(function () {
-                    console.log(1);
+                $('.register_btn').click(function (e) {
                     layer.open({
                         type: 1,
-                        skin: 'layui-layer-rim', //加上边框
-                        area: ['420px', '240px'], //宽高
-                        content: '<div class="lake_regForm">' +
-                                    '<h1>注册送200美金</h1>' + 
-                                    '<form>' +
-                                        '<input type="text" name="username" id="username" placeholder="昵称">' +
-                                        '<input type="tel" name="tel" id="telephone" placeholder="手机号">' +
-                                        '<span id="regist_btn">立即领取</span>' +
-                                    '</form>' + 
-                                  '</div>'
+                        title: false, //不显示标题
+                        shadeClose: true,
+                        content: '<div class="lake_regForm" id="float_regBtn">' +
+                        '<h1>注册送200美金</h1>' +
+                        '<form>' +
+                        '<input type="text" name="username" id="float_username" placeholder="昵称">' +
+                        '<input type="tel" name="tel" id="float_telephone" placeholder="手机号">' +
+                        '<span class="regist_btn" id="bdRegister">立即领取</span>' +
+                        '</form>' +
+                        '</div>'
                     });
+                    setTimeout(function () {
+                        $('#bdRegister').click(function () {
+                            window.bdRegister({
+                                usernameId: 'float_username',
+                                telephoneId: 'float_telephone',
+                                emailId: '',
+                                targetId: 'bdRegister'
+                            });
+                        })
+
+                        $(":input").focus(function () {
+                            if ($(this).hasClass("warning")) {
+                                $(this).val("");
+                                $(this).removeClass("warning");
+                            }
+                        });
+                    }, 200);
                 });
 
                 function activePage1(when) {
@@ -91,6 +107,15 @@
                     $(".registerNow" + index).fadeOut(500)
                 }
 
+                function addRegEff(index) {
+                    var effects = 'flash_rotateIn_jello_fadeIn_flipInX_lightSpeedIn'.split('_');
+                    var effect = effects[parseInt(Math.random() * effects.length)];
+                    console.log(effect);
+                    setTimeout(function () {
+                        $(".section" + index).find('.register_btn').addClass('animated ' + effect)
+                    }, 600)
+                }
+
                 setTimeout(function () {
                     activePage1();
                 }, 500);
@@ -120,11 +145,10 @@
 
                     afterRender: function () {
                         $(".lake_layout").fadeIn(0);
-                        //$('.section').css('height','90%');
-                        //$('<div class="navLine"></div>').appendTo('#fp-nav ul');
                     },
                     afterLoad: function (anchorLink, index) {
                         showBtn(index);
+                        addRegEff(index);
                         if (index == 1) {
                             activePage1(index);
                         }

@@ -40,6 +40,7 @@ $(document).ready(function () {
         }
     }
 
+    window.bdRegister = regist;
     function regist(info) {
         var input = $('#' + info.usernameId);
         var rName = input.val() ? input.val() : "";
@@ -61,22 +62,22 @@ $(document).ready(function () {
                 input.val(" 昵称应在4到16个字符之间").addClass("warning");
             }
         } else if (!(/^[\u4e00-\u9fa5A-Za-z\d]+$/.test(input.val()))) {
-            input.val(" 昵称不合法").addClass("warning");
+            input.val("昵称不合法").addClass("warning");
         }
         if ((input.val() == "") || (input.val() == "请填写昵称")) {
-            input.val(" 请填写昵称").addClass("warning");
+            input.val("请填写昵称").addClass("warning");
         }
         var input = $('#' + info.telephoneId);
         var rPhone = input.val() ? input.val() : "";
         var isMobile = /^(13|14|15|17|18)\d{9}$/;
         var isPhone = /^((0\d{2,4})-)?(\d{7,8})(-(\d{2,}))?$/;
         if ((input.val() == "") || (input.val() == "请填写有效的电话号码") || (!isMobile.test(input.val()) && !isPhone.test(input.val()))) {
-            input.val(" 请填写有效的电话号码").addClass("warning");
+            input.val("请填写有效的电话号码").addClass("warning");
         }
         var input = $('#' + info.emailId);
         var rEmail = input.val() ? input.val() : "";
         if ((input.val() == "") || (input.val() == "请填写有效的Email") || (!/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(input.val()))) {
-            input.val(" 请填写有效的Email").addClass("warning");
+            input.val("请填写有效的Email").addClass("warning");
         }
 
 
