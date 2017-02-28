@@ -476,6 +476,8 @@ module.exports = function (app) {
             } else {
                 res.render('bd_lake', extendPublic({}, req));
             }            
+        } else {
+            res.render('404.html', extendPublic({}, req));
         }
     });
 

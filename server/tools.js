@@ -40,11 +40,11 @@
         //Dec 1st to Dec 31st
         if (type == 'zh') {
           // return startZh + ' 到 ' + endZh
-          return '2017年3月1日 - 2017年3月15日'
+          return '2017年3月1日 - 2017年3月14日'
         }
         else if (type == 'en') {
           //return duringEn;
-          return 'Mar 01st 2017 To Mar 15th 2017'
+          return 'Mar 01st 2017 To Mar 14th 2017'
         }
       }
     }
