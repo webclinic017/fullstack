@@ -1,6 +1,10 @@
 //
 // Navs
 // --------------------------------------------------
+.has_navBar{
+    padding-top: 69px;
+}
+
 .nav {
     @extend .clearfix;
     margin-bottom: 0;
