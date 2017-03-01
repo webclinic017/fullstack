@@ -667,13 +667,15 @@ module.exports = function (app) {
 
     // nodeAPI
     app.route('/napi').get(function (req, res) {
+        setEnvCf(req, res);
+        
         var action = req.query.action;
-        var model = require('./model/modelRegular');
+        // var model = require('./model/modelRegular');
         var napiConfigInfo = require('./app_napi.config.js');
         var page, pagesize, sum;
         var page_total = 0;
         var data = null;
-        var data_pre = model['products'];
+        var data_pre = global_modelRegular['products'];
         var rs;
         var oError = null;
         if (action == "get_regular_list") {
