@@ -2,7 +2,7 @@ if ($(".m_vue").attr("data-page") === "forget") {
     var phoneApp = new Vue({
         el: '#m_vue_forget',
         data: {
-            step: 2,
+            step: 1,
             clickable: {
                 submit: true
             },
