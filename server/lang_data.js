@@ -331,6 +331,7 @@ module.exports = function () {
         "home56": { "en": "Fixed copy trading", "zh": "定期跟单" },
         "home57": { "en": "upto 60% yearly return", "zh": "年化收益可达" },
         "home58": { "en": "Monthly product is avaliable now!", "zh": "月盈产品火爆进行中" },
+        "home61": { "en": "CFD", "zh": "差价合约" },
 
         // 产品介绍－外汇交易 forex
         //"forex1": {"en": "Foreign exchange transaction involves buying and/or selling a kind of foreign currency. In terms of the largest single product market in the world, trades valuing over USD 5 trillion are achieved on the current foreign exchange market. The foreign exchange and price is mainly influenced by international trade, economy and policies of countries and investment flow direction and the foreign exchange market is featured as transparent information, tremendous turnover and great fairness and transparency.", "zh": "外汇交易涉及买入一个外国货币和/或卖出另一个外国货币。全球最大的单一产品市场，当今外汇市场每天拥有超过5万亿美元的成交额，外汇市场和价格主要受国际间的交易，各国经济和政策以及投资流向的影响，外汇市场信息透明，流通量巨大，公平透明。"},
@@ -946,6 +947,8 @@ module.exports = function () {
         "mWapLocation4": {"zh": "提交失败", "en": "Submit failed"},
         "mWapForget1": {"zh": "新密码设置成功", "en": "New password set successfully"},
         "mWapForget2": {"zh": "注意：您的 MT4 登陆密码同时被修改为新密码", "en": "Note: your MT4 login password has been modified to the new password"},
+        "mWapForget3": {"zh": "新密码", "en": "New Password"},
+        "mWapForget4": {"zh": "确认新密码", "en": "Confirm New Password"},
     };
 
     return data;
