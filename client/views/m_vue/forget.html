@@ -1,0 +1,143 @@
+<div class="m_vue" data-page="forget">
+    <div id="m_vue_forget" v-cloak>
+        <div class="" v-if="step === 1">
+            <validator name="validatorStep1">
+                <div class="form-control-wrapper">
+                    <input class="form-control m_vue_form-control" 
+                           type="text" 
+                           pattern="[0-9]*"
+                           placeholder="<%= lang.text('phone')%>"
+                           initial="off"
+                           :class="{'form-control-error': frontErr.phone.show && $validatorStep1.phone.phoneErr}"
+                           v-validate:phone="['phoneErr']"
+                           v-model="bindData.phone"
+                           @focus="hideFrontErr('phone')"
+                           @blur="showFrontErr('phone')">
+                    
+                    <i class="form-control-icon fa fa-mobile-phone"></i>
+
+                    <div v-show="frontErr.phone.show">
+
+                        <p class="alert-arrow_tp_lf" v-show="$validatorStep1.phone.phoneErr">
+                            {{ frontErr.phone.msg || "<%= lang.text('IncorrectPhone')%>" }}
+                        </p>
+                    </div>  
+                </div>
+            </validator>
+
+            <button @click="getCode('once')" class="btn btn-primary btn-lg mg-tp-20" v-if="clickable.submit">
+                <%= lang.text('ObtainVerificationCode')%>
+            </button>
+
+            <button class="btn btn-info btn-lg mg-tp-20" v-if="!clickable.submit">
+                <i class="loading fa fa-spinner"></i>
+                <%= lang.text('sending')%>
+            </button>
+        </div>
+        <div class="" v-if="step === 2">
+            <validator name="validatorStep2">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="form-control-wrapper">
+                            <input class="form-control m_vue_form-control" 
+                                   type="text"
+                                   pattern="[0-9]*"
+                                   placeholder="<%= lang.text('verifycode')%>"
+                                   initial="off"
+                                   :class="{'form-control-error': frontErr.code.show && $validatorStep2.code.noempty}"
+                                   v-validate:code="['noempty']"
+                                   v-model="bindData.code"
+                                   @focus="hideFrontErr('code')"
+                                   @blur="showFrontErr('code')">
+                            
+                            <i class="form-control-icon fa fa-pencil"></i>
+
+                            <div v-show="frontErr.code.show">
+
+                                <p class="alert-arrow_tp_lf" v-show="$validatorStep2.code.noempty">
+                                    {{ frontErr.code.msg || "<%= lang.text('enterVerifycode')%>" }}
+                                </p>
+                            </div>  
+                        </div>
+                    </div>
+                    
+                    <div class="col-xs-6">
+                        <div class="form-control-wrapper">
+                            <a @click="getCode('repeat')" 
+                               v-count-down="countDown" 
+                               class="btn m_vue_forget__btn"
+                               :class="{'btn-primary': !countDown.noClick, 'btn-info': countDown.noClick, 'en': language === 'en'}">
+                                {{ countDown.message }}
+                            </a>
+                        </div>
+                    </div>    
+                </div>
+                <div class="form-control-wrapper">
+                    <input class="form-control m_vue_form-control"
+                           name="pwdNew"
+                           type="password"
+                           placeholder="<%= lang.text('new')%><%= lang.text('password')%>"
+                           initial="off"
+                           :class="{'form-control-error': frontErr.pwdNew.show && $validatorStep2.pwdNew.pwdNew}"
+                           v-validate:pwd-new="['pwdNew']" 
+                           v-model="bindData.pwdNew"
+                           @focus="hideFrontErr('pwdNew')"
+                           @blur="showFrontErr('pwdNew')">
+                    
+                    <i class="form-control-icon fa fa-lock"></i>
+
+                    <div v-show="frontErr.pwdNew.show">
+                        <p class="alert-arrow_tp_lf" v-show="$validatorStep2.pwdNew.pwdNew">
+                            {{ frontErr.pwdNew.msg || "<%= lang.text('IncorrectPassword')%>" }}
+                        </p>
+                    </div>  
+                </div>
+
+                <div class="form-control-wrapper">
+                    <input class="form-control m_vue_form-control" 
+                           name="pwdConfirm" 
+                           type="password"
+                           placeholder="<%= lang.text('confirm')%><%= lang.text('new')%><%= lang.text('password')%>"
+                           initial="off"
+                           :class="{'form-control-error': frontErr.pwdConfirm.show && $validatorStep2.pwdConfirm.pwdConfirm}"
+                           v-validate:pwd-confirm="{pwdConfirm: pwdConfirm}"
+                           v-model="bindData.pwdConfirm"
+                           @focus="hideFrontErr('pwdConfirm')"
+                           @blur="showFrontErr('pwdConfirm')">
+                    
+                    <i class="form-control-icon fa fa-lock"></i>
+
+                    <div v-show="frontErr.pwdConfirm.show">
+
+                        <p class="alert-arrow_tp_lf" v-show="$validatorStep2.pwdConfirm.pwdConfirm">
+                            {{ frontErr.pwdConfirm.msg || "<%= lang.text('passwordIsNotIdentica')%>" }}
+                        </p>
+                    </div>
+                </div>
+            </validator>
+
+            <button @click="checkCode" class="btn btn-primary btn-lg mg-tp-20" v-if="clickable.submit">
+                <%= lang.text('submit')%>
+            </button>
+
+            <button class="btn btn-info btn-lg mg-tp-20" v-if="!clickable.submit">
+                <i class="loading fa fa-spinner"></i>
+                 <%= lang.text('submiting')%>
+            </button>
+        </div>
+        <div class="" v-if="step === 3">
+            <div class="m_vue_forget__icon">
+                <img src="/images/icon-succ.png">
+            </div>
+            <div class="m_vue_forget__cont">
+                <%= lang.text('mWapForget1')%>
+            </div>
+            <button @click="toLogin" class="btn btn-primary btn-lg mg-tp-20">
+                <%= lang.text('loginNow')%>
+            </button>
+            <p class="m_vue_forget__tip">
+                <%= lang.text('mWapForget2')%>
+            </p>
+        </div>
+    </div>
+</div>
