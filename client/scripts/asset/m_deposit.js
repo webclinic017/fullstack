@@ -14,11 +14,11 @@ $(document).ready(function () {
     }
     // console.info(urlPath);
 
-    $.get('/action/public/v4/get_info').then(function (data) {
-        data = JSON.parse(data);
-        console.log(data);
-        real_id = data.data.real_id;
-    });
+    // $.get('/action/public/v4/get_info').then(function (data) {
+    //     data = JSON.parse(data);
+    //     console.log(data);
+    //     real_id = data.data.real_id;
+    // });
 
     $payBtn.on('click', function () {
         var num = $("#m_deposit_test .number").val();
@@ -45,14 +45,14 @@ $(document).ready(function () {
         });
     }
 
-    // $pay.on('click', function () {
-    //     var action_address = $(this).attr("href");
-    //     callNative({
-    //         type: "openUrl",
-    //         url: action_address
-    //     });
-    //     return false;
-    // });
+    $pay.on('click', function () {
+        var action_address = $(this).attr("href");
+        callNative({
+            type: "openUrl",
+            url: action_address
+        });
+        return false;
+    });
 
     function doSearch (str, i) {
         var arr = str.substring(1).split('&');
