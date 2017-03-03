@@ -582,8 +582,11 @@ module.exports = function (app) {
     });
 
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
-    // list -> info, password, binding
-    app.route('/m/wap/:subpage(info|password|binding)').get(function (req, res) {
+    /*
+        设置     ->     info, password, binding, 
+        忘记密码  ->     forget
+    */
+    app.route('/m/wap/:subpage(info|password|binding|forget)').get(function (req, res) {
         var subpage = req.params.subpage || 'info';
         var pageInfo = {
             id: subpage

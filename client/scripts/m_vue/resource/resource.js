@@ -25,6 +25,9 @@ var apiUrl = {
     sendEmailCodeApi: rootUrl + '/action/public/v3/send_email_code', //post
     checkEmailCodeApi: rootUrl + '/action/public/v3/check_email_code', // post
     saveEmailApi: rootUrl + '/action/public/v3/set_my_bind_email', //post
+    getVerifyCodeApi: rootUrl + '/action/public/v3/get_phone_code', // post
+    checkCodeApi: rootUrl + '/action/public/v4/verifycode', //post
+    setNewPasswordApi: rootUrl + '/action/public/v4/change_password', //post
 };
 var apiUrlResource = {
     changePwd:  Vue.resource(apiUrl.changePwdApi),
@@ -42,4 +45,7 @@ var apiUrlResource = {
     sendEmailCode: Vue.resource(apiUrl.sendEmailCodeApi),
     checkEmailCode: Vue.resource(apiUrl.checkEmailCodeApi),
     saveEmail: Vue.resource(apiUrl.saveEmailApi),
+    getVerifyCode: Vue.resource(apiUrl.getVerifyCodeApi),
+    checkCode: Vue.resource(apiUrl.checkCodeApi),
+    setNewPassword: Vue.resource(apiUrl.setNewPasswordApi),
 };
