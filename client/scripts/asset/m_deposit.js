@@ -41,14 +41,14 @@ $(document).ready(function () {
         // console.info(order_no);
         $.each($pay, function (index, value) {
             var pMode = $(value).attr("data-pmode");
-            $(value).attr("href", urlPath+"/action/public/v4/pay_order/"+order_no+"?pmode="+pMode);
+            $(value).attr("href", urlPath+"/action/public/app/pay_order/"+order_no+"?pmode="+pMode);
         });
     }
 
     $pay.on('click', function () {
         var action_address = $(this).attr("href");
         callNative({
-            type: "openUrl",
+            type: "openUrlOnce",
             url: action_address
         });
         return false;
