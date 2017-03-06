@@ -31,11 +31,11 @@
         function getRedbagPool (page) {
             page = page ? page : 1;
             $scope.page = page;
-            var offset = (page - 1) * pagesize;
+            // var offset = (page - 1) * pagesize;
             // $scope.$broadcast('showLoadingImg');
             $scope.success = false;
 
-            redbag.getRedbagPool(offset, pagesize).then(function (data) {
+            redbag.getRedbagPool(page, pagesize).then(function (data) {
                 $scope.success = true;
                 // $scope.$broadcast('hideLoadingImg');
                 // console.log(data);

@@ -20,15 +20,15 @@
          * Redbag Service 获取红包中心红包
          *
          * @method getRedbagPool
-         * @param {Number} limit 
-         * @param {Number} offset
+         * @param {Number} page 
+         * @param {Number} pagesize
          */
-        function getRedbagPool(offset, limit) {
+        function getRedbagPool(page, pagesize) {
 
             return $http.get(o.getRedbagPoolApi, {
                 params: {
-                    limit: limit,
-                    offset: offset
+                    page: page,
+                    pagesize: pagesize
                 }
             });
         }

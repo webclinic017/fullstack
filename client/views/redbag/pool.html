@@ -9,7 +9,7 @@
                         <span class="tip">$</span>
                         <span class="number">{{ pool.amount || '0' }}</span>
                     </p>
-                    <p class="redbag_single__top-type">{{ pool.name || '-' }}</p>
+                    <p class="redbag_single__top-type" title="{{ pool.name }}">{{ pool.name || '-' }}</p>
                     <p class="redbag_single__top-tip">可领取时间：{{ pool.acquire_start.split(' ')[0] || '-' }}至{{ pool.acquire_end.split(' ')[0] || '-' }}</p>
                     <div class="redbag_single__top-bw" ng-init="N=[];N.length=30">
                         <span class="one" ng-repeat="n in N track by $index"></span>

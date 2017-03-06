@@ -23,8 +23,11 @@
                             <span class="tip">$</span>
                             <span class="number">{{ bag.amount || '0'}}</span>
                         </p>
-                        <p class="redbag_single__top-type">{{ bag.bonus_name || '-'}}</p>
-                        <p class="redbag_single__top-tip">兑换有效期截止至{{ bag.valid_end.split(' ')[0] || '-' }}</p>
+                        <p class="redbag_single__top-type" title="{{ bag.bonus_name }}">{{ bag.bonus_name || '-'}}</p>
+                        <p class="redbag_single__top-tip" ng-if="bag.bonus_status != 3">兑换有效期截止至{{ bag.valid_end.split(' ')[0] || '-' }}</p>
+                        <p class="redbag_single__top-tip" ng-if="bag.bonus_status == 3">
+                            兑换日期：{{ bag.pay_time.split(' ')[0] || '-' }}
+                        </p>
                         <div class="redbag_single__top-bw" ng-init="N=[];N.length=30">
                             <span class="one" ng-repeat="n in N track by $index"></span>
                         </div>
