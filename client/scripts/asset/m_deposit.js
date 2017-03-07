@@ -3,7 +3,7 @@ $(document).ready(function () {
     var $payBtn = $("#m_deposit_test a");
     var order_no, real_id;
 
-    var $pay = $payList.find("li a");
+    var $pay = $payList.find(".m_deposit_pay__bank");
     var search = location.search;
 
     // 兼容IE
@@ -20,38 +20,45 @@ $(document).ready(function () {
     //     real_id = data.data.real_id;
     // });
 
-    $payBtn.on('click', function () {
-        var num = $("#m_deposit_test .number").val();
-        if (real_id) {
-            $.get('/action/public/v4/pay', {
-                mt4_id: real_id,
-                amount: num
-            }).then(function (data) {
-                data = JSON.parse(data);
-                order_no = data.data.order_no;
-                if (order_no) {
-                    window.open('/m/deposit/pay?order_no='+order_no);
-                }
-            });
-        }
-    });
+    // $payBtn.on('click', function () {
+    //     var num = $("#m_deposit_test .number").val();
+    //     if (real_id) {
+    //         $.get('/action/public/v4/pay', {
+    //             mt4_id: real_id,
+    //             amount: num
+    //         }).then(function (data) {
+    //             data = JSON.parse(data);
+    //             order_no = data.data.order_no;
+    //             if (order_no) {
+    //                 window.open('/m/deposit/pay?order_no='+order_no);
+    //             }
+    //         });
+    //     }
+    // });
 
     if (search) {
         order_no = doSearch(search, 'order_no');
         // console.info(order_no);
-        $.each($pay, function (index, value) {
-            var pMode = $(value).attr("data-pmode");
-            $(value).attr("href", urlPath+"/action/public/app/pay_order/"+order_no+"?pmode="+pMode);
-        });
     }
 
     $pay.on('click', function () {
-        var action_address = $(this).attr("href");
-        callNative({
-            type: "openUrlOnce",
-            url: action_address
-        });
-        return false;
+        
+        if (order_no) {
+            var pMode = $(this).attr("data-pmode");
+            var action_address = urlPath+"/action/public/app/pay_order/"+order_no+"?pmode="+pMode;
+            callNative({
+                type: "openUrlOnce",
+                url: action_address
+            });
+            
+        } else {
+            layer.open({
+                content: '系统错误，请联系管理员'
+                ,skin: 'msg'
+                ,time: 2 //2秒后自动关闭
+              });
+        }
+        
     });
 
     function doSearch (str, i) {

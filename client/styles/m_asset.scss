@@ -298,13 +298,43 @@
             margin-top: px2rem(66);
         }
     }
-
-
-
-
-
-
-
-
-
 }
+
+/* H5 支付 银行页面*/
+@include b(m_deposit_pay) {
+    height: 100%;
+    background-color: #fff;
+
+    @include e(bank) {
+        border-bottom: 1px solid #eee;
+        padding: 12px 28px;
+        @extend .clearfix;
+
+        .pic {
+            float: left;
+            vertical-align: middle;
+            height: 28px;
+
+            img {
+                width: 28px;
+            }
+        }
+        .tit {
+            float: left;
+            font-size: 16px;
+            padding-left: 14px;
+            height: 28px;
+            line-height: 28px;
+        }
+
+        &:active {
+            background-color: #eee;
+        }
+    }
+    @include e(desc) {
+        color: #909090;
+        padding: 16px 0 0 28px;
+    }
+}
+
+
