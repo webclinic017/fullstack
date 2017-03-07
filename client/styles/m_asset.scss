@@ -306,9 +306,17 @@
     background-color: #fff;
 
     @include e(bank) {
+        display: block;
         border-bottom: 1px solid #eee;
         padding: 12px 28px;
-        @extend .clearfix;
+        &:before,
+        &:after {
+            content: ""; // 1
+            display: table; // 2
+        }
+        &:after {
+            clear: both;
+        }
 
         .pic {
             float: left;

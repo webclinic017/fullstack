@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var $payList = $("#m_deposit_pay");
-    var $payBtn = $("#m_deposit_test a");
+    // var $payBtn = $("#m_deposit_test a");
     var order_no, real_id;
 
     var $pay = $payList.find(".m_deposit_pay__bank");
@@ -38,28 +38,33 @@ $(document).ready(function () {
 
     if (search) {
         order_no = doSearch(search, 'order_no');
-        // console.info(order_no);
+        // console.info($pay);
+        $.each($pay, function (index, value) {
+            // console.log(index, value);
+            var pMode = $(value).attr("data-pmode");
+            $(value).attr("href", urlPath+"/action/public/app/pay_order/"+order_no+"?pmode="+pMode);
+        });
     }
 
-    $pay.on('click', function () {
+    // $pay.on('click', function () {
         
-        if (order_no) {
-            var pMode = $(this).attr("data-pmode");
-            var action_address = urlPath+"/action/public/app/pay_order/"+order_no+"?pmode="+pMode;
-            callNative({
-                type: "openUrlOnce",
-                url: action_address
-            });
+    //     if (order_no) {
+    //         var pMode = $(this).attr("data-pmode");
+    //         var action_address = urlPath+"/action/public/app/pay_order/"+order_no+"?pmode="+pMode;
+    //         callNative({
+    //             type: "openUrlOnce",
+    //             url: action_address
+    //         });
             
-        } else {
-            layer.open({
-                content: '系统错误，请联系管理员'
-                ,skin: 'msg'
-                ,time: 2 //2秒后自动关闭
-              });
-        }
+    //     } else {
+    //         layer.open({
+    //             content: '系统错误，请联系管理员'
+    //             ,skin: 'msg'
+    //             ,time: 2 //2秒后自动关闭
+    //           });
+    //     }
         
-    });
+    // });
 
     function doSearch (str, i) {
         var arr = str.substring(1).split('&');
