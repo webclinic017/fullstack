@@ -662,6 +662,15 @@ module.exports = function (app) {
             pageInfo: pageInfo
         }, req));
     });
+    // FAQ
+    app.route('/m/wap/faq/:subpage(index|simulate|real|depwith|type|transaction|mt4|overnight)').get(function (req, res) {
+        var subpage = req.params.subpage || 'index';
+        
+        setEnvCf(req, res);
+        res.render('m_vue_faq.html', extendPublic({
+            pageInfo: subpage
+        }, req));
+    });
 
     /* end */
 
