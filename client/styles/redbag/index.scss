@@ -202,5 +202,14 @@
                 font-size: 16px;
             }
         }
+        @include m(dec) {
+            text-align: center;
+            padding-top: 10px;
+
+            .dec {
+                color: #f5524f;
+                font-size: 16px;
+            }
+        }
     }
 }
