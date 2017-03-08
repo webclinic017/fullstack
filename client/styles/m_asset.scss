@@ -309,6 +309,8 @@
         display: block;
         border-bottom: 1px solid #eee;
         padding: 12px 28px;
+        padding-right: 18px;
+
         &:before,
         &:after {
             content: ""; // 1
@@ -333,10 +335,46 @@
             padding-left: 14px;
             height: 28px;
             line-height: 28px;
+            color: #000;
+        }
+        .tip {
+            float: left;
+            font-size: 14px;
+            padding-left: 8px;
+            height: 28px;
+            line-height: 28px;
+            color: #909090;
+        }
+        .sign {
+            float: right;
+            height: 28px;
+            vertical-align: top;
+            padding-top: 7px;
+
+            img {
+                height: 14px;
+            }
         }
 
         &:active {
             background-color: #eee;
+        }
+    }
+    @include e(title) {
+        padding: 17px 0 18px 28px;
+
+        .tip {
+            font-size: 16px;
+            height: 16px;
+            line-height: 16px;
+            color: #000;
+        }
+        .sub-tip {
+            font-size: 14px;
+            height: 16px;
+            line-height: 16px;
+            padding-left: 8px;
+            color: #909090;
         }
     }
     @include e(desc) {

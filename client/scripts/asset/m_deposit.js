@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var $payList = $("#m_deposit_pay");
+    var $payList = $(".m_deposit_pay");
     // var $payBtn = $("#m_deposit_test a");
     var order_no, real_id;
 
