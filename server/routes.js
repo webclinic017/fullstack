@@ -301,6 +301,16 @@ module.exports = function (app) {
         res.render('m_about_us', extendPublic({}, req));
     });
 
+    /* H5 充值中转页面 */
+    app.route('/m/deposit/test').get(function (req, res) {
+        setCompanyCookie(res);
+        res.render('m_deposit_test', extendPublic({}, req));
+    });
+    app.route('/m/deposit/pay').get(function (req, res) {
+        setCompanyCookie(res);
+        res.render('m_deposit_pay', extendPublic({}, req));
+    });
+
     /*--------------------APP-End-------------------------*/
 
 
