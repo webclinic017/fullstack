@@ -1,4 +1,20 @@
 var report_sites = [
+    /*添加时间 2017-3-06*/
+    {
+        address: 'http://mt.sohu.com/business/d20170223/127010601_581657.shtml',
+        description: '【搜狐财经】老虎外汇：投资市场动荡 投资者如何安置钱袋子',
+        date: '2017-02-23'
+    },
+    {
+        address: 'http://www.ceweekly.cn/2017/0227/181744.shtml',
+        description: '【经济网】银行低利率投资者转外汇投资 老虎外汇受青睐',
+        date: '2017-02-27'
+    },
+    {
+        address: 'http://mini.eastday.com/a/170228122626603.html',
+        description: '【东方头条】老虎外汇：李开复预言可信吗？该怎样迎接未来',
+        date: '2017-02-28'
+    },
     /*添加时间 2017-2-10*/
     {
         address: 'http://news.ifeng.com/a/20170116/50583280_0.shtml',

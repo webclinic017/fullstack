@@ -10,16 +10,66 @@
     border-bottom: 1px solid $gray;
 }
 
+.full-height{
+    min-height: 100%;
+}
+
 .primary-bg{
     background: $m-brand-primary;
 }
 
-.gray-bg{
-    background: $gray;
+.text-bg{
+    background: #fafafa;
 }
 
 .pr-color{
     color: $brand-primary-dark;
+}
+
+/*文本标题*/
+.text_title{
+  font-weight:500!important;
+  display: block!important;
+  padding: px2rem(17) 0!important;
+  font-size: px2rem(34);
+}
+.text_sub_title{
+  font-weight:500!important;
+  display: block!important;
+  margin: px2rem(17) 0!important;
+  font-size: px2rem(32);
+}
+/*文本内容*/
+.text_pgh{
+    li {
+        position: relative;
+        margin-bottom: px2rem(32);
+        padding-left: px2rem(32);
+        border: none;
+        // min-height: px2rem(80);
+    }
+    .plan-line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: inline-block;
+        width: px2rem(6);
+        height: 50%;
+        min-height: 18px;
+        max-height: 120px;
+        background: #fedd0a;
+        border-radius: 4px;
+    }
+    p {
+        font-size: px2rem(30);
+        line-height: px2rem(40);
+        color: #8f8f94;
+        .important{
+            color: red;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
 }
 
 @include b(m_vue) {
@@ -74,6 +124,11 @@
     @include e(title) {
         font-size: 16px;
         color: #333;
+    }
+
+    @include e(list) {
+        font-size: 16px;
+        color: #888;
     }
 
     @include e(enter) {
