@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include common/m_common_head.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include common/m_css_vendor.html %>
+<% include common/common_header.html %>
+
+<body>
+
+<div class="m_deposit_pay">
+    <div>
+        <a href="" class="m_deposit_pay__bank" data-pmode="126">
+            <span class="pic"><img src="/images/icons-bank/up.png"></span>
+            <span class="tit">银联支付</span>
+            <span class="tip">单日交易限额 ¥500</span>
+            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
+        </a>
+    </div>
+    <div class="m_deposit_pay__title">
+        <span class="tip">更高限额支付方式</span>
+        <span class="sub-tip">单日交易限额以银行规定为准</span>   
+    </div>
+    <div id="m_deposit_pay">
+        <a href="" class="m_deposit_pay__bank" data-pmode="3">
+            <span class="pic"><img src="/images/icons-bank/cmb.png"></span>
+            <span class="tit">招商银行</span>
+            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
+        </a>
+        <a href="" class="m_deposit_pay__bank" data-pmode="4">
+            <span class="pic"><img src="/images/icons-bank/ccb.png"></span>
+            <span class="tit">建设银行</span>
+            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
+        </a>
+        <a href="" class="m_deposit_pay__bank" data-pmode="9">
+            <span class="pic"><img src="/images/icons-bank/icbc.png"></span>
+            <span class="tit">工商银行</span>
+            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
+        </a>
+        <a href="" class="m_deposit_pay__bank" data-pmode="33">
+            <span class="pic"><img src="/images/icons-bank/cib.png"></span>
+            <span class="tit">兴业银行</span>
+            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
+        </a>
+        <a href="" class="m_deposit_pay__bank" data-pmode="69">
+            <span class="pic"><img src="/images/icons-bank/spdb.png"></span>
+            <span class="tit">浦发银行</span>
+            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
+        </a>
+        <a href="" class="m_deposit_pay__bank" data-pmode="85">
+            <span class="pic"><img src="/images/icons-bank/boc.png"></span>
+            <span class="tit">中国银行</span>
+            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
+        </a>
+    </div>
+    <div class="m_deposit_pay__desc">
+        即将支持更多的银行
+    </div>
+</div>
+
+</body>
+<% include common/m_js_vendor.html %>
+<!-- build:js(client) /scripts/m_vendor.js -->
+<script src="/bower_components/jquery-3.0.0.min/index.js"></script>
+<script src="/scripts/plugins/base64code.js"></script>
+<script src="/scripts/plugins/jquery.tap.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<!-- endbuild -->
+<!-- build:js(client) /scripts/m_deposit.js -->
+<script src="/scripts/asset/m_deposit.js"></script>
+<!-- endbuild -->
+
+<%- include('bd/common/footer.html') %>
+</html>

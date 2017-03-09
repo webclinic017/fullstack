@@ -186,6 +186,7 @@ module.exports = function () {
         "lijifuzhi": { "en": "Copy now", "zh": "立即复制" },
         "fuzhi": { "zh": "复制", "en": "Copy" },
         "lijizhuce": { "en": "Register now", "zh": "立即注册" },
+        "loginNow": { "en": "Login Now", "zh": "立即登录" },
         "liaojiexiangqing": { "en": "Learn more", "zh": "了解详情" },
         "xuanzegaoshou": { "en": "Select a master", "zh": "选择高手" },
         "shouyilv": { "en": "yield rate", "zh": "收益率" },
@@ -194,6 +195,7 @@ module.exports = function () {
         "low": { "en": "low", "zh": "低" },
         "middle": { "en": "middle", "zh": "中" },
         "high": { "en": "high", "zh": "高" },
+        "new": {"en": "New", "zh": "新"},
         "fuzhirenshu": { "en": "Copiers", "zh": "复制人数" },
         "lishifuzhirenshu": { "en": "Historical Copiers", "zh": "历史复制人数" },
         "zuidifuzhijine": { "en": "MIN copy", "zh": "最低复制金额" },
@@ -209,8 +211,17 @@ module.exports = function () {
         "password": { "en": "Password", "zh": "密码" },
         "username": { "en": "Username", "zh": "昵称" },
         "phone": { "en": "Phone", "zh": "手机号码" },
+        "IncorrectPhone": {"en": "Incorrect phone number format", "zh": "手机号码格式不正确"},
+        "IncorrectPassword": {"en": "Incorrect password format", "zh": "密码格式不正确"},
+        "passwordIsNotIdentica": {"en": "Confirmation password is not identica", "zh": "两次密码输入不一致"},
         "email": { "en": "E-mail", "zh": "电子邮箱" },
         "verifycode": { "en": "Verification code", "zh": "验证码" },
+        "ObtainVerificationCode": {"en": "Obtain verification code", "zh": "获取验证码"},
+        "enterVerifycode": { "en": "Please enter the verification code", "zh": "请输入验证码" },
+        "sending": {"en": "Sending", "zh": "发送中"},
+        "confirm": {"en": "Confirm", "zh": "确认"},
+        "submit": {"en": "Submit", "zh": "提交"},
+        "submiting": {"en": "Submit...", "zh": "提交中"},
 
         // 导航栏 navbar
         "navbar1": { "en": "Homepage", "zh": "首页" },
@@ -292,7 +303,7 @@ module.exports = function () {
         "home32": { "en": "Low threshold and transparent quotation", "zh": "门槛较低，报价透明" },
         "home33": { "en": "STP (straight trade process)", "zh": "STP直通式交易模式" },
         "home34": { "en": "Provide guarantee for excellent trading experience and optimizing user value", "zh": "为出色的交易体验和优化用户价值提供保障" },
-        "home35": { "en": companyConfig.companyNameEn + "cooperate with many famous institutions, including bank of America, citigroup, jpmorgan chase, barclays, Macquarie bank, etc., from many international Banks and other foreign exchange quotations and liquidation, and through the way of STP to transmit the user's orders to the international banking market, allowing users to order in the shortest possible time and optimal price.", "zh": "" + companyConfig.companyNameZh + "与多家知名机构合作，包括美国银行，花旗，摩根大通，巴克莱，麦格理银行等，从多家国际银行等获得外汇报价和清算，并且通过STP的方式将用户的订单传输到国际间银行市场，从而让用户订单在最短的时间内以最优的价格成交。" },
+        "home35": { "en": companyConfig.companyNameEn + "cooperate with many famous institutions, including bank of America, citigroup, jpmorgan chase, barclays, Macquarie bank, etc., from many international Banks and other foreign exchange quotations and liquidation, and through the way of STP to transmit the user's orders to the international banking market, allowing users to order in the shortest possible time and optimal price.", "zh": "" + companyConfig.companyNameZh + "与多家知名机构合作，包括美国银行，花旗，摩根大通，巴克莱，麦格理银行等，从多家国际银行获得外汇报价和清算，并且通过STP的方式将用户的订单传输到国际间银行市场，从而让用户订单在最短的时间内以最优的价格成交。" },
         //"home35": {"en": "By cooperation with many famous institutions, " + companyConfig.companyNameEn + " makes use of the foreign exchange quotation and settlement from many international banks and transmits user's order to the international banking market through STP, thus contributing to conclusion of a deal with the optimal price for user's order in the shortest time.", "zh": "" + companyConfig.companyNameZh + "与多家知名机构合作，从多家国际银行等获得外汇报价和清算，并且通过STP的方式将用户的订单传输到国际间银行市场，从而让用户订单在最短的时间内与最优的价格成交。"},
         "home36": { "en": "Why to choose " + companyConfig.companyNameEn + "", "zh": "为什么选择" + companyConfig.companyNameZh + "" },
         "home37": { "en": "" + companyConfig.companyNameEn + " will render a very distinctive trading experience for users after an account is opened", "zh": "开立" + companyConfig.companyNameZh + "账户，享受与众不同的交易体验" },
@@ -320,6 +331,7 @@ module.exports = function () {
         "home56": { "en": "Fixed copy trading", "zh": "定期跟单" },
         "home57": { "en": "upto 60% yearly return", "zh": "年化收益可达" },
         "home58": { "en": "Monthly product is avaliable now!", "zh": "月盈产品火爆进行中" },
+        "home61": { "en": "CFD", "zh": "差价合约" },
 
         // 产品介绍－外汇交易 forex
         //"forex1": {"en": "Foreign exchange transaction involves buying and/or selling a kind of foreign currency. In terms of the largest single product market in the world, trades valuing over USD 5 trillion are achieved on the current foreign exchange market. The foreign exchange and price is mainly influenced by international trade, economy and policies of countries and investment flow direction and the foreign exchange market is featured as transparent information, tremendous turnover and great fairness and transparency.", "zh": "外汇交易涉及买入一个外国货币和/或卖出另一个外国货币。全球最大的单一产品市场，当今外汇市场每天拥有超过5万亿美元的成交额，外汇市场和价格主要受国际间的交易，各国经济和政策以及投资流向的影响，外汇市场信息透明，流通量巨大，公平透明。"},
@@ -916,6 +928,27 @@ module.exports = function () {
         "mAgreementThree46": {"zh": "1. 交易系统断线时，客户请致电客服电话，" + companyConfig.companyNameZh + "仅代为平仓或取消挂单，无法代为建立新仓或挂止损/停利单。", "en": "1.While system disconnected, client needs to contact the support center. " + companyConfig.companyNameEn + " only close the position or cancel the order on client's behalf, and will not open a new position or place the loss/take profit order for client."},
         "mAgreementThree47": {"zh": "2. " + companyConfig.companyNameZh + "客服代客户平仓时，因电话延迟和网络延迟，造成电话报价与最终成交价格并不完全一致，客户知晓并同意" + companyConfig.companyNameZh + "的代为处理，此间价差由客户承担。" + companyConfig.companyNameZh + "只是作为代客执行交易的代理，并不是作为交易员给予客户报价。所以，当您在依规定的时间内提出紧急处理申请后，" + companyConfig.companyNameZh + "依据断线或报价异常期间之正确市场价格予以平仓处理。请注意: " + companyConfig.companyNameZh + "不接受指定价格平仓。", "en": "2.When " + companyConfig.companyNameEn + " support center closes the position on client’s behalf, the quotations in the phone call may not exactly aligned with final trading quotations due to the delay of phone call or the internet. Clients should be aware and agree the settlement of " + companyConfig.companyNameEn + " and take the responsibilities of the spreads mentioned above. " + companyConfig.companyNameEn + " is only an authorized agent to execute for client, and does not quote to client as a trader. Therefore, if you apply for the abnormal condition settlement during the effective time, " + companyConfig.companyNameEn + " will close the position by the accurate price according to the price while system disconnection or abnormality occurs. Attention: " + companyConfig.companyNameEn + " does not accept any assigned price to close the position."},
         "mAgreementThree48": {"zh": "3. 当您发出紧急处理申请之后切勿再对已申请的单子做任何平仓动作，若有此情形，" + companyConfig.companyNameZh + "仍将以依据断线或报价异常期间之正确市场价格予以平仓处理。", "en": "3.After you apply for the abnormal condition settlement, please do not close any position that you applied for. If you still act in this way, " + companyConfig.companyNameEn + " support center will still close the position by the accurate price according to the price while system disconnection or abnormality occurs."},
+        
+        // H5  基本资料
+        "mWapInfo1": {"zh": "更换", "en": "Change"},
+        "mWapInfo2": {"zh": "昵称", "en": "Username"},
+        "mWapInfo3": {"zh": "所在地", "en": "Location"},
+        "mWapUsername1": {"zh": "请输入昵称", "en": "Please enter your Username"},
+        "mWapUsername2": {"zh": "昵称包含4-16个字符，由汉字、字母、数字组成", "en": "Incorrect username"},
+        "mWapUsername3": {"zh": "昵称已存在", "en": "The username already exists"},
+        "mWapUsername4": {"zh": "昵称包含敏感词汇，请修改", "en": "The username contains sensitive words"},
+        "mWapUsername5": {"zh": "提交", "en": "Submit"},
+        "mWapUsername6": {"zh": "提交中", "en": "Submit..."},
+        "mWapUsername7": {"zh": "昵称修改成功", "en": "Username changed successfully"},
+        "mWapUsername8": {"zh": "确定", "en": "Ok"},
+        "mWapLocation1": {"zh": "请选择省/市", "en": "Please select province/city"},
+        "mWapLocation2": {"zh": "请选择市/区", "en": "Please select city/district"},
+        "mWapLocation3": {"zh": "所在地修改成功", "en": "Modify the location successfully"},
+        "mWapLocation4": {"zh": "提交失败", "en": "Submit failed"},
+        "mWapForget1": {"zh": "新密码设置成功", "en": "New password set successfully"},
+        "mWapForget2": {"zh": "注意：您的 MT4 登陆密码同时被修改为新密码", "en": "Note: your MT4 login password has been modified to the new password"},
+        "mWapForget3": {"zh": "新密码", "en": "New Password"},
+        "mWapForget4": {"zh": "确认新密码", "en": "Confirm New Password"},
     };
 
     return data;
