@@ -581,6 +581,20 @@ module.exports = function (app) {
         }
     });
 
+    // 红包话
+    app.route('/bd/t35').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit') {
+            if (isMobile(req)) {
+                res.render('bd_m_redbag', extendPublic({}, req));
+            } else {
+                res.render('404', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
     // list -> info, password, binding
     app.route('/m/wap/:subpage(info|password|binding)').get(function (req, res) {

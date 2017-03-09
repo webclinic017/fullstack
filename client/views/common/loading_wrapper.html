@@ -1,0 +1,29 @@
+<div class="load_wrapper" id="load_wrapper">
+    <div class="load_wrapper__box">
+        <div class="load_wrapper__box-bar" id="loading_bar"></div>
+    </div>
+    <div class="load_wrapper__text" id="loading_text">0%</div>
+</div>
+
+<script>
+    function twH5Loader(imgboxId, imgNum, callback) {
+        console.log('twH5Loader is running...')
+        var container = document.getElementById(imgboxId);
+        var imgLoad = imagesLoaded(container, { background: true });
+        var count = 0;
+        var loading_bar = document.getElementById('loading_bar');
+        var loading_text = document.getElementById('loading_text');
+        var load_wrapper = document.getElementById('load_wrapper');
+        imgLoad.on('progress', function (imgLoad, image) {
+            count++;
+            var ratio = parseInt(count / imgNum * 100) + '%';
+            loading_bar.style.width = ratio;
+            console.log('加载中...' + ratio);
+            $('#loading_text').html('加载中...' + ratio);
+            if (ratio == '100%') {
+                callback && callback();
+                $(load_wrapper).delay(150).fadeOut(450);
+            }
+        });
+    }
+</script>
