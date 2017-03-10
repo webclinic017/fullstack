@@ -16,7 +16,7 @@
         <!-- <div tw-loading-img></div> -->
         <div class="clearfix">
             <div class="redbag_single_wrapper" ng-repeat="bag in bags" ng-class="{noPadding: $index%3 === 2}">
-                <div class="redbag_single" ng-class="{light: (bag.bonus_status == 1 || bag.bonus_status == 2), dark: (bag.bonus_status == 3 || bag.bonus_status == 4)}">
+                <div class="redbag_single" ng-class="{light: (bag.bonus_status == 1 || bag.bonus_status == 2), dark: (bag.bonus_status == 3 || bag.bonus_status == 4 || bag.bonus_status == 5)}">
                     <div class="redbag_single__circle"></div>
                     <div class="redbag_single__top">
                         <p class="redbag_single__top-num">
@@ -47,16 +47,11 @@
                                 {{ bag.status_name }}
                             </span>
                         </div>
-                        <div class="redbag_single__bottom-mark" ng-if="bag.bonus_status == 3">
+                        <div class="redbag_single__bottom-mark" ng-if="bag.bonus_status == 3 || bag.bonus_status == 4 || bag.bonus_status == 5">
                             <span class="mark">
                                 {{ bag.status_name }}
                             </span>
                         </div>
-                        <div class="redbag_single__bottom-mark" ng-if="bag.bonus_status == 4">
-                            <span class="mark">
-                                {{ bag.status_name }}
-                            </span>
-                        </div> 
                     </div>
                 </div>
             </div>
