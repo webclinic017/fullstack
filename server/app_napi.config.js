@@ -57,7 +57,8 @@
     function getPushBannerInfo () {
         var data = {
             image: URL_PATH + "/activity/banner/redbag_app_index.png",
-            url: URL_PATH + "/"
+            url: URL_PATH + "/",
+            title: "活动详情"
         };
         return data;
     }
