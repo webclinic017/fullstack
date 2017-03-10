@@ -54,10 +54,18 @@
         return data;
     }
 
+    function getPushBannerInfo () {
+        var data = {
+            image: URL_PATH + "/activity/banner/redbag_app_index.png",
+            url: URL_PATH + "/"
+        };
+        return data;
+    }
 
     module.exports = {
         getBannerInfoAndroid: getBannerInfoAndroid,
-        getBannerInfoIos: getBannerInfoIos
+        getBannerInfoIos: getBannerInfoIos,
+        getPushBannerInfo: getPushBannerInfo
     };
 
     /*
