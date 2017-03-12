@@ -591,6 +591,20 @@ module.exports = function (app) {
         }
     });
 
+    // 红包活动
+    app.route('/bd/t35').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit') {
+            if (isMobile(req)) {
+                res.render('bd_m_redbag', extendPublic({}, req));
+            } else {
+                res.render('bd_redbag', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
     /*
         设置     ->     info, password, binding, 
