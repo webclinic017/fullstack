@@ -784,6 +784,9 @@ module.exports = function (app) {
                 data = napiConfigInfo.getBannerInfoIos();
             }
         }
+        if (action == "get_push_banner_info") {
+            data = napiConfigInfo.getPushBannerInfo();
+        }
         // 媒体报道
         if (action == "get_report_site") {
             data = report_sites;
