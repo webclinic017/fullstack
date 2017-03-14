@@ -72,7 +72,19 @@
         height: 818px !important;
         background-position: center center;
         background-size: cover;
-        @include img-normal($image-path-home + "index3-banner1.jpg");
+        @include img-normal($image-path-home + "index-banner-redbag.png");
+
+        .pic {
+            padding-top: 100px;
+
+            img {
+                width: 900px;
+            }
+        }
+        .date {
+            font-size: 24px;
+            padding-top: 20px;
+        }
 
     }
     .index2-slide2 {
