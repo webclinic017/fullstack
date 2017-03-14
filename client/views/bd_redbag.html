@@ -19,14 +19,36 @@
         <div class="bd_redbag_layout">
             <div class="fullpage" id="dowebok">
                 <div class="section section1">
-                    <div class="cont">
-                        <img src="/images/bd_redbag/rb_1-1.png" alt="" class="title">
-                        <img src="/images/bd_redbag/rb_1-2.png" alt="" class="tip">
-                        <p class="range">2017年3月15日－4月3日</p>
+                    <div class="static">
+                        <div class="cont">
+                            <img src="/images/bd_redbag/rb_1-1.png" alt="" class="title">
+                            <img src="/images/bd_redbag/rb_1-2.png" alt="" class="tip">
+                            <p class="range">2017年3月15日－4月3日</p>
+                        </div>
+                        <a href="/space/#/space/redbag/own" class="section_btn">
+                            <span>注册领红包</span>
+                            <img src="/images/bd_redbag/bag-1.png" class="bag">
+                        </a>
                     </div>
-                    <div class="section_btn">
-                        注册领红包
-                        <img src="/images/bd_redbag/bag-1.png" class="bag">
+                    <div class="remark animated bounceIn">
+                        <p>
+                            1. 新用户注册后即获得$200体验金。体验金仅限模拟交易操作，不可支取。完成首次入金后，所有体验金交易订单平仓，体验金清零。体验金交易红包（“露一手”）的盈利计算，以体验金交易订单平仓后数据为准；
+                        </p>
+                        <p>
+                            2. 用户需在红包指定兑现期限内完成对应条件并手动完成兑现，过期不能兑现；
+                        </p>
+                        <p>
+                            3. 活动所列红包每个用户仅可领取一次，兑现金额将在执行兑现操作后入账且可支取；
+                        </p>
+                        <p>
+                            4. 本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，CFD类产品交易手数不计入统计范围；
+                        </p>
+                        <p>
+                            5. 本活动仅限活动开始后新注册用户。用户提取资金前，需完成完整个人信息的提交并通过审核；
+                        </p>
+                        <p>
+                            6. <%= lang.text("companyZhName")%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打 <%= lang.text("telephone")%>；
+                        </p>
                     </div>
                 </div>
                 <div class="section section2">
@@ -112,10 +134,10 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="section_btn">
-                        注册领红包
+                    <a href="/space/#/space/redbag/own" class="section_btn">
+                        <span>注册领红包</span>
                         <img src="/images/bd_redbag/bag-1.png" class="bag">
-                    </div>
+                    </a>
                 </div>
                 <div class="section section3">
                     <div class="cont">
@@ -132,10 +154,10 @@
                             </p>
                         </div>
                     </div>
-                    <div class="section_btn">
-                        注册领红包
+                    <a href="/space/#/space/redbag/own" class="section_btn">
+                        <span>注册领红包</span>
                         <img src="/images/bd_redbag/bag-1.png" class="bag">
-                    </div>
+                    </a>
                 </div>
                 <div class="section section4">
                     <div class="cont">
@@ -182,10 +204,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section_btn">
-                        注册领红包
+                    <a href="/space/#/space/redbag/own" class="section_btn">
+                        <span>注册领红包</span>
                         <img src="/images/bd_redbag/bag-1.png" class="bag">
-                    </div>
+                    </a>
                 </div>
                 <div class="section section5">
                     <div class="box clearfix">
@@ -207,24 +229,24 @@
                                 </div>
                                 <div class="pic">
                                     <img src="/images/bd_redbag/rb_5-2.png">
-                                    <p>下载老虎外汇 APP</p>
+                                    <p>下载<%= lang.text("companyZhName")%> APP</p>
                                 </div>
                             </div>
                             <div class="desc">
-                                风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。 老虎外汇交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+                                风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。 <%= lang.text("companyZhName")%>交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
                             </div>
                         </div>
                         <div class="rt">
                             <div class="form-control-wrapper">
-                                <input type="tel" name="phone" class="form-control" placeholder="电话">
+                                <input type="text" name="username" id="username" class="form-control" placeholder="昵称">
                             </div>
                             <div class="form-control-wrapper">
-                                <input type="text" name="code" class="form-control" placeholder="验证码">
+                                <input type="tel" name="telephone" id="telephone" class="form-control" placeholder="电话">
                             </div>
                             <div class="form-control-wrapper">
-                                <input type="password" name="password" class="form-control" placeholder="密码">
+                                <input type="text" name="email" id="email" class="form-control" placeholder="邮箱">
                             </div>
-                            <span class="section5_btn">
+                            <span class="section5_btn" id="regist_btn">
                                 注册领红包
                                 <img src="/images/bd_redbag/bag-2.png" class="bag">
                             </span>
