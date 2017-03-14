@@ -598,7 +598,7 @@ module.exports = function (app) {
             if (isMobile(req)) {
                 res.render('bd_m_redbag', extendPublic({}, req));
             } else {
-                res.render('404', extendPublic({}, req));
+                res.render('bd_redbag', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));

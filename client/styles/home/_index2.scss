@@ -74,6 +74,18 @@
         background-size: cover;
         @include img-normal($image-path-home + "index3-banner1.jpg");
 
+        .pic {
+            padding-top: 100px;
+
+            img {
+                width: 900px;
+            }
+        }
+        .date {
+            font-size: 24px;
+            padding-top: 20px;
+        }
+
     }
     .index2-slide2 {
         overflow: hidden;
