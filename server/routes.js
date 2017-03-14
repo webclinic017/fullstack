@@ -581,7 +581,7 @@ module.exports = function (app) {
         }
     });
 
-    // 红包话
+    // 红包活动
     app.route('/bd/t35').get(function (req, res) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit') {

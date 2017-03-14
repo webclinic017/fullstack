@@ -68,6 +68,26 @@
     }
 
     /**
+     * 兼容安卓页面下拉刷新问题
+     * */
+    function offsetAction(index) {
+        /*debug*/
+        if (!isIOS() && isInTiger()) {
+            callNative({
+                type: 'offset',
+                offset: index - 1
+            })
+        }
+    }
+
+    /*
+        获取高度
+    */
+    function getClientHeight() {
+        return (document.body.clientHeight || document.documentElement.clientHeight);
+    }
+
+    /**
      * [isMobile 判断平台]
      * @param test: 0:iPhone    1:Android
      */
@@ -91,4 +111,5 @@
         }
     }
     ;
+
 </script>
