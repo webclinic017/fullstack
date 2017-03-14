@@ -88,7 +88,7 @@
 
             /*今日头条*/
             if (window.location.pathname.indexOf('t33_b') != -1) {
-                _taq.push({convert_id:"55824901749", event_type:"view"})
+                _taq.push({ convert_id: "55824901749", event_type: "view" })
             }
 
             /*loading层*/
@@ -163,7 +163,7 @@
         function checkPassword() {
             var password = $("#password");
             var rPassword = password.val() ? password.val() : "";
-            
+
             if (
                 (password.val() == "") ||
                 (!/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/.test(password.val()))
@@ -235,7 +235,7 @@
                 $(".h5_nav").css("display", "none");
                 $(".h5_float_footer").css("display", "none");
             }
-        } ());
+        }());
 
         /*h5 - footer关闭按钮*/
         ;
@@ -243,7 +243,7 @@
             $(".close").on('touchend', function () {
                 $(".h5_float_footer").fadeOut(500);
             });
-        } ());
+        }());
 
         /*密码可视按钮*/
         ;
@@ -263,7 +263,7 @@
                     $("#password").attr("type", "password")
                 }
             }
-        } ());
+        }());
 
         /*获取url中携带信息并进行相关操作*/
         ;
@@ -311,7 +311,7 @@
             }
 
             console.log(oReg);
-        } ());
+        }());
 
         /*发送验证码*/
         ;
@@ -345,7 +345,7 @@
                     })
                 }
             });
-        } ());
+        }());
 
         /*提交按钮*/
         ;
@@ -362,7 +362,7 @@
 
                 /*今日头条统计表单提交*/
                 if (window.location.pathname.indexOf('t33_a') != -1) {
-                    _taq.push({convert_id:"55824929459", event_type:"form"})
+                    _taq.push({ convert_id: "55824929459", event_type: "form" })
                 }
 
                 $.ajax({
@@ -382,7 +382,11 @@
                         data = JSON.parse(data);
                         if (data.is_succ) {
                             /*跳转到注册成功页面*/
-                            window.location.href = window.location.origin + "/m/h5_register/succ";
+                            if (window.location.pathname.indexOf('t35') >= 0) {
+                                window.location.href = window.location.origin + "/m/h5_register/succ?origin=redbag";
+                            } else {
+                                window.location.href = window.location.origin + "/m/h5_register/succ";
+                            }
                         } else {
                             layer.closeAll();
                             layer.open({
@@ -395,7 +399,7 @@
                     }
                 });
             });
-        } ());
+        }());
 
         /*注册成功页面*/
         if (isRegSucceed()) {
@@ -430,6 +434,14 @@
             /*调用预定义方法*/
             /*regist_page3.getMt4();*/
             regist_page3.submit();
+            // 判断是否在红包页面，更改文字样式
+            if (window.location.href.indexOf('redbag') >= 0) {
+                $('.h5_register_main').find('.forNormalPage').css('display', 'none');
+                $('.h5_register_main').find('.forRedbag').css('display', 'block');
+            } else {
+                $('.h5_register_main').find('.forNormalPage').css('display', 'block');
+                $('.h5_register_main').find('.forRedbag').css('display', 'none');
+            }
         }
 
         /*客户协议页面*/
@@ -457,4 +469,4 @@
             });
         }
     });
-} ());
+}());

@@ -45,11 +45,11 @@
     $tipBtn.on('click', function (event) {
         event.stopPropagation();
         $static.addClass('animated fadeOut');
-        $remark.css({display: 'block'});
+        $remark.css({ display: 'block' });
     });
 
     $('.section1').on('click', function () {
-        $remark.css({display: 'none'});
+        $remark.css({ display: 'none' });
         $static.removeClass('animated fadeOut');
     });
 
@@ -60,7 +60,29 @@
         }
     });
 
-    function activePage () {
+    $('.hover_scaled').hover(function (e) {
+        $(e.currentTarget).addClass('animated jello');
+    }, function (e) {
+        $(e.currentTarget).removeClass('animated jello');
+    });
+
+    // $('.hover_scaled').bind('hover', function (e) {
+    //     e.stopPropagation();
+    //     e.preventDefault();
+
+    //     if ($(e.currentTarget).hasClass('hover_scaled')) {
+    //         $(e.currentTarget).addClass('animated flipInX');
+    //     }
+    //     return false;
+    // }, function (e) {
+    //     e.stopPropagation();
+    //     e.preventDefault();
+
+    //     return false;
+    // })
+    // $('.hover_scaled').bind('mouseout')
+
+    function activePage() {
         $static.find(".title").addClass("animated bounceIn");
     }
 }());
