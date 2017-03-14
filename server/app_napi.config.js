@@ -8,13 +8,13 @@
     function getBannerInfoAndroid () {
         var data = [
             {
-                image: URL_PATH + "/activity/banner/banner1_redbag_20170314.png",
-                url: URL_PATH + "/bd/t35",
+                image: URL_PATH + "/activity/banner/banner1_20170101.jpg",
+                url: URL_PATH + "/bd/t33",
                 title: "活动详情"
             },
             {
-                image: URL_PATH + "/activity/banner/banner2_20160930.png",
-                url: URL_PATH + "/bd/t33",
+                image: URL_PATH + "/activity/banner/banner2_20170314.png",
+                url: URL_PATH + "/bd/t34",
                 title: "活动详情"
             },
             {
@@ -32,13 +32,13 @@
     function getBannerInfoIos () {
         var data = [
           {
-            image: URL_PATH + "/activity/banner/banner1_redbag_20170314.png",
-            url: URL_PATH + "/bd/t35",
+            image: URL_PATH + "/activity/banner/banner1_20170101.jpg",
+            url: URL_PATH + "/bd/t33",
             title: "活动详情"
           },
           {
-            image: URL_PATH + "/activity/banner/banner2_20160930.png",
-            url: URL_PATH + "/bd/t33",
+            image: URL_PATH + "/activity/banner/banner2_20170314.png",
+            url: URL_PATH + "/bd/t34",
             title: "活动详情"
           },
           {
