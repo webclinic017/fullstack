@@ -12,7 +12,7 @@
                         title: '老虎外汇多重礼，700美金砸向你！',
                         subTitle: '老虎外汇多重礼，700美金砸向你！',
                         shareLink: window.location.href,
-                        desc: '注册老虎外汇，入金送700美金大礼包，先到先得，马上行动！',
+                        desc: '注册老虎外汇，即享700美金大礼，你还在犹豫什么，马上行动起来！',
                         img: window.location.origin + '/activity/logo.png',
                         trackPage: window.location.pathname.replace(/\//gi, ''),
                         debug: false
