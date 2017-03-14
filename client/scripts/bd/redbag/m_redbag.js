@@ -12,7 +12,7 @@
                         title: '老虎外汇多重礼，700美金砸向你！',
                         subTitle: '老虎外汇多重礼，700美金砸向你！',
                         shareLink: window.location.href,
-                        desc: '注册老虎外汇，即送700美金大礼包，先到先得，马上行动！',
+                        desc: '注册老虎外汇，入金送700美金大礼包，先到先得，马上行动！',
                         img: window.location.origin + '/activity/logo.png',
                         trackPage: window.location.pathname.replace(/\//gi, ''),
                         debug: false
@@ -123,7 +123,6 @@
                                 $.fn.fullpage.setAllowScrolling(true)
                             }
                             if (action == "matters") {
-                                console.log(1111);
                                 openLay()
                             }
                             if (action == 'registerNow') {
@@ -132,7 +131,7 @@
                         });
 
                         $(".lake_layout").fadeIn(0);
-                        // 兼容安卓键盘弹出
+                        // 阻止安卓键盘弹出
                         window.removeEventListener('resize');
                     },
                     afterLoad: function (anchorLink, index) {
