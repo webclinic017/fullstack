@@ -1,0 +1,453 @@
+.layer_content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: left;
+    background: url('/images/bd/redbag_matters_bg.png') no-repeat;
+    background-size: 100% 100%;
+    max-width: 1334px;
+    .rules {
+        width: 90%;
+        height: 100%;
+        padding: 4% 5%;
+        line-height: 1.5rem;
+        font-size: 0.8rem;
+        a {
+            color: #222;
+        }
+    }
+}
+
+@include b(m_redbag_layout) {
+    text-align: center;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    /* Firefox 4 */
+    -webkit-transition: all 1s ease;
+    /* Safari and Chrome */
+    -o-transition: all 1s ease;
+    /* Opera */
+    font-family: sans-serif, 'Microsoft Yahei', 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    .redbag_logo {
+        position: absolute;
+        top: 3%;
+        right: 6%;
+        width: 30%;
+    }
+    #dowebok {
+        .registerNow {
+            position: absolute;
+            right: 0.5rem;
+            top: 45%;
+            width: 33.5%;
+        }
+        .connect_us {
+            margin-top: 14%;
+            display: inline-block;
+            color: #222;
+            font-size: 0.8rem;
+        }
+        .slide_arrow {
+            position: absolute;
+            bottom: 4%;
+            left: 52%;
+            margin: -14px 0 0 -25px;
+            width: 36px;
+            height: 38px;
+            background: url("/images/bd/change.png") no-repeat;
+            -webkit-animation: start 1.5s infinite ease-in-out;
+            -moz-animation: start 1.5s infinite ease-in-out;
+            animation: start 1.5s infinite ease-in-out;
+        }
+        @keyframes start {
+            0%,
+            30% {
+                opacity: 0;
+                transform: translate(0, 10px);
+            }
+            60% {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(0, -8px);
+            }
+        }
+        .line_title {
+            text-align: center;
+            h2 {
+                width: 100%;
+                font-weight: 200;
+                font-size: 0.8rem;
+                position: relative;
+                margin: 0;
+                color: #fff;
+                transition: color 1s 1s linear;
+                -webkit-transition: color 1s 1s linear;
+                &.active {
+                    color: #222;
+                }
+                .line {
+                    position: absolute;
+                    width: 0;
+                    height: 1px;
+                    border-top: 1px solid #777;
+                    top: 50%;
+                    transition: width 1s linear;
+                    -webkit-transition: width 1s linear;
+                }
+                .lineLeft {
+                    left: 14%
+                }
+                .lineRight {
+                    right: 14%
+                }
+                .line.active {
+                    width: 25%;
+                }
+            }
+            p {
+                i {
+                    font-weight: 100;
+                }
+                font-weight: 300;
+                padding: 0%;
+                font-size: 1.6rem;
+                color: #fff;
+                transition: color 1s 1s linear;
+                -webkit-transition: color 1s 1s linear;
+                &.active {
+                    color: #222;
+                }
+            }
+        }
+        .common_ways {
+            background: #13181f;
+            transition: all 0.8s ease;
+            -webkit-transition: all 0.8s ease;
+            /* Safari and Chrome */
+            width: 100%;
+            height: 19%;
+            font-size: 0.6rem;
+            text-align: left;
+            margin-top: 2%;
+            .left_part {
+                padding: 1% 5%;
+                width: 77.8%;
+                height: 100%;
+                float: left;
+                h5 {
+                    margin: 0;
+                    font-size: px2rem(28);
+                    margin-top: 0.5%;
+                }
+                .description {
+                    font-size: 0.5rem;
+                }
+            }
+            .right_part {
+                text-align: center;
+                padding: 2%;
+                width: 22.2%;
+                height: 100%;
+                float: left;
+                border-left: 1px solid #fff;
+                .amount {
+                    font-size: px2rem(50);
+                    i {
+                        font-size: 0.5rem;
+                        display: inline-block;
+                        margin-right: 0.15rem;
+                        vertical-align: middle;
+                    }
+                }
+                .getCondition {
+                    font-size: 0.5rem;
+                }
+            }
+        }
+        .section {
+            position: relative;
+            max-width: 1334px;
+        }
+        .section1 {
+            background: url("/images/bd/redbag_sec1_bg.png") no-repeat;
+            background-position: center top;
+            background-size: auto 100%;
+            position: relative;
+            .layer_contentBox {
+                display: none;
+            }
+            .matters_btn {
+                display: none;
+                position: absolute;
+                top: 57%;
+                left: 7.8rem;
+                width: 11%;
+            }
+        }
+        .section2 {
+            background: url("/images/bd/redbag_sec2-4_bg.png") no-repeat;
+            background-position: center center;
+            background-size: auto 100%;
+            overflow: hidden;
+            .four_ways {
+                display: none;
+                background: url("/images/bd/redbag_sec2_four_bg.png") no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                width: 86%;
+                height: 65%;
+                margin: 0 auto;
+                margin-top: 16.5%;
+                color: #fff;
+                padding: 5%;
+                .common_ways {
+                    display: none;
+                }
+            }
+            .registerNow {
+                width: 40%;
+                top: 76%;
+                right: 6.5rem;
+            }
+        }
+        .section3 {
+            background-color: #121212;
+            background: url("/images/bd/redbag_sec2-4_bg.png") no-repeat;
+            background-position: center center;
+            background-size: auto 100%;
+            .registerNow {
+                width: 40%;
+                top: 62%;
+                right: 6.5rem;
+            }
+            .connect_us {
+                margin-top: 20%;
+            }
+            @include b(sec3_ways) {
+                display: none;
+                background: url("/images/bd/redbag_sec3_ways_bg.png") no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                width: 86%;
+                margin: 0 auto;
+                height: 42.7%;
+                margin-top: 26%;
+                padding: 5%;
+                @include e(title) {
+                    @include m(dollar) {
+                        font-size: px2rem(90);
+                        font-weight: 100;
+                        i {
+                            font-weight: 100;
+                            font-size: 2.5rem;
+                        }
+                    }
+                    @include m(des) {
+                        font-size: px2rem(30);
+                        font-weight: 200;
+                    }
+                }
+                @include e(box) {
+                    background: #13181f;
+                    transition: all 0.8s ease;
+                    -webkit-transition: all 0.8s ease;
+                    /* Safari and Chrome */
+                    margin-top: 7%;
+                    width: 100%;
+                    height: 45%;
+                    font-size: 0.6rem;
+                    color: #fff;
+                    padding: 5% 8%;
+                    text-align: center;
+                    @include m(title) {
+                        font-size: px2rem(30);
+                    }
+                    @include m(con) {
+                        font-size: 0.525rem;
+                        line-height: 0.85rem;
+                        margin-top: 2%;
+                    }
+                }
+            }
+        }
+        .section4 {
+            background: url("/images/bd/redbag_sec2-4_bg.png") no-repeat;
+            background-position: center center;
+            background-size: auto 100%;
+            .registerNow {
+                width: 40%;
+                top: 66%;
+                right: 6.5rem;
+            }
+            .connect_us {
+                margin-top: 20%;
+            }
+            .two_ways {
+                background: url("/images/bd/redbag_sec4_ways_bg.png") no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                width: 86%;
+                height: 48%;
+                margin: 0 auto;
+                margin-top: 26%;
+                color: #fff;
+                padding: 5%;
+                position: relative;
+                .line_title>h2 .line.active {
+                    width: 20%;
+                }
+                .spec-style {
+                    margin-top: 5%;
+                    height: 33%;
+                    .left_part {
+                        width: 72%;
+                        margin-top: 1%;
+                        .description {
+                            margin-top: 4%;
+                        }
+                    }
+                    .right_part {
+                        width: 28%;
+                        .pd-6 {
+                            padding-top: 6%;
+                        }
+                    }
+                }
+            }
+        }
+        .section5 {
+            background: url("/images/bd/redbag_sec5_bg.png") no-repeat;
+            background-position: center center;
+            background-size: auto 100%;
+            .registerBtn {
+                width: 80%;
+                margin-top: 3%;
+            }
+            .redbag_regBox {
+                background: url("/images/bd/redbag_sec5_regbox.png") no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                width: 60%;
+                padding: 0 4%;
+                height: 28%;
+                opacity: 0.99;
+                margin: 0 auto;
+                margin-top: 60.5%;
+                transition: margin-top 0.1s linear;
+                -webkit-transition: margin-top 0.1s linear;
+                .submit_form {
+                    width: px2rem(336);
+                    margin: 0 auto;
+                    margin-top: 5%;
+                    display: block;
+                    text-align: center;
+                    background-color: #e7e7e8;
+                    color: #d1d1d3;
+                    padding: 4%;
+                    border-radius: 1.5rem;
+                    font-size: px2rem(28);
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+                form {
+                    height: 100%;
+                    padding-top: px2rem(15);
+                    padding-bottom: px2rem(15);
+                    font-size: px2rem(30);
+                    div {
+                        width: 100%;
+                        height: 25%;
+                        line-height: 2.5rem;
+                        display: flex;
+                        border-radius: px2rem(8);
+                        overflow: hidden;
+                        margin-top: px2rem(15);
+                        padding-right: px2rem(36);
+                        background: #e7e7e8;
+                        input {
+                            height: 100%;
+                            width: 100%;
+                            background: #e7e7e8;
+                            padding-left: px2rem(36);
+                            font-size: px2rem(30);
+                            flex: 1;
+                        }
+                        input::-webkit-input-placeholder,
+                        textarea::-webkit-input-placeholder {
+                            color: #d1d1d3;
+                        }
+                        input:-moz-placeholder,
+                        textarea:-moz-placeholder {
+                            color: #d1d1d3;
+                        }
+                        input::-moz-placeholder,
+                        textarea::-moz-placeholder {
+                            color: #d1d1d3;
+                        }
+                        input:-ms-input-placeholder,
+                        textarea:-ms-input-placeholder {
+                            color: #d1d1d3;
+                        }
+                    }
+                    .telephone {
+                        img {
+                            width: 0.9rem;
+                            height: 60%;
+                            margin-left: px2rem(-10);
+                            margin-top: 4%;
+                        }
+                    }
+                    .verify_code {
+                        padding-right: px2rem(16);
+                        .verify_code_btn {
+                            line-height: 1.6rem;
+                            text-align: center;
+                            display: inline-block;
+                            padding: 0 7%;
+                            height: 68.42%;
+                            color: #fff;
+                            position: relative;
+                            font-size: px2rem(28);
+                            top: 15.79%;
+                            background-color: #13181f;
+                            border-radius: px2rem(8);
+                            vertical-align: middle;
+                        }
+                    }
+                    .password {
+                        border: none;
+                        .password_btn {
+                            display: inline-block;
+                            width: 1.2rem;
+                            text-align: center;
+                            img {
+                                width: px2rem(34);
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+            .m_t33_risk {
+                color: #fff;
+                font-size: px2rem(18);
+                width: 80%;
+                margin: 0 auto;
+                text-align: left;
+                line-height: px2rem(32);
+                padding-bottom: 0.5rem;
+                padding-top: 0.5rem;
+                position: absolute;
+                left: 10%;
+                bottom: 0%;
+            }
+        }
+    }
+}

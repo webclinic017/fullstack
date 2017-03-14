@@ -1,4 +1,15 @@
 var report_sites = [
+    /*添加时间 2017-3-14*/
+    {
+        address: 'http://mt.sohu.com/business/d20170301/127599736_420292.shtml?loc=5',
+        description: '【搜狐财经】老虎外汇：杨幂三生三世获益匪浅明星投资潮受关注',
+        date: '2017-03-01'
+    },
+    {
+        address: 'http://district.ce.cn/newarea/hyzx/201703/08/t20170308_20840722.shtml',
+        description: '【中国经济网】老虎外汇：国内外汇投资热潮将来临？四点原因分析 ',
+        date: '2017-03-08'
+    },
     /*添加时间 2017-3-06*/
     {
         address: 'http://mt.sohu.com/business/d20170223/127010601_581657.shtml',
