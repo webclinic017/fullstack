@@ -376,7 +376,7 @@ module.exports = function () {
         "forex34": { "en": "24h quotation on trading day", "zh": "交易日24小时报价" },
         "forex35": { "en": "Trading period:", "zh": "交易时段" },
         "forex36": { "en": "" + companyConfig.companyNameEn + " also provides the trading products of cross currency pairs of the above major currency pairs.", "zh": "" + companyConfig.companyNameZh + "同时提供以上主流货币对的交叉货币对交易产品" },
-
+        "forex37": { "en": "(next day)", "zh": "(次日)" },
 
         // 产品介绍－原油交易 oil
         //"oil1": {"en": "Acting a strategic role for industry and cornerstone of modern civilization, crude oil is one of the largest commodities in global trade and also one of the most important trading subjects in global financial assets. ", "zh": "工业的血液，现代文明的基石，也是全球贸易中最大宗的商品之一，全球金融资产中最重要的交易标的物之一。"},
@@ -409,8 +409,8 @@ module.exports = function () {
         "oil27": { "en": "Minimum contract unit (standard lot)", "zh": "最小合约单位(标准手)" },
         "oil28": { "en": "Maximum trading volume (lot)", "zh": "最大交易量(手)" },
         "oil29": { "en": "Commission charge ($)", "zh": "手续费($)" },
-        "oil30": { "en": "Trading time (MT4 platform time)", "zh": "交易时间(MT4平台时间)" },
-        "oil31": { "en": "Quotation time (platform time)", "zh": "报价时间(平台时间)" },
+        "oil30": { "en": "Trading time (Beijing time)", "zh": "交易时间(北京时间)" },
+        "oil31": { "en": "Quotation time (Beijing time)", "zh": "报价时间(北京时间)" },
         "oil32": { "en": "Product introduction", "zh": "产品简介" },
         "oil33": { "en": "MBTU", "zh": "百万英国热量单位" },
         "oil34": { "en": "barrels", "zh": "桶" },
@@ -426,6 +426,7 @@ module.exports = function () {
         "oil43": { "en": "on Monday", "zh": "周一" },
         "oil44": { "en": "on Friday", "zh": "周五" },
         "oil45": { "en": "per day", "zh": "每日" },
+        "oil46": { "en": "on Thursday", "zh": "周四" },
 
         // 产品介绍－贵金属交易 metal
         //"metal1": {"en": "As the most ancient, most traditional and most widely recognized currency symbol, precious metals fall into the category of traditional safe-haven assets, which occupy an important position in industrial manufacture and have both the property and commodity property of safe-haven currencies. ", "zh": "作为人类文明最古老的最传统最被广泛认可的货币符号，属于传统的避险资产，同时随着科技的进步，也在工业生产中占据了重要的地位，同时具有避险货币的属性与商品属性 。"},
@@ -490,8 +491,8 @@ module.exports = function () {
         "cfd25": { "en": "Contract margin (USD)", "zh": "合约保证金(美元)" },
         "cfd26": { "en": "Minimum contract unit (standard lot)", "zh": "最小合约单位(标准手)" },
         "cfd27": { "en": "Maximum trading volume (lot)", "zh": "最大交易量(手)" },
-        "cfd28": { "en": "Trading time (MT4 platform time)", "zh": "交易时间(MT4平台时间)" },
-        "cfd29": { "en": "Quotation time (platform time)", "zh": "报价时间(平台时间)" },
+        "cfd28": { "en": "Trading time (Beijing time)", "zh": "交易时间(北京时间)" },
+        "cfd29": { "en": "Quotation time (Beijing time)", "zh": "报价时间(北京时间)" },
         "cfd30": { "en": "Product introduction", "zh": "产品简介" },
         "cfd31": { "en": "lot", "zh": "手" },
         "cfd32": { "en": "contract", "zh": "合约" },
