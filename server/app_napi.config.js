@@ -13,8 +13,8 @@
                 title: "活动详情"
             },
             {
-                image: URL_PATH + "/activity/banner/banner2_20160930.png",
-                url: URL_PATH + "/bd/t33",
+                image: URL_PATH + "/activity/banner/banner2_20170314.png",
+                url: URL_PATH + "/bd/t34",
                 title: "活动详情"
             },
             {
@@ -37,8 +37,8 @@
             title: "活动详情"
           },
           {
-            image: URL_PATH + "/activity/banner/banner2_20160930.png",
-            url: URL_PATH + "/bd/t33",
+            image: URL_PATH + "/activity/banner/banner2_20170314.png",
+            url: URL_PATH + "/bd/t34",
             title: "活动详情"
           },
           {
@@ -57,7 +57,7 @@
     function getPushBannerInfo () {
         var data = {
             image: URL_PATH + "/activity/banner/redbag_app_index.png",
-            url: URL_PATH + "/",
+            url: URL_PATH + "/bd/t35",
             title: "活动详情"
         };
         return data;
