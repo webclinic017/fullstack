@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('GlobalController', GlobalController);
 
-    GlobalController.$inject = ['$rootScope', '$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang', '$cookies', '$timeout'];
+    GlobalController.$inject = ['$rootScope', '$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang', '$cookies', '$timeout', 'redbag'];
 
     /**
      * @name GlobalController
      * @desc
      */
-    function GlobalController($rootScope, $scope, $state, $window, config, account, authorization, lang, $cookies, $timeout) {
+    function GlobalController($rootScope, $scope, $state, $window, config, account, authorization, lang, $cookies, $timeout, redbag) {
         $scope.userstatus = {
             logined: false
         };
@@ -46,6 +46,7 @@
         });
 
         getUnreadLength();
+        getMyRedbagLength();
         setInterval(function() {
             getUnreadLength();
         },30000);
@@ -92,6 +93,10 @@
             initialize();
             getUnreadLength();
         });
+        $scope.$on('get_my_redbag_length', function (event, arg) {
+            // console.log(arg);
+            $scope.personal.redbagLength = arg.redbagLength;
+        });
 
         // 初始化所需的全局数据
         function initialize() {
@@ -122,6 +127,21 @@
             });
             // $scope.$emit('refreshNoticeList');
 
+        }
+        // 获取可用红包数量 ps：最好单独出一个接口，暂时和我的红包用同一个接口
+        function getMyRedbagLength () {
+            redbag.getRedbagList({
+                page: 1,
+                pagesize: 1,
+                type: 1
+            }).then(function (data) {
+                // console.info(data);
+                if (data.is_succ) {
+                    angular.extend($scope.personal, {
+                        redbagLength: data.sum
+                    });
+                }
+            });
         }
 
         // 退出

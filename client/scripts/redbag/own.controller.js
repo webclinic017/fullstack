@@ -51,6 +51,9 @@
                         total: getTotal(data.sum, pagesize),
                         page: page
                     });
+                    $scope.$emit('get_my_redbag_length', {
+                        redbagLength: data.sum
+                    });
                 }
             });
         }
