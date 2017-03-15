@@ -60,11 +60,11 @@
         }
     });
 
-    $('.hover_scaled').hover(function (e) {
-        $(e.currentTarget).addClass('animated jello');
-    }, function (e) {
-        $(e.currentTarget).removeClass('animated jello');
-    });
+    // $('.hover_scaled').hover(function (e) {
+    //     $(e.currentTarget).addClass('animated jello');
+    // }, function (e) {
+    //     $(e.currentTarget).removeClass('animated jello');
+    // });
 
     // $('.hover_scaled').bind('hover', function (e) {
     //     e.stopPropagation();
