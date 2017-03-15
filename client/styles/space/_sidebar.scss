@@ -47,6 +47,26 @@
         color: $gray-base;
         cursor: pointer;
     }
+    @include e(bag-num) {
+        position: relative;
+        left: 10px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: #e7312f;
+        border-radius: 50%;
+        font-size: 14px;
+        text-align: center;
+        line-height: 20px;
+        color: #fff;
+        cursor: pointer;
+
+        &.new {
+            width: initial;
+            border-radius: 10px;
+            padding: 0 6px;
+        }
+    }
 
     @include e(user) {
         text-align: center;

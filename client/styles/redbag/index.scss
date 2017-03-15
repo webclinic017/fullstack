@@ -1,0 +1,215 @@
+@include b(redbag_content) {
+    padding-top: 30px;
+}
+@include b(redbag_nav) {
+
+    @include e(wrapper) {
+        background-color: #eee;
+    }
+
+    @include e(tabs) {
+        @extend .clearfix;
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 30px;
+
+        > li {
+            float: left;
+
+            > a {
+                display: inline-block;
+                width: 100%;
+                padding: 8px 15px;
+                text-align: center;
+                color: #4a4a4a;
+            }
+
+            &:hover {
+                > a {
+                    color: #f5524f;
+                }
+            }
+        }
+
+        > li.active {
+            > a {
+                color: #f5524f;
+            }
+        }
+    }
+}
+@include b(redbag_own) {
+    position: relative;
+}
+@include b(redbag_pool) {
+    position: relative;
+}
+@include b(redbag_nobag) {
+    text-align: center;
+    padding-top: 20px;
+}
+@include b(redbag_single_wrapper) {
+    float: left;
+    padding-right: 30px;
+    padding-top: 30px;
+
+    &.noPadding {
+        padding-right: 0px;
+    }
+}
+@include b(redbag_single) {
+    width: 235px;
+    background-color: #f1f1f1;
+    // padding: 38px 12px;
+    position: relative;
+
+    &.light {
+        .redbag_single__top {
+            background-color: #f5524f;
+        }
+    }
+    &.dark {
+        .redbag_single__top {
+            background-color: #b0b0b0;
+        }
+    }
+
+    @include e(circle) {
+        position: absolute;
+        width: 36px;
+        height: 18px;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+        background-color: #fafafa;
+        top: 0;
+        left: 50%;
+        margin-left: -18px;
+        z-index: 100;
+    }
+    @include e(top) {
+        text-align: center;
+        color: #fff;
+        padding-top: 30px;
+        padding-left: 12px;
+        padding-right: 12px;
+        position: relative;
+
+        @include m(bw) {
+            @extend .clearfix;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            overflow: hidden;
+
+            .one {
+                width: 4px;
+                height: 2px;
+                background-color: #f1f1f1;
+                float: left;
+                border-top-left-radius: 2px;
+                border-top-right-radius: 2px;
+                margin: 0 2px;
+            }
+        }
+        @include m(num) {
+            .tip {
+                vertical-align: top;
+                font-size: 20px;
+                padding-top: 6px;
+                display: inline-block;
+            }
+            .number {
+                font-size: 64px;
+                height: 64px;
+                line-height: 64px;
+            }
+        }
+        @include m(type) {
+            font-size: 16px;
+            padding: 12px 0 6px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        @include m(tip) {
+            height: 40px;
+            font-size: 12px;
+        }
+    }
+    @include e(bottom) {
+        padding: 20px 15px 38px;
+        height: 180px;
+
+        @include m(tip) {
+            color: #707070;
+            height: 80px;
+            line-height: 1.5;
+            text-align: center;
+        }
+        @include m(btn) {
+            text-align: center;
+            padding-top: 5px;
+
+            .btn {
+                width: 116px;
+                height: 38px;
+                text-align: center;
+                line-height: 38px;
+                padding: 0;
+                font-size: 16px;
+                background-color: transparent;
+                color: #f5524f;
+                border-color: #f5524f;
+
+                &.disabled {
+                    color: #707070;
+                    border-color: #cbcbcb;
+                }
+
+                &:hover {
+                    background-color:  #f5524f;
+                    color: #fff;
+                }
+            }
+        }
+        @include m(mark) {
+            text-align: right;
+
+            .mark {
+                display: inline-block;
+                width: 72px;
+                height: 72px;
+                border: 1px solid #cbcbcb;
+                border-radius: 50%;
+                text-align: center;
+                line-height: 72px;
+                transform: rotate(-33deg);
+                -webkit-transform: rotate(-33deg);
+                -moz-transform: rotate(-33deg);
+                -o-transform: rotate(-33deg);
+                font-size: 16px;
+                color: #707070;
+            }
+        }
+        @include m(sign) {
+            text-align: center;
+            padding-top: 10px;
+
+            .sign {
+                color: #707070;
+                font-size: 16px;
+            }
+        }
+        @include m(dec) {
+            text-align: center;
+            padding-top: 10px;
+
+            .dec {
+                color: #f5524f;
+                font-size: 16px;
+            }
+        }
+    }
+}

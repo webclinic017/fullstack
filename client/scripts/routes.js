@@ -208,6 +208,35 @@
                     }
                 })
 
+                // 我的红包
+                .state('space.redbag', {
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/redbag/index.html',
+                            controller: ''
+                        }
+                    }
+                })
+                .state('space.redbag.subpage', {
+                    authenticated: true,
+                    url: '/space/redbag/:subpage',
+                    views: {
+                        '@space.redbag': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'own';
+                                return '/views/redbag/' + $stateParams.subpage + '.html';
+                            },
+                            controllerProvider: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'own';
+                                var ctrlPrefix = 'Redbag';
+                                var ctrlSuffix = 'Controller';
+                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                            }
+                        }
+                    }
+                })
+
                 // 排行榜
                 .state('ranklist', {
                     views: {
