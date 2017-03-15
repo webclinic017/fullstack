@@ -117,6 +117,13 @@
             getMonthlySymbolsApi: o + '/action/public/v5/monthly_symbols'
         };
 
+        var redbag = {
+            getRedbagPoolApi: o + '/action/public/bonus/lists',
+            getRedbagListApi: o + '/action/public/bonus/my_bonus',
+            receiveRedbagApi: o + '/action/public/bonus/receive',
+            exchangeRedbagApi: o + '/action/public/bonus/bonus_pay_condition'
+        };
+
         var service = {
             account: account,
             asset: asset,
@@ -126,7 +133,8 @@
             market: market,
             product: product,
             ranklist: ranklist,
-            trader: trader
+            trader: trader,
+            redbag: redbag
         };
         return service;
     }
