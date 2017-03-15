@@ -425,9 +425,9 @@
                     });
                 },
                 submit: function () {
-                    $("#regist_btn3").on("touchend", function () {
-                        window.location.href = "/download";
-                    });
+                    // $("#regist_btn3").on("touchend", function () {
+                    //     window.location.href = "/download";
+                    // });
                 }
             };
 
