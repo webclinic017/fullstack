@@ -3,7 +3,7 @@
     $(function () {
         'use strict';
         twH5Loader('img_detect_container', 4, allLoaded)
-        //allLoaded();
+
         function allLoaded() {
             $(function () {
                 // 微信分享配置
@@ -22,7 +22,7 @@
                 }
 
                 // 兼容安卓键盘弹出
-                if (!isIOS()) {
+                if (!isIOS() || isAndriod()) {
                     var focusFlag = false;
                     var $element = $('.section5 input');
                     var initClientHeight = getClientHeight();
@@ -100,7 +100,7 @@
                     navigation: true,
                     navigationColor: "#fbd71f",
                     navigationPosition: "left",
-                    sectionsColor: ['#ccc', '#121212', '#fff', '#000', '#e0e0e0'],
+                    //sectionsColor: ['#ccc', '#121212', '#fff', '#000', '#e0e0e0'],
                     verticalCentered: false,
                     afterRender: function () {
                         $('.matters_btn').delay(700).fadeIn(800);
@@ -114,7 +114,7 @@
                                     content: $("#layer_contentBox").html(),
                                     style: 'padding:0;width:75%;border-radius:0;color:#000;background:rgba(0,0,0,0);'
                                 });
-                                $('.layui-m-layercont').css('padding',0)
+                                $('.layui-m-layercont').css('padding', 0)
                                 $.fn.fullpage.setAllowScrolling(false)
                             }
 
@@ -132,7 +132,11 @@
 
                         $(".lake_layout").fadeIn(0);
                         // 阻止安卓键盘弹出
-                        window.removeEventListener('resize');
+                        if (!isIOS() || isAndriod()) {
+                            window.removeEventListener('resize');
+                        } else {
+                            window.removeEventListener('resize');                            
+                        }
                     },
                     afterLoad: function (anchorLink, index) {
                         setTimeout(function () {
