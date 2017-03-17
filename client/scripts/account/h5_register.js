@@ -42,7 +42,16 @@
             if (!!document.getElementById("regist_btn3") && location) {
                 /*统计注册成功*/
                 sa.track('btn_register_finish');
-                _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
+                window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
+                
+                setTimeout(function () {
+                    var user_code = $.cookie("user_code");
+                    // console.log(user_code);
+                    if (user_id) {
+                        sa.login(user_id);
+                    }
+                }, 200);
+
                 return true;
             }
         }

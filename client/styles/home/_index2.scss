@@ -111,6 +111,10 @@
         background-position: center center;
         background-size: cover;
         @include img-normal($image-path-home + "index-banner-redbag.png");
+        
+        &.pkds {
+            @include img-normal($image-path-home + "index3-banner1.jpg");
+        }
 
         .pic {
             padding-top: 110px;
@@ -131,7 +135,10 @@
         background-position: center center;
         background-size: cover;
         @include img-normal($image-path-home + "index2-banner2-new.jpg");
-
+        
+        &.pkds {
+            @include img-normal($image-path-home + "index2-banner2_pre.jpg");
+        }
     }
     .index2-slide3 {
         overflow: hidden;
