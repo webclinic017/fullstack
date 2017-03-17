@@ -34,17 +34,17 @@
         var endDate = this.getCurrentMonthLast();
         //console.log(stDate);
         var month = (new Date()).getMonth() + 1;
-        var startZh = stDate[3] + '.' + month + '.' + stDate[2];
-        var endZh = endDate[3] + '.' + month + '.' + endDate[2];
+        var startZh = stDate[3] + '年' + month + '月' + stDate[2] + '日';
+        var endZh = endDate[3] + '年' + month + '月' + endDate[2] + '日';
         var duringEn = stDate[1] + ' 1st To ' + stDate[1] + ' ' + endDate[2] + 'st';
         //Dec 1st to Dec 31st
         if (type == 'zh') {
-          // return startZh + ' 到 ' + endZh
-          return '2017年3月1日 - 2017年3月14日'
+          return startZh + ' 到 ' + endZh
+          // return '2017年3月1日 - 2017年3月14日'
         }
         else if (type == 'en') {
-          //return duringEn;
-          return 'Mar 01st 2017 To Mar 14th 2017'
+          return duringEn;
+          // return 'Mar 01st 2017 To Mar 14th 2017'
         }
       }
     }
