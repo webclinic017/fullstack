@@ -1,4 +1,15 @@
 var report_sites = [
+    /*添加时间 2017-3-20*/
+    {
+        address: 'http://district.ce.cn/newarea/hyzx/201703/14/t20170314_20989633.shtml',
+        description: '【中国经济网】老虎外汇：被首度写入政府工作报告的人工智能 对Fintech将有何影响',
+        date: '2017-03-14'
+    },
+    {
+        address: 'http://www.sinotf.com/GB/News/Enterprise/2017-03-15/2OMDAwMDIyMzU2OA.html',
+        description: '【中国贸易金融网】老虎外汇：外储回升释放积极信号 Fintech为外汇创新提供新机',
+        date: '2017-03-15'
+    },
     /*添加时间 2017-3-14*/
     {
         address: 'http://mt.sohu.com/business/d20170301/127599736_420292.shtml?loc=5',
