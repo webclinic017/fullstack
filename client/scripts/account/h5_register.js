@@ -375,8 +375,8 @@
                 }
 
                 /*今日头条统计表单提交*/
-                if (window.location.pathname.indexOf('bd/t35') != -1) {
-                    _taq.push({ convert_id: "55824929459", event_type: "form" })
+                if (window.location.pathname.indexOf('t35') != -1) {
+                    _taq.push({convert_id:"58276692798", event_type:"form"})
                 }
 
                 $.ajax({
