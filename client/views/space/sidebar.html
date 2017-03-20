@@ -69,7 +69,7 @@
                 <li ui-sref-active="active">
                     <a ui-sref="space.bonus">复制和分成</a>
                 </li>
-                <li ui-sref-active="active">
+                <li ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
                     <a ui-sref="space.redbag.subpage">
                         我的红包
                         <!-- <span class="space_sidebar__bag-num" ng-if="personal.redbagLength > 0">{{personal.redbagLength}}</span> -->

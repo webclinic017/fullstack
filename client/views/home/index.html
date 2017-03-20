@@ -1,6 +1,7 @@
 <section class="index2-banner">
     <div class="swiper-container" style="height: 818px;" tw-carousel data-type="normal">
         <div class="swiper-wrapper">
+            <%if(lang.isCompany("tigerwit")){%>
             <div class="swiper-slide index2-slide1">
                 <div class="pic">
                     <img src="/images/bd_redbag/rb_1-1.png">
@@ -11,6 +12,20 @@
                 
                 <a class="index2-banner__btn1" href="/bd/t35" ng-click="toTrackBannerSensorsdata($event, '红包活动', '1');"><%= lang.text("liaojiexiangqing")%></a>
             </div>
+            <%}%>
+
+            <%if(lang.isCompany("pkds")){%>
+            <div class="swiper-slide index2-slide1 pkds">
+                <p class="index2-banner__tle1"><%= lang.text("home49")%></p>
+                <p class="index2-banner__tle2"><%= lang.text("home50")%><span class=""></span></p>
+                <p class="index2-banner__tle3"><%= lang.text("home59")%><span><%= lang.text("home60")%></span></p>
+                <div class="index2-banner__b1-con">
+                    <%= lang.text("home51")%>
+                  </div>
+                <a class="index2-banner__btn1" href="/bd/t33" ng-click="toTrackBannerSensorsdata($event, '赠金活动', '1');"><%= lang.text("liaojiexiangqing")%></a>
+              </div>
+            <%}%>
+            <%if(lang.isCompany("tigerwit")){%>
             <div class="swiper-slide index2-slide2">
                 <!--<p class="index2-banner__tle1"><%= lang.text("home52")%><span><%= lang.text("home53")%></span></p>
                 <p class="index2-banner__tle2"><%= lang.text("home54")%></p>
@@ -22,6 +37,17 @@
                 <br><br>
                 <a class="index2-banner__btn1" href="/bd/t34" ng-click="toTrackBannerSensorsdata($event, '赠金活动', '2');"><%= lang.text("liaojiexiangqing")%></a>
             </div>
+            <%}%>
+            <%if(lang.isCompany("pkds")){%>
+            <div class="swiper-slide index2-slide2 pkds">
+                <p class="index2-banner__tle1"><%= lang.text("home52")%><span><%= lang.text("home53")%></span></p>
+                  <p class="index2-banner__tle2"><%= lang.text("home54")%></p>
+                  <div class="index2-banner__b1-con">
+                      <%= lang.text("home55")%>
+                </div>
+                <a class="index2-banner__btn1" href="/bd/t33" ng-click="toTrackBannerSensorsdata($event, '赠金活动', '2');"><%= lang.text("liaojiexiangqing")%></a>
+            </div>
+            <%}%>
             <div class="swiper-slide index2-slide3 <%= lang.background().en %>">
                 <p class="index2-banner__tle1"><%= lang.text("home56")%></p>
                 <p class="index2-banner__tle2"><%= lang.text("home57")%><span <%= lang.text("navbar15")%>>60%</span></p>
