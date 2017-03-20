@@ -33,7 +33,7 @@
                     <td>{{ detail.VOLUME }}</td>
                     <td><i class="fa fa-dollar"></i>{{ detail.PROFIT }}</td>
                 </tr>
-                <tr ng-if="success && details.length > 0">
+                <!-- <tr ng-if="success && details.length > 0">
                     <td>总计</td>
                     <td colspan="5"></td>
                     <td><i class="fa fa-dollar"></i>{{ total.sum_profit }}</td>
@@ -42,7 +42,7 @@
                     <td>分成</td>
                     <td colspan="5"></td>
                     <td><i class="fa fa-dollar"></i>{{ total.pay_noob }}</td>
-                </tr>
+                </tr> -->
                 <tr ng-if="success && details.length <= 0"><td colspan="7">无数据</td></tr>
                 <tr ng-if="! success"><td colspan="7">加载中...</td></tr>
             </tbody>
