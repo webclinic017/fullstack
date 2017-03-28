@@ -1,0 +1,218 @@
+$t36_game_height: 100%;
+
+@include b(t36_game_layout) {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+@include b(t36_game) {
+    position: absolute;
+    left: 0;
+    // top: -100%;
+    top: 0;
+    width: 100%;
+    height: 300%;
+    transition: all .4s;
+
+    &.page2 {
+        top: -100%;
+    }
+
+    @include e(page1) {
+        width: 100%;
+        height: $t36_game_height / 3;
+        background-image: url("/images/bd_t36/bg.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        @include m(logo) {
+            height: 8%;
+            text-align: center;
+            padding-top: px2rem(32);
+
+            img {
+                height: 100%;
+            }
+        }
+
+        .btn-login, .btn-togame {
+            display: none;
+        }
+        .btn-login.active, .btn-togame.active {
+            display: block;
+        }
+    }
+    @include e(page2) {
+        width: 100%;
+        height: $t36_game_height / 3;
+        background-image: url("/images/bd_t36/bg.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0 px2rem(20);
+        
+        @include m(logo) {
+            height: 8%;
+            text-align: center;
+            padding-top: px2rem(32);
+
+            img {
+                height: 100%;
+            }
+        }
+        @include m(award) {
+            height: 23%;
+            text-align: center;
+            padding-top: px2rem(16);
+
+            img {
+                height: 100%;
+            }
+        }
+        @include m(list) {
+            width: 92%;
+            height: 18%;
+            background-color: #ff4900;
+            border-radius: px2rem(16);
+            color: #fff;
+            overflow: hidden;
+            margin: 0 auto;
+
+            .navbar {
+                background-color: #ff0000;
+                padding: px2rem(10) px2rem(60);
+
+                li {
+                    float: left;
+                    width: $t36_game_height / 3;
+                    text-align: center;
+                }
+            }
+            .content {
+                padding: 0 px2rem(60);
+                padding-top: px2rem(16);
+                height: 69%;
+                overflow: scroll;
+
+                li {
+                    padding: px2rem(4) 0;
+
+                    span {
+                        float: left;
+                        width: $t36_game_height / 3;
+                        text-align: center;
+                        overflow:hidden;
+                        text-overflow:ellipsis;
+                        white-space:nowrap;
+                    }
+                }
+            }
+        }
+
+        .t36_game_box_wrapper {
+            width: 100%;    // 680
+            height: 40%;    // 602
+            background-image: url("/images/bd_t36/game-box.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin: px2rem(16) auto;
+            position: relative;
+            
+            .game_chance {
+                height: 44px;
+                font-size: 10px;
+                color: #fff;
+                padding-top: 22px;
+                text-align: center;
+
+                img {
+                    height: 100%;
+                    vertical-align: middle;
+                    display: none;
+
+                    &.active {
+                        display: inline-block;
+                    }
+                }
+            }
+
+            .btn-start {
+                width: 250px;   // 250
+                height: 99px;   // 99
+                position: absolute;
+                top: 0px;     // 412
+                left: 50%;
+                margin-left: -125px;
+                background-image: url("/images/bd_t36/start.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .btn-start.active {
+                background-image: url("/images/bd_t36/start2.png");
+            }
+        }
+    }
+    @include e(page3) {
+        width: 100%;
+        height: $t36_game_height / 3;
+    }
+}
+@include b(t36_game_box) {
+    width: 430px;   // 430
+    height: 115px;  // 115
+    position: absolute;
+    top: 198px;     // 198
+    left: 50%;
+    margin-left: -215px;
+    overflow: hidden;
+
+    @include e(list) {
+        width: 100%;
+        height: 100%;
+        
+        li {
+            float: left;
+            position: relative;
+            width: 40px;    // 65
+            height: 40px;   // 115
+            margin-right: 26px; // 26
+            transition: all 1s;
+
+            &:last-child {
+                margin-right: 0 !important;
+            }
+            
+            div {
+                position: absolute;
+                left: 0;
+                top: 0;
+                display: block;
+                width: 100%;
+                height: 100%;
+                // border: 1px solid #ccc;
+                // text-align: center;
+                // line-height: 40px;
+                
+                span {
+                    width: 50px;
+                    height: 53.333px;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -25px;
+                    margin-left: -26.667px;
+                    background-image: url("/images/bd_t36/poke.png");
+                    background-size: 200px 266.665px;   // 300 400 // 75 80
+                    background-position: 0px 0px;
+                    background-repeat: no-repeat;
+                }
+
+                &.ready {
+                    top: 100%;
+                }
+            }
+        }
+    }
+}
