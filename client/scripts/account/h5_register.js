@@ -50,7 +50,7 @@
                     if (user_id) {
                         sa.login(user_id);
                     }
-                }, 200);
+                }, 0);
 
                 return true;
             }

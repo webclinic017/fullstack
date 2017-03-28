@@ -168,6 +168,9 @@
       margin-bottom: px2rem(40);
       font-weight: 500;
       color: #fff;
+      &.forNormalPage, &.forRedbag{
+        display: none;
+      }
       img {
         display: inline-block;
         border-radius: px2rem(25);
