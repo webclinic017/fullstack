@@ -605,6 +605,12 @@ module.exports = function (app) {
         }
     });
 
+    // 联众德州活动
+    app.route('/bd/t36_game').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('bd_mt36_game', extendPublic({}, req))
+    });
+
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
     /*
         设置     ->     info, password, binding, 
