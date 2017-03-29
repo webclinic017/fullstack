@@ -3,8 +3,9 @@
         gameBox: ".t36_game",
         btnLogin: ".t36_game__page1 .btn-login",
         btnGoGame: ".t36_game__page1 .btn-togame",
+        btnTip: ".t36_game__page1 .btn-tip",
         btnStartGame: ".t36_game__page2 .btn-start",
-        gameChangce: ".t36_game__page2 .game_chance img",
+        gameChance: ".t36_game__page2 .game_chance img",
         gameBoxPokeWrapper: ".t36_game_box_wrapper",
         gameBoxPokeBox: ".t36_game_box",
         gameBoxPokeLi: ".t36_game_box .t36_game_box__list li",
@@ -12,6 +13,11 @@
         gameBoxPokeFill: ".t36_game_box .t36_game_box__list li div span",
         // gameBoxSelectPoke: ".t36_game_box .t36_game_box__list li span.select",
         // gameBoxReadyPoke: ".t36_game_box .t36_game_box__list li span.ready"
+    };
+    var ajaxApi = {
+        getGameInfo: '/action/public/wx/texas_holdem_info',     // 获取游戏信息
+        saveGameResult: '/action/public/wx/texas_holdem_winning',   // 保存游戏信息
+        register: '/action/public/wx/texas_holdem_register'     // 注册
     };
     var pokeData = [];                      // 所有的扑克牌
     var selectPoke = [];                    // 游戏结束后选择的牌
@@ -22,13 +28,23 @@
     };
     var isSelectRightNum = 0;               // 选择确定数量
     var isGaming = false;                   // 正在游戏
-    var wx_token = $.cookie('wx_token');
     var styleCfg = {};
-    var gameChangce = 0;    // test
+    var gameInfoCfg = {
+        gameChance: 0,     // 剩余游戏次数
+        isWinAward: false,  // 是否中奖
+        isGetAward: false,  // 是否领奖
+        firstAwardNum: 0,
+        secondAwardNum: 0,
+        ThirdAwardNum: 0,
+        isGameTime: false    // 是否是游戏时间
+    };
+    var wx_token = $.cookie('wx_token');
 
     if (wx_token) {
         $(ele.btnLogin).removeClass("active");
         $(ele.btnGoGame).addClass("active");
+        
+        getGameInfo(true);
     } else {
         $(ele.btnGoGame).removeClass("active");
         $(ele.btnLogin).addClass("active");
@@ -63,8 +79,8 @@
         // backgroundPosition: -styleCfg.pokeSingleWidth+"px -"+styleCfg.pokeSingleHeight+"px"
     });
     
-    $(ele.gameChangce).removeClass("active");
-    $(ele.gameChangce).eq(gameChangce).addClass("active");
+    setGameChance();
+    setLayerStyle();
     /* set dom style end */
 
     // 初始化扑克牌坐标
@@ -90,34 +106,222 @@
     });
 
     // 微信登陆
-    $(ele.btnLogin).on("touchend", function () {
+    $(ele.btnLogin).on("tap", function () {
         console.log("to login");
         window.wxLongin();
     });
-
     // 马上抽奖
-    $(ele.btnGoGame).on("touchend", function () {
+    $(ele.btnGoGame).on("tap", function () {
         console.log("to page2");
         $(ele.gameBox).addClass("page2");
     });
+    // 注意事项
+    $(ele.btnTip).on("tap", function (e) {
+        layer.open({
+            content: $("#layer-tip").html(),
+            className: "page1-tip-layer",
+            shadeClose: false,
+            btn: ""
+        });
+        return false;
+    });
+    // close layer
+    $(document).on("tap", ".page-msg-layer .layui-m-layercont .close", function () {
+        layer.closeAll();
+        return false;
+    });
 
     // 开始游戏
-    $(ele.btnStartGame).on("touchend", function () {
+    /*
+     * 1.正在游戏中 isGaming
+     * 2.是否是游戏时间 gameInfoCfg.isGameTime
+     * 3.剩余游戏次数 gameInfoCfg.gameChance
+     * 4.中奖情况&领奖情况 gameInfoCfg.isWinAward & gameInfoCfg.isGetAward
+     * 5.奖池情况
+     */
+    $(ele.btnStartGame).on("tap", function () {
         if (!isGaming) {
+            getGameInfo();
             isGaming = true;
             $(ele.btnStartGame).addClass("active");
-            startGame();
         }
     });
 
+    // set layer msg style
+    function setLayerStyle () {
+        styleCfg.layerContentWidth = $("body").width()*0.9 > 640 ? 640 : $("body").width()*0.9;
+        styleCfg.layerContentHeight = styleCfg.layerContentWidth/777*616;
+        // console.log(styleCfg.layerContentHeight);
+    }
+
+    // 设置剩余游戏次数
+    function setGameChance () {
+        $(ele.gameChance).removeClass("active");
+        $(ele.gameChance).eq(gameInfoCfg.gameChance).addClass("active");
+    }
+
+    function getGameInfo (initialize) {
+        initialize = initialize ? initialize : false;
+        layer.closeAll();
+        layer.open({
+            type: 2,
+            shadeClose: false
+        });
+
+        $.get(ajaxApi.getGameInfo).then(function (data) {
+            data = JSON.parse(data);
+            console.log(data);
+            layer.closeAll();
+            
+            if (data.is_succ) {
+                gameInfoCfg.isGameTime = data.data.game_date || false;
+                gameInfoCfg.gameChance = data.data.can_play_num || 0;
+                gameInfoCfg.isWinAward = data.data.winning;
+                gameInfoCfg.isGetAward = data.data.accept_the_prize;
+                gameInfoCfg.firstAwardNum = data.data.level_1;
+                gameInfoCfg.secondAwardNum = data.data.level_2;
+                gameInfoCfg.ThirdAwardNum = data.data.level_3;
+
+                // 判断游戏条件
+                checkGameCondition(initialize);
+            } else {
+                canGame();
+                layer.open({
+                    content: data.error_msg,
+                    skin: 'msg',
+                    time: 2
+                });
+            }
+        }, function (err) {
+            console.log(err);
+            layer.closeAll();
+            canGame();
+            layer.open({
+                content: '信息获取失败',
+                skin: 'msg',
+                time: 2
+            });
+        });
+    }
+    
+    function checkGameCondition (initialize) {
+        if (gameInfoCfg.isGameTime) {   // 判断游戏时间
+            if (initialize) {
+                if (gameInfoCfg.isWinAward) {   // 是否中奖
+                    if (gameInfoCfg.isGetAward) {   // 是否领奖
+                        openLayerMsg({
+                            btnArr: ['我知道了'],
+                            content: '您已中奖<br>且领取过奖励'
+                        });
+                    } else {
+                        openLayerMsg({
+                            btnArr: ['马上领奖'],
+                            content: '您已中奖<br>请前往注册领取',
+                            yesFunc: function () {
+                                layer.closeAll();
+                                $(ele.gameBox).addClass("page3");
+                            }
+                        });
+                    }
+                }
+            } else {
+                if (gameInfoCfg.gameChance) {   // 判断剩余游戏次数
+                    startGame();
+                } else {
+                    console.log("游戏剩余次数为0");
+                    canGame();
+                    if (gameInfoCfg.isWinAward) {   // 是否中奖
+                        if (gameInfoCfg.isGetAward) {   // 是否领奖
+                            openLayerMsg({
+                                title: '机会已用尽',
+                                btnArr: ['我知道了'],
+                                content: '您已中奖<br>且领取过奖励'
+                            });
+                        } else {
+                            openLayerMsg({
+                                title: '机会已用尽',
+                                btnArr: ['马上领奖'],
+                                content: '您有中奖未领取<br>请前往注册领取',
+                                yesFunc: function () {
+                                    layer.closeAll();
+                                    $(ele.gameBox).addClass("page3");
+                                }
+                            });
+                        }
+                    } else {
+                        openLayerMsg({
+                            title: '机会已用尽',
+                            yesFunc: function () {
+                                layer.closeAll();
+                                $(ele.gameBox).addClass("page3");
+                            }
+                        });
+                    }
+                }
+            }
+        } else {
+            console.log("未到游戏时间");
+            if (initialize) return;
+            canGame();
+            openLayerMsg({
+                btnArr: [],
+                title: '别心急',
+                content: '现在还未到<br>开始抽奖时间'
+            });
+        }
+    }
+
+    function openLayerMsg (config) {
+        config      = config || {};
+        var tit     = config.title || '温馨提示';
+        var cont    = config.content || '老虎外汇<br>为您准备了一份薄礼';
+        var btnArr  = config.btnArr || ['注册领红包'];
+        var yesFunc = config.yesFunc || function () {layer.closeAll();};
+        var noFunc  = config.noFunc || function () {ayer.closeAll();};
+        layer.open({
+            content: '<i class="close"></i><p class="tit">'+ tit +'</p><p class="cont">'+ cont +'</p><p class="tip">详情咨询老虎外汇400-809-8509</p>',
+            className: "page-msg-layer",
+            style: 'height: '+styleCfg.layerContentHeight+'px',
+            shadeClose: false,
+            btn: btnArr,
+            yes: function () {
+                yesFunc();
+            },
+            no: function () {
+                noFunc();
+            }
+        });
+    }
+
+    function canGame () {
+        isGaming = false;
+        $(ele.btnStartGame).removeClass("active");
+    }
+
     function startGame () {
         // 获取奖池情况 start
-
         var awardPool = {   // true -> 不存在, false -> 存在 
             first: false,
             second: false,
             third: false
         };
+        if (gameInfoCfg.isWinAward || gameInfoCfg.isGetAward) {
+            awardPool = { 
+                first: true,
+                second: true,
+                third: true
+            };
+        } else {
+            if (gameInfoCfg.firstAwardNum >= 2) {
+                awardPool.first = true;
+            }
+            if (gameInfoCfg.secondAwardNum >= 10) {
+                awardPool.second = true;
+            }
+            if (gameInfoCfg.ThirdAwardNum >= 20) {
+                awardPool.third = true;
+            }
+        }
         var restOfAward = checkAwardPool(awardPool);
         // 获取奖池情况 end
         selectPoke = [];
@@ -365,7 +569,7 @@
         var isTime = false;     // 是否关闭定时器
         var isSetTime = false;  // 是否设置了isTime
         var delayTime = getRandomNum(1000, 2000);
-        var scaleX, scaleY;
+        var scaleX, scaleY, result;
         // console.log(restOfAward);
         timer = setInterval(function () {
             top1 = top1 - speed;
@@ -419,20 +623,90 @@
                     if (selectPoke.length === 5) {
                         // console.log(selectPoke);
                         console.log("游戏结束");
-                        // selectPoke = [
-                        //     {x: 0, y:1},
-                        //     {x: 1, y:1},
-                        //     {x: 2, y:1},
-                        //     {x: 3, y:1},
-                        //     {x: 0, y:0}
-                        // ];
-                        isGaming = false;
-                        $(ele.btnStartGame).removeClass("active");
-                        judgeGameResult();
+                        result = judgeGameResult();
+                        saveGameResult(result);
                     }
                 }
             }
         }, 30);
+    }
+    
+    function saveGameResult (result) {
+        layer.open({
+            type: 2,
+            shadeClose: false
+        });
+        var text = result.key+'';
+        var key = '-----BEGIN PUBLIC KEY-----MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDN67wAcj1WL/scb9TuvawbqMABg2sYXdmLkzXYUK/qbZI168gpM1t4SqS2qxYuEy+a/rOQ/YokJy0Q+dwQBEUmRWd4//64D3shkMMPZ0VuQ67LmVbFzbaly9dEYbAkoKvd4qcVxG1qAYlPGAKVZjRbf3q6d1CGeUGQqoynofTZNwIDAQAB-----END PUBLIC KEY-----';
+        var crypt = new JSEncrypt();
+        crypt.setKey(key);
+        var textEnc = crypt.encrypt(text);
+        $.post(ajaxApi.saveGameResult, {level: textEnc}).then(function (data) {
+            data = JSON.parse(data);
+            console.log(data);
+            if (data.is_succ) {
+                canGame();
+                layer.closeAll();
+                gameInfoCfg.gameChance = data.can_play_num || 0;
+                setGameChance();
+                if (gameInfoCfg.gameChance > 0) {
+                    if (result.key > 0) {
+                        openLayerMsg({
+                            title: '恭喜您',
+                            content: '获得'+result.value+'<br>$'+result.bag+'红包',
+                            btnArr: ['继续抽奖', '马上领奖'],
+                            noFunc: function () {
+                                layer.closeAll();
+                                $(ele.gameBox).addClass("page3");
+                            }
+                        });
+                    } else {
+                        openLayerMsg({
+                            title: '很遗憾',
+                            content: '听说下一次<br>中奖几率会更高',
+                            btnArr: ['再来一次']
+                        });
+                    }
+                } else {
+                    if (result.key > 0) {
+                        openLayerMsg({
+                            title: '机会已用尽',
+                            yesFunc: function () {
+                                layer.closeAll();
+                                $(ele.gameBox).addClass("page3");
+                            }
+                        });
+                    } else {
+                        openLayerMsg({
+                            title: '恭喜您',
+                            content: '获得'+result.value+'<br>$'+result.bag+'红包还未领取',
+                            btnArr: ['马上领奖'],
+                            yesFunc: function () {
+                                layer.closeAll();
+                                $(ele.gameBox).addClass("page3");
+                            }
+                        });
+                    }
+                }
+            } else {
+                canGame();
+                layer.closeAll();
+                layer.open({
+                    content: data.error_msg,
+                    skin: 'msg',
+                    time: 2
+                });
+            }
+        }, function (err) {
+            console.log(err);
+            canGame();
+            layer.closeAll();
+            layer.open({
+                content: '游戏存储失败',
+                skin: 'msg',
+                time: 2
+            });
+        });
     }
 
     function judgeGameResult () {
@@ -475,7 +749,8 @@
             console.log("一等奖");
             return {
                 key: 1,
-                value: "一等奖"
+                value: "一等奖",
+                bag: 500
             };
         }
         // 二等奖 [A K 10 Q J] 无位置、无花色要求顺子
@@ -483,7 +758,8 @@
             console.log("二等奖");
             return {
                 key: 2,
-                value: "二等奖"
+                value: "二等奖",
+                bag: 300
             };
         }
         // 三等奖 [K K K A A] [K K K A Q]
@@ -491,14 +767,16 @@
             console.log("三等奖");
             return {
                 key: 3,
-                value: "三等奖"
+                value: "三等奖",
+                bag: 200
             };
         }
         console.log("未中奖");
         return {
             key: 0,
-            value: "未中奖"
-        }
+            value: "未中奖",
+            bag: 0
+        };
     }
 }());
 
