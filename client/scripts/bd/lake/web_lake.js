@@ -34,6 +34,7 @@
                         type: 1,
                         title: false, //不显示标题
                         shadeClose: true,
+                        closeBtn: false,
                         content: '<div class="lake_regForm" id="float_regBtn">' +
                         '<h1>注册送200美金</h1>' +
                         '<form>' +
