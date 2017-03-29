@@ -1,5 +1,125 @@
 $t36_game_height: 100%;
 
+.page1-tip-layer {
+    background-color: transparent;
+    
+    .layui-m-layercont {
+        background-image: url("/images/bd_t36/page1_tip_bg.png");
+        // background-position: center;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        padding: 20px 18px;
+
+        p {
+            color: #fff;
+            font-size: 12px;
+            padding: 4px 0;
+            text-align: left;
+            line-height: 16px;
+        }
+    }
+    .layui-m-layerbtn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 15px auto 0;
+        background-color: transparent;
+        background-image: url("/images/bd_t36/close.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}
+.page-msg-layer {
+    background-color: transparent;
+    position: relative;
+    box-shadow: none;
+
+    .layui-m-layercont {
+        background-image: url("/images/bd_t36/layer_msg_bg.png");
+        // background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0px;
+        height: 100%;
+    
+        .close {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            border-right: none;
+            border-radius: initial;
+            background-image: url("/images/bd_t36/close.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+        .tit {
+            // background: #f60;
+            position: absolute;
+            width: px2rem(268);
+            height: px2rem(122);
+            top: px2rem(110);
+            left: px2rem(220);
+            color: #eb4d34;
+            font-size: px2rem(40);
+            text-align: center;
+            line-height: px2rem(122);
+        }
+        .cont {
+            // background: #699;
+            position: absolute;
+            width: px2rem(268);
+            height: px2rem(122);
+            top: px2rem(234);
+            left: px2rem(220);
+            color: #eb4d34;
+            padding-top: px2rem(16);
+        }
+        .tip {
+            font-size: px2rem(24);
+            color: #fff;
+            padding-left: px2rem(32);
+            padding-top: px2rem(432);
+        }
+    }
+    .layui-m-layerbtn {
+        position: absolute;
+        left: 0;
+        top: 108%;
+        width: 100%;
+        height: 50px;
+        border-radius: initial;
+        background-color: transparent;
+        line-height: initial;
+        display: block;
+        text-align: center;
+
+        span[no] {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 25px;
+            background-color: #ff9900;
+            color: #fff;
+            border-right: none;
+            margin-right: 10px;
+            font-size: 18px;
+        }
+        span[yes] {
+            display: inline-block;
+            width: 150px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 25px;
+            background-color: #df2226;
+            color: #fff;
+            font-size: 18px;
+        }
+    }
+}
+
 @include b(t36_game_layout) {
     width: 100%;
     height: 100%;
@@ -9,7 +129,7 @@ $t36_game_height: 100%;
 @include b(t36_game) {
     position: absolute;
     left: 0;
-    // top: -100%;
+    // top: -200%;
     top: 0;
     width: 100%;
     height: 300%;
@@ -17,6 +137,9 @@ $t36_game_height: 100%;
 
     &.page2 {
         top: -100%;
+    }
+    &.page3 {
+        top: -200%;
     }
 
     @include e(page1) {
@@ -37,11 +160,56 @@ $t36_game_height: 100%;
             }
         }
 
-        .btn-login, .btn-togame {
-            display: none;
+        @include m(focus) {
+            height: 38%;
+            background-image: url("/images/bd_t36/page1_focus.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 100%;
+            color: #fff;
+            font-size: px2rem(20);
+            padding-top: px2rem(390);
+            background-position: center center;
+
+            span {
+                display: block;
+                text-align: center;
+                transform: rotate(2deg);
+            }
         }
-        .btn-login.active, .btn-togame.active {
-            display: block;
+
+        @include m(cont) {
+            height: 44%;
+            background-image: url("/images/bd_t36/page1_cont.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+
+            .page1_btn {
+                padding-top: px2rem(35);
+
+                .btn-login, .btn-togame {
+                    width: 40%;
+                    margin: 0px auto;
+                    display: none;
+                }
+                .btn-login.active, .btn-togame.active {
+                    display: block;
+                }
+            }
+        }
+        @include m(tip) {
+            text-align: center;
+
+            img {
+                width: 32%;
+                vertical-align: top;
+            }
+            p {
+                font-size: 10px;
+                color: #fff;
+                padding-top: px2rem(10);
+            }
         }
     }
     @include e(page2) {
@@ -157,6 +325,81 @@ $t36_game_height: 100%;
     @include e(page3) {
         width: 100%;
         height: $t36_game_height / 3;
+        background-image: url("/images/bd_t36/bg.png");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+
+        @include m(logo) {
+            height: 8%;
+            text-align: center;
+            padding-top: px2rem(32);
+
+            img {
+                height: 100%;
+            }
+        }
+        @include m(focus) {
+            height: 42%;
+            background-image: url("/images/bd_t36/page3_focus.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center center;
+            margin-top: px2rem(32);
+        }
+        @include m(reg) {
+            padding: px2rem(2) px2rem(60);
+            background-color: #ff4900;
+            border-radius: px2rem(20);
+            width: 80%;
+            margin: 0 auto;
+
+            input {
+                display: block;
+                width: 100%;
+                padding: px2rem(26) px2rem(32);
+                border-radius: px2rem(20);
+                margin: px2rem(20) 0;
+                background-color: #fff;
+            }
+
+            .verify_code {
+                position: relative;
+
+                .verify_code_btn {
+                    position: absolute;
+                    top: 10%;
+                    right: px2rem(20);
+                    color: #fff;
+                    background-color: #ec1f16;
+                    padding: px2rem(15) px2rem(25);
+                    border-radius: px2rem(16);
+                }
+            }
+        }
+        @include m(tel) {
+            width: 100%;
+            font-size: px2rem(32);
+            background-color: #ff0000;
+            color: #fff;
+            padding: px2rem(16) 0;
+            text-align: center;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+        .btn-register {
+            background-color: #e51e19;
+            width: 28%;
+            text-align: center;
+            color: #fff;
+            height: px2rem(80);
+            line-height: px2rem(80);
+            border-radius: px2rem(40);
+            margin: px2rem(32) auto 0;
+            font-size: px2rem(32);
+        }
     }
 }
 @include b(t36_game_box) {
