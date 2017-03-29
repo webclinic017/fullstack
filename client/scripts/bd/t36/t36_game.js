@@ -78,8 +78,7 @@
         marginLeft: -styleCfg.pokeWrapperScale*53.333/2,
         // backgroundPosition: -styleCfg.pokeSingleWidth+"px -"+styleCfg.pokeSingleHeight+"px"
     });
-    
-    setGameChance();
+
     setLayerStyle();
     /* set dom style end */
 
@@ -205,6 +204,9 @@
     }
     
     function checkGameCondition (initialize) {
+        if (initialize) {
+            setGameChance();
+        }
         if (gameInfoCfg.isGameTime) {   // 判断游戏时间
             if (initialize) {
                 if (gameInfoCfg.isWinAward) {   // 是否中奖
