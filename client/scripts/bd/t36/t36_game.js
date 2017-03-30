@@ -5,6 +5,8 @@
         btnGoGame: ".t36_game__page1 .btn-togame",
         btnTip: ".t36_game__page1 .btn-tip",
         btnStartGame: ".t36_game__page2 .btn-start",
+        winnerList: ".t36_game__page2 .t36_game__page2-list ul.content",
+        winnerListEmpty: ".t36_game__page2 .t36_game__page2-list div.content",
         gameChance: ".t36_game__page2 .game_chance img",
         gameBoxPokeWrapper: ".t36_game_box_wrapper",
         gameBoxPokeBox: ".t36_game_box",
@@ -21,6 +23,7 @@
     var ajaxApi = {
         getGameInfo: '/action/public/wx/texas_holdem_info',         // 获取游戏信息
         saveGameResult: '/action/public/wx/texas_holdem_winning',   // 保存游戏信息
+        gameWinnerList: '/action/public/wx/winning_lists',          // 中奖列表
         register: '/action/public/wx/texas_holdem_register',        // 注册
         setToken: '/action/public/v3/set_token',                    // 设置token
         getVerifyCode: '/action/public/v3/get_phone_reg_code',      // 获取验证码
@@ -35,7 +38,7 @@
     var isSelectRightNum = 0;               // 选择确定数量
     var isGaming = false;                   // 正在游戏
     var isVerifyCode = false;               // 不可发送验证码
-    var isRegister = false; 
+    var isRegister = false;
     var styleCfg = {};
     var gameInfoCfg = {
         gameChance: 0,     // 剩余游戏次数
@@ -48,6 +51,7 @@
     };
     var oReg = {};
     var clientHeight = 0;
+    var winnerListHtml = '';
     var tiger_token = null;
     var wx_token = $.cookie('wx_token');
 
@@ -144,7 +148,9 @@
     if (!oReg.search_arr.lp) {
         oReg.search_arr.lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
     }
-    // console.log(oReg.search_arr);
+    
+    // 获取中奖信息列表
+    getWinnerList();
 
     // 微信登陆
     $(ele.btnLogin).on("tap", function () {
@@ -186,6 +192,7 @@
             isGaming = true;
             $(ele.btnStartGame).addClass("active");
         }
+        return false;
     });
 
     // 获取验证码
@@ -662,17 +669,17 @@
     function setTimer (li, timer, restOfAward) {
         li = li ? li : 0;
         var s1 = li*2, s2 = li*2+1;
-        var top1 = 0, top2 = 40;
-        var speed = 5;
+        var top1 = 0, top2 = 42;
+        var speed = 6;
         var isTime = false;     // 是否关闭定时器
         var isSetTime = false;  // 是否设置了isTime
-        var delayTime = getRandomNum(1000, 2000);
+        var delayTime = getRandomNum(2000, 3000);
         var scaleX, scaleY, result;
         // console.log(restOfAward);
         timer = setInterval(function () {
             top1 = top1 - speed;
             top2 = top2 - speed;
-            if (top1 <= -40) {
+            if (top1 <= -42) {
                 getOnePoke(s1, restOfAward);
 
                 scaleX = selectPokePool[s1].split('_')[0];
@@ -682,7 +689,7 @@
                     backgroundPosition: -styleCfg.pokeSingleWidth*scaleX+"px -"+styleCfg.pokeSingleHeight*scaleY+"px"
                 });
             }
-            if (top2 <= -40) {
+            if (top2 <= -42) {
                 getOnePoke(s2, restOfAward);
                 
                 scaleX = selectPokePool[s2].split('_')[0];
@@ -692,8 +699,8 @@
                     backgroundPosition: -styleCfg.pokeSingleWidth*scaleX+"px -"+styleCfg.pokeSingleHeight*scaleY+"px"
                 });
             }
-            top1 = top1 <= -40 ? 40 : top1;
-            top2 = top2 <= -40 ? 40 : top2;
+            top1 = top1 <= -42 ? 42 : top1;
+            top2 = top2 <= -42 ? 42 : top2;
             $(ele.gameBoxPoke).eq(s1).css('top', top1+'px');
             $(ele.gameBoxPoke).eq(s2).css('top', top2+'px');
 
@@ -877,6 +884,35 @@
         };
     }
 
+    function getWinnerList () {
+        $.get(ajaxApi.gameWinnerList, {
+            page: 1,
+            pagesize: 1000
+        }).then(function (data) {
+            data = JSON.parse(data);
+            // console.log(data);
+            if (data.is_succ) {
+                winnerListHtml = "";
+                $.each(data.data, function (index, value) {
+                    var li = "<li class='clearfix'><span>"+value.nickname+"</span><span>$"+value.amount+"</span></li>";
+                    winnerListHtml+=li;
+                });
+                if (winnerListHtml) {
+                    $(ele.winnerList).html(winnerListHtml);
+                    $(ele.winnerListEmpty).removeClass("active");
+                    $(ele.winnerList).addClass("active");
+                } else {
+                    $(ele.winnerListEmpty).addClass("active");
+                    $(ele.winnerList).removeClass("active");
+                }
+            }
+        }, function (err) {
+            console.log(err);
+            $(ele.winnerListEmpty).addClass("active");
+            $(ele.winnerList).removeClass("active");
+        });
+    }
+
     // register
     function set_token() {
         $.ajax({
@@ -953,6 +989,8 @@
                     skin: 'msg',
                     time: 2
                 });
+                console.log("to page4");
+                $(ele.gameBox).addClass("page4");
             } else {
                 layer.open({
                     content: data.error_msg,
