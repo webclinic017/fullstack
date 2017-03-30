@@ -11,13 +11,19 @@
         gameBoxPokeLi: ".t36_game_box .t36_game_box__list li",
         gameBoxPoke: ".t36_game_box .t36_game_box__list li div",
         gameBoxPokeFill: ".t36_game_box .t36_game_box__list li div span",
-        // gameBoxSelectPoke: ".t36_game_box .t36_game_box__list li span.select",
-        // gameBoxReadyPoke: ".t36_game_box .t36_game_box__list li span.ready"
+        phoneInp: ".t36_game__page3 .telephone input",
+        codeInp: ".t36_game__page3 .verify_code input",
+        passwordInp: ".t36_game__page3 .password input",
+        btnVerCode: ".t36_game__page3 .verify_code_btn",
+        btnRegister: ".t36_game__page3 .btn-register",
+        registerBox: ".t36_game__page3 .t36_game__page3-reg"
     };
     var ajaxApi = {
-        getGameInfo: '/action/public/wx/texas_holdem_info',     // 获取游戏信息
+        getGameInfo: '/action/public/wx/texas_holdem_info',         // 获取游戏信息
         saveGameResult: '/action/public/wx/texas_holdem_winning',   // 保存游戏信息
-        register: '/action/public/wx/texas_holdem_register'     // 注册
+        register: '/action/public/wx/texas_holdem_register',        // 注册
+        setToken: '/action/public/v3/set_token',                    // 设置token
+        getVerifyCode: '/action/public/v3/get_phone_reg_code',      // 获取验证码
     };
     var pokeData = [];                      // 所有的扑克牌
     var selectPoke = [];                    // 游戏结束后选择的牌
@@ -28,6 +34,8 @@
     };
     var isSelectRightNum = 0;               // 选择确定数量
     var isGaming = false;                   // 正在游戏
+    var isVerifyCode = false;               // 不可发送验证码
+    var isRegister = false; 
     var styleCfg = {};
     var gameInfoCfg = {
         gameChance: 0,     // 剩余游戏次数
@@ -38,7 +46,16 @@
         ThirdAwardNum: 0,
         isGameTime: false    // 是否是游戏时间
     };
+    var oReg = {};
+    var clientHeight = 0;
+    var tiger_token = null;
     var wx_token = $.cookie('wx_token');
+
+    set_token();
+    /*token 5分钟过期*/
+    setInterval(function () {
+        set_token();
+    }, 300000);
 
     if (wx_token) {
         $(ele.btnLogin).removeClass("active");
@@ -95,6 +112,8 @@
     });
 
     setLayerStyle();
+
+    clientHeight = getClientHeight();
     /* set dom style end */
 
     // 初始化扑克牌坐标
@@ -118,6 +137,14 @@
             backgroundPosition: -styleCfg.pokeSingleWidth*scaleX+"px -"+styleCfg.pokeSingleHeight*scaleY+"px"
         });
     });
+
+    // 获取查询字段
+    oReg.search_arr = getSearch();
+    /*获取lp*/
+    if (!oReg.search_arr.lp) {
+        oReg.search_arr.lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
+    }
+    // console.log(oReg.search_arr);
 
     // 微信登陆
     $(ele.btnLogin).on("tap", function () {
@@ -161,6 +188,60 @@
         }
     });
 
+    // 获取验证码
+    $(ele.btnVerCode).on("tap", function () {
+        if (isVerifyCode) return;
+        isVerifyCode = true;
+
+        if (tiger_token) {
+            // umeng
+            _czc && _czc.push(["_trackEvent","t36_game注册","获取验证码"]);
+            // 神策数据统计
+            sa && sa.track('btn_register_code');
+            sendVerifyCode();
+        } else {
+            sa && sa.track('set_token_failed');
+            layer.open({
+                content: '网络异常,请刷新重试!',
+                skin: 'msg',
+                time: 2
+            });
+        }
+    });
+    // register
+    $(ele.btnRegister).on("tap", function () {
+        var phone = $(ele.phoneInp).val();
+        var code = $(ele.codeInp).val();
+        var password = $(ele.passwordInp).val();
+        // console.log(phone, code, password);
+        if (phone && code && password) {
+            register();
+        } else {
+            layer.open({
+                content: '请填写注册信息!',
+                skin: 'msg',
+                time: 2
+            });
+        }
+        return false;
+    });
+
+    // 监听安卓键盘事件
+    if (!isIOS() || isAndriod()) {
+        // console.log(clientHeight);
+        $(window).resize(function(){
+            if (getClientHeight() < clientHeight) {
+                $(ele.registerBox).css({
+                    marginTop: '-30%'
+                });
+            } else {
+                $(ele.registerBox).css({
+                    marginTop: '0'
+                });
+            }
+        });
+    }
+
     // set layer msg style
     function setLayerStyle () {
         styleCfg.layerContentWidth = $("body").width()*0.9 > 640 ? 640 : $("body").width()*0.9;
@@ -184,7 +265,7 @@
 
         $.get(ajaxApi.getGameInfo).then(function (data) {
             data = JSON.parse(data);
-            console.log(data);
+            // console.log(data);
             layer.closeAll();
             
             if (data.is_succ) {
@@ -660,7 +741,7 @@
         var textEnc = crypt.encrypt(text);
         $.post(ajaxApi.saveGameResult, {level: textEnc}).then(function (data) {
             data = JSON.parse(data);
-            console.log(data);
+            // console.log(data);
             if (data.is_succ) {
                 canGame();
                 layer.closeAll();
@@ -794,6 +875,131 @@
             value: "未中奖",
             bag: 0
         };
+    }
+
+    // register
+    function set_token() {
+        $.ajax({
+            type: "post",
+            url: ajaxApi.setToken,
+            success: function () {
+                tiger_token = $.cookie("tiger_token");
+            }
+        });
+    }
+    function sendVerifyCode () {
+        $.post(ajaxApi.getVerifyCode, {
+            phone: $(ele.phoneInp).val(),
+            token: tiger_token
+        }).then(function (data) {
+            data = JSON.parse(data);
+            // console.log(data);
+            if (data.is_succ) {
+                layer.open({
+                    content: '验证码发送成功!',
+                    skin: 'msg',
+                    time: 2
+                });
+                countDownTime();
+            } else {
+                isVerifyCode = false;
+                layer.open({
+                    content: data.error_msg,
+                    skin: 'msg',
+                    time: 2
+                });
+            }
+        }, function (err) {
+            console.log(err);
+            isVerifyCode = false;
+            layer.open({
+                content: '验证码发送失败!',
+                skin: 'msg',
+                time: 2
+            });
+        });
+    }
+    function register () {
+        if (isRegister) return;
+        isRegister = true;
+        layer.closeAll();
+        layer.open({
+            type: 2,
+            shadeClose: false
+        });
+        // 神策数据统计
+        sa && sa.track('btn_register_submit');
+        $.post(ajaxApi.register, {
+            phone: $(ele.phoneInp).val() || "",
+            password: $(ele.passwordInp).val() || "",
+            verify_code: $(ele.codeInp).val() || "",
+            pid: oReg.search_arr.pid || "",
+            unit: oReg.search_arr.unit || "",
+            lp: oReg.search_arr.lp || "",
+            key: oReg.search_arr.key || "",
+            email: oReg.search_arr.email || ""
+        }).then(function (data) {
+            data = JSON.parse(data);
+            // console.log(data);
+            isRegister = true;
+            layer.closeAll();
+            if (data.is_succ) {
+                // umeng
+                _czc.push(["_trackEvent","t36_game注册","立即注册且成功"]);
+                // 神策数据统计
+                sa.track('btn_register_finish');
+                layer.open({
+                    content: '注册成功!',
+                    skin: 'msg',
+                    time: 2
+                });
+            } else {
+                layer.open({
+                    content: data.error_msg,
+                    skin: 'msg',
+                    time: 2
+                });
+            }
+        }, function (err) {
+            console.log(err);
+            isRegister = false;
+            layer.closeAll();
+            layer.open({
+                content: '注册失败!',
+                skin: 'msg',
+                time: 2
+            });
+        });
+    }
+    function countDownTime () {
+        var time = 59;
+        var countTimer = null;
+        $(ele.btnVerCode).html(time);
+
+        countTimer = setInterval(function () {
+            time--;
+            if (time <= 0) {
+                $(ele.btnVerCode).html("验证码");
+                isVerifyCode = false;
+                clearInterval(countTimer);
+            } else {
+                $(ele.btnVerCode).html(time);
+            }
+        }, 1000);
+    }
+    /*获取查询字段*/
+    function getSearch() {
+        var url = location.search;
+        /*获取url中"?"符后的字串*/
+        var theRequest = new Object();
+        if (url.indexOf("?") != -1) {
+            var str = url.substr(1);
+            strs = str.split("&");
+            for (var i = 0; i < strs.length; i++) {
+                theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+            }
+        }
+        return theRequest;
     }
 }());
 
