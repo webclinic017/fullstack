@@ -70,48 +70,20 @@
                 <div class="t36_main__table center">
                     <table>
                         <colgroup>
-                            <col width="33.3%">
-                            <col width="33.3%">
-                            <col width="33.3%">
+                            <col width="50%">
+                            <col width="50%">
                         </colgroup>
                         <thead>
                             <tr>
-                                <td>手机号</td>
+                                <td>用户昵称</td>
                                 <td>红包</td>
-                                <td>姓名</td>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="award_list">
                             <tr>
-                                <td>138****2323</td>
-                                <td>$500红包</td>
-                                <td>掉找天</td>
+                                <td colspan="2">正在获取中奖信息...</td>
                             </tr>
-                            <tr>
-                                <td>138****2323</td>
-                                <td>$500红包</td>
-                                <td>掉找天</td>
-                            </tr>
-                            <tr>
-                                <td>138****2323</td>
-                                <td>$500红包</td>
-                                <td>掉找天</td>
-                            </tr>
-                            <tr>
-                                <td>138****2323</td>
-                                <td>$500红包</td>
-                                <td>掉找天</td>
-                            </tr>
-                            <tr>
-                                <td>138****2323</td>
-                                <td>$500红包</td>
-                                <td>掉找天</td>
-                            </tr>
-                            <tr>
-                                <td>138****2323</td>
-                                <td>$500红包</td>
-                                <td>掉找天</td>
-                            </tr>
+                            <!-- forTemplateInsert -->
                         </tbody>
                     </table>
                 </div>
@@ -132,6 +104,20 @@
             </div>
         </div>
     </div>
+    <script id="award_table" type="text/template">
+        <$if(list.length > 0){$>
+            <$for(var i=0; i<list.length; i++){$>
+                <tr>
+                    <td><$=list[i].nickname$></td>
+                    <td><$='$' + list[i].amount + '红包'$></td>
+                </tr>
+            <$}$>
+        <$} else {$>
+            <tr>
+                <td colspan="2">暂无中奖信息...</td>
+            </tr>
+        <$}$>
+    </script>
     <!-- build:js(client) /scripts/bd_t36.js -->
     <script src="/scripts/common/config.service.js"></script>
     <script src="/scripts/common/account.service.js"></script>
@@ -151,6 +137,7 @@
     <script src="/scripts/common/lang_data.service.js"></script>
     <script src="/scripts/common/redbag.service.js"></script>
     <script src="/scripts/bd/t36/t36_pc_game.js"></script>
+    <script src="/scripts/plugins/baiduTemplate.js"></script>
     <!-- endbuild -->
 </div>
 </body>

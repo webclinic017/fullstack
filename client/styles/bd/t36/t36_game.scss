@@ -198,6 +198,8 @@ $t36_game_height: 100%;
 }
 
 .t36_pc_layout {
+    transition: filter .2s linear;
+    -webkit-transition: filter .2s linear;
     // height: 1000px;
     background: url('/images/bd/t36_bg_slicer.png');
     .gradient_layer {
@@ -336,7 +338,7 @@ $t36_game_height: 100%;
         }
         .matters {
             position: absolute;
-            top: 2115px;
+            top: 1900px;
             background: url('/images/bd/t36_filter.png') no-repeat;
             background-size: 100% 100%;
             width: 100%;
