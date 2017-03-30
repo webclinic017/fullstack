@@ -50,6 +50,21 @@
         $(ele.btnLogin).addClass("active");
     }
 
+    // 微信分享配置
+    if (wx) {
+        wxShareConfig({
+            title: '【抽奖赢福利】老虎外汇助力CMPT德扑赛事线上抽奖活动',
+            subTitle: '老虎外汇多重礼，700美金砸向你！',
+            shareLink: window.location.href,
+            desc: '牌场失意，汇场得意，你观赛未猜中冠军依然还有机会，来老虎外汇再试试你的手气！',
+            img: window.location.origin + '/activity/logo.png',
+            trackPage: window.location.pathname.replace(/\//gi, ''),
+            debug: false
+        });
+    } else {
+        console.log("微信配置错误");
+    }
+
     /* set dom style */
     styleCfg.pokeWrapperHeight = $(ele.gameBoxPokeWrapper).height();
     styleCfg.pokeWrapperScale = styleCfg.pokeWrapperHeight/602;
@@ -672,7 +687,9 @@
                 } else {
                     if (result.key > 0) {
                         openLayerMsg({
-                            title: '机会已用尽',
+                            title: '恭喜您',
+                            content: '获得'+result.value+'<br>$'+result.bag+'红包还未领取',
+                            btnArr: ['马上领奖'],
                             yesFunc: function () {
                                 layer.closeAll();
                                 $(ele.gameBox).addClass("page3");
@@ -680,9 +697,7 @@
                         });
                     } else {
                         openLayerMsg({
-                            title: '恭喜您',
-                            content: '获得'+result.value+'<br>$'+result.bag+'红包还未领取',
-                            btnArr: ['马上领奖'],
+                            title: '机会已用尽',
                             yesFunc: function () {
                                 layer.closeAll();
                                 $(ele.gameBox).addClass("page3");
