@@ -440,7 +440,7 @@
     }
     function startTimer (i, time, timer, restOfAward) {
         setTimeout(function () {
-            setTimer(i, oTimer[timer], restOfAward);
+            setTimer(i, oTimer[timer], restOfAward, time);
         }, time);
     }
 
@@ -666,7 +666,7 @@
         return Math.floor(Math.random()*(n-m)+m);
     }
     
-    function setTimer (li, timer, restOfAward) {
+    function setTimer (li, timer, restOfAward, time) {
         li = li ? li : 0;
         var s1 = li*2, s2 = li*2+1;
         var top1 = 0, top2 = 42;
@@ -676,6 +676,9 @@
         var delayTime = getRandomNum(2000, 3000);
         var scaleX, scaleY, result;
         // console.log(restOfAward);
+        if (restOfAward !== 0) {
+            delayTime = 2000 - time + (500*li);     // 确保上一张牌确定下来时再判断下一张
+        }
         timer = setInterval(function () {
             top1 = top1 - speed;
             top2 = top2 - speed;
