@@ -52,9 +52,11 @@
                     var list_str = baidu.template('award_table', list);
                     $("#award_list").html(list_str);
 
-                    $('.matters').css({
-                        top: 1900 + res.data.length * 40 + 'px'
+                    if(res.data.length >= 1){
+                        $('.matters').css({
+                        top: 1900 + (res.data.length - 1) * 40 + 'px'
                     })
+                    }
                 }
             },
         })
