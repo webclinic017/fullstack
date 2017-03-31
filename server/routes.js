@@ -113,6 +113,10 @@ module.exports = function (app) {
                 // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
                 res.redirect('https://lonfx.tigerwit.com/download');
             }
+            if (COMPANY_NAME === 'pandafx') {
+                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+                res.redirect('https://pandafx.tigerwit.com/download');
+            }
         } else {
             if (COMPANY_NAME === 'tigerwit') {
                 if (req.query.label === 'Parkerdawson Co-operative Group Limited') {
@@ -128,7 +132,7 @@ module.exports = function (app) {
                     pageInfo: {}
                 }, req));
             }
-            if (COMPANY_NAME === 'lonfx') {
+            if (COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
                 res.render('home.html', extendPublic({
                     pageInfo: {}
                 }, req));
@@ -589,7 +593,7 @@ module.exports = function (app) {
         // } else {
         //     res.render('bd_t33_sub', extendPublic({}, req));
         // }
-        if (COMPANY_NAME === 'tigerwit') {
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
                 res.render('bd_m_redbag', extendPublic({}, req));
             } else {
@@ -603,7 +607,7 @@ module.exports = function (app) {
     // 红包活动
     app.route('/bd/t35').get(function (req, res) {
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit') {
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
                 res.render('bd_m_redbag', extendPublic({}, req));
             } else {

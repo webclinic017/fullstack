@@ -54,7 +54,42 @@ module.exports = function () {
             supportEmail: "support@tigerwit.com",
             ibEmail: "support@tigerwit.com",
             telephone: "400 - 809 - 8509",
-            webSite: "www.tigerwit.com",
+            webSite: "lonfx.tigerwit.com",
+            webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
+            androidApp: versionAndroidApp,
+            download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
+
+            // path
+            logoPathZh: indexBasePath + "/tigerwit-logo.png",
+            h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
+            helpLogo: indexBasePath + "/help-logo-tigerwit.png",
+            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            homePersonPath: indexBasePath + "/index-person-tiger.jpg",
+            homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
+            homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
+            homePlusPath: indexBasePath + "/index2-master-jia-tiger.png",
+
+            webCopyRule: indexBasePath + "/rules-banner-tigerwit.jpg",
+            webCopySelect: indexBasePath + "/select-banner-tigerwit.jpg",
+            webAgentProxy: indexBasePath + "/agent-banner-tigerwit.jpg",
+            webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
+
+            icoPath: indexBasePath + "/tigerwit.ico",
+            t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
+        };
+
+    }
+    if (company_name === 'pandafx') {
+        companyConfig = {
+            companyNameZh: "熊猫外汇",
+            companyNameEn: "pandafx",
+            companyNickName: "熊猫",
+            titleZh: "熊猫外汇 - pandafx",
+            titleEn: "pandafx",
+            supportEmail: "support@tigerwit.com",
+            ibEmail: "support@tigerwit.com",
+            telephone: "400 - 809 - 8509",
+            webSite: "pandafx.tigerwit.com",
             webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
             androidApp: versionAndroidApp,
             download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
