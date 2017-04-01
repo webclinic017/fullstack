@@ -229,9 +229,9 @@
         function submitForm(formName) {
             showErr(formName, 'username');
             showErr(formName, 'locationWorld');
-            showErr(formName, 'special');
-            showErr(formName, 'strategy');
-            showErr(formName, 'desc');
+            // showErr(formName, 'special');
+            // showErr(formName, 'strategy');
+            // showErr(formName, 'desc');
 
             if ($scope.basicInfo.locationWorld.value == 'CN') {
                 showErr(formName, 'locationState');
@@ -255,10 +255,10 @@
                 $scope.basicInfo.username,
                 $scope.basicInfo.locationWorld.value,
                 $scope.basicInfo.locationState.value,
-                $scope.basicInfo.locationCity.value, 
-                $scope.basicInfo.special.value, 
-                $scope.basicInfo.strategy, 
-                $scope.basicInfo.desc
+                $scope.basicInfo.locationCity.value
+                // $scope.basicInfo.special.value, 
+                // $scope.basicInfo.strategy, 
+                // $scope.basicInfo.desc
             ).then(function (data) {
                 // console.info(data);
                 // 成功

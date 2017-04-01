@@ -77,7 +77,7 @@
             title: '【抽奖赢福利】老虎外汇助力CMPT德扑赛事线上抽奖活动',
             subTitle: '老虎外汇多重礼，700美金砸向你！',
             shareLink: window.location.href,
-            desc: '牌场失意，汇场得意，你观赛未猜中冠军依然还有机会，来老虎外汇再试试你的手气！',
+            desc: '你观赛未猜中冠军依然还有机会，来老虎外汇再试试你的手气！',
             img: window.location.origin + '/activity/logo.png',
             trackPage: window.location.pathname.replace(/\//gi, ''),
             debug: false
