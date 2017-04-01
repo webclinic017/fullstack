@@ -10,7 +10,7 @@
     function RedbagOwnController($scope, redbag) {
 
         var pagesize = 9;
-        $scope.tabType = 1;             // 1 or 2 -> 可用，3 -> 已兑换，4 -> 已过期
+        $scope.tabType = 1;             // 1 or 2 -> 可用，3 -> 已兑换，4 -> 已过期, 5 红包记录
         $scope.success = false;         // true -> 请求数据成功
         $scope.exchangeLoading = false; // true -> 红包兑换中
         $scope.page = 1;

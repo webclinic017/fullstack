@@ -113,6 +113,10 @@ module.exports = function (app) {
                 // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
                 res.redirect('https://lonfx.tigerwit.com/download');
             }
+            if (COMPANY_NAME === 'pandafx') {
+                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+                res.redirect('https://pandafx.tigerwit.com/download');
+            }
         } else {
             if (COMPANY_NAME === 'tigerwit') {
                 if (req.query.label === 'Parkerdawson Co-operative Group Limited') {
@@ -128,7 +132,7 @@ module.exports = function (app) {
                     pageInfo: {}
                 }, req));
             }
-            if (COMPANY_NAME === 'lonfx') {
+            if (COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
                 res.render('home.html', extendPublic({
                     pageInfo: {}
                 }, req));
@@ -562,39 +566,48 @@ module.exports = function (app) {
         }
 
     });
-
+    // t33 作为固定推广链接，要更新最新的落地页到这个地址
     app.route('/bd/:page(t33|t33_t|t33_a|t33_b)').get(function (req, res) {
         var pageId = req.params.page || 't33';
         setEnvCf(req, res);
-        if (isMobile(req)) {
-            if (COMPANY_NAME === 'tigerwit') {
-                if (pageId == 't33') {
-                    res.render('bd_m_t33', extendPublic({
-                        regBtn_text: '领取赠金',
-                        coInfo: "",
-                        page: pageId,
-                        sel_text: '首选'
-                    }, req));
-                } else {
-                    res.render('bd_m_t33', extendPublic({
-                        regBtn_text: '前往领取赠金',
-                        coInfo: "Tiger Financial Technology PTY. Ltd.",
-                        page: pageId,
-                        sel_text: '优选'
-                    }, req));
-                }
+        // if (isMobile(req)) {
+        //     if (COMPANY_NAME === 'tigerwit') {
+        //         if (pageId == 't33') {
+        //             res.render('bd_m_t33', extendPublic({
+        //                 regBtn_text: '领取赠金',
+        //                 coInfo: "",
+        //                 page: pageId,
+        //                 sel_text: '首选'
+        //             }, req));
+        //         } else {
+        //             res.render('bd_m_t33', extendPublic({
+        //                 regBtn_text: '前往领取赠金',
+        //                 coInfo: "Tiger Financial Technology PTY. Ltd.",
+        //                 page: pageId,
+        //                 sel_text: '优选'
+        //             }, req));
+        //         }
+        //     } else {
+        //         res.render('bd_t33_sub', extendPublic({}, req));
+        //     }
+        // } else {
+        //     res.render('bd_t33_sub', extendPublic({}, req));
+        // }
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('bd_m_redbag', extendPublic({}, req));
             } else {
-                res.render('bd_t33_sub', extendPublic({}, req));
+                res.render('bd_redbag', extendPublic({}, req));
             }
         } else {
-            res.render('bd_t33_sub', extendPublic({}, req));
+            res.render('404.html', extendPublic({}, req));
         }
     });
 
     // 红包活动
     app.route('/bd/t35').get(function (req, res) {
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit') {
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
                 res.render('bd_m_redbag', extendPublic({}, req));
             } else {

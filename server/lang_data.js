@@ -54,7 +54,42 @@ module.exports = function () {
             supportEmail: "support@tigerwit.com",
             ibEmail: "support@tigerwit.com",
             telephone: "400 - 809 - 8509",
-            webSite: "www.tigerwit.com",
+            webSite: "lonfx.tigerwit.com",
+            webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
+            androidApp: versionAndroidApp,
+            download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
+
+            // path
+            logoPathZh: indexBasePath + "/tigerwit-logo.png",
+            h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
+            helpLogo: indexBasePath + "/help-logo-tigerwit.png",
+            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            homePersonPath: indexBasePath + "/index-person-tiger.jpg",
+            homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
+            homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
+            homePlusPath: indexBasePath + "/index2-master-jia-tiger.png",
+
+            webCopyRule: indexBasePath + "/rules-banner-tigerwit.jpg",
+            webCopySelect: indexBasePath + "/select-banner-tigerwit.jpg",
+            webAgentProxy: indexBasePath + "/agent-banner-tigerwit.jpg",
+            webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
+
+            icoPath: indexBasePath + "/tigerwit.ico",
+            t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
+        };
+
+    }
+    if (company_name === 'pandafx') {
+        companyConfig = {
+            companyNameZh: "熊猫外汇",
+            companyNameEn: "pandafx",
+            companyNickName: "熊猫",
+            titleZh: "熊猫外汇 - pandafx",
+            titleEn: "pandafx",
+            supportEmail: "support@tigerwit.com",
+            ibEmail: "support@tigerwit.com",
+            telephone: "400 - 809 - 8509",
+            webSite: "pandafx.tigerwit.com",
             webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
             androidApp: versionAndroidApp,
             download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
@@ -276,7 +311,7 @@ module.exports = function () {
         "home14": { "en": "COPY TRADING. Get profit by following master's trading automatically.", "zh": "复制高手交易，立享同步收益" },
         "home15": { "en": "Select your favorite master.", "zh": "选择自己喜欢的高手" },
         "home16": { "en": "Set the copy amount.", "zh": "输入复制金额，点击复制" },
-        "home17": { "en": "Sync the profit with masters.", "zh": "享受和高手同比例收益" },
+        "home17": { "en": "Sync the profit with masters.", "zh": "享受高手同策略交易" },
         "home18": { "en": "Be a master, win 20% of followers' profit.", "zh": "成为高手，您将获得复制者盈利的20%" },
         "home19": { "en": "Diversified products for transaction", "zh": "多样化的交易产品" },
         "home20": { "en": "Invest several financial products only by opening a trading account", "zh": "开设一个交易账户，轻松参与多个国际金融产品投资" },
@@ -296,7 +331,7 @@ module.exports = function () {
         //"home28": {"en": "Trading of Brent crude oil and West Texas crude oil can be achieved at the same time", "zh": "可同时操作布伦特原油和西德州原油"},
         "home28": { "en": "Transaction cost is low, about 2 yuan/tons", "zh": "交易成本低，约2块人民币/吨左右" },
         //"home29": {"en": "Enter swap processing by data smoothing method", "zh": "采用数据平滑方式进行掉期处理"},
-        "home29": { "en": "Just a stop, the next day is still limited", "zh": "只需一次止损，隔天仍然有限" },
+        "home29": { "en": "Just a stop, the next day is still limited", "zh": "只需一次止损，隔天仍然有效" },
         //"home30": {"en": "Abundant products and high fund utilization rate", "zh": "产品丰富，资金利用率高"},
         "home30": { "en": "Contains three great beauty means, the nikkei index, Europe and other mainstream", "zh": "包含三大美指、日经、欧洲优选等主流股指" },
         "home31": { "en": "Margin level as low as 2% is offered", "zh": "提供低至2%的保证金水平" },

@@ -40,6 +40,17 @@
                         webSite:"lonfx.tigerwit.com",
                     };
                 }
+                if (value === 'pandafx') {
+                    companyConfig = {
+                        companyNickName: "pandafx",
+                        companyNameZh: "熊猫外汇",
+                        companyNameEn: "pandafx",
+                        telephone: "xxxx-xxx",
+                        mt4Live: "TigerWit-Live",
+                        companyCopyRules: "https://pandafx.tigerwit.com/web/copy/rules",
+                        webSite:"pandafx.tigerwit.com",
+                    };
+                }
                 if (value === 'pkds') {
                     companyConfig = {
                         companyNickName: "pkds",
