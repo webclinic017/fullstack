@@ -171,7 +171,8 @@
                     $scope.copyCancel = {
                         username: username,
                         success: false,     // 是否取消复制成功
-                        fail: false
+                        fail: false,
+                        failMsg: ''
                     };
                     $scope.clickable = true;
                     $scope.cancelCopy = cancelCopy;
@@ -189,10 +190,20 @@
                                 $state.go('space.invest.subpage', {
                                     subpage: 'current'
                                 }, { reload: true });
+                            } else {
+                                $scope.clickable = true;
+                                $scope.copyCancel.fail = true;
+                                $scope.copyCancel.failMsg = data.error_msg;
+
+                                $timeout(function () {
+                                    $scope.copyCancel.fail = false;
+                                    $scope.copyCancel.failMsg = '';
+                                }, 3000);
                             }
                         }, function (err) {
                             $scope.clickable = true;
                             $scope.copyCancel.fail = true;
+                            $scope.copyCancel.failMsg = '';
                             console.info(err);
 
                             $timeout(function () {
