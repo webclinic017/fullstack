@@ -613,22 +613,39 @@ $t36_game_height: 100%;
             @include e(table) {
                 width: 560px;
                 opacity: 0.9;
-                table {
+                #award_list {
                     border-radius: 10px;
                     width: 100%;
-                    overflow: hidden;
                     margin-top: 35px;
-                    td {
-                        height: 40px;
-                        width: 33.3%;
-                        color: #fff;
+                    overflow: hidden;
+                    ul{
+                        max-height: 300px;
+                        overflow-y: auto;
                     }
-                    thead {
-                        background: #ff0000;
-                    }
-                    tbody {
-                        background: #ff4900;
-                    }
+                   li{
+                       height: 35px;
+                       width: 100%;
+                       text-align: center;
+                       line-height: 35px;
+                       color: #fff;
+                       span{
+                           width: 50%;
+                           display: inline-block;
+                           float: left;
+                           text-align: center;
+                           line-height: 35px;
+                           color:#fff;
+                       }
+                       &.head{
+                           background: #ff0000;
+                           span{
+                               font-weight: 400;
+                           }
+                       }
+                       &.list{
+                           background: #ff4900;
+                       }
+                   }
                 }
             }
             @include e(advantages) {
