@@ -10,17 +10,17 @@ var request = require('request');
 var querystring = require('querystring');
 var masterApi = require('./api/master');
 var report_sites = require('./report_site');
-var setCompanyCookie, 
-    envConfig, 
-    URL_PATH, 
-    COMPANY_NAME, 
-    Lang, 
+var setCompanyCookie,
+    envConfig,
+    URL_PATH,
+    COMPANY_NAME,
+    Lang,
     global_modelRegular,
     gloal_modelRegularDetail;
 
 var SetEnvConfig = require('./get_env_config').SetEnvConfig;
 
-function setEnvCf (req, res) {
+function setEnvCf(req, res) {
     new SetEnvConfig(req);
 
     envConfig = require('./get_env_config').envConfig;
@@ -485,7 +485,7 @@ module.exports = function (app) {
                 res.render('bd_m_lake', extendPublic({}, req));
             } else {
                 res.render('bd_lake', extendPublic({}, req));
-            }            
+            }
         } else {
             res.render('404.html', extendPublic({}, req));
         }
@@ -608,7 +608,11 @@ module.exports = function (app) {
     // 联众德州活动
     app.route('/bd/t36_game').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('bd_mt36_game', extendPublic({}, req))
+        if (isMobile(req)) {
+            res.render('bd_mt36_game', extendPublic({}, req))
+        } else {
+            res.render('bd_pct36_game', extendPublic({}, req));
+        }
     });
 
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
@@ -698,7 +702,7 @@ module.exports = function (app) {
     // FAQ
     app.route('/m/wap/faq/:subpage(index|simulate|real|depwith|type|transaction|mt4|overnight)').get(function (req, res) {
         var subpage = req.params.subpage || 'index';
-        
+
         setEnvCf(req, res);
         res.render('m_vue_faq.html', extendPublic({
             pageInfo: subpage
@@ -710,7 +714,7 @@ module.exports = function (app) {
     // nodeAPI
     app.route('/napi').get(function (req, res) {
         setEnvCf(req, res);
-        
+
         var action = req.query.action;
         // var model = require('./model/modelRegular');
         var napiConfigInfo = require('./app_napi.config.js');
