@@ -16,7 +16,7 @@ if ($(".m_vue").attr("data-page") === "forget") {
             countDown: {
                 show: false,
                 noClick: false,
-                message: ''
+                message: '获取验证码'
             },
             frontErr: {
                 phone: {
@@ -52,7 +52,7 @@ if ($(".m_vue").attr("data-page") === "forget") {
                 self.language = 'en';
                 self.countDown.message = 'Obtain verification code';
             }
-
+            console.log(self.countDown.message);
             function getCookie (name) { 
                 var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
              
