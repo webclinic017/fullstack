@@ -60,7 +60,7 @@ Vue.validator('nameErr',function(val){
                 count += 1;
             }
         }
-        if(count >= 4 && count <= 16){
+        if(count >= 2 && count <= 16){
             return true;
         }
     } else {
