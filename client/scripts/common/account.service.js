@@ -406,15 +406,15 @@
          * @name setBasicInfo
          * @desc setting 模块设置基本信息
          */
-        function setBasicInfo(username, world, state, city, special, strategy, desc) {
+        function setBasicInfo(username, world, state, city) {
             return $http.post(o.setBasicInfoApi, {
                 username: username,
                 world_code: world,
                 state_code: state,
-                city_code: city,
-                special: special,
-                strategy: strategy,
-                desc: desc
+                city_code: city
+                // special: special,
+                // strategy: strategy,
+                // desc: desc
             });
         }
 
