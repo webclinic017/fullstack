@@ -42,6 +42,7 @@
             type: 'get',
             success: function (data) {
                 var res = JSON.parse(data);
+                // res.data = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
                 if (res.is_succ == true) {
                     var list = {
                         list: res.data
@@ -50,12 +51,19 @@
                     baidu.template.LEFT_DELIMITER = '<$';
                     baidu.template.RIGHT_DELIMITER = '$>';
                     var list_str = baidu.template('award_table', list);
-                    $("#award_list").html(list_str);
+                    $("#template").html(list_str);
 
                     if(res.data.length >= 1){
-                        $('.matters').css({
-                        top: 1900 + (res.data.length - 1) * 40 + 'px'
-                    })
+                        var top = 1900 + (res.data.length - 1) * 35;
+                        if(top <= 2160){
+                            $('.matters').css({
+                                top: top + 'px'
+                            })
+                        } else {
+                            $('.matters').css({
+                                top: '2160px'
+                            })
+                        }
                     }
                 }
             },

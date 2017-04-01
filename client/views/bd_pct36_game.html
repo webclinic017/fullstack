@@ -68,24 +68,15 @@
                     <span class="start_game center showCode" id="start_game"></span>                  
                 </div>
                 <div class="t36_main__table center">
-                    <table>
-                        <colgroup>
-                            <col width="50%">
-                            <col width="50%">
-                        </colgroup>
-                        <thead>
-                            <tr>
-                                <td>用户昵称</td>
-                                <td>红包</td>
-                            </tr>
-                        </thead>
-                        <tbody id="award_list">
-                            <tr>
-                                <td colspan="2">正在获取中奖信息...</td>
-                            </tr>
-                            <!-- forTemplateInsert -->
-                        </tbody>
-                    </table>
+                    <ul  id="award_list">
+                        <li class="head">
+                            <span>用户昵称</span>
+                            <span>红包</span>
+                        </li>
+                        <ul id="template">
+                            <li class="list">正在获取获奖名单...</li>
+                        </ul>
+                    </ul>
                 </div>
                 <img src="/images/bd/t36_advantages.png" class="t36_main__advantages" draggable="false">
             </div>
@@ -107,15 +98,15 @@
     <script id="award_table" type="text/template">
         <$if(list.length > 0){$>
             <$for(var i=0; i<list.length; i++){$>
-                <tr>
-                    <td><$=list[i].nickname$></td>
-                    <td><$='$' + list[i].amount + '红包'$></td>
-                </tr>
+                <li class="list">
+                    <span><$=(list[i].nickname || '未知昵称')$></span>
+                    <span><$='$' + (list[i].amount || '') + '红包'$></span>
+                </li>
             <$}$>
         <$} else {$>
-            <tr>
-                <td colspan="2">暂无中奖信息...</td>
-            </tr>
+           <li class="list">
+                暂无获奖名单...
+            </li>
         <$}$>
     </script>
     <!-- build:js(client) /scripts/bd_t36.js -->
