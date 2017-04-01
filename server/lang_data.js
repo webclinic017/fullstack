@@ -970,7 +970,7 @@ module.exports = function () {
         "mWapInfo2": {"zh": "昵称", "en": "Username"},
         "mWapInfo3": {"zh": "所在地", "en": "Location"},
         "mWapUsername1": {"zh": "请输入昵称", "en": "Please enter your Username"},
-        "mWapUsername2": {"zh": "昵称包含4-16个字符，由汉字、字母、数字组成", "en": "Incorrect username"},
+        "mWapUsername2": {"zh": "昵称包含2-16个字符，由汉字、字母、数字组成", "en": "Incorrect username"},
         "mWapUsername3": {"zh": "昵称已存在", "en": "The username already exists"},
         "mWapUsername4": {"zh": "昵称包含敏感词汇，请修改", "en": "The username contains sensitive words"},
         "mWapUsername5": {"zh": "提交", "en": "Submit"},

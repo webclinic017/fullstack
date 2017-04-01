@@ -44,7 +44,8 @@ $(document).ready(function () {
     function regist(info) {
         var input = $('#' + info.usernameId);
         var rName = input.val() ? input.val() : "";
-        if (/^[\u4e00-\u9fa5A-Za-z\d]+$/.test(input.val())) {
+
+        if (/^[\u4e00-\u9fa5A-Za-z0-9]{2,16}$/.test(input.val())) {
             function checkLength(name) {
                 var num = 0;
                 for (var i = 0; i < name.length; i++) {
@@ -58,11 +59,11 @@ $(document).ready(function () {
             }
 
             var username_length = parseInt(checkLength(input.val()));
-            if (username_length < 4 || username_length > 16) {
-                input.val("昵称应在4到16个字符之间").addClass("warning");
+            if (username_length < 2 || username_length > 16) {
+                input.val("昵称包含2-16个字符，支持中英文、数字").addClass("warning");
             }
-        } else if (!(/^[\u4e00-\u9fa5A-Za-z\d]+$/.test(input.val()))) {
-            input.val("昵称不合法").addClass("warning");
+        } else if (!(/^[\u4e00-\u9fa5A-Za-z0-9]{2,16}$/.test(input.val()))) {
+            input.val("昵称包含2-16个字符，支持中英文、数字").addClass("warning");
         }
         if ((input.val() == "") || (input.val() == "请填写昵称")) {
             input.val("请填写昵称").addClass("warning");

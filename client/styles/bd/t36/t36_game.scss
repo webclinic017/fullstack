@@ -1,5 +1,4 @@
 $t36_game_height: 100%;
-
 .page1-tip-layer {
     background-color: transparent;
     
@@ -126,6 +125,7 @@ $t36_game_height: 100%;
     position: relative;
     overflow: hidden;
 }
+
 @include b(t36_game) {
     position: absolute;
     left: 0;
@@ -134,7 +134,6 @@ $t36_game_height: 100%;
     width: 100%;
     height: 400%;
     transition: all .4s;
-
     &.page2 {
         top: -100%;
     }
@@ -152,17 +151,22 @@ $t36_game_height: 100%;
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-
         @include m(logo) {
             height: 8%;
             text-align: center;
             padding-top: px2rem(32);
-
             img {
                 height: 100%;
             }
         }
-
+        .btn-login,
+        .btn-togame {
+            display: none;
+        }
+        .btn-login.active,
+        .btn-togame.active {
+            display: block;
+        }
         @include m(focus) {
             height: 38%;
             background-image: url("/images/bd_t36/page1_focus.png");
@@ -223,12 +227,10 @@ $t36_game_height: 100%;
         background-size: cover;
         background-repeat: no-repeat;
         padding: 0 px2rem(20);
-        
         @include m(logo) {
             height: 8%;
             text-align: center;
             padding-top: px2rem(32);
-
             img {
                 height: 100%;
             }
@@ -237,7 +239,6 @@ $t36_game_height: 100%;
             height: 23%;
             text-align: center;
             padding-top: px2rem(16);
-
             img {
                 height: 100%;
             }
@@ -250,11 +251,9 @@ $t36_game_height: 100%;
             color: #fff;
             overflow: hidden;
             margin: 0 auto;
-
             .navbar {
                 background-color: #ff0000;
                 padding: px2rem(10) px2rem(60);
-
                 li {
                     float: left;
                     width: $t36_game_height / 2;
@@ -271,54 +270,47 @@ $t36_game_height: 100%;
                 &.active {
                     display: block;
                 }
-
                 li {
                     padding: px2rem(4) 0;
-
                     span {
                         float: left;
                         width: $t36_game_height / 2;
                         text-align: center;
-                        overflow:hidden;
-                        text-overflow:ellipsis;
-                        white-space:nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
                     }
                 }
             }
         }
-
         .t36_game_box_wrapper {
-            width: 100%;    // 680
-            height: 40%;    // 602
+            width: 100%; // 680
+            height: 40%; // 602
             background-image: url("/images/bd_t36/game-box.png");
             background-size: cover;
             background-repeat: no-repeat;
             margin: px2rem(16) auto;
             position: relative;
-            
             .game_chance {
                 height: 44px;
                 font-size: 10px;
                 color: #fff;
                 padding-top: 22px;
                 text-align: center;
-
                 img {
                     height: 100%;
                     vertical-align: middle;
                     display: none;
-
                     &.active {
                         display: inline-block;
                     }
                 }
             }
-
             .btn-start {
-                width: 250px;   // 250
-                height: 99px;   // 99
+                width: 250px; // 250
+                height: 99px; // 99
                 position: absolute;
-                top: 0px;     // 412
+                top: 0px; // 412
                 left: 50%;
                 margin-left: -125px;
                 background-image: url("/images/bd_t36/start.png");
@@ -453,31 +445,28 @@ $t36_game_height: 100%;
         }
     }
 }
+
 @include b(t36_game_box) {
-    width: 430px;   // 430
-    height: 115px;  // 115
+    width: 430px; // 430
+    height: 115px; // 115
     position: absolute;
-    top: 198px;     // 198
+    top: 198px; // 198
     left: 50%;
     margin-left: -215px;
     overflow: hidden;
-
     @include e(list) {
         width: 100%;
         height: 100%;
-        
         li {
             float: left;
             position: relative;
-            width: 40px;    // 65
-            height: 40px;   // 115
+            width: 40px; // 65
+            height: 40px; // 115
             margin-right: 26px; // 26
             transition: all 1s;
-
             &:last-child {
                 margin-right: 0 !important;
             }
-            
             div {
                 position: absolute;
                 left: 0;
@@ -488,7 +477,6 @@ $t36_game_height: 100%;
                 // border: 1px solid #ccc;
                 // text-align: center;
                 // line-height: 40px;
-                
                 span {
                     width: 50px;
                     height: 53.333px;
@@ -498,15 +486,199 @@ $t36_game_height: 100%;
                     margin-top: -25px;
                     margin-left: -26.667px;
                     background-image: url("/images/bd_t36/poke.png");
-                    background-size: 200px 266.665px;   // 300 400 // 75 80
+                    background-size: 200px 266.665px; // 300 400 // 75 80
                     background-position: 0px 0px;
                     background-repeat: no-repeat;
                 }
-
                 &.ready {
                     top: 100%;
                 }
             }
         }
+    }
+}
+
+.t36_pc_layout {
+    transition: filter .2s linear;
+    -webkit-transition: filter .2s linear;
+    // height: 1000px;
+    background: url('/images/bd/t36_bg_slicer.png');
+    .gradient_layer {
+        width: 100%;
+        position: relative;
+        // height: 100%;
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+        background: -moz-linear-gradient(left center, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+        background: linear-gradient(left center, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0));
+        transition: background 2s linear;
+        -webkit-transition: background 2s linear;
+        @include b(t36_main) {
+            // height: 500px;
+            text-align: center;
+            @include e(banner) {
+                width: 100%;
+                position: relative;
+                img {
+                    display: block;
+                    width: 70%;
+                }
+                .getNow1 {
+                    display: block;
+                    width: 200px;
+                    height: 70px;
+                    background: url('/images/bd/t36_pc_sprite.png');
+                    background-position: right top;
+                    position: absolute;
+                    bottom: 210px;
+                    left: 348px;
+                    background-size: 900px;
+                    margin-bottom: 70px;
+                    cursor: pointer;
+                }
+                .act_time {
+                    position: absolute;
+                    bottom: 220px;
+                    right: 260px;
+                    transform: rotateZ(2deg);
+                    -webkit-transform: rotateZ(2deg);
+                    color: #fff;
+                    text-align: right;
+                    line-height: 28px;
+                    span:nth-child(1) {
+                        font-size: 18px;
+                    }
+                    span:nth-child(2) {
+                        font-size: 16px;
+                    }
+                }
+            }
+            @include e(redbag) {
+                height: 253px;
+                width: 560px;
+                background: url('/images/bd/t36_redbag.png') no-repeat;
+                background-size: 100% 100%;
+                margin-top: 50px;
+                ul {
+                    width: 100%;
+                    padding-top: 190px;
+                    li {
+                        width: 33.33%;
+                        float: left;
+                        p {
+                            color: #fff;
+                            line-height: 25px;
+                            text-align: center;
+                            span:nth-child(1) {
+                                font-weight: 400;
+                                font-size: 16px;
+                                display: block;
+                            }
+                            span:nth-child(2) {
+                                font-weight: 100;
+                                font-size: 12px;
+                            }
+                        }
+                        .p1 {
+                            padding-left: 20px;
+                        }
+                        .p3 {
+                            padding-right: 30px;
+                        }
+                    }
+                }
+            }
+            @include e(gammer) {
+                position: relative;
+                img {
+                    display: block;
+                    width: 55%;
+                    margin-top: 35px;
+                }
+                .start_game {
+                    display: block;
+                    position: absolute;
+                    width: 255.5px;
+                    height: 101.5px;
+                    left: 40.5%;
+                    cursor: pointer;
+                    bottom: 100px;
+                    background: url('/images/bd/t36_starter.png') no-repeat;
+                    background-size: 100% 100%;
+                    &.active {
+                        background: url('/images/bd/t36_starter_active.png') no-repeat;
+                        background-size: 100% 100%;
+                    }
+                }
+            }
+            @include e(table) {
+                width: 560px;
+                opacity: 0.9;
+                table {
+                    border-radius: 10px;
+                    width: 100%;
+                    overflow: hidden;
+                    margin-top: 35px;
+                    td {
+                        height: 40px;
+                        width: 33.3%;
+                        color: #fff;
+                    }
+                    thead {
+                        background: #ff0000;
+                    }
+                    tbody {
+                        background: #ff4900;
+                    }
+                }
+            }
+            @include e(advantages) {
+                margin-top: 540px;
+                width: 630px;
+                margin-bottom: 50px;
+            }
+        }
+        .matters {
+            position: absolute;
+            top: 1900px;
+            background: url('/images/bd/t36_filter.png') no-repeat;
+            background-size: 100% 100%;
+            width: 100%;
+            height: 448px;
+            opacity: 0.9;
+            color: #fff;
+            .con_box {
+                width: 600px;
+                p {
+                    line-height: 30px;
+                    font-weight: 100;
+                    font-size: 16px;
+                    span {
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.layer_content {
+    display: none;
+}
+
+.active_code {
+    text-align: center;
+    img {
+        width: 288px;
+    }
+    .close_layer {
+        display: block;
+        width: 45px;
+        height: 45px;
+        background: url(/images/bd/t36_pc_sprite.png) no-repeat;
+        background-position: -560px 0px;
+        background-size: 800px;
+        margin: 0 auto;
+        margin-top: 40px;
+        cursor: pointer;
     }
 }
