@@ -70,6 +70,7 @@
             account.getStates('CN').then(function (data) {
                 // console.info(data);
                 $scope.provinces = data.data;
+                if(!passedScope.card.province){ return }
                 var keepGoing = true;
                 var targetProvinceZh = passedScope.card.province
                 angular.forEach($scope.provinces, function (province,index) {
@@ -86,10 +87,10 @@
             });
         }
         function getCity() {
-            if (!$scope.card.province.code) { return }
             account.getCities($scope.card.province.code).then(function (data) {
                 // console.info(data);
                 $scope.citys = data.data;
+                if(!passedScope.card.city){ return }
                 var targetCityZh = passedScope.card.city;
                 var keepGoing = true;
                 angular.forEach($scope.citys, function (city,index) {
