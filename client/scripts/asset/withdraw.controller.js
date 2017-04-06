@@ -85,7 +85,8 @@
                     $scope.withdraw.card.number = data.data.card_no;
                     $scope.withdraw.card.bank = data.data.bank_name;
                     $scope.withdraw.card.address = data.data.bank_addr;
-
+                    $scope.withdraw.card.province = data.data.province;
+                    $scope.withdraw.card.city = data.data.city;
                 }
             });
         }

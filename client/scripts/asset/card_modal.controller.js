@@ -51,6 +51,7 @@
         // 如果是修改银行卡，要初始化表单元素数据
         if (typeof passedScope.card !== 'undefined') {
             angular.extend($scope.card, passedScope.card);
+            // console.log($scope.card)
             $scope.card.number = undefined;
 
             var isBreak = false;
@@ -65,20 +66,46 @@
             });
         }
 
-        function getProvince () {
+        function getProvince() {
             account.getStates('CN').then(function (data) {
                 // console.info(data);
                 $scope.provinces = data.data;
+                if(!passedScope.card.province){ return }
+                var keepGoing = true;
+                var targetProvinceZh = passedScope.card.province
+                angular.forEach($scope.provinces, function (province,index) {
+                    if (!keepGoing) {
+                        return;
+                    }
+                    // console.log(province.name_cn === targetProvinceZh);
+                    if (province.name_cn === targetProvinceZh) {
+                        $scope.card.province = province;
+                        keepGoing = false;
+                    }
+                });
+                getCity();
             });
         }
-
-        function getCity () {
+        function getCity() {
             account.getCities($scope.card.province.code).then(function (data) {
                 // console.info(data);
                 $scope.citys = data.data;
+                if(!passedScope.card.city){ return }
+                var targetCityZh = passedScope.card.city;
+                var keepGoing = true;
+                angular.forEach($scope.citys, function (city,index) {
+                    if (!keepGoing) {
+                        return;
+                    }
+                    if (city.name_cn === targetCityZh) {
+                        $scope.card.city = city;
+                        keepGoing = false;
+                    }
+                });
             });
         }
         function submitForm() {
+            // console.log($scope.card);
             showErr('number');
             showErr('bank');
             showErr('address');
@@ -111,7 +138,7 @@
         // 去实名认证
         $scope.verify = verify;
         function verify() {
-            $state.go('space.setting.subpage',{subpage:'verify'},{reload:true});
+            $state.go('space.setting.subpage', { subpage: 'verify' }, { reload: true });
             closeModal();
         }
 
