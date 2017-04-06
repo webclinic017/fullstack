@@ -27,9 +27,9 @@
             </td>
             <td>
                 <span>{{ history.status_desc }}</span>
-                <span ng-if="history.pay_again === 1 && history.type === 1">
+                <!-- <span ng-if="history.pay_again === 1 && history.type === 1">
                     <a class="font-info" href="/action/public/v4/pay_order/{{history.code}}" target="_blank">继续充值</a>
-                </span>
+                </span> -->
                  <span ng-if="history.withdraw === 1">
                     <a class="deposit__pointer font-info" ng-click="cancelWithdraw(history.code)">撤销申请</a>
                 </span>

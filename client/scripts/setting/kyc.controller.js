@@ -10,6 +10,7 @@
 
     function SettingKycController($scope, $state, $timeout, account) {
         $scope.questions = [];
+        $scope.isSetKyc = false;
 
         $scope.tip = {
             questions: {
@@ -32,7 +33,7 @@
             $scope.type = 'setting';
         }
 
-        getKyc();
+        setUserLastKyc();
         
         function selectOption(question) {
             $scope.tip.questions.show = false;
@@ -90,9 +91,8 @@
                     if ($scope.type === 'setting') {
                         $scope.clickable = true;
                         $timeout(function () {
-                            $scope.tip.system.show = false;
-                            $scope.tip.system.status = 0;
-                        }, 3000);
+                            setUserLastKyc();
+                        }, 1000);
                     } else {
                         goNextStep();
                     }
@@ -146,17 +146,17 @@
                         answer: question.answer
                     });
                 });
-                setUserLastKyc();
             });
         }
         function setUserLastKyc(){
             account.getUserKyc().then(function(rs){
+                console.log(rs);
                 var data = rs && rs.data || {};
                 if(data && data.interests_exp){
-                    angular.forEach($scope.questions, function(question, index){
-                        question.answer = data[question.id];
-                        results[index].answer = data[question.id];
-                    });
+                    $scope.$broadcast("hideLoadingImg");
+                    $scope.isSetKyc = true;
+                } else {
+                    getKyc();
                 }
             });
         }

@@ -16,8 +16,8 @@
 
         var account = {
             getPersonalInfoDegreeApi: o + '/action/public/v4/user_perfect_degree',
-            loginApi: o + '/action/public/v3/login',
-            // loginApi: urlOrigin2 + '/auth/login',
+            // loginApi: o + '/action/public/v3/login',
+            loginApi: urlOrigin2 + '/auth/login',
             checkLoginedApi: o + '/action/public/v4/check',
             setTokenApi: o + '/action/public/v3/set_token',
             checkExistApi: o + '/action/public/v4/exists',
@@ -28,7 +28,8 @@
             getCaptchaApi: o + '/action/public/v3/get_phone_code',
             checkPhoneAndCaptchaApi: o + '/action/public/v4/verifycode',
             setNewPwdApi: o + '/action/public/v4/change_password',
-            getPersonalInfoApi: o + '/action/public/v4/get_info',
+            // getPersonalInfoApi: o + '/action/public/v4/get_info',
+            getPersonalInfoApi: urlOrigin2 + '/user/info',
             getAssetInfoApi: o + '/action/public/v4/get_usercenter_asset',
             getUnreadLengthApi: o + '/action/public/v3/get_notify_num',
             getNoticeCategoryApi: o + '/action/public/v3/get_notify_cate',
@@ -120,6 +121,13 @@
             getMonthlySymbolsApi: o + '/action/public/v5/monthly_symbols'
         };
 
+        var redbag = {
+            getRedbagPoolApi: o + '/action/public/bonus/lists',
+            getRedbagListApi: o + '/action/public/bonus/my_bonus',
+            receiveRedbagApi: o + '/action/public/bonus/receive',
+            exchangeRedbagApi: o + '/action/public/bonus/bonus_pay_condition'
+        };
+
         var service = {
             account: account,
             asset: asset,
@@ -129,7 +137,8 @@
             market: market,
             product: product,
             ranklist: ranklist,
-            trader: trader
+            trader: trader,
+            redbag: redbag
         };
         return service;
     }

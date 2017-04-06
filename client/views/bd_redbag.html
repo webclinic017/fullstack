@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en" class="bd_redbag">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%=lang.text("companyZhName")%>｜红包活动</title>
+        <% include vendor.css.html %>
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
+        <!-- endbuild -->
+        <% include common/common_header.html %>
+        <% include vendor.js.html %>
+</head>
+
+<body ng-app="fullstackApp" class="pd-tp-30">
+    <div ng-controller="GlobalController">
+        <% include navbar/main.html %>
+        <div class="bd_redbag_layout">
+            <div class="fullpage" id="dowebok">
+                <div class="section section1">
+                    <div class="static">
+                        <div class="cont">
+                            <img src="/images/bd_redbag/rb_1-1.png" alt="" class="title">
+                            <img src="/images/bd_redbag/rb_1-2.png" alt="" class="tip">
+                            <p class="range">2017年3月15日 火热开启</p>
+                        </div>
+                        <a href="/space/#/space/redbag/own" class="section_btn">
+                            <span>注册领红包</span>
+                            <img src="/images/bd_redbag/bag-1.png" class="bag">
+                        </a>
+                    </div>
+                    <div class="remark animated bounceIn">
+                        <p>
+                            1. 新用户注册后即获得$200体验金。体验金仅限模拟交易操作，不可支取。完成首次入金后，所有体验金交易订单平仓，体验金清零。体验金交易红包（“露一手”）的盈利计算，以体验金交易订单平仓后数据为准；
+                        </p>
+                        <p>
+                            2. 用户需在红包指定兑现期限内完成对应条件并手动完成兑现，过期不能兑现；
+                        </p>
+                        <p>
+                            3. 活动所列红包每个用户仅可领取一次，兑现金额将在执行兑现操作后入账且可支取；
+                        </p>
+                        <p>
+                            4. 本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，CFD类产品交易手数不计入统计范围；
+                        </p>
+                        <p>
+                            5. 本活动仅限活动开始后新注册用户。用户提取资金前，需完成完整个人信息的提交并通过审核；
+                        </p>
+                        <p>
+                            6. <%= lang.text("companyZhName")%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打 <%= lang.text("telephone")%>；
+                        </p>
+                    </div>
+                </div>
+                <div class="section section2">
+                    <div class="cont">
+                        <div class="title">
+                            入金红包
+                        </div>
+                        <!-- <div class="dollar">
+                            <i class="fa fa-usd"></i>
+                            $200
+                        </div> -->
+                        <div class="dollar">
+                            <img src="/images/bd_redbag/rb_2-2.png">
+                        </div>
+                        <ul class="list clearfix">
+                            <li class="mr hover_scaled">
+                                <div class="l">
+                                    <h4>初入江湖</h4>
+                                    <p>
+                                        首次入金后完成5手交易，且兑现前未出金即可兑现红包(金额$10)，每个用户仅可领取一次(注册后14天内兑现)
+                                    </p>    
+                                </div>
+                                <div class="s">
+                                    <h4>
+                                        <i class="fa fa-usd"></i>
+                                        <span>10</span>
+                                    </h4>
+                                    <p>
+                                        完成5手可领
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="hover_scaled">
+                                <div class="l">
+                                    <h4>崭露头角</h4>
+                                    <p>
+                                        首次入金后完成30手交易，且兑现前未出金即可兑现红包（金额$50），每个用户仅可领取一次（注册后60天内兑现）
+                                    </p>    
+                                </div>
+                                <div class="s">
+                                    <h4>
+                                        <i class="fa fa-usd"></i>
+                                        <span>50</span>
+                                    </h4>
+                                    <p>
+                                        完成30手可领
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="mr hover_scaled">
+                                <div class="l">
+                                    <h4>驾轻就熟</h4>
+                                    <p>
+                                        首次入金后完成15手交易，且兑现前未出金即可兑现红包（金额$20），每个用户仅可领取一次（注册后30天内兑现）
+                                    </p>    
+                                </div>
+                                <div class="s">
+                                    <h4>
+                                        <i class="fa fa-usd"></i>
+                                        <span>20</span>
+                                    </h4>
+                                    <p>
+                                        完成15手可领
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="hover_scaled">
+                                <div class="l">
+                                    <h4>小有所成</h4>
+                                    <p>
+                                        首次入金后完成50手交易，且兑现前未出金即可兑现红包（金额$120），每个用户仅可领取一次（注册后60天内兑现）
+                                    </p>    
+                                </div>
+                                <div class="s">
+                                    <h4>
+                                        <i class="fa fa-usd"></i>
+                                        <span>120</span>
+                                    </h4>
+                                    <p>
+                                        完成50手可领
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="/space/#/space/redbag/own" class="section_btn">
+                        <span>注册领红包</span>
+                        <img src="/images/bd_redbag/bag-1.png" class="bag">
+                    </a>
+                </div>
+                <div class="section section3">
+                    <div class="cont">
+                        <div class="dollar">
+                            <img src="/images/bd_redbag/rb_3-1.png">
+                        </div>
+                        <div class="tip">
+                            完成200手可领
+                        </div>
+                        <div class="detail hover_scaled">
+                            <h4>傲视群雄</h4>
+                            <p>
+                                首次入金后5天内累计入金1万美元以上，完成200手交易，且兑现前未出金即可兑现红包（金额$500）每个用户仅可领取一次（注册后180天内兑现）
+                            </p>
+                        </div>
+                    </div>
+                    <a href="/space/#/space/redbag/own" class="section_btn">
+                        <span>注册领红包</span>
+                        <img src="/images/bd_redbag/bag-1.png" class="bag">
+                    </a>
+                </div>
+                <div class="section section4">
+                    <div class="cont">
+                        <div class="list clearfix">
+                            <div class="lt hover_scaled">
+                                <div class="title">
+                                    注册红包
+                                </div>
+                                <div class="item_t">
+                                    <h4>
+                                        <i class="fa fa-usd"></i>
+                                        <span>5</span>
+                                    </h4>
+                                    <p>
+                                        满2手且盈利15%+(无持仓订单)可兑
+                                    </p>
+                                </div>
+                                <div class="item_b">
+                                    <h4>露一手</h4>
+                                    <p>
+                                        体验金交易满2手、盈利15%以上（无持仓订单），完成首次入金后即可兑现（金额$5），每个用户仅可领取一次。（注册后60天内兑现）
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="rt hover_scaled">
+                                <div class="title">
+                                    邀请好友红包
+                                </div>
+                                <div class="item_t">
+                                    <h4>
+                                        <i class="fa fa-usd"></i>
+                                        <span>10</span>
+                                    </h4>
+                                    <p>
+                                        邀请3名好友且至少1人入金并交易满1手可兑
+                                    </p>
+                                </div>
+                                <div class="item_b">
+                                    <h4>人从众</h4>
+                                    <p>
+                                        新注册用户分享活动，邀请3名好友注册，且至少有1人入金并完成1手交易即可兑现, 每个用户仅可领取一次。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/space/#/space/redbag/own" class="section_btn">
+                        <span>注册领红包</span>
+                        <img src="/images/bd_redbag/bag-1.png" class="bag">
+                    </a>
+                </div>
+                <div class="section section5">
+                    <div class="box clearfix">
+                        <div class="ft">
+                            <div class="clearfix">
+                                <div class="tip">
+                                    <img src="/images/bd_redbag/rb_5-1.png">
+                                    <ul class="list">
+                                        <li>
+                                            跟单交易:复制高手订单，新手也能轻松操作
+                                        </li>
+                                        <li>
+                                            权威监管:权威金融监管机构资金监管，安全放心
+                                        </li>
+                                        <li>
+                                            快捷便利:支持PC端MT4交易工具和app端交易，随时随地
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="pic">
+                                    <img src="/images/bd_redbag/rb_5-2.png">
+                                    <p>下载<%= lang.text("companyZhName")%> APP</p>
+                                </div>
+                            </div>
+                            <div class="desc">
+                                风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。 <%= lang.text("companyZhName")%>交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+                            </div>
+                        </div>
+                        <div class="rt">
+                            <div class="form-control-wrapper">
+                                <input type="text" name="username" id="username" class="form-control" placeholder="昵称">
+                            </div>
+                            <div class="form-control-wrapper">
+                                <input type="tel" name="telephone" id="telephone" class="form-control" placeholder="电话">
+                            </div>
+                            <div class="form-control-wrapper">
+                                <input type="text" name="email" id="email" class="form-control" placeholder="邮箱">
+                            </div>
+                            <span class="section5_btn" id="regist_btn">
+                                注册领红包
+                                <img src="/images/bd_redbag/bag-2.png" class="bag">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('bd/common/footer.html') %>
+</body>
+
+<!-- build:js(client) /scripts/bd_redbag.js -->
+<script src="/scripts/common/config.service.js"></script>
+<script src="/scripts/common/account.service.js"></script>
+<script src="/scripts/common/authorization.service.js"></script>
+<script src="/scripts/common/redbag.service.js"></script>
+<script src="/scripts/common/navbar.directive.js"></script>
+<script src="/scripts/common/dropdown.directive.js"></script>
+<script src="/scripts/common/global.controller.js"></script>
+<script src="/scripts/common/loading_img.directive.js"></script>
+<script src="/scripts/common/modal.js"></script>
+<script src="/scripts/common/pagination.directive.js"></script>
+<script src="/scripts/common/duration.filter.js"></script>
+<script src="/scripts/common/transition.service.js"></script>
+<script src="/scripts/common/symbol_mod.filter.js"></script>
+<script src="/scripts/common/trader.service.js"></script>
+<script src="/scripts/common/lang.service.js"></script>
+<script src="/scripts/common/lang_data.service.js"></script>
+<script src="/scripts/bd/t30/check.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<script src="/scripts/plugins/layer.js"></script>
+<script src="/scripts/bd/redbag/redbag.js"></script>
+<!-- endbuild -->
+</html>

@@ -13,8 +13,18 @@
 }
 
 .btn-primary {
-    background-color: $brand-primary;
-    border-color: $brand-primary;
+    background-color: $m-brand-primary;
+    border-color: $m-brand-primary;
+
+    &:active {
+        background-color: $brand-primary-dark;
+        border-color: $brand-primary-dark;
+    }
+}
+
+.btn-info {
+    background-color: $m-gray-lighter;
+    border-color: $m-gray-lighter;
 }
 
 .btn-lg {

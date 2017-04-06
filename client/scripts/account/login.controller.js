@@ -50,6 +50,11 @@
                 
                 if (textEnc) {
                     account.login($scope.account.id, textEnc, $scope.account.autoLogin).then(function (data) {
+                        console.log(data);
+                        if (!data) {
+                            $scope.clickable = true;
+                            return;
+                        }
                         if (!data.is_succ) {
                             
                             $scope.backErr.show = true;

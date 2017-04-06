@@ -121,8 +121,8 @@
                     if ($scope.personal.master === 1) {
                         openSystemMdl('isMaster');
                     } else {
-                        // 判断是否实名认证
-                        if ($scope.personal.verified === true) {
+                        // 判断是否实名认证 //复制不需要实名认证
+                        // if ($scope.personal.verified === true) {
                             var minCopyAmount = parseFloat($scope.master.min_copy_amount, 10);
 
                             if (typeof avaCopyAmount === 'undefined') {
@@ -130,16 +130,16 @@
                                 return;
                             }
                             avaCopyAmount = parseFloat(avaCopyAmount, 10);
-
+                            // console.log(avaCopyAmount, minCopyAmount);
                             if (avaCopyAmount < minCopyAmount) {
                                 openSystemMdl('amount', minCopyAmount);
                             } else {
                                 openCopyMdl();
                             }
 
-                        } else {
-                            openSystemMdl('verify');
-                        }
+                        // } else {
+                        //     openSystemMdl('verify');
+                        // }
                     }
                 }
             } else {

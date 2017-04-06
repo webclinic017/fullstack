@@ -1,84 +1,156 @@
 'use strict';
-var company_name = process.env.COMPANY_NAME;
-var url_path = process.env.URL_PATH;
-var companyConfig = {};
-var indexBasePath = "/white_label";
-var date = require('./tools').date;
-var versionAndroidApp = require('./app_ctrl.config').getAppInfo().url;
-
-if (company_name === 'tigerwit') {
-    companyConfig = {
-        companyNameZh: "老虎外汇",
-        companyNameEn: "TigerWit",
-        companyNickName: "小老虎",
-        titleZh: "老虎外汇 - TigerWit",
-        titleEn: "TigerWit",
-        supportEmail: "support@tigerwit.com",
-        ibEmail: "support@tigerwit.com",
-        telephone: "400 - 809 - 8509",
-        webSite: "www.tigerwit.com",
-        webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
-        androidApp: versionAndroidApp,
-        download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
-
-        // path
-        logoPathZh: indexBasePath + "/tigerwit-logo.png",
-        h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
-        helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-        logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
-        homePersonPath: indexBasePath + "/index-person-tiger.jpg",
-        homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
-        homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
-        homePlusPath: indexBasePath + "/index2-master-jia-tiger.png",
-
-        webCopyRule: indexBasePath + "/rules-banner-tigerwit.jpg",
-        webCopySelect: indexBasePath + "/select-banner-tigerwit.jpg",
-        webAgentProxy: indexBasePath + "/agent-banner-tigerwit.jpg",
-        webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
-
-        icoPath: indexBasePath + "/tigerwit.ico",
-        t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
-    };
-
-}
-if (company_name === 'pkds') {
-    companyConfig = {
-        companyNameZh: "派克道森",
-        companyNameEn: "Pakerdawson",
-        companyNickName: "派克道森",
-        titleZh: "派克道森 - Parkerdawson",
-        titleEn: "Parkerdawson",
-        supportEmail: "info@pkdsfx.com",
-        ibEmail: "info@pkdsfx.com",
-        telephone: "400 - 900 - 9296",
-        webSite: "www.pkdsfx.com",
-        webMt4Download: "http://pkdsfx.com/downloads/mt4/parkerdawson4setup.exe",
-        androidApp: versionAndroidApp,
-        download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex",
-
-        // path
-        logoPathZh: indexBasePath + "/pkds-logo.png",
-        h5_register_logo: indexBasePath + "/h5_register_logo_Pakerdawson.png",
-        helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-        logoPathEn: indexBasePath + "/pkds-logo.png",
-        homePersonPath: indexBasePath + "/index-person-tiger.jpg",
-        homeTradePathZh: indexBasePath + "/index2-trade-img-pkds.png",
-        homeTradePathEn: indexBasePath + "/index2-trade-img-pkds.png",
-        homePlusPath: indexBasePath + "/index2-master-jia-pkds.png",
-
-        webCopyRule: indexBasePath + "/rules-banner-pkds.jpg",
-        webCopySelect: indexBasePath + "/select-banner-pkds.jpg",
-        webAgentProxy: indexBasePath + "/agent-banner-pkds.jpg",
-        webAgentBecome: indexBasePath + "/become-banner-pkds.jpg",
-
-        icoPath: indexBasePath + "/pkds.ico",
-        t33_logo: indexBasePath + "/pkds-logo.png"
-
-    };
-
-}
 
 module.exports = function () {
+    var envConfig = require('./get_env_config').envConfig;
+    var company_name = envConfig.company_name;
+    var url_path = envConfig.url_path;
+    var companyConfig = {};
+    var indexBasePath = "/white_label";
+    var date = require('./tools').date;
+    var versionAndroidApp = require('./app_ctrl.config').getAppInfo().url;
+
+    if (company_name === 'tigerwit') {
+        companyConfig = {
+            companyNameZh: "老虎外汇",
+            companyNameEn: "TigerWit",
+            companyNickName: "小老虎",
+            titleZh: "老虎外汇 - TigerWit",
+            titleEn: "TigerWit",
+            supportEmail: "support@tigerwit.com",
+            ibEmail: "support@tigerwit.com",
+            telephone: "400 - 809 - 8509",
+            webSite: "www.tigerwit.com",
+            webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
+            androidApp: versionAndroidApp,
+            download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
+
+            // path
+            logoPathZh: indexBasePath + "/tigerwit-logo.png",
+            h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
+            helpLogo: indexBasePath + "/help-logo-tigerwit.png",
+            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            homePersonPath: indexBasePath + "/index-person-tiger.jpg",
+            homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
+            homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
+            homePlusPath: indexBasePath + "/index2-master-jia-tiger.png",
+
+            webCopyRule: indexBasePath + "/rules-banner-tigerwit.jpg",
+            webCopySelect: indexBasePath + "/select-banner-tigerwit.jpg",
+            webAgentProxy: indexBasePath + "/agent-banner-tigerwit.jpg",
+            webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
+
+            icoPath: indexBasePath + "/tigerwit.ico",
+            t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
+        };
+
+    }
+    if (company_name === 'lonfx') {
+        companyConfig = {
+            companyNameZh: "莱恩",
+            companyNameEn: "lonfx",
+            companyNickName: "莱恩",
+            titleZh: "莱恩 - lonfx",
+            titleEn: "lonfx",
+            supportEmail: "support@tigerwit.com",
+            ibEmail: "support@tigerwit.com",
+            telephone: "400 - 809 - 8509",
+            webSite: "lonfx.tigerwit.com",
+            webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
+            androidApp: versionAndroidApp,
+            download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
+
+            // path
+            logoPathZh: indexBasePath + "/tigerwit-logo.png",
+            h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
+            helpLogo: indexBasePath + "/help-logo-tigerwit.png",
+            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            homePersonPath: indexBasePath + "/index-person-tiger.jpg",
+            homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
+            homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
+            homePlusPath: indexBasePath + "/index2-master-jia-tiger.png",
+
+            webCopyRule: indexBasePath + "/rules-banner-tigerwit.jpg",
+            webCopySelect: indexBasePath + "/select-banner-tigerwit.jpg",
+            webAgentProxy: indexBasePath + "/agent-banner-tigerwit.jpg",
+            webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
+
+            icoPath: indexBasePath + "/tigerwit.ico",
+            t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
+        };
+
+    }
+    if (company_name === 'pandafx') {
+        companyConfig = {
+            companyNameZh: "熊猫外汇",
+            companyNameEn: "pandafx",
+            companyNickName: "熊猫",
+            titleZh: "熊猫外汇 - pandafx",
+            titleEn: "pandafx",
+            supportEmail: "support@tigerwit.com",
+            ibEmail: "support@tigerwit.com",
+            telephone: "400 - 809 - 8509",
+            webSite: "pandafx.tigerwit.com",
+            webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
+            androidApp: versionAndroidApp,
+            download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
+
+            // path
+            logoPathZh: indexBasePath + "/tigerwit-logo.png",
+            h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
+            helpLogo: indexBasePath + "/help-logo-tigerwit.png",
+            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            homePersonPath: indexBasePath + "/index-person-tiger.jpg",
+            homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
+            homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
+            homePlusPath: indexBasePath + "/index2-master-jia-tiger.png",
+
+            webCopyRule: indexBasePath + "/rules-banner-tigerwit.jpg",
+            webCopySelect: indexBasePath + "/select-banner-tigerwit.jpg",
+            webAgentProxy: indexBasePath + "/agent-banner-tigerwit.jpg",
+            webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
+
+            icoPath: indexBasePath + "/tigerwit.ico",
+            t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
+        };
+
+    }
+    if (company_name === 'pkds') {
+        companyConfig = {
+            companyNameZh: "派克道森",
+            companyNameEn: "Parkerdawson",
+            companyNickName: "派克道森",
+            titleZh: "派克道森 - Parkerdawson",
+            titleEn: "Parkerdawson",
+            supportEmail: "info@pkdsfx.com",
+            ibEmail: "info@pkdsfx.com",
+            telephone: "400 - 900 - 9296",
+            webSite: "www.pkdsfx.com",
+            webMt4Download: "http://pkdsfx.com/downloads/mt4/parkerdawson4setup.exe",
+            androidApp: versionAndroidApp,
+            download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex",
+
+            // path
+            logoPathZh: indexBasePath + "/pkds-logo.png",
+            h5_register_logo: indexBasePath + "/h5_register_logo_Pakerdawson.png",
+            helpLogo: indexBasePath + "/help-logo-tigerwit.png",
+            logoPathEn: indexBasePath + "/pkds-logo.png",
+            homePersonPath: indexBasePath + "/index-person-tiger.jpg",
+            homeTradePathZh: indexBasePath + "/index2-trade-img-pkds.png",
+            homeTradePathEn: indexBasePath + "/index2-trade-img-pkds.png",
+            homePlusPath: indexBasePath + "/index2-master-jia-pkds.png",
+
+            webCopyRule: indexBasePath + "/rules-banner-pkds.jpg",
+            webCopySelect: indexBasePath + "/select-banner-pkds.jpg",
+            webAgentProxy: indexBasePath + "/agent-banner-pkds.jpg",
+            webAgentBecome: indexBasePath + "/become-banner-pkds.jpg",
+
+            icoPath: indexBasePath + "/pkds.ico",
+            t33_logo: indexBasePath + "/pkds-logo.png"
+
+        };
+
+    }
+
     var data = {
         // image path
         "image": {
@@ -149,6 +221,7 @@ module.exports = function () {
         "lijifuzhi": { "en": "Copy now", "zh": "立即复制" },
         "fuzhi": { "zh": "复制", "en": "Copy" },
         "lijizhuce": { "en": "Register now", "zh": "立即注册" },
+        "loginNow": { "en": "Login Now", "zh": "立即登录" },
         "liaojiexiangqing": { "en": "Learn more", "zh": "了解详情" },
         "xuanzegaoshou": { "en": "Select a master", "zh": "选择高手" },
         "shouyilv": { "en": "yield rate", "zh": "收益率" },
@@ -157,6 +230,7 @@ module.exports = function () {
         "low": { "en": "low", "zh": "低" },
         "middle": { "en": "middle", "zh": "中" },
         "high": { "en": "high", "zh": "高" },
+        "new": {"en": "New", "zh": "新"},
         "fuzhirenshu": { "en": "Copiers", "zh": "复制人数" },
         "lishifuzhirenshu": { "en": "Historical Copiers", "zh": "历史复制人数" },
         "zuidifuzhijine": { "en": "MIN copy", "zh": "最低复制金额" },
@@ -172,8 +246,17 @@ module.exports = function () {
         "password": { "en": "Password", "zh": "密码" },
         "username": { "en": "Username", "zh": "昵称" },
         "phone": { "en": "Phone", "zh": "手机号码" },
+        "IncorrectPhone": {"en": "Incorrect phone number format", "zh": "手机号码格式不正确"},
+        "IncorrectPassword": {"en": "Incorrect password format", "zh": "密码格式不正确"},
+        "passwordIsNotIdentica": {"en": "Confirmation password is not identica", "zh": "两次密码输入不一致"},
         "email": { "en": "E-mail", "zh": "电子邮箱" },
         "verifycode": { "en": "Verification code", "zh": "验证码" },
+        "ObtainVerificationCode": {"en": "Obtain verification code", "zh": "获取验证码"},
+        "enterVerifycode": { "en": "Please enter the verification code", "zh": "请输入验证码" },
+        "sending": {"en": "Sending", "zh": "发送中"},
+        "confirm": {"en": "Confirm", "zh": "确认"},
+        "submit": {"en": "Submit", "zh": "提交"},
+        "submiting": {"en": "Submit...", "zh": "提交中"},
 
         // 导航栏 navbar
         "navbar1": { "en": "Homepage", "zh": "首页" },
@@ -228,7 +311,7 @@ module.exports = function () {
         "home14": { "en": "COPY TRADING. Get profit by following master's trading automatically.", "zh": "复制高手交易，立享同步收益" },
         "home15": { "en": "Select your favorite master.", "zh": "选择自己喜欢的高手" },
         "home16": { "en": "Set the copy amount.", "zh": "输入复制金额，点击复制" },
-        "home17": { "en": "Sync the profit with masters.", "zh": "享受和高手同比例收益" },
+        "home17": { "en": "Sync the profit with masters.", "zh": "享受高手同策略交易" },
         "home18": { "en": "Be a master, win 20% of followers' profit.", "zh": "成为高手，您将获得复制者盈利的20%" },
         "home19": { "en": "Diversified products for transaction", "zh": "多样化的交易产品" },
         "home20": { "en": "Invest several financial products only by opening a trading account", "zh": "开设一个交易账户，轻松参与多个国际金融产品投资" },
@@ -248,14 +331,14 @@ module.exports = function () {
         //"home28": {"en": "Trading of Brent crude oil and West Texas crude oil can be achieved at the same time", "zh": "可同时操作布伦特原油和西德州原油"},
         "home28": { "en": "Transaction cost is low, about 2 yuan/tons", "zh": "交易成本低，约2块人民币/吨左右" },
         //"home29": {"en": "Enter swap processing by data smoothing method", "zh": "采用数据平滑方式进行掉期处理"},
-        "home29": { "en": "Just a stop, the next day is still limited", "zh": "只需一次止损，隔天仍然有限" },
+        "home29": { "en": "Just a stop, the next day is still limited", "zh": "只需一次止损，隔天仍然有效" },
         //"home30": {"en": "Abundant products and high fund utilization rate", "zh": "产品丰富，资金利用率高"},
         "home30": { "en": "Contains three great beauty means, the nikkei index, Europe and other mainstream", "zh": "包含三大美指、日经、欧洲优选等主流股指" },
         "home31": { "en": "Margin level as low as 2% is offered", "zh": "提供低至2%的保证金水平" },
         "home32": { "en": "Low threshold and transparent quotation", "zh": "门槛较低，报价透明" },
         "home33": { "en": "STP (straight trade process)", "zh": "STP直通式交易模式" },
         "home34": { "en": "Provide guarantee for excellent trading experience and optimizing user value", "zh": "为出色的交易体验和优化用户价值提供保障" },
-        "home35": { "en": companyConfig.companyNameEn + "cooperate with many famous institutions, including bank of America, citigroup, jpmorgan chase, barclays, Macquarie bank, etc., from many international Banks and other foreign exchange quotations and liquidation, and through the way of STP to transmit the user's orders to the international banking market, allowing users to order in the shortest possible time and optimal price.", "zh": "" + companyConfig.companyNameZh + "与多家知名机构合作，包括美国银行，花旗，摩根大通，巴克莱，麦格理银行等，从多家国际银行等获得外汇报价和清算，并且通过STP的方式将用户的订单传输到国际间银行市场，从而让用户订单在最短的时间内以最优的价格成交。" },
+        "home35": { "en": companyConfig.companyNameEn + "cooperate with many famous institutions, including bank of America, citigroup, jpmorgan chase, barclays, Macquarie bank, etc., from many international Banks and other foreign exchange quotations and liquidation, and through the way of STP to transmit the user's orders to the international banking market, allowing users to order in the shortest possible time and optimal price.", "zh": "" + companyConfig.companyNameZh + "与多家知名机构合作，包括美国银行，花旗，摩根大通，巴克莱，麦格理银行等，从多家国际银行获得外汇报价和清算，并且通过STP的方式将用户的订单传输到国际间银行市场，从而让用户订单在最短的时间内以最优的价格成交。" },
         //"home35": {"en": "By cooperation with many famous institutions, " + companyConfig.companyNameEn + " makes use of the foreign exchange quotation and settlement from many international banks and transmits user's order to the international banking market through STP, thus contributing to conclusion of a deal with the optimal price for user's order in the shortest time.", "zh": "" + companyConfig.companyNameZh + "与多家知名机构合作，从多家国际银行等获得外汇报价和清算，并且通过STP的方式将用户的订单传输到国际间银行市场，从而让用户订单在最短的时间内与最优的价格成交。"},
         "home36": { "en": "Why to choose " + companyConfig.companyNameEn + "", "zh": "为什么选择" + companyConfig.companyNameZh + "" },
         "home37": { "en": "" + companyConfig.companyNameEn + " will render a very distinctive trading experience for users after an account is opened", "zh": "开立" + companyConfig.companyNameZh + "账户，享受与众不同的交易体验" },
@@ -271,7 +354,7 @@ module.exports = function () {
         "home47": { "en": "The secret of successful investment does not lie in the social influence and development prospect of a certain industry, but in a company's competitive edges and the sustainability of such edges. Only everlasting and profound product and service superiorities can generate generous returns for investors.", "zh": "投资的秘诀、不是评估某一行业对社会的影响有多大、或它的发展前景有多好、而是一间公司有多强的竞争优势、这优势可以维持多久。产品和服务的优越性持久而深厚、才能给投资者带来优厚的回报。" },
         "home48": { "en": "-Warren Buffett", "zh": "—— 沃伦·巴菲特" },
         // home banner
-        "home49": { "en": "With the new year and Good omen full", "zh": "金鸡贺岁 吉兆满盈" },
+        "home49": { "en": "Gold house ceremony to send spring", "zh": "春季淘金 豪礼相送" },
         "home50": { "en": " ", "zh": " " },
         "home59": { "en": "The new user registration can get", "zh": "新用户注册享" },
         "home60": { "en": "$200", "zh": " $200" },
@@ -283,6 +366,7 @@ module.exports = function () {
         "home56": { "en": "Fixed copy trading", "zh": "定期跟单" },
         "home57": { "en": "upto 60% yearly return", "zh": "年化收益可达" },
         "home58": { "en": "Monthly product is avaliable now!", "zh": "月盈产品火爆进行中" },
+        "home61": { "en": "CFD", "zh": "差价合约" },
 
         // 产品介绍－外汇交易 forex
         //"forex1": {"en": "Foreign exchange transaction involves buying and/or selling a kind of foreign currency. In terms of the largest single product market in the world, trades valuing over USD 5 trillion are achieved on the current foreign exchange market. The foreign exchange and price is mainly influenced by international trade, economy and policies of countries and investment flow direction and the foreign exchange market is featured as transparent information, tremendous turnover and great fairness and transparency.", "zh": "外汇交易涉及买入一个外国货币和/或卖出另一个外国货币。全球最大的单一产品市场，当今外汇市场每天拥有超过5万亿美元的成交额，外汇市场和价格主要受国际间的交易，各国经济和政策以及投资流向的影响，外汇市场信息透明，流通量巨大，公平透明。"},
@@ -327,7 +411,7 @@ module.exports = function () {
         "forex34": { "en": "24h quotation on trading day", "zh": "交易日24小时报价" },
         "forex35": { "en": "Trading period:", "zh": "交易时段" },
         "forex36": { "en": "" + companyConfig.companyNameEn + " also provides the trading products of cross currency pairs of the above major currency pairs.", "zh": "" + companyConfig.companyNameZh + "同时提供以上主流货币对的交叉货币对交易产品" },
-
+        "forex37": { "en": "(next day)", "zh": "(次日)" },
 
         // 产品介绍－原油交易 oil
         //"oil1": {"en": "Acting a strategic role for industry and cornerstone of modern civilization, crude oil is one of the largest commodities in global trade and also one of the most important trading subjects in global financial assets. ", "zh": "工业的血液，现代文明的基石，也是全球贸易中最大宗的商品之一，全球金融资产中最重要的交易标的物之一。"},
@@ -360,8 +444,8 @@ module.exports = function () {
         "oil27": { "en": "Minimum contract unit (standard lot)", "zh": "最小合约单位(标准手)" },
         "oil28": { "en": "Maximum trading volume (lot)", "zh": "最大交易量(手)" },
         "oil29": { "en": "Commission charge ($)", "zh": "手续费($)" },
-        "oil30": { "en": "Trading time (MT4 platform time)", "zh": "交易时间(MT4平台时间)" },
-        "oil31": { "en": "Quotation time (platform time)", "zh": "报价时间(平台时间)" },
+        "oil30": { "en": "Trading time (Beijing time)", "zh": "交易时间(北京时间)" },
+        "oil31": { "en": "Quotation time (Beijing time)", "zh": "报价时间(北京时间)" },
         "oil32": { "en": "Product introduction", "zh": "产品简介" },
         "oil33": { "en": "MBTU", "zh": "百万英国热量单位" },
         "oil34": { "en": "barrels", "zh": "桶" },
@@ -377,6 +461,7 @@ module.exports = function () {
         "oil43": { "en": "on Monday", "zh": "周一" },
         "oil44": { "en": "on Friday", "zh": "周五" },
         "oil45": { "en": "per day", "zh": "每日" },
+        "oil46": { "en": "on Thursday", "zh": "周四" },
 
         // 产品介绍－贵金属交易 metal
         //"metal1": {"en": "As the most ancient, most traditional and most widely recognized currency symbol, precious metals fall into the category of traditional safe-haven assets, which occupy an important position in industrial manufacture and have both the property and commodity property of safe-haven currencies. ", "zh": "作为人类文明最古老的最传统最被广泛认可的货币符号，属于传统的避险资产，同时随着科技的进步，也在工业生产中占据了重要的地位，同时具有避险货币的属性与商品属性 。"},
@@ -441,8 +526,8 @@ module.exports = function () {
         "cfd25": { "en": "Contract margin (USD)", "zh": "合约保证金(美元)" },
         "cfd26": { "en": "Minimum contract unit (standard lot)", "zh": "最小合约单位(标准手)" },
         "cfd27": { "en": "Maximum trading volume (lot)", "zh": "最大交易量(手)" },
-        "cfd28": { "en": "Trading time (MT4 platform time)", "zh": "交易时间(MT4平台时间)" },
-        "cfd29": { "en": "Quotation time (platform time)", "zh": "报价时间(平台时间)" },
+        "cfd28": { "en": "Trading time (Beijing time)", "zh": "交易时间(北京时间)" },
+        "cfd29": { "en": "Quotation time (Beijing time)", "zh": "报价时间(北京时间)" },
         "cfd30": { "en": "Product introduction", "zh": "产品简介" },
         "cfd31": { "en": "lot", "zh": "手" },
         "cfd32": { "en": "contract", "zh": "合约" },
@@ -472,7 +557,7 @@ module.exports = function () {
         // 关于老虎－关于老虎金融 about
         "about1": { "en": "About us", "zh": "关于我们" },
         //"about2": {"en": "As a leader in social investing, " + companyConfig.companyNameEn + " has independently developed China's first Internet foreign exchange product and attracted numerous trading elites to gather here to render services for investors by virtue of its abundant capital and rich experience in financial industry as well as innovation capability in Internet products. Relying on " + companyConfig.companyNameEn + ", common investors can follow the trading system and follow the masters' trading order automatically to gain the earnings of the same proportion with the masters. All will grow to be an investment master. ", "zh": "" + companyConfig.companyNameZh + "社交投资引领者，凭借雄厚的资本，结合丰富的金融行业阅历与互联网产品创新能力，自主研发了国内第一款互联网外汇产品，吸引了众多顶尖的交易精英汇聚在此，普通投资者可通过复制交易系统，自动复制高手的交易订单，同比例获得盈利。在这里人人都是投资高手。"},
-        "about2": { "en": companyConfig.companyNameEn + " founded in early 2015, is the first domestic capital market investment Internet forex trading platform.Company by the Internet or financial technology of 15 years of experience in the team.Abundant capital, combined with the strong ability of product innovation, the independent research and development of foreign exchange for copying documentary system and micro trading system, and provides the nearly hundred kinds of foreign exchange, crude oil, precious metals and CFD products, is committed to lower the difficulty of users involved in the foreign exchange market, to provide users with a fair and stable trading platform.", "zh": "" + companyConfig.companyNameZh + "成立于2015年初，是首批国内资本市场投资的互联网外汇交易平台。公司由互联网领域或金融科技领域15年以上经验的团队组成。凭借雄厚的资本，结合强大的产品创新能力，" + companyConfig.companyNameZh + "自主研发了复制跟单交易系统和移动端交易系统，并提供近百种外汇、原油、贵金属和指数差价合约产品，致力于降低用户参与外汇市场门槛，为用户提供一个公平稳定的交易平台。" },
+        "about2": { "en": companyConfig.companyNameEn + " founded in early 2015, is the first domestic capital market investment Internet forex trading platform.Company by the Internet or financial technology of 15 years of experience in the team.Abundant capital, combined with the strong ability of product innovation, the independent research and development of foreign exchange for copying documentary system and micro trading system, and provides the nearly hundred kinds of foreign exchange, crude oil, precious metals and CFD products, is committed to lower the difficulty of users involved in the foreign exchange market, to provide users with a fair and stable trading platform.", "zh": "" + companyConfig.companyNameZh + "成立于2015年初，是首批国内资本市场投资的互联网外汇交易服务平台。公司由互联网领域或金融科技领域15年以上经验的团队组成。凭借雄厚的资本，结合强大的产品创新能力，" + companyConfig.companyNameZh + "自主研发了复制跟单交易系统和移动端交易系统，并提供近百种外汇、原油、贵金属和指数差价合约等品种的交易服务，致力于降低用户参与外汇市场门槛，为用户提供一个公平稳定的交易平台。" },
         "about3": { "en": "Join hands with dozens of world's top banks", "zh": "与数十家全球顶级银行合作" },
         "about4": { "en": "" + companyConfig.companyNameEn + " provides nearly 100 kinds of foreign exchange, precious metal and index trading products. One account is offered with three different kinds of leverage simultaneously. The user's order can be directly butted with dozens of world's top banks through STP (including Bank of America, Citibank, JPMorgan Chase & Co, Barclays and Macquarie Bank), ensuring fair and transparent trading and rendering top-class trading experience for all traders. ", "zh": "" + companyConfig.companyNameZh + "提供近百种外汇、贵金属和指数交易品种，一个账户更可同时享受3种不同的交易杠杆，用户的交易订单通过STP模式直接与数十家全球顶级银行（包括：美国银行，花旗，摩根大通，巴克莱，麦格理银行等）对接，保证交易的公正与透明，为广大交易者提供一流交易体验。" },
         "about5": { "en": "Bank of America is the first and largest commercial bank in terms of capital. In 2006, the bank ranked No.3 according to Forbes 2000 and is the second oldest bank in USA. ", "zh": "美国银行以资产计是美国第一大商业银行；2006年，根据《福布斯》2000年排名是世界第三大公司，是美国第二个历史最悠久的银行。" },
@@ -481,7 +566,7 @@ module.exports = function () {
         "about8": { "en": companyConfig.companyNameEn + " investor-Tang Binsen", "zh": "" + companyConfig.companyNameZh + "投资人代表——唐彬森" },
         "about9": { "en": "He, born after 1980, is the principal owner of Happy Farm that has been popular for several years after its release and an entrepreneur building up a fortune from overseas market. In 2012, together with his team, he rolled out the first oversea-oriented navigation web and antivirus software developed by a Chinese and also received a cordial reception from President Hu Jintao at the 90th anniversary of the Communist Youth League as an excellent youth delegate. In 2015, the independently developed clash of kings by his company ranked No.6 in the North American bestsellers' list and became an intern game achieving the greatest outcomes in the internationalization process of China's games. Such outstanding achievements are gained exactly by an obscure company founded in a basement of Beihang University by Tang who also serves as the CEO of Elex. He is a legendary figure in creating overseas market for China's games. ", "zh": "唐彬森，智明星通首席执行官，被《环球企业家》评为2010年度全国四十位“40岁以下商业精英”。2012年作为优秀青年代表在建团90周年获得胡锦涛总书记的亲切接见。2008年，成功将开心农场游戏推广到全球20多个国家，影响海外5亿人口，成为迄今为止中国出口的最有影响力的游戏。2012年，借鉴了360免费杀毒在国内的成功商业模式，在海外新兴发展中国家，带领团队推出了中国人首款面向海外的导航网站和杀毒软件服务。现已成为知名风险投资人，主要涉及的领域有：游戏、金融、消费升级等。投资具有代表性的公司：老虎外汇、老虎证券、薪人薪事等。" },
         "about10": { "en": companyConfig.companyNameEn + "’s ambition is to establish financial service companies in advanced and highly regulated jurisdictions to serve local markets and now we have set up offices in China and Australia.", "zh": companyConfig.companyNameZh + "致力于在全球受监管的区域设立金融服务公司以服务当地市场，目前已经在中国和澳大利亚设立办公室。" },
-        "about11": { "en": "Tiger Financial Technology Pty Ltd (ACN 614 234 687), Australian subsidiary of TgerWit Group, is a Corporate Authorised Representative (CAR No. 001 247 008) of HLK Group Pty Ltd (ACN 161 284 500) with AFSL No. 435746, and is authorized to give personal and general advice under the agreement, and manage discretionary accounts, providing forex copy trading system and serving Australian market.", "zh": companyConfig.companyNameZh + "澳大利亚子公司Tiger Financial Technology Pty Ltd (ACN 614 234 687)，是HLK Group Pty Ltd (ACN 161 284 500)的机构授权代表(CAR No. 001 247 008)，被授权在外汇和金融衍生品市场提供个人和一般性建议以及管理委托账户，提供外汇跟单交易系统，服务澳大利亚市场。" },
+        "about11": { "en": "Tiger Financial Technology Pty Ltd (ACN 614 234 687), Australian subsidiary of TgerWit Group, is a Corporate Authorised Representative (CAR No. 001 247 008) of HLK Group Pty Ltd (ACN 161 284 500) with AFSL No. 435746, and is authorized to give personal and general advice under the agreement, and manage discretionary accounts.", "zh": companyConfig.companyNameZh + "澳大利亚子公司Tiger Financial Technology Pty Ltd (ACN 614 234 687)，是HLK Group Pty Ltd (ACN 161 284 500)的机构授权代表(CAR No. 001 247 008)，被授权在协议内提供个人和一般性建议以及管理委托账户。" },
 
         // 关于老虎－stp交易模式 stp
         "stp1": { "en": "What is STP?", "zh": "STP是什么？" },
@@ -556,17 +641,17 @@ module.exports = function () {
         "notice7": { "en": "Point difference enlarged", "zh": "点差扩大" },
         "notice8": { "en": "Slippage", "zh": "滑点" },
         "notice9": { "en": "Exchange rate gap", "zh": "汇价跳空" },
-        "notice10": { "en": "System quotation risk (wrong price) ", "zh": "系统报价风险(错价)" },
+        "notice10": { "en": "Risk of System Quotation (Mispricing)", "zh": "系统报价风险(错价)" },
         "notice11": { "en": "Arbitrage and control", "zh": "套汇和操控" },
         "notice12": { "en": "Price manipulation", "zh": "价位操纵" },
         "notice13": { "en": "Trade and third-party participation", "zh": "交易与第三者参与" },
-        "notice14": { "en": "Time of trading platform", "zh": "交易平台时间" },
-        "notice15": { "en": "Turnover", "zh": "流通量" },
-        "notice16": { "en": "Margin addition", "zh": "保证金追加" },
+        "notice14": { "en": "Platform Trading Hours", "zh": "交易平台时间" },
+        "notice15": { "en": "Circulation", "zh": "流通量" },
+        "notice16": { "en": "Margin call", "zh": "保证金追加" },
         "notice17": { "en": "Risks at weekends", "zh": "周末风险" },
         "notice18": { "en": "Online trading", "zh": "网络交易" },
         "notice19": { "en": "Commission charge", "zh": "手续费" },
-        "notice20": { "en": "Application for handling emergency and abnormal conditions in case of disconnection", "zh": "断线时紧急异常处理申请" },
+        "notice20": { "en": "Application for abnormal conditions", "zh": "断线时紧急异常处理申请" },
         "notice21": { "en": "Provision of a certain instructions (such as [stop loss], or [stop loss-buy limit]) is to control the losses within a specific range. However, it may fail to produce the desired result given market situations or technical restrictions. ", "zh": "下达某些指令(例如「止损」或「止损-限价」)目的在将损失控制在特定金额范围内，但有可能并不总是见效，因为市场情况或技术限制可能致使上述指令难以执行。" },
         "notice22": { "en": "In case of trade through (gap), the resting order (including stop loss, take profit, buy stop, sell stop, buy limit and sell limit) will become market order. In case of fast market (before and after release of important data) or sluggish market, trade through (gap) may arise. Though resting order is set, a trade may be concluded at market price due to different market circulation. ", "zh": "当穿价 (跳空) 时，挂单(含 stop loss、take profit、buy stop、sell stop、buy limit、sell limit) 将会变为市价单；穿价 (跳空)在快市（重大数据公布前后）或是市场清淡时都有可能发生，虽然设置了挂单，但仍有可能因为市场流通量的不同而成交在市场价。" },
         "notice23": { "en": "During the period before and after important data or information is released, market [rice may encounter sharp fluctuation. In such a situation, the gap of listing price of commodities may also become greater accordingly.", "zh": "当重大数据或消息公布前后，市场价格常会出现大幅剧烈波动，在该情况下，各商品的挂价距离也会随之变大 。" },
@@ -879,6 +964,27 @@ module.exports = function () {
         "mAgreementThree46": {"zh": "1. 交易系统断线时，客户请致电客服电话，" + companyConfig.companyNameZh + "仅代为平仓或取消挂单，无法代为建立新仓或挂止损/停利单。", "en": "1.While system disconnected, client needs to contact the support center. " + companyConfig.companyNameEn + " only close the position or cancel the order on client's behalf, and will not open a new position or place the loss/take profit order for client."},
         "mAgreementThree47": {"zh": "2. " + companyConfig.companyNameZh + "客服代客户平仓时，因电话延迟和网络延迟，造成电话报价与最终成交价格并不完全一致，客户知晓并同意" + companyConfig.companyNameZh + "的代为处理，此间价差由客户承担。" + companyConfig.companyNameZh + "只是作为代客执行交易的代理，并不是作为交易员给予客户报价。所以，当您在依规定的时间内提出紧急处理申请后，" + companyConfig.companyNameZh + "依据断线或报价异常期间之正确市场价格予以平仓处理。请注意: " + companyConfig.companyNameZh + "不接受指定价格平仓。", "en": "2.When " + companyConfig.companyNameEn + " support center closes the position on client’s behalf, the quotations in the phone call may not exactly aligned with final trading quotations due to the delay of phone call or the internet. Clients should be aware and agree the settlement of " + companyConfig.companyNameEn + " and take the responsibilities of the spreads mentioned above. " + companyConfig.companyNameEn + " is only an authorized agent to execute for client, and does not quote to client as a trader. Therefore, if you apply for the abnormal condition settlement during the effective time, " + companyConfig.companyNameEn + " will close the position by the accurate price according to the price while system disconnection or abnormality occurs. Attention: " + companyConfig.companyNameEn + " does not accept any assigned price to close the position."},
         "mAgreementThree48": {"zh": "3. 当您发出紧急处理申请之后切勿再对已申请的单子做任何平仓动作，若有此情形，" + companyConfig.companyNameZh + "仍将以依据断线或报价异常期间之正确市场价格予以平仓处理。", "en": "3.After you apply for the abnormal condition settlement, please do not close any position that you applied for. If you still act in this way, " + companyConfig.companyNameEn + " support center will still close the position by the accurate price according to the price while system disconnection or abnormality occurs."},
+        
+        // H5  基本资料
+        "mWapInfo1": {"zh": "更换", "en": "Change"},
+        "mWapInfo2": {"zh": "昵称", "en": "Username"},
+        "mWapInfo3": {"zh": "所在地", "en": "Location"},
+        "mWapUsername1": {"zh": "请输入昵称", "en": "Please enter your Username"},
+        "mWapUsername2": {"zh": "昵称包含2-16个字符，由汉字、字母、数字组成", "en": "Incorrect username"},
+        "mWapUsername3": {"zh": "昵称已存在", "en": "The username already exists"},
+        "mWapUsername4": {"zh": "昵称包含敏感词汇，请修改", "en": "The username contains sensitive words"},
+        "mWapUsername5": {"zh": "提交", "en": "Submit"},
+        "mWapUsername6": {"zh": "提交中", "en": "Submit..."},
+        "mWapUsername7": {"zh": "昵称修改成功", "en": "Username changed successfully"},
+        "mWapUsername8": {"zh": "确定", "en": "Ok"},
+        "mWapLocation1": {"zh": "请选择省/市", "en": "Please select province/city"},
+        "mWapLocation2": {"zh": "请选择市/区", "en": "Please select city/district"},
+        "mWapLocation3": {"zh": "所在地修改成功", "en": "Modify the location successfully"},
+        "mWapLocation4": {"zh": "提交失败", "en": "Submit failed"},
+        "mWapForget1": {"zh": "新密码设置成功", "en": "New password set successfully"},
+        "mWapForget2": {"zh": "注意：您的 MT4 登陆密码同时被修改为新密码", "en": "Note: your MT4 login password has been modified to the new password"},
+        "mWapForget3": {"zh": "新密码", "en": "New Password"},
+        "mWapForget4": {"zh": "确认新密码", "en": "Confirm New Password"},
     };
 
     return data;

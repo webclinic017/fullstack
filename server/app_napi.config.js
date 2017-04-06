@@ -1,19 +1,20 @@
 ;(function(){
     'use strict';
 
-    var URL_PATH = process.env.URL_PATH;
-    var COMPANY = process.env.COMPANY_NAME;
+    var envConfig = require('./get_env_config').envConfig;
+    var URL_PATH = envConfig.url_path;
+    var COMPANY = envConfig.company_name;
 
     function getBannerInfoAndroid () {
         var data = [
             {
-                image: URL_PATH + "/activity/banner/banner1_20170101.jpg",
-                url: URL_PATH + "/bd/t33",
+                image: URL_PATH + "/activity/banner/banner1_redbag_20170314.png",
+                url: URL_PATH + "/bd/t35",
                 title: "活动详情"
             },
             {
-                image: URL_PATH + "/activity/banner/banner2_20160930.png",
-                url: URL_PATH + "/bd/t33",
+                image: URL_PATH + "/activity/banner/banner2_20170314.png",
+                url: URL_PATH + "/bd/t34",
                 title: "活动详情"
             },
             {
@@ -31,13 +32,13 @@
     function getBannerInfoIos () {
         var data = [
           {
-            image: URL_PATH + "/activity/banner/banner1_20170101.jpg",
-            url: URL_PATH + "/bd/t33",
+            image: URL_PATH + "/activity/banner/banner1_redbag_20170314.png",
+            url: URL_PATH + "/bd/t35",
             title: "活动详情"
           },
           {
-            image: URL_PATH + "/activity/banner/banner2_20160930.png",
-            url: URL_PATH + "/bd/t33",
+            image: URL_PATH + "/activity/banner/banner2_20170314.png",
+            url: URL_PATH + "/bd/t34",
             title: "活动详情"
           },
           {
@@ -53,10 +54,19 @@
         return data;
     }
 
+    function getPushBannerInfo () {
+        var data = {
+            image: URL_PATH + "/activity/banner/redbag_app_index.jpg",
+            url: URL_PATH + "/bd/t35",
+            title: "活动详情"
+        };
+        return data;
+    }
 
     module.exports = {
         getBannerInfoAndroid: getBannerInfoAndroid,
-        getBannerInfoIos: getBannerInfoIos
+        getBannerInfoIos: getBannerInfoIos,
+        getPushBannerInfo: getPushBannerInfo
     };
 
     /*

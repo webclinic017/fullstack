@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('account', account);
 
-    account.$inject = ['$http', '$rootScope', '$q', '$cookies', 'whiteLabel', 'api'];
+    account.$inject = ['$http', '$rootScope', '$q', '$cookies', 'whiteLabel', 'api', 'publicHttp'];
 
-    function account($http, $rootScope, $q, $cookies, whiteLabel, api) {
+    function account($http, $rootScope, $q, $cookies, whiteLabel, api, publicHttp) {
         var o = api.account;
         var service = {
             encrypt: encrypt,
@@ -77,13 +77,20 @@
             } else {
                 expires = 0;
             }
-
-            return $http.post(o.loginApi, {
+            
+            return publicHttp.dealPublicRequest(o.loginApi, 'POST', {
                 account: id,
                 password: password,
                 // expires: expires
                 remember: expires
             });
+
+            // return $http.post(o.loginApi, {
+            //     account: id,
+            //     password: password,
+            //     // expires: expires
+            //     remember: expires
+            // });
         }
 
         function checkLogined() {
@@ -247,7 +254,11 @@
         }
 
         function getPersonalInfo() {
-            return $http.get(o.getPersonalInfoApi).then(function (data) {
+
+            return publicHttp.dealPublicRequest(o.getPersonalInfoApi, 'GET', {
+                token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RlbW9hcGkudGlnZXJ3aXQuY29tL2F1dGgvbG9naW4iLCJpYXQiOjE0OTE0NzQ2OTcsImV4cCI6MTQ5MTU2MTA5NywibmJmIjoxNDkxNDc0Njk3LCJqdGkiOiIxYTRiZGFlZGY4YzJlMjViYWFmOGI2MmE4MWZmNTk3NyIsInN1YiI6NDA2fQ.p1EK7vnILqkpkGIGjCWyT-ZKKMDkAXk0voG2BHJmXbQ'
+            }).then(function (data) {
+                if (!data) return false;
                 var personal = {};
 
                 angular.forEach(data.data, function (value, key) {
@@ -262,6 +273,26 @@
 
                 return personal;
             });
+
+            // return $http.get(o.getPersonalInfoApi, {
+            //     params: {
+            //         token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RlbW9hcGkudGlnZXJ3aXQuY29tL2F1dGgvbG9naW4iLCJpYXQiOjE0OTE0NTkxNTQsImV4cCI6MTQ5MTU0NTU1NCwibmJmIjoxNDkxNDU5MTU0LCJqdGkiOiJhMmZkMWRjNmUyY2Y1YWVmM2MyZDdhNmQ3YTNmNzVjNiIsInN1YiI6NzQzMn0.-froYKFyHpwp_EJlKq8iALvtn79D-XAS_Hd0bTAiKrU'
+            //     }
+            // }).then(function (data) {
+            //     var personal = {};
+
+            //     angular.forEach(data.data, function (value, key) {
+
+            //         if (key === 'user_code') {
+            //             this['usercode'] = value;
+
+            //         } else {
+            //             this[key] = value;
+            //         }
+            //     }, personal);
+
+            //     return personal;
+            // });
         }
 
         /**
@@ -407,15 +438,15 @@
          * @name setBasicInfo
          * @desc setting 模块设置基本信息
          */
-        function setBasicInfo(username, world, state, city, special, strategy, desc) {
+        function setBasicInfo(username, world, state, city) {
             return $http.post(o.setBasicInfoApi, {
                 username: username,
                 world_code: world,
                 state_code: state,
-                city_code: city,
-                special: special,
-                strategy: strategy,
-                desc: desc
+                city_code: city
+                // special: special,
+                // strategy: strategy,
+                // desc: desc
             });
         }
 

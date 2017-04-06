@@ -151,7 +151,7 @@
                 backdrop: 'static',
                 controller: function ($scope, $modalInstance, $state) {
                     $scope.closeModal = closeModal;
-                    $scope.message = message; 
+                    $scope.message = message;
                     // console.info(message);
 
                     function closeModal() {
@@ -179,25 +179,32 @@
                 $scope.message = data;
                 // console.info(data);
                 if ($scope.message.is_succ) {
-                    asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).
-                    then(function (data) {
-                      $scope.clickable = true;
+                    layer.confirm('现在提现会导致您的账户红包失效，是否继续提现？', {
+                      btn: ['取消', '继续提现'], //按钮
+                    }, function(){
+                        $scope.clickable = true;
+                        layer.closeAll();
+                    }, function(){
+                        asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).then(function (data) {
+                          $scope.clickable = true;
 
-                        if (data.is_succ) {
-                            $scope.withdraw.success = true;
-                            openWithdrawMdl("withdrawSucc");
+                            if (data.is_succ) {
+                                $scope.withdraw.success = true;
+                                openWithdrawMdl("withdrawSucc");
 
-                            $state.go('space.asset.subpage', {
-                                subpage: 'withdraw'
-                            }, {reload: true});
-                        }else{
-                            var msg = data.error_msg;
-                            openWithdrawMdl(msg);
-                        }
+                                $state.go('space.asset.subpage', {
+                                    subpage: 'withdraw'
+                                }, {reload: true});
+                            }else{
+                                var msg = data.error_msg;
+                                openWithdrawMdl(msg);
+                            }
+                        });
                     });
+                    
                 } else {
                     // console.info($scope.message);
-                    openMessageMdl(); 
+                    openMessageMdl();
                     $scope.clickable = true;
                     
                 }

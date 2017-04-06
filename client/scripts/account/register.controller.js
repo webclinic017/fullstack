@@ -237,7 +237,7 @@
         }
 
         function goNextStep() {
-            console.info($scope.progress.step);
+            // console.info($scope.progress.step);
             $scope.progress.step ++;
         }
 
@@ -279,11 +279,19 @@
                     // 神策数据统计
                     sa.track('btn_register_finish');
                     
+                    $timeout(function () {
+                        var user_id = $cookies['user_code'];
+                        // console.log(user_id);
+                        if (user_id) {
+                            sa.login(user_id);
+                        }
+                    }, 200);
+                    
                     // 成功
                     goNextStep();
                     
-                    _hmt.push(['_trackEvent', 'account', 'register']);
-                    _mvq.push(['$setGeneral', 'registered', '', $scope.account.username, $scope.account.phone]);
+                    window._hmt && _hmt.push(['_trackEvent', 'account', 'register']);
+                    window._mvq && _mvq.push(['$setGeneral', 'registered', '', $scope.account.username, $scope.account.phone]);
 
 
                 } else {

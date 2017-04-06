@@ -67,9 +67,28 @@ html,body{
 }
 /*文本内容*/
 .text_pgh{
-  display: block;
-  font-size: px2rem(28)!important;
-  margin-bottom: px2rem(20)!important;
+    li {
+        position: relative;
+        margin-bottom: px2rem(32);
+        padding-left: px2rem(32);
+        border: none;
+        min-height: px2rem(80);
+    }
+    .plan-line {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: inline-block;
+        width: px2rem(6);
+        height: px2rem(80);
+        background: #fedd0a;
+        border-radius: 4px;
+    }
+    p {
+        font-size: px2rem(30);
+        line-height: px2rem(40);
+        color: #8f8f94;
+    }
 }
 /*重置select标签的样式*/
 select {
@@ -228,5 +247,38 @@ button[class*="btn"]{
     border-radius: px2rem(6);
     border-bottom: px2rem(8) solid $color-h5regbtnbd;
     background-color: $color-h5regbtn;
+  }
+}
+
+@include b(load_wrapper) {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 1);
+  padding-top: 80%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  @include e(box) {
+    width: 80%;
+    padding: 2px 2px;
+    border: 1px solid $brand-primary;
+    margin: 0 auto;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    @include m(bar) {
+      width: 0%;
+      background-color: $brand-primary;
+      height: 2px;
+    }
+  }
+
+  @include e(text) {
+    margin: 0 auto;
+    color: $brand-primary;
+    margin-top: 4px;
+    font-size: 0.9rem;
   }
 }

@@ -40,10 +40,12 @@ $(document).ready(function () {
         }
     }
 
+    window.bdRegister = regist;
     function regist(info) {
         var input = $('#' + info.usernameId);
         var rName = input.val() ? input.val() : "";
-        if (/^[\u4e00-\u9fa5A-Za-z\d]+$/.test(input.val())) {
+
+        if (/^[\u4e00-\u9fa5A-Za-z0-9]{2,16}$/.test(input.val())) {
             function checkLength(name) {
                 var num = 0;
                 for (var i = 0; i < name.length; i++) {
@@ -57,26 +59,26 @@ $(document).ready(function () {
             }
 
             var username_length = parseInt(checkLength(input.val()));
-            if (username_length < 4 || username_length > 16) {
-                input.val(" 昵称应在4到16个字符之间").addClass("warning");
+            if (username_length < 2 || username_length > 16) {
+                input.val("昵称包含2-16个字符，支持中英文、数字").addClass("warning");
             }
-        } else if (!(/^[\u4e00-\u9fa5A-Za-z\d]+$/.test(input.val()))) {
-            input.val(" 昵称不合法").addClass("warning");
+        } else if (!(/^[\u4e00-\u9fa5A-Za-z0-9]{2,16}$/.test(input.val()))) {
+            input.val("昵称包含2-16个字符，支持中英文、数字").addClass("warning");
         }
         if ((input.val() == "") || (input.val() == "请填写昵称")) {
-            input.val(" 请填写昵称").addClass("warning");
+            input.val("请填写昵称").addClass("warning");
         }
         var input = $('#' + info.telephoneId);
         var rPhone = input.val() ? input.val() : "";
         var isMobile = /^(13|14|15|17|18)\d{9}$/;
         var isPhone = /^((0\d{2,4})-)?(\d{7,8})(-(\d{2,}))?$/;
-        if ((input.val() == "") || (input.val() == "请填写有效的电话号码") || (!isMobile.test(input.val()) && !isPhone.test(input.val()))) {
-            input.val(" 请填写有效的电话号码").addClass("warning");
+        if ((input.val() == "") || (input.val() == "请填写有效的手机号码") || (!isMobile.test(input.val()))) {
+            input.val("请填写有效的手机号码").addClass("warning");
         }
         var input = $('#' + info.emailId);
         var rEmail = input.val() ? input.val() : "";
         if ((input.val() == "") || (input.val() == "请填写有效的Email") || (!/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(input.val()))) {
-            input.val(" 请填写有效的Email").addClass("warning");
+            input.val("请填写有效的Email").addClass("warning");
         }
 
 
@@ -85,8 +87,8 @@ $(document).ready(function () {
         } else {
             //防止重复提交
             clickable = false;
-            $('#'+info.targetId).html('<i class="loading fa fa-spinner"></i>正在跳转');
- 
+            $('#' + info.targetId).html('<i class="loading fa fa-spinner"></i>正在跳转');
+
             /*
              品友DSP,负责人:蔡雪峰 添加日期：2016.7.12
              //删除此段代码时需要同时删除调用pyRegisterCvt (../t1/script/check.js)
@@ -103,8 +105,10 @@ $(document).ready(function () {
             // umeng
             _czc.push(["_trackEvent", "活动页", "免费注册"]);
 
-            // 360
-            _mvq.push(['$setGeneral', 'registered', '', rName, rPhone]);
+            // 360            
+            if (window._mvq) {
+                _mvq.push(['$setGeneral', 'registered', '', rName, rPhone]);
+            }
 
             // 神策数据统计
             sa.track('btn_register');
@@ -141,31 +145,35 @@ $(document).ready(function () {
     }
 
     $('#regist_btn').on("click", function (e) {
-        if(!clickable){return false}
+        if (!clickable) { return false }
         regist({
             usernameId: 'username',
             telephoneId: 'telephone',
             emailId: 'email',
-            targetId:'regist_btn'
+            targetId: 'regist_btn'
         });
     });
 
     $('#float_regBtn').on("click", function () {
-        if(!clickable){return false}        
+        if (!clickable) { return false }
         regist({
             usernameId: 'float_username',
             telephoneId: 'float_telephone',
             emailId: '',
-            targetId:'float_regBtn'
+            targetId: 'float_regBtn'
         });
     });
 
-    $(document.body).on("keyup", function (e) {
-        if (e.keyCode == 13) {
-            regist();
-        }
-    });
-
+    // $(document.body).on("keyup", function (e) {
+    //     if (e.keyCode == 13) {
+    //         regist({
+    //             usernameId: 'username',
+    //             telephoneId: 'telephone',
+    //             emailId: 'email',
+    //             targetId: 'regist_btn'
+    //         });
+    //     }
+    // });
 
     $(":input").focus(function () {
         if ($(this).hasClass("warning")) {
@@ -224,35 +232,35 @@ $(document).ready(function () {
     }
 });
 
-;(function(){
+; (function () {
     var floater = $('#float_register');
 
-    window.onscroll = function(e) {
+    window.onscroll = function (e) {
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if(!floater.hasClass('close')){
+        if (!floater.hasClass('close')) {
             if (scrollTop <= 450) {
                 floater.css({
-                    bottom:'-120px'
+                    bottom: '-120px'
                 });
             } else {
                 floater.css({
-                    bottom:'0'
+                    bottom: '0'
                 });
             }
         }
     };
 
-    $('#float_trigger').click(function(){
+    $('#float_trigger').click(function () {
         floater.toggleClass("close");
-        if(floater.hasClass('close')){
+        if (floater.hasClass('close')) {
             $(this).html("点击注册");
             floater.css({
-                bottom:'-98px'
+                bottom: '-98px'
             });
         } else {
             $(this).html("点击收起");
             floater.css({
-                bottom:'0'
+                bottom: '0'
             });
         }
     });

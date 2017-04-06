@@ -70,11 +70,8 @@
 
         <div class="system_modal__btn_wrapper" ng-if="!copyTrade.success">
             <div ng-show="backErr.system.show">
-                <p class="alert-system" ng-show="backErr.system.status === 1">
-                    复制人数已达上限
-                </p>
-                <p class="alert-system" ng-show="backErr.system.status === 2">
-                    您没有权限复制该高手
+                <p class="alert-system">
+                    {{ backErr.system.msg }}
                 </p>
             </div>
             <button class="btn btn-primary btn-sm" ng-if="clickable.copy" ng-click="submitForm()">

@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>
-        <%=lang.text("companyZhName")%>｜注册送200美金赠金</title>
+    <% include common/metas.html %>
+    <title><%=lang.text("companyZhName")%>｜注册送200美金赠金</title>
     <% include vendor.css.html %>
     <!-- build:css(.tmp) /styles/web.css -->
     <link rel="stylesheet" href="/styles/web.css">
@@ -63,7 +63,6 @@
                         <td>赠金金额／4</td>
                     </tr>
                 </table>
-
             </div>
         </div>
         <div class="t33_notice">
@@ -109,7 +108,7 @@
                 </p>
             </div>
         </div>
-        <%- include('bd/common/footer.html') %>
+        
         <%} else {%>
         <div class="footerbg clearfix">
             <div class="footer-wrap pkds" data-scroll-reveal="enter bottom, move 40px, over 1s, wait 0.53s">
@@ -122,9 +121,8 @@
             </div>
         </div>
         <%}%>
-
     </div>
-
+    <%- include('bd/common/footer.html') %>    
     <!-- build:js(client) /scripts/bd_t33.js -->
     <script src="/scripts/common/config.service.js"></script>
     <script src="/scripts/common/account.service.js"></script>
@@ -142,6 +140,7 @@
     <script src="/scripts/bd/t30/check.js"></script>
     <script src="/scripts/common/lang.service.js"></script>
     <script src="/scripts/common/lang_data.service.js"></script>
+    <script src="/scripts/common/redbag.service.js"></script>
     <!-- endbuild -->
 </div>
 </body>

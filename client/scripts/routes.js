@@ -208,6 +208,35 @@
                     }
                 })
 
+                // 我的红包
+                .state('space.redbag', {
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/redbag/index.html',
+                            controller: ''
+                        }
+                    }
+                })
+                .state('space.redbag.subpage', {
+                    authenticated: true,
+                    url: '/space/redbag/:subpage',
+                    views: {
+                        '@space.redbag': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'own';
+                                return '/views/redbag/' + $stateParams.subpage + '.html';
+                            },
+                            controllerProvider: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'own';
+                                var ctrlPrefix = 'Redbag';
+                                var ctrlSuffix = 'Controller';
+                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                            }
+                        }
+                    }
+                })
+
                 // 排行榜
                 .state('ranklist', {
                     views: {
@@ -296,11 +325,11 @@
         .run(['$rootScope', '$state', '$window', 'authorization', function ($rootScope, $state, $window, authorization) {
             $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
                 if (toState.authenticated) {
-                    authorization.authorize().then(function (isLogined) {
-                        if (!isLogined) {
-                            $state.go('account.subpage', {subpage: 'login'});
-                        }
-                    });
+                    // authorization.authorize().then(function (isLogined) {
+                    //     if (!isLogined) {
+                    //         $state.go('account.subpage', {subpage: 'login'});
+                    //     }
+                    // });
                 }
             });
         }]);

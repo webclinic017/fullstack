@@ -1,4 +1,48 @@
 var report_sites = [
+    /*添加时间 2017-3-27*/
+    {
+        address: 'http://www.zgjrzk.com/news/201703/405437.html',
+        description: '【中国金融智库】理财投资资产配置选哪家 陆金所、老虎外汇、微贷网各具特色',
+        date: '2017-03-21'
+    },
+    /*添加时间 2017-3-20*/
+    {
+        address: 'http://district.ce.cn/newarea/hyzx/201703/14/t20170314_20989633.shtml',
+        description: '【中国经济网】老虎外汇：被首度写入政府工作报告的人工智能 对Fintech将有何影响',
+        date: '2017-03-14'
+    },
+    {
+        address: 'http://www.sinotf.com/GB/News/Enterprise/2017-03-15/2OMDAwMDIyMzU2OA.html',
+        description: '【中国贸易金融网】老虎外汇：外储回升释放积极信号 Fintech为外汇创新提供新机',
+        date: '2017-03-15'
+    },
+    /*添加时间 2017-3-14*/
+    {
+        address: 'http://mt.sohu.com/business/d20170301/127599736_420292.shtml?loc=5',
+        description: '【搜狐财经】老虎外汇：杨幂三生三世获益匪浅明星投资潮受关注',
+        date: '2017-03-01'
+    },
+    {
+        address: 'http://district.ce.cn/newarea/hyzx/201703/08/t20170308_20840722.shtml',
+        description: '【中国经济网】老虎外汇：国内外汇投资热潮将来临？四点原因分析 ',
+        date: '2017-03-08'
+    },
+    /*添加时间 2017-3-06*/
+    {
+        address: 'http://mt.sohu.com/business/d20170223/127010601_581657.shtml',
+        description: '【搜狐财经】老虎外汇：投资市场动荡 投资者如何安置钱袋子',
+        date: '2017-02-23'
+    },
+    {
+        address: 'http://www.ceweekly.cn/2017/0227/181744.shtml',
+        description: '【经济网】银行低利率投资者转外汇投资 老虎外汇受青睐',
+        date: '2017-02-27'
+    },
+    {
+        address: 'http://mini.eastday.com/a/170228122626603.html',
+        description: '【东方头条】老虎外汇：李开复预言可信吗？该怎样迎接未来',
+        date: '2017-02-28'
+    },
     /*添加时间 2017-2-10*/
     {
         address: 'http://news.ifeng.com/a/20170116/50583280_0.shtml',

@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('GlobalController', GlobalController);
 
-    GlobalController.$inject = ['$rootScope', '$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang', '$cookies', '$timeout'];
+    GlobalController.$inject = ['$rootScope', '$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang', '$cookies', '$timeout', 'redbag'];
 
     /**
      * @name GlobalController
      * @desc
      */
-    function GlobalController($rootScope, $scope, $state, $window, config, account, authorization, lang, $cookies, $timeout) {
+    function GlobalController($rootScope, $scope, $state, $window, config, account, authorization, lang, $cookies, $timeout, redbag) {
         $scope.userstatus = {
             logined: false
         };
@@ -96,6 +96,7 @@
         // 初始化所需的全局数据
         function initialize() {
             account.getPersonalInfo().then(function (data) {
+                if (!data) return;
                 angular.extend($scope.personal, data, {
                     xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs + '?timestamp=' + (+new Date()),
                     smAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.sm + '?timestamp=' + (+new Date()),

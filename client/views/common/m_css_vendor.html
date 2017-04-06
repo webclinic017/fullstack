@@ -4,14 +4,14 @@
         var viewBase = 750;
         var fontBase = 32; //css文件中font-base ，基于该值计算rem值
         var docEl = doc.documentElement,
-                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
-                recalc = function () {
-                    var clientWidth = docEl.clientWidth;
-                    if (!clientWidth) {
-                        return;
-                    }
-                    docEl.style.fontSize = fontBase * (clientWidth / viewBase) + 'px';
-                };
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) {
+                    return;
+                }
+                docEl.style.fontSize = fontBase * (clientWidth / viewBase) + 'px';
+            };
         recalc();
         if (!doc.addEventListener) {
             return;
@@ -44,11 +44,16 @@
         }
     }
 
-    function getVersionName(){
+    function isAndriod(){
+        var bIsAndroid = navigator.userAgent.toLowerCase().match(/android/i) == "android";
+        return bIsAndroid;
+    }
+
+    function getVersionName() {
         var userAgent = window.navigator.userAgent;
         var targetStr = 'tiger_version=';
-        if(userAgent.indexOf(targetStr) != -1){
-            return userAgent.substr(userAgent.indexOf(targetStr)+targetStr.length,5);
+        if (userAgent.indexOf(targetStr) != -1) {
+            return userAgent.substr(userAgent.indexOf(targetStr) + targetStr.length, 5);
         }
     }
 
@@ -57,13 +62,59 @@
     }
 
     /*
-        判断是否在tigerwit公司
-    */
-    function isTigerCo(){
-        if($.cookie('company_name') == 'tigerwit'){
+     判断是否在tigerwit公司
+     */
+    function isTigerCo() {
+        if ($.cookie('company_name') == 'tigerwit') {
             return true;
         } else {
             return false;
         }
     }
+
+    /**
+     * 兼容安卓页面下拉刷新问题
+     * */
+    function offsetAction(index) {
+        /*debug*/
+        if (!isIOS() && isInTiger()) {
+            callNative({
+                type: 'offset',
+                offset: index - 1
+            })
+        }
+    }
+
+    /*
+        获取高度
+    */
+    function getClientHeight() {
+        return (document.body.clientHeight || document.documentElement.clientHeight);
+    }
+
+    /**
+     * [isMobile 判断平台]
+     * @param test: 0:iPhone    1:Android
+     */
+    function ismobile(test) {
+        var u = navigator.userAgent, app = navigator.appVersion;
+        if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
+            if (window.location.href.indexOf("?mobile") < 0) {
+                try {
+                    if (/iPhone|mac|iPod|iPad/i.test(navigator.userAgent)) {
+                        return '0';
+                    } else {
+                        return '1';
+                    }
+                } catch (e) {
+                }
+            }
+        } else if (u.indexOf('iPad') > -1) {
+            return '0';
+        } else {
+            return '1';
+        }
+    }
+    ;
+
 </script>

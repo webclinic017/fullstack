@@ -35,6 +35,10 @@
     margin: 0 auto;
 }
 
+.twLayout{
+    width: 1334px;
+}
+
 .ctn{
     width: 1030px;
 }
@@ -84,6 +88,9 @@
 
 .font-primary {
     color: $brand-primary !important;
+}
+.font-primary-darker {
+    color: $brand-primary-dark !important;
 }
 .font-up{
     color:$brand-danger !important;

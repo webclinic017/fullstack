@@ -1,12 +1,12 @@
 'use strict';
 
-var company_name = process.env.COMPANY_NAME;
-var data = require('./lang_data.js')();
-var querystring = require('querystring');
-
 module.exports = function () {
 
     function Lang(req) {
+        var envConfig = require('./get_env_config').envConfig;
+        var company_name = envConfig.company_name;
+        var data = require('./lang_data.js')();
+        var querystring = require('querystring');
         var cookieList = querystring.parse(req.headers.cookie, '; ');
         var language = 'zh';
 
@@ -17,11 +17,14 @@ module.exports = function () {
             }
         }
         this.language = language;
+        this.data = data;
+        this.company_name = company_name;
         // return this;         
     }
     Lang.prototype = {
         isCompany: function (name) {
-            if (company_name == name) {
+            var _this = this;
+            if (_this.company_name == name) {
                 return true;
             } else {
                 return false;
@@ -31,10 +34,11 @@ module.exports = function () {
             return this.language;
         },
         text: function (name) {
+            var _this = this;
             var text;
-            if (data[name]) {
+            if (_this.data[name]) {
                 //console.info('langData load successful!',data[name][this.language])
-                text = data[name][this.language] || 'NODE-loadERR';
+                text = _this.data[name][this.language] || 'NODE-loadERR';
             } else {
                 console.error(' - - - langData load error! in word - ', name);
                 text = 'NODE-loadERR'
@@ -42,9 +46,10 @@ module.exports = function () {
             return text;
         },
         image: function (name) {
+            var _this = this;
             var path;
-            if (data["image"][name]) {
-                path = data["image"][name][this.language];
+            if (_this.data["image"][name]) {
+                path = _this.data["image"][name][this.language];
             } else {
 
             }
@@ -54,7 +59,7 @@ module.exports = function () {
             var _this = this;
             var backgroundName = {
                 en: _this.language === 'en' ? 'en' : '',
-                company: company_name
+                company: _this.company_name
             };
             return backgroundName;
         }
