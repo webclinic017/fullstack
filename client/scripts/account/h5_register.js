@@ -207,18 +207,6 @@
         }
 
         function statistics(tel) {
-            /*
-             品友DSP,负责人:蔡雪峰 添加日期：2016.7.12
-             删除此段代码时需要同时删除调用pyRegisterCvt (../t1/script/check.js)
-             ==begin==
-             */
-            if (window.pyRegisterCvt) {
-                window.pyRegisterCvt(tel);
-            }
-            /*
-             品友DPS
-             ==end==
-             */
 
             function getOrigin() {
                 if (window.location.href.indexOf("/bd")) {

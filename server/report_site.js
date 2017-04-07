@@ -1,4 +1,15 @@
 var report_sites = [
+    /*添加时间 2017-4-6*/
+    {
+        address: 'http://m.tech.china.com/zixun/2017/0324/18271.html',
+        description: '【中国网】老虎外汇：政策频频利好的外汇行业，如何借势Fintech大跨步',
+        date: '2017-03-24'
+    },
+    {
+        address: 'http://district.ce.cn/newarea/hyzx/201703/28/t20170328_21518033.shtml',
+        description: '【东方网】老虎外汇：北京楼市新政出台 如何应对为好',
+        date: '2017-03-28'
+    },
     /*添加时间 2017-3-27*/
     {
         address: 'http://www.zgjrzk.com/news/201703/405437.html',
