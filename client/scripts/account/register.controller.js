@@ -159,7 +159,7 @@
 
             // umeng
             _czc.push(["_trackEvent","注册页","获取验证码"]);
-
+            
             // 神策数据统计
             sa.track('btn_register_code');
             
