@@ -20,10 +20,12 @@
        
         $rootScope.$on('relogin_info', function(){
             getOnceInfo();
+            initialize();
         })
 
         //一次性获取用户的相关信息。更换用户时需要触发重置。
         getOnceInfo();
+        initialize();
 
         function getOnceInfo(){
             getVerifyStatus();
@@ -54,6 +56,20 @@
                 getUnreadLength();
             },30000);
         });
+
+        // 初始化所需的全局数据
+        function initialize() {
+            account.getPersonalInfo().then(function (data) {
+                if (!data) return;
+                angular.extend($scope.personal, data, {
+                    xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs + '?timestamp=' + (+new Date()),
+                    smAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.sm + '?timestamp=' + (+new Date()),
+                    mdAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.md + '?timestamp=' + (+new Date()),
+                    lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg + '?timestamp=' + (+new Date())
+                });
+            });
+
+        }
 
         // 获取基本信息完整度
         function getPersonalInfoDegree () {

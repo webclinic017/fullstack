@@ -50,13 +50,13 @@
             getUnreadLength();
         },30000);
 
-        account.checkLogined().then(function (logined) {
-            $scope.userstatus.logined = logined;
-            if (logined) {
-                initialize();
+        // account.checkLogined().then(function (logined) {
+        //     $scope.userstatus.logined = logined;
+        //     if (logined) {
+        //         initialize();
 
-            }
-        });
+        //     }
+        // });
 
         $scope.$on('refresh_personal_cookies_info', function(event, is_login, is_register){
             console.info('refresh_personal_cookies_info');
@@ -88,24 +88,8 @@
                     $scope.$emit('refresh_personal_cookies_info', 'login');
                 }, 100);
             }
-
-            initialize();
             getUnreadLength();
         });
-
-        // 初始化所需的全局数据
-        function initialize() {
-            account.getPersonalInfo().then(function (data) {
-                if (!data) return;
-                angular.extend($scope.personal, data, {
-                    xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs + '?timestamp=' + (+new Date()),
-                    smAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.sm + '?timestamp=' + (+new Date()),
-                    mdAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.md + '?timestamp=' + (+new Date()),
-                    lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg + '?timestamp=' + (+new Date())
-                });
-            });
-
-        }
 
         // 获取新消息
         function getUnreadLength () {
