@@ -258,18 +258,6 @@
                     if ($(":input").hasClass("warning")) {
                         return false;
                     } else {
-                        /*
-                         品友DSP,负责人:蔡雪峰 添加日期：2016.7.12
-                         //删除此段代码时需要同时删除调用pyRegisterCvt (../t1/script/check.js)
-                         ==begin==
-                         */
-                        if (window.pyRegisterCvt) {
-                            window.pyRegisterCvt(rPhone);
-                        }
-                        /*
-                         品友DPS
-                         ==end==
-                         */
 
                         // umeng
                         _czc.push(["_trackEvent", "微盘大师申领奖励页", "提交按钮"]);
