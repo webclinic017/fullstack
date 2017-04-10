@@ -37,14 +37,16 @@
 
         function getList (page) {
             page = page ? page : 1;
+            // console.log(page);
             trader.getMasterCurrent(usercode, page, pagesize).then(function (data) {
                 // console.info(data);
                 $scope.orders = data.data;
 
                 $scope.$broadcast('hideLoadingImg');
 
-                listId = $timeout(function () {                
-                    getList();
+                $timeout.cancel(listId);
+                listId = $timeout(function () {         
+                    getList(page);
                 }, 5000);
 
                 if ($scope.orders.length <= 0) return;
