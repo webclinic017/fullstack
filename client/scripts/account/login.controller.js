@@ -50,7 +50,7 @@
                 
                 if (textEnc) {
                     account.login($scope.account.id, textEnc, $scope.account.autoLogin).then(function (data) {
-                        console.log(data);
+                        // console.log(data);
                         if (!data) {
                             $scope.clickable = true;
                             return;
@@ -69,14 +69,16 @@
                             // umeng
                             _czc.push(["_trackEvent","登录框","登录成功"]);
                             
-                            if (backUrl) {
-                                $window.location.href = backUrl;
-                            } else {
-                                account.hasChecked = false;
-                                $state.go('space.invest.subpage', {subpage: 'current', back: 'login'}, {reload: true});
-                                $scope.$emit('relogin_info');
+                            $timeout(function () {
+                                if (backUrl) {
+                                    $window.location.href = backUrl;
+                                } else {
+                                    account.hasChecked = false;
+                                    $state.go('space.invest.subpage', {subpage: 'current', back: 'login'}, {reload: true});
+                                    $scope.$emit('relogin_info');
 
-                            }
+                                }
+                            }, 100);
                         }
                     }, function (err) {
                         console.log(err);

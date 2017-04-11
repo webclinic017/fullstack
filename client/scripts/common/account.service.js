@@ -255,9 +255,7 @@
 
         function getPersonalInfo() {
 
-            return publicHttp.dealPublicRequest(o.getPersonalInfoApi, 'GET', {
-                token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RlbW9hcGkudGlnZXJ3aXQuY29tL2F1dGgvbG9naW4iLCJpYXQiOjE0OTE0NzQ2OTcsImV4cCI6MTQ5MTU2MTA5NywibmJmIjoxNDkxNDc0Njk3LCJqdGkiOiIxYTRiZGFlZGY4YzJlMjViYWFmOGI2MmE4MWZmNTk3NyIsInN1YiI6NDA2fQ.p1EK7vnILqkpkGIGjCWyT-ZKKMDkAXk0voG2BHJmXbQ'
-            }).then(function (data) {
+            return publicHttp.dealPublicRequest(o.getPersonalInfoApi, 'GET').then(function (data) {
                 if (!data) return false;
                 var personal = {};
 
@@ -499,7 +497,9 @@
          * @method logout
          */
         function logout() {
-            return $http.get(o.logoutApi);
+            // return $http.get(o.logoutApi);
+
+            return publicHttp.dealPublicRequest(o.logoutApi, 'POST');
         }
 
         /*

@@ -112,6 +112,7 @@
         // 退出
         function logout() {
             account.logout().then(function (data) {
+                if (!data) return;
                 if (data.is_succ) {
                     // 神策数据统计
                     sa.logout(true);
