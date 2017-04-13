@@ -200,7 +200,7 @@
          */
         function register(username, phone, captcha, email, password, lp, pid, unit, key) {
 
-            return $http.post(o.registerApi, {
+            return publicHttp.dealPublicRequest(o.registerApi, 'POST', {
                 username: username,
                 phone: phone,
                 verify_code: captcha,
@@ -211,6 +211,18 @@
                 unit: unit,
                 key: key
             });
+
+            // return $http.post(o.registerApi, {
+            //     username: username,
+            //     phone: phone,
+            //     verify_code: captcha,
+            //     email: email,
+            //     password: password,
+            //     lp: lp,
+            //     pid: pid,
+            //     unit: unit,
+            //     key: key
+            // });
         }
 
         /**
