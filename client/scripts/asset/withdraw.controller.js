@@ -5,9 +5,11 @@
     angular.module('fullstackApp')
         .controller('AssetWithdrawController', AssetWithdrawController);
 
-    AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', 'forex'];
+    AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', 'forex', '$cookies'];
 
-    function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, forex) {
+    function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, forex, $cookies) {
+        var companyName = $cookies["company_name"];
+
         $scope.message = {};
         $scope.withdraw = {
             // amount: ,
@@ -25,7 +27,7 @@
                 // RMB:         // 折合人民币
             },
             success: false,
-            minAmount: 20,
+            minAmount: companyName == 'tigerwit' ? 20 : 100,
             maxAmount: 0
         };
         $scope.frontErr = {
@@ -46,15 +48,15 @@
         getCard();
 
         //绑定银行卡后获取银行卡信息
-        $rootScope.$on('bindCardSuccess', function() {
+        $rootScope.$on('bindCardSuccess', function () {
             getCard();
         });
         // 汇率
-        asset.getFXRate().then(function(data) {
+        asset.getFXRate().then(function (data) {
             $scope.withdraw.FXRate.value = data.data.outparity;
 
         });
-        
+
         // 获取可提取的最大金额
         // forex.getAsset().then(function(data) {
         //     $scope.withdraw.maxAmount = data.data.balance;
@@ -63,7 +65,7 @@
         // 判断出金状态, 获取可提取的最大金额
         asset.getIsWithdraw().then(function (data) {
             // console.info(data);
-            $scope.withdrawMessageSucc = true; 
+            $scope.withdrawMessageSucc = true;
             $scope.message = data;
             $scope.withdraw.maxAmount = data.balance < 0 ? 0 : data.balance;
 
@@ -74,11 +76,11 @@
                 error_msg: '系统错误，请联系管理员哦～'
             };
         });
-        
+
 
         // 获取银行卡信息
         function getCard() {
-            asset.getCard().then(function(data) {
+            asset.getCard().then(function (data) {
 
                 if (data.is_succ) {
                     $scope.withdraw.card.id = data.data.id;
@@ -90,7 +92,7 @@
                 }
             });
         }
-        
+
         function openCardMdl() {
             var personal = {
                 verified: $scope.personal.verified,
@@ -167,27 +169,27 @@
         function toWithdraw() {
             showErr('amount');
             // console.info($scope.withdrawForm.$invalid);
-            if($scope.withdrawForm.$invalid){
-              return;
+            if ($scope.withdrawForm.$invalid) {
+                return;
             }
-            if($scope.clickable == false){
-              return;
+            if ($scope.clickable == false) {
+                return;
             }
             console.log('toWithdraw is click');
             $scope.clickable = false;
             // 判断是否可以出金
-            asset.getIsWithdraw($scope.withdraw.amount).then(function(data) {
+            asset.getIsWithdraw($scope.withdraw.amount).then(function (data) {
                 $scope.message = data;
                 // console.info(data);
                 if ($scope.message.is_succ) {
                     layer.confirm('现在提现会导致您的账户红包失效，是否继续提现？', {
-                      btn: ['取消', '继续提现'], //按钮
-                    }, function(){
+                        btn: ['取消', '继续提现'], //按钮
+                    }, function () {
                         $scope.clickable = true;
                         layer.closeAll();
-                    }, function(){
+                    }, function () {
                         asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).then(function (data) {
-                          $scope.clickable = true;
+                            $scope.clickable = true;
 
                             if (data.is_succ) {
                                 $scope.withdraw.success = true;
@@ -195,19 +197,19 @@
 
                                 $state.go('space.asset.subpage', {
                                     subpage: 'withdraw'
-                                }, {reload: true});
-                            }else{
+                                }, { reload: true });
+                            } else {
                                 var msg = data.error_msg;
                                 openWithdrawMdl(msg);
                             }
                         });
                     });
-                    
+
                 } else {
                     // console.info($scope.message);
                     openMessageMdl();
                     $scope.clickable = true;
-                    
+
                 }
             });
 
