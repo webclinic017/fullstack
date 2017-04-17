@@ -111,7 +111,7 @@
         //更新用户名  
         //@TODO  需要根据cookie和登录状态判断是否发请求
         account.getSettingInfo().then(function(result){
-            // console.info(result);
+            if (!result) return;
             $scope.name = result.realname;
             $scope.tel = result.phone;
         });

@@ -16,8 +16,7 @@
             $params = $params ? $params : {};
             var token = $cookies["token"] || '';
             $url = $url+"?token="+token;
-            // $url = $url+"?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RlbW9hcGkudGlnZXJ3aXQuY29tL2F1dGgvbG9naW4iLCJpYXQiOjE0OTE4ODAwODcsImV4cCI6MTQ5MTk2NjQ4NywibmJmIjoxNDkxODgwMDg3LCJqdGkiOiI1NGM2YWMwYTEyOWM2Zjk1OTk4OTg4ZjkzZWM0NzhlMSIsInN1YiI6NDA2fQ.oqXXuaoPbQijb4TeFVwBWDGivwuL2gwLQiUHGhPq5fE";
-
+            
             if ($method.toUpperCase() === 'GET') {
                 return $http.get($url, {
                     params: $params

@@ -84,10 +84,13 @@
         // 获取实名认证状态
         function getVerifyStatus () {
             account.getVerifyStatus().then(function (data) {
-                // console.info(data);
-                angular.extend($scope.personal, {
-                    verifiedStatus: data.status
-                });
+                if (!data) return;
+                if (data.is_succ) {
+                    data = data.data;
+                    angular.extend($scope.personal, {
+                        verifiedStatus: data.profile_check || 0
+                    });
+                }
             });
         }
 

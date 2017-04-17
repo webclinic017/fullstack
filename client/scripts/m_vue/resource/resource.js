@@ -17,7 +17,6 @@ var apiUrl = {
     set_token: rootUrl + '/action/public/v3/set_token',             //get
     check_exsit: rootUrl + '/action/public/v4/exists',              //get
     changeTelBind: rootUrl + '/action/public/v3/set_my_bind_phone', //post
-    getInfo: rootUrl + '/action/public/v4/get_info',                //get
     upload_avatar: rootUrl + '/action/public/v3/user_upload',       //get
     // set_username: rootUrl + '/action/public/v4/set_username',       //post
     set_username: rootUrl + '/user/username',       //put
@@ -38,7 +37,6 @@ var apiUrlResource = {
     set_token: Vue.resource(apiUrl.set_token),
     check_exsit: Vue.resource(apiUrl.check_exsit),
     changeTelBind: Vue.resource(apiUrl.changeTelBind),
-    getInfo: Vue.resource(apiUrl.getInfo),
     upload_avatar: Vue.resource(apiUrl.upload_avatar),
     set_username: Vue.resource(apiUrl.set_username),
     get_province: Vue.resource(apiUrl.get_province),
@@ -56,7 +54,6 @@ function dealApiUrlResource($url, $method, $params) {
     Vue.http.options.xhr = { withCredentials: true };
     var token = $.cookie("token") || '';
     $url = apiUrl[$url] + '?token='+token;
-    // $url = apiUrl[$url] + "?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RlbW9hcGkudGlnZXJ3aXQuY29tL2F1dGgvbG9naW4iLCJpYXQiOjE0OTE4ODAwODcsImV4cCI6MTQ5MTk2NjQ4NywibmJmIjoxNDkxODgwMDg3LCJqdGkiOiI1NGM2YWMwYTEyOWM2Zjk1OTk4OTg4ZjkzZWM0NzhlMSIsInN1YiI6NDA2fQ.oqXXuaoPbQijb4TeFVwBWDGivwuL2gwLQiUHGhPq5fE";
     $params = $params ? $params : {};
 
     if ($method.toUpperCase() === 'GET') {

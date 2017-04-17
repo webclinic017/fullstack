@@ -84,13 +84,6 @@
                 // expires: expires
                 remember: expires
             });
-
-            // return $http.post(o.loginApi, {
-            //     account: id,
-            //     password: password,
-            //     // expires: expires
-            //     remember: expires
-            // });
         }
 
         function checkLogined() {
@@ -211,18 +204,6 @@
                 unit: unit,
                 key: key
             });
-
-            // return $http.post(o.registerApi, {
-            //     username: username,
-            //     phone: phone,
-            //     verify_code: captcha,
-            //     email: email,
-            //     password: password,
-            //     lp: lp,
-            //     pid: pid,
-            //     unit: unit,
-            //     key: key
-            // });
         }
 
         /**
@@ -283,26 +264,6 @@
 
                 return personal;
             });
-
-            // return $http.get(o.getPersonalInfoApi, {
-            //     params: {
-            //         token: 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RlbW9hcGkudGlnZXJ3aXQuY29tL2F1dGgvbG9naW4iLCJpYXQiOjE0OTE0NTkxNTQsImV4cCI6MTQ5MTU0NTU1NCwibmJmIjoxNDkxNDU5MTU0LCJqdGkiOiJhMmZkMWRjNmUyY2Y1YWVmM2MyZDdhNmQ3YTNmNzVjNiIsInN1YiI6NzQzMn0.-froYKFyHpwp_EJlKq8iALvtn79D-XAS_Hd0bTAiKrU'
-            //     }
-            // }).then(function (data) {
-            //     var personal = {};
-
-            //     angular.forEach(data.data, function (value, key) {
-
-            //         if (key === 'user_code') {
-            //             this['usercode'] = value;
-
-            //         } else {
-            //             this[key] = value;
-            //         }
-            //     }, personal);
-
-            //     return personal;
-            // });
         }
 
         /**
@@ -388,20 +349,10 @@
          * @desc setting 获取手机号码、邮箱等加密信息
          */
         function getSettingInfo() {
-            return $http.get(o.getSettingInfoApi, {
-                params: {
-                    type: 'Profile'
-                }
-            }).then(function (data) {
+            return publicHttp.dealPublicRequest(o.getPersonalInfoApi, 'GET').then(function (data) {
+                if (!data) return false;
                 if (data.is_succ) {
-                    data = data.data;
-                    return angular.extend(data, {
-                        username: data.username,
-                        location: data.region,
-                        phone: data.phone,
-                        email: data.email,
-                        verifiedStatus: data.profile_check || 0
-                    });
+                    return data.data;
                 }
             });
         }
@@ -509,8 +460,6 @@
          * @method logout
          */
         function logout() {
-            // return $http.get(o.logoutApi);
-
             return publicHttp.dealPublicRequest(o.logoutApi, 'POST');
         }
 
@@ -529,25 +478,7 @@
          * @desc 获取实名认证状态
          */
         function getVerifyStatus() {
-            return $http.get(o.getVerifyStatusApi, {
-                params: {
-                    type: 'Profile'
-                }
-            }).then(function (data) {
-                
-                if (data.is_succ) {
-                    data = data.data;
-                    
-                    return {
-                        status: data.profile_check || 0,
-                        realname: data.realname,
-                        idNumber: data.id_no
-                    }
-                } else {
-                    return {};
-                }
-                
-            });
+            return publicHttp.dealPublicRequest(o.getPersonalInfoApi, 'GET');
         }
 
         /**

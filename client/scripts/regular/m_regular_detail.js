@@ -143,14 +143,23 @@ jQuery(function($){
         });
     }
 
-    $.get('/action/public/v4/get_info?type=Profile').then(function(result){
-        result = JSON.parse(result);
-        result = result.data;
-        name = result.realname;
-        phone = result.phone;
-    }, function (data) {
-        console.info(data);
+    publicRequest('getUserInfo', 'GET').then(function (data) {
+        if (!data) return;
+        // console.log(data);
+        if (data.is_succ) {
+            name = data.data.realname;
+            phone = data.data.phone;
+        }
     });
+
+    // $.get('/action/public/v4/get_info?type=Profile').then(function(result){
+    //     result = JSON.parse(result);
+    //     result = result.data;
+    //     name = result.realname;
+    //     phone = result.phone;
+    // }, function (data) {
+    //     console.info(data);
+    // });
 
     var $agreementBtn = $(".checkbox-wrapper a");
 

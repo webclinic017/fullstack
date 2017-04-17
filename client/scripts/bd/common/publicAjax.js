@@ -4,6 +4,7 @@
     var origin = $.cookie("access_origin2") || '';
     var apiUrl = {
         getUserInfo: origin + '/user/info',     // get
+        register: origin + '/auth/register',     // post
     };
 
     w.publicRequest = publicRequest;
@@ -11,7 +12,6 @@
     function publicRequest ($url, $method, $params) {
         var token = $.cookie("token") || '';
         $url = apiUrl[$url] + '?token='+token;
-        // $url = apiUrl[$url] + "?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RlbW9hcGkudGlnZXJ3aXQuY29tL2F1dGgvbG9naW4iLCJpYXQiOjE0OTE4ODAwODcsImV4cCI6MTQ5MTk2NjQ4NywibmJmIjoxNDkxODgwMDg3LCJqdGkiOiI1NGM2YWMwYTEyOWM2Zjk1OTk4OTg4ZjkzZWM0NzhlMSIsInN1YiI6NDA2fQ.oqXXuaoPbQijb4TeFVwBWDGivwuL2gwLQiUHGhPq5fE";
         $params = $params ? $params : {};
         
         return $.ajax({
@@ -22,7 +22,7 @@
             },
             data: $params,
             success: function (data) {
-                console.log(data);
+                // console.log(data);
                 if (data.code === 1000105) {
                     console.log(data.message);
                     layer.open({

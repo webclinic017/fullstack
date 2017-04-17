@@ -286,10 +286,10 @@
                         if (user_id) {
                             sa.login(user_id);
                         }
-                    }, 200);
-                    
-                    // 成功
-                    goNextStep();
+
+                        // 成功
+                        goNextStep();
+                    }, 300);
                     
                     window._hmt && _hmt.push(['_trackEvent', 'account', 'register']);
                     window._mvq && _mvq.push(['$setGeneral', 'registered', '', $scope.account.username, $scope.account.phone]);
