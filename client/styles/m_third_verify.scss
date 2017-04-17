@@ -1,0 +1,33 @@
+@import "common/mixins/bem";
+
+@include b(m_third_verify) {
+    @include e(test) {
+        width: 80%;
+        height: 200px;
+        margin-left: 10%;
+        border: 1px solid #ccc;
+        overflow: hidden;
+        position: relative;
+
+        @include m(pic) {
+            width: 100%;
+            height: 200px;
+            line-height: 200px;
+
+            img {
+                width: 100%;
+                vertical-align: middle;
+            }
+        }
+
+        input {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+    }
+}

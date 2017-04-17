@@ -307,12 +307,18 @@ module.exports = function (app) {
 
     /* H5 充值中转页面 */
     app.route('/m/deposit/test').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_deposit_test', extendPublic({}, req));
     });
     app.route('/m/deposit/pay').get(function (req, res) {
-        setCompanyCookie(res);
+        setEnvCf(req, res);
         res.render('m_deposit_pay', extendPublic({}, req));
+    });
+
+    // 第三方认证流程
+    app.route('/m/third/verify').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('m_third_verify', extendPublic({}, req));
     });
 
     /*--------------------APP-End-------------------------*/
