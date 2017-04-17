@@ -12,6 +12,7 @@
         $scope.settingInfo = {};
 
         account.getSettingInfo().then(function (data) {
+            if (!data) return;
             $scope.settingInfo = data;
         });
     }

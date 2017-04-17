@@ -58,11 +58,14 @@ if ($(".m_vue").attr("data-page") === "info_avatar") {
 			},
 			getAvatarInfo: function () {
 				var self = this;
-				apiUrlResource.getInfo.get().then(function (res) {
-					var avatar_info = JSON.parse(res.data).data.user_code;
-					self.avatar_info = '/avatar/' + avatar_info + '_150.jpg'
-					//console.log(JSON.parse(res.data));
-				});
+                dealApiUrlResource("getSettingInfoApi", "GET").then(function (data) {
+                    if (!data) return;
+                    if (data.is_succ) {
+                        self.avatar_info = '/avatar/' + data.data.user_code + '_150.jpg'
+                    } else {
+
+                    }
+                });
 			},
 			chageUploadStatus: function () {
 				this.avatar.status = 0;

@@ -325,11 +325,11 @@
         .run(['$rootScope', '$state', '$window', 'authorization', function ($rootScope, $state, $window, authorization) {
             $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
                 if (toState.authenticated) {
-                    authorization.authorize().then(function (isLogined) {
-                        if (!isLogined) {
-                            $state.go('account.subpage', {subpage: 'login'});
-                        }
-                    });
+                    // authorization.authorize().then(function (isLogined) {
+                    //     if (!isLogined) {
+                    //         $state.go('account.subpage', {subpage: 'login'});
+                    //     }
+                    // });
                 }
             });
         }]);

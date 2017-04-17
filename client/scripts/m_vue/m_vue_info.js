@@ -15,20 +15,33 @@ if ($(".m_vue").attr("data-page") === "info") {
         ready: function () {
             var self = this;
 
-            apiUrlResource.getSettingInfo.get().then(function (response) {
-                var data = JSON.parse(response.data);
-                // console.info(data);
+            dealApiUrlResource("getSettingInfoApi", "GET").then(function (data) {
+                if (!data) return;
                 if (data.is_succ) {
                     self.settingInfo.username = data.data.username;
                     self.settingInfo.location = {
-                        state_name: data.data.region.state_name,
-                        city_name: data.data.region.city_name
+                        state_name: data.data.region_cn.state_name,
+                        city_name: data.data.region_cn.city_name
                     };
                     self.settingInfo.avatar = '/avatar/' + data.data.user_code + '_150.jpg?timestamp=' + new Date().getTime();
+                } else {
+
                 }
-            }, function (error) {
-                console.info(error);
             });
+            // apiUrlResource.getSettingInfo.get().then(function (response) {
+            //     var data = JSON.parse(response.data);
+            //     console.info(data);
+            //     if (data.is_succ) {
+            //         self.settingInfo.username = data.data.username;
+            //         self.settingInfo.location = {
+            //             state_name: data.data.region.state_name,
+            //             city_name: data.data.region.city_name
+            //         };
+            //         self.settingInfo.avatar = '/avatar/' + data.data.user_code + '_150.jpg?timestamp=' + new Date().getTime();
+            //     }
+            // }, function (error) {
+            //     console.info(error);
+            // });
         },
         methods: {
             toStatePage: function (page) {

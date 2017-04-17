@@ -413,36 +413,7 @@
         /*注册成功页面*/
         if (isRegSucceed()) {
             /*第二页注册逻辑*/
-            var regist_page3 = {
-                getMt4: function () {
-                    $.ajax({
-                        type: "get",
-                        url: "/action/public/v4/get_info",
-                        success: function (data) {
-                            data = JSON.parse(data);
-                            data = data.data;
-                            console.log(data);
-                            if (data.real_id) {
-                                $("#reg_MT4_number").html(data.real_id);
-                            } else {
-                                $("#reg_MT4_number").html("获取失败");
-                            }
-                        },
-                        error: function (err) {
-                            $("#reg_MT4_number").html("获取失败");
-                        }
-                    });
-                },
-                submit: function () {
-                    // $("#regist_btn3").on("touchend", function () {
-                    //     window.location.href = "/download";
-                    // });
-                }
-            };
-
-            /*调用预定义方法*/
-            /*regist_page3.getMt4();*/
-            regist_page3.submit();
+            
             // 判断是否在红包页面，更改文字样式
             if (window.location.href.indexOf('redbag') >= 0) {
                 $('.h5_register_main').find('.forNormalPage').css('display', 'none');

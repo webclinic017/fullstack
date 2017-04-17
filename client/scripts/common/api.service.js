@@ -10,29 +10,32 @@
         // php接口要用http://proxy.tigerwit.com请求
 
         var urlOrigin = $cookies["access_origin"] || '';    // node 中写入cookie
+        var urlOrigin2 = $cookies["access_origin2"] || '';    // node 中写入cookie
         var o = urlOrigin;
         // console.info(o);
 
         var account = {
             getPersonalInfoDegreeApi: o + '/action/public/v4/user_perfect_degree',
-            loginApi: o + '/action/public/v3/login',
+            // loginApi: o + '/action/public/v3/login',
+            loginApi: urlOrigin2 + '/auth/login',
             checkLoginedApi: o + '/action/public/v4/check',
             setTokenApi: o + '/action/public/v3/set_token',
             checkExistApi: o + '/action/public/v4/exists',
             getRCaptchaApi: o + '/action/public/v3/get_phone_reg_code',
             getRVoiceCaptchaApi: o + '/action/public/v3/get_tigerwit_phone_sound_code',
-            registerApi: o + '/action/public/v3/register',
+            // registerApi: o + '/action/public/v3/register',
+            registerApi: urlOrigin2 + '/auth/register',
             getCaptchaApi: o + '/action/public/v3/get_phone_code',
             checkPhoneAndCaptchaApi: o + '/action/public/v4/verifycode',
             setNewPwdApi: o + '/action/public/v4/change_password',
-            getPersonalInfoApi: o + '/action/public/v4/get_info',
+            // getPersonalInfoApi: o + '/action/public/v4/get_info',
+            getPersonalInfoApi: urlOrigin2 + '/user/info',
             getAssetInfoApi: o + '/action/public/v4/get_usercenter_asset',
             getUnreadLengthApi: o + '/action/public/v3/get_notify_num',
             getNoticeCategoryApi: o + '/action/public/v3/get_notify_cate',
             getNoticeListApi: o + '/action/public/v3/get_notify_list',
             getOneReadApi: o + '/action/public/v3/notify_mark_read',
             getAllReadApi: o + '/action/public/v3/notify_mark_all_read',
-            getSettingInfoApi: o + '/action/public/v4/get_info',
             getLocationApi: o + '/action/public/v4/basic_settings',
             getWorldsApi: o + '/action/public/v4/worldcode_list',
             getStatesApi: o + '/action/public/v4/statecode_list',
@@ -42,9 +45,9 @@
             getSCaptchaApi: o + '/action/public/v3/get_phone_code',
             getSVoiceCaptchaApi: o + '/action/public/v3/get_phone_sound_code',
             setPhoneApi: o + '/action/public/v3/set_my_bind_phone',
-            logoutApi: o + '/action/public/v3/logout',
+            // logoutApi: o + '/action/public/v3/logout',
+            logoutApi: urlOrigin2 + '/auth/logout',
             verifyApi: o + '/action/public/v4/set_info',
-            getVerifyStatusApi: o + '/action/public/v4/get_info',
             getKycApi: o + '/action/public/v4/get_kyc_info',
             getUserKycApi: o + '/action/public/v4/get_user_kyc_info',
             setKycApi: o + '/action/public/v4/save_kyc_info',
