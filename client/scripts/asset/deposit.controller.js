@@ -58,7 +58,7 @@
 
             var w = $window.open('/waiting');
 
-            asset.deposit($scope.personal.real_id, amount).then(function(data) {
+            asset.deposit($scope.personal.mt4_id, amount).then(function(data) {
 
                 var url;
                 if(data && data.data && data.data.url){
