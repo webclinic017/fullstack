@@ -23,6 +23,8 @@ $(document).ready(function () {
         var file = e.target.files[0];
         preview1(file);
     });
+    var origin = $.cookie("access_origin2") || '';
+    var token = $.cookie("token") || '';
 
     $(".m_third_verify__btn").on("click", function () {
         var oMyForm = new FormData($(".m_third_verify__test .form" )[0]);
@@ -34,7 +36,7 @@ $(document).ready(function () {
         // console.log(oMyForm.get("file"));
 
         $.ajax({
-            url: '/user/upload_id_card?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczovL2RlbW9hcGkudGlnZXJ3aXQuY29tL2F1dGgvbG9naW4iLCJpYXQiOjE0OTI0MjE4MjgsImV4cCI6MTQ5NTAxMzgyOCwibmJmIjoxNDkyNDIxODI4LCJqdGkiOiI0Mzg0NjlmMWIyNjM0MzVhNzY0OWQ2YmEwOTU5OTg0MiIsInN1YiI6NzQzMn0.leioyq7id0wD-a_nBMWI93q-7c4O0XVTQmKd8PT-6Yo',
+            url: origin+'/user/upload_id_card?token='+token,
             type: 'POST',
             xhrFields: {
                 withCredentials: true
