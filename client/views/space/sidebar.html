@@ -44,10 +44,10 @@
             复制高手：{{ personal.copy_num }}
         </div>
         <div class="space_sidebar__real">
-            MT4 真实账户：{{ personal.real_id }}
+            MT4 真实账户：{{ personal.mt4_id }}
         </div>
         <div class="space_sidebar__demo">
-            MT4 模拟账户：{{ personal.demo_id }}
+            MT4 模拟账户：{{ personal.demo_mt4_id }}
         </div>
     </div>
 
@@ -72,7 +72,6 @@
                 <li ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
                     <a ui-sref="space.redbag.subpage">
                         我的红包
-                        <!-- <span class="space_sidebar__bag-num" ng-if="personal.redbagLength > 0">{{personal.redbagLength}}</span> -->
                         <span class="space_sidebar__bag-num new">new</span>
                     </a>
                 </li>

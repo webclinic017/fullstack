@@ -89,19 +89,6 @@ $(document).ready(function () {
             clickable = false;
             $('#' + info.targetId).html('<i class="loading fa fa-spinner"></i>正在跳转');
 
-            /*
-             品友DSP,负责人:蔡雪峰 添加日期：2016.7.12
-             //删除此段代码时需要同时删除调用pyRegisterCvt (../t1/script/check.js)
-             ==begin==
-             */
-            if (window.pyRegisterCvt) {
-                window.pyRegisterCvt(rPhone);
-            }
-            /*
-             品友DPS
-             ==end==
-             */
-
             // umeng
             _czc.push(["_trackEvent", "活动页", "免费注册"]);
 

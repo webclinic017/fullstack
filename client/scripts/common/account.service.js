@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('account', account);
 
-    account.$inject = ['$http', '$rootScope', '$q', '$cookies', 'whiteLabel', 'api'];
+    account.$inject = ['$http', '$rootScope', '$q', '$cookies', 'whiteLabel', 'api', 'publicHttp'];
 
-    function account($http, $rootScope, $q, $cookies, whiteLabel, api) {
+    function account($http, $rootScope, $q, $cookies, whiteLabel, api, publicHttp) {
         var o = api.account;
         var service = {
             encrypt: encrypt,
@@ -77,11 +77,12 @@
             } else {
                 expires = 0;
             }
-
-            return $http.post(o.loginApi, {
+            
+            return publicHttp.dealPublicRequest(o.loginApi, 'POST', {
                 account: id,
                 password: password,
-                expires: expires
+                // expires: expires
+                remember: expires
             });
         }
 
@@ -192,7 +193,7 @@
          */
         function register(username, phone, captcha, email, password, lp, pid, unit, key) {
 
-            return $http.post(o.registerApi, {
+            return publicHttp.dealPublicRequest(o.registerApi, 'POST', {
                 username: username,
                 phone: phone,
                 verify_code: captcha,
@@ -246,7 +247,9 @@
         }
 
         function getPersonalInfo() {
-            return $http.get(o.getPersonalInfoApi).then(function (data) {
+
+            return publicHttp.dealPublicRequest(o.getPersonalInfoApi, 'GET').then(function (data) {
+                if (!data) return false;
                 var personal = {};
 
                 angular.forEach(data.data, function (value, key) {
@@ -346,20 +349,10 @@
          * @desc setting 获取手机号码、邮箱等加密信息
          */
         function getSettingInfo() {
-            return $http.get(o.getSettingInfoApi, {
-                params: {
-                    type: 'Profile'
-                }
-            }).then(function (data) {
+            return publicHttp.dealPublicRequest(o.getPersonalInfoApi, 'GET').then(function (data) {
+                if (!data) return false;
                 if (data.is_succ) {
-                    data = data.data;
-                    return angular.extend(data, {
-                        username: data.username,
-                        location: data.region,
-                        phone: data.phone,
-                        email: data.email,
-                        verifiedStatus: data.profile_check || 0
-                    });
+                    return data.data;
                 }
             });
         }
@@ -467,7 +460,7 @@
          * @method logout
          */
         function logout() {
-            return $http.get(o.logoutApi);
+            return publicHttp.dealPublicRequest(o.logoutApi, 'POST');
         }
 
         /*
@@ -485,25 +478,7 @@
          * @desc 获取实名认证状态
          */
         function getVerifyStatus() {
-            return $http.get(o.getVerifyStatusApi, {
-                params: {
-                    type: 'Profile'
-                }
-            }).then(function (data) {
-                
-                if (data.is_succ) {
-                    data = data.data;
-                    
-                    return {
-                        status: data.profile_check || 0,
-                        realname: data.realname,
-                        idNumber: data.id_no
-                    }
-                } else {
-                    return {};
-                }
-                
-            });
+            return publicHttp.dealPublicRequest(o.getPersonalInfoApi, 'GET');
         }
 
         /**

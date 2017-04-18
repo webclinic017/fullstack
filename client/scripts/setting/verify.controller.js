@@ -124,14 +124,15 @@
 
         function getVerifyStatus() {
             account.getVerifyStatus().then(function (data) {
-                console.info(data);
                 $scope.$broadcast("hideLoadingImg");
-                $scope.verification.status = data.status;
-                // $scope.verification.status = 1;
-                $scope.verification.realname = data.realname || undefined;
-                $scope.verification.id.number = data.idNumber;
+                if (!data) return;
+                if (data.is_succ) {
+                    data = data.data;
 
-                // console.info($scope.verification);
+                    $scope.verification.status = data.profile_check || 0;
+                    $scope.verification.realname = data.realname || undefined;
+                    $scope.verification.id.number = data.id_no;
+                }
             });
         }
 

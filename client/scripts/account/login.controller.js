@@ -23,15 +23,8 @@
             }
         };
         $scope.backErr = {
-            id: {
-                show: false,
-                status: 0  // 0, 1
-            },
-
-            system: {
-                show: false,
-                status: 0    // 0, 1, 2
-            }
+            show: false,
+            msg: ''
         };
         $scope.clickable = true;
         $scope.showErr = showErr;
@@ -53,62 +46,50 @@
             var textEnc = account.encrypt($scope.account.password);
             // 首先对 password 加密
             // account.encrypt($scope.account.password).then(function (textEnc) {
-                // console.info(textEnc);
-
+                // console.info($scope.account.id, textEnc, $scope.account.autoLogin);
+                
                 if (textEnc) {
                     account.login($scope.account.id, textEnc, $scope.account.autoLogin).then(function (data) {
+                        // console.log(data);
+                        if (!data) {
+                            $scope.clickable = true;
+                            return;
+                        }
                         if (!data.is_succ) {
                             
-                            // id 错误
-                            if (data.error_code === 1) {
-                                $scope.backErr.id.show = true;
-                                $scope.backErr.id.status = 1;
-                            }
-                            
-                            if (data.error_code === 3) {
-                                $scope.backErr.id.show = true;
-                                $scope.backErr.id.status = 2;
-                            }
-                            // 帐号注销
-                            if (data.error_code === 5) {
-                                $scope.backErr.id.show = true;
-                                $scope.backErr.id.status = 3;
-                            }
+                            $scope.backErr.show = true;
+                            $scope.backErr.msg = data.message;
 
-                            // 系统错误
-                            if (data.error_code === 2) {
-                                $scope.backErr.system.show = true;
-                                $scope.backErr.system.status = 1;
-
-                                $timeout(function () {
-                                    $scope.backErr.system.show = false;
-                                    $scope.backErr.system.status = 0;
-                                }, 3000);
-                            }
-                            
-                            if (data.error_code === 4) {
-                                $scope.backErr.system.show = true;
-                                $scope.backErr.system.status = 2;
-
-                                $timeout(function () {
-                                    $scope.backErr.system.show = false;
-                                    $scope.backErr.system.status = 0;
-                                }, 3000);
-                            }
+                            $timeout(function () {
+                                $scope.backErr.show = false;
+                                $scope.backErr.msg = '';
+                            }, 3000);
                             $scope.clickable = true;
                         } else {
                             // umeng
                             _czc.push(["_trackEvent","登录框","登录成功"]);
                             
-                            if (backUrl) {
-                                $window.location.href = backUrl;
-                            } else {
-                                account.hasChecked = false;
-                                $state.go('space.invest.subpage', {subpage: 'current', back: 'login'}, {reload: true});
-                                $scope.$emit('relogin_info');
+                            $timeout(function () {
+                                if (backUrl) {
+                                    $window.location.href = backUrl;
+                                } else {
+                                    account.hasChecked = false;
+                                    $state.go('space.invest.subpage', {subpage: 'current', back: 'login'}, {reload: true});
+                                    $scope.$emit('relogin_info');
 
-                            }
+                                }
+                            }, 100);
                         }
+                    }, function (err) {
+                        console.log(err);
+                        $scope.backErr.show = true;
+                        $scope.backErr.msg = "接口请求失败";
+
+                        $timeout(function () {
+                            $scope.backErr.show = false;
+                            $scope.backErr.msg = '';
+                        }, 3000);
+                        $scope.clickable = true;
                     });
                 }
             // });

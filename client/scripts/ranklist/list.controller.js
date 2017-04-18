@@ -61,7 +61,7 @@
         }
         if($location.path() != "/ranklist/huiying-agree"){
             account.getSettingInfo().then(function(result){
-                // result = result.data;
+                if (!result) return;
                 $scope.name = result.realname;
                 $scope.tel = result.phone;
             });

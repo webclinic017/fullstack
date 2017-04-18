@@ -46,18 +46,17 @@
         });
 
         getUnreadLength();
-        getMyRedbagLength();
         setInterval(function() {
             getUnreadLength();
         },30000);
 
-        account.checkLogined().then(function (logined) {
-            $scope.userstatus.logined = logined;
-            if (logined) {
-                initialize();
+        // account.checkLogined().then(function (logined) {
+        //     $scope.userstatus.logined = logined;
+        //     if (logined) {
+        //         initialize();
 
-            }
-        });
+        //     }
+        // });
 
         $scope.$on('refresh_personal_cookies_info', function(event, is_login, is_register){
             console.info('refresh_personal_cookies_info');
@@ -89,27 +88,8 @@
                     $scope.$emit('refresh_personal_cookies_info', 'login');
                 }, 100);
             }
-
-            initialize();
             getUnreadLength();
         });
-        $scope.$on('get_my_redbag_length', function (event, arg) {
-            // console.log(arg);
-            $scope.personal.redbagLength = arg.redbagLength;
-        });
-
-        // 初始化所需的全局数据
-        function initialize() {
-            account.getPersonalInfo().then(function (data) {
-                angular.extend($scope.personal, data, {
-                    xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs + '?timestamp=' + (+new Date()),
-                    smAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.sm + '?timestamp=' + (+new Date()),
-                    mdAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.md + '?timestamp=' + (+new Date()),
-                    lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg + '?timestamp=' + (+new Date())
-                });
-            });
-
-        }
 
         // 获取新消息
         function getUnreadLength () {
@@ -128,25 +108,11 @@
             // $scope.$emit('refreshNoticeList');
 
         }
-        // 获取可用红包数量 ps：最好单独出一个接口，暂时和我的红包用同一个接口
-        function getMyRedbagLength () {
-            redbag.getRedbagList({
-                page: 1,
-                pagesize: 1,
-                type: 1
-            }).then(function (data) {
-                // console.info(data);
-                if (data.is_succ) {
-                    angular.extend($scope.personal, {
-                        redbagLength: data.sum
-                    });
-                }
-            });
-        }
 
         // 退出
         function logout() {
             account.logout().then(function (data) {
+                if (!data) return;
                 if (data.is_succ) {
                     // 神策数据统计
                     sa.logout(true);

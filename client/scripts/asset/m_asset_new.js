@@ -123,7 +123,17 @@ $(document).ready(function () {
                     }
                     
                 } else {
-                    toCardList();
+                    layer.open({
+                        content: '现在提现会导致您的账户红包失效，是否继续提现？',
+                        btn: ['继续提现', '取消'],
+                        yes: function(index){
+                            layer.closeAll();
+                            toCardList();
+                        },
+                        no: function () {
+                            layer.closeAll();
+                        }
+                    });
                 }
             } else {
                 console.info("提现金额不能小于20美金");
@@ -179,16 +189,24 @@ $(document).ready(function () {
 
     // 获取真实姓名以及银行卡信息
     function getPersonalInfo () {
-        $.get('/action/public/v4/get_info').then(function (data) {
-            data = JSON.parse(data);
-            
+        publicRequest('getUserInfo', 'GET').then(function (data) {
+            if (!data) return;
+            // console.log(data);
             if (data.is_succ) {
                 realname = data.data.realname;
                 getCard();
             }
-        }, function (err) {
-            console.log(err);
         });
+        // $.get('/action/public/v4/get_info').then(function (data) {
+        //     data = JSON.parse(data);
+        //     console.info(data);
+        //     if (data.is_succ) {
+        //         realname = data.data.realname;
+        //         getCard();
+        //     }
+        // }, function (err) {
+        //     console.log(err);
+        // });
     }
        
     function getCard() {
