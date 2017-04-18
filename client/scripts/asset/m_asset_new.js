@@ -189,24 +189,24 @@ $(document).ready(function () {
 
     // 获取真实姓名以及银行卡信息
     function getPersonalInfo () {
-        publicRequest('getUserInfo', 'GET').then(function (data) {
-            if (!data) return;
-            // console.log(data);
-            if (data.is_succ) {
-                realname = data.data.realname;
-                getCard();
-            }
-        });
-        // $.get('/action/public/v4/get_info').then(function (data) {
-        //     data = JSON.parse(data);
-        //     console.info(data);
+        // publicRequest('getUserInfo', 'GET').then(function (data) {
+        //     if (!data) return;
+        //     // console.log(data);
         //     if (data.is_succ) {
         //         realname = data.data.realname;
         //         getCard();
         //     }
-        // }, function (err) {
-        //     console.log(err);
         // });
+        $.get('/action/public/v4/get_info').then(function (data) {
+            data = JSON.parse(data);
+            console.info(data);
+            if (data.is_succ) {
+                realname = data.data.realname;
+                getCard();
+            }
+        }, function (err) {
+            console.log(err);
+        });
     }
        
     function getCard() {
