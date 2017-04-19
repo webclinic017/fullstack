@@ -8,7 +8,8 @@
     delete: {method: 'DELETE'}
  */
 
-var rootUrl = $.cookie("access_origin2");
+// var rootUrl = $.cookie("access_origin2");
+var rootUrl = '';
 var apiUrl = {
     changePwdApi: rootUrl + '/action/public/v4/change_password',    //post
     getSettingInfoApi: rootUrl + '/action/public/v4/get_info',      //get
