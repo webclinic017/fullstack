@@ -245,57 +245,57 @@ $(document).ready(function () {
                     /*获取邮箱*/
                     email = $('#email').val();
                     verify_code = $("#verify_code").val();
-                    publicRequest('register', 'POST', {
-                        username: username,
-                        phone: telephone,
-                        verify_code: verify_code,
-                        email: email,
-                        password: password,
-                        lp: "",
-                        pid: "",
-                        unit: "",
-                        key: ""
-                    }).then(function (data) {
-                        if (!data) return;
-                        // console.log(data);
-                        if (data.is_succ) {
-                            var action_address = window.location.href.replace("2", "3");
-                            skipTo(action_address);
-                        } else {
-                            alert(data.message);
-                        }
-                    });
-                    // $.ajax({
-                    //     type: "post",
-                    //     url: "/action/public/v3/register",
-                    //     data: {
-                    //         username: username,
-                    //         phone: telephone,
-                    //         verify_code: verify_code,
-                    //         email: email,
-                    //         password: password,
-                    //         lp: "",
-                    //         pid: "",
-                    //         unit: "",
-                    //         key: ""
-                    //     },
-                    //     success: function (data) {
-                    //         console.log(data);
-                    //         if (data.is_succ == true) {
-                    //             var action_address = window.location.href.replace("2", "3");
-                    //             skipTo(action_address);
-                    //         } else if (data.error_code == 12) {
-                    //             $("#verify_code").addClass("warning").val("验证码不正确");
-                    //         } else if (data.error_code == 3) {
-                    //             $("#verify_code").addClass("warning").val("手机号已存在");
-                    //         } else {
-                    //             alert(data.error_msg)
-                    //         }
-                    //     },
-                    //     error: function (err) {
-                    //         alert("error:" + err);
+                    // publicRequest('register', 'POST', {
+                    //     username: username,
+                    //     phone: telephone,
+                    //     verify_code: verify_code,
+                    //     email: email,
+                    //     password: password,
+                    //     lp: "",
+                    //     pid: "",
+                    //     unit: "",
+                    //     key: ""
+                    // }).then(function (data) {
+                    //     if (!data) return;
+                    //     // console.log(data);
+                    //     if (data.is_succ) {
+                    //         var action_address = window.location.href.replace("2", "3");
+                    //         skipTo(action_address);
+                    //     } else {
+                    //         alert(data.message);
                     //     }
                     // });
+                    $.ajax({
+                        type: "post",
+                        url: "/action/public/v3/register",
+                        data: {
+                            username: username,
+                            phone: telephone,
+                            verify_code: verify_code,
+                            email: email,
+                            password: password,
+                            lp: "",
+                            pid: "",
+                            unit: "",
+                            key: ""
+                        },
+                        success: function (data) {
+                            console.log(data);
+                            if (data.is_succ == true) {
+                                var action_address = window.location.href.replace("2", "3");
+                                skipTo(action_address);
+                            } else if (data.error_code == 12) {
+                                $("#verify_code").addClass("warning").val("验证码不正确");
+                            } else if (data.error_code == 3) {
+                                $("#verify_code").addClass("warning").val("手机号已存在");
+                            } else {
+                                alert(data.error_msg)
+                            }
+                        },
+                        error: function (err) {
+                            alert("error:" + err);
+                        }
+                    });
                 }
             })
         }
@@ -306,35 +306,35 @@ $(document).ready(function () {
         /*第三页注册逻辑 - 对象*/
         var regist_page3 = {
             getMt4: function () {
-                publicRequest('getUserInfo', 'GET').then(function (data) {
-                    if (!data) return;
-                    // console.log(data);
-                    if (data.is_succ) {
-                        data = data.data;
-                        if (data.mt4_id) {
-                            $("#reg_MT4_number").html(data.mt4_id);
-                        } else {
-                            $("#reg_MT4_number").html("获取失败");
-                        }
-                    }
-                });
-                // $.ajax({
-                //     type: "get",
-                //     url: "/action/public/v4/get_info",
-                //     success: function (data) {
-                //         data = JSON.parse(data);
+                // publicRequest('getUserInfo', 'GET').then(function (data) {
+                //     if (!data) return;
+                //     // console.log(data);
+                //     if (data.is_succ) {
                 //         data = data.data;
-                //         console.log(data);
-                //         if (data.real_id) {
-                //             $("#reg_MT4_number").html(data.real_id);
+                //         if (data.mt4_id) {
+                //             $("#reg_MT4_number").html(data.mt4_id);
                 //         } else {
                 //             $("#reg_MT4_number").html("获取失败");
                 //         }
-                //     },
-                //     error: function (err) {
-                //         $("#reg_MT4_number").html("获取失败");
                 //     }
                 // });
+                $.ajax({
+                    type: "get",
+                    url: "/action/public/v4/get_info",
+                    success: function (data) {
+                        data = JSON.parse(data);
+                        data = data.data;
+                        console.log(data);
+                        if (data.real_id) {
+                            $("#reg_MT4_number").html(data.real_id);
+                        } else {
+                            $("#reg_MT4_number").html("获取失败");
+                        }
+                    },
+                    error: function (err) {
+                        $("#reg_MT4_number").html("获取失败");
+                    }
+                });
             },
             submit: function () {
                 if (isPC()) { /*如果是PC,直接跳转*/

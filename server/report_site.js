@@ -1,4 +1,25 @@
 var report_sites = [
+    /*添加时间 2017-4-18*/
+    {
+        address: 'http://focus.21cn.com/society/a/2017/0331/13/32125006.shtml',
+        description: '【21CN焦点】老虎外汇：《微微一笑很倾城2》将拍?透视90后财富观',
+        date: '2017-03-31'
+    },
+    {
+        address: 'http://energy.chinadaily.cnicm.cn/2017/6_0411/59350.html?from=singlemessage&isappinstalled=0',
+        description: '【中国日报网】金融科技浪潮来临 老虎外汇聚焦互联网外汇服务',
+        date: '2017-04-11'
+    },
+    {
+        address: 'http://www.xsgou.com/biz/finance/52669.html?from=singlemessage&isappinstalled=0',
+        description: '【中国财经观察网】寻芳四月财机盛 爱钱进、TigerWit老虎外汇、投哪网助力财富开花',
+        date: '2017-04-10'
+    },
+    {
+        address: 'http://district.ce.cn/newarea/hyzx/201704/13/t20170413_21944005.shtml',
+        description: '【中国经济网】金融科技+外汇创新 看老虎外汇如何引领潮水方向',
+        date: '2017-04-13'
+    },
     /*添加时间 2017-4-6*/
     {
         address: 'http://m.tech.china.com/zixun/2017/0324/18271.html',

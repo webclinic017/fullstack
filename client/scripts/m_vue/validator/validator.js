@@ -10,7 +10,7 @@ Vue.validator('pwdNew', function (val) {
     var invalidMsg = '',
         counter = 0;
 
-    if (!/^[a-zA-Z0-9]{6,15}$/.test(val)) {
+    if (!/^[a-zA-Z0-9`~!@#\$%\^\&\*\(\)_\+<>\?:"\{\},\.\\\/;'\[\]]{6,15}$/.test(val)) {
         invalidMsg = '位数不正确或者包含非法字符';
     }
 
@@ -19,6 +19,10 @@ Vue.validator('pwdNew', function (val) {
     }
 
     if (val.search(/[a-zA-Z]/) !== -1) {
+        counter++;
+    }
+
+    if (string.search(/[`~!@#\$%\^\&\*\(\)_\+<>\?:"\{\},\.\\\/;'\[\]]/) !== 1) {
         counter++;
     }
 
@@ -45,22 +49,22 @@ Vue.validator('phoneErr', function (val) {
     }
 });
 
-Vue.validator('nameErr',function(val){
+Vue.validator('nameErr', function (val) {
     val = val.toString();
     var chExp = /[\u4e00-\u9fa5]/gi;
     var numExp = /\d/gi;
     var enExp = /[A-Za-z]/gi;
     var count = 0;
 
-    if(chExp.test(val) || numExp.test(val) || enExp.test(val)){
-        for(var i=0;i<val.length;i++){
-            if(chExp.test(val[i])){
+    if (chExp.test(val) || numExp.test(val) || enExp.test(val)) {
+        for (var i = 0; i < val.length; i++) {
+            if (chExp.test(val[i])) {
                 count += 2;
             } else {
                 count += 1;
             }
         }
-        if(count >= 2 && count <= 16){
+        if (count >= 2 && count <= 16) {
             return true;
         }
     } else {

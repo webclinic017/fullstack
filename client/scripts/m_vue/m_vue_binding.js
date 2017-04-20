@@ -11,23 +11,23 @@ if ($(".m_vue").attr("data-page") === "binding") {
         ready: function () {
             var self = this;
 
-            dealApiUrlResource("getSettingInfoApi", "GET").then(function (data) {
-                if (!data) return;
-                if (data.is_succ) {
-                    self.settingInfo.phone = data.data.phone;
-                    self.settingInfo.email = data.data.email;
-                }
-            });
-            // apiUrlResource.getSettingInfo.get({type: 'Profile'}).then(function (response) {
-            //     var data = JSON.parse(response.data);
-            //     // console.info(data);
+            // dealApiUrlResource("getSettingInfoApi", "GET").then(function (data) {
+            //     if (!data) return;
             //     if (data.is_succ) {
             //         self.settingInfo.phone = data.data.phone;
             //         self.settingInfo.email = data.data.email;
             //     }
-            // }, function (error) {
-            //     console.info(error);
             // });
+            apiUrlResource.getSettingInfo.get({type: 'Profile'}).then(function (response) {
+                var data = JSON.parse(response.data);
+                // console.info(data);
+                if (data.is_succ) {
+                    self.settingInfo.phone = data.data.phone;
+                    self.settingInfo.email = data.data.email;
+                }
+            }, function (error) {
+                console.info(error);
+            });
         },
         methods: {
             toStatePage: function (type, page) {

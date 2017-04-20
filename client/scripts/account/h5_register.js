@@ -175,7 +175,7 @@
 
             if (
                 (password.val() == "") ||
-                (!/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,20}$/.test(password.val()))
+                (!/^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{6,20}$/.test(password.val()))
             ) {
                 /*提示*/
                 layer.open({
@@ -184,7 +184,6 @@
                     anim: false,
                     time: 2 /*2秒后自动关闭*/
                 });
-
                 return false;
             } else {
                 return true;
