@@ -4,7 +4,7 @@
         <colgroup>
             <col width="35%">
             <col width="17%">
-            <col width="17%">
+            <!--<col width="17%">-->
             <col width="16%">
             <col width="15%">
         </colgroup>
@@ -12,7 +12,7 @@
             <tr>
                 <th>投资组合</th>
                 <th>交易手数</th>
-                <th>保证金</th>
+                <!--<th>保证金</th>-->
                 <th>收益</th>
                 <th></th>
             </tr>
@@ -25,7 +25,7 @@
             <colgroup>
                 <col width="35%">
                 <col width="17%">
-                <col width="17%">
+                <!--<col width="17%">-->
                 <col width="16%">
                 <col width="15%">
             </colgroup>
@@ -49,9 +49,9 @@
                     <th class="">
                         {{ orderHistory.volume }}
                     </th>
-                    <th class="">
+                    <!--<th class="">
                         <i class="fa fa-dollar"></i>{{ orderHistory.group_occupy_asset }}
-                    </th>
+                    </th>-->
                     <th ng-class="{'font-success': orderHistory.group_profit.indexOf('-') != -1, 'font-danger':  orderHistory.group_profit.indexOf('-') < 0}">
                         <i class="fa fa-dollar"></i>{{ orderHistory.group_profit }}
                     </th>
@@ -66,7 +66,7 @@
                 <colgroup>
                     <col width="35%">
                     <col width="17%">
-                    <col width="17%">
+                    <!--<col width="17%">-->
                     <col width="16%">
                     <col width="15%">
                 </colgroup>
@@ -95,7 +95,7 @@
                             </div>
                         </td>
                         <td>{{ order.volume }}</td>
-                        <td><i class="fa fa-dollar"></i>{{ order.occupy_asset }}</td>
+                        <!--<td><i class="fa fa-dollar"></i>{{ order.occupy_asset }}</td>-->
                         <td ng-class="{'font-success': order.profit.indexOf('-') != -1, 'font-danger': order.profit.indexOf('-') < 0}">
                             <i class="fa fa-dollar"></i>{{ order.profit }}
                         </td>
@@ -116,7 +116,7 @@
                 <colgroup>
                     <col width="35%">
                     <col width="17%">
-                    <col width="17%">
+                    <!--<col width="17%">-->
                     <col width="16%">
                     <col width="15%">
                 </colgroup>
@@ -141,9 +141,9 @@
                         <th class="">
                             {{ trader.volume }}
                         </th>
-                        <th class="">
+                        <!--<th class="">
                             <i class="fa fa-dollar"></i>{{ trader.amount }}
-                        </th>
+                        </th>-->
                         <th ng-class="{'font-success': trader.profit.indexOf('-') != -1, 'font-danger':  trader.profit.indexOf('-') < 0}">
                             <i class="fa fa-dollar"></i>{{ trader.profit }}
                         </th>
@@ -159,7 +159,7 @@
                     <colgroup>
                         <col width="35%">
                         <col width="17%">
-                        <col width="17%">
+                        <!--<col width="17%">-->
                         <col width="16%">
                         <col width="15%">
                     </colgroup>
@@ -188,7 +188,7 @@
                                 </div>
                             </td>
                             <td>{{ order.volume }}</td>
-                            <td><i class="fa fa-dollar"></i>{{ order.occupy_asset }}</td>
+                            <!--<td><i class="fa fa-dollar"></i>{{ order.occupy_asset }}</td>-->
                             <td ng-class="{'font-success': order.profit.indexOf('-') != -1, 'font-danger': order.profit.indexOf('-') < 0}">
                                 <i class="fa fa-dollar"></i>{{ order.profit }}
                             </td>
