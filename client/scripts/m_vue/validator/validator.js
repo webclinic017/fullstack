@@ -22,7 +22,7 @@ Vue.validator('pwdNew', function (val) {
         counter++;
     }
 
-    if (string.search(/[`~!@#\$%\^\&\*\(\)_\+<>\?:"\{\},\.\\\/;'\[\]]/) !== 1) {
+    if (val.search(/[`~!@#\$%\^\&\*\(\)_\+<>\?:"\{\},\.\\\/;'\[\]]/) !== 1) {
         counter++;
     }
 
