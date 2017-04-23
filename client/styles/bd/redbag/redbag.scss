@@ -644,3 +644,180 @@
         }
     }
 }
+
+
+@include b(bd_redbag_2) {
+    background: url("/images/bd_redbag/redbag_2_bg.png") no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    margin-top: 69px;
+
+    @include e(layout) {
+        width: 960px;
+        margin: 0 auto;
+        padding-bottom: 160px;
+    }
+    @include e(focus) {
+        width: 1080px;
+        margin: 0 auto;
+
+        img {
+            width: 100%;
+        }
+    }
+    @include e(rules) {
+        width: 100%;
+        background: url("/images/bd_redbag/redbag_2_bag.png") no-repeat;
+        background-position: center top;
+        background-size: 100% 100%;
+        color: #fff;
+        padding: 30px 70px;
+        margin-top: 30px;
+
+        h4 {
+            font-size: 30px;
+            text-align: center;
+            margin: 0;
+        }
+        p {
+            font-size: 16px;
+            margin: 0;
+            padding: 25px 0;
+        }
+
+        .rules_det {
+            .tip {
+                width: 25px;
+                float: left;
+            }
+            ul {
+                float: left;
+                width: 90%;
+
+                li {
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+    @include e(detail) {
+        width: 100%;
+        background: url("/images/bd_redbag/redbag_2_bag.png") no-repeat;
+        background-position: center top;
+        background-size: 100% 100%;
+        color: #fff;
+        padding: 30px 170px;
+        margin-top: 30px;
+
+        h4 {
+            font-size: 30px;
+            text-align: center;
+            margin: 0;
+        }
+        p {
+            font-size: 16px;
+            margin: 0;
+            padding: 25px 0;
+            text-align: center;
+        }
+
+        .bar_box {
+            height: 135px;
+            background: url("/images/bd_redbag/bar_bg.png") no-repeat;
+            background-position: center top;
+            background-size: 100% 100%;
+            position: relative;
+
+            .bar {
+                position: absolute;
+                top: 45px;
+                left: 10px;
+                width: 500px;
+                height: 35px;
+            }
+            .cont {
+                width: 500px;
+                position: relative;
+                text-align: center;
+                padding-top: 54px;
+                z-index: 10;
+
+            }
+
+            &.n1 {
+                .tip {
+                    position: absolute;
+                    right: 48px;
+                    font-size: 16px;
+                    top: 24px;
+                    text-align: center;
+                    color: #efc95c;
+
+                    span {
+                        font-size: 20px;
+                    }
+                }
+                .bar {
+                    span {
+                        display: block;
+                        width: 0;
+                        height: 100%;
+                        background: url("/images/bd_redbag/bar_1.png") no-repeat;
+                        background-size: auto 100%;
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                    }
+                }
+            }
+            &.n2 {
+                .tip {
+                    position: absolute;
+                    right: 48px;
+                    font-size: 16px;
+                    top: 38px;
+                    text-align: center;
+                    color: #57bc80;
+
+                    span {
+                        font-size: 20px;
+                    }
+                }
+                .bar {
+                    span {
+                        display: block;
+                        width: 0;
+                        height: 100%;
+                        background: url("/images/bd_redbag/bar_2.png") no-repeat;
+                        background-size: auto 100%;
+                        border-top-right-radius: 20px;
+                        border-bottom-right-radius: 20px;
+                    }
+                }
+            }
+        }
+        form {
+            width: 340px;
+            margin: 30px auto;
+            ::-webkit-input-placeholder {color:#fff;}
+            ::-moz-placeholder {color:#fff;}
+            ::-moz-placeholder {color:#fff;}
+            ::-ms-input-placeholder {color:#fff;}
+
+            .form-control {
+
+                color: #fff;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+

@@ -152,6 +152,22 @@
         }
 
     }
+    .index2-slide4 {
+        overflow: hidden;
+        height: 818px !important;
+        background-position: center center;
+        background-size: cover;
+        @include img-normal($image-path-home + "index2-banner4-bg.png");
+
+        .pic {
+            width: 1100px;
+            margin: 69px auto 0;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
     //.index2-slide4 {
     //    overflow: hidden;
     //    height: 818px !important;
