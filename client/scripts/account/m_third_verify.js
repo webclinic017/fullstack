@@ -47,16 +47,68 @@ $(document).ready(function () {
     layer.open({type: 2, shadeClose: false});
 
     // 请求当前用户认证到哪一步
-    setTimeout(function () {
-        layer.closeAll();
-        step = 3;
-        $(ele.wrapper).addClass("active");
-        goStepPage();
-    }, 1000);
+    setUserCookie();
+
+    function setUserCookie () {
+        var user_id = getUrlParam("user_id") || '';
+        var phone = getUrlParam("phone") || '';
+        var private_key = getUrlParam("private_key") || '';
+        var action = getUrlParam("action") || '';
+        var sign = getUrlParam("sign") || '';
+
+        var expiresDate = new Date();
+        expiresDate.setTime(expiresDate.getTime() + (30 * 60 * 1000));  // 30分钟过期
+        
+        $.cookie("third_user_id", user_id , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
+        $.cookie("third_phone", phone , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
+        $.cookie("private_key", private_key , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
+        $.cookie("action", action , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
+        $.cookie("sign", sign , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
+
+        getUserStatus();
+    }
+
+    function getUserStatus() {
+        publicRequest('thirdGetStatus', 'GET').then(function (data) {
+            // console.log(data);
+            layer.closeAll();
+            if (data.is_succ) {
+                step = data.data.status;
+                $(ele.wrapper).addClass("active");
+                goStepPage();
+            } else {
+                layer.open({
+                    content: data.message,
+                    skin: 'msg',
+                    time: 2
+                });
+            }
+        });
+    }
+    // setTimeout(function () {
+    //     layer.closeAll();
+    //     step = 0;
+    //     $(ele.wrapper).addClass("active");
+    //     goStepPage();
+    // }, 1000);
     
     $(ele.indexBtn).on("tap", function () {
-        step = 1;
-        goStepPage();
+        layer.open({type: 2, shadeClose: false});
+
+        publicRequest('thirdRegister', 'POST').then(function (data) {
+            console.log(data);
+            layer.closeAll();
+            if (data.is_succ) {
+                step = 1;
+                goStepPage();
+            } else {
+                layer.open({
+                    content: data.message,
+                    skin: 'msg',
+                    time: 2
+                });
+            }
+        });
     });
 
     // kyc 设置基本信息
@@ -226,8 +278,11 @@ $(document).ready(function () {
         }
     }
 
-
-
+    function getUrlParam(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substring(1).match(reg);  //匹配目标参数
+        if (r != null) return decodeURIComponent(r[2]); return null; //返回参数值
+    }
 
 
 

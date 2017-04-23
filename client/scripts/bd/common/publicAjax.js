@@ -5,6 +5,8 @@
     var apiUrl = {
         getUserInfo: origin + '/user/info',     // get
         register: origin + '/auth/register',     // post
+        thirdGetStatus: origin + '/third/auth/get_status', // get
+        thirdRegister: origin + '/third/auth/register', //post
     };
 
     w.publicRequest = publicRequest;
