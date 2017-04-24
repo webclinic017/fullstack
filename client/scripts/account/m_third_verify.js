@@ -354,7 +354,7 @@ $(document).ready(function () {
         e.preventDefault();
         var iframe = document.createElement('iframe');
         iframe.style.display = 'none';
-        iframe.src = window.location.protocol+window.location.hostname+'/third/complete/openAccount';
+        iframe.src = window.location.protocol+'//'+window.location.hostname+'/third/complete/openAccount';
         document.body.appendChild(iframe);
     });
 
