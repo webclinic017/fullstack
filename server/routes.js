@@ -618,6 +618,20 @@ module.exports = function (app) {
         }
     });
 
+    // 红包活动4.24 活动
+    app.route('/bd/t35_r').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('404.html', extendPublic({}, req));
+            } else {
+                res.render('bd_redbag_2', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+
     // 联众德州活动
     app.route('/bd/t36_game').get(function (req, res) {
         setEnvCf(req, res);
