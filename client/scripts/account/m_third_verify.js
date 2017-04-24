@@ -13,36 +13,40 @@ $(document).ready(function () {
         kycInpCheckbox: ".m_third .m_third_kyc .m_third_kyc__single .m_third_kyc__single-list.checkbox",
         kycBtn: ".m_third .m_third_kyc .m_third_kyc__btn .btn",
         userinfo: ".m_third .m_third_userinfo",
+        userinfoName: ".m_third .m_third_userinfo .realname",
+        userinfoIdNo: ".m_third .m_third_userinfo .id_no",
+        userinfoEmail: ".m_third .m_third_userinfo .email",
         userinfoBtn: ".m_third .m_third_userinfo .m_third_userinfo__btn .btn",
         card: ".m_third .m_third_card",
+        cardBtn: ".m_third .m_third_card .m_third_card__btn .btn",
         cardFile: ".m_third .m_third_card .m_third_card__pic .form input",
         verify: ".m_third .m_third_verify",
         success: ".m_third .m_third_success",
-        complete: ".m_third .m_third_complete"
+        successPassword: ".m_third .m_third_success input.info",
+        successBtn: ".m_third .m_third_success .m_third_success__btn .btn",
+        complete: ".m_third .m_third_complete",
+        completeMT4Id: ".m_third .m_third_complete .m_third_complete__id span",
+        completeBtn: ".m_third .m_third_complete .m_third_complete__btn .btn"
     };
     var eleIndex = {
-        "0": "index",       // 首页
-        "1": "kyc",         // kyc 页面
-        "2": "userinfo",    // 姓名、身份证号页面
-        "3": "card",        // 身份证图片页面
-        "4": "verify",      // 审核中
-        "5": "success",     // 审核成功，设置MT4密码页面
-        "6": "index",       // 审核失败，暂时回到首页
-        "7": "complete",    // MT4 帐号设置成功页面
+        "0": "index",       // 未注册 -> 首页
+        "1": "kyc",         // 已注册 -> kyc 页面
+        "2": "userinfo",    // 已经kyc认证 -> 姓名、身份证号页面
+        "3": "card",        // 已经填写真实姓名和身份证号 -> 身份证图片页面
+        "4": "userinfo",    // 审核拒绝 -> 姓名、身份证号页面
+        "5": "verify",      // 待审核 -> 审核中页面
+        "6": "success",     // 审核通过 -> 审核成功，设置MT4密码页面
+        "7": "complete",    // 已经开户 -> MT4 帐号设置成功页面
     };
-    var kycInfo = {
-        industry: '',
-        income: '',
-        interests_exp: '',
-        trading_market: [],
-        trading_target: [],
-        risk: ''
-    };
-    var kycInfoTmp = {
-        trading_market: {},
-        trading_target: {}
+    var kycInfo = {};
+    var kycInfoTmp = {};
+    var cardStatus = {
+        front: false,
+        back: false,
     };
     var step = 0;
+    var bt=baidu.template;
+    var mt4Id = '';
 
     layer.open({type: 2, shadeClose: false});
 
@@ -66,12 +70,14 @@ $(document).ready(function () {
         $.cookie("sign", sign , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
 
         getUserStatus();
+        getKycList();
     }
 
     function getUserStatus() {
         publicRequest('thirdGetStatus', 'GET').then(function (data) {
             // console.log(data);
             layer.closeAll();
+            if (!data) return;
             if (data.is_succ) {
                 step = data.data.status;
                 $(ele.wrapper).addClass("active");
@@ -87,7 +93,7 @@ $(document).ready(function () {
     }
     // setTimeout(function () {
     //     layer.closeAll();
-    //     step = 0;
+    //     step = 7;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
     // }, 1000);
@@ -96,8 +102,9 @@ $(document).ready(function () {
         layer.open({type: 2, shadeClose: false});
 
         publicRequest('thirdRegister', 'POST').then(function (data) {
-            console.log(data);
+            // console.log(data);
             layer.closeAll();
+            if (!data) return;
             if (data.is_succ) {
                 step = 1;
                 goStepPage();
@@ -111,62 +118,33 @@ $(document).ready(function () {
         });
     });
 
-    // kyc 设置基本信息
-    $(ele.kycSelect).selectOrDie({
-        placeholder: '请选择',
-        customClass: 'm_third_kyc__single-select',
-        onChange: function(){
-            kycInfo.industry = $(this).val();
-        }
-    });
-    // 单选
-    $(ele.kycInpRadio).find("label").on("tap", function (e) {
-        e.preventDefault();
-        var name = $(this).attr("data-name");
-        $(ele.kycInpRadio).find(".inp[data-name="+name+"]").removeClass("active");
-        $(this).find(".inp").addClass("active");
-        kycInfo[name] = $(this).find(".inp").attr("data-value");
-    });
-    // 多选
-    $(ele.kycInpCheckbox).find("label").on("tap", function (e) {
-        e.preventDefault();
-        var inp = $(this).find(".inp");
-        kycInfo[inp.attr("data-name")] = [];
-
-        if (inp.hasClass("active")) {
-            inp.removeClass("active");
-            kycInfoTmp[inp.attr("data-name")][inp.attr("data-value")] = false;
-        } else {
-            inp.addClass("active");
-            kycInfoTmp[inp.attr("data-name")][inp.attr("data-value")] = true;
-        }
-
-        $.each(kycInfoTmp[inp.attr("data-name")], function (index, value) {
-            if (value) {
-                kycInfo[inp.attr("data-name")].push(index);
-            }
-        });
-    });
     $(ele.kycBtn).on("tap", function (e) {
         e.preventDefault();
         // console.log(kycInfo);
         var next = true;
         $.each(kycInfo, function (index, value) {
-
-            if ((typeof value === 'string') && !value) {
-                next = false;
-            } else if (value.length === 0) {
+            if (!value) {
                 next = false;
             }
         });
         if (next) {
             layer.open({type: 2, shadeClose: false});
 
-            setTimeout(function () {
+            publicRequest('thirdSetKyc', 'POST', kycInfo).then(function (data) {
+                // console.log(data);
                 layer.closeAll();
-                step = 2;
-                goStepPage();
-            }, 1000);
+                if (!data) return;
+                if (data.is_succ) {
+                    step = 2;
+                    goStepPage();
+                } else {
+                    layer.open({
+                        content: data.message,
+                        skin: 'msg',
+                        time: 2
+                    });
+                }
+            });
         } else {
             layer.open({
                 content: '请将信息填写完整',
@@ -175,21 +153,133 @@ $(document).ready(function () {
             });
         }
     });
+
+    function getKycList () {
+        publicRequest('thirdGetKycList', 'GET').then(function (data) {
+            // console.log(data);
+            if (!data) return;
+            if (data.is_succ) {
+                var kycList = {
+                    select: [],
+                    radio: [],
+                    checkbox: []
+                };
+                var order = 1;
+
+                $.each(data.data, function (index, value) {
+                    if (value.type == 1) {
+                        kycInfo[index] = '';
+                        kycList.select.push({
+                            name: index,
+                            title: value.title,
+                            list: value.list
+                        });
+                    }
+                    if (value.type == 2) {
+                        kycInfo[index] = '';
+                        kycList.radio.push({
+                            name: index,
+                            title: value.title,
+                            list: value.list
+                        });
+                    }
+                    if (value.type == 3) {
+                        kycInfo[index] = '';
+                        kycInfoTmp[index] = {};
+                        kycList.checkbox.push({
+                            name: index,
+                            title: value.title,
+                            list: value.list
+                        });
+                    }
+                });
+                // 添加序号
+                $.each(kycList.select, function (index, value) {
+                    value.title = order+'.'+value.title;
+                    order++;
+                });
+                $.each(kycList.radio, function (index, value) {
+                    value.title = order+'.'+value.title;
+                    order++;
+                });
+                $.each(kycList.checkbox, function (index, value) {
+                    value.title = order+'.'+value.title;
+                    order++;
+                });
+                // console.log(kycList);
+                //使用template模版
+                var html=bt('template_kyc_info',kycList);
+                //渲染
+                $(".m_third_kyc__template").html(html);
+
+                // kyc 设置基本信息
+                $(ele.kycSelect).selectOrDie({
+                    placeholder: '请选择',
+                    customClass: 'm_third_kyc__single-select',
+                    onChange: function(e){
+                        kycInfo[$(this).attr("data-name")] = $(this).val();
+                    }
+                });
+                // 单选
+                $(ele.kycInpRadio).find("label").on("tap", function (e) {
+                    e.preventDefault();
+                    var name = $(this).attr("data-name");
+                    $(ele.kycInpRadio).find(".inp[data-name="+name+"]").removeClass("active");
+                    $(this).find(".inp").addClass("active");
+                    kycInfo[name] = $(this).find(".inp").attr("data-value");
+                });
+                // 多选
+                $(ele.kycInpCheckbox).find("label").on("tap", function (e) {
+                    e.preventDefault();
+                    var inp = $(this).find(".inp");
+                    kycInfo[inp.attr("data-name")] = '';
+                    var arr = [];
+
+                    if (inp.hasClass("active")) {
+                        inp.removeClass("active");
+                        kycInfoTmp[inp.attr("data-name")][inp.attr("data-value")] = false;
+                    } else {
+                        inp.addClass("active");
+                        kycInfoTmp[inp.attr("data-name")][inp.attr("data-value")] = true;
+                    }
+
+                    $.each(kycInfoTmp[inp.attr("data-name")], function (index, value) {
+                        if (value) {
+                            arr.push(index);
+                        }
+                    });
+                    kycInfo[inp.attr("data-name")] = arr.join(',');
+                });
+            }
+        });
+    }
     // userinfo
     $(ele.userinfoBtn).on("tap", function (e) {
         e.preventDefault();
 
-        if (true) {
-            layer.open({type: 2, shadeClose: false});
-
-            setTimeout(function () {
+        if ($(ele.userinfoName).val() && $(ele.userinfoIdNo).val() && $(ele.userinfoEmail).val()) {
+            publicRequest('thirdSetUserInfo', 'PUT', {
+                email: $(ele.userinfoEmail).val(),
+                realname: $(ele.userinfoName).val(),
+                id_no: $(ele.userinfoIdNo).val()
+            }).then(function (data) {
+                // console.log(data);
                 layer.closeAll();
-                step = 3;
-                goStepPage();
-            }, 1000);
+                if (!data) return;
+                if (data.is_succ) {
+                    step = 3;
+                    goStepPage();
+                } else {
+                    layer.open({
+                        content: data.message,
+                        skin: 'msg',
+                        time: 2
+                    });
+                }
+            });
         } else {
             layer.open({
-                content: '信息填写有误',
+                content: '请填写完整信息',
                 skin: 'msg',
                 time: 2
             });
@@ -201,6 +291,96 @@ $(document).ready(function () {
         var pageClass = "."+$(e.target).attr("data-page");
         preview(file, pageClass);
     });
+    $(ele.cardBtn).on("tap", function (e) {
+        e.preventDefault();
+        cardStatus = {
+            front: false,
+            back: false,
+        };
+        // console.log($(ele.cardFile)[0].value, $(ele.cardFile)[1].value);
+        if ($(ele.cardFile)[0].value && $(ele.cardFile)[1].value) {
+            layer.open({type: 2, shadeClose: false});
+
+            var oFormFront = new FormData($(".m_third_card__pic .form" )[0]);
+            var oFormBack = new FormData($(".m_third_card__pic .form" )[1]);
+            oFormFront.append("face", "front");
+            oFormBack.append("face", "back");
+            uploadCard('front', oFormFront);
+            uploadCard('back', oFormBack);
+        } else {
+            layer.open({
+                content: '请上传身份证',
+                skin: 'msg',
+                time: 2
+            });
+        }
+    });
+
+    // set Mt4 password
+    $(ele.successBtn).on("tap", function (e) {
+        e.preventDefault();
+        var val = $(ele.successPassword).val();
+
+        if (val) {
+            publicRequest('thirdSetPassword', 'POST', {
+                password: val
+            }).then(function (data) {
+                // console.log(data);
+                layer.closeAll();
+                if (!data) return;
+                if (data.is_succ) {
+                    step = 7;
+                    mt4Id = data.data.mt4_id;
+                    $(ele.completeMT4Id).html(mt4Id);
+                    goStepPage();
+                } else {
+                    layer.open({
+                        content: data.message,
+                        skin: 'msg',
+                        time: 2
+                    });
+                }
+            });
+        } else {
+            layer.open({
+                content: '请设置MT4密码',
+                skin: 'msg',
+                time: 2
+            });
+        }
+    });
+
+    $(ele.completeBtn).on("tap", function (e) {
+        e.preventDefault();
+        var iframe = document.createElement('iframe');
+        iframe.style.display = 'none';
+        iframe.src = window.location.protocol+window.location.hostname+'/third/complete/openAccount';
+        document.body.appendChild(iframe);
+    });
+
+    function uploadCard (type, oForm) {
+        publicUploadFile('thirdUploadIdCard', 'PUT', oForm).then(function (data) {
+            // console.log(data);
+            layer.closeAll();
+            if (!data) return;
+            if (data.is_succ) {
+                cardStatus[type] = true;
+
+                if (cardStatus.front && cardStatus.back) {
+                    layer.closeAll();
+                    step = 5;
+                    goStepPage();
+                }
+            } else {
+                layer.closeAll();
+                layer.open({
+                    content: data.message,
+                    skin: 'msg',
+                    time: 2
+                });
+            }
+        });
+    }
 
     function preview(file, pageClass) {
         var img = new Image(), url = img.src = URL.createObjectURL(file);
@@ -209,8 +389,6 @@ $(document).ready(function () {
         img.onload = function() {
             URL.revokeObjectURL(url);
             
-                alert("width"+img.width);
-                alert("heigh"+img.height);
             if (img.width < img.height) {
                 // $img.rotate(90);
                 // $img.css("transform","rotate(90deg)");
@@ -259,17 +437,17 @@ $(document).ready(function () {
             $(ele.navbarStep2).addClass("active");
         }
         if (step === 4) {
+            $(ele.navbarStep2).addClass("active");
+        }
+        if (step === 5) {
             $(ele.wrapper).addClass("bgm");
             $(ele.navbarStep2).addClass("active");
             $(ele.navbarStep3).addClass("active");
         }
-        if (step === 5) {
+        if (step === 6) {
             $(ele.navbarStep2).addClass("active");
             $(ele.navbarStep3).addClass("active");
             $(ele.navbarStep4).addClass("active");
-        }
-        if (step === 6) {
-            $(ele.wrapper).addClass("bgm");
         }
         if (step === 7) {
             $(ele.navbarStep2).addClass("active");

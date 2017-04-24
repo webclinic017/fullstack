@@ -91,8 +91,8 @@
             span {
                 display: none;
                 width: 100%;
-                height: px2rem(2);
-                margin-top: px2rem(5);
+                height: px2rem(4);
+                margin-top: px2rem(4);
                 background-color: #ffd000;
             }
 
@@ -170,12 +170,12 @@
 
         @include m(list) {
             li {
+                padding: px2rem(10) 0;
                 float: left;
                 width: 50%;
 
                 label {
                     display: block;
-                    padding: px2rem(10) 0;
 
                     .inp {
                         display: inline-block;
@@ -349,9 +349,11 @@
     }
     @include e(btn) {
         margin-top: px2rem(40);
+        padding-bottom: px2rem(32);
 
         .btn {
             width: 100%;
+            margin: 0;
         }
     }
 
@@ -369,12 +371,82 @@
 @include b(m_third_success) {
     display: none;
 
+    @include e(tip) {
+        color: #4a4a4a;
+        font-size: px2rem(30);
+        padding-top: px2rem(28);
+        padding-bottom: px2rem(16);
+    }
+    @include e(wrapper) {
+        padding: px2rem(14) 0;
+
+        .info {
+            display: block;
+            width: 100%;
+            height: px2rem(96);
+            padding: px2rem(34) px2rem(40);
+            padding-right: px2rem(10);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    }
+    @include e(btn) {
+        padding-top: px2rem(650);
+
+        .btn {
+            width: 100%;
+        }
+    }
+
     &.active {
         display: block;
     }
 }
 @include b(m_third_complete) {
     display: none;
+
+    @include e(tit) {
+        text-align: center;
+        padding: px2rem(30) 0 px2rem(15);
+
+        .icon {
+            display: inline-block;
+            width: px2rem(50);
+            vertical-align: top;
+
+            img {
+                width: 100%;
+            }
+        }
+        .tip {
+            font-size: px2rem(48);
+            line-height: px2rem(48);
+        }
+    }
+    @include e(id) {
+        text-align: center;
+        color: #4a4a4a;
+        font-size: px2rem(28);
+        padding: px2rem(20) 0;
+    }
+    @include e(server) {
+        text-align: center;
+        color: #4a4a4a;
+        font-size: px2rem(28);
+    }
+    @include e(btn) {
+        padding-top: px2rem(600);
+
+        .tip {
+            text-align: center;
+            font-size: px2rem(22);
+            color: #4a4a4a;
+            padding-bottom: px2rem(26);
+        }
+        .btn {
+            width: 100%;
+        }
+    }
 
     &.active {
         display: block;

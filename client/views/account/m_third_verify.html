@@ -67,141 +67,9 @@
         </div>
     </div>
     <div class="m_third_kyc">
-        <div class="m_third_kyc__single">
-            <p class="tit">1.您的职业所属行业</p>
-            <div class="cont">
-                <select>
-                    <option value="" disabled selected></option>
-                    <option value="1">sss</option>
-                    <option value="2qwe">选择1234wa</option>
-                </select>
-            </div>
-        </div>
-        <div class="m_third_kyc__single">
-            <p class="tit">2.您的年收入</p>
-            <div class="cont">
-                <ul class="m_third_kyc__single-list radio clearfix">
-                    <li>
-                        <label data-name="income">
-                            <span class="inp" data-name="income" data-value="0"></span>
-                            <span>0-5万美元</span>
-                        </label>
-                        <label data-name="income">
-                            <span class="inp" data-name="income" data-value="1"></span>
-                            <span>5-7.5万美元</span>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-name="income">
-                            <span class="inp" data-name="income" data-value="2"></span>
-                            <span>7.5-10万美元</span>
-                        </label>
-                        <label data-name="income">
-                            <span class="inp" data-name="income" data-value="3"></span>
-                            <span>10万美元以上</span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="m_third_kyc__single">
-            <p class="tit">3.您的外汇交易经验</p>
-            <div class="cont">
-                <ul class="m_third_kyc__single-list radio clearfix">
-                    <li>
-                        <label data-name="interests_exp">
-                            <span class="inp" data-name="interests_exp" data-value="0"></span>
-                            <span>少于1年</span>
-                        </label>
-                        <label data-name="interests_exp">
-                            <span class="inp" data-name="interests_exp" data-value="1"></span>
-                            <span>1-3年</span>
-                        </label>
-                    </li>
-                    <li>
-                        <label data-name="interests_exp">
-                            <span class="inp" data-name="interests_exp" data-value="2"></span>
-                            <span>3-6年</span>
-                        </label>
-                        <label data-name="interests_exp">
-                            <span class="inp" data-name="interests_exp" data-value="3"></span>
-                            <span>6年以上</span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="m_third_kyc__single">
-            <p class="tit">4.您在哪些市场进行过交易(可多选)</p>
-            <div class="cont">
-                <ul class="m_third_kyc__single-list checkbox clearfix">
-                    <li>
-                        <label>
-                            <span class="inp" data-name="trading_market" data-value="0"></span>
-                            <span>股票</span>
-                        </label>
-                        <label>
-                            <span class="inp" data-name="trading_market" data-value="1"></span>
-                            <span>银行理财</span>
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <span class="inp" data-name="trading_market" data-value="2"></span>
-                            <span>期货</span>
-                        </label>
-                        <label>
-                            <span class="inp" data-name="trading_market" data-value="3"></span>
-                            <span>衍生品</span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="m_third_kyc__single">
-            <p class="tit">5.您的投资目标(可多选)</p>
-            <div class="cont">
-                <ul class="m_third_kyc__single-list checkbox clearfix">
-                    <li>
-                        <label>
-                            <span class="inp" data-name="trading_target" data-value="0"></span>
-                            <span>资本增长</span>
-                        </label>
-                        <label>
-                            <span class="inp" data-name="trading_target" data-value="1"></span>
-                            <span>对冲</span>
-                        </label>
-                    </li>
-                    <li>
-                        <label>
-                            <span class="inp" data-name="trading_target" data-value="2"></span>
-                            <span>交易利润</span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="m_third_kyc__single">
-            <p class="tit">6.对于每年在此的投资，哪个风险/获利情景最符合您的期望</p>
-            <div class="cont">
-                <ul class="m_third_kyc__single-list radio clearfix">
-                    <li>
-                        <label data-name="risk">
-                            <span class="inp" data-name="risk" data-value="0"></span>
-                            <span>高风险，高收益</span>
-                        </label>
-                        <label data-name="risk">
-                            <span class="inp" data-name="risk" data-value="1"></span>
-                            <span>中风险，中收益</span>
-                        </label>
-                        <label data-name="risk">
-                            <span class="inp" data-name="risk" data-value="2"></span>
-                            <span>低风险，低收益</span>
-                        </label>
-                    </li>
-                </ul>
-            </div>
-        </div>
+
+        <div class="m_third_kyc__template"></div>
+
         <div class="m_third_kyc__btn">
             <button class="btn btn-primary">
                 下一步
@@ -210,18 +78,17 @@
     </div>
     <div class="m_third_userinfo">
         <div class="m_third_userinfo__wrapper">
-            <input class="info"
+            <input class="info realname"
                    type="text"
                    placeholder="请输入真实姓名">
         </div>
         <div class="m_third_userinfo__wrapper">
-            <input class="info"
-                   type="text"
-                   pattern="[0-9]*"
+            <input class="info id_no"
+                   type="number"
                    placeholder="请输入身份证号">
         </div>
         <div class="m_third_userinfo__wrapper">
-            <input class="info"
+            <input class="info email"
                    type="text"
                    placeholder="请输入您的邮箱，有助于接收重要的提醒消息">
         </div>
@@ -267,12 +134,116 @@
         </div>
     </div>
     <div class="m_third_verify">
-        verify....
+        <div class="m_third_index__content">
+            <ul class="clearfix">
+                <li class="icon">
+                    <img src="/images/third-icon-1.png">
+                </li>
+                <li class="tip">
+                    <p class="t">开户就送</p>
+                    <p class="sub-t">$200体验金 轻松玩外汇</p>
+                </li>
+            </ul>
+            <ul class="clearfix">
+                <li class="icon">
+                    <img src="/images/third-icon-2.png">
+                </li>
+                <li class="tip">
+                    <p class="t">新手豪礼</p>
+                    <p class="sub-t">$700红包等你来拿</p>
+                </li>
+            </ul>
+        </div>
+        <div class="m_third_index__btn">
+            <button class="btn btn-primary">
+                审核中
+            </button>
+            <p class="tip">认证信息已提交审核，请耐心等待，审核通过后将会通知您</p>
+        </div>
     </div>
     <div class="m_third_success">
-        success....
+        <div class="m_third_success__tip">
+            请设置MT4账号密码，用于登陆MT4客户端
+        </div>
+        <div class="m_third_success__wrapper">
+            <input class="info"
+                   type="password"
+                   placeholder="设置MT4密码">
+        </div>
+        <div class="m_third_success__btn">
+            <button class="btn btn-primary">
+                完成
+            </button>
+        </div>
     </div>
     <div class="m_third_complete">
-        complete....
+        <div class="m_third_complete__tit">
+            <span class="icon">
+                <img src="/images/icon-right.png">
+            </span>
+            <span class="tip">用户注册成功</span>
+        </div>
+        <div class="m_third_complete__id">
+            MT4账号：<span>xxx</span>
+        </div>
+        <div class="m_third_complete__server">
+            MT4服务器：<span>{Disanfang}-Live</span>服务器
+        </div>
+        <div class="m_third_complete__btn">
+            <p class="tip">请牢记您的账号和密码，用于登陆MT4客户端</p>
+            <button class="btn btn-primary">
+                完成
+            </button>
+        </div>
     </div>
 </div>
+
+<script id="template_kyc_info" type="text/html">
+    <$for(var i=0;i<select.length;i++){$>
+        <div class="m_third_kyc__single">
+            <p class="tit"><$= select[i].title$></p>
+            <div class="cont">
+                <select data-name="<$= select[i].name$>">
+                    <option value="" disabled selected></option>
+                    <$for(var j=0;j<select[i].list.length;j++){$>
+                    <option value="<$= select[i].list[j].key$>"><$= select[i].list[j].value$></option>
+                    <$}$>
+                </select>
+            </div>
+        </div>
+    <$}$>
+    <$for(var i=0;i<radio.length;i++){$>
+        <div class="m_third_kyc__single">
+            <p class="tit"><$= radio[i].title$></p>
+            <div class="cont">
+                <ul class="m_third_kyc__single-list radio clearfix">
+                    <$for(var j=0;j<radio[i].list.length;j++){$>
+                    <li>
+                        <label data-name="<$= radio[i].name$>">
+                            <span class="inp" data-name="<$= radio[i].name$>" data-value="<$= radio[i].list[j].key$>"></span>
+                            <span><$= radio[i].list[j].value$></span>
+                        </label>
+                    </li>
+                    <$}$>
+                </ul>
+            </div>
+        </div>
+    <$}$>
+    <$for(var i=0;i<checkbox.length;i++){$>
+        <div class="m_third_kyc__single">
+            <p class="tit"><$= checkbox[i].title$></p>
+            <div class="cont">
+                <ul class="m_third_kyc__single-list checkbox clearfix">
+                    <$for(var j=0;j<checkbox[i].list.length;j++){$>
+                    <li>
+                        <label>
+                            <span class="inp" data-name="<$= checkbox[i].name$>" data-value="<$= checkbox[i].list[j].key$>"></span>
+                            <span><$= checkbox[i].list[j].value$></span>
+                        </label>
+                    </li>
+                    <$}$>
+                </ul>
+            </div>
+        </div>
+    <$}$>
+</script>

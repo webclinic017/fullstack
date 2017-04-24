@@ -316,7 +316,7 @@ module.exports = function (app) {
     });
 
     // 第三方认证流程
-    app.route('/m/third/verify').get(function (req, res) {
+    app.route('/m/third/register').get(function (req, res) {
         setEnvCf(req, res);
         res.render('m_third_verify', extendPublic({}, req));
     });
