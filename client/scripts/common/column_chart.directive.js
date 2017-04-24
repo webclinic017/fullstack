@@ -176,7 +176,11 @@
                 var type = attrs.type;
 
                 scope.$on('rendColumnData', function (event, data) {
-                    options.series[0].data = data;
+                    var transformedData = [];
+                    angular.forEach(data,function(item,index){
+                        transformedData.push(parseInt(item));
+                    });
+                    options.series[0].data = transformedData;
                     element.highcharts(options);
                 });
                 scope.$on('hideColumnData', function (event, data) {
