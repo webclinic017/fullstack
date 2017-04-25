@@ -1,4 +1,15 @@
 var report_sites = [
+    /*添加时间 2017-4-24*/
+    {
+        address: 'http://www.southmoney.com/caijing/gongsixinwen/201704/1234736.html',
+        description: '【南方财富网】工薪族如何理财投资 京东金融、老虎外汇、开鑫贷各有魅力',
+        date: '2017-04-20'
+    },
+    {
+        address: 'http://www.jingji.com.cn/html/news/zxxw/68407.html',
+        description: '【经济网】外汇投资新手如何炒外汇？老虎外汇复制跟单入门有招',
+        date: '2017-04-21'
+    },
     /*添加时间 2017-4-18*/
     {
         address: 'http://focus.21cn.com/society/a/2017/0331/13/32125006.shtml',
