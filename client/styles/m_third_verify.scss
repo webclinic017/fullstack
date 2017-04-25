@@ -253,7 +253,7 @@
         }
     }
     @include e(btn) {
-        padding-top: px2rem(500);
+        padding-top: px2rem(32);
 
         .btn {
             width: 100%;
@@ -391,7 +391,7 @@
         }
     }
     @include e(btn) {
-        padding-top: px2rem(650);
+        padding-top: px2rem(32);
 
         .btn {
             width: 100%;
@@ -435,7 +435,7 @@
         font-size: px2rem(28);
     }
     @include e(btn) {
-        padding-top: px2rem(600);
+        padding-top: px2rem(320);
 
         .tip {
             text-align: center;
