@@ -40,6 +40,10 @@ $(document).ready(function () {
     };
     var kycInfo = {};
     var kycInfoTmp = {};
+    var cardBaseFile = {
+        front: false,
+        back: false,
+    };
     var cardStatus = {
         front: false,
         back: false,
@@ -290,6 +294,7 @@ $(document).ready(function () {
         var file = e.target.files[0];
         var pageClass = "."+$(e.target).attr("data-page");
         preview(file, pageClass);
+        previewBase64(file, $(e.target).attr("data-page"));
     });
     $(ele.cardBtn).on("tap", function (e) {
         e.preventDefault();
@@ -298,15 +303,19 @@ $(document).ready(function () {
             back: false,
         };
         // console.log($(ele.cardFile)[0].value, $(ele.cardFile)[1].value);
-        if ($(ele.cardFile)[0].value && $(ele.cardFile)[1].value) {
+        // if ($(ele.cardFile)[0].value && $(ele.cardFile)[1].value) {
+        if (cardBaseFile.front && cardBaseFile.back) {
             layer.open({type: 2, shadeClose: false});
 
-            var oFormFront = new FormData($(".m_third_card__pic .form" )[0]);
-            var oFormBack = new FormData($(".m_third_card__pic .form" )[1]);
-            oFormFront.append("face", "front");
-            oFormBack.append("face", "back");
-            uploadCard('front', oFormFront);
-            uploadCard('back', oFormBack);
+            uploadCard('front');
+            uploadCard('back');
+
+            // var oFormFront = new FormData($(".m_third_card__pic .form" )[0]);
+            // var oFormBack = new FormData($(".m_third_card__pic .form" )[1]);
+            // oFormFront.append("face", "front");
+            // oFormBack.append("face", "back");
+            // uploadCard('front', oFormFront);
+            // uploadCard('back', oFormBack);
         } else {
             layer.open({
                 content: '请上传身份证',
@@ -358,8 +367,34 @@ $(document).ready(function () {
         document.body.appendChild(iframe);
     });
 
-    function uploadCard (type, oForm) {
-        publicUploadFile('thirdUploadIdCard', 'PUT', oForm).then(function (data) {
+    // function uploadCard (type, oForm) {
+    //     publicUploadFile('thirdUploadIdCard', 'PUT', oForm).then(function (data) {
+    //         // console.log(data);
+    //         layer.closeAll();
+    //         if (!data) return;
+    //         if (data.is_succ) {
+    //             cardStatus[type] = true;
+
+    //             if (cardStatus.front && cardStatus.back) {
+    //                 layer.closeAll();
+    //                 step = 5;
+    //                 goStepPage();
+    //             }
+    //         } else {
+    //             layer.closeAll();
+    //             layer.open({
+    //                 content: data.message,
+    //                 skin: 'msg',
+    //                 time: 2
+    //             });
+    //         }
+    //     });
+    // }
+    function uploadCard (type) {
+        publicRequest('thirdUploadIdCard', 'POST', {
+            face: type,
+            file: cardBaseFile[type]
+        }).then(function (data) {
             // console.log(data);
             layer.closeAll();
             if (!data) return;
@@ -372,7 +407,6 @@ $(document).ready(function () {
                     goStepPage();
                 }
             } else {
-                layer.closeAll();
                 layer.open({
                     content: data.message,
                     skin: 'msg',
@@ -402,16 +436,14 @@ $(document).ready(function () {
             $imgWrapper.empty().append($img);
         };
     }
-    // function preview(file, pageClass) {
-    //     var reader = new FileReader();
-    //     var $imgWrapper = $('.m_third_card__pic').find(pageClass);
-    //     reader.onload = function(e) {
-    //         // console.log(e.target);
-    //         var $img = $('<img>').attr("src", e.target.result);
-    //         $imgWrapper.empty().append($img);
-    //     }
-    //     reader.readAsDataURL(file);
-    // }
+    function previewBase64(file, face) {
+        var reader = new FileReader();
+        
+        reader.onload = function(e) {
+            cardBaseFile[face] = e.target.result.split(',')[1];
+        };
+        reader.readAsDataURL(file);
+    }
 
     function goStepPage () {
 

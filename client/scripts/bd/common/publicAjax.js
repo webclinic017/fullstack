@@ -53,7 +53,7 @@
             }
         });
     }
-    // 上传文件
+    // 上传文件 form提交
     function publicUploadFile ($url, $method, oForm) {
         var token = $.cookie("token") || '';
         $url = apiUrl[$url] + '?token='+token;
