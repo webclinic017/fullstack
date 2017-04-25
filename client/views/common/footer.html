@@ -116,7 +116,13 @@
 <!-- Live800Online operator icon:online service(in use)[Floating icon] Start-->
 <script language="javascript">
     window.OpenChat = function () {
-        var chatUrl = "http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&jid=2997261242";
+        var chatUrl = "";
+        if (window.location.pathname === '/web/agent/proxy' || window.location.pathname === '/web/agent/become') {
+            chatUrl = "http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&configID=151374&jid=2997261242&skillId=8663";
+        } else {
+            chatUrl = "http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&jid=2997261242";
+        }
+        
         chatUrl += "&enterurl=" + encodeURIComponent(document.referrer || document.URL);
         chatUrl += "&t=" + new Date().getTime();
         try {

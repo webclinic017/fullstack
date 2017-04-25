@@ -273,7 +273,7 @@ module.exports = function () {
         "navbar12": { "en": "STP", "zh": "STP交易模式" },
         "navbar13": { "en": "", "zh": "" },
         "navbar14": { "en": "no-banner", "zh": "" },
-        "navbar15": { "en": "style=display:none;", "zh": "" },
+        "navbar15": { "en": "style=display:none;", "zh": "style" },
         "navbar16": { "en": "Download App", "zh": "下载APP" },
 
         // 底部 footer

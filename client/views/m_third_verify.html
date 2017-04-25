@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include common/m_common_head.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include common/m_css_vendor.html %>
+<% include common/common_header.html %>
+
+<body>
+<% include account/m_third_verify.html %>
+<!-- <div class="m_third_verify">
+    <div class="m_third_verify__test">
+        <div class="m_third_verify__test-pic">
+            
+        </div>
+        <form class="form">
+            <input type="file" name="file" accept="image/*" />
+        </form>
+    </div>
+
+    <button class="m_third_verify__btn">上传</button>
+</div> -->
+
+
+</body>
+<% include m_js_vendor.html %>
+<!-- build:js(client) /scripts/m_third_verify.js -->
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/account/m_third_verify.js"></script>
+<!-- endbuild -->
+
+<%- include('bd/common/footer.html') %>
+</html>
