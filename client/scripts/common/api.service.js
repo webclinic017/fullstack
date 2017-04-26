@@ -124,7 +124,9 @@
             getRedbagPoolApi: o + '/action/public/bonus/lists',
             getRedbagListApi: o + '/action/public/bonus/my_bonus',
             receiveRedbagApi: o + '/action/public/bonus/receive',
-            exchangeRedbagApi: o + '/action/public/bonus/bonus_pay_condition'
+            exchangeRedbagApi: o + '/action/public/bonus/bonus_pay_condition',
+            getRedbagNumApi: o + '/action/public/bonus/num',
+            setRedbagReadedApi: o + '/action/public/bonus/readed'
         };
 
         var service = {
