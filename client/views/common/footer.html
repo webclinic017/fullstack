@@ -117,19 +117,28 @@
 <script language="javascript">
     window.OpenChat = function () {
         var chatUrl = "";
-        if (window.location.pathname === '/web/agent/proxy' || window.location.pathname === '/web/agent/become') {
+
+        layer.confirm('您是想要询问代理商问题或者其它问题？', {
+            btn: ['代理商','其它'],
+            title: false,
+        }, function(){
             chatUrl = "http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&configID=151374&jid=2997261242&skillId=8663";
-        } else {
-            chatUrl = "http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&jid=2997261242";
-        }
+            openTarget();
+        }, function(){
+            chatUrl = "http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&jid=2997261242&configID=144016&skillId=8662";
+            openTarget();
+        });
         
-        chatUrl += "&enterurl=" + encodeURIComponent(document.referrer || document.URL);
-        chatUrl += "&t=" + new Date().getTime();
-        try {
-            window.open(chatUrl, "chatbox79482", "toolbar=0,scrollbars=0,location=0,menubar=0,resizable=1,width=570,height=424");
-        } catch (e) {
-            // browser blocked
-            // do nothing;
+        function openTarget () {
+            layer.closeAll();
+            chatUrl += "&enterurl=" + encodeURIComponent(document.referrer || document.URL);
+            chatUrl += "&t=" + new Date().getTime();
+            try {
+                window.open(chatUrl, "chatbox79482", "toolbar=0,scrollbars=0,location=0,menubar=0,resizable=1,width=570,height=424");
+            } catch (e) {
+                // browser blocked
+                // do nothing;
+            }
         }
     }
 </script>
