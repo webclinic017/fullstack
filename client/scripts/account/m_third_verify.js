@@ -55,7 +55,7 @@ $(document).ready(function () {
     layer.open({type: 2, shadeClose: false});
 
     // 请求当前用户认证到哪一步
-    // setUserCookie();
+    setUserCookie();
 
     function setUserCookie () {
         var user_id = getUrlParam("user_id") || '';
@@ -95,13 +95,13 @@ $(document).ready(function () {
             }
         });
     }
-    setTimeout(function () {
-        layer.closeAll();
-        getKycList();
-        step = 7;
-        $(ele.wrapper).addClass("active");
-        goStepPage();
-    }, 1000);
+    // setTimeout(function () {
+    //     layer.closeAll();
+    //     getKycList();
+    //     step = 7;
+    //     $(ele.wrapper).addClass("active");
+    //     goStepPage();
+    // }, 1000);
     
     $(ele.indexBtn).on("tap", function () {
         layer.open({type: 2, shadeClose: false});
