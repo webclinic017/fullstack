@@ -65,3 +65,63 @@
         color: $brand-primary;
     }
 }
+
+.footer-service-layer {
+    border-radius: 4px !important;
+
+    h4 {
+        font-weight: 400;
+        text-align: center;
+        margin-top: 40px;
+        font-size: 20px;
+        
+    }
+    ul {
+        padding: 20px 30px;
+
+        li {
+            float: left;
+            width: 255px;
+            height: 110px;
+            border: 2px solid #ffd202;
+            border-radius: 4px;
+            text-align: center;
+            line-height: 110px;
+            font-size: 20px;
+            font-weight: 500;
+            cursor: pointer;
+
+            &.ordinary_serv {
+                margin-right: 15px;
+            }
+            &.agent_serv {
+                margin-left: 15px;
+            }
+            &:hover {
+                background-color: #ffd202;
+            }
+
+            span {
+                img {
+                    width: 36px;
+                    margin-right: 16px;
+                }
+            }
+        }
+    }
+    .tip {
+        padding: 0px 15px;
+        p {
+            width: 50%;
+            float: left;
+            text-align: center;
+            line-height: 20px;
+        }
+    }
+}
+
+
+
+
+
+
