@@ -13,6 +13,7 @@
         thirdSetUserInfo: origin + '/third/user/auth_info', //put
         thirdUploadIdCard: origin + '/third/user/upload_base64_id_card', //put
         thirdSetPassword: origin + '/third/user/account', //post
+        thirdChangePassword: origin + '/third/user/passwd', //put
     };
 
     w.publicRequest = publicRequest;

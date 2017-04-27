@@ -97,7 +97,8 @@ $(document).ready(function () {
     }
     // setTimeout(function () {
     //     layer.closeAll();
-    //     step = 7;
+    //     getKycList();
+    //     step = 1;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
     // }, 1000);
