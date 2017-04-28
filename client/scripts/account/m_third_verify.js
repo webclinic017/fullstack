@@ -401,7 +401,7 @@ $(document).ready(function () {
             // console.log(data);
             layer.closeAll();
             if (!data) {
-                layer.closeAll();
+                // layer.closeAll();
                 return;
             }
             if (data.is_succ) {
@@ -449,7 +449,7 @@ $(document).ready(function () {
         var maxSize = 2*1024*1024;
 
         if (file.size > maxSize) {
-            scale = (file.size/maxSize).toFixed(1);
+            scale = Math.ceil(file.size/maxSize);
             console.log("to scale "+ scale);
         }
 
