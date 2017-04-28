@@ -55,7 +55,7 @@ $(document).ready(function () {
     layer.open({type: 2, shadeClose: false});
 
     // 请求当前用户认证到哪一步
-    // setUserCookie();
+    setUserCookie();
 
     function setUserCookie () {
         var user_id = getUrlParam("user_id") || '';
@@ -95,13 +95,13 @@ $(document).ready(function () {
             }
         });
     }
-    setTimeout(function () {
-        layer.closeAll();
-        getKycList();
-        step = 7;
-        $(ele.wrapper).addClass("active");
-        goStepPage();
-    }, 1000);
+    // setTimeout(function () {
+    //     layer.closeAll();
+    //     getKycList();
+    //     step = 3;
+    //     $(ele.wrapper).addClass("active");
+    //     goStepPage();
+    // }, 1000);
     
     $(ele.indexBtn).on("tap", function () {
         layer.open({type: 2, shadeClose: false});
@@ -400,7 +400,10 @@ $(document).ready(function () {
         }).then(function (data) {
             // console.log(data);
             layer.closeAll();
-            if (!data) return;
+            if (!data) {
+                layer.closeAll();
+                return;
+            }
             if (data.is_succ) {
                 cardStatus[type] = true;
 
@@ -441,9 +444,37 @@ $(document).ready(function () {
     }
     function previewBase64(file, face) {
         var reader = new FileReader();
-        
+        // console.log(file.size);
+        var scale = 1;
+        var maxSize = 2*1024*1024;
+
+        if (file.size > maxSize) {
+            scale = (file.size/maxSize).toFixed(1);
+            console.log("to scale "+ scale);
+        }
+
         reader.onload = function(e) {
-            cardBaseFile[face] = e.target.result.split(',')[1];
+            var img = new Image();
+            img.src = e.target.result;
+            
+            $(img).on('load', function (e) {
+                var canvas = document.createElement("canvas");
+                canvas.width=img.width/scale;
+                canvas.height=img.height/scale;
+                var ctx = canvas.getContext('2d');
+                // console.log(img.width);
+                // console.log(img.height);
+                ctx.drawImage(img,
+                    0,//sourceX,
+                    0,//sourceY,
+                    img.width/scale,//sourceWidth,
+                    img.height/scale//sourceHeight
+                );
+
+                var base64str=canvas.toDataURL("image/png");
+                cardBaseFile[face] = base64str.split(',')[1];
+            });
+            
         };
         reader.readAsDataURL(file);
     }
@@ -496,8 +527,6 @@ $(document).ready(function () {
         var r = window.location.search.substring(1).match(reg);  //匹配目标参数
         if (r != null) return decodeURIComponent(r[2]); return null; //返回参数值
     }
-
-
 
 
 
