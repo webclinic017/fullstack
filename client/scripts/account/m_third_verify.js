@@ -97,7 +97,8 @@ $(document).ready(function () {
     }
     // setTimeout(function () {
     //     layer.closeAll();
-    //     step = 7;
+    //     getKycList();
+    //     step = 3;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
     // }, 1000);
@@ -361,10 +362,12 @@ $(document).ready(function () {
 
     $(ele.completeBtn).on("tap", function (e) {
         e.preventDefault();
-        var iframe = document.createElement('iframe');
-        iframe.style.display = 'none';
-        iframe.src = window.location.protocol+'//'+window.location.hostname+'/third/complete/openAccount';
-        document.body.appendChild(iframe);
+        // var iframe = document.createElement('iframe');
+        // iframe.style.display = 'none';
+        // iframe.src = window.location.protocol+'//'+window.location.hostname+'/third/complete/openAccount';
+        // document.body.appendChild(iframe);
+        var r_href = window.location.protocol+'//'+window.location.hostname+'/third/complete/openAccount';
+        window.location = r_href;
     });
 
     // function uploadCard (type, oForm) {
@@ -393,11 +396,14 @@ $(document).ready(function () {
     function uploadCard (type) {
         publicRequest('thirdUploadIdCard', 'POST', {
             face: type,
-            file: cardBaseFile[type]
+            file: cardBaseFile[type].src.split(',')[1]
         }).then(function (data) {
             // console.log(data);
             layer.closeAll();
-            if (!data) return;
+            if (!data) {
+                // layer.closeAll();
+                return;
+            }
             if (data.is_succ) {
                 cardStatus[type] = true;
 
@@ -436,14 +442,49 @@ $(document).ready(function () {
             $imgWrapper.empty().append($img);
         };
     }
+
     function previewBase64(file, face) {
-        var reader = new FileReader();
-        
-        reader.onload = function(e) {
-            cardBaseFile[face] = e.target.result.split(',')[1];
-        };
-        reader.readAsDataURL(file);
+        var mpImg = new MegaPixImage(file);
+        cardBaseFile[face]=new Image();
+        mpImg.render(cardBaseFile[face], { maxWidth: 640, maxHeight: 640, quality: 0.5 });
+
     }
+    // function previewBase64(file, face) {
+    //     var reader = new FileReader();
+    //     console.log(file.size);
+    //     var scale = 1;
+    //     var maxSize = 2*1024*1024;
+
+    //     if (file.size > maxSize) {
+    //         scale = Math.ceil(file.size/maxSize);
+    //         console.log("to scale "+ scale);
+    //     }
+
+    //     reader.onload = function(e) {
+    //         var img = new Image();
+    //         img.src = e.target.result;
+            
+    //         $(img).on('load', function (e) {
+    //             var canvas = document.createElement("canvas");
+    //             canvas.width=img.width/scale;
+    //             canvas.height=img.height/scale;
+    //             var ctx = canvas.getContext('2d');
+    //             console.log(img.width);
+    //             console.log(img.height);
+    //             ctx.drawImage(img,
+    //                 0,//sourceX,
+    //                 0,//sourceY,
+    //                 img.width/scale,//sourceWidth,
+    //                 img.height/scale//sourceHeight
+    //             );
+
+    //             var base64str=canvas.toDataURL("image/png");
+    //             cardBaseFile[face] = base64str.split(',')[1];
+    //         });
+            
+    //     };
+    //     reader.readAsDataURL(file);
+    // }
 
     function goStepPage () {
 
@@ -493,8 +534,6 @@ $(document).ready(function () {
         var r = window.location.search.substring(1).match(reg);  //匹配目标参数
         if (r != null) return decodeURIComponent(r[2]); return null; //返回参数值
     }
-
-
 
 
 

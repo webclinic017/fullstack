@@ -117,19 +117,41 @@
 <script language="javascript">
     window.OpenChat = function () {
         var chatUrl = "";
-        if (window.location.pathname === '/web/agent/proxy' || window.location.pathname === '/web/agent/become') {
-            chatUrl = "http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&configID=151374&jid=2997261242&skillId=8663";
-        } else {
-            chatUrl = "http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&jid=2997261242";
-        }
+
+        layer.open({
+            type: 1,
+            skin: 'footer-service-layer',
+            title: false,
+            area: ['600px', '300px'],
+            shadeClose: true,
+            content: '<h4>你要在线咨询</h4><ul class="clearfix"><li class="ordinary_serv"><span><img src="/images/footer-service-1.png"></span>普通咨询</li><li class="agent_serv"><span><img src="/images/footer-service-2.png"></span>代理商咨询</li></ul><div class="tip clearfix"><p>我是普通用户，咨询交易相关的问题</p><p> 我是代理商或需要代理服务<br>咨询代理相关问题</p></div>'
+        });
+
+        var $ordinary_serv = $(".footer-service-layer .ordinary_serv");
+        var $agent_serv = $(".footer-service-layer .agent_serv");
+
+        $ordinary_serv.on('click', function () {
+            openTarget(0);
+        });
+        $agent_serv.on('click', function () {
+            openTarget(1);
+        });
         
-        chatUrl += "&enterurl=" + encodeURIComponent(document.referrer || document.URL);
-        chatUrl += "&t=" + new Date().getTime();
-        try {
-            window.open(chatUrl, "chatbox79482", "toolbar=0,scrollbars=0,location=0,menubar=0,resizable=1,width=570,height=424");
-        } catch (e) {
-            // browser blocked
-            // do nothing;
+        function openTarget (type) {
+            if (type) { // 代理商
+                chatUrl = "http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&configID=151374&jid=2997261242&skillId=8663";
+            } else {
+                chatUrl = "http://chat8.live800.com/live800/chatClient/chatbox.jsp?companyID=371437&jid=2997261242&configID=144016&skillId=8662";
+            }
+            layer.closeAll();
+            chatUrl += "&enterurl=" + encodeURIComponent(document.referrer || document.URL);
+            chatUrl += "&t=" + new Date().getTime();
+            try {
+                window.open(chatUrl, "chatbox79482", "toolbar=0,scrollbars=0,location=0,menubar=0,resizable=1,width=570,height=424");
+            } catch (e) {
+                // browser blocked
+                // do nothing;
+            }
         }
     }
 </script>

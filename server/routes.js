@@ -320,6 +320,10 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('m_third_verify', extendPublic({}, req));
     });
+    app.route('/m/third/password').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('m_third_password', extendPublic({}, req));
+    });
 
     /*--------------------APP-End-------------------------*/
 
