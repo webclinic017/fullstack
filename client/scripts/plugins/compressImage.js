@@ -8,7 +8,7 @@
  * Copyright (c) 2012 Shinichi Tomita <shinichi.tomita@gmail.com>
  * Released under the MIT license
  */
-(function() {
+;(function() {
 
     /**
      * Detect subsampling in loaded image.
