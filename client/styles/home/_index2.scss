@@ -110,17 +110,17 @@
         height: 818px !important;
         background-position: center center;
         background-size: cover;
-        @include img-normal($image-path-home + "index-banner-redbag.png");
+        @include img-normal($image-path-home + "index-banner-redbag_0501.png");
         
         &.pkds {
             @include img-normal($image-path-home + "index3-banner1.jpg");
         }
 
         .pic {
-            padding-top: 110px;
+            padding-top: 69px;
 
             img {
-                width: 900px;
+                width: 966px;
             }
         }
         .date {
@@ -293,6 +293,21 @@
         font-size: 24px;
         line-height: 24px;
         color: $brand-primary;
+
+        @include m(new) {
+            width: 966px;
+            margin: 0 auto;
+            position: relative;
+
+            a {
+                position: absolute;
+                width: 185px;
+                height: 76px;
+                top: -137px;
+                right: 170px;
+                cursor: pointer;
+            }
+        }
 
         &:hover {
             background: $brand-primary;
