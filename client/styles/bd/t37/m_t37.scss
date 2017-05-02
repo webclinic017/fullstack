@@ -48,8 +48,8 @@
         .connect_us {
             margin-top: 14%;
             display: inline-block;
-            color: #222;
-            font-size: 0.8rem;
+            color: #fff;
+            font-size: 0.55rem;
         }
         .slide_arrow {
             position: absolute;
@@ -135,6 +135,9 @@
             .layer_contentBox {
                 display: none;
             }
+            .connect_us{
+                margin-top: 147%;
+            }
             .matters_btn {
                 color: #fff;
                 border: 1px solid #fff;
@@ -162,6 +165,9 @@
                 top: 84%;
                 right: 6.5rem;
             }
+            .connect_us{
+                margin-top: 147%;
+            }
         }
         .section3 {
             background-color: #121212;
@@ -174,7 +180,7 @@
                 right: 6.0rem;
             }
             .connect_us {
-                margin-top: 20%;
+                margin-top: 100%;
             }
         }
         .section4 {
@@ -187,7 +193,7 @@
                 right: 6.5rem;
             }
             .connect_us {
-                margin-top: 20%;
+                margin-top: 120%;
             }
         }
         .section5 {
