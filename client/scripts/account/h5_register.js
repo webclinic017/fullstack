@@ -96,9 +96,9 @@
             _czc.push(["_trackEvent", "注册页", "获取验证码"]);
 
             /*今日头条*/
-            if (window.location.pathname.indexOf('t33_b') != -1) {
-                _taq.push({ convert_id: "55824901749", event_type: "view" })
-            }
+            // if (window.location.pathname.indexOf('t33_b') != -1) {
+            //     _taq.push({ convert_id: "55824901749", event_type: "view" })
+            // }
 
             /*loading层*/
             layer.open({ type: 2, shadeClose: false });
@@ -364,14 +364,14 @@
                 statistics($("#telephone").val());
 
                 /*今日头条统计表单提交*/
-                if (window.location.pathname.indexOf('t33_a') != -1) {
-                    _taq.push({ convert_id: "55824929459", event_type: "form" })
-                }
+                // if (window.location.pathname.indexOf('t33_a') != -1) {
+                //     _taq.push({ convert_id: "55824929459", event_type: "form" })
+                // }
 
                 /*今日头条统计表单提交*/
-                if (window.location.pathname.indexOf('t35') != -1) {
-                    _taq.push({convert_id:"58276692798", event_type:"form"})
-                }
+                // if (window.location.pathname.indexOf('t35') != -1) {
+                //     _taq.push({convert_id:"58276692798", event_type:"form"})
+                // }
 
                 $.ajax({
                     url: "/action/public/app/h5_register",
