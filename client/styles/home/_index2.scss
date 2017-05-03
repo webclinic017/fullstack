@@ -92,9 +92,9 @@
                 width: 60px;
                 height: 60px;
 
-                img {
-                    width: 100%;
-                }
+                @include img-normal($image-path-home + "layer_redbag_close.png");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
             }
         }
 

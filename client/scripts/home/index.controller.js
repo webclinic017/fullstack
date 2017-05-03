@@ -31,7 +31,7 @@
                 title: '',
                 shade: 0.6,
                 area: ['800px', '600px'], //宽高
-                content: '<div class="content"><a href="/bd/t35" class="btn"></a><div class="close" onclick="layer.closeAll();"><img src="/images/home/layer_redbag_close.png"></div></div>'
+                content: '<div class="content"><a href="/bd/t35" class="btn"></a><div class="close" onclick="layer.closeAll();"></div></div>'
             });
         }
 
