@@ -1,4 +1,10 @@
 var report_sites = [
+    /*添加时间 2017-5-4*/
+    {
+        address: 'http://www.southmoney.com/caijing/gongsixinwen/201704/1234736.html',
+        description: '【南方财富网】资产配置多元时代 老虎外汇开启互联网外汇投资新纪元',
+        date: '2017-04-20'
+    },
     /*添加时间 2017-4-24*/
     {
         address: 'http://www.southmoney.com/caijing/gongsixinwen/201704/1234736.html',
