@@ -5,6 +5,9 @@
     var apiUrl = {
         getUserInfo: origin + '/user/info',     // get
         register: origin + '/auth/register',     // post
+        getAssetInfo: origin + '/centre/asset',  // get
+        getWalletBalance: origin + '/wallet/valid_balance',  // get
+        withdrawWallet: origin + '/wallet/withdraw',  // post
         // 三方接口
         thirdGetStatus: origin + '/third/user/auth_status', // get
         thirdRegister: origin + '/third/auth/register', //post

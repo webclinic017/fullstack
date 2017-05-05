@@ -1,14 +1,19 @@
 $(document).ready(function () {
 
     var isNext = false;
+    var isNextInvest = false;
+    var isNextWallet = false;
     // 提示信息
     var alert_msg = '操作失败，请稍后再试';
     // 英文版 提示信息 暂时都显示同一提示
     var alert_msg_en = 'Operation Failed，please contact the admin';
-    // 可提现金额
+    // 交易帐户可提现金额
     var canWithdrawBalance = 0;
+    // 零钱包可提现金额
+    var canWithdrawBalanceWallet = 0;
     // 提现金额
     var widthdrawNum = 0;
+    var canWithdrawNum = 0;
     // 持卡人真实姓名
     var realname;
     // 已经绑定过的银行卡id号，若未绑定过，id为'';
@@ -18,10 +23,9 @@ $(document).ready(function () {
         tip: '银行卡卡号为 12-19 位数字',
         reg: /^\d{12,19}$/
     };
+    // 出金类型
+    var widthdrawType = 'invest';   // invest 交易帐户, wallet 零钱包
     // baiduTemplate 模版 http://baidufe.github.io/BaiduTemplate/
-    //可以设置分隔符
-    //bt.LEFT_DELIMITER='<!';
-    //bt.RIGHT_DELIMITER='!>';
 
     //可以设置输出变量是否自动HTML转义
     //bt.ESCAPE = false;
@@ -57,21 +61,47 @@ $(document).ready(function () {
      * 填写出金金额，获取当前汇率、可提现金额
      */
     var $currentRate = $(".m_withdraw__home-rate span");
-    var $isWithdrawBalance = $(".m_withdraw__home-info .tip span");
-    var $withdrawErrMsg = $(".m_withdraw__home-info .err_msg");
+    var $isWithdrawBalanceInvest = $(".m_withdraw__home-msg.invest span");
+    var $withdrawErrMsgInvest = $(".m_withdraw__home-msg.invest");
+    var $isWithdrawBalanceWallet = $(".m_withdraw__home-msg.wallet span");
+    var $withdrawErrMsgWallet = $(".m_withdraw__home-msg.wallet");
     var $toCardListBtn = $(".m_withdraw__home-btn .m_withdraw_btn");
     var $withdrawNum = $(".m_withdraw__home-info label .m_withdraw_num");
+    var $withdrawAccount = $(".m_withdraw__home-type .withdraw_account");
+    var $withdrawInvest = $(".m_withdraw__home-type .withdraw_tip.invest");
+    var $withdrawWallet = $(".m_withdraw__home-type .withdraw_tip.wallet");
 
     if (dataAttr == "page1") {
         console.log("this is page1");
         getCurrentRate();
         getIsWithdraw();
+        getIsWithdrawWallet();
+        getAssetInfo();
+        getWithdrawType();
+    }
+    // 获取当前资产
+    function getAssetInfo () {
+        publicRequest('getAssetInfo', 'GET').then(function (data) {
+            if (!data) return;
+            // console.log(data);
+            if (data.is_succ) {
+                $withdrawInvest.find("span").html(data.data.balance);
+                $withdrawWallet.find("span").html(data.data.wallet_balance);
+                $(".choose_type .choose_type__single.invest .tip span").html(data.data.balance);
+                $(".choose_type .choose_type__single.wallet .tip span").html(data.data.wallet_balance);
+            }
+        });
+    }
+    // 获取当前出金类型
+    function getWithdrawType () {
+        widthdrawType = getUrlParam('withdraw_type') ? getUrlParam('withdraw_type') : 'invest';
+        changeWithdrawType();
     }
     
     // 获取当前汇率
     function getCurrentRate () {
         $.get('/action/public/v4/get_parity').then(function (data) {
-            console.info(data);
+            // console.info(data);
             data = JSON.parse(data);
             var rate = Number(data.data.outparity).toFixed(4);
             $currentRate.html(rate);
@@ -79,36 +109,119 @@ $(document).ready(function () {
             console.info(err);
         });
     }
-    // 获取出金状态
+    // 获取出金状态 交易帐户
     function getIsWithdraw () {
         $.get('/action/public/v4/check_withdraw').then(function (data) {
             // console.info(data);
             data = JSON.parse(data);
             canWithdrawBalance = data.balance;
 
-            $isWithdrawBalance.html(canWithdrawBalance);
-
             if (data.is_succ) {
-                isNext = true;
+                isNextInvest = true;
+                $isWithdrawBalanceInvest.html(canWithdrawBalance);
             } else {
-                isNext = false;
-                var msg = "系统提示：" + data.error_msg;
+                isNextInvest = false;
                 alert_msg = data.error_msg;
-                $withdrawErrMsg.html(msg);
+                $withdrawErrMsgInvest.html(alert_msg);
             }
+            changeWithdrawType();
         }, function (err) {
             console.info(err);
         });
     }
+    // 获取出金状态 零钱包
+    function getIsWithdrawWallet () {
+        publicRequest('getWalletBalance', 'GET').then(function (data) {
+            if (!data) return;
+            // console.log(data);
+            if (data.is_succ) {
+                canWithdrawBalanceWallet = data.data;
+                isNextWallet = true;
+                $isWithdrawBalanceWallet.html(canWithdrawBalanceWallet);
+            } else {
+                isNextWallet = false;
+                $withdrawErrMsgWallet.html(data.message);
+            }
+            changeWithdrawType();
+        });
+        
+    }
+    // 设置出金类型
+    function changeWithdrawType () {
+        if (widthdrawType === 'invest') {
+            $withdrawAccount.html('交易帐户');
+            $withdrawWallet.removeClass('active');
+            $withdrawInvest.addClass('active');
+            $withdrawErrMsgWallet.removeClass("active");
+            $withdrawErrMsgInvest.addClass("active");
+            isNext = isNextInvest;
+        }
+        if (widthdrawType === 'wallet') {
+            $withdrawAccount.html('零钱包');
+            $withdrawInvest.removeClass('active');
+            $withdrawWallet.addClass('active');
+            $withdrawErrMsgInvest.removeClass("active");
+            $withdrawErrMsgWallet.addClass("active");
+            isNext = isNextWallet;
+        }
+        if (isNext) {
+            $toCardListBtn.removeClass("disabled");
+        } else {
+            $toCardListBtn.addClass("disabled");
+        }
+    }
+
+
+    $withdrawAccount.on("tap", function () {
+        var $layerInvest = $(".choose_type .choose_type__single.invest");
+        var $layerWallet = $(".choose_type .choose_type__single.wallet");
+        $(".choose_type .choose_type__single").removeClass("active");
+        if (widthdrawType === 'invest') {
+            $layerInvest.addClass('active');
+        }
+        if (widthdrawType === 'wallet') {
+            $layerWallet.addClass('active');
+        }
+
+        layer.open({
+            className: 'm_asset_layer',
+            content: $(".choose_type").html()
+        });
+
+        // layer 操作
+        $(".m_asset_layer .choose_type__btn span").on("tap", function () {
+            layer.closeAll();
+            return false;
+        });
+        $(".m_asset_layer .choose_type__single.invest").on("tap", function () {
+            $(".m_asset_layer .choose_type__single.wallet").removeClass("active")
+            $(this).addClass("active");
+            widthdrawType = 'invest';
+            changeWithdrawType();
+            layer.closeAll();
+            return false;
+        });
+        $(".m_asset_layer .choose_type__single.wallet").on("tap", function () {
+            $(".m_asset_layer .choose_type__single.invest").removeClass("active")
+            $(this).addClass("active");
+            widthdrawType = 'wallet';
+            changeWithdrawType();
+            layer.closeAll();
+            return false;
+        });
+
+        return false;
+    });
 
     // 跳转到银行卡列表页面
-    $toCardListBtn.on("touchend", function () {
+    $toCardListBtn.on("tap", function () {
         if (isNext) {
             widthdrawNum = Number($withdrawNum.val());
-            console.info("提现金额："+widthdrawNum, "可提现金额："+canWithdrawBalance);
+            canWithdrawNum = widthdrawType === 'invest' ? canWithdrawBalance : canWithdrawBalanceWallet;
+            console.info("提现金额："+widthdrawNum, "可提现金额："+canWithdrawNum);
 
             if (widthdrawNum >= 20) {
-                if (widthdrawNum > canWithdrawBalance) {
+                if (widthdrawNum > canWithdrawNum) {
                     console.info("提现金额不能大于可提现金额");
                     if (isEngLanguage()) {
                         layer.open({
@@ -150,18 +263,6 @@ $(document).ready(function () {
                     });
                 }
             }
-        } else {
-            if (isEngLanguage()) {
-                layer.open({
-                    content: alert_msg_en,
-                    btn: "OK"
-                });
-            } else {
-                layer.open({
-                    content: alert_msg+'<br>'+'如有疑问，请联系您的客户经理或联系客服（'+nodeResponseInfo.telephone+'）',
-                    btn: "确定"
-                });
-            }
         }
         return false;
     });
@@ -169,7 +270,9 @@ $(document).ready(function () {
     function toCardList () {
         var action_address = window.location.origin +
                              "/m/asset_new/cardlist?amount=" +
-                             encodeURIComponent(widthdrawNum);
+                             encodeURIComponent(widthdrawNum) +
+                             "&withdraw_type=" +
+                             encodeURIComponent(widthdrawType);
         console.info(action_address);
         callNative({
             type: "openUrlOnce",
@@ -189,29 +292,29 @@ $(document).ready(function () {
 
     // 获取真实姓名以及银行卡信息
     function getPersonalInfo () {
-        // publicRequest('getUserInfo', 'GET').then(function (data) {
-        //     if (!data) return;
-        //     // console.log(data);
-        //     if (data.is_succ) {
-        //         realname = data.data.realname;
-        //         getCard();
-        //     }
-        // });
-        $.get('/action/public/v4/get_info').then(function (data) {
-            data = JSON.parse(data);
-            console.info(data);
+        publicRequest('getUserInfo', 'GET').then(function (data) {
+            if (!data) return;
+            // console.log(data);
             if (data.is_succ) {
                 realname = data.data.realname;
                 getCard();
             }
-        }, function (err) {
-            console.log(err);
         });
+        // $.get('/action/public/v4/get_info').then(function (data) {
+        //     // data = JSON.parse(data);
+        //     console.info(data);
+        //     if (data.is_succ) {
+        //         realname = data.data.realname;
+        //         getCard();
+        //     }
+        // }, function (err) {
+        //     console.log(err);
+        // });
     }
        
     function getCard() {
         $.get('/action/public/v4/query_bankcard').then(function (data) {
-            console.info(data);
+            // console.info(data);
             data = JSON.parse(data);
             var cardInfo = {
                 "cardList": []
@@ -251,15 +354,18 @@ $(document).ready(function () {
 
             var $toAddCardBtn = $(".m_withdraw__cardlist .operateCard");
             var $withdrawBtn = $(".m_withdraw__cardlist .m_withdraw__cardlist-bank");
+            widthdrawType = getUrlParam("withdraw_type");
 
             // 跳转到绑定银行卡页面
-            $toAddCardBtn.on("touchend", function () {
+            $toAddCardBtn.on("tap", function () {
                 widthdrawNum = getUrlParam("amount");
+                
                 var action_address = window.location.origin + 
                                      "/m/asset_new/addcard1?amount=" +
                                      encodeURIComponent(widthdrawNum) +
                                      "&realname="+encodeURIComponent(realname) +
-                                     "&id="+encodeURIComponent(id);
+                                     "&id="+encodeURIComponent(id) +
+                                     "&withdraw_type="+encodeURIComponent(widthdrawType);
                 console.info(action_address);
                 callNative({
                     type: "openUrlOnce",
@@ -269,7 +375,7 @@ $(document).ready(function () {
             });
 
             // 出金
-            $withdrawBtn.on("touchend", function () {
+            $withdrawBtn.on("tap", function () {
                 widthdrawNum = getUrlParam("amount");
 
                 //loading
@@ -278,47 +384,83 @@ $(document).ready(function () {
                     content: 'loading',
                     shadeClose: false
                 });
-
-                $.post('/action/public/v4/withdraw', {
-                    amount: widthdrawNum,
-                    id: id
-                }).then(function (data) {
-                    layer.closeAll();
-                    console.info(data);
-                    data = JSON.parse(data);
-                    if (data.is_succ) {
-                        var action_address = window.location.origin +
-                                     "/m/asset_new/succ";
-                        console.info(action_address);
-                        callNative({
-                            type: "openUrlRefresh",
-                            url: action_address
-                        });
-                    } else {
-                        var action_address = window.location.origin +
-                                     "/m/asset_new/fail?msg=" +
-                                     encodeURIComponent(data.error_msg);
-                        console.info(action_address);
-                        callNative({
-                            type: "openUrlRefresh",
-                            url: action_address
-                        });
-                    }
-                }, function (err) {
-                    console.log("出金申请提交失败");
-                    var action_address = window.location.origin +
-                                     "/m/asset_new/fail";
-                    console.info(action_address);
-                    callNative({
-                        type: "openUrlRefresh",
-                        url: action_address
-                    });
-                });
+                if (widthdrawType === 'invest') {
+                    withdrawInvest();
+                } else {
+                    withdrawWallet();
+                }
+                
                 return false;
             });
             
         }, function (err) {
             console.info(err);
+        });
+    }
+
+    function withdrawInvest () {
+        $.post('/action/public/v4/withdraw', {
+            amount: widthdrawNum,
+            id: id
+        }).then(function (data) {
+            layer.closeAll();
+            // console.info(data);
+            data = JSON.parse(data);
+            if (data.is_succ) {
+                var action_address = window.location.origin +
+                             "/m/asset_new/succ";
+                console.info(action_address);
+                callNative({
+                    type: "openUrlRefresh",
+                    url: action_address
+                });
+            } else {
+                var action_address = window.location.origin +
+                             "/m/asset_new/fail?msg=" +
+                             encodeURIComponent(data.error_msg);
+                console.info(action_address);
+                callNative({
+                    type: "openUrlRefresh",
+                    url: action_address
+                });
+            }
+        }, function (err) {
+            console.log("出金申请提交失败");
+            var action_address = window.location.origin +
+                             "/m/asset_new/fail";
+            console.info(action_address);
+            callNative({
+                type: "openUrlRefresh",
+                url: action_address
+            });
+        });
+    }
+
+    function withdrawWallet () {
+        publicRequest('withdrawWallet', 'POST', {
+            amount: widthdrawNum
+        }).then(function (data) {
+            if (!data) return;
+            layer.closeAll();
+            // console.log(data);
+            if (data.is_succ) {
+                var action_address = window.location.origin +
+                             "/m/asset_new/succ";
+                console.info(action_address);
+                callNative({
+                    type: "openUrlRefresh",
+                    url: action_address
+                });
+            } else {
+                var action_address = window.location.origin +
+                             "/m/asset_new/fail?msg=" +
+                             encodeURIComponent(data.message);
+                console.info(action_address);
+                callNative({
+                    type: "openUrlRefresh",
+                    url: action_address
+                });
+            }
         });
     }
 
@@ -346,7 +488,7 @@ $(document).ready(function () {
         }
     });
 
-    $realnameInfo.on("touchend", function () {
+    $realnameInfo.on("tap", function () {
         layer.open({
             content: "<div style='padding-bottom: 10px;'>持卡人说明</div><div style='text-align: left; color: #666;'>为了您的账户资金安全，只能绑定持卡人本人的银行卡。<br>如有其它疑问，请联系"+nodeResponseInfo.company+"客服"+nodeResponseInfo.telephone+"</div>",
             btn: "确定"
@@ -355,18 +497,20 @@ $(document).ready(function () {
     });
 
     // 跳转到绑定银行卡页面2
-    $addCardBtn1.on("touchend", function () {
+    $addCardBtn1.on("tap", function () {
         var cardNum = isSuccAddCard1();
         
         if (cardNum) {
             widthdrawNum = getUrlParam("amount");
             id = getUrlParam("id");
+            widthdrawType = getUrlParam("withdraw_type");
             var action_address = window.location.origin + 
                                  "/m/asset_new/addcard2?amount=" + 
                                  encodeURIComponent(widthdrawNum) +
                                  "&realname="+encodeURIComponent(realname) +
                                  "&id="+encodeURIComponent(id) +
-                                 "&cardnum="+encodeURIComponent(cardNum);
+                                 "&cardnum="+encodeURIComponent(cardNum) +
+                                 "&withdraw_type="+encodeURIComponent(widthdrawType);
             console.info(action_address);
             callNative({
                 type: "openUrlOnce",
@@ -435,7 +579,7 @@ $(document).ready(function () {
     });
 
     // 跳转到银行卡列表页面
-    $addCardBtn2.on("touchend", function () {
+    $addCardBtn2.on("tap", function () {
         var banksInfo = isSuccAddCard2();
 
         if (banksInfo.bank && banksInfo.branch && banksInfo.state && banksInfo.city) {
@@ -449,13 +593,15 @@ $(document).ready(function () {
                 city: banksInfo.city,
                 id: id
             }).then(function (data) {
-                console.info(data);
+                // console.info(data);
                 data = JSON.parse(data);
                 if (data.is_succ) {
                     widthdrawNum = getUrlParam("amount");
+                    widthdrawType = getUrlParam("withdraw_type");
                     var action_address = window.location.origin +
                              "/m/asset_new/cardlist?amount=" +
-                             encodeURIComponent(widthdrawNum);
+                             encodeURIComponent(widthdrawNum) +
+                             "&withdraw_type="+encodeURIComponent(widthdrawType);
                     console.info(action_address);
                     callNative({
                         type: "openUrlOnce",
@@ -587,7 +733,7 @@ $(document).ready(function () {
         console.log("this is page5");
     }
 
-    $succToPersonalPage.on("touchend", function () {
+    $succToPersonalPage.on("tap", function () {
         console.log("成功了，前往个人中心");
         callNative({
             type: "back_personal",
@@ -608,7 +754,7 @@ $(document).ready(function () {
         getFailMsg();
     }
 
-    $failToPersonalPage.on("touchend", function () {
+    $failToPersonalPage.on("tap", function () {
         console.log("失败了，前往个人中心");
         callNative({
             type: "back_personal",

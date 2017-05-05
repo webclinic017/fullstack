@@ -1,18 +1,59 @@
 <div class="m_withdraw" data-page="page1">
     <div class="m_withdraw__home">
-        <div class="m_withdraw__home-rate" <%= lang.text("navbar15")%>>
-            当前汇率：1美元＝<span>*</span>人民币
+        <div class="m_withdraw__home-info clearfix">
+            <p class="tit">提现帐户</p>
+            <div class="m_withdraw__home-type">
+                <div class="withdraw_account"></div>
+                <p class="withdraw_tip invest">
+                    当前交易帐户余额：<i class="fa fa-dollar"></i><span>0</span>
+                </p>
+                <p class="withdraw_tip wallet">
+                    当前零钱包余额：<i class="fa fa-dollar"></i><span>0</span>
+                </p>
+            </div>
         </div>
-        <div class="m_withdraw__home-info">
+        <div class="m_withdraw__home-info clearfix">
             <p class="tit"><%= lang.text("mAssetWithdrawAmount")%></p>
             <label class="clearfix">
-                <span>$</span><input name="withdraw" type="number" class="m_withdraw_num" placeholder="<%= lang.text("mAssetWithdrawPlaceholder1")%>">
+                <span><i class="fa fa-dollar"></i></span><input name="withdraw" type="number" class="m_withdraw_num" placeholder="<%= lang.text("mAssetWithdrawPlaceholder1")%>">
             </label>
-            <p class="tip"><%= lang.text("mAssetWithdrawAmountAble")%>$<span>0</span></p>
-            <p class="err_msg" <%= lang.text("navbar15")%>></p>
         </div>
+        <p class="m_withdraw__home-msg invest">
+            <%= lang.text("mAssetWithdrawAmountAble")%><i class="fa fa-dollar"></i><span>0</span>
+        </p>
+        <p class="m_withdraw__home-msg wallet">
+            <%= lang.text("mAssetWithdrawAmountAble")%><i class="fa fa-dollar"></i><span>0</span>
+        </p>
         <div class="m_withdraw__home-btn">
             <span class="m_withdraw_btn"><%= lang.text("mAssetWithdrawNext")%></span>
+            <div class="m_withdraw__home-rate" <%= lang.text("navbar15")%>>
+                当前汇率：1美元＝<span>*</span>人民币
+            </div>
+        </div>
+
+        <div class="choose_type" style="display: none;">
+            <h2>提现账户</h2>
+            <div class="choose_type__single invest clearfix">
+                <div class="icon">
+                    <span></span>
+                </div>
+                <div class="cont">
+                    <p class="tit">交易账户</p>
+                    <p class="tip">当前交易账户余额：<i class="fa fa-dollar"></i><span>0</span></p>
+                </div>
+            </div>
+            <div class="choose_type__single wallet clearfix">
+                <div class="icon">
+                    <span></span>
+                </div>
+                <div class="cont">
+                    <p class="tit">零钱包</p>
+                    <p class="tip">当前零钱包余额：<i class="fa fa-dollar"></i><span>0</span></p>
+                </div>
+            </div>
+            <div class="choose_type__btn">
+                <span>取消</span>
+            </div>
         </div>
     </div>
 </div>

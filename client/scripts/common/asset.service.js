@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('asset', asset);
 
-    asset.$inject = ['$http', 'api'];
+    asset.$inject = ['$http', 'api', 'publicHttp'];
 
-    function asset($http, api) {
+    function asset($http, api, publicHttp) {
         var o = api.asset;
         var service = {
             withdraw: withdraw,
@@ -22,7 +22,10 @@
             getCopierBonusSummary: getCopierBonusSummary,
             getMasterBonusList: getMasterBonusList,
             getCopierBonusList: getCopierBonusList,
-            getBonusDetailList: getBonusDetailList
+            getBonusDetailList: getBonusDetailList,
+            walletDeposit: walletDeposit,
+            walletWithdraw: walletWithdraw,
+            walletCanWithdraw: walletCanWithdraw
         };
         return service;
 
@@ -238,6 +241,40 @@
                     mt4_to: mt4_to
                 }
             });
+        }
+
+        /**
+         * Asset Service 零钱包入金
+         *
+         * @method walletDeposit
+         * @param {Number} amount
+         */
+        function walletDeposit(amount) {
+            return publicHttp.dealPublicRequest(o.walletDepositApi, 'POST', {
+                amount: amount
+            });
+        }
+
+        /**
+         * Asset Service 零钱包出金
+         *
+         * @method walletWithdraw
+         * @param {Number} amount
+         */
+        function walletWithdraw(amount) {
+            return publicHttp.dealPublicRequest(o.walletWithdrawApi, 'POST', {
+                amount: amount
+            });
+        }
+
+        /**
+         * Asset Service 获取零钱包可出金金额
+         *
+         * @method walletCanWithdraw
+         * 
+         */
+        function walletCanWithdraw() {
+            return publicHttp.dealPublicRequest(o.walletCanWithdrawApi, 'GET');
         }
     }
 })();

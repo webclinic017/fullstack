@@ -44,8 +44,12 @@
 
         // 取消轮询
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
-            if (toState.name.indexOf('space') === -1) {
+            // console.log(toState.name);
+            if (toState.name.indexOf('center') === -1) {
                 $timeout.cancel(summaryId);
+            } else {
+                $timeout.cancel(summaryId);
+                getAssetInfo();
             }
         });
 
@@ -97,8 +101,15 @@
         // 获取个人资产概况
         function getAssetInfo() {
             account.getAssetInfo().then(function (data) {
+                if (!data) return;
                 // console.info(data);
-                angular.extend($scope.personal, data.data);
+                if (data.is_succ) {
+                    angular.extend($scope.personal, data.data);
+                    var my_total_balance = Number(data.data.balance)+Number(data.data.wallet_balance);
+                    angular.extend($scope.personal, {
+                        my_total_balance: my_total_balance
+                    });
+                }           
             });
 
             summaryId = $timeout(function () {

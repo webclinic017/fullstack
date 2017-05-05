@@ -11,6 +11,9 @@
         var companyName = $cookies["company_name"];
 
         $scope.message = {};
+        $scope.messageWallet = {};
+        $scope.maxAmountInvest = 0;
+        $scope.maxAmountWallet = 0;
         $scope.withdraw = {
             // amount: ,
             // succAmount: ,
@@ -26,6 +29,7 @@
                 // timestamp: ,
                 // RMB:         // 折合人民币
             },
+            type: $state.params.type || 'invest',
             success: false,
             minAmount: companyName == 'tigerwit' ? 20 : 100,
             maxAmount: 0
@@ -37,13 +41,14 @@
             }
         };
         $scope.withdrawMessageSucc = false;     // 判断出金状态接口请求情况
+        layer.load(2);
 
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
         $scope.toWithdraw = toWithdraw;
         $scope.openWithdrawMdl = openWithdrawMdl;
         $scope.openCardMdl = openCardMdl;
-
+        $scope.changeWithdrawType = changeWithdrawType;
 
         getCard();
 
@@ -64,10 +69,14 @@
 
         // 判断出金状态, 获取可提取的最大金额
         asset.getIsWithdraw().then(function (data) {
+            layer.closeAll();
             // console.info(data);
             $scope.withdrawMessageSucc = true;
             $scope.message = data;
-            $scope.withdraw.maxAmount = data.balance < 0 ? 0 : data.balance;
+            $scope.maxAmountInvest = data.balance < 0 ? 0 : data.balance;
+            if ($scope.withdraw.type === 'invest') {
+                $scope.withdraw.maxAmount = $scope.maxAmountInvest;
+            }
 
         }, function (err) {
             console.log(err);
@@ -76,7 +85,17 @@
                 error_msg: '系统错误，请联系管理员哦～'
             };
         });
-
+        // wallet可出金情况
+        asset.walletCanWithdraw().then(function (data) {
+            if (!data) return;
+            // console.log(data);
+            $scope.withdrawMessageSucc = true;
+            $scope.messageWallet = data;
+            $scope.maxAmountWallet = data.data;
+            if ($scope.withdraw.type === 'wallet') {
+                $scope.withdraw.maxAmount = $scope.maxAmountWallet;
+            }
+        });
 
         // 获取银行卡信息
         function getCard() {
@@ -164,6 +183,11 @@
             });
         }
 
+        function changeWithdrawType (type) {
+            $scope.withdraw.type = type;
+            $scope.withdraw.maxAmount = type === 'invest' ? $scope.maxAmountInvest : $scope.maxAmountWallet;
+        }
+
         // 提现
         $scope.clickable = true;
         function toWithdraw() {
@@ -177,6 +201,16 @@
             }
             console.log('toWithdraw is click');
             $scope.clickable = false;
+
+            if ($scope.withdraw.type === 'invest') {
+                withdrawInvest();
+            } else {
+                withdrawWallet();
+            }
+
+        }
+
+        function withdrawInvest () {
             // 判断是否可以出金
             asset.getIsWithdraw($scope.withdraw.amount).then(function (data) {
                 $scope.message = data;
@@ -196,7 +230,8 @@
                                 openWithdrawMdl("withdrawSucc");
 
                                 $state.go('space.asset.subpage', {
-                                    subpage: 'withdraw'
+                                    subpage: 'withdraw',
+                                    type: 'invest'
                                 }, { reload: true });
                             } else {
                                 var msg = data.error_msg;
@@ -212,7 +247,26 @@
 
                 }
             });
+        }
 
+        function withdrawWallet () {
+            asset.walletWithdraw($scope.withdraw.amount).then(function (data) {
+                // console.log(data);
+                $scope.clickable = true;
+                if (!data) return;
+                if (data.is_succ) {
+                    $scope.withdraw.success = true;
+                    openWithdrawMdl("withdrawSucc");
+
+                    $state.go('space.asset.subpage', {
+                        subpage: 'withdraw',
+                        type: 'wallet'
+                    }, { reload: true });
+                } else {
+                    var msg = data.message;
+                    openWithdrawMdl(msg);
+                }
+            });
         }
 
 
