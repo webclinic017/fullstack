@@ -236,17 +236,21 @@ $(document).ready(function () {
                     }
                     
                 } else {
-                    layer.open({
-                        content: '现在提现会导致您的账户红包失效，是否继续提现？',
-                        btn: ['继续提现', '取消'],
-                        yes: function(index){
-                            layer.closeAll();
-                            toCardList();
-                        },
-                        no: function () {
-                            layer.closeAll();
-                        }
-                    });
+                    if (widthdrawType === 'invest') {
+                        layer.open({
+                            content: '现在提现会导致您的账户红包失效，是否继续提现？',
+                            btn: ['继续提现', '取消'],
+                            yes: function(index){
+                                layer.closeAll();
+                                toCardList();
+                            },
+                            no: function () {
+                                layer.closeAll();
+                            }
+                        });
+                    } else {
+                        toCardList();
+                    }
                 }
             } else {
                 console.info("提现金额不能小于20美金");

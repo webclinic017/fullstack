@@ -144,6 +144,7 @@
                 float: left;
                 text-align: center;
                 font-size: px2rem(28);
+                line-height: px2rem(28);
             }
             .m_withdraw__home-type {
                 width: 70%;
@@ -152,16 +153,16 @@
                 .withdraw_account {
                     font-size: px2rem(32);
                     position: relative;
+                    line-height: px2rem(32);
 
                     &:before {
                         content: '';
                         display: block;
                         position: absolute;
-                        top: 50%;
+                        top: 0;
                         right: px2rem(32);
                         border: px2rem(12) solid transparent;
                         border-top-color: #999;
-                        margin-top: px2rem(-6);
                     }
 
                     &:active {
@@ -187,6 +188,7 @@
                 font-size: px2rem(48);
                 font-weight: 500;
                 color: #2b2b2b;
+                line-height: px2rem(48);
                 // border-bottom: 1px solid #eee;
                 // padding-bottom: px2rem(24);
                 // margin-bottom: px2rem(32);
