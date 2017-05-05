@@ -30,6 +30,7 @@
             font-weight: 400;
             font-size: px2rem(40);
             padding-bottom: px2rem(20);
+            line-height: px2rem(40);
         }
         .choose_type__single {
             padding-top: px2rem(50);
@@ -42,12 +43,16 @@
                             content: '';
                             display: block;
                             position: absolute;
-                            width: 12px;
-                            height: 12px;
+                            // width: 12px;
+                            // height: 12px;
+                            width: px2rem(24);
+                            height: px2rem(24);
                             background-color: #fedd14;
                             border-radius: 50%;
-                            top: 3px;
-                            left: 3px;
+                            // top: 3px;
+                            // left: 3px;
+                            top: px2rem(6);
+                            left: px2rem(6);
                         }
                     }
                 }
@@ -59,8 +64,10 @@
                 margin-right: px2rem(32);
 
                 span {
-                    width: 18px;
-                    height: 18px;
+                    // width: 18px;
+                    // height: 18px;
+                    width: px2rem(36);
+                    height: px2rem(36);
                     display: block;
                     border: 1px solid #8f8f8f;
                     border-radius: 50%;
@@ -74,10 +81,13 @@
                 .tit {
                     font-size: px2rem(32);
                     color: #3a3a3a;
+                    line-height: px2rem(32);
+                    padding-bottom: px2rem(10);
                 }
                 .tip {
                     font-size: px2rem(24);
                     color: #898989;
+                    line-height: px2rem(24);
                 }
             }
         }
@@ -88,6 +98,7 @@
                 display: inline-block;
                 padding: px2rem(20);
                 color: #3a3a3a;
+                font-size: px2rem(28);
             }
         }
     }
@@ -102,12 +113,14 @@
             color: #898989;
             padding-top: px2rem(30);
             text-align: center;
+            font-size: px2rem(28);
         }
         @include m(msg) {
             color: #898989;
             padding: px2rem(20);
             padding-left: px2rem(32);
             display: none;
+            font-size: px2rem(28);
 
             &.active {
                 display: block;
@@ -130,6 +143,7 @@
                 width: 30%;
                 float: left;
                 text-align: center;
+                font-size: px2rem(28);
             }
             .m_withdraw__home-type {
                 width: 70%;
@@ -235,7 +249,6 @@
                 font-size: px2rem(36);
                 float: right;
                 line-height: px2rem(88);
-                font-size: 18px;
             }
 
             .tit {
@@ -265,7 +278,8 @@
                     display: block;
                     color: #666;
                     font-weight: 600;
-                    margin-top: 2px;
+                    margin-top: px2rem(4);
+                    font-size: px2rem(28);
 
                     &.num {
                         font-size: px2rem(48);
@@ -279,6 +293,7 @@
         @include m(tit) {
             color: #666;
             padding: px2rem(30) 0 px2rem(30) px2rem(52);
+            font-size: px2rem(28);
         }
         @include m(info) {
             background-color: #fff;
@@ -326,12 +341,13 @@
 
                 span {
                     display: inline-block;
-                    width: 60px;
+                    width: px2rem(120);
                     color: #666;
+                    font-size: px2rem(28);
                 }
                 select {
                     width: 65%;
-                    height: 24px;
+                    height: px2rem(48);
                     font-size: px2rem(36);
                     color: #2b2b2b;
                     padding: 0;
@@ -357,8 +373,9 @@
                 
                 i.fa {
                     float: right;
-                    padding-top: 3px;
+                    padding-top: px2rem(6);
                     color: #aaa;
+                    font-size: px2rem(28);
                 }
             } 
         }
@@ -387,6 +404,7 @@
         @include m(tip) {
             text-align: center;
             color: #666;
+            font-size: px2rem(28);
         }
         @include m(btn) {
             margin-top: px2rem(66);
@@ -413,11 +431,13 @@
         @include m(tip) {
             text-align: center;
             color: #666;
+            font-size: px2rem(28);
         }
         @include m(info) {
             text-align: center;
             color: #666;
             margin-top: px2rem(28);
+            font-size: px2rem(28);
 
             span {
                 font-size: px2rem(36);
