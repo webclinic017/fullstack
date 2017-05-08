@@ -38,15 +38,16 @@
                             <div class="trader_gray_color">最大跌幅</div>
                         </li>
                         <li class="trader_profit">
-                            <div class="trader_profit__item">
+                            <!--<div class="trader_profit__item">
                                 <span class="big-num-font">
                                     <i class="fa fa-dollar"></i>{{ master.min_copy_amount || '0.00' }}
                                 </span>
                             </div>
-                            <div class="trader_gray_color">最低复制金额</div>
+                            <div class="trader_gray_color">最低复制金额</div>-->
                         </li>
                         <li class="trader_btn">
-                            <button class="btn btn-primary" ng-if="!master.copied" ng-click="toCopy()"><%=
+                            <button class="btn btn-primary" ng-if="!master.copied" ng-click="toCopy()">
+                                <%=
                                 lang.text("traderIndex1")%>
                             </button>
                             <button class="btn btn-primary" disabled ng-if="master.copied"><%= lang.text("traderIndex2")%>

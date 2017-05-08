@@ -32,7 +32,7 @@
         getTraders();
         // getAvaCopyAmount();
 
-        // 只要当前投资的所对应的 state 变化就要 cancel 轮询
+        // 只要当前投资的所对应的 state 变cancelCopy化就要 cancel 轮询
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
             $timeout.cancel(dataId);
             $timeout.cancel(tradersId);
@@ -187,9 +187,9 @@
                                 $scope.copyCancel.success = true;
                                 $scope.clickable = true;
 
-                                $state.go('space.invest.subpage', {
-                                    subpage: 'current'
-                                }, { reload: true });
+                                // $state.go('space.invest.subpage', {
+                                //     subpage: 'current'
+                                // }, { reload: true });
                             } else {
                                 $scope.clickable = true;
                                 $scope.copyCancel.fail = true;

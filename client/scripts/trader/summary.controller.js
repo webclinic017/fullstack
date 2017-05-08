@@ -27,8 +27,8 @@
         function rendColumnChart(usercode) {
             /*调接口获取数据*/
             trader.getHistoricalRate(usercode).then(function (return_data) {
-                // console.log(return_data.data);
-                if (return_data.error_code == 0 && return_data.data.length > 0) {
+                // console.log(return_data);
+                if (return_data.code == 0 && return_data.data.length > 0) {
                     //console.log(return_data);
                     var data = return_data.data;
                     /*解析数据*/
@@ -134,7 +134,7 @@
 
         function getMasterProfitLine(usercode) {
             trader.getMasterProfitLine(usercode).then(function (data) {
-                //console.info(data);
+                // console.info('paintLineChart',data);
                 $scope.$broadcast('paintLineChart', data.data);
             });
         }

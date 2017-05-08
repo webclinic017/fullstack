@@ -52,7 +52,7 @@
         function errFunc (error) {
             console.log(error);
             layer.msg("服务器异常");
-            $window.location.href='/space/#/account/login';
+            // $window.location.href='/space/#/account/login';
         }
     }
 })();

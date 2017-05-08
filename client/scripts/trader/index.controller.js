@@ -25,7 +25,7 @@
         getMasterInfo(usercode);
         getCopyRelation(usercode);
         // getFollowRelation(usercode);
-        getAvaCopyAmount(usercode);
+        // getAvaCopyAmount(usercode);
 
         // $scope.$on('$stateChangeStart', function (event, toState, toParams) {
         //     if (toParams.usercode !== usercode) {
@@ -35,6 +35,7 @@
 
         function getMasterInfo (usercode) {
             trader.getMasterInfo(usercode).then(function (data) {
+                // console.log('getMasterInfo',data)
                 if (data.is_succ) {
                     $rootScope.master_info = data.data;
                     angular.extend($scope.master, data.data);
@@ -42,9 +43,12 @@
                 }
             });
 
-            // detailId = $timeout(function () {
-            //     getMasterDetail(usercode);
-            // }, 5000);
+            trader.getAvaCopyAmount(usercode).then(function (data) {
+                console.log(data);
+                avaCopyAmount = data.data.usable;
+                $scope.master.avaCopyAmount = data.data.usable;
+                $scope.master.min_copy_amount = data.data.min_copy_amount;
+            });
         }
 
         // 关注关系
@@ -93,21 +97,21 @@
         }
 
         // 获取可用复制金额
-        function getAvaCopyAmount(usercode) {
-            $scope.$watch('userstatus.logined', function (newVal, oldVal) {
+        // function getAvaCopyAmount(usercode) {
+        //     $scope.$watch('userstatus.logined', function (newVal, oldVal) {
 
-                if (newVal === true) {
-                    trader.getAvaCopyAmount(usercode).then(function (data) {
-                        // console.info(data);
-                        if (data.is_succ) {
-                            avaCopyAmount = data.data.total_available;
-                        } else {
-                            avaCopyAmount = 0;
-                        }
-                    });
-                }
-            });
-        }
+        //         if (newVal === true) {
+        //             trader.getAvaCopyAmount(usercode).then(function (data) {
+        //                 // console.info(data);
+        //                 if (data.is_succ) {
+        //                     avaCopyAmount = data.data.total_available;
+        //                 } else {
+        //                     avaCopyAmount = 0;
+        //                 }
+        //             });
+        //         }
+        //     });
+        // }
 
         function toCopy () {
             // console.info($scope.personal.isumam);
@@ -129,6 +133,7 @@
                                 console.log('getting available copy amount');
                                 return;
                             }
+                            
                             avaCopyAmount = parseFloat(avaCopyAmount, 10);
                             // console.log(avaCopyAmount, minCopyAmount);
                             if (avaCopyAmount < minCopyAmount) {
