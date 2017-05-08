@@ -105,7 +105,7 @@
             getCopiersListApi: o + '/data/copiers.json',
             getOrderInfoApi: o + '/action/public/v3/closed_fund_leads'
         };
-        var trader = { //迁移中...
+        var trader = { //迁移完毕
             getMasterSummaryApi: o + '/action/public/v4/get_master_data', //暂无
             getMasterCurrentApi: urlOrigin2 + '/master/active/trades', 
             getMasterHistoryApi: o + '/action/public/v3/get_history_noauth', //->\\
