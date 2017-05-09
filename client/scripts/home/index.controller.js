@@ -27,10 +27,11 @@
             layer.open({
                 type: 1,
                 skin: 'home_redbag_layer', //加上边框
+                closeBtn: 0,
                 title: '',
                 shade: 0.6,
-                area: ['800px', '488px'], //宽高
-                content: '<div class="content"><div class="title">注册开户送红包<br>700美金等你领</div><a href="/bd/t35" class="btn">点击领取</a></div>'
+                area: ['800px', '600px'], //宽高
+                content: '<div class="content"><a href="/bd/t35" class="btn"></a><div class="close" onclick="layer.closeAll();"></div></div>'
             });
         }
 
