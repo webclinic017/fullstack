@@ -1,4 +1,20 @@
 var report_sites = [
+    /*添加时间 2017-5-9*/
+    {
+        address: 'http://www.huaxia.com/xw/zhxw/2017/04/5283628.html',
+        description: '【华夏经纬网】楼市限购投资哪里去？宜人贷、老虎外汇、有利网成智慧之选',
+        date: '2017-04-19'
+    },
+    {
+        address: 'http://district.ce.cn/newarea/hyzx/201704/24/t20170424_22280682.shtml',
+        description: '【中国经济网】资产配置多元时代 老虎外汇开启互联网外汇投资新纪元',
+        date: '2017-04-24'
+    },
+    {
+        address: 'http://finance.eastday.com/eastday/finance1/Business/node3/u1ai102907.html',
+        description: '【东方网】外汇成新晋“网红” ，老虎外汇试水互联网外汇',
+        date: '2017-4-27'
+    },
     /*添加时间 2017-5-4*/
     {
         address: 'http://www.southmoney.com/caijing/gongsixinwen/201704/1234736.html',
@@ -242,8 +258,8 @@ var report_sites = [
         date: '2016-10-13'
     },
     {
-        address: 'http://economy.gmw.cn/2016-10/13/content_22446245.htm',
-        description: '【光明经济】在家月挣3000美金，自信生活“复制”而来',
+        address: 'http://money.china.com/fin/lc/201610/12/4684066.html',
+        description: '【中华网】在家月挣3000美金，自信生活“复制”而来',
         date: '2016-10-13'
     },
     {
@@ -267,8 +283,8 @@ var report_sites = [
         date: '2016-09-28'
     },
     {
-        address: 'http://c.m.163.com/news/a/C1B9HU8N05258355.html?spss=newsapp&spsw=1',
-        description: '【网易APP】老虎外汇用户月入过万 轻松盈利需要有高效工具',
+        address: 'http://china.huanqiu.com/hot/2016-09/9458458.html',
+        description: '【环球网】老虎外汇用户月入过万 轻松盈利需要有高效工具',
         date: '2016-09-19'
     },
     {
@@ -282,8 +298,8 @@ var report_sites = [
         date: '2016-09-14'
     },
     {
-        address: 'http://business.sohu.com/20160913/n468334072.shtml',
-        description: '【搜狐财经】老虎外汇：践行Fintech需要拥有匠心精神',
+        address: 'http://news.sina.com.cn/o/2016-09-14/doc-ifxvueif6735983.shtml',
+        description: '【新浪网】老虎外汇：践行Fintech需要拥有匠心精神',
         date: '2016-09-13'
     },
     {
@@ -327,9 +343,8 @@ var report_sites = [
         date: '2016-04-27'
     },
     {
-        img_src: '/activity/web_about_report/report-sina.png',
-        address: 'http://cs.sina.com.pt/minisite/news/2016/0406/1459909814.html',
-        description: '【新浪资讯】老虎外汇梅花三弄,互联网外汇温柔多情',
+        address: 'http://money.591hx.com/article/2016-04-05/0000395160s.shtml',
+        description: '【华讯财经】老虎外汇梅花三弄,互联网外汇温柔多情',
         date: '2016-04-06'
     },
     {
@@ -339,9 +354,8 @@ var report_sites = [
         date: '2016-03-02'
     },
     {
-        img_src: '/activity/web_about_report/report-guangming.png',
-        address: 'http://city.gmw.cn/2016-01/29/content_18714790.htm',
-        description: '【光明网】TigerWit老虎外汇"傻瓜式"投资平台新用户竟以10倍速度递增？',
+        address: 'http://finance.fecn.net/2016/0129/154490.html',
+        description: '【中国财经网】TigerWit老虎外汇"傻瓜式"投资平台新用户竟以10倍速度递增？',
         date: '2016-01-29'
     },
     {
