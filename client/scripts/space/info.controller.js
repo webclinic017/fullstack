@@ -29,7 +29,6 @@
 
         function getOnceInfo(){
             getVerifyStatus();
-            getInviteFriendsInfo(1);
             getPersonalInfoDegree();
         }
 
@@ -115,16 +114,6 @@
             summaryId = $timeout(function () {
                 getAssetInfo();
             }, 5000);
-        }
-
-        // 获取邀请好友数
-        function getInviteFriendsInfo (page) {
-            invite.getInviteFriendsInfo(page, 5).then(function (data) {
-                // console.info(data);
-                angular.extend($scope.personal, {
-                    invite_sum: data.sum
-                });
-            });
         }
     }
 })();
