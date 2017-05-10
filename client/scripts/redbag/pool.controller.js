@@ -28,6 +28,16 @@
 
         getRedbagPool();
 
+        if ($scope.personal.redbagUnreadNum > 0) {
+            redbag.setRedbagReaded().then(function (data) {
+                if (!data) return;
+                // console.log(data);
+                if (data.is_succ) {
+                    $scope.personal.redbagUnreadNum = 0;
+                }
+            })
+        }
+
         function getRedbagPool (page) {
             page = page ? page : 1;
             $scope.page = page;
