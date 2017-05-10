@@ -351,12 +351,12 @@ module.exports = function (app) {
                 masterApiPath = 'https://a.tigerwit.com'
             }
         }
-        console.log('masterApiPath',masterApiPath);
+        console.log('------masterApiPath',masterApiPath);
         setEnvCf(req, res);
         request(masterApiPath + '/master/trading_profile?user_code=' + usercode, function (error, response, body) {
             // request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
             if (!error && response.statusCode == 200) {
-                console.info('body.data', body.data);
+                console.info('-------body.data', body.data);
                 body = JSON.parse(body);
                 res.render('trader.html', extendPublic({
                     master: body.data,
