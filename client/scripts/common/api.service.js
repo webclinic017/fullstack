@@ -12,6 +12,7 @@
         var urlOrigin = $cookies["access_origin"] || '';    // node 中写入cookie
         var urlOrigin2 = $cookies["access_origin2"] || '';    // node 中写入cookie
         var o = urlOrigin;
+        // console.log('urlOrigin2',urlOrigin2)
 
         var account = {
             getPersonalInfoDegreeApi: o + '/action/public/v4/user_perfect_degree',
