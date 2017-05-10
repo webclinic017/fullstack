@@ -160,7 +160,7 @@
         getMonthlySymbols(usercode);
         function getMonthlySymbols(usercode, date) {
             trader.getMonthlySymbols(usercode, date).then(function (data) {
-                console.log(data);
+                // console.log(data);
                 if (!data.is_succ) {
                     return false;
                 }
@@ -225,7 +225,6 @@
                 }
 
                 $scope.barData = parseBar(data.records);
-                console.log('$scope.barData',$scope.barData)
                 if (data.records.length <= 0) {
                     $scope.$broadcast('hideBarData', $scope.barData);
                 } else {
@@ -234,7 +233,6 @@
                 angular.forEach(data.records, function (value, index) {
                     var scale = (value.short_count / (value.long_count + value.short_count) * 100).toFixed(2);
                     value.scale = scale;
-                    console.log('scale',scale);
                 });
 
                 $scope.bars = data.records;
@@ -249,57 +247,6 @@
                 $scope.isFirstLoad = false;
             });
         }
-
-        // function getMasterBarChart(usercode) {
-        // 	trader.getMasterBarChart(usercode).then(function (data) {
-
-        // 		//function parseBar(data){
-        // 		//	var barData = [];
-        // 		//	for(var key in data){
-        // 		//		var obj = {
-        // 		//			name:'',
-        // 		//			data:[]
-        // 		//		};
-        // 		//		(function(key){
-        // 		//			obj.name = key;
-        // 		//			obj.data[0] = data[key];
-        // 		//			console.log(obj);
-        // 		//			barData.push(obj)
-        // 		//		}(key))
-        // 		//	}
-        // 		//	console.log(barData);
-        // 		//	return barData;
-        // 		//}
-        // 		//
-        // 		//$scope.$broadcast('rendBarData', parseBar(data.data));
-        // 		//
-        // 		//console.info(data);
-        // 		$scope.bars = [];
-        // 		var symbolBar = {};
-
-        // 		$scope.$broadcast('hideLoadingImg');
-
-        // 		if (data.data_num.length <= 0) return;
-
-        // 		angular.forEach(data.data, function (data, index, array) {
-        // 			symbolBar[index] = {};
-        // 			symbolBar[index]["symbol_mod"] = index;
-        // 			symbolBar[index]["scale"] = data;
-        // 		});
-
-        // 		angular.forEach(data.data_num, function (data, index, array) {
-        // 			symbolBar[index]["number"] = data;
-        // 		});
-
-        // 		angular.forEach(symbolBar, function (data, index, array) {
-        // 			$scope.bars.push(data);
-        // 		});
-
-        // 		$timeout(function () {
-        // 			$scope.$broadcast('rendScaleBars', $scope.bars);
-        // 		});
-        // 	});
-        // }
     }
 })();
 
