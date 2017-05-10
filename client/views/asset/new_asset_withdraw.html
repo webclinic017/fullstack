@@ -1,22 +1,24 @@
 <div class="m_withdraw" data-page="page1">
     <div class="m_withdraw__home">
-        <div class="m_withdraw__home-info clearfix">
-            <p class="tit">提现帐户</p>
-            <div class="m_withdraw__home-type">
-                <div class="withdraw_account"></div>
-                <p class="withdraw_tip invest">
-                    当前交易帐户余额：<i class="fa fa-dollar"></i><span>0</span>
-                </p>
-                <p class="withdraw_tip wallet">
-                    当前零钱包余额：<i class="fa fa-dollar"></i><span>0</span>
-                </p>
+        <div class="m_withdraw__home-info_wrapper">
+            <div class="m_withdraw__home-info clearfix">
+                <p class="tit">提现帐户</p>
+                <div class="m_withdraw__home-type">
+                    <div class="withdraw_account"></div>
+                    <p class="withdraw_tip invest">
+                        当前交易帐户余额：<i class="fa fa-dollar"></i><span>0</span>
+                    </p>
+                    <p class="withdraw_tip wallet">
+                        当前零钱包余额：<i class="fa fa-dollar"></i><span>0</span>
+                    </p>
+                </div>
             </div>
-        </div>
-        <div class="m_withdraw__home-info clearfix">
-            <p class="tit"><%= lang.text("mAssetWithdrawAmount")%></p>
-            <label class="clearfix">
-                <span><i class="fa fa-dollar"></i></span><input name="withdraw" type="number" class="m_withdraw_num" placeholder="<%= lang.text("mAssetWithdrawPlaceholder1")%>">
-            </label>
+            <div class="m_withdraw__home-info amount clearfix">
+                <p class="tit"><%= lang.text("mAssetWithdrawAmount")%></p>
+                <label class="clearfix">
+                    <span><i class="fa fa-dollar"></i></span><input name="withdraw" type="number" class="m_withdraw_num" placeholder="<%= lang.text("mAssetWithdrawPlaceholder1")%>">
+                </label>
+            </div>
         </div>
         <p class="m_withdraw__home-msg invest">
             <%= lang.text("mAssetWithdrawAmountAble")%><i class="fa fa-dollar"></i><span>0</span>

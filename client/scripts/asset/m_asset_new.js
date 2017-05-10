@@ -185,6 +185,7 @@ $(document).ready(function () {
 
         layer.open({
             className: 'm_asset_layer',
+            shade: 'background-color: rgba(0,0,0,.5)',
             content: $(".choose_type").html()
         });
 
