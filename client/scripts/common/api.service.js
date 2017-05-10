@@ -12,7 +12,6 @@
         var urlOrigin = $cookies["access_origin"] || '';    // node 中写入cookie
         var urlOrigin2 = $cookies["access_origin2"] || '';    // node 中写入cookie
         var o = urlOrigin;
-        console.info(urlOrigin2);
 
         var account = {
             getPersonalInfoDegreeApi: o + '/action/public/v4/user_perfect_degree',
@@ -119,7 +118,7 @@
             getHistoricalRateApi: urlOrigin2 + '/master/monthly_profit_rates',
             getCoopierChangeApi: o + '/action/public/v5/copy_change', //移除
             getMasterInfoApi: urlOrigin2 + '/master/trading_profile',
-            getMonthlySymbolsApi: o + '/action/public/v5/monthly_symbols' //暂未迁移
+            getMonthlySymbolsApi: urlOrigin2 + '/master/trading_symbols' 
         };
 
         var redbag = {

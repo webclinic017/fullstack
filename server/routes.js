@@ -331,10 +331,11 @@ module.exports = function (app) {
     app.route('/trader/:usercode').get(function (req, res) {
         var usercode = req.params.usercode;
         setEnvCf(req, res);
+        console.log('URL_PATH',URL_PATH);
         request(URL_PATH + '/action/public/v5/get_master_info?user_code=' + usercode, function (error, response, body) {
             // request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
             if (!error && response.statusCode == 200) {
-                // console.info(body);
+                console.info('body.data',body.data);
                 body = JSON.parse(body);
                 res.render('trader.html', extendPublic({
                     master: body.data,

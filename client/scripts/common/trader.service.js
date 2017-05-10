@@ -260,11 +260,9 @@
          * @returns {*}
          */
         function getMonthlySymbols(user_code, date) {
-            return $http.get(o.getMonthlySymbolsApi, {
-                params: {
-                    user_code: user_code,
-                    date: date
-                }
+            return publicHttp.dealPublicRequest(o.getMonthlySymbolsApi, 'GET', {
+                user_code: user_code,
+                date: date
             });
         }
     }

@@ -160,12 +160,14 @@
         getMonthlySymbols(usercode);
         function getMonthlySymbols(usercode, date) {
             trader.getMonthlySymbols(usercode, date).then(function (data) {
-                // console.log(data);
+                console.log(data);
                 if (!data.is_succ) {
                     return false;
                 }
-                var arrDate = data.now_date.split('-');
-                var beginDate = data.time.split('-');
+                data = data.data;
+                data.now_date = data.current_date.split(' ')[0].slice(0,7);
+                data.time = data.start_date.split(' ')[0].slice(0,7);
+
                 /*如果是首次加载,解析所有交易年份*/
                 if ($scope.isFirstLoad) {
                     $scope.monSymbols = parseMon(data.time, data.now_date);
@@ -212,9 +214,8 @@
                             data: []
                         };
                         (function (item) {
-                            //console.log(key);
                             obj.name = item.symbol;
-                            obj.data[0] = item.ratio;
+                            obj.data[0] = item.total_rate;
                             // console.log(obj);
                             barData.push(obj)
                         }(data[i]))
@@ -223,19 +224,20 @@
                     return barData;
                 }
 
-                $scope.barData = parseBar(data.data);
-
-                if (data.data.length <= 0) {
+                $scope.barData = parseBar(data.records);
+                console.log('$scope.barData',$scope.barData)
+                if (data.records.length <= 0) {
                     $scope.$broadcast('hideBarData', $scope.barData);
                 } else {
                     $scope.$broadcast('rendBarData', $scope.barData);
                 }
-                angular.forEach(data.data, function (value, index) {
-                    var scale = (value.symbol_cmd_zore / (value.symbol_cmd_zore + value.symbol_cmd_one) * 100).toFixed(2);
+                angular.forEach(data.records, function (value, index) {
+                    var scale = (value.short_count / (value.long_count + value.short_count) * 100).toFixed(2);
                     value.scale = scale;
+                    console.log('scale',scale);
                 });
 
-                $scope.bars = data.data;
+                $scope.bars = data.records;
 
                 $scope.$broadcast('hideLoadingImg');
 

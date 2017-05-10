@@ -44,7 +44,7 @@
             });
 
             trader.getAvaCopyAmount(usercode).then(function (data) {
-                console.log(data);
+                // console.log(data);
                 avaCopyAmount = data.data.usable;
                 $scope.master.avaCopyAmount = data.data.usable;
                 $scope.master.min_copy_amount = data.data.min_copy_amount;
