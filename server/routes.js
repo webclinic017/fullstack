@@ -336,7 +336,7 @@ module.exports = function (app) {
         // var apiOrigin = 'https://a.' + hostArr[hostArr.length - 2] + '.' + hostArr[hostArr.length - 1];
         var masterApiPath = '';
         if (process.env.COMPANY_NAME != 'tigerwit') {
-            masterApiPath = process.env.URL_PATH;
+            masterApiPath = process.env.URL_PATH + '/api';
         } else {
             var hostPrefix = hostArr[0];
             var hostPrefix2 = hostArr[1];
