@@ -10,7 +10,7 @@
         // php接口要用http://proxy.tigerwit.com请求
 
         var urlOrigin = $cookies["access_origin"] || '';    // node 中写入cookie
-        var urlOrigin2 = $cookies["access_origin2"] || '';    // node 中写入cookie
+        var urlOrigin2 = $cookies["access_origin2"] + '/api' || '';    // node 中写入cookie
         var o = urlOrigin;
         // console.log('urlOrigin2',urlOrigin2)
 
@@ -77,11 +77,11 @@
             getAssetApi: o + '/action/public/v3/get_usercenter_asset'
         };
         var invest = {
-            getInvestSummaryApi: o + '/action/public/v4/get_user_data',
-            getInvestProfitLineApi: o + '/action/public/v4/get_user_line_chart',
-            getInvestBarChartApi: o + '/action/public/v4/get_user_symbol',
-            getInvestCurrentDataApi: o + '/action/public/v4/get_usercenter_my_order_auth_list',
-            getInvestCurrentTradersApi: o + '/action/public/v4/get_usercenter_order_auth_group',
+            getInvestSummaryApi: urlOrigin2  + '/centre/trading_profile',
+            getInvestProfitLineApi: urlOrigin2 + '/centre/trading_trend',
+            getInvestBarChartApi: urlOrigin2 + '/centre/trading_symbols',
+            getInvestCurrentDataApi: urlOrigin2 + '/centre/active/self_trades',
+            getInvestCurrentTradersApi: urlOrigin2 + '/centre/active/copy_masters',
             getInvestCurrentDetailsApi: o + '/action/public/v3/get_usercenter_order_auth_group_list',
             getInvestHistoryDataApi: o + '/action/public/v3/get_usercenter_my_history_auth_list',
             getInvestHistoryTradersApi: o + '/action/public/v4/get_usercenter_history_auth_group',
@@ -103,7 +103,7 @@
             // getMastersListApi: o + '/action/public/v5/get_master_list',
             getMastersListApi: urlOrigin2 + '/master/list',
             getCopiersListApi: o + '/data/copiers.json',
-            getOrderInfoApi: o + '/action/public/v3/closed_fund_leads'
+            getOrderInfoApi: o + '/action/public/v3/closed_fund_leads' // 暂无
         };
         var trader = { //迁移完毕
             getMasterSummaryApi: o + '/action/public/v4/get_master_data', //暂无

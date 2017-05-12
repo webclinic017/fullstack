@@ -348,7 +348,7 @@ module.exports = function (app) {
                 masterApiPath = 'https://demo.tigerwit.com/api'
             }
             else if(hostPrefix == 'www' || hostPrefix == 'w'){
-                masterApiPath = 'https://a.tigerwit.com'
+                masterApiPath = 'https://www.tigerwit.com/api'
             }
         }
         console.log('------masterApiPath',masterApiPath);
