@@ -9,6 +9,7 @@
                 <form name="depositForm" novalidate>
                     <div class="form-control-wrapper">
                         <input class="form-control form-control-md"
+                               ng-if="deposit.type === 'invest'"
                                name="amount"
                                type="text"
                                required
@@ -16,6 +17,17 @@
                                ng-model="deposit.amount"
                                ng-pattern="frontErr.amount.reg"
                                twform-min="{{deposit.minAmount}}"
+                               ng-change="checkInputAmount()"
+                               ng-focus="hideErr('amount')"
+                               ng-blur="showErr('amount')">
+                        <input class="form-control form-control-md"
+                               ng-if="deposit.type === 'wallet'"
+                               name="amount"
+                               type="text"
+                               required
+                               ng-class="{'form-control-error': frontErr.amount.show && depositForm.amount.$invalid}"
+                               ng-model="deposit.amount"
+                               ng-pattern="frontErr.amount.reg"
                                ng-change="checkInputAmount()"
                                ng-focus="hideErr('amount')"
                                ng-blur="showErr('amount')">
