@@ -19,9 +19,10 @@
             wallet: true,
             walletTip: false,
             type: $state.params.type || 'invest',
-            amount: $state.params.type === 'wallet' ? $scope.personal.wallet_balance : undefined
+            amount: undefined
         };
         $scope.walletDepositSucc = false;
+        $scope.walletAble = 0;
 
         $scope.frontErr = {
             amount: {
@@ -48,6 +49,15 @@
             $scope.deposit.minAmount = parseInt(data.limit);
             $scope.deposit.isumam = data.isumam;
             
+        });
+        // 获取零钱包 可用金额
+        asset.walletCanWithdraw().then(function (data) {
+            if (!data) return;
+            // console.log(data);
+            $scope.walletAble = data.data;
+            if ($state.params.type === 'wallet') {
+                $scope.deposit.amount = $scope.walletAble;
+            }
         });
         // 充值  还未完成s
         function toDeposit(amount) {
@@ -113,7 +123,7 @@
         }
         function checkInputAmount () {
             // console.log($scope.deposit.amount, $scope.personal.wallet_balance, Number($scope.deposit.amount) > Number($scope.personal.wallet_balance));
-            if (Number($scope.deposit.amount) > Number($scope.personal.wallet_balance)) {
+            if (Number($scope.deposit.amount) > Number($scope.walletAble)) {
                 $scope.deposit.wallet = false;
                 
                 if ($scope.deposit.type === 'wallet') {

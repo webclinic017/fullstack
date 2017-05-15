@@ -104,7 +104,7 @@
                 // console.info(data);
                 if (data.is_succ) {
                     angular.extend($scope.personal, data.data);
-                    var my_total_balance = Number(data.data.balance)+Number(data.data.wallet_balance);
+                    var my_total_balance = (Number(data.data.balance)+Number(data.data.wallet_balance)).toFixed(2);
                     angular.extend($scope.personal, {
                         my_total_balance: my_total_balance
                     });
