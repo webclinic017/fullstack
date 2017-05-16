@@ -33,6 +33,31 @@
                         }
                     }
                 })
+                // 认证流程
+                .state('anthen',{
+                    views: {
+                        '@': {
+                            templateUrl: '/views/anthen/layout.html'
+                        }
+                    }
+                })
+                .state('anthen.subpage',{
+                    url: '/anthen/:subpage',
+                    views: {
+                        'nav@anthen':{
+                            templateUrl: '/views/anthen/nav.html'
+                        },
+                        'content@anthen': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'investInfo';
+                                return '/views/anthen/' + $stateParams.subpage + '.html';
+                            },
+                            controllerProvider: function () {
+                                return "HelpController";
+                            }
+                        }
+                    }
+                })
 
                 .state('help', {
                     views: {
