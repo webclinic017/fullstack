@@ -47,6 +47,21 @@
                     errFunc(error);
                 });
             }
+
+            if ($method.toUpperCase() === 'PUT') {
+                // console.log($params);
+                return $http.put($url, $params).then(function (data) {
+                    // console.log(data);
+                    if (data.code === 1000105) {
+                        // token 权限错误
+                        $window.location.href='/space/#/account/login';
+                    } else {
+                        return data;
+                    }
+                }, function (error) {
+                    errFunc(error);
+                });
+            }
         }
 
         function errFunc (error) {

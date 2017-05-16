@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('SettingInfoPhoneController', SettingInfoPhoneController);
 
-    SettingInfoPhoneController.$inject = ['$scope', '$timeout', 'validator', 'account'];
+    SettingInfoPhoneController.$inject = ['$scope', '$timeout', '$cookies', 'validator', 'account'];
 
-    function SettingInfoPhoneController($scope, $timeout, validator, account) {
+    function SettingInfoPhoneController($scope, $timeout, $cookies, validator, account) {
         $scope.phone = {
             phoneNew: undefined,
             captcha: undefined
@@ -35,11 +35,12 @@
             },
             captchaBtn: {
                 show: false,
-                status: 0
+                msg: ''
             },
             system: {
                 show: false,
-                status: 0
+                status: 0,
+                msg: ''
             }
         };
         $scope.clickable = {
@@ -51,7 +52,8 @@
         $scope.showErr = showErr;
         $scope.getCaptcha = getCaptcha;
         $scope.submitForm = submitForm;
-
+        var token;
+        account.setToken();
 
         function getCaptcha() {
             showErr('phoneForm', 'phoneNew');
@@ -60,38 +62,29 @@
                 return;
             }
             $scope.clickable.captcha = false;
+            token = $cookies['code_token'];
             var tmp;
             if ($scope.voiceCaptcha) {
-                tmp = account.getSVoiceCaptcha($scope.phone.phoneNew);
+                tmp = account.getRCaptcha($scope.phone.phoneNew, token, 3, 2);
             } else {
-                tmp = account.getSCaptcha($scope.phone.phoneNew);    
+                tmp = account.getRCaptcha($scope.phone.phoneNew, token, 3);  
             }
 
             tmp.then(function (data) {
+                if (!data) return;
                 if (data.is_succ) {
                     $scope.startTimer();
                 } else {
 
-                    if (data.error_code === 3) {
-                        $scope.backErr.phone.status = 1;
+                    $scope.backErr.captchaBtn.show = true;
+                    $scope.backErr.captchaBtn.msg = data.message;
+
+                    $timeout(function () {
+                        $scope.backErr.captchaBtn.show = false;
+                        $scope.backErr.captchaBtn.msg = 0;
                         $scope.clickable.captcha = true;
-                    }
-
-                    if (data.error_code === 1 || data.error_code === 2 ||
-                            data.error_code === 5) {
-                        $scope.backErr.captchaBtn.show = true;
-                        $scope.backErr.captchaBtn.status = data.error_code;
-
-                        $timeout(function () {
-                            $scope.backErr.captchaBtn.show = false;
-                            $scope.backErr.captchaBtn.status = 0;
-                            $scope.clickable.captcha = true;
-                        }, 3000);
-                    }
+                    }, 3000);
                 }
-            }, function (error) {
-                console.log(error);
-                $scope.clickable.captcha = true;
             });
         }
 
@@ -105,9 +98,8 @@
 
             $scope.clickable.submit = false;
             account.setPhone($scope.phone.phoneNew, $scope.phone.captcha).then(function (data) {
-
+                $scope.backErr.system.show = true;
                 if (data.is_succ) {
-                    $scope.backErr.system.show = true;
                     $scope.backErr.system.status = 1;
 
                     // 神策数据统计
@@ -115,22 +107,19 @@
                     // sa.setProfile({
                     //     phone: $scope.phone.phoneNew
                     // });
-
-                    $timeout(function () {
-                        $scope.backErr.system.show = false;
-                        $scope.backErr.system.status = 0;
-                        $scope.clickable.submit = true;
-                    }, 3000);
+                    
+                    $scope.settingInfo.phone = $scope.phone.phoneNew; 
                 } else {
-                    if (data.error_code === 3) {
-                        $scope.backErr.captcha.status = 1;
-                    }
-
-                    if (data.error_code === 4) {
-                        $scope.backErr.phoneNew.status = 1;
-                    }
+                    $scope.backErr.system.status = 2;
+                    $scope.backErr.system.msg = data.message;
+                    $scope.clickable.submit = true;  
+                }
+                $timeout(function () {
+                    $scope.backErr.system.show = false;
+                    $scope.backErr.system.status = 0;
                     $scope.clickable.submit = true;
-                }        
+                }, 3000);  
+                  
             });
         }
 

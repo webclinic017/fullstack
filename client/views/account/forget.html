@@ -51,8 +51,8 @@
                     </div>
 
                     <div ng-show="backErr.captcha.show">
-                        <p class="alert-arrow_tp_lf" ng-show="backErr.captcha.status == 1">
-                            验证码不正确
+                        <p class="alert-arrow_tp_lf" ng-show="backErr.captcha.status === 1">
+                            {{ backErr.captcha.msg }}
                         </p>
                     </div>
                 </div>
@@ -71,16 +71,8 @@
                     </div>
 
                     <div ng-show="backErr.captchaBtn.show">
-                        <p class="alert-arrow_tp_lf" ng-show="backErr.captchaBtn.status == 1">
-                            1 分钟内只可发送 1 次验证码
-                        </p>
-
-                        <p class="alert-arrow_tp_lf" ng-show="backErr.captchaBtn.status == 2">
-                            1 小时内只可发送 10 次验证码
-                        </p>
-
-                        <p class="alert-arrow_tp_lf" ng-show="backErr.captchaBtn.status == 5">
-                            验证码发送失败
+                        <p class="alert-arrow_tp_lf">
+                            {{ backErr.captchaBtn.msg }}
                         </p>
                     </div>
                 </div>
@@ -143,6 +135,12 @@
                     输入的密码不正确
                 </p>
             </div>
+        </div>
+
+        <div class="text-center" ng-show="backErr.system.show">
+            <p class="alert-system">
+                {{ backErr.system.msg || '未知错误，请联系管理员' }}
+            </p>
         </div>
 
         <button class="btn btn-primary btn-sm" ng-if="clickable.submit" ng-click="submitStep2Form('step2Form')">

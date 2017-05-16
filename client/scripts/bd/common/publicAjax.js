@@ -5,6 +5,18 @@
     var apiUrl = {
         getUserInfo: origin + '/user/info',     // get
         register: origin + '/auth/register',     // post
+        getPaymentRate: origin + '/payment/rates',     // get
+        checkWithdrawLimit: origin + '/payment/withdraw/limits', // get
+        getBankCard: origin + '/user/bank_card', // get
+        withdraw: origin + '/payment/withdraw',  // post
+        bindBankCard: origin + '/user/bank_card',  // put
+        getStateList: origin + '/region/provinces', // get
+        getCitiesList: origin + '/region/cities', // get
+        setToken: origin + '/validation/code_token', // post
+        checkExists: origin + '/user/check_exists', // get
+        getPhoneCode: origin + '/validation/send_phone_code', // post
+        getInviteList: origin + '/user/invites', // get
+
         // 三方接口
         thirdGetStatus: origin + '/third/user/auth_status', // get
         thirdRegister: origin + '/third/auth/register', //post
