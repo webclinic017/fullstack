@@ -1,12 +1,31 @@
 <div class="asset-public withdraw">
     <div class="row">
-        <div class="col-xs-4 pd-tp-10 text-right">转入绑定银行卡：&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div class="col-xs-3 pd-tp-15 text-right deposit__title-money">
+            提现帐户
+        </div>
 
-        <div class="col-xs-8 pd-tp-10 history__lt40" ng-show="!withdraw.card.id">
+        <div class="col-xs-9 clearfix">
+            <div class="withdraw__way" ng-class="{active: withdraw.type === 'invest'}" ng-click="changeWithdrawType('invest')">
+                <span>交易帐户</span>
+                <span>${{ personal.balance || '0.00' }}</span>
+            </div>
+            <div class="withdraw__way" ng-class="{active: withdraw.type === 'wallet'}" ng-click="changeWithdrawType('wallet')">
+                <span>零钱包</span>
+                <span>${{ personal.wallet_balance || '0.00' }}</span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-xs-3 text-right deposit__title-money">
+            提现帐户
+        </div>
+
+        <div class="col-xs-9 pd-tp-10" ng-show="!withdraw.card.id">
             <span class="deposit__pointer font-info" ng-click="openCardMdl()">点击绑定银行卡 ></span>
         </div>
 
-        <div class="col-xs-8 history__lt40" ng-show="withdraw.card.id">
+        <div class="col-xs-9" ng-show="withdraw.card.id">
             <span class="icon-banks-{{withdraw.card.bank}}"></span>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <span>***********{{withdraw.card.number}}</span>
@@ -15,12 +34,16 @@
         </div>
     </div>
     <br>
-    <div ng-show="withdrawMessageSucc && !message.is_succ" class="withdraw__sys_tip">
+    <div ng-show="withdraw.type === 'invest' && withdrawMessageSucc && !message.is_succ" class="withdraw__sys_tip">
         <p class="font-info">系统提示：{{message.error_msg}}</p>
         <p class="font-info">如有疑问，请联系您的客户经理或联系客服（{{lang.text('telephone')}}）</p>
     </div>
+    <div ng-show="withdraw.type === 'wallet' && withdrawMessageSucc && !messageWallet.is_succ" class="withdraw__sys_tip">
+        <p class="font-info">系统提示：{{message.message}}</p>
+        <p class="font-info">如有疑问，请联系您的客户经理或联系客服（{{lang.text('telephone')}}）</p>
+    </div>
     
-    <div ng-show="withdrawMessageSucc && message.is_succ">
+    <div ng-show="(withdraw.type === 'invest' && withdrawMessageSucc && message.is_succ) || (withdraw.type === 'wallet' && withdrawMessageSucc && messageWallet.is_succ)">
 
         <div class="row">
             <div class="col-xs-3 text-right deposit__title-money">提现金额</div>

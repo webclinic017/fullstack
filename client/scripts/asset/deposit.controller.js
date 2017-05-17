@@ -8,15 +8,21 @@
     AssetDepositController.$inject = ['$scope', '$window', '$modal', '$state', 'asset', 'validator'];
 
     function AssetDepositController($scope, $window, $modal, $state, asset, validator) {
-
+        // console.log($state.params);
         $scope.deposit = {
             minAmount: 0,       // 最低充值金额
             FXRate: {
                 // value: ,     // 汇率值
                 // timestamp: ,
                 // RMB:         // 折合人民币
-            }
+            },
+            wallet: true,
+            walletTip: false,
+            type: $state.params.type || 'invest',
+            amount: undefined
         };
+        $scope.walletDepositSucc = false;
+        $scope.walletAble = 0;
 
         $scope.frontErr = {
             amount: {
@@ -24,11 +30,14 @@
                 reg: validator.regType.amount.reg
             }
         };
+        $scope.isDeposit = false;
 
         $scope.toDeposit = toDeposit;
         $scope.openDepositMdl = openDepositMdl;
         $scope.hideErr = hideErr;
         $scope.showErr = showErr;
+        $scope.changeDepositType = changeDepositType;
+        $scope.checkInputAmount = checkInputAmount;
 
         // 汇率
         asset.getFXRate().then(function(data) {
@@ -45,6 +54,15 @@
             $scope.deposit.isumam = data.isumam;
             
         });
+        // 获取零钱包 可用金额
+        asset.walletCanWithdraw().then(function (data) {
+            if (!data) return;
+            // console.log(data);
+            $scope.walletAble = data.data;
+            if ($state.params.type === 'wallet') {
+                $scope.deposit.amount = $scope.walletAble;
+            }
+        });
         // 充值  还未完成s
         function toDeposit(amount) {
 
@@ -58,31 +76,68 @@
                 showErr('amount');
                 return;
             }
+
             amount = Number(amount).toFixed(2);
+            
+            if ($scope.deposit.type === 'invest') {
+                var w = $window.open('/waiting');
 
-            var w = $window.open('/waiting');
+                asset.deposit($scope.personal.mt4_id, amount).then(function(data) {
 
-            asset.deposit($scope.personal.mt4_id, amount).then(function(data) {
-
-                var url;
-                if(data && data.data && data.data.url){
-                    // 兼容IE
-                    if (location.origin) {
-                        url = location.origin+data.data.url;
-                    } else {
-                        url = location.protocol + "//" + location.hostname + data.data.url;
+                    var url;
+                    if(data && data.data && data.data.url){
+                        // 兼容IE
+                        if (location.origin) {
+                            url = location.origin+data.data.url;
+                        } else {
+                            url = location.protocol + "//" + location.hostname + data.data.url;
+                        }
+                        
+                        // url = 'https://www.tigerwit.com'+data.data.url;
                     }
-                    
-                    // url = 'https://www.tigerwit.com'+data.data.url;
+                    if(url){
+                        openDepositMdl('depositFinish');
+                        w.location = url;
+                    }else{
+                        alert( (data && data.error_msg) || '请求失败，请联系管理员。');
+                        w.close();
+                    }
+                });
+            } else {
+                if ($scope.isDeposit) return;
+                $scope.isDeposit = true;
+
+                asset.walletDeposit(amount).then(function (data) {
+                    // console.log(data);
+                    $scope.isDeposit = false;
+                    if (!data) return;
+                    if (data.is_succ) {
+                        $scope.walletDepositSucc = true;
+                    } else {
+                        layer.msg(data.message);
+                    }
+                });
+            }
+        }
+
+        function changeDepositType (type) {
+            if ($scope.deposit.wallet) {
+                $scope.deposit.type = type;
+            }
+        }
+        function checkInputAmount () {
+            // console.log($scope.deposit.amount, $scope.personal.wallet_balance, Number($scope.deposit.amount) > Number($scope.personal.wallet_balance));
+            if (Number($scope.deposit.amount) > Number($scope.walletAble)) {
+                $scope.deposit.wallet = false;
+                
+                if ($scope.deposit.type === 'wallet') {
+                    $scope.deposit.type = 'invest';
+                    $scope.deposit.walletTip = true;
                 }
-                if(url){
-                    openDepositMdl('depositFinish');
-                    w.location = url;
-                }else{
-                    alert( (data && data.error_msg) || '请求失败，请联系管理员。');
-                    w.close();
-                }
-            });
+            } else {
+                $scope.deposit.wallet = true;
+                $scope.deposit.walletTip = false;
+            }
         }
 
         function refresh() {

@@ -33,7 +33,8 @@
             setNewPwdApi: urlOrigin2 + '/forget_passwd',
             // getPersonalInfoApi: o + '/action/public/v4/get_info',
             getPersonalInfoApi: urlOrigin2 + '/user/info',
-            getAssetInfoApi: o + '/action/public/v4/get_usercenter_asset',
+            // getAssetInfoApi: o + '/action/public/v4/get_usercenter_asset',
+            getAssetInfoApi: urlOrigin2 + '/centre/asset',
             getUnreadLengthApi: o + '/action/public/v3/get_notify_num',
             getNoticeCategoryApi: o + '/action/public/v3/get_notify_cate',
             getNoticeListApi: o + '/action/public/v3/get_notify_list',
@@ -85,7 +86,10 @@
             getCopierBonusSummaryApi: o + '/action/public/v4/copier/profile',
             getMasterBonusListApi: o + '/action/public/v4/master/copy_pay_list',
             getCopierBonusListApi: o + '/action/public/v4/copier/copy_pay_list',
-            getBonusDetailListApi: o + '/action/public/v4/copy_pay_trade_list'
+            getBonusDetailListApi: o + '/action/public/v4/copy_pay_trade_list',
+            walletDepositApi: urlOrigin2 + '/wallet/deposit',
+            walletWithdrawApi: urlOrigin2 + '/wallet/withdraw',
+            walletCanWithdrawApi: urlOrigin2 + '/wallet/valid_balance',
         };
         var forex = {
             getAssetApi: o + '/action/public/v3/get_usercenter_asset'
@@ -99,7 +103,8 @@
             getInvestCurrentDetailsApi: o + '/action/public/v3/get_usercenter_order_auth_group_list',
             getInvestHistoryDataApi: o + '/action/public/v3/get_usercenter_my_history_auth_list',
             getInvestHistoryTradersApi: o + '/action/public/v4/get_usercenter_history_auth_group',
-            getInvestHistoryDetailsApi: o + '/action/public/v3/get_usercenter_history_auth_group_list'
+            getInvestHistoryDetailsApi: o + '/action/public/v3/get_usercenter_history_auth_group_list',
+            getWalletHistoryApi: urlOrigin2 + '/wallet/histories'
         };
         var invite = {
             getInviteFriendsInfoApi: o + '/action/public/v3/get_invite_friends_info',
