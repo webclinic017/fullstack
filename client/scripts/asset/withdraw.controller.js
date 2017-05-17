@@ -223,36 +223,44 @@
                 // $scope.message = data;
                 // console.info(data);
                 if (data && data.is_succ) {
-                    layer.confirm('现在提现会导致您的账户红包失效，是否继续提现？', {
-                        btn: ['取消', '继续提现'], //按钮
-                    }, function () {
-                        $scope.clickable = true;
-                        layer.closeAll();
-                    }, function () {
-                        asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).then(function (data) {
-                            if (!data) return;
+                    if (data.data.bonus == 0) {
+                        withdraw();
+                    } else {
+                        layer.confirm('现在提现会导致您的账户红包失效，是否继续提现？', {
+                            btn: ['取消', '继续提现'], //按钮
+                        }, function () {
                             $scope.clickable = true;
-
-                            if (data.is_succ) {
-                                $scope.withdraw.success = true;
-                                openWithdrawMdl("withdrawSucc");
-
-                                $state.go('space.asset.subpage', {
-                                    subpage: 'withdraw',
-                                    type: 'invest'
-                                }, { reload: true });
-                            } else {
-                                var msg = data.message;
-                                openWithdrawMdl(msg);
-                            }
+                            layer.closeAll();
+                        }, function () {
+                            withdraw();
                         });
-                    });
+                    }
 
                 } else {
                     // console.info($scope.message);
                     openMessageMdl();
                     $scope.clickable = true;
 
+                }
+
+                function withdraw () {
+                    asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).then(function (data) {
+                        if (!data) return;
+                        $scope.clickable = true;
+
+                        if (data.is_succ) {
+                            $scope.withdraw.success = true;
+                            openWithdrawMdl("withdrawSucc");
+
+                            $state.go('space.asset.subpage', {
+                                subpage: 'withdraw',
+                                type: 'invest'
+                            }, { reload: true });
+                        } else {
+                            var msg = data.message;
+                            openWithdrawMdl(msg);
+                        }
+                    });
                 }
             });
         }

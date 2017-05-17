@@ -39,10 +39,6 @@
             angular.extend($scope.personal, {
                 basic: toState.name.substring(6)
             });
-        });
-
-        // 取消轮询
-        $scope.$on('$stateChangeStart', function (event, toState, toParams) {
             // console.log(toState.name);
             if (toState.name.indexOf('center') === -1) {
                 $timeout.cancel(summaryId);

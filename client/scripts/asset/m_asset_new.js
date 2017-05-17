@@ -14,6 +14,8 @@ $(document).ready(function () {
     // 提现金额
     var widthdrawNum = 0;
     var canWithdrawNum = 0;
+    // 红包数
+    var redbagNum = 0;
     // 持卡人真实姓名
     var realname;
     // 已经绑定过的银行卡id号，若未绑定过，id为'';
@@ -117,6 +119,7 @@ $(document).ready(function () {
             if (data.is_succ) {
                 isNextInvest = true;
                 canWithdrawBalance = data.data.amount;
+                redbagNum = data.data.bonus;
                 $isWithdrawBalanceInvest.html(canWithdrawBalance);
             } else {
                 isNextInvest = false;
@@ -234,7 +237,7 @@ $(document).ready(function () {
                     }
                     
                 } else {
-                    if (widthdrawType === 'invest') {
+                    if (widthdrawType === 'invest' && redbagNum != 0) {
                         layer.open({
                             content: '现在提现会导致您的账户红包失效，是否继续提现？',
                             btn: ['继续提现', '取消'],
