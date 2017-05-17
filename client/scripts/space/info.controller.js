@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('SpaceInfoController', SpaceInfoController);
 
-    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout', 'config'];
+    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout', 'config', 'redbag'];
 
     /**
      * @name SpaceInfoController
      * @desc
      */
-    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config) {
+    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config, redbag) {
         $scope.unreadLength = 0;        // 未读消息
         var summaryId;
         var noticeId;
@@ -30,6 +30,7 @@
         function getOnceInfo(){
             getVerifyStatus();
             getPersonalInfoDegree();
+            getRedBagNum();
         }
 
         //定时提取用户资产信息
@@ -59,6 +60,17 @@
                 getUnreadLength();
             },30000);
         });
+
+        // 获取未读红包数
+        function getRedBagNum () {
+            redbag.getRedbagNum().then(function (data) {
+                if (!data) return;
+                // console.log(data);
+                angular.extend($scope.personal, {
+                    redbagUnreadNum: data.num
+                });
+            });
+        }
 
         // 初始化所需的全局数据
         function initialize() {

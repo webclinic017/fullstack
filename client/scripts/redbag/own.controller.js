@@ -29,6 +29,16 @@
         $scope.exchangeRedbag = exchangeRedbag;
         
         getRedbagList();
+        
+        if ($scope.personal.redbagUnreadNum > 0) {
+            redbag.setRedbagReaded().then(function (data) {
+                if (!data) return;
+                // console.log(data);
+                if (data.is_succ) {
+                    $scope.personal.redbagUnreadNum = 0;
+                }
+            })
+        }
 
         function getRedbagList (page) {
             page = page ? page : 1;

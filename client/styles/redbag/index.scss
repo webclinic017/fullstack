@@ -1,3 +1,19 @@
+@include b(redbag_unread) {
+    @include e(num) {
+        top: 17px;
+        position: absolute;
+        right: 5px;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        background: #e7312f;
+        border-radius: 50%;
+        font-size: 14px;
+        text-align: center;
+        line-height: 20px;
+        color: #fff;
+    }
+}
 @include b(redbag_content) {
     padding-top: 30px;
 }

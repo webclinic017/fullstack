@@ -12,7 +12,9 @@
             getRedbagPool: getRedbagPool,
             getRedbagList: getRedbagList,
             receiveRedbag: receiveRedbag,
-            exchangeRedbag: exchangeRedbag
+            exchangeRedbag: exchangeRedbag,
+            getRedbagNum: getRedbagNum,
+            setRedbagReaded: setRedbagReaded
         };
         return service;
 
@@ -75,6 +77,28 @@
             return $http.post(o.exchangeRedbagApi, {
                 user_bonus_id: user_bonus_id
             });
+        }
+
+        /**
+         * Redbag Service 获取新收到红包数量
+         *
+         * @method getRedbagNum
+         * 
+         */
+        function getRedbagNum() {
+
+            return $http.get(o.getRedbagNumApi);
+        }
+
+        /**
+         * Redbag Service 设置红包已读
+         *
+         * @method setRedbagReaded
+         * 
+         */
+        function setRedbagReaded() {
+
+            return $http.put(o.setRedbagReadedApi);
         }
     }
 })();
