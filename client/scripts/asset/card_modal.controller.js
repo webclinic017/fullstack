@@ -68,6 +68,7 @@
 
         function getProvince() {
             account.getStates('CN').then(function (data) {
+                if (!data) return;
                 // console.info(data);
                 $scope.provinces = data.data;
                 if(!passedScope.card.province){ return }
@@ -88,6 +89,7 @@
         }
         function getCity() {
             account.getCities($scope.card.province.code).then(function (data) {
+                if (!data) return;
                 // console.info(data);
                 $scope.citys = data.data;
                 if(!passedScope.card.city){ return }
@@ -120,17 +122,23 @@
             // 如果是第一次绑卡
             if (typeof $scope.card.id === 'undefined') {
                 asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address, $scope.card.province.code, $scope.card.city.code).then(function (data) {
+                    if (!data) return;
                     if (data.is_succ) {
                         $scope.card.binding = true;
                         $scope.$emit('bindCardSuccess');
+                    } else {
+                        alert(data.message);
                     }
                 });
             } else {
                 // 修改银行卡
                 asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address, $scope.card.province.code, $scope.card.city.code, $scope.card.id).then(function (data) {
+                    if (!data) return;
                     if (data.is_succ) {
                         $scope.card.binding = true;
                         $scope.$emit('bindCardSuccess');
+                    } else {
+                        alert(data.message);
                     }
                 });
             }

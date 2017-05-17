@@ -22,9 +22,10 @@
                     params: $params
                 }).then(function (data) {
                     // console.log(data);
-                    if (data.code === 1000105) {
+                    if (data.code === 100014) {
                         // token 权限错误
                         $window.location.href='/space/#/account/login';
+                        $window.location.reload(true);
                     } else {
                         return data;
                     }
@@ -37,9 +38,26 @@
                 // console.log($params);
                 return $http.post($url, $params).then(function (data) {
                     // console.log(data);
-                    if (data.code === 1000105) {
+                    if (data.code === 100014) {
                         // token 权限错误
                         $window.location.href='/space/#/account/login';
+                        $window.location.reload(true);
+                    } else {
+                        return data;
+                    }
+                }, function (error) {
+                    errFunc(error);
+                });
+            }
+
+            if ($method.toUpperCase() === 'PUT') {
+                // console.log($params);
+                return $http.put($url, $params).then(function (data) {
+                    // console.log(data);
+                    if (data.code === 100014) {
+                        // token 权限错误
+                        $window.location.href='/space/#/account/login';
+                        $window.location.reload(true);
                     } else {
                         return data;
                     }
@@ -53,6 +71,7 @@
             console.log(error);
             layer.msg("服务器异常");
             $window.location.href='/space/#/account/login';
+            $window.location.reload(true);
         }
     }
 })();

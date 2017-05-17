@@ -6,8 +6,8 @@
         .module('fullstackApp')
         .controller('AccountForgetController', AccountForgetController);
 
-    AccountForgetController.$inject = ['$scope', '$timeout', 'account', 'validator'];
-    function AccountForgetController($scope, $timeout, account, validator) {
+    AccountForgetController.$inject = ['$scope', '$timeout', '$cookies', 'account', 'validator'];
+    function AccountForgetController($scope, $timeout, $cookies, account, validator) {
         $scope.step = 1;
 
         $scope.account = {
@@ -40,11 +40,16 @@
             },
             captcha: {
                 show: false,
+                msg: '',
                 status: 0    // 0, 1
             },
             captchaBtn: {
                 show: false,
-                status: 0
+                msg: ''
+            },
+            system: {
+                show: false,
+                msg: ''
             }
         };
         $scope.clickable = {
@@ -58,6 +63,8 @@
         $scope.submitStep1Form = submitStep1Form;
         $scope.submitStep2Form = submitStep2Form;
         $scope.getCaptcha = getCaptcha;
+        var token;
+        account.setToken();
 
         function submitStep1Form(formName) {
             showErr(formName, 'phone');
@@ -70,16 +77,21 @@
             
             account.checkPhoneAndCaptcha($scope.account.phone, 
                     $scope.account.captcha).then(function (data) {
-                
+                if (!data) return;
                 if (data.is_succ) {
                     goNextStep();
                 } else {
 
-                    if (data.error_msg === '验证码不正确' || data.error_msg === '请先发送验证码') {
-                        $scope.backErr.captcha.show = true;
-                        $scope.backErr.captcha.status = 1;
-                        $scope.clickable.step1 = true;
-                    }
+                    $scope.backErr.captcha.show = true;
+                    $scope.backErr.captcha.msg = data.message;
+                    $scope.backErr.captcha.status = 1;
+                    $scope.clickable.step1 = true;
+
+                    $timeout(function () {
+                        $scope.backErr.captcha.show = false;
+                        $scope.backErr.captcha.msg = '';
+                        $scope.backErr.captcha.status = 0;
+                    }, 3000);
                 }
             });
         }
@@ -95,9 +107,23 @@
             $scope.clickable.submit = false;
             account.setNewPwd($scope.account.phone, $scope.account.captcha, 
                     $scope.account.pwdNew).then(function (data) {
+                if (!data) return;
 
                 if (data.is_succ) {
                     goNextStep();
+                } else {
+                    $scope.clickable.submit = true;
+                    $scope.backErr.system = {
+                        show: true,
+                        msg: data.message
+                    };
+
+                    $timeout(function () {
+                        $scope.backErr.system = {
+                            show: false,
+                            msg: ''
+                        };
+                    }, 3000);
                 }
             });
         }
@@ -110,35 +136,27 @@
             }            
 
             $scope.clickable.captcha = false;
-
+            token = $cookies['code_token'];
             var tmp;
             if ($scope.voiceCaptcha) {
-                tmp = account.getSVoiceCaptcha($scope.account.phone, 'pwd');
+                tmp = account.getRCaptcha($scope.account.phone, token, 2, 2);
             } else {
-                tmp = account.getCaptcha($scope.account.phone);
+                tmp = account.getRCaptcha($scope.account.phone, token, 2);
             }
             tmp.then(function (data) {
+                if (!data) return;
                 if (data.is_succ) {
                     $scope.startTimer();
                 } else {
 
-                    // 手机号码未注册
-                    if (data.error_code === 3 || data.error_code === 4) {
-                        $scope.backErr.phone.status = 1;
+                    $scope.backErr.captchaBtn.show = true;
+                    $scope.backErr.captchaBtn.msg = data.message;
+                    
+                    $timeout(function () {
+                        $scope.backErr.captchaBtn.show = false;
+                        $scope.backErr.captchaBtn.msg = '';
                         $scope.clickable.captcha = true;
-                    }
-
-                    if (data.error_code === 1 || data.error_code === 2 ||
-                            data.error_code === 5) {
-                        $scope.backErr.captchaBtn.show = true;
-                        $scope.backErr.captchaBtn.status = data.error_code;
-
-                        $timeout(function () {
-                            $scope.backErr.captchaBtn.show = false;
-                            $scope.backErr.captchaBtn.status = 0;
-                            $scope.clickable.captcha = true;
-                        }, 3000);
-                    }
+                    }, 3000);
                 }
             });
         }

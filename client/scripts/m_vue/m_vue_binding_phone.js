@@ -37,43 +37,74 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
         ready: function () {
             var self = this;
             //生成token
-            apiUrlResource.set_token.save().then(function () {
-                self.token = $.cookie('tiger_token')
+            dealApiUrlResource("set_token", "POST").then(function (data) {
+                // console.log(data);
+                if (data.is_succ) {
+                    self.token = $.cookie('code_token');
+                }
             });
+            // apiUrlResource.set_token.save().then(function () {
+            //     self.token = $.cookie('tiger_token')
+            // });
         },
         methods: {
             check_exsit: function () {
                 var self = this;
                 self.$validate('phone', function () {
                     if (!self.$checkTel.phone.phoneErr) { //指定通过校验的validator
-                        apiUrlResource.check_exsit.get({
-                            key: self.phone,
-                            username: null
-                        }).then(function (response) {
+                        dealApiUrlResource("check_exsit", "GET", {
+                            key: 3,
+                            value: self.phone
+                        }).then(function (data) {
+                            // console.log(data);
+                            if (data.is_succ) {
+                                if (data.data) {
 
-                            var data = JSON.parse(response.data);
-
-                            if (data.data) {
-
-                                self.backErr = {
-                                    show: true,
-                                    msg: '此号码已存在！'
-                                }
-                                self.exsit = true;
-                                setTimeout(function () {
                                     self.backErr = {
-                                        show: false,
-                                        msg: ''
-                                    };
-                                }, 3000);
-                            } else {
-                                self.exsit = false;
-                                self.getCode();
+                                        show: true,
+                                        msg: '此号码已存在！'
+                                    }
+                                    self.exsit = true;
+                                    setTimeout(function () {
+                                        self.backErr = {
+                                            show: false,
+                                            msg: ''
+                                        };
+                                    }, 3000);
+                                } else {
+                                    self.exsit = false;
+                                    // self.getCode();
+                                }
                             }
-                        }, function (error) {
-                            console.log(error);
-                            alert("请求失败");
                         });
+                        // apiUrlResource.check_exsit.get({
+                        //     key: self.phone,
+                        //     username: null
+                        // }).then(function (response) {
+
+                        //     var data = JSON.parse(response.data);
+
+                        //     if (data.data) {
+
+                        //         self.backErr = {
+                        //             show: true,
+                        //             msg: '此号码已存在！'
+                        //         }
+                        //         self.exsit = true;
+                        //         setTimeout(function () {
+                        //             self.backErr = {
+                        //                 show: false,
+                        //                 msg: ''
+                        //             };
+                        //         }, 3000);
+                        //     } else {
+                        //         self.exsit = false;
+                        //         self.getCode();
+                        //     }
+                        // }, function (error) {
+                        //     console.log(error);
+                        //     alert("请求失败");
+                        // });
                     } else {
                         self.showFrontErr('phone');
                     }
@@ -86,11 +117,11 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
                 self.$validate('phone', function () {
                     if (!self.$checkTel.phone.phoneErr && !self.exsit) {
                         self.clickable.code = false;
-                        apiUrlResource.getCode.save({
+                        dealApiUrlResource("getCodeApi", "POST", {
                             phone: self.phone,
-                            token: self.token
-                        }).then(function (response) {
-                            var data = JSON.parse(response.data);
+                            code_token: self.token,
+                            type: 3
+                        }).then(function (data) {
                             self.clickable.code = false;
                             if (data.is_succ) {
 
@@ -119,7 +150,7 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
 
                                 self.backErr = {
                                     show: true,
-                                    msg: data.error_msg
+                                    msg: data.message
                                 };
 
                                 setTimeout(function () {
@@ -129,11 +160,55 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
                                     };
                                 }, 3000);
                             }
-                        }, function (error) {
-                            self.clickable.code = true;
-                            console.log(error);
-                            alert("请求失败");
                         });
+                        // apiUrlResource.getCode.save({
+                        //     phone: self.phone,
+                        //     token: self.token
+                        // }).then(function (response) {
+                        //     var data = JSON.parse(response.data);
+                        //     self.clickable.code = false;
+                        //     if (data.is_succ) {
+
+                        //         if (self.step == 1) {
+                        //             self.nextStep(2);
+                        //         } else if (self.step == 2) {
+                        //             layer.open({
+                        //                 content: '验证码已发送！',
+                        //                 time: 2,
+                        //                 skin:'msg'
+                        //             })
+                        //         }
+                        //         var count = 59;
+                        //         self.codeTimer = setInterval(function () {
+                        //             self.codeBtn_msg = count + 's';
+                        //             count--;
+                        //             if (count == 0) {
+                        //                 clearInterval(self.codeTimer);
+                        //                 self.clickable.code = true;
+                        //                 self.codeBtn_msg = '重新获取'
+                        //             }
+                        //         }, 1000);
+
+                        //     } else {
+                        //         self.clickable.code = true;
+
+                        //         self.backErr = {
+                        //             show: true,
+                        //             msg: data.error_msg
+                        //         };
+
+                        //         setTimeout(function () {
+                        //             self.backErr = {
+                        //                 show: false,
+                        //                 msg: ''
+                        //             };
+                        //         }, 3000);
+                        //     }
+                        // }, function (error) {
+                        //     self.clickable.code = true;
+                        //     console.log(error);
+                        //     alert("请求失败");
+                        // });
                     } else {
                         self.showFrontErr('phone');
                     }
@@ -145,38 +220,22 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
                 self.$validate(true, function () {
                     if (!self.$checkTel.invalid) {
                         self.clickable.submit = false;
-                        apiUrlResource.changeTelBind.save({
+                        dealApiUrlResource("changeTelBind", "PUT", {
                             phone: self.phone,
-                            phone_code: self.code
-                        }).then(function (response) {
-                            var data = response.data;
+                            code: self.code
+                        }).then(function (data) {
+                            console.log(data);
+                            if (!data) return;
                             if (data.is_succ) {
                                 callNative({
                                     type: "hide_back"
                                 });
                                 self.nextStep(3);
                             } else {
-
-                                self.backErr.show = {
+                                self.backErr = {
                                     show: true,
-                                    msg: data.error_msg
+                                    msg: data.message
                                 };
-
-                                if (data.error_code === 1) {
-                                    self.backErr.msg = '参数错误';
-                                }
-
-                                if (data.error_code === 2) {
-                                    self.backErr.msg = '请输入正确的手机号码';
-                                }
-
-                                if (data.error_code === 3) {
-                                    self.backErr.msg = '验证码错误';
-                                }
-
-                                if (data.error_code === 4) {
-                                    self.backErr.msg = '不能绑定别人的手机号码'
-                                }
 
                                 self.clickable.submit = true;
 
@@ -187,11 +246,54 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
                                     };
                                 }, 3000);
                             }
-                        }, function (error) {
-                            self.clickable.submit = true;
-                            console.log(error);
-                            alert("请求失败");
                         });
+                        // apiUrlResource.changeTelBind.save({
+                        //     phone: self.phone,
+                        //     phone_code: self.code
+                        // }).then(function (response) {
+                        //     var data = response.data;
+                        //     if (data.is_succ) {
+                        //         callNative({
+                        //             type: "hide_back"
+                        //         });
+                        //         self.nextStep(3);
+                        //     } else {
+
+                        //         self.backErr.show = {
+                        //             show: true,
+                        //             msg: data.error_msg
+                        //         };
+
+                        //         if (data.error_code === 1) {
+                        //             self.backErr.msg = '参数错误';
+                        //         }
+
+                        //         if (data.error_code === 2) {
+                        //             self.backErr.msg = '请输入正确的手机号码';
+                        //         }
+
+                        //         if (data.error_code === 3) {
+                        //             self.backErr.msg = '验证码错误';
+                        //         }
+
+                        //         if (data.error_code === 4) {
+                        //             self.backErr.msg = '不能绑定别人的手机号码'
+                        //         }
+
+                        //         self.clickable.submit = true;
+
+                        //         setTimeout(function () {
+                        //             self.backErr = {
+                        //                 show: false,
+                        //                 msg: ''
+                        //             };
+                        //         }, 3000);
+                        //     }
+                        // }, function (error) {
+                        //     self.clickable.submit = true;
+                        //     console.log(error);
+                        //     alert("请求失败");
+                        // });
                     } else {
                         self.showFrontErr('phone');
                         self.showFrontErr('code');

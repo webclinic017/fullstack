@@ -34,23 +34,36 @@
     /*红包页面*/
     $("#telephone").blur(function () {
         if (($("#telephone").val().trim() != "") && !($("#telephone").hasClass("warning"))) {
-            $.ajax({
-                type: "get",
-                url: "/action/public/v4/exists",
-                data: {
-                    key: $("#telephone").val(),
-                    username: null
-                },
-                success: function (data) {
-                    data = JSON.parse(data);
-                    console.log(data);
-                    if (data && data.data == true) {
-                        $("#telephone").addClass("warning").val("此号码已注册!")
+            publicRequest('checkExists', 'GET', {
+                key: 3,
+                value: $("#telephone").val()
+            }).then(function (data) {
+                if (!data) return;
+                if (data.is_succ) {
+                    if (data.data) {
+                        $("#telephone").addClass("warning").val("此号码已注册!");
                     } else {
                         $("#telephone").removeClass("warning");
                     }
                 }
-            })
+            });
+            // $.ajax({
+            //     type: "get",
+            //     url: "/action/public/v4/exists",
+            //     data: {
+            //         key: $("#telephone").val(),
+            //         username: null
+            //     },
+            //     success: function (data) {
+            //         data = JSON.parse(data);
+            //         console.log(data);
+            //         if (data && data.data == true) {
+            //             $("#telephone").addClass("warning").val("此号码已注册!")
+            //         } else {
+            //             $("#telephone").removeClass("warning");
+            //         }
+            //     }
+            // })
         }
     });
 
@@ -161,28 +174,46 @@
         getInviteInfo();
         /*获取邀请概览*/
         function getInviteInfo() {
-            $.ajax({
-                url: "/action/public/v3/get_invite_friends_info",
-                type: "get",
-                data: {
-                    page: 1,
-                    pagesize: 50
-                },
-                success: function (data) {
-                    if (data.is_succ == true) {
-                        var list = {
-                            list: data.data
-                        };
-                        /*模板引擎*/
-                        baidu.template.LEFT_DELIMITER = '<$';
-                        baidu.template.RIGHT_DELIMITER = '$>';
-                        var list_str = baidu.template('invite_table', list);
-                        $("#history_list").html(list_str);
-                        $("#invited_amount").html(data.sum);
-                        $("#invited_income").html(data.profit);
-                    }
+            publicRequest('getInviteList', 'GET', {
+                page: 1,
+                pagesize: 50
+            }).then(function (data) {
+                if (!data) return;
+                if (data.is_succ) {
+                    var list = {
+                        list: data.data.records
+                    };
+                    /*模板引擎*/
+                    baidu.template.LEFT_DELIMITER = '<$';
+                    baidu.template.RIGHT_DELIMITER = '$>';
+                    var list_str = baidu.template('invite_table', list);
+                    $("#history_list").html(list_str);
+                    $("#invited_amount").html(data.data.record_count);
+                    $("#invited_income").html(data.data.profit);
                 }
             });
+            // $.ajax({
+            //     url: "/action/public/v3/get_invite_friends_info",
+            //     type: "get",
+            //     data: {
+            //         page: 1,
+            //         pagesize: 50
+            //     },
+            //     success: function (data) {
+            //         if (data.is_succ == true) {
+            //             var list = {
+            //                 list: data.data
+            //             };
+            //             /*模板引擎*/
+            //             baidu.template.LEFT_DELIMITER = '<$';
+            //             baidu.template.RIGHT_DELIMITER = '$>';
+            //             var list_str = baidu.template('invite_table', list);
+            //             $("#history_list").html(list_str);
+            //             $("#invited_amount").html(data.sum);
+            //             $("#invited_income").html(data.profit);
+            //         }
+            //     }
+            // });
         }
 
     } ());

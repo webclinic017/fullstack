@@ -43,15 +43,15 @@ if ($(".m_vue").attr("data-page") === "password_modify") {
                     /*如果所有条件都是false*/
                     if(!self.$validatorMethod.invalid){
                         self.clickable.submit = false;
-                        // var test = self.$resource('/action/public/v4/change_password');
 
-                        apiUrlResource.changePwd.save({
-                            origin_pwd: self.password.pwdOld,
-                            new_pwd: self.password.pwdNew
-                        }).then(function (response) {
+                        dealApiUrlResource("changePwdApi", "PUT", {
+                            old_passwd: self.password.pwdOld,
+                            new_passwd: self.password.pwdNew,
+                            confirm_passwd: self.password.pwdNew
+                        }).then(function (data) {
+                            console.log(data);
                             self.clickable.submit = true;
-                            var data = JSON.parse(response.data);
-                            // console.info(response.data, data);
+                            if (!data) return;
                             if (data.is_succ) {
                                 layer.open({
                                     content: '修改成功',
@@ -67,7 +67,7 @@ if ($(".m_vue").attr("data-page") === "password_modify") {
                             } else {
                                 self.backErr = {
                                     show: true,
-                                    msg: data.error_msg
+                                    msg: data.message
                                 };
 
                                 setTimeout(function () {
@@ -77,11 +77,44 @@ if ($(".m_vue").attr("data-page") === "password_modify") {
                                     };
                                 }, 3000);
                             }
-                        }, function (error) {
-                            self.clickable.submit = true;
-                            console.log(error);
-                            alert("请求失败");
                         });
+                        // apiUrlResource.changePwd.save({
+                        //     origin_pwd: self.password.pwdOld,
+                        //     new_pwd: self.password.pwdNew
+                        // }).then(function (response) {
+                        //     self.clickable.submit = true;
+                        //     var data = JSON.parse(response.data);
+                        //     // console.info(response.data, data);
+                        //     if (data.is_succ) {
+                        //         layer.open({
+                        //             content: '修改成功',
+                        //             skin: 'msg',
+                        //             time: 2 //2秒后自动关闭
+                        //         });
+                        //         setTimeout(function(){
+                        //             callNative({
+                        //                 type: "back_personal_login",
+                        //                 url: ""
+                        //             });
+                        //         },500);
+                        //     } else {
+                        //         self.backErr = {
+                        //             show: true,
+                        //             msg: data.error_msg
+                        //         };
+
+                        //         setTimeout(function () {
+                        //             self.backErr = {
+                        //                 show: false,
+                        //                 msg: ''
+                        //             };
+                        //         }, 3000);
+                        //     }
+                        // }, function (error) {
+                        //     self.clickable.submit = true;
+                        //     console.log(error);
+                        //     alert("请求失败");
+                        // });
                     } else {
                         self.showFrontErr('pwdOld');
                         self.showFrontErr('pwdNew');
