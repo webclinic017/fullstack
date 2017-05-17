@@ -54,7 +54,7 @@ function dealApiUrlResource($url, $method, $params) {
         return Vue.resource($url).get($params).then(function (data) {
             // console.log(data.data);
             data = data.data;
-            if (data.code === 1000105) {
+            if (data.code === 100014) {
                 console.log(data.message);
                 layer.open({
                     skin: 'msg',
@@ -73,7 +73,7 @@ function dealApiUrlResource($url, $method, $params) {
         return Vue.resource($url).update($params).then(function (data) {
             // console.log(data.data);
             data = data.data;
-            if (data.code === 1000105) {
+            if (data.code === 100014) {
                 console.log(data.message);
                 layer.open({
                     skin: 'msg',
@@ -92,7 +92,7 @@ function dealApiUrlResource($url, $method, $params) {
         return Vue.resource($url).save($params).then(function (data) {
             // console.log(data.data);
             data = data.data;
-            if (data.code === 1000105) {
+            if (data.code === 100014) {
                 console.log(data.message);
                 layer.open({
                     skin: 'msg',

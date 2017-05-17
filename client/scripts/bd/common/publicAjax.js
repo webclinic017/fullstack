@@ -45,7 +45,7 @@
             data: $params,
             success: function (data) {
                 // console.log(data);
-                if (data.code === 1000105) {
+                if (data.code === 100014) {
                     console.log(data.message);
                     layer.open({
                         skin: 'msg',
@@ -82,7 +82,7 @@
             contentType: false,
             success: function (data) {
                 // console.log(data);
-                if (data.code === 1000105) {
+                if (data.code === 100014) {
                     // console.log(data.message);
                     layer.open({
                         skin: 'msg',
