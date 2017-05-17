@@ -22,7 +22,7 @@
                     params: $params
                 }).then(function (data) {
                     // console.log(data);
-                    if (data.code === 100014) {
+                    if (data.code === 100014 || data.code === 100010) {
                         // token 权限错误
                         $window.location.href='/space/#/account/login';
                         $window.location.reload(true);
@@ -38,7 +38,7 @@
                 // console.log($params);
                 return $http.post($url, $params).then(function (data) {
                     // console.log(data);
-                    if (data.code === 100014) {
+                    if (data.code === 100014 || data.code === 100010) {
                         // token 权限错误
                         $window.location.href='/space/#/account/login';
                         $window.location.reload(true);
@@ -54,7 +54,7 @@
                 // console.log($params);
                 return $http.put($url, $params).then(function (data) {
                     // console.log(data);
-                    if (data.code === 100014) {
+                    if (data.code === 100014 || data.code === 100010) {
                         // token 权限错误
                         $window.location.href='/space/#/account/login';
                         $window.location.reload(true);
