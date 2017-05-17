@@ -1,9 +1,10 @@
 $(document).ready(function () {
     /*生成token*/
-    $.ajax({
-        type: "post",
-        url: '/action/public/v3/set_token'
-    });
+    publicRequest('setToken', 'POST');
+    // $.ajax({
+    //     type: "post",
+    //     url: '/action/public/v3/set_token'
+    // });
 
     /*密码可视按钮点击事件*/
     $(".password_view").on("touchend", function () {
@@ -80,23 +81,36 @@ $(document).ready(function () {
     $("#username").blur(function () {
         checkUserName();
         if (($("#username").val().trim() != "") && !($("#telephone").hasClass("warning"))) {
-            $.ajax({
-                type: "get",
-                url: "/action/public/v4/exists",
-                data: {
-                    key: null,
-                    username: $("#username").val()
-                },
-                success: function (data) {
-                    data = JSON.parse(data);
-                    console.log(data);
-                    if (data && data.data == true) {
-                        $("#username").addClass("warning").val("该昵称已存在!")
+            publicRequest('checkExists', 'GET', {
+                key: 1,
+                value: $("#username").val()
+            }).then(function (data) {
+                if (!data) return;
+                if (data.is_succ) {
+                    if (data.data) {
+                        $("#username").addClass("warning").val("该昵称已存在!");
                     } else {
                         $("#username").removeClass("warning");
                     }
                 }
-            })
+            });
+            // $.ajax({
+            //     type: "get",
+            //     url: "/action/public/v4/exists",
+            //     data: {
+            //         key: null,
+            //         username: $("#username").val()
+            //     },
+            //     success: function (data) {
+            //         data = JSON.parse(data);
+            //         console.log(data);
+            //         if (data && data.data == true) {
+            //             $("#username").addClass("warning").val("该昵称已存在!")
+            //         } else {
+            //             $("#username").removeClass("warning");
+            //         }
+            //     }
+            // })
         }
     });
 
@@ -122,23 +136,36 @@ $(document).ready(function () {
     $("#telephone").blur(function () {
         checkTel();
         if (($("#telephone").val().trim() != "") && !($("#telephone").hasClass("warning"))) {
-            $.ajax({
-                type: "get",
-                url: "/action/public/v4/exists",
-                data: {
-                    key: $("#telephone").val(),
-                    username: null
-                },
-                success: function (data) {
-                    data = JSON.parse(data);
-                    console.log(data);
-                    if (data && data.data == true) {
-                        $("#telephone").addClass("warning").val("此号码已注册!")
+            publicRequest('checkExists', 'GET', {
+                key: 3,
+                value: $("#telephone").val()
+            }).then(function (data) {
+                if (!data) return;
+                if (data.is_succ) {
+                    if (data.data) {
+                        $("#telephone").addClass("warning").val("此号码已注册!");
                     } else {
                         $("#telephone").removeClass("warning");
                     }
                 }
-            })
+            });
+            // $.ajax({
+            //     type: "get",
+            //     url: "/action/public/v4/exists",
+            //     data: {
+            //         key: $("#telephone").val(),
+            //         username: null
+            //     },
+            //     success: function (data) {
+            //         data = JSON.parse(data);
+            //         console.log(data);
+            //         if (data && data.data == true) {
+            //             $("#telephone").addClass("warning").val("此号码已注册!")
+            //         } else {
+            //             $("#telephone").removeClass("warning");
+            //         }
+            //     }
+            // })
         }
     });
 
@@ -213,17 +240,24 @@ $(document).ready(function () {
 
                     if (!(verify_code_btn.hasClass("disable"))) {
                         /*请求后台接口*/
-                        $.ajax({
-                            type: "post",
-                            url: "/action/public/v3/get_phone_reg_code",
-                            data: {
-                                phone: telephone,
-                                token: getCookie("tiger_token")
-                            },
-                            success: function (data) {
-                                console.log(data);
-                            }
+                        publicRequest('getPhoneCode', 'POST', {
+                            phone: telephone,
+                            code_token: getCookie("code_token"),
+                            type: 1
+                        }).then(function (data) {
+                            console.log(data);
                         });
+                        // $.ajax({
+                        //     type: "post",
+                        //     url: "/action/public/v3/get_phone_reg_code",
+                        //     data: {
+                        //         phone: telephone,
+                        //         token: getCookie("code_token")
+                        //     },
+                        //     success: function (data) {
+                        //         console.log(data);
+                        //     }
+                        // });
                     }
                 }
             });
@@ -245,57 +279,57 @@ $(document).ready(function () {
                     /*获取邮箱*/
                     email = $('#email').val();
                     verify_code = $("#verify_code").val();
-                    // publicRequest('register', 'POST', {
-                    //     username: username,
-                    //     phone: telephone,
-                    //     verify_code: verify_code,
-                    //     email: email,
-                    //     password: password,
-                    //     lp: "",
-                    //     pid: "",
-                    //     unit: "",
-                    //     key: ""
-                    // }).then(function (data) {
-                    //     if (!data) return;
-                    //     // console.log(data);
-                    //     if (data.is_succ) {
-                    //         var action_address = window.location.href.replace("2", "3");
-                    //         skipTo(action_address);
-                    //     } else {
-                    //         alert(data.message);
-                    //     }
-                    // });
-                    $.ajax({
-                        type: "post",
-                        url: "/action/public/v3/register",
-                        data: {
-                            username: username,
-                            phone: telephone,
-                            verify_code: verify_code,
-                            email: email,
-                            password: password,
-                            lp: "",
-                            pid: "",
-                            unit: "",
-                            key: ""
-                        },
-                        success: function (data) {
-                            console.log(data);
-                            if (data.is_succ == true) {
-                                var action_address = window.location.href.replace("2", "3");
-                                skipTo(action_address);
-                            } else if (data.error_code == 12) {
-                                $("#verify_code").addClass("warning").val("验证码不正确");
-                            } else if (data.error_code == 3) {
-                                $("#verify_code").addClass("warning").val("手机号已存在");
-                            } else {
-                                alert(data.error_msg)
-                            }
-                        },
-                        error: function (err) {
-                            alert("error:" + err);
+                    publicRequest('register', 'POST', {
+                        username: username,
+                        phone: telephone,
+                        verify_code: verify_code,
+                        email: email,
+                        password: password,
+                        lp: "",
+                        pid: "",
+                        unit: "",
+                        key: ""
+                    }).then(function (data) {
+                        if (!data) return;
+                        // console.log(data);
+                        if (data.is_succ) {
+                            var action_address = window.location.href.replace("2", "3");
+                            skipTo(action_address);
+                        } else {
+                            alert(data.message);
                         }
                     });
+                    // $.ajax({
+                    //     type: "post",
+                    //     url: "/action/public/v3/register",
+                    //     data: {
+                    //         username: username,
+                    //         phone: telephone,
+                    //         verify_code: verify_code,
+                    //         email: email,
+                    //         password: password,
+                    //         lp: "",
+                    //         pid: "",
+                    //         unit: "",
+                    //         key: ""
+                    //     },
+                    //     success: function (data) {
+                    //         console.log(data);
+                    //         if (data.is_succ == true) {
+                    //             var action_address = window.location.href.replace("2", "3");
+                    //             skipTo(action_address);
+                    //         } else if (data.error_code == 12) {
+                    //             $("#verify_code").addClass("warning").val("验证码不正确");
+                    //         } else if (data.error_code == 3) {
+                    //             $("#verify_code").addClass("warning").val("手机号已存在");
+                    //         } else {
+                    //             alert(data.error_msg)
+                    //         }
+                    //     },
+                    //     error: function (err) {
+                    //         alert("error:" + err);
+                    //     }
+                    // });
                 }
             })
         }
@@ -306,35 +340,35 @@ $(document).ready(function () {
         /*第三页注册逻辑 - 对象*/
         var regist_page3 = {
             getMt4: function () {
-                // publicRequest('getUserInfo', 'GET').then(function (data) {
-                //     if (!data) return;
-                //     // console.log(data);
-                //     if (data.is_succ) {
-                //         data = data.data;
-                //         if (data.mt4_id) {
-                //             $("#reg_MT4_number").html(data.mt4_id);
-                //         } else {
-                //             $("#reg_MT4_number").html("获取失败");
-                //         }
-                //     }
-                // });
-                $.ajax({
-                    type: "get",
-                    url: "/action/public/v4/get_info",
-                    success: function (data) {
-                        data = JSON.parse(data);
+                publicRequest('getUserInfo', 'GET').then(function (data) {
+                    if (!data) return;
+                    // console.log(data);
+                    if (data.is_succ) {
                         data = data.data;
-                        console.log(data);
-                        if (data.real_id) {
-                            $("#reg_MT4_number").html(data.real_id);
+                        if (data.mt4_id) {
+                            $("#reg_MT4_number").html(data.mt4_id);
                         } else {
                             $("#reg_MT4_number").html("获取失败");
                         }
-                    },
-                    error: function (err) {
-                        $("#reg_MT4_number").html("获取失败");
                     }
                 });
+                // $.ajax({
+                //     type: "get",
+                //     url: "/action/public/v4/get_info",
+                //     success: function (data) {
+                //         data = JSON.parse(data);
+                //         data = data.data;
+                //         console.log(data);
+                //         if (data.real_id) {
+                //             $("#reg_MT4_number").html(data.real_id);
+                //         } else {
+                //             $("#reg_MT4_number").html("获取失败");
+                //         }
+                //     },
+                //     error: function (err) {
+                //         $("#reg_MT4_number").html("获取失败");
+                //     }
+                // });
             },
             submit: function () {
                 if (isPC()) { /*如果是PC,直接跳转*/

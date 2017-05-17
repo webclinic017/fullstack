@@ -13,7 +13,7 @@ Vue.directive('countDown', {
             newVal.message = 60;
             var timer = setInterval(function () {
                 newVal.message--;
-
+                // console.log(newVal.message);
                 if (newVal.message <= 0) {
                     newVal.message = text;
                     newVal.noClick = false;
