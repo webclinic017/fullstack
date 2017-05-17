@@ -4,13 +4,11 @@
             <%if(lang.isCompany("tigerwit")){%>
             <div class="swiper-slide index2-slide1">
                 <div class="pic">
-                    <img src="/images/bd_redbag/rb_1-1.png">
+                    <img src="/images/home/index-banner-redbag1_0504.png">
                 </div>
-                <div class="date">
-                    2017年3月15日 火热开启
+                <div class="index2-banner__btn1-new">
+                    <a class="" href="/bd/t35" ng-click="toTrackBannerSensorsdata($event, '红包活动', '1');">了解详情</a>
                 </div>
-                
-                <a class="index2-banner__btn1" href="/bd/t35" ng-click="toTrackBannerSensorsdata($event, '红包活动', '1');"><%= lang.text("liaojiexiangqing")%></a>
             </div>
             <%}%>
 
@@ -48,23 +46,14 @@
                 <a class="index2-banner__btn1" href="/bd/t33" ng-click="toTrackBannerSensorsdata($event, '赠金活动', '2');"><%= lang.text("liaojiexiangqing")%></a>
             </div>
             <%}%>
-            <div class="swiper-slide index2-slide3 <%= lang.background().en %>">
+            <!--<div class="swiper-slide index2-slide3 <%= lang.background().en %>">
                 <p class="index2-banner__tle1"><%= lang.text("home56")%></p>
                 <p class="index2-banner__tle2"><%= lang.text("home57")%><span <%= lang.text("navbar15")%>>60%</span></p>
                 <div class="index2-banner__b1-con">
                     <%= lang.text("home58")%>
                 </div>
                 <a class="index2-banner__btn1" href="/regular" ng-click="toTrackBannerSensorsdata($event, '定期跟单', '3');"><%= lang.text("liaojiexiangqing")%></a>
-            </div>
-            <%if(lang.isCompany("tigerwit")){%>
-            <div class="swiper-slide index2-slide4">
-                <div class="pic">
-                    <img src="/images/home/index2-banner4-cont.png">
-                </div>
-                
-                <a class="index2-banner__btn1" href="/bd/t35_r" ng-click="toTrackBannerSensorsdata($event, '红包活动', '4');"><%= lang.text("liaojiexiangqing")%></a>
-            </div>
-            <%}%>
+            </div>-->
         </div>
         <div class="swiper-pagination swiper-pagination-home"></div>
     </div>
@@ -256,7 +245,7 @@
             <div class="col-xs-3">
                 <div class="index2-product__up">
                     <div class="index2-why__up-icon4"></div>
-                    <p class="index2-product__up-name"><%= lang.text("home44")%></p>
+                    <p class="index2-product__up-name" style="line-height:25px;"><%= lang.text("home44")%></p>
                 </div>
                 <div class="index2-product__down pd-lf-50">
                     <p><%= lang.text("home45")%></p>

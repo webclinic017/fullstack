@@ -100,33 +100,30 @@ $(document).ready(function () {
     
     // 获取当前汇率
     function getCurrentRate () {
-        $.get('/action/public/v4/get_parity').then(function (data) {
-            // console.info(data);
-            data = JSON.parse(data);
-            var rate = Number(data.data.outparity).toFixed(4);
-            $currentRate.html(rate);
-        }, function (err) {
-            console.info(err);
+        publicRequest('getPaymentRate', 'GET').then(function (data) {
+            if (!data) return;
+            // console.log(data);
+            if (data.is_succ) {
+                var rate = Number(data.data.out_rate).toFixed(4);
+                $currentRate.html(rate);
+            }
         });
     }
     // 获取出金状态 交易帐户
     function getIsWithdraw () {
-        $.get('/action/public/v4/check_withdraw').then(function (data) {
-            // console.info(data);
-            data = JSON.parse(data);
-            canWithdrawBalance = data.balance;
-
+        publicRequest('checkWithdrawLimit', 'GET').then(function (data) {
+            if (!data) return;
+            // console.log(data);
             if (data.is_succ) {
                 isNextInvest = true;
+                canWithdrawBalance = data.data.amount;
                 $isWithdrawBalanceInvest.html(canWithdrawBalance);
             } else {
                 isNextInvest = false;
-                alert_msg = data.error_msg;
+                alert_msg = data.message;
                 $withdrawErrMsgInvest.html(alert_msg);
             }
             changeWithdrawType();
-        }, function (err) {
-            console.info(err);
         });
     }
     // 获取出金状态 零钱包
@@ -305,22 +302,12 @@ $(document).ready(function () {
                 getCard();
             }
         });
-        // $.get('/action/public/v4/get_info').then(function (data) {
-        //     // data = JSON.parse(data);
-        //     console.info(data);
-        //     if (data.is_succ) {
-        //         realname = data.data.realname;
-        //         getCard();
-        //     }
-        // }, function (err) {
-        //     console.log(err);
-        // });
     }
        
     function getCard() {
-        $.get('/action/public/v4/query_bankcard').then(function (data) {
-            // console.info(data);
-            data = JSON.parse(data);
+        publicRequest('getBankCard', 'GET').then(function (data) {
+            if (!data) return;
+            // console.log(data);
             var cardInfo = {
                 "cardList": []
             };
@@ -331,7 +318,7 @@ $(document).ready(function () {
                 id = data.data.id ? data.data.id : '';
             } else {
                 id = '';
-                console.log("获取银行卡列表信息失败了");
+                console.log(data.message);
             }
 
             // 循环拿到的card信息，去和config中的bank信息比较，找到对应的中文name
@@ -389,28 +376,25 @@ $(document).ready(function () {
                     content: 'loading',
                     shadeClose: false
                 });
+
                 if (widthdrawType === 'invest') {
                     withdrawInvest();
                 } else {
                     withdrawWallet();
                 }
-                
                 return false;
             });
-            
-        }, function (err) {
-            console.info(err);
         });
     }
 
     function withdrawInvest () {
-        $.post('/action/public/v4/withdraw', {
+        publicRequest('withdraw', 'POST', {
             amount: widthdrawNum,
             id: id
         }).then(function (data) {
+            if (!data) return;
             layer.closeAll();
             // console.info(data);
-            data = JSON.parse(data);
             if (data.is_succ) {
                 var action_address = window.location.origin +
                              "/m/asset_new/succ";
@@ -422,22 +406,13 @@ $(document).ready(function () {
             } else {
                 var action_address = window.location.origin +
                              "/m/asset_new/fail?msg=" +
-                             encodeURIComponent(data.error_msg);
+                             encodeURIComponent(data.message);
                 console.info(action_address);
                 callNative({
                     type: "openUrlRefresh",
                     url: action_address
                 });
             }
-        }, function (err) {
-            console.log("出金申请提交失败");
-            var action_address = window.location.origin +
-                             "/m/asset_new/fail";
-            console.info(action_address);
-            callNative({
-                type: "openUrlRefresh",
-                url: action_address
-            });
         });
     }
 
@@ -590,7 +565,7 @@ $(document).ready(function () {
         if (banksInfo.bank && banksInfo.branch && banksInfo.state && banksInfo.city) {
             var id = getUrlParam("id");
             // 绑定银行卡
-            $.post('/action/public/v4/binding_bankcard', {
+            publicRequest('bindBankCard', 'PUT', {
                 card_no: number,
                 bank_name: banksInfo.bank,
                 bank_addr: banksInfo.branch,
@@ -598,8 +573,8 @@ $(document).ready(function () {
                 city: banksInfo.city,
                 id: id
             }).then(function (data) {
-                // console.info(data);
-                data = JSON.parse(data);
+                if (!data) return;
+                // console.log(data);
                 if (data.is_succ) {
                     widthdrawNum = getUrlParam("amount");
                     widthdrawType = getUrlParam("withdraw_type");
@@ -613,9 +588,9 @@ $(document).ready(function () {
                         url: action_address
                     });
                 } else {
-                    console.log(data.error_msg);
+                    console.log(data.message);
                     layer.open({
-                        content: data.error_msg,
+                        content: data.message,
                         btn: "确定"
                     });
                 }
@@ -658,32 +633,40 @@ $(document).ready(function () {
     }
 
     function setStateList () {
-        $.get('/action/public/v4/statecode_list?world_code=CN', function (data) {
-            data = JSON.parse(data);
-            // console.info(data);
-            var stateInfoLst = {
-                state: data.data
-            };
-        
-            //使用template模版
-            var html=bt('template_statelist',stateInfoLst);
+        publicRequest('getStateList', 'GET', {
+            country_code: 'CN'
+        }).then(function (data) {
+            if (!data) return;
+            // console.log(data);
+            if (data.is_succ) {
+                var stateInfoLst = {
+                    state: data.data
+                };
+            
+                //使用template模版
+                var html=bt('template_statelist',stateInfoLst);
 
-            $state.html(html);
+                $state.html(html);
+            }
         });
     }
 
     function setCityList (value) {
-        $.get('/action/public/v4/citycode_list', {parent_code: value}, function (data) {
-            data = JSON.parse(data);
-            // console.info(data);
-            var cityInfoLst = {
-                city: data.data
-            };
-            console.info(cityInfoLst);
-            //使用template模版
-            var html=bt('template_citylist',cityInfoLst);
+        publicRequest('getCitiesList', 'GET', {
+            parent_code: value
+        }).then(function (data) {
+            if (!data) return;
+            // console.log(data);
+            if (data.is_succ) {
+                var cityInfoLst = {
+                    city: data.data
+                };
+                // console.info(cityInfoLst);
+                //使用template模版
+                var html=bt('template_citylist',cityInfoLst);
 
-            $city.html(html);
+                $city.html(html);
+            }
         });
     }
 

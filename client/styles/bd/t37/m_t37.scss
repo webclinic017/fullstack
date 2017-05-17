@@ -1,0 +1,331 @@
+.mt37_layer_content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: left;
+    // background: url('/images/bd_t37/P1-layer_bg.png') no-repeat;
+    // background-size: 100% 100%;
+    max-width: 1334px;
+    display: block;
+    .rules {
+        width: 90%;
+        height: 100%;
+        padding: 4% 5%;
+        line-height: 1.5rem;
+        font-size: 0.8rem;
+        a {
+            color: #fff;
+        }
+    }
+    img {
+        width: 100%;
+    }
+}
+
+@include b(m_t37_layout) {
+    text-align: center;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    /* Firefox 4 */
+    -webkit-transition: all 1s ease;
+    /* Safari and Chrome */
+    -o-transition: all 1s ease;
+    /* Opera */
+    font-family: sans-serif, 'Microsoft Yahei', 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    .redbag_logo {
+        position: absolute;
+        top: 3%;
+        right: 6%;
+        width: 30%;
+    }
+    #dowebok {
+        .registerNow {
+            position: absolute;
+            right: 0.5rem;
+            top: 45%;
+            width: 33.5%;
+        }
+        .connect_us {
+            margin-top: 14%;
+            display: inline-block;
+            color: #fff;
+            font-size: 0.55rem;
+        }
+        .slide_arrow {
+            position: absolute;
+            bottom: 2%;
+            left: 52%;
+            margin: -14px 0 0 -25px;
+            width: 36px;
+            height: 38px;
+            background: url("/images/bd/change.png") no-repeat;
+            -webkit-animation: start 1.5s infinite ease-in-out;
+            -moz-animation: start 1.5s infinite ease-in-out;
+            animation: start 1.5s infinite ease-in-out;
+        }
+        @keyframes start {
+            0%,
+            30% {
+                opacity: 0;
+                transform: translate(0, 10px);
+            }
+            60% {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(0, -8px);
+            }
+        }
+        .common_ways {
+            background: #13181f;
+            transition: all 0.8s ease;
+            -webkit-transition: all 0.8s ease;
+            /* Safari and Chrome */
+            width: 100%;
+            height: 19%;
+            font-size: 0.6rem;
+            text-align: left;
+            margin-top: 2%;
+            .left_part {
+                padding: 1% 5%;
+                width: 77.8%;
+                height: 100%;
+                float: left;
+                h5 {
+                    margin: 0;
+                    font-size: px2rem(28);
+                    margin-top: 0.5%;
+                }
+                .description {
+                    font-size: 0.5rem;
+                }
+            }
+            .right_part {
+                text-align: center;
+                padding: 2%;
+                width: 22.2%;
+                height: 100%;
+                float: left;
+                border-left: 1px solid #fff;
+                .amount {
+                    font-size: px2rem(50);
+                    i {
+                        font-size: 0.5rem;
+                        display: inline-block;
+                        margin-right: 0.15rem;
+                        vertical-align: middle;
+                    }
+                }
+                .getCondition {
+                    font-size: 0.5rem;
+                }
+            }
+        }
+        .section {
+            position: relative;
+            max-width: 1334px;
+        }
+        .section1 {
+            background: url("/images/bd_t37/P1_new.png") no-repeat;
+            background-position: center top;
+            background-size: auto 100%;
+            position: relative;
+            .layer_contentBox {
+                display: none;
+            }
+            .connect_us{
+                margin-top: 147%;
+            }
+            .matters_btn {
+                color: #fff;
+                border: 1px solid #fff;
+                font-size: 1rem;
+                border-radius: 20px;
+                display: none;
+                position: absolute;
+                top: 69%;
+                left: 9rem;
+                padding: 4px 1rem;
+            }
+            .registerNow {
+                width: 48%;
+                top: 76%;
+                right: 5.5rem;
+            }
+        }
+        .section2 {
+            background: url("/images/bd_t37/P2_1.jpg") no-repeat;
+            background-position: center center;
+            background-size: auto 100%;
+            overflow: hidden;
+            .registerNow {
+                width: 40%;
+                top: 84%;
+                right: 6.5rem;
+            }
+            .connect_us{
+                margin-top: 147%;
+            }
+        }
+        .section3 {
+            background-color: #121212;
+            background: url("/images/bd_t37/P3_new.png") no-repeat;
+            background-position: center center;
+            background-size: auto 100%;
+            .registerNow {
+                width: 40%;
+                top: 75%;
+                right: 6.0rem;
+            }
+            .connect_us {
+                margin-top: 135%;
+            }
+        }
+        .section4 {
+            background: url("/images/bd_t37/P4.png") no-repeat;
+            background-position: center center;
+            background-size: auto 100%;
+            .registerNow {
+                width: 40%;
+                top: 66%;
+                right: 6.5rem;
+            }
+            .connect_us {
+                margin-top: 120%;
+            }
+        }
+        .section5 {
+            background: url("/images/bd_t37/P5.png") no-repeat;
+            background-position: center center;
+            background-size: auto 100%;
+            .registerBtn {
+                width: 80%;
+                margin-top: 3%;
+            }
+            .redbag_regBox {
+                background: url(/images/bd_t37/t37_regbox.png) no-repeat;
+                background-position: center center;
+                background-size: 100% 100%;
+                width: 92%;
+                padding: 5% 16%;
+                height: 35%;
+                opacity: 0.9;
+                margin: 0 auto;
+                margin-top: 54%;
+                transition: margin-top 0.1s linear;
+                -webkit-transition: margin-top 0.1s linear;
+                .submit_form {
+                    width: px2rem(336);
+                    margin: 0 auto;
+                    margin-top: 5%;
+                    display: block;
+                    text-align: center;
+                    background-color: #e7e7e8;
+                    color: #d1d1d3;
+                    padding: 4%;
+                    border-radius: 1.5rem;
+                    font-size: px2rem(28);
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+                form {
+                    height: 100%;
+                    padding-top: px2rem(15);
+                    padding-bottom: px2rem(15);
+                    font-size: px2rem(30);
+                    div {
+                        width: 100%;
+                        height: 25%;
+                        line-height: 2.5rem;
+                        display: flex;
+                        border-radius: px2rem(8);
+                        overflow: hidden;
+                        margin-top: px2rem(15);
+                        padding-right: px2rem(36);
+                        background: #ffffff;
+                        input {
+                            height: 100%;
+                            width: 100%;
+                            background: #ffffff;
+                            padding-left: px2rem(36);
+                            font-size: px2rem(30);
+                            flex: 1;
+                        }
+                        input::-webkit-input-placeholder,
+                        textarea::-webkit-input-placeholder {
+                            color: #d1d1d3;
+                        }
+                        input:-moz-placeholder,
+                        textarea:-moz-placeholder {
+                            color: #d1d1d3;
+                        }
+                        input::-moz-placeholder,
+                        textarea::-moz-placeholder {
+                            color: #d1d1d3;
+                        }
+                        input:-ms-input-placeholder,
+                        textarea:-ms-input-placeholder {
+                            color: #d1d1d3;
+                        }
+                    }
+                    .telephone {
+                        img {
+                            width: 0.9rem;
+                            height: 60%;
+                            margin-left: px2rem(-10);
+                            margin-top: 4%;
+                        }
+                    }
+                    .verify_code {
+                        padding-right: px2rem(16);
+                        .verify_code_btn {
+                            line-height: 1.6rem;
+                            text-align: center;
+                            display: inline-block;
+                            padding: 0 7%;
+                            height: 68.42%;
+                            color: #222;
+                            position: relative;
+                            font-size: px2rem(28);
+                            top: 15.79%;
+                            background-color: #fed500;
+                            border-radius: px2rem(8);
+                            vertical-align: middle;
+                        }
+                    }
+                    .password {
+                        border: none;
+                        .password_btn {
+                            display: inline-block;
+                            width: 1.2rem;
+                            text-align: center;
+                            img {
+                                width: px2rem(34);
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+            .m_t33_risk {
+                color: #fff;
+                font-size: px2rem(18);
+                width: 80%;
+                margin: 0 auto;
+                text-align: left;
+                line-height: px2rem(32);
+                padding-bottom: 0.5rem;
+                padding-top: 0.5rem;
+                position: absolute;
+                left: 10%;
+                bottom: 0%;
+            }
+        }
+    }
+}

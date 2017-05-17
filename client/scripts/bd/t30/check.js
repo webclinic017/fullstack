@@ -9,36 +9,44 @@ $(document).ready(function () {
     var hostnameUrl = window.location.hostname;
     var originUrl = window.location.origin;
     var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.') + 1) || "tigerwit.com";
-    // console.info(window.location);
+    var href = window.location.href;
     lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
     if (lp != "") {
         document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl;
     }
 
-    if (window.location.href.indexOf("?") >= 0) {
-        var aQuery = window.location.href.split("?");
+    function getUserParam() {
         var aGET = {};
-        if (aQuery.length > 1) {
-            var aBuf = aQuery[1].split("&");
-            for (var i = 0, iLoop = aBuf.length; i < iLoop; i++) {
-                var aTmp = aBuf[i].split("=");
-                aGET[aTmp[0]] = aTmp[1];
+        if (href.indexOf('?') != -1) {
+            var aQuery = href.split('?')[1];
+            if (aQuery.length > 0) {
+                var aBuf = aQuery.split("&");
+                for (var i = 0, iLoop = aBuf.length; i < iLoop; i++) {
+                    var aTmp = aBuf[i].split("=");
+                    aGET[aTmp[0]] = aTmp[1];
+                }
+            };
+            pid = aGET['pid'] ? aGET['pid'] : "";
+            unit = aGET['unit'] ? aGET['unit'] : "";
+            key = aGET['key'] ? aGET['key'] : "";
+
+            if (pid != '') {
+                // 清空重写
+                document.cookie = 'pid=' + null + ';path=/;domain=' + null;
+                document.cookie = 'unit=' + null + ';path=/;domain=' + null;
+                document.cookie = 'key=' + null + ';path=/;domain=' + null;
+
+                document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl;
+
+                if (unit) {
+                    document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl;
+                }
+                if (key) {
+                    document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl;
+                }
             }
         }
-        pid = aGET['pid'] ? aGET['pid'] : "";
-        unit = aGET['unit'] ? aGET['unit'] : "";
-        key = aGET['key'] ? aGET['key'] : "";
-
-        if (pid != "") {
-            document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl;
-        }
-        if (unit != "") {
-            document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl;
-        }
-        if (key != "") {
-            document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl;
-        }
-    }
+    } getUserParam();
 
     window.bdRegister = regist;
     function regist(info) {

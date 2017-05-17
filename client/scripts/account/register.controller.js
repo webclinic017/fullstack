@@ -67,7 +67,7 @@
             },
             captchaBtn: {
                 show: false,
-                status: 0
+                msg: ''
             },
             email: {
                 show: false,
@@ -75,7 +75,7 @@
             },
             system: {
                 show: false,
-                msg: 0    // 0, 1, 2
+                msg: ''
             }
         };
 
@@ -128,24 +128,29 @@
         });
 
         function checkUsernameExist() {
-            account.checkExist('', $scope.account.username).then(function (data) {
-                // 如果存在
-                if (data.data) {
-                    $scope.backErr.username.status = 1;
-                } else {
-                    $scope.backErr.username.status = 0;
+            account.checkExist(1, $scope.account.username).then(function (data) {
+                if (!data) return;
+                if (data.is_succ) {
+                    // 如果存在
+                    if (data.data) {
+                        $scope.backErr.username.status = 1;
+                    } else {
+                        $scope.backErr.username.status = 0;
+                    }
                 }
             });
         }
 
         function checkEmailExist() {
-            account.checkExist($scope.account.email).then(function (data) {
-
-                // 如果存在
-                if (data.data) {
-                    $scope.backErr.email.status = 1;
-                } else {
-                    $scope.backErr.email.status = 0;
+            account.checkExist(2, $scope.account.email).then(function (data) {
+                if (!data) return;
+                if (data.is_succ) {
+                    // 如果存在
+                    if (data.data) {
+                        $scope.backErr.email.status = 1;
+                    } else {
+                        $scope.backErr.email.status = 0;
+                    }
                 }
             });
         }
@@ -164,41 +169,29 @@
             sa.track('btn_register_code');
             
             $scope.clickable.captcha = false;
-
+            token = $cookies['code_token'];
             var tmp;
             if ($scope.voiceCaptcha) {
-                tmp = account.getRVoiceCaptcha($scope.account.phone);
+                tmp = account.getRCaptcha($scope.account.phone, token, 1, 2);
             } else {
-                token = $cookies['tiger_token'];
-                tmp = account.getRCaptcha($scope.account.phone, token);
+                tmp = account.getRCaptcha($scope.account.phone, token, 1);
             }
 
             tmp.then(function (data) {
                 // console.info(data);
+                if (!data) return;
                 if (data.is_succ) {
                     $scope.startTimer();
                 } else {
 
-                    if (data.error_code === 3) {
-                        $scope.backErr.phone.status = 1;
+                    $scope.backErr.captchaBtn.show = true;
+                    $scope.backErr.captchaBtn.msg = data.message;
+                    $timeout(function () {
+                        $scope.backErr.captchaBtn.show = false;
+                        $scope.backErr.captchaBtn.msg = '';
                         $scope.clickable.captcha = true;
-                    }
-
-                    if (data.error_code === 1 || data.error_code === 2 ||
-                            data.error_code === 5 || data.error_code === 8) {
-                        $scope.backErr.captchaBtn.show = true;
-                        $scope.backErr.captchaBtn.status = data.error_code;
-
-                        $timeout(function () {
-                            $scope.backErr.captchaBtn.show = false;
-                            $scope.backErr.captchaBtn.status = 0;
-                            $scope.clickable.captcha = true;
-                        }, 3000);
-                    }
+                    }, 3000);
                 }
-            }, function (error) {
-                console.log(error);
-                $scope.clickable.captcha = true;
             });
         }
 

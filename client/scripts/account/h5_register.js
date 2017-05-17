@@ -4,13 +4,19 @@
     var token = null;
 
     function set_token() {
-        $.ajax({
-            type: "post",
-            url: '/action/public/v3/set_token',
-            success: function () {
-                token = $.cookie("tiger_token");
+        publicRequest('setToken', 'POST').then(function (data) {
+            if (!data) return;
+            if (data.is_succ) {
+                token = $.cookie("code_token");
             }
         });
+        // $.ajax({
+        //     type: "post",
+        //     url: '/action/public/v3/set_token',
+        //     success: function () {
+        //         token = $.cookie("tiger_token");
+        //     }
+        // });
     }
 
     set_token();
@@ -96,57 +102,98 @@
             _czc.push(["_trackEvent", "注册页", "获取验证码"]);
 
             /*今日头条*/
-            if (window.location.pathname.indexOf('t33_b') != -1) {
-                _taq.push({ convert_id: "55824901749", event_type: "view" })
-            }
+            // if (window.location.pathname.indexOf('t33_b') != -1) {
+            //     _taq.push({ convert_id: "55824901749", event_type: "view" })
+            // }
 
             /*loading层*/
             layer.open({ type: 2, shadeClose: false });
-            $.ajax({
-                type: "post",
-                url: "/action/public/v3/get_phone_reg_code",
-                data: {
-                    phone: $("#telephone").val(),
-                    token: $.cookie("tiger_token")
-                },
-                success: function (data) {
-                    layer.closeAll();
-                    data = JSON.parse(data);
-                    if (data.is_succ) {
-                        /*提示*/
-                        layer.open({
-                            content: '验证码已发送!',
-                            skin: 'msg',
-                            anim: false,
-                            time: 1.2 /*1.2秒后自动关闭*/
-                        });
+            publicRequest('getPhoneCode', 'POST', {
+                phone: $("#telephone").val(),
+                code_token: $.cookie("code_token"),
+                type: 1
+            }).then(function (data) {
+                layer.closeAll();
+                if (!data) return;
+                if (data.is_succ) {
+                    /*提示*/
+                    layer.open({
+                        content: '验证码已发送!',
+                        skin: 'msg',
+                        anim: false,
+                        time: 1.2 /*1.2秒后自动关闭*/
+                    });
 
-                        /*倒计时*/
-                        if (Boolean(interval) == false) {
-                            var duration = 59;
-                            interval = setInterval(function () {
-                                $("#verify_code_btn").addClass("disable").html(duration-- + "s");
-                                if (duration <= 0) {
-                                    clearInterval(interval);
-                                    interval = null;
-                                    $("#verify_code_btn").removeClass("disable").html("重新获取");
-                                    duration = 59;
-                                    /*重新获取token*/
-                                    set_token();
-                                }
-                            }, 1000);
-                        }
-                    } else {
-                        set_token();
-                        layer.open({
-                            content: '获取失败,请重试!',
-                            skin: 'msg',
-                            anim: false,
-                            time: 2 /*3秒后自动关闭*/
-                        });
+                    /*倒计时*/
+                    if (Boolean(interval) == false) {
+                        var duration = 59;
+                        interval = setInterval(function () {
+                            $("#verify_code_btn").addClass("disable").html(duration-- + "s");
+                            if (duration <= 0) {
+                                clearInterval(interval);
+                                interval = null;
+                                $("#verify_code_btn").removeClass("disable").html("重新获取");
+                                duration = 59;
+                                /*重新获取token*/
+                                set_token();
+                            }
+                        }, 1000);
                     }
+                } else {
+                    set_token();
+                    layer.open({
+                        content: '获取失败,请重试!',
+                        skin: 'msg',
+                        anim: false,
+                        time: 2 /*3秒后自动关闭*/
+                    });
                 }
             });
+            // $.ajax({
+            //     type: "post",
+            //     url: "/action/public/v3/get_phone_reg_code",
+            //     data: {
+            //         phone: $("#telephone").val(),
+            //         token: $.cookie("tiger_token")
+            //     },
+            //     success: function (data) {
+            //         layer.closeAll();
+            //         data = JSON.parse(data);
+            //         if (data.is_succ) {
+            //             /*提示*/
+            //             layer.open({
+            //                 content: '验证码已发送!',
+            //                 skin: 'msg',
+            //                 anim: false,
+            //                 time: 1.2 /*1.2秒后自动关闭*/
+            //             });
+
+            //             /*倒计时*/
+            //             if (Boolean(interval) == false) {
+            //                 var duration = 59;
+            //                 interval = setInterval(function () {
+            //                     $("#verify_code_btn").addClass("disable").html(duration-- + "s");
+            //                     if (duration <= 0) {
+            //                         clearInterval(interval);
+            //                         interval = null;
+            //                         $("#verify_code_btn").removeClass("disable").html("重新获取");
+            //                         duration = 59;
+            //                         /*重新获取token*/
+            //                         set_token();
+            //                     }
+            //                 }, 1000);
+            //             }
+            //         } else {
+            //             set_token();
+            //             layer.open({
+            //                 content: '获取失败,请重试!',
+            //                 skin: 'msg',
+            //                 anim: false,
+            //                 time: 2 /*3秒后自动关闭*/
+            //             });
+            //         }
+            //     }
+            // });
         }
 
         function checkTel() {
@@ -324,17 +371,13 @@
                 if (!checkTel()) return;
                 /*检测手机号是否已经存在*/
                 if (($("#telephone").val().trim() != "")) {
-                    $.ajax({
-                        type: "get",
-                        url: "/action/public/v4/exists",
-                        data: {
-                            key: $("#telephone").val(),
-                            username: null
-                        },
-                        success: function (data) {
-                            data = JSON.parse(data);
-                            console.log(data);
-                            if (data && data.data == true) {
+                    publicRequest('checkExists', 'GET', {
+                        key: 3,
+                        value: $("#telephone").val()
+                    }).then(function (data) {
+                        if (!data) return;
+                        if (data.is_succ) {
+                            if (data.data) {
                                 layer.open({
                                     content: '此号码已注册!',
                                     skin: 'msg',
@@ -345,7 +388,29 @@
                                 sendVerifyCode();
                             }
                         }
-                    })
+                    });
+                    // $.ajax({
+                    //     type: "get",
+                    //     url: "/action/public/v4/exists",
+                    //     data: {
+                    //         key: $("#telephone").val(),
+                    //         username: null
+                    //     },
+                    //     success: function (data) {
+                    //         data = JSON.parse(data);
+                    //         console.log(data);
+                    //         if (data && data.data == true) {
+                    //             layer.open({
+                    //                 content: '此号码已注册!',
+                    //                 skin: 'msg',
+                    //                 anim: false,
+                    //                 time: 2 /*1.2秒后自动关闭*/
+                    //             });
+                    //         } else {
+                    //             sendVerifyCode();
+                    //         }
+                    //     }
+                    // })
                 }
             });
         }());
@@ -364,14 +429,14 @@
                 statistics($("#telephone").val());
 
                 /*今日头条统计表单提交*/
-                if (window.location.pathname.indexOf('t33_a') != -1) {
-                    _taq.push({ convert_id: "55824929459", event_type: "form" })
-                }
+                // if (window.location.pathname.indexOf('t33_a') != -1) {
+                //     _taq.push({ convert_id: "55824929459", event_type: "form" })
+                // }
 
                 /*今日头条统计表单提交*/
-                if (window.location.pathname.indexOf('t35') != -1) {
-                    _taq.push({convert_id:"58276692798", event_type:"form"})
-                }
+                // if (window.location.pathname.indexOf('t35') != -1) {
+                //     _taq.push({convert_id:"58276692798", event_type:"form"})
+                // }
 
                 $.ajax({
                     url: "/action/public/app/h5_register",

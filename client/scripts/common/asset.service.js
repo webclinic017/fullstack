@@ -39,7 +39,7 @@
         function withdraw(amount, cardId) {
             amount = Number(amount).toFixed(2);
 
-            return $http.post(o.withdrawApi, {
+            return publicHttp.dealPublicRequest(o.withdrawApi, 'POST', {
                 amount: amount,
                 id: cardId
             });
@@ -52,7 +52,7 @@
          * @method getCard
          */
         function getCard() {
-            return $http.get(o.getCardApi);
+            return publicHttp.dealPublicRequest(o.getCardApi, 'GET');
         }
 
         /**
@@ -61,7 +61,7 @@
          * @method bindCard
          */
         function bindCard(number, name, address, province, city, id) {
-            return $http.post(o.bindCardApi, {
+            return publicHttp.dealPublicRequest(o.bindCardApi, 'PUT', {
                 card_no: number,
                 bank_name: name,
                 bank_addr: address,
@@ -160,7 +160,7 @@
          * @method getFXRate
          */
         function getFXRate() {
-            return $http.get(o.getFXRateApi);
+            return publicHttp.dealPublicRequest(o.getFXRateApi, 'GET');
         }
 
         /**
@@ -171,11 +171,9 @@
          */
 
         function getIsWithdraw (amount) {
-            console.info('getIsWithdraw is sending', amount);
-            return $http.get(o.getIsWithdrawApi,{
-              params : {
-                         amount : amount
-                       }
+            // console.info('getIsWithdraw is sending', amount);
+            return publicHttp.dealPublicRequest(o.getIsWithdrawApi, 'GET', {
+                amount: amount
             });
         }
 

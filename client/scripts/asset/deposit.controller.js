@@ -41,7 +41,11 @@
 
         // 汇率
         asset.getFXRate().then(function(data) {
-            $scope.deposit.FXRate.value = data.data.parity;
+            if (!data) return;
+            // console.log(data);
+            if (data.is_succ) {
+                $scope.deposit.FXRate.value = data.data.in_rate;
+            }
         });
 
         // 获取入金限制

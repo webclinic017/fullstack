@@ -577,37 +577,41 @@ module.exports = function (app) {
 
     });
     // t33 作为固定推广链接，要更新最新的落地页到这个地址
-    app.route('/bd/:page(t33|t33_t|t33_a|t33_b)').get(function (req, res) {
+    app.route('/bd/:page(|t33_t|t33_a|t33_b)').get(function (req, res) {
         var pageId = req.params.page || 't33';
         setEnvCf(req, res);
-        // if (isMobile(req)) {
-        //     if (COMPANY_NAME === 'tigerwit') {
-        //         if (pageId == 't33') {
-        //             res.render('bd_m_t33', extendPublic({
-        //                 regBtn_text: '领取赠金',
-        //                 coInfo: "",
-        //                 page: pageId,
-        //                 sel_text: '首选'
-        //             }, req));
-        //         } else {
-        //             res.render('bd_m_t33', extendPublic({
-        //                 regBtn_text: '前往领取赠金',
-        //                 coInfo: "Tiger Financial Technology PTY. Ltd.",
-        //                 page: pageId,
-        //                 sel_text: '优选'
-        //             }, req));
-        //         }
-        //     } else {
-        //         res.render('bd_t33_sub', extendPublic({}, req));
-        //     }
-        // } else {
-        //     res.render('bd_t33_sub', extendPublic({}, req));
-        // }
+        if (isMobile(req)) {
+            if (COMPANY_NAME === 'tigerwit') {
+                if (pageId == 't33') {
+                    res.render('bd_m_t33', extendPublic({
+                        regBtn_text: '领取赠金',
+                        coInfo: "",
+                        page: pageId,
+                        sel_text: '首选'
+                    }, req));
+                } else {
+                    res.render('bd_m_t33', extendPublic({
+                        regBtn_text: '前往领取赠金',
+                        coInfo: "Tiger Financial Technology PTY. Ltd.",
+                        page: pageId,
+                        sel_text: '优选'
+                    }, req));
+                }
+            } else {
+                res.render('bd_t33_sub', extendPublic({}, req));
+            }
+        } else {
+            res.render('bd_t33_sub', extendPublic({}, req));
+        }
+    });
+
+    app.route('/bd/t33').get(function (req, res) {
+        setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd_m_redbag', extendPublic({}, req));
+                res.render('bd_m_t37', extendPublic({}, req))
             } else {
-                res.render('bd_redbag', extendPublic({}, req));
+                res.render('bd_t37', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -618,10 +622,15 @@ module.exports = function (app) {
     app.route('/bd/t35').get(function (req, res) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+            // if (isMobile(req)) {
+            //     res.render('bd_m_redbag', extendPublic({}, req));
+            // } else {
+            //     res.render('bd_redbag', extendPublic({}, req));
+            // }
             if (isMobile(req)) {
-                res.render('bd_m_redbag', extendPublic({}, req));
+                res.render('bd_m_t37', extendPublic({}, req))
             } else {
-                res.render('bd_redbag', extendPublic({}, req));
+                res.render('bd_t37', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -651,6 +660,15 @@ module.exports = function (app) {
             res.render('bd_pct36_game', extendPublic({}, req));
         }
     });
+
+    // app.route('/bd/t37').get(function (req, res) {
+    //     setEnvCf(req, res);
+    //     if (isMobile(req)) {
+    //         res.render('bd_m_t37', extendPublic({}, req))
+    //     } else {
+    //         res.render('bd_t37', extendPublic({}, req));
+    //     }
+    // });
 
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
     /*

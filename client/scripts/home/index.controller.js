@@ -27,10 +27,11 @@
             layer.open({
                 type: 1,
                 skin: 'home_redbag_layer', //加上边框
+                closeBtn: 0,
                 title: '',
                 shade: 0.6,
-                area: ['800px', '488px'], //宽高
-                content: '<div class="content"><div class="title">注册开户送红包<br>700美金等你领</div><a href="/bd/t35" class="btn">点击领取</a></div>'
+                area: ['800px', '600px'], //宽高
+                content: '<div class="content"><a href="/bd/t35" class="btn"></a><div class="close" onclick="layer.closeAll();"></div></div>'
             });
         }
 
@@ -42,38 +43,49 @@
             $scope.indexMasters = data.data.slice(0, 3);
         });
 
-        // 存cookie
-        if (window.location.href.indexOf("?") >= 0) {
+        function getUserParam() {
             var hostnameUrl = window.location.hostname;
+            var href = window.location.href;
             var originUrl = window.location.origin;
             var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.') + 1) || "tigerwit.com";
-            // console.info(window.location);
+            var pid = '', lp = '', unit = '', key = '', aGET = {};
             var lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
+
             if (lp != "") {
                 document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl;
             }
-            var aQuery = window.location.href.split("?");
-            var aGET = {};
-            if (aQuery.length > 1) {
-                var aBuf = aQuery[1].split("&");
-                for (var i = 0, iLoop = aBuf.length; i < iLoop; i++) {
-                    var aTmp = aBuf[i].split("=");
-                    aGET[aTmp[0]] = aTmp[1];
+
+            if (href.indexOf('?') != -1) {
+                var aQuery = href.split('?')[1];
+                if (aQuery.length > 0) {
+                    var aBuf = aQuery.split("&");
+                    for (var i = 0, iLoop = aBuf.length; i < iLoop; i++) {
+                        var aTmp = aBuf[i].split("=");
+                        aGET[aTmp[0]] = aTmp[1];
+                    }
+                };
+                pid = aGET['pid'] ? aGET['pid'] : "";
+                unit = aGET['unit'] ? aGET['unit'] : "";
+                key = aGET['key'] ? aGET['key'] : "";
+
+                if (pid != '') {
+                    // 清空重写
+                    // console.log(domainUrl);
+                    document.cookie = 'pid=' + null + ';path=/;domain=' + null;
+                    document.cookie = 'unit=' + null + ';path=/;domain=' + null;
+                    document.cookie = 'key=' + null + ';path=/;domain=' + null;
+
+                    document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl;
+
+                    if (unit) {
+                        document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl;
+                    }
+                    if (key) {
+                        document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl;
+                    }
                 }
             }
-            var pid = aGET['pid'] ? aGET['pid'] : "";
-            var unit = aGET['unit'] ? aGET['unit'] : "";
-            var key = aGET['key'] ? aGET['key'] : "";
+        } getUserParam();
 
-            if (pid != "") {
-                document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl;
-            }
-            if (unit != "") {
-                document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl;
-            }
-            if (key != "") {
-                document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl;
-            }
-        }
     }
 })();

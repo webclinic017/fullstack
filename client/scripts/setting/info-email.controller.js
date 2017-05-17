@@ -67,6 +67,7 @@
                 email = $scope.emailInfo.newEmail;
             }
             account.sendEmailCode(email).then(function (data) {
+                if (!data) return;
                 // console.info(data);
                 if (data.is_succ) {
                     if (type === 'old') {
@@ -94,7 +95,7 @@
                         });
                     }
                 } else {
-                    layer.msg(data.error_msg, {
+                    layer.msg(data.message, {
                         time: 2000
                     });
                 }
@@ -112,10 +113,11 @@
             account.checkEmailCode($scope.emailInfo.oldCode).then(function (data) {
                 // console.info(data);
                 $scope.clickable.oldSubmit = true;
+                if (!data) return;
                 if (data.is_succ) {
                     $scope.step++;
                 } else {
-                    layer.msg(data.error_msg, {
+                    layer.msg(data.message, {
                         time: 2000
                     });
                 }
@@ -133,6 +135,7 @@
             account.setBindEmail($scope.emailInfo.newEmail, $scope.emailInfo.newCode).then(function (data) {
                 
                 $scope.clickable.newSubmit = true;
+                if (!data) return;
                 if (data.is_succ) {
                     layer.msg('新邮箱绑定成功', {
                         time: 2000
@@ -140,7 +143,7 @@
                     $scope.settingInfo.email = $scope.emailInfo.newEmail;
                     $scope.step = 1;
                 } else {
-                    layer.msg(data.error_msg, {
+                    layer.msg(data.message, {
                         time: 2000
                     });
                 }

@@ -61,37 +61,40 @@
     }
 }
 .home_redbag_layer {
+    background-color: transparent !important;
+    box-shadow: none !important;
+
     .layui-layer-content {
         width: 800px;
         height: 488px;
         border-radius: 2px;
-        overflow: hidden;
-        @include img-normal($image-path-home + "layer_redbag_bd.png");
+        overflow: inherit !important;
+        @include img-normal($image-path-home + "layer_redbag_bd2.png");
         background-repeat: no-repeat;
+        background-size: 100% 100%;
 
         .content {
-
-            .title {
-                font-size: 50px;
-                padding-left: 282px;
-                padding-top: 62px;
-                font-weight: 500;
-            }
+            height: 100%;
+            position: relative;
+            
             .btn {
-                margin-left: 346px;
-                border-color: #ff0000;
-                background: rgba(255,0,0,0.1);
-                margin-top: 36px;
-                height: 70px;
-                color: #ff0000;
-                line-height: 70px;
-                font-size: 22px;
-                padding: 0 50px;
-                border-radius: 4px;
+                position: absolute;
+                top: 467px;
+                left: 243px;
+                width: 357px;
+                height: 80px;
+                cursor: pointer;
+            }
+            .close {
+                position: absolute;
+                top: 100px;
+                right: -60px;
+                width: 60px;
+                height: 60px;
 
-                &:hover {
-                    background: rgba(255,0,0,0.2);
-                }
+                @include img-normal($image-path-home + "layer_redbag_close.png");
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
             }
         }
 
@@ -110,17 +113,17 @@
         height: 818px !important;
         background-position: center center;
         background-size: cover;
-        @include img-normal($image-path-home + "index-banner-redbag.png");
+        @include img-normal($image-path-home + "index-banner-redbag_0501.png");
         
         &.pkds {
             @include img-normal($image-path-home + "index3-banner1.jpg");
         }
 
         .pic {
-            padding-top: 110px;
+            padding-top: 69px;
 
             img {
-                width: 900px;
+                width: 966px;
             }
         }
         .date {
@@ -293,6 +296,32 @@
         font-size: 24px;
         line-height: 24px;
         color: $brand-primary;
+
+        @include m(new) {
+            width: 966px;
+            margin: 0 auto;
+            position: relative;
+
+            a {
+                position: absolute;
+                width: 185px;
+                height: 76px;
+                top: -137px;
+                right: 170px;
+                cursor: pointer;
+                border: 1px solid #fff;
+                border-radius: 38px;
+                text-align: center;
+                font-size: 28px;
+                line-height: 76px;
+                color: #fff;
+
+                &:hover {
+                    border-color: #ff1d25;
+                    color: #ff1d25;
+                }
+            }
+        }
 
         &:hover {
             background: $brand-primary;

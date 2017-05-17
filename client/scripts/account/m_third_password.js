@@ -54,10 +54,12 @@ $(document).ready(function () {
 
     $passwordSuccBtn.on("tap", function (e) {
         e.preventDefault();
-        var iframe = document.createElement('iframe');
-        iframe.style.display = 'none';
-        iframe.src = window.location.protocol+'//'+window.location.hostname+'/third/complete/changePassword';
-        document.body.appendChild(iframe);
+        // var iframe = document.createElement('iframe');
+        // iframe.style.display = 'none';
+        // iframe.src = window.location.protocol+'//'+window.location.hostname+'/third/complete/changePassword';
+        // document.body.appendChild(iframe);
+        var r_href = window.location.protocol+'//'+window.location.hostname+'/third/complete/changePassword';
+        window.location = r_href;
     });
 
     function setUserCookie () {
