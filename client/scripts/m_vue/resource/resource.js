@@ -54,13 +54,14 @@ function dealApiUrlResource($url, $method, $params) {
         return Vue.resource($url).get($params).then(function (data) {
             // console.log(data.data);
             data = data.data;
-            if (data.code === 100014) {
-                console.log(data.message);
+            if (data.code === 100014 || data.code === 100010) {
+                // console.log(data.message);
                 layer.open({
                     skin: 'msg',
                     content: "请重新登陆",
                     time: 2
                 });
+                toLogin();
             } else {
                 return data;
             }
@@ -73,13 +74,14 @@ function dealApiUrlResource($url, $method, $params) {
         return Vue.resource($url).update($params).then(function (data) {
             // console.log(data.data);
             data = data.data;
-            if (data.code === 100014) {
+            if (data.code === 100014 || data.code === 100010) {
                 console.log(data.message);
                 layer.open({
                     skin: 'msg',
                     content: "请重新登陆",
                     time: 2
                 });
+                toLogin();
             } else {
                 return data;
             }
@@ -92,13 +94,14 @@ function dealApiUrlResource($url, $method, $params) {
         return Vue.resource($url).save($params).then(function (data) {
             // console.log(data.data);
             data = data.data;
-            if (data.code === 100014) {
+            if (data.code === 100014 || data.code === 100010) {
                 console.log(data.message);
                 layer.open({
                     skin: 'msg',
                     content: "请重新登陆",
                     time: 2
                 });
+                toLogin();
             } else {
                 return data;
             }
@@ -115,4 +118,13 @@ function errFunc (error) {
         content: "服务器异常",
         time: 2
     });
+    toLogin();
+}
+
+function toLogin() {
+    setTimeout(function () {
+        callNative({
+            type: "login"
+        });
+    }, 1000);
 }
