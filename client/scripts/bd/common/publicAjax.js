@@ -38,7 +38,7 @@
         
         if ($method.toUpperCase() === 'GET') {
             return $.get($url, $params).then(function (data) {
-                if (data.code === 100014) {
+                if (data.code === 100014 || data.code === 100010) {
                     layer.open({
                         skin: 'msg',
                         content: "请重新登陆",
@@ -60,7 +60,7 @@
         }
         if ($method.toUpperCase() === 'POST') {
             return $.post($url, $params).then(function (data) {
-                if (data.code === 100014) {
+                if (data.code === 100014 || data.code === 100010) {
                     layer.open({
                         skin: 'msg',
                         content: "请重新登陆",
@@ -82,7 +82,7 @@
         }
         if ($method.toUpperCase() === 'PUT') {
             return $.put($url, $params).then(function (data) {
-                if (data.code === 100014) {
+                if (data.code === 100014 || data.code === 100010) {
                     layer.open({
                         skin: 'msg',
                         content: "请重新登陆",
@@ -104,9 +104,11 @@
         }
 
         function toLogin () {
-            callNative({
-                type: "login"
-            });
+            setTimeout(function () {
+                callNative({
+                    type: "login"
+                });
+            }, 1000);
         }
         // return $.ajax({
         //     url: $url,
