@@ -81,26 +81,57 @@
             });
         }
         if ($method.toUpperCase() === 'PUT') {
-            return $.put($url, $params).then(function (data) {
-                if (data.code === 100014 || data.code === 100010) {
+            return $.ajax({
+                url: $url,
+                type: 'PUT',
+                xhrFields: {
+                    withCredentials: true
+                },
+                data: $params,
+                success: function (data) {
+                    // console.log(data);
+                    if (data.code === 100014) {
+                        console.log(data.message);
+                        layer.open({
+                            skin: 'msg',
+                            content: "请重新登陆",
+                            time: 2
+                        });
+                        toLogin();
+                    } else {
+                        return data;
+                    }
+                },
+                error: function (error) {
+                    console.log(error);
                     layer.open({
                         skin: 'msg',
-                        content: "请重新登陆",
+                        content: "服务器异常",
                         time: 2
                     });
                     toLogin();
-                } else {
-                    return data;
                 }
-            }, function (error) {
-                console.log(error);
-                layer.open({
-                    skin: 'msg',
-                    content: "服务器异常",
-                    time: 2
-                });
-                toLogin();
             });
+            // return $.put($url, $params).then(function (data) {
+            //     if (data.code === 100014 || data.code === 100010) {
+            //         layer.open({
+            //             skin: 'msg',
+            //             content: "请重新登陆",
+            //             time: 2
+            //         });
+            //         toLogin();
+            //     } else {
+            //         return data;
+            //     }
+            // }, function (error) {
+            //     console.log(error);
+            //     layer.open({
+            //         skin: 'msg',
+            //         content: "服务器异常",
+            //         time: 2
+            //     });
+            //     toLogin();
+            // });
         }
 
         function toLogin () {
