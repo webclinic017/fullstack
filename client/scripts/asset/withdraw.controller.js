@@ -74,7 +74,7 @@
                 $scope.message = {
                     is_succ: true
                 };
-                $scope.withdraw.maxAmount = data.data < 0 ? 0 : data.data;
+                $scope.withdraw.maxAmount = data.data.amount < 0 ? 0 : data.data.amount;
             } else {
                 $scope.message = {
                     is_succ: false,
