@@ -36,35 +36,109 @@
         $url = apiUrl[$url] + '?token='+token;
         $params = $params ? $params : {};
         
-        return $.ajax({
-            url: $url,
-            type: $method.toUpperCase(),
-            xhrFields: {
-                withCredentials: true
-            },
-            data: $params,
-            success: function (data) {
-                // console.log(data);
+        if ($method.toUpperCase() === 'GET') {
+            return $.get($url, $params).then(function (data) {
                 if (data.code === 100014) {
-                    console.log(data.message);
                     layer.open({
                         skin: 'msg',
                         content: "请重新登陆",
                         time: 2
                     });
+                    toLogin();
                 } else {
                     return data;
                 }
-            },
-            error: function (error) {
+            }, function (error) {
                 console.log(error);
                 layer.open({
                     skin: 'msg',
                     content: "服务器异常",
                     time: 2
                 });
-            }
-        });
+                toLogin();
+            });
+        }
+        if ($method.toUpperCase() === 'POST') {
+            return $.post($url, $params).then(function (data) {
+                if (data.code === 100014) {
+                    layer.open({
+                        skin: 'msg',
+                        content: "请重新登陆",
+                        time: 2
+                    });
+                    toLogin();
+                } else {
+                    return data;
+                }
+            }, function (error) {
+                console.log(error);
+                layer.open({
+                    skin: 'msg',
+                    content: "服务器异常",
+                    time: 2
+                });
+                toLogin();
+            });
+        }
+        if ($method.toUpperCase() === 'PUT') {
+            return $.put($url, $params).then(function (data) {
+                if (data.code === 100014) {
+                    layer.open({
+                        skin: 'msg',
+                        content: "请重新登陆",
+                        time: 2
+                    });
+                    toLogin();
+                } else {
+                    return data;
+                }
+            }, function (error) {
+                console.log(error);
+                layer.open({
+                    skin: 'msg',
+                    content: "服务器异常",
+                    time: 2
+                });
+                toLogin();
+            });
+        }
+
+        function toLogin () {
+            callNative({
+                type: "login"
+            });
+        }
+        // return $.ajax({
+        //     url: $url,
+        //     type: $method.toUpperCase(),
+        //     xhrFields: {
+        //         withCredentials: true
+        //     },
+        //     data: $params,
+        //     success: function (data) {
+        //         // console.log(data);
+        //         if (data.code === 100014) {
+        //             console.log(data.message);
+        //             layer.open({
+        //                 skin: 'msg',
+        //                 content: "请重新登陆",
+        //                 time: 2
+        //             });
+        //             console.log(1);
+        //             return 100014;
+        //         } else {
+        //             return data;
+        //         }
+        //     },
+        //     error: function (error) {
+        //         console.log(error);
+        //         layer.open({
+        //             skin: 'msg',
+        //             content: "服务器异常",
+        //             time: 2
+        //         });
+        //     }
+        // });
     }
     // 上传文件 form提交
     function publicUploadFile ($url, $method, oForm) {

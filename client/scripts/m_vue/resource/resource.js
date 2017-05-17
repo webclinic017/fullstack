@@ -55,11 +55,14 @@ function dealApiUrlResource($url, $method, $params) {
             // console.log(data.data);
             data = data.data;
             if (data.code === 100014) {
-                console.log(data.message);
+                // console.log(data.message);
                 layer.open({
                     skin: 'msg',
                     content: "请重新登陆",
                     time: 2
+                });
+                callNative({
+                    type: "login"
                 });
             } else {
                 return data;
@@ -80,6 +83,9 @@ function dealApiUrlResource($url, $method, $params) {
                     content: "请重新登陆",
                     time: 2
                 });
+                callNative({
+                    type: "login"
+                });
             } else {
                 return data;
             }
@@ -99,6 +105,9 @@ function dealApiUrlResource($url, $method, $params) {
                     content: "请重新登陆",
                     time: 2
                 });
+                callNative({
+                    type: "login"
+                });
             } else {
                 return data;
             }
@@ -114,5 +123,8 @@ function errFunc (error) {
         skin: 'msg',
         content: "服务器异常",
         time: 2
+    });
+    callNative({
+        type: "login"
     });
 }
