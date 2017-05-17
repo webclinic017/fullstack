@@ -91,10 +91,10 @@ $(document).ready(function () {
     function getIsWithdraw () {
         publicRequest('checkWithdrawLimit', 'GET').then(function (data) {
             if (!data) return;
-            // console.log(data);
+            console.log(data);
             if (data.is_succ) {
                 isNext = true;
-                canWithdrawBalance = data.data;
+                canWithdrawBalance = data.data.amount;
                 $isWithdrawBalance.html(canWithdrawBalance);
             } else {
                 isNext = false;

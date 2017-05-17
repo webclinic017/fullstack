@@ -58,7 +58,7 @@ if ($(".m_vue").attr("data-page") === "info_username") {
                             } else {
                                 self.backErr.username.show = true;
                                 self.backErr.username.status = -1;
-                                self.backErr.username.tip = data.error_msg;
+                                self.backErr.username.tip = data.message;
 
                                 setTimeout(function () {
                                     self.backErr.username = {
