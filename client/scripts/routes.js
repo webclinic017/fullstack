@@ -37,7 +37,8 @@
                 .state('anthen',{
                     views: {
                         '@': {
-                            templateUrl: '/views/anthen/layout.html'
+                            templateUrl: '/views/anthen/layout.html',
+                            controller: 'AuthenController'
                         }
                     }
                 })
@@ -52,8 +53,12 @@
                                 $stateParams.subpage = $stateParams.subpage || 'investInfo';
                                 return '/views/anthen/' + $stateParams.subpage + '.html';
                             },
-                            controllerProvider: function () {
-                                return "HelpController";
+                            controllerProvider: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'investInfo';
+                                var ctrlPrefix = 'Account';
+                                var ctrlSuffix = 'Controller';
+                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
                             }
                         }
                     }

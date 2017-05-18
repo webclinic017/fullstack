@@ -2,15 +2,19 @@
     width: 600px;
     margin-left: auto;
     margin-right: auto;
-    
     label {
         color: $gray-darker;
     }
-
+    .answers {
+        height: 50px;
+    }
     @include e(title) {
-        margin-top: 30px;
+        margin-top: 10px;
         margin-bottom: 15px;
         font-size: 16px;
         font-weight: 400;
+        @include m(kyc_selection) {
+            height: 32px;
+        }
     }
 }

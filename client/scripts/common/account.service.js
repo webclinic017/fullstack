@@ -14,6 +14,8 @@
             checkLogined: checkLogined,
             setToken: setToken,
             checkExist: checkExist,
+            exsitChecker: exsitChecker,
+            updataUserInfo: updataUserInfo,
             getRCaptcha: getRCaptcha,
             getRVoiceCaptcha: getRVoiceCaptcha,
             register: register,
@@ -49,7 +51,8 @@
             sendEmailCode: sendEmailCode,
             checkEmailCode: checkEmailCode,
             setBindEmail: setBindEmail,
-            hasChecked: false
+            hasChecked: false,
+            getAuthStatus: getAuthStatus //获取认证状态
         };
         var resolveValue;
         return service;
@@ -77,7 +80,7 @@
             } else {
                 expires = 0;
             }
-            
+
             return publicHttp.dealPublicRequest(o.loginApi, 'POST', {
                 account: id,
                 password: password,
@@ -164,6 +167,20 @@
                     username: username
                 }
             });
+        }
+
+        // 新接口exsit
+        // 1:昵称, 2:邮箱, 3:手机号, 4:身份证号码
+        function exsitChecker(type, value, mt4) {
+            return publicHttp.dealPublicRequest(o.exsitCheckerApi, 'GET', {
+                key: type,
+                value: value,
+                mt4: mt4
+            });
+        }
+
+        function updataUserInfo(params) {
+            return publicHttp.dealPublicRequest(o.updataUserInfoApi, 'PUT', params)
         }
 
         /**
@@ -486,7 +503,7 @@
          * @desc 获取KYC认证列表
          */
         function getKyc() {
-            return $http.get(o.getKycApi);
+            return publicHttp.dealPublicRequest(o.getKycApi, 'GET');
         }
 
         /**
@@ -497,12 +514,17 @@
             return $http.get(o.getUserKycApi);
         }
 
+        // 获取认证状态
+        function getAuthStatus() {
+            return publicHttp.dealPublicRequest(o.getAuthStatus, 'GET')
+        }
+
         /**
          * @name setKyc
          * @desc 设置KYC认证列表
          */
         function setKyc(json) {
-            return $http.post(o.setKycApi, json);
+            return publicHttp.dealPublicRequest(o.setKycApi, 'POST', json);
         }
 
         /**
