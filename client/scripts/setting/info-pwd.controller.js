@@ -36,7 +36,8 @@
             },
             system: {
                 show: false,
-                status: 0
+                status: 0,
+                msg: ''
             }
         };
         $scope.clickable = true;
@@ -55,10 +56,8 @@
 
             $scope.clickable = false;
             account.setPwd($scope.password.pwdOld, $scope.password.pwdNew).then(function (data) {
-                if (!data.is_succ && data.error_msg === '密码不正确') {
-                    $scope.backErr.pwdOld.status = 1;
-                    $scope.clickable = true;
-                }
+                if (!data) return;
+                console.log(data);
 
                 if (data.is_succ) {
                     $scope.backErr.system.show = true;
@@ -72,11 +71,24 @@
                         //修改完密码让用户重新登录
                         account.logout().then(function (data) {
                             if (data.is_succ) {
+                                // 神策数据统计
+                                sa.logout(true);
+
                                 account.hasChecked = false;
                                 $scope.$emit('refresh_personal_cookies_info');
                                 $window.location.href='/space/#/account/login';
                             }
-                        });                        
+                        });                      
+                    }, 3000);
+                } else {
+                    $scope.backErr.system.show = true;
+                    $scope.backErr.system.status = 2;
+                    $scope.clickable = true;
+                    $scope.backErr.system.msg = data.message;
+
+                    $timeout(function () {
+                        $scope.backErr.system.show = false;
+                        $scope.backErr.system.status = 0;                        
                     }, 3000);
                 }
             });

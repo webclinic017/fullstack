@@ -4,9 +4,9 @@
 
     angular
         .module('fullstackApp')
-        .directive('twUploadIdCard', twUploadIdCard);
+        .directive('twUploadIdCard', ['api', '$cookies', twUploadIdCard]);
 
-    function twUploadIdCard() {
+    function twUploadIdCard(api, $cookies) {
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
@@ -20,27 +20,13 @@
                     fileInput = element.find(selector.fileInput),
                     face = fileInput.attr('data-face');
 
-                // /*图片预览*/
-                // fileInput.on("change", function () {
-                //     var files = !!this.files ? this.files : [];
-                //     if (!files.length || !window.FileReader) return;
-                //
-                //     if (/^image/.test(files[0].type)) {
-                //         // var reader = new FileReader();
-                //         // reader.readAsDataURL(files[0]);
-                //         // reader.onloadend = function () {
-                //         //     var previewImg = $('<img src=' + this.result + '>');
-                //         //     previewImg.on('load', function () {
-                //         //         previewImg.css({width: '100%',marginBottom:'100%', display: 'none'});
-                //         //         element.prepend(previewImg);
-                //         //         previewImg.fadeIn()
-                //         //     });
-                //         // }
-                //     }
-                // });
+                var token = $cookies["token"] || '';
+                var uploadUrl = api.account.uploadIdCardForm + "?token=" + token;
+                // console.log('uploadUrl', uploadUrl);
 
                 fileInput.fileupload({
-                    url: '/action/public/v4/upload',
+                    url: uploadUrl,
+                    type: 'POST',
                     formData: {
                         face: face
                     },
@@ -56,13 +42,13 @@
                         console.log('当前文件大小' + data.originalFiles[0]['size'] / 1024 + 'KB');
 
                         /*图片预览*/
-                        function uploadPreview(){
+                        function uploadPreview() {
                             var reader = new FileReader();
                             reader.readAsDataURL(data.originalFiles[0]);
                             reader.onloadend = function () {
                                 var previewImg = $('<img src=' + this.result + '>');
                                 previewImg.on('load', function () {
-                                    previewImg.css({width: '100%',marginBottom:'100%', display: 'none'});
+                                    previewImg.css({ width: '100%', marginBottom: '100%', display: 'none' });
                                     element.prepend(previewImg);
                                     previewImg.fadeIn()
                                 });
@@ -91,15 +77,7 @@
                         }
                     },
                     done: function (e, data) {
-                        //console.log(data);
-                        // img = element.find('.' + selector.img);
-                        // imgSrc = data.result.path;
-                        //console.log(imgSrc);
-                        // if (img.length > 0) {
-                        //     img.remove();
-                        // }
-                        // element.prepend('<img class="' + selector.img + '" src="' +
-                        //     imgSrc + '?timestamp=' + e.timeStamp + '" alt="证件照片">');
+                        console.log(e, data);
 
                         scope.$emit('uploadIdCardSuccess', {
                             face: face

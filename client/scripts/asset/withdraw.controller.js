@@ -52,9 +52,12 @@
             getCard();
         });
         // 汇率
-        asset.getFXRate().then(function (data) {
-            $scope.withdraw.FXRate.value = data.data.outparity;
-
+        asset.getFXRate().then(function(data) {
+            if (!data) return;
+            // console.log(data);
+            if (data.is_succ) {
+                $scope.withdraw.FXRate.value = data.data.out_rate;
+            }
         });
 
         // 获取可提取的最大金额
@@ -64,24 +67,28 @@
 
         // 判断出金状态, 获取可提取的最大金额
         asset.getIsWithdraw().then(function (data) {
+            if (!data) return;
             // console.info(data);
             $scope.withdrawMessageSucc = true;
-            $scope.message = data;
-            $scope.withdraw.maxAmount = data.balance < 0 ? 0 : data.balance;
-
-        }, function (err) {
-            console.log(err);
-            $scope.message = {
-                is_succ: false,
-                error_msg: '系统错误，请联系管理员哦～'
-            };
+            if (data.is_succ) {
+                $scope.message = {
+                    is_succ: true
+                };
+                $scope.withdraw.maxAmount = data.data.amount < 0 ? 0 : data.data.amount;
+            } else {
+                $scope.message = {
+                    is_succ: false,
+                    error_msg: data.message
+                };
+            }
         });
 
 
         // 获取银行卡信息
         function getCard() {
             asset.getCard().then(function (data) {
-
+                if (!data) return;
+                // console.log(data);
                 if (data.is_succ) {
                     $scope.withdraw.card.id = data.data.id;
                     $scope.withdraw.card.number = data.data.card_no;
@@ -179,9 +186,9 @@
             $scope.clickable = false;
             // 判断是否可以出金
             asset.getIsWithdraw($scope.withdraw.amount).then(function (data) {
-                $scope.message = data;
+                // $scope.message = data;
                 // console.info(data);
-                if ($scope.message.is_succ) {
+                if (data && data.is_succ) {
                     layer.confirm('现在提现会导致您的账户红包失效，是否继续提现？', {
                         btn: ['取消', '继续提现'], //按钮
                     }, function () {
@@ -189,6 +196,7 @@
                         layer.closeAll();
                     }, function () {
                         asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).then(function (data) {
+                            if (!data) return;
                             $scope.clickable = true;
 
                             if (data.is_succ) {
@@ -199,7 +207,7 @@
                                     subpage: 'withdraw'
                                 }, { reload: true });
                             } else {
-                                var msg = data.error_msg;
+                                var msg = data.message;
                                 openWithdrawMdl(msg);
                             }
                         });

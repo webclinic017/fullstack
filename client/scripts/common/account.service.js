@@ -14,12 +14,9 @@
             checkLogined: checkLogined,
             setToken: setToken,
             checkExist: checkExist,
-            exsitChecker: exsitChecker,
             updataUserInfo: updataUserInfo,
             getRCaptcha: getRCaptcha,
-            getRVoiceCaptcha: getRVoiceCaptcha,
             register: register,
-            getCaptcha: getCaptcha,
             checkPhoneAndCaptcha: checkPhoneAndCaptcha,
             setNewPwd: setNewPwd,
             getPersonalInfo: getPersonalInfo,
@@ -37,8 +34,6 @@
             getCities: getCities,
             setBasicInfo: setBasicInfo,
             setPwd: setPwd,
-            getSCaptcha: getSCaptcha,
-            getSVoiceCaptcha: getSVoiceCaptcha,
             setPhone: setPhone,
             verify: verify,
             getVerifyStatus: getVerifyStatus,
@@ -147,35 +142,24 @@
          * @desc 进入注册页面设置 token 在获取手机验证码时回传
          */
         function setToken() {
-            return $http.post(o.setTokenApi);
+            return publicHttp.dealPublicRequest(o.setTokenApi, 'POST');
         }
 
         /**
          * @name checkExist
          * @desc 检查号码、昵称是否已存在
+         * @param {String} key 1:昵称, 2:邮箱, 3:手机号, 4:身份证号码
          * @param {String} number 可以是手机号、电子邮箱、身份证号码
-         * @param {String} username 昵称
          * @return {Object} {
          *   is_succ: true,
          *   data: true     // true 存在 false 不存在
          * }
          */
-        function checkExist(number, username) {
-            return $http.get(o.checkExistApi, {
-                params: {
-                    key: number,
-                    username: username
-                }
-            });
-        }
-
-        // 新接口exsit
-        // 1:昵称, 2:邮箱, 3:手机号, 4:身份证号码
-        function exsitChecker(type, value, mt4) {
-            return publicHttp.dealPublicRequest(o.exsitCheckerApi, 'GET', {
-                key: type,
-                value: value,
-                mt4: mt4
+        function checkExist(key, number, mt4) {
+            return publicHttp.dealPublicRequest(o.checkExistApi, 'GET', {
+                key: key,
+                value: number,
+                mt4_id: mt4
             });
         }
 
@@ -185,22 +169,16 @@
 
         /**
          * @name getRCaptcha
-         * @desc 获取验证码（注册功能）
+         * @desc 获取验证码
+         * 验证码类型:type -> 1-注册,2-忘记密码,3-修改绑定
+         * 验证码方式:mode -> 1-短信(默认),2-语音
          */
-        function getRCaptcha(phone, token) {
-            return $http.post(o.getRCaptchaApi, {
-                phone: phone,
-                token: token
-            });
-        }
-
-        /**
-         * @name getRVoiceCaptcha
-         * @desc 获取语音验证码（注册功能）
-         */
-        function getRVoiceCaptcha(phone) {
-            return $http.post(o.getRVoiceCaptchaApi, {
-                phone: phone
+        function getRCaptcha(phone, token, type, mode) {
+            return publicHttp.dealPublicRequest(o.getRCaptchaApi, 'POST', {
+                 phone: phone,
+                 code_token: token,
+                 type: type,
+                 mode: mode
             });
         }
 
@@ -224,20 +202,6 @@
         }
 
         /**
-         * @name getCaptcha
-         * @desc 忘记密码功能使用该接口获取验证码（python 接口）改为php接口 2016.11.01
-         * @return {Object} {
-         *   error_code: 1, 2, 4（您未注册）, 5（短信发送失败）, 6（手机号码不正确）
-         * }
-         */
-        function getCaptcha(phone) {
-            return $http.post(o.getCaptchaApi, {
-                phone: phone,
-                type: "pwd"      // 找回密码
-            });
-        }
-
-        /**
          * @name checkPhoneAndCaptcha
          * @desc 检查验手机号与验证码是否匹配，忘记密码功能第一步
          * @return {Object} {
@@ -245,9 +209,9 @@
          * }
          */
         function checkPhoneAndCaptcha(phone, captcha) {
-            return $http.post(o.checkPhoneAndCaptchaApi, {
+            return publicHttp.dealPublicRequest(o.checkPhoneAndCaptchaApi, 'POST', {
                 phone: phone,
-                verify_code: captcha
+                code: captcha
             });
         }
 
@@ -256,10 +220,10 @@
          * @desc 通过手机号码和验证码来设置新密码，忘记密码功能的第二步
          */
         function setNewPwd(phone, captcha, newPwd) {
-            return $http.post(o.setNewPwdApi, {
+            return publicHttp.dealPublicRequest(o.setNewPwdApi, 'PUT', {
                 phone: phone,
                 code: captcha,
-                new_pwd: newPwd
+                password: newPwd
             });
         }
 
@@ -393,22 +357,18 @@
         }
 
         function getWorlds() {
-            return $http.get(o.getWorldsApi);
+            return publicHttp.dealPublicRequest(o.getWorldsApi, 'GET');
         }
 
         function getStates(countryCode) {
-            return $http.get(o.getStatesApi, {
-                params: {
-                    world_code: countryCode
-                }
+            return publicHttp.dealPublicRequest(o.getStatesApi, 'GET', {
+                country_code: countryCode
             });
         }
 
         function getCities(stateCode) {
-            return $http.get(o.getCitiesApi, {
-                params: {
-                    parent_code: stateCode
-                }
+            return publicHttp.dealPublicRequest(o.getCitiesApi, 'GET', {
+                parent_code: stateCode
             });
         }
 
@@ -433,30 +393,10 @@
          * @desc 设置密码
          */
         function setPwd(oldPwd, newPwd) {
-            return $http.post(o.setPwdApi, {
-                origin_pwd: oldPwd,
-                new_pwd: newPwd
-            });
-        }
-
-        /**
-         * @name getSCaptcha
-         * @desc 获取验证码（setting 功能模块）
-         */
-        function getSCaptcha(phone) {
-            return $http.post(o.getSCaptchaApi, {
-                phone: phone
-            });
-        }
-
-        /**
-         * @name getSVoiceCaptcha
-         * @desc 获取语音验证码（setting 功能模块）
-         */
-        function getSVoiceCaptcha(phone, type) {
-            return $http.post(o.getSVoiceCaptchaApi, {
-                phone: phone,
-                type: type
+            return publicHttp.dealPublicRequest(o.setPwdApi, 'PUT', {
+                old_passwd: oldPwd,
+                new_passwd: newPwd,
+                confirm_passwd: newPwd
             });
         }
 
@@ -465,9 +405,9 @@
          * @desc setting 修改手机号码
          */
         function setPhone(phone, captcha) {
-            return $http.post(o.setPhoneApi, {
+            return publicHttp.dealPublicRequest(o.setPhoneApi, 'PUT', {
                 phone: phone,
-                phone_code: captcha
+                code: captcha
             });
         }
 
@@ -567,7 +507,7 @@
          * @param {String} email 不传则向绑定邮箱发送
          */
         function sendEmailCode(email) {
-            return $http.post(o.sendEmailCodeApi, {
+            return publicHttp.dealPublicRequest(o.sendEmailCodeApi, 'POST', {
                 email: email
             });
         }
@@ -581,7 +521,7 @@
          * @param {String} code 验证码
          */
         function checkEmailCode(code) {
-            return $http.post(o.checkEmailCodeApi, {
+            return publicHttp.dealPublicRequest(o.checkEmailCodeApi, 'POST', {
                 code: code
             });
         }
@@ -595,7 +535,7 @@
          * @param {String} code 验证码
          */
         function setBindEmail(email, code) {
-            return $http.post(o.setBindEmailApi, {
+            return publicHttp.dealPublicRequest(o.setBindEmailApi, 'PUT', {
                 email: email,
                 code: code
             });

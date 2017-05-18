@@ -93,7 +93,7 @@
             密码修改成功
         </p>
         <p class="alert-system" ng-show="backErr.system.status === 2">
-            系统繁忙
+            {{ backErr.system.msg || '系统繁忙' }}
         </p>
     </div>
 </div>
