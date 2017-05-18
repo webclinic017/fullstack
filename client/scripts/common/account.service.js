@@ -177,21 +177,19 @@
 
         /**
          * @name register
-         * @desc 注册
-         */
-        function register(username, phone, captcha, email, password, lp, pid, unit, key) {
-
-            return publicHttp.dealPublicRequest(o.registerApi, 'POST', {
-                username: username,
+         * params
                 phone: phone,
                 verify_code: captcha,
-                email: email,
                 password: password,
                 lp: lp,
                 pid: pid,
                 unit: unit,
                 key: key
-            });
+         * @desc 注册
+         */
+        function register(params) {
+
+            return publicHttp.dealPublicRequest(o.registerApi, 'POST', params);
         }
 
         /**
