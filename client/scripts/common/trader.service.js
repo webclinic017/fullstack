@@ -4,28 +4,35 @@
 
     angular.module('fullstackApp').factory('trader', trader);
 
-    trader.$inject = ['$http', 'api'];
+    trader.$inject = ['$http', 'api', 'publicHttp'];
 
-    function trader($http, api) {
+    function trader($http, api, publicHttp) {
         var o = api.trader;
         var service = {
             getMasterSummary: getMasterSummary,
             getMasterCurrent: getMasterCurrent,
             getMasterHistory: getMasterHistory,
+            getMasterPastTrade: getMasterPastTrade,
             getMasterProfitLine: getMasterProfitLine,
             getMasterBarChart: getMasterBarChart,
             copy: copy,
             cancelCopy: cancelCopy,
             getAvaCopyAmount: getAvaCopyAmount,
             getCopyRelation: getCopyRelation,
-            getHistoricalRate:getHistoricalRate,
-            getCoopierChange:getCoopierChange,
-            getMasterInfo:getMasterInfo,
-            getMonthlySymbols:getMonthlySymbols
+            getHistoricalRate: getHistoricalRate,
+            getCoopierChange: getCoopierChange,
+            getMasterInfo: getMasterInfo,
+            getMonthlySymbols: getMonthlySymbols
             // follow: follow,
             // getFollowRelation: getFollowRelation
         };
         return service;
+
+        // return publicHttp.dealPublicRequest(o.getMastersListApi, 'GET', {
+        //         sort_by: order,
+        //         offset: offset,
+        //         limit: limit
+        //     });
 
         /**
          * Trader Service 获取高手交易概况
@@ -34,7 +41,7 @@
          * @method getMasterSummary
          * @param {String} usercode
          */
-        function getMasterSummary (usercode) {
+        function getMasterSummary(usercode) {
             return $http.get(o.getMasterSummaryApi, {
                 params: {
                     usercode: usercode
@@ -51,12 +58,12 @@
          * @param {Number} page  当前页
          * @param {Number} pagesize  每页显示数
          */
-        function getMasterCurrent(usercode, page, pagesize,type) {
-            return $http.post(o.getMasterCurrentApi, {
-                cros_user: usercode,
+        function getMasterCurrent(usercode, page, pagesize, type) {
+            return publicHttp.dealPublicRequest(o.getMasterCurrentApi, 'GET', {
+                user_code: usercode,
                 page: page,
                 pagesize: pagesize,
-                type : type
+                type: type
             });
         }
 
@@ -69,12 +76,20 @@
          * @param {Number} page         当前页
          * @param {Number} pagesize     每页显示数
          */
-        function getMasterHistory (usercode, page, pagesize,type) {
+        function getMasterHistory(usercode, page, pagesize, type) {
             return $http.post(o.getMasterHistoryApi, {
                 cros_user: usercode,
                 page: page,
                 pagesize: pagesize,
-                type : type
+                type: type
+            });
+        }
+
+        function getMasterPastTrade(usercode, page, pagesize, type) {
+            return publicHttp.dealPublicRequest(o.getMasterPastTradeApi, 'GET', {
+                user_code: usercode,
+                offset: page,
+                limit: pagesize
             });
         }
 
@@ -116,7 +131,7 @@
          * @param {Number} amount 复制金额
          */
         function copy(usercode, amount) {
-            return $http.post(o.copyApi, {
+            return publicHttp.dealPublicRequest(o.copyApi, 'POST', {
                 user_code: usercode,
                 amount: amount
             });
@@ -132,7 +147,7 @@
          * @param {String} copyType 模拟复制或者真实复制
          */
         function cancelCopy(usercode, auto_delete) {
-            return $http.post(o.cancelCopyApi, {
+            return publicHttp.dealPublicRequest(o.cancelCopyApi, 'POST', {
                 user_code: usercode,
                 auto_delete: auto_delete,
                 to: 'real'
@@ -147,10 +162,8 @@
          * @param usercode 复制的高手的 usercode
          */
         function getAvaCopyAmount(usercode) {
-            return $http.get(o.getAvaCopyAmountApi, {
-                params: {
-                    from_code: usercode
-                }
+            return publicHttp.dealPublicRequest(o.getAvaCopyAmountApi, 'GET', {
+                user_code: usercode
             });
         }
 
@@ -206,11 +219,9 @@
          * @param user_code
          * @returns {*}
          */
-        function getHistoricalRate (user_code){
-            return $http.get(o.getHistoricalRateApi, {
-                params: {
-                    user_code: user_code
-                }
+        function getHistoricalRate(user_code) {
+            return publicHttp.dealPublicRequest(o.getHistoricalRateApi, 'GET', {
+                user_code: user_code
             });
         }
 
@@ -219,7 +230,7 @@
          * @param user_code
          * @returns {*}
          */
-        function getCoopierChange(user_code){
+        function getCoopierChange(user_code) {
             return $http.get(o.getCoopierChangeApi, {
                 params: {
                     user_code: user_code
@@ -232,12 +243,10 @@
          * @param user_code
          * @returns {*}
          */
-        function getMasterInfo(user_code){
-            return $http.get(o.getMasterInfoApi, {
-                params: {
-                    user_code: user_code
-                }
-            }).then(function(data){
+        function getMasterInfo(user_code) {
+            return publicHttp.dealPublicRequest(o.getMasterInfoApi, 'GET', {
+                user_code: user_code
+            }).then(function (data) {
                 //console.log(data);
                 data.data.usercode = data.data.user_code;
                 return data;
@@ -250,12 +259,10 @@
          * @param date 2016-9
          * @returns {*}
          */
-        function getMonthlySymbols (user_code,date){
-            return $http.get(o.getMonthlySymbolsApi, {
-                params: {
-                    user_code: user_code,
-                    date:date
-                }
+        function getMonthlySymbols(user_code, date) {
+            return publicHttp.dealPublicRequest(o.getMonthlySymbolsApi, 'GET', {
+                user_code: user_code,
+                date: date
             });
         }
     }

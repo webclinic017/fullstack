@@ -30,15 +30,18 @@
         getList(1);
 
         function getList (page) {
-            trader.getMasterHistory(usercode, page, pagesize).then(function (data) {
-                // console.info(data);
-                $scope.orders = data.data;
+            console.log(page)
+            var offset = (page - 1) * 8
+            var limit = 8;
+            trader.getMasterPastTrade(usercode, offset, limit).then(function (data) {
+                console.info(data);
+                $scope.orders = data.data.records;
 
                 $scope.$broadcast('hideLoadingImg');
 
                 if ($scope.orders.length <= 0) return;
                 angular.extend($scope.pagebar.config, {
-                    total: getTotal(data.sum, pagesize),
+                    total: getTotal(data.data.record_count, pagesize),
                     page: page
                 }); 
             });

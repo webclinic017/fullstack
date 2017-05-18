@@ -27,8 +27,8 @@
         function rendColumnChart(usercode) {
             /*调接口获取数据*/
             trader.getHistoricalRate(usercode).then(function (return_data) {
-                // console.log(return_data.data);
-                if (return_data.error_code == 0 && return_data.data.length > 0) {
+                // console.log(return_data);
+                if (return_data.code == 0 && return_data.data.length > 0) {
                     //console.log(return_data);
                     var data = return_data.data;
                     /*解析数据*/
@@ -134,7 +134,7 @@
 
         function getMasterProfitLine(usercode) {
             trader.getMasterProfitLine(usercode).then(function (data) {
-                //console.info(data);
+                // console.info('paintLineChart',data);
                 $scope.$broadcast('paintLineChart', data.data);
             });
         }
@@ -164,8 +164,10 @@
                 if (!data.is_succ) {
                     return false;
                 }
-                var arrDate = data.now_date.split('-');
-                var beginDate = data.time.split('-');
+                data = data.data;
+                data.now_date = data.current_date.split(' ')[0].slice(0,7);
+                data.time = data.start_date.split(' ')[0].slice(0,7);
+
                 /*如果是首次加载,解析所有交易年份*/
                 if ($scope.isFirstLoad) {
                     $scope.monSymbols = parseMon(data.time, data.now_date);
@@ -212,9 +214,8 @@
                             data: []
                         };
                         (function (item) {
-                            //console.log(key);
                             obj.name = item.symbol;
-                            obj.data[0] = item.ratio;
+                            obj.data[0] = item.total_rate;
                             // console.log(obj);
                             barData.push(obj)
                         }(data[i]))
@@ -223,19 +224,18 @@
                     return barData;
                 }
 
-                $scope.barData = parseBar(data.data);
-
-                if (data.data.length <= 0) {
+                $scope.barData = parseBar(data.records);
+                if (data.records.length <= 0) {
                     $scope.$broadcast('hideBarData', $scope.barData);
                 } else {
                     $scope.$broadcast('rendBarData', $scope.barData);
                 }
-                angular.forEach(data.data, function (value, index) {
-                    var scale = (value.symbol_cmd_zore / (value.symbol_cmd_zore + value.symbol_cmd_one) * 100).toFixed(2);
+                angular.forEach(data.records, function (value, index) {
+                    var scale = (value.short_count / (value.long_count + value.short_count) * 100).toFixed(2);
                     value.scale = scale;
                 });
 
-                $scope.bars = data.data;
+                $scope.bars = data.records;
 
                 $scope.$broadcast('hideLoadingImg');
 
@@ -247,57 +247,6 @@
                 $scope.isFirstLoad = false;
             });
         }
-
-        // function getMasterBarChart(usercode) {
-        // 	trader.getMasterBarChart(usercode).then(function (data) {
-
-        // 		//function parseBar(data){
-        // 		//	var barData = [];
-        // 		//	for(var key in data){
-        // 		//		var obj = {
-        // 		//			name:'',
-        // 		//			data:[]
-        // 		//		};
-        // 		//		(function(key){
-        // 		//			obj.name = key;
-        // 		//			obj.data[0] = data[key];
-        // 		//			console.log(obj);
-        // 		//			barData.push(obj)
-        // 		//		}(key))
-        // 		//	}
-        // 		//	console.log(barData);
-        // 		//	return barData;
-        // 		//}
-        // 		//
-        // 		//$scope.$broadcast('rendBarData', parseBar(data.data));
-        // 		//
-        // 		//console.info(data);
-        // 		$scope.bars = [];
-        // 		var symbolBar = {};
-
-        // 		$scope.$broadcast('hideLoadingImg');
-
-        // 		if (data.data_num.length <= 0) return;
-
-        // 		angular.forEach(data.data, function (data, index, array) {
-        // 			symbolBar[index] = {};
-        // 			symbolBar[index]["symbol_mod"] = index;
-        // 			symbolBar[index]["scale"] = data;
-        // 		});
-
-        // 		angular.forEach(data.data_num, function (data, index, array) {
-        // 			symbolBar[index]["number"] = data;
-        // 		});
-
-        // 		angular.forEach(symbolBar, function (data, index, array) {
-        // 			$scope.bars.push(data);
-        // 		});
-
-        // 		$timeout(function () {
-        // 			$scope.$broadcast('rendScaleBars', $scope.bars);
-        // 		});
-        // 	});
-        // }
     }
 })();
 

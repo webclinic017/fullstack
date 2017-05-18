@@ -25,7 +25,7 @@
                     if (data.code === 100014 || data.code === 100010) {
                         // token 权限错误
                         $window.location.href='/space/#/account/login';
-                        $window.location.reload(true);
+                        // $window.location.reload(true);
                     } else {
                         return data;
                     }
@@ -41,7 +41,7 @@
                     if (data.code === 100014 || data.code === 100010) {
                         // token 权限错误
                         $window.location.href='/space/#/account/login';
-                        $window.location.reload(true);
+                        // $window.location.reload(true);
                     } else {
                         return data;
                     }
@@ -57,7 +57,7 @@
                     if (data.code === 100014 || data.code === 100010) {
                         // token 权限错误
                         $window.location.href='/space/#/account/login';
-                        $window.location.reload(true);
+                        // $window.location.reload(true);
                     } else {
                         return data;
                     }
@@ -71,7 +71,7 @@
             console.log(error);
             layer.msg("服务器异常");
             $window.location.href='/space/#/account/login';
-            $window.location.reload(true);
+            // $window.location.reload(true);
         }
     }
 })();

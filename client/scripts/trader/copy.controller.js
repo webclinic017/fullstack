@@ -59,7 +59,9 @@
         // 获取可用复制金额
         function getAvaCopyAmount(usercode) {
             trader.getAvaCopyAmount(usercode).then(function (data) {
-                $scope.copyTrade.avaCopyAmount = data.data.total_available;
+                console.log(data);
+                $scope.copyTrade.avaCopyAmount = data.data.usable;
+                $scope.copyTrade.minCopyAmount = data.data.min_copy_amount;
             });
         }
 
@@ -78,6 +80,7 @@
 
                 trader.copy(copiedTrader.usercode, $scope.copyTrade.amount).then(function (data) {
                     // console.info(data);
+                    
                     $scope.clickable.copy = true;
 
                     if (data.is_succ) {
@@ -94,7 +97,7 @@
                         $scope.copyTrade.success = false;
 
                         $scope.backErr.system.show = true;
-                        $scope.backErr.system.msg = data.error_msg;
+                        $scope.backErr.system.msg = data.message;
 
                         $timeout(function () {
                             $scope.backErr.system.show = false;

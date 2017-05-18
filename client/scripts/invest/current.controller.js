@@ -32,7 +32,7 @@
         getTraders();
         // getAvaCopyAmount();
 
-        // 只要当前投资的所对应的 state 变化就要 cancel 轮询
+        // 只要当前投资的所对应的 state 变cancelCopy化就要 cancel 轮询
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
             $timeout.cancel(dataId);
             $timeout.cancel(tradersId);
@@ -44,10 +44,10 @@
         // 获取自主交易持仓订单和订单概况
         function getData() {
             invest.getInvestCurrentData().then(function (data) {
-                // console.info(data);
-                $scope.orders = data.data;
-                $scope.from_data = angular.extend(data.from_data);
-                angular.extend($scope.orderCurrent, data.group_data);
+                data = data.data;
+                $scope.orders = data.self_trades.records;
+                $scope.from_data = angular.extend(data.uncopy_trades);
+                angular.extend($scope.orderCurrent, data.self_trades);
                 $scope.from_orders_profit = 0;
                 var nProfit = 0;
                 angular.forEach($scope.from_data, function (oData, index) {
@@ -66,7 +66,7 @@
         function getTraders() {
             invest.getInvestCurrentTraders().then(function (data) {
                 $scope.$broadcast('hideLoadingImg');
-                // console.info(data);
+                console.info(data);
                 if (data.is_succ) {
                     if (data.data.length <= 0) {
                         $scope.traders = [];
@@ -187,9 +187,9 @@
                                 $scope.copyCancel.success = true;
                                 $scope.clickable = true;
 
-                                $state.go('space.invest.subpage', {
-                                    subpage: 'current'
-                                }, { reload: true });
+                                // $state.go('space.invest.subpage', {
+                                //     subpage: 'current'
+                                // }, { reload: true });
                             } else {
                                 $scope.clickable = true;
                                 $scope.copyCancel.fail = true;
@@ -240,7 +240,7 @@
                     invest.getInvestCurrentData().then(function (data) {
                         console.info(data);
                         $scope.$broadcast('hideLoadingImg');
-                        $scope.details = type === 'own' ? data.data : data.from_data;
+                        $scope.details = type === 'own' ? data.data.self_trades.records : data.uncopy_trades;
                         $scope.modal.show = true;
                     });
 

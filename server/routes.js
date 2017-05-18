@@ -10,6 +10,7 @@ var request = require('request');
 var querystring = require('querystring');
 var masterApi = require('./api/master');
 var report_sites = require('./report_site');
+var ACCESS_ORIGIN2 = require('./get_env_config').envConfig.access_origin2 || 'https://a.tigerwit.com';
 var setCompanyCookie,
     envConfig,
     URL_PATH,
@@ -330,11 +331,32 @@ module.exports = function (app) {
 
     app.route('/trader/:usercode').get(function (req, res) {
         var usercode = req.params.usercode;
+        var hostname = req.hostname;
+        var hostArr = hostname.split('\.');
+        // var apiOrigin = 'https://a.' + hostArr[hostArr.length - 2] + '.' + hostArr[hostArr.length - 1];
+        var masterApiPath = '';
+        if (process.env.COMPANY_NAME != 'tigerwit') {
+            masterApiPath = process.env.URL_PATH + '/api';
+        } else {
+            var hostPrefix = hostArr[0];
+            var hostPrefix2 = hostArr[1];
+            // www.tigerwit.com
+            // demo.tigerwit.com
+            // w.tigerwit.com
+            // w.dev.tigerwit.com
+            if(hostPrefix == 'demo' || hostPrefix2 == 'dev'){
+                masterApiPath = 'https://demo.tigerwit.com/api'
+            }
+            else if(hostPrefix == 'www' || hostPrefix == 'w'){
+                masterApiPath = 'https://www.tigerwit.com/api'
+            }
+        }
+        console.log('------masterApiPath',masterApiPath);
         setEnvCf(req, res);
-        request(URL_PATH + '/action/public/v5/get_master_info?user_code=' + usercode, function (error, response, body) {
+        request(masterApiPath + '/master/trading_profile?user_code=' + usercode, function (error, response, body) {
             // request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
             if (!error && response.statusCode == 200) {
-                // console.info(body);
+                console.info('-------body.data', body.data);
                 body = JSON.parse(body);
                 res.render('trader.html', extendPublic({
                     master: body.data,
