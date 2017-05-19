@@ -12,7 +12,7 @@
         var urlOrigin = $cookies["access_origin"] || '';    // node 中写入cookie
         var urlOrigin2 = $cookies["access_origin2"] || '';    // node 中写入cookie
         var o = urlOrigin;
-        // console.info(o);
+        // console.log('urlOrigin2',urlOrigin2)
 
         var account = {
             getPersonalInfoDegreeApi: o + '/action/public/v4/user_perfect_degree',
@@ -95,15 +95,15 @@
             getAssetApi: o + '/action/public/v3/get_usercenter_asset'
         };
         var invest = {
-            getInvestSummaryApi: o + '/action/public/v4/get_user_data',
-            getInvestProfitLineApi: o + '/action/public/v4/get_user_line_chart',
-            getInvestBarChartApi: o + '/action/public/v4/get_user_symbol',
-            getInvestCurrentDataApi: o + '/action/public/v4/get_usercenter_my_order_auth_list',
-            getInvestCurrentTradersApi: o + '/action/public/v4/get_usercenter_order_auth_group',
-            getInvestCurrentDetailsApi: o + '/action/public/v3/get_usercenter_order_auth_group_list',
-            getInvestHistoryDataApi: o + '/action/public/v3/get_usercenter_my_history_auth_list',
-            getInvestHistoryTradersApi: o + '/action/public/v4/get_usercenter_history_auth_group',
-            getInvestHistoryDetailsApi: o + '/action/public/v3/get_usercenter_history_auth_group_list',
+            getInvestSummaryApi: urlOrigin2  + '/centre/trading_profile',
+            getInvestProfitLineApi: urlOrigin2 + '/centre/trading_trend',
+            getInvestBarChartApi: urlOrigin2 + '/centre/trading_symbols',
+            getInvestCurrentDataApi: urlOrigin2 + '/centre/active/self_trades',
+            getInvestCurrentTradersApi: urlOrigin2 + '/centre/active/copy_masters',
+            getInvestCurrentDetailsApi: urlOrigin2 + '/centre/active/copy_trades',
+            getInvestHistoryDataApi: urlOrigin2 + '/centre/past/self_trades',
+            getInvestHistoryTradersApi: urlOrigin2 + '/centre/past/copy_masters',
+            getInvestHistoryDetailsApi: urlOrigin2 + '/centre/past/copy_trades',
             getWalletHistoryApi: urlOrigin2 + '/wallet/histories'
         };
         var invite = {
@@ -119,24 +119,20 @@
             getProductMarketApi: '/blog/api/get_category_posts?id=90'
         };
         var ranklist = {
-            getMastersListApi: o + '/action/public/v5/get_master_list',
-            getCopiersListApi: o + '/data/copiers.json',
-            getOrderInfoApi: o + '/action/public/v3/closed_fund_leads'
+            // getMastersListApi: o + '/action/public/v5/get_master_list',
+            getMastersListApi: urlOrigin2 + '/master/list',
+            getOrderInfoApi: o + '/action/public/v3/closed_fund_leads' // 暂无 定期跟单预约
         };
-        var trader = {
-            getMasterSummaryApi: o + '/action/public/v4/get_master_data',
-            getMasterCurrentApi: o + '/action/public/v3/get_master_order_noauth',
-            getMasterHistoryApi: o + '/action/public/v3/get_history_noauth',
-            getMasterProfitLineApi: o + '/action/public/v4/get_master_line_chart',
-            getMasterBarChartApi: o + '/action/public/v3/get_master_symbol_count',
-            copyApi: o + '/action/public/v4/copy',
-            cancelCopyApi: o + '/action/public/v4/uncopy',
-            getAvaCopyAmountApi: o + '/action/public/v4/copy_available_balance',
-            getCopyRelationApi: o + '/action/public/v4/get_user_relationship',
-            getHistoricalRateApi: o + '/action/public/v5/historical_rate',
-            getCoopierChangeApi: o + '/action/public/v5/copy_change',
-            getMasterInfoApi: o + '/action/public/v5/get_master_info',
-            getMonthlySymbolsApi: o + '/action/public/v5/monthly_symbols'
+        var trader = { //迁移完毕
+            getMasterCurrentApi: urlOrigin2 + '/master/active/trades', 
+            getMasterPastTradeApi: urlOrigin2 + '/master/past/trades', //替换getMasterHistoryApi
+            copyApi: urlOrigin2 + '/copy',
+            cancelCopyApi: urlOrigin2 + '/uncopy',
+            getAvaCopyAmountApi: urlOrigin2 + '/valid_copy',
+            getHistoricalRateApi: urlOrigin2 + '/master/monthly_profit_rates',
+            getCoopierChangeApi: o + '/action/public/v5/copy_change', //移除
+            getMasterInfoApi: urlOrigin2 + '/master/trading_profile',
+            getMonthlySymbolsApi: urlOrigin2 + '/master/trading_symbols' 
         };
 
         var redbag = {

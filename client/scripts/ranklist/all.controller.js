@@ -37,18 +37,20 @@
                 if ($scope.rankOrder == '') return;
             }
             $scope.rankOrder = order ? order : '';
-            getMastersList();
+            getMastersList(1);
         }
 
         function getMastersList (page) {
             page = page ? page : 1;
+            var offset = 9 * (page - 1);
             // $scope.ranklist = [];
             $scope.$broadcast('showLoadingImg');
 
-            ranklist.getMastersList($scope.rankOrder, page, pagesize).then(function (data) {
+            ranklist.getMastersList($scope.rankOrder, offset, 9).then(function (data) {
                 // console.info(data);
                 if (data.is_succ) {
-                    $scope.ranklist = data.data;
+                    data = data.data;
+                    $scope.ranklist = data.records.slice(0,9);
                     $scope.$broadcast('hideLoadingImg');
 
                     // 最大跌幅＊100
@@ -58,7 +60,7 @@
 
                     if ($scope.ranklist.length <= 0) return;
                     angular.extend($scope.pagebar.config, {
-                        total: getTotal(data.sum, pagesize),
+                        total: getTotal(data.record_count, 9),
                         page: page
                     }); 
                 }
