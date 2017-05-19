@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('AssetDepositController', AssetDepositController);
 
-    AssetDepositController.$inject = ['$scope', '$window', '$modal', '$state', 'asset', 'validator'];
+    AssetDepositController.$inject = ['$scope', '$window', '$modal', '$state', 'asset', 'validator', 'account'];
 
-    function AssetDepositController($scope, $window, $modal, $state, asset, validator) {
+    function AssetDepositController($scope, $window, $modal, $state, asset, validator, account) {
 
         $scope.deposit = {
             minAmount: 0,       // 最低充值金额
@@ -31,7 +31,7 @@
         $scope.showErr = showErr;
 
         // 汇率
-        asset.getFXRate().then(function(data) {
+        asset.getFXRate().then(function (data) {
             if (!data) return;
             // console.log(data);
             if (data.is_succ) {
@@ -40,13 +40,38 @@
         });
 
         // 获取入金限制
-        asset.getDepositLimit().then(function(data) {
+        asset.getDepositLimit().then(function (data) {
             $scope.deposit.minAmount = parseInt(data.limit);
             $scope.deposit.isumam = data.isumam;
-            
+
         });
+
+        function openSystemMdl(type, info) {
+            $modal.open({
+                templateUrl: '/views/asset/verify_modal.html',
+                size: 'sm',
+                backdrop: true,
+                controller: function ($scope, $modalInstance) {
+                    $scope.modal = {
+                        type: type,
+                        info: info
+                    };
+                    $scope.closeModal = closeModal;
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
+
         // 充值  还未完成s
         function toDeposit(amount) {
+            console.log($scope.personal.verify_status);
+            if ($scope.personal.verify_status < 6) {
+                openSystemMdl('verify');
+                return;
+            }
 
             if ($scope.deposit.isumam === 1) {
                 openDepositMdl('isumam');
@@ -62,24 +87,24 @@
 
             var w = $window.open('/waiting');
 
-            asset.deposit($scope.personal.mt4_id, amount).then(function(data) {
+            asset.deposit($scope.personal.mt4_id, amount).then(function (data) {
 
                 var url;
-                if(data && data.data && data.data.url){
+                if (data && data.data && data.data.url) {
                     // 兼容IE
                     if (location.origin) {
-                        url = location.origin+data.data.url;
+                        url = location.origin + data.data.url;
                     } else {
                         url = location.protocol + "//" + location.hostname + data.data.url;
                     }
-                    
+
                     // url = 'https://www.tigerwit.com'+data.data.url;
                 }
-                if(url){
+                if (url) {
                     openDepositMdl('depositFinish');
                     w.location = url;
-                }else{
-                    alert( (data && data.error_msg) || '请求失败，请联系管理员。');
+                } else {
+                    alert((data && data.error_msg) || '请求失败，请联系管理员。');
                     w.close();
                 }
             });
@@ -88,7 +113,7 @@
         function refresh() {
             $state.go('space.asset.subpage', {
                 subpage: 'deposit'
-            }, {reload: true});
+            }, { reload: true });
         }
 
         // 入金相关的各种弹窗提示
@@ -119,7 +144,7 @@
                     // 支付成功
                     function depositSucc() {
                         // umeng
-                        _czc.push(["_trackEvent","入金页面","充值"]);
+                        _czc.push(["_trackEvent", "入金页面", "充值"]);
 
                         closeModal();
                     }

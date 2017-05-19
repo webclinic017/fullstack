@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('TraderIndexController', TraderIndexController);
 
-    TraderIndexController.$inject = ['$scope', '$location', '$state', 'trader', '$timeout', '$modal','$rootScope'];
+    TraderIndexController.$inject = ['$scope', '$location', '$state', 'trader', '$timeout', '$modal', '$rootScope'];
 
-    function TraderIndexController($scope, $location, $state, trader, $timeout, $modal,$rootScope) {
+    function TraderIndexController($scope, $location, $state, trader, $timeout, $modal, $rootScope) {
         $scope.master = {};
         $scope.toCopy = toCopy;
         // $scope.toFollow = toFollow;
@@ -33,7 +33,7 @@
         //     }
         // });
 
-        function getMasterInfo (usercode) {
+        function getMasterInfo(usercode) {
             trader.getMasterInfo(usercode).then(function (data) {
                 if (data.is_succ) {
                     $rootScope.master_info = data.data;
@@ -48,7 +48,7 @@
         }
 
         // 关注关系
-        function getFollowRelation (usercode) {
+        function getFollowRelation(usercode) {
             $scope.$watch('userstatus.logined', function (newVal, oldVal) {
                 if (newVal === true) {
                     trader.getFollowRelation(usercode).then(function (data) {
@@ -59,7 +59,7 @@
             });
         }
 
-        function toFollow (action) {
+        function toFollow(action) {
             // 判断是否登陆
             if ($scope.userstatus.logined) {
                 trader.follow(usercode, action).then(function (data) {
@@ -72,11 +72,11 @@
             }
         }
 
-        function cancelFollow () {
+        function cancelFollow() {
             $scope.master.follow_text = '取消关注';
         }
 
-        function isFollow () {
+        function isFollow() {
             $scope.master.follow_text = '已关注';
         }
 
@@ -109,7 +109,7 @@
             });
         }
 
-        function toCopy () {
+        function toCopy() {
             // console.info($scope.personal.isumam);
             // 判断是否登录
             if ($scope.userstatus.logined) {
@@ -122,7 +122,8 @@
                         openSystemMdl('isMaster');
                     } else {
                         // 判断是否实名认证 //复制不需要实名认证
-                        // if ($scope.personal.verified === true) {
+                        console.log($scope.personal.verify_status);
+                        if ($scope.personal.verify_status > 5) {
                             var minCopyAmount = parseFloat($scope.master.min_copy_amount, 10);
 
                             if (typeof avaCopyAmount === 'undefined') {
@@ -136,10 +137,9 @@
                             } else {
                                 openCopyMdl();
                             }
-
-                        // } else {
-                        //     openSystemMdl('verify');
-                        // }
+                        } else {
+                            openSystemMdl('verify');
+                        }
                     }
                 }
             } else {
@@ -147,6 +147,7 @@
             }
         }
 
+        // openSystemMdl('verify', '复制');
         function openSystemMdl(type, info) {
             $modal.open({
                 templateUrl: '/views/trader/system_modal.html',
