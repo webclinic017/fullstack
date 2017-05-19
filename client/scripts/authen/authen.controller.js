@@ -13,7 +13,6 @@
     AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account'];
     AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout'];
     AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
-    AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
     AuthenSubmitController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
 
     // 主控制器
