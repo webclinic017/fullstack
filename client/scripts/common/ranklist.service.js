@@ -10,7 +10,6 @@
         var o = api.ranklist;
         var service = {
             getMastersList: getMastersList,
-            getCopiersList: getCopiersList,
             getOrderInfo: getOrderInfo
         };
         return service;
@@ -28,17 +27,6 @@
                 offset: offset,
                 limit: limit
             });
-        }
-
-        /**
-         * Ranklist Service 获取复制者列表
-         * 排行榜 
-         *
-         * @method getCopiersList
-         * 
-         */
-        function getCopiersList(type) {
-            return $http.get(o.getCopiersListApi);
         }
 
         /**

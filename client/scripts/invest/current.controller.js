@@ -117,7 +117,7 @@
 
         // 获取 copied traders 列表的详情（复制交易持仓订单）
         function getDetails(trader) {
-            invest.getInvestCurrentDetails(trader.usercode).then(function (data) {
+            invest.getInvestCurrentDetails(trader.user_code).then(function (data) {
                 trader.notFirstLoad = true;
                 trader.orders = data.data || [];
             });
@@ -252,7 +252,7 @@
         }
 
         function openInvestCopyDetailMdl(trader, event) {
-            var usercode = trader.usercode;
+            var usercode = trader.user_code;
             event.stopPropagation();
             event.stopImmediatePropagation();
 

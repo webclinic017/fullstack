@@ -96,10 +96,10 @@
             getInvestBarChartApi: urlOrigin2 + '/centre/trading_symbols',
             getInvestCurrentDataApi: urlOrigin2 + '/centre/active/self_trades',
             getInvestCurrentTradersApi: urlOrigin2 + '/centre/active/copy_masters',
-            getInvestCurrentDetailsApi: o + '/action/public/v3/get_usercenter_order_auth_group_list',
-            getInvestHistoryDataApi: o + '/action/public/v3/get_usercenter_my_history_auth_list',
-            getInvestHistoryTradersApi: o + '/action/public/v4/get_usercenter_history_auth_group',
-            getInvestHistoryDetailsApi: o + '/action/public/v3/get_usercenter_history_auth_group_list'
+            getInvestCurrentDetailsApi: urlOrigin2 + '/centre/active/copy_trades',
+            getInvestHistoryDataApi: urlOrigin2 + '/centre/past/self_trades',
+            getInvestHistoryTradersApi: urlOrigin2 + '/centre/past/copy_masters',
+            getInvestHistoryDetailsApi: urlOrigin2 + '/centre/past/copy_trades'
         };
         var invite = {
             getInviteFriendsInfoApi: o + '/action/public/v3/get_invite_friends_info',
@@ -116,20 +116,14 @@
         var ranklist = {
             // getMastersListApi: o + '/action/public/v5/get_master_list',
             getMastersListApi: urlOrigin2 + '/master/list',
-            getCopiersListApi: o + '/data/copiers.json',
-            getOrderInfoApi: o + '/action/public/v3/closed_fund_leads' // 暂无
+            getOrderInfoApi: o + '/action/public/v3/closed_fund_leads' // 暂无 定期跟单预约
         };
         var trader = { //迁移完毕
-            getMasterSummaryApi: o + '/action/public/v4/get_master_data', //暂无
             getMasterCurrentApi: urlOrigin2 + '/master/active/trades', 
-            getMasterHistoryApi: o + '/action/public/v3/get_history_noauth', //->\\
             getMasterPastTradeApi: urlOrigin2 + '/master/past/trades', //替换getMasterHistoryApi
-            getMasterProfitLineApi: o + '/action/public/v4/get_master_line_chart', //暂无
-            getMasterBarChartApi: o + '/action/public/v3/get_master_symbol_count', //未使用
             copyApi: urlOrigin2 + '/copy',
             cancelCopyApi: urlOrigin2 + '/uncopy',
             getAvaCopyAmountApi: urlOrigin2 + '/valid_copy',
-            getCopyRelationApi: o + '/action/public/v4/get_user_relationship', //暂无
             getHistoricalRateApi: urlOrigin2 + '/master/monthly_profit_rates',
             getCoopierChangeApi: o + '/action/public/v5/copy_change', //移除
             getMasterInfoApi: urlOrigin2 + '/master/trading_profile',

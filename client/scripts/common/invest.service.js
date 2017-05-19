@@ -85,10 +85,8 @@
          * @method getInvestCurrentDetails
          */
         function getInvestCurrentDetails(usercode) {
-            return $http.post(o.getInvestCurrentDetailsApi, {
-                  user_code: usercode,
-                  page: 1,
-                  pagesize: 1000
+            return publicHttp.dealPublicRequest(o.getInvestCurrentDetailsApi, 'GET', {
+                user_code: usercode
             });
         }
 
@@ -101,9 +99,9 @@
          * @param {Number} pagesize 单页显示数
          */
         function getInvestHistoryData() {
-            return $http.post(o.getInvestHistoryDataApi, {
-                page: 1,
-                pagesize: 1000
+            return publicHttp.dealPublicRequest(o.getInvestHistoryDataApi, 'GET', {
+                offset: 0,
+                limit: 1000
             });
         }
 
@@ -113,7 +111,7 @@
          * @method getCopiedTraders
          */
         function getInvestHistoryTraders() {
-            return $http.get(o.getInvestHistoryTradersApi);
+            return publicHttp.dealPublicRequest(o.getInvestHistoryTradersApi, 'GET');
         }
 
         /*
@@ -121,11 +119,11 @@
          *
          * @method getHistoryDetails
          */
-        function getInvestHistoryDetails(usercode, page, pagesize) {
-            return $http.post(o.getInvestHistoryDetailsApi, {
+        function getInvestHistoryDetails(usercode, offset, limit) {
+            return publicHttp.dealPublicRequest(o.getInvestHistoryDetailsApi, 'GET', {
                 user_code: usercode,
-                page: page,
-                pagesize: pagesize
+                offset: offset,
+                limit: limit
             });
         }
        

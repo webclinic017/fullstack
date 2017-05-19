@@ -10,9 +10,6 @@
     function TraderIndexController($scope, $location, $state, trader, $timeout, $modal,$rootScope) {
         $scope.master = {};
         $scope.toCopy = toCopy;
-        // $scope.toFollow = toFollow;
-        // $scope.cancelFollow = cancelFollow;
-        // $scope.isFollow = isFollow;
         var usercode,
             detailId,
             avaCopyAmount;
@@ -23,9 +20,7 @@
         usercode = absUrl.match(regUsercode)[1];
 
         getMasterInfo(usercode);
-        getCopyRelation(usercode);
-        // getFollowRelation(usercode);
-        // getAvaCopyAmount(usercode);
+        getAvaCopyAmount(usercode);
 
         // $scope.$on('$stateChangeStart', function (event, toState, toParams) {
         //     if (toParams.usercode !== usercode) {
@@ -42,76 +37,27 @@
                     $scope.master.max_retract_percent = ($scope.master.max_retract * 100).toFixed(2);
                 }
             });
-
-            trader.getAvaCopyAmount(usercode).then(function (data) {
-                // console.log(data);
-                avaCopyAmount = data.data.usable;
-                $scope.master.avaCopyAmount = data.data.usable;
-                $scope.master.min_copy_amount = data.data.min_copy_amount;
-            });
         }
 
-        // 关注关系
-        function getFollowRelation (usercode) {
+        // 获取可用复制金额 复制关系
+        function getAvaCopyAmount(usercode) {
             $scope.$watch('userstatus.logined', function (newVal, oldVal) {
+
                 if (newVal === true) {
-                    trader.getFollowRelation(usercode).then(function (data) {
+                    trader.getAvaCopyAmount(usercode).then(function (data) {
                         // console.info(data);
-                        $scope.master.follow = data.follow;
+                        if (data.is_succ) {
+                            $scope.master.copied = data.data.is_copy;
+                            avaCopyAmount = data.data.usable;
+                            $scope.master.avaCopyAmount = data.data.usable;
+                            $scope.master.min_copy_amount = data.data.min_copy_amount;
+                        } else {
+                            avaCopyAmount = 0;
+                        }
                     });
                 }
             });
         }
-
-        function toFollow (action) {
-            // 判断是否登陆
-            if ($scope.userstatus.logined) {
-                trader.follow(usercode, action).then(function (data) {
-                    if (data.is_succ) {
-                        getFollowRelation(usercode);
-                    }
-                });
-            } else {
-                openSystemMdl('login', '关注');
-            }
-        }
-
-        function cancelFollow () {
-            $scope.master.follow_text = '取消关注';
-        }
-
-        function isFollow () {
-            $scope.master.follow_text = '已关注';
-        }
-
-        // 复制关系
-        function getCopyRelation(usercode) {
-            $scope.$watch('userstatus.logined', function (newVal, oldVal) {
-                if (newVal === true) {
-                    trader.getCopyRelation(usercode).then(function (data) {
-                        // 本人是否复制高手，值为 null（未复制）或者数字（复制金额）
-                        $scope.master.copied = data.data.copy_real;
-                    });
-                }
-            });
-        }
-
-        // 获取可用复制金额
-        // function getAvaCopyAmount(usercode) {
-        //     $scope.$watch('userstatus.logined', function (newVal, oldVal) {
-
-        //         if (newVal === true) {
-        //             trader.getAvaCopyAmount(usercode).then(function (data) {
-        //                 // console.info(data);
-        //                 if (data.is_succ) {
-        //                     avaCopyAmount = data.data.total_available;
-        //                 } else {
-        //                     avaCopyAmount = 0;
-        //                 }
-        //             });
-        //         }
-        //     });
-        // }
 
         function toCopy () {
             // console.info($scope.personal.isumam);

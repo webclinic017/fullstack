@@ -17,8 +17,6 @@
 
         usercode = absUrl.match(regUsercode)[1];
 
-        getMasterSummary(usercode);
-        getMasterProfitLine(usercode);
         // getMasterBarChart(usercode);
 //--------------------------高手主页4.0重构--begin----------------------------------------
         /*----------------------------柱状图图-----------------------------*/
@@ -110,34 +108,6 @@
         };
 
 //---------------------------------end------------------------------------------
-
-        function getMasterSummary(usercode) {
-            trader.getMasterSummary(usercode).then(function (data) {
-                // console.info(data);
-                if (data.is_succ) {
-                    $scope.summary = data.data;
-                }
-
-                // 饼图绘制
-                broadcastPieData();
-
-                function broadcastPieData() {
-                    var profitSum = [
-                        ['盈利订单', $scope.summary.order_count.profit_order],
-                        ['亏损订单', $scope.summary.order_count.loss_order]
-                    ];
-                    // console.info(profitSum);
-                    $scope.$broadcast('paintPieChart', profitSum);
-                }
-            });
-        }
-
-        function getMasterProfitLine(usercode) {
-            trader.getMasterProfitLine(usercode).then(function (data) {
-                // console.info('paintLineChart',data);
-                $scope.$broadcast('paintLineChart', data.data);
-            });
-        }
 
         //getMonthlySymbols(usercode);
 
