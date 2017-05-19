@@ -1,4 +1,20 @@
 var report_sites = [
+    /*添加时间 2017-5-15*/
+    {
+        address: 'http://www.prcfe.com/finance/2017/0503/158092.html',
+        description: '【中国经济网】理财投资体验测评：老虎外汇、爱钱进、团贷网怎么样？',
+        date: '2017-04-24'
+    },
+    {
+        address: 'http://www.huaxia.com/xw/zhxw/2017/05/5311252.html',
+        description: '【华夏经纬网】楼市遇冷 他在老虎外汇、网信理财、爱投资获利颇丰',
+        date: '2017-05-09'
+    },
+    {
+        address: 'http://share.iclient.ifeng.com/sharenews.f?aid=cmpp_056910015374996&forward=1&from=groupmessage&isappinstalled=0',
+        description: '【凤凰新闻】借力互联网金融科技 老虎外汇教你如何简化外汇交易',
+        date: '2017-05-15'
+    },
     /*添加时间 2017-5-9*/
     {
         address: 'http://www.huaxia.com/xw/zhxw/2017/04/5283628.html',
