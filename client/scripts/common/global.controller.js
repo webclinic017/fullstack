@@ -60,7 +60,7 @@
         getAuthStatus();
         function getAuthStatus() {
             account.getAuthStatus().then(function (data) {
-                console.log(data);
+                // console.log(data);
                 if (data.is_succ) {
                     angular.extend($scope.personal, {
                         verify_status: parseInt(data.data.status)

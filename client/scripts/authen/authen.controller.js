@@ -4,17 +4,17 @@
 
     angular.module('fullstackApp')
         .controller('AuthenController', AuthenController)
-        .controller('AccountInvestInfoController', AccountInvestInfoController)
-        .controller('AccountCompleteController', AccountCompleteController)
-        .controller('AccountRealnameController', AccountRealnameController)
-        .controller('AccountSubmitController', AccountSubmitController);
+        .controller('AuthenInvestInfoController', AuthenInvestInfoController)
+        .controller('AuthenCompleteController', AuthenCompleteController)
+        .controller('AuthenRealnameController', AuthenRealnameController)
+        .controller('AuthenSubmitController', AuthenSubmitController);
 
     AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state'];
-    AccountInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account'];
-    AccountCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout'];
-    AccountRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
-    AccountRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
-    AccountSubmitController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
+    AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account'];
+    AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout'];
+    AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
+    AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
+    AuthenSubmitController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
 
     // 主控制器
     function AuthenController($scope, $cookies, $location, account, $state) {
@@ -79,7 +79,7 @@
     }
 
     // kyc
-    function AccountInvestInfoController($scope, $state, $timeout, account) {
+    function AuthenInvestInfoController($scope, $state, $timeout, account) {
         window.onbeforeunload = function () {
             return '确认离开当前页面吗？未保存的数据将会丢失！'
         }
@@ -207,7 +207,7 @@
     }
 
     // complete
-    function AccountCompleteController($scope, validator, account, $timeout) {
+    function AuthenCompleteController($scope, validator, account, $timeout) {
         window.onbeforeunload = function () {
             return '确认离开当前页面吗？未保存的数据将会丢失！'
         }
@@ -347,7 +347,7 @@
     }
 
     // id_card
-    function AccountRealnameController($scope, $state, $modal, validator, account) {
+    function AuthenRealnameController($scope, $state, $modal, validator, account) {
         $scope.verification = {
             id: {
                 number: undefined,
@@ -456,7 +456,7 @@
         }
     }
 
-    function AccountSubmitController($scope) {
+    function AuthenSubmitController($scope) {
         $scope.$emit('getAuthStatus');
     }
 })();

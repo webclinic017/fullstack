@@ -55,7 +55,7 @@
                             },
                             controllerProvider: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'investInfo';
-                                var ctrlPrefix = 'Account';
+                                var ctrlPrefix = 'Authen';
                                 var ctrlSuffix = 'Controller';
                                 var ctrlRoot = modCtrlName($stateParams.subpage);
                                 return ctrlPrefix + ctrlRoot + ctrlSuffix;
