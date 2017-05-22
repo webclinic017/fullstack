@@ -27,8 +27,8 @@
 
                 function broadcastPieData () {
                     var profitSum = [
-                        ['盈利订单',$scope.summary.order_count.profit_order],
-                        ['亏损订单',$scope.summary.order_count.loss_order]
+                        ['盈利订单',$scope.summary.profit_trade_count],
+                        ['亏损订单',$scope.summary.loss_trade_count]
                     ];
                     // console.info(profitSum);
                     $scope.$broadcast('paintPieChart', profitSum);
@@ -45,21 +45,20 @@
 
         function getInvestBarChart () {
             invest.getInvestBarChart().then(function (data) {
-                // console.info(data);
+                console.info(data);
                 $scope.bars = [];
                 var symbolBar = {};
 
                 $scope.$broadcast('hideLoadingImg');
 
-                if (data.data_num.length <= 0) return;
+                if (data.data.length <= 0) return;
                 
                 angular.forEach(data.data, function(data,index,array){
-                    symbolBar[index] = {};
-                    symbolBar[index]["symbol_mod"] = index;
-                    symbolBar[index]["scale"] = data;
-                });
-                angular.forEach(data.data_num, function(data,index,array){
-                    symbolBar[index]["number"] = data;
+                    var symbol = data.symbol;
+                    symbolBar[symbol] = {};
+                    symbolBar[symbol]["symbol_mod"] = symbol;
+                    symbolBar[symbol]["scale"] = data.rate;
+                    symbolBar[symbol]["number"] = data.count; //count
                 });
                 angular.forEach(symbolBar, function(data,index,array){
                     $scope.bars.push(data);

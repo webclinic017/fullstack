@@ -27,7 +27,7 @@
         $scope.toTrackRegisterSensorsdata = toTrackRegisterSensorsdata;
         $scope.toTrackLoginSensorsdata = toTrackLoginSensorsdata;
         $scope.toTrackBannerSensorsdata = toTrackBannerSensorsdata;
-
+        
         $rootScope.personalCookiesInfo = {
             userCode: $cookies["user_code"],
             userName: decodeURIComponent($cookies["username"] || ''),

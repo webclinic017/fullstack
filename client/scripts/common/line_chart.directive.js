@@ -332,8 +332,8 @@
 
                         data = Highcharts.map(data, function (config) {
                             return {
-                                x: config.timestamp * 1000,
-                                y: config.value * 1
+                                x: config.t * 1000,
+                                y: config.v * 1
                             };
                         });
 

@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('invest', invest);
 
-    invest.$inject = ['$http', 'api'];
+    invest.$inject = ['$http', 'api', 'publicHttp'];
 
-    function invest($http, api) {
+    function invest($http, api, publicHttp) {
         var o = api.invest;
         var service = {
             getInvestSummary: getInvestSummary,
@@ -17,7 +17,8 @@
             getInvestCurrentDetails: getInvestCurrentDetails,
             getInvestHistoryData: getInvestHistoryData,
             getInvestHistoryTraders: getInvestHistoryTraders,
-            getInvestHistoryDetails: getInvestHistoryDetails
+            getInvestHistoryDetails: getInvestHistoryDetails,
+            getWalletHistory: getWalletHistory
         };
         return service;
 
@@ -29,7 +30,7 @@
          * 
          */
         function getInvestSummary () {
-            return $http.get(o.getInvestSummaryApi);
+            return publicHttp.dealPublicRequest(o.getInvestSummaryApi, 'GET');
         }
 
         /**
@@ -40,7 +41,7 @@
          * 
          */
         function getInvestProfitLine() {        
-            return $http.get(o.getInvestProfitLineApi);
+            return publicHttp.dealPublicRequest(o.getInvestProfitLineApi, 'GET');
         }
 
         /**
@@ -52,7 +53,7 @@
          */
         function getInvestBarChart() {
             // return $http.get('/data/bar_chart.json');
-            return $http.get(o.getInvestBarChartApi);
+            return publicHttp.dealPublicRequest(o.getInvestBarChartApi, 'GET');
         }
 
         /*
@@ -62,7 +63,7 @@
          * @method getInvestCurrentData
          */
         function getInvestCurrentData() {
-            return $http.post(o.getInvestCurrentDataApi, {
+            return publicHttp.dealPublicRequest(o.getInvestCurrentDataApi, 'GET' ,{
                   page: 1,
                   pagesize: 1000
             });
@@ -75,7 +76,7 @@
          * @method getInvestCurrentTraders
          */
         function getInvestCurrentTraders() {
-            return $http.post(o.getInvestCurrentTradersApi);
+            return publicHttp.dealPublicRequest(o.getInvestCurrentTradersApi, 'GET');
         }
 
         /*
@@ -85,10 +86,8 @@
          * @method getInvestCurrentDetails
          */
         function getInvestCurrentDetails(usercode) {
-            return $http.post(o.getInvestCurrentDetailsApi, {
-                  user_code: usercode,
-                  page: 1,
-                  pagesize: 1000
+            return publicHttp.dealPublicRequest(o.getInvestCurrentDetailsApi, 'GET', {
+                user_code: usercode
             });
         }
 
@@ -101,9 +100,9 @@
          * @param {Number} pagesize 单页显示数
          */
         function getInvestHistoryData() {
-            return $http.post(o.getInvestHistoryDataApi, {
-                page: 1,
-                pagesize: 1000
+            return publicHttp.dealPublicRequest(o.getInvestHistoryDataApi, 'GET', {
+                offset: 0,
+                limit: 1000
             });
         }
 
@@ -113,7 +112,7 @@
          * @method getCopiedTraders
          */
         function getInvestHistoryTraders() {
-            return $http.get(o.getInvestHistoryTradersApi);
+            return publicHttp.dealPublicRequest(o.getInvestHistoryTradersApi, 'GET');
         }
 
         /*
@@ -121,11 +120,27 @@
          *
          * @method getHistoryDetails
          */
-        function getInvestHistoryDetails(usercode, page, pagesize) {
-            return $http.post(o.getInvestHistoryDetailsApi, {
+        function getInvestHistoryDetails(usercode, offset, limit) {
+            return publicHttp.dealPublicRequest(o.getInvestHistoryDetailsApi, 'GET', {
                 user_code: usercode,
-                page: page,
-                pagesize: pagesize
+                offset: offset,
+                limit: limit
+            });
+        }
+
+        /**
+         * Asset Service 查询零钱包交易明细
+         *
+         * @method getWalletHistory
+         *
+         * @params offset   默认值0
+         * @params limit    默认值10
+         *
+         */
+        function getWalletHistory(offset, limit) {
+            return publicHttp.dealPublicRequest(o.getWalletHistoryApi, 'GET', {
+                offset: offset,
+                limit: limit
             });
         }
        

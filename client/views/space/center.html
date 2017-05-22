@@ -1,0 +1,93 @@
+<div ng-if="personal.basic === 'center.index'">
+    <div class="space_center_total">
+        <div class="space_center_total__num">
+            资产总额: ${{ personal.my_total_balance || '0.00' }}
+        </div>
+        <div class="space_center_total__tip">
+            交易帐户+零钱包
+        </div>
+    </div>
+</div>
+<div ng-if="personal.basic === 'center.index' || 
+            personal.basic === 'center.invest.subpage'">
+    <div class="space_center_invest">
+        <div class="clearfix">
+            <div class="space_center_invest__num">
+                交易帐户: ${{ personal.balance || '0.00' }}
+            </div>
+            <ul class="space_center_invest__btn">
+                <li>
+                    <a ng-if="personal.basic === 'center.index'" ui-sref="space.center.invest.subpage({ subpage: 'current'})" class="btn btn-default btn-sm">查看明细</a>
+                    <a ng-if="personal.basic === 'center.invest.subpage'" ui-sref="space.center.index" class="btn btn-default btn-sm">返回</a>
+                </li>
+                <li>
+                    <a ui-sref="space.asset.subpage({ subpage: 'withdraw', type: 'invest'})" class="btn btn-default btn-sm">提现</a>
+                </li>
+                <li>
+                    <a ui-sref="space.asset.subpage({ subpage: 'deposit', type: 'invest'})" class="btn btn-primary btn-sm">充值</a>
+                </li>
+            </ul>
+        </div>
+        <ul class="space_center_invest__info clearfix">
+            <li>
+                <p class="num">${{ personal.equity || '0.00' }}</p>
+                <p class="tip">资产净值</p>
+            </li>
+            <li>
+                <p class="num">${{ personal.credit || '0.00' }}</p>
+                <p class="tip">信用赠金</p>
+            </li>
+            <li>
+                <p class="num">${{ personal.margin_free || '0.00' }}</p>
+                <p class="tip">可用保证金</p>
+            </li>
+            <li class="noLine">
+                <p class="num">{{ personal.margin_level || '0.00' }}%</p>
+                <p class="tip">保证金比例</p>
+            </li>
+            <li ng-mouseenter="show_volume=true" ng-mouseleave="show_volume=false" ng-class="{'active':show_volume}">
+                <p class="num">{{ personal.volume || '0.00' }}</p>
+                <p class="tip">总交易手数</p>
+                <p class="space_center_hint">用户真实入金后的交易手数累计，包含复制交易，不包含CFD</p>
+            </li>
+            <li ng-mouseenter="show_close_profit=true" ng-mouseleave="show_close_profit=false" ng-class="{'active':show_close_profit}">
+                <p class="num" ng-class="{'font-danger': personal.profit.indexOf('-') < 0, 'font-success': personal.profit.indexOf('-') >= 0}">${{ personal.profit || '0.00' }}</p>
+                <p class="tip">历史总收益</p>
+                <p class="space_center_hint">用户真实入金后平仓产生的收益总数</p>
+            </li>
+            <li>
+                <p class="num" ng-class="{'font-danger': personal.floating_profit.indexOf('-') < 0, 'font-success': personal.floating_profit.indexOf('-') >= 0}">${{ personal.floating_profit || '0.00' }}</p>
+                <p class="tip">浮动盈亏</p>
+            </li>
+            <li class="noLine">
+                <p class="num" ng-class="{'font-danger': personal.profit_rate.indexOf('-') < 0, 'font-success': personal.profit_rate.indexOf('-') >= 0}">{{ personal.profit_rate || '0.00' }}%</p>
+                <p class="tip">总收益率</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div ng-if="personal.basic === 'center.index' || 
+            personal.basic === 'center.wallet.subpage'">
+    <div class="space_center_wallet">
+        <div class="clearfix">
+            <div class="space_center_wallet__num">
+                零钱包: ${{ personal.wallet_balance || '0.00' }}
+            </div>
+            <ul class="space_center_wallet__btn">
+                <li>
+                    <a ng-if="personal.basic === 'center.index'" ui-sref="space.center.wallet.subpage({ subpage: 'summary'})" class="btn btn-default btn-sm">查看明细</a>
+                    <a ng-if="personal.basic === 'center.wallet.subpage'" ui-sref="space.center.index" class="btn btn-default btn-sm">返回</a>
+                </li>
+                <li>
+                    <a ui-sref="space.asset.subpage({ subpage: 'withdraw', type: 'wallet'})" class="btn btn-default btn-sm">提现</a>
+                </li>
+                <li>
+                    <a ui-sref="space.asset.subpage({ subpage: 'deposit', type: 'wallet'})" class="btn btn-primary btn-sm">划入交易帐户</a>
+                </li>
+            </ul>
+        </div>
+        <div class="space_center_wallet__tip">
+            高手分成收益与代理商佣金收益会存入零钱包，您可以提现或划入交易帐户。
+        </div>
+    </div>
+</div>

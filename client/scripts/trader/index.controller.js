@@ -10,9 +10,6 @@
     function TraderIndexController($scope, $location, $state, trader, $timeout, $modal, $rootScope) {
         $scope.master = {};
         $scope.toCopy = toCopy;
-        // $scope.toFollow = toFollow;
-        // $scope.cancelFollow = cancelFollow;
-        // $scope.isFollow = isFollow;
         var usercode,
             detailId,
             avaCopyAmount;
@@ -23,8 +20,6 @@
         usercode = absUrl.match(regUsercode)[1];
 
         getMasterInfo(usercode);
-        getCopyRelation(usercode);
-        // getFollowRelation(usercode);
         getAvaCopyAmount(usercode);
 
         // $scope.$on('$stateChangeStart', function (event, toState, toParams) {
@@ -35,6 +30,7 @@
 
         function getMasterInfo(usercode) {
             trader.getMasterInfo(usercode).then(function (data) {
+                // console.log('getMasterInfo',data)
                 if (data.is_succ) {
                     $rootScope.master_info = data.data;
                     angular.extend($scope.master, data.data);
@@ -90,9 +86,10 @@
                     });
                 }
             });
+
         }
 
-        // 获取可用复制金额
+        // 获取可用复制金额 复制关系
         function getAvaCopyAmount(usercode) {
             $scope.$watch('userstatus.logined', function (newVal, oldVal) {
 
@@ -100,7 +97,10 @@
                     trader.getAvaCopyAmount(usercode).then(function (data) {
                         // console.info(data);
                         if (data.is_succ) {
-                            avaCopyAmount = data.data.total_available;
+                            $scope.master.copied = data.data.is_copy;
+                            avaCopyAmount = data.data.usable;
+                            $scope.master.avaCopyAmount = data.data.usable;
+                            $scope.master.min_copy_amount = data.data.min_copy_amount;
                         } else {
                             avaCopyAmount = 0;
                         }
@@ -130,6 +130,7 @@
                                 console.log('getting available copy amount');
                                 return;
                             }
+                            
                             avaCopyAmount = parseFloat(avaCopyAmount, 10);
                             // console.log(avaCopyAmount, minCopyAmount);
                             if (avaCopyAmount < minCopyAmount) {

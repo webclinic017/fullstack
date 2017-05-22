@@ -99,13 +99,28 @@
                             templateUrl: '/views/space/sidebar.html',
                             controller: ''
                         },
-                        'basic@space': {
-                            templateUrl: '/views/space/basic.html',
+                        // 'basic@space': {
+                        //     templateUrl: '/views/space/basic.html',
+                        //     controller: ''
+                        // }
+                    }
+                })
+                // 将space.invest并入，并增加wallet模块合为space.center
+                .state('space.center', {
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/space/center.html',
                             controller: ''
                         }
                     }
                 })
-                .state('space.invest', {
+                .state('space.center.index', {
+                    url: '/center',
+                    views: {
+                        
+                    }
+                })
+                .state('space.center.invest', {
                     views: {
                         'content@space': {
                             templateUrl: '/views/invest/index.html',
@@ -113,11 +128,15 @@
                         }
                     }
                 })
-                .state('space.invest.subpage', {
+                .state('space.center.invest.subpage', {
                     authenticated: true,
-                    url: '/space/invest/:subpage',
+                    url: '/center/invest/:subpage',
                     views: {
-                        '@space.invest': {
+                        'basic@space.center.invest': {
+                            templateUrl: '/views/space/center.html',
+                            controller: ''
+                        },
+                        'detail@space.center.invest': {
                             templateUrl: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'current';
                                 return '/views/invest/' + $stateParams.subpage + '.html';
@@ -130,6 +149,54 @@
                                 return ctrlPrefix + ctrlRoot + ctrlSuffix;
                             }
                         }
+                    }
+                })
+                .state('space.center.wallet', {
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/wallet/index.html',
+                            controller: ''
+                        }
+                    }
+                })
+                .state('space.center.wallet.subpage', {
+                    authenticated: true,
+                    url: '/center/wallet/:subpage',
+                    views: {
+                        'basic@space.center.wallet': {
+                            templateUrl: '/views/space/center.html',
+                            controller: ''
+                        },
+                        'detail@space.center.wallet': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'summary';
+                                return '/views/wallet/' + $stateParams.subpage + '.html';
+                            },
+                            controllerProvider: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'summary';
+                                var ctrlPrefix = 'Wallet';
+                                var ctrlSuffix = 'Controller';
+                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                            }
+                        }
+                    }
+                })
+
+                // space.invest 弃用，会跳转到space.center.index
+                .state('space.invest', {
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/space/center.html',
+                            controller: ''
+                        }
+                    }
+                })
+                .state('space.invest.subpage', {
+                    toCenter: true,
+                    url: '/space/invest/:subpage',
+                    views: {
+                        
                     }
                 })
 
@@ -163,7 +230,7 @@
                 })
                 .state('space.asset.subpage', {
                     authenticated: true,
-                    url: '/space/asset/:subpage',
+                    url: '/space/asset/:subpage?type&amount',
                     views: {
                         '@space.asset': {
                             templateUrl: function ($stateParams) {
@@ -352,7 +419,7 @@
                 return newName;
             }
         }])
-        .run(['$rootScope', '$state', '$window', 'authorization', function ($rootScope, $state, $window, authorization) {
+        .run(['$rootScope', '$state', '$window', 'authorization', '$timeout', function ($rootScope, $state, $window, authorization, $timeout) {
             $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
                 if (toState.authenticated) {
                     // authorization.authorize().then(function (isLogined) {
@@ -360,6 +427,13 @@
                     //         $state.go('account.subpage', {subpage: 'login'});
                     //     }
                     // });
+                }
+                if (toState.toCenter) {
+                    
+                    $timeout(function () {
+                        $state.go('space.center.index');
+                    });
+                    
                 }
             });
         }]);

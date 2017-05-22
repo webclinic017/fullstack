@@ -1,7 +1,10 @@
 <!-- side navbar -->
 <div class="invite-con">
-    <div class="row">
-        <div class="col-xs-9">
+    <div class="invite-con__title">
+        邀请好友,赢取10美金
+    </div>
+    <div class="row invite-con__link">
+        <div class="col-xs-8">
             <input class="form-control form-control-md"
                    name="link"
                    type="text"
@@ -15,13 +18,17 @@
                 <span class="font-danger">$20</span> 的奖励-->
             </p>
         </div>
-        <div class="col-xs-3">
-            <a class="btn btn-primary btn-sm" ng-click="selectTxt()">全选</a>
+        <div class="col-xs-2 invite_btn">
+            <a class="btn btn-primary btn-sm" ng-click="selectTxt()">复制</a>
+        </div>
+        <div class="col-xs-2">
+            <p class="num">{{ friendsNum }}</p>
+            <p class="tip">当前邀请人数</p>
         </div>
     </div>
 
     <div class="invite-con__rules">
-        <p class="font-base font-bold font-size-18">邀请好友规则：</p>
+        <p class="font-base font-size-18">邀请好友规则：</p>
         <br>
         <ul>
             <!--<li>

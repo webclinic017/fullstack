@@ -56,8 +56,8 @@
                             保证金比例: {{ orderCurrent.margin_level }}%
                         </span>
                     </th>
-                    <th ng-class="{'font-success': orderCurrent.group_profit.indexOf('-') != -1, 'font-danger':  orderCurrent.group_profit.indexOf('-') < 0}">
-                        <i class="fa fa-dollar"></i>{{ orderCurrent.group_profit }}
+                    <th ng-class="{'font-success': orderCurrent.floating_profit.indexOf('-') != -1, 'font-danger':  orderCurrent.floating_profit.indexOf('-') < 0}">
+                        <i class="fa fa-dollar"></i>{{ orderCurrent.floating_profit }}
                     </th>
                     <th class="invest_orders__btn">
                         <button href="" class="btn btn-primary btn-sm" ng-click="openInvestOwnDetailMdl('own', $event)">详情</button>
@@ -224,12 +224,12 @@
                         </th>
                         <th colspan="2" class="invest_orders__rate-copy">
                             <span class="number" ng-click="openCopyMdl(trader, $event)">
-                                复制金额: {{ trader.copy_asset }}
+                                复制金额: {{ trader.copy_amount }}
                                 <i class="fa fa-caret-down font-info"></i>
                             </span>
                         </th>
                         <th ng-class="{'font-success': trader.profit.indexOf('-') != -1, 'font-danger':  trader.profit.indexOf('-') < 0}">
-                            <i class="fa fa-dollar"></i>{{ trader.profit }}
+                            <i class="fa fa-dollar"></i>{{ trader.floating_profit }}
                         </th>
                         <th class="invest_orders__btn">
                             <button class="btn btn-primary btn-sm" ng-click="openInvestCopyDetailMdl(trader, $event)">详情</button>

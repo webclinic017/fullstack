@@ -35,9 +35,9 @@
 
         function getInvestHistoryData () {
             invest.getInvestHistoryData().then(function (data) {
-                // console.info(data);
-                $scope.orderHistory = data.group_data;
-                $scope.orders = data.data;
+                console.info(data);
+                $scope.orderHistory = data.data;
+                $scope.orders = data.data.records;
 
                 $scope.$broadcast('hideLoadingImg');
             });
@@ -56,6 +56,7 @@
         // 获取 copied traders 列表
         function getInvestHistoryTraders() {
             invest.getInvestHistoryTraders().then(function (data) {
+                if (!data) return;
                 // console.info(data);
                 $scope.traders = data.data;
                 angular.forEach($scope.traders, function (value, key) {
@@ -83,14 +84,15 @@
 
         function getInvestHistoryDetails (page) {
             page = page ? page : 1;
+            var offset = (page-1)*pagesize;
 
-            invest.getInvestHistoryDetails(nowTrader.usercode, page, pagesize).then(function (data) {
+            invest.getInvestHistoryDetails(nowTrader.user_code, offset, pagesize).then(function (data) {
                 nowTrader.notFirstLoad = true;
                 // console.info(data);
-                nowTrader.orders = data.data;
+                nowTrader.orders = data.data.records;
 
                 angular.extend($scope.pagebar.config, {
-                    total: getTotal(data.sum, pagesize),
+                    total: getTotal(data.data.record_count, pagesize),
                     page: page
                 });
             }); 
@@ -130,7 +132,7 @@
                     invest.getInvestHistoryData().then(function (data) {
                         // console.info(data);
                         $scope.$broadcast('hideLoadingImg');
-                        $scope.details = data.data;
+                        $scope.details = data.data.records;
                         $scope.modal.show = true;
                     });
                     
@@ -178,16 +180,17 @@
                     
                     function getInvestHistoryDetailsMdl (page) {
                         page = page ? page : 1;
+                        var offset = (page-1)*pagesize;
                         $scope.$broadcast('showLoadingImg');
 
-                        invest.getInvestHistoryDetails(trader.usercode, page, pagesize).then(function (data) {
+                        invest.getInvestHistoryDetails(trader.user_code, offset, pagesize).then(function (data) {
                             // console.info(data);
                             $scope.$broadcast('hideLoadingImg');
-                            $scope.details = data.data;
+                            $scope.details = data.data.records;
                             $scope.modal.show = true;
 
                             angular.extend($scope.pagebar.config, {
-                                total: getTotal(data.sum, pagesize),
+                                total: getTotal(data.data.record_count, pagesize),
                                 page: page
                             });
                         }); 

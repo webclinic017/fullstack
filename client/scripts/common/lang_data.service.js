@@ -110,7 +110,7 @@
             "rank1": {"en": "Ranking", "zh": "综合排名"},
 
             // 登录 login
-            "login1": {"en": "Mobile No. /MT4 account No./e-mail", "zh": "手机号码/MT4账号/电子邮箱"},
+            "login1": {"en": "Mobile No.", "zh": "手机号码"},
             "login2": {"en": "Please enter your account No.", "zh": "请输入账号"},
             "login3": {"en": "xx", "zh": "账号格式不正确"},
             "login4": {"en": "xx", "zh": "账号尚未注册"},
