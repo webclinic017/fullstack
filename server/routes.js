@@ -773,18 +773,18 @@ module.exports = function (app) {
         var action = req.query.action;
         // var model = require('./model/modelRegular');
         var napiConfigInfo = require('./app_napi.config.js');
-        var page, pagesize, sum;
+        var offset, limit, sum;
         var page_total = 0;
         var data = null;
         var data_pre = global_modelRegular['products'];
         var rs;
         var oError = null;
         if (action == "get_regular_list") {
-            page = req.query.page || 1;
-            pagesize = req.query.pagesize || 10;
+            offset = req.query.offset || 0;
+            limit = req.query.limit || 10;
             sum = data_pre.length;
-            page_total = Math.ceil(sum / pagesize);
-            if (page > page_total) {
+            page_total = Math.ceil(sum / limit);
+            if (offset > sum) {
                 oError = {
                     error_msg: "错误的页码"
                 };
@@ -806,8 +806,9 @@ module.exports = function (app) {
                     data_new_item["profit_rate_wish"] = Math.ceil(data_new_item["profit_rate_wish"].split("%")[0] / 12) + '%';
                     data_pre_new.push(data_new_item);
                 }
-                data = data_pre_new.slice((page - 1) * pagesize, Math.min(page * pagesize, sum));
-
+                var endPg = Number(offset)+Number(limit);
+                data = data_pre_new.slice(offset, Math.min(endPg, sum));
+                // console.log(data, endPg);
             }
         }
         if (action == "get_regular_detail") {
@@ -857,24 +858,34 @@ module.exports = function (app) {
             data = report_sites;
         }
         if (data) {
-            rs = {
-                is_succ: true,
-                error_code: 0,
-                error_msg: "获取成功",
-                data: data
-            }
-            if (page) {
-                rs.page = page;
-                rs.sum = sum;
+            
+            if (offset) {
+                rs = {
+                    is_succ: true,
+                    code: 0,
+                    message: "获取成功",
+                    data: {
+                        records: data,
+                        page_count: page_total,
+                        record_count: sum
+                    }
+                }
+            } else {
+                rs = {
+                    is_succ: true,
+                    code: 0,
+                    message: "获取成功",
+                    data: data
+                }
             }
         } else {
             rs = {
                 is_succ: false,
-                error_code: 1,
-                error_msg: "获取失败"
+                code: 1,
+                message: "获取失败"
             }
             if (oError) {
-                rs.error_msg = oError.error_msg;
+                rs.message = oError.error_msg;
             }
         }
         res.json(rs);
