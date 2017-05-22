@@ -38,46 +38,16 @@
         
         if ($method.toUpperCase() === 'GET') {
             return $.get($url, $params).then(function (data) {
-                if (data.code === 100014 || data.code === 100010) {
-                    layer.open({
-                        skin: 'msg',
-                        content: "请重新登陆",
-                        time: 2
-                    });
-                    toLogin();
-                } else {
-                    return data;
-                }
+                return checkTokenCode(data);
             }, function (error) {
-                console.log(error);
-                layer.open({
-                    skin: 'msg',
-                    content: "服务器异常",
-                    time: 2
-                });
-                toLogin();
+                errFunc(error);
             });
         }
         if ($method.toUpperCase() === 'POST') {
             return $.post($url, $params).then(function (data) {
-                if (data.code === 100014 || data.code === 100010) {
-                    layer.open({
-                        skin: 'msg',
-                        content: "请重新登陆",
-                        time: 2
-                    });
-                    toLogin();
-                } else {
-                    return data;
-                }
+                return checkTokenCode(data);
             }, function (error) {
-                console.log(error);
-                layer.open({
-                    skin: 'msg',
-                    content: "服务器异常",
-                    time: 2
-                });
-                toLogin();
+                errFunc(error);
             });
         }
         if ($method.toUpperCase() === 'PUT') {
@@ -90,48 +60,32 @@
                 data: $params,
                 success: function (data) {
                     // console.log(data);
-                    if (data.code === 100014) {
-                        console.log(data.message);
-                        layer.open({
-                            skin: 'msg',
-                            content: "请重新登陆",
-                            time: 2
-                        });
-                        toLogin();
-                    } else {
-                        return data;
-                    }
+                    return checkTokenCode(data);
                 },
                 error: function (error) {
-                    console.log(error);
-                    layer.open({
-                        skin: 'msg',
-                        content: "服务器异常",
-                        time: 2
-                    });
-                    toLogin();
+                    errFunc(error);
                 }
             });
-            // return $.put($url, $params).then(function (data) {
-            //     if (data.code === 100014 || data.code === 100010) {
-            //         layer.open({
-            //             skin: 'msg',
-            //             content: "请重新登陆",
-            //             time: 2
-            //         });
-            //         toLogin();
-            //     } else {
-            //         return data;
-            //     }
-            // }, function (error) {
-            //     console.log(error);
-            //     layer.open({
-            //         skin: 'msg',
-            //         content: "服务器异常",
-            //         time: 2
-            //     });
-            //     toLogin();
-            // });
+        }
+
+        // 检查返回的token code确定是不是要重新登陆
+        function checkTokenCode (data) {
+            // 100100,  // 令牌错误
+            // 100101,  // 令牌已被列入黑名单   
+            // 100102,  // 令牌过期    
+            // 100103,  // 令牌验证失败  
+            // 100104,  // 令牌未定义
+
+            if (data.code >= 100100 && data.code <= 100199) {
+                layer.open({
+                    skin: 'msg',
+                    content: "请重新登陆",
+                    time: 2
+                });
+                toLogin();
+            } else {
+                return data;
+            }
         }
 
         function toLogin () {
@@ -141,37 +95,16 @@
                 });
             }, 1000);
         }
-        // return $.ajax({
-        //     url: $url,
-        //     type: $method.toUpperCase(),
-        //     xhrFields: {
-        //         withCredentials: true
-        //     },
-        //     data: $params,
-        //     success: function (data) {
-        //         // console.log(data);
-        //         if (data.code === 100014) {
-        //             console.log(data.message);
-        //             layer.open({
-        //                 skin: 'msg',
-        //                 content: "请重新登陆",
-        //                 time: 2
-        //             });
-        //             console.log(1);
-        //             return 100014;
-        //         } else {
-        //             return data;
-        //         }
-        //     },
-        //     error: function (error) {
-        //         console.log(error);
-        //         layer.open({
-        //             skin: 'msg',
-        //             content: "服务器异常",
-        //             time: 2
-        //         });
-        //     }
-        // });
+
+        function errFunc (error) {
+            console.log(error);
+            layer.open({
+                skin: 'msg',
+                content: "服务器异常",
+                time: 2
+            });
+            toLogin();
+        }
     }
     // 上传文件 form提交
     function publicUploadFile ($url, $method, oForm) {

@@ -19,11 +19,11 @@
                 {{ copyCancel.failMsg || '取消复制失败' }}
             </p>
 
-            <button class="btn btn-primary btn-sm" ng-if="clickable" ng-click="cancelCopy(false)">
+            <button class="btn btn-primary btn-sm" ng-if="clickable" ng-click="cancelCopy(0)">
                 取消复制并跟随高手平仓
             </button>
 
-            <button class="btn btn-primary btn-sm mg-tp-15" ng-if="clickable" ng-click="cancelCopy(true)">
+            <button class="btn btn-primary btn-sm mg-tp-15" ng-if="clickable" ng-click="cancelCopy(1)">
                 取消复制并强行平仓
             </button>
 

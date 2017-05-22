@@ -83,7 +83,7 @@
                             <div class="invest_orders__operate">
                                 <p>
                                     <span class="invest_orders__action" ng-class="detail.action?'font-down':'font-up'">
-                                        {{ detail.action_name }}
+                                        {{ detail.cmd_name }}
                                     </span>
                                     <a class="invest_orders__symbol" href="">
                                         {{ detail.symbol | symbolMod:'zh' }}
@@ -91,15 +91,15 @@
                                 </p>
 
                                 <p class="text-left font-size-12" ng-if="modal.usage =='history'" >
-                                    <span class="history-operation-way">{{detail.type_name}}</span>
-                                    <span>{{detail.ago | duration}}前</span>
+                                    <span class="history-operation-way">{{detail.close_type_name}}</span>
+                                    <span>{{detail.passed_time | duration}}前</span>
                                 </p>  
                             </div>
                         </td>
                         <td>{{ detail.open_price }}</td>
                         <td>{{ detail.close_price }}</td>
                         <td>{{ detail.volume }}</td>
-                        <td><i class="fa fa-dollar"></i>{{ detail.occupy_asset }}</td>
+                        <td><i class="fa fa-dollar"></i>{{ detail.margin }}</td>
                         <td ng-class="{'font-success': detail.profit.indexOf('-') != -1, 'font-danger': detail.profit.indexOf('-') < 0}"><i class="fa fa-dollar"></i>{{ detail.profit }}</td>
                         <td>{{ detail.swaps }}</td>
                         <td>{{ detail.commission }}</td>

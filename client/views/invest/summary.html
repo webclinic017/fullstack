@@ -21,30 +21,30 @@
                             <div class="col-xs-6 no_padding">
                                 <div class="invest_main__rt">
                                     <div class="space_gray_color">平均持仓时间</div>
-                                    <div>{{ summary.statistic.holding_time || '0.00' | duration }}</div>
+                                    <div>{{ summary.avg_position_time || '0.00' | duration }}</div>
                                 </div>
                                 <div class="invest_main__rt">
                                     <div class="space_gray_color">月平均交易次数</div>
-                                    <div>{{ summary.statistic.trader_num || '0'  }}</div>
+                                    <div>{{ summary.avg_monthly_trade_count || '0'  }}</div>
                                 </div>
                                 <div class="invest_main__rt no-border">
                                     <div class="space_gray_color">月回报率</div>
-                                    <div>{{ summary.statistic.month_profit || '0.00' }}%</div>
+                                    <div>{{ summary.monthly_profit_rate || '0.00' }}%</div>
                                 </div>
                             </div>
                             <div class="col-xs-6 no_padding">
                                 <span class="navbar_summary__divider"></span>
                                 <div class="invest_main__rt">
                                     <div class="space_gray_color">最大回撤</div>
-                                    <div>{{ summary.statistic.drawdown || '0.00' }}%</div>
+                                    <div>{{ summary.max_retract || '0.00' }}%</div>
                                 </div>
                                 <div class="invest_main__rt">
                                     <div class="space_gray_color">最大盈利点差</div>
-                                    <div>{{ summary.statistic.max_profit || '0.00' }}</div>
+                                    <div>{{ summary.max_profit || '0.00' }}</div>
                                 </div>
                                 <div class="invest_main__rt no-border">
                                     <div class="space_gray_color">总收益率</div>
-                                    <div>{{ summary.statistic.total_profit || '0.00' }}%</div>
+                                    <div>{{ summary.total_profit_rate || '0.00' }}%</div>
                                 </div>
                             </div>
                         </div>
