@@ -12,24 +12,14 @@
         $scope.progress = {
             step: 1
         };
-        //截止到16号，交易大赛不可报名。
-        $scope.showGame = new Date().getTime() < new Date(2016,4,16).getTime() ? true : false;
         $scope.account = {
             phone: undefined,
             captcha: undefined,
-            email: undefined,
-            password: undefined,
-            pwdConfirm: undefined,
-            realId: undefined,     // 注册成功后生成的真实账号
-            demoId: undefined,     // 注册成功后生成的模拟账号
+            password: undefined
         };
 
         // 前端错误
         $scope.frontErr = {
-            username: {
-                show: false,
-                tip: validator.regType.username.tip
-            },
             phone: {
                 show: false,
                 reg: validator.regType.phone.reg
@@ -37,42 +27,15 @@
             captcha: {
                 show: false
             },
-            email: {
-                show: false,
-                reg: validator.regType.email.reg
-            },
             password: {
                 show: false,
                 reg: validator.regType.password.reg,
                 tip: validator.regType.password.tip
-            },
-            pwdConfirm: {
-                show: false
             }
         };
 
         // 后端错误
         $scope.backErr = {
-            username: {
-                show: false,
-                status: 0    //0, 1, 2
-            },
-            phone: {
-                show: false,
-                status: 0    //0, 1
-            },
-            captcha: {
-                show: false,
-                status: 0    // 0, 1
-            },
-            captchaBtn: {
-                show: false,
-                msg: ''
-            },
-            email: {
-                show: false,
-                status: 0    //0, 1
-            },
             system: {
                 show: false,
                 msg: ''
@@ -87,6 +50,7 @@
         $scope.voiceCaptcha = false;
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
+        $scope.checkPhoneCode = checkPhoneCode;
         $scope.submitRegisterForm = submitRegisterForm;
         $scope.getCaptcha = getCaptcha;
         $scope.goNextStep = goNextStep;
@@ -95,15 +59,15 @@
         // 设置 token 在获取手机验证码时提交该 token 解决更换 ip 批量注册的问题
         account.setToken();
         // 从 landing page 进入时
-        $scope.account.username = $state.params.name;
+        // $scope.account.username = $state.params.name;
         $scope.account.phone = $state.params.phone;
-        $scope.account.email = $state.params.email;
+        // $scope.account.email = $state.params.email;
 
-        if ($scope.account.username) {
-            if (!validator.isValidTxt('username', $scope.account.username, 4, 20)) {
-                $scope.account.username = undefined;
-            }
-        }
+        // if ($scope.account.username) {
+        //     if (!validator.isValidTxt('username', $scope.account.username, 4, 20)) {
+        //         $scope.account.username = undefined;
+        //     }
+        // }
 
         if ($scope.account.phone) {
             if (!validator.regType.phone.reg.test($scope.account.phone)) {
@@ -111,49 +75,11 @@
             }
         }
 
-        if ($scope.account.email) {
-            if (!validator.regType.email.reg.test($scope.account.email)) {
-                $scope.account.email = undefined;
-            }
-        }
-
-        // 监听 $scope.progress.step 如果是注册成功则获取账户信息
-        $scope.$watch('progress.step', function (newVal) {
-            if (newVal === 4) {
-                account.getPersonalInfo().then(function (data) {
-                    $scope.account.realId = data.real_id;
-                    $scope.account.demoId = data.demo_id;
-                });
-            }
-        });
-
-        function checkUsernameExist() {
-            account.checkExist(1, $scope.account.username).then(function (data) {
-                if (!data) return;
-                if (data.is_succ) {
-                    // 如果存在
-                    if (data.data) {
-                        $scope.backErr.username.status = 1;
-                    } else {
-                        $scope.backErr.username.status = 0;
-                    }
-                }
-            });
-        }
-
-        function checkEmailExist() {
-            account.checkExist(2, $scope.account.email).then(function (data) {
-                if (!data) return;
-                if (data.is_succ) {
-                    // 如果存在
-                    if (data.data) {
-                        $scope.backErr.email.status = 1;
-                    } else {
-                        $scope.backErr.email.status = 0;
-                    }
-                }
-            });
-        }
+        // if ($scope.account.email) {
+        //     if (!validator.regType.email.reg.test($scope.account.email)) {
+        //         $scope.account.email = undefined;
+        //     }
+        // }
 
         function getCaptcha(formName) {
             showErr(formName, 'phone');
@@ -178,18 +104,38 @@
             }
 
             tmp.then(function (data) {
-                // console.info(data);
+                console.info(data);
                 if (!data) return;
                 if (data.is_succ) {
                     $scope.startTimer();
                 } else {
+                    $scope.clickable.captcha = true;
+                    layer.msg(data.message);
+                }
+            });
+        }
 
-                    $scope.backErr.captchaBtn.show = true;
-                    $scope.backErr.captchaBtn.msg = data.message;
+        function checkPhoneCode (formName) {
+            showErr(formName, 'phone');
+            showErr(formName, 'captcha');
+
+            if ($scope[formName].$invalid) {
+                return;
+            }
+
+            account.checkPhoneAndCaptcha($scope.account.phone, 
+                    $scope.account.captcha).then(function (data) {
+                if (!data) return;
+                if (data.is_succ) {
+                    goNextStep();
+                } else {
+
+                    $scope.backErr.system.show = true;
+                    $scope.backErr.system.msg = data.message;
+
                     $timeout(function () {
-                        $scope.backErr.captchaBtn.show = false;
-                        $scope.backErr.captchaBtn.msg = '';
-                        $scope.clickable.captcha = true;
+                        $scope.backErr.system.show = false;
+                        $scope.backErr.system.msg = '';
                     }, 3000);
                 }
             });
@@ -236,12 +182,7 @@
 
         function submitRegisterForm(formName) {
 
-            showErr(formName, 'username');
-            showErr(formName, 'phone');
-            showErr(formName, 'captcha');
-            showErr(formName, 'email');
             showErr(formName, 'password');
-            showErr(formName, 'pwdConfirm');
 
             if ($scope[formName].$invalid) {
                 return;
@@ -251,17 +192,15 @@
             sa.track('btn_register_submit');
 
             $scope.clickable.submit = false;
-            account.register(
-                $scope.account.username,
-                $scope.account.phone,
-                $scope.account.captcha,
-                $scope.account.email,
-                $scope.account.password,
-                $state.params.lp,
-                $state.params.pid,
-                $state.params.unit,
-                $state.params.key
-            ).then(function (data) {
+            account.register({
+                phone: $scope.account.phone,
+                verify_code: $scope.account.captcha,
+                password: $scope.account.password,
+                lp: $state.params.lp,
+                pid: $state.params.pid,
+                unit: $state.params.unit,
+                key: $state.params.key
+            }).then(function (data) {
                 $scope.clickable.submit = true;
                 if (!data) return;
                 if (data.is_succ) {

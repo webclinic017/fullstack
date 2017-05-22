@@ -1,113 +1,68 @@
 <div class="account_register">
-    <div class="step_by_step mg-bt-80">
+    <div class="step_by_step">
         
-        <div class="step_by_step__step active">
+        <div class="step_by_step__step" ng-class="{'active': progress.step == 1}">
             <span></span>
-            <p>1. {{ lang.text("register1") }}</p>
+            <p><span>1</span>填写手机号</p>
         </div>
-        <div class="step_by_step__step" ng-class="{'active': progress.step >= 2}">
+        <div class="step_by_step__step" ng-class="{'active': progress.step == 2}">
             <span></span>
-            <p>2. {{ lang.text("register2") }}</p>
+            <p><span>2</span>设置密码</p>
         </div>
-        <div class="step_by_step__step" ng-class="{'active': progress.step >= 3}">
+        <div class="step_by_step__step" ng-class="{'active': progress.step == 3}">
             <span></span>
-            <p>3. {{ lang.text("register3") }}</p>
-        </div>
-        <div class="step_by_step__step" ng-class="{'active': progress.step >= 4}">
-            <span></span>
-            <p>4. {{ lang.text("register4") }}</p>
+            <p><span>3</span>完成注册</p>
         </div>
     </div>
+    <h2 class="account_register__title">
+        <img src="/images/logo@2x.png">
+    </h2>
     <div class="account_register__step-1" ng-show="progress.step === 1">
-        <h2 class="account_register__title">{{ lang.text("register1") }}</h2>
-        
-        <form name="registerForm" novalidate>
+        <form name="registerForm1" novalidate>
             <div class="form-control-wrapper">
-                <input class="form-control" 
-                       name="username"
-                       type="text"
-                       placeholder="{{ lang.text('username') }}"
-                       required
-                       ng-class="{'form-control-error': (frontErr.username.show && registerForm.username.$invalid) || (backErr.username.show && backErr.username.status > 0)}"
-                       ng-model="account.username"
-                       twform-valid-txt
-                       data-txt-type="username"
-                       data-min-len="2"
-                       data-max-len="16"
-                       ng-focus="hideErr('registerForm', 'username')"
-                       ng-blur="showErr('registerForm', 'username')">
-
-                <div ng-show="frontErr.username.show">
-                    <p class="alert-arrow_tp_lf" ng-show="registerForm.username.$error.required">
-                        {{ lang.text("register7") }}
-                    </p>
-                    <p class="alert-arrow_tp_lf" ng-show="registerForm.username.$error.twformValidTxt">
-                        {{frontErr.username.tip}}
-                    </p>
-                </div>
-
-                <div ng-show="backErr.username.show">
-                    <p class="alert-arrow_tp_lf" ng-show="backErr.username.status == 1">
-                        该昵称已存在
-                    </p>
-                </div>
-            </div>
-
-            <div class="form-control-wrapper">
+                <span class="phone_tip">+86</span>
                 <input class="form-control" 
                        name="phone"
                        type="text"
-                       placeholder="{{ lang.text('phone') }}"
+                       placeholder="{{ lang.text('register8') }}"
                        required
-                       ng-class="{'form-control-error': (frontErr.phone.show && registerForm.phone.$invalid) || (backErr.phone.show && backErr.phone.status > 0)}"
+                       ng-class="{'form-control-error': frontErr.phone.show && registerForm1.phone.$invalid}"
                        ng-model="account.phone"
                        ng-pattern="frontErr.phone.reg"
-                       ng-focus="hideErr('registerForm', 'phone')"
-                       ng-blur="showErr('registerForm', 'phone')">
+                       ng-focus="hideErr('registerForm1', 'phone')"
+                       ng-blur="showErr('registerForm1', 'phone')">
 
                 <div ng-show="frontErr.phone.show">
-                    <p class="alert-arrow_tp_lf" ng-show="registerForm.phone.$error.required">
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm1.phone.$error.required">
                         {{ lang.text("register8") }}
                     </p>
-                    <p class="alert-arrow_tp_lf" ng-show="registerForm.phone.$error.pattern">
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm1.phone.$error.pattern">
                         输入的手机号码格式不正确
-                    </p>
-                </div>
-
-                <div ng-show="backErr.phone.show">
-                    <p class="alert-arrow_tp_lf" ng-show="backErr.phone.status == 1">
-                        该手机号码已注册
                     </p>
                 </div>
             </div>
         
             <div class="row">
-                <div class="col-xs-6">
+                <div class="col-xs-7">
                     <div class="form-control-wrapper">
                         <input class="form-control"
                                name="captcha"
                                type="text"
                                placeholder="{{ lang.text('verifycode') }}"
                                required
-                               ng-class="{'form-control-error': (frontErr.captcha.show && registerForm.captcha.$invalid) || (backErr.captcha.show && backErr.captcha.status > 0)}"
+                               ng-class="{'form-control-error': frontErr.captcha.show && registerForm1.captcha.$invalid}"
                                ng-model="account.captcha"
-                               ng-blur="showErr('registerForm', 'captcha')"
-                               ng-focus="hideErr('registerForm', 'captcha')">
+                               ng-blur="showErr('registerForm1', 'captcha')"
+                               ng-focus="hideErr('registerForm1', 'captcha')">
 
                         <div ng-show="frontErr.captcha.show">
-                            <p class="alert-arrow_tp_lf" ng-show="registerForm.captcha.$error.required">
+                            <p class="alert-arrow_tp_lf" ng-show="registerForm1.captcha.$error.required">
                                 {{ lang.text("register9") }}
-                            </p>
-                        </div>
-
-                        <div ng-show="backErr.captcha.show">
-                            <p class="alert-arrow_tp_lf" ng-show="backErr.captcha.status == 1">
-                                验证码不正确
                             </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-6">
+                <div class="col-xs-5">
                     <div class="relative">
                         <div class="captcha_btn"
                              tw-captcha-timer 
@@ -115,7 +70,7 @@
                              voice-captcha="voiceCaptcha"
                              captcha-btn-clickable="clickable.captcha" 
                              ng-disabled="!clickable.captcha" 
-                             ng-click="getCaptcha('registerForm')">
+                             ng-click="getCaptcha('registerForm1')">
                             {{ lang.text("register6") }}
                         </div>
 
@@ -127,79 +82,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="form-control-wrapper">
-                <input class="form-control"
-                       name="email"
-                       type="text"
-                       placeholder="{{ lang.text('email') }}"
-                       required
-                       ng-class="{'form-control-error': (frontErr.email.show && registerForm.email.$invalid) || (backErr.email.show && backErr.email.status > 0)}"
-                       ng-model="account.email"
-                       ng-pattern="frontErr.email.reg"
-                       ng-blur="showErr('registerForm', 'email')"
-                       ng-focus="hideErr('registerForm', 'email')">
-
-                <div ng-show="frontErr.email.show">
-                    <p class="alert-arrow_tp_lf" ng-show="registerForm.email.$error.required">
-                        {{ lang.text("register10") }}
-                    </p>
-                    <p class="alert-arrow_tp_lf" ng-show="registerForm.email.$error.pattern">
-                        电子邮箱格式不正确
-                    </p>
-                </div>
-
-                <div ng-show="backErr.email.show">
-                    <p class="alert-arrow_tp_lf" ng-show="backErr.email.status == 1">
-                        电子邮箱已存在
-                    </p>
-                </div>
-            </div>
-
-            <div class="form-control-wrapper">
-                <input class="form-control"
-                       name="password"
-                       type="password"
-                       placeholder="{{ lang.text('password') }}"
-                       required
-                       ng-class="{'form-control-error': frontErr.password.show && registerForm.password.$invalid}"
-                       ng-model="account.password"
-                       twform-valid-pwd
-                       ng-focus="hideErr('registerForm', 'password')"
-                       ng-blur="showErr('registerForm', 'password')">
-                
-                <div ng-show="frontErr.password.show">
-                    <p class="alert-arrow_tp_lf" ng-show="registerForm.password.$error.required">
-                        {{ lang.text("register11") }}
-                    </p>
-                    <p class="alert-arrow_tp_lf" ng-show="registerForm.password.$error.twformValidPwd">
-                        {{frontErr.password.tip}}
-                    </p>
-                </div>
-            </div>
-
-            <div class="form-control-wrapper">
-                <input class="form-control"
-                       name="pwdConfirm" 
-                       type="password"
-                       placeholder="{{ lang.text('register5') }}"
-                       required
-                       ng-class="{'form-control-error': frontErr.pwdConfirm.show && registerForm.pwdConfirm.$invalid}"
-                       ng-model="account.pwdConfirm"
-                       twform-repeat="{{account.password}}"
-                       ng-focus="hideErr('registerForm', 'pwdConfirm')"
-                       ng-blur="showErr('registerForm', 'pwdConfirm')">
-
-                <div ng-show="frontErr.pwdConfirm.show">
-                    <p class="alert-arrow_tp_lf" ng-show="registerForm.pwdConfirm.$error.required">
-                        {{ lang.text("register12") }}
-                    </p>
-
-                    <p class="alert-arrow_tp_lf" ng-show="registerForm.pwdConfirm.$error.twformRepeat">
-                        两次输入的密码不一致
-                    </p>
-                </div>
-            </div>
             
             <div class="text-center" ng-show="backErr.system.show">
                 <p class="alert-system">
@@ -208,7 +90,7 @@
             </div>
 
             
-            <p class="font-dark mg-tp-10">
+            <p class="font-dark">
                 <i class="fa fa-check-square" aria-hidden="true"></i>
                 {{ lang.text("register13") }}
                 <a class="font-info" href="/web/blog/risk">
@@ -222,8 +104,8 @@
                 </a>
             </p>
 
-            <div class="text-center mg-tp-50 mg-bt-30">
-                <button class="btn btn-primary btn-sm" ng-if="clickable.submit"  ng-click="submitRegisterForm('registerForm')">
+            <div class="text-center mg-tp-20 mg-bt-20">
+                <button class="btn btn-primary btn-sm" ng-if="clickable.submit"  ng-click="checkPhoneCode('registerForm1')">
                     {{ lang.text("register20") }}
                 </button>
 
@@ -242,41 +124,53 @@
         </div>
     </div>
     
-    <div ng-if="progress.step === 2">
-        <h2 class="account_register__title">实名认证</h2>
-        <div ng-include="'/views/setting/verify.html'"></div>    
+    <div class="account_register__step-2" ng-show="progress.step === 2">
+        <form name="registerForm2" novalidate>
+            
+            <div class="form-control-wrapper">
+                <span class="password_tip">设置密码</span>
+                <input class="form-control" 
+                       name="password"
+                       type="password"
+                       placeholder="组合、字母数字，不少于6位"
+                       required
+                       ng-class="{'form-control-error': frontErr.password.show && registerForm2.password.$invalid}"
+                       ng-model="account.password"
+                       twform-valid-pwd
+                       ng-focus="hideErr('registerForm2', 'password')"
+                       ng-blur="showErr('registerForm2', 'password')">
+
+                <div ng-show="frontErr.password.show">
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm2.password.$error.required">
+                        {{ lang.text("register11") }}
+                    </p>
+                    <p class="alert-arrow_tp_lf" ng-show="registerForm2.password.$error.twformValidPwd">
+                        {{ frontErr.password.tip }}
+                    </p>
+                </div>
+            </div>
+            <div class="text-center" ng-show="backErr.system.show">
+                <p class="alert-system">
+                    {{ backErr.system.msg || '未知错误，请联系管理员' }}
+                </p>
+            </div>
+            <div class="text-center mg-tp-20 mg-bt-20">
+                <button class="btn btn-primary btn-sm" ng-if="clickable.submit"  ng-click="submitRegisterForm('registerForm2')">
+                    完成注册
+                </button>
+
+                <button class="btn btn-primary btn-sm" disabled ng-if="!clickable.submit">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    提交中
+                </button>
+            </div>
+        </form>
     </div>
 
-    <div ng-if="progress.step === 3">
-        <h2 class="account_register__title">KYC 认证</h2>
-        <div ng-include="'/views/setting/kyc.html'"></div>
-    </div>
-
-    <div class="text-center" ng-if="progress.step === 4">
-        <h2 class="account_register__title">开户成功</h2>
-        <p>
-            <span class="font-dark">MT4 账号：</span>
-            {{account.realId || '******'}}
-        </p>
-        <p>
-            <span class="font-dark">MT4 服务器：</span>
-            {{lang.text('mt4Live')}}
-        </p>
-        <p>
-            <span class="font-dark">MT4 密码：</span>
-            与网站密码相同
-        </p>    
-        
-        <a class="btn btn-primary btn-sm mg-tp-50 mg-bt-20" ui-sref="space.invest.subpage({subpage: 'current'})">进入个人中心</a>
-        <br>
-        <a class="btn btn-info btn-sm" href="/web/mt4">
-            下载 MT4 软件 
-        </a>
-        <div ng-if="showGame">
-          <br>
-          <a class="btn btn-info btn-sm" href="/bd/t29" >
-              报名交易挑战赛
-          </a>
+    <div class="account_register__step-3" ng-show="progress.step === 3">
+        <p>用户注册成功</p>
+        <div class="text-center mg-tp-20">
+            <a class="btn btn-primary" ui-sref="space.invest.subpage({subpage: 'current'})">进入老虎外汇</a>
         </div>
     </div>
 </div>
