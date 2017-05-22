@@ -66,7 +66,7 @@
         function getTraders() {
             invest.getInvestCurrentTraders().then(function (data) {
                 $scope.$broadcast('hideLoadingImg');
-                console.info(data);
+                // console.info(data);
                 if (data.is_succ) {
                     if (data.data.length <= 0) {
                         $scope.traders = [];
