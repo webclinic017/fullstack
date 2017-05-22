@@ -5,14 +5,17 @@
     //绑定siteid
     _czc.push(["_setAccount", "1260394016"]);
 </script>
-<%}%>
-<%if(lang.isCompany("pkds")){%>
+<%} else if(lang.isCompany("pkds")){%>
 <script>
     //声明_czc对象:
     var _czc = _czc || [];
     //绑定siteid
     _czc.push(["_setAccount", "1260871639"]);
 </script>
+<%} else {%>
+    <script>
+        var _czc = _czc || [];
+    </script>
 <%}%>
 
 <%if(lang.isCompany("tigerwit")){%>

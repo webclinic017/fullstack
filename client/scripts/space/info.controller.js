@@ -89,9 +89,14 @@
         // 获取基本信息完整度
         function getPersonalInfoDegree () {
             account.getPersonalInfoDegree().then(function (data) {
+                if (!data) return;
                 // console.info(data);
+                var deg = 0;
+                if (data.is_succ) {
+                    deg = data.data.degree;
+                }
                 angular.extend($scope.personal, {
-                    infoDegree: data.data.degree
+                    infoDegree: deg
                 });
             });
         }

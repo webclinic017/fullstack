@@ -246,7 +246,7 @@
          * @method getPersonalInfoDegree
          */
         function getPersonalInfoDegree() {
-            return $http.get(o.getPersonalInfoDegreeApi);
+            return publicHttp.dealPublicRequest(o.getPersonalInfoDegreeApi, 'GET');
         }
 
         /**

@@ -52,8 +52,7 @@
         function errFunc (error) {
             console.log(error);
             layer.msg("服务器异常");
-            $window.location.href='/space/#/account/login';
-            // $rootScope.personalCookiesInfo.userCode = undefined;
+            // $window.location.href='/space/#/account/login';
         }
 
         // 检查返回的token code确定是不是要重新登陆

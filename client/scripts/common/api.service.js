@@ -15,7 +15,7 @@
         // console.log('urlOrigin2',urlOrigin2)
 
         var account = {
-            getPersonalInfoDegreeApi: o + '/action/public/v4/user_perfect_degree',
+            getPersonalInfoDegreeApi: urlOrigin2 + '/user/perfect_degree',
             // loginApi: o + '/action/public/v3/login',
             loginApi: urlOrigin2 + '/auth/login',
             checkLoginedApi: o + '/action/public/v4/check',
