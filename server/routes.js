@@ -795,12 +795,14 @@ module.exports = function (app) {
         var action = req.query.action;
         // var model = require('./model/modelRegular');
         var napiConfigInfo = require('./app_napi.config.js');
-        var page, pagesize, sum;
+        var page, pagesize;
+        var offset, limit, sum;
         var page_total = 0;
         var data = null;
         var data_pre = global_modelRegular['products'];
         var rs;
         var oError = null;
+        // 兼容老版本APP 获取分页数据
         if (action == "get_regular_list") {
             page = req.query.page || 1;
             pagesize = req.query.pagesize || 10;
@@ -830,6 +832,39 @@ module.exports = function (app) {
                 }
                 data = data_pre_new.slice((page - 1) * pagesize, Math.min(page * pagesize, sum));
 
+            }
+        }
+        // 新的获取分页数据接口
+        if (action == "get_regular_list_new") {
+            offset = req.query.offset || 0;
+            limit = req.query.limit || 10;
+            sum = data_pre.length;
+            page_total = Math.ceil(sum / limit);
+            if (offset > sum) {
+                oError = {
+                    error_msg: "错误的页码"
+                };
+            } else {
+                var data_pre_new = [];
+                var deepCopy = function (source) {
+                    var result = source ? {} : source;
+                    for (var key in source) {
+                        result[key] = typeof source[key] === 'object' ? deepCopy(source[key]) : source[key];
+                    }
+                    return result;
+                }
+
+                for (var i = 0; i < data_pre.length; i++) {
+                    var data_new_item = deepCopy(data_pre[i]);
+
+                    data_new_item["name"] = data_new_item["name"].substring(1, data_new_item["name"].length - 1);
+                    data_new_item["profit_rate_wish_year"] = data_new_item["profit_rate_wish"];
+                    data_new_item["profit_rate_wish"] = Math.ceil(data_new_item["profit_rate_wish"].split("%")[0] / 12) + '%';
+                    data_pre_new.push(data_new_item);
+                }
+                var endPg = Number(offset)+Number(limit);
+                data = data_pre_new.slice(offset, Math.min(endPg, sum));
+                // console.log(data, endPg);
             }
         }
         if (action == "get_regular_detail") {
@@ -879,11 +914,25 @@ module.exports = function (app) {
             data = report_sites;
         }
         if (data) {
-            rs = {
-                is_succ: true,
-                error_code: 0,
-                error_msg: "获取成功",
-                data: data
+            
+            if (offset) {
+                rs = {
+                    is_succ: true,
+                    code: 0,
+                    message: "获取成功",
+                    data: {
+                        records: data,
+                        page_count: page_total,
+                        record_count: sum
+                    }
+                }
+            } else {
+                rs = {
+                    is_succ: true,
+                    code: 0,
+                    message: "获取成功",
+                    data: data
+                }
             }
             if (page) {
                 rs.page = page;
@@ -892,11 +941,11 @@ module.exports = function (app) {
         } else {
             rs = {
                 is_succ: false,
-                error_code: 1,
-                error_msg: "获取失败"
+                code: 1,
+                message: "获取失败"
             }
             if (oError) {
-                rs.error_msg = oError.error_msg;
+                rs.message = oError.error_msg;
             }
         }
         res.json(rs);
