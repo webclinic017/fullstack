@@ -41,7 +41,7 @@
             // detailId = $timeout(function () {
             //     getMasterDetail(usercode);
             // }, 5000);
-        }
+        }\
 
         // 关注关系
         function getFollowRelation(usercode) {
@@ -109,8 +109,8 @@
             });
         }
 
+        // console.info($scope.personal.isumam);
         function toCopy() {
-            // console.info($scope.personal.isumam);
             // 判断是否登录
             if ($scope.userstatus.logined) {
                 // 判断资金是否处于封闭期
@@ -130,7 +130,7 @@
                                 console.log('getting available copy amount');
                                 return;
                             }
-                            
+
                             avaCopyAmount = parseFloat(avaCopyAmount, 10);
                             // console.log(avaCopyAmount, minCopyAmount);
                             if (avaCopyAmount < minCopyAmount) {

@@ -27,7 +27,7 @@
         $scope.toTrackRegisterSensorsdata = toTrackRegisterSensorsdata;
         $scope.toTrackLoginSensorsdata = toTrackLoginSensorsdata;
         $scope.toTrackBannerSensorsdata = toTrackBannerSensorsdata;
-        
+
         $rootScope.personalCookiesInfo = {
             userCode: $cookies["user_code"],
             userName: decodeURIComponent($cookies["username"] || ''),
@@ -38,10 +38,10 @@
 
             account.checkLogined().then(function (logined) {
                 $scope.userstatus.logined = logined;
-                // if (logined) {
-                //     // initialize();
-                //     getUnreadLength();
-                // }
+                if (logined) {
+                    // initialize();
+                    getUnreadLength();
+                }
             });
         });
 
@@ -57,7 +57,6 @@
 
         //     }
         // });
-        getAuthStatus();
         function getAuthStatus() {
             account.getAuthStatus().then(function (data) {
                 // console.log(data);
@@ -106,16 +105,17 @@
 
         // 获取新消息
         function getUnreadLength() {
-            account.checkLogined().then(function (logined) {
-                if (!logined) {
-                    return;
-                }
+            if ($scope.userstatus.logined) {
                 account.getUnreadLength().then(function (data) {
-                    $scope.unreadLength = data.num;
+                    // console.log(data);
+                    if (!data) return;
+                    if (data.is_succ) {
+                        $scope.unreadLength = data.data;
 
-                    angular.extend($scope.personal, {
-                        unreadLength: $scope.unreadLength
-                    });
+                        angular.extend($scope.personal, {
+                            unreadLength: $scope.unreadLength
+                        });
+                    }
                 });
                 account.getPersonalInfo().then(function (data) {
                     // console.log(data);
@@ -127,8 +127,9 @@
                         lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg + '?timestamp=' + (+new Date())
                     });
                 });
-            });
-            // $scope.$emit('refreshNoticeList');
+                getAuthStatus();
+            }
+
 
         }
 

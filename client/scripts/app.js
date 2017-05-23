@@ -62,15 +62,6 @@
                 if (toState.name === '404') {
                     $window.location.replace('/404');
                 }
-
-                // 需要登录的调用 account 的 checkLogined 方法
-                // if (toState.authenticated) {
-                //     account.checkLogined().then(function (logined) {
-                //         if (!logined) {
-                //             $window.location.replace('/space/#/account/login');
-                //         }
-                //     });
-                // }
             });
             
             // pv 统计
