@@ -34,24 +34,24 @@
                     }
                 })
                 // 认证流程
-                .state('anthen',{
+                .state('authen',{
                     views: {
                         '@': {
-                            templateUrl: '/views/anthen/layout.html',
+                            templateUrl: '/views/authen/layout.html',
                             controller: 'AuthenController'
                         }
                     }
                 })
-                .state('anthen.subpage',{
-                    url: '/anthen/:subpage',
+                .state('authen.subpage',{
+                    url: '/authen/:subpage',
                     views: {
-                        'nav@anthen':{
-                            templateUrl: '/views/anthen/nav.html'
+                        'nav@authen':{
+                            templateUrl: '/views/authen/nav.html'
                         },
-                        'content@anthen': {
+                        'content@authen': {
                             templateUrl: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'investInfo';
-                                return '/views/anthen/' + $stateParams.subpage + '.html';
+                                return '/views/authen/' + $stateParams.subpage + '.html';
                             },
                             controllerProvider: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'investInfo';

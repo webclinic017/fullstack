@@ -32,7 +32,7 @@
         }
 
         function goState(dist) {
-            $state.go('anthen.subpage', {
+            $state.go('authen.subpage', {
                 subpage: dist
             });
         }
@@ -46,7 +46,7 @@
             getAuthStatus();
         });
 
-        if($scope.personal.verify_status){
+        if ($scope.personal.verify_status) {
             goState($scope.flow.authStatusMap[$scope.personal.verify_status]);
         }
 
@@ -122,8 +122,6 @@
             else {
                 kycInfo[question.id] = option.key;
             }
-
-            // console.log(kycInfo);
         }
 
         function submitForm() {
@@ -138,7 +136,7 @@
                 // console.log(item.id);
                 if (!kycInfo[item.id]) {
                     $scope.tip.questions.show = true;
-                    $scope.tip.questions.msg = '请完成题目：' + item.title
+                    $scope.tip.questions.msg = '请完成第' + (Number(index) + 1) + '题：' + item.title
                     isBreak = true;
                 } else {
                     $scope.tip.questions.show = false;
@@ -151,7 +149,6 @@
             }
 
             $scope.clickable = false;
-            // console.info(kycInfo);
 
             account.setKyc(kycInfo).then(function (data) {
                 console.info(data);
@@ -159,9 +156,12 @@
                 if (data.is_succ) {
                     // 神策数据统计
                     sa.setProfile({
+                        key_industry: kycInfo.industry,
+                        key_annual_income: kycInfo.annual_income,
                         key_experience: kycInfo.interests_exp,
                         key_market: kycInfo.trading_market,
-                        key_risk: kycInfo.risk_tendency
+                        key_invest_obj: kycInfo.investment_objectives,
+                        key_risk_tendency: kycInfo.risk_tendency
                     });
                     // 神策数据统计
                     sa.track('btn_kyc');
@@ -186,10 +186,10 @@
         function getKyc() {
             account.getKyc().then(function (data) {
                 $scope.$broadcast("hideLoadingImg");
-                // console.info('data',data);
+                console.info('data', data);
                 angular.forEach(data.data, function (data, index, array) {
                     var json = {};
-                    json["id"] = index;
+                    json["id"] = data.name;
                     json["data"] = data;
                     json["answer"] = undefined;
                     json["title"] = data["title"];
