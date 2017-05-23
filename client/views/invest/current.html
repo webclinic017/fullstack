@@ -85,8 +85,8 @@
                             </span>
                             <div class="invest_orders__operate">
                                 <p>
-                                    <span class="invest_orders__action" ng-class="order.action?'font-down':'font-up'">
-                                        {{ order.action ? '买跌' : '买涨' }}
+                                    <span class="invest_orders__action" ng-class="order.cmd?'font-down':'font-up'">
+                                        {{ order.cmd_name }}
                                     </span>
                                     <a class="invest_orders__symbol" href="">
                                         {{ order.symbol | symbolMod:'zh' }}
@@ -170,8 +170,8 @@
                             </span>
                             <div class="invest_orders__operate">
                                 <p>
-                                    <span class="invest_orders__action" ng-class="order.action?'font-down':'font-up'">
-                                        {{ order.action ? '买跌' : '买涨' }}
+                                    <span class="invest_orders__action" ng-class="order.cmd?'font-down':'font-up'">
+                                        {{ order.cmd_name }}
                                     </span>
                                     <a class="invest_orders__symbol" href="">
                                         {{ order.symbol | symbolMod:'zh' }}

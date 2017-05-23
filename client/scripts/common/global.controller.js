@@ -38,10 +38,10 @@
 
             account.checkLogined().then(function (logined) {
                 $scope.userstatus.logined = logined;
-                // if (logined) {
-                //     // initialize();
-                //     getUnreadLength();
-                // }
+                if (logined) {
+                    // initialize();
+                    getUnreadLength();
+                }
             });
         });
 
@@ -49,14 +49,6 @@
         setInterval(function() {
             getUnreadLength();
         },30000);
-
-        // account.checkLogined().then(function (logined) {
-        //     $scope.userstatus.logined = logined;
-        //     if (logined) {
-        //         initialize();
-
-        //     }
-        // });
 
         $scope.$on('refresh_personal_cookies_info', function(event, is_login, is_register){
             console.info('refresh_personal_cookies_info');
@@ -93,19 +85,19 @@
 
         // 获取新消息
         function getUnreadLength () {
-            account.checkLogined().then(function (logined) {
-                if(!logined){
-                    return;
-                }
+            if ($scope.userstatus.logined) {
                 account.getUnreadLength().then(function(data) {
-                    $scope.unreadLength = data.num;
+                    // console.log(data);
+                    if (!data) return;
+                    if (data.is_succ) {
+                        $scope.unreadLength = data.data;
 
-                    angular.extend($scope.personal, {
-                        unreadLength: $scope.unreadLength
-                    });
+                        angular.extend($scope.personal, {
+                            unreadLength: $scope.unreadLength
+                        });
+                    }
                 });
-            });
-            // $scope.$emit('refreshNoticeList');
+            }
 
         }
 
