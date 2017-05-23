@@ -87,21 +87,9 @@
         };
 
         $scope.backErr = {
-            username: {
-                show: false,
-                status: 0
-            },
-            strategy: {
-                show: false,
-                status: 0
-            },
-            desc: {
-                show: false,
-                status: 0
-            },
             system: {
                 show: false,
-                status: 0
+                msg: ''
             }
         };
         $scope.clickable = true;
@@ -139,20 +127,20 @@
 
         function initLocation() {
             account.getLocation().then(function (data) {
-                // console.info(data);
+                console.info(data);
                 if (data.is_succ) {
                     data = data.data
                     angular.extend($scope.basicInfo, {
                         locationWorld: {
-                            key: data.world_name,
-                            value: data.world_code
+                            key: data.region_cn.world_name,
+                            value: data.region_cn.world_code
                         },
                         locationState: {
-                            key: data.state_name,
+                            key: data.region_cn.state_name,
                             value: data.state_code
                         },
                         locationCity: {
-                            key: data.city_name,
+                            key: data.region_cn.city_name,
                             value: data.city_code
                         }
                     });
@@ -261,11 +249,11 @@
                 // $scope.basicInfo.strategy, 
                 // $scope.basicInfo.desc
             ).then(function (data) {
-                // console.info(data);
+                console.info(data);
                 // 成功
                 if (data.is_succ) {
                     $scope.backErr.system.show = true;
-                    $scope.backErr.system.status = 1;
+                    $scope.backErr.system.msg = "提交成功";
                     $scope.clickable = true;
 
                     // 神策数据统计
@@ -281,34 +269,19 @@
                     
                     $timeout(function () {
                         $scope.backErr.system.show = false;
-                        $scope.backErr.system.status = 0;
+                        $scope.backErr.system.msg = '';
                     }, 3000);
                 } else {
                     
-                    if (data.error_code === 6) {
-                        $scope.backErr.username.show = true;
-                        $scope.backErr.username.status = 1;
-                    }
-
-                    if (data.error_code === 3) {
-                        $scope.backErr.username.show = true;
-                        $scope.backErr.username.status = 2;
-                    }
-
-                    if (data.error_code === 1) {
-                        $scope.backErr.system.show = true;
-                        $scope.backErr.system.status = 2;
-                        
-                        $timeout(function () {
-                            $scope.backErr.system.show = false;
-                            $scope.backErr.system.status = 0;
-                        }, 3000);
-                    }
+                    $scope.backErr.system.show = true;
+                    $scope.backErr.system.msg = data.message;
+                    
+                    $timeout(function () {
+                        $scope.backErr.system.show = false;
+                        $scope.backErr.system.msg = '';
+                    }, 3000);
                     $scope.clickable = true;
                 }
-            }, function (error) {
-                console.log(error);
-                $scope.clickable = true;
             });
         }
 

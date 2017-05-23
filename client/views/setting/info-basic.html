@@ -12,7 +12,7 @@
                            type="text"
                            placeholder="昵称"
                            required
-                           ng-class="{'form-control-error': (frontErr.username.show && basicInfoForm.username.$invalid) || (backErr.username.show && backErr.username.status > 0)}"
+                           ng-class="{'form-control-error': frontErr.username.show && basicInfoForm.username.$invalid}"
                            ng-model="basicInfo.username"
                            twform-valid-txt
                            data-txt-type="username"
@@ -27,16 +27,6 @@
                         </p>
                         <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.username.$error.twformValidTxt">
                             {{frontErr.username.tip}}
-                        </p>
-                    </div>
-
-                    <div ng-show="backErr.username.show">
-                        <p class="alert alert-arrow_tp_lf" ng-show="backErr.username.status == 1">
-                            昵称已存在
-                        </p>
-
-                        <p class="alert alert-arrow_tp_lf" ng-show="backErr.username.status == 2">
-                            昵称包含敏感词汇，请修改
                         </p>
                     </div>
                 </div>
@@ -146,118 +136,10 @@
             </div>   
         </div>
 
-        <!-- <div class="row">
-            <div class="col-xs-2 pd-rg-0">
-                <label for="">交易特色</label>
-            </div>
-            <div class="col-xs-5">
-                <div class="form-control-wrapper">
-                    <div class="select">
-                        <input class="select__input"
-                               name="special"
-                               type="text"
-                               placeholder="请选择"
-                               required
-                               ng-model="basicInfo.special.key"
-                               ng-class="{'form-control-error': frontErr.special.show && basicInfoForm.special.$invalid}"
-                               ng-blur="showErr('basicInfoForm', 'special')"
-                               ng-focus="hideErr('basicInfoForm', 'special')">
-                        
-                        <i class="select__icon fa fa-angle-down"></i>
-
-                        <ul class="select__dropdown" twform-select data-bind-model="basicInfo.special">
-                            
-                            <li ng-repeat="special in specials" ng-class="{'selected': special.value === basicInfo.special.value}">
-                                <span data-value="{{special.value}}">{{special.key}}</span>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div ng-show="frontErr.special.show">
-                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.special.$error.required">
-                            请选择交易特色
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row">
-            <div class="col-xs-2 pd-rg-0">
-                <label for="">交易策略</label>
-            </div>
-            <div class="col-xs-8">
-                <div class="editbox">
-                    <textarea class="editbox__textarea"
-                              name="strategy"
-                              ng-class="{'editbox__textarea-error': (frontErr.strategy.show && basicInfoForm.strategy.$invalid) || (backErr.strategy.show && backErr.strategy.status > 0)}"
-                              ng-model="basicInfo.strategy"
-                              twform-editbox
-                              data-words-limit="1000"
-                              data-words="strategy.words"
-                              ng-focus="hideErr('basicInfoForm', 'strategy')"
-                              ng-blur="showErr('basicInfoForm', 'strategy')"></textarea>
-
-                    <span class="editbox__words_limit">
-                        {{ strategy.words }}/1000 字符
-                    </span>
-                    
-                    <div ng-show="frontErr.strategy.show">
-                        <p class="alert-arrow_tp_lf" ng-show="basicInfoForm.strategy.$error.twformEditbox">
-                            超出字符数限制
-                        </p>
-                    </div>
-
-                    <div ng-show="backErr.strategy.show">
-                        <p class="alert-arrow_tp_lf" ng-show="backErr.strategy.status === 1">
-                            包含敏感词汇，请修改
-                        </p>
-                    </div>          
-                </div>
-            </div>
-        </div>    
-
-        <div class="row">
-            <div class="col-xs-2 pd-rg-0">
-                <label for="">更多介绍</label>
-            </div>
-            <div class="col-xs-8">
-                <div class="editbox">
-                    <textarea class="editbox__textarea"
-                              name="desc"
-                              ng-class="{'editbox__textarea-error': (frontErr.desc.show && basicInfoForm.desc.$invalid) || (backErr.desc.show && backErr.desc.status > 0)}"
-                              ng-model="basicInfo.desc"
-                              twform-editbox
-                              data-words-limit="1000"
-                              data-words="desc.words"
-                              ng-focus="hideErr('basicInfoForm', 'desc')"
-                              ng-blur="showErr('basicInfoForm', 'desc')"></textarea>
-
-                    <span class="editbox__words_limit">
-                        {{ desc.words }}/1000 字符
-                    </span>
-                    <div ng-show="frontErr.desc.show">
-                        <p class="alert-arrow_tp_lf" ng-show="basicInfoForm.desc.$error.twformEditbox">
-                            超出字符数限制
-                        </p>
-                    </div>
-
-                    <div ng-show="backErr.desc.show">
-                        <p class="alert-arrow_tp_lf" ng-show="backErr.desc.status === 1">
-                            包含敏感词汇，请修改
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
         <div class="text-center mg-bt-20 mg-tp-20">
             <div ng-show="backErr.system.show">
-                <p class="alert-system" ng-show="backErr.system.status === 1">
-                    保存成功
-                </p>
-                <p class="alert-system" ng-show="backErr.system.status === 2">
-                    登录超时
+                <p class="alert-system">
+                    {{ backErr.system.msg }}
                 </p>
             </div>
             
