@@ -83,7 +83,7 @@ $(document).ready(function () {
             layer.closeAll();
             if (!data) return;
             if (data.is_succ) {
-                step = data.data.status;
+                step = data.data.status > 5 ? 5 : data.data.status;
                 $(ele.wrapper).addClass("active");
                 goStepPage();
             } else {
@@ -98,7 +98,7 @@ $(document).ready(function () {
     // setTimeout(function () {
     //     layer.closeAll();
     //     getKycList();
-    //     step = 3;
+    //     step = 6;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
     // }, 1000);
@@ -165,49 +165,16 @@ $(document).ready(function () {
             if (!data) return;
             if (data.is_succ) {
                 var kycList = {
-                    select: [],
-                    radio: [],
-                    checkbox: []
+                    data: data.data
                 };
                 var order = 1;
-
-                $.each(data.data, function (index, value) {
-                    if (value.type == 1) {
-                        kycInfo[index] = '';
-                        kycList.select.push({
-                            name: index,
-                            title: value.title,
-                            list: value.list
-                        });
-                    }
-                    if (value.type == 2) {
-                        kycInfo[index] = '';
-                        kycList.radio.push({
-                            name: index,
-                            title: value.title,
-                            list: value.list
-                        });
-                    }
-                    if (value.type == 3) {
-                        kycInfo[index] = '';
-                        kycInfoTmp[index] = {};
-                        kycList.checkbox.push({
-                            name: index,
-                            title: value.title,
-                            list: value.list
-                        });
-                    }
-                });
                 // 添加序号
-                $.each(kycList.select, function (index, value) {
-                    value.title = order+'.'+value.title;
-                    order++;
-                });
-                $.each(kycList.radio, function (index, value) {
-                    value.title = order+'.'+value.title;
-                    order++;
-                });
-                $.each(kycList.checkbox, function (index, value) {
+                $.each(kycList.data, function (index, value) {
+                    kycInfo[value.name] = '';
+                    if (value.type == 3) {
+                        kycInfoTmp[value.name] = {};
+                    }
+
                     value.title = order+'.'+value.title;
                     order++;
                 });
