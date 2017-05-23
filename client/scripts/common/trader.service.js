@@ -74,8 +74,7 @@
         function cancelCopy(usercode, auto_delete) {
             return publicHttp.dealPublicRequest(o.cancelCopyApi, 'POST', {
                 user_code: usercode,
-                auto_delete: auto_delete,
-                to: 'real'
+                auto_delete: auto_delete
             });
         }
 

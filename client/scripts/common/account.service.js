@@ -22,7 +22,6 @@
             getPersonalInfoDegree: getPersonalInfoDegree,
             getAssetInfo: getAssetInfo,
             getUnreadLength: getUnreadLength,
-            getNoticeCategory: getNoticeCategory,
             getNoticeList: getNoticeList,
             getOneRead: getOneRead,
             getAllRead: getAllRead,
@@ -94,7 +93,7 @@
                     checkResolve(deferred);
                 } else {   //有cookie时，只发一次请求
                     service.hasChecked = true;
-                    $http.get(o.checkLoginedApi).then(function (data) {
+                    publicHttp.dealPublicRequest(o.checkLoginedApi, 'GET').then(function (data) {
                         if (data.is_succ) {
                             resolveValue = true;
                             deferred.resolve(true);
@@ -108,7 +107,7 @@
                     });
                 }
             }
-
+            
             return deferred.promise;
 
         }
@@ -266,17 +265,7 @@
          *
          */
         function getUnreadLength() {
-            return $http.get(o.getUnreadLengthApi);
-        }
-
-        /*
-         * Account Service 获取消息分类
-         *
-         * @method getNoticeCategory
-         *
-         */
-        function getNoticeCategory() {
-            return $http.get(o.getNoticeCategoryApi);
+            return publicHttp.dealPublicRequest(o.getUnreadLengthApi, 'GET');
         }
 
         /*
