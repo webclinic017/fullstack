@@ -83,7 +83,7 @@ $(document).ready(function () {
             layer.closeAll();
             if (!data) return;
             if (data.is_succ) {
-                step = data.data.status;
+                step = data.data.status > 5 ? 5 : data.data.status;
                 $(ele.wrapper).addClass("active");
                 goStepPage();
             } else {
@@ -98,7 +98,7 @@ $(document).ready(function () {
     // setTimeout(function () {
     //     layer.closeAll();
     //     getKycList();
-    //     step = 3;
+    //     step = 6;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
     // }, 1000);
