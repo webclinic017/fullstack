@@ -57,7 +57,7 @@
             getCard();
         });
         // 汇率
-        asset.getFXRate().then(function(data) {
+        asset.getFXRate().then(function (data) {
             if (!data) return;
             // console.log(data);
             if (data.is_succ) {
@@ -190,7 +190,7 @@
             });
         }
 
-        function changeWithdrawType (type) {
+        function changeWithdrawType(type) {
             $scope.withdraw.type = type;
             $scope.withdraw.maxAmount = type === 'invest' ? $scope.maxAmountInvest : $scope.maxAmountWallet;
         }
@@ -206,8 +206,16 @@
             if ($scope.clickable == false) {
                 return;
             }
+            // 判断认证状态
+            if ($scope.personal.verify_status < 6) {
+                openSystemMdl('withdraw');
+                return;
+            }
+
             console.log('toWithdraw is click');
             $scope.clickable = false;
+
+
 
             if ($scope.withdraw.type === 'invest') {
                 withdrawInvest();
@@ -217,8 +225,23 @@
 
         }
 
-        function withdrawInvest () {
-            // 判断是否可以出金
+        function openSystemMdl(type) {
+            $modal.open({
+                templateUrl: '/views/asset/verify_modal.html',
+                size: 'sm',
+                backdrop: true,
+                controller: function ($scope, $modalInstance) {
+                    $scope.type = type;
+                    $scope.closeModal = closeModal;
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
+
+        function withdrawInvest() {
             asset.getIsWithdraw($scope.withdraw.amount).then(function (data) {
                 // $scope.message = data;
                 // console.info(data);
@@ -243,7 +266,7 @@
 
                 }
 
-                function withdraw () {
+                function withdraw() {
                     asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).then(function (data) {
                         if (!data) return;
                         $scope.clickable = true;
@@ -265,7 +288,7 @@
             });
         }
 
-        function withdrawWallet () {
+        function withdrawWallet() {
             asset.walletWithdraw($scope.withdraw.amount).then(function (data) {
                 // console.log(data);
                 $scope.clickable = true;

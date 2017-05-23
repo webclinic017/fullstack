@@ -41,7 +41,7 @@
             // detailId = $timeout(function () {
             //     getMasterDetail(usercode);
             // }, 5000);
-        }\
+        }
 
         // 关注关系
         function getFollowRelation(usercode) {

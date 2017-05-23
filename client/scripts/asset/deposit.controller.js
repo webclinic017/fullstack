@@ -54,16 +54,13 @@
             $scope.deposit.isumam = data.isumam;
 
         });
-        function openSystemMdl(type, info) {
+        function openSystemMdl(type) {
             $modal.open({
                 templateUrl: '/views/asset/verify_modal.html',
                 size: 'sm',
                 backdrop: true,
                 controller: function ($scope, $modalInstance) {
-                    $scope.modal = {
-                        type: type,
-                        info: info
-                    };
+                    $scope.type = type;
                     $scope.closeModal = closeModal;
 
                     function closeModal() {
@@ -101,7 +98,7 @@
             if ($scope.deposit.type === 'invest') {
                 console.log($scope.personal.verify_status);
                 if ($scope.personal.verify_status < 6) {
-                    openSystemMdl('verify');
+                    openSystemMdl('deposit');
                     return;
                 }
                 var w = $window.open('/waiting');
