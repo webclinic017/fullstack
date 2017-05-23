@@ -62,7 +62,7 @@
             // 100102,  // 令牌过期    
             // 100103,  // 令牌验证失败  
             // 100104,  // 令牌未定义
-
+debugger;
             if (data.code >= 100100 && data.code <= 100199) {
                 $window.location.href='/space/#/account/login';
                 $rootScope.personalCookiesInfo.userCode = undefined;
