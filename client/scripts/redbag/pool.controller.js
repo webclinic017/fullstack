@@ -31,18 +31,24 @@
         function getRedbagPool (page) {
             page = page ? page : 1;
             $scope.page = page;
-            // var offset = (page - 1) * pagesize;
+            var offset = (page - 1) * pagesize;
             // $scope.$broadcast('showLoadingImg');
             $scope.success = false;
+            var start, end;
 
-            redbag.getRedbagPool(page, pagesize).then(function (data) {
+            redbag.getRedbagPool(offset, pagesize).then(function (data) {
                 $scope.success = true;
                 // $scope.$broadcast('hideLoadingImg');
                 // console.log(data);
                 if (data.is_succ) {
-                    $scope.pools = data.data;
+                    $scope.pools = data.data.records;
 
                     angular.forEach($scope.pools, function (value, index) {
+                        start = new Date(value.acquire_start*1000);
+                        end = new Date(value.acquire_end*1000);
+                        // console.log(start, end);
+                        value.acquire_start = start.getFullYear()+'-'+(start.getMonth()+1)+'-'+start.getDate();
+                        value.acquire_end = end.getFullYear()+'-'+(end.getMonth()+1)+'-'+end.getDate();
                         // console.info(value, index);
                         if (value.is_receive == 4) {
                             setCountDownTimer(value, value.second);
@@ -52,7 +58,7 @@
                     });
 
                     angular.extend($scope.pagebar.config, {
-                        total: getTotal(data.total_count, pagesize),
+                        total: data.data.page_count,
                         page: page
                     });
                 }
@@ -75,7 +81,7 @@
                     });
                     getRedbagPool($scope.page);
                 } else {
-                    layer.msg(data.error_msg, {
+                    layer.msg(data.message, {
                         time: 2000
                     });
                 }

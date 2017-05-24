@@ -30,7 +30,6 @@
         function getOnceInfo(){
             getVerifyStatus();
             getInviteFriendsInfo(1);
-            getPersonalInfoDegree();
         }
 
         //定时提取用户资产信息
@@ -72,19 +71,19 @@
         }
 
         // 获取基本信息完整度
-        function getPersonalInfoDegree () {
-            account.getPersonalInfoDegree().then(function (data) {
-                if (!data) return;
-                // console.info(data);
-                var deg = 0;
-                if (data.is_succ) {
-                    deg = data.data.degree;
-                }
-                angular.extend($scope.personal, {
-                    infoDegree: deg
-                });
-            });
-        }
+        // function getPersonalInfoDegree () {
+        //     account.getPersonalInfoDegree().then(function (data) {
+        //         if (!data) return;
+        //         // console.info(data);
+        //         var deg = 0;
+        //         if (data.is_succ) {
+        //             deg = data.data.degree;
+        //         }
+        //         angular.extend($scope.personal, {
+        //             infoDegree: deg
+        //         });
+        //     });
+        // }
 
         // 获取实名认证状态
         function getVerifyStatus () {

@@ -3,8 +3,8 @@
     <div class="space_bonus__total_box clearfix">
         <div class="space_bonus__total">
             <div class="item-num">
-                <span ng-if="personal && personal.master">{{ masterSummary.copier_count }}</span>
-                <span ng-if="personal && !personal.master">{{ copierSummary.master_count }}</span>
+                <span ng-if="personal && personal.master">{{ masterSummary.copy_count }}</span>
+                <span ng-if="personal && !personal.master">{{ copierSummary.copy_count }}</span>
             </div>
             <div class="item-tip">
                 <span ng-if="personal && personal.master">当前复制人数</span>
@@ -13,8 +13,8 @@
         </div>
         <div class="space_bonus__total mid">
             <div class="item-num">
-                <span ng-if="personal && personal.master"><i class="fa fa-dollar"></i>{{ masterSummary.last_pay_amount }}</span>
-                <span ng-if="personal && !personal.master"><i class="fa fa-dollar"></i>{{ copierSummary.last_pay_amount }}</span>
+                <span ng-if="personal && personal.master"><i class="fa fa-dollar"></i>{{ masterSummary.last_sum_pay }}</span>
+                <span ng-if="personal && !personal.master"><i class="fa fa-dollar"></i>{{ copierSummary.last_sum_pay }}</span>
             </div>
             <div class="item-tip">
                 <span ng-if="personal && personal.master">
@@ -33,8 +33,8 @@
         </div>
         <div class="space_bonus__total">
             <div class="item-num">
-                <span ng-if="personal && personal.master"><i class="fa fa-dollar"></i>{{ masterSummary.total_pay_amount }}</span>
-                <span ng-if="personal && !personal.master"><i class="fa fa-dollar"></i>{{ copierSummary.total_pay_amount }}</span>
+                <span ng-if="personal && personal.master"><i class="fa fa-dollar"></i>{{ masterSummary.total_sum_pay }}</span>
+                <span ng-if="personal && !personal.master"><i class="fa fa-dollar"></i>{{ copierSummary.total_sum_pay }}</span>
             </div>
             <div class="item-tip">
                 <span ng-if="personal && personal.master">
@@ -46,7 +46,7 @@
                         <span>
                             用户开户至今已扣除的分成总和
                         </span>
-                </i>
+                    </i>
                 </span>
             </div>
         </div>
@@ -99,14 +99,6 @@
                         <button class="btn btn-primary btn-sm" ng-click="openBonusDetailMdl(master)">详情</button>
                     </td>
                 </tr>
-                <tr ng-if="success && masterList.length > 0">
-                    <td>总计</td>
-                    <td></td>
-                    <td></td>
-                    <td><i class="fa fa-dollar"></i>{{ masterTotalPay.sum_pay }}</td>
-                    <td>{{ masterTotalPay.pay_time }}</td>
-                    <td></td>
-                </tr>
                 <tr ng-if="success && masterList.length <= 0">
                     <td colspan="6">{{ backErr.msg || '无数据'}}</td>
                 </tr>
@@ -153,14 +145,6 @@
                         <button class="btn btn-primary btn-sm" ng-click="openBonusDetailMdl(copier)">详情</button>
                     </td>
                 </tr>
-                <tr ng-if="success && copierList.length > 0">
-                    <td>总计</td>
-                    <td></td>
-                    <td></td>
-                    <td><i class="fa fa-dollar"></i>{{ totalPay }}</td>
-                    <td></td>
-                    <td></td>
-                </tr>
                 <tr ng-if="success && copierList.length <= 0">
                     <td colspan="6">{{ backErr.msg || '无数据'}}</td>
                 </tr>
@@ -169,5 +153,8 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+    <div class="text-right">
+        <div tw-pagination></div>
     </div>
 </div>

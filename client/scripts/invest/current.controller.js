@@ -70,7 +70,7 @@
             invest.getInvestCurrentTraders().then(function (data) {
                 $scope.$broadcast('hideLoadingImg');
                 if (!data) return;
-                console.info(data);
+                // console.info(data);
                 if (data.is_succ) {
                     if (data.data.length <= 0) {
                         $scope.traders = [];
@@ -78,7 +78,7 @@
                     }
 
                     $scope.traders = data.data;
-                    console.log($scope.traders);
+                    // console.log($scope.traders);
                 }
             });
 

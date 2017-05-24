@@ -10,7 +10,7 @@
     function RedbagOwnController($scope, redbag) {
 
         var pagesize = 9;
-        $scope.tabType = 1;             // 1 or 2 -> 可用，3 -> 已兑换，4 -> 已过期, 5 红包记录
+        $scope.tabType = 1;             // 1 可用， 2 红包记录
         $scope.success = false;         // true -> 请求数据成功
         $scope.exchangeLoading = false; // true -> 红包兑换中
         $scope.page = 1;
@@ -33,26 +33,47 @@
         function getRedbagList (page) {
             page = page ? page : 1;
             $scope.page = page;
+            var offset = (page - 1) * pagesize;
             // $scope.$broadcast('showLoadingImg');
             $scope.success = false;
 
             redbag.getRedbagList({
-                page: page,
-                pagesize: pagesize,
+                offset: offset,
+                limit: pagesize,
                 type: $scope.tabType
             }).then(function (data) {
                 $scope.success = true;
                 // $scope.$broadcast('hideLoadingImg');
                 // console.info(data);
                 if (data.is_succ) {
-                    $scope.bags = data.data;
+                    $scope.bags = data.data.records;
+
+                    angular.forEach($scope.bags, function (value, index) {
+                        if (value.valid_end) {
+                            value.valid_end = changeTimestamp(value.valid_end);
+                        }
+                        if (value.pay_time) {
+                            value.pay_time = changeTimestamp(value.pay_time);
+                        }
+                        if (value.acquire_time) {
+                            value.acquire_time = changeTimestamp(value.acquire_time);
+                        }
+                    });
 
                     angular.extend($scope.pagebar.config, {
-                        total: getTotal(data.sum, pagesize),
+                        total: data.data.page_count,
                         page: page
                     });
                 }
             });
+        }
+
+        function changeTimestamp (timestamp) {
+            var time = new Date(timestamp*1000);
+            // console.log(start, end);
+            var date = time.getFullYear()+'-'+(time.getMonth()+1)+'-'+time.getDate();
+
+            return date;
         }
 
         function changeTabType (type) {
@@ -65,12 +86,12 @@
         function exchangeRedbag (o) {
 
             if ($scope.exchangeLoading) return;
-            console.log(o);
+            // console.log(o);
             $scope.exchangeLoading = true;
             o.exchangeLoading = true;
             
-            redbag.exchangeRedbag(o.user_bonus_id).then(function (data) {
-                console.info(data);
+            redbag.exchangeRedbag(o.bonus_id).then(function (data) {
+                // console.info(data);
                 $scope.exchangeLoading = false;
                 o.exchangeLoading = false;
                 if (data.is_succ) {
@@ -79,7 +100,7 @@
                     });
                     getRedbagList($scope.page);
                 } else {
-                    layer.msg(data.error_msg, {
+                    layer.msg(data.message, {
                         time: 2000
                     });
                 }

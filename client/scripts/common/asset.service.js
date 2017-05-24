@@ -76,13 +76,14 @@
          * @param {Number} code 出入金历史纪录的编号
          */
         function cancelWithdraw(code) {
-            return $http.post(o.cancelWithdrawApi, {
+            return publicHttp.dealPublicRequest(o.cancelWithdrawApi, 'PUT', {
                 order_no: code
             });
         }
 
         /**
          * Asset Service 获取出入金历史
+         *  @params direction 0全部，1入金，-1出金
          *
          * @method getHistory
          * @return {Object} {
@@ -94,37 +95,11 @@
          *                      // -5 出金成功
          * }
          */
-        function getHistory(page, pagesize) {
-            return $http.get(o.getHistoryApi, {
-                params: {
-                    page: page,
-                    pagesize: pagesize
-                }
-            }).then(function (data) {
-                // 要返回的历史记录
-                var records = [];
-                //console.log(data);
-
-                angular.forEach(data.data, function (item) {
-                    var record = {};
-
-                    record.amount = item.amount;
-                    record.status = item.status;
-                    record.timestamp = item.order_date;
-                    record.code = item.order_no;
-                    record.status_desc = item.status_desc;
-                    record.status_explain = item.status_explain;
-                    record.type = item.type;
-                    record.pay_again = item.pay_again;
-                    record.withdraw = item.withdraw;
-
-                    this.push(record);
-                }, records);
-
-                return {
-                    records: records,
-                    sum: data.sum
-                };
+        function getHistory(offset, limit) {
+            return publicHttp.dealPublicRequest(o.getHistoryApi, 'GET', {
+                direction: 0,
+                offset: offset,
+                limit: limit
             });
         }
 
@@ -133,12 +108,9 @@
          *
          * @method deposit
          */
-        function deposit(mt4_id, amount) {
-            return $http.get(o.depositApi, {
-                params: {
-                    mt4_id: mt4_id,
-                    amount: amount
-                }
+        function deposit(amount) {
+            return publicHttp.dealPublicRequest(o.depositApi, 'POST', {
+                amount: amount
             });
         }
 
@@ -148,7 +120,7 @@
          * @method getDepositLimit
          */
         function getDepositLimit() {
-            return $http.get(o.getDepositLimitApi);
+            return publicHttp.dealPublicRequest(o.getDepositLimitApi, 'GET');
         }
 
         /**
@@ -180,7 +152,7 @@
          * @method getMasterBonusSummary
          */
         function getMasterBonusSummary() {
-            return $http.get(o.getMasterBonusSummaryApi);
+            return publicHttp.dealPublicRequest(o.getMasterBonusSummaryApi, 'GET');
         }
 
         /**
@@ -189,7 +161,7 @@
          * @method getCopierBonusSummary
          */
         function getCopierBonusSummary() {
-            return $http.get(o.getCopierBonusSummaryApi);
+            return publicHttp.dealPublicRequest(o.getCopierBonusSummaryApi, 'GET');
         }
 
         /**
@@ -197,11 +169,11 @@
          *
          * @method getMasterBonusList
          */
-        function getMasterBonusList(pay_zone) {
-            return $http.get(o.getMasterBonusListApi, {
-                params: {
-                    pay_zone: pay_zone
-                }
+        function getMasterBonusList(pay_zone, offset, limit) {
+            return publicHttp.dealPublicRequest(o.getMasterBonusListApi, 'GET', {
+                pay_zone: pay_zone,
+                offset: offset,
+                limit: limit
             });
         }
 
@@ -210,11 +182,11 @@
          *
          * @method getCopierBonusList
          */
-        function getCopierBonusList(pay_zone) {
-            return $http.get(o.getCopierBonusListApi, {
-                params: {
-                    pay_zone: pay_zone
-                }
+        function getCopierBonusList(pay_zone, offset, limit) {
+            return publicHttp.dealPublicRequest(o.getCopierBonusListApi, 'GET', {
+                pay_zone: pay_zone,
+                offset: offset,
+                limit: limit
             });
         }
 
@@ -229,12 +201,10 @@
          *
          */
         function getBonusDetailList(ticket_noob, mt4_from, mt4_to) {
-            return $http.get(o.getBonusDetailListApi, {
-                params: {
-                    ticket_noob: ticket_noob,
-                    mt4_from: mt4_from,
-                    mt4_to: mt4_to
-                }
+            return publicHttp.dealPublicRequest(o.getBonusDetailListApi, 'GET', {
+                ticket_noob: ticket_noob,
+                mt4_from: mt4_from,
+                mt4_to: mt4_to
             });
         }
     }

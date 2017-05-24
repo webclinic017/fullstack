@@ -51,7 +51,8 @@
 
         function errFunc (error) {
             console.log(error);
-            layer.msg("服务器异常");
+            console.log("服务器异常");
+            // layer.msg("服务器异常");
             // $window.location.href='/space/#/account/login';
         }
 

@@ -70,22 +70,22 @@
             getCardApi: urlOrigin2 + '/user/bank_card',
             // bindCardApi: o + '/action/public/v4/binding_bankcard',
             bindCardApi: urlOrigin2 + '/user/bank_card',
-            cancelWithdrawApi: o + '/action/public/v4/cancel_withdraw',
-            getHistoryApi: o + '/action/public/v4/pay_history',
-            depositApi: o + '/action/public/v4/pay',
-            getDepositLimitApi: o + '/action/public/v4/pay_limit',
+            cancelWithdrawApi: urlOrigin2 + '/payment/withdraw/cancel',
+            getHistoryApi: urlOrigin2 + '/payment/histories',
+            depositApi: urlOrigin2 + '/payment/deposit',
+            getDepositLimitApi: urlOrigin2 + '/payment/deposit/limits',
             // getFXRateApi: o + '/action/public/v4/get_parity',
             getFXRateApi: urlOrigin2 + '/payment/rates',
             // getIsWithdrawApi: o + '/action/public/v4/check_withdraw',
             getIsWithdrawApi: urlOrigin2 + '/payment/withdraw/limits',
-            getMasterBonusSummaryApi: o + '/action/public/v4/master/profile',
-            getCopierBonusSummaryApi: o + '/action/public/v4/copier/profile',
-            getMasterBonusListApi: o + '/action/public/v4/master/copy_pay_list',
-            getCopierBonusListApi: o + '/action/public/v4/copier/copy_pay_list',
-            getBonusDetailListApi: o + '/action/public/v4/copy_pay_trade_list'
+            getMasterBonusSummaryApi: urlOrigin2 + '/commission/master_profile',
+            getCopierBonusSummaryApi: urlOrigin2 + '/commission/custom_profile',
+            getMasterBonusListApi: urlOrigin2 + '/commission/master_settle',
+            getCopierBonusListApi: urlOrigin2 + '/commission/custom_settle',
+            getBonusDetailListApi: urlOrigin2 + '/commission/settle_info'
         };
         var forex = {
-            getAssetApi: o + '/action/public/v3/get_usercenter_asset'
+            
         };
         var invest = {
             getInvestSummaryApi: urlOrigin2  + '/centre/trading_profile',
@@ -128,10 +128,10 @@
         };
 
         var redbag = {
-            getRedbagPoolApi: o + '/action/public/bonus/lists',
-            getRedbagListApi: o + '/action/public/bonus/my_bonus',
-            receiveRedbagApi: o + '/action/public/bonus/receive',
-            exchangeRedbagApi: o + '/action/public/bonus/bonus_pay_condition'
+            getRedbagPoolApi: urlOrigin2 + '/bonus/index',
+            getRedbagListApi: urlOrigin2 + '/bonus',
+            receiveRedbagApi: urlOrigin2 + '/bonus/receive',
+            exchangeRedbagApi: urlOrigin2 + '/bonus/exchange'
         };
 
         var service = {
