@@ -8,23 +8,23 @@
     <div class="ranklist">
         <div class="ranklist__navbar">
             <ul class="ranklist__navbar-lst clearfix">
-                <li ng-class="{active: rankOrder == ''}" ng-click="changeRankOrder()">
+                <li ng-class="{active: rankOrder == 'last_total_profit_rate'}" ng-click="changeRankOrder('last_total_profit_rate')">
                     收益率
                     <i class="fa fa-caret-down"></i>
                 </li>
-                <li ng-class="{active: rankOrder == 'maxRetract'}" ng-click="changeRankOrder('maxRetract')">
+                <li ng-class="{active: rankOrder == 'max_retract'}" ng-click="changeRankOrder('max_retract')">
                     最大跌幅
                     <i class="fa fa-caret-down"></i>
                 </li>
-                <li ng-class="{active: rankOrder == 'copyHistorySum'}" ng-click="changeRankOrder('copyHistorySum')">
+                <li ng-class="{active: rankOrder == 'copy_history_sum'}" ng-click="changeRankOrder('copy_history_sum')">
                     历史跟随人数
                     <i class="fa fa-caret-down"></i>
                 </li>
-                <li ng-class="{active: rankOrder == 'min_follow'}" ng-click="changeRankOrder('min_follow')">
+                <!-- <li ng-class="{active: rankOrder == 'min_follow'}" ng-click="changeRankOrder('min_follow')">
                     <i class="fa fa-dollar"></i>
                     最低复制金额
                     <i class="fa fa-caret-down"></i>
-                </li>
+                </li> -->
             </ul>
         </div>
         <!-- <div class="ranklist__search clearfix">

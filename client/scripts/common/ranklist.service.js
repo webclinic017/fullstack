@@ -23,6 +23,7 @@
          */
         function getMastersList(order, offset, limit) {
             return publicHttp.dealPublicRequest(o.getMastersListApi, 'GET', {
+                order_by: 'desc',
                 sort_by: order,
                 offset: offset,
                 limit: limit
