@@ -1,4 +1,4 @@
-<div class="redbag_content">
+<div class="redbag_content" ng-if="personal.verify_status >= 6">
     <div class="redbag_nav__wrapper">
         <ul class="redbag_nav__tabs">
             <li ng-class="{active: (tabType === 1 || tabType === 2)}">
@@ -66,4 +66,7 @@
             <div tw-pagination></div>
         </div>
     </div>
+</div>
+<div class="redbag_content font-danger text-center" ng-if="personal.verify_status < 6">
+    请先完成认证审核！
 </div>

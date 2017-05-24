@@ -5,9 +5,29 @@
     angular.module('fullstackApp')
         .controller('RedbagPoolController', RedbagPoolController);
 
-    RedbagPoolController.$inject = ['$scope', 'redbag', '$interval'];
+    RedbagPoolController.$inject = ['$scope', 'redbag', '$interval', '$modal'];
 
-    function RedbagPoolController($scope, redbag, $interval) {
+    function RedbagPoolController($scope, redbag, $interval, $modal) {
+        if ($scope.personal.verify_status < 6) {
+            openSystemMdl('redbag');
+            return;
+        }
+
+        function openSystemMdl(type) {
+            $modal.open({
+                templateUrl: '/views/asset/verify_modal.html',
+                size: 'sm',
+                backdrop: true,
+                controller: function ($scope, $modalInstance) {
+                    $scope.type = type;
+                    $scope.closeModal = closeModal;
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
 
         var pagesize = 9;
         $scope.success = false;         // true -> 请求数据成功
@@ -17,18 +37,18 @@
         $scope.pagebar = {
             config: {
                 // total: , // 总页数
-                page: 1    
+                page: 1
             },
             pages: [],
             pagesBtn: [],
             // selectPage: , bind to pagination.selectPage
-            getList: getRedbagPool           
+            getList: getRedbagPool
         };
         $scope.receiveRedbag = receiveRedbag;
 
         getRedbagPool();
 
-        function getRedbagPool (page) {
+        function getRedbagPool(page) {
             page = page ? page : 1;
             $scope.page = page;
             // var offset = (page - 1) * pagesize;
@@ -48,7 +68,7 @@
                             setCountDownTimer(value, value.second);
                             // setCountDownTimer(value, parseInt(Math.random()*10));
                         }
-                        
+
                     });
 
                     angular.extend($scope.pagebar.config, {
@@ -59,12 +79,12 @@
             });
         }
 
-        function receiveRedbag (o) {
+        function receiveRedbag(o) {
             if ($scope.receiveLoading) return;
             // console.log(o);
             $scope.receiveLoading = true;
             o.receiveLoading = true;
-            
+
             redbag.receiveRedbag(o.id).then(function (data) {
                 // console.info(data);
                 $scope.receiveLoading = false;
@@ -95,17 +115,17 @@
             return total;
         }
 
-        function setCountDownTimer (obj, time) {
+        function setCountDownTimer(obj, time) {
             setCountdown(obj, time);
 
             obj.timer = $interval(function () {
                 if (time <= 0) $interval.cancel(obj.timer);
-                time --;
+                time--;
                 setCountdown(obj, time);
             }, 1000);
         }
 
-        function setCountdown (obj, time) {
+        function setCountdown(obj, time) {
 
             if (time <= 0) {
                 obj.is_receive = 2;     // 已到领取时间
@@ -126,8 +146,8 @@
             obj.countdownTime.second = todou(time % 60);
         }
 
-        function todou (n) {
-            return n >= 10 ? ''+n : '0'+n;
+        function todou(n) {
+            return n >= 10 ? '' + n : '0' + n;
         }
     }
 })();

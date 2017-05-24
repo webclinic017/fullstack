@@ -5,9 +5,30 @@
     angular.module('fullstackApp')
         .controller('RedbagOwnController', RedbagOwnController);
 
-    RedbagOwnController.$inject = ['$scope', 'redbag'];
+    RedbagOwnController.$inject = ['$scope', 'redbag', '$modal'];
 
-    function RedbagOwnController($scope, redbag) {
+    function RedbagOwnController($scope, redbag, $modal) {
+        
+        if ($scope.personal.verify_status < 6) {
+            openSystemMdl('redbag');
+            return;
+        }
+
+        function openSystemMdl(type) {
+            $modal.open({
+                templateUrl: '/views/asset/verify_modal.html',
+                size: 'sm',
+                backdrop: true,
+                controller: function ($scope, $modalInstance) {
+                    $scope.type = type;
+                    $scope.closeModal = closeModal;
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
 
         var pagesize = 9;
         $scope.tabType = 1;             // 1 or 2 -> 可用，3 -> 已兑换，4 -> 已过期, 5 红包记录
@@ -27,9 +48,9 @@
         };
         $scope.changeTabType = changeTabType;
         $scope.exchangeRedbag = exchangeRedbag;
-        
+
         getRedbagList();
-        
+
         if ($scope.personal.redbagUnreadNum > 0) {
             redbag.setRedbagReaded().then(function (data) {
                 if (!data) return;
@@ -40,7 +61,7 @@
             })
         }
 
-        function getRedbagList (page) {
+        function getRedbagList(page) {
             page = page ? page : 1;
             $scope.page = page;
             // $scope.$broadcast('showLoadingImg');
@@ -65,20 +86,20 @@
             });
         }
 
-        function changeTabType (type) {
+        function changeTabType(type) {
             if (type !== $scope.tabType) {
                 $scope.tabType = type;
                 getRedbagList();
             }
         }
 
-        function exchangeRedbag (o) {
+        function exchangeRedbag(o) {
 
             if ($scope.exchangeLoading) return;
             console.log(o);
             $scope.exchangeLoading = true;
             o.exchangeLoading = true;
-            
+
             redbag.exchangeRedbag(o.user_bonus_id).then(function (data) {
                 console.info(data);
                 $scope.exchangeLoading = false;

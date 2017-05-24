@@ -48,12 +48,17 @@
 
         if ($scope.personal.verify_status) {
             goState($scope.flow.authStatusMap[$scope.personal.verify_status]);
+        } else {
+            getAuthStatus();
         }
 
         // 获取当前认证状态
-        getAuthStatus();
+        // getAuthStatus();
         var showMsg = undefined;
         function getAuthStatus() {
+            if($scope.personal.verify_status){
+                return;
+            }
             account.getAuthStatus().then(function (data) {
                 console.log('getAuthStatus', data);
                 if (data.is_succ) {
@@ -412,6 +417,7 @@
                 ($scope.backErr.system.status != 3)
             ) {
                 $scope.$emit('goState', 'submit');
+                // 神策统计
             }
         });
 
