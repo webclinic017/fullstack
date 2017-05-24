@@ -11,7 +11,7 @@
 
     AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state'];
     AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account'];
-    AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout'];
+    AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval'];
     AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
     AuthenSubmitController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
 
@@ -48,6 +48,7 @@
 
         if ($scope.personal.verify_status) {
             goState($scope.flow.authStatusMap[$scope.personal.verify_status]);
+            $scope.flow.step = $scope.personal.verify_status;
         } else {
             getAuthStatus();
         }
@@ -56,7 +57,7 @@
         // getAuthStatus();
         var showMsg = undefined;
         function getAuthStatus() {
-            if($scope.personal.verify_status){
+            if ($scope.personal.verify_status) {
                 return;
             }
             account.getAuthStatus().then(function (data) {
@@ -211,7 +212,7 @@
     }
 
     // complete
-    function AuthenCompleteController($scope, validator, account, $timeout) {
+    function AuthenCompleteController($scope, validator, account, $timeout, $interval) {
         window.onbeforeunload = function () {
             return '确认离开当前页面吗？未保存的数据将会丢失！'
         }
@@ -221,8 +222,10 @@
             email: '',
             realname: '',
             id_num: '',
-            clickable: true
+            clickable: true,
+            overTime: 1500,
         }
+        getUserName();
 
         $scope.exsit = {
             username: {
@@ -309,6 +312,9 @@
         $scope.checkExsit = function (type) {
             if (type == 1) {
                 var checkName = 'username';
+                if ($scope.personal.username == $scope.completeInfo.username) {
+                    return;
+                }
             }
             else if (type == 2) {
                 var checkName = 'email';
@@ -346,6 +352,18 @@
             }
             if ($scope.exsit[name]) {
                 $scope.exsit[name].show = false;
+            }
+        }
+
+        function getUserName() {
+            if ($scope.completeInfo.overTime <= 0) { return };
+            if ($scope.personal.username) {
+                $scope.completeInfo.username = $scope.personal.username;
+            } else {
+                $timeout(function () {
+                    getUserName();
+                    $scope.completeInfo.overTime -= 500;
+                }, 500);
             }
         }
     }
@@ -417,7 +435,8 @@
                 ($scope.backErr.system.status != 3)
             ) {
                 $scope.$emit('goState', 'submit');
-                // 神策统计
+                // 神策数据统计
+                sa.track('btn_verify');
             }
         });
 
