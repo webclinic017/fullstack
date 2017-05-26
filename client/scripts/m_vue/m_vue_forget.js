@@ -266,7 +266,7 @@ if ($(".m_vue").attr("data-page") === "forget") {
             },
             toLogin: function () {
                 callNative({
-                    type: "login"
+                    type: "modify_pwd"
                 });
             },
             showFrontErr: function (name) {

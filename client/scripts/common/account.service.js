@@ -255,7 +255,8 @@
          * @method getAssetInfo
          */
         function getAssetInfo() {
-            return $http.post(o.getAssetInfoApi);
+            return publicHttp.dealPublicRequest(o.getAssetInfoApi, 'GET');
+            // return $http.post(o.getAssetInfoApi);
         }
 
         /**
