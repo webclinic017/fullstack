@@ -24,7 +24,7 @@
                 '1': 'investInfo',   // 投资信息 - kyc
                 '2': 'complete',     // 完成kyc 完善资料信息
                 '3': 'realname',     // 已经填写真实姓名和身份证号 -> 身份证图片页面
-                '4': 'realname',     // 审核拒绝 -> 姓名、身份证号页面
+                '4': 'complete',     // 审核拒绝 -> 姓名、身份证号页面
                 "5": "submit",       // 待审核 -> 审核中页面
                 "6": 'submit',       // 审核通过 -> 审核成功，设置MT4密码页面
                 "7": 'submit'        // 已经开户 -> MT4 帐号设置成功页面
@@ -68,11 +68,13 @@
                     $scope.flow.step = data.data.status;
                     // 控制当前流程显示页面
                     goState($scope.flow.authStatusMap[data.data.status]);
-                    if (data.data.status == 4) {
+
+                    if ($scope.personal.profile_check == 1) {
                         if (!showMsg) {
-                            showMsg = layer.msg('您上传的身份证照片审核被拒绝，请重新上传，被拒原因请查看系统消息。');
+                            showMsg = layer.msg('您上传的身份证照片审核被拒绝，请重新填写相关信息，被拒原因请查看系统消息。');
                         }
                     }
+
                     if (data.data.status == 0) {
                         window.location.href = 'https://www.tigerwit.com/space/#/account/register'
                     }
