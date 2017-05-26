@@ -39,6 +39,12 @@
 
         $scope.$on('goState', function (e, flow) {
             getAuthStatus();
+            if(flow == 'realname'){
+                $scope.flow.step = 3; // 自定状态
+            }
+            if(flow == 'submit'){
+                $scope.flow.step = 5;
+            }
             goState(flow);
         });
 
@@ -66,6 +72,7 @@
                     $scope.$broadcast("hideLoadingImg");
                     // 控制流程导航active
                     $scope.flow.step = data.data.status;
+                    console.log($scope.flow.step);
                     // 控制当前流程显示页面
                     goState($scope.flow.authStatusMap[data.data.status]);
 
@@ -372,6 +379,7 @@
 
     // id_card
     function AuthenRealnameController($scope, $state, $modal, validator, account) {
+        // $scope.$emit('getAuthStatus');
         $scope.verification = {
             id: {
                 number: undefined,
