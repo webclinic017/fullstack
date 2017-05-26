@@ -103,6 +103,7 @@
         function getAssetInfo() {
             account.getAssetInfo().then(function (data) {
                 // console.info(data);
+                if (!data) return;
                 angular.extend($scope.personal, data.data);
             });
 

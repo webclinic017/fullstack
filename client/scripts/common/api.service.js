@@ -34,7 +34,7 @@
             setNewPwdApi: urlOrigin2 + '/forget_passwd',
             // getPersonalInfoApi: o + '/action/public/v4/get_info',
             getPersonalInfoApi: urlOrigin2 + '/user/info',
-            getAssetInfoApi: o + '/action/public/v4/get_usercenter_asset',
+            getAssetInfoApi: urlOrigin2 + '/centre/asset',
             getUnreadLengthApi: urlOrigin2 + '/notify/number',
             getNoticeListApi: o + '/action/public/v3/get_notify_list',
             getOneReadApi: o + '/action/public/v3/notify_mark_read',
