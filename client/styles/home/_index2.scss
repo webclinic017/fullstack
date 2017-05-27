@@ -775,6 +775,10 @@
             font-weight: bold;
             font-size: 20px;
             color: #0C0A09;
+
+            &.en {
+                line-height: 25px;
+            }
         }
     }
     @include e(down) {
@@ -868,7 +872,8 @@
             display: inline-block;
             width: 120px;
             height: 100px;
-            @include img-normal($image-path-home + "index2-why-icon4.png");
+            @include img-normal($image-path-home + "index2-why-icon4-new.png");
+            background-repeat: no-repeat;
 
             &:hover {
                 left: -2px;
