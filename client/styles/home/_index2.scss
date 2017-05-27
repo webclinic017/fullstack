@@ -101,6 +101,96 @@
     }
 }
 
+// 报价
+@include b(index2-quote) {
+    @include e(title) {
+        float: left;
+        width: 50%;
+        padding-bottom: 20px;
+        padding-top: 50px;
+        color: #393939;
+
+        li {
+            float: left;
+            text-align: center;
+
+            &.pro {
+                width: 50%;
+            }
+            &.sell {
+                width: 25%;
+            }
+            &.buy {
+                width: 25%;
+            }
+        }
+    }
+    @include e(tip) {
+        padding-top: 35px;
+        text-align: center;
+        color: #aaa;
+        padding-bottom: 60px;
+    }
+    @include e(content) {
+        float: left;
+        width: 50%;
+        padding: 17px 0;
+        color: #393939;
+
+        &.h_border {
+            border-right: 1px solid #ccc;
+        }
+
+        li {
+            float: left;
+            text-align: center;
+
+            span {
+                padding: 1px 0px;
+                display: inline-block;
+                border-radius: 4px;
+                width: 65px;
+            }
+
+            &.pro {
+                width: 50%;
+            }
+            &.sell {
+                width: 25%;
+
+                &.up {
+                    span {
+                        background-color: #f05452;
+                        color: #fff;
+                    }
+                }
+                &.down {
+                    span {
+                        background-color: #25c875;
+                        color: #fff;
+                    }
+                }
+            }
+            &.buy {
+                width: 25%;
+
+                &.up {
+                    span {
+                        background-color: #f05452;
+                        color: #fff;
+                    }
+                }
+                &.down {
+                    span {
+                        background-color: #25c875;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @include b(index2-banner) {
     position: relative;
     text-align: center;

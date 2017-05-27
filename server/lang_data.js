@@ -368,6 +368,13 @@ module.exports = function () {
         "home57": { "en": "upto 60% yearly return", "zh": "年化收益可达" },
         "home58": { "en": "Monthly product is avaliable now!", "zh": "月盈产品火爆进行中" },
         "home61": { "en": "CFD", "zh": "差价合约" },
+        // quote
+        "home62": { "en": "TigerWit makes trading easier", "zh": "TigerWit让交易更简单" },
+        "home63": { "en": "Market conditions rich,support two-way transactions", "zh": "市场行情丰富 支持双向交易" },
+        "home64": { "en": "Markets", "zh": "交易产品" },
+        "home65": { "en": "Sell", "zh": "卖出价" },
+        "home66": { "en": "Buy", "zh": "买入价" },
+        "home67": { "en": "Data real-time automatic update, Saturday and Sanday no quote", "zh": "数据实时自动更新，周六日停盘无报价" },
 
         // 产品介绍－外汇交易 forex
         //"forex1": {"en": "Foreign exchange transaction involves buying and/or selling a kind of foreign currency. In terms of the largest single product market in the world, trades valuing over USD 5 trillion are achieved on the current foreign exchange market. The foreign exchange and price is mainly influenced by international trade, economy and policies of countries and investment flow direction and the foreign exchange market is featured as transparent information, tremendous turnover and great fairness and transparency.", "zh": "外汇交易涉及买入一个外国货币和/或卖出另一个外国货币。全球最大的单一产品市场，当今外汇市场每天拥有超过5万亿美元的成交额，外汇市场和价格主要受国际间的交易，各国经济和政策以及投资流向的影响，外汇市场信息透明，流通量巨大，公平透明。"},
