@@ -90,8 +90,8 @@
         // 报价服务
         $scope.quoteSymbols = [];
         var socketPara = {
-            websocketTigerUrl: 'ws://crmdev.tigerwit.com:4567',
-            request_symbols: ['AUDUSD', 'XNGUSD', 'EURUSD', 'XTIUSD', 'GBPUSD', 'XBRUSD', 'NZDUSD', 'XAUUSD', 'USDCAD', 'XAGUSD', 'USDCHF', 'AUS200', 'USDJPY', 'JPY225'],
+            websocketTigerUrl: location.hostname === 'www.tigerwit.com' ? 'wss://crmdev.tigerwit.com:4567' : 'wss://crmdev.tigerwit.com:4567',
+            request_symbols: ['AUDUSD', 'XNGUSD', 'EURUSD', 'XTIUSD', 'GBPUSD', 'XBRUSD', 'NZDUSD', 'XAUUSD', 'USDCAD', 'XAGUSD', 'USDCHF', 'AUS200', 'USDJPY', 'JPN225'],
             request_symbols_zh: {
                 AUDUSD: '澳元美元',
                 XNGUSD: '美燃气',
@@ -106,7 +106,7 @@
                 USDCHF: '美元瑞郎',
                 AUS200: '澳大利亚标准普尔200指数',
                 USDJPY: '美元日元',
-                JPY225: '日经指数',
+                JPN225: '日经指数',
             },
             user_name: "tiger",
             key: "WjIABSkfG96GL0z2",
