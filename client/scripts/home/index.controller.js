@@ -233,7 +233,7 @@
                                 commonSpread = commonSpread/fix;
                                 groupSpread = groupSpread/fix;
                                 buy = (Number(quote[3])+commonSpread+groupSpread).toFixed(spreadLength);
-                                sell = (Number(quote[3])-commonSpread-groupSpread).toFixed(spreadLength);
+                                sell = (Number(quote[2])-commonSpread-groupSpread).toFixed(spreadLength);
 
                                 value.sell = sell;
                                 value.buy = buy;
