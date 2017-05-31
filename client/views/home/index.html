@@ -1,281 +1,338 @@
-<section class="index2-banner">
-    <div class="swiper-container" style="height: 818px;" tw-carousel data-type="normal">
-        <div class="swiper-wrapper">
-            <%if(lang.isCompany("tigerwit")){%>
-            <div class="swiper-slide index2-slide1">
-                <div class="pic">
-                    <img src="/images/home/index-banner-redbag1_0531.png">
+<div ng-controller="HomeIndexController" ng-cloak>
+    <section class="index2-banner">
+        <div class="swiper-container" style="height: 818px;" tw-carousel data-type="normal">
+            <div class="swiper-wrapper">
+                <%if(lang.isCompany("tigerwit")){%>
+                <div class="swiper-slide index2-slide1">
+                    <div class="pic">
+                        <img src="/images/home/index-banner-redbag1_0531.png">
+                    </div>
+                    <div class="index2-banner__btn1-new">
+                        <a class="" href="/bd/t35" ng-click="toTrackBannerSensorsdata($event, '红包活动', '1');">了解详情</a>
+                    </div>
                 </div>
-                <div class="index2-banner__btn1-new">
-                    <a class="" href="/bd/t35" ng-click="toTrackBannerSensorsdata($event, '红包活动', '1');">了解详情</a>
-                </div>
-            </div>
-            <%}%>
+                <%}%>
 
-            <%if(lang.isCompany("pkds")){%>
-            <div class="swiper-slide index2-slide1 pkds">
-                <p class="index2-banner__tle1"><%= lang.text("home49")%></p>
-                <p class="index2-banner__tle2"><%= lang.text("home50")%><span class=""></span></p>
-                <p class="index2-banner__tle3"><%= lang.text("home59")%><span><%= lang.text("home60")%></span></p>
-                <div class="index2-banner__b1-con">
-                    <%= lang.text("home51")%>
+                <%if(lang.isCompany("pkds")){%>
+                <div class="swiper-slide index2-slide1 pkds">
+                    <p class="index2-banner__tle1"><%= lang.text("home49")%></p>
+                    <p class="index2-banner__tle2"><%= lang.text("home50")%><span class=""></span></p>
+                    <p class="index2-banner__tle3"><%= lang.text("home59")%><span><%= lang.text("home60")%></span></p>
+                    <div class="index2-banner__b1-con">
+                        <%= lang.text("home51")%>
+                      </div>
+                    <a class="index2-banner__btn1" href="/bd/t33" ng-click="toTrackBannerSensorsdata($event, '赠金活动', '1');"><%= lang.text("liaojiexiangqing")%></a>
                   </div>
-                <a class="index2-banner__btn1" href="/bd/t33" ng-click="toTrackBannerSensorsdata($event, '赠金活动', '1');"><%= lang.text("liaojiexiangqing")%></a>
-              </div>
-            <%}%>
-            <%if(lang.isCompany("tigerwit")){%>
-            <div class="swiper-slide index2-slide2">
-                <!--<p class="index2-banner__tle1"><%= lang.text("home52")%><span><%= lang.text("home53")%></span></p>
-                <p class="index2-banner__tle2"><%= lang.text("home54")%></p>
-                <div class="index2-banner__b1-con">
-                    <%= lang.text("home55")%>
+                <%}%>
+                <%if(lang.isCompany("tigerwit")){%>
+                <div class="swiper-slide index2-slide2">
+                    <!--<p class="index2-banner__tle1"><%= lang.text("home52")%><span><%= lang.text("home53")%></span></p>
+                    <p class="index2-banner__tle2"><%= lang.text("home54")%></p>
+                    <div class="index2-banner__b1-con">
+                        <%= lang.text("home55")%>
+                    </div>-->
+                    <br><br><br><br><br><br>
+                    <br><br><br><br><br><br>
+                    <br><br>
+                    <a class="index2-banner__btn1" href="/bd/t34" ng-click="toTrackBannerSensorsdata($event, '赠金活动', '2');"><%= lang.text("liaojiexiangqing")%></a>
+                </div>
+                <%}%>
+                <%if(lang.isCompany("pkds")){%>
+                <div class="swiper-slide index2-slide2 pkds">
+                    <p class="index2-banner__tle1"><%= lang.text("home52")%><span><%= lang.text("home53")%></span></p>
+                      <p class="index2-banner__tle2"><%= lang.text("home54")%></p>
+                      <div class="index2-banner__b1-con">
+                          <%= lang.text("home55")%>
+                    </div>
+                    <a class="index2-banner__btn1" href="/bd/t33" ng-click="toTrackBannerSensorsdata($event, '赠金活动', '2');"><%= lang.text("liaojiexiangqing")%></a>
+                </div>
+                <%}%>
+                <!--<div class="swiper-slide index2-slide3 <%= lang.background().en %>">
+                    <p class="index2-banner__tle1"><%= lang.text("home56")%></p>
+                    <p class="index2-banner__tle2"><%= lang.text("home57")%><span <%= lang.text("navbar15")%>>60%</span></p>
+                    <div class="index2-banner__b1-con">
+                        <%= lang.text("home58")%>
+                    </div>
+                    <a class="index2-banner__btn1" href="/regular" ng-click="toTrackBannerSensorsdata($event, '定期跟单', '3');"><%= lang.text("liaojiexiangqing")%></a>
                 </div>-->
-                <br><br><br><br><br><br>
-                <br><br><br><br><br><br>
-                <br><br>
-                <a class="index2-banner__btn1" href="/bd/t34" ng-click="toTrackBannerSensorsdata($event, '赠金活动', '2');"><%= lang.text("liaojiexiangqing")%></a>
             </div>
-            <%}%>
-            <%if(lang.isCompany("pkds")){%>
-            <div class="swiper-slide index2-slide2 pkds">
-                <p class="index2-banner__tle1"><%= lang.text("home52")%><span><%= lang.text("home53")%></span></p>
-                  <p class="index2-banner__tle2"><%= lang.text("home54")%></p>
-                  <div class="index2-banner__b1-con">
-                      <%= lang.text("home55")%>
-                </div>
-                <a class="index2-banner__btn1" href="/bd/t33" ng-click="toTrackBannerSensorsdata($event, '赠金活动', '2');"><%= lang.text("liaojiexiangqing")%></a>
-            </div>
-            <%}%>
-            <!--<div class="swiper-slide index2-slide3 <%= lang.background().en %>">
-                <p class="index2-banner__tle1"><%= lang.text("home56")%></p>
-                <p class="index2-banner__tle2"><%= lang.text("home57")%><span <%= lang.text("navbar15")%>>60%</span></p>
-                <div class="index2-banner__b1-con">
-                    <%= lang.text("home58")%>
-                </div>
-                <a class="index2-banner__btn1" href="/regular" ng-click="toTrackBannerSensorsdata($event, '定期跟单', '3');"><%= lang.text("liaojiexiangqing")%></a>
-            </div>-->
+            <div class="swiper-pagination swiper-pagination-home"></div>
         </div>
-        <div class="swiper-pagination swiper-pagination-home"></div>
-    </div>
-    
-</section>
-<section class="index2-master" ng-controller="HomeIndexController">
-    <div class="container">
-        <div class="index2-master__con">
-            <div class="row">
-                <div class="col-xs-3 index2-master__col1" ng-cloak ng-if="indexMasters.length > 0">
-                    <p class="index2-master__col1-tit"><%= lang.text("home14")%></p>
-                    <ul class="index2-master__col1-ul">
-                        <li>
-                            <span class="index2-master__col1-circle">1</span>
-                            &nbsp;<%= lang.text("home15")%>
-                        </li>
-                        <li>
-                            <span class="index2-master__col1-circle">2</span>
-                            &nbsp;<%= lang.text("home16")%>
-                        </li>
-                        <li>
-                            <span class="index2-master__col1-circle">3</span>
-                            &nbsp;<%= lang.text("home17")%>
-                        </li>
-                        <li>
-                            <span class="index2-master__col1-circle">4</span>
-                            &nbsp;<%= lang.text("home18")%>
-                        </li>
-                        <a class="index2-master__col1-btn" href="/ranklist/#/ranklist/masters"><%= lang.text("xuanzegaoshou")%></a>
-                    </ul>
-                </div>
-                <div class="col-xs-3 index2-master__col2" ng-cloak ng-repeat="master in indexMasters" ng-if="indexMasters.length > 0">
-                    <ul>
-                        <li class="index2-master__col2-li1">
-                            <a class="index2-master__col2-photo" href="/trader/{{master.user_code}}/#/trader/summary" target="_blank">
-                              <img ng-src="/avatar/{{ master.user_code }}_150.jpg" alt="avatar">
-                            </a>
-                            <span class="index2-master__col2-name" title="{{ master.username || '**' }}">{{ master.username || '**' }}</span>
-                        </li>
-                        <li class="index2-master__col2-li2">
-                            <div class="index2-master__col2-div1">
-                                <span class="index2-master__col2-rate">{{ master.profit_rate || '0.00' }}</span><span class="font-size-12">%</span><br>
-                                <span class="font-size-14"><%= lang.text("shouyilv")%></span>
-                            </div>
-                            <div class="index2-master__col2-div2">
-                                <span class="index2-master__col2-how" ng-show="master.max_retract < 0.05"><%= lang.text("low")%></span>
-                                <span class="index2-master__col2-how" ng-show="master.max_retract >= 0.05 && master.max_retract <= 0.10"><%= lang.text("middle")%></span>
-                                <span class="index2-master__col2-how" ng-show="master.max_retract > 0.10"><%= lang.text("high")%></span>
-                                <br>
-                                <span class="index2-master__col2-how-c"><%= lang.text("fengxian")%></span>
-                            </div>
-                        </li>
-                        <li class="index2-master__col2-li3 clearfix">
-                            <div class="index2-master__col2-div1 mg-tp-_14">
-                                <span class="index2-master__col2-num">{{ master.history_copy_count || 0 }}</span><br>
-                                <span class="font-size-14"><%= lang.text("lishifuzhirenshu")%></span>
-                            </div>
-                            <div class="index2-master__col2-div3">
-                                <a class="index2-master__col2-copy" href="/trader/{{master.user_code}}/#/trader/summary" target="_blank">
-                                    <img  class="index2-master__col2-jia" src="<%= lang.image('homePlus')%>" alt="">
+        
+    </section>
+    <section class="index2-master">
+        <div class="container">
+            <div class="index2-master__con">
+                <div class="row">
+                    <div class="col-xs-3 index2-master__col1" ng-cloak ng-if="indexMasters.length > 0">
+                        <p class="index2-master__col1-tit"><%= lang.text("home14")%></p>
+                        <ul class="index2-master__col1-ul">
+                            <li>
+                                <span class="index2-master__col1-circle">1</span>
+                                &nbsp;<%= lang.text("home15")%>
+                            </li>
+                            <li>
+                                <span class="index2-master__col1-circle">2</span>
+                                &nbsp;<%= lang.text("home16")%>
+                            </li>
+                            <li>
+                                <span class="index2-master__col1-circle">3</span>
+                                &nbsp;<%= lang.text("home17")%>
+                            </li>
+                            <li>
+                                <span class="index2-master__col1-circle">4</span>
+                                &nbsp;<%= lang.text("home18")%>
+                            </li>
+                            <a class="index2-master__col1-btn" href="/ranklist/#/ranklist/masters"><%= lang.text("xuanzegaoshou")%></a>
+                        </ul>
+                    </div>
+                    <div class="col-xs-3 index2-master__col2" ng-cloak ng-repeat="master in indexMasters" ng-if="indexMasters.length > 0">
+                        <ul>
+                            <li class="index2-master__col2-li1">
+                                <a class="index2-master__col2-photo" href="/trader/{{master.user_code}}/#/trader/summary" target="_blank">
+                                  <img ng-src="/avatar/{{ master.user_code }}_150.jpg" alt="avatar">
                                 </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                                <span class="index2-master__col2-name" title="{{ master.username || '**' }}">{{ master.username || '**' }}</span>
+                            </li>
+                            <li class="index2-master__col2-li2">
+                                <div class="index2-master__col2-div1">
+                                    <span class="index2-master__col2-rate">{{ master.profit_rate || '0.00' }}</span><span class="font-size-12">%</span><br>
+                                    <span class="font-size-14"><%= lang.text("shouyilv")%></span>
+                                </div>
+                                <div class="index2-master__col2-div2">
+                                    <span class="index2-master__col2-how" ng-show="master.max_retract < 0.05"><%= lang.text("low")%></span>
+                                    <span class="index2-master__col2-how" ng-show="master.max_retract >= 0.05 && master.max_retract <= 0.10"><%= lang.text("middle")%></span>
+                                    <span class="index2-master__col2-how" ng-show="master.max_retract > 0.10"><%= lang.text("high")%></span>
+                                    <br>
+                                    <span class="index2-master__col2-how-c"><%= lang.text("fengxian")%></span>
+                                </div>
+                            </li>
+                            <li class="index2-master__col2-li3 clearfix">
+                                <div class="index2-master__col2-div1 mg-tp-_14">
+                                    <span class="index2-master__col2-num">{{ master.history_copy_count || 0 }}</span><br>
+                                    <span class="font-size-14"><%= lang.text("lishifuzhirenshu")%></span>
+                                </div>
+                                <div class="index2-master__col2-div3">
+                                    <a class="index2-master__col2-copy" href="/trader/{{master.user_code}}/#/trader/summary" target="_blank">
+                                        <img  class="index2-master__col2-jia" src="<%= lang.image('homePlus')%>" alt="">
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
 
-            </div>
-        </div>
-    </div>
-</section>
-<section class="index2-product clearfix">
-    <div class="container">
-        <h2 class="index2-product__title"><%= lang.text("home19")%></h2>
-        <p class="index2-product__tip"><%= lang.text("home20")%></p>
-        <div class="row">
-            <div class="col-xs-3">
-                <div class="index2-product__up">
-                    <a class="index2-product__up-circle" href="/web/product/forex" target="_blank">
-                        <span class="index2-product__up-icon1"></span>
-                    </a>
-                    <p class="index2-product__up-name"><%= lang.text("waihui")%></p>
-                </div>
-                <div class="index2-product__down pd-lf-50">
-                    <p><%= lang.text("home21")%></p>
-                    <p><%= lang.text("home22")%></p>
-                    <p><%= lang.text("home23")%></p>
-                </div>
-            </div>
-            <div class="col-xs-3">
-                <div class="index2-product__up">
-                    <a class="index2-product__up-circle" href="/web/product/metal" target="_blank">
-                        <span class="index2-product__up-icon2"></span>
-                    </a>
-                    <p class="index2-product__up-name"><%= lang.text("guijinshu")%></p>
-                </div>
-                <div class="index2-product__down pd-lf-50">
-                    <p><%= lang.text("home24")%></p>
-                    <p><%= lang.text("home25")%></p>
-                    <p><%= lang.text("home26")%></p>
-                </div>
-            </div>
-            <div class="col-xs-3">
-                <div class="index2-product__up">
-                    <a class="index2-product__up-circle" href="/web/product/oil" target="_blank">
-                        <span class="index2-product__up-icon3"></span>
-                    </a>
-                    <p class="index2-product__up-name"><%= lang.text("yuanyou")%></p>
-                </div>
-                <div class="index2-product__down pd-lf-40">
-                    <p><%= lang.text("home27")%></p>
-                    <p><%= lang.text("home28")%></p>
-                    <p><%= lang.text("home29")%></p>
-                </div>
-            </div>
-            <div class="col-xs-3">
-                <div class="index2-product__up">
-                    <a class="index2-product__up-circle" href="/web/product/cfd" target="_blank">
-                        <span class="index2-product__up-icon4"></span>
-                    </a>
-                    <p class="index2-product__up-name"><%= lang.text("home61")%></p>
-                </div>
-                <div class="index2-product__down pd-lf-50">
-                    <p><%= lang.text("home30")%></p>
-                    <p><%= lang.text("home31")%></p>
-                    <p><%= lang.text("home32")%></p>
                 </div>
             </div>
         </div>
-        <div class="index2-product__btn-con">
-            <a class="index2-product__btn" href="space/#/account/register"><%= lang.text("lijizhuce")%></a>
+    </section>
+    <section class="index2-product clearfix">
+        <div class="container">
+            <h2 class="index2-product__title"><%= lang.text("home19")%></h2>
+            <p class="index2-product__tip"><%= lang.text("home20")%></p>
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="index2-product__up">
+                        <a class="index2-product__up-circle" href="/web/product/forex" target="_blank">
+                            <span class="index2-product__up-icon1"></span>
+                        </a>
+                        <p class="index2-product__up-name"><%= lang.text("waihui")%></p>
+                    </div>
+                    <div class="index2-product__down pd-lf-50">
+                        <p><%= lang.text("home21")%></p>
+                        <p><%= lang.text("home22")%></p>
+                        <p><%= lang.text("home23")%></p>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="index2-product__up">
+                        <a class="index2-product__up-circle" href="/web/product/metal" target="_blank">
+                            <span class="index2-product__up-icon2"></span>
+                        </a>
+                        <p class="index2-product__up-name"><%= lang.text("guijinshu")%></p>
+                    </div>
+                    <div class="index2-product__down pd-lf-50">
+                        <p><%= lang.text("home24")%></p>
+                        <p><%= lang.text("home25")%></p>
+                        <p><%= lang.text("home26")%></p>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="index2-product__up">
+                        <a class="index2-product__up-circle" href="/web/product/oil" target="_blank">
+                            <span class="index2-product__up-icon3"></span>
+                        </a>
+                        <p class="index2-product__up-name"><%= lang.text("yuanyou")%></p>
+                    </div>
+                    <div class="index2-product__down pd-lf-40">
+                        <p><%= lang.text("home27")%></p>
+                        <p><%= lang.text("home28")%></p>
+                        <p><%= lang.text("home29")%></p>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="index2-product__up">
+                        <a class="index2-product__up-circle" href="/web/product/cfd" target="_blank">
+                            <span class="index2-product__up-icon4"></span>
+                        </a>
+                        <p class="index2-product__up-name"><%= lang.text("home61")%></p>
+                    </div>
+                    <div class="index2-product__down pd-lf-50">
+                        <p><%= lang.text("home30")%></p>
+                        <p><%= lang.text("home31")%></p>
+                        <p><%= lang.text("home32")%></p>
+                    </div>
+                </div>
+            </div>
+            <div class="index2-product__btn-con">
+                <a class="index2-product__btn" href="space/#/account/register"><%= lang.text("lijizhuce")%></a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="index2-trade">
-    <div class="container">
-        <h2 class="index2-product__title"><%= lang.text("home33")%></h2>
-        <p class="index2-product__tip"><%= lang.text("home34")%></p>
-        <div class="row">
-            <div class="col-xs-6">
-                <div class="index2-trade__con1">
-                    <%= lang.text("home35")%>
+    <section class="index2-trade">
+        <div class="container">
+            <h2 class="index2-product__title"><%= lang.text("home33")%></h2>
+            <p class="index2-product__tip"><%= lang.text("home34")%></p>
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="index2-trade__con1">
+                        <%= lang.text("home35")%>
+                    </div>
+                    <div class="index2-trade__btn-con">
+                        <a class="index2-product__btn" href="/web/about/stp"><%= lang.text("liaojiexiangqing")%></a>
+                    </div>
                 </div>
-                <div class="index2-trade__btn-con">
-                    <a class="index2-product__btn" href="/web/about/stp"><%= lang.text("liaojiexiangqing")%></a>
-                </div>
-            </div>
-            <div class="col-xs-6">
-                <div class="index2-trade__img">
-                    <img src="<%= lang.image('homeTrade')%>" alt="">
+                <div class="col-xs-6">
+                    <div class="index2-trade__img">
+                        <img src="<%= lang.image('homeTrade')%>" alt="">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<section class="index2-why index2-product">
-    <div class="container">
-        <h2 class="index2-product__title"><%= lang.text("home36")%></h2>
-        <p class="index2-product__tip"><%= lang.text("home37")%></p>
-        <div class="row">
-            <div class="col-xs-3">
-                <div class="index2-product__up">
-                    <div class="index2-why__up-icon1"></div>
-                    <p class="index2-product__up-name"><%= lang.text("home38")%></p>
+    <section class="index2-why index2-product">
+        <div class="container">
+            <h2 class="index2-product__title"><%= lang.text("home36")%></h2>
+            <p class="index2-product__tip"><%= lang.text("home37")%></p>
+            <div class="row">
+                <div class="col-xs-3">
+                    <div class="index2-product__up">
+                        <div class="index2-why__up-icon1"></div>
+                        <p class="index2-product__up-name"><%= lang.text("home38")%></p>
+                    </div>
+                    <div class="index2-product__down pd-lf-50">
+                        <p><%= lang.text("home39")%></p>
+                    </div>
                 </div>
-                <div class="index2-product__down pd-lf-50">
-                    <p><%= lang.text("home39")%></p>
+                <div class="col-xs-3">
+                    <div class="index2-product__up">
+                        <div class="index2-why__up-icon2"></div>
+                        <p class="index2-product__up-name"><%= lang.text("home40")%></p>
+                    </div>
+                    <div class="index2-product__down pd-lf-50">
+                        <p><%= lang.text("home41")%></p>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="index2-product__up">
+                        <div class="index2-why__up-icon3"></div>
+                        <p class="index2-product__up-name"><%= lang.text("home42")%></p>
+                    </div>
+                    <div class="index2-product__down pd-lf-40">
+                        <p><%= lang.text("home43")%></p>
+                    </div>
+                </div>
+                <div class="col-xs-3">
+                    <div class="index2-product__up">
+                        <div class="index2-why__up-icon4"></div>
+                        <p class="index2-product__up-name <%= lang.currentLanguage()%>"><%= lang.text("home44")%></p>
+                    </div>
+                    <div class="index2-product__down pd-lf-50">
+                        <p><%= lang.text("home45")%></p>
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-3">
-                <div class="index2-product__up">
-                    <div class="index2-why__up-icon2"></div>
-                    <p class="index2-product__up-name"><%= lang.text("home40")%></p>
-                </div>
-                <div class="index2-product__down pd-lf-50">
-                    <p><%= lang.text("home41")%></p>
-                </div>
-            </div>
-            <div class="col-xs-3">
-                <div class="index2-product__up">
-                    <div class="index2-why__up-icon3"></div>
-                    <p class="index2-product__up-name"><%= lang.text("home42")%></p>
-                </div>
-                <div class="index2-product__down pd-lf-40">
-                    <p><%= lang.text("home43")%></p>
-                </div>
-            </div>
-            <div class="col-xs-3">
-                <div class="index2-product__up">
-                    <div class="index2-why__up-icon4"></div>
-                    <p class="index2-product__up-name" style="line-height:25px;"><%= lang.text("home44")%></p>
-                </div>
-                <div class="index2-product__down pd-lf-50">
-                    <p><%= lang.text("home45")%></p>
-                </div>
+            <div class="index2-product__btn-con">
+                <a class="index2-product__btn" href="space/#/account/register"><%= lang.text("lijizhuce")%></a>
             </div>
         </div>
-        <div class="index2-product__btn-con">
-            <a class="index2-product__btn" href="space/#/account/register"><%= lang.text("lijizhuce")%></a>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section class="index2-info">
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-6">
-                <div class="index2-info__personal">
-                    <img src="<%= lang.image('homePerson')%>" alt="">
-                </div>
+    <section class="index2-quote">
+        <div class="container">
+            <h2 class="index2-product__title"><%= lang.text("home62")%></h2>
+            <p class="index2-product__tip"><%= lang.text("home63")%></p>
+            <div class="pd-tp-15 clearfix">
+                <ul class="index2-quote__title clearfix">
+                    <li class="pro">
+                        <%= lang.text("home64")%>
+                    </li>
+                    <li class="sell">
+                        <%= lang.text("home65")%>
+                    </li>
+                    <li class="buy">
+                        <%= lang.text("home66")%>
+                    </li>
+                </ul>
+                <ul class="index2-quote__title clearfix">
+                    <li class="pro">
+                        <%= lang.text("home64")%>
+                    </li>
+                    <li class="sell">
+                        <%= lang.text("home65")%>
+                    </li>
+                    <li class="buy">
+                        <%= lang.text("home66")%>
+                    </li>
+                </ul>
             </div>
-            <div class="col-xs-6 whiteLabelC">
-                <h2 class="index2-info__title"><%= lang.text("home46")%></h2>
-                <p class="index2-info__con">
-                    <%= lang.text("home47")%>
-                </p>
-                <p class="index2-info__con1 text-right"><%= lang.text("home48")%></p>
-                <div class="index2-info__btn-con">
-                    <a class="index2-product__btn" href="/space/#/account/register"><%= lang.text("lijizhuce")%></a>
+            <div class="clearfix">
+                <ul ng-repeat="quoteSymbol in quoteSymbols" class="index2-quote__content clearfix" ng-class="{h_border: $index%2 === 0}">
+                    <li class="pro">
+                        <%if (lang.currentLanguage() === 'zh'){%>
+                        {{ quoteSymbol.symbol_zh }}({{ quoteSymbol.symbol }})
+                        <%}else {%>
+                        {{ quoteSymbol.symbol }}
+                        <%}%>
+                    </li>
+                    <li class="sell" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                        <span>
+                            {{ quoteSymbol.sell }}
+                        </span>
+                    </li>
+                    <li class="buy" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                        <span>
+                            {{ quoteSymbol.buy }}
+                        </span>
+                    </li>
+                </ul>
+            </div>
+            <div class="index2-quote__tip">
+                *<%= lang.text("home67")%>
+            </div>
+        </div>
+    </section>
+
+    <section class="index2-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="index2-info__personal">
+                        <img src="<%= lang.image('homePerson')%>" alt="">
+                    </div>
+                </div>
+                <div class="col-xs-6 whiteLabelC">
+                    <h2 class="index2-info__title"><%= lang.text("home46")%></h2>
+                    <p class="index2-info__con">
+                        <%= lang.text("home47")%>
+                    </p>
+                    <p class="index2-info__con1 text-right"><%= lang.text("home48")%></p>
+                    <div class="index2-info__btn-con">
+                        <a class="index2-product__btn" href="/space/#/account/register"><%= lang.text("lijizhuce")%></a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>

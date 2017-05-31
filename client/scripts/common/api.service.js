@@ -64,7 +64,9 @@
             // checkEmailCodeApi: o + '/action/public/v3/check_email_code',
             checkEmailCodeApi: urlOrigin2 + '/validation/check_email_code',
             // setBindEmailApi: o + '/action/public/v3/set_my_bind_email'
-            setBindEmailApi: urlOrigin2 + '/user/email'
+            setBindEmailApi: urlOrigin2 + '/user/email',
+            getSpreadInfoApi: urlOrigin2 + '/spread_info',
+            getUserGroupApi: urlOrigin2 + '/user/group'
         };
         var asset = {
             // withdrawApi: o + '/action/public/v4/withdraw',

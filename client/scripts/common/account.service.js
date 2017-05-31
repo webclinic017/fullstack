@@ -44,6 +44,8 @@
             sendEmailCode: sendEmailCode,
             checkEmailCode: checkEmailCode,
             setBindEmail: setBindEmail,
+            getSpreadInfo: getSpreadInfo,
+            getUserGroup: getUserGroup,
             hasChecked: false
         };
         var resolveValue;
@@ -517,6 +519,26 @@
                 email: email,
                 code: code
             });
+        }
+
+        /**
+         * Account Service 获取点差信息
+         *
+         * @method getSpreadInfo
+         *
+         */
+        function getSpreadInfo() {
+            return publicHttp.dealPublicRequest(o.getSpreadInfoApi, 'GET');
+        }
+
+        /**
+         * Account Service 获取用户当前MT4组
+         *
+         * @method getUserGroup
+         *
+         */
+        function getUserGroup() {
+            return publicHttp.dealPublicRequest(o.getUserGroupApi, 'GET');
         }
     }
 })();
