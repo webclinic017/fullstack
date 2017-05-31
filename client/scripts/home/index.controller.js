@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('HomeIndexController', HomeIndexController);
 
-    HomeIndexController.$inject = ['$scope', 'product', 'ranklist', '$cookies', '$location'];
+    HomeIndexController.$inject = ['$scope', 'product', 'ranklist', '$cookies', '$location', 'account'];
 
-    function HomeIndexController($scope, product, ranklist, $cookies, $location) {
+    function HomeIndexController($scope, product, ranklist, $cookies, $location, account) {
         var company = $cookies["company_name"];
         var userCode = $cookies["user_code"];
 
@@ -89,6 +89,8 @@
 
         // 报价服务
         $scope.quoteSymbols = [];
+        $scope.spreadInfo = {};     // 点差
+        $scope.userGroup = undefined;   // 用户所在组
         var socketPara = {
             websocketTigerUrl: location.hostname === 'www.tigerwit.com' ? 'wss://crmdev.tigerwit.com:4567' : 'wss://crmdev.tigerwit.com:4567',
             request_symbols: ['AUDUSD', 'XNGUSD', 'EURUSD', 'XTIUSD', 'GBPUSD', 'XBRUSD', 'NZDUSD', 'XAUUSD', 'USDCAD', 'XAGUSD', 'USDCHF', 'AUS200', 'USDJPY', 'JPN225'],
@@ -127,7 +129,33 @@
                 };
                 $scope.quoteSymbols.push(symbol);
             });
-            connectSocket();
+            getSpreadInfo();
+        }
+
+        function getSpreadInfo () {
+            account.getSpreadInfo().then(function (data) {
+                // console.log(data);
+                $scope.spreadInfo = data.data;
+                getUserGroup();
+            });
+        }
+
+        function getUserGroup () {
+            account.checkLogined().then(function (logined) {
+                if (logined) {
+                    account.getUserGroup().then(function (data) {
+                        // console.log(data);
+                        angular.forEach($scope.spreadInfo.spread_special_offset, function (value, key) {
+                            if (data.data.group === key) {
+                                $scope.userGroup = data.data.group;
+                            }
+                        });
+                        connectSocket();
+                    });
+                } else {
+                    connectSocket();
+                }
+            });
         }
 
         function connectSocket () {
@@ -184,13 +212,31 @@
                     $scope.$apply(function () {
                         // console.log("收到报价：" + data['data']);
                         var quote = data['data'];
+                        var buy, sell, spreadLength, commonSpread = 0, groupSpread = 0;
                         // console.log(quote);
                         angular.forEach($scope.quoteSymbols, function (value, index) {
                             if (value.symbol === quote[0]) {
                                 value.type = quote[1];
-                                value.sell = quote[2];
-                                value.buy = quote[3];
                                 value.timestamp = quote[4];
+
+                                // 处理点差
+                                commonSpread = $scope.spreadInfo.spread_common[$scope.spreadInfo.security[value.symbol]]/2;
+                                if ($scope.userGroup) {
+                                    var s = $scope.spreadInfo.spread_special_offset[$scope.userGroup[$scope.spreadInfo.security[value.symbol]]];
+                                    groupSpread = s ? s/2 : 0;
+                                }
+                                var fix = '1';
+                                spreadLength = quote[3].split('.')[1].length;
+                                for (var i=0; i<spreadLength; i++) {
+                                    fix = fix+'0';
+                                }
+                                commonSpread = commonSpread/fix;
+                                groupSpread = groupSpread/fix;
+                                buy = (Number(quote[3])+commonSpread+groupSpread).toFixed(spreadLength);
+                                sell = (Number(quote[3])-commonSpread-groupSpread).toFixed(spreadLength);
+
+                                value.sell = sell;
+                                value.buy = buy;
                             }
                         });
                     });
