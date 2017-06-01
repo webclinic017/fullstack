@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('AssetDepositController', AssetDepositController);
 
-    AssetDepositController.$inject = ['$scope', '$window', '$modal', '$state', 'asset', 'validator', 'account'];
+    AssetDepositController.$inject = ['$scope', '$window', '$cookies', '$modal', '$state', 'asset', 'validator', 'account'];
 
-    function AssetDepositController($scope, $window, $modal, $state, asset, validator, account) {
+    function AssetDepositController($scope, $window, $cookies, $modal, $state, asset, validator, account) {
 
         $scope.deposit = {
             minAmount: 0,       // 最低充值金额
@@ -49,10 +49,21 @@
         });
 
         // 获取入金限制
-        asset.getDepositLimit().then(function (data) {
-            $scope.deposit.minAmount = parseInt(data.limit);
-            $scope.deposit.isumam = data.isumam;
-
+        asset.getDepositLimit().then(function(data) {
+            // console.log(data);
+            if (!data) return;
+            if (data.is_succ) {
+                $scope.deposit.minAmount = parseInt(data.data.min);
+            }
+        });
+        // 获取零钱包 可用金额
+        asset.walletCanWithdraw().then(function (data) {
+            if (!data) return;
+            // console.log(data);
+            $scope.walletAble = data.data;
+            if ($state.params.type === 'wallet') {
+                $scope.deposit.amount = $scope.walletAble;
+            }
         });
         function openSystemMdl(type) {
             $modal.open({
@@ -69,23 +80,10 @@
                 }
             });
         }
-        // 获取零钱包 可用金额
-        asset.walletCanWithdraw().then(function (data) {
-            if (!data) return;
-            // console.log(data);
-            $scope.walletAble = data.data;
-            if ($state.params.type === 'wallet') {
-                $scope.deposit.amount = $scope.walletAble;
-            }
-        });
+        
         // 充值  还未完成s
         function toDeposit(amount) {
             
-
-            if ($scope.deposit.isumam === 1) {
-                openDepositMdl('isumam');
-                return;
-            }
             var amount = $scope.deposit.amount;
 
             if (typeof amount === 'undefined') {
@@ -96,7 +94,7 @@
             amount = Number(amount).toFixed(2);
             
             if ($scope.deposit.type === 'invest') {
-                console.log($scope.personal.verify_status);
+                // console.log($scope.personal.verify_status);
                 if ($scope.personal.verify_status < 6) {
                     openSystemMdl('deposit');
                     return;
@@ -104,23 +102,14 @@
                 var w = $window.open('/waiting');
 
                 asset.deposit($scope.personal.mt4_id, amount).then(function(data) {
-
-                    var url;
-                    if(data && data.data && data.data.url){
-                        // 兼容IE
-                        if (location.origin) {
-                            url = location.origin+data.data.url;
-                        } else {
-                            url = location.protocol + "//" + location.hostname + data.data.url;
-                        }
-                        
-                        // url = 'https://www.tigerwit.com'+data.data.url;
-                    }
-                    if(url){
+                    if (!data) return;
+                    if (data.is_succ) {
+                        var token = $cookies["token"] || '';
+                        var url = data.data.url + '?order_no='+data.data.order_no+'&token='+token;
                         openDepositMdl('depositFinish');
                         w.location = url;
-                    }else{
-                        alert( (data && data.error_msg) || '请求失败，请联系管理员。');
+                    } else {
+                        layer.msg(data.message);
                         w.close();
                     }
                 });

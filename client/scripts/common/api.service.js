@@ -38,31 +38,26 @@
             getPersonalInfoApi: urlOrigin2 + '/user/info',
             getAssetInfoApi: urlOrigin2 + '/centre/asset',
             getUnreadLengthApi: urlOrigin2 + '/notify/number',
-            getNoticeListApi: o + '/action/public/v3/get_notify_list',
-            getOneReadApi: o + '/action/public/v3/notify_mark_read',
-            getAllReadApi: o + '/action/public/v3/notify_mark_all_read',
-            getLocationApi: o + '/action/public/v4/basic_settings',
+            getNoticeListApi: urlOrigin2 + '/notify',
+            getAllReadApi: urlOrigin2 + '/notify/read',
             // getWorldsApi: o + '/action/public/v4/worldcode_list',
             getWorldsApi: urlOrigin2 + '/region/countries',
             // getStatesApi: o + '/action/public/v4/statecode_list',
             getStatesApi: urlOrigin2 + '/region/provinces',
             // getCitiesApi: o + '/action/public/v4/citycode_list',
             getCitiesApi: urlOrigin2 + '/region/cities',
-            setBasicInfoApi: o + '/action/public/v4/update_user_info',
             // setPwdApi: o + '/action/public/v4/change_password',
             setPwdApi: urlOrigin2 + '/user/passwd',
             // setPhoneApi: o + '/action/public/v3/set_my_bind_phone',
             setPhoneApi: urlOrigin2 + '/user/phone',
             // logoutApi: o + '/action/public/v3/logout',
             logoutApi: urlOrigin2 + '/auth/logout',
-            verifyApi: o + '/action/public/v4/set_info',
             getKycApi: urlOrigin2 + '/user/kyc_map',
             // getKycApi: o + '/action/public/v4/get_kyc_info',
-            getUserKycApi: o + '/action/public/v4/get_user_kyc_info',
             getAuthStatus: urlOrigin2 + '/user/auth_status',
             setKycApi: urlOrigin2 + '/user/kyc',
-            checkMasterApi: o + '/action/public/v3/check_master',
-            applyBecomeMasterApi: o + '/action/public/v3/apply_to_master',
+            // checkMasterApi: o + '/action/public/v3/check_master',   // 弃用
+            // applyBecomeMasterApi: o + '/action/public/v3/apply_to_master',// 弃用
             // sendEmailCodeApi: o + '/action/public/v3/send_email_code',
             sendEmailCodeApi: urlOrigin2 + '/validation/send_email_code',
             // checkEmailCodeApi: o + '/action/public/v3/check_email_code',
@@ -79,25 +74,25 @@
             getCardApi: urlOrigin2 + '/user/bank_card',
             // bindCardApi: o + '/action/public/v4/binding_bankcard',
             bindCardApi: urlOrigin2 + '/user/bank_card',
-            cancelWithdrawApi: o + '/action/public/v4/cancel_withdraw',
-            getHistoryApi: o + '/action/public/v4/pay_history',
-            depositApi: o + '/action/public/v4/pay',
-            getDepositLimitApi: o + '/action/public/v4/pay_limit',
+            cancelWithdrawApi: urlOrigin2 + '/payment/withdraw/cancel',
+            getHistoryApi: urlOrigin2 + '/payment/histories',
+            depositApi: urlOrigin2 + '/payment/deposit',
+            getDepositLimitApi: urlOrigin2 + '/payment/deposit/limits',
             // getFXRateApi: o + '/action/public/v4/get_parity',
             getFXRateApi: urlOrigin2 + '/payment/rates',
             // getIsWithdrawApi: o + '/action/public/v4/check_withdraw',
             getIsWithdrawApi: urlOrigin2 + '/payment/withdraw/limits',
-            getMasterBonusSummaryApi: o + '/action/public/v4/master/profile',
-            getCopierBonusSummaryApi: o + '/action/public/v4/copier/profile',
-            getMasterBonusListApi: o + '/action/public/v4/master/copy_pay_list',
-            getCopierBonusListApi: o + '/action/public/v4/copier/copy_pay_list',
-            getBonusDetailListApi: o + '/action/public/v4/copy_pay_trade_list',
             walletDepositApi: urlOrigin2 + '/wallet/deposit',
             walletWithdrawApi: urlOrigin2 + '/wallet/withdraw',
             walletCanWithdrawApi: urlOrigin2 + '/wallet/valid_balance',
+            getMasterBonusSummaryApi: urlOrigin2 + '/commission/master_profile',
+            getCopierBonusSummaryApi: urlOrigin2 + '/commission/custom_profile',
+            getMasterBonusListApi: urlOrigin2 + '/commission/master_settle',
+            getCopierBonusListApi: urlOrigin2 + '/commission/custom_settle',
+            getBonusDetailListApi: urlOrigin2 + '/commission/settle_info'
         };
         var forex = {
-            getAssetApi: o + '/action/public/v3/get_usercenter_asset'
+            
         };
         var invest = {
             getInvestSummaryApi: urlOrigin2  + '/centre/trading_profile',
@@ -141,10 +136,10 @@
         };
 
         var redbag = {
-            getRedbagPoolApi: o + '/action/public/bonus/lists',
-            getRedbagListApi: o + '/action/public/bonus/my_bonus',
-            receiveRedbagApi: o + '/action/public/bonus/receive',
-            exchangeRedbagApi: o + '/action/public/bonus/bonus_pay_condition',
+            getRedbagPoolApi: urlOrigin2 + '/bonus/index',
+            getRedbagListApi: urlOrigin2 + '/bonus',
+            receiveRedbagApi: urlOrigin2 + '/bonus/receive',
+            exchangeRedbagApi: urlOrigin2 + '/bonus/exchange',
             getRedbagNumApi: o + '/action/public/bonus/num',
             setRedbagReadedApi: o + '/action/public/bonus/readed'
         };

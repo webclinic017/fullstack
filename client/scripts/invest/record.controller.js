@@ -31,31 +31,31 @@
 
         // 获取交易历史
         function getList(page) {
-
-
-            asset.getHistory(page, pagesize).then(function (data) {
-                // console.info(data.records[0]);
-                $scope.historyList = data.records;
-                // console.log(data.records);
-                //console.log(data.records);
-                $scope.$emit('showLoadingImg');
-
-                angular.extend($scope.pagebar.config, {
-                    total: utils.getTotal(data.sum, pagesize),
-                    page: page
-                });
+            $scope.$emit('showLoadingImg');
+            var offset = (page - 1) * pagesize;
+            asset.getHistory(offset, pagesize).then(function (data) {
+                // console.info(data);
                 $scope.$broadcast('hideLoadingImg');
+                if (!data) return;
+                if (data.is_succ) {
+                    $scope.historyList = data.data.records;
 
+                    angular.extend($scope.pagebar.config, {
+                        total: data.data.page_count,
+                        page: page
+                    });
+                }
             });
-
 
         }
 
         function cancelWithdraw(code) {
             asset.cancelWithdraw(code).then(function (data) {
+                if (!data) return;
                 //console.log(data);
                 if (!data.is_succ) {
-                    console.log(data.error_msg);
+                    // console.log(data.message);
+                    layer.msg(data.message);
                     return;
                 }
 
