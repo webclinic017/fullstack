@@ -95,6 +95,7 @@ $(document).ready(function () {
         } else {
             //防止重复提交
             clickable = false;
+            var h = $('#' + info.targetId).html();
             $('#' + info.targetId).html('<i class="loading fa fa-spinner"></i>正在跳转');
 
             // umeng
@@ -124,14 +125,17 @@ $(document).ready(function () {
 
                 returnurl = originUrl + "/m/h5_register/reg?" + "name=" + rName + "&telephone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
             }
+            
             jQuery.ajax({
-                url: '/action/public/v3/page_signup',
+                url: '/api/auth/page_signup',
                 data: tmpForm.serialize(),
                 type: "POST",
                 success: function (data) {
+                    // console.log(data);
                     location.href = returnurl;
                 },
                 error: function (err) {
+                    
                     location.href = returnurl;
                 }
             });

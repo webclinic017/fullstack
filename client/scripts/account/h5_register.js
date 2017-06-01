@@ -10,13 +10,6 @@
                 token = $.cookie("code_token");
             }
         });
-        // $.ajax({
-        //     type: "post",
-        //     url: '/action/public/v3/set_token',
-        //     success: function () {
-        //         token = $.cookie("tiger_token");
-        //     }
-        // });
     }
 
     set_token();
@@ -149,51 +142,6 @@
                     });
                 }
             });
-            // $.ajax({
-            //     type: "post",
-            //     url: "/action/public/v3/get_phone_reg_code",
-            //     data: {
-            //         phone: $("#telephone").val(),
-            //         token: $.cookie("tiger_token")
-            //     },
-            //     success: function (data) {
-            //         layer.closeAll();
-            //         data = JSON.parse(data);
-            //         if (data.is_succ) {
-            //             /*提示*/
-            //             layer.open({
-            //                 content: '验证码已发送!',
-            //                 skin: 'msg',
-            //                 anim: false,
-            //                 time: 1.2 /*1.2秒后自动关闭*/
-            //             });
-
-            //             /*倒计时*/
-            //             if (Boolean(interval) == false) {
-            //                 var duration = 59;
-            //                 interval = setInterval(function () {
-            //                     $("#verify_code_btn").addClass("disable").html(duration-- + "s");
-            //                     if (duration <= 0) {
-            //                         clearInterval(interval);
-            //                         interval = null;
-            //                         $("#verify_code_btn").removeClass("disable").html("重新获取");
-            //                         duration = 59;
-            //                         /*重新获取token*/
-            //                         set_token();
-            //                     }
-            //                 }, 1000);
-            //             }
-            //         } else {
-            //             set_token();
-            //             layer.open({
-            //                 content: '获取失败,请重试!',
-            //                 skin: 'msg',
-            //                 anim: false,
-            //                 time: 2 /*3秒后自动关闭*/
-            //             });
-            //         }
-            //     }
-            // });
         }
 
         function checkTel() {
@@ -344,12 +292,8 @@
 
             /*设置邀请源INVITE_CODE*/
             if (oReg.search_arr.user_code) {
-                $.ajax({
-                    type: "post",
-                    url: "/action/public/v3/set_invite_code",
-                    data: {
-                        usercode: oReg.search_arr.user_code
-                    }
+                publicRequest('setInviteCode', 'POST', {
+                    usercode: oReg.search_arr.user_code
                 });
             }
 
@@ -389,28 +333,6 @@
                             }
                         }
                     });
-                    // $.ajax({
-                    //     type: "get",
-                    //     url: "/action/public/v4/exists",
-                    //     data: {
-                    //         key: $("#telephone").val(),
-                    //         username: null
-                    //     },
-                    //     success: function (data) {
-                    //         data = JSON.parse(data);
-                    //         console.log(data);
-                    //         if (data && data.data == true) {
-                    //             layer.open({
-                    //                 content: '此号码已注册!',
-                    //                 skin: 'msg',
-                    //                 anim: false,
-                    //                 time: 2 /*1.2秒后自动关闭*/
-                    //             });
-                    //         } else {
-                    //             sendVerifyCode();
-                    //         }
-                    //     }
-                    // })
                 }
             });
         }());
@@ -437,40 +359,35 @@
                 // if (window.location.pathname.indexOf('t35') != -1) {
                 //     _taq.push({convert_id:"58276692798", event_type:"form"})
                 // }
-
-                $.ajax({
-                    url: "/action/public/app/h5_register",
-                    type: "post",
-                    data: {
-                        phone: $("#telephone").val() || "",
-                        password: $("#password").val() || "",
-                        verify_code: $("#verify_code").val() || "",
-                        pid: oReg.search_arr.pid || "",
-                        unit: oReg.search_arr.unit || "",
-                        lp: oReg.search_arr.lp || "",
-                        key: oReg.search_arr.key || "",
-                        email: oReg.search_arr.email || ""
-                    },
-                    success: function (data) {
-                        data = JSON.parse(data);
-                        if (data.is_succ) {
-                            /*跳转到注册成功页面*/
-                            if (window.location.pathname.indexOf('t35') >= 0) {
-                                window.location.href = window.location.origin + "/m/h5_register/succ?origin=redbag";
-                            } else {
-                                window.location.href = window.location.origin + "/m/h5_register/succ";
-                            }
+                publicRequest('register', 'POST', {
+                    phone: $("#telephone").val() || "",
+                    password: $("#password").val() || "",
+                    verify_code: $("#verify_code").val() || "",
+                    pid: oReg.search_arr.pid || "",
+                    unit: oReg.search_arr.unit || "",
+                    lp: oReg.search_arr.lp || "",
+                    key: oReg.search_arr.key || "",
+                    email: oReg.search_arr.email || ""
+                }).then(function (data) {
+                    if (!data) return;
+                    if (data.is_succ) {
+                        /*跳转到注册成功页面*/
+                        if (window.location.pathname.indexOf('t35') >= 0) {
+                            window.location.href = window.location.origin + "/m/h5_register/succ?origin=redbag";
                         } else {
-                            layer.closeAll();
-                            layer.open({
-                                content: data.error_msg,
-                                skin: 'msg',
-                                anim: false,
-                                time: 2 /*2秒后自动关闭*/
-                            });
+                            window.location.href = window.location.origin + "/m/h5_register/succ";
                         }
+                    } else {
+                        layer.closeAll();
+                        layer.open({
+                            content: data.message,
+                            skin: 'msg',
+                            anim: false,
+                            time: 2 /*2秒后自动关闭*/
+                        });
                     }
                 });
+                
             });
         }());
 

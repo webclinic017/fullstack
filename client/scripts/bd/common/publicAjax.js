@@ -19,6 +19,8 @@
         checkExists: origin + '/user/check_exists', // get
         getPhoneCode: origin + '/validation/send_phone_code', // post
         getInviteList: origin + '/user/invites', // get
+        setClueCustomer: origin + '/auth/page_signup', // post
+        setInviteCode: origin + '/invite_code', // post
 
         // 三方接口
         thirdGetStatus: origin + '/third/user/auth_status', // get
