@@ -94,9 +94,9 @@
 
     // kyc
     function AuthenInvestInfoController($scope, $state, $timeout, account) {
-        window.onbeforeunload = function () {
-            return '确认离开当前页面吗？未保存的数据将会丢失！'
-        }
+        // window.onbeforeunload = function () {
+        //     return '确认离开当前页面吗？未保存的数据将会丢失！'
+        // }
         $scope.$emit('getAuthStatus');
         $scope.questions = [];
         $scope.isSetKyc = false;
@@ -222,9 +222,9 @@
 
     // complete
     function AuthenCompleteController($scope, validator, account, $timeout, $interval) {
-        window.onbeforeunload = function () {
-            return '确认离开当前页面吗？未保存的数据将会丢失！'
-        }
+        // window.onbeforeunload = function () {
+        //     return '确认离开当前页面吗？未保存的数据将会丢失！'
+        // }
         $scope.$emit('getAuthStatus');
         $scope.completeInfo = {
             username: '',
