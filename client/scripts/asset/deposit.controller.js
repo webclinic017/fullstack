@@ -94,8 +94,7 @@
             amount = Number(amount).toFixed(2);
             
             if ($scope.deposit.type === 'invest') {
-                // console.log($scope.personal.verify_status);
-                if ($scope.personal.verify_status < 6) {
+                if ($scope.personal.profile_check != 3) {
                     openSystemMdl('deposit');
                     return;
                 }
