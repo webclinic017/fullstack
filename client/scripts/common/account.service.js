@@ -14,6 +14,7 @@
             checkLogined: checkLogined,
             setToken: setToken,
             checkExist: checkExist,
+            updataUserInfo: updataUserInfo,
             getRCaptcha: getRCaptcha,
             register: register,
             checkPhoneAndCaptcha: checkPhoneAndCaptcha,
@@ -46,7 +47,8 @@
             setBindEmail: setBindEmail,
             getSpreadInfo: getSpreadInfo,
             getUserGroup: getUserGroup,
-            hasChecked: false
+            hasChecked: false,
+            getAuthStatus: getAuthStatus //获取认证状态            
         };
         var resolveValue;
         return service;
@@ -74,7 +76,7 @@
             } else {
                 expires = 0;
             }
-            
+
             return publicHttp.dealPublicRequest(o.loginApi, 'POST', {
                 account: id,
                 password: password,
@@ -154,11 +156,16 @@
          *   data: true     // true 存在 false 不存在
          * }
          */
-        function checkExist(key, number) {
+        function checkExist(key, number, mt4) {
             return publicHttp.dealPublicRequest(o.checkExistApi, 'GET', {
                 key: key,
-                value: number
+                value: number,
+                mt4_id: mt4
             });
+        }
+
+        function updataUserInfo(params) {
+            return publicHttp.dealPublicRequest(o.updataUserInfoApi, 'PUT', params)
         }
 
         /**
@@ -178,21 +185,19 @@
 
         /**
          * @name register
-         * @desc 注册
-         */
-        function register(username, phone, captcha, email, password, lp, pid, unit, key) {
-
-            return publicHttp.dealPublicRequest(o.registerApi, 'POST', {
-                username: username,
+         * params
                 phone: phone,
                 verify_code: captcha,
-                email: email,
                 password: password,
                 lp: lp,
                 pid: pid,
                 unit: unit,
                 key: key
-            });
+         * @desc 注册
+         */
+        function register(params) {
+
+            return publicHttp.dealPublicRequest(o.registerApi, 'POST', params);
         }
 
         /**
@@ -258,7 +263,6 @@
          */
         function getAssetInfo() {
             return publicHttp.dealPublicRequest(o.getAssetInfoApi, 'GET');
-            // return $http.post(o.getAssetInfoApi);
         }
 
         /**
@@ -428,7 +432,7 @@
          * @desc 获取KYC认证列表
          */
         function getKyc() {
-            return $http.get(o.getKycApi);
+            return publicHttp.dealPublicRequest(o.getKycApi, 'GET');
         }
 
         /**
@@ -439,12 +443,17 @@
             return $http.get(o.getUserKycApi);
         }
 
+        // 获取认证状态
+        function getAuthStatus() {
+            return publicHttp.dealPublicRequest(o.getAuthStatus, 'GET')
+        }
+
         /**
          * @name setKyc
          * @desc 设置KYC认证列表
          */
         function setKyc(json) {
-            return $http.post(o.setKycApi, json);
+            return publicHttp.dealPublicRequest(o.setKycApi, 'POST', json);
         }
 
         /**

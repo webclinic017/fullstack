@@ -24,19 +24,21 @@
             getList: getInviteFriendsInfo
         }
         $scope.friends = {};
+        $scope.friendsNum = 0;
         $scope.bonusList = [];
         $scope.selectTxt = selectTxt;
         var pagesize = 10;
-
 
         getInfo();
         getInviteFriendsInfo(1);
 
         function getInviteFriendsInfo (page) {
             invite.getInviteFriendsInfo(page, pagesize).then(function (data) {
+                console.info(data);
                 if (data.is_succ) {
                     $scope.friends = data;
                     $scope.bonusList = data.data;
+                    $scope.friendsNum = data.sum;
                 }
                 angular.extend($scope.pagebar.config, {
                     total: utils.getTotal(data.sum, pagesize),
@@ -44,8 +46,6 @@
                 });
             });
         }
-
-
 
         function getInfo () {
             account.getPersonalInfo().then(function (data) {
@@ -60,6 +60,12 @@
             var $input = $document.find('input[name="link"]');
             $input.focus();
             $input.select();
+            if (document.execCommand("Copy")) {
+                console.log("已复制到剪贴板");
+            } else {
+                consoel.log("浏览器不支持复制到剪贴板");
+            }
+            
         }
     }
 })();

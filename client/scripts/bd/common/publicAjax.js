@@ -5,6 +5,9 @@
     var apiUrl = {
         getUserInfo: origin + '/user/info',     // get
         register: origin + '/auth/register',     // post
+        getAssetInfo: origin + '/centre/asset',  // get
+        getWalletBalance: origin + '/wallet/valid_balance',  // get
+        withdrawWallet: origin + '/wallet/withdraw',  // post
         getPaymentRate: origin + '/payment/rates',     // get
         checkWithdrawLimit: origin + '/payment/withdraw/limits', // get
         getBankCard: origin + '/user/bank_card', // get

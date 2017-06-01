@@ -3,11 +3,11 @@
     'use strict';
 
     angular.module('fullstackApp')
-        .controller('AssetHistoryController', AssetHistoryController);
+        .controller('InvestRecordController', InvestRecordController);
 
-    AssetHistoryController.$inject = ['$scope', 'asset', 'utils'];
+    InvestRecordController.$inject = ['$scope', 'asset', 'utils'];
 
-    function AssetHistoryController($scope, asset, utils) {
+    function InvestRecordController($scope, asset, utils) {
         $scope.records = [];
         $scope.historyList = [];
 
@@ -36,7 +36,7 @@
             asset.getHistory(page, pagesize).then(function (data) {
                 // console.info(data.records[0]);
                 $scope.historyList = data.records;
-                console.log(data.records);
+                // console.log(data.records);
                 //console.log(data.records);
                 $scope.$emit('showLoadingImg');
 

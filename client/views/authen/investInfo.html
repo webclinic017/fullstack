@@ -1,0 +1,83 @@
+<div class="authen_content mg-tp-30 ctn center">
+    <h2>投资信息确认</h2>
+    <div tw-loading-img></div>
+    <div class="kyc">
+        <div ng-if="!isSetKyc">
+            <form name="kycForm" novalidate>
+                <div ng-repeat="(qId, question) in questions">
+                    <h3 class="kyc__title" ng-if="question.id != 'industry'">
+                        {{qId + 1}}. {{question.title}}
+                    </h3>
+                    <div ng-if="question.data.type == 1">
+                        <h3 class="kyc__title">
+                            {{qId + 1}}. {{question.title}}
+                            <select 
+                                class="kyc__title-kyc_selection mg-lf-20"
+                                ng-model="industry"
+                                ng-options="item.value for item in question.data.list track by item.key"
+                                ng-change="selectOption(question, industry)"
+                            >
+                                <option value="">您的职业所属行业</option>
+                            </select>
+                        </h3>
+                    </div>
+                    <div class="row" ng-if="question.id != 1">
+                        <!--单选-->
+                        <div class="col-xs-3 answers" ng-if="question.data.type == 2" ng-repeat="option in question.data.list">
+                            <label class="radio" ng-class="{'checked': question.answer == option.key}">
+                                <input type="radio"
+                                       value="{{ option.key }}"
+                                       required
+                                       ng-model="question.answer"
+                                       ng-change="selectOption(question,option)">
+                                <i class="fa fa-circle-o"></i>
+                                <i class="fa fa-dot-circle-o"></i>
+                                {{ option.value }}
+                            </label>
+                        </div>
+                        <!--多选-->
+                        <div class="col-xs-3 answers" ng-if="question.data.type == 3" ng-repeat="option in question.data.list">
+                            <label class="radio" ng-class="{'checked': option.checked}">
+                                <input type="radio"
+                                       value="{{ option.key }}"
+                                       required
+                                       ng-model="question.answer"
+                                       ng-click="selectOption(question, option)">
+                                <i class="fa fa-circle-o"></i>
+                                <i class="fa fa-dot-circle-o"></i>
+                                {{ option.value }}
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mg-tp-50">
+                    <div ng-show="tip.questions.show">
+                        <p class="alert-system">
+                            {{ tip.questions.msg }}
+                        </p>
+                    </div>
+
+                    <div ng-show="tip.system.show">
+                        <p class="alert-system">
+                            {{ tip.system.msg }}
+                        </p>
+                    </div>
+
+                    <button class="btn btn-sm btn-primary" ng-if="clickable" ng-click="submitForm()">
+                        下一步
+                    </button>
+
+                    <button class="btn btn-sm btn-primary" ng-if="!clickable">
+                        <i class="loading_spinner fa fa-spinner"></i>
+                        提交中
+                    </button>
+                    <!--<button class="btn btn-sm btn-info mg-lf-100" ng-if="type !== 'setting'" ng-click="goNextStep()">跳过</button>-->
+                </div>
+            </form>
+        </div>
+        <div ng-show="isSetKyc" class="mg-tp-20">
+            您已完成KYC认证，感谢您的参与，请放心交易。
+        </div>
+    </div>
+</div>

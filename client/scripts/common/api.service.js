@@ -18,7 +18,7 @@
             getPersonalInfoDegreeApi: urlOrigin2 + '/user/perfect_degree',
             // loginApi: o + '/action/public/v3/login',
             loginApi: urlOrigin2 + '/auth/login',
-            // checkLoginedApi: o + '/action/public/v4/check',
+            updataUserInfoApi: urlOrigin2 + '/user/auth_info',
             checkLoginedApi: urlOrigin2 + '/auth/check',
             // setTokenApi: o + '/action/public/v3/set_token',
             setTokenApi: urlOrigin2 + '/validation/code_token',
@@ -28,6 +28,8 @@
             getRCaptchaApi: urlOrigin2 + '/validation/send_phone_code',
             // registerApi: o + '/action/public/v3/register',
             registerApi: urlOrigin2 + '/auth/register',
+            uploadIdCardBase64: urlOrigin2 + '/user/upload_base64_id_card',
+            uploadIdCardForm: urlOrigin2 + '/user/upload_id_card',
             // checkPhoneAndCaptchaApi: o + '/action/public/v4/verifycode',
             checkPhoneAndCaptchaApi: urlOrigin2 + '/validation/check_phone_code',
             // setNewPwdApi: o + '/action/public/v4/change_password',
@@ -54,9 +56,11 @@
             // logoutApi: o + '/action/public/v3/logout',
             logoutApi: urlOrigin2 + '/auth/logout',
             verifyApi: o + '/action/public/v4/set_info',
-            getKycApi: o + '/action/public/v4/get_kyc_info',
+            getKycApi: urlOrigin2 + '/user/kyc_map',
+            // getKycApi: o + '/action/public/v4/get_kyc_info',
             getUserKycApi: o + '/action/public/v4/get_user_kyc_info',
-            setKycApi: o + '/action/public/v4/save_kyc_info',
+            getAuthStatus: urlOrigin2 + '/user/auth_status',
+            setKycApi: urlOrigin2 + '/user/kyc',
             checkMasterApi: o + '/action/public/v3/check_master',
             applyBecomeMasterApi: o + '/action/public/v3/apply_to_master',
             // sendEmailCodeApi: o + '/action/public/v3/send_email_code',
@@ -87,7 +91,10 @@
             getCopierBonusSummaryApi: o + '/action/public/v4/copier/profile',
             getMasterBonusListApi: o + '/action/public/v4/master/copy_pay_list',
             getCopierBonusListApi: o + '/action/public/v4/copier/copy_pay_list',
-            getBonusDetailListApi: o + '/action/public/v4/copy_pay_trade_list'
+            getBonusDetailListApi: o + '/action/public/v4/copy_pay_trade_list',
+            walletDepositApi: urlOrigin2 + '/wallet/deposit',
+            walletWithdrawApi: urlOrigin2 + '/wallet/withdraw',
+            walletCanWithdrawApi: urlOrigin2 + '/wallet/valid_balance',
         };
         var forex = {
             getAssetApi: o + '/action/public/v3/get_usercenter_asset'
@@ -101,7 +108,8 @@
             getInvestCurrentDetailsApi: urlOrigin2 + '/centre/active/copy_trades',
             getInvestHistoryDataApi: urlOrigin2 + '/centre/past/self_trades',
             getInvestHistoryTradersApi: urlOrigin2 + '/centre/past/copy_masters',
-            getInvestHistoryDetailsApi: urlOrigin2 + '/centre/past/copy_trades'
+            getInvestHistoryDetailsApi: urlOrigin2 + '/centre/past/copy_trades',
+            getWalletHistoryApi: urlOrigin2 + '/wallet/histories'
         };
         var invite = {
             getInviteFriendsInfoApi: o + '/action/public/v3/get_invite_friends_info',
@@ -136,7 +144,9 @@
             getRedbagPoolApi: o + '/action/public/bonus/lists',
             getRedbagListApi: o + '/action/public/bonus/my_bonus',
             receiveRedbagApi: o + '/action/public/bonus/receive',
-            exchangeRedbagApi: o + '/action/public/bonus/bonus_pay_condition'
+            exchangeRedbagApi: o + '/action/public/bonus/bonus_pay_condition',
+            getRedbagNumApi: o + '/action/public/bonus/num',
+            setRedbagReadedApi: o + '/action/public/bonus/readed'
         };
 
         var service = {

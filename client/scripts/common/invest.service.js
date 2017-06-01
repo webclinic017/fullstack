@@ -17,7 +17,8 @@
             getInvestCurrentDetails: getInvestCurrentDetails,
             getInvestHistoryData: getInvestHistoryData,
             getInvestHistoryTraders: getInvestHistoryTraders,
-            getInvestHistoryDetails: getInvestHistoryDetails
+            getInvestHistoryDetails: getInvestHistoryDetails,
+            getWalletHistory: getWalletHistory
         };
         return service;
 
@@ -122,6 +123,22 @@
         function getInvestHistoryDetails(usercode, offset, limit) {
             return publicHttp.dealPublicRequest(o.getInvestHistoryDetailsApi, 'GET', {
                 user_code: usercode,
+                offset: offset,
+                limit: limit
+            });
+        }
+
+        /**
+         * Asset Service 查询零钱包交易明细
+         *
+         * @method getWalletHistory
+         *
+         * @params offset   默认值0
+         * @params limit    默认值10
+         *
+         */
+        function getWalletHistory(offset, limit) {
+            return publicHttp.dealPublicRequest(o.getWalletHistoryApi, 'GET', {
                 offset: offset,
                 limit: limit
             });

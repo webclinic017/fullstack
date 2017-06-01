@@ -1,4 +1,20 @@
 var report_sites = [
+    /*添加时间 2017-5-22*/
+    {
+        address: 'http://finance.eastday.com/eastday/finance1/Business/node3/u1ai112927.htm',
+        description: '【东方网】金融科技3.0时代，互联网外汇平台老虎外汇的探索',
+        date: '2017-5-17'
+    },
+    {
+        address: 'http://www.xsgou.com/biz/finance/58248.html',
+        description: '【中国财经观察网】炒外汇赚钱原理分析，老虎外汇怎么玩？',
+        date: '2017-05-10'
+    },
+    {
+        address: 'http://www.e521.com/pl/wywy/488236.shtml',
+        description: '【中华财会网】从关关修炼成安迪，老虎外汇、挖财、雪球网来助力',
+        date: '2017-05-18'
+    },
     /*添加时间 2017-5-15*/
     {
         address: 'http://www.prcfe.com/finance/2017/0503/158092.html',

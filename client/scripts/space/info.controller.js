@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('SpaceInfoController', SpaceInfoController);
 
-    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout', 'config'];
+    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout', 'config', 'redbag'];
 
     /**
      * @name SpaceInfoController
      * @desc
      */
-    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config) {
+    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config, redbag) {
         $scope.unreadLength = 0;        // 未读消息
         var summaryId;
         var noticeId;
@@ -29,8 +29,8 @@
 
         function getOnceInfo(){
             getVerifyStatus();
-            getInviteFriendsInfo(1);
             getPersonalInfoDegree();
+            getRedBagNum();
         }
 
         //定时提取用户资产信息
@@ -40,12 +40,12 @@
             angular.extend($scope.personal, {
                 basic: toState.name.substring(6)
             });
-        });
-
-        // 取消轮询
-        $scope.$on('$stateChangeStart', function (event, toState, toParams) {
-            if (toState.name.indexOf('space') === -1) {
+            // console.log(toState.name);
+            if (toState.name.indexOf('center') === -1) {
                 $timeout.cancel(summaryId);
+            } else {
+                $timeout.cancel(summaryId);
+                getAssetInfo();
             }
         });
 
@@ -56,6 +56,17 @@
                 getUnreadLength();
             },30000);
         });
+
+        // 获取未读红包数
+        function getRedBagNum () {
+            redbag.getRedbagNum().then(function (data) {
+                if (!data) return;
+                // console.log(data);
+                angular.extend($scope.personal, {
+                    redbagUnreadNum: data.num
+                });
+            });
+        }
 
         // 初始化所需的全局数据
         function initialize() {
@@ -102,24 +113,20 @@
         // 获取个人资产概况
         function getAssetInfo() {
             account.getAssetInfo().then(function (data) {
-                // console.info(data);
                 if (!data) return;
-                angular.extend($scope.personal, data.data);
+                // console.info(data);
+                if (data.is_succ) {
+                    angular.extend($scope.personal, data.data);
+                    var my_total_balance = (Number(data.data.balance)+Number(data.data.wallet_balance)).toFixed(2);
+                    angular.extend($scope.personal, {
+                        my_total_balance: my_total_balance
+                    });
+                } 
             });
 
             summaryId = $timeout(function () {
                 getAssetInfo();
             }, 5000);
-        }
-
-        // 获取邀请好友数
-        function getInviteFriendsInfo (page) {
-            invite.getInviteFriendsInfo(page, 5).then(function (data) {
-                // console.info(data);
-                angular.extend($scope.personal, {
-                    invite_sum: data.sum
-                });
-            });
         }
     }
 })();
