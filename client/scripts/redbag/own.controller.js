@@ -9,7 +9,7 @@
 
     function RedbagOwnController($scope, redbag, $modal) {
         
-        if ($scope.personal.verify_status < 6) {
+        if ($scope.personal.profile_check != 3) {
             openSystemMdl('redbag');
             return;
         }
