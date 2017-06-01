@@ -29,7 +29,6 @@
 
         function getOnceInfo(){
             getVerifyStatus();
-            getPersonalInfoDegree();
             getRedBagNum();
         }
 
@@ -40,7 +39,8 @@
             angular.extend($scope.personal, {
                 basic: toState.name.substring(6)
             });
-            // console.log(toState.name);
+        });
+        $scope.$on('$stateChangeStart', function (event, toState, toParams) {
             if (toState.name.indexOf('center') === -1) {
                 $timeout.cancel(summaryId);
             } else {
@@ -83,19 +83,19 @@
         }
 
         // 获取基本信息完整度
-        function getPersonalInfoDegree () {
-            account.getPersonalInfoDegree().then(function (data) {
-                if (!data) return;
-                // console.info(data);
-                var deg = 0;
-                if (data.is_succ) {
-                    deg = data.data.degree;
-                }
-                angular.extend($scope.personal, {
-                    infoDegree: deg
-                });
-            });
-        }
+        // function getPersonalInfoDegree () {
+        //     account.getPersonalInfoDegree().then(function (data) {
+        //         if (!data) return;
+        //         // console.info(data);
+        //         var deg = 0;
+        //         if (data.is_succ) {
+        //             deg = data.data.degree;
+        //         }
+        //         angular.extend($scope.personal, {
+        //             infoDegree: deg
+        //         });
+        //     });
+        // }
 
         // 获取实名认证状态
         function getVerifyStatus () {

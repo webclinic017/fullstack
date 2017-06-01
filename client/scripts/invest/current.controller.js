@@ -78,7 +78,7 @@
                     }
 
                     $scope.traders = data.data;
-                    console.log($scope.traders);
+                    // console.log($scope.traders);
                 }
             });
 

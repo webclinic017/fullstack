@@ -36,28 +36,30 @@
         // 获取消息列表
         function getNoticeList(page) {
             $scope.page = page;
-            account.getNoticeList(page, pagesize).then(function(data) {
-                
-                $scope.noticeList = data.data;
-
-                angular.forEach($scope.noticeList, function (value, index) {
-                    value.openOrClose = 'open';
-
-                    if (value.content.length > 150) {
-                        value.contentOmit = value.content.substring(0, 150) + '...';
-                    } else {
-                        value.contentOmit = value.content;
-                    }
-                });
-
-                $scope.$emit('showLoadingImg');
-
-                angular.extend($scope.pagebar.config, {
-                    total: utils.getTotal(data.num, pagesize),
-                    page: page
-                });
-
+            var offset = (page-1)*pagesize;
+            $scope.$emit('showLoadingImg');
+            account.getNoticeList(offset, pagesize).then(function(data) {
+                // console.log(data);
                 $scope.$broadcast('hideLoadingImg');
+                if (!data) return;
+                if (data.is_succ) {
+                    $scope.noticeList = data.data.records;
+
+                    angular.forEach($scope.noticeList, function (value, index) {
+                        value.openOrClose = 'open';
+
+                        if (value.content.length > 150) {
+                            value.contentOmit = value.content.substring(0, 150) + '...';
+                        } else {
+                            value.contentOmit = value.content;
+                        }
+                    });
+
+                    angular.extend($scope.pagebar.config, {
+                        total: data.data.page_count,
+                        page: page
+                    });
+                }
             });
         }
 
