@@ -27,27 +27,16 @@
         getOnceInfo();
         initialize();
 
-        function getOnceInfo(){
-            getVerifyStatus();
-            getRedBagNum();
-        }
-
-        //定时提取用户资产信息
-        getAssetInfo();
-
         $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
             angular.extend($scope.personal, {
                 basic: toState.name.substring(6)
             });
         });
-        $scope.$on('$stateChangeStart', function (event, toState, toParams) {
-            if (toState.name.indexOf('center') === -1) {
-                $timeout.cancel(summaryId);
-            } else {
-                $timeout.cancel(summaryId);
-                getAssetInfo();
-            }
-        });
+
+        function getOnceInfo(){
+            getVerifyStatus();
+            getRedBagNum();
+        }
 
         // 检查新消息
         $scope.$on('refreshNoticeList', function() {
@@ -106,6 +95,25 @@
                     angular.extend($scope.personal, {
                         verifiedStatus: data.profile_check || 0
                     });
+
+                    if (data.profile_check == 3) {
+                        //定时提取用户资产信息
+                        getAssetInfo();
+
+                        $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
+                            angular.extend($scope.personal, {
+                                basic: toState.name.substring(6)
+                            });
+                        });
+                        $scope.$on('$stateChangeStart', function (event, toState, toParams) {
+                            if (toState.name.indexOf('center') === -1) {
+                                $timeout.cancel(summaryId);
+                            } else {
+                                $timeout.cancel(summaryId);
+                                getAssetInfo();
+                            }
+                        });
+                    }
                 }
             });
         }
