@@ -23,7 +23,6 @@
             //selectPage: , bind to pagination.selectPage
             getList: getInviteFriendsInfo
         }
-        $scope.friends = {};
         $scope.friendsNum = 0;
         $scope.bonusList = [];
         $scope.selectTxt = selectTxt;
@@ -34,14 +33,13 @@
 
         function getInviteFriendsInfo (page) {
             invite.getInviteFriendsInfo(page, pagesize).then(function (data) {
-                console.info(data);
+                // console.info(data);
                 if (data.is_succ) {
-                    $scope.friends = data;
-                    $scope.bonusList = data.data;
-                    $scope.friendsNum = data.sum;
+                    $scope.bonusList = data.data.records;
+                    $scope.friendsNum = data.data.record_count;
                 }
                 angular.extend($scope.pagebar.config, {
-                    total: utils.getTotal(data.sum, pagesize),
+                    total: utils.getTotal(data.data.record_count, pagesize),
                     page: page
                 });
             });
@@ -49,7 +47,7 @@
 
         function getInfo () {
             account.getPersonalInfo().then(function (data) {
-                console.log(data);
+                // console.log(data);
                 $scope.invitation.usercode = data.usercode;
                 $scope.invitation.link = $location.protocol() + '://' + $location.host() + '/space/#/space/invite/come?usercode=' + data.usercode;
             });

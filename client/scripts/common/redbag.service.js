@@ -79,8 +79,7 @@
          * 
          */
         function getRedbagNum() {
-
-            return $http.get(o.getRedbagNumApi);
+            return publicHttp.dealPublicRequest(o.getRedbagNumApi, 'GET');
         }
 
         /**
@@ -91,7 +90,7 @@
          */
         function setRedbagReaded() {
 
-            return $http.put(o.setRedbagReadedApi);
+            return publicHttp.dealPublicRequest(o.setRedbagReadedApi, 'PUT');
         }
     }
 })();

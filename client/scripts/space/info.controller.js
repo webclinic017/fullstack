@@ -52,7 +52,7 @@
                 if (!data) return;
                 // console.log(data);
                 angular.extend($scope.personal, {
-                    redbagUnreadNum: data.num
+                    redbagUnreadNum: data.data
                 });
             });
         }
