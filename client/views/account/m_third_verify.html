@@ -199,51 +199,53 @@
 </div>
 
 <script id="template_kyc_info" type="text/html">
-    <$for(var i=0;i<select.length;i++){$>
-        <div class="m_third_kyc__single">
-            <p class="tit"><$= select[i].title$></p>
-            <div class="cont">
-                <select data-name="<$= select[i].name$>">
-                    <option value="" disabled selected></option>
-                    <$for(var j=0;j<select[i].list.length;j++){$>
-                    <option value="<$= select[i].list[j].key$>"><$= select[i].list[j].value$></option>
-                    <$}$>
-                </select>
+    <$for(var i=0;i<data.length;i++){$>
+        <$if (data[i].type == 1) {$>
+            <div class="m_third_kyc__single">
+                <p class="tit"><$= data[i].title$></p>
+                <div class="cont">
+                    <select data-name="<$= data[i].name$>">
+                        <option value="" disabled selected></option>
+                        <$for(var j=0;j<data[i].list.length;j++){$>
+                        <option value="<$= data[i].list[j].key$>"><$= data[i].list[j].value$></option>
+                        <$}$>
+                    </select>
+                </div>
             </div>
-        </div>
-    <$}$>
-    <$for(var i=0;i<radio.length;i++){$>
-        <div class="m_third_kyc__single">
-            <p class="tit"><$= radio[i].title$></p>
-            <div class="cont">
-                <ul class="m_third_kyc__single-list radio clearfix">
-                    <$for(var j=0;j<radio[i].list.length;j++){$>
-                    <li>
-                        <label data-name="<$= radio[i].name$>">
-                            <span class="inp" data-name="<$= radio[i].name$>" data-value="<$= radio[i].list[j].key$>"></span>
-                            <span><$= radio[i].list[j].value$></span>
-                        </label>
-                    </li>
-                    <$}$>
-                </ul>
+        <$}$>
+        <$if (data[i].type == 2) {$>
+            <div class="m_third_kyc__single">
+                <p class="tit"><$= data[i].title$></p>
+                <div class="cont">
+                    <ul class="m_third_kyc__single-list radio clearfix">
+                        <$for(var j=0;j<data[i].list.length;j++){$>
+                        <li>
+                            <label data-name="<$= data[i].name$>">
+                                <span class="inp" data-name="<$= data[i].name$>" data-value="<$= data[i].list[j].key$>"></span>
+                                <span><$= data[i].list[j].value$></span>
+                            </label>
+                        </li>
+                        <$}$>
+                    </ul>
+                </div>
             </div>
-        </div>
-    <$}$>
-    <$for(var i=0;i<checkbox.length;i++){$>
-        <div class="m_third_kyc__single">
-            <p class="tit"><$= checkbox[i].title$></p>
-            <div class="cont">
-                <ul class="m_third_kyc__single-list checkbox clearfix">
-                    <$for(var j=0;j<checkbox[i].list.length;j++){$>
-                    <li>
-                        <label>
-                            <span class="inp" data-name="<$= checkbox[i].name$>" data-value="<$= checkbox[i].list[j].key$>"></span>
-                            <span><$= checkbox[i].list[j].value$></span>
-                        </label>
-                    </li>
-                    <$}$>
-                </ul>
+        <$}$>
+        <$if (data[i].type == 3) {$>
+            <div class="m_third_kyc__single">
+                <p class="tit"><$= data[i].title$></p>
+                <div class="cont">
+                    <ul class="m_third_kyc__single-list checkbox clearfix">
+                        <$for(var j=0;j<data[i].list.length;j++){$>
+                        <li>
+                            <label>
+                                <span class="inp" data-name="<$= data[i].name$>" data-value="<$= data[i].list[j].key$>"></span>
+                                <span><$= data[i].list[j].value$></span>
+                            </label>
+                        </li>
+                        <$}$>
+                    </ul>
+                </div>
             </div>
-        </div>
+        <$}$>
     <$}$>
 </script>

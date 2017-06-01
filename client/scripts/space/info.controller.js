@@ -121,7 +121,7 @@
                     angular.extend($scope.personal, {
                         my_total_balance: my_total_balance
                     });
-                }           
+                } 
             });
 
             summaryId = $timeout(function () {
