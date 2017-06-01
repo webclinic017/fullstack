@@ -13,6 +13,10 @@ $(document).ready(function () {
         urlPath = location.protocol + "//" + location.hostname;
     }
     // console.info(urlPath);
+    // 临时处理安卓入金问题
+    if (location.hostname === 'proxy.tigerwit.com') {
+        urlPath = 'https://www.tigerwit.com';
+    }
 
     // $.get('/action/public/v4/get_info').then(function (data) {
     //     data = JSON.parse(data);
