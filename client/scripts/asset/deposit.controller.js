@@ -101,7 +101,7 @@
                 }
                 var w = $window.open('/waiting');
 
-                asset.deposit($scope.personal.mt4_id, amount).then(function(data) {
+                asset.deposit(amount).then(function(data) {
                     if (!data) return;
                     if (data.is_succ) {
                         var token = $cookies["token"] || '';
