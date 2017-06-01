@@ -146,7 +146,7 @@
         // 去实名认证
         $scope.verify = verify;
         function verify() {
-            $state.go('space.setting.subpage', { subpage: 'verify' }, { reload: true });
+            $state.go('authen.subpage', { subpage: 'investInfo' });
             closeModal();
         }
 
