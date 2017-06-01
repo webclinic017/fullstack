@@ -20,16 +20,16 @@
                         <span class="icon-histroy icon-forex-{{ order.symbol.toLowerCase() }}"></span>
                         <div class="history-operation-box">
                             <p class="text-left">
-                                <span ng-class="order.action?'font-down':'font-up'">
-                                    {{ order.action_name }}
+                                <span ng-class="order.cmd?'font-down':'font-up'">
+                                    {{ order.cmd_name }}
                                 </span>
                                 <span class="">
                                     {{ order.symbol | symbolMod:lang.text("TradingHistory11") }}
                                 </span>
                             </p>
                             <p class="text-left font-size-12">
-                                <span class="history-operation-way">{{order.type_name}}</span>
-                                <span>{{order.ago | duration}}{{ lang.text("TradingHistory10") }}</span>
+                                <span class="history-operation-way">{{order.close_type_name}}</span>
+                                <span>{{order.passed_time | duration}}{{ lang.text("TradingHistory10") }}</span>
                             </p>
                         <div>
                         <div>

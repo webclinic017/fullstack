@@ -14,6 +14,7 @@
             checkLogined: checkLogined,
             setToken: setToken,
             checkExist: checkExist,
+            updataUserInfo: updataUserInfo,
             getRCaptcha: getRCaptcha,
             register: register,
             checkPhoneAndCaptcha: checkPhoneAndCaptcha,
@@ -22,7 +23,6 @@
             getPersonalInfoDegree: getPersonalInfoDegree,
             getAssetInfo: getAssetInfo,
             getUnreadLength: getUnreadLength,
-            getNoticeCategory: getNoticeCategory,
             getNoticeList: getNoticeList,
             getOneRead: getOneRead,
             getAllRead: getAllRead,
@@ -45,7 +45,8 @@
             sendEmailCode: sendEmailCode,
             checkEmailCode: checkEmailCode,
             setBindEmail: setBindEmail,
-            hasChecked: false
+            hasChecked: false,
+            getAuthStatus: getAuthStatus //获取认证状态
         };
         var resolveValue;
         return service;
@@ -73,7 +74,7 @@
             } else {
                 expires = 0;
             }
-            
+
             return publicHttp.dealPublicRequest(o.loginApi, 'POST', {
                 account: id,
                 password: password,
@@ -94,7 +95,7 @@
                     checkResolve(deferred);
                 } else {   //有cookie时，只发一次请求
                     service.hasChecked = true;
-                    $http.get(o.checkLoginedApi).then(function (data) {
+                    publicHttp.dealPublicRequest(o.checkLoginedApi, 'GET').then(function (data) {
                         if (data.is_succ) {
                             resolveValue = true;
                             deferred.resolve(true);
@@ -108,7 +109,7 @@
                     });
                 }
             }
-
+            
             return deferred.promise;
 
         }
@@ -153,11 +154,16 @@
          *   data: true     // true 存在 false 不存在
          * }
          */
-        function checkExist(key, number) {
+        function checkExist(key, number, mt4) {
             return publicHttp.dealPublicRequest(o.checkExistApi, 'GET', {
                 key: key,
-                value: number
+                value: number,
+                mt4_id: mt4
             });
+        }
+
+        function updataUserInfo(params) {
+            return publicHttp.dealPublicRequest(o.updataUserInfoApi, 'PUT', params)
         }
 
         /**
@@ -177,21 +183,19 @@
 
         /**
          * @name register
-         * @desc 注册
-         */
-        function register(username, phone, captcha, email, password, lp, pid, unit, key) {
-
-            return publicHttp.dealPublicRequest(o.registerApi, 'POST', {
-                username: username,
+         * params
                 phone: phone,
                 verify_code: captcha,
-                email: email,
                 password: password,
                 lp: lp,
                 pid: pid,
                 unit: unit,
                 key: key
-            });
+         * @desc 注册
+         */
+        function register(params) {
+
+            return publicHttp.dealPublicRequest(o.registerApi, 'POST', params);
         }
 
         /**
@@ -246,7 +250,7 @@
          * @method getPersonalInfoDegree
          */
         function getPersonalInfoDegree() {
-            return $http.get(o.getPersonalInfoDegreeApi);
+            return publicHttp.dealPublicRequest(o.getPersonalInfoDegreeApi, 'GET');
         }
 
         /**
@@ -256,7 +260,7 @@
          * @method getAssetInfo
          */
         function getAssetInfo() {
-            return $http.post(o.getAssetInfoApi);
+            return publicHttp.dealPublicRequest(o.getAssetInfoApi, 'GET');
         }
 
         /**
@@ -266,17 +270,7 @@
          *
          */
         function getUnreadLength() {
-            return $http.get(o.getUnreadLengthApi);
-        }
-
-        /*
-         * Account Service 获取消息分类
-         *
-         * @method getNoticeCategory
-         *
-         */
-        function getNoticeCategory() {
-            return $http.get(o.getNoticeCategoryApi);
+            return publicHttp.dealPublicRequest(o.getUnreadLengthApi, 'GET');
         }
 
         /*
@@ -436,7 +430,7 @@
          * @desc 获取KYC认证列表
          */
         function getKyc() {
-            return $http.get(o.getKycApi);
+            return publicHttp.dealPublicRequest(o.getKycApi, 'GET');
         }
 
         /**
@@ -447,12 +441,17 @@
             return $http.get(o.getUserKycApi);
         }
 
+        // 获取认证状态
+        function getAuthStatus() {
+            return publicHttp.dealPublicRequest(o.getAuthStatus, 'GET')
+        }
+
         /**
          * @name setKyc
          * @desc 设置KYC认证列表
          */
         function setKyc(json) {
-            return $http.post(o.setKycApi, json);
+            return publicHttp.dealPublicRequest(o.setKycApi, 'POST', json);
         }
 
         /**

@@ -119,16 +119,16 @@
                     <div class="info">
                         <div class="copiers">
                             <span class="num">
-                                {{ rank.history_sum || '0' }}
+                                {{ rank.history_copy_count || '0' }}
                             </span>
                             <span class="tip">历史跟随者</span>
                         </div>
-                        <div class="rate">
+                        <!--<div class="rate">
                             <span class="num">
                                 <i class="fa fa-dollar"></i>{{ rank.min_copy_amount }}
                             </span>
                             <span class="tip">最低复制金额</span>
-                        </div>
+                        </div>-->
                     </div>
                     <div class="copy_btn_wrapper">
                         <a href="/trader/{{rank.user_code}}/#/trader/summary" target="_blank" class="copy_btn">复制</a>

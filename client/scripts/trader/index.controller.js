@@ -5,14 +5,11 @@
     angular.module('fullstackApp')
         .controller('TraderIndexController', TraderIndexController);
 
-    TraderIndexController.$inject = ['$scope', '$location', '$state', 'trader', '$timeout', '$modal','$rootScope'];
+    TraderIndexController.$inject = ['$scope', '$location', '$state', 'trader', '$timeout', '$modal', '$rootScope'];
 
-    function TraderIndexController($scope, $location, $state, trader, $timeout, $modal,$rootScope) {
+    function TraderIndexController($scope, $location, $state, trader, $timeout, $modal, $rootScope) {
         $scope.master = {};
         $scope.toCopy = toCopy;
-        // $scope.toFollow = toFollow;
-        // $scope.cancelFollow = cancelFollow;
-        // $scope.isFollow = isFollow;
         var usercode,
             detailId,
             avaCopyAmount;
@@ -23,8 +20,6 @@
         usercode = absUrl.match(regUsercode)[1];
 
         getMasterInfo(usercode);
-        getCopyRelation(usercode);
-        // getFollowRelation(usercode);
         getAvaCopyAmount(usercode);
 
         // $scope.$on('$stateChangeStart', function (event, toState, toParams) {
@@ -33,8 +28,9 @@
         //     }
         // });
 
-        function getMasterInfo (usercode) {
+        function getMasterInfo(usercode) {
             trader.getMasterInfo(usercode).then(function (data) {
+                // console.log('getMasterInfo',data)
                 if (data.is_succ) {
                     $rootScope.master_info = data.data;
                     angular.extend($scope.master, data.data);
@@ -48,7 +44,7 @@
         }
 
         // 关注关系
-        function getFollowRelation (usercode) {
+        function getFollowRelation(usercode) {
             $scope.$watch('userstatus.logined', function (newVal, oldVal) {
                 if (newVal === true) {
                     trader.getFollowRelation(usercode).then(function (data) {
@@ -59,7 +55,7 @@
             });
         }
 
-        function toFollow (action) {
+        function toFollow(action) {
             // 判断是否登陆
             if ($scope.userstatus.logined) {
                 trader.follow(usercode, action).then(function (data) {
@@ -72,11 +68,11 @@
             }
         }
 
-        function cancelFollow () {
+        function cancelFollow() {
             $scope.master.follow_text = '取消关注';
         }
 
-        function isFollow () {
+        function isFollow() {
             $scope.master.follow_text = '已关注';
         }
 
@@ -90,9 +86,10 @@
                     });
                 }
             });
+
         }
 
-        // 获取可用复制金额
+        // 获取可用复制金额 复制关系
         function getAvaCopyAmount(usercode) {
             $scope.$watch('userstatus.logined', function (newVal, oldVal) {
 
@@ -100,7 +97,10 @@
                     trader.getAvaCopyAmount(usercode).then(function (data) {
                         // console.info(data);
                         if (data.is_succ) {
-                            avaCopyAmount = data.data.total_available;
+                            $scope.master.copied = data.data.is_copy;
+                            avaCopyAmount = data.data.usable;
+                            $scope.master.avaCopyAmount = data.data.usable;
+                            $scope.master.min_copy_amount = data.data.min_copy_amount;
                         } else {
                             avaCopyAmount = 0;
                         }
@@ -109,8 +109,8 @@
             });
         }
 
-        function toCopy () {
-            // console.info($scope.personal.isumam);
+        // console.info($scope.personal.isumam);
+        function toCopy() {
             // 判断是否登录
             if ($scope.userstatus.logined) {
                 // 判断资金是否处于封闭期
@@ -122,13 +122,15 @@
                         openSystemMdl('isMaster');
                     } else {
                         // 判断是否实名认证 //复制不需要实名认证
-                        // if ($scope.personal.verified === true) {
+                        console.log($scope.personal.verify_status);
+                        if ($scope.personal.verify_status > 5) {
                             var minCopyAmount = parseFloat($scope.master.min_copy_amount, 10);
 
                             if (typeof avaCopyAmount === 'undefined') {
                                 console.log('getting available copy amount');
                                 return;
                             }
+
                             avaCopyAmount = parseFloat(avaCopyAmount, 10);
                             // console.log(avaCopyAmount, minCopyAmount);
                             if (avaCopyAmount < minCopyAmount) {
@@ -136,10 +138,9 @@
                             } else {
                                 openCopyMdl();
                             }
-
-                        // } else {
-                        //     openSystemMdl('verify');
-                        // }
+                        } else {
+                            openSystemMdl('verify');
+                        }
                     }
                 }
             } else {
@@ -147,6 +148,7 @@
             }
         }
 
+        // openSystemMdl('verify', '复制');
         function openSystemMdl(type, info) {
             $modal.open({
                 templateUrl: '/views/trader/system_modal.html',

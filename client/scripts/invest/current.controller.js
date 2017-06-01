@@ -32,7 +32,7 @@
         getTraders();
         // getAvaCopyAmount();
 
-        // 只要当前投资的所对应的 state 变化就要 cancel 轮询
+        // 只要当前投资的所对应的 state 变cancelCopy化就要 cancel 轮询
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
             $timeout.cancel(dataId);
             $timeout.cancel(tradersId);
@@ -44,18 +44,21 @@
         // 获取自主交易持仓订单和订单概况
         function getData() {
             invest.getInvestCurrentData().then(function (data) {
-                // console.info(data);
-                $scope.orders = data.data;
-                $scope.from_data = angular.extend(data.from_data);
-                angular.extend($scope.orderCurrent, data.group_data);
-                $scope.from_orders_profit = 0;
-                var nProfit = 0;
-                angular.forEach($scope.from_data, function (oData, index) {
-                    nProfit += (+oData.profit) || 0;
-                });
-                $scope.from_orders_profit = nProfit.toFixed(2);
+                if (!data) return;
+                if (data.is_succ) {
+                    data = data.data;
+                    $scope.orders = data.self_trades.records;
+                    $scope.from_data = angular.extend(data.uncopy_trades);
+                    angular.extend($scope.orderCurrent, data.self_trades);
+                    $scope.from_orders_profit = 0;
+                    var nProfit = 0;
+                    angular.forEach($scope.from_data, function (oData, index) {
+                        nProfit += (+oData.profit) || 0;
+                    });
+                    $scope.from_orders_profit = nProfit.toFixed(2);
 
-                // $scope.$broadcast('hideLoadingImg');
+                    // $scope.$broadcast('hideLoadingImg');
+                }
             });
 
             dataId = $timeout(function () {
@@ -66,23 +69,16 @@
         function getTraders() {
             invest.getInvestCurrentTraders().then(function (data) {
                 $scope.$broadcast('hideLoadingImg');
-                // console.info(data);
+                if (!data) return;
+                console.info(data);
                 if (data.is_succ) {
                     if (data.data.length <= 0) {
                         $scope.traders = [];
                         return;
                     }
 
-                    angular.forEach(data.data, function (item, index) {
-
-                        if (typeof $scope.traders[index] === 'undefined') {
-                            $scope.traders[index] = {};
-                        }
-
-                        angular.forEach(item, function (value, key) {
-                            $scope.traders[index][key] = value;
-                        });
-                    });
+                    $scope.traders = data.data;
+                    console.log($scope.traders);
                 }
             });
 
@@ -117,7 +113,7 @@
 
         // 获取 copied traders 列表的详情（复制交易持仓订单）
         function getDetails(trader) {
-            invest.getInvestCurrentDetails(trader.usercode).then(function (data) {
+            invest.getInvestCurrentDetails(trader.user_code).then(function (data) {
                 trader.notFirstLoad = true;
                 trader.orders = data.data || [];
             });
@@ -138,7 +134,10 @@
         function openCopyMdl(trader, event) {
             event.stopPropagation();
             event.stopImmediatePropagation();
-
+            // console.log(trader);
+            // 为了和高手主页复制高手公用一个controller，字段名做统一处理
+            trader.copied = trader.copy_amount;
+            trader.usercode = trader.user_code;
             $modal.open({
                 templateUrl: '/views/invest/copy_modal.html',
                 controller: 'TraderCopyController',
@@ -158,7 +157,7 @@
         }
 
         function openCancelCopyMdl(trader, event) {
-            var usercode = trader.usercode;
+            var usercode = trader.user_code;
             var username = trader.username;
             event.stopPropagation();
             event.stopImmediatePropagation();
@@ -187,9 +186,9 @@
                                 $scope.copyCancel.success = true;
                                 $scope.clickable = true;
 
-                                $state.go('space.invest.subpage', {
-                                    subpage: 'current'
-                                }, { reload: true });
+                                // $state.go('space.invest.subpage', {
+                                //     subpage: 'current'
+                                // }, { reload: true });
                             } else {
                                 $scope.clickable = true;
                                 $scope.copyCancel.fail = true;
@@ -240,7 +239,7 @@
                     invest.getInvestCurrentData().then(function (data) {
                         console.info(data);
                         $scope.$broadcast('hideLoadingImg');
-                        $scope.details = type === 'own' ? data.data : data.from_data;
+                        $scope.details = type === 'own' ? data.data.self_trades.records : data.uncopy_trades;
                         $scope.modal.show = true;
                     });
 
@@ -252,7 +251,7 @@
         }
 
         function openInvestCopyDetailMdl(trader, event) {
-            var usercode = trader.usercode;
+            var usercode = trader.user_code;
             event.stopPropagation();
             event.stopImmediatePropagation();
 

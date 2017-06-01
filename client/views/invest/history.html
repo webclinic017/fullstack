@@ -53,7 +53,7 @@
                         <i class="fa fa-dollar"></i>{{ orderHistory.group_occupy_asset }}
                     </th>-->
                     <th ng-class="{'font-success': orderHistory.group_profit.indexOf('-') != -1, 'font-danger':  orderHistory.group_profit.indexOf('-') < 0}">
-                        <i class="fa fa-dollar"></i>{{ orderHistory.group_profit }}
+                        <i class="fa fa-dollar"></i>{{ orderHistory.profit }}
                     </th>
                     <th class="invest_orders__btn">
                         <button class="btn btn-primary btn-sm" ng-click="openInvestOwnDetailMdl($event)">详情</button>
@@ -81,16 +81,16 @@
                             </span>
                             <div class="invest_orders__operate">
                                 <p>
-                                    <span class="invest_orders__action"  ng-class="order.action?'font-down':'font-up'">
-                                        {{ order.action_name }}
+                                    <span class="invest_orders__action"  ng-class="order.cmd?'font-down':'font-up'">
+                                        {{ order.cmd_name }}
                                     </span>
                                     <a class="invest_orders__symbol" href="">
                                         {{ order.symbol | symbolMod:'zh' }}
                                     </a>        
                                 </p>
                                 <p class="text-left font-size-12">
-                                    <span class="history-operation-way">{{order.type_name}}</span>
-                                    <span>{{order.ago | duration}}前</span>
+                                    <span class="history-operation-way">{{order.close_type_name}}</span>
+                                    <span>{{order.passed_time | duration}}前</span>
                                 </p>   
                             </div>
                         </td>
@@ -174,16 +174,16 @@
                                 </span>
                                 <div class="invest_orders__operate">
                                     <p>
-                                        <span class="invest_orders__action" ng-class="order.action?'font-down':'font-up'">
-                                            {{ order.action_name }}
+                                        <span class="invest_orders__action" ng-class="order.cmd?'font-down':'font-up'">
+                                            {{ order.cmd_name }}
                                         </span>
                                         <a class="invest_orders__symbol" href="">
                                             {{ order.symbol | symbolMod:'zh' }}
                                         </a>        
                                     </p>
                                     <p class="text-left font-size-12">
-                                        <span class="history-operation-way">{{order.type_name}}</span>
-                                        <span>{{order.ago | duration}}前</span>
+                                        <span class="history-operation-way">{{order.close_type_name}}</span>
+                                        <span>{{order.passed_time | duration}}前</span>
                                     </p>                                    
                                 </div>
                             </td>

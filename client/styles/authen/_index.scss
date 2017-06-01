@@ -1,0 +1,43 @@
+@include b(authen_nav) {
+    padding-top: 50px;
+    @include e(list) {
+        width: 80%;
+        margin-left: 10%;
+        @include m(item) {
+            width: 25%;
+            height: 43px;
+            border-bottom: 2px solid $gray;
+            &.active {
+                border-bottom: 2px solid $brand-primary;
+                p {
+                    color: #222;
+                }
+            }
+            p {
+                font-size: 18px;
+                font-weight: 500;
+                color: $gray-dark;
+                span {
+                    display: inline-block;
+                    width: 25px;
+                    height: 25px;
+                    margin-right: 8px;
+                    background: $brand-primary;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+@include b(authen_content) {
+    padding: 105px 55px;
+    padding-top: 0;
+    h2 {
+        font-weight: 400;
+    }
+    @include e(tip) {
+        font-size: 14px;
+        color: $gray-dark;
+    }
+}

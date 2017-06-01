@@ -20,7 +20,7 @@
             getList: getList           
         };
 
-        var pagesize = 8;
+        var pagesize = 10;
         var listId;
         var usercode;
         var absUrl = $location.absUrl();
@@ -37,10 +37,13 @@
 
         function getList (page) {
             page = page ? page : 1;
+            var offset = (page - 1) * 10;
+            var limit = 10;
             // console.log(page);
-            trader.getMasterCurrent(usercode, page, pagesize).then(function (data) {
-                // console.info(data);
-                $scope.orders = data.data;
+            trader.getMasterCurrent(usercode, offset, limit).then(function (data) {
+                console.info(data);
+                data = data.data;
+                $scope.orders = data.records;
 
                 $scope.$broadcast('hideLoadingImg');
 
@@ -51,7 +54,7 @@
 
                 if ($scope.orders.length <= 0) return;
                 angular.extend($scope.pagebar.config, {
-                    total: getTotal(data.sum, pagesize),
+                    total: getTotal(data.record_count, pagesize),
                     page: page
                 }); 
             });

@@ -4,13 +4,12 @@
 
     angular.module('fullstackApp').factory('ranklist', ranklist);
 
-    ranklist.$inject = ['$http', 'api'];
+    ranklist.$inject = ['$http', 'api', 'publicHttp'];
 
-    function ranklist($http, api) {
+    function ranklist($http, api, publicHttp) {
         var o = api.ranklist;
         var service = {
             getMastersList: getMastersList,
-            getCopiersList: getCopiersList,
             getOrderInfo: getOrderInfo
         };
         return service;
@@ -22,26 +21,12 @@
          * @method getMastersList
          * 
          */
-        function getMastersList(order, page, pagesize) {
-            // return $http.get('/data/masters.json', {
-            return $http.get(o.getMastersListApi, {
-                params: {
-                    order: order,
-                    page : page,
-                    pagesize: pagesize
-                }
+        function getMastersList(order, offset, limit) {
+            return publicHttp.dealPublicRequest(o.getMastersListApi, 'GET', {
+                sort_by: order,
+                offset: offset,
+                limit: limit
             });
-        }
-
-        /**
-         * Ranklist Service 获取复制者列表
-         * 排行榜 
-         *
-         * @method getCopiersList
-         * 
-         */
-        function getCopiersList (type) {
-            return $http.get(o.getCopiersListApi);
         }
 
         /**
