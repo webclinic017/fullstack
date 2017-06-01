@@ -65,11 +65,6 @@
             }
         });
 
-        // 获取可提取的最大金额
-        // forex.getAsset().then(function(data) {
-        //     $scope.withdraw.maxAmount = data.data.balance;
-        // });
-
         // 判断出金状态, 获取可提取的最大金额
         asset.getIsWithdraw().then(function (data) {
             layer.closeAll();

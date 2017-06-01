@@ -38,11 +38,12 @@ $(document).ready(function () {
 
     if (search) {
         order_no = doSearch(search, 'order_no');
+        var token = $.cookie("token") || '';
         // console.info($pay);
         $.each($pay, function (index, value) {
             // console.log(index, value);
             var pMode = $(value).attr("data-pmode");
-            $(value).attr("href", urlPath+"/action/public/app/pay_order/"+order_no+"?pmode="+pMode);
+            $(value).attr("href", urlPath+"/api/payment/deposit/dispatch?order_no="+order_no+"&pmode="+pMode+"&token="+token);
         });
     }
 

@@ -24,7 +24,6 @@
             getAssetInfo: getAssetInfo,
             getUnreadLength: getUnreadLength,
             getNoticeList: getNoticeList,
-            getOneRead: getOneRead,
             getAllRead: getAllRead,
             getSettingInfo: getSettingInfo,
             getLocation: getLocation,
@@ -34,14 +33,10 @@
             setBasicInfo: setBasicInfo,
             setPwd: setPwd,
             setPhone: setPhone,
-            verify: verify,
             getVerifyStatus: getVerifyStatus,
             setKyc: setKyc,
             getKyc: getKyc,
-            getUserKyc: getUserKyc,
             logout: logout,
-            checkMaster: checkMaster,
-            applyBecomeMaster: applyBecomeMaster,
             sendEmailCode: sendEmailCode,
             checkEmailCode: checkEmailCode,
             setBindEmail: setBindEmail,
@@ -281,26 +276,10 @@
          * @method getNoticeList
          *
          */
-        function getNoticeList(page, pagesize) {
-            return $http.get(o.getNoticeListApi, {
-                params: {
-                    page: page,
-                    pagesize: pagesize
-                }
-            });
-        }
-
-        /*
-         * Account Service 把单条消息标记为已读
-         *
-         * @method getOneRead
-         *
-         */
-        function getOneRead(id) {
-            return $http.get(o.getOneReadApi, {
-                params: {
-                    id: id     // 此id为获取消息通知列表中的id
-                }
+        function getNoticeList(offset, limit) {
+            return publicHttp.dealPublicRequest(o.getNoticeListApi, 'GET', {
+                offset: offset,
+                limit: limit
             });
         }
 
@@ -311,7 +290,7 @@
          *
          */
         function getAllRead() {
-            return $http.get(o.getAllReadApi);
+            return publicHttp.dealPublicRequest(o.getAllReadApi, 'PUT');
         }
 
         /**
@@ -342,7 +321,7 @@
          * }
          */
         function getLocation() {
-            return $http.get(o.getLocationApi);
+            return publicHttp.dealPublicRequest(o.getPersonalInfoApi, 'GET');
         }
 
         function getWorlds() {
@@ -366,14 +345,11 @@
          * @desc setting 模块设置基本信息
          */
         function setBasicInfo(username, world, state, city) {
-            return $http.post(o.setBasicInfoApi, {
+            return publicHttp.dealPublicRequest(o.getPersonalInfoApi, 'PUT', {
                 username: username,
                 world_code: world,
                 state_code: state,
                 city_code: city
-                // special: special,
-                // strategy: strategy,
-                // desc: desc
             });
         }
 
@@ -409,16 +385,6 @@
             return publicHttp.dealPublicRequest(o.logoutApi, 'POST');
         }
 
-        /*
-         * @name verify
-         * @desc 实名认证
-         */
-        function verify(realname) {
-            return $http.post(o.verifyApi, {
-                real_name: realname
-            });
-        }
-
         /**
          * @name getVerifyStatus
          * @desc 获取实名认证状态
@@ -435,14 +401,6 @@
             return publicHttp.dealPublicRequest(o.getKycApi, 'GET');
         }
 
-        /**
-         * @name getUserKyc
-         * @desc 获取KYC认证列表
-         */
-        function getUserKyc() {
-            return $http.get(o.getUserKycApi);
-        }
-
         // 获取认证状态
         function getAuthStatus() {
             return publicHttp.dealPublicRequest(o.getAuthStatus, 'GET')
@@ -454,38 +412,6 @@
          */
         function setKyc(json) {
             return publicHttp.dealPublicRequest(o.setKycApi, 'POST', json);
-        }
-
-        /**
-         * Account Service 是否是高手、有无复制关系、有无交易记录
-         * 申请成为高手
-         *
-         * @method checkMaster
-         */
-        function checkMaster() {
-            return $http.post(o.checkMasterApi);
-        }
-
-        /**
-         * Account Service 申请成为高手
-         * 申请成为高手
-         *
-         * @method applyBecomeMaster
-         *
-         * @param {String} trade_exp 交易经验
-         * @param {String} trade_model 交易方式
-         * @param {String} min_copy_asset 最低跟随资金
-         * @param {String} trade_desc 交易策略描述
-         * @param {file} history_file 上传文件  单独调接口
-         */
-        function applyBecomeMaster(trade_exp, trade_model, min_copy_asset, trade_desc, history_file) {
-            return $http.post(o.applyBecomeMasterApi, {
-                trade_exp: trade_exp,
-                trade_model: trade_model,
-                min_copy_asset: min_copy_asset,
-                trade_desc: trade_desc,
-                history_file: history_file
-            });
         }
 
         /**

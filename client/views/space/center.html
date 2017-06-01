@@ -45,10 +45,9 @@
                 <p class="num">{{ personal.margin_level || '0.00' }}%</p>
                 <p class="tip">保证金比例</p>
             </li>
-            <li ng-mouseenter="show_volume=true" ng-mouseleave="show_volume=false" ng-class="{'active':show_volume}">
+            <li>
                 <p class="num">{{ personal.volume || '0.00' }}</p>
                 <p class="tip">总交易手数</p>
-                <p class="space_center_hint">用户真实入金后的交易手数累计，包含复制交易，不包含CFD</p>
             </li>
             <li ng-mouseenter="show_close_profit=true" ng-mouseleave="show_close_profit=false" ng-class="{'active':show_close_profit}">
                 <p class="num" ng-class="{'font-danger': personal.profit.indexOf('-') < 0, 'font-success': personal.profit.indexOf('-') >= 0}">${{ personal.profit || '0.00' }}</p>

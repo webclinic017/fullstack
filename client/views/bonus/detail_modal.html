@@ -23,15 +23,15 @@
             </thead>
             <tbody>
                 <tr ng-repeat="detail in details" ng-if="success && details.length > 0">
-                    <td>{{ detail.CMD_DESC }} {{ detail.SYMBOL }}</td>
+                    <td>{{ detail.cmd_name }} {{ detail.symbol_cn }}</td>
                     <td>
-                        {{ detail.OPEN_TIME }}
+                        {{ detail.open_time }}
                     </td>
-                    <td>{{ detail.CLOSE_TIME }}</td>
-                    <td>{{ detail.OPEN_PRICE }}</td>
-                    <td>{{ detail.CLOSE_PRICE }}</td>
-                    <td>{{ detail.VOLUME }}</td>
-                    <td><i class="fa fa-dollar"></i>{{ detail.PROFIT }}</td>
+                    <td>{{ detail.close_time }}</td>
+                    <td>{{ detail.open_price }}</td>
+                    <td>{{ detail.close_price }}</td>
+                    <td>{{ detail.volume }}</td>
+                    <td><i class="fa fa-dollar"></i>{{ detail.profit }}</td>
                 </tr>
                 <!-- <tr ng-if="success && details.length > 0">
                     <td>总计</td>

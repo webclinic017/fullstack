@@ -143,7 +143,7 @@
             "register15": {"en": "Declaration by Client", "zh": "客户声明"},
             "register16": {"en": "Trading Notes for Users", "zh": "用户交易须知"},
             "register17": {"en": "Register in 30s and open the journey to fortune", "zh": "30 秒注册 开启财富之旅"},
-            "register20": {"en": "Register now to receive $200", "zh": "立即注册 领取$200"},
+            "register20": {"en": "Register now to receive $200", "zh": "立即注册 领取$1000"},
             "register18": {"en": "Registered?", "zh": "已有账户？"},
             "register19": {"en": "Log in now", "zh": "立即登录"},
 

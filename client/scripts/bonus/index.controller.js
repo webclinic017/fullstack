@@ -17,6 +17,16 @@
         $scope.copierSummary = {};
         $scope.masterList = [];
         $scope.copierList = [];
+        $scope.pagebar = {
+            config: {
+                // total: , // 总页数
+                page: 1    
+            },
+            pages: [],
+            pagesBtn: [],
+            // selectPage: , bind to pagination.selectPage
+            getList: $scope.personal.master ? getMasterBonusList : getCopierBonusList         
+        };
 
         var date = new Date();
         var year = date.getFullYear();
@@ -30,6 +40,7 @@
         }
         var dateString = year + '-' + month;
         var lastDateString = year + '-' + lastMonth;
+        var pagesize = 10;
 
         $scope.datepickerMaster = {
             date: lastDateString,
@@ -40,10 +51,10 @@
             }
         };
         $scope.datepickerCopier = {
-            date: dateString,
+            date: lastDateString,
             options: {
                 format: 'YYYY-MM',
-                date: dateString,
+                date: lastDateString,
                 // endDate: endDateString,
             }
         };
@@ -57,6 +68,7 @@
 
         function getMasterBonusSummary() {
             asset.getMasterBonusSummary().then(function(data) {
+                // console.log(data);
                 if (data && data.is_succ) {
                     $scope.masterSummary = data.data;
                 }
@@ -65,50 +77,59 @@
 
         function getCopierBonusSummary() {
             asset.getCopierBonusSummary().then(function(data) {
+                // console.log(data);
                 if (data && data.is_succ) {
                     $scope.copierSummary = data.data;
                 }
             });
         }
 
-        function getMasterBonusList() {
+        function getMasterBonusList(page) {
+            page = page ? page : 1;
+            var offset = (page - 1)*pagesize;
             $scope.masterList = [];
             $scope.success = false;
             $scope.backErr = {
                 msg: ''
             };
-            asset.getMasterBonusList($scope.datepickerMaster.date).then(function(data) {
+            asset.getMasterBonusList($scope.datepickerMaster.date, offset, pagesize).then(function(data) {
                 // console.info(2, data);
                 $scope.success = true;
+                if (!data) return;
                 if (data && data.is_succ) {
-                    $scope.masterList = data.data.copy_pay_list;
+                    $scope.masterList = data.data.records;
 
-                    $scope.masterTotalPay = data.data.copy_pay_master;
+                    angular.extend($scope.pagebar.config, {
+                        total: data.data.page_count,
+                        page: page
+                    });
                 } else {
-                    $scope.backErr.msg = data.error_msg;
+                    $scope.backErr.msg = data.message;
                 }
             });
         }
 
-        function getCopierBonusList() {
+        function getCopierBonusList(page) {
+            page = page ? page : 1;
+            var offset = (page - 1)*pagesize;
             $scope.copierList = [];
             $scope.success = false;
             $scope.backErr = {
                 msg: ''
             };
-            asset.getCopierBonusList($scope.datepickerCopier.date).then(function(data) {
+            asset.getCopierBonusList($scope.datepickerCopier.date, offset, pagesize).then(function(data) {
                 // console.info(1, data);
                 $scope.success = true;
+                if (!data) return;
                 if (data && data.is_succ) {
-                    $scope.copierList = data.data;
+                    $scope.copierList = data.data.records;
 
-                    var total = 0;
-                    angular.forEach($scope.copierList, function(value, index) {
-                        total += value.pay_noob;
+                    angular.extend($scope.pagebar.config, {
+                        total: data.data.page_count,
+                        page: page
                     });
-                    $scope.totalPay = total.toFixed(2);
                 } else {
-                    $scope.backErr.msg = data.error_msg;
+                    $scope.backErr.msg = data.message;
                 }
             });
         }
@@ -136,7 +157,7 @@
                         asset.getBonusDetailList(trader.ticket_noob, trader.mt4_from, trader.mt4_to).then(function(data) {
                             // console.info(data);
                             $scope.success = true;
-                            if (data.is_succ) {
+                            if (data.is_succ && data.data) {
                                 $scope.details = data.data.trade_list;
                                 $scope.total = {
                                     sum_profit: data.data.sum_profit,
