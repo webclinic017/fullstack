@@ -5,13 +5,21 @@
     angular.module('fullstackApp')
         .controller('RedbagOwnController', RedbagOwnController);
 
-    RedbagOwnController.$inject = ['$scope', 'redbag', '$modal'];
+    RedbagOwnController.$inject = ['$scope', 'redbag', '$modal', '$timeout'];
 
-    function RedbagOwnController($scope, redbag, $modal) {
-        
-        if ($scope.personal.profile_check != 3) {
+    function RedbagOwnController($scope, redbag, $modal, $timeout) {
+        var hasAlerted = false;
+
+        if (!$scope.personal.profile_check) {
+            $scope.$on('global_controller_has_get_info', function () {
+                console.log('global_controller_has_get_info')
+                if ($scope.personal.profile_check != 3 && !hasAlerted) {
+                    openSystemMdl('redbag');
+                    hasAlerted = true;
+                }
+            });
+        } else if ($scope.personal.profile_check != 3) {
             openSystemMdl('redbag');
-            return;
         }
 
         function openSystemMdl(type) {
@@ -99,15 +107,15 @@
             });
         }
 
-        function changeTimestamp (timestamp) {
-            var time = new Date(timestamp*1000);
+        function changeTimestamp(timestamp) {
+            var time = new Date(timestamp * 1000);
             // console.log(start, end);
-            var date = time.getFullYear()+'-'+(time.getMonth()+1)+'-'+time.getDate();
+            var date = time.getFullYear() + '-' + (time.getMonth() + 1) + '-' + time.getDate();
 
             return date;
         }
 
-        function changeTabType (type) {
+        function changeTabType(type) {
             if (type !== $scope.tabType) {
                 $scope.tabType = type;
                 getRedbagList();
@@ -120,7 +128,7 @@
             // console.log(o);
             $scope.exchangeLoading = true;
             o.exchangeLoading = true;
-            
+
             redbag.exchangeRedbag(o.bonus_id).then(function (data) {
                 $scope.exchangeLoading = false;
                 o.exchangeLoading = false;

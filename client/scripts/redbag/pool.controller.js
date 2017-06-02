@@ -8,9 +8,18 @@
     RedbagPoolController.$inject = ['$scope', 'redbag', '$interval', '$modal'];
 
     function RedbagPoolController($scope, redbag, $interval, $modal) {
-        if ($scope.personal.profile_check != 3) {
+
+        var hasAlerted = false;
+        if (!$scope.personal.profile_check) {
+            $scope.$on('global_controller_has_get_info', function () {
+                console.log('global_controller_has_get_info')
+                if ($scope.personal.profile_check != 3 && !hasAlerted) {
+                    openSystemMdl('redbag');
+                    hasAlerted = true;
+                }
+            });
+        } else if ($scope.personal.profile_check != 3) {
             openSystemMdl('redbag');
-            return;
         }
 
         function openSystemMdl(type) {
@@ -64,11 +73,11 @@
                     $scope.pools = data.data.records;
 
                     angular.forEach($scope.pools, function (value, index) {
-                        start = new Date(value.acquire_start*1000);
-                        end = new Date(value.acquire_end*1000);
+                        start = new Date(value.acquire_start * 1000);
+                        end = new Date(value.acquire_end * 1000);
                         // console.log(start, end);
-                        value.acquire_start = start.getFullYear()+'-'+(start.getMonth()+1)+'-'+start.getDate();
-                        value.acquire_end = end.getFullYear()+'-'+(end.getMonth()+1)+'-'+end.getDate();
+                        value.acquire_start = start.getFullYear() + '-' + (start.getMonth() + 1) + '-' + start.getDate();
+                        value.acquire_end = end.getFullYear() + '-' + (end.getMonth() + 1) + '-' + end.getDate();
                         // console.info(value, index);
                         if (value.is_receive == 4) {
                             setCountDownTimer(value, value.second);
