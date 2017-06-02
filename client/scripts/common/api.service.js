@@ -25,6 +25,7 @@
             registerApi: urlOrigin2 + '/auth/register',
             uploadIdCardBase64: urlOrigin2 + '/user/upload_base64_id_card',
             uploadIdCardForm: urlOrigin2 + '/user/upload_id_card',
+            uploadAvatarForm: urlOrigin2 + '/user/upload_avatar',
             checkPhoneAndCaptchaApi: urlOrigin2 + '/validation/check_phone_code',
             setNewPwdApi: urlOrigin2 + '/forget_passwd',
             getPersonalInfoApi: urlOrigin2 + '/user/info',
@@ -87,7 +88,7 @@
         };
         var market = {
             getVideoListApi: o + '/data/video_list.json',
-            checkPhoneApi: o + '/action/public/v3/agent'
+            checkPhoneApi: urlOrigin2 + '/agent'
         };
         var product = {
             getProductCommentApi: '/blog/api/get_category_posts?id=86',
