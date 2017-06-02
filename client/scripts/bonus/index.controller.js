@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('BonusIndexController', BonusIndexController);
 
-    BonusIndexController.$inject = ['$scope', 'asset', '$modal'];
+    BonusIndexController.$inject = ['$scope', 'asset', '$modal', '$timeout'];
 
-    function BonusIndexController($scope, asset, $modal) {
+    function BonusIndexController($scope, asset, $modal, $timeout) {
 
         $scope.success = false;
         $scope.backErr = {
@@ -25,9 +25,12 @@
             pages: [],
             pagesBtn: [],
             // selectPage: , bind to pagination.selectPage
-            getList: $scope.personal.master ? getMasterBonusList : getCopierBonusList         
+            // getList: $scope.personal.is_master ? getMasterBonusList : getCopierBonusList         
         };
-
+        $timeout(function () {
+            $scope.pagebar.getList = $scope.personal.is_master ? getMasterBonusList : getCopierBonusList;
+        }, 1500);
+        
         var date = new Date();
         var year = date.getFullYear();
         var lastMonth = date.getMonth();

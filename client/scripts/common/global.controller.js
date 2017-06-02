@@ -118,7 +118,7 @@
                     }
                 });
                 account.getPersonalInfo().then(function (data) {
-                    console.log('info', data);
+                    // console.log('info', data);
                     if (!data) return;
                     angular.extend($scope.personal, data, {
                         xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs + '?timestamp=' + (+new Date()),
