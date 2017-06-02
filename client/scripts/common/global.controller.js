@@ -41,6 +41,20 @@
                 if (logined) {
                     // initialize();
                     getUnreadLength();
+                    account.getPersonalInfo().then(function (data) {
+                        // console.log('info', data);
+                        if (!data) return;
+                        angular.extend($scope.personal, data, {
+                            xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs + '?timestamp=' + (+new Date()),
+                            smAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.sm + '?timestamp=' + (+new Date()),
+                            mdAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.md + '?timestamp=' + (+new Date()),
+                            lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg + '?timestamp=' + (+new Date())
+                        });
+                        if (data.profile_check != 3) {
+                            getAuthStatus();
+                        }
+                        $scope.$broadcast('global_controller_has_get_info');
+                    });
                 }
             });
         });
@@ -64,8 +78,6 @@
                     angular.extend($scope.personal, {
                         verify_status: parseInt(data.data.status)
                     });
-                } else {
-                    layer.msg('服务器异常，请刷新重试！');
                 }
             });
         }
@@ -117,22 +129,7 @@
                         });
                     }
                 });
-                account.getPersonalInfo().then(function (data) {
-                    // console.log('info', data);
-                    if (!data) return;
-                    angular.extend($scope.personal, data, {
-                        xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs + '?timestamp=' + (+new Date()),
-                        smAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.sm + '?timestamp=' + (+new Date()),
-                        mdAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.md + '?timestamp=' + (+new Date()),
-                        lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg + '?timestamp=' + (+new Date())
-                    });
-                    if (data.profile_check != 3) {
-                        getAuthStatus();
-                    }
-                });
             }
-
-
         }
 
         // 退出
