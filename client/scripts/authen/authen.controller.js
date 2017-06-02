@@ -319,6 +319,7 @@
         }
 
         $scope.checkExsit = function (type) {
+            var mt4;
             if (type == 1) {
                 var checkName = 'username';
                 if ($scope.personal.username == $scope.completeInfo.username) {
@@ -330,6 +331,7 @@
             }
             else if (type == 4) {
                 var checkName = 'id_num';
+                mt4 = $scope.personal.mt4_id;
             }
 
             var checkInfo = $scope.completeInfo[checkName];
@@ -340,7 +342,7 @@
                 return
             }
 
-            account.checkExist(type, checkInfo).then(function (data) {
+            account.checkExist(type, checkInfo, mt4 || null).then(function (data) {
                 if (data.data) {
                     $scope.exsit[checkName].show = true;
                 } else {
