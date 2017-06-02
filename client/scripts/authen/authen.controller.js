@@ -63,11 +63,8 @@
         // getAuthStatus();
         var showMsg = undefined;
         function getAuthStatus() {
-            if ($scope.personal.verify_status) {
-                return;
-            }
             account.getAuthStatus().then(function (data) {
-                console.log('getAuthStatus', data);
+                // console.log('getAuthStatus', data);
                 if (data.is_succ) {
                     $scope.$broadcast("hideLoadingImg");
                     // 控制流程导航active
