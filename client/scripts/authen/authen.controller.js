@@ -39,10 +39,10 @@
 
         $scope.$on('goState', function (e, flow) {
             getAuthStatus();
-            if(flow == 'realname'){
+            if (flow == 'realname') {
                 $scope.flow.step = 3; // 自定状态
             }
-            if(flow == 'submit'){
+            if (flow == 'submit') {
                 $scope.flow.step = 5;
             }
             goState(flow);
@@ -63,6 +63,9 @@
         // getAuthStatus();
         var showMsg = undefined;
         function getAuthStatus() {
+            if ($scope.personal.verify_status) {
+                return;
+            }
             account.getAuthStatus().then(function (data) {
                 // console.log('getAuthStatus', data);
                 if (data.is_succ) {
