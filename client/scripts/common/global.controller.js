@@ -20,6 +20,9 @@
 
         $scope.personal = {};
 
+        // 先默认为3 避免出现bug
+        $scope.personal.profile_check = 3;
+
         $scope.process = {};
 
         $scope.logout = logout;

@@ -1,4 +1,4 @@
-<div class="redbag_content" ng-if="personal.profile_check == 3">
+<div class="redbag_content" ng-cloak ng-if="personal.profile_check == 3">
     <div class="redbag_nav__wrapper">
         <ul class="redbag_nav__tabs">
             <li ng-class="{active: tabType === 1}">
@@ -67,6 +67,6 @@
         </div>
     </div>
 </div>
-<div class="redbag_content font-danger text-center" ng-if="personal.profile_check != 3">
+<div class="redbag_content font-danger text-center" ng-cloak ng-if="personal.profile_check != 3">
     请先完成认证审核！
 </div>
