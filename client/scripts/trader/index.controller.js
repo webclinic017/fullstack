@@ -122,7 +122,6 @@
                         openSystemMdl('isMaster');
                     } else {
                         // 判断是否实名认证 //复制不需要实名认证
-                        console.log($scope.personal.verify_status);
                         if ($scope.personal.profile_check == 3) {
                             var minCopyAmount = parseFloat($scope.master.min_copy_amount, 10);
 

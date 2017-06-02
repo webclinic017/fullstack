@@ -117,7 +117,8 @@
         function openCardMdl() {
             var personal = {
                 verified: $scope.personal.verified,
-                realname: $scope.personal.realname
+                realname: $scope.personal.realname,
+                profile_check: $scope.personal.profile_check,
             };
 
             $modal.open({
@@ -202,7 +203,7 @@
                 return;
             }
             // 判断认证状态
-            if ($scope.personal.verify_status < 6) {
+            if ($scope.personal.profile_check != 3) {
                 openSystemMdl('withdraw');
                 return;
             }

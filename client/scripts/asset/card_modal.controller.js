@@ -9,6 +9,7 @@
 
     function AssetCardController($scope, config, $state, $modalInstance, validator, account, asset, passedScope) {
         $scope.personal = passedScope.personal;
+        console.log($scope.personal,'$scope.personal');
         $scope.card = {
             //number: ,         // 卡号
             //bank: ,           // 银行
