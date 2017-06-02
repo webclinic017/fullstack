@@ -19,26 +19,12 @@
             </a>
         </p>
     </div>
-    <div class="system_modal__content" ng-if="modal.type === 'repeat'">
+    <div class="system_modal__content" ng-if="modal.type === 'fail'">
         <p class="system_modal__info">
             代理申请失败
         </p>
         <p class="system_modal__tip">
-            手机号码已提交过申请
-        </p>
-
-        <p class="system_modal__btn_wrapper">
-            <a class="btn btn-primary btn-sm" ng-click="closeModal()">
-                确定
-            </a>
-        </p>
-    </div>
-    <div class="system_modal__content" ng-if="modal.type === 'frequent'">
-        <p class="system_modal__info">
-            代理申请失败
-        </p>
-        <p class="system_modal__tip">
-            提交过于频繁，请稍候再试。
+            {{ modal.message || '请联系客服人员' }}
         </p>
 
         <p class="system_modal__btn_wrapper">

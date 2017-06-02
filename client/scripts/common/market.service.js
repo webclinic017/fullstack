@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('market', market);
 
-    market.$inject = ['$http', 'api'];
+    market.$inject = ['$http', 'api', 'publicHttp'];
 
-    function market ($http, api) {
+    function market ($http, api, publicHttp) {
         var o = api.market;
         var service = {
             getVideoList: getVideoList,
@@ -31,7 +31,7 @@
           * @param {Number} phone
           */
          function checkPhone (phone) {
-            return $.post(o.checkPhoneApi, {
+            return publicHttp.dealPublicRequest(o.checkPhoneApi, 'POST', {
                 phone: phone
             });
          }

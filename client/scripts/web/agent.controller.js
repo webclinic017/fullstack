@@ -33,25 +33,25 @@
             
             market.checkPhone($scope.becomeAgent.phone).then(function (data) {
                 // console.info(data);
-                if (data.error_code === 0) {
+                if (!data) return;
+                if (data.is_succ) {
                     openSystemMdl('success');
-                } else if (data.error_code === 1) {
-                    openSystemMdl('repeat');
-                } else if (data.error_code === 2) {
-                    openSystemMdl('frequent');
+                } else {
+                    openSystemMdl('fail', data.message);
                 }
             });
 
         }
 
-        function openSystemMdl(type) {
+        function openSystemMdl(type, message) {
             $modal.open({
                 templateUrl: '/views/web/agent_modal.html',
                 size: 'sm',
                 backdrop: true,
                 controller: function ($scope, $modalInstance) {
                     $scope.modal = {
-                        type: type
+                        type: type,
+                        message: message || ''
                     };
                     $scope.closeModal = closeModal;
 
