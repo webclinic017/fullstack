@@ -109,6 +109,8 @@ if ($(".m_vue").attr("data-page") === "forget") {
                     if (data.is_succ) {
                         if (arg === 'once') {
                             self.step++;
+                            self.countDown.show = true;
+                            self.countDown.noClick = true;
                         }
                         if (arg === 'repeat') {
                             self.countDown.show = true;
@@ -134,44 +136,6 @@ if ($(".m_vue").attr("data-page") === "forget") {
                         });
                     }
                 });
-                // apiUrlResource.getVerifyCode.save({
-                //     phone: self.bindData.phone,
-                //     type: "pwd"
-                // }).then(function (response) {
-                //     self.clickable.submit = true;
-                //     var data = JSON.parse(response.data);
-                //     if (data.is_succ) {
-                //         if (arg === 'once') {
-                //             self.step++;
-                //         }
-                //         if (arg === 'repeat') {
-                //             self.countDown.show = true;
-                //             self.countDown.noClick = true;
-                //             var cont;
-                //             if (self.language === 'zh') {
-                //                 cont = '发送成功';
-                //             }
-                //             if (self.language === 'en') {
-                //                 cont = 'send successfully';
-                //             }
-                //             layer.open({
-                //                 content: cont,
-                //                 skin: 'msg',
-                //                 time: 2 //2秒后自动关闭
-                //             });
-                //         }
-                //     } else {
-                //         layer.open({
-                //             content: data.error_msg,
-                //             skin: 'msg',
-                //             time: 2 //2秒后自动关闭
-                //         });
-                //     }
-                // }, function (err) {
-                //     self.clickable.submit = true;
-                //     console.log(error);
-                //     alert("请求失败");
-                // });
             },
             checkCode: function () {
                 var self = this;
@@ -200,26 +164,6 @@ if ($(".m_vue").attr("data-page") === "forget") {
                                 });
                             }
                         });
-                        // apiUrlResource.checkCode.save({
-                        //     phone: self.bindData.phone,
-                        //     verify_code: self.bindData.code
-                        // }).then(function (response) {
-                        //     var data = JSON.parse(response.data);
-                        //     if (data.is_succ) {
-                        //         self.setNewPassword();
-                        //     } else {
-                        //         self.clickable.submit = true;
-                        //         layer.open({
-                        //             content: data.error_msg,
-                        //             skin: 'msg',
-                        //             time: 2 //2秒后自动关闭
-                        //         });
-                        //     }
-                        // }, function (err) {
-                        //     self.clickable.submit = true;
-                        //     console.log(error);
-                        //     alert("请求失败");
-                        // });
                     }
                 });
             },
@@ -242,27 +186,6 @@ if ($(".m_vue").attr("data-page") === "forget") {
                         });
                     }
                 });
-                // apiUrlResource.setNewPassword.save({
-                //     phone: self.bindData.phone,
-                //     code: self.bindData.code,
-                //     new_pwd: self.bindData.pwdNew
-                // }).then(function (response) {
-                //     self.clickable.submit = true;
-                //     var data = JSON.parse(response.data);
-                //     if (data.is_succ) {
-                //         self.step++;
-                //     } else {
-                //         layer.open({
-                //             content: data.error_msg,
-                //             skin: 'msg',
-                //             time: 2 //2秒后自动关闭
-                //         });
-                //     }
-                // }, function (err) {
-                //     self.clickable.submit = true;
-                //     console.log(error);
-                //     alert("请求失败");
-                // });
             },
             toLogin: function () {
                 callNative({
