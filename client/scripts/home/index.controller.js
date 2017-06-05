@@ -92,7 +92,7 @@
         $scope.spreadInfo = {};     // 点差
         $scope.userGroup = undefined;   // 用户所在组
         var socketPara = {
-            websocketTigerUrl: location.hostname === 'www.tigerwit.com' ? 'wss://crmdev.tigerwit.com:4567' : 'wss://crmdev.tigerwit.com:4567',
+            websocketTigerUrl: location.hostname === 'www.tigerwit.com' ? 'wss://demo.tigerwit.com:4567' : 'wss://demo.tigerwit.com:4567',
             request_symbols: ['AUDUSD', 'XNGUSD', 'EURUSD', 'XTIUSD', 'GBPUSD', 'XBRUSD', 'NZDUSD', 'XAUUSD', 'USDCAD', 'XAGUSD', 'USDCHF', 'AUS200', 'USDJPY', 'JPN225'],
             request_symbols_zh: {
                 AUDUSD: '澳元美元',
