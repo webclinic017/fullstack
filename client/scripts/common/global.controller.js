@@ -45,6 +45,7 @@
                         // console.log('info', data);
                         if (!data) return;
                         angular.extend($scope.personal, data, {
+                            profile_check_ready: true,
                             xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs + '?timestamp=' + (+new Date()),
                             smAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.sm + '?timestamp=' + (+new Date()),
                             mdAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.md + '?timestamp=' + (+new Date()),
