@@ -3,7 +3,7 @@
         <div ui-view="side"></div>
     </div>
     <div class="layout-2__content">
-        <a ng-if="personal.profile_check && personal.profile_check != 3" ui-sref="authen.subpage({subpage: 'investInfo'})" class="layout-2__content-tip">
+        <a ng-if="personal.profile_check_ready && personal.profile_check != 3" ui-sref="authen.subpage({subpage: 'investInfo'})" class="layout-2__content-tip">
             您的帐户尚未完成认证审核，将无法进行交易和资金相关操作，点击此处完成审核。
         </a>
         <div class="mg-tp-30" ui-view="content"></div>
