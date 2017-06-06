@@ -178,6 +178,10 @@
         bottom: 24%;
         z-index: $index_slider;
         cursor: pointer;
+
+        &.fir {
+            bottom: 4%;
+        }
     }
     .section1 {
         background: url("/images/bd/lake_web_sec1_bg.png") no-repeat;
