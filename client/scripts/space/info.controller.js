@@ -96,24 +96,22 @@
                         verifiedStatus: data.profile_check || 0
                     });
 
-                    if (data.profile_check == 3) {
-                        //定时提取用户资产信息
-                        getAssetInfo();
+                    //定时提取用户资产信息
+                    getAssetInfo();
 
-                        $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
-                            angular.extend($scope.personal, {
-                                basic: toState.name.substring(6)
-                            });
+                    $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
+                        angular.extend($scope.personal, {
+                            basic: toState.name.substring(6)
                         });
-                        $scope.$on('$stateChangeStart', function (event, toState, toParams) {
-                            if (toState.name.indexOf('center') === -1) {
-                                $timeout.cancel(summaryId);
-                            } else {
-                                $timeout.cancel(summaryId);
-                                getAssetInfo();
-                            }
-                        });
-                    }
+                    });
+                    $scope.$on('$stateChangeStart', function (event, toState, toParams) {
+                        if (toState.name.indexOf('center') === -1) {
+                            $timeout.cancel(summaryId);
+                        } else {
+                            $timeout.cancel(summaryId);
+                            getAssetInfo();
+                        }
+                    });
                 }
             });
         }
@@ -132,9 +130,11 @@
                 } 
             });
 
-            summaryId = $timeout(function () {
-                getAssetInfo();
-            }, 5000);
+            if ($scope.personal.profile_check == 3) {
+                summaryId = $timeout(function () {
+                    getAssetInfo();
+                }, 5000);
+            }
         }
     }
 })();
