@@ -201,7 +201,7 @@
                     $scope.$broadcast('rendBarData', $scope.barData);
                 }
                 angular.forEach(data.records, function (value, index) {
-                    var scale = (value.short_count / (value.long_count + value.short_count) * 100).toFixed(2);
+                    var scale = ((value.avg_long_time / (value.avg_long_time + value.avg_short_time)) * 100).toFixed(2);
                     value.scale = scale;
                 });
 

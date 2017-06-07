@@ -14,10 +14,10 @@
 			replace: true,
 			template: '<div class="scale_bar">'
 					+ '<span class="scale_bar__item"></span>'
-					+ '<span class="scale_bar__info_multi">多单,{{ bar.long_time | duration }}'
+					+ '<span class="scale_bar__info_multi">多单,{{ bar.avg_long_time | duration }}'
 					+ '<i></i>'
 					+ '</span>'
-					+ '<span class="scale_bar__info_empty">空单,{{ bar.short_time | duration }}'
+					+ '<span class="scale_bar__info_empty">空单,{{ bar.avg_short_time | duration }}'
 					+ '<i></i>'
 					+ '</span>'
 					+ '<span class="scale_bar__info">'
