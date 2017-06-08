@@ -170,11 +170,11 @@
 
             if (
                 (password.val() == "") ||
-                (!/^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{6,20}$/.test(password.val()))
+                (!/^(?![\d]+$)(?![a-zA-Z]+$)(?![^\da-zA-Z]+$).{6,15}$/.test(password.val()))
             ) {
                 /*提示*/
                 layer.open({
-                    content: '密码格式不正确!',
+                    content: '密码为6-15位字母、数字或符号组合',
                     skin: 'msg',
                     anim: false,
                     time: 2 /*2秒后自动关闭*/
