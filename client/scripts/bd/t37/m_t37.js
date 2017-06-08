@@ -93,11 +93,13 @@
             }
 
             function activeWater(index) {
-                $('.section' + index).ripples({
-                    resolution: 150,
-                    dropRadius: 10, //px
-                    perturbance: 0.02,
-                });
+                if (isIOS()) {
+                    $('.section' + index).ripples({
+                        resolution: 150,
+                        dropRadius: 10, //px
+                        perturbance: 0.02,
+                    });
+                }
             }
 
             function removeWater(index) {
@@ -162,6 +164,12 @@
                     // 阻止安卓键盘弹出
                     if (!isIOS() || isAndriod()) {
                         window.removeEventListener('resize');
+                        $(window).on('resize', function () {
+                            var cvs = document.createElement('canvas');
+                            cvs.width = 0;
+                            cvs.height = 0;
+                            document.appendChild(cvs);
+                        });
                     } else {
                         window.removeEventListener('resize');
                     }
