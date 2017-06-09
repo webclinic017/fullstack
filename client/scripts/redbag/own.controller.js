@@ -129,7 +129,7 @@
             $scope.exchangeLoading = true;
             o.exchangeLoading = true;
 
-            redbag.exchangeRedbag(o.bonus_id).then(function (data) {
+            redbag.exchangeRedbag(o.id).then(function (data) {
                 $scope.exchangeLoading = false;
                 o.exchangeLoading = false;
                 if (data.is_succ) {
