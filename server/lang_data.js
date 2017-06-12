@@ -350,7 +350,7 @@ module.exports = function () {
         "home42": { "en": "Leverage utilization", "zh": "杠杆利用" },
         "home43": { "en": "50-,100- and 200-times leverage, flexibly satisfy your needs in terms of risk control and capital management.", "zh": "50倍、100倍、200倍杠杆交易，灵活满足您对风险控制，资金管理的需求" },
         "home44": { "en": "Real-time deposit and withdrawal", "zh": "实时出入金" },
-        "home45": { "en": "Convenient payment", "zh": "便捷支付" },
+        "home45": { "en": "Convenient Payment Method", "zh": "便捷支付" },
         "home45_2": { "en": "Mobile payment is convenient and fast", "zh": "移动支付方便、快速" },
         "home45_3": { "en": "Deposit and Withdrawal is efficient,safe and secure", "zh": "出入金高效、安全、稳妥" },
         "home46": { "en": "" + companyConfig.companyNameEn + "-Trade like a master", "zh": "" + companyConfig.companyNameZh + " — 人人都是投资高手" },
