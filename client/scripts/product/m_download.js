@@ -56,6 +56,7 @@
                 $(".m_download_layout").css("display", "block")
             },
             afterLoad: function (anchorLink, index) {
+                offsetAction(index);
                 if (index == 1) {
                     activePage1();
                 }
