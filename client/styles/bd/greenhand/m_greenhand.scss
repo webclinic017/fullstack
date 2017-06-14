@@ -1,0 +1,318 @@
+@mixin effCreator($PTEXT,$p){
+    @for $i from 1 to (length($PTEXT)+1) {
+        .text#{$i}.active {
+            top: nth(nth($PTEXT, $i), 1);
+        }
+        .text#{$i} {
+            transition-delay: #{($i - 1 ) * 0.2}s;
+            -moz-transition-delay: #{($i - 1 ) * 0.2}s;
+            -webkit-transition-delay: #{($i - 1 ) * 0.2}s;
+            -o-transition-delay: #{($i - 1 ) * 0.2}s;
+            top: 100%;
+            
+            @if nth(nth($PTEXT, $i), 4) {
+                width: getWS(nth(nth($PTEXT, $i), 4));
+                left: getWS((750 - nth(nth($PTEXT, $i), 4)) / 2); // border: 1px solid #fff;                
+            }
+            @else {
+                width: getWS(555);
+                left: getWS(100); 
+            }
+            // border: 1px solid #fff;
+            
+            height: nth(nth($PTEXT, $i), 2);
+            background: url('/images/greenhand/p#{$p}-text.png') no-repeat;
+            background-size: 100% auto;
+            background-position: 0 nth(nth($PTEXT, $i), 3);
+        }
+    }
+}
+.m_greenhand_layout_body{
+    .greenhand_logo {
+        position: fixed;
+        top: 3%;
+        right: 6%;
+        width: 30%;
+        z-index: 100;
+    }
+    .slide_arrow2{
+        position: fixed!important;
+        z-index: 100;
+    }
+    .connect_us {
+        color: #fff;
+        position: fixed;
+        z-index: 100;
+        right: 4%;
+        bottom: 2%;
+        font-size: px2rem(28);
+        background: url('/images/greenhand/tel.png') no-repeat;
+        background-size: auto 100%;
+        padding-left: px2rem(48);
+    }
+}
+
+@include b(m_greenhand_layout) {
+    text-align: center;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    /* Firefox 4 */
+    -webkit-transition: all 1s ease;
+    /* Safari and Chrome */
+    -o-transition: all 1s ease;
+    /* Opera */
+    font-family: sans-serif, 'Microsoft Yahei', 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    #dowebok {
+        .section {
+            background-color: #222;
+            color: #fff;
+            position: relative;
+            max-width: 1334px;
+            overflow: hidden;
+            
+           
+            .text-trans {
+                width: 100%;
+                position: absolute;
+                @include transition(all 0.65s ease);
+                &.fade{
+                    top: -50%!important;
+                }
+            }
+        }
+        .page_pic {
+            position: absolute;
+            top: 100%;
+            left: getWS(72);
+            width: getWS(605);
+            opacity: 0.5;
+            @include transition(all 1.2s ease);
+            @include blur(10px);
+            opacity: 0.5;
+            &.fade{
+                top: -50%!important;
+            }
+        }
+        .border {
+            border: 1px solid $brand-primary-dark;
+        }
+        
+        .section1 {
+            $P1TEXT: // top height bgp
+                (getHS(210),7%,0px,null),
+                (getHS(320),getHS(138),44.38%,null),
+                (getHS(475),7%,90%,null);
+            @include effCreator($P1TEXT,1);
+            .page_pic.active {
+                @include blur(0);
+                opacity: 1;
+                top: getHS(625);
+            }
+        }
+        .section2 {
+            $P1TEXT: // top height bgp
+                (getHS(140),8%,0, null),
+                (getHS(265),getHS(125),44.38%, null),
+                (getHS(390),getHS(120),90%, null);
+            @include effCreator($P1TEXT,2);
+            .page_pic.active {
+                @include blur(0);
+                opacity: 1;
+                top: getHS(575);
+            }
+        }
+        .section3 {
+            $P1TEXT: 
+                //top height bgp
+                (getHS(140), 8.35%, 0, 410),
+                (getHS(260), 8.35%, 30%, 410),
+                (getHS(380), 8.35%, 60%, 410),
+                (getHS(500), 8.35%, 90%, 410);
+            @include effCreator($P1TEXT,3);
+            .page_pic.active {
+                @include blur(0);
+                opacity: 1;
+                top: getHS(630);
+            }
+        }
+        .section4 {
+            $P1TEXT: 
+                //top height bgp
+                (getHS(140), 8.35%, 0, 400),
+                (getHS(260), 8.35%, 30%, 400),
+                (getHS(380), 8.35%, 60%, 400),
+                (getHS(500), 8.35%, 90%, 400);
+            @include effCreator($P1TEXT,4);
+            .page_pic{
+                width: getWS(500);
+                left: getWS(125);
+                &.active {
+                    @include blur(0);
+                    opacity: 1;
+                    top: getHS(650);
+                }
+            }
+        }
+        .section5 {
+            $P1TEXT: 
+                //top height bgp
+                (getHS(140), 8.35%, 0, 400),
+                (getHS(260), 8.35%, 30%, 400),
+                (getHS(375), 8.35%, 60%, 400),
+                (getHS(500), 8.35%, 90%, 400);
+            @include effCreator($P1TEXT,5);
+            .page_pic{
+                width: getWS(335);
+                left: getWS((750 - 330) / 2);
+                &.active {
+                    @include blur(0);
+                    opacity: 1;
+                    top: getHS(650);
+                }
+            }
+            .page_pic0 {
+                position: absolute;
+                top: 100%;
+                right:0;
+                width: getWS(100);
+                @include transition(all 1.2s ease);
+                &.active{
+                    top: getHS(720);
+                    right: getWS(150);
+                }
+            }
+            .page_pic1 {
+                position: absolute;
+                top: 100%;
+                left: getWS((750 - 335) / 2);
+                width: getWS(335);                
+                @include transition(all 0.8s ease);
+                &.active{
+                    top: getHS(970);
+                }
+            }
+        }
+        .section6 {
+            $P1TEXT: 
+                //top height bgp
+                (getHS(140), 8.2%, 0, 600),
+                (getHS(300), 3%, 49%, 600),
+                (getHS(352), 3%, 63.5%, 600),
+                (getHS(405), 8%, 95%, 600);
+            @include effCreator($P1TEXT,6);
+            .registerBtn{
+                width: 90%;
+                margin-top: 5%;
+            }
+            .redbag_regBox {
+                position: absolute;
+                background: $brand-primary-darker;
+                width: getWS(565);
+                left: getWS(185 / 2);
+                padding: 0 4%;
+                height: 26%;
+                border-radius: 10px;
+                top: getHS(550);
+                @include transition(top 1s linear);
+                .submit_form {
+                    width: px2rem(336);
+                    margin: 0 auto;
+                    margin-top: 5%;
+                    display: block;
+                    text-align: center;
+                    background-color: #e7e7e8;
+                    color: #d1d1d3;
+                    padding: 4%;
+                    border-radius: 1.5rem;
+                    font-size: px2rem(28);
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+                form {
+                    height: 100%;
+                    padding-top: px2rem(15);
+                    padding-bottom: px2rem(15);
+                    font-size: px2rem(30);
+                    div {
+                        width: 100%;
+                        height: 26%;
+                        line-height: 2.5rem;
+                        display: flex;
+                        border-radius: px2rem(8);
+                        overflow: hidden;
+                        margin-top: px2rem(15);
+                        padding-right: px2rem(36);
+                        background: #ffffff;
+                        @include placeholderColor(#d1d1d3);                        
+                        input {
+                            height: 100%;
+                            width: 100%;
+                            background: #ffffff;
+                            padding-left: px2rem(36);
+                            font-size: px2rem(30);
+                            color: #222;
+                            flex: 1;
+                        }
+                    }
+                    .telephone {
+                        img {
+                            width: 0.9rem;
+                            height: 60%;
+                            margin-left: px2rem(-10);
+                            margin-top: 4%;
+                        }
+                    }
+                    .verify_code {
+                        padding-right: px2rem(16);
+                        .verify_code_btn {
+                            line-height: 1.6rem;
+                            text-align: center;
+                            display: inline-block;
+                            padding: 0 7%;
+                            height: 68.42%;
+                            color: #222;
+                            position: relative;
+                            font-size: px2rem(28);
+                            top: 15.79%;
+                            background-color: $brand-primary-darker;
+                            border-radius: px2rem(8);
+                            vertical-align: middle;
+                        }
+                    }
+                    .password {
+                        border: none;
+                        .password_btn {
+                            display: inline-block;
+                            width: 1.2rem;
+                            text-align: center;
+                            img {
+                                width: px2rem(34);
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+            .risk_tip {
+                background: $brand-primary-darker;
+                @include transition(bottom 1s ease);
+                color: #222;
+                font-size: 0.5rem;
+                width: 100%;
+                padding: 3% 6%;
+                text-align: left;
+                line-height: px2rem(25);
+                position: absolute;
+                left: 0%;
+                bottom: -50%;
+                &.active{
+                    bottom: 0;
+                }
+            }
+        }
+    }
+}
