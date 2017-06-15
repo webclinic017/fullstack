@@ -15,7 +15,6 @@
             cancelCopy: cancelCopy,
             getAvaCopyAmount: getAvaCopyAmount,
             getHistoricalRate: getHistoricalRate,
-            getCoopierChange: getCoopierChange,
             getMasterInfo: getMasterInfo,
             getMonthlySymbols: getMonthlySymbols
         };
@@ -99,19 +98,6 @@
         function getHistoricalRate(user_code) {
             return publicHttp.dealPublicRequest(o.getHistoricalRateApi, 'GET', {
                 user_code: user_code
-            });
-        }
-
-		/**
-		 * trader 获取高手变化图表
-         * @param user_code
-         * @returns {*}
-         */
-        function getCoopierChange(user_code) {
-            return $http.get(o.getCoopierChangeApi, {
-                params: {
-                    user_code: user_code
-                }
             });
         }
 

@@ -84,22 +84,6 @@
             return targetArr;
         }
 
-        /*----------------------------区域图-----------------------------*/
-        rendAreaChart(usercode);
-        function rendAreaChart(usercode) {
-            trader.getCoopierChange(usercode).then(function (return_data) {
-                // console.log(return_data);
-                $scope.areaDataInfo = return_data;
-                //console.log(parseData("area",return_data.data));
-                if (return_data.error_code == 0) {
-                    $scope.areaData = parseData("area", return_data.data);
-                    $scope.$broadcast('rendAreaData', $scope.areaData);
-                } else {
-                    console.log(return_data.error_msg)
-                }
-            });
-        }
-
         /*-----------------------BarChart------------------*/
         $scope.changeYearType = function () {
             $scope.$broadcast('rendBarData', $scope.barData);
