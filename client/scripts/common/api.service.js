@@ -105,7 +105,6 @@
             cancelCopyApi: urlOrigin2 + '/uncopy',
             getAvaCopyAmountApi: urlOrigin2 + '/valid_copy',
             getHistoricalRateApi: urlOrigin2 + '/master/monthly_profit_rates',
-            getCoopierChangeApi: o + '/action/public/v5/copy_change', //移除
             getMasterInfoApi: urlOrigin2 + '/master/trading_profile',
             getMonthlySymbolsApi: urlOrigin2 + '/master/trading_symbols' 
         };
