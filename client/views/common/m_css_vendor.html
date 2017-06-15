@@ -44,7 +44,7 @@
         }
     }
 
-    function isAndriod(){
+    function isAndriod() {
         var bIsAndroid = navigator.userAgent.toLowerCase().match(/android/i) == "android";
         return bIsAndroid;
     }
@@ -114,7 +114,47 @@
         } else {
             return '1';
         }
-    }
-    ;
+    };
 
+    function debugAndroidKey(conf) {
+        if (!isIOS() || isAndriod()) {
+            // 移除resize 事件
+            $(window).on('resize', function () {
+                var cvs = document.createElement('canvas');
+                cvs.width = 0;
+                cvs.height = 0;
+                document.appendChild(cvs);
+            });
+
+            var focusFlag = false;
+            var $element = $(conf.focusSelector);
+            var $reg_box = $(conf.ctrlBox);
+            var initClientHeight = getClientHeight();
+            var focusClientHeight = null;
+
+            $element.focus(function () {
+                focusFlag = true;
+                focusClientHeight = getClientHeight();
+                $reg_box.css(conf.focusCss);
+                $.isFunction(conf.focusFn) && conf.focusFn();
+            });
+
+            $element.blur(function () {
+                focusFlag = false;
+                $reg_box.css(conf.blurCss);
+                $.isFunction(conf.blurFn) && conf.blurFn();
+            });
+
+            window.addEventListener('resize', function () {
+                // console.log(getClientHeight());
+                setTimeout(function () {
+                    if (getClientHeight() == focusClientHeight) {
+                        $reg_box.css(conf.blurCss);
+                    } else {
+                        $reg_box.css(conf.focusCss);
+                    }
+                }, 10);
+            })
+        }
+    }
 </script>

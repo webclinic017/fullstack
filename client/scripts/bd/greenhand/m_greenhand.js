@@ -18,75 +18,38 @@
                 console.log("微信配置错误")
             }
 
-            // 兼容安卓键盘弹出
-            if (!isIOS() || isAndriod()) {
-                var focusFlag = false;
-                var $element = $('.section5 input');
-                var initClientHeight = getClientHeight();
-                var focusClientHeight = null;
-                var $reg_box = $('.redbag_regBox');
-
-                $element.focus(function () {
-                    focusFlag = true;
-                    focusClientHeight = getClientHeight();
-                    $reg_box.css({
-                        marginTop: '15%'
-                    });
-                });
-                $element.blur(function () {
-                    focusFlag = false;
-                    $reg_box.css({
-                        marginTop: '54%'
-                    });
-                });
-
-                window.addEventListener('resize', function () {
-                    // console.log(getClientHeight());
-                    setTimeout(function () {
-                        if (getClientHeight() == focusClientHeight) {
-                            $reg_box.css({
-                                marginTop: '54%'
-                            });
-                        } else {
-                            $reg_box.css({
-                                marginTop: '15%'
-                            });
-                        }
-                    }, 10);
-                })
-            }
-
-            $('.slide_arrow2').on('tap', function () {
-                $.fn.fullpage.moveTo(5);
+            // 兼容安卓键盘弹出BUG
+            debugAndroidKey({
+                focusSelector: '.section6 input',
+                ctrlBox: '.greenhand_regBox',
+                focusCss: {
+                    top: '10%'
+                },
+                focusFn: function () {
+                    $('.connect_us').hide();
+                },
+                blurCss: {
+                    top: '41.29%'
+                },
+                blurFn: function () {
+                    $('.connect_us').show();
+                },
             })
 
+            $('.slide_arrow2').on('tap', function () {
+                $.fn.fullpage.moveTo(6);
+            })
 
             function activePage(index) {
                 var sec = $('.section' + index);
-                sec.find('.text-trans').addClass('active');
+                // sec.find('.text-trans').addClass('active');
+                sec.addClass('act');
                 sec.find('.page_pic').addClass('active');
                 if (index == 5) {
                     setTimeout(function () {
                         sec.find('.page_pic0').addClass('active');
-                    }, 1000);
-                    setTimeout(function () {
                         sec.find('.page_pic1').addClass('active');
-                    }, 2000);
-                }
-
-                if (index == 6) {
-                    $('.slide_arrow2').hide();
-                    $('.connect_us').css({
-                        right: '40%',
-                        bottom: '18%'
-                    });
-                    $('.risk_tip').addClass('active');
-                } else {
-                    $('.slide_arrow2').show();
-                    $('.connect_us').css({
-                        right: '4%',
-                        bottom: '2%'
-                    });
+                    }, 800);
                 }
             }
 
@@ -94,15 +57,16 @@
                 var sec = $('.section' + index);
                 var textTrans = sec.find('.text-trans');
                 var pagePic = sec.find('.page_pic');
-                textTrans.addClass('fade');
-                pagePic.addClass('fade');
+                // sec.addClass('fade');
+                // sec.addClass('fade');
 
                 setTimeout(function () {
-                    sec.find('.page_pic0').removeClass('active').removeClass('fade');
-                    sec.find('.page_pic1').removeClass('active').removeClass('fade');
-                    textTrans.removeClass('active').removeClass('fade');
-                    pagePic.removeClass('active').removeClass('fade');
-                }, 300);
+                    sec.find('.page_pic0').removeClass('active');
+                    sec.find('.page_pic1').removeClass('active');
+                    // textTrans.removeClass('active').removeClass('fade');
+                    // pagePic.removeClass('active').removeClass('fade');
+                    sec.removeClass('act');
+                }, 500);
             }
 
             $('#dowebok').fullpage({
@@ -114,24 +78,47 @@
                     setTimeout(function () {
                         activePage(1);
                     }, 200);
-                    $.fn.fullpage.moveTo(6);
-                    // 阻止安卓键盘弹出
-                    if (!isIOS() || isAndriod()) {
-                        window.removeEventListener('resize');
-                    } else {
-                        window.removeEventListener('resize');
-                    }
                 },
                 afterLoad: function (anchorLink, index) {
                     // debug 安卓翻页
-                    offsetAction(index)
-                    activePage(index);
+                    offsetAction(index);
+                    // activePage(index);
+                    if (index == 6) {
+                        $('.slide_arrow2').hide();
+                        $('.connect_us').css({
+                            right: '40%',
+                            bottom: '18%'
+                        });
+                        $('.risk_tip').addClass('active');
+                    } else {
+                        $('.slide_arrow2').show();
+                        $('.connect_us').css({
+                            right: '4%',
+                            bottom: '2%'
+                        });
+                    }
+
+                    activePage(index)
                 },
-                onLeave: function (index, direction) {
-                    fadePage(index)
-                    setTimeout(function () {
-                        activePage(index + 1);
-                    }, 200);
+                onLeave: function (index, nextIndex, direction) {
+                    // console.log(arguments);
+                    fadePage(index);
+                    if (direction == 'up') {
+                        setTimeout(function () {
+                            activePage(index - 1)
+                        }, 200);
+                    }
+                    else if (direction == 'down') {
+                        setTimeout(function () {
+                            activePage(index + 1)
+                        }, 200);
+                    }
+                    if (index == 6) {
+                        $('.connect_us').css({
+                            right: '4%',
+                            bottom: '2%'
+                        });
+                    }
                 }
             });
         })

@@ -1,6 +1,6 @@
 @mixin effCreator($PTEXT,$p){
     @for $i from 1 to (length($PTEXT)+1) {
-        .text#{$i}.active {
+        &.act .text#{$i} {
             top: nth(nth($PTEXT, $i), 1);
         }
         .text#{$i} {
@@ -69,8 +69,6 @@
             position: relative;
             max-width: 1334px;
             overflow: hidden;
-            
-           
             .text-trans {
                 width: 100%;
                 position: absolute;
@@ -103,7 +101,7 @@
                 (getHS(320),getHS(138),44.38%,null),
                 (getHS(475),7%,90%,null);
             @include effCreator($P1TEXT,1);
-            .page_pic.active {
+            &.act .page_pic {
                 @include blur(0);
                 opacity: 1;
                 top: getHS(625);
@@ -115,7 +113,7 @@
                 (getHS(265),getHS(125),44.38%, null),
                 (getHS(390),getHS(120),90%, null);
             @include effCreator($P1TEXT,2);
-            .page_pic.active {
+            &.act .page_pic {
                 @include blur(0);
                 opacity: 1;
                 top: getHS(575);
@@ -129,7 +127,7 @@
                 (getHS(380), 8.35%, 60%, 410),
                 (getHS(500), 8.35%, 90%, 410);
             @include effCreator($P1TEXT,3);
-            .page_pic.active {
+            &.act .page_pic {
                 @include blur(0);
                 opacity: 1;
                 top: getHS(630);
@@ -172,13 +170,15 @@
             }
             .page_pic0 {
                 position: absolute;
-                top: 100%;
-                right:0;
+                top: 70%;
+                right:10%;
                 width: getWS(100);
-                @include transition(all 1.2s ease);
+                opacity: 0;
+                @include transition(all 1s ease);
                 &.active{
                     top: getHS(720);
                     right: getWS(150);
+                    opacity: 1;
                 }
             }
             .page_pic1 {
@@ -204,8 +204,8 @@
                 width: 90%;
                 margin-top: 5%;
             }
-            .redbag_regBox {
-                position: absolute;
+            .greenhand_regBox {
+                position: relative;
                 background: $brand-primary-darker;
                 width: getWS(565);
                 left: getWS(185 / 2);
@@ -213,7 +213,7 @@
                 height: 26%;
                 border-radius: 10px;
                 top: getHS(550);
-                @include transition(top 1s linear);
+                @include transition(top 0.1s linear);
                 .submit_form {
                     width: px2rem(336);
                     margin: 0 auto;
@@ -247,17 +247,18 @@
                         margin-top: px2rem(15);
                         padding-right: px2rem(36);
                         background: #ffffff;
-                        @include placeholderColor(#d1d1d3);                        
+                        color: #222;
+                                               
                         input {
                             height: 100%;
                             width: 100%;
                             background: #ffffff;
                             padding-left: px2rem(36);
                             font-size: px2rem(30);
-                            color: #222;
                             flex: 1;
                         }
                     }
+                    
                     .telephone {
                         img {
                             width: 0.9rem;

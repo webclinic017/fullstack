@@ -1,4 +1,10 @@
 var report_sites = [
+    /*添加时间 2017-6-15*/
+    {
+        address: 'http://jigou.cngold.org/company/7122/news/c989122.htm',
+        description: '【金投网】金融科技时代，外汇市场转型变革的关键点在哪里？',
+        date: '2017-06-08'
+    },
     /*添加时间 2017-5-22*/
     {
         address: 'http://finance.eastday.com/eastday/finance1/Business/node3/u1ai112927.htm',
