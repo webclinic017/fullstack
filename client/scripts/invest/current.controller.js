@@ -22,24 +22,11 @@
         $scope.openCancelCopyMdl = openCancelCopyMdl;
         $scope.openInvestCopyDetailMdl = openInvestCopyDetailMdl;
         $scope.openInvestOwnDetailMdl = openInvestOwnDetailMdl;
-
-        var dataId;
-        var tradersId;
-        var detailsId;
         // var avaCopyAmount;
 
         getData();
         getTraders();
         // getAvaCopyAmount();
-
-        // 只要当前投资的所对应的 state 变cancelCopy化就要 cancel 轮询
-        $scope.$on('$stateChangeStart', function (event, toState, toParams) {
-            $timeout.cancel(dataId);
-            $timeout.cancel(tradersId);
-            angular.forEach($scope.traders, function (value, key) {
-                $timeout.cancel(value.detailsId);
-            });
-        });
 
         // 获取自主交易持仓订单和订单概况
         function getData() {
@@ -60,10 +47,6 @@
                     // $scope.$broadcast('hideLoadingImg');
                 }
             });
-
-            dataId = $timeout(function () {
-                getData();
-            }, 5000);
         }
 
         function getTraders() {
@@ -81,10 +64,6 @@
                     // console.log($scope.traders);
                 }
             });
-
-            tradersId = $timeout(function () {
-                getTraders();
-            }, 5000);
         }
 
         // 显示/隐藏自主交易历史订单
@@ -103,7 +82,6 @@
         function showDetails(trader) {
             if (trader.detailsShow) {
                 trader.detailsShow = false;
-                $timeout.cancel(trader.detailsId);
             } else {
                 // $scope.$emit('showLoadingImg');
                 trader.detailsShow = true;
@@ -117,10 +95,6 @@
                 trader.notFirstLoad = true;
                 trader.orders = data.data || [];
             });
-
-            trader.detailsId = $timeout(function () {
-                getDetails(trader);
-            }, 5000);
         }
 
         // 获取可用复制金额
