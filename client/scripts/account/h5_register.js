@@ -293,7 +293,7 @@
             /*设置邀请源INVITE_CODE*/
             if (oReg.search_arr.user_code) {
                 publicRequest('setInviteCode', 'POST', {
-                    usercode: oReg.search_arr.user_code
+                    user_code: oReg.search_arr.user_code
                 });
             }
 
