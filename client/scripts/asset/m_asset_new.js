@@ -217,6 +217,7 @@ $(document).ready(function () {
 
     // 跳转到银行卡列表页面
     $toCardListBtn.on("tap", function () {
+        $withdrawNum.blur();
         if (isNext) {
             widthdrawNum = Number($withdrawNum.val());
             canWithdrawNum = widthdrawType === 'invest' ? canWithdrawBalance : canWithdrawBalanceWallet;
@@ -473,6 +474,7 @@ $(document).ready(function () {
     });
 
     $realnameInfo.on("tap", function () {
+        $cardnum.blur();
         layer.open({
             content: "<div style='padding-bottom: 10px;'>持卡人说明</div><div style='text-align: left; color: #666;'>为了您的账户资金安全，只能绑定持卡人本人的银行卡。<br>如有其它疑问，请联系"+nodeResponseInfo.company+"客服"+nodeResponseInfo.telephone+"</div>",
             btn: "确定"
@@ -483,7 +485,7 @@ $(document).ready(function () {
     // 跳转到绑定银行卡页面2
     $addCardBtn1.on("tap", function () {
         var cardNum = isSuccAddCard1();
-        
+        $cardnum.blur();
         if (cardNum) {
             widthdrawNum = getUrlParam("amount");
             id = getUrlParam("id");

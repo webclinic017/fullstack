@@ -16,13 +16,6 @@
         var summaryId;
         var noticeId;
 
-
-       
-        $rootScope.$on('relogin_info', function(){
-            getOnceInfo();
-            initialize();
-        })
-
         //一次性获取用户的相关信息。更换用户时需要触发重置。
         getOnceInfo();
         initialize();
@@ -97,7 +90,7 @@
                     });
 
                     //定时提取用户资产信息
-                    getAssetInfo();
+                    loopAsset();
 
                     $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
                         angular.extend($scope.personal, {
@@ -105,15 +98,27 @@
                         });
                     });
                     $scope.$on('$stateChangeStart', function (event, toState, toParams) {
+                        // console.log(toState.name);
                         if (toState.name.indexOf('center') === -1) {
-                            $timeout.cancel(summaryId);
+                            $interval.cancel(summaryId);
                         } else {
-                            $timeout.cancel(summaryId);
-                            getAssetInfo();
+                            loopAsset();
                         }
                     });
                 }
             });
+        }
+
+        function loopAsset () {
+            console.log($scope.personal.profile_check);
+            if ($scope.personal.profile_check == 3) {
+                $interval.cancel(summaryId);
+                summaryId = $interval(function () {
+                    getAssetInfo();
+                }, 5000);
+            } else {
+                getAssetInfo();
+            }
         }
 
         // 获取个人资产概况
@@ -129,12 +134,6 @@
                     });
                 } 
             });
-
-            if ($scope.personal.profile_check == 3) {
-                summaryId = $timeout(function () {
-                    getAssetInfo();
-                }, 5000);
-            }
         }
     }
 })();

@@ -115,16 +115,16 @@
 
         @include m(rate) {
             color: #898989;
-            padding-top: px2rem(30);
-            text-align: center;
-            font-size: px2rem(26);
+            padding-bottom: px2rem(30);
+            padding-left: px2rem(32);
+            font-size: px2rem(28);
         }
         @include m(msg) {
             color: #898989;
             padding: px2rem(24) 0;
             padding-left: px2rem(32);
             display: none;
-            font-size: px2rem(26);
+            font-size: px2rem(28);
 
             &.active {
                 display: block;
@@ -151,21 +151,21 @@
 
             .tit {
                 color: #3a3a3a;
-                width: 30%;
+                width: 32%;
                 float: left;
                 text-align: left;
                 padding-left: px2rem(34);
-                font-size: px2rem(28);
-                line-height: px2rem(28);
+                font-size: px2rem(30);
+                line-height: px2rem(30);
             }
             .m_withdraw__home-type {
-                width: 70%;
+                width: 68%;
                 float: left;
 
                 .withdraw_account {
-                    font-size: px2rem(32);
+                    font-size: px2rem(34);
                     position: relative;
-                    line-height: px2rem(32);
+                    line-height: px2rem(34);
                     color: #3a3a3a;
 
                     &:before {
@@ -174,9 +174,9 @@
                         position: absolute;
                         top: 0;
                         right: px2rem(32);
-                        border: px2rem(12) solid transparent;
-                        border-left-width:  px2rem(11);
-                        border-right-width:  px2rem(11);
+                        border: px2rem(14) solid transparent;
+                        border-left-width:  px2rem(12);
+                        border-right-width:  px2rem(12);
                         border-top-color: #999;
                     }
 
@@ -187,8 +187,8 @@
                 .withdraw_tip {
                     display: none;
                     color: #999;
-                    font-size: px2rem(24);
-                    padding-top: px2rem(27);
+                    font-size: px2rem(26);
+                    padding-top: px2rem(28);
 
                     &.active {
                         display: block;
@@ -197,7 +197,7 @@
             }
 
             label {
-                width: 70%;
+                width: 68%;
                 float: left;
                 display: block;
                 font-size: px2rem(48);
