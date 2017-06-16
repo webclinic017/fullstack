@@ -34,7 +34,7 @@
          */
         function setInviteFriendsLink (usercode) {
             return publicHttp.dealPublicRequest(o.setInviteFriendsLinkApi, 'POST', {
-                usercode: usercode
+                user_code: usercode
             });
         }
 
