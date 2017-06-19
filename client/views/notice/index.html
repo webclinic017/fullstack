@@ -14,7 +14,7 @@
                     <div ng-if="notice.content.length > 150 && notice.openOrClose == 'close'" class="text-right">
                         <a class="notice__close" href="" ng-click="openNotice(notice, 0)">收起</a>
                     </div>
-                <p class="font-size-12"> {{notice.send_time}}</p>
+                <p class="font-size-12 pd-tp-15"> {{notice.created_at | dealTimestamp }}</p>
                 </div>
             </div>
         </li>
