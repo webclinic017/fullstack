@@ -1,4 +1,26 @@
 var report_sites = [
+    /*添加时间 2017-6-20*/
+    {
+        address: 'http://c.m.163.com/news/a/CMARV9IH0511DQOT.html?spss=newsapp&spsw=1',
+        description: '【网易新闻】比特币狂翻70倍，未来还有哪些投资工具价值可期？',
+        date: '2017-06-07'
+    },
+    {
+        address: 'http://c.m.163.com/news/a/CLU3C0EO0511DQOT.html?spss=newsapp&spsw=1',
+        description: '【网易新闻】外汇交易计划制定实操指南',
+        date: '2017-06-02'
+    },
+    {
+        address: 'http://caijing.fx678.com/news/315811.html',
+        description: '【汇通网】从亏损$20000到炒汇高手，“货比三家”后他如此评价老虎外汇',
+        date: '2017-05-25'
+    },
+    /*添加时间 2017-6-15*/
+    {
+        address: 'http://jigou.cngold.org/company/7122/news/c989122.htm',
+        description: '【金投网】金融科技时代，外汇市场转型变革的关键点在哪里？',
+        date: '2017-06-08'
+    },
     /*添加时间 2017-5-22*/
     {
         address: 'http://finance.eastday.com/eastday/finance1/Business/node3/u1ai112927.htm',
