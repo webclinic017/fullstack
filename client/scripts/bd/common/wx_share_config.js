@@ -20,7 +20,7 @@
             $(function () {
                 $.ajax({
                     type: "post",
-                    url: "/action/public/wx/get_jssdk",
+                    url: "https://proxy.tigerwit.com/action/public/wx/get_jssdk",
                     data: {
                         url: window.location.href
                     },
