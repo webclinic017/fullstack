@@ -5,8 +5,8 @@
         修改复制金额
     </h5>
 
-    <div class="system_modal__content">
-        <form class="mg-tp-30" name="copyForm" novalidate ng-show="!copyTrade.success">
+    <div class="system_modal__content" ng-show="step == 1">
+        <form class="mg-tp-30" name="copyForm" novalidate>
             <div class="row">
                 <div class="col-xs-4">
                     <label>复制金额：</label>
@@ -15,15 +15,15 @@
                     <div class="form-control-wrapper">
                         <input class="form-control icon"
                                name="amount"
-                               type="text"
+                               type="number"
                                ng-class="{'form-control-error': frontErr.amount.show && copyForm.amount.$invalid}"
                                ng-model="copyTrade.amount"
                                required
                                ng-pattern="frontErr.amount.reg"
-                               twform-max="{{ copyTrade.avaCopyAmount }}"
                                twform-min="{{ copyTrade.minCopyAmount }}"
                                ng-focus="hideErr('amount')"
-                               ng-blur="showErr('amount')">
+                               ng-change="calAmount()"
+                               ng-blur="[showErr('amount')]">
 
                         <i class="fa fa-dollar form-control-icon font-primary"></i>
 
@@ -32,16 +32,8 @@
                                 请输入复制金额
                             </p>
 
-                            <p class="alert-arrow_tp_lf" ng-show="copyForm.amount.$error.pattern">
-                                输入的金额为大于零的整数或者小数（小数点后最多两位数字）
-                            </p>
-
-                            <p class="alert-arrow_tp_lf" ng-show="copyForm.amount.$error.twformMax">
-                                复制金额不能超过可用复制金额
-                            </p>
-
                             <p class="alert-arrow_tp_lf" ng-show="copyForm.amount.$error.twformMin">
-                                复制金额最少为 {{ copyTrade.minCopyAmount }} 美金
+                                最小复制金额为 ${{ copyTrade.minCopyAmount }} 
                             </p>
                         </div>
                     </div>
@@ -50,7 +42,7 @@
 
             <div class="row">
                 <div class="col-xs-4">
-                    <label>可用金额：</label>
+                    <label>可用金额:</label>
                 </div>
                 <div class="col-xs-8">
                     <label class="copy_modal__label">
@@ -59,30 +51,82 @@
                     </label>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-4">
+                    <label>建议金额:</label>
+                </div>
+                <div class="col-xs-8">
+                    <label class="copy_modal__label">
+                        <i class="fa fa-dollar font-primary"></i>
+                        {{ copyTrade.advice || '0.00' }}
+                    </label>
+                </div>
+            </div>
         </form>
 
-        <div ng-if="copyTrade.success">
-            <p class="system_modal__info">
-                <i class="operate_tip__succ_icon fa fa-check-circle"></i>
-                复制金额修改成功
-            </p>
+        <div class="text-center copy_modal__tip mg-tp-20">
+            如果复制金额少于建议复制金额，当高手的交易的手数过小，您的跟单可能会失败。
         </div>
 
-        <div class="system_modal__btn_wrapper" ng-if="!copyTrade.success">
+        <div class="font-danger text-center mg-tp-20">
+            <p ng-if="frontErr.insufficient.show">可用复制金额不足</p>
+        </div>
+
+        <div class="system_modal__btn_wrapper mg-tp-30">
             <div ng-show="backErr.system.show">
                 <p class="alert-system">
                     {{ backErr.system.msg }}
                 </p>
             </div>
-            <button class="btn btn-primary btn-sm" ng-if="clickable.copy" ng-click="submitForm()">
-                修改复制金额
+
+            <button ng-if="frontErr.insufficient.show" class="btn btn-primary btn-sm" >
+               <a ui-sref="space.asset.subpage({subpage:'deposit'})" ng-click="closeModal()">去充值</a>
+            </button>
+
+            <button ng-if="!frontErr.insufficient.show && clickable.copy" class="btn btn-primary btn-sm" ng-click="submitStep1(false)">
+                提交
             </button>
 
             <button class="btn btn-primary btn-sm active" disabled ng-if="!clickable.copy">
                 <i class="loading_spinner fa fa-spinner"></i>
-                修改复制金额
+                提交中
+            </button>
+        </div>        
+    </div>
+
+    <div class="system_modal__content" ng-if="step == 2">
+        <div class="text-center copy_modal__tip mg-tp-20">
+            复制金额少于建议复制金额，会有跟单失败的风险
+            <br>
+            是否要继续？
+        </div>
+
+        <!--强制继续按钮组-->
+        <div class="system_modal__btn_wrapper mg-tp-30">
+            <button class="btn btn-gray btn-sm" ng-click="cancleSubmit()" ng-if="clickable.copy">
+                返回修改
             </button>
 
+            <button class="btn btn-primary btn-sm" ng-click="submitForm()" ng-if="clickable.copy">
+                继续
+            </button>
+
+            <button class="btn btn-primary btn-sm active" disabled ng-if="!clickable.copy">
+                <i class="loading_spinner fa fa-spinner"></i>
+                正在提交
+            </button>
         </div>
     </div>
+
+    <div class="system_modal__content" ng-if="step == 3">
+        <div>
+            <p class="system_modal__info">
+                <i class="operate_tip__succ_icon fa fa-check-circle"></i>
+                复制金额修改成功
+            </p>
+        </div>
+    </div>
+
 </div>
+

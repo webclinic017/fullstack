@@ -194,6 +194,9 @@
     @include e(label) {
         font-size: 20px;
     }
+    @include e(tip) {
+        color: $gray-dark;
+    }
 }
 
 @include b(cancel_copy_modal) {
