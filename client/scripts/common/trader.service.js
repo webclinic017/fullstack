@@ -32,8 +32,8 @@
         function getMasterCurrent(usercode, page, pagesize, type) {
             return publicHttp.dealPublicRequest(o.getMasterCurrentApi, 'GET', {
                 user_code: usercode,
-                page: page,
-                pagesize: pagesize,
+                offset: page,
+                limit: pagesize,
                 type: type
             });
         }
