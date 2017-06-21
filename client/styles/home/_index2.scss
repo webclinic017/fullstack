@@ -261,6 +261,13 @@
             }
         }
     }
+    .index2-slide3 {
+        overflow: hidden;
+        height: 818px !important;
+        background-position: center center;
+        background-size: cover;
+        @include img-normal($image-path-home + "index-banner-greenhand.png");
+    }
     //.index2-slide4 {
     //    overflow: hidden;
     //    height: 650px !important;

@@ -1,0 +1,244 @@
+@mixin bgCutter($Array,$p) {
+    @for $i from 1 to (length($Array) + 1) {
+        .text#{$i} {
+            margin-top: nth(nth($Array, $i), 1);
+            width: nth(nth($Array, $i), 2);
+            height: nth(nth($Array, $i), 3);
+            background: url('/images/greenhand/web-p#{$p}-text.png') no-repeat;
+            background-size: 100% auto;
+            background-position: center nth(nth($Array, $i), 4);
+        }
+        dl{
+            background-image: url('/images/greenhand/web-p#{$p}-pic.png');
+        }
+    }
+}
+.bd_greenhand_html{
+    min-width: 1334px;
+}
+.bd_greenhand {
+    min-width: 1000px; // 重置分液器位置、样式
+    .swiper-pagination-fraction,
+    .swiper-pagination-custom,
+    .swiper-container-horizontal>.swiper-pagination-bullets {
+        bottom: 30px;
+        .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 10px;
+            @include transition(width 0.3s linear);
+        }
+        .swiper-pagination-bullet-active {
+            width: 20px;
+            background: #fff;
+        }
+    }
+}
+
+.bd_greenhand_layout {
+    .swiper-container {
+        margin-top: 69px;
+        background: #0e0d6a;
+        @include animation(bgchanger 8s linear infinite);
+        @include keyframes(bgchanger) {
+            0% {
+                background: lighten(#0e0d6a, 5%);
+            }
+            25% {
+                background: #0e0d6a;
+            }
+            50% {
+                background: darken(#0e0d6a, 5%);
+            }
+            75% {
+                background: #0e0d6a;
+            }
+            100% {
+                background: lighten(#0e0d6a, 5%);
+            }
+        }
+        .greend_logo {
+            position: fixed;
+            right: 18%;
+            top: 110px;
+            width: 150px;
+            z-index: 10;
+        }
+        
+        .swiper-slide {
+            font-size: 40px;
+            color: #fff;
+            position: relative;
+            height: 100%;
+            dl{
+                display: block;
+                width: 1334px;
+                margin:0 auto;
+                height: 100%;
+                background-position: 84% 75%;
+                background-size: 25%;
+                background-repeat: no-repeat;
+                padding-left: 12%;
+                padding-top: 5%;
+                min-height: 620px;
+            }
+        }
+        .slide1 {
+            .text {
+                margin:0 auto;
+            }
+            dl{
+                padding-top: 14%;
+                padding-left: 0;
+                // background-image: url('/images/greenhand/web-p1-pic.png');
+                background-position: center center;
+                background-size: 50%;
+            }
+            $bg:
+                // margin-top width height bgPer
+                (0, 40%, 95px, 0),
+                (10px, 40%, 140px, 48%),
+                (10px, 40%, 100px, 105%),
+            ;
+            @include bgCutter($bg, 1);
+        }
+        .slide2 {
+            $bg:
+                // margin-top width height bgPer
+                (20px, 35%, 75px, 0),
+                (10px, 35%, 75px, 52%),
+                (10px, 35%, 75px, 100%),
+            ;
+            @include bgCutter($bg, 2);
+        }
+        .slide3 {
+            $bg:
+                // margin-top width height bgPer
+                (0, 23%, 70px, 0),
+                (0, 23%, 70px, 32%),
+                (0px, 23%, 70px, 66.5%),
+                (0px, 23%, 70px, 100%),
+            ;
+            @include bgCutter($bg, 3);
+        }
+        .slide4 {
+            $bg:
+                // margin-top width height bgPer
+                (0, 23%, 70px, 0),
+                (0, 23%, 70px, 33%),
+                (0px, 23%, 70px, 66.5%),
+                (0px, 23%, 70px, 100%),
+            ;
+            @include bgCutter($bg, 4);
+        }
+        .slide5 {
+            $bg:
+                // margin-top width height bgPer
+                (0, 23%, 70px, 0),
+                (0, 23%, 70px, 33%),
+                (0px, 23%, 70px, 66.5%),
+                (0px, 23%, 70px, 100%),
+            ;
+            @include bgCutter($bg, 5);
+            dl{
+                background-position: 80% 80%;
+                background-size: 17%;
+                position: relative;
+                img{
+                    width: 4%;
+                    position: absolute;
+                    right: 8%;
+                    bottom: 52%;
+                    opacity: 0;
+                    @include transition(all 0.5s ease 0.8s);
+                }
+            }
+            &.swiper-slide-active > dl > img{
+                right: 14%;
+                opacity: 1;
+            }
+        }
+        .slide6 {
+            $bg:
+                // margin-top width height bgPer
+                (0, 30%, 75px, 0),
+                (50, 30%, 30px, 52%),
+                (0, 30%, 30px, 70%),
+                (0, 30%, 65px, 110%),
+            ;
+            @include bgCutter($bg, 6);
+            dl{
+                min-height: 300px;
+                padding-top: 10%;
+                height: 70%;
+                .greenhand_regBox{
+                    position: absolute;
+                    top: 22%;
+                    right: 23%;
+                    .greenhand_regForm{
+                        background-color: #23dbd9;
+                        padding: 25px 30px;
+                        border-radius: 10px;
+                        form{
+                            input{
+                                display: block;
+                                width: 350px;
+                                height: 50px;
+                                line-height: 80px;
+                                border-radius: 5px;
+                                color: #222;
+                                font-size: 18px;
+                                padding-left: 18px;
+                                border: none;
+                            }
+                            input:nth-child(2){
+                                margin-top: 15px;
+                            }
+                            .warning{
+                                @extend .font-danger;
+                            }
+                        }
+                    }
+                    
+                    img.regist_btn{
+                        display: block;
+                        width: 320px;
+                        margin: 0 auto;
+                        margin-top: 22px;
+                        cursor: pointer;                      
+                    }
+                }
+            }
+
+            @include b(risk_tip){
+                background: #fe5260;
+                color: #fff;
+                width: 100%;
+                height: 30%;
+                text-align: left;
+                position: absolute;
+                @include e(content){
+                    width: 1334px;
+                    margin:0 auto;
+                    font-size: 12px;
+                    line-height: 25px;
+                    padding: 4% 25px;
+                    p.text_box{
+                        display: inline-block;
+                        width: 80%;
+                    }
+                    p.img_box{
+                        width: 20%;
+                        padding-right: 30px;
+                        text-align: right;
+                        img{
+                            background: #fff;
+                            width: 52%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
