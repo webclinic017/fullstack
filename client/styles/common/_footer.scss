@@ -54,7 +54,47 @@
     }
 }
 
+.footer-weibo {
+    position: relative;
+    float: left;
+    padding-right: 15px;
 
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: 0px;
+        width: 1px;
+        height: 15px;
+        background-color: $brand-primary;
+    }
+}
+.footer-weixin {
+    float: left;
+    padding-left: 15px;
+    position: relative;
+
+    span {
+        display: none;
+        position: absolute;
+        left: 108%;
+        top: -70%;
+    }
+
+    &:hover {
+        span {
+            display: block;
+        }
+    }
+}
+.footer-follow {
+    padding-top: 10px;
+}
+.footer-follow-tip {
+    font-size: 12px;
+    color:  #999;
+}
 
 
 .footer-bottom {
