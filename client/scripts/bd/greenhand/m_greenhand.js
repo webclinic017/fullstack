@@ -6,10 +6,10 @@
             // 微信分享配置
             if (wx) {
                 wxShareConfig({
-                    title: '老虎外汇多重礼，700美金砸向你！',
-                    subTitle: '老虎外汇多重礼，700美金砸向你！',
+                    title: '【老虎带你炒外汇，轻松赚钱超酸爽】',
+                    subTitle: '【老虎带你炒外汇，轻松赚钱超酸爽】',
                     shareLink: window.location.href,
-                    desc: '【老虎外汇】缤纷夏日迎新季，开户即送$700豪礼红包，快来注册吧！',
+                    desc: '外汇投资选老虎，人人都是投资高手，一键跟单简单粗暴，老虎高手带你轻松赚钱！！',
                     img: window.location.origin + '/activity/logo.png',
                     trackPage: window.location.pathname.replace(/\//gi, ''),
                     debug: false
