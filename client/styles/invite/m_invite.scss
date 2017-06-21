@@ -19,13 +19,13 @@ html,body{
     text-align: center;
     color: $gray-lightest;
     &.invite01{
-      background: url("/images/mobile/share01_bg2.png") no-repeat;
-      background-size: 100% auto;
+      background: url("/images/mobile/share01_bg2_new.png") no-repeat;
+      background-size: auto 100%;
       background-position: center bottom;
     }
     &.register_coupon{
-      background: url("/images/mobile/share01_bg2_register_coupon.png") no-repeat;
-      background-size: 100% auto;
+      background: url("/images/mobile/share01_bg2_register_coupon_new.png") no-repeat;
+      background-size: auto 100%;
       background-position: center bottom;
     }
 
@@ -51,7 +51,7 @@ html,body{
 
     @include e(bag_text){
       position: absolute;
-      bottom: 46%;
+      bottom: 44.5%;
       left: 15%;
       padding-top:px2rem(25);
       width: 70%;
