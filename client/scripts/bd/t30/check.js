@@ -7,7 +7,7 @@ $(document).ready(function () {
     var clickable = true;
 
     var hostnameUrl = window.location.hostname;
-    var originUrl = window.location.origin;
+    var originUrl = window.location.origin || (window.location.protocal+'//'+window.location.hostname);
     var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.') + 1) || "tigerwit.com";
     var href = window.location.href;
     lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
