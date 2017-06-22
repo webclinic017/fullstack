@@ -1,72 +1,81 @@
 @import "compass";
-
 // Core variables and mixins
 @import "variables";
 @import "mixins";
-
 @import "m_reset";
 @import "m_icons";
-
 // Reset and dependencies
 @import "normalize";
-
 // Utilities CSS
 @import "utilities";
-
 // Font Awesome
 @import "font";
-
 // Core CSS
 @import "scaffolding";
 @import "grid";
 @import "m_rem";
 @import "m_tabs";
 @import "m_buttons";
+html,
+body {
+    width: 100%;
+    height: 100%;
+    min-width: 300px;
+    max-width: 750px;
+}
 
-html,body{
-  width: 100%;
-  height: 100%;
-  min-width: 300px;
-  max-width: 750px;
-}
+
 /*小字体*/
-.small_font{
-  font-size: 12px!important;
-  -webkit-transform-origin-x: 0!important;
-  -webkit-transform: scale(0.90)!important;
+
+.small_font {
+    font-size: 12px!important;
+    -webkit-transform-origin-x: 0!important;
+    -webkit-transform: scale(0.90)!important;
 }
+
+
 /*状态样式*/
-.warning{
-  color: #ff464f!important;
+
+.warning {
+    color: #ff464f!important;
 }
+
 .show {
-  display: inline-block!important;
+    display: inline-block!important;
 }
+
 .hide {
-  display: none!important;
+    display: none!important;
 }
-.disable{
-  color: #ccc!important;
-  border: 1px solid #ccc!important;
-  //background: #ccc!important;
-  font-size: px2rem(10)!important;
-  cursor: wait!important;
+
+.disable {
+    color: #ccc!important;
+    border: 1px solid #ccc!important; //background: #ccc!important;
+    font-size: px2rem(10)!important;
+    cursor: wait!important;
 }
+
+
 /*文本标题*/
-.text_title{
-  font-weight:500!important;
-  display: block!important;
-  margin: px2rem(17) 0!important;
-  font-size: px2rem(34);
+
+.text_title {
+    font-weight: 500!important;
+    display: block!important;
+    margin: px2rem(17) 0!important;
+    font-size: px2rem(34);
 }
-.text_sub_title{
-  font-weight:500!important;
-  display: block!important;
-  margin: px2rem(17) 0!important;
-  font-size: px2rem(32);
+
+.text_sub_title {
+    font-weight: 500!important;
+    display: block!important;
+    margin: px2rem(17) 0!important;
+    font-size: px2rem(32);
 }
+
+
 /*文本内容*/
-.text_pgh{
+
+.text_pgh {
     li {
         position: relative;
         margin-bottom: px2rem(32);
@@ -90,115 +99,122 @@ html,body{
         color: #8f8f94;
     }
 }
+
+
 /*重置select标签的样式*/
+
 select {
-  /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
-  border: solid 1px #ccc!important;
-  /*很关键：将默认的select选择框样式清除*/
-  appearance:none!important;
-  -moz-appearance:none!important;
-  -webkit-appearance:none!important;
-  /*将背景改为绿色*/
-  background:#fff;
-  /*留出一点位置，避免被文字覆盖*/
-  padding-left: 12px;
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    border: solid 1px #ccc!important;
+    /*很关键：将默认的select选择框样式清除*/
+    appearance: none!important;
+    -moz-appearance: none!important;
+    -webkit-appearance: none!important;
+    /*将背景改为绿色*/
+    background: #fff;
+    /*留出一点位置，避免被文字覆盖*/
+    padding-left: 12px;
 }
 
-button[class*="btn"]{
-  color: $brand-button-color;
-  font-size: px2rem(36);
-  font-weight: 400;
-  display: block;
-  width: 90%;
-  height: px2rem(90);
-  text-align: center;
-  margin: 0 auto;
-  background-color: $brand-primary-dark;
-  margin-bottom: 1rem;
-  border: 1px solid $brand-primary-dark;
-  -webkit-border-radius: px2rem(8);
-  -moz-border-radius: px2rem(8);
-  border-radius: px2rem(8);
+button[class*="btn"] {
+    color: $brand-button-color;
+    font-size: px2rem(36);
+    font-weight: 400;
+    display: block;
+    width: 90%;
+    height: px2rem(90);
+    text-align: center;
+    margin: 0 auto;
+    background-color: $brand-primary-dark;
+    margin-bottom: 1rem;
+    border: 1px solid $brand-primary-dark;
+    -webkit-border-radius: px2rem(8);
+    -moz-border-radius: px2rem(8);
+    border-radius: px2rem(8);
 }
+
 
 /*h5导航条样式*/
-.h5_nav{
-  width: 100%;
-  background-color: #222;
-  padding: 0.3rem px2rem(18);
-  img{
-    display: inline-block;
-    float: left;
-    height: 2rem;
-  }
-  span{
-    font-size: px2rem(36);
-    height: 2rem;
-    line-height: 2rem;
-    float: right;
-    color: $brand-primary;
-  }
+
+.h5_nav {
+    width: 100%;
+    background-color: #222;
+    padding: 0.3rem px2rem(18);
+    img {
+        display: inline-block;
+        float: left;
+        height: 2rem;
+    }
+    span {
+        font-size: px2rem(36);
+        height: 2rem;
+        line-height: 2rem;
+        float: right;
+        color: $brand-primary;
+    }
 }
 
+
 /*h5footer样式*/
-@include b(h5_float_footer){
-  z-index: 1000;
-  width: 100%;
-  height: 4rem;
-  background-color: rgba(227,62,78,0.85);
-  position: fixed;
-  bottom: 0;
-  font-size: 1rem;
-  color: $gray-lightest;
-  padding: 0.52rem px2rem(15);
-  @include e(handle){
-    .close{
-      display: block;
-      width:px2rem(20);
-      height: px2rem(20);
-      line-height: px2rem(20);
-      text-align: center;
-      font-size: 1rem;
-      padding: px2rem(4);
+
+@include b(h5_float_footer) {
+    z-index: 1000;
+    width: 100%;
+    height: 4rem;
+    background-color: rgba(227, 62, 78, 0.85);
+    position: fixed;
+    bottom: 0;
+    font-size: 1rem;
+    color: $gray-lightest;
+    padding: 0.52rem px2rem(15);
+    @include e(handle) {
+        .close {
+            display: block;
+            width: px2rem(20);
+            height: px2rem(20);
+            line-height: px2rem(20);
+            text-align: center;
+            font-size: 1rem;
+            padding: px2rem(4);
+        }
     }
-  }
-  @include e(con){
-    .logo{
-      background-repeat: no-repeat;
-      background-size: cover;
-      height:px2rem(110);
+    @include e(con) {
+        .logo {
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: px2rem(110);
+        }
+        div {
+            float: left;
+        }
+        h6 {
+            font-size: 1.2rem;
+        }
+        p {
+            font-size: 0.8rem;
+        }
+        .footer_logo {
+            width: 14.8%;
+            margin-right: px2rem(28);
+            img {
+                width: 100%;
+            }
+        }
+        .text {
+            width: 56%;
+        }
+        .down_load {
+            width: 17%;
+            margin-top: px2rem(25);
+            a {
+                background-color: $brand-info;
+                color: $gray-lightest;
+                display: inline-block;
+                padding: px2rem(5) 0.85rem;
+                border-radius: px2rem(5);
+            }
+        }
     }
-    div{
-      float: left;
-    }
-    h6{
-      font-size: 1.2rem;
-    }
-    p{
-      font-size: 0.8rem;
-    }
-    .footer_logo{
-      width: 14.8%;
-      margin-right: px2rem(28);
-      img{
-        width: 100%;
-      }
-    }
-    .text{
-      width: 56%;
-    }
-    .down_load{
-      width: 17%;
-      margin-top: px2rem(25);
-      a{
-        background-color: $brand-info;
-        color: $gray-lightest;
-        display: inline-block;
-        padding: px2rem(5) 0.85rem;
-        border-radius: px2rem(5);
-      }
-    }
-  }
 }
 
 // m_footer 样式隐藏 
@@ -207,78 +223,184 @@ button[class*="btn"]{
     visibility: hidden;
 }
 
+
 /*h5注册框样式*/
-.h5_regbox{
-  margin: 0 auto;
-  width: px2rem(500);
-  height:px2rem(465);
-  background-color: $color-h5regbg;
-  border-radius: px2rem(18);
-  .title{
-    text-align: center;
-    height:px2rem(100);
-    color: $color-mt27bg;
-    line-height:px2rem(100);
-    font-size: px2rem(45);
-    font-weight: 200;
-    margin-top: 0;
-    margin-bottom: px2rem(8);
-  }
-  input{
-    border: none;
-    height: px2rem(65);
-    width: 85.5%;
-    font-size: px2rem(28);
-    margin-left: px2rem(35);
-    padding-left: px2rem(20);
-    background-color: #fff;
-    border-radius: px2rem(6);
-    margin-bottom: px2rem(16);
-  }
-  .button{
-    display: block;
+
+.h5_regbox {
     margin: 0 auto;
-    width: 85.5%;
-    height: px2rem(82);
-    text-align: center;
-    color: $color-yellow;
-    font-size: px2rem(30);
-    line-height:px2rem(82);
-    border-radius: px2rem(6);
-    border-bottom: px2rem(8) solid $color-h5regbtnbd;
-    background-color: $color-h5regbtn;
-  }
+    width: px2rem(500);
+    height: px2rem(465);
+    background-color: $color-h5regbg;
+    border-radius: px2rem(18);
+    .title {
+        text-align: center;
+        height: px2rem(100);
+        color: $color-mt27bg;
+        line-height: px2rem(100);
+        font-size: px2rem(45);
+        font-weight: 200;
+        margin-top: 0;
+        margin-bottom: px2rem(8);
+    }
+    input {
+        border: none;
+        height: px2rem(65);
+        width: 85.5%;
+        font-size: px2rem(28);
+        margin-left: px2rem(35);
+        padding-left: px2rem(20);
+        background-color: #fff;
+        border-radius: px2rem(6);
+        margin-bottom: px2rem(16);
+    }
+    .button {
+        display: block;
+        margin: 0 auto;
+        width: 85.5%;
+        height: px2rem(82);
+        text-align: center;
+        color: $color-yellow;
+        font-size: px2rem(30);
+        line-height: px2rem(82);
+        border-radius: px2rem(6);
+        border-bottom: px2rem(8) solid $color-h5regbtnbd;
+        background-color: $color-h5regbtn;
+    }
 }
 
 @include b(load_wrapper) {
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  background: rgba(0, 0, 0, 1);
-  padding-top: 80%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10000;
-  @include e(box) {
-    width: 80%;
-    padding: 2px 2px;
-    border: 1px solid $brand-primary;
-    margin: 0 auto;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;
-    @include m(bar) {
-      width: 0%;
-      background-color: $brand-primary;
-      height: 2px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: rgba(0, 0, 0, 1);
+    padding-top: 80%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    @include e(box) {
+        width: 80%;
+        padding: 2px 2px;
+        border: 1px solid $brand-primary;
+        margin: 0 auto;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        @include m(bar) {
+            width: 0%;
+            background-color: $brand-primary;
+            height: 2px;
+        }
     }
-  }
+    @include e(text) {
+        margin: 0 auto;
+        color: $brand-primary;
+        margin-top: 4px;
+        font-size: 0.9rem;
+    }
+}
 
-  @include e(text) {
-    margin: 0 auto;
-    color: $brand-primary;
-    margin-top: 4px;
-    font-size: 0.9rem;
-  }
+.slide_arrow {
+    position: absolute;
+    bottom: 2%;
+    left: 52%;
+    margin: -14px 0 0 -25px;
+    width: 36px;
+    height: 38px;
+    background: url("/images/bd/change.png") no-repeat;
+    -webkit-animation: start 1.5s infinite ease-in-out;
+    -moz-animation: start 1.5s infinite ease-in-out;
+    animation: start 1.5s infinite ease-in-out;
+}
+
+@keyframes start {
+    0%,
+    30% {
+        opacity: 0;
+        transform: translate(0, 10px);
+    }
+    60% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, -8px);
+    }
+}
+
+.slide_arrow2 {
+    position: absolute;
+    bottom: 6.5%;
+    left: 50%;
+    width: 24px;
+    height: 24px;
+    margin-top: -12px;
+    margin-left: -12px;
+    .chevron {
+        position: absolute;
+        width: 28px;
+        height: 8px;
+        opacity: 0;
+        transform: scale3d(0.5, 0.5, 0.5);
+        animation: move 3s ease-out infinite;
+    }
+    .chevron:first-child {
+        animation: move 3s ease-out 1s infinite;
+    }
+    .chevron:nth-child(2) {
+        animation: move 3s ease-out 2s infinite;
+    }
+    .chevron:before,
+    .chevron:after {
+        content: ' ';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 51%;
+        background: #fff;
+    }
+    .chevron:before {
+        left: 0;
+        transform: skew(0deg, 30deg);
+    }
+    .chevron:after {
+        right: 0;
+        width: 50%;
+        transform: skew(0deg, -30deg);
+    }
+    @keyframes move {
+        25% {
+            opacity: 1;
+        }
+        33% {
+            opacity: 1;
+            transform: translateY(30px);
+        }
+        67% {
+            opacity: 1;
+            transform: translateY(40px);
+        }
+        100% {
+            opacity: 0;
+            transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+        }
+    }
+    .text {
+        display: block;
+        margin-top: 75px;
+        margin-left: -30px;
+        font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+        font-size: 12px;
+        color: #fff;
+        text-transform: uppercase;
+        white-space: nowrap;
+        opacity: .25;
+        animation: pulse 2s linear alternate infinite;
+    }
+    @keyframes pulse {
+        to {
+            opacity: 1;
+        }
+    }
 }

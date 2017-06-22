@@ -36,3 +36,20 @@ $baseRootSize:32;
 
  * lpx2rem end
  */
+
+/*
+	定义返回高度比值的函数
+*/ 
+$baseHeight: 1334;
+
+@function getHS($px){
+	@return $px / $baseHeight * 100%;
+}
+
+/*
+	定义返回宽度比值函数
+*/
+
+@function getWS($px){
+	@return $px / $baseView  * 100%;
+}
