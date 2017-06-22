@@ -454,7 +454,7 @@ module.exports = function (grunt) {
         'filerev',
         'usemin',
         'htmlmin',
-        'cdnify'
+        // 'cdnify'
     ]);
 
     // grunt serve or build need to update variables.scss
