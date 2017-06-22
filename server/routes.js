@@ -527,6 +527,20 @@ module.exports = function (app) {
         }
     });
 
+    // 新手介绍页
+    app.route('/bd/greenhand').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit') {
+            if (isMobile(req)) {
+                res.render('bd_m_greenhand', extendPublic({}, req));
+            } else {
+                res.render('bd_greenhand', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+
     app.route('/bd/t29').get(function (req, res) {
         setEnvCf(req, res);
         res.render('bd_t29', extendPublic({}, req));

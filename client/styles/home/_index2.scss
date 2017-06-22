@@ -192,8 +192,55 @@
 }
 
 @include b(index2-banner) {
+    
+
     position: relative;
     text-align: center;
+
+    @include e(btn1) {
+        // margin-top: 60px;
+        padding: 19px 57px;
+        display: inline-block;
+        border: 1px solid $brand-primary;
+        border-radius: 4px;
+        background: transparent;
+        // font-weight: bold;
+        font-size: 24px;
+        line-height: 24px;
+        color: $brand-primary;
+
+        @include m(new) {
+            width: 966px;
+            margin: 0 auto;
+            position: relative;
+            cursor:pointer;
+
+            a {
+                position: absolute;
+                width: 174px;
+                height: 60px;
+                top: -122px;
+                right: 184px;
+                cursor: pointer;
+                border: 1px solid #fff;
+                border-radius: 38px;
+                text-align: center;
+                font-size: 25px;
+                line-height: 60px;
+                color: #fff;
+
+                &:hover {
+                    border-color: #ff1d25;
+                    color: #ff1d25;
+                }
+            }
+        }
+
+        &:hover {
+            background: $brand-primary;
+            color: $brand-index-hover;
+        }
+    }
 
     .swiper-slide{
         width:100%;
@@ -259,6 +306,17 @@
             img {
                 width: 100%;
             }
+        }
+    }
+    .index2-slide3 {
+        overflow: hidden;
+        height: 650px !important;
+        background-position: center center;
+        background-size: auto 100%;
+        @include img-normal($image-path-home + "index-banner-greenhand.png");
+        .index2-banner__btn1-new > a{
+            top: 380px;
+            right: 480px;
         }
     }
     //.index2-slide4 {
@@ -375,49 +433,8 @@
         font-weight: bold;
         color: #FDFDFD;
     }
-    @include e(btn1) {
-        margin-top: 60px;
-        padding: 19px 57px;
-        display: inline-block;
-        border: 1px solid $brand-primary;
-        border-radius: 4px;
-        background: transparent;
-        // font-weight: bold;
-        font-size: 24px;
-        line-height: 24px;
-        color: $brand-primary;
-
-        @include m(new) {
-            width: 966px;
-            margin: 0 auto;
-            position: relative;
-
-            a {
-                position: absolute;
-                width: 174px;
-                height: 60px;
-                top: -122px;
-                right: 184px;
-                cursor: pointer;
-                border: 1px solid #fff;
-                border-radius: 38px;
-                text-align: center;
-                font-size: 25px;
-                line-height: 60px;
-                color: #fff;
-
-                &:hover {
-                    border-color: #ff1d25;
-                    color: #ff1d25;
-                }
-            }
-        }
-
-        &:hover {
-            background: $brand-primary;
-            color: $brand-index-hover;
-        }
-    }
+    
+    
 
     @include e(b1-con) {
         font-size: 20px;
