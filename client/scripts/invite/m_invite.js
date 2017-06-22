@@ -171,18 +171,35 @@
     (function () {
         'use strict';
         if (!document.getElementById("m_share02_layout")) return false;
+
+        var page = 1;
+        var limit = 8;
+        var load_status = 1;   // 1 loading, 2 more, 3 complete
+        var list = {
+            list: []
+        };
+        $(".share02_main__history table tfoot .loading").css("display", "block");
+
         getInviteInfo();
+
+        $(".share02_main__history table tfoot .more").on('touchend', function () {
+            $(".share02_main__history table tfoot span").css("display", "none");
+            $(".share02_main__history table tfoot .loading").css("display", "block");
+
+            page++;
+            getInviteInfo();
+        });
         /*获取邀请概览*/
         function getInviteInfo() {
+            var offset = (page - 1)*limit;
+
             publicRequest('getInviteList', 'GET', {
-                page: 1,
-                pagesize: 50
+                offset: offset,
+                limit: limit
             }).then(function (data) {
                 if (!data) return;
                 if (data.is_succ) {
-                    var list = {
-                        list: data.data.records
-                    };
+                    list.list = list.list.concat(data.data.records);
                     /*模板引擎*/
                     baidu.template.LEFT_DELIMITER = '<$';
                     baidu.template.RIGHT_DELIMITER = '$>';
@@ -190,6 +207,14 @@
                     $("#history_list").html(list_str);
                     $("#invited_amount").html(data.data.record_count);
                     $("#invited_income").html(data.data.profit);
+
+                    if ((offset+limit) >= data.data.record_count) {
+                        $(".share02_main__history table tfoot span").css("display", "none");
+                        $(".share02_main__history table tfoot .complete").css("display", "block");
+                    } else {
+                        $(".share02_main__history table tfoot span").css("display", "none");
+                        $(".share02_main__history table tfoot .more").css("display", "block");
+                    }
                 }
             });
             // $.ajax({
