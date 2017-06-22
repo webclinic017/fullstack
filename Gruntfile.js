@@ -3,6 +3,7 @@
 
 module.exports = function (grunt) {
     var localConfig;
+    var path = require("path");
     try {
         localConfig = require('./server/config/local.env');
     } catch(e) {
@@ -255,11 +256,22 @@ module.exports = function (grunt) {
             }
         },
 
-        // Replace Google CDN references
+        // The task looks through your specified files for URLs to rewrite
         cdnify: {
-            dist: {
-                html: ['<%= yeoman.dist %>/<%= yeoman.client %>/*.html']
-            }
+          dist: {
+            options: {
+              // base: '//cdn.example.com/static/'
+              rewriter: function (url) {
+                return 'http://web.tigerwit.com'+url;
+              }
+            },
+            files: [{
+              expand: true,
+              cwd: 'dist',
+              src: '**/*.{css,html}',
+              dest: 'dist'
+            }]
+          }
         },
 
         // Copies remaining files to places other tasks can use
@@ -437,12 +449,12 @@ module.exports = function (grunt) {
         'concat',
         'ngAnnotate',
         'copy:dist',
-        // 'cdnify',
         'cssmin',
         'uglify',
         'filerev',
         'usemin',
-        'htmlmin'
+        'htmlmin',
+        'cdnify'
     ]);
 
     // grunt serve or build need to update variables.scss
