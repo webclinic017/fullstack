@@ -262,7 +262,7 @@ module.exports = function (grunt) {
             options: {
               // base: '//cdn.example.com/static/'
               rewriter: function (url) {
-                return 'http://web.tigerwit.com'+url;
+                return 'https://web.tigerwit.com'+url;
               }
             },
             files: [{
