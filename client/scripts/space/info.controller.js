@@ -110,14 +110,13 @@
         }
 
         function loopAsset () {
-            console.log($scope.personal.profile_check);
+            // console.log($scope.personal.profile_check);
+            getAssetInfo();
             if ($scope.personal.profile_check == 3) {
                 $interval.cancel(summaryId);
                 summaryId = $interval(function () {
                     getAssetInfo();
                 }, 5000);
-            } else {
-                getAssetInfo();
             }
         }
 

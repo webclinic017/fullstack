@@ -1,7 +1,7 @@
 <div ng-if="personal.basic === 'center.index'">
     <div class="space_center_total">
         <div class="space_center_total__num">
-            资产总额: ${{ personal.my_total_balance || '0.00' }}
+            资产总额: ${{ personal.my_total_balance || '--' }}
         </div>
         <div class="space_center_total__tip">
             交易帐户+零钱包
@@ -13,7 +13,7 @@
     <div class="space_center_invest">
         <div class="clearfix">
             <div class="space_center_invest__num">
-                交易帐户: ${{ personal.balance || '0.00' }}
+                交易帐户: ${{ personal.balance || '--' }}
             </div>
             <ul class="space_center_invest__btn">
                 <li>
@@ -70,7 +70,7 @@
     <div class="space_center_wallet">
         <div class="clearfix">
             <div class="space_center_wallet__num">
-                零钱包: ${{ personal.wallet_balance || '0.00' }}
+                零钱包: ${{ personal.wallet_balance || '--' }}
             </div>
             <ul class="space_center_wallet__btn">
                 <li>
