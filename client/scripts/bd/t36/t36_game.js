@@ -201,10 +201,6 @@
         isVerifyCode = true;
 
         if (tiger_token) {
-            // umeng
-            _czc && _czc.push(["_trackEvent","t36_game注册","获取验证码"]);
-            // 神策数据统计
-            sa && sa.track('btn_register_code');
             sendVerifyCode();
         } else {
             sa && sa.track('set_token_failed');
@@ -934,6 +930,11 @@
             data = JSON.parse(data);
             // console.log(data);
             if (data.is_succ) {
+                // umeng
+                _czc && _czc.push(["_trackEvent","t36_game注册","获取验证码"]);
+                // 神策数据统计
+                sa && sa.track('btn_register_code');
+                
                 layer.open({
                     content: '验证码发送成功!',
                     skin: 'msg',
