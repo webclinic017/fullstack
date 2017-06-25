@@ -90,9 +90,7 @@
                 });
             }
 
-            /*统计代码*/
-            sa.track('btn_register_code');
-            _czc.push(["_trackEvent", "注册页", "获取验证码"]);
+            
 
             /*今日头条*/
             // if (window.location.pathname.indexOf('t33_b') != -1) {
@@ -116,6 +114,10 @@
                         anim: false,
                         time: 1.2 /*1.2秒后自动关闭*/
                     });
+
+                    /*统计代码*/
+                    sa.track('btn_register_code');
+                    _czc.push(["_trackEvent", "注册页", "获取验证码"]);
 
                     /*倒计时*/
                     if (Boolean(interval) == false) {
