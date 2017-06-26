@@ -84,7 +84,7 @@
             </div>
 
             <button ng-if="frontErr.insufficient.show" class="btn btn-primary btn-sm">
-               <a ui-sref="space.asset.subpage({subpage:'deposit'})" ng-click="closeModal()">去充值</a>
+               <a href="/space/#/space/asset/deposit" class="font-base" ng-click="closeModal()">去充值</a>
             </button>
 
             <button ng-if="!frontErr.insufficient.show && clickable.copy" 
@@ -111,7 +111,7 @@
         <!--强制继续按钮组-->
         <div class="system_modal__btn_wrapper mg-tp-30">
             <button class="btn btn-gray btn-sm" ng-click="cancleSubmit()" ng-if="clickable.copy">
-                < 返回修改
+                返回修改
             </button>
 
             <button class="btn btn-primary btn-sm" ng-click="submitForm()" ng-if="clickable.copy">
