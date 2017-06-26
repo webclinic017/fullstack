@@ -1,8 +1,11 @@
 <div class="system_modal">
     <button class="close" ng-click="closeModal()">&times;</button>
 
-    <h5 class="system_modal__title">
+    <h5 class="system_modal__title" ng-if="copyTrade.title == 'modify'">
         修改复制金额
+    </h5>
+    <h5 class="system_modal__title" ng-if="copyTrade.title == 'copy'">
+        复制 {{ copyTrade.username }}
     </h5>
 
     <div class="system_modal__content" ng-show="step == 1">
@@ -65,7 +68,7 @@
             </div>
         </form>
 
-        <div class="text-center copy_modal__tip mg-tp-20">
+        <div class="text-center copy_modal__tip mg-tp-20 font-dark">
             如果复制金额少于建议复制金额，当高手的交易的手数过小，您的跟单可能会失败。
         </div>
 
@@ -80,11 +83,14 @@
                 </p>
             </div>
 
-            <button ng-if="frontErr.insufficient.show" class="btn btn-primary btn-sm" >
+            <button ng-if="frontErr.insufficient.show" class="btn btn-primary btn-sm">
                <a ui-sref="space.asset.subpage({subpage:'deposit'})" ng-click="closeModal()">去充值</a>
             </button>
 
-            <button ng-if="!frontErr.insufficient.show && clickable.copy" class="btn btn-primary btn-sm" ng-click="submitStep1(false)">
+            <button ng-if="!frontErr.insufficient.show && clickable.copy" 
+                class="btn btn-sm btn-dark" 
+                ng-class="{ 'btn-dark' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
+                ng-click="submitStep1(false)">
                 提交
             </button>
 
@@ -105,7 +111,7 @@
         <!--强制继续按钮组-->
         <div class="system_modal__btn_wrapper mg-tp-30">
             <button class="btn btn-gray btn-sm" ng-click="cancleSubmit()" ng-if="clickable.copy">
-                返回修改
+                < 返回修改
             </button>
 
             <button class="btn btn-primary btn-sm" ng-click="submitForm()" ng-if="clickable.copy">
@@ -121,9 +127,13 @@
 
     <div class="system_modal__content" ng-if="step == 3">
         <div>
-            <p class="system_modal__info">
-                <i class="operate_tip__succ_icon fa fa-check-circle"></i>
+            <p class="system_modal__info" ng-if="copyTrade.title == 'modify'">
+                <i class="operate_tip__succ_icon fa fa-check-circle font-primary"></i>
                 复制金额修改成功
+            </p>
+            <p class="system_modal__info" ng-if="copyTrade.title == 'copy'">
+                <i class="operate_tip__succ_icon fa fa-check-circle font-primary"></i>
+                复制成功
             </p>
         </div>
     </div>
