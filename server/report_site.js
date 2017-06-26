@@ -1,4 +1,15 @@
 var report_sites = [
+    /*添加时间 2017-6-26*/
+    {
+        address: 'http://news.163.com/17/0614/21/CMU1LP9H00014AEE.html',
+        description: '【网易新闻】安迪刘涛投资受关注 老虎外汇、老虎证券、铜掌柜助力普通投资者',
+        date: '2017-06-14'
+    },
+    {
+        address: 'http://news.163.com/17/0619/17/CNAEU2G200014AEE.html',
+        description: '【网易新闻】从eToro、老虎外汇看社区交易、复制跟单交易的魅力',
+        date: '2017-06-19'
+    },
     /*添加时间 2017-6-20*/
     {
         address: 'http://c.m.163.com/news/a/CMARV9IH0511DQOT.html?spss=newsapp&spsw=1',
