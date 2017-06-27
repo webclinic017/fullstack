@@ -129,3 +129,30 @@
         text-align: center;
     }
 }
+
+@include b(sys_modal){
+    .close {
+        margin-top: 4px;
+        margin-right: 10px;
+        font-size: 22px;
+        @extend .font-base;
+    }
+
+    @include e(title){
+        margin: 0;
+        padding: 8px 15px;
+        line-height: 20px;
+        @extend .font-base;
+        font-size: 25px;
+    }
+
+    @include e(sub_title){
+        margin: 0;
+        padding: 8px 15px;
+        line-height: 20px;
+        @extend .font-base;
+        font-size: 20px;
+    }
+
+    
+}

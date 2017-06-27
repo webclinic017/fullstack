@@ -1,12 +1,15 @@
-<div class="system_modal">
+<div class="sys_modal">
     <button class="close" ng-click="closeModal()">&times;</button>
 
-    <h5 class="system_modal__title" ng-if="copyTrade.title == 'modify'">
+    <h5 class="sys_modal__title" ng-if="copyTrade.title == 'modify'">
         修改复制金额
     </h5>
-    <h5 class="system_modal__title" ng-if="copyTrade.title == 'copy'">
-        复制 {{ copyTrade.username }}
+    <h5 class="sys_modal__title" ng-if="copyTrade.title == 'copy'">
+        复制 
     </h5>
+    <h6 class="sys_modal__sub_title" ng-if="copyTrade.title == 'copy'">
+        {{ copyTrade.username }}
+    </h6>
 
     <div class="system_modal__content" ng-show="step == 1">
         <form class="mg-tp-30" name="copyForm" novalidate>
