@@ -3,6 +3,7 @@
 
 module.exports = function (grunt) {
     var localConfig;
+    var CDN_URL = '';
     var path = require("path");
     try {
         localConfig = require('./server/config/local.env');
@@ -262,7 +263,7 @@ module.exports = function (grunt) {
             options: {
               // base: '//cdn.example.com/static/'
               rewriter: function (url) {
-                return 'https://web.tigerwit.com'+url;
+                return CDN_URL+url;
               }
             },
             files: [{
@@ -286,6 +287,7 @@ module.exports = function (grunt) {
                         src: [
                             'views/**/*.html',
                             '*.ico',
+                            '*.xml',
                             'fonts/*.*',
                             'plugins/**'
                         ]
@@ -454,7 +456,7 @@ module.exports = function (grunt) {
         'filerev',
         'usemin',
         'htmlmin',
-        // 'cdnify'
+        'cdnify'
     ]);
 
     // grunt serve or build need to update variables.scss
@@ -471,7 +473,8 @@ module.exports = function (grunt) {
         // change process env config
         if (node_env == "dev") node_env = "development";
         if (node_env == "pro") node_env = "production";
-
+        // set CDN URL
+        CDN_URL = url === 'wwww' ? 'https://web.tigerwit.com' : 'https://webdemo.tigerwit.com';
         var url_path, login_public_key;
 
         url_path = companyInfo[company][url]["url_path"];
