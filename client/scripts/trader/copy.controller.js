@@ -40,7 +40,10 @@
             });
         }
 
+        // 流程控制
         $scope.step = 1;
+        // 是否重新填写
+        $scope.hasCanceled = undefined;
 
         $scope.frontErr = {
             amount: {
@@ -90,9 +93,10 @@
 
         $scope.cancleSubmit = function () {
             $scope.step = 1;
+            $scope.hasCanceled = true;
         }
 
-        $scope.submitStep1 = function () {
+        $scope.submitStep1 = function (isForce) {
             showErr('amount');
 
             if (typeof $scope.copyTrade.avaCopyAmount === 'undefined') {
@@ -105,8 +109,9 @@
             }
 
             // 不是强制继续的时候检测建议交易金额
-            console.log($scope.copyTrade.amount, Number($scope.copyTrade.advice));
-            if (Number($scope.copyTrade.amount) < Number($scope.copyTrade.advice.split('.')[0])) {
+            // console.log((Number($scope.copyTrade.amount), Number($scope.copyTrade.advice.split('.')[0])), isForce);
+            
+            if ((Number($scope.copyTrade.amount) < Number($scope.copyTrade.advice.split('.')[0])) && !isForce) {
                 goStep(2);
             } else {
                 // 如果通过直接提交表单
@@ -132,11 +137,9 @@
                         btn_name: '复制'
                     });
 
-                    $timeout(function () {
-                        closeModal();
-                    }, 800);
                 } else {
                     goStep(1);
+                    $scope.hasCanceled = false;
 
                     $scope.backErr.system.show = true;
                     $scope.backErr.system.msg = data.message;

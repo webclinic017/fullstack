@@ -169,7 +169,6 @@
             });
         }
 
-        openCopyMdl();
         function openCopyMdl() {
 
             $modal.open({

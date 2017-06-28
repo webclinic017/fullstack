@@ -1,5 +1,7 @@
 <div class="sys_modal">
-    <button class="close" ng-click="closeModal()">&times;</button>
+    <p class="clearfix">
+        <button class="close" ng-click="closeModal()">&times;</button>
+    </p>
 
     <h5 class="sys_modal__title" ng-if="copyTrade.title == 'modify'">
         修改复制金额
@@ -7,19 +9,21 @@
     <h5 class="sys_modal__title" ng-if="copyTrade.title == 'copy'">
         复制 
     </h5>
-    <h6 class="sys_modal__sub_title" ng-if="copyTrade.title == 'copy'">
+    <h5 class="sys_modal__sub_title" ng-if="copyTrade.title == 'copy'">
         {{ copyTrade.username }}
-    </h6>
+    </h5>
 
-    <div class="system_modal__content" ng-show="step == 1">
+    <div class="sys_modal__content" ng-show="step == 1">
         <form class="mg-tp-30" name="copyForm" novalidate>
             <div class="row">
                 <div class="col-xs-4">
-                    <label>复制金额：</label>
+                    <label>复制金额</label>
                 </div>
-                <div class="col-xs-8">
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
                     <div class="form-control-wrapper">
-                        <input class="form-control icon"
+                        <input class="form-control icon bd-bt"
                                name="amount"
                                type="number"
                                ng-class="{'form-control-error': frontErr.amount.show && copyForm.amount.$invalid}"
@@ -31,7 +35,7 @@
                                ng-change="calAmount()"
                                ng-blur="[showErr('amount')]">
 
-                        <i class="fa fa-dollar form-control-icon font-primary"></i>
+                        <i class="fa fa-dollar form-control-icon bd-bt font-base"></i>
 
                         <div ng-show="frontErr.amount.show">
                             <p class="alert-arrow_tp_lf" ng-show="copyForm.amount.$error.required">
@@ -45,33 +49,45 @@
                     </div>
                 </div>
             </div>
-
+            <br>
             <div class="row">
                 <div class="col-xs-4">
-                    <label>可用金额:</label>
+                    <label>可用复制金额:</label>
                 </div>
-                <div class="col-xs-8">
+                <div class="col-xs-8 text-right">
                     <label class="copy_modal__label">
-                        <i class="fa fa-dollar font-primary"></i>
+                        <i class="fa fa-dollar font-base"></i>
                         {{ copyTrade.avaCopyAmount || '0.00' }}
+                    </label>
+                </div>
+            </div>
+
+            <div class="row" ng-if="hasCanceled">
+                <div class="col-xs-4">
+                    <label>当前复制金额:</label>
+                </div>
+                <div class="col-xs-8 text-right">
+                    <label class="copy_modal__label">
+                        <i class="fa fa-dollar font-base"></i>
+                        {{ copyTrade.amount || '0.00' }}
                     </label>
                 </div>
             </div>
 
             <div class="row">
                 <div class="col-xs-4">
-                    <label>建议金额:</label>
+                    <label>建议复制金额:</label>
                 </div>
-                <div class="col-xs-8">
+                <div class="col-xs-8 text-right">
                     <label class="copy_modal__label">
-                        <i class="fa fa-dollar font-primary"></i>
+                        <i class="fa fa-dollar font-base"></i>
                         {{ copyTrade.advice || '0.00' }}
                     </label>
                 </div>
             </div>
         </form>
 
-        <div class="text-center copy_modal__tip mg-tp-20 font-dark">
+        <div class="text-left copy_modal__tip mg-tp-20 font-dark">
             如果复制金额少于建议复制金额，当高手的交易的手数过小，您的跟单可能会失败。
         </div>
 
@@ -79,65 +95,120 @@
             <p ng-if="frontErr.insufficient.show">可用复制金额不足</p>
         </div>
 
-        <div class="system_modal__btn_wrapper mg-tp-30">
-            <div ng-show="backErr.system.show">
+        <div class="sys_modal__btn_wrapper clearfix">
+            <div ng-if="backErr.system.show">
                 <p class="alert-system">
                     {{ backErr.system.msg }}
                 </p>
             </div>
 
-            <button ng-if="frontErr.insufficient.show" class="btn btn-primary btn-sm">
-               <a href="/space/#/space/asset/deposit" target="_blank" class="font-base" ng-click="closeModal()">去充值</a>
+            <button ng-if="frontErr.insufficient.show" class="btn btn-primary btn-lt fr">
+               <a href="/space/#/space/asset/deposit" target="_blank" class="font-base">去充值</a>
             </button>
 
-            <button ng-if="!frontErr.insufficient.show && clickable.copy" 
-                class="btn btn-sm btn-dark" 
-                ng-class="{ 'btn-dark' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
-                ng-click="submitStep1(false)">
-                提交
-            </button>
+            <!--正常提交按钮-->
+            <div class="clearfix" ng-if="!hasCanceled">
+                <button ng-if="!frontErr.insufficient.show && clickable.copy && copyTrade.title == 'copy'" 
+                    class="btn btn-lt btn-dark fr" 
+                    ng-class="{ 'btn-dark' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
+                    ng-click="submitStep1(false)">
+                    复制交易
+                </button>
 
-            <button class="btn btn-primary btn-sm active" disabled ng-if="!clickable.copy">
-                <i class="loading_spinner fa fa-spinner"></i>
-                提交中
-            </button>
-        </div>        
+                <button ng-if="!frontErr.insufficient.show && clickable.copy && copyTrade.title == 'modify'" 
+                    class="btn btn-lt btn-dark fr" 
+                    ng-class="{ 'btn-dark' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
+                    ng-click="submitStep1(false)">
+                    确认修改
+                </button>
+
+                <button class="btn btn-primary btn-lt active fr" disabled ng-if="!clickable.copy">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    提交中
+                </button>
+            </div>
+
+            <!--返回修改按钮-->
+            <div class="clearfix" ng-if="hasCanceled">
+                <button ng-if="!frontErr.insufficient.show && clickable.copy" 
+                    class="btn btn-lt btn-dark fr" 
+                    ng-class="{ 'btn-dark' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
+                    ng-click="submitStep1(true)">
+                    确认修改
+                </button>
+
+                <button class="btn btn-primary btn-lt active fr" disabled ng-if="!clickable.copy">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    提交中
+                </button>
+            </div>
+        </div>
     </div>
 
-    <div class="system_modal__content" ng-if="step == 2">
-        <div class="text-center copy_modal__tip mg-tp-20">
-            复制金额少于建议复制金额，会有跟单失败的风险
-            <br>
-            是否要继续？
+    <div class="sys_modal__content" ng-if="step == 2">
+        <div class="text-left copy_modal__tip mg-tp-20">
+            您的复制金额低于建议复制金额，有跟单失败的风险，仍然继续复制吗？
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-4">
+                <label>复制金额:</label>
+            </div>
+            <div class="col-xs-8 text-right">
+                <label class="copy_modal__label font-danger">
+                    <i class="fa fa-dollar"></i>
+                    {{ copyTrade.amount || '0.00' }}
+                </label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-4">
+                <label>建议金额:</label>
+            </div>
+            <div class="col-xs-8 text-right">
+                <label class="copy_modal__label">
+                    <i class="fa fa-dollar font-base"></i>
+                    {{ copyTrade.advice || '0.00' }}
+                </label>
+            </div>
         </div>
 
         <!--强制继续按钮组-->
-        <div class="system_modal__btn_wrapper mg-tp-30">
-            <button class="btn btn-gray btn-sm" ng-click="cancleSubmit()" ng-if="clickable.copy">
-                返回修改
-            </button>
-
-            <button class="btn btn-primary btn-sm" ng-click="submitForm()" ng-if="clickable.copy">
+        <div class="sys_modal__btn_wrapper clearfix">
+            <button class="btn btn-primary btn-lt fr" ng-click="submitForm()" ng-if="clickable.copy">
                 继续
             </button>
 
-            <button class="btn btn-primary btn-sm active" disabled ng-if="!clickable.copy">
+            <button class="btn btn-primary btn-lt fr mg-rg-15" ng-click="cancleSubmit()" ng-if="clickable.copy">
+                取消
+            </button>
+            
+            <button class="btn btn-primary btn-lt active fr" disabled ng-if="!clickable.copy">
                 <i class="loading_spinner fa fa-spinner"></i>
                 正在提交
             </button>
         </div>
     </div>
 
-    <div class="system_modal__content" ng-if="step == 3">
+    <div class="sys_modal__content" ng-if="step == 3">
         <div>
-            <p class="system_modal__info" ng-if="copyTrade.title == 'modify'">
-                <i class="operate_tip__succ_icon fa fa-check-circle font-primary"></i>
+            <p class="text-center mg-tp-50">
+                <svg width="90" height="90">
+                    <image xlink:href="/images/web/circle-right.svg" src="/images/web/circle-right.png" width="90" height="90" />
+                </svg>
+            </p>
+            <p class="text-center mg-tp-10 font-normal" ng-if="copyTrade.title == 'modify'">
                 复制金额修改成功
             </p>
-            <p class="system_modal__info" ng-if="copyTrade.title == 'copy'">
-                <i class="operate_tip__succ_icon fa fa-check-circle font-primary"></i>
+            <p class="text-center mg-tp-10 font-normal" ng-if="copyTrade.title == 'copy'">
                 复制成功
             </p>
+        </div>
+        <div class="sys_modal__btn_wrapper mg-tp-30 clearfix">
+            <button class="btn btn-primary btn-lt fr" ng-click="closeModal()">
+                确定
+            </button>
         </div>
     </div>
 

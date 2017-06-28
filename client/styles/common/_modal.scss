@@ -131,16 +131,18 @@
 }
 
 @include b(sys_modal){
+    padding-left: 20px;
+    padding-right: 20px;
+
     .close {
         margin-top: 4px;
-        margin-right: 10px;
         font-size: 22px;
         @extend .font-base;
     }
 
     @include e(title){
         margin: 0;
-        padding: 8px 15px;
+        padding: 8px 0;
         line-height: 20px;
         @extend .font-base;
         font-size: 25px;
@@ -148,11 +150,21 @@
 
     @include e(sub_title){
         margin: 0;
-        padding: 8px 15px;
         line-height: 20px;
         @extend .font-base;
         font-size: 20px;
     }
 
-    
+    @include e(content) {
+        min-height: 150px;
+    }
+
+    @include e(btn_wrapper) {
+        margin-top: 30px;
+        margin-bottom: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        // border-top: 1px solid $gray;
+        text-align: center;
+    }
 }
