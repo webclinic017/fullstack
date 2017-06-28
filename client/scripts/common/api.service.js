@@ -46,7 +46,8 @@
             checkEmailCodeApi: urlOrigin2 + '/validation/check_email_code',
             setBindEmailApi: urlOrigin2 + '/user/email',
             getSpreadInfoApi: urlOrigin2 + '/spread_info',
-            getUserGroupApi: urlOrigin2 + '/user/group'
+            getUserGroupApi: urlOrigin2 + '/user/group',
+            getAdvertiseRecords: urlOrigin2 + '/position/records',
         };
         var asset = {
             withdrawApi: urlOrigin2 + '/payment/withdraw',

@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('HomeIndexController', HomeIndexController);
 
-    HomeIndexController.$inject = ['$scope', 'product', 'ranklist', '$cookies', '$location', 'account'];
+    HomeIndexController.$inject = ['$scope', 'product', 'ranklist', '$cookies', '$location', 'account', '$timeout'];
 
-    function HomeIndexController($scope, product, ranklist, $cookies, $location, account) {
+    function HomeIndexController($scope, product, ranklist, $cookies, $location, account, $timeout) {
         var company = $cookies["company_name"];
         var userCode = $cookies["user_code"];
 
@@ -36,6 +36,7 @@
         }
 
         $scope.indexMasters = [];// 首页 第二模块的高手
+        $scope.advertiseLst = [];
 
         // 此为index2 首页的高手信息
         ranklist.getMastersList().then(function (data) {
@@ -86,6 +87,20 @@
                 }
             }
         } getUserParam();
+
+        // 轮播图信息
+        getAdvertiseRecords();
+        function getAdvertiseRecords () {
+            account.getAdvertiseRecords().then(function (data) {
+                console.log(data);
+                if (data.is_succ) {
+                    $scope.advertiseLst = data.data;
+                    $timeout(function () {
+                        $scope.$emit('carousel-swiper');
+                    });
+                }
+            });
+        }
 
         // 报价服务
         $scope.quoteSymbols = [];

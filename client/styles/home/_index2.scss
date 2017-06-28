@@ -245,78 +245,18 @@
     .swiper-slide{
         width:100%;
     }
-    .index2-slide1 {
-        overflow: hidden;
-        height: 650px !important;
-        background-position: center center;
-        background-size: cover;
-        @include img-normal($image-path-home + "index-banner-redbag_0501.png");
-        
-        &.pkds {
-            @include img-normal($image-path-home + "index3-banner1.jpg");
-        }
-
-        .pic {
-            padding-top: 69px;
-
-            img {
-                height: 520px;
-            }
-        }
-        .date {
-            font-size: 24px;
-            padding-top: 20px;
-        }
-
-    }
-    .index2-slide2 {
-        overflow: hidden;
-        height: 650px !important;
-        background-position: center center;
-        background-size: cover;
-        @include img-normal($image-path-home + "index2-banner2-new.jpg");
-        
-        &.pkds {
-            @include img-normal($image-path-home + "index2-banner2_pre.jpg");
-        }
-    }
-    .index2-slide3 {
-        overflow: hidden;
-        height: 650px !important;
-        background-position: center center;
-        background-size: cover;
-        @include img-normal($image-path-home + "index2-banner3.jpg");
-
-        &.en {
-            @include img-normal($image-path-home + "index2-banner3-en.jpg");
-        }
-
-    }
-    .index2-slide4 {
-        overflow: hidden;
-        height: 650px !important;
-        background-position: center center;
-        background-size: cover;
-        @include img-normal($image-path-home + "index2-banner4-bg.png");
-
-        .pic {
-            width: 1100px;
-            margin: 69px auto 0;
-
-            img {
-                width: 100%;
-            }
-        }
-    }
-    .index2-slide3 {
+    
+    .index2-slide {
         overflow: hidden;
         height: 650px !important;
         background-position: center center;
         background-size: auto 100%;
-        @include img-normal($image-path-home + "index-banner-greenhand.png");
-        .index2-banner__btn1-new > a{
-            top: 380px;
-            right: 480px;
+        
+        .slide__btn_wrapper {
+            width: 1030px;
+            display: block;
+            margin: 0 auto;
+            height: 650px;
         }
     }
     //.index2-slide4 {
