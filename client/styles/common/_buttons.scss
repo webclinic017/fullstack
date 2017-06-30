@@ -52,6 +52,9 @@
     @include button-size(0px, 15px, 12px, 30px, $btn-border-radius);
 }
 
+.btn-lt {
+    @include button-size(0px, $btn-padding-horizontal-lt, $btn-font-size-lt, $btn-height-lt, $btn-border-radius);
+}
 .btn-sm {
     @include button-size(0px, $btn-padding-horizontal-sm, $btn-font-size-sm, $btn-height-sm, $btn-border-radius);
 }

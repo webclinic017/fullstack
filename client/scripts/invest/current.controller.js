@@ -123,7 +123,7 @@
                         trader.minCopyAmount = trader.min_copy_amount;
                         return {
                             copiedTrader: trader,
-                            // avaCopyAmount: avaCopyAmount
+                            title: 'modify'
                         }
                     }
                 }

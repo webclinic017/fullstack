@@ -210,6 +210,10 @@ $navbar-bg:                         #fff !default;
 $navbar-font-size:                  16px !default;
 
 //== Btns
+$btn-height-lt:                     35px !default;
+$btn-padding-horizontal-lt:         40px !default;
+$btn-font-size-lt:                  14px !default;
+
 $btn-padding-vertical:              8px !default;
 $btn-padding-horizontal-sm:         45px !default;
 $btn-padding-horizontal:            70px !default;
@@ -267,6 +271,7 @@ $table-color-head:              #333;
 $table-border-color:            #ebebeb !default;
 
 //== Forms
+$input-padding-left-normal:     20px !default;
 $input-padding-left:            30px !default;
 $input-bg:                      rgba(0, 0, 0, 0) !default;
 $input-color:                   $gray-darker !default;
