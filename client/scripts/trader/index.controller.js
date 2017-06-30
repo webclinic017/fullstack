@@ -12,6 +12,7 @@
         $scope.toCopy = toCopy;
         var usercode,
             detailId,
+            AvaCopyInfo,
             avaCopyAmount;
 
         var absUrl = $location.absUrl();
@@ -101,6 +102,7 @@
                             avaCopyAmount = data.data.usable;
                             $scope.master.avaCopyAmount = data.data.usable;
                             $scope.master.min_copy_amount = data.data.min_copy_amount;
+                            AvaCopyInfo = data.data;
                         } else {
                             avaCopyAmount = 0;
                         }
@@ -167,10 +169,11 @@
             });
         }
 
+        // openCopyMdl()
         function openCopyMdl() {
 
             $modal.open({
-                templateUrl: '/views/trader/master_copy_modal.html',
+                templateUrl: '/views/invest/copy_modal.html',
                 controller: 'TraderCopyController',
                 size: 'sm',
                 backdrop: 'static',
@@ -181,7 +184,8 @@
 
                         return {
                             copiedTrader: $scope.master,
-                            avaCopyAmount: avaCopyAmount
+                            AvaCopyInfo: AvaCopyInfo,
+                            title: 'copy'
                         }
                     }
                 }
