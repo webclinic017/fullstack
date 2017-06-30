@@ -258,6 +258,10 @@
             margin: 0 auto;
             height: 650px;
         }
+
+        &.default {
+            @include img-normal($image-path-home + "banner-default.png");
+        }
     }
     //.index2-slide4 {
     //    overflow: hidden;

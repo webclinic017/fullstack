@@ -89,15 +89,20 @@
         } getUserParam();
 
         // 轮播图信息
+        $scope.getBannerSucc = false;
+
         getAdvertiseRecords();
         function getAdvertiseRecords () {
             account.getAdvertiseRecords().then(function (data) {
                 console.log(data);
                 if (data.is_succ) {
+                    $scope.getBannerSucc = true;
                     $scope.advertiseLst = data.data;
-                    $timeout(function () {
-                        $scope.$emit('carousel-swiper');
-                    });
+                    if ($scope.advertiseLst.length > 0) {
+                        $timeout(function () {
+                            $scope.$emit('carousel-swiper');
+                        });
+                    }
                 }
             });
         }
