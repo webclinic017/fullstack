@@ -697,14 +697,14 @@ module.exports = function (app) {
         }
     });
 
-    // app.route('/bd/t37').get(function (req, res) {
-    //     setEnvCf(req, res);
-    //     if (isMobile(req)) {
-    //         res.render('bd_m_t37', extendPublic({}, req))
-    //     } else {
-    //         res.render('bd_t37', extendPublic({}, req));
-    //     }
-    // });
+    app.route('/bd/t38').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            res.render('bd_m_t38', extendPublic({}, req))
+        } else {
+            res.render('bd_t38', extendPublic({}, req));
+        }
+    });
 
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
     /*
