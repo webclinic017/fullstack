@@ -27,6 +27,8 @@
                 avaCopyAmount: avaCopyInfo.usable || undefined,
                 advice: avaCopyInfo.advice
             });
+            getDefaultAmount();
+            // $scope.copyTrade.amount = avaCopyInfo.advice;
         } else {
             getAvaCopyAmount(copiedTrader.usercode);
         }
@@ -36,8 +38,23 @@
             trader.getAvaCopyAmount(usercode).then(function (data) {
                 $scope.copyTrade.avaCopyAmount = data.data.usable;
                 $scope.copyTrade.advice = data.data.advice;
+                // $scope.copyTrade.amount = avaCopyInfo.advice;
                 $scope.calAmount();
+                getDefaultAmount();
             });
+        }
+
+        function getDefaultAmount(){
+            var ava = Number($scope.copyTrade.avaCopyAmount);
+            var adv = Number($scope.copyTrade.advice);
+            var min = Number(200);
+            console.log(ava,adv,min);
+            if((min < ava && ava < adv) || ava < min){
+                $scope.copyTrade.amount = ava;
+            }
+            if(ava > adv){
+                $scope.copyTrade.amount = adv;
+            }
         }
 
         // 流程控制

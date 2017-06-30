@@ -12,14 +12,11 @@
     left: 0;
     z-index: $zindex-modal;
     -webkit-overflow-scrolling: touch;
-
     outline: 0;
-
     &.fade .modal-dialog {
         @include translate(0, -25%);
         @include transition-transform(0.3s ease);
     }
-
     &.in .modal-dialog {
         @include translate(0, 0);
     }
@@ -72,7 +69,8 @@
 .modal-sm {
     width: $modal-sm;
 }
-.modal-md{
+
+.modal-md {
     width: $modal-md;
 }
 
@@ -82,17 +80,14 @@
 
 //== 系统弹窗
 @include b(system_modal) {
-
     label {
         line-height: 40px;
     }
-
     .close {
         margin-top: 4px;
         margin-right: 10px;
         font-size: 22px;
     }
-
     @include e(title) {
         margin: 0;
         padding: 8px 15px;
@@ -100,26 +95,20 @@
         color: #fff;
         background-color: $gray-dark;
     }
-
     @include e(content) {
         min-height: 150px;
         padding: 15px 40px;
-    }
-
-    // 一级描述
+    } // 一级描述
     @include e(info) {
         margin-top: 50px;
         margin-bottom: 20px;
         text-align: center;
         font-size: 18px;
-    }
-
-    // 二级描述
+    } // 二级描述
     @include e(tip) {
         text-align: center;
         color: $gray-dark;
     }
-
     @include e(btn_wrapper) {
         margin-top: 50px;
         margin-bottom: 0;
@@ -130,41 +119,38 @@
     }
 }
 
-@include b(sys_modal){
+@include b(sys_modal) {
     padding-left: 20px;
     padding-right: 20px;
-
+    .copy_modal__label {
+        font-size: 20px;
+    }
     .close {
         margin-top: 4px;
         font-size: 22px;
         @extend .font-base;
     }
-
-    @include e(title){
+    @include e(title) {
         margin: 0;
         padding: 8px 0;
         line-height: 20px;
         @extend .font-base;
         font-size: 25px;
     }
-
-    @include e(sub_title){
+    @include e(sub_title) {
         margin: 0;
         line-height: 20px;
         @extend .font-base;
         font-size: 20px;
     }
-
     @include e(content) {
         min-height: 150px;
     }
-
     @include e(btn_wrapper) {
         margin-top: 30px;
         margin-bottom: 0;
         padding-top: 30px;
-        padding-bottom: 30px;
-        // border-top: 1px solid $gray;
+        padding-bottom: 30px; // border-top: 1px solid $gray;
         text-align: center;
     }
 }
