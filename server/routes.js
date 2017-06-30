@@ -664,9 +664,9 @@ module.exports = function (app) {
             //     res.render('bd_redbag', extendPublic({}, req));
             // }
             if (isMobile(req)) {
-                res.render('bd_m_t37', extendPublic({}, req))
+                res.render('bd_m_t38', extendPublic({}, req))
             } else {
-                res.render('bd_t37', extendPublic({}, req));
+                res.render('bd_t38', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -694,15 +694,6 @@ module.exports = function (app) {
             res.render('bd_mt36_game', extendPublic({}, req))
         } else {
             res.render('bd_pct36_game', extendPublic({}, req));
-        }
-    });
-
-    app.route('/bd/t38').get(function (req, res) {
-        setEnvCf(req, res);
-        if (isMobile(req)) {
-            res.render('bd_m_t38', extendPublic({}, req))
-        } else {
-            res.render('bd_t38', extendPublic({}, req));
         }
     });
 
