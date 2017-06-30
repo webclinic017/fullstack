@@ -1,0 +1,40 @@
+<footer class='clearfix' style="display:none">
+    <!-- 友盟统计 2016.09.21 -->
+    <div style="display:none">
+        <script type="text/javascript">
+            var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260394016'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260394016' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+    </div>
+
+    <!-- 360推广统计代码（16号下线）2016.11.02-->
+    <script type="text/javascript">
+            var _mvq = _mvq || [];
+            _mvq.push(['$setAccount', 'm-202313-0']);
+            _mvq.push(['$logConversion']);
+            (function () {
+                var mvl = document.createElement('script');
+                mvl.type = 'text/javascript'; mvl.async = true;
+                mvl.src = ('https:' == document.location.protocol ? 'https://static-ssl.mediav.com/mvl.js' : 'http://static.mediav.com/mvl.js');
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(mvl, s);
+            })();
+    </script>
+    <!--以上是流量统计(到达转化)代码，后续转化代码需要配合流量统计代码一同使用-->
+
+    <script>
+        function pyRegisterCvt(_orderno, _money, _productList) {
+            var w = window, d = document, e = encodeURIComponent;
+            var b = location.href, c = d.referrer, f, g = d.cookie, h = g.match(/(^|;)\s*ipycookie=([^;]*)/), i = g.match(/(^|;)\s*ipysession=([^;]*)/);
+            if (w.parent != w) {
+                f = b;
+                b = c;
+                c = f;
+            }
+            ;
+            u = '//stats.ipinyou.com/cvt?a=' + e('Hms.hxs.odF1F7r66vVyAG84pJ2wN0') + '&c=' + e(h ? h[2] : '') + '&s=' + e(i ? i[2].match(/jump\%3D(\d+)/)[1] : '') + '&u=' + e(b) + '&r=' + e(c) + '&rd=' + (new Date()).getTime() + '&OrderNo=' + e(_orderno) + '&Money=' + e(_money) + '&ProductList=' + e(_productList) + '&e=';
+            (new Image()).src = u;
+        }
+    </script>
+    <!--品牌合作代码 end-->
+</footer>

@@ -169,9 +169,7 @@
             });
         }
 
-        // openCopyMdl()
         function openCopyMdl() {
-
             $modal.open({
                 templateUrl: '/views/invest/copy_modal.html',
                 controller: 'TraderCopyController',

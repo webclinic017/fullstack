@@ -30,8 +30,8 @@
                 closeBtn: 0,
                 title: '',
                 shade: 0.6,
-                area: ['800px', '600px'], //宽高
-                content: '<div class="content"><a href="/bd/t35" class="btn"></a><div class="close" onclick="layer.closeAll();"></div></div>'
+                area: ['768px', '448px'], //宽高
+                content: '<div class="content"><a href="/bd/t35" class="btn">注册领红包</a><div class="close" onclick="layer.closeAll();"></div></div>'
             });
         }
 

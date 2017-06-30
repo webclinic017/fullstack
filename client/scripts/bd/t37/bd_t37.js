@@ -14,9 +14,16 @@
         });
     });
 
-    // $('.bd_t37').ripples({
-    //     resolution: 512,
-    //     dropRadius: 20,
-    //     perturbance: 0.01,
-    // });
+    $('.bd_t38_detail').click(function(){
+        layer.open({
+            type: 1,
+            skin: 'bd_t38_layer',
+            title: '',
+            closeBtn: 0,
+            shadeClose: true,
+            shade: 0.5,
+            area: ['600px', '475px'],
+            content: $('.bd_t38_detail_con').html()
+        });
+    });
 })();
