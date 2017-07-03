@@ -41,7 +41,9 @@
                     });
                 }
 
-                var swiper = new Swiper('.swiper-container', options);
+                scope.$on('carousel-swiper', function () {
+                    var swiper = new Swiper('.swiper-container', options);
+                });
                 // var interval,
                 //     i = 0,
                 //     inLength = $('.carousel-inner div').length;
