@@ -50,14 +50,14 @@
     }
     #dowebok {
         .registerNow {
-            color: #fff;
-            position: absolute;
+            color: #fff; // position: absolute;
             width: 65%;
             padding: 0.5rem 0;
-            top: 88%;
-            left: 20%;
+            position: static;
             border: 1px solid #fff;
             text-align: center;
+            margin: 0 auto;
+            margin-top: 5%;
         }
         .connect_us {
             margin-top: 14%;
@@ -146,7 +146,7 @@
             -webkit-transition: all 0.8s ease;
             /* Safari and Chrome */
             width: 100%;
-            height: 22%;
+            height: 21.75%;
             font-size: 0.6rem;
             text-align: left;
             margin-top: 2%;
@@ -192,13 +192,14 @@
                 background: #fff;
                 background-position: center center;
                 background-size: 100% 100%;
-                width: 86%;
-                height: 48%;
+                width: 80%;
+                height: 55%;
                 margin: 0 auto;
                 margin-top: 26%;
                 color: #fff;
-                padding: 5%;
+                padding: 2.5%;
                 position: relative;
+                margin-top: 1%;
                 .line_title>h2 .line.active {
                     width: 20%;
                 }
@@ -221,8 +222,11 @@
                 }
             }
             .amount_title {
-                width: getWS(260);
-                margin-top: 18%;
+                width: 30%;
+                margin-top: 15%;
+            }
+            .connect_us {
+                margin-top: 5%;
             }
         }
         .section1 {
@@ -234,29 +238,28 @@
                 display: block;
                 background: #fff;
             }
-            .matters_btn {
-                color: #222;
-                position: absolute;
-                top: 81%;
-                font-size: 0.8rem;
-                padding: px2rem(10) px2rem(32);
-                border-radius: 50px;
-                border: 1px solid #fff;
-                left: 65%;
-                background: #fff;
-            }
             .p1-text {
-                position: absolute;
-                width: getWS(500);
-                top: getHS(120);
-                left: getHS(250);
+                width: 55%;
+                margin-top: 15%;
             }
-            .act-date {
-                color: #fff;
-                position: absolute;
-                top: 81.5%;
-                font-size: 0.8rem;
-                left: 20.5%;
+            .detail {
+                width: 67%;
+                margin-top: 1%;
+                .act-date {
+                    color: #fff;
+                    /* position: absolute; */
+                    /* top: 76.5%; */
+                    font-size: 0.8rem;
+                    margin-top: 1%;
+                }
+                .matters_btn {
+                    color: #222;
+                    font-size: 0.8rem;
+                    padding: 0.25rem 0.8rem;
+                    border-radius: 50px;
+                    border: 1px solid #fff;
+                    background: #fff;
+                }
             }
         }
         .section2 {
@@ -269,21 +272,15 @@
                 background: #fff;
                 background-position: center center;
                 background-size: 100% 100%;
-                width: 86%;
-                height: 55%;
+                width: 80%;
+                height: 56%;
                 margin: 0 auto;
                 margin-top: 2%;
                 color: #fff;
-                padding: 5%;
+                padding: 2.5%;
                 .common_ways {
                     display: none;
                 }
-            }
-            .connect_us {
-                margin-top: 17%;
-            }
-            .registerNow {
-                top: 82%;
             }
         }
         .section3 {
@@ -294,12 +291,7 @@
             .registerNow {
                 top: 82%;
             }
-            .connect_us {
-                margin-top: 20%;
-            }
             .two_ways {
-                height: 55%;
-                margin-top: 1%;
                 .spec-style {
                     margin-top: 3%;
                 }
@@ -312,11 +304,9 @@
             background: url("/images/bd_t38/p4.png") no-repeat;
             background-position: center center;
             background-size: auto 100%;
-            .registerNow {
-                top: 68%;
-            }
-            .connect_us {
-                margin-top: 21%;
+            .two_ways {
+                margin-top: 25%;
+                height: 50%;
             }
         }
         .section5 {
@@ -328,10 +318,10 @@
                 margin-top: 3%;
             }
             .p5-text {
-                width: getWS(650);
+                width: 80%;
                 position: absolute;
-                top: 12%;
-                left: getWS(50)
+                top: 11%;
+                left: 10%;
             }
             .registerNow {
                 width: 80%;
@@ -341,12 +331,12 @@
             }
             .redbag_regBox {
                 background: #ff3a5c;
-                width: getWS(650);
+                width: 80%;
                 padding: 0 4%;
                 height: 28%;
                 opacity: 0.99;
                 margin: 0 auto;
-                margin-top: 65.5%;
+                margin-top: 63%;
                 transition: margin-top 0.1s linear;
                 -webkit-transition: margin-top 0.1s linear;
                 .submit_form {
@@ -436,7 +426,7 @@
                 font-size: px2rem(18);
                 width: 100%;
                 margin: 0 auto;
-                padding: 5% 5%;
+                padding: 3% 3%;
                 text-align: left;
                 line-height: px2rem(25);
                 position: absolute;

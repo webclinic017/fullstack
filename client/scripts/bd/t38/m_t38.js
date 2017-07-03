@@ -30,7 +30,7 @@
           //   $('.connect_us').hide();
         },
         blurCss: {
-          marginTop: '65.5%'
+          marginTop: '63%'
         },
         blurFn: function () {
           //   $('.connect_us').show();
@@ -83,7 +83,7 @@
         afterRender: function () {
           $('.matters_btn').delay(700).fadeIn(800);
           /*页面按钮事件*/
-          $(document.body).on("click", function (e) {
+          $(document.body).on("tap", function (e) {
             var action = $(e.target).attr("data-action");
             var targetClass = $(e.target).attr("class");
 
