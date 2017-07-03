@@ -37,10 +37,12 @@
         <div class="section section1" id="img_detect_container">
             <div class="slide_arrow"></div>
             <img src="/images/basic_logo.png" alt="" class="redbag_logo">
-            <img src="/images/bd_t38/p1-text.png" class="p1-text text">
-            <p data-action="matters" alt="" class="matters_btn">活动详情</p>
-            <p data-action="registerNow" class="registerNow">注册领红包</p>
-            <p class="act-date">活动日期：7月1日 - 8月31日</p>
+            <img src="/images/bd_t38/p1-text.png" class="p1-text text center">
+            <div class="clearfix detail center">
+                <p class="act-date fl">活动日期：7月1日 - 8月31日</p>
+                <p data-action="matters" alt="" class="matters_btn fr">活动详情</p>
+            </div>
+            <p data-action="registerNow" class="registerNow center">注册领红包</p>
             
             <div class="layer_contentBox" id="layer_contentBox">
                 <div class="layer_content">
@@ -106,7 +108,7 @@
                     </div>
                 </div>
             </div>
-            <p data-action="registerNow" class="registerNow">注册即送$1000</p>
+            <p data-action="registerNow" class="registerNow center">注册即送$1000</p>
             <a class="connect_us" href="tel:<%= lang.text('telephone')%>">客服电话：<%= lang.text('telephone')%></a>
         </div>
 
@@ -169,7 +171,7 @@
                     </div>
                     <div class="right_part">
                         <p class="amount"><i class="fa fa-dollar"></i>5</p>
-                        <p class="getCondition pd-6">满2手且盈利15%+</br>（无持仓订单）可兑</p>
+                        <p class="getCondition pd-6">满2手且盈利15%+（无持仓订单）可兑</p>
                     </div> 
                 </div>
 

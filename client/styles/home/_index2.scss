@@ -251,11 +251,11 @@
         width:100%;
     }
     .index2-slide1 {
+        @include img-normal($image-path-home + "index-banner-redbag_0630.jpg");
         overflow: hidden;
         height: 650px !important;
         background-position: center center;
-        background-size: cover;
-        @include img-normal($image-path-home + "index-banner-redbag_0630.jpg");
+        background-size: auto 100%;;
         
         &.pkds {
             @include img-normal($image-path-home + "index3-banner1.jpg");
