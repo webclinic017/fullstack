@@ -43,7 +43,8 @@
             getSpreadInfo: getSpreadInfo,
             getUserGroup: getUserGroup,
             hasChecked: false,
-            getAuthStatus: getAuthStatus //获取认证状态            
+            getAuthStatus: getAuthStatus, //获取认证状态    
+            getAdvertiseRecords: getAdvertiseRecords        
         };
         var resolveValue;
         return service;
@@ -474,6 +475,18 @@
          */
         function getUserGroup() {
             return publicHttp.dealPublicRequest(o.getUserGroupApi, 'GET');
+        }
+
+        /**
+         * Account Service 获取首页轮播图信息
+         *
+         * @method getAdvertiseRecords
+         *
+         */
+        function getAdvertiseRecords () {
+            return publicHttp.dealPublicRequest(o.getAdvertiseRecords, 'GET', {
+                identifier: 'wheel'
+            });
         }
     }
 })();

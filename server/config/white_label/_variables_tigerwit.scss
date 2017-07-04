@@ -110,20 +110,20 @@ $border-radius-base:        2px !default;
 $border-radius-lg:          4px !default;
 
 //== Font path
-$font-path-base:             "../fonts/";
+$font-path-base:             "/fonts/";
 
 //== Background image path
-$image-path-base:            "../images/";
-$image-path-home:            "../images/home/";
-$image-path-personal:        "../images/personal/";
-$image-path-master:          "../images/master/";
-$image-path-account:         "../images/account/";
-$image-path-about_us:        "../images/about_us/";
-$image-path-web:             "../images/web/";
-$image-path-study:             "../images/study/";
-$image-path-media:           "../images/media/";
-$icon-path-forex:            "../images/icons-forex/";
-$icon-path-bank:             "../images/icons-bank/";
+$image-path-base:            "/images/";
+$image-path-home:            "/images/home/";
+$image-path-personal:        "/images/personal/";
+$image-path-master:          "/images/master/";
+$image-path-account:         "/images/account/";
+$image-path-about_us:        "/images/about_us/";
+$image-path-web:             "/images/web/";
+$image-path-study:             "/images/study/";
+$image-path-media:           "/images/media/";
+$icon-path-forex:            "/images/icons-forex/";
+$icon-path-bank:             "/images/icons-bank/";
 
 //== Icon name
 $forex-names: audcad, audchf, audjpy, audnzd, audusd, cadchf, cadjpy, chfjpy, dax,

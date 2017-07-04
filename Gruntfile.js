@@ -3,6 +3,8 @@
 
 module.exports = function (grunt) {
     var localConfig;
+    var CDN_URL = '';
+    var path = require("path");
     try {
         localConfig = require('./server/config/local.env');
     } catch(e) {
@@ -255,11 +257,25 @@ module.exports = function (grunt) {
             }
         },
 
-        // Replace Google CDN references
+        // The task looks through your specified files for URLs to rewrite
         cdnify: {
-            dist: {
-                html: ['<%= yeoman.dist %>/<%= yeoman.client %>/*.html']
-            }
+          dist: {
+            options: {
+              // base: '//cdn.example.com/static/'
+              rewriter: function (url) {
+                if (url.indexOf('http') != -1) {
+                    return url;
+                }
+                return CDN_URL+url;
+              }
+            },
+            files: [{
+              expand: true,
+              cwd: 'dist',
+              src: '**/*.{css,html}',
+              dest: 'dist'
+            }]
+          }
         },
 
         // Copies remaining files to places other tasks can use
@@ -274,6 +290,7 @@ module.exports = function (grunt) {
                         src: [
                             'views/**/*.html',
                             '*.ico',
+                            '*.xml',
                             'fonts/*.*',
                             'plugins/**'
                         ]
@@ -437,12 +454,12 @@ module.exports = function (grunt) {
         'concat',
         'ngAnnotate',
         'copy:dist',
-        // 'cdnify',
         'cssmin',
         'uglify',
         'filerev',
         'usemin',
-        'htmlmin'
+        'htmlmin',
+        'cdnify'
     ]);
 
     // grunt serve or build need to update variables.scss
@@ -459,7 +476,8 @@ module.exports = function (grunt) {
         // change process env config
         if (node_env == "dev") node_env = "development";
         if (node_env == "pro") node_env = "production";
-
+        // set CDN URL
+        CDN_URL = url === 'www' ? 'https://web.tigerwit.com' : 'https://webdemo.tigerwit.com';
         var url_path, login_public_key;
 
         url_path = companyInfo[company][url]["url_path"];
