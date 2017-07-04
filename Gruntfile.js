@@ -477,7 +477,7 @@ module.exports = function (grunt) {
         if (node_env == "dev") node_env = "development";
         if (node_env == "pro") node_env = "production";
         // set CDN URL
-        CDN_URL = url === 'wwww' ? 'https://web.tigerwit.com' : 'https://webdemo.tigerwit.com';
+        CDN_URL = url === 'www' ? 'https://web.tigerwit.com' : 'https://webdemo.tigerwit.com';
         var url_path, login_public_key;
 
         url_path = companyInfo[company][url]["url_path"];
