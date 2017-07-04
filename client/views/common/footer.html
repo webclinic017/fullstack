@@ -130,6 +130,9 @@
         </div>
     </div>
 </div>
+<div id="footer-service-wrapper" style="display:none;">
+    <h4>你要在线咨询</h4><ul class="clearfix"><li class="ordinary_serv"><span><img src="/images/footer-service-1.png"></span>普通咨询</li><li class="agent_serv"><span><img src="/images/footer-service-2.png"></span>代理商咨询</li></ul><div class="tip clearfix"><p>我是普通用户，咨询交易相关的问题</p><p> 我是代理商或需要代理服务<br>咨询代理相关问题</p></div>
+</div>
 
 <%if(lang.isCompany("tigerwit")){%>
 <!-- Live800Online operator icon:online service(in use)[Floating icon] Start-->
@@ -143,7 +146,7 @@
             title: false,
             area: ['600px', '300px'],
             shadeClose: true,
-            content: '<h4>你要在线咨询</h4><ul class="clearfix"><li class="ordinary_serv"><span><img src="/images/footer-service-1.png"></span>普通咨询</li><li class="agent_serv"><span><img src="/images/footer-service-2.png"></span>代理商咨询</li></ul><div class="tip clearfix"><p>我是普通用户，咨询交易相关的问题</p><p> 我是代理商或需要代理服务<br>咨询代理相关问题</p></div>'
+            content: $("#footer-service-wrapper")
         });
 
         var $ordinary_serv = $(".footer-service-layer .ordinary_serv");

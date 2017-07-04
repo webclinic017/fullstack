@@ -25,6 +25,25 @@
             }
         }
     }
+    @include e(404) {
+        height: 575px;
+        background: url('/images/404.png') no-repeat;
+        background-position: center center;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        p {
+            text-align: center; 
+            font-size: 24px; 
+            padding-top: 360px; 
+            padding-left: 154px; 
+            color: #666;
+
+            a {
+                color: #fe5f5f;
+            }
+        }
+    }
 }
 
 @include b(layout-3) {
