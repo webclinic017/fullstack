@@ -263,6 +263,9 @@ module.exports = function (grunt) {
             options: {
               // base: '//cdn.example.com/static/'
               rewriter: function (url) {
+                if (url.indexOf('http') != -1) {
+                    return url;
+                }
                 return CDN_URL+url;
               }
             },
