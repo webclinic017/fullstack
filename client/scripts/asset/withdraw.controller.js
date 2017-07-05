@@ -103,7 +103,7 @@
             asset.getCard().then(function (data) {
                 if (!data) return;
                 // console.log(data);
-                if (data.is_succ) {
+                if (data.is_succ && data.data) {
                     $scope.withdraw.card.id = data.data.id;
                     $scope.withdraw.card.number = data.data.card_no;
                     $scope.withdraw.card.bank = data.data.bank_name;
