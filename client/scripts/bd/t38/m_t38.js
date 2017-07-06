@@ -5,7 +5,8 @@
 	function allLoaded() {
 		$(function () {
 			// 微信分享配置
-			if (wx) {
+			
+			if (wx && isTigerCo()) {
 				wxShareConfig({
 					title: '外汇超级行情来袭，老虎外汇送你1000美金给你',
 					subTitle: '外汇超级行情来袭，老虎外汇送你1000美金给你',
