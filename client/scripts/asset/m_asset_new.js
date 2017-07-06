@@ -318,7 +318,7 @@ $(document).ready(function () {
             };
             var banks = getBanksInfo();
 
-            if (data.is_succ) {
+            if (data.is_succ && data.data) {
                 cardInfo.cardList.push(data.data);
                 id = data.data.id ? data.data.id : '';
             } else {
