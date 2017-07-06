@@ -15,8 +15,10 @@
 
 <body ng-app="fullstackApp">
   <div ng-controller="GlobalController">
-    <% include navbar/main.html %>
-      <div class="bd_t37 t38 clearfix">
+    <%if(lang.text('companyEnName') != 'pandafx'){%>
+        <% include navbar/main.html %>
+    <%}%>
+      <div class="bd_t37 t38 clearfix <%= lang.text("companyEnName")%>">
         <div class="bd_t38_detail_con">
           <div class="bd_t38_detail_con__text">
             <p class="bd_t38_detail_con__line">1. 新用户注册后即获得$200体验金。体验金仅限模拟交易操作，不可支取。完成首次入金后，所有体验金交易订单平仓，体验金清零。体验金交易红包（“露一手”）的盈利计算，以体验金交易订单平仓后数据为准； </p>
@@ -26,14 +28,26 @@
             <p class="bd_t38_detail_con__line">5. 本活动仅限活动开始后新注册用户，需要完成完整的个人信息提交并通过审核，然后完成兑现条件方可提取红包奖励资金； </p>
             <p class="bd_t38_detail_con__line">6.
               <%= lang.text('companyZhName')%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打
-                <%= lang.text('telephone')%>； </p>
+              <%= lang.text('telephone')%>； </p>
           </div>
           <p class="bd_t38_detail_con__close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
         </div>
         <div class="bd_t37_focus">
           <p class="t38_activity_date">活动时间: 7月1日 - 8月31日</p>
-          <a href="#bd_t37_form" target="_parent" class="bd_t37_toReg"></a>
-          <div class="bd_t37_logo"><img src="/images/basic_logo.png"></div>
+          <%if(lang.text('companyEnName') == 'TigerWit'){%>
+            <div class="bd_t37_logo"><img src="/images/basic_logo.png"></div>
+          <%}%>
+          <%if(lang.text('companyEnName') == 'pandafx'){%>
+            <div class="bd_t37_logo pandafx"><img src="/images/basic_logo_panda_white.png"></div>              
+          <%}%>
+        </div>
+        <div class="t38_center slogan">
+            <%if(lang.text('companyEnName') == 'TigerWit'){%>
+              <img src="/images/bd_t38/t38-slogan.png">
+            <%}%>
+            <%if(lang.text('companyEnName') == 'pandafx'){%>
+                <img src="/images/bd_t38/t38-slogan-panda.png">
+            <%}%>
         </div>
         <div class="bd_t37_layout">
           <div class="t38_top clearfix">
@@ -64,34 +78,60 @@
             <%= lang.text('telephone')%>
           </p>
           <div class="t38_center bagbox">
-            <img src="/images/bd_t38/p5-text.png">
+            <%if(lang.text('companyEnName') == 'TigerWit'){%>
+              <img src="/images/bd_t38/t38_reg_text.png">
+            <%}%>
+            <%if(lang.text('companyEnName') == 'pandafx'){%>
+                <img src="/images/bd_t38/t38_reg_text_panda.png">
+            <%}%>
           </div>
-          <div class="bd_t37_form t38" id="bd_t37_form">
-            <div class="form-control-wrapper">
-              <input type="text" class="form-control t38" name="username" id="username" placeholder="昵称">
+          <%if(lang.text('companyEnName') == 'TigerWit'){%>
+            <div class="bd_t37_form t38" id="bd_t37_form">
+              <div class="form-control-wrapper">
+                <input type="text" class="form-control t38" name="username" id="username" placeholder="昵称">
+              </div>
+              <div class="form-control-wrapper">
+                <input type="text" class="form-control t38" name="telephone" id="telephone" placeholder="电话">
+              </div>
+              <div class="form-control-wrapper">
+                <input type="text" class="form-control t38" name="email" id="email" placeholder="邮箱">
+              </div>
             </div>
-            <div class="form-control-wrapper">
-              <input type="text" class="form-control t38" name="telephone" id="telephone" placeholder="电话">
-            </div>
-            <div class="form-control-wrapper">
-              <input type="text" class="form-control t38" name="email" id="email" placeholder="邮箱">
-            </div>
-          </div>
-          <a id="regist_btn" target="_parent" class="t38_top__btns bd_t38_toReg">注册送$1000</a>
+            <a id="regist_btn" target="_parent" class="t38_top__btns bd_t38_toReg">注册送$1000</a>
+          <%}%>
+		  
+          <%if(lang.text('companyEnName') == 'pandafx'){%>
+		  <div class="bd_t37_form t38" id="bd_t37_form">
+				<div class="form-control-wrapper">
+					<input type="tel" class="form-control t38" name="telephone" id="telephone" placeholder="电话">
+				</div>
+				<div class="form-control-wrapper clearfix">
+					<input type="number" class="form-control t38 fl verify" id="verify_code" placeholder="验证码">
+					<p class="verify_code_btn_wrapper fl"><span class="verify_code_btn" id="verify_code_btn">验证码</span></p>
+				</div>
+				<div class="form-control-wrapper">
+					<input type="password" class="form-control t38" type="password" id="password" placeholder="密码">
+				</div>
+			</div>
+			<a id="submit_form" target="_parent" class="t38_top__btns bd_t38_toReg">注册即送$1000</a>
+          <%}%>
+          
           <p class="t38_tel">客服电话：
             <%= lang.text('telephone')%>
           </p>
         </div>
         <div class="risk_tip_t38">
           <div class="risk_tip_t38__content clearfix">
-            <p class="text_box fl">
+            <p class="text_box fl <%= lang.text('companyEnName')%>">
               高风险投资警告：<br> 市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。
               您需要知晓金融市场的保证金交易具有全部或部分亏损的可能。
               <%= lang.text("companyZhName")%>交易平台为广大交易高手及普通投资者提供复制交易服务， 网站发布的任何信息，包括实时交易提醒、投资文章及其他资源均来自互联网，所有用户需仔细考量并权衡投资风险及安全性。 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
             </p>
-            <p class="img_box fr">
-              <img src="/images/bd/t30_code_min.png" alt="">
-            </p>
+            <%if(lang.text('companyEnName') == 'TigerWit'){%>
+              <p class="img_box fr">
+                <img src="/images/bd/t30_code_min.png" alt="">
+              </p>
+            <%}%>
           </div>
         </div>
       </div>
@@ -119,8 +159,8 @@
 <script src="/scripts/bd/t30/check.js"></script>
 <script src="/scripts/plugins/plugins.js"></script>
 <script src="/scripts/plugins/layer.js"></script>
-<script src="/scripts/plugins/ripples.js"></script>
 <script src="/scripts/bd/t37/bd_t37.js"></script>
+<script src="/scripts/bd/common/publicAjax.js"></script>
+<script src="/scripts/bd/common/register.js"></script>
 <!-- endbuild -->
-
 </html>

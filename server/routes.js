@@ -645,9 +645,9 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd_m_t37', extendPublic({}, req))
+                res.render('bd_m_t38', extendPublic({}, req))
             } else {
-                res.render('bd_t37', extendPublic({}, req));
+                res.render('bd_t38', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
