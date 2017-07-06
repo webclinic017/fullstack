@@ -34,7 +34,6 @@
             envConfig.access_origin = process.env.ACCESS_ORIGIN;
             envConfig.access_origin2 = process.env.ACCESS_ORIGIN2;
         }
-        // console.log(envConfig.company_name);
     }
 
     module.exports = {

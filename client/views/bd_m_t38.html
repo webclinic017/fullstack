@@ -36,8 +36,18 @@
     <div class="full_page" id="dowebok">
         <div class="section section1" id="img_detect_container">
             <div class="slide_arrow"></div>
-            <img src="/images/basic_logo.png" alt="" class="redbag_logo">
-            <img src="/images/bd_t38/p1-text.png" class="p1-text text center">
+            <%if(lang.text('companyEnName') == 'TigerWit'){%>
+                <img src="/images/basic_logo.png" alt="" class="redbag_logo">
+            <%}%>
+            <%if(lang.text('companyEnName') == 'pandafx'){%>
+                <img src="/images/basic_logo_panda_white.png" alt="" class="redbag_logo panda">
+            <%}%>
+            <%if(lang.text('companyEnName') == 'TigerWit'){%>
+                <img src="/images/bd_t38/p1-text.png" class="p1-text text-center">
+            <%}%>
+            <%if(lang.text('companyEnName') == 'pandafx'){%>
+                <img src="/images/bd_t38/p1-text-panda.png" class="p1-text text-center">
+            <%}%>
             <div class="clearfix detail center">
                 <p class="act-date fl">活动日期：7月1日 - 8月31日</p>
                 <p data-action="matters" alt="" class="matters_btn fr">活动详情</p>
@@ -52,7 +62,7 @@
                         <p>3. 活动所列红包每个用户仅可领取一次，兑现金额将在执行兑现操作后入账且可支取； </p>
                         <p>4. 本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，CFD类产品交易手数不计入统计范围； </p>
                         <p>5. 本活动仅限活动开始后新注册用户。用户提取资金前，需完成完整个人信息的提交并通过审核； </p>
-                        <p>6. <%= lang.text('companyZhName')%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打 <a class="connect_us" href="tel:<%= lang.text('telephone')%>"><%= lang.text('telephone')%></a>； </p>
+                        <p>6. <%= lang.text('companyZhName')%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打 <a class="connect_us" style="text-decoration: underline;" href="tel:<%= lang.text('telephone')%>"><%= lang.text('telephone')%></a>； </p>
                     </div>
                 </div>
             </div>
@@ -60,7 +70,13 @@
 
         <div class="section section2">
             <div class="slide_arrow"></div>
-            <img src="/images/basic_logo.png" alt="" class="redbag_logo">
+            <%if(lang.text('companyEnName') == 'TigerWit'){%>
+                <img src="/images/basic_logo.png" alt="" class="redbag_logo">
+            <%}%>
+            <%if(lang.text('companyEnName') == 'pandafx'){%>
+                <img src="/images/basic_logo_panda_white.png" alt="" class="redbag_logo panda">
+            <%}%>
+            
             <!--<img src="/images/bd/redbag_regist_btn.png" data-action="registerNow" class="registerNow">-->
             <img class="amount_title" src="/images/bd_t38/$200.png" alt="">
             <div class="four_ways">
@@ -114,7 +130,12 @@
 
         <div class="section section3 clearfix">
             <div class="slide_arrow"></div>
-            <img src="/images/basic_logo.png" alt="" class="redbag_logo">
+            <%if(lang.text('companyEnName') == 'TigerWit'){%>
+                <img src="/images/basic_logo.png" alt="" class="redbag_logo">
+            <%}%>
+            <%if(lang.text('companyEnName') == 'pandafx'){%>
+                <img src="/images/basic_logo_panda_white.png" alt="" class="redbag_logo panda">
+            <%}%>
             <img class="amount_title" src="/images/bd_t38/$800.png" alt="">
             <div class="two_ways">
                  <div class="line_title title1">
@@ -159,7 +180,12 @@
 
         <div class="section section4 clearfix">
             <div class="slide_arrow"></div>
-            <img src="/images/basic_logo.png" alt="" class="redbag_logo">
+            <%if(lang.text('companyEnName') == 'TigerWit'){%>
+                <img src="/images/basic_logo.png" alt="" class="redbag_logo">
+            <%}%>
+            <%if(lang.text('companyEnName') == 'pandafx'){%>
+                <img src="/images/basic_logo_panda_white.png" alt="" class="redbag_logo panda">
+            <%}%>
             <div class="two_ways">
                 <div class="line_title title1">
                     <h2><span class="line lineLeft"></span>体验交易红包<span class="line lineRight"></span></h2>
@@ -194,9 +220,19 @@
         </div>
 
         <div class="section section5 clearfix">
-            <img src="/images/basic_logo.png" alt="" class="redbag_logo">
-            <img src="/images/bd_t38/p5-text.png" class="p5-text" >
+            <%if(lang.text('companyEnName') == 'TigerWit'){%>
+                <img src="/images/basic_logo.png" alt="" class="redbag_logo">
+            <%}%>
+            <%if(lang.text('companyEnName') == 'pandafx'){%>
+                <img src="/images/basic_logo_panda_white.png" alt="" class="redbag_logo panda">
+            <%}%>
             
+            <%if(lang.text('companyEnName') == 'TigerWit'){%>
+                <img src="/images/bd_t38/t38_reg_text.png" class="p5-text" >
+            <%}%>
+            <%if(lang.text('companyEnName') == 'pandafx'){%>
+                <img src="/images/bd_t38/t38_reg_text_panda.png" class="p5-text" >
+            <%}%>
             <div class="redbag_regBox">
                 <form>
                     <div class="telephone">
