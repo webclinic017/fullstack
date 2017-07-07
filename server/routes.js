@@ -882,8 +882,10 @@ module.exports = function (app) {
         }
         if (action == "version_check") {
             var system = req.query.system;
-            var versionCode = req.query.version || req.query.version_code;
+            var version = req.query.version.replace(/\./g, "");
+            var versionCode = req.query.version_code;
             var versinInfo = require('./app_ctrl.config');
+            var currentVersionNum = versinInfo.getAppInfo().version_name.replace(/[v\.]/ig, "");
             // var currentVersion = {
             //     version_name: "V2.0",
             //     description: "上线全新外汇产品，交互全新改版!",
@@ -897,8 +899,17 @@ module.exports = function (app) {
                 force_update: false
             };
 
-            if (system == "android" && versionCode < versinInfo.currentVersionCode) {
-                currentVersion = versinInfo.getAppInfo();
+            if (system == "android") {
+                if (versionCode) {
+                    if (versionCode < versinInfo.currentVersionCode) {
+                        currentVersion = versinInfo.getAppInfo();
+                    }
+                } else {
+                    // console.log(version, currentVersionNum);
+                    if (Number(version) < Number(currentVersionNum)) {
+                        currentVersion = versinInfo.getAppInfo();
+                    }
+                }
             }
             data = currentVersion;
         }
