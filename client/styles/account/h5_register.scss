@@ -127,6 +127,9 @@
     margin: 0 auto;
     padding-top: px2rem(110);
     width: px2rem(385);
+    &.pandafx{
+      width: 100%;
+    }
     img{
       width: 100%;
     }
