@@ -881,7 +881,7 @@ module.exports = function (app) {
             });
         }
         if (action == "version_check") {
-            var system = req.query.system;
+            var system = req.query.system || req.query.os;
             var version = req.query.version.replace(/\./g, "");
             var versionCode = req.query.version_code;
             var versinInfo = require('./app_ctrl.config');
