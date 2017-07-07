@@ -92,11 +92,11 @@ module.exports = function () {
             webSite: "pandafx.tigerwit.com",
             webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
             androidApp: versionAndroidApp,
-            download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
+            download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.pandaforex.forex&ckey=CK1367855402383",
 
             // path
             logoPathZh: indexBasePath + "/tigerwit-logo.png",
-            h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
+            h5_register_logo: indexBasePath + "/h5_register_logo_panda.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
             logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
