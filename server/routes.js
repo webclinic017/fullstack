@@ -882,7 +882,7 @@ module.exports = function (app) {
         }
         if (action == "version_check") {
             var system = req.query.system;
-            var versionCode = req.query.version_code;
+            var versionCode = req.query.version || req.query.version_code;
             var versinInfo = require('./app_ctrl.config');
             // var currentVersion = {
             //     version_name: "V2.0",
