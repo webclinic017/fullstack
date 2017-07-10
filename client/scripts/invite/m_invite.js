@@ -102,14 +102,17 @@
     });
 
     function invitation() {
-        var versionName = getVersionName();
-        console.log('versionName=' + versionName);
-        var modalHeight = '250px';
-        $('.new_share').hide();
-        if (versionName && parseFloat(versionName) >= 2.2) {
-            modalHeight = '350px';
-            $('.new_share').show();
-        }
+        // var versionName = getVersionName();
+        // console.log('versionName=' + versionName);
+        // var modalHeight = '250px';
+        // $('.new_share').hide();
+        // if (versionName && parseFloat(versionName) >= 2.2) {
+        //     modalHeight = '350px';
+        //     $('.new_share').show();
+        // }
+        var modalHeight = '350px';
+        modalHeight = '350px';
+        $('.new_share').show();
         /*页面层*/
         layIndex = layer.open({
             type: 1
