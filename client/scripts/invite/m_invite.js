@@ -102,14 +102,17 @@
     });
 
     function invitation() {
-        var versionName = getVersionName();
-        console.log('versionName=' + versionName);
-        var modalHeight = '250px';
-        $('.new_share').hide();
-        if (versionName && parseFloat(versionName) >= 2.2) {
-            modalHeight = '350px';
-            $('.new_share').show();
-        }
+        // var versionName = getVersionName();
+        // console.log('versionName=' + versionName);
+        // var modalHeight = '250px';
+        // $('.new_share').hide();
+        // if (versionName && parseFloat(versionName) >= 2.2) {
+        //     modalHeight = '350px';
+        //     $('.new_share').show();
+        // }
+        var modalHeight = '350px';
+        modalHeight = '350px';
+        $('.new_share').show();
         /*页面层*/
         layIndex = layer.open({
             type: 1
@@ -125,18 +128,26 @@
         }
     };
 
+    var coMap = {
+        tigerwit: '老虎外汇',
+        pandafx: '熊猫外汇',
+    }
+
     function nativeShare(type) {
         console.log(type);
         if (!isInTiger()) {
             console.log("当前不是APP环境");
             return
         }
+
         var callConfig = {
             type: type,
             title: "你投资，我出钱！注册就送200美金！",
-            description: "我刚刚在老虎外汇领了200美金，好东西必须分享，你也快来看看！",
+            description: "我刚刚在"+ (coMap[getCoName()] || '老虎外汇') +"领了200美金，好东西必须分享，你也快来看看！",
             url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
         };
+
+        console.log(getCoName(),callConfig)
         callNative(callConfig);
     }
 
@@ -191,7 +202,7 @@
         });
         /*获取邀请概览*/
         function getInviteInfo() {
-            var offset = (page - 1)*limit;
+            var offset = (page - 1) * limit;
 
             publicRequest('getInviteList', 'GET', {
                 offset: offset,
@@ -208,7 +219,7 @@
                     $("#invited_amount").html(data.data.record_count);
                     $("#invited_income").html(data.data.profit);
 
-                    if ((offset+limit) >= data.data.record_count) {
+                    if ((offset + limit) >= data.data.record_count) {
                         $(".share02_main__history table tfoot span").css("display", "none");
                         $(".share02_main__history table tfoot .complete").css("display", "block");
                     } else {
@@ -241,5 +252,5 @@
             // });
         }
 
-    } ());
-} (jQuery));
+    }());
+}(jQuery));
