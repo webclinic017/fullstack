@@ -114,6 +114,12 @@ html,body{
     height:px2rem(58);
     line-height: px2rem(58);
     margin-bottom:px2rem(10);
+    &.pandafx{
+      background: url("/images/mobile/Artboard02_pandafx.png") no-repeat;
+      background-size: 100% 100%;
+      background-position: center center;
+      color: #fff;
+    }
   }
   @include b(share02_main){
     width: 100%;
@@ -125,6 +131,11 @@ html,body{
       background: url("/images/mobile/invite02_banner_new.png") no-repeat;
       background-size: 100% 100%;
       background-position: center center;
+      &.pandafx{
+        background: url("/images/mobile/invite02_banner_new_pandafx.png") no-repeat;
+        background-size: 100% 100%;
+        background-position: center center;
+      }
     }
     @include e(invite){
       width: 100%;
@@ -241,6 +252,10 @@ html,body{
         background-color: $brand-primary-dark;
         margin-top:px2rem(25);
         color: $brand-button-color;
+        &.pandafx{
+          background-color: #4555cd;
+          color: #fff;
+        }
       }
     }
   }

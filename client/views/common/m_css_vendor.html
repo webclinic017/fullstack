@@ -36,8 +36,9 @@
     /*判断是否在APP中*/
     function isInTiger() {
         var userPlatForm = window.navigator.userAgent;
-        var flag = userPlatForm.indexOf("tigerwit_app");
-        if (flag >= 0) {
+        var flag1 = userPlatForm.indexOf("tigerwit_app");
+        var flag2 = userPlatForm.indexOf("panda_app");
+        if (flag1 >= 0 || flag2 >= 0) {
             return true;
         } else {
             return false;
@@ -70,6 +71,10 @@
         } else {
             return false;
         }
+    }
+
+    function getCoName() {
+        return $.cookie('company_name')
     }
 
     /**

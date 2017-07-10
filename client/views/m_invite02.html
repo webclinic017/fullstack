@@ -13,7 +13,7 @@
 <body class="invite02_body">
 <div class="m_share02_layout" id="m_share02_layout">
     <div class="share02_main">
-        <div class="share02_main__banner"></div>
+        <div class="share02_main__banner <%= lang.text('companyEnName') %>"></div>
         <div class="p share02_main__invite">
             <div class="share02_main__invite-friends clearfix">
                 <div class="invite_amount">
@@ -27,7 +27,7 @@
             </div>
         </div>
         <div class="bdt p share02_main__history">
-            <h5 class="title">邀请记录</h5>
+            <h5 class="title <%= lang.text('companyEnName') %>">邀请记录</h5>
             <table>
                 <colgroup>
                     <col width="30%"></col>
@@ -62,13 +62,13 @@
             <p>3、同一手机号码、身份证号和银行卡号视为同一用户。任何通过第三方作弊软件刷取好友邀请奖励的用户，一经发现，<%= lang.text('companyZhName')%>有权取消所有奖励的承兑。</p>
             <p>4、本活动最终解释权归<%= lang.text('companyZhName')%>所有。如有疑问，请咨询客服 <%= lang.text('telephone')%>。</p>
             <span id="send_invitation">发送邀请给好友</span>-->
-            <h5 class="title">邀请好友规则</h5>
+            <h5 class="title <%= lang.text('companyEnName') %>">邀请好友规则</h5>
             <p>1、注册即获得邀请类红包“人从众”，邀请3名好友注册，且至少有1人入金并完成1手交易即可兑现, 每位用户仅可领取一次。</p>
             <p>2、您只有通过邀请链接进行注册的好友才算有效。</p>
             <p>3、同一手机号，身份证号和银行卡号视为同一用户。</p>
             <p>4、任何通过第三方作弊软件刷取好友邀请奖励，一经发现老虎外汇有权取消红包兑现奖励。</p>
             <p>4、本活动最终解释权归<%= lang.text('companyZhName')%>所有。如有疑问，请咨询客服 <%= lang.text('telephone')%>。</p>
-            <span id="send_invitation">发送邀请给好友</span>
+            <span id="send_invitation" class="<%= lang.text('companyEnName') %>">发送邀请给好友</span>
         </div>
         <div class="share_box" id="share02_box">
             <div class="share02_modal clearfix" id="share02_modal">
