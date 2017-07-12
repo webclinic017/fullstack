@@ -481,11 +481,12 @@
          * Account Service 获取首页轮播图信息
          *
          * @method getAdvertiseRecords
+         *      @params identifier    wheel 首页轮播图，popup 首页弹窗
          *
          */
-        function getAdvertiseRecords () {
+        function getAdvertiseRecords (identifier) {
             return publicHttp.dealPublicRequest(o.getAdvertiseRecords, 'GET', {
-                identifier: 'wheel'
+                identifier: identifier
             });
         }
     }
