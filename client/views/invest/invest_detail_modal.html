@@ -78,7 +78,7 @@
                 <tbody>
                     <tr ng-repeat="detail in details" ng-if="details.length > 0">
                         <td>
-                            <span class="invest_orders__icon icon-forex-{{ detail.symbol.toLowerCase() }} {{modal.usage=='history'?'icon-history':'vertical-middle'}}">
+                            <span class="invest_orders__icon icon-forex-{{ detail.symbol_origin.toLowerCase() }} {{modal.usage=='history'?'icon-history':'vertical-middle'}}">
                             </span>
                             <div class="invest_orders__operate">
                                 <p>
@@ -86,7 +86,7 @@
                                         {{ detail.cmd_name }}
                                     </span>
                                     <a class="invest_orders__symbol" href="">
-                                        {{ detail.symbol | symbolMod:'zh' }}
+                                        {{ detail.symbol_cn }}
                                     </a>        
                                 </p>
 
