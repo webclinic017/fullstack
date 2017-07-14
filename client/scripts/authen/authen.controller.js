@@ -78,7 +78,15 @@
 
                     if ($scope.personal.profile_check == 1) {
                         if (!showMsg) {
-                            showMsg = layer.msg('您上传的身份证照片审核被拒绝，请重新填写相关信息，被拒原因请查看系统消息。');
+                            showMsg = layer.msg('您上传的身份证照片审核被拒绝，请重新填写相关信息，被拒原因请查看系统消息。',
+                                {
+                                    time: 0,
+                                    btn: ['好的'],
+                                    yes: function (index) {
+                                        layer.close(index)
+                                    }
+                                }
+                            );
                         }
                     }
 
