@@ -12,6 +12,9 @@
             isCompany: function () {
                 return langData["company"];
             },
+            isEnglish: function () {
+                return langData["language"] == 'en' ? true : false;
+            },
             text: function(name){
                 var text;
                 text = langData[name][langData["language"]];

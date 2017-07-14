@@ -147,7 +147,6 @@
     @include e(real) {
         text-align: center;
         color: $gray-dark;
-        padding-top: 10px;
         padding-bottom: 15px;
     }
     @include e(demo) {
@@ -161,5 +160,6 @@
         text-align: center;
         color: $gray-dark;
         padding-top: 15px;
+        padding-bottom: 10px;
     }
 }
