@@ -98,6 +98,7 @@ if ($(".m_vue").attr("data-page") === "forget") {
             },
             sendCode: function (arg) {
                 var self = this;
+                self.countDown.noClick = true;
 
                 dealApiUrlResource("getCodeApi", "POST", {
                     phone: self.bindData.phone,
@@ -110,11 +111,9 @@ if ($(".m_vue").attr("data-page") === "forget") {
                         if (arg === 'once') {
                             self.step++;
                             self.countDown.show = true;
-                            self.countDown.noClick = true;
                         }
                         if (arg === 'repeat') {
                             self.countDown.show = true;
-                            self.countDown.noClick = true;
                             var cont;
                             if (self.language === 'zh') {
                                 cont = '发送成功';
@@ -129,6 +128,7 @@ if ($(".m_vue").attr("data-page") === "forget") {
                             });
                         }
                     } else {
+                        self.countDown.noClick = false;
                         layer.open({
                             content: data.message,
                             skin: 'msg',

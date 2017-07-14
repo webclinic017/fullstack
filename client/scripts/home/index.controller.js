@@ -24,14 +24,20 @@
         // }
 
         if (!userCode && company && company === 'tigerwit') {
-            layer.open({
-                type: 1,
-                skin: 'home_redbag_layer', //加上边框
-                closeBtn: 0,
-                title: '',
-                shade: 0.6,
-                area: ['768px', '448px'], //宽高
-                content: '<div class="content"><a href="/bd/t35" class="btn">注册领红包</a><div class="close" onclick="layer.closeAll();"></div></div>'
+            account.getAdvertiseRecords('popup').then(function (data) {
+                console.log(data);
+                if (data.is_succ && data.data.length) {
+                    data = data.data[0];
+                    layer.open({
+                        type: 1,
+                        skin: 'home_redbag_layer', //加上边框
+                        closeBtn: 0,
+                        title: '',
+                        shade: 0.6,
+                        area: ['960px', '560px'], //宽高
+                        content: '<div class="content"><a href="'+data.target_url+'"><img src="'+data.image_url+'"></a><div class="close" onclick="layer.closeAll();"></div></div>'
+                    });
+                }
             });
         }
 
@@ -93,8 +99,8 @@
 
         getAdvertiseRecords();
         function getAdvertiseRecords () {
-            account.getAdvertiseRecords().then(function (data) {
-                console.log(data);
+            account.getAdvertiseRecords('wheel').then(function (data) {
+                // console.log(data);
                 if (data.is_succ) {
                     $scope.getBannerSucc = true;
                     $scope.advertiseLst = data.data;

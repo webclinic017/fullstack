@@ -77,7 +77,7 @@
                             <span class="invest_orders__trunk"></span>
                             <span class="invest_orders__branch"></span>
 
-                            <span class="invest_orders__icon icon-forex-{{ order.symbol.toLowerCase() }} icon-history">
+                            <span class="invest_orders__icon icon-forex-{{ order.symbol_origin.toLowerCase() }} icon-history">
                             </span>
                             <div class="invest_orders__operate">
                                 <p>
@@ -85,7 +85,7 @@
                                         {{ order.cmd_name }}
                                     </span>
                                     <a class="invest_orders__symbol" href="">
-                                        {{ order.symbol | symbolMod:'zh' }}
+                                        {{ order.symbol_cn }}
                                     </a>        
                                 </p>
                                 <p class="text-left font-size-12">
@@ -170,7 +170,7 @@
                                 <span class="invest_orders__trunk"></span>
                                 <span class="invest_orders__branch"></span>
 
-                                <span class="invest_orders__icon icon-forex-{{ order.symbol.toLowerCase() }} icon-history">
+                                <span class="invest_orders__icon icon-forex-{{ order.symbol_origin.toLowerCase() }} icon-history">
                                 </span>
                                 <div class="invest_orders__operate">
                                     <p>
@@ -178,7 +178,7 @@
                                             {{ order.cmd_name }}
                                         </span>
                                         <a class="invest_orders__symbol" href="">
-                                            {{ order.symbol | symbolMod:'zh' }}
+                                            {{ order.symbol_cn }}
                                         </a>        
                                     </p>
                                     <p class="text-left font-size-12">

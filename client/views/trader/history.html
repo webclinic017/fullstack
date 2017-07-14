@@ -17,14 +17,17 @@
                 <tr ng-repeat="order in orders" ng-if="orders.length > 0">
                     <td class=""> 
                         <div class="history-operation-td text-left">
-                        <span class="icon-histroy icon-forex-{{ order.symbol.toLowerCase() }}"></span>
+                        <span class="icon-histroy icon-forex-{{ order.symbol_origin.toLowerCase() }}"></span>
                         <div class="history-operation-box">
                             <p class="text-left">
                                 <span ng-class="order.cmd?'font-down':'font-up'">
                                     {{ order.cmd_name }}
                                 </span>
-                                <span class="">
-                                    {{ order.symbol | symbolMod:lang.text("TradingHistory11") }}
+                                <span class="" ng-show="!lang.isEnglish()">
+                                    {{ order.symbol_cn }}
+                                </span>
+                                <span class="" ng-show="lang.isEnglish()">
+                                    {{ order.symbol }}
                                 </span>
                             </p>
                             <p class="text-left font-size-12">

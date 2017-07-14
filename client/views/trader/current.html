@@ -15,14 +15,17 @@
             <tbody>
                 <tr ng-repeat="order in orders" ng-if="orders.length > 0">
                     <td>
-                        <span class="icon-forex-{{ order.symbol.toLowerCase() }}">
+                        <span class="icon-forex-{{ order.symbol_origin.toLowerCase() }}">
                             
                         </span>
                         <span ng-class="order.cmd?'font-down':'font-up'">
                             &nbsp;&nbsp;{{ order.cmd_name }}
                         </span>
-                        <span class="">
-                            {{ order.symbol | symbolMod:lang.text("HoldingTrades11") }}
+                        <span class="" ng-show="!lang.isEnglish()">
+                            {{ order.symbol_cn }}
+                        </span>
+                        <span class="" ng-show="lang.isEnglish()">
+                            {{ order.symbol }}
                         </span>
                     </td>
                     <td>
