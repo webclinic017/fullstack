@@ -16,12 +16,19 @@
                 } else {
                     $(".download_btn").attr("href", hrefAn);
                 }
-
-                $(".download_btn").on('touchend', function () {
-                    _czc.push(["_trackEvent", "PID=JRTT&platform=" + platform, "下载APP"]);
-                });
             }
-        } ());
+        }());
+
+        (function () {
+            $(".download_btn").on('touchend', function (e) {
+                if (window.location.href.indexOf("download_t") != -1) {
+                    _czc.push(["_trackEvent", "PID=JRTT&platform=" + platform, "下载APP"]);
+                } else {
+                    sa.track('DI_click');
+                    window.location.href = $(e.target).attr('data-url');
+                }
+            });
+        }());
 
         function activePage1() {
             $('.section1').addClass("_active");
@@ -127,4 +134,4 @@
         });
     });
 
-} ());
+}());

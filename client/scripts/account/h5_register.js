@@ -431,5 +431,10 @@
                 return false;
             });
         }
+
+        $('#regist_btn3').on('touchend',function(e){
+            sa.track('DI_click');
+            window.location.href = $(e.target).attr('data-url');
+        })
     });
 }());
