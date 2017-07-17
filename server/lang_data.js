@@ -507,6 +507,7 @@ module.exports = function () {
         "metal30": { "en": "Trading period on the trading day", "zh": "交易日交易时段" },
 
         // 产品介绍－股指，差价合约 cfd
+        "platformTimeNote" : { "en" : "Note: MT4 platform time is GMT + 3 time", "zh" : "注：MT4平台时间为GMT+3时间" },
         "cfd1": { "en": "Stock index", "zh": "股指" },
         "cfd2": { "en": "Contracts for differences", "zh": "指数差价合约" },
         "cfd3": { "en": "Stock index is short for stock price index, which is prepared by stock exchanges or financial service institutions to indicate the fluctuation of stock market quotation for investors' reference. Stock price index is developed to describe the overall price change on the stock market. The index is acquired by selecting a group of representative stocks, achieving the weighted average by their prices and then by certain calculation programming.", "zh": "股指是股票价格指数简称，股票价格指数即股票指数。是由证券交易所或金融服务机构编制的表明股票行市变动的一种供参考的指示数字。股票价格指数是描述股票市场总的价格水平变化的指标。它是选取有代表性的一组股票，把他们的价格进行加权平均，通过一定的计算得到。" },
