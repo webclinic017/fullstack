@@ -114,60 +114,27 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>XNGUSD</td>
-                        <td>天然气</td>
-                        <td class="pro-public__no-padding"><%= lang.text("oil33")%></td>
-                        <td><%= lang.text("oil35")%></td>
-                        <td>0.01</td>
-                        <td>20</td>
-                        <td>0</td>
+                    <tr ng-if="oil" ng-cloak ng-repeat="item in oil">
+                        <td>{{ item.name_en }}</td>
+                        <td>{{ item.name_zh }}</td>
+                        <td class="pro-public__no-padding">{{ item.volum }}</td>
+                        <td>{{ item.unit }}</td>
+                        <td>{{ item.min_volum }}</td>
+                        <td>{{ item.max_volum }}</td>
+                        <td>{{ item.charge }}</td>
                         <td class="pro-public__no-padding">
-                            <%= lang.text("oil43")%>－<%= lang.text("oil46")%> 07:00--06:00<%= lang.text("forex37")%>
-                            <%= lang.text("oil44")%> 07:00--05:00<%= lang.text("forex37")%>
+                            {{ item.trade_time }}
                         </td>
                         <td class="pro-public__no-padding">
-                            <%= lang.text("oil43")%>－<%= lang.text("oil46")%> 07:00--06:00<%= lang.text("forex37")%>
-                            <%= lang.text("oil44")%> 07:00--05:00<%= lang.text("forex37")%>
+                            {{ item.quote_time }}
                         </td>
-                        <td class="pro-public__no-padding"><%= lang.text("oil38")%></td>
+                        <td class="pro-public__no-padding">{{ item.desp }}</td>
                     </tr>
-                    <tr>
-                        <td>XTIUSD</td>
-                        <td>西德州原油</td>
-                        <td class="pro-public__no-padding">1000 <%= lang.text("oil34")%></td>
-                        <td><%= lang.text("oil35")%></td>
-                        <td>0.01</td>
-                        <td>20</td>
-                        <td>0</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("oil43")%>－<%= lang.text("oil44")%> 06:00--05:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("oil43")%>－<%= lang.text("oil44")%> 06:00--05:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding"><%= lang.text("oil39")%></td>
-                    </tr>
-                    <tr>
-                        <td>XBRUSD</td>
-                        <td>布伦特原油</td>
-                        <td class="pro-public__no-padding">1000 <%= lang.text("oil34")%></td>
-                        <td><%= lang.text("oil35")%></td>
-                        <td>0.01</td>
-                        <td>20</td>
-                        <td>0</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("oil43")%>－<%= lang.text("oil44")%> 08:00--05:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("oil43")%>－<%= lang.text("oil44")%> 08:00--05:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding"><%= lang.text("oil40")%></td>
                     </tr>
                 </tbody>                
             </table>
             <div style="padding-top: 10px;">
-                注：MT4平台时间为GMT+3时间
+                <%= lang.text("platformTimeNote")%>
             </div>
         </div>
     </div>

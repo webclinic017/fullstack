@@ -929,6 +929,10 @@ module.exports = function (app) {
         if (action == "get_report_site") {
             data = report_sites;
         }
+        if(action == 'get_product'){
+            var type = req.query.product_type;
+            data = type ? require('./model/modelProduct.js')[type] : [] || {};
+        }
         if (data) {
             
             if (offset) {

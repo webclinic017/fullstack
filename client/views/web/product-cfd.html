@@ -96,182 +96,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- <tr>
-                        <td>AUS200</td>
-                        <td class="pro-public__no-padding">澳大利亚标准普尔200指数</td>
-                        <td>1<%= lang.text("cfd31")%>＝1<%= lang.text("cfd32")%></td>
-                        <td>1</td>
-                        <td>100</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%>07:50--14:30,15:10--05:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%>07:50--14:30,15:10--05:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding"><%= lang.text("cfd40")%></td>
-                    </tr> -->
-                    <tr>
-                        <td>EUSTX50</td>
-                        <td class="pro-public__no-padding">欧洲上市股票50指数</td>
-                        <td>1<%= lang.text("cfd31")%>＝5<%= lang.text("cfd32")%></td>
-                        <td>1</td>
-                        <td>100</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 14:00--04:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 14:00--04:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding"><%= lang.text("cfd41")%></td>
+                    <tr ng-if="cfd" ng-repeat="item in cfd" ng-cloak>
+                        <td>{{ item.name_en }}</td>
+                        <td class="pro-public__no-padding">{{ item.name_zh }}</td>
+                        <td>{{ item.volum }}</td>
+                        <td>{{ item.min_volum }}</td>
+                        <td>{{ item.max_volum }}</td>
+                        <td class="pro-public__no-padding">{{ item.trade_time }}</td>
+                        <td class="pro-public__no-padding">{{ item.quote_time }}</td>
+                        <td class="pro-public__no-padding">{{ item.desp }}</td>
                     </tr>
-                    <tr>
-                        <td>GER30</td>
-                        <td class="pro-public__no-padding">德国dax指数</td>
-                        <td>1<%= lang.text("cfd31")%>＝1<%= lang.text("cfd32")%></td>
-                        <td>1</td>
-                        <td>100</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 14:00--04:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 14:00--04:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd42")%>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>JPN225</td>
-                        <td class="pro-public__no-padding">日经指数</td>
-                        <td>1<%= lang.text("cfd31")%>＝100<%= lang.text("cfd32")%></td>
-                        <td>1</td>
-                        <td>100</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 07:05--04:15<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 07:00--04:15<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd43")%>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>NAS100</td>
-                        <td class="pro-public__no-padding">纳斯达克指数</td>
-                        <td>1<%= lang.text("cfd31")%>＝5<%= lang.text("cfd32")%></td>
-                        <td>1</td>
-                        <td>100</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 06:00--04:15<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 06:00--04:15<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd44")%>
-                        </td>
-                    </tr>
-                    <!-- <tr>
-                        <td>SPA35</td>
-                        <td class="pro-public__no-padding">西班牙上市股票指数</td>
-                        <td>1<%= lang.text("cfd31")%>＝1<%= lang.text("cfd32")%></td>
-                        <td>1</td>
-                        <td>100</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 14:00--02:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 14:00--02:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd45")%>
-                        </td>
-                    </tr> -->
-                    <!-- <tr>
-                        <td>UK100</td>
-                        <td class="pro-public__no-padding">富时100指数</td>
-                        <td>1<%= lang.text("cfd31")%>＝1<%= lang.text("cfd32")%></td>
-                        <td>1</td>
-                        <td>100</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 14:00--04:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 14:00--04:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd46")%>           
-                        </td>
-                    </tr> -->
-                    <tr>
-                        <td>US30</td>
-                        <td class="pro-public__no-padding">道琼斯指数</td>
-                        <td>1<%= lang.text("cfd31")%>＝1<%= lang.text("cfd32")%></td>
-                        <td>1</td>
-                        <td>100</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 06:00--04:15<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 06:00--04:15<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd47")%>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>USA500</td>
-                        <td class="pro-public__no-padding">标普500指数</td>
-                        <td>1<%= lang.text("cfd31")%>＝10<%= lang.text("cfd32")%></td>
-                        <td>1</td>
-                        <td>100</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 06:00--04:15<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 06:00--04:15<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd48")%>  
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>HK50</td>
-                        <td class="pro-public__no-padding">香港恒生50指数</td>
-                        <td>1<%= lang.text("cfd31")%>＝10<%= lang.text("cfd32")%></td>
-                        <td>1</td>
-                        <td>100</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 09:20--12:00,13:00--16:15
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 09:15--12:00,13:00--16:15
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd49")%>
-                        </td>
-                    </tr>
-                    <!-- <tr>
-                        <td>FRA40</td>
-                        <td class="pro-public__no-padding">法国40指数</td>
-                        <td>1<%= lang.text("cfd31")%>＝1<%= lang.text("cfd32")%></td>
-                        <td>1</td>
-                        <td>100</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 14:00--04:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd51")%> 14:00--04:00<%= lang.text("forex37")%>
-                        </td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("cfd52")%>
-                        </td>
-                    </tr> -->
                 </tbody>
             </table>
             <div style="padding-top: 10px;">
-                注：MT4平台时间为GMT+3时间
+                <%= lang.text("platformTimeNote")%>
             </div>
         </div>
     </div>
