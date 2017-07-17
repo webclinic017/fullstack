@@ -93,7 +93,8 @@
         };
         var product = {
             getProductCommentApi: '/blog/api/get_category_posts?id=86',
-            getProductMarketApi: '/blog/api/get_category_posts?id=90'
+            getProductMarketApi: '/blog/api/get_category_posts?id=90',
+            getWebProductInfoApi: '/napi?action=get_product'
         };
         var ranklist = {
             getMastersListApi: urlOrigin2 + '/master/list',

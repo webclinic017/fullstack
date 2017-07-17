@@ -24,7 +24,9 @@
                 if (window.location.href.indexOf("download_t") != -1) {
                     _czc.push(["_trackEvent", "PID=JRTT&platform=" + platform, "下载APP"]);
                 } else {
-                    sa.track('DI_click');
+                    sa.track('DI_click', {
+                        page: window.location.href
+                    });
                     window.location.href = $(e.target).attr('data-url');
                 }
             });
@@ -61,6 +63,7 @@
             afterRender: function () {
                 layer.closeAll();
                 $(".m_download_layout").css("display", "block")
+
             },
             afterLoad: function (anchorLink, index) {
                 offsetAction(index);

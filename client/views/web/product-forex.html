@@ -101,109 +101,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>AUDUSD</td>
-                        <td>澳元美元</td>
-                        <td>2.5</td>
-                        <td>50 100 200</td>
-                        <td><%= lang.text("forex31")%></td>
-                        <td>0.01</td>
-                        <td>100000</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("forex34")%><br>
-                            <%= lang.text("forex35")%>05:05--04:55<%= lang.text("forex37")%>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>EURUSD</td>
-                        <td>欧元美元</td>
-                        <td>2</td>
-                        <td>50 100 200</td>
-                        <td><%= lang.text("forex31")%></td>
-                        <td>0.01</td>
-                        <td>100000</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("forex34")%><br>
-                            <%= lang.text("forex35")%>05:05--04:55<%= lang.text("forex37")%>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>GBPUSD</td>
-                        <td>英镑美元</td>
-                        <td>2.2</td>
-                        <td>50 100 200</td>
-                        <td><%= lang.text("forex31")%></td>
-                        <td>0.01</td>
-                        <td>100000</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("forex34")%><br>
-                            <%= lang.text("forex35")%>05:05--04:55<%= lang.text("forex37")%>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>NZDUSD</td>
-                        <td>纽元美元</td>
-                        <td>2.8</td>
-                        <td>50 100 200</td>
-                        <td><%= lang.text("forex31")%></td>
-                        <td>0.01</td>
-                        <td>100000</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("forex34")%><br>
-                            <%= lang.text("forex35")%>05:05--04:55<%= lang.text("forex37")%>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>USDCAD</td>
-                        <td>美元加元</td>
-                        <td>2.7</td>
-                        <td>50 100 200</td>
-                        <td><%= lang.text("forex31")%></td>
-                        <td>0.01</td>
-                        <td>100000</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("forex34")%><br>
-                            <%= lang.text("forex35")%>05:05--04:55<%= lang.text("forex37")%>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>USDCHF</td>
-                        <td>美元瑞郞</td>
-                        <td>2.7</td>
-                        <td>50 100 200</td>
-                        <td><%= lang.text("forex31")%></td>
-                        <td>0.01</td>
-                        <td>100000</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("forex34")%><br>
-                            <%= lang.text("forex35")%>05:05--04:55<%= lang.text("forex37")%>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>USDJPY</td>
-                        <td>美元日元</td>
-                        <td>2</td>
-                        <td>50 100 200</td>
-                        <td><%= lang.text("forex32")%></td>
-                        <td>0.01</td>
-                        <td>100000</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("forex34")%><br>
-                            <%= lang.text("forex35")%>05:05--04:55<%= lang.text("forex37")%>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>USDCNH</td>
-                        <td>离岸人民币</td>
-                        <td><%= lang.text("forex33")%></td>
-                        <td>50 100 200</td>
-                        <td><%= lang.text("forex31")%></td>
-                        <td>0.01</td>
-                        <td>100000</td>
-                        <td class="pro-public__no-padding">
-                            <%= lang.text("forex34")%><br>
-                            <%= lang.text("forex35")%>05:05--04:55<%= lang.text("forex37")%>
-                        </td>
+                    <tr ng-if="forex" ng-cloak ng-repeat="item in forex">
+                        <td>{{ item.name_en }}</td>
+                        <td>{{ item.name_zh }}</td>
+                        <td>{{ item.dot }}</td>
+                        <td>{{ item.lever }}</td>
+                        <td>{{ item.fixed }}</td>
+                        <td>{{ item.min_volum }}</td>
+                        <td>{{ item.standard_volum }}</td>
+                        <td class="pro-public__no-padding">{{ item.trade_time }}</td>
                     </tr>
                     <tr>
                         <td class="font-info" colspan="8">
@@ -213,7 +119,7 @@
                 </tbody>
             </table>
             <div style="padding-top: 10px;">
-                注：MT4平台时间为GMT+3时间
+                <%= lang.text("platformTimeNote")%>
             </div>
         </div>
     </div>
