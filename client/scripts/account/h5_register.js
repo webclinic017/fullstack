@@ -42,7 +42,7 @@
                 /*统计注册成功*/
                 sa.track('btn_register_finish');
                 window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
-                
+
                 setTimeout(function () {
                     var user_code = $.cookie("user_code");
                     // console.log(user_code);
@@ -90,7 +90,7 @@
                 });
             }
 
-            
+
 
             /*今日头条*/
             // if (window.location.pathname.indexOf('t33_b') != -1) {
@@ -359,7 +359,7 @@
 
                 /*今日头条统计表单提交*/
                 if (window.location.pathname.indexOf('t35') != -1) {
-                    _taq.push({convert_id:"58276692798", event_type:"form"})
+                    _taq.push({ convert_id: "58276692798", event_type: "form" })
                 }
                 publicRequest('register', 'POST', {
                     phone: $("#telephone").val() || "",
@@ -389,14 +389,14 @@
                         });
                     }
                 });
-                
+
             });
         }());
 
         /*注册成功页面*/
         if (isRegSucceed()) {
             /*第二页注册逻辑*/
-            
+
             // 判断是否在红包页面，更改文字样式
             if (window.location.href.indexOf('redbag') >= 0) {
                 $('.h5_register_main').find('.forNormalPage').css('display', 'none');
@@ -432,8 +432,10 @@
             });
         }
 
-        $('#regist_btn3').on('touchend',function(e){
-            sa.track('DI_click');
+        $('#regist_btn3').on('touchend', function (e) {
+            sa.track('DI_click', {
+                page: window.location.href
+            });
             window.location.href = $(e.target).attr('data-url');
         })
     });
