@@ -6,6 +6,7 @@ $(document).ready(function () {
         navbarStep3: ".m_third .m_third_navbar .m_third_navbar__progress li.num2",
         navbarStep4: ".m_third .m_third_navbar .m_third_navbar__progress li.num3",
         index: ".m_third .m_third_index",
+        indexDollar200: ".m_third .m_third_index .m_third_index__content .dollar200",
         indexBtn: ".m_third .m_third_index .m_third_index__btn .btn",
         kyc: ".m_third .m_third_kyc",
         kycSelect: ".m_third .m_third_kyc .m_third_kyc__single select",
@@ -73,6 +74,11 @@ $(document).ready(function () {
         $.cookie("action", action , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
         $.cookie("sign", sign , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
 
+        // 需要去掉200体验金的三方：tubiaojia、juyoulicai
+        if (private_key === 'tubiaojia' || private_key === 'juyoulicai') {
+            $(ele.indexDollar200).css({display: 'none'});
+        }
+
         getUserStatus();
         getKycList();
     }
@@ -97,8 +103,8 @@ $(document).ready(function () {
     }
     // setTimeout(function () {
     //     layer.closeAll();
-    //     getKycList();
-    //     step = 6;
+    //     // getKycList();
+    //     step = 0;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
     // }, 1000);
