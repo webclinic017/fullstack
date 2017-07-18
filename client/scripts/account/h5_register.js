@@ -361,6 +361,7 @@
                 if (window.location.pathname.indexOf('t35') != -1) {
                     _taq.push({convert_id:"58276692798", event_type:"form"})
                 }
+                
                 publicRequest('register', 'POST', {
                     phone: $("#telephone").val() || "",
                     password: $("#password").val() || "",
@@ -375,7 +376,11 @@
                     if (data.is_succ) {
                         /*跳转到注册成功页面*/
                         if (window.location.pathname.indexOf('t35') >= 0) {
-                            window.location.href = window.location.origin + "/m/h5_register/succ?origin=redbag";
+                            var pandaDownloadUrl = '';
+                            if (oReg.search_arr.panda_download_url) {
+                                pandaDownloadUrl = "&panda_download_url="+oReg.search_arr.panda_download_url;
+                            }
+                            window.location.href = window.location.origin + "/m/h5_register/succ?origin=redbag"+pandaDownloadUrl;
                         } else {
                             window.location.href = window.location.origin + "/m/h5_register/succ";
                         }
@@ -434,7 +439,12 @@
 
         $('#regist_btn3').on('touchend',function(e){
             sa.track('DI_click');
-            window.location.href = $(e.target).attr('data-url');
+            if (oReg.search_arr.panda_download_url && oReg.search_arr.panda_download_url === 'oppo') {
+                // pandafx download url of oppo
+                window.location.href = "http://adsfs.oppomobile.com/mp/app/B/detail.html?im=$im1$&pkg=com.pandaforex.forex";
+            } else {
+                window.location.href = $(e.target).attr('data-url');
+            }
         })
     });
 }());
