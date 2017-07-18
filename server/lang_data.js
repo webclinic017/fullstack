@@ -96,7 +96,7 @@ module.exports = function () {
 
             // path
             logoPathZh: indexBasePath + "/tigerwit-logo.png",
-            h5_register_logo: indexBasePath + "/h5_register_logo_panda.png",
+            h5_register_logo: indexBasePath + "/h5_register_logo_Panda.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
             logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
