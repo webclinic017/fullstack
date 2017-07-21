@@ -119,7 +119,7 @@
         $scope.userGroup = undefined;   // 用户所在组
         var socketPara = {
             websocketTigerUrl: location.hostname === 'www.tigerwit.com' ? 'wss://demo.tigerwit.com:4567' : 'wss://demo.tigerwit.com:4567',
-            request_symbols: ['AUDUSD', 'XNGUSD', 'EURUSD', 'XTIUSD', 'GBPUSD', 'XBRUSD', 'NZDUSD', 'XAUUSD', 'USDCAD', 'XAGUSD', 'USDCHF', 'AUS200', 'USDJPY', 'JPN225'],
+            request_symbols: ['AUDUSD', 'XNGUSD', 'EURUSD', 'XTIUSD', 'GBPUSD', 'XBRUSD', 'NZDUSD', 'XAUUSD', 'USDCAD', 'XAGUSD', 'USDCHF', 'US30', 'USDJPY', 'JPN225'],
             request_symbols_zh: {
                 AUDUSD: '澳元美元',
                 XNGUSD: '天燃气',
@@ -132,7 +132,7 @@
                 USDCAD: '美元加元',
                 XAGUSD: '白银',
                 USDCHF: '美元瑞郎',
-                AUS200: '澳大利亚标准普尔200指数',
+                US30: '道琼斯指数',
                 USDJPY: '美元日元',
                 JPN225: '日经指数',
             },
