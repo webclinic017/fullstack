@@ -104,7 +104,7 @@
                     if (!data) return;
                     if (data.is_succ) {
                         var token = $cookies["token"] || '';
-                        var url = data.data.url + '?order_no='+data.data.order_no+'&token='+token;
+                        var url = data.data.url + '?token='+token;
                         openDepositMdl('depositFinish');
                         w.location = url;
                     } else {
