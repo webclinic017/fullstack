@@ -697,6 +697,12 @@ module.exports = function (app) {
         }
     });
 
+    // 品牌部活动 － 申请代理
+    app.route('/bd/brand_proxy').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('bd_brand_proxy', extendPublic({}, req));
+    });
+
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
     /*
         设置     ->     info, password, binding, 
