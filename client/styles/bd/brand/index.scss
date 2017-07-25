@@ -1,0 +1,242 @@
+.brand_index {
+    height: 650px;
+    overflow: hidden;
+    background-position: center center;
+    background-size: auto 100%;
+    background-image: url("/images/bd_brand/brand_banner.png");
+    background-repeat: no-repeat;
+
+    .container {
+        position: relative;
+    }
+
+    .brand_form {
+        position: absolute;
+        width: 400px;
+        top: 210px;
+        right: 0px;
+        background: rgba(3,26,115,0.7);
+        padding: 60px 30px;
+
+        .form-control-wrapper {
+            position: relative;
+            margin-bottom: 0px;
+
+            input {
+                padding-left: 50px;
+                color: #fff;
+            }
+
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 40px;
+                height: 40px;
+                content: '+86';
+                text-align: center;
+                line-height: 40px;
+                background-color: #fff;
+                color: #666;
+            }
+        }
+
+        /*placeholder字体大小*/  
+        ::-webkit-input-placeholder { /* WebKit browsers */  
+            color: #fff;
+        }  
+        :-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
+            color: #fff;
+        }  
+        ::-moz-placeholder { /* Mozilla Firefox 19+ */  
+            color: #fff;
+        }  
+        :-ms-input-placeholder { /* Internet Explorer 10+ */  
+            color: #fff;
+        }  
+
+        .btn {
+            margin-top: 30px;
+            width: 100%;
+            background-color: #1895e5;
+            color: #fff;
+            transition: all .4s;
+
+            &:hover {
+                background-color: #3ca3e6;
+            }
+        }
+    }
+}
+.brand_container {
+    background-color: #fff;
+}
+.brand_title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #0C0A09;
+    margin-top: 80px;
+    line-height: 48px;
+}
+.brand_sub_title {
+    margin-top: 26px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #0C0A09;
+}
+.brand_content {
+    .brand_t {
+        height: 90px;
+        text-align: center;
+        margin-top: 50px;
+
+
+        img {
+            height: 100%;
+
+            &.n2 {
+                display: none;
+            }
+        }
+
+        &:hover {
+            img.n1 {
+                display: none;
+            }
+            img.n2 {
+                display: inline-block;
+            }
+        }
+    }
+    .brand_info {
+        text-align: center;
+
+        p {
+            width: 80%;
+            margin: 0 auto;
+            line-height: 20px;
+        }
+    }
+    .brand_mod_wrapper {
+        margin-top: 45px;
+    }
+    .brand_mod_t {
+        line-height: 22px;
+        padding-top: 55px;
+        text-align: center;
+        width: 95%;
+    }
+    .brand_mod {
+        text-align: center;
+
+        img {
+            width: 100%;
+        }
+    }
+    .brand_news {
+        padding: 0px;
+        padding-bottom: 30px;
+
+        .pic {
+            position: relative;
+            display: block;
+
+            img {
+                width: 100%;
+                vertical-align: top;
+            }
+
+            &:before {
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: rgba(0, 0, 0, 0.4);
+                transition: all 0.4s;
+            }
+
+            &:hover {
+                &:before {
+                    background: rgba(0, 0, 0, 0);
+                }
+            }
+        }
+        .tip {
+            padding-top: 15px;
+            font-weight: 500;
+            font-size: 16px;
+
+            a {
+                color: #000;
+
+                &:hover {
+                    color: #333;
+                }
+            }
+        }
+        .des {
+            padding-top: 5px;
+            color: #555;
+        }
+
+        &.p1 {
+            padding-right: 60px;
+        }
+        &.p2 {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        &.p3 {
+            padding-left: 60px;
+        }
+    }
+    .brand_award {
+        padding: 1px;
+
+        .award_box {
+            background-color: #000;
+            color: #ffbd43;
+            padding: 30px 0;
+            text-align: center;
+            height: 180px;
+
+            h4 {
+                margin: 0px;
+                padding: 20px 0px 15px;
+                font-size: 18px;
+            }
+            .des {
+                font-size: 12px;
+                padding-top: 4px;
+            }
+
+            &.noPadding {
+                h4 {
+                    padding-top: 0px;
+                }
+            }
+        }
+    }
+    
+    &.brand_news_cont {
+        margin-top: 30px;
+    }
+    &.last-cont {
+        padding: 30px 0px 60px;
+    }
+}
+.brand_btn {
+    text-align: center;
+    margin-top: 60px;
+
+    .btn-primary {
+        background-color: #ffbd43;
+        border-color: #ffbd43;
+        height: 40px;
+        line-height: 40px;
+    }
+}
