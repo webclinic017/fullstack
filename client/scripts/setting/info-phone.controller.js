@@ -109,6 +109,10 @@
                     // });
                     
                     $scope.settingInfo.phone = $scope.phone.phoneNew; 
+
+                    $timeout(function () {
+                        window.location.reload();
+                    }, 1000); 
                 } else {
                     $scope.backErr.system.status = 2;
                     $scope.backErr.system.msg = data.message;

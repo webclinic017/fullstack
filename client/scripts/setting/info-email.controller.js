@@ -142,6 +142,10 @@
                     });
                     $scope.settingInfo.email = $scope.emailInfo.newEmail;
                     $scope.step = 1;
+
+                    $timeout(function () {
+                        window.location.reload();
+                    }, 1000); 
                 } else {
                     layer.msg(data.message, {
                         time: 2000
