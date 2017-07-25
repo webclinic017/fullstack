@@ -10,43 +10,48 @@
     border-bottom: 1px solid $gray;
 }
 
-.full-height{
+.full-height {
     min-height: 100%;
 }
 
-.primary-bg{
+.primary-bg {
     background: $m-brand-primary;
 }
 
-.text-bg{
+.text-bg {
     background: #fafafa;
 }
 
-.pr-color{
+.pr-color {
     color: $brand-primary-dark;
 }
 
+
 /*文本标题*/
-.text_title{
-  font-weight:500!important;
-  display: block!important;
-  padding: px2rem(17) 0!important;
-  font-size: px2rem(34);
+
+.text_title {
+    font-weight: 500!important;
+    display: block!important;
+    padding: px2rem(17) 0!important;
+    font-size: px2rem(34);
 }
-.text_sub_title{
-  font-weight:500!important;
-  display: block!important;
-  margin: px2rem(17) 0!important;
-  font-size: px2rem(32);
+
+.text_sub_title {
+    font-weight: 500!important;
+    display: block!important;
+    margin: px2rem(17) 0!important;
+    font-size: px2rem(32);
 }
+
+
 /*文本内容*/
-.text_pgh{
+
+.text_pgh {
     li {
         position: relative;
         margin-bottom: px2rem(32);
         padding-left: px2rem(32);
-        border: none;
-        // min-height: px2rem(80);
+        border: none; // min-height: px2rem(80);
     }
     .plan-line {
         position: absolute;
@@ -64,7 +69,7 @@
         font-size: px2rem(30);
         line-height: px2rem(40);
         color: #8f8f94;
-        .important{
+        .important {
             color: red;
             display: inline-block;
             vertical-align: middle;
@@ -74,7 +79,6 @@
 
 @include b(m_vue) {
     padding: 30px 10px 0px;
-
     &.m_vue_bgc {
         padding-left: 0px;
         padding-right: 0px;
@@ -88,11 +92,10 @@
 @include b(m_vue_nav) {
     background-color: #fff;
     padding-left: 10px;
+    padding-right: 10px;
     border-top: 1px solid #f0f0f0;
     border-bottom: 1px solid #f0f0f0;
-    
-    > li {
-
+    >li {
         &.nav_avatar {
             a {
                 line-height: 50px;
@@ -103,8 +106,7 @@
                 border-bottom: none;
             }
         }
-
-        > a {
+        >a {
             display: block;
             padding-top: 15px;
             padding-bottom: 15px;
@@ -113,36 +115,72 @@
             line-height: 20px;
         }
     }
-
     @include e(avatar) {
         width: 50px;
         height: 50px;
         border-radius: 50%;
         vertical-align: middle;
     }
-
     @include e(title) {
         font-size: 16px;
         color: #333;
     }
-
     @include e(list) {
         font-size: 16px;
         color: #888;
     }
-
     @include e(enter) {
         float: right;
         color: #888;
+        transition: all 0.5s ease;
+        &.pull {
+            transform: rotateZ(90deg);
+            -webkit-transform: rotateZ(90deg);
+            &.active {
+                transform: rotateZ(-90deg);
+                -webkit-transform: rotateZ(-90deg);
+            }
+        }
+    }
+    @include e(sub) {
+        margin-left: -10px;
+        margin-right: -10px;
+        display: none;
+        opacity: 0;
+        overflow: hidden;
+        transition: opacity 0.5s ease;
+        &.active {
+            opacity: 1;
+        }
+        >li {
+            transition: all 0.5s ease;
+            padding: 0 15px;
+            background: #f8f8f8;
+            >a {
+                display: block;
+                padding-top: 15px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #eeeeee;
+                line-height: 20px;
+                color: #c5c5c5;
+                transition: color 0.5s ease;
+            }
+            &.active {
+                background: $brand-primary-dark;
+                a {
+                    color: #ffffff;
+                }
+            }
+        }
     }
 }
 
 // 上传头像
-.info_avatar__container{
+.info_avatar__container {
     padding-top: 20px;
 }
 
-.info_avatar__process_bar{
+.info_avatar__process_bar {
     position: fixed;
     top: 0;
     left: 0;
@@ -154,14 +192,12 @@
 }
 
 @include b(upload_avatar) {
-
     @include e(avatar) {
         width: 100px;
         height: 100px;
         border: 2px solid #fff;
         border-radius: 50%;
     }
-
     @include e(label) {
         @extend .btn;
         @extend .btn-lg;
@@ -172,11 +208,9 @@
         margin: 0 auto;
         margin-top: 30px;
     }
-
     @include e(input) {
         display: none;
     }
-
     @include e(tip) {
         margin-top: 20px;
         margin-bottom: 15px;
@@ -189,41 +223,35 @@
         color: #888;
         margin-bottom: 20px;
     }
-
     @include e(resend) {
         text-align: center;
         margin-top: 10px;
-
         a {
             color: #666;
         }
     }
-
     @include e(icon) {
         text-align: center;
-
         img {
             width: 80px;
         }
     }
-
-     @include e(tit) {
+    @include e(tit) {
         text-align: center;
         padding-top: 20px;
     }
-
     .form-control-wrapper {
         &.formWidth50 {
             width: 50%;
             margin-left: auto;
             margin-right: auto;
-
             .form-control {
                 text-align: center;
             }
         }
     }
 }
+
 @include b(m_vue_forget) {
     @include e(btn) {
         width: 100%;
@@ -231,14 +259,12 @@
         line-height: 40px;
         padding: 0;
         text-align: center;
-
         &.en {
             font-size: 14px;
         }
     }
     @include e(icon) {
         text-align: center;
-
         img {
             width: 80px;
         }
@@ -253,3 +279,347 @@
     }
 }
 
+.layset {
+    width: 100%;
+    min-height: 100%;
+    background-color: #fff;
+}
+
+@include b(whyForexBox) {
+    @extend .layset;
+    height: 100%;
+    padding: 38.5px 28px 75px;
+    @include e(item) {
+        width: 50%;
+        height: 50%;
+        float: left;
+        text-align: center;
+        padding-top: 40px;
+        border: 1px solid transparent;
+        @include m(imgBox) {
+            width: px2rem(100);
+        }
+        @include m(desp) {
+            font-size: px2rem(30);
+            line-height: 1.2rem;
+            text-align: justify;
+            margin-top: 20px;
+            padding: 0 20px;
+        }
+        &:first-child {
+            padding-top: 0;
+            border-right: 1px solid $brand-primary-dark;
+            border-bottom: 1px solid $brand-primary-dark;
+            p {
+                padding-left: 0;
+            }
+        }
+        &:nth-child(2) {
+            padding-top: 0;
+            border-bottom: 1px solid $brand-primary-dark;
+            p {
+                padding-right: 0;
+            }
+        }
+        &:nth-child(3) {
+            border-right: 1px solid $brand-primary-dark;
+            p {
+                padding-left: 0;
+            }
+        }
+        &:nth-child(4) {
+            p {
+                padding-right: 0;
+            }
+        }
+    }
+}
+
+.help_title_set {
+    padding: 0;
+    margin: 0;
+    color: $brand-primary-dark;
+    font-size: px2rem(32);
+    text-align: center;
+    position: relative;
+    padding-bottom: 12px;
+    padding-top: 25px;
+    &:after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        width: px2rem(64);
+        height: 4px;
+        bottom: 0px;
+        left: 50%;
+        background-color: $brand-primary-dark;
+        transform: translate(-50%)
+    }
+}
+
+@include b(help1min) {
+    @extend .layset;
+    padding: 0 px2rem(28);
+    text-align: justify;
+    font-size: px2rem(30);
+    font-weight: 300;
+    font-style: "normal";
+    line-height: px2rem(48);
+    @include e(item) {
+        width: 100%;
+        border-bottom: 1px solid $brand-primary-dark;
+        padding-bottom: 25px;
+        &:last-child {
+            border: none;
+        }
+        @include m(title) {
+            @extend .help_title_set;
+        }
+        @include m(desp) {
+            margin-top: 20px;
+            padding: 0 1.5rem;
+            font-size: px2rem(30)
+        }
+    }
+}
+
+@include b(help5rule) {
+    @extend .layset;
+    padding: 0 px2rem(28);
+    text-align: justify;
+    font-size: px2rem(30);
+    font-weight: 300;
+    font-style: normal;
+    line-height: px2rem(48);
+    @include e(item) {
+        width: 100%;
+        border-bottom: 1px solid $brand-primary-dark;
+        border-top: 1px solid $brand-primary-dark;
+        padding-bottom: 25px;
+        margin-top: 0.5rem;
+        &:first-child {
+            border-top: none;
+            margin-top: 0;
+        }
+        &:last-child {
+            border-bottom: none;
+        }
+        @include m(num) {
+            width: 15%;
+            height: 100%;
+            padding-top: 4rem;
+            float: left;
+            font-family: "ClementePDac";
+            font-size: px2rem(120);
+            font-weight: 200;
+            font-style: normal;
+            text-align: center;
+            color: $brand-primary-dark;
+        }
+        @include m(con) {
+            width: 85%;
+            float: left;
+            padding-left: 2%;
+            .title {
+                @extend .help_title_set;
+                text-align: left;
+                &:after {
+                    left: 0;
+                    transform: translate(0)
+                }
+            }
+            .desp {
+                padding-top: 1rem;
+            }
+        }
+    }
+}
+
+@include b(helpSelf) {
+    text-align: center;
+    @extend .layset;
+    padding: px2rem(56) 0;
+    @include e(item) {
+        border: 2px solid $brand-primary-dark;
+        border-radius: px2rem(10);
+        padding: px2rem(32);
+        text-align: center;
+        transition: all 0.5s ease;
+        background: transparent;
+        display: inline-block;
+        width: px2rem(148 * 2);
+        height: px2rem(160 * 2);
+        margin-bottom: 1rem;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &.withDep {
+            width: 13rem;
+            height: 13rem;
+            margin-bottom: 2.5rem;
+            .hasImg {
+                padding-top: 2rem;
+                img {
+                    width: px2rem(170);
+                }
+            }
+        }
+        @include m(icon) {
+            color: $brand-primary-dark;
+            font-size: 3.5rem;
+            transition: all 0.5s ease;
+            &.icon1 {
+                font-size: 4.5rem;
+                transform: scale(1.3);
+                i {
+                    transform: scaleY(1.2);
+                }
+            }
+            &.icon2 {
+                transform: scale(1.4);
+            }
+            &.icon3 {
+                font-family: 'Impact';
+            }
+        }
+        @include m(desp) {
+            color: $brand-primary-dark;
+            font-size: px2rem(30);
+            transition: all 0.5s ease;
+        }
+        &.active {
+            background: $brand-primary-dark;
+            .icon,
+            .desp {
+                color: #fff;
+            }
+        }
+    }
+}
+
+#layer_contentBox {
+    display: none;
+}
+
+.layui-m-layercont {
+    padding: 0;
+}
+
+@include b(layer_content) {
+    padding: 0 px2rem(32) px2rem(56) px2rem(32);
+    .self_desp {
+        text-align: left;
+        margin-top: 1rem;
+        line-height: 1.5rem;
+        font-size: px2rem(30);
+        .color-brand-primary {
+            color: $brand-primary-dark;
+        }
+    }
+    .self_close {
+        color: $brand-primary-dark;
+        font-size: 1rem;
+        text-align: right;
+        padding-right: 1rem;
+        margin-top: 1rem;
+    }
+    .self_tip {
+        font-size: px2rem(16);
+        color: #aaa;
+        text-align: justify;
+        line-height: 0.8rem;
+        margin-top: px2rem(12);
+    }
+    @include b(flow) {
+        width: 100%;
+        @include e(item) {
+            border: 1px solid $brand-primary-dark;
+            border-radius: px2rem(16);
+            margin-top: px2rem(32);
+            padding: 1rem;
+            padding-left: 0;
+            @include m(operate) {
+                float: left;
+                width: 40%;
+                color: $brand-primary-dark;
+                font-size: 1rem;
+                text-align: center;
+                &.haspt {
+                    padding-top: 1rem;
+                }
+                img {
+                    width: 2rem;
+                    &.special {
+                        width: 4.5rem;
+                    }
+                    &.width25 {
+                        width: 2.5rem;
+                    }
+                }
+            }
+            @include m(desp) {
+                float: left;
+                width: 60%;
+                text-align: justify;
+                color: $m-gray-base;
+                font-size: px2rem(25);
+                line-height: 1.125rem;
+            }
+        }
+    }
+    .flowChart__viewport {
+        position: relative;
+        width: 100%;
+        height: 28rem;
+        padding-top: px2rem(30);
+        overflow-y: scroll;
+        overflow-x: hidden;
+        transition: all 0.5s ease;
+        @include b(viewport_flows) {
+            transition: left 0.5s ease;
+            position: absolute;
+            left: 0;
+            width: 150rem;
+            @include e(item) {
+                float: left;
+                width: 18rem;
+                @include m(img_box) {
+                    overflow-x: scroll;
+                    width: 100%;
+                    p {
+                        text-align: center;
+                        img {
+                            width: 12rem;
+                            border: 1px solid $brand-primary-dark;
+                            float: left;
+                            margin-right: px2rem(16);
+                        }
+                        &.num1 {
+                            width: 12rem;
+                            img {
+                                float: none;
+                                margin-left: 3rem;
+                            }
+                        }
+                        &.num2 {
+                            width: 26rem;
+                        }
+                        &.num3 {
+                            width: 38rem;
+                        }
+                    }
+                }
+                @include m(desp) {
+                    margin-top: 1rem;
+                    text-align: left;
+                    .steps {
+                        color: $brand-primary-dark;
+                        font-family: 'Impact';
+                        font-size: 1rem;
+                        margin-right: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
