@@ -1,0 +1,46 @@
+<div class="system_modal">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <h5 class="system_modal__title">
+        申请代理
+    </h5>
+
+    <div class="system_modal__content" ng-show="!modal.isComplete">
+        <div class="system_modal__info">
+            <div class="form-control-wrapper">
+                <input class="form-control" type="phone" placeholder="请输入手机号码" ng-model="phone">
+            </div>
+        </div>
+        
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="submitMdlForm()">
+                提交
+            </a>
+        </p>
+    </div>
+
+    <div class="system_modal__content" ng-show="modal.isComplete">
+        <div ng-show="modal.type === 'success'">
+            <p class="system_modal__info">
+                代理申请成功
+            </p>
+            <p class="system_modal__tip">
+                我们已经收到您的信息，请保持手机畅通。
+            </p>
+        </div>
+        <div ng-show="modal.type === 'fail'">
+            <p class="system_modal__info">
+                代理申请失败
+            </p>
+            <p class="system_modal__tip">
+                {{ modal.message || '请联系客服人员' }}
+            </p>
+        </div>
+
+        <p class="system_modal__btn_wrapper">
+            <a class="btn btn-primary btn-sm" ng-click="closeModal()">
+                确定
+            </a>
+        </p>
+    </div>
+</div>

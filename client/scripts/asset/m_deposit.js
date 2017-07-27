@@ -40,13 +40,16 @@ $(document).ready(function () {
     //     }
     // });
 
-    var token = $.cookie("token") || '';
-    // console.info($pay);
-    $.each($pay, function (index, value) {
-        // console.log(index, value);
-        var pMode = $(value).attr("data-pmode");
-        $(value).attr("href", urlPath+"/api/app/payment/deposit/dispatch?pmode="+pMode+"&token="+token);
-    });
+    if (search) {
+        order_no = doSearch(search, 'order_no');
+        var token = $.cookie("token") || '';
+        // console.info($pay);
+        $.each($pay, function (index, value) {
+            // console.log(index, value);
+            var pMode = $(value).attr("data-pmode");
+            $(value).attr("href", urlPath+"/api/app/payment/deposit/dispatch?order_no="+order_no+"&pmode="+pMode+"&token="+token);
+        });
+    }
 
     // $pay.on('click', function () {
         
