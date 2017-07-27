@@ -1,5 +1,9 @@
+/**
+ * 包含移动端交易流程、跟随高手流程、出入金流程页面
+ * 根据不同的data数据渲染不同页面的流程
+ */
 if ($(".m_vue").attr("data-page") === "helpSelf") {
-    var bindingApp = new Vue({
+    var helpSelfApp = new Vue({
         el: '#helpSelf',
         data: {
             triggleEvent: 'click', //配置当前触发事件
@@ -135,6 +139,7 @@ if ($(".m_vue").attr("data-page") === "helpSelf") {
         ready: function () {
             var curFlow = $('#helpSelf').attr('data-flow');
             var TRIGGLE_EVENT = this.$data.triggleEvent;
+            var hasAutoScrolled = false;
             // 总步数
             var totalStep;
             var vm = this;
@@ -180,6 +185,15 @@ if ($(".m_vue").attr("data-page") === "helpSelf") {
                 }, 0);
             }
 
+            function autoScroll(target) {
+                if (!hasAutoScrolled) {
+                    target.delay(300).animate({ scrollTop: 300 }, 500, 'swing', function () {
+                        target.animate({ scrollTop: 0 }, 500, 'swing');
+                    });
+                    hasAutoScrolled = true;
+                }
+            }
+
             // 记录当前打开的layerbox和index
             var curLayBox = undefined;
             var curStep = 1;
@@ -216,9 +230,8 @@ if ($(".m_vue").attr("data-page") === "helpSelf") {
                     // 动态获取有多少step
                     totalStep = curLayBox.find('.viewport_flows__item').length;
                     // 自动滚动，让用户知道当前元素可以滚动
-                    $viewPort.delay(300).animate({ scrollTop: 300 }, 500, 'swing', function () {
-                        $viewPort.animate({ scrollTop: 0 }, 500, 'swing');
-                    });
+                    autoScroll($viewPort);
+
                     nextLoop(function () {
                         curLayBox.on(TRIGGLE_EVENT, function (e) {
                             var curTarget = $(e.target);
