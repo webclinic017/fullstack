@@ -15,7 +15,7 @@
                                 class="kyc__title-kyc_selection mg-lf-20"
                                 ng-model="industry"
                                 ng-options="item.value for item in question.data.list track by item.key"
-                                ng-change="selectOption(question, industry)"
+                                ng-change="selectOption(question, industry, $index)"
                             >
                                 <option value="">您的职业所属行业</option>
                             </select>
@@ -29,7 +29,7 @@
                                        value="{{ option.key }}"
                                        required
                                        ng-model="question.answer"
-                                       ng-change="selectOption(question,option)">
+                                       ng-change="selectOption(question,option,$index)">
                                 <i class="fa fa-circle-o"></i>
                                 <i class="fa fa-dot-circle-o"></i>
                                 {{ option.value }}
@@ -42,7 +42,7 @@
                                        value="{{ option.key }}"
                                        required
                                        ng-model="question.answer"
-                                       ng-click="selectOption(question, option)">
+                                       ng-click="selectOption(question, option, $index)">
                                 <i class="fa fa-circle-o"></i>
                                 <i class="fa fa-dot-circle-o"></i>
                                 {{ option.value }}
