@@ -74,8 +74,7 @@
                     $scope.flow.step = data.data.status;
                     console.log($scope.flow.step);
                     // 控制当前流程显示页面
-                    // goState($scope.flow.authStatusMap[data.data.status]);
-                    goState('investInfo');
+                    goState($scope.flow.authStatusMap[data.data.status]);
 
                     if ($scope.personal.profile_check == 1) {
                         if (!showMsg) {
