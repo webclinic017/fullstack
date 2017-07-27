@@ -55,12 +55,16 @@
             var href = window.location.href;
             var originUrl = window.location.origin;
             var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.') + 1) || "tigerwit.com";
-            var pid = '', lp = '', unit = '', key = '', aGET = {};
-            var lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
-
-            if (lp != "") {
-                document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl;
-            }
+            var pid = '', lp = 'sy', unit = '', key = '', aGET = {};
+            // var lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
+            var oDate = new Date();
+            var overdueDate = new Date();
+            oDate.setTime(oDate.getTime() + (7 * 24 * 60 * 60 * 1000));
+            overdueDate.setTime(oDate.getTime() - (7 * 24 * 60 * 60 * 1000));
+            var expTime = ';expires='+oDate.toUTCString();
+            var overdueExpTime = ';expires='+overdueDate.toUTCString();
+            
+            document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl+expTime;
 
             if (href.indexOf('?') != -1) {
                 var aQuery = href.split('?')[1];
@@ -77,18 +81,17 @@
 
                 if (pid != '') {
                     // 清空重写
-                    // console.log(domainUrl);
-                    document.cookie = 'pid=' + null + ';path=/;domain=' + null;
-                    document.cookie = 'unit=' + null + ';path=/;domain=' + null;
-                    document.cookie = 'key=' + null + ';path=/;domain=' + null;
-
-                    document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl;
+                    document.cookie = 'pid=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                    document.cookie = 'unit=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                    document.cookie = 'key=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                    
+                    document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl+expTime;
 
                     if (unit) {
-                        document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl;
+                        document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl+expTime;
                     }
                     if (key) {
-                        document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl;
+                        document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl+expTime;
                     }
                 }
             }
