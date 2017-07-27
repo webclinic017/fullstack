@@ -7,7 +7,7 @@ $(document).ready(function () {
     var clickable = true;
 
     var hostnameUrl = window.location.hostname;
-    var originUrl = window.location.origin || (window.location.protocol+'//'+window.location.hostname);
+    var originUrl = window.location.origin || (window.location.protocol + '//' + window.location.hostname);
     var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.') + 1) || "tigerwit.com";
     var href = window.location.href;
     lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
@@ -107,7 +107,9 @@ $(document).ready(function () {
             }
 
             // 神策数据统计
-            sa.track('btn_register');
+            sa.track('btn_register', {
+                page: window.location.href
+            });
 
             var tmpForm = $("<form></form>");
             tmpForm.append("<input type='hidden' value='" + rName + "' name='username'/>");
@@ -125,7 +127,7 @@ $(document).ready(function () {
 
                 returnurl = originUrl + "/m/h5_register/reg?" + "name=" + rName + "&telephone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
             }
-            
+
             jQuery.ajax({
                 url: '/api/auth/page_signup',
                 data: tmpForm.serialize(),
@@ -135,7 +137,7 @@ $(document).ready(function () {
                     location.href = returnurl;
                 },
                 error: function (err) {
-                    
+
                     location.href = returnurl;
                 }
             });
