@@ -25,7 +25,7 @@
 
         if (!userCode && company && company === 'tigerwit') {
             account.getAdvertiseRecords('popup').then(function (data) {
-                console.log(data);
+                // console.log(data);
                 if (data.is_succ && data.data.length) {
                     data = data.data[0];
                     layer.open({
@@ -45,9 +45,9 @@
         $scope.advertiseLst = [];
 
         // 此为index2 首页的高手信息
-        ranklist.getMastersList().then(function (data) {
-            // console.info(data);
-            $scope.indexMasters = data.data.records.slice(0, 3);
+        ranklist.getIndexMasters().then(function (data) {
+            console.info(data);
+            $scope.indexMasters = data.data;
         });
 
         function getUserParam() {

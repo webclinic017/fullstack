@@ -8,16 +8,16 @@
     <div class="ranklist">
         <div class="ranklist__navbar">
             <ul class="ranklist__navbar-lst clearfix">
-                <li ng-class="{active: rankOrder == 'last_total_profit_rate'}" ng-click="changeRankOrder('last_total_profit_rate')">
+                <li ng-class="{active: rankOrder == 'thirty_profit_rate'}" ng-click="changeRankOrder('thirty_profit_rate')">
                     收益率
                     <i class="fa fa-caret-down"></i>
                 </li>
-                <li ng-class="{active: rankOrder == 'max_retract'}" ng-click="changeRankOrder('max_retract')">
+                <li ng-class="{active: rankOrder == 'thirty_max_retract'}" ng-click="changeRankOrder('thirty_max_retract')">
                     最大跌幅
                     <i class="fa fa-caret-down"></i>
                 </li>
-                <li ng-class="{active: rankOrder == 'copy_history_sum'}" ng-click="changeRankOrder('copy_history_sum')">
-                    历史跟随人数
+                <li ng-class="{active: rankOrder == 'thirty_win_rate'}" ng-click="changeRankOrder('thirty_win_rate')">
+                    胜率
                     <i class="fa fa-caret-down"></i>
                 </li>
                 <!-- <li ng-class="{active: rankOrder == 'min_follow'}" ng-click="changeRankOrder('min_follow')">
@@ -99,16 +99,16 @@
                 </div>
                 <div class="ranklist_cont__master-trade clearfix">
                     <div class="profit">
-                        <div class="num" ng-class="{'font-danger': (rank.profit_rate + '').indexOf('-') < 0, 'font-success': (rank.profit_rate + '').indexOf('-') != -1}">
-                            {{ rank.profit_rate }}<span>%</span>
+                        <div class="num" ng-class="{'font-danger': (rank.thirty_profit_rate + '').indexOf('-') < 0, 'font-success': (rank.thirty_profit_rate + '').indexOf('-') != -1}">
+                            {{ rank.thirty_profit_rate }}<span>%</span>
                         </div>
                         <div class="tip">
                             收益率
                         </div>
                     </div>
                     <div class="dropdown">
-                        <div class="num" ng-class="{'font-danger': (rank.max_retract_percent + '').indexOf('-') < 0, 'font-success': (rank.max_retract_percent + '').indexOf('-') != -1}">
-                            {{ rank.max_retract_percent }}%
+                        <div class="num" ng-class="{'font-danger': (rank.thirty_max_retract + '').indexOf('-') < 0, 'font-success': (rank.thirty_max_retract + '').indexOf('-') != -1}">
+                            {{ rank.thirty_max_retract }}%
                         </div>
                         <div class="tip">
                             最大跌幅

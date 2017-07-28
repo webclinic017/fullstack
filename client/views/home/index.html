@@ -45,22 +45,35 @@
                     <div class="col-xs-3 index2-master__col2" ng-cloak ng-repeat="master in indexMasters" ng-if="indexMasters.length > 0">
                         <ul>
                             <li class="index2-master__col2-li1">
-                                <a class="index2-master__col2-photo" href="/trader/{{master.user_code}}/#/trader/summary" target="_blank">
-                                  <img ng-src="/avatar/{{ master.user_code }}_150.jpg" alt="avatar">
-                                </a>
-                                <span class="index2-master__col2-name" title="{{ master.username || '**' }}">{{ master.username || '**' }}</span>
+                                <span class="index2-master__col2-tip" ng-show="master.type == 1">
+                                    收益高手
+                                </span>
+                                <span class="index2-master__col2-tip" ng-show="master.type == 2">
+                                    稳健高手
+                                </span>
+                                <span class="index2-master__col2-tip" ng-show="master.type == 3">
+                                    常胜高手
+                                </span>
+                                <a class="index2-master__col2-name" href="/trader/{{master.user_code}}/#/trader/summary" target="_blank" title="{{ master.username || '**' }}">{{ master.username || '**' }}</a>
                             </li>
                             <li class="index2-master__col2-li2">
                                 <div class="index2-master__col2-div1">
-                                    <span class="index2-master__col2-rate">{{ master.profit_rate || '0.00' }}</span><span class="font-size-12">%</span><br>
-                                    <span class="font-size-14"><%= lang.text("shouyilv")%></span>
+                                    <span class="index2-master__col2-rate">{{ master.thirty_profit_rate || '0.00' }}</span><span class="font-size-12">%</span><br>
+                                    <span class="font-size-14">近30日收益率</span>
+                                    <div class="index2-master__col2-tags">
+                                        <span ng-repeat="tag in master.tags">
+                                            {{ tag }}
+                                        </span>
+                                    </div>
                                 </div>
                                 <div class="index2-master__col2-div2">
-                                    <span class="index2-master__col2-how" ng-show="master.max_retract < 0.05"><%= lang.text("low")%></span>
-                                    <span class="index2-master__col2-how" ng-show="master.max_retract >= 0.05 && master.max_retract <= 0.10"><%= lang.text("middle")%></span>
-                                    <span class="index2-master__col2-how" ng-show="master.max_retract > 0.10"><%= lang.text("high")%></span>
+                                    <span class="index2-master__col2-how" ng-show="master.type == 1">高</span>
+                                    <span class="index2-master__col2-how" ng-show="master.type == 2">稳</span>
+                                    <span class="index2-master__col2-how" ng-show="master.type == 3">低</span>
                                     <br>
-                                    <span class="index2-master__col2-how-c"><%= lang.text("fengxian")%></span>
+                                    <span class="index2-master__col2-how-c" ng-show="master.type == 1">收益</span>
+                                    <span class="index2-master__col2-how-c" ng-show="master.type == 2">操作</span>
+                                    <span class="index2-master__col2-how-c" ng-show="master.type == 3">风险</span>
                                 </div>
                             </li>
                             <li class="index2-master__col2-li3 clearfix">
