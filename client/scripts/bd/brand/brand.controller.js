@@ -27,6 +27,7 @@
                     if (!data) return;
                     if (data.is_succ) {
                         openSystemMdl('success');
+                        $scope.phone = undefined;
                     } else {
                         openSystemMdl('fail', data.message);
                     }

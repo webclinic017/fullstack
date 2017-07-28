@@ -123,14 +123,13 @@
         $scope.selectOption = selectOption;
         $scope.submitForm = submitForm;
         var kycInfo = {};
+        var muiltiSelect = {};
 
         if ($state.current.name === 'space.setting.subpage') {
             $scope.type = 'setting';
         }
 
-        // setUserLastKyc();
-
-        function selectOption(question, option) {
+        function selectOption(question, option, $index) {
             // console.log('question', question);
             // console.log('option', option);
             $scope.tip.questions.show = false;
@@ -138,8 +137,12 @@
 
             // 多选
             if (question.data.type == 3) {
+                if(!muiltiSelect[question.id]){
+                    muiltiSelect[question.id] = [];
+                }
                 option.checked = option.checked ? false : true;
-                kycInfo[question.id] = kycInfo[question.id] += ',' + option.key
+                muiltiSelect[question.id][$index] = option.checked ? option.key : undefined;
+                console.log(muiltiSelect[question.id]);
             }
             // 单选
             else {
@@ -147,7 +150,22 @@
             }
         }
 
+        function mapMuiltiSelectToKycInfo(){
+            angular.forEach(muiltiSelect,function(item, index){
+                var temp = [];
+                angular.forEach(item, function(item, index){
+                    if(item){
+                        temp.push(item);
+                    }
+                })
+                // console.log(temp);
+                kycInfo[index] = temp.join(',');
+            });
+            console.log(kycInfo);
+        }
+
         function submitForm() {
+            mapMuiltiSelectToKycInfo();
             var isBreak = false;
             var hasFinishAll = false;
             // console.log(isBreak);
