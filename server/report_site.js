@@ -1,4 +1,40 @@
 var report_sites = [
+    /*添加时间 2017-7-28*/
+    {
+        address: 'http://m.3news.cn/2017/0724/207412.html?from=groupmessage&isappinstalled=0',
+        description: '【大河网】共话转型与变革 老虎外汇摘获第六届中国财经峰会双项殊荣',
+        date: '2017-07-24'
+    },
+    {
+        address: 'http://www.xsgou.com/biz/finance/72409.html',
+        description: '【中国财经观察网】移动互联网时代，互联网外汇服务平台老虎外汇的思与行',
+        date: '2017-07-20'
+    },
+    {
+        address: 'http://www.3news.cn/2017/0720/207085.html',
+        description: '【中国财经时报网】外汇投资成流行姿势 老虎外汇让外汇交易更简单轻松',
+        date: '2017-07-20'
+    },
+    {
+        address: 'http://news.xinxunwang.com/china/syzx/88659.html',
+        description: '【新讯网】老虎外汇获“2017最具成长价值奖” 受邀参加第六届中国财经峰会',
+        date: '2017-07-11'
+    },
+    {
+        address: 'http://www.xsgou.com/biz/finance/71077.html',
+        description: '【中国财经观察网】外汇交易跟单软件推荐：老虎外汇、eToro、Follow me',
+        date: '2017-07-14'
+    },
+    {
+        address: 'http://www.jingji.com.cn/html/news/zxxw/74739.html',
+        description: '【经济网】老虎外汇荣获第六届中国财经峰会“2017最具成长价值奖”',
+        date: '2017-07-13'
+    },
+    {
+        address: 'http://industry.caijing.com.cn/20170713/4298933.shtml',
+        description: '【财经网】炒汇新手如何选择外汇服务平台？老虎外汇怎么样？',
+        date: '2017-07-13'
+    },
     /*添加时间 2017-6-26*/
     {
         address: 'http://news.163.com/17/0614/21/CMU1LP9H00014AEE.html',
