@@ -43,8 +43,14 @@
         checkCodeApi: rootUrl + '/validation/check_phone_code', //post
         // setNewPasswordApi: rootUrl + '/action/public/v4/change_password', //post
         setNewPasswordApi: rootUrl + '/forget_passwd', //put
+        getWebProductInfoApi: '/napi?action=get_product', //get
     };
     w.dealApiUrlResource = dealApiUrlResource;
+    w.getVueApi = getVueApi;
+
+    function getVueApi(){
+        return apiUrl;
+    }
     
     function dealApiUrlResource($url, $method, $params) {
         Vue.http.options.xhr = { withCredentials: true };

@@ -1,0 +1,120 @@
+<div class="m_vue m_vue_bgc" data-page="helpSelf" id="helpSelf" data-flow="follow">
+    <ul class="helpSelf">
+        <li class="helpSelf__item" data-action="openlay-mobile">
+            <p class="helpSelf__item-icon icon">
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+            </p>
+            <p class="helpSelf__item-desp desp">高手跟单</p>
+        </li>
+        <br>
+        <li class="helpSelf__item" data-action="openlay-how">
+            <p class="helpSelf__item-icon icon icon2">
+                ?
+            </p>
+            <p class="helpSelf__item-desp desp">
+                如何进行</br>高手跟单
+            </p>
+        </li>
+        <br>
+        <li class="helpSelf__item" data-action="openlay-flowChart">
+            <p class="helpSelf__item-icon icon icon3">
+                step
+            </p>
+            <p class="helpSelf__item-desp desp">
+                高手跟单</br>操作流程图
+            </p>
+        </li>
+    </ul>
+    <div id="layer_contentBox">
+        <div class="mobile">
+            <div class="layer_content">
+                <h5 class="mobile__title help_title_set">
+                    高手跟单
+                </h5>
+                <p class="mobile__desp self_desp">
+                    <span class="color-brand-primary">高手跟单: </span>也叫复制交易。若投资人自身经验不足难以对市场走势进行判断和分析，可通 过复制跟单操作，同比例复制交易高手的交易行为与高手同步盈亏。投资交易高手不但可 通过自身交易直接获利，还可从复制者的盈利中获得 20%的利润分成。
+                    <br>
+                    <br>
+                    <span class="color-brand-primary">高手筛选指标: </span><br>
+                    1.总收益率:自投资高手在老虎外汇平台开户交易以来的总体收益率。 <br>
+                    2.历史跟随:跟随该高手交易的历史总人数。 <br>
+                    3.最大跌幅:投资高手在老虎外汇平台开户交易以来的单笔订单最大跌幅。 <br>
+                    4.最低复制金额:与该交易高手同比例的最低保证金数。 <br>
+                    5.高手排名:按总收益率递减的顺序排列。
+                </p>
+                <p class="mobile__close self_close" data-action="closelay-mobile">
+                    关闭
+                </p>
+            </div>
+        </div>
+        <div class="how">
+            <div class="layer_content">
+                <h5 class="help_title_set">
+                    如何进行高手跟单
+                </h5>
+                <p class="self_desp">
+                    只需 3 步，就可以获得专业投资交易高手同比例的收益
+                </p>
+                <ul class="flow">
+                    <li class="flow__item clearfix">
+                         <div class="flow__item-operate haspt">
+                            <img class="width25" src="/images/mobile/help_how_icon1.svg">
+                        </div>
+                        <div class="flow__item-desp">
+                            通过对比交易高手的收益率，最大回撤、历史复制人数、交易记录等信息，选择最欣赏的交易高手，输入想要跟随的金额;
+                        </div>
+                    </li>
+                    <li class="flow__item clearfix">
+                         <div class="flow__item-operate">
+                            <img src="/images/mobile/help_how_icon4.svg">
+                        </div>
+                        <div class="flow__item-desp">
+                            点击“复制”,系统会自动同步复制交易高手订单。
+                        </div>
+                    </li>
+                    <li class="flow__item clearfix">
+                        <div class="flow__item-operate">
+                            <img src="/images/mobile/help_how_icon5.svg">
+                        </div>
+                        <div class="flow__item-desp">
+                            只要高手下订单，你的账号就会自动同比例复制高手的订单，并且同比例盈亏。
+                        </div>
+                    </li>
+                </ul>
+                <p class="self_tip">
+                    提示：老虎外汇 APP 上的高手资料和交易信息均对外公布，不管用户是否注册或充值都可以随 时查看了解;若用户想要完成复制跟单并盈利，则首先需要在页面中进行注册、实名认证、充值。
+                </p>
+                <p class="self_close" data-action="closelay-how">
+                    关闭
+                </p>
+            </div>
+        </div>
+        <div class="flowChart">
+            <div class="layer_content">
+                <h5 class="help_title_set">
+                    复制跟单操作流程图
+                </h5>
+                <div class="flowChart__viewport clearfix">
+                    <ul class="viewport_flows clearfix">
+                        <li class="viewport_flows__item" v-for="flow in followData" :key="flow.stepTxt">
+                            <div class="viewport_flows__item-img_box">
+                                <p class="clearfix num{{flow.imgSrc.length}}">
+                                    <img v-for="src in flow.imgSrc" src="/images/mobile/help_followchart-{{ src }}.png">
+                                </p>
+                            </div>
+                            <p class="viewport_flows__item-desp">
+                                <span class="steps">STEP{{$index + 1}}</span>
+                                {{ flow.desp }}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <p class="self_close next_page" >
+                    <span class="handle_bar previous fl" style="display:none;" data-action="previousPage-flow">上一页</span>
+                    <span class="handle_bar next" data-action="nextPage-flow">下一页</span>
+                    <span class="handle_bar closer" style="display:none;" data-action="closelay-flowChart">关闭</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

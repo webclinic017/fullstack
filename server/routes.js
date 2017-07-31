@@ -344,14 +344,14 @@ module.exports = function (app) {
             // demo.tigerwit.com
             // w.tigerwit.com
             // w.dev.tigerwit.com
-            if(hostPrefix == 'demo' || hostPrefix2 == 'dev'){
+            if (hostPrefix == 'demo' || hostPrefix2 == 'dev') {
                 masterApiPath = 'https://demo.tigerwit.com/api'
             }
-            else if(hostPrefix == 'www' || hostPrefix == 'w'){
+            else if (hostPrefix == 'www' || hostPrefix == 'w') {
                 masterApiPath = 'https://www.tigerwit.com/api'
             }
         }
-        console.log('------masterApiPath',masterApiPath);
+        console.log('------masterApiPath', masterApiPath);
         setEnvCf(req, res);
         request(masterApiPath + '/master/trading_profile?user_code=' + usercode, function (error, response, body) {
             // request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
@@ -458,8 +458,6 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('web_mt4.html', extendPublic({}, req));
     });
-
-
 
     app.route('/study/:subpage(introduction|term|fundamental|skill|video)').get(function (req, res) {
         var subpage = req.params.subpage || 'skill';
@@ -797,6 +795,16 @@ module.exports = function (app) {
         }, req));
     });
 
+    // help
+    app.route('/m/wap/help/:subpage(*)').get(function (req, res) {
+        var subpage = req.params.subpage || 'index';
+
+        setEnvCf(req, res);
+        res.render('m_vue_help.html', extendPublic({
+            pageInfo: subpage
+        }, req));
+    });
+
     /* end */
 
     // nodeAPI
@@ -873,7 +881,7 @@ module.exports = function (app) {
                     data_new_item["profit_rate_wish"] = Math.ceil(data_new_item["profit_rate_wish"].split("%")[0] / 12) + '%';
                     data_pre_new.push(data_new_item);
                 }
-                var endPg = Number(offset)+Number(limit);
+                var endPg = Number(offset) + Number(limit);
                 data = data_pre_new.slice(offset, Math.min(endPg, sum));
                 // console.log(data, endPg);
             }
@@ -935,12 +943,12 @@ module.exports = function (app) {
         if (action == "get_report_site") {
             data = report_sites;
         }
-        if(action == 'get_product'){
+        if (action == 'get_product') {
             var type = req.query.product_type;
             data = type ? require('./model/modelProduct.js')[type] : [] || {};
         }
         if (data) {
-            
+
             if (offset) {
                 rs = {
                     is_succ: true,
