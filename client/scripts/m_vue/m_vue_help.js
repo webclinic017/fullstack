@@ -3,21 +3,22 @@ if ($(".m_vue").attr("data-page") === "help") {
         el: '#m_vue_help',
         ready: function () {
             var TRIGGLE_EVENT = 'click';
-            var HELP_ORIGIN = '/m/wap/help/';
+            var HELP_ORIGIN = window.location.origin + '/m/wap/help/';
 
             function getAction(e) {
                 return $(e.currentTarget).attr('data-action');
             }
 
             function openUrlInNative(url) {
+                url = HELP_ORIGIN + url
                 console.log(url);
                 if (isInTiger()) {
                     callNative({
                         type: "openUrl",
-                        url: HELP_ORIGIN + url
+                        url: url
                     });
                 } else {
-                    window.location.href = HELP_ORIGIN + url;
+                    window.location.href = url;
                 }
             }
 
