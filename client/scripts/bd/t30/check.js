@@ -1,3 +1,11 @@
+/*
+    运营关于pid等信息存储要求：
+        1.若链接中带有pid，所有相关字段信息清空重写
+        2.若链接中未带有pid，则沿用原来信息
+        3.每次重写pid等信息，存储时间为7天
+        4.lp 每次都会更新到最新的页面来源（首页 lp=sy）
+*/
+
 $(document).ready(function () {
     /*注册组件公用逻辑*/
     var lp = '';
@@ -7,12 +15,18 @@ $(document).ready(function () {
     var clickable = true;
 
     var hostnameUrl = window.location.hostname;
-    var originUrl = window.location.origin || (window.location.protocol+'//'+window.location.hostname);
+    var originUrl = window.location.origin || (window.location.protocol + '//' + window.location.hostname);
     var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.') + 1) || "tigerwit.com";
     var href = window.location.href;
+    var oDate = new Date();
+    var overdueDate = new Date();
+    oDate.setTime(oDate.getTime() + (7 * 24 * 60 * 60 * 1000));
+    overdueDate.setTime(oDate.getTime() - (7 * 24 * 60 * 60 * 1000));
+    var expTime = ';expires='+oDate.toUTCString();
+    var overdueExpTime = ';expires='+overdueDate.toUTCString();
     lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
     if (lp != "") {
-        document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl;
+        document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl+expTime;
     }
 
     function getUserParam() {
@@ -32,17 +46,17 @@ $(document).ready(function () {
 
             if (pid != '') {
                 // 清空重写
-                document.cookie = 'pid=' + null + ';path=/;domain=' + null;
-                document.cookie = 'unit=' + null + ';path=/;domain=' + null;
-                document.cookie = 'key=' + null + ';path=/;domain=' + null;
-
-                document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl;
+                document.cookie = 'pid=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                document.cookie = 'unit=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                document.cookie = 'key=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                
+                document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl+expTime;
 
                 if (unit) {
-                    document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl;
+                    document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl+expTime;
                 }
                 if (key) {
-                    document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl;
+                    document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl+expTime;
                 }
             }
         }
@@ -107,7 +121,9 @@ $(document).ready(function () {
             }
 
             // 神策数据统计
-            sa.track('btn_register');
+            sa.track('btn_register', {
+                page: window.location.href
+            });
 
             var tmpForm = $("<form></form>");
             tmpForm.append("<input type='hidden' value='" + rName + "' name='username'/>");
@@ -125,7 +141,7 @@ $(document).ready(function () {
 
                 returnurl = originUrl + "/m/h5_register/reg?" + "name=" + rName + "&telephone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
             }
-            
+
             jQuery.ajax({
                 url: '/api/auth/page_signup',
                 data: tmpForm.serialize(),
@@ -135,7 +151,7 @@ $(document).ready(function () {
                     location.href = returnurl;
                 },
                 error: function (err) {
-                    
+
                     location.href = returnurl;
                 }
             });

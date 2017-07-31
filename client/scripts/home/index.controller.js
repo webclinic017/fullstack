@@ -11,35 +11,35 @@
         var company = $cookies["company_name"];
         var userCode = $cookies["user_code"];
 
-        // if (company && company === 'tigerwit') {
-        //    layer.open({
-        //        type: 1,
-        //        skin: 'home_layer', //加上边框
-        //        title: '',
-        //        shade: 0.6,
-        //        area: ['800px', '567px'], //宽高
-        //        content: '<div class="content"><h4><span>老虎外汇杠杆水平调整公告</span></h4><p class="info"><span>尊敬的用户:</span><br>面临即将到来的美国大选,英国退欧公投后的不确定因素,老虎外汇基于对公司和客户负责的态度,在经过风险评估后,将采取以下必要措施:</p><p class="detail">2016年11月07日开市(北京时间11月07日凌晨5点)至11月12日休市,所有外汇货币对杠杆水平将调整为50:1;贵金属,大宗商品和CFD将调整为33:1<br>2016年11月14日开市(北京时间11月14日凌晨5点)至12月31日休市,所有GBP货币对,贵金属,大宗商品和CFD杠杆水平将调整为50:1</p><p class="end">老虎外汇保留因未来市场走向再度调整杠杆的权利。<br>请监测您在老虎外汇账户的保证金水平，并作出必要的更改。<br>感谢您对此次调整的理解。</p></div>',
-        //        btn: '知道了'
-        //    });
-        // }
-
-        if (!userCode && company && company === 'tigerwit') {
-            account.getAdvertiseRecords('popup').then(function (data) {
-                console.log(data);
-                if (data.is_succ && data.data.length) {
-                    data = data.data[0];
-                    layer.open({
-                        type: 1,
-                        skin: 'home_redbag_layer', //加上边框
-                        closeBtn: 0,
-                        title: '',
-                        shade: 0.6,
-                        area: ['960px', '560px'], //宽高
-                        content: '<div class="content"><a href="'+data.target_url+'"><img src="'+data.image_url+'"></a><div class="close" onclick="layer.closeAll();"></div></div>'
-                    });
-                }
-            });
+        if (company && company === 'tigerwit') {
+           layer.open({
+               type: 1,
+               skin: 'home_layer',
+               closeBtn: 0,
+               title: '',
+               shade: 0.6,
+               area: ['900px', '520px'], //宽高
+               content: $('#home-layer-model')
+           });
         }
+
+        // if (!userCode && company && company === 'tigerwit') {
+        //     account.getAdvertiseRecords('popup').then(function (data) {
+        //         console.log(data);
+        //         if (data.is_succ && data.data.length) {
+        //             data = data.data[0];
+        //             layer.open({
+        //                 type: 1,
+        //                 skin: 'home_redbag_layer', //加上边框
+        //                 closeBtn: 0,
+        //                 title: '',
+        //                 shade: 0.6,
+        //                 area: ['960px', '560px'], //宽高
+        //                 content: '<div class="content"><a href="'+data.target_url+'"><img src="'+data.image_url+'"></a><div class="close" onclick="layer.closeAll();"></div></div>'
+        //             });
+        //         }
+        //     });
+        // }
 
         $scope.indexMasters = [];// 首页 第二模块的高手
         $scope.advertiseLst = [];
@@ -55,12 +55,16 @@
             var href = window.location.href;
             var originUrl = window.location.origin;
             var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.') + 1) || "tigerwit.com";
-            var pid = '', lp = '', unit = '', key = '', aGET = {};
-            var lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
-
-            if (lp != "") {
-                document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl;
-            }
+            var pid = '', lp = 'sy', unit = '', key = '', aGET = {};
+            // var lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
+            var oDate = new Date();
+            var overdueDate = new Date();
+            oDate.setTime(oDate.getTime() + (7 * 24 * 60 * 60 * 1000));
+            overdueDate.setTime(oDate.getTime() - (7 * 24 * 60 * 60 * 1000));
+            var expTime = ';expires='+oDate.toUTCString();
+            var overdueExpTime = ';expires='+overdueDate.toUTCString();
+            
+            document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl+expTime;
 
             if (href.indexOf('?') != -1) {
                 var aQuery = href.split('?')[1];
@@ -77,18 +81,17 @@
 
                 if (pid != '') {
                     // 清空重写
-                    // console.log(domainUrl);
-                    document.cookie = 'pid=' + null + ';path=/;domain=' + null;
-                    document.cookie = 'unit=' + null + ';path=/;domain=' + null;
-                    document.cookie = 'key=' + null + ';path=/;domain=' + null;
-
-                    document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl;
+                    document.cookie = 'pid=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                    document.cookie = 'unit=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                    document.cookie = 'key=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                    
+                    document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl+expTime;
 
                     if (unit) {
-                        document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl;
+                        document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl+expTime;
                     }
                     if (key) {
-                        document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl;
+                        document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl+expTime;
                     }
                 }
             }
@@ -119,7 +122,7 @@
         $scope.userGroup = undefined;   // 用户所在组
         var socketPara = {
             websocketTigerUrl: location.hostname === 'www.tigerwit.com' ? 'wss://demo.tigerwit.com:4567' : 'wss://demo.tigerwit.com:4567',
-            request_symbols: ['AUDUSD', 'XNGUSD', 'EURUSD', 'XTIUSD', 'GBPUSD', 'XBRUSD', 'NZDUSD', 'XAUUSD', 'USDCAD', 'XAGUSD', 'USDCHF', 'AUS200', 'USDJPY', 'JPN225'],
+            request_symbols: ['AUDUSD', 'XNGUSD', 'EURUSD', 'XTIUSD', 'GBPUSD', 'XBRUSD', 'NZDUSD', 'XAUUSD', 'USDCAD', 'XAGUSD', 'USDCHF', 'US30', 'USDJPY', 'JPN225'],
             request_symbols_zh: {
                 AUDUSD: '澳元美元',
                 XNGUSD: '天燃气',
@@ -132,7 +135,7 @@
                 USDCAD: '美元加元',
                 XAGUSD: '白银',
                 USDCHF: '美元瑞郎',
-                AUS200: '澳大利亚标准普尔200指数',
+                US30: '道琼斯指数',
                 USDJPY: '美元日元',
                 JPN225: '日经指数',
             },

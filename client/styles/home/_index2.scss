@@ -6,57 +6,76 @@
 
 .home_layer {
     background-color: transparent !important;
-    box-shadow: none !important;
+    box-shadow: inherit !important;
 
-    .layui-layer-content {
-        width: 800px;
-        height: 489px;
-        @include img-normal($image-path-home + "layer_bd.png");
-        background-repeat: no-repeat;
+    #home-layer-model {
+        position: relative;
+        padding-top: 10px;
 
-
-        .content {
-            padding: 0 56px;
-            
-            p {
-                line-height: 24px;
-            }
-
-            h4 {
-                text-align: center;
-                font-size: 30px;
-                margin-bottom: 40px;
-                margin-top: 30px;
-
-                span {
-                    border-bottom: 3px solid #fff000;
-                    padding-bottom: 5px;
-                }
-            }
-            .info {
-                span {
-                    font-weight: 500;
-                }
-            }
-            .detail {
-                padding: 35px 0;
-                font-weight: 500;
-            }
+        .bar {
+            background-color: #ffd202;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 900px;
+            height: 20px;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
     }
-    .layui-layer-btn {
 
-        text-align: center;
-        .layui-layer-btn0 {
-            width: 316px;
-            height: 56px;
+    .content {
+        padding: 40px 60px 70px;
+        background-color: #fff;
+        border-radius: 8px;
+        position: relative;
+        z-index: 100;
+        
+        p {
+            line-height: 24px;
+        }
+
+        h4 {
             text-align: center;
-            line-height: 56px;
-            background-color: #fff000;
             font-size: 20px;
-            border-radius: 2px;
-            border: none;
-            color: #222;
+            padding-bottom: 40px;
+            margin: 0px;
+        }
+        .info {
+            strong {
+                display: block;
+                color: #d23131;
+                font-size: 22px;
+                text-align: center;
+                margin: 30px 0;
+            }
+            span {
+                font-weight: 500;
+                font-size: 17px;
+                line-height: 30px;
+            }
+        }
+        .detail {
+            padding-top: 30px;
+
+            a {
+                color: #3088e2;
+            }
+        }
+        .end {
+            text-align: right;
+            line-height: 20px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 13px;
+            width: 40px;
+            height: 40px;
+
+            @include img-normal($image-path-home + "layer_close.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
         }
     }
 }

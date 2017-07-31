@@ -42,7 +42,7 @@
     right: 0;
     left: 0;
     z-index: $zindex-modal;
-    height: 2000px;
+    height: 4000px;
     background-color: $modal-backdrop-bg;
     &.fade {
         @include opacity(0);

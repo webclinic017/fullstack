@@ -161,7 +161,9 @@
 
         function toTrackRegisterSensorsdata() {
             // 神策数据统计
-            sa.track('btn_register');
+            sa.track('btn_register', {
+                page: window.location.href
+            });
         }
         function toTrackLoginSensorsdata() {
             // 神策数据统计
