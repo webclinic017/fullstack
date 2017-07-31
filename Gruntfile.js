@@ -15,7 +15,7 @@ module.exports = function (grunt) {
     require('jit-grunt')(grunt, {
         express: 'grunt-express-server',
         useminPrepare: 'grunt-usemin',
-        cdnify: 'grunt-google-cdn'
+        // cdnify: 'grunt-google-cdn'
     });
     // require('load-grunt-tasks')(grunt);
     
@@ -263,6 +263,7 @@ module.exports = function (grunt) {
             options: {
               // base: '//cdn.example.com/static/'
               rewriter: function (url) {
+                console.log('----- grunt-cdnify maped url -----',url)
                 if (url.indexOf('http') != -1) {
                     return url;
                 }

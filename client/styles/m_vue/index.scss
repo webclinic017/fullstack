@@ -433,6 +433,14 @@
                     line-height: px2rem(56);
                 }
             }
+            .desp_separator{
+                border-top: 1px solid #eee;
+                width: 90%;
+                margin: 1rem auto;
+                &:first-child{
+                    border: none;
+                }
+            }
             .desp_sub_title {
                 color: $brand-primary-dark;
                 font-family: "NotoSansHans";
