@@ -236,25 +236,49 @@ if ($(".m_vue").attr("data-page") === "helpSelf") {
                         curLayBox.on(TRIGGLE_EVENT, function (e) {
                             var curTarget = $(e.target);
                             var oAction = getAction(curTarget);
+                            var $nextPage = $(e.target);
+                            var actionName = oAction.actionName;
+                            var width,handle,previousBtn,nextBtn,closeBtn;
+
                             // console.log(oAction);
-                            if (oAction.actionName == 'closelay') {
+                            if (actionName == 'closelay') {
                                 layer.close(layerIndex[oAction.actionEle]);
                                 layer.closeAll();
                                 fade(activedLi);
-                            } else if (oAction.actionName == 'nextPage') {
-                                var $nextPage = $(e.target);
-                                var width = $('.viewport_flows > li').width();
-                                var closeBtn = curLayBox.find('.close_btn');
+                            } else if (actionName == 'nextPage' || actionName == 'previousPage') {
+                                width = $('.viewport_flows > li').width();
+                                handle = curLayBox.find('.self_close');
+                                previousBtn = handle.find('.previous');
+                                nextBtn = handle.find('.next');
+                                closeBtn = handle.find('.closer');
 
-                                if (curStep < totalStep) {
+                                if (actionName == 'nextPage') {
                                     $('.viewport_flows').css({
                                         left: '-' + width * curStep + 'px'
                                     });
                                     curStep++
                                     if (curStep == totalStep) {
-                                        curTarget.hide();
+                                        nextBtn.hide();
                                         closeBtn.show();
                                     }
+                                    if(curStep > 1){
+                                        previousBtn.show();
+                                    }
+                                } else if (oAction.actionName == 'previousPage') {
+                                    closeBtn.hide();
+                                    previousBtn.show();
+                                    if (curStep > 1) {
+                                        curStep--
+                                    }
+                                    if(curStep == 1){
+                                        previousBtn.hide();
+                                    }
+                                    if(curStep < totalStep){
+                                        nextBtn.show();
+                                    }
+                                    $('.viewport_flows').css({
+                                        left: '-' + width * (curStep - 1) + 'px'
+                                    });
                                 }
                             }
                         })
