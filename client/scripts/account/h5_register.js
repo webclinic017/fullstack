@@ -345,7 +345,7 @@
             $("#submit_form").on("touchend", function () {
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
-                if (!checkPassword()) return;
+                // if (!checkPassword()) return;
 
                 /*loading层*/
                 layer.open({ type: 2, shadeClose: false });
@@ -362,16 +362,18 @@
                     _taq.push({ convert_id: "58276692798", event_type: "form" })
                 }
                 
-                publicRequest('register', 'POST', {
-                    phone: $("#telephone").val() || "",
-                    password: $("#password").val() || "",
-                    verify_code: $("#verify_code").val() || "",
-                    pid: oReg.search_arr.pid || "",
-                    unit: oReg.search_arr.unit || "",
-                    lp: oReg.search_arr.lp || "",
-                    key: oReg.search_arr.key || "",
-                    email: oReg.search_arr.email || ""
+                publicRequest('regOrLogin', 'POST', {
+                    phone: $("#telephone").val() || null,
+                    // password: $("#password").val() || null,
+                    password: $("#verify_code").val() || null,
+                    login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录
+                    pid: oReg.search_arr.pid || null,
+                    unit: oReg.search_arr.unit || null,
+                    lp: oReg.search_arr.lp || null,
+                    key: oReg.search_arr.key || null,
+                    email: oReg.search_arr.email || null
                 }).then(function (data) {
+                    console.log(data);
                     if (!data) return;
                     if (data.is_succ) {
                         /*跳转到注册成功页面*/
