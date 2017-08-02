@@ -15,7 +15,7 @@ if ($(".m_vue").attr("data-type") === "helpNavi") {
             var TOP_BAR_SHOWED = false;
             var DESP_CLASS = '.help1-navi-title__item-desp';
             var WAIT_TIME = 500;
-            var ANIMATE_BSR = 'swing';
+            var ANIMATE_BSR = 'jswing';
             var VM = this;
 
             function getAction($target) {
@@ -52,7 +52,7 @@ if ($(".m_vue").attr("data-type") === "helpNavi") {
             $(document).scroll(function () {
                 // 节流
                 if (!TOP_BAR_SHOWED) {
-                    TOP_BAR.fadeIn(WAIT_TIME);
+                    TOP_BAR.stop().fadeIn(WAIT_TIME);
                 }
             })
 
