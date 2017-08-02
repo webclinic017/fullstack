@@ -129,11 +129,11 @@
                 plotBands: [{ //彩色带横跨绘图区，标志着轴间隔。
                     color: col_color.positiveBg,
                     from: 0,
-                    to: 1000
+                    to: 1500
                 },{ //彩色带横跨绘图区，标志着轴间隔。
                     color: col_color.negativeBg,
                     from: 0,
-                    to: -1000
+                    to: -1500
                 }]
             },
             exporting: {
