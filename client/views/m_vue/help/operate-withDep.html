@@ -1,0 +1,72 @@
+<div class="m_vue m_vue_bgc" data-page="helpSelf" id="helpSelf" data-flow="withDep">
+    <ul class="helpSelf">
+        <li class="helpSelf__item withDep" data-action="openlay-flowChartDep">
+            <p class="helpSelf__item-icon hasImg">
+                <img src="/images/mobile/help_withDep-icon1.svg">
+            </p>
+        </li>
+        <br>
+        <li class="helpSelf__item withDep" data-action="openlay-flowChartWith">
+            <p class="helpSelf__item-icon icon hasImg">
+                <img src="/images/mobile/help_withDep-icon2.svg">
+            </p>
+        </li>
+    </ul>
+    <div id="layer_contentBox">
+        <div class="flowChartDep">
+            <div class="layer_content">
+                <h5 class="help_title_set">
+                    入金操作
+                </h5>
+                <div class="flowChart__viewport clearfix">
+                    <ul class="viewport_flows clearfix">
+                        <li class="viewport_flows__item" v-for="flow in withDepData.depData">
+                            <div class="viewport_flows__item-img_box">
+                                <p class="clearfix num{{flow.imgSrc.length}}">
+                                    <img v-for="src in flow.imgSrc" src="/white_label/mobile/help_depchart-{{ src }}.png">
+                                </p>
+                            </div>
+                            <p class="viewport_flows__item-desp">
+                                <span class="steps">STEP{{$index + 1}}</span> {{ flow.desp }}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <p class="self_close next_page" >
+                    <span class="handle_bar previous fl" style="display:none;" data-action="previousPage-flow">上一页</span>
+                    <span class="handle_bar next" data-action="nextPage-flow">下一页</span>
+                    <span class="handle_bar closer" style="display:none;" data-action="closelay-flowChart">关闭</span>
+                </p>
+            </div>
+        </div>
+        <div class="flowChartWith">
+            <div class="layer_content">
+                <h5 class="help_title_set">
+                    出金操作
+                </h5>
+                <div class="flowChart__viewport clearfix">
+                    <ul class="viewport_flows clearfix">
+                        <li class="viewport_flows__item" v-for="flow in withDepData.withData">
+                            <div class="viewport_flows__item-img_box">
+                                <p class="clearfix num{{flow.imgSrc.length}}">
+                                    <img v-for="src in flow.imgSrc" src="/white_label/mobile/help_withchart-{{ src }}.png">
+                                </p>
+                            </div>
+                            <p class="viewport_flows__item-desp">
+                                <span class="steps">STEP{{$index + 1}}</span> {{ flow.desp }}
+                            </p>
+                            <p class="viewport_flows__item-desp" v-if="$index == 2">
+                                <span class="steps">STEP{{$index + 2}}</span> {{ flow.desp2 }}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <p class="self_close next_page" >
+                    <span class="handle_bar previous fl" style="display:none;" data-action="previousPage-flow">上一页</span>
+                    <span class="handle_bar next" data-action="nextPage-flow">下一页</span>
+                    <span class="handle_bar closer" style="display:none;" data-action="closelay-flowChart">关闭</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

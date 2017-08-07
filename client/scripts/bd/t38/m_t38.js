@@ -160,4 +160,10 @@
 			});
 		})
 	}
+
+	$(document).ready(function(){
+		$('.open_tiger').click(function(e){
+			console.log(e.target);
+		});
+	});
 }());

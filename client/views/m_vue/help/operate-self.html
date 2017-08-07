@@ -1,0 +1,113 @@
+<div class="m_vue m_vue_bgc" data-page="helpSelf" id="helpSelf" data-flow="flow">
+    <ul class="helpSelf">
+        <li class="helpSelf__item" data-action="openlay-mobile">
+            <p class="helpSelf__item-icon icon icon1">
+                <i class="fa fa-mobile" aria-hidden="true"></i>
+            </p>
+            <p class="helpSelf__item-desp desp">移动端交易系统</p>
+        </li>
+        <br>
+        <li class="helpSelf__item" data-action="openlay-how">
+            <p class="helpSelf__item-icon icon icon2">
+                ?
+            </p>
+            <p class="helpSelf__item-desp desp">
+                如何进行</br>移动端交易
+            </p>
+        </li>
+        <br>
+        <li class="helpSelf__item" data-action="openlay-flowChart">
+            <p class="helpSelf__item-icon icon icon3">
+                step
+            </p>
+            <p class="helpSelf__item-desp desp">
+                移动端交易</br>操作流程图
+            </p>
+        </li>
+    </ul>
+    <div id="layer_contentBox">
+        <div class="mobile">
+            <div class="layer_content">
+                <h5 class="mobile__title help_title_set">
+                    看清趋势
+                </h5>
+                <p class="mobile__desp self_desp">
+                    老虎外汇的移动端交易系统是其为方便投资人在 APP 上进行外汇交易而研发的一套服务软件。 移动端交易系统实时与国际大型银行报价无缝对接，用户可直接进行外汇、贵金 属、原油、差价合约等产品交易， 一键即可完成下单，操作简单快捷。且在个人交易 订单界面可随时随地查看订单详情、盈亏情况、K
+                    线图等信息，方便用户全程掌控交 易状态，并根据行情走势快速下单交易。
+                </p>
+                <p class="mobile__close self_close" data-action="closelay-mobile">
+                    关闭
+                </p>
+            </div>
+        </div>
+        <div class="how">
+            <div class="layer_content">
+                <h5 class="help_title_set">
+                    如何进行移动端交易
+                </h5>
+                <p class="self_desp">
+                    只需 3 步，就可根据行情进行快速下单交易，并能随时随地监测交易状态。
+                </p>
+                <ul class="flow">
+                    <li class="flow__item clearfix">
+                         <div class="flow__item-operate haspt">
+                            <img class="width25" src="/images/mobile/help_how_icon1.svg">
+                        </div>
+                        <div class="flow__item-desp">
+                            根据自己所选的交易品种，参考系统显示的报价、K 线图等信息，输入预下单的手数、止损止盈价位;
+                        </div>
+                    </li>
+                    <li class="flow__item clearfix">
+                         <div class="flow__item-operate">
+                            <img class="special" src="/images/mobile/help_how_icon2.svg">
+                        </div>
+                        <div class="flow__item-desp">
+                            点击“买涨”或“买跌”，立即完成下单。
+                        </div>
+                    </li>
+                    <li class="flow__item clearfix">
+                        <div class="flow__item-operate">
+                            <img src="/images/mobile/help_how_icon3.svg">
+                        </div>
+                        <div class="flow__item-desp">
+                            交易后可在个人账户中实时查询订单盈亏情况等信息。
+                        </div>
+                    </li>
+                </ul>
+                <p class="self_tip">
+                    提示：移动端交易系统上所有外汇、贵金属、原油等信息均对外公布，不管用户是否注册或充值 都可随时查看了解;若用户想要在移动端交易系统上进行交易并盈利，则首先需要在 APP 端中进 行注册、实名认证、充值。
+                </p>
+                <p class="self_close" data-action="closelay-how">
+                    关闭
+                </p>
+            </div>
+        </div>
+        <div class="flowChart">
+            <div class="layer_content">
+                <h5 class="help_title_set">
+                    移动端交易操作流程图
+                </h5>
+                <div class="flowChart__viewport clearfix">
+                    <ul class="viewport_flows clearfix">
+                        <li class="viewport_flows__item" v-for="flow in flowData" :key="flow.stepTxt">
+                            <div class="viewport_flows__item-img_box">
+                                <p class="clearfix num{{flow.imgSrc.length}}">
+                                    <img v-for="src in flow.imgSrc" src="/white_label/mobile/help_flowchart-{{ src }}.png">
+                                </p>
+                            </div>
+                            <p class="viewport_flows__item-desp">
+                                <span class="steps">STEP{{$index + 1}}</span>
+                                {{ flow.desp }}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <p class="self_close next_page" >
+                    <span class="handle_bar previous fl" style="display:none;" data-action="previousPage-flow">上一页</span>
+                    <span class="handle_bar next" data-action="nextPage-flow">下一页</span>
+                    <span class="handle_bar closer" style="display:none;" data-action="closelay-flowChart">关闭</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

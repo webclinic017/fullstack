@@ -1,0 +1,104 @@
+<div class="m_vue m_vue_bgc" data-type="helpNavi" id="helpNavi">
+    <ul class="help1-navi-title">
+        <p class="help1-navi-title__back_top" data-action="backTop-naviBox">回到</br>顶部</p>
+        <li class="help1-navi-title__item">
+            <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">复制高手</h5>
+            <div class="help1-navi-title__item-desp">
+                <p class="desp_separator"></p>
+                <!-- <h6 class="desp_title">10 MAX</h6> -->
+                <p class="desp_subdesp">
+                    每位投资人最多可以复制10位高手。每位交易高手的复制金额不同，投资人可以根据自己的账户情况选择高手进行复制。
+                </p>
+            </div>
+        </li>
+        <li class="help1-navi-title__item">
+            <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">复制资金</h5>
+            <div class="help1-navi-title__item-desp">
+                <p class="desp_separator"></p>
+                <!-- <h6 class="desp_title">≤$200</h6> -->
+                <p class="desp_subdesp">
+                    复制资金可自行设置，最小值不可低于高手的最低复制金额（$200），最大值不可超过投资人账户的可用复制金额
+                </p>
+                <p class="desp_note">
+                    * 可用复制资金=余额-已复制高手资金
+                </p>
+            </div>
+        </li>
+        <li class="help1-navi-title__item">
+            <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">复制高手开仓</h5>
+            <div class="help1-navi-title__item-desp">
+                <p class="desp_separator"></p>
+                <!-- <h6 class="desp_title">同步</h6> -->
+                <p class="desp_subdesp">
+                    复制成功后,高手开仓,账户跟随高手同步开仓。
+                </p>
+                <p class="desp_note">
+                    * 用户跟单手数=（高手订单手数*跟单者资金）/高手余额
+                </p>
+                <p class="desp_subdesp">
+                    用户开仓可用保证金=跟单者资金-跟随高手的持仓单占用保证金+跟随高手持仓单的浮动的盈亏当复制资金不足时，将不再跟随高手下单
+                </p>
+                <p class="desp_separator"></p>
+                <!-- <h6 class="desp_title">失败</h6> -->
+                <p class="desp_subdesp">
+                    高手极短时间内开仓后立即平仓，可能会导致跟单失败
+                </p>
+                <p class="desp_separator"></p>
+                <!-- <h6 class="desp_title">只</h6> -->
+                <p class="desp_subdesp">
+                    账户只复制高手开仓订单，高手的挂单交易不会复制，挂单成交会跟随开仓。
+                </p>
+            </div>
+        </li>
+        <li class="help1-navi-title__item">
+            <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">跟随高手开仓</h5>
+            <div class="help1-navi-title__item-desp">
+                <p class="desp_separator"></p>
+                <!-- <h6 class="desp_title">同步</h6> -->
+                <p class="desp_subdesp">
+                    复制成功后，高手平仓，账户会跟随高手同步平仓，该笔订单盈亏将会记入复制金额内。
+                </p>
+                <p class="desp_separator"></p>
+                <!-- <h6 class="desp_title">手动</h6> -->
+                <p class="desp_subdesp">
+                    投资人可以手动平仓复制高手的订单，不会取消复制关系。
+                </p>
+                <p class="desp_separator"></p>
+                <!-- <h6 class="desp_title">取消</h6> -->
+                <p class="desp_subdesp">
+                    取消复制关系时，可自主选择强行平仓或者跟随高手平仓正在持仓中订单。
+                </p>
+                <p class="desp_separator"></p>
+                <!-- <h6 class="desp_title">责任</h6> -->
+                <p class="desp_subdesp">
+                    复制高手所产生的盈利或亏损，网站不承担任何责任。
+                </p>
+            </div>
+        </li>
+        <li class="help1-navi-title__item">
+            <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">复制高手盈利分成</h5>
+            <div class="help1-navi-title__item-desp">
+                <p class="desp_separator"></p>
+                <!-- <h6 class="desp_title">周期结算</h6> -->
+                <p class="desp_subdesp">
+                    每月1日，系统对投资人在本次周期内跟随高手的情况进行统计并结算，扣除跟随该高手盈利部分的20%作为该高手的分成；每月10日，系统对高手进行分成结算，分成资金自动转入高手的零钱包中，零钱包资金可以提现或转入交易账户。
+                </p>
+                <p class="desp_separator"></p>
+                <!-- <h6 class="desp_title">强平分成</h6> -->
+                <p class="desp_subdesp">
+                    投资人取消复制关系选择强制平仓时，系统将对本次周期内跟随该高手的所有订单进行统计并结算,扣除盈利部分的20%作为该高手分成。
+                </p>
+                <p class="desp_separator"></p>
+                <!-- <h6 class="desp_title">跟平分成</h6> -->
+                <p class="desp_subdesp">
+                    投资人取消复制关系选择跟随高手平仓时，系统将在跟随该高手的所有订单全部平仓后，对本次周期内跟随该高手所有订单进行统计并结算，扣除总盈利的20%作为该高手分成。
+                </p>
+                <p class="desp_separator"></p>
+                <!-- <h6 class="desp_title">分成结算</h6> -->
+                <p class="desp_subdesp">
+                    只要跟随高手开仓的订单,都会进行分成结算。
+                </p>
+            </div>
+        </li>
+    </ul>
+</div>

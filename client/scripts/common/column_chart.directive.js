@@ -178,7 +178,7 @@
                 scope.$on('rendColumnData', function (event, data) {
                     var transformedData = [];
                     angular.forEach(data,function(item,index){
-                        transformedData.push(parseInt(item));
+                        transformedData.push(item);
                     });
                     options.series[0].data = transformedData;
                     element.highcharts(options);
