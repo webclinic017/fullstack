@@ -16,7 +16,7 @@
             // address: ,       // 开户行
             binding: false
         };
-        $scope.banks = config.banks;
+        $scope.banks = [];
 
         $scope.provinces = [];
         $scope.citys = [];
@@ -48,6 +48,20 @@
         $scope.getCity = getCity;
 
         getProvince();
+
+        asset.getBanks().then(function (data) {
+            // console.log(data);
+            if (data.is_succ) {
+                var b = [];
+                angular.forEach(data.data, function (val, index) {
+                    b.push({
+                        nameEN: index,
+                        nameZH: val
+                    });
+                });
+                $scope.banks = b;
+            }
+        });
 
         // 如果是修改银行卡，要初始化表单元素数据
         if (typeof passedScope.card !== 'undefined') {
