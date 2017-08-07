@@ -10,7 +10,8 @@
         var o = api.ranklist;
         var service = {
             getMastersList: getMastersList,
-            getOrderInfo: getOrderInfo
+            getOrderInfo: getOrderInfo,
+            getIndexMasters: getIndexMasters
         };
         return service;
 
@@ -44,6 +45,17 @@
                 username: username,
                 amount: amount
             });
+        }
+
+        /**
+         * Ranklist Service 获取高手列表
+         * 首页
+         *
+         * @method getIndexMasters
+         * 
+         */
+        function getIndexMasters() {
+            return publicHttp.dealPublicRequest(o.getIndexMastersApi, 'GET');
         }
     }
 })();
