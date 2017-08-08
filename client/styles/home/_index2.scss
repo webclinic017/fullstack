@@ -520,8 +520,10 @@
         // @include img-normal($image-path-home + "index2-master-bg.jpg");
 
         @include m(li1) {
-            padding-bottom: 11px;
-            border-bottom: 1px solid $brand-index-line;
+            padding-bottom: 14px;
+            padding-left: 10px;
+            border-bottom: 1px solid #e8ca01;
+
         }
 
         @include m(li2) {
@@ -533,7 +535,7 @@
 
         @include m(li3) {
             padding-top: 26px;
-            border-top: 1px solid $brand-index-line;
+            border-top: 1px solid #e8ca01;
         }
 
         @include m(photo) {
@@ -548,27 +550,30 @@
             }
         }
         @include m(name) {
-            display: inline-block;
-            margin-left: 18px;
+            display: block;
             vertical-align: top;
-            line-height: 55px;
-            font-size: 20px;
-            
-            max-width: 160px;
+            line-height: 34px;
+            font-size: 24px;
+            color: #222;
+            font-weight: 500;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
+        @include m(tip) {
+            display: block;
+        }
         @include m(div1) {
             float: left;
             padding-left: 10px;
+            max-width: 150px;
         }
         @include m(div2) {
             float: right;
             padding-top: 15px;
             padding-right: 10px;
             padding-left: 22px;
-            border-left: 1px solid $brand-index-line;
+            border-left: 1px solid #e8ca01;
 
         }
         @include m(div3) {
@@ -579,6 +584,21 @@
         }
         @include m(rate) {
             font-size: 36px;
+        }
+        @include m(tags) {
+            font-size: 14px;
+            display: block;
+            height: 16px;
+            line-height: 16px;
+            margin-top: 6px;
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+
+            span {
+                padding-right: 5px;
+            }
         }
         @include m(how) {
             display: inline-block;
