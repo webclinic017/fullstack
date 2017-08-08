@@ -25,7 +25,8 @@
             getBonusDetailList: getBonusDetailList,
             walletDeposit: walletDeposit,
             walletWithdraw: walletWithdraw,
-            walletCanWithdraw: walletCanWithdraw
+            walletCanWithdraw: walletCanWithdraw,
+            getBanks: getBanks
         };
         return service;
 
@@ -244,5 +245,15 @@
         function walletCanWithdraw() {
             return publicHttp.dealPublicRequest(o.walletCanWithdrawApi, 'GET');
         }
+
+        /**
+         * Asset Service 获取银行列表
+         *
+         * @method getBanks
+         * 
+         */
+        function getBanks() {
+            return publicHttp.dealPublicRequest(o.getBanksApi, 'GET');
+        }        
     }
 })();

@@ -14,6 +14,7 @@
         $scope.messageWallet = {};
         $scope.maxAmountInvest = 0;
         $scope.maxAmountWallet = 0;
+        $scope.withdrawNotice = '';
         $scope.withdraw = {
             // amount: ,
             // succAmount: ,
@@ -64,7 +65,6 @@
                 $scope.withdraw.FXRate.value = data.data.out_rate;
             }
         });
-
         // 判断出金状态, 获取可提取的最大金额
         asset.getIsWithdraw().then(function (data) {
             layer.closeAll();
@@ -72,13 +72,22 @@
             // console.info(data);
             $scope.withdrawMessageSucc = true;
             if (data.is_succ) {
-                $scope.message = {
-                    is_succ: true
-                };
-                $scope.maxAmountInvest = data.data.amount < 0 ? 0 : data.data.amount;
-                if ($scope.withdraw.type === 'invest') {
-                    $scope.withdraw.maxAmount = $scope.maxAmountInvest;
+                if (data.data.status == 0) {
+                    $scope.message = {
+                        is_succ: false,
+                        error_msg: data.data.status_message
+                    };
+                } else {
+                    $scope.message = {
+                        is_succ: true
+                    };
+                    $scope.withdrawNotice = data.data.notice;
+                    $scope.maxAmountInvest = data.data.amount < 0 ? 0 : data.data.amount;
+                    if ($scope.withdraw.type === 'invest') {
+                        $scope.withdraw.maxAmount = $scope.maxAmountInvest;
+                    }
                 }
+                
             } else {
                 $scope.message = {
                     is_succ: false,
@@ -317,5 +326,13 @@
             }
         }
 
+
+        $scope.formatText = function(text){
+            if (!text) return '';
+            var newText = text.replace(/\\r\\n/g,'<br>');
+            return '6.'+newText;
+        }
+
     }
+
 })();
