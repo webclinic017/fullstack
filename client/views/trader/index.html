@@ -17,9 +17,11 @@
                                 </span>
                             </div>
                             <div class="trader_tags">
-                                #
-                                <%for(var t=0; t<master.tags.length; t++){%>
-                                    <span><%= master.tags[t]%></span>
+                                <%if (master.tags) {%>
+                                    #
+                                    <%for(var t=0; t<master.tags.length; t++){%>
+                                        <span><%= master.tags[t]%></span>
+                                    <%}%>
                                 <%}%>
                             </div>
                         </div>
