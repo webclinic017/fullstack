@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include /common/meta/web.html %>
+    <title><%=lang.text("title")%> 直通全球资本市场</title>
+    <meta name="description" content="<%=lang.text("companyZhName")%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <% include /common/vendor/web.css.html %>
+
+    <!-- build:css(.tmp) /styles/web.css -->
+    <link rel="stylesheet" href="/styles/web.css">
+    <!-- endbuild -->
+
+    <% include /common/statistic/main.html %>
+</head>
+<body ng-app="fullstackApp" class="<%= lang_class%>">
+    <div ng-controller="GlobalController">
+        <div class="header">
+            <%- include('/common/nav/web.header.html',{
+                navClass : 'navbar-2'
+            }) %>
+        </div>
+        <div class="body">
+            <div class="index_download_layout">
+                <div class="download_banner">
+                    <div class="center download_banner__ctn">
+                        <div class="download_banner__ctn-action">
+                            <ul class="plat">
+                                <li class="phone">
+                                    <a href="<%= lang.text('androidApp')%>">
+                                        <i class="fa fa-android" aria-hidden="true"></i>
+                                        Android 版
+                                    </a>
+                                    <p>支持Android2.3.3及以上</p>
+                                </li>
+                                <% if(lang.isCompany('tigerwit')){%>
+                                <li class="phone">
+                                    <a href="https://itunes.apple.com/app/id1091437876">
+                                        <i class="fa fa-apple" aria-hidden="true"></i>
+                                        iPhone 版
+                                    </a>
+                                    <p>支持ios7.0及以上</p>
+                                </li>
+                                <%}%>
+                            </ul>
+                            <% if(lang.isCompany('tigerwit')){%>
+                            <div class="code">
+                                <div class="img_box">
+                                    <img src="/images/web/download_code.png" alt="code" draggable=false>
+                                </div>
+                                <p>扫码轻松赚收益</p>
+                            </div>
+                            <%}%>
+                        </div>
+                    </div>
+                    <div class="swiper-container" tw-carousel data-type="gradient">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="download_banner__ctn-des">
+                                    <h2>复制跟单</h2>
+                                    <span>无需精通外汇知识,跟着高手轻松赚钱</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="download_banner__ctn-des">
+                                    <h2>定期跟单</h2>
+                                    <span>专业外汇交易团队带你钱生钱</span>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="download_banner__ctn-des">
+                                    <h2>移动端交易系统</h2>
+                                    <span>随时随地一键交易,把握财富主动权</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+                <div class="download_advantage">
+                    <div class="download_title">
+                        <h2>六大投资优势 体验完美交易</h2>
+                        <p>在<%= lang.text('companyZhName')%>,已有 86523人选择外汇跟单交易</p>
+                    </div>
+                    <ul class="download_advantage__detail">
+                        <li>
+                            <h4>门槛低</h4>
+                            <p>开户就送$200体验金 <br>最低10$就能交易</p>
+                        </li>
+                        <li>
+                            <h4>高收益</h4>
+                            <p>涨跌皆有机会盈利,多倍杠杆,<br>$200当做$20000使用</p>
+                        </li>
+                        <li>
+                            <h4>易操作</h4>
+                            <p>移动端交易,简便易懂,<br>会炒股就会操作</p>
+                        </li>
+                        <li>
+                            <h4>机会多</h4>
+                            <p>24小时交易、T+0交易,<br>大小行情不错过</p>
+                        </li>
+                        <li>
+                            <h4>高手跟单</h4>
+                            <p>无需精通理财知识,复制交易高手, <br>把握赚钱机会</p>
+
+                        </li>
+                        <li>
+                            <h4>市场公平</h4>
+                            <p>国际市场,每天5万亿以上成交量</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="download_title">
+                    <h2><%= lang.text('companyZhName')%> 真正带你赚钱的APP</h2>
+                    <p>人人都是投资高手——赚钱,就是现在</p>
+                </div>
+                <div class="download_bottom">
+                    <div class="download_bottom__ctn <%= lang.background().company%>">
+                        <ul class="download_bottom__ctn-plat">
+                            <li class="phone">
+                                <a href="<%= lang.text('androidApp')%>">
+                                    <i class="fa fa-android" aria-hidden="true"></i>
+                                    Android 版
+                                </a>
+                            </li>
+                            <% if(lang.isCompany('tigerwit')){%>
+                            <li class="phone">
+                                <a href="https://itunes.apple.com/app/id1091437876">
+                                    <i class="fa fa-apple" aria-hidden="true"></i>
+                                    iPhone 版
+                                </a>
+                            </li>
+                            <%}%>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <% include /common/nav/web.footer.html %>
+        </div>
+    </div>
+    <% include /common/vendor/web.js.html %>
+    <!-- build:js(client) /scripts/home.js -->
+    <script src="/scripts/plugins/sha1.js"></script>
+    <script src="/scripts/common/config.service.js"></script>
+    <script src="/scripts/common/account.service.js"></script>
+    <script src="/scripts/common/authorization.service.js"></script>
+    <script src="/scripts/common/ranklist.service.js"></script>
+    <script src="/scripts/common/product.service.js"></script>
+    <script src="/scripts/common/lang.service.js"></script>
+    <script src="/scripts/common/lang_data.service.js"></script>
+    <script src="/scripts/common/redbag.service.js"></script>
+
+    <script src="/scripts/common/global.controller.js"></script>
+
+    <script src="/scripts/common/navbar.directive.js"></script>
+    <script src="/scripts/common/dropdown.directive.js"></script>
+    <script src="/scripts/common/carousel.directive.js"></script>
+    <script src="/scripts/common/line_chart.directive.js"></script>
+    <script src="/scripts/common/progress.directive.js"></script>
+
+    <script src="/scripts/ranklist/all.controller.js"></script>
+
+    <script src="/scripts/home/index.controller.js"></script>
+    <!-- endbuild -->
+</body>
+</html>

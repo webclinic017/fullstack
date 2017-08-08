@@ -67,7 +67,7 @@
                 .state('help', {
                     views: {
                         '@': {
-                            templateUrl: '/views/help/help.html',
+                            templateUrl: '/views/web/help/index.html',
                             controller: ''
                         }
                     }
@@ -80,7 +80,7 @@
                         'content@help': {
                             templateUrl: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'introduce';
-                                return '/views/help/help_' + $stateParams.subpage + '.html';
+                                return '/views/web/help/help_' + $stateParams.subpage + '.html';
                             },
                             controllerProvider: function () {
                                 return "HelpController";
@@ -338,7 +338,7 @@
                 .state('ranklist', {
                     views: {
                         '@': {
-                            templateUrl: '/views/ranklist/index.html',
+                            templateUrl: '/views/web/ranklist/index.html',
                             controller: 'RanklistIndexController'
                         }
                     }
@@ -347,7 +347,7 @@
                     url: '/ranklist/masters',
                     views: {
                         'list@ranklist': {
-                            templateUrl: '/views/ranklist/masters.html',
+                            templateUrl: '/views/web/ranklist/masters.html',
                             controller: 'RanklistAllController'
                         }
                     }
@@ -356,7 +356,7 @@
                 .state('trader', {
                     views: {
                         '@': {
-                            templateUrl: '/views/trader/list.html',
+                            templateUrl: '/views/web/trader/list.html',
                             controller: ''
                         }
                     }
@@ -367,7 +367,7 @@
                         'list@trader': {
                             templateUrl: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'summary';
-                                return '/views/trader/' + $stateParams.subpage + '.html';
+                                return '/views/web/trader/' + $stateParams.subpage + '.html';
                             },
                             controllerProvider: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'summary';

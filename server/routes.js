@@ -143,7 +143,7 @@ module.exports = function (app) {
 
     app.route('/ranklist').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('ranklist.html', extendPublic({}, req));
+        res.render('web/ranklist.html', extendPublic({}, req));
     });
 
     app.route('/:downloadPage(download|download_t)').get(function (req, res) {
@@ -164,9 +164,9 @@ module.exports = function (app) {
                     coInfo: "Tiger Financial Technology PTY. Ltd."
                 }
             }
-            res.render('m_download.html', extendPublic(extendObj, req));
+            res.render('m_vue/download.html', extendPublic(extendObj, req));
         } else {
-            res.render('web_download.html', extendPublic({}, req));
+            res.render('web/download.html', extendPublic({}, req));
         }
     });
 
@@ -174,45 +174,49 @@ module.exports = function (app) {
     app.route('/regular').get(function (req, res) {
         setEnvCf(req, res);
 
-        res.render('regular_list.html', extendPublic({
+        res.render('web/regular/list.html', extendPublic({
             model: global_modelRegular
         }, req));
     });
     app.route('/regular/agree/:subpage').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('regular_agree.html', extendPublic({
-            model: global_modelRegular,
-            detail_id: req.params.subpage || ""
-        }, req));
-    });
-    app.route('/m/regular/agree/:subpage').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('m_regular_agree.html', extendPublic({
+        res.render('web/regular/agree.html', extendPublic({
             model: global_modelRegular,
             detail_id: req.params.subpage || ""
         }, req));
     });
     app.route('/regular/detail/:subpage').get(function (req, res) {
         setEnvCf(req, res)
-        res.render('regular_detail.html', extendPublic({
+        res.render('web/regular/detail.html', extendPublic({
             model: gloal_modelRegularDetail(req.params.subpage || "")
+        }, req));
+    });
+    app.route('/m/regular/agree/:subpage').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('m_vue/regular/agree.html', extendPublic({
+            model: global_modelRegular,
+            detail_id: req.params.subpage || ""
         }, req));
     });
     app.route('/m/regular/detail/:subpage').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('m_regular_detail.html', extendPublic({
+        res.render('m_vue/regular/detail.html', extendPublic({
             model: gloal_modelRegularDetail(req.params.subpage || "")
         }, req));
     });
     app.route('/m/regular/detail/team/:subpage').get(function (req, res) {
-        var team_html = global_modelRegular.getTeamHtmlName(req.params.subpage);
+        var subpage = req.params.subpage;
+        if(subpage.indexOf('_') != -1){
+            subpage = subpage.split('_')[1];
+        }
+        // var team_html = global_modelRegular.getTeamHtmlName(req.params.subpage);
         setEnvCf(req, res);
-        res.render('regular/' + team_html + '.html', extendPublic({}, req));
+        res.render('m_vue/regular/detail.team.' + subpage + '.html', extendPublic({}, req));
     });
     app.route('/m/regular/detail/history/:subpage').get(function (req, res) {
         var aImages = global_modelRegular.getTeamHistoryImages(req.params.subpage);
         setEnvCf(req, res);
-        res.render('regular/m_regular_detail_history.html', extendPublic({
+        res.render('m_vue/regular/detail.history.html', extendPublic({
             model: {
                 aImages: aImages
             }
@@ -223,33 +227,21 @@ module.exports = function (app) {
 
     /*--------------------APP-Beagin---------------------*/
     /*注册相关页面*/
-    /*注册相关页面*/
     app.route('/m/h5_register/:status(reg|succ|agreement)').get(function (req, res) {
         var status = req.params.status || 'reg';
         var pageInfo = {
             status: status
         };
         setEnvCf(req, res);
-        res.render('h5_register.html', extendPublic({
+        res.render('m_vue/register/index.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
-    app.route('/m/register').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render("m_register01", extendPublic({}, req));
-    });
-    app.route('/m/register2').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render("m_register02", extendPublic({}, req));
-    });
-    app.route('/m/register3').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render("m_register03", extendPublic({}, req));
-    });
+    
     /*成为高手*/
     app.route('/m/agent/become').get(function (req, res) {
         setEnvCf(req, res);
-        res.render("m_agent_become", extendPublic({}, req));
+        res.render("m_vue/m_agent_become", extendPublic({}, req));
     });
 
     /*定期跟单*/
@@ -265,7 +257,7 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('m_asset.html', extendPublic({
+        res.render('m_vue/m_asset.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
@@ -276,7 +268,7 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('m_asset_new.html', extendPublic({
+        res.render('m_vue/m_asset_new.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
@@ -303,27 +295,24 @@ module.exports = function (app) {
     /*H5 web 关于我们 英文页面*/
     app.route('/m/web/about/us').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('m_about_us', extendPublic({}, req));
+        res.render('m_vue/m_about_us', extendPublic({}, req));
     });
 
     /* H5 充值中转页面 */
-    app.route('/m/deposit/test').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('m_deposit_test', extendPublic({}, req));
-    });
+    
     app.route('/m/deposit/pay').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('m_deposit_pay', extendPublic({}, req));
+        res.render('m_vue/m_deposit_pay', extendPublic({}, req));
     });
 
     // 第三方认证流程
     app.route('/m/third/register').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('m_third_verify', extendPublic({}, req));
+        res.render('m_vue/m_third_verify', extendPublic({}, req));
     });
     app.route('/m/third/password').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('m_third_password', extendPublic({}, req));
+        res.render('m_vue/m_third_password', extendPublic({}, req));
     });
 
     /*--------------------APP-End-------------------------*/
@@ -351,14 +340,14 @@ module.exports = function (app) {
                 masterApiPath = 'https://www.tigerwit.com/api'
             }
         }
-        console.log('------masterApiPath', masterApiPath);
+        // console.log('------masterApiPath', masterApiPath);
         setEnvCf(req, res);
         request(masterApiPath + '/master/trading_profile?user_code=' + usercode, function (error, response, body) {
             // request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
             if (!error && response.statusCode == 200) {
                 body = JSON.parse(body);
                 console.info('-------body.data', body.data);
-                res.render('trader.html', extendPublic({
+                res.render('web/trader.html', extendPublic({
                     master: body.data,
                     usercode: usercode
                 }, req));
@@ -366,17 +355,7 @@ module.exports = function (app) {
         });
     });
 
-    // 条件和条款
-    app.route('/web/blog/:subpage(risk|statement|notice)').get(function (req, res) {
-        var subpage = req.params.subpage || 'risk';
-        var pageInfo = {
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('web_blog.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
+    
     // 复制交易
     app.route('/web/copy/:subpage(rules|select|become|comment)').get(function (req, res) {
         var subpage = req.params.subpage || 'rules';
@@ -384,10 +363,11 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('web_copy.html', extendPublic({
+        res.render('web/copy.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
+
     // 交易品种
     app.route('/web/product/:subpage(forex|metal|oil|cfd)').get(function (req, res) {
         var subpage = req.params.subpage || 'forex';
@@ -395,36 +375,24 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('web_product.html', extendPublic({
+        res.render('web/product.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
+
     app.route('/web/product/trade').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('trade_tool.html', extendPublic({}, req));
+        res.render('web/mt4_online.html', extendPublic({}, req));
     })
-
-    // 资讯
-    app.route('/web/information/:subpage(time|comment|market)').get(function (req, res) {
-        var subpage = req.params.subpage || 'forex';
-        var pageInfo = {
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('web_information.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
 
     // 关于老虎金融
     app.route('/web/about/:subpage(stp|team|report|control|tigerwit|partner)').get(function (req, res) {
-
         var subpage = req.params.subpage || 'forex';
         var pageInfo = {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('web_about.html', extendPublic({
+        res.render('web/about.html', extendPublic({
             pageInfo: pageInfo,
             report_sites: report_sites
         }, req));
@@ -437,7 +405,7 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('web_faq.html', extendPublic({
+        res.render('web/faq.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
@@ -449,14 +417,26 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('web_agent.html', extendPublic({
+        res.render('web/agent.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
+
+    // 条件和条款
+    app.route('/web/blog/:subpage(risk|statement|notice)').get(function (req, res) {
+        var subpage = req.params.subpage || 'risk';
+        var pageInfo = {
+            id: subpage
+        };
+        setEnvCf(req, res);
+        res.render('web/blog.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
 
     app.route('/web/mt4').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('web_mt4.html', extendPublic({}, req));
+        res.render('web/mt4.html', extendPublic({}, req));
     });
 
     app.route('/study/:subpage(introduction|term|fundamental|skill|video)').get(function (req, res) {
@@ -465,16 +445,15 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('study.html', extendPublic({
+        res.render('web/study.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
 
     app.route('/help').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('help_doc.html', extendPublic({}, req));
+        res.render('web/help.html', extendPublic({}, req));
     });
-
 
     app.route('/api_test').get(function (req, res, next) {
         // accountApi.checkLogined(function (data) {
@@ -507,7 +486,7 @@ module.exports = function (app) {
     app.route('/bd/yellow').get(function (req, res) {
         if (COMPANY_NAME === 'tigerwit') {
             setEnvCf(req, res);
-            res.render('bd_m_yellow', extendPublic({}, req));
+            res.render('bd/yellow', extendPublic({}, req));
         }
     });
 
@@ -516,9 +495,9 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit') {
             if (isMobile(req)) {
-                res.render('bd_m_lake', extendPublic({}, req));
+                res.render('bd/lake/h5.html', extendPublic({}, req));
             } else {
-                res.render('bd_lake', extendPublic({}, req));
+                res.render('bd/lake/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -530,9 +509,9 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit') {
             if (isMobile(req)) {
-                res.render('bd_m_greenhand', extendPublic({}, req));
+                res.render('bd/greenhand/h5.html', extendPublic({}, req));
             } else {
-                res.render('bd_greenhand', extendPublic({}, req));
+                res.render('bd/greenhand/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -541,74 +520,62 @@ module.exports = function (app) {
 
     app.route('/bd/t29').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('bd_t29', extendPublic({}, req));
+        res.render('bd/t29/web.html', extendPublic({}, req));
     });
 
     app.route('/bd/t30').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
-            res.render('bd_m7', extendPublic({}, req))
+            res.render('bd/t30/h5.html', extendPublic({}, req))
         } else {
-            res.render('bd_t30', extendPublic({}, req));
+            res.render('bd/t30/web.html', extendPublic({}, req));
         }
     });
     app.route('/bd/t27').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
-            res.render('bd_m_t27', extendPublic({}, req))
+            res.render('bd/t27/h5.html', extendPublic({}, req))
         } else {
-            res.render('bd_t27', extendPublic({}, req));
+            res.render('bd/t27/web.html', extendPublic({}, req));
         }
+    });
+    
+
+    app.route('/bd/t31_game').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('bd/t31/h5.game.html', extendPublic({}, req))
     });
     app.route('/bd/t31').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
             // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
             if (COMPANY_NAME === 'tigerwit') {
-                res.render('bd_m_t31', extendPublic({
+                res.render('bd/t31/h5.html', extendPublic({
                     pageInfo: ""
                 }, req))
             }
-            if (COMPANY_NAME === 'pkds') {
-                res.render('bd_t31', extendPublic({}, req));
-            }
         } else {
-            res.render('bd_t31', extendPublic({}, req));
+            res.render('bd/t31/web.html', extendPublic({}, req));
         }
     });
-
-    app.route('/bd/t31_game').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('bd_mt31_game', extendPublic({}, req))
-    });
-
     app.route('/bd/t32').get(function (req, res) {
         setEnvCf(req, res);
 
         // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
         if (COMPANY_NAME === 'tigerwit') {
-            res.render('bd_m_t31', extendPublic({
+            res.render('bd/t31/h5.html', extendPublic({
                 pageInfo: "t32"
             }, req))
         }
-        if (COMPANY_NAME === 'pkds') {
-            res.render('bd_t31', extendPublic({}, req));
-        }
-
     });
-
     app.route('/bd/t32_t').get(function (req, res) {
         setEnvCf(req, res);
         // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
         if (COMPANY_NAME === 'tigerwit') {
-            res.render('bd_m_t31', extendPublic({
+            res.render('bd/t31/h5.html', extendPublic({
                 pageInfo: "t32_t"
             }, req))
         }
-        if (COMPANY_NAME === 'pkds') {
-            res.render('bd_t31', extendPublic({}, req));
-        }
-
     });
     // t33 作为固定推广链接，要更新最新的落地页到这个地址
     app.route('/bd/:page(|t33_t|t33_a|t33_b)').get(function (req, res) {
@@ -617,14 +584,14 @@ module.exports = function (app) {
         if (isMobile(req)) {
             if (COMPANY_NAME === 'tigerwit') {
                 if (pageId == 't33') {
-                    res.render('bd_m_t33', extendPublic({
+                    res.render('bd/t33/h5.html', extendPublic({
                         regBtn_text: '领取赠金',
                         coInfo: "",
                         page: pageId,
                         sel_text: '首选'
                     }, req));
                 } else {
-                    res.render('bd_m_t33', extendPublic({
+                    res.render('bd/t33/h5.html', extendPublic({
                         regBtn_text: '前往领取赠金',
                         coInfo: "Tiger Financial Technology PTY. Ltd.",
                         page: pageId,
@@ -632,10 +599,10 @@ module.exports = function (app) {
                     }, req));
                 }
             } else {
-                res.render('bd_t33_sub', extendPublic({}, req));
+                res.render('bd/t33/web.sub.html', extendPublic({}, req));
             }
         } else {
-            res.render('bd_t33_sub', extendPublic({}, req));
+            res.render('bd/t33/web.sub.html', extendPublic({}, req));
         }
     });
 
@@ -643,9 +610,9 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd_m_t38', extendPublic({}, req))
+                res.render('bd/t38/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd_t38', extendPublic({}, req));
+                res.render('bd/t38/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -662,9 +629,9 @@ module.exports = function (app) {
             //     res.render('bd_redbag', extendPublic({}, req));
             // }
             if (isMobile(req)) {
-                res.render('bd_m_t38', extendPublic({}, req))
+                res.render('bd/t38/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd_t38', extendPublic({}, req));
+                res.render('bd/t38/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -678,7 +645,7 @@ module.exports = function (app) {
             if (isMobile(req)) {
                 res.render('404.html', extendPublic({}, req));
             } else {
-                res.render('bd_redbag_2', extendPublic({}, req));
+                res.render('bd/redbag/web2', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -689,16 +656,16 @@ module.exports = function (app) {
     app.route('/bd/t36_game').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
-            res.render('bd_mt36_game', extendPublic({}, req))
+            res.render('bd/t36/h5.game.html', extendPublic({}, req))
         } else {
-            res.render('bd_pct36_game', extendPublic({}, req));
+            res.render('bd/t36/web.game.html', extendPublic({}, req));
         }
     });
 
     // 品牌部活动 － 申请代理
     app.route('/bd/brand_proxy').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('bd_brand_proxy', extendPublic({}, req));
+        res.render('bd/brand/proxy', extendPublic({}, req));
     });
 
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
@@ -712,7 +679,7 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('m_vue.html', extendPublic({
+        res.render('m_vue/index.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
@@ -724,7 +691,7 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('m_vue_info.html', extendPublic({
+        res.render('m_vue/m_vue_info.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
@@ -735,7 +702,7 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('m_vue_info.html', extendPublic({
+        res.render('m_vue/m_vue_info.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
@@ -746,7 +713,7 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('m_vue_info.html', extendPublic({
+        res.render('m_vue/m_vue_info.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
@@ -758,7 +725,7 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('m_vue_password.html', extendPublic({
+        res.render('m_vue/m_vue_password.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
@@ -770,7 +737,7 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('m_vue_binding.html', extendPublic({
+        res.render('m_vue/m_vue_binding.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
@@ -781,7 +748,7 @@ module.exports = function (app) {
             id: subpage
         };
         setEnvCf(req, res);
-        res.render('m_vue_binding.html', extendPublic({
+        res.render('m_vue/m_vue_binding.html', extendPublic({
             pageInfo: pageInfo
         }, req));
     });
@@ -790,7 +757,7 @@ module.exports = function (app) {
         var subpage = req.params.subpage || 'index';
 
         setEnvCf(req, res);
-        res.render('m_vue_faq.html', extendPublic({
+        res.render('m_vue/m_vue_faq.html', extendPublic({
             pageInfo: subpage
         }, req));
     });
@@ -800,7 +767,7 @@ module.exports = function (app) {
         var subpage = req.params.subpage || 'index';
 
         setEnvCf(req, res);
-        res.render('m_vue_help.html', extendPublic({
+        res.render('m_vue/m_vue_help.html', extendPublic({
             pageInfo: subpage
         }, req));
     });

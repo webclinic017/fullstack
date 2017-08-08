@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!--引入公用头部-->
+    <% include /common/meta/h5.html %>
+    <!-- 引入H5 CSS -->
+    <!-- build:css(.tmp) /styles/h5_common.css -->
+    <link rel="stylesheet" href="/styles/h5_common.css">
+    <!-- endbuild -->
+</head>
+<!--引入原生交互方法与根节点字体改变脚本-->
+<% include /common/vendor/h5.utiljs.html %>ml %>
+<% include /common/statistic/main.html %>
+<body>
+<div class="m_regular_how">
+    <%if(false){%>
+    <div class="how_banner">
+        <p>定 期 跟 单</p>
+        <p>专业外汇交易团队带你钱生钱</p>
+    </div>
+    <%}%>
+    <div class="how_detail_new">
+        <h4>如何进行定期跟单?</h4>
+        <!-- <p>1、在<%= lang.text('companyEnName')%>注册开户并入金</p>
+        <p>2、选择好合适的定期产品,了解定期产品详情,确认无误后点击“立即预约”,根据提示进行操作</p>
+        <p>3、无需盯盘,定期产品募集成功后开始交易,封闭期内交易帐号被冻结无法操作</p>
+        <p>4、封闭期结束,获得盈利</p>
+        <p><%= lang.text('companyZhName')%>基金管理人账户是<%= lang.text('companyZhName')%>为代理上和操盘手提供的高级解决方案。
+           由交易高手制定定投策略,融资后,在固定的封闭期内交易获利,
+           最终按约定进行分红</p> -->
+
+        <div class="plan-con">
+            <ul>
+                <li>
+                    <span class="plan-line"></span>
+                    <p>1、在<%= lang.text('companyEnName')%>注册开户并入金</p>
+                </li>
+                <li>
+                    <span class="plan-line"></span>
+                    <p>2、选择好合适的定期产品,了解定期产品详情,确认无误后点击“立即预约”,根据提示进行操作</p>
+                </li>
+                <li>
+                    <span class="plan-line"></span>
+                    <p>3、无需盯盘,定期产品募集成功后开始交易,封闭期内交易帐号被冻结无法操作</p>
+                </li>
+                <li>
+                    <span class="plan-line"></span>
+                    <p>4、封闭期结束,获得盈利</p>
+                </li>
+                <li>
+                    <span class="plan-line"></span>
+                    <p>
+                        <%= lang.text('companyZhName')%>基金管理人账户是<%= lang.text('companyZhName')%>为代理上和操盘手提供的高级解决方案。由交易高手制定定投策略,融资后,在固定的封闭期内交易获利,最终按约定进行分红
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<% include /common/vendor/h5.js.html %>
+
+<!-- build:js(client) /scripts/m_regular_how.js -->
+<script src="/scripts/regular/m_regular_how.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</body>
+</html>

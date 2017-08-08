@@ -1,0 +1,244 @@
+<%
+    var status = model.status;
+%>
+<script type="text/javascript">
+    var countdownInfo = {
+        type: <%= model.countdownInfo.type %>,
+        time: <%= model.countdownInfo.time %>
+    };
+    
+    var appointAmount = {
+        min: <%= model.money_copy_low %>,
+        max: <%= model.money_copy_high %>
+    };
+</script>
+
+
+<div class="hy-detail">
+    <div class="container" ng-controller="RegularController" ng-cloak>
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="hy-detail__title">
+                    <span class="hy-detail__title-span1" ><%= model.name %></span>
+                </div>
+                <div class="hy-detail__con">
+                    <ul class="hy-detail__con-ul">
+                        <li>
+                            <span>复制金额</span>
+                            <p class="hy-detail__con-red"><%= model.money_copy %></p>
+                        </li>
+                        <li>
+                            <span>预期年化收益率</span>
+                            <p><%= model.expect_year_profit %></p>
+                        </li>
+                        <li>
+                            <span>复制封闭期</span>
+                            <p><%= model.period %></p>
+                        </li>
+                        <li>
+                            <span>历史最高回撤</span>
+                            <p><%= model.withdraw_history %></p>
+                        </li>
+                    </ul>
+                    <div class="hy-detail__con-progress_box">
+                        <div class="hy-detail__con-progress">
+                            <span class="hy-detail__con-circle"></span> 
+                            <span class="font-size-16"><%= model.max_desc %></span>
+                            <div class="progress-box">
+                                <div class="progress" tw-progress>
+                                    <div class="scale"></div>
+                                </div>
+                                <span>&nbsp;&nbsp;&nbsp;&nbsp;已完成</span>
+                                <span class="p-num"><%= status != "before_appoint" ? model.progress:0 %>%</span>
+                            </div>
+                        </div>
+                        <%if(lang.isCompany("pkds")){%>
+                            <div class="hy-detail__con-progress">
+                                <span class="hy-detail__con-circle"></span> 
+                                <span class="font-size-16" ng-if="countdownTime.type === 1">预约已结束</span>
+                                <span class="font-size-16" ng-if="countdownTime.type === 2">开始预约倒计时</span>
+                                <span class="font-size-16" ng-if="countdownTime.type === 3">结束预约倒计时</span>
+                                <div class="hy-detail__con-countdown">
+                                    <span>{{countdownTime.day || 0}}</span>天<span>{{countdownTime.hour || 0}}</span>时<span>{{countdownTime.minute || 0}}</span>分<span>{{countdownTime.second || 0}}</span>秒
+                                </div>
+                            </div>
+                        <%}%>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="hy-detail__title">
+                    <span class="hy-detail__title-tel <%= lang.background().company %>"></span>
+                    <span class="hy-detail__title-span2">产品咨询：<%= lang.text('telephone')%></span>
+                </div>
+                <div class="hy-detail__con">
+                    <div class="hy-detail__con-form">
+                        <form name="orderForm">
+
+<%  
+    if(status == "before_appoint" || status == "start_appoint" || status == "end_appoint"){
+%>
+                           <div class="relative">
+                                <input name="name"
+                                       class="order-info-name mg-tp-20" 
+                                       type="text" 
+                                       <%= status == 'before_appoint' || status == 'end_appoint' ? 'disabled' : '' %>
+                                       placeholder="您的姓名"
+                                       ng-model="name"
+                                       ng-focus="hideErr('name')">
+                                <p ng-show="frontErr.name.show" class="alert-arrow_tp_lf">
+                                    姓名不能为空
+                                </p>
+                            </div>
+                            <div class="relative">
+                                <input name="tel" 
+                                       class="order-info-tel mg-tp-10" 
+                                       type="text"  
+                                       <%= status == 'before_appoint' || status == 'end_appoint' ? 'disabled' : '' %>
+                                       placeholder="手机号码" 
+                                       ng-model="tel"
+                                       ng-focus="hideErr('tel')">
+                                <p ng-show="frontErr.tel.show" class="alert-arrow_tp_lf">
+                                    手机号码不能为空
+                                </p>
+                            </div>
+                            <div class="amount-box relative">
+                                <span>预约金额</span>
+                                <input name="amount" 
+                                       class="order-info-tel mg-tp-10" 
+                                       type="number"  
+                                       <%= status == 'before_appoint' || status == 'end_appoint' ? 'disabled' : '' %>
+                                       placeholder="<%= model.money_copy %>"
+                                       ng-model="amount"
+                                       ng-focus="hideErr('amount')">
+                                <p ng-show="frontErr.amount.show" class="alert-arrow_tp_lf">
+                                    复制金额为<%= model.money_copy %>
+                                </p>
+                            </div>
+                            <p class="mg-tp-20">
+                                <input class="check_agreement" type="checkbox" checked />同意并遵守
+                                <a href="/regular/agree/<%= model.id %>?name={{name}}" target="_blank" class="font-info">委托协议书</a>
+                            </p>                  
+<%
+    }
+    if(status == "before_appoint"){
+%>
+                            <input name="submit" 
+                                   class="hy-detail__con-btn hy-detail__con-btn-trade" 
+                                   type="button" 
+                                   disabled="disabled"
+                                   value="即将开始" 
+                                   ng-model="submit"
+                                   ng-click="submitOrder()"
+                            />
+<%
+    }
+    if(status == "start_appoint"){
+%>                      
+                            <input name="submit" 
+                                   class="hy-detail__con-btn hy-detail__con-btn-order" 
+                                   type="button" 
+                                   value="立即预约" 
+                                   ng-model="submit"
+                                   ng-click="submitOrder()"
+                            />
+<%
+    }
+    if(status == "end_appoint"){
+%>
+                               <input name="submit" 
+                                   class="hy-detail__con-btn hy-detail__con-btn-trade" 
+                                   type="button" 
+                                   disabled="disabled"
+                                   value="预约结束" 
+                                />
+<%
+    }
+    if(status == "tradding"){
+%>
+                            <p class="font-size-16 pd-tp-30  text-center">实时年化收益率</p>
+                            <p class="fix-list__list-red font-info  text-center"><%= model.profit_rate_now %></p>
+                            <input name="submit" 
+                                   class="hy-detail__con-btn hy-detail__con-btn-trade" 
+                                   type="button" 
+                                   value="交易中" 
+                                   disabled="disabled"
+                            />
+<%
+    }
+    if(status == "end_trade"){
+%>
+                            <p class="font-size-16 pd-tp-30 text-center">已结算周收益率</p>
+                            <p class="fix-list__list-red text-center"><%= model.profit_rate_now %></p>
+<%
+      if(model.profit_rate_last){
+%>
+                            <p class="mg-tp-20 text-center">上期年化收益率:<span class="font-size-20 font-warning"><%= model.profit_rate_last%></span></p>
+<%
+
+      }else{
+%>
+                            <p class="mg-tp-20 text-center">预期年化收益率:<span class="font-size-20 font-warning"><%= model.expect_year_profit%></span></p>
+<%
+      }
+%>
+                            <input name="submit" 
+                                   class="hy-detail__con-btn hy-detail__con-btn-end" 
+                                   type="button" 
+                                   value="交易已结束" 
+                                   disabled="disabled"
+                            />
+<%
+    }
+%>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hy-detail__de">
+            <p class="hy-detail__de-title">详情</p>
+            <div class="hy-detail__de-table">
+                <table class="table table-border">
+                    <colgroup>
+                        <col width="20%">
+                        <col width="80%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>复制封闭期</td>
+                            <td><%= model.period %>（复制者在封闭期间不能操作账户，比如下单和平仓等，封闭期结束后拥有账户操作权）</td>
+                        </tr>
+                        <tr>
+                            <td>预约复制时间</td>
+                            <td><%= model.detail_appoint_time %></td>
+                        </tr>
+                        <tr>
+                            <td>账户交易时间</td>
+                            <td><%= model.trade_time %></td>                           
+                        </tr>
+                        <tr>
+                            <td>风险控制机制</td>
+                            <td><%= model.desc_risk %></td>
+                        </tr>
+                        <tr>
+                            <td>高手报酬分成</td>
+                            <td><%= model.desc_divide %></td>
+                        </tr>
+                        <tr>
+                            <td>报名限制</td>
+                            <td><%= model.max_desc %></td>
+                        </tr>
+                        <tr>
+                            <td>备注</td>
+                            <td><%= model.note %></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="hy-detail__de-ps">注：定期跟单账户不参加赠金活动。</p>
+        </div>
+        <%- include('./'+ model.team+'.html') %>
+    </div>
+</div>
