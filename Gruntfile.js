@@ -123,7 +123,7 @@ module.exports = function (grunt) {
                             js: function (filePath) {
                                 var filePathArr = filePath.split('..');
                                 var jsPath = filePathArr[filePathArr.length - 1];
-                                // console.log('-------bower injector jsPath-------',jsPath)
+                                console.log('-------bower injector jsPath-------',jsPath)
                                 return '<script src="' + jsPath + '"></script>';
                             },
                             css: function (filePath) {
@@ -268,7 +268,7 @@ module.exports = function (grunt) {
                         if (url.indexOf('http') != -1) {
                             return url;
                         }
-                        // console.log('----- grunt-cdnify maped url -----', url)
+                        console.log('----- grunt-cdnify maped url -----', url)
                         return CDN_URL + url;
                     }
                 },
