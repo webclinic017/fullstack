@@ -58,7 +58,7 @@
             depositApi: urlOrigin2 + '/payment/deposit',
             getDepositLimitApi: urlOrigin2 + '/payment/deposit/limits',
             getFXRateApi: urlOrigin2 + '/payment/rates',
-            getIsWithdrawApi: urlOrigin2 + '/payment/withdraw/limits',
+            getIsWithdrawApi: urlOrigin2 + '/v2/payment/withdraw/limits',
             walletDepositApi: urlOrigin2 + '/wallet/deposit',
             walletWithdrawApi: urlOrigin2 + '/wallet/withdraw',
             walletCanWithdrawApi: urlOrigin2 + '/wallet/valid_balance',
@@ -66,7 +66,8 @@
             getCopierBonusSummaryApi: urlOrigin2 + '/commission/custom_profile',
             getMasterBonusListApi: urlOrigin2 + '/commission/master_settle',
             getCopierBonusListApi: urlOrigin2 + '/commission/custom_settle',
-            getBonusDetailListApi: urlOrigin2 + '/commission/settle_info'
+            getBonusDetailListApi: urlOrigin2 + '/commission/settle_info',
+            getBanksApi: urlOrigin2 + '/bank_names'
         };
         var forex = {
             
