@@ -7,14 +7,15 @@
  *  其他文件中要用，都要通过此文件获取，不再独自去读取process
  */
 
- ;(function () {   
+; (function () {
     'use strict';
 
     var envConfig = {
         company_name: process.env.COMPANY_NAME,
         url_path: process.env.URL_PATH,
         access_origin: process.env.ACCESS_ORIGIN,
-        access_origin2: process.env.ACCESS_ORIGIN2
+        access_origin2: process.env.ACCESS_ORIGIN2,
+        cdn_url: 'https://web.tigerwit.com'
     };
 
     function SetEnvConfig(req) {
@@ -34,10 +35,13 @@
             envConfig.access_origin = process.env.ACCESS_ORIGIN;
             envConfig.access_origin2 = process.env.ACCESS_ORIGIN2;
         }
+        envConfig.company_name = 'pandafx';
+        envConfig.url_path = 'https://pandafx.tigerwit.com';
+        envConfig.access_origin = '';
     }
 
     module.exports = {
         envConfig: envConfig,
         SetEnvConfig: SetEnvConfig
     };
- })();
+})();

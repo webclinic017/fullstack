@@ -18,15 +18,16 @@ Vue.component('help-carousel', {
                     '<div class="swiper-slide" v-for="step in steps" v-cloak>' +
                         '<div class="swiper-slide-content">' +
                             // 当图片数量大于1时 阻止冒泡，让滑动事件不会触发swiper的滑动，让当前图片可滚动
+                            // cdn_url : 路径写在js中，构建时不会更改cdn路径，需要手动添加
                             '<div class="swiper-slide-content__img_viewer" v-on:touchstart.stop v-if="step.imgSrc.length > 1">' +
                                 '<p class="swiper-slide-content__img_viewer-img_box clearfix num{{ step.imgSrc.length }}">' +
-                                    '<img v-for="src in step.imgSrc" src="/white_label/mobile/{{ src }}.png" alt="" class="swiper-slide-content__img_box-img">' +
+                                    '<img v-for="src in step.imgSrc" src="{{ cdn_url }}/white_label/mobile/{{ src }}.png" alt="" class="swiper-slide-content__img_box-img">' +
                                 '</p>' +
                             '</div>' +
                             // 当图片数量大于1时 开启冒泡
                             '<div class="swiper-slide-content__img_viewer" v-if="step.imgSrc.length == 1">' +
                                 '<p class="swiper-slide-content__img_viewer-img_box clearfix num{{ step.imgSrc.length }}">' +
-                                    '<img v-for="src in step.imgSrc" src="/white_label/mobile/{{ src }}.png" alt="" class="swiper-slide-content__img_box-img">' +
+                                    '<img v-for="src in step.imgSrc" src="{{ cdn_url }}/white_label/mobile/{{ src }}.png" alt="" class="swiper-slide-content__img_box-img">' +
                                 '</p>' +
                             '</div>' +
                             '<p class="swiper-slide-content__desp">' +
@@ -51,6 +52,7 @@ Vue.component('help-carousel', {
     data: function () {
         console.log('component help-carousel data');
         return {
+            cdn_url: $.cookie('cdn_url'),
             countDown: this.steps,
         };
     },
