@@ -23,22 +23,26 @@
 <% include common/m_css_vendor.html %>
 <% include common/common_header.html %>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
-
 <body>
-<div class="load_wrapper" id="load_wrapper">
-    <div class="load_wrapper__box">
-        <div class="load_wrapper__box-bar" id="loading_bar"></div>
+<%- include('common/m_nav.html') %>
+<div class="m_live_layout clearfix">
+    <div class="m_live_layout__content clearfix">
+        <p class="desp_main_title">梳理金融事件</p>
+        <p class="desp_sub_title">洞察实事动向，解读重点数据，理清时下全球局势</p>
+        <p class="desp_main_title">点评当日机会</p>
+        <p class="desp_sub_title">分析行情走势，梳理关键点位，明确品种操作机会</p>
+        <p class="desp_main_title">分享实战策略</p>
+        <p class="desp_sub_title">分享交易技巧，团队操作计划，教你掌握实战手法</p>
+        <a href="http://t.cn/RiM1bjm" target="_blank" class="desp_redirect_url">点击进入直播间</a>
+        <br>
+        <img src="/images/live/live_qr_code.png" alt="" class="desp_qr_code">
     </div>
-    <div class="load_wrapper__text" id="loading_text">0%</div>
-</div>
-<div class="lake_layout">
-    
 </div>
 </body>
 <% include m_js_vendor.html %>
 <!-- build:js(client) /scripts/m_live.js -->
 <script src="/scripts/bd/common/wx_share_config.js"></script>
-<script src="/scripts/account/h5_register.js"></script>
+<script src="/scripts/bd/live/h5.js"></script>
 <!-- endbuild -->
 
 <!-- 推广脚本footer -->
