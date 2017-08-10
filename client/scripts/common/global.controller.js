@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('GlobalController', GlobalController);
 
-    GlobalController.$inject = ['$rootScope', '$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang', '$cookies', '$timeout', 'redbag'];
+    GlobalController.$inject = ['$rootScope', '$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang', '$cookies', '$timeout', 'redbag', '$cookieStore'];
 
     /**
      * @name GlobalController
      * @desc
      */
-    function GlobalController($rootScope, $scope, $state, $window, config, account, authorization, lang, $cookies, $timeout, redbag) {
+    function GlobalController($rootScope, $scope, $state, $window, config, account, authorization, lang, $cookies, $timeout, redbag, $cookieStore) {
         $scope.userstatus = {
             logined: false
         };
