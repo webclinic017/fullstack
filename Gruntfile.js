@@ -121,17 +121,16 @@ module.exports = function (grunt) {
                     html: {
                         replace: {
                             js: function (filePath) {
-                                //../bower_components/jquery/dist/jquery.js
-                                var prefixPath = '..';
-                                var length = prefixPath.length;
-                                filePath = filePath.slice(length);
-                                return '<script src="' + filePath + '"></script>';
+                                var filePathArr = filePath.split('..');
+                                var jsPath = filePathArr[filePathArr.length - 1];
+                                console.log('-------bower injector jsPath-------',jsPath)
+                                return '<script src="' + jsPath + '"></script>';
                             },
                             css: function (filePath) {
-                                var prefixPath = '..';
-                                var length = prefixPath.length;
-                                filePath = filePath.slice(length);
-                                return '<link rel="stylesheet" href="' + filePath + '">';
+                                var filePathArr = filePath.split('..');
+                                var cssPath = filePathArr[filePathArr.length - 1];
+                                console.log('-------bower injector cssPath-------', cssPath)
+                                return '<link rel="stylesheet" href="' + cssPath + '">';
                             }
                         }
                     }
