@@ -60,8 +60,8 @@ if ($(".m_vue").attr("data-page") === "help") {
                 }
             });
         },
-        data: {
-            titleList: [
+        data: function () {
+            var origin = [
                 {
                     title: '外汇交易怎么玩',
                     sub: [
@@ -138,6 +138,15 @@ if ($(".m_vue").attr("data-page") === "help") {
                     ]
                 }
             ]
+            var companyName = $.cookie('company_name');
+            if (companyName == 'pandafx') {
+                $.each(origin, function (index, item) {
+                    item.title = item.title.replace('老虎外汇', '熊猫外汇')
+                })
+            }
+            return {
+                titleList: origin
+            }
         },
         methods: {
             toStatePage: function (type, page) {
