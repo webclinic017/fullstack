@@ -29,11 +29,13 @@
           * @method checkPhone
           * 
           * @param {Number} phone
+          * @param {Number} code   品牌部推广页（/bd/brand_proxy） 渠道
           * @param {Number} channel   品牌部推广页（/bd/brand_proxy） 渠道
           */
-         function checkPhone (phone, channel) {
+         function checkPhone (phone, code, channel) {
             return publicHttp.dealPublicRequest(o.checkPhoneApi, 'POST', {
                 phone: phone,
+                code: code,
                 channel: channel
             });
          }
