@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="bd_redbag">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%=lang.text("companyZhName")%>｜红包活动</title>
+        <% include /common/vendor/web.css.html %>
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
+        <!-- endbuild -->
+        <% include /common/statistic/main.html %>
+        <% include /common/vendor/web.js.html %>
+</head>
+
+<body ng-app="fullstackApp">
+    <div ng-controller="GlobalController">
+        <% include /common/nav/web.header.html %>
+        <div class="bd_redbag_2">
+            <div class="bd_redbag_2__focus">
+                <img src="/images/bd_redbag/redbag_2_focus.png">
+            </div>
+            <div class="bd_redbag_2__layout">
+                <div class="bd_redbag_2__rules">
+                    <h4>活动规则</h4>
+                    <p>活动期间完成20手交易，且活动截止前累计入金达到5000美金，即可获得100美金的奖励</p>
+                    <div class="rules_det clearfix">
+                        <div class="tip">注：</div>
+                        <ul>
+                            <li>1.用户交易手数计算规则：在活动期间完成平仓/卖出的订单对应手数累计值</li>
+                            <li>2.累计入金金额计算规则：只统计用户直接充值入金金额。红包兑现等资金注入不计入累计入金金额</li>
+                            <li>3.用户需在红包指定兑现期内完成对应条件并手动完成兑现，过期不能兑现</li>
+                            <li>4.活动所列红包每个用户仅可领取一次，兑现金额将在执行兑现操作后入账且可支取</li>
+                            <li>5.本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，CFD（指数）类产品的交易手数不计入统计范围</li>
+                            <li>6.老虎外汇享有最终解释权，若有疑问，请咨询在线客服，或拨打400-809-8509。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bd_redbag_2__detail">
+                    <h4>冲刺之路</h4>
+                    <p>加油！美金红包就在眼前！</p>
+                    <div class="bar_box_layout">
+                        <div class="bar_box n1">
+                            <div class="bar">
+                                <span></span>
+                            </div>
+                            <div class="tip">
+                                入金<br><span>5000</span><br>美金
+                            </div>
+                            <div class="cont">
+                                <span class="speed">0</span>／5000
+                            </div>
+                        </div>
+                        <div class="bar_box n2">
+                            <div class="bar">
+                                <span></span>
+                            </div>
+                            <div class="tip">
+                                交易<br><span>20手</span>
+                            </div>
+                            <div class="cont">
+                                <span class="speed">0</span>／20
+                            </div>
+                        </div>
+                    </div>
+                    <form>
+                        <div class="form-control-wrapper">
+                            <input class="form-control username"
+                                   type="text"
+                                   placeholder="昵称"> 
+                        </div>
+                        <div class="form-control-wrapper">
+                            <input class="form-control phone"
+                                   type="number"
+                                   placeholder="电话"> 
+                        </div>
+                        <div class="form-control-wrapper">
+                            <input class="form-control email"
+                                   type="text"
+                                   placeholder="邮箱"> 
+                        </div>
+                        <button class="btn btn-primary">
+                            领取100美金
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include('/common/statistic/all.html') %>
+</body>
+
+<!-- build:js(client) /scripts/bd_redbag_2.js -->
+<script src="/scripts/common/config.service.js"></script>
+<script src="/scripts/common/account.service.js"></script>
+<script src="/scripts/common/authorization.service.js"></script>
+<script src="/scripts/common/redbag.service.js"></script>
+<script src="/scripts/common/navbar.directive.js"></script>
+<script src="/scripts/common/dropdown.directive.js"></script>
+<script src="/scripts/common/global.controller.js"></script>
+<script src="/scripts/common/loading_img.directive.js"></script>
+<script src="/scripts/common/modal.js"></script>
+<script src="/scripts/common/pagination.directive.js"></script>
+<script src="/scripts/common/duration.filter.js"></script>
+<script src="/scripts/common/transition.service.js"></script>
+<script src="/scripts/common/symbol_mod.filter.js"></script>
+<script src="/scripts/common/trader.service.js"></script>
+<script src="/scripts/common/lang.service.js"></script>
+<script src="/scripts/common/lang_data.service.js"></script>
+<script src="/scripts/bd/t30/check.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<script src="/scripts/plugins/layer.js"></script>
+<script src="/scripts/bd/redbag/redbag_2.js"></script>
+<!-- endbuild -->
+</html>

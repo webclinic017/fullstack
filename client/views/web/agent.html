@@ -1,14 +1,22 @@
-<!doctype html>
+<% if (pageInfo.id === 'proxy') { %>
+    <% var title = '代理合作' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'become') {%>
+    <% var title = '成为高手' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } %>
+<!DOCTYPE html>
 <html>
     <head>
         <% include /common/meta/web.html %>
 
-        <title><%=lang.text("title")%> 直通全球资本市场</title>
-        <meta name="description" content="<%=lang.text("companyZhName")%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+        <title><%=lang.text("companyZhName")%>｜<%= title %></title>
+        <meta name="description" content="<%=lang.text("title")%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+        <meta name="keywords" content="">
 
-        <% include /common/vendor/web.css.html %>
-
-        <!-- build:css(.tmp) /styles/404.css -->
+        <!-- build:css(.tmp) /styles/web.css -->
         <link rel="stylesheet" href="/styles/web.css">
         <!-- endbuild -->
 
@@ -19,23 +27,18 @@
             <div class="header">
                 <% include /common/nav/web.header.html %>
             </div>
-
             <div class="body">
                 <div class="layout-2">
-                    <div class="layout-2__404">
-                        <p>
-                            别着急，点击
-                            <a href="/">这里</a>
-                            就可以找到出路
-                        </p>
+                    <div class="layout-2__side mg-tp-30">
+                        <%- include('./agent/sidebar.html') %>
+                    </div>
+                    <div class="layout-2__content mg-tp-30">
+                        <%- include('./agent/' + pageInfo.id + '.html') %>
                     </div>
                 </div>
             </div>
-
         <% include /common/vendor/web.js.html %>
-
-        <!-- build:js(client) /scripts/404.js -->
-
+        <!-- build:js(client) /scripts/web_agent.js -->
         <script src="/scripts/common/config.service.js"></script>
         <script src="/scripts/common/account.service.js"></script>
         <script src="/scripts/common/authorization.service.js"></script>
@@ -45,19 +48,16 @@
         <script src="/scripts/common/lang.service.js"></script>
         <script src="/scripts/common/lang_data.service.js"></script>
         <script src="/scripts/common/redbag.service.js"></script>
-
         <script src="/scripts/common/navbar.directive.js"></script>
         <script src="/scripts/common/dropdown.directive.js"></script>
         <script src="/scripts/common/form_select.directive.js"></script>
-        <script src="/scripts/common/media.directive.js"></script>
-        <script src="/scripts/common/dropdown_knowledge.directive.js"></script>
-
+        <script src="/scripts/common/upload_history_file.directive.js"></script>
         <script src="/scripts/common/modal.js"></script>
-
         <script src="/scripts/common/global.controller.js"></script>
-        <script src="/scripts/study/video.controller.js"></script>
+        <script src="/scripts/web/become_master.controller.js"></script>
+        <script src="/scripts/web/become_modal.controller.js"></script>
+        <script src="/scripts/web/agent.controller.js"></script>
         <!-- endbuild -->
-
             <div class="footer">
                 <% include /common/nav/web.footer.html %>
             </div>

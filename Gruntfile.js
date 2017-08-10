@@ -7,7 +7,7 @@ module.exports = function (grunt) {
     var path = require("path");
     try {
         localConfig = require('./server/config/local.env');
-    } catch(e) {
+    } catch (e) {
         localConfig = {};
     }
 
@@ -18,7 +18,7 @@ module.exports = function (grunt) {
         // cdnify: 'grunt-google-cdn'
     });
     // require('load-grunt-tasks')(grunt);
-    
+
     // Time how long tasks take. Can help when optimizing build times
     require('time-grunt')(grunt);
 
@@ -27,14 +27,14 @@ module.exports = function (grunt) {
 
         // Project settings
         pkg: grunt.file.readJSON('package.json'),
-        
+
         yeoman: {
             // configurable paths
             client: 'client',
             server: 'server',
             dist: 'dist'
         },
-        
+
         env: {
             test: {
                 NODE_ENV: 'test'
@@ -44,7 +44,7 @@ module.exports = function (grunt) {
             },
             all: localConfig
         },
-        
+
         express: {
             options: {
                 port: process.env.PORT || 9000
@@ -55,13 +55,13 @@ module.exports = function (grunt) {
                 }
             }
         },
-        
+
         open: {
             server: {
                 url: 'http://localhost:<%= express.options.port %>'
             }
         },
-        
+
         watch: {
             sass: {
                 files: ['<%= yeoman.client %>/styles/**/*.{scss,sass}'],
@@ -116,7 +116,7 @@ module.exports = function (grunt) {
                 exclude: []
             },
             app: {
-                src: ['<%= yeoman.client %>/views/*.html'],
+                src: ['<%= yeoman.client %>/views/**/*.html'],
                 fileTypes: {
                     html: {
                         replace: {
@@ -143,8 +143,23 @@ module.exports = function (grunt) {
         concurrent: {
             dist: [
                 'sass',
-                'imagemin'
+                // 'imagemin'
             ]
+        },
+
+        // The following *-min tasks produce minified files in the dist folder
+        /**
+         * This task has been removed in build task!!!!!!
+         */
+        imagemin: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= yeoman.client %>',
+                    src: '{images,ngsrc}/{,*/}*.{png,jpg,jpeg,gif,svg}',
+                    dest: '<%= yeoman.dist %>'
+                }]
+            }
         },
 
         // Compiles Sass to CSS
@@ -163,29 +178,17 @@ module.exports = function (grunt) {
             }
         },
 
-        // The following *-min tasks produce minified files in the dist folder
-        imagemin: {
-            dist: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= yeoman.client %>',
-                    src: '{images,ngsrc}/{,*/}*.{png,jpg,jpeg,gif,svg}',
-                    dest: '<%= yeoman.dist %>'
-                }]
-            }
-        },
-
         // Reads HTML for usemin blocks to enable smart builds that automatically
         // concat, minify and revision files. Creates configurations in memory so
         // additional tasks can operate on them
         useminPrepare: {
-            html: ['<%= yeoman.client %>/views/*.html'],
+            html: ['<%= yeoman.client %>/views/**/*.html'],
             options: {
                 dest: '<%= yeoman.dist %>',
                 flow: {
                     html: {
                         steps: {
-                             js: ['concat', 'uglifyjs'],
+                            js: ['concat', 'uglifyjs'],
                             css: ['cssmin']
                         },
                         post: {}
@@ -259,24 +262,24 @@ module.exports = function (grunt) {
 
         // The task looks through your specified files for URLs to rewrite
         cdnify: {
-          dist: {
-            options: {
-              // base: '//cdn.example.com/static/'
-              rewriter: function (url) {
-                console.log('----- grunt-cdnify maped url -----',url)
-                if (url.indexOf('http') != -1) {
-                    return url;
-                }
-                return CDN_URL+url;
-              }
-            },
-            files: [{
-              expand: true,
-              cwd: 'dist',
-              src: '**/*.{css,html}',
-              dest: 'dist'
-            }]
-          }
+            dist: {
+                options: {
+                    // base: '//cdn.example.com/static/'
+                    rewriter: function (url) {
+                        if (url.indexOf('http') != -1) {
+                            return url;
+                        }
+                        console.log('----- grunt-cdnify maped url -----', url)
+                        return CDN_URL + url;
+                    }
+                },
+                files: [{
+                    expand: true,
+                    cwd: 'dist',
+                    src: '**/*.{css,html}',
+                    dest: 'dist'
+                }]
+            }
         },
 
         // Copies remaining files to places other tasks can use
@@ -290,6 +293,7 @@ module.exports = function (grunt) {
                         dest: '<%= yeoman.dist %>',
                         src: [
                             'views/**/*.html',
+                            'images/**/*.*',
                             '*.ico',
                             '*.xml',
                             'fonts/*.*',
@@ -339,13 +343,13 @@ module.exports = function (grunt) {
             // Inject application script files into index.html (doesn't include bower)
             scripts: {
                 options: {
-                    transform: function(filePath) {
+                    transform: function (filePath) {
                         var yoClient = grunt.config.get('yeoman.client');
                         filePath = filePath.replace('/' + yoClient + '/', '');
                         filePath = filePath.replace('/.tmp/', '');
                         return '<script src="' + filePath + '"></script>';
                     },
-                    sort: function(a, b) {
+                    sort: function (a, b) {
                         var module = /\.module\.js$/;
                         var aMod = module.test(a);
                         var bMod = module.test(b);
@@ -357,10 +361,10 @@ module.exports = function (grunt) {
                 },
                 files: {
                     '<%= yeoman.client %>/index.html': [
-                       [
-                         '<%= yeoman.client %>/{app,components}/**/!(*.spec|*.mock).js',
-                         '!{.tmp,<%= yeoman.client %>}/app.{js,ts}'
-                       ]
+                        [
+                            '<%= yeoman.client %>/{app,components}/**/!(*.spec|*.mock).js',
+                            '!{.tmp,<%= yeoman.client %>}/app.{js,ts}'
+                        ]
                     ]
                 }
             },
@@ -368,7 +372,7 @@ module.exports = function (grunt) {
             // Inject component scss into app.scss
             sass: {
                 options: {
-                    transform: function(filePath) {
+                    transform: function (filePath) {
                         var yoClient = grunt.config.get('yeoman.client');
                         filePath = filePath.replace('/' + yoClient + '/app/', '');
                         filePath = filePath.replace('/' + yoClient + '/components/', '../components/');
@@ -388,7 +392,7 @@ module.exports = function (grunt) {
             // Inject component css into index.html
             css: {
                 options: {
-                    transform: function(filePath) {
+                    transform: function (filePath) {
                         var yoClient = grunt.config.get('yeoman.client');
                         filePath = filePath.replace('/' + yoClient + '/', '');
                         filePath = filePath.replace('/.tmp/', '');
@@ -485,19 +489,19 @@ module.exports = function (grunt) {
         login_public_key = companyInfo[company][url]["login_public_key"];
 
         var envConfig = fs.readFileSync(envConfigPath + 'processENV.origin.config.js', 'utf8');
-        envConfig = envConfig.replace('tigerwit',company).replace('development', node_env).replace('path', url_path);
+        envConfig = envConfig.replace('tigerwit', company).replace('development', node_env).replace('path', url_path);
         fs.writeFileSync(envConfigPath + 'processENV.config.js', envConfig, 'utf8');
         var companyName = require(envConfigPath + 'processENV.config').COMPANY_NAME;
 
         //change angular - whiteLabel.service.js
         var AS = fs.readFileSync(whiteLabelPath + 'whiteLabel.service.origin.js', 'utf8');
-        AS = AS.replace('tigerwit',companyName).replace('publicKey', login_public_key);
+        AS = AS.replace('tigerwit', companyName).replace('publicKey', login_public_key);
         fs.writeFileSync(scriptPath + 'whiteLabel.service.js', AS, 'utf8');
 
         // param -> tigerwit, pkds
         var param = companyName || "tiger";
         // console.info("tiger ->", stylePath, param);
-        var cont = fs.readFileSync(whiteLabelPath + '_variables_'+ param +'.scss', 'utf8');
+        var cont = fs.readFileSync(whiteLabelPath + '_variables_' + param + '.scss', 'utf8');
         // console.info("tiger", cont);
         fs.writeFileSync(stylePath + '_variables.scss', cont, 'utf8');
         console.log('whiteLabel task finished...');

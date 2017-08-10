@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="bd_t33">
+
+<head>
+    <meta charset="UTF-8">
+    <% include /common/meta/web.html %>
+    <title><%=lang.text("companyZhName")%>｜注册送200美金赠金</title>
+    <% include /common/vendor/web.css.html %>
+    <!-- build:css(.tmp) /styles/web.css -->
+    <link rel="stylesheet" href="/styles/web.css">
+    <!-- endbuild -->
+
+    <% include /common/statistic/main.html %>
+    <% include /common/vendor/web.js.html %>
+</head>
+
+<body ng-app="fullstackApp" class="bd_t33">
+<div ng-controller="GlobalController">
+    <% include /common/nav/web.header.html %>
+    <div class="t33_layout <%= lang.background().company %>">
+        <div class="t33_reg_box">
+            <h1>注册即可得<span>$200</span>体验金</h1>
+            <form>
+                <input type="text" name="username" id="username" placeholder="昵称">
+                <input type="tel" name="tel" id="telephone" placeholder="电话">
+                <input type="text" name="email" id="email" placeholder="邮箱">
+                <span id="regist_btn">注册送200美金</span>
+            </form>
+        </div>
+        <div class="t33_gifts clearfix">
+            <img src="/images/bd/t33_gift1_bg.png" draggable=false>
+            <img src="/images/bd/t33_gift2_bg.png" draggable=false>
+            <div class="gift_des">
+                <h4>一重礼</h4>
+                <p>注册可获得200美金体验资金，可直接用于交易，体验资金即刻到账</p>
+            </div>
+            <div class="gift_des">
+                <h4>二重礼</h4>
+                <p>首次充值大于2000美金（包含），可享受优厚的比例赠金，赠金计算方式如下：</p>
+            </div>
+        </div>
+        <div class="t33_con">
+            <div class="t33_con__ac_rule">
+                <table border="0" cellspacing="0" cellpadding="0" class="t33_con__ac_rule-table">
+                    <tr>
+                        <th>入金金额</th>
+                        <th>赠金比例</th>
+                        <th>交易手数</th>
+                    </tr>
+                    <tr>
+                        <td>2000-4999 美金</td>
+                        <td>10.0%</td>
+                        <td>赠金金额／4</td>
+                    </tr>
+                    <tr>
+                        <td>5000-9999 美金</td>
+                        <td>12.5%</td>
+                        <td>赠金金额／4</td>
+                    </tr>
+                    <tr>
+                        <td>10000 美金以上</td>
+                        <td>15%（最多不超过 10000 美金）</td>
+                        <td>赠金金额／4</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="t33_notice">
+            <h2><img src="/images/bd/t33_icon2.png" alt="">注意事项</h2>
+            <p>1、5天内入金200美金（包含）以上，所有订单平仓体验金扣除，重新发放200美金信用赠金，之后完成40手，可提取信用赠金+盈利；</p>
+            <p>2、5天之后入金，只赠送100美金信用赠金，完成25手可取信用赠金+盈利；</p>
+            <p>3、入金后所有订单平仓体验金扣除，重新发放相应信用赠金；</p>
+            <p>4、本活动的交易手数仅适用于外汇，贵金属以及能源类产品，CFD股指交易手数不计入统计范围；</p>
+            <p>5、本活动仅限首次入金的新用户，为了保证您的资金快速出入，请提交正确的开户信息；</p>
+            <p>6、定期跟单客户不参加以上任何活动;</p>
+            <p>7、完成规定交易手数之前，赠金不可抵消账户亏损，若账户净值低于赠金金额的105%，
+                <%=lang.text("companyZhName")%>有权强行平仓；</p>
+            <p>8、所获赠金在首次出金时未完成相应手数将扣除所有赠金；</p>
+            <p>9、用户需在活动期间完成首次入金方可获取信用赠金奖励；</p>
+            <p>10、
+                <%=lang.text("companyZhName")%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打
+                <%=lang.text("telephone")%>.</p>
+        </div>
+
+        <div class="t33_5Ways">
+            <img src="/images/bd/t33_five.png" draggable=false>
+        </div>
+
+        <div class="t31_tiger_help <%= lang.background().company %>"></div>   
+        <%if(lang.isCompany("tigerwit")) {%>
+        <% include /common/component/bd.float_register.html %>
+        <div class="t33_report">
+            <h2>媒体报道</h2>
+            <ul class="clearfix">
+                <li><img src="/images/bd/report_01.png" alt="reports"></li>
+                <li><img src="/images/bd/report_02.png" alt="reports"></li>
+                <li><img src="/images/bd/report_03.png" alt="reports"></li>
+            </ul>
+        </div>
+        <div class="footerbg clearfix">
+            <div class="footer-wrap" data-scroll-reveal="enter bottom, move 40px, over 1s, wait 0.53s">
+                <div class="t27_code">
+                    <img src="/images/bd/t30_code_min.png" draggable="false"/>
+                    <p>APP下载二维码</p>
+                </div>
+                <p>
+                    风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险，不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前，应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式；您需要知晓金融市场的保证金交易具有全部或部分亏损的可能。<%= lang.text('companyZhName')%>交易平台为广大交易高手及普通投资者提供复制交易服务，网站发布的任何信息，包括实时交易提醒、投资文章及其他资源等均来自互联网所有用户需仔细考量并权衡投资风险及安全性。交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+                </p>
+            </div>
+        </div>
+        
+        <%} else {%>
+        <div class="footerbg clearfix">
+            <div class="footer-wrap pkds" data-scroll-reveal="enter bottom, move 40px, over 1s, wait 0.53s">
+                <p>
+                    风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险，不适合所有投资者，增大杠杆意味着高风险与高收益并存。
+                    在您决定交易前，应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式；您需要知晓金融市场的保证金交易具有全部或部分亏损的可能。
+                    <%= lang.text('companyZhName')%>交易平台为广大交易高手及普通投资者提供复制交易服务，网站发布的任何信息，包括实时交易提醒、
+                    投资文章及其他资源等均来自互联网所有用户需仔细考量并权衡投资风险及安全性。交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+                </p>
+            </div>
+        </div>
+        <%}%>
+    </div>
+    <%- include('/common/statistic/all.html') %>    
+    <!-- build:js(client) /scripts/bd_t33.js -->
+    <script src="/scripts/common/config.service.js"></script>
+    <script src="/scripts/common/account.service.js"></script>
+    <script src="/scripts/common/authorization.service.js"></script>
+    <script src="/scripts/common/navbar.directive.js"></script>
+    <script src="/scripts/common/dropdown.directive.js"></script>
+    <script src="/scripts/common/global.controller.js"></script>
+    <script src="/scripts/common/loading_img.directive.js"></script>
+    <script src="/scripts/common/modal.js"></script>
+    <script src="/scripts/common/pagination.directive.js"></script>
+    <script src="/scripts/common/duration.filter.js"></script>
+    <script src="/scripts/common/transition.service.js"></script>
+    <script src="/scripts/common/symbol_mod.filter.js"></script>
+    <script src="/scripts/common/trader.service.js"></script>
+    <script src="/scripts/bd/t30/check.js"></script>
+    <script src="/scripts/common/lang.service.js"></script>
+    <script src="/scripts/common/lang_data.service.js"></script>
+    <script src="/scripts/common/redbag.service.js"></script>
+    <!-- endbuild -->
+</div>
+</body>
+
+</html>
