@@ -1,3 +1,32 @@
+.brand_modal__info {
+    .code-wrapper {
+        padding-left: 0px;
+        span {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            background-color: #fff000;
+            text-align: center;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all .4s;
+            font-size: 16px;
+
+            &:hover {
+                background-color: #ffed7b;
+            }
+
+            &.count {
+                background-color: #ccc;
+
+                &:hover {
+                    background-color: #ccc;
+                }
+            }
+        }
+    }
+}
+
 .brand_index {
     height: 650px;
     overflow: hidden;
@@ -18,27 +47,63 @@
         background: rgba(3,26,115,0.7);
         padding: 60px 30px;
 
-        .form-control-wrapper {
-            position: relative;
-            margin-bottom: 0px;
-
+        .code-wrapper {
             input {
-                padding-left: 50px;
                 color: #fff;
             }
 
-            &:before {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 40px;
-                height: 40px;
-                content: '+86';
-                text-align: center;
-                line-height: 40px;
-                background-color: #fff;
-                color: #666;
+            .col-xs-4 {
+                padding-left: 0px;
+                span {
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;
+                    color: #fff;
+                    background-color: #1895e5;
+                    text-align: center;
+                    border-radius: 2px;
+                    cursor: pointer;
+                    transition: all .4s;
+
+                    &:hover {
+                        background-color: #3ca3e6;
+                    }
+
+                    &.count {
+                        background-color: #ccc;
+
+                        &:hover {
+                            background-color: #ccc;
+                        }
+                    }
+                }
             }
+        }
+
+        .form-control-wrapper {
+
+            &.phone {
+                position: relative;
+
+                input {
+                    padding-left: 50px;
+                    color: #fff;
+                }
+
+                &:before {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 40px;
+                    height: 40px;
+                    content: '+86';
+                    text-align: center;
+                    line-height: 40px;
+                    background-color: #fff;
+                    color: #666;
+                }
+            }
+            
         }
 
         /*placeholder字体大小*/  
