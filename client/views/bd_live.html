@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" class="bd_greenhand_html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%=lang.text("companyZhName")%>｜注册送200美金赠金</title>
+        <% include vendor.css.html %>
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
+        <!-- endbuild -->
+        <% include common/common_header.html %>
+        <% include vendor.js.html %>
+</head>
+
+<body ng-app="fullstackApp" class="bd_greenhand">
+    <div ng-controller="GlobalController">
+        <% include navbar/main.html %>
+        <div class="bd_live_layout has-navbar">
+            
+        </div>
+    </div>
+</body>
+<%- include('bd/common/footer.html') %>
+<!-- build:js(client) /scripts/bd_live.js -->
+<script src="/scripts/common/config.service.js"></script>
+<script src="/scripts/common/account.service.js"></script>
+<script src="/scripts/common/authorization.service.js"></script>
+<script src="/scripts/common/navbar.directive.js"></script>
+<script src="/scripts/common/dropdown.directive.js"></script>
+<script src="/scripts/common/global.controller.js"></script>
+<script src="/scripts/common/loading_img.directive.js"></script>
+<script src="/scripts/common/modal.js"></script>
+<script src="/scripts/common/pagination.directive.js"></script>
+<script src="/scripts/common/duration.filter.js"></script>
+<script src="/scripts/common/transition.service.js"></script>
+<script src="/scripts/common/symbol_mod.filter.js"></script>
+<script src="/scripts/common/trader.service.js"></script>
+<script src="/scripts/common/lang.service.js"></script>
+<script src="/scripts/common/lang_data.service.js"></script>
+<script src="/scripts/common/redbag.service.js"></script>
+<script src="/scripts/plugins/layer.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<!-- endbuild -->
+</html>
