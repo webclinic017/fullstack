@@ -35,9 +35,6 @@
             envConfig.access_origin = process.env.ACCESS_ORIGIN;
             envConfig.access_origin2 = process.env.ACCESS_ORIGIN2;
         }
-        envConfig.company_name = 'pandafx';
-        envConfig.url_path = 'https://pandafx.tigerwit.com';
-        envConfig.access_origin = '';
     }
 
     module.exports = {
