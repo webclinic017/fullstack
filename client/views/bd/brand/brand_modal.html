@@ -6,9 +6,22 @@
     </h5>
 
     <div class="system_modal__content" ng-show="!modal.isComplete">
-        <div class="system_modal__info">
+        <div class="system_modal__info brand_modal__info">
             <div class="form-control-wrapper">
                 <input class="form-control" type="phone" placeholder="请输入手机号码" ng-model="phone">
+            </div>
+            <div class="row">
+                <div class="col-xs-6">
+                    <input class="form-control" type="text" placeholder="验证码" ng-model="code">
+                </div>
+                <div class="col-xs-6 code-wrapper">
+                    <span ng-click="getMdlPhoneCode()" ng-if="!isCount">
+                        获取验证码
+                    </span>
+                    <span class="count" ng-if="isCount">
+                        {{ countNum }}
+                    </span>
+                </div>
             </div>
         </div>
         

@@ -17,10 +17,23 @@
         <div class="brand_index">
             <div class="container">
                 <div class="brand_form">
-                    <div class="form-control-wrapper">
+                    <div class="form-control-wrapper phone">
                         <input class="form-control" type="phone" placeholder="请输入手机号码" ng-model="phone">
                     </div>
-                    
+                    <div class="row code-wrapper">
+                        <div class="col-xs-8">
+                            <input class="form-control" type="text" placeholder="验证码" ng-model="code">
+                        </div>
+                        <div class="col-xs-4">
+                            <span ng-click="getPhoneCode()" ng-if="!isCount">
+                                获取验证码
+                            </span>
+                            <span class="count" ng-if="isCount">
+                                {{ countNum }}
+                            </span>
+                        </div>
+                    </div>
+
                     <div class="btn-wrapper">
                         <button class="btn" ng-click="submitForm()">申请代理</button>
                     </div>

@@ -167,7 +167,7 @@
         /**
          * @name getRCaptcha
          * @desc 获取验证码
-         * 验证码类型:type -> 1-注册,2-忘记密码,3-修改绑定
+         * 验证码类型:type -> 1-注册,2-忘记密码,3-修改绑定,4-登录,5-申请代理验证码
          * 验证码方式:mode -> 1-短信(默认),2-语音
          */
         function getRCaptcha(phone, token, type, mode) {
