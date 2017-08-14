@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" class="bd_greenhand_html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%=lang.text("companyZhName")%>｜注册送200美金赠金</title>
+        <% include vendor.css.html %>
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
+        <!-- endbuild -->
+        <% include common/common_header.html %>
+        <% include vendor.js.html %>
+</head>
+
+<body ng-app="fullstackApp" class="bd_greenhand">
+    <div ng-controller="GlobalController">
+        <% include navbar/main.html %>
+        <div class="bd_live_layout has-navbar clearfix">
+            <div class="bd_live_layout__content clearfix">
+                <div class="bd_live_layout__content-desp">
+                    <p class="desp_main_title">梳理金融事件</p>
+                    <p class="desp_sub_title">洞察实事动向，解读重点数据，理清时下全球局势</p>
+                    <p class="desp_main_title">点评当日机会</p>
+                    <p class="desp_sub_title">分析行情走势，梳理关键点位，明确品种操作机会</p>
+                    <p class="desp_main_title">分享实战策略</p>
+                    <p class="desp_sub_title">分享交易技巧，团队操作计划，教你掌握实战手法</p>
+                    <img src="/images/live/live_qr_code.png" alt="" class="desp_qr_code">
+                    <a href="http://t.cn/RiM1bjm" target="_blank" class="desp_redirect_url ">点击进入直播间</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<% include common/footer.html %>
+<!-- build:js(client) /scripts/bd_live.js -->
+<script src="/scripts/common/config.service.js"></script>
+<script src="/scripts/common/account.service.js"></script>
+<script src="/scripts/common/authorization.service.js"></script>
+<script src="/scripts/common/navbar.directive.js"></script>
+<script src="/scripts/common/dropdown.directive.js"></script>
+<script src="/scripts/common/global.controller.js"></script>
+<script src="/scripts/common/loading_img.directive.js"></script>
+<script src="/scripts/common/modal.js"></script>
+<script src="/scripts/common/pagination.directive.js"></script>
+<script src="/scripts/common/duration.filter.js"></script>
+<script src="/scripts/common/transition.service.js"></script>
+<script src="/scripts/common/symbol_mod.filter.js"></script>
+<script src="/scripts/common/trader.service.js"></script>
+<script src="/scripts/common/lang.service.js"></script>
+<script src="/scripts/common/lang_data.service.js"></script>
+<script src="/scripts/common/redbag.service.js"></script>
+<script src="/scripts/plugins/layer.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<!-- endbuild -->
+</html>
