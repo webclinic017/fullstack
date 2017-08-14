@@ -247,7 +247,7 @@ module.exports = function (app) {
     /*定期跟单*/
     app.route('/m/regular/how').get(function (req, res) {
         setEnvCf(req, res);
-        res.render("m_regular_how", extendPublic({}, req));
+        res.render("m_vue/regular/how", extendPublic({}, req));
     });
 
     /*出入金流程*/
@@ -276,20 +276,20 @@ module.exports = function (app) {
     /*邀请好友*/
     app.route('/m/invite01').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('m_invite01', extendPublic({
+        res.render('m_vue/invite/m_invite01', extendPublic({
             page: 'invite01'
         }, req));
     });
     app.route('/m/register_coupon').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('m_invite01', extendPublic({
+        res.render('m_vue/invite/m_invite01', extendPublic({
             page: 'register_coupon'
         }, req));
     });
 
     app.route('/m/invite02').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('m_invite02', extendPublic({}, req));
+        res.render('m_vue/invite/m_invite02', extendPublic({}, req));
     });
 
     /*H5 web 关于我们 英文页面*/
@@ -465,16 +465,6 @@ module.exports = function (app) {
         //     }
         // });
         next();
-    });
-
-    app.route('/activity').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('web-bonus1.html', extendPublic({}, req));
-    });
-
-    app.route('/activity/simulate426').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('simulate-426.html', extendPublic({}, req));
     });
 
     // 页面跳转中
