@@ -522,9 +522,9 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit') {
             if (isMobile(req)) {
-                res.render('bd_m_live', extendPublic({}, req));
+                res.render('bd/live/h5', extendPublic({}, req));
             } else {
-                res.render('bd_live', extendPublic({}, req));
+                res.render('bd/live/web', extendPublic({}, req));
             }
         }
     });

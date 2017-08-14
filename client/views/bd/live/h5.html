@@ -20,11 +20,10 @@
 <link rel="stylesheet" href="/styles/h5_common.css">
 <!-- endbuild -->
 <!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
-<% include common/m_css_vendor.html %>
-<% include common/common_header.html %>
+<% include /common/vendor/h5.utiljs.html %>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <body>
-<%- include('common/m_nav.html') %>
+<%- include('/common/component/h5.navbar.html') %>
 <div class="m_live_layout clearfix">
     <div class="m_live_layout__content clearfix">
         <p class="desp_main_title">梳理金融事件</p>
@@ -39,12 +38,12 @@
     </div>
 </div>
 </body>
-<% include m_js_vendor.html %>
+<% include /common/vendor/h5.js.html %>
 <!-- build:js(client) /scripts/m_live.js -->
 <script src="/scripts/bd/common/wx_share_config.js"></script>
 <script src="/scripts/bd/live/h5.js"></script>
 <!-- endbuild -->
 
 <!-- 推广脚本footer -->
-<%- include('bd/common/footer.html') %>
+<%- include('/common/statistic/_all.html') %>
 </html>
