@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <% include common/metas.html %>
+    <% include /common/meta/web.html %>
     <title><%=lang.text("title")%> 直通全球资本市场</title>
     <meta name="description" content="<%=lang.text("companyZhName")%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
-    <% include vendor.css.html %>
+    <% include /common/vendor/web.css.html %>
 
     <!-- build:css(.tmp) /styles/web.css -->
     <link rel="stylesheet" href="/styles/web.css">
     <!-- endbuild -->
 
-    <% include common/common_header.html %>
+    <% include /common/statistic/main.html %>
 </head>
 <body ng-app="fullstackApp" class="<%= lang_class%>">
 <div ng-controller="GlobalController">
     <div class="header">
-        <%- include('navbar/main.html',{
+        <%- include('/common/nav/web.header.html',{
         navClass : 'navbar-2'
         }) %>
     </div>
     <div class="body">
-        <% include home/index.html %>
+        <% include /web/home/index.html %>
     </div>
 
-    <% include vendor.js.html %>
+    <% include /common/vendor/web.js.html %>
 
     <!-- build:js(client) /scripts/home.js -->
     <script src="/scripts/plugins/sha1.js"></script>
@@ -50,7 +50,7 @@
     <!-- endbuild -->
 
     <div class="footer">
-        <% include common/footer.html %>
+        <% include /common/nav/web.footer.html %>
     </div>
 </div>
 </body>

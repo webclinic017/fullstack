@@ -1,0 +1,227 @@
+<%
+    var status = model.status;
+%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+    </head>
+    <!-- 引入H5 CSS -->
+    <!-- build:css(.tmp) /styles/h5_common.css -->
+    <link rel="stylesheet" href="/styles/h5_common.css">
+    <!-- endbuild -->
+    <% include /common/vendor/h5.utiljs.html %>
+    <% include /common/statistic/main.html %>
+    <body>
+         <div class="regular_detail" data-title="<%= model.name %>">
+            <div class="regular_detail_summary">
+                <div class="regular_detail_summary__info text-center">
+                    <p class="regular_detail_summary__info-tit">
+                        预期年化收益率
+                    </p>
+                    <p class="regular_detail_summary__info-profit">
+                        <%= model.expect_year_profit %>
+                    </p>
+                </div>
+                <ul class="regular_detail_summary__instr text-center clearfix">
+                    <li>
+                        <p class="regular_detail_summary__instr-num">
+                            <%= model.period %>
+                        </p>
+                        <p class="regular_detail_summary__instr-tit">封闭期</p>
+                        <p class="regular_detail_summary__instr-num">
+                            <%= model.withdraw_history %>
+                        </p>
+                        <p class="regular_detail_summary__instr-tit">历史最高回撤</p>
+                    </li>
+                    <li>
+                        <p class="regular_detail_summary__instr-num">
+                            <%= model.money_copy %>
+                        </p>
+                        <p class="regular_detail_summary__instr-tit">复制金额</p>
+                        <p class="regular_detail_summary__instr-num">
+                            <%= model.profit_rate_last %>
+                        </p>
+                        <p class="regular_detail_summary__instr-tit">上期收益率</p>
+                    </li>                                
+                </ul>
+            </div>
+            <div class="regular_detail_progress">
+                <div class="regular_detail__mar35">
+                    <div class="regular_detail_progress__info clearfix">
+                        <p class="regular_detail_progress__total">
+                            <span class="tip">总复制金额</span>
+                            <span class="num">
+                                <%= model.money_copy_max %>
+                            </span>  
+                        </p>
+                        <p class="regular_detail_progress__complete">
+                            已完成 <%= model.progress %>%
+                        </p>
+                    </div>
+                    <div class="regular_detail_progress__bar">
+                        <span class="bar" style="width: <%= model.progress %>%"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="regular_detail_content">
+                <dl class="regular_detail_content__dl regular_detail__mar35">
+                    <dt>复制封闭期</dt>
+                    <dd>
+                        <%= model.period %>（复制者在封闭期间不能操作账户，比如下单和平仓等，封闭期结束后拥有账户操作权）
+                    </dd>
+                    <dt>预约复制时间</dt>
+                    <dd>
+                        <%= model.detail_appoint_time %>
+                    </dd>
+                    <dt>账户交易时间</dt>
+                    <dd>
+                        <%= model.trade_time %>
+                    </dd> 
+                    <dt>风险控制机制</dt>
+                    <dd>
+                        <%= model.desc_risk %>
+                    </dd>
+                    <dt>高手报酬分成</dt>
+                    <dd>
+                        <%= model.desc_divide %>
+                    </dd> 
+                    <dt>报名限制</dt>
+                    <dd>
+                        <%= model.max_desc %>
+                    </dd> 
+                    <dt>备注</dt>
+                    <dd>
+                        <%= model.note %>
+                    </dd> 
+                </dl>
+            </div>
+            <div class="regular_detail_tab">
+                <div class="tab">
+                    <p class="tab__item">
+                        <a href="/m/regular/detail/team/<%= model.team%>">
+                            高手团队介绍
+                            <span><i class="fa fa-angle-right"></i></span>
+                        </a>
+                    </p>
+                    <p class="tab__item">
+                        <a href="/m/regular/detail/history/<%= model.team%>">
+                            历史交易图表
+                            <span><i class="fa fa-angle-right"></i></span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="regular_detail_comment regular_detail__mar35">
+                温馨提示：本产品上收益率仅为过往情况评估，仅供参考，不代表未来收益情况。定期跟单账户不参加赠金活动。
+            </div>
+            <div class="regular_detail_btn regular_detail__mar35">
+<%  
+    if(status == "before_appoint"){
+%>
+                    <button class="btn btn-primary btn-lg" disabled="disabled">
+                        即将开始
+                    </button>
+<%
+    }
+    if(status == "start_appoint"){
+%>     
+                    <button id="regular_detail_btn" class="btn btn-primary btn-lg">
+                        立即预约
+                    </button>
+<%
+    }
+    if(status == "end_appoint"){
+%>
+                    <button class="btn btn-primary btn-lg" disabled="disabled">
+                        预约结束
+                    </button>
+<%
+    }
+    if(status == "tradding"){
+%>
+                    <button class="btn btn-primary btn-lg" disabled="disabled">
+                        交易中
+                    </button>
+<%
+    }
+    if(status == "end_trade"){
+%>
+                    <button class="btn btn-primary btn-lg" disabled="disabled">
+                        交易已结束
+                    </button>
+<%
+      }
+%>
+            </div>
+        </div>
+        <div class="regular_modal__backdrop"></div>
+        <div class="regular_modal__wrapper">
+            <div class="regular_modal__content info active">
+                <!-- <div class="regular-close">
+                    <span>x</span>
+                </div> -->
+                <div class="title">
+                    <h4>预约资料：</h4>
+                    <span>客服咨询：400-809-8509</span>
+                </div>
+                <div class="content">
+                    <div class="regular_detail_form__wrapper">
+                        <input type="text"
+                               class="regular_detail_form__input username"
+                               placeholder="您的姓名">
+                    </div>
+                    <div class="regular_detail_form__wrapper">
+                        <input type="text"
+                               class="regular_detail_form__input phone"
+                               placeholder="您的联系电话">
+                    </div>
+                </div>
+                <p class="checkbox-wrapper">
+                    <input class="check_agreement" type="checkbox" checked />
+                    同意并遵守
+                    <a href="/m/regular/agree/<%= model.id %>" class="font-info">
+                        委托协议书
+                    </a>
+                </p>
+
+                <div class="modal_btn">
+                    <button class="btn btn-primary btn-lg">
+                        立即预约
+                    </button>
+                </div>
+            </div>
+            <div class="regular_modal__content success">
+                <div class="regular-close">
+                    <span>x</span>
+                </div>
+                <div class="content">
+                    <h4 class="title">预约成功</h4>
+                    <p class="info">
+                        账户将在交易期间不能操作账户，比如下单和平仓等，请保持您的联系电话正常通信，<%= lang.text('companyZhName')%>客服会尽快与您联系。
+                    </p>
+                </div>
+            </div>
+            <div class="regular_modal__content fail">
+                <div class="regular-close">
+                    <span>x</span>
+                </div>
+                <div class="content">
+                    <h4 class="title">预约失败</h4>
+                    <p class="info">
+                        请重新提交预约信息，或联系客服：400-809-8509
+                    </p>
+                </div>
+            </div>
+        </div>  
+    </body>
+
+    <% include /common/vendor/h5.js.html %>
+    <!-- build:js(client) /scripts/m_regular_detail.js -->
+        <script src="/scripts/regular/m_regular_detail.js"></script>
+    <!-- endbuild -->
+
+    <%- include('/common/statistic/all.html') %>
+</html>

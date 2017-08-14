@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <% include /common/meta/web.html %>
+    <% include /common/vendor/web.css.html %>
+
+    <!-- build:css(.tmp) /styles/help.css -->
+    <link rel="stylesheet" href="/styles/help.css">
+    <!-- endbuild -->
+
+    <% include /common/statistic/main.html %>
+</head>
+<body ng-app="fullstackApp" class="<%= lang_class%>">
+<div ng-controller="GlobalController">
+    <div ui-view></div>
+    <% include /common/vendor/web.js.html %>
+</div>
+<!-- build:js(client) /scripts/help.js -->
+<script src="/scripts/routes.js"></script>
+<script src="/scripts/common/config.service.js"></script>
+<script src="/scripts/common/account.service.js"></script>
+<script src="/scripts/common/authorization.service.js"></script>
+<script src="/scripts/common/validator.service.js"></script>
+<script src="/scripts/common/market.service.js"></script>
+<script src="/scripts/common/lang.service.js"></script>
+<script src="/scripts/common/lang_data.service.js"></script>
+<script src="/scripts/common/search_highlight.filter.js"></script>
+
+<script src="/scripts/common/global.controller.js"></script>
+<script src="/scripts/help/HelpController.js"></script>
+<script src="/scripts/common/redbag.service.js"></script>
+<!-- endbuild -->
+</body>
+</html>

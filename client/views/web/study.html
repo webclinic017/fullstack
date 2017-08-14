@@ -1,15 +1,37 @@
+<% if (pageInfo.id === 'skill') { %>
+    <% var title = '技术分析' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'video') { %>
+    <% var title = '学习视频' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'introduction') { %>
+    <% var title = '新手入门' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'term') { %>
+    <% var title = '外汇交易术语' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'fundamental') { %>
+    <% var title = '基本面分析' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } %>
 <!doctype html>
 <html>
     <head>
         <% include /common/meta/web.html %>
 
-        <title><%=lang.text("title")%> 直通全球资本市场</title>
-        <meta name="description" content="<%=lang.text("companyZhName")%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+        <title><%=lang.text("companyZhName")%>｜<%= title %></title>
+        <meta name="description" content="<%= description %>">
+        <meta name="keywords" content="<%= keywords %>">
 
         <% include /common/vendor/web.css.html %>
 
-        <!-- build:css(.tmp) /styles/404.css -->
-        <link rel="stylesheet" href="/styles/web.css">
+        <!-- build:css(.tmp) /styles/study.css -->
+        <link rel="stylesheet" href="/styles/study.css">
         <!-- endbuild -->
 
         <% include /common/statistic/main.html %>
@@ -22,20 +44,22 @@
 
             <div class="body">
                 <div class="layout-2">
-                    <div class="layout-2__404">
-                        <p>
-                            别着急，点击
-                            <a href="/">这里</a>
-                            就可以找到出路
-                        </p>
-                    </div>
+                    <%if(pageInfo.id != "help"){%>
+                        <div class="layout-2__side mg-tp-30">
+                            <%- include('study/sidebar.html') %>
+                        </div>
+                        <div class="layout-2__content mg-tp-30">
+                            <%- include('study/' + pageInfo.id + '.html') %>
+                        </div>
+                    <%} else {%>
+                        <div ui-view></div>
+                    <%}%>
                 </div>
             </div>
 
         <% include /common/vendor/web.js.html %>
 
-        <!-- build:js(client) /scripts/404.js -->
-
+        <!-- build:js(client) /scripts/study.js -->
         <script src="/scripts/common/config.service.js"></script>
         <script src="/scripts/common/account.service.js"></script>
         <script src="/scripts/common/authorization.service.js"></script>
@@ -56,6 +80,8 @@
 
         <script src="/scripts/common/global.controller.js"></script>
         <script src="/scripts/study/video.controller.js"></script>
+        <script src="/scripts/study/HelpController.js"></script>
+        <script src="/scripts/web/faq.controller.js"></script>
         <!-- endbuild -->
 
             <div class="footer">

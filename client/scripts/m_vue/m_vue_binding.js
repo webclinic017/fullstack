@@ -37,6 +37,7 @@ if ($(".m_vue").attr("data-page") === "binding") {
                     var action_address = window.location.origin + "/m/wap/binding_" + type + "/" + page;
                 }
                 console.info(action_address);
+                window.location.href = action_address;
                 callNative({
                     type: "openUrl",
                     url: action_address
