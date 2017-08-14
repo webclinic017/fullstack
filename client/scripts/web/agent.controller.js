@@ -45,7 +45,7 @@
 
         function openSystemMdl(type, message) {
             $modal.open({
-                templateUrl: '/views/web/agent_modal.html',
+                templateUrl: '/views/web/agent/modal.html',
                 size: 'sm',
                 backdrop: true,
                 controller: function ($scope, $modalInstance) {

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include /common/meta/web.html %>
+    <title>MT4 下载｜<%=lang.text("title")%> 直通全球资本市场</title>
+    <meta name="description" content="<%=lang.text("companyZhName")%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <!-- build:css(.tmp) /styles/web.css -->
+    <link rel="stylesheet" href="/styles/web.css">
+    <!-- endbuild -->
+
+    <% include /common/statistic/main.html %>
+</head>
+<body ng-app="fullstackApp" class="<%= lang_class%>">
+    <div ng-controller="GlobalController">
+        <div class="header">
+            <% include /common/nav/web.header.html %>
+        </div>
+        <div class="body mg-tp-84" style="background-color: #fafafa;">
+            <div class="container">
+                <div class="mt4">
+                    <p class="mt4__title mg-tp-100"><%= lang.text("mt4-1")%></p>
+                    <p class="font-info text-center font-size-18 mg-tp-20"><%= lang.text("mt4-2")%></p>
+                    <p class="mt4__con1 mg-tp-30">
+                        <%= lang.text("mt4-3")%>
+                    </p>
+                    <div class="row text-center mg-tp-100">
+                        <div class="col-xs-4">
+                            <img src="/images/web/mt4-ios.png">
+                            <a class="mt4__info" href="https://itunes.apple.com/cn/app/metatrader-4/id496212596?l=en&mt=8" target="_blank">
+                                <img src="/images/web/mt4-ios-s.png">
+                                <span><%= lang.text("mt4-4")%></span>
+                                <span class="qr_code"><img src="/images/web/ios.png"></span>
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <img src="/images/web/mt4-and.png">
+                            <a class="mt4__info" href="http://zhushou.360.cn/detail/index/soft_id/260622?recrefer=SE_D_meta" target="_blank">
+                                <img src="/images/web/mt4-and-s.png">
+                                <span><%= lang.text("mt4-5")%></span>
+                                <span class="qr_code"><img src="/images/web/android.png"></span>
+                            </a>
+                        </div>
+                        <div class="col-xs-4">
+                            <img class="mt4__img-com" src="/images/web/mt4-com.png">
+                            <a class="mt4__info" href="<%= lang.text('webMt4Download')%>" target="_blank">
+                                <img src="/images/web/mt4-com-s.png">
+                                 <span><%= lang.text("mt4-6")%></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <% include /common/vendor/web.js.html %>
+
+    <!-- build:js(client) /scripts/web.js -->
+    <script src="/scripts/common/config.service.js"></script>        
+    <script src="/scripts/common/account.service.js"></script>
+    <script src="/scripts/common/authorization.service.js"></script>
+    <script src="/scripts/common/ranklist.service.js"></script>
+    <script src="/scripts/common/product.service.js"></script>
+    <script src="/scripts/common/lang.service.js"></script>
+    <script src="/scripts/common/lang_data.service.js"></script>
+    <script src="/scripts/common/redbag.service.js"></script>
+
+    <script src="/scripts/common/global.controller.js"></script>
+        
+    <script src="/scripts/common/navbar.directive.js"></script>
+    <script src="/scripts/common/dropdown.directive.js"></script>
+    <!-- endbuild -->
+
+        <div class="footer">
+            <% include /common/nav/web.footer.html %>
+        </div>
+    </div>
+</body>
+</html>

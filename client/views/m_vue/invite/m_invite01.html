@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/m_css_vendor.html %>
+<% include /common/vendor/h5.utiljs.html %>
+
+<% include /common/statistic/main.html %>
+<body>
+<div class="m_share01_layout">
+    <div class="m_share01_main <%=page%>">
+        <div class="m_share01_main__title">
+            <%if(page == 'register_coupon'){%>
+                <h4>注册开户送红包</h4>
+                <h4><span>$1000</span>等你领</h4>
+                <p>红包领取规则请见官网</p>
+            <%} else {%>
+                <h4>你投资,我出钱!</h4>
+                <h4>注册就送<span>200美金</span></h4>
+                <p>在<%=lang.text("companyZhName")%>, 已经有86253 人选择外汇跟单交易</p>
+            <%}%>
+        </div>
+        <%if(page == 'invite01'){%>
+            <div class="m_share01_main__bag_text">
+                <p>我刚刚在<%=lang.text("companyZhName")%>领取了200美金,好东西<br>必须分享,你也快来看看</p>
+            </div>
+        <%}%>
+        <div class="m_share01_main__form">
+            <form id="form">
+                <input type="tel" placeholder="输入手机号" id="share_tel">
+            </form>
+            <span id="get_award">领取奖励</span>
+        </div>
+    </div>
+</div>
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_invite.js -->
+<script src="/scripts/invite/m_invite.js"></script>
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

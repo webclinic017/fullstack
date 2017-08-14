@@ -1,27 +1,27 @@
 <!doctype html>
 <html>
     <head>
-        <% include common/metas.html %>
+        <% include /common/meta/web.html %>
         <title><%=lang.text("companyZhName")%>｜个人中心</title>
 
-        <% include vendor.css.html %>
+        <% include /common/vendor/web.css.html %>
 
         <!-- build:css(.tmp) /styles/space.css -->
         <link rel="stylesheet" href="/styles/space.css">
         <!-- endbuild -->
 
-        <% include common/common_header.html %>
+        <% include /common/statistic/main.html %>
     </head>
     <body ng-app="fullstackApp" class="<%= lang_class%>">
         <div ng-controller="GlobalController">
             <div class="header">
-                <% include navbar/main.html %>
+                <% include /common/nav/web.header.html %>
             </div>
             <div class="body">
                 <div ui-view></div>
             </div>
 
-        <% include vendor.js.html %>
+        <% include /common/vendor/web.js.html %>
 
         <!-- build:js(client) /scripts/space.js -->
         <script src="/scripts/routes.js"></script>
@@ -118,7 +118,7 @@
         <!-- endbuild -->
 
             <div class="footer">
-                <% include common/footer.html %>
+                <% include /common/nav/web.footer.html %>
             </div>
         </div>
     </body>

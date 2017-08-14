@@ -1,0 +1,85 @@
+<% if (pageInfo.id === 'simulate') { %>
+    <% var title = '开立模拟帐户' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'real') { %>
+    <% var title = '开立帐户' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'wad') { %>
+    <% var title = '出入金' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'type') { %>
+    <% var title = '帐户类型' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'deal') {%>
+    <% var title = '交易' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'platform') {%>
+    <% var title = '平台' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } else if (pageInfo.id === 'interest') {%>
+    <% var title = '隔夜利息' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<% } %>
+<!doctype html>
+<html>
+    <head>
+        <% include /common/meta/web.html %>
+
+        <title><%=lang.text("companyZhName")%>｜<%= title %></title>
+        <meta name="description" content="<%= description %>">
+        <meta name="keywords" content="<%= keywords %>">
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
+        <!-- endbuild -->
+
+        <% include /common/statistic/main.html %>
+
+    </head>
+    <body ng-app="fullstackApp" class="<%= lang_class%>">
+        <div ng-controller="GlobalController">
+            <div class="header">
+                <% include /common/nav/web.header.html %>
+            </div>
+            
+            <div class="body" style="background-color: #fafafa">
+                <div class="layout-2" style="margin-bottom: 200px;">
+                    <div class="layout-2__side mg-tp-30">
+                        <%- include('./faq/sidebar.html') %>
+                    </div>
+                    <div class="layout-2__content mg-tp-30">
+                        <%- include('./faq/' + pageInfo.id + '.html') %>
+                    </div>
+                </div>
+            </div>
+       <% include /common/vendor/web.js.html %>
+
+        <!-- build:js(client) /scripts/web_faq.js -->
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/authorization.service.js"></script>
+        <script src="/scripts/common/lang.service.js"></script>
+        <script src="/scripts/common/lang_data.service.js"></script>
+        <script src="/scripts/common/redbag.service.js"></script>
+        
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/dropdown-faq.directive.js"></script>
+        
+        <script src="/scripts/common/global.controller.js"></script>
+        <script src="/scripts/web/faq.controller.js"></script>
+
+        <!-- endbuild -->
+
+            <div class="footer">
+                <% include /common/nav/web.footer.html %>
+            </div>
+        </div>
+    </body>
+</html>

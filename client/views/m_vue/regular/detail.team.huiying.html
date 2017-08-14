@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+
+        <% include /common/statistic/main.html %>
+    </head>
+    <!-- 引入H5 CSS -->
+    <!-- build:css(.tmp) /styles/h5_common.css -->
+    <link rel="stylesheet" href="/styles/h5_common.css">
+    <!-- endbuild -->
+    <% include /common/vendor/h5.utiljs.html %>
+    <body>
+        <div class="regular_detail_team regular_detail__mar35">
+            <div class="regular_detail_team__title">
+                汇赢成立8年，目前交易团队共有20人，核心人员介绍：
+            </div>
+            <dl class="regular_detail_team__content">
+                <dt>
+                    <span></span>
+                    基金经理： 赵海峰
+                </dt>
+                <dd>
+                    拥有20年金融衍生品投资经验，独创多套对冲基金风控模型，汇赢全球创始人。
+                </dd>
+                <dt>
+                    <span></span>
+                    首席交易员: Jarratt Davis
+                </dt>
+                <dd>
+                    11年外汇交易经验，曾作为首席交易员任职香港避险基金公司，SMILe等，主要利用算法以及模型为客户带来良好的收益。
+                </dd>
+                <dt>
+                    <span></span>
+                    首席分析师和分析师团队： Clive Lambert 
+                </dt>
+                <dd>
+                    从事金融分析和交易25年，其中20年伦敦期货行业经纪人和交易员经验，Society’s 主讲人，与7City Learning和CME长期保持合作，发表的文章经常被新闻以及CNBC引用，FuturesTechs创始人，FuturesTech的团队也作为汇赢全球的分析师团队，为交易员提供最实时的市场信息。
+                </dd>
+            </dl>
+        </div>
+    </body>
+
+
+    <% include /common/vendor/h5.js.html %>
+    <!-- build:js(client) /scripts/m_regular_detail.js -->
+        <script src="/scripts/regular/m_regular_detail.js"></script>
+    <!-- endbuild -->
+
+    <%- include('/common/statistic/all.html') %>
+</html>

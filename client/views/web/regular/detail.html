@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+    <head>
+        <% include /common/meta/web.html %>
+        <title><%=lang.text("companyZhName")%>｜定期跟单</title>
+        <meta name="description" content="<%=lang.text("companyZhName")%>高手排行榜，您可以根据自身需要按照复制人数、复制资金、最大回撤和总收益进行排序，让你轻松筛选高手。">
+
+        <!-- build:css(.tmp) /styles/regular.css -->
+        <link rel="stylesheet" href="/styles/regular.css">
+        <!-- endbuild -->
+
+        <% include /common/statistic/main.html %>
+    </head>
+    <body ng-app="fullstackApp" class="<%= lang_class%>">
+        <div ng-controller="GlobalController">
+            <div class="header">
+                <% include /common/nav/web.header.html %>
+            </div>
+            <div class="body">
+                <div ui-view>
+                    <% include ./detail_main.html %>
+                </div>
+            </div>
+
+        <% include /common/vendor/web.js.html %>
+
+        <!-- build:js(client) /scripts/regular.js -->
+
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/authorization.service.js"></script>
+        <script src="/scripts/common/ranklist.service.js"></script>
+        <script src="/scripts/common/lang.service.js"></script>
+        <script src="/scripts/common/lang_data.service.js"></script>
+        <script src="/scripts/common/redbag.service.js"></script>
+
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/line_chart.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/loading_img.directive.js"></script>
+        <script src="/scripts/common/progress.directive.js"></script>
+        <script src="/scripts/common/tabs.directive.js"></script>
+
+        <script src="/scripts/common/global.controller.js"></script>
+        <script src="/scripts/regular/regular.controller.js"></script>
+
+        <!-- endbuild -->
+
+            <div class="footer">
+                <% include /common/nav/web.footer.html %>
+            </div>
+        </div>
+    </body>
+</html>
