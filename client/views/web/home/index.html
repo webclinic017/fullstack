@@ -81,69 +81,71 @@
             </div>
         </div>
     </section>
-    <section class="index2-product clearfix" tw-clone-site>
-        <div class="container">
-            <h2 class="index2-product__title"><%= lang.text("home19")%></h2>
-            <p class="index2-product__tip"><%= lang.text("home20")%></p>
-            <div class="row">
-                <div class="col-xs-3">
-                    <div class="index2-product__up">
-                        <a class="index2-product__up-circle" href="/web/product/forex" target="_blank">
-                            <span class="index2-product__up-icon1"></span>
-                        </a>
-                        <p class="index2-product__up-name"><%= lang.text("waihui")%></p>
+    <%if(!lang.isCloned()){%>
+         <section class="index2-product clearfix">
+            <div class="container">
+                <h2 class="index2-product__title"><%= lang.text("home19")%></h2>
+                <p class="index2-product__tip"><%= lang.text("home20")%></p>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <div class="index2-product__up">
+                            <a class="index2-product__up-circle" href="/web/product/forex" target="_blank">
+                                <span class="index2-product__up-icon1"></span>
+                            </a>
+                            <p class="index2-product__up-name"><%= lang.text("waihui")%></p>
+                        </div>
+                        <div class="index2-product__down pd-lf-50">
+                            <p><%= lang.text("home21")%></p>
+                            <p><%= lang.text("home22")%></p>
+                            <p><%= lang.text("home23")%></p>
+                        </div>
                     </div>
-                    <div class="index2-product__down pd-lf-50">
-                        <p><%= lang.text("home21")%></p>
-                        <p><%= lang.text("home22")%></p>
-                        <p><%= lang.text("home23")%></p>
+                    <div class="col-xs-3">
+                        <div class="index2-product__up">
+                            <a class="index2-product__up-circle" href="/web/product/metal" target="_blank">
+                                <span class="index2-product__up-icon2"></span>
+                            </a>
+                            <p class="index2-product__up-name"><%= lang.text("guijinshu")%></p>
+                        </div>
+                        <div class="index2-product__down pd-lf-50">
+                            <p><%= lang.text("home24")%></p>
+                            <p><%= lang.text("home25")%></p>
+                            <p><%= lang.text("home26")%></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="index2-product__up">
+                            <a class="index2-product__up-circle" href="/web/product/oil" target="_blank">
+                                <span class="index2-product__up-icon3"></span>
+                            </a>
+                            <p class="index2-product__up-name"><%= lang.text("yuanyou")%></p>
+                        </div>
+                        <div class="index2-product__down pd-lf-40">
+                            <p><%= lang.text("home27")%></p>
+                            <p><%= lang.text("home28")%></p>
+                            <p><%= lang.text("home29")%></p>
+                        </div>
+                    </div>
+                    <div class="col-xs-3">
+                        <div class="index2-product__up">
+                            <a class="index2-product__up-circle" href="/web/product/cfd" target="_blank">
+                                <span class="index2-product__up-icon4"></span>
+                            </a>
+                            <p class="index2-product__up-name"><%= lang.text("home61")%></p>
+                        </div>
+                        <div class="index2-product__down pd-lf-50">
+                            <p><%= lang.text("home30")%></p>
+                            <p><%= lang.text("home31")%></p>
+                            <p><%= lang.text("home32")%></p>
+                        </div>
                     </div>
                 </div>
-                <div class="col-xs-3">
-                    <div class="index2-product__up">
-                        <a class="index2-product__up-circle" href="/web/product/metal" target="_blank">
-                            <span class="index2-product__up-icon2"></span>
-                        </a>
-                        <p class="index2-product__up-name"><%= lang.text("guijinshu")%></p>
-                    </div>
-                    <div class="index2-product__down pd-lf-50">
-                        <p><%= lang.text("home24")%></p>
-                        <p><%= lang.text("home25")%></p>
-                        <p><%= lang.text("home26")%></p>
-                    </div>
-                </div>
-                <div class="col-xs-3">
-                    <div class="index2-product__up">
-                        <a class="index2-product__up-circle" href="/web/product/oil" target="_blank">
-                            <span class="index2-product__up-icon3"></span>
-                        </a>
-                        <p class="index2-product__up-name"><%= lang.text("yuanyou")%></p>
-                    </div>
-                    <div class="index2-product__down pd-lf-40">
-                        <p><%= lang.text("home27")%></p>
-                        <p><%= lang.text("home28")%></p>
-                        <p><%= lang.text("home29")%></p>
-                    </div>
-                </div>
-                <div class="col-xs-3">
-                    <div class="index2-product__up">
-                        <a class="index2-product__up-circle" href="/web/product/cfd" target="_blank">
-                            <span class="index2-product__up-icon4"></span>
-                        </a>
-                        <p class="index2-product__up-name"><%= lang.text("home61")%></p>
-                    </div>
-                    <div class="index2-product__down pd-lf-50">
-                        <p><%= lang.text("home30")%></p>
-                        <p><%= lang.text("home31")%></p>
-                        <p><%= lang.text("home32")%></p>
-                    </div>
+                <div class="index2-product__btn-con">
+                    <a class="index2-product__btn" href="space/#/account/register"><%= lang.text("lijizhuce")%></a>
                 </div>
             </div>
-            <div class="index2-product__btn-con">
-                <a class="index2-product__btn" href="space/#/account/register"><%= lang.text("lijizhuce")%></a>
-            </div>
-        </div>
-    </section>
+        </section>
+    <%}%>
 
     <section class="index2-trade">
         <div class="container">

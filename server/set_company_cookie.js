@@ -7,6 +7,7 @@
         var access_origin = envConfig.access_origin || '';
         var access_origin2 = envConfig.access_origin2 || '';
         var cdn_url = envConfig.cdn_url || '';
+        var is_cloned = envConfig.isCloned || '';
         // console.log("cookies->"+company_name);
         // console.info(res);
         res.setHeader('Set-Cookie',
@@ -15,6 +16,7 @@
                 'access_origin=' + access_origin + '; path=/',
                 'access_origin2=' + access_origin2 + '; path=/',
                 'cdn_url=' + cdn_url + '; path=/',
+                'is_cloned=' + is_cloned + '; path=/',
             ]);
     };
 })();
