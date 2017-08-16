@@ -5,22 +5,22 @@
     <meta charset="UTF-8">
     <title>
         <%=lang.text("companyZhName")%>｜注册送200美金赠金</title>
-        <% include vendor.css.html %>
+        <% include /common/vendor/web.css.html %>
         <!-- build:css(.tmp) /styles/web.css -->
         <link rel="stylesheet" href="/styles/web.css">
         <!-- endbuild -->
-        <% include common/common_header.html %>
-        <% include vendor.js.html %>
+        <% include /common/statistic/main.html %>
+        <% include /common/vendor/web.js.html %>
 </head>
 
 <body ng-app="fullstackApp" class="bd_greenhand">
     <div ng-controller="GlobalController">
-        <% include navbar/main.html %>
+        <% include /common/nav/web.header.html %>
         <div class="bd_live_layout has-navbar clearfix">
             <div class="bd_live_layout__content clearfix">
                 <div class="bd_live_layout__content-desp">
                     <p class="desp_main_title">梳理金融事件</p>
-                    <p class="desp_sub_title">洞察实事动向，解读重点数据，理清时下全球局势</p>
+                    <p class="desp_sub_title">洞察时事动向，解读重点数据，理清时下全球局势</p>
                     <p class="desp_main_title">点评当日机会</p>
                     <p class="desp_sub_title">分析行情走势，梳理关键点位，明确品种操作机会</p>
                     <p class="desp_main_title">分享实战策略</p>
@@ -31,8 +31,9 @@
             </div>
         </div>
     </div>
+    <% include /common/nav/web.footer.html %>
+    <%- include('/common/statistic/_all.html') %>
 </body>
-<% include common/footer.html %>
 <!-- build:js(client) /scripts/bd_live.js -->
 <script src="/scripts/common/config.service.js"></script>
 <script src="/scripts/common/account.service.js"></script>
