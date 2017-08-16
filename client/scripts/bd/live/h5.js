@@ -25,6 +25,7 @@
             } else {
                 window.location.href = liveLocation;
             }
+            return false;
         });
     })
 }())
