@@ -14,9 +14,10 @@
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
-                var hideHost = 'tigerwit.co.uk',
+                var hideHost = 'www.tigerwit.co.uk',
                     showHost = 'www.tigerwit.com__demo.tigerwit.com__w.tigerwit.com__w.dev.tigerwit.com',
                     currentHost = window.location.hostname;
+                    // console.log('=-----hostname----=', currentHost);
                 if (hideHost.indexOf(currentHost) != -1) {
                     element.hide();
                 }
