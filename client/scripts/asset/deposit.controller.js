@@ -90,42 +90,56 @@
                 showErr('amount');
                 return;
             }
-
             amount = Number(amount).toFixed(2);
-            
-            if ($scope.deposit.type === 'invest') {
-                if ($scope.personal.profile_check != 3) {
-                    openSystemMdl('deposit');
-                    return;
-                }
-                var w = $window.open('/waiting');
 
-                asset.deposit(amount).then(function(data) {
-                    if (!data) return;
-                    if (data.is_succ) {
-                        var token = $cookies["token"] || '';
-                        var url = data.data.url + '?token='+token;
-                        openDepositMdl('depositFinish');
-                        w.location = url;
-                    } else {
-                        layer.msg(data.message);
-                        w.close();
-                    }
+            if ($scope.personal.is_true == 2) {
+                layer.confirm('充值成功后，您的账户将由体验金账户升级为交易账户，体验金账户将失效', {
+                    btn: ['取消', '继续'], //按钮
+                    title: '提示'
+                }, function () {
+                    layer.closeAll();
+                }, function () {
+                    confirmDeposit();
                 });
             } else {
-                if ($scope.isDeposit) return;
-                $scope.isDeposit = true;
-
-                asset.walletDeposit(amount).then(function (data) {
-                    // console.log(data);
-                    $scope.isDeposit = false;
-                    if (!data) return;
-                    if (data.is_succ) {
-                        $scope.walletDepositSucc = true;
-                    } else {
-                        layer.msg(data.message);
+                confirmDeposit();
+            }  
+            
+            function confirmDeposit() {
+                if ($scope.deposit.type === 'invest') {
+                    if ($scope.personal.profile_check != 3) {
+                        openSystemMdl('deposit');
+                        return;
                     }
-                });
+                    var w = $window.open('/waiting');
+
+                    asset.deposit(amount).then(function(data) {
+                        if (!data) return;
+                        if (data.is_succ) {
+                            var token = $cookies["token"] || '';
+                            var url = data.data.url + '?token='+token;
+                            openDepositMdl('depositFinish');
+                            w.location = url;
+                        } else {
+                            layer.msg(data.message);
+                            w.close();
+                        }
+                    });
+                } else {
+                    if ($scope.isDeposit) return;
+                    $scope.isDeposit = true;
+
+                    asset.walletDeposit(amount).then(function (data) {
+                        // console.log(data);
+                        $scope.isDeposit = false;
+                        if (!data) return;
+                        if (data.is_succ) {
+                            $scope.walletDepositSucc = true;
+                        } else {
+                            layer.msg(data.message);
+                        }
+                    });
+                }
             }
         }
 
