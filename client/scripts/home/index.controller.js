@@ -35,7 +35,7 @@
                         title: '',
                         shade: 0.6,
                         area: ['960px', '560px'], //宽高
-                        content: '<div class="content"><a href="'+data.target_url+'"><img src="'+data.image_url+'"></a><div class="close" onclick="layer.closeAll();"></div></div>'
+                        content: '<div class="content"><a href="' + data.target_url + '"><img src="' + data.image_url + '"></a><div class="close" onclick="layer.closeAll();"></div></div>'
                     });
                 }
             });
@@ -61,10 +61,10 @@
             var overdueDate = new Date();
             oDate.setTime(oDate.getTime() + (7 * 24 * 60 * 60 * 1000));
             overdueDate.setTime(oDate.getTime() - (7 * 24 * 60 * 60 * 1000));
-            var expTime = ';expires='+oDate.toUTCString();
-            var overdueExpTime = ';expires='+overdueDate.toUTCString();
-            
-            document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl+expTime;
+            var expTime = ';expires=' + oDate.toUTCString();
+            var overdueExpTime = ';expires=' + overdueDate.toUTCString();
+
+            document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl + expTime;
 
             if (href.indexOf('?') != -1) {
                 var aQuery = href.split('?')[1];
@@ -81,17 +81,17 @@
 
                 if (pid != '') {
                     // 清空重写
-                    document.cookie = 'pid=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
-                    document.cookie = 'unit=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
-                    document.cookie = 'key=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
-                    
-                    document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl+expTime;
+                    document.cookie = 'pid=' + null + ';path=/;domain=' + domainUrl + overdueExpTime;
+                    document.cookie = 'unit=' + null + ';path=/;domain=' + domainUrl + overdueExpTime;
+                    document.cookie = 'key=' + null + ';path=/;domain=' + domainUrl + overdueExpTime;
+
+                    document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl + expTime;
 
                     if (unit) {
-                        document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl+expTime;
+                        document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl + expTime;
                     }
                     if (key) {
-                        document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl+expTime;
+                        document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl + expTime;
                     }
                 }
             }
@@ -101,7 +101,7 @@
         $scope.getBannerSucc = false;
 
         getAdvertiseRecords();
-        function getAdvertiseRecords () {
+        function getAdvertiseRecords() {
             account.getAdvertiseRecords('wheel').then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
@@ -120,32 +120,58 @@
         $scope.quoteSymbols = [];
         $scope.spreadInfo = {};     // 点差
         $scope.userGroup = undefined;   // 用户所在组
+        var requestSymbols = [];
+        var forNormalSymbolZh = {
+            AUDUSD: '澳元美元',
+            XNGUSD: '天燃气',
+            EURUSD: '欧元美元',
+            XTIUSD: '西德州原油',
+            GBPUSD: '英镑美元',
+            XBRUSD: '布伦特原油',
+            NZDUSD: '纽元美元',
+            XAUUSD: '黄金',
+            USDCAD: '美元加元',
+            XAGUSD: '白银',
+            USDCHF: '美元瑞郎',
+            US30: '道琼斯指数',
+            USDJPY: '美元日元',
+            JPN225: '日经指数',
+        }
+        var forCloneSymbolZh = {
+            AUDUSD: '澳元美元',
+            XNGUSD: '天燃气',
+            EURUSD: '欧元美元',
+            // XTIUSD: '西德州原油',
+            AUDCAD: '澳元加元',
+            GBPUSD: '英镑美元',
+            // XBRUSD: '布伦特原油',
+            EURCHF: '欧元瑞郎',
+            NZDUSD: '纽元美元',
+            // XAUUSD: '黄金',
+            EURCAD: '欧元加元',
+            USDCAD: '美元加元',
+            // XAGUSD: '白银',
+            GBPJPY: '英镑日元',
+            USDCHF: '美元瑞郎',
+            US30: '道琼斯指数',
+            USDJPY: '美元日元',
+            JPN225: '日经指数',
+        }
+        var switcher = window.location.hostname.indexOf('tigerwit.co.uk') != -1;
+        angular.forEach(switcher ? forCloneSymbolZh : forNormalSymbolZh, function (value, key) {
+            requestSymbols.push(key);
+        });
         var socketPara = {
-            websocketTigerUrl: location.hostname === 'www.tigerwit.com' ? 'wss://demo.tigerwit.com:4567' : 'wss://demo.tigerwit.com:4567',
-            request_symbols: ['AUDUSD', 'XNGUSD', 'EURUSD', 'XTIUSD', 'GBPUSD', 'XBRUSD', 'NZDUSD', 'XAUUSD', 'USDCAD', 'XAGUSD', 'USDCHF', 'US30', 'USDJPY', 'JPN225'],
-            request_symbols_zh: {
-                AUDUSD: '澳元美元',
-                XNGUSD: '天燃气',
-                EURUSD: '欧元美元',
-                XTIUSD: '西德州原油',
-                GBPUSD: '英镑美元',
-                XBRUSD: '布伦特原油',
-                NZDUSD: '纽元美元',
-                XAUUSD: '黄金',
-                USDCAD: '美元加元',
-                XAGUSD: '白银',
-                USDCHF: '美元瑞郎',
-                US30: '道琼斯指数',
-                USDJPY: '美元日元',
-                JPN225: '日经指数',
-            },
+            websocketTigerUrl: location.hostname === 'www.tigerwit.com' ? 'https://quotephp.tigerwit.com:4567' : 'wss://demo.tigerwit.com:4567',
+            request_symbols: requestSymbols,
+            request_symbols_zh: switcher ? forCloneSymbolZh : forNormalSymbolZh,
             user_name: "tiger",
             key: "WjIABSkfG96GL0z2",
             logined: false
         };
         var ws;
         initDefalutSymbol();
-        function initDefalutSymbol () {
+        function initDefalutSymbol() {
             var symbol = {};
             angular.forEach(socketPara.request_symbols, function (value, index) {
                 symbol = {
@@ -161,7 +187,7 @@
             getSpreadInfo();
         }
 
-        function getSpreadInfo () {
+        function getSpreadInfo() {
             account.getSpreadInfo().then(function (data) {
                 // console.log(data);
                 $scope.spreadInfo = data.data;
@@ -169,7 +195,7 @@
             });
         }
 
-        function getUserGroup () {
+        function getUserGroup() {
             account.checkLogined().then(function (logined) {
                 if (logined) {
                     account.getUserGroup().then(function (data) {
@@ -187,22 +213,22 @@
             });
         }
 
-        function connectSocket () {
+        function connectSocket() {
             if ("WebSocket" in window) {
                 ws = new WebSocket(socketPara.websocketTigerUrl);
-                ws.onopen = function() {
+                ws.onopen = function () {
                     ws_open();
                 };
-                ws.onmessage = function(res) {
+                ws.onmessage = function (res) {
                     ws_message(res);
                 };
-                ws.onclose = function(e) {
+                ws.onclose = function (e) {
                     // websocket is closed.
                     console.log("Connection is closed...");
                     //console.log(e);
                     connectSocket();
                 };
-                ws.onerror = function(e){
+                ws.onerror = function (e) {
                     // websocket is error.
                     console.log("Connection is error...");
                 };
@@ -212,20 +238,20 @@
             }
         }
 
-        function ws_open () {
+        function ws_open() {
             var now_date = formatDate(new Date());
             var guid = new_guid();
             var shaObj = new jsSHA("SHA-1", "TEXT");
             shaObj.setHMACKey(socketPara.key, "TEXT");
             shaObj.update(now_date + socketPara.user_name + guid);
             var hmac = shaObj.getHMAC("HEX");
-            var login_content = {"user_name": socketPara.user_name, "login_time": now_date, "guid": guid, "sign": hmac};
-            var login_data = {"type": "login", "content": login_content};
+            var login_content = { "user_name": socketPara.user_name, "login_time": now_date, "guid": guid, "sign": hmac };
+            var login_data = { "type": "login", "content": login_content };
             var msg = JSON.stringify(login_data);
             ws.send(msg);
         }
 
-        function ws_message (res) {
+        function ws_message(res) {
             var data = JSON.parse(res.data);
             // console.log(data);
             if (!socketPara.logined) {
@@ -249,20 +275,20 @@
                                 value.timestamp = quote[4];
 
                                 // 处理点差
-                                commonSpread = $scope.spreadInfo.spread_common[$scope.spreadInfo.security[value.symbol]]/2;
+                                commonSpread = $scope.spreadInfo.spread_common[$scope.spreadInfo.security[value.symbol]] / 2;
                                 if ($scope.userGroup) {
                                     var s = $scope.spreadInfo.spread_special_offset[$scope.userGroup[$scope.spreadInfo.security[value.symbol]]];
-                                    groupSpread = s ? s/2 : 0;
+                                    groupSpread = s ? s / 2 : 0;
                                 }
                                 var fix = '1';
                                 spreadLength = quote[3].split('.')[1].length;
-                                for (var i=0; i<spreadLength; i++) {
-                                    fix = fix+'0';
+                                for (var i = 0; i < spreadLength; i++) {
+                                    fix = fix + '0';
                                 }
-                                commonSpread = commonSpread/fix;
-                                groupSpread = groupSpread/fix;
-                                buy = (Number(quote[3])+commonSpread+groupSpread).toFixed(spreadLength);
-                                sell = (Number(quote[2])-commonSpread-groupSpread).toFixed(spreadLength);
+                                commonSpread = commonSpread / fix;
+                                groupSpread = groupSpread / fix;
+                                buy = (Number(quote[3]) + commonSpread + groupSpread).toFixed(spreadLength);
+                                sell = (Number(quote[2]) - commonSpread - groupSpread).toFixed(spreadLength);
 
                                 value.sell = sell;
                                 value.buy = buy;
@@ -275,10 +301,10 @@
             }
         }
 
-        function ws_send_msg () {
+        function ws_send_msg() {
             var init_symbols = {
                 "type": "quote",
-                "content":{
+                "content": {
                     "symbols": socketPara.request_symbols
                 }
             };
@@ -286,23 +312,23 @@
             console.log("请求报价品种:" + JSON.stringify(init_symbols));
         }
 
-        function formatDate (date) {
-            var d = date.getFullYear()+'-'+todou((date.getMonth()+1))+'-'+todou(date.getDate());
-            var t = todou(date.getHours())+':'+todou(date.getMinutes())+':'+todou(date.getSeconds());
-            return d+' '+t;
+        function formatDate(date) {
+            var d = date.getFullYear() + '-' + todou((date.getMonth() + 1)) + '-' + todou(date.getDate());
+            var t = todou(date.getHours()) + ':' + todou(date.getMinutes()) + ':' + todou(date.getSeconds());
+            return d + ' ' + t;
         }
 
-        function todou (n) {
-            return n >= 10 ? ''+n : '0'+n; 
+        function todou(n) {
+            return n >= 10 ? '' + n : '0' + n;
         }
 
-        function new_guid () {
+        function new_guid() {
             var guid = "";
-            for (var i = 1; i <= 32; i++){
-              var n = Math.floor(Math.random()*16.0).toString(16);
-              guid +=   n;
-              if((i==8)||(i==12)||(i==16)||(i==20))
-                guid += "-";
+            for (var i = 1; i <= 32; i++) {
+                var n = Math.floor(Math.random() * 16.0).toString(16);
+                guid += n;
+                if ((i == 8) || (i == 12) || (i == 16) || (i == 20))
+                    guid += "-";
             }
             return guid;
         }
