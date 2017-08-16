@@ -333,7 +333,12 @@ module.exports = function (app) {
             // demo.tigerwit.com
             // w.tigerwit.com
             // w.dev.tigerwit.com
-            if (hostPrefix == 'demo' || hostPrefix2 == 'dev') {
+
+            // tigerwit.co.uk return hostname is ip 60.205.105.34
+            if (hostname == '60.205.105.34') {
+                masterApiPath = 'https://www.tigerwit.com/api'
+            }
+            else if (hostPrefix == 'demo' || hostPrefix2 == 'dev') {
                 masterApiPath = 'https://demo.tigerwit.com/api'
             }
             else if (hostPrefix == 'www' || hostPrefix == 'w') {
