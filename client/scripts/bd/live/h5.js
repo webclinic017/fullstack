@@ -14,5 +14,17 @@
         } else {
             console.log("微信配置错误")
         }
+
+        var liveLocation = 'http://t.cn/RiM1bjm';
+        $('.desp_redirect_url').on('tap', function () {
+            if (isInTiger()) {
+                callNative({
+                    type: "openUrl",
+                    url: liveLocation
+                });
+            } else {
+                window.location.href = liveLocation;
+            }
+        });
     })
 }())
