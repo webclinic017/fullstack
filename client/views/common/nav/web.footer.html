@@ -80,14 +80,16 @@
                     <span class="font-light"><%= lang.text("foot11")%></span>
                 </p>
                 <ul>
-                    <li tw-clone-site>
-                        <p>
-                            <i class="fa fa-phone"></i>&nbsp;&nbsp;
-                            <span>
-                                <%=lang.text("telephone")%>
-                            </span>
-                        </p>
-                    </li>
+                    <%if(!lang.isCloned()){%>
+                        <li>
+                            <p>
+                                <i class="fa fa-phone"></i>&nbsp;&nbsp;
+                                <span>
+                                    <%=lang.text("telephone")%>
+                                </span>
+                            </p>
+                        </li>
+                    <%}%>
                     <li>
                         <p>
                             <i class="fa fa-envelope"></i>
@@ -103,25 +105,28 @@
                     </li> -->
                 </ul>
             </div>
-            <div tw-clone-site class="col-xs-2" <%= lang.text('navbar15')%>>
-                <p class="mg-bt-20">
-                    <span>关注我们</span>
-                </p>
-                <ul class="footer-follow clearfix">
-                    <li class="footer-weibo">
-                        <a href="http://weibo.com/TigerWit?refer_flag=1001030102_&is_hot=1 " target="_blank">
-                            <img src="/images/footer-weibo.png">
-                        </a>
-                    </li>
-                    <li class="footer-weixin">
-                        <img src="/images/footer-weixin.png">
-                        <span>
-                            <img src="/images/footer-weixin-code.png">
-                        </span>
-                    </li>
-                </ul>
-                <div class="footer-follow-tip">订阅每日必读的投资干货</div>
-            </div>
+            <%if(!lang.isCloned()){%>
+                <div class="col-xs-2" <%= lang.text('navbar15')%>>
+                    <p class="mg-bt-20">
+                        <span>关注我们</span>
+                    </p>
+                    <ul class="footer-follow clearfix">
+                        <li class="footer-weibo">
+                            <a href="http://weibo.com/TigerWit?refer_flag=1001030102_&is_hot=1 " target="_blank">
+                                <img src="/images/footer-weibo.png">
+                            </a>
+                        </li>
+                        <li class="footer-weixin">
+                            <img src="/images/footer-weixin.png">
+                            <span>
+                                <img src="/images/footer-weixin-code.png">
+                            </span>
+                        </li>
+                    </ul>
+                    <div class="footer-follow-tip">订阅每日必读的投资干货</div>
+                </div>
+            <%}%>
+            
         </div>
         <div class="footer_con mg-tp-30">
             <p class="mg-bt-30">

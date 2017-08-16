@@ -5,6 +5,7 @@ module.exports = function () {
     function Lang(req) {
         var envConfig = require('./get_env_config').envConfig;
         var company_name = envConfig.company_name;
+        var isCloned = envConfig.isCloned;
         var data = require('./lang_data.js')();
         var querystring = require('querystring');
         var cookieList = querystring.parse(req.headers.cookie, '; ');
@@ -29,6 +30,9 @@ module.exports = function () {
             } else {
                 return false;
             }
+        },
+        isCloned: function(){
+            return this.isCloned
         },
         currentLanguage: function () {
             return this.language;

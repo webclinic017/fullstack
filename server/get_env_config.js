@@ -15,6 +15,7 @@
         url_path: process.env.URL_PATH,
         access_origin: process.env.ACCESS_ORIGIN,
         access_origin2: process.env.ACCESS_ORIGIN2,
+        isCloned: false,
         cdn_url: 'https://web.tigerwit.com'
     };
 
@@ -29,12 +30,18 @@
             envConfig.company_name = 'pandafx';
             envConfig.url_path = 'https://pandafx.tigerwit.com';
             envConfig.access_origin = '';
+        } else if (req.hostname === '60.205.105.34') { //百度克隆网站
+            envConfig.company_name = 'tigerwit';
+            envConfig.isCloned = true;
         } else {
             envConfig.company_name = process.env.COMPANY_NAME;
             envConfig.url_path = process.env.URL_PATH;
             envConfig.access_origin = process.env.ACCESS_ORIGIN;
             envConfig.access_origin2 = process.env.ACCESS_ORIGIN2;
         }
+        envConfig.company_name = 'tigerwit';
+        envConfig.url_path = 'https://www.tigerwit.com';
+        envConfig.isCloned = true;
     }
 
     module.exports = {

@@ -157,14 +157,14 @@
             USDJPY: '美元日元',
             JPN225: '日经指数',
         }
-        var switcher = window.location.hostname.indexOf('tigerwit.co.uk') != -1;
-        angular.forEach(switcher ? forCloneSymbolZh : forNormalSymbolZh, function (value, key) {
+        var isCloned = $cookies['is_cloned'] === 'true';
+        angular.forEach(isCloned ? forCloneSymbolZh : forNormalSymbolZh, function (value, key) {
             requestSymbols.push(key);
         });
         var socketPara = {
             websocketTigerUrl: location.hostname === 'www.tigerwit.com' ? 'https://quotephp.tigerwit.com:4567' : 'wss://demo.tigerwit.com:4567',
             request_symbols: requestSymbols,
-            request_symbols_zh: switcher ? forCloneSymbolZh : forNormalSymbolZh,
+            request_symbols_zh: isCloned ? forCloneSymbolZh : forNormalSymbolZh,
             user_name: "tiger",
             key: "WjIABSkfG96GL0z2",
             logined: false
