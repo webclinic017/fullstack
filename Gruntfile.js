@@ -296,6 +296,7 @@ module.exports = function (grunt) {
                             '*.ico',
                             '*.xml',
                             'fonts/*.*',
+                            'ngsrc/*.*',
                             'plugins/**'
                         ]
                     }, {
