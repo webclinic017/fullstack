@@ -43,7 +43,7 @@
       }
     }
     form {
-      height: px2rem(295);
+      // height: px2rem(295);
       background-color: #fff;
       padding-left: px2rem(20);
       padding-top: px2rem(15);
@@ -56,6 +56,9 @@
         line-height: 2.8rem;
         display: flex;
         border-bottom: 1px solid $gray;
+        &:last-child {
+          border: none;
+        }
         span {
           display: inline-block;
         }

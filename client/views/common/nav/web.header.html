@@ -86,12 +86,14 @@
                     <li>
                         <a href="/web/product/forex"><%= lang.text("navbar6")%></a>
                     </li>
-                    <li>
-                        <a href="/web/product/oil"><%= lang.text("navbar7")%></a>
-                    </li>
-                    <li>
-                        <a href="/web/product/metal"><%= lang.text("navbar8")%></a>
-                    </li>
+                    <%if(!lang.isCloned()){%>
+                        <li>
+                            <a href="/web/product/oil"><%= lang.text("navbar7")%></a>
+                        </li>
+                        <li>
+                            <a href="/web/product/metal"><%= lang.text("navbar8")%></a>
+                        </li>
+                    <%}%>
                     <li>
                       <a href="/web/product/cfd"><%= lang.text("navbar9")%></a>
                     </li>

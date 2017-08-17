@@ -365,7 +365,7 @@
                 publicRequest('regOrLogin', 'POST', {
                     phone: $("#telephone").val() || null,
                     // password: $("#password").val() || null,
-                    password: $("#verify_code").val() || null,
+                    password: $("#verify_code").val() || $("#password").val() || null,
                     login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录
                     pid: oReg.search_arr.pid || null,
                     unit: oReg.search_arr.unit || null,

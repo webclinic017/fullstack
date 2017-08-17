@@ -1,0 +1,51 @@
+@include b(bd_live_layout) {
+    margin-top: 69px;
+    width: 100%;
+    height: 1402px;
+    background: url('/images/live/live_web_bg.png') center top;
+    background-size: auto 100%;
+    @include e(content) {
+        width: 1334px;
+        height: 590px;
+        margin: 0 auto;
+        margin-top: 816px;
+        @include m(desp) {
+            position: relative;
+            width: 845px;
+            height: 385px;
+            margin: 0 auto;
+            margin-top: 98px;
+            font-family: 'FontLive';
+            color: #fff;
+            .desp_main_title {
+                font-size: 25px;
+            }
+            .desp_sub_title {
+                font-size: 18px;
+                margin-bottom: 30px;
+            }
+            .desp_qr_code {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 180px;
+            }
+            .desp_redirect_url {
+                display: block;
+                margin: 0 auto;
+                margin-top: 90px;
+                width: 290px;
+                height: 48px;
+                text-align: center;
+                font-size: 28px;
+                line-height: 48px;
+                border: 1px solid $brand-primary-dark;
+                color: $brand-primary-dark;
+                &:hover {
+                    background-color: $brand-primary-dark;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

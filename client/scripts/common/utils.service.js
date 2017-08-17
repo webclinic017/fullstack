@@ -10,12 +10,11 @@
 
     function utils($http, $window) {
 
-        var service = {
+        return {
             getTotal: getTotal,
-            formatDate: formatDate
+            formatDate: formatDate,
+            domainCheckerForBaidu: domainCheckerForBaidu
         };
-        return service;
-
 
         /*
          * Utils Service 数据分页时获取总页数

@@ -27,8 +27,11 @@
             <p class="bd_t38_detail_con__line">4. 本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，CFD类产品交易手数不计入统计范围； </p>
             <p class="bd_t38_detail_con__line">5. 本活动仅限活动开始后新注册用户，需要完成完整的个人信息提交并通过审核，然后完成兑现条件方可提取红包奖励资金； </p>
             <p class="bd_t38_detail_con__line">6.
-              <%= lang.text('companyZhName')%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打
-              <%= lang.text('telephone')%>； </p>
+              <%= lang.text('companyZhName')%>享有最终解释权。 
+              <%if(!lang.isCloned()){%>
+                若有疑问，请咨询在线客服，或者拨打<%= lang.text('telephone')%>； 
+              <%}%>
+            </p>
           </div>
           <p class="bd_t38_detail_con__close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
         </div>
@@ -60,23 +63,29 @@
             <img src="/images/bd_t38/bag200.png">
           </div>
           <a href="#bd_t37_form" target="_parent" class="t38_top__btns bd_t38_toReg">注册送$1000</a>
-          <p class="t38_tel">客服电话：
-            <%= lang.text('telephone')%>
-          </p>
+          <%if(!lang.isCloned()){%>
+            <p class="t38_tel">客服电话：
+              <%= lang.text('telephone')%>
+            </p>
+          <%}%>
           <div class="t38_center bagbox">
             <img src="/images/bd_t38/bag800.png">
           </div>
           <a href="#bd_t37_form" target="_parent" class="t38_top__btns bd_t38_toReg">注册送$1000</a>
-          <p class="t38_tel">客服电话：
-            <%= lang.text('telephone')%>
-          </p>
+          <%if(!lang.isCloned()){%>
+            <p class="t38_tel">客服电话：
+              <%= lang.text('telephone')%>
+            </p>
+          <%}%>
           <div class="t38_center bagbox">
             <img src="/images/bd_t38/bag3.png">
           </div>
           <a href="#bd_t37_form" target="_parent" class="t38_top__btns bd_t38_toReg">注册送$1000</a>
-          <p class="t38_tel">客服电话：
-            <%= lang.text('telephone')%>
-          </p>
+          <%if(!lang.isCloned()){%>
+            <p class="t38_tel">客服电话：
+              <%= lang.text('telephone')%>
+            </p>
+          <%}%>
           <div class="t38_center bagbox">
             <%if(lang.text('companyEnName') == 'TigerWit'){%>
               <img src="/images/bd_t38/t38_reg_text.png">
@@ -116,9 +125,11 @@
 			<a id="submit_form" target="_parent" class="t38_top__btns bd_t38_toReg">注册即送$1000</a>
           <%}%>
           
-          <p class="t38_tel">客服电话：
-            <%= lang.text('telephone')%>
-          </p>
+          <%if(!lang.isCloned()){%>
+            <p class="t38_tel">客服电话：
+              <%= lang.text('telephone')%>
+            </p>
+          <%}%>
         </div>
         <div class="risk_tip_t38">
           <div class="risk_tip_t38__content clearfix">
