@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiger Wit</title>
+    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <meta name="keywords" content="老虎外汇 TigerWit 跟单交易 外汇 贵金属 CFD 指数 股指 互联网金融"> <meta name="description" content="老虎外汇倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。"> <meta name="apple-mobile-web-app-title" content="老虎外汇"> <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black"> <meta name="format-detection" content="telephone=no"><!-- 删除默认的苹果工具栏和菜单栏 --> <meta name="apple-mobile-web-app-capable" content="yes"><!-- 苹果状态栏颜色 --> <meta name="apple-mobile-web-app-status-bar-style" content="black"><!-- 启用360浏览器的极速模式(webkit) --> <meta name="renderer" content="webkit"><!-- uc强制竖屏 --> <meta name="screen-orientation" content="portrait"><!-- QQ强制竖屏 --> <meta name="x5-orientation" content="portrait"><!-- UC强制全屏 --> <meta name="full-screen" content="yes"><!-- QQ强制全屏 --> <meta name="x5-fullscreen" content="true"><!-- UC应用模式 --> <meta name="browsermode" content="application"><!-- QQ应用模式 --> <meta name="x5-page-mode" content="app"> <title> 老虎外汇 </title> <!-- 引入H5 CSS --> 
+   <link href="https://www.tigerwit.com/downloads/static/froala-editor/froala.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        * {
+        box-sizing: border-box;
+    }
+    html {
+        color:#000;
+        background-color: #fff !important;
+    }
+    body {
+        font-family: "Helvetica Neue",Helvetica,"Lantinghei SC","Microsoft YaHei",Arial,sans-serif;
+        background-color: #fff !important;
+    }
+    body,
+    div,
+    dl,
+    dt,
+    dd,
+    ul,
+    ol,
+    li,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    pre,
+    code,
+    form,
+    fieldset,
+    legend,
+    input,
+    textarea,
+    p,
+    blockquote,
+    th,
+    td {
+        margin:0;padding:0;
+    }
+    table {
+        border-collapse:collapse;
+        border-spacing:0;
+    }
+    fieldset,img,button {
+        border:0;
+    }
+    button,
+    input,
+    textarea,
+    select {
+        outline: none;
+    }
+    ol,
+    ul,
+    li {
+        list-style:none;
+    }
+    q:before,
+    q:after {
+        content:'';
+    }
+    abbr,acronym {
+        border:0;
+        font-variant:normal;
+    }
+    sup {
+        vertical-align:text-top;
+    }
+    sub {
+        vertical-align:text-bottom;
+    }
+    input,
+    textarea,
+    select {
+        font-family:inherit;
+        font-size:inherit;
+        font-weight:inherit;
+        resize:none;
+        /*去掉内阴影*/
+        border: 0; /* 方法1 */
+    }
+    legend {
+        color:#000;
+    }
+    a {
+        text-decoration: none;
+    }
+
+    </style>
+
+    </head>
+<body>
+<div class="fr-view">
+    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #eee;">
+        <img style="width: 50px;position: absolute;top: 50%;left: 50%;margin-left: -25px;margin-top: -25px;" src="/ngsrc/loading.gif">
+    </div>
+</div>
+
+<script type="text/javascript" src="https://www.tigerwit.com/downloads/static/froala-editor/jQuery.min.js"></script>
+<script>
+    (function () {
+        var $viewWrapper = $(".fr-view");
+
+        $.get('/api/dissertation', {
+            id: <%= pageInfo.id%>
+        }).then(function (data) {
+            console.log(data);
+            if (data.is_succ) {
+                $viewWrapper.html(data.data.content);
+            }
+        });
+        
+    })();
+</script>
+</body>
+</html>
