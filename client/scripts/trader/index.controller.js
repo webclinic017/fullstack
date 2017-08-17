@@ -152,7 +152,7 @@
         // openSystemMdl('verify', '复制');
         function openSystemMdl(type, info) {
             $modal.open({
-                templateUrl: '/views/trader/system_modal.html',
+                templateUrl: '/views/web/trader/system_modal.html',
                 size: 'sm',
                 backdrop: true,
                 controller: function ($scope, $modalInstance) {
