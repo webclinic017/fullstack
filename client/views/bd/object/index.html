@@ -111,9 +111,11 @@
         $.get('/api/dissertation', {
             id: <%= pageInfo.id%>
         }).then(function (data) {
-            console.log(data);
+            // console.log(data);
             if (data.is_succ) {
                 $viewWrapper.html(data.data.content);
+            } else {
+                $viewWrapper.html('<p style="text-align: center;font-size: 30px">404</p>');
             }
         });
         
