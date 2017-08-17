@@ -12,8 +12,7 @@
 
         return {
             getTotal: getTotal,
-            formatDate: formatDate,
-            domainCheckerForBaidu: domainCheckerForBaidu
+            formatDate: formatDate
         };
 
         /*
