@@ -3,63 +3,61 @@
         <div ng-cloak class="trader">
             <div class="trader__basic">
                 <div class="row">
-                    <div class="col-xs-6">
+                    <div class="col-xs-8">
                         <div class="trader_avatar">
                             <span class="trader_avatar__wrapper">
                                 <img ng-src="/avatar/<%= master.user_code%>_150.jpg" alt="avatar">
-                                <!-- <span class="trader_avatar__number">NO.<%= master.ranking%></span> -->
                             </span>
                         </div>
-                        <div class="trader_user">
-                            <span class="trader_user__username"><%= master.username%></span>
-                            <span class="trader_user__position trader_gray_color">
-                                <%= master.region_cn.world_name || '中国'%>
-                            </span>
-                        </div>
-                    </div>
-                    <ul class="trader_userdata col-xs-9 clearfix">
-                        <li class="trader_profit">
-                            <div class="trader_profit__item">
-                                <span class="big-num-font">{{ master.history_copy_count || '0' }}</span>
-                            </div>
-                            <div class="trader_gray_color">历史复制者</div>
-                        </li>
-                        <li class="trader_profit">
-                            <div class="trader_profit__item "
-                                 ng-class="{'font-danger': master.profit_rate.indexOf('-') >= 0, 'font-success': master.profit_rate.indexOf('-') < 0}">
-                                <span class="big-num-font trader_blue">{{ master.total_profit_rate || '0.00' }}</span>%
-                            </div>
-                            <div class="trader_gray_color">总收益率</div>
-                        </li>
-                        <li class="trader_profit">
-                            <div class="trader_profit__item">
-                                <span class="big-num-font trader_green">{{ master.max_retract_percent || '0.00' }}</span>%
-                            </div>
-                            <div class="trader_gray_color">最大跌幅</div>
-                        </li>
-                        <li class="trader_profit">
-                            <!--<div class="trader_profit__item">
-                                <span class="big-num-font">
-                                    <i class="fa fa-dollar"></i>{{ master.min_copy_amount || '0.00' }}
+                        <div class="trader_info">
+                            <div class="trader_user">
+                                <span class="trader_user__username"><%= master.username%></span>
+                                <span class="trader_user__position trader_gray_color">
+                                    <%= master.region_cn.world_name || '中国'%>
                                 </span>
                             </div>
-                            <div class="trader_gray_color">最低复制金额</div>-->
-                        </li>
-                        <li class="trader_btn">
+                            <div class="trader_tags">
+                                <%if (master.tags) {%>
+                                    #
+                                    <%for(var t=0; t<master.tags.length; t++){%>
+                                        <span><%= master.tags[t]%></span>
+                                    <%}%>
+                                <%}%>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-4">
+                        <div class="trader_btn">
                             <button class="btn btn-primary" ng-if="!master.copied" ng-click="toCopy()">
                                 <%=
                                 lang.text("traderIndex1")%>
                             </button>
                             <button class="btn btn-primary" disabled ng-if="master.copied"><%= lang.text("traderIndex2")%>
                             </button>
-                            <!-- <div class="trader_gray_color trader_btn__profit">
-                            已帮 {{ master.help_num || 0 }} 人赚取
-                            <span><i class="fa fa-dollar"></i>{{ master.help_amount || 0 }}</span>
-                            </div> -->
-                        </li>
-                    </ul>
-
+                        </div>
+                    </div>
                 </div>
+                <ul class="trader_profit_box clearfix">
+                    <li class="trader_profit">
+                        <div class="trader_profit__item">
+                            <span class="big-num-font">{{ master.history_copy_count || '0' }}</span>
+                        </div>
+                        <div class="trader_gray_color">历史复制者</div>
+                    </li>
+                    <li class="trader_profit">
+                        <div class="trader_profit__item "
+                             ng-class="{'font-danger': master.profit_rate.indexOf('-') >= 0, 'font-success': master.profit_rate.indexOf('-') < 0}">
+                            <span class="big-num-font trader_blue">{{ master.total_profit_rate || '0.00' }}</span>%
+                        </div>
+                        <div class="trader_gray_color">总收益率</div>
+                    </li>
+                    <li class="trader_profit">
+                        <div class="trader_profit__item">
+                            <span class="big-num-font trader_green">{{ master.max_retract_percent || '0.00' }}</span>%
+                        </div>
+                        <div class="trader_gray_color">最大跌幅</div>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>

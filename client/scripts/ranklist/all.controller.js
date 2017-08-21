@@ -10,7 +10,7 @@
     function RanklistAllController($scope, $document, $state, ranklist) {
         
         var pagesize = 9;
-        $scope.rankOrder = 'last_total_profit_rate';
+        $scope.rankOrder = 'thirty_profit_rate';
         $scope.search = {};
         $scope.ranklist = [];
         $scope.pagebar = {
@@ -34,7 +34,7 @@
             if (order) {
                 if ($scope.rankOrder == order) return;
             }
-            $scope.rankOrder = order ? order : 'last_total_profit_rate';
+            $scope.rankOrder = order ? order : 'thirty_profit_rate';
             getMastersList(1);
         }
 

@@ -5,7 +5,7 @@ module.exports = function () {
     function Lang(req) {
         var envConfig = require('./get_env_config').envConfig;
         var company_name = envConfig.company_name;
-        var isCloned = envConfig.isCloned;
+        var clonedBaidu = envConfig.isCloned;
         var data = require('./lang_data.js')();
         var querystring = require('querystring');
         var cookieList = querystring.parse(req.headers.cookie, '; ');
@@ -20,6 +20,7 @@ module.exports = function () {
         this.language = language;
         this.data = data;
         this.company_name = company_name;
+        this.clonedBaidu = clonedBaidu;
         // return this;         
     }
     Lang.prototype = {
@@ -32,7 +33,7 @@ module.exports = function () {
             }
         },
         isCloned: function(){
-            return this.isCloned
+            return this.clonedBaidu;
         },
         currentLanguage: function () {
             return this.language;
