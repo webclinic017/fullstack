@@ -104,7 +104,7 @@ $(document).ready(function () {
     // setTimeout(function () {
     //     layer.closeAll();
     //     // getKycList();
-    //     step = 0;
+    //     step = 3;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
     // }, 1000);
@@ -480,6 +480,16 @@ $(document).ready(function () {
             $(ele.navbarStep2).addClass("active");
         }
         if (step === 3) {
+            var userAgent = navigator.userAgent.toLowerCase();
+            var index = userAgent.indexOf("android");
+            if(index >= 0){  
+                var androidVersion = userAgent.slice(index+8, index+11); 
+                // console.log(userAgent);  
+                // console.log(androidVersion);
+                if (androidVersion <= 4.4) {
+                    alert("您当前的手机版本不支持图片上传功能，请升级手机系统或更换手机。");
+                }
+            }  
             $(ele.navbarStep2).addClass("active");
         }
         if (step === 4) {

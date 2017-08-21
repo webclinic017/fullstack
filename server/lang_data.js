@@ -258,6 +258,15 @@ module.exports = function () {
         "submit": {"en": "Submit", "zh": "提交"},
         "submiting": {"en": "Submit...", "zh": "提交中"},
         "banquan": {"en": companyConfig.companyNameEn.toLocaleUpperCase() + "ALL RIGHTS RESERVED", "zh": companyConfig.companyNameZh + "版权所有"},
+        "profitMaster": {"en": "Profit Master", "zh": "收益高手"},
+        "steadyMaster": {"en": "Steady Master", "zh": "稳健高手"},
+        "persistentMaster": {"en": "Persistent Master", "zh": "常胜高手"},
+        "yieldRateOfMonth": {"en": "yield rate of month", "zh": "近30日收益率"},
+        "steady": {"en": "Steady", "zh": "稳"},
+        "operation": {"en": "Operation", "zh": "操作"},
+        "risk": {"en": "Risk", "zh": "风险"},
+        "profit": {"en": "Profit", "zh": "收益"},
+
 
         // 导航栏 navbar
         "navbar1": { "en": "Homepage", "zh": "首页" },
