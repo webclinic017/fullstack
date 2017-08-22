@@ -103,15 +103,15 @@
                             {{ rank.thirty_profit_rate }}<span>%</span>
                         </div>
                         <div class="tip">
-                            收益率
+                            近30日收益率
                         </div>
                     </div>
                     <div class="dropdown">
-                        <div class="num" ng-class="{'font-danger': (rank.thirty_max_retract + '').indexOf('-') < 0, 'font-success': (rank.thirty_max_retract + '').indexOf('-') != -1}">
-                            {{ rank.thirty_max_retract }}%
+                        <div class="num" ng-class="{'font-danger': (rank.thirty_win_rate + '').indexOf('-') < 0, 'font-success': (rank.thirty_win_rate + '').indexOf('-') != -1}">
+                            {{ rank.thirty_win_rate }}%
                         </div>
                         <div class="tip">
-                            最大跌幅
+                            最大胜率
                         </div>
                     </div>
                 </div>
