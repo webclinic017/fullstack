@@ -674,6 +674,18 @@ module.exports = function (app) {
         res.render('bd/brand/proxy', extendPublic({}, req));
     });
 
+    // cms 生成H5活动页
+    app.route('/bd/object/:subpage').get(function (req, res) {
+        var subpage = req.params.subpage;
+        var pageInfo = {
+            id: subpage
+        };
+        setEnvCf(req, res);
+        res.render('bd/object/index.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
+
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
     /*
         设置     ->     info, password, binding, 
