@@ -39,6 +39,7 @@
             envConfig.url_path = process.env.URL_PATH;
             envConfig.access_origin = process.env.ACCESS_ORIGIN;
             envConfig.access_origin2 = process.env.ACCESS_ORIGIN2;
+            envConfig.isCloned = false;
         }
     }
 
