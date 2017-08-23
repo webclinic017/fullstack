@@ -1,55 +1,178 @@
 <div class="about-public">
     <div class="<%= lang.text('navbar14')%>about-public__tigerwit-banner"></div>
     <div class="tigerwit about-public__con mg-bt-100">
-        <h1 class="pro-public__title"><%= lang.text("about1")%></h1>
-        <p class="font-dark mg-tp-20">
-            <%= lang.text("about2")%>
-        </p>
-        <div class="tigerwit__con1"></div>
-        <p class="font-dark">
-            <%= lang.text("about10")%><br>
-            <%= lang.text("about11")%>
-        </p>
-        <div class="tigerwit__con2">
-            <img src="/images/web/tigerwit-ftp.png">
-        </div>
-        <h2 class="font-base font-bold mg-tp-50">
-            <%= lang.text("about3")%>
-        </h2>
-        <p class="font-dark">
-            <%= lang.text("about4")%>
-        </p>
-        <p class="font-dark">
-            <span class="font-info">Band of America </span> <%= lang.text("about5")%>
-        </p>
-        <p class="font-dark">
-            <span class="font-info">BNP PARIBAS </span> <%= lang.text("about6")%>
-        </p>
-        <p class="font-dark">
-            <span class="font-info">UBS </span> <%= lang.text("about7")%>
-        </p>
-        <div class="pro-public__logo"></div>
-        
-
-        <%if(lang.isCompany("tigerwit")){%>
-            <h2 class="font-base font-bold mg-tp-50">
-                <%= lang.text("about8")%>
-            </h2>
+        <%if(lang.currentLanguage() == 'en'){%>
+            <h1 class="pro-public__title">
+                About Us
+            </h1>
             <p class="font-dark">
-                <%= lang.text("about9")%>
+                Business name: TigerWit Financial Services Limited
             </p>
-            <div style="width:600px;margin:20px auto;">
-                <video id="player" 
-                       width="600" 
-                       height="400" 
-                       poster="/images/media/tang.jpg" 
-                       src="https://www.tigerwit.com/files/video/20160317.flv"
-                       type="video/flv"
-                       controls="controls"
-                       tw-media>
-                </video>
-            </div>
+            <p class="font-dark">
+                Trading name: TigerWit
+            </p>
+            <p class="font-dark">
+                Established: 12 December 2016
+            </p>
+            <p class="font-dark">
+                Registration: The Bahamas, company number 198255 B
+            </p>
+            <p class="font-dark">
+                Financial Services Licence number: SIA-F185
+            </p>
+            <p class="font-dark">
+                Website: https://www.tigerwit.com
+            </p>
+            <h1 class="pro-public__title">
+                Who We Are
+            </h1>
+            <p class="font-dark">
+                TigerWit emerged from a financial technology company to gain its financial services licence in 2017. With a strong technological core built upon a philosophy of transparency, credibility and integrity, TigerWit’s offers its clients exceptional capabilities to trade the markets.
+            </p>
+            <p class="font-dark mg-tp-20">
+                TigerWit’s founders are experienced individuals with successful backgrounds and a long history of achievement, who bring together a team of professionals with diverse academic and applied backgrounds experienced in trading Forex, CFD and spread betting, regulatory compliance, investment management, research & development of online platforms and global sales & marketing.
+            </p>
+        <%} else {%>
+            <h1 class="pro-public__title">
+                关于我们
+            </h1>
+            <p class="font-dark">
+                老虎外汇成立于2015年初，是首批国内资本市场投资的互联网外汇交易服务平台。公司由互联网领域或金融科技领域15年以上经验的团队组成。凭借雄厚的资本，结合强大的产品创新能力，老虎外汇自主研发了复制跟单交易系统和移动端交易系统，并提供近百种外汇、原油、贵金属和指数差价合约等品种的交易服务，致力于降低用户参与外汇市场门槛，为用户提供一个公平稳定的交易平台。
+            </p>
+            <h1 class="pro-public__title">
+                管理团队
+            </h1>
+            <p class="font-dark">
+                老虎外汇创始人具有丰富的外汇交易行业经验和行业成功背景，他们汇集了具有不同学术和应用背景的专业人士，分别在外汇交易、差价合约、监管合规性、投资管理、在线平台研发和全球营销等方面拥有丰富的经验。
+            </p>
         <%}%>  
 
+        <h1 class="pro-public__title">
+            <%= lang.text("about_1")%>
+        </h1>
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_2")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_3")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_4")%>
+        </p>
+        <%if(lang.currentLanguage() == 'zh'){%>
+            <p class="font-darkest font-size-18 mg-tp-20">
+                受SIA监管
+            </p>
+            <p class="font-dark mg-tp-10">
+                老虎外汇受巴哈马证券委员会（SIA）的授权和监管。
+            </p>
+            <p class="font-dark">
+                监管号：SIA-F185
+            </p>
+        <%}%>  
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_5")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_6")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_7")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_8")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_9")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_10")%>
+        </p>
+
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_11")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_12")%>
+        </p>
+
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_13")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_14")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_15")%>
+        </p>
+
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_16")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_17")%>
+        </p>
+
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_18")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_19")%>
+        </p>
+
+
+        <h1 class="pro-public__title">
+            <%= lang.text("about_20")%>
+        </h1>
+        <p class="font-dark">
+            <%= lang.text("about_21")%>
+        </p>
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_22")%>
+        </p>
+
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_23")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_24")%>
+        </p>
+
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_25")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_26")%>
+        </p>
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_27")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_28")%>
+        </p>
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_29")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_30")%>
+        </p>
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_31")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_32")%>
+        </p>
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_33")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_34")%>
+        </p>
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_35")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_36")%>
+        </p>
     </div>
 </div>
