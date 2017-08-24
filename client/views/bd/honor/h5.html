@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="<%= lang.text('companyZhName')%> <%= lang.text('companyEnName')%> 跟单交易 外汇 CFD 指数 股指 互联网金融">
+    <meta name="description" content="<%= lang.text('companyZhName')%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyZhName')%>">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>
+        <%= lang.text('companyZhName')%>
+    </title>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<body>
+<%- include('/common/component/h5.navbar.html') %>
+<div class="m_honor_layout">
+    <div class="m_honor">
+        <div class="m_honor__box1">
+            <p class="bag_tip">
+                <span>仅可选择其中一个完成兑换</span>
+            </p>
+            <div class="bag_wrapper">
+                <ul class="bag_list clearfix">
+                    <!-- <li class="bag_item">
+                        <div class="bag">
+                            <p class="tit">1000美金</p>
+                            <p class="tip">活动期间完成<br>180手交易</p>
+                        </div>
+                        <div class="bag_btn_wrapper">
+                            <button class="bag_btn">
+                                立即领取
+                            </button>
+                        </div>
+                    </li>
+                    <li class="bag_item">
+                        <div class="bag">
+                            <p class="tit">500美金</p>
+                            <p class="tip">活动期间完成<br>90手交易</p>
+                        </div>
+                        <div class="bag_btn_wrapper">
+                            <button class="bag_btn">
+                                立即领取
+                            </button>
+                        </div>
+                    </li>
+                    <li class="bag_item">
+                        <div class="bag">
+                            <p class="tit">200美金</p>
+                            <p class="tip">活动期间完成<br>40手交易</p>
+                        </div>
+                        <div class="bag_btn_wrapper">
+                            <button class="bag_btn">
+                                立即领取
+                            </button>
+                        </div>
+                    </li>
+                    <li class="bag_item">
+                        <div class="bag">
+                            <p class="tit">100美金</p>
+                            <p class="tip">活动期间完成<br>25手交易</p>
+                        </div>
+                        <div class="bag_btn_wrapper">
+                            <button class="bag_btn">
+                                立即领取
+                            </button>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+        <div class="m_honor__box2">
+            <p class="bag_tip">
+                <span>活动期间累计入金≥1000美金，并完成一手交易，即可领取王者荣耀电竞专用手柄</span>
+            </p>
+            <p class="bag_tit">
+                王者荣耀电竞专用手柄
+            </p>
+            <div class="bag_btn_wrapper">
+                <button class="bag_btn btn-2 not_recevie">
+                    立即领取
+                </button>
+            </div>
+        </div>
+        <div class="m_honor__rules">
+            <p>
+                1.参与资格：老虎外汇真实入金客户（首次入金时间早于2017年6月1日）且自6月1日至今无入金、开仓、平仓行为，当前账户资金量低于20美金。
+            </p>
+            <p>
+                2.  每位符合条件用户4个红包只能选择一个， 确定之后即可领取，在达成兑换条件后即可成功兑换。
+            </p>
+            <p>
+                3.  本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，CFD（指数）类产品的交易手数不计入统计范围。
+            </p>
+            <p>
+                4.允许EA，但禁止EA剥头皮交易。违反规则用户，将被剥夺参与本次活动的权利。
+            </p>
+            <p>
+                5.本活动最终解释权归老虎外汇平台所有。
+            </p>
+        </div>
+        <div class="m_honor__footer">
+            <div class="bd_honor_logo">
+                <img src="/images/basic_logo.png">
+            </div>
+            <div class="bd_honor_tip">
+                <p>更多精彩福利</p>
+                <p>进入老虎外汇APP 一键跟单 智能交易</p>
+            </div>
+            <div class="bag_btn_wrapper">
+                <span class="bag_btn btn-3">
+                    进入老虎外汇APP
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="template_bag_list" type="text/html">
+    <$for(var i=0;i<data.length;i++){$>
+        <li class="bag_item">
+            <div class="bag">
+                <p class="tit"><$= data[i].amount$>美金</p>
+                <p class="tip"><$= data[i].front_desc_fir$><br><$= data[i].front_desc_sec$></p>
+            </div>
+            <div class="bag_btn_wrapper">
+                <button class="bag_btn btn-1" data-id="<$= data[i].id$>">
+                    <$= data[i].front_recevie_status$>
+                </button>
+            </div>
+        </li>
+    <$}$>
+</script>
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_honor.js -->
+<script src="/scripts/bd/common/wx_share_config.js"></script>
+<script src="/scripts/bd/common/open_app.js"></script>
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/bd/honor/h5.js"></script>
+<!-- endbuild -->
+
+<!-- 推广脚本footer -->
+<%- include('/common/statistic/_all.html') %>
+</html>

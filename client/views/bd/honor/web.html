@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" class="bd_greenhand_html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%=lang.text("companyZhName")%>｜注册送200美金赠金</title>
+        <% include /common/vendor/web.css.html %>
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
+        <!-- endbuild -->
+        <% include /common/statistic/main.html %>
+        <% include /common/vendor/web.js.html %>
+</head>
+
+<body ng-app="fullstackApp" class="bd_greenhand">
+    <div ng-controller="GlobalController">
+        <% include /common/nav/web.header.html %>
+        <div ng-controller="WebHonorController" class="bd_honor_layout clearfix" ng-cloak>
+            <div class="bd_honor">
+                <div class="bd_honor__box1">
+                    <p class="bag_tip">
+                        <span>仅可选择其中一个完成兑换</span>
+                    </p>
+                    <div class="bag_wrapper">
+                        <ul class="clearfix">
+                            <li class="bag_item" ng-repeat="bag in bagList">
+                                <div class="bag">
+                                    <p class="tit">{{bag.amount}}美金</p>
+                                    <p class="tip">{{bag.front_desc_fir}}<br>{{bag.front_desc_sec}}</p>
+                                </div>
+                                <div class="bag_btn_wrapper">
+                                    <button class="bag_btn not_recevie" ng-show="!recevieStatus" ng-click="getHonorBag(bag)">
+                                        {{bag.front_recevie_status}}
+                                    </button>
+                                    <button class="bag_btn is_recevie" disabled ng-show="recevieStatus">
+                                        {{bag.front_recevie_status}}
+                                    </button>
+                                </div>
+                            </li>
+                            <!-- <li class="bag_item">
+                                <div class="bag">
+                                    <p class="tit">500美金</p>
+                                    <p class="tip">活动期间完成<br>90手交易</p>
+                                </div>
+                                <div class="bag_btn_wrapper">
+                                    <button class="bag_btn">
+                                        立即领取
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="bag_item">
+                                <div class="bag">
+                                    <p class="tit">200美金</p>
+                                    <p class="tip">活动期间完成<br>40手交易</p>
+                                </div>
+                                <div class="bag_btn_wrapper">
+                                    <button class="bag_btn">
+                                        立即领取
+                                    </button>
+                                </div>
+                            </li>
+                            <li class="bag_item">
+                                <div class="bag">
+                                    <p class="tit">100美金</p>
+                                    <p class="tip">活动期间完成<br>25手交易</p>
+                                </div>
+                                <div class="bag_btn_wrapper">
+                                    <button class="bag_btn">
+                                        立即领取
+                                    </button>
+                                </div>
+                            </li> -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="bd_honor__box2">
+                    <p class="bag_tip">
+                        <span>活动期间累计入金≥1000美金，并完成一手交易，即可领取王者荣耀电竞专用手柄</span>
+                    </p>
+                    <p class="bag_tit">
+                        王者荣耀电竞专用手柄
+                    </p>
+                    <div class="bag_btn_wrapper">
+                        <button class="bag_btn not_recevie" ng-show="honorStatus == 0" ng-click="recevieHonor()">
+                            立即领取
+                        </button>
+                        <button class="bag_btn is_recevie" disabled ng-show="honorStatus == 1">
+                            已领取
+                        </button>
+                        <button class="bag_btn not_recevie" ng-show="honorStatus == 2" ng-click="openExchangeHonorMdl()">
+                            立即兑换
+                        </button>
+                        <button class="bag_btn is_recevie" disabled ng-show="honorStatus == 3">
+                            已兑换
+                        </button>
+                        <button class="bag_btn is_recevie" disabled ng-show="honorStatus == 4">
+                            已失效
+                        </button>
+                    </div>
+                </div>
+                <div class="bd_honor__rules">
+                    <p>
+                        1.参与资格：老虎外汇真实入金客户（首次入金时间早于2017年6月1日）且自6月1日至今无入金、开仓、平仓行为，当前账户资金量低于20美金。
+                    </p>
+                    <p>
+                        2.  每位符合条件用户4个红包只能选择一个， 确定之后即可领取，在达成兑换条件后即可成功兑换。
+                    </p>
+                    <p>
+                        3.  本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，CFD（指数）类产品的交易手数不计入统计范围。
+                    </p>
+                    <p>
+                        4.允许EA，但禁止EA剥头皮交易。违反规则用户，将被剥夺参与本次活动的权利。
+                    </p>
+                    <p>
+                        5.本活动最终解释权归老虎外汇平台所有。
+                    </p>
+                </div>
+                <div class="bd_honor__footer">
+                    <div class="bd_honor_logo">
+                        <img src="/images/basic_logo.png">
+                    </div>
+                    <div class="bd_honor_tip">
+                        <p>更多精彩福利</p>
+                        <p>进入老虎外汇APP 一键跟单 智能交易</p>
+                    </div>
+                    <div class="bag_btn_wrapper">
+                        <button class="bag_btn">
+                            进入老虎外汇APP
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include /common/nav/web.footer.html %>
+    <%- include('/common/statistic/_all.html') %>
+</body>
+<!-- build:js(client) /scripts/bd_honor.js -->
+<script src="/scripts/common/config.service.js"></script>
+<script src="/scripts/common/account.service.js"></script>
+<script src="/scripts/common/authorization.service.js"></script>
+<script src="/scripts/common/navbar.directive.js"></script>
+<script src="/scripts/common/dropdown.directive.js"></script>
+<script src="/scripts/common/global.controller.js"></script>
+<script src="/scripts/common/loading_img.directive.js"></script>
+<script src="/scripts/common/modal.js"></script>
+<script src="/scripts/common/pagination.directive.js"></script>
+<script src="/scripts/common/duration.filter.js"></script>
+<script src="/scripts/common/transition.service.js"></script>
+<script src="/scripts/common/symbol_mod.filter.js"></script>
+<script src="/scripts/common/trader.service.js"></script>
+<script src="/scripts/common/lang.service.js"></script>
+<script src="/scripts/common/lang_data.service.js"></script>
+<script src="/scripts/common/redbag.service.js"></script>
+<script src="/scripts/plugins/layer.js"></script>
+<script src="/scripts/bd/honor/web.js"></script>
+<!-- endbuild -->
+</html>

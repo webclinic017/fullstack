@@ -118,7 +118,11 @@
             receiveRedbagApi: urlOrigin2 + '/bonus/receive',
             exchangeRedbagApi: urlOrigin2 + '/bonus/exchange',
             getRedbagNumApi: urlOrigin2 + '/bonus/number',
-            setRedbagReadedApi: urlOrigin2 + '/bonus/readed'
+            setRedbagReadedApi: urlOrigin2 + '/bonus/readed',
+            //荣耀王者活动接口
+            checkHonorStatusApi: urlOrigin2 + '/king/show',
+            receiveHonorApi: urlOrigin2 + '/king/receive',
+            exchangeHonorApi: urlOrigin2 + '/king/exchange',
         };
 
         var service = {
