@@ -30,14 +30,11 @@
           * 
           * @param {Number} phone
           * @param {Number} code   品牌部推广页（/bd/brand_proxy） 渠道
-          * @param {Number} channel   品牌部推广页（/bd/brand_proxy） 渠道
+          * @param {Number} sources  渠道—就是他们提供的q  不为空
+          * @param {Number} ad_position  广告合作商和位置他们提供的w  不为空
           */
-         function checkPhone (phone, code, channel) {
-            return publicHttp.dealPublicRequest(o.checkPhoneApi, 'POST', {
-                phone: phone,
-                code: code,
-                channel: channel
-            });
+         function checkPhone (params) {
+            return publicHttp.dealPublicRequest(o.checkPhoneApi, 'POST', params);
          }
     }
 })();
