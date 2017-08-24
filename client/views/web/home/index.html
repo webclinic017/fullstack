@@ -46,34 +46,34 @@
                         <ul>
                             <li class="index2-master__col2-li1">
                                 <span class="index2-master__col2-tip" ng-show="master.type == 1">
-                                    收益高手
+                                    <%= lang.text("profitMaster")%></a>
                                 </span>
                                 <span class="index2-master__col2-tip" ng-show="master.type == 2">
-                                    稳健高手
+                                    <%= lang.text("steadyMaster")%>
                                 </span>
                                 <span class="index2-master__col2-tip" ng-show="master.type == 3">
-                                    常胜高手
+                                    <%= lang.text("persistentMaster")%>
                                 </span>
                                 <a class="index2-master__col2-name" href="/trader/{{master.user_code}}/#/trader/summary" target="_blank" title="{{ master.username || '**' }}">{{ master.username || '**' }}</a>
                             </li>
                             <li class="index2-master__col2-li2">
                                 <div class="index2-master__col2-div1">
                                     <span class="index2-master__col2-rate">{{ master.thirty_profit_rate || '0.00' }}</span><span class="font-size-12">%</span><br>
-                                    <span class="font-size-14">近30日收益率</span>
-                                    <div class="index2-master__col2-tags">
+                                    <span class="font-size-14"><%= lang.text("yieldRateOfMonth")%></span>
+                                    <!-- <div class="index2-master__col2-tags">
                                         <span ng-repeat="tag in master.tags">
                                             {{ tag }}
                                         </span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="index2-master__col2-div2">
-                                    <span class="index2-master__col2-how" ng-show="master.type == 1">高</span>
-                                    <span class="index2-master__col2-how" ng-show="master.type == 2">稳</span>
-                                    <span class="index2-master__col2-how" ng-show="master.type == 3">低</span>
+                                    <span class="index2-master__col2-how" ng-show="master.type == 1"><%= lang.text("high")%></span>
+                                    <span class="index2-master__col2-how" ng-show="master.type == 2"><%= lang.text("steady")%></span>
+                                    <span class="index2-master__col2-how" ng-show="master.type == 3"><%= lang.text("low")%></span>
                                     <br>
-                                    <span class="index2-master__col2-how-c" ng-show="master.type == 1">收益</span>
-                                    <span class="index2-master__col2-how-c" ng-show="master.type == 2">操作</span>
-                                    <span class="index2-master__col2-how-c" ng-show="master.type == 3">风险</span>
+                                    <span class="index2-master__col2-how-c" ng-show="master.type == 1"><%= lang.text("profit")%></span>
+                                    <span class="index2-master__col2-how-c" ng-show="master.type == 2"><%= lang.text("operation")%></span>
+                                    <span class="index2-master__col2-how-c" ng-show="master.type == 3"><%= lang.text("risk")%></span>
                                 </div>
                             </li>
                             <li class="index2-master__col2-li3 clearfix">
@@ -160,7 +160,7 @@
         </section>
     <%}%>
 
-    <section class="index2-trade">
+    <!-- <section class="index2-trade">
         <div class="container">
             <h2 class="index2-product__title"><%= lang.text("home33")%></h2>
             <p class="index2-product__tip"><%= lang.text("home34")%></p>
@@ -180,9 +180,9 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
-    <section class="index2-why index2-product">
+    <section class="index2-why">
         <div class="container">
             <h2 class="index2-product__title"><%= lang.text("home36")%></h2>
             <p class="index2-product__tip"><%= lang.text("home37")%></p>
@@ -231,7 +231,7 @@
         </div>
     </section>
 
-    <section class="index2-quote">
+    <section class="index2-quote index2-product">
         <div class="container">
             <h2 class="index2-product__title"><%= lang.text("home62")%></h2>
             <p class="index2-product__tip"><%= lang.text("home63")%></p>
