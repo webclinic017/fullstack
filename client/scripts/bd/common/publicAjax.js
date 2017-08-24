@@ -2,7 +2,7 @@
     'use strict';
 
     var origin = $.cookie ? $.cookie("access_origin2") : '/api';
-    console.log(origin);
+    // console.log(origin);
     var apiUrl = {
         getUserInfo: origin + '/user/info',     // get
         register: origin + '/auth/register',     // post
@@ -23,6 +23,13 @@
         getInviteList: origin + '/user/invites', // get
         setClueCustomer: origin + '/auth/page_signup', // post
         setInviteCode: origin + '/invite_code', // post
+        // 荣耀王者活动
+        checkLogined: origin + '/auth/check', // get
+        getRedBagPool: origin + '/bonus/index', // get
+        receiveRedbag: origin + '/bonus/receive', // put
+        checkHonorStatus: origin + '/king/show', // get
+        receiveHonor: origin + '/king/receive', // post
+        exchangeHonor: origin + '/king/exchange', // post
 
         // 三方接口
         thirdGetStatus: origin + '/third/user/auth_status', // get

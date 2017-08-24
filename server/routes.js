@@ -524,6 +524,17 @@ module.exports = function (app) {
         }
     });
 
+    app.route('/bd/honor').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit') {
+            if (isMobile(req)) {
+                res.render('bd/honor/h5', extendPublic({}, req));
+            } else {
+                res.render('bd/honor/web', extendPublic({}, req));
+            }
+        }
+    });
+
     app.route('/bd/t29').get(function (req, res) {
         setEnvCf(req, res);
         res.render('bd/t29/web.html', extendPublic({}, req));

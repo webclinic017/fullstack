@@ -1,0 +1,143 @@
+@include b(bd_honor_layout) {
+    margin-top: 69px;
+}
+@include b(bd_honor) {
+    min-height: 500px;
+    background: url('/images/bd_honor/bd_honor_bg.jpg');
+    background-position: center top;
+    background-size: auto auto;
+    padding-top: 500px;
+    color: #fff;
+
+    @include e(box1) {
+        width: 876px;
+        height: 406px;
+        background: url('/images/bd_honor/bd_honor_1.png');
+        margin: 0 auto;
+
+        .bag_tip {
+            padding-top: 70px;
+            text-align: center;
+            font-size: 16px;
+
+            span {
+                background-color: #9e7017;
+                padding: 3px 12px;
+            }
+        }
+        .bag_wrapper {
+            padding-top: 40px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .bag_item {
+            width: 25%;
+            float: left;
+
+            .bag {
+                width: 138px;
+                height: 179px;
+                background: url('/images/bd_honor/bd_honor_bag.png');
+                margin: 0 auto;
+                text-align: center;
+
+                .tit {
+                    font-size: 26px;
+                    padding-top: 20px;
+                }
+            }
+            .bag_btn_wrapper {
+                text-align: center;
+                padding-top: 20px;
+            }
+            .bag_btn {
+                width: 103px;
+                height: 35px;
+                border: none;
+
+                &.is_recevie {
+                    background: url('/images/bd_honor/bd_honor_btn_2.png');
+                }
+                &.not_recevie {
+                    background: url('/images/bd_honor/bd_honor_btn_1.png');
+                }
+            }
+        }
+    }
+    @include e(box2) {
+        width: 876px;
+        height: 807px;
+        background: url('/images/bd_honor/bd_honor_2.png');
+        margin: 60px auto 0px;
+
+        .bag_tip {
+            padding-top: 70px;
+            text-align: center;
+            font-size: 16px;
+
+            span {
+                background-color: #9e7017;
+                padding: 3px 12px;
+            }
+        }
+        .bag_tit {
+            padding-top: 582px;
+            text-align: center;
+            font-size: 24px;
+        }
+        .bag_btn_wrapper {
+            text-align: center;
+            padding-top: 20px;
+        }
+        .bag_btn {
+            width: 103px;
+            height: 35px;
+            border: none;
+
+            &.is_recevie {
+                background: url('/images/bd_honor/bd_honor_btn_2.png');
+            }
+            &.not_recevie {
+                background: url('/images/bd_honor/bd_honor_btn_1.png');
+            }
+        }
+    }
+    @include e(rules) {
+        width: 876px;
+        height: 291px;
+        background: url('/images/bd_honor/bd_honor_3.png');
+        margin: 60px auto 0px;
+        padding: 80px 40px 0px;
+
+        p {
+            padding-bottom: 15px;
+        }
+    }
+    @include e(footer) {
+        padding-top: 40px;
+        padding-bottom: 60px;
+        text-align: center;
+
+        .bd_honor_logo {
+            width: 175px;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+            }
+        }
+        .bd_honor_tip {
+            padding-top: 20px;
+        }
+        .bag_btn_wrapper {
+            padding-top: 15px;
+        }
+        .bag_btn {
+            background: #ffd302;
+            color: #000;
+            border: none;
+            padding: 4px 20px;
+            border-radius: 8px;
+        }
+    }
+}
