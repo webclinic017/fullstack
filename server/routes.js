@@ -428,7 +428,7 @@ module.exports = function (app) {
     });
 
     // 条件和条款
-    app.route('/web/blog/:subpage(risk|statement|notice)').get(function (req, res) {
+    app.route('/web/blog/:subpage(risk|statement|notice|legal)').get(function (req, res) {
         var subpage = req.params.subpage || 'risk';
         var pageInfo = {
             id: subpage
