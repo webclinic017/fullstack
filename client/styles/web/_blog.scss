@@ -34,6 +34,36 @@
     }
 }
 
+@include b(blog_legal) {
+    padding-bottom: 40px;
+
+    @include e(title) {
+        text-align: center;
+        color: #000;
+    }
+    @include e(content) {
+        color: #838992;
+
+        .legal_pdf {
+            padding-bottom: 30px;
+        }
+
+        .link {
+            padding-bottom: 10px;
+
+            a {
+                &:hover {
+                    color: #188afa!important;
+                }
+            }
+        }
+
+        p {
+            line-height: 22px;
+        }
+    }
+}
+
 @include b(blog_notice) {
     padding-bottom: 40px;
 
