@@ -20,7 +20,8 @@
         $scope.getPhoneCode = getPhoneCode;
 
         var loading = false;
-        var channel = getQueryString('channel') ? getQueryString('channel') : '';
+        var sources = getQueryString('q') || '';
+        var ad_position = getQueryString('w') || '';
         var token;
 
         setToken();
@@ -32,7 +33,12 @@
             if (loading) return;
             if (validator.regType.phone.reg.test($scope.phone) && $scope.code) {
                 loading = true;
-                market.checkPhone($scope.phone, $scope.code, channel).then(function (data) {
+                market.checkPhone({
+                    phone: $scope.phone,
+                    code: $scope.code,
+                    sources: sources,
+                    ad_position: ad_position
+                }).then(function (data) {
                     loading = false;
                     if (!data) return;
                     if (data.is_succ) {
@@ -137,7 +143,12 @@
                         if (loading) return;
                         if (validator.regType.phone.reg.test($scope.phone) && $scope.code) {
                             loading = true;
-                            market.checkPhone($scope.phone, channel).then(function (data) {
+                            market.checkPhone({
+                                phone: $scope.phone,
+                                code: $scope.code,
+                                sources: sources,
+                                ad_position: ad_position
+                            }).then(function (data) {
                                 loading = false;
                                 if (!data) return;
                                 if (data.is_succ) {
