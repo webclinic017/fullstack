@@ -3,10 +3,8 @@
         <div class="swiper-container" style="height: 650px;" tw-carousel data-type="normal">
             <div class="swiper-wrapper">
                 <div class="swiper-slide index2-slide" ng-repeat="ad in advertiseLst" ng-style="{'background-image': 'url('+ad.image_url+')'}">
-                    <a class="slide__btn_wrapper" ng-href="{{ad.target_url}}" title="了解详情" ng-click="toTrackBannerSensorsdata($event, ad.name, $index);"></a>
-                    <!-- <div class="index2-banner__btn1-new">
-                        <a class="" href="/bd/greenhand" ng-click="toTrackBannerSensorsdata($event, '新手落地页', '1');">了解详情</a>
-                    </div> -->
+                    <a class="slide__btn_wrapper" ng-href="{{ad.target_url}}" title="了解详情" ng-click="toTrackBannerSensorsdata(ad.name, $index);"></a>
+                    
                 </div>
                 <div class="swiper-slide index2-slide default" ng-if="getBannerSucc && advertiseLst.length <= 0">
                     
@@ -54,7 +52,7 @@
                                 <span class="index2-master__col2-tip" ng-show="master.type == 3">
                                     <%= lang.text("persistentMaster")%>
                                 </span>
-                                <a class="index2-master__col2-name" href="/trader/{{master.user_code}}/#/trader/summary" target="_blank" title="{{ master.username || '**' }}">{{ master.username || '**' }}</a>
+                                <a class="index2-master__col2-name" href="/trader/{{master.user_code}}/#/trader/summary" ng-click="toQuickPageviewSensorsdata(master.username)" target="_blank" title="{{ master.username || '**' }}">{{ master.username || '**' }}</a>
                             </li>
                             <li class="index2-master__col2-li2">
                                 <div class="index2-master__col2-div1">
@@ -82,7 +80,7 @@
                                     <span class="font-size-14"><%= lang.text("lishifuzhirenshu")%></span>
                                 </div>
                                 <div class="index2-master__col2-div3">
-                                    <a class="index2-master__col2-copy" href="/trader/{{master.user_code}}/#/trader/summary" target="_blank">
+                                    <a class="index2-master__col2-copy" href="/trader/{{master.user_code}}/#/trader/summary" ng-click="toQuickPageviewSensorsdata(master.username)" target="_blank">
                                         <img  class="index2-master__col2-jia" src="<%= lang.image('homePlus')%>" alt="">
                                     </a>
                                 </div>
