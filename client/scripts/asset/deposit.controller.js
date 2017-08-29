@@ -16,6 +16,8 @@
                 // timestamp: ,
                 // RMB:         // 折合人民币
             },
+            alipay: true,
+            alipayTip: false,
             wallet: true,
             walletTip: false,
             type: $state.params.type || 'invest',
@@ -23,6 +25,7 @@
         };
         $scope.walletDepositSucc = false;
         $scope.walletAble = 0;
+        $scope.alipayAble = 3000;   // 支付宝入金限额
 
         $scope.frontErr = {
             amount: {
@@ -81,7 +84,7 @@
             });
         }
         
-        // 充值  还未完成s
+        // 充值  还未完成
         function toDeposit(amount) {
             
             var amount = $scope.deposit.amount;
@@ -106,14 +109,15 @@
             }  
             
             function confirmDeposit() {
-                if ($scope.deposit.type === 'invest') {
+                if ($scope.deposit.type === 'invest' || $scope.deposit.type === 'alipay') {
                     if ($scope.personal.profile_check != 3) {
                         openSystemMdl('deposit');
                         return;
                     }
+                    var platform = $scope.deposit.type === 'alipay' ? 4 : undefined;
                     var w = $window.open('/waiting');
 
-                    asset.deposit(amount).then(function(data) {
+                    asset.deposit(amount, platform).then(function(data) {
                         if (!data) return;
                         if (data.is_succ) {
                             var token = $cookies["token"] || '';
@@ -144,7 +148,13 @@
         }
 
         function changeDepositType (type) {
-            if ($scope.deposit.wallet) {
+            if (type === 'invest') {
+                $scope.deposit.type = type;
+            }
+            if ((type === 'wallet') && $scope.deposit.wallet) {
+                $scope.deposit.type = type;
+            }
+            if ((type === 'alipay') && $scope.deposit.alipay) {
                 $scope.deposit.type = type;
             }
         }
@@ -160,6 +170,18 @@
             } else {
                 $scope.deposit.wallet = true;
                 $scope.deposit.walletTip = false;
+            }
+
+            if (Number($scope.deposit.amount) > $scope.alipayAble) {
+                $scope.deposit.alipay = false;
+                
+                if ($scope.deposit.type === 'alipay') {
+                    $scope.deposit.type = 'invest';
+                    $scope.deposit.alipayTip = true;
+                }
+            } else {
+                $scope.deposit.alipay = true;
+                $scope.deposit.alipayTip = false;
             }
         }
 

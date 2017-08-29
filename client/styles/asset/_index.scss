@@ -62,10 +62,11 @@
 
         @include m(tip) {
             position: absolute;
+            width: 76%;
+            top: 107%;
             left: 30px;
             color: #f57a7a;
             font-size: 12px;
-            bottom: -20px;
             line-height: 16px;
             display: none;
 
