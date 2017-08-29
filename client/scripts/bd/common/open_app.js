@@ -14,11 +14,7 @@
         var userAgent = navigator.userAgent;
         if(/MicroMessenger/gi.test(userAgent)) {
             // 微信浏览器中
-            layer.open({
-                content: '请到老虎外汇APP中打开页面'
-                ,skin: 'msg'
-                ,time: 2 //2秒后自动关闭
-            });
+            window.location.href = url.down;
         } else{
             if (userAgent.indexOf("Safari") != -1) {
                 window.location.href = url.openIos+page;

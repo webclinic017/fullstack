@@ -24,26 +24,26 @@
                 $scope.bagList = [
                     {
                         amount: 1000,
-                        front_desc_fir: "活动期间完成",
-                        front_desc_sec: "180手交易",
+                        front_desc_fir: "完成180手交易",
+                        front_desc_sec: "期限120天",
                         front_recevie_status: "立即领取"
                     },
                     {
                         amount: 500,
-                        front_desc_fir: "活动期间完成",
-                        front_desc_sec: "90手交易",
+                        front_desc_fir: "完成90手交易",
+                        front_desc_sec: "期限120天",
                         front_recevie_status: "立即领取"
                     },
                     {
                         amount: 200,
-                        front_desc_fir: "活动期间完成",
-                        front_desc_sec: "40手交易",
+                        front_desc_fir: "完成40手交易",
+                        front_desc_sec: "期限60天",
                         front_recevie_status: "立即领取"
                     },
                     {
                         amount: 100,
-                        front_desc_fir: "活动期间完成",
-                        front_desc_sec: "25手交易",
+                        front_desc_fir: "完成25手交易",
+                        front_desc_sec: "期限60天",
                         front_recevie_status: "立即领取"
                     }
                 ];
@@ -53,17 +53,26 @@
         //领取红包
         $scope.getHonorBag = function (bag) {
             if ($scope.logined) {
-                layer.load(2);
-                redbag.receiveRedbag(bag.id).then(function (data) {
-                    // console.log(data);
+                layer.confirm('本活动红包仅可4选1，确定选择'+bag.amount+'美元红包吗？', {
+                    btn: ['确定','取消'],
+                    title: "领取红包"
+                }, function(){
                     layer.closeAll();
-                    if (data.is_succ) {
-                        getBagList();
-                    } else {
-                        layer.msg(data.message);
-                    }
+                    layer.load(2);
+                    redbag.receiveRedbag(bag.id).then(function (data) {
+                        // console.log(data);
+                        layer.closeAll();
+                        if (data.is_succ) {
+                            getBagList();
+                            layer.alert('恭喜你已成功领取'+bag.amount+'美元红包，赶紧去完成条件兑换把！');
+                        } else {
+                            layer.msg(data.message);
+                        }
+                    });
                 });
+                
             } else {
+
                 layer.msg('请先登录！');
             }
         };
@@ -159,8 +168,8 @@
         function doDesc (desc) {
             var str = desc.split('(')[0];
             return {
-                r1: str.substring(0, 6),
-                r2: str.substring(6)
+                r1: str.split('，')[0],
+                r2: str.split('，')[1]
             };
         }
     }
