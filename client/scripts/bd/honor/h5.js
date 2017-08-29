@@ -3,10 +3,10 @@
         // 微信分享配置
         if (wx) {
             wxShareConfig({
-                title: '王者归来，荣耀操盘 老虎外汇再送最高1000元美金红包和电竞专用手柄',
+                title: '王者归来，荣耀操盘 老虎外汇送大礼',
                 subTitle: '王者归来，荣耀操盘 老虎外汇再送最高1000元美金红包和电竞专用手柄',
                 shareLink: window.location.href,
-                desc: '领着大红包，用着电竞专用手柄和伙伴一起开黑，炒鸡爽~ ',
+                desc: '参与此活动最高1000元美金红包及手机电竞游戏专用手柄',
                 img: window.location.origin + '/activity/logo.png',
                 trackPage: window.location.pathname.replace(/\//gi, ''),
                 debug: false
@@ -47,20 +47,36 @@
             // console.log(isInTigerApp);
             if (isInTigerApp) {
                 if (isLogined) {
-                    layer.open({type: 2,shadeClose: false});
                     var id = $(this).attr("data-id");
-                    publicRequest('receiveRedbag', 'PUT', {
-                        id: id
-                    }).then(function (data) {
-                        // console.log(data);
-                        layer.closeAll();
-                        if (data.is_succ) {
-                            window.location.reload();
-                        } else {
-                            layer.open({
-                                content: data.message,
-                                skin: 'msg',
-                                time: 2 //2秒后自动关闭
+                    var amount = $(this).attr("data-amount");
+                    layer.open({
+                        content: '本活动红包仅可4选1，确定选择'+amount+'美元红包吗？'
+                        ,btn: ['确定', '取消']
+                        ,yes: function(index){
+                            layer.closeAll();
+                            layer.open({type: 2,shadeClose: false});
+                            publicRequest('receiveRedbag', 'PUT', {
+                                id: id
+                            }).then(function (data) {
+                                // console.log(data);
+                                layer.closeAll();
+                                if (data.is_succ) {
+                                    layer.open({
+                                        content: '恭喜你已成功领取'+amount+'美元红包，赶紧去完成条件兑换把！',
+                                        skin: 'msg',
+                                        time: 2 //2秒后自动关闭
+                                    });
+
+                                    setTimeout(function () {
+                                        window.location.reload();
+                                    }, 1500);
+                                } else {
+                                    layer.open({
+                                        content: data.message,
+                                        skin: 'msg',
+                                        time: 2 //2秒后自动关闭
+                                    });
+                                }
                             });
                         }
                     });
@@ -233,8 +249,8 @@
         function doDesc (desc) {
             var str = desc.split('(')[0];
             return {
-                r1: str.substring(0, 6),
-                r2: str.substring(6)
+                r1: str.split('，')[0],
+                r2: str.split('，')[1]
             };
         }
 
@@ -253,26 +269,26 @@
             bagList.data = [
                 {
                     amount: 1000,
-                    front_desc_fir: "活动期间完成",
-                    front_desc_sec: "180手交易",
+                    front_desc_fir: "完成180手交易",
+                    front_desc_sec: "期限120天",
                     front_recevie_status: "立即领取"
                 },
                 {
                     amount: 500,
-                    front_desc_fir: "活动期间完成",
-                    front_desc_sec: "90手交易",
+                    front_desc_fir: "完成90手交易",
+                    front_desc_sec: "期限120天",
                     front_recevie_status: "立即领取"
                 },
                 {
                     amount: 200,
-                    front_desc_fir: "活动期间完成",
-                    front_desc_sec: "40手交易",
+                    front_desc_fir: "完成40手交易",
+                    front_desc_sec: "期限60天",
                     front_recevie_status: "立即领取"
                 },
                 {
                     amount: 100,
-                    front_desc_fir: "活动期间完成",
-                    front_desc_sec: "25手交易",
+                    front_desc_fir: "完成25手交易",
+                    front_desc_sec: "期限60天",
                     front_recevie_status: "立即领取"
                 }
             ];
