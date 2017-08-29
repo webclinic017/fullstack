@@ -30,6 +30,7 @@
         $scope.toTrackRegisterSensorsdata = toTrackRegisterSensorsdata;
         $scope.toTrackLoginSensorsdata = toTrackLoginSensorsdata;
         $scope.toTrackBannerSensorsdata = toTrackBannerSensorsdata;
+        $scope.toQuickPageviewSensorsdata = toQuickPageviewSensorsdata;
 
         $rootScope.personalCookiesInfo = {
             userCode: $cookies["user_code"],
@@ -169,15 +170,19 @@
             // 神策数据统计
             sa.track('btn_login');
         }
-        function toTrackBannerSensorsdata(event, title, index) {
-            // console.info(event.target.href, title, index);
+        function toTrackBannerSensorsdata(title, index) {
             // umeng
             _czc.push(['_trackEvent', '首页Banner', '点击', index]);
             // 神策数据统计
             sa.track('btn_banner', {
-                banner_title: title,
-                banner_url: event.target.href,
-                banner_index: index
+                pc_banner_name: title,
+                pc_banner_location: index
+            });
+        }
+
+        function toQuickPageviewSensorsdata (masterName) {    // 浏览高手页面
+            sa.track('$pageview', {
+                master_name: masterName
             });
         }
     }
