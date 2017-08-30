@@ -4,6 +4,8 @@
 @include b(bd_honor) {
     min-height: 500px;
     background: url('/images/bd_honor/bd_honor_bg.jpg');
+    background-repeat: no-repeat;
+    background-color: #000;
     background-position: center top;
     background-size: auto auto;
     padding-top: 500px;
@@ -131,13 +133,10 @@
         }
         .bag_btn_wrapper {
             padding-top: 15px;
-        }
-        .bag_btn {
-            background: #ffd302;
-            color: #000;
-            border: none;
-            padding: 4px 20px;
-            border-radius: 8px;
+
+            img {
+                width: 120px;
+            }
         }
     }
 }
