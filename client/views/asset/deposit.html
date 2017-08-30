@@ -86,7 +86,7 @@
             <div class="col-xs-6">
                 <div class="deposit__way" ng-class="{active: deposit.type === 'alipay', disabled: !deposit.alipay}" ng-click="changeDepositType('alipay')">
                     支付宝
-                    <span ng-show="deposit.type === 'alipay'" class="font-dark font-size-12">限额3000美金/天</span>
+                    <span ng-show="deposit.alipayAbleTip" class="">限额3000美金/天</span>
                 </div>
                 <p class="deposit__way-tip" ng-class="{active: deposit.alipayTip}">支付宝只支持3000美金/天以下入金，请更换支付方式或分批次入金</p>
             </div>

@@ -17,6 +17,7 @@
                 // RMB:         // 折合人民币
             },
             alipay: true,
+            alipayAbleTip: false, 
             alipayTip: false,
             wallet: true,
             walletTip: false,
@@ -148,6 +149,12 @@
         }
 
         function changeDepositType (type) {
+            $scope.deposit.alipayAbleTip = false;
+
+            if (!$scope.deposit.alipay) {
+                $scope.deposit.alipayAbleTip = true;
+            }
+
             if (type === 'invest') {
                 $scope.deposit.type = type;
             }
@@ -156,6 +163,7 @@
             }
             if ((type === 'alipay') && $scope.deposit.alipay) {
                 $scope.deposit.type = type;
+                $scope.deposit.alipayAbleTip = true;
             }
         }
         function checkInputAmount () {
@@ -174,6 +182,7 @@
 
             if (Number($scope.deposit.amount) > $scope.alipayAble) {
                 $scope.deposit.alipay = false;
+                $scope.deposit.alipayAbleTip = true;
                 
                 if ($scope.deposit.type === 'alipay') {
                     $scope.deposit.type = 'invest';
@@ -182,6 +191,10 @@
             } else {
                 $scope.deposit.alipay = true;
                 $scope.deposit.alipayTip = false;
+
+                if ($scope.deposit.type !== 'alipay') {
+                    $scope.deposit.alipayAbleTip = false;
+                }
             }
         }
 
