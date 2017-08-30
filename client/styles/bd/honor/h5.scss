@@ -1,0 +1,198 @@
+@include b(m_honor_layout) {
+
+}
+@include b(m_honor) {
+    min-height: px2rem(2400);
+    background: url('/images/bd_honor/m_honor_bg.jpg');
+    background-position: center top;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-color: #000;
+    color: #fff;
+    padding-top: px2rem(304);
+
+    @include e(box1) {
+        width: px2rem(696);
+        height: px2rem(406);
+        background: url('/images/bd_honor/m_honor_1.png');
+        background-size: 100% 100%;
+        margin: 0 auto;
+
+        .bag_tip {
+            padding-top: px2rem(75);
+            text-align: center;
+            font-size: px2rem(20);
+
+            span {
+                padding: px2rem(6) px2rem(24);
+            }
+        }
+        .bag_wrapper {
+            padding-top: px2rem(32);
+            padding-left: px2rem(25);
+            padding-right: px2rem(25);
+        }
+        .bag_item {
+            width: 25%;
+            float: left;
+
+            .bag {
+                width: px2rem(138);
+                height: px2rem(179);
+                background: url('/images/bd_honor/m_honor_bag.png');
+                background-size: 100% 100%;
+                margin: 0 auto;
+                text-align: center;
+
+                .tit {
+                    font-size: px2rem(30);
+                    padding-top: px2rem(10);
+                    line-height: px2rem(38);
+                }
+                .tip {
+                    font-size: px2rem(20);
+                }
+            }
+            .bag_btn_wrapper {
+                text-align: center;
+                padding-top: px2rem(25);
+            }
+            .bag_btn {
+                width: px2rem(111);
+                height: px2rem(48);
+                font-size: px2rem(20);
+                
+                border: none;
+                color: #fff;
+
+                &.is_recevie {
+                    background: url('/images/bd_honor/m_honor_btn_2.png');
+                    background-size: 100% 100%;   
+                }
+                &.not_recevie {
+                    background: url('/images/bd_honor/m_honor_btn_1.png');
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+
+    @include e(box2) {
+        width: px2rem(696);
+        height: px2rem(806);
+        background: url('/images/bd_honor/m_honor_2.png');
+        background-size: 100% 100%;
+        margin: px2rem(50) auto 0px;
+
+        .bag_tip {
+            padding: px2rem(64) px2rem(64) 0;
+            text-align: center;
+            font-size: px2rem(20);
+        }
+        .bag_tit {
+            padding-top: px2rem(560);
+            text-align: center;
+            font-size: px2rem(25);
+        }
+        .bag_btn_wrapper {
+            text-align: center;
+            padding-top: px2rem(25);
+        }
+        .bag_btn {
+            width: px2rem(111);
+            height: px2rem(48);
+            font-size: px2rem(20);
+            color: #fff;
+            border: none;
+
+            &.is_recevie {
+                background: url('/images/bd_honor/m_honor_btn_2.png');
+                background-size: 100% 100%;   
+            }
+            &.not_recevie {
+                background: url('/images/bd_honor/m_honor_btn_1.png');
+                background-size: 100% 100%;
+            }
+        }
+    }
+    @include e(rules) {
+        width: px2rem(696);
+        height: px2rem(453);
+        background: url('/images/bd_honor/m_honor_3.png');
+        background-size: 100% 100%;
+        margin: px2rem(50) auto 0px;
+        padding: px2rem(80) px2rem(32) 0px;
+
+        p {
+            padding-bottom: px2rem(16);
+            font-size: px2rem(20);
+        }
+    }
+    @include e(footer) {
+        padding-top: px2rem(38);
+        text-align: center;
+
+        .bd_honor_logo {
+            width: px2rem(256);
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+            }
+        }
+        .bd_honor_tip {
+            padding-top: px2rem(20);
+            font-size: px2rem(20);
+        }
+        .bag_btn_wrapper {
+            padding-top: px2rem(32);
+        }
+        .bag_btn {
+            background: #ffd302;
+            color: #000;
+            border: none;
+            padding: px2rem(6.4) px2rem(20);
+            border-radius: px2rem(8);
+        }
+    }
+
+}
+.layer-adress-wrapper {
+    width: 80%;
+    margin: 0 auto;
+
+    ::-webkit-input-placeholder { /* WebKit browsers */  
+        font-size: 12px
+    }  
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
+        font-size: 12px
+    }  
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */  
+        font-size: 12px
+    }  
+    :-ms-input-placeholder { /* Internet Explorer 10+ */  
+        font-size: 12px
+    }  
+
+    .layer-adress {
+        width: 60%;
+        border: 1px solid #ccc;
+        padding: 4px 0px 3px 10px;
+        height: 20px;
+        float: left;
+    }
+    .layer-adress-btn {
+        width: 25%;
+        float: right;
+        background: linear-gradient(left, #f9e266 , #ffbd43);
+        background: -o-linear-gradient(left, #f9e266, #ffbd43);
+        background: -moz-linear-gradient(left, #f9e266, #ffbd43);
+        background: -webkit-linear-gradient(left, #f9e266 , #ffbd43);
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        border-radius: 4px;
+        color: #333;
+        font-size: 12px;
+    }
+}
