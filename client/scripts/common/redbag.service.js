@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('redbag', redbag);
 
-    redbag.$inject = ['$http', 'api', 'publicHttp'];
+    redbag.$inject = ['$http', 'api', 'publicHttp', '$cookies'];
 
-    function redbag($http, api, publicHttp) {
+    function redbag($http, api, publicHttp, $cookies) {
         var o = api.redbag;
         var service = {
             getRedbagPool: getRedbagPool,
@@ -14,7 +14,10 @@
             receiveRedbag: receiveRedbag,
             exchangeRedbag: exchangeRedbag,
             getRedbagNum: getRedbagNum,
-            setRedbagReaded: setRedbagReaded
+            setRedbagReaded: setRedbagReaded,
+            checkHonorStatus: checkHonorStatus,
+            receiveHonor: receiveHonor,
+            exchangeHonor: exchangeHonor
         };
         return service;
 
@@ -24,12 +27,14 @@
          * @method getRedbagPool
          * @param {Number} page 
          * @param {Number} pagesize
+         * @param {Number} group  条件分组
          */
-        function getRedbagPool(offset, limit) {
+        function getRedbagPool(offset, limit, group) {
 
             return publicHttp.dealPublicRequest(o.getRedbagPoolApi, 'GET', {
                 offset: offset,
-                limit: limit
+                limit: limit,
+                group: group
             });
         }
 
@@ -91,6 +96,25 @@
         function setRedbagReaded() {
 
             return publicHttp.dealPublicRequest(o.setRedbagReadedApi, 'PUT');
+        }
+
+        // 荣耀王者活动接口
+        function checkHonorStatus () {
+            var token = $cookies["token"] || '';
+            var $url = o.checkHonorStatusApi+"?token="+token;
+            return $http.get($url)
+        }
+        function receiveHonor () {
+            var token = $cookies["token"] || '';
+            var $url = o.receiveHonorApi+"?token="+token;
+            return $http.post($url);
+        }
+        function exchangeHonor (address) {
+            var token = $cookies["token"] || '';
+            var $url = o.exchangeHonorApi+"?token="+token;
+            return $http.post($url, {
+                address: address
+            });
         }
     }
 })();
