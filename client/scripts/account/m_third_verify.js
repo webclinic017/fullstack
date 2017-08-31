@@ -104,7 +104,7 @@ $(document).ready(function () {
     // setTimeout(function () {
     //     layer.closeAll();
     //     // getKycList();
-    //     step = 6;
+    //     step = 5;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
     // }, 1000);
