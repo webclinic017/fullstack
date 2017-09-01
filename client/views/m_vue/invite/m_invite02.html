@@ -9,64 +9,52 @@
 
 <% include /common/vendor/h5.utiljs.html %>
 <% include /common/statistic/main.html %>
-<body class="invite02_body">
+<body>
 <div class="m_share02_layout" id="m_share02_layout">
     <div class="share02_main">
-        <div class="share02_main__banner <%= lang.text('companyEnName') %>"></div>
-        <div class="p share02_main__invite">
-            <div class="share02_main__invite-friends clearfix">
-                <div class="invite_amount">
-                    <p>已邀请人数</p>
-                    <span id="invited_amount">0</span>
+        <div class="share02_main__box">
+            <div class="share02_main__title clearfix">
+                <p class="tit">邀请好友<br>赢取10美金</p>
+                <%if(lang.isCompany("tigerwit")){%>
+                    <p class="pic"><img src="/images/basic_logo_tw.png"></p>
+                <%} else if (lang.isCompany("pandafx")) {%>
+                    <p class="pic"><img src="/images/basic_logo_panda_black.png"></p>
+                <%}%>
+            </div>
+            <div class="share02_main__list" id="invite_history_list">
+                
+            </div>
+            <div class="share02_main__content clearfix">
+                <div class="info">
+                    <p class="tip">已邀请人数</p>
+                    <p class="num">0</p>
                 </div>
-                <div class="invite_income">
-                    <p>累计邀请收益($)</p>
-                    <span id="invited_income">0.00</span>
+                <div class="status">
+                    <p class="tip">奖励状态</p>
+                    <p class="c <%= lang.text('companyEnName') %>"></p>
                 </div>
             </div>
         </div>
-        <div class="bdt p share02_main__history">
-            <h5 class="title <%= lang.text('companyEnName') %>">邀请记录</h5>
-            <table>
-                <colgroup>
-                    <col width="30%"></col>
-                    <col width="40%"></col>
-                    <col width="30%"></col>
-                </colgroup>
-                <thead>
-                <tr>
-                    <th>好友昵称</th>
-                    <th>状态</th>
-                    <th>我的佣金($)</th>
-                </tr>
-                </thead>
-                <tbody id="history_list">
-                    <!--模板引擎填充-->
-                </tbody>
-                <tfoot>
-                    <tr>
-                        <td colspan="3">
-                            <span class="more" id="invite02_load">加载更多</span>
-                            <span class="loading">加载中...</span>
-                            <span class="complete">加载完毕</span>
-                        </td>
-                    </tr>
-                </tfoot>
-            </table>
+
+        <div class="share02_main__rules">
+            <p>
+                1.注册即获得邀请类红包“人从众”邀请3名好友注册，且至少有1人入金并完成1手交易即可兑现，每位用户仅可领取一次。
+            </p>
+            <p>
+                2.您只有通过邀请链接进行注册的好友才算有效。
+            </p>
+            <p>
+                3.同一手机号，身份证号和银行卡号视为同一用户。
+            </p>
+            <p>
+                4.任何通过第三方作弊软件刷取好友邀请奖励，一经发现<%= lang.text('companyZhName')%>有权取消红包兑现奖励。
+            </p>
+            <p>
+                5.本活动最终解释权归<%= lang.text('companyZhName')%>所有。如有疑问，请咨询客服<%= lang.text('telephone')%>。
+            </p>
         </div>
-        <div class="bdt p share02_main__rule">
-            <!--<h5 class="title">邀请好友规则</h5>
-            <p>1、只有通过邀请链接进行注册才算有效。</p>
-            <p>2、不限介绍好友的数量。</p>
-            <p>3、同一手机号码、身份证号和银行卡号视为同一用户。任何通过第三方作弊软件刷取好友邀请奖励的用户，一经发现，<%= lang.text('companyZhName')%>有权取消所有奖励的承兑。</p>
-            <p>4、本活动最终解释权归<%= lang.text('companyZhName')%>所有。如有疑问，请咨询客服 <%= lang.text('telephone')%>。</p>
-            <span id="send_invitation">发送邀请给好友</span>-->
-            <h5 class="title <%= lang.text('companyEnName') %>">邀请好友规则</h5>
-            <p>1、注册即获得邀请类红包“人从众”，邀请3名好友注册，且至少有1人入金并完成1手交易即可兑现, 每位用户仅可领取一次。</p>
-            <p>2、您只有通过邀请链接进行注册的好友才算有效。</p>
-            <p>3、同一手机号，身份证号和银行卡号视为同一用户。</p>
-            <p>4、任何通过第三方作弊软件刷取好友邀请奖励，一经发现<%= lang.text('companyZhName')%>有权取消红包兑现奖励。</p>
-            <p>4、本活动最终解释权归<%= lang.text('companyZhName')%>所有。如有疑问，请咨询客服 <%= lang.text('telephone')%>。</p>
+        
+        <div class="share02_main__send_btn">
             <span id="send_invitation" class="<%= lang.text('companyEnName') %>">发送邀请给好友</span>
         </div>
         <div class="share_box" id="share02_box">
@@ -84,21 +72,13 @@
 </div>
 </body>
 <script id="invite_table" type="text/template">
-    <$if(list.length > 0){$>
+    
+    <div class="invite_pic_list relative">
         <$for(var i=0; i<list.length; i++){$>
-            <tr>
-                <td><$=list[i].username$></td>
-                <td><$=list[i].status$></td>
-                <td><$=list[i].money$></td>
-            </tr>
+            <span class="item"><img src="/avatar/<$=list.res_id$>_150.jpg"></span>
         <$}$>
-    <$} else {$>
-        <tr>
-            <td></td>
-            <td>暂无数据!</td>
-            <td></td>
-        </tr>
-    <$}$>
+    </div>
+    
 </script>
 <% include /common/vendor/h5.js.html %>
 <!-- build:js(client) /scripts/m_invite.js -->
