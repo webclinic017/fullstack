@@ -25,25 +25,25 @@
                     {
                         amount: 1000,
                         front_desc_fir: "完成180手交易",
-                        front_desc_sec: "期限120天",
+                        front_desc_sec: "兑换期限120天",
                         front_recevie_status: "立即领取"
                     },
                     {
                         amount: 500,
                         front_desc_fir: "完成90手交易",
-                        front_desc_sec: "期限120天",
+                        front_desc_sec: "兑换期限120天",
                         front_recevie_status: "立即领取"
                     },
                     {
                         amount: 200,
                         front_desc_fir: "完成40手交易",
-                        front_desc_sec: "期限60天",
+                        front_desc_sec: "兑换期限60天",
                         front_recevie_status: "立即领取"
                     },
                     {
                         amount: 100,
                         front_desc_fir: "完成25手交易",
-                        front_desc_sec: "期限60天",
+                        front_desc_sec: "兑换期限60天",
                         front_recevie_status: "立即领取"
                     }
                 ];
