@@ -183,73 +183,73 @@
         'use strict';
         if (!document.getElementById("m_share02_layout")) return false;
 
-        var page = 1;
-        var limit = 8;
-        var load_status = 1;   // 1 loading, 2 more, 3 complete
         var list = {
             list: []
         };
-        $(".share02_main__history table tfoot .loading").css("display", "block");
+        var listBoxWidth = parseInt($("#invite_history_list").width()); //盒子宽度
+        var picNumAble = parseInt((listBoxWidth - 60) / 30) + 1;    //可以容纳的头像数量
+        var listWrapperLeft = "0px";
+        // console.log(listBoxWidth, picNumAble);
+
+        $(document).on('touchend', '.share02_main__content .status .c.active', function (e) {
+            callNative({
+                type: 'back_red_packet'
+            });
+        });
 
         getInviteInfo();
-
-        $(".share02_main__history table tfoot .more").on('touchend', function () {
-            $(".share02_main__history table tfoot span").css("display", "none");
-            $(".share02_main__history table tfoot .loading").css("display", "block");
-
-            page++;
-            getInviteInfo();
-        });
         /*获取邀请概览*/
         function getInviteInfo() {
-            var offset = (page - 1) * limit;
 
             publicRequest('getInviteList', 'GET', {
-                offset: offset,
-                limit: limit
+                offset: 0,
+                limit: 1000
             }).then(function (data) {
                 if (!data) return;
                 if (data.is_succ) {
-                    list.list = list.list.concat(data.data.records);
+                    list.list = data.data.records;
+
+                    if (picNumAble < list.list.length) {
+                        $.each(list.list, function (index, value) {
+                            value.left = (index*((listBoxWidth-60)/(list.list.length-1))).toFixed(2)+"px";
+                        });
+                    } else {
+                        listWrapperLeft = (listBoxWidth-60-(list.list.length-1)*30)/2+"px";
+
+                        $.each(list.list, function (index, value) {
+                            value.left = index*30+"px";
+                        });
+                    }
+
+                    var cBtn = ".share02_main__content .status .c";
+                    $(".share02_main__content .info .num").html(data.data.record_count);
+                    
+                    if (data.data.bonus_status == 1) {
+                        $(cBtn).html("不可兑换");
+                    } else if (data.data.bonus_status == 2) {
+                        $(cBtn).html("点击领取10美金");
+                        $(cBtn).addClass("active");
+                    } else if (data.data.bonus_status == 3) {
+                        $(cBtn).html("已兑换");
+                    } else if (data.data.bonus_status == 4) {
+                        $(cBtn).html("已过期");
+                    } else if (data.data.bonus_status == 5) {
+                        $(cBtn).html("已失效");
+                    }
+
                     /*模板引擎*/
                     baidu.template.LEFT_DELIMITER = '<$';
                     baidu.template.RIGHT_DELIMITER = '$>';
                     var list_str = baidu.template('invite_table', list);
-                    $("#history_list").html(list_str);
-                    $("#invited_amount").html(data.data.record_count);
-                    $("#invited_income").html(data.data.profit);
+                    $("#invite_history_list").html(list_str);
 
-                    if ((offset + limit) >= data.data.record_count) {
-                        $(".share02_main__history table tfoot span").css("display", "none");
-                        $(".share02_main__history table tfoot .complete").css("display", "block");
-                    } else {
-                        $(".share02_main__history table tfoot span").css("display", "none");
-                        $(".share02_main__history table tfoot .more").css("display", "block");
-                    }
+                    $("#invite_history_list .invite_pic_list").css("marginLeft", listWrapperLeft);
+
+                    $.each($("#invite_history_list .invite_pic_list .item"), function (index, value) {
+                        $(value).css("left", list.list[index].left);
+                    });
                 }
             });
-            // $.ajax({
-            //     url: "/action/public/v3/get_invite_friends_info",
-            //     type: "get",
-            //     data: {
-            //         page: 1,
-            //         pagesize: 50
-            //     },
-            //     success: function (data) {
-            //         if (data.is_succ == true) {
-            //             var list = {
-            //                 list: data.data
-            //             };
-            //             /*模板引擎*/
-            //             baidu.template.LEFT_DELIMITER = '<$';
-            //             baidu.template.RIGHT_DELIMITER = '$>';
-            //             var list_str = baidu.template('invite_table', list);
-            //             $("#history_list").html(list_str);
-            //             $("#invited_amount").html(data.sum);
-            //             $("#invited_income").html(data.profit);
-            //         }
-            //     }
-            // });
         }
 
     }());
