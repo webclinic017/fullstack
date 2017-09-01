@@ -484,7 +484,7 @@ $(document).ready(function () {
         if (step === 3) {
             var userAgent = navigator.userAgent.toLowerCase();
             var index = userAgent.indexOf("android");
-            if(index >= 0 && company != 'juyoulicai'){  
+            if(index >= 0){  
                 var androidVersion = userAgent.slice(index+8, index+11); 
                 // console.log(userAgent);  
                 // console.log(androidVersion);
