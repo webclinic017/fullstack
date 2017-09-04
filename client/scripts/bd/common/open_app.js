@@ -17,7 +17,15 @@
             window.location.href = url.down;
         } else{
             if (userAgent.indexOf("Safari") != -1) {
-                window.location.href = url.openIos+page;
+                if (isAndriod()) {
+                    iframe.src = url.openAndriod+page;
+
+                    timer = setTimeout(function() {
+                      window.location.href = url.down;
+                    }, 500);
+                } else {
+                   window.location.href = url.openIos+page; 
+                }
             } else {
                 body.appendChild(iframe);
                 if (isAndriod()) {
