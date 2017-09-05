@@ -428,7 +428,7 @@ module.exports = function (app) {
     });
 
     // 条件和条款
-    app.route('/web/blog/:subpage(risk|statement|notice)').get(function (req, res) {
+    app.route('/web/blog/:subpage(risk|statement|notice|legal)').get(function (req, res) {
         var subpage = req.params.subpage || 'risk';
         var pageInfo = {
             id: subpage
@@ -520,6 +520,17 @@ module.exports = function (app) {
                 res.render('bd/live/h5', extendPublic({}, req));
             } else {
                 res.render('bd/live/web', extendPublic({}, req));
+            }
+        }
+    });
+
+    app.route('/bd/honor').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit') {
+            if (isMobile(req)) {
+                res.render('bd/honor/h5', extendPublic({}, req));
+            } else {
+                res.render('bd/honor/web', extendPublic({}, req));
             }
         }
     });

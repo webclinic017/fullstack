@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('WebAgentController', WebAgentController);
 
-    WebAgentController.$inject = ['$scope', 'validator', '$modal', 'market'];
+    WebAgentController.$inject = ['$scope', 'validator', '$modal', 'market', '$location'];
 
-    function WebAgentController ($scope, validator, $modal, market) {
+    function WebAgentController ($scope, validator, $modal, market, $location) {
 
         $scope.becomeAgent = {
             phone: undefined
@@ -24,14 +24,21 @@
         $scope.showErr = showErr;
         $scope.submitForm = submitForm;
 
+        var sources = getQueryString('q') || 1;
+        var ad_position = getQueryString('w') || 3;
+
         function submitForm () {
             showErr('phone');
-
+            console.log(sources, ad_position);
             if ($scope.agentForm.$invalid) {
                 return;
             }
             
-            market.checkPhone($scope.becomeAgent.phone).then(function (data) {
+            market.checkPhone({
+                phone: $scope.becomeAgent.phone,
+                sources: sources,
+                ad_position: ad_position
+            }).then(function (data) {
                 // console.info(data);
                 if (!data) return;
                 if (data.is_succ) {
@@ -60,6 +67,12 @@
                     }
                 }
             });
+        }
+
+        function getQueryString(name){
+             var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+             var r = window.location.search.substr(1).match(reg);
+             if(r!=null)return  unescape(r[2]); return null;
         }
 
         function hideErr(name) {
