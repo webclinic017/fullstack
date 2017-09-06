@@ -236,18 +236,23 @@
                     } else if (data.data.bonus_status == 5) {
                         $(cBtn).html("已失效");
                     }
-
+                    
                     /*模板引擎*/
                     baidu.template.LEFT_DELIMITER = '<$';
                     baidu.template.RIGHT_DELIMITER = '$>';
-                    var list_str = baidu.template('invite_table', list);
-                    $("#invite_history_list").html(list_str);
+                    
+                    if (list.list.length) {
+                        var list_str = baidu.template('invite_table', list);
+                        $("#invite_history_list").html(list_str);
 
-                    $("#invite_history_list .invite_pic_list").css("marginLeft", listWrapperLeft);
+                        $("#invite_history_list .invite_pic_list").css("marginLeft", listWrapperLeft);
 
-                    $.each($("#invite_history_list .invite_pic_list .item"), function (index, value) {
-                        $(value).css("left", list.list[index].left);
-                    });
+                        $.each($("#invite_history_list .invite_pic_list .item"), function (index, value) {
+                            $(value).css("left", list.list[index].left);
+                        });
+                    } else {
+                        $("#invite_history_list .init").addClass("active");
+                    }
                 }
             });
         }

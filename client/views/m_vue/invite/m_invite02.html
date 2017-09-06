@@ -22,7 +22,7 @@
                 <%}%>
             </div>
             <div class="share02_main__list" id="invite_history_list">
-                
+                <div class="init">您还没有邀请好友哦</div>
             </div>
             <div class="share02_main__content clearfix">
                 <div class="info">
@@ -75,7 +75,7 @@
     
     <div class="invite_pic_list relative">
         <$for(var i=0; i<list.length; i++){$>
-            <span class="item"><img src="/avatar/<$=list.res_id$>_150.jpg"></span>
+            <span class="item"><img src="/avatar/<$=list[i].res_id$>_150.jpg"></span>
         <$}$>
     </div>
     
