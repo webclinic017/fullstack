@@ -52,6 +52,7 @@ $(document).ready(function () {
     var step = 0;
     var bt=baidu.template;
     var mt4Id = '';
+    var company = '';
 
     layer.open({type: 2, shadeClose: false});
 
@@ -64,6 +65,7 @@ $(document).ready(function () {
         var private_key = getUrlParam("private_key") || '';
         var action = getUrlParam("action") || '';
         var sign = getUrlParam("sign") || '';
+        company = private_key;
 
         var expiresDate = new Date();
         expiresDate.setTime(expiresDate.getTime() + (30 * 60 * 1000));  // 30分钟过期
@@ -104,7 +106,7 @@ $(document).ready(function () {
     // setTimeout(function () {
     //     layer.closeAll();
     //     // getKycList();
-    //     step = 5;
+    //     step = 3;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
     // }, 1000);
