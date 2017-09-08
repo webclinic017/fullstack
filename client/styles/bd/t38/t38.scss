@@ -124,12 +124,12 @@
     @include e(cont1) {
         width: 1032px;
         height: 719px;
-        background: url("/images/bd_t38/web_cont_1.png") no-repeat;
+        background: url("/images/bd_t38/web_cont_1_new.png") no-repeat;
         background-size: 100% 100%;
         margin-top: 150px;
 
         &.pandafx {
-            background: url("/images/bd_t38/web_cont_1_panda.png") no-repeat;
+            background: url("/images/bd_t38/web_cont_1_panda_new.png") no-repeat;
         }
     }
     @include e(cont2) {
