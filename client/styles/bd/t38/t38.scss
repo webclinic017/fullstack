@@ -68,7 +68,7 @@
 
     @include e(title) {
         padding-top: 500px;
-        padding-left: 36px;
+        padding-left: 86px;
         color: #fff;
 
         .tit {
@@ -85,7 +85,7 @@
     @include e(reg) {
         width: 310px;
         position: absolute;
-        top: 360px;
+        top: 325px;
         left: 1010px;
         background: rgba(255,255,255,0.2);
         padding: 20px;
