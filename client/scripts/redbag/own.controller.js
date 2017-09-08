@@ -23,19 +23,10 @@
         }
 
         function openSystemMdl(type) {
-            $modal.open({
-                templateUrl: '/views/asset/verify_modal.html',
-                size: 'sm',
-                backdrop: true,
-                controller: function ($scope, $modalInstance) {
-                    $scope.type = type;
-                    $scope.closeModal = closeModal;
-
-                    function closeModal() {
-                        $modalInstance.dismiss();
-                    }
-                }
-            });
+            $scope.$emit('global.openDredgeMdl', {
+                position: 'redbag',
+                userInfo: $scope.personal
+            })
         }
 
         var pagesize = 9;

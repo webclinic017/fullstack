@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('GlobalController', GlobalController);
 
-    GlobalController.$inject = ['$rootScope', '$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang', '$cookies', '$timeout', 'redbag', '$cookieStore'];
+    GlobalController.$inject = ['$rootScope', '$scope', '$state', '$window', 'config', 'account', 'authorization', 'lang', '$cookies', '$timeout', 'redbag', '$cookieStore', '$modal'];
 
     /**
      * @name GlobalController
      * @desc
      */
-    function GlobalController($rootScope, $scope, $state, $window, config, account, authorization, lang, $cookies, $timeout, redbag, $cookieStore) {
+    function GlobalController($rootScope, $scope, $state, $window, config, account, authorization, lang, $cookies, $timeout, redbag, $cookieStore, $modal) {
         $scope.userstatus = {
             logined: false
         };
@@ -31,6 +31,7 @@
         $scope.toTrackLoginSensorsdata = toTrackLoginSensorsdata;
         $scope.toTrackBannerSensorsdata = toTrackBannerSensorsdata;
         $scope.toQuickPageviewSensorsdata = toQuickPageviewSensorsdata;
+        $scope.openDredgeMdl = openDredgeMdl;
 
         $rootScope.personalCookiesInfo = {
             userCode: $cookies["user_code"],
@@ -180,10 +181,58 @@
             });
         }
 
-        function toQuickPageviewSensorsdata (masterName) {    // 浏览高手页面
+        function toQuickPageviewSensorsdata(masterName) {    // 浏览高手页面
             sa.track('$pageview', {
                 master_name: masterName
             });
         }
+
+        // 开户弹窗
+        /**
+         * openDredgeMdl
+         * @param {*Object} resolve 
+         * position redbag copy payment
+         * userInfo personal
+         */
+        function openDredgeMdl(position) {
+            $modal.open({
+                templateUrl: '/views/account/dredge_modal.html',
+                size: 'lt',
+                backdrop: 'static',
+                resolve: {
+                    passedScope: function () {
+                        return position
+                    }
+                },
+                controller: ['$scope', 'passedScope', '$modalInstance', '$state', '$timeout', function ($scope, passedScope, $modalInstance, $state, $timeout) {
+                    $scope.closeModal = closeModal;
+                    $scope.position = passedScope.position;
+                    $scope.dredge_type = undefined
+
+                    var info = passedScope.userInfo;
+                    console.log(info)
+                    if (info) {
+                        if (!!info.mt4_id && !!info.is_true) {
+                            $scope.dredge_type = 'live'
+                        } else {
+                            $scope.dredge_type = 'demo'
+                        }
+                    } else {
+                        $scope.dredge_type = 'all'
+                    }
+                    console.log($scope.dredge_type)
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }]
+            });
+        }
+
+        // 事件监听 全局使用
+        $scope.$on('global.openDredgeMdl', function (e, resolve) {
+            if (!resolve) { return }
+            openDredgeMdl(resolve)
+        })
     }
 })();

@@ -26,6 +26,29 @@
     }
 }
 
+@mixin button-gradient($color, $backgroundstart, $backgroundend, $border-radius) {
+    color: $color;
+    @include gradient-horizontal($backgroundstart, $backgroundend);
+    @include box-shadow(0 25px 60px $backgroundstart);
+    border-radius: $border-radius;
+    border: none;
+    font-weight: 500;
+
+    &:hover,
+    &:active {
+        @include gradient-horizontal(lighten($backgroundstart, 5%), lighten($backgroundend, 5%));
+    }
+    
+    &.active {
+        @include gradient-horizontal(lighten($backgroundstart, 5%), lighten($backgroundend, 5%));
+
+        &:hover,
+        &:active {
+            @include gradient-horizontal(lighten($backgroundstart, 5%), lighten($backgroundend, 5%));
+        }
+    }
+}
+
 // Button sizes
 @mixin button-size($padding-vertical, $padding-horizontal, $font-size, $height, $border-radius) {
     padding: $padding-vertical $padding-horizontal;

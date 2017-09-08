@@ -1,0 +1,37 @@
+<div class="sys_modal_v2">
+    <button class="close" ng-click="closeModal()">&times;</button>
+    <div class="sys_modal_v2__content">
+        <div class="text-left" ng-if="dredgeType == 'demo'">
+            <h3 class="sys_modal_v2__title text-center">恭喜您已开通老虎外汇体验金账户</h3>
+            <p class="sys_modal_v2__desp">即可体验无风险交易</p>
+            <p class="sys_modal_v2__desp">领取体验进红包，完成任务即可兑换成现金使用</p>
+            <p class="sys_modal_v2__desp">体验金账户不可提现，入金并完成实名认证，即可升级为真实账户</p>
+            <div class="btn_wrapper">
+                <a class="btn btn-primary-gradient mg-tp-20" ng-click="closeModal()" ui-sref="space.center.index">完成</a>
+            </div>
+        </div>
+        <div class="text-left" ng-if="dredgeType == 'live'">
+            <h3 class="sys_modal_v2__title text-center">恭喜您已开通老虎外汇真实交易账户</h3>
+            <p class="sys_modal_v2__desp">您离交易还差两步：1.上传身份审核 2.入金</p>
+            <p class="sys_modal_v2__desp">即刻入金，立即领取$1000红包！</p>
+            <p class="sys_modal_v2__desp">老虎外汇保护客户资金安全。</p>
+            <p class="sys_modal_v2__desp">客户资金完全与公司资金隔离，保存在独立银行账户中，确保属于客户的资金不会被用于任何其他目的。</p>
+            <div class="btn_wrapper">
+                <a class="btn btn-primary-gradient mg-tp-20" ng-click="go_realname()">去实名认证</a>
+            </div>
+        </div>
+        <!-- <div class="text-center" ng-if="id_uploaded">
+            <h3 class="sys_modal_v2__title">认证信息已提交，正在审核中</h3>
+            <p class="sys_modal_v2__desp">审核时间：</p>
+            <br>
+            <p class="sys_modal_v2__desp">工作日9:00-19:00 将在15分钟左右完成审核</p>
+            <p class="sys_modal_v2__desp">工作日19:00以后 将在21:00、23:00统一审核</p>
+            <p class="sys_modal_v2__desp">非工作日将在10:00、16:00、22:00统一审核</p>
+            <br>
+            <p class="sys_modal_v2__desp">请留意查询您的审核状态</p>
+            <div class="btn_wrapper">
+                <a class="btn btn-primary-gradient mg-tp-20" ng-click="closeModal()">完成</a>
+            </div>
+        </div> -->
+    </div>
+</div>

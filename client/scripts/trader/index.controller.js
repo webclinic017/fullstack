@@ -151,6 +151,13 @@
 
         // openSystemMdl('verify', '复制');
         function openSystemMdl(type, info) {
+            if(type == 'verify'){
+                $scope.$emit('global.openDredgeMdl', {
+                    position: 'redbag',
+                    userInfo: $scope.personal
+                })
+                return
+            }
             $modal.open({
                 templateUrl: '/views/web/trader/system_modal.html',
                 size: 'sm',

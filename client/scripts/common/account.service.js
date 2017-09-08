@@ -13,6 +13,7 @@
             login: login,
             checkLogined: checkLogined,
             setToken: setToken,
+            updataId: updataId,
             checkExist: checkExist,
             updataUserInfo: updataUserInfo,
             getRCaptcha: getRCaptcha,
@@ -488,6 +489,10 @@
             return publicHttp.dealPublicRequest(o.getAdvertiseRecords, 'GET', {
                 identifier: identifier
             });
+        }
+
+        function updataId(params){
+            return publicHttp.dealPublicRequest(o.updataId, 'PUT', params);
         }
     }
 })();

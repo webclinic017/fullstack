@@ -17,7 +17,8 @@
         var account = {
             getPersonalInfoDegreeApi: urlOrigin2 + '/user/perfect_degree',
             loginApi: urlOrigin2 + '/auth/login',
-            updataUserInfoApi: urlOrigin2 + '/user/auth_info',
+            updataUserInfoApi: urlOrigin2 + '/v2/user/auth_info',
+            updataId: urlOrigin2 + '/user/update_idno',
             checkLoginedApi: urlOrigin2 + '/auth/check',
             setTokenApi: urlOrigin2 + '/validation/code_token',
             checkExistApi: urlOrigin2 + '/user/check_exists',
