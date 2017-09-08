@@ -23,7 +23,7 @@
 			// 兼容安卓键盘弹出BUG
 			debugAndroidKey({
 				focusSelector: '.section4 input',
-				ctrlBox: '.redbag_regBox',
+				ctrlBox: '.submit_form_box',
 				focusCss: {
 					marginTop: '15%'
 				},
@@ -31,7 +31,7 @@
 					//   $('.connect_us').hide();
 				},
 				blurCss: {
-					marginTop: '63%'
+					marginTop: '10rem'
 				},
 				blurFn: function () {
 					//   $('.connect_us').show();
