@@ -14,7 +14,7 @@
         background-color: #fff !important;
     }
     body {
-        font-family: "Helvetica Neue",Helvetica,"Lantinghei SC","Microsoft YaHei",Arial,sans-serif;
+        font-family: PingFang SC,Helvetica,Microsoft YaHei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif;
         background-color: #fff !important;
     }
     body,
@@ -97,7 +97,8 @@
 
     </head>
 <body>
-<div class="fr-view">
+    <div class="title" style="font-size: 18px; text-align: center; margin: 20px; font-weight: bold;"></div>
+<div class="fr-view" style="margin: 0 20px;">
     <div style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #eee;">
         <img style="width: 50px;position: absolute;top: 50%;left: 50%;margin-left: -25px;margin-top: -25px;" src="/ngsrc/loading.gif">
     </div>
@@ -107,12 +108,14 @@
 <script>
     (function () {
         var $viewWrapper = $(".fr-view");
+        var $title = $(".title");
 
         $.get('/api/dissertation', {
             id: <%= pageInfo.id%>
         }).then(function (data) {
             // console.log(data);
             if (data.is_succ) {
+                $title.html(data.data.name);
                 $viewWrapper.html(data.data.content);
             } else {
                 $viewWrapper.html('<p style="text-align: center;font-size: 30px">404</p>');
