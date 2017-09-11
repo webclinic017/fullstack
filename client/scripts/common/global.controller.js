@@ -215,10 +215,8 @@
                         if (!!info.mt4_id && !!info.is_true) {
                             $scope.dredge_type = 'live'
                         } else {
-                            $scope.dredge_type = 'demo'
+                            $scope.dredge_type = 'all'
                         }
-                    } else {
-                        $scope.dredge_type = 'all'
                     }
                     console.log($scope.dredge_type)
 
