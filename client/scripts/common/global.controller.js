@@ -62,20 +62,20 @@
 
                         // 判断是否开通过账户
                         var dredged_type = '';
-                        if(data.mt4_id){
+                        if (data.mt4_id) {
                             // 开通过真实账户
-                            if(data.is_true == 1){
+                            if (data.is_true == 1) {
                                 dredged_type = 'live'
                             }
                             // 开通过模拟账户
-                            else if(data.is_true == 2){
+                            else if (data.is_true == 2) {
                                 dredged_type = 'demo'
                             }
-                        // 未开通
+                            // 未开通
                         } else {
                             dredged_type = 'unknow'
                         }
-            
+
                         angular.extend($scope.personal, {
                             dredged_type: dredged_type
                         });
@@ -225,11 +225,24 @@
                         return position
                     }
                 },
-                controller: ['$scope', 'passedScope', '$modalInstance', '$state', '$timeout', function ($scope, passedScope, $modalInstance, $state, $timeout) {
+                controller: ['$scope', 'passedScope', '$modalInstance', '$state', '$timeout', '$location', function ($scope, passedScope, $modalInstance, $state, $timeout, $location) {
                     $scope.closeModal = closeModal;
                     $scope.position = passedScope.position;
-                    
+
                     $scope.dredge_type = 'all';
+
+                    $scope.confirmLive = function () {
+                        console.log(123)
+                        layer.confirm('开通真实账户后，将不再支持开通体验金账户', {
+                            btn: ['取消', '继续'], //按钮
+                            title: '提示'
+                        }, function () {
+                            layer.closeAll();
+                        }, function () {
+                            window.location.href = location.origin + '/space/#/authen/investInfo?dredge_type=live'
+                            closeModal();
+                        });
+                    }
 
                     function closeModal() {
                         $modalInstance.dismiss();
