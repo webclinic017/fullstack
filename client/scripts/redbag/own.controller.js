@@ -8,35 +8,18 @@
     RedbagOwnController.$inject = ['$scope', 'redbag', '$modal', '$timeout'];
 
     function RedbagOwnController($scope, redbag, $modal, $timeout) {
+        
         var hasAlerted = false;
-
-        if (!$scope.personal.profile_check) {
-            $scope.$on('global_controller_has_get_info', function () {
-                console.log('global_controller_has_get_info')
-                if ($scope.personal.verify_status < 3 && !hasAlerted) {
-                    openSystemMdl('redbag');
-                    hasAlerted = true;
-                }
-            });
-        } else if ($scope.personal.verify_status < 3) {
-            openSystemMdl('redbag');
-        }
-
-        function openSystemMdl(type) {
-            $modal.open({
-                templateUrl: '/views/asset/verify_modal.html',
-                size: 'sm',
-                backdrop: true,
-                controller: function ($scope, $modalInstance) {
-                    $scope.type = type;
-                    $scope.closeModal = closeModal;
-
-                    function closeModal() {
-                        $modalInstance.dismiss();
-                    }
-                }
-            });
-        }
+        $scope.$on('global_controller_has_get_info', function () {
+            console.log('$scope.personal.dredged_type',$scope.personal.dredged_type)
+            var type = $scope.personal.dredged_type;
+            // 未开通
+            if(type == 'unknow'){
+                $scope.$emit('global.openDredgeMdl', {
+                    position: 'invite',
+                });
+            }
+        });
 
         var pagesize = 9;
         $scope.tabType = 1;             // 1 可用， 2 红包记录

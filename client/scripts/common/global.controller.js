@@ -59,6 +59,27 @@
                         if (data.profile_check != 3) {
                             getAuthStatus();
                         }
+
+                        // 判断是否开通过账户
+                        var dredged_type = '';
+                        if(data.mt4_id){
+                            // 开通过真实账户
+                            if(data.is_true == 1){
+                                dredged_type = 'live'
+                            }
+                            // 开通过模拟账户
+                            else if(data.is_true == 2){
+                                dredged_type = 'demo'
+                            }
+                        // 未开通
+                        } else {
+                            dredged_type = 'unknow'
+                        }
+            
+                        angular.extend($scope.personal, {
+                            dredged_type: dredged_type
+                        });
+
                         $scope.$broadcast('global_controller_has_get_info');
                     });
                 }
@@ -207,7 +228,8 @@
                 controller: ['$scope', 'passedScope', '$modalInstance', '$state', '$timeout', function ($scope, passedScope, $modalInstance, $state, $timeout) {
                     $scope.closeModal = closeModal;
                     $scope.position = passedScope.position;
-                    $scope.dredge_type = 'all'
+                    
+                    $scope.dredge_type = 'all';
 
                     function closeModal() {
                         $modalInstance.dismiss();

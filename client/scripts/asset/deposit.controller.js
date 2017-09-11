@@ -96,7 +96,14 @@
             }
             amount = Number(amount).toFixed(2);
 
-            if ($scope.personal.is_true == 2) {
+            // 获取开通状态
+            var dredged_type = $scope.personal.dredged_type;
+            // 未开通
+            if(dredged_type == 'unknow'){
+                $scope.$emit('global.openDredgeMdl', {
+                    position: 'deposit',
+                });
+            } else if(dredged_type == 'demo'){
                 layer.confirm('充值成功后，您的账户将由体验金账户升级为交易账户，体验金账户将失效', {
                     btn: ['取消', '继续'], //按钮
                     title: '提示'
@@ -107,14 +114,14 @@
                 });
             } else {
                 confirmDeposit();
-            }  
+            }
             
             function confirmDeposit() {
                 if ($scope.deposit.type === 'invest' || $scope.deposit.type === 'alipay') {
-                    if ($scope.personal.profile_check != 3) {
-                        openSystemMdl('deposit');
-                        return;
-                    }
+                    // if ($scope.personal.profile_check != 3) {
+                    //     openSystemMdl('deposit');
+                    //     return;
+                    // }
                     var platform = $scope.deposit.type === 'alipay' ? 4 : undefined;
                     var w = $window.open('/waiting');
 
