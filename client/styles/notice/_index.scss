@@ -1,15 +1,44 @@
 @include b (notice) {
+    box-shadow: 1px 5px 30px darken($gray, 10%);
+    padding-left: 40px;
+    @include e (nav) {
+        height: 70px;
+        
+        @include m(item){
+            width: 120px;
+            font-size: 18px;
+            font-weight: 500;
+            color: $gray-base;
+            position: relative;
+            &.has_new::before {
+                display: inline-block;
+                position: absolute;
+                width: 8px;
+                height: 8px;
+                background: $brand-danger-dark;
+                border-radius: 4px;
+                top: -5px;
+                right: 2px;
+            }
+            &:after {
+
+            }
+            &:hover {
+
+            }
+        }
+    }
 
     @include e (list) {
         color: $gray-darkest;
     }
 
     @include e (list-li) {
-        padding: 20px 20px 5px 20px;
+        padding: 20px 20px 5px 0px;
         margin-bottom: 20px;
         overflow: hidden;
-        background: #fff;
-        border: 1px solid $gray;
+        // background: #fff;
+        // border: 1px solid $gray;
 
         &:hover {
             background: $gray-lightest;
