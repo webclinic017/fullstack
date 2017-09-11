@@ -478,13 +478,6 @@ module.exports = function (app) {
         res.render('waiting', extendPublic({}, req));
     });
 
-    app.route('/bd/yellow').get(function (req, res) {
-        if (COMPANY_NAME === 'tigerwit') {
-            setEnvCf(req, res);
-            res.render('bd/yellow', extendPublic({}, req));
-        }
-    });
-
     //理财江湖
     app.route('/bd/t34').get(function (req, res) {
         setEnvCf(req, res);
@@ -512,7 +505,7 @@ module.exports = function (app) {
             res.render('404.html', extendPublic({}, req));
         }
     });
-
+    // 直播落地页
     app.route('/bd/live').get(function (req, res) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit') {
@@ -523,7 +516,7 @@ module.exports = function (app) {
             }
         }
     });
-
+    // 王者荣耀活动页
     app.route('/bd/honor').get(function (req, res) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit') {
@@ -534,95 +527,13 @@ module.exports = function (app) {
             }
         }
     });
-
-    app.route('/bd/t29').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('bd/t29/web.html', extendPublic({}, req));
-    });
-
-    app.route('/bd/t30').get(function (req, res) {
-        setEnvCf(req, res);
-        if (isMobile(req)) {
-            res.render('bd/t30/h5.html', extendPublic({}, req))
-        } else {
-            res.render('bd/t30/web.html', extendPublic({}, req));
-        }
-    });
-    app.route('/bd/t27').get(function (req, res) {
-        setEnvCf(req, res);
-        if (isMobile(req)) {
-            res.render('bd/t27/h5.html', extendPublic({}, req))
-        } else {
-            res.render('bd/t27/web.html', extendPublic({}, req));
-        }
-    });
-    
-
+    // 微信小游戏
     app.route('/bd/t31_game').get(function (req, res) {
         setEnvCf(req, res);
         res.render('bd/t31/h5.game.html', extendPublic({}, req))
     });
-    app.route('/bd/t31').get(function (req, res) {
-        setEnvCf(req, res);
-        if (isMobile(req)) {
-            // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
-            if (COMPANY_NAME === 'tigerwit') {
-                res.render('bd/t31/h5.html', extendPublic({
-                    pageInfo: ""
-                }, req))
-            }
-        } else {
-            res.render('bd/t31/web.html', extendPublic({}, req));
-        }
-    });
-    app.route('/bd/t32').get(function (req, res) {
-        setEnvCf(req, res);
-
-        // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
-        if (COMPANY_NAME === 'tigerwit') {
-            res.render('bd/t31/h5.html', extendPublic({
-                pageInfo: "t32"
-            }, req))
-        }
-    });
-    app.route('/bd/t32_t').get(function (req, res) {
-        setEnvCf(req, res);
-        // 暂时把派克道森的H5强跳到pc页 同bd下check.js同时修改
-        if (COMPANY_NAME === 'tigerwit') {
-            res.render('bd/t31/h5.html', extendPublic({
-                pageInfo: "t32_t"
-            }, req))
-        }
-    });
+    
     // t33 作为固定推广链接，要更新最新的落地页到这个地址
-    app.route('/bd/:page(|t33_t|t33_a|t33_b)').get(function (req, res) {
-        var pageId = req.params.page || 't33';
-        setEnvCf(req, res);
-        if (isMobile(req)) {
-            if (COMPANY_NAME === 'tigerwit') {
-                if (pageId == 't33') {
-                    res.render('bd/t33/h5.html', extendPublic({
-                        regBtn_text: '领取赠金',
-                        coInfo: "",
-                        page: pageId,
-                        sel_text: '首选'
-                    }, req));
-                } else {
-                    res.render('bd/t33/h5.html', extendPublic({
-                        regBtn_text: '前往领取赠金',
-                        coInfo: "Tiger Financial Technology PTY. Ltd.",
-                        page: pageId,
-                        sel_text: '优选'
-                    }, req));
-                }
-            } else {
-                res.render('bd/t33/web.sub.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('bd/t33/web.sub.html', extendPublic({}, req));
-        }
-    });
-
     app.route('/bd/t33').get(function (req, res) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
@@ -640,29 +551,10 @@ module.exports = function (app) {
     app.route('/bd/t35').get(function (req, res) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
-            // if (isMobile(req)) {
-            //     res.render('bd_m_redbag', extendPublic({}, req));
-            // } else {
-            //     res.render('bd_redbag', extendPublic({}, req));
-            // }
             if (isMobile(req)) {
                 res.render('bd/t38/h5.html', extendPublic({}, req))
             } else {
                 res.render('bd/t38/web.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('404.html', extendPublic({}, req));
-        }
-    });
-
-    // 红包活动4.24 活动
-    app.route('/bd/t35_r').get(function (req, res) {
-        setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
-            if (isMobile(req)) {
-                res.render('404.html', extendPublic({}, req));
-            } else {
-                res.render('bd/redbag/web2', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
