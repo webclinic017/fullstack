@@ -123,8 +123,8 @@
                     if ($scope.personal.master === 1) {
                         openSystemMdl('isMaster');
                     } else {
-                        // 判断是否实名认证 //复制不需要实名认证
-                        if ($scope.personal.profile_check == 3) {
+                        // 判断是否开通帐号
+                        if ($scope.personal.verify_status >= 3) {
                             var minCopyAmount = parseFloat($scope.master.min_copy_amount, 10);
 
                             if (typeof avaCopyAmount === 'undefined') {
@@ -153,7 +153,7 @@
         function openSystemMdl(type, info) {
             if(type == 'verify'){
                 $scope.$emit('global.openDredgeMdl', {
-                    position: 'redbag',
+                    position: 'trader',
                     userInfo: $scope.personal
                 })
                 return

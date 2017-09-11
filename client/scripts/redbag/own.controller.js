@@ -13,20 +13,29 @@
         if (!$scope.personal.profile_check) {
             $scope.$on('global_controller_has_get_info', function () {
                 console.log('global_controller_has_get_info')
-                if ($scope.personal.profile_check != 3 && !hasAlerted) {
+                if ($scope.personal.verify_status < 3 && !hasAlerted) {
                     openSystemMdl('redbag');
                     hasAlerted = true;
                 }
             });
-        } else if ($scope.personal.profile_check != 3) {
+        } else if ($scope.personal.verify_status < 3) {
             openSystemMdl('redbag');
         }
 
         function openSystemMdl(type) {
-            $scope.$emit('global.openDredgeMdl', {
-                position: 'redbag',
-                userInfo: $scope.personal
-            })
+            $modal.open({
+                templateUrl: '/views/asset/verify_modal.html',
+                size: 'sm',
+                backdrop: true,
+                controller: function ($scope, $modalInstance) {
+                    $scope.type = type;
+                    $scope.closeModal = closeModal;
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
         }
 
         var pagesize = 9;

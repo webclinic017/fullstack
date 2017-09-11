@@ -207,18 +207,7 @@
                 controller: ['$scope', 'passedScope', '$modalInstance', '$state', '$timeout', function ($scope, passedScope, $modalInstance, $state, $timeout) {
                     $scope.closeModal = closeModal;
                     $scope.position = passedScope.position;
-                    $scope.dredge_type = undefined
-
-                    var info = passedScope.userInfo;
-                    console.log(info)
-                    if (info) {
-                        if (!!info.mt4_id && !!info.is_true) {
-                            $scope.dredge_type = 'live'
-                        } else {
-                            $scope.dredge_type = 'all'
-                        }
-                    }
-                    console.log($scope.dredge_type)
+                    $scope.dredge_type = 'all'
 
                     function closeModal() {
                         $modalInstance.dismiss();
