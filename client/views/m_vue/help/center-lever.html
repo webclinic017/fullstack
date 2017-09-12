@@ -32,9 +32,15 @@
                 </p>
                 <p class="desp_separator"></p>
                 <!-- <h6 class="desp_title">选择</h6> -->
-                <p class="desp_subdesp">
-                    在<%=lang.text("companyZhName")%>“交易”模块中，添加的外汇、贵金属均有三种不同杠杆倍率，根据自己交易习惯和资金量，选择对应的交易品种及杠杆倍率即可。
-                </p>
+                <%if(lang.isTigerSpecial()){%>
+                    <p class="desp_subdesp">
+                        在<%=lang.text("companyZhName")%>“交易”模块中，添加的外汇均有三种不同杠杆倍率，根据自己交易习惯和资金量，选择对应的交易品种及杠杆倍率即可。
+                    </p>
+                <%} else { %>
+                    <p class="desp_subdesp">
+                        在<%=lang.text("companyZhName")%>“交易”模块中，添加的外汇、贵金属均有三种不同杠杆倍率，根据自己交易习惯和资金量，选择对应的交易品种及杠杆倍率即可。
+                    </p>
+                <%}%>
                 <img src="/white_label/mobile/help_lever-step1.png" alt="" class="desp_img">
             </div>
         </li>

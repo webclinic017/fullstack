@@ -45,6 +45,11 @@
         }
     }
 
+    function isTigerSpecial() {
+        var userPlatForm = window.navigator.userAgent;
+        return userPlatForm.indexOf("tiger_special") != -1;
+    }
+
     function isAndriod() {
         var bIsAndroid = navigator.userAgent.toLowerCase().match(/android/i) == "android";
         return bIsAndroid;
