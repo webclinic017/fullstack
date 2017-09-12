@@ -14,7 +14,8 @@
             console.log('$scope.personal.dredged_type',$scope.personal.dredged_type)
             var type = $scope.personal.dredged_type;
             // 未开通
-            if(type == 'unknow'){
+            if(type == 'unknow' && !hasAlerted){
+                hasAlerted = true
                 $scope.$emit('global.openDredgeMdl', {
                     position: 'invite',
                 });
