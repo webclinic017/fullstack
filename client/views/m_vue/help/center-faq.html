@@ -57,9 +57,16 @@
             <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">交易</h5>
             <div class="help1-navi-title__item-desp">
                 <h6 class="desp_title faq">Q:平台有多少交易品种？</h6>
-                <p class="desp_subdesp faq">
-                    A：<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>向客户提供20多种外汇交易品种、2种贵金属（黄金、白银）、原油和天然气以及多种FD股指差价合约。
-                </p>
+                <%if(lang.isTigerSpecial()){%>
+                    <p class="desp_subdesp faq">
+                        A：<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>向客户提供20多种外汇交易品种以及多种FD股指差价合约。
+                    </p>
+                <%} else { %>
+                    <p class="desp_subdesp faq">
+                        A：<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>向客户提供20多种外汇交易品种、2种贵金属（黄金、白银）、原油和天然气以及多种FD股指差价合约。
+                    </p>
+                <%}%>
+                
                 <h6 class="desp_title faq">Q：为什么我的APP上没有黄金？</h6>
                 <p class="desp_subdesp faq">
                     A：在自选页面，点击右上角“添加”，即可找到黄金，将它添加到自选列表里即可。
@@ -69,31 +76,57 @@
                     A：在自选界面找到您想查看的交易品种，点开此交易品种，点击左上角交易品种名称后面的“？”图标，您能查看到该产品的交易时间、库存费等详细信息。
                 </p>
                 <h6 class="desp_title faq">Q：杠杆是多少？</h6>
-                <p class="desp_subdesp faq">
-                    A：对于外汇和贵金属，<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>向客户同时提供3种杠杆， 50倍、100倍和200倍。 
-                    </br>
-                    对于原油、天然气和CFD股指差价合约，我们只提供一种杠杆1:100。
-                </p>
+                <%if(lang.isTigerSpecial()){%>
+                    <p class="desp_subdesp faq">
+                        A：对于外汇，<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>向客户同时提供3种杠杆， 50倍、100倍和200倍。 
+                        </br>
+                        对于CFD股指差价合约，我们只提供一种杠杆1:100。
+                    </p>
+                <%} else { %>
+                    <p class="desp_subdesp faq">
+                        A：对于外汇和贵金属，<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>向客户同时提供3种杠杆， 50倍、100倍和200倍。 
+                        </br>
+                        对于原油、天然气和CFD股指差价合约，我们只提供一种杠杆1:100。
+                    </p>
+                <%}%>
+                
                 <h6 class="desp_title faq">Q：如何调整杠杆</h6>
                 <p class="desp_subdesp faq">
                     A：杠杆无需调整，体现在产品中，直接交易对应的产品就可以了。交易品种后面的数字代表杠杆大小，没有数字默认是100倍的杠杆。例如：GBPUSD50代表50倍杠杆，GBPUSD200代表200倍杠杆，GBPUSD代表100倍杠杆。
                 </p>
                 <h6 class="desp_title faq">Q：交易收取什么费用</h6>
-                <p class="desp_subdesp faq">
-                    A：CFD股指差价合约每手10美金手续费，外汇、贵金属、原油、天然气没有佣金和手续费，只收取相应的点差。
-                </p>
+                <%if(lang.isTigerSpecial()){%>
+                    <p class="desp_subdesp faq">
+                        A：CFD股指差价合约每手10美金手续费，外汇没有佣金和手续费，只收取相应的点差。
+                    </p>
+                <%} else { %>
+                    <p class="desp_subdesp faq">
+                        A：CFD股指差价合约每手10美金手续费，外汇、贵金属、原油、天然气没有佣金和手续费，只收取相应的点差。
+                    </p>
+                <%}%>
                 <h6 class="desp_title faq">Q：为什么交易一开始的获利是负的？</h6>
                 <p class="desp_subdesp faq">
                     A：因为报价中包括买入价和卖出价两个价格（买入价高于卖出价，中间有点差），如果您对某一品种看涨，以买入价进场，以卖出价平仓退场。买卖价之间存在差额，所以您一进入市场就先显示亏损。
                 </p>
                 <h6 class="desp_title faq">Q：<%=lang.text("companyEnName")%>最低和最高交易手数是多少？</h6>
-                <p class="desp_subdesp faq">
-                    A：外汇、原油及贵金属产品最低开仓为0.01手，天然气最低开仓为0.1手，CFD产品最低开仓为1手。
-                    </br> 
-                    外汇、贵金属单张订单交易的开仓上限为50手，能源交易单张订单开仓上限为20手，CFD产品单张订单开仓上限为10手。 
-                    </br>                     
-                    但是如果账户资金足够大，那么可以下多张订单，我们对订单的数量是没有限制。
-                </p>
+                <%if(lang.isTigerSpecial()){%>
+                    <p class="desp_subdesp faq">
+                        A：外汇产品最低开仓为0.01手，CFD产品最低开仓为1手。
+                        </br> 
+                        外汇单张订单交易的开仓上限为50手，能源交易单张订单开仓上限为20手，CFD产品单张订单开仓上限为10手。 
+                        </br>                     
+                        但是如果账户资金足够大，那么可以下多张订单，我们对订单的数量是没有限制。
+                    </p>
+                <%} else { %>
+                    <p class="desp_subdesp faq">
+                        A：外汇、原油及贵金属产品最低开仓为0.01手，天然气最低开仓为0.1手，CFD产品最低开仓为1手。
+                        </br> 
+                        外汇、贵金属单张订单交易的开仓上限为50手，能源交易单张订单开仓上限为20手，CFD产品单张订单开仓上限为10手。 
+                        </br>                     
+                        但是如果账户资金足够大，那么可以下多张订单，我们对订单的数量是没有限制。
+                    </p>
+                <%}%>
+                
                 <h6 class="desp_title faq">Q：持仓有时间限制吗？</h6>
                 <p class="desp_subdesp faq">
                     A：持仓没有时间限制，只要没有到达止损、止盈底线，可以长期持仓。
