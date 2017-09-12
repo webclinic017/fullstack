@@ -26,11 +26,19 @@
 
         $scope.openNotice = openNotice;
 
+        $scope.currentMsg = 'trade';
+        $scope.chooseMsg = chooseMsg;
+
         getNoticeList(1);
 
         if ($location.path() === '/space/notice') {
             readAllNotice();
             // console.info("readAll");
+        }
+
+        function chooseMsg(type){
+            $scope.currentMsg = type;
+            // todo
         }
 
         // 获取消息列表
