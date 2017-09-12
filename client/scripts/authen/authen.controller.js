@@ -447,6 +447,8 @@
             $scope.$emit('goState', flow);
         }
 
+        open_modal()
+
         function open_modal(resolve) {
             $modal.open({
                 templateUrl: '/views/authen/alert_modal.html',
