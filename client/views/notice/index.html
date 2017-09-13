@@ -1,11 +1,11 @@
 <div class="notice">
     <div class="notice__nav clearfix">
-        <div class="notice__nav-item fl" ng-class="{ 'active': currentMsg == 'trade', 'has_new': traderMsgHasNew }" ng-click="chooseMsg('trade')">交易提醒</div>
-        <div class="notice__nav-item fl" ng-class="{ 'active': currentMsg == 'system', 'has_new': systemMsgHasNew }" ng-click="chooseMsg('system')">系统提醒</div>
+        <div class="notice__nav-item fl" ng-class="{ 'active': currentMsg == 'trade', 'has_new': unreadMsg.trade > 0 }" ng-click="chooseMsg('trade')">交易提醒</div>
+        <div class="notice__nav-item fl" ng-class="{ 'active': currentMsg == 'system', 'has_new': unreadMsg.system > 0 }" ng-click="chooseMsg('system')">系统提醒</div>
     </div>
     <ul class="notice__list" ng-if="currentMsg == 'trade'">
         <div tw-loading-img></div>
-        <li class="notice__list-li" ng-repeat="notice in noticeList">
+        <li class="notice__list-li" ng-repeat="notice in noticeList.trade">
             <div class="row">
                 <div class="col-xs-12">
                     <p class="notice__li-title">{{notice.title}}</p>
@@ -18,14 +18,18 @@
                     <div ng-if="notice.content.length > 150 && notice.openOrClose == 'close'" class="text-right">
                         <a class="notice__close" href="" ng-click="openNotice(notice, 0)">收起</a>
                     </div>
-                
                 </div>
             </div>
+        </li>
+        <li class="notice__list-li" ng-if="noticeList.trade.length == 0">
+            <p class="text-left">
+                暂无提醒
+            </p>
         </li>
     </ul>
     <ul class="notice__list" ng-if="currentMsg == 'system'">
         <div tw-loading-img></div>
-        <li class="notice__list-li" ng-repeat="notice in noticeList">
+        <li class="notice__list-li" ng-repeat="notice in noticeList.system">
             <div class="row">
                 <div class="col-xs-12">
                     <p class="notice__li-title">{{notice.title}}</p>
@@ -38,9 +42,13 @@
                     <div ng-if="notice.content.length > 150 && notice.openOrClose == 'close'" class="text-right">
                         <a class="notice__close" href="" ng-click="openNotice(notice, 0)">收起</a>
                     </div>
-                
                 </div>
             </div>
+        </li>
+        <li class="notice__list-li" ng-if="noticeList.system.length == 0">
+            <p class="text-left">
+                暂无提醒
+            </p>
         </li>
     </ul>
     <div class="text-center">

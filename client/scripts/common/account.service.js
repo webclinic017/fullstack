@@ -277,10 +277,11 @@
          * @method getNoticeList
          *
          */
-        function getNoticeList(offset, limit) {
+        function getNoticeList(offset, limit, type) {
             return publicHttp.dealPublicRequest(o.getNoticeListApi, 'GET', {
                 offset: offset,
-                limit: limit
+                limit: limit,
+                type: type
             });
         }
 
@@ -290,8 +291,10 @@
          * @method getAllRead
          *
          */
-        function getAllRead() {
-            return publicHttp.dealPublicRequest(o.getAllReadApi, 'PUT');
+        function getAllRead(type) {
+            return publicHttp.dealPublicRequest(o.getAllReadApi, 'PUT', {
+                type: type
+            });
         }
 
         /**

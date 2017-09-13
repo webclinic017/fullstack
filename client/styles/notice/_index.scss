@@ -22,7 +22,7 @@
                 border-radius: 4px;
                 position: absolute;
                 top: 0px;
-                right: -10px;
+                right: -12px;
             }
             &:hover, &.active{
                 position: relative;
@@ -35,7 +35,7 @@
                     border-radius: 2px;
                     @include gradient-horizontal($brand-primary-lighter, $brand-index-line);
                     position: absolute;
-                    top: 125%;
+                    top: 110%;
                     left: 50%;
                     margin-left: -15px;
                 }
@@ -45,6 +45,7 @@
 
     @include e (list) {
         color: $gray-darkest;
+        position: relative;
     }
 
     @include e (list-li) {

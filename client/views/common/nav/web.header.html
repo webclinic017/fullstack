@@ -42,8 +42,8 @@
         <div class="navbar_info" ng-cloak ng-if="personalCookiesInfo.userCode">
             <a class="navbar_info__msg" href="/space/#/space/notice">
                 <!-- 有新消息时显示 -->
-                <span class="navbar_info__number" ng-if="personal.unreadLength > 0">
-                    {{personal.unreadLength}}
+                <span class="navbar_info__number" ng-if="personal.unreadMsg.total > 0">
+                    {{ personal.unreadMsg.total }}
                 </span>
             </a>
 
