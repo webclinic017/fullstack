@@ -19,7 +19,7 @@
                 navClass : 'navbar-2'
             }) %>
         </div>
-        <div class="body">
+        <div class="body" ng-controller="WebDownloadController">
             <div class="index_download_layout">
                 <div class="download_banner">
                     <div class="center download_banner__ctn">
@@ -45,7 +45,7 @@
                             <% if(lang.isCompany('tigerwit')){%>
                             <div class="code">
                                 <div class="img_box">
-                                    <img src="/images/web/download_code.png" alt="code" draggable=false>
+                                    <img src="/images/web/download_m_blank.png" alt="code" draggable=false>
                                 </div>
                                 <p>扫码轻松赚收益</p>
                             </div>
@@ -141,7 +141,7 @@
         </div>
     </div>
     <%- include('/common/vendor/web.js.html') %>
-    <!-- build:js(client) /scripts/home.js -->
+    <!-- build:js(client) /scripts/web_download.js -->
     <script src="/scripts/plugins/sha1.js"></script>
     <script src="/scripts/common/config.service.js"></script>
     <script src="/scripts/common/account.service.js"></script>
@@ -162,7 +162,7 @@
 
     <script src="/scripts/ranklist/all.controller.js"></script>
 
-    <script src="/scripts/home/index.controller.js"></script>
+    <script src="/scripts/web/download.controller.js"></script>
     <!-- endbuild -->
 </body>
 </html>

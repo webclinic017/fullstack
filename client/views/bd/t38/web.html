@@ -129,7 +129,10 @@
         </div>
       </div>
   </div>
-  <% include /common/nav/web.footer.html %>
+  <%if(lang.isCompany('tigerwit')){%>
+    <% include /common/nav/web.footer.html %>
+  <%}%>
+  
   <%- include('/common/statistic/_all.html') %>
 </body>
 
