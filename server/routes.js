@@ -315,6 +315,12 @@ module.exports = function (app) {
         res.render('m_vue/m_third_password', extendPublic({}, req));
     });
 
+    // H5 空白页
+    app.route('/m/blank').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('m_vue/m_blank', extendPublic({}, req));
+    });
+
     /*--------------------APP-End-------------------------*/
 
 
