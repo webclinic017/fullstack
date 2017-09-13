@@ -18,15 +18,15 @@
             //selectPage: , bind to pagination.selectPage
             getList: getNoticeList
         };
+        var pagesize = 10;
 
         $scope.page = 1;
         $scope.noticeList = {
             trade: [],
             system: []
         }
-        var pagesize = 10;
-        $scope.openNotice = openNotice;
         $scope.currentMsg = 'trade';
+        $scope.openNotice = openNotice;
         $scope.chooseMsg = chooseMsg;
         $scope.unreadMsg = {
             trade: 0,
@@ -56,17 +56,14 @@
                 if (!data) return;
                 if (data.is_succ) {
                     $scope.noticeList[type] = data.data.records;
-
                     angular.forEach($scope.noticeList[type], function (value, index) {
                         value.openOrClose = 'open';
-
                         if (value.content.length > 150) {
                             value.contentOmit = value.content.substring(0, 150) + '...';
                         } else {
                             value.contentOmit = value.content;
                         }
                     });
-
                     angular.extend($scope.pagebar.config, {
                         total: data.data.page_count,
                         page: page
