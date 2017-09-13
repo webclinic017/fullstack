@@ -22,9 +22,11 @@ $m-activity-major2:         #e33e4e !default;
 $brand-primary:             #fff000 !default;
 //tiger主题色 - 浅
 $brand-primary-lighter:     #ffed7b !default;
+$brand-primary-mid:         #fae266 !default;
 //tiger主题色 - 深
 $brand-primary-dark:        #fad802 !default;
 $brand-primary-darker:      #ffcd00 !default;
+$brand-primary-darkest:     #ffbf44 !default;
 //首页渐变区线条颜色
 $brand-index-line:          #f3d40a !default;
 //首页渐变区三个颜色
@@ -303,6 +305,7 @@ $modal-backdrop-opacity:        0.5 !default;
 $modal-lg:                      900px !default;
 $modal-md:                      600px !default;
 $modal-sm:                      400px !default;
+$modal-lt:                      520px !default;
 
 //== Pagination
 $pagination-color:                     #ccc !default;

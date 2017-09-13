@@ -43,7 +43,7 @@
                     }
                 })
                 .state('authen.subpage',{
-                    url: '/authen/:subpage',
+                    url: '/authen/:subpage?dredge_type',
                     views: {
                         'nav@authen':{
                             templateUrl: '/views/authen/nav.html'

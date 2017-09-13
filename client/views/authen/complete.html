@@ -1,117 +1,175 @@
 <div class="authen_content mg-tp-30 ctn center">
-    <h2>完善信息</h2>
-    <p class="authen_content__tip">如实填写个人信息是核实您真实身份，保障您资金和帐号安全，隐私信息的重要依据</p>
+    <div class="authen_title">
+        <h2>完善信息</h2>
+        <p class="authen_content__tip">如实填写个人信息是核实您真实身份，保障您资金和帐号安全，隐私信息的重要依据</p>
+    </div>
     <!--<div tw-loading-img></div>-->
     <div class="mg-tp-40 kyc">
        <form name="completeForm" novalidate>
-            <div class="form-control-wrapper">
-                <input class="form-control" 
-                       name="username"
-                       type="text"
-                       placeholder="请为账户设置昵称，有助于您登上高手榜"
-                       required
-                       ng-class="{'form-control-error': (frontErr.username.show && completeForm.username.$invalid)}"
-                       ng-model="completeInfo.username"
-                       twform-valid-txt
-                       data-txt-type="username"
-                       data-min-len="2"
-                       data-max-len="16"
-                       ng-focus="hideErr('username')"
-                       ng-blur="[showErr('username'),checkExsit(1)]">
-
-                <div ng-show="frontErr.username.show">
-                    <p class="alert-arrow_tp_lf" ng-show="completeForm.username.$error.required">
-                        请为账户设置昵称
-                    </p>
-                    <p class="alert-arrow_tp_lf" ng-show="completeForm.username.$error.twformValidTxt">
-                        {{frontErr.username.tip}}
-                    </p>
-                </div>
-
-                <div ng-show="exsit.username.show">
-                    <p class="alert-arrow_tp_lf" ng-show="exsit.username.show">
-                        昵称已存在
-                    </p>
-                </div>
-            </div>
-
-            <div class="form-control-wrapper">
-                <input class="form-control"
-                       name="email"
-                       type="text"
-                       placeholder="请输入您的电子邮箱，用于接收重要信息"
-                       required
-                       ng-class="{'form-control-error': (frontErr.email.show && completeForm.email.$invalid)}"
-                       ng-model="completeInfo.email"
-                       ng-pattern="frontErr.email.reg"
-                       ng-blur="showErr('email')"
-                       ng-focus="[hideErr('email'),checkExsit(2)]">
-
-                <div ng-show="frontErr.email.show">
-                    <p class="alert-arrow_tp_lf" ng-show="completeForm.email.$error.required">
-                        请输入您的电子邮箱
-                    </p>
-                    <p class="alert-arrow_tp_lf" ng-show="completeForm.email.$error.pattern">
-                        电子邮箱格式不正确
-                    </p>
-                </div>
-
-                <div ng-show="exsit.email.show">
-                    <p class="alert-arrow_tp_lf">
-                        电子邮箱已存在
-                    </p>
+            <div class="row">
+                <div class="col-xs-2">
+                    <label>设置昵称</label>
+                </div>        
+                <div class="col-xs-8">
+                    <div class="form-control-wrapper">
+                        <input class="form-control" 
+                                name="username"
+                                type="text"
+                                placeholder="请为账户设置昵称，有助于您登上高手榜"
+                                required
+                                ng-class="{'form-control-error': (frontErr.username.show && completeForm.username.$invalid)}"
+                                ng-model="completeInfo.username"
+                                twform-valid-txt
+                                data-txt-type="username"
+                                data-min-len="2"
+                                data-max-len="16"
+                                ng-focus="hideErr('username')"
+                                ng-blur="[showErr('username'),checkExsit(1)]">
+        
+                        <div ng-show="frontErr.username.show">
+                            <p class="alert-arrow_tp_lf" ng-show="completeForm.username.$error.required">
+                                请为账户设置昵称
+                            </p>
+                            <p class="alert-arrow_tp_lf" ng-show="completeForm.username.$error.twformValidTxt">
+                                {{frontErr.username.tip}}
+                            </p>
+                        </div>
+        
+                        <div ng-show="exsit.username.show">
+                            <p class="alert-arrow_tp_lf" ng-show="exsit.username.show">
+                                昵称已存在
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="form-control-wrapper">
-                <input class="form-control"
-                        name="realname"
-                        type="text"
-                        placeholder="请输入真实姓名"
-                        required
-                        ng-class="{'form-control-error': frontErr.realname.show && completeForm.realname.$invalid}"
-                        ng-model="completeInfo.realname"
-                        ng-pattern="frontErr.realname.reg"
-                        ng-blur="showErr('realname')"
-                        ng-focus="hideErr('realname')">
-
-                <div ng-show="frontErr.realname.show">
-                    <p class="alert-arrow_tp_lf" ng-show="completeForm.realname.$error.required">
-                        请输入真实姓名
-                    </p>
-                    <p class="alert-arrow_tp_lf" ng-show="completeForm.realname.$error.pattern">
-                        {{ frontErr.realname.tip }}
-                    </p>
+            <div class="row">
+                <div class="col-xs-2">
+                    <label>绑定邮箱</label>
+                </div>        
+                <div class="col-xs-8">
+                    <div class="form-control-wrapper">
+                        <input class="form-control"
+                                name="email"
+                                type="text"
+                                placeholder="请输入您的邮箱，有助于接收重要的提醒消息"
+                                required
+                                ng-class="{'form-control-error': (frontErr.email.show && completeForm.email.$invalid)}"
+                                ng-model="completeInfo.email"
+                                ng-pattern="frontErr.email.reg"
+                                ng-blur="[showErr('email'), checkExsit(2)]"
+                                ng-focus="[hideErr('email')]">
+        
+                        <div ng-show="frontErr.email.show">
+                            <p class="alert-arrow_tp_lf" ng-show="completeForm.email.$error.required">
+                                请输入您的电子邮箱
+                            </p>
+                            <p class="alert-arrow_tp_lf" ng-show="completeForm.email.$error.pattern">
+                                电子邮箱格式不正确
+                            </p>
+                        </div>
+        
+                        <div ng-show="exsit.email.show">
+                            <p class="alert-arrow_tp_lf">
+                                电子邮箱已存在
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="form-control-wrapper">
-                <input class="form-control"
-                        name="id_num"
-                        type="text"
-                        placeholder="请输入身份证号"
-                        required
-                        ng-class="{'form-control-error': frontErr.id_num.show && completeForm.id_num.$invalid}"
-                        ng-model="completeInfo.id_num"
-                        ng-pattern="frontErr.id_num.reg"
-                        ng-blur="[showErr('id_num'),checkExsit(4)]"
-                        ng-focus="hideErr('id_num')">
+            <div class="row">
+                <div class="col-xs-2">
+                    <label>居住地址</label>
+                </div>        
+                <div class="col-xs-4">
+                    <div class="form-control-wrapper">
+                        <div class="select">
+                            <input class="select__input"
+                                name="province"
+                                type="text"
+                                placeholder="省份"
+                                required
+                                ng-model="completeInfo.province.key"
+                                ng-class="{'form-control-error': frontErr.province.show && completeForm.province.$invalid}"
+                                ng-blur="showErr('province')"
+                                ng-focus="hideErr('province')">
+                            
+                            <i class="select__icon fa fa-angle-down"></i>
 
-                <div ng-show="frontErr.id_num.show">
-                    <p class="alert-arrow_tp_lf" ng-show="completeForm.id_num.$error.required">
-                        请输入身份证号
-                    </p>
-                    <p class="alert-arrow_tp_lf" ng-show="completeForm.id_num.$error.pattern">
-                        {{ frontErr.id_num.tip }}
-                    </p>
+                            <ul class="select__dropdown" twform-select data-bind-model="completeInfo.province">
+                                
+                                <li ng-repeat="province in address.provinces" ng-class="{'selected': province.code === completeInfo.province.value}">
+                                    <span data-value="{{province.code}}" ng-click="selectRegion('province', province.code)">{{ province.name_cn }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                    
+                        <div ng-show="frontErr.province.show">
+                            <p class="alert alert-arrow_tp_lf" ng-show="completeForm.province.$error.required">
+                                请选择省/市
+                            </p>
+                        </div>
+                    </div>
                 </div>
+                <div class="col-xs-4">
+                    <div class="form-control-wrapper">
+                        <div class="select">
+                            <input class="select__input"
+                                name="city"
+                                type="text"
+                                placeholder="城市"
+                                required
+                                ng-model="completeInfo.city.key"
+                                ng-class="{'form-control-error': frontErr.province.show && completeForm.city.$invalid}"
+                                ng-blur="showErr('city')"
+                                ng-focus="hideErr('city')">
+                            
+                            <i class="select__icon fa fa-angle-down"></i>
 
-                <div ng-show="exsit.id_num.show">
-                    <p class="alert-arrow_tp_lf">
-                        身份证号已存在
-                    </p>
+                            <ul class="select__dropdown" twform-select data-bind-model="completeInfo.city">
+                                
+                                <li ng-repeat="city in address.cities" ng-class="{'selected': city.code === completeInfo.city.value}">
+                                    <span data-value="{{city.code}}" ng-click="selectRegion('city', city.code)">{{ city.name_cn }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div ng-show="frontErr.city.show">
+                            <p class="alert alert-arrow_tp_lf" ng-show="completeForm.city.$error.required">
+                                请选择市/区
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-2">
+                    <label>&nbsp;</label>
+                </div>
+                <div class="col-xs-8">
+                    <div class="form-control-wrapper">
+                        <input class="form-control" 
+                            name="address"
+                            type="text"
+                            placeholder="请输入完整居住地址"
+                            required
+                            ng-class="{'form-control-error': (frontErr.address.show && completeForm.address.$invalid)}"
+                            ng-model="completeInfo.address"
+                            ng-focus="hideErr('address')"
+                            ng-blur="[showErr('address')]">
+        
+                        <div ng-show="frontErr.address.show">
+                            <p class="alert-arrow_tp_lf" ng-show="completeForm.address.$error.required">
+                                请输入完整居住地址
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             
             <div class="text-center" ng-show="backErr.system.show">
                 <p class="alert-system">
@@ -123,12 +181,12 @@
                 <p>{{ backErr.msg }} !</p>
             </div>
 
-            <div class="text-center mg-tp-50 mg-bt-30">
-                <button class="btn btn-primary btn-sm" ng-if="completeInfo.clickable"  ng-click="submitCompleteForm()">
+            <div class="text-left mg-tp-50 mg-bt-30">
+                <button class="btn btn-primary-gradient" ng-if="completeInfo.clickable"  ng-click="submitCompleteForm()">
                     下一步
                 </button>
 
-                <button class="btn btn-primary btn-sm" disabled ng-if="!completeInfo.clickable">
+                <button class="btn btn-primary-gradient btn-sm" disabled ng-if="!completeInfo.clickable">
                     <i class="loading_spinner fa fa-spinner"></i>
                     提交中
                 </button>

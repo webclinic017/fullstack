@@ -1,8 +1,6 @@
 //
 // Buttons
 // --------------------------------------------------
-
-
 // Base styles
 // --------------------------------------------------
 .btn {
@@ -18,13 +16,11 @@
     cursor: pointer;
     @include button-size(0px, $btn-padding-horizontal, $btn-font-size, $btn-height-base, $btn-border-radius);
     @include user-select(none);
-
     &:active,
     &.active {
         outline: 0;
         background-image: none;
     }
-
     &.disabled,
     &[disabled] {
         cursor: not-allowed;
@@ -55,9 +51,11 @@
 .btn-lt {
     @include button-size(0px, $btn-padding-horizontal-lt, $btn-font-size-lt, $btn-height-lt, $btn-border-radius);
 }
+
 .btn-sm {
     @include button-size(0px, $btn-padding-horizontal-sm, $btn-font-size-sm, $btn-height-sm, $btn-border-radius);
 }
+
 .btn-lg {
     @include button-size(0px, $btn-padding-horizontal-lg, $btn-font-size-lg, $btn-height-lg, $btn-border-radius);
 }
@@ -71,4 +69,8 @@
     height: $input-height-base;
     padding: 0;
     line-height: $input-height-base;
+}
+
+.btn-primary-gradient {
+    @include button-gradient($btn-primary-color, $brand-primary-mid, $brand-primary-darkest, 100px);
 }
