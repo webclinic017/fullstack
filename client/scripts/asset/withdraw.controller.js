@@ -87,7 +87,7 @@
                         $scope.withdraw.maxAmount = $scope.maxAmountInvest;
                     }
                 }
-                
+
             } else {
                 $scope.message = {
                     is_succ: false,
@@ -123,29 +123,48 @@
             });
         }
 
-        function openCardMdl() {
-            var personal = {
-                verified: $scope.personal.verified,
-                realname: $scope.personal.realname,
-                profile_check: $scope.personal.profile_check,
-            };
-
-            $modal.open({
-                templateUrl: '/views/asset/card_modal.html',
-                size: 'md',
-                controller: 'AssetCardController',
-                resolve: {
-                    passedScope: function () {
-                        return {
-                            personal: personal,
-                            card: $scope.withdraw.card
-                        };
-                    }
-                }
-            });
+        /**
+         * // 校验开户状态
+         * @param {* 真实账户回调 } liveTodo 
+         */
+        function switchDredge(liveTodo) {
+            // 获取开通状态
+            var dredged_type = $scope.personal.dredged_type;
+            // 未开通
+            if (dredged_type == 'unknow') {
+                $scope.$emit('global.openDredgeMdl', {
+                    position: 'withdraw'
+                });
+            } else if (dredged_type == 'demo') {
+                layer.msg('您当前是体验金账户，无法使用提现功能！');
+            } else if(dredged_type == 'live'){
+                liveTodo && liveTodo()
+            }
         }
 
-
+        function openCardMdl() {
+            switchDredge(function () {
+                var personal = {
+                    verified: $scope.personal.verified,
+                    realname: $scope.personal.realname,
+                    profile_check: $scope.personal.profile_check,
+                };
+    
+                $modal.open({
+                    templateUrl: '/views/asset/card_modal.html',
+                    size: 'md',
+                    controller: 'AssetCardController',
+                    resolve: {
+                        passedScope: function () {
+                            return {
+                                personal: personal,
+                                card: $scope.withdraw.card
+                            };
+                        }
+                    }
+                });
+            })
+        }
 
         // 提现相关的各种弹窗提示
         function openWithdrawMdl(message) {
@@ -176,6 +195,8 @@
             });
         }
 
+        
+
         function openMessageMdl() {
             var message = $scope.message;
 
@@ -203,31 +224,26 @@
         // 提现
         $scope.clickable = true;
         function toWithdraw() {
-            showErr('amount');
-            // console.info($scope.withdrawForm.$invalid);
-            if ($scope.withdrawForm.$invalid) {
-                return;
-            }
-            if ($scope.clickable == false) {
-                return;
-            }
-            // 判断认证状态
-            if ($scope.personal.profile_check != 3) {
-                openSystemMdl('withdraw');
-                return;
-            }
-
-            console.log('toWithdraw is click');
-            $scope.clickable = false;
-
-
-
-            if ($scope.withdraw.type === 'invest') {
-                withdrawInvest();
-            } else {
-                withdrawWallet();
-            }
-
+            // 校验开户状态
+            switchDredge(function () {
+                showErr('amount');
+                // console.info($scope.withdrawForm.$invalid);
+                if ($scope.withdrawForm.$invalid) {
+                    return;
+                }
+                if ($scope.clickable == false) {
+                    return;
+                }
+    
+                console.log('toWithdraw is click');
+                $scope.clickable = false;
+    
+                if ($scope.withdraw.type === 'invest') {
+                    withdrawInvest();
+                } else {
+                    withdrawWallet();
+                }
+            })
         }
 
         function openSystemMdl(type) {
@@ -327,10 +343,10 @@
         }
 
 
-        $scope.formatText = function(text){
+        $scope.formatText = function (text) {
             if (!text) return '';
-            var newText = text.replace(/\\r\\n/g,'<br>');
-            return '6.'+newText;
+            var newText = text.replace(/\\r\\n/g, '<br>');
+            return '6.' + newText;
         }
 
     }

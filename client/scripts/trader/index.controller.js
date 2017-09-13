@@ -123,15 +123,15 @@
                     if ($scope.personal.master === 1) {
                         openSystemMdl('isMaster');
                     } else {
-                        // 判断是否实名认证 //复制不需要实名认证
-                        if ($scope.personal.profile_check == 3) {
+                        // 获取开通状态
+                        var dredged_type = $scope.personal.dredged_type;
+                        // 未开通
+                        if (dredged_type != 'unknow') {
                             var minCopyAmount = parseFloat($scope.master.min_copy_amount, 10);
-
                             if (typeof avaCopyAmount === 'undefined') {
                                 console.log('getting available copy amount');
                                 return;
                             }
-
                             avaCopyAmount = parseFloat(avaCopyAmount, 10);
                             // console.log(avaCopyAmount, minCopyAmount);
                             if (avaCopyAmount < minCopyAmount) {
@@ -140,7 +140,9 @@
                                 openCopyMdl();
                             }
                         } else {
-                            openSystemMdl('verify');
+                            $scope.$emit('global.openDredgeMdl', {
+                                position: 'copy',
+                            });
                         }
                     }
                 }

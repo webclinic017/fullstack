@@ -9,59 +9,66 @@
         .controller('AuthenRealnameController', AuthenRealnameController)
         .controller('AuthenSubmitController', AuthenSubmitController);
 
-    AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state'];
-    AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account'];
-    AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval'];
-    AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
+    AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state', '$stateParams', '$timeout'];
+    AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account', '$location', '$modal'];
+    AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval', '$location', '$modal'];
+    AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location'];
     AuthenSubmitController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
 
     // 主控制器
-    function AuthenController($scope, $cookies, $location, account, $state) {
+    function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout) {
         $scope.flow = {
             step: 1,
             authStatusMap: {
-                "0": "index",        // 未注册 -> 首页
                 '1': 'investInfo',   // 投资信息 - kyc
                 '2': 'complete',     // 完成kyc 完善资料信息
-                '3': 'realname',     // 已经填写真实姓名和身份证号 -> 身份证图片页面
-                '4': 'complete',     // 审核拒绝 -> 姓名、身份证号页面
+                '3': 'realname',     // 未上传过身份证
+                '4': 'realname',     // 审核拒绝 完善资料信息
                 "5": "submit",       // 待审核 -> 审核中页面
                 "6": 'submit',       // 审核通过 -> 审核成功，设置MT4密码页面
-                "7": 'submit'        // 已经开户 -> MT4 帐号设置成功页面
             }
         }
 
-        function goState(dist) {
+        function goState(flow) {
             $state.go('authen.subpage', {
-                subpage: dist
+                subpage: $scope.flow.authStatusMap[flow]
             });
         }
 
         $scope.$on('goState', function (e, flow) {
-            getAuthStatus();
-            if (flow == 'realname') {
-                $scope.flow.step = 3; // 自定状态
-            }
-            if (flow == 'submit') {
-                $scope.flow.step = 5;
-            }
+            $scope.flow.step = flow
             goState(flow);
         });
 
-        $scope.$on('getAuthStatus', function (e, flow) {
-            getAuthStatus();
-        });
-
         if ($scope.personal.verify_status) {
-            goState($scope.flow.authStatusMap[$scope.personal.verify_status]);
+            // 防止不能跳转到本页
+            $timeout(function () {
+                goState($scope.personal.verify_status);
+            });
             $scope.flow.step = $scope.personal.verify_status;
+            showErr4()
         } else {
             getAuthStatus();
         }
 
-        // 获取当前认证状态
-        // getAuthStatus();
         var showMsg = undefined;
+        function showErr4() {
+            if ($scope.personal.verify_status == 4) {
+                if (!showMsg) {
+                    showMsg = layer.msg('您上传的身份证照片审核被拒绝，请重新填写相关信息，被拒原因请查看系统消息。',
+                        {
+                            time: 0,
+                            btn: ['好的'],
+                            yes: function (index) {
+                                layer.close(index)
+                            }
+                        }
+                    );
+                }
+            }
+        }
+
+        // 获取当前认证状态
         function getAuthStatus() {
             if ($scope.personal.verify_status) {
                 return;
@@ -72,27 +79,12 @@
                     $scope.$broadcast("hideLoadingImg");
                     // 控制流程导航active
                     $scope.flow.step = data.data.status;
+                    $scope.personal.verify_status = data.data.status;
                     console.log($scope.flow.step);
                     // 控制当前流程显示页面
-                    goState($scope.flow.authStatusMap[data.data.status]);
+                    goState(data.data.status);
 
-                    if ($scope.personal.profile_check == 1) {
-                        if (!showMsg) {
-                            showMsg = layer.msg('您上传的身份证照片审核被拒绝，请重新填写相关信息，被拒原因请查看系统消息。',
-                                {
-                                    time: 0,
-                                    btn: ['好的'],
-                                    yes: function (index) {
-                                        layer.close(index)
-                                    }
-                                }
-                            );
-                        }
-                    }
-
-                    if (data.data.status == 0) {
-                        window.location.href = 'https://www.tigerwit.com/space/#/account/register'
-                    }
+                    showErr4()
                 } else {
                     layer.msg('服务器异常，请刷新重试！');
                 }
@@ -105,7 +97,6 @@
         // window.onbeforeunload = function () {
         //     return '确认离开当前页面吗？未保存的数据将会丢失！'
         // }
-        $scope.$emit('getAuthStatus');
         $scope.questions = [];
         $scope.isSetKyc = false;
 
@@ -137,7 +128,7 @@
 
             // 多选
             if (question.data.type == 3) {
-                if(!muiltiSelect[question.id]){
+                if (!muiltiSelect[question.id]) {
                     muiltiSelect[question.id] = [];
                 }
                 option.checked = option.checked ? false : true;
@@ -150,11 +141,11 @@
             }
         }
 
-        function mapMuiltiSelectToKycInfo(){
-            angular.forEach(muiltiSelect,function(item, index){
+        function mapMuiltiSelectToKycInfo() {
+            angular.forEach(muiltiSelect, function (item, index) {
                 var temp = [];
-                angular.forEach(item, function(item, index){
-                    if(item){
+                angular.forEach(item, function (item, index) {
+                    if (item) {
                         temp.push(item);
                     }
                 })
@@ -211,7 +202,7 @@
 
                     // 向authenController发送信息，切换到complete页面
                     $timeout(function () {
-                        $scope.$emit('goState', 'complete');
+                        $scope.$emit('goState', 2);
                     }, 1500);
                 } else {
                     $scope.tip.system.show = true;
@@ -247,18 +238,28 @@
     }
 
     // complete
-    function AuthenCompleteController($scope, validator, account, $timeout, $interval) {
-        // window.onbeforeunload = function () {
-        //     return '确认离开当前页面吗？未保存的数据将会丢失！'
-        // }
-        $scope.$emit('getAuthStatus');
+    function AuthenCompleteController($scope, validator, account, $timeout, $interval, $location, $modal) {
+        // 获取当前开通类型
+        // demo / live
+        $scope.dredgeType = $location.search().dredge_type || ''
         $scope.completeInfo = {
             username: '',
             email: '',
-            realname: '',
-            id_num: '',
             clickable: true,
             overTime: 1500,
+            country: {
+                key: undefined,
+                value: undefined
+            },
+            province: {
+                key: undefined,
+                value: undefined
+            },
+            city: {
+                key: undefined,
+                value: undefined
+            },
+            address: ''
         }
         getUserName();
 
@@ -270,11 +271,7 @@
             email: {
                 show: false,
                 msg: ''
-            },
-            id_num: {
-                show: false,
-                msg: ''
-            },
+            }
         }
 
         $scope.frontErr = {
@@ -286,15 +283,14 @@
                 show: false,
                 reg: validator.regType.email.reg
             },
-            realname: {
-                show: false,
-                reg: validator.regType.realname.reg,
-                tip: validator.regType.realname.tip,
+            province: {
+                show: false
             },
-            id_num: {
-                show: false,
-                reg: validator.regType.idNumber.reg,
-                tip: validator.regType.idNumber.tip
+            city: {
+                show: false
+            },
+            address: {
+                show: false
             }
         }
 
@@ -303,13 +299,110 @@
             msg: ''
         }
 
+        // 地址相关操作
+        initLocation();
+        $scope.selectRegion = selectRegion;
+        $scope.address = {};
+
+        function initLocation() {
+            account.getLocation().then(function (data) {
+                if (data.is_succ) {
+                    data = data.data
+                    angular.extend($scope.completeInfo, {
+                        country: {
+                            key: data.region_cn.world_name,
+                            value: data.region_cn.world_code,
+                        },
+                        province: {
+                            key: data.region_cn.state_name,
+                            value: data.state_code
+                        },
+                        city: {
+                            key: data.region_cn.city_name,
+                            value: data.city_code
+                        }
+                    });
+                    // console.log('$scope.basicInfo.locationWorld', $scope.basicInfo.locationWorld);
+                    $scope.$broadcast('locationInfoReady');
+                }
+
+            });
+
+            $scope.$on('locationInfoReady', function () {
+                getRegions('country', 'countries');
+
+                if ($scope.completeInfo.country.value == 'CN') {
+                    getRegions('province', 'provinces', $scope.completeInfo.country.value);
+                    getRegions('city', 'cities', $scope.completeInfo.province.value);
+                }
+            });
+        }
+
+        // 根据 region code 获取对应的 regions
+        function getRegions(regionName, regionsName, upperRegionCode) {
+            var tmp;
+
+            switch (regionName) {
+                case 'country':
+                    tmp = account.getWorlds();
+                    break;
+                case 'province':
+                    tmp = account.getStates(upperRegionCode);
+                    break;
+                case 'city':
+                    tmp = upperRegionCode && account.getCities(upperRegionCode);
+                    break;
+                default:
+                    break;
+            }
+
+            tmp && tmp.then(function (data) {
+                if (!data) return;
+                // console.log(data);
+                if (!data.is_succ) {
+                    return;
+                }
+                $scope.address[regionsName] = data.data;
+            });
+        }
+
+        // 选择一个 region
+        function selectRegion(regionName, regionCode) {
+            console.log($scope.completeInfo)
+            switch (regionName) {
+                case 'country':
+                    $scope.completeInfo.province = {
+                        key: undefined,
+                        value: undefined
+                    };
+                    $scope.completeInfo.city = {
+                        key: undefined,
+                        value: undefined
+                    };
+                    $scope.address.cities = [];
+                    getRegions('province', 'provinces', regionCode);
+                    break;
+                case 'province':
+                    $scope.completeInfo.city = {
+                        key: undefined,
+                        value: undefined
+                    };
+                    getRegions('city', 'cities', regionCode);
+                    break;
+                default:
+                    break;
+            }
+        }
+
         $scope.submitCompleteForm = function () {
             $scope.showErr('username');
             $scope.showErr('email');
-            $scope.showErr('realname');
-            $scope.showErr('id_num');
+            $scope.showErr('province');
+            $scope.showErr('city');
+            $scope.showErr('address');
 
             console.log('$scope.completeForm.$invalid', $scope.completeForm.$invalid);
+            console.log('$scope.completeInfo', $scope.completeInfo);
 
             if ($scope.completeForm.$invalid) {
                 return
@@ -322,15 +415,22 @@
 
             account.updataUserInfo({
                 username: $scope.completeInfo.username,
-                realname: $scope.completeInfo.realname,
-                id_no: $scope.completeInfo.id_num,
                 email: $scope.completeInfo.email,
+                state_code: $scope.completeInfo.province.value,
+                city_code: $scope.completeInfo.city.value,
+                address: $scope.completeInfo.address,
+                is_live: $scope.dredgeType == 'demo' ? 0 : 1
             }).then(function (data) {
-                // console.log(data);
                 $scope.completeInfo.clickable = true;
                 if (data.is_succ) {
-                    // 去实名认证
-                    $scope.$emit('goState', 'realname');
+                    if ($scope.dredgeType) {
+                        // 提示开通账户成功
+                        open_modal({
+                            dredgeType: $scope.dredgeType
+                        })
+                    } else {
+                        go(4)
+                    }
                 } else {
                     $scope.backErr.show = true;
                     $scope.backErr.msg = data.message;
@@ -341,7 +441,35 @@
                     }, 2000);
                 }
             });
+        }
 
+        function go(flow) {
+            $scope.$emit('goState', flow);
+        }
+
+        function open_modal(resolve) {
+            $modal.open({
+                templateUrl: '/views/authen/alert_modal.html',
+                size: 'md',
+                backdrop: 'static',
+                resolve: {
+                    passedScope: function () {
+                        return resolve
+                    }
+                },
+                controller: ['$scope', 'passedScope', '$modalInstance', '$state', function ($scope, passedScope, $modalInstance, $state) {
+                    angular.extend($scope, passedScope)
+                    $scope.closeModal = closeModal;
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+
+                    $scope.go_realname = function () {
+                        go(4)
+                        $modalInstance.dismiss();
+                    }
+                }]
+            });
         }
 
         $scope.checkExsit = function (type) {
@@ -406,7 +534,6 @@
 
     // id_card
     function AuthenRealnameController($scope, $state, $modal, validator, account) {
-        // $scope.$emit('getAuthStatus');
         $scope.verification = {
             id: {
                 number: undefined,
@@ -415,11 +542,34 @@
             }
         };
 
+        $scope.realnameInfo = {
+            realname: '',
+            id_type: {
+                key: undefined,
+                vlaue: undefined
+            },
+            idNum: '',
+            year18: false
+        }
+
         $scope.frontErr = {
             idFront: {
                 show: false
             },
             idBack: {
+                show: false
+            },
+            realname: {
+                show: false,
+                reg: validator.regType.realname.reg,
+                tip: validator.regType.realname.tip,
+            },
+            id_num: {
+                show: false,
+                reg: validator.regType.idNumber.reg,
+                tip: validator.regType.idNumber.tip
+            },
+            id_type: {
                 show: false
             }
         };
@@ -430,6 +580,27 @@
                 status: 0
             }
         };
+
+        $scope.idType = [
+            {
+                key: '大陆',
+                value: 0
+            },
+            {
+                key: '港澳',
+                value: 1
+            },
+            {
+                key: '台湾',
+                value: 2
+            }
+        ]
+
+        $scope.exsit = {
+            id_num: {
+                show: false
+            }
+        }
 
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
@@ -471,7 +642,7 @@
                 $scope.uploadFinish.hasOwnProperty('back') &&
                 ($scope.backErr.system.status != 3)
             ) {
-                $scope.$emit('goState', 'submit');
+                $scope.$emit('goState', 5);
                 // 神策数据统计
                 sa.track('btn_verify');
             }
@@ -484,13 +655,13 @@
             });
         });
 
-        function hideErr(formName, controlName) {
+        function hideErr(controlName) {
             if ($scope.frontErr[controlName]) {
                 $scope.frontErr[controlName].show = false;
             }
         }
 
-        function showErr(formName, controlName) {
+        function showErr(controlName) {
             if ($scope.frontErr[controlName]) {
                 $scope.frontErr[controlName].show = true;
             }
@@ -498,26 +669,101 @@
 
         function submitForm(formName) {
             // console.log($scope.readyToUpload);
+            showErr('realname');
+            showErr('id_type');
+            showErr('id_num');
 
             if (!$scope.readyToUpload.hasOwnProperty('front')) {
-                showErr(formName, 'idFront');
-                return
+                showErr('idFront');
             }
+
             if (!$scope.readyToUpload.hasOwnProperty('back')) {
-                showErr(formName, 'idBack');
+                showErr('idBack');
                 return
             }
 
-            /*遍历对象上传图片*/
-            angular.forEach($scope.readyToUpload, function (data, index, array) {
-                data.submit();
-            });
+            if ($scope.realnameForm.$invalid) {
+                return
+            }
+
+            if (!$scope.realnameInfo.year18) {
+                layer.msg('您的年龄未满18周岁，不建议您进行外汇交易。')
+                return
+            }
+
+            // 提交身份信息
+            account.updataId({
+                id_no: $scope.realnameInfo.id_num,
+                card_type: $scope.realnameInfo.id_type.value,
+                real_name: $scope.realnameInfo.realname,
+            }).then(function (data) {
+                if (!data.is_succ) {
+                    layer.msg(data.message)
+                    $scope.clickable = true;
+                } else {
+                    /*上传图片*/
+                    angular.forEach($scope.readyToUpload, function (data, index, array) {
+                        data.submit();
+                    });
+                }
+            })
 
             $scope.clickable = false;
         }
+
+        $scope.checkExsit = function (type) {
+            var checkInfo = $scope.realnameInfo.id_num;
+            var mt4 = $scope.personal.mt4_id;
+            var checkName = 'id_num'
+
+            if (!checkName || $scope.realnameForm[checkName].$invalid) {
+                return
+            }
+
+            account.checkExist(type, checkInfo, mt4 || null).then(function (data) {
+                if (data.data) {
+                    $scope.exsit[checkName].show = true;
+                } else {
+                    $scope.exsit[checkName].show = false;
+                }
+            });
+        }
+
+        $scope.checkBirthday = function () {
+            var strBirthday = "";
+            var identityCard = $scope.realnameInfo.id_num
+            if ($scope.realnameForm.id_num.$invalid) {
+                return
+            }
+            if (identityCard.length == 15) {
+                strBirthday = "19" + identityCard.substr(6, 2) + "/" + identityCard.substr(8, 2) + "/" + identityCard.substr(10, 2);
+            }
+            if (identityCard.length == 18) {
+                strBirthday = identityCard.substr(6, 4) + "/" + identityCard.substr(10, 2) + "/" + identityCard.substr(12, 2);
+            }
+            var birthDate = new Date(strBirthday);
+            var nowDateTime = new Date();
+            var age = nowDateTime.getFullYear() - birthDate.getFullYear();
+            if (nowDateTime.getMonth() < birthDate.getMonth() || (nowDateTime.getMonth() == birthDate.getMonth() && nowDateTime.getDate() < birthDate.getDate())) {
+                age--;
+            }
+            if (parseInt(age) <= 18) {
+                $scope.realnameInfo.year18 = false
+                layer.msg('您的年龄未满18周岁，不建议您进行外汇交易。')
+            } else {
+                $scope.realnameInfo.year18 = true
+                if (parseInt(age) >= 75) {
+                    layer.msg('外汇市场波动较大，基于您的年龄考虑，小老虎提醒您慎重交易。', {
+                        time: 0,
+                        btn: ['好的'],
+                        yes: function (index) {
+                            layer.close(index)
+                        }
+                    })
+                }
+            }
+        }
     }
 
-    function AuthenSubmitController($scope) {
-        $scope.$emit('getAuthStatus');
-    }
+    function AuthenSubmitController() { }
 })();

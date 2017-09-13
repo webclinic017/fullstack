@@ -1,0 +1,24 @@
+<div class="sys_modal_v2">
+  <button class="close" ng-click="closeModal()">&times;</button>
+  <div class="sys_modal_v2__content">
+    <div class="text-left mg-bt-50" ng-show="dredge_type == 'demo' || dredge_type == 'all'">
+      <h3 class="sys_modal_v2__title text-center">开通体验金账户</h3>
+      <p class="sys_modal_v2__desp">开户即送$200交易体验金。自由交易不用承担任何风险。</p>
+      <p class="sys_modal_v2__desp pd-tp-10">两步开通：</p>
+      <p class="sys_modal_v2__desp pd-tp-5">1. 投资信息确认 —— 2. 完善信息</p>
+      <div class="btn_wrapper">
+          <a class="btn btn-primary-gradient" ng-click="closeModal()" href="/space/#/authen/investInfo?dredge_type=demo" >免费开通</a>
+      </div>
+    </div>
+    <div class="dredge_box" ng-show="dredge_type == 'live' || dredge_type == 'all'">
+      <h3 class="sys_modal_v2__title text-center">开通真实交易账户</h3>
+      <p class="sys_modal_v2__desp">开户得$200交易红包，入金可获$800红包！</p>
+      <p class="sys_modal_v2__desp pd-tp-10">四步开启账户交易：</p>
+      <p class="sys_modal_v2__desp pd-tp-5">1.投资信息确认 —— 2.完善信息 </p>
+      <p class="sys_modal_v2__desp pd-tp-5">3.实名认证&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;—— 4.入金激活账户</p>
+      <div class="btn_wrapper">
+          <a class="btn btn-primary-gradient" ng-click="confirmLive()">免费开通</a>
+      </div>
+    </div>
+  </div>
+</div>
