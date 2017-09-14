@@ -49,6 +49,9 @@
         <div ng-show="personal.is_true == 2" class="space_sidebar__real">
             MT4 体验金账户：{{ personal.mt4_id }}
         </div>
+        <div ng-show="personal.dredged_type == 'unknow'" class="space_sidebar__real">
+            <a ng-click="openDredgeMdl({position: 'sidebar'})" class="btn btn-primary btn-lt">创建账户</a>
+        </div>
     </div>
 
     <ul class="side_navbar">
