@@ -136,7 +136,7 @@ $(document).ready(function () {
             tmpForm.appendTo("body");
             var returnurl;
             if (isPC()) {
-                returnurl = originUrl + "/space/#/account/register?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
+                returnurl = originUrl + "/space/#/account/login?" + "name=" + rName + "&phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
             } else {
 
                 returnurl = originUrl + "/m/h5_register/reg?" + "name=" + rName + "&telephone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
