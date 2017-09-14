@@ -56,9 +56,7 @@
                             mdAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.md + '?timestamp=' + (+new Date()),
                             lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg + '?timestamp=' + (+new Date())
                         });
-                        if (data.profile_check != 3) {
-                            getAuthStatus();
-                        }
+                        getAuthStatus();
 
                         // 判断是否开通过账户
                         var dredged_type = '';
