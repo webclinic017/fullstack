@@ -91,233 +91,237 @@
                 </div>
             </div>
         </li>
-        <li class="help1-navi-title__item">
-            <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">原油交易</h5>
-            <div class="help1-navi-title__item-desp">
-                <p class="desp_subdesp first">
-                    原油即石油，也称“黑色金子”，原油是燃油和汽油的主要原材料，是世界上最重要的一次能源之一。目前，原油不仅成为全球贸易中最大宗的商品，同时也是全球金融资产中最重要的交易标的物之一。
-                </p>
-                <h6 class="desp_sub_title">为什么在<%=lang.text("companyZhName")%>原油交易</h6>
-                <p class="desp_sub_title_desp">
-                    <%=lang.text("companyZhName")%>除了提供两大全球交易量最大的原油：布伦特原油和西德州原油合约以外，同时提供美国天然气合约。<%=lang.text("companyZhName")%>竭诚为客户提供灵活的杠杆、具有竞争优势的点差，来源于全球金融界领先银行的报价。同时也提供创新性的跟单系统服务。
-                </p>
-                <h6 class="desp_sub_title">在<%=lang.text("companyZhName")%>做原油交易的优势</h6>
-                <p class="desp_sub_list_title">
-                    <span>•</span>对冲交易，减少交易风险
-                </p>
-                <p class="desp_sub_list_title_desp">
-                    目前可以进行交易的两大原油为：布伦特原油和西德州原油，并且这 2 种原油可以进行对冲交易，发现价格扭曲，寻找低风险套利机会。
-                </p>
-                <p class="desp_sub_list_title">
-                    <span>•</span>保证金低，收益高
-                </p>
-                <p class="desp_sub_list_title_desp">
-                    在<%=lang.text("companyZhName")%>做原油交易杠杆高达 50 倍以上，占用保证金更低。所以<%=lang.text("companyZhName")%>所需的投资成本更低，而杠杆可超过国内现货原油的一倍以上。国际现货原油的成本折合到每吨的计算方式是：50 美金左右 * 当日汇率 / (1000 * 度量衡折换)。而国内现货原油的陈本计算方式是：点差
-                    + 当日价格 * 0.12% 。
-                </p>
-                <p class="desp_sub_list_title">
-                    <span>•</span>无手续费
-                </p>
-                <p class="desp_sub_list_title_desp">
-                    在<%=lang.text("companyZhName")%>做原油交易是不收取手续费的，仅收取点差，一手 50 美金左右等于 1000 桶，那 7.5 桶等于 1 吨，因此我们的折合到吨就是 0.37 美金/吨，差不多就是 2.3 人民币/吨（以实时汇率为准）。
-                </p>
-                <p class="desp_sub_list_title">
-                    <span>•</span>止损简便
-                </p>
-                <p class="desp_sub_list_title_desp">
-                    <%=lang.text("companyZhName")%>可以做到只需设置一次止损，隔天仍然有效，这样很大程度上避免了因忘记设置止损产生的亏损。
-                </p>
-                <p class="desp_sub_list_title">
-                    <span>•</span>采用数据平滑方式进行掉期处理
-                </p>
-                <p class="desp_sub_list_title_desp">
-                    <%=lang.text("companyZhName")%>与业内最权威的数据提供商合作，在国际原油主力合约发生掉期展期时，采用最先进的数据平滑处理，而非国内原油采用的强行平仓，开仓，无掉水费用。
-                </p>
-                <p class="desp_sub_list_title">
-                    <span>•</span>复制跟单交易
-                </p>
-                <p class="desp_sub_list_title_desp">
-                    针对于一些对原油交易不熟悉的投资者，可选择原油交易的高手直接复制，即可同比例盈利，降低了初级投资者的交易风险。
-                </p>
-                <h6 class="desp_sub_title">在<%=lang.text("companyZhName")%>怎么做原油交易?</h6>
-                <p class="desp_sub_title_desp">
-                    某位<%=lang.text("companyZhName")%>的投资者在<%=lang.text("companyZhName")%>的平台时间 10 月 23 号 15 点左右，于 45.890位置左右动用 1000 美金卖出 1 手西德州原油（xti/usd）。
-                    </br>
-                    一个多小时后，10 月 23 日 16 点左右，于 44.50 位置平仓了结，客户收益（45.89-44.50）*1000=1390
-                    美元，收益率 139%。
-                </p>
-                <h6 class="desp_sub_title"><%=lang.text("companyZhName")%>能源类交易产品介绍</h6>
-                <table class="desp_sub_title_table">
-                    <colgroup>
-                        <col width="20%">
-                        <col width="20%">
-                        <col width="20%">
-                        <col width="20%">
-                        <col width="20%">
-                    </colgroup>
-                    <thead>
-                        <th>产品代码</th>
-                        <th>中文名称</th>
-                        <th>
-                            合约量
-                        </th>
-                        <th>计量单位</th>
-                        <th>
-                            最小合约单位
-                            </br><span class="title_note">(标准手)</span>
-                        </th>
-                    </thead>
-                    <tbody>
-                        <tr v-for="item in oil" v-cloak>
-                            <td>{{ item.name_en }}</td>
-                            <td>{{ item.name_zh }}</td>
-                            <td>{{ item.volum }}</td>
-                            <td>{{ item.unit }}</td>
-                            <td>{{ item.min_volum }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="desp_sub_title_table">
-                    <colgroup>
-                        <col width="14%">
-                        <col width="13%">
-                        <col width="22%">
-                        <col width="22%">
-                        <col width="32%">
-                    </colgroup>
-                    <thead>
-                        <th>最大交易量(手)</th>
-                        <th>手续费($)</th>
-                        <th>
-                            交易时间
-                            <br>
-                            (北京时间)
-                        </th>
-                        <th>报价时间</th>
-                        <th>产品简介</th>
-                    </thead>
-                    <tbody>
-                        <tr v-for="item in oil" v-cloak>
-                            <td>{{ item.max_volum }}</td>
-                            <td>{{ item.charge }}</td>
-                            <td>{{ item.trade_time }}</td>
-                            <td>{{ item.quote_time }}</td>
-                            <td>{{ item.desp }}</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="desp_sub_title_table_note">
-                    注：MT4平台时间为GMT+3时间
+        <%if(!lang.isTigerSpecial()){%>
+            <li class="help1-navi-title__item">
+                <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">原油交易</h5>
+                <div class="help1-navi-title__item-desp">
+                    <p class="desp_subdesp first">
+                        原油即石油，也称“黑色金子”，原油是燃油和汽油的主要原材料，是世界上最重要的一次能源之一。目前，原油不仅成为全球贸易中最大宗的商品，同时也是全球金融资产中最重要的交易标的物之一。
+                    </p>
+                    <h6 class="desp_sub_title">为什么在<%=lang.text("companyZhName")%>原油交易</h6>
+                    <p class="desp_sub_title_desp">
+                        <%=lang.text("companyZhName")%>除了提供两大全球交易量最大的原油：布伦特原油和西德州原油合约以外，同时提供美国天然气合约。<%=lang.text("companyZhName")%>竭诚为客户提供灵活的杠杆、具有竞争优势的点差，来源于全球金融界领先银行的报价。同时也提供创新性的跟单系统服务。
+                    </p>
+                    <h6 class="desp_sub_title">在<%=lang.text("companyZhName")%>做原油交易的优势</h6>
+                    <p class="desp_sub_list_title">
+                        <span>•</span>对冲交易，减少交易风险
+                    </p>
+                    <p class="desp_sub_list_title_desp">
+                        目前可以进行交易的两大原油为：布伦特原油和西德州原油，并且这 2 种原油可以进行对冲交易，发现价格扭曲，寻找低风险套利机会。
+                    </p>
+                    <p class="desp_sub_list_title">
+                        <span>•</span>保证金低，收益高
+                    </p>
+                    <p class="desp_sub_list_title_desp">
+                        在<%=lang.text("companyZhName")%>做原油交易杠杆高达 50 倍以上，占用保证金更低。所以<%=lang.text("companyZhName")%>所需的投资成本更低，而杠杆可超过国内现货原油的一倍以上。国际现货原油的成本折合到每吨的计算方式是：50 美金左右 * 当日汇率 / (1000 * 度量衡折换)。而国内现货原油的陈本计算方式是：点差
+                        + 当日价格 * 0.12% 。
+                    </p>
+                    <p class="desp_sub_list_title">
+                        <span>•</span>无手续费
+                    </p>
+                    <p class="desp_sub_list_title_desp">
+                        在<%=lang.text("companyZhName")%>做原油交易是不收取手续费的，仅收取点差，一手 50 美金左右等于 1000 桶，那 7.5 桶等于 1 吨，因此我们的折合到吨就是 0.37 美金/吨，差不多就是 2.3 人民币/吨（以实时汇率为准）。
+                    </p>
+                    <p class="desp_sub_list_title">
+                        <span>•</span>止损简便
+                    </p>
+                    <p class="desp_sub_list_title_desp">
+                        <%=lang.text("companyZhName")%>可以做到只需设置一次止损，隔天仍然有效，这样很大程度上避免了因忘记设置止损产生的亏损。
+                    </p>
+                    <p class="desp_sub_list_title">
+                        <span>•</span>采用数据平滑方式进行掉期处理
+                    </p>
+                    <p class="desp_sub_list_title_desp">
+                        <%=lang.text("companyZhName")%>与业内最权威的数据提供商合作，在国际原油主力合约发生掉期展期时，采用最先进的数据平滑处理，而非国内原油采用的强行平仓，开仓，无掉水费用。
+                    </p>
+                    <p class="desp_sub_list_title">
+                        <span>•</span>复制跟单交易
+                    </p>
+                    <p class="desp_sub_list_title_desp">
+                        针对于一些对原油交易不熟悉的投资者，可选择原油交易的高手直接复制，即可同比例盈利，降低了初级投资者的交易风险。
+                    </p>
+                    <h6 class="desp_sub_title">在<%=lang.text("companyZhName")%>怎么做原油交易?</h6>
+                    <p class="desp_sub_title_desp">
+                        某位<%=lang.text("companyZhName")%>的投资者在<%=lang.text("companyZhName")%>的平台时间 10 月 23 号 15 点左右，于 45.890位置左右动用 1000 美金卖出 1 手西德州原油（xti/usd）。
+                        </br>
+                        一个多小时后，10 月 23 日 16 点左右，于 44.50 位置平仓了结，客户收益（45.89-44.50）*1000=1390
+                        美元，收益率 139%。
+                    </p>
+                    <h6 class="desp_sub_title"><%=lang.text("companyZhName")%>能源类交易产品介绍</h6>
+                    <table class="desp_sub_title_table">
+                        <colgroup>
+                            <col width="20%">
+                            <col width="20%">
+                            <col width="20%">
+                            <col width="20%">
+                            <col width="20%">
+                        </colgroup>
+                        <thead>
+                            <th>产品代码</th>
+                            <th>中文名称</th>
+                            <th>
+                                合约量
+                            </th>
+                            <th>计量单位</th>
+                            <th>
+                                最小合约单位
+                                </br><span class="title_note">(标准手)</span>
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr v-for="item in oil" v-cloak>
+                                <td>{{ item.name_en }}</td>
+                                <td>{{ item.name_zh }}</td>
+                                <td>{{ item.volum }}</td>
+                                <td>{{ item.unit }}</td>
+                                <td>{{ item.min_volum }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="desp_sub_title_table">
+                        <colgroup>
+                            <col width="14%">
+                            <col width="13%">
+                            <col width="22%">
+                            <col width="22%">
+                            <col width="32%">
+                        </colgroup>
+                        <thead>
+                            <th>最大交易量(手)</th>
+                            <th>手续费($)</th>
+                            <th>
+                                交易时间
+                                <br>
+                                (北京时间)
+                            </th>
+                            <th>报价时间</th>
+                            <th>产品简介</th>
+                        </thead>
+                        <tbody>
+                            <tr v-for="item in oil" v-cloak>
+                                <td>{{ item.max_volum }}</td>
+                                <td>{{ item.charge }}</td>
+                                <td>{{ item.trade_time }}</td>
+                                <td>{{ item.quote_time }}</td>
+                                <td>{{ item.desp }}</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="desp_sub_title_table_note">
+                        注：MT4平台时间为GMT+3时间
+                    </div>
                 </div>
-            </div>
-        </li>
-        <li class="help1-navi-title__item">
-            <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">贵金属交易</h5>
-            <div class="help1-navi-title__item-desp">
-                <p class="desp_subdesp first">
-                    黄金和白银作为人类文明最古老、最传统、最被广泛认可的货币符号，属于传统的避险资产，随着科技的进步，其在工业生产中占据了重要的地位，同时具有避险兼商品的属性。
-                </p>
-                <h6 class="desp_sub_title">什么是现货黄金、白银交易</h6>
-                <p class="desp_sub_title_desp">
-                    现货黄金与现货白银保证金交易亦称之为伦敦金，伦敦银。每标准手伦敦金为 100 盎司，每标准手白银为 5000 盎司，与纽约期金期银不同的是现货金，现货银无需掉期，展期，同时合约大小，杠杆更为灵活，资金利用率更高。
-                </p>
-                <h6 class="desp_sub_title">在<%=lang.text("companyZhName")%>交易黄金、白银的优势</h6>
-                <p class="desp_sub_list_title">
-                    <span>•</span>杠杆高
-                </p>
-                <p class="desp_sub_list_title_desp">
-                    <%=lang.text("companyZhName")%>提供三种杠杆灵活选择，现货白银杠杆可高达 200 倍以上。
-                </p>
-                <p class="desp_sub_list_title">
-                    <span>•</span>交易成本低
-                </p>
-                <p class="desp_sub_list_title_desp">
-                    <%=lang.text("companyZhName")%>交易现货白银成本低至约1.29美元/千克，约8.7元人民币/千克。（人民币换算以实时汇率为准）
-                </p>
-                <p class="desp_sub_list_title">
-                    <span>•</span>低门槛
-                </p>
-                <p class="desp_sub_list_title_desp">
-                    比起国内现货白银300人民币保证金水平，<%=lang.text("companyZhName")%>现货白银交易最小交易保证金仅为 10 美金。
-                </p>
-                <p class="desp_sub_list_title">
-                    <span>•</span>一个帐户交易黄金、白银
-                </p>
-                <p class="desp_sub_list_title_desp">
-                    由于国内相关国情限制，国内大多数交易所仅能交易现货白银，而无法交易现货黄金，但黄金产品是国际市场上更为关注与重要的交易品种，而<%=lang.text("companyZhName")%>同时提供白银与黄金交易，给广大投资者更为自主的选择。
-                </p>
-                <p class="desp_sub_list_title">
-                    <span>•</span>使用 MT4 交易
-                </p>
-                <p class="desp_sub_list_title_desp">
-                    <%=lang.text("companyZhName")%>采用全球广泛使用的成熟的MT4平台，开会智能交易模块，紧跟世界金融市场潮流。
-                </p>
-                <p class="desp_sub_list_title">
-                    <span>•</span>复制跟单交易
-                </p>
-                <p class="desp_sub_list_title_desp">
-                    <%=lang.text("companyZhName")%>提供业内先进创新的全自动订单复制跟单系统，并且汇聚众多颇具盈利能力的投资高手，投资者可通过复制高手交易获得同比例投资收益。高手也可以通过不断增加跟随者而获得更多收益。
-                </p>
-                <h6 class="desp_sub_title"><%=lang.text("companyZhName")%>能源类交易产品介绍</h6>
-                <table class="desp_sub_title_table">
-                    <colgroup>
-                        <col width="11%">
-                        <col width="10%">
-                        <col width="10%">
-                        <col width="13%">
-                        <col width="16%">
-                        <col width="10%">
-                        <col width="11%">
-                        <col width="20%">
-                    </colgroup>
-                    <thead>
-                        <th>产品代码</th>
-                        <th>中文名称</th>
-                        <th>
-                            点差</br><span class="title_note">(平均点差)</span>
-                        </th>
-                        <th>杠杆</th>
-                        <th>
-                            报价位
-                        </th>
-                        <th>
-                            最小交易手数
-                        </th>
-                        <th>
-                            每标准手合约量
-                        </th>
-                        <th>
-                            交易时间</br><span class="title_note">(北京时间)</span>
-                        </th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>XAUUSD</td>
-                            <td>黄金</td>
-                            <td>45</td>
-                            <td>50 100 200</td>
-                            <td>小数点后两位</td>
-                            <td>0.01</td>
-                            <td>100盎司</td>
-                            <td>交易日交易时段</br>06:00–05:00(次日)</td>
-                        </tr>
-                        <tr>
-                            <td>XAGUSD</td>
-                            <td>白银</td>
-                            <td>40</td>
-                            <td>50 100 200</td>
-                            <td>小数点后三位</td>
-                            <td>0.01</td>
-                            <td>5000盎司</td>
-                            <td>交易日交易时段</br>06:00–05:00(次日)</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="desp_sub_title_table_note">
-                    注：MT4平台时间为GMT+3时间
+            </li>
+        <%}%>
+        <%if(!lang.isTigerSpecial()){%>
+            <li class="help1-navi-title__item">
+                <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">贵金属交易</h5>
+                <div class="help1-navi-title__item-desp">
+                    <p class="desp_subdesp first">
+                        黄金和白银作为人类文明最古老、最传统、最被广泛认可的货币符号，属于传统的避险资产，随着科技的进步，其在工业生产中占据了重要的地位，同时具有避险兼商品的属性。
+                    </p>
+                    <h6 class="desp_sub_title">什么是现货黄金、白银交易</h6>
+                    <p class="desp_sub_title_desp">
+                        现货黄金与现货白银保证金交易亦称之为伦敦金，伦敦银。每标准手伦敦金为 100 盎司，每标准手白银为 5000 盎司，与纽约期金期银不同的是现货金，现货银无需掉期，展期，同时合约大小，杠杆更为灵活，资金利用率更高。
+                    </p>
+                    <h6 class="desp_sub_title">在<%=lang.text("companyZhName")%>交易黄金、白银的优势</h6>
+                    <p class="desp_sub_list_title">
+                        <span>•</span>杠杆高
+                    </p>
+                    <p class="desp_sub_list_title_desp">
+                        <%=lang.text("companyZhName")%>提供三种杠杆灵活选择，现货白银杠杆可高达 200 倍以上。
+                    </p>
+                    <p class="desp_sub_list_title">
+                        <span>•</span>交易成本低
+                    </p>
+                    <p class="desp_sub_list_title_desp">
+                        <%=lang.text("companyZhName")%>交易现货白银成本低至约1.29美元/千克，约8.7元人民币/千克。（人民币换算以实时汇率为准）
+                    </p>
+                    <p class="desp_sub_list_title">
+                        <span>•</span>低门槛
+                    </p>
+                    <p class="desp_sub_list_title_desp">
+                        比起国内现货白银300人民币保证金水平，<%=lang.text("companyZhName")%>现货白银交易最小交易保证金仅为 10 美金。
+                    </p>
+                    <p class="desp_sub_list_title">
+                        <span>•</span>一个帐户交易黄金、白银
+                    </p>
+                    <p class="desp_sub_list_title_desp">
+                        由于国内相关国情限制，国内大多数交易所仅能交易现货白银，而无法交易现货黄金，但黄金产品是国际市场上更为关注与重要的交易品种，而<%=lang.text("companyZhName")%>同时提供白银与黄金交易，给广大投资者更为自主的选择。
+                    </p>
+                    <p class="desp_sub_list_title">
+                        <span>•</span>使用 MT4 交易
+                    </p>
+                    <p class="desp_sub_list_title_desp">
+                        <%=lang.text("companyZhName")%>采用全球广泛使用的成熟的MT4平台，开会智能交易模块，紧跟世界金融市场潮流。
+                    </p>
+                    <p class="desp_sub_list_title">
+                        <span>•</span>复制跟单交易
+                    </p>
+                    <p class="desp_sub_list_title_desp">
+                        <%=lang.text("companyZhName")%>提供业内先进创新的全自动订单复制跟单系统，并且汇聚众多颇具盈利能力的投资高手，投资者可通过复制高手交易获得同比例投资收益。高手也可以通过不断增加跟随者而获得更多收益。
+                    </p>
+                    <h6 class="desp_sub_title"><%=lang.text("companyZhName")%>能源类交易产品介绍</h6>
+                    <table class="desp_sub_title_table">
+                        <colgroup>
+                            <col width="11%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="13%">
+                            <col width="16%">
+                            <col width="10%">
+                            <col width="11%">
+                            <col width="20%">
+                        </colgroup>
+                        <thead>
+                            <th>产品代码</th>
+                            <th>中文名称</th>
+                            <th>
+                                点差</br><span class="title_note">(平均点差)</span>
+                            </th>
+                            <th>杠杆</th>
+                            <th>
+                                报价位
+                            </th>
+                            <th>
+                                最小交易手数
+                            </th>
+                            <th>
+                                每标准手合约量
+                            </th>
+                            <th>
+                                交易时间</br><span class="title_note">(北京时间)</span>
+                            </th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>XAUUSD</td>
+                                <td>黄金</td>
+                                <td>45</td>
+                                <td>50 100 200</td>
+                                <td>小数点后两位</td>
+                                <td>0.01</td>
+                                <td>100盎司</td>
+                                <td>交易日交易时段</br>06:00–05:00(次日)</td>
+                            </tr>
+                            <tr>
+                                <td>XAGUSD</td>
+                                <td>白银</td>
+                                <td>40</td>
+                                <td>50 100 200</td>
+                                <td>小数点后三位</td>
+                                <td>0.01</td>
+                                <td>5000盎司</td>
+                                <td>交易日交易时段</br>06:00–05:00(次日)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="desp_sub_title_table_note">
+                        注：MT4平台时间为GMT+3时间
+                    </div>
                 </div>
-            </div>
-        </li>
+            </li>
+        <%}%>
         <li class="help1-navi-title__item">
             <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">指数差价合约</h5>
             <div class="help1-navi-title__item-desp">

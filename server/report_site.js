@@ -1,4 +1,45 @@
 var report_sites = [
+    /*添加时间 2017-9-11*/
+    {
+        address: 'http://www.cien.com.cn/content-163407.html',
+        description: '【中国产经新闻网】互联网理财投资资产配置首选：老虎外汇、向上金服、蛋卷基金',
+        date: '2017-8-14'
+    },
+    {
+        address: 'http://news.xinxunwang.com/world/gdyw/97054.html',
+        description: '【新讯网】家庭理财资产配置神助攻：老虎外汇、理财通、众安保险口碑好',
+        date: '2017-8-15'
+    },
+    {
+        address: 'http://www.cnfina.com/kuaixun/20170816_107598.html',
+        description: '【华财网】想做外汇交易跟单投资看这些知识就够了，附跟单平台玩法解读',
+        date: '2017-8-16'
+    },
+    {
+        address: 'http://yzwb.sjzdaily.com.cn/qynews/caijing/2017-08-17/9537.html',
+        description: '【燕赵晚报】外汇交易美股投资正当时：老虎外汇、牛股王、富途证券口碑卓著',
+        date: '2017-8-17'
+    },
+    {
+        address: 'http://www.cnbaiyin.com/shehui/2017-08-21/c2667291.html',
+        description: '【中国白银投资网】外汇交易为何越来越火？老虎外汇等新兴外汇平台助力外汇交易',
+        date: '2017-8-21'
+    },
+    {
+        address: 'http://ed-china.stnn.cc/diplomacy/2017/0822/465833.shtml',
+        description: '【星岛环球网】老虎外汇和传统外汇交易平台有什么区别？',
+        date: '2017-8-24'
+    },
+    {
+        address: 'http://news.xnnews.com.cn/newshydt/201708/t20170824_2773064.shtml',
+        description: '【咸宁新闻网】为什么外汇交易者喜欢老虎外汇，追踪其产品轨迹得出这点原因',
+        date: '2017-8-23'
+    },
+    {
+        address: 'http://www.jingji.com.cn/html/news/zxxw/78253.html ',
+        description: '【经济网】老虎外汇：推动外汇交易市场创新与改变的探索者',
+        date: '2017-8-25'
+    },
     /*添加时间 2017-7-28*/
     {
         address: 'http://m.3news.cn/2017/0724/207412.html?from=groupmessage&isappinstalled=0',

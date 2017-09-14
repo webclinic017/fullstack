@@ -19,6 +19,7 @@ module.exports = function () {
         }
         this.language = language;
         this.data = data;
+        this.req = req;
         this.company_name = company_name;
         this.clonedBaidu = clonedBaidu;
         // return this;         
@@ -34,6 +35,10 @@ module.exports = function () {
         },
         isCloned: function(){
             return this.clonedBaidu;
+        },
+        isTigerSpecial: function(){
+            // console.log("this.req.headers['user-agent']", this.req.headers['user-agent'])
+            return this.req.headers['user-agent'].indexOf('tiger_special') != -1;
         },
         currentLanguage: function () {
             return this.language;

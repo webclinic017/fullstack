@@ -19,8 +19,11 @@
             display: block;
             margin-top: 30px;
             color: #fb4a67;
-
-            &:hover {
+            
+            &.link, .link{
+                color: #fb4a67;
+            }
+            &.link:hover, .link:hover {
                 text-decoration: underline;
             }
         }

@@ -111,10 +111,13 @@
          * Asset Service 入金
          *
          * @method deposit
+         *      
+         * @params platform   支付宝入金 -> 4
          */
-        function deposit(amount) {
+        function deposit(amount, platform) {
             return publicHttp.dealPublicRequest(o.depositApi, 'POST', {
-                amount: amount
+                amount: amount,
+                platform: platform
             });
         }
 

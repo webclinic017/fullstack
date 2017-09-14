@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<script>
+    var nodeResponseInfo = {
+        android: "<%= lang.text('androidApp')%>"
+    };
+</script>
+<body>
+    <p class="weixinTip" style="margin: 10px auto; text-align: center; display: none;">请用浏览器打开页面下载</p>    
+
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_blank.js -->
+<script src="/scripts/web/m_blank.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

@@ -81,7 +81,37 @@ if ($(".m_vue").attr("data-page") === "help") {
                 },
                 {
                     title: '老虎外汇操作指南',
-                    sub: [
+                    sub: 
+                    isTigerSpecial() 
+                    ? 
+                    ([
+                        {
+                            param: 'operate-follow',
+                            title: '如何进行高手跟单'
+                        },
+                        {
+                            param: 'operate-withDep',
+                            title: '如何进行出入金操作'
+                        },
+                        {
+                            param: 'operate-authen',
+                            title: '如何进行实名认证'
+                        },
+                        {
+                            param: 'operate-wallet',
+                            title: '什么是零钱包功能'
+                        },
+                        {
+                            param: 'operate-redbag',
+                            title: '红包在哪里查看，如何兑现红包？'
+                        },
+                        {
+                            param: 'operate-invite',
+                            title: '如何邀请好友？'
+                        },
+                    ]) 
+                    : 
+                    ([
                         {
                             param: 'operate-self',
                             title: '如何操作自主交易'
@@ -110,7 +140,7 @@ if ($(".m_vue").attr("data-page") === "help") {
                             param: 'operate-invite',
                             title: '如何邀请好友？'
                         },
-                    ]
+                    ])
                 },
                 {
                     title: '老虎外汇帮助中心',

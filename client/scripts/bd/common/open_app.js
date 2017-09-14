@@ -18,6 +18,7 @@
         } else{
             if (userAgent.indexOf("Safari") != -1) {
                 if (isAndriod()) {
+                    body.appendChild(iframe);
                     iframe.src = url.openAndriod+page;
 
                     timer = setTimeout(function() {

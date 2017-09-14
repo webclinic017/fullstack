@@ -78,6 +78,10 @@
     width: $modal-lg;
 }
 
+.modal-lt {
+    width: $modal-lt;
+}
+
 //== 系统弹窗
 @include b(system_modal) {
     label {
@@ -151,6 +155,39 @@
         margin-bottom: 0;
         padding-top: 30px;
         padding-bottom: 30px; // border-top: 1px solid $gray;
+        text-align: center;
+    }
+}
+
+@include b(sys_modal_v2) {
+    padding: 50px 80px;
+    position: relative;
+    .close {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+        font-size: 22px;
+        @extend .font-base;
+    }
+    @include e(title) {
+        margin: 0;
+        padding: 8px 0;
+        line-height: 20px;
+        @extend .font-base;
+        font-size: 25px;
+        margin: 15px 0;
+    }
+    @include e(desp) {
+        margin: 0;
+        @extend .font-base;
+        font-size: 14px;
+    }
+    @include e(content) {
+        min-height: 150px;
+    }
+    .btn_wrapper {
+        margin-top: 30px;
+        margin-bottom: 0;
         text-align: center;
     }
 }

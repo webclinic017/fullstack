@@ -1,6 +1,9 @@
 <div class="authen_content mg-tp-30 ctn center">
-    <h2>投资信息确认</h2>
-    <div tw-loading-img></div>
+    <div class="authen_title">
+        <h2>投资信息确认</h2>
+        <div tw-loading-img></div>
+    </div>    
+    
     <div class="kyc">
         <div ng-if="!isSetKyc">
             <form name="kycForm" novalidate>
@@ -50,8 +53,8 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="text-center mg-tp-50">
+                
+                <div class="mg-tp-30">
                     <div ng-show="tip.questions.show">
                         <p class="alert-system">
                             {{ tip.questions.msg }}
@@ -64,11 +67,11 @@
                         </p>
                     </div>
 
-                    <button class="btn btn-sm btn-primary" ng-if="clickable" ng-click="submitForm()">
+                    <button class="btn btn-sm btn-primary-gradient text-left" ng-if="clickable" ng-click="submitForm()">
                         下一步
                     </button>
 
-                    <button class="btn btn-sm btn-primary" ng-if="!clickable">
+                    <button class="btn btn-sm btn-primary-gradient text-left" ng-if="!clickable">
                         <i class="loading_spinner fa fa-spinner"></i>
                         提交中
                     </button>
@@ -77,7 +80,7 @@
             </form>
         </div>
         <div ng-show="isSetKyc" class="mg-tp-20">
-            您已完成KYC认证，感谢您的参与，请放心交易。
+            您已完成KYC认证，感谢您的参与，请继续完成下一步操作。
         </div>
     </div>
 </div>

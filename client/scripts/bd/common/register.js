@@ -1,3 +1,4 @@
+/*panda活动页注册逻辑*/
 ;
 (function () {
     /*生成token*/

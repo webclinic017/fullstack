@@ -9,6 +9,18 @@
 
     function InviteIndexController($scope, $document, $location, invite, utils, account, config) {
 
+        $scope.$on('global_controller_has_get_info', function () {
+            console.log('$scope.personal.dredged_type',$scope.personal.dredged_type)
+            var type = $scope.personal.dredged_type;
+            // 未开通
+            if(type == 'unknow'){
+                $scope.$emit('global.openDredgeMdl', {
+                    position: 'invite',
+                });
+            }
+        });
+
+
         $scope.invitation = {
             // usercode: 3303,
             // link: 'https://www.tigerwit.com/personal/#/invite/come?usercode=3303'
