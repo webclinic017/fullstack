@@ -213,6 +213,7 @@
          * position redbag copy payment
          * userInfo personal
          */
+        $scope.openDredgeMdl = openDredgeMdl;
         function openDredgeMdl(position) {
             $modal.open({
                 templateUrl: '/views/account/dredge_modal.html',
