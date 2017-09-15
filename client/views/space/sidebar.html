@@ -1,100 +1,101 @@
 <div class="space_sidebar mg-tp-30">
-    <div class="space_sidebar__info">
-        <div class="space_sidebar__avatar">
-            <a ui-sref="space.invest.subpage({subpage: 'current'})">
-                <img ng-src="{{ personal.lgAvatar }}">
-            </a>
-        </div>
-        <div class="space_sidebar__user">
-            <span class="space_sidebar__user-username">{{ personal.username }}</span>
-            <!-- <span class="space_sidebar__user-position">
-                <i class="fa fa-map-marker"></i>
-                {{ personal.region.city_name || personal.region.state_name || personal.region.world_name || '中国' }}
-            </span> -->
-        </div>
-        <!-- <div class="row space_sidebar__verify">
-            <div class="col-xs-6 bar">
-                <div new-scale-bar data-type="spaceSidebar"></div>
-            </div>
-            <div class="col-xs-6">
-                <a class="btn btn-gray btn-gray-sm" ui-sref="space.setting.subpage({subpage: 'verify'})" ng-if="personal.verifiedStatus === 0 || personal.verifiedStatus === 1">
-                    实名认证
-                </a>
-
-                <a class="btn btn-gray btn-gray-sm" ng-disabled="true" ng-if="personal.verifiedStatus === 2">
-                    审核中
-                </a>
-
-                <a class="btn btn-gray btn-gray-sm" ui-sref="space.setting.subpage({subpage: 'info'})" ng-if="personal.verifiedStatus === 3 && personal.infoDegree < 100">
-                    完善资料
-                </a>
-
-                <a class="btn btn-gray btn-gray-sm" ng-if="personal.verifiedStatus === 3 && personal.infoDegree === 100">
-                    已认证
+        <div class="space_sidebar__info">
+            <div class="space_sidebar__avatar">
+                <a ui-sref="space.invest.subpage({subpage: 'current'})">
+                    <img ng-src="{{ personal.lgAvatar }}">
                 </a>
             </div>
-        </div> -->
-        <!-- <div class="space_sidebar__data">
-            <a class="btn btn-primary btn-sm" ui-sref="space.setting.subpage({subpage: 'info'})">完善个人资料 ></a>
-        </div> -->
-        <div ng-if="personal.is_master" class="space_sidebar__copy">
-            复制高手：0
+            <div class="space_sidebar__user">
+                <span class="space_sidebar__user-username">{{ personal.username }}</span>
+                <!-- <span class="space_sidebar__user-position">
+                    <i class="fa fa-map-marker"></i>
+                    {{ personal.region.city_name || personal.region.state_name || personal.region.world_name || '中国' }}
+                </span> -->
+            </div>
+            <!-- <div class="row space_sidebar__verify">
+                <div class="col-xs-6 bar">
+                    <div new-scale-bar data-type="spaceSidebar"></div>
+                </div>
+                <div class="col-xs-6">
+                    <a class="btn btn-gray btn-gray-sm" ui-sref="space.setting.subpage({subpage: 'verify'})" ng-if="personal.verifiedStatus === 0 || personal.verifiedStatus === 1">
+                        实名认证
+                    </a>
+    
+                    <a class="btn btn-gray btn-gray-sm" ng-disabled="true" ng-if="personal.verifiedStatus === 2">
+                        审核中
+                    </a>
+    
+                    <a class="btn btn-gray btn-gray-sm" ui-sref="space.setting.subpage({subpage: 'info'})" ng-if="personal.verifiedStatus === 3 && personal.infoDegree < 100">
+                        完善资料
+                    </a>
+    
+                    <a class="btn btn-gray btn-gray-sm" ng-if="personal.verifiedStatus === 3 && personal.infoDegree === 100">
+                        已认证
+                    </a>
+                </div>
+            </div> -->
+            <!-- <div class="space_sidebar__data">
+                <a class="btn btn-primary btn-sm" ui-sref="space.setting.subpage({subpage: 'info'})">完善个人资料 ></a>
+            </div> -->
+            <div ng-if="personal.is_master" class="space_sidebar__copy">
+                复制高手：0
+            </div>
+            <div ng-if="!personal.is_master" class="space_sidebar__copy">
+                复制高手：{{ personal.copy_num }}
+            </div>
+            <div ng-show="personal.is_true == 1" class="space_sidebar__real">
+                MT4 真实账户：{{ personal.mt4_id }}
+            </div>
+            <div ng-show="personal.is_true == 2" class="space_sidebar__real">
+                MT4 体验金账户：{{ personal.mt4_id }}
+            </div>
+            <div ng-show="personal.dredged_type == 'unknow'" class="space_sidebar__real">
+                <a ng-click="openDredgeMdl({position: 'sidebar'})" class="btn btn-primary btn-lt">创建账户</a>
+            </div>
         </div>
-        <div ng-if="!personal.is_master" class="space_sidebar__copy">
-            复制高手：{{ personal.copy_num }}
-        </div>
-        <div ng-show="personal.is_true == 1" class="space_sidebar__real">
-            MT4 真实账户：{{ personal.mt4_id }}
-        </div>
-        <div ng-show="personal.is_true == 2" class="space_sidebar__real">
-            MT4 体验金账户：{{ personal.mt4_id }}
-        </div>
-        <div ng-show="personal.dredged_type == 'unknow'" class="space_sidebar__real">
-            <a ng-click="openDredgeMdl({position: 'sidebar'})" class="btn btn-primary btn-lt">创建账户</a>
-        </div>
+    
+        <ul class="side_navbar">
+            <li>
+                <h4 class="side_navbar__title">账户</h4>
+    
+                <ul class="side_navbar__menu">
+                    <li ui-sref-active="active">
+                        <a ui-sref="space.center.index">
+                            账户概况
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="space.asset.subpage">
+                            充值/提现
+                        </a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="space.bonus">复制和分成</a>
+                    </li>
+                    <li ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
+                        <a ui-sref="space.redbag.subpage">
+                            我的红包
+                            <span class="space_sidebar__bag-num" ng-show="personal.redbagUnreadNum && personal.redbagUnreadNum > 0">{{ personal.redbagUnreadNum || '0' }}</span>
+                        </a>
+                    </li>
+                    <li ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
+                        <a ui-sref="space.invite">邀请好友</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="space.notice">
+                            系统消息
+                            <span class="space_sidebar__mes-num" ng-if="personal.unreadMsg.total > 0">{{ personal.unreadMsg.total }}</span>
+                        </a>
+    
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="space.setting.subpage">账户设置</a>
+                    </li>
+                </ul>
+            </li>
+            <!-- <li>
+                <h4 class="side_navbar__title">投资顾问</h4>
+            </li> -->
+        </ul>
     </div>
-
-    <ul class="side_navbar">
-        <li>
-            <h4 class="side_navbar__title">账户</h4>
-
-            <ul class="side_navbar__menu">
-                <li ui-sref-active="active">
-                    <a ui-sref="space.center.index">
-                        账户概况
-                    </a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="space.asset.subpage">
-                        充值/提现
-                    </a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="space.bonus">复制和分成</a>
-                </li>
-                <li ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
-                    <a ui-sref="space.redbag.subpage">
-                        我的红包
-                        <span class="space_sidebar__bag-num" ng-show="personal.redbagUnreadNum && personal.redbagUnreadNum > 0">{{ personal.redbagUnreadNum || '0' }}</span>
-                    </a>
-                </li>
-                <li ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
-                    <a ui-sref="space.invite">邀请好友</a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="space.notice">
-                        系统消息
-                        <span class="space_sidebar__mes-num" ng-if="personal.unreadLength > 0">{{personal.unreadLength}}</span>
-                    </a>
-
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="space.setting.subpage">账户设置</a>
-                </li>
-            </ul>
-        </li>
-        <!-- <li>
-            <h4 class="side_navbar__title">投资顾问</h4>
-        </li> -->
-    </ul>
-</div>
+    
