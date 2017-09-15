@@ -70,6 +70,10 @@
 
         // 获取当前认证状态
         function getAuthStatus() {
+            // 获取当前开通类型
+            // demo / live
+            $scope.dredgingType = $location.search().dredge_type || 'unkown'
+            
             if ($scope.personal.verify_status) {
                 return;
             }
