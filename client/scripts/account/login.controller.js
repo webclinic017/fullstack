@@ -117,21 +117,30 @@
                 return;
             }
 
-            var pho, pas, login_type, remember;
-            remember = $scope.rememberLoginStatus ? 1 : 0;
+            var para = {};
             if ($scope.loginType == 'code') {
-                pho = $scope.account.step1Phone;
-                pas = $scope.account.step1Code;
-                login_type = 2;
+                para = {
+                    phone: $scope.account.step1Phone,
+                    password: $scope.account.step1Code,
+                    login_type: 2,
+                    remember: $scope.rememberLoginStatus ? 1 : 0,
+                    lp: $state.params.lp,
+                    pid: $state.params.pid,
+                    unit: $state.params.unit,
+                    key: $state.params.key
+                };
             } else {
-                pho = $scope.account.step2Phone;
-                pas = account.encrypt($scope.account.step2Password);
-                login_type = 1;
+                para = {
+                    phone: $scope.account.step2Phone,
+                    password: account.encrypt($scope.account.step2Password),
+                    login_type: 1,
+                    remember: $scope.rememberLoginStatus ? 1 : 0
+                };
             }
             layer.load();
             $scope.loginBtnStatus = false;
 
-            account.login(pho, pas, login_type, remember).then(function (data) {
+            account.login(para).then(function (data) {
                 // console.log(data);
                 layer.closeAll();
                 $scope.loginBtnStatus = true;

@@ -71,14 +71,9 @@
          * @param {int} remember 是否记住登录状态，1：是，0：否
          * 
          */
-        function login(phone, password, login_type, remember) {
+        function login(params) {
 
-            return publicHttp.dealPublicRequest(o.loginApi, 'POST', {
-                phone: phone,
-                password: password,
-                login_type: login_type,
-                remember: remember
-            });
+            return publicHttp.dealPublicRequest(o.loginApi, 'POST', params);
         }
 
         function checkLogined() {
