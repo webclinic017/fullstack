@@ -114,53 +114,73 @@ $(document).ready(function () {
         } else {
             //防止重复提交
             clickable = false;
-            var h = $('#' + info.targetId).html();
-            $('#' + info.targetId).html('<i class="loading fa fa-spinner"></i>正在跳转');
-
-            // umeng
-            _czc.push(["_trackEvent", "活动页", "免费注册"]);
-
-            // 360            
-            // if (window._mvq) {
-            //     _mvq.push(['$setGeneral', 'registered', '', rName, rPhone]);
-            // }
-
-            // 神策数据统计
-            sa.track('btn_register', {
-                page: window.location.href
-            });
-
-            var tmpForm = $("<form></form>");
-            // tmpForm.append("<input type='hidden' value='" + rName + "' name='username'/>");
-            tmpForm.append("<input type='hidden' value='" + rPhone + "' name='phone'/>");
-            tmpForm.append("<input type='hidden' value='" + rEmail + "' name='email'/>");
-            tmpForm.append("<input type='hidden' value='" + lp + "' name='lp'/>");
-            tmpForm.append("<input type='hidden' value='" + pid + "' name='pid'/>");
-            tmpForm.append("<input type='hidden' value='" + unit + "' name='unit'/>");
-            tmpForm.append("<input type='hidden' value='" + key + "' name='key'/>");
-            tmpForm.appendTo("body");
-            var returnurl;
-            if (isPC()) {
-                returnurl = originUrl + "/space/#/account/login?" + "phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
-            } else {
-
-                returnurl = originUrl + "/m/h5_register/reg?" + "telephone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
-            }
-
-            jQuery.ajax({
-                url: '/api/auth/page_signup',
-                data: tmpForm.serialize(),
-                type: "POST",
+            jQuery.ajax({   // 检测手机号是否存在
+                url: '/api/user/check_exists',
+                data: {
+                    key: 3,
+                    value: rPhone,
+                },
+                type: "GET",
                 success: function (data) {
-                    // console.log(data);
-                    location.href = returnurl;
+                    if (data.data) {
+                        clickable = true;
+                        layer.msg("手机号已注册，请更换新的手机号码");
+                    } else {
+                        
+                        var h = $('#' + info.targetId).html();
+                        $('#' + info.targetId).html('<i class="loading fa fa-spinner"></i>正在跳转');
+
+                        // umeng
+                        _czc.push(["_trackEvent", "活动页", "免费注册"]);
+
+                        // 360            
+                        // if (window._mvq) {
+                        //     _mvq.push(['$setGeneral', 'registered', '', rName, rPhone]);
+                        // }
+
+                        // 神策数据统计
+                        sa.track('btn_register', {
+                            page: window.location.href
+                        });
+
+                        var tmpForm = $("<form></form>");
+                        // tmpForm.append("<input type='hidden' value='" + rName + "' name='username'/>");
+                        tmpForm.append("<input type='hidden' value='" + rPhone + "' name='phone'/>");
+                        tmpForm.append("<input type='hidden' value='" + rEmail + "' name='email'/>");
+                        tmpForm.append("<input type='hidden' value='" + lp + "' name='lp'/>");
+                        tmpForm.append("<input type='hidden' value='" + pid + "' name='pid'/>");
+                        tmpForm.append("<input type='hidden' value='" + unit + "' name='unit'/>");
+                        tmpForm.append("<input type='hidden' value='" + key + "' name='key'/>");
+                        tmpForm.appendTo("body");
+                        var returnurl;
+                        if (isPC()) {
+                            returnurl = originUrl + "/space/#/account/login?" + "phone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
+                        } else {
+
+                            returnurl = originUrl + "/m/h5_register/reg?" + "telephone=" + rPhone + "&email=" + rEmail + "&lp=" + lp + "&pid=" + pid + "&unit=" + unit + "&key=" + key;
+                        }
+
+                        jQuery.ajax({
+                            url: '/api/auth/page_signup',
+                            data: tmpForm.serialize(),
+                            type: "POST",
+                            success: function (data) {
+                                // console.log(data);
+                                location.href = returnurl;
+                            },
+                            error: function (err) {
+
+                                location.href = returnurl;
+                            }
+                        });
+                        return true;
+                    }
                 },
                 error: function (err) {
-
-                    location.href = returnurl;
+                    console.log(err);
+                    alert("请求失败，请联系管理员");
                 }
             });
-            return true;
         }
     }
 
