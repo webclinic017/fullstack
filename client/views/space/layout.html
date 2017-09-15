@@ -1,17 +1,17 @@
 <div class="layout-2">
-        <div class="layout-2__side">
-            <div ui-view="side"></div>
-        </div>
-        <div class="layout-2__content">
-                <a ng-if="personal.dredged_type == 'live' && personal.verify_status < 5" ui-sref="authen.subpage({subpage: 'realname'})" class="layout-2__content-tip link">
-                    您的帐户尚未完成认证审核，将无法进行交易和资金相关操作，点击此处完成审核。
-                </a>
-                <p ng-if="personal.dredged_type == 'demo' && personal.verify_status < 5"  class="layout-2__content-tip">
-                    您当前账户为体验金账户，升级至真实账户只需两步：
-                    <a class="link" ui-sref="space.asset.subpage({subpage: 'deposit'})">1.充值激活</a>
-                    &nbsp;&nbsp;
-                    <a class="link" ui-sref="authen.subpage({subpage: 'realname'})">2.上传证件审核</a>
-                </p>
-            <div class="mg-tp-30" ui-view="content"></div>
-        </div>
+    <div class="layout-2__side">
+        <div ui-view="side"></div>
     </div>
+    <div class="layout-2__content">
+        <a ng-if="personal.dredged_type == 'live' && personal.verify_status < 5" ui-sref="authen.subpage({subpage: 'realname'})"
+            class="layout-2__content-tip link">
+        您的帐户尚未完成认证审核，将无法进行交易和资金相关操作，点击此处完成审核。
+        </a>
+        <p ng-if="personal.dredged_type == 'demo' && personal.verify_status < 5" class="layout-2__content-tip">
+            您当前账户为体验金账户，升级至真实账户只需两步：
+            <a class="link" ui-sref="space.asset.subpage({subpage: 'deposit'})">1.充值激活</a> &nbsp;&nbsp;
+            <a class="link" ui-sref="authen.subpage({subpage: 'realname'})">2.上传证件审核</a>
+        </p>
+        <div class="mg-tp-30" ui-view="content"></div>
+    </div>
+</div>

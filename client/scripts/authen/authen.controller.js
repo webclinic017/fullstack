@@ -17,6 +17,7 @@
 
     // 主控制器
     function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout) {
+        $scope.dredgingType = 'demo'
         $scope.flow = {
             step: 1,
             authStatusMap: {
@@ -33,6 +34,14 @@
             $state.go('authen.subpage', {
                 subpage: $scope.flow.authStatusMap[flow]
             });
+        }
+
+        getDredgingType()
+        function getDredgingType() {
+            // 获取当前开通类型
+            // demo / live
+            $scope.dredgingType = $location.search().dredge_type || 'unkown'
+            console.log($scope.dredgingType)
         }
 
         $scope.$on('goState', function (e, flow) {
@@ -70,10 +79,9 @@
 
         // 获取当前认证状态
         function getAuthStatus() {
-            // 获取当前开通类型
-            // demo / live
-            $scope.dredgingType = $location.search().dredge_type || 'unkown'
-            
+            getDredgingType()
+            console.log($scope.dredgingType)
+
             if ($scope.personal.verify_status) {
                 return;
             }

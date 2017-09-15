@@ -12,8 +12,11 @@
             personal.basic === 'center.invest.subpage'">
     <div class="space_center_invest">
         <div class="clearfix">
-            <div class="space_center_invest__num">
+            <div ng-if="personal.dredged_type == 'live' || personal.dredged_type == 'unknow'" class="space_center_invest__num">
                 交易帐户: ${{ personal.balance || '--' }}
+            </div>
+            <div ng-if="personal.dredged_type == 'demo'" class="space_center_invest__num">
+                交易账户（体验金）: ${{ personal.balance || '--' }}
             </div>
             <ul class="space_center_invest__btn">
                 <li>
