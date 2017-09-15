@@ -7,23 +7,21 @@
     @extend .container;
     margin-top: 69px;
     padding: 0;
-
     @include e(side) {
         @extend .col-xs-3;
     }
-
     @include e(content) {
         @extend .col-xs-9;
-
         @include m(tip) {
             display: block;
             margin-top: 30px;
             color: #fb4a67;
-            
-            &.link, .link{
+            &.link,
+            .link {
                 color: #fb4a67;
             }
-            &.link:hover, .link:hover {
+            &.link:hover,
+            .link:hover {
                 text-decoration: underline;
             }
         }
@@ -34,14 +32,12 @@
         background-position: center center;
         margin-top: 50px;
         margin-bottom: 50px;
-
         p {
-            text-align: center; 
-            font-size: 24px; 
-            padding-top: 360px; 
-            padding-left: 154px; 
+            text-align: center;
+            font-size: 24px;
+            padding-top: 360px;
+            padding-left: 154px;
             color: #666;
-
             a {
                 color: #fe5f5f;
             }
@@ -50,13 +46,7 @@
 }
 
 @include b(layout-3) {
-
-    @include e(side) {
-    }
-
-    @include e(content) {
-    }
-
-    @include e(info) {
-    }
+    @include e(side) {}
+    @include e(content) {}
+    @include e(info) {}
 }
