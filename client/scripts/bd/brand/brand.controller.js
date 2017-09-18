@@ -29,6 +29,14 @@
             setToken();
         }, 300000);
 
+        // 统计验证码
+        function trackSA(){
+            sa.track('btn_register_code', {
+                page: '代理商申请',
+                path: 'bd/brand_proxy'
+            });
+        }
+
         function submitForm () {
             if (loading) return;
             if (validator.regType.phone.reg.test($scope.phone) && $scope.code) {
@@ -70,6 +78,8 @@
             account.getRCaptcha($scope.phone, token, 5, 1).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
+                    // 神策统计
+                    trackSA()
                     $scope.isCount = true;
                     var timer = $interval(function () {
                         $scope.countNum--;
@@ -124,6 +134,8 @@
                         account.getRCaptcha($scope.phone, token, 5, 1).then(function (data) {
                             // console.log(data);
                             if (data.is_succ) {
+                                // 神策统计
+                                trackSA()
                                 $scope.isCount = true;
                                 var timer = $interval(function () {
                                     $scope.countNum--;
