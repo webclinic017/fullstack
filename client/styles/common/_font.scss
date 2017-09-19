@@ -31,6 +31,14 @@
     src: url("#{$font-path-base}" + "live-font.otf");
     /*这里是字体文件路径*/
 }
+
+@font-face {
+    // 方正幼圆
+    font-family: 'FFYY';
+    /*这里是说明调用来的字体名字*/
+    src: url("#{$font-path-base}" + "FZYY.ttf");
+    /*这里是字体文件路径*/
+}
 /* makes the font 33% larger relative to the icon container */
 .fa-lg {
   font-size: 1.33333333em;
