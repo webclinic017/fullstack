@@ -97,19 +97,38 @@
 
     </head>
 <body>
-    <div class="title" style="font-size: 18px; text-align: left; margin: 20px; font-weight: bold;"></div>
-<div class="fr-view" style="margin: 0 20px;">
-    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #eee;">
-        <img style="width: 50px;position: absolute;top: 50%;left: 50%;margin-left: -25px;margin-top: -25px;" src="/ngsrc/loading.gif">
+    <div class="title" style="font-size: 18px; text-align: left; margin: 20px 20px 5px; font-weight: bold;"></div>
+    <div class="sub-tit clearfix" style="margin: 0px 20px 20px; font-size: 14px; color: #999;">
+        <div class="editor" style="float: left;">
+            来自：<span>老虎外汇</span>
+        </div>
+        <div class="time" style="float: right;">
+            
+        </div>
     </div>
-</div>
+    <div class="fr-view" style="margin: 0 20px; font-size: 16px;">
+        <div style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #eee;">
+            <img style="width: 50px;position: absolute;top: 50%;left: 50%;margin-left: -25px;margin-top: -25px;" src="/ngsrc/loading.gif">
+        </div>
+    </div>
+    <div class="pageView" style="margin: 0px 20px 20px; color: #999">
+        <!-- <i class="fa fa-eye"></i> -->
+        阅读
+        <span></span>
+    </div>
 
 <script type="text/javascript" src="https://www.tigerwit.com/downloads/static/froala-editor/jQuery.min.js"></script>
 <script>
     (function () {
         var $viewWrapper = $(".fr-view");
         var $title = $(".title");
-
+        var $editor = $(".editor span");
+        var $time = $(".time");
+        var $pageView = $(".pageView span");
+        var pageView = {
+            num: <%= pageInfo.pageView%>
+        };
+        console.log(pageView.num);
         $.get('/api/dissertation', {
             id: <%= pageInfo.id%>
         }).then(function (data) {
@@ -117,6 +136,16 @@
             if (data.is_succ) {
                 $title.html(data.data.name);
                 $viewWrapper.html(data.data.content);
+
+                if (data.data.pageView) {
+                    pageView.num += Number(data.data.pageView); 
+                }
+                if (data.data.editor) {
+                    $editor.html(data.data.editor);
+                }
+
+                $time.html(data.data.time);
+                $pageView.html(pageView.num);
             } else {
                 $viewWrapper.html('<p style="text-align: center;font-size: 30px">404</p>');
             }
