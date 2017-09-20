@@ -1,6 +1,6 @@
 <div ng-controller="SettingInfoPwdController">
     <div class="row pd-tp-20">
-        <form name="pwdForm" novalidate>
+        <form name="pwdForm" novalidate ng-show="personal.password == 1">
             <div class="col-xs-3">
                 <div class="form-control-wrapper">
                     <input class="form-control" 
@@ -77,6 +77,46 @@
 
             <div class="col-xs-3 text-center">
                 <button class="btn btn-primary btn-sm" type="submit" ng-if="clickable" ng-click="submitForm('pwdForm')">
+                    提交
+                </button>
+
+                <button class="btn btn-primary btn-sm" disabled ng-if="!clickable">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    提交中
+                </button>
+            </div>
+        </form>
+
+        <form name="pwdFormNew" novalidate ng-show="personal.password == 0">
+            <div class="col-xs-4">
+                <div class="form-control-wrapper">
+                    <input class="form-control"
+                           name="password"
+                           type="password"
+                           placeholder="密码"
+                           required
+                           ng-class="{'form-control-error': frontErr.password.show && pwdFormNew.password.$invalid}"
+                           ng-model="password.password"
+                           twform-valid-pwd
+                           ng-focus="hideErr('pwdFormNew', 'password')"
+                           ng-blur="showErr('pwdFormNew', 'password')">
+
+                    <div ng-show="frontErr.password.show">
+                        <p class="alert-arrow_tp_lf" ng-show="pwdFormNew.password.$error.required">
+                            请输入密码
+                        </p>
+
+                        <p class="alert-arrow_tp_lf" ng-show="pwdFormNew.password.$error.twformValidPwd">
+                            {{frontErr.password.tip}}
+                        </p>
+                    </div>  
+                </div>
+            </div>
+
+            <div class="col-xs-5"></div>
+
+            <div class="col-xs-3 text-center">
+                <button class="btn btn-primary btn-sm" type="submit" ng-if="clickable" ng-click="submitFormNew('pwdFormNew')">
                     提交
                 </button>
 

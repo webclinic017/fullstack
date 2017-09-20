@@ -33,6 +33,7 @@
             getCities: getCities,
             setBasicInfo: setBasicInfo,
             setPwd: setPwd,
+            setPwdFirst: setPwdFirst,
             setPhone: setPhone,
             getVerifyStatus: getVerifyStatus,
             setKyc: setKyc,
@@ -65,21 +66,15 @@
         /**
          * @name login
          * @desc 登陆
+         * @param {String} phone 手机号
+         * @param {String} password 登录密码/验证码
+         * @param {int} login_type 登录验证方式，1-密码登录，2-验证码登录
+         * @param {int} remember 是否记住登录状态，1：是，0：否
+         * 
          */
-        function login(id, password, expires) {
+        function login(params) {
 
-            if (expires) {
-                expires = 1;
-            } else {
-                expires = 0;
-            }
-
-            return publicHttp.dealPublicRequest(o.loginApi, 'POST', {
-                account: id,
-                password: password,
-                // expires: expires
-                remember: expires
-            });
+            return publicHttp.dealPublicRequest(o.loginApi, 'POST', params);
         }
 
         function checkLogined() {
@@ -359,8 +354,18 @@
         }
 
         /**
+         * @name setPwdFirst
+         * @desc 首次 设置密码
+         */
+        function setPwdFirst(password) {
+            return publicHttp.dealPublicRequest(o.setPwdApi, 'POST', {
+                password: password
+            });
+        }
+
+        /**
          * @name setPwd
-         * @desc 设置密码
+         * @desc 个人中心 设置密码
          */
         function setPwd(oldPwd, newPwd) {
             return publicHttp.dealPublicRequest(o.setPwdApi, 'PUT', {
