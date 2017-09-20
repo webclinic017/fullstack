@@ -7,16 +7,17 @@
         .controller('AuthenInvestInfoController', AuthenInvestInfoController)
         .controller('AuthenCompleteController', AuthenCompleteController)
         .controller('AuthenRealnameController', AuthenRealnameController)
-        .controller('AuthenSubmitController', AuthenSubmitController);
+        .controller('AuthenSubmitController', AuthenSubmitController)
+        .controller('AuthenDemoCompleteController', AuthenDemoCompleteController);
 
-    AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state', '$stateParams', '$timeout'];
+    AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state', '$stateParams', '$timeout', '$modal'];
     AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account', '$location', '$modal'];
     AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval', '$location', '$modal'];
     AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location'];
     AuthenSubmitController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
 
     // 主控制器
-    function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout) {
+    function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout, $modal) {
         $scope.dredgingType = 'demo'
         $scope.flow = {
             step: 1,
@@ -24,6 +25,7 @@
                 '1': 'investInfo',   // 投资信息 - kyc
                 '2': 'complete',     // 完成kyc 完善资料信息
                 '3': 'realname',     // 未上传过身份证
+                "_3": 'demoComplete', // 已开通体验金账户页
                 '4': 'realname',     // 审核拒绝 完善资料信息
                 "5": "submit",       // 待审核 -> 审核中页面
                 "6": 'submit',       // 审核通过 -> 审核成功，设置MT4密码页面
@@ -31,6 +33,9 @@
         }
 
         function goState(flow) {
+            if(flow == 3 && $scope.dredgingType == 'demo'){
+                flow = '_3'
+            }
             $state.go('authen.subpage', {
                 subpage: $scope.flow.authStatusMap[flow]
             });
@@ -47,6 +52,33 @@
         $scope.$on('goState', function (e, flow) {
             $scope.flow.step = flow
             goState(flow);
+        });
+
+        $scope.$on('open_alert_modal', function (e) {
+            $modal.open({
+                templateUrl: '/views/authen/alert_modal.html',
+                size: 'md',
+                backdrop: 'static',
+                resolve: {
+                    passedScope: function () {
+                        return {
+                            dredgeType: $scope.dredgingType
+                        }
+                    }
+                },
+                controller: ['$scope', 'passedScope', '$modalInstance', '$state', function ($scope, passedScope, $modalInstance, $state) {
+                    angular.extend($scope, passedScope)
+                    $scope.closeModal = closeModal;
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+
+                    $scope.go_realname = function () {
+                        go(4)
+                        $modalInstance.dismiss();
+                    }
+                }]
+            });
         });
 
         if ($scope.personal.verify_status) {
@@ -435,13 +467,15 @@
             }).then(function (data) {
                 $scope.completeInfo.clickable = true;
                 if (data.is_succ) {
-                    if ($scope.dredgeType) {
+                    if ($scope.dredgeType == 'live') {
                         // 提示开通账户成功
-                        open_modal({
-                            dredgeType: $scope.dredgeType
-                        })
+                        $scope.$emit('open_alert_modal')
+                    } else if ($scope.dredgeType == 'demo') {
+                        // 去往开通体验金
+                        go(7)
                     } else {
-                        go(4)
+                        // 去实名认证
+                        go(7)
                     }
                 } else {
                     $scope.backErr.show = true;
@@ -457,31 +491,6 @@
 
         function go(flow) {
             $scope.$emit('goState', flow);
-        }
-
-        function open_modal(resolve) {
-            $modal.open({
-                templateUrl: '/views/authen/alert_modal.html',
-                size: 'md',
-                backdrop: 'static',
-                resolve: {
-                    passedScope: function () {
-                        return resolve
-                    }
-                },
-                controller: ['$scope', 'passedScope', '$modalInstance', '$state', function ($scope, passedScope, $modalInstance, $state) {
-                    angular.extend($scope, passedScope)
-                    $scope.closeModal = closeModal;
-                    function closeModal() {
-                        $modalInstance.dismiss();
-                    }
-
-                    $scope.go_realname = function () {
-                        go(4)
-                        $modalInstance.dismiss();
-                    }
-                }]
-            });
         }
 
         $scope.checkExsit = function (type) {
@@ -778,4 +787,8 @@
     }
 
     function AuthenSubmitController() { }
+    function AuthenDemoCompleteController($scope) {
+        // 提示开通账户成功
+        // $scope.$emit('open_alert_modal')
+    }
 })();

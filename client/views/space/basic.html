@@ -68,8 +68,8 @@
 
     </ul>
     <div class="space_basic__notice">
-        <a class="font-base deposit__pointer" href="/space/#/space/notice" ng-if="personal.unreadLength > 0">
-            <span class="font-danger">消息通知：</span>您有 <span>{{ personal.unreadLength }}</span>条未读消息，请点击查看
+        <a class="font-base deposit__pointer" href="/space/#/space/notice" ng-if="personal.unreadMsg.total > 0">
+            <span class="font-danger">消息通知：</span>您有 <span>{{ personal.unreadMsg.total }}</span>条未读消息，请点击查看
         </a>
     </div>
 </div>

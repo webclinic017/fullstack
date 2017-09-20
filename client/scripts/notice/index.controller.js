@@ -8,7 +8,6 @@
     NoticeIndexController.$inject = ['$scope', '$location', '$interval', '$state', 'utils', 'account'];
 
     function NoticeIndexController($scope, $location, $interval, $state, utils, account) {
-
         $scope.pagebar = {
             config: {
                 // total: , 总页数
@@ -19,46 +18,71 @@
             //selectPage: , bind to pagination.selectPage
             getList: getNoticeList
         };
-        $scope.page = 1;
-        $scope.noticeList = [];
-
         var pagesize = 10;
 
+        $scope.page = 1;
+        $scope.noticeList = {
+            trade: [],
+            system: []
+        }
+        $scope.currentMsg = 'trade';
         $scope.openNotice = openNotice;
+        $scope.chooseMsg = chooseMsg;
+        $scope.unreadMsg = {
+            trade: 0,
+            system: 0,
+        }
 
-        getNoticeList(1);
+        // 获取消息
+        getNoticeList(1, 'trade');
+        getNoticeList(1, 'system');
 
-        if ($location.path() === '/space/notice') {
-            readAllNotice();
-            // console.info("readAll");
+        function chooseMsg(type){
+            $scope.currentMsg = type;
+            getNoticeList(1, type)
+            if($scope.unreadMsg[type] > 0){
+                readNotice(type)
+            }
         }
 
         // 获取消息列表
-        function getNoticeList(page) {
+        function getNoticeList(page, type) {
             $scope.page = page;
             var offset = (page-1)*pagesize;
             $scope.$emit('showLoadingImg');
-            account.getNoticeList(offset, pagesize).then(function(data) {
+            account.getNoticeList(offset, pagesize, type == 'trade' ? 2 : 1).then(function(data) {
                 // console.log(data);
                 $scope.$broadcast('hideLoadingImg');
                 if (!data) return;
                 if (data.is_succ) {
-                    $scope.noticeList = data.data.records;
-
-                    angular.forEach($scope.noticeList, function (value, index) {
+                    $scope.noticeList[type] = data.data.records;
+                    angular.forEach($scope.noticeList[type], function (value, index) {
                         value.openOrClose = 'open';
-
                         if (value.content.length > 150) {
                             value.contentOmit = value.content.substring(0, 150) + '...';
                         } else {
                             value.contentOmit = value.content;
                         }
                     });
-
                     angular.extend($scope.pagebar.config, {
                         total: data.data.page_count,
                         page: page
                     });
+                }
+            });
+        }
+
+        // 获取未读消息
+        getUnreadMsg()
+        function getUnreadMsg() {
+            account.getUnreadLength().then(function (data) {
+                if (!data) return;
+                var res = data.data
+                if (data.is_succ) {
+                    $scope.unreadMsg = {
+                        trade: ~~res.trade,
+                        system: ~~res.system
+                    }
                 }
             });
         }
@@ -75,9 +99,14 @@
         }
 
         // 所有消息设置为已读
-        function readAllNotice() {
-            account.getAllRead().then(function(data) {});
+        function readNotice(type) {
+            account.getAllRead(type == 'trade' ? 2 : 1).then(function(data) {
+                // 读完消息刷新未读
+                getUnreadMsg()
+            });
         }
+
+        // 格式化文本
         $scope.formatText = function(text){
             var newText = text.replace(/\n/g,'<br>');
             return newText;

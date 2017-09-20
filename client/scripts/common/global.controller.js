@@ -144,13 +144,15 @@
         function getUnreadLength() {
             if ($scope.userstatus.logined) {
                 account.getUnreadLength().then(function (data) {
-                    // console.log(data);
                     if (!data) return;
                     if (data.is_succ) {
-                        $scope.unreadLength = data.data;
-
+                        $scope.unreadLength = ~~data.data.system + ~~data.data.trade;
                         angular.extend($scope.personal, {
-                            unreadLength: $scope.unreadLength
+                            unreadMsg: {
+                                total: ~~data.data.system + ~~data.data.trade,
+                                trade: ~~data.data.trade,
+                                system: ~~data.data.system
+                            }
                         });
                     }
                 });

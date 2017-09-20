@@ -1,15 +1,59 @@
 @include b (notice) {
+    box-shadow: 1px 5px 30px darken($gray, 10%);
+    padding: 25px 30px 0 60px;
+    margin-bottom: 50px;
+
+    @include e (nav) {
+        height: 50px;
+        
+        @include m(item){
+            font-size: 18px;
+            font-weight: 500;
+            color: $gray-dark;
+            position: relative;
+            margin-right: 55px;
+            cursor: pointer;
+            &.has_new:before {
+                display: inline-block;
+                content: '';
+                width: 8px;
+                height: 8px;
+                background: $brand-danger;
+                border-radius: 4px;
+                position: absolute;
+                top: 0px;
+                right: -12px;
+            }
+            &:hover, &.active{
+                position: relative;
+                color: $gray-darkest;
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 30px;
+                    height: 4px;
+                    border-radius: 2px;
+                    @include gradient-horizontal($brand-primary-lighter, $brand-index-line);
+                    position: absolute;
+                    top: 110%;
+                    left: 50%;
+                    margin-left: -15px;
+                }
+            }
+        }
+    }
 
     @include e (list) {
         color: $gray-darkest;
+        position: relative;
     }
 
     @include e (list-li) {
-        padding: 20px 20px 5px 20px;
+        padding: 20px 20px 5px 0px;
         margin-bottom: 20px;
         overflow: hidden;
-        background: #fff;
-        border: 1px solid $gray;
+        // background: #fff;
+        // border: 1px solid $gray;
 
         &:hover {
             background: $gray-lightest;
@@ -18,12 +62,16 @@
 
     @include e (li-title) {
         margin-top: 5px;
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 20px;
+        font-weight: 600;
     }
 
     @include e (li-info) {
-        margin-top: 5px;
+        margin-top: 10px;
+    }
+
+    @include e(li-time) {
+        color: $gray-dark;
     }
 
     @include e(open) {
