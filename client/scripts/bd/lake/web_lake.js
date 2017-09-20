@@ -38,8 +38,8 @@
                         content: '<div class="lake_regForm" id="float_regBtn">' +
                         '<h1>注册送200美金</h1>' +
                         '<form>' +
-                        '<input type="text" name="username" id="float_username" placeholder="昵称">' +
                         '<input type="tel" name="tel" id="float_telephone" placeholder="手机号">' +
+                        '<input type="text" name="email" id="float_email" placeholder="邮箱">' +
                         '<span class="regist_btn" id="bdRegister">立即领取</span>' +
                         '</form>' +
                         '</div>'
@@ -49,7 +49,7 @@
                             window.bdRegister({
                                 usernameId: 'float_username',
                                 telephoneId: 'float_telephone',
-                                emailId: '',
+                                emailId: 'float_email',
                                 targetId: 'bdRegister'
                             });
                         })

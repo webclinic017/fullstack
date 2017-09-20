@@ -6,120 +6,256 @@
         .module('fullstackApp')
         .controller('AccountLoginController', AccountLoginController);
 
-    AccountLoginController.$inject = ['$scope', '$timeout', '$window', '$state', 'account'];
+    AccountLoginController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies'];
 
-    function AccountLoginController($scope, $timeout, $window, $state, account) {
-        $scope.account = {
-            id: undefined,
-            password: undefined,
-            autoLogin: true
-        };
-        $scope.frontErr = {
-            id: {
-                show: false
+    function AccountLoginController($scope, $interval, $timeout, $window, $state, account, validator, $cookies) {
+        $scope.loginType = 'code';  // 登录方式 code ->验证码登录，pass ->密码登录
+        $scope.loginStep1 = 1;      // 验证码登录进行到哪一步
+        $scope.loginStep2 = 1;      // 密码登录进行到哪一步
+        $scope.step1PasswordStatus = true;  // 验证码登录密码显示or隐藏
+        $scope.step2PasswordStatus = true;  // 密码登录密码显示or隐藏
+        $scope.forgetPasswordStatus = true; // 忘记密码设置密码显示or隐藏
+        $scope.rememberLoginStatus = true;  // 记住登录状态
+        $scope.loginBtnStatus = true;       // 登录按钮状态
+        $scope.codeBtnStatus = {            // 获取验证码按钮状态
+            step1Phone: {
+                count: false,       // 点击状态 false 可点击；true 不可点击
+                msg: '',            // 倒计时信息
+                timer: undefined    // 定时器
             },
-            password: {
-                show: false
+            forgetPhone: {
+                count: false,
+                msg: '',
+                timer: undefined
             }
         };
-        $scope.backErr = {
-            show: false,
-            msg: ''
+
+        $scope.frontErr = {
+            phone: {
+                reg: validator.regType.phone.reg
+            }
         };
-        $scope.clickable = true;
-        $scope.showErr = showErr;
-        $scope.hideErr = hideErr;
-        $scope.submitForm = submitForm;
 
-        var backUrl = $state.params.back;
+        $scope.account = {
+            step1Phone: '',
+            step1Code: '',
+            step1Password: '',
+            step2Phone: '',
+            step2Password: '',
+            forgetPhone: '',
+            forgetCode: '',
+            forgetPassword: ''
+        };
+        var token;
 
-        function submitForm(formName) {
-            showErr(formName, 'id');
-            showErr(formName, 'password');
+        account.setToken();
+        $interval(function () {
+            account.setToken();
+        }, 300000);
 
-            if ($scope[formName].$invalid) {
+        // 从 landing page 进入时
+        $scope.account.step1Phone = $state.params.phone;
+
+
+        // 切换登录方式
+        $scope.changeLoginType = function (loginType) {
+            $scope.loginType = loginType;
+        };
+        // 清除loginStep1 手机号
+        $scope.clearPhone = function (phone) {
+            $scope.account[phone] = '';
+        };
+        // 切换密码显示or隐藏
+        $scope.changePasswordStatus = function (status) {
+            $scope[status] = !$scope[status];
+        };
+        // 是否记住登录状态
+        $scope.changeRememberLogin = function () {
+            $scope.rememberLoginStatus = !$scope.rememberLoginStatus;
+        };
+        // 获取验证码
+        $scope.getCaptcha = function (formName, phoneName) {
+            var type;
+
+            if ($scope[formName][phoneName].$invalid) {
+                layer.msg("请填写手机号");
+                return;
+            }
+            if (!$scope.frontErr.phone.reg.test($scope.account[phoneName])) {
+                layer.msg("请填写正确的手机号");
                 return;
             }
 
-            $scope.clickable = false;
+            token = $cookies['code_token'];
 
-            var textEnc = account.encrypt($scope.account.password);
-            // 首先对 password 加密
-            // account.encrypt($scope.account.password).then(function (textEnc) {
-                // console.info($scope.account.id, textEnc, $scope.account.autoLogin);
-                
-                if (textEnc) {
-                    account.login($scope.account.id, textEnc, $scope.account.autoLogin).then(function (data) {
-                        // console.log(data);
-                        if (!data) {
-                            $scope.clickable = true;
-                            return;
-                        }
-                        if (!data.is_succ) {
-                            
-                            $scope.backErr.show = true;
-                            $scope.backErr.msg = data.message;
+            switch (phoneName) {
+                case 'step1Phone':
+                    type = 4;       // 登录
+                    break;
+                case 'forgetPhone':
+                    type = 2;       // 忘记密码
+                    break;
+                default:
+                    type = 0;
+                    break;
+            }
 
-                            $timeout(function () {
-                                $scope.backErr.show = false;
-                                $scope.backErr.msg = '';
-                            }, 3000);
-                            $scope.clickable = true;
-                        } else {
-                            // umeng
-                            _czc.push(["_trackEvent","登录框","登录成功"]);
-                            
-                            $timeout(function () {
-                                if (backUrl) {
-                                    $window.location.href = backUrl;
-                                } else {
-                                    account.hasChecked = false;
-                                    $state.go('space.invest.subpage', {subpage: 'current', back: 'login'}, {reload: true});
-                                    $scope.$emit('relogin_info');
-
-                                }
-                            }, 100);
-                        }
-                    }, function (err) {
-                        console.log(err);
-                        $scope.backErr.show = true;
-                        $scope.backErr.msg = "接口请求失败";
-
-                        $timeout(function () {
-                            $scope.backErr.show = false;
-                            $scope.backErr.msg = '';
-                        }, 3000);
-                        $scope.clickable = true;
-                    });
+            account.getRCaptcha($scope.account[phoneName], token, type).then(function (data) {
+                // console.log(data);
+                if (data.is_succ) {
+                    countDown(phoneName);
+                } else {
+                    layer.msg(data.message);
                 }
-            // });
-        }
-
-        function showErr(formName, controlName) {
-            if ($scope.frontErr[controlName]) {
-                $scope.frontErr[controlName].show = true;
-            }
-
-            if ($scope[formName][controlName].$invalid) {
-                // 如果前端有错误就不显示后端错误
+            });
+        };
+        // 登录
+        $scope.login = function (formName) {
+            if (!$scope.loginBtnStatus) return;
+            if ($scope[formName].$invalid) {
+                layer.msg("请填写完整信息");
                 return;
             }
 
-            if ($scope.backErr[controlName]) {
-                $scope.backErr[controlName].show = true;
+            var para = {};
+            if ($scope.loginType == 'code') {
+                para = {
+                    phone: $scope.account.step1Phone,
+                    password: $scope.account.step1Code,
+                    login_type: 2,
+                    remember: $scope.rememberLoginStatus ? 1 : 0,
+                    lp: $state.params.lp,
+                    pid: $state.params.pid,
+                    unit: $state.params.unit,
+                    key: $state.params.key
+                };
+            } else {
+                para = {
+                    phone: $scope.account.step2Phone,
+                    password: account.encrypt($scope.account.step2Password),
+                    login_type: 1,
+                    remember: $scope.rememberLoginStatus ? 1 : 0
+                };
             }
-        }
+            layer.load();
+            $scope.loginBtnStatus = false;
 
-        function hideErr(formName, controlName) {
-            if ($scope.frontErr[controlName]) {
-                $scope.frontErr[controlName].show = false;
-            }
+            account.login(para).then(function (data) {
+                // console.log(data);
+                layer.closeAll();
+                $scope.loginBtnStatus = true;
 
-            // 如果需要后端验错，这里是隐藏错误，所以把状态重置为后端未验证的状态
-            if($scope.backErr[controlName]) {
-                $scope.backErr[controlName].show = false;
-                $scope.backErr[controlName].status = 0;
+                if (data.is_succ) {
+                    if (($scope.loginType == 'code') && data.data.initial && (data.data.initial == 1)) {
+                        // 新用户
+                        $scope.loginStep1 = 2;
+                        $scope.$emit('relogin_info', 'is_register');
+                        return;
+                    }
+                    $timeout(function () {
+                        account.hasChecked = false;
+                        $state.go('space.center.index', {reload: true});
+                        $scope.$emit('relogin_info');
+                    }, 100);
+                } else {
+                    layer.msg(data.message);
+                }
+            });
+        };
+        // 验证码登录 新用户设置密码
+        $scope.setPassword = function (formName) {
+            if (!$scope.loginBtnStatus) return;
+            if ($scope[formName].$invalid) {
+                layer.msg("请输入密码");
+                return;
             }
+            layer.load();
+            $scope.loginBtnStatus = false;
+
+            account.setPwdFirst($scope.account.step1Password).then(function (data) {
+                // console.log(data);
+                layer.closeAll();
+                $scope.loginBtnStatus = true;
+
+                if (data.is_succ) {
+                    $timeout(function () {
+                        $scope.$emit('global.openDredgeMdl', {position: 'register'});
+                        $state.go('space.center.index', {reload: true});
+                    }, 100);
+                    
+                } else {
+                    layer.msg(data.message);
+                }
+            });
+        };
+        // 忘记密码页
+        $scope.goForgetPassword = function () {
+            $scope.loginStep2 = 2;
+        };
+        // 忘记密码页 第二步
+        $scope.goForgetPassword2 = function (formName) {
+            if (!$scope.loginBtnStatus) return;
+            if ($scope[formName].$invalid) {
+                layer.msg("请填写完整信息");
+                return;
+            }
+            layer.load();
+            $scope.loginBtnStatus = false;
+
+            account.checkPhoneAndCaptcha($scope.account.forgetPhone, $scope.account.forgetCode).then(function (data) {
+                layer.closeAll();
+                $scope.loginBtnStatus = true;
+
+                if (data.is_succ) {
+                    $scope.loginStep2 = 3;
+                } else {
+                    layer.msg(data.message);
+                }
+            });
+        };
+        // 忘记密码 设置密码
+        $scope.setForgetPassword = function (formName) {
+            if (!$scope.loginBtnStatus) return;
+            if ($scope[formName].$invalid) {
+                layer.msg("请输入密码");
+                return;
+            }
+            layer.load();
+            $scope.loginBtnStatus = false;
+
+            account.setNewPwd($scope.account.forgetPhone, $scope.account.forgetCode, $scope.account.forgetPassword).then(function (data) {
+                // console.log(data);
+                layer.closeAll();
+                $scope.loginBtnStatus = true;
+
+                if (data.is_succ) {
+                    $scope.loginStep2 = 4;
+                } else {
+                    layer.msg(data.message);
+                }
+            });
+        };
+        // 重新登陆
+        $scope.goLogin = function () {
+            $scope.loginStep2 = 1;
+        };
+
+
+        // 获取验证码倒计时
+        function countDown (codeType) {
+            $scope.codeBtnStatus[codeType].count = true;
+            $scope.codeBtnStatus[codeType].msg = 60;
+
+            $interval.cancel($scope.codeBtnStatus[codeType].timer);
+            $scope.codeBtnStatus[codeType].timer = $interval(function () {
+                $scope.codeBtnStatus[codeType].msg --;
+
+                if ($scope.codeBtnStatus[codeType].msg <= 0) {
+                    $scope.codeBtnStatus[codeType].count = false;
+
+                    $interval.cancel($scope.codeBtnStatus[codeType].timer);
+                }
+            }, 1000);
         }
     }
 })();

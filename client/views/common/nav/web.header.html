@@ -31,11 +31,11 @@
         <!-- 未登录时 -->
         <ul class="nav navbar-login navbar-right" ng-cloak ng-if="!personalCookiesInfo.userCode">
             <li>
-                <a class="login" ng-click="toTrackLoginSensorsdata()" href="/space/#/account/login"><%= lang.text("login")%></a>
+                <a class="signup" ng-click="toTrackLoginSensorsdata()" href="/space/#/account/login"><%= lang.text("login")%></a>
             </li>
-            <li>
+            <!-- <li>
                 <a class="signup" ng-click="toTrackRegisterSensorsdata()" href="/space/#/account/register"><%= lang.text("register")%></a>
-            </li>
+            </li> -->
         </ul>
 
         <!-- 登录后 -->
