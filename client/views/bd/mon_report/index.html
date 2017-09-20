@@ -16,24 +16,28 @@
 <% include /common/statistic/h5.jrtt.html %>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
-<body class="m_greenhand_layout_body">
-<% include /common/component/h5.loading.html %>
-<!--滑块-->
-<div class="slide_arrow2">
-    <div class="chevron"></div>
-    <div class="chevron"></div>
-    <div class="chevron"></div>
-</div>
-<img src="/images/greenhand/logo.png" alt="" class="greenhand_logo">
-<a class="connect_us" href="tel:<%= lang.text('telephone')%>">咨询客服</a>
+<body class="m_mon_report_body">
+    <% include /common/component/h5.loading.html %>
+    <!--滑块-->
+    <div class="slide_arrow2">
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+        <div class="chevron"></div>
+    </div>
 
-<div class="m_mon_report_layout">
-    <div class="full_page" id="dowebok">
-        <div class="section section1" id="img_detect_container">
-            
+    <div class="m_mon_report_layout">
+        <div class="full_page" id="dowebok">
+            <div class="section section1" id="img_detect_container">
+                <img class="banner full_img" src="/images/bd_mon_report/banner.png" alt="">
+                <img class="logo full_img" src="/images/bd_mon_report/logo.png" alt="">
+                <img class="check_now full_img" src="/images/bd_mon_report/check_now.png" alt="">
+            </div>
+            <div class="section section2 clearfix">
+                <img class="full_img mon_profit" src="/images/bd_mon_report/mon_profit.png" alt="">
+                <p class="text_box mon_profit_text">$213132.3</p>
+            </div>
         </div>
     </div>
-</div>
 </body>
 <% include /common/vendor/h5.js.html %>
 <!-- build:js(client) /scripts/m_mon_report.js -->

@@ -1,6 +1,6 @@
 ;
 (function () {
-    twH5Loader('img_detect_container', 1, allLoaded)
+    twH5Loader('img_detect_container', 4, allLoaded)
     function allLoaded() {
         $(function () {
             // 微信分享配置
@@ -17,24 +17,6 @@
             } else {
                 console.log("微信配置错误")
             }
-
-            // 兼容安卓键盘弹出BUG
-            debugAndroidKey({
-                focusSelector: '.section6 input',
-                ctrlBox: '.greenhand_regBox',
-                focusCss: {
-                    top: '10%'
-                },
-                focusFn: function () {
-                    $('.connect_us').hide();
-                },
-                blurCss: {
-                    top: '41.29%'
-                },
-                blurFn: function () {
-                    $('.connect_us').show();
-                }
-            })
 
             $('.slide_arrow2').on('tap', function () {
                 $.fn.fullpage.moveTo(6);
@@ -78,6 +60,7 @@
                     setTimeout(function () {
                         activePage(1);
                     }, 200);
+                    $.fn.fullpage.moveTo(2);
                 },
                 afterLoad: function (anchorLink, index) {
                     // debug 安卓翻页
