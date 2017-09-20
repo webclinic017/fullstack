@@ -379,6 +379,9 @@
                     getRegions('province', 'provinces', $scope.completeInfo.country.value);
                     getRegions('city', 'cities', $scope.completeInfo.province.value);
                 }
+                if (!$scope.completeInfo.country.value) {
+                    getRegions('province', 'provinces', 'CN');
+                }
             });
         }
 
