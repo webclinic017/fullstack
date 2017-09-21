@@ -11,14 +11,14 @@
         $scope.pagebar = {
             config: {
                 // total: , 总页数
-                size: 3,
+                size: 0,
                 page: 1
             },
             pages: [],
             //selectPage: , bind to pagination.selectPage
             getList: getNoticeList
         };
-        var pagesize = 10;
+        var pagesize = 5;
 
         $scope.page = 1;
         $scope.noticeList = {
@@ -37,20 +37,22 @@
         getNoticeList(1, 'trade');
         getNoticeList(1, 'system');
 
-        function chooseMsg(type){
+        function chooseMsg(type) {
             $scope.currentMsg = type;
             getNoticeList(1, type)
-            if($scope.unreadMsg[type] > 0){
+            if ($scope.unreadMsg[type] > 0) {
                 readNotice(type)
             }
         }
 
         // 获取消息列表
         function getNoticeList(page, type) {
+            $scope.pagebar.config.size = 0;
+            type = type ? type : $scope.currentMsg; 
+            $scope.$broadcast('showLoadingImg');
             $scope.page = page;
-            var offset = (page-1)*pagesize;
-            $scope.$emit('showLoadingImg');
-            account.getNoticeList(offset, pagesize, type == 'trade' ? 2 : 1).then(function(data) {
+            var offset = (page - 1) * pagesize;
+            account.getNoticeList(offset, pagesize, type == 'trade' ? 2 : 1).then(function (data) {
                 // console.log(data);
                 $scope.$broadcast('hideLoadingImg');
                 if (!data) return;
@@ -88,7 +90,7 @@
         }
 
         // 展开/收起 消息 status-> 0 收起 1 展开
-        function openNotice (notice, status) {
+        function openNotice(notice, status) {
             if (status) {
                 notice.contentOmit = notice.content;
                 notice.openOrClose = 'close';
@@ -100,16 +102,41 @@
 
         // 所有消息设置为已读
         function readNotice(type) {
-            account.getAllRead(type == 'trade' ? 2 : 1).then(function(data) {
+            account.getAllRead(type == 'trade' ? 2 : 1).then(function (data) {
                 // 读完消息刷新未读
                 getUnreadMsg()
             });
         }
 
         // 格式化文本
-        $scope.formatText = function(text){
-            var newText = text.replace(/\n/g,'<br>');
-            return newText;
+        $scope.formatText = function (text, type) {
+            var splitor1 = '\：';
+            var splitor2 = '\:';
+            if (type) {
+                var taggedStr = ''
+                var textArr = text.split('\n')
+                if (textArr.length > 1) {
+                    angular.forEach(textArr, function (item, index) {
+                        // console.log(item)
+                        if (item.indexOf(splitor1) != -1) {
+                            var splitedStr = item.split(splitor1);
+                            taggedStr += "<span class='info_desp'>" + splitedStr[0] + splitor1 + "</span>" + splitedStr[1] + "</br>"
+                        } 
+                        // else if (item.indexOf(splitor2) != -1) {
+                        //     var splitedStr = item.split(splitor2);
+                        //     taggedStr += "<span class='info_desp'>" + splitedStr[0] + splitor2 + "</span>" + splitedStr[1] + "</br>"
+                        // } 
+                        else {
+                            taggedStr += item + "</br>"
+                        }
+                    })
+                    return taggedStr
+                } else {
+                    return text
+                }
+            } else {
+                return text.replace(/\n/g, '<br>');
+            }
         }
     }
 })();
