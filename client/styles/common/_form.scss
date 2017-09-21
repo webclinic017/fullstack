@@ -75,6 +75,57 @@
     }
 }
 
+//== 登录input样式
+.account-form-control-wrapper {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+
+    /*placeholder字体大小*/  
+    ::-webkit-input-placeholder { /* WebKit browsers */  
+        font-size: 14px;
+        color: #c8c8c8;
+    }  
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
+        font-size: 14px;
+        color: #c8c8c8;
+    }  
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */  
+        font-size: 14px;
+        color: #c8c8c8;
+    }  
+    :-ms-input-placeholder { /* Internet Explorer 10+ */  
+        font-size: 14px;
+        color: #c8c8c8;
+    }  
+}
+.account-form-control {
+    display: block;
+    width: 100%;
+    height: 46px;
+    padding: 0px;
+    padding-left: 18px;
+    border: 1px solid $input-border;
+    border-radius: 14px;
+    line-height: 46px;
+    font-size: 18px;
+    color: #4a4a4a;
+    font-weight: 500;
+    
+}
+.account-form-control-tip {
+    position: absolute;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    top: -7px;
+    left: 22px;
+    padding: 0 8px;
+    background-color: #fff;
+    color: #b5b5b5;
+}
+
 //== checkbox
 .checkbox {
     cursor: pointer;

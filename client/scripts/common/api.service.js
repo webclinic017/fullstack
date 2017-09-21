@@ -16,7 +16,7 @@
 
         var account = {
             getPersonalInfoDegreeApi: urlOrigin2 + '/user/perfect_degree',
-            loginApi: urlOrigin2 + '/auth/login',
+            loginApi: urlOrigin2 + '/v2/auth/login',
             updataUserInfoApi: urlOrigin2 + '/v2/user/auth_info',
             updataId: urlOrigin2 + '/user/update_idno',
             checkLoginedApi: urlOrigin2 + '/auth/check',
@@ -94,8 +94,8 @@
             checkPhoneApi: urlOrigin2 + '/agent'
         };
         var product = {
-            getProductCommentApi: '/blog/api/get_category_posts?id=86',
-            getProductMarketApi: '/blog/api/get_category_posts?id=90',
+            getProductCommentApi: 'https://forex.tigerwit.com/api/get_category_posts?id=86',
+            getProductMarketApi: 'https://forex.tigerwit.com/api/get_category_posts?id=90',
             getWebProductInfoApi: '/napi?action=get_product'
         };
         var ranklist = {

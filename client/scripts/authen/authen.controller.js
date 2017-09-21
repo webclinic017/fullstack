@@ -379,6 +379,9 @@
                     getRegions('province', 'provinces', $scope.completeInfo.country.value);
                     getRegions('city', 'cities', $scope.completeInfo.province.value);
                 }
+                if (!$scope.completeInfo.country.value) {
+                    getRegions('province', 'provinces', 'CN');
+                }
             });
         }
 
@@ -472,7 +475,7 @@
                         $scope.$emit('open_alert_modal')
                     } else if ($scope.dredgeType == 'demo') {
                         // 去往开通体验金
-                        go(7)
+                        go('_3')
                     } else {
                         // 去实名认证
                         go(7)
