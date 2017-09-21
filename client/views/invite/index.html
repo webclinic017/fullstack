@@ -52,7 +52,7 @@
         </ul>
     </div>
 
-    <!-- <table class="table table-personal table-hover table-bordered mg-tp-30">
+    <table class="table table-personal table-hover table-bordered mg-tp-30">
         <colgroup>
             <col width="33.3%">
             <col width="33.3%">
@@ -61,17 +61,29 @@
         <thead>
             <tr>
                 <th>好友昵称</th>
-                <th>状态</th>
-                <th>我的佣金</th>
+                <th>入金状态</th>
+                <th>是否完成交易</th>
             </tr>
         </thead>
         <tbody>
             <tr ng-repeat="bonus in bonusList">
-                <td>{{bonus.username}}</td>
+                <td>{{bonus.user_name}}</td>
                 <td>
-                    {{ bonus.status }}
+                    <span style="color: #f9e266;" ng-show="bonus.is_deposit == 1">
+                        已入金
+                    </span>
+                    <span ng-show="bonus.is_deposit == 0">
+                        未入金
+                    </span>
                 </td>
-                <td><i class="fa fa-dollar"></i>{{bonus.money || 0}}</td>
+                <td>
+                    <span style="color: #f9e266;" ng-show="bonus.volume >= 1">
+                        是
+                    </span>
+                    <span ng-show="bonus.volume < 1">
+                        否
+                    </span>
+                </td>
             </tr>
         </tbody>
     </table>
@@ -81,5 +93,5 @@
 
     <div ng-if="bonusList.length <= 0">
         <p class="text-center mg-tp-20">无数据！</p>
-    </div> -->
+    </div>
 </div>
