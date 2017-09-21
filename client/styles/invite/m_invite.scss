@@ -157,7 +157,7 @@ html,body{
 
             .list {
                 margin-top: px2rem(16);
-                height: px2rem(256);
+                height: px2rem(320);
                 overflow: scroll;
 
                 .content {
@@ -169,6 +169,7 @@ html,body{
 
                         .status {
                             color: #b5b5b5;
+                            font-size: px2rem(26);
 
                             &.active {
                                 color: #f9e266;

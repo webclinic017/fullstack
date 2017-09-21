@@ -73,29 +73,24 @@
 </body>
 <script id="invite_table" type="text/template">
     <div class="invite_pic_list">
-        <ul class="title clearfix">
-            <li style="width: 20%;"></li>
-            <li style="width: 40%;">昵称</li>
-            <li style="width: 23%;">入金状态</li>
-            <li style="width: 17%;">是否完成交易</li>
-        </ul>
+        
         <div class="list">
         <$for(var i=0; i<list.length; i++){$>
             <ul class="content clearfix">
                 <li class="pic"><span><img src="/avatar/<$=list[i].user_code$>_150.jpg"></span></li>
                 <li class="name"><$=list[i].user_name$></li>
-                <li style="width: 23%;">
+                <li style="width: 20%;">
                     <$if (list[i].is_deposit == 1) {$>
                         <span class="status active">已入金</span>
                     <$} else {$>
                         <span class="status">未入金</span>
                     <$}$>
                 </li>
-                <li style="width: 17%;">
+                <li style="width: 20%;">
                     <$if (list[i].volume >= 1) {$>
-                        <span class="status active">是</span>
+                        <span class="status active">已满手数</span>
                     <$} else {$>
-                        <span class="status">否</span>
+                        <span class="status">未满手数</span>
                     <$}$>
                 </li>
             </ul>
