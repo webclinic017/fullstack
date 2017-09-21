@@ -5,7 +5,6 @@
     src: url("#{$font-path-base}"+"_fontyouyuan.ttf");
     /*这里是字体文件路径*/
 }
-
 @include b(m_mon_report_layout) {
     text-align: center;
     transition: all 1s ease;
@@ -23,6 +22,9 @@
         width: 30%;
     }
     #dowebok {
+        .slide_arrow2 {
+            z-index: 10;
+        }
         .section {
             background: url("/images/bd_mon_report/bg.png");
             background-position: center center;
@@ -30,17 +32,95 @@
             position: relative;
             max-width: 1334px;
             font-family: 'fontYY';
+            color: #475c95;
             .full_img {
                 width: 100%;
                 position: absolute;
                 left: 0;
                 top: 0;
             }
-            .text_box{
-                background: url('/images/bd_mon_report/text_box.png');
+            .mon_profit {
+                top: -41%;
+                z-index: 1;
+            }
+            .mon_profit_text {
+                margin-top: 30.5%;
+                z-index: 1;
+            }
+            .text_box {
+                background: url('/images/bd_mon_report/text_box_bg.png');
+                font-size: px2rem(58);
+                font-weight: 800;
+                padding: 0 1.2rem;
+                display: inline-block;
+                border: 0.28rem solid #475c95;
+
+                &.slogan{
+                    margin-top: 5%;
+                    font-size: 1.25rem;
+                    padding: 0.4rem 1rem;
+                }
+            }
+            // 交易品种图例
+            @include b(legend_box){
+                margin-bottom: 0.5rem;
+                @include e(icon){
+                    margin-right: 0.2rem;
+                    @include m(legend){
+                        @include square(0.85rem, px2rem(4));
+                        border: 2px solid #475c95;
+                        &.bg1{
+                            background: #ffab00;
+                        }
+                        &.bg2{
+                            background: #475c95;
+                        }
+                        &.bg3{
+                            background: #ff433a;
+                        }
+                        &.bg4{
+                            background: #8dc9d3;
+                        }
+                    }
+                }
+            }
+            
+            @include b(intro_box) {
+                @include square_per(625, 0.5rem);
+                background: url('/images/bd_mon_report/intro_bg.png');
                 background-size: 100% 100%;
-                color: #475c95;
-                font-size: px2rem(55);
+                display: inline-block;
+                margin-top: 1rem;
+                padding: 1rem;
+                @include e(title) {
+                    text-align: center;
+                    font-size: px2rem(40);
+                    font-weight: 600;
+                }
+                @include e(content) {
+                    margin-top: 0.2rem;
+                    height: px2rem(435);
+                    @include m(chart){
+                        width: 53.4%;
+                        height: 90%;
+                        padding-top: 1.8rem;
+                    }
+
+                    @include m(types){
+                        width: 45%;
+                        padding-left: 1rem;
+                        margin-top: 1.2rem;
+                        font-size: px2rem(30);
+                        text-align: left;
+
+                        &.ring_chart {
+                            padding-top: 1rem;
+                            .legend_box{
+                                margin-bottom: 1rem;                                
+                            }
+                        }
+                    }
+                }
             }
         }
         .section1 {
@@ -58,15 +138,6 @@
                 width: 50%;
                 top: 61%;
                 left: 25%;
-            }
-        }
-        .section2 {
-            .mon_profit {
-                top: -35%;
-            }
-            .mon_profit_text{
-                width: 54.5%;
-                margin-top: 7.8%;
             }
         }
     }

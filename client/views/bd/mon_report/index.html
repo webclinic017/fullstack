@@ -18,29 +18,104 @@
 
 <body class="m_mon_report_body">
     <% include /common/component/h5.loading.html %>
-    <!--滑块-->
-    <div class="slide_arrow2">
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-        <div class="chevron"></div>
-    </div>
-
     <div class="m_mon_report_layout">
         <div class="full_page" id="dowebok">
             <div class="section section1" id="img_detect_container">
+                <!--滑块-->                
+                <% include /common/component/h5.slider.html %>
                 <img class="banner full_img" src="/images/bd_mon_report/banner.png" alt="">
                 <img class="logo full_img" src="/images/bd_mon_report/logo.png" alt="">
                 <img class="check_now full_img" src="/images/bd_mon_report/check_now.png" alt="">
             </div>
             <div class="section section2 clearfix">
+                <!--滑块-->
+                <% include /common/component/h5.slider.html %>
                 <img class="full_img mon_profit" src="/images/bd_mon_report/mon_profit.png" alt="">
-                <p class="text_box mon_profit_text">$213132.3</p>
+                <p class="text_box mon_profit_text">$21311232.3</p>
+                <div class="intro_box">
+                    <div class="intro_box__title">最喜爱交易品种</div>
+                    <div class="intro_box__content clearfix">
+                        <div class="intro_box__content-chart fl">
+                            <canvas id="pie_chart" width="400" height="400"></canvas>
+                        </div>
+                        <ul class="intro_box__content-types fl">
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg1"></span></p>
+                                <div class="legend_box__desp fl">
+                                    <p class="legend_box__desp-name">欧元美元</p>
+                                    <p class="legend_box__desp-lot">23.10手</p>
+                                </div>
+                            </li>
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg2"></span></p>
+                                <div class="legend_box__desp fl">
+                                    <p class="legend_box__desp-name">欧元美元</p>
+                                    <p class="legend_box__desp-lot">23.10手</p>
+                                </div>
+                            </li>
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg3"></span></p>
+                                <div class="legend_box__desp fl">
+                                    <p class="legend_box__desp-name">欧元美元欧欧</p>
+                                    <p class="legend_box__desp-lot">23.10手</p>
+                                </div>
+                            </li>
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg4"></span></p>
+                                <div class="legend_box__desp fl">
+                                    <p class="legend_box__desp-name">欧元美元</p>
+                                    <p class="legend_box__desp-lot">23.10手</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text_box slogan">掌握全球资讯 最爱外汇投资</p>
+            </div>
+            <div class="section section3 clearfix">
+                <!--滑块-->
+                <% include /common/component/h5.slider.html %>
+                <img class="full_img mon_profit" src="/images/bd_mon_report/mon_profit.png" alt="">
+                <p class="text_box mon_profit_text">$21311232.3</p>
+                <div class="intro_box">
+                    <div class="intro_box__title">收益最大的交易品种</div>
+                    <div class="intro_box__content clearfix">
+                        <div class="intro_box__content-chart fl">
+                            <canvas id="ring_chart" width="400" height="400"></canvas>
+                        </div>
+                        <ul class="intro_box__content-types ring_chart fl">
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg1"></span></p>
+                                <div class="legend_box__desp fl">
+                                    <p class="legend_box__desp-name">欧元美元</p>
+                                    <p class="legend_box__desp-lot">23.10手</p>
+                                </div>
+                            </li>
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg2"></span></p>
+                                <div class="legend_box__desp fl">
+                                    <p class="legend_box__desp-name">欧元美元</p>
+                                    <p class="legend_box__desp-lot">23.10手</p>
+                                </div>
+                            </li>
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg3"></span></p>
+                                <div class="legend_box__desp fl">
+                                    <p class="legend_box__desp-name">欧元美元欧欧</p>
+                                    <p class="legend_box__desp-lot">23.10手</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text_box slogan">多才多艺，交易品种广</p>
             </div>
         </div>
     </div>
 </body>
 <% include /common/vendor/h5.js.html %>
 <!-- build:js(client) /scripts/m_mon_report.js -->
+<script src="/scripts/plugins/chart.min.js"></script>
 <script src="/scripts/bd/common/wx_share_config.js"></script>
 <script src="/scripts/bd/mon_report/index.js"></script>
 <!-- endbuild -->
