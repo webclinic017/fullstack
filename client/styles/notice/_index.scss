@@ -68,6 +68,12 @@
 
     @include e (li-info) {
         margin-top: 10px;
+        .info_desp {
+            display: inline-block;
+            min-width: 80px;
+            font-weight: 500;
+            color: $gray-darker;
+        }
     }
 
     @include e(li-time) {
