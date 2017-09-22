@@ -11,10 +11,10 @@
         $scope.pagebar = {
             config: {
                 // total: , 总页数
-                size: 0,
                 page: 1
             },
             pages: [],
+            pagesBtn: [],
             //selectPage: , bind to pagination.selectPage
             getList: getNoticeList
         };
@@ -47,7 +47,6 @@
 
         // 获取消息列表
         function getNoticeList(page, type) {
-            $scope.pagebar.config.size = 0;
             type = type ? type : $scope.currentMsg; 
             $scope.$broadcast('showLoadingImg');
             $scope.page = page;
