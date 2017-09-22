@@ -90,13 +90,15 @@ html,body{
 }
 
 .m_share02_layout{
+    background-color: #fff;
   
   @include b(share02_main){
     padding: px2rem(32);
+    padding-bottom: px2rem(132);
 
     @include e(box) {
-        height: px2rem(634);
-        margin: 0 px2rem(40);
+        height: px2rem(800);
+        margin: 0 px2rem(8);
         padding: px2rem(30) px2rem(25);
         background-color: #fff;
         border-radius: px2rem(10);
@@ -124,7 +126,7 @@ html,body{
         }
     }
     @include e(list) {
-        height: px2rem(350);
+        height: px2rem(480);
 
         .init {
             font-size: 20px;
@@ -157,34 +159,33 @@ html,body{
 
             .list {
                 margin-top: px2rem(16);
-                height: px2rem(320);
+                height: px2rem(460);
                 overflow: scroll;
 
                 .content {
                     color: #4a4a4a;
-                    padding: px2rem(6.4) 0;
+                    padding: px2rem(8) 0;
 
                     li {
                         float: left;
 
                         .status {
                             color: #b5b5b5;
-                            font-size: px2rem(26);
 
                             &.active {
-                                color: #f9e266;
+                                color: #ffbd43;
                             }
                         }
                     }
                     li:not(:first-child) {
-                        padding-top: px2rem(16);
-                        font-size: px2rem(30);
+                        padding-top: px2rem(26);
+                        font-size: px2rem(26);
                     }
                     li.pic {
-                        width: 16%;
+                        width: 13%;
                         border-radius: 50%;
                         overflow: hidden;
-                        margin-right: 4%;
+                        margin-right: 5%;
 
                         img {
                             width: 100%;
@@ -193,6 +194,7 @@ html,body{
                     }
                     li.name {
                         width: 40%;
+                        margin-right: 4%;
                         overflow:hidden;
                         white-space:nowrap;
                         text-overflow:ellipsis;
@@ -245,9 +247,17 @@ html,body{
     }
     
     @include e(send_btn){
+        position: fixed;
+        left: 4%;
+        bottom: 1rem;
+        width: 92%;
+        background: #fff;
+        padding-top: px2rem(20);
+
       
       span{
         display: block;
+        color: #4a4a4a;
         margin: 0 auto;
         width: 100%;
         height: px2rem(90);
@@ -260,8 +270,6 @@ html,body{
         background: -moz-linear-gradient(left,#f9e266,#ffbd43);
         background: -o-linear-gradient(left,#f9e266,#ffbd43);
         background: linear-gradient(left,#f9e266,#ffbd43);
-        margin-top:px2rem(25);
-        color: $brand-button-color;
 
         &.pandafx{
             background: -webkit-linear-gradient(left,#838cd4,#4555cd);
