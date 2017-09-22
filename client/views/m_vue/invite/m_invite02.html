@@ -14,7 +14,7 @@
     <div class="share02_main">
         <div class="share02_main__box">
             <div class="share02_main__title clearfix">
-                <p class="tit">邀请好友<br>赢取10美金</p>
+                <p class="tit"><span>邀请好友</span><span>赢取10美金</span></p>
                 <%if(lang.isCompany("tigerwit")){%>
                     <p class="pic"><img src="/images/basic_logo_tw.png"></p>
                 <%} else if (lang.isCompany("pandafx")) {%>
@@ -72,11 +72,30 @@
 </div>
 </body>
 <script id="invite_table" type="text/template">
-    
-    <div class="invite_pic_list relative">
+    <div class="invite_pic_list">
+        
+        <div class="list">
         <$for(var i=0; i<list.length; i++){$>
-            <span class="item"><img src="/avatar/<$=list[i].res_id$>_150.jpg"></span>
+            <ul class="content clearfix">
+                <li class="pic"><span><img src="/avatar/<$=list[i].user_code$>_150.jpg"></span></li>
+                <li class="name"><$=list[i].user_name$></li>
+                <li style="width: 18%;">
+                    <$if (list[i].is_deposit == 1) {$>
+                        <span class="status active">已入金</span>
+                    <$} else {$>
+                        <span class="status">未入金</span>
+                    <$}$>
+                </li>
+                <li style="width: 20%;">
+                    <$if (list[i].volume >= 1) {$>
+                        <span class="status active">已满手数</span>
+                    <$} else {$>
+                        <span class="status">未满手数</span>
+                    <$}$>
+                </li>
+            </ul>
         <$}$>
+        </div>
     </div>
     
 </script>

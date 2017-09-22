@@ -186,10 +186,6 @@
         var list = {
             list: []
         };
-        var listBoxWidth = parseInt($("#invite_history_list").width()); //盒子宽度
-        var picNumAble = parseInt((listBoxWidth - 60) / 30) + 1;    //可以容纳的头像数量
-        var listWrapperLeft = "0px";
-        // console.log(listBoxWidth, picNumAble);
 
         $(document).on('touchend', '.share02_main__content .status .c.active', function (e) {
             callNative({
@@ -208,18 +204,6 @@
                 if (!data) return;
                 if (data.is_succ) {
                     list.list = data.data.records;
-
-                    if (picNumAble < list.list.length) {
-                        $.each(list.list, function (index, value) {
-                            value.left = (index*((listBoxWidth-60)/(list.list.length-1))).toFixed(2)+"px";
-                        });
-                    } else {
-                        listWrapperLeft = (listBoxWidth-60-(list.list.length-1)*30)/2+"px";
-
-                        $.each(list.list, function (index, value) {
-                            value.left = index*30+"px";
-                        });
-                    }
 
                     var cBtn = ".share02_main__content .status .c";
                     $(".share02_main__content .info .num").html(data.data.record_count);
@@ -244,12 +228,7 @@
                     if (list.list.length) {
                         var list_str = baidu.template('invite_table', list);
                         $("#invite_history_list").html(list_str);
-
-                        $("#invite_history_list .invite_pic_list").css("marginLeft", listWrapperLeft);
-
-                        $.each($("#invite_history_list .invite_pic_list .item"), function (index, value) {
-                            $(value).css("left", list.list[index].left);
-                        });
+                        
                     } else {
                         $("#invite_history_list .init").addClass("active");
                     }
