@@ -3,55 +3,63 @@
         <div class="notice__nav-item fl" ng-class="{ 'active': currentMsg == 'trade', 'has_new': unreadMsg.trade > 0 }" ng-click="chooseMsg('trade')">交易提醒</div>
         <div class="notice__nav-item fl" ng-class="{ 'active': currentMsg == 'system', 'has_new': unreadMsg.system > 0 }" ng-click="chooseMsg('system')">系统提醒</div>
     </div>
-    <ul class="notice__list" ng-if="currentMsg == 'trade'">
-        <div tw-loading-img></div>
-        <li class="notice__list-li" ng-repeat="notice in noticeList.trade">
-            <div class="row">
-                <div class="col-xs-12">
-                    <p class="notice__li-title">{{notice.title}}</p>
-                    <p class="notice__li-time font-size-12"> {{notice.created_at | dealTimestamp }}</p>
-                    <p class="notice__li-info" ng-bind-html="formatText(notice.contentOmit, 'trade') | bindhtml">
-                    </p>
-                    <div ng-if="notice.content.length > 150 && notice.openOrClose == 'open'" class="text-right">
-                        <a class="notice__open" href="" ng-click="openNotice(notice, 1)">展开</a>
-                    </div>
-                    <div ng-if="notice.content.length > 150 && notice.openOrClose == 'close'" class="text-right">
-                        <a class="notice__close" href="" ng-click="openNotice(notice, 0)">收起</a>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li class="notice__list-li" ng-if="noticeList.trade.length == 0">
-            <p class="text-left">
-                暂无提醒
-            </p>
-        </li>
-    </ul>
-    <ul class="notice__list" ng-if="currentMsg == 'system'">
-        <div tw-loading-img></div>
-        <li class="notice__list-li" ng-repeat="notice in noticeList.system">
-            <div class="row">
-                <div class="col-xs-12">
-                    <p class="notice__li-title">{{notice.title}}</p>
-                    <p class="notice__li-time font-size-12"> {{notice.created_at | dealTimestamp }}</p>
-                    <p class="notice__li-info" ng-bind-html="formatText(notice.contentOmit, 'sys') | bindhtml">
-                    </p>
-                    <div ng-if="notice.content.length > 150 && notice.openOrClose == 'open'" class="text-right">
-                        <a class="notice__open" href="" ng-click="openNotice(notice, 1)">展开</a>
-                    </div>
-                    <div ng-if="notice.content.length > 150 && notice.openOrClose == 'close'" class="text-right">
-                        <a class="notice__close" href="" ng-click="openNotice(notice, 0)">收起</a>
+    <div ng-if="currentMsg == 'trade'">
+        <ul class="notice__list">
+            <div tw-loading-img class="mg-bt-20"></div>
+            <li class="notice__list-li" ng-repeat="notice in noticeList.trade">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="notice__li-title">{{notice.title}}</p>
+                        <p class="notice__li-time font-size-12"> {{notice.created_at | dealTimestamp }}</p>
+                        <p class="notice__li-info" ng-bind-html="formatText(notice.contentOmit, 'trade') | bindhtml">
+                        </p>
+                        <div ng-if="notice.content.length > 150 && notice.openOrClose == 'open'" class="text-right">
+                            <a class="notice__open" href="" ng-click="openNotice(notice, 1)">展开</a>
+                        </div>
+                        <div ng-if="notice.content.length > 150 && notice.openOrClose == 'close'" class="text-right">
+                            <a class="notice__close" href="" ng-click="openNotice(notice, 0)">收起</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </li>
-        <li class="notice__list-li" ng-if="noticeList.system.length == 0">
-            <p class="text-left">
-                暂无提醒
-            </p>
-        </li>
-    </ul>
-    <div class="text-center">
-        <p tw-pagination></p>
+            </li>
+            <li class="notice__list-li" ng-if="noticeList.trade.length == 0">
+                <p class="text-left mg-bt-20">
+                    暂无提醒
+                </p>
+            </li>
+        </ul>
+        <div class="text-right" ng-if="noticeList.trade.length > 0">
+            <div tw-pagination></div>
+        </div>
+    </div>
+    <div ng-if="currentMsg == 'system'">
+        <ul class="notice__list pd-bt-20">
+            <div tw-loading-img class="mg-bt-20"></div>
+            <li class="notice__list-li" ng-repeat="notice in noticeList.system">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <p class="notice__li-title">{{notice.title}}</p>
+                        <p class="notice__li-time font-size-12"> {{notice.created_at | dealTimestamp }}</p>
+                        <p class="notice__li-info" ng-bind-html="formatText(notice.contentOmit, 'sys') | bindhtml">
+                        </p>
+                        <div ng-if="notice.content.length > 150 && notice.openOrClose == 'open'" class="text-right">
+                            <a class="notice__open" href="" ng-click="openNotice(notice, 1)">展开</a>
+                        </div>
+                        <div ng-if="notice.content.length > 150 && notice.openOrClose == 'close'" class="text-right">
+                            <a class="notice__close" href="" ng-click="openNotice(notice, 0)">收起</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="notice__list-li" ng-if="noticeList.system.length == 0">
+                <p class="text-left mg-bt-20">
+                    暂无提醒
+                </p>
+            </li>
+        </ul>
+        
+        <div class="text-right" ng-if="noticeList.system.length > 0">
+            <div tw-pagination></div>
+        </div>
     </div>
 </div>
