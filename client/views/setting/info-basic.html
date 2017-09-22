@@ -33,45 +33,9 @@
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-xs-2 pd-rg-0">
-                <label for="">所在地</label>
-            </div>
-
-            <div class="col-xs-5">
-                <div class="form-control-wrapper">
-                    <div class="select">
-                        <input class="select__input"
-                               name="locationWorld"
-                               type="text"
-                               placeholder="请选择国家"
-                               required
-                               ng-model="basicInfo.locationWorld.key"
-                               ng-class="{'form-control-error': frontErr.locationWorld.show && basicInfoForm.locationWorld.$invalid}"
-                               ng-blur="showErr('basicInfoForm', 'locationWorld')"
-                               ng-focus="hideErr('basicInfoForm', 'locationWorld')">
-                        
-                        <i class="select__icon fa fa-angle-down"></i>
-
-                        <ul class="select__dropdown" twform-select data-bind-model="basicInfo.locationWorld">
-                            
-                            <li ng-repeat="world in worlds" ng-class="{'selected': world.code === basicInfo.locationWorld.value}">
-                                <span data-value="{{world.code}}" ng-click="selectRegion('world', world.code)">{{world.name_cn}}</span>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div ng-show="frontErr.locationWorld.show">
-                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.locationWorld.$error.required">
-                            请选择国家
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row" ng-if="basicInfo.locationWorld.value == 'CN'">
             <div class="col-xs-2 pd-rg-0">
-                
+                <label for="">所在地</label>
             </div>
             <div class="col-xs-5">
                 <div class="form-control-wrapper">
