@@ -12,8 +12,8 @@
         $scope.basicInfo = {
             username: undefined,
             locationWorld: {
-                key: undefined,
-                value: undefined
+                key: '中国',
+                value: 'CN'
             },
             locationState: {
                 key: undefined,
@@ -127,13 +127,13 @@
 
         function initLocation() {
             account.getLocation().then(function (data) {
-                console.info(data);
+                // console.info(data);
                 if (data.is_succ) {
                     data = data.data
                     angular.extend($scope.basicInfo, {
                         locationWorld: {
-                            key: data.region_cn.world_name,
-                            value: data.region_cn.world_code
+                            key: '中国',
+                            value: 'CN'
                         },
                         locationState: {
                             key: data.region_cn.state_name,
@@ -151,7 +151,7 @@
             });
 
             $scope.$on('locationInfoReady', function () {
-                getRegions('world', 'worlds');
+                // getRegions('world', 'worlds');
                 
                 if ($scope.basicInfo.locationWorld.value == 'CN') {
                     getRegions('state', 'states', $scope.basicInfo.locationWorld.value);
