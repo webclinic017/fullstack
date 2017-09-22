@@ -249,11 +249,11 @@ html,body{
     @include e(send_btn){
         position: fixed;
         left: 4%;
-        bottom: 1rem;
+        bottom: 0;
         width: 92%;
         background: #fff;
         padding-top: px2rem(20);
-
+        padding-bottom: px2rem(32);
       
       span{
         display: block;
