@@ -217,7 +217,7 @@
 
         function submitForm(formName) {
             showErr(formName, 'username');
-            showErr(formName, 'locationWorld');
+            // showErr(formName, 'locationWorld');
             // showErr(formName, 'special');
             // showErr(formName, 'strategy');
             // showErr(formName, 'desc');
