@@ -1,0 +1,48 @@
+<div class="h5_share_modal_box" id="share_modal_box">
+    <div class="share_modal clearfix" id="share_modal">
+        <h5 id="share_title"></h5>
+        <span class="share_to_friends">    <img src="/images/mobile/share2wx.png" data-share-type="wechat_friend"><br>微信好友</span>
+        <span class="share_to_circle">     <img src="/images/mobile/share2circle.png" data-share-type="wechat_circle"><br>朋友圈</span>
+        <span class="share_to_qf">         <img src="/images/mobile/share2qq.png" data-share-type="qq"><br>QQ好友</span>
+        <span class="share_to_qZone">      <img src="/images/mobile/share2qZone.png" data-share-type="qzone"><br>QQ空间</span>
+        <span class="share_to_microBlog">  <img src="/images/mobile/share2mBlog.png" data-share-type="weibo"><br>微博</span>
+        <span class="cancel_share" id="cancel_share"><button>取消</button></span>
+    </div>
+</div>
+
+<script>
+    window.openH5ShareModal = openH5ShareModal;
+    function openH5ShareModal(config) {
+        // 弹窗标题
+        $('#share_title').html(config.modalTitle);
+
+        var modalHeight = '350px';
+        var layerShareIndex = layer.open({
+            type: 1
+            , content: $('#share_modal_box').html()
+            , anim: 'up'
+            , style: 'position:fixed; bottom:0; left:0; width: 100%; height: ' + modalHeight + '; padding:10px 0; border:none;'
+        });
+        
+        // 给分享按钮绑定事件
+        $(document).one('touchend', '.share_modal', function (e) {
+            layer.close(layerShareIndex);
+            var shareType = $(e.target).attr('data-share-type');
+            console.log('shareModal.log : share to', shareType, config)
+            if (!isInTiger()) {
+                console.log("当前不是APP环境");
+                return
+            } else {
+                callNative({
+                    type: shareType,
+                    title: config.shareTitle,
+                    description: config.desp,
+                    url: config.url
+                })
+            }
+
+            return false
+        });
+    }
+
+</script>
