@@ -26,7 +26,7 @@
     // 在分享页面为 true
     var hasShared = getSearch().shared == 1;
 
-    if (!isInTiger() && (loca.hostname == 'www.tigerwit.com' || loca.hostname == 'demo.tigerwit.com')) {
+    if (!isInTiger() && loca.hostname == 'www.tigerwit.com') {
         if(!hasShared){
             openInApp(loca.hostname + loca.pathname + loca.search)
         }
@@ -286,7 +286,7 @@
                 $('.mon-rank-num').html(result.rank)
                 result["rank"] = rank + '%'
                 result["title"] = value.title
-                result["path"] = '/' + key + '.png'
+                result["path"] = key
                 return false
             }
         })
@@ -297,7 +297,7 @@
         $('.report-result-title').html(result.title)
         $('.mon-rank-num').html(result.rank)
         // 渲染插画
-        $('.rank-comic').attr('src', '/images/bd_mon_report' + result.path)
+        $('.intro_box__content-rank_comic').find('.' + result.path).show();
 
         var section5 = $('.section5').find('.slogan').hide().end()
         var path = loca.pathname
@@ -332,7 +332,8 @@
             '.section4',
             '.section5',
         ])
-        $('section1').find('.slide_arrow2').hide()
+        $('.section1').find('.slide_arrow2').hide()
+        $('.section1').find('.check_now').hide()
         initFullPage(hasShared ? null : afterLoad)
         // 提示错误
         errWarning()
@@ -352,10 +353,17 @@
             content: '正在生成月报...'
         });
 
-        publicRequest('getMonReport', 'GET', {
+        var params = {
             user_code: hasShared ? user_code : null,
-            token: getSearch().token
-        }).then(function (data) {
+        }
+
+        if(getSearch().token){
+            params.token = getSearch().token
+        }
+
+        console.log(params)
+
+        publicRequest('getMonReport', 'GET', params).then(function (data) {
             if (!data) { return }
             var res = data.data
             if (data.is_succ) {
@@ -384,7 +392,8 @@
                 noDataErr(hasShared)
             }
             layer.close(loaderIndex)
-        }).fail(function () {
+        }).fail(function (data) {
+            console.log(data)
             noDataErr(hasShared)
         })
     }
