@@ -300,6 +300,53 @@ button[class*="btn"] {
     }
 }
 
+// 分享组件
+.h5_share_modal_box{
+    display: none;
+}
+@include b(share_modal){
+    text-align: center;
+    font-size:px2rem(38);
+    padding-left: 5%;
+    padding-right: 5%;
+    h5{
+      font-size:px2rem(45);
+      font-weight: 300;
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+      color: #555;
+    }
+    span{
+      display: inline-block;
+      width: 25%;
+      float: left;
+      font-size: px2rem(25);
+      font-weight: 200;
+      margin-top:px2rem(25);
+      color: #222;
+
+      img{
+        width: 75%;
+        vertical-align: middle;
+        margin-bottom: px2rem(10);
+      }
+    }
+
+    button{
+      width: 100%;
+      height: px2rem(100);
+      color: #99999c;
+      border-top: 1px solid #e6e6e6;
+      position: absolute;
+      bottom:0;
+      left: 0;
+      right: 0;
+      padding: 0;
+      background-color: transparent;
+      font-size: 1.2rem;
+    }
+  }
+
 .slide_arrow {
     position: absolute;
     bottom: 2%;

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <% include /common/meta/h5.html %>
+    <title>
+        <%= lang.text('companyZhName')%> | 投资月报
+    </title>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<body class="m_mon_report_body">
+    <!-- 引入组件 -->
+    <% include /common/component/h5.loading.html %>
+    <% include /common/component/h5.share_modal.html %>
+    
+    <div class="m_mon_report_layout">
+        <div class="full_page" id="dowebok">
+            <div class="section section1" id="img_detect_container">
+                <!--滑块-->                
+                <% include /common/component/h5.slider.html %>
+                <img class="banner full_img" src="/images/bd_mon_report/banner.png" alt="">
+                <img class="logo full_img" src="/images/bd_mon_report/logo.png" alt="">
+                <p class="date">2017.8</p>
+                <img class="check_now full_img" src="/images/bd_mon_report/check_now.png" alt="">
+            </div>
+            <div class="section section2 clearfix">
+                <!--滑块-->
+                <% include /common/component/h5.slider.html %>
+                <img class="full_img mon_profit" src="/images/bd_mon_report/mon_profit.png" alt="">
+                <p class="text_box mon_profit_text"></p>
+                <div class="intro_box">
+                    <div class="intro_box__title">最喜爱交易品种</div>
+                    <div class="intro_box__content clearfix">
+                        <div class="intro_box__content-chart fl">
+                            <canvas id="pie_chart" width="400" height="400"></canvas>
+                        </div>
+                        <ul class="intro_box__content-types fl">
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg1"></span></p>
+                                <div class="legend_box__desp fl max-like">
+                                    <p class="legend_box__desp-name max-like-name">...</p>
+                                    <p class="legend_box__desp-lot max-like-lot">...</p>
+                                </div>
+                            </li>
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg2"></span></p>
+                                <div class="legend_box__desp fl max-like">
+                                    <p class="legend_box__desp-name max-like-name">...</p>
+                                    <p class="legend_box__desp-lot max-like-lot">...</p>
+                                </div>
+                            </li>
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg3"></span></p>
+                                <div class="legend_box__desp fl max-like">
+                                    <p class="legend_box__desp-name max-like-name">...</p>
+                                    <p class="legend_box__desp-lot max-like-lot">...</p>
+                                </div>
+                            </li>
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg4"></span></p>
+                                <div class="legend_box__desp fl max-like">
+                                    <p class="legend_box__desp-name max-like-name">...</p>
+                                    <p class="legend_box__desp-lot max-like-lot">...</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text_box slogan max-like-desc">掌握全球资讯，最爱外汇投资</p>
+            </div>
+            <div class="section section3 clearfix">
+                <!--滑块-->
+                <% include /common/component/h5.slider.html %>
+                <img class="full_img mon_profit" src="/images/bd_mon_report/mon_profit.png" alt="">
+                <p class="text_box mon_profit_text"></p>
+                <div class="intro_box">
+                    <div class="intro_box__title">收益最大的交易品种</div>
+                    <div class="intro_box__content clearfix">
+                        <div class="intro_box__content-chart fl">
+                            <canvas id="ring_chart" width="400" height="400"></canvas>
+                        </div>
+                        <ul class="intro_box__content-types ring_chart fl">
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg1"></span></p>
+                                <div class="legend_box__desp fl max-profit">
+                                    <p class="legend_box__desp-name max-profit-name">...</p>
+                                    <p class="legend_box__desp-lot max-profit-lot">...</p>
+                                </div>
+                            </li>
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg2"></span></p>
+                                <div class="legend_box__desp fl max-profit">
+                                    <p class="legend_box__desp-name max-profit-name">...</p>
+                                    <p class="legend_box__desp-lot max-profit-lot">...</p>
+                                </div>
+                            </li>
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg3"></span></p>
+                                <div class="legend_box__desp fl max-profit">
+                                    <p class="legend_box__desp-name max-profit-name">...</p>
+                                    <p class="legend_box__desp-lot max-profit-lot">...</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text_box slogan max-profit-desc">多才多艺，交易品种广</p>
+            </div>
+            <div class="section section4 clearfix">
+                <!--滑块-->
+                <% include /common/component/h5.slider.html %>
+                <img class="full_img mon_profit" src="/images/bd_mon_report/mon_profit.png" alt="">
+                <p class="text_box mon_profit_text"></p>
+                <div class="intro_box">
+                    <div class="intro_box__title">最常用的交易方式</div>
+                    <div class="intro_box__content clearfix">
+                        <div class="intro_box__content-chart fl">
+                            <canvas id="pie_chart2" width="400" height="400"></canvas>
+                        </div>
+                        <ul class="intro_box__content-types pie_chart2 fl">
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg1"></span></p>
+                                <div class="legend_box__desp fl">
+                                    <p class="legend_box__desp-name">自主交易</p>
+                                    <p class="legend_box__desp-lot"><span class="auto-trade-profit"></span>&nbsp;&nbsp;$</p>
+                                    <p class="legend_box__desp-lot">手数：<span class="auto-trade-lot"></span>手</p>
+                                </div>
+                            </li>
+                            <li class="legend_box clearfix">
+                                <p class="legend_box__icon fl"><span class="legend_box__icon-legend bg2"></span></p>
+                                <div class="legend_box__desp fl">
+                                    <p class="legend_box__desp-name">跟单交易</p>
+                                    <p class="legend_box__desp-lot"><span class="copy-trade-profit"></span>&nbsp;&nbsp;$</p>
+                                    <p class="legend_box__desp-lot">手数：<span class="copy-trade-lot"></span>手</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="text_box slogan trade_way_desc"></p>
+            </div>
+            <div class="section section5 clearfix">
+                <img class="full_img mon_profit" src="/images/bd_mon_report/mon_profit.png" alt="">
+                <p class="text_box mon_profit_text"></p>
+                <div class="intro_box">
+                    <!-- <img class="intro_box__title img" src="/images/bd_mon_report/money_maker_text.png"/> -->
+                    <div class="intro_box__title report_result">「<span class="report-result-title"></span>」</div>
+                    <div class="intro_box__content clearfix">
+                        <div class="intro_box__content-chart mon_rank_container fl">
+                            您本月的收益超过
+                            </br>
+                            <span class="mon-rank-num">98%</span>
+                            </br>
+                            的网友
+                        </div>
+                        <div class="intro_box__content-rank_comic fl">
+                            <img class="rank-comic money_maker" alt="rank-comic" src="/images/bd_mon_report/money_maker.png">
+                            <img class="rank-comic old_driver" alt="rank-comic" src="/images/bd_mon_report/old_driver.png">
+                            <img class="rank-comic house_keeper" alt="rank-comic" src="/images/bd_mon_report/house_keeper.png">
+                            <img class="rank-comic good_investor" alt="rank-comic" src="/images/bd_mon_report/good_investor.png">
+                            <img class="rank-comic pi_master" alt="rank-comic" src="/images/bd_mon_report/pi_master.png">
+                            <img class="rank-comic baby" alt="rank-comic" src="/images/bd_mon_report/baby.png">
+                        </div>
+                    </div>
+                </div>
+                <p class="text_box slogan share">炫一炫战绩</p>
+                <a class="text_box slogan has_sub bd">
+                    注册送1000美元红包
+                    </br>
+                    <span class="sub_title">活动时间：9月1日－10月31日</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_mon_report.js -->
+<script src="/bower_components/jsencrypt/bin/jsencrypt.min.js"></script>
+<script src="/scripts/plugins/chart.min.js"></script>
+<script src="/scripts/bd/common/wx_share_config.js"></script>
+<script src="/scripts/bd/common/open_app.js"></script>
+<script src="/scripts/bd/mon_report/index.js"></script>
+<!-- endbuild -->
+
+<!-- 推广脚本footer -->
+<%- include('/common/statistic/all.html') %>
+</html>
