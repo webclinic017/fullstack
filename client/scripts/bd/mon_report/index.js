@@ -27,7 +27,7 @@
     var hasShared = getSearch().shared == 1;
 
     if (!isInTiger() && loca.hostname == 'www.tigerwit.com') {
-        if(!hasShared){
+        if (!hasShared) {
             openInApp(loca.hostname + loca.pathname + loca.search)
         }
     }
@@ -99,17 +99,22 @@
         var shareLink = loca.origin + '/bd/mon_report' + '?shared=1&user_code=' + encodeURIComponent(encrypt($.cookie('user_code') || ''));
         // console.log(shareDesp, shareTitle, shareLink)
         // console.log(shareLink)
-        if (isInTiger) {
-            $('.share').on('tap', function () {
-                openH5ShareModal({
-                    modalTitle: shareTitle,
-                    shareTitle: shareTitle,
-                    desp: shareDesp,
-                    url: shareLink,
-                })
-                return false
+        $('.share').on('tap', function () {
+            openH5ShareModal({
+                modalTitle: shareTitle,
+                shareTitle: shareTitle,
+                desp: shareDesp,
+                url: shareLink,
+                fn: function () {
+                    // 统计分享
+                    sa.track('mon_report_share_btn', {
+                        path: loca.pathname
+                    });
+                    _czc.push(["_trackEvent", loca.pathname, "mon_report_share_btn"]);
+                }
             })
-        }
+            return false
+        })
 
         // 微信分享配置
         if (wx) {
@@ -312,19 +317,12 @@
                 return false
             });
         } else {
-            section5.find('.share').show().on('tap', function () {
-                // 统计分享
-                sa.track('mon_report_share_btn', {
-                    path: path
-                });
-                _czc.push(["_trackEvent", path, "mon_report_share_btn"]);
-                return false
-            })
+            section5.find('.share').show();
         }
         share(hasShared)
     }
 
-    // 无数据报错
+    // 无数据
     function noDataErr(hasShared) {
         removeSection([
             '.section2',
@@ -357,7 +355,7 @@
             user_code: hasShared ? user_code : null,
         }
 
-        if(getSearch().token){
+        if (getSearch().token) {
             params.token = getSearch().token
         }
 

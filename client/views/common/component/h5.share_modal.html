@@ -29,6 +29,8 @@
             layer.close(layerShareIndex);
             var shareType = $(e.target).attr('data-share-type');
             console.log('shareModal.log : share to', shareType, config)
+            // 执行回调
+            config.fn && config.fn();
             if (!isInTiger()) {
                 console.log("当前不是APP环境");
                 return
