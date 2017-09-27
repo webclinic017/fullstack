@@ -583,6 +583,12 @@ module.exports = function (app) {
         res.render('bd/brand/proxy', extendPublic({}, req));
     });
 
+    // 市场部 - 月报生成
+    app.route('/bd/mon_report').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('bd/mon_report/index', extendPublic({}, req));
+    });
+
     // cms 生成H5活动页
     app.route('/bd/object/:subpage').get(function (req, res) {
         var subpage = req.params.subpage;

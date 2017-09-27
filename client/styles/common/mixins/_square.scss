@@ -1,0 +1,15 @@
+// 像素正方形
+@mixin square($dis, $border_radius) {
+  display: inline-block;
+  width: $dis;
+  height: $dis;
+  border-radius: $border_radius;
+}
+
+// 百分比正方形
+@mixin square_per($dis, $border_radius) {
+  display: inline-block;
+  width: $dis / 750 * 100%;
+  height: $dis / 1334 * 100%;
+  border-radius: $border_radius;
+}
