@@ -229,7 +229,7 @@
         var $maxLike = $('.max-like');
         $.each(res.max_like, function (index, item) {
             $($maxLike[index]).find('.max-like-name').html(item.symbol_cn)
-                .end().find('.max-like-lot').html(item.vols).end().parent().show();
+                .end().find('.max-like-lot').html(item.vols + ' 手').end().parent().show();
             pieChartData.push(item.vols)
             pieChartDataLabels.push(item.symbol_cn)
         })
@@ -246,7 +246,7 @@
         var $maxProfit = $('.max-profit');
         $.each(res.max_profit, function (index, item) {
             $($maxProfit[index]).show().find('.max-profit-name').html(item.symbol_cn)
-            $($maxProfit[index]).find('.max-profit-lot').html(item.profits).end().parent().show()
+            $($maxProfit[index]).find('.max-profit-lot').html('$ ' + item.profits).end().parent().show()
             ringChartData.push(item.profits)
             ringChartDataLabels.push(item.symbol_cn)
         })
