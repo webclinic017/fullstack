@@ -215,9 +215,10 @@
 
         // 渲染最最喜爱交易品种页
         var pieChartData = [];
+        var $maxLike = $('.max-like');
         $.each(res.max_like, function (index, item) {
-            $($('.max-like')[index]).find('.max-like-name').html(item.symbol_cn)
-                .end().find('.max-like-lot').html(item.vols);
+            $($maxLike[index]).find('.max-like-name').html(item.symbol_cn)
+                .end().find('.max-like-lot').html(item.vols).end().parent().show();
             pieChartData.push(item.vols)
         })
         $('.max-like-desc').html(res.max_like_desc)
@@ -228,12 +229,15 @@
 
         // 渲染收益最大交易品种页
         var ringChartData = [];
-        $('.max-profit').each(function (index, item) {
-            // console.log(index, res.max_profit[index], item)
-            $(item).find('.max-profit-name').html(res.max_profit[index].symbol_cn)
-                .end().find('.max-profit-lot').html(res.max_profit[index].profits);
-            ringChartData.push(res.max_like[index].vols)
+        var $maxProfit = $('.max-profit');
+        $.each(res.max_profit, function (index, item) {
+            $($maxProfit[index]).show().find('.max-profit-name').html(item.symbol_cn)
+            $($maxProfit[index]).find('.max-profit-lot').html(item.profits).end().parent().show()
+            ringChartData.push(item.vols)
         })
+
+
+
         // console.log(ringChartData)
         $('.max-profit-desc').html(res.max_profit_desc)
         chartMap.ringChart.config.data.datasets[0].data = ringChartData
@@ -365,6 +369,7 @@
             if (!data) { return }
             var res = data.data
             if (data.is_succ) {
+                console.log(data)
                 if (res.length == 0) {
                     noDataErr()
                 } else {
@@ -377,6 +382,7 @@
                             '.section4',
                         ])
                     } else {
+                        console.log(res)
                         readyChartsData(res)
                         $('.check_now').fadeIn(500).on('tap', function () {
                             $.fn.fullpage.moveTo(2);
