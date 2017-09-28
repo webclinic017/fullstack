@@ -12,7 +12,11 @@
     // 获取当前日期
     var date = new Date;
     var year = date.getFullYear();
-    var cur_month = date.getMonth() + 1;
+    var cur_month = date.getMonth();
+    if(cur_month == 0){
+        cur_month = 12
+        year -= 1
+    }
     var cur_date = year + '.' + cur_month;
 
     // 排行结果
@@ -147,6 +151,9 @@
             backgroundColor: ['#ffab00', '#003655', '#ff433a', '#8dc9d3'],
 
             options: {
+                legend: {
+                    display: false
+                },
                 circumference: 2 * Math.PI,
                 animation: {
                     animateRotate: true,
@@ -162,6 +169,7 @@
                 config: {
                     type: 'pie',
                     data: {
+                        labels: [],
                         datasets: [
                             {
                                 data: [],
@@ -179,6 +187,7 @@
                 config: {
                     type: 'pie',
                     data: {
+                        labels: ['自主交易', '复制交易'],
                         datasets: [
                             {
                                 data: [],
@@ -196,6 +205,7 @@
                 config: {
                     type: 'doughnut',
                     data: {
+                        labels: [],
                         datasets: [
                             {
                                 data: [],
@@ -215,32 +225,36 @@
 
         // 渲染最最喜爱交易品种页
         var pieChartData = [];
+        var pieChartDataLabels = []
         var $maxLike = $('.max-like');
         $.each(res.max_like, function (index, item) {
             $($maxLike[index]).find('.max-like-name').html(item.symbol_cn)
                 .end().find('.max-like-lot').html(item.vols).end().parent().show();
             pieChartData.push(item.vols)
+            pieChartDataLabels.push(item.symbol_cn)
         })
         $('.max-like-desc').html(res.max_like_desc)
         chartMap.pieChart.config.data.datasets[0].data = pieChartData
+        chartMap.pieChart.config.data.labels = pieChartDataLabels
         if (renderedChart.pieChart) {
             renderedChart.pieChart.update()
         }
 
         // 渲染收益最大交易品种页
         var ringChartData = [];
+        var ringChartDataLabels = []
         var $maxProfit = $('.max-profit');
         $.each(res.max_profit, function (index, item) {
             $($maxProfit[index]).show().find('.max-profit-name').html(item.symbol_cn)
             $($maxProfit[index]).find('.max-profit-lot').html(item.profits).end().parent().show()
-            ringChartData.push(item.vols)
+            ringChartData.push(item.profits)
+            ringChartDataLabels.push(item.symbol_cn)
         })
-
-
 
         // console.log(ringChartData)
         $('.max-profit-desc').html(res.max_profit_desc)
-        chartMap.ringChart.config.data.datasets[0].data = ringChartData
+        chartMap.ringChart.config.data.datasets[0].data = ringChartData;
+        chartMap.ringChart.config.data.labels = ringChartDataLabels;
         if (renderedChart.ringChart) {
             renderedChart.ringChart.update()
         }
