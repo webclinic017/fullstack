@@ -20,6 +20,7 @@ var setCompanyCookie,
     gloal_modelRegularDetail;
 
 var SetEnvConfig = require('./get_env_config').SetEnvConfig;
+var recordAccessTimes = require('./record_access_times');
 
 function setEnvCf(req, res) {
     new SetEnvConfig(req);
@@ -592,13 +593,18 @@ module.exports = function (app) {
     // cms 生成H5活动页
     app.route('/bd/object/:subpage').get(function (req, res) {
         var subpage = req.params.subpage;
-        var pageInfo = {
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('bd/object/index.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
+        recordAccessTimes.readAccessTimes('/object_page_view.txt', function (num) {
+            // console.log(num);
+            var pageInfo = {
+                id: subpage,
+                pageView: num || 0
+            };
+            setEnvCf(req, res);
+            res.render('bd/object/index.html', extendPublic({
+                pageInfo: pageInfo
+            }, req));
+        });
+        
     });
 
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
