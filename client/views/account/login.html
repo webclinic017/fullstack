@@ -14,6 +14,7 @@
                                    type="text"
                                    placeholder="请输入您的帐号"
                                    required
+                                   on-enter="login('loginForm3')"
                                    ng-model="account.step2Phone">
                             <span class="account-form-control-tip" ng-show="account.step2Phone">手机号</span>
                             <span class="account_login__close" ng-show="account.step2Phone" ng-click="clearPhone('step2Phone')">
@@ -27,6 +28,7 @@
                                    name="step2Password"
                                    type="password"
                                    placeholder="请输入您的账户密码"
+                                   on-enter="login('loginForm3')"
                                    required
                                    ng-model="account.step2Password">
                             <span class="account-form-control-tip" ng-show="account.step2Password">密码</span>
@@ -40,6 +42,7 @@
                                    name="step2Password"
                                    type="text"
                                    placeholder="请输入您的账户密码"
+                                   on-enter="login('loginForm3')"
                                    required
                                    ng-model="account.step2Password">
                             <span class="account-form-control-tip" ng-show="account.step2Password">密码</span>
@@ -76,6 +79,7 @@
                                    name="forgetPhone"
                                    type="text"
                                    placeholder="请输入手机号码"
+                                   on-enter="getCaptcha('loginForm4', 'forgetPhone')"
                                    required
                                    ng-model="account.forgetPhone">
                             <span class="account-form-control-tip" ng-show="account.forgetPhone">手机号</span>
@@ -89,6 +93,7 @@
                                    name="forgetCode"
                                    type="text"
                                    placeholder="请输入验证码"
+                                   on-enter="goForgetPassword2('loginForm4')"
                                    required
                                    ng-model="account.forgetCode">
                             <span class="account-form-control-tip" ng-show="account.forgetCode">校验码</span>
@@ -113,6 +118,7 @@
                                    name="forgetPassword"
                                    type="password"
                                    placeholder="请输入密码"
+                                   on-enter="setForgetPassword('loginForm5')"
                                    required
                                    ng-model="account.forgetPassword">
                             <span class="account-form-control-tip" ng-show="account.forgetPassword">密码</span>
@@ -126,6 +132,7 @@
                                    name="forgetPassword"
                                    type="text"
                                    placeholder="请输入密码"
+                                   on-enter="setForgetPassword('loginForm5')"
                                    required
                                    ng-model="account.forgetPassword">
                             <span class="account-form-control-tip" ng-show="account.forgetPassword">密码</span>
@@ -164,6 +171,7 @@
                                    name="step1Phone"
                                    type="text"
                                    placeholder="请输入手机号码"
+                                   on-enter="getCaptcha('loginForm1', 'step1Phone')"
                                    required
                                    ng-model="account.step1Phone">
                             <span class="account-form-control-tip" ng-show="account.step1Phone">手机号</span>
@@ -177,6 +185,7 @@
                                    name="step1Code"
                                    type="text"
                                    placeholder="请输入验证码"
+                                   on-enter="login('loginForm1')"
                                    required
                                    ng-model="account.step1Code">
                             <span class="account-form-control-tip" ng-if="account.step1Code">校验码</span>
@@ -208,6 +217,7 @@
                                    name="step1Password"
                                    type="password"
                                    placeholder="请输入密码"
+                                   on-enter="setPassword('loginForm2')"
                                    required
                                    ng-model="account.step1Password">
                             <span class="account-form-control-tip" ng-show="account.step1Password">密码</span>
@@ -220,6 +230,7 @@
                                    autocomplete="off"
                                    name="step1Password"
                                    type="text"
+                                   on-enter="setPassword('loginForm2')"
                                    placeholder="请输入密码"
                                    required
                                    ng-model="account.step1Password">
