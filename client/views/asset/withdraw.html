@@ -18,7 +18,7 @@
     <br>
     <div class="row">
         <div class="col-xs-3 text-right deposit__title-money">
-            提现帐户
+            银行卡
         </div>
 
         <div class="col-xs-9 pd-tp-10" ng-show="!withdraw.card.id">
@@ -33,6 +33,8 @@
             <span class="deposit__pointer font-info" ng-click="openCardMdl()">修改 ></span>
         </div>
     </div>
+    <br>
+    <p>管理银行卡</p>
     <br>
     <div ng-show="withdraw.type === 'invest' && withdrawMessageSucc && !message.is_succ" class="withdraw__sys_tip">
         <p class="font-info">系统提示：{{message.error_msg}}</p>

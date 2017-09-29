@@ -69,7 +69,7 @@
         asset.getIsWithdraw().then(function (data) {
             layer.closeAll();
             if (!data) return;
-            // console.info(data);
+            console.info('getIsWithdraw.data', data);
             $scope.withdrawMessageSucc = true;
             if (data.is_succ) {
                 if (data.data.status == 0) {
