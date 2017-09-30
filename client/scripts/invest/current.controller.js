@@ -31,6 +31,7 @@
         // 获取自主交易持仓订单和订单概况
         function getData() {
             invest.getInvestCurrentData().then(function (data) {
+                // console.log(data);
                 if (!data) return;
                 if (data.is_succ) {
                     data = data.data;
@@ -40,7 +41,7 @@
                     $scope.from_orders_profit = 0;
                     var nProfit = 0;
                     angular.forEach($scope.from_data, function (oData, index) {
-                        nProfit += (+oData.profit) || 0;
+                        nProfit += (+oData.gross_profit) || 0;
                     });
                     $scope.from_orders_profit = nProfit.toFixed(2);
 
