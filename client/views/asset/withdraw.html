@@ -1,6 +1,6 @@
-<div class="asset-public withdraw">
+<div class="asset-public withdraw pd-lf-50">
     <div class="row">
-        <div class="col-xs-3 pd-tp-15 text-right deposit__title-money">
+        <div class="col-xs-2 pd-tp-15 text-left deposit__title-money">
             提现帐户
         </div>
 
@@ -17,7 +17,7 @@
     </div>
     <br>
     <div class="row">
-        <div class="col-xs-3 text-right deposit__title-money">
+        <div class="col-xs-2 text-left deposit__title-money">
             银行卡
         </div>
 
@@ -31,10 +31,11 @@
             <span>{{withdraw.card.number}}</span>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <span class="deposit__pointer font-info" ng-click="openCardMdl()">修改 ></span>
+            <br>
+            <br>
+            <span class="deposit__pointer font-info" ng-click="openManageCardMdl()">管理银行卡 ></span>
         </div>
     </div>
-    <br>
-    <p>管理银行卡</p>
     <br>
     <div ng-show="withdraw.type === 'invest' && withdrawMessageSucc && !message.is_succ" class="withdraw__sys_tip">
         <p class="font-info">系统提示：{{message.error_msg}}</p>

@@ -49,6 +49,7 @@
         $scope.toWithdraw = toWithdraw;
         $scope.openWithdrawMdl = openWithdrawMdl;
         $scope.openCardMdl = openCardMdl;
+        $scope.openManageCardMdl = openManageCardMdl;
         $scope.changeWithdrawType = changeWithdrawType;
 
         getCard();
@@ -69,7 +70,7 @@
         asset.getIsWithdraw().then(function (data) {
             layer.closeAll();
             if (!data) return;
-            console.info('getIsWithdraw.data', data);
+            // console.info(data);
             $scope.withdrawMessageSucc = true;
             if (data.is_succ) {
                 if (data.data.status == 0) {
@@ -164,6 +165,31 @@
                     }
                 });
             })
+        }
+
+        function openManageCardMdl(){
+            $modal.open({
+                templateUrl: '/views/asset/withdraw_modal.html',
+                size: 'sm',
+                backdrop: 'static',
+                controller: function ($scope, $modalInstance, $state) {
+                    $scope.isWithdrawSucc = withdraw.success;
+                    $scope.withdrawAmount = withdraw.amount;
+                    $scope.closeModal = closeModal;
+                    $scope.bindCard = bindCard;
+                    $scope.message = message;
+
+                    // 绑定银行卡
+                    function bindCard() {
+                        closeModal();
+                        openCardMdl();
+                    }
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
         }
 
         // 提现相关的各种弹窗提示
