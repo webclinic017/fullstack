@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="<%= lang.text('companyZhName')%> <%= lang.text('companyEnName')%> 跟单交易 外汇 CFD 指数 股指 互联网金融">
+    <meta name="description" content="<%= lang.text('companyZhName')%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyZhName')%>">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <title>
+        <%= lang.text('companyZhName')%>
+    </title>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<body>
+
+<div class="m_prize_layout">
+    <div class="m_prize">
+        <div class="m_prize_rule"></div>
+        <div class="m_prize_title">
+            <!-- 还差0.1手即可参加明日抽奖，快去完成交易吧！ -->
+            <!-- 请前往APP参与抽奖! -->
+        </div>
+        <div class="m_prize_draw">
+            <ul class="m_prize__award_box clearfix">
+                <li class="m_prize__award">
+                    <div class="m_prize__award-bg" data-prize="1"><span></span></div>
+                </li>
+                <li class="m_prize__award">
+                    <div class="m_prize__award-bg" data-prize="2"><span></span></div>
+                </li>
+                <li class="m_prize__award">
+                    <div class="m_prize__award-bg" data-prize="3"><span></span></div>
+                </li>
+            </ul>
+            <div class="m_prize__award_btn">
+                <span></span>
+            </div>
+        </div>
+        <div class="m_prize_list">
+            <!-- insert template -->
+            
+        </div>
+        <div class="m_prize_risk clearfix">
+            <div class="m_prize_risk__tip">
+                <p>风</p>
+                <p>险</p>
+                <p>警</p>
+                <p>示</p>
+            </div>
+            <div class="m_prize_risk__detail">
+                市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。 老虎外汇交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="m_prize_layer-rule">
+    <div class="m_prize_layer-content">
+        <div class="detail">
+            <p>1、用户每日0-24点累积计算交易手数，满足每日开仓数≥0.3手，在次日（0-24点）获抽奖机会一次，满足条件用户可天天参加抽奖（注：活动最后一天11月30日交易量不作为抽奖条件 ）；</p>
+            <p>2、本活动中奖几率100%，奖品分别为 5美金、1美金、0.5美金，抽中奖品（美金）可用于交易或直接提现（抽中奖品将直接存入“零钱包”），如满足抽奖条件却未在规定时间内抽奖的用户，视为放弃本次抽奖机会；</p>
+            <p>3、本活动仅适用于外汇、贵金属以及能源类产品，CFD（指数）类产品的交易手数不计入统计范围；</p>
+            <p>4、本活动仅在老虎外汇APP内操作；</p>
+            <p>5、本活动最终解释权归老虎外汇平台所有，如有疑问请咨询在线客服或拨打 400-809-8509 。</p>
+        </div>
+        <div class="close-btn">
+            <span></span>
+        </div>
+    </div>
+</div>
+<div id="m_prize_layer-msg">
+    <div class="m_prize_layer-message">
+        <div class="detail">
+            <p class="code1">活动已结束</p>
+            <p class="code2">
+                <span>抱歉</span><span>您昨日未满足活动条件</span><span>继续努力吧！</span>
+            </p>
+            <p class="code3">
+                <span>不要贪心</span><span>今天的1次抽奖机会已经用完啦</span><span>明日再来吧！</span>
+            </p>
+        </div>
+        <div class="close-btn">
+            <span></span>
+        </div>
+    </div>
+</div>
+<div id="m_prize_layer-result">
+    <div class="m_prize_layer-sure">
+        <div class="detail">
+            <p>
+                恭喜您抽中
+                <span class="dollar">0.5</span>
+                美金
+            </p>
+            <p>
+                已放入您的零钱包！  
+            </p>
+        </div>
+        <div class="close-btn">
+            <span></span>
+        </div>
+    </div>
+</div>
+
+
+<script id="template_prize_list" type="text/html">
+    <div class="m_prize_list__box_wrapper">
+        <ul class="m_prize_list__box box_1">
+            <$for(var i=0;i<lst_1.length;i++){$>
+            <li>恭喜<$= lst_1[i].phone$> 抽中<$= lst_1[i].award$>美金</li>
+            <$}$>
+        </ul>
+        <ul class="m_prize_list__box box_2">
+            <$for(var i=0;i<lst_2.length;i++){$>
+            <li>恭喜<$= lst_2[i].phone$> 抽中<$= lst_2[i].award$>美金</li>
+            <$}$>
+        </ul>
+    </div>
+</script>
+
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_prize.js -->
+<script src="/scripts/bd/common/wx_share_config.js"></script>
+<script src="/scripts/bd/common/open_app.js"></script>
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/bd/prize/h5.js"></script>
+<!-- endbuild -->
+
+<!-- 推广脚本footer -->
+<%- include('/common/statistic/_all.html') %>
+</html>

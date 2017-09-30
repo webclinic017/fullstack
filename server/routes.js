@@ -583,6 +583,16 @@ module.exports = function (app) {
         res.render('bd/brand/proxy', extendPublic({}, req));
     });
 
+    // 抽奖活动
+    app.route('/bd/prize').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            res.render('bd/prize/h5.html', extendPublic({}, req));
+        } else {
+            res.render('bd/prize/web.html', extendPublic({}, req));
+        }
+    });
+
     // cms 生成H5活动页
     app.route('/bd/object/:subpage').get(function (req, res) {
         var subpage = req.params.subpage;
