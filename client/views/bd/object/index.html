@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tiger Wit</title>
+    <title>TigerWit</title>
     <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> <meta name="keywords" content="老虎外汇 TigerWit 跟单交易 外汇 贵金属 CFD 指数 股指 互联网金融"> <meta name="description" content="老虎外汇倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。"> <meta name="apple-mobile-web-app-title" content="老虎外汇"> <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"> <meta name="apple-mobile-web-app-capable" content="yes"> <meta name="apple-mobile-web-app-status-bar-style" content="black"> <meta name="format-detection" content="telephone=no"><!-- 删除默认的苹果工具栏和菜单栏 --> <meta name="apple-mobile-web-app-capable" content="yes"><!-- 苹果状态栏颜色 --> <meta name="apple-mobile-web-app-status-bar-style" content="black"><!-- 启用360浏览器的极速模式(webkit) --> <meta name="renderer" content="webkit"><!-- uc强制竖屏 --> <meta name="screen-orientation" content="portrait"><!-- QQ强制竖屏 --> <meta name="x5-orientation" content="portrait"><!-- UC强制全屏 --> <meta name="full-screen" content="yes"><!-- QQ强制全屏 --> <meta name="x5-fullscreen" content="true"><!-- UC应用模式 --> <meta name="browsermode" content="application"><!-- QQ应用模式 --> <meta name="x5-page-mode" content="app"> <title> 老虎外汇 </title> <!-- 引入H5 CSS --> 
    <link href="https://www.tigerwit.com/downloads/static/froala-editor/froala.min.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
@@ -97,19 +97,38 @@
 
     </head>
 <body>
-    <div class="title" style="font-size: 18px; text-align: left; margin: 20px; font-weight: bold;"></div>
-<div class="fr-view" style="margin: 0 20px;">
-    <div style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #eee;">
-        <img style="width: 50px;position: absolute;top: 50%;left: 50%;margin-left: -25px;margin-top: -25px;" src="/ngsrc/loading.gif">
+    <div class="title" style="font-size: 18px; text-align: left; margin: 20px 20px 5px; font-weight: bold;"></div>
+    <div class="sub-tit clearfix" style="margin: 0px 20px 20px; font-size: 14px; color: #999;">
+        <div class="editor" style="float: left;">
+            来自：<span>老虎外汇</span>
+        </div>
+        <div class="time" style="float: right;">
+            
+        </div>
     </div>
-</div>
+    <div class="fr-view" style="margin: 0 20px; font-size: 16px;">
+        <div style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;background-color: #eee;">
+            <img style="width: 50px;position: absolute;top: 50%;left: 50%;margin-left: -25px;margin-top: -25px;" src="/ngsrc/loading.gif">
+        </div>
+    </div>
+    <div class="pageView" style="margin: 10px 20px 20px; color: #999">
+        <!-- <i class="fa fa-eye"></i> -->
+        阅读
+        <span></span>
+    </div>
 
 <script type="text/javascript" src="https://www.tigerwit.com/downloads/static/froala-editor/jQuery.min.js"></script>
 <script>
     (function () {
         var $viewWrapper = $(".fr-view");
         var $title = $(".title");
-
+        var $editor = $(".editor span");
+        var $time = $(".time");
+        var $pageView = $(".pageView span");
+        var pageView = {
+            num: <%= pageInfo.pageView%>
+        };
+        // console.log(pageView.num);
         $.get('/api/dissertation', {
             id: <%= pageInfo.id%>
         }).then(function (data) {
@@ -117,6 +136,16 @@
             if (data.is_succ) {
                 $title.html(data.data.name);
                 $viewWrapper.html(data.data.content);
+
+                if (data.data.visit) {
+                    pageView.num += Number(data.data.visit); 
+                }
+                if (data.data.author) {
+                    $editor.html(data.data.author);
+                }
+
+                $time.html(data.data.issue_date);
+                $pageView.html(pageView.num);
             } else {
                 $viewWrapper.html('<p style="text-align: center;font-size: 30px">404</p>');
             }
