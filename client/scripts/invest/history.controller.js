@@ -35,7 +35,7 @@
 
         function getInvestHistoryData () {
             invest.getInvestHistoryData().then(function (data) {
-                console.info(data);
+                // console.log(data);
                 $scope.orderHistory = data.data;
                 $scope.orders = data.data.records;
 

@@ -11,35 +11,35 @@
         var company = $cookies["company_name"];
         var userCode = $cookies["user_code"];
 
-        if (company && company === 'tigerwit') {
-           layer.open({
-               type: 1,
-               skin: 'home_layer',
-               closeBtn: 0,
-               title: '',
-               shade: 0.6,
-               area: ['800px', '520px'], //宽高
-               content: $('#home-layer-model')
-           });
-        }
-
-        // if (!userCode && company && company === 'tigerwit') {
-        //     account.getAdvertiseRecords('popup').then(function (data) {
-        //         // console.log(data);
-        //         if (data.is_succ && data.data.length) {
-        //             data = data.data[0];
-        //             layer.open({
-        //                 type: 1,
-        //                 skin: 'home_redbag_layer', //加上边框
-        //                 closeBtn: 0,
-        //                 title: '',
-        //                 shade: 0.6,
-        //                 area: ['960px', '560px'], //宽高
-        //                 content: '<div class="content"><a href="' + data.target_url + '"><img src="' + data.image_url + '"></a><div class="close" onclick="layer.closeAll();"></div></div>'
-        //             });
-        //         }
-        //     });
+        // if (company && company === 'tigerwit') {
+        //    layer.open({
+        //        type: 1,
+        //        skin: 'home_layer',
+        //        closeBtn: 0,
+        //        title: '',
+        //        shade: 0.6,
+        //        area: ['800px', '520px'], //宽高
+        //        content: $('#home-layer-model')
+        //    });
         // }
+
+        if (!userCode && company && company === 'tigerwit') {
+            account.getAdvertiseRecords('popup').then(function (data) {
+                // console.log(data);
+                if (data.is_succ && data.data.length) {
+                    data = data.data[0];
+                    layer.open({
+                        type: 1,
+                        skin: 'home_redbag_layer', //加上边框
+                        closeBtn: 0,
+                        title: '',
+                        shade: 0.6,
+                        area: ['960px', '560px'], //宽高
+                        content: '<div class="content"><a href="' + data.target_url + '"><img src="' + data.image_url + '"></a><div class="close" onclick="layer.closeAll();"></div></div>'
+                    });
+                }
+            });
+        }
 
         $scope.indexMasters = [];// 首页 第二模块的高手
         $scope.advertiseLst = [];
