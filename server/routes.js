@@ -593,7 +593,8 @@ module.exports = function (app) {
     // cms 生成H5活动页
     app.route('/bd/object/:subpage').get(function (req, res) {
         var subpage = req.params.subpage;
-        recordAccessTimes.readAccessTimes('/object_page_view.txt', function (num) {
+        var numName = "number_"+subpage;
+        recordAccessTimes.readAccessTimes('/object_page_view.txt', numName, function (num) {
             // console.log(num);
             var pageInfo = {
                 id: subpage,
