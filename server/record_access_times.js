@@ -8,9 +8,9 @@
 
     var fs = require('fs');
 
-    function readAccessTimes (dirName, fn) {
+    function readAccessTimes (dirName, numName, fn) {
         var dir = __dirname+'/record'+dirName;
-        var num;
+        var num = {};
         fs.exists(__dirname+'/record', function (exists) {
             // console.log('-----dirName----', exists, dir);
             if(exists){
@@ -20,28 +20,28 @@
                         try {
                             var numTemp = fs.readFileSync(dir,"utf-8");
                             num = JSON.parse(numTemp);
-                            num.number++;
+                            num[numName] ? (num[numName]++) : (num[numName] = 1);
                             fs.writeFile(dir, JSON.stringify(num));
                         } catch (e) {
-                            num = {"number": 0};
+                            num[numName] = 1;
                             console.log(e);
                         }
                     } else {
-                        num = {"number": 1};
+                        num[numName] = 1;
                         fs.writeFile(dir, JSON.stringify(num));
                     }
-                    fn(num.number);
+                    fn(num[numName]);
                 });
             }else{
                 fs.mkdir(__dirname+'/record',function(err){
                     if(err){
                         console.log('创建文件夹出错！');
-                        num = {"number": 1};
+                        num[numName] = 1;
                     }else{
-                        num = {"number": 1};
+                        num[numName] = 1;
                         fs.writeFile(dir, JSON.stringify(num));
                     }
-                    fn(num.number);
+                    fn(num[numName]);
                 });
             }
         })
