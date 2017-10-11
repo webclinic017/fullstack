@@ -96,8 +96,8 @@
                         </td>
                         <td>{{ order.volume }}</td>
                         <!--<td><i class="fa fa-dollar"></i>{{ order.occupy_asset }}</td>-->
-                        <td ng-class="{'font-success': order.profit.indexOf('-') != -1, 'font-danger': order.profit.indexOf('-') < 0}">
-                            <i class="fa fa-dollar"></i>{{ order.profit }}
+                        <td ng-class="{'font-success': order.gross_profit.indexOf('-') != -1, 'font-danger': order.gross_profit.indexOf('-') < 0}">
+                            <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                         </td>
                 
                         <td>
@@ -189,8 +189,8 @@
                             </td>
                             <td>{{ order.volume }}</td>
                             <!--<td><i class="fa fa-dollar"></i>{{ order.occupy_asset }}</td>-->
-                            <td ng-class="{'font-success': order.profit.indexOf('-') != -1, 'font-danger': order.profit.indexOf('-') < 0}">
-                                <i class="fa fa-dollar"></i>{{ order.profit }}
+                            <td ng-class="{'font-success': order.gross_profit.indexOf('-') != -1, 'font-danger': order.gross_profit.indexOf('-') < 0}">
+                                <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                             </td>
                     
                             <td>

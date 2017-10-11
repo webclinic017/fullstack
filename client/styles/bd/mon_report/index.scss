@@ -1,0 +1,211 @@
+@include b(m_mon_report_layout) {
+    text-align: center;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    /* Firefox 4 */
+    -webkit-transition: all 1s ease;
+    /* Safari and Chrome */
+    -o-transition: all 1s ease;
+    /* Opera */
+    font-family: 'Microsoft Yahei';
+    .mon_report_logo {
+        position: absolute;
+        top: 2%;
+        right: 6%;
+        width: 30%;
+    }
+    #dowebok {
+        .slide_arrow2 {
+            z-index: 10;
+        }
+        .section {
+            background: url("/images/bd_mon_report/bg.png");
+            background-position: center center;
+            background-size: auto 100%;
+            position: relative;
+            max-width: 1334px;
+            font-family: 'Microsoft Yahei';
+            color: #475c95;
+            .date {
+                width: 100%;
+                position: absolute;
+                top: 46.5%;
+                font-size: 2rem;
+                color: #fcefc5;
+                text-shadow: 5px 5px 5px #ff7b00;
+                z-index: 10;
+            }
+            .full_img {
+                width: 100%;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+            .mon_profit {
+                width: 75%;
+                top: 3%;
+                left: 12.5%;
+                z-index: 1;
+            }
+            .mon_profit_text {
+                margin-top: 30.5%;
+                z-index: 1;
+            }
+            .text_box {
+                background: url('/images/bd_mon_report/text_box_bg.png');
+                font-size: px2rem(58);
+                font-weight: 800;
+                padding: 0 1.2rem;
+                display: inline-block;
+                border: 0.28rem solid #475c95;
+                min-width: 8rem;
+                &.slogan {
+                    margin-top: 5%;
+                    font-size: 1.25rem;
+                    padding: 0.4rem 1rem;
+                    color: #475c95!important;
+                    &.has_sub{
+                        line-height: 1rem;
+                        padding: 0.4rem 2rem;
+                        .sub_title{
+                            font-size: 0.65rem;
+                        }
+                    }
+                    &.share {
+                        padding: 0.4rem 4.5rem;
+                    }
+                }
+            } // 交易品种图例
+            @include b(legend_box) {
+                margin-bottom: 0.5rem;
+                display: none;
+                &.show {
+                    display: list-item;
+                }
+                @include e(icon) {
+                    margin-right: 0.2rem;
+                    @include m(legend) {
+                        @include square(0.85rem,
+                        px2rem(4));
+                        border: 2px solid #475c95;
+                        &.bg1 {
+                            background: #ffab00;
+                        }
+                        &.bg2 {
+                            background: #475c95;
+                        }
+                        &.bg3 {
+                            background: #ff433a;
+                        }
+                        &.bg4 {
+                            background: #8dc9d3;
+                        }
+                    }
+                }
+            }
+            @include b(intro_box) {
+                @include square_per(625, 0.5rem);
+                background: url('/images/bd_mon_report/intro_bg.png');
+                background-size: 100% 100%;
+                display: inline-block;
+                margin-top: 1rem;
+                padding: 1rem;
+                @include e(title) {
+                    text-align: center;
+                    font-size: px2rem(40);
+                    font-weight: 600;
+                    &.report_result {
+                        font-size: 2.5rem;
+                        font-weight: 800;
+                        margin-top: -0.5rem;
+                        transform: scale(1.15);
+                        -webkit-transform: scale(1.15);
+                    }
+                }
+                @include e(content) {
+                    margin-top: 0.2rem;
+                    height: px2rem(435);
+                    @include m(chart) {
+                        width: 53.4%;
+                        height: 90%;
+                        padding-top: 1.8rem;
+
+                        &.mon_rank_container{
+                            width: 40%;
+                            padding-top: 0.5rem;
+                            text-align: left;
+                            // line-height: 1.5rem;
+                            font-size: 1.2rem;
+                            padding-right: 1rem;
+                            span {
+                                font-size: 2.5rem;
+                                line-height: 2.6rem;
+                            }
+                        }
+                    }
+                    @include m(types) {
+                        width: 45%;
+                        padding-left: 1rem;
+                        margin-top: 1.2rem;
+                        font-size: px2rem(30);
+                        text-align: left;
+                        &.ring_chart {
+                            padding-top: 1rem;
+                            .legend_box {
+                                margin-bottom: 1rem;
+                            }
+                        }
+                        &.pie_chart2 {
+                            padding-top: 1.5rem;
+                            .legend_box {
+                                margin-bottom: 1rem;
+                            }
+                        }
+                    }
+
+                    @include m(rank_comic) {
+                        width: 50%;
+                        height: 90%;
+                        margin-left: 1rem;
+                        img{
+                            display: none;
+                            max-height: 100%;
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .section1 {
+            .banner {
+                z-index: 1;
+                top: 11%;
+            }
+            .logo {
+                z-index: 2;
+                top: 77%;
+                left: 32.5%;
+                width: 35%;
+            }
+            .check_now {
+                display: none;
+                z-index: 3;
+                width: 60%;
+                top: 60%;
+                left: 20%;
+            }
+        }
+        .section5 {
+            .QR_code {
+                display: none;
+                width: 100%;
+                text-align: center;
+                padding-top: 0.5rem;
+                img{
+                    display: inline-block;
+                    width: 75%;
+                }
+            }
+        }
+    }
+}

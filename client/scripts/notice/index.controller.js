@@ -47,6 +47,7 @@
 
         // 获取消息列表
         function getNoticeList(page, type) {
+            $scope.noticeList[type] = []
             type = type ? type : $scope.currentMsg; 
             $scope.$broadcast('showLoadingImg');
             $scope.page = page;

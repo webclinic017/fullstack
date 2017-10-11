@@ -110,7 +110,7 @@
         return false;
     });
 
-    if (isInTiger()) {
+    if (!isInTiger()) {
         isInTigerApp = true;
         getPrizeChangce();
     } else {
@@ -149,30 +149,35 @@
     }
     //获取抽奖资格
     function getDrawPrize () {
+        var s = getSearch().source ? {source: 1} : {};
         layer.open({type: 2});
-        publicRequest('drawPrize', 'POST').then(function (data) {
+        publicRequest('drawPrize', 'POST', s).then(function (data) {
             // console.log(data);
             layer.closeAll();
             if (data.is_succ) {
-                if (data.data == '5') {
-                    resAward = 1;   // 一等奖
-                } else if (data.data == '1') {
-                    resAward = 1;   // 二等奖
-                } else if (data.data == '0.5') {
-                    resAward = 3;   // 二等奖
+                data = data.data;
+                if (data.type == 0) {   // 中奖
+                    if (data.amount == 5) {
+                        resAward = 1;   // 一等奖
+                    } else if (data.amount == 1) {
+                        resAward = 1;   // 二等奖
+                    } else if (data.amount == 0.5) {
+                        resAward = 3;   // 三等奖
+                    }
+                    $(".m_prize_layer-sure .detail .dollar").html(data.data);
+                    runDrawPrize();
+                } else {    //不能抽奖
+                    $(".m_prize_layer-message .detail p").removeClass("active");
+                    if (data.type == 1) {
+                        $(".m_prize_layer-message .detail .code1").addClass("active");
+                    } else if (data.type == 2) {
+                        $(".m_prize_layer-message .detail .code2").addClass("active");
+                    } else if (data.type == 3) {
+                        $(".m_prize_layer-message .detail .code3").addClass("active");
+                    }
+                    openLayerModal($("#m_prize_layer-msg").html());
                 }
-                $(".m_prize_layer-sure .detail .dollar").html(data.data);
-                runDrawPrize();
-            } else {
-                $(".m_prize_layer-message .detail p").removeClass("active");
-                if (data.code == 1) {
-                    $(".m_prize_layer-message .detail .code1").addClass("active");
-                } else if (data.code == 2) {
-                    $(".m_prize_layer-message .detail .code2").addClass("active");
-                } else if (data.code == 3) {
-                    $(".m_prize_layer-message .detail .code3").addClass("active");
-                }
-                openLayerModal($("#m_prize_layer-msg").html());
+                
             }
         });
     }
@@ -193,9 +198,11 @@
             console.log('end----'+diffTime+'----'+currentAward);
             $award.removeClass("active");
             $awardgroup[currentAward].addClass("active");
-            isDrawAward = false;
 
-            openLayerModal($("#m_prize_layer-result").html());
+            setTimeout(function () {
+                isDrawAward = false;
+                openLayerModal($("#m_prize_layer-result").html());
+            }, 100);
             return;
         }
         // setTime = 20;
@@ -284,15 +291,18 @@
             content: content
         });
     }
-
+    
     function toOpenApp () {
         // console.log(window.location);
         var o;
+        var s = getSearch().source ? '?source=1' : '';
+
         if (window.location.origin.indexOf("www.tigerwit.com") != -1) {
-            o = "www.tigerwit.com/bd/prize";
+            o = "www.tigerwit.com/bd/prize"+s;
         } else {
-            o = "demo.tigerwit.com/bd/prize";
+            o = "demo.tigerwit.com/bd/prize"+s;
         }
-        openInApp(o);
+        console.log(o);
+        // openInApp(o);
     }
 })();

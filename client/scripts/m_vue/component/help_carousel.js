@@ -52,7 +52,7 @@ Vue.component('help-carousel', {
     data: function () {
         console.log('component help-carousel data');
         return {
-            cdn_url: $.cookie('cdn_url'),
+            cdn_url: window.location.hostname.indexOf('dev.') != -1 ? '' : $.cookie('cdn_url'),
             countDown: this.steps,
         };
     },

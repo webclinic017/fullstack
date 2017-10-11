@@ -20,6 +20,7 @@ var setCompanyCookie,
     gloal_modelRegularDetail;
 
 var SetEnvConfig = require('./get_env_config').SetEnvConfig;
+var recordAccessTimes = require('./record_access_times');
 
 function setEnvCf(req, res) {
     new SetEnvConfig(req);
@@ -585,24 +586,43 @@ module.exports = function (app) {
 
     // 抽奖活动
     app.route('/bd/prize').get(function (req, res) {
+        // console.log(req.query.source);
+        var s = req.query.source;
+
+        recordAccessTimes.recordPrizeQrTimes('/prize_qr_times.txt', s, function (num) {
+            
+            setEnvCf(req, res);
+            if (isMobile(req)) {
+                res.render('bd/prize/h5.html', extendPublic({}, req));
+            } else {
+                res.render('bd/prize/web.html', extendPublic({
+                    num: num
+                }, req));
+            }
+        });
+    });
+    // 市场部 - 月报生成
+    app.route('/bd/mon_report').get(function (req, res) {
         setEnvCf(req, res);
-        if (isMobile(req)) {
-            res.render('bd/prize/h5.html', extendPublic({}, req));
-        } else {
-            res.render('bd/prize/web.html', extendPublic({}, req));
-        }
+        res.render('bd/mon_report/index', extendPublic({}, req));
     });
 
     // cms 生成H5活动页
     app.route('/bd/object/:subpage').get(function (req, res) {
         var subpage = req.params.subpage;
-        var pageInfo = {
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('bd/object/index.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
+        var numName = "number_"+subpage;
+        recordAccessTimes.readAccessTimes('/object_page_view.txt', numName, function (num) {
+            // console.log(num);
+            var pageInfo = {
+                id: subpage,
+                pageView: num || 0
+            };
+            setEnvCf(req, res);
+            res.render('bd/object/index.html', extendPublic({
+                pageInfo: pageInfo
+            }, req));
+        });
+        
     });
 
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/

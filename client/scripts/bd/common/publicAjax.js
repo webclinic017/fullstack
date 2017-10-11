@@ -43,6 +43,9 @@
         thirdUploadIdCard: origin + '/third/user/upload_base64_id_card', //put
         thirdSetPassword: origin + '/third/user/account', //post
         thirdChangePassword: origin + '/third/user/passwd', //put
+
+        // 获取交易月报
+        getMonReport: origin + '/user/monthly_report',     // get
     };
 
     w.publicRequest = publicRequest;

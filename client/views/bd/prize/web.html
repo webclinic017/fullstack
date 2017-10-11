@@ -13,7 +13,7 @@
         <% include /common/vendor/web.js.html %>
 </head>
 
-<body ng-app="fullstackApp" class="bd_greenhand">
+<body ng-app="fullstackApp" class="bd_greenhand" data-qr-num="<%= num%>">
     <div ng-controller="GlobalController">
         <% include /common/nav/web.header.html %>
         <div class="bd_prize_layout clearfix">
@@ -31,7 +31,11 @@
                     </div>
                     <div class="bd_prize__code">
                         <div class="code_wrapper">
-                            <img src="/images/bd_prize/bd_prize_code.png">
+                            <% if (lang.isDemo()) {%>
+                                <img src="/images/bd_prize/prize_demo.png">
+                            <%} else {%>
+                                <img src="/images/bd_prize/prize_www.png">
+                            <%}%>
                         </div>
                     </div>
                 </div>

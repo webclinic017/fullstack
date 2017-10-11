@@ -36,6 +36,7 @@
             if(flow == 3 && $scope.dredgingType == 'demo'){
                 flow = '_3'
             }
+            console.log(flow, $scope.flow.authStatusMap[flow])
             $state.go('authen.subpage', {
                 subpage: $scope.flow.authStatusMap[flow]
             });
@@ -54,6 +55,7 @@
             goState(flow);
         });
 
+        var parentScope = $scope;
         $scope.$on('open_alert_modal', function (e) {
             $modal.open({
                 templateUrl: '/views/authen/alert_modal.html',
@@ -74,13 +76,14 @@
                     }
 
                     $scope.go_realname = function () {
-                        go(4)
+                        parentScope.flow.step = 3
+                        goState(3);
                         $modalInstance.dismiss();
                     }
                 }]
             });
         });
-
+        
         if ($scope.personal.verify_status) {
             // 防止不能跳转到本页
             $timeout(function () {
