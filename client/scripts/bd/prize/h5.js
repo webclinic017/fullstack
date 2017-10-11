@@ -302,7 +302,7 @@
         } else {
             o = "demo.tigerwit.com/bd/prize"+s;
         }
-        console.log(o);
-        // openInApp(o);
+        // console.log(o);
+        openInApp(o);
     }
 })();
