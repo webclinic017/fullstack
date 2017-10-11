@@ -110,7 +110,7 @@
         return false;
     });
 
-    if (!isInTiger()) {
+    if (isInTiger()) {
         isInTigerApp = true;
         getPrizeChangce();
     } else {
