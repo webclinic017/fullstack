@@ -255,6 +255,11 @@
             line-height: px2rem(38.4);
         }
     }
+
+    .temp_tip {
+        text-align: center;
+        padding-top: px2rem(64);
+    }
 }
 @include b(m_prize_risk) {
     margin-top: px2rem(16);
