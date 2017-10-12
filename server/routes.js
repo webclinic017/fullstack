@@ -805,7 +805,8 @@ module.exports = function (app) {
             var system = req.query.system || req.query.os;
             var versionCode = req.query.version_code;
             var versinInfo = require('./app_ctrl.config');
-            var currentVersionNum = versinInfo.getAppInfo().version_name.replace(/[v\.]/ig, "");
+            var currentVersionNumAndroid = versinInfo.getAppInfo().version_name.replace(/[v\.]/ig, "");
+            var currentVersionNumIos = versinInfo.getAppInfoIos().version.replace(/[v\.]/ig, "");
             // var currentVersion = {
             //     version_name: "V2.0",
             //     description: "上线全新外汇产品，交互全新改版!",
@@ -825,11 +826,17 @@ module.exports = function (app) {
                         currentVersion = versinInfo.getAppInfo();
                     }
                 } else {
-                    // console.log(version, currentVersionNum);
+                    // console.log(version, currentVersionNumAndroid);
                     var version = req.query.version.replace(/\./g, "");
-                    if (Number(version) < Number(currentVersionNum)) {
+                    if (Number(version) < Number(currentVersionNumAndroid)) {
                         currentVersion = versinInfo.getAppInfo();
                     }
+                }
+            } else if (system == "ios") {
+                var version = versionCode.replace(/\./g, "");
+                // console.log(version, currentVersionNumIos);
+                if (Number(version) < Number(currentVersionNumIos)) {
+                    currentVersion = versinInfo.getAppInfoIos();
                 }
             }
             data = currentVersion;
