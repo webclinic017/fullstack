@@ -35,6 +35,8 @@
             var lgAvatar = personal.lgAvatar.replace(/\?timestamp=.*/g,'');
             personal.mdAvatar = mdAvatar + '?timestamp=' + (+new Date());
             personal.lgAvatar = lgAvatar + '?timestamp=' + (+new Date());
+
+            $scope.$emit('refresh_personal_cookies_info', 'login');
         }
     }
 })();
