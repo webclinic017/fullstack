@@ -1,4 +1,4 @@
-<div class="about-public">
+<div class="about-public" ng-controller="WebReportController" ng-cloak>
     <div class="about-public__report-banner"></div>
 
     <div class="report about-public__con mg-bt-100">
@@ -15,19 +15,21 @@
                 </tr>
             </thead>
             <tbody>
-                <%for(var i=0; i< report_sites.length; i++){%>
-                  <tr>
+                  <tr ng-repeat="report in reports">
                     <td>
-                      <a class="report__title" href="<%= report_sites[i].address %>" target="_blank">
-                        <%= report_sites[i].description %>
+                      <a class="report__title" ng-href="{{report.address}}" target="_blank">
+                        {{ report.description }}
                       </a>
                     </td>
                     <td>
-                      <%= report_sites[i].date%>
+                        {{ report.date }}
                     </td>
                   </tr>
-                <%}%>
             </tbody>
         </table>
+
+        <div class="text-right" ng-if="reports.length > 0">
+            <div tw-pagination></div>
+        </div>
     </div>
 </div>
