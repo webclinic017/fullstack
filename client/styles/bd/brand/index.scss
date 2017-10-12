@@ -187,17 +187,41 @@
     .brand_mod_wrapper {
         margin-top: 45px;
     }
-    .brand_mod_t {
-        line-height: 22px;
-        padding-top: 55px;
-        text-align: center;
-        width: 95%;
-    }
     .brand_mod {
-        text-align: center;
+        height: 90px;
+        width: 80%;
 
-        img {
-            width: 100%;
+        .tit {
+            font-weight: 500;
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 4px;
+            line-height: 16px;
+
+            span {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 14px;
+                height: 14px;
+                background-color: #ffbd43;
+                border-radius: 50%;
+
+                &:before {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #fff;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .tip {
+            padding-left: 22px;
         }
     }
     .brand_news {
