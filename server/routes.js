@@ -848,7 +848,20 @@ module.exports = function (app) {
         }
         // 媒体报道
         if (action == "get_report_site") {
-            data = report_sites;
+            offset = req.query.offset || 0;
+            limit = req.query.limit || 10;
+            sum = report_sites.length;
+            page_total = Math.ceil(sum / limit);
+            if (offset > sum) {
+                oError = {
+                    error_msg: "错误的页码"
+                };
+            } else {
+                
+                var endPg = Number(offset) + Number(limit);
+                data = report_sites.slice(offset, Math.min(endPg, sum));
+                // console.log(data, endPg);
+            }
         }
         if (action == 'get_product') {
             var type = req.query.product_type;
