@@ -803,7 +803,6 @@ module.exports = function (app) {
         }
         if (action == "version_check") {
             var system = req.query.system || req.query.os;
-            var version = req.query.version.replace(/\./g, "");
             var versionCode = req.query.version_code;
             var versinInfo = require('./app_ctrl.config');
             var currentVersionNum = versinInfo.getAppInfo().version_name.replace(/[v\.]/ig, "");
@@ -827,6 +826,7 @@ module.exports = function (app) {
                     }
                 } else {
                     // console.log(version, currentVersionNum);
+                    var version = req.query.version.replace(/\./g, "");
                     if (Number(version) < Number(currentVersionNum)) {
                         currentVersion = versinInfo.getAppInfo();
                     }
