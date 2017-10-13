@@ -8,6 +8,11 @@
     AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', 'forex', '$cookies'];
 
     function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, forex, $cookies) {
+        // 缓存当前父scope 给弹窗控制器使用
+        var parentScope = $scope;
+        parentScope.hasChooseedCard = false
+        parentScope.cardList = undefined;
+
         var companyName = $cookies["company_name"];
 
         $scope.message = {};
@@ -52,11 +57,17 @@
         $scope.openManageCardMdl = openManageCardMdl;
         $scope.changeWithdrawType = changeWithdrawType;
 
+        // 获取默认银行卡
         getCard();
 
         //绑定银行卡后获取银行卡信息
         $rootScope.$on('bindCardSuccess', function () {
-            getCard();
+            // 没有选中任何卡时刷新默认卡片
+            if (!parentScope.hasChooseedCard) {
+                getCard()
+            }
+            // 通知所有子控器 
+            $rootScope.$broadcast('bindCardSuccess')
         });
         // 汇率
         asset.getFXRate().then(function (data) {
@@ -138,7 +149,7 @@
                 });
             } else if (dredged_type == 'demo') {
                 layer.msg('您当前是体验金账户，无法使用提现功能！');
-            } else if(dredged_type == 'live'){
+            } else if (dredged_type == 'live') {
                 liveTodo && liveTodo()
             }
         }
@@ -150,7 +161,7 @@
                     realname: $scope.personal.realname,
                     profile_check: $scope.personal.profile_check,
                 };
-    
+
                 $modal.open({
                     templateUrl: '/views/asset/card_modal.html',
                     size: 'md',
@@ -167,29 +178,65 @@
             })
         }
 
-        function openManageCardMdl(){
+        function openManageCardMdl(type) {
             $modal.open({
-                templateUrl: '/views/asset/withdraw_modal.html',
-                size: 'sm',
+                templateUrl: '/views/asset/manage_card_modal.html',
+                size: 'md',
                 backdrop: 'static',
-                controller: function ($scope, $modalInstance, $state) {
-                    $scope.isWithdrawSucc = withdraw.success;
-                    $scope.withdrawAmount = withdraw.amount;
+                controller: ['$scope', '$modalInstance', '$state', 'asset', '$timeout', function ($scope, $modalInstance, $state, asset, $timeout) {
+                    $timeout(function () {
+                        $scope.$broadcast('hideLoadingImg');
+                    }, 0)
                     $scope.closeModal = closeModal;
-                    $scope.bindCard = bindCard;
-                    $scope.message = message;
+                    $scope.manageType = type
+                    $scope.openAddCardModal = openCardMdl
+                    // 添加新的银行卡 刷新列表 
+                    $scope.$on('bindCardSuccess', function () {
+                        getCardList($scope).then(function () {
+                            $scope.cardList = parentScope.cardList
+                        })
+                    })
+                    if (type != 'delete') {
+                        // 获取银行卡列表
+                        if (!parentScope.cardList) {
+                            getCardList($scope).then(function () {
+                                $scope.cardList = parentScope.cardList
+                            })
+                        } else {
+                            $scope.cardList = parentScope.cardList
+                        }
+                    }
 
-                    // 绑定银行卡
-                    function bindCard() {
-                        closeModal();
-                        openCardMdl();
+                    $scope.chooseCard = function (card) {
+                        console.log(card)
+                        parentScope.withdraw.card.id = card.id;
+                        parentScope.withdraw.card.number = card.card_no;
+                        parentScope.withdraw.card.bank = card.bank_name;
+                        parentScope.withdraw.card.address = card.bank_addr;
+                        parentScope.withdraw.card.province = card.province;
+                        parentScope.withdraw.card.city = card.city;
+                        // 更改选中状态
+                        parentScope.hasChooseedCard = true;
+                        closeModal()
                     }
 
                     function closeModal() {
                         $modalInstance.dismiss();
                     }
-                }
+                }]
             });
+        }
+
+        function getCardList(_scope) {
+            _scope.$emit('showLoadingImg');
+            return asset.getCardList().then(function (data) {
+                _scope.$broadcast('hideLoadingImg');
+                if (!data) {
+                    console.info('获取银行卡列表失败！')
+                    return
+                }
+                parentScope.cardList = data.data
+            })
         }
 
         // 提现相关的各种弹窗提示
@@ -221,8 +268,6 @@
             });
         }
 
-        
-
         function openMessageMdl() {
             var message = $scope.message;
 
@@ -234,7 +279,6 @@
                     $scope.closeModal = closeModal;
                     $scope.message = message;
                     // console.info(message);
-
                     function closeModal() {
                         $modalInstance.dismiss();
                     }
@@ -260,10 +304,10 @@
                 if ($scope.clickable == false) {
                     return;
                 }
-    
+
                 console.log('toWithdraw is click');
                 $scope.clickable = false;
-    
+
                 if ($scope.withdraw.type === 'invest') {
                     withdrawInvest();
                 } else {
@@ -280,7 +324,6 @@
                 controller: function ($scope, $modalInstance) {
                     $scope.type = type;
                     $scope.closeModal = closeModal;
-
                     function closeModal() {
                         $modalInstance.dismiss();
                     }
@@ -305,12 +348,10 @@
                             withdraw();
                         });
                     }
-
                 } else {
                     // console.info($scope.message);
                     openMessageMdl();
                     $scope.clickable = true;
-
                 }
 
                 function withdraw() {
@@ -355,7 +396,6 @@
             });
         }
 
-
         function hideErr(name) {
             if ($scope.frontErr[name]) {
                 $scope.frontErr[name].show = false;
@@ -368,13 +408,10 @@
             }
         }
 
-
         $scope.formatText = function (text) {
             if (!text) return '';
             var newText = text.replace(/\\r\\n/g, '<br>');
             return '6.' + newText;
         }
-
     }
-
 })();

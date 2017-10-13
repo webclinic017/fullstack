@@ -1,26 +1,52 @@
-<div class="sys_modal_v2">
+<div class="sys_modal_v2 mid_case">
     <button class="close" ng-click="closeModal()">&times;</button>
-    <div class="sys_modal_v2__content">
-        <h3 class="sys_modal_v2__title text-center">恭喜您已开通老虎外汇真实交易账户</h3>
-        <p class="sys_modal_v2__desp">您离交易还差两步：1.上传身份审核 2.入金</p>
-        <p class="sys_modal_v2__desp">即刻入金，立即领取$1000红包！</p>
-        <p class="sys_modal_v2__desp">老虎外汇保护客户资金安全。</p>
-        <p class="sys_modal_v2__desp">客户资金完全与公司资金隔离，保存在独立银行账户中，确保属于客户的资金不会被用于任何其他目的。</p>
-        <div class="btn_wrapper">
-            <a class="btn btn-primary-gradient mg-tp-20" ng-click="go_realname()">去实名认证</a>
+
+    <!-- 选择银行卡/管理银行卡 -->
+    <div class="sys_modal_v2__content" ng-if="manageType == 'switch' || manageType == 'manage'">
+        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'switch'">切换银行卡</h3>
+        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'manage'">管理银行卡</h3>
+        <div tw-loading-img></div>
+        <table class="manage_card_list">
+            <colgroup>
+                <col width="47%">
+                <col width="37%">
+                <col width="15%">
+            </colgroup>
+            <tbody>
+                    <colgroup>
+                        <col width="47%">
+                        <col width="37%">
+                        <col width="15%">
+                    </colgroup>
+                <tr class="manage_card_list__item" ng-repeat="card in cardList track by $index">
+                    <td>
+                        <p class="text-center">
+                            <span class="card_icon icon-banks-{{ card.bank_name }}"></span>
+                        </p>
+                    </td>
+                    <td>
+                        <p class="card_number text-center">{{ card.card_no }}</p>
+                    </td>
+                    <td>
+                        <p class="text-center" ng-if="manageType == 'switch'">
+                            <a class="btn-text card_btn" ng-click="chooseCard(card)">选择</a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mg-tp-10 text-left" ng-if="manageType == 'manage'">
+            <a class="btn-text" ng-click="openAddCardModal()">添加银行卡</a>
         </div>
-        <!-- <div class="text-center" ng-if="id_uploaded">
-            <h3 class="sys_modal_v2__title">认证信息已提交，正在审核中</h3>
-            <p class="sys_modal_v2__desp">审核时间：</p>
-            <br>
-            <p class="sys_modal_v2__desp">工作日9:00-19:00 将在15分钟左右完成审核</p>
-            <p class="sys_modal_v2__desp">工作日19:00以后 将在21:00、23:00统一审核</p>
-            <p class="sys_modal_v2__desp">非工作日将在10:00、16:00、22:00统一审核</p>
-            <br>
-            <p class="sys_modal_v2__desp">请留意查询您的审核状态</p>
-            <div class="btn_wrapper">
-                <a class="btn btn-primary-gradient mg-tp-20" ng-click="closeModal()">完成</a>
-            </div>
-        </div> -->
+    </div>
+
+    <!-- 删除银行卡 -->
+    <div class="sys_modal_v2__content" ng-if="manageType == 'delete'">
+        <h3 class="sys_modal_v2__title text-left">删除银行卡</h3>
+        <p class="sys_modal_v2__desp mg-tp-20">确认删除本银行卡，如需再次使用需重新验证</p>
+        <div class="btn_wrapper text-right clearfix">
+            <a class="btn-text fr mg-lf-20" ng-click="closeModal()">取消</a>
+            <a class="btn-text fr">删除</a>
+        </div>
     </div>
 </div>
