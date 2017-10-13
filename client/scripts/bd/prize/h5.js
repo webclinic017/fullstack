@@ -160,11 +160,11 @@
                     if (data.amount == 5) {
                         resAward = 1;   // 一等奖
                     } else if (data.amount == 1) {
-                        resAward = 1;   // 二等奖
+                        resAward = 2;   // 二等奖
                     } else if (data.amount == 0.5) {
                         resAward = 3;   // 三等奖
                     }
-                    $(".m_prize_layer-sure .detail .dollar").html(data.data);
+                    $(".m_prize_layer-sure .detail .dollar").html(data.amount);
                     runDrawPrize();
                 } else {    //不能抽奖
                     $(".m_prize_layer-message .detail p").removeClass("active");
