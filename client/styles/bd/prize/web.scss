@@ -1,0 +1,50 @@
+@include b(bd_prize_layout) {
+    margin-top: 69px;
+}
+@include b(bd_prize) {
+    height: 1644px;
+    background: url('/images/bd_prize/web_bg.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+
+    @include e(rules) {
+        width: 1025px;
+        height: 528px;
+        background: url('/images/bd_prize/web_rule.png');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100% 100%;
+        margin-top: 600px;
+        padding: 180px 70px 0;
+
+        p {
+            font-size: 18px;
+            font-weight: 500;
+            padding-bottom: 30px;
+        }
+    }
+    @include e(tip) {
+        text-align: center;
+        padding-top: 35px;
+    }
+    @include e(code) {
+        text-align: center;
+        padding-top: 30px;
+
+        .code_wrapper {
+            width: 300px;
+            height: 300px;
+            display: inline-block;
+            border: 8px solid #000;
+            background-color: #fff;
+            border-radius: 20px;
+            text-align: center;
+
+            img {
+                width: 270px;
+                margin-top: 7px;
+            }
+        }
+    }
+}

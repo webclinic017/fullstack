@@ -584,6 +584,23 @@ module.exports = function (app) {
         res.render('bd/brand/proxy', extendPublic({}, req));
     });
 
+    // 抽奖活动
+    app.route('/bd/prize').get(function (req, res) {
+        // console.log(req.query.source);
+        var s = req.query.source;
+
+        recordAccessTimes.recordPrizeQrTimes('/prize_qr_times.txt', s, function (num) {
+            
+            setEnvCf(req, res);
+            if (isMobile(req)) {
+                res.render('bd/prize/h5.html', extendPublic({}, req));
+            } else {
+                res.render('bd/prize/web.html', extendPublic({
+                    num: num
+                }, req));
+            }
+        });
+    });
     // 市场部 - 月报生成
     app.route('/bd/mon_report').get(function (req, res) {
         setEnvCf(req, res);
