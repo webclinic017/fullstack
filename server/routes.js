@@ -599,8 +599,6 @@ module.exports = function (app) {
                     res.render('bd/prize/web.html', extendPublic({
                         num: num
                     }, req));
-                } else {
-                    res.render('404.html', extendPublic({}, req));
                 }
             }
         });
