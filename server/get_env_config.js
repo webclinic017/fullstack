@@ -20,7 +20,7 @@
     };
 
     function SetEnvConfig(req) {
-        console.log(req.hostname);
+        // console.log(req.hostname);
 
         if (req.hostname === 'lonfx.tigerwit.com') {
             envConfig.company_name = 'lonfx';
