@@ -174,6 +174,8 @@
                         $(".m_prize_layer-message .detail .code2").addClass("active");
                     } else if (data.type == 3) {
                         $(".m_prize_layer-message .detail .code3").addClass("active");
+                    } else if (data.type == 4) {
+                        $(".m_prize_layer-message .detail .code4").addClass("active");
                     }
                     openLayerModal($("#m_prize_layer-msg").html());
                 }
@@ -303,6 +305,8 @@
             o = "demo.tigerwit.com/bd/prize"+s;
         }
         // console.log(o);
-        openInApp(o);
+        if (isTigerCo()) {
+            openInApp(o);
+        }
     }
 })();
