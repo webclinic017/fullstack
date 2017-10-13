@@ -595,9 +595,13 @@ module.exports = function (app) {
             if (isMobile(req)) {
                 res.render('bd/prize/h5.html', extendPublic({}, req));
             } else {
-                res.render('bd/prize/web.html', extendPublic({
-                    num: num
-                }, req));
+                if (COMPANY_NAME === 'tigerwit') {
+                    res.render('bd/prize/web.html', extendPublic({
+                        num: num
+                    }, req));
+                } else {
+                    res.render('404.html', extendPublic({}, req));
+                }
             }
         });
     });
