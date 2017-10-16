@@ -1,5 +1,10 @@
 .prize_layer {
     background-color: transparent!important;
+    width: auto !important;
+
+    .layui-m-layercont {
+        padding: 0;
+    }
 }
 #m_prize_layer-rule, #m_prize_layer-msg, #m_prize_layer-result{
     display: none;
