@@ -89,7 +89,7 @@
     };
 
     $awardgroup[currentAward].addClass("active");
-    // insertTemp();
+    insertTemp();
 
     $(document).on("tap", ".close-btn", function () {
         layer.closeAll();

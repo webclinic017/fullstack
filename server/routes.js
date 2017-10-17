@@ -852,11 +852,11 @@ module.exports = function (app) {
                     }
                 }
             } else if (system == "ios") {
-                var version = versionCode.replace(/\./g, "");
-                // console.log(version, currentVersionNumIos);
-                if (Number(version) < Number(currentVersionNumIos)) {
-                    currentVersion = versinInfo.getAppInfoIos();
-                }
+                // var version = versionCode.replace(/\./g, "");
+                // // console.log(version, currentVersionNumIos);
+                // if (Number(version) < Number(currentVersionNumIos)) {
+                //     currentVersion = versinInfo.getAppInfoIos();
+                // }
             }
             data = currentVersion;
         }
