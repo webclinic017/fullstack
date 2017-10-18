@@ -109,7 +109,7 @@ module.exports = function () {
             webAgentProxy: indexBasePath + "/agent-banner-tigerwit.jpg",
             webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
 
-            icoPath: indexBasePath + "/tigerwit.ico",
+            icoPath: indexBasePath + "/pandafx.ico",
             t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
         };
 

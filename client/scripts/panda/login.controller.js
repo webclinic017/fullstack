@@ -125,7 +125,7 @@
                     login_type: 2,
                     remember: $scope.rememberLoginStatus ? 1 : 0,
                     lp: $state.params.lp,
-                    pid: $state.params.pid,
+                    pid: "pandafx",
                     unit: $state.params.unit,
                     key: $state.params.key
                 };
