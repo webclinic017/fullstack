@@ -421,6 +421,9 @@
         }])
         .run(['$rootScope', '$state', '$window', 'authorization', '$timeout', function ($rootScope, $state, $window, authorization, $timeout) {
             $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {
+                if(layer){
+                    layer.closeAll()
+                }
                 if (toState.authenticated) {
                     // authorization.authorize().then(function (isLogined) {
                     //     if (!isLogined) {
