@@ -85,6 +85,24 @@ module.exports = function (app) {
         res.render('space', extendPublic({}, req));
     });
 
+    // 熊猫外汇页面路径
+    app.route('/panda').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('panda', extendPublic({
+            pageInfo: {
+                id: "login"
+            }
+        }, req));
+    });
+    app.route('/panda/:subpage(login|asset)').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('panda', extendPublic({
+            pageInfo: {
+                id: req.params.subpage || ""
+            }
+        }, req));
+    });
+
     app.route('/').get(function (req, res) {
         setEnvCf(req, res);
 
