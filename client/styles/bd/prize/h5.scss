@@ -1,0 +1,289 @@
+.prize_layer {
+    background-color: transparent!important;
+    width: auto !important;
+
+    .layui-m-layercont {
+        padding: 0;
+    }
+}
+#m_prize_layer-rule, #m_prize_layer-msg, #m_prize_layer-result{
+    display: none;
+}
+.m_prize_layer-sure {
+    width: px2rem(576);
+    height: px2rem(498);
+    background-image: url('/images/bd_prize/h5_prize_bg.png');
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    .detail {
+        height: px2rem(144);
+        padding-top: px2rem(208);
+        font-size: px2rem(40);
+        font-weight: 500;
+
+        p {
+            margin-bottom: px2rem(6.4);
+
+            .dollar {
+                color: #e95629;
+                font-size: px2rem(64);
+            }
+        }
+    }
+    .close-btn {
+        text-align: center;
+
+        span {
+            display: inline-block;
+            width: px2rem(335);
+            height: px2rem(94);
+            background-image: url('/images/bd_prize/h5_sure_btn.png');
+            background-position: center top;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+    }
+}
+.m_prize_layer-message {
+    width: px2rem(576);
+    height: px2rem(360);
+    background-image: url('/images/bd_prize/h5_msg_bg.png');
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    .detail {
+        height: px2rem(224);
+        font-size: px2rem(40);
+        font-weight: 500;
+
+        p {
+            display: none;
+
+            span {
+                display: block;
+                margin-bottom: px2rem(6.4);
+            }
+
+            &.code1 {
+                padding-top: px2rem(112);
+            }
+            &.code2 {
+                padding-top: px2rem(38.4);
+            }
+            &.code3 {
+                padding-top: px2rem(38.4);
+            }
+            &.code4 {
+                padding-top: px2rem(70);
+            }
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+    .close-btn {
+        text-align: center;
+
+        span {
+            display: inline-block;
+            width: px2rem(335);
+            height: px2rem(94);
+            background-image: url('/images/bd_prize/h5_close_btn.png');
+            background-position: center top;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+    }
+}
+.m_prize_layer-content {
+    width: px2rem(576);
+    height: px2rem(776);
+    background-image: url('/images/bd_prize/h5_rule_detail.png');
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    .detail {
+        padding: px2rem(192) px2rem(32) 0;
+        font-size: px2rem(16);
+
+        p {
+            padding-bottom: px2rem(19.2);
+            line-height: px2rem(30);
+            text-align: left;
+        }
+    }
+    .close-btn {
+        text-align: center;
+
+        span {
+            display: inline-block;
+            width: px2rem(335);
+            height: px2rem(94);
+            background-image: url('/images/bd_prize/h5_close_btn.png');
+            background-position: center top;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+    }
+}
+@include b(m_prize_layout) {
+    min-height: px2rem(1334);
+    background-image: url('/images/bd_prize/h5_bg.png');
+    background-position: center top;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+@include b(m_prize) {
+    margin: 0 px2rem(58);
+    padding-top: px2rem(320);
+    position: relative;
+
+    @include e(award_box) {
+        padding: px2rem(82) px2rem(60) px2rem(70);
+    }
+
+    @include e(award) {
+        width: 33.33%;
+        float: left;
+        padding: 0;
+        text-align: center;
+
+        @include m(bg) {
+            width: px2rem(172);
+            height: px2rem(206);
+            display: inline-block;
+            padding: px2rem(8);
+
+            &.active {
+                background-color: #fff;
+                border-radius: px2rem(16);
+                box-shadow: 0px 0px 5px 2px #fff;
+            }
+
+            span {
+                display: inline-block;
+                width: px2rem(156);
+                height: px2rem(190);
+                background-position: center top;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+            &[data-prize="1"] {
+                span {
+                    background-image: url('/images/bd_prize/h5_prize_packet_3.png');
+                }
+            }
+            &[data-prize="2"] {
+                span {
+                    background-image: url('/images/bd_prize/h5_prize_packet_2.png');
+                }
+            }
+            &[data-prize="3"] {
+                span {
+                    background-image: url('/images/bd_prize/h5_prize_packet_1.png');
+                }
+            }
+        }
+    }
+    @include e(award_btn) {
+        text-align: center;
+
+        span {
+            display: inline-block;
+            width: px2rem(266);
+            height: px2rem(74);
+            background-image: url('/images/bd_prize/h5_draw_btn.png');
+            background-position: center top;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+    }
+}
+@include b(m_prize_rule) {
+    width: px2rem(96);
+    height: px2rem(166);
+    background-image: url('/images/bd_prize/h5_rule_btn.png');
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+@include b(m_prize_title) {
+    min-height: px2rem(82);
+    background-image: url('/images/bd_prize/h5_cont_1.png');
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    font-size: px2rem(28);
+    font-weight: 500;
+    text-align: center;
+    padding-top: px2rem(8);
+}
+@include b(m_prize_draw) {
+    min-height: px2rem(470);
+    background-image: url('/images/bd_prize/h5_draw_box_1.png');
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    &.change {
+        background-image: url('/images/bd_prize/h5_draw_box_2.png');
+        background-position: center top;
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+}
+@include b(m_prize_list) {
+    min-height: px2rem(267);
+    background-image: url('/images/bd_prize/h5_cont_2.png');
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding-top: px2rem(38.4);
+
+    @include e(box_wrapper) {
+        height: px2rem(211.2);
+        overflow: hidden;
+        position: relative;
+    }
+    @include e(box) {
+        position: absolute;
+        left: px2rem(144);
+
+        li {
+            font-size: px2rem(28);
+            height: px2rem(38.4);
+            line-height: px2rem(38.4);
+        }
+    }
+
+    .temp_tip {
+        text-align: center;
+        padding-top: px2rem(64);
+    }
+}
+@include b(m_prize_risk) {
+    margin-top: px2rem(16);
+    font-weight: 500;
+
+    @include e(tip) {
+        float: left;
+        width: px2rem(44.8);
+        font-size: px2rem(25);
+        padding: px2rem(6.4);
+        border: 1px solid #000;
+        border-radius: 6px;
+    }
+    @include e(detail) {
+        font-size: px2rem(18);
+        padding-left: px2rem(57.6);
+        margin-right: px2rem(25.6);
+    }
+}

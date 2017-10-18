@@ -30,6 +30,9 @@
         checkHonorStatus: origin + '/king/show', // get
         receiveHonor: origin + '/king/receive', // post
         exchangeHonor: origin + '/king/exchange', // post
+        // 抽奖活动
+        getPrizeChangce: origin + '/lucky_draw', // get
+        drawPrize: origin + '/lucky_draw', // post
 
         // 三方接口
         thirdGetStatus: origin + '/third/user/auth_status', // get
