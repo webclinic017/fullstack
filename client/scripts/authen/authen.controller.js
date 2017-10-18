@@ -774,7 +774,7 @@
             if (nowDateTime.getMonth() < birthDate.getMonth() || (nowDateTime.getMonth() == birthDate.getMonth() && nowDateTime.getDate() < birthDate.getDate())) {
                 age--;
             }
-            if (parseInt(age) <= 18) {
+            if (parseInt(age) < 18) {
                 $scope.realnameInfo.year18 = false
                 layer.msg('您的年龄未满18周岁，不建议您进行外汇交易。')
             } else {
