@@ -18,7 +18,7 @@
         //        closeBtn: 0,
         //        title: '',
         //        shade: 0.6,
-        //        area: ['600px', '520px'], //宽高
+        //        area: ['800px', '520px'], //宽高
         //        content: $('#home-layer-model')
         //    });
         // }

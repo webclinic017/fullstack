@@ -69,21 +69,21 @@
                 $scope.deposit.amount = $scope.walletAble;
             }
         });
-        function openSystemMdl(type) {
-            $modal.open({
-                templateUrl: '/views/asset/verify_modal.html',
-                size: 'sm',
-                backdrop: true,
-                controller: function ($scope, $modalInstance) {
-                    $scope.type = type;
-                    $scope.closeModal = closeModal;
+        // function openSystemMdl(type) {
+        //     $modal.open({
+        //         templateUrl: '/views/asset/verify_modal.html',
+        //         size: 'sm',
+        //         backdrop: true,
+        //         controller: function ($scope, $modalInstance) {
+        //             $scope.type = type;
+        //             $scope.closeModal = closeModal;
 
-                    function closeModal() {
-                        $modalInstance.dismiss();
-                    }
-                }
-            });
-        }
+        //             function closeModal() {
+        //                 $modalInstance.dismiss();
+        //             }
+        //         }
+        //     });
+        // }
         
         // 充值  还未完成
         function toDeposit(amount) {

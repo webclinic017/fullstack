@@ -25,9 +25,9 @@
                 <tr ng-repeat="detail in details" ng-if="success && details.length > 0">
                     <td>{{ detail.cmd_name }} {{ detail.symbol_cn }}</td>
                     <td>
-                        {{ detail.open_time }}
+                        {{ detail.open_time | dealTimestamp }}
                     </td>
-                    <td>{{ detail.close_time }}</td>
+                    <td>{{ detail.close_time | dealTimestamp }}</td>
                     <td>{{ detail.open_price }}</td>
                     <td>{{ detail.close_price }}</td>
                     <td>{{ detail.volume }}</td>

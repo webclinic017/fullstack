@@ -75,6 +75,7 @@
                         }
 
                         angular.extend($scope.personal, {
+                            finishVerify: data.profile_check == 3,
                             dredged_type: dredged_type
                         });
 
@@ -113,7 +114,7 @@
                 $rootScope.personalCookiesInfo = {
                     userCode: $cookies["user_code"],
                     userName: decodeURIComponent($cookies["username"] || ''),
-                    userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md
+                    userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md + '?timestamp=' + (+new Date())
                 };
             } else {
                 $rootScope.personalCookiesInfo.userCode = undefined;

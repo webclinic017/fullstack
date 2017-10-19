@@ -1,26 +1,29 @@
-<div class="system_modal">
+<div class="sys_modal_v2 slim_case">
     <button class="close" ng-click="closeModal()">&times;</button>
 
-    <h5 class="system_modal__title">
+    <h5 class="sys_modal_v2__title">
         系统提示
     </h5>
 
-    <div class="system_modal__content">
-        <p ng-if="type == 'deposit'" class="system_modal__info">
+    <div class="sys_modal_v2__content">
+        <p ng-if="type == 'deposit'" class="sys_modal_v2__info">
             无法充值
         </p>
-        <p ng-if="type == 'withdraw'" class="system_modal__info">
+        <p ng-if="type == 'withdraw'" class="sys_modal_v2__info">
             无法提现
         </p>
-        <p ng-if="type == 'redbag'" class="system_modal__info">
-            
+        <p ng-if="type == 'binding'" class="sys_modal_v2__info">
+            无法绑定银行卡
         </p>
-        <p class="system_modal__tip">
+        <p class="sys_modal_v2__tip" ng-show="dredgeType == 'demo'">
+            受最高监管的约束，需要您通过认证审核后方可进行充值操作
+        </p>
+        <p class="sys_modal_v2__tip" ng-show="dredgeType == 'live'">
             您的账户尚未通过认证审核，请先完善资料。
         </p>
 
-        <p class="system_modal__btn_wrapper">
-            <a class="btn btn-primary btn-sm" ng-click="closeModal()" ui-sref="authen.subpage({subpage: 'investInfo'})">
+        <p class="btn_wrapper">
+            <a class="btn btn-primary-gradient btn-sm" ng-click="closeModal()" ui-sref="authen.subpage({subpage: 'investInfo'})">
                 完善资料
             </a>
         </p>

@@ -1,4 +1,45 @@
 var report_sites = [
+    /*添加时间 2017-10-12*/
+    {
+        address: 'https://news.jrzj.com/bd/196924.html',
+        description: '【金融之家】外汇交易成理财投资重要工具，老虎外汇吸睛三大缘由解读',
+        date: '2017-9-28'
+    },
+    {
+        address: 'http://www.huaxia.com/xw/zhxw/2017/09/5482797.html',
+        description: '【华夏经纬】外汇票据综合理财投资 老虎外汇京东金融金银猫各有特色',
+        date: '2017-9-25'
+    },
+    {
+        address: 'http://ed-china.stnn.cc/diplomacy/2017/0920/477469.shtml',
+        description: '【星岛环球网】金融科技向外汇交易服务市场渗透，老虎外汇的创新之法',
+        date: '2017-9-20'
+    },
+    {
+        address: 'http://www.zhongguobaiyin.com/c/2017-09-20/c2670888.html',
+        description: '【中国白银投资网】货币基金收益下滑 老虎外汇给外汇黄金投资入门者“支招”',
+        date: '2017-9-19'
+    },
+    {
+        address: 'http://yzwb.sjzdaily.com.cn/hot/20170918/11506.html',
+        description: '【燕赵晚报】老虎外汇复制跟单系统，让外汇交易更简单',
+        date: '2017-9-18'
+    },
+    {
+        address: 'http://www.cnfina.com/kuaixun/20170915_109861.html',
+        description: '【华财网】外汇投资成获利避险重要方式 老虎外汇科技革新外汇投资参与方式',
+        date: '2017-9-15'
+    },
+    {
+        address: 'http://news.xinxunwang.com/china/syzx/103204.html',
+        description: '【新讯网】老虎外汇：借力金融科技，让外汇交易像游戏通关一样简单有趣',
+        date: '2017-9-14'
+    },
+    {
+        address: 'http://www.jingji.com.cn/html/news/zxxw/79812.html',
+        description: '【经济网】外汇交易更接地气，老虎外汇科技创新诠释新式外汇交易服务',
+        date: '2017-9-12'
+    },
     /*添加时间 2017-9-11*/
     {
         address: 'http://www.cien.com.cn/content-163407.html',

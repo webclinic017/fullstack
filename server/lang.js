@@ -33,6 +33,14 @@ module.exports = function () {
                 return false;
             }
         },
+        isDemo: function () {
+            console.log(this.req.hostname);
+            if ((this.req.hostname.indexOf('demo.tigerwit.com') != -1) || (this.req.hostname.indexOf('w.dev.tigerwit.com') != -1)) {
+                return true;
+            } else {
+                return false;
+            }
+        },
         isCloned: function(){
             return this.clonedBaidu;
         },
