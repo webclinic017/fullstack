@@ -127,7 +127,7 @@
          * // 校验开户状态
          * @param {* 真实账户回调 } liveTodo 
          */
-        function switchDredge(liveTodo) {
+        function switchDredge(demotodo, liveTodo) {
             // 获取开通状态
             var dredged_type = $scope.personal.dredged_type;
             // 未开通
@@ -136,20 +136,21 @@
                     position: 'withdraw'
                 });
             } else if (dredged_type == 'demo') {
-                layer.msg('您当前是体验金账户，无法使用提现功能！');
-            } else if(dredged_type == 'live'){
+                // layer.msg('您当前是体验金账户，无法使用提现功能！');
+                demotodo && demotodo()
+            } else if (dredged_type == 'live') {
                 liveTodo && liveTodo()
             }
         }
 
         function openCardMdl() {
-            switchDredge(function () {
+            var hasVerify = $scope.personal.finishVerify
+            if (hasVerify) {
                 var personal = {
                     verified: $scope.personal.verified,
                     realname: $scope.personal.realname,
                     profile_check: $scope.personal.profile_check,
                 };
-    
                 $modal.open({
                     templateUrl: '/views/asset/card_modal.html',
                     size: 'md',
@@ -163,7 +164,29 @@
                         }
                     }
                 });
-            })
+            } else {
+                // 没有完成实名认证
+                $modal.open({
+                    templateUrl: '/views/asset/verify_modal.html',
+                    size: 'sm',
+                    backdrop: true,
+                    controller: function ($scope, $modalInstance) {
+                        $scope.closeModal = closeModal;
+                        $scope.type = 'binding';
+                        $scope.dredgeType = 'unkown';
+
+                        switchDredge(function () {
+                            $scope.dredgeType = 'demo'
+                        }, function () {
+                            $scope.dredgeType = 'live'
+                        })
+
+                        function closeModal() {
+                            $modalInstance.dismiss();
+                        }
+                    }
+                });
+            }
         }
 
         // 提现相关的各种弹窗提示
@@ -195,7 +218,7 @@
             });
         }
 
-        
+
 
         function openMessageMdl() {
             var message = $scope.message;
@@ -234,10 +257,10 @@
                 if ($scope.clickable == false) {
                     return;
                 }
-    
+
                 console.log('toWithdraw is click');
                 $scope.clickable = false;
-    
+
                 if ($scope.withdraw.type === 'invest') {
                     withdrawInvest();
                 } else {
@@ -246,21 +269,21 @@
             })
         }
 
-        function openSystemMdl(type) {
-            $modal.open({
-                templateUrl: '/views/asset/verify_modal.html',
-                size: 'sm',
-                backdrop: true,
-                controller: function ($scope, $modalInstance) {
-                    $scope.type = type;
-                    $scope.closeModal = closeModal;
+        // function openSystemMdl(type) {
+        //     $modal.open({
+        //         templateUrl: '/views/asset/verify_modal.html',
+        //         size: 'sm',
+        //         backdrop: true,
+        //         controller: function ($scope, $modalInstance) {
+        //             $scope.type = type;
+        //             $scope.closeModal = closeModal;
 
-                    function closeModal() {
-                        $modalInstance.dismiss();
-                    }
-                }
-            });
-        }
+        //             function closeModal() {
+        //                 $modalInstance.dismiss();
+        //             }
+        //         }
+        //     });
+        // }
 
         function withdrawInvest() {
             asset.getIsWithdraw($scope.withdraw.amount).then(function (data) {

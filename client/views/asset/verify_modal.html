@@ -12,10 +12,13 @@
         <p ng-if="type == 'withdraw'" class="system_modal__info">
             无法提现
         </p>
-        <p ng-if="type == 'redbag'" class="system_modal__info">
-            
+        <p ng-if="type == 'binding'" class="system_modal__info">
+            无法绑定银行卡
         </p>
-        <p class="system_modal__tip">
+        <p class="system_modal__tip" ng-show="dredgeType == 'demo'">
+            受最高监管的约束，需要您通过认证审核后方可进行充值操作
+        </p>
+        <p class="system_modal__tip" ng-show="dredgeType == 'live'">
             您的账户尚未通过认证审核，请先完善资料。
         </p>
 

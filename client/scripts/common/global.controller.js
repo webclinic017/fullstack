@@ -74,7 +74,14 @@
                             dredged_type = 'unknow'
                         }
 
+                        // 是否通过实名认证 flag
+                        var finishVerify = false;
+                        if(data.profile_check == 3){
+                            finishVerify = true
+                        }
+
                         angular.extend($scope.personal, {
+                            finishVerify: finishVerify,
                             dredged_type: dredged_type
                         });
 
