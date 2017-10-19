@@ -217,6 +217,7 @@
                     $scope.$on('bindCardSuccess', function () {
                         getCardList($scope).then(function () {
                             $scope.cardList = parentScope.cardList
+                            isShortBankName($scope.cardList)
                         })
                     })
                     if (type != 'delete') {
@@ -224,10 +225,17 @@
                         if (!parentScope.cardList) {
                             getCardList($scope).then(function () {
                                 $scope.cardList = parentScope.cardList
+                                isShortBankName($scope.cardList)
                             })
                         } else {
                             $scope.cardList = parentScope.cardList
                         }
+                    }
+
+                    function isShortBankName(list) {
+                        angular.forEach(list, function (value) {
+                            value.is_short = /^[A-Za-z]/.test(value.bank_name)
+                        })
                     }
 
                     $scope.chooseCard = function (card) {
