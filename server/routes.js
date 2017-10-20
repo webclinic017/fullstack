@@ -599,7 +599,9 @@ module.exports = function (app) {
     // 品牌部活动 － 申请代理
     app.route('/bd/brand_proxy').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('bd/brand/proxy', extendPublic({}, req));
+        res.render('bd/brand/proxy', extendPublic({
+            in_phone: isMobile(req) ? 'y' : 'n'
+        }, req));
     });
 
     // 抽奖活动

@@ -21,14 +21,14 @@
                             var numTemp = fs.readFileSync(dir,"utf-8");
                             num = JSON.parse(numTemp);
                             num[numName] ? (num[numName]++) : (num[numName] = 1);
-                            fs.writeFile(dir, JSON.stringify(num));
+                            fs.writeFileSync(dir, JSON.stringify(num));
                         } catch (e) {
                             num[numName] = 1;
                             console.log(e);
                         }
                     } else {
                         num[numName] = 1;
-                        fs.writeFile(dir, JSON.stringify(num));
+                        fs.writeFileSync(dir, JSON.stringify(num));
                     }
                     fn(num[numName]);
                 });
@@ -39,7 +39,7 @@
                         num[numName] = 1;
                     }else{
                         num[numName] = 1;
-                        fs.writeFile(dir, JSON.stringify(num));
+                        fs.writeFileSync(dir, JSON.stringify(num));
                     }
                     fn(num[numName]);
                 });
@@ -64,7 +64,7 @@
                             
                             if (s) {
                                 num.number++;
-                                fs.writeFile(dir, JSON.stringify(num));
+                                fs.writeFileSync(dir, JSON.stringify(num));
                             }
                             
                         } catch (e) {
@@ -77,7 +77,7 @@
                         } else {
                             num.number = 0;
                         }
-                        fs.writeFile(dir, JSON.stringify(num));
+                        fs.writeFileSync(dir, JSON.stringify(num));
                     }
                     fn(num.number);
                 });
@@ -93,7 +93,7 @@
                             num.number = 0;
                         }
                         
-                        fs.writeFile(dir, JSON.stringify(num));
+                        fs.writeFileSync(dir, JSON.stringify(num));
                     }
                     fn(num.number);
                 });
