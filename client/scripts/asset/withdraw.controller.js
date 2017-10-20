@@ -131,6 +131,8 @@
                     $scope.withdraw.card.address = data.data.bank_addr;
                     $scope.withdraw.card.province = data.data.province;
                     $scope.withdraw.card.city = data.data.city;
+                    // 判断是否为英文简称
+                    $scope.withdraw.card.is_short = /^[A-Za-z]/.test(data.data.bank_name);
                 }
             });
         }
@@ -331,7 +333,6 @@
         $scope.clickable = true;
         function toWithdraw() {
             // 校验开户状态
-            console.log(123131)
             if (!$scope.personal.finishVerify) {
                 openVerifyMdl('withdraw')
             } else {

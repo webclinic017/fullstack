@@ -26,7 +26,8 @@
         </div>
 
         <div class="col-xs-9" ng-show="withdraw.card.id">
-            <span class="icon-banks-{{withdraw.card.bank}}"></span>
+            <span ng-if="withdraw.card.is_short" class="card_icon icon-banks-{{ withdraw.card.bank }}"></span>
+            <span ng-if="!withdraw.card.is_short" style="font-size: 16px; font-weight: 500;">{{ withdraw.card.bank }}</span>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <span>{{withdraw.card.number}}</span>
             &nbsp;&nbsp;&nbsp;&nbsp;

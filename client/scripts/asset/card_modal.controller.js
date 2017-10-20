@@ -60,10 +60,10 @@
             // console.log(data);
             if (data.is_succ) {
                 var b = [];
-                angular.forEach(data.data, function (val) {
+                angular.forEach(data.data, function (val, key) {
                     b.push({
-                        nameEN: val.key,
-                        nameZH: val.name
+                        nameEN: key,
+                        nameZH: val
                     });
                 });
                 $scope.banks = b;
@@ -129,7 +129,7 @@
             });
         }
         function submitForm() {
-            // console.log($scope.card);
+            // console.log($scope.card, $scope.card.bank.nameEN);
             showErr('realname');
             showErr('number');
             showErr('bank');
