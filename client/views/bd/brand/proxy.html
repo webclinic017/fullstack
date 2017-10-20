@@ -1,3 +1,10 @@
+<% if (in_phone === 'y') { %>
+    <% var class_box = '' %>
+    <% var bgs = '160% 100%' %>
+<% } else { %>
+    <% var class_box = 'container' %>
+    <% var bgs = 'auto 100%' %>
+<% } %>
 <!DOCTYPE html>
 <html lang="en" class="bd_redbag">
 
@@ -17,8 +24,8 @@
 
 <body ng-app="fullstackApp">
     <div ng-controller="BrandAgentController">
-        <div class="brand_index">
-            <div class="container">
+        <div class="brand_index" style="background-size: <%= bgs%>">
+            <div class="<%= class_box%>">
                 <div class="brand_form">
                     <div class="form-control-wrapper phone">
                         <input class="form-control" type="phone" placeholder="请输入手机号码" ng-model="phone">
@@ -44,7 +51,7 @@
             </div>
         </div>
         <div class="brand_container">
-            <div class="container">
+            <div class="<%= class_box%>">
                 <div class="brand_title">
                     为什么选择老虎外汇
                 </div>
