@@ -178,26 +178,7 @@
                 });
             } else {
                 // 没有完成实名认证
-                $modal.open({
-                    templateUrl: '/views/asset/verify_modal.html',
-                    size: 'sm',
-                    backdrop: true,
-                    controller: function ($scope, $modalInstance) {
-                        $scope.closeModal = closeModal;
-                        $scope.type = 'binding';
-                        $scope.dredgeType = 'unkown';
-
-                        switchDredge(function () {
-                            $scope.dredgeType = 'demo'
-                        }, function () {
-                            $scope.dredgeType = 'live'
-                        })
-
-                        function closeModal() {
-                            $modalInstance.dismiss();
-                        }
-                    }
-                });
+                openVerifyMdl('binding')
             }
         }
 
@@ -299,7 +280,29 @@
             });
         }
 
+        function openVerifyMdl(type) {
+            // 没有完成实名认证
+            $modal.open({
+                templateUrl: '/views/asset/verify_modal.html',
+                size: 'sm',
+                backdrop: true,
+                controller: function ($scope, $modalInstance) {
+                    $scope.closeModal = closeModal;
+                    $scope.type = type;
+                    $scope.dredgeType = 'unkown';
 
+                    switchDredge(function () {
+                        $scope.dredgeType = 'demo'
+                    }, function () {
+                        $scope.dredgeType = 'live'
+                    })
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
 
         function openMessageMdl() {
             var message = $scope.message;
@@ -328,7 +331,10 @@
         $scope.clickable = true;
         function toWithdraw() {
             // 校验开户状态
-            switchDredge(function () {
+            console.log(123131)
+            if (!$scope.personal.finishVerify) {
+                openVerifyMdl('withdraw')
+            } else {
                 showErr('amount');
                 // console.info($scope.withdrawForm.$invalid);
                 if ($scope.withdrawForm.$invalid) {
@@ -338,7 +344,6 @@
                     return;
                 }
 
-                console.log('toWithdraw is click');
                 $scope.clickable = false;
 
                 if ($scope.withdraw.type === 'invest') {
@@ -346,24 +351,8 @@
                 } else {
                     withdrawWallet();
                 }
-            })
+            }
         }
-
-        // function openSystemMdl(type) {
-        //     $modal.open({
-        //         templateUrl: '/views/asset/verify_modal.html',
-        //         size: 'sm',
-        //         backdrop: true,
-        //         controller: function ($scope, $modalInstance) {
-        //             $scope.type = type;
-        //             $scope.closeModal = closeModal;
-
-        //             function closeModal() {
-        //                 $modalInstance.dismiss();
-        //             }
-        //         }
-        //     });
-        // }
 
         function withdrawInvest() {
             asset.getIsWithdraw($scope.withdraw.amount).then(function (data) {

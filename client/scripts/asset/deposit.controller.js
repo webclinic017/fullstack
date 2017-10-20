@@ -69,25 +69,54 @@
                 $scope.deposit.amount = $scope.walletAble;
             }
         });
-        // function openSystemMdl(type) {
-        //     $modal.open({
-        //         templateUrl: '/views/asset/verify_modal.html',
-        //         size: 'sm',
-        //         backdrop: true,
-        //         controller: function ($scope, $modalInstance) {
-        //             $scope.type = type;
-        //             $scope.closeModal = closeModal;
 
-        //             function closeModal() {
-        //                 $modalInstance.dismiss();
-        //             }
-        //         }
-        //     });
-        // }
+        function switchDredge(demotodo, liveTodo) {
+            // 获取开通状态
+            var dredged_type = $scope.personal.dredged_type;
+            // 未开通
+            if (dredged_type == 'unknow') {
+                $scope.$emit('global.openDredgeMdl', {
+                    position: 'withdraw'
+                });
+            } else if (dredged_type == 'demo') {
+                // layer.msg('您当前是体验金账户，无法使用提现功能！');
+                demotodo && demotodo()
+            } else if (dredged_type == 'live') {
+                liveTodo && liveTodo()
+            }
+        }
+
+        function openSystemMdl(type) {
+            $modal.open({
+                templateUrl: '/views/asset/verify_modal.html',
+                size: 'sm',
+                backdrop: true,
+                controller: function ($scope, $modalInstance) {
+                    $scope.type = type;
+                    $scope.closeModal = closeModal;
+                    $scope.dredgeType = '';
+
+                    switchDredge(function () {
+                        $scope.dredgeType = 'demo'
+                    }, function () {
+                        $scope.dredgeType = 'live'
+                    })
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
         
         // 充值  还未完成
         function toDeposit(amount) {
-            
+            // 没有实名认证
+            if(!$scope.personal.finishVerify){
+                openSystemMdl('deposit')
+
+                return
+            }
+
             var amount = $scope.deposit.amount;
 
             if (typeof amount === 'undefined') {
@@ -96,25 +125,7 @@
             }
             amount = Number(amount).toFixed(2);
 
-            // 获取开通状态
-            var dredged_type = $scope.personal.dredged_type;
-            // 未开通
-            if(dredged_type == 'unknow'){
-                $scope.$emit('global.openDredgeMdl', {
-                    position: 'deposit',
-                });
-            } else if(dredged_type == 'demo'){
-                layer.confirm('充值成功后，您的账户将由体验金账户升级为交易账户，体验金账户将失效', {
-                    btn: ['取消', '继续'], //按钮
-                    title: '提示'
-                }, function () {
-                    layer.closeAll();
-                }, function () {
-                    confirmDeposit();
-                });
-            } else {
-                confirmDeposit();
-            }
+            confirmDeposit();
             
             function confirmDeposit() {
                 if ($scope.deposit.type === 'invest' || $scope.deposit.type === 'alipay') {
