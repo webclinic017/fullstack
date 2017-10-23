@@ -231,6 +231,8 @@
                         parentScope.withdraw.card.city = card.city;
                         // 更改选中状态
                         parentScope.hasChooseedCard = true;
+                        // 判断是否为英文简称
+                        parentScope.withdraw.card.is_short = /^[A-Za-z]/.test(card.bank_name);
                         closeModal()
                     }
 

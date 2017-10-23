@@ -51,7 +51,8 @@
                 </form>
             </div>
             <div class="col-xs-3">
-                <button class="btn btn-primary btn-sm" ng-click="toDeposit()">充值</button>
+                <button ng-if="!isLoading" class="btn btn-primary btn-sm" ng-click="toDeposit()">充值</button>
+                <button ng-if="isLoading" class="btn btn-primary btn-sm"><i class="loading_spinner fa fa-spinner"></i>充值中</button>
             </div>
         </div>
 
@@ -93,7 +94,7 @@
         </div> -->
         
     </div>
-    <div class="deposit__wallet_succ" ng-show="walletDepositSucc">
-        充值已提交，审核通过后零钱将划入交易账户
+    <div class="deposit__wallet_succ mg-tp-50" ng-show="walletDepositSucc">
+        充值已提交，到账约为10分钟，请耐心等待
     </div>
 </div>

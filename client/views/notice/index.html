@@ -1,4 +1,4 @@
-<div class="notice">
+<div class="notice pd-bt-20">
     <div class="notice__nav clearfix">
         <div class="notice__nav-item fl" ng-class="{ 'active': currentMsg == 'trade', 'has_new': unreadMsg.trade > 0 }" ng-click="chooseMsg('trade')">交易提醒</div>
         <div class="notice__nav-item fl" ng-class="{ 'active': currentMsg == 'system', 'has_new': unreadMsg.system > 0 }" ng-click="chooseMsg('system')">系统提醒</div>
@@ -34,7 +34,7 @@
     </div>
     <div ng-if="currentMsg == 'system'">
         <ul class="notice__list pd-bt-20">
-            <div tw-loading-img class="mg-bt-20"></div>
+            <div tw-loading-img></div>
             <li class="notice__list-li" ng-repeat="notice in noticeList.system">
                 <div class="row">
                     <div class="col-xs-12">

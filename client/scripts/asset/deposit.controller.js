@@ -36,6 +36,7 @@
         };
         $scope.isDeposit = false;
 
+        $scope.isLoading = false;
         $scope.toDeposit = toDeposit;
         $scope.openDepositMdl = openDepositMdl;
         $scope.hideErr = hideErr;
@@ -128,6 +129,7 @@
             confirmDeposit();
             
             function confirmDeposit() {
+                $scope.isLoading = true;
                 if ($scope.deposit.type === 'invest' || $scope.deposit.type === 'alipay') {
                     // if ($scope.personal.profile_check != 3) {
                     //     openSystemMdl('deposit');
@@ -137,6 +139,7 @@
                     var w = $window.open('/waiting');
 
                     asset.deposit(amount, platform).then(function(data) {
+                        $scope.isLoading = false;
                         if (!data) return;
                         if (data.is_succ) {
                             var token = $cookies["token"] || '';
@@ -153,6 +156,7 @@
                     $scope.isDeposit = true;
 
                     asset.walletDeposit(amount).then(function (data) {
+                        $scope.isLoading = false;
                         // console.log(data);
                         $scope.isDeposit = false;
                         if (!data) return;
