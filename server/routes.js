@@ -573,13 +573,26 @@ module.exports = function (app) {
     });
 
     // 红包活动
+    // app.route('/bd/t35').get(function (req, res) {
+    //     setEnvCf(req, res);
+    //     if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+    //         if (isMobile(req)) {
+    //             res.render('bd/t38/h5.html', extendPublic({}, req))
+    //         } else {
+    //             res.render('bd/t38/web.html', extendPublic({}, req));
+    //         }
+    //     } else {
+    //         res.render('404.html', extendPublic({}, req));
+    //     }
+    // });
+    // 11月份活动
     app.route('/bd/t35').get(function (req, res) {
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+        if (COMPANY_NAME === 'tigerwit') {
             if (isMobile(req)) {
-                res.render('bd/t38/h5.html', extendPublic({}, req))
+                res.render('bd/t36/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t38/web.html', extendPublic({}, req));
+                res.render('bd/t36/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
