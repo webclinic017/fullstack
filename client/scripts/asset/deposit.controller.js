@@ -17,7 +17,7 @@
                 // RMB:         // 折合人民币
             },
             alipay: true,
-            alipayAbleTip: false, 
+            alipayAbleTip: false,
             alipayTip: false,
             wallet: true,
             walletTip: false,
@@ -54,7 +54,7 @@
         });
 
         // 获取入金限制
-        asset.getDepositLimit().then(function(data) {
+        asset.getDepositLimit().then(function (data) {
             // console.log(data);
             if (!data) return;
             if (data.is_succ) {
@@ -108,14 +108,21 @@
                 }
             });
         }
-        
+
         // 充值  还未完成
         function toDeposit(amount) {
             // 没有实名认证
-            if(!$scope.personal.finishVerify){
-                openSystemMdl('deposit')
+            // if(!$scope.personal.finishVerify){
+            //     openSystemMdl('deposit')
 
-                return
+            //     return
+            // }
+            // 体验金账户未完成实名认证
+            if (!$scope.personal.finishVerify) {
+                // 资料已经提交审核
+                if (personal.dredged_type == 'live' && $scope.personal.verify_status == 5) {
+                    layer.msg('您的账户正在审核中，请审核通过后再进行充值操作。')
+                }
             }
 
             var amount = $scope.deposit.amount;
@@ -127,7 +134,7 @@
             amount = Number(amount).toFixed(2);
 
             confirmDeposit();
-            
+
             function confirmDeposit() {
                 $scope.isLoading = true;
                 if ($scope.deposit.type === 'invest' || $scope.deposit.type === 'alipay') {
@@ -138,12 +145,12 @@
                     var platform = $scope.deposit.type === 'alipay' ? 4 : undefined;
                     var w = $window.open('/waiting');
 
-                    asset.deposit(amount, platform).then(function(data) {
+                    asset.deposit(amount, platform).then(function (data) {
                         $scope.isLoading = false;
                         if (!data) return;
                         if (data.is_succ) {
                             var token = $cookies["token"] || '';
-                            var url = data.data.url + '?token='+token;
+                            var url = data.data.url + '?token=' + token;
                             openDepositMdl('depositFinish');
                             w.location = url;
                         } else {
@@ -170,7 +177,7 @@
             }
         }
 
-        function changeDepositType (type) {
+        function changeDepositType(type) {
             $scope.deposit.alipayAbleTip = false;
 
             if (!$scope.deposit.alipay) {
@@ -188,11 +195,11 @@
                 $scope.deposit.alipayAbleTip = true;
             }
         }
-        function checkInputAmount () {
+        function checkInputAmount() {
             // console.log($scope.deposit.amount, $scope.personal.wallet_balance, Number($scope.deposit.amount) > Number($scope.personal.wallet_balance));
             if (Number($scope.deposit.amount) > Number($scope.walletAble)) {
                 $scope.deposit.wallet = false;
-                
+
                 if ($scope.deposit.type === 'wallet') {
                     $scope.deposit.type = 'invest';
                     $scope.deposit.walletTip = true;
@@ -205,7 +212,7 @@
             if (Number($scope.deposit.amount) > $scope.alipayAble) {
                 $scope.deposit.alipay = false;
                 $scope.deposit.alipayAbleTip = true;
-                
+
                 if ($scope.deposit.type === 'alipay') {
                     $scope.deposit.type = 'invest';
                     $scope.deposit.alipayTip = true;
