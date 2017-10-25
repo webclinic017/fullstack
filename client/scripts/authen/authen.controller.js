@@ -95,11 +95,10 @@
             getAuthStatus();
         }
 
-        var showMsg = undefined;
         function showErr4() {
             if ($scope.personal.verify_status == 4) {
-                if (!showMsg) {
-                    showMsg = layer.msg('您上传的身份证照片审核被拒绝，请重新填写相关信息，被拒原因请查看系统消息。',
+                if (!$scope.personal.showAuthenMsg) {
+                    $scope.personal.showAuthenMsg = layer.msg('您上传的身份证照片审核被拒绝，请重新填写相关信息，被拒原因请查看系统消息。',
                         {
                             time: 0,
                             btn: ['好的'],

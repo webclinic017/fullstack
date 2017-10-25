@@ -46,6 +46,36 @@
 
                 <div class="row">
                     <div class="col-xs-3 text-left">
+                        <label>卡号：</label>
+                    </div>
+
+                    <div class="col-xs-9">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                   name="number"
+                                   type="text"
+                                   required
+                                   ng-class="{'form-control-error': frontErr.number.show && cardForm.number.$invalid}"
+                                   ng-model="card.number"
+                                   placeholder="请输入卡号"
+                                   ng-pattern="frontErr.number.reg"
+                                   ng-focus="hideErr('number')"
+                                   ng-blur="showErr('number')">
+
+                            <div ng-show="frontErr.number.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.required">
+                                    请输入卡号
+                                </p>
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.pattern">
+                                    {{frontErr.number.tip}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-3 text-left">
                         <label>选择开户行：</label>
                     </div>
 
@@ -146,36 +176,6 @@
                             <div ng-show="frontErr.city.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.city.$error.required">
                                     请选择开户市
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>卡号：</label>
-                    </div>
-
-                    <div class="col-xs-9">
-                        <div class="form-control-wrapper">
-                            <input class="form-control"
-                                   name="number"
-                                   type="text"
-                                   required
-                                   ng-class="{'form-control-error': frontErr.number.show && cardForm.number.$invalid}"
-                                   ng-model="card.number"
-                                   placeholder="请输入卡号"
-                                   ng-pattern="frontErr.number.reg"
-                                   ng-focus="hideErr('number')"
-                                   ng-blur="showErr('number')">
-
-                            <div ng-show="frontErr.number.show">
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.required">
-                                    请输入卡号
-                                </p>
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.pattern">
-                                    {{frontErr.number.tip}}
                                 </p>
                             </div>
                         </div>

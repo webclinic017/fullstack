@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('AssetWithdrawController', AssetWithdrawController);
 
-    AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', 'forex', '$cookies'];
+    AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', 'forex', '$cookies', '$layer'];
 
-    function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, forex, $cookies) {
+    function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, forex, $cookies, $layer) {
         // 缓存当前父scope 给弹窗控制器使用
         var parentScope = $scope;
         parentScope.hasChooseedCard = false
@@ -158,8 +158,7 @@
         }
 
         function openCardMdl() {
-            var hasVerify = $scope.personal.finishVerify
-            if (hasVerify) {
+            checkAuthen(function () {
                 var personal = {
                     verified: $scope.personal.verified,
                     realname: $scope.personal.realname,
@@ -178,17 +177,14 @@
                         }
                     }
                 });
-            } else {
-                // 没有完成实名认证
-                openVerifyMdl('binding')
-            }
+            }, 'binding')
         }
 
         function openManageCardMdl(type) {
             $modal.open({
                 templateUrl: '/views/asset/manage_card_modal.html',
                 size: 'md',
-                backdrop: 'static',
+                backdrop: 'true',
                 controller: ['$scope', '$modalInstance', '$state', 'asset', '$timeout', function ($scope, $modalInstance, $state, asset, $timeout) {
                     $timeout(function () {
                         $scope.$broadcast('hideLoadingImg');
@@ -293,7 +289,7 @@
                 controller: function ($scope, $modalInstance) {
                     $scope.closeModal = closeModal;
                     $scope.type = type;
-                    $scope.dredgeType = 'unkown';
+                    $scope.dredgeType = 'unknow';
 
                     switchDredge(function () {
                         $scope.dredgeType = 'demo'
@@ -331,13 +327,36 @@
             $scope.withdraw.maxAmount = type === 'invest' ? $scope.maxAmountInvest : $scope.maxAmountWallet;
         }
 
+        function checkAuthen(finishTodo, type) {
+            // 体验金账户未完成实名认证
+            var verifyStatus = $scope.personal.verify_status
+            if (!$scope.personal.finishVerify) {
+                // 资料已经提交审核
+                if (verifyStatus == 5) {
+                    $layer({
+                        // title: '系统提示',
+                        // msgClass: 'font-danger',
+                        size: 'sm',
+                        btnsClass: 'text-right',
+                        msg: '您的账户正在审核中，请等待审核通过后再进行充值操作',
+                        btns: {
+                            '确定': function () { }
+                        }
+                    })
+                }
+                // 未上传过身份证 或者 实名被拒绝
+                if (verifyStatus < 5) {
+                    openVerifyMdl(type || 'withdraw')
+                }
+            } else {
+                finishTodo && finishTodo()
+            }
+        }
+
         // 提现
         $scope.clickable = true;
         function toWithdraw() {
-            // 校验开户状态
-            if (!$scope.personal.finishVerify) {
-                openVerifyMdl('withdraw')
-            } else {
+            checkAuthen(function () {
                 showErr('amount');
                 // console.info($scope.withdrawForm.$invalid);
                 if ($scope.withdrawForm.$invalid) {
@@ -354,7 +373,7 @@
                 } else {
                     withdrawWallet();
                 }
-            }
+            })
         }
 
         function withdrawInvest() {

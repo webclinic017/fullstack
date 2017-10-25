@@ -2,7 +2,7 @@
 (function () {
     'use strict';
 
-    angular.module('fullstackApp').factory('$layer', $layer);
+    angular.module('fullstackApp').service('$layer', $layer);
 
     $layer.$inject = ['$modal'];
 
