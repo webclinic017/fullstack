@@ -338,7 +338,7 @@
                         // msgClass: 'font-danger',
                         size: 'sm',
                         btnsClass: 'text-right',
-                        msg: '您的账户正在审核中，请等待审核通过后再进行充值操作',
+                        msg: '您的账户正在审核中，请等待审核通过后再进行提现操作',
                         btns: {
                             '确定': function () { }
                         }
