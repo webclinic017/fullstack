@@ -21,9 +21,9 @@ var report_sites = [
         date: '2017-9-19'
     },
     {
-        address: 'http://yzwb.sjzdaily.com.cn/hot/20170918/11506.html',
-        description: '【燕赵晚报】老虎外汇复制跟单系统，让外汇交易更简单',
-        date: '2017-9-18'
+        address: 'http://finance.sina.com.cn/roll/2017-09-19/doc-ifykynia8122064.shtml',
+        description: '【新浪财经】老虎外汇复制跟单系统，让外汇交易更简单',
+        date: '2017-9-19'
     },
     {
         address: 'http://www.cnfina.com/kuaixun/20170915_109861.html',
