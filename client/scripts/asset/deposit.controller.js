@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('AssetDepositController', AssetDepositController);
 
-    AssetDepositController.$inject = ['$scope', '$window', '$cookies', '$modal', '$state', 'asset', 'validator', 'account'];
+    AssetDepositController.$inject = ['$scope', '$window', '$cookies', '$modal', '$state', 'asset', 'validator', 'account', '$layer'];
 
-    function AssetDepositController($scope, $window, $cookies, $modal, $state, asset, validator, account) {
+    function AssetDepositController($scope, $window, $cookies, $modal, $state, asset, validator, account, $layer) {
 
         $scope.deposit = {
             minAmount: 0,       // 最低充值金额
@@ -111,18 +111,27 @@
 
         // 充值  还未完成
         function toDeposit(amount) {
-            // 没有实名认证
-            // if(!$scope.personal.finishVerify){
-            //     openSystemMdl('deposit')
-
-            //     return
-            // }
             // 体验金账户未完成实名认证
+            var verifyStatus = $scope.personal.verify_status
             if (!$scope.personal.finishVerify) {
                 // 资料已经提交审核
-                if (personal.dredged_type == 'live' && $scope.personal.verify_status == 5) {
-                    layer.msg('您的账户正在审核中，请审核通过后再进行充值操作。')
+                if (verifyStatus == 5) {
+                    $layer({
+                        // title: '系统提示',
+                        // msgClass: 'font-danger',
+                        size: 'sm',
+                        btnsClass: 'text-right',
+                        msg: '您的账户正在审核中，请等待审核通过后再进行充值操作',
+                        btns: {
+                            '确定': function () {}
+                        }
+                    })
                 }
+                // 未上传过身份证 或者 实名被拒绝
+                if (verifyStatus < 5) {
+                    openSystemMdl('deposit')
+                }
+                return
             }
 
             var amount = $scope.deposit.amount;

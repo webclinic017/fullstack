@@ -165,6 +165,9 @@
 
     &.slim_case{
         padding: 25px;
+        .sys_modal_v2__title {
+            margin-top: 0!important;
+        }
     }
     &.mid_case{
         padding: 35px;
