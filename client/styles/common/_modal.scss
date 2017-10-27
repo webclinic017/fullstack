@@ -172,6 +172,10 @@
     &.mid_case{
         padding: 35px;
     }
+    &.has_border{
+        border: 1px solid #dedede;
+        border-radius: 8px;
+    }
     .close {
         position: absolute;
         right: 15px;

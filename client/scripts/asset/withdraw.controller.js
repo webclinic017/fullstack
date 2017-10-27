@@ -12,6 +12,7 @@
         var parentScope = $scope;
         parentScope.hasChooseedCard = false
         parentScope.cardList = undefined;
+        parentScope.manageCardModalInstance = undefined;
 
         var companyName = $cookies["company_name"];
 
@@ -186,6 +187,7 @@
                 size: 'md',
                 backdrop: 'true',
                 controller: ['$scope', '$modalInstance', '$state', 'asset', '$timeout', function ($scope, $modalInstance, $state, asset, $timeout) {
+                    parentScope.manageCardModalInstance = $modalInstance
                     $timeout(function () {
                         $scope.$broadcast('hideLoadingImg');
                     }, 0)
@@ -331,6 +333,8 @@
             // 体验金账户未完成实名认证
             var verifyStatus = $scope.personal.verify_status
             if (!$scope.personal.finishVerify) {
+                // 先关闭父级modal
+                parentScope.manageCardModalInstance.dismiss()
                 // 资料已经提交审核
                 if (verifyStatus == 5) {
                     $layer({
