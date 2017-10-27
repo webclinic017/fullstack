@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <% include /common/meta/web.html %>
+    <title><%=lang.text("title")%> 直通全球资本市场</title>
+    <meta name="description" content="<%=lang.text("companyZhName")%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <% include /common/vendor/web.css.html %>
+
+    <!-- build:css(.tmp) /styles/space.css -->
+    <link rel="stylesheet" href="/styles/space.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="fullstackApp" ng-cloak style="height: 100%;">
+<div style="height: 100%;">
+    <div class="body" style="height: 100%;">
+        <%- include('./panda/' + pageInfo.id + '.html') %>
+    </div>
+
+    <% include /common/vendor/web.js.html %>
+
+    <!-- build:js(client) /scripts/panda.js -->
+    <script src="/scripts/common/config.service.js"></script>
+    <script src="/scripts/common/account.service.js"></script>
+    <script src="/scripts/common/asset.service.js"></script>
+    <script src="/scripts/common/authorization.service.js"></script>
+    <script src="/scripts/common/validator.service.js"></script>
+    <script src="/scripts/common/lang.service.js"></script>
+    <script src="/scripts/common/lang_data.service.js"></script>
+
+    <script src="/scripts/panda/nav.controller.js"></script>
+    <script src="/scripts/panda/login.controller.js"></script>
+    <script src="/scripts/panda/asset.controller.js"></script>
+    <!-- endbuild -->
+
+</div>
+</body>
+</html>

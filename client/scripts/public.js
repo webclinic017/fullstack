@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('publicHttp', publicHttp);
 
-    publicHttp.$inject = ['$http', '$rootScope', '$state', '$cookies', '$cookieStore', '$window'];
+    publicHttp.$inject = ['$http', '$rootScope', '$state', '$cookies', '$cookieStore', '$window', 'lang'];
 
-    function publicHttp($http, $rootScope, $state, $cookies, $cookieStore, $window) {
+    function publicHttp($http, $rootScope, $state, $cookies, $cookieStore, $window, lang) {
         var service = {
             dealPublicRequest: dealPublicRequest
         };
@@ -65,8 +65,13 @@
             // 100104,  // 令牌未定义
             
             if (data.code >= 100100 && data.code <= 100199) {
-                $window.location.href='/space/#/account/login';
-                $rootScope.personalCookiesInfo.userCode = undefined;
+                if (lang.isCompany() === 'pandafx') {
+                    $window.location.href='/panda/login';
+                } else {
+                    $window.location.href='/space/#/account/login';
+                    $rootScope.personalCookiesInfo.userCode = undefined;
+                }
+                
             } else {
                 return data;
             }

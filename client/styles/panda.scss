@@ -1,0 +1,21 @@
+.account_login-bg.panda {
+    background-image: url("/images/panda/login_bg.jpg");
+}
+.panda_asset_bg {
+    height: 100%;
+    max-width: 2560px;
+    overflow: hidden;
+    background-position: center center;
+    background-size: 100% 100%;
+    background-image: url(/images/panda/asset_bg.png);
+
+    .asset-public {
+        background-position: center center;
+        background-size: 100% 100%;
+        background-image: url(/images/panda/asset_box_bg.png);
+    }
+
+    .deposit__input input {
+        background-color: #fff;
+    }
+}

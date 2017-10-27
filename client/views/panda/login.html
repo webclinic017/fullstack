@@ -1,0 +1,256 @@
+<div ng-controller="PandaLoginController" style="height: 100%;">
+    <div class="account_login-bg panda" style="height: 100%;">
+        <div class="account_login_box">
+            <div class="account_login login_pass" ng-class="{active: loginType === 'pass'}" ng-show="loginStep1 != 2">
+                <div class="account_login__pos login_pass" ng-show="loginType !== 'pass'" ng-click="changeLoginType('pass')">
+                    帐号密码登录
+                </div>
+                <div class="account_login__pass" ng-show="loginType === 'pass'">
+                    <div ng-show="loginStep2 == 1">
+                        <div class="account_login__title">帐号密码登录</div>
+                        <form name="loginForm3" class="account_login__form" novalidate>
+                            <div class="account-form-control-wrapper">
+                                <input class="account-form-control"
+                                       name="step2Phone"
+                                       type="text"
+                                       placeholder="请输入您的帐号"
+                                       required
+                                       on-enter="login('loginForm3')"
+                                       ng-model="account.step2Phone">
+                                <span class="account-form-control-tip" ng-show="account.step2Phone">手机号</span>
+                                <span class="account_login__close" ng-show="account.step2Phone" ng-click="clearPhone('step2Phone')">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </span>
+                            </div>
+
+                            <div class="account-form-control-wrapper" ng-show="step2PasswordStatus">
+                                <input class="account-form-control"
+                                       autocomplete="off"
+                                       name="step2Password"
+                                       type="password"
+                                       placeholder="请输入您的账户密码"
+                                       on-enter="login('loginForm3')"
+                                       required
+                                       ng-model="account.step2Password">
+                                <span class="account-form-control-tip" ng-show="account.step2Password">密码</span>
+                                <span class="account_login__close" ng-click="changePasswordStatus('step2PasswordStatus')">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="account-form-control-wrapper" ng-show="!step2PasswordStatus">
+                                <input class="account-form-control"
+                                       autocomplete="off"
+                                       name="step2Password"
+                                       type="text"
+                                       placeholder="请输入您的账户密码"
+                                       on-enter="login('loginForm3')"
+                                       required
+                                       ng-model="account.step2Password">
+                                <span class="account-form-control-tip" ng-show="account.step2Password">密码</span>
+                                <span class="account_login__close" ng-click="changePasswordStatus('step2PasswordStatus')">
+                                    <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="clearfix">
+                                <div class="account_login__remenber fl">
+                                    <span class="account_login__remenber-btn" ng-click="changeRememberLogin()">
+                                        <i class="fa fa-square-o" ng-show="!rememberLoginStatus"></i>
+                                        <i class="fa fa-check-square" ng-show="rememberLoginStatus"></i>
+                                        记住登录状态
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="account_login__btn_wrapper">
+                            <span class="account_login__btn" ng-click="login('loginForm3')">登录</span>
+                        </div>
+                        <div class="account_login__docs">
+                            <p>*已使用SSL加密技术保护您的网络安全</p>
+                        </div>
+                    </div>
+                    <div ng-show="loginStep2 == 2">
+                        <div class="account_login__title">找回密码</div>
+                        <form name="loginForm4" class="account_login__form" novalidate style="margin-bottom: 45px;">
+                            <div class="account-form-control-wrapper">
+                                <input class="account-form-control"
+                                       autocomplete="off"
+                                       name="forgetPhone"
+                                       type="text"
+                                       placeholder="请输入手机号码"
+                                       on-enter="getCaptcha('loginForm4', 'forgetPhone')"
+                                       required
+                                       ng-model="account.forgetPhone">
+                                <span class="account-form-control-tip" ng-show="account.forgetPhone">手机号</span>
+                                <span class="account_login__close" ng-show="account.forgetPhone" ng-click="clearPhone('forgetPhone')">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="account-form-control-wrapper">
+                                <input class="account-form-control"
+                                       autocomplete="off"
+                                       name="forgetCode"
+                                       type="text"
+                                       placeholder="请输入验证码"
+                                       on-enter="goForgetPassword2('loginForm4')"
+                                       required
+                                       ng-model="account.forgetCode">
+                                <span class="account-form-control-tip" ng-show="account.forgetCode">校验码</span>
+                                <span class="account_login__code_btn" ng-show="!codeBtnStatus.forgetPhone.count" ng-click="getCaptcha('loginForm4', 'forgetPhone')">
+                                    获取校验码
+                                </span>
+                                <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.forgetPhone.count">
+                                    {{ codeBtnStatus.forgetPhone.msg }}s 后重新获取
+                                </span>
+                            </div>
+                        </form>
+                        <div class="account_login__btn_wrapper">
+                            <span class="account_login__btn" ng-click="goForgetPassword2('loginForm4')">下一步</span>
+                        </div>
+                    </div>
+                    <div ng-show="loginStep2 == 3">
+                        <div class="account_login__title">设置密码</div>
+                        <form name="loginForm5" class="account_login__form" novalidate style="margin-bottom: 45px;">
+                            <div class="account-form-control-wrapper" ng-show="forgetPasswordStatus">
+                                <input class="account-form-control"
+                                       autocomplete="off"
+                                       name="forgetPassword"
+                                       type="password"
+                                       placeholder="请输入密码"
+                                       on-enter="setForgetPassword('loginForm5')"
+                                       required
+                                       ng-model="account.forgetPassword">
+                                <span class="account-form-control-tip" ng-show="account.forgetPassword">密码</span>
+                                <span class="account_login__close" ng-click="changePasswordStatus('forgetPasswordStatus')">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="account-form-control-wrapper" ng-show="!forgetPasswordStatus">
+                                <input class="account-form-control"
+                                       autocomplete="off"
+                                       name="forgetPassword"
+                                       type="text"
+                                       placeholder="请输入密码"
+                                       on-enter="setForgetPassword('loginForm5')"
+                                       required
+                                       ng-model="account.forgetPassword">
+                                <span class="account-form-control-tip" ng-show="account.forgetPassword">密码</span>
+                                <span class="account_login__close" ng-click="changePasswordStatus('forgetPasswordStatus')">
+                                    <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <p class="account_login__pass-tip2">请为您的账户设置密码，6-15位字母、数字或符号组合</p>
+                        </form>
+                        <div class="account_login__btn_wrapper">
+                            <span class="account_login__btn" ng-click="setForgetPassword('loginForm5')">完成修改</span>
+                        </div>
+                    </div>
+                    <div ng-show="loginStep2 == 4">
+                        <div class="account_login__title">设置密码</div>
+                        <div class="account_login__tip">
+                            新密码设置成功
+                        </div>
+                        <div class="account_login__btn_wrapper">
+                            <span class="account_login__btn" ng-click="goLogin()">重新登陆</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="account_login login_code" ng-class="{active: loginType === 'code'}">
+                <div class="account_login__pos login_code" ng-show="loginType !== 'code'" ng-click="changeLoginType('code')">
+                    快捷登录
+                </div>
+                <div class="account_login__code" ng-show="loginType === 'code'">
+                    <div ng-show="loginStep1 == 1">
+                        <div class="account_login__title">快捷登录</div>
+                        <form name="loginForm1" class="account_login__form" novalidate>
+                            <div class="account-form-control-wrapper">
+                                <input class="account-form-control"
+                                       autocomplete="off"
+                                       name="step1Phone"
+                                       type="text"
+                                       placeholder="请输入手机号码"
+                                       on-enter="getCaptcha('loginForm1', 'step1Phone')"
+                                       required
+                                       ng-model="account.step1Phone">
+                                <span class="account-form-control-tip" ng-show="account.step1Phone">手机号</span>
+                                <span class="account_login__close" ng-show="account.step1Phone" ng-click="clearPhone('step1Phone')">
+                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="account-form-control-wrapper">
+                                <input class="account-form-control"
+                                       autocomplete="off"
+                                       name="step1Code"
+                                       type="text"
+                                       placeholder="请输入验证码"
+                                       on-enter="login('loginForm1')"
+                                       required
+                                       ng-model="account.step1Code">
+                                <span class="account-form-control-tip" ng-if="account.step1Code">校验码</span>
+                                <span class="account_login__code_btn" ng-show="!codeBtnStatus.step1Phone.count" ng-click="getCaptcha('loginForm1', 'step1Phone')">
+                                    获取校验码
+                                </span>
+                                <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.step1Phone.count">
+                                    {{ codeBtnStatus.step1Phone.msg }}s 后重新获取
+                                </span>
+                            </div>
+                            <div class="account_login__remenber">
+                                <span class="account_login__remenber-btn" ng-click="changeRememberLogin()">
+                                    <i class="fa fa-square-o" ng-show="!rememberLoginStatus"></i>
+                                    <i class="fa fa-check-square" ng-show="rememberLoginStatus"></i>
+                                    记住登录状态
+                                </span>
+                            </div>
+                        </form>
+                        <div class="account_login__btn_wrapper">
+                            <span class="account_login__btn" ng-click="login('loginForm1')">登录</span>
+                        </div>
+                    </div>
+                    <div ng-show="loginStep1 == 2">
+                        <div class="account_login__title">设置密码</div>
+                        <form name="loginForm2" class="account_login__form" novalidate style="margin-bottom: 30px;">
+                            <div class="account-form-control-wrapper" ng-show="step1PasswordStatus">
+                                <input class="account-form-control"
+                                       autocomplete="off"
+                                       name="step1Password"
+                                       type="password"
+                                       placeholder="请输入密码"
+                                       on-enter="setPassword('loginForm2')"
+                                       required
+                                       ng-model="account.step1Password">
+                                <span class="account-form-control-tip" ng-show="account.step1Password">密码</span>
+                                <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <div class="account-form-control-wrapper" ng-show="!step1PasswordStatus">
+                                <input class="account-form-control"
+                                       autocomplete="off"
+                                       name="step1Password"
+                                       type="text"
+                                       on-enter="setPassword('loginForm2')"
+                                       placeholder="请输入密码"
+                                       required
+                                       ng-model="account.step1Password">
+                                <span class="account-form-control-tip" ng-show="account.step1Password">密码</span>
+                                <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
+                                    <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                </span>
+                            </div>
+                            <p class="account_login__code-tip">请为您的账户设置密码，6-15位字母、数字或符号组合</p>
+                            <p class="account_login__code-jump">
+                                <a href="/panda/asset">跳过</a>
+                            </p>
+                        </form>
+                        <div class="account_login__btn_wrapper">
+                            <span class="account_login__btn" ng-click="setPassword('loginForm2')">完成注册</span>
+                        </div>
+                    </div>
+                    <div class="account_login__docs">
+                        <p>未注册的手机号码验证后将自动为您创建账户</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
