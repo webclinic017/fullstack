@@ -647,6 +647,20 @@ module.exports = function (app) {
         
     });
 
+    // 一键原谅活动
+    app.route('/bd/forgiveme').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('bd/forgive/h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/forgive/web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
     /*
         设置     ->     info, password, binding, 
