@@ -32,16 +32,16 @@ $(function () {
           content: $('.layer_content.confirm').html()
         });
       } else {
-        if(data.message.indexOf('余额不足') != -1){
-          layer.open({
-            style: 'padding:0;width:80%;border-radius:0;color:#000;background:rgba(0,0,0,0);',
-            content: $('.layer_content.sorry').html()
-          });
-        } else {
-          layer.open({
-            style: 'padding:0;width:80%;border-radius:0;color:#000;background:rgba(0,0,0,0);',
-            content: $('.layer_content.nofit').html()
-          });
+        $('.forgiveLayer .msg').html(data.message)
+
+        layer.open({
+          style: 'padding:0;width:80%;border-radius:0;color:#000;background:rgba(0,0,0,0);',
+          content: $('.layer_content.nofit').html()
+        });
+
+        if (data.message.indexOf('余额') != -1) {
+          $('.confirm-btn').hide()
+          $('.deposit-btn').show()
         }
       }
     })
@@ -49,6 +49,7 @@ $(function () {
 
   $(document).on('click', '.btn-down', function (e) {
     var action = $(e.target).attr('data-action');
+    console.log(action)
     if (action == 'deposit') {
       if (isInTiger()) {
         callNative({

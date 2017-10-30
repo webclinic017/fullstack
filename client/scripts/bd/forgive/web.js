@@ -58,22 +58,18 @@ $(function () {
           if(confirm('请先登录再进行操作')){
             window.location.href = "/space/#/account/login"
           }
-        }
-        else if (data.message.indexOf('余额不足') != -1) {
+        } else {
+          $('.forgiveLayer .msg').html(data.message)
           layer.open(
             $.extend(openCfg, {
               area: ['520px', '240px'],
-              content: $('.layer_content.sorry').html()
-            })
-          )
-        } 
-        else {
-          layer.open(
-            $.extend(openCfg, {
-              area: ['520px', '220px'],
               content: $('.layer_content.nofit').html()
             })
           )
+          if (data.message.indexOf('余额') != -1) {
+            $('.confirm-btn').hide()
+            $('.deposit-btn').show()
+          }
         }
       }
     })

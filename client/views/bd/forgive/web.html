@@ -36,18 +36,11 @@
                 <img class="btn-down btn-right" data-action="waiter" src="/images/bd_forgive/waiter.png">
             </div>
         </div>
-        <div class="layer_content sorry">
-            <div class="forgiveLayer">
-                <img class="bg" src="/images/bd_forgive/sorry.png">
-                <img class="btn-down btn-left" onclick="layer.closeAll()" src="/images/bd_forgive/btn-confirm.png">
-                <img class="btn-down btn-right" data-action="deposit" src="/images/bd_forgive/deposit.png">
-            </div>
-        </div>
         <div class="layer_content nofit">
-            <div class="forgiveLayer">
-                <img class="bg" src="/images/bd_forgive/nofit.png">
-                <img class="btn-down btn-center" onclick="layer.closeAll()" src="/images/bd_forgive/btn-confirm.png">
-                <!-- <img class="btn-down btn-right" data-action="deposit" src="/images/bd_forgive/deposit.png"> -->
+            <div class="forgiveLayer nofit">
+                <p class="msg text-center"></p>
+                <img class="btn-down btn-center deposit-btn" onclick="layer.closeAll()" data-action="deposit" src="/images/bd_forgive/deposit.png">
+                <img class="btn-down btn-center confirm-btn" onclick="layer.closeAll()" src="/images/bd_forgive/btn-confirm.png">
             </div>
         </div>
         <% include /common/nav/web.footer.html %>
