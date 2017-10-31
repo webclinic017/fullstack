@@ -43,9 +43,8 @@ $(function () {
   // 一键原谅
   $('.forgive__btn').click(function () {
     layer.load(0, { shade: false }); //0代表加载的风格，支持0-2
-    publicRequest('receiveRedbag', 'PUT', { id: 135 }).then(function (data) {
+    publicRequest('receiveRedbag', 'PUT', { id: 90 }).then(function (data) {
       layer.closeAll()
-      console.log(data)
       if (data.is_succ) {
         layer.open(
           $.extend(openCfg, {

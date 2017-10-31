@@ -23,7 +23,7 @@ $(function () {
     //   content: $('.layer_content.sorry').html()
     // });
     layer.open({type: 2});
-    publicRequest('receiveRedbag', 'PUT', {id: 135}).then(function (data) {
+    publicRequest('receiveRedbag', 'PUT', {id: 90}).then(function (data) {
       layer.closeAll()
       console.log(data)
       if(data.is_succ){
