@@ -149,6 +149,13 @@
             color: #303030;
         }
     }
+    @include e(content) {
+        &.en {
+            .blog_agreement__item {
+                height: 145px;
+            }
+        }
+    }
 }
 
 
