@@ -52,16 +52,16 @@
                 en: "Segregation of Funds,Additional Measures We Take"
             },
             execution: {
-                zh: "",
-                en: ""
+                zh: "序言,范围和服务,最佳执行,执行场所,监控和审查,客户同意书,重要信息,常见问题,其他联系人",
+                en: "Introduction,Scope and Services,Best Execution,Execution Venues,Monitor and Review,Client Consent,Important Information,FAQs,Additional Contacts"
             },
             conflicts: {
                 zh: "序言,政策范围,识别利益冲突,管理利益冲突,披露,常见问题解答,其他联系人",
                 en: "Introduction,Scope of the Policy,Identification of Conflicts of Interest,Managing Conflicts of Interest,Disclosure,Frequently Asked Questions,Additional Contacts"
             },
             complaint: {
-                zh: "",
-                en: ""
+                zh: "投诉程序概述,序言,条款解释,投诉处理程序的范围,投诉的定义,程序,常见问题,联系方式",
+                en: "SUMMARY OF COMPLAINTS PROCEDURE,INTRODUCTION,INTERPRETATION OF TERMS,SCOPE OF THE COMPLAINTS HANDLING PROCEDURE,DEFINITION OF A COMPLAINT,PROCEDURE,FAQs,CONTACTS"
             }
         };
         $scope.tabList = [];
