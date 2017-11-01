@@ -594,6 +594,12 @@ module.exports = function (app) {
             } else {
                 res.render('bd/t36/web.html', extendPublic({}, req));
             }
+        } else if (COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('bd/t38/h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/t38/web.html', extendPublic({}, req));
+            }
         } else {
             res.render('404.html', extendPublic({}, req));
         }
