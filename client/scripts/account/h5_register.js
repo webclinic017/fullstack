@@ -416,27 +416,18 @@
 
         /*客户协议页面*/
         if (isInAgreement()) {
-            function tabHandle(e) {
-                var $target = $(e.target);
-                var tab_attr = $target.attr("tabindex");
-                var $items = $(".tips .tips_item");
-                $target.siblings().removeClass("active").end().addClass("active");
-                $items.removeClass("active");
-                $items.each(function (index, item) {
-                    var $item = $(item);
-                    if ($item.attr("tabindex") == tab_attr) {
-                        $item.addClass("active");
-                    }
+
+            $(".h5_agreement_content .h5_agreement_item .tit").on('touchend', function () {
+                var ad = $(this).attr("data-address");
+                var action_address = window.location.origin +
+                             "/agreement/"+ad;
+                console.info(action_address);
+                callNative({
+                    type: "openUrl",
+                    url: action_address
                 });
-            }
-
-            $(".tabNav li").on("touchend", tabHandle);
-
-            $(".item3 h5").on("tap", function (e) {
-                $(e.target).find("span").toggleClass("active");
-                $(e.target).next().fadeToggle(200);
-                return false;
             });
+            
         }
 
         $('#regist_btn3').on('touchend',function(e){

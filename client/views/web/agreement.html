@@ -1,32 +1,11 @@
-<% if (pageInfo.id === 'risk') { %>
-    <% var title = '风险披露书' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'statement') { %>
-    <% var title = '客户声明' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'notice') { %>
-    <% var title = '用户交易须知' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'legal') { %>
-    <% var title = '法律文件和声明' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else {%>
-    <% var title = 'TigerWit 直通全球资本市场' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<%}%>
 <!doctype html>
 <html>
     <head>
         <% include /common/meta/web.html %>
     
-        <title><%=lang.text("companyZhName")%>｜<%= title %></title>
-        <meta name="description" content="<%= description %>">
-        <meta name="keywords" content="<%= keywords %>">
+        <title><%=lang.text("companyZhName")%>｜TigerWit 直通全球资本市场</title>
+        <meta name="description" content="老虎外汇直通全球资本市场。">
+        <meta name="keywords" content="老虎外汇，TigerWit，复制交易，外汇，贵金属，CFD，互联网金融">
         
         <!-- build:css(.tmp) /styles/web.css -->
         <link rel="stylesheet" href="/styles/web.css">
@@ -41,14 +20,14 @@
             </div>
             
             <div class="body">
-                <div class="layout-2">
-                    <%- include('./blog/' + pageInfo.id + '.html') %>
+                <div class="layout-2" ng-controller="WebAgreementController">
+                    <%- include('./agreement/' + pageInfo.id + '.html') %>
                 </div>
             </div>
 
         <% include /common/vendor/web.js.html %>
 
-        <!-- build:js(client) /scripts/web_blog.js -->
+        <!-- build:js(client) /scripts/web_agreement.js -->
         <script src="/scripts/common/config.service.js"></script>
         <script src="/scripts/common/account.service.js"></script>
         <script src="/scripts/common/authorization.service.js"></script>
@@ -62,19 +41,12 @@
         <script src="/scripts/common/dropdown.directive.js"></script>
         <script src="/scripts/common/form_select.directive.js"></script>
         <script src="/scripts/common/upload_history_file.directive.js"></script>
+        <script src="/scripts/common/agreement.directive.js"></script>
         <script src="/scripts/common/utils.service.js"></script>
-        <script src="/scripts/common/product.service.js"></script>
         <script src="/scripts/common/bind_html.filter.js"></script>
-        <script src="/scripts/common/dropdown_knowledge.directive.js"></script>
-
-
-        
         
         <script src="/scripts/common/global.controller.js"></script>
-
-        <script src="/scripts/web/become_master.controller.js"></script>
-        <script src="/scripts/web/become_modal.controller.js"></script>
-        <script src="/scripts/product/comment.controller.js"></script>
+        <script src="/scripts/web/agreement.controller.js"></script>
 
         <!-- endbuild -->
 
