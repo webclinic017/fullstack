@@ -18,10 +18,16 @@
         <%if(lang.isCompany('tigerwit')){%>
             <% include /common/nav/web.header.html %>
         <%}%>
-        <div class="bd_t36 clearfix" id="bd_t36_form">
-            <div class="bd_t36__logo">
-                <img src="/images/basic_logo.png">
-            </div>
+        <div class="bd_t36 clearfix <%= lang.text("companyEnName")%>" id="bd_t36_form">
+            <%if(lang.isCompany('tigerwit')){%>
+                <div class="bd_t36__logo">
+                    <img src="/images/basic_logo.png">
+                </div>
+            <%} else if(lang.isCompany('pandafx')) {%>
+                <div class="bd_t36__logo <%= lang.text("companyEnName")%>">
+                    <img src="/images/basic_logo_panda_white.png">
+                </div>
+            <%}%>
 
             <div class="bd_t36_detail_con c-1">
               <div class="bd_t36_detail_con__text">
@@ -68,6 +74,22 @@
                         </div>
                     </div>
                     <div class="bd_t36__register">
+                    
+                        <div class="form-control-wrapper">
+                            <input type="text" class="form-control t36" name="telephone" id="telephone" placeholder="电话">
+                        </div>
+                        <div class="form-control-wrapper">
+                            <input type="number" class="form-control t36" id="verify_code" placeholder="验证码" style="padding-right: 90px;">
+                            <p class="verify_code_btn_wrapper">
+                                <span class="verify_code_btn" id="verify_code_btn">发送验证码</span>
+                            </p>
+                        </div>
+
+                        <div class="bd_t36__btn center reg">
+                            <span id="submit_form" class="b">注册领红包</span>
+                        </div>
+                    </div>
+                    <!-- <div class="bd_t36__register">
                         <div class="form-control-wrapper">
                             <input type="text" class="form-control t36" name="telephone" id="telephone" placeholder="电话">
                         </div>
@@ -77,10 +99,15 @@
                         <div class="bd_t36__btn center reg">
                              <span id="regist_btn" class="b">点我领红包</span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="bd_t36__cont">
-                    <img src="/images/bd_t36_act/web_cont_1.png">
+                    <%if(lang.isCompany('tigerwit')){%>
+                        <img src="/images/bd_t36_act/web_cont_1.png">
+                    <%} else if(lang.isCompany('pandafx')) {%>
+                        <img src="/images/bd_t36_act/web_cont_1_panda.png">
+                    <%}%>
+                    
                 </div>
                 <div class="bd_t36__btn center">
                     <a href="#bd_t36_form" target="_parent" class="b">点我领红包</a>
@@ -105,8 +132,11 @@
                     <span>风险警示</span>
                     市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。
                     <%= lang.text("companyZhName")%>交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
-
-                    <p style="margin-top: 30px;">Tiger Financial Technology PTY. Ltd.版权所有</p>
+                    
+                    <%if(lang.isCompany('tigerwit')){%>
+                        <p style="margin-top: 30px;">Tiger Financial Technology PTY. Ltd.版权所有</p>
+                    <%}%>
+                    
                 </div>      
             </div>
             

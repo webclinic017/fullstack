@@ -37,7 +37,12 @@
         <div class="section section1" id="img_detect_container">
             <div class="slide_arrow"></div>
             <div class="section1_logo">
-                <img src="/images/bd_t36_act/h5_logo.png">    
+                <%if(lang.isCompany('tigerwit')){%>
+                    <img src="/images/bd_t36_act/h5_logo.png">
+                <%} else if(lang.isCompany('pandafx')) {%>
+                    <img src="/images/bd_t36_act/h5_logo_panda.png" alt="">
+                <%}%>
+                 
             </div>
             <div class="section1_focus">
                 <img src="/images/bd_t36_act/h5_focus.png">    
@@ -71,7 +76,12 @@
         <div class="section section2">
             <div class="slide_arrow"></div>
             <div class="section2_title">
-                <img src="/images/bd_t36_act/h5_sec2_cont.png">
+                <%if(lang.isCompany('tigerwit')){%>
+                    <img src="/images/bd_t36_act/h5_sec2_cont.png">
+                <%} else if(lang.isCompany('pandafx')) {%>
+                    <img src="/images/bd_t36_act/h5_sec2_cont_panda.png">
+                <%}%>
+                
             </div>
             
             <div class="section2_btn">
@@ -147,7 +157,10 @@
                 <span>风险警示</span>
                 市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。
                 <%= lang.text("companyZhName")%>交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
-                <p style="margin-top: 0.5rem;">Tiger Financial Technology PTY. Ltd.版权所有</p>
+                <%if(lang.isCompany('tigerwit')){%>
+                    <p style="margin-top: 0.5rem;">Tiger Financial Technology PTY. Ltd.版权所有</p>
+                <%}%>
+                
             </div>             
         </div>
 
