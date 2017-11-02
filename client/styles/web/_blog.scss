@@ -108,3 +108,55 @@
         color: #838992;
     }
 }
+
+@include b(blog_agreement) {
+    margin: 50px 0;
+
+    @include e(title) {
+        margin-bottom: 30px;
+
+        .tit {
+            margin: 0;
+            font-size: 32px;
+            line-height: 32px;
+        }    
+        .tip {
+            text-align: right;
+            height: 32px;
+            line-height: 46px;
+        }    
+    }
+    @include e(item) {
+        height: 100px;
+        padding-right: 90px;
+
+        &:nth-child(3n) {
+            padding-right: 15px;
+        }
+
+        .tit {
+            padding-bottom: 5px;
+            a {
+                color: #0866c3;
+                font-size: 20px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+        .tip {
+            color: #303030;
+        }
+    }
+    @include e(content) {
+        &.en {
+            .blog_agreement__item {
+                height: 145px;
+            }
+        }
+    }
+}
+
+
+

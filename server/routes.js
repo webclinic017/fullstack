@@ -453,7 +453,7 @@ module.exports = function (app) {
     });
 
     // 条件和条款
-    app.route('/web/blog/:subpage(risk|statement|notice|legal)').get(function (req, res) {
+    app.route('/web/blog/:subpage(agreement|risk|statement|notice|legal)').get(function (req, res) {
         var subpage = req.params.subpage || 'risk';
         var pageInfo = {
             id: subpage
@@ -462,6 +462,24 @@ module.exports = function (app) {
         res.render('web/blog.html', extendPublic({
             pageInfo: pageInfo
         }, req));
+    });
+    // 条件和条款--子项目
+    app.route('/agreement/:subpage').get(function (req, res) {
+        var subpage = req.params.subpage;
+        var pageInfo = {
+            id: subpage
+        };
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            res.render('web/m_agreement.html', extendPublic({
+                pageInfo: pageInfo
+            }, req));
+        } else {
+            res.render('web/agreement.html', extendPublic({
+                pageInfo: pageInfo
+            }, req));
+        }
+        
     });
 
     app.route('/web/mt4').get(function (req, res) {
@@ -572,14 +590,27 @@ module.exports = function (app) {
         }
     });
 
-    // 红包活动
+    //红包活动
+    // app.route('/bd/t35').get(function (req, res) {
+    //     setEnvCf(req, res);
+    //     if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+    //         if (isMobile(req)) {
+    //             res.render('bd/t38/h5.html', extendPublic({}, req))
+    //         } else {
+    //             res.render('bd/t38/web.html', extendPublic({}, req));
+    //         }
+    //     } else {
+    //         res.render('404.html', extendPublic({}, req));
+    //     }
+    // });
+    // 11月份活动
     app.route('/bd/t35').get(function (req, res) {
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t38/h5.html', extendPublic({}, req))
+                res.render('bd/t36/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t38/web.html', extendPublic({}, req));
+                res.render('bd/t36/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));

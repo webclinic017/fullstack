@@ -14,7 +14,11 @@
     <% var title = '法律文件和声明' %>
     <% var description = '' %>
     <% var keywords = '' %>
-<% } %>
+<% } else {%>
+    <% var title = 'TigerWit 直通全球资本市场' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
+<%}%>
 <!doctype html>
 <html>
     <head>
@@ -38,12 +42,7 @@
             
             <div class="body">
                 <div class="layout-2">
-                    <div class="layout-2__side mg-tp-30">
-                        <%- include('./blog/sidebar.html') %>
-                    </div>
-                    <div class="layout-2__content mg-tp-30">
-                        <%- include('./blog/' + pageInfo.id + '.html') %>
-                    </div>
+                    <%- include('./blog/' + pageInfo.id + '.html') %>
                 </div>
             </div>
 

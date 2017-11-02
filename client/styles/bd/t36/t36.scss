@@ -1,0 +1,223 @@
+.bd_t36_layer {
+    background: transparent !important;
+    box-shadow: none !important;
+    .layui-layer-content {
+        padding-top: 40px;
+        overflow: hidden;
+        .bd_t36_detail_con__text {
+            padding: 30px;
+            padding-top: 50px;
+            background: rgba(244,227,145,0.2);
+            border: 2px solid rgba(244,227,145,0.9);
+            border-radius: 2px;
+            color: rgb(244,227,145);
+            position: relative;
+
+            .title {
+                width: 217px;
+                height: 65px;
+                background: url("/images/bd_t36_act/h5_rule.png") no-repeat;
+                background-size: 100% 100%;
+                position: absolute;
+                top: -32px;
+                left: 50%;
+                margin-left: -108px;
+            }
+
+            &.rule_200 {
+                .title {
+                    height: 79px;
+                    background: url("/images/bd_t36_act/h5_rule_200.png") no-repeat;
+                    background-size: 100% 100%;
+                    top: -40px;
+                }
+            }
+            &.rule_800 {
+                .title {
+                    height: 79px;
+                    background: url("/images/bd_t36_act/h5_rule_800.png") no-repeat;
+                    background-size: 100% 100%;
+                    top: -40px;
+                }
+            }
+
+            .bd_t36_detail_con__line {
+                line-height: 30px;
+            }
+        }
+        .bd_t36_detail_con__close {
+            width: 25px;
+            height: 25px;
+            background: url("/images/bd_t36_act/h5_close.png") no-repeat;
+            background-size: 100% 100%;
+            margin: 30px auto 0;
+            cursor: pointer;
+        }
+    }
+}
+.layui-layer-shade {
+    opacity: 0.8 !important;
+}
+@include b(bd_t36) {
+    background: url("/images/bd_t36_act/web_bg.png") no-repeat;
+    background-size: auto 100%;
+    height: 1953px;
+    background-position: center top;
+    position: relative;
+    min-width: 1334px;
+    margin-top: 69px;
+    
+    &.pandafx {
+        margin-top: 0px;
+    }
+    
+    .bd_t36_detail_con {
+        display: none;
+    }
+
+    @include e(logo) {
+        position: absolute;
+        top: 30px;
+        right: 5%;
+        width: 150px;
+
+        &.pandafx {
+            width: 200px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+    @include e(btn) {
+        .b {
+            font-size: 18px;
+            color: #fff;
+            padding: 3px 7px;
+            background-color: #ab0c19;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        &.center {
+            text-align: center;
+        }
+        &.rule {
+            margin-left: 5px;
+        }
+        &.reg {
+            .b {
+                padding: 5px 18px;
+            }
+        }
+    }
+    @include e(focus) {
+        margin-top: 160px;
+    }
+    @include e(title) {
+        width: 581px;
+        float: left;
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+        .date {
+            color: #fff;
+            font-size: 23px;
+            padding: 5px;
+            font-weight: 500;
+        }
+    }
+    @include e(register) {
+        width: 387px;
+        height: 225px;
+        float: right;
+        padding-top: 55px;
+        background: url("/images/bd_t36_act/web_register.png") no-repeat;
+        background-size: 100% 100%;
+
+        .verify_code_btn_wrapper {
+            position: absolute;
+            top: 7px;
+            right: 0;
+            width: 90px;
+            height: 26px;
+            text-align: center;
+            line-height: 26px;
+            border-left: 1px solid #ccc;
+
+            .verify_code_btn {
+                cursor: pointer;
+            }
+        }
+
+        .form-control-wrapper {
+            width: 80%;
+            margin-left: 10%;
+
+            .form-control.t36 {
+                background-color: #fff;
+                border-radius: 6px;
+            }
+        }
+    }
+    @include e(cont) {
+        margin-top: 80px;
+        margin-bottom: 20px;
+
+        img {
+            width: 100%;
+        }
+    }
+    @include e(redbag) {
+        width: 900px;
+        height: 390px;
+        margin-left: 65px;
+        position: relative;
+        background: url("/images/bd_t36_act/web_redbag.png") no-repeat;
+        background-size: 100% 100%;
+        margin-bottom: 20px;
+
+        .rules_btn {
+            position: absolute;
+            top: 300px;
+            background-color: #f4e391;
+            padding: 6px 25px;
+            border-radius: 100px;
+            border: 1px solid #f4e391;
+            cursor: pointer;
+
+            &.b_200 {
+                left: 178px;
+            }
+            &.b_800 {
+                left: 632px;
+            }
+
+            &:hover {
+                background-color: transparent;
+                color: #f4e391;
+            }
+        }
+    }
+    @include e(client) {
+        color: #fff;
+        text-align: center;
+        margin-top: 100px;
+
+        .phone {
+            font-size: 28px;
+        }
+    }
+    @include e(risk) {
+        width: 90%;
+        margin-left: 5%;
+        color: #888;
+        margin-top: 50px;
+
+        span {
+            display: block;
+            color: #eee;
+        }
+    }
+}
