@@ -4,8 +4,7 @@
 
 	function allLoaded() {
 		$(function () {
-			// 微信分享配置
-			
+
 			if (wx && isTigerCo()) {
 				wxShareConfig({
 					title: '外汇超级行情来袭，老虎外汇送你1000美金给你',
@@ -75,6 +74,8 @@
 				}, 300)
 			}
 
+
+
 			$('#dowebok').fullpage({
 				navigation: true,
 				navigationColor: "#fbd71f",
@@ -101,26 +102,31 @@
 							$.fn.fullpage.setAllowScrolling(true)
 						}
 						if (action == "matters") {
-							setTimeout(function(){
+							setTimeout(function () {
 								openLay("#layer_contentBox")
-							},10)
+							}, 10)
 						}
-                        if (action == "rule1") {
-                            setTimeout(function(){
-                                openLay("#layer_contentRule1")
-                            },10)
-                        }
-                        if (action == "rule2") {
-                            setTimeout(function(){
-                                openLay("#layer_contentRule2")
-                            },10)
-                        }
+						if (action == "rule1") {
+							setTimeout(function () {
+								openLay("#layer_contentRule1")
+							}, 10)
+						}
+						if (action == "rule2") {
+							setTimeout(function () {
+								openLay("#layer_contentRule2")
+							}, 10)
+						}
 						if (action == 'registerNow') {
 							$.fn.fullpage.moveTo(4);
 						}
 					});
 
 					$(".lake_layout").fadeIn(0);
+
+					// window.openH5AgmentModal(100402, function (resolve, e) {
+					// 	console.log(this, resolve, e)
+					// 	layer.close(resolve.layIndex)
+					// })
 				},
 				afterLoad: function (anchorLink, index) {
 
@@ -153,7 +159,7 @@
 						// $('.section3 .line_title').find('h2').addClass('active');
 						// $('.section3 .line_title').find('p').addClass('active');
 						// $('.section3').find('.line').addClass('active');
-                        $('.section3 .cont').addClass('animated jello');
+						$('.section3 .cont').addClass('animated jello');
 					}
 
 					if (index == 4) {
@@ -172,8 +178,8 @@
 		})
 	}
 
-	$(document).ready(function(){
-		$('.open_tiger').click(function(e){
+	$(document).ready(function () {
+		$('.open_tiger').click(function (e) {
 			console.log(e.target);
 		});
 	});
