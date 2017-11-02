@@ -217,78 +217,58 @@
 }
 
 .h5_agreement_layout {
-  width: 100%;
-  font-size: px2rem(32);
-  .tabNav {
-    position: fixed;
-    z-index: 100;
-    width: 100%;
-    background-color: $gray-lightest;
-    display: -webkit-flex; /* Safari */
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    height: px2rem(100);
-    li {
-      flex: 1;
-      height: 100%;
-      line-height: px2rem(96);
-      text-align: center;
-      border-bottom: px2rem(4) solid transparent;
-      display: inline-block;
-      color: $gray-darker;
-      font-weight: 500;
-    }
-    li.active {
-      color: #222 !important;
-      border-bottom: px2rem(4) solid $brand-primary-dark !important;
-    }
-  }
-  .tips {
-    position: relative;
-    width: 100%;
-    font-size: px2rem(28);
-    color: $gray-darker;
-    h5 {
-      font-size: px2rem(32);
-      color: #222;
-    }
-    .tips_item {
-      background-color: #f3f3f3;
-      display: none;
-      position: absolute;
-      width: 100%;
-      padding: px2rem(30) px2rem(30);
-      padding-top: px2rem(100);
-      top: 0;
-      left: 0;
-    }
-    .tips_item:nth-child(3) {
-      div {
-        margin-top: px2rem(20);
-        margin-bottom: px2rem(20);
-        h5 {
-          margin-top: px2rem(15);
-          margin-bottom: px2rem(15);
-          position: relative;
-          padding-left: px2rem(32);
-          span {
-            position: absolute;
-            left: 0;
-            top:0;
-            transition: all 0.2s linear;
-          }
-          span.active{
-            transform:rotateZ(90deg)
-          }
+    padding: px2rem(40);
+
+    .h5_agreement_title {
+        margin-bottom: px2rem(42);
+        color: rgb(74,74,74);
+
+        .tit {
+            font-size: px2rem(60);
+            line-height: px2rem(75);
+            font-weight: 500;
+            margin: 0;
+            padding-bottom: px2rem(10);
         }
-        .detail {
-          display: none;
+        .tip {
+            font-size: px2rem(28);
+            color: rgb(181,181,181);
         }
-      }
     }
-    .active {
-      display: block;
+    .h5_agreement_content {
+        .h5_agreement_item {
+            margin-bottom: px2rem(42);
+            font-size: px2rem(30);
+            color: rgb(74,74,74);
+        }
     }
-  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

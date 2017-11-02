@@ -1,0 +1,15 @@
+<div class="m_agreement_backdrop"></div>
+<div class="m_agreement_tab">
+    <div class="m_agreement_tab__wrapper">
+        <div class="m_agreement_tab__title">目录</div>
+        <ul class="m_agreement_tab__lst">
+            <!-- insert html -->
+        </ul>
+    </div>
+</div>
+
+<script id="template_tab_list" type="text/html">
+    <$for(var i=0;i<tabList.length;i++){$>
+        <li data-type="<$= tabList[i].link$>"><$= tabList[i].title$></li>
+    <$}$>
+</script>
