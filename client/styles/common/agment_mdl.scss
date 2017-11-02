@@ -1,0 +1,94 @@
+.agreenment_modal__layer_skin {
+    background: transparent !important;
+    box-shadow: none !important;
+    .layui-layer-content {
+        overflow: hidden;
+    }
+}
+
+.agreement_modal_for_layer__box {
+    display: none;
+}
+
+.web_agreement_modal_for_layer {
+    
+}
+
+.agment_mdl_con.web {
+    padding: 30px;
+    background: #fff;
+    border-radius: 14px;
+    line-height: 25px;
+    .agment_mdl_con__title {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .font-decoration {
+        text-decoration: underline;
+    }
+    .text-indent6 {
+        text-indent: 6em;
+    }
+    .link {
+        color: #09b0e7;
+        cursor: pointer;
+        font-weight: 500;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    .agree_button {
+        font-size: 26px;
+        color: $brand-primary-darkest;
+        cursor: pointer;
+        font-weight: 500;
+        &:hover {
+            text-decoration: underline;
+            color: $brand-primary-darker;
+        }
+    }
+}
+
+.agment_mdl_con.h5 {
+    text-align: left;
+    padding: 30px;
+    background: #fff;
+    border-radius: px2rem(28);
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    .agment_mdl_con__title {
+        font-size: px2rem(48);
+        font-weight: 500;
+    }
+    .br_gap {
+        margin-top: 0.6rem;
+    }
+    .font-decoration {
+        text-decoration: underline;
+    }
+    .link {
+        color: #09b0e7;
+        cursor: pointer;
+        font-weight: 500;
+    }
+    .button-area {
+        padding: 0 3rem;
+    }
+    .agree_button {
+        font-size: px2rem(48);
+        color: $brand-primary-darkest;
+        cursor: pointer;
+        font-weight: 400;
+        &.sm-size {
+            font-size: px2rem(38);
+        }
+        &.cancle {
+            font-size: px2rem(38);
+            color: $m-black-base;
+        }
+    }
+    .agree {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+}

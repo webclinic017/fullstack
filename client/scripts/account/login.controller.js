@@ -29,6 +29,12 @@
                 timer: undefined
             }
         };
+        // test
+        // openWebAgmentModal(100403, function(resolve, e){
+        //     // this 当前点击按钮
+        //     console.log(this, resolve, e)
+        //     layer.close(resolve.layIndex)
+        // })
 
         $scope.frontErr = {
             phone: {
