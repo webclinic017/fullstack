@@ -241,22 +241,22 @@
             $("#submit_form").on("click", function () {
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
-                // if (!checkPassword()) return;
+                if (!checkPassword()) return;
 
                 /*loading层*/
                 layer.load(1, {shade: false});
                 /*统计*/
                 statistics($("#telephone").val());
 
-                publicRequest('regOrLogin', 'POST', {
+                publicRequest('register', 'POST', {
                     phone: $("#telephone").val() || "",
-                    password: $("#verify_code").val()  || $("#password").val() || "",
-                    login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录
+                    password: $("#password").val() || "",
+                    verify_code: $("#verify_code").val() || "",
                     pid: oReg.search_arr.pid || "",
                     unit: oReg.search_arr.unit || "",
                     lp: oReg.search_arr.lp || "",
                     key: oReg.search_arr.key || "",
-                    email: oReg.search_arr.email || "",
+                    email: oReg.search_arr.email || ""
                 }).then(function (data) {
                     if (!data) return;
                     layer.closeAll();
