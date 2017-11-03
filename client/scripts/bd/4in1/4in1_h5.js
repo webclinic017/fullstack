@@ -1,11 +1,10 @@
 ;
 (function () {
-	twH5Loader('img_detect_container', 2, allLoaded)
-
+	// twH5Loader('img_detect_container', 2, allLoaded)
+	allLoaded()
 	function allLoaded() {
 		$(function () {
 			// 微信分享配置
-			
 			if (wx && isTigerCo()) {
 				wxShareConfig({
 					title: '外汇超级行情来袭，老虎外汇送你1000美金给你',
@@ -37,26 +36,6 @@
 					//   $('.connect_us').show();
 				},
 			})
-
-			function removeEff(index, except) {
-				var hasEff = $('.section' + index + ' .animated');
-
-				hasEff.each(function (index, item) {
-					var classNames = $(item).attr('class').split(' ');
-					var effName = '';
-					var subIndex = null;
-					$.each(classNames, function (index, item) {
-						if (item == 'animated') {
-							subIndex = index;
-						}
-						effName = classNames[subIndex + 1];
-					});
-					if (classNames.indexOf(except) < 0) {
-						$(item).removeClass('animated');
-						$(item).removeClass(effName);
-					}
-				});
-			}
 
 			function showBtn(index) {
 				$(".registerNow" + index).fadeIn(300)
@@ -100,20 +79,20 @@
 							$.fn.fullpage.setAllowScrolling(true)
 						}
 						if (action == "matters") {
-							setTimeout(function(){
+							setTimeout(function () {
 								openLay("#layer_contentBox")
-							},10)
+							}, 10)
 						}
-                        if (action == "rule1") {
-                            setTimeout(function(){
-                                openLay("#layer_contentRule1")
-                            },10)
-                        }
-                        if (action == "rule2") {
-                            setTimeout(function(){
-                                openLay("#layer_contentRule2")
-                            },10)
-                        }
+						if (action == "rule1") {
+							setTimeout(function () {
+								openLay("#layer_contentRule1")
+							}, 10)
+						}
+						if (action == "rule2") {
+							setTimeout(function () {
+								openLay("#layer_contentRule2")
+							}, 10)
+						}
 						if (action == 'registerNow') {
 							$.fn.fullpage.moveTo(4);
 						}
@@ -152,10 +131,4 @@
 			});
 		})
 	}
-
-	$(document).ready(function(){
-		$('.open_tiger').click(function(e){
-			console.log(e.target);
-		});
-	});
 }());
