@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<script>
+    var nodeResponseInfo = {
+        language: '<%= lang.currentLanguage() %>',
+    };
+</script>
+<body>
+<%- include('./agreement/m_common.html') %>
+<%- include('./agreement/m_' + pageInfo.id + '.html') %>
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/h5_agreement.js -->
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/web/m_agreement.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

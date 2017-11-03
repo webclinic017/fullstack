@@ -1,4 +1,6 @@
-/*panda活动页注册逻辑*/
+/*
+    web 活动页注册逻辑
+*/
 ;
 (function () {
     /*生成token*/
@@ -159,24 +161,67 @@
             console.log("统计代码执行完毕!")
         }
 
-        /*获取url中携带信息并进行相关操作*/
+        /* 运营关于pid等信息存储要求：
+            1.若链接中带有pid，所有相关字段信息清空重写
+            2.若链接中未带有pid，则沿用原来信息
+            3.每次重写pid等信息，存储时间为7天
+            4.lp 每次都会更新到最新的页面来源（首页 lp=sy）
+        */
         ;
         (function () {
+            var lp = '';
+            var pid = '';
+            var unit = '';
+            var key = '';
+
+            var hostnameUrl = window.location.hostname;
+            var domainUrl = hostnameUrl.substring(hostnameUrl.indexOf('.') + 1) || "tigerwit.com";
+            var href = window.location.href;
+            var oDate = new Date();
+            var overdueDate = new Date();
+            oDate.setTime(oDate.getTime() + (7 * 24 * 60 * 60 * 1000));
+            overdueDate.setTime(oDate.getTime() - (7 * 24 * 60 * 60 * 1000));
+            var expTime = ';expires='+oDate.toUTCString();
+            var overdueExpTime = ';expires='+overdueDate.toUTCString();
+            lp = window.location.pathname.replace(/[\/:]/g, "").toLowerCase();
+            if (lp != "") {
+                document.cookie = 'lp=' + lp + ';path=/;domain=' + domainUrl+expTime;
+            }
             /*获取查询字段*/
             function getSearch() {
-                var url = location.search;
-                /*获取url中"?"符后的字串*/
-                var theRequest = new Object();
-                if (url.indexOf("?") != -1) {
-                    var str = url.substr(1);
-                    strs = str.split("&");
-                    for (var i = 0; i < strs.length; i++) {
-                        theRequest[strs[i].split("=")[0]] = (strs[i].split("=")[1]);
+                var aGET = {};
+                if (href.indexOf('?') != -1) {
+                    var aQuery = href.split('?')[1];
+                    if (aQuery.length > 0) {
+                        var aBuf = aQuery.split("&");
+                        for (var i = 0, iLoop = aBuf.length; i < iLoop; i++) {
+                            var aTmp = aBuf[i].split("=");
+                            aGET[aTmp[0]] = aTmp[1];
+                        }
+                    };
+                    pid = aGET['pid'] ? aGET['pid'] : "";
+                    unit = aGET['unit'] ? aGET['unit'] : "";
+                    key = aGET['key'] ? aGET['key'] : "";
+
+                    if (pid != '') {
+                        // 清空重写
+                        document.cookie = 'pid=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                        document.cookie = 'unit=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                        document.cookie = 'key=' + null + ';path=/;domain=' + domainUrl+overdueExpTime;
+                        
+                        document.cookie = 'pid=' + pid + ';path=/;domain=' + domainUrl+expTime;
+
+                        if (unit) {
+                            document.cookie = 'unit=' + unit + ';path=/;domain=' + domainUrl+expTime;
+                        }
+                        if (key) {
+                            document.cookie = 'key=' + key + ';path=/;domain=' + domainUrl+expTime;
+                        }
                     }
                 }
-                return theRequest;
+                // console.log(aGET);
+                return aGET;
             }
-
             oReg.search_arr = getSearch();
 
             /*获取lp*/
@@ -207,7 +252,7 @@
                 oReg.search_arr.pid = 'pandafx';
             }
 
-            console.log(oReg);
+            // console.log(oReg);
         }());
 
         /*发送验证码*/
@@ -238,10 +283,10 @@
         /*提交按钮*/
         ;
         (function () {
-            $("#submit_form").on("click", function () {
+
+            function toLogin (is_agree) {
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
-                // if (!checkPassword()) return;
 
                 /*loading层*/
                 layer.load(1, {shade: false});
@@ -249,14 +294,16 @@
                 statistics($("#telephone").val());
 
                 publicRequest('regOrLogin', 'POST', {
-                    phone: $("#telephone").val() || "",
-                    password: $("#verify_code").val()  || $("#password").val() || "",
+                    phone: $("#telephone").val() || null,
+                    // password: $("#password").val() || null,
+                    password: $("#verify_code").val() || null,
                     login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录
-                    pid: oReg.search_arr.pid || "",
-                    unit: oReg.search_arr.unit || "",
-                    lp: oReg.search_arr.lp || "",
-                    key: oReg.search_arr.key || "",
-                    email: oReg.search_arr.email || "",
+                    pid: oReg.search_arr.pid || null,
+                    unit: oReg.search_arr.unit || null,
+                    lp: oReg.search_arr.lp || null,
+                    key: oReg.search_arr.key || null,
+                    email: oReg.search_arr.email || null,
+                    is_agree: is_agree == 'is_agree' ? 1 : 0
                 }).then(function (data) {
                     if (!data) return;
                     layer.closeAll();
@@ -267,10 +314,18 @@
                         sa.track('btn_register_finish');
                         window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
                     } else {
-                        layer.msg(data.message);
+                        if ((data.code == 100402) || (data.code == 100403)) {
+                            openWebAgmentModal(data.code, function(resolve, e){
+                                toLogin('is_agree');
+                                layer.close(resolve.layIndex)
+                            })
+                        } else {
+                            layer.msg(data.message);
+                        }
                     }
                 });
-            });
+            }
+            $("#submit_form").on("click", toLogin);
         }());
     });
 }());

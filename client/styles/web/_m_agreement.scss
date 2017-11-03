@@ -1,0 +1,109 @@
+@include b(m_agreement_backdrop) {
+    width: 0%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 100;
+
+    &.active {
+        width: 100%;
+    }
+}
+@include b(m_agreement_tab) {
+    width: 65%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -65%;
+    background: #fff;
+    z-index: 200;
+    transition: all .4s;
+    overflow-y: scroll;
+
+    &.active {
+        right: 0;
+    }
+
+    @include e(wrapper) {
+        padding: px2rem(40) px2rem(20);
+    }
+
+
+    @include e(title) {
+        padding-bottom: px2rem(46);
+        font-size: px2rem(40);
+        line-height: px2rem(50);
+        font-weight: 500;
+    }
+    @include e(lst) {
+
+        li {
+            font-size: px2rem(32);
+            font-weight: 500;
+            margin-bottom: px2rem(32);
+        }
+    }
+}
+@include b(m_agreement_common) {
+    margin: px2rem(40);
+
+    @include e(title) {
+        padding-bottom: px2rem(46);
+        
+        .tit {
+            font-size: px2rem(40);
+            line-height: px2rem(50);
+            font-weight: 500;
+        } 
+    }
+    @include e(sub_title) {
+        font-size: px2rem(28);
+        line-height: px2rem(32);
+        margin-bottom: px2rem(20);
+        color: #222;
+        font-weight: 500;
+    }
+    @include e(detail) {
+        font-size: px2rem(28);
+        line-height: px2rem(40);
+        margin-bottom: px2rem(40);
+        color: #666;
+    }
+    @include e(sign) {
+        font-size: px2rem(36);
+        line-height: px2rem(36);
+        color: #444;
+        position: fixed;
+        right: px2rem(40);
+        bottom: px2rem(40);
+        padding: px2rem(10);
+        background-color: #fff;
+        border-radius: px2rem(8);
+        box-shadow: 0px 0px 6px 2px #eee;
+        -webkit-box-shadow: 0px 0px 6px 2px #eee;
+        -moz-box-shadow: 0px 0px 6px 2px #eee;
+        -o-box-shadow: 0px 0px 6px 2px #eee;
+    }
+    @include e(to_top) {
+        font-size: px2rem(36);
+        line-height: px2rem(36);
+        color: #444;
+        position: fixed;
+        right: px2rem(40);
+        bottom: px2rem(112);
+        padding: px2rem(10);
+        background-color: #fff;
+        border-radius: px2rem(8);
+        box-shadow: 0px 0px 6px 2px #eee;
+        -webkit-box-shadow: 0px 0px 6px 2px #eee;
+        -moz-box-shadow: 0px 0px 6px 2px #eee;
+        -o-box-shadow: 0px 0px 6px 2px #eee;
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}
