@@ -1,0 +1,558 @@
+.layer_content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    text-align: left;
+    background-size: 100% 100%;
+    
+    max-width: 1334px;
+    .rules {
+        width: 90%;
+        height: 100%;
+        padding: 4% 5%;
+        line-height: 1.5rem;
+        font-size: 0.8rem;
+        background: #fff;
+        a {
+            color: #222;
+        }
+        p {
+            padding-bottom: px2rem(20);
+        }
+    }
+    .rule_close {
+        border: 1px solid #fff;
+        cursor: pointer;
+        width: px2rem(60);
+        height: px2rem(60);
+        border-radius: 20px;
+        margin: 0 auto;
+        margin-top: px2rem(50);
+        line-height: px2rem(60);
+        text-align: center;
+        color: #fff;
+        font-size: px2rem(32);
+    }
+}
+
+.layui-m-layercont {
+    .layer_content {
+        display: block!important;
+    }
+}
+
+@include b(m_t38_layout) {
+    text-align: center;
+    transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    /* Firefox 4 */
+    -webkit-transition: all 1s ease;
+    /* Safari and Chrome */
+    -o-transition: all 1s ease;
+    /* Opera */
+    font-family: sans-serif, 'Microsoft Yahei', 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+    .redbag_logo {
+        position: absolute;
+        top: 2%;
+        right: 6%;
+        width: 30%;
+        &.panda {
+            width: 40%;
+            right: -2%;
+        }
+    }
+    #dowebok {
+        .registerNow {
+            font-size: px2rem(32);
+            font-weight: 500;
+            color: #4a4a4a;
+            padding: px2rem(16) px2rem(90);
+            display: inline-block;
+            background-color: #efdc9e;
+            border-radius: px2rem(20);
+            -webkit-box-shadow: 0px px2rem(8) px2rem(10) #765087;
+            -ms-box-shadow: 0px px2rem(8) px2rem(10) #765087;
+            -moz-box-shadow: 0px px2rem(8) px2rem(10) #765087;
+            box-shadow: 0px px2rem(8) px2rem(10) #765087;
+        }
+        .connect_us {
+            margin-top: 14%;
+            display: inline-block;
+            color: #fff;
+            font-size: 0.8rem;
+        }
+        .slide_arrow {
+            position: absolute;
+            bottom: 0%;
+            left: 52%;
+            margin: -14px 0 0 -25px;
+            width: 36px;
+            height: 38px;
+            background: url("/images/bd/change.png") no-repeat;
+            -webkit-animation: start 1.5s infinite ease-in-out;
+            -moz-animation: start 1.5s infinite ease-in-out;
+            animation: start 1.5s infinite ease-in-out;
+        }
+        @keyframes start {
+            0%,
+            30% {
+                opacity: 0;
+                transform: translate(0, 10px);
+            }
+            60% {
+                opacity: 1;
+                transform: translate(0, 0);
+            }
+            100% {
+                opacity: 0;
+                transform: translate(0, -8px);
+            }
+        }
+        .line_title {
+            text-align: center;
+            h2 {
+                width: 100%;
+                font-weight: 200;
+                font-size: 0.8rem;
+                position: relative;
+                margin: 0;
+                color: #fff;
+                transition: color 1s 1s linear;
+                -webkit-transition: color 1s 1s linear;
+                &.active {
+                    color: #222;
+                }
+                .line {
+                    position: absolute;
+                    width: 0;
+                    height: 1px;
+                    border-top: 1px solid #777;
+                    top: 50%;
+                    transition: width 1s linear;
+                    -webkit-transition: width 1s linear;
+                }
+                .lineLeft {
+                    left: 14%
+                }
+                .lineRight {
+                    right: 14%
+                }
+                .line.active {
+                    width: 25%;
+                }
+            }
+            p {
+                i {
+                    font-weight: 100;
+                }
+                font-weight: 300;
+                padding: 0%;
+                font-size: 1.6rem;
+                color: #fff;
+                transition: color 1s 1s linear;
+                -webkit-transition: color 1s 1s linear;
+                &.active {
+                    color: #222;
+                }
+            }
+        }
+        .common_ways {
+            background: #0193e8;
+            transition: all 0.8s ease;
+            -webkit-transition: all 0.8s ease;
+            /* Safari and Chrome */
+            width: 100%;
+            height: 21.75%;
+            font-size: 0.6rem;
+            text-align: left;
+            margin-top: 2%;
+            .left_part {
+                padding: 1% 5%;
+                width: 77.8%;
+                height: 100%;
+                float: left;
+                h5 {
+                    margin: 0;
+                    font-size: px2rem(28);
+                    margin-top: 0.5%;
+                }
+                .description {
+                    font-size: 0.5rem;
+                }
+            }
+            .right_part {
+                text-align: center;
+                padding: 2%;
+                width: 22.2%;
+                height: 100%;
+                float: left;
+                border-left: 1px solid #fff;
+                .amount {
+                    font-size: px2rem(50);
+                    i {
+                        font-size: 0.5rem;
+                        display: inline-block;
+                        margin-right: 0.15rem;
+                        vertical-align: middle;
+                    }
+                }
+                .getCondition {
+                    font-size: 0.5rem;
+                }
+            }
+        }
+        .section {
+            position: relative;
+            max-width: 1334px;
+            .two_ways {
+                background: #fff;
+                background-position: center center;
+                background-size: 100% 100%;
+                width: 80%;
+                height: 55%;
+                margin: 0 auto;
+                margin-top: 26%;
+                color: #fff;
+                padding: 2.5%;
+                position: relative;
+                margin-top: 1%;
+                .line_title>h2 .line.active {
+                    width: 20%;
+                }
+                .spec-style {
+                    margin-top: 5%;
+                    height: 33%;
+                    .left_part {
+                        width: 72%;
+                        margin-top: 1%;
+                        .description {
+                            margin-top: 4%;
+                        }
+                    }
+                    .right_part {
+                        width: 28%;
+                        .pd-6 {
+                            padding-top: 6%;
+                        }
+                    }
+                }
+            }
+            .amount_title {
+                width: 30%;
+                margin-top: 15%;
+            }
+            .connect_us {
+                margin-top: 5%;
+            }
+        }
+        .section1 {
+            background: url("/images/bd_t38/h5_p1_bg.png") no-repeat;
+            background-position: center top;
+            background-size: auto 100%;
+            position: relative;
+            .layer_contentBox {
+                display: block;
+                background: #fff;
+            }
+            .p1-text {
+                width: 100%;
+                text-align: center;
+                color: #fff;
+                padding-top: px2rem(750);
+                font-size: px2rem(46);
+            }
+            .detail {
+                width: 85%;
+                margin-top: 1%;
+                .act-date {
+                    color: #fff;
+                    /* position: absolute; */
+                    /* top: 76.5%; */
+                    font-size: px2rem(32);
+                    margin-top: 1%;
+                }
+                .matters_btn {
+                    font-size: px2rem(26);
+                    font-weight: 500;
+                    color: #fff;
+                    padding: px2rem(10) px2rem(48);
+                    display: inline-block;
+                    background-color: #8554a5;
+                    border-radius: px2rem(10);
+                    -webkit-box-shadow: 0px px2rem(8) px2rem(10) #9c6281;
+                    -ms-box-shadow: 0px px2rem(8) px2rem(10) #9c6281;
+                    -moz-box-shadow: 0px px2rem(8) px2rem(10) #9c6281;
+                    box-shadow: 0px px2rem(8) px2rem(10) #9c6281;
+                }
+            }
+        }
+        .section2 {
+            background: url("/images/bd_t38/h5_p2_bg_new.png") no-repeat;
+            background-position: center center;
+            background-size: auto 100%;
+            overflow: hidden;
+
+            &.pandafx {
+                background: url("/images/bd_t38/h5_p2_bg_panda_new.png") no-repeat;
+                background-position: center center;
+                background-size: auto 100%;
+                overflow: hidden;
+            }
+            
+            .registerNow {
+                position: absolute;
+                bottom: 1rem;
+                left: 28%;
+            }
+        }
+        .section3 {
+            background-color: #121212;
+            background: url("/images/bd_t38/h5_p3_bg.png") no-repeat;
+            background-position: center center;
+            background-size: auto 100%;
+            
+            .details_wrapper {
+                .title {
+                    color: #fff;
+                    padding-top: px2rem(80);
+
+                    .sub_tit {
+                        font-size: px2rem(32);
+                    }
+                }
+                .cont {
+                    margin: px2rem(32) auto;
+                }
+                .cont-1 {
+                    width: px2rem(580);
+                    height: px2rem(352);
+                    background: url("/images/bd_t38/h5_p3_cont_1_new.png") no-repeat;
+                    background-size: 100% 100%;
+
+                    .rules_btn_wrapper {
+                        padding-top: px2rem(268);
+                        text-align: right;
+                        color: #fff;
+                        padding-right: px2rem(60);
+                    }
+                }
+                .cont-2 {
+                    width: px2rem(588);
+                    height: px2rem(380);
+                    background: url("/images/bd_t38/h5_p3_cont_2_new.png") no-repeat;
+                    background-size: 100% 100%;
+
+                    .rules_btn_wrapper {
+                        padding-top: px2rem(306);
+                        text-align: right;
+                        color: #fff;
+                        padding-right: px2rem(80);
+                    }
+                }
+            }
+        }
+        .section4 {
+            background: url("/images/bd_t38/h5_p4_bg.png") no-repeat;
+            background-position: center center;
+            background-size: auto 100%;
+
+            .submit_form_box {
+                width: px2rem(576);
+                margin: px2rem(320) auto 0;
+                background: rgba(255,255,255,0.2);
+                border: 1px solid rgba(255,255,255,0.4);
+                border-radius: px2rem(4);
+
+                .verify_code_btn_wrapper {
+                    position: absolute;
+                    top: px2rem(12);
+                    right: 0;
+                    width: px2rem(180);
+                    height: px2rem(48);
+                    text-align: center;
+                    line-height: px2rem(48);
+                    border-left: 1px solid #ccc;
+
+                    .verify_code_btn {
+                        cursor: pointer;
+                    }
+                }
+
+                .form-control-wrapper {
+                    margin: px2rem(48) px2rem(48) 0;
+                }
+                
+                input[type=number] {
+                    padding-right: px2rem(192) !important;
+                }
+                .form-control.t38 {
+                    width: 100%;
+                    padding: px2rem(16);
+                    background-color: #fff;
+                    border-radius: px2rem(10);
+                    padding-left: px2rem(32);
+                }
+                .btn-wrapper {
+                    text-align: center;
+                    margin: px2rem(48) 0;
+                }
+            }
+            
+            .registerBtn {
+                font-size: px2rem(32);
+                font-weight: 500;
+                color: #fff;
+                padding: px2rem(16) px2rem(64);
+                display: inline-block;
+                background-color: #8554a5;
+                border-radius: px2rem(10);
+                -webkit-box-shadow: 0px px2rem(8) px2rem(10) #9c6281;
+                -ms-box-shadow: 0px px2rem(8) px2rem(10) #9c6281;
+                -moz-box-shadow: 0px px2rem(8) px2rem(10) #9c6281;
+                box-shadow: 0px px2rem(8) px2rem(10) #9c6281;
+            }
+            .t38_client {
+                color: #fff;
+                margin-top: px2rem(60);
+                line-height: px2rem(50);
+
+                a {
+                    color: #fff;
+                }
+            }
+            .t38_risk {
+                color: #fff;
+                font-size: px2rem(20);
+                position: absolute;
+                bottom: 3%;
+                width: 90%;
+                left: 5%;
+                text-align: left;
+            }
+        }
+        .section5 {
+            background: url("/images/bd_t38/p5.png") no-repeat;
+            background-position: center center;
+            background-size: auto 100%;
+            .registerBtn {
+                width: 80%;
+                margin-top: 3%;
+            }
+            .p5-text {
+                width: 80%;
+                position: absolute;
+                top: 11%;
+                left: 10%;
+            }
+            .registerNow {
+                width: 80%;
+                margin: 0 auto;
+                margin-top: 5%;
+                position: static;
+            }
+            .redbag_regBox {
+                background: #ff3a5c;
+                width: 80%;
+                padding: 0 4%;
+                height: 20%;
+                opacity: 0.99;
+                margin: 0 auto;
+                margin-top: 63%;
+                transition: margin-top 0.1s linear;
+                -webkit-transition: margin-top 0.1s linear;
+                .submit_form {
+                    width: 85%;
+                    margin: 0 auto;
+                    margin-top: 5%;
+                    display: block;
+                    text-align: center;
+                    background-color: #e7e7e8;
+                    color: #d1d1d3;
+                    padding: 4%;
+                    border-radius: 1.5rem;
+                    font-size: px2rem(28);
+                    -webkit-touch-callout: none;
+                    -webkit-user-select: none;
+                    -khtml-user-select: none;
+                    -moz-user-select: none;
+                    -ms-user-select: none;
+                    user-select: none;
+                }
+                form {
+                    height: 100%;
+                    padding-top: px2rem(15);
+                    padding-bottom: px2rem(15);
+                    font-size: px2rem(30);
+                    div {
+                        width: 100%;
+                        height: 36%;
+                        line-height: 2.5rem;
+                        display: flex;
+                        border-radius: px2rem(8);
+                        overflow: hidden;
+                        margin-top: 0.6rem;
+                        padding-right: px2rem(36);
+                        background: #ffffff;
+                        input {
+                            height: 100%;
+                            width: 100%;
+                            background: #ffffff;
+                            padding-left: px2rem(36);
+                            font-size: px2rem(30);
+                            flex: 1;
+                        }
+                    }
+                    .telephone {
+                        img {
+                            width: 0.9rem;
+                            height: 60%;
+                            margin-left: px2rem(-10);
+                            margin-top: 4%;
+                        }
+                    }
+                    .verify_code {
+                        padding-right: px2rem(16);
+                        .verify_code_btn {
+                            line-height: 1.8rem;
+                            text-align: center;
+                            display: inline-block;
+                            padding: 0 7%;
+                            height: 68.42%;
+                            color: #fff;
+                            position: relative;
+                            font-size: px2rem(28);
+                            top: 15.79%;
+                            background-color: #ff3a5c;
+                            border-radius: px2rem(8);
+                            vertical-align: middle;
+                        }
+                    }
+                    .password {
+                        border: none;
+                        .password_btn {
+                            display: inline-block;
+                            width: 1.2rem;
+                            text-align: center;
+                            img {
+                                width: px2rem(34);
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+            .m_t33_risk {
+                background: #0193e8;
+                color: #fff;
+                font-size: px2rem(18);
+                width: 100%;
+                margin: 0 auto;
+                padding: 3% 3%;
+                text-align: left;
+                line-height: px2rem(25);
+                position: absolute;
+                bottom: 0%;
+            }
+        }
+    }
+}
