@@ -116,7 +116,7 @@
             });
         };
         // 登录
-        $scope.login = function (formName) {
+        $scope.login = function (formName, is_agree) {
             if (!$scope.loginBtnStatus) return;
             if ($scope[formName].$invalid) {
                 layer.msg("请填写完整信息");
@@ -143,6 +143,7 @@
                     remember: $scope.rememberLoginStatus ? 1 : 0
                 };
             }
+            (is_agree == "is_agree") && (para.is_agree = 1);
             layer.load();
             $scope.loginBtnStatus = false;
 
@@ -164,7 +165,14 @@
                         $scope.$emit('relogin_info');
                     }, 100);
                 } else {
-                    layer.msg(data.message);
+                    if ((data.code == 100402) || (data.code == 100403)) {
+                        openWebAgmentModal(data.code, function(resolve, e){
+                            $scope.login(formName, 'is_agree');
+                            layer.close(resolve.layIndex)
+                        })
+                    } else {
+                        layer.msg(data.message);
+                    }
                 }
             });
         };
