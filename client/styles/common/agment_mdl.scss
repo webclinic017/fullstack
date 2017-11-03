@@ -46,6 +46,11 @@
             text-decoration: underline;
             color: $brand-primary-darker;
         }
+        &.cancle {
+            color: $gray-dark;
+            margin-left: 400px;
+            font-size: 24px;
+        }
     }
 }
 
@@ -84,11 +89,15 @@
         }
         &.cancle {
             font-size: px2rem(38);
-            color: $m-black-base;
+            color: $gray-dark;
         }
     }
     .agree {
         margin-top: 2rem;
         margin-bottom: 1rem;
+    }
+    .agment_mdl_con__detail {
+        max-height: 24rem;
+        overflow-y: scroll;
     }
 }

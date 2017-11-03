@@ -27,6 +27,9 @@
                     <span class="agreement-btn agree_button" data-btn-action="webNew.agree_user_agreement">
                         同意协议
                     </span>
+                    <span class="agree_button cancle" onclick="layer.closeAll()">
+                        取消
+                    </span>
                 </p>
             </div>
         </div>
@@ -64,8 +67,8 @@
             <div class="agment_mdl_con__title">
                 注册协议
             </div>
-            <div class="agment_mdl_con__detail">
-                <p class="agree"></p>
+            <p class="agree"></p>
+            <div class="agment_mdl_con__detail clearfix">
                 <p>
                     <span class="font-bold-light">【审慎阅读】</span>
                     您在申请注册流程中完成注册前，应当认真阅读以下协议。
@@ -87,15 +90,15 @@
                 <a class="link" target="_blank" href="/agreement/risk">《风险披露声明》</a><br>
                 <a class="link" target="_blank" href="/agreement/cookie">《隐私政策》</a><br>
                 <a class="link" target="_blank" href="/agreement/legal">《法律声明》</a><br>
-                <p class="mg-tp-20 clearfix button-area">
-                    <span class="agreement-btn agree_button sm-size fl" data-btn-action="h5New.agree_user_agreement">
-                        同意协议
-                    </span>
-                    <span class="agree_button cancle fr" onclick="layer.closeAll()">
-                        取消
-                    </span>
-                </p>
             </div>
+            <p class="mg-tp-20 clearfix button-area">
+                <span class="agreement-btn agree_button sm-size fl" data-btn-action="h5New.agree_user_agreement">
+                    同意协议
+                </span>
+                <span class="agree_button cancle agment_mdl_cancle fr" onclick="">
+                    取消
+                </span>
+            </p>
         </div>
     </div>
 
@@ -162,6 +165,13 @@
             })
         }
 
+        $(document).on('click', '.agment_mdl_cancle', function (e) {
+            layer.closeAll()
+            if($.fn.fullpage){
+                $.fn.fullpage.setAllowScrolling(true)
+            }
+        })
+
         window.openH5AgmentModal = function (code, callback) {
             // 100402(new) 100403(old)
             var layMap = {
@@ -181,7 +191,14 @@
                 style: 'padding:0;width:100%;border-radius:0;color:#000;background:rgba(0,0,0,0);'
             });
 
+            if($.fn.fullpage){
+                $.fn.fullpage.setAllowScrolling(false)
+            }
+
             $(document).on('click', '.agreement-btn', function (e) {
+                if($.fn.fullpage){
+                    $.fn.fullpage.setAllowScrolling(true)
+                }
                 $.isFunction(callback) && callback.call(this, {
                     curCode: code,
                     layIndex: layerIndex
