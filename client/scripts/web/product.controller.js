@@ -13,7 +13,7 @@
     var location = $location.$$absUrl.split('/');
    	var curProduct = location[location.length - 1] || '';
 
-    if('forex_oil_cfd'.indexOf(curProduct) != -1){
+    if('forex_oil_cfd_metal'.indexOf(curProduct) != -1){
     	product.getProductInfo({product_type: curProduct}).then(function(res){
     		if(res.is_succ){
     			$scope[curProduct] = res.data[lang];
