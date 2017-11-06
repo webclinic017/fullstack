@@ -283,7 +283,8 @@
         /*提交按钮*/
         ;
         (function () {
-            $("#submit_form").on("click", function () {
+
+            function toLogin (is_agree) {
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
 
@@ -301,7 +302,8 @@
                     unit: oReg.search_arr.unit || null,
                     lp: oReg.search_arr.lp || null,
                     key: oReg.search_arr.key || null,
-                    email: oReg.search_arr.email || null
+                    email: oReg.search_arr.email || null,
+                    is_agree: is_agree == 'is_agree' ? 1 : 0
                 }).then(function (data) {
                     if (!data) return;
                     layer.closeAll();
@@ -312,10 +314,18 @@
                         sa.track('btn_register_finish');
                         window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
                     } else {
-                        layer.msg(data.message);
+                        if ((data.code == 100402) || (data.code == 100403)) {
+                            openWebAgmentModal(data.code, function(resolve, e){
+                                toLogin('is_agree');
+                                layer.close(resolve.layIndex)
+                            })
+                        } else {
+                            layer.msg(data.message);
+                        }
                     }
                 });
-            });
+            }
+            $("#submit_form").on("click", toLogin);
         }());
     });
 }());

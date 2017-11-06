@@ -579,11 +579,11 @@ module.exports = function (app) {
     // t33 作为固定推广链接，要更新最新的落地页到这个地址
     app.route('/bd/t33').get(function (req, res) {
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t38/h5.html', extendPublic({}, req))
+                res.render('bd/t36/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t38/web.html', extendPublic({}, req));
+                res.render('bd/t36/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -917,11 +917,11 @@ module.exports = function (app) {
                     }
                 }
             } else if (system == "ios") {
-                // var version = versionCode.replace(/\./g, "");
-                // // console.log(version, currentVersionNumIos);
-                // if (Number(version) < Number(currentVersionNumIos)) {
-                //     currentVersion = versinInfo.getAppInfoIos();
-                // }
+                var version = versionCode.replace(/\./g, "");
+                // console.log(version, currentVersionNumIos);
+                if (Number(version) < Number(currentVersionNumIos)) {
+                    currentVersion = versinInfo.getAppInfoIos();
+                }
             }
             data = currentVersion;
         }
