@@ -29,20 +29,76 @@
 <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
 <body class="tw_h5_body">
-<!-- <% include /common/component/h5.loading.html %> -->
+<% include /common/component/h5.loading.html %>
 
 <div class="m_4in1_layout">
-    <% include /common/component/h5.slider.html %>
     <div class="full_page" id="dowebok">
-        <div class="section section1"></div>
-        <div class="section section2"></div>
-        <div class="section section3"></div>
-        <div class="section section4"></div>
+        <div class="section section1" id="img_detect_container">
+            <% include /common/component/h5.slider.html %>
+            <img class="text" src="/images/bd_4in1/h5_sec1_text.png" class="text">
+            <img src="/images/bd_4in1/h5_check_btn.png" class="check_btn" data-action="checkNow">
+        </div>
+        <div class="section section2">
+            <img src="/images/basic_logo.png" class="logo">
+            <div class="animation_box">
+                <img class="animation_item" src="/images/bd_4in1/h5_sec2_1.png">
+                <img class="animation_item" src="/images/bd_4in1/h5_sec2_2.png">
+                <img class="animation_item" src="/images/bd_4in1/h5_sec2_3.png">
+                <img class="animation_item" src="/images/bd_4in1/h5_sec2_4.png">
+            </div>
+            <img src="/images/bd_4in1/h5_reg_btn.png" data-action="registerNow" class="reg_btn">
+        </div>
+        <div class="section section3">
+            <img src="/images/basic_logo.png" class="logo">
+            <div class="animation_box">
+                <img class="text_logo" src="/images/bd_4in1/h5_sec3_logo.png">
+                <img class="animation_item circle active" src="/images/bd_4in1/h5_sec3_1.png">
+                <img class="animation_item" src="/images/bd_4in1/h5_sec3_2.png">
+            </div>
+            <img src="/images/bd_4in1/h5_reg_btn.png" data-action="registerNow" class="reg_btn">
+        </div>
+        <div class="section section4">
+            <div class="layer_contentBox" id="layer_contentBox">
+                    <div class="layer_content">
+                        <div class="rules">
+                            <p>1. 用户需在红包指定兑现期限内完成对应条件并手动完成兑现，过期不能兑现；</p>
+                            <p>2. 活动所列红包每个用户仅可领取一次，兑现金额将在执行兑现操作后入账且可支取；</p>
+                            <p>3. 本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，CFD类产品交易手数不计入统计范围；</p>
+                            <p>4. 本活动仅限活动开始后新注册用户，用户提取资金前，需完成完整个人信息的提交并通过审核；</p>
+                            <p>5. 本活动允许EA但禁止EA剥头皮交易，违反规则的用户将取消参与本次活动的权利；</p>
+                            <p>6.<%= lang.text('companyZhName')%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打 <a class="connect_us" style="text-decoration: underline;" href="tel:<%= lang.text('telephone')%>"><%= lang.text('telephone')%></a>。
+                            </p>
+                        </div>
+                        <p class="rule_close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+            <img src="/images/basic_logo.png" class="logo">
+            <img class="rule_btn" data-action="open-layer" src="/images/bd_4in1/h5_sec5_rule.png" alt="">
+            <div class="content clearfix">
+                <img class="title" src="/images/bd_4in1/h5_sec4_title.png" alt="">
+                <img class="redbag" src="/images/bd_4in1/h5_sec5_redbag.png" alt="">
+            </div>
+            <div class="reg_box">
+                <div class="submit_form_box no-select">
+                    <div class="form-control-wrapper">
+                        <input type="text" class="form-control t38" name="telephone" id="telephone" placeholder="+86">
+                    </div>
+                    <div class="form-control-wrapper">
+                        <input type="number" class="form-control t38" id="verify_code" placeholder="验证码">
+                        <span class="verify_code_btn" id="verify_code_btn">验证码</span>
+                    </div>
+                    <div class="btn-wrapper">
+                        <span id="submit_form" class="registerBtn">领红包交易</span>
+                    </div>
+                </div>
+            </div>
+            <img class="risk" src="/images/bd_4in1/h5_risk.png">
+        </div>
     </div>
 </body>
 
 <% include /common/vendor/h5.js.html %>
-<!-- build:js(client) /scripts/m_t38.js -->
+<!-- build:js(client) /scripts/m_4in1.js -->
 <script src="/scripts/bd/common/wx_share_config.js"></script>
 <script src="/scripts/bd/4in1/4in1_h5.js"></script>
 <script src="/scripts/account/h5_register.js"></script>

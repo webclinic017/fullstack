@@ -1,7 +1,6 @@
 ;
 (function () {
-	// twH5Loader('img_detect_container', 2, allLoaded)
-	allLoaded()
+	twH5Loader('img_detect_container', 3, allLoaded)
 	function allLoaded() {
 		$(function () {
 			// 微信分享配置
@@ -22,42 +21,28 @@
 			// 兼容安卓键盘弹出BUG
 			debugAndroidKey({
 				focusSelector: '.section4 input',
-				ctrlBox: '.submit_form_box',
+				ctrlBox: '.reg_box',
 				focusCss: {
-					marginTop: '15%'
+					top: '10%'
 				},
 				focusFn: function () {
-					//   $('.connect_us').hide();
+					$('.content').hide(200)
 				},
 				blurCss: {
-					marginTop: '10rem'
+					top: '44.5%'
 				},
 				blurFn: function () {
-					//   $('.connect_us').show();
-				},
+					$('.content').show(200)
+				}
 			})
 
-			function showBtn(index) {
-				$(".registerNow" + index).fadeIn(300)
-			}
-
-			function hideBtn(index) {
-				$(".registerNow" + index).fadeOut(500)
-			}
-
-			function addRegEff(index) {
-				var effects = 'rotateIn_jello_fadeIn_flipInX_lightSpeedIn'.split('_');
-				var effect = effects[parseInt(Math.random() * effects.length)];
-				console.log(effect);
-				setTimeout(function () {
-					$(".section" + index).find('.registerNow').addClass('animated ' + effect)
-				}, 300)
+			function activePage1() {
+				$('.section1').find('.text').addClass('animated flip')
 			}
 
 			$('#dowebok').fullpage({
 				navigation: true,
-				navigationColor: "#fbd71f",
-				navigationPosition: "left",
+				navigationPosition: "right",
 				verticalCentered: false,
 				afterRender: function () {
 					$('.matters_btn').delay(700).fadeIn(800);
@@ -70,6 +55,7 @@
 						$('.layui-m-layercont').css('padding', 0)
 						$.fn.fullpage.setAllowScrolling(false)
 					}
+					activePage1()
 					/*页面按钮事件*/
 					$(document.body).on("tap", function (e) {
 						var action = $(e.target).attr("data-action");
@@ -78,55 +64,46 @@
 							layer.closeAll();
 							$.fn.fullpage.setAllowScrolling(true)
 						}
-						if (action == "matters") {
+						if (action == 'open-layer') {
 							setTimeout(function () {
 								openLay("#layer_contentBox")
-							}, 10)
-						}
-						if (action == "rule1") {
-							setTimeout(function () {
-								openLay("#layer_contentRule1")
-							}, 10)
-						}
-						if (action == "rule2") {
-							setTimeout(function () {
-								openLay("#layer_contentRule2")
 							}, 10)
 						}
 						if (action == 'registerNow') {
 							$.fn.fullpage.moveTo(4);
 						}
+						if (action == 'checkNow') {
+							$.fn.fullpage.moveTo(2);
+						}
 					});
-
-					$(".lake_layout").fadeIn(0);
 				},
 				afterLoad: function (anchorLink, index) {
-
-					setTimeout(function () {
-						addRegEff(index);
-					}, index == 1 ? 200 : 900);
 					offsetAction(index)
 					if (index == 1) {
-
+						$('.section1').find('.text').addClass('animated zoomInDown')
 					}
-
-					if (index == 2) {
-
+					else if (index == 2) {
+						$('.section2').find('.animation_item').each(function (index, item) {
+							(function (index, item) {
+								setTimeout(function () {
+									$(item).addClass('animated flip')
+								}, index * 200)
+							}(index, item))
+						})
 					}
-
-					if (index == 3) {
-
+					else if (index == 3){
+						$('.section3').find('.animation_box').addClass('animated pulse')
+						.find('.animation_item').addClass('animated rollIn').end()
 					}
-
-					if (index == 4) {
-
+					else if(index == 4) {
+						$('.section4').find('.rule_btn').addClass('animated pulse').end()
+										.find('.redbag').addClass('animated fadeInLeft')
 					}
 				},
 				onLeave: function (index, direction) {
 					if (index != 3) {
-						removeEff(index);
+
 					}
-					hideBtn(index);
 				}
 			});
 		})

@@ -4,6 +4,7 @@
     position: relative;
     text-align: left;
     background-size: 100% 100%;
+    
     max-width: 1334px;
     .rules {
         width: 90%;
@@ -34,10 +35,17 @@
     }
 }
 
+.layui-m-layercont {
+    .layer_content {
+        display: block!important;
+    }
+}
+
 .tw_h5_body {
     padding: 0;
     min-width: 300PX;
     max-width: 750PX;
+    min-height: 1000PX;
     margin: 0 auto;
 }
 
@@ -62,135 +70,198 @@
         top: 2%;
         right: 6%;
         width: 30%;
-        &.panda {
-            width: 40%;
-            right: -2%;
-        }
     }
     .section {
         position: relative;
-        max-width: 1334px;
+        max-width: 750PX;
         background-position: center top;
         background-size: auto 100%;
         background-repeat: no-repeat;
-        background: aqua;
         overflow: hidden;
+        text-align: center;
+        background-image: url("/images/bd_4in1/h5_sec_bg.png");
+        .animation_box {
+            background-repeat: no-repeat;
+            background-size: 100% auto;
+            background-position: center top;
+            width: 100%;
+            height: 82%;
+            margin: 0 auto;
+            margin-top: 10%;
+            padding: 0 2rem;
+            padding-top: 6rem;
+        }
+        .reg_btn {
+            width: 45%;
+            margin-top: 0.8rem;
+        }
     }
     .section1 {
-        // background: url("/images/bd_t38/h5_p1_bg.png") no-repeat;
+        background-image: url("/images/bd_4in1/h5_sec1_bg.png");
+        padding-top: getHS(330);
+        .text {
+            display: inline-block;
+            width: 100%;
+        }
+        .check_btn {
+            width: px2rem(348);
+            margin-top: getHS(150);
+        }
     }
     .section2 {
-        
+        .animation_box {
+            width: 90%;
+            background-image: url("/images/bd_4in1/h5_sec2_anibox.png");
+            .animation_item {
+                width: 8rem;
+                &:nth-child(2n) {
+                    margin-left: 0.8rem;
+                }
+                &:nth-child(3) {
+                    margin-top: 1.9rem;
+                }
+                &:nth-child(4) {
+                    margin-top: 1.9rem;
+                }
+            }
+        }
     }
     .section3 {
-
+        .animation_box {
+            background-image: url("/images/bd_4in1/h5_sec3_anibox.png");
+            padding-top: 3.5rem;
+            position: relative;
+            height: 72%;
+            width: 81%;
+            margin-top: 14%;
+            .text_logo {
+                $w: px2rem(115);
+                width: $w;
+                position: absolute;
+                top: 5.8rem;;
+                left: 50%;
+                transform: translateX(- $w / 2);
+            }
+            .circle {
+                &.active {
+                    animation: rotate 8s infinite linear;
+                    -webkit-animation: rotate 8s infinite linear;
+                }
+                @-webkit-keyframes rotate {
+                    0% {
+                        transform: rotate(0deg)
+                    }
+                    50% {
+                        transform: rotate(360deg)
+                    }
+                    100% {
+                        transform: rotate(180deg)
+                    }
+                }
+                @keyframes rotate {
+                    0% {
+                        transform: rotate(0deg)
+                    }
+                    50% {
+                        transform: rotate(360deg)
+                    }
+                    100% {
+                        transform: rotate(180deg)
+                    }
+                }
+            }
+            .animation_item {
+                width: 9rem;
+                &:nth-child(2) {
+                    width: px2rem(200)
+                }
+                &:nth-child(3) {
+                    width: 100%;
+                }
+            }
+        }
     }
     .section4 {
-
-    }
-    .section5 {
-        .redbag_regBox {
-            background: #ff3a5c;
+        .rule_btn {
+            position: absolute;
+            top: 8%;
+            right: 0%;
+            width: getWS(190);
+        }
+        .content {
             width: 80%;
-            padding: 0 4%;
-            height: 20%;
-            opacity: 0.99;
+            padding-top: 12.5%;
             margin: 0 auto;
-            margin-top: 63%;
-            transition: margin-top 0.1s linear;
-            -webkit-transition: margin-top 0.1s linear;
-            .submit_form {
-                width: 85%;
-                margin: 0 auto;
-                margin-top: 5%;
-                display: block;
-                text-align: center;
-                background-color: #e7e7e8;
-                color: #d1d1d3;
-                padding: 4%;
-                border-radius: 1.5rem;
-                font-size: px2rem(28);
-                -webkit-touch-callout: none;
-                -webkit-user-select: none;
-                -khtml-user-select: none;
-                -moz-user-select: none;
-                -ms-user-select: none;
-                user-select: none;
+            .title {
+                width: 52%;
             }
-            form {
-                height: 100%;
-                padding-top: px2rem(15);
-                padding-bottom: px2rem(15);
-                font-size: px2rem(30);
-                div {
-                    width: 100%;
-                    height: 36%;
-                    line-height: 2.5rem;
-                    display: flex;
-                    border-radius: px2rem(8);
-                    overflow: hidden;
-                    margin-top: 0.6rem;
-                    padding-right: px2rem(36);
-                    background: #ffffff;
+            .redbag {
+                width: 80%;
+            }
+        }
+        .reg_box {
+            width: getWS(500);
+            height: 40%;
+            position: absolute;
+            left: getWS(125);
+            top: 44.5%;
+            background: url('/images/bd_4in1/h5_sec5_regbg.png') no-repeat center top;
+            background-size: 100%;
+            padding-top: 2.65rem;
+            transition: all 0.2s linear;
+            -webkit-transition: all 0.2s linear;
+            .submit_form_box {
+                .form-control-wrapper {
+                    margin: 0 auto;
+                    height: 1.85rem;
+                    width: px2rem(295);
+                    transform: skew(15deg);
+                    -webkit-transform: skew(-15deg);
                     input {
+                        width: 95%;
                         height: 100%;
-                        width: 100%;
-                        background: #ffffff;
-                        padding-left: px2rem(36);
-                        font-size: px2rem(30);
-                        flex: 1;
+                        padding-left: 0.5rem;
                     }
-                }
-                .telephone {
-                    img {
-                        width: 0.9rem;
-                        height: 60%;
-                        margin-left: px2rem(-10);
-                        margin-top: 4%;
+                    &:nth-child(1) {
+                        padding-left: 1rem;
                     }
-                }
-                .verify_code {
-                    padding-right: px2rem(16);
-                    .verify_code_btn {
-                        line-height: 1.8rem;
-                        text-align: center;
-                        display: inline-block;
-                        padding: 0 7%;
-                        height: 68.42%;
-                        color: #fff;
-                        position: relative;
-                        font-size: px2rem(28);
-                        top: 15.79%;
-                        background-color: #ff3a5c;
-                        border-radius: px2rem(8);
-                        vertical-align: middle;
-                    }
-                }
-                .password {
-                    border: none;
-                    .password_btn {
-                        display: inline-block;
-                        width: 1.2rem;
-                        text-align: center;
-                        img {
-                            width: px2rem(34);
-                            vertical-align: middle;
+                    &:nth-child(2) {
+                        margin-top: 1.35rem;
+                        display: flex;
+                        flex-flow: row nowrap;
+                        input {
+                            width: 55%;
                         }
+                        .verify_code_btn {
+                            flex: 1;
+                            border-left: 1px solid #ccc;
+                            color: #ccc;
+                            line-height: 1.8rem;
+                            &.disable {
+                                border: none!important;
+                                border-left: 1px solid #ccc;
+                            }
+                        }
+                    }
+                }
+                .btn-wrapper {
+                    margin-top: 1.5rem;
+                    .registerBtn {
+                        display: inline-block;
+                        border: 2px solid $brand-primary;
+                        background: rgba(255,255,255, 0.3);
+                        color: #222;
+                        font-size: 1rem;
+                        padding: 0.2rem 1rem;
                     }
                 }
             }
         }
-        .m_t33_risk {
-            background: #0193e8;
-            color: #fff;
-            font-size: px2rem(18);
+        .risk {
             width: 100%;
-            margin: 0 auto;
-            padding: 3% 3%;
-            text-align: left;
-            line-height: px2rem(25);
             position: absolute;
-            bottom: 0%;
+            left: 0;
+            bottom: 0;
         }
     }
 }

@@ -74,8 +74,6 @@
 				}, 300)
 			}
 
-
-
 			$('#dowebok').fullpage({
 				navigation: true,
 				navigationColor: "#fbd71f",
