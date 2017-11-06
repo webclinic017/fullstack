@@ -6,10 +6,10 @@
 			// 微信分享配置
 			if (wx && isTigerCo()) {
 				wxShareConfig({
-					title: '外汇超级行情来袭，老虎外汇送你1000美金给你',
-					subTitle: '外汇超级行情来袭，老虎外汇送你1000美金给你',
+					title: '老虎外汇-四位一体的交易体验',
+					subTitle: '老虎外汇-四位一体的交易体验',
 					shareLink: window.location.href,
-					desc: '外汇投资选老虎，人人都是投资高手，一键跟单简单粗暴，老虎高手带你轻松赚钱！！',
+					desc: '选择老虎外汇，资金安全，操作便捷，用户尊享“四位一体”的交易体验，速来注册吧！',
 					img: window.location.origin + '/activity/logo.png',
 					trackPage: window.location.pathname.replace(/\//gi, ''),
 					debug: false
