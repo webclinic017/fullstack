@@ -579,11 +579,11 @@ module.exports = function (app) {
     // t33 作为固定推广链接，要更新最新的落地页到这个地址
     app.route('/bd/t33').get(function (req, res) {
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t38/h5.html', extendPublic({}, req))
+                res.render('bd/t36/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t38/web.html', extendPublic({}, req));
+                res.render('bd/t36/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -686,6 +686,20 @@ module.exports = function (app) {
                 res.render('bd/forgive/h5.html', extendPublic({}, req))
             } else {
                 res.render('bd/forgive/web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+
+    // 四位一体
+    app.route('/bd/4in1').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('bd/4in1/4in1_h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/4in1/4in1_web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
