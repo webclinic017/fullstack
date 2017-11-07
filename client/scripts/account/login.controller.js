@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('AccountLoginController', AccountLoginController);
 
-    AccountLoginController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies'];
+    AccountLoginController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies', 'lang'];
 
-    function AccountLoginController($scope, $interval, $timeout, $window, $state, account, validator, $cookies) {
+    function AccountLoginController($scope, $interval, $timeout, $window, $state, account, validator, $cookies, lang) {
         $scope.loginType = 'code';  // 登录方式 code ->验证码登录，pass ->密码登录
         $scope.loginStep1 = 1;      // 验证码登录进行到哪一步
         $scope.loginStep2 = 1;      // 密码登录进行到哪一步
@@ -53,7 +53,7 @@
             forgetPassword: ''
         };
         var token;
-
+        // console.log(lang.text("actLogin1"));
         account.setToken();
         $interval(function () {
             account.setToken();
@@ -84,11 +84,11 @@
             var type;
 
             if ($scope[formName][phoneName].$invalid) {
-                layer.msg("请填写手机号");
+                layer.msg(lang.text("actLogin3"));    //请填写手机号
                 return;
             }
             if (!$scope.frontErr.phone.reg.test($scope.account[phoneName])) {
-                layer.msg("请填写正确的手机号");
+                layer.msg(lang.text("actLogin16"));     //请填写正确的手机号
                 return;
             }
 
@@ -119,7 +119,7 @@
         $scope.login = function (formName, is_agree) {
             if (!$scope.loginBtnStatus) return;
             if ($scope[formName].$invalid) {
-                layer.msg("请填写完整信息");
+                layer.msg(lang.text("actLogin19"));       //请填写完整信息
                 return;
             }
 
@@ -180,7 +180,7 @@
         $scope.setPassword = function (formName) {
             if (!$scope.loginBtnStatus) return;
             if ($scope[formName].$invalid) {
-                layer.msg("请输入密码");
+                layer.msg(lang.text('actLogin21')); //请输入密码
                 return;
             }
             layer.load();
@@ -210,7 +210,7 @@
         $scope.goForgetPassword2 = function (formName) {
             if (!$scope.loginBtnStatus) return;
             if ($scope[formName].$invalid) {
-                layer.msg("请填写完整信息");
+                layer.msg(lang.text("actLogin19"));   //请填写完整信息
                 return;
             }
             layer.load();
@@ -231,7 +231,7 @@
         $scope.setForgetPassword = function (formName) {
             if (!$scope.loginBtnStatus) return;
             if ($scope[formName].$invalid) {
-                layer.msg("请输入密码");
+                layer.msg(lang.text("actLogin25"));     //请输入您的账户密码
                 return;
             }
             layer.load();

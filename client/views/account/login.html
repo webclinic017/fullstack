@@ -2,21 +2,21 @@
     <div class="account_login_box">
         <div class="account_login login_pass" ng-class="{active: loginType === 'pass'}" ng-show="loginStep1 != 2">
             <div class="account_login__pos login_pass" ng-show="loginType !== 'pass'" ng-click="changeLoginType('pass')">
-                帐号密码登录
+                {{ lang.text("actLogin2") }}
             </div>
             <div class="account_login__pass" ng-show="loginType === 'pass'">
                 <div ng-show="loginStep2 == 1">
-                    <div class="account_login__title">帐号密码登录</div>
+                    <div class="account_login__title">{{ lang.text("actLogin2") }}</div>
                     <form name="loginForm3" class="account_login__form" novalidate>
                         <div class="account-form-control-wrapper">
                             <input class="account-form-control"
                                    name="step2Phone"
                                    type="text"
-                                   placeholder="请输入您的帐号"
+                                   placeholder="{{ lang.text('actLogin24') }}"
                                    required
                                    on-enter="login('loginForm3')"
                                    ng-model="account.step2Phone">
-                            <span class="account-form-control-tip" ng-show="account.step2Phone">手机号</span>
+                            <span class="account-form-control-tip" ng-show="account.step2Phone">{{ lang.text("actLogin17") }}</span>
                             <span class="account_login__close" ng-show="account.step2Phone" ng-click="clearPhone('step2Phone')">
                                 <i class="fa fa-times" aria-hidden="true"></i>
                             </span>
@@ -27,11 +27,11 @@
                                    autocomplete="off"
                                    name="step2Password"
                                    type="password"
-                                   placeholder="请输入您的账户密码"
+                                   placeholder="{{ lang.text('actLogin25') }}"
                                    on-enter="login('loginForm3')"
                                    required
                                    ng-model="account.step2Password">
-                            <span class="account-form-control-tip" ng-show="account.step2Password">密码</span>
+                            <span class="account-form-control-tip" ng-show="account.step2Password">{{ lang.text('actLogin22') }}</span>
                             <span class="account_login__close" ng-click="changePasswordStatus('step2PasswordStatus')">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </span>
@@ -41,11 +41,11 @@
                                    autocomplete="off"
                                    name="step2Password"
                                    type="text"
-                                   placeholder="请输入您的账户密码"
+                                   placeholder="{{ lang.text('actLogin25') }}"
                                    on-enter="login('loginForm3')"
                                    required
                                    ng-model="account.step2Password">
-                            <span class="account-form-control-tip" ng-show="account.step2Password">密码</span>
+                            <span class="account-form-control-tip" ng-show="account.step2Password">{{ lang.text('actLogin22') }}</span>
                             <span class="account_login__close" ng-click="changePasswordStatus('step2PasswordStatus')">
                                 <i class="fa fa-eye-slash" aria-hidden="true"></i>
                             </span>
@@ -55,34 +55,34 @@
                                 <span class="account_login__remenber-btn" ng-click="changeRememberLogin()">
                                     <i class="fa fa-square-o" ng-show="!rememberLoginStatus"></i>
                                     <i class="fa fa-check-square" ng-show="rememberLoginStatus"></i>
-                                    记住登录状态
+                                    {{ lang.text('actLogin7') }}
                                 </span>
                             </div>
                             <p class="account_login__pass-tip">
-                                <span ng-click="goForgetPassword()">忘记密码</span>
+                                <span ng-click="goForgetPassword()">{{ lang.text("actLogin26") }}</span>
                             </p>
                         </div>
                     </form>
                     <div class="account_login__btn_wrapper">
-                        <span class="account_login__btn" ng-click="login('loginForm3')">登录</span>
+                        <span class="account_login__btn" ng-click="login('loginForm3')">{{ lang.text('actLogin8') }}</span>
                     </div>
                     <div class="account_login__docs">
-                        <p>*已使用SSL加密技术保护您的网络安全</p>
+                        <p>{{ lang.text('actLogin27') }}</p>
                     </div>
                 </div>
                 <div ng-show="loginStep2 == 2">
-                    <div class="account_login__title">找回密码</div>
+                    <div class="account_login__title">{{ lang.text('actLogin28') }}</div>
                     <form name="loginForm4" class="account_login__form" novalidate style="margin-bottom: 45px;">
                         <div class="account-form-control-wrapper">
                             <input class="account-form-control"
                                    autocomplete="off"
                                    name="forgetPhone"
                                    type="text"
-                                   placeholder="请输入手机号码"
+                                   placeholder="{{ lang.text('actLogin3') }}"
                                    on-enter="getCaptcha('loginForm4', 'forgetPhone')"
                                    required
                                    ng-model="account.forgetPhone">
-                            <span class="account-form-control-tip" ng-show="account.forgetPhone">手机号</span>
+                            <span class="account-form-control-tip" ng-show="account.forgetPhone">{{ lang.text("actLogin17") }}</span>
                             <span class="account_login__close" ng-show="account.forgetPhone" ng-click="clearPhone('forgetPhone')">
                                 <i class="fa fa-times" aria-hidden="true"></i>
                             </span>
@@ -92,36 +92,36 @@
                                    autocomplete="off"
                                    name="forgetCode"
                                    type="text"
-                                   placeholder="请输入验证码"
+                                   placeholder="{{ lang.text('actLogin4') }}"
                                    on-enter="goForgetPassword2('loginForm4')"
                                    required
                                    ng-model="account.forgetCode">
-                            <span class="account-form-control-tip" ng-show="account.forgetCode">校验码</span>
+                            <span class="account-form-control-tip" ng-show="account.forgetCode">{{ lang.text('actLogin18') }}</span>
                             <span class="account_login__code_btn" ng-show="!codeBtnStatus.forgetPhone.count" ng-click="getCaptcha('loginForm4', 'forgetPhone')">
-                                获取校验码
+                                {{ lang.text('actLogin5') }}
                             </span>
                             <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.forgetPhone.count">
-                                {{ codeBtnStatus.forgetPhone.msg }}s 后重新获取
+                                {{ codeBtnStatus.forgetPhone.msg }}s {{ lang.text('actLogin6') }}
                             </span>
                         </div>
                     </form>
                     <div class="account_login__btn_wrapper">
-                        <span class="account_login__btn" ng-click="goForgetPassword2('loginForm4')">下一步</span>
+                        <span class="account_login__btn" ng-click="goForgetPassword2('loginForm4')">{{ lang.text('actLogin29') }}</span>
                     </div>
                 </div>
                 <div ng-show="loginStep2 == 3">
-                    <div class="account_login__title">设置密码</div>
+                    <div class="account_login__title">{{ lang.text('actLogin20') }}</div>
                     <form name="loginForm5" class="account_login__form" novalidate style="margin-bottom: 45px;">
                         <div class="account-form-control-wrapper" ng-show="forgetPasswordStatus">
                             <input class="account-form-control"
                                    autocomplete="off"
                                    name="forgetPassword"
                                    type="password"
-                                   placeholder="请输入密码"
+                                   placeholder="{{ lang.text('actLogin21') }}"
                                    on-enter="setForgetPassword('loginForm5')"
                                    required
                                    ng-model="account.forgetPassword">
-                            <span class="account-form-control-tip" ng-show="account.forgetPassword">密码</span>
+                            <span class="account-form-control-tip" ng-show="account.forgetPassword">{{ lang.text('actLogin22') }}</span>
                             <span class="account_login__close" ng-click="changePasswordStatus('forgetPasswordStatus')">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </span>
@@ -131,50 +131,50 @@
                                    autocomplete="off"
                                    name="forgetPassword"
                                    type="text"
-                                   placeholder="请输入密码"
+                                   placeholder="{{ lang.text('actLogin21') }}"
                                    on-enter="setForgetPassword('loginForm5')"
                                    required
                                    ng-model="account.forgetPassword">
-                            <span class="account-form-control-tip" ng-show="account.forgetPassword">密码</span>
+                            <span class="account-form-control-tip" ng-show="account.forgetPassword">{{ lang.text('actLogin22') }}</span>
                             <span class="account_login__close" ng-click="changePasswordStatus('forgetPasswordStatus')">
                                 <i class="fa fa-eye-slash" aria-hidden="true"></i>
                             </span>
                         </div>
-                        <p class="account_login__pass-tip2">请为您的账户设置密码，6-15位字母、数字或符号组合</p>
+                        <p class="account_login__pass-tip2">{{ lang.text('actLogin23') }}</p>
                     </form>
                     <div class="account_login__btn_wrapper">
-                        <span class="account_login__btn" ng-click="setForgetPassword('loginForm5')">完成修改</span>
+                        <span class="account_login__btn" ng-click="setForgetPassword('loginForm5')">{{ lang.text('actLogin30') }}</span>
                     </div>
                 </div>
                 <div ng-show="loginStep2 == 4">
-                    <div class="account_login__title">设置密码</div>
+                    <div class="account_login__title">{{ lang.text('actLogin20') }}</div>
                     <div class="account_login__tip">
-                        新密码设置成功
+                        {{ lang.text('actLogin31') }}
                     </div>
                     <div class="account_login__btn_wrapper">
-                        <span class="account_login__btn" ng-click="goLogin()">重新登陆</span>
+                        <span class="account_login__btn" ng-click="goLogin()">{{ lang.text('actLogin32') }}</span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="account_login login_code" ng-class="{active: loginType === 'code'}">
             <div class="account_login__pos login_code" ng-show="loginType !== 'code'" ng-click="changeLoginType('code')">
-                快捷登录
+                {{ lang.text("actLogin1") }}
             </div>
             <div class="account_login__code" ng-show="loginType === 'code'">
                 <div ng-show="loginStep1 == 1">
-                    <div class="account_login__title">快捷登录</div>
-                    <form name="loginForm1" class="account_login__form" novalidate>
+                    <div class="account_login__title">{{ lang.text("actLogin1") }}</div>
+                    <form name="loginForm1" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglish() ? '0px' : '20px'}">
                         <div class="account-form-control-wrapper">
                             <input class="account-form-control"
                                    autocomplete="off"
                                    name="step1Phone"
                                    type="text"
-                                   placeholder="请输入手机号码"
+                                   placeholder="{{ lang.text('actLogin3') }}"
                                    on-enter="getCaptcha('loginForm1', 'step1Phone')"
                                    required
                                    ng-model="account.step1Phone">
-                            <span class="account-form-control-tip" ng-show="account.step1Phone">手机号</span>
+                            <span class="account-form-control-tip" ng-show="account.step1Phone">{{ lang.text("actLogin17") }}</span>
                             <span class="account_login__close" ng-show="account.step1Phone" ng-click="clearPhone('step1Phone')">
                                 <i class="fa fa-times" aria-hidden="true"></i>
                             </span>
@@ -184,43 +184,43 @@
                                    autocomplete="off"
                                    name="step1Code"
                                    type="text"
-                                   placeholder="请输入验证码"
+                                   placeholder="{{ lang.text('actLogin4') }}"
                                    on-enter="login('loginForm1')"
                                    required
                                    ng-model="account.step1Code">
-                            <span class="account-form-control-tip" ng-if="account.step1Code">校验码</span>
+                            <span class="account-form-control-tip" ng-if="account.step1Code">{{ lang.text('actLogin18') }}</span>
                             <span class="account_login__code_btn" ng-show="!codeBtnStatus.step1Phone.count" ng-click="getCaptcha('loginForm1', 'step1Phone')">
-                                获取校验码
+                                {{ lang.text('actLogin5') }}
                             </span>
                             <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.step1Phone.count">
-                                {{ codeBtnStatus.step1Phone.msg }}s 后重新获取
+                                {{ codeBtnStatus.step1Phone.msg }}s {{ lang.text('actLogin6') }}
                             </span>
                         </div>
                         <div class="account_login__remenber">
                             <span class="account_login__remenber-btn" ng-click="changeRememberLogin()">
                                 <i class="fa fa-square-o" ng-show="!rememberLoginStatus"></i>
                                 <i class="fa fa-check-square" ng-show="rememberLoginStatus"></i>
-                                记住登录状态
+                                {{ lang.text('actLogin7') }}
                             </span>
                         </div>
                     </form>
                     <div class="account_login__btn_wrapper">
-                        <span class="account_login__btn" ng-click="login('loginForm1')">登录</span>
+                        <span class="account_login__btn" ng-click="login('loginForm1')">{{ lang.text('actLogin8') }}</span>
                     </div>
                 </div>
                 <div ng-show="loginStep1 == 2">
-                    <div class="account_login__title">设置密码</div>
-                    <form name="loginForm2" class="account_login__form" novalidate style="margin-bottom: 30px;">
+                    <div class="account_login__title">{{ lang.text('actLogin20') }}</div>
+                    <form name="loginForm2" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglish() ? '5px' : '25px'}">
                         <div class="account-form-control-wrapper" ng-show="step1PasswordStatus">
                             <input class="account-form-control"
                                    autocomplete="off"
                                    name="step1Password"
                                    type="password"
-                                   placeholder="请输入密码"
+                                   placeholder="{{ lang.text('actLogin21') }}"
                                    on-enter="setPassword('loginForm2')"
                                    required
                                    ng-model="account.step1Password">
-                            <span class="account-form-control-tip" ng-show="account.step1Password">密码</span>
+                            <span class="account-form-control-tip" ng-show="account.step1Password">{{ lang.text('actLogin22') }}</span>
                             <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
                             </span>
@@ -231,28 +231,27 @@
                                    name="step1Password"
                                    type="text"
                                    on-enter="setPassword('loginForm2')"
-                                   placeholder="请输入密码"
+                                   placeholder="{{ lang.text('actLogin21') }}"
                                    required
                                    ng-model="account.step1Password">
-                            <span class="account-form-control-tip" ng-show="account.step1Password">密码</span>
+                            <span class="account-form-control-tip" ng-show="account.step1Password">{{ lang.text('actLogin22') }}</span>
                             <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
                                 <i class="fa fa-eye-slash" aria-hidden="true"></i>
                             </span>
                         </div>
-                        <p class="account_login__code-tip">请为您的账户设置密码，6-15位字母、数字或符号组合</p>
+                        <p class="account_login__code-tip">{{ lang.text('actLogin23') }}</p>
                         <p class="account_login__code-jump">
-                            <a ui-sref="space.center.index" ng-click="openDredgeMdl({position: 'register'})">跳过</a>
+                            <a ui-sref="space.center.index" ng-click="openDredgeMdl({position: 'register'})">{{ lang.text('actLogin34') }}</a>
                         </p>
                     </form>
                     <div class="account_login__btn_wrapper">
-                        <span class="account_login__btn" ng-click="setPassword('loginForm2')">完成注册</span>
+                        <span class="account_login__btn" ng-click="setPassword('loginForm2')">{{ lang.text('actLogin33') }}</span>
                     </div>
                 </div>
                 <div class="account_login__docs">
-                    <p>未注册的手机号码验证后将自动为您创建账户</p>
-                    <p>
-                        提交代表您已阅读并同意
-                        <a class="" href="/web/blog/legal" target="_blank">老虎外汇用户协议</a>
+                    <p>{{ lang.text('actLogin9') }}</p>
+                    <p ng-show="loginStep1 == 1">
+                        {{ lang.text('actLogin10') }}<a class="" href="/agreement/client" target="_blank">{{ lang.text('actLogin11') }}</a>、<a class="" href="/agreement/risk" target="_blank">{{ lang.text('actLogin12') }}</a>、<a class="" href="/agreement/cookie" target="_blank">{{ lang.text('actLogin13') }}</a>{{ lang.text('actLogin15') }}<a class="" href="/agreement/legal" target="_blank">{{ lang.text('actLogin14') }}</a>
                     </p>
                 </div>
             </div>
