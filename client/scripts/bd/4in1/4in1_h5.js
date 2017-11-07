@@ -36,10 +36,6 @@
 				}
 			})
 
-			function activePage1() {
-				$('.section1').find('.text').addClass('animated flip')
-			}
-
 			$('#dowebok').fullpage({
 				navigation: true,
 				navigationPosition: "right",
@@ -55,7 +51,6 @@
 						$('.layui-m-layercont').css('padding', 0)
 						$.fn.fullpage.setAllowScrolling(false)
 					}
-					activePage1()
 					/*页面按钮事件*/
 					$(document.body).on("tap", function (e) {
 						var action = $(e.target).attr("data-action");
@@ -79,19 +74,7 @@
 				},
 				afterLoad: function (anchorLink, index) {
 					offsetAction(index)
-					if (index == 1) {
-						$('.section1').find('.text').addClass('animated zoomInDown')
-					}
-					else if (index == 2) {
-						$('.section2').find('.animation_item').each(function (index, item) {
-							(function (index, item) {
-								setTimeout(function () {
-									$(item).addClass('animated flip')
-								}, index * 200)
-							}(index, item))
-						})
-					}
-					else if (index == 3){
+					if (index == 3){
 						$('.section3').find('.animation_box').addClass('animated pulse')
 						.find('.animation_item').addClass('animated rollIn').end()
 					}

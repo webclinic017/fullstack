@@ -13,6 +13,7 @@
         line-height: 1.5rem;
         font-size: 0.8rem;
         background: #fff;
+        border-radius: .5rem;
         a {
             color: #222;
         }
@@ -93,7 +94,7 @@
         }
         .reg_btn {
             width: 45%;
-            margin-top: 0.8rem;
+            margin-top: -1rem;
         }
     }
     .section1 {
@@ -110,10 +111,11 @@
     }
     .section2 {
         .animation_box {
-            width: 90%;
+            width: 81%;
+            height: 80%;
             background-image: url("/images/bd_4in1/h5_sec2_anibox.png");
             .animation_item {
-                width: 7.8rem;
+                width: 6.5rem;
                 &:nth-child(2n) {
                     margin-left: 0.8rem;
                 }
@@ -131,7 +133,7 @@
             background-image: url("/images/bd_4in1/h5_sec3_anibox.png");
             padding-top: 3.5rem;
             position: relative;
-            height: 72%;
+            height: 80%;
             width: 81%;
             margin-top: 14%;
             .text_logo {
