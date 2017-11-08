@@ -168,7 +168,12 @@
         $(document).on('click', '.agment_mdl_cancle', function (e) {
             layer.closeAll()
             if($.fn.fullpage){
-                $.fn.fullpage.setAllowScrolling(true)
+                try {
+                    $.fn.fullpage.setAllowScrolling(true)
+                } catch (e) {
+                    console.log(e);
+                }
+                
             }
         })
 
@@ -192,12 +197,22 @@
             });
 
             if($.fn.fullpage){
-                $.fn.fullpage.setAllowScrolling(false)
+                try {
+                    $.fn.fullpage.setAllowScrolling(false)
+                } catch (e) {
+                    console.log(e);
+                }
+                
             }
 
             $(document).on('click', '.agreement-btn', function (e) {
                 if($.fn.fullpage){
-                    $.fn.fullpage.setAllowScrolling(true)
+                    try {
+                        $.fn.fullpage.setAllowScrolling(true)
+                    } catch (e) {
+                        console.log(e);
+                    }
+                    
                 }
                 $.isFunction(callback) && callback.call(this, {
                     curCode: code,

@@ -392,6 +392,7 @@
 
                         if ((data.code == 100402) || (data.code == 100403)) {
                             openH5AgmentModal(data.code, function(resolve, e){
+                                console.log(123);
                                 toRegister('is_agree');
                                 layer.close(resolve.layIndex)
                             })
@@ -409,7 +410,9 @@
                 });
 
             }
-            $("#submit_form").on("touchend", toRegister);
+            $("#submit_form").on("touchend", function () {
+                toRegister();
+            });
         }());
 
         /*注册成功页面*/
