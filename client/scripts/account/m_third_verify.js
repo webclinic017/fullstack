@@ -285,13 +285,8 @@ $(document).ready(function () {
 
             uploadCard('front');
             uploadCard('back');
-
-            // var oFormFront = new FormData($(".m_third_card__pic .form" )[0]);
-            // var oFormBack = new FormData($(".m_third_card__pic .form" )[1]);
-            // oFormFront.append("face", "front");
-            // oFormBack.append("face", "back");
-            // uploadCard('front', oFormFront);
-            // uploadCard('back', oFormBack);
+            // console.log(cardBaseFile.front, cardBaseFile.back);
+            
         } else {
             layer.open({
                 content: '请上传身份证',
@@ -345,29 +340,6 @@ $(document).ready(function () {
         window.location = r_href;
     });
 
-    // function uploadCard (type, oForm) {
-    //     publicUploadFile('thirdUploadIdCard', 'PUT', oForm).then(function (data) {
-    //         // console.log(data);
-    //         layer.closeAll();
-    //         if (!data) return;
-    //         if (data.is_succ) {
-    //             cardStatus[type] = true;
-
-    //             if (cardStatus.front && cardStatus.back) {
-    //                 layer.closeAll();
-    //                 step = 5;
-    //                 goStepPage();
-    //             }
-    //         } else {
-    //             layer.closeAll();
-    //             layer.open({
-    //                 content: data.message,
-    //                 skin: 'msg',
-    //                 time: 2
-    //             });
-    //         }
-    //     });
-    // }
     function uploadCard (type) {
         publicRequest('thirdUploadIdCard', 'POST', {
             face: type,
@@ -418,48 +390,93 @@ $(document).ready(function () {
         };
     }
 
-    function previewBase64(file, face) {
-        var mpImg = new MegaPixImage(file);
-        cardBaseFile[face]=new Image();
-        mpImg.render(cardBaseFile[face], { maxWidth: 640, maxHeight: 640, quality: 0.5 });
-
-    }
     // function previewBase64(file, face) {
-    //     var reader = new FileReader();
-    //     console.log(file.size);
-    //     var scale = 1;
-    //     var maxSize = 2*1024*1024;
-
-    //     if (file.size > maxSize) {
-    //         scale = Math.ceil(file.size/maxSize);
-    //         console.log("to scale "+ scale);
-    //     }
-
-    //     reader.onload = function(e) {
-    //         var img = new Image();
-    //         img.src = e.target.result;
-            
-    //         $(img).on('load', function (e) {
-    //             var canvas = document.createElement("canvas");
-    //             canvas.width=img.width/scale;
-    //             canvas.height=img.height/scale;
-    //             var ctx = canvas.getContext('2d');
-    //             console.log(img.width);
-    //             console.log(img.height);
-    //             ctx.drawImage(img,
-    //                 0,//sourceX,
-    //                 0,//sourceY,
-    //                 img.width/scale,//sourceWidth,
-    //                 img.height/scale//sourceHeight
-    //             );
-
-    //             var base64str=canvas.toDataURL("image/png");
-    //             cardBaseFile[face] = base64str.split(',')[1];
-    //         });
-            
-    //     };
-    //     reader.readAsDataURL(file);
+    //     var mpImg = new MegaPixImage(file);
+    //     cardBaseFile[face]=new Image();
+    //     mpImg.render(cardBaseFile[face], { maxWidth: 640, maxHeight: 640, quality: 0.5 });
     // }
+    function previewBase64(file, face) {
+        var reader = new FileReader();
+
+        reader.onload = function(e) {
+            var img = new Image();
+            img.src = e.target.result;
+
+            $(img).on('load', function (e) {
+                cardBaseFile[face]=new Image();
+                renderImage(cardBaseFile[face], img, { maxWidth: 640, maxHeight: 640, quality: 0.5 });
+            
+            });
+            
+        };
+        reader.readAsDataURL(file);
+    }
+
+    function renderImage (target, img, options) {
+        options = options || {};
+        var imgWidth = img.naturalWidth, imgHeight = img.naturalHeight,
+            width = options.width, height = options.height,
+            maxWidth = options.maxWidth, maxHeight = options.maxHeight,
+            doSquash = !this.blob || this.blob.type === 'image/jpeg';
+        if (width && !height) {
+            height = (imgHeight * width / imgWidth) << 0;
+        } else if (height && !width) {
+            width = (imgWidth * height / imgHeight) << 0;
+        } else {
+            width = imgWidth;
+            height = imgHeight;
+        }
+        
+        if (maxWidth && width > maxWidth) {
+            width = maxWidth;
+            height = (imgHeight * width / imgWidth) << 0;
+        }
+        if (maxHeight && height > maxHeight) {
+            height = maxHeight;
+            width = (imgWidth * height / imgHeight) << 0;
+        }
+        var opt = { width : width, height : height };
+        for (var k in options) opt[k] = options[k];
+
+        target.src = renderImageToDataURL(img, opt);
+    }
+    function renderImageToDataURL (img, options) {
+        var width = options.width, height = options.height;
+        var canvas = document.createElement("canvas"); 
+        var iw = img.naturalWidth, ih = img.naturalHeight;
+        var ctx = canvas.getContext('2d');
+        ctx.save();
+        canvas.width = width;
+        canvas.height = height;
+
+        var d = 1024; // size of tiling canvas
+        var tmpCanvas = document.createElement('canvas');
+        tmpCanvas.width = tmpCanvas.height = d;
+        var tmpCtx = tmpCanvas.getContext('2d');
+        var dw = Math.ceil(d * width / iw);
+        var dh = Math.ceil(d * height / ih);
+        var sy = 0;
+        var dy = 0;
+        
+        while (sy < ih) {
+            var sx = 0;
+            var dx = 0;
+            while (sx < iw) {
+                tmpCtx.clearRect(0, 0, d, d);
+                tmpCtx.drawImage(img, -sx, -sy);
+                ctx.drawImage(tmpCanvas, 0, 0, d, d, dx, dy, dw, dh);
+                sx += d;
+                dx += dw;
+            }
+            sy += d;
+            dy += dh;
+        }
+
+        ctx.restore();
+        tmpCanvas = tmpCtx = null;
+
+        return canvas.toDataURL("image/jpeg", options.quality || 0.5);
+    }
 
     function goStepPage () {
 
@@ -519,66 +536,4 @@ $(document).ready(function () {
         var r = window.location.search.substring(1).match(reg);  //匹配目标参数
         if (r != null) return decodeURIComponent(r[2]); return null; //返回参数值
     }
-
-
-
-    // var $inp = $(".m_third_verify__test input");
-
-    //  function preview1(file) {
-    //     var img = new Image(), url = img.src = URL.createObjectURL(file)
-    //     var $img = $(img)
-    //     img.onload = function() {
-    //         URL.revokeObjectURL(url)
-    //         $('.m_third_verify__test-pic').empty().append($img)
-    //     };
-    // }
-    // function preview2(file) {
-    //     var reader = new FileReader()
-    //     reader.onload = function(e) {
-    //         console.log(e.target);
-    //         var $img = $('<img>').attr("src", e.target.result)
-    //         $('.m_third_verify__test-pic').empty().append($img)
-    //     }
-    //     reader.readAsDataURL(file)
-    // }
-
-    // $inp.on('change', function(e) {
-    //     var file = e.target.files[0];
-    //     preview2(file);
-    // });
-
-
-
-//     var origin = $.cookie("access_origin2") || '';
-//     var token = $.cookie("token") || '';
-
-//     $(".m_third_verify__btn").on("click", function () {
-//         var oMyForm = new FormData($(".m_third_verify__test .form" )[0]);
-//         // var file = $inp[0];
-
-//         oMyForm.append("face", "front");
-//         // oMyForm.append("file", file);
-//         // console.log(oMyForm.get("face"));
-//         // console.log(oMyForm.get("file"));
-
-//         $.ajax({
-//             url: origin+'/user/upload_id_card?token='+token,
-//             type: 'POST',
-//             xhrFields: {
-//                 withCredentials: true
-// 　　　　　　  },
-//             data: oMyForm,
-//             processData: false,
-//             contentType: false,
-//             success: function (data) {
-//                 console.log(data);
-//                 alert(1);
-//             },
-//             error: function (err) {
-//                 console.log(err);
-//                 alert(2);
-//             }
-//         });
-//     });
-
 });
