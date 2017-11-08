@@ -74,3 +74,12 @@
 .btn-primary-gradient {
     @include button-gradient($btn-primary-color, $brand-primary-mid, $brand-primary-darkest, 100px);
 }
+
+.btn-text {
+    color: $brand-info;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}

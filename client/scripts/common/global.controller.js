@@ -75,6 +75,7 @@
                         }
 
                         angular.extend($scope.personal, {
+                            finishVerify: data.profile_check == 3,
                             dredged_type: dredged_type
                         });
 
@@ -226,23 +227,27 @@
                         return position
                     }
                 },
-                controller: ['$scope', 'passedScope', '$modalInstance', '$state', '$timeout', '$location', function ($scope, passedScope, $modalInstance, $state, $timeout, $location) {
+                controller: ['$scope', 'passedScope', '$modalInstance', '$state', '$timeout', '$location', '$layer', function ($scope, passedScope, $modalInstance, $state, $timeout, $location, $layer) {
                     $scope.closeModal = closeModal;
                     $scope.position = passedScope.position;
 
                     $scope.dredge_type = 'all';
 
                     $scope.confirmLive = function () {
-                        console.log(123)
-                        layer.confirm('开通真实账户后，将不再支持开通体验金账户', {
-                            btn: ['取消', '继续'], //按钮
-                            title: '提示'
-                        }, function () {
-                            layer.closeAll();
-                        }, function () {
-                            window.location.href = location.origin + '/space/#/authen/investInfo?dredge_type=live'
-                            closeModal();
-                        });
+                        $modalInstance.dismiss()
+                        $layer({
+                            title: '提示',
+                            // msgClass: 'font-danger',
+                            size: 'sm',
+                            btnsClass: 'text-right',
+                            msg: '开通真实账户后，将不再支持开通体验金账户',
+                            btns: {
+                                '取消': function () {},
+                                '继续': function () {
+                                    window.location.href = location.origin + '/space/#/authen/investInfo?dredge_type=live'
+                                }
+                            }
+                        })
                     }
 
                     function closeModal() {

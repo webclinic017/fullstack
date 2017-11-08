@@ -1,6 +1,6 @@
-<div class="asset-public withdraw">
+<div class="asset-public withdraw pd-lf-50">
     <div class="row">
-        <div class="col-xs-3 pd-tp-15 text-right deposit__title-money">
+        <div class="col-xs-2 pd-tp-15 text-left deposit__title-money">
             提现帐户
         </div>
 
@@ -17,8 +17,8 @@
     </div>
     <br>
     <div class="row">
-        <div class="col-xs-3 text-right deposit__title-money">
-            提现帐户
+        <div class="col-xs-2 text-left deposit__title-money">
+            银行卡
         </div>
 
         <div class="col-xs-9 pd-tp-10" ng-show="!withdraw.card.id">
@@ -26,11 +26,15 @@
         </div>
 
         <div class="col-xs-9" ng-show="withdraw.card.id">
-            <span class="icon-banks-{{withdraw.card.bank}}"></span>
+            <span ng-if="withdraw.card.is_short" class="card_icon icon-banks-{{ withdraw.card.bank }}"></span>
+            <span ng-if="!withdraw.card.is_short" style="font-size: 16px; font-weight: 500;">{{ withdraw.card.bank }}</span>
             &nbsp;&nbsp;&nbsp;&nbsp;
             <span>{{withdraw.card.number}}</span>
             &nbsp;&nbsp;&nbsp;&nbsp;
-            <span class="deposit__pointer font-info" ng-click="openCardMdl()">修改 ></span>
+            <span class="deposit__pointer font-info" ng-click="openManageCardMdl('switch')">切换银行卡 ></span>
+            <br>
+            <br>
+            <span class="deposit__pointer font-info btn-text" ng-click="openManageCardMdl('manage')">管理银行卡 ></span>
         </div>
     </div>
     <br>

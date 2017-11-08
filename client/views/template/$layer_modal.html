@@ -1,0 +1,18 @@
+<div class="sys_modal_v2 slim_case" ng-class="layClass">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <h5 class="sys_modal_v2__title">
+        {{ title || '系统提示' }}
+    </h5>
+
+    <div class="sys_modal_v2__content">
+        <p class="sys_modal_v2__tip" ng-class="msgClass">
+            {{ msg }}
+        </p>
+        <p class="mg-tp-30 text-center" ng-if="btns" ng-class="btnsClass">
+            <a ng-repeat="(key, value) in btns track by $index" class="btn btn-primary-gradient btn-lt mg-lf-15" ng-click="handler(value)">
+                {{ key }}
+            </a>
+        </p>
+    </div>
+</div>

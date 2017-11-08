@@ -5,9 +5,15 @@
     angular.module('fullstackApp')
         .controller('AssetWithdrawController', AssetWithdrawController);
 
-    AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', 'forex', '$cookies'];
+    AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', 'forex', '$cookies', '$layer'];
 
-    function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, forex, $cookies) {
+    function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, forex, $cookies, $layer) {
+        // 缓存当前父scope 给弹窗控制器使用
+        var parentScope = $scope;
+        parentScope.hasChooseedCard = false
+        parentScope.cardList = undefined;
+        parentScope.manageCardModalInstance = undefined;
+
         var companyName = $cookies["company_name"];
 
         $scope.message = {};
@@ -49,14 +55,20 @@
         $scope.toWithdraw = toWithdraw;
         $scope.openWithdrawMdl = openWithdrawMdl;
         $scope.openCardMdl = openCardMdl;
+        $scope.openManageCardMdl = openManageCardMdl;
         $scope.changeWithdrawType = changeWithdrawType;
 
+        // 获取默认银行卡
         getCard();
 
         //绑定银行卡后获取银行卡信息
         $rootScope.$on('bindCardSuccess', function () {
-            getCard();
+            // 通知所有子控器 
+            if(!parentScope.hasChooseedCard){
+                getCard()
+            }
         });
+
         // 汇率
         asset.getFXRate().then(function (data) {
             if (!data) return;
@@ -119,6 +131,8 @@
                     $scope.withdraw.card.address = data.data.bank_addr;
                     $scope.withdraw.card.province = data.data.province;
                     $scope.withdraw.card.city = data.data.city;
+                    // 判断是否为英文简称
+                    $scope.withdraw.card.is_short = /^[A-Za-z]/.test(data.data.bank_name);
                 }
             });
         }
@@ -127,7 +141,7 @@
          * // 校验开户状态
          * @param {* 真实账户回调 } liveTodo 
          */
-        function switchDredge(liveTodo) {
+        function switchDredge(demotodo, liveTodo) {
             // 获取开通状态
             var dredged_type = $scope.personal.dredged_type;
             // 未开通
@@ -136,20 +150,20 @@
                     position: 'withdraw'
                 });
             } else if (dredged_type == 'demo') {
-                layer.msg('您当前是体验金账户，无法使用提现功能！');
-            } else if(dredged_type == 'live'){
+                // layer.msg('您当前是体验金账户，无法使用提现功能！');
+                demotodo && demotodo()
+            } else if (dredged_type == 'live') {
                 liveTodo && liveTodo()
             }
         }
 
         function openCardMdl() {
-            switchDredge(function () {
+            checkAuthen(function () {
                 var personal = {
                     verified: $scope.personal.verified,
                     realname: $scope.personal.realname,
                     profile_check: $scope.personal.profile_check,
                 };
-    
                 $modal.open({
                     templateUrl: '/views/asset/card_modal.html',
                     size: 'md',
@@ -163,6 +177,96 @@
                         }
                     }
                 });
+            }, 'binding')
+        }
+        
+        function openManageCardMdl(type, card) {
+            $modal.open({
+                templateUrl: '/views/asset/manage_card_modal.html',
+                size: 'md',
+                backdrop: 'true',
+                controller: ['$scope', '$modalInstance', '$state', 'asset', '$timeout', function ($scope, $modalInstance, $state, asset, $timeout) {
+                    parentScope.manageCardModalInstance = $modalInstance
+                    $timeout(function () {
+                        $scope.$broadcast('hideLoadingImg');
+                    }, 0)
+                    $scope.closeModal = closeModal;
+                    $scope.manageType = type
+                    $scope.openAddCardModal = openCardMdl
+                    //刷新列表 
+                    getCardList($scope).then(function () {
+                        $scope.cardList = parentScope.cardList
+                        isShortBankName($scope.cardList)
+                    })
+                    if (type != 'delete') {
+                        // 获取银行卡列表
+                        if (!parentScope.cardList) {
+                            getCardList($scope).then(function () {
+                                $scope.cardList = parentScope.cardList
+                                isShortBankName($scope.cardList)
+                            })
+                        } else {
+                            $scope.cardList = parentScope.cardList
+                        }
+                    }
+
+                    function isShortBankName(list) {
+                        angular.forEach(list, function (value) {
+                            value.is_short = /^[A-Za-z]/.test(value.bank_name)
+                        })
+                    }
+
+                    $scope.chooseCard = function (card) {
+                        console.log(card)
+                        parentScope.withdraw.card.id = card.id;
+                        parentScope.withdraw.card.number = card.card_no;
+                        parentScope.withdraw.card.bank = card.bank_name;
+                        parentScope.withdraw.card.address = card.bank_addr;
+                        parentScope.withdraw.card.province = card.province;
+                        parentScope.withdraw.card.city = card.city;
+                        // 更改选中状态
+                        parentScope.hasChooseedCard = true;
+                        // 判断是否为英文简称
+                        parentScope.withdraw.card.is_short = /^[A-Za-z]/.test(card.bank_name);
+                        closeModal()
+                    }
+
+                    $scope.confirmDeleteCard = function (card) {
+                        closeModal()
+                        openManageCardMdl('delete', card)
+                    }
+
+                    $scope.deleteCard = function () {
+                        asset.deleteCard(card.id).then(function(data){
+                            if(data.is_succ){
+                                getCardList($scope).then(function () {
+                                    $scope.cardList = parentScope.cardList
+                                    isShortBankName($scope.cardList)
+                                    if($scope.cardList.length == 0){
+                                        parentScope.withdraw.card = {}
+                                    }
+                                })
+                                closeModal()
+                            }
+                        })
+                    }
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }]
+            });
+        }
+
+        function getCardList(_scope) {
+            _scope.$emit('showLoadingImg');
+            return asset.getCardList().then(function (data) {
+                _scope.$broadcast('hideLoadingImg');
+                if (!data) {
+                    console.info('获取银行卡列表失败！')
+                    return
+                }
+                parentScope.cardList = data.data
             })
         }
 
@@ -195,7 +299,29 @@
             });
         }
 
-        
+        function openVerifyMdl(type) {
+            // 没有完成实名认证
+            $modal.open({
+                templateUrl: '/views/asset/verify_modal.html',
+                size: 'sm',
+                backdrop: true,
+                controller: function ($scope, $modalInstance) {
+                    $scope.closeModal = closeModal;
+                    $scope.type = type;
+                    $scope.dredgeType = 'unknow';
+
+                    switchDredge(function () {
+                        $scope.dredgeType = 'demo'
+                    }, function () {
+                        $scope.dredgeType = 'live'
+                    })
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
 
         function openMessageMdl() {
             var message = $scope.message;
@@ -208,7 +334,6 @@
                     $scope.closeModal = closeModal;
                     $scope.message = message;
                     // console.info(message);
-
                     function closeModal() {
                         $modalInstance.dismiss();
                     }
@@ -221,11 +346,40 @@
             $scope.withdraw.maxAmount = type === 'invest' ? $scope.maxAmountInvest : $scope.maxAmountWallet;
         }
 
+        function checkAuthen(finishTodo, type) {
+            // 体验金账户未完成实名认证
+            var verifyStatus = $scope.personal.verify_status
+            if (!$scope.personal.finishVerify) {
+                // 先关闭父级modal
+                if(parentScope.manageCardModalInstance){
+                    parentScope.manageCardModalInstance.dismiss()
+                }
+                // 资料已经提交审核
+                if (verifyStatus == 5) {
+                    $layer({
+                        // title: '系统提示',
+                        // msgClass: 'font-danger',
+                        size: 'sm',
+                        btnsClass: 'text-right',
+                        msg: '您的账户正在审核中，请等待审核通过后再进行提现操作',
+                        btns: {
+                            '确定': function () { }
+                        }
+                    })
+                }
+                // 未上传过身份证 或者 实名被拒绝
+                if (verifyStatus < 5) {
+                    openVerifyMdl(type || 'withdraw')
+                }
+            } else {
+                finishTodo && finishTodo()
+            }
+        }
+
         // 提现
         $scope.clickable = true;
         function toWithdraw() {
-            // 校验开户状态
-            switchDredge(function () {
+            checkAuthen(function () {
                 showErr('amount');
                 // console.info($scope.withdrawForm.$invalid);
                 if ($scope.withdrawForm.$invalid) {
@@ -234,32 +388,15 @@
                 if ($scope.clickable == false) {
                     return;
                 }
-    
-                console.log('toWithdraw is click');
+
                 $scope.clickable = false;
-    
+
                 if ($scope.withdraw.type === 'invest') {
                     withdrawInvest();
                 } else {
                     withdrawWallet();
                 }
             })
-        }
-
-        function openSystemMdl(type) {
-            $modal.open({
-                templateUrl: '/views/asset/verify_modal.html',
-                size: 'sm',
-                backdrop: true,
-                controller: function ($scope, $modalInstance) {
-                    $scope.type = type;
-                    $scope.closeModal = closeModal;
-
-                    function closeModal() {
-                        $modalInstance.dismiss();
-                    }
-                }
-            });
         }
 
         function withdrawInvest() {
@@ -279,12 +416,10 @@
                             withdraw();
                         });
                     }
-
                 } else {
                     // console.info($scope.message);
                     openMessageMdl();
                     $scope.clickable = true;
-
                 }
 
                 function withdraw() {
@@ -329,7 +464,6 @@
             });
         }
 
-
         function hideErr(name) {
             if ($scope.frontErr[name]) {
                 $scope.frontErr[name].show = false;
@@ -342,13 +476,10 @@
             }
         }
 
-
         $scope.formatText = function (text) {
             if (!text) return '';
             var newText = text.replace(/\\r\\n/g, '<br>');
             return '6.' + newText;
         }
-
     }
-
 })();
