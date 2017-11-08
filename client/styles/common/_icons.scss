@@ -23,26 +23,27 @@
     background-color: #fff;
 }
 
-@each $name in $bank-names {
-    .icon-bank-#{$name} {
-        @extend .icon-bank;
-        @include img-normal($icon-path-bank + "#{$name}.jpg");
-    }
-}
+// @each $name in $bank-names {
+//     .icon-bank-#{$name} {
+//         @extend .icon-bank;
+//         @include img-normal($icon-path-bank + "#{$name}.jpg");
+//     }
+// }
 
 .icon-banks {
     display: inline-block;
     width: 129px;
-    height: 42px;
+    height: 34.55px;
     vertical-align: middle;
-    @include img-normal($icon-path-bank + "banks.jpg");
+    background-size: 100% auto;
+    @include img-normal($icon-path-bank + "bank_list.jpg");
 }
-@each $name in $bank-names {
+@each $name in $bank-names_new {
     .icon-banks-#{$name} {
         @extend .icon-banks;
         // background-position-x: 0;
         // background-position-y: -(index($bank-names, $name) - 1) * 44px;
-        background-position:0px (-(index($bank-names, $name) - 1) * 44px);
+        background-position:0px (-(index($bank-names_new, $name) - 1) * 34.55px);
     }
 }
 

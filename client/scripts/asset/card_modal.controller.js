@@ -9,14 +9,16 @@
 
     function AssetCardController($scope, config, $state, $modalInstance, validator, account, asset, passedScope) {
         $scope.personal = passedScope.personal;
-        console.log($scope.personal,'$scope.personal');
+        console.log($scope.personal, '$scope.personal');
         $scope.card = {
             //number: ,         // 卡号
             //bank: ,           // 银行
             // address: ,       // 开户行
-            binding: false
+            binding: false,
+            realname: ''
         };
         $scope.banks = [];
+        $scope.clickable = true;
 
         $scope.provinces = [];
         $scope.citys = [];
@@ -38,6 +40,11 @@
             },
             city: {
                 show: false
+            },
+            realname: {
+                show: false,
+                reg: validator.regType.realname.reg,
+                tip: validator.regType.realname.tip,
             }
         };
 
@@ -53,9 +60,9 @@
             // console.log(data);
             if (data.is_succ) {
                 var b = [];
-                angular.forEach(data.data, function (val, index) {
+                angular.forEach(data.data, function (val, key) {
                     b.push({
-                        nameEN: index,
+                        nameEN: key,
                         nameZH: val
                     });
                 });
@@ -86,10 +93,10 @@
                 if (!data) return;
                 // console.info(data);
                 $scope.provinces = data.data;
-                if(!passedScope.card.province){ return }
+                if (!passedScope.card.province) { return }
                 var keepGoing = true;
                 var targetProvinceZh = passedScope.card.province
-                angular.forEach($scope.provinces, function (province,index) {
+                angular.forEach($scope.provinces, function (province, index) {
                     if (!keepGoing) {
                         return;
                     }
@@ -107,10 +114,10 @@
                 if (!data) return;
                 // console.info(data);
                 $scope.citys = data.data;
-                if(!passedScope.card.city){ return }
+                if (!passedScope.card.city) { return }
                 var targetCityZh = passedScope.card.city;
                 var keepGoing = true;
-                angular.forEach($scope.citys, function (city,index) {
+                angular.forEach($scope.citys, function (city, index) {
                     if (!keepGoing) {
                         return;
                     }
@@ -122,37 +129,44 @@
             });
         }
         function submitForm() {
-            // console.log($scope.card);
+            // console.log($scope.card, $scope.card.bank.nameEN);
+            showErr('realname');
             showErr('number');
             showErr('bank');
             showErr('address');
             showErr('province');
             showErr('city');
-            console.info($scope.cardForm.city);
+            // console.info($scope.cardForm.city);
 
             if ($scope.cardForm.$invalid) {
                 return;
             }
 
+            $scope.clickable = false;
+
             // 如果是第一次绑卡
             if (typeof $scope.card.id === 'undefined') {
                 asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address, $scope.card.province.code, $scope.card.city.code).then(function (data) {
+                    $scope.clickable = true
                     if (!data) return;
                     if (data.is_succ) {
                         $scope.card.binding = true;
                         $scope.$emit('bindCardSuccess');
                     } else {
+                        $scope.$emit('bindCardFail');
                         alert(data.message);
                     }
                 });
             } else {
                 // 修改银行卡
                 asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address, $scope.card.province.code, $scope.card.city.code, $scope.card.id).then(function (data) {
+                    $scope.clickable = true
                     if (!data) return;
                     if (data.is_succ) {
                         $scope.card.binding = true;
                         $scope.$emit('bindCardSuccess');
                     } else {
+                        $scope.$emit('bindCardFail');
                         alert(data.message);
                     }
                 });

@@ -123,3 +123,22 @@
         margin-left: -40px;
     }
 }
+
+// 银行卡管理modal
+@include b(manage_card_list){
+    width: 100%;
+    @include e(item){
+        td {
+            height: 65px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            .card_icon{
+                transform: scale(1.25);
+                -webkit-transform: scale(1.25);
+            }
+            .card_number, .card_btn{
+                font-size: 16px;
+            }
+        }
+    }
+}

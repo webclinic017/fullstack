@@ -9,8 +9,8 @@
         </a>
         <p ng-if="personal.dredged_type == 'demo' && personal.verify_status < 5" class="layout-2__content-tip">
             您当前账户为体验金账户，升级至真实账户只需两步：
-            <a class="link" ui-sref="space.asset.subpage({subpage: 'deposit'})">1.充值激活</a> &nbsp;&nbsp;
-            <a class="link" ui-sref="authen.subpage({subpage: 'realname'})">2.上传证件审核</a>
+            <a class="link" ui-sref="authen.subpage({subpage: 'realname'})">1.上传证件审核</a> &nbsp;&nbsp;
+            <a class="link" ui-sref="space.asset.subpage({subpage: 'deposit'})">2.充值激活</a>
         </p>
         <div class="mg-tp-30" ui-view="content"></div>
     </div>

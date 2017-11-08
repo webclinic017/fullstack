@@ -29,7 +29,7 @@
 
 .modal-content {
     position: relative;
-    border-radius: $border-radius-base;
+    border-radius: $border-radius-lg * 2;
     background-clip: padding-box;
     outline: 0;
     overflow: hidden;
@@ -162,14 +162,41 @@
 @include b(sys_modal_v2) {
     padding: 50px 80px;
     position: relative;
+
+    &.slim_case{
+        padding: 25px;
+        .sys_modal_v2__title {
+            margin-top: 0!important;
+        }
+    }
+    &.mid_case{
+        padding: 35px;
+    }
+    &.has_border{
+        border: 1px solid #dedede;
+        border-radius: 8px;
+    }
     .close {
         position: absolute;
-        right: 10px;
-        top: 5px;
+        right: 15px;
+        top: 10px;
         font-size: 22px;
         @extend .font-base;
     }
     @include e(title) {
+        margin: 0;
+        padding: 8px 0;
+        line-height: 20px;
+        @extend .font-base;
+        font-size: 25px;
+        margin: 15px 0;
+        .desp {
+            font-size: 14px;
+            color: $gray-dark;
+            font-weight: 400;
+        }
+    }
+    @include e(sub_title) {
         margin: 0;
         padding: 8px 0;
         line-height: 20px;
@@ -183,7 +210,7 @@
         font-size: 14px;
     }
     @include e(content) {
-        min-height: 150px;
+        // min-height: 150px;
     }
     .btn_wrapper {
         margin-top: 30px;

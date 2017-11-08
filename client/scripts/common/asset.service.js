@@ -12,6 +12,8 @@
             withdraw: withdraw,
             getCard: getCard,
             bindCard: bindCard,
+            deleteCard: deleteCard,
+            getCardList: getCardList,
             cancelWithdraw: cancelWithdraw,
             getHistory: getHistory,
             deposit: deposit,
@@ -68,6 +70,26 @@
                 bank_addr: address,
                 province: province,
                 city: city,
+                id: id
+            });
+        }
+
+        /**
+         * Asset Service 获取银行卡list
+         *
+         * @method getCardList
+         */
+        function getCardList() {
+            return publicHttp.dealPublicRequest(o.getCardListApi, 'GET');
+        }
+
+        /**
+         * Asset Service 删除银行卡
+         *
+         * @method deleteCard
+         */
+        function deleteCard(id) {
+            return publicHttp.dealPublicRequest(o.deleteCardApi, 'POST', {
                 id: id
             });
         }
