@@ -63,13 +63,12 @@
 
         //绑定银行卡后获取银行卡信息
         $rootScope.$on('bindCardSuccess', function () {
-            // 没有选中任何卡时刷新默认卡片
-            if (!parentScope.hasChooseedCard) {
+            // 通知所有子控器 
+            if(!parentScope.hasChooseedCard){
                 getCard()
             }
-            // 通知所有子控器 
-            $rootScope.$broadcast('bindCardSuccess')
         });
+
         // 汇率
         asset.getFXRate().then(function (data) {
             if (!data) return;
@@ -180,8 +179,8 @@
                 });
             }, 'binding')
         }
-
-        function openManageCardMdl(type) {
+        
+        function openManageCardMdl(type, card) {
             $modal.open({
                 templateUrl: '/views/asset/manage_card_modal.html',
                 size: 'md',
@@ -194,12 +193,10 @@
                     $scope.closeModal = closeModal;
                     $scope.manageType = type
                     $scope.openAddCardModal = openCardMdl
-                    // 添加新的银行卡 刷新列表 
-                    $scope.$on('bindCardSuccess', function () {
-                        getCardList($scope).then(function () {
-                            $scope.cardList = parentScope.cardList
-                            isShortBankName($scope.cardList)
-                        })
+                    //刷新列表 
+                    getCardList($scope).then(function () {
+                        $scope.cardList = parentScope.cardList
+                        isShortBankName($scope.cardList)
                     })
                     if (type != 'delete') {
                         // 获取银行卡列表
@@ -232,6 +229,26 @@
                         // 判断是否为英文简称
                         parentScope.withdraw.card.is_short = /^[A-Za-z]/.test(card.bank_name);
                         closeModal()
+                    }
+
+                    $scope.confirmDeleteCard = function (card) {
+                        closeModal()
+                        openManageCardMdl('delete', card)
+                    }
+
+                    $scope.deleteCard = function () {
+                        asset.deleteCard(card.id).then(function(data){
+                            if(data.is_succ){
+                                getCardList($scope).then(function () {
+                                    $scope.cardList = parentScope.cardList
+                                    isShortBankName($scope.cardList)
+                                    if($scope.cardList.length == 0){
+                                        parentScope.withdraw.card = {}
+                                    }
+                                })
+                                closeModal()
+                            }
+                        })
                     }
 
                     function closeModal() {
@@ -334,7 +351,9 @@
             var verifyStatus = $scope.personal.verify_status
             if (!$scope.personal.finishVerify) {
                 // 先关闭父级modal
-                parentScope.manageCardModalInstance.dismiss()
+                if(parentScope.manageCardModalInstance){
+                    parentScope.manageCardModalInstance.dismiss()
+                }
                 // 资料已经提交审核
                 if (verifyStatus == 5) {
                     $layer({

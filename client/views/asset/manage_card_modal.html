@@ -32,6 +32,9 @@
                         <p class="text-center" ng-if="manageType == 'switch'">
                             <a class="btn-text card_btn" ng-click="chooseCard(card)">选择</a>
                         </p>
+                        <p class="text-center" ng-if="manageType == 'manage'">
+                            <a class="btn-text card_btn" ng-click="confirmDeleteCard(card)">删除</a>
+                        </p>
                     </td>
                 </tr>
             </tbody>
@@ -47,7 +50,7 @@
         <p class="sys_modal_v2__desp mg-tp-20">确认删除本银行卡，如需再次使用需重新验证</p>
         <div class="btn_wrapper text-right clearfix">
             <a class="btn-text fr mg-lf-20" ng-click="closeModal()">取消</a>
-            <a class="btn-text fr">删除</a>
+            <a class="btn-text fr" ng-click="deleteCard()">删除</a>
         </div>
     </div>
 </div>

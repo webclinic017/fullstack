@@ -55,7 +55,7 @@
             getCardApi: urlOrigin2 + '/user/bank_card',
             bindCardApi: urlOrigin2 + '/user/bank_card',
             getCardListApi: urlOrigin2 + '/user/bank_card/lists',
-            deleteCardApi: urlOrigin2 + '/user/bank_card/destory',
+            deleteCardApi: urlOrigin2 + '/user/bank_card/destroy',
             cancelWithdrawApi: urlOrigin2 + '/payment/withdraw/cancel',
             getHistoryApi: urlOrigin2 + '/payment/histories',
             depositApi: urlOrigin2 + '/payment/deposit',
