@@ -4,6 +4,7 @@
 @import "common/jquery.fullPage";
 @import "common/animate";
 @import "common/selectordie";
+@import "common/agment_mdl";
 
 // H5 CSS
 @import "bd/t31/m_t31_game";
@@ -15,6 +16,9 @@
 @import "bd/honor/h5";
 @import "bd/prize/h5";
 @import "bd/mon_report/index";
+@import "bd/forgive/m_forgive";
+@import "bd/4in1/4in1_h5";
+@import "bd/t36/m_t36";
 
 @import "m_agent_become";
 @import "m_register";
@@ -27,3 +31,5 @@
 @import "web/download";
 @import "m_web";
 @import "m_third_verify";
+
+@import "web/m_agreement";

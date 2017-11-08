@@ -1,0 +1,42 @@
+<div class="agreement_common" data-list-type="responsibly">
+    <div class="agreement_common__to_top" ng-class="{active: showScrollTop}">
+        <span ng-click="toTop()"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+    </div>
+    <div class="agreement_common__title clearfix">
+        <div class="tit"><%= lang.text("amtIndex14")%></div>
+        <div tw-agreement-tab data-tab-list="tabList"></div>
+    </div>
+    <div class="agreement_common__sub_title" data-action="agreement0">
+        <%= lang.text("amtResponsibly1")%>
+    </div>
+    <p class="agreement_common__detail">
+        <%= lang.text("amtResponsibly2")%>
+    </p>
+    <p class="agreement_common__detail">
+        <%= lang.text("amtResponsibly3")%>
+    </p>
+    <div class="agreement_common__sub_title" data-action="agreement1">
+        <%= lang.text("amtResponsibly4")%>
+    </div>
+    <p class="agreement_common__detail">
+        <%= lang.text("amtResponsibly5")%>
+    </p>
+    <p class="agreement_common__detail">
+        <%= lang.text("amtResponsibly6")%>
+    </p>
+    
+
+    <div class="agreement_common__tip">
+        <span><%= lang.text("amtCommon1")%></span>
+        <% if (lang.currentLanguage() == 'en') {%>
+            <a href="/white_label/legal/TigerWit Trade Responsibly Notice.pdf" target="_blank"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;TigerWit Trade Responsibly Notice</a>
+
+            <a href="/white_label/legal/老虎外汇-负责任交易声明.pdf" target="_blank"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;老虎外汇-负责任交易声明</a>
+        <%} else {%>
+            <a href="/white_label/legal/老虎外汇-负责任交易声明.pdf" target="_blank"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;老虎外汇-负责任交易声明</a>
+
+            <a href="/white_label/legal/TigerWit Trade Responsibly Notice.pdf" target="_blank"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;TigerWit Trade Responsibly Notice</a>
+        <%}%>
+        
+    </div>
+</div>

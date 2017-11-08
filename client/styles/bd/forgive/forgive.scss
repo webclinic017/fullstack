@@ -1,0 +1,81 @@
+.bd_forgive_layout {
+  padding-top: 70px;
+  background: #fff;
+}
+.bd_forgive_body {
+  .layui-layer-content {
+    overflow: hidden!important;
+  }
+}
+.forgive_box {
+  width: 1000px;
+  margin: 0 auto;
+  .forgive_imgs {
+    margin-top: 50px;
+    width: 100%;
+    transition: all 0.66s ease;
+    transform: translateY(38px) translateX(5px);
+    &.active {
+      transform: translateY(0px) translateX(0px);
+    }
+  }
+  .forgive__btn {
+    cursor: pointer;
+  }
+}
+
+.forgive_layer_skin {
+  background: transparent!important;
+  box-shadow: none!important;
+  overflow: hidden!important;
+}
+.layer_content {}
+
+.forgiveLayer {
+  position: relative;
+  width: 520px;
+  height: 180px;
+  img{
+    display: inline-block;
+    position: absolute;
+  }
+  .bg{
+    width: 100%;
+    top: 0;
+    left: 0;
+    &.detail {
+      cursor: pointer;
+    }
+  }
+  
+  &.nofit {
+    .msg {
+      position: absolute;
+      background: url('/images/bd_forgive/nofit_bg.png') no-repeat;
+      background-size: 100%;
+      width: 100%;
+      height: 100%;
+      padding-top: 40px;
+      font-weight: 800;
+      font-size: 24px;
+      font-family: 'FontLive';
+    }
+  }
+  .deposit-btn {
+    display: none;
+  }
+  .btn-down {
+    bottom: -10%;
+    cursor: pointer;
+  }
+  .btn-left {
+    left: 10%;
+  }
+  .btn-right {
+    right: 8%;
+  }
+  .btn-center {
+    right: 30%;
+    bottom: 5%;
+  }
+}

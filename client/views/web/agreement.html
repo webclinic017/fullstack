@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+        <% include /common/meta/web.html %>
+    
+        <title><%=lang.text("companyZhName")%>｜TigerWit 直通全球资本市场</title>
+        <meta name="description" content="老虎外汇直通全球资本市场。">
+        <meta name="keywords" content="老虎外汇，TigerWit，复制交易，外汇，贵金属，CFD，互联网金融">
+        
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
+        <!-- endbuild -->
+
+        <% include /common/statistic/main.html %>
+    </head>
+    <body ng-app="fullstackApp" class="<%= lang_class%>">
+        <div ng-controller="GlobalController">
+            <div class="header">
+                <% include /common/nav/web.header.html %>
+            </div>
+            
+            <div class="body">
+                <div class="layout-2" ng-controller="WebAgreementController">
+                    <%- include('./agreement/' + pageInfo.id + '.html') %>
+                </div>
+            </div>
+
+        <% include /common/vendor/web.js.html %>
+
+        <!-- build:js(client) /scripts/web_agreement.js -->
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/authorization.service.js"></script>
+        
+        <script src="/scripts/common/validator.service.js"></script>
+        <script src="/scripts/common/lang.service.js"></script>
+        <script src="/scripts/common/lang_data.service.js"></script>
+        <script src="/scripts/common/redbag.service.js"></script>
+        
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/form_select.directive.js"></script>
+        <script src="/scripts/common/upload_history_file.directive.js"></script>
+        <script src="/scripts/common/agreement.directive.js"></script>
+        <script src="/scripts/common/utils.service.js"></script>
+        <script src="/scripts/common/bind_html.filter.js"></script>
+        
+        <script src="/scripts/common/global.controller.js"></script>
+        <script src="/scripts/web/agreement.controller.js"></script>
+
+        <!-- endbuild -->
+
+            <div class="footer">
+                <% include /common/nav/web.footer.html %>
+            </div>
+        </div>
+    </body>
+</html>

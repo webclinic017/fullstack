@@ -1,0 +1,101 @@
+<div class="panda_asset_bg">
+    <div class="container" style="padding-top: 20px;">
+        <div class="" ng-controller="PandaNavController" style="float: right;">
+            <div>
+                <img class="navbar_info__avatar" ng-src="{{pandaInfo.userAvatar}}">
+                <h4 class="navbar_info__username" style="color: #fff;">{{pandaInfo.userName || '**'}}</h4>
+            </div>
+
+            <a class="navbar_info__logout" href="" ng-click="pandaLogout()">
+                <i class="fa fa-sign-out"></i>
+                退出
+            </a>
+        </div>
+        <div ng-controller="PandaAssetController" class="asset-public deposit" style="padding-top: 80px; margin-top: 50px;">
+            <div ng-show="!walletDepositSucc">
+                <div class="row mg-tp-30">
+                    <div class="col-xs-3 text-right deposit__title-money">充值金额</div>
+                    <div class="col-xs-6 deposit__input">
+                        <form name="depositForm" novalidate>
+                            <div class="form-control-wrapper">
+                                <input class="form-control form-control-md"
+                                       ng-if="deposit.type === 'invest' || deposit.type === 'alipay'"
+                                       name="amount"
+                                       type="text"
+                                       required
+                                       ng-class="{'form-control-error': frontErr.amount.show && depositForm.amount.$invalid}"
+                                       ng-model="deposit.amount"
+                                       ng-pattern="frontErr.amount.reg"
+                                       twform-min="{{deposit.minAmount}}"
+                                       ng-change="checkInputAmount()"
+                                       ng-focus="hideErr('amount')"
+                                       ng-blur="showErr('amount')">
+                                <input class="form-control form-control-md"
+                                       ng-if="deposit.type === 'wallet'"
+                                       name="amount"
+                                       type="text"
+                                       required
+                                       ng-class="{'form-control-error': frontErr.amount.show && depositForm.amount.$invalid}"
+                                       ng-model="deposit.amount"
+                                       ng-pattern="frontErr.amount.reg"
+                                       ng-change="checkInputAmount()"
+                                       ng-focus="hideErr('amount')"
+                                       ng-blur="showErr('amount')">
+
+                                <span class="asset__input-icon">$</span>
+
+                                <div ng-show="frontErr.amount.show">
+                                    <p class="alert alert-arrow_tp_lf" ng-show="depositForm.amount.$error.required">
+                                        请输入入金金额
+                                    </p>
+
+                                    <p class="alert alert-arrow_tp_lf" ng-show="depositForm.amount.$error.pattern">
+                                        输入的金额为大于零的整数或者小数（小数点后最多两位数字）
+                                    </p>
+
+                                    <p class="alert alert-arrow_tp_lf" ng-show="depositForm.amount.$error.twformMin">
+                                        入金金额最少为 {{deposit.minAmount}} 美金
+                                    </p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-xs-3">
+                        <button class="btn btn-primary btn-sm" ng-click="toDeposit()">充值</button>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-9 col-xs-offset-3">
+                        <p class="panda_c">
+                            <span class="font-danger">＊</span>今日汇率：1 美元 =
+                            <span>{{deposit.FXRate.value}}</span> 人民币
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="row mg-tp-30">
+                    <div class="col-xs-3 text-right deposit__title-money">充值方式</div>
+                    <div class="col-xs-6">
+                        <div class="deposit__way" ng-class="{active: deposit.type === 'invest'}" ng-click="changeDepositType('invest')">
+                            网银支付
+                        </div>
+                    </div>
+                </div>
+                <div class="row mg-tp-30">
+                    <div class="col-xs-3"></div>
+                    <div class="col-xs-6">
+                        <div class="deposit__way" ng-class="{active: deposit.type === 'wallet', disabled: !deposit.wallet}" ng-click="changeDepositType('wallet')">
+                            零钱包可用余额: ${{ walletAble || '0.00' }}
+                        </div>
+                        <p class="deposit__way-tip" ng-class="{active: deposit.walletTip}">零钱包余额不足，请尝试用网银支付</p>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="deposit__wallet_succ" ng-show="walletDepositSucc">
+                <span style="color: #4555cd; padding-right: 10px; cursor: pointer;" ng-click="returnAsset();"><i class="fa fa-chevron-left" aria-hidden="true"></i> 返回</span>充值已提交，审核通过后零钱将划入交易账户
+            </div>
+        </div>
+    </div>
+</div>

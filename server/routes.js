@@ -85,6 +85,24 @@ module.exports = function (app) {
         res.render('space', extendPublic({}, req));
     });
 
+    // 熊猫外汇页面路径
+    app.route('/panda').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('panda', extendPublic({
+            pageInfo: {
+                id: "login"
+            }
+        }, req));
+    });
+    app.route('/panda/:subpage(login|asset)').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('panda', extendPublic({
+            pageInfo: {
+                id: req.params.subpage || ""
+            }
+        }, req));
+    });
+
     app.route('/').get(function (req, res) {
         setEnvCf(req, res);
 
@@ -435,7 +453,7 @@ module.exports = function (app) {
     });
 
     // 条件和条款
-    app.route('/web/blog/:subpage(risk|statement|notice|legal)').get(function (req, res) {
+    app.route('/web/blog/:subpage(agreement|risk|statement|notice|legal)').get(function (req, res) {
         var subpage = req.params.subpage || 'risk';
         var pageInfo = {
             id: subpage
@@ -444,6 +462,24 @@ module.exports = function (app) {
         res.render('web/blog.html', extendPublic({
             pageInfo: pageInfo
         }, req));
+    });
+    // 条件和条款--子项目
+    app.route('/agreement/:subpage').get(function (req, res) {
+        var subpage = req.params.subpage;
+        var pageInfo = {
+            id: subpage
+        };
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            res.render('web/m_agreement.html', extendPublic({
+                pageInfo: pageInfo
+            }, req));
+        } else {
+            res.render('web/agreement.html', extendPublic({
+                pageInfo: pageInfo
+            }, req));
+        }
+        
     });
 
     app.route('/web/mt4').get(function (req, res) {
@@ -543,25 +579,38 @@ module.exports = function (app) {
     // t33 作为固定推广链接，要更新最新的落地页到这个地址
     app.route('/bd/t33').get(function (req, res) {
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t38/h5.html', extendPublic({}, req))
+                res.render('bd/t36/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t38/web.html', extendPublic({}, req));
+                res.render('bd/t36/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
         }
     });
 
-    // 红包活动
+    //红包活动
+    // app.route('/bd/t35').get(function (req, res) {
+    //     setEnvCf(req, res);
+    //     if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+    //         if (isMobile(req)) {
+    //             res.render('bd/t38/h5.html', extendPublic({}, req))
+    //         } else {
+    //             res.render('bd/t38/web.html', extendPublic({}, req));
+    //         }
+    //     } else {
+    //         res.render('404.html', extendPublic({}, req));
+    //     }
+    // });
+    // 11月份活动
     app.route('/bd/t35').get(function (req, res) {
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t38/h5.html', extendPublic({}, req))
+                res.render('bd/t36/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t38/web.html', extendPublic({}, req));
+                res.render('bd/t36/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -581,7 +630,9 @@ module.exports = function (app) {
     // 品牌部活动 － 申请代理
     app.route('/bd/brand_proxy').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('bd/brand/proxy', extendPublic({}, req));
+        res.render('bd/brand/proxy', extendPublic({
+            in_phone: isMobile(req) ? 'y' : 'n'
+        }, req));
     });
 
     // 抽奖活动
@@ -625,6 +676,34 @@ module.exports = function (app) {
             }, req));
         });
         
+    });
+
+    // 一键原谅活动
+    app.route('/bd/forgiveme').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('bd/forgive/h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/forgive/web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+
+    // 四位一体
+    app.route('/bd/4in1').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('bd/4in1/4in1_h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/4in1/4in1_web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
     });
 
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
@@ -852,11 +931,11 @@ module.exports = function (app) {
                     }
                 }
             } else if (system == "ios") {
-                // var version = versionCode.replace(/\./g, "");
-                // // console.log(version, currentVersionNumIos);
-                // if (Number(version) < Number(currentVersionNumIos)) {
-                //     currentVersion = versinInfo.getAppInfoIos();
-                // }
+                var version = versionCode.replace(/\./g, "");
+                // console.log(version, currentVersionNumIos);
+                if (Number(version) < Number(currentVersionNumIos)) {
+                    currentVersion = versinInfo.getAppInfoIos();
+                }
             }
             data = currentVersion;
         }

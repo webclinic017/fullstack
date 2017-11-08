@@ -13,7 +13,7 @@
     }
 
     set_token();
-
+    
     /*token 5分钟过期*/
     setInterval(function () {
         set_token();
@@ -342,7 +342,8 @@
         /*提交按钮*/
         ;
         (function () {
-            $("#submit_form").on("touchend", function () {
+
+            function toRegister (is_agree) {
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
                 // if (!checkPassword()) return;
@@ -371,7 +372,8 @@
                     unit: oReg.search_arr.unit || null,
                     lp: oReg.search_arr.lp || null,
                     key: oReg.search_arr.key || null,
-                    email: oReg.search_arr.email || null
+                    email: oReg.search_arr.email || null,
+                    is_agree: is_agree == 'is_agree' ? 1 : 0
                 }).then(function (data) {
                     console.log(data);
                     if (!data) return;
@@ -387,16 +389,29 @@
                             window.location.href = window.location.origin + "/m/h5_register/succ";
                         }
                     } else {
-                        layer.closeAll();
-                        layer.open({
-                            content: data.message,
-                            skin: 'msg',
-                            anim: false,
-                            time: 2 /*2秒后自动关闭*/
-                        });
+
+                        if ((data.code == 100402) || (data.code == 100403)) {
+                            openH5AgmentModal(data.code, function(resolve, e){
+                                console.log(123);
+                                toRegister('is_agree');
+                                layer.close(resolve.layIndex)
+                            })
+                        } else {
+                            layer.closeAll();
+                            layer.open({
+                                content: data.message,
+                                skin: 'msg',
+                                anim: false,
+                                time: 2 /*2秒后自动关闭*/
+                            });
+                        }
+                        
                     }
                 });
 
+            }
+            $("#submit_form").on("touchend", function () {
+                toRegister();
             });
         }());
 
@@ -416,27 +431,24 @@
 
         /*客户协议页面*/
         if (isInAgreement()) {
-            function tabHandle(e) {
-                var $target = $(e.target);
-                var tab_attr = $target.attr("tabindex");
-                var $items = $(".tips .tips_item");
-                $target.siblings().removeClass("active").end().addClass("active");
-                $items.removeClass("active");
-                $items.each(function (index, item) {
-                    var $item = $(item);
-                    if ($item.attr("tabindex") == tab_attr) {
-                        $item.addClass("active");
-                    }
-                });
-            }
 
-            $(".tabNav li").on("touchend", tabHandle);
+            $(".h5_agreement_content .h5_agreement_item .tit").on('touchend', function () {
+                var ad = $(this).attr("data-address");
+                var action_address = window.location.origin +
+                             "/agreement/"+ad;
+                console.info(action_address);
 
-            $(".item3 h5").on("tap", function (e) {
-                $(e.target).find("span").toggleClass("active");
-                $(e.target).next().fadeToggle(200);
-                return false;
+                if (isInTiger()) {
+                    callNative({
+                        type: "openUrl",
+                        url: action_address
+                    });
+                } else {
+                    location.href = action_address;
+                }
+                
             });
+            
         }
 
         $('#regist_btn3').on('touchend',function(e){

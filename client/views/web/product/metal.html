@@ -100,31 +100,15 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>XAUUSD</td>
-                        <td>黄金</td>
-                        <td>45</td>
-                        <td>50 100 200</td>
-                        <td><%= lang.text("metal27")%></td>
-                        <td>0.01</td>
-                        <td>100 <%= lang.text("metal29")%></td>
-                        <td>
-                            <%= lang.text("metal30")%><br>
-                            06:00--05:00<%= lang.text("forex37")%>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>XAGUSD</td>
-                        <td>白银</td>
-                        <td>40</td>
-                        <td>50 100 200</td>
-                        <td><%= lang.text("metal28")%></td>
-                        <td>0.01</td>
-                        <td>5000 <%= lang.text("metal29")%></td>
-                        <td>
-                            <%= lang.text("metal30")%><br>
-                            06:00--05:00<%= lang.text("forex37")%>
-                        </td>
+                    <tr ng-if="metal" ng-repeat="item in metal" ng-cloak>
+                         <td>{{ item.name_en }}</td>
+                        <td class="pro-public__no-padding">{{ item.name_zh }}</td>
+                        <td>{{ item.dot }}</td>
+                        <td>{{ item.lever }}</td>
+                        <td>{{ item.fixed }}</td>
+                        <td>{{ item.min_volum }}</td>
+                        <td>{{ item.standard_volum }}</td>
+                        <td>{{ item.trade_time }}</td>
                     </tr>
                 </tbody>
             </table>

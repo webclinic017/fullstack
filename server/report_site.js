@@ -1,4 +1,15 @@
 var report_sites = [
+    /*添加时间 2017-11-2*/
+    {
+        address: 'http://www.hscbw.com/a/zonghe/2017/1018/67567.html?1508313934',
+        description: '【华声晨报网】老虎外汇：外汇交易的维新之路，以科技赋能，新连接新服务',
+        date: '2017-10-18'
+    },
+    {
+        address: 'http://china.prcfe.com/global/2017/1025/20965.html',
+        description: '【中国金融商报】外汇交易还能这么玩，老虎外汇复制跟单让外汇新手轻松入门',
+        date: '2017-10-25'
+    },
     /*添加时间 2017-10-12*/
     {
         address: 'https://news.jrzj.com/bd/196924.html',
@@ -21,9 +32,9 @@ var report_sites = [
         date: '2017-9-19'
     },
     {
-        address: 'http://yzwb.sjzdaily.com.cn/hot/20170918/11506.html',
-        description: '【燕赵晚报】老虎外汇复制跟单系统，让外汇交易更简单',
-        date: '2017-9-18'
+        address: 'http://finance.sina.com.cn/roll/2017-09-19/doc-ifykynia8122064.shtml',
+        description: '【新浪财经】老虎外汇复制跟单系统，让外汇交易更简单',
+        date: '2017-9-19'
     },
     {
         address: 'http://www.cnfina.com/kuaixun/20170915_109861.html',

@@ -1,0 +1,41 @@
+<div class="agreement_common" data-list-type="funds">
+    <div class="agreement_common__to_top" ng-class="{active: showScrollTop}">
+        <span ng-click="toTop()"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
+    </div>
+    <div class="agreement_common__title clearfix">
+        <div class="tit"><%= lang.text("amtIndex22")%></div>
+        <div tw-agreement-tab data-tab-list="tabList"></div>
+    </div>
+    <p class="agreement_common__detail">
+        <%= lang.text("amtFunds1")%>
+    </p>
+    <div class="agreement_common__sub_title" data-action="agreement0">
+        <%= lang.text("amtFunds2")%>
+    </div>
+    <p class="agreement_common__detail">
+        <%= lang.text("amtFunds3")%>
+    </p>
+    <div class="agreement_common__sub_title" data-action="agreement1">
+        <%= lang.text("amtFunds4")%>
+    </div>
+    <p class="agreement_common__detail">
+        <%= lang.text("amtFunds5")%>
+    </p>
+    <p class="agreement_common__detail">
+        <%= lang.text("amtFunds6")%>
+    </p>
+    
+    <div class="agreement_common__tip">
+        <span><%= lang.text("amtCommon1")%></span>
+        <% if (lang.currentLanguage() == 'en') {%>
+            <a href="/white_label/legal/TigerWit Protecting Client Funds.pdf" target="_blank"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;TigerWit Protecting Client Funds</a>
+
+            <a href="/white_label/legal/老虎外汇-保护客户资金.pdf" target="_blank"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;老虎外汇-保护客户资金</a>
+        <%} else {%>
+            <a href="/white_label/legal/老虎外汇-保护客户资金.pdf" target="_blank"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;老虎外汇-保护客户资金</a>
+
+            <a href="/white_label/legal/TigerWit Protecting Client Funds.pdf" target="_blank"> <i class="fa fa-file-pdf-o" aria-hidden="true"></i>&nbsp;&nbsp;TigerWit Protecting Client Funds</a>
+        <%}%>
+        
+    </div>
+</div>
