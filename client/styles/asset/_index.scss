@@ -1,7 +1,7 @@
 // asset
 @include b (asset-public) {
     min-height: 500px;
-    padding: 30px 20px;
+    // padding: 30px 20px;
     color: $gray-darker;
     
     .btn-primary {
@@ -20,7 +20,8 @@
         position: absolute;
         top: 10px;
         left: 15px;
-        color: $brand-primary;
+        color: #333;
+        font-weight: 500;
     }
 }
 
@@ -28,6 +29,11 @@
 @include b(deposit) {
     ul > li {
         margin: 5px 0;
+    }
+
+    @include e(rate) {
+        color: #999;
+        font-size: 12px;
     }
 
     @include e(circle) {
@@ -52,20 +58,28 @@
     }
 
     @include e(way) {
-        width: 90%;
-        padding: 20px;
-        background-color: #fff;
-        border: 1px solid #ccc;
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
         color: #494949;
+        font-size: 18px;
         font-weight: 500;
         cursor: pointer;
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            border: 6px solid transparent;
+            border-top-color: #666;
+            margin-top: -6px;
+        }
 
         @include m(tip) {
-            position: absolute;
-            width: 76%;
-            top: 107%;
-            left: 30px;
-            color: #f57a7a;
+            color: #999;
             font-size: 12px;
             line-height: 16px;
             display: none;
@@ -73,13 +87,6 @@
             &.active {
                 display: block;
             }
-        }
-        &.disabled {
-            color: #aeaeae;
-            border-color: #ccc !important;
-        }
-        &.active {
-            border-color: $brand-primary-dark;
         }
     }
     @include e(wallet_succ) {
@@ -89,7 +96,103 @@
         text-align: center;
         padding-top: 100px;
     }
+    @include e(btn_wrapper) {
+
+        .btn {
+            margin-top: 80px;
+            width: 100%;
+        }
+    }
+    @include e(tele) {
+        padding: 30px 0px;
+
+        @include m(tip) {
+            color: #999;
+            padding-bottom: 10px;
+
+            .des {
+                color: rgb(245,82,79);
+            }
+        }
+        @include m(tit) {
+            color: #333;
+            font-weight: 500;
+            padding-bottom: 10px;
+        }
+        @include m(msg) {
+            color: #666;
+            padding-bottom: 10px;
+
+            .des {
+                color: rgb(73,144,226);
+                cursor: pointer;
+            }
+        }
+    }
+    @include e(tele_file) {
+        border: 1px dashed #999;
+        border-radius: 10px;
+        height: 200px;
+        margin-top: 40px;
+        text-align: center;
+        line-height: 200px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    @include e(tele_succ) {
+        .pic {
+            float: left;
+            width: 30%;
+            height: 60px;
+            text-align: right;
+
+            img {
+                height: 100%;
+            }
+        }
+        .tip {
+            width: 70%;
+            float: left;
+            color: #494949;
+            font-size: 16px;
+            font-weight: 500;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+    }
 }
+
+@include b(deposit_modal) {
+    @include e(type) {
+        margin-top: 30px;
+
+        li {
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        @include m(icon) {
+            padding-right: 0px;
+        }
+        @include m(cont) {
+            .tit {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 18px;
+                color: #333;
+                padding-bottom: 8px;
+
+                span {
+                    font-size: 14px;
+                    padding-left: 5px;
+                    color: rgb(245,82,79);
+                }
+            }
+            .tip {
+                color: #999;
+            }
+        }
+    }
+} 
 
 @include b(withdraw) {
     @include e(sys_tip) {
@@ -97,7 +200,7 @@
     }
 
     @include e(way) {
-        width: 240px;
+        width: 220px;
         padding: 8px 0;
         border: 1px solid #ccc;
         background: #fff;

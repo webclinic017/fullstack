@@ -515,3 +515,64 @@
         border-left: 1px dashed $gray;
     }
 }
+
+//== 新改版后个人中心content模块中nav样式
+// 2017.11.13 Add
+@include b (space_content) {
+    box-shadow: 1px 5px 30px darken($gray, 10%);
+    padding: 25px 30px 0 60px;
+    margin-bottom: 50px;
+
+    @include e (nav) {
+        height: 50px;
+        
+        @include m(item){
+            font-size: 18px;
+            font-weight: 500;
+            color: $gray-dark;
+            position: relative;
+            margin-right: 55px;
+            cursor: pointer;
+            float: left;
+            & > a {
+                color: $gray-dark;
+            }
+            &.has_new:before {
+                display: inline-block;
+                content: '';
+                width: 8px;
+                height: 8px;
+                background: $brand-danger;
+                border-radius: 4px;
+                position: absolute;
+                top: 0px;
+                right: -12px;
+            }
+            &:hover, &.active{
+                position: relative;
+                color: $gray-darkest;
+                & > a {
+                    color: $gray-darkest;
+                }
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 30px;
+                    height: 4px;
+                    border-radius: 2px;
+                    @include gradient-horizontal($brand-primary-lighter, $brand-index-line);
+                    position: absolute;
+                    top: 110%;
+                    left: 50%;
+                    margin-left: -15px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
