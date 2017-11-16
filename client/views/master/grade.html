@@ -1,0 +1,48 @@
+<div class="space_grade">
+    <div class="space_master__title">
+        高手等级说明
+        
+    </div>
+    <div class="space_grade__bar">
+        <div class="space_sidebar__grade-bar">
+            <span ng-style="{width: masterGradeInfo.scale}"></span>
+        </div>
+    </div>
+    <div class="space_grade__level">
+        当前类别<span class="icon-grade">{{ masterGradeInfo.name || 'B' }}</span>
+    </div>
+    <ul class="space_grade__info">
+        <li>
+            <span class="t">杠杆使用范围：</span>
+            <span class="i">{{ masterGradeInfo.leverage }}</span>
+        </li>
+        <li>
+            <span class="t">复制金额限额：</span>
+            <span class="i">${{ masterGradeInfo.follow_amount }}</span>
+        </li>  
+        <li>
+            <span class="t">剩余可复制金额：</span>
+            <span class="i">${{ masterGradeInfo.available_amount }}</span>
+        </li>    
+    </ul>
+    <div class="space_grade__tit">
+        为了最大限度地规避交易风险，老虎外汇根据高手等级限制可复制总额与杠杆使用范围：
+    </div>
+    <ul class="space_grade__lst">
+        <li ng-repeat="grade in masterGradeInfo.all_master_level">
+            <span class="icon-grade">{{ grade.name }}</span>
+            <span class="desc">{{ grade.desc }}</span>
+        </li>
+    </ul>
+    <ul class="space_grade__tip">
+        <li>
+            用户复制高手的复制资金不可超过高手当前账户级别的限额；
+        </li>
+        <li>
+            若当前累计复制资金量达到限额，系统将提醒高手进行账户升级，高手确认并更改账户级别后，用户方能继续复制；
+        </li>
+        <li>
+            高手只能使用账户级别内支持的杠杆进行交易，复制者跟随高手进行同杠杆开仓交易。
+        </li>
+    </ul>
+</div>

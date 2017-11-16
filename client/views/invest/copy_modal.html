@@ -85,6 +85,18 @@
                     </label>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-6">
+                    <label>高手剩余可复制金额:</label>
+                </div>
+                <div class="col-xs-6 text-right">
+                    <label class="copy_modal__label">
+                        <i class="fa fa-dollar font-base"></i>
+                        {{ copyTrade.surplusAmount.toFixed(2) || '0.00' }}
+                    </label>
+                </div>
+            </div>
         </form>
 
         <div class="text-left copy_modal__tip mg-tp-20 font-dark">

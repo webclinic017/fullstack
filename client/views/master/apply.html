@@ -1,0 +1,59 @@
+<div class="space_apply">
+    <div class="space_master__title">
+        <span ng-if="applyInfo.data.status != 0">成为老虎外汇高手，获取更多收益</span>
+        <span ng-if="applyInfo.data.status == 0">高手申请审核中，请耐心等待</span>
+        <span class="btn btn-primary btn-sm" ng-if="applyInfo.data.status == -1" ng-click="applyMaster()">立即申请成为高手</span>
+    </div>
+    <div class="space_apply__loading" ng-if="applyInfo.loading">
+        <img src="/ngsrc/loading.gif">
+    </div>
+    <div class="space_apply__content" ng-if="!applyInfo.loading">
+        <div class="space_apply__tip" ng-if="applyInfo.data.status == -1">
+            榜单投资者被其他用户复制跟随，会获得复制者20%的盈利分成，申请成为高手需达成以下条件：
+        </div>
+        <div class="space_apply__tip" ng-if="applyInfo.data.status == 0">
+            高手申请由工作人员人工审核，我们会尽快完成审核并将结果通知您
+        </div>
+        <ul class="space_apply__lst" ng-if="(applyInfo.data.status == 0) || (applyInfo.data.status == -1)">
+            <li ng-class="{active: applyInfo.data.one == 1}">
+                <span>开通老虎外汇真实账户并完成实名认证</span>
+            </li>
+            <li ng-class="{active: applyInfo.data.two == 1}">
+                <span>在老虎外汇交易平台真实入金并连续自主交易30个以上工作日</span>
+            </li>
+            <li ng-class="{active: applyInfo.data.three == 1}">
+                <span>近30日收益率大于20%</span>
+            </li>
+            <li ng-class="{active: applyInfo.data.four == 1}">
+                <span>账户余额不得低于500美金</span>
+            </li>
+        </ul>
+        <div class="space_apply__message" ng-if="applyInfo.data.status == 1">
+            <div class="clearfix message_wrapper">
+                <div class="message_icon">
+                    <img src="/images/icon-succ.png">
+                </div>
+                <div class="message_tip">
+                    <div class="tit">高手申请已通过审核</div>
+                    <div class="reason">
+                        <span>恭喜您的高手申请已通过审核！<br>您的交易账户已被推荐到高手榜。</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="space_apply__message" ng-if="applyInfo.data.status == 2">
+            <div class="clearfix message_wrapper">
+                <div class="message_icon">
+                    <img src="/images/icon-fail.png">
+                </div>
+                <div class="message_tip">
+                    <div class="tit">高手申请被拒绝</div>
+                    <div class="reason">
+                        <span>{{ applyInfo.data.reason || '请联系客服人员' }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
