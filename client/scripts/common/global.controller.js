@@ -20,6 +20,7 @@
         $scope.userstatus = { logined: false };
         $scope.lang = lang;
         $scope.personal = {};
+        $scope.personal.is_live = null;
         $scope.process = {};
 
         $scope.logout = logout;
@@ -29,6 +30,7 @@
         $scope.toTrackBannerSensorsdata = toTrackBannerSensorsdata;
         $scope.toQuickPageviewSensorsdata = toQuickPageviewSensorsdata;
         $scope.openDredgeMdl = openDredgeMdl;
+        var globalScope = $scope;
 
         // 初始加载
         getUnreadLength();
@@ -214,6 +216,11 @@
 
                     $scope.dredge_type = 'all';
 
+                    $scope.openDemo = function(){
+                        globalScope.personal.is_live = '0'
+                        window.location.href = location.origin + '/space/#/authen/complete'
+                        closeModal()
+                    }
                     $scope.confirmLive = function () {
                         $modalInstance.dismiss()
                         $layer({
@@ -225,7 +232,8 @@
                             btns: {
                                 '取消': function () { },
                                 '继续': function () {
-                                    window.location.href = location.origin + '/space/#/authen/complete?dredge_type=live'
+                                    globalScope.personal.is_live = '1'
+                                    window.location.href = location.origin + '/space/#/authen/complete'
                                 }
                             }
                         })
@@ -243,11 +251,13 @@
         // account_status 0:没开通,1:真实,2:模拟
         // status=10只有在添加认证信息结束的时候我会返回10，app主动请求获取用户认证状态的最终状态是6(审核通过)不会有10
         function getAuthStatus(callback) {
-            account.getAuthStatus().then(function (data) {
+            account.getAuthStatus({
+                is_live: globalScope.personal.is_live
+            }).then(function (data) {
                 console.log('global.getAuthStatus', data);
                 if (data.is_succ) {
                     // 开户类型(体验金、真实)
-                    var verify_status = 1
+                    var verify_status = data.data.status
                     var accountStatus = data.data.account_status
                     var accountStatusMap = {
                         '0': 'unknow',

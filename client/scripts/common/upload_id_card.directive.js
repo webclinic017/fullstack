@@ -22,8 +22,9 @@
 
                 var token = $cookies["token"] || '';
                 var uploadUrl = api.account.uploadIdCardForm + "?token=" + token;
-                // console.log('uploadUrl', uploadUrl);
-
+                if(scope.is_live){
+                    uploadUrl + '&is_live=' + scope.is_live
+                }
                 fileInput.fileupload({
                     url: uploadUrl,
                     type: 'POST',

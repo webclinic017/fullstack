@@ -200,7 +200,11 @@
 
             $scope.clickable = false;
 
-            account.setKyc(kycInfo).then(function (data) {
+            account.setKyc(
+                angular.extend(kycInfo, {
+                    is_live: $scope.personal.is_live
+                })
+            ).then(function (data) {
                 console.info(data);
                 $scope.clickable = true;
                 if (data.is_succ) {
@@ -255,9 +259,6 @@
 
     // complete
     function AuthenCompleteController($scope, validator, account, $timeout, $interval, $location, $modal) {
-        if($location.search().dredge_type){
-            $scope.dredgeType = $location.search().dredge_type || 'demo'
-        }
         $scope.completeInfo = {
             username: '',
             email: '',
@@ -438,7 +439,7 @@
                 state_code: $scope.completeInfo.province.value,
                 city_code: $scope.completeInfo.city.value,
                 address: $scope.completeInfo.address,
-                is_live: $scope.dredgeType == 'demo' ? 0 : 1
+                is_live: $scope.personal.is_live
             }).then(function (data) {
                 $scope.completeInfo.clickable = true;
                 if (data.is_succ) {
@@ -518,6 +519,7 @@
 
     // id_card
     function AuthenRealnameController($scope, $state, $modal, validator, account) {
+        $scope.is_live = $scope.personal.is_live
         $scope.verification = {
             id: {
                 number: undefined,
@@ -681,6 +683,7 @@
                 id_no: $scope.realnameInfo.id_num,
                 card_type: $scope.realnameInfo.id_type.value,
                 real_name: $scope.realnameInfo.realname,
+                is_live: $scope.personal.is_live
             }).then(function (data) {
                 if (!data.is_succ) {
                     layer.msg(data.message)
