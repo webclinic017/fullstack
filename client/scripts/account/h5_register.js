@@ -366,7 +366,7 @@
                 // 神策统计 - 点击登录
                 if(!is_agree) {
                     sa.track('click_login', {
-                        login_type: 'code'
+                        login_type: '验证码登录'
                     });
                 }
                 
@@ -388,7 +388,7 @@
                         // 神策统计 - 登录
                         sa.track('login', {
                             login_isNew: true,
-                            login_type: 'code'
+                            login_type: '验证码登录'
                         });
                         /*跳转到注册成功页面*/
                         if (window.location.pathname.indexOf('t35') >= 0) {

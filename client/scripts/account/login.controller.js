@@ -126,7 +126,7 @@
             // 神策统计 - 点击登录
             if(!is_agree) {
                 sa.track('click_login', {
-                    login_type: $scope.loginType
+                    login_type: $scope.loginType == 'code' ? '验证码登录' : '账号密码登录'
                 });
             }
             
@@ -168,14 +168,14 @@
                         // 神策统计 - 登录
                         sa.track('login', {
                             login_isNew: true,
-                            login_type: 'code'
+                            login_type: '验证码登录'
                         });
                         return;
                     }
                     // 神策统计 - 登录
                     sa.track('login', {
                         login_isNew: false,
-                        login_type: $scope.loginType
+                        login_type: $scope.loginType == 'code' ? '验证码登录' : '账号密码登录'
                     });
                     $timeout(function () {
                         account.hasChecked = false;
