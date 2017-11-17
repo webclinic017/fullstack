@@ -1,0 +1,36 @@
+<div class="sys_modal_v2 slim_case">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <h5 class="sys_modal_v2__title">
+        高手等级说明
+    </h5>
+
+    <div class="sys_modal_v2__content trader_modal">
+        <div class="trader_modal__tit">
+            为了最大限度地规避交易风险，老虎外汇根据高手等级限制可复制总额范围：
+        </div>
+        <ul class="trader_modal__lst">
+            <li ng-repeat="grade in gradeList">
+                <span class="icon-grade">{{ grade.name }}</span>
+                <span class="desc">{{ grade.customer_desc }}</span>
+            </li>
+        </ul>
+        <ul>
+            <li class="trader_modal__tip">
+                ● 用户复制高手的复制资金不可超过高手当前账户级别的限额；
+            </li>
+            <li class="trader_modal__tip">
+                ● 若当前累计复制资金量达到限额，系统将提醒高手进行账户升级，高手确认并更改账户级别后，用户方能继续复制；
+            </li>
+            <li class="trader_modal__tip">
+                ● 高手只能使用账户级别内支持的杠杆进行交易，复制者跟随高手进行同杠杆开仓交易。
+            </li>
+        </ul>
+        <div class="btn_wrapper mg-tp-30 clearfix">
+            <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
+                确定
+            </button>
+        </div>
+    </div>
+
+</div>
