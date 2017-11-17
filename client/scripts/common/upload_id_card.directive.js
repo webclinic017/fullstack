@@ -80,7 +80,8 @@
                         console.log(e, data);
 
                         scope.$emit('uploadIdCardSuccess', {
-                            face: face
+                            face: face,
+                            data: data.result.data
                         });
 
                     },

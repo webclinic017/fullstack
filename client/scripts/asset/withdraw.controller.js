@@ -64,7 +64,7 @@
         //绑定银行卡后获取银行卡信息
         $rootScope.$on('bindCardSuccess', function () {
             // 通知所有子控器 
-            if(!parentScope.hasChooseedCard){
+            if (!parentScope.hasChooseedCard) {
                 getCard()
             }
         });
@@ -137,49 +137,33 @@
             });
         }
 
-        /**
-         * // 校验开户状态
-         * @param {* 真实账户回调 } liveTodo 
-         */
-        function switchDredge(demotodo, liveTodo) {
-            // 获取开通状态
-            var dredged_type = $scope.personal.dredged_type;
-            // 未开通
-            if (dredged_type == 'unknow') {
-                $scope.$emit('global.openDredgeMdl', {
-                    position: 'withdraw'
-                });
-            } else if (dredged_type == 'demo') {
-                // layer.msg('您当前是体验金账户，无法使用提现功能！');
-                demotodo && demotodo()
-            } else if (dredged_type == 'live') {
-                liveTodo && liveTodo()
-            }
+        function openCardMdl() {
+            // 检测认证状态
+            $scope.$emit('global.checkAuthenFlow', {
+                ctrlName: 'AssetWithdrawController',
+                callback: function () {
+                    var personal = {
+                        verified: $scope.personal.verified,
+                        realname: $scope.personal.realname,
+                        profile_check: $scope.personal.profile_check,
+                    };
+                    $modal.open({
+                        templateUrl: '/views/asset/card_modal.html',
+                        size: 'md',
+                        controller: 'AssetCardController',
+                        resolve: {
+                            passedScope: function () {
+                                return {
+                                    personal: personal,
+                                    card: $scope.withdraw.card
+                                };
+                            }
+                        }
+                    });
+                }
+            })
         }
 
-        function openCardMdl() {
-            checkAuthen(function () {
-                var personal = {
-                    verified: $scope.personal.verified,
-                    realname: $scope.personal.realname,
-                    profile_check: $scope.personal.profile_check,
-                };
-                $modal.open({
-                    templateUrl: '/views/asset/card_modal.html',
-                    size: 'md',
-                    controller: 'AssetCardController',
-                    resolve: {
-                        passedScope: function () {
-                            return {
-                                personal: personal,
-                                card: $scope.withdraw.card
-                            };
-                        }
-                    }
-                });
-            }, 'binding')
-        }
-        
         function openManageCardMdl(type, card) {
             $modal.open({
                 templateUrl: '/views/asset/manage_card_modal.html',
@@ -237,12 +221,12 @@
                     }
 
                     $scope.deleteCard = function () {
-                        asset.deleteCard(card.id).then(function(data){
-                            if(data.is_succ){
+                        asset.deleteCard(card.id).then(function (data) {
+                            if (data.is_succ) {
                                 getCardList($scope).then(function () {
                                     $scope.cardList = parentScope.cardList
                                     isShortBankName($scope.cardList)
-                                    if($scope.cardList.length == 0){
+                                    if ($scope.cardList.length == 0) {
                                         parentScope.withdraw.card = {}
                                     }
                                 })
@@ -299,30 +283,6 @@
             });
         }
 
-        function openVerifyMdl(type) {
-            // 没有完成实名认证
-            $modal.open({
-                templateUrl: '/views/asset/verify_modal.html',
-                size: 'sm',
-                backdrop: true,
-                controller: function ($scope, $modalInstance) {
-                    $scope.closeModal = closeModal;
-                    $scope.type = type;
-                    $scope.dredgeType = 'unknow';
-
-                    switchDredge(function () {
-                        $scope.dredgeType = 'demo'
-                    }, function () {
-                        $scope.dredgeType = 'live'
-                    })
-
-                    function closeModal() {
-                        $modalInstance.dismiss();
-                    }
-                }
-            });
-        }
-
         function openMessageMdl() {
             var message = $scope.message;
 
@@ -346,55 +306,29 @@
             $scope.withdraw.maxAmount = type === 'invest' ? $scope.maxAmountInvest : $scope.maxAmountWallet;
         }
 
-        function checkAuthen(finishTodo, type) {
-            // 体验金账户未完成实名认证
-            var verifyStatus = $scope.personal.verify_status
-            if (!$scope.personal.finishVerify) {
-                // 先关闭父级modal
-                if(parentScope.manageCardModalInstance){
-                    parentScope.manageCardModalInstance.dismiss()
-                }
-                // 资料已经提交审核
-                if (verifyStatus == 5) {
-                    $layer({
-                        // title: '系统提示',
-                        // msgClass: 'font-danger',
-                        size: 'sm',
-                        btnsClass: 'text-right',
-                        msg: '您的账户正在审核中，请等待审核通过后再进行提现操作',
-                        btns: {
-                            '确定': function () { }
-                        }
-                    })
-                }
-                // 未上传过身份证 或者 实名被拒绝
-                if (verifyStatus < 5) {
-                    openVerifyMdl(type || 'withdraw')
-                }
-            } else {
-                finishTodo && finishTodo()
-            }
-        }
-
         // 提现
         $scope.clickable = true;
         function toWithdraw() {
-            checkAuthen(function () {
-                showErr('amount');
-                // console.info($scope.withdrawForm.$invalid);
-                if ($scope.withdrawForm.$invalid) {
-                    return;
-                }
-                if ($scope.clickable == false) {
-                    return;
-                }
+            // 通过认证
+            $scope.$emit('global.checkAuthenFlow', {
+                ctrlName: 'AssetWithdrawController',
+                callback: function () {
+                    showErr('amount');
+                    // console.info($scope.withdrawForm.$invalid);
+                    if ($scope.withdrawForm.$invalid) {
+                        return;
+                    }
+                    if ($scope.clickable == false) {
+                        return;
+                    }
 
-                $scope.clickable = false;
+                    $scope.clickable = false;
 
-                if ($scope.withdraw.type === 'invest') {
-                    withdrawInvest();
-                } else {
-                    withdrawWallet();
+                    if ($scope.withdraw.type === 'invest') {
+                        withdrawInvest();
+                    } else {
+                        withdrawWallet();
+                    }
                 }
             })
         }

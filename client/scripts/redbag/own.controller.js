@@ -17,7 +17,7 @@
             if(type == 'unknow' && !hasAlerted){
                 hasAlerted = true
                 $scope.$emit('global.openDredgeMdl', {
-                    position: 'invite',
+                    position: 'RedbagOwnController',
                 });
             }
         });

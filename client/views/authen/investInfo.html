@@ -1,10 +1,10 @@
 <div class="authen_content mg-tp-30 ctn center">
     <div class="authen_title">
         <h2>投资信息确认</h2>
+        <p class="authen_content__tip">由于受最高监管的约束，需要您提供相关信息，我们只询问与开户相关的问题。您的资料始终保密，绝不公开。</p>
         <div tw-loading-img></div>
-    </div>    
-    
-    <div class="kyc">
+    </div>
+    <div class="kyc mg-tp-40">
         <div ng-if="!isSetKyc">
             <form name="kycForm" novalidate>
                 <div ng-repeat="(qId, question) in questions">
@@ -70,6 +70,10 @@
                     <button class="btn btn-sm btn-primary-gradient text-left" ng-if="clickable" ng-click="submitForm()">
                         下一步
                     </button>
+
+                    <a class="btn btn-sm btn-primary-gradient text-left mg-lf-20" ui-sref="space.center.index">
+                        跳过
+                    </a>
 
                     <button class="btn btn-sm btn-primary-gradient text-left" ng-if="!clickable">
                         <i class="loading_spinner fa fa-spinner"></i>
