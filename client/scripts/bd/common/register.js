@@ -293,6 +293,13 @@
                 /*统计*/
                 statistics($("#telephone").val());
 
+                // 神策统计 - 点击登录
+                if(!is_agree) {
+                    sa.track('click_login', {
+                        login_type: 'code'
+                    });
+                }
+
                 publicRequest('regOrLogin', 'POST', {
                     phone: $("#telephone").val() || null,
                     // password: $("#password").val() || null,
@@ -312,6 +319,11 @@
                         layer.msg('注册成功!');
                         /*统计注册成功*/
                         sa.track('btn_register_finish');
+                        // 神策统计 - 登录
+                        sa.track('login', {
+                            login_isNew: true,
+                            login_type: 'code'
+                        });
                         window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
                     } else {
                         if ((data.code == 100402) || (data.code == 100403)) {

@@ -362,6 +362,13 @@
                 if (window.location.pathname.indexOf('t35') != -1) {
                     _taq.push({ convert_id: "58276692798", event_type: "form" })
                 }
+
+                // 神策统计 - 点击登录
+                if(!is_agree) {
+                    sa.track('click_login', {
+                        login_type: 'code'
+                    });
+                }
                 
                 publicRequest('regOrLogin', 'POST', {
                     phone: $("#telephone").val() || null,
@@ -378,6 +385,11 @@
                     console.log(data);
                     if (!data) return;
                     if (data.is_succ) {
+                        // 神策统计 - 登录
+                        sa.track('login', {
+                            login_isNew: true,
+                            login_type: 'code'
+                        });
                         /*跳转到注册成功页面*/
                         if (window.location.pathname.indexOf('t35') >= 0) {
                             var pandaDownloadUrl = '';
@@ -392,7 +404,7 @@
 
                         if ((data.code == 100402) || (data.code == 100403)) {
                             openH5AgmentModal(data.code, function(resolve, e){
-                                console.log(123);
+                                // console.log(123);
                                 toRegister('is_agree');
                                 layer.close(resolve.layIndex)
                             })
