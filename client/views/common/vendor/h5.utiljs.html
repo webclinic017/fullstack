@@ -33,6 +33,23 @@
         return true;
     }
 
+    //第三方native和h5通讯
+    function openThirdNative(oAction) {
+        try {
+            var sAction = JSON.stringify(oAction);
+            //IOS和Android均会在页面写入该对象。只是调用方法略不同
+            if (isIOS()) {
+                CallThirdNative(sAction);
+            } else {
+                CallThirdNative.jsCall(sAction);
+            }
+            return true;
+        } catch (e) {
+            return false;
+        }
+        
+    }
+
     /*判断是否在APP中*/
     function isInTiger() {
         var userPlatForm = window.navigator.userAgent;
