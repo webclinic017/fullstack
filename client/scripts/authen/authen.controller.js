@@ -10,13 +10,13 @@
         .controller('AuthenSubmitController', function () { })
         .controller('AuthenSuccessController', function () { });
 
-    AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state', '$stateParams', '$timeout', '$modal'];
+    AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state', '$stateParams', '$timeout', '$modal', '$layer'];
     AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account', '$location', '$modal'];
     AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval', '$location', '$modal'];
     AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location'];
 
     // 主控制器
-    function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout, $modal) {
+    function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout, $modal, $layer) {
         $scope.dredgingType = 'unkown'
         $scope.flow = {
             step: 1,
@@ -54,6 +54,7 @@
                     '2': 'demo',
                 }[$scope.personal.verify_status]
             });
+            showErr4()
         } else {
             $scope.$emit('global.getAuthStatus', {
                 ctrlName: 'AuthenController',
@@ -96,15 +97,16 @@
         function showErr4() {
             if ($scope.personal.verify_status == 4) {
                 if (!$scope.personal.showAuthenMsg) {
-                    $scope.personal.showAuthenMsg = layer.msg('您上传的身份证照片审核被拒绝，请重新填写相关信息，被拒原因请查看系统消息。',
-                        {
-                            time: 0,
-                            btn: ['好的'],
-                            yes: function (index) {
-                                layer.close(index)
-                            }
+                    $layer({
+                        title: '提示',
+                        msg: '您上传的身份证照片审核被拒绝，请重新填写相关信息，被拒原因请查看系统消息。',
+                        msgClass: 'font-danger',
+                        btns: {
+                            "好的": function(){}
                         }
-                    );
+                    })
+
+                    $scope.personal.showAuthenMsg = true
                 }
             }
         }
@@ -637,7 +639,7 @@
 
         $scope.$on('uploadIdCardFail', function (event, data) {
             $scope.$apply(function () {
-                $scope.clickable = false;
+                $scope.clickable = true;
                 $scope.verification.id[data.face + 'Status'] = 3;
             });
         });
@@ -695,8 +697,6 @@
                     });
                 }
             })
-
-            $scope.clickable = false;
         }
 
         $scope.checkExsit = function (type) {

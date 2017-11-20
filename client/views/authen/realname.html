@@ -181,14 +181,14 @@
                     下一步
                 </button>
 
+                <a class="btn btn-sm btn-primary-gradient" ng-if="!clickable">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    提交中...
+                </a>
+
                 <a ng-if="dredgingType == 'live'" ui-sref="space.center.index" class="btn btn-sm btn-primary-gradient mg-lf-20">
                     跳过
                 </a>
-        
-                <button class="btn btn-sm btn-primary-gradient" ng-if="!clickable">
-                    <i class="loading_spinner fa fa-spinner"></i>
-                    提交中...
-                </button>
             </div>    
         </div>
     </div>

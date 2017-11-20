@@ -24,7 +24,7 @@
                 templateUrl: '/views/template/$layer_modal.html',
                 size: params.size || 'sm',
                 backdrop: true,
-                controller: function ($scope, $modalInstance) {
+                controller: ['$scope', '$modalInstance',function ($scope, $modalInstance) {
                     // 绑定参数
                     angular.extend($scope, params)
 
@@ -38,7 +38,7 @@
                     function closeModal() {
                         $modalInstance.dismiss();
                     }
-                }
+                }]
             });
         }
     }

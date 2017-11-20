@@ -4,9 +4,9 @@
 
     angular
         .module('fullstackApp')
-        .directive('twUploadIdCard', ['api', '$cookies', twUploadIdCard]);
+        .directive('twUploadIdCard', ['api', '$cookies', '$layer',twUploadIdCard]);
 
-    function twUploadIdCard(api, $cookies) {
+    function twUploadIdCard(api, $cookies, $layer) {
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
@@ -58,7 +58,7 @@
 
                         /*判断大小*/
                         if (data.originalFiles[0]['size'] > 2 * 1024 * 1024) {
-                            uploadErrors.push('对不起,暂时不支持大于2M的文件,请压缩后再试!');
+                            uploadErrors.push('对不起，暂时不支持大于2M的文件，请压缩后再试!');
                             scope.$emit('uploadIdCardFail', {
                                 face: face
                             });
@@ -67,7 +67,14 @@
                         }
 
                         if (uploadErrors.length > 0) {
-                            alert(uploadErrors.join("\n"));
+                            $layer({
+                                title: '提示',
+                                msg: uploadErrors.join("\n"),
+                                msgClass: 'font-danger',
+                                btns: {
+                                    "好的": function(){}
+                                }
+                            })
                         } else {
                             data.face = face;
                             /*将利用插件生成的上传控件存入controller*/
