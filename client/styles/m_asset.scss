@@ -550,4 +550,34 @@
     }
 }
 
+/* H5 支付成功*/
+@include b(m_deposit_succ) {
+    padding: 0 15px;
+    color: #4a4a4a;
+
+    @include e(title) {
+        padding-top: 40px;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 30px;
+    }
+    @include e(tip) {
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 30px;
+        margin-bottom: 60px;
+    }
+
+    @include e(icon) {
+        width: 270px;
+        position: fixed;
+        right: -22px;
+        bottom: -50px;
+
+        img {
+            width: 100%;
+        }
+    }
+}
+
 
