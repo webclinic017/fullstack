@@ -233,7 +233,7 @@
                                 '取消': function () { },
                                 '继续': function () {
                                     globalScope.personal.is_live = '1'
-                                    window.location.href = location.origin + '/space/#/authen/complete'
+                                    window.location.href = location.origin + '/space/#/authen/investInfo'
                                 }
                             }
                         })
