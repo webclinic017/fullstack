@@ -22,6 +22,15 @@
     }
 }
 
+.btn-primary-gradient {
+    background-image: -webkit-linear-gradient(left, #fae266 0%, #ffbf44 100%);
+    background-image: -o-linear-gradient(left, #fae266 0%, #ffbf44 100%);
+    background-image: linear-gradient(to right, #fae266 0%, #ffbf44 100%);
+    background-repeat: repeat-x;
+    border-radius: 4px;
+    border: none;
+}
+
 .btn-info {
     background-color: $m-gray-lighter;
     border-color: $m-gray-lighter;
