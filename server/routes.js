@@ -318,10 +318,14 @@ module.exports = function (app) {
     });
 
     /* H5 充值中转页面 */
-    
     app.route('/m/deposit/pay').get(function (req, res) {
         setEnvCf(req, res);
         res.render('m_vue/m_deposit_pay', extendPublic({}, req));
+    });
+    /* H5 充值成功 */
+    app.route('/m/deposit/success').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('m_vue/m_deposit_succ', extendPublic({}, req));
     });
 
     // 第三方认证流程

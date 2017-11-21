@@ -86,10 +86,10 @@
                 <p class="">如您因平台服务与老虎外汇发生争议的，适用《利益冲突政策》处理。 </p>
                 <p class="br_gap"></p>
                 <p class="font-decoration font-bold-light">阅读协议的过程中，如果您不同意相关协议或其中任何条款约定，您应立即停止注册程序。 </p>
-                <a class="link" target="_blank" href="/agreement/client">《客户协议》</a><br>
-                <a class="link" target="_blank" href="/agreement/risk">《风险披露声明》</a><br>
-                <a class="link" target="_blank" href="/agreement/cookie">《隐私政策》</a><br>
-                <a class="link" target="_blank" href="/agreement/legal">《法律声明》</a><br>
+                <a class="link" target="_blank" data-title="客户协议" href="/agreement/client">《客户协议》</a><br>
+                <a class="link" target="_blank" data-title="风险披露声明" href="/agreement/risk">《风险披露声明》</a><br>
+                <a class="link" target="_blank" data-title="隐私政策" href="/agreement/cookie">《隐私政策》</a><br>
+                <a class="link" target="_blank" data-title="法律声明" href="/agreement/legal">《法律声明》</a><br>
             </div>
             <p class="mg-tp-20 clearfix button-area">
                 <span class="agreement-btn agree_button sm-size fl" data-btn-action="h5New.agree_user_agreement">
@@ -112,7 +112,7 @@
                 <p class="agree">尊敬的用户，您好：</p>
                 <p class="">
                     我们更新了服务协议，协议中有对您权利义务特别约定以及管辖约定等重要条款。请
-                    <a class="link" target="_blank" href="/m/h5_register/agreement">点击此处</a>
+                    <a class="link" target="_blank" data-title="用户协议" href="/m/h5_register/agreement">点击此处</a>
                     查看。
                 </p>
                 <p class="mg-tp-10">
@@ -218,6 +218,17 @@
                     curCode: code,
                     layIndex: layerIndex
                 }, e)
+            })
+
+            // 三方APP中查看协议
+            $(document).on('click', '.link', function (e) {
+                var cb = openThirdNative({
+                    type: "openUrl",
+                    title: $(this).attr("data-title"),
+                    url: window.location.origin+$(this).attr("href")
+                });
+                // console.log(cb);
+                if (cb) return false;
             })
         }
     })
