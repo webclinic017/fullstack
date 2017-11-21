@@ -9,57 +9,6 @@
             font-size: 24px;
             font-weight: 500;
         }
-        .sign {
-            float: right;
-            font-size: 18px;
-            color: #333;
-            cursor: pointer;
-            padding-right: 20px;
-            position: relative;
-
-            span {
-                line-height: 20px;
-            }
-
-            .lst {
-                width: 200px;
-                position: absolute;
-                top: 32px;
-                right: 0px;
-                padding: 10px;
-                background-color: #fff;
-                border-radius: 8px;
-                box-shadow: 0px 0px 12px 5px #eee;
-                display: none;
-
-                &:before {
-                    display: block;
-                    content: '';
-                    position: absolute;
-                    top: -22px;
-                    right: 22px;
-                    border-width: 11px 6px;
-                    border-color: transparent;
-                    border-bottom-color: #fff;
-                    z-index: 10;
-                    border-style: solid;
-                }
-
-                li {
-                    font-size: 14px;
-                    line-height: 18px;
-                    padding: 5px 0px;
-
-                    a {
-                        color: #333;
-
-                        &:hover {
-                            color: #3683ce;
-                        }
-                    }
-                }
-            }
-        }
     }
     @include e(sub_title) {
         font-size: 14px;
@@ -86,6 +35,74 @@
 
             i {
                 color: #c81616;
+            }
+        }
+    }
+    @include e(catalog) {
+        position: fixed;
+        text-align: right;
+        top: 100px;
+        width: 1030px;
+
+        &.active {
+
+            .sign {
+                border-radius: 5px;
+                background: rgba(255, 255, 255, 0.8);
+                box-shadow: 0px 0px 6px 3px #ddd;
+            }
+        }
+        .sign {
+            font-size: 22px;
+            color: #666;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            line-height: 22px;
+            padding: 5px;
+
+            span {
+                line-height: 20px;
+            }
+
+            .lst {
+                width: 200px;
+                position: absolute;
+                top: 37px;
+                right: -13px;
+                padding: 10px;
+                background-color: #fff;
+                border-radius: 8px;
+                box-shadow: 0px 0px 12px 5px #eee;
+                display: none;
+
+                &:before {
+                    display: block;
+                    content: '';
+                    position: absolute;
+                    top: -22px;
+                    right: 22px;
+                    border-width: 11px 6px;
+                    border-color: transparent;
+                    border-bottom-color: #fff;
+                    z-index: 10;
+                    border-style: solid;
+                }
+
+                li {
+                    font-size: 14px;
+                    line-height: 18px;
+                    padding: 5px 0px;
+                    text-align: left;
+
+                    a {
+                        color: #333;
+
+                        &:hover {
+                            color: #3683ce;
+                        }
+                    }
+                }
             }
         }
     }

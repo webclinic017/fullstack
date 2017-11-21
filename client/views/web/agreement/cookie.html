@@ -2,9 +2,11 @@
     <div class="agreement_common__to_top" ng-class="{active: showScrollTop}">
         <span ng-click="toTop()"><i class="fa fa-arrow-up" aria-hidden="true"></i></span>
     </div>
+    <div class="agreement_common__catalog" ng-class="{active: showScrollTop}">
+        <div tw-agreement-tab data-tab-list="tabList"></div>
+    </div>
     <div class="agreement_common__title clearfix">
         <div class="tit"><%= lang.text("amtIndex10")%></div>
-        <div tw-agreement-tab data-tab-list="tabList"></div>
     </div>
     <p class="agreement_common__detail">
         <%= lang.text("amtCookie1")%>
