@@ -157,7 +157,7 @@
                     .html()
             });
 
-            $(document).on('click', '.agreement-btn', function (e) {
+            $('.agreement-btn').on('click', function (e) {
                 $.isFunction(callback) && callback.call(this, {
                     curCode: code,
                     layIndex: layerIndex
@@ -205,7 +205,7 @@
                 
             }
 
-            $(document).on('click', '.agreement-btn', function (e) {
+            $('.agreement-btn').on('click', function (e) {
                 if($.fn.fullpage){
                     try {
                         $.fn.fullpage.setAllowScrolling(true)
@@ -218,7 +218,7 @@
                     curCode: code,
                     layIndex: layerIndex
                 }, e)
-            })
+            });
 
             // 三方APP中查看协议
             $(document).on('click', '.link', function (e) {
