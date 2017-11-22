@@ -113,7 +113,7 @@
              */
             if (resolve && resolve.ctrlName) {
                 console.log('global.checkAuthenFlow called by ' + resolve.ctrlName)
-                if (checkAuthenFlow($scope.dredged_type)) {
+                if (checkAuthenFlow($scope.dredged_type, resolve.ctrlName)) {
                     resolve.callback()
                 }
             } else {
@@ -279,10 +279,15 @@
         }
 
         // 校验认证状态，以及相关弹窗操作
-        function checkAuthenFlow(dredged_type) {
+        function checkAuthenFlow(dredged_type, ctrlName) {
             var dredged_type = $scope.personal.dredged_type;
             var verify_status = $scope.personal.verify_status;
             var passedAuthen = $scope.personal.passedAuthen;
+            var reviewMsgMap = {
+                "TraderIndexController": "您的账户正在审核中，请等待审核通过后再进行复制操作",
+                "AssetWithdrawController": "您的账户正在审核中，请等待审核通过后再进行提现操作",
+                "AssetDepositController": "您的账户正在审核中，请等待审核通过后再进行充值操作"
+            }
 
             // 通过直接return
             if (passedAuthen) {
@@ -299,7 +304,7 @@
                             // msgClass: 'font-danger',
                             size: 'sm',
                             btnsClass: 'text-right',
-                            msg: '您的账户正在审核中，请等待审核通过后再进行提现操作',
+                            msg: reviewMsgMap[ctrlName] || '您的账户正在审核中, 请等待审核通过再进行此操作',
                             btns: {
                                 '确定': function () { }
                             }
