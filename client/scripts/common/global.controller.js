@@ -18,6 +18,9 @@
 
         $scope.lang = lang;
 
+        // 临时头像预览
+        $scope.uploadAvatarImg = '';
+
         $scope.personal = {};
 
         // 先默认为3 避免出现bug

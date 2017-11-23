@@ -2,7 +2,8 @@
         <div class="space_sidebar__info">
             <div class="space_sidebar__avatar">
                 <a ui-sref="space.invest.subpage({subpage: 'current'})">
-                    <img ng-src="{{ personal.lgAvatar }}">
+                    <img ng-show="!personal.addAvatarImg" ng-src="{{ personal.lgAvatar }}">
+                    <img ng-show="!!personal.addAvatarImg" ng-src="{{personal.addAvatarImg}}">
                 </a>
             </div>
             <div class="space_sidebar__user">

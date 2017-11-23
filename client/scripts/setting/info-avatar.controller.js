@@ -12,16 +12,18 @@
         $scope.avatar = {
             status: 0             
         };
-        
         $scope.$on('uploadAvatarStart', function () {
             $scope.$apply(function () {
                 $scope.avatar.status = 1;
             });
         });
-        $scope.$on('uploadAvatarSuccess', function () {
+        $scope.$on('uploadAvatarSuccess', function (e, data) {
             $scope.$apply(function () {
-                $scope.avatar.status = 2;
-                changeAvatar($scope.personal);
+                // $scope.personal.addAvatarImg = data;
+                $timeout(function(){
+                    $scope.avatar.status = 2;
+                    changeAvatar($scope.personal);
+                }, 2000)
             });
         });
         $scope.$on('uploadAvatarFail', function () {
