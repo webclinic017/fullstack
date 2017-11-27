@@ -45,9 +45,9 @@
                 .state('authen.subpage',{
                     url: '/authen/:subpage?dredge_type',
                     views: {
-                        'nav@authen':{
-                            templateUrl: '/views/authen/nav.html'
-                        },
+                        // 'nav@authen':{
+                        //     templateUrl: '/views/authen/nav.html'
+                        // },
                         'content@authen': {
                             templateUrl: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'investInfo';

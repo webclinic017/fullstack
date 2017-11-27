@@ -1,40 +1,40 @@
-@include b(authen_nav) {
-    padding-top: 50px;
-    @include e(list) {
-        width: 80%;
-        margin-left: 10%;
-        text-align: center;
-        @include m(item) {
-            width: 24%;
-            height: 43px;
-            display: inline-block;
-            border-bottom: 2px solid $gray;
-            &.active {
-                border-bottom: 2px solid $brand-primary;
-                p {
-                    color: #222;
-                }
-            }
-            p {
-                font-size: 18px;
-                font-weight: 500;
-                color: $gray-dark;
-                span {
-                    display: inline-block;
-                    width: 25px;
-                    height: 25px;
-                    margin-right: 8px;
-                    background: $brand-primary;
-                    border-radius: 50%;
-                }
-            }
-        }
-    }
-}
+// @include b(authen_nav) {
+//     padding-top: 50px;
+//     @include e(list) {
+//         width: 80%;
+//         margin-left: 10%;
+//         text-align: center;
+//         @include m(item) {
+//             width: 24%;
+//             height: 43px;
+//             display: inline-block;
+//             border-bottom: 2px solid $gray;
+//             &.active {
+//                 border-bottom: 2px solid $brand-primary;
+//                 p {
+//                     color: #222;
+//                 }
+//             }
+//             p {
+//                 font-size: 18px;
+//                 font-weight: 500;
+//                 color: $gray-dark;
+//                 span {
+//                     display: inline-block;
+//                     width: 25px;
+//                     height: 25px;
+//                     margin-right: 8px;
+//                     background: $brand-primary;
+//                     border-radius: 50%;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 @include b(authen_content) {
     padding: 105px 55px;
-    padding-top: 0;
+    padding-top: 50px;
     h2 {
         font-weight: 400;
     }

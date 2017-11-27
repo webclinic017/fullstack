@@ -41,7 +41,7 @@
             setPhoneApi: urlOrigin2 + '/user/phone',
             logoutApi: urlOrigin2 + '/auth/logout',
             getKycApi: urlOrigin2 + '/user/kyc_map',
-            getAuthStatus: urlOrigin2 + '/user/auth_status',
+            getAuthStatus: urlOrigin2 + '/v2/user/auth_status',
             setKycApi: urlOrigin2 + '/user/kyc',
             sendEmailCodeApi: urlOrigin2 + '/validation/send_email_code',
             checkEmailCodeApi: urlOrigin2 + '/validation/check_email_code',

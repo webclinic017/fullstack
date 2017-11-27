@@ -1,7 +1,8 @@
 <div ng-controller="SettingInfoAvatarController">
     <div class="upload_avatar text-center" tw-upload-avatar filename="personal.lgAvatar">
 
-        <img class="upload_avatar__avatar" ng-src="{{personal.lgAvatar}}" alt="头像">
+        <img class="upload_avatar__avatar" ng-show="!personal.addAvatarImg" ng-src="{{personal.lgAvatar}}" alt="头像">
+        <img class="upload_avatar__avatar" ng-show="!!personal.addAvatarImg" ng-src="{{personal.addAvatarImg}}">
 
         <label class="upload_avatar__label" for="input">
             <input id="input" class="upload_avatar__input" name="file" type="file" accept="image/jpeg,image/png">

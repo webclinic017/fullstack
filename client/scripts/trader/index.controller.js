@@ -155,7 +155,7 @@
                             }
                         } else {
                             $scope.$emit('global.openDredgeMdl', {
-                                position: 'copy',
+                                position: 'TraderIndexController',
                             });
                         }
                     }

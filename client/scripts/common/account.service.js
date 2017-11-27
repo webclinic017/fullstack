@@ -412,8 +412,8 @@
         }
 
         // 获取认证状态
-        function getAuthStatus() {
-            return publicHttp.dealPublicRequest(o.getAuthStatus, 'GET')
+        function getAuthStatus(params) {
+            return publicHttp.dealPublicRequest(o.getAuthStatus, 'GET', params)
         }
 
         /**

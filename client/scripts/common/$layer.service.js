@@ -25,7 +25,7 @@
                 templateUrl: '/views/template/$layer_modal.html',
                 size: params.size || 'sm',
                 backdrop: true,
-                controller: function ($scope, $modalInstance) {
+                controller: ['$scope', '$modalInstance',function ($scope, $modalInstance) {
                     // 绑定参数
                     angular.extend($scope, params)
                     //$scope.loading = 0;   0 未loading；1 正在loading；2 loading完毕
@@ -43,7 +43,7 @@
                     function closeModal() {
                         $modalInstance.dismiss();
                     }
-                }
+                }]
             });
         }
     }

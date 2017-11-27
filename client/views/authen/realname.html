@@ -1,9 +1,9 @@
-<div class="authen_content mg-tp-30 ctn center">
+<div class="authen_content ctn center">
     <div class="authen_title">
         <h2>上传身份证明</h2>
         <p class="authen_content__tip">因监管要求，请您提供相关信息。请确认是您本人，审核通过后不可修改。</p>
     </div>
-    <div class="kyc mg-tp-30">
+    <div class="kyc mg-tp-40">
         <form name="realnameForm" novalidate>
             <div class="row">
                 <div class="col-xs-2">
@@ -181,14 +181,14 @@
                     下一步
                 </button>
 
+                <a class="btn btn-sm btn-primary-gradient" ng-if="!clickable">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    提交中...
+                </a>
+
                 <a ng-if="dredgingType == 'live'" ui-sref="space.center.index" class="btn btn-sm btn-primary-gradient mg-lf-20">
                     跳过
                 </a>
-        
-                <button class="btn btn-sm btn-primary-gradient" ng-if="!clickable">
-                    <i class="loading_spinner fa fa-spinner"></i>
-                    提交中...
-                </button>
             </div>    
         </div>
     </div>
