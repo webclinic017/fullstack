@@ -1,0 +1,53 @@
+<div class="sys_modal_v2 slim_case">
+    <button class="close" ng-click="closeModal()">×</button>
+
+    <h5 class="sys_modal_v2__title">
+        选择支付方式
+    </h5>
+
+    <div class="sys_modal_v2__content">
+        <ul class="deposit_modal__type">
+           <li class="row" ng-click="selectType('tele')">
+               <div class="col-xs-3 deposit_modal__type-icon">
+                   <span class="btn-select fr" ng-class="{active: deposit.type === 'tele'}"></span>
+               </div>
+               <div class="col-xs-9 deposit_modal__type-cont">
+                   <p class="tit">电汇<span>推荐</span></p>
+                   <p class="tip">电汇通常需要 3-5 个工作日到帐</p>
+               </div>
+           </li>
+           <li class="row" ng-click="selectType('invest')">
+               <div class="col-xs-3 deposit_modal__type-icon">
+                   <span class="btn-select fr" ng-class="{active: deposit.type === 'invest'}"></span>
+               </div>
+               <div class="col-xs-9 deposit_modal__type-cont">
+                   <p class="tit">网银支付</p>
+                   <p class="tip">单日交易限额以银行规定为准</p>
+               </div>
+           </li>
+           <li class="row" ng-click="selectType('wallet')">
+               <div class="col-xs-3 deposit_modal__type-icon">
+                   <span class="btn-select fr" ng-class="{active: deposit.type === 'wallet'}"></span>
+               </div>
+               <div class="col-xs-9 deposit_modal__type-cont">
+                   <p class="tit">零钱包</p>
+                   <p class="tip">当前零钱包余额：${{ deposit.walletAble || '0.00' }}</p>
+               </div>
+           </li>
+           <!-- <li class="row" ng-click="selectType('alipay')">
+               <div class="col-xs-3 deposit_modal__type-icon">
+                   <span class="btn-select fr" ng-class="{active: deposit.type === 'alipay'}"></span>
+               </div>
+               <div class="col-xs-9 deposit_modal__type-cont">
+                   <p class="tit">支付宝</p>
+                   <p class="tip">单日交易限额 $3000.00</p>
+               </div>
+           </li> -->
+        </ul>
+
+        <p class="btn_wrapper mg-bt-15">
+            <button class="btn btn-primary-gradient btn-sm" ng-click="changeType()">
+                确定
+            </button>
+        </p>
+    </div>

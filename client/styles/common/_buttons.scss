@@ -43,6 +43,9 @@
 .btn-gray {
     @include button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border, $btn-gray-bg, $btn-gray-border);
 }
+.btn-disabled {
+    @include button-variant(#333, #ccc, #ccc, #ccc, #ccc);
+}
 
 .btn-gray-sm {
     @include button-size(0px, 15px, 12px, 30px, $btn-border-radius);
@@ -81,5 +84,31 @@
 
     &:hover {
         text-decoration: underline;
+    }
+}
+
+// 选择按钮
+.btn-select {
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #999;
+    border-radius: 50%;
+    position: relative;
+    background-color: transparent;
+
+    &.active {
+        border-color: #ffbf44;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #ffbf44;
+            top: 2px;
+            left: 2px;
+        }
     }
 }
