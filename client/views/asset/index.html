@@ -1,13 +1,13 @@
-<div class="nav-tabs-wrapper">
-    <ul class="nav-tabs">
-        <li ui-sref-active="active">
-            <a ui-sref="space.asset.subpage({subpage: 'deposit'})">&nbsp;&nbsp;&nbsp;充值&nbsp;&nbsp;&nbsp;</a>
+<div class="space_content">
+    <ul class="space_content__nav clearfix">
+        <li class="space_content__nav-item" ui-sref-active="active">
+            <a ui-sref="space.asset.subpage({subpage: 'deposit'})">&nbsp;&nbsp;&nbsp;充&nbsp;值&nbsp;&nbsp;&nbsp;</a>
         </li>
-        <li ui-sref-active="active">
-            <a ui-sref="space.asset.subpage({subpage: 'withdraw'})">&nbsp;&nbsp;&nbsp;提现&nbsp;&nbsp;&nbsp;</a>
+        <li class="space_content__nav-item" ui-sref-active="active">
+            <a ui-sref="space.asset.subpage({subpage: 'withdraw'})">&nbsp;&nbsp;&nbsp;提&nbsp;现&nbsp;&nbsp;&nbsp;</a>
         </li>
     </ul>
-</div>
-<div class="relative mg-bt-50">
-    <div ui-view style="min-height: 450px;"></div>
+    <div class="relative mg-bt-50">
+        <div ui-view style="min-height: 450px;"></div>
+    </div>
 </div>

@@ -28,7 +28,8 @@
             walletDeposit: walletDeposit,
             walletWithdraw: walletWithdraw,
             walletCanWithdraw: walletCanWithdraw,
-            getBanks: getBanks
+            getBanks: getBanks,
+            teleDeposit: teleDeposit
         };
         return service;
 
@@ -279,6 +280,20 @@
          */
         function getBanks() {
             return publicHttp.dealPublicRequest(o.getBanksApi, 'GET');
-        }        
+        }
+
+        /**
+         * Asset Service 电汇入金
+         *
+         * @method teleDeposit
+         * @param {Number} amount
+         * @param {Number} file  (base64编码)
+         */
+        function teleDeposit(amount, file) {
+            return publicHttp.dealPublicRequest(o.teleDepositApi, 'POST', {
+                amount: amount,
+                file: file
+            });
+        }    
     }
 })();
