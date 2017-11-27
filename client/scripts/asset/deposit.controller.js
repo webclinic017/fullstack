@@ -87,103 +87,109 @@
             }
         }
 
-        function openSystemMdl(type) {
-            $modal.open({
-                templateUrl: '/views/asset/verify_modal.html',
-                size: 'sm',
-                backdrop: true,
-                controller: function ($scope, $modalInstance) {
-                    $scope.type = type;
-                    $scope.closeModal = closeModal;
-                    $scope.dredgeType = '';
+        function checkAuthenFlow() {
+            var dredged_type = $scope.personal.dredged_type;
+            var verify_status = $scope.personal.verify_status;
+            var passedAuthen = $scope.personal.passedAuthen;
 
-                    switchDredge(function () {
-                        $scope.dredgeType = 'demo'
-                    }, function () {
-                        $scope.dredgeType = 'live'
-                    })
-                    function closeModal() {
-                        $modalInstance.dismiss();
+            // 通过直接return
+            if (passedAuthen) {
+                return true
+            } else {
+                if (dredged_type == 'unknow') {
+                    $scope.$emit('global.openDredgeMdl', {
+                        position: 'withdraw'
+                    });
+                } else {
+                    // 关闭其余弹窗
+                    if (parentScope.manageCardModalInstance) {
+                        parentScope.manageCardModalInstance.dismiss()
+                    }
+                    if (verify_status == 5) {
+                        $layer({
+                            // title: '系统提示',
+                            // msgClass: 'font-danger',
+                            size: 'sm',
+                            btnsClass: 'text-right',
+                            msg: '您的账户正在审核中，请等待审核通过后再进行提现操作',
+                            btns: {
+                                '确定': function () { }
+                            }
+                        })
+                    } else {
+                        // 没有完成实名认证
+                        $modal.open({
+                            templateUrl: '/views/asset/verify_modal.html',
+                            size: 'sm',
+                            backdrop: true,
+                            controller: function ($scope, $modalInstance) {
+                                $scope.closeModal = closeModal;
+                                $scope.dredgeType = dredgeType;
+
+                                function closeModal() {
+                                    $modalInstance.dismiss();
+                                }
+                            }
+                        });
                     }
                 }
-            });
+                return false
+            }
         }
 
         // 充值  还未完成
         function toDeposit(amount) {
-            // 体验金账户未完成实名认证
-            var verifyStatus = $scope.personal.verify_status
-            if (!$scope.personal.finishVerify) {
-                // 资料已经提交审核
-                if (verifyStatus == 5) {
-                    $layer({
-                        // title: '系统提示',
-                        // msgClass: 'font-danger',
-                        size: 'sm',
-                        btnsClass: 'text-right',
-                        msg: '您的账户正在审核中，请等待审核通过后再进行充值操作',
-                        btns: {
-                            '确定': function () {}
-                        }
-                    })
-                }
-                // 未上传过身份证 或者 实名被拒绝
-                if (verifyStatus < 5) {
-                    openSystemMdl('deposit')
-                }
-                return
-            }
+            $scope.$emit('global.checkAuthenFlow', {
+                ctrlName: 'AssetDepositController',
+                callback: function () {
+                    var amount = $scope.deposit.amount;
 
-            var amount = $scope.deposit.amount;
+                    if (typeof amount === 'undefined') {
+                        showErr('amount');
+                        return;
+                    }
+                    amount = Number(amount).toFixed(2);
 
-            if (typeof amount === 'undefined') {
-                showErr('amount');
-                return;
-            }
-            amount = Number(amount).toFixed(2);
+                    confirmDeposit();
 
-            confirmDeposit();
+                    function confirmDeposit() {
+                        $scope.isLoading = true;
+                        if ($scope.deposit.type === 'invest' || $scope.deposit.type === 'alipay') {
+                            var platform = $scope.deposit.type === 'alipay' ? 4 : undefined;
+                            var w = $window.open('/waiting');
 
-            function confirmDeposit() {
-                $scope.isLoading = true;
-                if ($scope.deposit.type === 'invest' || $scope.deposit.type === 'alipay') {
-                    // if ($scope.personal.profile_check != 3) {
-                    //     openSystemMdl('deposit');
-                    //     return;
-                    // }
-                    var platform = $scope.deposit.type === 'alipay' ? 4 : undefined;
-                    var w = $window.open('/waiting');
-
-                    asset.deposit(amount, platform).then(function (data) {
-                        $scope.isLoading = false;
-                        if (!data) return;
-                        if (data.is_succ) {
-                            var token = $cookies["token"] || '';
-                            var url = data.data.url + '?token=' + token;
-                            openDepositMdl('depositFinish');
-                            w.location = url;
+                            asset.deposit(amount, platform).then(function (data) {
+                                $scope.isLoading = false;
+                                if (!data) return;
+                                if (data.is_succ) {
+                                    var token = $cookies["token"] || '';
+                                    var url = data.data.url + '?token=' + token;
+                                    openDepositMdl('depositFinish');
+                                    w.location = url;
+                                } else {
+                                    layer.msg(data.message);
+                                    w.close();
+                                }
+                            });
                         } else {
-                            layer.msg(data.message);
-                            w.close();
-                        }
-                    });
-                } else {
-                    if ($scope.isDeposit) return;
-                    $scope.isDeposit = true;
+                            if ($scope.isDeposit) return;
+                            $scope.isDeposit = true;
 
-                    asset.walletDeposit(amount).then(function (data) {
-                        $scope.isLoading = false;
-                        // console.log(data);
-                        $scope.isDeposit = false;
-                        if (!data) return;
-                        if (data.is_succ) {
-                            $scope.walletDepositSucc = true;
-                        } else {
-                            layer.msg(data.message);
+                            asset.walletDeposit(amount).then(function (data) {
+                                $scope.isLoading = false;
+                                // console.log(data);
+                                $scope.isDeposit = false;
+                                if (!data) return;
+                                if (data.is_succ) {
+                                    $scope.walletDepositSucc = true;
+                                } else {
+                                    layer.msg(data.message);
+                                }
+                            });
                         }
-                    });
+                    }
                 }
-            }
+            })
         }
 
         function changeDepositType(type) {

@@ -49,10 +49,10 @@
             <div ng-if="!personal.is_master" class="space_sidebar__copy">
                 复制高手：{{ personal.copy_num }}
             </div>
-            <div ng-show="personal.is_true == 1" class="space_sidebar__real">
+            <div ng-show="personal.dredged_type == 'live'" class="space_sidebar__real">
                 MT4 真实账户：{{ personal.mt4_id }}
             </div>
-            <div ng-show="personal.is_true == 2" class="space_sidebar__real">
+            <div ng-show="personal.dredged_type == 'demo'" class="space_sidebar__real">
                 MT4 体验金账户：{{ personal.mt4_id }}
             </div>
             <div ng-show="personal.dredged_type == 'unknow'" class="space_sidebar__real">
@@ -99,9 +99,6 @@
                     </li>
                 </ul>
             </li>
-            <!-- <li>
-                <h4 class="side_navbar__title">投资顾问</h4>
-            </li> -->
         </ul>
     </div>
     

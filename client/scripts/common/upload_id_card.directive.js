@@ -4,9 +4,9 @@
 
     angular
         .module('fullstackApp')
-        .directive('twUploadIdCard', ['api', '$cookies', twUploadIdCard]);
+        .directive('twUploadIdCard', ['api', '$cookies', '$layer',twUploadIdCard]);
 
-    function twUploadIdCard(api, $cookies) {
+    function twUploadIdCard(api, $cookies, $layer) {
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
@@ -22,8 +22,9 @@
 
                 var token = $cookies["token"] || '';
                 var uploadUrl = api.account.uploadIdCardForm + "?token=" + token;
-                // console.log('uploadUrl', uploadUrl);
-
+                if(scope.is_live){
+                    uploadUrl + '&is_live=' + scope.is_live
+                }
                 fileInput.fileupload({
                     url: uploadUrl,
                     type: 'POST',
@@ -57,7 +58,7 @@
 
                         /*判断大小*/
                         if (data.originalFiles[0]['size'] > 2 * 1024 * 1024) {
-                            uploadErrors.push('对不起,暂时不支持大于2M的文件,请压缩后再试!');
+                            uploadErrors.push('对不起，暂时不支持大于2M的文件，请压缩后再试!');
                             scope.$emit('uploadIdCardFail', {
                                 face: face
                             });
@@ -66,7 +67,14 @@
                         }
 
                         if (uploadErrors.length > 0) {
-                            alert(uploadErrors.join("\n"));
+                            $layer({
+                                title: '提示',
+                                msg: uploadErrors.join("\n"),
+                                msgClass: 'font-danger',
+                                btns: {
+                                    "好的": function(){}
+                                }
+                            })
                         } else {
                             data.face = face;
                             /*将利用插件生成的上传控件存入controller*/
@@ -80,7 +88,8 @@
                         console.log(e, data);
 
                         scope.$emit('uploadIdCardSuccess', {
-                            face: face
+                            face: face,
+                            data: data.result.data
                         });
 
                     },
