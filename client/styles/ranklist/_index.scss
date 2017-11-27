@@ -177,6 +177,10 @@
                     display: block;
                     color: #222;
                     font-weight: 600;
+                    width: 200px;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
                 }
                 > .intr {
                     color: #626364;

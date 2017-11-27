@@ -87,7 +87,7 @@
         }, 400);
     });
 
-    $(document).on('click', '.m_agreement_tab__lst li', function () {
+    $(".m_agreement_tab__lst li").on('click', function () {
         $(".m_agreement_tab").removeClass("active");
         setTimeout(function () {
             $(".m_agreement_backdrop").removeClass("active");

@@ -19,7 +19,8 @@
             username: copiedTrader.username,          // 高手 username
             // avatar: copiedTrader.lgAvatar,         // 高手头像
             amount: copiedTrader.copied || undefined, // 需填写的复制金额，若已经复制则为本人复制高手的复制金额
-            minCopyAmount: 200,  
+            minCopyAmount: 200, 
+            surplusAmount: passedScope.surplusAmount || undefined
         };
 
         if(avaCopyInfo){
@@ -33,6 +34,10 @@
             getAvaCopyAmount(copiedTrader.usercode);
         }
 
+        if ($scope.copyTrade.title == 'modify') {
+            getMasterGrade(copiedTrader.usercode);
+        }
+
         // 获取可用复制金额
         function getAvaCopyAmount(usercode) {
             trader.getAvaCopyAmount(usercode).then(function (data) {
@@ -41,6 +46,17 @@
                 // $scope.copyTrade.amount = avaCopyInfo.advice;
                 $scope.calAmount();
                 getDefaultAmount();
+            });
+        }
+
+        // 获取高手剩余可复制金额 
+        // 只有在修改时需要获取，复制高手时是通过 passedScope 传递获得
+        function getMasterGrade (usercode) {
+            trader.getMasterGrade(usercode).then(function (data) {
+                // console.log(data);
+                if (data.is_succ && data.code == 0) {
+                    $scope.copyTrade.surplusAmount = data.data.available_amount;
+                }
             });
         }
 

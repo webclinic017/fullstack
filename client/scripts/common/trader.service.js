@@ -16,7 +16,10 @@
             getAvaCopyAmount: getAvaCopyAmount,
             getHistoricalRate: getHistoricalRate,
             getMasterInfo: getMasterInfo,
-            getMonthlySymbols: getMonthlySymbols
+            getMonthlySymbols: getMonthlySymbols,
+            getMasterGrade: getMasterGrade,
+            getMasterCondition: getMasterCondition,
+            applyMaster: applyMaster
         };
         return service;
 
@@ -127,6 +130,33 @@
                 user_code: user_code,
                 date: date
             });
+        }
+
+        /**
+         * trader 获取高手等级信息
+         * @param user_code 
+         *
+         */
+        function getMasterGrade(user_code) {
+            return publicHttp.dealPublicRequest(o.getMasterGradeApi, 'GET', {
+                user_code: user_code
+            });
+        }
+
+        /**
+         * trader 高手申请条件检查
+         *
+         */
+        function getMasterCondition() {
+            return publicHttp.dealPublicRequest(o.getMasterConditionApi, 'GET');
+        }
+
+        /**
+         * trader 高手申请
+         *
+         */
+        function applyMaster() {
+            return publicHttp.dealPublicRequest(o.applyMasterApi, 'POST');
         }
     }
 })();

@@ -106,28 +106,32 @@ $(document).ready(function () {
     // setTimeout(function () {
     //     layer.closeAll();
     //     // getKycList();
-    //     step = 3;
+    //     step = 0;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
     // }, 1000);
     
     $(ele.indexBtn).on("tap", function () {
-        layer.open({type: 2, shadeClose: false});
 
-        publicRequest('thirdRegister', 'POST').then(function (data) {
-            // console.log(data);
-            layer.closeAll();
-            if (!data) return;
-            if (data.is_succ) {
-                step = 1;
-                goStepPage();
-            } else {
-                layer.open({
-                    content: data.message,
-                    skin: 'msg',
-                    time: 2
-                });
-            }
+        openH5AgmentModal(100402, function(resolve, e){
+            layer.close(resolve.layIndex);
+            layer.open({type: 2, shadeClose: false});
+
+            publicRequest('thirdRegister', 'POST').then(function (data) {
+                // console.log(data);
+                layer.closeAll();
+                if (!data) return;
+                if (data.is_succ) {
+                    step = 1;
+                    goStepPage();
+                } else {
+                    layer.open({
+                        content: data.message,
+                        skin: 'msg',
+                        time: 2
+                    });
+                }
+            });
         });
     });
 

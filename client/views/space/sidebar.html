@@ -13,36 +13,23 @@
                     {{ personal.region.city_name || personal.region.state_name || personal.region.world_name || '中国' }}
                 </span> -->
             </div>
-            <!-- <div class="row space_sidebar__verify">
-                <div class="col-xs-6 bar">
-                    <div new-scale-bar data-type="spaceSidebar"></div>
+            <div class="text-center mg-tp-10" ng-if="personal.is_master != undefined">
+                <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="!personal.is_master" class="btn btn-gray btn-gray-sm">申请高手</a>
+                <div class="space_sidebar__grade" ng-if="personal.is_master">
+                    <div class="space_sidebar__grade-bar">
+                        <span ng-style="{width: masterGradeInfo.scale}"></span>
+                    </div>
+                    <div class="clearfix mg-tp-10">
+                        <div class="space_sidebar__grade-tip fl">
+                            高手等级
+                            <span class="icon-grade">{{ masterGradeInfo.name || 'B' }}</span>
+                        </div>
+                        <a ui-sref="space.master.subpage({subpage: 'grade'})" class="space_sidebar__grade-btn fr">
+                             查看详情 >
+                        </a>
+                    </div>
                 </div>
-                <div class="col-xs-6">
-                    <a class="btn btn-gray btn-gray-sm" ui-sref="space.setting.subpage({subpage: 'verify'})" ng-if="personal.verifiedStatus === 0 || personal.verifiedStatus === 1">
-                        实名认证
-                    </a>
-    
-                    <a class="btn btn-gray btn-gray-sm" ng-disabled="true" ng-if="personal.verifiedStatus === 2">
-                        审核中
-                    </a>
-    
-                    <a class="btn btn-gray btn-gray-sm" ui-sref="space.setting.subpage({subpage: 'info'})" ng-if="personal.verifiedStatus === 3 && personal.infoDegree < 100">
-                        完善资料
-                    </a>
-                </li>
-                <li ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
-                    <a ui-sref="space.invite">邀请好友</a>
-                </li>
-                <li ui-sref-active="active">
-                    <a ui-sref="space.notice">
-                        系统消息
-                        <span class="space_sidebar__mes-num" ng-if="personal.unreadMsg.total > 0">{{ personal.unreadMsg.total }}</span>
-                    </a>
-                </div>
-            </div> -->
-            <!-- <div class="space_sidebar__data">
-                <a class="btn btn-primary btn-sm" ui-sref="space.setting.subpage({subpage: 'info'})">完善个人资料 ></a>
-            </div> -->
+            </div>
             <div ng-if="personal.is_master" class="space_sidebar__copy">
                 复制高手：0
             </div>

@@ -70,7 +70,8 @@
             getMasterBonusListApi: urlOrigin2 + '/commission/master_settle',
             getCopierBonusListApi: urlOrigin2 + '/commission/custom_settle',
             getBonusDetailListApi: urlOrigin2 + '/commission/settle_info',
-            getBanksApi: urlOrigin2 + '/bank_names'
+            getBanksApi: urlOrigin2 + '/bank_names',
+            teleDepositApi: urlOrigin2 + '/payment/deposit/transfer'
         };
         var forex = {
             
@@ -113,7 +114,10 @@
             getAvaCopyAmountApi: urlOrigin2 + '/valid_copy',
             getHistoricalRateApi: urlOrigin2 + '/master/monthly_profit_rates',
             getMasterInfoApi: urlOrigin2 + '/master/trading_profile',
-            getMonthlySymbolsApi: urlOrigin2 + '/master/trading_symbols' 
+            getMonthlySymbolsApi: urlOrigin2 + '/master/trading_symbols',
+            getMasterGradeApi: urlOrigin2 + '/master/level',
+            getMasterConditionApi: urlOrigin2 + '/master/condition',
+            applyMasterApi: urlOrigin2 + '/master/apply'
         };
 
         var redbag = {

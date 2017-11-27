@@ -9,6 +9,7 @@
 
     function TraderIndexController($scope, $location, $state, trader, $timeout, $modal, $rootScope) {
         $scope.master = {};
+        $scope.masterGradeInfo = {};
         $scope.toCopy = toCopy;
         var usercode,
             detailId,
@@ -18,10 +19,13 @@
         var absUrl = $location.absUrl();
         var regUsercode = /trader\/(\d+)\/#/;
 
+        $scope.openMasterGradeMdl = openMasterGradeMdl;
+
         usercode = absUrl.match(regUsercode)[1];
 
         getMasterInfo(usercode);
         getAvaCopyAmount(usercode);
+        getMasterGrade(usercode);
 
         // $scope.$on('$stateChangeStart', function (event, toState, toParams) {
         //     if (toParams.usercode !== usercode) {
@@ -111,6 +115,16 @@
             });
         }
 
+        // 获取高手等级信息
+        function getMasterGrade (usercode) {
+            trader.getMasterGrade(usercode).then(function (data) {
+                // console.log(data);
+                if (data.is_succ && data.code == 0) {
+                    $scope.masterGradeInfo = data.data;
+                }
+            });
+        }
+
         // console.info($scope.personal.isumam);
         function toCopy() {
             // 判断是否登录
@@ -185,8 +199,33 @@
                         return {
                             copiedTrader: $scope.master,
                             AvaCopyInfo: AvaCopyInfo,
+                            surplusAmount: $scope.masterGradeInfo.available_amount,
                             title: 'copy'
                         }
+                    }
+                }
+            });
+        }
+
+        function openMasterGradeMdl() {
+            $modal.open({
+                templateUrl: '/views/web/trader/master_grade_modal.html',
+                size: 'sm',
+                backdrop: 'static',
+                resolve: {
+                    passedScope: function () {
+                        return {
+                            gradeList: $scope.masterGradeInfo.all_master_level
+                        };
+                    }
+                },    
+                controller: function ($scope, passedScope, $modalInstance) {
+
+                    $scope.gradeList = passedScope.gradeList;
+
+                    $scope.closeModal = closeModal;
+                    function closeModal() {
+                        $modalInstance.dismiss();
                     }
                 }
             });
