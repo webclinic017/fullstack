@@ -30,7 +30,7 @@
             checkPhoneAndCaptchaApi: urlOrigin2 + '/validation/check_phone_code',
             setNewPwdApi: urlOrigin2 + '/forget_passwd',
             getPersonalInfoApi: urlOrigin2 + '/user/info',
-            getAssetInfoApi: urlOrigin2 + '/centre/asset',
+            getAssetInfoApi: urlOrigin2 + '/v2/centre/asset',
             getUnreadLengthApi: urlOrigin2 + '/notify/number',
             getNoticeListApi: urlOrigin2 + '/notify',
             getAllReadApi: urlOrigin2 + '/notify/read',

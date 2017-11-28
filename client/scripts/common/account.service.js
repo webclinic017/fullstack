@@ -254,7 +254,9 @@
          * @method getAssetInfo
          */
         function getAssetInfo() {
-            return publicHttp.dealPublicRequest(o.getAssetInfoApi, 'GET');
+            return publicHttp.dealPublicRequest(o.getAssetInfoApi, 'GET', {
+                type: 0
+            });
         }
 
         /**
