@@ -7,7 +7,7 @@ module.exports = function () {
     var companyConfig = {};
     var indexBasePath = "/white_label";
     var date = require('./tools').date;
-    var versionAndroidApp = require('./app_ctrl.config').getAppInfo().url;
+    var versionAndroidApp = require('./app_ctrl.config').getAppInfo(company_name).android.app_info.url;
 
     if (company_name === 'tigerwit') {
         companyConfig = {

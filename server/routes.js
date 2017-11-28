@@ -904,18 +904,12 @@ module.exports = function (app) {
             });
         }
         if (action == "version_check") {
-            setEnvCf(req, res);
             var system = req.query.system || req.query.os;
             var versionCode = req.query.version_code;
-            var versinInfo = require('./app_ctrl.config');
-            var currentVersionNumAndroid = versinInfo.getAppInfo().version_name.replace(/[v\.]/ig, "");
-            var currentVersionNumIos = versinInfo.getAppInfoIos().version.replace(/[v\.]/ig, "");
-            // var currentVersion = {
-            //     version_name: "V2.0",
-            //     description: "上线全新外汇产品，交互全新改版!",
-            //     url: "http://www.tigerwit.com/download",
-            //     force_update: true
-            // };
+            var versinInfo = require('./app_ctrl.config').getAppInfo(COMPANY_NAME);
+            var currentVersionNumAndroid = versinInfo.android.app_info.version_name.replace(/[v\.]/ig, "");
+            var currentVersionNumIos = versinInfo.ios.app_info.version.replace(/[v\.]/ig, "");
+            
             var currentVersion = {
                 version_name: "",
                 description: "",
@@ -925,21 +919,21 @@ module.exports = function (app) {
 
             if (system == "android") {
                 if (versionCode) {
-                    if (versionCode < versinInfo.currentVersionCode) {
-                        currentVersion = versinInfo.getAppInfo();
+                    if (versionCode < versinInfo.android.currentVersionCode) {
+                        currentVersion = versinInfo.android.app_info;
                     }
                 } else {
                     // console.log(version, currentVersionNumAndroid);
                     var version = req.query.version.replace(/\./g, "");
                     if (Number(version) < Number(currentVersionNumAndroid)) {
-                        currentVersion = versinInfo.getAppInfo();
+                        currentVersion = versinInfo.android.app_info;
                     }
                 }
             } else if (system == "ios") {
                 var version = versionCode.replace(/\./g, "");
                 // console.log(version, currentVersionNumIos);
                 if (Number(version) < Number(currentVersionNumIos)) {
-                    currentVersion = versinInfo.getAppInfoIos();
+                    currentVersion = versinInfo.ios.app_info;
                 }
             }
             data = currentVersion;
