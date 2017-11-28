@@ -904,6 +904,7 @@ module.exports = function (app) {
             });
         }
         if (action == "version_check") {
+            setEnvCf(req, res);
             var system = req.query.system || req.query.os;
             var versionCode = req.query.version_code;
             var versinInfo = require('./app_ctrl.config');
@@ -921,7 +922,6 @@ module.exports = function (app) {
                 url: "",
                 force_update: false
             };
-            setEnvCf(req, res);
 
             if (system == "android") {
                 if (versionCode) {
