@@ -921,6 +921,7 @@ module.exports = function (app) {
                 url: "",
                 force_update: false
             };
+            setEnvCf(req, res);
 
             if (system == "android") {
                 if (versionCode) {
