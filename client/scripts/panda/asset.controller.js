@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('PandaAssetController', PandaAssetController);
 
-    PandaAssetController.$inject = ['$scope', '$window', '$cookies', '$modal', '$state', 'asset', 'validator', 'account', '$layer'];
+    PandaAssetController.$inject = ['$scope', '$window', '$cookies', '$modal', '$state', 'asset', 'validator', 'account'];
 
-    function PandaAssetController($scope, $window, $cookies, $modal, $state, asset, validator, account, $layer) {
+    function PandaAssetController($scope, $window, $cookies, $modal, $state, asset, validator, account) {
 
         var depositType = {
             invest: "网银支付",
@@ -198,7 +198,7 @@
    
         function openChangeDepTypeMdl () {
             $modal.open({
-                templateUrl: '/views/asset/deposit_dep_type_modal.html',
+                templateUrl: '/panda/deposit_dep_type_modal.html',
                 size: 'sm',
                 backdrop: 'static',
                 resolve: {
@@ -278,7 +278,7 @@
             if ($scope.verifyInfo.status) {
                 return true;
             } else {
-                $layer({
+                openMsgMdl({
                     size: 'sm',
                     btnsClass: 'text-right',
                     msg: $scope.verifyInfo.msg,
@@ -288,6 +288,33 @@
                 })
                 return false;
             }
+        }
+
+        function openMsgMdl (params) {
+            $modal.open({
+                templateUrl: '/panda/$layer_modal.html',
+                size: params.size || 'sm',
+                backdrop: true,
+                controller: ['$scope', '$modalInstance',function ($scope, $modalInstance) {
+                    // 绑定参数
+                    angular.extend($scope, params)
+                    //$scope.loading = 0;   0 未loading；1 正在loading；2 loading完毕
+                    $scope.loading = 0;
+                    $scope.handler = function (value) {
+                        var evaled = eval(value)
+                        angular.isFunction(evaled) && evaled($scope)
+                        if (!params.autoClose) {
+                            closeModal()
+                        }
+                        
+                    }
+
+                    $scope.closeModal = closeModal
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }]
+            });
         }
     }
 })();
