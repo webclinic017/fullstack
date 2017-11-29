@@ -2,17 +2,31 @@
     background-image: url("/images/panda/login_bg.jpg");
 }
 .panda_asset_bg {
-    height: 100%;
+    min-height: 100%;
     max-width: 2560px;
     overflow: hidden;
     background-position: center center;
     background-size: 100% 100%;
-    background-image: url(/images/panda/asset_bg.png);
+    background-image: url(/images/panda/asset_bg_new.png);
 
-    .asset-public {
-        background-position: center center;
-        background-size: 100% 100%;
-        background-image: url(/images/panda/asset_box_bg.png);
+    .deposit__rate, .deposit__way-tip, .deposit__tele-tip {
+        color: #ddd;
+    }
+    .deposit__tele-tit {
+        color: #fff;
+    }
+    .deposit__way {
+        color: #fff;
+
+        &:before {
+            border-top-color: #fff;
+        }
+    }
+    .deposit__tele_file {
+        border-color: #ddd;
+    }
+    .deposit__tele-msg {
+        color: #ccc;
     }
 
     .deposit__input input {
