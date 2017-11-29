@@ -314,6 +314,12 @@ module.exports = function (app) {
     /*H5 web 关于我们 英文页面*/
     app.route('/m/web/about/us').get(function (req, res) {
         setEnvCf(req, res);
+        res.render('m_vue/m_about_us_en', extendPublic({}, req));
+    });
+
+    /*H5 关于我们*/
+    app.route('/m/about/us').get(function (req, res) {
+        setEnvCf(req, res);
         res.render('m_vue/m_about_us', extendPublic({}, req));
     });
 

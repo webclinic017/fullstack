@@ -11,23 +11,187 @@
 <body>
 
 <div class="m_about_us">
-    <h4 class="m_about_us__title">About Tiger Financial Technology</h4>
-    <p class="m_about_us__content">
-        Tiger Financial Technology Pty Ltd (ACN 614 234 687) is a Corporate Authorised Representative (CAR No. 001 247 008) of HLK Group Pty Ltd (ACN 155 185 014) with AFSL No. 426539.  Tiger Financial Technology is affiliated with Tiger Wit Group Limited (Hong Kong).
-    </p>
-    <h4 class="m_about_us__title">About TigerWit Group</h4>
-    <p class="m_about_us__content">
-        TigerWit Group is a financial technology (fintech) company that combines cutting edge technology with trading platforms, upon its abundant capital power and product innovation TigerWit developed its own copy trading system and Mini trading platform that provide hundreds of instruments including forex, precious metals and CFD. Working together with dozens of banking institution enables TigerWit to process customer’s transactions directly to the global interbank market instantly with competitive price while keep trading fair and transparent. With HTTP secure socket layer and AES encryption algorithm to encrypt all transactions to ensure the safety of customer funds and information
-    </p>
+    <div class="tigerwit about-public__con mg-bt-30">
+        <%if(lang.currentLanguage() == 'en'){%>
+            <h1 class="m_about_us__title">
+                About Us
+            </h1>
+            <p class="font-dark">
+                Business name: TigerWit Financial Services Limited
+            </p>
+            
+            <p class="font-dark">
+                Registration: The Bahamas, company number 198255 B
+            </p>
+            <p class="font-dark">
+                Financial Services Licence number: SIA-F185
+            </p>
+            <p class="font-dark">
+                Website: https://www.tigerwit.com
+            </p>
+            <h1 class="m_about_us__title">
+                Who We Are
+            </h1>
+            <p class="font-dark">
+                 With a strong technological core built upon a philosophy of transparency, credibility and integrity, TigerWit offers its clients exceptional capabilities to trade in the markets.
+            </p>
+            <p class="font-dark mg-tp-20">
+                TigerWit’s founders are experienced individuals with successful backgrounds and a long history of achievement, who bring together a team of professionals with diverse academic and applied backgrounds experienced in trading Forex, CFD and spread betting, regulatory compliance, investment management, research & development of online platforms and global sales & marketing.
+            </p>
+        <%} else {%>
+            <h1 class="m_about_us__title">
+                关于我们
+            </h1>
+            <p class="font-dark">
+                老虎外汇成立于2015年初，是首批国内资本市场投资的互联网外汇交易服务平台。公司由互联网领域或金融科技领域15年以上经验的团队组成。凭借雄厚的资本，结合强大的产品创新能力，老虎外汇自主研发了复制跟单交易系统和移动端交易系统，并提供近百种外汇
+                <%if(!lang.isCloned()){ %>
+                  、原油、贵金属
+                <% } %>
+                和指数差价合约等品种的交易服务，致力于降低用户参与外汇市场门槛，为用户提供一个公平稳定的交易平台。
+            </p>
+            <h1 class="m_about_us__title">
+                管理团队
+            </h1>
+            <p class="font-dark">
+                老虎外汇创始人具有丰富的外汇交易行业经验和行业成功背景，他们汇集了具有不同学术和应用背景的专业人士，分别在外汇交易、差价合约、监管合规性、投资管理、在线平台研发和全球营销等方面拥有丰富的经验。
+            </p>
+        <%}%>  
+
+        <h1 class="m_about_us__title">
+            <%= lang.text("about_1")%>
+        </h1>
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_2")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_3")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_4")%>
+        </p>
+        <%if(lang.currentLanguage() == 'zh'){%>
+            <p class="font-darkest font-size-18 mg-tp-20">
+                所受监管
+            </p>
+            <p class="font-dark mg-tp-10">
+                老虎外汇受巴哈马证券委员会（SCB）的授权和监管。
+            </p>
+            <p class="font-dark">
+                监管号：SIA-F185
+            </p>
+            <p class="font-dark">
+                老虎外汇澳大利亚子公司Tiger Financial Technology Pty Ltd (ACN 614 234 687)，是HLK Group Pty Ltd (ACN 161 284 500)的机构授权代表(CAR No. 001 247 008)，被授权在协议内提供个人和一般性建议以及管理委托账户。
+            </p>
+        <%}%>  
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_5")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_6")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_7")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_8")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_9")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_10")%>
+        </p>
+
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_11")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_12")%>
+        </p>
+
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_13")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_14")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_15")%>
+        </p>
+
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_16")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_17")%>
+        </p>
+
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_18")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_19")%>
+        </p>
+
+
+        <h1 class="m_about_us__title">
+            <%= lang.text("about_20")%>
+        </h1>
+        <p class="font-dark">
+            <%= lang.text("about_21")%>
+        </p>
+        <p class="font-darkest font-size-18 mg-tp-20">
+            <%= lang.text("about_22")%>
+        </p>
+
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_23")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_24")%>
+        </p>
+
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_25")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_26")%>
+        </p>
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_27")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_28")%>
+        </p>
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_29")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_30")%>
+        </p>
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_31")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_32")%>
+        </p>
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_33")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_34")%>
+        </p>
+        <p class="font-darker font-size-16 mg-tp-20">
+            <%= lang.text("about_35")%>
+        </p>
+        <p class="font-dark mg-tp-10">
+            <%= lang.text("about_36")%>
+        </p>
+    </div>
 </div>
 
 </body>
 <% include /common/vendor/h5.js.html %>
-<!-- build:js(client) /scripts/m_asset.js -->
-<script src="/scripts/plugins/baiduTemplate.js"></script>
-<script src="/scripts/plugins/m_config.js"></script>
-<script src="/scripts/asset/m_asset.js"></script>
-<!-- endbuild -->
 
 <%- include('/common/statistic/all.html') %>
 </html>

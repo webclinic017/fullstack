@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<body>
+
+<div class="m_about_us">
+    <h4 class="m_about_us__title">About Tiger Financial Technology</h4>
+    <p class="m_about_us__content">
+        Tiger Financial Technology Pty Ltd (ACN 614 234 687) is a Corporate Authorised Representative (CAR No. 001 247 008) of HLK Group Pty Ltd (ACN 155 185 014) with AFSL No. 426539.  Tiger Financial Technology is affiliated with Tiger Wit Group Limited (Hong Kong).
+    </p>
+    <h4 class="m_about_us__title">About TigerWit Group</h4>
+    <p class="m_about_us__content">
+        TigerWit Group is a financial technology (fintech) company that combines cutting edge technology with trading platforms, upon its abundant capital power and product innovation TigerWit developed its own copy trading system and Mini trading platform that provide hundreds of instruments including forex, precious metals and CFD. Working together with dozens of banking institution enables TigerWit to process customer’s transactions directly to the global interbank market instantly with competitive price while keep trading fair and transparent. With HTTP secure socket layer and AES encryption algorithm to encrypt all transactions to ensure the safety of customer funds and information
+    </p>
+</div>
+
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_asset.js -->
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/plugins/m_config.js"></script>
+<script src="/scripts/asset/m_asset.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>
