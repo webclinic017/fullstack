@@ -297,7 +297,8 @@ module.exports = function (grunt) {
                             '*.xml',
                             'fonts/*.*',
                             'ngsrc/*.*',
-                            'plugins/**'
+                            'plugins/**',
+                            'panda/*.*'
                         ]
                     }, {
                         expand: true,
