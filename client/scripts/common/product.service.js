@@ -11,7 +11,8 @@
     var service = {
       getProductComment: getProductComment,
       getProductMarket: getProductMarket,
-      getProductInfo: getProductInfo
+      getProductInfo: getProductInfo,
+      getTradeFeeInfo: getTradeFeeInfo
     };
     return service;
 
@@ -40,6 +41,12 @@
 
     function getProductInfo(oParams) {
       return $http.get(o.getWebProductInfoApi, {
+        params: oParams
+      });
+    }
+
+    function getTradeFeeInfo(oParams) {
+      return $http.get(o.getWebTradeFeeInfoApi, {
         params: oParams
       });
     }

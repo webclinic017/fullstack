@@ -307,6 +307,7 @@ module.exports = function () {
         "foot12": { "en": "High Risk Warning: Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results.", "zh": "高风险投资警告：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险，不适合所有投资者。增大杠杆意味着高风险与高收益并存。在您决定交易之前，必须确认投资目标、投资经验及风险承受能力，并且选择适合自己的投资方式。您需要知晓金融市场的保证金交易具有全部或者部分亏损的可能。" + companyConfig.companyNameZh + "交易平台为广大交易高手和普通投资者提供复制交易服务。网站发布的任何信息，包括实时交易提醒、投资文章及其他资源等均来自互联网。所有用户必须需仔细考量并权衡投资风险及安全性。交易高手的历史数据不代表未来操作能力，用户因此所产生的的任何风险需自己承担。" },
         "foot13": { "en": "col-xs-3", "zh": "col-xs-2" },
         "foot14": { "en": "Support Documents", "zh": "帮助文档" },
+        "foot15": { "en": "Trade Fee", "zh": "交易费用" },
         "footlang": { "en": "English", "zh": "简体中文" },
         "footzh": { "en": "简体中文", "zh": "简体中文" },
 

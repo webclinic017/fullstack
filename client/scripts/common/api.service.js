@@ -99,7 +99,8 @@
         var product = {
             getProductCommentApi: 'https://forex.tigerwit.com/api/get_category_posts?id=86',
             getProductMarketApi: 'https://forex.tigerwit.com/api/get_category_posts?id=90',
-            getWebProductInfoApi: '/napi?action=get_product'
+            getWebProductInfoApi: '/napi?action=get_product',
+            getWebTradeFeeInfoApi: '/napi?action=get_trade_fee'
         };
         var ranklist = {
             getMastersListApi: urlOrigin2 + '/master/list',
