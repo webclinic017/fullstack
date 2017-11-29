@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('PandaAssetController', PandaAssetController);
 
-    PandaAssetController.$inject = ['$scope', '$window', '$cookies', '$modal', '$state', 'asset', 'validator', 'account'];
+    PandaAssetController.$inject = ['$scope', '$window', '$cookies', '$modal', '$state', 'asset', 'validator', 'account', '$layer'];
 
-    function PandaAssetController($scope, $window, $cookies, $modal, $state, asset, validator, account) {
+    function PandaAssetController($scope, $window, $cookies, $modal, $state, asset, validator, account, $layer) {
 
         var depositType = {
             invest: "网银支付",
@@ -198,7 +198,7 @@
    
         function openChangeDepTypeMdl () {
             $modal.open({
-                templateUrl: '/panda/deposit_dep_type_modal.html',
+                templateUrl: '/views/template/deposit_dep_type_modal.html',
                 size: 'sm',
                 backdrop: 'static',
                 resolve: {
@@ -292,7 +292,7 @@
 
         function openMsgMdl (params) {
             $modal.open({
-                templateUrl: '/panda/$layer_modal.html',
+                templateUrl: '/views/template/$layer_modal.html',
                 size: params.size || 'sm',
                 backdrop: true,
                 controller: ['$scope', '$modalInstance',function ($scope, $modalInstance) {
