@@ -1,4 +1,8 @@
 module.exports = {
+    "faqCommon0": {
+        "zh": "回到顶部",
+        "en": "Back to top"
+    },
     "faqAccount1": {
         "zh": "Q：怎样开设一个账户？",
         "en": "Q: How to download MT4 platform?"
@@ -305,7 +309,7 @@ module.exports = {
     },
     "faqMeta2": {
         "zh": "A：MT4 下载地址（跳转至MT4客户端应用市场）",
-        "en": "A:    iOS Download  Android Download"
+        "en": "A: MT4 for"
     },
     "faqMeta3": {
         "zh": "Q：忘记了 MT4 登录密码怎么办？",
