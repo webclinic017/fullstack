@@ -189,7 +189,7 @@ module.exports = {
     },
     "faqTrade24": {
         "zh": "Q：我收到“重新报价”信息。 这是什么意思？",
-        "en": "Q: I received a message _ “price re-quotation”. What does this mean?"
+        "en": "Q: I received a message - “price re-quotation”. What does this mean?"
     },
     "faqTrade25": {
         "zh": "A：如果市场出现大幅波动，价格会急剧变化。在此情况之下，我们需要向您提供最新市场价。您可以接受新的重新报价或者拒绝新的价格并取消交易的执行。",
@@ -297,11 +297,11 @@ module.exports = {
     },
     "faqAsset15": {
         "zh": "Q:$200体验金可以出金吗？体验金交易产生的盈利可以出金吗？",
-        "en": "Q: $ 200 experience funds can be withdraw? Experienced funds generated profits can be withdraw?"
+        "en": "Q: $200 experience funds can be withdraw? Experienced funds generated profits can be withdraw?"
     },
     "faqAsset16": {
         "zh": "A:$200体验金账户可直接用于交易，体验金和盈利不支持出金，同时亏损也无需补偿。在您首次入金后，系统将会自动将账户升级为真实交易账户，真实账户不含体验金。",
-        "en": "A: $200 Experience fundscan be used directly for trading, experience funds and profit can not withdrawal, experience    funds trading losses generated without compensation."
+        "en": "A: $200 Experience fundscan be used directly for trading, experience funds and profit can not withdrawal, experience funds trading losses generated without compensation."
     },
     "faqMeta1": {
         "zh": "Q：如何下载 MT4 平台？",
@@ -313,11 +313,11 @@ module.exports = {
     },
     "faqMeta3": {
         "zh": "Q：忘记了 MT4 登录密码怎么办？",
-        "en": ""
+        "en": "What if I cannot remember MT4 login password?"
     },
     "faqMeta4": {
         "zh": "A：开户成功后系统自动生成MT4登录密码，您可以登录注册邮箱查看密码。如果您在网站修改登录密码，那么MT4的密码也会同步跟随修改。但是，如果您只在MT4里修改密码，并不会影响到您实际网站的登录密码，请妥善保管所有密码。",
-        "en": ""
+        "en": "A：The password you created during registration is the password for MT4 login. If you change your login password on the website, MT4 password will be changed accordingly. But, if you change your password on MT4, the password for logging into the website will not be changed. Please take care of all your passwords. "
     },
     "faqSwap1": {
         "zh": "Q：什么是隔夜利息？",
@@ -325,7 +325,7 @@ module.exports = {
     },
     "faqSwap2": {
         "zh": "A：隔夜利息通常在客户持仓隔夜的情况下发生，银行收取或支付给您的利息，隔夜利息有正有负。",
-        "en": "A: Swap rate usually happens in the case of positions overnight, it is the interest your bank receives    or pays you."
+        "en": "A: Swap rate usually happens in the case of positions overnight, it is the interest your bank receives or pays you."
     },
     "faqSwap3": {
         "zh": "Q：隔夜利息的计算时间？",
@@ -333,27 +333,27 @@ module.exports = {
     },
     "faqSwap4": {
         "zh": "A：隔夜利息在美国东部时间下午 5 点执行。外汇交易以平台时间0:00为开始及结束时间。在平台时间0:00前建立的仓位都会视为持仓过夜，需要计算隔夜利息。客户在该时间所持有的任何头寸都将被自动纳入隔夜利息的计算，且结果会显示在交易账户中。请查看常见问题了解隔夜利息详情。",
-        "en": "A: Swap rate will be calculated at 5:00pm EST.Forex trading time starts and ends at 0:00 (GMT+3).    Orders opened before 0:00 (GMT + 3) are considered overnight positions and need to calculate swap    rate."
+        "en": "A: Swap rate will be calculated at 5:00pm EST.Forex trading time starts and ends at 0:00 (GMT+3).    Orders opened before 0:00 (GMT + 3) are considered overnight positions and need to calculate swap rate."
     },
     "faqSwap5": {
         "zh": "Q：我在哪里可以查看到隔夜利息报价？",
         "en": "Q: Where can I check the swap rate quotation?"
     },
     "faqSwap6": {
-        "zh": "A：您在老虎外汇APP里可以查看隔夜利息。具体操作：在自选列表中，选择您要查看的交易品种，点击进入交易页面，再点击产品名称旁边的?查看库存费即代表该交易品种双向隔夜利息。您在 MT4 平台里可以查看到隔夜利息。具体操作：在市场报价里单击右键，选择交易品种列表，点击    Forex 外汇或 CFD 差价合约列表，点击选择您想要查看的品种，再点击“属性”，即可查看到双向隔夜利息。",
-        "en": "A: You can check the swap rate information on APP. Detailed operations: enter the product's trading page,    click on the \"?\" icon at the top of the trading symbol to view the swap rate information. You can    check the swap rate information on MT4. Detailed operations: right-click the market quotation, choose    the transaction variety list, click Forex or CFD list, then click the variety you want to check,    and click “attribute” to check two-way swap rate information."
+        "zh": "A：您在老虎外汇APP里可以查看隔夜利息。具体操作：在自选列表中，选择您要查看的交易品种，点击进入交易页面，再点击产品名称旁边的?查看库存费即代表该交易品种双向隔夜利息。您在 MT4 平台里可以查看到隔夜利息。具体操作：在市场报价里单击右键，选择交易品种列表，点击 Forex 外汇或 CFD 差价合约列表，点击选择您想要查看的品种，再点击“属性”，即可查看到双向隔夜利息。",
+        "en": "A: You can check the swap rate information on APP. Detailed operations: enter the product's trading page,    click on the \"?\" icon at the top of the trading symbol to view the swap rate information. You can check the swap rate information on MT4. Detailed operations: right-click the market quotation, choose    the transaction variety list, click Forex or CFD list, then click the variety you want to check,    and click “attribute” to check two-way swap rate information."
     },
     "faqSwap7": {
         "zh": "老虎外汇尽可能每日及时更新隔夜利息报价，但不排除由于无法预测的市场情况而导致的剧烈波动，隔夜利息可能在当日内有变动。",
         "en": "TigerWit will update swap rate quotation daily as far as possible, butthere might be violent fluctuations because of unpredictable markets, which means that the swap ratemight be subject to big changes on the very day."
     },
     "faqSwap8": {
-        "zh": "Q：为什么有时候隔夜利息会不一样？Why swap rate will be different?",
-        "en": "Q: 不同的货币对不同方向的隔夜利息是不一样的；按照国际惯例，周三的隔夜利息三倍。"
+        "zh": "Q：为什么有时候隔夜利息会不一样？",
+        "en": "Q: Why swap rate will be different?。"
     },
     "faqSwap9": {
         "zh": "Q: 不同的货币对不同方向的隔夜利息是不一样的；按照国际惯例，周三的隔夜利息三倍。",
-        "en": "A: The swap rate for each currency pair is different for different trading directions; According to international    practice, wednesday's swap rate is three times."
+        "en": "A: The swap rate for each currency pair is different for different trading directions; According to international practice, wednesday's swap rate is three times."
     },
     "faqSwap10": {
         "zh": "Q：如何避免支付隔夜利息？",
