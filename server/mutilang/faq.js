@@ -96,7 +96,7 @@ module.exports = {
         "en": "A: Please click lost password, enter security code sent to your cellphone and reset the password."
     },
     "faqTrade1": {
-        "zh": "Q:平台有多少交易品种？",
+        "zh": "Q: 平台有多少交易品种？",
         "en": "Q: How many trading products?"
     },
     "faqTrade2": {
@@ -308,7 +308,7 @@ module.exports = {
         "en": "Q: How to download MT4 platform?"
     },
     "faqMeta2": {
-        "zh": "A：MT4 下载地址（跳转至MT4客户端应用市场）",
+        "zh": "A：MT4 下载地址",
         "en": "A: MT4 for"
     },
     "faqMeta3": {
@@ -348,11 +348,11 @@ module.exports = {
         "en": "TigerWit will update swap rate quotation daily as far as possible, butthere might be violent fluctuations because of unpredictable markets, which means that the swap ratemight be subject to big changes on the very day."
     },
     "faqSwap8": {
-        "zh": "Q：为什么有时候隔夜利息会不一样？Why swap rate will be different?",
-        "en": "Q: 不同的货币对不同方向的隔夜利息是不一样的；按照国际惯例，周三的隔夜利息三倍。"
+        "zh": "Q：为什么有时候隔夜利息会不一样？",
+        "en": "Q: Why swap rate will be different?"
     },
     "faqSwap9": {
-        "zh": "Q: 不同的货币对不同方向的隔夜利息是不一样的；按照国际惯例，周三的隔夜利息三倍。",
+        "zh": "Q：不同的货币对不同方向的隔夜利息是不一样的；按照国际惯例，周三的隔夜利息三倍。",
         "en": "A: The swap rate for each currency pair is different for different trading directions; According to international    practice, wednesday's swap rate is three times."
     },
     "faqSwap10": {
