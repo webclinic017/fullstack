@@ -54,8 +54,9 @@
     function isInTiger() {
         var userPlatForm = window.navigator.userAgent;
         var flag1 = userPlatForm.indexOf("tigerwit_app");
+        var flag3 = userPlatForm.indexOf("tigerwell");
         var flag2 = userPlatForm.indexOf("panda_app");
-        if (flag1 >= 0 || flag2 >= 0) {
+        if (flag1 >= 0 || flag2 >= 0 || flag3 >= 0) {
             return true;
         } else {
             return false;
