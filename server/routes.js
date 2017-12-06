@@ -685,7 +685,6 @@ module.exports = function (app) {
                 pageInfo: pageInfo
             }, req));
         });
-        
     });
 
     // 一键原谅活动
@@ -710,6 +709,20 @@ module.exports = function (app) {
                 res.render('bd/4in1/4in1_h5.html', extendPublic({}, req))
             } else {
                 res.render('bd/4in1/4in1_web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+
+    // 电汇入金活动
+    app.route('/bd/tele').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('bd/tele/tele_h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/tele/tele_web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
