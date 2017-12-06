@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" class="bd_redbag">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    <%=lang.text("companyZhName")%>｜每日汇评</title>
+  <% include /common/vendor/web.css.html %>
+    <!-- build:css(.tmp) /styles/web.css -->
+    <link rel="stylesheet" href="/styles/web.css">
+    <!-- endbuild -->
+    <% include /common/statistic/main.html %>
+    <% include /common/vendor/web.js.html %>
+</head>
+
+<body ng-app="fullstackApp">
+  <div ng-controller="GlobalController">
+        comment
+  </div>
+  <%- include('/common/statistic/_all.html') %>
+</body>
+
+<!-- build:js(client) /scripts/bd_comment.js -->
+<script src="/scripts/common/config.service.js"></script>
+<script src="/scripts/common/account.service.js"></script>
+<script src="/scripts/common/authorization.service.js"></script>
+<script src="/scripts/common/redbag.service.js"></script>
+<script src="/scripts/common/navbar.directive.js"></script>
+<script src="/scripts/common/dropdown.directive.js"></script>
+<script src="/scripts/common/global.controller.js"></script>
+<script src="/scripts/common/loading_img.directive.js"></script>
+<script src="/scripts/common/lang.service.js"></script>
+<script src="/scripts/common/lang_data.service.js"></script>
+
+<script src="/scripts/common/pagination.directive.js"></script>
+<script src="/scripts/common/duration.filter.js"></script>
+
+<script src="/scripts/plugins/plugins.js"></script>
+<script src="/scripts/plugins/layer.js"></script>
+<script src="/scripts/bd/common/publicAjax.js"></script>
+<!-- endbuild -->
+</html>

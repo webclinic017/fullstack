@@ -23,6 +23,8 @@
         getInviteList: origin + '/user/invites', // get
         setClueCustomer: origin + '/auth/page_signup', // post
         setInviteCode: origin + '/invite_code', // post
+        //交易品种
+        getSymbols: origin + '/symbols', //get
         // 荣耀王者活动
         checkLogined: origin + '/auth/check', // get
         getRedBagPool: origin + '/bonus/index', // get
@@ -46,6 +48,11 @@
 
         // 获取交易月报
         getMonReport: origin + '/user/monthly_report',     // get
+        // 每日汇评
+        getCommentList: origin + '/comment/list',   // get
+        getCommentDetails: origin + '/comment/details',   // get
+        //挂单交易
+        setPendingTrade: origin + '/pending_trade/add',  //post
     };
 
     w.publicRequest = publicRequest;
