@@ -244,6 +244,7 @@
                             btns: {
                                 '取消': function () { },
                                 '继续': function (oScope) {
+                                    globalScope.personal.is_live = '1'
                                     oScope.loading = 1
                                     getAuthStatus().then(function(){
                                         oScope.loading = 2
