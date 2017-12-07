@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="bd_tele">
+<html lang="en" class="bd_tele_html">
 
 <head>
     <meta charset="UTF-8">
@@ -17,12 +17,14 @@
     <div ng-controller="GlobalController">
         <% include /common/nav/web.header.html %>
         <div class="bd_tele clearfix">
+            <img class="tele_logo" src="<%= lang.image('basicLogoWhite')%>" alt="">
             <div class="bd_tele_detail_con c-1">
                 <div class="bd_tele_detail_con__text">
-                    <p class="bd_tele_detail_con__line">1. 用户需在红包指定兑现期限内完成对应条件并手动完成兑现，过期不能兑现；</p>
-                    <p class="bd_tele_detail_con__line">2. 活动所列红包每个用户仅可领取一次，兑现金额将在执行兑现操作后入账且可支取；</p>
-                    <p class="bd_tele_detail_con__line">3. 本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，美元/人民币、CFD类产品交易手数不计入统计范围；</p>
-                    <p class="bd_tele_detail_con__line">4. 本活动仅限活动开始后新注册用户，用户提取资金前，需完成完整个人信息的提交并通过审核；</p>
+                    <p class="bd_tele_detail_con__title">活动规则</p>  
+                    <p class="bd_tele_detail_con__line">1. 活动期间<%= lang.text('companyZhName')%>全部用户均可参与；</p>
+                    <p class="bd_tele_detail_con__line">2. 活动期间用户首次电汇入金可获得首次电汇红包，每月累计电汇金额大于500美金，次月在5日前即可再获得每月电汇红包；</p>
+                    <p class="bd_tele_detail_con__line">3. 用户获得红包可在“我的红包”中查询，需在红包指定兑现期限内完成对应条件并手动完成兑现，兑现金额入账且可支取，过期不能兑现；</p>
+                    <p class="bd_tele_detail_con__line">4. 本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，美元/人民币、CFD类产品交易手数不计入统计范围；</p>
                     <p class="bd_tele_detail_con__line">5. 本活动允许EA但禁止EA剥头皮交易，违反规则的用户将取消参与本次活动的权利；</p>
                     <p class="bd_tele_detail_con__line">6.
                     <%= lang.text('companyZhName')%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打
@@ -33,40 +35,39 @@
                     <i class="fa fa-times" aria-hidden="true"></i>
                 </p>
             </div>
-            <div class="bd_tele__reg">
-                <div class="form-control-wrapper tel">
-                    <input type="text" class="form-control" name="telephone" id="telephone" placeholder="电话">
+            <div class="bd_tele_detail_con c-20">
+                <div class="bd_tele_detail_con__text">
+                    <p class="bd_tele_detail_con__title">活动规则</p>  
+                    <p class="bd_tele_detail_con__line">首次通过电汇方式入金（金额不限）即可获得20美金红包，30日内累计完成2手交易（不含美元/人民币、CFD产品）即可兑现。（每位用户仅限一次）</p>
                 </div>
-                <div class="form-control-wrapper code">
-                    <input type="number" class="form-control" id="verify_code" placeholder="验证码" style="padding-right: 90px;">
-                    <p class="verify_code_btn_wrapper">
-                        <span class="verify_code_btn" id="verify_code_btn">验证码</span>
-                    </p>
-                </div>
-                <div class="btn-wrapper">
-                    <span id="submit_form" class="register_btn">注册</span>
-                </div>
+                <p class="bd_tele_detail_con__close" onclick="layer.closeAll()">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </p>
             </div>
+            <div class="bd_tele_detail_con c-50">
+                <div class="bd_tele_detail_con__text">
+                    <p class="bd_tele_detail_con__title">活动规则</p>  
+                    <p class="bd_tele_detail_con__line">活动期间，每月通过电汇方式累计入金≥500美金，次月在5日前获得50美金红包一个（每月红包按照自然月末最后一天为界定）；获得红包后30日内累计完成8手交易即可兑现（不含美元/人民币、CFD产品）。（每位用户每月可获得一次，最多获得4次）</p>
+                </div>
+                <p class="bd_tele_detail_con__close" onclick="layer.closeAll()">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </p>
+            </div>
+            
             <div class="bd_tele__main">
-                <img src="/images/bd_tele/P1.png" alt="">
-                <div>
-                    <a class="bd_tele__main-btn" target="_parent">
-                        点我注册
-                    </a>
+                <button class="show-rule-btn rule-btn" data-show="c-1" id="show_details">活动规则</button>
+                <img class="full" src="/images/bd_tele/web_2.png" alt="">
+                <div class="half_img_box clearfix">
+                    <img class="show-rule-btn half cursor_pointer" data-show="c-20" src="/images/bd_tele/web_3_1.png" alt="">
+                    <img class="show-rule-btn half cursor_pointer" data-show="c-50" src="/images/bd_tele/web_3_2.png" alt="">
                 </div>
-                <img src="/images/bd_tele/P2.png" alt="">
-                <div>
-                    <a class="bd_tele__main-btn" target="_parent">
-                        点我注册
-                    </a>
-                </div>
-                <img src="/images/bd_tele/P3.png" class="cursor_pointer" id="show_details">
-                <div>
-                    <a class="bd_tele__main-btn" target="_parent">
-                        点我领红包
-                    </a>
-                </div>
-                <img src="/images/bd_tele/risk.png" alt="">
+                <a class="rule-btn yellow_bg" href="/space/#/space/asset/deposit">点我电汇入金</a>
+                <p class="call-center">详情拨打客服：<%= lang.text('telephone')%></p>
+                <p class="risk">
+                    风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。
+                    在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。 <%= lang.text('companyZhName')%>交易平台为广大交易高手及普通投资者
+                    提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+                </p>
             </div>
         </div>
     </div>

@@ -1,22 +1,19 @@
 ;
 (function () {
     $(function () {
-        $('#show_details').click(function () {
+        $('.show-rule-btn').click(function (e) {
+            var show = $(e.target).attr("data-show");
+            layer.closeAll()
             layer.open({
                 type: 1,
-                skin: 'bd_4in1_layer',
+                skin: 'bd_tele_layer',
                 title: '',
                 closeBtn: 0,
                 shadeClose: true,
-                shade: 0.5,
-                area: ['600px', '400px'],
-                content: $('.bd_4in1_detail_con.c-1').html()
+                shade: 0,
+                area: ['600px', '350px'],
+                content: $('.bd_tele_detail_con.' + show).html()
             });
         })
-    })
-
-    $('.bd_4in1__main-btn').click(function(){
-        $('.bd_4in1').animate({scrollTop: '200px'}, 'normal', 'swing')
-        $('#telephone').focus()
     })
 }())

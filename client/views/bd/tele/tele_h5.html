@@ -30,14 +30,65 @@
 
 <body class="tw_h5_body">
 
-<div class="m_tele_layout">
-    <div on-tap="toNativeTele">
-        电汇入金
+<div class="m_tele_layout clearfix">
+    <div class="layer_contentBox" id="rule-main">
+        <div class="layer_content">
+            <span class="rule_close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></span>
+            <div class="rules">
+                <p class="rules-title">活动规则</p>
+                <p>1. 活动期间<%= lang.text('companyZhName')%>全部用户均可参与；</p>
+                <p>2. 活动期间用户首次电汇入金可获得首次电汇红包，每月累计电汇金额大于500美金，次月在5日前即可再获得每月电汇红包；</p>
+                <p>3. 用户获得红包可在“我的红包”中查询，需在红包指定兑现期限内完成对应条件并手动完成兑现，兑现金额入账且可支取，过期不能兑现；</p>
+                <p>4. 本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，美元/人民币、CFD类产品交易手数不计入统计范围；</p>
+                <p>5. 本活动允许EA但禁止EA剥头皮交易，违反规则的用户将取消参与本次活动的权利；</p>
+                <p>6.<%= lang.text('companyZhName')%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打 <a class="connect_us" style="text-decoration: underline;" href="tel:<%= lang.text('telephone')%>"><%= lang.text('telephone')%></a>。
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="layer_contentBox" id="rule-20">
+        <div class="layer_content">
+            <div class="rules">
+                <p class="rules-title">活动规则</p>
+                <p>首次通过电汇方式入金（金额不限）即可获得20美金红包，30日内累计完成2手交易（不含美元/人民币、CFD产品）即可兑现。（每位用户仅限一次）</p>
+            </div>
+            <p class="rule_close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
+        </div>
+    </div>
+    <div class="layer_contentBox" id="rule-50">
+        <div class="layer_content">
+            <div class="rules">
+                <p class="rules-title">活动规则</p>
+                <p>活动期间，每月通过电汇方式累计入金≥500美金，次月在5日前获得50美金红包一个（每月红包按照自然月末最后一天为界定）；获得红包后30日内累计完成8手交易即可兑现（不含美元/人民币、CFD产品）。（每位用户每月可获得一次，最多获得4次）</p>
+            </div>
+            <p class="rule_close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
+        </div>
+    </div>
+    <img class="tele_logo" src="<%= lang.image('basicLogoWhite')%>" alt="">
+    <div class="tele_main">
+        <p class="rule-btn" on-tap="openRule" rule="rule-main">
+            活动规则
+        </p>
+        <img class="full" src="/images/bd_tele/h5_02.png">
+        <img src="/images/bd_tele/h5_03.png" on-tap="openRule" rule="rule-20">
+        <img src="/images/bd_tele/h5_04.png" on-tap="openRule" rule="rule-50">
+        <p class="rule-btn yellow_bg" on-tap="toNativeTele">
+            点我电汇入金
+        </p>
+        <p class="call-center">
+            详情拨打客服：<a href="tel:<%= lang.text('telephone')%>"><%= lang.text('telephone')%></a>
+        </p>
+        <p class="risk">
+            风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。
+            在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。 <%= lang.text('companyZhName')%>交易平台为广大交易高手及普通投资者
+            提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+        </p>
     </div>
 </body>
 
 <% include /common/vendor/h5.js.html %>
 <!-- build:js(client) /scripts/m_tele.js -->
+<script src="/scripts/bd/common/open_app.js"></script>
 <script src="/scripts/bd/common/wx_share_config.js"></script>
 <script src="/scripts/bd/tele/tele_h5.js"></script>
 <!-- endbuild -->

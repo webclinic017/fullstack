@@ -3,34 +3,43 @@
     // twH5Loader('img_detect_container', 1, allLoaded)
     allLoaded()
     function allLoaded() {
-        function toNativeTele() {
-            if (isInTiger()) {
-                var teleVersion = ~~'304'
-                var version = ~~getVersionName().replace(/\./gi, '')
-                alert('当前版本：' + version, "目标版本：", teleVersion)
-                callNative({
-                    type: version >= teleVersion ? "teleDeposit" : "deposit"
-                })
-            } else {
+        var tapHandlers = {
+            toNativeTele: function() {
+                if (isInTiger()) {
+                    var teleVersion = ~~'304'
+                    var version = ~~getVersionName().replace(/\./gi, '')
+                    // alert('当前版本：' + version + "目标版本：" + teleVersion)
+                    callNative({
+                        type: version >= teleVersion ? "teleDeposit" : "deposit"
+                    })
+                } else {
+                    layer.open({
+                        content: '请在App中打开此页面',
+                        skin: 'msg',
+                        anim: false,
+                        time: 2
+                    });
+                    setTimeout(function(){
+                        openInApp(window.location.hostname + "/bd/tele")
+                    }, 200)
+                }
+            },
+            openRule: function($target){
                 layer.open({
-                    content: '请在APP中打开此页面',
-                    skin: 'msg',
-                    anim: false,
-                    time: 2 /*1.2秒后自动关闭*/
+                    shadeClose: true,
+                    content: $("#"+ $target.attr("rule")).html(),
+                    style: 'padding:0;width:85%;border-radius:0;color:#000;background:rgba(0,0,0,0);'
                 });
+                $('.layui-m-layercont').css('padding', 0)
+                $('.layui-m-layershade').css('background-color', 'rgba(0,0,0,0)')
             }
         }
 
         $('[on-tap]').on('click', function (e) {
-            var action = $(e.target).attr('on-tap')
+            var $target = $(e.target)
+            var action = $target.attr('on-tap')
             console.log(action)
-            var handlers = {
-                toNativeTele: function() {
-                    toNativeTele()
-                }
-            }
-            handlers[action]()
-
+            tapHandlers[action]($target)
             return false
         })
     }

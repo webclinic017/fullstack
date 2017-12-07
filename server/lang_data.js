@@ -41,7 +41,9 @@ module.exports = function () {
             webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
 
             icoPath: indexBasePath + "/tigerwit.ico",
-            t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
+            t33_logo: indexBasePath + "/t33_logo-tigerwit.png",
+            basicLogoBlack: indexBasePath + "/basic_logo_tiger_black.png",
+            basicLogoWhite: indexBasePath + "/basic_logo_tiger_white.png"
         };
 
     }
@@ -76,7 +78,10 @@ module.exports = function () {
             webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
 
             icoPath: indexBasePath + "/tigerwit.ico",
-            t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
+            t33_logo: indexBasePath + "/t33_logo-tigerwit.png",
+
+            basicLogoBlack: indexBasePath + "/basic_logo_tiger_black.png",
+            basicLogoWhite: indexBasePath + "/basic_logo_tiger_white.png"
         };
 
     }
@@ -111,7 +116,9 @@ module.exports = function () {
             webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
 
             icoPath: indexBasePath + "/pandafx.ico",
-            t33_logo: indexBasePath + "/t33_logo-tigerwit.png"
+            t33_logo: indexBasePath + "/t33_logo-tigerwit.png",
+            basicLogoBlack: indexBasePath + "/basic_logo_panda_black.png",
+            basicLogoWhite: indexBasePath + "/basic_logo_panda_white.png"
         };
 
     }
@@ -202,6 +209,14 @@ module.exports = function () {
             t33_logo: {
                 "en": companyConfig.t33_logo,
                 "zh": companyConfig.t33_logo
+            },
+            basicLogoBlack: {
+                "en": companyConfig.basicLogoBlack,
+                "zh": companyConfig.basicLogoBlack
+            },
+            basicLogoWhite: {
+                "en": companyConfig.basicLogoWhite,
+                "zh": companyConfig.basicLogoWhite
             }
         },
 
