@@ -11,7 +11,7 @@
                 closeBtn: 0,
                 shadeClose: true,
                 shade: 0,
-                area: ['600px', '350px'],
+                area: ['600px'],
                 content: $('.bd_tele_detail_con.' + show).html()
             });
         })

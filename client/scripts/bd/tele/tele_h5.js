@@ -1,7 +1,7 @@
 ;
 (function () {
     // twH5Loader('img_detect_container', 1, allLoaded)
-    allLoaded()
+    $(allLoaded)
     function allLoaded() {
         var tapHandlers = {
             toNativeTele: function() {
@@ -20,7 +20,7 @@
                         time: 2
                     });
                     setTimeout(function(){
-                        openInApp(window.location.hostname + "/bd/tele")
+                        openInApp(window.location.hostname + "/bd/tele?toTele=1")
                     }, 200)
                 }
             },
@@ -35,10 +35,13 @@
             }
         }
 
+        if(getSearch().toTele == "1"){
+            tapHandlers.toNativeTele()
+        }
+
         $('[on-tap]').on('click', function (e) {
             var $target = $(e.target)
             var action = $target.attr('on-tap')
-            console.log(action)
             tapHandlers[action]($target)
             return false
         })
