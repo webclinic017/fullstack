@@ -692,7 +692,7 @@ module.exports = function (app) {
         if (isMobile(req)) {
             res.render('bd/commentlist/h5.html', extendPublic({}, req));
         } else {
-            res.render('bd/commentlist/web.html', extendPublic({}, req));
+            res.render('404.html', extendPublic({}, req));
         }    
     });
     app.route('/bd/comment/:subpage').get(function (req, res) {

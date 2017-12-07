@@ -1,28 +1,23 @@
-<div class="pro-public" ng-controller="ProductCommentController">
-    <p class="pro-comment__com-title">每日汇评</p>
+<div class="pro-comment" ng-controller="ProductCommentController">
+    <p class="pro-comment__title">每日汇评</p>
     <!-- <p ng-bind-html="aa | bindhtml"></p> -->
-    <ul class="pro-comment__con-ul">
-        <li class="clear pro-public__bor-bt" ng-repeat="comment in commentList" ng-cloak>
-            <p class="pro-comment__li-title">{{comment.title}}</p>
-            <!-- <p class="font-bold">{{comment.title_plain}}</p> -->
-
-            <div class="pro-comment__li-con" ng-bind-html="comment.excerpt | bindhtml"></div>
-
-
-            <a class="font-info float-left" href="{{comment.url}}" target="_blank">详情></a>
-            <span class="font-info float-right" href="">{{comment.date}}</span>
+    <ul class="pro-comment__lst">
+        <li class="pro-comment__details" ng-repeat="comment in commentList" ng-cloak>
+            <a ng-href="/bd/comment/{{comment.id}}?type={{comment.id}}" target="_blank">
+                <div class="pro-comment__details-title clearfix">
+                    <h4>{{comment.title}}</h4>
+                    <span class="morning" ng-show="comment.morning_night == 1">早评</span>
+                    <span class="night" ng-show="comment.morning_night == 2">晚评</span>
+                </div>
+                <div class="pro-comment__details-content">{{ comment.content.substring(0,50) }}...</div>
+                <div class="pro-comment__details-date">
+                    <span>分析师{{comment.analyst}}专栏</span>
+                    <span class="time">{{comment.issue_date}}</span>
+                </div>
+            </a>
         </li>
     </ul>
-    <ul class="pro-comment__con-ul">
-        <li class="clear pro-public__bor-bt" ng-repeat="market in marketList" ng-cloak>
-            <p class="pro-comment__li-title">{{market.title}}</p>
-            <!-- <p class="font-bold">{{market.title_plain}}</p> -->
-            <div class="pro-comment__li-con" ng-bind-html="market.excerpt | bindhtml"></div>
-            <a class="font-info float-left" href="{{market.url}}">详情></a>
-            <span class="font-info float-right" href="">{{market.date}}</span>
-        </li>
-    </ul>
-    <!-- <div class="text-center">
+    <div class="text-right">
         <p tw-pagination></p>
-    </div> -->
+    </div>
 </div>

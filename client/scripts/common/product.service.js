@@ -9,32 +9,38 @@
   function product($http, api) {
     var o = api.product;
     var service = {
-      getProductComment: getProductComment,
-      getProductMarket: getProductMarket,
+      getCommentList: getCommentList,
+      getCommentDetails: getCommentDetails,
       getProductInfo: getProductInfo
     };
     return service;
 
 
     /**
-     * Product Service 交易品种下的每日汇评
+     * Product Service 每日汇评列表
      *
-     * @method getProductComment
+     * @method getCommentList
      */
-    function getProductComment() {
+    function getCommentList(oParams) {
 
-      return $http.post(o.getProductCommentApi);
+      return $http.get(o.getCommentListApi, {
+        params: oParams
+      });
 
     }
 
     /**
-     * Product Service 交易品种下的市场分析
+     * Product Service 每日汇评详情
      *
-     * @method getProductMarket
+     * @method getCommentDetails
      */
-    function getProductMarket() {
+    function getCommentDetails(id) {
 
-      return $http.post(o.getProductMarketApi);
+      return $http.get(o.getCommentDetailsApi, {
+        params: {
+            comment_id: id
+        }
+      });
 
     }
 

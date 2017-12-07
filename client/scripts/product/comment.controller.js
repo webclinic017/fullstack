@@ -10,26 +10,41 @@
     function ProductCommentController($scope, $sce, utils, product) {
 
         $scope.commentList = [];
-        $scope.marketList = [];
+        var limit = 10;
 
-        getList();
-        getMarketList();
+        $scope.pagebar = {
+            config: {
+                // total: , // 总页数
+                page: 1    
+            },
+            pages: [],
+            pagesBtn: [],
+            // selectPage: , bind to pagination.selectPage
+            getList: getCommentList           
+        };
+
+        getCommentList();
 
         // 获取每日汇评
-        function getList() {
-            product.getProductComment().then(function (data) {
-                $scope.commentList = data.posts;
+        function getCommentList(page) {
+            page = page ? page : 1;
+            var offset = (page - 1)*limit;
+            product.getCommentList({
+                offset: offset,
+                limit: limit
+            }).then(function (data) {
+                console.log(data);
+                if (data.is_succ) {
+                    $scope.commentList = data.data.comment_list;
+
+                    angular.extend($scope.pagebar.config, {
+                        total: data.data.page_count,
+                        page: page
+                    }); 
+                }
             });
 
         }
 
-        // 获取市场分析
-        function getMarketList() {
-            product.getProductMarket().then(function (data) {
-                $scope.marketList = data.posts;
-
-            });
-
-        }
     }
 })();

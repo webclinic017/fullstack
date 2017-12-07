@@ -97,8 +97,8 @@
             checkPhoneApi: urlOrigin2 + '/agent'
         };
         var product = {
-            getProductCommentApi: 'https://forex.tigerwit.com/api/get_category_posts?id=86',
-            getProductMarketApi: 'https://forex.tigerwit.com/api/get_category_posts?id=90',
+            getCommentListApi: urlOrigin2 + '/comment/list',   // get
+            getCommentDetailsApi: urlOrigin2 + '/comment/details',   // get
             getWebProductInfoApi: '/napi?action=get_product'
         };
         var ranklist = {

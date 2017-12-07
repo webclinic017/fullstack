@@ -96,35 +96,70 @@
 }
 
 @include b(pro-comment) {
-    @include e (com-title) {
+    @include e (title) {
         margin-top: 15px;
-        margin-bottom: 15px;
-        padding-bottom: 20px;
-        font-weight: bold;
-        font-size: 20px;
-        color: $gray-base;
+        padding-bottom: 10px;
+        font-size: 18px;
+        color: #4a4a4a;
         border-bottom: 1px solid $gray;
     }
-    @include e(con-ul) {
+    @include e(lst) {
 
-        >li {
-            padding-bottom: 40px;
-            margin-top: 20px;
+    }
+
+    @include e(details) {
+        padding: 24px 8px;
+        border-bottom: 1px solid $gray;
+        cursor: pointer;
+        transition: all .6s;
+
+        &:hover {
+            background-color: #fff;
+            box-shadow: 0px 0px 10px 8px #f3f3f3;
+            border-radius: 4px;
+            border-color: transparent;
         }
-    }
 
-    @include e(li-title) {
-        font-size: 18px;
-        font-weight: bold;
-    }
+        @include m(title) {
+            margin-bottom: 15px;
+            
+            h4 {
+                margin: 0;
+                float: left;
+                font-size: 20px;
+                font-weight: 500;
+                color: #4a4a4a;
+                line-height: 20px;
+            }
 
-    @include e(li-con) {
+            span {
+                float: left;
+                margin-left: 5px;
+                font-size: 12px;
+                color: #fff;
+                font-weight: 400;
+                line-height: 12px;
+                padding: 4px 8px;
+                border-radius: 100px;
 
+                &.morning {
+                    background-color: #11c971;
+                }
+                &.night {
+                    background-color: #ffbd43;
+                }
+            }
+        }
+        @include m(content) {
+            color: #888;
+            margin-bottom: 20px;
+        }
+        @include m(date) {
+            color: #b5b5b5;
 
-        p {
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            .time {
+                padding-left: 10px;
+            }
         }
     }
 }

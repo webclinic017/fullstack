@@ -5,6 +5,7 @@
     var $author = $(".m_comment .m_comment__date .author");
     var $content = $(".m_comment .m_comment__content");
     var $visit = $(".m_comment .m_comment__read .num");
+    var $focus = $(".m_comment .m_comment__focus");
 
     var visit, info;
     var pageData = {};
@@ -23,6 +24,11 @@
                 $date.html(pageData.issue_date);
                 $author.html(pageData.analyst);
                 $visit.html(visit);
+
+                if (pageData.banner_image) {
+                    $focus.addClass("active");
+                    $focus.find("img").attr("src", pageData.banner_image);
+                }
 
                 insertComment();
             }
