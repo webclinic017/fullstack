@@ -158,26 +158,33 @@
         }
 
         function openCardMdl() {
-            checkAuthen(function () {
-                var personal = {
-                    verified: $scope.personal.verified,
-                    realname: $scope.personal.realname,
-                    profile_check: $scope.personal.profile_check,
-                };
-                $modal.open({
-                    templateUrl: '/views/asset/card_modal.html',
-                    size: 'md',
-                    controller: 'AssetCardController',
-                    resolve: {
-                        passedScope: function () {
-                            return {
-                                personal: personal,
-                                card: $scope.withdraw.card
-                            };
+            if(parentScope.manageCardModalInstance){
+                parentScope.manageCardModalInstance.dismiss()
+            }
+            // 检测认证状态
+            $scope.$emit('global.checkAuthenFlow', {
+                ctrlName: 'AssetWithdrawController',
+                callback: function () {
+                    var personal = {
+                        verified: $scope.personal.verified,
+                        realname: $scope.personal.realname,
+                        profile_check: $scope.personal.profile_check,
+                    };
+                    $modal.open({
+                        templateUrl: '/views/asset/card_modal.html',
+                        size: 'md',
+                        controller: 'AssetCardController',
+                        resolve: {
+                            passedScope: function () {
+                                return {
+                                    personal: personal,
+                                    card: $scope.withdraw.card
+                                };
+                            }
                         }
-                    }
-                });
-            }, 'binding')
+                    })
+                }
+            })
         }
         
         function openManageCardMdl(type, card) {

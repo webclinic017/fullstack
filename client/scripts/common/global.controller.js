@@ -233,6 +233,15 @@
 
                     $scope.dredge_type = 'all';
 
+                    $scope.openDemo = function(){
+                        globalScope.personal.is_live = '0'
+                        $scope.loading.demo = true
+                        getAuthStatus().then(function(){
+                            $scope.loading.demo = false
+                            window.location.href = location.origin + '/space/#/authen/complete'
+                            closeModal()
+                        })
+                    }
                     $scope.confirmLive = function () {
                         $modalInstance.dismiss()
                         $layer({
