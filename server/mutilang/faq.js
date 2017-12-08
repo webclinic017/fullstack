@@ -208,7 +208,7 @@ module.exports = {
         "en": "The other reason for price re-quotation might be slow internet connection or no connection which slows    down the transmission of deals. It means that the price you saw on the platform is the old price    and not the current market price."
     },
     "faqTrade27": {
-        "zh": "Q：您们是否支持跟踪止损（Trailing Stops）和智能交易系统（Expert Advisors）？",
+        "zh": "Q：你们是否支持跟踪止损（Trailing Stops）和智能交易系统（Expert Advisors）？",
         "en": "Q: Do you support Trailing Stops or Expert Advisors?"
     },
     "faqTrade28": {
@@ -232,7 +232,7 @@ module.exports = {
         "en": "Q: Why are spreads of Europe / America and Britain / America so high, such as 30 points?"
     },
     "faqTrade32": {
-        "zh": "A：请注意， 为客户提供更全面，优惠的价格，我们使用尾数点差价格。我们使用 5 位小数，而不是 4 为小数。因此， 买卖价相差 30 实际为 3.0 点。",
+        "zh": "A：请注意， 为客户提供更全面，优惠的价格，我们使用尾数点差价格。我们使用 5 位小数，而不是 4位小数。因此， 买卖价相差 30 实际为 3.0 点。",
         "en": "A: Attention: In order to provide clients with a more complete and competitive price, we use the five    decimals not four decimals. For example, the price spread of 30 is in fact 3.0 point."
     },
     "faqTrade33": {
