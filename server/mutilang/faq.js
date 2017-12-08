@@ -268,7 +268,7 @@ module.exports = {
         "en": "A: $50"
     },
     "faqAsset5": {
-        "zh": "Q:出金有何限制？",
+        "zh": "Q：出金有何限制？",
         "en": "Q: What is the limit of withdrawal?"
     },
     "faqAsset6": {
@@ -276,31 +276,31 @@ module.exports = {
         "en": "A: The minimum withdrawal limit of $20; needs to have a transaction record after the deposit; The account    cannot have the open orders and follow relationship before withdrawal."
     },
     "faqAsset7": {
-        "zh": "Q:出金到账时间？",
+        "zh": "Q：出金到账时间？",
         "en": "Q: How long after the withdrawal to account?"
     },
     "faqAsset8": {
-        "zh": "A:工作日内提交48小时内到账。",
+        "zh": "A：工作日内提交48小时内到账。",
         "en": "A: Working days to arrive the account within 48 hours."
     },
     "faqAsset9": {
-        "zh": "Q:出金的费用？",
+        "zh": "Q：出金的费用？",
         "en": "Q: Is withdrawal charged?"
     },
     "faqAsset10": {
-        "zh": "A:正常交易的客户每月有4次免费取款，超过4次，每次收5元人民币取款费用。",
+        "zh": "A：正常交易的客户每月有4次免费取款，超过4次，每次收5元人民币取款费用。",
         "en": "A: 4 times per month free withdrawals, more than 4 times, each received 5 RMB withdrawal fee."
     },
     "faqAsset11": {
-        "zh": "Q:交易账户中的资金已显示移除，为什么我的银行卡还没有收到出金金额？",
+        "zh": "Q：交易账户中的资金已显示移除，为什么我的银行卡还没有收到出金金额？",
         "en": "Q: Why haven’t I received the withdrawn amount while the funds in the transaction account have already    been removed?"
     },
     "faqAsset12": {
-        "zh": "A:出金申请状态显示已成功，表示我们已完成汇款，因为汇款不是即刻到账，请您在出金后几天密切关注您的收款账户动态。",
+        "zh": "A：出金申请状态显示已成功，表示我们已完成汇款，因为汇款不是即刻到账，请您在出金后几天密切关注您的收款账户动态。",
         "en": "A: That we have completed the remittance. Remittances do not arrive immediately, please closely monitor    your receiving bank and ensure that the funds are transferred."
     },
     "faqAsset13": {
-        "zh": "Q:如何撤销出金？",
+        "zh": "Q：如何撤销出金？",
         "en": "Q: How to cancel withdrawal?"
     },
     "faqAsset14": {
@@ -308,7 +308,7 @@ module.exports = {
         "en": "A: “Trade” - “History” - “Record”, check “Cancel”."
     },
     "faqAsset15": {
-        "zh": "Q: $200体验金可以出金吗？体验金交易产生的盈利可以出金吗？",
+        "zh": "Q：$200体验金可以出金吗？体验金交易产生的盈利可以出金吗？",
         "en": "Q: $ 200 experience funds can be used to withdraw? Experienced funds generated profits can be used to withdraw?"
     },
     "faqAsset16": {
