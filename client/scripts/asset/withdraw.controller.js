@@ -233,6 +233,7 @@
                                         parentScope.withdraw.card = {}
                                     }
                                 })
+                                getCard()
                                 closeModal()
                             }
                         })
