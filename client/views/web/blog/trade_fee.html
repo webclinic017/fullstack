@@ -11,6 +11,7 @@
             <h4 class="blog_statement__title text-left">点差</h4>
             <p>点差指买卖价格之间的差异，<%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>根据基础市场的价值得出价格，外汇点差会根据基础市场的价格发生变化。</p>
             <p>请查看<%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>各交易品种点差详情 </p>
+            <p><span class="font-danger">* </span> <%= lang.text('companyEnName')%>点差计算时段为截止2017年7月21日的前十四天。</p>
             <br>
             <div class="blog_statement__navi">
                 <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'forex'}" ng-click="changeType('point', 'forex')">外汇</span> |
@@ -28,18 +29,18 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>Forex</th>
-                        <th>Spread</th>
-                        <th><%= lang.text('companyEnName')%> Added Spread</th>
-                        <th>Commission</th>
+                        <th>名称</th>
+                        <th>最小点差</th>
+                        <th>平均点差</th>
+                        <th><%= lang.text('companyEnName')%>收取点差</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-if="currentData.point.length > 0" ng-repeat="point in currentData.point" ng-cloak>
                         <td>{{ point.name }}</td>
-                        <td>{{ point.spread }}</td>
-                        <td>{{ point.addedSpread }}</td>
-                        <td>{{ point.commission }}</td>
+                        <td>{{ point.min }}</td>
+                        <td>{{ point.average }}</td>
+                        <td>{{ point.tiger }}</td>
                     </tr>
                     <tr ng-if="currentData.point.length <= 0" class="text-center">
                         <td colspan="20">暂无数据</td>
@@ -47,17 +48,19 @@
                 </tbody>
             </table>
 
-            <div ng-show="currentData.point.length >= 2 && !unfold.point" class="text-center" ng-cloak>
-                <a class="btn btn-text font-size-14" ng-click="unfold('point')">
-                    点击查看更多信息
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div ng-show="currentData.point.length >= 2 && unfold.point" class="text-center" ng-cloak>
-                <a class="btn btn-text font-size-14" ng-click="fold('point')">
-                    收起
-                    <i class="fa fa-angle-up" aria-hidden="true"></i>
-                </a>
+            <div ng-show="showFolder.point">
+                <div ng-show="currentData.point.length >= 2 && !unfold.point" class="text-center" ng-cloak>
+                    <a class="btn btn-text font-size-14" ng-click="unfold('point')">
+                        点击查看更多信息
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div ng-show="currentData.point.length >= 2 && unfold.point" class="text-center" ng-cloak>
+                    <a class="btn btn-text font-size-14" ng-click="fold('point')">
+                        收起
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
         </div>
         <br>
@@ -84,37 +87,39 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>Forex</th>
-                        <th>调期库存费计算模式</th>
-                        <th>买单调期库存费（美元/手）</th>
-                        <th>卖单调期库存费（美元/手）</th>
+                        <th>名称</th>
+                        <th>最小点差</th>
+                        <th><%= lang.text('companyEnName')%>收取点差</th>
+                        <th>手续费</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr ng-if="currentData.swap.length > 0" ng-repeat="swap in currentData.swap" ng-cloak>
                         <td>{{ swap.name }}</td>
-                        <td>{{ swap.mode }}</td>
-                        <td>{{ swap.buy }}</td>
-                        <td>{{ swap.sell }}</td>
+                        <td>{{ swap.min }}</td>
+                        <td>{{ swap.tiger }}</td>
+                        <td>{{ swap.commission }}</td>
                     </tr>
                     <tr ng-if="currentData.swap.length <= 0" class="text-center">
                         <td colspan="20">暂无数据</td>
                     </tr>
                 </tbody>
             </table>
-            <div ng-show="currentData.swap.length >= 2 && !unfold.swap" class="text-center" ng-cloak>
-                <a class="btn btn-text font-size-14" ng-click="unfold('swap')">
-                    点击查看更多信息
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </a>
+            <div ng-show="showFolder.swap">
+                <div ng-show="currentData.swap.length >= 2 && !unfold.swap" class="text-center" ng-cloak>
+                    <a class="btn btn-text font-size-14" ng-click="unfold('swap')">
+                        点击查看更多信息
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div ng-show="currentData.swap.length >= 2 && unfold.swap" class="text-center">
+                    <a class="btn btn-text font-size-14" ng-click="fold('swap')" ng-cloak>
+                        收起
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
-            <div ng-show="currentData.swap.length >= 2 && unfold.swap" class="text-center">
-                <a class="btn btn-text font-size-14" ng-click="fold('swap')" ng-cloak>
-                    收起
-                    <i class="fa fa-angle-up" aria-hidden="true"></i>
-                </a>
-            </div>
-            <p>
+            <p ng-class="{'mg-tp-10': !showFolder.swap}">
                 <span class="font-danger"> * </span>星期三持仓隔夜的仓位隔夜利息将是平常的三倍。个别货币对例外：美元/加元 在周四计算3天的隔夜利息</p>
             <p>
                 <span class="font-danger"> * </span>如交易日当天为公共节假日，隔夜利息将推前一天计算</p>
@@ -123,7 +128,7 @@
         <br>
         <div class="fee">
             <h4 class="blog_statement__title text-left">手续费</h4>
-            <p><%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>的差价合约产品为0点差，<%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>对差价合约产品收取一定比例的手续费。</p>
+            <p><%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>对差价合约产品收取的点差为0，<%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>对差价合约产品收取一定比例的手续费。</p>
             <br>
             <table class="table table-personal table-hover table-bordered">
                 <colgroup>
@@ -134,10 +139,10 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>CFD</th>
-                        <th>Spread</th>
-                        <th><%= lang.text('companyEnName')%> Added Spread</th>
-                        <th>Commission</th>
+                        <th>名称</th>
+                        <th>最小点差</th>
+                        <th><%= lang.text('companyEnName')%> 收取点差</th>
+                        <th>手续费</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -152,17 +157,19 @@
                     </tr>
                 </tbody>
             </table>
-            <div ng-show="currentData.fee.length >= 2 && !unfold.fee" class="text-center" ng-cloak>
-                <a class="btn btn-text font-size-14" ng-click="unfold('fee')">
-                    点击查看更多信息
-                    <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </a>
-            </div>
-            <div ng-show="currentData.fee.length >= 2 && unfold.fee" class="text-center">
-                <a class="btn btn-text font-size-14" ng-click="fold('fee')" ng-cloak>
-                    收起
-                    <i class="fa fa-angle-up" aria-hidden="true"></i>
-                </a>
+            <div ng-show="showFolder.fee">
+                <div ng-show="currentData.fee.length >= 2 && !unfold.fee" class="text-center" ng-cloak>
+                    <a class="btn btn-text font-size-14" ng-click="unfold('fee')">
+                        点击查看更多信息
+                        <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    </a>
+                </div>
+                <div ng-show="currentData.fee.length >= 2 && unfold.fee" class="text-center">
+                    <a class="btn btn-text font-size-14" ng-click="fold('fee')" ng-cloak>
+                        收起
+                        <i class="fa fa-angle-up" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
         </div>
         <br>
@@ -184,7 +191,7 @@
         </div>
         <br>
         <div class="withdraw_fee">
-            <h4 class="blog_statement__title text-left">存款费用</h4>
+            <h4 class="blog_statement__title text-left">提现费用</h4>
             <p>每个账户每月拥有4次免费提现的机会，超过4次每笔提现将收取5元人民币手续费。</p>
         </div>
         <br>

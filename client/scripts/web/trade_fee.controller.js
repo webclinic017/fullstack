@@ -21,6 +21,12 @@
             swap: '', // forex metail nergy contrast
             fee: '', // forex metail nergy contrast
         }
+        // 是否显示folder
+        $scope.showFolder = {
+            point: true,
+            swap: true,
+            fee: true
+        }
         // 展开状态
         $scope.unfold = {
             point: false,
@@ -49,7 +55,8 @@
                 $scope.tradeFeeData[cate][type].slice(0, 2) ||
                 [] : []
             $scope.currentChecked[cate] = type
-            console.log(cate, type, $scope.currentData[cate])
+            $scope.showFolder[cate] = $scope.tradeFeeData[cate][type].length > 2;
+            console.log(cate, type, $scope.currentData[cate], $scope.showFolder)
         }
         // 获取表格数据
         getTradeFeeInfo()
