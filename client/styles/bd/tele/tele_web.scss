@@ -33,6 +33,10 @@
                 color: #c99f63;
                 border-color: #c99f63;
             }
+            &.big {
+                padding: 8px 35px;
+                font-size: 22px;
+            }
             &.yellow_bg:hover {
                 background: #c99f63;
                 color: #fff;
@@ -57,7 +61,7 @@
             }
         }
         .call-center {
-            font-size: 28px;
+            font-size: 24px;
             color: #fff;
             text-align: center;
         }

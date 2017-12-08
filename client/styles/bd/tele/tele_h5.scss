@@ -73,6 +73,11 @@
         background: transparent;
         margin-bottom: 1.8rem;
         cursor: pointer;
+        &.big {
+            font-size: 1.25rem;
+            padding: 0.3rem 1.25rem;
+            margin-top: 1rem;
+        }
         &.yellow_bg {
             background: #c99f63;
             color: #fff;
@@ -93,8 +98,8 @@
     }
     .call-center {
         color: #fff;
-        font-size: 1.2rem;
-        margin-top: 2rem;
+        font-size: 0.8rem;
+        margin-top: 0rem;
         a{
             color: #fff;
             text-decoration: underline;
