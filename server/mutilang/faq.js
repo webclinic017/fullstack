@@ -72,7 +72,7 @@ module.exports = {
         "en": "Make deals directly on the internet."
     },
     "faqAccount18": {
-        "zh": "下载移动端，通过手机 APP 进行交易。",
+        "zh": "下载App，通过手机 APP 进行交易。",
         "en": "Download the APP version on your mobile phone, then log in and make deals."
     },
     "faqAccount19": {
@@ -392,7 +392,11 @@ module.exports = {
         "en": "Q: Where can I check the previous records on swap rate?"
     },
     "faqSwap13": {
-        "zh": "A：在老虎外汇APP里，查看历史平仓订单，在每笔订单详情中的库存费即代表该笔交易曾获取或支付的隔夜利息详情MT4 平台：在账户历史的库存费栏目，您可以查看到该交易账户曾获取或支付的隔夜利息详情。",
-        "en": "A：On TigerWit’s APP: Click “Trade”-“History”-“Closed Orders”, check swap rate in your order details. MT4 platform: In the column of storage fee of account history,   you can check all acquired or paid swap rate on your transaction account."
+        "zh": "A：在老虎外汇APP里，查看历史平仓订单，在每笔订单详情中的库存费即代表该笔交易曾获取或支付的隔夜利息详情。",
+        "en": "A：On TigerWit’s APP: Click “Trade”-“History”-“Closed Orders”, check swap rate in your order details. "
+    },
+    "faqSwap13_2": {
+        "zh": "MT4平台：在账户历史的库存费栏目，您可以查看到该交易账户曾获取或支付的隔夜利息详情。",
+        "en": "MT4 platform: In the column of storage fee of account history, you can check all acquired or paid swap rate on your transaction account."
     }
 }
