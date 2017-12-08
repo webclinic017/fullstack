@@ -5,7 +5,7 @@ module.exports = {
     },
     "faqAccount1": {
         "zh": "Q：怎样开设一个账户？",
-        "en": "Q: How to download MT4 platform?"
+        "en": "Q: How to open an account?"
     },
     "faqAccount2": {
         "zh": "A：在TigerWit老虎外汇注册成功后，点击交易，系统会提醒您选择开立体验金账户或真实交易账户，按照流程完善资料后即可开立对应账户。",
