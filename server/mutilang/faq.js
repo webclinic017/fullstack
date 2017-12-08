@@ -376,7 +376,7 @@ module.exports = {
         "en": "Q: Why swap rate will be different?"
     },
     "faqSwap9": {
-        "zh": "Q：不同的货币对不同方向的隔夜利息是不一样的；按照国际惯例，周三的隔夜利息三倍。",
+        "zh": "A：不同的货币对不同方向的隔夜利息是不一样的；按照国际惯例，周三的隔夜利息三倍。",
         "en": "A: The swap rate for each currency pair is different for different trading directions; According to international    practice, wednesday's swap rate is three times."
     },
     "faqSwap10": {
