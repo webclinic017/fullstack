@@ -45,9 +45,9 @@
                 .state('authen.subpage',{
                     url: '/authen/:subpage?dredge_type',
                     views: {
-                        'nav@authen':{
-                            templateUrl: '/views/authen/nav.html'
-                        },
+                        // 'nav@authen':{
+                        //     templateUrl: '/views/authen/nav.html'
+                        // },
                         'content@authen': {
                             templateUrl: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'investInfo';
@@ -326,6 +326,35 @@
                             controllerProvider: function ($stateParams) {
                                 $stateParams.subpage = $stateParams.subpage || 'own';
                                 var ctrlPrefix = 'Redbag';
+                                var ctrlSuffix = 'Controller';
+                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                            }
+                        }
+                    }
+                })
+
+                // 申请高手&高手等级
+                .state('space.master', {
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/master/index.html',
+                            controller: ''
+                        }
+                    }
+                })
+                .state('space.master.subpage', {
+                    authenticated: true,
+                    url: '/space/master/:subpage',
+                    views: {
+                        '@space.master': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage;
+                                return '/views/master/' + $stateParams.subpage + '.html';
+                            },
+                            controllerProvider: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage;
+                                var ctrlPrefix = 'Master';
                                 var ctrlSuffix = 'Controller';
                                 var ctrlRoot = modCtrlName($stateParams.subpage);
                                 return ctrlPrefix + ctrlRoot + ctrlSuffix;

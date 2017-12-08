@@ -18,7 +18,6 @@
                     filename; // 头像路径
                 var token = $cookies["token"] || '';
                 var uploadUrl = api.account.uploadAvatarForm + "?token=" + token;
-
                 // 首先赋值然后监听！！    
                 filename = scope.filename;
                 scope.$watch('filename', function (newVal, oldVal) {
@@ -31,16 +30,26 @@
                         filename = scope.filename;
                     }
                 });
+                var base64PreviewImg = null
 
                 inputEle.fileupload({
                     url: uploadUrl,
+                    add: function (e, data) {
+                        console.log('当前文件大小' + data.originalFiles[0]['size'] / 1024 + 'KB');
+                        /*图片预览*/
+                        var reader = new FileReader();
+                        reader.readAsDataURL(data.originalFiles[0]);
+                        reader.onload = function () {
+                            base64PreviewImg = this.result
+                        };
+                        data.submit();
+                    },
                     done: function (e) {
-                        imgEle.attr('src', filename + '?timestamp=' + e.timeStamp);
-                        scope.$emit('uploadAvatarSuccess');
+                        // imgEle.attr('src', filename + '?timestamp=' + e.timeStamp);
+                        scope.$emit('uploadAvatarSuccess', base64PreviewImg);
                     },
                     fail: function (e, data) {
                         scope.$emit('uploadAvatarFail');
-
                     },
                     send: function () {
                         scope.$emit('uploadAvatarStart');

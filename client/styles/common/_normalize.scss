@@ -30,6 +30,9 @@ select {
   padding-left: 12px;
 }
 
+// IE 去掉文本框的叉叉和密码输入框的眼睛图标 
+input::-ms-clear, input::-ms-reveal{display: none;}
+
 ul,
 li {
     margin: 0;

@@ -5,14 +5,15 @@
     angular.module('fullstackApp')
         .controller('SpaceInfoController', SpaceInfoController);
 
-    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout', 'config', 'redbag'];
+    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout', 'config', 'redbag', 'trader'];
 
     /**
      * @name SpaceInfoController
      * @desc
      */
-    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config, redbag) {
+    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config, redbag, trader) {
         $scope.unreadLength = 0;        // 未读消息
+        $scope.masterGradeInfo = {};    // 高手等级信息
         var summaryId;
         var noticeId;
 
@@ -30,6 +31,14 @@
             getVerifyStatus();
             getRedBagNum();
         }
+
+        // 如果是高手账号，则获取高手等级
+        $scope.$watch('personal.is_master', function (newVal, oldVal) {
+            // console.log(newVal, oldVal);
+            if (newVal) {
+                getMasterGrade();
+            }
+        });
 
         // 检查新消息
         $scope.$on('refreshNoticeList', function() {
@@ -63,21 +72,6 @@
             });
 
         }
-
-        // 获取基本信息完整度
-        // function getPersonalInfoDegree () {
-        //     account.getPersonalInfoDegree().then(function (data) {
-        //         if (!data) return;
-        //         // console.info(data);
-        //         var deg = 0;
-        //         if (data.is_succ) {
-        //             deg = data.data.degree;
-        //         }
-        //         angular.extend($scope.personal, {
-        //             infoDegree: deg
-        //         });
-        //     });
-        // }
 
         // 获取实名认证状态
         function getVerifyStatus () {
@@ -132,6 +126,17 @@
                         my_total_balance: my_total_balance
                     });
                 } 
+            });
+        }
+
+        // 获取高手等级
+        function getMasterGrade () {
+            trader.getMasterGrade($scope.personal.usercode).then(function (data) {
+                // console.log(data);
+                if (data.is_succ && data.code == 0) {
+                    $scope.masterGradeInfo = data.data;
+                    $scope.masterGradeInfo.scale = (($scope.masterGradeInfo.follow_amount - $scope.masterGradeInfo.available_amount) / $scope.masterGradeInfo.follow_amount * 100).toFixed(2)+'%';
+                }
             });
         }
     }

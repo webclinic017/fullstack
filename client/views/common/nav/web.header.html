@@ -49,7 +49,9 @@
 
             <div class="navbar_info__psl">
                 <a href="/space/#/center">
-                    <img class="navbar_info__avatar" ng-src="{{personalCookiesInfo.userAvatar}}">
+                    <!-- SettingInfoAvatarController -->
+                    <img class="navbar_info__avatar" ng-show="!personal.addAvatarImg" ng-src="{{personalCookiesInfo.userAvatar}}">
+                    <img class="navbar_info__avatar" ng-show="!!personal.addAvatarImg" ng-src="{{personal.addAvatarImg}}">
                     <h4 class="navbar_info__username">{{personalCookiesInfo.userName || '**'}}</h4>
                 </a>
 

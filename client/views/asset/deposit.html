@@ -2,7 +2,7 @@
 
 <div class="asset-public deposit">
 
-    <div ng-show="!walletDepositSucc">
+    <div ng-show="!walletDepositSucc && !teleDepositSucc">
         <div class="row mg-tp-30">
             <div class="col-xs-3 text-right deposit__title-money">充值金额</div>
             <div class="col-xs-6 deposit__input">
@@ -31,6 +31,18 @@
                                ng-change="checkInputAmount()"
                                ng-focus="hideErr('amount')"
                                ng-blur="showErr('amount')">
+                        <input class="form-control form-control-md"
+                               ng-if="deposit.type === 'tele'"
+                               name="amount"
+                               type="text"
+                               required
+                               ng-pattern="frontErr.amount.reg"
+                               ng-class="{'form-control-error': frontErr.amount.show && depositForm.amount.$invalid}"
+                               ng-model="deposit.amount"
+                               ng-change="checkInputAmount()"
+                               ng-focus="hideErr('amount')"
+                               ng-blur="showErr('amount')">
+
 
                         <span class="asset__input-icon">$</span>
 
@@ -50,51 +62,119 @@
                     </div>
                 </form>
             </div>
-            <div class="col-xs-3">
-                <button ng-if="!isLoading" class="btn btn-primary btn-sm" ng-click="toDeposit()">充值</button>
-                <button ng-if="isLoading" class="btn btn-primary btn-sm"><i class="loading_spinner fa fa-spinner"></i>充值中</button>
-            </div>
+            
         </div>
 
         <div class="row">
-            <div class="col-xs-9 col-xs-offset-3">
+            <div class="col-xs-9 col-xs-offset-3 deposit__rate">
                 <p>
                     <span class="font-danger">＊</span>今日汇率：1 美元 =
                     <span>{{deposit.FXRate.value}}</span> 人民币
                 </p>
             </div>
         </div>
-        
+
         <div class="row mg-tp-30">
-            <div class="col-xs-3 text-right deposit__title-money">充值方式</div>
+            <div class="col-xs-3 text-right deposit__title-money">支付方式</div>
             <div class="col-xs-6">
-                <div class="deposit__way" ng-class="{active: deposit.type === 'invest'}" ng-click="changeDepositType('invest')">
-                    网银支付
+                <div class="deposit__way" ng-click="openChangeDepTypeMdl()">
+                    {{ depositTypeCN }}
                 </div>
+                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'tele'}">电汇通常需要 3-5 个工作日到帐</p>
+                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'invest'}">单日交易限额以银行规定为准</p>
+                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'wallet'}">当前零钱包余额：${{ walletAble || '0.00' }}</p>
+                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'alipay'}">单日交易限额 $3000.00</p>
             </div>
         </div>
-        <div class="row mg-tp-30">
-            <div class="col-xs-3"></div>
-            <div class="col-xs-6">
-                <div class="deposit__way" ng-class="{active: deposit.type === 'wallet', disabled: !deposit.wallet}" ng-click="changeDepositType('wallet')">
-                    零钱包可用余额: ${{ walletAble || '0.00' }}
-                </div>
-                <p class="deposit__way-tip" ng-class="{active: deposit.walletTip}">零钱包余额不足，请尝试用网银支付</p>
+        <div class="row mg-tp-30" ng-show="deposit.type === 'tele'">
+            <div class="col-xs-3 text-right deposit__title-money">上传电汇凭证</div>
+            <div class="col-xs-6 deposit__tele_file">
+                点击上传电汇凭证
+                <div tw-upload-file-base64 data-file-name="deposit.teleFile"></div>
             </div>
         </div>
-        <!-- <div class="row mg-tp-30">
+
+        <div class="row">
             <div class="col-xs-3"></div>
-            <div class="col-xs-6">
-                <div class="deposit__way" ng-class="{active: deposit.type === 'alipay', disabled: !deposit.alipay}" ng-click="changeDepositType('alipay')">
-                    支付宝
-                    <span ng-show="deposit.alipayAbleTip" class="">限额3000美金/天</span>
-                </div>
-                <p class="deposit__way-tip" ng-class="{active: deposit.alipayTip}">支付宝只支持3000美金/天以下入金，请更换支付方式或分批次入金</p>
+            <div class="col-xs-6 deposit__btn_wrapper">
+                <button ng-if="!isLoading" class="btn btn-primary btn-sm" ng-class="{'btn-disabled': !deposit.submitBtn, 'disabled': !deposit.submitBtn}" ng-click="toDeposit()">
+                    <span ng-show="deposit.type !== 'tele'">充值</span>
+                    <span ng-show="deposit.type === 'tele'">提交</span>
+                </button>
+                <button ng-if="isLoading" class="btn btn-primary btn-sm"><i class="loading_spinner fa fa-spinner"></i>提交中</button>
             </div>
-        </div> -->
+        </div>
+
+        <div class="deposit__tele" ng-if="deposit.type === 'tele'">
+            <p class="deposit__tele-tip">
+                不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，老虎外汇不收取电汇入金手续费，入金金额将以实际到账为准。
+            </p>
+            <p class="deposit__tele-tip">
+                请注意，我们不接受直接支付到我们银行账户的现金付款。为了您的注资能及时、准确到帐，在填写电汇申请单时，<span class="des">请您务必在汇款附言一栏里填写您的交易账号。</span>同时请提供您的电话号码，以便我们与您取得联系。
+            </p>
+            <p class="deposit__tele-tit">
+                老虎外汇接受美元汇款，汇款详情如下：
+            </p>
+            <p class="deposit__tele-msg">
+                收款人名称（Company）：<br>TigerWit Financial Services Limited
+            </p>
+            <p class="deposit__tele-msg">
+                收款行所在国家（地区）： <br>澳大利亚AUSTRALIA
+            </p>
+            <p class="deposit__tele-msg">
+                收款人账号（Account）：<br>06443210678867
+            </p>
+            <p class="deposit__tele-msg">
+                收款银行机构鉴定代码（Swift）：<br>CTBAAU2S
+            </p>
+            <p class="deposit__tele-msg">
+                收款人开户行（Bank）：<br>COMMONWEALTH BANK OF AUSTRALIA SYDNEY
+            </p>
+            <p class="deposit__tele-msg">
+                银行地址（Address）：<br>201 SUSSEX STREET FLOOR 27 SYDNEY NSW 2000 AUSTRALIA
+            </p>
+            <p class="deposit__tele-msg">
+                清算号（BSB）：<br>064432
+            </p>
+            <p class="deposit__tele-msg">
+                收款人地址（Address）：<br>No. 201  Church Street Sandyport P. O. Box SP 64638 Nassau, Bahamas
+
+            </p>
+            <p class="deposit__tele-msg">
+                汇款附言：姓名：您的姓名拼音，交易账号：12345678
+            </p>
+            <p class="deposit__tele-tit">
+                反洗钱政策：
+            </p>
+            <p class="deposit__tele-tip">
+                老虎外汇将根据各国适用法律尽最大努力以实际行动配合反洗钱及反恐怖方面的所有法律法规，具体包括报告及冻结可疑资产等。老虎外汇将不定期地查看账户记录以获取有洗钱嫌疑的交易证据，包括对如下几项的监控：
+            </p>
+            <p class="deposit__tele-tip">
+                1)  账户资金出入情况。电汇入金的用户，提现时若金额低于电汇入金时金额，老虎外汇只支持将提现金额提现至入金银行卡。<br>
+                2) 电汇汇款方及收款方<br>
+                3) 除正常业务外的其他行为。
+            </p>
+            <p class="deposit__tele-msg">
+                如您有疑问，请
+                <span ng-click="toHelp()" class="des">点击此处</span>
+                联系在线客服获得帮助。
+            </p>
+        </div>
         
     </div>
+    
     <div class="deposit__wallet_succ mg-tp-50" ng-show="walletDepositSucc">
         充值已提交，到账约为10分钟，请耐心等待
+    </div>
+    <div class="deposit__tele_succ mg-tp-50" ng-show="teleDepositSucc">
+        <div class="clearfix">
+            <div class="pic">
+                <img src="/images/icon-succ2.png">
+            </div>
+            <div class="tip">
+                电汇凭证已提交<br>大概需要3-5个工作日到账
+            </div>
+        </div>
+        
     </div>
 </div>

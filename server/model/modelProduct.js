@@ -422,7 +422,7 @@ var metal = {
         {
             "name_en": "XAUUSD",
             "name_zh": "黄金",
-            "dot": "45",
+            "dot": "4.5",
             "lever": "50 100 200",
             "fixed": "小数点后两位",
             "min_volum": "0.01",
@@ -444,7 +444,7 @@ var metal = {
         {
             "name_en": "XAUUSD",
             "name_zh": "黄金",
-            "dot": "45",
+            "dot": "4.5",
             "lever": "50 100 200",
             "fixed": "Two digits after the decimal point",
             "min_volum": "0.01",

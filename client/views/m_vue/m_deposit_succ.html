@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+
+<div class="m_deposit_succ">
+    <div class="m_deposit_succ__title">充值成功</div>
+    <div class="m_deposit_succ__tip">到账约为10分钟，请耐心等待</div>
+
+    <!-- <div class="btn_wrapper">
+        <span class="btn btn-primary-gradient btn-lg">确认</span>
+    </div> -->
+    <div class="m_deposit_succ__icon">
+        <img src="/images/icon-succ-primary.png">
+    </div>
+</div>
+
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_deposit_succ.js -->
+<script src="/scripts/asset/m_deposit_succ.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

@@ -5,9 +5,10 @@
                 <div class="row">
                     <div class="col-xs-8">
                         <div class="trader_avatar">
-                            <span class="trader_avatar__wrapper">
+                            <div class="trader_avatar__wrapper" ng-click="openMasterGradeMdl()">
                                 <img ng-src="/avatar/<%= master.user_code%>_150.jpg" alt="avatar">
-                            </span>
+                                <span class="icon-grade" ng-if="masterGradeInfo.name">{{ masterGradeInfo.name }}</span>
+                            </div>
                         </div>
                         <div class="trader_info">
                             <div class="trader_user">

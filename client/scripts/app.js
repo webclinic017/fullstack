@@ -54,6 +54,9 @@
                // Allow loading from our assets domain.  Notice the difference between * and **.
                'http://bd.tigerwit.com/**']);
         }])
+        // .config(['$compileProvider', function ($compileProvider) {
+        //     $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|local|data):/);
+        // }])
         .run(['$rootScope', '$state', '$window', 'account', '$cookies', 
                 function ($rootScope, $state, $window, account, $cookies) {
             $rootScope.$on('$stateChangeStart', function (event, toState, toParams) {

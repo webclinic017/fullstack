@@ -92,7 +92,7 @@
                         <img ng-src="/avatar/{{ rank.user_code }}_150.jpg" alt="avatar">
                     </a>
                     <div class="user">
-                        <a class="name" href="/trader/{{rank.user_code}}/#/trader/summary" ng-click="toQuickPageviewSensorsdata(rank.username)" target="_blank">
+                        <a class="name" href="/trader/{{rank.user_code}}/#/trader/summary" ng-click="toQuickPageviewSensorsdata(rank.username)" target="_blank" title="{{ rank.username || '-' }}">
                             {{ rank.username || '-' }}
                         </a>
                     </div>
