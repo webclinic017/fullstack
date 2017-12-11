@@ -10,6 +10,7 @@
     function ProductCommentController($scope, $sce, utils, product) {
 
         $scope.commentList = [];
+        $scope.loading = true;
         var limit = 10;
 
         $scope.pagebar = {
@@ -33,9 +34,10 @@
                 offset: offset,
                 limit: limit
             }).then(function (data) {
-                console.log(data);
+                // console.log(data);
+                $scope.loading = false;
                 if (data.is_succ) {
-                    $scope.commentList = data.data.comment_list;
+                    $scope.commentList = data.data.records;
 
                     angular.extend($scope.pagebar.config, {
                         total: data.data.page_count,

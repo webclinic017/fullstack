@@ -97,8 +97,8 @@
             checkPhoneApi: urlOrigin2 + '/agent'
         };
         var product = {
-            getCommentListApi: urlOrigin2 + '/comment/list',   // get
-            getCommentDetailsApi: urlOrigin2 + '/comment/details',   // get
+            getCommentListApi: urlOrigin2 + '/daily_comment/list',   // get
+            getCommentDetailsApi: urlOrigin2 + '/daily_comment/detail',   // get
             getWebProductInfoApi: '/napi?action=get_product'
         };
         var ranklist = {

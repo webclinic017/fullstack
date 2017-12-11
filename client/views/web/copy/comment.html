@@ -1,8 +1,10 @@
-<div class="pro-comment" ng-controller="ProductCommentController">
+<div class="pro-comment" ng-controller="ProductCommentController" ng-cloak>
     <p class="pro-comment__title">每日汇评</p>
-    <!-- <p ng-bind-html="aa | bindhtml"></p> -->
-    <ul class="pro-comment__lst">
-        <li class="pro-comment__details" ng-repeat="comment in commentList" ng-cloak>
+    <div class="pro-comment__loading" ng-show="loading">
+        <img src="/ngsrc/loading.gif">
+    </div>
+    <ul class="pro-comment__lst" ng-show="!loading">
+        <li class="pro-comment__details" ng-repeat="comment in commentList">
             <a ng-href="/bd/comment/{{comment.id}}?type={{comment.id}}" target="_blank">
                 <div class="pro-comment__details-title clearfix">
                     <h4>{{comment.title}}</h4>
@@ -16,6 +18,7 @@
                 </div>
             </a>
         </li>
+        <li style="text-align: center;padding-top: 50px;color: #666;" ng-show="!loading && commentList.length == 0">没有更多内容！</li>
     </ul>
     <div class="text-right">
         <p tw-pagination></p>

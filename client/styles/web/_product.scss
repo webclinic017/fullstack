@@ -96,12 +96,22 @@
 }
 
 @include b(pro-comment) {
+    min-height: 500px;
+
     @include e (title) {
         margin-top: 15px;
         padding-bottom: 10px;
         font-size: 18px;
         color: #4a4a4a;
         border-bottom: 1px solid $gray;
+    }
+    @include e(loading) {
+        text-align: center;
+        padding-top: 50px;
+
+        img {
+            width: 50px;
+        }
     }
     @include e(lst) {
 

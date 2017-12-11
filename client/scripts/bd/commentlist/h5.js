@@ -39,7 +39,7 @@
             if (data.is_succ) {
                 page++;
                 comment_list = {
-                    comment_list: comment_list.comment_list.concat(data.data.comment_list)
+                    comment_list: comment_list.comment_list.concat(data.data.records)
                 };
                 insertComment();
                 $load.removeClass("active");

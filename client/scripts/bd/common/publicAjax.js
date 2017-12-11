@@ -49,8 +49,8 @@
         // 获取交易月报
         getMonReport: origin + '/user/monthly_report',     // get
         // 每日汇评
-        getCommentList: origin + '/comment/list',   // get
-        getCommentDetails: origin + '/comment/details',   // get
+        getCommentList: origin + '/daily_comment/list',   // get
+        getCommentDetails: origin + '/daily_comment/detail',   // get
         //挂单交易
         setPendingTrade: origin + '/pending_trade/add',  //post
     };
