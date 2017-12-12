@@ -14,7 +14,7 @@
         return false;
     });
 
-    $(document).on("tap", ".m_commentlist__btn a", function () {
+    $(document).on("tap", ".m_commentlist__btn_box", function () {
         if (isInTiger()) {
             var action_address = window.location.origin + $(this).attr("href");
             // console.info(action_address);

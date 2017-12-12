@@ -43,7 +43,7 @@
     <ul class="">
         <$for(var i=0;i<comment_list.length;i++){$>
             <li>
-                <a href="/bd/comment/<$= comment_list[i].id$>">
+                <a class="m_commentlist__btn_box" href="/bd/comment/<$= comment_list[i].id$>">
                     <div class="m_commentlist__title">
                         <$= comment_list[i].title$>
                         <$if (comment_list[i].morning_night == 1) {$>
