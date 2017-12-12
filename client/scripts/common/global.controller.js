@@ -228,7 +228,7 @@
                         $scope.loading.demo = true
                         getAuthStatus().then(function(){
                             $scope.loading.demo = false
-                            window.location.href = location.origin + '/space/#/authen/'
+                            window.location.href = location.origin + '/space/#/authen/complete'
                             closeModal()
                         })
                     }
