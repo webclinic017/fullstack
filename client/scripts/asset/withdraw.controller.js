@@ -131,6 +131,7 @@
                     $scope.withdraw.card.address = data.data.bank_addr;
                     $scope.withdraw.card.province = data.data.province;
                     $scope.withdraw.card.city = data.data.city;
+                    $scope.withdraw.card.bank_code = data.data.bank_code;
                     // 判断是否为英文简称
                     $scope.withdraw.card.is_short = /^[A-Za-z]/.test(data.data.bank_name);
                 }
