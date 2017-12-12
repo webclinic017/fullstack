@@ -684,8 +684,39 @@ module.exports = function (app) {
             res.render('bd/object/index.html', extendPublic({
                 pageInfo: pageInfo
             }, req));
+        });    
+    });
+    // cms 生成H5 - 每日汇评
+    app.route('/bd/commentlist').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            res.render('bd/commentlist/h5.html', extendPublic({}, req));
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }    
+    });
+    app.route('/bd/comment/:subpage').get(function (req, res) {
+        var subpage = req.params.subpage;
+        var numName = "number_"+subpage;
+        recordAccessTimes.readAccessTimes('/comment_page_view.txt', numName, function (num) {
+            // console.log(num);
+            var pageInfo = {
+                id: subpage,
+                pageView: num || 0
+            };
+            setEnvCf(req, res);
+            if (isMobile(req)) {
+                res.render('bd/comment/h5.html', extendPublic({
+                    pageInfo: pageInfo
+                }, req));
+            } else {
+                res.render('bd/comment/web.html', extendPublic({
+                    pageInfo: pageInfo
+                }, req));
+            }
         });
     });
+
 
     // 一键原谅活动
     app.route('/bd/forgiveme').get(function (req, res) {
