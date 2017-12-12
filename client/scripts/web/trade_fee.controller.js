@@ -41,9 +41,9 @@
             $scope.unfold[cate] = true
         }
         // 折叠
-        $scope.fold = function (cate) {
+        $scope.fold = function (cate, num) {
             $scope.currentData[cate] = $scope.tradeFeeData[cate][$scope.currentChecked[cate]] ?
-                $scope.tradeFeeData[cate][$scope.currentChecked[cate]].slice(0, 2) ||
+                $scope.tradeFeeData[cate][$scope.currentChecked[cate]].slice(0, 6) ||
                 [] : []
             $scope.unfold[cate] = false
         }
@@ -52,10 +52,10 @@
         function changeType(cate, type) {
             $scope.fold(cate)
             $scope.currentData[cate] = $scope.tradeFeeData[cate][type] ?
-                $scope.tradeFeeData[cate][type].slice(0, 2) ||
+                $scope.tradeFeeData[cate][type].slice(0, 6) ||
                 [] : []
             $scope.currentChecked[cate] = type
-            $scope.showFolder[cate] = $scope.tradeFeeData[cate][type].length > 2;
+            $scope.showFolder[cate] = $scope.tradeFeeData[cate][type].length > 6;
             console.log(cate, type, $scope.currentData[cate], $scope.showFolder)
         }
         // 获取表格数据

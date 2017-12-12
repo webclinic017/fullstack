@@ -2,6 +2,54 @@
 var point = {
     forex: [
         {
+            "name": "AUDUSD",
+            "min": "2",
+            "average": "2.2",
+            "tiger": "1.6"
+        },
+        {
+            "name": "EURUSD",
+            "min": "1.8",
+            "average": "1.9",
+            "tiger": "1.6"
+        },
+        {
+            "name": "GBPUSD",
+            "min": "1.8",
+            "average": "2.3",
+            "tiger": "1.6"
+        },
+        {
+            "name": "NZDUSD",
+            "min": "2",
+            "average": "2.4",
+            "tiger": "1.6"
+        },
+        {
+            "name": "USDCAD",
+            "min": "2",
+            "average": "2.4",
+            "tiger": "1.6"
+        },
+        {
+            "name": "USDCHF",
+            "min": "2",
+            "average": "2.5",
+            "tiger": "1.6"
+        },
+        {
+            "name": "USDJPY",
+            "min": "1.8",
+            "average": "1.9",
+            "tiger": "1.6"
+        },
+        {
+            "name": "USDCNH",
+            "min": "1.6",
+            "average": "5.4",
+            "tiger": "1.6"
+        },
+        {
             "name": "AUDCAD",
             "min": "2",
             "average": "3",
@@ -23,12 +71,6 @@ var point = {
             "name": "AUDNZD",
             "min": "2",
             "average": "3",
-            "tiger": "1.6"
-        },
-        {
-            "name": "AUDUSD",
-            "min": "2",
-            "average": "2.2",
             "tiger": "1.6"
         },
         {
@@ -80,12 +122,6 @@ var point = {
             "tiger": "1.6"
         },
         {
-            "name": "EURUSD",
-            "min": "1.8",
-            "average": "1.9",
-            "tiger": "1.6"
-        },
-        {
             "name": "EURCAD",
             "min": "2",
             "average": "2.9",
@@ -103,12 +139,7 @@ var point = {
             "average": "3.6",
             "tiger": "1.6"
         },
-        {
-            "name": "GBPUSD",
-            "min": "1.8",
-            "average": "2.3",
-            "tiger": "1.6"
-        },
+
         {
             "name": "GBPNZD",
             "min": "1.6",
@@ -143,36 +174,6 @@ var point = {
             "name": "NZDJPY",
             "min": "2",
             "average": "3",
-            "tiger": "1.6"
-        },
-        {
-            "name": "NZDUSD",
-            "min": "2",
-            "average": "2.4",
-            "tiger": "1.6"
-        },
-        {
-            "name": "USDCNH",
-            "min": "1.6",
-            "average": "5.4",
-            "tiger": "1.6"
-        },
-        {
-            "name": "USDCAD",
-            "min": "2",
-            "average": "2.4",
-            "tiger": "1.6"
-        },
-        {
-            "name": "USDCHF",
-            "min": "2",
-            "average": "2.5",
-            "tiger": "1.6"
-        },
-        {
-            "name": "USDJPY",
-            "min": "1.8",
-            "average": "1.9",
             "tiger": "1.6"
         }
     ],
@@ -506,12 +507,12 @@ var swap = {
 var fee = {
     // 本无此分类，仅为保持数据结构一致，前端处理方便
     forex: [
-        {
-            "name": "AUS200",
-            "spread": "200",
-            "addedSpread": "0",
-            "commission": "$10"
-        },
+        // {
+        //     "name": "AUS200",
+        //     "spread": "200",
+        //     "addedSpread": "0",
+        //     "commission": "$10"
+        // },
         {
             "name": "EUSTX50",
             "spread": "100",
@@ -536,42 +537,42 @@ var fee = {
             "addedSpread": "0",
             "commission": "$10"
         },
-        {
-            "name": "SPA35",
-            "spread": "600",
-            "addedSpread": "0",
-            "commission": "$10"
-        },
+        // {
+        //     "name": "SPA35",
+        //     "spread": "600",
+        //     "addedSpread": "0",
+        //     "commission": "$10"
+        // },
         {
             "name": "NAS100",
             "spread": "100",
             "addedSpread": "0",
             "commission": "$10"
         },
-        {
-            "name": "UK100",
-            "spread": "600",
-            "addedSpread": "0",
-            "commission": "$10"
-        },
+        // {
+        //     "name": "UK100",
+        //     "spread": "600",
+        //     "addedSpread": "0",
+        //     "commission": "$10"
+        // },
         {
             "name": "US30",
             "spread": "280",
             "addedSpread": "0",
             "commission": "$10"
         },
-        {
-            "name": "USA500",
-            "spread": "60",
-            "addedSpread": "0",
-            "commission": "$10"
-        },
-        {
-            "name": "FRA40",
-            "spread": "100",
-            "addedSpread": "0",
-            "commission": "$10"
-        }
+        // {
+        //     "name": "USA500",
+        //     "spread": "60",
+        //     "addedSpread": "0",
+        //     "commission": "$10"
+        // },
+        // {
+        //     "name": "FRA40",
+        //     "spread": "100",
+        //     "addedSpread": "0",
+        //     "commission": "$10"
+        // }
     ]
 }
 
