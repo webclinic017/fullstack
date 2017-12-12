@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="bd_redbag">
+
+<head>
+  <meta charset="UTF-8">
+  <title>
+    <%=lang.text("companyZhName")%>｜每日汇评</title>
+  <% include /common/vendor/web.css.html %>
+    <!-- build:css(.tmp) /styles/web.css -->
+    <link rel="stylesheet" href="/styles/web.css">
+    <!-- endbuild -->
+    <% include /common/statistic/main.html %>
+    <% include /common/vendor/web.js.html %>
+</head>
+
+<body ng-app="fullstackApp">
+    <div ng-controller="GlobalController">
+        <% include /common/nav/web.header.html %>
+        <div class="comment" ng-controller="ProductCommentDetailsController" ng-cloak>
+            <div class="container">
+                <div class="comment__title">
+                    {{ commentDetails.main_title || '--' }}
+                </div>
+                <div class="comment__date">
+                    <span>{{ commentDetails.issue_date }}</span>
+                    <span style="padding-left: 10px;">分析师{{ commentDetails.analyst }}专栏</span>
+                </div>
+                 <div class="comment__focus">
+                    <img ng-src="{{commentDetails.banner_image}}">
+                </div>
+                <ul class="comment__lst">
+                    <li class="comment__details" ng-repeat="comment in commentDetails.comment_field">
+                        <div class="tit" ng-show="comment.title">{{comment.title}}</div>
+                        <p class="cont">
+                            {{ comment.content }}
+                        </p>
+                        <div class="pic" ng-repeat="img in comment.image">
+                            <img ng-src="{{img}}">
+                        </div>
+                    </li>
+                </ul>
+                <div class="comment__tip">
+                    <p>本文由互联网外汇服务平台老虎外汇特约分析师提供。转载请标明来源，否则将依法追究责任。</p>
+                    <p>老虎外汇致力于通过互联网、大数据等高新科技手段，降低投资门槛，改善金融交易环境，助力拥有财富增值意愿的人们成为投资高手。</p>
+                    <p>免责声明：本文所含评论、新闻、研究、分析、价格及其他资料只能视作一般市场资讯，系作者个人观点，仅为协助读者参考市场形势，并不构成任何投资建议。</p>
+                </div>
+                <div class="comment__other">
+                    <p>
+                        上一篇：
+                        <a ng-if="commentDetails.prev_comment" ng-href="/bd/comment/{{commentDetails.prev_comment.id}}?type={{commentDetails.prev_comment.id}}">{{commentDetails.prev_comment.title}}</a>
+                        <span ng-show="!commentDetails.prev_comment">没有更多了</span>
+                    </p>
+                    <p>
+                        下一篇：
+                        <a ng-if="commentDetails.next_comment" ng-href="/bd/comment/{{commentDetails.next_comment.id}}?type={{commentDetails.next_comment.id}}">{{commentDetails.next_comment.title}}</a>
+                        <span ng-show="!commentDetails.next_comment">没有更多了</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <% include /common/nav/web.footer.html %>
+    </div>
+
+    <%- include('/common/statistic/_all.html') %>
+</body>
+
+<!-- build:js(client) /scripts/bd_comment.js -->
+<script src="/scripts/common/config.service.js"></script>
+<script src="/scripts/common/account.service.js"></script>
+<script src="/scripts/common/authorization.service.js"></script>
+<script src="/scripts/common/redbag.service.js"></script>
+<script src="/scripts/common/navbar.directive.js"></script>
+<script src="/scripts/common/dropdown.directive.js"></script>
+<script src="/scripts/common/global.controller.js"></script>
+<script src="/scripts/common/loading_img.directive.js"></script>
+<script src="/scripts/common/lang.service.js"></script>
+<script src="/scripts/common/lang_data.service.js"></script>
+
+<script src="/scripts/common/pagination.directive.js"></script>
+<script src="/scripts/common/duration.filter.js"></script>
+<script src="/scripts/common/product.service.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<script src="/scripts/plugins/layer.js"></script>
+<script src="/scripts/bd/common/publicAjax.js"></script>
+<script src="/scripts/bd/comment/web.js"></script>
+<!-- endbuild -->
+</html>
