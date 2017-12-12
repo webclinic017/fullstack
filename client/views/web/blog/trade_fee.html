@@ -32,7 +32,7 @@
                         <th>名称</th>
                         <th>最小点差</th>
                         <th>平均点差</th>
-                        <th><%= lang.text('companyEnName')%>收取点差</th>
+                        <!-- <th><%= lang.text('companyEnName')%>收取点差</th> -->
                     </tr>
                 </thead>
                 <tbody>
@@ -40,7 +40,7 @@
                         <td>{{ point.name }}</td>
                         <td>{{ point.min }}</td>
                         <td>{{ point.average }}</td>
-                        <td>{{ point.tiger }}</td>
+                        <!-- <td>{{ point.tiger }}</td> -->
                     </tr>
                     <tr ng-if="currentData.point.length <= 0" class="text-center">
                         <td colspan="20">暂无数据</td>
@@ -88,9 +88,9 @@
                 <thead>
                     <tr>
                         <th>名称</th>
-                        <th>最小点差</th>
-                        <th><%= lang.text('companyEnName')%>收取点差</th>
-                        <th>手续费</th>
+                        <th>调期库存费计算模式</th>
+                        <th>买单调期库存费（美元/手）</th>
+                        <th>卖单调期库存费（美元/手）</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -141,7 +141,7 @@
                     <tr>
                         <th>名称</th>
                         <th>最小点差</th>
-                        <th><%= lang.text('companyEnName')%> 收取点差</th>
+                        <!-- <th><%= lang.text('companyEnName')%> 收取点差</th> -->
                         <th>手续费</th>
                     </tr>
                 </thead>
@@ -149,7 +149,7 @@
                     <tr ng-if="currentData.fee.length > 0" ng-repeat="fee in currentData.fee" ng-cloak>
                         <td>{{ fee.name }}</td>
                         <td>{{ fee.spread }}</td>
-                        <td>{{ fee.addedSpread }}</td>
+                        <!-- <td>{{ fee.addedSpread }}</td> -->
                         <td>{{ fee.commission }}</td>
                     </tr>
                     <tr ng-if="currentData.fee.length <= 0" class="text-center">

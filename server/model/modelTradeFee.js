@@ -3,7 +3,7 @@ var point = {
     forex: [
         {
             "name": "AUDUSD",
-            "min": "2",
+            "min": "2.0",
             "average": "2.2",
             "tiger": "1.6"
         },
@@ -21,19 +21,19 @@ var point = {
         },
         {
             "name": "NZDUSD",
-            "min": "2",
+            "min": "2.0",
             "average": "2.4",
             "tiger": "1.6"
         },
         {
             "name": "USDCAD",
-            "min": "2",
+            "min": "2.0",
             "average": "2.4",
             "tiger": "1.6"
         },
         {
             "name": "USDCHF",
-            "min": "2",
+            "min": "2.0",
             "average": "2.5",
             "tiger": "1.6"
         },
@@ -51,67 +51,67 @@ var point = {
         },
         {
             "name": "AUDCAD",
-            "min": "2",
+            "min": "2.0",
             "average": "3",
             "tiger": "1.6"
         },
         {
             "name": "AUDCHF",
-            "min": "2",
+            "min": "2.0",
             "average": "3",
             "tiger": "1.6"
         },
         {
             "name": "AUDJPY",
-            "min": "2",
+            "min": "2.0",
             "average": "2.7",
             "tiger": "1.6"
         },
         {
             "name": "AUDNZD",
-            "min": "2",
+            "min": "2.0",
             "average": "3",
             "tiger": "1.6"
         },
         {
             "name": "CADCHF",
-            "min": "2",
+            "min": "2.0",
             "average": "2.9",
             "tiger": "1.6"
         },
         {
             "name": "CADJPY",
-            "min": "2",
+            "min": "2.0",
             "average": "2.8",
             "tiger": "1.6"
         },
         {
             "name": "CHFJPY",
-            "min": "2",
+            "min": "2.0",
             "average": "3.1",
             "tiger": "1.6"
         },
         {
             "name": "EURAUD",
-            "min": "2",
+            "min": "2.0",
             "average": "2.9",
             "tiger": "1.6"
         },
         {
             "name": "EURCHF",
-            "min": "2",
+            "min": "2.0",
             "average": "2.5",
             "tiger": "1.6"
         },
         {
             "name": "EURGBP",
-            "min": "2",
+            "min": "2.0",
             "average": "2.4",
             "tiger": "1.6"
         },
         {
             "name": "EURJPY",
-            "min": "2",
+            "min": "2.0",
             "average": "2.4",
             "tiger": "1.6"
         },
@@ -123,19 +123,19 @@ var point = {
         },
         {
             "name": "EURCAD",
-            "min": "2",
+            "min": "2.0",
             "average": "2.9",
             "tiger": "1.6"
         },
         {
             "name": "GBPAUD",
-            "min": "2",
+            "min": "2.0",
             "average": "3.8",
             "tiger": "1.6"
         },
         {
             "name": "GBPCAD",
-            "min": "2",
+            "min": "2.0",
             "average": "3.6",
             "tiger": "1.6"
         },
@@ -148,31 +148,31 @@ var point = {
         },
         {
             "name": "GBPJPY",
-            "min": "2",
+            "min": "2.0",
             "average": "3",
             "tiger": "1.6"
         },
         {
             "name": "GBPCHF",
-            "min": "2",
+            "min": "2.0",
             "average": "2.8",
             "tiger": "1.6"
         },
         {
             "name": "NZDCAD",
-            "min": "2",
+            "min": "2.0",
             "average": "3.2",
             "tiger": "1.6"
         },
         {
             "name": "NZDCHF",
-            "min": "2",
+            "min": "2.0",
             "average": "3.2",
             "tiger": "1.6"
         },
         {
             "name": "NZDJPY",
-            "min": "2",
+            "min": "2.0",
             "average": "3",
             "tiger": "1.6"
         }
@@ -186,7 +186,7 @@ var point = {
         },
         {
             "name": "XAGUSD",
-            "min": "30",
+            "min": "30.0",
             "average": "35.8",
             "tiger": "28"
         },
@@ -214,37 +214,37 @@ var point = {
     contrast: [
         {
             "name": "EUSTX50",
-            "min": "10",
+            "min": "10.0",
             "average": "15.6",
             "tiger": "0"
         },
         {
             "name": "GER30",
-            "min": "3",
+            "min": "3.0",
             "average": "7.4",
             "tiger": "0"
         },
         {
             "name": "HK50",
-            "min": "0",
+            "min": "0.0",
             "average": "61.1",
             "tiger": "0"
         },
         {
             "name": "JPN225",
-            "min": "40",
+            "min": "40.0",
             "average": "81.8",
             "tiger": "0"
         },
         {
             "name": "NAS100",
-            "min": "9",
+            "min": "9.0",
             "average": "10.3",
             "tiger": "0"
         },
         {
             "name": "US30",
-            "min": "19",
+            "min": "19.0",
             "average": "21.4",
             "tiger": "0"
         }
@@ -515,25 +515,25 @@ var fee = {
         // },
         {
             "name": "EUSTX50",
-            "spread": "100",
+            "spread": "10.0",
             "addedSpread": "0",
             "commission": "$10"
         },
         {
             "name": "GER30",
-            "spread": "70",
+            "spread": "3.0",
             "addedSpread": "0",
             "commission": "$10"
         },
         {
             "name": "HK50",
-            "spread": "1000",
+            "spread": "0.0",
             "addedSpread": "0",
             "commission": "$10"
         },
         {
             "name": "JPN225",
-            "spread": "500",
+            "spread": "40.0",
             "addedSpread": "0",
             "commission": "$10"
         },
@@ -545,7 +545,7 @@ var fee = {
         // },
         {
             "name": "NAS100",
-            "spread": "100",
+            "spread": "9.0",
             "addedSpread": "0",
             "commission": "$10"
         },
@@ -557,7 +557,7 @@ var fee = {
         // },
         {
             "name": "US30",
-            "spread": "280",
+            "spread": "19.0",
             "addedSpread": "0",
             "commission": "$10"
         },
