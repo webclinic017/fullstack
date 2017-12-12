@@ -135,25 +135,52 @@
             cTime = parseInt((sTime - nTime)/1000);
         }
         var params = {};
-        params.cmd = info.buy_sell == 0 ? 2 : 3;
-        params.symbol = info.symbol;
-        params.volume = $(".layui-m-layer-comment .m_comment_modal .volume .volume_num input").val();
-        params.pending_price = info.price;
-        info.tp && (params.tp = info.tp);
-        info.sl && (params.sl = info.sl);
-        (cTime && cTime > 0) && (params.expiration_time = cTime);
-        // console.log(sDate, cTime, params);
 
-        publicRequest('setPendingTrade', 'POST', params).then(function (data) {
-            // console.log(data);
+        publicRequest('getRealQuote', 'GET', {
+            symbol: info.symbol
+        }).then(function (data) {
             if (data.is_succ) {
-                $(".layui-m-layer-comment .m_comment_modal .btn_box span").removeClass("active");
-                $(".layui-m-layer-comment .m_comment_modal .btn_box .record_btn").addClass("active");
+                if (info.buy_sell == 0) {   // 买入
+                    if (info.price < data.data.ask) {
+                        params.cmd = 2;     // buy limit
+                    } else {
+                        params.cmd = 4;     // buy stop
+                    }
+                }
+                if (info.buy_sell == 1) {   // 卖出
+                    if (info.price > data.data.bid) {
+                        params.cmd = 3;     // sell limit
+                    } else {
+                        params.cmd = 5;     // sell stop
+                    }
+                }
+                params.symbol = info.symbol;
+                params.volume = $(".layui-m-layer-comment .m_comment_modal .volume .volume_num input").val();
+                params.pending_price = info.price;
+                info.tp && (params.tp = info.tp);
+                info.sl && (params.sl = info.sl);
+                (cTime && cTime > 0) && (params.expiration_time = cTime);
+                // console.log(sDate, cTime, params);
 
-                $(".layui-m-layer-comment .m_comment_modal .title h4").html("挂单成功");
-                $(".layui-m-layer-comment .m_comment_modal .volume .volume_num").removeClass("active");
-                $(".layui-m-layer-comment .m_comment_modal .volume .info").html($(".layui-m-layer-comment .m_comment_modal .volume .volume_num input").val());
-                $(".layui-m-layer-comment .m_comment_modal .volume .info").addClass("active");
+                publicRequest('setPendingTrade', 'POST', params).then(function (data) {
+                    // console.log(data);
+                    if (data.is_succ) {
+                        $(".layui-m-layer-comment .m_comment_modal .btn_box span").removeClass("active");
+                        $(".layui-m-layer-comment .m_comment_modal .btn_box .record_btn").addClass("active");
+
+                        $(".layui-m-layer-comment .m_comment_modal .title h4").html("挂单成功");
+                        $(".layui-m-layer-comment .m_comment_modal .volume .volume_num").removeClass("active");
+                        $(".layui-m-layer-comment .m_comment_modal .volume .info").html($(".layui-m-layer-comment .m_comment_modal .volume .volume_num input").val());
+                        $(".layui-m-layer-comment .m_comment_modal .volume .info").addClass("active");
+                    } else {
+                        layer.closeAll();
+                        layer.open({
+                            skin: 'msg',
+                            content: data.message,
+                            time: 3
+                        });
+                    }
+                });
             } else {
                 layer.closeAll();
                 layer.open({
@@ -162,6 +189,7 @@
                     time: 3
                 });
             }
+            
         });
 
         return false;

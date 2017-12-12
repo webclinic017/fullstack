@@ -43,24 +43,26 @@
     <ul class="">
         <$for(var i=0;i<comment_list.length;i++){$>
             <li>
-                <div class="m_commentlist__title">
-                    <$= comment_list[i].title$>
-                    <$if (comment_list[i].morning_night == 1) {$>
-                    <span class="morning">早评</span>
-                    <$} else {$>
-                    <span class="night">晚评</span>
-                    <$}$>
-                </div>
-                <div class="m_commentlist__date">
-                    <span class="date"><$= comment_list[i].issue_date$></span>
-                    <span style="padding-left: 10px;">分析师<$= comment_list[i].analyst$>专栏</span>
-                </div>
-                <div class="m_commentlist__content">
-                    <$= comment_list[i].content.substring(0,60)$>...
-                </div>
-                <div class="m_commentlist__btn">
-                    <a href="/bd/comment/<$= comment_list[i].id$>">查看详情 ></a>
-                </div>
+                <a href="/bd/comment/<$= comment_list[i].id$>">
+                    <div class="m_commentlist__title">
+                        <$= comment_list[i].title$>
+                        <$if (comment_list[i].morning_night == 1) {$>
+                        <span class="morning">早评</span>
+                        <$} else {$>
+                        <span class="night">晚评</span>
+                        <$}$>
+                    </div>
+                    <div class="m_commentlist__date">
+                        <span class="date"><$= comment_list[i].issue_date$></span>
+                        <span style="padding-left: 10px;">分析师<$= comment_list[i].analyst$>专栏</span>
+                    </div>
+                    <div class="m_commentlist__content">
+                        <$= comment_list[i].content.substring(0,60)$>...
+                    </div>
+                    <div class="m_commentlist__btn">
+                        <a href="javascript:;">查看详情 ></a>
+                    </div>
+                </a>
             </li>
         <$}$>
     </ul>

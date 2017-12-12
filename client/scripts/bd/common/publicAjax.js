@@ -53,6 +53,7 @@
         getCommentDetails: origin + '/daily_comment/detail',   // get
         //挂单交易
         setPendingTrade: origin + '/pending_trade/add',  //post
+        getRealQuote: origin + '/quote/real-time',  //get
     };
 
     w.publicRequest = publicRequest;
