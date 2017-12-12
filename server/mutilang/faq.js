@@ -101,7 +101,7 @@ module.exports = {
     },
     "faqTrade2": {
         "zh": "A：TigerWit老虎外汇向客户提供20多种外汇交易品种、2种贵金属（黄金、白银）、原油和天然气以及多种CFD股指差价合约。",
-        "en": "A: TigerWit offers more than 20 varieties of foreign exchange, precious metals (gold, silver), crude    oil and natural gas, as well as a variety of index and CFD."
+        "en": "A: TigerWit offers more than 20 varieties of foreign exchange, precious metals (gold, silver), crude oil and natural gas, as well as a variety of index and CFD."
     },
     "faqTrade3": {
         "zh": "Q：为什么我的APP上没有黄金？",
@@ -164,12 +164,12 @@ module.exports = {
         "en": "A: Fx, Crude oil and Precious metals opened at 0.01lot minimum, Natural gas minimum open 0.1lot, CFD minimum open 1lot."
     },
     "faqTrade17_2": {
-        "zh": "A：外汇、贵金属单张订单交易的开仓上限为50手，能源交易单张订单开仓上限为20手，CFD产品单张订单开仓上限为10手。",
-        "en": "A: Fx, Precious metals opened max to 50 lots, Nature gas opened max to 20 lots, CFD opened max to 10 lots. "
+        "zh": "外汇、贵金属单张订单交易的开仓上限为50手，能源交易单张订单开仓上限为20手，CFD产品单张订单开仓上限为10手。",
+        "en": "Fx, Precious metals opened max to 50 lots, Nature gas opened max to 20 lots, CFD opened max to 10 lots. "
     },
     "faqTrade17_3": {
-        "zh": "A：但是如果账户资金足够大，那么可以下多张订单，我们对订单的数量没有限制。",
-        "en": "A: You can open more orders, we have no limit on the number of orders."
+        "zh": "但是如果账户资金足够大，那么可以下多张订单，我们对订单的数量没有限制。",
+        "en": "You can open more orders, we have no limit on the number of orders."
     },
     "faqTrade18": {
         "zh": "Q：持仓有时间限制吗？",
@@ -185,7 +185,7 @@ module.exports = {
     },
     "faqTrade21": {
         "zh": "A：夏令时从每年 3 月的第 2 个星期日开始，结束在11月的第 1 个星期日，夏令时间之外为冬令时",
-        "en": "A: During summer time, it starts from the second Sunday in March and ends on the first Sunday in November.   Otherwise, it starts and ends in winter time."
+        "en": "A: During summer time, it starts from the second Sunday in March and ends on the first Sunday in November. Otherwise, it starts and ends in winter time"
     },
     "faqTrade22": {
         "zh": "Q：我下的单被强行平仓，为什么？",
@@ -216,8 +216,8 @@ module.exports = {
         "en": "A: Our platform supports these functions. One more thing, even though you use Trailing Stops or Expert Advisors etc. functions, you are still responsible for transaction operations since they are executed on your MT4."
     },
     "faqTrade28_2": {
-        "zh": "A：如果您的智能交易系统有攻击服务器的行为，老虎外汇有权利拒绝您的智能交易系统。",
-        "en": "A: If your Expert Advisors attacks the server, TigerWit has the right to refuse your Expert Advisors."
+        "zh": "如果您的智能交易系统有攻击服务器的行为，老虎外汇有权利拒绝您的智能交易系统。",
+        "en": "If your Expert Advisors attacks the server, TigerWit has the right to refuse your Expert Advisors."
     },
     "faqTrade29": {
         "zh": "Q：为什么单子没有按照已经设置好的止盈止损价格成交？",
@@ -345,7 +345,7 @@ module.exports = {
     },
     "faqSwap4": {
         "zh": "A：隔夜利息在美国东部时间下午 5 点执行。外汇交易以平台时间0:00为开始及结束时间。在平台时间0:00前建立的仓位都会视为持仓过夜，需要计算隔夜利息。客户在该时间所持有的任何头寸都将被自动纳入隔夜利息的计算，且结果会显示在交易账户中。请查看常见问题了解隔夜利息详情。",
-        "en": "A: Swap rate will be calculated at 5:00pm EST.Forex trading time starts and ends at 0:00 (GMT+3). Orders opened before 0:00 (GMT + 3) are considered overnight positions and need to calculate swap rate."
+        "en": "A: Swap rate will be calculated at 5:00pm EST.Forex trading time starts and ends at 0:00 (GMT+3). Orders opened before 0:00 (GMT+3) are considered overnight positions and need to calculate swap rate."
     },
     "faqSwap5": {
         "zh": "Q：我在哪里可以查看到隔夜利息报价？",
