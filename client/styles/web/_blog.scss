@@ -25,6 +25,15 @@
         text-align: center;
         color: #000;
     }
+    @include e(navi) {
+        .navi-item {
+            color: $brand-info;
+            cursor: pointer;
+            &.active {
+                color: #222;
+            }
+        }
+    }
     @include e(content) {
         color: #838992;
 
