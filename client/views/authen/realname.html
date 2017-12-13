@@ -76,6 +76,7 @@
                 <div class="col-xs-6">
                     <div class="form-control-wrapper">
                         <input class="form-control"
+                            ng-if="realnameInfo.id_type.value == 0"
                             name="id_num"
                             type="text"
                             placeholder="请输入身份证号"
@@ -84,6 +85,18 @@
                             ng-model="realnameInfo.id_num"
                             ng-pattern="frontErr.id_num.reg"
                             ng-blur="[showErr('id_num'),checkExsit(4), checkBirthday()]"
+                            ng-focus="hideErr('id_num')">
+
+                        <!-- 港澳台移除 ng-parttern -->
+                        <input class="form-control"
+                            ng-if="realnameInfo.id_type.value != 0"
+                            name="id_num"
+                            type="text"
+                            placeholder="请输入身份证号"
+                            required
+                            ng-class="{'form-control-error': frontErr.id_num.show && realnameForm.id_num.$invalid}"
+                            ng-model="realnameInfo.id_num"
+                            ng-blur="[showErr('id_num'),checkExsit(4)]"
                             ng-focus="hideErr('id_num')">
         
                         <div ng-show="frontErr.id_num.show">
@@ -98,6 +111,70 @@
                         <div ng-show="exsit.id_num.show">
                             <p class="alert-arrow_tp_lf">
                                 身份证号已存在
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-2">
+                    <lable class="form-control-title">性别</lable>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-control-wrapper">
+                        <div class="select">
+                            <input class="select__input"
+                                name="gender"
+                                type="text"
+                                placeholder="性别"
+                                required
+                                ng-model="realnameInfo.gender.key"
+                                ng-class="{'form-control-error': frontErr.gender.show && realnameForm.gender.$invalid}"
+                                ng-blur="showErr('gender')"
+                                ng-focus="hideErr('gender')">
+                            
+                            <i class="select__icon fa fa-angle-down"></i>
+
+                            <ul class="select__dropdown" twform-select data-bind-model="realnameInfo.gender">
+                                
+                                <li ng-repeat="gender in genders" ng-class="{'selected': gender.value === realnameInfo.gender.value}">
+                                    <span data-value="{{gender.value}}">{{ gender.key }}</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div ng-show="frontErr.gender.show">
+                            <p class="alert alert-arrow_tp_lf" ng-show="realnameForm.gender.$error.required">
+                                请输入性别
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-2">
+                    <lable class="form-control-title">生日</lable>
+                </div>
+                <div class="col-xs-6">
+                    <div class="form-control-wrapper">
+                        <input class="form-control"
+                            name="birthday"
+                            tw-date-picker
+                            placeholder="生日"
+                            data-type="day"
+                            required
+                            ng-model="realnameInfo.birthday"
+                            data-bind-model="realnameInfo.birthday"
+                            data-formatter="yyyymmdd"
+                            ng-class="{'form-control-error': frontErr.birthday.show && realnameForm.birthday.$invalid}"
+                            ng-blur="showErr('birthday')"
+                            ng-focus="hideErr('birthday')"
+                        >
+                        <div ng-show="frontErr.birthday.show">
+                            <p class="alert alert-arrow_tp_lf" ng-show="realnameForm.birthday.$error.required">
+                                请输入您的生日
                             </p>
                         </div>
                     </div>

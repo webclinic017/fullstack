@@ -131,6 +131,7 @@
                     $scope.withdraw.card.address = data.data.bank_addr;
                     $scope.withdraw.card.province = data.data.province;
                     $scope.withdraw.card.city = data.data.city;
+                    $scope.withdraw.card.bank_code = data.data.bank_code;
                     // 判断是否为英文简称
                     $scope.withdraw.card.is_short = /^[A-Za-z]/.test(data.data.bank_name);
                 }
@@ -138,6 +139,9 @@
         }
 
         function openCardMdl() {
+            if(parentScope.manageCardModalInstance){
+                parentScope.manageCardModalInstance.dismiss()
+            }
             // 检测认证状态
             $scope.$emit('global.checkAuthenFlow', {
                 ctrlName: 'AssetWithdrawController',
@@ -208,6 +212,7 @@
                         parentScope.withdraw.card.address = card.bank_addr;
                         parentScope.withdraw.card.province = card.province;
                         parentScope.withdraw.card.city = card.city;
+                        parentScope.withdraw.card.bank_code = card.bank_code;
                         // 更改选中状态
                         parentScope.hasChooseedCard = true;
                         // 判断是否为英文简称
@@ -230,6 +235,7 @@
                                         parentScope.withdraw.card = {}
                                     }
                                 })
+                                getCard()
                                 closeModal()
                             }
                         })

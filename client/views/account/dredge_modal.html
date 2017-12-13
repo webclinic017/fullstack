@@ -8,7 +8,10 @@
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> 自由交易，灵活杠杆</p>
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> 不用承担任何风险</p>
       <div class="btn_wrapper">
-          <a class="btn btn-primary-gradient btn-sm" ng-click="openDemo()" >免费开通</a>
+          <a class="btn btn-primary-gradient btn-sm" ng-click="openDemo()">
+            <i class="loading fa fa-spinner loading_spinner" ng-show="loading.demo"></i>
+            免费开通
+          </a>
       </div>
     </div>
     <div class="dredge_box" ng-show="dredge_type == 'live' || dredge_type == 'all'">
@@ -19,7 +22,9 @@
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> 复制高手获得收益</p>
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> 申请成为高手获得盈利分成</p>
       <div class="btn_wrapper">
-          <a class="btn btn-primary-gradient btn-sm" ng-click="confirmLive()">免费开通</a>
+          <a class="btn btn-primary-gradient btn-sm" ng-click="confirmLive()">
+            免费开通
+          </a>
       </div>
     </div>
   </div>

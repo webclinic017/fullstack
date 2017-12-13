@@ -463,7 +463,7 @@ module.exports = function (app) {
     });
 
     // 条件和条款
-    app.route('/web/blog/:subpage(agreement|risk|statement|notice|legal)').get(function (req, res) {
+    app.route('/web/blog/:subpage(agreement|risk|statement|notice|legal|trade_fee)').get(function (req, res) {
         var subpage = req.params.subpage || 'risk';
         var pageInfo = {
             id: subpage
@@ -1021,8 +1021,10 @@ module.exports = function (app) {
             var type = req.query.product_type;
             data = type ? require('./model/modelProduct.js')[type] : [] || {};
         }
+        if (action == 'get_trade_fee') {
+            data = require('./model/modelTradeFee.js') || {};
+        }
         if (data) {
-
             if (offset) {
                 rs = {
                     is_succ: true,
