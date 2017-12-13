@@ -212,6 +212,7 @@
                         parentScope.withdraw.card.address = card.bank_addr;
                         parentScope.withdraw.card.province = card.province;
                         parentScope.withdraw.card.city = card.city;
+                        parentScope.withdraw.card.bank_code = card.bank_code;
                         // 更改选中状态
                         parentScope.hasChooseedCard = true;
                         // 判断是否为英文简称
