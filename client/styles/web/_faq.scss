@@ -4,15 +4,19 @@
         font-size: 18px;
         color: $gray-base;
         cursor: pointer;
-
+        .fa-angle-down {
+            display: none;
+        }
         &:hover {
             color: $brand-info;
         }
     }
     @include e(answer) {
+        display: none;
         margin-top: 5px;
         font-size: 16px;
         color: $gray-darker;
+        padding-left: 20px;
     }
     
     i {

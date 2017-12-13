@@ -55,7 +55,7 @@
                 <h6 class="desp_title faq"><%=lang.text("faqTrade1")%></h6>
                 <%if(!lang.isTigerSpecial()){%>
                     <p class="desp_subdesp faq">
-                        <%=lang.text("faqTrade2")%>。
+                        <%=lang.text("faqTrade2")%>
                     </p>
                 <%} else { %>
                     <p class="desp_subdesp faq">
@@ -100,14 +100,16 @@
                         A：CFD股指差价合约每手10美金手续费，外汇、贵金属、原油、天然气没有佣金和手续费，只收取相应的点差。
                     </p>
                 <%}%>
-                <h6 class="desp_title faq"><%=lang.text("faqTrade14")%></h6>
+                <!-- <h6 class="desp_title faq"><%=lang.text("faqTrade14")%></h6>
                 <p class="desp_subdesp faq">
                     <%=lang.text("faqTrade15")%>
-                </p>
+                </p> -->
                 <h6 class="desp_title faq"><%=lang.text("faqTrade16")%></h6>
                 <%if(!lang.isTigerSpecial()){%>
                     <p class="desp_subdesp faq">
-                        <%=lang.text("faqTrade17")%>
+                        <%= lang.text("faqTrade17")%></br>
+                        <span style="text-indent: 2em;"><%= lang.text("faqTrade17_2")%></span></br>
+                        <span style="text-indent: 2em;"><%= lang.text("faqTrade17_3")%></span>
                     </p>
                 <%} else { %>
                     <p class="desp_subdesp faq">
@@ -154,7 +156,8 @@
                 </p>
                 <h6 class="desp_title faq"><%=lang.text("faqTrade27")%></h6>
                 <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade28")%> 
+                    <%=lang.text("faqTrade28")%></br>
+                    <%=lang.text("faqTrade28_2")%>
                 </p>
                 <h6 class="desp_title faq"><%=lang.text("faqTrade29")%></h6>
                 <p class="desp_subdesp faq">
@@ -225,8 +228,8 @@
                 <h6 class="desp_title faq"><%=lang.text("faqMeta1")%></h6>
                 <p class="desp_subdesp faq">
                     <%=lang.text("faqMeta2")%>
-                    <a style="color: #188afa;text-decoration: underline;" href="https://itunes.apple.com/cn/app/metatrader-4/id496212596?l=en&mt=8">IOS</a>
-                    <a style="color: #188afa;text-decoration: underline;" href="http://zhushou.360.cn/detail/index/soft_id/260622?recrefer=SE_D_meta">Android</a>
+                    <a style="color: #188afa;text-decoration: underline;" href="https://itunes.apple.com/cn/app/metatrader-4/id496212596?l=en&mt=8">IOS;</a>
+                    <a style="color: #188afa;text-decoration: underline;margin-left: 0.5rem;" href="http://zhushou.360.cn/detail/index/soft_id/260622?recrefer=SE_D_meta">Android</a>
                 </p>
                 <h6 class="desp_title faq"><%=lang.text("faqMeta3")%></h6>
                 <p class="desp_subdesp faq">
@@ -247,8 +250,10 @@
                 </p>
                 <h6 class="desp_title faq"><%=lang.text("faqSwap5")%></h6>
                 <p class="desp_subdesp faq">
-                    <%=lang.text("faqSwap6")%>
-                    <br>
+                    <%=lang.text("faqSwap6")%><br>
+                    <%=lang.text("faqSwap6_2")%><br>
+                    <%=lang.text("faqSwap6_3")%><br>
+                    <%=lang.text("faqSwap6_4")%><br>
                     <%=lang.text("faqSwap7")%>
                 </p>
                 <h6 class="desp_title faq"><%=lang.text("faqSwap8")%></h6>
@@ -260,8 +265,9 @@
                     <%=lang.text("faqSwap11")%>
                 </p>
                 <h6 class="desp_title faq"><%=lang.text("faqSwap12")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqSwap13")%>
+                <p class="desp_subdesp faq" style="text-align: left;">
+                    <%= lang.text("faqSwap13")%><br>
+                    <%= lang.text("faqSwap13_2")%>
                 </p>
             </div>
         </li>
