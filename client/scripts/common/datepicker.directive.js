@@ -40,6 +40,7 @@
                     language: "zh-CN",
                     autoclose: true,
                     clearBtn: true,
+                    startView: 2,
                     format: dateFormatter[attrs.type]
                 }
 
