@@ -219,11 +219,18 @@
                     $scope.position = passedScope.position;
 
                     $scope.dredge_type = 'all';
+                    $scope.loading = {
+                        demo: false
+                    }
 
                     $scope.openDemo = function(){
                         globalScope.personal.is_live = '0'
-                        window.location.href = location.origin + '/space/#/authen/complete'
-                        closeModal()
+                        $scope.loading.demo = true
+                        getAuthStatus().then(function(){
+                            $scope.loading.demo = false
+                            window.location.href = location.origin + '/space/#/authen/'
+                            closeModal()
+                        })
                     }
                     $scope.confirmLive = function () {
                         $modalInstance.dismiss()
@@ -233,11 +240,16 @@
                             size: 'sm',
                             btnsClass: 'text-right',
                             msg: '开通真实账户后，将不再支持开通体验金账户',
+                            autoClose: false,
                             btns: {
                                 '取消': function () { },
-                                '继续': function () {
+                                '继续': function (oScope) {
                                     globalScope.personal.is_live = '1'
-                                    window.location.href = location.origin + '/space/#/authen/investInfo'
+                                    oScope.loading = 1
+                                    getAuthStatus().then(function(){
+                                        oScope.loading = 2
+                                        window.location.href = location.origin + '/space/#/authen/'
+                                    })
                                 }
                             }
                         })
@@ -255,7 +267,7 @@
         // account_status 0:没开通,1:真实,2:模拟
         // status=10只有在添加认证信息结束的时候我会返回10，app主动请求获取用户认证状态的最终状态是6(审核通过)不会有10
         function getAuthStatus(callback) {
-            account.getAuthStatus({
+            return account.getAuthStatus({
                 is_live: globalScope.personal.is_live
             }).then(function (data) {
                 console.log('global.getAuthStatus', data);
@@ -278,6 +290,7 @@
                     }
                     angular.extend($scope.personal, params);
                     callback && angular.isFunction(callback) && callback(params)
+                    return data
                 }
             });
         }

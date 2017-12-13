@@ -13,7 +13,7 @@
     AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state', '$stateParams', '$timeout', '$modal', '$layer'];
     AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account', '$location', '$modal'];
     AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval', '$location', '$modal'];
-    AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location'];
+    AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location', '$layer'];
 
     // 主控制器
     function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout, $modal, $layer) {
@@ -533,11 +533,16 @@
         $scope.realnameInfo = {
             realname: '',
             id_type: {
-                key: undefined,
-                vlaue: undefined
+                key: "大陆",
+                value: 0
             },
             idNum: '',
-            year18: false
+            year18: false,
+            gender: {
+                key: '',
+                value: ''
+            },
+            birthday: ''
         }
 
         $scope.frontErr = {
@@ -559,6 +564,12 @@
             },
             id_type: {
                 show: false
+            },
+            gender: {
+                show: false
+            },
+            birthday: {
+                show: false
             }
         };
 
@@ -568,6 +579,17 @@
                 status: 0
             }
         };
+
+        $scope.genders = [
+            {
+                key: '男',
+                value: '1'
+            },
+            {
+                key: '女',
+                value: '0'
+            }
+        ]
 
         $scope.idType = [
             {
@@ -657,10 +679,11 @@
         }
 
         function submitForm(formName) {
-            // console.log($scope.readyToUpload);
             showErr('realname');
-            showErr('id_type');
             showErr('id_num');
+            showErr('id_type');
+            showErr('gender');
+            showErr('birthday');
 
             if (!$scope.readyToUpload.hasOwnProperty('front')) {
                 showErr('idFront');
@@ -675,7 +698,7 @@
                 return
             }
 
-            if (!$scope.realnameInfo.year18) {
+            if (!$scope.realnameInfo.year18 && $scope.realnameInfo.id_type.value == 0) {
                 layer.msg('您的年龄未满18周岁，不建议您进行外汇交易。')
                 return
             }
@@ -683,8 +706,10 @@
             // 提交身份信息
             account.updataId({
                 id_no: $scope.realnameInfo.id_num,
-                card_type: $scope.realnameInfo.id_type.value,
+                idcard_type: $scope.realnameInfo.id_type.value,
                 real_name: $scope.realnameInfo.realname,
+                gender: $scope.realnameInfo.gender.value,
+                bitrh: $scope.realnameInfo.birthday,
                 is_live: $scope.personal.is_live
             }).then(function (data) {
                 if (!data.is_succ) {

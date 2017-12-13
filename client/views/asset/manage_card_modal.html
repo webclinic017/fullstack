@@ -21,8 +21,8 @@
                 <tr class="manage_card_list__item" ng-repeat="card in cardList track by $index">
                     <td>
                         <p class="text-center">
-                            <span ng-if="card.is_short" class="card_icon icon-banks-{{ card.bank_name }}"></span>
-                            <span ng-if="!card.is_short" style="font-size: 16px; font-weight: 500;">{{ card.bank_name_cn }}</span>
+                            <span ng-if="card.bank_code" class="card_icon icon-banks-{{ card.bank_code }}"></span>
+                            <span ng-if="!card.bank_code" style="font-size: 16px; font-weight: 500;">{{ card.bank_name_cn }}</span>
                         </p>
                     </td>
                     <td>
