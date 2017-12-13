@@ -395,6 +395,7 @@
     @include e(back_top) {
         display: none;
         position: fixed;
+        max-width: 2.8rem;
         right: 0;
         bottom: 10%;
         padding: px2rem(10) px2rem(32) px2rem(10) px2rem(16);
