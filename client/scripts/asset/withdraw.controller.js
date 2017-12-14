@@ -385,7 +385,7 @@
         }
 
         function withdrawWallet() {
-            asset.walletWithdraw($scope.withdraw.amount).then(function (data) {
+            asset.walletWithdraw($scope.withdraw.card.id, $scope.withdraw.amount).then(function (data) {
                 // console.log(data);
                 $scope.clickable = true;
                 if (!data) return;

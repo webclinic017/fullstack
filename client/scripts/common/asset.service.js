@@ -256,8 +256,9 @@
          * @method walletWithdraw
          * @param {Number} amount
          */
-        function walletWithdraw(amount) {
+        function walletWithdraw(bank_card_id, amount) {
             return publicHttp.dealPublicRequest(o.walletWithdrawApi, 'POST', {
+                bank_card_id: bank_card_id,
                 amount: amount
             });
         }
