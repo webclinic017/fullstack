@@ -45,7 +45,7 @@
 
             return publicHttp.dealPublicRequest(o.withdrawApi, 'POST', {
                 amount: amount,
-                id: cardId
+                bank_card_id: cardId
             });
         }
 
