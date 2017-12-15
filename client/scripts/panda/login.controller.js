@@ -100,7 +100,7 @@
                     break;
             }
 
-            account.getRCaptcha($scope.account[phoneName], token, type).then(function (data) {
+            account.sendCode($scope.account[phoneName], token, type).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
                     countDown(phoneName);

@@ -16,7 +16,6 @@
             updataId: updataId,
             checkExist: checkExist,
             updataUserInfo: updataUserInfo,
-            getRCaptcha: getRCaptcha,
             register: register,
             checkPhoneAndCaptcha: checkPhoneAndCaptcha,
             setNewPwd: setNewPwd,
@@ -39,14 +38,17 @@
             setKyc: setKyc,
             getKyc: getKyc,
             logout: logout,
-            sendEmailCode: sendEmailCode,
             checkEmailCode: checkEmailCode,
             setBindEmail: setBindEmail,
             getSpreadInfo: getSpreadInfo,
             getUserGroup: getUserGroup,
             hasChecked: false,
             getAuthStatus: getAuthStatus, //获取认证状态    
-            getAdvertiseRecords: getAdvertiseRecords        
+            getAdvertiseRecords: getAdvertiseRecords,
+
+            // sendEmailCode: sendEmailCode,
+            // getRCaptcha: getRCaptcha,
+            sendCode: sendCode,
         };
         var resolveValue;
         return service;
@@ -158,21 +160,6 @@
 
         function updataUserInfo(params) {
             return publicHttp.dealPublicRequest(o.updataUserInfoApi, 'PUT', params)
-        }
-
-        /**
-         * @name getRCaptcha
-         * @desc 获取验证码
-         * 验证码类型:type -> 1-注册,2-忘记密码,3-修改绑定,4-登录,5-申请代理验证码
-         * 验证码方式:mode -> 1-短信(默认),2-语音
-         */
-        function getRCaptcha(phone, token, type, mode) {
-            return publicHttp.dealPublicRequest(o.getRCaptchaApi, 'POST', {
-                 phone: phone,
-                 code_token: token,
-                 type: type,
-                 mode: mode
-            });
         }
 
         /**
@@ -427,15 +414,18 @@
         }
 
         /**
-         * Account Service 发送邮箱验证码
-         *
-         * @method sendEmailCode
-         *
-         * @param {String} email 不传则向绑定邮箱发送
+         * 发送验证码合并接口
+         * @param {String} account 手机号
+         * @param {String} code_token 
+         * @param {Number} type 1-注册,2-忘记密码,3-修改绑定,4-登录,5-代理商申请
+         * @param {Number} account_type 1-手机号,2-邮箱
          */
-        function sendEmailCode(email) {
-            return publicHttp.dealPublicRequest(o.sendEmailCodeApi, 'POST', {
-                email: email
+        function sendCode(account, code_token, type, account_type){
+            return publicHttp.dealPublicRequest(o.sendCodeApi, 'POST', {
+                account: account,
+                code_token: code_token,
+                type: type,
+                account_type: account_type ? account_type : 1
             });
         }
 
