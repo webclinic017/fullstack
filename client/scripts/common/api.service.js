@@ -42,12 +42,13 @@
             getAuthStatus: urlOrigin2 + '/v2/user/auth_status',
             setKycApi: urlOrigin2 + '/user/kyc',
 
-            getRCaptchaApi: urlOrigin2 + '/validation/send_phone_code',
-            sendEmailCodeApi: urlOrigin2 + '/validation/send_email_code',
+            // getRCaptchaApi: urlOrigin2 + '/validation/send_phone_code',
+            // sendEmailCodeApi: urlOrigin2 + '/validation/send_email_code',
             sendCodeApi: urlOrigin2 + '/validation/send_code', 
 
-            checkPhoneAndCaptchaApi: urlOrigin2 + '/validation/check_phone_code',
-            checkEmailCodeApi: urlOrigin2 + '/validation/check_email_code',
+            // checkPhoneAndCaptchaApi: urlOrigin2 + '/validation/check_phone_code',
+            // checkEmailCodeApi: urlOrigin2 + '/validation/check_email_code',
+            checkCodeApi: urlOrigin2 + '/validation/check_code',
 
             setBindEmailApi: urlOrigin2 + '/user/email',
             getSpreadInfoApi: urlOrigin2 + '/spread_info',

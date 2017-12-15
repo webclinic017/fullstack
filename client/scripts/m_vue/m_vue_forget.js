@@ -101,9 +101,10 @@ if ($(".m_vue").attr("data-page") === "forget") {
                 self.countDown.noClick = true;
 
                 dealApiUrlResource("getCodeApi", "POST", {
-                    phone: self.bindData.phone,
+                    account: self.bindData.phone,
                     code_token: self.token,
-                    type: 2
+                    type: 2,
+                    account_type: 1
                 }).then(function (data) {
                     self.clickable.submit = true;
                     if (!data) return;
@@ -149,8 +150,9 @@ if ($(".m_vue").attr("data-page") === "forget") {
                     } else {
                         self.clickable.submit = false;
                         dealApiUrlResource("checkCodeApi", "POST", {
-                            phone: self.bindData.phone,
-                            code: self.bindData.code
+                            account: self.bindData.phone,
+                            code: self.bindData.code,
+                            account_type: 1
                         }).then(function (data) {
                             if (!data) return;
                             if (data.is_succ) {

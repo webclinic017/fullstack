@@ -234,7 +234,7 @@
             layer.load();
             $scope.loginBtnStatus = false;
 
-            account.checkPhoneAndCaptcha($scope.account.forgetPhone, $scope.account.forgetCode).then(function (data) {
+            account.checkCode($scope.account.forgetPhone, $scope.account.forgetCode).then(function (data) {
                 layer.closeAll();
                 $scope.loginBtnStatus = true;
 

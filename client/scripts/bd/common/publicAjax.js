@@ -19,7 +19,7 @@
         getCitiesList: origin + '/region/cities', // get
         setToken: origin + '/validation/code_token', // post
         checkExists: origin + '/user/check_exists', // get
-        getPhoneCode: origin + '/validation/send_phone_code', // post
+        getPhoneCode: origin + '/validation/send_code', // post
         getInviteList: origin + '/user/invites', // get
         setClueCustomer: origin + '/auth/page_signup', // post
         setInviteCode: origin + '/invite_code', // post

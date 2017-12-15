@@ -17,7 +17,6 @@
             checkExist: checkExist,
             updataUserInfo: updataUserInfo,
             register: register,
-            checkPhoneAndCaptcha: checkPhoneAndCaptcha,
             setNewPwd: setNewPwd,
             getPersonalInfo: getPersonalInfo,
             getPersonalInfoDegree: getPersonalInfoDegree,
@@ -38,17 +37,19 @@
             setKyc: setKyc,
             getKyc: getKyc,
             logout: logout,
-            checkEmailCode: checkEmailCode,
             setBindEmail: setBindEmail,
             getSpreadInfo: getSpreadInfo,
             getUserGroup: getUserGroup,
             hasChecked: false,
             getAuthStatus: getAuthStatus, //获取认证状态    
             getAdvertiseRecords: getAdvertiseRecords,
-
             // sendEmailCode: sendEmailCode,
             // getRCaptcha: getRCaptcha,
             sendCode: sendCode,
+
+            checkPhoneAndCaptcha: checkPhoneAndCaptcha,
+            checkEmailCode: checkEmailCode,
+            checkCode: checkCode,
         };
         var resolveValue;
         return service;
@@ -190,6 +191,33 @@
             return publicHttp.dealPublicRequest(o.checkPhoneAndCaptchaApi, 'POST', {
                 phone: phone,
                 code: captcha
+            });
+        }
+
+         /**
+         * Account Service 检测邮箱验证码是否正确
+         *
+         * @method checkEmailCode
+         *
+         * @param {String} email 不传则向绑定邮箱发送
+         * @param {String} code 验证码
+         */
+        function checkEmailCode(code) {
+            return publicHttp.dealPublicRequest(o.checkEmailCodeApi, 'POST', {
+                code: code
+            });
+        }
+
+        /**
+         * 检测验证码是否正确
+         * @param {String} account 
+         * @param {Number} code 
+         */
+        function checkCode(account, code, account_type){
+            return publicHttp.dealPublicRequest(o.checkCodeApi, 'POST', {
+                account: account,
+                code: code,
+                account_type: account_type ? account_type : '1'
             });
         }
 
@@ -425,21 +453,7 @@
                 account: account,
                 code_token: code_token,
                 type: type,
-                account_type: account_type ? account_type : 1
-            });
-        }
-
-        /**
-         * Account Service 检测邮箱验证码是否正确
-         *
-         * @method checkEmailCode
-         *
-         * @param {String} email 不传则向绑定邮箱发送
-         * @param {String} code 验证码
-         */
-        function checkEmailCode(code) {
-            return publicHttp.dealPublicRequest(o.checkEmailCodeApi, 'POST', {
-                code: code
+                account_type: account_type ? account_type : '1'
             });
         }
 

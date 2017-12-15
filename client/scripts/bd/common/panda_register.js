@@ -65,7 +65,8 @@
             publicRequest('getPhoneCode', 'POST', {
                 phone: $("#telephone").val(),
                 code_token: $.cookie("code_token"),
-                type: 1
+                type: 1,
+                account_type: 1
             }).then(function (data) {
                 layer.closeAll();
                 if (!data) return;
