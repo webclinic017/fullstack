@@ -111,7 +111,7 @@
             }
             $scope.clickable.oldSubmit = false;
 
-            account.checkEmailCode($scope.emailInfo.oldCode).then(function (data) {
+            account.checkCode(null, $scope.emailInfo.oldCode, 2).then(function (data) {
                 // console.info(data);
                 $scope.clickable.oldSubmit = true;
                 if (!data) return;

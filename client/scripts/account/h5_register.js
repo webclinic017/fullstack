@@ -100,7 +100,7 @@
             /*loading层*/
             layer.open({ type: 2, shadeClose: false });
             publicRequest('getPhoneCode', 'POST', {
-                phone: $("#telephone").val(),
+                account: $("#telephone").val(),
                 code_token: $.cookie("code_token"),
                 type: 1,
                 account_type: 1
