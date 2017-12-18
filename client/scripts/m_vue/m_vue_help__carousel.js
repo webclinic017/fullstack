@@ -28,7 +28,7 @@ if ($(".m_vue").attr("data-type") === "carousel") {
                 invite: [
                     {
                         imgSrc: cn == 'tigerwit' ? ['help_invite-step1'] : ['help_invite-pandafx-step1'],
-                        desp: '1. 点击资金操作后未认证会进入认证页面，先填写“投资信息确认”。'
+                        desp: '1登陆后点击”我的”模块，选择进入” 邀请好友”'
                     },
                     {
                         imgSrc: cn == 'tigerwit' ? ['help_invite-step2.1'] : ['help_invite-pandafx-step2.1'],
