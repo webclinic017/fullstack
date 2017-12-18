@@ -344,8 +344,8 @@ module.exports = {
         "en": "Q：When will the swap rate be calculated?"
     },
     "faqSwap4": {
-        "zh": "A：隔夜利息在美国东部时间下午 5 点执行。外汇交易以平台时间0:00为开始及结束时间。在平台时间0:00前建立的仓位都会视为持仓过夜，需要计算隔夜利息。客户在该时间所持有的任何头寸都将被自动纳入隔夜利息的计算，且结果会显示在交易账户中。请查看常见问题了解隔夜利息详情。",
-        "en": "A: Swap rate will be calculated at 5:00pm EST.Forex trading time starts and ends at 0:00 (GMT+3). Orders opened before 0:00 (GMT+3) are considered overnight positions and need to calculate swap rate."
+        "zh": "A：隔夜利息在美国东部时间下午 5 点执行。外汇交易以北京时间05:00（冬令时06:00）为开始及结束时间。在北京时间05:00（冬令时06:00）前建立的仓位都会视为持仓过夜，需要计算隔夜利息。客户在该时间所持有的任何头寸都将被自动纳入隔夜利息的计算，且结果会显示在交易账户中。",
+        "en": "A: Swap rate will be calculated at 5:00pm EST. Forex trading time starts and ends at Beijing time 05:00(Winter time 06:00). Orders opened before Beijing time 05:00(Winter time 06:00) are considered overnight positions and need to calculate swap rate."
     },
     "faqSwap5": {
         "zh": "Q：我在哪里可以查看到隔夜利息报价？",
