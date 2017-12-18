@@ -2029,10 +2029,10 @@ module.exports = function () {
     function replaceTiger(str) {
         return JSON.parse(
             JSON.stringify(str)
-                .replace(/TigerWit/, companyConfig.companyNameEn)
-                .replace(/tigerwit/, companyConfig.companyNameEn)
-                .replace(/tigerWit/, companyConfig.companyNameEn)
-                .replace(/老虎外汇/, companyConfig.companyNameZh)
+                .replace(/TigerWit/g, companyConfig.companyNameEn)
+                .replace(/tigerwit/g, companyConfig.companyNameEn)
+                .replace(/tigerWit/g, companyConfig.companyNameEn)
+                .replace(/老虎外汇/g, companyConfig.companyNameZh)
         )
     }
 
