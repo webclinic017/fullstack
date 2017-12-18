@@ -10,7 +10,7 @@
         width: 90%;
         height: 100%;
         padding: 4% 5%;
-        line-height: 1.5rem;
+        line-height: 1.15rem;
         font-size: 0.8rem;
         background: rgba(0,0,0,0.85);
         color: #fff;
@@ -22,6 +22,9 @@
             color: #c99f63;
             font-size: 1rem;
             text-align: center;
+        }
+        p{
+            padding-bottom: 0.5rem;
         }
     }
     .rule_close {
@@ -113,5 +116,12 @@
         left: 0;
         text-align: left;
         padding: 0.5rem 1rem;
+    }
+    .tele_desp {
+        color: #c99f63;
+        text-align: center;
+        font-size: 0.6rem;
+        margin-top: -1rem;
+        margin-bottom: 3em;
     }
 }
