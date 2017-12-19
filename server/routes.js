@@ -978,6 +978,17 @@ module.exports = function (app) {
                     if (Number(version) < Number(currentVersionNumAndroid)) {
                         currentVersion = versinInfo.android.app_info;
                     }
+                    // 熊猫外汇 v1.5.3 以下版本有问题不更新 - 2017.12.19
+                    if (COMPANY_NAME == 'pandafx') {
+                        if (Number(version) < 153) {
+                            currentVersion = {
+                                version_name: "",
+                                description: "",
+                                url: "",
+                                force_update: false
+                            };
+                        }
+                    }
                 }
             } else if (system == "ios") {
                 var version = versionCode.replace(/\./g, "");
