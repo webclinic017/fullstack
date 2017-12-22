@@ -222,13 +222,16 @@
                     $scope.loading = {
                         demo: false
                     }
+                    if (!window.location.origin) {
+                        window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+                    }
 
                     $scope.openDemo = function(){
                         globalScope.personal.is_live = '0'
                         $scope.loading.demo = true
                         getAuthStatus().then(function(){
                             $scope.loading.demo = false
-                            window.location.href = location.origin + '/space/#/authen/complete'
+                            window.location.href = window.location.origin + '/space/#/authen/complete'
                             closeModal()
                         })
                     }
@@ -248,7 +251,7 @@
                                     oScope.loading = 1
                                     getAuthStatus().then(function(){
                                         oScope.loading = 2
-                                        window.location.href = location.origin + '/space/#/authen/'
+                                        window.location.href = window.location.origin + '/space/#/authen/'
                                     })
                                 }
                             }
