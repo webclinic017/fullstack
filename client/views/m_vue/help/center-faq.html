@@ -142,7 +142,12 @@
                 <h6 class="desp_title faq"><%=lang.text("faqTrade20")%></h6>
                 <p class="desp_subdesp faq">
                     <%=lang.text("faqTrade21")%>
-                    <img src="/white_label/trade-time.jpg" alt="">
+                    <%if(lang.isCompany('pandafx')){%>
+                        <img src="/white_label/trade-time-pandafx.jpg" alt="">
+                    <%} else { %>
+                        <img src="/white_label/trade-time.jpg" alt="">
+                    <%}%>
+                    
                 </p>
                 <h6 class="desp_title faq"><%=lang.text("faqTrade22")%></h6>
                 <p class="desp_subdesp faq">

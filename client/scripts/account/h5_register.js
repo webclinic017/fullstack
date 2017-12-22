@@ -360,7 +360,7 @@
 
                 /*今日头条统计表单提交*/
                 if (window.location.pathname.indexOf('t35') != -1) {
-                    _taq.push({ convert_id: "58276692798", event_type: "form" })
+                    _taq.push({ convert_id: "81431259366", event_type: "form" })
                 }
 
                 // 神策统计 - 点击登录
