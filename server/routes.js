@@ -644,6 +644,11 @@ module.exports = function (app) {
             in_phone: isMobile(req) ? 'y' : 'n'
         }, req));
     });
+    // 品牌部活动 － fx168
+    app.route('/bd/brand_fx168').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('bd/brand/fx168_web', extendPublic({}, req));
+    });
 
     // 抽奖活动
     app.route('/bd/prize').get(function (req, res) {
