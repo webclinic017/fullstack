@@ -87,6 +87,15 @@
         return false;
     });
 
+    $(".m_comment__content").on('tap', 'img', function () {
+        // console.log($(this).attr("src"));
+        callNative({
+            type: "openImage",
+            url : $(this).attr("src")
+        });
+        return false;
+    });
+
     /*操作弹窗*/
     $(document).on("tap", ".layui-m-layer-comment .m_comment_modal .title span", function () {
         layer.closeAll();
