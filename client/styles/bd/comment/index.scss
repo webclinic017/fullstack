@@ -129,9 +129,10 @@
             color: #fff;
             font-weight: 400;
             line-height: px2rem(20);
-            padding: px2rem(10) px2rem(16);
+            padding: px2rem(8) px2rem(12);
             border-radius: 100px;
             display: inline-block;
+            vertical-align: middle;
 
             &.morning {
                 background-color: #11c971;
@@ -162,7 +163,7 @@
     color: #888;
     font-size: px2rem(30);
     text-align: center;
-    margin-bottom: px2rem(40);
+    padding-bottom: px2rem(40);
 
     span {
         display: none;
