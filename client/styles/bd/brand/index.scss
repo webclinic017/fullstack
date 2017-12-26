@@ -335,16 +335,12 @@
     overflow-x: hidden;
     overflow-y: scroll;
     text-align: center;
-}
-.brand_fx168 {
     position: relative;
-    display: inline-block;
-    width: 100%;
-    margin: 0 auto;
     table {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%)        
+        transform: translateX(-50%);     
+        -webkit-transform: translateX(-50%)        
     }
     
     .fixed_code {

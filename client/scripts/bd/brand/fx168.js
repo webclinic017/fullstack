@@ -12,10 +12,9 @@
                 closeBtn: 0,
                 shadeClose: true,
                 shade: 0.5,
-                // area: ['60'],
+                area: ['350px', '450px'],
                 content: $('.bd_fx168_detail_con').html()
             });
-
             return false
         })
     })
