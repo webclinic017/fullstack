@@ -329,3 +329,44 @@
         line-height: 40px;
     }
 }
+
+.brand_fx168_body {
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    text-align: center;
+    position: relative;
+    table {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);     
+        -webkit-transform: translateX(-50%)        
+    }
+    
+    .fixed_code {
+        position: fixed;
+        top: 100px;
+        right: 5%;
+        z-index: 100;
+        width: 160px;
+    }
+
+    .bd_fx168_detail_con {
+        display: none;
+    }
+}
+.fx168_cursor_pointer {
+    cursor: pointer;
+}
+.bd_fx168_layer {
+    background: transparent !important;
+    box-shadow: none !important;
+    .layui-layer-content {
+        overflow: hidden;
+        .bd_fx168_detail_con__text {
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
