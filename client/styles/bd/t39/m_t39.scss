@@ -85,14 +85,14 @@
             max-width: 1334px;
             background: url("/images/bd_t39/h5_bg_wrapper.png") no-repeat;
             background-position: center top;
-            background-size: auto 100%;
+            background-size: 100% 100%;
             position: relative;
             overflow: hidden;
 
             .section_box {
                 background: url("/images/bd_t39/h5_bg_2.png") no-repeat;
                 background-position: center top;
-                background-size: auto 100%;
+                background-size: 100% 100%;
                 position: relative;
                 height: 100%;
             }
@@ -110,7 +110,7 @@
             .section_box {
                 background: url("/images/bd_t39/h5_bg_1.png") no-repeat;
                 background-position: center top;
-                background-size: auto 100%;
+                background-size: 100% 100%;
                 position: relative;
                 height: 100%;
             }
@@ -146,11 +146,10 @@
             .section2_title {
                 img {
                     width: 100%;
-                    margin-top: 20%;
+                    margin-top: 15%;
                 }
             }
             .section2_lst {
-                padding-top: px2rem(16);
 
                 li {
                     background-color: #f3c7aa;
@@ -162,17 +161,17 @@
                     text-align: center;
 
                     img {
-                        height: px2rem(108);
+                        height: px2rem(80);
                         vertical-align: top;
                     }
                 }
                 .tit {
-                    font-size: px2rem(32);
+                    font-size: px2rem(26);
                     color: #786450;
                 }
                 .tip {
                     color: #786450;
-                    font-size: px2rem(26);
+                    font-size: px2rem(22);
                     padding-bottom: px2rem(10);
                 }
             }
@@ -189,7 +188,7 @@
                 .section3_title {
                     img {
                         width: 100%;
-                        margin-top: 20%;
+                        margin-top: 15%;
                         margin-bottom: 5%;
                     }
                 }
@@ -202,7 +201,7 @@
 
                     .pic {
                         img {
-                            height: px2rem(320);
+                            height: px2rem(224);
                             margin: px2rem(32) 0;
                             vertical-align: top;
                         }
@@ -228,14 +227,16 @@
                     }
                 }
                 .registerNow {
-                    margin-top: 3%;
+                    position: absolute;
+                    bottom: 1rem;
+                    left: 28%;
                 }
             }
         }
         .section4 {
             .section4_logo {
                 width: 50%;
-                margin-top: px2rem(160);
+                margin-top: px2rem(96);
             }
             .submit_form_box {
                 width: px2rem(576);
@@ -282,8 +283,8 @@
             
             .section4_client {
                 color: #4f2a0a;
-                padding-top: px2rem(64);
-                font-size: px2rem(32);
+                padding-top: px2rem(48);
+                font-size: px2rem(28);
 
                 a {
                     color: #4f2a0a;
@@ -292,7 +293,7 @@
             .section4_risk {
                 color: #4f2a0a;
                 font-size: px2rem(20);
-                padding: px2rem(64) px2rem(32) px2rem(16);
+                padding: px2rem(48) px2rem(32) px2rem(16);
                 text-align: left;
             }
             .section4_ltd {
