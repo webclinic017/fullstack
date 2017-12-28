@@ -77,7 +77,38 @@
         cursor: pointer;
     }
     @include e(reg) {
+        width: 310px;
+        position: absolute;
         top: 335px;
+        left: 710px;
+        background: rgba(255,255,255,0.2);
+        padding: 20px;
+        border: 1px solid rgba(255,255,255,0.4);
+        border-radius: 4px;
+
+        .verify_code_btn_wrapper {
+            position: absolute;
+            top: 7px;
+            right: 0;
+            width: 90px;
+            height: 26px;
+            text-align: center;
+            line-height: 26px;
+            border-left: 1px solid #ccc;
+
+            .verify_code_btn {
+                cursor: pointer;
+            }
+        }
+
+        .form-control.t39 {
+            background-color: #fff;
+            border-radius: 10px;
+            padding-left: 20px;
+        }
+        .btn-wrapper {
+            text-align: center;
+        }
     }
     @include e(btn) {
         font-size: 16px;

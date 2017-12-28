@@ -64,41 +64,23 @@
                 <span class="bd_t39__detail">活动详情</span>
             </div>
 
-            <%if(lang.isCompany('tigerwit')){%>
-                <div class="bd_t38__reg bd_t39__reg">
-                    <!-- <div class="form-control-wrapper">
-                        <input type="text" class="form-control t38" name="username" id="username" placeholder="昵称">
-                    </div> -->
-                    <div class="form-control-wrapper">
-                        <input type="text" class="form-control t38" name="telephone" id="telephone" placeholder="电话">
-                    </div>
-                    <div class="form-control-wrapper">
-                        <input type="text" class="form-control t38" name="email" id="email" placeholder="邮箱">
-                    </div>
-                    <div class="btn-wrapper">
-                        <span id="regist_btn" class="bd_t39__btn">注册领红包</span>
-                    </div>
+            <div class="bd_t39__reg">
+            
+                <div class="form-control-wrapper">
+                    <input type="text" class="form-control t39" name="telephone" id="telephone" placeholder="电话">
                 </div>
-            <%} else if(lang.isCompany('pandafx')) {%>
-                <div class="bd_t38__reg bd_t39__reg">
-                    
-                    <div class="form-control-wrapper">
-                        <input type="text" class="form-control t38" name="telephone" id="telephone" placeholder="电话">
-                    </div>
-                    <div class="form-control-wrapper">
-                        <input type="number" class="form-control t38" id="verify_code" placeholder="验证码" style="padding-right: 90px;">
-                        <p class="verify_code_btn_wrapper">
-                            <span class="verify_code_btn" id="verify_code_btn">发送验证码</span>
-                        </p>
-                    </div>
-                    <div class="form-control-wrapper">
-                        <input type="password" class="form-control t38" id="password" placeholder="密码">
-                    </div>
-                    <div class="btn-wrapper">
-                        <span id="submit_form" class="bd_t39__btn">注册领红包</span>
-                    </div>
+                <div class="form-control-wrapper">
+                    <input type="number" class="form-control t39" id="verify_code" placeholder="验证码" style="padding-right: 90px;">
+                    <p class="verify_code_btn_wrapper">
+                        <span class="verify_code_btn" id="verify_code_btn">发送验证码</span>
+                    </p>
                 </div>
-            <%}%>
+
+                <div class="btn-wrapper">
+                    <span id="submit_form" class="bd_t39__btn">注册领红包</span>
+                </div>
+            </div>
+
             <div class="bd_t39__title">
                 <%if(lang.isCompany('tigerwit')){%>
                     <img src="/images/bd_t39/comm_title_1.png">
