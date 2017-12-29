@@ -618,6 +618,19 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
+                res.render('bd/t36/h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/t36/web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+    // 活动test
+    app.route('/bd/test').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
                 res.render('bd/t39/h5.html', extendPublic({}, req))
             } else {
                 res.render('bd/t39/web.html', extendPublic({}, req));
