@@ -38,7 +38,11 @@
         if (month < 10) {
             month = '0' + month;
         }
-        if (lastMonth < 10) {
+        // console.log(lastMonth);
+        if (lastMonth == 0) {
+            year--;
+            lastMonth = 12;
+        } else if (lastMonth < 10) {
             lastMonth = '0' + lastMonth;
         }
         var dateString = year + '-' + month;
