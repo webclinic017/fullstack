@@ -35,7 +35,7 @@
                         title: '',
                         shade: 0.6,
                         area: ['960px', '560px'], //宽高
-                        content: '<div class="content"><a href="' + data.target_url + '"><img src="' + data.image_url + '"></a><div class="close" onclick="layer.closeAll();"></div></div>'
+                        content: '<div class="content"><a href="'+data.target_url+'" onclick="toTrackBannerSensorsdata(\'modal\', \''+data.name+'\')"><img src="' + data.image_url + '"></a><div class="close" onclick="layer.closeAll();"></div></div>'
                     });
                 }
             });
@@ -46,7 +46,7 @@
 
         // 此为index2 首页的高手信息
         ranklist.getIndexMasters().then(function (data) {
-            console.info(data);
+            // console.info(data);
             $scope.indexMasters[0] = data.data.profit[0];
             $scope.indexMasters[1] = data.data.retract[0];
             $scope.indexMasters[2] = data.data.win[0];

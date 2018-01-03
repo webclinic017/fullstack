@@ -3,7 +3,7 @@
         <div class="swiper-container" style="height: 650px;" tw-carousel data-type="normal">
             <div class="swiper-wrapper">
                 <div class="swiper-slide index2-slide" ng-repeat="ad in advertiseLst" ng-style="{'background-image': 'url('+ad.image_url+')'}">
-                    <a class="slide__btn_wrapper" ng-href="{{ad.target_url}}" title="了解详情" ng-click="toTrackBannerSensorsdata(ad.name, $index);"></a>
+                    <a class="slide__btn_wrapper" ng-href="{{ad.target_url}}" title="了解详情" ng-click="toTrackBannerSensorsdata('focus', ad.name, $index);"></a>
                     
                 </div>
                 <div class="swiper-slide index2-slide default" ng-if="getBannerSucc && advertiseLst.length <= 0">

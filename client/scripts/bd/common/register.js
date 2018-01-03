@@ -142,25 +142,6 @@
             }
         }
 
-        function statistics(tel) {
-
-            function getOrigin() {
-                if (window.location.href.indexOf("/bd")) {
-                    return "活动页"
-                } else {
-                    return "H5注册页"
-                }
-            }
-
-            /*umeng*/
-            _czc.push(["_trackEvent", getOrigin(), "免费注册"]);
-
-            /*神策数据统计*/
-            sa.track('btn_register_submit');
-
-            console.log("统计代码执行完毕!")
-        }
-
         /* 运营关于pid等信息存储要求：
             1.若链接中带有pid，所有相关字段信息清空重写
             2.若链接中未带有pid，则沿用原来信息
@@ -255,6 +236,14 @@
             // console.log(oReg);
         }());
 
+        //神策统计
+        $("#telephone").on("click", function () {
+            sa.track('inp_PN');
+        });
+        $("#verify_code").on("click", function () {
+            sa.track('inp_code');
+        });
+
         /*发送验证码*/
         ;
         (function () {
@@ -273,6 +262,7 @@
                                 layer.msg('此号码已注册!');
                             } else {
                                 sendVerifyCode();
+                                sa.track('btn_register_code');
                             }
                         }
                     });
@@ -290,8 +280,6 @@
 
                 /*loading层*/
                 layer.load(1, {shade: false});
-                /*统计*/
-                statistics($("#telephone").val());
 
                 // 神策统计 - 点击登录
                 if(!is_agree) {
