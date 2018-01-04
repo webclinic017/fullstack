@@ -720,10 +720,10 @@
                     $scope.clickable = true;
                 } else {
                     sa.track('New_Realname');
+                    sa.track('New_uploadcard');
                     /*上传图片*/
                     angular.forEach($scope.readyToUpload, function (data, index, array) {
                         data.submit();
-                        sa.track('New_uploadcard');
                     });
                 }
             })

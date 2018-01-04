@@ -42,7 +42,41 @@
             name: 'sa',
             web_url: 'https://admin-shence.tigerwit.com:8887/',
             server_url: 'https://shence.tigerwit.com:8006/sa',
-            heatmap: {}
+            heatmap: {
+                //是否开启点击图，默认 default 表示开启，可以设置 'not_collect' 表示关闭
+                clickmap:'default',
+                //是否开启触达注意力图，默认 default 表示开启，可以设置 'not_collect' 表示关闭
+                scroll_notice_map:'default',
+                //设置成 true 后，我们会自动给 a 标签绑定一个 sa.trackLink() 方法（详见本页 3.3 ）。
+                //如果是单页面 a 标签不涉及页面跳转或者 a 标签的点击是下载功能，建议不要打开。默认 false 。
+                isTrackLink: false,
+                //设置多少毫秒后开始渲染点击图,因为刚打开页面时候页面有些元素还没加载
+                loadTimeout:  3000,
+                //返回真会采集当前页面的数据，返回假表示不采集当前页面,设置这个函数后，内容为空的话，是返回假的。不设置函数默认是采集所有页面
+                collect_url: function(){
+                    return true;
+                },
+                //用户点击（a，button，input）这些元素时会触发这个函数，让你来判断是否要采集当前这个元素，返回真表示采集，返回假表示不采集。
+                //不设置这个函数，默认是采集 a button input 这些标签。
+                collect_element: function(element_target){
+                    return true;
+                },
+                //考虑到用户隐私，这里可以设置input里的内容是否采集
+                //如果返回真，表示采集input内容，返回假表示不采集input内容,默认不采集    
+                collect_input:function(element_target){
+                    return false;
+                },
+                //假如要在 $WebClick 事件增加自定义属性，可以通过（a，button，input）这三类标签的特征来判断是否要增加
+                custom_property:function( element_target ){
+                           
+                },
+                // 设置触达图的有效停留时间，默认超过4秒以上算有效停留
+                scroll_delay_time: 3000,
+                // 关闭 $WebStay (Web 视区停留) 事件
+                scroll_notice_map:'not_collect',
+                // 关闭 $WebClick（Web 元素点击）事件
+                clickmap:'not_collect'
+            }
         });
         var user_id = undefined;
         var cookiesArr = document.cookie.split('; ');
