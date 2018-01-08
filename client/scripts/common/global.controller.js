@@ -315,7 +315,7 @@
             } else {
                 if (dredged_type == 'unknow') {
                     $scope.$emit('global.openDredgeMdl', {
-                        position: 'withdraw'
+                        position: ctrlName
                     });
                 } else {
                     if (verify_status == 5) {
