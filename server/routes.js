@@ -765,6 +765,20 @@ module.exports = function (app) {
         }
     });
 
+    // 新春抽奖活动
+    app.route('/bd/r01').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit') {
+            if (isMobile(req)) {
+                res.render('bd/r01/h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/r01/web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
     /*
         设置     ->     info, password, binding, 

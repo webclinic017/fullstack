@@ -54,6 +54,9 @@
         //挂单交易
         setPendingTrade: origin + '/pending_trade/add',  //post
         getRealQuote: origin + '/symbol/realtime',  //get
+        //新春抽奖
+        checkReward: origin + '/reward/check', //post
+        joinReward: origin + '/reward/join', //post
     };
 
     w.publicRequest = publicRequest;
