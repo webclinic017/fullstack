@@ -106,7 +106,7 @@ $(document).ready(function () {
     // setTimeout(function () {
     //     layer.closeAll();
     //     // getKycList();
-    //     step = 0;
+    //     step = 3;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
     // }, 1000);
@@ -124,6 +124,10 @@ $(document).ready(function () {
                 if (data.is_succ) {
                     step = 1;
                     goStepPage();
+                    // 神策统计
+                    sa.track('New_Selectiontype', {
+                        account_type: '真实账户'
+                    });
                 } else {
                     layer.open({
                         content: data.message,
@@ -154,6 +158,8 @@ $(document).ready(function () {
                 if (data.is_succ) {
                     step = 2;
                     goStepPage();
+                    // 神策统计
+                    sa.track('New_information');
                 } else {
                     layer.open({
                         content: data.message,
@@ -253,6 +259,8 @@ $(document).ready(function () {
                 if (data.is_succ) {
                     step = 3;
                     goStepPage();
+                    // 神策统计
+                    sa.track('New_Realname');
                 } else {
                     layer.open({
                         content: data.message,
@@ -362,6 +370,8 @@ $(document).ready(function () {
                     layer.closeAll();
                     step = 5;
                     goStepPage();
+                    // 神策统计
+                    sa.track('New_uploadcard');
                 }
             } else {
                 layer.open({
