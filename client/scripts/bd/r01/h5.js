@@ -5,6 +5,7 @@
     var $rotateBox = $(".bd_r01 .bd_r01__rotate-pic");
     var $detail = $(".bd_r01 .bd_r01__focus-details");
     var $condition = $(".bd_r01 .bd_r01__condition span");
+    var $list = $(".bd_r01 .bd_r01__lst-detail");
 
     var time = 4000;
     var baseNum = 72;   //旋转角度基数 360/5
@@ -19,6 +20,8 @@
     var isDrawAward = false;
     var rewardCount = 0;
     var msg = "网络错误";
+    var activityId = 1;
+    var rewardId = 1;
 
     setInterval(function () {
         if ($rotate.hasClass('active')) {
@@ -28,7 +31,7 @@
         }
     }, 1000);
 
-    if (isInTiger()) {
+    if (!isInTiger()) {
         isInTigerApp = true;
         checkReward();
     } else {
@@ -56,11 +59,42 @@
 
         return false;
     });
+    getRewardLst();
+    function getRewardLst () {
+        publicRequest('getRewardLst', 'GET', {
+            activity_id: activityId,
+            reward_id: rewardId,
+            limit: 4
+        }).then(function (data) {
+            var lst = [];
+            // console.log(data.data);
+            if (data.is_succ) {
+                lst = data.data;
+                appendRewardLst(lst);
+            }
+        });
+    }
+
+    function appendRewardLst (list) {
+        console.log(list);
+        if (list && list.length) {
+            $.each(list, function (index, value) {
+                var dom = "<li>恭喜 "+value.phone+" 抽中 "+value.prize+" 美金</li>";
+                $list.append(dom);
+            });
+
+            if (list.length >= 4) {
+                $list.append("<li>......</li>");
+            }
+        } else {
+            $list.append("<li>敬请期待...</li>");
+        }
+    }
 
     function checkReward () {
         publicRequest('checkReward', 'POST', {
-            activity_id: 1,
-            reward_id: 1
+            activity_id: activityId,
+            reward_id: rewardId
         }).then(function (data) {
             // console.log(data.data);
             if (data.is_succ) {
@@ -91,8 +125,8 @@
             type: 2
         });
         publicRequest('joinReward', 'POST', {
-            activity_id: 1,
-            reward_id: 1
+            activity_id: activityId,
+            reward_id: rewardId
         }).then(function (data) {
             // console.log(data.data);
             layer.closeAll();

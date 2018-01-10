@@ -57,6 +57,7 @@
         //新春抽奖
         checkReward: origin + '/reward/check', //post
         joinReward: origin + '/reward/join', //post
+        getRewardLst: origin + '/reward/list', //get
     };
 
     w.publicRequest = publicRequest;
