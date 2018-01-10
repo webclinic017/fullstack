@@ -13,7 +13,7 @@
         $scope.isFirstLoad = true;
         var usercode;
         var absUrl = $location.absUrl();
-        var regUsercode = /trader\/(\d+)\/#/;
+        var regUsercode = /trader\/(\d+)(\/)?[#?]/;
 
         usercode = absUrl.match(regUsercode)[1];
 
