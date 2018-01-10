@@ -31,13 +31,14 @@
         }
     }, 1000);
 
-    if (!isInTiger()) {
+    if (isInTiger()) {
         isInTigerApp = true;
         checkReward();
     } else {
         toOpenApp();
         $condition.html("请前往APP参与活动");
     }
+    getRewardLst();
     
     $detail.on("tap", function () {
         layer.open({
@@ -59,7 +60,7 @@
 
         return false;
     });
-    getRewardLst();
+    
     function getRewardLst () {
         publicRequest('getRewardLst', 'GET', {
             activity_id: activityId,
