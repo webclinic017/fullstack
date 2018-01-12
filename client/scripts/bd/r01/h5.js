@@ -125,10 +125,12 @@
         layer.open({
             type: 2
         });
-        publicRequest('joinReward', 'POST', {
+        var s = {
             activity_id: activityId,
             reward_id: rewardId
-        }).then(function (data) {
+        };
+        getSearch().source && (s.source = 1);
+        publicRequest('joinReward', 'POST', s).then(function (data) {
             // console.log(data.data);
             layer.closeAll();
             if (data.is_succ) {
@@ -168,10 +170,13 @@
     }
 
     function toOpenApp () {
+        var o;
+        var s = getSearch().source ? '?source=1' : '';
+        // console.log(s);
         if (window.location.origin.indexOf("www.tigerwit.com") != -1) {
-            o = "www.tigerwit.com/bd/r01";
+            o = "www.tigerwit.com/bd/r01"+s;
         } else {
-            o = "demo.tigerwit.com/bd/r01";
+            o = "demo.tigerwit.com/bd/r01"+s;
         }
         // console.log(o);
         if (isTigerCo()) {
