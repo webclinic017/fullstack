@@ -81,8 +81,10 @@ $(document).ready(function () {
             $(ele.indexDollar200).css({display: 'none'});
         }
 
-        getUserStatus();
-        getKycList();
+        setTimeout(function () {
+            getUserStatus();
+            getKycList();
+        }, 300);
     }
 
     function getUserStatus() {

@@ -1,7 +1,7 @@
 ;(function (w) {
     'use strict';
 
-    var origin = $.cookie ? $.cookie("access_origin2") : '/api';
+    var origin = ($.cookie && $.cookie("access_origin2")) ? $.cookie("access_origin2") : '/api';
     // console.log(origin);
     var apiUrl = {
         getUserInfo: origin + '/user/info',     // get
