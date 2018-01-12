@@ -1,0 +1,94 @@
+@include b(bd_r01) {
+    margin-top: 69px;
+
+    @include e(focus) {
+        background: url("/images/bd_r01/web_focus.png") no-repeat;
+        background-size: auto 100%;
+        height: 680px;
+        background-position: center top;
+        position: relative;
+
+        .date {
+            color: #fff;
+            font-size: 22px;
+            text-align: center;
+            padding-top: 380px;
+        }
+    }
+    @include e(box) {
+        background: url("/images/bd_r01/web_bg.png") no-repeat;
+        background-size: auto auto;
+        background-position: center top;
+        position: relative;
+    }
+    @include e(rule) {
+        margin-top: 80px;
+
+        .pic {
+            img {
+                width: 100%;
+            }
+        }
+        
+        .lst {
+            margin: -70px 135px 0px;
+            background-color: #fff;
+            padding: 30px 50px;
+            color: #4a1415;
+            line-height: 22px;
+
+            p {
+                padding-bottom: 10px;
+            }
+        }
+        .bar {
+             width: 80%;
+            height: 20px;
+            background-color: #f6dfa9;
+            border-radius: 10px;
+            margin: 0 auto;
+
+        }
+    }
+    @include e(tip) {
+        text-align: center;
+        margin-top: 70px;
+    }
+    @include e(qrcode) {
+        width: 414px;
+        height: 270px;
+        background: url("/images/bd_r01/web_qrcode_box.png") no-repeat;
+        margin: 30px auto 60px;
+        text-align: center;
+        padding-top: 32px;
+
+        img {
+            width: 220px;
+            vertical-align: top;
+            display: none;
+
+            &.active {
+                display: inline-block;
+            }
+        }
+    }
+    @include e(client) {
+        color: #fff;
+        font-size: 20px;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    @include e(footer) {
+        .tit {
+            padding-bottom: 10px;
+            img {
+                vertical-align: top;
+            }
+        }
+        .detail {
+            color: #f1d09e;
+            line-height: 24px;
+            padding-bottom: 140px;
+        }
+    }
+}
