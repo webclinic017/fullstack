@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="<%= lang.text('companyZhName')%> <%= lang.text('companyEnName')%> 跟单交易 外汇 CFD 指数 股指 互联网金融">
+    <meta name="description" content="<%= lang.text('companyZhName')%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyZhName')%>">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!--禁用缓存-->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>
+        <%= lang.text('companyZhName')%>
+    </title>
+    <% include /common/statistic/h5.jrtt.html %>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<body>
+
+<div class="bd_r01">
+    <div class="bd_r01__focus">
+        <div class="bd_r01__focus-date">
+            2018年1月15日－2018年2月25日
+        </div>
+        <div class="bd_r01__focus-details">
+            <span>活动详情</span>
+        </div>
+
+        <div class="layer_contentBox" id="layer_contentBox">
+            <div class="layer_bdt39 layer_bdr01">
+                <div class="rules">
+                    <p class="tit">活动规则</p>
+                    <p>1、活动期间，累计净入金≥1500美金，每周完成5手数交易，即可在当周内获得抽奖机会一次；第二周开始时将重新计算交易手数，每周满足活动条件均可参与抽奖；</p>
+                    <p>2、本活动中奖机率100%，奖品分别为888.8美金、188.8美金、88.8美金、18.8美金、8.8美金；</p>
+                    <p>3、抽中的奖品（美金）将直接存入“零钱包”，可用于交易或直接提现；</p>
+                    <p>4、如满足抽奖条件却未在活动期间内抽奖的用户，视为放弃本次抽奖机会；</p>
+                    <p>5、本活动参与用户不得滥用活动权利，如AB仓对冲操作外挂操作软件或其他经纪商进行对冲；</p>
+                    <p>6、本活动仅适用于外汇、贵金属以及能源类产品，美元/人民币和CFD（指数）类产品的交易手数不计入统计范围；</p>
+                    <p>7、本活动抽奖环节仅在老虎外汇APP内操作；</p>
+                    <p>8、本活动最终解释权归老虎外汇平台所有，如有疑问请咨询在线客服或拨打 400-809-8509 。</p>
+                </div>
+                <p class="rule_close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
+            </div>
+        </div>
+    </div>
+    <div class="bd_r01__box">
+        
+        <div class="bd_r01__condition">
+            <span class=""></span>
+        </div>
+        <div class="bd_r01__rotate_box">
+            <div class="bd_r01__pointer">
+                <img src="/images/bd_r01/h5_rotate_pointer.png">
+            </div>
+            <div class="bd_r01__rotate">
+                <div class="bd_r01__rotate-pic">
+                    <img src="/images/bd_r01/h5_rotate.png">
+                </div>
+                <span class="bd_r01__rotate-btn">
+                    <img src="/images/bd_r01/h5_rotate_start.png">
+                </span>
+            </div>
+
+            <div class="layer_contentBox2" id="layer_contentBox2">
+                <div class="layer_bdt39 layer_bdr01_dollar">
+                    <div class="cont">
+                        <p>恭喜您抽中<span class="num"></span>美金</p>
+                        <p>奖品已放入您的零钱包！</p>
+                    </div>
+                    <div class="pic">
+                        <img src="/images/bd_r01/h5_dollar.png">
+                    </div>
+                    <p class="rule_close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
+                </div>
+            </div>
+        </div>
+        <div class="bd_r01__lst">
+            <div class="bd_r01__lst-tit">
+                <img src="/images/bd_r01/h5_award_title.png">
+            </div>
+            <ul class="bd_r01__lst-detail">
+                
+            </ul>
+        </div>
+        <div class="bd_r01__client">
+            <img src="/images/bd_r01/h5_client.png">
+        </div>
+    </div>
+    <div class="bd_r01__footer">
+        风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。 老虎外汇交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+    </div>
+    
+</div>
+
+</body>
+
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_r01.js -->
+<script src="/scripts/bd/common/open_app.js"></script>
+<script src="/scripts/bd/common/wx_share_config.js"></script>
+<script src="/scripts/bd/r01/h5.js"></script>
+<!-- endbuild -->
+
+<!-- 推广脚本footer -->
+<%- include('/common/statistic/all.html') %>
+</html>

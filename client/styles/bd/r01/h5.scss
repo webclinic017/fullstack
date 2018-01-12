@@ -1,0 +1,202 @@
+.layui-m-layercont {
+    .layer_bdr01 {
+        padding-top: 1rem;
+
+        .tit {
+            color: #e66b2a;
+            text-align: center;
+            font-size: px2rem(32);
+            padding-bottom: px2rem(32);
+        }
+    }
+    .layer_bdr01_dollar {
+        background: #8e0a07;
+        border-radius: 4px;
+
+        .cont {
+            font-size: 20px;
+            text-align: center;
+            border-bottom: 1px dashed #fff;
+            width: 85%;
+            margin: 0 auto;
+
+            p {
+                padding-bottom: 5px;
+            }
+        }
+        .pic {
+            text-align: center;
+
+            img {
+                width: 70%;
+                vertical-align: top;
+            }
+        }
+    }
+}
+@include b(bd_r01) {
+    .layer_contentBox, .layer_contentBox2 {
+        display: none;
+    }
+    @include e(focus) {
+        background: url("/images/bd_r01/h5_focus.png") no-repeat;
+        background-position: center top;
+        background-size: 100% 100%;
+        position: relative;
+        height: px2rem(850);
+
+        @include m(date) {
+            text-align: center;
+            padding-top: px2rem(512);
+            color: #fff;
+            font-weight: 500;
+            font-size: px2rem(28);
+        }
+        @include m(details) {
+            text-align: center;
+            padding-top: px2rem(48);
+
+            span {
+                color: #fff;
+                border: 1px solid #fff;
+                padding: 2px 4px;
+                border-radius: 2px;
+                font-size: px2rem(28);
+            }
+        }
+    }
+    @include e(box) {
+        background: url("/images/bd_r01/h5_bg.png") repeat-y;
+        background-position: center top;
+        background-size: 100% auto;
+        position: relative;
+        padding-top: px2rem(40);
+        padding-bottom: px2rem(160);
+    }
+    @include e(condition) {
+        width: px2rem(600);
+        height: px2rem(120);
+        background: url("/images/bd_r01/h5_draw_title.png") no-repeat;
+        background-position: center top;
+        background-size: 100% 100%;
+        position: relative;
+        display: table;
+        margin: 0 auto;
+
+        span {
+            text-align: center;
+            display: block;
+            margin: 0 auto;
+            color: #ffe59a;
+            display: table-cell;
+            vertical-align: middle;
+            padding: 0px 52px;
+        }
+    }
+    @include e(rotate_box) {
+        width: px2rem(680);
+        height: px2rem(680);
+        background: url("/images/bd_r01/h5_rotate_box1.png") no-repeat;
+        background-position: center top;
+        background-size: 100% 100%;
+        margin: 0 auto;
+        padding: px2rem(64);
+        margin-top: px2rem(60);
+        position: relative;
+
+        &.active {
+            background: url("/images/bd_r01/h5_rotate_box2.png") no-repeat;
+            background-position: center top;
+            background-size: 100% 100%;
+        }
+    }
+    @include e(pointer) {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: px2rem(48);
+        margin-left: px2rem(-24);
+        z-index: 100;
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+    }
+    @include e(rotate) {
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto;
+
+        @include m(pic) {
+            width: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                vertical-align: top;
+            }
+        }
+
+        @include m(btn) {
+            position: absolute;
+            top: 33%;
+            left: 33%;
+            width: 34%;
+            height: 34%;
+
+            img {
+                width: 100%;
+                vertical-align: top;
+            }
+        }
+    }
+    @include e(lst) {
+        width: px2rem(680);
+        height: px2rem(350);
+        background: url("/images/bd_r01/h5_award_box.png") no-repeat;
+        background-position: center top;
+        background-size: 100% 100%;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: px2rem(32);
+        margin-top: px2rem(60);
+
+        @include m(tit) {
+            width: 40%;
+            margin: 0 auto;
+
+            img {
+                width: 100%;
+                vertical-align: top;
+            }
+        }
+        @include m(detail) {
+            text-align: center;
+            color: #8a0101;
+            margin-top: px2rem(32);
+
+            li {
+                font-size: px2rem(28);
+                line-height: px2rem(38);
+            }
+        }
+    }
+    @include e(client) {
+        width: 40%;
+        margin: 0 auto;
+        margin-top: px2rem(100);
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+    }
+    @include e(footer) {
+        background-color: #cc2321;
+        padding: px2rem(64) px2rem(32);
+        color: #e66b2a;
+        font-size: px2rem(28);
+    }
+}
