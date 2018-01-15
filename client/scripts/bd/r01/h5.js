@@ -104,6 +104,7 @@
                 rewardCount = data.data.num;
             } else {
                 msg = data.message;
+                $condition.html(data.message);
                 layer.open({
                     content: data.message,
                     skin: 'msg',
