@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" class="bd_tele_html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+    <%=lang.text("companyZhName")%></title>
+    <% include /common/vendor/web.css.html %>
+    <!-- build:css(.tmp) /styles/web.css -->
+    <link rel="stylesheet" href="/styles/web.css">
+    <!-- endbuild -->
+    <% include /common/statistic/main.html %>
+    <% include /common/vendor/web.js.html %>
+</head>
+
+<body ng-app="fullstackApp">
+    <div ng-controller="GlobalController">
+        <% include /common/nav/web.header.html %>
+        <div class="bd_r01">
+            <div class="bd_r01__focus">
+                <div class="date">
+                    2018年1月15日－2018年2月25日
+                </div>
+            </div>
+            <div class="bd_r01__box">
+                <div class="container">
+                    <div class="bd_r01__rule">
+                        <div class="pic">
+                            <img src="/images/bd_r01/web_rule_title.png">
+                        </div>
+                        <div class="lst">
+                            <p>1、活动期间，累计净入金≥1500美金，每周完成5手数交易，即可在当周内获得抽奖机会一次；第二周开始时将重新计算交易手数，每周满足活动条件均可参与抽奖；</p>
+                            <p>2、本活动中奖机率100%，奖品分别为888.8美金、188.8美金、88.8美金、18.8美金、8.8美金；</p>
+                            <p>3、抽中的奖品（美金）将直接存入“零钱包”，可用于交易或直接提现；</p>
+                            <p>4、如满足抽奖条件却未在活动期间内抽奖的用户，视为放弃本次抽奖机会；</p>
+                            <p>5、本活动参与用户不得滥用活动权利，如AB仓对冲操作外挂操作软件或其他经纪商进行对冲；</p>
+                            <p>6、本活动仅适用于外汇、贵金属以及能源类产品，美元/人民币和CFD（指数）类产品的交易手数不计入统计范围；</p>
+                            <p>7、本活动抽奖环节仅在老虎外汇APP内操作；</p>
+                            <p>8、本活动最终解释权归老虎外汇平台所有，如有疑问请咨询在线客服或拨打 400-809-8509 。</p>
+                        </div>
+                        <div class="bar"></div>
+                    </div>
+                    <div class="bd_r01__tip">
+                        <img src="/images/bd_r01/web_qrcode_tip.png">
+                    </div>
+                    <div class="bd_r01__qrcode">
+                        <img class="demo" src="/images/bd_r01/qrcode_demo.png">
+                        <img class="www" src="/images/bd_r01/qrcode_www.png">
+                    </div>
+                    <div class="bd_r01__client">
+                        详情拨打客服 : 400-809-8509
+                    </div>
+                    <div class="bd_r01__footer">
+                        <div class="tit">
+                            <img src="/images/bd_r01/web_tip.png">
+                        </div>
+                        <div class="detail">
+                            市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。 老虎外汇交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include /common/nav/web.footer.html %>
+    <%- include('/common/statistic/_all.html') %>
+    <!-- 注册协议相关弹窗 -->
+    <%include /common/component/agment_mdl.html %>
+</body>
+
+<!-- build:js(client) /scripts/bd_r01.js -->
+<script src="/scripts/common/config.service.js"></script>
+<script src="/scripts/common/account.service.js"></script>
+<script src="/scripts/common/authorization.service.js"></script>
+<script src="/scripts/common/redbag.service.js"></script>
+<script src="/scripts/common/navbar.directive.js"></script>
+<script src="/scripts/common/dropdown.directive.js"></script>
+<script src="/scripts/common/global.controller.js"></script>
+<script src="/scripts/common/loading_img.directive.js"></script>
+
+<script src="/scripts/common/pagination.directive.js"></script>
+<script src="/scripts/common/duration.filter.js"></script>
+
+<script src="/scripts/common/symbol_mod.filter.js"></script>
+<script src="/scripts/common/trader.service.js"></script>
+<script src="/scripts/common/lang.service.js"></script>
+<script src="/scripts/common/lang_data.service.js"></script>
+<script src="/scripts/bd/t30/check.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<script src="/scripts/plugins/layer.js"></script>
+<script src="/scripts/bd/r01/web.js"></script>
+<!-- endbuild -->
+
+</html>

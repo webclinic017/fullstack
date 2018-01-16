@@ -1,7 +1,7 @@
 ;(function (w) {
     'use strict';
 
-    var origin = $.cookie ? $.cookie("access_origin2") : '/api';
+    var origin = ($.cookie && $.cookie("access_origin2")) ? $.cookie("access_origin2") : '/api';
     // console.log(origin);
     var apiUrl = {
         getUserInfo: origin + '/user/info',     // get
@@ -54,6 +54,10 @@
         //挂单交易
         setPendingTrade: origin + '/pending_trade/add',  //post
         getRealQuote: origin + '/symbol/realtime',  //get
+        //新春抽奖
+        checkReward: origin + '/reward/check', //post
+        joinReward: origin + '/reward/join', //post
+        getRewardLst: origin + '/reward/list', //get
     };
 
     w.publicRequest = publicRequest;

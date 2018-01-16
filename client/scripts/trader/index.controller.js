@@ -17,12 +17,12 @@
             avaCopyAmount;
 
         var absUrl = $location.absUrl();
-        var regUsercode = /trader\/(\d+)\/#/;
+        var regUsercode = /trader\/(\d+)(\/)?[#?]/;
 
         $scope.openMasterGradeMdl = openMasterGradeMdl;
 
         usercode = absUrl.match(regUsercode)[1];
-
+        
         getMasterInfo(usercode);
         getAvaCopyAmount(usercode);
         getMasterGrade(usercode);

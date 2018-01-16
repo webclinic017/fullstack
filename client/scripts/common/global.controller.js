@@ -29,10 +29,6 @@
 
         $scope.logout = logout;
         $scope.reloadLanguage = reloadLanguage;
-        $scope.toTrackRegisterSensorsdata = toTrackRegisterSensorsdata;
-        $scope.toTrackLoginSensorsdata = toTrackLoginSensorsdata;
-        $scope.toTrackBannerSensorsdata = toTrackBannerSensorsdata;
-        $scope.toQuickPageviewSensorsdata = toQuickPageviewSensorsdata;
         $scope.openDredgeMdl = openDredgeMdl;
         var globalScope = $scope;
 
@@ -106,7 +102,9 @@
              */
             if (resolve && resolve.ctrlName) {
                 console.log('global.getAuthStatus called by ' + resolve.ctrlName)
-                getAuthStatus(resolve.callback)
+                getAuthStatus({
+                    callback:resolve.callback
+                })
             } else {
                 console.warn('call global.getAuthStatus error, due to no ctrlName')
             }
@@ -170,31 +168,52 @@
             location.reload();
         }
 
-        // 数据统计相关
-        function toTrackRegisterSensorsdata() {
-            // 神策数据统计
-            sa.track('btn_register', {
-                page: window.location.href
-            });
-        }
-        function toTrackLoginSensorsdata() {
-            // 神策数据统计
+        /*
+         * 神策数据 统计
+         * 2018.01.03 update
+         */
+        $scope.toTrackLoginSensorsdata = function () {    // 点击header登录按钮触发
             sa.track('btn_login');
-        }
-        function toTrackBannerSensorsdata(title, index) {
-            // umeng
-            _czc.push(['_trackEvent', '首页Banner', '点击', index]);
+        };
+        $scope.toTrackBannerSensorsdata = toTrackBannerSensorsdata;
+        window.toTrackBannerSensorsdata = toTrackBannerSensorsdata; //弹窗调用 index.controller.js
+        function toTrackBannerSensorsdata (type, name, index) { // 点击广告位
+            var param = {
+                banner_client: 'pc',
+                banner_name: name
+            };
+            if (type == 'focus') {      //轮播图
+                param.banner_type = '顶部轮播图';
+                param.banner_location = index+1;
+            } else if (type == 'modal') {   //弹窗图
+                param.banner_type = '弹窗图';
+            }
+            // console.log(param);
             // 神策数据统计
-            sa.track('btn_banner', {
-                pc_banner_name: title,
-                pc_banner_location: index
-            });
+            sa.track('New_btn_banner', param);
         }
-        function toQuickPageviewSensorsdata(masterName) {    // 浏览高手页面
+        $scope.toQuickPageviewSensorsdata = function (masterName) {    // 浏览高手页面
             sa.track('$pageview', {
                 master_name: masterName
             });
+        };
+        $scope.toTrackPhoneSensorsdata = function () {  // 点击手机号码输入框
+            sa.track('inp_PN');
+        };
+        $scope.toTrackCodeSensorsdata = function () {  // 点击验证码输入框
+            sa.track('inp_code');
+        };
+        $scope.toAuthenTypeSensorsdata = toAuthenTypeSensorsdata;
+        function toAuthenTypeSensorsdata (type) {  // 选择开户类型
+            sa.track('New_Selectiontype', {
+                account_type: type
+            });
         }
+        $scope.toAuthenCompleteSensorsdata = function (type) { //完成开户
+            sa.track('New_Theaccount', {
+                account_type: type
+            });
+        };
 
         // 开户弹窗
         /**
@@ -229,10 +248,13 @@
                     $scope.openDemo = function(){
                         globalScope.personal.is_live = '0'
                         $scope.loading.demo = true
-                        getAuthStatus().then(function(){
+                        getAuthStatus({
+                            is_live: '0'
+                        }).then(function(){
                             $scope.loading.demo = false
                             window.location.href = window.location.origin + '/space/#/authen/complete'
                             closeModal()
+                            toAuthenTypeSensorsdata('体验金账户');
                         })
                     }
                     $scope.confirmLive = function () {
@@ -249,9 +271,12 @@
                                 '继续': function (oScope) {
                                     globalScope.personal.is_live = '1'
                                     oScope.loading = 1
-                                    getAuthStatus().then(function(){
+                                    getAuthStatus({
+                                        is_live: '1'
+                                    }).then(function(){
                                         oScope.loading = 2
                                         window.location.href = window.location.origin + '/space/#/authen/'
+                                        toAuthenTypeSensorsdata('真实账户');
                                     })
                                 }
                             }
@@ -269,9 +294,10 @@
         // status 1:没填kyc,2:没填写昵称邮箱,3:未上传过身份证,4:审核拒绝,5:待审核,6:审核通过,10:开户完成
         // account_status 0:没开通,1:真实,2:模拟
         // status=10只有在添加认证信息结束的时候我会返回10，app主动请求获取用户认证状态的最终状态是6(审核通过)不会有10
-        function getAuthStatus(callback) {
+        function getAuthStatus(para) {
+            para = para || {};
             return account.getAuthStatus({
-                is_live: globalScope.personal.is_live
+                is_live: para.is_live
             }).then(function (data) {
                 console.log('global.getAuthStatus', data);
                 if (data.is_succ) {
@@ -292,7 +318,7 @@
                         passedAuthen: passedAuthen
                     }
                     angular.extend($scope.personal, params);
-                    callback && angular.isFunction(callback) && callback(params)
+                    para.callback && angular.isFunction(para.callback) && para.callback(params)
                     return data
                 }
             });

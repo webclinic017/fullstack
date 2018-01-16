@@ -110,6 +110,7 @@
                 // console.log(data);
                 if (data.is_succ) {
                     countDown(phoneName);
+                    sa.track('btn_register_code');
                 } else {
                     layer.msg(data.message);
                 }

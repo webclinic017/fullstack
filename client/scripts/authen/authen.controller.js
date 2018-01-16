@@ -221,6 +221,7 @@
                     });
                     // 神策数据统计
                     sa.track('btn_kyc');
+                    sa.track('New_information');
                     $scope.tip.system.show = true;
                     $scope.tip.system.msg = 'KYC 认证信息提交成功';
 
@@ -447,6 +448,8 @@
                 if (data.is_succ) {
                     // 向authenController发送信息
                     $scope.$emit('goState', data.data);
+
+                    sa.track('New_Personaldata');
                 } else {
                     $scope.backErr.show = true;
                     $scope.backErr.msg = data.message;
@@ -716,6 +719,8 @@
                     layer.msg(data.message)
                     $scope.clickable = true;
                 } else {
+                    sa.track('New_Realname');
+                    sa.track('New_uploadcard');
                     /*上传图片*/
                     angular.forEach($scope.readyToUpload, function (data, index, array) {
                         data.submit();

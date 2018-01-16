@@ -202,25 +202,6 @@
             }
         }
 
-        function statistics(tel) {
-
-            function getOrigin() {
-                if (window.location.href.indexOf("/bd")) {
-                    return "活动页"
-                } else {
-                    return "H5注册页"
-                }
-            }
-
-            /*umeng*/
-            _czc.push(["_trackEvent", getOrigin(), "免费注册"]);
-
-            /*神策数据统计*/
-            sa.track('btn_register_submit');
-
-            console.log("统计代码执行完毕!")
-        }
-
         /*判断是否在APP中,关闭相关层*/
         ;
         (function () {
@@ -308,6 +289,14 @@
 
             console.log(oReg);
         }());
+        
+        //神策统计
+        $("#telephone").on("click", function () {
+            sa.track('inp_PN');
+        });
+        $("#verify_code").on("click", function () {
+            sa.track('inp_code');
+        });
 
         /*发送验证码*/
         ;
@@ -332,6 +321,7 @@
                                 });
                             } else {
                                 sendVerifyCode();
+                                sa.track('btn_register_code');
                             }
                         }
                     });
@@ -350,8 +340,6 @@
 
                 /*loading层*/
                 layer.open({ type: 2, shadeClose: false });
-                /*统计*/
-                statistics($("#telephone").val());
 
                 /*今日头条统计表单提交*/
                 // if (window.location.pathname.indexOf('t33_a') != -1) {
