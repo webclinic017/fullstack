@@ -443,7 +443,7 @@
         /*客户协议页面*/
         if (isInAgreement()) {
 
-            $(".h5_agreement_content .h5_agreement_item .tit").on('touchend', function () {
+            $(".h5_agreement_content .h5_agreement_item .tit").on('tap', function () {
                 var ad = $(this).attr("data-address");
                 var action_address = window.location.origin +
                              "/agreement/"+ad;
