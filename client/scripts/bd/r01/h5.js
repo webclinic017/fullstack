@@ -38,7 +38,7 @@
         toOpenApp();
         $condition.html("请前往APP参与活动");
     }
-    getRewardLst();
+    // getRewardLst();
     
     $detail.on("tap", function () {
         layer.open({
