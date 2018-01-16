@@ -14,7 +14,11 @@ module.exports = function () {
         for (var name in cookieList) {
             // console.info(name);
             if (name === 'lang') {
-                language = cookieList[name];
+                if(cookieList[name] instanceof Array){
+                    language = cookieList[name][0];
+                } else {
+                    language = cookieList[name];
+                }
             }
         }
         this.language = language;
