@@ -75,7 +75,7 @@
             }
             $scope.clickable.step1 = false;
 
-            account.checkPhoneAndCaptcha(
+            account.checkCode(
                 $scope.account.phone,
                 $scope.account.captcha
                 

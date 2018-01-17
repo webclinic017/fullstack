@@ -212,6 +212,7 @@
          * 检测验证码是否正确
          * @param {String} account 
          * @param {Number} code 
+         * @param {Number} account_type 1 手机号 2 邮箱
          */
         function checkCode(account, code, account_type){
             return publicHttp.dealPublicRequest(o.checkCodeApi, 'POST', {
