@@ -114,7 +114,6 @@ $(document).ready(function () {
     // }, 1000);
     
     $(ele.indexBtn).on("tap", function () {
-
         openH5AgmentModal(100402, function(resolve, e){
             layer.close(resolve.layIndex);
             layer.open({type: 2, shadeClose: false});
@@ -139,6 +138,7 @@ $(document).ready(function () {
                 }
             });
         });
+        return false;
     });
 
     $(ele.kycBtn).on("tap", function (e) {
