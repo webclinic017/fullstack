@@ -1,4 +1,45 @@
 var report_sites = [
+    /*添加时间 2018-01-18*/
+    {
+        address: 'http://www.cnfina.com/kuaixun/20171031_113706.html',
+        description: '【华财网】科技成外汇交易革新解码器，老虎外汇的探索之路',
+        date: '2017-10-31'
+    },
+    {
+        address: 'http://www.sinotf.com/GB/News/Enterprise/2017-11-02/zOMDAwMDI4ODczOQ.html',
+        description: '【中国贸易金融网】闲散资金如何投资？老虎外汇、富途证券、凤凰金融给你不同方案',
+        date: '2017-11-01'
+    },
+    {
+        address: 'http://www.xsgou.com/biz/qiye/89203.html',
+        description: '【中国财经观察网】老虎外汇获巴哈马证券交易委员会SCB监管牌照',
+        date: '2017-11-06'
+    },
+    {
+        address: 'http://news.xinhuanet.com/energy/2017-11/11/c_1121941029.htm',
+        description: '【新华网】服务体验再升级，老虎外汇获巴哈马SCB监管牌照',
+        date: '2017-11-09'
+    },
+    {
+        address: 'http://www.prcfe.com/finance/2017/1115/208496.html',
+        description: '【中国财经新闻网】外汇交易现在流行这个范儿 老虎外汇将科技DNA注入外汇交易 ',
+        date: '2017-11-15'
+    },
+    {
+        address: 'http://jingji.cyol.com/content/2017-11/22/content_16713211.htm',
+        description: '【中青在线】老虎外汇：科技加持下的外汇交易服务创新',
+        date: '2017-11-22'
+    },
+    {
+        address: 'http://www.hscbw.com/a/zonghe/2017/1124/72182.html?1511514136%0a',
+        description: '【华声晨报】老虎外汇获SCB牌照！为什么近年外汇服务商热衷SCB监管？',
+        date: '2017-11-23'
+    },
+    {
+        address: 'http://www.hscbw.com/a/zonghe/2017/1205/73325.html?1512466592',
+        description: '【华声晨报】老虎外汇：第一家输出API接口服务的互联网外汇交易服务商',
+        date: '2017-12-04'
+    },
     /*添加时间 2017-11-2*/
     {
         address: 'http://www.hscbw.com/a/zonghe/2017/1018/67567.html?1508313934',
