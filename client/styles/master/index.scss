@@ -143,7 +143,10 @@
         .message_wrapper {
             margin-left: 150px;
             margin-top: 60px;
-
+            &.mg {
+                margin-left: 0;
+                margin-top: 20px;
+            }
             .message_icon {
                 float: left;
                 height: 80px;
@@ -173,6 +176,32 @@
                         display: table-cell;
                         vertical-align: middle;
                     }
+                }
+            }
+
+            .message_nickname {
+                > li {
+                    width: 50%;
+                    height: 50px;
+                    line-height: 50px;
+                    float: left;
+                    .form-control-wrapper {
+                        width: 35%;
+                        display: inline-block;
+                        .alert-arrow_tp_lf{
+                            line-height: 16px;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
+            .master_notice {
+                p {
+                    font-size: 15px;
+                    line-height: 22px;
+                    padding: 0 100px;
+                    color: rgb(153,153,153);
                 }
             }
         }

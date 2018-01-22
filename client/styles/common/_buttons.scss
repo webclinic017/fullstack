@@ -85,6 +85,13 @@
     &:hover {
         text-decoration: underline;
     }
+    &.pd-sm {
+        padding: 0 10px;
+    }
+    &.pd-lf {
+        padding: 0;
+        padding-left: 10px;
+    }
 }
 
 // 选择按钮
@@ -110,5 +117,24 @@
             top: 2px;
             left: 2px;
         }
+    }
+}
+
+.btn-icon {
+    cursor: pointer;
+    @include button-size(0px, $btn-font-size-sm, $btn-font-size, $btn-height-base, $btn-border-radius);
+    padding: 0 20px;
+    &:hover {
+        color: $brand-primary-darkest;
+    }
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled] {
+        cursor: not-allowed;
+        pointer-events: none; // Future-proof disabling of clicks
     }
 }

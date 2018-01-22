@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('MasterApplyController', MasterApplyController);
 
-    MasterApplyController.$inject = ['$scope', 'trader', '$layer'];
+    MasterApplyController.$inject = ['$scope', 'trader', '$layer', 'validator', 'account', '$cookies'];
 
-    function MasterApplyController($scope, trader, $layer) {
+    function MasterApplyController($scope, trader, $layer, validator, account, $cookies) {
 
         $scope.applyInfo = {
             loading: true,
@@ -17,8 +17,8 @@
         $scope.applyMaster = applyMaster;
 
         getMasterCondition();
-        
-        function getMasterCondition () {
+
+        function getMasterCondition() {
             trader.getMasterCondition().then(function (data) {
                 $scope.applyInfo.loading = false;
                 // console.log(data);
@@ -38,16 +38,15 @@
             });
         }
 
-        function applyMaster () {
+        function applyMaster() {
             if ($scope.applyInfo.condition) {
                 openApplyMdl('succ');
             } else {
                 openApplyMdl('fail');
             }
-            
         }
 
-        function openApplyMdl (s) {
+        function openApplyMdl(s) {
             if (s == 'succ') {
                 $layer({
                     title: '申请高手提醒',
@@ -64,7 +63,7 @@
                                 oScope.loading = 2;
                                 if (data.is_succ) {
                                     oScope.msg = "申请已提交";
-                                    $scope.applyInfo.data.status = 0;
+                                    $scope.applyInfo.data.status = 3;
                                 } else {
                                     oScope.msg = data.message;
                                 }
@@ -81,12 +80,65 @@
                     msg: '未达成高手申请条件，请继续努力',
                     btns: {
                         '确定': function () {
-                            
+
                         }
                     }
                 })
             }
-            
+
+        }
+
+        $scope.masterInfo = {
+            edit: false,
+            username: '',
+            error: {
+                invalid: false,
+                invalid_tip: validator.regType.username.tip
+            },
+            loading: false
+        }
+
+        $scope.hideErr = function(){
+            $scope.masterInfo.error.invalid = false;
+        }
+        $scope.editUsername = function () {
+            $scope.masterInfo.edit = true;
+        }
+        $scope.cancelEdit = function () {
+            $scope.masterInfo.edit = false;
+            $scope.personal.username = decodeURIComponent($cookies["username"] || '')
+        }
+        $scope.comfirmEdit = function () {
+            if (!validator.regType.username.reg.test($scope.personal.username)) {
+                $scope.masterInfo.error.invalid = true
+                return
+            } else {
+                $scope.masterInfo.error.invalid = false
+            }
+
+            $scope.masterInfo.loading = true
+
+            account.setUsername({
+                username: $scope.masterInfo.username
+            }).then(function(data){
+                $scope.masterInfo.loading = false
+                if(!data.is_succ){
+                    $layer({
+                        title: '错误提示',
+                        size: 'sm',
+                        msgClass: 'font-danger',
+                        msg: data.message || '昵称修改失败',
+                        btns: {
+                            '确定': function () {
+    
+                            }
+                        }
+                    })
+                } else {
+                    $scope.masterInfo.edit = false;
+                    $scope.personal.username = $scope.masterInfo.username
+                }
+            });
         }
     }
 })();

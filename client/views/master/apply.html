@@ -1,7 +1,8 @@
 <div class="space_apply">
     <div class="space_master__title">
-        <span ng-if="applyInfo.data.status != 0">成为老虎外汇高手，获取更多收益</span>
+        <span ng-if="applyInfo.data.status != 0 && applyInfo.data.status != 3">成为老虎外汇高手，获取更多收益</span>
         <span ng-if="applyInfo.data.status == 0">高手申请审核中，请耐心等待</span>
+        <span ng-if="applyInfo.data.status == 3">注意事项</span>
         <span class="btn btn-primary btn-sm" ng-if="applyInfo.data.status == -1" ng-click="applyMaster()">立即申请成为高手</span>
     </div>
     <div class="space_apply__loading" ng-if="applyInfo.loading">
@@ -36,24 +37,86 @@
                 <div class="message_tip">
                     <div class="tit">高手申请已通过审核</div>
                     <div class="reason">
-                        <span>恭喜您的高手申请已通过审核！<br>您的交易账户已被推荐到高手榜。</span>
+                        <span>恭喜您的高手申请已通过审核！
+                            <br>您的交易账户已被推荐到高手榜。</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="space_apply__message" ng-if="applyInfo.data.status == 2">
+        <div class="space_apply__message" ng-if="applyInfo.data.status == 1">
             <div class="clearfix message_wrapper">
                 <div class="message_icon">
-                    <img src="/images/icon-fail.png">
+                    <img src="/images/icon-succ.png">
                 </div>
                 <div class="message_tip">
-                    <div class="tit">高手申请被拒绝</div>
+                    <div class="tit">高手申请已通过审核</div>
                     <div class="reason">
-                        <span>{{ applyInfo.data.reason || '请联系客服人员' }}</span>
+                        <span>恭喜您的高手申请已通过审核！
+                            <br>您的交易账户已被推荐到高手榜。</span>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="space_apply__message" ng-if="applyInfo.data.status == 3">
+            <div class="clearfix message_wrapper mg">
+                <div class="">
+                    <div ng-controller="SettingInfoAvatarController">
+                        <div class="upload_avatar text-center" tw-upload-avatar filename="personal.lgAvatar" ban="ban">
+                            <label class="upload_avatar__label includeImg" for="input">
+                                <img class="upload_avatar__avatar select_directly" ng-src="{{personal.lgAvatar}}" alt="头像">
+                                <input id="input" class="upload_avatar__input" name="file" type="file" accept="image/jpeg,image/png">
+                                <!-- <i>选择图片</i> -->
+                                <span class="alert-arrow_tp_lf" style="left: 42%;" ng-show="avatar.status === 1">
+                                    正在上传...
+                                </span>
+                                <span class="alert-arrow_tp_lf" style="left: 42%;" ng-show="avatar.status === 3">
+                                    图片大小超过 2MB 请重新选择
+                                </span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <ul class="message_nickname clearfix mg-tp-10">
+                    <li class="text-right">
+                        <div class="form-control-wrapper" ng-if="masterInfo.edit">
+                            <input  
+                                type="text" 
+                                class="form-control" 
+                                ng-class="{'form-control-error': masterInfo.error.invalid}"
+                                ng-focus="hideErr()"
+                                ng-init="masterInfo.username = personal.username"
+                                ng-model="masterInfo.username"
+                                placeholder="昵称"
+                                on-enter="comfirmEdit()"
+                            >
+                            <span ng-if="masterInfo.error.invalid" class="alert-arrow_tp_lf">{{ masterInfo.error.invalid_tip }}</span>
+                        </div>
+                        <span ng-if="!masterInfo.edit">{{ personal.username }}</span>
+                    </li>
+                    <li class="text-left">
+                        <span ng-if="!masterInfo.edit"  class="btn-icon btn-sm" ng-click="editUsername()">
+                            <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                        </span>
+                        <span ng-if="masterInfo.edit && !masterInfo.loading"  class="btn btn-text pd-lf btn-lt" ng-click="cancelEdit()">取消</span>
+                        <span ng-if="masterInfo.edit && !masterInfo.loading"  class="btn btn-text pd-lf btn-lt" ng-click="comfirmEdit()">确认</span>
+                        <span ng-if="masterInfo.edit && masterInfo.loading"  class="btn btn-sm btn-text">
+                            <i class="loading_spinner fa fa-spinner"></i>
+                            正在提交
+                        </span>
+                    </li>
+                </ul>
+                <br>
+                <div class="master_notice">
+                    <p>1.昵称使用规范：昵称应体现个人属性，避免选用官方化、敏感时政词汇、不雅词汇、广告名称、手机号码、社交联系方式等</p>
+                    <br>
+                    <p>2.头像使用规范：头像禁止使用选用政治敏感图片、不雅图片、广告图片、品牌LOGO、广告物料等</p>
+                    <br>
+                    <p>3.成为高手后昵称及头像将不能再次修改，请谨慎填写</p>
+                    <br>
+                    <p class="font-danger">违背以上情况，申请将会被驳回。</p>
                 </div>
             </div>
         </div>
     </div>
-    
+
 </div>
