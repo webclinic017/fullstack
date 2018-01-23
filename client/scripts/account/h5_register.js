@@ -19,6 +19,13 @@
         set_token();
     }, 300000);
 
+    // setTimeout(function(){
+    //     openH5AgmentModal(100402, function(resolve, e){
+    //         toRegister('is_agree');
+    //         layer.close(resolve.layIndex)
+    //     })
+    // }, 500)
+
     $(function () {
         /*定义全局变量*/
         var oReg = {};
