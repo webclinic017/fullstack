@@ -21,7 +21,7 @@ module.exports = function () {
             ibEmail: "support@tigerwit.com",
             telephone: "400 - 809 - 8509",
             webSite: "www.tigerwit.com",
-            webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
+            webMt4Download: "https://www.tigerwit.com/files/tigerwit4setup.exe",
             androidApp: versionAndroidApp,
             // download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
             download: "/m/blank",
