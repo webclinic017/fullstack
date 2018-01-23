@@ -445,6 +445,7 @@
                 } else {
                     location.href = action_address;
                 }
+                return false;
                 
             });
             

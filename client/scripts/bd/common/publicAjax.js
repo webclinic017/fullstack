@@ -132,7 +132,7 @@
             console.log(error);
             layer.open({
                 skin: 'msg',
-                content: "服务器异常",
+                content: "网络超时，请稍后再试",
                 time: 2
             });
             toLogin();
@@ -169,7 +169,7 @@
                 console.log(err);
                 layer.open({
                     skin: 'msg',
-                    content: "服务器异常",
+                    content: "网络超时，请稍后再试",
                     time: 2
                 });
             }

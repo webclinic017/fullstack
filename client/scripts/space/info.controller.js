@@ -32,6 +32,12 @@
             getRedBagNum();
         }
 
+        var url = $location.search();
+        
+        if (url.type && (url.type == 'new')) {
+            $scope.$emit('global.openDredgeMdl', {position: 'register'});
+        }
+
         // 如果是高手账号，则获取高手等级
         $scope.$watch('personal.is_master', function (newVal, oldVal) {
             // console.log(newVal, oldVal);

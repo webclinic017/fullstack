@@ -5,7 +5,8 @@
     var $rotateBox = $(".bd_r01 .bd_r01__rotate-pic");
     var $detail = $(".bd_r01 .bd_r01__focus-details");
     var $condition = $(".bd_r01 .bd_r01__condition span");
-    var $list = $(".bd_r01 .bd_r01__lst-detail");
+    var $list1 = $(".bd_r01 .bd_r01__lst-detail .list-1");
+    var $list2 = $(".bd_r01 .bd_r01__lst-detail .list-2");
 
     var time = 4000;
     var baseNum = 72;   //旋转角度基数 360/5
@@ -22,6 +23,52 @@
     var msg = "网络错误";
     var activityId = 1;
     var rewardId = 1;
+    var rewardLst = [
+        {
+            phone: "188****1750",
+            prize: "8.8"
+        },
+        {
+            phone: "188****2206",
+            prize: "8.8"
+        },
+        {
+            phone: "188****2587",
+            prize: "8.8"
+        },
+        {
+            phone: "186****7193",
+            prize: "188.8"
+        },
+        {
+            phone: "188****3088",
+            prize: "88.8"
+        },
+        {
+            phone: "135****1277",
+            prize: "8.8"
+        },
+        {
+            phone: "182****4321",
+            prize: "8.8"
+        },
+        {
+            phone: "134****3911",
+            prize: "18.8"
+        },
+        {
+            phone: "136****4210",
+            prize: "88.8"
+        },
+        {
+            phone: "188****5019",
+            prize: "8.8"
+        },
+        {
+            phone: "188****4311",
+            prize: "8.8"
+        }
+    ];
 
     setInterval(function () {
         if ($rotate.hasClass('active')) {
@@ -38,7 +85,7 @@
         toOpenApp();
         $condition.html("请前往APP参与活动");
     }
-    // getRewardLst();
+    getRewardLst();
     
     $detail.on("tap", function () {
         layer.open({
@@ -65,7 +112,7 @@
         publicRequest('getRewardLst', 'GET', {
             activity_id: activityId,
             reward_id: rewardId,
-            limit: 4
+            limit: 7
         }).then(function (data) {
             var lst = [];
             // console.log(data.data);
@@ -77,19 +124,38 @@
     }
 
     function appendRewardLst (list) {
-        console.log(list);
+        // console.log(list);
         if (list && list.length) {
-            $.each(list, function (index, value) {
-                var dom = "<li>恭喜 "+value.phone+" 抽中 "+value.prize+" 美金</li>";
-                $list.append(dom);
-            });
-
-            if (list.length >= 4) {
-                $list.append("<li>......</li>");
-            }
-        } else {
-            $list.append("<li>敬请期待...</li>");
+            rewardLst = rewardLst.concat(list);  
         }
+        
+        $.each(rewardLst, function (index, value) {
+            var dom = "<li>恭喜 "+value.phone+" 抽中 "+value.prize+" 美金</li>";
+            $list1.append(dom);
+            $list2.append(dom);
+        });
+
+        var h = $list1.height();
+        // console.log(h);
+        $list1.css({top: 0});
+        $list2.css({top: h});
+        startRow(h);
+    }
+
+    function startRow (h) {
+        var t1, t2;
+
+        setInterval(function () {
+            
+            t1 = $list1.position().top, t2 = $list2.position().top;
+            t1--, t2--;
+
+            if (t1 < -h) t1 = h;
+            if (t2 < -h) t2 = h;
+
+            $list1.css({top: t1});
+            $list2.css({top: t2});
+        }, 30);
     }
 
     function checkReward () {

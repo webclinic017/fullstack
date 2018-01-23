@@ -32,6 +32,8 @@
         $scope.openDredgeMdl = openDredgeMdl;
         var globalScope = $scope;
 
+        window.$scope = $scope;
+
         // 初始加载
         getUnreadLength();
         setInterval(function () {
