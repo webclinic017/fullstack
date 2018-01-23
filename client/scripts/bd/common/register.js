@@ -275,6 +275,7 @@
         (function () {
 
             function toLogin (is_agree) {
+                
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
 
@@ -313,6 +314,10 @@
                             login_type: '验证码登录'
                         });
                         window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
+
+                        $timeout(function () {
+                            window.location.href = '/space/#/center?type=new';
+                        }, 100);
                     } else {
                         if ((data.code == 100402) || (data.code == 100403)) {
                             openWebAgmentModal(data.code, function(resolve, e){
