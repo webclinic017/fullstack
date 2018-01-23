@@ -179,6 +179,7 @@
 
         window.openH5AgmentModal = function (code, callback) {
             // 100402(new) 100403(old)
+            $('.agment_mdl_con__detail').css('max-height', innerSize().height * 0.6 + "px")
             var layMap = {
                 "100402": {
                     layClass: ".h5_new_register",
