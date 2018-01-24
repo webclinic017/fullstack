@@ -16,7 +16,7 @@
         access_origin: process.env.ACCESS_ORIGIN,
         access_origin2: process.env.ACCESS_ORIGIN2,
         isCloned: false,
-        cdn_url: 'https://web.tigerwit.com'
+        cdn_url: 'https://static.tigerwitfx.com'
     };
 
     function SetEnvConfig(req) {
