@@ -397,7 +397,7 @@ module.exports = function (app) {
 
     
     // 复制交易
-    app.route('/web/copy/:subpage(rules|select|become|comment)').get(function (req, res) {
+    app.route('/web/copy/:subpage(rules|select|become|comment|calendar)').get(function (req, res) {
         var subpage = req.params.subpage || 'rules';
         var pageInfo = {
             id: subpage

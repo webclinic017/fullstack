@@ -1,0 +1,59 @@
+<div class="pro-calendar" ng-controller="ProductCalendarController" ng-cloak>
+    <div class="pro-calendar__title clearfix">
+        <span class="tit">财经日历</span>
+        
+        <span class="calendar_icon" tw-date-picker data-type="day" data-orientation="right" data-clear-btn="false" data-bind-model="selectStr" data-formatter="yyyymmdd">
+            <i class="fa fa-calendar"></i>
+        </span>
+
+        <div class="select_box">
+            <span>筛选</span>
+            <i class="fa fa-caret-down"></i>
+        </div>
+    </div>
+    <div class="pro-calendar__content">
+        <div class="date_list_box">
+            <div class="date_list_tit">{{selectDate.year}}年{{toDou(selectDate.month+1)}}月</div>
+            <ul class="date_list clearfix">
+                <li ng-repeat="date in dateList">
+                    <span class="w">{{ weekList[date.day] }}</span>
+                    <div class="d" ng-class="{active: date.select}" ng-click="checkDate(date)">
+                        {{ toDou(date.date) }}
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="info_list_box">
+            <li class="info_list" ng-repeat="news in newsInfo">
+                <div class="tip_info">
+                    <i class="fa fa-bell-o""></i>
+                    {{news.tw_time}}
+                    <i class="fa fa-star" ng-class="{active: news.importance >= 1}"></i>
+                    <i class="fa fa-star" ng-class="{active: news.importance >= 2}"></i>
+                    <i class="fa fa-star" ng-class="{active: news.importance >= 3}"></i>
+                </div>
+                <div class="tit_info">
+                    <img ng-src="{{news.flagURL}}">
+                    <span>
+                        {{news.country}}{{news.title}}
+                    </span>
+                </div>
+                <div class="cont_info">
+                    <p>
+                        今值
+                        <span>{{news.actual || '--'}}</span>
+                    </p>
+                    <p>
+                        预期
+                        <span>{{news.forecast || '--'}}</span>
+                    </p>
+                    <p>
+                        前值
+                        <span>{{news.previous || '--'}}</span>
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
