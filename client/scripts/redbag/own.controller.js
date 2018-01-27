@@ -8,7 +8,7 @@
     RedbagOwnController.$inject = ['$scope', 'redbag', '$modal', '$timeout'];
 
     function RedbagOwnController($scope, redbag, $modal, $timeout) {
-        
+        console.log($scope.personal);
         var hasAlerted = false;
         $scope.$on('global_controller_has_get_info', function () {
             console.log('$scope.personal.dredged_type',$scope.personal.dredged_type)
