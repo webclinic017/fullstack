@@ -211,10 +211,84 @@
         .select_box {
             float: right;
             margin-right: 20px;
-            cursor: pointer;
+            position: relative;
 
-            i {
-                color: #666;
+            .select_btn {
+                cursor: pointer;
+
+                i {
+                    color: #666;
+                }
+            }
+
+            .select_content {
+                width: 500px;
+                position: absolute;
+                top: 24px;
+                right: 0px;
+                padding: 30px 15px;
+                background-color: #fff;
+                box-shadow: 0px 0px 6px 4px #eee;
+                z-index: 100;
+                border-radius: 2px;
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                .select_title {
+                    color: #999;
+                }
+                .select_country {
+                    margin-bottom: 30px;
+
+                    li {
+                        float: left;
+                        width: 21%;
+                        line-height: 14px;
+                        padding: 8px 0px;
+                        border: 1px solid #eee;
+                        text-align: center;
+                        border-radius: 2px;
+                        color: #333;
+                        margin-right: 4%;
+                        margin-top: 10px;
+                        cursor: pointer;
+
+                        &.active {
+                            background-color: #fff000;
+                            border-color: #fff000;
+                        }
+                    }
+                }
+                .select_imp {
+                    li {
+                        float: left;
+                        width: 100px;
+                        padding: 8px 0px;
+                        border: 1px solid #eee;
+                        text-align: center;
+                        border-radius: 2px;
+                        cursor: pointer;
+                        line-height: 14px;
+                        margin-right: 10px;
+                        margin-top: 10px;
+
+                        &.active {
+                            background-color: #fff000;
+                            border-color: #fff000;
+                        }
+
+                        i {
+                            color: #ccc;
+
+                            &.active {
+                                color: #ffbd43;
+                            }
+                        }
+                    }
+                }
             }
         }
         .calendar_icon {
@@ -227,34 +301,64 @@
 
         .date_list_box {
             background-color: #f5f5f5;
-            padding: 10px 40px;
+            padding: 10px 0px;
             border-radius: 5px;
         }
         .date_list_tit {
             text-align: center;
+            padding-bottom: 5px;
+        }
+
+        .date_list_wrapper {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 0 20px;
+
+            .prev, .next {
+                color: #666;
+                font-size: 16px;
+                cursor: pointer;
+            }
         }
 
         .date_list {
 
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1;
+            flex: 1 1;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+
             li {
-                float: left;
-                width: 14%;
                 text-align: center;
 
                 .w {
                     display: block;
+                    color: #666;
                 }
                 .d {
                     display: block;
-                    width: 36px;
-                    height: 36px;
+                    width: 44px;
+                    height: 44px;
                     text-align: center;
-                    line-height: 36px;
-                    font-size: 18px;
+                    line-height: 44px;
+                    font-size: 20px;
                     margin: 4px auto 0;
                     cursor: pointer;
                     background-color: transparent;
                     border-radius: 30px;
+
+                    &.today {
+                        background-color: #b2b8cf;
+                        color: #fff;
+                    }
 
                     &.active {
                         color: #fff;
@@ -267,6 +371,87 @@
                     }
                 }
                 
+            }
+        }
+        .date_info_box {
+            padding: 20px;
+            border-bottom: 1px solid #ddd;
+
+            i {
+                color: #1478f0;
+                padding: 0px 5px;
+            }
+
+            .return_today {
+                cursor: pointer;
+                color: #666;
+                box-shadow: 0px 3px 10px 3px #e5e5e5;
+                border-radius: 2px;
+                padding: 10px;
+            }
+        }
+
+        .info_list_box {
+            margin: 10px 0px 50px;
+
+            .info_list {
+                padding: 10px 0px;
+
+                .tip_info {
+                    color: #ccc;
+                    font-size: 14px;
+                    padding-bottom: 10px;
+                    padding-left: 65px;
+
+                    span {
+                        padding-right: 10px;
+                    }
+
+                    i.active {
+                        color: #ffbd43;
+                    }
+                }
+                .tit_info {
+                    margin-bottom: 15px;
+                    position: relative;
+
+                    img {
+                        width: 44px;
+                        vertical-align: top;
+                        position: absolute;
+                        top: 50%;
+                        left: 8px;
+                        margin-top: -14px;
+                    }
+                    span {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: #222;
+                        line-height: 28px;
+                        display: block;
+                        padding-left: 65px;
+                    }
+                }
+                .cont_info {
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #eee;
+                    margin-left: 65px;
+
+                    p {
+                        display: inline-block;
+                        padding-right: 20px;
+                        color: #ccc;
+                        font-size: 12px;
+
+                        &.active {
+                            color: #ffbd43;
+                        }
+
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+                }
             }
         }
     }
