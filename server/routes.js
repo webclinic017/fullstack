@@ -973,6 +973,7 @@ module.exports = function (app) {
             });
         }
         if (action == "version_check") {
+            var isGlobal = req.query.global;
             var system = req.query.system || req.query.os;
             var versionCode = req.query.version_code;
             var versinInfo = require('./app_ctrl.config').getAppInfo(COMPANY_NAME);
@@ -987,7 +988,14 @@ module.exports = function (app) {
             };
 
             if (system == "android") {
-                if (versionCode) {
+                if (isGlobal) {     // global版本
+                    currentVersion = {
+                        version_name: "",
+                        description: "",
+                        url: "",
+                        force_update: false
+                    };
+                } else if (versionCode) {
                     if (versionCode < versinInfo.android.currentVersionCode) {
                         currentVersion = versinInfo.android.app_info;
                     }
