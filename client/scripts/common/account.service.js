@@ -452,10 +452,9 @@
          */
         function sendCode(account, code_token, type, account_type) {
             return publicHttp.dealPublicRequest(o.sendCodeApi, 'POST', angular.extend({
-                    account: account,
                     code_token: code_token,
                     type: type
-                }, account ? {} : {account_type : account_type ? account_type : '1'})
+                }, account ? { account: account } : {account_type : account_type ? account_type : '1'})
             );
         }
 
