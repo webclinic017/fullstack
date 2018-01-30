@@ -179,7 +179,7 @@ module.exports = function (app) {
             } else {
                 extendObj = {
                     regularTip: '订单同步',
-                    download: '打开APP 领$200体验金',
+                    download: '打开APP 领$2000体验金',
                     coInfo: "Tiger Financial Technology PTY. Ltd."
                 }
             }
