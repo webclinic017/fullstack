@@ -142,8 +142,8 @@
 
         var callConfig = {
             type: type,
-            title: "你投资，我出钱！注册就送200美金！",
-            description: "我刚刚在"+ (coMap[getCoName()] || '老虎外汇') +"领了200美金，好东西必须分享，你也快来看看！",
+            title: "你投资，我出钱！注册就送2000美金！",
+            description: "我刚刚在"+ (coMap[getCoName()] || '老虎外汇') +"领了2000美金，好东西必须分享，你也快来看看！",
             url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
         };
 
