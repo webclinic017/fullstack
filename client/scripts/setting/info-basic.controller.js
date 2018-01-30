@@ -123,7 +123,7 @@
             $scope.basicInfo.desc = newVal.desc;
 
         },true);
-        initLocation();
+        // initLocation();
 
         function initLocation() {
             account.getLocation().then(function (data) {
@@ -222,10 +222,10 @@
             // showErr(formName, 'strategy');
             // showErr(formName, 'desc');
 
-            if ($scope.basicInfo.locationWorld.value == 'CN') {
-                showErr(formName, 'locationState');
-                showErr(formName, 'locationCity');
-            }
+            // if ($scope.basicInfo.locationWorld.value == 'CN') {
+            //     showErr(formName, 'locationState');
+            //     showErr(formName, 'locationCity');
+            // }
             
             if ($scope[formName].$invalid) {
                 return;
@@ -242,9 +242,9 @@
             $scope.clickable = false;
             account.setBasicInfo(
                 $scope.basicInfo.username,
-                $scope.basicInfo.locationWorld.value,
-                $scope.basicInfo.locationState.value,
-                $scope.basicInfo.locationCity.value
+                // $scope.basicInfo.locationWorld.value,
+                // $scope.basicInfo.locationState.value,
+                // $scope.basicInfo.locationCity.value
                 // $scope.basicInfo.special.value, 
                 // $scope.basicInfo.strategy, 
                 // $scope.basicInfo.desc
@@ -259,9 +259,9 @@
                     // 神策数据统计
                     sa.setProfile({
                         $name: $scope.basicInfo.username,
-                        country: $scope.basicInfo.locationWorld.key,
-                        $province: $scope.basicInfo.locationState.key,
-                        $city: $scope.basicInfo.locationCity.key,
+                        // country: $scope.basicInfo.locationWorld.key,
+                        // $province: $scope.basicInfo.locationState.key,
+                        // $city: $scope.basicInfo.locationCity.key,
                         trade_feature: $scope.basicInfo.special.value
                     });
                     
