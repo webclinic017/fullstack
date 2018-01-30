@@ -513,9 +513,5 @@
         function setUsername(params){
             return publicHttp.dealPublicRequest(o.setUsername, 'PUT', params);
         }
-
-        function setUsername(params) {
-            return publicHttp.dealPublicRequest(o.setUsername, 'PUT', params);
-        }
     }
 })();
