@@ -1,39 +1,7 @@
 <div ng-controller="SettingInfoBasicController" >
     <form name="basicInfoForm" novalidate>
-        <div class="row">
-            <div class="col-xs-2 pd-rg-0">
-                <label for="">昵称</label>
-            </div>
-            
-            <div class="col-xs-5">
-                <div class="form-control-wrapper">
-                    <input class="form-control"
-                           name="username"
-                           type="text"
-                           placeholder="昵称"
-                           required
-                           ng-class="{'form-control-error': frontErr.username.show && basicInfoForm.username.$invalid}"
-                           ng-model="basicInfo.username"
-                           twform-valid-txt
-                           data-txt-type="username"
-                           data-min-len="4"
-                           data-max-len="16"
-                           ng-blur="showErr('basicInfoForm', 'username')"
-                           ng-focus="hideErr('basicInfoForm', 'username')">
-
-                    <div ng-show="frontErr.username.show">
-                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.username.$error.required">
-                            请输入昵称
-                        </p>
-                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.username.$error.twformValidTxt">
-                            {{frontErr.username.tip}}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" ng-if="basicInfo.locationWorld.value == 'CN'">
+        
+        <!-- <div class="row" ng-if="basicInfo.locationWorld.value == 'CN'">
             <div class="col-xs-2 pd-rg-0">
                 <label for="">所在地</label>
             </div>
@@ -98,8 +66,58 @@
                     </div>
                 </div>
             </div>   
-        </div>
+        </div> -->
+        <div class="row">
+            <div class="col-xs-2 pd-rg-0">
+                <label for="">昵称</label>
+            </div>
+            
+            <div class="col-xs-5">
+                <div class="form-control-wrapper">
+                    <input class="form-control"
+                            name="username"
+                            type="text"
+                            placeholder="昵称"
+                            required
+                            ng-class="{'form-control-error': frontErr.username.show && basicInfoForm.username.$invalid}"
+                            ng-model="basicInfo.username"
+                            twform-valid-txt
+                            data-txt-type="username"
+                            data-min-len="4"
+                            data-max-len="16"
+                            ng-blur="showErr('basicInfoForm', 'username')"
+                            ng-focus="hideErr('basicInfoForm', 'username')">
 
+                    <div ng-show="frontErr.username.show">
+                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.username.$error.required">
+                            请输入昵称
+                        </p>
+                        <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.username.$error.twformValidTxt">
+                            {{frontErr.username.tip}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 pd-rg-0">
+                <label for="">国家</label>
+            </div>
+            <div class="col-xs-5">
+                <div class="form-control-wrapper">
+                    <div class="select">
+                        <input class="form-control disabled"
+                            name="locationState"
+                            type="text"
+                            placeholder="国家"
+                            disabled
+                            required
+                            ng-model="personal.region.world_name"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="text-center mg-bt-20 mg-tp-20">
             <div ng-show="backErr.system.show">
                 <p class="alert-system">
