@@ -8,19 +8,19 @@
     RedbagOwnController.$inject = ['$scope', 'redbag', '$modal', '$timeout'];
 
     function RedbagOwnController($scope, redbag, $modal, $timeout) {
-        console.log($scope.personal);
-        var hasAlerted = false;
-        $scope.$on('global_controller_has_get_info', function () {
-            console.log('$scope.personal.dredged_type',$scope.personal.dredged_type)
-            var type = $scope.personal.dredged_type;
-            // 未开通
-            if(type == 'unknow' && !hasAlerted){
-                hasAlerted = true
-                $scope.$emit('global.openDredgeMdl', {
-                    position: 'RedbagOwnController',
-                });
-            }
-        });
+        // console.log($scope.personal);
+        // var hasAlerted = false;
+        // $scope.$on('global_controller_has_get_info', function () {
+        //     console.log('$scope.personal.dredged_type',$scope.personal.dredged_type)
+        //     var type = $scope.personal.dredged_type;
+        //     // 未开通
+        //     if(type == 'unknow' && !hasAlerted){
+        //         hasAlerted = true
+        //         $scope.$emit('global.openDredgeMdl', {
+        //             position: 'RedbagOwnController',
+        //         });
+        //     }
+        // });
 
         var pagesize = 9;
         $scope.tabType = 1;             // 1 可用， 2 红包记录
