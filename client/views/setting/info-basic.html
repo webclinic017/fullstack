@@ -1,24 +1,6 @@
 <div ng-controller="SettingInfoBasicController" >
     <form name="basicInfoForm" novalidate>
-        <div class="row">
-            <div class="col-xs-2 pd-rg-0">
-                <label for="">国家</label>
-            </div>
-            <div class="col-xs-5">
-                <div class="form-control-wrapper">
-                    <div class="select">
-                        <input class="form-control disabled"
-                            name="locationState"
-                            type="text"
-                            placeholder="国家"
-                            disabled
-                            required
-                            ng-model="personal.region.world_name"
-                        >
-                    </div>
-                </div>
-            </div>
-        </div>
+        
         <!-- <div class="row" ng-if="basicInfo.locationWorld.value == 'CN'">
             <div class="col-xs-2 pd-rg-0">
                 <label for="">所在地</label>
@@ -113,6 +95,25 @@
                         <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.username.$error.twformValidTxt">
                             {{frontErr.username.tip}}
                         </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 pd-rg-0">
+                <label for="">国家</label>
+            </div>
+            <div class="col-xs-5">
+                <div class="form-control-wrapper">
+                    <div class="select">
+                        <input class="form-control disabled"
+                            name="locationState"
+                            type="text"
+                            placeholder="国家"
+                            disabled
+                            required
+                            ng-model="personal.region.world_name"
+                        >
                     </div>
                 </div>
             </div>
