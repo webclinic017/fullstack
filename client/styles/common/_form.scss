@@ -40,6 +40,9 @@
         border: none;
         border-bottom: 1px solid $input-border;
     }
+    &.disabled {
+        cursor: not-allowed;
+    }
 }
 
 .form-control-error {

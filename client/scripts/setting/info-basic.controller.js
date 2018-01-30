@@ -104,7 +104,7 @@
         //     if (newVal === oldVal) return;
         //     if (newVal.username === undefined) return;
         //     // console.info(newVal);
-            
+
         //     $scope.basicInfo.username = newVal.username;
         //     $scope.basicInfo.special = {
         //         key: newVal.trading_type,
@@ -113,17 +113,17 @@
         //     $scope.basicInfo.strategy = newVal.trading_strategy;
         //     $scope.basicInfo.desc = newVal.desc;
         // }, true);
-        $scope.$watch('settingInfo', function(newVal, oldVal, scope){
+        $scope.$watch('settingInfo', function (newVal, oldVal, scope) {
             $scope.basicInfo.username = newVal.username;
             $scope.basicInfo.special = {
-                key : newVal.trading_type,
-                value : newVal.trading_type
+                key: newVal.trading_type,
+                value: newVal.trading_type
             };
             $scope.basicInfo.strategy = newVal.trading_strategy;
             $scope.basicInfo.desc = newVal.desc;
 
-        },true);
-        initLocation();
+        }, true);
+        // initLocation();
 
         function initLocation() {
             account.getLocation().then(function (data) {
@@ -144,15 +144,15 @@
                             value: data.city_code
                         }
                     });
-                    
+
                     $scope.$broadcast('locationInfoReady');
                 }
-                
+
             });
 
             $scope.$on('locationInfoReady', function () {
                 // getRegions('world', 'worlds');
-                
+
                 if ($scope.basicInfo.locationWorld.value == 'CN') {
                     getRegions('state', 'states', $scope.basicInfo.locationWorld.value);
                     getRegions('city', 'cities', $scope.basicInfo.locationState.value);
@@ -163,7 +163,7 @@
         // 根据 region code 获取对应的 regions
         function getRegions(regionName, regionsName, upperRegionCode) {
             var tmp;
-            
+
             switch (regionName) {
                 case 'world':
                     tmp = account.getWorlds();
@@ -222,11 +222,11 @@
             // showErr(formName, 'strategy');
             // showErr(formName, 'desc');
 
-            if ($scope.basicInfo.locationWorld.value == 'CN') {
-                showErr(formName, 'locationState');
-                showErr(formName, 'locationCity');
-            }
-            
+            // if ($scope.basicInfo.locationWorld.value == 'CN') {
+            //     showErr(formName, 'locationState');
+            //     showErr(formName, 'locationCity');
+            // }
+
             if ($scope[formName].$invalid) {
                 return;
             }
@@ -241,10 +241,10 @@
 
             $scope.clickable = false;
             account.setBasicInfo(
-                $scope.basicInfo.username,
-                $scope.basicInfo.locationWorld.value,
-                $scope.basicInfo.locationState.value,
-                $scope.basicInfo.locationCity.value
+                $scope.basicInfo.username
+                // $scope.basicInfo.locationWorld.value,
+                // $scope.basicInfo.locationState.value,
+                // $scope.basicInfo.locationCity.value
                 // $scope.basicInfo.special.value, 
                 // $scope.basicInfo.strategy, 
                 // $scope.basicInfo.desc
@@ -259,23 +259,23 @@
                     // 神策数据统计
                     sa.setProfile({
                         $name: $scope.basicInfo.username,
-                        country: $scope.basicInfo.locationWorld.key,
-                        $province: $scope.basicInfo.locationState.key,
-                        $city: $scope.basicInfo.locationCity.key,
+                        // country: $scope.basicInfo.locationWorld.key,
+                        // $province: $scope.basicInfo.locationState.key,
+                        // $city: $scope.basicInfo.locationCity.key,
                         trade_feature: $scope.basicInfo.special.value
                     });
-                    
+
                     window.location.reload();
-                    
+
                     $timeout(function () {
                         $scope.backErr.system.show = false;
                         $scope.backErr.system.msg = '';
                     }, 3000);
                 } else {
-                    
+
                     $scope.backErr.system.show = true;
                     $scope.backErr.system.msg = data.message;
-                    
+
                     $timeout(function () {
                         $scope.backErr.system.show = false;
                         $scope.backErr.system.msg = '';
@@ -291,7 +291,7 @@
             }
 
             // 如果需要后端验错，这里是隐藏错误，所以把状态重置为后端未验证的状态
-            if($scope.backErr[controlName]) {
+            if ($scope.backErr[controlName]) {
                 $scope.backErr[controlName].show = false;
                 $scope.backErr[controlName].status = 0;
             }
