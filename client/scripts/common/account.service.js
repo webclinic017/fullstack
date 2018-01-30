@@ -510,12 +510,12 @@
         function updataId(params) {
             return publicHttp.dealPublicRequest(o.updataId, 'PUT', params);
         }
-<<<<<<< Updated upstream
-=======
+        function setUsername(params){
+            return publicHttp.dealPublicRequest(o.setUsername, 'PUT', params);
+        }
 
         function setUsername(params) {
             return publicHttp.dealPublicRequest(o.setUsername, 'PUT', params);
         }
->>>>>>> Stashed changes
     }
 })();
