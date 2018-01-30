@@ -308,12 +308,12 @@ module.exports = {
         "en": "A: “Trade” - “History” - “Record”, check “Cancel”."
     },
     "faqAsset15": {
-        "zh": "Q：$200体验金可以出金吗？体验金交易产生的盈利可以出金吗？",
-        "en": "Q: $ 200 experience funds can be used to withdraw? Experienced funds generated profits can be used to withdraw?"
+        "zh": "Q：$2000体验金可以出金吗？体验金交易产生的盈利可以出金吗？",
+        "en": "Q: $ 2000 experience funds can be used to withdraw? Experienced funds generated profits can be used to withdraw?"
     },
     "faqAsset16": {
-        "zh": "A：$200体验金账户可直接用于交易，体验金和盈利不支持出金，同时亏损也无需补偿。在您首次入金后，系统将会自动将账户升级为真实交易账户，真实账户不含体验金。",
-        "en": "A: $200 Experience fundscan be used directly for trading, experience funds and profit can not withdrawal, experience funds trading losses generated without compensation."
+        "zh": "A：$2000体验金账户可直接用于交易，体验金和盈利不支持出金，同时亏损也无需补偿。在您首次入金后，系统将会自动将账户升级为真实交易账户，真实账户不含体验金。",
+        "en": "A: $2000 Experience fundscan be used directly for trading, experience funds and profit can not withdrawal, experience funds trading losses generated without compensation."
     },
     "faqMeta1": {
         "zh": "Q：如何下载 MT4 平台？",
