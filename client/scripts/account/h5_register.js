@@ -30,7 +30,6 @@
     var areaCode = ''
     var areaCodes = []
     var $areaCode = $('#areaCode')
-    console.log($areaCode[0])
     if($areaCode[0]){
         $areaCode.on('change', function(e){
             areaCode = e.target.value
