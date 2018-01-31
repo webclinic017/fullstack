@@ -26,6 +26,25 @@
     //     })
     // }, 500)
 
+    // 获取phonecode
+    var areaCode = ''
+    var areaCodes = []
+    var $areaCode = $('#areaCode')
+    console.log($areaCode[0])
+    if($areaCode[0]){
+        $areaCode.on('change', function(e){
+            areaCode = e.target.value
+            $('#areaCodeShow').html(e.target.value ? '+ '+ e.target.value : 'Area Code')
+        })
+        publicRequest('getCountries', 'GET').then(function (data) {
+            var temp = "<option value=''>"+lang.text('register.areaCode')+"</option>"
+            data.data.forEach(function(item){
+                temp += "<option value="+ item.phone_code +">"+ '+' + item.phone_code+ " ("+ (lang.curLang('en') ? item.name_en : item.name_cn) +")" +"</option>"
+            })
+            $areaCode.html(temp)
+        });
+    }
+    
     $(function () {
         /*定义全局变量*/
         var oReg = {};
@@ -74,7 +93,7 @@
                 var flag = $("#verify_code_btn").hasClass("disable");
                 if (flag) {
                     layer.open({
-                        content: '请一分钟后再试!',
+                        content: lang.text('register.code'),
                         skin: 'msg',
                         anim: false,
                         time: 1.2 /*1.2秒后自动关闭*/
@@ -90,7 +109,7 @@
             if (!token) {
                 sa.track('set_token_failed');
                 layer.open({
-                    content: '网络异常,请刷新重试!',
+                    content: lang.text('register.networkErr'),
                     skin: 'msg',
                     anim: false,
                     time: 2 /*1.2秒后自动关闭*/
@@ -108,6 +127,7 @@
             layer.open({ type: 2, shadeClose: false });
             publicRequest('getPhoneCode', 'POST', {
                 phone: $("#telephone").val(),
+                phone_code: areaCode,
                 code_token: $.cookie("code_token"),
                 type: 1
             }).then(function (data) {
@@ -116,7 +136,7 @@
                 if (data.is_succ) {
                     /*提示*/
                     layer.open({
-                        content: '验证码已发送!',
+                        content: lang.text('register.codeSent'),
                         skin: 'msg',
                         anim: false,
                         time: 1.2 /*1.2秒后自动关闭*/
@@ -134,7 +154,7 @@
                             if (duration <= 0) {
                                 clearInterval(interval);
                                 interval = null;
-                                $("#verify_code_btn").removeClass("disable").html("重新获取");
+                                $("#verify_code_btn").removeClass("disable").html(lang.text('register.resendCode'));
                                 duration = 59;
                                 /*重新获取token*/
                                 set_token();
@@ -144,7 +164,7 @@
                 } else {
                     set_token();
                     layer.open({
-                        content: '获取失败,请重试!',
+                        content: data.message,
                         skin: 'msg',
                         anim: false,
                         time: 2 /*3秒后自动关闭*/
@@ -157,18 +177,31 @@
             /*获取手机号*/
             var telephone = $("#telephone");
             var rPhone = telephone.val() ? telephone.val() : "";
-            var isMobile = /^(13|14|15|17|18)\d{9}$/;
-            var isPhone = /^((0\d{2,4})-)?(\d{7,8})(-(\d{2,}))?$/;
-            if ((telephone.val() == "") || (!isMobile.test(telephone.val()) && !isPhone.test(telephone.val()))) {
+            // var isMobile = /^(13|14|15|17|18)\d{9}$/;
+            // var isPhone = /^((0\d{2,4})-)?(\d{7,8})(-(\d{2,}))?$/;
+            // || (!isMobile.test(telephone.val()) && !isPhone.test(telephone.val()))
+            if ((telephone.val() == "")) {
                 /*提示*/
                 layer.open({
-                    content: '请输入有效的手机号',
+                    content: lang.text('register.effcient'),
                     skin: 'msg',
                     anim: false,
                     time: 1.2 /*1.2秒后自动关闭*/
                 });
                 return false;
-            } else {
+            } 
+            // 如果本注册页包含areaCode那么提示错误
+            else if(!areaCode && $areaCode[0]){
+                /*提示*/
+                layer.open({
+                    content: lang.text('register.areaCodeErr'),
+                    skin: 'msg',
+                    anim: false,
+                    time: 1.2 /*1.2秒后自动关闭*/
+                });
+                return false;
+            }
+            else {
                 return true;
             }
         }
@@ -183,7 +216,7 @@
             ) {
                 /*提示*/
                 layer.open({
-                    content: '密码为6-15位字母、数字或符号组合',
+                    content: lang.text('register.password'),
                     skin: 'msg',
                     anim: false,
                     time: 2 /*2秒后自动关闭*/
@@ -198,7 +231,7 @@
             if ($("#verify_code").val() == "") {
                 /*提示*/
                 layer.open({
-                    content: '请输入验证码!',
+                    content: lang.text('register.code1'),
                     skin: 'msg',
                     anim: false,
                     time: 2 /*2秒后自动关闭*/
@@ -321,7 +354,7 @@
                         if (data.is_succ) {
                             if (data.data) {
                                 layer.open({
-                                    content: '此号码已注册!',
+                                    content: lang.text('register.registerd'),
                                     skin: 'msg',
                                     anim: false,
                                     time: 2 /*1.2秒后自动关闭*/
@@ -367,6 +400,7 @@
                 
                 publicRequest('regOrLogin', 'POST', {
                     phone: $("#telephone").val() || null,
+                    phone_code: areaCode || null,
                     // password: $("#password").val() || null,
                     password: $("#verify_code").val() || $("#password").val() || null,
                     login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录

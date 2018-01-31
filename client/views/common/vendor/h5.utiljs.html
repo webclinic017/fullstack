@@ -47,7 +47,7 @@
         } catch (e) {
             return false;
         }
-        
+
     }
 
     /*判断是否在APP中*/
@@ -203,13 +203,89 @@
     function innerSize() {
         return {
             width: window.innerWidth
-            || document.documentElement.clientWidth
-            || document.body.clientWidth,
+                || document.documentElement.clientWidth
+                || document.body.clientWidth,
 
             height: window.innerHeight
-            || document.documentElement.clientHeight
-            || document.body.clientHeight
+                || document.documentElement.clientHeight
+                || document.body.clientHeight
         }
     }
 
+    var langData = {
+        invite: {
+            registerd: {
+                zh: '此号码已注册!',
+                en: 'This No. has been registerd!'
+            },
+            effcient: {
+                zh: '请输入有效的手机号!',
+                en: 'Please input an effcient phone No.'
+            }
+        },
+        register: {
+            areaCode: {
+                zh: '区号',
+                en: 'Area Code',
+            },
+            areaCodeErr: {
+                zh: '请选择区号',
+                en: 'Please Select the area code',
+            },
+            code: {
+                zh: '请一分钟后再试！',
+                en: 'Please try after 1 minute!',
+            },
+            code1: {
+                zh: '请输入验证码!',
+                en: 'Please input the verify code!',
+            },
+            codeSent: {
+                zh: '验证码已发送',
+                en: 'Verify code has been sent',
+            },
+            resendCode: {
+                zh: '重新获取',
+                en: 'resend',
+            },
+            networkErr: {
+                zh: '网络异常,请刷新重试!',
+                en: 'network error',
+            },
+            registerd: {
+                zh: '此号码已注册!',
+                en: 'This No. has been registerd!'
+            },
+            effcient: {
+                zh: '请输入有效的手机号!',
+                en: 'Please input an effcient phone No.'
+            },
+            password: {
+                zh: '密码为6-15位字母、数字或符号组合',
+                en: 'Password was combined by letters, Numbers and symbols, combination of two or more length is 6 to 15 characters'
+            }
+        }
+    }
+
+    var lang = {
+        text: function (moduleName) {
+            var curLang = $.cookie('lang') || 'zh'
+            var moduleNameInfo = moduleName.split('.'), area = '', name = ""
+            if (moduleNameInfo.length == 2) {
+                area = moduleNameInfo[0]
+                name = moduleNameInfo[1]
+                return langData[area][name][curLang]
+            } else {
+                name = moduleNameInfo[0]
+                return langData[name][curLang]
+            }
+        },
+        curLang: function(lang){
+            if(lang){
+                return $.cookie('lang') == lang
+            } else {
+                return $.cookie('lang') || 'zh'
+            }
+        }
+    }
 </script>

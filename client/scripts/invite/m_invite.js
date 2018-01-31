@@ -41,7 +41,7 @@
                 if (!data) return;
                 if (data.is_succ) {
                     if (data.data) {
-                        $("#telephone").addClass("warning").val("此号码已注册!");
+                        $("#telephone").addClass("warning").val( lang.text('invite.registerd') );
                     } else {
                         $("#telephone").removeClass("warning");
                     }
@@ -76,7 +76,7 @@
         if ((telephone.val() == "") || (!isMobile.test(telephone.val()) && !isPhone.test(telephone.val()))) {
             /*提示*/
             layer.open({
-                content: '请输入有效的手机号',
+                content: lang.text('invite.effcient'),
                 skin: 'msg',
                 anim: false,
                 time: 1.2 /*1.2秒后自动关闭*/
