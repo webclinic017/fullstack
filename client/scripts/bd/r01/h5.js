@@ -25,47 +25,87 @@
     var rewardId = 1;
     var rewardLst = [
         {
-            phone: "188****1750",
+            phone: "139****3321",
             prize: "8.8"
         },
         {
-            phone: "188****2206",
+            phone: "188****5552",
             prize: "8.8"
         },
         {
-            phone: "188****2587",
+            phone: "137****9240",
             prize: "8.8"
         },
         {
-            phone: "186****7193",
-            prize: "188.8"
-        },
-        {
-            phone: "188****3088",
-            prize: "88.8"
-        },
-        {
-            phone: "135****1277",
-            prize: "8.8"
-        },
-        {
-            phone: "182****4321",
-            prize: "8.8"
-        },
-        {
-            phone: "134****3911",
+            phone: "183****8797",
             prize: "18.8"
         },
         {
-            phone: "136****4210",
-            prize: "88.8"
-        },
-        {
-            phone: "188****5019",
+            phone: "150****3504",
             prize: "8.8"
         },
         {
-            phone: "188****4311",
+            phone: "135****3728",
+            prize: "8.8"
+        },
+        {
+            phone: "136****7683",
+            prize: "888.8"
+        },
+        {
+            phone: "186****8951",
+            prize: "8.8"
+        },
+        {
+            phone: "186****1337",
+            prize: "8.8"
+        },
+        {
+            phone: "182****1112",
+            prize: "8.8"
+        },
+        {
+            phone: "133****4232",
+            prize: "18.8"
+        },
+        {
+            phone: "185****0268",
+            prize: "88.8"
+        },
+        {
+            phone: "189****1989",
+            prize: "8.8"
+        },
+        {
+            phone: "150****2015",
+            prize: "8.8"
+        },
+        {
+            phone: "157****9393",
+            prize: "88.8"
+        },
+        {
+            phone: "152****6667",
+            prize: "8.8"
+        },
+        {
+            phone: "188****4321",
+            prize: "8.8"
+        },
+        {
+            phone: "150****7820",
+            prize: "888.8"
+        },
+        {
+            phone: "135****1785",
+            prize: "8.8"
+        },
+        {
+            phone: "186****6317",
+            prize: "8.8"
+        },
+        {
+            phone: "183****6161",
             prize: "8.8"
         }
     ];
@@ -109,18 +149,19 @@
     });
     
     function getRewardLst () {
-        publicRequest('getRewardLst', 'GET', {
-            activity_id: activityId,
-            reward_id: rewardId,
-            limit: 7
-        }).then(function (data) {
-            var lst = [];
-            // console.log(data.data);
-            if (data.is_succ) {
-                lst = data.data;
-                appendRewardLst(lst);
-            }
-        });
+        // publicRequest('getRewardLst', 'GET', {
+        //     activity_id: activityId,
+        //     reward_id: rewardId,
+        //     limit: 7
+        // }).then(function (data) {
+        //     var lst = [];
+        //     // console.log(data.data);
+        //     if (data.is_succ) {
+        //         lst = data.data;
+        //         appendRewardLst(lst);
+        //     }
+        // });
+        appendRewardLst();
     }
 
     function appendRewardLst (list) {
