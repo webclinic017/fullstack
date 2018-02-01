@@ -236,7 +236,7 @@
 
             if (!news.open) return;
 
-            $http.get('http://api-sit.wallstreetcn.com/apiv1/finfo/'+news.calendar_key+'/detail').then(function (data) {
+            $http.get('https://api-sit.wallstreetcn.com/apiv1/finfo/'+news.calendar_key+'/detail').then(function (data) {
                 // console.log(data);
                 news.details = data.data;
                 news.errMsg = false;
