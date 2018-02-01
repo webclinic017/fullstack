@@ -26,8 +26,8 @@
     //     })
     // }, 500)
 
-    // 获取phonecode
-    var areaCode = ''
+    // 获取phonecode，默认值为 86
+    var areaCode = '86'
     var areaCodes = []
     var $areaCode = $('#areaCode')
     if($areaCode[0]){
@@ -38,8 +38,10 @@
         publicRequest('getCountries', 'GET').then(function (data) {
             var temp = "<option value=''>"+lang.text('register.areaCode')+"</option>"
             data.data.forEach(function(item){
-                temp += "<option value="+ item.phone_code +">"+ '+' + item.phone_code+ " ("+ (lang.curLang('en') ? item.name_en : item.name_cn) +")" +"</option>"
+                var selected = item.phone_code == 86 ? 'selected' : ''
+                temp += "<option "+ selected +" value="+ item.phone_code  +">"+ '+' + item.phone_code+ " ("+ (lang.curLang('en') ? item.name_en : item.name_cn) +")" +"</option>"
             })
+            $('#areaCodeShow').html('+86')
             $areaCode.html(temp)
         });
     }
