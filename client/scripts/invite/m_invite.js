@@ -209,16 +209,16 @@
                     $(".share02_main__content .info .num").html(data.data.record_count);
                     
                     if (data.data.bonus_status == 1) {
-                        $(cBtn).html("不可兑换");
+                        $(cBtn).html(lang.text('invite.Unexchangeable'));
                     } else if (data.data.bonus_status == 2) {
-                        $(cBtn).html("点击领取10美金");
+                        $(cBtn).html(lang.text('invite.get$10'));
                         $(cBtn).addClass("active");
                     } else if (data.data.bonus_status == 3) {
-                        $(cBtn).html("已兑换");
+                        $(cBtn).html(lang.text('invite.Exchanged'));
                     } else if (data.data.bonus_status == 4) {
-                        $(cBtn).html("已过期");
+                        $(cBtn).html(lang.text('invite.Expired'));
                     } else if (data.data.bonus_status == 5) {
-                        $(cBtn).html("已失效");
+                        $(cBtn).html(lang.text('invite.Lapsed'));
                     }
                     
                     /*模板引擎*/
