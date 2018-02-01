@@ -101,9 +101,9 @@
             layer.open({ type: 2, shadeClose: false });
             publicRequest('getPhoneCode', 'POST', {
                 account: $("#telephone").val(),
+                phone_code: areaCode,
                 code_token: $.cookie("code_token"),
-                type: 1,
-                account_type: 1
+                type: 1
             }).then(function (data) {
                 layer.closeAll();
                 if (!data) return;
