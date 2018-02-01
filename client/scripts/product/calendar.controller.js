@@ -93,7 +93,9 @@
         $scope.setDateList = setDateList;
         $scope.showSelectBox = showSelectBox;
         $scope.dealNewsInfo = dealNewsInfo;
+        $scope.showDetails = showDetails;
         $scope.toDou = toDou;
+        $scope.getDetailTime = getDetailTime;
 
         $scope.$watch('selectStr', function (newVal, oldVal) {
             // console.log(newVal, oldVal);
@@ -187,6 +189,7 @@
 
                 angular.forEach($scope.newsInfoTemp, function (value, index) {
                     value.tw_time = getTwTime(value.timestamp);
+                    value.open = false;
                 });
 
                 dealNewsInfo();
@@ -226,6 +229,61 @@
                     $scope.newsInfo = $scope.newsInfoTemp;
                 }
             });
+        }
+
+        function showDetails (news) {
+            news.open = !news.open;
+
+            if (!news.open) return;
+
+            $http.get('http://api-sit.wallstreetcn.com/apiv1/finfo/'+news.calendar_key+'/detail').then(function (data) {
+                // console.log(data);
+                news.details = data.data;
+                news.errMsg = false;
+                news.bindChartOptions = data.data;
+
+                if (data.code !== 20000) {
+                    news.errMsg = data.message;
+                }
+                // draw chart
+                if (data.data.items && data.data.items.length > 0) {
+                    var xOptions = [];
+                    var dataOptions = [
+                        {
+                            name: '预测值',
+                            data: []
+                        },
+                        {
+                            name: '公布值',
+                            data: []
+                        }
+                    ];
+                    angular.forEach(data.data.items, function (value, index) {
+                        xOptions.unshift(value.human_date.slice(0,10));
+                        var o = value.forecast ? parseFloat(value.forecast) : null;
+                        var t = value.actual ? parseFloat(value.actual) : null;
+                        dataOptions[0].data.unshift(o);
+                        dataOptions[1].data.unshift(t);
+                    });
+
+                    news.bindChartOptions = {
+                        xOptions: xOptions,
+                        dataOptions: dataOptions
+                    };
+                } else {
+                    news.bindChartOptions = {
+                        xOptions: [],
+                        dataOptions: []
+                    };
+                }
+            });  
+        }
+
+        function getDetailTime (timestamp) {
+            if (!timestamp) return '';
+            var oD = new Date(timestamp*1000);
+
+            return toDou(oD.getMonth()+1) + '-' + toDou(oD.getDate()) + ' ' + toDou(oD.getHours())+':'+toDou(oD.getMinutes());
         }
 
         function getTwTime (timestamp) {

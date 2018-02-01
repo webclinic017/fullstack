@@ -78,10 +78,14 @@
                     <i class="fa fa-star" ng-class="{active: news.importance >= 2}"></i>
                     <i class="fa fa-star" ng-class="{active: news.importance >= 3}"></i>
                 </div>
-                <div class="tit_info clearfix">
+                <div class="tit_info clearfix" ng-click="showDetails(news)">
                     <img ng-src="{{news.flagURL}}">
-                    <span>
+                    <span class="title">
                         {{news.mark && news.country}}{{news.title}}
+                    </span>
+                    <span class="icon">
+                        <i class="fa fa-chevron-down" ng-show="!news.open"></i>
+                        <i class="fa fa-chevron-up" ng-show="news.open"></i>
                     </span>
                 </div>
                 <div class="cont_info">
@@ -97,6 +101,49 @@
                         前值
                         <span>{{news.previous || '--'}}</span>
                     </p>
+                </div>
+
+                <div class="info_details_box" ng-show="news.open">
+                    <div class="info_details">
+                        <div class="title">{{news.mark && news.country}}{{news.title}}</div>
+
+                        <div style="min-width: 400px; height: 300px; margin: 20px 0px;">
+                            <div tw-spline-chart bind-chart-options="news.bindChartOptions"></div>
+                        </div>
+
+                        <div class="tip_item">下次公布时间：{{getDetailTime(news.details.detail.next_fab_time)}}</div>
+                        <div class="tip_item">数据公布机构：{{news.details.detail.public_organization}}</div>
+                        <div class="tip_item">发布频率：{{news.details.detail.release_frequency}}</div>
+                        <div class="tip_item">统计方法：{{news.details.detail.statistical_method}}</div>
+
+                        <ul class="desc_item">
+                            <li class="item">
+                                <div class="tit">
+                                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                    <strong>数据影响</strong>
+                                </div>
+                                <div class="tip">{{news.details.detail.data_influence}}</div>
+                            </li>
+                            <li class="item">
+                                <div class="tit">
+                                    <i class="fa fa-question" aria-hidden="true"></i>
+                                    <strong>数据释义</strong>
+                                </div>
+                                <div class="tip">{{news.details.detail.data_paraphrase}}</div>
+                            </li>
+                            <li class="item">
+                                <div class="tit">
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                    <strong>关注理由</strong>
+                                </div>
+                                <div class="tip">{{news.details.detail.focus_reason}}</div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div ng-show="news.errMsg" class="info_details_msg">
+                        {{news.errMsg}}
+                    </div>
                 </div>
             </li>
         </ul>
