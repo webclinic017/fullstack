@@ -10,7 +10,12 @@
                 </p>
                 <h6 class="desp_title faq"><%=lang.text("faqAccount3")%></h6>
                 <p class="desp_subdesp faq">
-                    <%=lang.text("faqAccount4")%>
+                    <%=lang.text("faqAccount4")%> <br>
+                    <%if(lang.isVersion('uk')){%>
+                        <%=lang.text("faqAccount4_1_uk")%> 
+                    <%} else {%>
+                        <%=lang.text("faqAccount4_1")%> 
+                    <%}%>
                 </p>
                 <h6 class="desp_title faq"><%=lang.text("faqAccount5")%></h6>
                 <p class="desp_subdesp faq">
@@ -26,7 +31,8 @@
                 </p>
                 <h6 class="desp_title faq"><%=lang.text("faqAccount11")%></h6>
                 <p class="desp_subdesp faq">
-                    <%=lang.text("faqAccount12")%>
+                    <%=lang.text("faqAccount12")%> <br>
+                    <%=lang.text("faqAccount12_1")%>
                 </p>
                 <h6 class="desp_title faq"><%=lang.text("faqAccount13")%></h6>
                 <p class="desp_subdesp faq">
@@ -71,29 +77,37 @@
                 <p class="desp_subdesp faq">
                     <%=lang.text("faqTrade6")%>
                 </p>
-                <h6 class="desp_title faq"><%=lang.text("faqTrade7")%></h6>
-                <%if(lang.isTigerSpecial()){%>
+
+                <%if(!lang.isVersion('uk')){%>
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade7")%></h6>
+                    <%if(lang.isTigerSpecial()){%>
+                        <p class="desp_subdesp faq">
+                            A：对于外汇，<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>向客户同时提供3种杠杆， 50倍、100倍和200倍。 
+                            </br>
+                            对于CFD股指差价合约，我们只提供一种杠杆1:100。
+                        </p>
+                    <%} else { %>
+                        <p class="desp_subdesp faq">
+                            <%=lang.text("faqTrade8")%>
+                            </br>
+                            <%=lang.text("faqTrade9")%>
+                        </p>
+                    <%}%>
+                    
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade10")%></h6>
                     <p class="desp_subdesp faq">
-                        A：对于外汇，<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>向客户同时提供3种杠杆， 50倍、100倍和200倍。 
-                        </br>
-                        对于CFD股指差价合约，我们只提供一种杠杆1:100。
-                    </p>
-                <%} else { %>
-                    <p class="desp_subdesp faq">
-                        <%=lang.text("faqTrade8")%>
-                        </br>
-                        <%=lang.text("faqTrade9")%>
+                        <%=lang.text("faqTrade11")%>
                     </p>
                 <%}%>
                 
-                <h6 class="desp_title faq"><%=lang.text("faqTrade10")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade11")%>
-                </p>
                 <h6 class="desp_title faq"><%=lang.text("faqTrade12")%></h6>
                 <%if(!lang.isTigerSpecial()){%>
                     <p class="desp_subdesp faq">
-                        <%=lang.text("faqTrade13")%>
+                        <%if(lang.isVersion('uk')){%>
+                            <%=lang.text("faqTrade13_uk")%> 
+                        <%} else {%>
+                            <%=lang.text("faqTrade13")%>
+                        <%}%>
                     </p>
                 <%} else { %>
                     <p class="desp_subdesp faq">
@@ -198,13 +212,26 @@
                     <%=lang.text("faqAsset2")%>
                 </p>
                 <h6 class="desp_title faq"><%=lang.text("faqAsset3")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAsset4")%>
-                </p>
+                <%if(lang.isVersion('uk')){%>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAsset4_uk")%>
+                    </p>
+                <%} else {%>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAsset4")%>
+                    </p>
+                <%}%>
                 <h6 class="desp_title faq"><%=lang.text("faqAsset5")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAsset6")%>
-                </p>
+                
+                <%if(lang.isVersion('uk')){%>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAsset6_uk")%>
+                    </p>
+                <%} else {%>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAsset6")%>
+                    </p>
+                <%}%>
                 <h6 class="desp_title faq"><%=lang.text("faqAsset7")%></h6>
                 <p class="desp_subdesp faq">
                     <%=lang.text("faqAsset8")%>
@@ -224,6 +251,17 @@
                 <h6 class="desp_title faq"><%=lang.text("faqAsset15")%></h6>
                 <p class="desp_subdesp faq">
                     <%=lang.text("faqAsset16")%>
+                </p>
+                <h6 class="desp_title faq"><%=lang.text("faqAsset17")%></h6>
+                <p class="desp_subdesp faq">
+                    <%=lang.text("faqAsset18")%> <br>
+                    <%=lang.text("faqAsset18_1")%> <br>
+                    <%=lang.text("faqAsset18_2")%>
+                </p>
+                <h6 class="desp_title faq"><%=lang.text("faqAsset19")%></h6>
+                <p class="desp_subdesp faq">
+                    <%=lang.text("faqAsset20")%> <br>
+                    <%=lang.text("faqAsset20_1")%>
                 </p>
             </div>
         </li>

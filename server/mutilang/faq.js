@@ -16,16 +16,24 @@ module.exports = {
         "en": "Q: Can I open two or more accounts? Can I use different currencies to open accounts?"
     },
     "faqAccount4": {
-        "zh": "A：TigerWit老虎外汇允许同一张身份证开设2个或2个以上账户，但暂不支持同一个手机号绑定多个账户，如需添加更多账户，请联系您的客户经理。 TigerWit老虎外汇暂不支持不同货币，交易以美元执行。",
+        "zh": "A：TigerWit老虎外汇允许同一张身份证开设2个或2个以上账户，但暂不支持同一个手机号绑定多个账户，如需添加更多账户，请联系您的客户经理。 ",
         "en": "A: TigerWit allows two or more accounts on the same ID, but does not support the same phone binding multipleaccounts, if you want to add more accounts, please contact your account manager."
+    },
+    "faqAccount4_1": {
+        "zh": "TigerWit老虎外汇暂不支持不同货币，交易以美元执行。",
+        "en": "TigerWit does not support different currencies and trades are executed in USD at this application."
+    },
+    "faqAccount4_1_uk": {
+        "zh": "TigerWit老虎外汇暂不支持不同货币，在本应用中交易以英镑执行。",
+        "en": "TigerWit does not support different currencies and trades are executed in GBP at this application."
     },
     "faqAccount5": {
         "zh": "Q：为何当我在开设账户时，需要我提供金融背景和个人投资经历？",
-        "en": "Q: Why do I need to provide my personal information about financial background and investment history    when I open an account?"
+        "en": "Q: Why do I need to provide my personal information about financial background and investment history when I open an account?"
     },
     "faqAccount6": {
         "zh": "A：由于受最高监管的约束，需要您提供相关信息，我们只会询问与开户相关的问题。为了您的最佳利益，我们会根据您填写的信息评估您对我们所提供服务的风险认知，同时将该信息如实提交给监管部门。",
-        "en": "A: Due to the highest regulatory constraints, you need to provide relevant information, we only ask questionsrelated to account opening. For your best interests, we will evaluate your risk perception of the serviceswe provide based on the information you fill in, and truthfully submit this information to regulatory authorities."
+        "en": "A: Due to the highest regulatory constraints, you need to provide relevant information, we only ask questions related to account opening. For your best interests, we will evaluate your risk perception of the services we provide based on the information you fill in, and truthfully submit this information to regulatory authorities."
     },
     "faqAccount7": {
         "zh": "Q：开设一个账户需要多长时间？",
@@ -36,8 +44,8 @@ module.exports = {
         "en": "A: You can open the account on TigerWit immediately with complete information."
     },
     "faqAccount9": {
-        "zh": "Q：我能开设一个联名账户吗？",
-        "en": "Q: Can I open a joint account?"
+        "zh": "Q：我能在真实账户中开设一个联名账户吗",
+        "en": "Q: Can I open a joint account in Live account?"
     },
     "faqAccount10": {
         "zh": "A：可以，需要的话请咨询客服或服务您的业务经理。",
@@ -48,8 +56,12 @@ module.exports = {
         "en": "Q: When can I make deals?"
     },
     "faqAccount12": {
-        "zh": "A：如果您开通体验金账户，即刻可以开始交易；如果您开通真实交易账户，向账户注资并通过实名认证审核后，您就可以立即进行交易。",
-        "en": "A: If you open an Experience Account, you can trade now. If you open a Real Account, you can trade after    complete the ID Verification and deposit."
+        "zh": "A：如果您开通体验金账户，即刻可以开始交易；",
+        "en": "A: If you open a Trial Account, you can trade now. "
+    },
+    "faqAccount12_1": {
+        "zh": "A：如果您开通真实交易账户，向账户注资并通过实名认证审核后，您就可以立即进行交易。",
+        "en": "A: If you open a Live Account, you can trade after complete the ID Verification and deposit."
     },
     "faqAccount13": {
         "zh": "Q：需要何种类型的身份证明文件呢？",
@@ -57,7 +69,7 @@ module.exports = {
     },
     "faqAccount14": {
         "zh": "A：您可以提交贴有您照片的护照、国民身份证或者由某个独立可靠的机构颁发的其他证件。您的照片、签名、发行日期及有效期、包括序列号在内的个人资料都必须清晰可见。",
-        "en": "A: You need to submit a passport with a photo, ID card, or other certifications issued by an independent    and reliable institution that prove your identification and address. Your personal information such    as a photo, signature, the issuing date, expiry date and Series No. should be clearly seen."
+        "en": "A: You need to submit a passport with a photo, ID card, or other certifications issued by an independent and reliable institution that prove your identification and address. Your personal information such as a photo, signature, the issuing date, expiry date and Series No. should be clearly seen."
     },
     "faqAccount15": {
         "zh": "Q：在我开始交易之前是否需要下载软件？",
@@ -84,16 +96,16 @@ module.exports = {
         "en": "Q: Why am I not able to log into personal center on website?"
     },
     "faqAccount21": {
-        "zh": "A：请使用您注册的手机号码和您开设的账户密码进行登录。",
-        "en": "A: Please use your registered mobile phone No. and password to log in."
+        "zh": "A：请使用您注册的邮箱和您开设的账户密码进行登录。",
+        "en": "A: Please use your registered email/phone and password to log in."
     },
     "faqAccount22": {
         "zh": "Q：忘了登录用户中心的密码，怎么办？",
         "en": "Q: What if I cannot remember my password?"
     },
     "faqAccount23": {
-        "zh": "A：请点击忘记密码，输入手机验证码后重新设置密码。",
-        "en": "A: Please click “Forget the Password”, enter security code sent to your cellphone and reset the password."
+        "zh": "A：请点击忘记密码，输入邮箱/手机验证码后重新设置密码。",
+        "en": "A: Please click ‘Forget password’, enter security code sent to your email/phone and reset the password."
     },
     "faqTrade1": {
         "zh": "Q：平台有多少交易品种？",
@@ -117,7 +129,7 @@ module.exports = {
     },
     "faqTrade6": {
         "zh": "A：在自选界面找到您想查看的交易品种，点开此交易品种，点击左上角交易品种名称后面的“？”图标，您能查看到该产品的交易时间、库存费等详细信息。",
-        "en": "A: Enter the product's trading page, click on the \"?\" icon at the top of the trading symbol to view the    details."
+        "en": "A: Enter the product's trading page, click on the \"?\" icon at the top of the trading symbol to view the details."
     },
     "faqTrade7": {
         "zh": "Q：杠杆是多少？",
@@ -144,8 +156,12 @@ module.exports = {
         "en": "Q: What are the fees in the trade?"
     },
     "faqTrade13": {
-        "zh": "A：CFD股指差价合约每手10美金手续费，外汇、贵金属、原油、天然气没有佣金和手续费，只收取相应的点差。",
-        "en": "A: The CFD charges $ 10 per standard lot. FX, Precious metals, Crude oil, Natural gas without commissions    and fees, Only charge the spread."
+        "zh": "A：CFD股指差价合约每手10美元手续费，外汇、贵金属、原油、天然气没有佣金和手续费，只收取相应的点差。",
+        "en": "A: The CFD charges $10 per standard lot. FX, Precious metals, Crude oil, Natural gas without commissions and fees, Only charge the spread."
+    },
+    "faqTrade13_uk": {
+        "zh": "A：CFD股指差价合约每手10英镑手续费，外汇、贵金属、原油、天然气没有佣金和手续费，只收取相应的点差。",
+        "en": "A: The CFD charges £ 10 per standard lot. FX, Precious metals, Crude oil, Natural gas without commissions and fees, Only charge the spread."
     },
     "faqTrade14": {
         "zh": "Q：为什么交易一开始的获利是负的？",
@@ -189,11 +205,11 @@ module.exports = {
     },
     "faqTrade22": {
         "zh": "Q：我下的单被强行平仓，为什么？",
-        "en": "Q: Why forced liquidation happens to the deal I made?"
+        "en": "Q: Why has forced liquidation happened to the deal I made?"
     },
     "faqTrade23": {
-        "zh": "A：当普通账户保证金比率（保证金比例 = 净值 / 已用预付款 * 100%）低于100%，高手帐户的保证金比率（保证金比例 = 净值 / 已用预付款 * 100%）低于200%，系统将会启动强平机制，从您损失最大的订单开始平仓。",
-        "en": "A: When the margin level (Margin Level=Equit / Margin *100%) is below 100% on common accounts and the margin level is below 200% on masters’ accounts, the company will effect forced liquidation starting from your deal with the highest loss."
+        "zh": "A：当普通账户保证金比率（保证金比例 = 净值 / 已用预付款 * 100%）低于100%，高手帐户的保证金比率（保证金比例 = 净值 / 已用预付款 * 100%）低于100%，系统将会启动强平机制，从您损失最大的订单开始平仓。",
+        "en": "A: When the margin ration (Margin Level=Equit / Margin *100%) is below 100% on common accounts and the margin ratio is below 100% on masters’accounts, the company will effect forced liquidation starting from your deal with the highest loss."
     },
     "faqTrade24": {
         "zh": "Q：我收到“重新报价”信息。 这是什么意思？",
@@ -201,11 +217,11 @@ module.exports = {
     },
     "faqTrade25": {
         "zh": "A：如果市场出现大幅波动，价格会急剧变化。在此情况之下，我们需要向您提供最新市场价。您可以接受新的重新报价或者拒绝新的价格并取消交易的执行。",
-        "en": "A: In case of drastic market fluctuations, the price will change dramatically. In this case, we need    to supply new market prices to you. Under this circumstance, you can accept new prices or refuse    and cancel the deal.    "
+        "en": "A: In case of drastic market fluctuations, the price will change dramatically. In this case, we need to supply new market prices to you. Under this circumstance, you can accept new prices or refuse and cancel the deal.    "
     },
     "faqTrade26": {
         "zh": "取得重新报价的另一个可能的原因在于因特网连接缓慢或出现故障，延迟了订单传输。意味着您在交易平台上看到的是以前的价格而非当前市场价格。",
-        "en": "The other reason for price re-quotation might be slow internet connection or no connection which slows    down the transmission of deals. It means that the price you saw on the platform is the old price    and not the current market price."
+        "en": "The other reason for price re-quotation might be slow internet connection or no connection which slows down the transmission of deals. It means that the price you saw on the platform is the old price and not the current market price."
     },
     "faqTrade27": {
         "zh": "Q：你们是否支持跟踪止损（Trailing Stops）和智能交易系统（Expert Advisors）？",
@@ -213,7 +229,7 @@ module.exports = {
     },
     "faqTrade28": {
         "zh": "A：我们的平台支持此类功能。您应当注意，尽管在您的客户端使用了诸如跟踪止损和智能交易系统等附加功能，但交易操作的执行完全应由您承担责任，因为它们直接依赖于您的客户交易终端。",
-        "en": "A: Our platform supports these functions. One more thing, even though you use Trailing Stops or Expert Advisors etc. functions, you are still responsible for transaction operations since they are executed on your MT4."
+        "en": "A: Our platform supports these functions. One more thing, Even though you use Trailing Stops or Expert Advisors etc. functions, you are still responsible for transaction operations since they are executed on your MT4."
     },
     "faqTrade28_2": {
         "zh": "如果您的智能交易系统有攻击服务器的行为，老虎外汇有权利拒绝您的智能交易系统。",
@@ -225,15 +241,15 @@ module.exports = {
     },
     "faqTrade30": {
         "zh": "A：请注意，平仓时将按市场实际价格成交。如果当时市场上有跳空，那么将根据跳空后的第一口价格成交，因此可能会与您设置的止盈止损价格有所出入。",
-        "en": "A: Attention: The deal is made at actual market price in case of forced liquidation. In case of gaps,    the deal will be made at the first dealt price after the gap, which might be different from the set    prices."
+        "en": "A: Attention: The deal is made at actual market price in case of forced liquidation. In case of gaps, the deal will be made at the first dealt price after the gap, which might be different from the set prices."
     },
     "faqTrade31": {
-        "zh": "Q：为什么欧美/英美（例如 30 点）点差这么高？",
-        "en": "Q: Why are spreads of Europe / America and Britain / America so high, such as 30 points?"
+        "zh": "Q：为什么欧美/英镑（例如 30 点）点差这么高？",
+        "en": "Q: Why are spreads of EUR/GBP so high, such as 30 points?"
     },
     "faqTrade32": {
-        "zh": "A：请注意， 为客户提供更全面，优惠的价格，我们使用尾数点差价格。我们使用 5 位小数，而不是 4位小数。因此， 买卖价相差 30 实际为 3.0 点。",
-        "en": "A: Attention: In order to provide clients with a more complete and competitive price, we use the five    decimals not four decimals. For example, the price spread of 30 is in fact 3.0 point."
+        "zh": "A：请注意，为客户提供更全面，优惠的价格，我们使用尾数点差价格。我们使用 5 位小数，而不是 4位小数。因此， 买卖价相差 30 实际为 3.0 点。",
+        "en": "A: Attention: In order to provide clients with a more complete and competitive price, we use the five decimals not four decimals. For example, the price spread of 30 is in fact 3.0 point."
     },
     "faqTrade33": {
         "zh": "Q：为什么我的隔夜利息这么高？",
@@ -264,8 +280,12 @@ module.exports = {
         "en": "Q: What is the minimum deposit amount?"
     },
     "faqAsset4": {
-        "zh": "A：50美元    ",
-        "en": "A: $50"
+        "zh": "A：200美元",
+        "en": "A: $200"
+    },
+    "faqAsset4_uk": {
+        "zh": "A：200英镑",
+        "en": "A: £200"
     },
     "faqAsset5": {
         "zh": "Q：出金有何限制？",
@@ -273,31 +293,35 @@ module.exports = {
     },
     "faqAsset6": {
         "zh": "A：出金最低限额20美元；入金后需有交易行为；出金时账户需无持仓单、无复制关系。",
-        "en": "A: The minimum withdrawal limit of $20; needs to have a transaction record after the deposit; The account    cannot have the open orders and follow relationship before withdrawal."
+        "en": "A: The minimum withdrawal limit of $20; needs to have a transaction record after the deposit; The account cannot have the open orders and follow relationship before withdrawal."
+    },
+    "faqAsset6_uk": {
+        "zh": "A：出金最低限额20英镑；入金后需有交易行为；出金时账户需无持仓单、无复制关系。",
+        "en": "A: The minimum withdrawal limit of £20; needs to have a transaction record after the deposit; The account cannot have the open orders and follow relationship before withdrawal."
     },
     "faqAsset7": {
         "zh": "Q：出金到账时间？",
-        "en": "Q: How long after the withdrawal to account?"
+        "en": "Q: How long will it take for funds to be received in my account after a withdrawal?"
     },
     "faqAsset8": {
         "zh": "A：工作日内提交48小时内到账。",
-        "en": "A: Working days to arrive the account within 48 hours."
+        "en": "A: After a withdrawal during workting days, it will take 48 hours for funds to be received into your account."
     },
     "faqAsset9": {
         "zh": "Q：出金的费用？",
-        "en": "Q: Is withdrawal charged?"
+        "en": "Q: Is there a withdrawal Fee?"
     },
     "faqAsset10": {
         "zh": "A：正常交易的客户每月有4次免费取款，超过4次，每次收5元人民币取款费用。",
-        "en": "A: 4 times per month free withdrawals, more than 4 times, each received 5 RMB withdrawal fee."
+        "en": "A: The first 4 withdrawals are free.  After that a fee of £5 will be charged for each withdrawal."
     },
     "faqAsset11": {
         "zh": "Q：交易账户中的资金已显示移除，为什么我的银行卡还没有收到出金金额？",
-        "en": "Q: Why haven’t I received the withdrawn amount while the funds in the transaction account have already    been removed?"
+        "en": "Q: Why haven’t I received the withdrawn amount while the funds in the transaction account have already been removed?"
     },
     "faqAsset12": {
         "zh": "A：出金申请状态显示已成功，表示我们已完成汇款，因为汇款不是即刻到账，请您在出金后几天密切关注您的收款账户动态。",
-        "en": "A: That we have completed the remittance. Remittances do not arrive immediately, please closely monitor    your receiving bank and ensure that the funds are transferred."
+        "en": "This indicates that the withdrawal application has been approved. Please closely monitor your receiving bank and ensure that the funds are transferred."
     },
     "faqAsset13": {
         "zh": "Q：如何撤销出金？",
@@ -308,12 +332,40 @@ module.exports = {
         "en": "A: “Trade” - “History” - “Record”, check “Cancel”."
     },
     "faqAsset15": {
-        "zh": "Q：$2000体验金可以出金吗？体验金交易产生的盈利可以出金吗？",
-        "en": "Q: $ 2000 experience funds can be used to withdraw? Experienced funds generated profits can be used to withdraw?"
+        "zh": "Q：体验金可以出金吗？体验金交易产生的盈利可以出金吗？",
+        "en": "Q: Am I allowed to withdraw the trial funds automatically deposited to the Trial Account upon account opening?  Can the profits generated from trading using the trial funds automatic deposit be withdrawn?"
     },
     "faqAsset16": {
-        "zh": "A：$2000体验金账户可直接用于交易，体验金和盈利不支持出金，同时亏损也无需补偿。在您首次入金后，系统将会自动将账户升级为真实交易账户，真实账户不含体验金。",
-        "en": "A: $2000 Experience fundscan be used directly for trading, experience funds and profit can not withdrawal, experience funds trading losses generated without compensation."
+        "zh": "A：体验金账户可直接用于交易，体验金和盈利不支持出金，同时亏损也无需补偿。在您首次入金后，系统将会自动将账户升级为真实交易账户，真实账户不含体验金。",
+        "en": "A: Trial funds and profit cannot withdrawal."
+    },
+    "faqAsset17": {
+        "zh": "Q：我可以通过何种渠道入金？",
+        "en": "Q: What are my options for depositing money into my account?"
+    },
+    "faqAsset18": {
+        "zh": "A：您可以通过以下方式将资金存入您的账户：",
+        "en": "A: You can deposit money in your account in the following ways: "
+    },
+    "faqAsset18_1": {
+        "zh": "银行转账",
+        "en": "Telegraphic Transfer"
+    },
+    "faqAsset18_2": {
+        "zh": "银联网上支付",
+        "en": "Online payment by Union pay card"
+    },
+    "faqAsset19": {
+        "zh": "Q：挂单交易可以提现吗？",
+        "en": "Can I make withdrawals in case of pending transactions?"
+    },
+    "faqAsset20": {
+        "zh": "A：不可以。",
+        "en": "A: Cannot."
+    },
+    "faqAsset20_1": {
+        "zh": "请注意：为了避免低保证金的风险，我们建议您在空仓时进行提款。",
+        "en": "Attention: In order to avoid the risk of low account margin, we suggest you should make withdrawals during a short position."
     },
     "faqMeta1": {
         "zh": "Q：如何下载 MT4 平台？",
@@ -369,15 +421,15 @@ module.exports = {
     },
     "faqSwap7": {
         "zh": "老虎外汇尽可能每日及时更新隔夜利息报价，但不排除由于无法预测的市场情况而导致的剧烈波动，隔夜利息可能在当日内有变动。",
-        "en": "TigerWit will update swap rate quotation daily as far as possible, butthere might be violent fluctuations because of unpredictable markets, which means that the swap ratemight be subject to big changes on the very day."
+        "en": "TigerWit will update swap rate quotation daily as far as possible, but there might be violent fluctuations because of unpredictable markets, which means that the swap rate might be subject to big changes on the same day."
     },
     "faqSwap8": {
         "zh": "Q：为什么有时候隔夜利息会不一样？",
         "en": "Q: Why swap rate will be different?"
     },
     "faqSwap9": {
-        "zh": "A：不同的货币对不同方向的隔夜利息是不一样的；按照国际惯例，周四的隔夜利息三倍。",
-        "en": "A: The swap rate for each currency pair is different for different trading directions; According to international    practice, Thursday's swap rate is three times."
+        "zh": "A：不同的货币对不同方向的隔夜利息是不一样的；按照国际惯例，周三的隔夜利息三倍。",
+        "en": "A: The swap rate for each currency pair is different for different trading directions; According to international practice, wednesday's swap rate is three times."
     },
     "faqSwap10": {
         "zh": "Q：如何避免支付隔夜利息？",
@@ -385,7 +437,7 @@ module.exports = {
     },
     "faqSwap11": {
         "zh": "A：如您在当天交易时段内建仓且平仓，您将不会支付或获取任何隔夜利息。",
-        "en": "A: If you open a position or close a position during transaction period on the very day, you will not    pay or acquire any swap rate."
+        "en": "A: If you open a position or close a position during transaction period on the same day, you will not pay or acquire any swap rate."
     },
     "faqSwap12": {
         "zh": "Q：在哪里可以查看历史隔夜利息记录？",
