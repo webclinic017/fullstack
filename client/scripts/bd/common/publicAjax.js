@@ -15,6 +15,7 @@
         getBankCard: origin + '/user/bank_card', // get
         withdraw: origin + '/payment/withdraw',  // post
         bindBankCard: origin + '/user/bank_card',  // put
+        getCountries: origin + '/region/countries', // get
         getStateList: origin + '/region/provinces', // get
         getCitiesList: origin + '/region/cities', // get
         setToken: origin + '/validation/code_token', // post

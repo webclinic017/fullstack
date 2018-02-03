@@ -19,21 +19,23 @@
                 <h4><span>$1000</span>等你领</h4>
                 <p>红包领取规则请见官网</p>
             <%} else {%>
-                <h4>你投资,我出钱!</h4>
-                <h4>注册就送<span>2000美金</span></h4>
-                <p>在<%=lang.text("companyZhName")%>, 已经有86253 人选择外汇跟单交易</p>
+                <%if(!lang.currentLanguage() == 'en'){%>
+                    <h4><%=lang.text('mInvite05')%></h4>
+                <%}%>
+                <h4><%=lang.text('mInvite06')%><span><%=lang.text('mInvite07')%></span></h4>
+                <p><%=lang.text('mInvite08')%></p>
             <%}%>
         </div>
         <%if(page == 'invite01'){%>
             <div class="m_share01_main__bag_text">
-                <p>我刚刚在<%=lang.text("companyZhName")%>领取了2000美金,好东西<br>必须分享,你也快来看看</p>
+                <p><%=lang.text('mInvite09')%><br><%=lang.text('mInvite10')%></p>
             </div>
         <%}%>
         <div class="m_share01_main__form">
             <form id="form">
-                <input type="tel" placeholder="输入手机号" id="share_tel">
+                <input type="tel" placeholder="<%=lang.text('mInvite11')%>" id="share_tel">
             </form>
-            <span id="get_award">领取奖励</span>
+            <span id="get_award"><%=lang.text('mInvite12')%></span>
         </div>
     </div>
 </div>

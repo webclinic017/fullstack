@@ -52,6 +52,15 @@ module.exports = function () {
             // console.log("this.req.headers['user-agent']", this.req.headers['user-agent'])
             return this.req.headers['user-agent'].indexOf('tiger_special') != -1;
         },
+        isVersion: function(version){
+            var vMap = {
+                global: 'tigerwit_global',
+                special: 'tiger_special',
+                uk: 'tigerwit_uk',
+                pandafx: 'panda_app'
+            }
+            return this.req.headers['user-agent'].indexOf(vMap[version]) != -1;
+        },
         currentLanguage: function () {
             return this.language;
         },

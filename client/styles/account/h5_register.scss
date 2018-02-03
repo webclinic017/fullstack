@@ -65,6 +65,39 @@
         span:nth-child(1) {
           margin-right: px2rem(20);
         }
+        select {
+          appearance:none;
+          -moz-appearance:none;
+          -webkit-appearance:none;
+          border: none!important;
+          padding-left:0px;
+          padding-right: 1rem;
+        }
+        .area_code {
+          display: inline-block;
+          height: 100%;
+          max-width: 5.5rem;
+          position: relative;
+          &:after {
+            content: "▼";
+            display: inline-block;
+            position: absolute;
+            font-size: 10px;
+            color: #aaa;
+            right: -5px;
+            top: 0;
+          }
+          .selector {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-width: 5.5rem;
+            color: transparent;
+            background: transparent;
+          }
+        }
       }
       .telephone {
         span:nth-child(1) {
@@ -75,25 +108,26 @@
         }
       }
       .verify_code {
-        span:nth-child(1) {
-
+        .verify_code_title {
+          white-space: nowrap;
+          width: 15%;
+        }
+        input {
+          width: 55%;
         }
         .verify_code_btn {
-          text-align: center;
-          flex: none;
           display: inline-block;
-          width: px2rem(210);
+          text-align: center;
+          width: 30%;
           height: 104%;
-          // line-height: 3.3rem;
           padding-top: 0.8%;
           background-color: $brand-primary-dark;
           color: $brand-button-color;
           position: relative;
           top: -2%;
+          white-space: nowrap;
         }
-        input {
-          flex: 1;
-        }
+        
       }
       .password {
         border: none;

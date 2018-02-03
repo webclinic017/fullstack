@@ -14,7 +14,7 @@
     <div class="share02_main">
         <div class="share02_main__box">
             <div class="share02_main__title clearfix">
-                <p class="tit"><span>邀请好友</span><span>赢取10美金</span></p>
+                <p class="tit"><span><%=lang.text('mInvite13')%></span><span><%=lang.text('mInvite14')%></span></p>
                 <%if(lang.isCompany("tigerwit")){%>
                     <p class="pic"><img src="/images/basic_logo_tw.png"></p>
                 <%} else if (lang.isCompany("pandafx")) {%>
@@ -22,15 +22,15 @@
                 <%}%>
             </div>
             <div class="share02_main__list" id="invite_history_list">
-                <div class="init">您还没有邀请好友哦</div>
+                <div class="init"><%=lang.text('mInvite15')%></div>
             </div>
             <div class="share02_main__content clearfix">
                 <div class="info">
-                    <p class="tip">已邀请人数</p>
+                    <p class="tip"><%=lang.text('mInvite16')%></p>
                     <p class="num">0</p>
                 </div>
                 <div class="status">
-                    <p class="tip">奖励状态</p>
+                    <p class="tip"><%=lang.text('mInvite17')%></p>
                     <p class="c <%= lang.text('companyEnName') %>"></p>
                 </div>
             </div>
@@ -38,34 +38,34 @@
 
         <div class="share02_main__rules">
             <p>
-                1.注册即获得邀请类红包“人从众”邀请3名好友注册，且至少有1人入金并完成1手交易即可兑现，每位用户仅可领取一次。
+                <%=lang.text('mInvite18')%>
             </p>
             <p>
-                2.您只有通过邀请链接进行注册的好友才算有效。
+                <%=lang.text('mInvite19')%>
             </p>
             <p>
-                3.同一手机号，身份证号和银行卡号视为同一用户。
+                <%=lang.text('mInvite20')%>
             </p>
             <p>
-                4.任何通过第三方作弊软件刷取好友邀请奖励，一经发现<%= lang.text('companyZhName')%>有权取消红包兑现奖励。
+                <%=lang.text('mInvite21')%>
             </p>
             <p>
-                5.本活动最终解释权归<%= lang.text('companyZhName')%>所有。如有疑问，请咨询客服<%= lang.text('telephone')%>。
+                <%=lang.text('mInvite22')%>
             </p>
         </div>
         
         <div class="share02_main__send_btn">
-            <span id="send_invitation" class="<%= lang.text('companyEnName') %>">发送邀请给好友</span>
+            <span id="send_invitation" class="<%= lang.text('companyEnName') %>"><%=lang.text('mInvite23')%></span>
         </div>
         <div class="share_box" id="share02_box">
             <div class="share02_modal clearfix" id="share02_modal">
-                <h5>分享好友投资,即获$10奖励</h5>
-                <span class="share_to_friends"   id="share_to_friends">  <img src="/images/mobile/share2wx.png"><br>微信好友</span>
-                <span class="share_to_circle"    id="share_to_circle">   <img src="/images/mobile/share2circle.png"><br>朋友圈</span>
-                <span class="share_to_qf new_share"        id="share_to_qFriend">  <img src="/images/mobile/share2qq.png"><br>QQ好友</span>
-                <span class="share_to_qZone new_share"     id="share_to_qZone">    <img src="/images/mobile/share2qZone.png"><br>QQ空间</span>
-                <span class="share_to_microBlog new_share" id="share_to_microBlog"><img src="/images/mobile/share2mBlog.png"><br>微博</span>
-                <span id="cancel_share"><button>取消</button></span>
+                <h5><%=lang.text('mInvite24')%></h5>
+                <span class="share_to_friends"   id="share_to_friends">  <img src="/images/mobile/share2wx.png"><br><%=lang.text('mInvite25')%></span>
+                <span class="share_to_circle"    id="share_to_circle">   <img src="/images/mobile/share2circle.png"><br><%=lang.text('mInvite26')%></span>
+                <span class="share_to_qf new_share"        id="share_to_qFriend">  <img src="/images/mobile/share2qq.png"><br><%=lang.text('mInvite27')%></span>
+                <span class="share_to_qZone new_share"     id="share_to_qZone">    <img src="/images/mobile/share2qZone.png"><br><%=lang.text('mInvite28')%></span>
+                <span class="share_to_microBlog new_share" id="share_to_microBlog"><img src="/images/mobile/share2mBlog.png"><br><%=lang.text('mInvite30')%></span>
+                <span id="cancel_share"><button><%=lang.text('mInvite31')%></button></span>
             </div>
         </div>
     </div>
@@ -81,16 +81,16 @@
                 <li class="name"><$=list[i].user_name$></li>
                 <li style="width: 18%;">
                     <$if (list[i].is_deposit == 1) {$>
-                        <span class="status active">已入金</span>
+                        <span class="status active"><%=lang.text('mInvite32')%></span>
                     <$} else {$>
-                        <span class="status">未入金</span>
+                        <span class="status"><%=lang.text('mInvite33')%></span>
                     <$}$>
                 </li>
                 <li style="width: 20%;">
                     <$if (list[i].volume >= 1) {$>
-                        <span class="status active">已满手数</span>
+                        <span class="status active"><%=lang.text('mInvite34')%></span>
                     <$} else {$>
-                        <span class="status">未满手数</span>
+                        <span class="status"><%=lang.text('mInvite35')%></span>
                     <$}$>
                 </li>
             </ul>
