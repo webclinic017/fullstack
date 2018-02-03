@@ -41,7 +41,7 @@
                 if (!data) return;
                 if (data.is_succ) {
                     if (data.data) {
-                        $("#telephone").addClass("warning").val("此号码已注册!");
+                        $("#telephone").addClass("warning").val( lang.text('invite.registerd') );
                     } else {
                         $("#telephone").removeClass("warning");
                     }
@@ -76,7 +76,7 @@
         if ((telephone.val() == "") || (!isMobile.test(telephone.val()) && !isPhone.test(telephone.val()))) {
             /*提示*/
             layer.open({
-                content: '请输入有效的手机号',
+                content: lang.text('invite.effcient'),
                 skin: 'msg',
                 anim: false,
                 time: 1.2 /*1.2秒后自动关闭*/
@@ -129,8 +129,8 @@
     };
 
     var coMap = {
-        tigerwit: '老虎外汇',
-        pandafx: '熊猫外汇',
+        tigerwit: lang.text('tiger'),
+        pandafx: lang.text('pandafx'),
     }
 
     function nativeShare(type) {
@@ -142,8 +142,8 @@
 
         var callConfig = {
             type: type,
-            title: "你投资，我出钱！注册就送2000美金！",
-            description: "我刚刚在"+ (coMap[getCoName()] || '老虎外汇') +"领了2000美金，好东西必须分享，你也快来看看！",
+            title: lang.text('invite.share2'),
+            description: lang.text('invite.share3') + (lang.curLang('zh') ? coMap[getCoName()] : '') + lang.text('invite.share1'),
             url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
         };
 
@@ -209,16 +209,16 @@
                     $(".share02_main__content .info .num").html(data.data.record_count);
                     
                     if (data.data.bonus_status == 1) {
-                        $(cBtn).html("不可兑换");
+                        $(cBtn).html(lang.text('invite.Unexchangeable'));
                     } else if (data.data.bonus_status == 2) {
-                        $(cBtn).html("点击领取10美金");
+                        $(cBtn).html(lang.text('invite.get$10'));
                         $(cBtn).addClass("active");
                     } else if (data.data.bonus_status == 3) {
-                        $(cBtn).html("已兑换");
+                        $(cBtn).html(lang.text('invite.Exchanged'));
                     } else if (data.data.bonus_status == 4) {
-                        $(cBtn).html("已过期");
+                        $(cBtn).html(lang.text('invite.Expired'));
                     } else if (data.data.bonus_status == 5) {
-                        $(cBtn).html("已失效");
+                        $(cBtn).html(lang.text('invite.Lapsed'));
                     }
                     
                     /*模板引擎*/

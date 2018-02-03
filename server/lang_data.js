@@ -2033,6 +2033,7 @@ module.exports = function () {
                 .replace(/tigerwit/g, companyConfig.companyNameEn)
                 .replace(/tigerWit/g, companyConfig.companyNameEn)
                 .replace(/老虎外汇/g, companyConfig.companyNameZh)
+                .replace(/400 - 809 - 8509/g, companyConfig.telephone)
         )
     }
 
@@ -2040,9 +2041,13 @@ module.exports = function () {
     var faq = replaceTiger(require('./mutilang/faq'))
 
     // console.log(faq)
+    var mInvite = replaceTiger(require('./mutilang/mInvite'))
+    var mRegister = replaceTiger(require('./mutilang/mRegister'))
 
     return _.merge(
         data,
-        faq
+        faq,
+        mInvite,
+        mRegister
     );
 }; 
