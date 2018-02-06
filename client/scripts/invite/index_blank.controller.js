@@ -21,7 +21,7 @@
                 if ($scope.userstatus.logined) {
                     $location.url("/space/invest/current");
                 } else {
-                    $location.url("/account/register");
+                    $location.url("/account/login");
                 }
             });
         }
