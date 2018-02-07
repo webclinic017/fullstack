@@ -54,9 +54,9 @@ module.exports = function () {
         },
         isVersion: function(version){
             var vMap = {
-                global: 'tigerwit_global',
+                global: 'tigerwell_global',
                 special: 'tiger_special',
-                uk: 'tigerwit_uk',
+                uk: 'tigerwell_uk',
                 pandafx: 'panda_app'
             }
             return this.req.headers['user-agent'].indexOf(vMap[version]) != -1;
