@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <p class="notice__li-title">{{notice.title}}</p>
-                        <p class="notice__li-time font-size-12"> {{notice.created_at | dealTimestamp }}</p>
+                        <p class="notice__li-time font-size-12"> {{notice.created_at | dateFormatter }}</p>
                         <p class="notice__li-info" ng-bind-html="formatText(notice.contentOmit, 'trade') | bindhtml">
                         </p>
                         <div ng-if="notice.content.length > 150 && notice.openOrClose == 'open'" class="text-right">
@@ -39,7 +39,7 @@
                 <div class="row">
                     <div class="col-xs-12">
                         <p class="notice__li-title">{{notice.title}}</p>
-                        <p class="notice__li-time font-size-12"> {{notice.created_at | dealTimestamp }}</p>
+                        <p class="notice__li-time font-size-12"> {{notice.created_at | dateFormatter }}</p>
                         <p class="notice__li-info" ng-bind-html="formatText(notice.contentOmit, 'sys') | bindhtml">
                         </p>
                         <div ng-if="notice.content.length > 150 && notice.openOrClose == 'open'" class="text-right">
