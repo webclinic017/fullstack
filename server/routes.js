@@ -973,7 +973,16 @@ module.exports = function (app) {
             });
         }
         if (action == "version_check") {
-            var appType = req.query.type || 'global';   // global, uk, pandafx, old
+            var appType;   // global, uk, pandafx, old
+            if (req.query.type) {
+                appType = req.query.type;
+            } else {
+                if (COMPANY_NAME == 'tigerwit') {
+                    appType = 'old';
+                } else {
+                    appType = 'pandafx';
+                }
+            }
             var system = req.query.os;
             var versionNum = req.query.version.replace(/\./g, "");
             var versinInfo = require('./app_ctrl.config').getAppInfo(appType);
