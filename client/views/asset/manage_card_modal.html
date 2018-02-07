@@ -8,22 +8,17 @@
         <div tw-loading-img></div>
         <table class="manage_card_list">
             <colgroup>
-                <col width="47%">
-                <col width="37%">
-                <col width="15%">
+                <col width="40%">
+                <col width="30%">
+                <col width="30%">
             </colgroup>
             <tbody>
-                    <colgroup>
-                        <col width="47%">
-                        <col width="37%">
-                        <col width="15%">
-                    </colgroup>
                 <tr class="manage_card_list__item" ng-repeat="card in cardList track by $index">
                     <td>
-                        <p class="text-center">
-                            <span ng-if="card.bank_code" class="card_icon icon-banks-{{ card.bank_code }}"></span>
-                            <span ng-if="!card.bank_code" style="font-size: 16px; font-weight: 500;">{{ card.bank_name_cn }}</span>
-                        </p>
+                        <div class="widthdraw__card_bg" style="width: 80%;">
+                            <img ng-show="card.bank_img" ng-src="{{ card.bank_img }}">
+                            <span>{{ card.bank_name ||  card.bank_code }}</span>
+                        </div>
                     </td>
                     <td>
                         <p class="card_number text-center">{{ card.card_no }}</p>

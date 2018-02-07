@@ -520,7 +520,7 @@
 // 2017.11.13 Add
 @include b (space_content) {
     box-shadow: 1px 5px 30px darken($gray, 10%);
-    padding: 25px 30px 0 60px;
+    padding: 25px 30px 10px 60px;
     margin-bottom: 50px;
 
     @include e (nav) {
