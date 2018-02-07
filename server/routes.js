@@ -973,55 +973,35 @@ module.exports = function (app) {
             });
         }
         if (action == "version_check") {
-            var isGlobal = req.query.global;
-            var system = req.query.system || req.query.os;
-            var versionCode = req.query.version_code;
-            var versinInfo = require('./app_ctrl.config').getAppInfo(COMPANY_NAME);
-            var currentVersionNumAndroid = versinInfo.android.app_info.version_name.replace(/[v\.]/ig, "");
-            var currentVersionNumIos = versinInfo.ios.app_info.version.replace(/[v\.]/ig, "");
+            var appType = req.query.type || 'global';   // global, uk, pandafx, old
+            var system = req.query.os;
+            var versionNum = req.query.version.replace(/\./g, "");
+            var versinInfo = require('./app_ctrl.config').getAppInfo(appType);
+            var currentVersionNum = versinInfo[system].app_info.version_name.replace(/[v\.]/ig, "");
             
             var currentVersion = {
                 version_name: "",
                 description: "",
+                updated_description: "",
                 url: "",
                 force_update: false
             };
+            // console.log(appType, system, Number(versionNum), Number(currentVersionNum));
 
-            if (system == "android") {
-                if (isGlobal) {     // global版本
+            if (Number(versionNum) < Number(currentVersionNum)) {
+                currentVersion = versinInfo[system].app_info;
+            }
+
+            // 熊猫外汇 v1.5.3 以下版本有问题不更新 - 2017.12.19
+            if ((system == 'android') && (appType == 'pandafx')) {
+                if (Number(versionNum) < 153) {
                     currentVersion = {
                         version_name: "",
                         description: "",
+                        updated_description: "",
                         url: "",
                         force_update: false
                     };
-                } else if (versionCode) {
-                    if (versionCode < versinInfo.android.currentVersionCode) {
-                        currentVersion = versinInfo.android.app_info;
-                    }
-                } else {
-                    // console.log(version, currentVersionNumAndroid);
-                    var version = req.query.version.replace(/\./g, "");
-                    if (Number(version) < Number(currentVersionNumAndroid)) {
-                        currentVersion = versinInfo.android.app_info;
-                    }
-                    // 熊猫外汇 v1.5.3 以下版本有问题不更新 - 2017.12.19
-                    if (COMPANY_NAME == 'pandafx') {
-                        if (Number(version) < 153) {
-                            currentVersion = {
-                                version_name: "",
-                                description: "",
-                                url: "",
-                                force_update: false
-                            };
-                        }
-                    }
-                }
-            } else if (system == "ios") {
-                var version = versionCode.replace(/\./g, "");
-                // console.log(version, currentVersionNumIos);
-                if (Number(version) < Number(currentVersionNumIos)) {
-                    currentVersion = versinInfo.ios.app_info;
                 }
             }
             data = currentVersion;
