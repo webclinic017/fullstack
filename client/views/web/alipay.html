@@ -1,0 +1,52 @@
+<!doctype html>
+<html style="height: 100%;">
+    <head>
+        <% include /common/meta/web.html %>
+    
+        <title>支付宝入金</title>
+        <% include /common/vendor/web.css.html %>
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
+        <!-- endbuild -->
+        <% include /common/statistic/main.html %>
+    </head>
+    <body ng-app="fullstackApp" style="height: 100%;">
+        <div ng-controller="GlobalController" style="height: 100%;">
+            <div class="header">
+                <% include /common/nav/web.header.html %>
+            </div>
+            
+            <div class="web_alipay_temp" ng-controller="WebAlipayController" ng-cloak>
+                <div class="deposit_box">
+                    <div class="tit">老虎外汇 支付宝入金</div>
+
+                    <div class="form-control-wrapper">
+                        <input type="text" name="amount" class="form-control" placeholder="入金金额" ng-model="amount">
+                    </div>
+                    <p class="tip">支付限额：5000美金/天</p>
+
+                    <div class="btn-wrapper">
+                        <span class="btn btn-primary-gradient btn-sm" ng-click="toDepositAlipay()">确认</span>
+                        <!-- <span class="btn btn-gray btn-sm">取消</span> -->
+                    </div>
+                </div>
+            </div>
+        <% include /common/vendor/web.js.html %>
+
+        <!-- build:js(client) /scripts/web_alipay.js -->
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/authorization.service.js"></script>
+        <script src="/scripts/common/lang.service.js"></script>
+        <script src="/scripts/common/lang_data.service.js"></script>
+        <script src="/scripts/common/redbag.service.js"></script>
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/global.controller.js"></script>
+
+        <script src="/scripts/common/asset.service.js"></script>
+        <script src="/scripts/web/alipay.controller.js"></script>        
+        <!-- endbuild -->
+        </div>
+    </body>
+</html>

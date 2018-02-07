@@ -189,6 +189,12 @@ module.exports = function (app) {
         }
     });
 
+    // 支付宝临时入金页面
+    app.route('/alipay/temp').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('web/alipay', extendPublic({}, req));
+    });
+
     /*定期跟单开始*/
     app.route('/regular').get(function (req, res) {
         setEnvCf(req, res);
