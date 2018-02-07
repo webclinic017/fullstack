@@ -186,16 +186,6 @@
                     getCardList($scope).then(function () {
                         $scope.cardList = parentScope.cardList
                     })
-                    if (type != 'delete') {
-                        // 获取银行卡列表
-                        if (!parentScope.cardList) {
-                            getCardList($scope).then(function () {
-                                $scope.cardList = parentScope.cardList
-                            })
-                        } else {
-                            $scope.cardList = parentScope.cardList
-                        }
-                    }
 
                     $scope.chooseCard = function (card) {
                         console.log(card)
