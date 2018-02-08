@@ -273,8 +273,10 @@
                 console.log('global.getAuthStatus', data);
                 if (data.is_succ) {
                     // 开户类型(体验金、真实)
-                    var verify_status = data.data.status
+                    var verify_status = 2
                     var accountStatus = data.data.account_status
+                    // var verify_status = data.data.status
+                    // var accountStatus = data.data.account_status
                     var accountStatusMap = {
                         '0': 'unknow',
                         '1': 'live',

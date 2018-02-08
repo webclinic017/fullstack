@@ -215,11 +215,12 @@
          * @param {Number} account_type 1 手机号 2 邮箱
          */
         function checkCode(account, code, account_type) {
-            return publicHttp.dealPublicRequest(o.checkCodeApi, 'POST', {
-                account: account,
-                code: code,
-                account_type: account_type ? account_type : '1'
-            });
+            return publicHttp.dealPublicRequest(
+                o.checkCodeApi, 'POST', 
+                angular.extend({
+                    code: code
+                }, account ? { account: account } : {account_type : account_type ? account_type : '1'}
+            ));
         }
 
         /**
@@ -446,7 +447,7 @@
          * 发送验证码合并接口
          * @param {String} account 手机号
          * @param {String} code_token 
-         * @param {Number} type 1-注册,2-忘记密码,3-修改绑定,4-登录,5-代理商申请
+         * @param {Number} type 1-注册/绑定,2-忘记密码,3-修改绑定,4-登录,5-代理商申请
          * @param {Number} account_type 1-手机号,2-邮箱
          * account_type 和account 不能同时存在
          */

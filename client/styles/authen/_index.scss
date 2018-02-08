@@ -66,4 +66,37 @@
             font-weight: 500;
         }
     }
+    .contact_way {
+        display: inline-block;
+        border: 1px solid $input-border;
+        border-radius: $input-border-radius;
+        >.form-control {
+            border: none;
+            width: 60%;
+            display: inline-block;
+        }
+        .sender_btn{
+            display: inline-block;
+            cursor: pointer;
+            width: 35%;
+            text-align: center;
+            padding: $padding-base-vertical $padding-base-horizontal;
+            border-left: 1px solid $input-border;
+            line-height: $line-height-base;
+            font-size: $font-size-base;
+            color: $input-color;
+            background-color: $input-bg;
+        }
+        .area_code {
+            display: inline-block;
+            width: 25%;
+            border-right: 1px solid $input-border;
+            .form-control-wrapper {
+                margin-bottom: 0;
+                .select__input {
+                    border: none;
+                }
+            }
+        }
+    }
 }
