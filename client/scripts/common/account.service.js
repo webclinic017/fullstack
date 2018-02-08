@@ -451,10 +451,11 @@
          * @param {Number} account_type 1-手机号,2-邮箱
          * account_type 和account 不能同时存在
          */
-        function sendCode(account, code_token, type, account_type) {
+        function sendCode(account, code_token, type, phone_code, account_type) {
             return publicHttp.dealPublicRequest(o.sendCodeApi, 'POST', angular.extend({
                     code_token: code_token,
-                    type: type
+                    type: type,
+                    phone_code: phone_code
                 }, account ? { account: account } : {account_type : account_type ? account_type : '1'})
             );
         }

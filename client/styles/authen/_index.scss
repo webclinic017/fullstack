@@ -66,6 +66,26 @@
             font-weight: 500;
         }
     }
+    .bind_phone {
+        .form-control-wrapper {
+            display: inline-block;
+            border: 1px solid $input-border;
+            border-radius: $input-border-radius;
+            .select__input,.form-control {
+                border: none;
+            }
+            &.area_code {
+                width: 30%;
+                border-right: none;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+            }
+            &.phone {
+                margin-left: -4px;
+                width: 70%;
+            }
+        }
+    }
     .contact_way {
         display: inline-block;
         border: 1px solid $input-border;
@@ -86,17 +106,6 @@
             font-size: $font-size-base;
             color: $input-color;
             background-color: $input-bg;
-        }
-        .area_code {
-            display: inline-block;
-            width: 25%;
-            border-right: 1px solid $input-border;
-            .form-control-wrapper {
-                margin-bottom: 0;
-                .select__input {
-                    border: none;
-                }
-            }
         }
     }
 }

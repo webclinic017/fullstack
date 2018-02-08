@@ -40,6 +40,9 @@
         border: none;
         border-bottom: 1px solid $input-border;
     }
+    &.disabled {
+        cursor: not-allowed;
+    }
 }
 
 .form-control-error {
@@ -197,6 +200,9 @@
         padding-right: 30px;
         position: relative;
         z-index: 2;
+        &.disabled {
+            cursor: not-allowed;
+        }
     }
     @include e(icon) {
         position: absolute;

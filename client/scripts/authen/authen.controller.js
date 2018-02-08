@@ -261,15 +261,16 @@
 
     // complete
     function AuthenCompleteController($scope, validator, account, $timeout, $interval, $location, $modal, $cookies) {
+        console.log('$scope.personal', $scope.personal)
         $scope.completeInfo = {
             username: '',
-            email: '',
+            email: ($scope.personal.email || ''),
             emailCode: '',
-            phone: '',
+            phone: ($scope.personal.phone || ''),
             phoneCode: '',
             areaCode: {
                 key: undefined,
-                value: undefined
+                value: '+' + ($scope.personal.phone_code || '86')
             },
             clickable: true,
             overTime: 1500,
@@ -289,7 +290,19 @@
             hasSendCode: false,
             waitTime: 59
         }
-        getUserName();
+        console.log($scope.completeInfo)
+        getUserInfo('username');
+        function getUserInfo(name) {
+            if ($scope.completeInfo.overTime <= 0) { return };
+            if ($scope.personal[name]) {
+                $scope.completeInfo[name] = $scope.personal[name];
+            } else {
+                $timeout(function () {
+                    getUserInfo(name);
+                    $scope.completeInfo.overTime -= 500;
+                }, 500);
+            }
+        }
 
         $scope.exsit = {
             username: {
@@ -313,14 +326,14 @@
             },
             email: {
                 show: false,
-                reg: validator.regType.email.reg
+                reg: $scope.completeInfo.email ? /[\s\S]*/ : validator.regType.email.reg
             },
             emailCode: {
                 show: false
             },
             phone: {
                 show: false,
-                reg: validator.regType.phone.reg
+                reg: $scope.completeInfo.phone ? /[\s\S]*/ : validator.regType.phone.reg
             },
             phoneCode: {
                 show: false
@@ -366,7 +379,8 @@
             angular.forEach(data.data, function(item, index){
                 $scope.areaCodes.push({
                     key: item.name_cn,
-                    value: '+' + item.phone_code
+                    value: '+' + item.phone_code,
+                    name: item.name
                 })
             })
         })
@@ -470,7 +484,6 @@
         $scope.sendCode = function(type) {
             if(type == 'phone' && !$scope.completeInfo.areaCode.value){
                 $scope.showErr('areaCode');
-                return
             }
             if(!$scope.completeInfo[type]){
                 $scope.showErr(type);
@@ -479,7 +492,8 @@
             account.sendCode(
                 $scope.completeInfo[type],
                 $cookies['code_token'],
-                1
+                1,
+                $scope.completeInfo.areaCode.value.replace(/\+/gi, '') || null
             ).then(function(data){
                 $scope.completeInfo.hasSendCode = data.is_succ
                 $scope.codeErr[type] = {
@@ -499,23 +513,22 @@
         }
 
         $scope.submitCompleteForm = function () {
-            if($scope.personal.email && !$scope.personal.phone){
+            if(!$scope.personal.phone){
                 $scope.showErr('phone');
-                $scope.showErr('phoneCode');
                 $scope.showErr('areaCode');
+                $scope.showErr('phoneCode');
             }
-            if(!$scope.personal.email && $scope.personal.phone){
+            if(!$scope.personal.email){
                 $scope.showErr('email');
                 $scope.showErr('emailCode');
             }
-            
             $scope.showErr('username');
             $scope.showErr('province');
             $scope.showErr('city');
             $scope.showErr('address');
 
-            // console.log('$scope.completeForm.$invalid', $scope.completeForm.$invalid);
-            // console.log('$scope.completeInfo', $scope.completeInfo);
+            console.log('$scope.completeForm.$invalid', $scope.completeForm.$invalid);
+            console.log('$scope.completeInfo', $scope.completeInfo);
 
             if ($scope.completeForm.$invalid) {
                 return
@@ -523,53 +536,65 @@
 
             $scope.completeInfo.clickable = false;
 
-            account.checkCode(
-                $scope.completeInfo.phone || $scope.completeInfo.email || null,
-                $scope.completeInfo.phoneCode || $scope.completeInfo.emailCode || null
-            ).then(function(data){
-                if(data.is_succ){
-                    // 神策数据统计
-                    sa.track('btn_verify');
-                    account.updataUserInfo({
-                        username: $scope.completeInfo.username,
-                        email: $scope.completeInfo.email || null,
-                        phone: $scope.completeInfo.phone || null,
-                        phone_code: $scope.completeInfo.areaCode.value.replace(/\+/gi, '') || null,
-                        code: $scope.completeInfo.phoneCode || $scope.completeInfo.emailCode || null,
-                        state_code: $scope.completeInfo.province.value,
-                        city_code: $scope.completeInfo.city.value,
-                        address: $scope.completeInfo.address,
-                        is_live: $scope.personal.is_live || null
-                    }).then(function (data) {
+            if(!$scope.personal.email || !$scope.personal.phone){
+                account.checkCode(
+                    $scope.personal.phone ? $scope.completeInfo.email : $scope.completeInfo.phone,
+                    $scope.completeInfo.phoneCode || $scope.completeInfo.emailCode || null
+                ).then(function(data){
+                    if(data.is_succ){
+                        confirmSubmit()
+                    } else {
                         $scope.completeInfo.clickable = true;
-                        if (data.is_succ) {
-                            // 向authenController发送信息
-                            $scope.$emit('goState', data.data);
+                        $scope.backErr.show = true;
+                        $scope.backErr.msg = data.message;
+    
+                        $timeout(function () {
+                            $scope.backErr.show = false;
+                            $scope.backErr.msg = '';
+                        }, 2000);
+                    }
+                })
+            } else {
+                confirmSubmit()
+            }
 
-                            sa.track('New_Personaldata');
-                        } else {
-                            $scope.backErr.show = true;
-                            $scope.backErr.msg = data.message;
-
-                            $timeout(function () {
-                                $scope.backErr.show = false;
-                                $scope.backErr.msg = '';
-                            }, 2000);
-                        }
-                    });
-                } else {
-                    $scope.completeInfo.clickable = true;
-                    $scope.backErr.show = true;
-                    $scope.backErr.msg = data.message;
-
-                    $timeout(function () {
-                        $scope.backErr.show = false;
-                        $scope.backErr.msg = '';
-                    }, 2000);
+            function confirmSubmit(){
+                var params = {
+                    username: $scope.completeInfo.username,
+                    state_code: $scope.completeInfo.province.value,
+                    city_code: $scope.completeInfo.city.value,
+                    address: $scope.completeInfo.address,
+                    is_live: $scope.personal.is_live || null
                 }
-            })
+                if(!$scope.personal.email){
+                    params.email = $scope.completeInfo.email || null
+                    params.code = $scope.completeInfo.emailCode || null
+                } 
+                if(!$scope.personal.phone){
+                    params.phone = $scope.completeInfo.phone || null
+                    params.code = $scope.completeInfo.phoneCode || null
+                    params.phone_code = $scope.completeInfo.areaCode.value.replace(/\+/gi, '') || null
+                }
+                // 神策数据统计
+                sa.track('btn_verify');
+                account.updataUserInfo( params ).then(function (data) {
+                    $scope.completeInfo.clickable = true;
+                    if (data.is_succ) {
+                        // 向authenController发送信息
+                        $scope.$emit('goState', data.data);
 
-            
+                        sa.track('New_Personaldata');
+                    } else {
+                        $scope.backErr.show = true;
+                        $scope.backErr.msg = data.message;
+
+                        $timeout(function () {
+                            $scope.backErr.show = false;
+                            $scope.backErr.msg = '';
+                        }, 2000);
+                    }
+                });
+            }
         }
 
         $scope.checkExsit = function (type) {
@@ -619,18 +644,6 @@
             }
             if ($scope.codeErr[name]) {
                 $scope.codeErr[name].show = false;
-            }
-        }
-
-        function getUserName() {
-            if ($scope.completeInfo.overTime <= 0) { return };
-            if ($scope.personal.username) {
-                $scope.completeInfo.username = $scope.personal.username;
-            } else {
-                $timeout(function () {
-                    getUserName();
-                    $scope.completeInfo.overTime -= 500;
-                }, 500);
             }
         }
     }
