@@ -11,10 +11,12 @@
 
         $scope.applyInfo = {
             loading: true,
+            loading2: false,
             data: {},
             condition: false
         };
         $scope.applyMaster = applyMaster;
+        $scope.comfirmApplyMaster = comfirmApplyMaster;
 
         getMasterCondition();
 
@@ -53,21 +55,11 @@
                     // msgClass: 'font-danger',
                     size: 'sm',
                     btnsClass: 'text-right',
-                    autoClose: true,
-                    msg: '确定提交高手申请吗？',
+                    // autoClose: true,
+                    msg: '确定申请高手吗？',
                     btns: {
                         '确定': function (oScope) {
-                            oScope.loading = 1;
-                            trader.applyMaster().then(function (data) {
-                                // console.log(data);
-                                oScope.loading = 2;
-                                if (data.is_succ) {
-                                    oScope.msg = "申请已提交";
-                                    $scope.applyInfo.data.status = 3;
-                                } else {
-                                    oScope.msg = data.message;
-                                }
-                            });
+                            $scope.applyInfo.data.status = 3;
                         }
                     }
                 })
@@ -77,6 +69,7 @@
                     title: '申请高手提醒',
                     size: 'sm',
                     btnsClass: 'text-right',
+                    msgClass: 'font-danger',
                     msg: '未达成高手申请条件，请继续努力',
                     btns: {
                         '确定': function () {
@@ -85,7 +78,23 @@
                     }
                 })
             }
+        }
 
+        function comfirmApplyMaster(){
+            $scope.applyInfo.loading2 = true
+            trader.applyMaster().then(function (data) {
+                $scope.applyInfo.loading2 = false
+                $layer({
+                    title: '申请高手提醒',
+                    size: 'sm',
+                    btnsClass: 'text-right',
+                    msgClass: data.is_succ ? 'font-succ' : 'font-danger',
+                    msg: data.is_succ ? '申请已提交！' : data.message,
+                    btns: {
+                        '确定': function () {}
+                    }
+                })
+            });
         }
 
         $scope.masterInfo = {

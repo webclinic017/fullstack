@@ -4,6 +4,8 @@
         <span ng-if="applyInfo.data.status == 0">高手申请审核中，请耐心等待</span>
         <span ng-if="applyInfo.data.status == 3">注意事项</span>
         <span class="btn btn-primary btn-sm" ng-if="applyInfo.data.status == -1" ng-click="applyMaster()">立即申请成为高手</span>
+        <span class="btn btn-primary btn-sm" ng-if="applyInfo.data.status == 3 && !applyInfo.loading2" ng-click="comfirmApplyMaster()">确认提交</span>
+        <span class="btn btn-primary btn-sm" ng-if="applyInfo.data.status == 3 && applyInfo.loading2">提交中..</span>
     </div>
     <div class="space_apply__loading" ng-if="applyInfo.loading">
         <img src="/ngsrc/loading.gif">
