@@ -1009,7 +1009,10 @@ module.exports = function (app) {
             // console.log(appType, system, Number(versionNum), Number(currentVersionNum));
 
             if (Number(versionNum) < Number(currentVersionNum)) {
-                currentVersion = versinInfo[system].app_info;
+
+                for (var key in versinInfo[system].app_info) {
+                    currentVersion[key] = versinInfo[system].app_info[key];
+                }
                 //重命名
                 if ((system == 'android') && (appType == 'old')) {
                     currentVersion.version_name = "V1.0.1";
