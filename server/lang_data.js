@@ -8,7 +8,7 @@ module.exports = function () {
     var companyConfig = {};
     var indexBasePath = "/white_label";
     var date = require('./tools').date;
-    var app_version = company_name == 'tigerwit' ? 'old' : 'pandafx';
+    var app_version = company_name == 'tigerwit' ? 'global' : 'pandafx';
     var versionAndroidApp = require('./app_ctrl.config').getAppInfo(app_version).android.app_info.url;
 
     if (company_name === 'tigerwit') {
