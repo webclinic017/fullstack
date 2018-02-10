@@ -105,7 +105,7 @@
             </div>
         </div>
 
-        <div class="row deposit__bank_file" ng-if="deposit.type === 'invest'">
+        <div class="row deposit__bank_file" ng-if="(deposit.type === 'invest') && !deposit.isAbleDeposit">
             <div class="col-xs-3 text-right deposit__title-money">入金凭证</div>
             <div class="col-xs-6">
                 <p class="tip">
