@@ -25,7 +25,8 @@
             type: $state.params.type || 'tele',
             amount: undefined,
             teleFile: undefined,    //电汇凭证
-            submitBtn: true
+            submitBtn: true,
+            bankFile : undefined    //入金凭证
         };
         $scope.depositTypeCN = depositType[$scope.deposit.type];
         $scope.walletDepositSucc = false;
@@ -74,6 +75,10 @@
             if ($state.params.type === 'wallet') {
                 $scope.deposit.amount = $scope.walletAble;
             }
+        });
+
+        $scope.$watch('deposit.bankFile', function (newVal, oldVal) {
+            console.log(newVal, oldVal);
         });
 
         function switchDredge(demotodo, liveTodo) {
