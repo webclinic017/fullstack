@@ -56,4 +56,16 @@
             </button>
         </p>
     </div>
+
+    <div class="system_modal__content" ng-if="type === 'confirmDeposit'">
+        <p class="system_modal__info">
+            您已超过每日3000美金/日限额，此笔入金需要上传入金凭证。入金凭证可以是付款成功页截图、银行流水单等。
+        </p>
+
+        <p class="system_modal__btn_wrapper">
+            <button class="btn btn-primary" ng-click="goOnDeposit()">
+                继续支付
+            </button>
+        </p>
+    </div>
 </div>

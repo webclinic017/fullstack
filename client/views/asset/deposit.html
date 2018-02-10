@@ -105,6 +105,19 @@
             </div>
         </div>
 
+        <div class="row deposit__bank_file" ng-if="(deposit.type === 'invest') && !deposit.isAbleDeposit">
+            <div class="col-xs-3 text-right deposit__title-money">入金凭证</div>
+            <div class="col-xs-6">
+                <p class="tip">
+                    请上传前一次入金时的凭证，凭证可为付款成功页截图、银行流水单
+                </p>
+                <div class="deposit__tele_file bank_file">
+                    点此上传
+                    <div tw-upload-file-base64 data-file-name="deposit.bankFile"></div>
+                </div>
+            </div>
+        </div>
+
         <div class="deposit__tele" ng-if="deposit.type === 'tele'">
             <p class="deposit__tele-tip">
                 不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，老虎外汇不收取电汇入金手续费，入金金额将以实际到账为准。
