@@ -1010,6 +1010,10 @@ module.exports = function (app) {
 
             if (Number(versionNum) < Number(currentVersionNum)) {
                 currentVersion = versinInfo[system].app_info;
+                //重命名
+                if ((system == 'android') && (appType == 'old')) {
+                    currentVersion.version_name = "V1.0.1";
+                }
             }
 
             // 熊猫外汇 v1.5.3 以下版本有问题不更新 - 2017.12.19
