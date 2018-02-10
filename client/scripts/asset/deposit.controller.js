@@ -196,8 +196,8 @@
 
                                         if (data.data.evidence == 0) {
                                             $scope.deposit.isAbleDeposit = true;
-
-                                            if ((amount+Number(data.data.today_total))>=3000) {
+                                            
+                                            if ((Number(amount)+Number(data.data.today_total))>=3000) {
                                                 $scope.isLoading = false;
                                                 openDepositMdl('confirmDeposit', submitDeposit);
                                             } else {
