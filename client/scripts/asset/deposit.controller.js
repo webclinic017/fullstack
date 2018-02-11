@@ -222,7 +222,7 @@
                                 // 解决浏览器拦截打开窗口问题
                                 handler = function(){
                                     w = $window.open('/waiting');
-
+                                    console.log('handle');
                                     if (document.body.removeEventListener){
                                         document.body.removeEventListener("click",handler,false);
                                     } else {
@@ -238,6 +238,7 @@
                                     // ie8及以下，只支持事件冒泡
                                     document.body.attachEvent("onclick",handler);
                                 }
+                                document.body.click();
 
                                 asset.deposit(amount, platform).then(function (data) {
                                     $scope.isLoading = false;
