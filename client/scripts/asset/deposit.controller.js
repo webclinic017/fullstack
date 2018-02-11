@@ -199,9 +199,9 @@
                                             
                                             if ((Number(amount)+Number(data.data.today_total))>=3000) {
                                                 $scope.isLoading = false;
-                                                openDepositMdl('confirmDeposit', submitDeposit);
+                                                openDepositMdl('confirmDeposit', submitDeposit, '您已超过每日3000美金/日限额，此笔入金需要上传入金凭证。入金凭证可以是付款成功页截图、银行流水单等。');
                                             } else {
-                                                submitDeposit();
+                                                openDepositMdl('confirmDeposit', submitDeposit, '应监管要求，每日入金3000美金以上客户需上传入金凭证。您此次入金未到限额，点击“继续支付”可正常入金。');
                                             }
                                         } else {
                                             $scope.isLoading = false;
@@ -318,12 +318,13 @@
         }
 
         // 入金相关的各种弹窗提示
-        function openDepositMdl(type, callback) {
+        function openDepositMdl(type, callback, msg) {
             $modal.open({
                 templateUrl: '/views/asset/deposit_modal.html',
                 size: 'sm',
                 backdrop: 'static',
                 controller: function ($scope, $modalInstance, $state) {
+                    $scope.msg = msg || '';
                     $scope.type = type;
                     $scope.closeModal = closeModal;
                     $scope.verify = verify;
