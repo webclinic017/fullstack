@@ -1,0 +1,178 @@
+.bd_t39_layer {
+    .bd_t39_detail_con__text {
+        background: #45d6b0 !important;
+        color: #333 !important;
+    }
+}
+.bd_t40.bd_t39 {
+	background: url("/images/bd_t40/web_bg.png") no-repeat;
+    background-size: auto 100%; // height: 5637px;
+    height: 2600px;
+    background-position: center top;
+    position: relative;
+    min-width: 1334px;
+
+    img {
+    	vertical-align: top;
+    }
+
+    .bd_t39__focus {
+    	margin-top: 150px;
+    }
+    .bd_t40__tip {
+	    color: #fff;
+	    font-size: 30px;
+	    padding-left: 52px;
+    }
+    .bd_t39__date {
+    	padding-left: 52px;
+    }
+    .bd_t40__detail_wrapper {
+	    padding-left: 50px;
+        padding-top: 12px;
+
+    	.bd_t40__detail {
+    		width: 150px;
+    		height: 45px;
+    		background: url("/images/bd_t40/comm_icon1.png") no-repeat;
+    		background-size: 100% 100%;
+    		color: #626262;
+    		text-align: center;
+    		line-height: 45px;
+    		font-size: 18px;
+    		display: block;
+    		cursor: pointer;
+    	}
+    }
+    .bd_t39__reg {
+    	top: 285px;
+    }
+    .bd_t40__btn {
+    	width: 130px;
+		height: 32px;
+		background: url("/images/bd_t40/comm_icon2.png") no-repeat;
+		background-size: 100% 100%;
+		color: #626262;
+		text-align: center;
+		line-height: 32px;
+		font-size: 14px;
+		display: block;
+		cursor: pointer;
+		margin: 0 auto;
+    }
+    .bd_t39__title {
+        padding-top: 220px;
+    }
+    .bd_t40__lst {
+
+        padding: 20px 5%;
+
+        li {
+            float: left;
+            width: 33%;
+            text-align: center;
+
+            .pic {
+                img {
+                    height: 110px;
+                    vertical-align: top;
+                }
+            }
+            .tit {
+                font-size: 16px;
+                color: #333;
+                padding: 5px 0px;
+            }
+            .tip {
+                color: #999;
+                font-size: 16px;
+            }
+        }
+    }
+    .bd_t40__btn2_wrapper {
+        padding-top: 12px;
+
+        .bd_t40__btn2 {
+            margin: 0 auto;
+            width: 150px;
+            height: 45px;
+            background: url("/images/bd_t40/comm_icon1.png") no-repeat;
+            background-size: 100% 100%;
+            color: #626262;
+            text-align: center;
+            line-height: 45px;
+            font-size: 18px;
+            display: block;
+            cursor: pointer;
+        }
+    }
+    .bd_t40__bag {
+        margin-top: 20px;
+
+        .bag {
+            float: left;
+        }
+        .bag_200, .bag_800 {
+            width: 49%;
+
+            img {
+                height: 340px;
+                vertical-align: top;
+            }
+        }
+        .bag_200 {
+            text-align: right;
+            padding-right: 10px;
+        }
+        .bag_800 {
+            text-align: left;
+            padding-left: 6px;
+        }
+        .bag_plus {
+            width: 2%;
+            text-align: center;
+            height: 340px;
+            line-height: 340px;
+
+            img {
+                width: 100%;
+                vertical-align: middle;
+            }
+        }
+        .rule-1 {
+            text-align: center;
+            padding-left: 65px;
+
+            .bd_t40_rule-1 {
+                border-bottom: 1px solid #666;
+                color: #666;
+                padding-bottom: 3px;
+                cursor: pointer;
+            }
+        }
+        .rule-2 {
+            text-align: center;
+            padding-right: 40px;
+
+            .bd_t40_rule-2 {
+                border-bottom: 1px solid #666;
+                color: #666;
+                padding-bottom: 3px;
+                cursor: pointer;
+            }
+        }
+    }
+    .bd_t40__client {
+        text-align: center;
+        font-size: 18px;
+        color: #333;
+        margin-top: 200px;
+    }
+    .bd_t39__footer {
+        color: #666;
+        line-height: 28px;
+    }
+    .bd_t39__ltd {
+        color: #666;
+    }
+}
