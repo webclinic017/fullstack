@@ -199,9 +199,9 @@
                                             
                                             if ((Number(amount)+Number(data.data.today_total))>=3000) {
                                                 $scope.isLoading = false;
-                                                openDepositMdl('confirmDeposit', submitDeposit);
+                                                openDepositMdl('confirmDeposit', submitDeposit, '您已超过每日3000美金/日限额，此笔入金需要上传入金凭证。入金凭证可以是付款成功页截图、银行流水单等。');
                                             } else {
-                                                submitDeposit();
+                                                openDepositMdl('confirmDeposit', submitDeposit, '应监管要求，每日入金3000美金以上客户需上传入金凭证。您此次入金未到限额，点击“继续支付”可正常入金。');
                                             }
                                         } else {
                                             $scope.isLoading = false;
@@ -217,28 +217,7 @@
 
                             function submitDeposit() {
                                 var platform = $scope.deposit.type === 'alipay' ? 4 : undefined;
-                                var w, handler;
-
-                                // 解决浏览器拦截打开窗口问题
-                                handler = function(){
-                                    w = $window.open('/waiting');
-                                    console.log('handle');
-                                    if (document.body.removeEventListener){
-                                        document.body.removeEventListener("click",handler,false);
-                                    } else {
-                                        // ie8及以下，只支持事件冒泡
-                                        document.body.detachEvent("onclick",handler);
-                                    }
-                                };
-
-                                if (document.body.addEventListener) {
-                                    document.body.addEventListener("click",handler,false);
-
-                                } else {
-                                    // ie8及以下，只支持事件冒泡
-                                    document.body.attachEvent("onclick",handler);
-                                }
-                                document.body.click();
+                                var w = $window.open('/waiting');
 
                                 asset.deposit(amount, platform).then(function (data) {
                                     $scope.isLoading = false;
@@ -339,12 +318,13 @@
         }
 
         // 入金相关的各种弹窗提示
-        function openDepositMdl(type, callback) {
+        function openDepositMdl(type, callback, msg) {
             $modal.open({
                 templateUrl: '/views/asset/deposit_modal.html',
                 size: 'sm',
                 backdrop: 'static',
                 controller: function ($scope, $modalInstance, $state) {
+                    $scope.msg = msg || '';
                     $scope.type = type;
                     $scope.closeModal = closeModal;
                     $scope.verify = verify;
