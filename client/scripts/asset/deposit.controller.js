@@ -217,7 +217,27 @@
 
                             function submitDeposit() {
                                 var platform = $scope.deposit.type === 'alipay' ? 4 : undefined;
-                                var w = $window.open('/waiting');
+                                var w, handler;
+
+                                // 解决浏览器拦截打开窗口问题
+                                handler = function(){
+                                    w = $window.open('/waiting');
+
+                                    if (document.body.removeEventListener){
+                                        document.body.removeEventListener("click",handler,false);
+                                    } else {
+                                        // ie8及以下，只支持事件冒泡
+                                        document.body.detachEvent("onclick",handler);
+                                    }
+                                };
+
+                                if (document.body.addEventListener) {
+                                    document.body.addEventListener("click",handler,false);
+
+                                } else {
+                                    // ie8及以下，只支持事件冒泡
+                                    document.body.attachEvent("onclick",handler);
+                                }
 
                                 asset.deposit(amount, platform).then(function (data) {
                                     $scope.isLoading = false;
