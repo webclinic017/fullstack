@@ -26,11 +26,6 @@ var report_sites = [
         date: '2017-11-15'
     },
     {
-        address: 'http://jingji.cyol.com/content/2017-11/22/content_16713211.htm',
-        description: '【中青在线】老虎外汇：科技加持下的外汇交易服务创新',
-        date: '2017-11-22'
-    },
-    {
         address: 'http://www.hscbw.com/a/zonghe/2017/1124/72182.html?1511514136%0a',
         description: '【华声晨报】老虎外汇获SCB牌照！为什么近年外汇服务商热衷SCB监管？',
         date: '2017-11-23'
