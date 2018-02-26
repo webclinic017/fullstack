@@ -128,9 +128,9 @@
                 },
                 afterLoad: function (anchorLink, index) {
 
-                    setTimeout(function () {
-                        addRegEff(index);
-                    }, index == 1 ? 200 : 900);
+                    // setTimeout(function () {
+                    //     addRegEff(index);
+                    // }, index == 1 ? 200 : 900);
                     // debug 安卓翻页
                     offsetAction(index)
                     //showBtn(index);
@@ -143,13 +143,11 @@
                     }
 
                     if (index == 3) {
-                        $('.section3 .section3_lst').addClass('animated flipInX');
+                        $('.section3 .section3_lst').addClass('animated lightSpeedIn');
                     }
 
                     if (index == 4) {
-                        // $('.section4 .line_title').find('h2').addClass('active');
-                        // $('.section4 .line_title').find('p').addClass('active');
-                        // $('.section4').find('.line').addClass('active');
+                        addRegEff(index);
                     }
                 },
                 onLeave: function (index, direction) {

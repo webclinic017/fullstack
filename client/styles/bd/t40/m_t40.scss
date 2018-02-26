@@ -1,6 +1,10 @@
 .layui-m-layercont {
     .layer_bdt40 {
-        background: rgba(210, 80, 80, 0.7);
+        background: -webkit-linear-gradient(top,#4bd7ae, #18d9ca);
+        background: -moz-linear-gradient(top,#4bd7ae, #18d9ca);
+        background: -o-linear-gradient(top,#4bd7ae, #18d9ca);
+        background: linear-gradient(top,#4bd7ae, #18d9ca);
+        opacity: 0.8;
         color: #fff;
         position: relative;
         font-size: px2rem(24);
@@ -110,7 +114,7 @@
                 font-size: px2rem(42);
                 line-height: px2rem(50);
 
-                color: #fff;
+                color: #fcf904;
             }
             .section1_date {
                 text-align: center;
@@ -138,7 +142,7 @@
         }
         .section2 {
             .section_box {
-                background: url("/images/bd_t40/h5_p2_bg.png") no-repeat;
+                background: url("/images/bd_t40/h5_p2_bg_new.png") no-repeat;
                 background-position: center top;
                 background-size: 100% 100%;
                 position: relative;
@@ -187,7 +191,7 @@
         }
         .section3 {
             .section_box {
-                background: url("/images/bd_t40/h5_p2_bg.png") no-repeat;
+                background: url("/images/bd_t40/h5_p2_bg_new.png") no-repeat;
                 background-position: center top;
                 background-size: 100% 100%;
                 position: relative;

@@ -1,7 +1,10 @@
 .bd_t39_layer {
     .bd_t39_detail_con__text {
-        background: #45d6b0 !important;
-        color: #333 !important;
+        background: -webkit-linear-gradient(top,#4bd7ae, #18d9ca) !important;
+        background: -moz-linear-gradient(top,#4bd7ae, #18d9ca) !important;
+        background: -o-linear-gradient(top,#4bd7ae, #18d9ca) !important;
+        background: linear-gradient(top,#4bd7ae, #18d9ca) !important;
+        opacity: 0.8;
     }
 }
 .bd_t40.bd_t39 {
@@ -20,7 +23,7 @@
     	margin-top: 150px;
     }
     .bd_t40__tip {
-	    color: #fff;
+	    color: #fcf904;
 	    font-size: 30px;
 	    padding-left: 52px;
     }
