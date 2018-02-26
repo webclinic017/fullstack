@@ -41,7 +41,7 @@
                 if (!data) return;
                 if (data.is_succ) {
                     if (data.data) {
-                        $("#telephone").addClass("warning").val( lang.text('invite.registerd') );
+                        $("#telephone").addClass("warning").val(lang.text('invite.registerd'));
                     } else {
                         $("#telephone").removeClass("warning");
                     }
@@ -134,21 +134,18 @@
     }
 
     function nativeShare(type) {
-        console.log(type);
-        if (!isInTiger()) {
-            console.log("当前不是APP环境");
-            return
-        }
-
         var callConfig = {
             type: type,
             title: lang.text('invite.share2'),
             description: lang.text('invite.share3') + (lang.curLang('zh') ? coMap[getCoName()] : '') + lang.text('invite.share1'),
             url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
         };
-
-        console.log(getCoName(),callConfig)
-        callNative(callConfig);
+        if (!isInTiger()) {
+            console.log("当前不是APP环境");
+        } else {
+            callNative(callConfig);
+        }
+        console.log(getCoName(), callConfig)
     }
 
     $(document).on('touchend', '.share02_modal', function (e) {
@@ -207,7 +204,7 @@
 
                     var cBtn = ".share02_main__content .status .c";
                     $(".share02_main__content .info .num").html(data.data.record_count);
-                    
+
                     if (data.data.bonus_status == 1) {
                         $(cBtn).html(lang.text('invite.Unexchangeable'));
                     } else if (data.data.bonus_status == 2) {
@@ -220,15 +217,15 @@
                     } else if (data.data.bonus_status == 5) {
                         $(cBtn).html(lang.text('invite.Lapsed'));
                     }
-                    
+
                     /*模板引擎*/
                     baidu.template.LEFT_DELIMITER = '<$';
                     baidu.template.RIGHT_DELIMITER = '$>';
-                    
+
                     if (list.list.length) {
                         var list_str = baidu.template('invite_table', list);
                         $("#invite_history_list").html(list_str);
-                        
+
                     } else {
                         $("#invite_history_list .init").addClass("active");
                     }

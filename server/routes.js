@@ -1062,6 +1062,13 @@ module.exports = function (app) {
         if (action == 'get_trade_fee') {
             data = require('./model/modelTradeFee.js') || {};
         }
+        // 获取邀请好友图片
+        if (action == 'get_share_img'){
+            var user_code = req.query.user_code || ''
+            if(user_code){
+
+            }
+        }
         if (data) {
             if (offset) {
                 rs = {
