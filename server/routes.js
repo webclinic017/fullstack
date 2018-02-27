@@ -985,6 +985,7 @@ module.exports = function (app) {
         }
         if (action == "version_check") {
             var appType;   // global, uk, pandafx, old
+            var appLanguage = req.query.lang || 'cn';
             if (req.query.type) {
                 appType = req.query.type;
             } else {
@@ -996,7 +997,7 @@ module.exports = function (app) {
             }
             var system = req.query.os;
             var versionNum = req.query.version.replace(/\./g, "");
-            var versinInfo = require('./app_ctrl.config').getAppInfo(appType);
+            var versinInfo = require('./app_ctrl.config').getAppInfo(appType)[appLanguage];
             var currentVersionNum = versinInfo[system].app_info.version_name.replace(/[v\.]/ig, "");
             
             var currentVersion = {
