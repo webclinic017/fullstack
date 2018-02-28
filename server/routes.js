@@ -5,6 +5,7 @@
 'use strict';
 
 var path = require('path');
+var fs = require('fs');
 var url = require('url');
 var request = require('request');
 var querystring = require('querystring');
@@ -236,7 +237,7 @@ module.exports = function (app) {
     });
     app.route('/m/regular/detail/team/:subpage').get(function (req, res) {
         var subpage = req.params.subpage;
-        if(subpage.indexOf('_') != -1){
+        if (subpage.indexOf('_') != -1) {
             subpage = subpage.split('_')[1];
         }
         // var team_html = global_modelRegular.getTeamHtmlName(req.params.subpage);
@@ -267,7 +268,7 @@ module.exports = function (app) {
             pageInfo: pageInfo
         }, req));
     });
-    
+
     /*成为高手*/
     app.route('/m/agent/become').get(function (req, res) {
         setEnvCf(req, res);
@@ -406,7 +407,7 @@ module.exports = function (app) {
         });
     });
 
-    
+
     // 复制交易
     app.route('/web/copy/:subpage(rules|select|become|comment)').get(function (req, res) {
         var subpage = req.params.subpage || 'rules';
@@ -500,7 +501,7 @@ module.exports = function (app) {
                 pageInfo: pageInfo
             }, req));
         }
-        
+
     });
 
     app.route('/web/mt4').get(function (req, res) {
@@ -596,7 +597,7 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('bd/t31/h5.game.html', extendPublic({}, req))
     });
-    
+
     // t33 作为固定推广链接，要更新最新的落地页到这个地址
     app.route('/bd/t33').get(function (req, res) {
         setEnvCf(req, res);
@@ -667,7 +668,7 @@ module.exports = function (app) {
         var s = req.query.source;
 
         recordAccessTimes.recordPrizeQrTimes('/prize_qr_times.txt', s, function (num) {
-            
+
             setEnvCf(req, res);
             if (isMobile(req)) {
                 res.render('bd/prize/h5.html', extendPublic({}, req));
@@ -689,7 +690,7 @@ module.exports = function (app) {
     // cms 生成H5活动页
     app.route('/bd/object/:subpage').get(function (req, res) {
         var subpage = req.params.subpage;
-        var numName = "number_"+subpage;
+        var numName = "number_" + subpage;
         recordAccessTimes.readAccessTimes('/object_page_view.txt', numName, function (num) {
             // console.log(num);
             var pageInfo = {
@@ -700,7 +701,7 @@ module.exports = function (app) {
             res.render('bd/object/index.html', extendPublic({
                 pageInfo: pageInfo
             }, req));
-        });    
+        });
     });
     // cms 生成H5 - 每日汇评
     app.route('/bd/commentlist').get(function (req, res) {
@@ -709,11 +710,11 @@ module.exports = function (app) {
             res.render('bd/commentlist/h5.html', extendPublic({}, req));
         } else {
             res.render('404.html', extendPublic({}, req));
-        }    
+        }
     });
     app.route('/bd/comment/:subpage').get(function (req, res) {
         var subpage = req.params.subpage;
-        var numName = "number_"+subpage;
+        var numName = "number_" + subpage;
         recordAccessTimes.readAccessTimes('/comment_page_view.txt', numName, function (num) {
             // console.log(num);
             var pageInfo = {
@@ -998,7 +999,7 @@ module.exports = function (app) {
             var versionNum = req.query.version.replace(/\./g, "");
             var versinInfo = require('./app_ctrl.config').getAppInfo(appType);
             var currentVersionNum = versinInfo[system].app_info.version_name.replace(/[v\.]/ig, "");
-            
+
             var currentVersion = {
                 version_name: "",
                 description: "",
@@ -1049,7 +1050,7 @@ module.exports = function (app) {
                     error_msg: "错误的页码"
                 };
             } else {
-                
+
                 var endPg = Number(offset) + Number(limit);
                 data = report_sites.slice(offset, Math.min(endPg, sum));
                 // console.log(data, endPg);
@@ -1063,11 +1064,30 @@ module.exports = function (app) {
             data = require('./model/modelTradeFee.js') || {};
         }
         // 获取邀请好友图片
-        if (action == 'get_share_img'){
-            var user_code = req.query.user_code || ''
-            if(user_code){
-
-            }
+        if (action == 'get_share_img') {
+            (function(){
+                var QRSynthesizer = require('./api/invite_img.js').QRSynthesizer
+                var Synthesizer = new QRSynthesizer(req)
+                Synthesizer.merge(function (output) {
+                    if(output){
+                        res.sendFile(output, function(err){
+                            if(err){
+                                console.log(err)
+                            } else {
+                                Synthesizer.clearOutput()
+                                Synthesizer = null
+                            }
+                        });
+                    } else {
+                        res.json({
+                            is_succ: false,
+                            code: 1,
+                            message: "参数错误"
+                        })
+                    }
+                })
+            }())
+            return
         }
         if (data) {
             if (offset) {

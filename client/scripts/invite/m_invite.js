@@ -11,6 +11,9 @@
         "share_to_qFriend",
         "share_to_qZone",
         "share_to_microBlog",
+        "share_to_fb",
+        "share_to_ins",
+        "share_to_twitter",
         "cancel_share",
         "share02_box",
         "get_award",
@@ -102,17 +105,7 @@
     });
 
     function invitation() {
-        // var versionName = getVersionName();
-        // console.log('versionName=' + versionName);
-        // var modalHeight = '250px';
-        // $('.new_share').hide();
-        // if (versionName && parseFloat(versionName) >= 2.2) {
-        //     modalHeight = '350px';
-        //     $('.new_share').show();
-        // }
         var modalHeight = '350px';
-        modalHeight = '350px';
-        $('.new_share').show();
         /*页面层*/
         layIndex = layer.open({
             type: 1
@@ -138,7 +131,8 @@
             type: type,
             title: lang.text('invite.share2'),
             description: lang.text('invite.share3') + (lang.curLang('zh') ? coMap[getCoName()] : '') + lang.text('invite.share1'),
-            url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
+            url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || ''),
+            imgUrl: window.location.origin + "/napi?action=get_share_img&user_code=" + ($.cookie("user_code") || '') + ".png",
         };
         if (!isInTiger()) {
             console.log("当前不是APP环境");
@@ -165,7 +159,17 @@
         }
         else if (id == id_arr[5]) {
             type = "weibo";
-        } else if (id == id_arr[6]) {
+        } 
+        else if (id == id_arr[6]) {
+            type = "facebook";
+        } 
+        else if (id == id_arr[7]) {
+            type = "instagram";
+        } 
+        else if (id == id_arr[8]) {
+            type = "twitter";
+        } 
+        else if (id == id_arr[9]) {
             layer.close(layIndex);
             return false;
         } else {
@@ -232,6 +236,5 @@
                 }
             });
         }
-
     }());
 }(jQuery));

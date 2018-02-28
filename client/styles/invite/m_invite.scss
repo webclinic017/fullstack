@@ -309,7 +309,6 @@ html,body{
       font-weight: 200;
       margin-top:px2rem(25);
       color: #222;
-
       img{
         width: 75%;
         vertical-align: middle;
@@ -328,11 +327,22 @@ html,body{
       background-color: transparent;
       font-size: 1.2rem;
     }
-    //.share_to_friends{
-    //  background-color: #27B24A;
-    //}
-    //.share_to_circle{
-    //  background-color: #F43531;
-    //}
+
+    &.en {
+        .show_in_en {
+            display: inline-block;
+        }
+        .show_in_zh {
+            display: none;
+        }
+    }
+    &.zh {
+        .show_in_zh {
+            display: inline-block;
+        }
+        .show_in_en {
+            display: none;
+        }
+    }
   }
 }
