@@ -9,11 +9,11 @@
         "share_to_friends",
         "share_to_circle",
         "share_to_qFriend",
-        "share_to_qZone",
         "share_to_microBlog",
         "share_to_fb",
-        "share_to_ins",
         "share_to_twitter",
+        "share_to_linkin",
+        "share_to_tumblr",
         "cancel_share",
         "share02_box",
         "get_award",
@@ -155,19 +155,19 @@
             type = "qq";
         }
         else if (id == id_arr[4]) {
-            type = "qzone";
+            type = "weibo";
         }
         else if (id == id_arr[5]) {
-            type = "weibo";
-        } 
-        else if (id == id_arr[6]) {
             type = "facebook";
         } 
+        else if (id == id_arr[6]) {
+            type = "twitter";
+        } 
         else if (id == id_arr[7]) {
-            type = "instagram";
+            type = "linkin";
         } 
         else if (id == id_arr[8]) {
-            type = "twitter";
+            type = "tumblr";
         } 
         else if (id == id_arr[9]) {
             layer.close(layIndex);
