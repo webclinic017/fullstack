@@ -90,14 +90,16 @@
                         });
                         $('.layui-m-layercont').css('padding', 0)
                         $.fn.fullpage.setAllowScrolling(false)
-
-                        return false;
                     }
                     /*页面按钮事件*/
                     $(document.body).on("tap", function (e) {
                         var action = $(e.target).attr("data-action");
                         var targetClass = $(e.target).attr("class");
                         if (targetClass == "layui-m-layershade") {
+                            layer.closeAll();
+                            $.fn.fullpage.setAllowScrolling(true)
+                        }
+                        if ((targetClass == "rule_close") || (targetClass == "fa fa-times")) {
                             layer.closeAll();
                             $.fn.fullpage.setAllowScrolling(true)
                         }
@@ -119,6 +121,8 @@
                         if (action == 'registerNow') {
                             $.fn.fullpage.moveTo(4);
                         }
+
+                        return false;
                     });
 
                     $(".lake_layout").fadeIn(0);
