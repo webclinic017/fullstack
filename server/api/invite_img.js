@@ -4,7 +4,6 @@ var qr = require('qr-image');
 var images = require("images");
 var path = require('path');
 var querystring = require('querystring');
-var async = require('async');
 
 var imgCoor = {
     size: 218,
