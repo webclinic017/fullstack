@@ -90,6 +90,8 @@
                         });
                         $('.layui-m-layercont').css('padding', 0)
                         $.fn.fullpage.setAllowScrolling(false)
+
+                        return false;
                     }
                     /*页面按钮事件*/
                     $(document.body).on("tap", function (e) {
