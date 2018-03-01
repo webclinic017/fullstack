@@ -721,6 +721,25 @@ module.exports = function (app) {
             }
         });
     });
+    // H5 财经日历
+    app.route('/bd/calendarlist').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            res.render('bd/calendar/list.html', extendPublic({}, req));
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }    
+    });
+    app.route('/bd/calendar/:subpage').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            res.render('bd/calendar/detail.html', extendPublic({
+                id: req.params.subpage
+            }, req));
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }    
+    });
 
 
     // 一键原谅活动
