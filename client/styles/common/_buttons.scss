@@ -43,6 +43,7 @@
 .btn-gray {
     @include button-variant($btn-gray-color, $btn-gray-bg, $btn-gray-border, $btn-gray-bg, $btn-gray-border);
 }
+
 .btn-disabled {
     @include button-variant(#333, #ccc, #ccc, #ccc, #ccc);
 }
@@ -121,4 +122,87 @@
             left: 2px;
         }
     }
+}
+
+// 个人中心 新按钮
+$tw-btn-color: #222;
+$tw-btn-border: 1px solid #d6d7d9;
+$tw-btn-border-hover: 1px solid darken(#d6d7d9, 5%);
+
+$tw-btn-width-lg: 100%;
+$tw-btn-min-width-lg: 290px;
+$tw-btn-width-md: 130px;
+$tw-btn-width-sm: 100px;
+
+$tw-btn-height-lg: 52px;
+$tw-btn-height-md: 40px;
+$tw-btn-height-sm: 35px;
+
+$tw-btn-fontsize-lg: 18px;
+$tw-btn-fontsize-md: 14px;
+$tw-btn-fontsize-sm: 12px;
+$tw-btn-fontsize-sl: 10px;
+
+$tw-btn-radius-capsule: 200px;
+$tw-btn-radius-square: 4px;
+
+$tw-btn-fontweight: 500;
+
+$tw-btn-bg-start: #ffc500;
+$tw-btn-bg-end: #ffd240;
+.tw-btn {
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    background-image: none;
+    cursor: pointer;
+    @include user-select(none);
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+    }
+    &.disabled,
+    &[disabled] {
+        cursor: not-allowed;
+        pointer-events: none; // Future-proof disabling of clicks
+    }
+}
+
+// 按钮尺寸
+.tw-btn-lg {
+    min-width: $tw-btn-min-width-lg;
+    @include tw-button-size($tw-btn-width-lg, $tw-btn-height-lg, $tw-btn-fontsize-lg)
+}
+.tw-btn-md {
+    @include tw-button-size($tw-btn-width-md, $tw-btn-height-md, $tw-btn-fontsize-md)
+}
+.tw-btn-sm {
+    @include tw-button-size($tw-btn-width-sm, $tw-btn-height-sm, $tw-btn-fontsize-sm, 400)
+}
+.tw-btn-sl {
+    @include button-size(0, 0, $tw-btn-fontsize-sl, auto, 0)
+}
+
+// 按钮阴影
+.tw-btn-shadow-primary {
+    @include box-shadow(0 0 40px $tw-btn-bg-end);
+}
+
+// 按钮形状
+.tw-btn-capsule-gradient {
+    @include tw-button-variant($tw-btn-color, none, none, $tw-btn-radius-capsule);
+    @include tw-button-gradient-vertical($tw-btn-bg-start, $tw-btn-bg-end);
+}
+.tw-btn-capsule-bordered {
+    @include tw-button-variant($tw-btn-color, $tw-btn-border, $tw-btn-border-hover, $tw-btn-radius-capsule);
+}
+.tw-btn-square-gradient {
+    @include tw-button-variant($tw-btn-color, none, none, $tw-btn-radius-square);
+    @include tw-button-gradient-vertical($tw-btn-bg-start, $tw-btn-bg-end);
+}
+.tw-btn-square-bordered {
+    @include tw-button-variant($tw-btn-color, $tw-btn-border, $tw-btn-border-hover, $tw-btn-radius-square);
 }
