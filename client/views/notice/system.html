@@ -1,0 +1,28 @@
+<ul class="notice__list">
+    <div tw-loading-img></div>
+    <li class="notice__list-li" ng-repeat="notice in noticeList.system">
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="notice__li-title">{{notice.title}}</p>
+                <p class="notice__li-time font-size-12"> {{notice.created_at | dateFormatter }}</p>
+                <p class="notice__li-info" ng-bind-html="formatText(notice.contentOmit, 'sys') | bindhtml">
+                </p>
+                <div ng-if="notice.content.length > 150 && notice.openOrClose == 'open'" class="text-right">
+                    <a class="notice__open" href="" ng-click="openNotice(notice, 1)">展开</a>
+                </div>
+                <div ng-if="notice.content.length > 150 && notice.openOrClose == 'close'" class="text-right">
+                    <a class="notice__close" href="" ng-click="openNotice(notice, 0)">收起</a>
+                </div>
+            </div>
+        </div>
+    </li>
+    <li class="notice__list-li" ng-if="noticeList.system.length == 0">
+        <p class="text-left mg-bt-20">
+            暂无提醒
+        </p>
+    </li>
+</ul>
+
+<div class="text-right" ng-if="noticeList.system.length > 0">
+    <div tw-pagination></div>
+</div>

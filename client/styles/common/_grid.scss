@@ -12,6 +12,10 @@
     width: $container-main;
 }
 
+.tw-container {
+    @include container-fixed();
+}
+
 // Row
 .row {
     @include make-row();

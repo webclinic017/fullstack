@@ -150,6 +150,8 @@ $tw-btn-fontweight: 500;
 
 $tw-btn-bg-start: #ffc500;
 $tw-btn-bg-end: #ffd240;
+$tw-btn-bg-black-start: #242a36;
+$tw-btn-bg-black-end: #2b323e;
 .tw-btn {
     display: inline-block;
     margin: 0;
@@ -202,6 +204,10 @@ $tw-btn-bg-end: #ffd240;
 .tw-btn-square-gradient {
     @include tw-button-variant($tw-btn-color, none, none, $tw-btn-radius-square);
     @include tw-button-gradient-vertical($tw-btn-bg-start, $tw-btn-bg-end);
+}
+.tw-btn-square-gradient-black {
+    @include tw-button-variant(#fff, none, none, $tw-btn-radius-square);
+    @include tw-button-gradient-vertical($tw-btn-bg-black-start, $tw-btn-bg-black-end);
 }
 .tw-btn-square-bordered {
     @include tw-button-variant($tw-btn-color, $tw-btn-border, $tw-btn-border-hover, $tw-btn-radius-square);

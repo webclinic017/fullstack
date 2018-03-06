@@ -8,8 +8,8 @@
 // asset
 @include b (asset-public) {
     min-height: 500px;
-    // padding: 30px 20px;
-    color: $gray-darker;
+    padding: 30px 32px;
+    color: $gray-base;
     
     .btn-primary {
         margin-top: -3px;
@@ -252,9 +252,9 @@
     }
     
     @include e(way) {
-        width: 225px;
-        height: 96.8px;
-        padding: 20px;
+        width: 255px;
+        height: 136px;
+        padding: 24px;
         text-align: left;
         float: left;
         border-radius: 5px;
@@ -266,11 +266,12 @@
         -webkit-transition: all 0.22s ease;
         color: #fff;
         .amount {
-            font-size:  27px;
+            font-size:  37.5px;
             font-weight: 500;
         }
         span {
             display: block;
+            font-size: 16px;
         }
         &.account {
             margin-right: 20px;

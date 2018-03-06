@@ -1,0 +1,33 @@
+@include b(space_nav){
+    padding-left: 64px;
+    line-height: 55px;
+    @include e(box) {
+        @include m(item){
+            float: left;
+            margin-right: 36px;
+            position: relative;
+            > a {
+                font-size: 16px;
+                font-weight: 500;
+                color: $gray-dark;
+                cursor: pointer;
+            }
+            &.red_point:before {
+                display: inline-block;
+                content: '';
+                width: 8px;
+                height: 8px;
+                background: $brand-danger;
+                border-radius: 4px;
+                position: absolute;
+                top: 10px;
+                right: -12px;
+            }
+            &.active, &:hover {
+                > a {
+                    color: $gray-base;
+                }
+            }
+        }
+    }
+}

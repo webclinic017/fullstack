@@ -1,18 +1,39 @@
 @include b(space_bg) {
-    background-color: $gray-lightest;
-    padding-bottom: 200px;
+    background-color: $gray-fff;
 }
 
 @include b(space_sidebar) {
-
-    .side_navbar {
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
+    // .side_navbar {
+    //     padding-top: 80px;
+    //     border-top-left-radius: 0px;
+    //     border-top-right-radius: 0px;
+    //     background: transparent;
+    // }
+    @extend .tw-container;
+    height: 100%;
+    position: relative;
+    @include e(nav) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+        background-color: transparent;
+        text-align: center;
+        @include m(menu){
+            padding: 12px 0;
+            > a {
+                color: $gray-dark;
+                font-size: 16px;
+                font-weight: 500;
+            }
+            &.active, &:hover{
+                a {
+                    color: $gray-base;
+                }
+            }
+        }
     }
 
     @include e(info) {
-        background-color: $gray-base;
-        color: $gray-lightest;
+        color: $gray-base;
         border-top-left-radius: $border-radius-base;
         border-top-right-radius: $border-radius-base;
 
@@ -24,7 +45,7 @@
 
     @include e(avatar) {
         text-align: center;
-        padding-top: 20px;
+        padding-top: 30px;
 
         > a > img {
             display: inline-block;
@@ -71,7 +92,7 @@
     @include e(user) {
         text-align: center;
         padding-top: 15px;
-
+        margin-bottom: 30px;
         @include m(username) {
             display: inline-block;
             white-space: nowrap;
@@ -80,6 +101,7 @@
             vertical-align: middle;
             max-width: 100%;
             padding-right: 5px;
+            font-size: 24px;
         }
 
         @include m(position) {
@@ -90,6 +112,25 @@
             overflow: hidden;
             color: $gray-dark;
             max-width: 100%;
+        }
+    }
+
+    @include e(detail) {
+        .detail_item{
+            text-align: center;
+            display: inline-block;
+            width: 49%;
+            .item__number{
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 22px;
+            }
+            .item__text {
+                margin-top: 5px;
+                color: $gray-dark;
+                font-size: 12px;
+                line-height: 22px;
+            }
         }
     }
 
@@ -144,17 +185,17 @@
         }
     }
 
-    @include e(real) {
-        text-align: center;
-        color: $gray-dark;
-        padding-bottom: 15px;
-    }
-    @include e(demo) {
-        text-align: center;
-        color: $gray-dark;
-        padding-top: 10px;
-        padding-bottom: 15px;
-    }
+    // @include e(real) {
+    //     text-align: center;
+    //     color: $gray-dark;
+    //     padding-bottom: 15px;
+    // }
+    // @include e(demo) {
+    //     text-align: center;
+    //     color: $gray-dark;
+    //     padding-top: 10px;
+    //     padding-bottom: 15px;
+    // }
 
     @include e(copy) {
         text-align: center;
@@ -197,6 +238,21 @@
             font-size: 12px;
             line-height: 20px;
         }
+    }
+
+    @include e(logout) {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 85px;
+        line-height: 85px;
+        text-align: center;
+        font-size: 16px;
+        font-weight: 500;
+        border-top: 1px solid $gray;
+        cursor: pointer;
+        color: $gray-darker;
     }
 }
 

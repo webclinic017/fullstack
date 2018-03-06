@@ -28,19 +28,17 @@
         $scope.currentMsg = 'trade';
         $scope.openNotice = openNotice;
         $scope.chooseMsg = chooseMsg;
-        $scope.unreadMsg = {
-            trade: 0,
-            system: 0,
-        }
 
         // 获取消息
         getNoticeList(1, 'trade');
         getNoticeList(1, 'system');
+        // 选择消息类型
+        chooseMsg($state.params.subpage)
 
         function chooseMsg(type) {
             $scope.currentMsg = type;
             getNoticeList(1, type)
-            if ($scope.unreadMsg[type] > 0) {
+            if ($scope.personal.unreadMsg && $scope.personal.unreadMsg[type] > 0) {
                 readNotice(type)
             }
         }
@@ -75,18 +73,8 @@
         }
 
         // 获取未读消息
-        getUnreadMsg()
         function getUnreadMsg() {
-            account.getUnreadLength().then(function (data) {
-                if (!data) return;
-                var res = data.data
-                if (data.is_succ) {
-                    $scope.unreadMsg = {
-                        trade: ~~res.trade,
-                        system: ~~res.system
-                    }
-                }
-            });
+            $scope.$emit('global.getUnReadMsgLength', {ctrlName: 'NoticeIndexController'})
         }
 
         // 展开/收起 消息 status-> 0 收起 1 展开

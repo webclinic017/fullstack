@@ -1,0 +1,51 @@
+<div class="space_nav">
+
+    <!-- toState为global.controller 中的 $scope.toState -->
+    <ul class="space_nav__box" ng-show="toState.name == 'space.center.index'">
+        <li class="space_nav__box-item active">
+            <a>账户概况</a>
+        </li>
+    </ul>
+    
+    <ul class="space_nav__box" ng-show="toState.name == 'space.asset.subpage'">
+        <li class="space_nav__box-item" ui-sref-active="active">
+            <a ui-sref="space.asset.subpage({subpage: 'deposit'})">充值</a>
+        </li>
+        <li class="space_nav__box-item" ui-sref-active="active">
+            <a ui-sref="space.asset.subpage({subpage: 'withdraw'})">提现</a>
+        </li>
+    </ul>
+
+    <ul class="space_nav__box" ng-show="toState.name == 'space.bonus'">
+        <li class="space_nav__box-item active">
+            <a>复制和分成</a>
+        </li>
+    </ul>
+
+    <ul class="space_nav__box" ng-show="toState.name == 'space.redbag.subpage'">
+        <li class="space_nav__box-item" ui-sref-active="active">
+            <a ui-sref="space.redbag.subpage({subpage: 'own'})">我的红包</a>
+        </li>
+    </ul>
+
+    <ul class="space_nav__box" ng-show="toState.name == 'space.invite'">
+        <li class="space_nav__box-item active">
+            <a>邀请好友</a>
+        </li>
+    </ul>
+
+    <ul class="space_nav__box" ng-show="toState.name == 'space.notice.subpage'">
+        <li class="space_nav__box-item" ng-class="{ 'red_point': personal.unreadMsg.trade > 0 }" ui-sref-active="active">
+            <a ui-sref="space.notice.subpage({subpage: 'trade'})">交易提醒</a>
+        </li>
+        <li class="space_nav__box-item" ng-class="{ 'red_point': personal.unreadMsg.system > 0 }" ui-sref-active="active">
+            <a ui-sref="space.notice.subpage({subpage: 'system'})">系统提醒</a>
+        </li>
+    </ul>
+
+    <ul class="space_nav__box" ng-show="toState.name == 'space.setting.subpage'">
+        <li class="space_nav__box-item active">
+            <a>修改资料</a>
+        </li>
+    </ul>
+</div>

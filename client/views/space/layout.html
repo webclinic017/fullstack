@@ -1,4 +1,4 @@
-<div class="layout-2">
+<!-- <div class="layout-2">
     <div class="layout-2__side">
         <div ui-view="side"></div>
     </div>
@@ -13,5 +13,17 @@
             <a class="link" ui-sref="space.asset.subpage({subpage: 'deposit'})">2.充值激活</a>
         </p>
         <div class="mg-tp-30" ui-view="content"></div>
+    </div>
+</div> -->
+
+<div class="tw-space-layout" tw-window-height data-has-navbar="true" data-min-height="900">
+    <div class="tw-space-layout__side">
+        <div class="tw-space-layout__side-view" ui-view="side"></div>
+    </div>
+    <div class="tw-space-layout__nav">
+        <div class="tw-space-layout__nav-view" ui-view="nav"></div>
+    </div>
+    <div class="tw-space-layout__content">
+        <div class="tw-space-layout__content-view" ui-view="content"></div>
     </div>
 </div>
