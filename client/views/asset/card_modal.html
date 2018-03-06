@@ -26,19 +26,17 @@
                                    placeholder="请输入持卡人姓名"
                                    ng-class="{'form-control-error': frontErr.realname.show && cardForm.realname.$invalid}"
                                    ng-model="card.realname"
-                                   ng-init="card.realname = personal.realname"
                                    ng-disabled="card.realname != ''"
                                    ng-focus="hideErr('realname')"
-                                   ng-pattern="frontErr.realname.reg"
+                                   ng-init="card.realname = personal.realname"
                                    ng-blur="showErr('realname')">
-
                             <div ng-show="frontErr.realname.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.realname.$error.required">
                                     请输入持卡人姓名
                                 </p>
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.realname.$error.pattern">
+                                <!-- <p class="alert alert-arrow_tp_lf" ng-show="cardForm.realname.$error.pattern">
                                     {{frontErr.realname.tip}}
-                                </p>
+                                </p> -->
                             </div>
                         </div>
                     </div>

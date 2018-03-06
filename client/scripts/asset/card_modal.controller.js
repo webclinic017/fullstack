@@ -14,7 +14,7 @@
             //bank: ,           // 银行
             // address: ,       // 开户行
             binding: false,
-            realname: ''
+            realname: $scope.personal.realname
         };
         $scope.banks = [];
         $scope.clickable = true;
@@ -41,9 +41,7 @@
                 show: false
             },
             realname: {
-                show: false,
-                reg: validator.regType.realname.reg,
-                tip: validator.regType.realname.tip,
+                show: false
             }
         };
 
