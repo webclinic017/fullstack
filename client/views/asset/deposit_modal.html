@@ -1,70 +1,36 @@
-<div class="system_modal">
+<div class="sys_modal_v2 slim_case">
     <button class="close" ng-click="closeModal()">&times;</button>
 
-    <h5 class="system_modal__title">
-        系统提示
+    <h5 class="sys_modal_v2__title">
+        {{msgInfo.msgTitle}}
     </h5>
 
-    <div class="system_modal__content" ng-if="type === 'needVerify'">
-        <p class="system_modal__info">
-            无法进行入金操作
-        </p>
-        <p class="system_modal__tip">
-            由于您没有完成开户，无法进行入金操作
-        </p>
-
-        <p class="system_modal__tip font-danger">
-            请进行实名认证完成开户
-        </p>
-
-        <p class="system_modal__btn_wrapper">
-            <button class="btn btn-info active" ng-click="verify()">
-                实名认证
-            </button>
-        </p>
-    </div>
-
-    <div class="system_modal__content" ng-if="type === 'depositFinish'">
-        <p class="system_modal__info">
+    <div class="sys_modal_v2__content" ng-if="type === 'depositFinish'">
+        <p class="sys_modal_v2__info">
             支付完成前，请不要关闭支付验证窗口
         </p>
-        <p class="system_modal__tip">
+        <p class="sys_modal_v2__tip">
             支付完成后，请根据您支付的情况点击下面按钮
         </p>
 
-        <p class="system_modal__btn_wrapper">
-            <button class="btn btn-primary btn-sm" ng-click="openChat()">
+        <p class="btn_wrapper mg-bt-15"">
+            <button class="btn btn-primary-gradient btn-sm mg-rg-15"" ng-click="openChat()">
                 遇到问题
             </button>
-            <button class="btn btn-info btn-sm" ng-click="depositSucc()">
+            <button class="btn btn-info btn-sm" style="border-radius: 100px;" ng-click="depositSucc()">
                 支付成功
             </button>
         </p>
     </div>
 
-    <div class="system_modal__content" ng-if="type === 'isumam'">
-        <p class="system_modal__info">
-            无法进行充值操作
-        </p>
-        <p class="system_modal__tip">
-            您的资金处于封闭期，无法使用充值
+    <div class="sys_modal_v2__content" ng-if="type === 'confirmDeposit'">
+        <p class="sys_modal_v2__info mg-bt-15">
+            {{msgInfo.msgTip}}
         </p>
 
-        <p class="system_modal__btn_wrapper">
-            <button class="btn btn-primary btn-sm" ng-click="closeModal()">
-                确定
-            </button>
-        </p>
-    </div>
-
-    <div class="system_modal__content" ng-if="type === 'confirmDeposit'">
-        <p class="system_modal__info">
-            {{msg}}
-        </p>
-
-        <p class="system_modal__btn_wrapper">
-            <button class="btn btn-primary" ng-click="goOnDeposit()">
-                继续支付
+        <p class="btn_wrapper mg-bt-15">
+            <button class="btn btn-primary-gradient btn-sm" ng-click="goOnDeposit()">
+                {{msgInfo.msgBtn}}
             </button>
         </p>
     </div>
