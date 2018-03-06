@@ -102,11 +102,15 @@
                         if ((targetClass == "rule_close") || (targetClass == "fa fa-times")) {
                             layer.closeAll();
                             $.fn.fullpage.setAllowScrolling(true)
+
+                            return false;
                         }
                         if (action == "matters") {
                             setTimeout(function () {
                                 openLay("#layer_contentBox")
                             }, 10)
+
+                            return false;
                         }
                         if (action == "rule1") {
                             setTimeout(function () {
@@ -121,8 +125,6 @@
                         if (action == 'registerNow') {
                             $.fn.fullpage.moveTo(4);
                         }
-
-                        return false;
                     });
 
                     $(".lake_layout").fadeIn(0);
