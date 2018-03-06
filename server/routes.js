@@ -602,9 +602,9 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t36/h5.html', extendPublic({}, req))
+                res.render('bd/t40/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t36/web.html', extendPublic({}, req));
+                res.render('bd/t40/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
