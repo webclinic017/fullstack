@@ -29,7 +29,8 @@
             walletWithdraw: walletWithdraw,
             walletCanWithdraw: walletCanWithdraw,
             getBanks: getBanks,
-            teleDeposit: teleDeposit
+            teleDeposit: teleDeposit,
+            uploadPaymentEvidence: uploadPaymentEvidence
         };
         return service;
 
@@ -293,6 +294,18 @@
         function teleDeposit(amount, file) {
             return publicHttp.dealPublicRequest(o.teleDepositApi, 'POST', {
                 amount: amount,
+                file: file
+            });
+        } 
+
+        /**
+         * Asset Service 入金凭证
+         *
+         * @method uploadPaymentEvidence
+         * @param {Number} file  (base64编码)
+         */
+        function uploadPaymentEvidence(file) {
+            return publicHttp.dealPublicRequest(o.uploadPaymentEvidenceApi, 'POST', {
                 file: file
             });
         }    
