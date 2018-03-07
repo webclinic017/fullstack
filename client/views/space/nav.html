@@ -1,7 +1,13 @@
 <div class="space_nav">
 
     <!-- toState为global.controller 中的 $scope.toState -->
-    <ul class="space_nav__box" ng-show="toState.name == 'space.center.index'">
+    <ul class="space_nav__box" ng-show="toState.name == 'space.master.subpage'">
+        <li class="space_nav__box-item active">
+            <a>申请高手</a>
+        </li>
+    </ul>
+
+    <ul class="space_nav__box" ng-if="toState.name == 'space.center.index'">
         <li class="space_nav__box-item active">
             <a>账户概况</a>
         </li>
@@ -46,6 +52,21 @@
     <ul class="space_nav__box" ng-show="toState.name == 'space.setting.subpage'">
         <li class="space_nav__box-item active">
             <a>修改资料</a>
+        </li>
+    </ul>
+    <!-- 认证提示 -->
+    <ul class="space_nav__box">
+        <li class="space_nav__box-item">
+            <a ng-if="personal.dredged_type == 'live' && personal.verify_status < 5" 
+                ui-sref="authen.subpage({subpage: 'investInfo'})"
+                class="link">
+                您的帐户尚未完成认证审核，将无法进行交易和资金相关操作，点击此处完成审核。
+            </a>
+            <p ng-if="personal.dredged_type == 'demo' && personal.verify_status < 5" class="font-danger">
+                您当前账户为体验金账户，升级至真实账户只需两步：
+                <a class="link" ui-sref="authen.subpage" ng-click="toAuthenTypeSensorsdata('真实账户')">1.完整填写个人信息</a> &nbsp;&nbsp;
+                <a class="link" ui-sref="space.asset.subpage({subpage: 'deposit'})">2.充值激活</a>
+            </p>
         </li>
     </ul>
 </div>

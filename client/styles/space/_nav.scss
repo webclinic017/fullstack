@@ -2,15 +2,22 @@
     padding-left: 64px;
     line-height: 55px;
     @include e(box) {
+        @extend .clearfix;
+        display: inline-block;
         @include m(item){
             float: left;
             margin-right: 36px;
             position: relative;
-            > a {
+            a {
                 font-size: 16px;
                 font-weight: 500;
                 color: $gray-dark;
                 cursor: pointer;
+                &.link {
+                    font-weight: 200;
+                    color: red;
+                    font-size: 14px;
+                }
             }
             &.red_point:before {
                 display: inline-block;
@@ -24,8 +31,12 @@
                 right: -12px;
             }
             &.active, &:hover {
-                > a {
+                a {
                     color: $gray-base;
+                    &.link {
+                        color: red;
+                        text-decoration: underline;
+                    }
                 }
             }
         }
