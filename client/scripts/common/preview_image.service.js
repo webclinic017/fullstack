@@ -26,14 +26,16 @@
 
             $("body").append(div);
 
+            console.log($('.img_modal'),$('.img_modal img').width(), $('.img_modal').width(),$('.img_modal').height(),-$('.img_modal').width()*wHeight*0.7/$('.img_modal').height()/2);
+
             setTimeout(function () {
                 $(".img_modal").css({
                     height: '70%',
                     top: '15%',
                     left: '50%',
-                    marginLeft: -$('.img_modal').width()*wHeight*0.7/$('.img_modal').height()/2
+                    marginLeft: -$('.img_modal img').width()*wHeight*0.7/$('.img_modal').height()/2
                 });
-            }, 30);
+            });
 
             $(".img_modal img").on('click', function (e) {
                 return false;
