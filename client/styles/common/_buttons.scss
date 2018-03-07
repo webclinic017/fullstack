@@ -175,7 +175,6 @@ $tw-btn-bg-black-end: #2b323e;
 
 // 按钮尺寸
 .tw-btn-lg {
-    min-width: $tw-btn-min-width-lg;
     @include tw-button-size($tw-btn-width-lg, $tw-btn-height-lg, $tw-btn-fontsize-lg)
 }
 .tw-btn-md {

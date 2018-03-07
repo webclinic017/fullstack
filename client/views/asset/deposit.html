@@ -1,14 +1,12 @@
-
-
-<div class="asset-public deposit" tw-prevent-scroll>
+<div class="asset-public deposit">
 
     <div ng-show="!walletDepositSucc && !teleDepositSucc">
         <div class="row mg-tp-30">
-            <div class="col-xs-3 text-right deposit__title-money">充值金额</div>
-            <div class="col-xs-6 deposit__input">
+            <div class="col-xs-2 text-right deposit__title-money">充值金额</div>
+            <div class="col-xs-7 deposit__input">
                 <form name="depositForm" novalidate>
                     <div class="form-control-wrapper">
-                        <input class="form-control form-control-md"
+                        <input class="form-control form-control-md radius"
                                ng-if="deposit.type === 'invest' || deposit.type === 'alipay'"
                                name="amount"
                                type="text"
@@ -20,7 +18,7 @@
                                ng-change="checkInputAmount()"
                                ng-focus="hideErr('amount')"
                                ng-blur="showErr('amount')">
-                        <input class="form-control form-control-md"
+                        <input class="form-control form-control-md radius"
                                ng-if="deposit.type === 'wallet'"
                                name="amount"
                                type="text"
@@ -31,7 +29,7 @@
                                ng-change="checkInputAmount()"
                                ng-focus="hideErr('amount')"
                                ng-blur="showErr('amount')">
-                        <input class="form-control form-control-md"
+                        <input class="form-control form-control-md radius"
                                ng-if="deposit.type === 'tele'"
                                name="amount"
                                type="text"
@@ -66,7 +64,7 @@
         </div>
 
         <div class="row">
-            <div class="col-xs-9 col-xs-offset-3 deposit__rate">
+            <div class="col-xs-7 col-xs-offset-2 deposit__rate">
                 <p>
                     <span class="font-danger">＊</span>今日汇率：1 美元 =
                     <span>{{deposit.FXRate.value}}</span> 人民币
@@ -75,8 +73,8 @@
         </div>
 
         <div class="row mg-tp-30">
-            <div class="col-xs-3 text-right deposit__title-money">支付方式</div>
-            <div class="col-xs-6">
+            <div class="col-xs-2 text-right deposit__title-money">支付方式</div>
+            <div class="col-xs-7">
                 <div class="deposit__way" ng-click="openChangeDepTypeMdl()">
                     {{ depositTypeCN }}
                 </div>
@@ -86,22 +84,27 @@
                 <p class="deposit__way-tip" ng-class="{active: deposit.type === 'alipay'}">单日交易限额 $3000.00</p>
             </div>
         </div>
-        <div class="row mg-tp-30" ng-show="deposit.type === 'tele'">
-            <div class="col-xs-3 text-right deposit__title-money">上传电汇凭证</div>
-            <div class="col-xs-6 deposit__tele_file">
-                点击上传电汇凭证
-                <div tw-upload-file-base64 data-file-name="deposit.teleFile"></div>
+        <br>
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-7 deposit__btn_box">
+                <div class="deposit__btn_wrapper">
+                    <button ng-if="!isLoading" class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-class="{'btn-disabled': !deposit.submitBtn, 'disabled': !deposit.submitBtn}" ng-click="toDeposit()">
+                        <span ng-show="deposit.type !== 'tele'">充值</span>
+                        <span ng-show="deposit.type === 'tele'">提交</span>
+                    </button>
+                    <button ng-if="isLoading" class="tw-btn tw-btn-capsule-gradient tw-btn-md"><i class="loading_spinner fa fa-spinner"></i>提交中</button>
+                </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-xs-3"></div>
-            <div class="col-xs-6 deposit__btn_wrapper">
-                <button ng-if="!isLoading" class="btn btn-primary btn-sm" ng-class="{'btn-disabled': !deposit.submitBtn, 'disabled': !deposit.submitBtn}" ng-click="toDeposit()">
-                    <span ng-show="deposit.type !== 'tele'">充值</span>
-                    <span ng-show="deposit.type === 'tele'">提交</span>
-                </button>
-                <button ng-if="isLoading" class="btn btn-primary btn-sm"><i class="loading_spinner fa fa-spinner"></i>提交中</button>
+        <div class="deposit_separator"></div>
+
+        <div class="row mg-tp-30" ng-show="deposit.type === 'tele'">
+            <div class="col-xs-2 text-right deposit__title-money">上传电汇凭证</div>
+            <div class="col-xs-7 deposit__tele_file">
+                点击上传电汇凭证
+                <div tw-upload-file-base64 data-file-name="deposit.teleFile"></div>
             </div>
         </div>
 
@@ -138,7 +141,6 @@
             </p>
             <p class="deposit__tele-msg">
                 收款人地址（Address）：<br>No. 201  Church Street Sandyport P. O. Box SP 64638 Nassau, Bahamas
-
             </p>
             <p class="deposit__tele-msg">
                 汇款附言：姓名：您的姓名拼音，交易账号：12345678
