@@ -87,7 +87,7 @@
         }
 
         function uploadBankFile () {    //提交入金凭证
-            console.log($scope.deposit.bankFile);
+            // console.log($scope.deposit.bankFile);
             if ($scope.deposit.bankFile.length) {
                 asset.uploadPaymentEvidence($scope.deposit.bankFile).then(function (data) {
                     if (data.is_succ) {
@@ -207,7 +207,7 @@
                                                 $scope.isLoading = false;
                                                 openDepositMdl('confirmDeposit', submitDeposit, {
                                                     msgTip: '应监管要求，此笔支付成功后，当日累计支付超过3000美金，需提供入金凭证。入金凭证可以是含有姓名、卡号、支付金额的付款成功截图或银行流水单。',
-                                                    msgBtn: '我知道了',
+                                                    msgBtn: '继续支付',
                                                     msgTitle: '提示'
                                                 });
                                             } else {

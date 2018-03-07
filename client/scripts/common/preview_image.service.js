@@ -27,7 +27,7 @@
             $("body").append(div);
 
             $(".img_modal img").load(function () {
-                console.log($('.img_modal img')[0].naturalWidth,$('.img_modal img')[0].naturalHeight);
+                // console.log($('.img_modal img')[0].naturalWidth,$('.img_modal img')[0].naturalHeight);
 
                 setTimeout(function () {
                     $(".img_modal").css({

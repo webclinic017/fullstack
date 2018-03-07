@@ -21,8 +21,8 @@
                         'accept="image/*"'+
                         'style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;opacity: 0;cursor:pointer;z-index:20">',
             link: function (scope, element, attrs) {
-                $('input[type=file]').on('change', function (e) {
-                    // console.log(e.target.files[0]);
+                
+                $(element).on('change', function (e) {
                     var file = e.target.files[0];
                     renderImage(file, this);
                 });
@@ -41,13 +41,12 @@
                             src: e.target.result,
                             style: "width:100%;height:100%;position:absolute;top:0;left:0;z-index:10"
                         });
+                        $(target).nextAll().remove();
                         $(target).parent().append($img);
                         
                     };
                     reader.readAsDataURL(file);
                 }
-
-
                 
             }
         };
