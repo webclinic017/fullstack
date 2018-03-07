@@ -26,37 +26,39 @@
 
             $("body").append(div);
 
-            console.log($('.img_modal img')[0].naturalWidth,$('.img_modal img')[0].naturalHeight);
-
-            setTimeout(function () {
-                $(".img_modal").css({
-                    height: '70%',
-                    top: '15%',
-                    left: '50%',
-                    marginLeft: -$('.img_modal img')[0].naturalWidth*wHeight*0.7/$('.img_modal img')[0].naturalHeight/2
-                });
-            });
-
-            $(".img_modal img").on('click', function (e) {
-                return false;
-            });
-
-            $(".img_modal_wrapper").on('click', function (e) {
-                var _this = this;
-
-                $(".img_modal").css({
-                    height: 0,
-                    top: offsetTop,
-                    left: offsetLeft,
-                    marginLeft: 0
-                });
+            $(".img_modal img").load(function () {
+                console.log($('.img_modal img')[0].naturalWidth,$('.img_modal img')[0].naturalHeight);
 
                 setTimeout(function () {
-                    $(_this).remove();
-                }, 300);
+                    $(".img_modal").css({
+                        height: '70%',
+                        top: '15%',
+                        left: '50%',
+                        marginLeft: -$('.img_modal img')[0].naturalWidth*wHeight*0.7/$('.img_modal img')[0].naturalHeight/2
+                    });
+                });
 
-                return false;
-            })
+                $(".img_modal img").on('click', function (e) {
+                    return false;
+                });
+
+                $(".img_modal_wrapper").on('click', function (e) {
+                    var _this = this;
+
+                    $(".img_modal").css({
+                        height: 0,
+                        top: offsetTop,
+                        left: offsetLeft,
+                        marginLeft: 0
+                    });
+
+                    setTimeout(function () {
+                        $(_this).remove();
+                    }, 300);
+
+                    return false;
+                })
+            });
         }   
     }
 })();
