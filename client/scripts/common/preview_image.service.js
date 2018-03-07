@@ -25,7 +25,6 @@
             var div = '<div class="img_modal_wrapper"><div class="img_modal" style="top: '+offsetTop+'px;left: '+offsetLeft+'px;"><img src="'+targetUrl+'"></div></div>';
 
             $("body").append(div);
-            $('.img_modal').height(10);
 
             setTimeout(function () {
                 $(".img_modal").css({
@@ -34,7 +33,7 @@
                     left: '50%',
                     marginLeft: -$('.img_modal').width()*wHeight*0.7/$('.img_modal').height()/2
                 });
-            });
+            }, 30);
 
             $(".img_modal img").on('click', function (e) {
                 return false;
