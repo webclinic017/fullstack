@@ -157,9 +157,9 @@
         else if (id == id_arr[4]) {
             type = "weibo";
         }
-        else if (id == id_arr[5]) {
-            type = "facebook";
-        } 
+        // else if (id == id_arr[5]) {
+        //     type = "facebook";
+        // } 
         else if (id == id_arr[6]) {
             type = "twitter";
         } 
