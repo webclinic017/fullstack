@@ -105,13 +105,21 @@
     });
 
     function invitation() {
-        var modalHeight = '350px';
+        var versionName = getVersionName()
+        var version = versionName ? Number(versionName.replace(/\./gi, '')) : 0
+
+        if (version >= 306 && isIOS()) {
+            $('.new_share').show();
+        }
+        if (version >= 110 && isAndriod()) {
+            $('.new_share').show();
+        }
         /*页面层*/
         layIndex = layer.open({
-            type: 1
-            , content: DOM['$share02_box'].html()
-            , anim: 'up'
-            , style: 'position:fixed; bottom:0; left:0; width: 100%; height: ' + modalHeight + '; padding:10px 0; border:none;'
+            type: 1, 
+            content: DOM['$share02_box'].html(),
+            anim: 'up',
+            style: 'position:fixed; bottom:0; left:0; width: 100%; height: 350px; padding:10px 0; border:none;'
         });
     }
 

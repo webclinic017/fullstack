@@ -314,6 +314,9 @@ html,body{
         vertical-align: middle;
         margin-bottom: px2rem(10);
       }
+      &.new_share {
+          display: none;
+      }
     }
 
     button{
