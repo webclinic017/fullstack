@@ -14,6 +14,10 @@
     <% var title = '成为高手' %>
     <% var description = '' %>
     <% var keywords = '' %>
+<% } else if (pageInfo.id === 'calendar') { %>
+    <% var title = '财经日历' %>
+    <% var description = '' %>
+    <% var keywords = '' %>
 <% } %>
 <!doctype html>
 <html>
@@ -64,11 +68,15 @@
         <script src="/scripts/common/product.service.js"></script>
         <script src="/scripts/common/bind_html.filter.js"></script>
         <script src="/scripts/common/pagination.directive.js"></script>
+        <script src="/scripts/common/spline_chart.directive.js"></script>
         
         <script src="/scripts/common/global.controller.js"></script>
+        <script src="/scripts/common/datepicker.directive.js"></script>
+
         <script src="/scripts/web/become_master.controller.js"></script>
         <script src="/scripts/web/become_modal.controller.js"></script>
         <script src="/scripts/product/comment.controller.js"></script>
+        <script src="/scripts/product/calendar.controller.js"></script>
         <!-- endbuild -->
             <div class="footer">
                 <% include /common/nav/web.footer.html %>

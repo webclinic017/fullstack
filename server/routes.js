@@ -408,7 +408,7 @@ module.exports = function (app) {
 
     
     // 复制交易
-    app.route('/web/copy/:subpage(rules|select|become|comment)').get(function (req, res) {
+    app.route('/web/copy/:subpage(rules|select|become|comment|calendar)').get(function (req, res) {
         var subpage = req.params.subpage || 'rules';
         var pageInfo = {
             id: subpage
@@ -731,6 +731,25 @@ module.exports = function (app) {
                 }, req));
             }
         });
+    });
+    // H5 财经日历
+    app.route('/bd/calendarlist').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            res.render('bd/calendar/list.html', extendPublic({}, req));
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }    
+    });
+    app.route('/bd/calendar/:subpage').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            res.render('bd/calendar/detail.html', extendPublic({
+                id: req.params.subpage
+            }, req));
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }    
     });
 
 

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="<%= lang.text('companyZhName')%> <%= lang.text('companyEnName')%> 跟单交易 外汇 CFD 指数 股指 互联网金融">
+    <meta name="description" content="<%= lang.text('companyZhName')%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyZhName')%>">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!--禁用缓存-->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>
+        <%= lang.text('companyZhName')%>
+    </title>
+    <% include /common/statistic/h5.jrtt.html %>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+    <div class="m_calendar_box" data-key="<%= id%>">
+        <div class="m_calendar_msg">加载中...</div>
+    </div>
+</body>
+
+<script id="template_calendar_list" type="text/html">
+    <div class="m_calendar_content">
+        <div class="m_calendar_title"><$= details.digest.country$> - <$= details.digest.title$></div>
+        <div class="m_calendar_sub_tit clearfix">
+            <i class="fa fa-bell-o"></i>
+            <span><$= details.digest.tw_time$></span>
+            <span class="flag"><img src="<$= details.digest.flagURL$>"></span>
+            <span><$= details.digest.country$></span>
+            <span class="stars">
+                <$if (details.digest.importance == 1) {$>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <$} else if (details.digest.importance == 2) {$>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star"></i>
+                <$} else if (details.digest.importance == 3) {$>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star active"></i>
+                <i class="fa fa-star active"></i>
+                <$}$>
+            </span>
+        </div>
+        <div class="m_calendar_tip clearfix">
+            <p class="active">
+                今值
+                <$if (details.digest.actual) {$>
+                <span><$= details.digest.actual$></span>
+                <$} else {$>
+                <span>--</span>
+                <$}$>
+            </p>
+            <p>
+                预期
+                <$if (details.digest.forecast) {$>
+                <span><$= details.digest.forecast$></span>
+                <$} else {$>
+                <span>--</span>
+                <$}$>
+            </p>
+            <p>
+                前值
+                <$if (details.digest.previous) {$>
+                <span><$= details.digest.previous$></span>
+                <$} else {$>
+                <span>--</span>
+                <$}$>
+            </p>
+        </div>
+
+        <div class="m_calendar_charts"></div>
+
+        <div class="m_calendar_info">下次公布时间：<span><$= details.detail.next_fab_time_transfer$></span></div>
+        <div class="m_calendar_info">数据公布机构：<span><$= details.detail.public_organization$></span></div>
+        <div class="m_calendar_info">发布频率：<span><$= details.detail.release_frequency$></span></div>
+        <div class="m_calendar_info">统计方法：<span><$= details.detail.statistical_method$></span></div>
+
+        <ul class="m_calendar_desc">
+            <li class="item">
+                <div class="tit">
+                    <i class="fa fa-share-alt" aria-hidden="true"></i>
+                    <strong>数据影响</strong>
+                </div>
+                <div class="tip"><$= details.detail.data_influence$></div>
+            </li>
+            <li class="item">
+                <div class="tit">
+                    <i class="fa fa-question" aria-hidden="true"></i>
+                    <strong>数据释义</strong>
+                </div>
+                <div class="tip"><$= details.detail.data_paraphrase$></div>
+            </li>
+            <li class="item">
+                <div class="tit">
+                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                    <strong>关注理由</strong>
+                </div>
+                <div class="tip"><$= details.detail.focus_reason$></div>
+            </li>
+        </ul>
+    </div>
+    
+</script>
+
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_calendar.js -->
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/bd/calendar/detail.js"></script>
+<!-- endbuild -->
+
+<!-- 推广脚本footer -->
+<%- include('/common/statistic/all.html') %>
+</html>
