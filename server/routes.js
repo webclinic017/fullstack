@@ -408,7 +408,7 @@ module.exports = function (app) {
 
     
     // 复制交易
-    app.route('/web/copy/:subpage(rules|select|become|comment)').get(function (req, res) {
+    app.route('/web/copy/:subpage(rules|select|become|comment|calendar)').get(function (req, res) {
         var subpage = req.params.subpage || 'rules';
         var pageInfo = {
             id: subpage
@@ -602,9 +602,9 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t36/h5.html', extendPublic({}, req))
+                res.render('bd/t40/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t36/web.html', extendPublic({}, req));
+                res.render('bd/t40/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -629,9 +629,9 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t39/h5.html', extendPublic({}, req))
+                res.render('bd/t40/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t39/web.html', extendPublic({}, req));
+                res.render('bd/t40/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -731,6 +731,25 @@ module.exports = function (app) {
                 }, req));
             }
         });
+    });
+    // H5 财经日历
+    app.route('/bd/calendarlist').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            res.render('bd/calendar/list.html', extendPublic({}, req));
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }    
+    });
+    app.route('/bd/calendar/:subpage').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            res.render('bd/calendar/detail.html', extendPublic({
+                id: req.params.subpage
+            }, req));
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }    
     });
 
 
@@ -985,6 +1004,7 @@ module.exports = function (app) {
         }
         if (action == "version_check") {
             var appType;   // global, uk, pandafx, old
+            var appLanguage = req.query.lang || 'cn';
             if (req.query.type) {
                 appType = req.query.type;
             } else {
@@ -996,7 +1016,7 @@ module.exports = function (app) {
             }
             var system = req.query.os;
             var versionNum = req.query.version.replace(/\./g, "");
-            var versinInfo = require('./app_ctrl.config').getAppInfo(appType);
+            var versinInfo = require('./app_ctrl.config').getAppInfo(appType)[appLanguage];
             var currentVersionNum = versinInfo[system].app_info.version_name.replace(/[v\.]/ig, "");
             
             var currentVersion = {
@@ -1009,21 +1029,28 @@ module.exports = function (app) {
             // console.log(appType, system, Number(versionNum), Number(currentVersionNum));
 
             if (Number(versionNum) < Number(currentVersionNum)) {
-                currentVersion = versinInfo[system].app_info;
+
+                for (var key in versinInfo[system].app_info) {
+                    currentVersion[key] = versinInfo[system].app_info[key];
+                }
+                //重命名
+                if ((system == 'android') && (appType == 'old')) {
+                    currentVersion.version_name = "V1.0.1";
+                }
             }
 
             // 熊猫外汇 v1.5.3 以下版本有问题不更新 - 2017.12.19
-            if ((system == 'android') && (appType == 'pandafx')) {
-                if (Number(versionNum) < 153) {
-                    currentVersion = {
-                        version_name: "",
-                        description: "",
-                        updated_description: "",
-                        url: "",
-                        force_update: false
-                    };
-                }
-            }
+            // if ((system == 'android') && (appType == 'pandafx')) {
+            //     if (Number(versionNum) < 153) {
+            //         currentVersion = {
+            //             version_name: "",
+            //             description: "",
+            //             updated_description: "",
+            //             url: "",
+            //             force_update: false
+            //         };
+            //     }
+            // }
             data = currentVersion;
         }
         if (action == "get_banner_info") {

@@ -71,7 +71,8 @@
             getCopierBonusListApi: urlOrigin2 + '/commission/custom_settle',
             getBonusDetailListApi: urlOrigin2 + '/commission/settle_info',
             getBanksApi: urlOrigin2 + '/bank_names',
-            teleDepositApi: urlOrigin2 + '/payment/deposit/transfer'
+            teleDepositApi: urlOrigin2 + '/payment/deposit/transfer',
+            uploadPaymentEvidenceApi: urlOrigin2 + '/payment/evidence'
         };
         var forex = {
             

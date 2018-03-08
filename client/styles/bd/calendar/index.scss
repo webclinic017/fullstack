@@ -1,0 +1,356 @@
+.m_calendar_list_box {
+	.select_box {
+		background-color: #f5f5f5;
+		padding: px2rem(20) px2rem(32);
+
+		.select_star {
+			float: left;
+		}
+		.select_date {
+			float: right;
+		}
+	}
+	.date_list_box {
+	    color: #333;
+	    border-bottom: 1px solid #f5f5f5;
+	    margin-top: px2rem(20);
+
+		.date_list_total {
+			text-align: center;
+		}
+		.date_list {
+			padding: px2rem(10) px2rem(20);
+			text-align: center;
+
+			li {
+				float: left;
+				width: 14.28%;
+
+				&:first-child, &:last-child{
+					color: #999;
+				}
+
+				.date {
+					font-size: px2rem(38);
+					width: px2rem(70);
+					height: px2rem(70);
+					line-height: px2rem(70);
+					margin: px2rem(10) auto;
+					border-radius: 50%;
+					font-weight: 300;
+
+					&.today {
+						color: #ffbd43;
+					}
+
+					&.active {
+						color: #fff;
+						background-color: #ffbd43;
+					}
+				}
+			}
+		}
+	}
+	.news_list_box {
+		.news_item {
+			padding: px2rem(20) 0;
+
+			.tip_info {
+				color: #ccc;
+			    padding-bottom: px2rem(20);
+			    padding-left: px2rem(130);
+
+			    span {
+			    	padding-right: px2rem(20);
+			    }
+			    i.active {
+			        color: #ffbd43;
+			    }
+			}
+			.tit_info {
+				margin-bottom: px2rem(30);
+    			position: relative;
+
+    			img {
+    				width: px2rem(64);
+				    vertical-align: top;
+				    position: absolute;
+				    top: 50%;
+				    left: px2rem(32);
+				    margin-top: px2rem(-24);
+    			}
+    			.title {
+    				font-size: px2rem(28);
+				    font-weight: 500;
+				    color: #333;
+				    line-height: px2rem(40);
+				    display: block;
+				    padding-left: px2rem(130);
+				    padding-right: px2rem(32);
+    			}
+			}
+			.cont_info {
+			    padding-bottom: px2rem(20);
+			    border-bottom: 1px solid #eee;
+			    margin-left: px2rem(130);
+
+			    p {
+			    	display: inline-block;
+				    padding-right: px2rem(32);
+				    color: #ccc;
+
+				    &.active {
+				    	color: #ffbd43;
+				    }
+			    }
+			}
+		}	
+	}
+}
+
+.calendar_layer {
+	position: fixed;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 100%;
+    transition: all .2s;
+
+    .select_layer_box {
+	    width: 100%;
+	    height: 100%;
+	    background-color: #fff;
+	    padding: px2rem(32) px2rem(32) 0;
+	    position: relative;
+
+	    .tit {
+	    	color: #999;
+	    	padding-top: px2rem(32);
+	    	padding-bottom: px2rem(20);
+	    	font-size: px2rem(28);
+	    }
+	    .sele_country {
+	    	float: left;
+		    width: 22%;
+		    text-align: center;
+		    padding: px2rem(12) 0px;
+		    border: 1px solid #eee;
+		    border-radius: px2rem(8);
+		    margin-right: 3%;
+		    margin-bottom: px2rem(16);
+
+		    &.active {
+		    	border-color: #ffbd43;
+		    	background-color: #ffbd43;
+		    	color: #fff;
+		    }
+	    }
+	    .sele_star {
+	    	float: left;
+		    width: 25%;
+		    text-align: center;
+		    padding: px2rem(12) 0px;
+		    border: 1px solid #eee;
+		    border-radius: px2rem(8);
+		    margin-right: 3%;
+		    margin-bottom: px2rem(16);
+
+		    &.active {
+		    	border-color: #ffbd43;
+		    }
+
+		    i {
+		    	color: #ccc;
+
+		    	&.active {
+		    		color: #ffbd43;
+		    	}
+		    }
+	    }
+	    .select_layer_btn_box {
+	    	position: absolute;
+	    	bottom: px2rem(20);
+	    	left: 0;
+	    	width: 100%;
+
+	    	.btn {
+	    		width: 44%;
+	    		margin: 0 3%;
+	    		float: left;
+
+	    		&.btn-info {
+	    			background-color: transparent;
+	    		}
+	    	}
+	    }
+    }
+    .date_layer_box {
+    	background-color: #fff;
+
+    	.date_layer_title {
+    		background-color: #eee;
+		    position: relative;
+		    padding: px2rem(24) 0;
+		    text-align: center;
+
+		    i {
+		    	position: absolute;
+		    	top: px2rem(24);
+
+		    	&:first-child {
+		    		left: px2rem(16);
+		    	}
+		    	&:last-child {
+		    		right: px2rem(16);
+		    	}
+		    }
+    	}
+    	.week_item {
+    		float: left;
+    		width: 14.28%;
+    		text-align: center;
+    		color: #4a4a4a;
+    		padding: px2rem(20) 0;
+    	}
+    	.date_item {
+    		float: left;
+    		width: 14.28%;
+    		text-align: center;
+
+    		span {
+    			font-size: px2rem(28);
+    			width: px2rem(60);
+    			height: px2rem(60);
+    			line-height: px2rem(60);
+    			display: block;
+    			margin: 0 auto px2rem(20);
+    			border-radius: 50%;
+
+    			&.active {
+    				background-color: #ffbd43;
+		    		color: #fff;
+    			}
+    			&.prev_or_next {
+    				color: #999;
+    			}
+    		}
+    	}
+    	.date_layer_btn_box {
+    		text-align: right;
+    		padding: px2rem(20) px2rem(30) px2rem(30) 0;
+
+    		.btn {
+			    font-size: px2rem(24);
+			    padding: px2rem(16) px2rem(32);
+    		}
+    	}
+    }
+}
+
+.m_calendar_box {
+	.m_calendar_msg {
+		text-align: center;
+	    padding-top: px2rem(32);
+	    color: #4a4a4a;
+	}
+	.m_calendar_content {
+		padding: px2rem(32);
+
+		.m_calendar_title {
+			text-align: center;
+		    border-bottom: 1px solid #eee;
+		    margin: 0 px2rem(-32);
+		    font-size: px2rem(28);
+		    font-weight: 500;
+		    padding: 0 px2rem(32) px2rem(16);
+		}
+		.m_calendar_sub_tit {
+			color: #4a4a4a;
+    		padding-top: px2rem(32);
+
+    		> i {
+    			color: #ccc;
+    			padding-right: px2rem(16);
+    		}
+    		.flag {
+    			width: px2rem(40);
+			    display: inline-block;
+			    margin-left: px2rem(32);
+
+			    img{
+			    	width: 100%;
+			    	vertical-align: middle;
+			    	margin-right: px2rem(10);
+			    }
+    		}
+    		.stars {
+    			float: right;
+
+    			i {
+    				color: #ccc;
+
+    				&.active {
+    					color: #ffbd43;
+    				}
+    			}
+    		}
+		}
+		.m_calendar_tip {
+			padding: px2rem(32) 0;
+		    border-bottom: 1px solid #eee;
+		    margin: 0 px2rem(-32) px2rem(64);
+
+		    p {
+		    	float: left;
+			    width: 33%;
+			    border-left: 1px solid #ccc;
+			    text-align: center;
+
+			    &.active {
+			    	color: #ffbd43;
+			    	border: none;
+			    }
+		    }
+		}
+		.m_calendar_info {
+			color: #4a4a4a;
+
+			span {
+				font-weight: 500;
+			}
+		}
+		.m_calendar_desc {
+			margin-top: px2rem(50);
+
+			.item {
+				margin-bottom: px2rem(40);
+
+				.tit {
+					margin-bottom: px2rem(20);
+
+					i {
+						display: inline-block;
+					    width: px2rem(40);
+					    height: px2rem(40);
+					    background-color: #1478f0;
+					    border-radius: px2rem(20);
+					    text-align: center;
+					    line-height: px2rem(40);
+					    color: #fff;
+					    font-size: px2rem(24);
+					    margin-right: px2rem(10);
+					}
+					strong {
+						color: #444;
+					    line-height: px2rem(40);
+					    display: inline-block;
+					}
+				}
+				.tip {
+					font-size: px2rem(24);
+				}
+			}
+		}
+	}
+}
