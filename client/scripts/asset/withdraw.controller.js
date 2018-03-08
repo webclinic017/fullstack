@@ -127,10 +127,11 @@
                 if (data.is_succ && data.data) {
                     $scope.withdraw.card.id = data.data.id;
                     $scope.withdraw.card.number = data.data.card_no;
-                    $scope.withdraw.card.bank = data.data.bank_name;
+                    $scope.withdraw.card.bank_name = data.data.bank_name;
                     $scope.withdraw.card.address = data.data.bank_addr;
                     $scope.withdraw.card.province = data.data.province;
                     $scope.withdraw.card.city = data.data.city;
+                    $scope.withdraw.card.bank_img = data.data.bank_img;
                     $scope.withdraw.card.bank_code = data.data.bank_code;
                     // 判断是否为英文简称
                     $scope.withdraw.card.is_short = /^[A-Za-z]/.test(data.data.bank_name);
@@ -184,35 +185,19 @@
                     //刷新列表 
                     getCardList($scope).then(function () {
                         $scope.cardList = parentScope.cardList
-                        isShortBankName($scope.cardList)
                     })
-                    if (type != 'delete') {
-                        // 获取银行卡列表
-                        if (!parentScope.cardList) {
-                            getCardList($scope).then(function () {
-                                $scope.cardList = parentScope.cardList
-                                isShortBankName($scope.cardList)
-                            })
-                        } else {
-                            $scope.cardList = parentScope.cardList
-                        }
-                    }
-
-                    function isShortBankName(list) {
-                        angular.forEach(list, function (value) {
-                            value.is_short = /^[A-Za-z]/.test(value.bank_name)
-                        })
-                    }
 
                     $scope.chooseCard = function (card) {
                         console.log(card)
                         parentScope.withdraw.card.id = card.id;
                         parentScope.withdraw.card.number = card.card_no;
-                        parentScope.withdraw.card.bank = card.bank_name;
                         parentScope.withdraw.card.address = card.bank_addr;
                         parentScope.withdraw.card.province = card.province;
+                        parentScope.withdraw.card.bank_name = card.bank_name;
+                        parentScope.withdraw.card.bank_name_cn = card.bank_name_cn;
                         parentScope.withdraw.card.city = card.city;
                         parentScope.withdraw.card.bank_code = card.bank_code;
+                        parentScope.withdraw.card.bank_img = card.bank_img;
                         // 更改选中状态
                         parentScope.hasChooseedCard = true;
                         // 判断是否为英文简称
@@ -230,7 +215,6 @@
                             if (data.is_succ) {
                                 getCardList($scope).then(function () {
                                     $scope.cardList = parentScope.cardList
-                                    isShortBankName($scope.cardList)
                                     if ($scope.cardList.length == 0) {
                                         parentScope.withdraw.card = {}
                                     }

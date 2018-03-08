@@ -1,3 +1,10 @@
+.flexBox {
+    display: -webkit-flex;  /* 新版本语法: Chrome 21+ */
+    display: flex;          /* 新版本语法: Opera 12.1, Firefox 22+ */
+    display: -moz-box;      /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;   /* 混合版本语法: IE 10 */   
+}
+
 // asset
 @include b (asset-public) {
     min-height: 500px;
@@ -22,6 +29,46 @@
         left: 15px;
         color: #333;
         font-weight: 500;
+    }
+}
+
+.warn_tip_area {
+    font-size: 12px;
+    color: $gray-darker;
+    background-color: rgb(255,255,234);
+    @extend .flexBox;
+    flex-flow: row nowrap;
+    justify-content: flex-start; 
+    padding: 15px 20px;
+    border-radius: 10px;
+    .warn_icon {
+        font-size: 24px;
+        width: 46px;
+        text-align: left;
+    }
+}
+
+.widthdraw__card_bg {
+    display: inline-flex;
+    height: 38px;
+    background: url('/images/asset/bank_card_bg.jpg') no-repeat;
+    background-size: 100% 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: left;
+    padding: 0 10px;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    span {
+        font-weight: 500;
+        font-size: 10px;
+        color: #fff;
+    }
+    img {
+        height: 60%;
+        vertical-align: middle;
+        margin-right: 6px;
     }
 }
 
@@ -50,7 +97,7 @@
 
     @include e (title-money) {
         font-size: $font-size-h4;
-        line-height: 40px;
+        font-weight: 500;
     }
 
     @include e (pointer) {
@@ -89,6 +136,7 @@
             }
         }
     }
+
     @include e(wallet_succ) {
         color: #494949;
         font-size: 16px;
@@ -317,24 +365,69 @@
     @include e(sys_tip) {
         margin-left: 92px;
     }
-
+    .sys_tip1 {
+        font-size: 12px;
+        color: $gray-dark;
+    }
+    
     @include e(way) {
-        width: 220px;
-        padding: 8px 0;
-        border: 1px solid #ccc;
-        background: #fff;
-        text-align: center;
+        width: 225px;
+        height: 96.8px;
+        padding: 20px;
+        text-align: left;
         float: left;
-        margin-right: 15px;
+        border-radius: 5px;
+        overflow: hidden;
         cursor: pointer;
-
+        background-size: 100% 100%;
+        box-shadow: 0px 0px 0px rgba(0,0,0,0.5);
+        transition: all 0.22s ease;
+        -webkit-transition: all 0.22s ease;
+        color: #fff;
+        .amount {
+            font-size:  27px;
+            font-weight: 500;
+        }
         span {
             display: block;
-            line-height: 24px;
         }
-
+        &.account {
+            margin-right: 20px;
+            background-image: url('/images/asset/trading_bg.png'); 
+        }
+        &.wallet {
+            background-image: url('/images/asset/wallet_bg.png'); 
+        }
         &.active {
-            border-color: $brand-primary-dark;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+            &.account {
+                background-image: url('/images/asset/trading_bg_active.png'); 
+            }
+            &.wallet {
+                background-image: url('/images/asset/wallet_bg_active.png'); 
+            }
+        }
+    }
+
+    @include e(card_handler) {
+        @extend .flexBox;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        
+        .card_number {
+            font-weight: 500;
+            font-size: 18px;
+            margin-left: 10px;
+            @extend .flexBox;
+            align-items: center;
+        }
+        .card_switch {
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        .card_manage {
+            margin-left: 30px;
         }
     }
 }

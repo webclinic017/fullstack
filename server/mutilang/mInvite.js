@@ -134,7 +134,7 @@ module.exports = {
     },
     "mInvite35": {
         "zh": "未满手数",
-        "en": "not Meet the lots"
+        "en": "Not Meet the lots"
     },
     "mInvite36": {
         "zh": "",
