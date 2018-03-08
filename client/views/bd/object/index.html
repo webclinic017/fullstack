@@ -95,7 +95,8 @@
 
     </style>
 
-    </head>
+</head>
+<% include /common/vendor/h5.utiljs.html %>
 <body>
     <div class="title" style="font-size: 18px; text-align: left; margin: 20px 20px 5px; font-weight: bold;"></div>
     <div class="sub-tit clearfix" style="margin: 0px 20px 20px; font-size: 14px; color: #999;">
@@ -117,7 +118,7 @@
         <span></span>
     </div>
 
-<script type="text/javascript" src="https://www.tigerwit.com/downloads/static/froala-editor/jQuery.min.js"></script>
+<% include /common/vendor/h5.js.html %>
 <script>
     (function () {
         var $viewWrapper = $(".fr-view");
@@ -151,6 +152,27 @@
             }
         });
         
+        $viewWrapper.on('tap', 'img', function () {
+            // console.log($(this).attr("src"));
+            if (isInTiger()) {
+                callNative({
+                    type: "openImage",
+                    url : $(this).attr("src")
+                });
+                return false;
+            }
+        });
+
+        $viewWrapper.on('tap', 'a', function () {
+            console.log($(this).attr("href"));
+            if (isInTiger()) {
+                callNative({
+                    type: "openUrl",
+                    url : $(this).attr("href")
+                });
+                return false;
+            }
+        });
     })();
 </script>
 </body>

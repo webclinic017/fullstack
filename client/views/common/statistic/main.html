@@ -17,10 +17,8 @@
         var _czc = _czc || [];
     </script>
 <%}%>
-
 <script>
     if (window.location.href.indexOf('www.tigerwit.com') != -1) {
-
         (function(para) {
             var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
             w['sensorsDataAnalytic201505'] = n;
@@ -94,13 +92,11 @@
     } else {
         (function (w) {
             var ifs = ['track','quick','register','registerPage','registerOnce','clearAllRegister','trackSignup', 'trackAbtest', 'setProfile','setOnceProfile','appendProfile', 'incrementProfile', 'deleteProfile', 'unsetProfile', 'identify','login','logout','trackLink','clearAllRegister','getAppStatus'];
-
             w.sa = {};
             for (var i = 0; i < ifs.length; i++) {
                 // console.info(ifs[i]);
                 w["sa"][ifs[i]] = publicFunc;
             }
-
             function publicFunc (param) {
                 // 只有tigerwit计算到神策统计中
                 console.info("not tiger", param);
