@@ -41,20 +41,53 @@
         series: []
     };
 
-    $.get('https://api-sit.wallstreetcn.com/apiv1/finfo/'+key+'/detail').then(function (data) {
+    $.get('https://api-prod.wallstreetcn.com/apiv1/finfo/calendars/keys?keys='+key).then(function (data) {
         // console.log(data);
-        if (data.code !== 20000) {
-            $(".m_calendar_box .m_calendar_msg").html(data.message);
-        } else {
-        	details = data.data;
+        details.digest = data.data.items[0];
+        details.digest.tw_time = getTwTime(details.digest.timestamp);
 
-        	data.data.detail.next_fab_time_transfer = getDetailTime(data.data.detail.next_fab_time);
-        	data.data.digest.tw_time = getTwTime(data.data.digest.timestamp);
-        	dealDetails();
-        }
+        getDetails();
+        getChartsData();
     });
 
-    function dealDetails () {
+
+    function getDetails () {
+        $.get('https://api-prod.wallstreetcn.com/apiv1/finfo/ticker/detail?ticker='+details.digest.ticker).then(function (data) {
+            // console.log(data);
+            details.detail = data.data;
+            details.detail.next_fab_time_transfer = getDetailTime(details.detail.next_fab_time);
+        });
+    }
+
+    function getChartsData () {
+        var t = details.digest.ticker.replace(' ', '+');
+        $.get('https://api-prod.wallstreetcn.com/apiv1/finfo/ticker/calendar/history?ticker='+t).then(function (data) {
+            // console.log(data);
+            details.items = data.data.items;
+            dealCahrtsDetails();
+        });
+    }
+
+
+
+
+
+
+
+    // $.get('https://api-sit.wallstreetcn.com/apiv1/finfo/'+key+'/detail').then(function (data) {
+    //     // console.log(data);
+    //     if (data.code !== 20000) {
+    //         $(".m_calendar_box .m_calendar_msg").html(data.message);
+    //     } else {
+    //     	details = data.data;
+
+    //     	data.data.detail.next_fab_time_transfer = getDetailTime(data.data.detail.next_fab_time);
+    //     	data.data.digest.tw_time = getTwTime(data.data.digest.timestamp);
+    //     	dealCahrtsDetails();
+    //     }
+    // });
+
+    function dealCahrtsDetails () {
     	var xOptions = [];
         var dataOptions = [
             {

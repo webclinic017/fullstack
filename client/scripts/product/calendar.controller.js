@@ -235,48 +235,61 @@
             news.open = !news.open;
 
             if (!news.open) return;
+            news.details = {};
+            getDetails();
+            getChartsData();
 
-            $http.get('https://api-sit.wallstreetcn.com/apiv1/finfo/'+news.calendar_key+'/detail').then(function (data) {
-                // console.log(data);
-                news.details = data.data;
-                news.errMsg = false;
-                news.bindChartOptions = data.data;
-
-                if (data.code !== 20000) {
-                    news.errMsg = data.message;
-                }
-                // draw chart
-                if (data.data.items && data.data.items.length > 0) {
-                    var xOptions = [];
-                    var dataOptions = [
-                        {
-                            name: '预测值',
-                            data: []
-                        },
-                        {
-                            name: '公布值',
-                            data: []
-                        }
-                    ];
-                    angular.forEach(data.data.items, function (value, index) {
-                        xOptions.unshift(value.human_date.slice(0,10));
-                        var o = value.forecast ? parseFloat(value.forecast) : null;
-                        var t = value.actual ? parseFloat(value.actual) : null;
-                        dataOptions[0].data.unshift(o);
-                        dataOptions[1].data.unshift(t);
+            function getDetails () {
+                $.get('https://api-prod.wallstreetcn.com/apiv1/finfo/ticker/detail?ticker='+news.ticker).then(function (data) {
+                    // console.log(data);
+                    $timeout(function () {
+                        news.details.detail = data.data;
                     });
+                });
+            }
 
-                    news.bindChartOptions = {
-                        xOptions: xOptions,
-                        dataOptions: dataOptions
-                    };
-                } else {
-                    news.bindChartOptions = {
-                        xOptions: [],
-                        dataOptions: []
-                    };
-                }
-            });  
+            function getChartsData () {
+                var t = news.ticker.replace(' ', '+');
+                $.get('https://api-prod.wallstreetcn.com/apiv1/finfo/ticker/calendar/history?ticker='+t).then(function (data) {
+                    // console.log(data);
+                    $timeout(function () {
+                        news.details.items = data.data.items;
+
+                        // draw chart
+                        if (data.data.items && data.data.items.length > 0) {
+                            var xOptions = [];
+                            var dataOptions = [
+                                {
+                                    name: '预测值',
+                                    data: []
+                                },
+                                {
+                                    name: '公布值',
+                                    data: []
+                                }
+                            ];
+                            angular.forEach(data.data.items, function (value, index) {
+                                xOptions.unshift(value.human_date.slice(0,10));
+                                var o = value.forecast ? parseFloat(value.forecast) : null;
+                                var t = value.actual ? parseFloat(value.actual) : null;
+                                dataOptions[0].data.unshift(o);
+                                dataOptions[1].data.unshift(t);
+                            });
+
+                            news.bindChartOptions = {
+                                xOptions: xOptions,
+                                dataOptions: dataOptions
+                            };
+                        } else {
+                            news.bindChartOptions = {
+                                xOptions: [],
+                                dataOptions: []
+                            };
+                        }
+                    });
+                    
+                });
+            } 
         }
 
         function getDetailTime (timestamp) {
