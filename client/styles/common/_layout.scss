@@ -49,55 +49,39 @@
     width: 100%;
     height: 100%;
     margin-top: 69px;
-    position: relative;
+    min-width: 1320px;
     min-height: 900px;
     border: 1px solid $gray;
+    @extend .clearfix;
     @include e(side) {
         width: 320px;
-        height: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
+        float: left;
         z-index: 2;
-        background-color: #fff; 
-        @include m(view){
+        background-color: #fff;
+        border-bottom: 1px solid $gray;
+        @include m(view) {
             height: 100%;
         }
     }
-    @include e(nav) {
+    @include e(con) {
+        float: left;
         width: 100%;
-        min-width: 1320px;
-        height: 55px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        background-color: #fff; 
-        border-bottom: 2px solid $gray;
-        @include m(view){
-            width: 100%;
-            padding-left: 320px;
-        }
-    }
-    @include e(prompt) {}
-    @include e(content) {
-        width: 100%;
-        min-width: 1320px;
-        height: 85%;
+        margin-left: -320px;
         padding-left: 320px;
-        position: absolute;
-        left: 0;
-        top: 55px;
-        z-index: 1;
-        @include m(view){
-            width: 940px;
-            margin: 0 auto;
+        @include m(nav) {
+            background-color: #fff;
+            border-bottom: 2px solid #ebebeb;
+            height: 55px;
+        }
+        @include m(content) {
             margin-top: 50px;
-            margin-bottom: 80px;
-            height: 100%;
-            background-color: #fff; 
-            border-radius: 10px;
-            overflow: auto;
-            box-shadow: 0 0 10px $gray;
+            .content-view {
+                width: 940px;
+                margin: 0 auto;
+                margin-top: 50px;
+                margin-bottom: 80px;
+                height: 100%;
+            }
         }
     }
 }

@@ -7,117 +7,84 @@ $font-space-gray-color: $gray-dark;
     font-size: $font-space-size-sm;
 }
 
-@include b(space_basic) {
-    margin-top: 50px;
-    margin-left: 20px;
-
-    .invite {
-        > .space_basic__item {
-            width: percentage(1 / 6);
-        }
+.space_block {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px $gray;
+    padding: 25px;
+    &.gapped {
+        margin-top: 50px;
     }
 
-    @include e(info) {
-        margin-left: -20px;
+    .block_title {
+        font-size: 18px;
+        font-weight: 500;
     }
 
-    @include e(item) {
-        position:relative;
-        float: left;
-        width: 20%;
+    .block_tips {
+        font-size: 14px;
         text-align: center;
-        border-left: 1px solid $gray;
-        margin-top: 30px;
-
-        &:first-child {
-            border: none;
-            border-left: 1px solid $gray;
-        }
-
-        @include m(number) {
-            padding-bottom: 2px;
-
-            > span {
-                font-size: $font-space-size-lg;
-            }
-        }
+        color: $gray-dark;
+        margin: 80px 0;
     }
 
-    @include e(btn) {
-        text-align: center;
-        float: right;
-        margin-top:32px;
-        width: 20%;
-    }
-
-    @include e(notice) {
-        margin-top: 20px;
+    .block_btn_group {
+        .tw-btn:nth-child(2) {
+            margin: 0 24px;
+        }
     }
 }
-.space_basic_hint{
-    position:absolute;
-    color:$brand-info;
-    background:rgba(0,0,0,.7);
-    border-radius:4px;
-    padding:10px;
-    z-index:1000;
-    display:none;
-}
-.active .space_basic_hint{display:block}
-
 
 // space.center
-@include b(space_center_total) {
-    background-color: #fff;
-    padding: 10px 25px;
-    margin-bottom: 15px;
-
-    @include e(num) {
-        font-size: 18px;
-        font-weight: 500;
-        color: #4f464a;
-        padding: 10px 0;
-    }
-    @include e(tip) {
-        font-size: 12px;
-        color: #909090;
-        padding-bottom: 15px; 
-    }
-}
-@include b(space_center_invest) {
-    background-color: #fff;
-    padding: 10px 25px;
-    margin-bottom: 15px;
-
-    @include e(num) {
-        font-size: 18px;
-        font-weight: 500;
-        color: #4f464a;
-        padding: 10px 0;
-        float: left;
-        width: 40%;
-    }
-    @include e(btn) {
-        float: left;
-        width: 60%;
-
-        li {
-            float: right;
-            padding: 0 10px;
-
-            .btn {
-                width: 100px;
-                padding: 0;
-                height: 34px;
-                text-align: center;
-                line-height: 34px;
-                font-size: 12px;
+@include b(space_center_summary){
+    @include e(list){
+        @include m(item){
+            display: inline-block;
+            box-sizing: border-box;
+            float: left;
+            width: 300px;
+            height: 160px;
+            border-radius: 8px;
+            transition: all 0.22s linear;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            cursor: pointer;
+            padding: 25px;
+            &:hover {
+                box-shadow: 0 10px 60px $gray-dark;
+            }
+            &:nth-child(1) {
+                background-image: url('/images/space/center-total.png');
+            }
+            &:nth-child(2) {
+                background-image: url('/images/space/center-trading.png');
+                margin: 0 20px;
+            }
+            &:nth-child(3) {
+                background-image: url('/images/space/center-wallet.png');
+            }
+            p {
+                color: #fff;
+            }
+            .summary_name {
+                font-size: 16px;
+                margin-top: 10px;
+            }
+            .summary_amount {
+                font-size: 36px;
+                font-weight: 500;
+                margin-top: 20px;
             }
         }
     }
-    @include e(info) {
-        padding-bottom: 10px;
+}
 
+@include b(space_center_trading){
+    @extend .space_block;
+    
+    @include b(trading_details) {
+        margin-top: 75px;
+        margin-bottom: 25px;
         li {
             float: left;
             width: 25%;
@@ -127,12 +94,15 @@ $font-space-gray-color: $gray-dark;
             position: relative;
             
             .num {
-                line-height: 20px;
+                line-height: 22px;
+                font-size: 18px;
+                font-weight: 500;
             }
             .tip {
                 font-size: 12px;
-                line-height: 16px;
+                line-height: 22px;
             }
+
             &:not(.noLine):before {
                 content: '';
                 display: block;
@@ -153,6 +123,7 @@ $font-space-gray-color: $gray-dark;
                 z-index:1000;
                 display:none;
             }
+
             &.active {
                 .space_center_hint{
                     display:block
@@ -161,42 +132,3 @@ $font-space-gray-color: $gray-dark;
         }
     }
 }
-@include b(space_center_wallet) {
-    background-color: #fff;
-    padding: 10px 25px;
-
-    @include e(num) {
-        font-size: 18px;
-        font-weight: 500;
-        color: #4f464a;
-        padding: 10px 0;
-        float: left;
-        width: 40%;
-    }
-    @include e(btn) {
-        float: left;
-        width: 60%;
-
-        li {
-            float: right;
-            padding: 0 10px;
-
-            .btn {
-                width: 100px;
-                padding: 0;
-                height: 34px;
-                text-align: center;
-                line-height: 34px;
-                font-size: 12px;
-            }
-        }
-    }
-    @include e(tip) {
-        font-size: 12px;
-        color: #909090;
-        padding: 15px 0; 
-    }
-}
-
-
-

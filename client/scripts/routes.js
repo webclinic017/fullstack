@@ -102,11 +102,7 @@
                         'nav@space': {
                             templateUrl: '/views/space/nav.html',
                             controller: ''
-                        },
-                        // 'basic@space': {
-                        //     templateUrl: '/views/space/basic.html',
-                        //     controller: ''
-                        // }
+                        }
                     }
                 })
                 // 将space.invest并入，并增加wallet模块合为space.center

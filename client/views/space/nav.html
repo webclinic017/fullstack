@@ -12,6 +12,25 @@
             <a>账户概况</a>
         </li>
     </ul>
+    <ul class="space_nav__box" ng-if="toState.name == 'space.center.invest.subpage'">
+        <li class="space_nav__box-item" ui-sref-active="active">
+            <a ui-sref="space.center.invest.subpage({subpage: 'current'})">当前交易</a>
+        </li>
+        <li class="space_nav__box-item" ui-sref-active="active">
+            <a ui-sref="space.center.invest.subpage({subpage: 'history'})">历史交易</a>
+        </li>
+        <li class="space_nav__box-item" ui-sref-active="active">
+            <a ui-sref="space.center.invest.subpage({subpage: 'summary'})">数据统计</a>
+        </li>
+        <li class="space_nav__box-item" ui-sref-active="active">
+            <a ui-sref="space.center.invest.subpage({subpage: 'record'})">资金记录</a>
+        </li>
+    </ul>
+    <ul class="space_nav__box" ng-if="toState.name == 'space.center.wallet.subpage'">
+        <li class="space_nav__box-item active">
+            <a>零钱包</a>
+        </li>
+    </ul>
     
     <ul class="space_nav__box" ng-show="toState.name == 'space.asset.subpage'">
         <li class="space_nav__box-item" ui-sref-active="active">
