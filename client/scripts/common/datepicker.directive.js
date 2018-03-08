@@ -35,13 +35,14 @@
                     day: "yyyy-mm-dd",
                     month: "yyyy-mm"
                 }
-
+                
                 var options = {
                     language: "zh-CN",
                     autoclose: true,
-                    clearBtn: true,
+                    clearBtn: attrs.clearBtn == 'false' ? false : true,
                     startView: 2,
-                    format: dateFormatter[attrs.type]
+                    format: dateFormatter[attrs.type],
+                    orientation: attrs.orientation || undefined
                 }
 
                 // 判断 type
