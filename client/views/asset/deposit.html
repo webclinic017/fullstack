@@ -5,7 +5,7 @@
             <div class="col-xs-7 deposit__input">
                 <form name="depositForm" novalidate>
                     <div class="form-control-wrapper">
-                        <input class="form-control form-control-md radius"
+                        <input class="form-control form-control-size-lg form-control-shape-capsule"
                                ng-if="deposit.type === 'invest' || deposit.type === 'alipay'"
                                name="amount"
                                type="text"
@@ -17,7 +17,7 @@
                                ng-change="checkInputAmount()"
                                ng-focus="hideErr('amount')"
                                ng-blur="showErr('amount')">
-                        <input class="form-control form-control-md radius"
+                        <input class="form-control form-control-size-lg form-control-shape-capsule"
                                ng-if="deposit.type === 'wallet'"
                                name="amount"
                                type="text"
@@ -28,7 +28,7 @@
                                ng-change="checkInputAmount()"
                                ng-focus="hideErr('amount')"
                                ng-blur="showErr('amount')">
-                        <input class="form-control form-control-md radius"
+                        <input class="form-control form-control-size-lg form-control-shape-capsule"
                                ng-if="deposit.type === 'tele'"
                                name="amount"
                                type="text"
@@ -40,8 +40,7 @@
                                ng-focus="hideErr('amount')"
                                ng-blur="showErr('amount')">
 
-
-                        <span class="asset__input-icon">$</span>
+                        <span class="form-control-icon form-control-icon-size-lg">$</span>
 
                         <div ng-show="frontErr.amount.show">
                             <p class="alert alert-arrow_tp_lf" ng-show="depositForm.amount.$error.required">
@@ -86,26 +85,18 @@
         <br>
         <div class="row">
             <div class="col-xs-2"></div>
-            <div class="col-xs-7 deposit__btn_box">
+            <div class="col-xs-7 text-center">
                 <div class="deposit__btn_wrapper">
-                    <button ng-if="!isLoading" class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-class="{'btn-disabled': !deposit.submitBtn, 'disabled': !deposit.submitBtn}" ng-click="toDeposit()">
+                    <button ng-if="!isLoading" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-class="{'tw-btn-disabled': !deposit.submitBtn, 'disabled': !deposit.submitBtn}" ng-click="toDeposit()">
                         <span ng-show="deposit.type !== 'tele'">充值</span>
                         <span ng-show="deposit.type === 'tele'">提交</span>
                     </button>
-                    <button ng-if="isLoading" class="tw-btn tw-btn-capsule-gradient tw-btn-md"><i class="loading_spinner fa fa-spinner"></i>提交中</button>
+                    <button ng-if="isLoading" class="tw-btn tw-btn-capsule-gradient tw-btn-full"><i class="loading_spinner fa fa-spinner"></i>提交中</button>
                 </div>
             </div>
         </div>
 
         <div class="deposit_separator"></div>
-
-        <div class="row mg-tp-30" ng-show="deposit.type === 'tele'">
-            <div class="col-xs-2 text-right deposit__title-money">上传电汇凭证</div>
-            <div class="col-xs-7 deposit__tele_file">
-                点击上传电汇凭证
-                <div tw-upload-file-base64 data-file-name="deposit.teleFile"></div>
-            </div>
-        </div>
 
         <div class="deposit__bank_file" ng-if="(deposit.type === 'invest') && (deposit.isAbleDeposit != 0)">
             <div ng-if="deposit.isAbleDeposit == 1">
@@ -140,7 +131,7 @@
                 </div>
                 <div class="deposit__bank_file-upload_tip">上传凭证为1-3张。目前只支持2MB的PNG、JPG格式</div>
                 <div class="deposit__bank_file-upload_btn">
-                    <button class="btn btn-primary btn-sm" ng-click="uploadBankFile()">
+                    <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" ng-click="uploadBankFile()">
                         提交
                     </button>
                 </div>
@@ -153,58 +144,69 @@
         </div>
 
         <div class="deposit__tele" ng-if="deposit.type === 'tele'">
-            <p class="deposit__tele-tip">
-                不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，老虎外汇不收取电汇入金手续费，入金金额将以实际到账为准。
-            </p>
-            <p class="deposit__tele-tip">
-                请注意，我们不接受直接支付到我们银行账户的现金付款。为了您的注资能及时、准确到帐，在填写电汇申请单时，<span class="des">请您务必在汇款附言一栏里填写您的交易账号。</span>同时请提供您的电话号码，以便我们与您取得联系。
-            </p>
-            <p class="deposit__tele-tit">
-                老虎外汇接受美元汇款，汇款详情如下：
-            </p>
-            <p class="deposit__tele-msg">
-                收款人名称（Company）：<br>TigerWit Financial Services Limited
-            </p>
-            <p class="deposit__tele-msg">
-                收款行所在国家（地区）： <br>澳大利亚AUSTRALIA
-            </p>
-            <p class="deposit__tele-msg">
-                收款人账号（Account）：<br>06443210678867
-            </p>
-            <p class="deposit__tele-msg">
-                收款银行机构鉴定代码（Swift）：<br>CTBAAU2S (或CTBAAU2SXXX)
-            </p>
-            <p class="deposit__tele-msg">
-                收款人开户行（Bank）：<br>COMMONWEALTH BANK OF AUSTRALIA SYDNEY
-            </p>
-            <p class="deposit__tele-msg">
-                银行地址（Address）：<br>201 SUSSEX STREET FLOOR 27 SYDNEY NSW 2000 AUSTRALIA
-            </p>
-            <p class="deposit__tele-msg">
-                清算号（BSB）：<br>064432
-            </p>
-            <p class="deposit__tele-msg">
-                收款人地址（Address）：<br>No. 201  Church Street Sandyport P. O. Box SP 64638 Nassau, Bahamas
-            </p>
-            <p class="deposit__tele-msg">
-                汇款附言：姓名：您的姓名拼音，交易账号：12345678
-            </p>
-            <p class="deposit__tele-tit">
-                反洗钱政策：
-            </p>
-            <p class="deposit__tele-tip">
-                老虎外汇将根据各国适用法律尽最大努力以实际行动配合反洗钱及反恐怖方面的所有法律法规，具体包括报告及冻结可疑资产等。老虎外汇将不定期地查看账户记录以获取有洗钱嫌疑的交易证据，包括对如下几项的监控：
-            </p>
-            <p class="deposit__tele-tip">
-                1)  账户资金出入情况。电汇入金的用户，提现时若金额低于电汇入金时金额，老虎外汇只支持将提现金额提现至入金银行卡。<br>
-                2) 电汇汇款方及收款方<br>
-                3) 除正常业务外的其他行为。
-            </p>
-            <p class="deposit__tele-msg">
-                如您有疑问，请
-                <span ng-click="toHelp()" class="des">点击此处</span>
-                联系在线客服获得帮助。
-            </p>
+            <div class="row">
+                <div class="col-xs-2 text-right deposit__title-money">上传电汇凭证</div>
+                <div class="col-xs-7 deposit__tele_file">
+                    点击上传电汇凭证
+                    <div tw-upload-file-base64 data-file-name="deposit.teleFile"></div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <p class="deposit__tele-tip">
+                    不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，老虎外汇不收取电汇入金手续费，入金金额将以实际到账为准。
+                </p>
+                <p class="deposit__tele-tip">
+                    请注意，我们不接受直接支付到我们银行账户的现金付款。为了您的注资能及时、准确到帐，在填写电汇申请单时，<span class="des">请您务必在汇款附言一栏里填写您的交易账号。</span>同时请提供您的电话号码，以便我们与您取得联系。
+                </p>
+                <p class="deposit__tele-tit">
+                    老虎外汇接受美元汇款，汇款详情如下：
+                </p>
+                <p class="deposit__tele-msg">
+                    收款人名称（Company）：<br>TigerWit Financial Services Limited
+                </p>
+                <p class="deposit__tele-msg">
+                    收款行所在国家（地区）： <br>澳大利亚AUSTRALIA
+                </p>
+                <p class="deposit__tele-msg">
+                    收款人账号（Account）：<br>06443210678867
+                </p>
+                <p class="deposit__tele-msg">
+                    收款银行机构鉴定代码（Swift）：<br>CTBAAU2S (或CTBAAU2SXXX)
+                </p>
+                <p class="deposit__tele-msg">
+                    收款人开户行（Bank）：<br>COMMONWEALTH BANK OF AUSTRALIA SYDNEY
+                </p>
+                <p class="deposit__tele-msg">
+                    银行地址（Address）：<br>201 SUSSEX STREET FLOOR 27 SYDNEY NSW 2000 AUSTRALIA
+                </p>
+                <p class="deposit__tele-msg">
+                    清算号（BSB）：<br>064432
+                </p>
+                <p class="deposit__tele-msg">
+                    收款人地址（Address）：<br>No. 201  Church Street Sandyport P. O. Box SP 64638 Nassau, Bahamas
+                </p>
+                <p class="deposit__tele-msg">
+                    汇款附言：姓名：您的姓名拼音，交易账号：12345678
+                </p>
+                <p class="deposit__tele-tit">
+                    反洗钱政策：
+                </p>
+                <p class="deposit__tele-tip">
+                    老虎外汇将根据各国适用法律尽最大努力以实际行动配合反洗钱及反恐怖方面的所有法律法规，具体包括报告及冻结可疑资产等。老虎外汇将不定期地查看账户记录以获取有洗钱嫌疑的交易证据，包括对如下几项的监控：
+                </p>
+                <p class="deposit__tele-tip">
+                    1)  账户资金出入情况。电汇入金的用户，提现时若金额低于电汇入金时金额，老虎外汇只支持将提现金额提现至入金银行卡。<br>
+                    2) 电汇汇款方及收款方<br>
+                    3) 除正常业务外的其他行为。
+                </p>
+                <p class="deposit__tele-msg">
+                    如您有疑问，请
+                    <span ng-click="toHelp()" class="des">点击此处</span>
+                    联系在线客服获得帮助。
+                </p>
+            </div>
         </div>
     </div>
     

@@ -129,7 +129,8 @@ $tw-btn-color: #222;
 $tw-btn-border: 1px solid #d6d7d9;
 $tw-btn-border-hover: 1px solid darken(#d6d7d9, 5%);
 
-$tw-btn-width-lg: 100%;
+$tw-btn-width-full: 100%;
+$tw-btn-width-lg: 160px;
 $tw-btn-min-width-lg: 290px;
 $tw-btn-width-md: 130px;
 $tw-btn-width-sm: 100px;
@@ -174,6 +175,9 @@ $tw-btn-bg-black-end: #2b323e;
 }
 
 // 按钮尺寸
+.tw-btn-full {
+    @include tw-button-size($tw-btn-width-full, $tw-btn-height-lg, $tw-btn-fontsize-lg)
+}
 .tw-btn-lg {
     @include tw-button-size($tw-btn-width-lg, $tw-btn-height-lg, $tw-btn-fontsize-lg)
 }
@@ -210,4 +214,10 @@ $tw-btn-bg-black-end: #2b323e;
 }
 .tw-btn-square-bordered {
     @include tw-button-variant($tw-btn-color, $tw-btn-border, $tw-btn-border-hover, $tw-btn-radius-square);
+}
+
+.tw-btn-disabled {
+    cursor: not-allowed;
+    color: $gray-darker;
+    @include tw-button-gradient-vertical($gray-dark, $gray);
 }

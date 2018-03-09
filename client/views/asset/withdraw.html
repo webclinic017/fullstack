@@ -17,12 +17,13 @@
     </div>
     <br>
     <br>
+    <br>
     <div class="row">
         <div class="col-xs-2 text-left deposit__title-money">
             银行卡
         </div>
 
-        <div class="col-xs-9 pd-tp-10" ng-show="!withdraw.card.id">
+        <div class="col-xs-10 pd-tp-10" ng-show="!withdraw.card.id">
             <span class="deposit__pointer font-info" ng-click="openCardMdl()">点击绑定银行卡 ></span>
         </div>
 
@@ -37,13 +38,14 @@
                 </span>
                 <span class="deposit__pointer font-info btn-text card_switch" ng-click="openManageCardMdl('switch')">切换银行卡 ></span>
             </span>
-            <span class="tw-btn tw-btn-sm tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl('manage')">管理银行卡</span>
+            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl('manage')">管理银行卡</span>
         </div>
     </div>
     <br>
     <br>
+    <br>
     <div class="row">
-        <div class="col-xs-9 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'invest' && withdrawMessageSucc && !message.is_succ">
+        <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'invest' && withdrawMessageSucc && !message.is_succ">
             <div class="warn_icon">
                 ⚠️
             </div>
@@ -54,7 +56,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-9 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'wallet' && withdrawMessageSucc && !messageWallet.is_succ">
+        <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'wallet' && withdrawMessageSucc && !messageWallet.is_succ">
             <div class="warn_icon">
                 ⚠️
             </div>
@@ -73,7 +75,7 @@
             <div class="col-xs-6 deposit__input">
                 <form name="withdrawForm" novalidate>
                     <div class="form-control-wrapper">
-                        <input class="form-control form-control-md radius"
+                        <input class="form-control form-control-size-lg form-control-shape-capsule"
                                name="amount"
                                type="text"
                                required
@@ -85,7 +87,7 @@
                                ng-focus="hideErr('amount')"
                                ng-blur="showErr('amount')">
 
-                        <span class="asset__input-icon">$</span>
+                        <span class="form-control-icon form-control-icon-size-lg">$</span>
 
                         <div ng-show="frontErr.amount.show">
                             <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.required">
@@ -124,8 +126,8 @@
         <br>
         <div class="row">
             <div class="col-xs-9 col-xs-offset-2 text-center">
-                <button class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-show="clickable" ng-click="toWithdraw()">提现</button>
-                <button class="tw-btn tw-btn-capsule-gradient tw-btn-md" disabled ng-show="!clickable">
+                <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" ng-show="clickable" ng-click="toWithdraw()">提现</button>
+                <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" disabled ng-show="!clickable">
                     <i class="loading_spinner fa fa-spinner"></i>
                     提现中 
                 </button>
@@ -133,8 +135,9 @@
         </div>
         <br>
         <br>
+        <br>
         <div class="row">
-            <div class="col-xs-9 col-xs-offset-2 warn_tip_area">
+            <div class="col-xs-8 col-xs-offset-2 warn_tip_area">
                 <div class="warn_icon">
                     ⚠️
                 </div>
@@ -148,5 +151,9 @@
                 </div>
             </div>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
     </div>
 </div>

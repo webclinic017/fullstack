@@ -1,8 +1,12 @@
 .flexBox {
-    display: -webkit-flex;  /* 新版本语法: Chrome 21+ */
-    display: flex;          /* 新版本语法: Opera 12.1, Firefox 22+ */
-    display: -moz-box;      /* 老版本语法: Firefox (buggy) */
-    display: -ms-flexbox;   /* 混合版本语法: IE 10 */   
+    display: -webkit-flex;
+    /* 新版本语法: Chrome 21+ */
+    display: flex;
+    /* 新版本语法: Opera 12.1, Firefox 22+ */
+    display: -moz-box;
+    /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;
+    /* 混合版本语法: IE 10 */
 }
 
 // asset
@@ -10,19 +14,15 @@
     min-height: 500px;
     padding: 30px 32px;
     color: $gray-base;
-    
     .btn-primary {
         margin-top: -3px;
     }
-
     .form-control-wrapper {
         margin-bottom: 10px;
     }
-    
     .form-control {
         padding-left: 30px;
     }
-    
     .asset__input-icon {
         position: absolute;
         top: 10px;
@@ -33,36 +33,37 @@
 }
 
 .warn_tip_area {
-    font-size: 12px;
+    font-size: 14px;
+    line-height: 22px;
     color: $gray-darker;
-    background-color: rgb(255,255,234);
+    background-color: rgb(255, 255, 234);
     @extend .flexBox;
     flex-flow: row nowrap;
-    justify-content: flex-start; 
-    padding: 15px 20px;
+    justify-content: flex-start;
+    padding: 22px 24px;
     border-radius: 10px;
     .warn_icon {
         font-size: 24px;
-        width: 46px;
+        width: 50px;
         text-align: left;
     }
 }
 
 .widthdraw__card_bg {
     display: inline-flex;
-    height: 38px;
+    height: 50px;
     background: url('/images/asset/bank_card_bg.jpg') no-repeat;
     background-size: 100% 100%;
     border-radius: 5px;
     overflow: hidden;
     text-align: left;
-    padding: 0 10px;
+    padding: 0 15px;
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
     span {
         font-weight: 500;
-        font-size: 10px;
+        font-size: 12px;
         color: #fff;
     }
     img {
@@ -74,22 +75,20 @@
 
 .deposit_separator {
     width: 100%;
-    border-top: 1px solid $gray;
+    border-top: 1px dashed $gray;
     margin: 0 auto;
     margin-top: 50px;
 }
 
 // deposit
 @include b(deposit) {
-    ul > li {
+    ul>li {
         margin: 5px 0;
     }
-
     @include e(rate) {
         color: #999;
-        font-size: 12px;
+        font-size: 14px;
     }
-
     @include e(circle) {
         display: inline-block;
         width: 10px;
@@ -97,29 +96,25 @@
         border: 2px solid $brand-primary;
         border-radius: 50%;
     }
-
     @include e (input) {
         // margin-top: 2px;
     }
-
     @include e (title-money) {
-        font-size: $font-size-h4;
+        font-size: $font-size-h3;
         font-weight: 500;
+        line-height: 50px;
     }
-
     @include e (pointer) {
         cursor: pointer;
     }
-
     @include e(way) {
         width: 100%;
         height: 35px;
         color: #494949;
-        font-size: 18px;
+        font-size: 24px;
         font-weight: 500;
         cursor: pointer;
         position: relative;
-
         &:before {
             content: '';
             display: block;
@@ -130,39 +125,37 @@
             border-top-color: #666;
             margin-top: -6px;
         }
-
         @include m(tip) {
             color: #999;
-            font-size: 12px;
+            font-size: 14px;
             line-height: 16px;
             display: none;
-
+            margin-top: 10px;
             &.active {
                 display: block;
             }
         }
     }
-
     @include e(wallet_succ) {
         color: #494949;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 500;
-        text-align: center;
-        padding-top: 100px;
+        padding-left: 10px;
+        line-height: 28px;
     }
     @include e(btn_wrapper) {
         margin-top: 30px;
         text-align: center;
+        width: 160px;
+        display: inline-block;
     }
     @include e(tele) {
-        padding: 30px 0px;
-
+        padding: 30px 40px;
         @include m(tip) {
             color: #999;
             padding-bottom: 10px;
-
             .des {
-                color: rgb(245,82,79);
+                color: rgb(245, 82, 79);
             }
         }
         @include m(tit) {
@@ -173,9 +166,8 @@
         @include m(msg) {
             color: #666;
             padding-bottom: 10px;
-
             .des {
-                color: rgb(73,144,226);
+                color: rgb(73, 144, 226);
                 cursor: pointer;
             }
         }
@@ -183,19 +175,22 @@
     @include e(tele_file) {
         border: 1px dashed #999;
         border-radius: 10px;
-        height: 200px;
-        margin-top: 40px;
+        height: 260px;
+        line-height: 260px;
+        margin-top: 60px;
         text-align: center;
-        line-height: 200px;
         cursor: pointer;
         overflow: hidden;
-
+        background-color: $gray-lighter;
+        font-size: 18px;
+        font-weight: 500;
+        color: $gray-dark;
         &.bank_file {
-            height: 180px;
-            line-height: 180px;
             margin-top: 20px;
             position: relative;
-
+            &:nth-child(1) {
+                margin-top: 50px;
+            }
             &.add_file {
                 &:before {
                     display: block;
@@ -232,7 +227,6 @@
             width: 30%;
             height: 60px;
             text-align: right;
-
             img {
                 height: 100%;
             }
@@ -251,13 +245,14 @@
         margin-top: 45px;
         padding-left: 55px;
         @include m(tit) {
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 500;
             color: #222;
             padding-bottom: 10px;
         }
         @include m(tip) {
             padding-bottom: 20px;
+            color: $gray-darker;
         }
         @include m(sub_tit) {
             font-size: 14px;
@@ -265,43 +260,38 @@
             color: #222;
             padding-bottom: 10px;
         }
-
         @include m(eg) {
             display: table;
             width: 100%;
             padding-top: 10px;
-
             .pic {
-                height: 100px;
+                height: 116px;
                 display: table-cell;
-                width: 180px;
+                width: 220px;
                 text-align: center;
                 border: 1px solid #ccc;
                 border-radius: 15px;
                 overflow: hidden;
                 cursor: pointer;
                 position: relative;
-
                 span {
                     position: absolute;
                     top: 0;
                     left: 0;
                     width: 100%;
-                    height: 100px;
-                    background: rgba(0,0,0,0.6);
+                    height: 116px;
+                    line-height: 116px;
+                    background: rgba(0, 0, 0, 0.6);
                     text-align: center;
-                    line-height: 100px;
                     color: #fafafa;
                     font-size: 12px;
                     display: none;
                 }
-
                 &:hover {
                     span {
                         display: block;
                     }
                 }
-
                 img {
                     height: 100%;
                     vertical-align: top;
@@ -314,13 +304,14 @@
             }
         }
         @include m(upload) {
-            width: 360px;
+            width: 464px;
             margin: 0 auto;
         }
         @include m(upload_tip) {
             width: 360px;
             margin: 10px auto 30px;
-            font-size: 12px;
+            font-size: 14px;
+            color: $gray-dark;
         }
         @include m(upload_btn) {
             text-align: center;
@@ -332,7 +323,6 @@
 @include b(deposit_modal) {
     @include e(type) {
         margin-top: 30px;
-
         li {
             margin-bottom: 15px;
             cursor: pointer;
@@ -347,11 +337,10 @@
                 line-height: 18px;
                 color: #333;
                 padding-bottom: 8px;
-
                 span {
                     font-size: 14px;
                     padding-left: 5px;
-                    color: rgb(245,82,79);
+                    color: rgb(245, 82, 79);
                 }
             }
             .tip {
@@ -359,34 +348,35 @@
             }
         }
     }
-} 
+}
 
 @include b(withdraw) {
+    min-height: 700px;
     @include e(sys_tip) {
         margin-left: 92px;
     }
     .sys_tip1 {
-        font-size: 12px;
+        font-size: 14px;
         color: $gray-dark;
     }
-    
     @include e(way) {
-        width: 255px;
-        height: 136px;
+        width: 300px;
+        height: 160px;
         padding: 24px;
         text-align: left;
         float: left;
-        border-radius: 5px;
+        border-radius: 10px;
         overflow: hidden;
         cursor: pointer;
         background-size: 100% 100%;
-        box-shadow: 0px 0px 0px rgba(0,0,0,0.5);
-        transition: all 0.22s ease;
-        -webkit-transition: all 0.22s ease;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+        transition: all 0.22s linear;
+        -webkit-transition: all 0.22s linear;
         color: #fff;
         .amount {
-            font-size:  37.5px;
+            font-size: 36px;
             font-weight: 500;
+            margin-top: 20px;
         }
         span {
             display: block;
@@ -394,65 +384,63 @@
         }
         &.account {
             margin-right: 20px;
-            background-image: url('/images/asset/trading_bg.png'); 
+            background-image: url('/images/asset/trading_bg.png');
         }
         &.wallet {
-            background-image: url('/images/asset/wallet_bg.png'); 
+            background-image: url('/images/asset/wallet_bg.png');
         }
         &.active {
-            box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+            box-shadow: 0 10px 60px $gray-dark;
             &.account {
-                background-image: url('/images/asset/trading_bg_active.png'); 
+                background-image: url('/images/asset/trading_bg_active.png');
             }
             &.wallet {
-                background-image: url('/images/asset/wallet_bg_active.png'); 
+                background-image: url('/images/asset/wallet_bg_active.png');
             }
         }
     }
-
     @include e(card_handler) {
         @extend .flexBox;
         flex-flow: row nowrap;
         justify-content: flex-start;
         align-items: center;
-        
         .card_number {
             font-weight: 500;
-            font-size: 18px;
-            margin-left: 10px;
+            font-size: 22px;
+            margin-left: 20px;
             @extend .flexBox;
             align-items: center;
         }
         .card_switch {
-            font-size: 12px;
-            margin-left: 5px;
+            font-size: 14px;
+            margin-left: 16px;
         }
         .card_manage {
-            margin-left: 30px;
+            margin-left: 40px;
         }
     }
 }
 
 @include b(history) {
-
     @include e (lt40) {
         margin-left: -40px;
     }
 }
 
 // 银行卡管理modal
-@include b(manage_card_list){
+@include b(manage_card_list) {
     width: 100%;
-    @include e(item){
+    @include e(item) {
         td {
             height: 65px;
             padding-top: 8px;
             padding-bottom: 8px;
-            .card_icon{
+            .card_icon {
                 transform: scale(1.25);
                 -webkit-transform: scale(1.25);
             }
-            .card_number, .card_btn{
+            .card_number,
+            .card_btn {
                 font-size: 16px;
             }
         }

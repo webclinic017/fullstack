@@ -1,6 +1,3 @@
-.master_content {
-    padding: 15px;
-}
 @include b(space_master) {
     @include e(title) {
         font-size: 18px;

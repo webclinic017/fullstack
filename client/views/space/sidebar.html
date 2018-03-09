@@ -32,7 +32,7 @@
                 </li>
             </ul>
             <div class="text-center mg-tp-10">
-                <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="!personal.is_master" class="tw-btn tw-btn-lg tw-btn-square-gradient">申请高手</a>
+                <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="!personal.is_master" class="tw-btn tw-btn-full tw-btn-square-gradient">申请高手</a>
                 <div class="space_sidebar__grade" ng-if="personal.is_master">
                     <div class="space_sidebar__grade-bar">
                         <span ng-style="{width: 50}"></span>
@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div ng-show="personal.dredged_type == 'unknow'" class="space_sidebar__real mg-tp-10">
-                <a ng-click="openDredgeMdl({position: 'sidebar'})" class="tw-btn tw-btn-lg tw-btn-square-gradient-black">认证审核</a>
+                <a ng-click="openDredgeMdl({position: 'sidebar'})" class="tw-btn tw-btn-full tw-btn-square-gradient-black">认证审核</a>
             </div>
         </div>
     
