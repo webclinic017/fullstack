@@ -137,7 +137,27 @@ module.exports = {
         "en": "Not Meet the lots"
     },
     "mInvite36": {
-        "zh": "",
-        "en": ""
+        "zh": "Facebook",
+        "en": "Facebook"
     },
+    "mInvite37": {
+        "zh": "G＋",
+        "en": "G＋"
+    },
+    "mInvite38": {
+        "zh": "Linked-in",
+        "en": "Linked-in"
+    },
+    "mInvite39": {
+        "zh": "Instagram",
+        "en": "Instagram"
+    },
+    "mInvite40": {
+        "zh": "Tumblr",
+        "en": "Tumblr"
+    },
+    "mInvite41": {
+        "zh": "Twitter",
+        "en": "Twitter"
+    }
 }

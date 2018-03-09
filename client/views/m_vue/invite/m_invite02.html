@@ -58,13 +58,20 @@
             <span id="send_invitation" class="<%= lang.text('companyEnName') %>"><%=lang.text('mInvite23')%></span>
         </div>
         <div class="share_box" id="share02_box">
-            <div class="share02_modal clearfix" id="share02_modal">
+            <div class="share02_modal clearfix <%=lang.currentLanguage()%>" id="share02_modal">
                 <h5><%=lang.text('mInvite24')%></h5>
-                <span class="share_to_friends"   id="share_to_friends">  <img src="/images/mobile/share2wx.png"><br><%=lang.text('mInvite25')%></span>
-                <span class="share_to_circle"    id="share_to_circle">   <img src="/images/mobile/share2circle.png"><br><%=lang.text('mInvite26')%></span>
-                <span class="share_to_qf new_share"        id="share_to_qFriend">  <img src="/images/mobile/share2qq.png"><br><%=lang.text('mInvite27')%></span>
-                <span class="share_to_qZone new_share"     id="share_to_qZone">    <img src="/images/mobile/share2qZone.png"><br><%=lang.text('mInvite28')%></span>
-                <span class="share_to_microBlog new_share" id="share_to_microBlog"><img src="/images/mobile/share2mBlog.png"><br><%=lang.text('mInvite30')%></span>
+                <span class="share_to_friends show_in_all"   id="share_to_friends">  <img src="/images/mobile/share2wx.png"><br><%=lang.text('mInvite25')%></span>
+                <span class="share_to_circle show_in_all"    id="share_to_circle">   <img src="/images/mobile/share2circle.png"><br><%=lang.text('mInvite26')%></span>
+                <span class="share_to_qf show_in_all"        id="share_to_qFriend">  <img src="/images/mobile/share2qq.png"><br><%=lang.text('mInvite27')%></span>
+                <!-- <span class="share_to_qZone show_in_zh"     id="share_to_qZone">    <img src="/images/mobile/share2qZone.png"><br><%=lang.text('mInvite28')%></span> -->
+                <span class="share_to_microBlog show_in_all" id="share_to_microBlog"><img src="/images/mobile/share2mBlog.png"><br><%=lang.text('mInvite30')%></span>
+
+                <!-- <span class="share_to_fb show_in_all" id="share_to_fb"><img src="/images/mobile/share2fb.png"><br><%=lang.text('mInvite36')%></span> -->
+                <span class="share_to_twitter show_in_all new_share" id="share_to_twitter"><img src="/images/mobile/share2twitter.png"><br><%=lang.text('mInvite41')%></span>
+                <span class="share_to_in show_in_all new_share" id="share_to_linkin"><img src="/images/mobile/share2in.png"><br><%=lang.text('mInvite38')%></span>
+                <span class="share_to_tumblr show_in_all new_share" id="share_to_tumblr"><img src="/images/mobile/share2tumblr.png"><br><%=lang.text('mInvite40')%></span>
+                <!-- <span class="share_to_ins show_in_en" id="share_to_ins"><img src="/images/mobile/share2ins.png"><br><%=lang.text('mInvite39')%></span> -->
+                <!-- <span class="share_to_g+" id="share_to_g+"><img src="/images/mobile/share2g+.png"><br><%=lang.text('mInvite37')%></span> -->
                 <span id="cancel_share"><button><%=lang.text('mInvite31')%></button></span>
             </div>
         </div>

@@ -9,8 +9,11 @@
         "share_to_friends",
         "share_to_circle",
         "share_to_qFriend",
-        "share_to_qZone",
         "share_to_microBlog",
+        "share_to_fb",
+        "share_to_twitter",
+        "share_to_linkin",
+        "share_to_tumblr",
         "cancel_share",
         "share02_box",
         "get_award",
@@ -41,7 +44,7 @@
                 if (!data) return;
                 if (data.is_succ) {
                     if (data.data) {
-                        $("#telephone").addClass("warning").val( lang.text('invite.registerd') );
+                        $("#telephone").addClass("warning").val(lang.text('invite.registerd'));
                     } else {
                         $("#telephone").removeClass("warning");
                     }
@@ -102,23 +105,21 @@
     });
 
     function invitation() {
-        // var versionName = getVersionName();
-        // console.log('versionName=' + versionName);
-        // var modalHeight = '250px';
-        // $('.new_share').hide();
-        // if (versionName && parseFloat(versionName) >= 2.2) {
-        //     modalHeight = '350px';
-        //     $('.new_share').show();
-        // }
-        var modalHeight = '350px';
-        modalHeight = '350px';
-        $('.new_share').show();
+        var versionName = getVersionName()
+        var version = versionName ? Number(versionName.replace(/\./gi, '')) : 0
+
+        if (version >= 306 && isIOS()) {
+            $('.new_share').show();
+        }
+        if (version >= 110 && isAndriod()) {
+            $('.new_share').show();
+        }
         /*页面层*/
         layIndex = layer.open({
-            type: 1
-            , content: DOM['$share02_box'].html()
-            , anim: 'up'
-            , style: 'position:fixed; bottom:0; left:0; width: 100%; height: ' + modalHeight + '; padding:10px 0; border:none;'
+            type: 1, 
+            content: DOM['$share02_box'].html(),
+            anim: 'up',
+            style: 'position:fixed; bottom:0; left:0; width: 100%; height: 350px; padding:10px 0; border:none;'
         });
     }
 
@@ -134,21 +135,19 @@
     }
 
     function nativeShare(type) {
-        console.log(type);
-        if (!isInTiger()) {
-            console.log("当前不是APP环境");
-            return
-        }
-
         var callConfig = {
             type: type,
             title: lang.text('invite.share2'),
             description: lang.text('invite.share3') + (lang.curLang('zh') ? coMap[getCoName()] : '') + lang.text('invite.share1'),
-            url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || '')
+            url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || ''),
+            imgUrl: window.location.origin + "/napi?action=get_share_img&user_code=" + ($.cookie("user_code") || '') + ".png",
         };
-
-        console.log(getCoName(),callConfig)
-        callNative(callConfig);
+        if (!isInTiger()) {
+            console.log("当前不是APP环境");
+        } else {
+            callNative(callConfig);
+        }
+        console.log(getCoName(), callConfig)
     }
 
     $(document).on('touchend', '.share02_modal', function (e) {
@@ -164,11 +163,21 @@
             type = "qq";
         }
         else if (id == id_arr[4]) {
-            type = "qzone";
-        }
-        else if (id == id_arr[5]) {
             type = "weibo";
-        } else if (id == id_arr[6]) {
+        }
+        // else if (id == id_arr[5]) {
+        //     type = "facebook";
+        // } 
+        else if (id == id_arr[6]) {
+            type = "twitter";
+        } 
+        else if (id == id_arr[7]) {
+            type = "linkin";
+        } 
+        else if (id == id_arr[8]) {
+            type = "tumblr";
+        } 
+        else if (id == id_arr[9]) {
             layer.close(layIndex);
             return false;
         } else {
@@ -207,7 +216,7 @@
 
                     var cBtn = ".share02_main__content .status .c";
                     $(".share02_main__content .info .num").html(data.data.record_count);
-                    
+
                     if (data.data.bonus_status == 1) {
                         $(cBtn).html(lang.text('invite.Unexchangeable'));
                     } else if (data.data.bonus_status == 2) {
@@ -220,21 +229,20 @@
                     } else if (data.data.bonus_status == 5) {
                         $(cBtn).html(lang.text('invite.Lapsed'));
                     }
-                    
+
                     /*模板引擎*/
                     baidu.template.LEFT_DELIMITER = '<$';
                     baidu.template.RIGHT_DELIMITER = '$>';
-                    
+
                     if (list.list.length) {
                         var list_str = baidu.template('invite_table', list);
                         $("#invite_history_list").html(list_str);
-                        
+
                     } else {
                         $("#invite_history_list .init").addClass("active");
                     }
                 }
             });
         }
-
     }());
 }(jQuery));
