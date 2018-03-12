@@ -160,6 +160,7 @@ $tw-btn-bg-black-end: #2b323e;
     vertical-align: middle;
     white-space: nowrap;
     background-image: none;
+    transition: all $base-trans-time linear;
     cursor: pointer;
     @include user-select(none);
     &:active,
