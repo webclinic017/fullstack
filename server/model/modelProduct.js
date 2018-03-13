@@ -33,8 +33,8 @@ var cfd = {
         "volum": "1手＝5合约",
         "min_volum": "1",
         "max_volum": "100",
-        "trade_time": "周一－周五 15:00--05:00(次日)",
-        "quote_time": "周一－周五 15:00--05:00(次日)",
+        "trade_time": "周一－周五 14:00-04:00(次日)",
+        "quote_time": "周一－周五 14:00-04:00(次日)",
         "desp": "也称欧洲绩优指数，欧元区蓝筹股股价指数"
     },
     {
@@ -43,8 +43,8 @@ var cfd = {
         "volum": "1手＝1合约",
         "min_volum": "1",
         "max_volum": "100",
-        "trade_time": "周一－周五 15:00--05:00(次日)",
-        "quote_time": "周一－周五 15:00--05:00(次日)",
+        "trade_time": "周一－周五 14:00-04:00(次日)",
+        "quote_time": "周一－周五 14:00-04:00(次日)",
         "desp": "德国30种法兰克福上市蓝筹股票指数经过算法后得出收益的指数"
     },
     {
@@ -53,8 +53,8 @@ var cfd = {
         "volum": "1手＝100合约",
         "min_volum": "1",
         "max_volum": "100",
-        "trade_time": "周一－周五 08:05--05:15(次日)",
-        "quote_time": "周一－周五 08:00--05:15(次日)",
+        "trade_time": "周一－周五 07:15-04:15(次日)",
+        "quote_time": "周一－周五 07:00-04:15(次日)",
         "desp": "日经225只东京交易所上市股票指数"
     },
     {
@@ -63,8 +63,8 @@ var cfd = {
         "volum": "1手＝5合约",
         "min_volum": "1",
         "max_volum": "100",
-        "trade_time": "周一－周五 07:00--05:15(次日)",
-        "quote_time": "周一－周五 07:00--05:15(次日)",
+        "trade_time": "周一 06:00-04:15(次日) 04:30-05:00(次日) 周二－周五 05:00-04:15(次日) 04:30-05:00(次日)",
+        "quote_time": "周一 06:00-04:15(次日) 04:30-05:00(次日) 周二－周五 05:00-04:15(次日) 04:30-05:00(次日)",
         "desp": "基于高科技股票的指数"
     },
     {
@@ -73,8 +73,8 @@ var cfd = {
         "volum": "1手＝1合约",
         "min_volum": "1",
         "max_volum": "100",
-        "trade_time": "周一－周五 07:00--05:15(次日)",
-        "quote_time": "周一－周五 07:00--05:15(次日)",
+        "trade_time": "周一 06:00-04:15(次日) 04:30-05:00(次日) 周二－周五 05:00-04:15(次日) 04:30-05:00(次日)",
+        "quote_time": "周一 06:00-04:15(次日) 04:30-05:00(次日) 周二－周五 05:00-04:15(次日) 04:30-05:00(次日)",
         "desp": "美国30家主要工业公司构成的股票指数"
     },
     {
@@ -83,8 +83,8 @@ var cfd = {
         "volum": "1手＝10合约",
         "min_volum": "1",
         "max_volum": "100",
-        "trade_time": "周一－周五 07:00--05:15(次日)",
-        "quote_time": "周一－周五 07:00--05:15(次日)",
+        "trade_time": "周一 06:00-04:15(次日) 04:30-05:00(次日) 周二－周五 05:00-04:15(次日) 04:30-05:00(次日)",
+        "quote_time": "周一 06:00-04:15(次日) 04:30-05:00(次日) 周二－周五 05:00-04:15(次日) 04:30-05:00(次日)",
         "desp": "美国500家领军企业构成的股票指数"
     },
     {
@@ -104,8 +104,8 @@ var cfd = {
         "volum": "1lot＝5contract",
         "min_volum": "1",
         "max_volum": "100",
-        "trade_time": "on Monday - on Friday 15:00--05:00(next day)",
-        "quote_time": "on Monday - on Friday 15:00--05:00(next day)",
+        "trade_time": "on Monday - on Friday 14:00-04:00(next day)",
+        "quote_time": "on Monday - on Friday 14:00-04:00(next day)",
         "desp": "Also known as European blue chip index in Euro zone"
     },
     {
@@ -114,8 +114,8 @@ var cfd = {
         "volum": "1lot＝1contract",
         "min_volum": "1",
         "max_volum": "100",
-        "trade_time": "on Monday - on Friday 15:00--05:00(next day)",
-        "quote_time": "on Monday - on Friday 15:00--05:00(next day)",
+        "trade_time": "on Monday - on Friday 14:00-04:00(next day)",
+        "quote_time": "on Monday - on Friday 14:00-04:00(next day)",
         "desp": "Index of earnings obtained from 30 kinds of listed blue chip stock indexes in German."
     },
     {
@@ -124,8 +124,8 @@ var cfd = {
         "volum": "1lot＝100contract",
         "min_volum": "1",
         "max_volum": "100",
-        "trade_time": "on Monday - on Friday 08:05--05:15(next day)",
-        "quote_time": "on Monday - on Friday 08:00--05:15(next day)",
+        "trade_time": "on Monday - on Friday 07:15-04:15(next day)",
+        "quote_time": "on Monday - on Friday 07:00-04:15(next day)",
         "desp": "Index of 225 stocks listed in Tokyo Stock Exchange"
     },
     {
@@ -134,8 +134,8 @@ var cfd = {
         "volum": "1lot＝5contract",
         "min_volum": "1",
         "max_volum": "100",
-        "trade_time": "on Monday - on Friday 07:00--05:15(next day)",
-        "quote_time": "on Monday - on Friday 07:00--05:15(next day)",
+        "trade_time": "on Monday 06:00-04:15(next day) 04:30-05:00(next day) on Tuesday - on Friday 05:00-04:15(next day) 04:30-05:00(next day)",
+        "quote_time": "on Monday 06:00-04:15(next day) 04:30-05:00(next day) on Tuesday - on Friday 05:00-04:15(next day) 04:30-05:00(next day)",
         "desp": "Index based on tech stock"
     },
     {
@@ -144,8 +144,8 @@ var cfd = {
         "volum": "1lot＝1contract",
         "min_volum": "1",
         "max_volum": "100",
-        "trade_time": "on Monday - on Friday 07:00--05:15(next day)",
-        "quote_time": "on Monday - on Friday 07:00--05:15(next day)",
+        "trade_time": "on Monday 06:00-04:15(next day) 04:30-05:00(next day) on Tuesday - on Friday 05:00-04:15(next day) 04:30-05:00(next day)",
+        "quote_time": "on Monday 06:00-04:15(next day) 04:30-05:00(next day) on Tuesday - on Friday 05:00-04:15(next day) 04:30-05:00(next day)",
         "desp": "Stock index of 30 major industrial enterprises of USA"
     },
     {
@@ -154,8 +154,8 @@ var cfd = {
         "volum": "1lot＝10contract",
         "min_volum": "1",
         "max_volum": "100",
-        "trade_time": "on Monday - on Friday 07:00--05:15(next day)",
-        "quote_time": "on Monday - on Friday 07:00--05:15(next day)",
+        "trade_time": "on Monday 06:00-04:15(next day) 04:30-05:00(next day) on Tuesday - on Friday 05:00-04:15(next day) 04:30-05:00(next day)",
+        "quote_time": "on Monday 06:00-04:15(next day) 04:30-05:00(next day) on Tuesday - on Friday 05:00-04:15(next day) 04:30-05:00(next day)",
         "desp": "Stock index of 500 leading enterprises in USA"
     },
     {
@@ -182,7 +182,7 @@ var forex = {
         "fixed": "小数点后五位",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "交易日24小时报价 交易时段06:05--05:55(次日)"
+        "trade_time": "交易日24小时报价 交易时段05:05-04:55(次日)"
     },
     {
         "name_en": "EURUSD",
@@ -192,7 +192,7 @@ var forex = {
         "fixed": "小数点后五位",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "交易日24小时报价 交易时段06:05--05:55(次日)"
+        "trade_time": "交易日24小时报价 交易时段05:05-04:55(次日)"
     },
     {
         "name_en": "GBPUSD",
@@ -202,7 +202,7 @@ var forex = {
         "fixed": "小数点后五位",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "交易日24小时报价 交易时段06:05--05:55(次日)"
+        "trade_time": "交易日24小时报价 交易时段05:05-04:55(次日)"
     },
     {
         "name_en": "NZDUSD",
@@ -212,7 +212,7 @@ var forex = {
         "fixed": "小数点后五位",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "交易日24小时报价 交易时段06:05--05:55(次日)"
+        "trade_time": "交易日24小时报价 交易时段05:05-04:55(次日)"
     },
     {
         "name_en": "USDCAD",
@@ -222,7 +222,7 @@ var forex = {
         "fixed": "小数点后五位",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "交易日24小时报价 交易时段06:05--05:55(次日)"
+        "trade_time": "交易日24小时报价 交易时段05:05-04:55(次日)"
     },
     {
         "name_en": "USDCHF",
@@ -232,7 +232,7 @@ var forex = {
         "fixed": "小数点后五位",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "交易日24小时报价 交易时段06:05--05:55(次日)"
+        "trade_time": "交易日24小时报价 交易时段05:05-04:55(次日)"
     },
     {
         "name_en": "USDJPY",
@@ -242,7 +242,7 @@ var forex = {
         "fixed": "小数点后三位",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "交易日24小时报价 交易时段06:05--05:55(次日)"
+        "trade_time": "交易日24小时报价 交易时段05:05-04:55(次日)"
     },
     {
         "name_en": "USDCNH",
@@ -252,7 +252,7 @@ var forex = {
         "fixed": "小数点后五位",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "交易日24小时报价 交易时段06:05--05:55(次日)"
+        "trade_time": "交易日24小时报价 交易时段05:05-04:55(次日)"
     }
     ],
     en: [{
@@ -263,7 +263,7 @@ var forex = {
         "fixed": "Five digits after the decimal point",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "24h quotation on trading day Trading period:06:05--05:55(next day)"
+        "trade_time": "24h quotation on trading day Trading period:05:05-04:55(next day)"
     },
     {
         "name_en": "EURUSD",
@@ -273,7 +273,7 @@ var forex = {
         "fixed": "Five digits after the decimal point",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "24h quotation on trading day Trading period:06:05--05:55(next day)"
+        "trade_time": "24h quotation on trading day Trading period:05:05-04:55(next day)"
     },
     {
         "name_en": "GBPUSD",
@@ -283,7 +283,7 @@ var forex = {
         "fixed": "Five digits after the decimal point",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "24h quotation on trading day Trading period:06:05--05:55(next day)"
+        "trade_time": "24h quotation on trading day Trading period:05:05-04:55(next day)"
     },
     {
         "name_en": "NZDUSD",
@@ -293,7 +293,7 @@ var forex = {
         "fixed": "Five digits after the decimal point",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "24h quotation on trading day Trading period:06:05--05:55(next day)"
+        "trade_time": "24h quotation on trading day Trading period:05:05-04:55(next day)"
     },
     {
         "name_en": "USDCAD",
@@ -303,7 +303,7 @@ var forex = {
         "fixed": "Five digits after the decimal point",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "24h quotation on trading day Trading period:06:05--05:55(next day)"
+        "trade_time": "24h quotation on trading day Trading period:05:05-04:55(next day)"
     },
     {
         "name_en": "USDCHF",
@@ -313,7 +313,7 @@ var forex = {
         "fixed": "Five digits after the decimal point",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "24h quotation on trading day Trading period:06:05--05:55(next day)"
+        "trade_time": "24h quotation on trading day Trading period:05:05-04:55(next day)"
     },
     {
         "name_en": "USDJPY",
@@ -323,7 +323,7 @@ var forex = {
         "fixed": "Three digits after the decimal point",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "24h quotation on trading day Trading period:06:05--05:55(next day)"
+        "trade_time": "24h quotation on trading day Trading period:05:05-04:55(next day)"
     },
     {
         "name_en": "USDCNH",
@@ -333,7 +333,7 @@ var forex = {
         "fixed": "Five digits after the decimal point",
         "min_volum": "0.01",
         "standard_volum": "100000",
-        "trade_time": "24h quotation on trading day Trading period:06:05--05:55(next day)"
+        "trade_time": "24h quotation on trading day Trading period:05:05-04:55(next day)"
     }
     ]
 
@@ -348,8 +348,8 @@ var oil = {
         "min_volum": "0.01",
         "max_volum": "20",
         "charge": "0",
-        "trade_time": "周一－周四 07:00--06:00(次日) 周五 07:00--05:00(次日)",
-        "quote_time": "周一－周四 07:00--06:00(次日) 周五 07:00--05:00(次日)",
+        "trade_time": "周一－周五 06:00-05:00(次日)",
+        "quote_time": "周一－周五 06:00-05:00(次日)",
         "desp": "以NYMEX交易所美国天然气产品为基准的能源合约，天然气提供了美国四分之一左右的能源需求，同时可作为电力期权等产品的对冲工具"
     },
     {
@@ -360,8 +360,8 @@ var oil = {
         "min_volum": "0.01",
         "max_volum": "20",
         "charge": "0",
-        "trade_time": "周一－周五 07:00--06:00(次日)",
-        "quote_time": "周一－周五 07:00--06:00(次日)",
+        "trade_time": "周一－周五 06:00-05:00(次日)",
+        "quote_time": "周一－周五 06:00-05:00(次日)",
         "desp": "以NYMEX交易所美国原油为基准的脱硫轻质原油合约，是全球两大原油基准产品之一，被用于多国原油产品的定价基准。也是世界上交易量最大的能源合约"
     },
     {
@@ -372,8 +372,8 @@ var oil = {
         "min_volum": "0.01",
         "max_volum": "20",
         "charge": "0",
-        "trade_time": "周一－周五 09:00--06:00(次日)",
-        "quote_time": "周一－周五 09:00--06:00(次日)",
+        "trade_time": "周一－周五 08:00-05:00(次日)",
+        "quote_time": "周一－周五 08:00-05:00(次日)",
         "desp": "即是俗称的北海油，同样是脱硫轻质原油。是欧洲地区的原油定价基准，也是全球两大原油基准产品之一，可以用于与西德州原油进行对冲的产品"
     }
     ],
@@ -385,8 +385,8 @@ var oil = {
         "min_volum": "0.01",
         "max_volum": "20",
         "charge": "0",
-        "trade_time": "on Monday－on Thursday 07:00--06:00(next day) on Friday 07:00--05:00(next day)",
-        "quote_time": "on Monday－on Thursday 07:00--06:00(next day) on Friday 07:00--05:00(next day)",
+        "trade_time": "on Monday－on Friday 06:00-05:00(next day)",
+        "quote_time": "on Monday－on Friday 06:00-05:00(next day)",
         "desp": "As for energy contract taking NYMEX US natural gas products as the benchmark, natural gas satisfies about 1/4 energy demands of the US and can also be used as hedging tool for such products as electricity option."
     },
     {
@@ -397,8 +397,8 @@ var oil = {
         "min_volum": "0.01",
         "max_volum": "20",
         "charge": "0",
-        "trade_time": "on Monday－on Friday 07:00--06:00(next day)",
-        "quote_time": "on Monday－on Friday 07:00--06:00(next day)",
+        "trade_time": "on Monday－on Friday 06:00-05:00(next day)",
+        "quote_time": "on Monday－on Friday 06:00-05:00(next day)",
         "desp": "Desulfurized light crude oil contract with NYMEX US crude oil as the benchmark is one of the two crude oil benchmarking products in the world and is applied by many countries as the pricing datum of crude oil products, which is also the energy contract with the largest trading volume in the world."
     },
     {
@@ -409,8 +409,8 @@ var oil = {
         "min_volum": "0.01",
         "max_volum": "20",
         "charge": "0",
-        "trade_time": "on Monday－on Friday 09:00--06:00(next day)",
-        "quote_time": "on Monday－on Friday 09:00--06:00(next day)",
+        "trade_time": "on Monday－on Friday 08:00-05:00(next day)",
+        "quote_time": "on Monday－on Friday 08:00-05:00(next day)",
         "desp": "Commonly known as North Sea oil, which is also desulfurized light crude oil. Pricing datum of crude oil in Europe and one of the two major crude oil benchmarking products in the world, which can also be applied as hedging product against West Texas crude oil"
     }
     ]
@@ -427,7 +427,7 @@ var metal = {
             "fixed": "小数点后两位",
             "min_volum": "0.01",
             "standard_volum": "100 盎司",
-            "trade_time": "交易日交易时段 07:00--06:00(次日)"
+            "trade_time": "交易日交易时段 06:00-05:00(次日)"
         },  
         {
             "name_en": "XAGUSD",
@@ -437,7 +437,7 @@ var metal = {
             "fixed": "小数点后三位",
             "min_volum": "0.01",
             "standard_volum": "5000 盎司",
-            "trade_time": "交易日交易时段 07:00--06:00(次日)"
+            "trade_time": "交易日交易时段 06:00-05:00(次日)"
         },   
     ],
     en: [
@@ -449,7 +449,7 @@ var metal = {
             "fixed": "Two digits after the decimal point",
             "min_volum": "0.01",
             "standard_volum": "100 ounces",
-            "trade_time": "Trading period on the trading day 07:00--06:00(next day)"
+            "trade_time": "Trading period on the trading day 06:00-05:00(next day)"
         },
         {
             "name_en": "XAGUSD",
@@ -459,7 +459,7 @@ var metal = {
             "fixed": "Three digits after the decimal point",
             "min_volum": "0.01",
             "standard_volum": "5000 ounces",
-            "trade_time": "Trading period on the trading day 07:00--06:00(next day)"
+            "trade_time": "Trading period on the trading day 06:00-05:00(next day)"
         },  
     ]
 
