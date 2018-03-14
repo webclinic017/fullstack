@@ -18,13 +18,7 @@
         };
 
         main.thirdLogout = thirdLogout;
-        // 退出
-        var loginPath = '/third/login'
 
-        // 未登录跳到登录页面
-        if (!main.thirdInfo.userCode && location.pathname != loginPath) {
-            $window.location.href = loginPath
-        }
         function thirdLogout() {
             account.logout().then(function (data) {
                 if (!data) return;

@@ -17,12 +17,6 @@
             loading: true
         };
 
-        var token;
-        account.setToken();
-        $interval(function () {
-            account.setToken();
-        }, 300000);
-
         // 从 landing page 进入时
         $scope.account.mt4 = $state.params.mt4;
 
