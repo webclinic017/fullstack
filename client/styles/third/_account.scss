@@ -1,0 +1,188 @@
+@include b(account_login-bg) {
+    max-width: 2560px;
+    min-height: 800px;
+    overflow: hidden;
+    background-position: center center;
+    background-size: 100% 100%;
+    @include img-normal($image-path-base + "login_bg_new.jpg");
+}
+@include b(account_login_box) {
+    width: 390px;
+    margin: 150px auto 0;
+    position: relative;
+}
+@include b(account_login) {
+    width: 330px;
+    height: 307px;
+    background-color: #fafafa;
+    border-radius: 14px;
+    position: absolute;
+    left: 30px;
+    transition: all .4s;
+    padding: 40px 30px 15px;
+    z-index: $zindex-login;
+
+    &.active {
+        width: 390px;
+        height: 367px;
+        left: 0px;
+        background-color: #fff;
+        box-shadow: 0px 0px 1px 1px #fff;
+        z-index: $zindex-login-h;
+
+        &.login_code {
+            top: 88px;
+        }
+        &.login_pass {
+            top: 0px;
+        }
+    }
+
+    &.login_pass {
+        top: 30px;
+    }
+    &.login_code {
+        top: 118px;
+    }
+
+    @include e(btn_wrapper) {
+        text-align: center;
+    }
+    @include e(btn) {
+        color: #ffbd43;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    @include e(form) {
+        margin-bottom: 25px;
+    }
+
+    @include e(pos) {
+        width: 100%;
+        height: 58px;
+        line-height: 58px;
+        color: #4a4a4a;
+        font-size: 22px;
+        font-weight: 500;
+        position: absolute;
+        left: 0;
+        cursor: pointer;
+
+        &.login_pass {
+            top: 0;
+            padding-left: 24px;
+        }
+        &.login_code {
+            bottom: 0;
+            text-align: center;
+        }
+    }
+    @include e(title) {
+        font-size: 26px;
+        line-height: 26px;
+        font-weight: 500;
+        color: #4a4a4a;
+        padding-bottom: 33px;
+    }
+    @include e(close) {
+        position: absolute;
+        top: 13px;
+        right: 15px;
+        font-size: 20px;
+        height: 20px;
+        line-height: 20px;
+        cursor: pointer;
+        color: #3e3e3e;
+    }
+    @include e(docs) {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 84%;
+        text-align: center;
+        color: #b5b5b5;
+        font-size: 12px;
+        margin: 0 8%;
+
+        p {
+            padding-bottom: 2px;
+
+            a {
+                color: #10bcef;
+            }
+        }
+    }
+    @include e(tip) {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 80px;
+        margin-top: 30px;
+    }
+    @include e(remenber) {
+        margin-top: -10px;
+        padding-left: 10px;
+        color: #666;
+
+        @include m(btn) {
+            cursor: pointer;
+        }
+    }
+    @include e(code_btn) {
+        position: absolute;
+        top: 12px;
+        height: 22px;
+        line-height: 22px;
+        width: 140px;
+        text-align: center;
+        right: 0px;
+        color: #4a4a4a;
+        border-left: 1px solid #ccc;
+        cursor: pointer;
+
+        &.notAllowed {
+            color: #ccc;
+            cursor: not-allowed;
+        }
+    }
+    @include e(code) {
+        height: 100%;
+        position: relative;
+
+        @include m(tip) {
+            color: #b5b5b5;
+            font-size: 12px;
+            text-align: center;
+        }
+        @include m(jump) {
+            text-align: center;
+            padding-top: 20px;
+
+            a {
+                color: #10bcef;
+                cursor: pointer;
+            }
+        }
+    }
+    @include e(pass) {
+        height: 100%;
+        position: relative;
+
+        @include m(tip) {
+            font-size: 12px;
+            text-align: right;
+            margin-top: -10px;
+
+            span {
+                color: #10bcef;
+                cursor: pointer;
+            }
+        }
+        @include m(tip2) {
+            color: #b5b5b5;
+            font-size: 12px;
+            text-align: center;
+            padding-bottom: 20px;
+        }
+    }
+}

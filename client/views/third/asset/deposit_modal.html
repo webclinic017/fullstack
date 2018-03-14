@@ -1,0 +1,35 @@
+<div class="sys_modal_v2 slim_case">
+        <button class="close" ng-click="closeModal()">&times;</button>
+    
+        <h5 class="sys_modal_v2__title">
+            {{msgInfo.msgTitle}}
+        </h5>
+    
+        <div class="sys_modal_v2__content" ng-if="type === 'depositFinish'">
+            <p class="sys_modal_v2__info">
+                支付完成前，请不要关闭支付验证窗口
+            </p>
+            <p class="sys_modal_v2__tip">
+                支付完成后，请根据您支付的情况点击下面按钮
+            </p>
+    
+            <p class="btn_wrapper mg-bt-15">
+                <button class="btn btn-info btn-sm" style="border-radius: 100px;" ng-click="depositSucc()">
+                    支付成功
+                </button>
+            </p>
+        </div>
+    
+        <div class="sys_modal_v2__content" ng-if="type === 'confirmDeposit'">
+            <p class="sys_modal_v2__info mg-bt-15">
+                {{msgInfo.msgTip}}
+            </p>
+    
+            <p class="btn_wrapper mg-bt-15">
+                <button class="btn btn-primary-gradient btn-sm" ng-click="goOnDeposit()">
+                    {{msgInfo.msgBtn}}
+                </button>
+            </p>
+        </div>
+    </div>
+    

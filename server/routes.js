@@ -102,6 +102,25 @@ module.exports = function (app) {
             }
         }, req));
     });
+    // 三方相关页面
+    // 第三方认证流程
+    app.route('/m/third/register').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('m_vue/m_third_verify', extendPublic({}, req));
+    });
+    app.route('/m/third/password').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('m_vue/m_third_password', extendPublic({}, req));
+    });
+    // 三方
+    app.route('/third/:subpage(login|asset)').get(function(req, res){
+        setEnvCf(req, res);
+        res.render('third/index', extendPublic({
+            pageInfo: {
+                id: req.params.subpage || ""
+            }
+        }, req));
+    })
 
     app.route('/').get(function (req, res) {
         setEnvCf(req, res);
@@ -343,16 +362,6 @@ module.exports = function (app) {
     app.route('/m/deposit/success').get(function (req, res) {
         setEnvCf(req, res);
         res.render('m_vue/m_deposit_succ', extendPublic({}, req));
-    });
-
-    // 第三方认证流程
-    app.route('/m/third/register').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('m_vue/m_third_verify', extendPublic({}, req));
-    });
-    app.route('/m/third/password').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('m_vue/m_third_password', extendPublic({}, req));
     });
 
     // H5 空白页

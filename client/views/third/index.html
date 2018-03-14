@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include /common/meta/web.html %>
+    <title><%=lang.text("title")%> 直通全球资本市场</title>
+    <meta name="description" content="<%=lang.text("companyZhName")%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <% include /common/vendor/web.css.html %>
+
+    <!-- build:css(.tmp) /styles/third.css -->
+    <link rel="stylesheet" href="/styles/third.css">
+    <!-- endbuild -->
+</head>
+<body ng-app="fullstackApp" ng-cloak>
+<div ng-controller="ThirdMainController">
+    <div class="body">
+        <%- include('./' + pageInfo.id + '.html') %>
+    </div>
+    <% include /common/vendor/web.js.html %>
+    <!-- build:js(client) /scripts/third.js -->
+    <script src="/scripts/common/config.service.js"></script>
+    <script src="/scripts/common/account.service.js"></script>
+    <script src="/scripts/common/asset.service.js"></script>
+    <script src="/scripts/common/authorization.service.js"></script>
+    <script src="/scripts/common/validator.service.js"></script>
+    <script src="/scripts/common/lang.service.js"></script>
+    <script src="/scripts/common/lang_data.service.js"></script>
+    <script src="/scripts/common/$layer.service.js"></script>
+    <script src="/scripts/common/preview_image.service.js"></script>
+    <script src="/scripts/common/window_height.directive.js"></script>
+    <script src="/scripts/common/pagination.directive.js"></script>
+    <script src="/scripts/common/utils.service.js"></script>
+    <script src="/scripts/common/loading_img.directive.js"></script>
+
+    <script src="/scripts/common/bind_html.filter.js"></script>
+    <script src="/scripts/common/date_formatter.filter.js"></script>
+
+    <script src="/scripts/third/main.controller.js"></script>
+    <script src="/scripts/third/login.controller.js"></script>
+    <script src="/scripts/third/asset.deposit.controller.js"></script>
+    <script src="/scripts/third/asset.withdraw.controller.js"></script>
+    <script src="/scripts/third/asset.record.controller.js"></script>
+    <script src="/scripts/third/asset.card_modal.controller.js"></script>
+    <!-- endbuild -->
+</div>
+</body>
+</html>
