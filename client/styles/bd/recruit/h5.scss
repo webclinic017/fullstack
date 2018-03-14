@@ -1,0 +1,188 @@
+.m_recruit {
+	background: url("/images/bd_recruit/h5_bg.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    position: relative;
+    height: px2rem(3500);
+
+    .m_recruit_logo {
+    	text-align: center;
+    	padding: px2rem(45) 0 px2rem(8);
+
+    	img {
+    		width: 32%;
+    		vertical-align: top;
+    	}
+    }
+    .m_recruit_title {
+    	text-align: center;
+
+    	img {
+    		width: 74%;
+    		vertical-align: top;
+    	}
+    }
+
+    .m_recruit_btn_box1 {
+    	text-align: center;
+    	margin-top: px2rem(170);
+    }
+    .m_recruit_btn_box2 {
+    	text-align: center;
+    	margin-top: px2rem(60);
+    	
+    	.m_recruit_btn {
+    		padding: px2rem(32) px2rem(60) px2rem(70);
+    	}
+    }
+    .m_recruit_btn_box3 {
+    	text-align: center;
+    	margin-top: px2rem(30);
+    	
+    	.m_recruit_btn {
+    		padding: px2rem(32) px2rem(60) px2rem(70);
+    	}
+    }
+    .m_recruit_btn_box4 {
+    	text-align: center;
+    	margin-top: px2rem(60);
+    }
+    .m_recruit_btn {
+    	background: url("/images/bd_recruit/comm_btn.png") no-repeat;
+	    background-position: center top;
+	    background-size: 100% 100%;
+	    position: relative;
+	    padding: px2rem(28) px2rem(40) px2rem(66);
+	    font-size: px2rem(36);
+	    font-weight: 500;
+	    display: inline-block;
+    }
+    .m_recruit_icon_box {
+    	float: left;
+    	width: 50%;
+    	text-align: center;
+    	color: #fff;
+    	padding-top: px2rem(30);
+
+    	.icon {
+    		img {
+    			width: 50%;
+    			vertical-align: top;
+    		}
+    	}
+    	.icon_tit {
+    		font-size: px2rem(22);
+    		padding-top: px2rem(12);
+    		padding-left: px2rem(16);
+    	}
+    	.icon_sub_tit {
+    		font-size: px2rem(28);
+    		font-weight: 500;
+    		padding-left: px2rem(16);
+    	}
+    }
+    .m_recruit_reward_box {
+    	background: rgba(255,255,255,0.1);
+    	margin: px2rem(16) px2rem(32) 0;
+    	padding: px2rem(32);
+
+    	.m_recruit_reward {
+		    position: relative;
+		    width: 100%;
+		    font-size: px2rem(24);
+		    padding: px2rem(36) 0 px2rem(28);
+		    padding-left: px2rem(90);
+
+		    &.reward1 {
+		    	background: url("/images/bd_recruit/comm_box1.png") no-repeat;
+			    background-position: center top;
+			    background-size: 100% 100%;
+		    }
+		    &.reward2 {
+		    	background: url("/images/bd_recruit/comm_box2.png") no-repeat;
+			    background-position: center top;
+			    background-size: 100% 100%;
+		    }
+		    &.reward3 {
+		    	background: url("/images/bd_recruit/comm_box3.png") no-repeat;
+			    background-position: center top;
+			    background-size: 100% 100%;
+		    }
+		    &.reward4 {
+		    	background: url("/images/bd_recruit/comm_box4.png") no-repeat;
+			    background-position: center top;
+			    background-size: 100% 100%;
+		    }
+		    &.reward5 {
+		    	background: url("/images/bd_recruit/comm_box5.png") no-repeat;
+			    background-position: center top;
+			    background-size: 100% 100%;
+			    padding-right: px2rem(20);
+
+			    span {
+			    	display: block;
+			    	color: #0562d6;
+			    }
+		    }
+    	}
+    }
+    .m_recruit_task_box {
+    	background: rgba(255,255,255,0.1);
+    	margin: 0 px2rem(32);
+    	padding: px2rem(32);
+
+    	.m_recruit_task {
+    		padding: px2rem(16) 0;
+    		color: #fff;
+
+    		.shape {
+    			float: left;
+    			width: 5%;
+    			padding-top: px2rem(6);
+
+    			img {
+    				width: 80%;
+    				vertical-align: top;
+    			}
+    		}
+    		.tip {
+    			float: left;
+    			width: 95%;
+    			padding-left: px2rem(16);
+    			font-size: px2rem(24);
+    		}
+    	}
+    }
+    .m_recruit_condition_box {
+    	margin: px2rem(16) px2rem(48) 0;
+
+    	.m_recruit_condition {
+    		color: #fff;
+    		font-size: px2rem(24);
+    		padding: px2rem(7) 0;
+
+    		span {
+    			color: #ffdf07;
+    		}
+    	}
+    }
+	.m_recruit_footer {
+		padding: px2rem(36) px2rem(32);
+		font-size: px2rem(18);
+		color: rgba(255,255,255,0.5);
+	}
+}
+.m_recruit_download {
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: px2rem(20);
+    background: rgba(20,21,59,0.85);
+
+    .btn {
+    	width: 94%;
+    	font-weight: 500;
+    }
+}

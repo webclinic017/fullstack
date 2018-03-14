@@ -1,0 +1,183 @@
+.bd_recruit_layout {
+	background: url("/images/bd_recruit/web_bg.png") no-repeat;
+    background-position: center top;
+    background-size: auto 100%;
+    height: 4800px;
+    margin-top: 69px;
+
+    .bd_recruit_logo {
+    	width: 330px;
+    	padding-top: 70px;
+    	margin: 0 auto;
+
+    	img {
+    		width: 100%;
+    	}
+    }
+    .bd_recruit_title {
+    	width: 90%;
+    	margin: 30px auto 0px;
+
+    	img {
+    		width: 100%;
+    	}
+    }
+    .bd_recruit_btn_box1 {
+    	margin-top: 286px;
+    	text-align: center;
+    }
+    .bd_recruit_btn_box2 {
+    	margin-top: 150px;
+    	text-align: center;
+    }
+    .bd_recruit_btn_box3 {
+    	text-align: center;
+    	margin-top: 200px;
+    }
+    .bd_recruit_btn_box4 {
+    	text-align: center;
+    	margin-top: 230px;
+    }
+    .bd_recruit_btn {
+    	background: url("/images/bd_recruit/comm_btn.png") no-repeat;
+	    background-position: center top;
+	    background-size: 100% 100%;
+	    position: relative;
+	    padding: 22px 44px 58px;
+	    font-size: 42px;
+	    font-weight: 500;
+	    display: inline-block;
+    }
+    .bd_recruit_icon_box {
+    	margin: 50px 100px 0px;
+    }
+    .bd_recruit_icon {
+    	float: left;
+    	width: 50%;
+    	text-align: center;
+    	color: #fff;
+    	padding-top: 30px;
+
+    	.icon {
+    		img {
+    			width: 60%;
+    			vertical-align: top;
+    		}
+    	}
+    	.icon_tit {
+    		font-size: 22px;
+    		padding-top: 12px;
+    		padding-left: 40px;
+    		color: rgba(255,255,255,0.8);
+    	}
+    	.icon_sub_tit {
+    		font-size: 28px;
+    		font-weight: 500;
+    		padding-left: 40px;
+    	}
+    }
+    .bd_recruit_reward_box {
+    	background: rgba(255,255,255,0.1);
+    	padding: 50px 32px;
+    	margin: 35px 50px 0px;
+
+    	.bd_recruit_reward {
+		    position: relative;
+		    width: 100%;
+		    font-size: 24px;
+		    padding: 44px 0 38px;
+		    margin: 10px 0px;
+		    padding-left: 135px;
+
+		    &.reward1 {
+		    	background: url("/images/bd_recruit/comm_box1.png") no-repeat;
+			    background-position: center top;
+			    background-size: 100% 100%;
+		    }
+		    &.reward2 {
+		    	background: url("/images/bd_recruit/comm_box2.png") no-repeat;
+			    background-position: center top;
+			    background-size: 100% 100%;
+		    }
+		    &.reward3 {
+		    	background: url("/images/bd_recruit/comm_box3.png") no-repeat;
+			    background-position: center top;
+			    background-size: 100% 100%;
+		    }
+		    &.reward4 {
+		    	background: url("/images/bd_recruit/comm_box4.png") no-repeat;
+			    background-position: center top;
+			    background-size: 100% 100%;
+		    }
+		    &.reward5 {
+		    	background: url("/images/bd_recruit/comm_box5.png") no-repeat;
+			    background-position: center top;
+			    background-size: 100% 100%;
+			    padding-right: 35px;
+
+			    span {
+			    	display: block;
+			    	color: #0562d6;
+			    }
+		    }
+    	}
+    }
+    .bd_recruit_task_box {
+    	background: rgba(255,255,255,0.1);
+    	margin: 35px 50px 0px;
+    	padding: 50px 32px;
+
+    	.bd_recruit_task {
+    		padding: 20px 0;
+    		color: rgba(255,255,255,0.7);
+
+    		.shape {
+    			float: left;
+    			width: 5%;
+    			padding-top: 8px;
+
+    			img {
+    				vertical-align: top;
+    			}
+    		}
+    		.tip {
+    			float: left;
+    			width: 95%;
+    			font-size: 24px;
+    		}
+    	}
+    }
+    .bd_recruit_condition_box {
+    	margin: 100px 100px 0px;
+
+    	.bd_recruit_condition {
+    		color: #fff;
+    		font-size: 24px;
+    		padding: 10px;
+
+    		span {
+    			color: #ffdf07;
+    		}
+    	}
+    }
+    .bd_recruit_download {
+    	text-align: center;
+    	margin-top: 120px;
+
+    	a {
+    		cursor: pointer;
+
+    		img {
+    			width: 50%;
+    		}
+    	}
+    }
+}
+.bd_recruit_footer {
+	background: #ffdf07;
+	font-size: 16px;
+	
+	.boxing {
+		padding: 50px 100px;
+	}
+}
