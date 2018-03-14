@@ -67,7 +67,11 @@
             if (data.code >= 100100 && data.code <= 100199) {
                 if (lang.isCompany() === 'pandafx') {
                     $window.location.href='/panda/login';
-                } else {
+                }
+                else if(location.pathname.indexOf('third') != -1){
+                    $window.location.href='/third/login';
+                }
+                else {
                     $window.location.href='/space/#/account/login';
                     $rootScope.personalCookiesInfo.userCode = undefined;
                 }

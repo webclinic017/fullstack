@@ -18,9 +18,13 @@
         };
 
         main.thirdLogout = thirdLogout;
-
         // 退出
         var loginPath = '/third/login'
+
+        // 未登录跳到登录页面
+        if (!main.thirdInfo.userCode && location.pathname != loginPath) {
+            $window.location.href = loginPath
+        }
         function thirdLogout() {
             account.logout().then(function (data) {
                 if (!data) return;
@@ -31,11 +35,10 @@
             });
         }
 
-        // 未登录跳到登录页面
-        if (!main.thirdInfo.userCode && location.pathname != loginPath) {
-            $window.location.href = loginPath
-        }
-
+        main.verifyInfo = {
+            status: false,
+            msg: '网络错误，请联系客服'
+        };
         account.checkLogined().then(function (logined) {
             if (logined) {
                 // 获取资产信息、个人信息
@@ -55,6 +58,28 @@
                         });
                     }
                 });
+
+                //获取认证状态
+                account.getAuthStatus().then(function (data) {
+                    if (data.is_succ) {
+                        if (data.data.status == 6) {
+                            main.verifyInfo = {
+                                status: true,
+                                msg: ''
+                            };
+                        } else {
+                            main.verifyInfo = {
+                                status: false,
+                                msg: '您还未认证通过，请登录App提交认证或等待认证通过后即可进行资金操作',
+                            };
+                        }
+                    } else {
+                        main.verifyInfo = {
+                            status: false,
+                            msg: data.message,
+                        };
+                    }
+                });
             }
         });
 
@@ -63,34 +88,7 @@
         main.switchPage = function (page) {
             main.pageCtrl = page
         }
-        main.verifyInfo = {
-            status: false,
-            msg: '网络错误，请联系客服'
-        };
         
-        //获取认证状态
-        account.getAuthStatus().then(function (data) {
-            if (data.is_succ) {
-                if (data.data.status == 6) {
-                    main.verifyInfo = {
-                        status: true,
-                        msg: ''
-                    };
-                } else {
-                    main.verifyInfo = {
-                        status: false,
-                        msg: '您还未认证通过，请登录App提交认证或等待认证通过后即可进行资金操作',
-                    };
-                }
-            } else {
-                main.verifyInfo = {
-                    status: false,
-                    msg: data.message,
-                };
-            }
-        });
-
-
         $scope.$on('main.checkAuthenFlow', function (e, resolve) {
             if (resolve && resolve.ctrlName) {
                 if (checkAuthenFlow()) {
@@ -118,12 +116,12 @@
             }
         }
 
-        function openMsgMdl (params) {
+        function openMsgMdl(params) {
             $modal.open({
                 templateUrl: '/views/template/$layer_modal.html',
                 size: params.size || 'sm',
                 backdrop: true,
-                controller: ['$scope', '$modalInstance',function ($scope, $modalInstance) {
+                controller: ['$scope', '$modalInstance', function ($scope, $modalInstance) {
                     // 绑定参数
                     angular.extend($scope, params)
                     //$scope.loading = 0;   0 未loading；1 正在loading；2 loading完毕
