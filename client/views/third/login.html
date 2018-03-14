@@ -1,16 +1,16 @@
-<div ng-controller="ThirdLoginController" tw-window-height data-min-height="900">
+<div ng-controller="ThirdLoginController" tw-window-height data-min-height="900" data-min-width="1300">
         <div class="account_login-bg panda" style="height: 100%;">
             <div class="account_login_box">
                 <div class="account_login login_pass active">
                     <div class="account_login__pass">
                         <div>
-                            <div class="account_login__title">MT4登录</div>
+                            <div class="account_login__title">登录</div>
                             <form name="loginForm3" class="account_login__form" novalidate>
                                 <div class="account-form-control-wrapper">
                                     <input class="account-form-control"
                                            name="mt4"
                                            type="text"
-                                           placeholder="请输入MT4"
+                                           placeholder="MT4帐号"
                                            required
                                            on-enter="login('loginForm3')"
                                            ng-model="account.mt4">
@@ -26,7 +26,7 @@
                                            autocomplete="off"
                                            name="password"
                                            type="password"
-                                           placeholder="请输入您的密码"
+                                           placeholder="密码"
                                            on-enter="login('loginForm3')"
                                            required
                                            ng-model="account.password">
@@ -35,7 +35,7 @@
                                            autocomplete="off"
                                            name="password"
                                            type="text"
-                                           placeholder="请输入您的密码"
+                                           placeholder="密码"
                                            on-enter="login('loginForm3')"
                                            required
                                            ng-model="account.password">
@@ -55,12 +55,12 @@
                                     </div>
                                 </div>
                             </form>
-                            <div class="account_login__btn_wrapper">
-                                <span class="account_login__btn" ng-click="login('loginForm3')">登录</span>
+                            <div class="account_login__btn_wrapper text-left">
+                                <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-click="login('loginForm3')">登录</span>
                             </div>
-                            <div class="account_login__docs">
-                                <p>*已使用SSL加密技术保护您的网络安全</p>
-                            </div>
+                            <!-- <div class="account_login__docs text-left">
+                                *已使用SSL加密技术保护您的网络安全
+                            </div> -->
                         </div>
                     </div>
                 </div>

@@ -1,7 +1,9 @@
 @include b(space_nav){
-    padding-left: 64px;
     line-height: 55px;
+    text-align: center;
     @include e(box) {
+        display: inline-block;
+        margin: 0 auto;
         @extend .clearfix;
         display: inline-block;
         @include m(item){

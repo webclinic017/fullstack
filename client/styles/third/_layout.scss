@@ -3,13 +3,12 @@
     height: 100%;
     min-width: 1320px;
     min-height: 500px;
-    border: 1px solid $gray;
     @extend .clearfix;
     @include e(side) {
         width: 320px;
         float: left;
         z-index: 2;
-        background-color: #fff;
+        background-color: #161a24;
         border-bottom: 1px solid $gray;
         @include m(view) {
             height: 100%;
@@ -18,8 +17,50 @@
     @include e(con) {
         float: left;
         width: 100%;
-        margin-left: -320px;
-        padding-left: 320px;
+        // margin-left: -320px;
+        // padding-left: 320px;
+
+        @include m(info) {
+            background-color: #161a24;
+            color: #fff;
+            height: 370px;
+            width: 100%;
+            .info_box {
+                width: 600px;
+                margin: 0 auto;
+                height: 100%;
+                padding-top: 100px;
+                text-align: center;
+                .info_box__avatar {
+                    img{
+                        border-radius: 45px;
+                        width: 90px;
+                        height: 90px;
+                    }
+                    p{
+                        margin-top: 10px;
+                        font-size: 24px;
+                        font-weight: 500;
+                    }
+                }
+                .info_box__detail {
+                    margin-top: 40px;
+                    @extend .clearfix;
+                    li {
+                        width: 33%;
+                        float: left;
+                        .item__number {
+                            font-size: 24px;
+                            font-weight: 500;
+                        }
+                        .item__text {
+                            font-size: 14px;
+                            color: $gray-dark;
+                        }
+                    }
+                }
+            }
+        }
         @include m(nav) {
             background-color: #fff;
             border-bottom: 2px solid #ebebeb;

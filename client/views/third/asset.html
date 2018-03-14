@@ -1,5 +1,5 @@
 <div class="tw-space-layout">
-    <div class="tw-space-layout__side" tw-window-height data-min-height="500">
+    <!-- <div class="tw-space-layout__side" tw-window-height data-min-height="500">
         <div class="tw-space-layout__side-view">
             <div class="space_sidebar">
                 <div class="space_sidebar__info">
@@ -14,7 +14,7 @@
                 <ul class="space_sidebar__detail clearfix">
                     <li class="detail_item">
                         <div class="item__number">
-                            {{ main.thirdInfo.userName }}
+                            
                         </div>
                         <div class="item__text">
                             <span>用户昵称</span>
@@ -50,8 +50,42 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="tw-space-layout__con">
+        <div class="tw-space-layout__con-info">
+            <div class="info_box">
+                <div class="info_box__avatar">
+                    <img ng-src="{{ main.thirdInfo.userAvatar }}">
+                    <p>{{ main.thirdInfo.userName }}</p>
+                </div>
+                <ul class="info_box__detail">
+                    <li>
+                        <div class="item__number">
+                            {{ main.mt4_id }}
+                        </div>
+                        <div class="item__text">
+                            <span>MT4真实账户</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item__number">
+                            {{ main.balance }}
+                        </div>
+                        <div class="item__text">
+                            <span>账户余额</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item__number">
+                            {{ main.wallet_balance }}
+                        </div>
+                        <div class="item__text">
+                            <span>零钱包账户</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
         <div class="tw-space-layout__con-nav">
             <div class="nav-view">
                 <div class="space_nav">
