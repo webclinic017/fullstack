@@ -154,12 +154,16 @@
     	}
     }
     .m_recruit_condition_box {
-    	margin: px2rem(16) px2rem(48) 0;
+    	margin: 0 px2rem(48);
 
     	.m_recruit_condition {
     		color: #fff;
     		font-size: px2rem(24);
     		padding: px2rem(7) 0;
+
+            &.qq {
+                color: #00a0e9;
+            }
 
     		span {
     			color: #ffdf07;
@@ -167,7 +171,7 @@
     	}
     }
 	.m_recruit_footer {
-		padding: px2rem(36) px2rem(32);
+		padding: px2rem(32);
 		font-size: px2rem(18);
 		color: rgba(255,255,255,0.5);
 	}
