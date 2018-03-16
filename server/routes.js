@@ -115,11 +115,15 @@ module.exports = function (app) {
     // 三方
     app.route('/third/:subpage(login|asset)').get(function(req, res){
         setEnvCf(req, res);
-        res.render('third/index', extendPublic({
-            pageInfo: {
-                id: req.params.subpage || ""
-            }
-        }, req));
+        if(req.hostname.indexOf('www.tigerwit.com') != -1){
+            res.render('404.html', extendPublic({}, req));
+        } else {
+            res.render('third/index', extendPublic({
+                pageInfo: {
+                    id: req.params.subpage || ""
+                }
+            }, req));
+        }
     })
 
     app.route('/').get(function (req, res) {

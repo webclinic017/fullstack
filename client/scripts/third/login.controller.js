@@ -13,7 +13,7 @@
             mt4: '',
             password: '',
             remember: true,
-            showPassword: true,
+            showPassword: false,
             loading: true
         };
 
