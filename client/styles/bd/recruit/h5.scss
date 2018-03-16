@@ -190,3 +190,53 @@
     	font-weight: 500;
     }
 }
+
+.m_recruit_layout {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 20px 16px 0px;
+}
+.m_recruit_info_title {
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+.m_recruit_info_form {
+    input {
+        width: 100%;
+        padding: 6px 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+    select {
+        width: 100%;
+        padding: 4px 10px;
+    }
+    textarea {
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 4px 10px;
+
+        &.textarea_1 {
+            height: 50px;
+        }
+        &.textarea_2 {
+            height: 80px;
+        }
+    }
+}
+.m_recruit_info_btn {
+    width: 60%;
+    margin: 0 auto;
+}
+.m_recruit_info_tip {
+    text-align: center;
+    color: #666;
+}
+.m_recruit_complete {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+}

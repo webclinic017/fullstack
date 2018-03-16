@@ -823,6 +823,19 @@ module.exports = function (app) {
             res.render('404.html', extendPublic({}, req));
         }
     });
+    app.route('/bd/recruit_master/:subpage(info|complete)').get(function (req, res) {
+        var subpage = req.params.subpage || 'info';
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit') {
+            if (isMobile(req)) {
+                res.render('bd/recruit/h5_'+subpage+'.html', extendPublic({}, req))
+            } else {
+                res.render('bd/recruit/h5_'+subpage+'.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
 
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
     /*

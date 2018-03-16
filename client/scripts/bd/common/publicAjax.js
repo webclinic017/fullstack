@@ -59,6 +59,8 @@
         checkReward: origin + '/reward/check', //post
         joinReward: origin + '/reward/join', //post
         getRewardLst: origin + '/reward/list', //get
+        // 申请高手
+        recruitMaster: origin + '/master/auth_apply', //post
     };
 
     w.publicRequest = publicRequest;

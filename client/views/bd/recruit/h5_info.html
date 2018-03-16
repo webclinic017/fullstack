@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="<%= lang.text('companyZhName')%> <%= lang.text('companyEnName')%> 跟单交易 外汇 CFD 指数 股指 互联网金融">
+    <meta name="description" content="<%= lang.text('companyZhName')%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyZhName')%>">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>
+        <%= lang.text('companyZhName')%>
+    </title>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<!--引入原生API + 根据屏幕宽度改变根节点字体大小.js-->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<body>
+<div class="m_recruit_layout">
+    <div class="m_recruit_info_title">
+        《认证高手申请表》
+    </div>
+    <div class="m_recruit_info_form">
+        <div class="clearfix mg-bt-10">
+            <div style="width: 49%;margin-right: 2%; float: left;"><input type="text" name="real_name" data-sign="true" placeholder="*真实姓名"></div>
+            <div style="width: 49%;float: left;"><input type="text" name="sex" data-sign="true" placeholder="*性别"></div>
+        </div>
+        <div class="clearfix mg-bt-10">
+            <div style="width: 40%;margin-right: 2%; float: left;"><input type="text" name="nick_name" data-sign="true" placeholder="*平台昵称"></div>
+            <div style="width: 30%;margin-right: 2%;float: left;"><input type="text" name="mt4_id" data-sign="true" placeholder="*MT4账号"></div>
+            <div style="width: 26%;float: left;"><input type="text" name="age" data-sign="true" placeholder="*汇龄"></div>
+        </div>
+        <div class="clearfix mg-bt-10">
+            <div style="width: 100%; float: left;"><input type="text" name="id_no" data-sign="true" placeholder="*身份证号码"></div>
+        </div>
+        <div class="clearfix mg-bt-10">
+            <div style="width: 28%;margin-right: 2%; float: left;"><input type="text" name="phone" data-sign="true" placeholder="*手机号码"></div>
+            <div style="width: 28%;margin-right: 2%;float: left;"><input type="text" name="wechat" data-sign="true" placeholder="*QQ/微信号"></div>
+            <div style="width: 40%;float: left;"><input type="text" name="email" data-sign="true" placeholder="*邮箱"></div>
+        </div>
+        <div class="clearfix mg-bt-10">
+            <div style="width: 100%; float: left;"><input type="text" name="address" data-sign="true" placeholder="通讯地址"></div>
+        </div>
+        <div class="clearfix mg-bt-10">
+            <div style="width: 32%;margin-right: 2%; float: left;">
+                <select name="career_type" data-sign="true">
+                    <option value="">*职业类型</option>
+                    <option value="职业汇民">职业汇民</option>
+                    <option value="机构从业人员">机构从业人员</option>
+                    <option value="业务交易者">业务交易者</option>
+                </select>
+            </div>
+            <div style="width: 32%;margin-right: 2%;float: left;">
+                <select name="direction" data-sign="true">
+                    <option value="">*投资方向</option>
+                    <option value="商品能源">商品能源</option>
+                    <option value="直盘">直盘</option>
+                    <option value="交叉盘">交叉盘</option>
+                </select>
+            </div>
+            <div style="width: 32%;float: left;">
+                <select name="good_at" data-sign="true">
+                    <option value="">*擅长领域</option>
+                    <option value="技术操作">技术操作</option>
+                    <option value="波段操作">波段操作</option>
+                    <option value="超短投机">超短投机</option>
+                    <option value="长线趋势">长线趋势</option>
+                    <option value="宏观基本面分析操作">宏观基本面分析操作</option>
+                </select>
+            </div>
+        </div>
+        <div class="clearfix mg-bt-10">
+            <div style="width: 100%; float: left;">
+                <textarea class="textarea_1" name="is_master" data-sign="true" placeholder="*是否在其他平台做高手（附带相关链接）"></textarea>
+            </div>
+        </div>
+        <div class="clearfix mg-bt-10">
+            <div style="width: 100%; float: left;">
+                <textarea class="textarea_2" name="introduce" data-sign="true" placeholder="*资历介绍（例如：是否经过系统学习/是否有独立且突出优势战法/过往操盘交易战绩截图/其他平台个人主页链接等）"></textarea>
+            </div>
+        </div>
+
+        <div class="m_recruit_info_btn">
+            <button class="btn btn-primary-gradient">提交</button>
+        </div>
+        <div class="m_recruit_info_tip">
+             任何问题请联系QQ：3250619100
+        </div>
+    </div>
+</div>
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_recruit.js -->
+<script src="/scripts/bd/common/wx_share_config.js"></script>
+<script src="/scripts/bd/recruit/m_recruit.js"></script>
+<!-- endbuild -->
+
+<!-- 推广脚本footer -->
+<%- include('/common/statistic/_all.html') %>
+</html>
