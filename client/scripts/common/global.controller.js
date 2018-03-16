@@ -42,6 +42,8 @@
 
         /*******************global 事件系统************************/
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
+            $scope.toState = toState
+            console.log('toState', toState)
             account.checkLogined().then(function (logined) {
                 $scope.userstatus.logined = logined;
                 if (logined) {
@@ -124,12 +126,23 @@
                 console.warn('call global.checkAuthenFlow error, due to no ctrlName')
             }
         })
+        $scope.$on('global.getUnReadMsgLength', function(e, resolve){
+            if (resolve && resolve.ctrlName) {
+                console.log('global.getUnReadMsgLength called by ' + resolve.ctrlName)
+                getUnreadLength(function(){
+                    resolve.callback && resolve.callback()
+                    $scope.$broadcast('global.getUnReadMsgLength.done', $scope.personal.unreadMsg)
+                })
+            } else {
+                console.warn('call global.getUnReadMsgLength error, due to no ctrlName')
+            }
+        });
         /*******************global 事件系统************************/
 
 
         /*******************global functions*********************/
         // 获取新消息
-        function getUnreadLength() {
+        function getUnreadLength(callback) {
             if ($scope.userstatus.logined) {
                 account.getUnreadLength().then(function (data) {
                     if (!data) return;
@@ -137,11 +150,12 @@
                         $scope.unreadLength = ~~data.data.system + ~~data.data.trade;
                         angular.extend($scope.personal, {
                             unreadMsg: {
-                                total: ~~data.data.system + ~~data.data.trade,
+                                total: $scope.unreadLength,
                                 trade: ~~data.data.trade,
                                 system: ~~data.data.system
                             }
                         });
+                        callback && callback()
                     }
                 });
             }

@@ -99,10 +99,10 @@
                             templateUrl: '/views/space/sidebar.html',
                             controller: ''
                         },
-                        // 'basic@space': {
-                        //     templateUrl: '/views/space/basic.html',
-                        //     controller: ''
-                        // }
+                        'nav@space': {
+                            templateUrl: '/views/space/nav.html',
+                            controller: ''
+                        }
                     }
                 })
                 // 将space.invest并入，并增加wallet模块合为space.center
@@ -248,11 +248,22 @@
                     }
                 })
                 .state('space.notice', {
-                    authenticated: true,
-                    url: '/space/notice',
                     views: {
                         'content@space': {
                             templateUrl: '/views/notice/index.html',
+                            controller: ''
+                        }
+                    }
+                })
+                .state('space.notice.subpage', {
+                    authenticated: true,
+                    url: '/space/notice/:subpage?currentMsg&hasNew',
+                    views: {
+                        '@space.notice': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'system';
+                                return '/views/notice/' + $stateParams.subpage + '.html';
+                            },
                             controller: 'NoticeIndexController'
                         }
                     }

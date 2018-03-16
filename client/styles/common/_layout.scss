@@ -45,8 +45,43 @@
     }
 }
 
-@include b(layout-3) {
-    @include e(side) {}
-    @include e(content) {}
-    @include e(info) {}
+@include b(tw-space-layout) {
+    width: 100%;
+    height: 100%;
+    margin-top: 69px;
+    min-width: 1320px;
+    min-height: 900px;
+    border: 1px solid $gray;
+    @extend .clearfix;
+    @include e(side) {
+        width: 320px;
+        float: left;
+        z-index: 2;
+        background-color: #fff;
+        border-bottom: 1px solid $gray;
+        @include m(view) {
+            height: 100%;
+        }
+    }
+    @include e(con) {
+        float: left;
+        width: 100%;
+        margin-left: -320px;
+        padding-left: 320px;
+        @include m(nav) {
+            background-color: #fff;
+            border-bottom: 2px solid #ebebeb;
+            height: 55px;
+        }
+        @include m(content) {
+            margin-top: 50px;
+            .content-view {
+                width: 940px;
+                margin: 0 auto;
+                margin-top: 50px;
+                margin-bottom: 80px;
+                height: 100%;
+            }
+        }
+    }
 }

@@ -1,36 +1,37 @@
-<div ng-if="personal.basic === 'center.index'">
-    <div class="space_center_total">
-        <div class="space_center_total__num">
-            资产总额: ${{ personal.my_total_balance || '--' }}
+<div class="space_center_summary" ng-if="personal.basic === 'center.index'">
+    <ul class="space_center_summary__list clearfix">
+        <li class="space_center_summary__list-item">
+            <p class="summary_name">资产总额</p>
+            <p class="summary_amount">${{ personal.my_total_balance || '--' }}</p>
+        </li>
+        <li class="space_center_summary__list-item">
+            <p class="summary_name">交易账户</p>
+            <p class="summary_amount">${{ personal.balance || '--' }}</p>
+        </li>
+        <li class="space_center_summary__list-item">
+            <p class="summary_name">零钱包</p>
+            <p class="summary_amount">${{ personal.wallet_balance || '--' }}</p>
+        </li>
+    </ul>
+</div>
+
+<div class="space_center_trading gapped" ng-if="personal.basic === 'center.index' || personal.basic === 'center.invest.subpage'">
+    <div class="row">
+        <div class="col-xs-5">
+            <div class="block_title">交易账户</div>
         </div>
-        <div class="space_center_total__tip">
-            交易账户+零钱包
+        <div class="col-xs-7">
+            <div class="block_btn_group text-right">
+                <a ui-sref="space.asset.subpage({ subpage: 'deposit', type: 'invest'})" class="tw-btn tw-btn-capsule-gradient tw-btn-md">充值</a>
+                <a ui-sref="space.asset.subpage({ subpage: 'withdraw', type: 'invest'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md">提现</a>
+                <a ng-if="personal.basic === 'center.index'" ui-sref="space.center.invest.subpage({ subpage: 'current'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md">查看明细</a>
+                <a ng-if="personal.basic === 'center.invest.subpage'" ui-sref="space.center.index" class="tw-btn tw-btn-capsule-bordered tw-btn-md">返回</a>
+            </div>
         </div>
     </div>
-</div>
-<div ng-if="personal.basic === 'center.index' || personal.basic === 'center.invest.subpage'">
-    <div class="space_center_invest">
-        <div class="clearfix">
-            <div ng-if="personal.dredged_type == 'live' || personal.dredged_type == 'unknow'" class="space_center_invest__num">
-                交易帐户: ${{ personal.balance || '--' }}
-            </div>
-            <div ng-if="personal.dredged_type == 'demo'" class="space_center_invest__num">
-                交易账户（体验金）: ${{ personal.balance || '--' }}
-            </div>
-            <ul class="space_center_invest__btn">
-                <li>
-                    <a ng-if="personal.basic === 'center.index'" ui-sref="space.center.invest.subpage({ subpage: 'current'})" class="btn btn-default btn-sm">查看明细</a>
-                    <a ng-if="personal.basic === 'center.invest.subpage'" ui-sref="space.center.index" class="btn btn-default btn-sm">返回</a>
-                </li>
-                <li>
-                    <a ui-sref="space.asset.subpage({ subpage: 'withdraw', type: 'invest'})" class="btn btn-default btn-sm">提现</a>
-                </li>
-                <li>
-                    <a ui-sref="space.asset.subpage({ subpage: 'deposit', type: 'invest'})" class="btn btn-primary btn-sm">充值</a>
-                </li>
-            </ul>
-        </div>
-        <ul class="space_center_invest__info clearfix">
+
+    <div class="row">
+        <ul class="trading_details clearfix">
             <li>
                 <p class="num">${{ personal.equity || '0.00' }}</p>
                 <p class="tip">资产净值</p>
@@ -67,28 +68,23 @@
         </ul>
     </div>
 </div>
-<div ng-if="personal.basic === 'center.index' || 
-            personal.basic === 'center.wallet.subpage'">
-    <div class="space_center_wallet">
-        <div class="clearfix">
-            <div class="space_center_wallet__num">
-                零钱包: ${{ personal.wallet_balance || '--' }}
+
+<div class="space_block gapped" ng-if="personal.basic === 'center.index' || personal.basic === 'center.wallet.subpage'">
+    <div class="row">
+        <div class="col-xs-5">
+            <div class="block_title">零钱包</div>
+        </div>
+        <div class="col-xs-7">
+            <div class="block_btn_group text-right">
+                <a ui-sref="space.asset.subpage({ subpage: 'deposit', type: 'wallet'})" class="tw-btn tw-btn-capsule-gradient tw-btn-md">划入交易账户</a>
+                <a ui-sref="space.asset.subpage({ subpage: 'withdraw', type: 'wallet'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md">提现</a>
+                <a ng-if="personal.basic === 'center.index'" ui-sref="space.center.wallet.subpage({ subpage: 'summary'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md">查看明细</a>
+                <a ng-if="personal.basic === 'center.wallet.subpage'" ui-sref="space.center.index" class="tw-btn tw-btn-capsule-bordered tw-btn-md">返回</a>
             </div>
-            <ul class="space_center_wallet__btn">
-                <li>
-                    <a ng-if="personal.basic === 'center.index'" ui-sref="space.center.wallet.subpage({ subpage: 'summary'})" class="btn btn-default btn-sm">查看明细</a>
-                    <a ng-if="personal.basic === 'center.wallet.subpage'" ui-sref="space.center.index" class="btn btn-default btn-sm">返回</a>
-                </li>
-                <li>
-                    <a ui-sref="space.asset.subpage({ subpage: 'withdraw', type: 'wallet'})" class="btn btn-default btn-sm">提现</a>
-                </li>
-                <li>
-                    <a ui-sref="space.asset.subpage({ subpage: 'deposit', type: 'wallet'})" class="btn btn-primary btn-sm">划入交易账户</a>
-                </li>
-            </ul>
         </div>
-        <div class="space_center_wallet__tip">
-            高手分成收益与代理商佣金收益会存入零钱包，您可以提现或划入交易账户。
-        </div>
+    </div>
+
+    <div class="row">
+        <p class="block_tips">高手分成收益与代理商佣金收益会存入零钱包，您可以提现或划入交易账户。</p>
     </div>
 </div>
