@@ -1039,19 +1039,7 @@ module.exports = function (app) {
                     currentVersion.version_name = "V1.0.1";
                 }
             }
-
-            // 熊猫外汇 v1.5.3 以下版本有问题不更新 - 2017.12.19
-            // if ((system == 'android') && (appType == 'pandafx')) {
-            //     if (Number(versionNum) < 153) {
-            //         currentVersion = {
-            //             version_name: "",
-            //             description: "",
-            //             updated_description: "",
-            //             url: "",
-            //             force_update: false
-            //         };
-            //     }
-            // }
+            
             data = currentVersion;
         }
         if (action == "get_banner_info") {
