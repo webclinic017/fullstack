@@ -49,11 +49,78 @@
     }
 }
 
-// Button sizes
 @mixin button-size($padding-vertical, $padding-horizontal, $font-size, $height, $border-radius) {
     padding: $padding-vertical $padding-horizontal;
     font-size: $font-size;
     height: $height;
     line-height: $height;
     border-radius: $border-radius;
+}
+
+@mixin tw-button-variant($color, $border:none, $border-hover:none, $border-radius:200px, $background:transparent, $background-hover:transparent) {
+    color: $color;
+    background-color: $background;
+    border: $border;
+    border-radius: $border-radius;
+    
+    &:hover,
+    &:active {
+        background-color: $background-hover;
+        border: $border-hover;
+    }
+    
+    &.active {
+        background-color: $background-hover;
+        border: $border-hover;
+
+        &:hover,
+        &:active {
+            background-color: $background;
+            border: $border;
+        }
+    }
+}
+
+// 水平渐变
+@mixin tw-button-gradient-horizontal($backgroundstart, $backgroundend) {
+    @include gradient-horizontal($backgroundstart, $backgroundend);
+    &:hover,
+    &:active {
+        @include gradient-horizontal(lighten($backgroundstart, 5%), lighten($backgroundend, 5%));
+    }
+    
+    &.active {
+        @include gradient-horizontal(lighten($backgroundstart, 5%), lighten($backgroundend, 5%));
+
+        &:hover,
+        &:active {
+            @include gradient-horizontal(lighten($backgroundstart, 5%), lighten($backgroundend, 5%));
+        }
+    }
+}
+
+// 垂直渐变
+@mixin tw-button-gradient-vertical($backgroundstart, $backgroundend) {
+    @include gradient-vertical($backgroundstart, $backgroundend);
+    &:hover,
+    &:active {
+        @include gradient-vertical(lighten($backgroundstart, 5%), lighten($backgroundend, 5%));
+    }
+    
+    &.active {
+        @include gradient-vertical(lighten($backgroundstart, 5%), lighten($backgroundend, 5%));
+
+        &:hover,
+        &:active {
+            @include gradient-vertical(lighten($backgroundstart, 5%), lighten($backgroundend, 5%));
+        }
+    }
+}
+
+@mixin tw-button-size($width, $height, $font-size, $font-weight: 500){
+    width: $width;
+    height: $height;
+    line-height: $height;
+    font-size: $font-size;
+    font-weight: $font-weight;
 }

@@ -15,12 +15,11 @@
     }
 }
 @include b(redbag_content) {
-    padding-top: 30px;
+    // padding-top: 30px;
 }
 @include b(redbag_nav) {
 
     @include e(wrapper) {
-        background-color: #eee;
     }
 
     @include e(tabs) {
@@ -56,6 +55,7 @@
 }
 @include b(redbag_own) {
     position: relative;
+    padding: 0 30px;
 }
 @include b(redbag_pool) {
     position: relative;

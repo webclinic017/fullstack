@@ -15,9 +15,6 @@
 }
 @include b(space_grade) {
     color: #4a4a4a;
-    margin-bottom: 50px;
-    padding-top: 20px;
-
     @include e(bar) {
         width: 60%;
         margin-left: 50px;
@@ -82,9 +79,6 @@
 
 @include b(space_apply) {
     color: #4a4a4a;
-    margin-bottom: 50px;
-    padding-top: 20px;
-
     @include e(loading) {
         height: 50px;
         margin-top: 50px;

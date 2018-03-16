@@ -48,6 +48,29 @@
     }
 }
 
+// 形状
+.form-control-shape-capsule {
+    border-radius: 100px;
+}
+
+.form-control-shape-square {
+    border-radius: $input-border-radius;
+}
+
+.form-control-size-lg {
+    height: $input-height-lg;
+    padding: 0 $input-padding-horizontal-lg * 2;
+    line-height: $input-height-lg;
+    font-size: $font-size-large;
+}
+
+.form-control-size-md {
+    height: $input-height-base;
+    padding: $padding-base-vertical $padding-base-horizontal;
+    line-height: $line-height-base;
+    font-size: $font-size-base;
+}
+
 .form-control-error {
     border-color: $brand-danger;
     color: $brand-danger;
@@ -72,10 +95,24 @@
 
 .form-control-icon {
     position: absolute;
+    font-size: 16px;
+    color: $gray-base;
+    &.bd-bt{
+        left: 5px;
+    }
+}
+
+.form-control-icon-size-md {
     top: 11px;
     left: 12px;
-    font-size: 16px;
-    color: $gray;
+    font-size: $font-size-large;
+}
+
+.form-control-icon-size-lg {
+    position: absolute;
+    top: 12px;
+    left: $input-padding-horizontal-lg;
+    font-size: $font-size-xl;
     &.bd-bt{
         left: 5px;
     }
