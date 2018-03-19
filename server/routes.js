@@ -113,7 +113,7 @@ module.exports = function (app) {
         res.render('m_vue/m_third_password', extendPublic({}, req));
     });
     // 三方
-    app.route('/third/:subpage(login|asset)').get(function(req, res){
+    app.route('/payment/:subpage(login|asset)').get(function(req, res){
         setEnvCf(req, res);
         if(req.hostname.indexOf('www.tigerwit.com') != -1){
             res.render('404.html', extendPublic({}, req));
