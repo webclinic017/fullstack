@@ -34,6 +34,10 @@
             envConfig.company_name = 'tigerwit';
             envConfig.url_path = 'https://www.tigerwit.com';
             envConfig.isCloned = true;
+        } else if (req.hostname.indexOf('ibonline') != -1) {
+            envConfig.company_name = 'tigerwit';
+            envConfig.url_path = 'https://www.tigerwit.com';
+            envConfig.access_origin2 = req.hostname + '/api';
         } else {
             // envConfig.company_name = 'pandafx';
             envConfig.company_name = process.env.COMPANY_NAME;
