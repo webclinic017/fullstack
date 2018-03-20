@@ -202,6 +202,19 @@
     padding-bottom: 20px;
 }
 .m_recruit_info_form {
+
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+        font-size: 14px;
+    } 
+    input:-moz-placeholder, textarea:-moz-placeholder { 
+        font-size: 14px;
+    } 
+    input::-moz-placeholder, textarea::-moz-placeholder { 
+        font-size: 14px;
+    } 
+    input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+        font-size: 14px;
+    } 
     input {
         width: 100%;
         padding: 6px 10px;

@@ -2,6 +2,11 @@
 
     var content = {};
     var loading = false;
+    var regExp = {
+        id_no: /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/,
+        phone: /^\d{11}$/,
+        email: /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+    };
 
 	$(document).on("tap", ".m_recruit_download a", function () {
         if (isInTiger()) {
@@ -34,6 +39,20 @@
         console.log(content, success);
 
         if (success) {
+            //校验正则
+            if (!regExp.id_no.test(content.id_no)) {
+                alert('身份证号码填写有误');
+                return false;
+            }
+            if (!regExp.phone.test(content.phone)) {
+                alert('手机号码填写有误');
+                return false;
+            }
+            if (!regExp.email.test(content.email)) {
+                alert('邮箱填写有误');
+                return false;
+            }
+
             loading = true;
 
             publicRequest('recruitMaster', 'POST', content).then(function (data) {
