@@ -31,7 +31,7 @@
                     <div class="item__text">复制人数</div>
                 </li>
             </ul>
-            <div class="text-center mg-tp-10">
+            <div class="text-center mg-tp-15">
                 <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="!personal.is_master" class="tw-btn tw-btn-full tw-btn-square-gradient">申请高手</a>
                 <div class="space_sidebar__grade" ng-if="personal.is_master">
                     <div class="space_sidebar__grade-bar">
@@ -71,7 +71,7 @@
                 </a>
             </li>
             <li class="space_sidebar__nav-menu" ui-sref-active="active">
-                <a ui-sref="space.bonus">复制和分成</a>
+                <a ui-sref="space.bonus">复制分成</a>
             </li>
             <li class="space_sidebar__nav-menu" ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
                 <a ui-sref="space.redbag.subpage">

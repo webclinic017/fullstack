@@ -15,7 +15,7 @@
     </ul>
 </div>
 
-<div class="space_center_trading gapped" ng-if="personal.basic === 'center.index' || personal.basic === 'center.invest.subpage'">
+<div class="space_center_trading" ng-if="personal.basic === 'center.index' || personal.basic === 'center.invest.subpage'">
     <div class="row">
         <div class="col-xs-5">
             <div class="block_title">交易账户</div>
@@ -69,7 +69,7 @@
     </div>
 </div>
 
-<div class="space_block gapped" ng-if="personal.basic === 'center.index' || personal.basic === 'center.wallet.subpage'">
+<div class="space_block" ng-class="{'gapped': personal.basic != 'center.wallet.subpage'}" ng-if="personal.basic === 'center.index' || personal.basic === 'center.wallet.subpage'">
     <div class="row">
         <div class="col-xs-5">
             <div class="block_title">零钱包</div>
