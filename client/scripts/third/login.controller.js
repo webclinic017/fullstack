@@ -49,7 +49,7 @@
                 if (data.is_succ) {
                     $timeout(function () {
                         account.hasChecked = false;
-                        $window.location.href = '/third/asset';
+                        $window.location.href = '/payment/asset';
                     }, 100);
                 } else {
                     layer.msg(data.message);

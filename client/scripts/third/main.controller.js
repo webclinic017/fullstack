@@ -24,7 +24,7 @@
                 if (!data) return;
                 if (data.is_succ) {
                     account.hasChecked = false;
-                    $window.location.href = '/third/login';
+                    $window.location.href = '/payment/login';
                 }
             });
         }
