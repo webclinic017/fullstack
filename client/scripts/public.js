@@ -68,8 +68,8 @@
                 if (lang.isCompany() === 'pandafx') {
                     $window.location.href='/panda/login';
                 }
-                else if(location.pathname.indexOf('third') != -1){
-                    $window.location.href='/third/login';
+                else if(location.host.indexOf('ibonline') != -1){
+                    $window.location.href='/payment/login';
                 }
                 else {
                     $window.location.href='/space/#/account/login';
