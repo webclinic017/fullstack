@@ -1,0 +1,134 @@
+$font-space-size-sm: 12px;
+$font-space-size-lg: 20px;
+$font-space-gray-color: $gray-dark;
+
+.space_gray_color {
+    color: $font-space-gray-color;
+    font-size: $font-space-size-sm;
+}
+
+.space_block {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px $gray;
+    padding: 25px;
+    &.gapped {
+        margin-top: 50px;
+    }
+
+    .block_title {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .block_tips {
+        font-size: 14px;
+        text-align: center;
+        color: $gray-dark;
+        margin: 80px 0;
+    }
+
+    .block_btn_group {
+        .tw-btn:nth-child(2) {
+            margin: 0 24px;
+        }
+    }
+}
+
+// space.center
+@include b(space_center_summary){
+    @include e(list){
+        @include m(item){
+            display: inline-block;
+            box-sizing: border-box;
+            float: left;
+            width: 300px;
+            height: 160px;
+            border-radius: 8px;
+            transition: all 0.22s linear;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            cursor: pointer;
+            padding: 25px;
+            &:hover {
+                box-shadow: 0 10px 60px $gray-dark;
+            }
+            &:nth-child(1) {
+                background-image: url('/images/space/center-total.png');
+            }
+            &:nth-child(2) {
+                background-image: url('/images/space/center-trading.png');
+                margin: 0 20px;
+            }
+            &:nth-child(3) {
+                background-image: url('/images/space/center-wallet.png');
+            }
+            p {
+                color: #fff;
+            }
+            .summary_name {
+                font-size: 16px;
+                margin-top: 10px;
+            }
+            .summary_amount {
+                font-size: 36px;
+                font-weight: 500;
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@include b(space_center_trading){
+    @extend .space_block;
+    
+    @include b(trading_details) {
+        margin-top: 75px;
+        margin-bottom: 25px;
+        li {
+            float: left;
+            width: 25%;
+            text-align: center;
+            margin-top: 20px;
+            color: #494949;
+            position: relative;
+            
+            .num {
+                line-height: 22px;
+                font-size: 18px;
+                font-weight: 500;
+            }
+            .tip {
+                font-size: 12px;
+                line-height: 22px;
+            }
+
+            &:not(.noLine):before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 3px;
+                right: 0;
+                width: 1px;
+                height: 30px;
+                background-color: #d2d2d2;
+            }
+
+            .space_center_hint{
+                position:absolute;
+                color:$brand-info;
+                background:rgba(0,0,0,.7);
+                border-radius:4px;
+                padding:10px;
+                z-index:1000;
+                display:none;
+            }
+
+            &.active {
+                .space_center_hint{
+                    display:block
+                }
+            }
+        }
+    }
+}

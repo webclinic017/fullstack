@@ -1,0 +1,159 @@
+<div class="space_block withdraw" ng-controller="ThirdWithdrawController">
+    <div class="row">
+        <div class="col-xs-2 text-left deposit__title-money">
+            提现帐户
+        </div>
+
+        <div class="col-xs-9 clearfix">
+            <div class="withdraw__way account" ng-class="{active: withdraw.type === 'invest'}" ng-click="changeWithdrawType('invest')">
+                <span>交易帐户</span>
+                <span class="amount">${{ personal.balance || '0.00' }}</span>
+            </div>
+            <div class="withdraw__way wallet" ng-class="{active: withdraw.type === 'wallet'}" ng-click="changeWithdrawType('wallet')">
+                <span>零钱包</span>
+                <span class="amount">${{ personal.wallet_balance || '0.00' }}</span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-xs-2 text-left deposit__title-money">
+            银行卡
+        </div>
+
+        <div class="col-xs-10 pd-tp-10" ng-show="!withdraw.card.id">
+            <span class="deposit__pointer font-info" ng-click="openCardMdl()">点击绑定银行卡 ></span>
+        </div>
+
+        <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.card.id">
+            <div class="widthdraw__card_bg">
+                <img ng-show="withdraw.card.bank_img" ng-src="{{ withdraw.card.bank_img }}">
+                <span>{{ withdraw.card.bank_name ||  withdraw.card.bank_code }}</span>
+            </div>
+            <span class="card_number">
+                <span>
+                    {{withdraw.card.number}} 
+                </span>
+                <span class="deposit__pointer font-info btn-text card_switch" ng-click="openManageCardMdl('switch')">切换银行卡 ></span>
+            </span>
+            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl('manage')">管理银行卡</span>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'invest' && withdrawMessageSucc && !message.is_succ">
+            <div class="warn_icon">
+                ⚠️
+            </div>
+            <div class="warn_content">
+                <div class="">
+                    <p>系统提示：{{message.error_msg}}</p>
+                    <p>如有疑问，请联系您的客户经理或联系客服</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'wallet' && withdrawMessageSucc && !messageWallet.is_succ">
+            <div class="warn_icon">
+                ⚠️
+            </div>
+            <div class="warn_content">
+                <div  class="">
+                    <p>系统提示：{{message.message}}</p>
+                    <p>如有疑问，请联系您的客户经理或联系客服</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div ng-show="(withdraw.type === 'invest' && withdrawMessageSucc && message.is_succ) || (withdraw.type === 'wallet' && withdrawMessageSucc && messageWallet.is_succ)">
+        <div class="row">
+            <div class="col-xs-2 text-left deposit__title-money">提现金额</div>
+            <div class="col-xs-6 deposit__input">
+                <form name="withdrawForm" novalidate>
+                    <div class="form-control-wrapper">
+                        <input class="form-control form-control-size-lg form-control-shape-capsule"
+                               name="amount"
+                               type="text"
+                               required
+                               ng-class="{'form-control-error': frontErr.amount.show && withdrawForm.amount.$invalid}"
+                               ng-model="withdraw.amount"
+                               ng-pattern="frontErr.amount.reg"
+                               twform-max="{{withdraw.maxAmount || 0}}"
+                               twform-min="{{withdraw.minAmount}}"
+                               ng-focus="hideErr('amount')"
+                               ng-blur="showErr('amount')">
+
+                        <span class="form-control-icon form-control-icon-size-lg">$</span>
+
+                        <div ng-show="frontErr.amount.show">
+                            <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.required">
+                                请输入出金金额
+                            </p>
+
+                            <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.pattern">
+                                输入的金额为大于零的整数或者小数（小数点后最多两位数字）
+                            </p>
+
+                            <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.twformMax">
+                                出金金额最多为 {{withdraw.maxAmount || 0}} 美金
+                            </p>
+
+                            <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.twformMin">
+                                出金金额最少为 {{withdraw.minAmount}} 美金
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-9 col-xs-offset-2">
+                <p class="sys_tip1">
+                    <span class="font-danger">*</span>
+                    可提取金额：<span>${{withdraw.maxAmount || '0.00'}}</span>
+                </p>
+                <p class="sys_tip1">
+                    <span class="font-danger">*</span>
+                    <span>今日汇率：1 美元 = {{withdraw.FXRate.value}}</span> 人民币
+                </p>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-xs-9 col-xs-offset-2 text-center">
+                <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" ng-show="clickable" ng-click="toWithdraw()">提现</button>
+                <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" disabled ng-show="!clickable">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    提现中 
+                </button>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 warn_tip_area">
+                <div class="warn_icon">
+                    ⚠️
+                </div>
+                <div class="warn_content">
+                    <p class="sys_tip2">1. 通过实名认证后才可以进行资金提现。</p>
+                    <p class="sys_tip2">2. 提现金额最少为20美金。</p>
+                    <p class="sys_tip2">3. 未充值，体验资金和盈利不可提取。</p>
+                    <p class="sys_tip2">4. 充值后交易手数未满足活动规则要求，体验资金和充值前的盈利不可提取。</p>
+                    <p class="sys_tip2">5. 存在复制关系的，提现时系统自动扣除复制金额，若要全部提现，请先手动取消复制关系。</p>
+                    <p class="sys_tip2" ng-bind-html="formatText(withdrawNotice) | bindhtml"></p>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>

@@ -6,8 +6,9 @@
     max-width: 2560px;
     overflow: hidden;
     background-position: center center;
-    background-size: 100% 100%;
-    background-image: url(/images/panda/asset_bg_new.png);
+    background-size: auto 100%;
+    background-image: url('/images/panda/asset_bg_new.png');
+    background-repeat: no-repeat;
 
     .deposit__rate, .deposit__way-tip, .deposit__tele-tip {
         color: #ddd;

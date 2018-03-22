@@ -1,0 +1,69 @@
+<div ng-controller="ThirdLoginController" tw-window-height data-min-height="900" data-min-width="1300">
+        <div class="account_login-bg panda" style="height: 100%;">
+            <div class="account_login_box">
+                <div class="account_login login_pass active">
+                    <div class="account_login__pass">
+                        <div>
+                            <div class="account_login__title">登录</div>
+                            <form name="loginForm3" class="account_login__form" novalidate>
+                                <div class="account-form-control-wrapper">
+                                    <input class="account-form-control"
+                                           name="mt4"
+                                           type="text"
+                                           placeholder="MT4帐号"
+                                           required
+                                           on-enter="login('loginForm3')"
+                                           ng-model="account.mt4">
+                                    <span class="account-form-control-tip" ng-show="account.mt4">MT4</span>
+                                    <span class="account_login__close" ng-click="clearPhone('mt4')">
+                                        <i class="fa fa-times" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+    
+                                <div class="account-form-control-wrapper">
+                                    <input class="account-form-control"
+                                           ng-if="!account.showPassword"
+                                           autocomplete="off"
+                                           name="password"
+                                           type="password"
+                                           placeholder="密码"
+                                           on-enter="login('loginForm3')"
+                                           required
+                                           ng-model="account.password">
+                                    <input class="account-form-control"
+                                           ng-if="account.showPassword"
+                                           autocomplete="off"
+                                           name="password"
+                                           type="text"
+                                           placeholder="密码"
+                                           on-enter="login('loginForm3')"
+                                           required
+                                           ng-model="account.password">
+                                    <span class="account-form-control-tip" ng-show="account.password">密码</span>
+                                    <span class="account_login__close" ng-click="changeLoginStatus('showPassword')">
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                    </span>
+                                </div>
+                                
+                                <div class="clearfix">
+                                    <div class="account_login__remenber fl">
+                                        <span class="account_login__remenber-btn" ng-click="changeLoginStatus('remember')">
+                                            <i class="fa fa-square-o" ng-show="!account.remember"></i>
+                                            <i class="fa fa-check-square" ng-show="account.remember"></i>
+                                            记住登录状态
+                                        </span>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="account_login__btn_wrapper text-left">
+                                <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-click="login('loginForm3')">登录</span>
+                            </div>
+                            <!-- <div class="account_login__docs text-left">
+                                *已使用SSL加密技术保护您的网络安全
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
