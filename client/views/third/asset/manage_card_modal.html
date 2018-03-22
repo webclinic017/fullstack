@@ -1,0 +1,51 @@
+<div class="sys_modal_v2 mid_case">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <!-- 选择银行卡/管理银行卡 -->
+    <div class="sys_modal_v2__content" ng-if="manageType == 'switch' || manageType == 'manage'">
+        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'switch'">切换银行卡</h3>
+        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'manage'">管理银行卡</h3>
+        <div tw-loading-img></div>
+        <table class="manage_card_list">
+            <colgroup>
+                <col width="40%">
+                <col width="30%">
+                <col width="30%">
+            </colgroup>
+            <tbody>
+                <tr class="manage_card_list__item" ng-repeat="card in cardList track by $index">
+                    <td>
+                        <div class="widthdraw__card_bg" style="width: 80%;">
+                            <img ng-show="card.bank_img" ng-src="{{ card.bank_img }}">
+                            <span>{{ card.bank_name ||  card.bank_code }}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="card_number text-center">{{ card.card_no }}</p>
+                    </td>
+                    <td>
+                        <p class="text-center" ng-if="manageType == 'switch'">
+                            <a class="btn-text card_btn" ng-click="chooseCard(card)">选择</a>
+                        </p>
+                        <p class="text-center" ng-if="manageType == 'manage'">
+                            <a class="btn-text card_btn" ng-click="confirmDeleteCard(card)">删除</a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mg-tp-10 text-left" ng-if="manageType == 'manage'">
+            <a class="btn-text" ng-click="openAddCardModal()">添加银行卡</a>
+        </div>
+    </div>
+
+    <!-- 删除银行卡 -->
+    <div class="sys_modal_v2__content" ng-if="manageType == 'delete'">
+        <h3 class="sys_modal_v2__title text-left">删除银行卡</h3>
+        <p class="sys_modal_v2__desp mg-tp-20">确认删除本银行卡，如需再次使用需重新验证</p>
+        <div class="btn_wrapper text-right clearfix">
+            <a class="btn-text fr mg-lf-20" ng-click="closeModal()">取消</a>
+            <a class="btn-text fr" ng-click="deleteCard()">删除</a>
+        </div>
+    </div>
+</div>

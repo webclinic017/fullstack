@@ -50,14 +50,8 @@
     height: 100%;
     margin: 0 auto;
     margin-top: 69px;
-    min-width: 1320px;
-    @media screen and (min-width: 1500px){
-        &{
-            width: 1500px;
-        }
-    }
-    min-height: 900px;
-    border: 1px solid $gray;
+    width: 1320px;
+    min-height: 800px;
     @extend .clearfix;
     @include e(side) {
         width: 320px;
@@ -75,16 +69,16 @@
         margin-left: -320px;
         padding-left: 320px;
         @include m(nav) {
-            background-color: #fff;
-            border-bottom: 2px solid #ebebeb;
-            height: 55px;
+            // .nav-view {
+            //     height: 60px;
+            // }
         }
         @include m(content) {
-            margin-top: 50px;
+            margin-top: 35px;
+            
+            margin-left: 60px;
+            width: 940px;
             .content-view {
-                width: 940px;
-                margin: 0 auto;
-                margin-top: 50px;
                 margin-bottom: 80px;
                 height: 100%;
             }

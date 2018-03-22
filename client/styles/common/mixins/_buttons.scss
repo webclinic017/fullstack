@@ -81,6 +81,13 @@
     }
 }
 
+@mixin tw-button-color-trans($color, $color-hovered){
+    color: $color;
+    &:hover {
+        color: $color-hovered;
+    }
+}
+
 // 水平渐变
 @mixin tw-button-gradient-horizontal($backgroundstart, $backgroundend) {
     @include gradient-horizontal($backgroundstart, $backgroundend);

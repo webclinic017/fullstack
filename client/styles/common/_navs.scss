@@ -127,6 +127,14 @@
     }
 }
 
+.header-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 1360px;
+}
+
 // Navbar heading
 .navbar-header {
     @extend .clearfix;
@@ -198,7 +206,7 @@
 .navbar-nav {
     float: left;
     margin: 0;
-
+    padding-left: 206px;
     &.navbar-right:last-child {
         margin-right: -$navbar-padding-horizontal;
     }

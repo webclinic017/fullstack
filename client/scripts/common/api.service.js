@@ -16,6 +16,7 @@
 
         var account = {
             getPersonalInfoDegreeApi: urlOrigin2 + '/user/perfect_degree',
+            loginByMt4Api: urlOrigin2 + '/login/mt4_account',
             loginApi: urlOrigin2 + '/v2/auth/login',
             updataUserInfoApi: urlOrigin2 + '/v2/user/auth_info',
             updataId: urlOrigin2 + '/user/update_idno',

@@ -11,6 +11,7 @@
         var service = {
             encrypt: encrypt,
             login: login,
+            loginByMt4: loginByMt4,
             checkLogined: checkLogined,
             setToken: setToken,
             updataId: updataId,
@@ -75,6 +76,10 @@
         function login(params) {
 
             return publicHttp.dealPublicRequest(o.loginApi, 'POST', params);
+        }
+        // 通过MT4登录
+        function loginByMt4(params) {
+            return publicHttp.dealPublicRequest(o.loginByMt4Api, 'POST', params);
         }
 
         function checkLogined() {

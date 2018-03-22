@@ -1,0 +1,226 @@
+<div class="space_block deposit" ng-controller="ThirdDepositController">
+    <div ng-show="!walletDepositSucc && !teleDepositSucc">
+        <div class="row mg-tp-30">
+            <div class="col-xs-2 text-right deposit__title-money">充值金额</div>
+            <div class="col-xs-7 deposit__input">
+                <form name="depositForm" novalidate>
+                    <div class="form-control-wrapper">
+                        <input class="form-control form-control-size-lg form-control-shape-capsule"
+                               ng-if="deposit.type === 'invest' || deposit.type === 'alipay'"
+                               name="amount"
+                               type="text"
+                               required
+                               ng-class="{'form-control-error': frontErr.amount.show && depositForm.amount.$invalid}"
+                               ng-model="deposit.amount"
+                               ng-pattern="frontErr.amount.reg"
+                               twform-min="{{deposit.minAmount}}"
+                               ng-change="checkInputAmount()"
+                               ng-focus="hideErr('amount')"
+                               ng-blur="showErr('amount')">
+                        <input class="form-control form-control-size-lg form-control-shape-capsule"
+                               ng-if="deposit.type === 'wallet'"
+                               name="amount"
+                               type="text"
+                               required
+                               ng-class="{'form-control-error': frontErr.amount.show && depositForm.amount.$invalid}"
+                               ng-model="deposit.amount"
+                               ng-pattern="frontErr.amount.reg"
+                               ng-change="checkInputAmount()"
+                               ng-focus="hideErr('amount')"
+                               ng-blur="showErr('amount')">
+                        <input class="form-control form-control-size-lg form-control-shape-capsule"
+                               ng-if="deposit.type === 'tele'"
+                               name="amount"
+                               type="text"
+                               required
+                               ng-pattern="frontErr.amount.reg"
+                               ng-class="{'form-control-error': frontErr.amount.show && depositForm.amount.$invalid}"
+                               ng-model="deposit.amount"
+                               ng-change="checkInputAmount()"
+                               ng-focus="hideErr('amount')"
+                               ng-blur="showErr('amount')">
+
+                        <span class="form-control-icon form-control-icon-size-lg">$</span>
+
+                        <div ng-show="frontErr.amount.show">
+                            <p class="alert alert-arrow_tp_lf" ng-show="depositForm.amount.$error.required">
+                                请输入入金金额
+                            </p>
+
+                            <p class="alert alert-arrow_tp_lf" ng-show="depositForm.amount.$error.pattern">
+                                输入的金额为大于零的整数或者小数（小数点后最多两位数字）
+                            </p>
+
+                            <p class="alert alert-arrow_tp_lf" ng-show="depositForm.amount.$error.twformMin">
+                                入金金额最少为 {{deposit.minAmount}} 美金
+                            </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-xs-7 col-xs-offset-2 deposit__rate">
+                <p>
+                    <span class="font-danger">＊</span>今日汇率：1 美元 =
+                    <span>{{deposit.FXRate.value}}</span> 人民币
+                </p>
+            </div>
+        </div>
+
+        <div class="row mg-tp-30 deposit__pay_method">
+            <div class="col-xs-2 text-right deposit__title-money">支付方式</div>
+            <div class="col-xs-7">
+                <div class="deposit__way" ng-click="openChangeDepTypeMdl()">
+                    {{ depositTypeCN }}
+                </div>
+                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'tele'}">电汇通常需要 3-5 个工作日到帐</p>
+                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'invest'}">单日交易限额以银行规定为准</p>
+                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'wallet'}">当前零钱包余额：${{ walletAble || '0.00' }}</p>
+                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'alipay'}">单日交易限额 $3000.00</p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-7 text-center">
+                <div class="deposit__btn_wrapper">
+                    <button ng-if="!isLoading" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-class="{'tw-btn-disabled': !deposit.submitBtn, 'disabled': !deposit.submitBtn}" ng-click="toDeposit()">
+                        <span ng-show="deposit.type !== 'tele'">充值</span>
+                        <span ng-show="deposit.type === 'tele'">提交</span>
+                    </button>
+                    <button ng-if="isLoading" class="tw-btn tw-btn-capsule-gradient tw-btn-full"><i class="loading_spinner fa fa-spinner"></i>提交中</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="deposit_separator"></div>
+
+        <div class="deposit__bank_file" ng-if="(deposit.type === 'invest') && (deposit.isAbleDeposit != 0)">
+            <div ng-if="deposit.isAbleDeposit == 1">
+                <div class="deposit__bank_file-tit">上传入金凭证</div>
+                <div class="deposit__bank_file-tip">
+                    应监管要求，请您上传上次网银的入金凭证
+                </div>
+                <div class="deposit__bank_file-sub_tit">凭证注意事项：</div>
+                <div class="deposit__bank_file-tip">
+                    <p>1.凭证信息需显示出姓名、银行卡号、支付金额等内容；</p>
+                    <p>2.凭证信息必须为实名认证本人的银行卡。</p>
+                    <p>如未达到以上要求，审核将被驳回</p>
+                    <p>审核驳回后，上次支付金额将原路返回，并由您自行承担1.5%手续费。</p>
+                </div>
+                <div class="deposit__bank_file-sub_tit">凭证示例展示：</div>
+                <div class="deposit__bank_file-eg clearfix">
+                    <div class="pic" ng-click="checkImage($event, '/white_label/deposit/evidence1.jpg')"><img src="/white_label/deposit/evidence1.jpg"><span>点击查看凭证</span></div>
+                    <div class="blank"></div>
+                    <div class="pic" ng-click="checkImage($event, '/white_label/deposit/evidence2.jpg')"><img src="/white_label/deposit/evidence2.jpg"><span>点击查看凭证</span></div>
+                </div>
+                <div class="deposit__bank_file-upload">
+                    <div class="deposit__tele_file bank_file">
+                        点此上传凭证
+                        <div tw-upload-file-base64 data-file-name="deposit.bankFile[0]"></div>
+                    </div>
+                    <div class="deposit__tele_file bank_file add_file" ng-if="deposit.bankFile.length > 0">
+                        <div tw-upload-file-base64 data-file-name="deposit.bankFile[1]"></div>
+                    </div>
+                    <div class="deposit__tele_file bank_file add_file" ng-if="deposit.bankFile.length > 1">
+                        <div tw-upload-file-base64 data-file-name="deposit.bankFile[2]"></div>
+                    </div>
+                </div>
+                <div class="deposit__bank_file-upload_tip">上传凭证为1-3张。目前只支持2MB的PNG、JPG格式</div>
+                <div class="deposit__bank_file-upload_btn">
+                    <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" ng-click="uploadBankFile()">
+                        提交
+                    </button>
+                </div>
+            </div>
+
+            <div ng-if="deposit.isAbleDeposit == 2">
+                <div class="deposit__bank_file-tit">入金凭证已提交，正在审核中</div>
+                <div class="deposit__bank_file-tip">审核时间：<br>大概需要1个工作日</div>
+            </div>
+        </div>
+
+        <div class="deposit__tele" ng-if="deposit.type === 'tele'">
+            <div class="row">
+                <div class="col-xs-2 text-right deposit__title-money">上传电汇凭证</div>
+                <div class="col-xs-7 deposit__tele_file">
+                    点击上传电汇凭证
+                    <div tw-upload-file-base64 data-file-name="deposit.teleFile"></div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <p class="deposit__tele-tip">
+                    不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，老虎外汇不收取电汇入金手续费，入金金额将以实际到账为准。
+                </p>
+                <p class="deposit__tele-tip">
+                    请注意，我们不接受直接支付到我们银行账户的现金付款。为了您的注资能及时、准确到帐，在填写电汇申请单时，<span class="des">请您务必在汇款附言一栏里填写您的交易账号。</span>同时请提供您的电话号码，以便我们与您取得联系。
+                </p>
+                <p class="deposit__tele-tit">
+                    老虎外汇接受美元汇款，汇款详情如下：
+                </p>
+                <p class="deposit__tele-msg">
+                    收款人名称（Company）：<br>TigerWit Financial Services Limited
+                </p>
+                <p class="deposit__tele-msg">
+                    收款行所在国家（地区）： <br>澳大利亚AUSTRALIA
+                </p>
+                <p class="deposit__tele-msg">
+                    收款人账号（Account）：<br>06443210678867
+                </p>
+                <p class="deposit__tele-msg">
+                    收款银行机构鉴定代码（Swift）：<br>CTBAAU2S (或CTBAAU2SXXX)
+                </p>
+                <p class="deposit__tele-msg">
+                    收款人开户行（Bank）：<br>COMMONWEALTH BANK OF AUSTRALIA SYDNEY
+                </p>
+                <p class="deposit__tele-msg">
+                    银行地址（Address）：<br>201 SUSSEX STREET FLOOR 27 SYDNEY NSW 2000 AUSTRALIA
+                </p>
+                <p class="deposit__tele-msg">
+                    清算号（BSB）：<br>064432
+                </p>
+                <p class="deposit__tele-msg">
+                    收款人地址（Address）：<br>No. 201  Church Street Sandyport P. O. Box SP 64638 Nassau, Bahamas
+                </p>
+                <p class="deposit__tele-msg">
+                    汇款附言：姓名：您的姓名拼音，交易账号：12345678
+                </p>
+                <p class="deposit__tele-tit">
+                    反洗钱政策：
+                </p>
+                <p class="deposit__tele-tip">
+                    老虎外汇将根据各国适用法律尽最大努力以实际行动配合反洗钱及反恐怖方面的所有法律法规，具体包括报告及冻结可疑资产等。老虎外汇将不定期地查看账户记录以获取有洗钱嫌疑的交易证据，包括对如下几项的监控：
+                </p>
+                <p class="deposit__tele-tip">
+                    1)  账户资金出入情况。电汇入金的用户，提现时若金额低于电汇入金时金额，老虎外汇只支持将提现金额提现至入金银行卡。<br>
+                    2) 电汇汇款方及收款方<br>
+                    3) 除正常业务外的其他行为。
+                </p>
+                <p class="deposit__tele-msg">
+                    如您有疑问，请
+                    <span ng-click="toHelp()" class="des">点击此处</span>
+                    联系在线客服获得帮助。
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="deposit__wallet_succ mg-tp-50" ng-show="walletDepositSucc">
+        充值已提交，到账约为10分钟，请耐心等待
+    </div>
+    <div class="deposit__tele_succ mg-tp-50" ng-show="teleDepositSucc">
+        <div class="clearfix">
+            <div class="pic">
+                <img src="/images/icon-succ2.png">
+            </div>
+            <div class="tip">
+                电汇凭证已提交<br>大概需要3-5个工作日到账
+            </div>
+        </div>
+    </div>
+</div>

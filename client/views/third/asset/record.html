@@ -1,0 +1,43 @@
+<div ng-controller="ThirdRecordController">
+    <div tw-loading-img></div>
+        <div class="invest_content space_block history" ng-if="historyList.length > 0" style="padding: 0; overflow: hidden;">
+            <table class="table table-personal table-hover table-bordered">
+                <colgroup>
+                    <col width="25%">
+                    <col width="25%">
+                    <col width="25%">
+                    <col width="25%">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>全部类型</th>
+                    <th>金额</th>
+                    <th>状态</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="history in historyList">
+                    <td>{{ history.order_date | dateFormatter }}</td>
+                    <td>{{ history.status_type }}</td>
+                    <td ng-class="{'font-danger': history.status === 2, 'font-success': history.status === 4, 'font-base': history.status === -2}">
+                        ${{ history.amount }}
+                    </td>
+                    <td>
+                        <span>{{ history.status_explain }}</span>
+                            <span ng-if="history.withdraw === 1">
+                            <a class="deposit__pointer font-info" ng-click="cancelWithdraw(history.order_no)">撤销申请</a>
+                        </span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        
+            <div class="text-right" style="padding: 0 25px;">
+                <p tw-pagination></p>
+            </div>
+        </div>
+        <div ng-if="historyList.length <= 0">
+            <p class="text-center mg-tp-50">无数据!</p>
+        </div>
+</div>

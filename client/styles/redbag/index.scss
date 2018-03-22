@@ -78,7 +78,8 @@
     background-color: #f1f1f1;
     // padding: 38px 12px;
     position: relative;
-
+    border-radius: 8px;
+    overflow: hidden;
     &.light {
         .redbag_single__top {
             background-color: #f5524f;

@@ -103,10 +103,45 @@ module.exports = function (app) {
             }
         }, req));
     });
+    // 三方相关页面
+    // 第三方认证流程
+    app.route('/m/third/register').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('m_vue/m_third_verify', extendPublic({}, req));
+    });
+    app.route('/m/third/password').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('m_vue/m_third_password', extendPublic({}, req));
+    });
+    app.use('/', function(req, res, next){
+        setEnvCf(req, res);
+        var allowPaths = ['/payment/login', '/payment/asset']
+        if(req.hostname.indexOf('ibonline') != -1) {
+            if(allowPaths.indexOf(req.originalUrl) != -1){
+                var pageId = ''
+                if(req.originalUrl == allowPaths[0]){
+                    pageId = 'login'
+                }
+                else if(req.originalUrl == allowPaths[1]){
+                    pageId = 'asset'
+                }
+                res.render('third/index', extendPublic({
+                    pageInfo: {
+                        id: pageId
+                    }
+                }, req));
+                return
+            } else {
+                res.redirect('/payment/login');
+                return
+            }
+        } else {
+            next()
+        }
+    })
 
     app.route('/').get(function (req, res) {
         setEnvCf(req, res);
-
         if (isMobile(req)) {
             var cookieList = querystring.parse(req.headers.cookie, '; ');
             var trunPC = false;
@@ -120,43 +155,20 @@ module.exports = function (app) {
                 res.render('home.html', extendPublic({
                     pageInfo: {}
                 }, req));
+                return
             } else {
                 if (COMPANY_NAME === 'tigerwit') {
                     // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
                     res.redirect('https://www.tigerwit.com/download');
+                    return
                 }
-                if (COMPANY_NAME === 'pkds') {
-                    // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex');
-                    res.redirect('https://www.pkdsfx.com/download');
-                }
-            }
-            if (COMPANY_NAME === 'lonfx') {
-                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
-                res.redirect('https://lonfx.tigerwit.com/download');
-            }
-            if (COMPANY_NAME === 'pandafx') {
-                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
-                res.redirect('https://pandafx.tigerwit.com/download');
             }
         } else {
             if (COMPANY_NAME === 'tigerwit') {
-                if (req.query.label === 'Parkerdawson Co-operative Group Limited') {
-                    res.redirect('https://www.pkdsfx.com/space/#/account/register');
-                } else {
-                    res.render('home.html', extendPublic({
-                        pageInfo: {}
-                    }, req));
-                }
-            }
-            if (COMPANY_NAME === 'pkds') {
                 res.render('home.html', extendPublic({
                     pageInfo: {}
                 }, req));
-            }
-            if (COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
-                res.render('home.html', extendPublic({
-                    pageInfo: {}
-                }, req));
+                return
             }
         }
     });
@@ -344,16 +356,6 @@ module.exports = function (app) {
     app.route('/m/deposit/success').get(function (req, res) {
         setEnvCf(req, res);
         res.render('m_vue/m_deposit_succ', extendPublic({}, req));
-    });
-
-    // 第三方认证流程
-    app.route('/m/third/register').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('m_vue/m_third_verify', extendPublic({}, req));
-    });
-    app.route('/m/third/password').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('m_vue/m_third_password', extendPublic({}, req));
     });
 
     // H5 空白页
@@ -1151,6 +1153,7 @@ module.exports = function (app) {
         //     }
         //     res.send(html);
         // });
+        setEnvCf(req, res);
         res.render('404.html', extendPublic({}, req));
     });
 

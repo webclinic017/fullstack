@@ -1,18 +1,25 @@
 @include b(space_nav){
-    padding-left: 60px;
+    line-height: 55px;
+    text-align: center;
     @include e(box) {
+        display: inline-block;
+        margin: 0 auto;
         @extend .clearfix;
-        display: block;
-        padding-top: 40px;
+        display: inline-block;
         @include m(item){
             float: left;
             margin-right: 36px;
             position: relative;
             a {
-                font-size: 20px;
+                font-size: 16px;
                 font-weight: 500;
                 color: $gray-dark;
                 cursor: pointer;
+                &.link {
+                    font-weight: 200;
+                    color: red;
+                    font-size: 14px;
+                }
             }
             &.red_point:before {
                 display: inline-block;
@@ -28,24 +35,11 @@
             &.active, &:hover {
                 a {
                     color: $gray-base;
+                    &.link {
+                        color: red;
+                        text-decoration: underline;
+                    }
                 }
-            }
-        }
-    }
-
-    @include e(prompt){
-        color: red;
-        a {
-            font-size: 14px;
-            cursor: pointer;
-            color: red;
-            &.link {
-                font-weight: 200;
-                font-size: 14px;
-                line-height: 30px;
-            }
-            &:hover {
-                text-decoration: underline;
             }
         }
     }

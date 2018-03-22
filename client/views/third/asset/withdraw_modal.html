@@ -1,0 +1,35 @@
+<div class="system_modal">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <h5 class="system_modal__title">
+        系统提示
+    </h5>
+
+    <div class="system_modal__content" ng-if="!isWithdrawSucc">
+        <p class="system_modal__info">
+            无法进行出金操作
+        </p>
+        <p class="system_modal__tip">
+            {{message}}
+        </p>
+
+        <p class="system_modal__btn_wrapper">
+            <button class="btn btn-primary btn-sm" ng-click="closeModal()">
+                确定
+            </button>
+        </p>
+    </div>
+
+    <div class="system_modal__content" ng-if="isWithdrawSucc">
+        <p class="system_modal__info">
+            出金 ${{withdrawAmount}} 申请已提交，我们会在两个工作日内处理完毕
+        </p>
+        <p class="system_modal__btn_wrapper">
+            <button class="btn btn-primary btn-sm" ng-click="closeModal()">
+                确定
+            </button>
+        </p>
+    </div>
+
+
+</div>

@@ -12,7 +12,6 @@ $font-space-gray-color: $gray-dark;
     border-radius: 10px;
     box-shadow: 0 0 15px $gray;
     padding: 25px;
-    width: 940px;
     &.gapped {
         margin-top: 50px;
     }
@@ -38,7 +37,6 @@ $font-space-gray-color: $gray-dark;
 
 // space.center
 @include b(space_center_summary){
-    margin-bottom: 50px;
     @include e(list){
         @include m(item){
             display: inline-block;
