@@ -5,7 +5,8 @@
     var regExp = {
         id_no: /(^\d{15}$)|(^\d{18}$)|(^\d{17}(\d|X|x)$)/,
         phone: /^\d{11}$/,
-        email: /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/
+        email: /^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+)+$/,
+        real_name: /^[\u4e00-\u9fa5]+$/
     };
 
 	$(document).on("tap", ".m_recruit_download a", function () {
@@ -36,10 +37,14 @@
                 success = false;
             }
         }
-        console.log(content, success);
+        // console.log(content, success);
 
         if (success) {
             //校验正则
+            if (!regExp.real_name.test(content.real_name)) {
+                alert('真实姓名填写有误');
+                return false;
+            }
             if (!regExp.id_no.test(content.id_no)) {
                 alert('身份证号码填写有误');
                 return false;
