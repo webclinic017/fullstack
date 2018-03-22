@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('publicHttp', publicHttp);
 
-    publicHttp.$inject = ['$http', '$rootScope', '$state', '$cookies', '$cookieStore', '$window', 'lang'];
+    publicHttp.$inject = ['$http', '$rootScope', '$state', '$cookies', '$cookieStore', '$window', 'lang', '$location'];
 
-    function publicHttp($http, $rootScope, $state, $cookies, $cookieStore, $window, lang) {
+    function publicHttp($http, $rootScope, $state, $cookies, $cookieStore, $window, lang, $location) {
         var service = {
             dealPublicRequest: dealPublicRequest
         };
@@ -63,12 +63,11 @@
             // 100102,  // 令牌过期    
             // 100103,  // 令牌验证失败  
             // 100104,  // 令牌未定义
-            
             if (data.code >= 100100 && data.code <= 100199) {
                 if (lang.isCompany() === 'pandafx') {
                     $window.location.href='/panda/login';
                 }
-                else if(location.host.indexOf('ibonline') != -1){
+                else if($window.location.host.indexOf('ibonline') != -1){
                     $window.location.href='/payment/login';
                 }
                 else {
