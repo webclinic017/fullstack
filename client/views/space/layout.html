@@ -1,23 +1,5 @@
-<!-- <div class="layout-2">
-    <div class="layout-2__side">
-        <div ui-view="side"></div>
-    </div>
-    <div class="layout-2__content">
-        <a ng-if="personal.dredged_type == 'live' && personal.verify_status < 5" ui-sref="authen.subpage({subpage: 'investInfo'})"
-            class="layout-2__content-tip link">
-        您的帐户尚未完成认证审核，将无法进行交易和资金相关操作，点击此处完成审核。
-        </a>
-        <p ng-if="personal.dredged_type == 'demo' && personal.verify_status < 5" class="layout-2__content-tip">
-            您当前账户为体验金账户，升级至真实账户只需两步：
-            <a class="link" ui-sref="authen.subpage" ng-click="toAuthenTypeSensorsdata('真实账户')">1.完整填写个人信息</a> &nbsp;&nbsp;
-            <a class="link" ui-sref="space.asset.subpage({subpage: 'deposit'})">2.充值激活</a>
-        </p>
-        <div class="mg-tp-30" ui-view="content"></div>
-    </div>
-</div> -->
-
 <div class="tw-space-layout">
-    <div class="tw-space-layout__side" tw-window-height data-has-navbar="true" data-min-height="900">
+    <div class="tw-space-layout__side" tw-window-height data-has-navbar="true" data-min-height="820">
         <div class="tw-space-layout__side-view" ui-view="side"></div>
     </div>
     <div class="tw-space-layout__con">
