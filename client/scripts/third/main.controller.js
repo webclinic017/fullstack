@@ -101,7 +101,8 @@
                 openMsgMdl({
                     size: 'sm',
                     btnsClass: 'text-right',
-                    msg: main.msg,
+                    msgClass: 'font-danger',
+                    msg: main.verifyInfo.msg,
                     btns: {
                         '确定': function () { }
                     }
