@@ -21,12 +21,12 @@
         // padding-left: 320px;
         @include m(info) {
             background-color: #161b25;
-            background-image: url($image-path-base + 'third/asset_bg.png');
+            // background-image: url($image-path-base + 'third/asset_bg.png');
             background-position: center top;
             background-repeat: no-repeat;
             background-size: auto 100%;
             color: #fff;
-            height: 370px;
+            // height: 370px;
             width: 100%;
             position: relative;
             .logout {
@@ -43,7 +43,8 @@
                 width: 600px;
                 margin: 0 auto;
                 height: 100%;
-                padding-top: 100px;
+                padding: 50px 0;
+                // padding-top: 100px;
                 text-align: center;
                 .info_box__avatar {
                     img{
@@ -58,7 +59,7 @@
                     }
                 }
                 .info_box__detail {
-                    margin-top: 40px;
+                    // margin-top: 40px;
                     @extend .clearfix;
                     li {
                         width: 33%;
