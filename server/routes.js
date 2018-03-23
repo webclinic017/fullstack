@@ -115,7 +115,7 @@ module.exports = function (app) {
     });
     app.use('/', function(req, res, next){
         setEnvCf(req, res);
-        var allowPaths = ['/payment/login', '/payment/asset']
+        var allowPaths = ['/payment/login', '/payment/asset', '/waiting']
         if(req.hostname.indexOf('ibonline') != -1) {
             if(allowPaths.indexOf(req.originalUrl) != -1){
                 var pageId = ''
@@ -124,6 +124,9 @@ module.exports = function (app) {
                 }
                 else if(req.originalUrl == allowPaths[1]){
                     pageId = 'asset'
+                } else if(req.originalUrl == allowPaths[2]){
+                    res.render('waiting', extendPublic({}, req));
+                    return
                 }
                 res.render('third/index', extendPublic({
                     pageInfo: {
