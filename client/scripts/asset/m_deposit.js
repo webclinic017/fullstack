@@ -26,7 +26,7 @@ $(document).ready(function () {
             {
                 bank_id: 'CCB',
                 bank_name: '建设银行',
-                select: true
+                select: platform === 'pc' ? true : false
             },
             {
                 bank_id: 'BOCM',
