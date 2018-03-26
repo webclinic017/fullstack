@@ -353,7 +353,13 @@ module.exports = function (app) {
     /* H5 充值中转页面 */
     app.route('/m/deposit/pay').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('m_vue/m_deposit_pay', extendPublic({}, req));
+        var platform = 'pc';
+        if (isMobile(req)) {
+            platform = 'mobile';
+        }
+        res.render('m_vue/m_deposit_pay', extendPublic({
+            platform: platform
+        }, req));
     });
     /* H5 充值成功 */
     app.route('/m/deposit/success').get(function (req, res) {

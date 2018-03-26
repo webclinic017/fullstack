@@ -8,6 +8,9 @@
 <!-- endbuild -->
 <% include /common/vendor/h5.utiljs.html %>
 <% include /common/statistic/main.html %>
+<script>
+    var platform = '<%= platform%>';
+</script>
 
 <body>
 
@@ -26,95 +29,31 @@
         <span class="sub-tip">单日交易限额以银行规定为准</span>   
     </div>
     <div id="m_deposit_pay">
-        <a href="" class="m_deposit_pay__bank" data-pmode="ICBC">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">工商银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="ABC">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">农业银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="BOC">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">中国银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="CCB">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">建设银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="BOCM">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">交通银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="CMB">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">招商银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="CITIC">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">中信银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="CMBC">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">民生银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="CEB">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">光大银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="PABC">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">平安银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="SPDB">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">上海浦东发展银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="PSBC">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">中国邮政储蓄银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="HXB">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">华夏银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="CIB">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">兴业银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="BOB">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">北京银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
-        <a href="" class="m_deposit_pay__bank" data-pmode="BOS">
-            <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-            <span class="tit">上海银行</span>
-            <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-        </a>
+        
     </div>
     <div class="m_deposit_pay__desc">
         即将支持更多的银行
     </div>
+
+    <script id="template_banklist" type="text/html">
+        <div>
+            <$for(var i=0;i<bankList.length;i++){$>
+                <$if(bankList[i].select){$>
+                    <a href="" class="m_deposit_pay__bank" data-pmode="<$= bankList[i].bank_id$>">
+                        <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
+                        <span class="tit"><$= bankList[i].bank_name$></span>
+                        <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
+                    </a> 
+                <$}$>
+            <$}$>
+        </div>
+    </script>
 </div>
 
 </body>
 <% include /common/vendor/h5.js.html %>
 <!-- build:js(client) /scripts/m_deposit.js -->
+<script src="/scripts/plugins/baiduTemplate.js"></script>
 <script src="/scripts/asset/m_deposit.js"></script>
 <!-- endbuild -->
 
