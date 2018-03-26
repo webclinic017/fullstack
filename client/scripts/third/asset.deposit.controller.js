@@ -21,7 +21,7 @@
                 // timestamp: ,
                 // RMB:         // 折合人民币
             },
-            type: $state.params.type || 'tele',
+            type: $state.params.type || 'invest',
             amount: undefined,
             teleFile: undefined,    //电汇凭证
             submitBtn: true,
