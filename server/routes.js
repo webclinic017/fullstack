@@ -88,20 +88,10 @@ module.exports = function (app) {
 
     // 熊猫外汇页面路径
     app.route('/panda').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('panda', extendPublic({
-            pageInfo: {
-                id: "login"
-            }
-        }, req));
+        res.redirect('https://ibonline.tigerwit.com');
     });
     app.route('/panda/:subpage(login|asset)').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('panda', extendPublic({
-            pageInfo: {
-                id: req.params.subpage || ""
-            }
-        }, req));
+        res.redirect('https://ibonline.tigerwit.com');
     });
     // 三方相关页面
     // 第三方认证流程
