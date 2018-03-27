@@ -11,6 +11,7 @@ var request = require('request');
 var querystring = require('querystring');
 var masterApi = require('./api/master');
 var report_sites = require('./report_site');
+var depositBankList = require('./deposit_bank_list');
 var ACCESS_ORIGIN2 = require('./get_env_config').envConfig.access_origin2 || 'https://a.tigerwit.com';
 var setCompanyCookie,
     envConfig,
@@ -1071,6 +1072,10 @@ module.exports = function (app) {
                 data = report_sites.slice(offset, Math.min(endPg, sum));
                 // console.log(data, endPg);
             }
+        }
+         // 媒体报道
+         if (action == "get_deposit_bank") {
+            data = depositBankList;
         }
         if (action == 'get_product') {
             var type = req.query.product_type;
