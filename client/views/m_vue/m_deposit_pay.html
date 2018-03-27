@@ -36,15 +36,12 @@
     </div>
 
     <script id="template_banklist" type="text/html">
-        <div>
+        <div class="m_deposit_pay__lst clearfix">
             <$for(var i=0;i<bankList.length;i++){$>
-                <$if(bankList[i].select){$>
-                    <a href="" class="m_deposit_pay__bank" data-pmode="<$= bankList[i].bank_id$>">
-                        <!-- <span class="pic"><img src="/downloads/static/bank/icbc.png"></span> -->
-                        <span class="tit"><$= bankList[i].bank_name$></span>
-                        <span class="sign"><img src="/images/icons-bank/arrow.png"></span>
-                    </a> 
-                <$}$>
+                <a href="" class="m_deposit_pay__bank <$if (bankList[i].special) {$>active<$}$>" data-pmode="<$= bankList[i].bank_id$>">
+                    <span class="pic"><img src="<$= bankList[i].img_url$>"></span>
+                    <span class="tit"><$= bankList[i].bank_name$></span>
+                </a> 
             <$}$>
         </div>
     </script>
