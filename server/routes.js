@@ -140,28 +140,13 @@ module.exports = function (app) {
         }
     })
 
-    app.route('/').get(function (req, res) {
+    app.route('/cn').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
-            var cookieList = querystring.parse(req.headers.cookie, '; ');
-            var trunPC = false;
-            for (var name in cookieList) {
-                // console.info(name);
-                if (name === 'turnPC') {
-                    trunPC = true;
-                }
-            }
-            if (trunPC) {   // 回到电脑版
-                res.render('home.html', extendPublic({
-                    pageInfo: {}
-                }, req));
+            if (COMPANY_NAME === 'tigerwit') {
+                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
+                res.redirect('https://www.tigerwit.com/download');
                 return
-            } else {
-                if (COMPANY_NAME === 'tigerwit') {
-                    // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
-                    res.redirect('https://www.tigerwit.com/download');
-                    return
-                }
             }
         } else {
             if (COMPANY_NAME === 'tigerwit') {
@@ -171,6 +156,11 @@ module.exports = function (app) {
                 return
             }
         }
+    });
+
+    app.route('/').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('entry/index.html', extendPublic({}, req));
     });
 
     app.route('/home').get(function (req, res) {
