@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TigerWit</title>
+    <% include /common/vendor/web.css.html %>
+
+    <!-- build:css(.tmp) /styles/entry.index.css -->
+    <link rel="stylesheet" href="/styles/entry.css">
+    <!-- endbuild -->
+
+</head>
+
+<body ng-app="TigerEntry">
+    <div class="entry_layout" ng-controller="EntryIndexController">
+        <div class="entry_banner">
+            <a class="banner_logo"></a>
+            <div class="banner_swiper">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1"></div>
+                        <div class="swiper-slide slide2"></div>
+                    </div>
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+            <div class="banner_main">
+                <div class="main_center">
+                    <div class="cont s--inactive">
+                        <!-- cont inner start -->
+                        <div class="cont__inner">
+                            <div class="el">
+                                <div class="el__overflow">
+                                    <div class="el__inner">
+                                    <div class="el__bg"></div>
+                                    <div class="el__preview-cont cont1 clearfix">
+                                        <section class="index2-quote index2-product font_fff">
+                                            <div class="container">
+                                                <h2 class="index2-product__title">
+                                                    TigerWit </br>
+                                                    Makes Trading Easier
+                                                </h2>
+                                                <p class="title_tip">Follow Masters / Autonomous Trading / MDA Stratagy Trading</p>
+                                                <div class="clearfix queto_block">
+                                                    <ul class="index2-quote__content clearfix">
+                                                        <li class="pro">
+                                                            Markets
+                                                        </li>
+                                                        <li class="sell">
+                                                            Sell
+                                                        </li>
+                                                        <li class="buy">
+                                                            Buy
+                                                        </li>
+                                                    </ul>
+                                                    <ul ng-repeat="quoteSymbol in quoteSymbols" class="index2-quote__content clearfix" ng-class="{h_border: $index%2 === 0}">
+                                                        <li class="pro">
+                                                            {{ quoteSymbol.symbol }}
+                                                        </li>
+                                                        <li class="sell" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                                                            <span>
+                                                                {{ quoteSymbol.sell }}
+                                                            </span>
+                                                        </li>
+                                                        <li class="buy" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                                                            <span>
+                                                                {{ quoteSymbol.buy }}
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="entry_btn start_btn fr">Start Trading</div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <div class="el__content">
+                                        <section class="index2-quote index2-product font_gray active_quote clearfix">
+                                            <div class="unfold_container_left">
+                                                <h2 class="index2-product__title">
+                                                    TigerWit </br>
+                                                    Makes Trading Easier
+                                                </h2>
+                                                <p class="title_tip">Follow Masters / Autonomous Trading / MDA Stratagy Trading</p>
+                                                <div class="clearfix queto_block">
+                                                    <ul class="index2-quote__content clearfix">
+                                                        <li class="pro">
+                                                            Markets
+                                                        </li>
+                                                        <li class="sell">
+                                                            Sell
+                                                        </li>
+                                                        <li class="buy">
+                                                            Buy
+                                                        </li>
+                                                    </ul>
+                                                    <ul ng-repeat="quoteSymbol in quoteSymbols" class="index2-quote__content clearfix" ng-class="{h_border: $index%2 === 0}">
+                                                        <li class="pro">
+                                                            {{ quoteSymbol.symbol }}
+                                                        </li>
+                                                        <li class="sell" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                                                            <span>
+                                                                {{ quoteSymbol.sell }}
+                                                            </span>
+                                                        </li>
+                                                        <li class="buy" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                                                            <span>
+                                                                {{ quoteSymbol.buy }}
+                                                            </span>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="unfold_container_right">
+                                                <a class="entry_btn queto_btn1 btn_FCA">
+                                                    Start Trading
+                                                </a>
+                                                <a class="entry_btn queto_btn2 btn_SCB">
+                                                    Start Trading
+                                                </a>
+                                            </div>
+                                        </section>
+                                        <div class="el__close-btn"></div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="el">
+                                <div class="el__overflow">
+                                    <div class="el__inner">
+                                    <div class="el__bg"></div>
+                                    <div class="el__preview-cont cont2 preview_content clearfix">
+                                        <p class="preview_content_title">
+                                            Customer Acquisition </br>
+                                            More Faster & Easier </br>
+                                           as TigerWit's IB
+                                        </p>
+                                        <p class="preview_content_detail">
+                                            <span>Independent Brand Establishment</span></br>
+                                            API technical services to help build your own brand.
+                                        </p>
+                                        <p class="preview_content_detail">
+                                            <span>Intelligent Management System</span></br>
+                                            It is easier to improve service quality based on data management.
+                                        </p>
+                                        <p class="preview_content_detail">
+                                            <span>Adaptive Market Operation Strategy</span></br>
+                                            Through the mobile Internet and the financial industry combination of the more adaptable operation plan.
+                                        </p>
+                                        <p class="preview_content_detail">
+                                            <span>Support and Training</span></br>
+                                            Share market knowledge, trading strategies and customer experience
+                                        </p>
+                                        <div class="entry_btn join_btn fr">Join Us</div>
+                                    </div>
+                                    <div class="el__content">
+                                        <div class="font_gray clearfix">
+                                            <div class="unfold_container_left unfold_container_left_2 preview_content">
+                                                <p class="preview_content_title">
+                                                    Customer Acquisition </br>
+                                                    More Faster & Easier </br>
+                                                    as TigerWit's IB
+                                                </p>
+                                                
+                                                <p class="preview_content_detail detail_more">
+                                                    <span>Who is TigerWit’?</span></br>
+                                                    TigerWit is a global forex platform with offices in UK, AU, BS and CN. With the core driver of technology upgrades, we will constantly create a transparent, credible, low-cost, and efficient trading environment.
+                                                </p>
+                                                <p class="preview_content_detail detail_more">
+                                                    <span>Why Choose TigerWit?</span></br>
+                                                    Authority Supervision </br>
+                                                    Regulation by FCA, and regulated No. is 679941.
+                                                </p>
+                                                <p class="preview_content_detail detail_more">
+                                                    <span>Independent Platform</span></br>
+                                                    Building your independent forex platform through our API technology service. Customer Acquisition with more faster and efficient.
+                                                </p>
+                                                <p class="preview_content_detail detail_more">
+                                                    <span>Smart Trading System</span></br>
+                                                    Independent development, Compatible with MT4 system. Easy to operate in Web & APP. and you can also follow trading.
+                                                </p>
+                                                <a class="entry_btn join_btn2 fr btn_IB" href="https://global.tigerwit.com/bd/brand_proxy">Join Us</a>
+                                            </div>
+                                            <!-- <div class="unfold_container_right">
+                                                
+                                            </div> -->
+                                        </div>
+                                        <div class="el__close-btn"></div>
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="el">
+                                <div class="el__overflow">
+                                    <div class="el__inner">
+                                        <div class="el__bg"></div>
+                                        <div class="el__preview-cont preview_content cont3">
+                                            <p class="preview_content_title">
+                                                Blockchain Technology
+                                            </p>
+                                            <p class="preview_content_detail">
+                                                Better trading tools and safe and transparent trading environment
+                                            </p>
+                                            <a class="entry_btn read_btn fr" href="/blockchain">Read More</a>
+                                        </div>
+                                        <div class="el__content">
+                                            <div class="font_gray clearfix">
+                                                <div class="unfold_container_left unfold_container_left_3 preview_content">
+                                                    <p class="preview_content_title">
+                                                        Blockchain Technology
+                                                    </p>
+                                                    <p class="preview_content_detail detail_more">
+                                                        Better trading tools and safe and transparent trading environment
+                                                    </p>
+                                                    <!-- <div class="entry_btn join_btn2 fr">Join Us</div> -->
+                                                </div>
+                                                <div class="unfold_container_right">
+                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="el__close-btn"></div>
+                                </div>
+                                <!-- <div class="el__index">
+                                    <div class="el__index-back">3</div>
+                                    <div class="el__index-front">
+                                    <div class="el__index-overlay" data-index="3">3</div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="entry_icons">
+            <img src="/images/entry/icons.png" alt="">
+        </div>
+        <div class="entry_map"></div>
+        <div class="entry_footer">
+            <div class="layer_contentBox" id="layer_contentBox">
+                <div class="layer_entry">
+                    <a href="https://itunes.apple.com/us/app/%E8%80%81%E8%99%8E%E5%A4%96%E6%B1%87/id1091437876?platform=iphone&preserveScrollPosition=true#platform/iphone" class="app_apple"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.tigerwit.forex" class="app_google"></a>
+                </div>
+            </div>
+            <div class="footer_main">
+                <div class="footer_main_log">
+                    <img src="/images/entry/footer_logo.png" alt="">
+                </div>
+                <ul class="footer_main_links clearfix">
+                    <li class="links_block">
+                        <img src="/images/entry/FCA.png" alt="">
+                        <br>
+                        <br>
+                        <img src="/images/entry/SCB.png" alt="">
+                    </li>
+                    <li class="links_block">
+                        <p class="links_block_title">Trading Platform</p>
+                        <a class="links_block_link btn_app_link">TigerWit App</a>
+                        <a class="links_block_link" href="/web/mt4">MT4 Download</a>
+                        <a class="links_block_link" href="/web/product/trade">MT4 Web Version</a>
+                    </li>
+                    <li class="links_block">
+                        <p class="links_block_title">Business Cooperation</p>
+                        <a class="links_block_link" href="https://global.tigerwit.com/bd/brand_proxy">The Agent Cooperation</a>
+                        <a class="links_block_link" href="/web/agent/become">Become a Master</a>
+                        <a class="links_block_link" href="/web/blog/trade_fee">Trade Fee</a>
+                    </li>
+                    <li class="links_block">
+                        <p class="links_block_title">About</p>
+                        <a class="links_block_link" href="/web/about/tigerwit">About TigerWit</a>
+                        <a class="links_block_link" href="/web/blog/agreement">Conditions and Clauses</a>
+                        <!-- <a class="links_block_link" href="">CFD</a> -->
+                    </li>
+                    <li class="links_block">
+                        <p class="links_block_title">Contact Us</p>
+                        <a class="links_block_link" href="">Phone: 400 - 809 - 8509</a>
+                        <p class="links_block_link">
+                            Email: 
+                            <a class="link_mail" href="mailto:support@tigerwit.com">support@tigerwit.com</a>
+                        </p>
+                        <br>
+                        <div class="links_block_contact">
+                            <ul class="footer-follow clearfix">
+                                <li class="footer-weibo">
+                                    <a href="http://weibo.com/TigerWit?refer_flag=1001030102_&is_hot=1 " target="_blank">
+                                        <img src="/images/entry/weibo.png">
+                                    </a>
+                                </li>
+                                <li class="footer-weixin">
+                                    <img src="/images/entry/weixin.png">
+                                    <span>
+                                        <img src="/images/entry/footer-weixin-code.png">
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+                <div class="footer_main_risk">
+                    High Risk Warning:
+                    <br>
+                    <br>
+                    The spread contract is a leveraged financial product that may incur losses beyond your savings. You do not actually own or hold any of the underlying assets. Please read TigerWit's product disclosure statement carefully before the transaction. Please fully understand the risks involved before trading and carefully manage your exposure. The TigerWit platform provides replication trading services for the vast majority of traders and ordinary investors; Any information posted on the site, including real-time trading alerts, investment articles, and other resources, comes from the Internet. All users must carefully consider and weigh investment risks and safety; The historical data of the transaction master does not represent the future operational capability, so any risk generated by the user should be borne by himself.
+                    <br>
+                    <br>
+                    TigerWit Limited has ownership and access to the site. The financial conduct authority (FCA) issued a licence number: 679941. Authority and regulation of the Bahamas securities and exchange commission (SCB) : SIA-F185.
+                </div>
+            </div>
+        </div>
+    </div>
+    <% include /common/vendor/web.js.html %>
+    <!-- build:js(client) /scripts/entry.index.js -->
+    <script src="/scripts/entry/queto.js"></script>
+    <script src="/scripts/entry/index.js"></script>
+    <script src="/scripts/plugins/plugins.js"></script>
+    <script src="/scripts/plugins/sha1.js"></script>
+    <script src="/scripts/plugins/layer.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
