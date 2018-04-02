@@ -163,6 +163,11 @@ module.exports = function (app) {
         res.render('entry/index.html', extendPublic({}, req));
     });
 
+    app.route('/blockchain').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('entry/blockchain.html', extendPublic({}, req));
+    });
+
     app.route('/home').get(function (req, res) {
         setEnvCf(req, res);
         res.render('home.html', extendPublic({}, req));
