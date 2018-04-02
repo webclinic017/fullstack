@@ -1,0 +1,56 @@
+.blockchain_layout {
+    .blockchain_banner {
+        height: 1000px;
+        background: #2a2b2f;
+        position: relative;
+        >div {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+        }
+        .banner_logo {
+            position: absolute;
+            top: 40px;
+            left: 110px;
+            z-index: 2;
+            width: 230px;
+            height: 55px;
+            background-size: 100%;
+            background-image: url('/images/entry/logo.png');
+            background-repeat: no-repeat;
+        }
+        .banner_particle {
+            z-index: 0;
+        }
+        .banner_cont {
+            z-index: 1;
+            width: 100%;
+            .cont_main {
+                width: 1380px;
+                height: 1000px;
+                margin: 0 auto;
+                .cont_main__slogan {
+                    margin-top: 325px;
+                    text-align: center;
+                    color: #fff;
+                    >p {
+                        padding: 20px;
+                        background: rgba(42,43,47, 0.9);
+                        display: inline-block;
+                    }
+                    .slogan_main {
+                        font-size: 45px;
+                        font-weight: 300;
+                        font-family: 'Microsoft Yahei';
+                    }
+                    .slogan_main {
+                        font-size: 22px;
+                        font-weight: 200;
+                        font-family: 'Microsoft Yahei';
+                    }
+                }
+            }
+        }
+    }
+}

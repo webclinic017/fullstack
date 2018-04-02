@@ -1,20 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <style>
-        *{
-            margin:0;
-        }
-        img{
-            width: 100%;
-        }
-    </style>
+    <title>TigerWit</title>
+    <% include /common/vendor/web.css.html %>
+
+    <!-- build:css(.tmp) /styles/entry.index.css -->
+    <link rel="stylesheet" href="/styles/entry.css">
+    <!-- endbuild -->
+
 </head>
+
 <body>
-    <img src="/images/upgrading.jpg" alt="">
+    <div class="blockchain_layout">
+        <div class="blockchain_banner">
+            <a href="/" class="banner_logo"></a>
+            <div class="banner_particle">
+
+            </div>
+            <div class="banner_cont">
+                <div class="cont_main clearfix">
+                    <div class="cont_main__slogan">
+                        <p class="slogan_main">
+                            SECURE AND RELIABLE <br>
+                            NEXT-GENERATION TRADING NETWORKS
+                        </p>
+                        <br>
+                        <p class="slogan_sub">
+                            Hundreds of millions of orders processing experience <br>
+                            Support mobile platform and web platform's follow trade and independent trading.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- build:js(client) /scripts/entry.blockchain.js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/scripts/entry/three.js"></script>
+    <script src="/scripts/entry/blockchain.js"></script>
+    <script src="/scripts/plugins/plugins.js"></script>
+    <script src="/scripts/plugins/layer.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>
