@@ -13,13 +13,14 @@
     //     loop: true,
     //     effect: 'fade'
     // });
-
     $(function () {
+        // 设置语言
+        $.cookie('lang', 'en');
         new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
             paginationClickable: true,
             autoplay: 4000,
-            speed: 1000,
+            speed: 1600,
             loop: true,
             effect: 'fade'
         });
@@ -73,6 +74,17 @@
         })
         $('.btn_IB').click(function(){
             window.location.href = oHref[domain].ib
+        })
+        $('.btn_app_link').click(function(){
+            layer.open({
+                type: 1,
+                title: '',
+                closeBtn: 0,
+                shadeClose: true,
+                shade: 0.5,
+                area: ['280px', '204px'],
+                content: $('.layer_contentBox').html()
+            });
         })
     })
 }())

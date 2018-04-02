@@ -17,6 +17,7 @@
 <body ng-app="TigerEntry">
     <div class="entry_layout" ng-controller="EntryIndexController">
         <div class="entry_banner">
+            <a class="banner_logo"></a>
             <div class="banner_swiper">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
@@ -181,7 +182,7 @@
                                                     <span>Smart Trading System</span></br>
                                                     Independent development, Compatible with MT4 system. Easy to operate in Web & APP. and you can also follow trading.
                                                 </p>
-                                                <a class="entry_btn join_btn2 fr btn_IB">Join Us</a>
+                                                <a class="entry_btn join_btn2 fr btn_IB" href="https://global.tigerwit.com/bd/brand_proxy">Join Us</a>
                                             </div>
                                             <div class="unfold_container_right">
                                                 
@@ -241,6 +242,12 @@
         </div>
         <div class="entry_map"></div>
         <div class="entry_footer">
+            <div class="layer_contentBox" id="layer_contentBox">
+                <div class="layer_entry">
+                    <a href="https://itunes.apple.com/us/app/%E8%80%81%E8%99%8E%E5%A4%96%E6%B1%87/id1091437876?platform=iphone&preserveScrollPosition=true#platform/iphone" class="app_apple"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.tigerwit.forex" class="app_google"></a>
+                </div>
+            </div>
             <div class="footer_main">
                 <div class="footer_main_log">
                     <img src="/images/entry/footer_logo.png" alt="">
@@ -254,14 +261,14 @@
                     </li>
                     <li class="links_block">
                         <p class="links_block_title">Trading Platform</p>
-                        <a class="links_block_link" href="">TigerWit App</a>
+                        <a class="links_block_link btn_app_link">TigerWit App</a>
                         <a class="links_block_link" href="/web/mt4">MT4 Download</a>
                         <a class="links_block_link" href="/web/product/trade">MT4 Web Version</a>
                     </li>
                     <li class="links_block">
                         <p class="links_block_title">Business Cooperation</p>
-                        <a class="links_block_link" href="">The Agent Cooperation</a>
-                        <a class="links_block_link" href="">Become a Master</a>
+                        <a class="links_block_link" href="https://global.tigerwit.com/bd/brand_proxy">The Agent Cooperation</a>
+                        <a class="links_block_link" href="/web/agent/become">Become a Master</a>
                         <a class="links_block_link" href="/web/blog/trade_fee">Trade Fee</a>
                     </li>
                     <li class="links_block">
@@ -311,7 +318,9 @@
     <!-- build:js(client) /scripts/entry.index.js -->
     <script src="/scripts/entry/queto.js"></script>
     <script src="/scripts/entry/index.js"></script>
+    <script src="/scripts/plugins/plugins.js"></script>
     <script src="/scripts/plugins/sha1.js"></script>
+    <script src="/scripts/plugins/layer.js"></script>
     <!-- endbuild -->
 </body>
 

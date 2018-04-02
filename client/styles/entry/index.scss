@@ -9,9 +9,7 @@
         margin-right: 30px;
         margin-top: 10px;
     }
-    &.active_quote {
-        
-    }
+    &.active_quote {}
     .title_tip {
         margin: 0;
         text-align: left;
@@ -46,7 +44,6 @@
         float: left;
         width: 90%;
         padding: 10px 0;
-        
         li {
             float: left;
             text-align: center;
@@ -92,12 +89,15 @@
         }
     }
 }
+
 .font_fff {
     color: #fff;
 }
+
 .font_gray {
     color: #222;
 }
+
 .unfold_container_left {
     width: 415px;
     height: 650px;
@@ -105,7 +105,6 @@
     float: left;
     margin: -30px;
     padding: 30px;
-
     &.unfold_container_left_2 {
         background: #303135;
     }
@@ -113,6 +112,7 @@
         background: transparent;
     }
 }
+
 .unfold_container_right {
     width: 100%;
     height: 590px;
@@ -132,6 +132,27 @@
     }
 }
 
+.layui-layer-content {
+    border-radius: 10px;
+    .layer_entry {
+        background: #fff;
+        >a {
+            display: block;
+            width: 240px;
+            height: 72px;
+            margin: 20px;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+        .app_apple {
+            background-image: url('/images/entry/app_apple.png');
+        }
+        .app_google {
+            background-image: url('/images/entry/app_google.png');
+        }
+    }
+}
+
 .preview_content {
     color: #fff;
     p {
@@ -147,7 +168,7 @@
         &.detail_more {
             margin-top: 20px;
         }
-        > span {
+        >span {
             font-size: 18px;
             font-weight: 500;
         }
@@ -180,6 +201,17 @@
         height: 1380px;
         width: 100%;
         position: relative;
+        .banner_logo {
+            position: absolute;
+            left: 100px;
+            top: 40px;
+            z-index: 2;
+            width: 230px;
+            height: 55px;
+            background-size: 100%;
+            background-image: url('/images/entry/logo.png');
+            background-repeat: no-repeat;
+        }
         .banner_swiper {
             position: absolute;
             left: 0;
@@ -196,7 +228,7 @@
                 height: 100%;
                 text-align: center;
                 font-size: 18px;
-                background-position: center top;
+                background-position: center center;
                 background-size: auto 100%;
                 background-repeat: no-repeat;
                 &.slide1 {
@@ -205,6 +237,24 @@
                 &.slide2 {
                     background-image: url('/images/entry/banner2.png');
                 }
+                // animation: scaleBG 1s linear infinite alternate;
+                // -webkit-animation: scaleBG 1s linear infinite alternate;
+                // @keyframes scaleBG {
+                //     from {
+                //         background-size: auto 100%;
+                //     }
+                //     to {
+                //         background-size: auto 120%;
+                //     }
+                // }
+                // @-webkit-keyframes scaleBG {
+                //     from {
+                //         background-size: auto 100%;
+                //     }
+                //     to {
+                //         background-size: auto 120%;
+                //     }
+                // }
             }
             .swiper-pagination-bullet-active {
                 background: $brand-primary-dark;
@@ -245,12 +295,15 @@
     .entry_footer {
         background: #1b1b1b;
         padding-bottom: 75px;
+        .layer_contentBox {
+            display: none;
+        }
         .footer_main {
             width: 1280px;
             margin: 0 auto;
             .footer_main_log {
                 padding: 20px 0;
-                img{
+                img {
                     width: 190px;
                 }
             }
@@ -277,7 +330,7 @@
                         color: #606060;
                         padding: 7px 0;
                         cursor: pointer;
-                        &:hover{
+                        &:hover {
                             color: #fff;
                         }
                         .link_mail {
@@ -289,7 +342,6 @@
                             position: relative;
                             float: left;
                             padding-right: 15px;
-                        
                             &:before {
                                 content: '';
                                 display: block;
@@ -305,14 +357,12 @@
                             float: left;
                             padding-left: 15px;
                             position: relative;
-                        
                             span {
                                 display: none;
                                 position: absolute;
                                 left: 108%;
                                 top: -70%;
                             }
-                        
                             &:hover {
                                 span {
                                     display: block;
