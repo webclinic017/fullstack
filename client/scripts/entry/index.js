@@ -51,12 +51,12 @@
 
         var oHref = {
             www: {
-                fca: 'https://www.tigerwit.com.co.uk',
+                fca: 'https://www.tigerwit.co.uk',
                 scb: '/cn',
                 ib: 'https://global.tigerwit.com/bd/brand_proxy'
             },
             demo: {
-                fca: 'https://demo.tigerwit.com.co.uk',
+                fca: 'https://demo.tigerwit.co.uk',
                 scb: '/cn',
                 ib: 'https://globaldemo.tigerwit.com/bd/brand_proxy',
             }
