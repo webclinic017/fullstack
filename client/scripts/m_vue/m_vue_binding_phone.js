@@ -118,9 +118,10 @@ if ($(".m_vue").attr("data-page") === "binding_phone") {
                     if (!self.$checkTel.phone.phoneErr && !self.exsit) {
                         self.clickable.code = false;
                         dealApiUrlResource("getCodeApi", "POST", {
-                            phone: self.phone,
+                            account: self.phone,
                             code_token: self.token,
-                            type: 3
+                            type: 3,
+                            account_type: 1
                         }).then(function (data) {
                             self.clickable.code = false;
                             if (data.is_succ) {

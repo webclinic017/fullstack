@@ -17,7 +17,6 @@
         // getSettingInfoApi: rootUrl + '/action/public/v4/get_info',      //get
         getSettingInfoApi: rootUrl + '/user/info',      //get
         // getCodeApi: rootUrl + '/action/public/v3/get_phone_reg_code',   //post
-        getCodeApi: rootUrl + '/validation/send_phone_code',   //post
         // set_token: rootUrl + '/action/public/v3/set_token',             //get
         set_token: rootUrl + '/validation/code_token',             //post
         // check_exsit: rootUrl + '/action/public/v4/exists',              //get
@@ -34,13 +33,13 @@
         // set_region: rootUrl + '/action/public/v4/set_region',           //post
         set_region: rootUrl + '/user/region',           //put
         // sendEmailCodeApi: rootUrl + '/action/public/v3/send_email_code', //post
-        sendEmailCodeApi: rootUrl + '/validation/send_email_code', //post
+        getCodeApi: rootUrl + '/validation/send_code',   //post
         // checkEmailCodeApi: rootUrl + '/action/public/v3/check_email_code', // post
         checkEmailCodeApi: rootUrl + '/validation/check_email_code', // post
+        checkCodeApi: rootUrl + '/validation/check_code', //post
         // saveEmailApi: rootUrl + '/action/public/v3/set_my_bind_email', //post
         saveEmailApi: rootUrl + '/user/email', //put
         // checkCodeApi: rootUrl + '/action/public/v4/verifycode', //post
-        checkCodeApi: rootUrl + '/validation/check_phone_code', //post
         // setNewPasswordApi: rootUrl + '/action/public/v4/change_password', //post
         setNewPasswordApi: rootUrl + '/forget_passwd', //put
         getWebProductInfoApi: '/napi?action=get_product', //get

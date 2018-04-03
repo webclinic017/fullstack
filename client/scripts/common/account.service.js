@@ -17,9 +17,7 @@
             updataId: updataId,
             checkExist: checkExist,
             updataUserInfo: updataUserInfo,
-            getRCaptcha: getRCaptcha,
             register: register,
-            checkPhoneAndCaptcha: checkPhoneAndCaptcha,
             setNewPwd: setNewPwd,
             getPersonalInfo: getPersonalInfo,
             getPersonalInfoDegree: getPersonalInfoDegree,
@@ -40,14 +38,19 @@
             setKyc: setKyc,
             getKyc: getKyc,
             logout: logout,
-            sendEmailCode: sendEmailCode,
-            checkEmailCode: checkEmailCode,
             setBindEmail: setBindEmail,
             getSpreadInfo: getSpreadInfo,
             getUserGroup: getUserGroup,
             hasChecked: false,
             getAuthStatus: getAuthStatus, //获取认证状态    
-            getAdvertiseRecords: getAdvertiseRecords        
+            getAdvertiseRecords: getAdvertiseRecords,
+            // sendEmailCode: sendEmailCode,
+            // getRCaptcha: getRCaptcha,
+            sendCode: sendCode,
+
+            checkPhoneAndCaptcha: checkPhoneAndCaptcha,
+            checkEmailCode: checkEmailCode,
+            checkCode: checkCode,
         };
         var resolveValue;
         return service;
@@ -108,7 +111,7 @@
                     });
                 }
             }
-            
+
             return deferred.promise;
 
         }
@@ -166,21 +169,6 @@
         }
 
         /**
-         * @name getRCaptcha
-         * @desc 获取验证码
-         * 验证码类型:type -> 1-注册,2-忘记密码,3-修改绑定,4-登录,5-申请代理验证码
-         * 验证码方式:mode -> 1-短信(默认),2-语音
-         */
-        function getRCaptcha(phone, token, type, mode) {
-            return publicHttp.dealPublicRequest(o.getRCaptchaApi, 'POST', {
-                 phone: phone,
-                 code_token: token,
-                 type: type,
-                 mode: mode
-            });
-        }
-
-        /**
          * @name register
          * params
                 phone: phone,
@@ -209,6 +197,35 @@
                 phone: phone,
                 code: captcha
             });
+        }
+
+        /**
+        * Account Service 检测邮箱验证码是否正确
+        *
+        * @method checkEmailCode
+        *
+        * @param {String} email 不传则向绑定邮箱发送
+        * @param {String} code 验证码
+        */
+        function checkEmailCode(code) {
+            return publicHttp.dealPublicRequest(o.checkEmailCodeApi, 'POST', {
+                code: code
+            });
+        }
+
+        /**
+         * 检测验证码是否正确
+         * @param {String} account 
+         * @param {Number} code 
+         * @param {Number} account_type 1 手机号 2 邮箱
+         */
+        function checkCode(account, code, account_type) {
+            return publicHttp.dealPublicRequest(
+                o.checkCodeApi, 'POST', 
+                angular.extend({
+                    code: code
+                }, account ? { account: account } : {account_type : account_type ? account_type : '1'}
+            ));
         }
 
         /**
@@ -432,30 +449,20 @@
         }
 
         /**
-         * Account Service 发送邮箱验证码
-         *
-         * @method sendEmailCode
-         *
-         * @param {String} email 不传则向绑定邮箱发送
+         * 发送验证码合并接口
+         * @param {String} account 手机号
+         * @param {String} code_token 
+         * @param {Number} type 1-注册/绑定,2-忘记密码,3-修改绑定,4-登录,5-代理商申请
+         * @param {Number} account_type 1-手机号,2-邮箱
+         * account_type 和account 不能同时存在
          */
-        function sendEmailCode(email) {
-            return publicHttp.dealPublicRequest(o.sendEmailCodeApi, 'POST', {
-                email: email
-            });
-        }
-
-        /**
-         * Account Service 检测邮箱验证码是否正确
-         *
-         * @method checkEmailCode
-         *
-         * @param {String} email 不传则向绑定邮箱发送
-         * @param {String} code 验证码
-         */
-        function checkEmailCode(code) {
-            return publicHttp.dealPublicRequest(o.checkEmailCodeApi, 'POST', {
-                code: code
-            });
+        function sendCode(account, code_token, type, phone_code, account_type) {
+            return publicHttp.dealPublicRequest(o.sendCodeApi, 'POST', angular.extend({
+                    code_token: code_token,
+                    type: type,
+                    phone_code: phone_code
+                }, account ? { account: account } : {account_type : account_type ? account_type : '1'})
+            );
         }
 
         /**
@@ -500,14 +507,17 @@
          *      @params identifier    wheel 首页轮播图，popup 首页弹窗
          *
          */
-        function getAdvertiseRecords (identifier) {
+        function getAdvertiseRecords(identifier) {
             return publicHttp.dealPublicRequest(o.getAdvertiseRecords, 'GET', {
                 identifier: identifier
             });
         }
 
-        function updataId(params){
+        function updataId(params) {
             return publicHttp.dealPublicRequest(o.updataId, 'PUT', params);
+        }
+        function setUsername(params){
+            return publicHttp.dealPublicRequest(o.setUsername, 'PUT', params);
         }
     }
 })();

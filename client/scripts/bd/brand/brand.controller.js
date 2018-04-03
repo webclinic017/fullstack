@@ -75,7 +75,7 @@
                 layer.msg('请填写正确的手机号码');
                 return;
             }
-            account.getRCaptcha($scope.phone, token, 5, 1).then(function (data) {
+            account.sendCode($scope.phone, token, 5).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
                     // 神策统计
@@ -131,7 +131,7 @@
                             layer.msg('请填写正确的手机号码');
                             return;
                         }
-                        account.getRCaptcha($scope.phone, token, 5, 1).then(function (data) {
+                        account.sendCode($scope.phone, token, 5).then(function (data) {
                             // console.log(data);
                             if (data.is_succ) {
                                 // 神策统计
