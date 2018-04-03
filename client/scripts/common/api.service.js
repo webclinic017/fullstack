@@ -20,6 +20,7 @@
             loginApi: urlOrigin2 + '/v2/auth/login',
             updataUserInfoApi: urlOrigin2 + '/v2/user/auth_info',
             updataId: urlOrigin2 + '/user/update_idno',
+            setUsername: urlOrigin2 + '/user/username',
             checkLoginedApi: urlOrigin2 + '/auth/check',
             setTokenApi: urlOrigin2 + '/validation/code_token',
             checkExistApi: urlOrigin2 + '/user/check_exists',

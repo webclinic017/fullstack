@@ -15,6 +15,7 @@
             checkLogined: checkLogined,
             setToken: setToken,
             updataId: updataId,
+            setUsername: setUsername,
             checkExist: checkExist,
             updataUserInfo: updataUserInfo,
             register: register,
@@ -516,6 +517,7 @@
         function updataId(params) {
             return publicHttp.dealPublicRequest(o.updataId, 'PUT', params);
         }
+
         function setUsername(params){
             return publicHttp.dealPublicRequest(o.setUsername, 'PUT', params);
         }

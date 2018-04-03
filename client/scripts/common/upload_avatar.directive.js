@@ -4,13 +4,15 @@
 
     angular
         .module('fullstackApp')
-        .directive('twUploadAvatar', ['api', '$cookies', twUploadAvatar]);
+        .directive('twUploadAvatar', ['api', '$cookies', '$layer',twUploadAvatar]);
 
-    function twUploadAvatar(api, $cookies) {
+    function twUploadAvatar(api, $cookies, $layer) {
         return {
             restrict: 'A',
             scope: {
-                filename: '='
+                filename: '=',
+                // 是否禁止上传
+                ban: '='
             },
             link: function (scope, element, attrs) {
                 var inputEle = element.find('input'),
@@ -32,6 +34,8 @@
                 });
                 var base64PreviewImg = null
 
+                console.log(scope)
+
                 inputEle.fileupload({
                     url: uploadUrl,
                     add: function (e, data) {
@@ -42,7 +46,21 @@
                         reader.onload = function () {
                             base64PreviewImg = this.result
                         };
-                        data.submit();
+                        if(scope.ban){
+                            $layer({
+                                title: '系统提示',
+                                size: 'sm',
+                                msgClass: 'font-danger',
+                                msg: scope.ban.msg,
+                                btns: {
+                                    '确定': function () {
+            
+                                    }
+                                }
+                            })
+                        } else {
+                            data.submit();
+                        }
                     },
                     done: function (e) {
                         // imgEle.attr('src', filename + '?timestamp=' + e.timeStamp);

@@ -1,5 +1,5 @@
 <div ng-controller="SettingInfoAvatarController">
-    <div class="upload_avatar text-center" tw-upload-avatar filename="personal.lgAvatar">
+    <div class="upload_avatar text-center" tw-upload-avatar ban="ban" filename="personal.lgAvatar">
 
         <img class="upload_avatar__avatar" ng-show="!personal.addAvatarImg" ng-src="{{personal.lgAvatar}}" alt="头像">
         <img class="upload_avatar__avatar" ng-show="!!personal.addAvatarImg" ng-src="{{personal.addAvatarImg}}">
