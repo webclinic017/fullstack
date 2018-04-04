@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+  <div class="m_evidence">
+    <ul class="m_evidence__box">
+      <!-- insert temp -->
+    </ul>
+  </div>
+
+  <script id="template_list" type="text/html">
+    <$for(var i=0;i<data.length;i++){$>
+      <li class="m_evidence__item">
+        <div class="title clearfix">
+          <span><$= data[i].title$></span>
+          <i class="fa fa-angle-down"></i>
+          <i class="fa fa-angle-up"></i>
+        </div>
+        <div class="m_evidence__item-content">
+          <$for(var j=0;j<data[i].content.length;j++){$>
+              <$if (data[i].content[j].title) {$>
+                <div class="sub-title">
+                  <$= data[i].content[j].title$>
+                </div>  
+              <$}$>
+              <div class="info">
+                <$for(var k=0;k<data[i].content[j].tip.length;k++){$>
+                  <p><$= data[i].content[j].tip[k]$></p>
+                <$}$>
+              </div>
+              <div class="pic">
+                <$for(var k=0;k<data[i].content[j].tip.length;k++){$>
+                  <img src="<$= data[i].content[j].pic[k]$>" alt="">
+                <$}$>
+              </div>
+            <$}$>
+        </div>
+      </li>
+    <$}$>
+  </script>
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- 注册协议相关弹窗 -->
+<%include /common/component/agment_mdl.html %>
+<!-- build:js(client) /scripts/m_deposit_evidence.js -->
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/asset/m_evidence.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

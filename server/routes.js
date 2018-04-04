@@ -12,6 +12,7 @@ var querystring = require('querystring');
 var masterApi = require('./api/master');
 var report_sites = require('./report_site');
 var depositBankList = require('./deposit_bank_list');
+var depositEvidenceList = require('./deposit_evidence_list');
 var ACCESS_ORIGIN2 = require('./get_env_config').envConfig.access_origin2 || 'https://a.tigerwit.com';
 var setCompanyCookie,
     envConfig,
@@ -356,6 +357,11 @@ module.exports = function (app) {
     app.route('/m/deposit/success').get(function (req, res) {
         setEnvCf(req, res);
         res.render('m_vue/m_deposit_succ', extendPublic({}, req));
+    });
+    // H5 入金凭证 （老虎和三方使用）
+    app.route('/m/deposit/evidence').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('m_vue/m_deposit_evidence', extendPublic({}, req));
     });
 
     // H5 空白页
@@ -1073,9 +1079,13 @@ module.exports = function (app) {
                 // console.log(data, endPg);
             }
         }
-         // 媒体报道
-         if (action == "get_deposit_bank") {
+        // 银行列表
+        if (action == "get_deposit_bank") {
             data = depositBankList;
+        }
+        // 大额入金示例
+        if (action == "get_deposit_evidence") {
+            data = depositEvidenceList;
         }
         if (action == 'get_product') {
             var type = req.query.product_type;
