@@ -26,7 +26,6 @@
         });
 
         var $cont = document.querySelector('.cont');
-        console.log($cont)
         var $elsArr = [].slice.call(document.querySelectorAll('.el'));
         var $closeBtnsArr = [].slice.call(document.querySelectorAll('.el__close-btn'));
 
@@ -62,6 +61,7 @@
                 ib: 'https://globaldemo.tigerwit.com/bd/brand_proxy',
             }
         }
+        
         var domain = 'demo'
         if(location.host == 'www.tigerwit.com'){
             domain = 'www'
