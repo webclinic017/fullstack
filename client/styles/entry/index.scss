@@ -294,9 +294,10 @@
     }
     .entry_map {
         height: 830px;
+        background-color: rgb(42,43,47);
         background-image: url('/images/entry/map.png');
         background-size: auto 100%;
-        background-position: center;
+        background-position: center center;
     }
     .entry_footer {
         background: #1b1b1b;

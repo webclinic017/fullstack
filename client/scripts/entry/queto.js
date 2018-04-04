@@ -2,7 +2,6 @@
 (function () {
     'use strict';
     angular.module('TigerEntry', []);
-
     angular.module('TigerEntry').controller('EntryIndexController', EntryIndexController);
     EntryIndexController.$inject = ['$scope', '$location', '$timeout', '$http'];
     function EntryIndexController($scope, $location, $timeout, $http) {
