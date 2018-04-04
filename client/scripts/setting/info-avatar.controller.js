@@ -12,6 +12,14 @@
         $scope.avatar = {
             status: 0             
         };
+        if($scope.personal.is_master){
+            $scope.ban = {
+                msg: '您已是高手，不能再修改头像'
+            }
+        } else {
+            $scope.ban = undefined
+        }
+        
         $scope.$on('uploadAvatarStart', function () {
             $scope.$apply(function () {
                 $scope.avatar.status = 1;

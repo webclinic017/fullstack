@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('SettingInfoEmailController', SettingInfoEmailController);
 
-    SettingInfoEmailController.$inject = ['$scope', '$timeout', 'account', '$interval'];
+    SettingInfoEmailController.$inject = ['$scope', '$timeout', 'account', '$interval', '$cookies'];
 
-    function SettingInfoEmailController($scope, $timeout, account, $interval) {
+    function SettingInfoEmailController($scope, $timeout, account, $interval, $cookies) {
         // step1 => binding old Email , step2 => binding new Email
         $scope.step = 1;
 
@@ -66,7 +66,8 @@
                 }
                 email = $scope.emailInfo.newEmail;
             }
-            account.sendEmailCode(email).then(function (data) {
+            var token = $cookies['code_token'];
+            account.sendCode(email ? email : '', token, type == 'new' ? 3 : 4, 2).then(function (data) {
                 if (!data) return;
                 // console.info(data);
                 if (data.is_succ) {
@@ -110,7 +111,7 @@
             }
             $scope.clickable.oldSubmit = false;
 
-            account.checkEmailCode($scope.emailInfo.oldCode).then(function (data) {
+            account.checkCode(null, $scope.emailInfo.oldCode, 2).then(function (data) {
                 // console.info(data);
                 $scope.clickable.oldSubmit = true;
                 if (!data) return;

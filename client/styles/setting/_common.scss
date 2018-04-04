@@ -21,6 +21,12 @@
         height: 100px;
         border: 1px solid $gray;
         border-radius: 50%;
+
+        &.select_directly {
+            width: 150px;
+            height: 150px;
+            box-shadow: 5px 5px 5px $gray;
+        }
     }
 
     @include e(label) {
@@ -31,6 +37,9 @@
         background-color: $gray-darkest;
         color: $brand-primary;
         cursor: pointer;
+        &.includeImg {
+            background-color: transparent;
+        }
         
         > i {
             font-style: normal;

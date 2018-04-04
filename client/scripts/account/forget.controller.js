@@ -74,9 +74,12 @@
                 return;
             }
             $scope.clickable.step1 = false;
-            
-            account.checkPhoneAndCaptcha($scope.account.phone, 
-                    $scope.account.captcha).then(function (data) {
+
+            account.checkCode(
+                $scope.account.phone,
+                $scope.account.captcha
+                
+            ).then(function (data) {
                 if (!data) return;
                 if (data.is_succ) {
                     goNextStep();
@@ -105,27 +108,27 @@
             }
 
             $scope.clickable.submit = false;
-            account.setNewPwd($scope.account.phone, $scope.account.captcha, 
-                    $scope.account.pwdNew).then(function (data) {
-                if (!data) return;
+            account.setNewPwd($scope.account.phone, $scope.account.captcha,
+                $scope.account.pwdNew).then(function (data) {
+                    if (!data) return;
 
-                if (data.is_succ) {
-                    goNextStep();
-                } else {
-                    $scope.clickable.submit = true;
-                    $scope.backErr.system = {
-                        show: true,
-                        msg: data.message
-                    };
-
-                    $timeout(function () {
+                    if (data.is_succ) {
+                        goNextStep();
+                    } else {
+                        $scope.clickable.submit = true;
                         $scope.backErr.system = {
-                            show: false,
-                            msg: ''
+                            show: true,
+                            msg: data.message
                         };
-                    }, 3000);
-                }
-            });
+
+                        $timeout(function () {
+                            $scope.backErr.system = {
+                                show: false,
+                                msg: ''
+                            };
+                        }, 3000);
+                    }
+                });
         }
 
         function getCaptcha(formName) {
@@ -133,15 +136,15 @@
 
             if ($scope[formName]['phone'].$invalid) {
                 return;
-            }            
+            }
 
             $scope.clickable.captcha = false;
             token = $cookies['code_token'];
             var tmp;
             if ($scope.voiceCaptcha) {
-                tmp = account.getRCaptcha($scope.account.phone, token, 2, 2);
+                tmp = account.sendCode($scope.account.phone, token, 2);
             } else {
-                tmp = account.getRCaptcha($scope.account.phone, token, 2);
+                tmp = account.sendCode($scope.account.phone, token, 2);
             }
             tmp.then(function (data) {
                 if (!data) return;
@@ -151,7 +154,7 @@
 
                     $scope.backErr.captchaBtn.show = true;
                     $scope.backErr.captchaBtn.msg = data.message;
-                    
+
                     $timeout(function () {
                         $scope.backErr.captchaBtn.show = false;
                         $scope.backErr.captchaBtn.msg = '';
@@ -167,7 +170,7 @@
             }
 
             // 如果需要后端验错，这里是隐藏错误，所以把状态重置为后端未验证的状态
-            if($scope.backErr[controlName]) {
+            if ($scope.backErr[controlName]) {
                 $scope.backErr[controlName].show = false;
                 $scope.backErr[controlName].status = 0;
             }

@@ -2,6 +2,7 @@ if ($(".m_vue").attr("data-page") === "binding_email") {
 
     var bindingApp = new Vue({
         el: '.m_vue_binding_email',
+
         data: {
             clickable: {
                 submit: true
@@ -30,6 +31,20 @@ if ($(".m_vue").attr("data-page") === "binding_email") {
                 show: false,
                 msg: ''
             }
+        },
+        //生成token
+        ready: function () {
+            var self = this;
+            //生成token
+            dealApiUrlResource("set_token", "POST").then(function (data) {
+                // console.log(data);
+                if (data.is_succ) {
+                    self.token = $.cookie('code_token');
+                }
+            });
+            // apiUrlResource.set_token.save().then(function () {
+            //     self.token = $.cookie('tiger_token')
+            // });
         },
         methods: {
             sendCode: function (arg) {
@@ -60,8 +75,11 @@ if ($(".m_vue").attr("data-page") === "binding_email") {
                     // 倒计时
                     if (self.countDown.noClick) return;
                 }
-                dealApiUrlResource("sendEmailCodeApi", "POST", {
-                    email: email
+                dealApiUrlResource("getCodeApi", "POST", {
+                    account: email,
+                    code_token: self.token,
+                    type: 3,
+                    account_type: 2
                 }).then(function (data) {
                     self.clickable.submit = true;
                     if (!data) return;
@@ -184,8 +202,9 @@ if ($(".m_vue").attr("data-page") === "binding_email") {
                     /*如果所有条件都是false*/
                     if(!self.$validatorMethod.invalid){
                         self.clickable.submit = false;
-                        dealApiUrlResource("checkEmailCodeApi", "POST", {
-                            code: self.code.old
+                        dealApiUrlResource("checkCodeApi", "POST", {
+                            code: self.code.old,
+                            account_type: 2
                         }).then(function (data) {
                             self.clickable.submit = true;
                             if (!data) return;

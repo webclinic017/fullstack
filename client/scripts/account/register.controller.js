@@ -98,9 +98,9 @@
             token = $cookies['code_token'];
             var tmp;
             if ($scope.voiceCaptcha) {
-                tmp = account.getRCaptcha($scope.account.phone, token, 1, 2);
+                tmp = account.sendCode($scope.account.phone, token, 1);
             } else {
-                tmp = account.getRCaptcha($scope.account.phone, token, 1);
+                tmp = account.sendCode($scope.account.phone, token, 1);
             }
 
             tmp.then(function (data) {
@@ -123,7 +123,7 @@
                 return;
             }
 
-            account.checkPhoneAndCaptcha($scope.account.phone, 
+            account.checkCode($scope.account.phone, 
                     $scope.account.captcha).then(function (data) {
                 if (!data) return;
                 if (data.is_succ) {

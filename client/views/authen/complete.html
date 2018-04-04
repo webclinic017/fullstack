@@ -53,11 +53,13 @@
                         <input class="form-control"
                                 name="email"
                                 type="text"
-                                placeholder="请输入您的邮箱，有助于接收重要的提醒消息"
+                                placeholder="请输入您的邮箱"
                                 required
-                                ng-class="{'form-control-error': (frontErr.email.show && completeForm.email.$invalid)}"
+                                ng-disabled="personal.email"
+                                ng-class="{'disabled': personal.email, 'form-control-error': (frontErr.email.show && completeForm.email.$invalid)}"
                                 ng-model="completeInfo.email"
                                 ng-pattern="frontErr.email.reg"
+                                on-enter="sendCode('email')"
                                 ng-blur="[showErr('email'), checkExsit(2)]"
                                 ng-focus="[hideErr('email')]">
         
@@ -74,6 +76,141 @@
                             <p class="alert-arrow_tp_lf">
                                 电子邮箱已存在
                             </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row" ng-if="!personal.email">
+                <div class="col-xs-2">
+                    <label>验证邮箱</label>
+                </div>        
+                <div class="col-xs-8">
+                    <div class="form-control-wrapper contact_way inputor">
+                        <input class="form-control"
+                                name="emailCode"
+                                type="text"
+                                placeholder="请输入验证码"
+                                required
+                                ng-class="{'form-control-error': (frontErr.emailCode.show && completeForm.emailCode.$invalid)}"
+                                ng-model="completeInfo.emailCode"
+                                ng-blur="[showErr('emailCode')]"
+                                ng-focus="[hideErr('emailCode')]">
+                        
+                        <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="sendCode('email')">发送验证码</span>
+                        <span class="sender_btn" ng-show="completeInfo.hasSendCode" >{{ completeInfo.waitTime }}秒 后重新获取</span>
+
+                        <div ng-show="frontErr.emailCode.show">
+                            <p class="alert-arrow_tp_lf" ng-show="completeForm.emailCode.$error.required">
+                                请输入验证码
+                            </p>
+                        </div>
+
+                        <div ng-show="codeErr.email.show">
+                            <p class="alert-arrow_tp_lf">
+                                {{ codeErr.email.msg }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="row">
+                    <div class="col-xs-2">
+                        <label>绑定手机</label>
+                    </div>        
+                    <div class="col-xs-8 bind_phone">
+                        <div class="form-control-wrapper area_code">
+                            <div class="select">
+                                <input class="select__input"
+                                    name="areaCode"
+                                    type="text"
+                                    placeholder="区号"
+                                    required
+                                    ng-disabled="personal.phone"
+                                    ng-model="completeInfo.areaCode.value"
+                                    ng-class="{'form-control-error': frontErr.areaCode.show && completeForm.areaCode.$invalid, 'disabled': personal.phone }"
+                                    ng-blur="showErr('areaCode')"
+                                    ng-focus="hideErr('areaCode')">
+                                
+                                <i ng-if="!personal.phone" class="select__icon fa fa-angle-down"></i>
+    
+                                <ul style="width: 150%;" ng-if="!personal.phone" class="select__dropdown" twform-select data-bind-model="completeInfo.areaCode">
+                                    
+                                    <li ng-repeat="areaCode in areaCodes" ng-class="{'selected': areaCode.value === completeInfo.areaCode.value}">
+                                        <span data-value="{{ areaCode.value }}">{{ areaCode.value }}({{ areaCode.name }})</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        
+                            <div ng-show="frontErr.areaCode.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="completeForm.areaCode.$error.required">
+                                    请选择区号
+                                </p>
+                            </div>
+                        </div>
+                        <div class="form-control-wrapper phone">
+                            <input class="form-control"
+                                    name="phone"
+                                    type="text"
+                                    placeholder="请输入您的手机号"
+                                    required
+                                    ng-disabled="personal.phone"
+                                    ng-class="{'disabled': personal.phone, 'form-control-error': (frontErr.phone.show && completeForm.phone.$invalid) || codeErr.phone.show}"
+                                    ng-model="completeInfo.phone"
+                                    ng-pattern="frontErr.phone.reg"
+                                    on-enter="sendCode('phone')"
+                                    ng-blur="[showErr('phone'), checkExsit(3)]"
+                                    ng-focus="[hideErr('phone')]">
+            
+                            <div ng-show="frontErr.phone.show">
+                                <p class="alert-arrow_tp_lf" ng-show="completeForm.phone.$error.required">
+                                    请输入您的手机号
+                                </p>
+                                <p class="alert-arrow_tp_lf" ng-show="completeForm.phone.$error.pattern">
+                                    手机号码不正确
+                                </p>
+                            </div>
+            
+                            <div ng-show="exsit.phone.show">
+                                <p class="alert-arrow_tp_lf">
+                                    手机号已存在
+                                </p>
+                            </div>
+
+                            <div ng-show="codeErr.phone.show">
+                                <p class="alert-arrow_tp_lf">
+                                    {{ codeErr.phone.msg }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" ng-if="!personal.phone">
+                    <div class="col-xs-2">
+                        <label>验证手机</label>
+                    </div>        
+                    <div class="col-xs-8">
+                        <div class="form-control-wrapper contact_way inputor">
+                            <input class="form-control"
+                                    name="phoneCode"
+                                    type="text"
+                                    placeholder="请输入验证码"
+                                    required
+                                    ng-class="{'form-control-error': (frontErr.phoneCode.show && completeForm.phoneCode.$invalid)}"
+                                    ng-model="completeInfo.phoneCode"
+                                    ng-blur="[showErr('phoneCode')]"
+                                    ng-focus="[hideErr('phoneCode')]">
+                            
+                            <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="sendCode('phone')">发送验证码</span>
+                            <span class="sender_btn" ng-show="completeInfo.hasSendCode" >{{ completeInfo.waitTime }}秒 后重新获取</span>
+    
+                            <div ng-show="frontErr.phoneCode.show">
+                                <p class="alert-arrow_tp_lf" ng-show="completeForm.phoneCode.$error.required">
+                                    请输入验证码
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
