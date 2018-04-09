@@ -11,6 +11,7 @@ var request = require('request');
 var querystring = require('querystring');
 var masterApi = require('./api/master');
 var report_sites = require('./report_site');
+var depositBankList = require('./deposit_bank_list');
 var ACCESS_ORIGIN2 = require('./get_env_config').envConfig.access_origin2 || 'https://a.tigerwit.com';
 var setCompanyCookie,
     envConfig,
@@ -88,20 +89,10 @@ module.exports = function (app) {
 
     // 熊猫外汇页面路径
     app.route('/panda').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('panda', extendPublic({
-            pageInfo: {
-                id: "login"
-            }
-        }, req));
+        res.redirect('https://ibonline.tigerwit.com');
     });
     app.route('/panda/:subpage(login|asset)').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('panda', extendPublic({
-            pageInfo: {
-                id: req.params.subpage || ""
-            }
-        }, req));
+        res.redirect('https://ibonline.tigerwit.com');
     });
     // 三方相关页面
     // 第三方认证流程
@@ -115,7 +106,7 @@ module.exports = function (app) {
     });
     app.use('/', function(req, res, next){
         setEnvCf(req, res);
-        var allowPaths = ['/payment/login', '/payment/asset']
+        var allowPaths = ['/payment/login', '/payment/asset', '/waiting']
         if(req.hostname.indexOf('ibonline') != -1) {
             if(allowPaths.indexOf(req.originalUrl) != -1){
                 var pageId = ''
@@ -124,6 +115,9 @@ module.exports = function (app) {
                 }
                 else if(req.originalUrl == allowPaths[1]){
                     pageId = 'asset'
+                } else if(req.originalUrl == allowPaths[2]){
+                    res.render('waiting', extendPublic({}, req));
+                    return
                 }
                 res.render('third/index', extendPublic({
                     pageInfo: {
@@ -345,7 +339,13 @@ module.exports = function (app) {
     /* H5 充值中转页面 */
     app.route('/m/deposit/pay').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('m_vue/m_deposit_pay', extendPublic({}, req));
+        var platform = 'pc';
+        if (isMobile(req)) {
+            platform = 'mobile';
+        }
+        res.render('m_vue/m_deposit_pay', extendPublic({
+            platform: platform
+        }, req));
     });
     /* H5 充值成功 */
     app.route('/m/deposit/success').get(function (req, res) {
@@ -1067,6 +1067,10 @@ module.exports = function (app) {
                 data = report_sites.slice(offset, Math.min(endPg, sum));
                 // console.log(data, endPg);
             }
+        }
+         // 媒体报道
+         if (action == "get_deposit_bank") {
+            data = depositBankList;
         }
         if (action == 'get_product') {
             var type = req.query.product_type;

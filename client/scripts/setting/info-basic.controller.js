@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('SettingInfoBasicController', SettingInfoBasicController);
 
-    SettingInfoBasicController.$inject = ['$scope', 'account', '$timeout', 'validator'];
+    SettingInfoBasicController.$inject = ['$scope', 'account', '$timeout', 'validator', '$layer'];
 
-    function SettingInfoBasicController($scope, account, $timeout, validator) {
+    function SettingInfoBasicController($scope, account, $timeout, validator, $layer) {
         $scope.basicInfo = {
             username: undefined,
             locationWorld: {
@@ -216,6 +216,20 @@
         }
 
         function submitForm(formName) {
+            if($scope.personal.is_master){
+                $layer({
+                    title: '错误提示',
+                    size: 'sm',
+                    msgClass: 'font-danger',
+                    msg: '您已是高手，暂不能修改基本资料',
+                    btns: {
+                        '确定': function () {
+
+                        }
+                    }
+                })
+                return
+            }
             showErr(formName, 'username');
             // showErr(formName, 'locationWorld');
             // showErr(formName, 'special');

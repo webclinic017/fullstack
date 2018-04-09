@@ -86,6 +86,13 @@
     &:hover {
         text-decoration: underline;
     }
+    &.pd-sm {
+        padding: 0 10px;
+    }
+    &.pd-lf {
+        padding: 0;
+        padding-left: 10px;
+    }
 }
 
 .btn-border {
@@ -162,6 +169,15 @@ $tw-btn-bg-black-end: #2b323e;
     background-image: none;
     cursor: pointer;
     @include user-select(none);
+}
+
+.btn-icon {
+    cursor: pointer;
+    @include button-size(0px, $btn-font-size-sm, $btn-font-size, $btn-height-base, $btn-border-radius);
+    padding: 0 20px;
+    &:hover {
+        color: $brand-primary-darkest;
+    }
     &:active,
     &.active {
         outline: 0;
@@ -217,7 +233,6 @@ $tw-btn-bg-black-end: #2b323e;
     @include tw-button-variant($tw-btn-color, $tw-btn-border, $tw-btn-border-hover, $tw-btn-radius-square);
     @include tw-button-color-trans(lighten($tw-btn-color, 30%), $tw-btn-color);
 }
-
 .tw-btn-disabled {
     cursor: not-allowed;
     color: $gray-darker;

@@ -469,14 +469,37 @@
 
 /* H5 支付 银行页面*/
 @include b(m_deposit_pay) {
-    height: 100%;
+    width: 1320px;
+    margin: 80px auto;
+    box-shadow: 0 0 15px #ebebeb;
+    border-radius: 10px;
     background-color: #fff;
+    padding: 40px 60px;
 
+    @include e(lst) {
+        padding-left: 40px;
+    }
     @include e(bank) {
         display: block;
-        border-bottom: 1px solid #eee;
-        padding: 12px 28px;
-        padding-right: 18px;
+        padding: 12px 15px;
+        float: left;
+        width: 20%;
+        margin-right: 5%;
+        margin-top: 20px;
+
+        &:hover, &:active {
+            box-shadow: 0 0 15px #ebebeb;
+            border-radius: 10px;
+            transition: all .2s;
+
+            .tit {
+                transition: all .2s;
+                color: #222;
+                font-weight: 500;
+                transform: scale(1.1);
+                transform-origin: left center;
+            }
+        }
 
         &:before,
         &:after {
@@ -487,13 +510,18 @@
             clear: both;
         }
 
+        &.active {
+            transform: translateX(-42px);
+        }
+
         .pic {
             float: left;
             vertical-align: middle;
             height: 28px;
 
+            
             img {
-                width: 28px;
+                height: 28px;
             }
         }
         .tit {
@@ -502,7 +530,7 @@
             padding-left: 14px;
             height: 28px;
             line-height: 28px;
-            color: #000;
+            color: #666;
         }
         .tip {
             float: left;
@@ -531,10 +559,11 @@
         padding: 17px 0 18px 28px;
 
         .tip {
-            font-size: 16px;
-            height: 16px;
-            line-height: 16px;
-            color: #000;
+            font-size: 20px;
+            height: 20px;
+            line-height: 20px;
+            color: #222;
+            font-weight: 500;
         }
         .sub-tip {
             font-size: 14px;
@@ -546,7 +575,39 @@
     }
     @include e(desc) {
         color: #909090;
-        padding: 16px 0 0 28px;
+        padding-top: 60px;
+        padding-left: 28px;
+    }
+
+    &.mobile {
+        width: 100%;
+        margin: 0;
+        min-height: 100%;
+        padding: 16px;
+        
+        .m_deposit_pay__title {
+            padding: 10px 0px;
+
+            .sub-tip {
+                display: block;
+                padding-left: 0px;
+                padding-top: 4px;
+                font-size: 14px;
+            }
+        }
+        .m_deposit_pay__lst {
+            padding-left: 0px;
+
+            .m_deposit_pay__bank {
+                width: 100%;
+                margin-top: 10px;
+                transform: inherit !important; 
+            }
+        }
+        .m_deposit_pay__desc {
+            padding-left: 0px;
+            padding-top: 20px;
+        }
     }
 }
 

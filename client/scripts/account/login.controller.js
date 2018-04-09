@@ -106,7 +106,7 @@
                     break;
             }
 
-            account.getRCaptcha($scope.account[phoneName], token, type).then(function (data) {
+            account.sendCode($scope.account[phoneName], token, type).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
                     countDown(phoneName);
@@ -235,7 +235,7 @@
             layer.load();
             $scope.loginBtnStatus = false;
 
-            account.checkPhoneAndCaptcha($scope.account.forgetPhone, $scope.account.forgetCode).then(function (data) {
+            account.checkCode($scope.account.forgetPhone, $scope.account.forgetCode).then(function (data) {
                 layer.closeAll();
                 $scope.loginBtnStatus = true;
 
