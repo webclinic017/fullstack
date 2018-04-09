@@ -1,4 +1,5 @@
 .blockchain_layout {
+    font-family: 'Microsoft Yahei';
     .blockchain_banner {
         height: 1000px;
         background: #2a2b2f;
@@ -30,26 +31,161 @@
                 width: 1380px;
                 height: 1000px;
                 margin: 0 auto;
+                position: relative;
                 .cont_main__slogan {
-                    margin-top: 325px;
+                    margin-top: 20%;
                     text-align: center;
-                    color: #fff;
+                    color: #222;
+                    transition: all 0.8s ease-in-out;
+                    &.active {
+                        color: #fff;
+                    }
                     >p {
                         padding: 20px;
                         background: rgba(42,43,47, 0.9);
                         display: inline-block;
                     }
                     .slogan_main {
-                        font-size: 45px;
+                        font-size: 35px;
                         font-weight: 300;
-                        font-family: 'Microsoft Yahei';
                     }
-                    .slogan_main {
-                        font-size: 22px;
+                    .slogan_sub {
+                        font-size: 18px;
                         font-weight: 200;
-                        font-family: 'Microsoft Yahei';
+                        .sys_icon {
+                            width: 235px;
+                        }
                     }
                 }
+                .scroll_bar {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: 50px;
+                    left: 50%;
+                    width: 35px;
+                    margin-left: -17.5px;
+                }
+            }
+        }
+    }
+    .blockchain_goal {
+        text-align: center;
+        height: 450px;
+        background-image: url('/images/entry/blockchain/goal.png');
+        background-size: auto 100%;
+        background-position: center top;
+        padding: 80px;
+        .goal_title {
+            font-size: 40px;
+            margin: 0;
+        }
+        .goal_slogan {
+            margin-top: 280px;
+            font-size: 25px;
+        }
+    }
+    .blockchain_solution {
+        padding: 60px;
+        text-align: center;
+        background: #fff;
+        .solution_title {
+            font-size: 40px;
+        }
+        .solution_subtitle {
+            font-size: 20px;
+            padding: 30px;
+        }
+        .solution_icons {
+            width: 1050px;
+            margin: 0 auto;
+            .icon_item {
+                box-sizing: border-box;
+                text-align: center;
+                transition: all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+                box-shadow: 0 0 20px #ccc;
+                position: relative;
+                padding: 15px;
+                width: 282px;
+                height: 282px;
+                &:hover {
+                    box-shadow: 0 0 30px #aaa;
+                }
+                .item_img {
+                    margin-top: 15px;
+                    height: 115px;
+                }
+                .item_text {
+                    margin-top: 40px;
+                    font-size: 15px;
+                }
+                &:nth-child(2) {
+                    margin: 0 85px;
+                }
+                &::after {
+                    display: inline-block;
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    height: 6px;
+                    background: #ffd521;
+                    transition: all 0.3s ease-in-out;
+                    -webkit-transition: all 0.3s ease-in-out;
+                    left: 100%;
+                    width: 0;
+                }
+                &:hover::after {
+                    width: 194px;
+                    left: 43px;
+                }
+            }
+            .icon_item:hover ~ .icon_item::after {
+                left: 0;
+            }
+        }
+    }
+    .blockchain_join {
+        height: 460px;
+        background: url('/images/entry/blockchain/join.png');
+        background-size: auto 100%;
+        background-position: center top;
+        text-align: center;
+        .join_title {
+            margin-top: 185px;
+            font-size: 40px;
+        }
+        .join_btn {
+            display: inline-block;
+            margin-top: 40px;
+            border: 2px solid #222;
+            padding: 5px 25px;
+            cursor: pointer;
+            font-size: 25px;
+        }
+        
+    }
+    .blockchain_footer {
+        padding: 40px;
+        background-color: #2a2b2f;
+        color: #fff;
+        .footer_main {
+            width: 1030px;
+            margin: 0 auto;
+            text-align: center;
+            .footer_logo {
+                width: 225px;
+            }
+            .footer_link {
+                > a {
+                    color: #0298d9;
+                }
+            }
+            .footer_text {
+                color: #828284;
+                font-size: 12px;
+            }
+            .footer_copy {
+                font-size: 14px;
             }
         }
     }
