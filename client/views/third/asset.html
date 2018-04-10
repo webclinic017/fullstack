@@ -102,6 +102,9 @@
                         <li class="space_nav__box-item" ng-class="{'active': main.pageCtrl == 'record'}">
                             <a ng-click="main.switchPage('record')">资金记录</a>
                         </li>
+                        <li class="space_nav__box-item" ng-class="{'active': main.pageCtrl == 'evidence'}">
+                            <a ng-click="main.switchPage('evidence')">凭证记录</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -116,6 +119,9 @@
             <div class="content-view relative" ng-if="main.pageCtrl == 'record'">
                 <div ng-include="'/views/third/asset/record.html'"></div>
             </div>
+            <div class="content-view relative" ng-if="main.pageCtrl == 'evidence'">
+                    <div ng-include="'/views/third/asset/evidence.html'"></div>
+                </div>
         </div>
     </div>
 </div>

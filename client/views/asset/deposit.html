@@ -80,6 +80,9 @@
                 <p class="deposit__way-tip" ng-class="{active: deposit.type === 'invest'}">单日交易限额以银行规定为准</p>
                 <p class="deposit__way-tip" ng-class="{active: deposit.type === 'wallet'}">当前零钱包余额：${{ walletAble || '0.00' }}</p>
                 <p class="deposit__way-tip" ng-class="{active: deposit.type === 'alipay'}">单日交易限额 $3000.00</p>
+                <p class="deposit__way-desc" ng-class="{active: deposit.type === 'invest'}">
+                    <span ng-click="openDepositRuleMdl('depositRule')">网银支付规则</span>
+                </p>
             </div>
         </div>
         <br>
@@ -87,7 +90,7 @@
             <div class="col-xs-2"></div>
             <div class="col-xs-7 text-center">
                 <div class="deposit__btn_wrapper">
-                    <button ng-if="!isLoading" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-class="{'tw-btn-disabled': !deposit.submitBtn, 'disabled': !deposit.submitBtn}" ng-click="toDeposit()">
+                    <button ng-if="!isLoading" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-click="toDeposit()">
                         <span ng-show="deposit.type !== 'tele'">充值</span>
                         <span ng-show="deposit.type === 'tele'">提交</span>
                     </button>
@@ -97,51 +100,6 @@
         </div>
 
         <div class="deposit_separator"></div>
-
-        <div class="deposit__bank_file" ng-if="(deposit.type === 'invest') && (deposit.isAbleDeposit != 0)">
-            <div ng-if="deposit.isAbleDeposit == 1">
-                <div class="deposit__bank_file-tit">上传入金凭证</div>
-                <div class="deposit__bank_file-tip">
-                    应监管要求，请您上传上次网银的入金凭证
-                </div>
-                <div class="deposit__bank_file-sub_tit">凭证注意事项：</div>
-                <div class="deposit__bank_file-tip">
-                    <p>1.凭证信息需显示出姓名、银行卡号、支付金额等内容；</p>
-                    <p>2.凭证信息必须为实名认证本人的银行卡。</p>
-                    <p>如未达到以上要求，审核将被驳回</p>
-                    <p>审核驳回后，上次支付金额将原路返回，并由您自行承担1.5%手续费。</p>
-                </div>
-                <div class="deposit__bank_file-sub_tit">凭证示例展示：</div>
-                <div class="deposit__bank_file-eg clearfix">
-                    <div class="pic" ng-click="checkImage($event, '/white_label/deposit/evidence1.jpg')"><img src="/white_label/deposit/evidence1.jpg"><span>点击查看凭证</span></div>
-                    <div class="blank"></div>
-                    <div class="pic" ng-click="checkImage($event, '/white_label/deposit/evidence2.jpg')"><img src="/white_label/deposit/evidence2.jpg"><span>点击查看凭证</span></div>
-                </div>
-                <div class="deposit__bank_file-upload">
-                    <div class="deposit__tele_file bank_file">
-                        点此上传凭证
-                        <div tw-upload-file-base64 data-file-name="deposit.bankFile[0]"></div>
-                    </div>
-                    <div class="deposit__tele_file bank_file add_file" ng-if="deposit.bankFile.length > 0">
-                        <div tw-upload-file-base64 data-file-name="deposit.bankFile[1]"></div>
-                    </div>
-                    <div class="deposit__tele_file bank_file add_file" ng-if="deposit.bankFile.length > 1">
-                        <div tw-upload-file-base64 data-file-name="deposit.bankFile[2]"></div>
-                    </div>
-                </div>
-                <div class="deposit__bank_file-upload_tip">上传凭证为1-3张。目前只支持2MB的PNG、JPG格式</div>
-                <div class="deposit__bank_file-upload_btn">
-                    <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" ng-click="uploadBankFile()">
-                        提交
-                    </button>
-                </div>
-            </div>
-
-            <div ng-if="deposit.isAbleDeposit == 2">
-                <div class="deposit__bank_file-tit">入金凭证已提交，正在审核中</div>
-                <div class="deposit__bank_file-tip">审核时间：<br>大概需要1个工作日</div>
-            </div>
-        </div>
 
         <div class="deposit__tele" ng-if="deposit.type === 'tele'">
             <div class="row">

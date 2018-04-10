@@ -1,0 +1,82 @@
+<div class="space_block">
+  <div class="asset_evidence">
+    <ul class="asset_evidence__nav clearfix">
+      <li class="asset_evidence__nav-item" ng-class="{active: status === 1}" ng-click="changeEvidenceStatus(1)">
+        待上传
+      </li>
+      <li class="asset_evidence__nav-item" ng-class="{active: status === 2}" ng-click="changeEvidenceStatus(2)">
+        审核中
+      </li>
+      <li class="asset_evidence__nav-item" ng-class="{active: status === 0}" ng-click="changeEvidenceStatus(0)">
+        审核成功
+      </li>
+    </ul>
+    <div class="asset_evidence__content">
+        <div ng-if="status === 1">
+          <h4 class="title">凭证注意事项</h4>
+          <p class="tip">
+              1.凭证信息必须显示姓名、银行卡号、支付金额等内容
+          </p>
+          <p class="tip">
+              2.凭证信息必须为实名认证本人银行账户。
+          </p>
+          <p class="tip">
+              未满足以上要求，审核将被驳回。
+          </p>
+          <p class="tip">
+              审核驳回后，支付金额将原路退还，产生的1.5%手续费由您自行承担。
+          </p>
+          <div class="desc">
+            <a href="/web/deposit/evidence" target="_blank">查看凭证示例</a>
+          </div>
+        </div>        
+        <ul class="asset_evidence__content-lst">
+          <li class="item" ng-repeat="evidence in evidenceList">
+            <div class="tit clearfix">
+              <span class="fl">充值成功</span>
+              <span class="fr">${{evidence.amount}}</span>
+            </div>
+            <div class="date clearfix">
+              <span class="fl">{{evidence.created_at | dealTimestamp}}</span>
+              <span class="fr">交易成功</span>
+            </div>
+            <div class="info clearfix" ng-if="status === 1">
+              <div class="fl pic-box clearfix">
+                <div class="pic" ng-repeat="file in evidence.files" ng-click="checkImage($event, srcHead+file)">
+                  <img ng-src="{{srcHead}}{{file}}" alt="">
+                </div>
+                <div class="pic add_file" ng-if="evidence.files.length === 1">
+                    <div tw-upload-file-base64 data-file-name="evidence.files[1]"></div>
+                </div>
+                <div class="pic add_file" ng-if="evidence.files.length === 2">
+                    <div tw-upload-file-base64 data-file-name="evidence.files[2]"></div>
+                </div>
+              </div>
+              <div class="fr">
+                  <button ng-if="!evidence.files.length" class="tw-btn tw-btn-capsule-gradient">
+                    上传凭证
+                    <div tw-upload-file-base64 data-file-name="evidence.files[0]"></div>
+                  </button>
+                  <button ng-if="evidence.files.length" class="tw-btn tw-btn-capsule-bordered" ng-click="uploadEvidence(evidence, $index)">
+                    提交审核    
+                  </button>
+              </div>
+            </div>
+            <div class="info clearfix" ng-if="(status === 0) || (status === 2)">
+                <div class="fl pic-box clearfix">
+                  <div class="pic" ng-repeat="file in evidence.pic_thumb" ng-click="checkImage($event, evidence.pic[$index])">
+                    <img ng-src="{{file}}" alt="">
+                  </div>
+                </div>
+                <div class="fr">
+                    <button ng-if="status === 2" class="tw-btn tw-btn-capsule-bordered" ng-click="cancelEvidence(evidence, $index)">
+                      撤销
+                    </button>
+                </div>
+              </div>
+          </li>
+        </ul>
+    </div>
+  </div>
+
+</div>

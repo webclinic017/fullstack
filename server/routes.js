@@ -107,8 +107,9 @@ module.exports = function (app) {
     });
     app.use('/', function(req, res, next){
         setEnvCf(req, res);
-        var allowPaths = ['/payment/login', '/payment/asset', '/waiting']
+        var allowPaths = ['/payment/login', '/payment/asset', '/payment/evidence', '/waiting', '/napi']
         if(req.hostname.indexOf('ibonline') != -1) {
+        // if(req.hostname.indexOf('w.dev.tigerwit.com') != -1) {
             if(allowPaths.indexOf(req.originalUrl) != -1){
                 var pageId = ''
                 if(req.originalUrl == allowPaths[0]){
@@ -117,6 +118,8 @@ module.exports = function (app) {
                 else if(req.originalUrl == allowPaths[1]){
                     pageId = 'asset'
                 } else if(req.originalUrl == allowPaths[2]){
+                    pageId = 'evidence'
+                } else if(req.originalUrl == allowPaths[3]){
                     res.render('waiting', extendPublic({}, req));
                     return
                 }
@@ -126,6 +129,8 @@ module.exports = function (app) {
                     }
                 }, req));
                 return
+            } else if(req.originalUrl.indexOf(allowPaths[4]) != -1){
+                next()
             } else {
                 res.redirect('/payment/login');
                 return
@@ -288,29 +293,6 @@ module.exports = function (app) {
         res.render("m_vue/regular/how", extendPublic({}, req));
     });
 
-    /*出入金流程*/
-    app.route('/m/asset/:subpage(withdraw|cardlist|addcard1|addcard2|succ|fail)').get(function (req, res) {
-        var subpage = req.params.subpage || 'withdraw';
-        var pageInfo = {
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('m_vue/m_asset.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
-    /*出入金流程 新版*/
-    app.route('/m/asset_new/:subpage(withdraw|cardlist|addcard1|addcard2|succ|fail)').get(function (req, res) {
-        var subpage = req.params.subpage || 'withdraw';
-        var pageInfo = {
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('m_vue/m_asset_new.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
-
     /*邀请好友*/
     app.route('/m/invite01').get(function (req, res) {
         setEnvCf(req, res);
@@ -415,6 +397,11 @@ module.exports = function (app) {
         });
     });
 
+    // WEB 入金凭证
+    app.route('/web/deposit/evidence').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('web/evidence', extendPublic({}, req));
+    });
 
     // 复制交易
     app.route('/web/copy/:subpage(rules|select|become|comment|calendar)').get(function (req, res) {

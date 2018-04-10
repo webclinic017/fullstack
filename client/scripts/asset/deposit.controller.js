@@ -26,7 +26,6 @@
             amount: undefined,
             teleFile: undefined,    //电汇凭证
             submitBtn: true,
-            bankFile : [],    //入金凭证
             isAbleDeposit: 0    //是否能够入金（是否上传凭证）evidence  0不需要上传，1需要上传，2未审核
         };
         $scope.depositTypeCN = depositType[$scope.deposit.type];
@@ -45,13 +44,12 @@
         $scope.isLoading = false;
         $scope.toDeposit = toDeposit;
         $scope.openDepositMdl = openDepositMdl;
+        $scope.openDepositRuleMdl = openDepositRuleMdl;
         $scope.hideErr = hideErr;
         $scope.showErr = showErr;
         $scope.checkInputAmount = checkInputAmount;
         $scope.openChangeDepTypeMdl = openChangeDepTypeMdl;
         $scope.toHelp = toHelp;
-        $scope.uploadBankFile = uploadBankFile;
-        $scope.checkImage = checkImage;
 
         // 汇率
         asset.getFXRate().then(function (data) {
@@ -69,7 +67,11 @@
             if (data.is_succ) {
                 $scope.deposit.minAmount = parseInt(data.data.min);
                 $scope.deposit.isAbleDeposit = data.data.evidence;
+                // $scope.deposit.isAbleDeposit = 1;
                 checkInputAmount();
+                // 网银入金限制
+                checkInvestLimit();
+                
             }
         });
         // 获取零钱包 可用金额
@@ -81,34 +83,6 @@
                 $scope.deposit.amount = $scope.walletAble;
             }
         });
-
-        function checkImage (e, targetUrl) {
-            previewImage.toLargeImage(e, targetUrl);
-        }
-
-        function uploadBankFile () {    //提交入金凭证
-            // console.log($scope.deposit.bankFile);
-            if ($scope.deposit.bankFile.length) {
-                asset.uploadPaymentEvidence($scope.deposit.bankFile).then(function (data) {
-                    if (data.is_succ) {
-                        layer.msg('上传成功');
-                        asset.getDepositLimit().then(function (data) {
-                            // console.log(data);
-                            if (!data) return;
-                            if (data.is_succ) {
-                                $scope.deposit.minAmount = parseInt(data.data.min);
-                                $scope.deposit.isAbleDeposit = data.data.evidence;
-                                checkInputAmount();
-                            }
-                        });
-                    } else {
-                        layer.msg(data.message);
-                    }
-                });
-            } else {
-                layer.msg("请先选择需要上传的凭证");
-            }
-        }
 
         function switchDredge(demotodo, liveTodo) {
             // 获取开通状态
@@ -176,6 +150,20 @@
             }
         }
 
+        function checkInvestLimit () {
+            if ($scope.deposit.type !== 'invest') return;
+            if ($scope.deposit.isAbleDeposit === 1) {
+                openDepositMdl('depositLimit', openChangeDepTypeMdl, {
+                    msgTip: '您网银支付累计已超过$3000，需上传历史充值凭证后才可继续使用网银支付功能。',
+                    msgBtn: '选择其他支付方式',
+                    msgTitle: '提示'
+                });
+            }
+            if ($scope.deposit.isAbleDeposit === 2) {
+                openDepositMdl('depositLimitCheck');
+            }
+        }
+
         // 充值  还未完成
         function toDeposit(amount) {
             $scope.$emit('global.checkAuthenFlow', {
@@ -201,26 +189,17 @@
                                     if (!data) return;
                                     if (data.is_succ) {
                                         $scope.deposit.isAbleDeposit = data.data.evidence;
-                                        if ($scope.deposit.isAbleDeposit == 0) {
+                                        if ($scope.deposit.isAbleDeposit === 0) {
                                             
-                                            if ((Number(amount)+Number(data.data.today_total))>=3000) {
-                                                $scope.isLoading = false;
-                                                openDepositMdl('confirmDeposit', submitDeposit, {
-                                                    msgTip: '应监管要求，此笔支付成功后，当日累计支付超过3000美金，需提供入金凭证。入金凭证可以是含有姓名、卡号、支付金额的付款成功截图或银行流水单。',
-                                                    msgBtn: '继续支付',
-                                                    msgTitle: '提示'
-                                                });
-                                            } else {
-                                                $scope.isLoading = false;
-                                                openDepositMdl('confirmDeposit', submitDeposit, {
-                                                    msgTip: '应监管要求，每日网银支付累计超过3000美金需上传入金凭证。您此次入金未到限额，点击“继续支付”可正常入金。',
-                                                    msgBtn: '继续支付',
-                                                    msgTitle: '规则说明'
-                                                });
-                                            }
+                                            $scope.isLoading = false;
+                                            openDepositMdl('confirmDeposit', submitDeposit, {
+                                                msgTip: '请务必使用实名认证本人银行卡进行充值，否则资金将被退回，充值成功后请及时上传支付凭证。',
+                                                msgBtn: '确定',
+                                                msgTitle: '提示'
+                                            });
                                         } else {
                                             $scope.isLoading = false;
-                                            $scope.deposit.submitBtn = false;
+                                            checkInvestLimit();
                                         }
                                     }
                                 });
@@ -299,6 +278,7 @@
         function changeDepositType(type) {
             $scope.deposit.type = type;
             $scope.depositTypeCN = depositType[$scope.deposit.type];
+            checkInvestLimit();
         }
 
         function checkInputAmount() {
@@ -370,6 +350,26 @@
                         callback && callback();
                         closeModal();
                     }
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+
+                }
+            });
+        }
+
+        function openDepositRuleMdl(type) {
+            $modal.open({
+                templateUrl: '/views/asset/deposit_modal.html',
+                size: 'md',
+                backdrop: 'static',
+                controller: function ($scope, $modalInstance, $state) {
+                    $scope.type = type;
+                    $scope.msgInfo = {
+                        msgTitle: '网银入金规则'
+                    };
+                    $scope.closeModal = closeModal;
 
                     function closeModal() {
                         $modalInstance.dismiss();
