@@ -807,6 +807,33 @@ module.exports = function (app) {
         }
     });
 
+    // 招募高手
+    app.route('/bd/recruit_master').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit') {
+            if (isMobile(req)) {
+                res.render('bd/recruit/h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/recruit/web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+    app.route('/bd/recruit_master/:subpage(info|complete)').get(function (req, res) {
+        var subpage = req.params.subpage || 'info';
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit') {
+            if (isMobile(req)) {
+                res.render('bd/recruit/h5_'+subpage+'.html', extendPublic({}, req))
+            } else {
+                res.render('bd/recruit/h5_'+subpage+'.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
     /*
         设置     ->     info, password, binding, 
@@ -1036,7 +1063,7 @@ module.exports = function (app) {
                     currentVersion.version_name = "V1.0.1";
                 }
             }
-            
+
             data = currentVersion;
         }
         if (action == "get_banner_info") {
