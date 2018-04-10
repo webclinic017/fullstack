@@ -1,23 +1,23 @@
 <div class="blog_statement" ng-controller="TradeFeeController">
     <br>
     <h2 class="blog_statement__title text-left">
-        <%= lang.text("foot15")%>
+        <%=lang.text("tradeFee0")%>
     </h2>
     <br>
-    <p>以下为<%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>的收费标准，您可以时刻了解在<%= lang.text('companyEnName')%>交易所产生的的费用。</p>
+    <p><%=lang.text('tradeFee1')%></p>
     <br>
     <div class="blog_statement__content">
         <div class="point">
-            <h4 class="blog_statement__title text-left">点差</h4>
-            <p>点差指买卖价格之间的差异，<%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>根据基础市场的价值得出价格，外汇点差会根据基础市场的价格发生变化。</p>
-            <p>请查看<%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>各交易品种点差详情 </p>
-            <p><span class="font-danger">* </span> <%= lang.text('companyEnName')%>点差计算时段为截止2017年7月21日的前十四天。</p>
+            <h4 class="blog_statement__title text-left"><%=lang.text('tradeFee2')%></h4>
+            <p><%=lang.text('tradeFee3')%></p>
+            <p><%=lang.text('tradeFee4')%></p>
+            <p><span class="font-danger">* </span> <%=lang.text('tradeFee5')%></p>
             <br>
             <div class="blog_statement__navi">
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'forex'}" ng-click="changeType('point', 'forex')">外汇</span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'metal'}" ng-click="changeType('point', 'metal')">贵金属</span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'nergy'}" ng-click="changeType('point', 'nergy')">能源</span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'contrast'}" ng-click="changeType('point', 'contrast')">差价合约</span>
+                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'forex'}" ng-click="changeType('point', 'forex')"><%=lang.text('waihui')%></span> |
+                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'metal'}" ng-click="changeType('point', 'metal')"><%=lang.text('guijinshu')%></span> |
+                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'nergy'}" ng-click="changeType('point', 'nergy')"><%=lang.text('nengyuan')%></span> |
+                <span class="navi-item btn-text" ng-class="{'active': currentChecked.point == 'contrast'}" ng-click="changeType('point', 'contrast')"><%=lang.text('CFD')%></span>
             </div>
             <br>
             <table class="table table-personal table-hover table-bordered">
@@ -43,7 +43,7 @@
                         <!-- <td>{{ point.tiger }}</td> -->
                     </tr>
                     <tr ng-if="currentData.point.length <= 0" class="text-center">
-                        <td colspan="20">暂无数据</td>
+                        <td colspan="20"><%=lang.text('nodata')%></td>
                     </tr>
                 </tbody>
             </table>
@@ -51,13 +51,13 @@
             <div ng-show="showFolder.point">
                 <div ng-show="currentData.point.length >= 6 && !unfold.point" class="text-center" ng-cloak>
                     <a class="btn btn-text font-size-14" ng-click="unfold('point')">
-                        点击查看更多信息
+                        <%=lang.text('more')%>
                         <i class="fa fa-angle-down" aria-hidden="true"></i>
                     </a>
                 </div>
                 <div ng-show="currentData.point.length >= 6 && unfold.point" class="text-center" ng-cloak>
                     <a class="btn btn-text font-size-14" ng-click="fold('point')">
-                        收起
+                        <%=lang.text('fold')%>
                         <i class="fa fa-angle-up" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -65,17 +65,17 @@
         </div>
         <br>
         <div class="swap">
-            <h4 class="blog_statement__title text-left">隔夜利息</h4>
-            <p>隔夜利息通常在客户持仓隔夜的情况下发生。交易时段在美国东部时间17点进行交接。客户在该时间所持有的任何头寸都将被自动纳入隔夜利息的计算，且结果会显示在交易账户中。</p>
-            <p><%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>尽可能每日及时更新隔夜利息报价，但不排除由于无法预测的市场情况而导致的剧烈波动，隔夜利息可能在当日内有变动。</p>
-            <p>隔夜利息的取值取决于当前现货价格和客户服务等级下两种货币利息之间的差额。该项服务不收取任何佣金或其他费用。您可以查阅隔夜利息报价。</p>
-            <p>以下为隔夜利息计算表格，您可以根据以下表格对您持有仓位计算每日的隔夜利息净额。</p>
+            <h4 class="blog_statement__title text-left"><%=lang.text('tradeFee6')%></h4>
+            <p><%=lang.text('tradeFee7')%></p>
+            <p><%=lang.text('tradeFee8')%></p>
+            <p><%=lang.text('tradeFee9')%></p>
+            <p><%=lang.text('tradeFee10')%></p>
             <br>
             <div class="blog_statement__navi">
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'forex'}" ng-click="changeType('swap', 'forex')">外汇</span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'metal'}" ng-click="changeType('swap', 'metal')">贵金属</span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'nergy'}" ng-click="changeType('swap', 'nergy')">能源</span> |
-                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'contrast'}" ng-click="changeType('swap', 'contrast')">差价合约</span>
+                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'forex'}" ng-click="changeType('swap', 'forex')"><%=lang.text('waihui')%></span> |
+                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'metal'}" ng-click="changeType('swap', 'metal')"><%=lang.text('guijinshu')%></span> |
+                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'nergy'}" ng-click="changeType('swap', 'nergy')"><%=lang.text('nengyuan')%></span> |
+                <span class="navi-item btn-text" ng-class="{'active': currentChecked.swap == 'contrast'}" ng-click="changeType('swap', 'contrast')"><%=lang.text('CFD')%></span>
             </div>
             <br>
             <table class="table table-personal table-hover table-bordered">
@@ -101,34 +101,34 @@
                         <td>{{ swap.commission }}</td>
                     </tr>
                     <tr ng-if="currentData.swap.length <= 0" class="text-center">
-                        <td colspan="20">暂无数据</td>
+                        <td colspan="20"><%=lang.text('nodata')%></td>
                     </tr>
                 </tbody>
             </table>
             <div ng-show="showFolder.swap">
                 <div ng-show="currentData.swap.length >= 6 && !unfold.swap" class="text-center" ng-cloak>
                     <a class="btn btn-text font-size-14" ng-click="unfold('swap')">
-                        点击查看更多信息
+                        <%=lang.text('more')%>
                         <i class="fa fa-angle-down" aria-hidden="true"></i>
                     </a>
                 </div>
                 <div ng-show="currentData.swap.length >= 6 && unfold.swap" class="text-center">
                     <a class="btn btn-text font-size-14" ng-click="fold('swap')" ng-cloak>
-                        收起
+                        <%=lang.text('fold')%>
                         <i class="fa fa-angle-up" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
             <p ng-class="{'mg-tp-10': !showFolder.swap}">
-                <span class="font-danger"> * </span>星期三持仓隔夜的仓位隔夜利息将是平常的三倍。个别货币对例外：美元/加元 在周四计算3天的隔夜利息</p>
+                <span class="font-danger"> * </span><%=lang.text('tradeFee11')%></p>
             <p>
-                <span class="font-danger"> * </span>如交易日当天为公共节假日，隔夜利息将推前一天计算</p>
-            <p>此外，如果是节假日期间的头寸，您也会支付或得到更多隔夜利息</p>
+                <span class="font-danger"> * </span><%=lang.text('tradeFee12')%></p>
+            <p><%=lang.text('tradeFee13')%></p>
         </div>
         <br>
         <div class="fee">
-            <h4 class="blog_statement__title text-left">手续费</h4>
-            <p><%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>对差价合约产品收取的点差为0，<%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>对差价合约产品收取一定比例的手续费。</p>
+            <h4 class="blog_statement__title text-left"><%=lang.text('tradeFee14')%></h4>
+            <p><%=lang.text('tradeFee15')%></p>
             <br>
             <table class="table table-personal table-hover table-bordered">
                 <colgroup>
@@ -153,20 +153,20 @@
                         <td>{{ fee.commission }}</td>
                     </tr>
                     <tr ng-if="currentData.fee.length <= 0" class="text-center">
-                        <td colspan="20">暂无数据</td>
+                        <td colspan="20"><%=lang.text('nodata')%></td>
                     </tr>
                 </tbody>
             </table>
             <div ng-show="showFolder.fee">
                 <div ng-show="currentData.fee.length >= 6 && !unfold.fee" class="text-center" ng-cloak>
                     <a class="btn btn-text font-size-14" ng-click="unfold('fee')">
-                        点击查看更多信息
+                        <%=lang.text('more')%>
                         <i class="fa fa-angle-down" aria-hidden="true"></i>
                     </a>
                 </div>
                 <div ng-show="currentData.fee.length >= 6 && unfold.fee" class="text-center">
                     <a class="btn btn-text font-size-14" ng-click="fold('fee')" ng-cloak>
-                        收起
+                        <%=lang.text('fold')%>
                         <i class="fa fa-angle-up" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -174,25 +174,25 @@
         </div>
         <br>
         <div class="cmmission">
-            <h4 class="blog_statement__title text-left">复制高手佣金</h4>
-            <p><%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>提供业内先进创新的全自动订单复制跟单系统。投资者可通过复制高手交易获得同比例投资收益。<%= lang.text('companyEnName')%><%= lang.text('companyZhName')%>在获得客户同意并授权的情况下，可以为客户开启跟单操作及进行跟单交易、按约定实时扣除客户跟单净利润盈利中的20%支付给交易高手作为佣金或奖励。</p>
-            <p>每月1日，系统将对您跟随高手的情况进行统计并结算，扣除跟随该高手盈利部分的20%作为该高手的分成；每月10日，系统将对高手进行分成结算。</p>
-            <p>当您取消复制关系并选择强制平仓时，系统将对跟随该高手的所有订单进行统计并结算，扣除未结算盈利部分的20%作为该高手佣金。</p>
-            <p>当您取消复制关系并选择跟随高手平仓时，系统将在跟随该高手的所有订单全部平仓后，对跟随该高手的所有订单进行统计并结算，扣除未结算盈利的20%作为该高手分成。</p>
-            <p>只要跟随高手开仓的订单，都会进行分成结算。</p>
+            <h4 class="blog_statement__title text-left"><%=lang.text('tradeFee16')%></h4>
+            <p><%=lang.text('tradeFee17')%></p>
+            <p><%=lang.text('tradeFee18')%></p>
+            <p><%=lang.text('tradeFee19')%></p>
+            <p><%=lang.text('tradeFee20')%></p>
+            <p><%=lang.text('tradeFee21')%></p>
         </div>
         <br>
         <div class="deposit_fee">
-            <h4 class="blog_statement__title text-left">存款费用</h4>
-            <p>电汇入金：不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，<%= lang.text('companyZhName')%>不收取电汇入金手续费，入金金额将以实际到账为准。其他方式不收取任何手续费。</p>
+            <h4 class="blog_statement__title text-left"><%=lang.text('tradeFee22')%></h4>
+            <p><%=lang.text('tradeFee23')%></p>
             <!-- <p>网银入金：网银充值由第三方服务商提供，每笔入金费用为1.5%，<%= lang.text('companyZhName')%>不收取任何费用。</p>
             <p>支付宝入金：支付宝充值由支付宝第三方平台提供，每笔入金费用为2%，<%= lang.text('companyZhName')%>不收取任何费用。</p> -->
-            <p>零钱包入金：<%= lang.text('companyZhName')%>不收取任何费用。</p>
+            <p><%=lang.text('tradeFee24')%></p>
         </div>
         <br>
         <div class="withdraw_fee">
-            <h4 class="blog_statement__title text-left">提现费用</h4>
-            <p>每个账户每月拥有4次免费提现的机会，超过4次每笔提现将收取5元人民币手续费。</p>
+            <h4 class="blog_statement__title text-left"><%=lang.text('tradeFee25')%></h4>
+            <p><%=lang.text('tradeFee26')%></p>
         </div>
         <br>
         <br>
