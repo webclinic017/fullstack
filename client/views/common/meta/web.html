@@ -1,5 +1,275 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<meta name="description" content="<%=lang.text("companyZhName")%>直通全球资本市场。">
-<meta name="keywords" content="<%=lang.text("companyZhName")%>，<%=lang.text("companyEnName")%>，复制交易，外汇，贵金属，CFD，互联网金融">
 <link rel="shortcut icon" href="<%= lang.image('ico')%>">
+
+<%if(req.path == "/" || req.path == "/home" || req.path == "/cn") {%>
+<title><%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-全球可信赖外汇交易平台_外汇投资_外汇直播</title>
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-全球可信赖外汇交易平台_外汇投资_外汇直播">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>创建于2015年，一直致力于为用户提供可靠的外汇交易平台。国内外外汇交易平台，外汇保证金交易系统,外汇分析软件,外汇模拟交易平台,外汇策略，外汇理财，外汇交易高手。联系电话：400 - 809 - 8509">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/ranklist/#/ranklist/masters") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>高手跟单-人人都是投资理财高手_外汇短线高手">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>交易平台，免费提供复制跟单系统，稳健高手，常胜高手，收益高手由你选择投资">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、 复制跟单系统外汇投资高手">
+
+<%} else if(req.path == "/regular") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>定期跟单_外汇交易定期跟单交易">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>是一家最安全规范、实力最强的互联网金融投资理财平台,专业团队，稳定的收益，大众化的低投资门槛,优质的服务体验">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/web/product/forex") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>交易平台_外汇交易技巧">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>交易平台出入金模式简单、快捷、高效、安全，涵盖所有主流货币对及交叉货币对比如：澳元美元，欧元美元，英镑美元，黄金等，支持多种交易方式，杠杆交易，高手复制跟单系统交易。">
+<meta name="keywords" content="外汇交易时间 外汇杠杆交易">
+
+<%} else if(req.path == "/web/product/oil") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>_原油交易平台">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>提供国内正规原油交易平台，保证金低，收益高，无手续费，高手复制跟单原油交易，教你怎么使用<%=lang.text("companyZhName")%>原油交易平台，<%=lang.text("companyZhName")%>能源类交易产品介绍">
+<meta name="keywords" content="原油交易产品、原油投资技巧、原油交易时间<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>">
+
+<%} else if(req.path == "/web/product/metal") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>_贵金属交易平台">
+<meta name="description" content="<%=lang.text("companyZhName")%>提供国内正规贵金属交易平台，杠杆高，交易成本低，低门槛，一个账户可同时开仓黄金 白银，黄金复制跟单高手交易">
+<meta name="keywords" content="贵金属交易产品、贵金属交易技巧、贵金属交易时间<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>">
+
+<%} else if(req.path == "/web/product/cfd") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>_指数差交易平台">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>提供国内正规指数差价合约交易平台，产品丰富，资金利用率高，门槛较低，报价透明，如果你比较忙没有时间看交易图，可在<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>高手复制跟单系统找到你喜欢指数差价合约高手跟单，轻轻松松帮你盈利">
+<meta name="keywords" content="指数差价合约交易产品、指数差价合约交易技巧、指数差价合约交易时间<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>">
+
+<%} else if(req.path == "/web/copy/rules") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>_外汇复制高手规则">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>复制高手，可根据自己的资金情况复制高手，一旦复制成功，高手和复制者同步开仓同步平仓同步盈利。">
+<meta name="keywords" content="复制高手规则<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>">
+
+<%} else if(req.path == "/web/copy/select") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>_如何选择外汇高手_外汇高手筛选有哪些指标">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>为你提供外汇交易高手，如何筛选外汇高手，怎么才能成功复制成功外汇高手等让你在外汇交易过程中不在迷茫。">
+<meta name="keywords" content="如何复制高手 <%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>">
+
+<%} else if(req.path == "/web/copy/comment") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇交易策略_外汇交易行情_外汇交易资讯">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>平台提供每日早间，晚间外汇交易思路外汇产品行情分析，外汇市场新闻及走势分析等信息">
+<meta name="keywords" content="每日交易策略 <%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>">
+
+<%} else if(req.path == "/web/agent/proxy") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇代理_外汇开户_外汇代理扶持_外汇代理返佣">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>招募外汇代理商，<%=lang.text("companyZhName")%>有着专业的团队，大力扶持优秀代理，提供最快捷、最诚信的外汇返佣,与全球多家外汇交易商合作代理。">
+<meta name="keywords" content="招募外汇代理 外汇代理加盟、外汇代理如何盈利">
+
+<%} else if(req.path == "/web/agent/become") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-怎么成为外汇高手_外汇投资交易高手_如何成为外汇交易高手技巧">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>教你如何成为外汇高手、炒外汇高手、外汇交易高手、外汇投资相关介绍。">
+<meta name="keywords" content="外汇高手基本条件，国内外汇高手">
+
+<%} else if(req.path == "/web/about/tigerwit") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-<%=lang.text("companyZhName")%>怎么样_关于<%=lang.text("companyZhName")%>_<%=lang.text("companyZhName")%>是正规平台吗">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>有着专业的管理团队，分别在外汇交易、差价合约、监管合规性、投资管理、在线平台研发和全球营销等方面拥有丰富的经验。">
+<meta name="keywords" content="关于<%=lang.text("companyZhName")%>交易系统，外汇监管号，外汇金融服务">
+
+<%} else if(req.path == "/web/about/report") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-媒体报道_新闻资讯">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>是一家最安全可靠的外汇交易平台，外汇交易策略，外汇理财等，想了解更多关于<%=lang.text("companyZhName")%>新闻资讯，媒体报道请关注我们">
+<meta name="keywords" content="<%=lang.text("companyZhName")%>最新资讯，媒体报道">
+
+<%} else if(req.path == "/download") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>下载APP页面_下载<%=lang.text("companyZhName")%>app有哪些优势_MT4下载">
+<meta name="description" content="选择<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>高手跟单有六大投资优势，门槛低，高收益，易操作，高手跟单，机会多，市场公平，同时MT4下载，<%=lang.text("companyZhName")%>app下载只需要扫一扫二维码就可成功下载完成。">
+<meta name="keywords" content="<%=lang.text("companyZhName")%>安卓，苹果手机app下载">
+
+<%} else if(req.path == "/space/#/account/login") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>_快速登陆账号_账号密码登陆">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>申请外汇开户，可在这里对帐号资料、密码、等信息进行修改和管理">
+<meta name="keywords" content="<%=lang.text("companyZhName")%>交易账户开户，在线快速申请开户，密码登陆<%=lang.text("companyZhName")%>账户">
+
+<%} else if(req.path == "/bd/tele") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>交易平台_电汇入金享好礼_专属红包送给你_电汇入金教程">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>推出电汇入金，首次电汇享受20美元红包，每月电汇满500美金享受50美金红包，你电汇我赠金，轻轻松松炒外汇。">
+<meta name="keywords" content="外汇电汇入金操作步骤，入金享好礼">
+
+<%} else if(req.path == "/bd/live") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>交易平台_外汇直播喊单_炒外汇直播室">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>交易平台周一到周五早8点45尽在yy直播间开始外汇直播，想了解今天最新外汇行情，请登陆yy直播：45066803.">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>直播、外汇直播室直播喊单、yy直播">
+
+<%} else if(req.path == "/web/mt4") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>交易平台_MT4交易软件下载_MT4是什么">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>MT4交易平台可以即时查看黄金、白银、外汇、股票、期货等行情，同时可以进行模拟交易、开仓平仓功能简单易用、止赚止损来进行风险控制等操作">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>MT4下载官网、MT4教程、MT4操作手册">
+
+<%} else if(req.path == "/web/product/trade") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>交易平台_mt4交易平台">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>MT4是一款免费的外汇交易平台。它提供了广泛的技术分析选项,灵活的交易系统,算法和移动交易,市场,虚拟主机和信号">
+<meta name="keywords" content="MT4软件、网页版本MT4平台下载">
+
+<%} else if(req.path == "/web/faq/real") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>交易平台-外汇常见问题问答_开外汇账户需要哪些资料">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>开设外汇账户允许同一张身份证开设2个或2个以上账户，但暂不支持同一个手机号绑定多个账户，如需添加更多账户，请联系您的客户经理。">
+<meta name="keywords" content="怎样开设一个外汇账户？、外汇开立账户解答">
+
+<%} else if(req.path == "/web/faq/wad") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇出入金要找银行吗_外汇出入金有汇率差吗">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>出金一般在48小时到账，那你知道通过什么渠道可以入金呢？我们支持电汇、银联等">
+<meta name="keywords" content="外汇出金限制、外汇入金金额、外汇出金到账时间">
+
+<%} else if(req.path == "/web/faq/deal") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇交易技巧_什么是外汇交易">
+<meta name="description" content="外汇市场交易时段夏令时从每年 3 月的第 2个星期日开始，结束在11月的第 1 个星期日，夏令时间之外为冬令时等">
+<meta name="keywords" content="外汇交易杠杆比例、外汇交易时段">
+
+<%} else if(req.path == "/web/faq/platform") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-忘记了 MT4登录密码怎么办？_如何下载 MT4 平台？">
+<meta name="description" content="mt4<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>提供最新mt4软件免费下载!mt4外汇交易系统是一款强大的外汇交易平台,可进行真实和模拟交易,为全球金融市场的提供交易服务,欢迎下载使用!">
+<meta name="keywords" content="外汇交易平台，外汇交易软件下载">
+
+<%} else if(req.path == "/web/faq/interest") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇隔夜利息怎么算">
+<meta name="description" content="常见的外汇隔夜利息问题，帮你解答，隔夜利息在美国东部时间下午 5点执行。外汇交易以北京时间05:00（冬令时06:00）为开始及结束时间。在北京时间05:00（冬令时06:00）前建立的仓位都会视为持仓过夜，需要计算隔夜利息等。">
+<meta name="keywords" content="什么是外汇隔夜利息、哪里可以查看到外汇隔夜利息报价">
+
+<%} else if(req.path == "/help/#/help/regular_web") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-网页版外汇复制跟单系统详解">
+<meta name="description" content="用户与高手跟单不同,定期跟单的复制对象均由专业外汇交易团队构成,在一定封闭期时间内进行自动跟单。复制成功后,在封闭期内用户可以查看每日盈利情 况,到期后收益自动进入投资人账户中,无需盯盘。">
+<meta name="keywords" content="复制跟单系统、定期跟单、外汇定期跟单操作流程图">
+
+<%} else if(req.path == "/help/#/help/regular_app") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-APP版定期跟单系统详解">
+<meta name="description" content="如何进行定期跟单，只需 3步,就可以获得专业交易高手团队同比例的收益。">
+<meta name="keywords" content="复制跟单系统、定期跟单、外汇定期跟单操作流程图">
+
+<%} else if(req.path == "/help/#/help/copy_web") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-网页版外汇复制跟单系统详解">
+<meta name="description" content="高手跟单也叫复制交易。若投资人自身经验不足难以对市场走势进行判断和分析，可通过复制跟单操作，同比例复制交易高手的交易行为与高手同步盈亏。投资交易高 手不但可通过自身交易直接获利，还可从复制者的盈利中获得 20%的利润分成。">
+<meta name="keywords" content="外汇高手跟单、外汇复制跟单操作流程图">
+
+<%} else if(req.path == "/help/#/help/copy_app") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-APP版外汇复制跟单系统详解">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>的复制跟单系统是其为方便投资人进行外汇交易而研发的一套服务软件。">
+<meta name="keywords" content="外汇高手跟单、外汇复制跟单操作流程图">
+
+<%} else if(req.path == "/help/#/help/minMarket_app") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-APP版交易系统详解">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>移动端交易系统实时与国际大型银行报价无缝对接，用户可直接进行外汇、贵金 属、原油、差价合约等产品交易，一键即可完成下单，操作简单快捷。">
+<meta name="keywords" content="移动端外汇交易系统、移动端外汇交易操作流程图">
+
+<%} else if(req.path == "/web/blog/agreement") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇投诉处理流程、利益冲突政策等条件条款">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>将按照法律法规、风险披露声明、外汇交易条件声明、外汇利益冲突政策等严格执行">
+<meta name="keywords" content="外汇法律声明、外汇客户协议、外汇交易条件声明">
+
+<%} else if(req.path == "/agreement/legal") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇法律声明">
+<meta name="description" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>的法律声明,欢迎您访问<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>,进入本网站请仔细阅读本法律声明。">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/agreement/client") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-客户协议">
+<meta name="description" content="欢迎访问<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>客户协议，为了保护客户切身利益，进入本网站请仔细阅读">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/agreement/risk") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇风险声明">
+<meta name="description" content="欢迎访问<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>外汇风险声明，请仔细阅读可以帮助您了解交易差价合约（“CFD”）时可能会出现的风险">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/agreement/cookie") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇隐私政策和cookie披露声明">
+<meta name="description" content="欢迎访问<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>隐私政策和cookie披露声明，<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>尊重其网站用户的隐私，因此，本公司承诺会采取一切合理措施为现有及未来客户、申请者和访客提供保障。">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/agreement/business") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇商业条件与条款">
+<meta name="description" content="欢迎访问<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>商业条件与条款，我们的注册办事处位于201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。<%=lang.text("companyEnName")%>受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/agreement/responsibly") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇负责任交易声明">
+<meta name="description" content="欢迎访问<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>负责任交易声明页面。在了解市场和知晓相关风险，不能完全消除在CFD交易中的风险，但有助于您做出更加充分的决策，更有效地管理您的投资资金并使用充分的风险管理。如果您是外汇交易新手，请访问我们的新手页面并注册体验金账户学习基础知识。">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/agreement/conditions") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇交易条件声明">
+<meta name="description" content="欢迎访问<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>交易条件声明页面，在不同的投资策略涉及不同程度的风险，因此在决定是否使用该类投资策略时，客户应了解以下各点：">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/agreement/statement") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇客户声明">
+<meta name="description" content="欢迎访问<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>客户声明页面，进入本网站，请仔细阅读。">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/agreement/categorization") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇客户分类通知">
+<meta name="description" content="欢迎访问<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>客户分类通知页面。客户分类有三种，不同的类别享受不同级别的保护。">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/agreement/funds") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇保护客户资金">
+<meta name="description" content="欢迎访问<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>保护客户资金页面。作为一家受监管的实体，<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>符合下列有关客户资金的监管要求">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/agreement/execution") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇订单执行政策">
+<meta name="description" content="欢迎访问<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>订单执行政策页面。外汇交易者在进行外汇交易时都要在交易平台下订单,如何进行交易订单，请仔细阅读。">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/agreement/conflicts") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇利益冲突政策">
+<meta name="description" content="欢迎访问<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>利益冲突政策，根据本政策，本公司须采取一切合理措施，发现并避免以下双方之间的利益冲突。">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/agreement/complaint") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇投诉处理流程">
+<meta name="description" content="欢迎访问<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>投诉处理流程页面。外汇投诉怎么处理，处理流程是什么呢？我们将在收到您的投诉48 小时内确认收到，并告知由哪位专业人员处理您的投诉等具体内容请阅读完。">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<%} else if(req.path == "/web/blog/trade_fee") {%>
+
+<meta name="title" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>-外汇交易费用">
+<meta name="description" content="以下为<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>的收费标准，您可以时刻了解在<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>交易所产生的的费用。">
+<meta name="keywords" content="<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>、外汇投资理财、黄金白银交易平台、外汇交易平台、外汇高手、外汇代理合作机构、互联网金融">
+
+<% } %>
