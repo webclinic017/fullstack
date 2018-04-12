@@ -18,7 +18,7 @@
                     // 该导航项包含几级，默认情况只有一级导航
                     var level = parseInt(trigger.attr('data-navbar-level'), 10) || 1;
                     var href = trigger.attr('href');
-                    var parent = trigger.parent('li');
+                    var parent = trigger.parent('h2').parent('li');
                     var tmpUrl = url;
                     
                     if (level === 1) {

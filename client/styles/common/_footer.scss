@@ -2,7 +2,12 @@
     background-color: $gray-base;
     color: $gray-light;
 
-    div > p > span {
+    h2, h3 {
+        margin: 0px;
+        font-weight: normal;
+    }
+
+    div > h2 > p > span {
         font-size: $font-size-h4;
         padding-bottom: 5px;
         border-bottom: 1px solid $brand-primary;
@@ -12,14 +17,19 @@
         margin-bottom: 10px;
     }
 
-    .col-xs-2 > ul > li > a{
-        color: $gray-dark;
+    .col-xs-2 > ul > li > h3 {
+        line-height: 18px;
 
-        &:hover {
-            color: $brand-primary;
+        > a{
+            color: $gray-dark;
+            font-size: 14px;
+    
+            &:hover {
+                color: $brand-primary;
+            }
         }
     }
-    .col-xs-3 > ul > li > a{
+    .col-xs-3 > ul > li > h3 > a{
         color: $gray-dark;
 
         &:hover {

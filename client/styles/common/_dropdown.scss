@@ -33,13 +33,14 @@
     //     left: auto;
     // }
 
-    > li > a {
+    > li > h2 > a {
         display: block;
         padding: 8px 10px;
         clear: both;
         line-height: $line-height-base;
         white-space: nowrap;
         color: $brand-primary;
+        font-size: 14px;
 
         &:hover,
         &:focus {
@@ -51,7 +52,7 @@
     }
 
     > li:last-child {
-        > a {
+       > h2 > a {
             border-bottom: none;
         }
     }

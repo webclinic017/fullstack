@@ -5,6 +5,8 @@ $font-trader-gray-color: $gray-dark;
 .trader_gray_color {
     color: $font-trader-gray-color;
     font-size: $font-trader-size-sm;
+    margin: 0px;
+    font-weight: normal;
 }
 
 .col-fff {
@@ -74,6 +76,9 @@ $font-trader-gray-color: $gray-dark;
 @include b(trader_tags) {
     padding-top: 22px;
     color: #bbb;
+    margin: 0px;
+    font-weight: normal;
+    font-size: 14px;
 
     span {
         padding-left: 5px;
@@ -128,6 +133,8 @@ $font-trader-gray-color: $gray-dark;
         overflow: hidden;
         max-width: 100%;
         font-size: 38px;
+        margin: 0px;
+        font-weight: normal;
     }
 
     @include e(position) {
@@ -181,6 +188,7 @@ $font-trader-gray-color: $gray-dark;
 }
 
 @include b(trader_btn) {
+    margin: 0px;
     width: 150px;
     float: right;
     margin-right: 40px;
