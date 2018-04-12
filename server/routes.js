@@ -41,6 +41,7 @@ function setEnvCf(req, res) {
 function extendPublic(data, req) {
     var lang = new Lang(req);
     data["lang"] = lang;
+    data["req"] = req;
 
     if (lang.language === 'en') {
         data["lang_class"] = 'tw_en';
