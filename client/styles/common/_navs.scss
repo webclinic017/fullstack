@@ -15,7 +15,7 @@
         position: relative;
         display: block;
 
-        > a {
+        > h2 > a {
             position: relative;
             display: block;
 
@@ -133,13 +133,17 @@
     padding-left: 15px;
     padding-right: 15px;
     width: 1360px;
+
+    h1, h2, h3 {
+        margin: 0px;
+        font-weight: normal;
+    }
 }
 
 // Navbar heading
 .navbar-header {
     @extend .clearfix;
     float: left;
-    margin-right: 20px;
 
     .logo {
         margin: 15px 0 0 0;
@@ -214,7 +218,7 @@
     > li {
         float: left;
 
-        > a {
+        > h2 > a {
             margin: 0 10px;
             padding: 28px 0 25px;
             border-bottom: 2px solid transparent;
@@ -231,7 +235,7 @@
         }
     }
 
-    > li.active > a {
+    > li.active > h2 > a {
         &,
         &:hover,
         &:active,
@@ -406,8 +410,8 @@
 
     @include e(username) {
         @extend .text-inline;
-        margin-top: 0px;
-        margin-bottom: 2px;
+        margin-bottom: 2px !important;
+        font-size: 16px;
         font-weight: 400;
         color: $brand-primary;
     }
@@ -458,6 +462,11 @@
     }
 
     @include e(menu) {
+        h2 {
+            margin: 0px;
+            font-weight: normal;
+            font-size: 14px;
+        }
         & > li {
             padding-left: 30px;
         }
@@ -465,29 +474,29 @@
         & > li.active {
             background-color: $brand-primary;
 
-            > a {
+            > h2 > a {
                 color: $gray-base;
                 border-bottom-color: transparent;
                 cursor: default;
             }
 
-            > a:hover {
+            > h2 > a:hover {
                 color: $gray-base;
             }
         }
 
-        & > li > a {
+        & > li > h2 > a {
             display: block;
             padding: 10px 0;
             color: $gray-dark;
             border-bottom: 1px solid $gray-darkest;
         }
 
-        & > li > a:hover {
+        & > li > h2 > a:hover {
             color: $brand-primary;
         }
 
-        & > li:last-child > a {
+        & > li:last-child > h2 > a {
             border-color: transparent;
         }
     }

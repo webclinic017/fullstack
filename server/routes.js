@@ -162,11 +162,6 @@ module.exports = function (app) {
         res.render('entry/blockchain.html', extendPublic({}, req));
     });
 
-    app.route('/home').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('home.html', extendPublic({}, req));
-    });
-
     app.route('/ranklist').get(function (req, res) {
         setEnvCf(req, res);
         res.render('web/ranklist.html', extendPublic({}, req));

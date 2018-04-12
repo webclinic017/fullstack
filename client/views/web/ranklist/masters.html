@@ -20,70 +20,8 @@
                     胜率
                     <i class="fa fa-caret-down"></i>
                 </li>
-                <!-- <li ng-class="{active: rankOrder == 'min_follow'}" ng-click="changeRankOrder('min_follow')">
-                    <i class="fa fa-dollar"></i>
-                    最低复制金额
-                    <i class="fa fa-caret-down"></i>
-                </li> -->
             </ul>
         </div>
-        <!-- <div class="ranklist__search clearfix">
-            <div class="ranklist__search-item" ng-click="showSearchList($event, 'cycle')">
-                交易周期
-                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                <div class="search-list" ng-show="search.cycle">
-                    <div class="tit">
-                        交易周期
-                        <i class="fa fa-angle-up" aria-hidden="true"></i>
-                    </div>
-                    <ul class="lst">
-                        <li>哟呦切克闹</li>
-                        <li>煎饼果子来一套</li>
-                        <li>哟呦切克闹</li>
-                        <li>煎饼果子来一套</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="ranklist__search-item" ng-click="showSearchList($event, 'preference')">
-                交易偏好
-                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                <div class="search-list" ng-show="search.preference">
-                    <div class="tit">
-                        交易偏好
-                        <i class="fa fa-angle-up" aria-hidden="true"></i>
-                    </div>
-                    <ul class="lst">
-                        <li>哟呦切克闹</li>
-                        <li>煎饼果子来一套</li>
-                        <li>哟呦切克闹</li>
-                        <li>煎饼果子来一套</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="ranklist__search-item" ng-click="showSearchList($event, 'forex')">
-                外汇交易
-                <i class="fa fa-angle-down" aria-hidden="true"></i>
-                <div class="search-list" ng-show="search.forex">
-                    <div class="tit">
-                        外汇交易
-                        <i class="fa fa-angle-up" aria-hidden="true"></i>
-                    </div>
-                    <ul class="lst">
-                        <li>哟呦切克闹</li>
-                        <li>煎饼果子来一套</li>
-                        <li>哟呦切克闹</li>
-                        <li>煎饼果子来一套</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="ranklist__search-box">
-                <input type="text"
-                       class="ranklist__search-input"
-                       placeholder="搜索投资者">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </div>
-        </div> -->
         <div class="ranklist_cont clearfix">
             <div tw-loading-img></div>
             <div class="ranklist_cont__master" ng-repeat="rank in ranklist track by $index">
@@ -123,12 +61,6 @@
                             </span>
                             <span class="tip">历史跟随者</span>
                         </div>
-                        <!--<div class="rate">
-                            <span class="num">
-                                <i class="fa fa-dollar"></i>{{ rank.min_copy_amount }}
-                            </span>
-                            <span class="tip">最低复制金额</span>
-                        </div>-->
                     </div>
                     <div class="copy_btn_wrapper">
                         <a href="/trader/{{rank.user_code}}/#/trader/summary" target="_blank" class="copy_btn">复制</a>

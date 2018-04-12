@@ -1,15 +1,10 @@
 <div class="<%= typeof navClass == 'undefined' ? 'navbar' : 'navbar-2' %> navbar-fixed-top" tw-navbar>
     <div class="header-container">
-        <div class="navbar-header">
+        <h1 class="navbar-header">
             <a href="/cn">
                 <img class="logo" src="<%= lang.image('logo')%>">
             </a>
-            
-            <!-- <div class="cctv_con">
-                <a class="logocctv" href="#"></a>
-            </div> -->
-            <!--<a class="logo-cctv" href=""></a>-->
-        </div>
+        </h1>
     
         <%if(lang.isCompany("tigerwit")){%>
             <div class="lang navbar-right">
@@ -49,7 +44,7 @@
                     <!-- SettingInfoAvatarController -->
                     <img class="navbar_info__avatar" ng-show="!personal.addAvatarImg" ng-src="{{personalCookiesInfo.userAvatar}}">
                     <img class="navbar_info__avatar" ng-show="!!personal.addAvatarImg" ng-src="{{personal.addAvatarImg}}">
-                    <h4 class="navbar_info__username">{{personalCookiesInfo.userName || '**'}}</h4>
+                    <h2 class="navbar_info__username">{{personalCookiesInfo.userName || '**'}}</h2>
                 </a>
 
                 <a class="navbar_info__logout" href="" ng-click="logout()">
@@ -61,119 +56,123 @@
 
         <ul class="nav navbar-nav navbar-left">
             <li>
-                <a data-navbar-trigger href="/home">
-                    <%= lang.text("navbar1")%>
-                </a>
+                <h2>
+                    <a data-navbar-trigger href="/cn">
+                        <%= lang.text("navbar1")%>
+                    </a>
+                </h2>
             </li>
             <li class="dropdown" tw-dropdown>
-                <a data-navbar-trigger data-navbar-level="2" href="/ranklist/#/ranklist/masters">
-                    <%= lang.text("navbar2")%>
-                </a>
+                <h2>
+                    <a data-navbar-trigger data-navbar-level="2" href="/ranklist/#/ranklist/masters">
+                        <%= lang.text("navbar2")%>
+                    </a>
+                </h2>
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="/ranklist/#/ranklist/masters"><%= lang.text("navbar3")%></a>
+                        <h2><a href="/ranklist/#/ranklist/masters"><%= lang.text("navbar3")%></a></h2>
                     </li>
                     <li <%= lang.text("navbar15")%>>
-                        <a href="/regular"><%= lang.text("navbar4")%></a>
+                        <h2><a href="/regular"><%= lang.text("navbar4")%></a></h2>
                     </li>
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown>
-                <a data-navbar-trigger data-navbar-level="2" href="/web/product/forex"><%= lang.text("navbar5")%></a>
+                <h2>
+                    <a data-navbar-trigger data-navbar-level="2" href="/web/product/forex"><%= lang.text("navbar5")%></a>
+                </h2>
 
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="/web/product/forex"><%= lang.text("navbar6")%></a>
+                        <h2><a href="/web/product/forex"><%= lang.text("navbar6")%></a></h2>
                     </li>
                     <%if(!lang.isCloned()){%>
                         <li>
-                            <a href="/web/product/oil"><%= lang.text("navbar7")%></a>
+                            <h2><a href="/web/product/oil"><%= lang.text("navbar7")%></a></h2>
                         </li>
                         <li>
-                            <a href="/web/product/metal"><%= lang.text("navbar8")%></a>
+                            <h2><a href="/web/product/metal"><%= lang.text("navbar8")%></a></h2>
                         </li>
                     <%}%>
                     <li>
-                      <a href="/web/product/cfd"><%= lang.text("navbar9")%></a>
+                      <h2><a href="/web/product/cfd"><%= lang.text("navbar9")%></a></h2>
                     </li>
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown <%= lang.text("navbar15")%>>
-                <a data-navbar-trigger data-navbar-level="2" href="/web/copy/rules">
-                    交易指南
-                </a>
+                <h2>
+                    <a data-navbar-trigger data-navbar-level="2" href="/web/copy/rules">交易指南</a>
+                </h2>
 
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="/web/copy/rules">复制规则</a>
+                        <h2><a href="/web/copy/rules">复制规则</a></h2>
                     </li>
                     <li>
-                        <a href="/web/copy/select">如何选择高手</a>
+                        <h2><a href="/web/copy/select">如何选择高手</a></h2>
                     </li>
                     <%if(lang.isCompany("tigerwit")){%>
                         <li>
-                            <a href="/web/copy/comment">每日汇评</a>
+                            <h2><a href="/web/copy/comment">每日汇评</a></h2>
                         </li>
                         <li>
-                            <a href="/web/copy/calendar">财经日历</a>
+                            <h2><a href="/web/copy/calendar">财经日历</a></h2>
                         </li>
                     <%}%>
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown <%= lang.text("navbar15")%>>
-                <a data-navbar-trigger data-navbar-level="2" href="/web/agent/proxy">
-                    合作伙伴
-                </a>
+                <h2>
+                    <a data-navbar-trigger data-navbar-level="2" href="/web/agent/proxy">合作伙伴</a>
+                </h2>
 
                 <ul class="dropdown-menu">
                     <li>
-                        <a href="/web/agent/proxy">代理合作</a>
+                        <h2><a href="/web/agent/proxy">代理合作</a></h2>
                     </li>
                     <li>
-                        <a href="/web/agent/become">成为高手</a>
+                        <h2><a href="/web/agent/become">成为高手</a></h2>
                     </li>
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown>
                 <%if(lang.isCompany("tigerwit")){%>
-                    <a data-navbar-trigger data-navbar-level="2" href="/web/about/tigerwit"><%= lang.text("navbar10")%></a>
+                    <h2>
+                        <a data-navbar-trigger data-navbar-level="2" href="/web/about/tigerwit"><%= lang.text("navbar10")%></a>
+                    </h2>
 
                     <ul class="dropdown-menu">
                         <li>
-                            <a href="/web/about/tigerwit"><%= lang.text("navbar11")%></a>
-                        </li>
-                        <!-- <li>
-                            <a href="/web/about/stp"><%= lang.text("navbar12")%></a>
-                        </li> -->
-                    
-                        <li <%= lang.text("navbar15")%>>
-                            <a href="/web/about/team">精英团队</a>
+                            <h2><a href="/web/about/tigerwit"><%= lang.text("navbar11")%></a></h2>
                         </li>
                         <li <%= lang.text("navbar15")%>>
-                            <a href="/web/about/report">媒体报道</a>
+                            <h2><a href="/web/about/team">精英团队</a></h2>
                         </li>
-                        <!-- <li>
-                            <a href="/web/about/control">合规和监管</a>
-                        </li> -->
-                        <!-- <li>
-                            <a href="/web/about/partner">媒体合作</a>
-                        </li> -->
+                        <li <%= lang.text("navbar15")%>>
+                            <h2><a href="/web/about/report">媒体报道</a></h2>
+                        </li>
                     </ul>
                 <%}%>
                 <%if(lang.isCompany("pkds")){%>
-                    <a data-navbar-trigger href="/web/about/stp"><%= lang.text("navbar12")%></a>
+                    <h2>
+                        <a data-navbar-trigger href="/web/about/stp"><%= lang.text("navbar12")%></a>
+                    </h2>
                 <%}%>
             </li>
             <li>
-                <a data-navbar-trigger href="/download">
-                    <%= lang.text("navbar16")%>
-                </a>
+                <h2>
+                    <a data-navbar-trigger href="/download">
+                        <%= lang.text("navbar16")%>
+                    </a>
+                </h2>
             </li>
             <%if(lang.isCompany("pkds")){%>
                 <li>
-                    <a data-navbar-trigger href="/web/mt4">
-                        MT4 下载
-                    </a>
+                    <h2>
+                        <a data-navbar-trigger href="/web/mt4">
+                            MT4 下载
+                        </a>
+                    </h2>
                 </li>
             <%}%>
         </ul>

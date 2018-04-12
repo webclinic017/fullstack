@@ -48,6 +48,7 @@
         text-align: center;
         font-weight: bold;
         color: $gray-base;
+        font-size: 30px;
     }
 
     @include e(star) {
@@ -60,6 +61,10 @@
 
     @include e(forex-ul) {
         margin-top: 30px;
+
+        h5 {
+            margin: 0px;
+        }
 
         > li {
             margin-bottom: 25px;
@@ -207,6 +212,9 @@
 
         .tit {
             float: left;
+            font-size: 14px;
+            font-weight: normal;
+            margin: 0px;
         }
         .select_box {
             float: right;

@@ -24,6 +24,10 @@
     @include e(title) {
         text-align: center;
         color: #000;
+        
+        .tit {
+            font-size: 22px;
+        }
     }
     @include e(navi) {
         .navi-item {
@@ -144,6 +148,8 @@
         }
 
         .tit {
+            margin: 0;
+            font-weight: normal;
             padding-bottom: 5px;
             a {
                 color: #0866c3;

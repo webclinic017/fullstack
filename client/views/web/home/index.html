@@ -19,7 +19,7 @@
             <div class="index2-master__con">
                 <div class="row">
                     <div class="col-xs-3 index2-master__col1" ng-cloak ng-if="indexMasters.length > 0">
-                        <p class="index2-master__col1-tit"><%= lang.text("home14")%></p>
+                        <h3 class="index2-master__col1-tit"><%= lang.text("home14")%></h3>
                         <ul class="index2-master__col1-ul">
                             <li>
                                 <span class="index2-master__col1-circle">1</span>
@@ -52,17 +52,14 @@
                                 <span class="index2-master__col2-tip" ng-show="master.type == 3">
                                     <%= lang.text("persistentMaster")%>
                                 </span>
-                                <a class="index2-master__col2-name" href="/trader/{{master.user_code}}/#/trader/summary" ng-click="toQuickPageviewSensorsdata(master.username)" target="_blank" title="{{ master.username || '**' }}">{{ master.username || '**' }}</a>
+                                <h3>
+                                    <a class="index2-master__col2-name" href="/trader/{{master.user_code}}/#/trader/summary" ng-click="toQuickPageviewSensorsdata(master.username)" target="_blank" title="{{ master.username || '**' }}">{{ master.username || '**' }}</a>
+                                </h3>
                             </li>
                             <li class="index2-master__col2-li2">
                                 <div class="index2-master__col2-div1">
                                     <span class="index2-master__col2-rate">{{ master.thirty_profit_rate || '0.00' }}</span><span class="font-size-12">%</span><br>
                                     <span class="font-size-14"><%= lang.text("yieldRateOfMonth")%></span>
-                                    <!-- <div class="index2-master__col2-tags">
-                                        <span ng-repeat="tag in master.tags">
-                                            {{ tag }}
-                                        </span>
-                                    </div> -->
                                 </div>
                                 <div class="index2-master__col2-div2">
                                     <span class="index2-master__col2-how" ng-show="master.type == 1"><%= lang.text("high")%></span>
@@ -87,7 +84,6 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -95,15 +91,15 @@
     <%if(!lang.isCloned()){%>
          <section class="index2-product clearfix">
             <div class="container">
-                <h2 class="index2-product__title"><%= lang.text("home19")%></h2>
-                <p class="index2-product__tip"><%= lang.text("home20")%></p>
+                <h3 class="index2-product__title"><%= lang.text("home19")%></h3>
+                <h4 class="index2-product__tip"><%= lang.text("home20")%></h4>
                 <div class="row">
                     <div class="col-xs-3">
                         <div class="index2-product__up">
                             <a class="index2-product__up-circle" href="/web/product/forex" target="_blank">
                                 <span class="index2-product__up-icon1"></span>
                             </a>
-                            <p class="index2-product__up-name"><%= lang.text("waihui")%></p>
+                            <h5 class="index2-product__up-name"><%= lang.text("waihui")%></h5>
                         </div>
                         <div class="index2-product__down pd-lf-50">
                             <p><%= lang.text("home21")%></p>
@@ -115,7 +111,7 @@
                             <a class="index2-product__up-circle" href="/web/product/metal" target="_blank">
                                 <span class="index2-product__up-icon2"></span>
                             </a>
-                            <p class="index2-product__up-name"><%= lang.text("guijinshu")%></p>
+                            <h5 class="index2-product__up-name"><%= lang.text("guijinshu")%></h5>
                         </div>
                         <div class="index2-product__down pd-lf-50">
                             <p><%= lang.text("home24")%></p>
@@ -128,7 +124,7 @@
                             <a class="index2-product__up-circle" href="/web/product/oil" target="_blank">
                                 <span class="index2-product__up-icon3"></span>
                             </a>
-                            <p class="index2-product__up-name"><%= lang.text("yuanyou")%></p>
+                            <h5 class="index2-product__up-name"><%= lang.text("yuanyou")%></h5>
                         </div>
                         <div class="index2-product__down pd-lf-40">
                             <p><%= lang.text("home27")%></p>
@@ -141,7 +137,7 @@
                             <a class="index2-product__up-circle" href="/web/product/cfd" target="_blank">
                                 <span class="index2-product__up-icon4"></span>
                             </a>
-                            <p class="index2-product__up-name"><%= lang.text("home61")%></p>
+                            <h5 class="index2-product__up-name"><%= lang.text("home61")%></h5>
                         </div>
                         <div class="index2-product__down pd-lf-50">
                             <p><%= lang.text("home30")%></p>
@@ -157,37 +153,15 @@
         </section>
     <%}%>
 
-    <!-- <section class="index2-trade">
-        <div class="container">
-            <h2 class="index2-product__title"><%= lang.text("home33")%></h2>
-            <p class="index2-product__tip"><%= lang.text("home34")%></p>
-            <div class="row">
-                <div class="col-xs-6">
-                    <div class="index2-trade__con1">
-                        <%= lang.text("home35")%>
-                    </div>
-                    <div class="index2-trade__btn-con">
-                        <a class="index2-product__btn" href="/web/about/stp"><%= lang.text("liaojiexiangqing")%></a>
-                    </div>
-                </div>
-                <div class="col-xs-6">
-                    <div class="index2-trade__img">
-                        <img src="<%= lang.image('homeTrade')%>" alt="">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
     <section class="index2-why">
         <div class="container">
-            <h2 class="index2-product__title"><%= lang.text("home36")%></h2>
-            <p class="index2-product__tip"><%= lang.text("home37")%></p>
+            <h3 class="index2-product__title"><%= lang.text("home36")%></h3>
+            <h4 class="index2-product__tip"><%= lang.text("home37")%></h4>
             <div class="row">
                 <div class="col-xs-3">
                     <div class="index2-product__up">
                         <div class="index2-why__up-icon1"></div>
-                        <p class="index2-product__up-name"><%= lang.text("home38")%></p>
+                        <h5 class="index2-product__up-name"><%= lang.text("home38")%></h5>
                     </div>
                     <div class="index2-product__down pd-lf-50">
                         <p><%= lang.text("home39")%></p>
@@ -196,7 +170,7 @@
                 <div class="col-xs-3">
                     <div class="index2-product__up">
                         <div class="index2-why__up-icon2"></div>
-                        <p class="index2-product__up-name <%= lang.currentLanguage()%>"><%= lang.text("home40")%></p>
+                        <h5 class="index2-product__up-name <%= lang.currentLanguage()%>"><%= lang.text("home40")%></h5>
                     </div>
                     <div class="index2-product__down pd-lf-50">
                         <p><%= lang.text("home41")%></p>
@@ -205,7 +179,7 @@
                 <div class="col-xs-3">
                     <div class="index2-product__up">
                         <div class="index2-why__up-icon3"></div>
-                        <p class="index2-product__up-name"><%= lang.text("home42")%></p>
+                        <h5 class="index2-product__up-name"><%= lang.text("home42")%></h5>
                     </div>
                     <div class="index2-product__down pd-lf-40">
                         <p><%= lang.text("home43")%></p>
@@ -214,7 +188,7 @@
                 <div class="col-xs-3">
                     <div class="index2-product__up">
                         <div class="index2-why__up-icon4"></div>
-                        <p class="index2-product__up-name <%= lang.currentLanguage()%>"><%= lang.text("home44")%></p>
+                        <h5 class="index2-product__up-name <%= lang.currentLanguage()%>"><%= lang.text("home44")%></h5>
                     </div>
                     <div class="index2-product__down pd-lf-50">
                         <p><%= lang.text("home45_2")%></p>
@@ -230,8 +204,8 @@
 
     <section class="index2-quote index2-product">
         <div class="container">
-            <h2 class="index2-product__title"><%= lang.text("home62")%></h2>
-            <p class="index2-product__tip"><%= lang.text("home63")%></p>
+            <h3 class="index2-product__title"><%= lang.text("home62")%></h3>
+            <h4 class="index2-product__tip"><%= lang.text("home63")%></h4>
             <div class="pd-tp-15 clearfix">
                 <ul class="index2-quote__title clearfix">
                     <li class="pro">
@@ -292,7 +266,7 @@
                     </div>
                 </div>
                 <div class="col-xs-6 whiteLabelC">
-                    <h2 class="index2-info__title"><%= lang.text("home46")%></h2>
+                    <h3 class="index2-info__title"><%= lang.text("home46")%></h3>
                     <p class="index2-info__con">
                         <%= lang.text("home47")%>
                     </p>

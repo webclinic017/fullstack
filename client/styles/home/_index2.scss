@@ -474,7 +474,7 @@
         background: #fff;
 
         @include m(tit) {
-            // font-family: "MicrosoftYaHei Bold", "Lantinghei SC";
+            margin: 0px;
             font-size: 20px;
             font-weight: bold;
         }
@@ -518,6 +518,9 @@
         background-position: center center;
         // @include img-normal($image-path-home + "index2-master-bg.jpg");
 
+        h3 {
+            margin: 0px;
+        }
         @include m(li1) {
             padding-bottom: 14px;
             padding-left: 10px;
@@ -684,11 +687,13 @@
         color: #0C0A09;
     }
     @include e(tip) {
+        margin: 0px;
         margin-top: 26px;
         line-height: 20px;
         text-align: center;
         font-size: 18px;
         color: #0C0A09;
+        font-weight: normal;
     }
     @include e(btn-con) {
         margin-top: 80px;
@@ -766,6 +771,7 @@
         }
 
         @include m(name) {
+            margin: 0px;
             margin-top: 26px;
             line-height: 48px;
             font-weight: bold;
