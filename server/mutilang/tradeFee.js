@@ -108,8 +108,32 @@ module.exports = {
         "en": "Free withdrawals 4 times per month each account, more than 4 times, charge $1 for each withdrawal."
     },
     "tradeFee27": {
-        "zh": "ming",
-        "en": "Free withdrawals 4 times per month each account, more than 4 times, charge $1 for each withdrawal."
+        "zh": "名称",
+        "en": "Name"
     },
+    "tradeFee28": {
+        "zh": "最小点差",
+        "en": "Minimal Spread"
+    },
+    "tradeFee29": {
+        "zh": "平均点差",
+        "en": "Average Spread"
+    },
+    "tradeFee30": {
+        "zh": "调期库存费计算模式",
+        "en": "Calculation Mode of Swap"
+    },
+    "tradeFee31": {
+        "zh": "买单调期库存费（美元/手）",
+        "en": "Swap Long（USD/Lot)"
+    },
+    "tradeFee32": {
+        "zh": "卖单调期库存费（美元/手）",
+        "en": "Swap Short（USD/Lot）"
+    },
+    "tradeFee33": {
+        "zh": "手续费",
+        "en": "Swap"
+    }
 }
 
