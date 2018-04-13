@@ -13,7 +13,8 @@
             invest: "网银支付",
             tele: "电汇",
             wallet: "零钱包",
-            alipay: "支付宝"
+            alipay: "支付宝",
+            cseWallet: "CSE"
         };
         $scope.deposit = {
             minAmount: 0,       // 最低充值金额
@@ -26,7 +27,7 @@
             amount: undefined,
             teleFile: undefined,    //电汇凭证
             submitBtn: true,
-            bankFile : [],    //入金凭证
+            bankFile: [],    //入金凭证
             isAbleDeposit: 0    //是否能够入金（是否上传凭证）evidence  0不需要上传，1需要上传，2未审核
         };
         $scope.depositTypeCN = depositType[$scope.deposit.type];
@@ -82,11 +83,11 @@
             }
         });
 
-        function checkImage (e, targetUrl) {
+        function checkImage(e, targetUrl) {
             previewImage.toLargeImage(e, targetUrl);
         }
 
-        function uploadBankFile () {    //提交入金凭证
+        function uploadBankFile() {    //提交入金凭证
             // console.log($scope.deposit.bankFile);
             if ($scope.deposit.bankFile.length) {
                 asset.uploadPaymentEvidence($scope.deposit.bankFile).then(function (data) {
@@ -190,10 +191,10 @@
                     amount = Number(amount).toFixed(2);
 
                     confirmDeposit();
-            
+
                     function confirmDeposit() {
                         $scope.isLoading = true;
-                        if ($scope.deposit.type === 'invest' || $scope.deposit.type === 'alipay') {
+                        if ($scope.deposit.type === 'invest' || $scope.deposit.type === 'alipay' || $scope.deposit.type === 'cseWallet') {
                             //网银大额入金限制
                             if ($scope.deposit.type === 'invest') {
                                 asset.getDepositLimit().then(function (data) {
@@ -202,8 +203,8 @@
                                     if (data.is_succ) {
                                         $scope.deposit.isAbleDeposit = data.data.evidence;
                                         if ($scope.deposit.isAbleDeposit == 0) {
-                                            
-                                            if ((Number(amount)+Number(data.data.today_total))>=3000) {
+
+                                            if ((Number(amount) + Number(data.data.today_total)) >= 3000) {
                                                 $scope.isLoading = false;
                                                 openDepositMdl('confirmDeposit', submitDeposit, {
                                                     msgTip: '应监管要求，此笔支付成功后，当日累计支付超过3000美金，需提供入金凭证。入金凭证可以是含有姓名、卡号、支付金额的付款成功截图或银行流水单。',
@@ -224,12 +225,32 @@
                                         }
                                     }
                                 });
+                            } else if ($scope.deposit.type == 'cseWallet') {
+                                $layer({
+                                    title: '系统提示',
+                                    // msgClass: 'font-danger',
+                                    size: 'sm',
+                                    btnsClass: 'text-right',
+                                    msg: '是否有CSE帐号？',
+                                    btns: {
+                                        '是': function () {
+                                            submitDeposit()
+                                        },
+                                        '否': function () {
+                                            $scope.isLoading = false;
+                                            //todo 
+                                        },
+                                    }
+                                })
                             } else {
                                 submitDeposit();
                             }
-
                             function submitDeposit() {
-                                var platform = $scope.deposit.type === 'alipay' ? 4 : undefined;
+                                var depTypeCode = {
+                                    alipay: 4,
+                                    cseWallet: 17
+                                }
+                                var platform = depTypeCode[$scope.deposit.type];
                                 var w = $window.open('/waiting');
 
                                 asset.deposit(amount, platform).then(function (data) {
@@ -246,9 +267,8 @@
                                     }
                                 });
                             }
-                        } 
+                        }
                         if ($scope.deposit.type === 'wallet') {
-
                             asset.walletDeposit(amount).then(function (data) {
                                 $scope.isLoading = false;
                                 // console.log(data);
@@ -273,7 +293,6 @@
                                 }
                             })
                         }
-                    
                         if ($scope.deposit.type === 'tele') {
                             if (!$scope.deposit.teleFile) {
                                 $scope.isLoading = false;
@@ -294,7 +313,7 @@
                 }
             })
         }
-   
+
 
         function changeDepositType(type) {
             $scope.deposit.type = type;
@@ -366,7 +385,7 @@
                     }
 
                     //继续入金
-                    function goOnDeposit () {
+                    function goOnDeposit() {
                         callback && callback();
                         closeModal();
                     }
@@ -379,7 +398,7 @@
             });
         }
 
-        function openChangeDepTypeMdl () {
+        function openChangeDepTypeMdl() {
             $modal.open({
                 templateUrl: '/views/asset/deposit_dep_type_modal.html',
                 size: 'sm',
@@ -402,14 +421,14 @@
                     $scope.selectType = selectType;
                     $scope.changeType = changeType;
 
-                    function selectType (type) {
+                    function selectType(type) {
                         $scope.deposit.type = type;
                     }
 
-                    function changeType () {
+                    function changeType() {
+                        closeModal();
                         changeDepositType($scope.deposit.type);
                         checkInputAmount();
-                        closeModal();
                     }
 
                     function closeModal() {

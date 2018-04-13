@@ -25,6 +25,15 @@
                    <p class="tip">单日交易限额以银行规定为准</p>
                </div>
            </li>
+           <li class="row" ng-click="selectType('cseWallet')">
+               <div class="col-xs-3 deposit_modal__type-icon">
+                   <span class="btn-select fr" ng-class="{active: deposit.type === 'cseWallet'}"></span>
+               </div>
+               <div class="col-xs-9 deposit_modal__type-cont">
+                   <p class="tit">CSE</p>
+                   <p class="tip">需跳转到第三方平台</p>
+               </div>
+           </li>
            <li class="row" ng-click="selectType('wallet')">
                <div class="col-xs-3 deposit_modal__type-icon">
                    <span class="btn-select fr" ng-class="{active: deposit.type === 'wallet'}"></span>
