@@ -256,6 +256,8 @@ module.exports = function () {
         "waihui": { "en": "Forex", "zh": "外汇" },
         "guijinshu": { "en": "Precious metal", "zh": "贵金属" },
         "yuanyou": { "en": "Crude oil", "zh": "原油" },
+        "nengyuan": { "en": "Energy", "zh": "能源" },
+        "CFD": { "en": "CFD", "zh": "差价合约" },
         "faq": { "en": "FAQ", "zh": "常见问题" },
         "login": { "en": "Login", "zh": "登录" },
         "register": { "en": "Register", "zh": "注册" },
@@ -289,6 +291,9 @@ module.exports = function () {
         "trading": { "en": "Trading", "zh": "交易" },
         "platform": { "en": "Platform", "zh": "平台" },
         "swapRate": { "en": "Swap Rate", "zh": "隔夜利息" },
+        "nodata": { "en": "No data", "zh": "暂无数据" },
+        "more": { "en": "Click for More", "zh": "点击查看更多信息" },
+        "fold": { "en": "Fold", "zh": "收起" },
 
 
         // 导航栏 navbar
@@ -2046,6 +2051,7 @@ module.exports = function () {
     // 处理faq相关字段
     var faq = replaceTiger(require('./mutilang/faq'))
     var tobeMaster = replaceTiger(require('./mutilang/tobeMaster'))
+    var tradeFee = replaceTiger(require('./mutilang/tradeFee'))
 
     // console.log(faq)
     var mInvite = replaceTiger(require('./mutilang/mInvite'))
@@ -2055,6 +2061,7 @@ module.exports = function () {
         data,
         faq,
         tobeMaster,
+        tradeFee,
         mInvite,
         mRegister
     );

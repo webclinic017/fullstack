@@ -62,7 +62,7 @@
         getTradeFeeInfo()
         function getTradeFeeInfo(cate, type) {
             product.getTradeFeeInfo().then(function (res) {
-                console.log(res)
+                // console.log(res)
                 if (res.is_succ) {
                     $scope.tradeFeeData = res.data;
                     changeType('point', 'forex')
