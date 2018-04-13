@@ -256,6 +256,8 @@ module.exports = function () {
         "waihui": { "en": "Forex", "zh": "外汇" },
         "guijinshu": { "en": "Precious metal", "zh": "贵金属" },
         "yuanyou": { "en": "Crude oil", "zh": "原油" },
+        "nengyuan": { "en": "Energy", "zh": "能源" },
+        "CFD": { "en": "CFD", "zh": "差价合约" },
         "faq": { "en": "FAQ", "zh": "常见问题" },
         "login": { "en": "Login", "zh": "登录" },
         "register": { "en": "Register", "zh": "注册" },
@@ -289,6 +291,9 @@ module.exports = function () {
         "trading": { "en": "Trading", "zh": "交易" },
         "platform": { "en": "Platform", "zh": "平台" },
         "swapRate": { "en": "Swap Rate", "zh": "隔夜利息" },
+        "nodata": { "en": "No data", "zh": "暂无数据" },
+        "more": { "en": "Click for More", "zh": "点击查看更多信息" },
+        "fold": { "en": "Fold", "zh": "收起" },
 
 
         // 导航栏 navbar
@@ -801,6 +806,9 @@ module.exports = function () {
         "sidebar9": { "en": "Platform", "zh": "平台" },
         "sidebar10": { "en": "Swap Rate", "zh": "隔夜利息" },
         "sidebar11": { "en": "Videos", "zh": "学习视频" },
+        "sidebar12": { "en": "Partner", "zh": "合作伙伴" },
+        "sidebar13": { "en": "Agent", "zh": "代理合作" },
+        "sidebar14": { "en": "Become Master", "zh": "成为高手" },
 
         // （页面底部）学习中心-模拟账户 virtual
         "virtual1": { "en": "How to open a virtual account?", "zh": "Q：如何开立模拟账户？" },
@@ -2036,11 +2044,14 @@ module.exports = function () {
                 .replace(/tigerWit/g, companyConfig.companyNameEn)
                 .replace(/老虎外汇/g, companyConfig.companyNameZh)
                 .replace(/400 - 809 - 8509/g, companyConfig.telephone)
+                .replace(/support@tigerwit.com/g, companyConfig.supportEmail)
         )
     }
 
     // 处理faq相关字段
     var faq = replaceTiger(require('./mutilang/faq'))
+    var tobeMaster = replaceTiger(require('./mutilang/tobeMaster'))
+    var tradeFee = replaceTiger(require('./mutilang/tradeFee'))
 
     // console.log(faq)
     var mInvite = replaceTiger(require('./mutilang/mInvite'))
@@ -2049,6 +2060,8 @@ module.exports = function () {
     return _.merge(
         data,
         faq,
+        tobeMaster,
+        tradeFee,
         mInvite,
         mRegister
     );
