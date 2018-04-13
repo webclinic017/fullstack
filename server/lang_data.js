@@ -801,6 +801,9 @@ module.exports = function () {
         "sidebar9": { "en": "Platform", "zh": "平台" },
         "sidebar10": { "en": "Swap Rate", "zh": "隔夜利息" },
         "sidebar11": { "en": "Videos", "zh": "学习视频" },
+        "sidebar12": { "en": "Partner", "zh": "合作伙伴" },
+        "sidebar13": { "en": "Agent", "zh": "代理合作" },
+        "sidebar14": { "en": "Become Master", "zh": "成为高手" },
 
         // （页面底部）学习中心-模拟账户 virtual
         "virtual1": { "en": "How to open a virtual account?", "zh": "Q：如何开立模拟账户？" },
@@ -2036,11 +2039,13 @@ module.exports = function () {
                 .replace(/tigerWit/g, companyConfig.companyNameEn)
                 .replace(/老虎外汇/g, companyConfig.companyNameZh)
                 .replace(/400 - 809 - 8509/g, companyConfig.telephone)
+                .replace(/support@tigerwit.com/g, companyConfig.supportEmail)
         )
     }
 
     // 处理faq相关字段
     var faq = replaceTiger(require('./mutilang/faq'))
+    var tobeMaster = replaceTiger(require('./mutilang/tobeMaster'))
 
     // console.log(faq)
     var mInvite = replaceTiger(require('./mutilang/mInvite'))
@@ -2049,6 +2054,7 @@ module.exports = function () {
     return _.merge(
         data,
         faq,
+        tobeMaster,
         mInvite,
         mRegister
     );
