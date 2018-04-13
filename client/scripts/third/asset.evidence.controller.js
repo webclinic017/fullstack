@@ -46,6 +46,14 @@
         asset.uploadPaymentEvidence(evidence.files, evidence.id).then(function (data) {
           if (data.is_succ) {
             $scope.evidenceList.splice(ind, 1);
+            $layer({
+              title: '提示',
+              msg: '入金凭证已提交，正在审核中。审核时间：大约1个工作日',
+              msgClass: '',
+              btns: {
+                "确定": function(){}
+              }
+            });
           } else {
             $layer({
               title: '提示',

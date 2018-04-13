@@ -157,7 +157,7 @@
     @include e(btn_wrapper) {
         margin-top: 30px;
         text-align: center;
-        width: 160px;
+        min-width: 160px;
         display: inline-block;
     }
     @include e(tele) {

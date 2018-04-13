@@ -38,7 +38,8 @@
               </div>
               <div class="date clearfix">
                 <span class="fl">{{evidence.created_at | dealTimestamp}}</span>
-                <span class="fr">交易成功</span>
+                <span ng-if="status !== 1" class="fr">交易成功</span>
+                <span ng-if="status === 1" class="fr">{{evidence.reason}}</span>
               </div>
               <div class="info clearfix" ng-if="status === 1">
                 <div class="fl pic-box clearfix">
@@ -74,6 +75,9 @@
                       </button>
                   </div>
                 </div>
+            </li>
+            <li ng-if="!evidenceList.length" class="text-center font-size-16">
+              当前没有凭证
             </li>
           </ul>
       </div>

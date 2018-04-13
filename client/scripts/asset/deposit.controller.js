@@ -22,6 +22,8 @@
                 // timestamp: ,
                 // RMB:         // 折合人民币
             },
+            notice: null,       // 网银入金后端提示
+            quota_full_notice: null,    // 网银限额按钮提示
             type: $state.params.type || 'tele',
             amount: undefined,
             teleFile: undefined,    //电汇凭证
@@ -65,6 +67,8 @@
             // console.log(data);
             if (!data) return;
             if (data.is_succ) {
+                $scope.deposit.quota_full_notice = data.data.quota_full_notice;
+                $scope.deposit.notice = data.data.notice;
                 $scope.deposit.minAmount = parseInt(data.data.min);
                 $scope.deposit.isAbleDeposit = data.data.evidence;
                 // $scope.deposit.isAbleDeposit = 1;
@@ -154,7 +158,7 @@
             if ($scope.deposit.type !== 'invest') return;
             if ($scope.deposit.isAbleDeposit === 1) {
                 openDepositMdl('depositLimit', openChangeDepTypeMdl, {
-                    msgTip: '您网银支付累计已超过$3000，需上传历史充值凭证后才可继续使用网银支付功能。',
+                    msgTip: '您网银入金累计已超过$3000，需上传历史充值凭证后才可继续使用网银支付功能。',
                     msgBtn: '选择其他支付方式',
                     msgTitle: '提示'
                 });
@@ -193,7 +197,7 @@
                                             
                                             $scope.isLoading = false;
                                             openDepositMdl('confirmDeposit', submitDeposit, {
-                                                msgTip: '请务必使用实名认证本人银行卡进行充值，否则资金将被退回，充值成功后请及时上传支付凭证。',
+                                                msgTip: '请务必使用实名认证本人银行卡进行充值，否则资金将被退回。充值成功后请及时上传支付凭证。',
                                                 msgBtn: '确定',
                                                 msgTitle: '提示'
                                             });

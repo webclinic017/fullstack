@@ -67,6 +67,9 @@
                     <span class="font-danger">＊</span>今日汇率：1 美元 =
                     <span>{{deposit.FXRate.value}}</span> 人民币
                 </p>
+                <p ng-show="deposit.type === 'invest'">
+                    额外收取2％手续费
+                </p>
             </div>
         </div>
 
@@ -90,11 +93,27 @@
             <div class="col-xs-2"></div>
             <div class="col-xs-7 text-center">
                 <div class="deposit__btn_wrapper">
-                    <button ng-if="!isLoading" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-click="toDeposit()">
+                    <button ng-if="!isLoading && ((deposit.type !== 'invest') || ((deposit.type === 'invest') && !deposit.quota_full_notice))" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-click="toDeposit()">
                         <span ng-show="deposit.type !== 'tele'">充值</span>
                         <span ng-show="deposit.type === 'tele'">提交</span>
                     </button>
+                    <button ng-if="!isLoading && (deposit.type === 'invest') && deposit.quota_full_notice" class="tw-btn tw-btn-capsule-gradient tw-btn-full tw-btn-disabled disabled">
+                        {{deposit.quota_full_notice}}
+                    </button>
                     <button ng-if="isLoading" class="tw-btn tw-btn-capsule-gradient tw-btn-full"><i class="loading_spinner fa fa-spinner"></i>提交中</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-7 col-xs-offset-2 warn_tip_area mg-tp-15" ng-show="(deposit.type === 'invest') && deposit.notice">
+                <div class="warn_icon">
+                    ⚠️
+                </div>
+                <div class="warn_content">
+                    <div class="">
+                        <p>{{deposit.notice}}</p>
+                    </div>
                 </div>
             </div>
         </div>
