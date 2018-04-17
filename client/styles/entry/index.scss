@@ -186,6 +186,9 @@
         font-size: 18px;
         font-weight: 500;
     }
+    .sys_icons {
+        height: 30px;
+    }
 }
 
 .unfold_container_right {
@@ -232,7 +235,7 @@
             z-index: 2;
             width: 230px;
             height: 55px;
-            background-size: 100%;
+            background-size: auto 100%;
             background-image: url('/images/entry/logo.png');
             background-repeat: no-repeat;
         }
