@@ -66,8 +66,9 @@
                 }
                 email = $scope.emailInfo.newEmail;
             }
+            console.log(email)
             var token = $cookies['code_token'];
-            account.sendCode(email ? email : '', token, type == 'new' ? 3 : 4, 2).then(function (data) {
+            account.sendCode(email || '', token, type === 'new' ? 3 : 4, undefined, 2).then(function (data) {
                 if (!data) return;
                 // console.info(data);
                 if (data.is_succ) {
