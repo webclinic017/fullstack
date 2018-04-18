@@ -21,9 +21,26 @@
         </div>
     
         <div class="sys_modal_v2__content" ng-if="type === 'confirmDeposit'">
-            <p class="sys_modal_v2__info mg-bt-15">
-                {{msgInfo.msgTip}}
-            </p>
+            <div class="sys_modal_v2__info mg-bt-15">
+                <p class="deposit_modal__tit">¥ {{msgInfo.amountTotal}}</p>
+                <ul class="deposit_modal__lst">
+                    <li class="clearfix">
+                        <span class="fl">充值金额：</span>
+                        <span class="fr">${{msgInfo.amountDollar}}</span>
+                    </li>
+                    <li class="clearfix">
+                        <span class="fl">折合人民币约：</span>
+                        <span class="fr">¥{{msgInfo.amountRMB}}</span>
+                    </li>
+                    <li class="clearfix">
+                        <span class="fl">手续费：</span>
+                        <span class="fr">¥{{msgInfo.amountFee}}</span>
+                    </li>
+                </ul>
+                <p class="deposit_modal__tip">
+                    请务必使用实名认证本人银行卡进行充值，否则资金将被退回。充值成功后请及时上传支付凭证。
+                </p>
+            </div>
     
             <p class="btn_wrapper mg-bt-15">
                 <button class="btn btn-primary-gradient btn-sm" ng-click="goOnDeposit()">

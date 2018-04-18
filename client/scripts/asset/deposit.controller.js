@@ -194,12 +194,15 @@
                                     if (data.is_succ) {
                                         $scope.deposit.isAbleDeposit = data.data.evidence;
                                         if ($scope.deposit.isAbleDeposit === 0) {
-                                            
                                             $scope.isLoading = false;
+                                            var amountRMB = Number(amount*$scope.deposit.FXRate.value).toFixed(2);
+                                            var amountFee = Number(amount*$scope.deposit.FXRate.value*0.02).toFixed(2);
                                             openDepositMdl('confirmDeposit', submitDeposit, {
-                                                msgTip: '请务必使用实名认证本人银行卡进行充值，否则资金将被退回。充值成功后请及时上传支付凭证。',
-                                                msgBtn: '确定',
-                                                msgTitle: '提示'
+                                                amountDollar: amount,
+                                                amountRMB: amountRMB,
+                                                amountFee: amountFee,
+                                                amountTotal: Number(amountRMB) + Number(amountFee),
+                                                msgBtn: '确认'
                                             });
                                         } else {
                                             $scope.isLoading = false;

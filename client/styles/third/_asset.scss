@@ -359,6 +359,21 @@
             }
         }
     }
+    @include e(tit) {
+        font-size: 30px;
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    @include e(lst) {
+        li {
+            padding: 5px 0px;
+            color: #666;
+        }
+    }
+    @include e(tip) {
+        margin-top: 25px;
+        color: #999;
+    }
 }
 
 @include b(withdraw) {
