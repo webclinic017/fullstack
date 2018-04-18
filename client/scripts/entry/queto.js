@@ -55,15 +55,14 @@
                 };
                 $scope.quoteSymbols.push(symbol);
             });
-            getSpreadInfo();
+            connectSocket();
         }
-
-        function getSpreadInfo() {
-            $http.get('/api/spread_info').then(function (data) {
-                $scope.spreadInfo = data.data.data;
-                connectSocket()
-            });
-        }
+        // function getSpreadInfo() {
+        //     $http.get('/api/spread_info').then(function (data) {
+        //         $scope.spreadInfo = data.data.data;
+        //         connectSocket()
+        //     });
+        // }
 
         function connectSocket() {
             if ("WebSocket" in window) {
@@ -126,15 +125,15 @@
                                 value.type = quote[1];
                                 value.timestamp = quote[4];
                                 // 处理点差
-                                commonSpread = $scope.spreadInfo.spread_common[$scope.spreadInfo.security[value.symbol]] / 2;
-                                var fix = '1';
-                                spreadLength = quote[3].split('.')[1].length;
-                                for (var i = 0; i < spreadLength; i++) {
-                                    fix = fix + '0';
-                                }
-                                commonSpread = commonSpread / fix;
-                                buy = (Number(quote[3]) + commonSpread).toFixed(spreadLength);
-                                sell = (Number(quote[2]) - commonSpread).toFixed(spreadLength);
+                                // commonSpread = $scope.spreadInfo.spread_common[$scope.spreadInfo.security[value.symbol]] / 2;
+                                // var fix = '1';
+                                // spreadLength = quote[3].split('.')[1].length;
+                                // for (var i = 0; i < spreadLength; i++) {
+                                //     fix = fix + '0';
+                                // }
+                                // commonSpread = commonSpread / fix;
+                                buy = Number(quote[3])
+                                sell = Number(quote[2])
 
                                 value.sell = sell;
                                 value.buy = buy;
