@@ -283,13 +283,13 @@
                                 }
 
                                 // commonSpread = $scope.spreadInfo.spread_common[$scope.spreadInfo.security[value.symbol]] / 2;
-                                // var fix = '1';
+                                var fix = '1';
                                 spreadLength = quote[3].split('.')[1].length;
-                                // for (var i = 0; i < spreadLength; i++) {
-                                //     fix = fix + '0';
-                                // }
+                                for (var i = 0; i < spreadLength; i++) {
+                                    fix = fix + '0';
+                                }
                                 // commonSpread = commonSpread / fix;
-                                // groupSpread = groupSpread / fix;
+                                groupSpread = groupSpread / fix;
                                 buy = (Number(quote[3]) + groupSpread).toFixed(spreadLength);
                                 sell = (Number(quote[2]) - groupSpread).toFixed(spreadLength);
 
