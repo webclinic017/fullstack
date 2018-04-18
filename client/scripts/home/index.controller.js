@@ -186,16 +186,16 @@
                 };
                 $scope.quoteSymbols.push(symbol);
             });
-            getSpreadInfo();
+            getUserGroup();
         }
 
-        function getSpreadInfo() {
-            account.getSpreadInfo().then(function (data) {
-                // console.log(data);
-                $scope.spreadInfo = data.data;
-                getUserGroup();
-            });
-        }
+        // function getSpreadInfo() {
+        //     account.getSpreadInfo().then(function (data) {
+        //         // console.log(data);
+        //         $scope.spreadInfo = data.data;
+        //         getUserGroup();
+        //     });
+        // }
 
         function getUserGroup() {
             account.checkLogined().then(function (logined) {
@@ -277,20 +277,21 @@
                                 value.timestamp = quote[4];
 
                                 // 处理点差
-                                commonSpread = $scope.spreadInfo.spread_common[$scope.spreadInfo.security[value.symbol]] / 2;
                                 if ($scope.userGroup) {
                                     var s = $scope.spreadInfo.spread_special_offset[$scope.userGroup[$scope.spreadInfo.security[value.symbol]]];
                                     groupSpread = s ? s / 2 : 0;
                                 }
-                                var fix = '1';
+
+                                // commonSpread = $scope.spreadInfo.spread_common[$scope.spreadInfo.security[value.symbol]] / 2;
+                                // var fix = '1';
                                 spreadLength = quote[3].split('.')[1].length;
-                                for (var i = 0; i < spreadLength; i++) {
-                                    fix = fix + '0';
-                                }
-                                commonSpread = commonSpread / fix;
-                                groupSpread = groupSpread / fix;
-                                buy = (Number(quote[3]) + commonSpread + groupSpread).toFixed(spreadLength);
-                                sell = (Number(quote[2]) - commonSpread - groupSpread).toFixed(spreadLength);
+                                // for (var i = 0; i < spreadLength; i++) {
+                                //     fix = fix + '0';
+                                // }
+                                // commonSpread = commonSpread / fix;
+                                // groupSpread = groupSpread / fix;
+                                buy = (Number(quote[3]) + groupSpread).toFixed(spreadLength);
+                                sell = (Number(quote[2]) - groupSpread).toFixed(spreadLength);
 
                                 value.sell = sell;
                                 value.buy = buy;
