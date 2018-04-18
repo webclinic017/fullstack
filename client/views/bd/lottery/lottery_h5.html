@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <% include /common/meta/h5.html %>
+    <title>
+        <%= lang.text('companyZhName')%>
+    </title>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<body class="m_lottery">
+    <!-- 引入组件 -->
+    <% include /common/component/h5.share_modal.html %>
+    <div class="m_mon_report_layout">
+        <br>
+        <br>
+        <br>
+        <br>
+        <button id="share_test">分享</button>
+        <p id="share_succ"></p>
+        <p id="share_fail"></p>
+    </div>
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_lottery.js -->
+<script src="/scripts/bd/common/wx_share_config.js"></script>
+<script src="/scripts/bd/common/open_app.js"></script>
+<script src="/scripts/bd/lottery/lottery_h5.js"></script>
+<!-- endbuild -->
+
+<!-- 推广脚本footer -->
+<%- include('/common/statistic/all.html') %>
+</html>
