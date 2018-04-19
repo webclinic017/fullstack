@@ -197,8 +197,8 @@
                                         },
                                         '否': function () {
                                             $scope.isLoading = false;
-                                            window.open("/third/cse_usage", "self")
-                                        },
+                                            window.open("https://www.csepay.com/zn/")
+                                        }
                                     }
                                 })
                             } else {

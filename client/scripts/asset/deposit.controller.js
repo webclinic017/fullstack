@@ -238,7 +238,7 @@
                                         },
                                         '否': function () {
                                             $scope.isLoading = false;
-                                            window.open("/third_usage", "self")
+                                            window.open("https://www.csepay.com/zn/")
                                         },
                                     }
                                 })
