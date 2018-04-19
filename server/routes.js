@@ -88,6 +88,11 @@ module.exports = function (app) {
         res.render('space', extendPublic({}, req));
     });
 
+    app.route('/third_usage').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('web/third_usage', extendPublic({}, req));
+    });
+
     // 熊猫外汇页面路径
     app.route('/panda').get(function (req, res) {
         res.redirect('https://ibonline.tigerwit.com');

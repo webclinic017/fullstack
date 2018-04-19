@@ -14,7 +14,7 @@
             tele: "电汇",
             wallet: "零钱包",
             alipay: "支付宝",
-            cseWallet: "CSE"
+            cseWallet: "第三方支付"
         };
         $scope.deposit = {
             minAmount: 0,       // 最低充值金额
@@ -231,14 +231,14 @@
                                     // msgClass: 'font-danger',
                                     size: 'sm',
                                     btnsClass: 'text-right',
-                                    msg: '是否有CSE帐号？',
+                                    msg: '是否有CSE Wallet帐号？',
                                     btns: {
                                         '是': function () {
                                             submitDeposit()
                                         },
                                         '否': function () {
                                             $scope.isLoading = false;
-                                            //todo 
+                                            window.open("/third_usage", "self")
                                         },
                                     }
                                 })
