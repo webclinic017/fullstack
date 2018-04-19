@@ -88,6 +88,11 @@ module.exports = function (app) {
         res.render('space', extendPublic({}, req));
     });
 
+    app.route('/third_usage').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('web/third_usage', extendPublic({}, req));
+    });
+
     // 熊猫外汇页面路径
     app.route('/panda').get(function (req, res) {
         res.redirect('https://ibonline.tigerwit.com');
@@ -107,7 +112,7 @@ module.exports = function (app) {
     });
     app.use('/', function(req, res, next){
         setEnvCf(req, res);
-        var allowPaths = ['/payment/login', '/payment/asset', '/waiting']
+        var allowPaths = ['/payment/login', '/payment/asset', '/waiting', '/third/cse_usage']
         if(req.hostname.indexOf('ibonline') != -1) {
             if(allowPaths.indexOf(req.originalUrl) != -1){
                 var pageId = ''
@@ -116,7 +121,11 @@ module.exports = function (app) {
                 }
                 else if(req.originalUrl == allowPaths[1]){
                     pageId = 'asset'
-                } else if(req.originalUrl == allowPaths[2]){
+                } 
+                else if(req.originalUrl == allowPaths[3]){
+                    pageId = 'cse_usage'
+                }
+                else if(req.originalUrl == allowPaths[2]){
                     res.render('waiting', extendPublic({}, req));
                     return
                 }
