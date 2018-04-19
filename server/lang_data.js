@@ -22,7 +22,7 @@ module.exports = function () {
             ibEmail: "support@tigerwit.com",
             telephone: "400 - 809 - 8509",
             webSite: "www.tigerwit.com",
-            webMt4Download: "https://www.tigerwit.com/files/tigerwit4setup.exe",
+            webMt4Download: "https://static.tigerwitfx.com/files/tigerwit4setup.exe",
             androidApp: versionAndroidApp,
             // download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
             download: "/m/blank",
@@ -60,7 +60,7 @@ module.exports = function () {
             ibEmail: "support@tigerwit.com",
             telephone: "400 - 809 - 8509",
             webSite: "lonfx.tigerwit.com",
-            webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
+            webMt4Download: "https://static.tigerwitfx.com/files/tigerwit_setup_151111.exe",
             androidApp: versionAndroidApp,
             download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
 
@@ -98,7 +98,7 @@ module.exports = function () {
             ibEmail: "info@pandafx.com",
             telephone: "400-033-1949",
             webSite: "pandafx.tigerwit.com",
-            webMt4Download: "https://www.tigerwit.com/files/tigerwit_setup_151111.exe",
+            webMt4Download: "https://static.tigerwitfx.com/files/tigerwit_setup_151111.exe",
             androidApp: versionAndroidApp,
             download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.pandaforex.forex",
 

@@ -72,11 +72,11 @@
             };
 
             if (server === 'dev') {
-                urlPrefix.main = 'http://dev.tigerwit.com';
+                urlPrefix.main = 'https://cndemo.tigerwit.com';
             }
 
             if (server === 'www') {
-                urlPrefix.main = 'https://www.tigerwit.com';
+                urlPrefix.main = 'https://cn.tigerwit.com';
             }
             return urlPrefix;
         }

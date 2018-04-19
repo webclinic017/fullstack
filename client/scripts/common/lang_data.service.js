@@ -25,7 +25,7 @@
                         companyNameEn: "TigerWit",
                         telephone: "400 - 809 - 8509",
                         mt4Live: "TigerWit-Live",
-                        companyCopyRules: "https://www.tigerwit.com/web/copy/rules",
+                        companyCopyRules: "https://cn.tigerwit.com/web/copy/rules",
                         webSite:"www.tigerwit.com",
                     };
                 }
