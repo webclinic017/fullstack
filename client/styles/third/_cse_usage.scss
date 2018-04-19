@@ -1,0 +1,21 @@
+@include b(third_usage_layout) {
+    width: 1280px;
+    margin: 0 auto;
+    padding: 50px;
+    @include e(title){
+        font-size: 28px;
+    }
+    @include e(step){
+        margin-top: 50px;
+    }
+    @include e(img){
+        width: 100%;
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px $gray-dark;
+    }
+    @include e(btn){
+        margin-top: 20px;
+        text-align: center;
+    }
+}
