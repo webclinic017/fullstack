@@ -6,7 +6,7 @@
                 <form name="depositForm" novalidate>
                     <div class="form-control-wrapper">
                         <input class="form-control form-control-size-lg form-control-shape-capsule"
-                               ng-if="deposit.type === 'invest' || deposit.type === 'alipay'"
+                               ng-if="deposit.type === 'invest' || deposit.type === 'alipay' || deposit.type === 'cseWallet'"
                                name="amount"
                                type="text"
                                required
@@ -80,6 +80,8 @@
                 <p class="deposit__way-tip" ng-class="{active: deposit.type === 'invest'}">单日交易限额以银行规定为准</p>
                 <p class="deposit__way-tip" ng-class="{active: deposit.type === 'wallet'}">当前零钱包余额：${{ walletAble || '0.00' }}</p>
                 <p class="deposit__way-tip" ng-class="{active: deposit.type === 'alipay'}">单日交易限额 $3000.00</p>
+                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'cseWallet'}">需要跳转到第三方平台</p>
+                <a class="deposit__way-tip font-danger mg-tp-10 cursor_pointer" href="/third/cse_usage" target="_blank" ng-class="{active: deposit.type === 'cseWallet'}">第三方充值教程</a>
             </div>
         </div>
         <br>
