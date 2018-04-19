@@ -113,7 +113,7 @@ module.exports = function (app) {
     app.use('/', function(req, res, next){
         setEnvCf(req, res);
         var allowPaths = ['/payment/login', '/payment/asset', '/waiting', '/third/cse_usage']
-        if(req.hostname.indexOf('ibonline') == -1) {
+        if(req.hostname.indexOf('ibonline') != -1) {
             if(allowPaths.indexOf(req.originalUrl) != -1){
                 var pageId = ''
                 if(req.originalUrl == allowPaths[0]){
