@@ -9,18 +9,18 @@
     
 
     if (isInTiger()) {
-        publicRequest('shareLottery', 'GET').then(function (data) {
-            if (data.is_succ) {
-                checkLottery();
-            }
-        });
+        checkLottery();
     } else {
         $("#lottery_status_tip").html("请前往APP参与抽奖!");
         toOpenApp();
     }
 
     window['lottery_native_share_succ'] = function(type) {
-        checkLottery();
+        publicRequest('shareLottery', 'GET').then(function (data) {
+            if (data.is_succ) {
+                checkLottery();
+            }
+        });
     }
     window['lottery_native_share_fail'] = function(type) {
         layer.open({
