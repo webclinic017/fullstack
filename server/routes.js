@@ -834,7 +834,9 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit') {
             if (isMobile(req)) {
-                res.render('bd/lottery/lottery_h5.html', extendPublic({}, req))
+                res.render('bd/lottery/lottery_h5.html', extendPublic({
+                    reward_lst: require('./lottery_reward_lst')
+                }, req))
             } else {
                 res.render('bd/lottery/lottery_web.html', extendPublic({}, req));
             }
