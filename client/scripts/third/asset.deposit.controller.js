@@ -155,7 +155,8 @@
                                             if ($scope.deposit.isAbleDeposit === 0) {
                                                 $scope.isLoading = false;
                                                 var amountRMB = Number(amount*$scope.deposit.FXRate.value).toFixed(2);
-                                                var amountFee = Number(amount*$scope.deposit.FXRate.value*0.02).toFixed(2);
+                                                // var amountFee = Number(amount*$scope.deposit.FXRate.value*0.02).toFixed(2);
+                                                var amountFee = 0;
                                                 openDepositMdl('confirmDeposit', submitDeposit, {
                                                     amountDollar: amount,
                                                     amountRMB: amountRMB,
