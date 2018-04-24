@@ -14,7 +14,7 @@
             tele: "电汇",
             wallet: "零钱包",
             alipay: "支付宝",
-            cseWallet: "第三方支付"
+            cseWallet: "第三方转账"
         };
         $scope.deposit = {
             minAmount: 0,       // 最低充值金额
