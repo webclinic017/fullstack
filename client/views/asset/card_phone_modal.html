@@ -1,0 +1,84 @@
+<div class="sys_modal_v2 slim_case card_modal">
+    <button class="close" ng-click="closeModal()">&times;</button>
+    <h5 class="sys_modal_v2__title">
+        系统提示
+    </h5>
+    <div ng-show="!bindInfo.success">
+        <span class="desp font-danger">
+            因要求，请填写该银行卡的预留手机号
+        </span>
+        <br>
+        <br>
+        <div class="withdraw__card_handler">
+            <div class="widthdraw__card_bg">
+                <img ng-show="card.bank_img" ng-src="{{ card.bank_img }}">
+                <span>{{ card.bank_name ||  card.bank_code }}</span>
+            </div>
+            <span class="card_number">
+                <span>
+                    {{card.number}} 
+                </span>
+            </span>
+        </div>
+        <br>
+        <div class="sys_modal_v2__content" >
+            <form name="cardForm" novalidate>
+                <div class="row">
+                    <div class="col-xs-9 font-bold-light text-left">
+                        预留手机号：
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-9">
+                        <div class="form-control-wrapper">
+                            <input class="form-control form-control-shape-capsule form-control-size-md"
+                                   name="phone"
+                                   type="text"
+                                   required
+                                   ng-class="{'form-control-error': frontErr.phone.show && cardForm.phone.$invalid}"
+                                   ng-model="bindInfo.phone"
+                                   placeholder="请输入手机号"
+                                   ng-pattern="frontErr.phone.reg"
+                                   ng-focus="hideErr('phone')"
+                                   ng-blur="showErr('phone')">
+
+                            <div ng-show="frontErr.phone.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.phone.$error.required">
+                                    请输入手机号
+                                </p>
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.phone.$error.pattern">
+                                    {{frontErr.phone.tip}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <p ng-show="backErr.show" class="font-danger">
+                <br>
+                {{ backErr.msg }}
+                <br>
+            </p>
+            <p class="btn_wrapper mg-bt-15">
+                <button class="tw-btn tw-btn-lg tw-btn-capsule-gradient" ng-if="!bindInfo.loading" ng-click="submitForm()">
+                    确定
+                </button>
+                <button class="tw-btn tw-btn-lg tw-btn-capsule-gradient" ng-if="bindInfo.loading">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    请稍等
+                </button>
+            </p>
+        </div>
+    </div>
+    <div class="sys_modal_v2__content" ng-if="bindInfo.success">
+            <p class="system_modal__info">
+                手机号绑定成功
+            </p>
+            <p class="btn_wrapper mg-bt-15">
+                <button class="tw-btn tw-btn-lg tw-btn-capsule-gradient" ng-click="closeModal()">
+                    确定
+                </button>
+            </p>
+        </div>
+</div>

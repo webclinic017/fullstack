@@ -12,6 +12,7 @@
             withdraw: withdraw,
             getCard: getCard,
             bindCard: bindCard,
+            bindCardPhone: bindCardPhone,
             deleteCard: deleteCard,
             getCardList: getCardList,
             cancelWithdraw: cancelWithdraw,
@@ -67,14 +68,25 @@
          *
          * @method bindCard
          */
-        function bindCard(number, name, address, province, city, id) {
+        function bindCard(number, name, address, province, city, id, phone) {
             return publicHttp.dealPublicRequest(o.bindCardApi, 'PUT', {
                 card_no: number,
                 bank_name: name,
                 bank_addr: address,
                 province: province,
                 city: city,
-                id: id
+                id: id,
+                phone: phone
+            });
+        }
+
+        /**
+         * 绑定银行卡手机号
+         */
+        function bindCardPhone(id, phone) {
+            return publicHttp.dealPublicRequest(o.bindCardPhoneApi, 'POST', {
+                id: id,
+                phone: phone
             });
         }
 
