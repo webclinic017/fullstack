@@ -1,0 +1,73 @@
+<div class="tw-space-layout">
+    <div class="tw-space-layout__con">
+        <div class="tw-space-layout__con-info">
+            <div class="logout"> 
+                <span ng-click="main.thirdLogout()" title="退出登录"><i class="fa fa-sign-out"></i> 退出</span>
+            </div>
+            <div class="info_box">
+                <!-- <div class="info_box__avatar">
+                    <img ng-src="{{ main.thirdInfo.userAvatar }}">
+                    <p>{{ main.thirdInfo.userName }}</p>
+                </div> -->
+                <ul class="info_box__detail">
+                    <li>
+                        <div class="item__number">
+                            {{ main.mt4_id }}
+                        </div>
+                        <div class="item__text">
+                            <span>MT4真实账户</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item__number">
+                            {{ main.balance }}
+                        </div>
+                        <div class="item__text">
+                            <span>账户余额</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="item__number">
+                            {{ main.wallet_balance }}
+                        </div>
+                        <div class="item__text">
+                            <span>零钱包账户</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="tw-space-layout__con-content">
+            <div class="content-view" ng-controller="ThirdEvidenceListController">
+                <div class="web_evidence">
+                    <h4 class="web_evidence__title">凭证示例</h4>
+                    <ul class="web_evidence__box">
+                      <li class="web_evidence__item" ng-repeat="item in evidenceLst">
+                          <div class="title clearfix" ng-click="showEvidence(item)">
+                            <span>{{item.title}}</span>
+                            <i class="fa fa-angle-down" ng-show="!item.show"></i>
+                            <i class="fa fa-angle-up" ng-show="item.show"></i>
+                          </div>
+                          <div class="web_evidence__item-content" ng-show="item.show">
+                            <div ng-repeat="cont in item.content">
+                                <div class="sub-title" ng-show="cont.title">
+                                  {{cont.title}}
+                                </div>
+                                <div class="info">
+                                  <div ng-repeat="tip in cont.tip">
+                                    <p>{{tip}}</p>
+                                  </div>
+                                </div>
+                                <div class="pic">
+                                    <img ng-repeat="pic in cont.pic" ng-src="{{pic}}" alt="">
+                                </div>
+                            </div>
+                          </div>
+                        </li>
+                    </ul>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>

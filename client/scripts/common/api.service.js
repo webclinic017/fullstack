@@ -79,7 +79,9 @@
             getBonusDetailListApi: urlOrigin2 + '/commission/settle_info',
             getBanksApi: urlOrigin2 + '/bank_names',
             teleDepositApi: urlOrigin2 + '/payment/deposit/transfer',
-            uploadPaymentEvidenceApi: urlOrigin2 + '/payment/evidence'
+            uploadPaymentEvidenceApi: urlOrigin2 + '/payment/evidence',
+            getPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_list',
+            cancelPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_cancel'
         };
         var forex = {
             
