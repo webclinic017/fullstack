@@ -641,4 +641,57 @@
     }
 }
 
+/* H5 大额入金凭证*/
+@include b(m_evidence) {
+    padding: 16px;
+    @include e(box) {}
+    @include e(item) {
+        padding-bottom: 20px;
+        .title {
+            font-size: 18px;
+            line-height: 18px;
+            margin-bottom: 10px;
+            span {
+                float: left;
+            }
+            i {
+                float: right;
+            }
+            i.fa-angle-up {
+                display: none;
+            }
+        }
+        .sub-title {
+            margin: 10px 0px 5px;
+        }
+        .info {
+            color: #999;
+            p {
+                line-height: 20px;
+            }
+        }
+        .pic {
+            img {
+                width: 100%;
+                vertical-align: top;
+                margin-top: 10px;
+            }
+        }
+        @include m(content) {
+            display: none;
+        }
+
+        &.active {
+            i.fa-angle-up {
+                display: block;
+            }
+            i.fa-angle-down {
+                display: none;
+            }
+            .m_evidence__item-content {
+                display: block;
+            }
+        }
+    }
+}
 

@@ -1,0 +1,43 @@
+@include b(web_evidence) {
+  min-height: 400px;
+  box-shadow: 0 0 15px #ebebeb;
+  margin: 50px 0px 100px;
+  border-radius: 10px;
+  padding: 30px 80px;
+
+  @include e(box) {
+    padding-top: 30px;
+  }
+  @include e(item) {
+    padding-bottom: 20px;
+    .title {
+        font-size: 18px;
+        line-height: 18px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        span {
+            float: left;
+        }
+        i {
+            float: right;
+        }
+    }
+    .sub-title {
+        margin: 10px 0px 5px;
+    }
+    .info {
+        color: #999;
+        p {
+            line-height: 20px;
+        }
+    }
+    .pic {
+        text-align: center;
+        img {
+            width: 60%;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+    }
+  }
+}

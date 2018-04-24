@@ -11,9 +11,9 @@
     function dealTimestamp() {
         return function (timestamp) {
             var date = new Date(timestamp*1000);
-            var Y = date.getFullYear()+"年";
-            var M = (date.getMonth()+1)+"月";
-            var D = date.getDate()+"日";
+            var Y = date.getFullYear()+"-";
+            var M = toDou(date.getMonth()+1)+"-";
+            var D = toDou(date.getDate());
             var time = toDou(date.getHours())+":"+toDou(date.getMinutes())+":"+toDou(date.getSeconds());
 
             var dateFormat = Y+M+D+" "+time;
