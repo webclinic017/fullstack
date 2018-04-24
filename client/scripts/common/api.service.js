@@ -61,6 +61,7 @@
             withdrawApi: urlOrigin2 + '/payment/withdraw',
             getCardApi: urlOrigin2 + '/user/bank_card',
             bindCardApi: urlOrigin2 + '/user/bank_card',
+            bindCardPhoneApi: urlOrigin2 + '/user/bank_card/phone',
             getCardListApi: urlOrigin2 + '/user/bank_card/lists',
             deleteCardApi: urlOrigin2 + '/user/bank_card/destroy',
             cancelWithdrawApi: urlOrigin2 + '/payment/withdraw/cancel',
