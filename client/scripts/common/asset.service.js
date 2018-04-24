@@ -31,7 +31,9 @@
             walletCanWithdraw: walletCanWithdraw,
             getBanks: getBanks,
             teleDeposit: teleDeposit,
-            uploadPaymentEvidence: uploadPaymentEvidence
+            uploadPaymentEvidence: uploadPaymentEvidence,
+            getPaymentEvidence: getPaymentEvidence,
+            cancelPaymentEvidence: cancelPaymentEvidence
         };
         return service;
 
@@ -315,11 +317,37 @@
          *
          * @method uploadPaymentEvidence
          * @param {Number} file  (base64编码)
+         * @param {Number} id  记录ID
          */
-        function uploadPaymentEvidence(file) {
+        function uploadPaymentEvidence(file, id) {
             return publicHttp.dealPublicRequest(o.uploadPaymentEvidenceApi, 'POST', {
-                file: file
+                file: file,
+                id: id
             });
-        }    
+        }
+        /**
+         * Asset Service 入金凭证列表
+         *
+         * @method getPaymentEvidence
+         * @param {Number} status  状态0不需要上传,1需要上传(默认)，2待审核
+         */
+        function getPaymentEvidence(status) {
+            return publicHttp.dealPublicRequest(o.getPaymentEvidenceApi, 'GET', {
+                status: status,
+                offset: 0,
+                limit: 1000
+            });
+        }
+        /**
+         * Asset Service 取消
+         *
+         * @method cancelPaymentEvidence
+         * @param {Number} id  记录ID
+         */
+        function cancelPaymentEvidence(id) {
+            return publicHttp.dealPublicRequest(o.cancelPaymentEvidenceApi, 'POST', {
+                id: id
+            });
+        }
     }
 })();

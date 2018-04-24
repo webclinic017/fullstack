@@ -8,7 +8,7 @@
     ThirdMainController.$inject = ['$rootScope', '$scope', '$state', '$window', '$location', 'config', 'account', 'authorization', '$cookies', '$timeout', '$cookieStore', '$modal', '$layer'];
     function ThirdMainController($rootScope, $scope, $state, $window, $location, config, account, authorization, $cookies, $timeout, $cookieStore, $modal, $layer) {
         // main存储全局共享数据
-        var main = $scope.main = {}
+        var main = $scope.main = $rootScope.main = {}
 
         main.thirdInfo = {
             userCode: $cookies["user_code"],

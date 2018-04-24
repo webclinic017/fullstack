@@ -61,6 +61,10 @@
         getRewardLst: origin + '/reward/list', //get
         // 申请高手
         recruitMaster: origin + '/master/auth_apply', //post
+        // 刮奖活动 2018.4.20
+        checkLotteryStatus: origin + '/activity/user_status', //get
+        startLottery: origin + '/activity/scratch', //get
+        shareLottery: origin + '/activity/share', //get
     };
 
     w.publicRequest = publicRequest;
