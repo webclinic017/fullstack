@@ -1,0 +1,192 @@
+.lottery_layer {
+  background: rgba(21,2,67,0.88);
+  color: #fff;
+  .layui-m-layercont {
+    padding: px2rem(32);
+    h4 {
+      margin-top: 0;
+    }
+    p {
+      text-align: left;
+      font-size: px2rem(24);
+      margin-bottom: px2rem(16);
+    }
+  }
+}
+.lottery_award_layer {
+  height: px2rem(180);
+  background-image: url('/white_label/lottery/h5_layer_bg.png');
+  background-position: center top;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+@include b(h5_lottery) {
+  .h5_lottery_layout {
+    height: px2rem(2300);
+    background-image: url('/white_label/lottery/h5_bg.png');
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  @include e(focus) {
+    text-align: center;
+    padding-top: px2rem(130);
+    img {
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+  @include e(date) {
+    text-align: center;
+    font-size: px2rem(32);
+    color: #fff;
+    -webkit-font-smoothing: antialiased;
+  }
+  @include e(btn) {
+    span {
+      display: block;
+      width: px2rem(255);
+      height: px2rem(80);
+      background-image: url('/white_label/lottery/h5_btn.png');
+      background-position: center top;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      text-align: center;
+      padding-top: px2rem(10);
+      color: #882dbd;
+      font-size: px2rem(32);
+      margin: px2rem(40) auto 0;
+    }
+  }
+  @include e(notice) {
+    width: 80%;
+    margin: px2rem(190) auto 0;
+    background: #150243;
+    color: #fff;
+    padding: px2rem(10);
+    text-align: center;
+
+    .icon {
+      height: px2rem(32);
+      display: inline-block;
+      img {
+        height: 100%;
+        vertical-align: top;
+      }
+    }
+    .notice {
+      font-size: px2rem(26);
+      line-height: px2rem(26);
+      padding-left: px2rem(20);
+    }
+  }
+  @include e(award) {
+    padding: px2rem(32) px2rem(32) 0;
+    .bar {
+      img {
+        width: 100%;
+        vertical-align: top;
+      }
+    }
+    .award_box {
+      background: #fff;
+      margin: px2rem(-19.2) px2rem(25.6) 0;
+      position: relative;
+      z-index: 10;
+      padding: 0 px2rem(32) px2rem(32);
+      .tip {
+        margin: 0;
+        background: #c8abfd;
+        text-align: center;
+        padding: px2rem(19.2) 0;
+        color: #3c2377;
+        font-size: px2rem(28);
+      }
+      .lottery_box {
+        margin-top: px2rem(16);
+        position: relative;
+      }
+    }
+  }
+  @include e(cover) {
+    display: block;
+    width: 100%;
+    height: px2rem(256);
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  @include e(init) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-image: url("/white_label/lottery/h5_modal.png");
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    &.active {
+      display: none;
+    }
+  }
+  @include e(result) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: table;
+    width: 100%;
+    height: px2rem(256);
+    z-index: -1;
+    background-image: url("/white_label/lottery/h5_award_bg.png");
+    background-position: center top;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    span {
+      display: table-cell;
+      vertical-align: middle;
+      text-align: center;
+      padding: 0 px2rem(72);
+      font-weight: 500;
+      color: #3c2377;
+    }
+  }
+  @include e(list) {
+    margin-top: px2rem(80);
+    h4 {
+      margin: 0;
+      text-align: center;
+      img {
+        width: 50%;
+        vertical-align: top;
+      }
+    }
+    .details {
+      margin: 0 px2rem(64) 0;
+      height: px2rem(320);
+      background-image: url('/white_label/lottery/h5_list_box.png');
+      background-position: center top;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      padding: px2rem(32);
+      overflow: scroll;
+
+      p {
+        color: #fff;
+        text-align: center;
+        padding: px2rem(4) 0;
+      }
+    }
+  }
+  @include e(risk) {
+    color: #fff;
+    font-size: 0.7rem;
+    padding: px2rem(80) px2rem(32) 0;
+    opacity: 0.65;
+    .tit {
+      padding-bottom: px2rem(16);
+    }
+  }
+}

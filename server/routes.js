@@ -832,6 +832,21 @@ module.exports = function (app) {
             res.render('404.html', extendPublic({}, req));
         }
     });
+    // 刮奖
+    app.route('/bd/lottery').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit') {
+            if (isMobile(req)) {
+                res.render('bd/lottery/lottery_h5.html', extendPublic({
+                    reward_lst: require('./lottery_reward_lst')
+                }, req))
+            } else {
+                res.render('bd/lottery/lottery_web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
 
     /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
     /*
