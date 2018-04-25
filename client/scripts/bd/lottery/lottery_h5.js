@@ -2,17 +2,16 @@
     var isReady = false;
     var haveChance = false;
     var message_popup = '网络错误，请稍后再试';
-    var activityId = 10, rewardId = 21;
+    var activityId = 3, rewardId = 3;
     var shareDesp = "邀请您参加老虎外汇的交易刮大奖活动，每日最高刮中99美金！";
     var shareTitle = "交易刮刮乐，好礼别错过";
-    var shareLink = "https://cndemo.tigerwit.com/bd/lottery";
+    var shareLink = "https://www.tigerwit.com/bd/lottery";
     
 
     if (isInTiger()) {
         checkLottery();
     } else {
         $("#lottery_status_tip").html("请前往APP参与抽奖!");
-        toOpenApp();
     }
 
     window['lottery_native_share_succ'] = function(type) {
