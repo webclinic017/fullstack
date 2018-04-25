@@ -19,6 +19,7 @@
             getHistory: getHistory,
             deposit: deposit,
             getDepositLimit: getDepositLimit,
+            getDepositPlatform: getDepositPlatform,
             getFXRate: getFXRate,
             getIsWithdraw: getIsWithdraw,
             getMasterBonusSummary: getMasterBonusSummary,
@@ -166,6 +167,15 @@
          */
         function getDepositLimit() {
             return publicHttp.dealPublicRequest(o.getDepositLimitApi, 'GET');
+        }
+
+        /**
+         * Asset Service 获取入金平台等信息
+         *
+         * @method getDepositPlatform
+         */
+        function getDepositPlatform () {
+            return publicHttp.dealPublicRequest(o.getDepositPlatformApi, 'GET');
         }
 
         /**
