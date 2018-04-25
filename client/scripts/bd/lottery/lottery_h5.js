@@ -6,12 +6,28 @@
     var shareDesp = "邀请您参加老虎外汇的交易刮大奖活动，每日最高刮中99美金！";
     var shareTitle = "交易刮刮乐，好礼别错过";
     var shareLink = "https://www.tigerwit.com/bd/lottery";
+
+    // 微信分享配置
+    if (wx) {
+        wxShareConfig({
+            title: shareTitle,
+            subTitle: shareTitle,
+            shareLink: shareLink,
+            desc: shareDesp,
+            img: window.location.origin + '/activity/logo.png',
+            trackPage: window.location.pathname.replace(/\//gi, ''),
+            debug: false
+        });
+    } else {
+        console.log("微信配置错误");
+    }
     
 
     if (isInTiger()) {
         checkLottery();
     } else {
         $("#lottery_status_tip").html("请前往APP参与抽奖!");
+        $("#lottery_share_wrapper").css({display: 'none'});
     }
 
     window['lottery_native_share_succ'] = function(type) {
@@ -57,6 +73,8 @@
                 content: message_popup,
                 time: 3
             });
+        } else {
+            toOpenApp();
         }
         return false;
     })
