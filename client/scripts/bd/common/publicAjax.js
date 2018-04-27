@@ -62,9 +62,9 @@
         // 申请高手
         recruitMaster: origin + '/master/auth_apply', //post
         // 刮奖活动 2018.4.20
-        checkLotteryStatus: origin + '/activity/user_status', //get
-        startLottery: origin + '/activity/scratch', //get
-        shareLottery: origin + '/activity/share', //get
+        checkLotteryStatus: origin + '/app/activity/user_status', //get
+        startLottery: origin + '/app/activity/scratch', //get
+        shareLottery: origin + '/app/activity/share', //get
     };
 
     w.publicRequest = publicRequest;
