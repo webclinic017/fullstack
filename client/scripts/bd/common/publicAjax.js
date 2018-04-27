@@ -4,38 +4,38 @@
     var origin = ($.cookie && $.cookie("access_origin2")) ? $.cookie("access_origin2") : '/api';
     // console.log(origin);
     var apiUrl = {
-        getUserInfo: origin + '/user/info',     // get
-        register: origin + '/auth/register',     // post
+        getUserInfo: origin + '/app/user/info',     // get
+        register: origin + '/app/auth/register',     // post
         regOrLogin: origin + '/v2/auth/login',     // post
-        getAssetInfo: origin + '/centre/asset',  // get
-        getWalletBalance: origin + '/wallet/valid_balance',  // get
-        withdrawWallet: origin + '/wallet/withdraw',  // post
-        getPaymentRate: origin + '/payment/rates',     // get
-        checkWithdrawLimit: origin + '/payment/withdraw/limits', // get
-        getBankCard: origin + '/user/bank_card', // get
-        withdraw: origin + '/payment/withdraw',  // post
-        bindBankCard: origin + '/user/bank_card',  // put
-        getCountries: origin + '/region/countries', // get
-        getStateList: origin + '/region/provinces', // get
-        getCitiesList: origin + '/region/cities', // get
+        getAssetInfo: origin + '/app/centre/asset',  // get
+        getWalletBalance: origin + '/app/wallet/valid_balance',  // get
+        withdrawWallet: origin + '/app/wallet/withdraw',  // post
+        getPaymentRate: origin + '/app/payment/rates',     // get
+        checkWithdrawLimit: origin + '/app/payment/withdraw/limits', // get
+        getBankCard: origin + '/app/user/bank_card', // get
+        withdraw: origin + '/app/payment/withdraw',  // post
+        bindBankCard: origin + '/app/user/bank_card',  // put
+        getCountries: origin + '/app/region/countries', // get
+        getStateList: origin + '/app/region/provinces', // get
+        getCitiesList: origin + '/app/region/cities', // get
         setToken: origin + '/validation/code_token', // post
         checkExists: origin + '/user/check_exists', // get
         getPhoneCode: origin + '/validation/send_code', // post
-        getInviteList: origin + '/user/invites', // get
+        getInviteList: origin + '/app/user/invites', // get
         setClueCustomer: origin + '/auth/page_signup', // post
         setInviteCode: origin + '/invite_code', // post
         //交易品种
-        getSymbols: origin + '/symbols', //get
+        getSymbols: origin + '/app/symbols', //get
         // 荣耀王者活动
-        checkLogined: origin + '/auth/check', // get
-        getRedBagPool: origin + '/bonus/index', // get
-        receiveRedbag: origin + '/bonus/receive', // put
-        checkHonorStatus: origin + '/king/show', // get
-        receiveHonor: origin + '/king/receive', // post
-        exchangeHonor: origin + '/king/exchange', // post
+        checkLogined: origin + '/app/auth/check', // get
+        getRedBagPool: origin + '/app/bonus/index', // get
+        receiveRedbag: origin + '/app/bonus/receive', // put
+        checkHonorStatus: origin + '/app/king/show', // get
+        receiveHonor: origin + '/app/king/receive', // post
+        exchangeHonor: origin + '/app/king/exchange', // post
         // 抽奖活动
-        getPrizeChangce: origin + '/lucky_draw', // get
-        drawPrize: origin + '/lucky_draw', // post
+        getPrizeChangce: origin + '/app/lucky_draw', // get
+        drawPrize: origin + '/app/lucky_draw', // post
 
         // 三方接口
         thirdGetStatus: origin + '/third/user/auth_status', // get
@@ -48,19 +48,19 @@
         thirdChangePassword: origin + '/third/user/passwd', //put
 
         // 获取交易月报
-        getMonReport: origin + '/user/monthly_report',     // get
+        getMonReport: origin + '/app/user/monthly_report',     // get
         // 每日汇评
-        getCommentList: origin + '/daily_comment/list',   // get
-        getCommentDetails: origin + '/daily_comment/detail',   // get
+        getCommentList: origin + '/app/daily_comment/list',   // get
+        getCommentDetails: origin + '/app/daily_comment/detail',   // get
         //挂单交易
-        setPendingTrade: origin + '/pending_trade/add',  //post
-        getRealQuote: origin + '/symbol/realtime',  //get
+        setPendingTrade: origin + '/app/pending_trade/add',  //post
+        getRealQuote: origin + '/app/symbol/realtime',  //get
         //新春抽奖
-        checkReward: origin + '/reward/check', //post
-        joinReward: origin + '/reward/join', //post
-        getRewardLst: origin + '/reward/list', //get
+        checkReward: origin + '/app/reward/check', //post
+        joinReward: origin + '/app/reward/join', //post
+        getRewardLst: origin + '/app/reward/list', //get
         // 申请高手
-        recruitMaster: origin + '/master/auth_apply', //post
+        recruitMaster: origin + '/app/master/auth_apply', //post
         // 刮奖活动 2018.4.20
         checkLotteryStatus: origin + '/app/activity/user_status', //get
         startLottery: origin + '/app/activity/scratch', //get
