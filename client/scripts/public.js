@@ -70,6 +70,9 @@
                 else if($window.location.host.indexOf('ibonline') != -1){
                     $window.location.href='/payment/login';
                 }
+                else if($window.location.host.indexOf('dp') != -1){
+                    $window.location.href='/payment/login';
+                }
                 else {
                     $window.location.href='/space/#/account/login';
                     $rootScope.personalCookiesInfo.userCode = undefined;
