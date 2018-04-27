@@ -599,49 +599,23 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t40/h5.html', extendPublic({}, req))
+                res.render('bd/t41/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t40/web.html', extendPublic({}, req));
+                res.render('bd/t41/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
         }
     });
     
-    app.route('/bd/t33').get(function (req, res) {
-        setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
-            if (isMobile(req)) {
-                res.render('bd/t40/h5.html', extendPublic({}, req))
-            } else {
-                res.render('bd/t40/web.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('404.html', extendPublic({}, req));
-        }
-    });
-
-    //红包活动
-    // app.route('/bd/t35').get(function (req, res) {
-    //     setEnvCf(req, res);
-    //     if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
-    //         if (isMobile(req)) {
-    //             res.render('bd/t38/h5.html', extendPublic({}, req))
-    //         } else {
-    //             res.render('bd/t38/web.html', extendPublic({}, req));
-    //         }
-    //     } else {
-    //         res.render('404.html', extendPublic({}, req));
-    //     }
-    // });
     // 11月份活动
     app.route('/bd/t35').get(function (req, res) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t40/h5.html', extendPublic({}, req))
+                res.render('bd/t41/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t40/web.html', extendPublic({}, req));
+                res.render('bd/t41/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));

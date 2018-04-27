@@ -19,14 +19,14 @@
     <%if(lang.isCompany('tigerwit')){%>
         <% include /common/nav/web.header.html %>
     <%}%>
-      <div class="bd_t39 bd_t40 clearfix <%= lang.text("companyEnName")%>">
+      <div class="bd_t39 bd_t41 clearfix <%= lang.text("companyEnName")%>">
 
         <div class="bd_t39_detail_con c-1">
           <div class="bd_t39_detail_con__text">
-            <p class="bd_t39_detail_con__tit">活动规则</p>
+            <p class="bd_t39_detail_con__tit">活动详情</p>
             <p class="bd_t39_detail_con__line">1. 用户需在红包指定兑现期限内完成对应条件并手动完成兑现，过期不能兑现；</p>
             <p class="bd_t39_detail_con__line">2. 活动所列红包每个用户仅可领取一次，兑现金额将在执行兑现操作后入账且可支取；</p>
-            <p class="bd_t39_detail_con__line">3.本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，美元/人民币以及CFD类产品交易手数不计入统计范围；</p>
+            <p class="bd_t39_detail_con__line">3. 本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，美元/人民币以及CFD类产品交易手数不计入统计范围；</p>
             <p class="bd_t39_detail_con__line">4. 本活动仅限活动开始后新注册用户，用户提取资金前，需完成完整个人信息的提交并通过审核；</p>
             <p class="bd_t39_detail_con__line">5. 本活动允许EA但禁止EA剥头皮交易，违反规则的用户将取消参与本次活动的权利；</p>
             <p class="bd_t39_detail_con__line">6.<%= lang.text('companyZhName')%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打 <%= lang.text('telephone')%>。
@@ -56,17 +56,11 @@
         </div>
         
         <div class="container clearfix relative" id="bd_t39_form">
-            <div class="bd_t39__focus">
-                <img src="/images/bd_t40/web_focus.png">
-            </div>
-            <div class="bd_t40__tip">新用户注册赠1000美金红包</div>
-            <div class="bd_t39__date">2018年3月1日－2018年4月30日</div>
             <div class="bd_t40__detail_wrapper">
                 <span class="bd_t40__detail">活动详情</span>
             </div>
 
             <div class="bd_t39__reg">
-            
                 <div class="form-control-wrapper">
                     <input type="text" class="form-control t39" name="telephone" id="telephone" placeholder="电话">
                 </div>
@@ -76,69 +70,65 @@
                         <span class="verify_code_btn" id="verify_code_btn">发送验证码</span>
                     </p>
                 </div>
-
                 <div class="btn-wrapper">
                     <span id="submit_form" class="bd_t40__btn">注册领红包</span>
                 </div>
             </div>
 
-            <div class="bd_t39__title">
-                <%if(lang.isCompany('tigerwit')){%>
-                    <img src="/images/bd_t40/web_title1.png">
-                <%} else if(lang.isCompany('pandafx')) {%>
-                    <img src="/images/bd_t40/web_title1_panda.png">
-                <%}%>
+            <div class="bd_t41__title">
+                - 选择<%=lang.text("companyZhName")%>，安心解决交易“三大难题” -
             </div>
-            <ul class="bd_t40__lst clearfix">
-                <li>
-                    <div class="pic"><img src="/images/bd_t40/comm_pic1.png"></div>
-                    <p class="tit">零基础轻松入门</p>
-                    <p class="tip">小白一键复制高手跟单</p>
+            <ul class="bd_t41__lst clearfix">
+                <li class="bd_t41__lst_item1">
+                    <p class="tit">没经验？</p>
+                    <p class="tip">一键复制高手实盘跟单 <br> 体验金模拟交易轻松练手</p>
                 </li>
-                <li>
-                    <div class="pic"><img src="/images/bd_t40/comm_pic2.png"></div>
-                    <p class="tit">门槛低以小见大</p>
-                    <p class="tip">最低5美金交易&最高200倍杠杆</p>
+                <li class="bd_t41__lst_item2">
+                    <p class="tit">没资金？</p>
+                    <p class="tip">最低50美金开户交易 <br> 最高200倍杠杆可选</p>
                 </li>
-                <li>
-                    <div class="pic"><img src="/images/bd_t40/comm_pic3.png"></div>
-                    <p class="tit">行情多机会不断</p>
-                    <p class="tip">24小时全球双向N次交易</p>
+                <li class="bd_t41__lst_item3">
+                    <p class="tit">没时间？</p>
+                    <p class="tip">24小时全球市场不打烊 <br> T+0交易模式灵活买入卖出</p>
                 </li>
             </ul>
-            <div class="bd_t40__btn2_wrapper">
-                <a href="#bd_t39_form" target="_parent" class="bd_t40__btn2">点我领赠金</a>
+            <div class="bd_t41__btn2_wrapper">
+                <a href="#bd_t39_form" target="_parent" class="bd_t41__btn2">点击领赠金</a>
             </div>
-            <div class="bd_t39__title" style="padding-top: 150px;">
-                <img src="/images/bd_t40/web_title2.png">
+
+            <div class="bd_t41__title">
+                - 行情热浪来袭，赠金助你外汇交易 -
+                <p class="sub_tit">新用户注册送1000美金红包</p>
             </div>
             <div class="bd_t40__bag clearfix">
                 <div class="bag bag_200">
-                    <img src="/images/bd_t40/comm_200.png">
+                    <img src="/images/bd_t41/comm_200.png">
                     <div class="rule-1">
-                        <span class="bd_t40_rule-1">200美金红包规则</span>
+                        <span class="bd_t41_rule-1">200美金红包规则</span>
                     </div>
                 </div>
-                <div class="bag bag_plus"><img src="/images/bd_t40/comm_plus.png"></div>
+                <div class="bag bag_plus">+</div>
                 <div class="bag bag_800">
-                    <img src="/images/bd_t40/comm_800.png">
+                    <img src="/images/bd_t41/comm_800.png">
                     <div class="rule-2">
-                        <span class="bd_t40_rule-2">800美金红包规则</span>
+                        <span class="bd_t41_rule-2">800美金红包规则</span>
                     </div>
                 </div>
             </div>
-            <div class="bd_t40__btn2_wrapper">
-                <a href="#bd_t39_form" target="_parent" class="bd_t40__btn2">点我领赠金</a>
+            <div class="bd_t41__btn2_wrapper">
+                <a href="#bd_t39_form" target="_parent" class="bd_t41__btn2">点击领赠金</a>
             </div>
-            <div class="bd_t40__client">
+            <div class="bd_t41__client">
                 如有任何疑问<br>请拨打客服电话：<%= lang.text('telephone')%>
             </div>
-            <div class="bd_t39__footer">
-                风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。<br>
+            <div class="bd_t41__footer">
+                风险警示：<br>
+                市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。<br>
                 在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。 <%= lang.text('companyZhName')%>交易平台为广大交易高手及普通投资者提供复制交易服务，交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
             </div>
             <%if(lang.isCompany('tigerwit')){%>
-                <p class="bd_t39__ltd">Tiger Financial Technology PTY. Ltd.版权所有</p>  
+                <br>
+                <p class="bd_t41__ltd">Tiger Financial Technology PTY. Ltd.版权所有</p>  
             <%}%>
         </div>
       </div>
@@ -152,7 +142,7 @@
   <%include /common/component/agment_mdl.html %>
 </body>
 
-<!-- build:js(client) /scripts/bd_t40.js -->
+<!-- build:js(client) /scripts/bd_t41.js -->
 <script src="/scripts/common/config.service.js"></script>
 <script src="/scripts/common/account.service.js"></script>
 <script src="/scripts/common/authorization.service.js"></script>
@@ -171,7 +161,7 @@
 <script src="/scripts/common/lang_data.service.js"></script>
 <script src="/scripts/plugins/plugins.js"></script>
 <script src="/scripts/plugins/layer.js"></script>
-<script src="/scripts/bd/t40/bd_t40.js"></script>
+<script src="/scripts/bd/t41/bd_t41.js"></script>
 <script src="/scripts/bd/common/publicAjax.js"></script>
 <script src="/scripts/bd/common/register.js"></script>
 <!-- endbuild -->

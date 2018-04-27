@@ -12,7 +12,7 @@
             content: $('.bd_t39_detail_con.c-1').html()
         });
     });
-    $('.bd_t40_rule-1').click(function(){
+    $('.bd_t41_rule-1').click(function(){
         layer.open({
             type: 1,
             skin: 'bd_t39_layer',
@@ -24,7 +24,7 @@
             content: $('.bd_t39_detail_con.c-2').html()
         });
     });
-    $('.bd_t40_rule-2').click(function(){
+    $('.bd_t41_rule-2').click(function(){
         layer.open({
             type: 1,
             skin: 'bd_t39_layer',
