@@ -4,6 +4,7 @@
 
     function allLoaded() {
         $(function () {
+
             if (wx && isTigerCo()) {
                 wxShareConfig({
                     title: '外汇超级行情来袭，老虎外汇送你1000美金给你',
@@ -77,6 +78,7 @@
                 navigation: true,
                 navigationColor: "#fbd71f",
                 navigationPosition: "left",
+                //sectionsColor: ['#ccc', '#121212', '#fff', '#000', '#e0e0e0'],
                 verticalCentered: false,
                 afterRender: function () {
                     $('.matters_btn').delay(700).fadeIn(800);
@@ -165,4 +167,10 @@
             });
         })
     }
+
+    $(document).ready(function () {
+        $('.open_tiger').click(function (e) {
+            console.log(e.target);
+        });
+    });
 }());
