@@ -1,20 +1,7 @@
 <div class="sys_modal_v2 slim_case">
   <button class="close" ng-click="closeModal()">&times;</button>
   <div class="sys_modal_v2__content">
-    <div class="text-left mg-bt-40" ng-show="dredge_type == 'demo' || dredge_type == 'all'">
-      <h3 class="sys_modal_v2__title text-center">开通体验金账户</h3>
-      <p class="sys_modal_v2__desp">开户即送$2000交易体验金。</p>
-      <p class="sys_modal_v2__desp pd-tp-10">只需一步，即刻享受：</p>
-      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> 自由交易，灵活杠杆</p>
-      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> 不用承担任何风险</p>
-      <div class="btn_wrapper">
-          <a class="btn btn-primary-gradient btn-sm" ng-click="openDemo()">
-            <i class="loading fa fa-spinner loading_spinner" ng-show="loading.demo"></i>
-            免费开通
-          </a>
-      </div>
-    </div>
-    <div class="dredge_box" ng-show="dredge_type == 'live' || dredge_type == 'all'">
+    <div class="dredge_box mg-bt-40" ng-show="dredge_type == 'live' || dredge_type == 'all'">
       <h3 class="sys_modal_v2__title text-center">开通真实账户</h3>
       <p class="sys_modal_v2__desp">开户即得$200交易红包，入金可获$800红包！</p>
       <p class="sys_modal_v2__desp pd-tp-10">同时享受更多交易体验：</p>
@@ -23,6 +10,19 @@
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> 申请成为高手获得盈利分成</p>
       <div class="btn_wrapper">
           <a class="btn btn-primary-gradient btn-sm" ng-click="confirmLive()">
+            免费开通
+          </a>
+      </div>
+    </div>
+    <div class="text-left" ng-show="dredge_type == 'demo' || dredge_type == 'all'">
+      <h3 class="sys_modal_v2__title text-center">开通体验金账户</h3>
+      <p class="sys_modal_v2__desp">开户即送$2000交易体验金。</p>
+      <p class="sys_modal_v2__desp pd-tp-10">只需一步，即刻享受：</p>
+      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> 自由交易，灵活杠杆</p>
+      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> 不用承担任何风险</p>
+      <div class="btn_wrapper">
+          <a class="btn btn-primary-gradient btn-sm" ng-click="openDemo()">
+            <i class="loading fa fa-spinner loading_spinner" ng-show="loading.demo"></i>
             免费开通
           </a>
       </div>
