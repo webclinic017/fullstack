@@ -20,8 +20,8 @@
     </title>
     <script>
         var pageView  = {
-            num: <%= pageInfo.pageView%>,
-            id: <%= pageInfo.id%>
+            num: '<%= pageInfo.pageView%>',
+            id: '<%= pageInfo.id%>'
         };
     </script>
 </head>
@@ -53,6 +53,23 @@
         <div class="m_comment__read">
             阅读
             <span class="num"></span>
+        </div>
+
+        <div class="share02_main__send_btn">
+            <span id="send_invitation" class="<%= lang.text('companyEnName') %>"><%=lang.text('mInvite23')%></span>
+        </div>
+        <div class="m_share02_layout">
+            <div class="share_box" id="share02_box">
+                <div class="share02_modal clearfix <%=lang.currentLanguage()%>" id="share02_modal">
+                    <h5><%=lang.text('mInvite24')%></h5>
+                    <span class="share_to_friends show_in_all"   id="share_to_friends">  <img src="/images/mobile/share2wx.png"><br><%=lang.text('mInvite25')%></span>
+                    <span class="share_to_circle show_in_all"    id="share_to_circle">   <img src="/images/mobile/share2circle.png"><br><%=lang.text('mInvite26')%></span>
+                    <span class="share_to_qf show_in_all"        id="share_to_qFriend">  <img src="/images/mobile/share2qq.png"><br><%=lang.text('mInvite27')%></span>
+                    <!-- <span class="share_to_qZone show_in_zh"     id="share_to_qZone">    <img src="/images/mobile/share2qZone.png"><br><%=lang.text('mInvite28')%></span> -->
+                    <span class="share_to_microBlog show_in_all" id="share_to_microBlog"><img src="/images/mobile/share2mBlog.png"><br><%=lang.text('mInvite30')%></span>
+                    <span id="cancel_share"><button style="padding: 0;"><%=lang.text('mInvite31')%></button></span>
+                </div>
+            </div>
         </div>
     </div>
 
