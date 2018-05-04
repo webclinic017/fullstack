@@ -176,6 +176,7 @@
 
 @include b(m_comment) {
     padding: px2rem(40);
+    padding-bottom: px2rem(160);
 
     @include e(title) {
         margin: 0;
