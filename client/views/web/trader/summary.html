@@ -31,8 +31,8 @@
                 <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.avg_position_time }}</span><span class="square_des">平均持仓时间</span></li>
                 <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.win_buy_count }}笔</span><span class="square_des">成功做多交易</span></li>
                 <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.win_sell_count }}笔</span><span class="square_des">成功做空交易</span></li>
-                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_profit_rate }}%</span><span class="square_des">上一日交易状况</span></li>
-                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_week_profit_rate }}%</span><span class="square_des">近七日交易状况</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_profit_rate }}%</span><span class="square_des">上一日交易日状况<i class="fa fa-info" aria-hidden="true"></i></span><span class="alert">指该高手最后一次有交易行为的数据统计。</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_week_profit_rate }}%</span><span class="square_des">近七日交易状况<i class="fa fa-info" aria-hidden="true"></i></span><span class="alert">指从当前日期开始最近七个自然日交易状况。</span></li>
                 <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.avg_month_close }}笔</span><span class="square_des">月平均交易笔数</span></li>
             </ul>
         </div>

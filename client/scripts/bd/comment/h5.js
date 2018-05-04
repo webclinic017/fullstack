@@ -15,10 +15,10 @@
     getCommentDetails();
     function getCommentDetails () {
         publicRequest('getCommentDetails', 'GET', {comment_id: pageView.id}).then(function (data) {
-            // console.log(data);
+            // console.log(pageView);
             if (data.is_succ) {
                 pageData = data.data;
-                visit = pageView.num+Number(pageData.visit);
+                visit = Number(pageView.num)+Number(pageData.visit);
 
                 $title.html(pageData.main_title);
                 $date.html(pageData.issue_date);
@@ -209,5 +209,86 @@
             type: "back_pending_record"
         });
         return false;
+    });
+
+    // share
+    if (!isInTiger()) {
+        $(".share02_main__send_btn").css("display", "none");
+    }
+    var id_arr = [
+        "send_invitation",
+        "share_to_friends",
+        "share_to_circle",
+        "share_to_qFriend",
+        "share_to_microBlog",
+        "share_to_fb",
+        "share_to_twitter",
+        "share_to_linkin",
+        "share_to_tumblr",
+        "cancel_share",
+        "share02_box",
+        "get_award",
+        "share_tel",
+        "share02_modal"
+    ];
+    var layIndex;
+    function nativeShare(type) {
+        var callConfig = {
+            type: type,
+            title: '每日汇评',
+            description: pageData.main_title || 'TigerWit 每日汇评，分析师李彭专栏',
+            url: window.location.href
+        };
+        if (!isInTiger()) {
+            console.log("当前不是APP环境");
+        } else {
+            callNative(callConfig);
+        }
+    }
+    $(document).on('tap', '#send_invitation', function (e) {
+        console.log(pageData.main_title);
+        layIndex = layer.open({
+            type: 1, 
+            content: $('#share02_box').html(),
+            anim: 'up',
+            style: 'position:fixed; bottom:0; left:0; width: 100%; height: 350px; padding:10px 0; border:none;'
+        });
+        return false;
+    });
+    $(document).on('touchend', '.share02_modal', function (e) {
+        var id = $(e.target).parent('span').attr('id');
+        var type = undefined;
+        if (id == id_arr[1]) {
+            type = "wechat_friend";
+        }
+        else if (id == id_arr[2]) {
+            type = "wechat_circle";
+        }
+        else if (id == id_arr[3]) {
+            type = "qq";
+        }
+        else if (id == id_arr[4]) {
+            type = "weibo";
+        }
+        // else if (id == id_arr[5]) {
+        //     type = "facebook";
+        // } 
+        else if (id == id_arr[6]) {
+            type = "twitter";
+        } 
+        else if (id == id_arr[7]) {
+            type = "linkin";
+        } 
+        else if (id == id_arr[8]) {
+            type = "tumblr";
+        } 
+        else if (id == id_arr[9]) {
+            layer.close(layIndex);
+            return false;
+        } else {
+            return false;
+        }
+        nativeShare(type);
+        layer.close(layIndex);
     });
 })();

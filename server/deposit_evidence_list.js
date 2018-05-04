@@ -94,6 +94,74 @@ module.exports = [
     ]
   },
   {
+    title: "农业银行",
+    content: [
+      {
+        title: "一、PC端凭证示例",
+        tip: [
+          "Step1：登录农业银行官网",
+          "Step2：截取对应充值记录的“网上银行电子回单”截图内需包含持卡人姓名、银行账号、充值金额等内容。"
+        ],
+        pic: [
+          "/white_label/deposit/abc-1.png"
+        ]
+      },
+      {
+        title: "二、APP端凭证示例",
+        tip: [
+          "Step1：登录农业银行APP",
+          "Step2：点击我的账户 > 查询明细",
+          "Step3：截取对应的充值记录，截图内需包含持卡人姓名、银行账号、充值金额等内容。"
+        ],
+        pic: [
+          "/white_label/deposit/abc-2.png",
+          "/white_label/deposit/abc-3.png"
+        ]
+      }
+    ]
+  },
+  {
+    title: "平安银行",
+    content: [
+      {
+        title: null,
+        tip: [
+          "Step1：登录平安银行官网",
+          "Step2：截取对应充值记录的“充值详情”，截图内需包含持卡人姓名、银行账号、充值金额等内容。"
+        ],
+        pic: [
+          "/white_label/deposit/pab-1.png"
+        ]
+      }
+    ]
+  },
+  {
+    title: "浦发银行",
+    content: [
+      {
+        title: "一、PC端凭证示例",
+        tip: [
+          "Step1：登录浦发银行官网",
+          "Step2：选择我的账户 > 本地行卡交易查询，找到充值记录",
+          "Step3：截取对应充值记录，截图内需包含持卡人姓名、银行账号、充值金额等内容。"
+        ],
+        pic: [
+          "/white_label/deposit/spdb-1.png"
+        ]
+      },
+      {
+        title: "二、APP端凭证示例",
+        tip: [
+          "Step1：登录浦发银行APP",
+          "Step2：截取对应充值记录，截图内需包含持卡人姓名、银行账号、充值金额等内容。"
+        ],
+        pic: [
+          "/white_label/deposit/spdb-2.png"
+        ]
+      }
+    ]
+  },
+  {
     title: "其他银行",
     content: [
       {
