@@ -1,3 +1,33 @@
 <div class="space_content">
-    <div ui-view></div>
+    <div ui-view ng-if="authenAsset"></div>
+    <div ng-if="!authenAsset">
+        <div class="text-center" ng-show="authenAssetStatus == 0">
+            <img style="height: 50px;" src="/ngsrc/loading.gif">
+        </div>
+        <div class="text-center" ng-show="authenAssetStatus == 1">
+            <div class="text-center font-size-16 mg-bt-20">
+                您尚未开通任何账户，请先开户
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary-gradient btn-sm" ng-click="openDredgeMdl({position: 'sidebar'})">
+                    快捷开户
+                </a>
+            </div>
+        </div>
+        <div ng-show="(authenAssetStatus == 2) && (authenAssetStatus == 4)">
+            <div class="text-center font-size-16 mg-bt-20">
+                您的账户尚未通过认证审核，请先完善资料
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary-gradient btn-sm" ui-sref="authen.subpage({subpage: 'investInfo'})">
+                    完善资料
+                </a>
+            </div>
+        </div>
+        <div ng-show="authenAssetStatus == 3">
+            <div class="text-center font-size-16 mg-bt-20">
+                您的账户正在审核中
+            </div>
+        </div>
+    </div>
 </div>
