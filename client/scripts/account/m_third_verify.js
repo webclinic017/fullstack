@@ -107,8 +107,8 @@ $(document).ready(function () {
     }
     // setTimeout(function () {
     //     layer.closeAll();
-    //     // getKycList();
-    //     step = 3;
+    //     getKycList();
+    //     step = 0;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
     // }, 1000);
@@ -172,7 +172,7 @@ $(document).ready(function () {
             });
         } else {
             layer.open({
-                content: '请将信息填写完整',
+                content: lang.text('third.fillInfoTip'),
                 skin: 'msg',
                 time: 2
             });
@@ -206,7 +206,7 @@ $(document).ready(function () {
 
                 // kyc 设置基本信息
                 $(ele.kycSelect).selectOrDie({
-                    placeholder: '请选择',
+                    placeholder: lang.text('third.select'),
                     customClass: 'm_third_kyc__single-select',
                     onChange: function(e){
                         kycInfo[$(this).attr("data-name")] = $(this).val();
@@ -273,7 +273,7 @@ $(document).ready(function () {
             });
         } else {
             layer.open({
-                content: '请填写完整信息',
+                content: lang.text('third.fillInfoTip'),
                 skin: 'msg',
                 time: 2
             });
@@ -292,18 +292,25 @@ $(document).ready(function () {
             front: false,
             back: false,
         };
+
+        if (lang.curLang() === 'en') {  //只需传一张
+            cardBaseFile.back = true;
+            cardStatus.back = true;
+        }
         // console.log($(ele.cardFile)[0].value, $(ele.cardFile)[1].value);
         // if ($(ele.cardFile)[0].value && $(ele.cardFile)[1].value) {
         if (cardBaseFile.front && cardBaseFile.back) {
             layer.open({type: 2, shadeClose: false});
 
             uploadCard('front');
-            uploadCard('back');
+            if (lang.curLang() !== 'en') {  //只需传一张
+                uploadCard('back');
+            }
             // console.log(cardBaseFile.front, cardBaseFile.back);
             
         } else {
             layer.open({
-                content: '请上传身份证',
+                content: lang.text('third.uploadCard'),
                 skin: 'msg',
                 time: 2
             });
@@ -522,7 +529,7 @@ $(document).ready(function () {
                 // console.log(userAgent);  
                 // console.log(androidVersion);
                 if (androidVersion <= 4.4) {
-                    alert("您当前的手机版本不支持图片上传功能，请升级手机系统或更换手机。");
+                    alert(lang.text('third.systemTip'));
                 }
             }  
             $(ele.navbarStep2).addClass("active");

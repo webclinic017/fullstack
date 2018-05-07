@@ -10,7 +10,7 @@
     }
     &.bgm {
         background: url("/images/mobile/h5_register_bg2.png") no-repeat center center;
-        background-size: 100% auto;
+        background-size: 100% 100%;
 
         .m_third_navbar__progress {
             .circle {
@@ -115,7 +115,7 @@
 
             .icon {
                 float: left;
-                width: px2rem(92);
+                width: 13%;
                 height: px2rem(92);
 
                 img {
@@ -124,6 +124,7 @@
             }
             .tip {
                 float: left;
+                width: 85%;
                 padding-left: px2rem(30);
                 color: #fff;
 

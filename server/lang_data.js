@@ -2056,13 +2056,18 @@ module.exports = function () {
     // console.log(faq)
     var mInvite = replaceTiger(require('./mutilang/mInvite'))
     var mRegister = replaceTiger(require('./mutilang/mRegister'))
-
+    // 三方开户
+    var mThird = require('./mutilang/third')
+    // 注册协议 agment_mdl.html
+    var agment = replaceTiger(require('./mutilang/agment'))
     return _.merge(
         data,
         faq,
         tobeMaster,
         tradeFee,
         mInvite,
-        mRegister
+        mRegister,
+        mThird,
+        agment
     );
 }; 
