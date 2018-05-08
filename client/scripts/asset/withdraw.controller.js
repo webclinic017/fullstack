@@ -381,7 +381,14 @@
             $scope.$emit('global.checkAuthenFlow', {
                 ctrlName: 'AssetWithdrawController',
                 callback: function () {
-                    if(!checkCardPhone($scope.withdraw.card)){ return }
+                    if ($scope.withdraw.type === 'invest') {
+                        if ($scope.withdraw.accountType === 'bank') {
+                            if(!checkCardPhone($scope.withdraw.card)){ return }
+                        }
+                    } else {
+                        if(!checkCardPhone($scope.withdraw.card)){ return }
+                    }
+
                     showErr('amount');
                     // console.info($scope.withdrawForm.$invalid);
                     if ($scope.withdrawForm.$invalid) {
