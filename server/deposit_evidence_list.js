@@ -106,18 +106,18 @@ module.exports = [
           "/white_label/deposit/abc-1.png"
         ]
       },
-      {
-        title: "二、APP端凭证示例",
-        tip: [
-          "Step1：登录农业银行APP",
-          "Step2：点击我的账户 > 查询明细",
-          "Step3：截取对应的充值记录，截图内需包含持卡人姓名、银行账号、充值金额等内容。"
-        ],
-        pic: [
-          "/white_label/deposit/abc-2.png",
-          "/white_label/deposit/abc-3.png"
-        ]
-      }
+      // {
+      //   title: "二、APP端凭证示例",
+      //   tip: [
+      //     "Step1：登录农业银行APP",
+      //     "Step2：点击我的账户 > 查询明细",
+      //     "Step3：截取对应的充值记录，截图内需包含持卡人姓名、银行账号、充值金额等内容。"
+      //   ],
+      //   pic: [
+      //     "/white_label/deposit/abc-2.png",
+      //     "/white_label/deposit/abc-3.png"
+      //   ]
+      // }
     ]
   },
   {
