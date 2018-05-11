@@ -223,14 +223,26 @@
                                             openDepositMdl('confirmDeposit', submitDeposit, {
                                                 amountDollar: amount,
                                                 amountRMB: amountRMB,
-                                                amountFee: amountFee,
-                                                amountTotal: Number(amountRMB) + Number(amountFee),
+                                                amountFee: $scope.depositTypeLst.invest.poundage_status ? amountFee : '0.00',
+                                                amountTotal: $scope.depositTypeLst.invest.poundage_status ? (Number(amountRMB) + Number(amountFee)).toFixed(2) : Number(amountRMB).toFixed(2),
                                                 msgBtn: '确认'
                                             });
                                         } else {
                                             checkInvestLimit();
                                         }
                                     }
+                                });
+                            } else if ($scope.deposit.type === 'paypal') {
+                                $scope.isLoading = false;
+                                var poundage = $scope.depositTypeLst.paypal.poundage.substring(0, $scope.depositTypeLst.paypal.poundage.length-1)*0.01;
+                                var amountFee = Number(amount*poundage).toFixed(2);
+                                openDepositMdl('confirmPaypalDeposit', submitDeposit, {
+                                    amountDollar: amount,
+                                    amountFee: amountFee,
+                                    amountTotal: $scope.depositTypeLst.paypal.poundage_status ? (Number(amount) + Number(amountFee)).toFixed(2) : amount,
+                                    isFree: $scope.depositTypeLst.paypal.poundage_status,
+                                    desc: $scope.depositTypeLst.paypal.poundage_desc,
+                                    msgBtn: '确认'
                                 });
                             } else if ($scope.deposit.type == 'cseWallet') {
                                 $scope.isLoading = false;                                

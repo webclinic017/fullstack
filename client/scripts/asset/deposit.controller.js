@@ -222,8 +222,8 @@
                                             openDepositMdl('confirmDeposit', submitDeposit, {
                                                 amountDollar: amount,
                                                 amountRMB: amountRMB,
-                                                amountFee: amountFee,
-                                                amountTotal: (Number(amountRMB) + Number(amountFee)).toFixed(2),
+                                                amountFee: $scope.depositTypeLst.invest.poundage_status ? amountFee : '0.00',
+                                                amountTotal: $scope.depositTypeLst.invest.poundage_status ? (Number(amountRMB) + Number(amountFee)).toFixed(2) : Number(amountRMB).toFixed(2),
                                                 desc: $scope.depositTypeLst.invest.poundage_desc,
                                                 msgBtn: '确认'
                                             });

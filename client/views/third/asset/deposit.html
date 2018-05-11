@@ -20,7 +20,7 @@
 
         <div class="row" ng-if="deposit.currency">
             <div class="col-xs-7 col-xs-offset-2 deposit__rate">
-                <p>
+                <p ng-show="deposit.currency.currency !== 'USD'">
                     <span class="font-danger">＊</span>今日汇率：1 美元 =
                     <span>{{deposit.currency.rate_in}}</span> {{deposit.currency.currency_name}}
                 </p>
