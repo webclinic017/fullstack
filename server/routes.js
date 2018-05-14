@@ -1173,7 +1173,7 @@ module.exports = function (app) {
         }
         res.json(rs);
     });
-    app.route('/thitd_napi').get(function (req, res) {
+    app.route('/third_napi').get(function (req, res) {
         var ThirdPath = require('./third_napi.js')()
         var data = new ThirdPath(req);
         var nError = null, rs = null;
@@ -1181,14 +1181,14 @@ module.exports = function (app) {
             rs = {
                 is_succ: true,
                 code: 0,
-                message: "获取成功",
+                message: "",
                 data: data.oPath
             }
         } else {
             rs = {
                 is_succ: false,
                 code: 1,
-                message: "获取失败"
+                message: ""
             }
             if (nError) {
                 rs.message = nError.error_msg;
