@@ -1173,6 +1173,29 @@ module.exports = function (app) {
         }
         res.json(rs);
     });
+    app.route('/thitd_napi').get(function (req, res) {
+        var ThirdPath = require('./third_napi.js')()
+        var data = new ThirdPath(req);
+        var nError = null, rs = null;
+        if (data) {
+            rs = {
+                is_succ: true,
+                code: 0,
+                message: "获取成功",
+                data: data.oPath
+            }
+        } else {
+            rs = {
+                is_succ: false,
+                code: 1,
+                message: "获取失败"
+            }
+            if (nError) {
+                rs.message = nError.error_msg;
+            }
+        }
+        res.json(rs);
+    });
 
     app.route('/:url(404|*)').get(function (req, res) {
         // var viewFilePath = '404';
