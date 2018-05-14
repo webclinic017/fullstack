@@ -1,5 +1,8 @@
 @include b(bd_lottery_layout) {
   margin-top: 69px;
+  &.pandafx {
+    margin-top: 0px;
+  }
 }
 @include b(bd_lottery) {
   height: 2472px;
