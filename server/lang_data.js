@@ -13,7 +13,7 @@ module.exports = function () {
 
     if (company_name === 'tigerwit') {
         companyConfig = {
-            companyNameZh: "老虎外汇",
+            companyNameZh: "TigerWit",
             companyNameEn: "TigerWit",
             companyNickName: "小老虎",
             titleZh: "老虎外汇 - TigerWit",
