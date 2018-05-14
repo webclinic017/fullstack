@@ -30,6 +30,17 @@
         color: #333;
         font-weight: 500;
     }
+    @include e(tip) {
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            color: #333;
+        }
+    }
 }
 
 .warn_tip_area {
