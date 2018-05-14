@@ -822,7 +822,7 @@ module.exports = function (app) {
     // 刮奖
     app.route('/bd/lottery').get(function (req, res) {
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit') {
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
                 res.render('bd/lottery/lottery_h5.html', extendPublic({
                     reward_lst: require('./lottery_reward_lst')

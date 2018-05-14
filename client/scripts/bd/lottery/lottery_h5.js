@@ -3,10 +3,16 @@
     var haveChance = false;
     var message_popup = '网络错误，请稍后再试';
     var activityId = 3, rewardId = 3;
-    var shareDesp = "邀请您参加老虎外汇的交易刮大奖活动，每日最高刮中99美金！";
+    var shareDesp = "邀请您参加TigerWit的交易刮大奖活动，每日最高刮中99美金！";
     var shareTitle = "交易刮刮乐，好礼别错过";
-    var shareLink = "https://www.tigerwit.com/bd/lottery";
+    var shareLink = window.location.origin + "/bd/lottery";
+    var logoImg = "/activity/logo.png";
 
+    if (getCoName() === 'pandafx') {
+        activityId = 4, rewardId = 4;
+        shareDesp = "邀请您参加熊猫外汇的交易刮大奖活动，每日最高刮中99美金！";
+        logoImg = '/white_label/basic_logo_panda_black.png';
+    }
     // 微信分享配置
     if (wx) {
         wxShareConfig({
@@ -14,7 +20,7 @@
             subTitle: shareTitle,
             shareLink: shareLink,
             desc: shareDesp,
-            img: window.location.origin + '/activity/logo.png',
+            img: window.location.origin + logoImg,
             trackPage: window.location.pathname.replace(/\//gi, ''),
             debug: false
         });
