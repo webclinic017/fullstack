@@ -1,6 +1,7 @@
 ; $(function () {
     var isReady = false;
     var haveChance = false;
+    var isPanda = false;
     var message_popup = '网络错误，请稍后再试';
     var activityId = 3, rewardId = 3;
     var shareDesp = "邀请您参加TigerWit的交易刮大奖活动，每日最高刮中99美金！";
@@ -9,6 +10,7 @@
     var logoImg = "/activity/logo.png";
 
     if (getCoName() === 'pandafx') {
+        isPanda = true;
         activityId = 4, rewardId = 4;
         shareDesp = "邀请您参加熊猫外汇的交易刮大奖活动，每日最高刮中99美金！";
         logoImg = '/white_label/basic_logo_panda_black.png';
@@ -34,6 +36,10 @@
     } else {
         $("#lottery_status_tip").html("请前往APP参与抽奖!");
         $("#lottery_share_wrapper").css({display: 'none'});
+
+        if (isPanda) {
+            window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.pandaforex.forex";
+        }
     }
 
     window['lottery_native_share_succ'] = function(type) {

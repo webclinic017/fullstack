@@ -22,7 +22,13 @@
             <div class="bd_lottery">
                 <div class="container">
                     <div class="bd_lottery__date">
-                      活动时间：2018.4.25 - 2018.5.25
+                      活动时间：
+                    <%if(lang.isCompany('tigerwit')){%>
+                        2018.4.25 - 2018.5.25
+                    <%}%>
+                    <% if (lang.isCompany('pandafx')) {%>
+                        2018.05.14 - 2018.06.15
+                    <%}%>
                     </div>
                     <div class="bd_lottery__rule-tit">
                       <img src="/white_label/lottery/web_rule_tit.png" alt="">
