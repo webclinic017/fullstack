@@ -36,10 +36,6 @@
     } else {
         $("#lottery_status_tip").html("请前往APP参与抽奖!");
         $("#lottery_share_wrapper").css({display: 'none'});
-
-        if (isPanda) {
-            window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.pandaforex.forex";
-        }
     }
 
     window['lottery_native_share_succ'] = function(type) {
@@ -86,7 +82,11 @@
                 time: 3
             });
         } else {
-            toOpenApp();
+            if (isPanda) {
+                window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.pandaforex.forex";
+            } else {
+                toOpenApp();
+            }
         }
         return false;
     })
