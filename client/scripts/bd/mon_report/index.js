@@ -97,9 +97,9 @@
 
     // 分享功能
     function share(hasShared) {
-        // 我在老虎外汇投资，成绩超过98%网友获得印钞工人称号
-        var shareDesp = "我在老虎外汇投资, 成绩超过" + rank_result.rank + "网友获得" + rank_result.title + "称号";
-        var shareTitle = '我在老虎外汇' + cur_month + '月的投资报告';
+        // 我在TigerWit投资，成绩超过98%网友获得印钞工人称号
+        var shareDesp = "我在TigerWit投资, 成绩超过" + rank_result.rank + "网友获得" + rank_result.title + "称号";
+        var shareTitle = '我在TigerWit' + cur_month + '月的投资报告';
         var shareLink = loca.origin + '/bd/mon_report' + '?shared=1&user_code=' + encodeURIComponent(encrypt($.cookie('user_code') || ''));
         // console.log(shareDesp, shareTitle, shareLink)
         // console.log(shareLink)
