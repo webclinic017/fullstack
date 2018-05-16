@@ -41,7 +41,8 @@
             cseAccount: undefined,
             success: false,
             minAmount: companyName == 'tigerwit' ? 20 : 100,
-            maxAmount: 0
+            maxAmount: 0,
+            cseStatus: 0    // cse出金方式  1显示，0隐藏
         };
         $scope.frontErr = {
             amount: {
@@ -84,7 +85,7 @@
         asset.getIsWithdraw().then(function (data) {
             layer.closeAll();
             if (!data) return;
-            // console.info(data);
+            console.info(data);
             $scope.withdrawMessageSucc = true;
             if (data.is_succ) {
                 if (data.data.status == 0) {
@@ -98,6 +99,7 @@
                     };
                     $scope.withdrawNotice = data.data.notice;
                     $scope.maxAmountInvest = data.data.amount < 0 ? 0 : data.data.amount;
+                    $scope.withdraw.cseStatus = data.data.cse_status;
                     if ($scope.withdraw.type === 'invest') {
                         $scope.withdraw.maxAmount = $scope.maxAmountInvest;
                     }
