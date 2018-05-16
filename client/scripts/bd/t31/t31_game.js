@@ -1,6 +1,6 @@
 ;(function () {
     window.onload = function () {
-        $("title").html("老虎外汇 - 微盘大师");
+        $("title").html("TigerWit - 微盘大师");
         function Stock_game(id) {
             //缓存this
             var _this = this;

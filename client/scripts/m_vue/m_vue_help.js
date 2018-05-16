@@ -80,7 +80,7 @@ if ($(".m_vue").attr("data-page") === "help") {
                     ]
                 },
                 {
-                    title: '老虎外汇操作指南',
+                    title: 'TigerWit操作指南',
                     sub: 
                     isTigerSpecial() 
                     ? 
@@ -143,7 +143,7 @@ if ($(".m_vue").attr("data-page") === "help") {
                     ])
                 },
                 {
-                    title: '老虎外汇帮助中心',
+                    title: 'TigerWit帮助中心',
                     sub: [
                         {
                             param: 'center-copyRule',
@@ -171,7 +171,7 @@ if ($(".m_vue").attr("data-page") === "help") {
             var companyName = $.cookie('company_name');
             if (companyName == 'pandafx') {
                 $.each(origin, function (index, item) {
-                    item.title = item.title.replace('老虎外汇', '熊猫外汇')
+                    item.title = item.title.replace('TigerWit', '熊猫外汇')
                 })
             }
             return {
