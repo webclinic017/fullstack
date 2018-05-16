@@ -32,7 +32,7 @@
             en: "Functions or strategies to mitigate risks,Price,Information delay,Spread Fluctuations,Slippage,Exchange rate gap,Risk of System Quotation (Mispricing),Arbitrage and control,Price manipulation,Trade and third-party participation,Platform Trading Hours,Circulation,Margin call,Risks over weekends,Online trading,Commission charge,Application for abnormal conditions,The announcement,FAQs,Customer Support Department,Additional Contacts"
         },
         statement: {
-            zh: "客户声明,老虎外汇交易平台风险提示及免责条款",
+            zh: "客户声明,TigerWit交易平台风险提示及免责条款",
             en: "Declaration by Client,Risk Warning and Exemptions for Trading on TigerWit Trading Platform"
         },
         categorization: {

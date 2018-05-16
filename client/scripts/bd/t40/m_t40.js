@@ -6,10 +6,10 @@
         $(function () {
             if (wx && isTigerCo()) {
                 wxShareConfig({
-                    title: '外汇超级行情来袭，老虎外汇送你1000美金给你',
-                    subTitle: '外汇超级行情来袭，老虎外汇送你1000美金给你',
+                    title: '外汇超级行情来袭，TigerWit送你1000美金给你',
+                    subTitle: '外汇超级行情来袭，TigerWit送你1000美金给你',
                     shareLink: window.location.href,
-                    desc: '外汇投资选老虎，人人都是投资高手，一键跟单简单粗暴，老虎高手带你轻松赚钱！！',
+                    desc: '外汇投资选TigerWit，人人都是投资高手，一键跟单简单粗暴，TigerWit高手带你轻松赚钱！！',
                     img: window.location.origin + '/activity/logo.png',
                     trackPage: window.location.pathname.replace(/\//gi, ''),
                     debug: false
