@@ -18,7 +18,19 @@
     <br>
     <br>
     <br>
-    <div class="row">
+    <div class="row mg-bt-30" ng-show="withdraw.type === 'invest' && withdraw.cseStatus">
+        <div class="col-xs-2 text-left deposit__title-money">
+            提现到
+        </div>
+
+        <div class="col-xs-6">
+            <div class="deposit__way" ng-click="openChangeWithTypeMdl()">
+                {{ withdraw.accountType === 'bank' ? '银行卡' : 'CSE平台账户' }}
+            </div>
+            <p class="deposit__way-tip" ng-class="{active: withdraw.accountType === 'cse'}">请填写您的真实CSE钱包账号</p>
+        </div>
+    </div>
+    <div class="row mg-bt-30" ng-show="((withdraw.type === 'invest') && (withdraw.accountType === 'bank')) || (withdraw.type === 'wallet')">
         <div class="col-xs-2 text-left deposit__title-money">
             银行卡
         </div>
@@ -41,9 +53,20 @@
             <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl('manage')">管理银行卡</span>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
+    <div class="row" ng-show="(withdraw.type === 'invest') && (withdraw.accountType === 'cse')">
+        <div class="col-xs-2 text-left deposit__title-money">
+            CSE账号
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-control-wrapper">
+                <input class="form-control form-control-size-lg form-control-shape-capsule"
+                    name="account"
+                    type="text"
+                    ng-model="withdraw.cseAccount">
+            </div>  
+        </div>      
+    </div>
     <div class="row">
         <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'invest' && withdrawMessageSucc && !message.is_succ">
             <div class="warn_icon">
