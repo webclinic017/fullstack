@@ -39,7 +39,7 @@ module.exports = function () {
 
             webCopyRule: indexBasePath + "/rules-banner-tigerwit.jpg",
             webCopySelect: indexBasePath + "/select-banner-tigerwit.jpg",
-            webAgentProxy: indexBasePath + "/agent-banner-tigerwit.jpg",
+            webAgentProxy: indexBasePath + "/agent-banner-tigerwit-new.jpg",
             webAgentBecome: indexBasePath + "/become-banner-tigerwit.png",
 
             icoPath: indexBasePath + "/tigerwit.ico",

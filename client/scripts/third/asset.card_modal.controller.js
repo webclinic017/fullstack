@@ -28,6 +28,11 @@
                 reg: validator.regType.bankCardNumber.reg,
                 tip: validator.regType.bankCardNumber.tip
             },
+            phone: {
+                show: false,
+                reg: validator.regType.phone.reg,
+                tip: validator.regType.phone.tip
+            },
             bank: {
                 show: false
             },
@@ -134,6 +139,7 @@
             showErr('address');
             showErr('province');
             showErr('city');
+            showErr('phone');
             // console.info($scope.cardForm.city);
 
             if ($scope.cardForm.$invalid) {
@@ -144,7 +150,7 @@
 
             // 如果是第一次绑卡
             if (typeof $scope.card.id === 'undefined') {
-                asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address, $scope.card.province.code, $scope.card.city.code).then(function (data) {
+                asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address, $scope.card.province.code, $scope.card.city.code, null, $scope.card.phone).then(function (data) {
                     $scope.clickable = true
                     if (!data) return;
                     if (data.is_succ) {
@@ -157,7 +163,7 @@
                 });
             } else {
                 // 修改银行卡
-                asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address, $scope.card.province.code, $scope.card.city.code, $scope.card.id).then(function (data) {
+                asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address, $scope.card.province.code, $scope.card.city.code, $scope.card.id, $scope.card.phone).then(function (data) {
                     $scope.clickable = true
                     if (!data) return;
                     if (data.is_succ) {
