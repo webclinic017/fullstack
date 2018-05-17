@@ -438,7 +438,12 @@
                     var paramsAsset = {
                         amount: Number($scope.withdraw.amount).toFixed(2)
                     };
-                    $scope.withdraw.accountType === 'bank' ? paramsAsset.bank_card_id = $scope.withdraw.card.id : paramsAsset.cse_account = $scope.withdraw.cseAccount;
+                    if ($scope.withdraw.accountType === 'bank') {
+                        paramsAsset.bank_card_id = $scope.withdraw.card.id;
+                    } else {
+                        paramsAsset.third_type = 1;
+                        paramsAsset.third_account = $scope.withdraw.cseAccount;
+                    }
                     asset.withdraw(paramsAsset).then(function (data) {
                         if (!data) return;
                         $scope.clickable = true;
