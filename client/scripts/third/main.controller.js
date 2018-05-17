@@ -56,6 +56,7 @@
                 //获取认证状态
                 account.getAuthStatus().then(function (data) {
                     if (data.is_succ) {
+                        main.accountStatus = data.data.account_status;
                         if (data.data.status == 6) {
                             main.verifyInfo = {
                                 status: true,
