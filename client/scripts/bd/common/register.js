@@ -15,12 +15,12 @@
         });
     }
 
-    set_token();
+    // set_token();
 
-    /*token 5分钟过期*/
-    setInterval(function () {
-        set_token();
-    }, 300000);
+    // /*token 5分钟过期*/
+    // setInterval(function () {
+    //     set_token();
+    // }, 300000);
 
     $(function () {
         var oReg = {};
@@ -57,10 +57,10 @@
 
             var interval = null;
 
-            if (!token) {
-                sa.track('set_token_failed');
-                layer.msg('网络异常,请刷新重试!');
-            }
+            // if (!token) {
+            //     sa.track('set_token_failed');
+            //     layer.msg('网络异常,请刷新重试!');
+            // }
 
             /*loading层*/
             layer.load(1, {shade: false});
@@ -90,12 +90,12 @@
                                 $("#verify_code_btn").removeClass("disable").html("重新获取");
                                 duration = 59;
                                 /*重新获取token*/
-                                set_token();
+                                // set_token();
                             }
                         }, 1000);
                     }
                 } else {
-                    set_token();
+                    // set_token();
                     layer.msg('获取失败,请重试!');
                 }
             });

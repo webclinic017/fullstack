@@ -12,12 +12,12 @@
         });
     }
 
-    set_token();
+    // set_token();
     
     /*token 5分钟过期*/
-    setInterval(function () {
-        set_token();
-    }, 300000);
+    // setInterval(function () {
+    //     set_token();
+    // }, 300000);
 
     // setTimeout(function(){
     //     openH5AgmentModal(100402, function(resolve, e){
@@ -106,16 +106,16 @@
             if (isDisabled()) return;
 
             var interval = null;
-
-            if (!token) {
-                sa.track('set_token_failed');
-                layer.open({
-                    content: lang.text('register.networkErr'),
-                    skin: 'msg',
-                    anim: false,
-                    time: 2 /*1.2秒后自动关闭*/
-                });
-            }
+            
+            // if (!token) {
+            //     sa.track('set_token_failed');
+            //     layer.open({
+            //         content: lang.text('register.networkErr'),
+            //         skin: 'msg',
+            //         anim: false,
+            //         time: 2 /*1.2秒后自动关闭*/
+            //     });
+            // }
 
 
 
@@ -158,12 +158,12 @@
                                 $("#verify_code_btn").removeClass("disable").html(lang.text('register.resendCode'));
                                 duration = 59;
                                 /*重新获取token*/
-                                set_token();
+                                // set_token();
                             }
                         }, 1000);
                     }
                 } else {
-                    set_token();
+                    // set_token();
                     layer.open({
                         content: data.message,
                         skin: 'msg',
