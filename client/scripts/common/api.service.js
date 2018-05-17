@@ -61,12 +61,14 @@
             withdrawApi: urlOrigin2 + '/payment/withdraw',
             getCardApi: urlOrigin2 + '/user/bank_card',
             bindCardApi: urlOrigin2 + '/user/bank_card',
+            bindCardPhoneApi: urlOrigin2 + '/user/bank_card/phone',
             getCardListApi: urlOrigin2 + '/user/bank_card/lists',
             deleteCardApi: urlOrigin2 + '/user/bank_card/destroy',
             cancelWithdrawApi: urlOrigin2 + '/payment/withdraw/cancel',
             getHistoryApi: urlOrigin2 + '/payment/histories',
             depositApi: urlOrigin2 + '/payment/deposit',
             getDepositLimitApi: urlOrigin2 + '/payment/deposit/limits',
+            getDepositPlatformApi: urlOrigin2 + '/payment/deposit/platform',
             getFXRateApi: urlOrigin2 + '/payment/rates',
             getIsWithdrawApi: urlOrigin2 + '/v2/payment/withdraw/limits',
             walletDepositApi: urlOrigin2 + '/wallet/deposit',
@@ -79,7 +81,9 @@
             getBonusDetailListApi: urlOrigin2 + '/commission/settle_info',
             getBanksApi: urlOrigin2 + '/bank_names',
             teleDepositApi: urlOrigin2 + '/payment/deposit/transfer',
-            uploadPaymentEvidenceApi: urlOrigin2 + '/payment/evidence'
+            uploadPaymentEvidenceApi: urlOrigin2 + '/payment/evidence',
+            getPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_list',
+            cancelPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_cancel'
         };
         var forex = {
             

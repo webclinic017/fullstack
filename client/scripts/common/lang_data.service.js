@@ -21,7 +21,7 @@
                 if (value === 'tigerwit') {
                     companyConfig = {
                         companyNickName: "tigerwit",
-                        companyNameZh: "老虎外汇",
+                        companyNameZh: "TigerWit",
                         companyNameEn: "TigerWit",
                         telephone: "400 - 809 - 8509",
                         mt4Live: "TigerWit-Live",
@@ -199,7 +199,7 @@
             actLogin6: {zh: "后重新获取", en: "after resend"},
             actLogin7: {zh: "记住登录状态", en: "Remember login status"},
             actLogin8: {zh: "登录", en: "Login"},
-            actLogin9: {zh: "未注册老虎外汇的手机号，登录时将自动注册", en: "Logging in will turn to registration if the Phone Number hasn't been registered."},
+            actLogin9: {zh: "未注册TigerWit的手机号，登录时将自动注册", en: "Logging in will turn to registration if the Phone Number hasn't been registered."},
             actLogin10: {zh: "提交代表您已阅读并同意", en: "I accept the"},
             actLogin11: {zh: "客户协议", en: "Client Agreement"},
             actLogin12: {zh: "风险披露声明", en: "Risk Disclosure"},

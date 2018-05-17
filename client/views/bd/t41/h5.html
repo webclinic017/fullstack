@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html >
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="<%= lang.text('companyEnName')%> 跟单交易 外汇 CFD 指数 股指 互联网金融">
+    <meta name="description" content="<%= lang.text('companyEnName')%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyEnName')%>">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!--禁用缓存-->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>
+        <%= lang.text('companyEnName')%>
+    </title>
+    <% include /common/statistic/h5.jrtt.html %>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<body>
+<% include /common/component/h5.loading.html %>
+
+<div class="m_t41_layout">
+    <div class="full_page" id="dowebok">
+        <div class="section section1" id="img_detect_container">
+            <div class="section_box">
+                <div class="slide_arrow"></div>
+                <%if(lang.text('companyEnName') == 'TigerWit'){%>
+                    <img src="/images/bd_t41/logo.png" alt="" class="redbag_logo">
+                <%}%>
+                <%if(lang.text('companyEnName') == 'pandafx'){%>
+                    <img src="/images/basic_logo_panda_white.png" alt="" class="redbag_logo panda">
+                <%}%>
+                <div class="section1_page">
+                    <img src="/images/bd_t41/h5_p1_focus.png">
+                </div>
+                <div class="section1_tit">
+                    新用户注册赠1000美金红包
+                </div>
+                <div class="section1_date">
+                    2018年5月1日 - 2018年5月31日
+                </div>
+                <div class="detail center">
+                    <p data-action="matters" alt="" class="matters_btn">活动详情</p>
+                </div>
+                
+                <div class="layer_contentBox" id="layer_contentBox">
+                    <div class="layer_bdt41">
+                        <div class="rules">
+                            <p class="rule_title">活动详情</p>
+                            <p>1. 用户需在红包指定兑现期限内完成对应条件并手动完成兑现，过期不能兑现；</p>
+                            <p>2. 活动所列红包每个用户仅可领取一次，兑现金额将在执行兑现操作后入账且可支取；</p>
+                            <p>3.本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，美元/人民币以及CFD类产品交易手数不计入统计范围；</p>
+                            <p>4. 本活动仅限活动开始后新注册用户，用户提取资金前，需完成完整个人信息的提交并通过审核；</p>
+                            <p>5. 本活动允许EA但禁止EA剥头皮交易，违反规则的用户将取消参与本次活动的权利；</p>
+                            <p>6.<%= lang.text('companyEnName')%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打 <a class="connect_us" style="text-decoration: underline;" href="tel:<%= lang.text('telephone')%>"><%= lang.text('telephone')%></a>。
+                            </p>
+                            
+                        </div>
+                        <p class="rule_close"><i class="fa fa-times" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section2">
+            <div class="section_box">
+                <div class="slide_arrow"></div>
+                <%if(lang.text('companyEnName') == 'TigerWit'){%>
+                    <img src="/images/bd_t41/logo.png" alt="" class="redbag_logo">
+                <%}%>
+                <%if(lang.text('companyEnName') == 'pandafx'){%>
+                    <img src="/images/basic_logo_panda_white.png" alt="" class="redbag_logo panda">
+                <%}%>
+                <div class="section2_title">
+                    选择<%=lang.text("companyEnName")%> <br>
+                    安心解决交易“三大难题”
+                </div>
+                <ul class="section2_lst">
+                    <li class="bd_t41__lst_item1">
+                        <!-- <p class="tit">零基础轻松入门</p>
+                        <p class="tip">小白一键复制高手跟单</p> -->
+                    </li>
+                    <li class="bd_t41__lst_item2">
+                        <!-- <p class="tit">门槛低以小见大</p>
+                        <p class="tip">最低5美金交易&最高200倍杠杆</p> -->
+                    </li>
+                    <li class="bd_t41__lst_item3">
+                        <!-- <p class="tit">行情多机会不断</p>
+                        <p class="tip">24小时全球双向N次交易</p> -->
+                    </li>
+                </ul>
+                <p data-action="registerNow" class="registerNow center">点我领红包</p>
+            </div>
+        </div>
+
+        <div class="section section3 clearfix">
+            <div class="section_box">
+                <div class="slide_arrow"></div>
+                <%if(lang.text('companyEnName') == 'TigerWit'){%>
+                    <img src="/images/bd_t41/logo.png" alt="" class="redbag_logo">
+                <%}%>
+                <%if(lang.text('companyEnName') == 'pandafx'){%>
+                    <img src="/images/basic_logo_panda_white.png" alt="" class="redbag_logo panda">
+                <%}%>
+
+                <div class="layer_contentBox" id="layer_contentRule1">
+                    <div class="layer_bdt41">
+                        <div class="rules">
+                            <p class="rule_title">200美金红包规则</p>
+                            <p>首次入金后完成5手交易(不含美元/人民币、CFD产品)，即可兑换红包(金额10美金)，每个用户仅可领取一次(注册后14天内兑现); </p>
+                            <br>
+                            <p>首次入金后完成15手交易(不含美元/人民币、CFD产品)，即可兑换红包(金额20美金)，每个用户仅可领取一次(注册后30天内兑现);</p>
+                            <br>
+                            <p>首次入金后完成30手交易(不含美元/人民币、CFD产品)，即可兑换红包(金额50美金)，每个用户仅可领取一次(注册后60天内兑现);</p>
+                            <br>
+                            <p>首次入金后完成50手交易(不含美元/人民币、CFD产品)，即可兑换红包(金额120美金)，每个用户仅可领取一次(注册后60天内兑现)。</p>
+                        </div>
+                        <p class="rule_close"><i class="fa fa-times" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+                <div class="layer_contentBox" id="layer_contentRule2">
+                    <div class="layer_bdt41">
+                        <div class="rules">
+                            <p class="rule_title">800美金红包规则</p>
+                            <p>首次入金后5日内累计入金≥1000美金，累计完成100手交易(不含美元/人民币、CFD产品)即可兑现红包(金额100美金)(每位用户仅可领取一次，注册后90日内兑现)；</p>
+                            <br>
+                            <p>首次入金后5日内累计入金≥5000美金，累计完成150手交易(不含美元/人民币、CFD产品)即可兑现红包(金额200美金)(每位用户仅可领取一次，注册后90日内兑现)；</p>
+                            <br>
+                            <p>首次入金后5日内累计入金≥10000美金，累计完成200手交易(不含美元/人民币、CFD产品)即可兑现红包(金额500美金)(每位用户仅可领取一次，注册后180日内兑现)。</p>
+                        </div>
+                        <p class="rule_close"><i class="fa fa-times" aria-hidden="true"></i></p>
+                    </div>
+                </div>
+                
+                <div class="section3_details">
+                    <div class="section3_title">
+                        行情热浪来袭，赠金助你外汇交易 <br>
+                        新用户注册送1000美金红包
+                    </div>
+                    <div class="section3_lst">
+                        <div class="pic"><img src="/images/bd_t41/h5_comm_200.png"></div>
+                        <div class="rule_btn">
+                            <span data-action="rule1" class="">200美金兑换规则</span>
+                        </div>
+                    </div>
+                    <div class="section3_plus">
+                        +
+                    </div>
+                    <div class="section3_lst lst2">
+                        <div class="pic"><img src="/images/bd_t41/h5_comm_800.png"></div>
+                        <div class="rule_btn">
+                            <span data-action="rule2" class="">800美金兑换规则</span>
+                        </div>
+                    </div>
+                    <p data-action="registerNow" class="registerNow">点我领红包</p> 
+                </div>    
+            </div>              
+        </div>
+
+        <div class="section section4 clearfix">
+            <div class="section_box">
+                <%if(lang.text('companyEnName') == 'TigerWit'){%>
+                    <img src="/images/bd_t41/logo.png" alt="" class="redbag_logo">
+                <%}%>
+                <%if(lang.text('companyEnName') == 'pandafx'){%>
+                    <img src="/images/basic_logo_panda_white.png" alt="" class="redbag_logo">
+                <%}%>
+                <div class="section4_title">
+                    提“钱”出发，惊喜从注册开始
+                </div>
+                <div class="t41_regbox">
+                    <div class="submit_form_box">
+                        <div class="form-control-wrapper">
+                            <input type="text" class="form-control t38" name="telephone" id="telephone" placeholder="+86">
+                        </div>
+                        <div class="form-control-wrapper relative">
+                            <input type="number" class="form-control t38" id="verify_code" placeholder="验证码">
+                            <p class="verify_code_btn_wrapper">
+                                <span class="verify_code_btn" id="verify_code_btn">验证码</span>
+                            </p>
+                        </div>
+                        <div class="btn-wrapper">
+                            <span id="submit_form" class="registerNow">点我领红包</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section4_client">
+                    <p>如有任何疑问</p>
+                    <p>请拨打客服电话：<a class="" href="tel:<%= lang.text('telephone')%>"><%= lang.text('telephone')%></a></p>
+                </div>
+
+                <div class="section4_risk">
+                    风险警示：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。
+                    <%= lang.text("companyEnName")%>交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+                </div>
+                <%if(lang.text('companyEnName') == 'TigerWit'){%>
+                    <p class="section4_ltd">Tiger Financial Technology PTY. Ltd.版权所有</p>  
+                <%}%>
+            </div>
+                   
+        </div>
+    </div>
+</div>
+</body>
+<% include /common/vendor/h5.js.html %>
+<% include /common/component/agment_mdl.html %>
+<!-- build:js(client) /scripts/m_t41.js -->
+<script src="/scripts/bd/common/wx_share_config.js"></script>
+<script src="/scripts/bd/t41/m_t41.js"></script>
+<script src="/scripts/account/h5_register.js"></script>
+<!-- endbuild -->
+
+<!-- 推广脚本footer -->
+<%- include('/common/statistic/all.html') %>
+</html>

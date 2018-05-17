@@ -43,7 +43,7 @@
         /*******************global 事件系统************************/
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
             $scope.toState = toState
-            console.log('toState', toState)
+            // console.log('toState', toState)
             account.checkLogined().then(function (logined) {
                 $scope.userstatus.logined = logined;
                 if (logined) {
@@ -66,7 +66,7 @@
             });
         });
         $scope.$on('refresh_personal_cookies_info', function (event, is_login, is_register) {
-            console.info('refresh_personal_cookies_info');
+            // console.info('refresh_personal_cookies_info');
             if (is_login) {
                 $rootScope.personalCookiesInfo = {
                     userCode: $cookies["user_code"],
@@ -101,11 +101,12 @@
             openDredgeMdl(resolve)
         })
         $scope.$on('global.getAuthStatus', function (e, resolve) {
+            console.log(resolve.ctrlName);
             /**
              * resolve { ctrlName: 'globalController'[, callback]} 
              */
             if (resolve && resolve.ctrlName) {
-                console.log('global.getAuthStatus called by ' + resolve.ctrlName)
+                // console.log('global.getAuthStatus called by ' + resolve.ctrlName)
                 getAuthStatus({
                     callback:resolve.callback
                 })
@@ -118,7 +119,7 @@
              * resolve { ctrlName: 'globalController'[, callback]} 
              */
             if (resolve && resolve.ctrlName) {
-                console.log('global.checkAuthenFlow called by ' + resolve.ctrlName)
+                // console.log('global.checkAuthenFlow called by ' + resolve.ctrlName)
                 if (checkAuthenFlow($scope.dredged_type, resolve.ctrlName)) {
                     resolve.callback()
                 }
@@ -128,7 +129,7 @@
         })
         $scope.$on('global.getUnReadMsgLength', function(e, resolve){
             if (resolve && resolve.ctrlName) {
-                console.log('global.getUnReadMsgLength called by ' + resolve.ctrlName)
+                // console.log('global.getUnReadMsgLength called by ' + resolve.ctrlName)
                 getUnreadLength(function(){
                     resolve.callback && resolve.callback()
                     $scope.$broadcast('global.getUnReadMsgLength.done', $scope.personal.unreadMsg)
@@ -315,7 +316,7 @@
             return account.getAuthStatus({
                 is_live: para.is_live
             }).then(function (data) {
-                console.log('global.getAuthStatus', data);
+                // console.log('global.getAuthStatus', data);
                 if (data.is_succ) {
                     // 开户类型(体验金、真实)
                     // var verify_status = 2

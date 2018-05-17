@@ -1,34 +1,8 @@
-<% if (pageInfo.id === 'stp') { %>
-    <% var title = 'STP交易模式' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'team') { %>
-    <% var title = '精英团队' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'report') { %>
-    <% var title = '媒体报道' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'control') { %>
-    <% var title = '合规和监管' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'tigerwit') { %>
-    <% var title = '关于我们' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if(pageInfo.id === 'partner'){ %>
-    <% var title = '合作伙伴' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } %>
 <!doctype html>
 <html>
     <head>
         <% include /common/meta/web.html %>
     
-        <title><%=lang.text("companyZhName")%>｜<%= title %></title>
         <% include /common/vendor/web.css.html %>
         <!-- build:css(.tmp) /styles/web.css -->
         <link rel="stylesheet" href="/styles/web.css">

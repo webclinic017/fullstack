@@ -12,7 +12,8 @@ var querystring = require('querystring');
 var masterApi = require('./api/master');
 var report_sites = require('./report_site');
 var depositBankList = require('./deposit_bank_list');
-var ACCESS_ORIGIN2 = require('./get_env_config').envConfig.access_origin2 || '/api';
+var depositEvidenceList = require('./deposit_evidence_list');
+var ACCESS_ORIGIN2 = require('./get_env_config').envConfig.access_origin2 || 'https://a.tigerwit.com';
 var setCompanyCookie,
     envConfig,
     URL_PATH,
@@ -88,6 +89,11 @@ module.exports = function (app) {
         res.render('space', extendPublic({}, req));
     });
 
+    app.route('/third_usage').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('web/third_usage', extendPublic({}, req));
+    });
+
     // 熊猫外汇页面路径
     app.route('/panda').get(function (req, res) {
         res.redirect('https://ibonline.tigerwit.com');
@@ -107,8 +113,9 @@ module.exports = function (app) {
     });
     app.use('/', function(req, res, next){
         setEnvCf(req, res);
-        var allowPaths = ['/payment/login', '/payment/asset', '/waiting']
-        if(req.hostname.indexOf('ibonline') != -1) {
+        var allowPaths = ['/payment/login', '/payment/asset', '/payment/evidence', '/third/cse_usage', '/waiting', '/napi']
+        if(req.hostname.indexOf('dp') != -1) {
+        // if(req.hostname.indexOf('w.dev.tigerwit.com') != -1) {
             if(allowPaths.indexOf(req.originalUrl) != -1){
                 var pageId = ''
                 if(req.originalUrl == allowPaths[0]){
@@ -116,7 +123,14 @@ module.exports = function (app) {
                 }
                 else if(req.originalUrl == allowPaths[1]){
                     pageId = 'asset'
-                } else if(req.originalUrl == allowPaths[2]){
+                } 
+                else if(req.originalUrl == allowPaths[3]){
+                    pageId = 'cse_usage'
+                } 
+                else if(req.originalUrl == allowPaths[2]){
+                    pageId = 'evidence'
+                } 
+                else if(req.originalUrl == allowPaths[4]){
                     res.render('waiting', extendPublic({}, req));
                     return
                 }
@@ -126,6 +140,8 @@ module.exports = function (app) {
                     }
                 }, req));
                 return
+            } else if(req.originalUrl.indexOf(allowPaths[5]) != -1){
+                next()
             } else {
                 res.redirect('/payment/login');
                 return
@@ -272,29 +288,6 @@ module.exports = function (app) {
         res.render("m_vue/regular/how", extendPublic({}, req));
     });
 
-    /*出入金流程*/
-    app.route('/m/asset/:subpage(withdraw|cardlist|addcard1|addcard2|succ|fail)').get(function (req, res) {
-        var subpage = req.params.subpage || 'withdraw';
-        var pageInfo = {
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('m_vue/m_asset.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
-    /*出入金流程 新版*/
-    app.route('/m/asset_new/:subpage(withdraw|cardlist|addcard1|addcard2|succ|fail)').get(function (req, res) {
-        var subpage = req.params.subpage || 'withdraw';
-        var pageInfo = {
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('m_vue/m_asset_new.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
-
     /*邀请好友*/
     app.route('/m/invite01').get(function (req, res) {
         setEnvCf(req, res);
@@ -342,6 +335,11 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('m_vue/m_deposit_succ', extendPublic({}, req));
     });
+    // H5 入金凭证 （老虎和三方使用）
+    app.route('/m/deposit/evidence').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('m_vue/m_deposit_evidence', extendPublic({}, req));
+    });
 
     // H5 空白页
     app.route('/m/blank').get(function (req, res) {
@@ -370,6 +368,11 @@ module.exports = function (app) {
         });
     });
 
+    // WEB 入金凭证
+    app.route('/web/deposit/evidence').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('web/evidence', extendPublic({}, req));
+    });
 
     // 复制交易
     app.route('/web/copy/:subpage(rules|select|become|comment|calendar)').get(function (req, res) {
@@ -566,36 +569,23 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t40/h5.html', extendPublic({}, req))
+                res.render('bd/t41/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t40/web.html', extendPublic({}, req));
+                res.render('bd/t41/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
         }
     });
-
-    //红包活动
-    // app.route('/bd/t35').get(function (req, res) {
-    //     setEnvCf(req, res);
-    //     if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
-    //         if (isMobile(req)) {
-    //             res.render('bd/t38/h5.html', extendPublic({}, req))
-    //         } else {
-    //             res.render('bd/t38/web.html', extendPublic({}, req));
-    //         }
-    //     } else {
-    //         res.render('404.html', extendPublic({}, req));
-    //     }
-    // });
+    
     // 11月份活动
     app.route('/bd/t35').get(function (req, res) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t40/h5.html', extendPublic({}, req))
+                res.render('bd/t41/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t40/web.html', extendPublic({}, req));
+                res.render('bd/t41/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -794,6 +784,21 @@ module.exports = function (app) {
                 res.render('bd/recruit/h5_'+subpage+'.html', extendPublic({}, req))
             } else {
                 res.render('bd/recruit/h5_'+subpage+'.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+    // 刮奖
+    app.route('/bd/lottery').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('bd/lottery/lottery_h5.html', extendPublic({
+                    reward_lst: require('./lottery_reward_lst')
+                }, req))
+            } else {
+                res.render('bd/lottery/lottery_web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -1061,9 +1066,13 @@ module.exports = function (app) {
                 // console.log(data, endPg);
             }
         }
-         // 媒体报道
-         if (action == "get_deposit_bank") {
+        // 银行列表
+        if (action == "get_deposit_bank") {
             data = depositBankList;
+        }
+        // 大额入金示例
+        if (action == "get_deposit_evidence") {
+            data = depositEvidenceList;
         }
         if (action == 'get_product') {
             var type = req.query.product_type;

@@ -4,13 +4,12 @@
 
     function allLoaded() {
         $(function () {
-
             if (wx && isTigerCo()) {
                 wxShareConfig({
-                    title: '外汇超级行情来袭，老虎外汇送你1000美金给你',
-                    subTitle: '外汇超级行情来袭，老虎外汇送你1000美金给你',
+                    title: '外汇超级行情来袭，TigerWit送你1000美金给你',
+                    subTitle: '外汇超级行情来袭，TigerWit送你1000美金给你',
                     shareLink: window.location.href,
-                    desc: '外汇投资选老虎，人人都是投资高手，一键跟单简单粗暴，老虎高手带你轻松赚钱！！',
+                    desc: '外汇投资选TigerWit，人人都是投资高手，一键跟单简单粗暴，TigerWit高手带你轻松赚钱！！',
                     img: window.location.origin + '/activity/logo.png',
                     trackPage: window.location.pathname.replace(/\//gi, ''),
                     debug: false
@@ -78,7 +77,6 @@
                 navigation: true,
                 navigationColor: "#fbd71f",
                 navigationPosition: "left",
-                //sectionsColor: ['#ccc', '#121212', '#fff', '#000', '#e0e0e0'],
                 verticalCentered: false,
                 afterRender: function () {
                     $('.matters_btn').delay(700).fadeIn(800);
@@ -167,10 +165,4 @@
             });
         })
     }
-
-    $(document).ready(function () {
-        $('.open_tiger').click(function (e) {
-            console.log(e.target);
-        });
-    });
 }());

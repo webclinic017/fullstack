@@ -343,7 +343,7 @@ var oil = {
     zh: [{
         "name_en": "XNGUSD",
         "name_zh": "天然气",
-        "volum": "百万英国热量单位",
+        "volum": "10000立方米/手",
         "unit": "美元",
         "min_volum": "0.01",
         "max_volum": "20",
@@ -380,7 +380,7 @@ var oil = {
     en: [{
         "name_en": "XNGUSD",
         "name_zh": "天然气",
-        "volum": "MBTU",
+        "volum": "10000㎥/lot",
         "unit": "USD",
         "min_volum": "0.01",
         "max_volum": "20",

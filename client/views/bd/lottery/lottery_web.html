@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" class="bd_greenhand_html">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%=lang.text("companyZhName")%>｜交易刮刮乐</title>
+        <% include /common/vendor/web.css.html %>
+        <!-- build:css(.tmp) /styles/web.css -->
+        <link rel="stylesheet" href="/styles/web.css">
+        <!-- endbuild -->
+        <% include /common/statistic/main.html %>
+        <% include /common/vendor/web.js.html %>
+</head>
+
+<body ng-app="fullstackApp" class="bd_greenhand">
+    <div ng-controller="GlobalController">
+        <%if(lang.isCompany('tigerwit')){%>
+            <% include /common/nav/web.header.html %>
+        <%}%>
+        <div class="bd_lottery_layout clearfix <%= lang.text("companyEnName")%>">
+            <div class="bd_lottery">
+                <div class="container">
+                    <div class="bd_lottery__date">
+                      活动时间：
+                    <%if(lang.isCompany('tigerwit')){%>
+                        2018.4.25 - 2018.5.25
+                    <%}%>
+                    <% if (lang.isCompany('pandafx')) {%>
+                        2018.05.15 - 2018.06.15
+                    <%}%>
+                    </div>
+                    <div class="bd_lottery__rule-tit">
+                      <img src="/white_label/lottery/web_rule_tit.png" alt="">
+                    </div>
+                    <div class="bd_lottery__rule-details">
+                      <p>1、活动期间每日实盘开仓用户可参加一次刮奖，分享活动每日可增加一次刮奖机会；</p>
+                      <p>2、本活动奖品为随机美元现金，最高为99美元现金；</p>
+                      <p>3、本活动抽中的现金奖品（美元）将直接存入“零钱包”；</p>
+                      <p>4、如满足刮奖条件却未在活动期间内刮奖的用户，视为放弃本次刮奖机会；</p>
+                      <p>5、本活动参与用户不得滥用活动权利，如AB仓对冲操作、外挂操作软件或其他经纪商进行对冲；</p>
+                      <p>6、本活动仅适用于外汇、贵金属以及能源类产品，美元/人民币和CFD（指数）类产品的交易手数不计入统计范围；</p>
+                      <p>7、本活动刮奖环节仅在<%= lang.text('companyZhName')%> APP内操作；</p>
+                      <p>8、本活动最终解释权归<%= lang.text('companyZhName')%>平台所有，如有疑问请咨询在线客服或拨打 <%= lang.text('telephone')%>。</p>
+                    </div>
+                    <div class="bd_lottery__code-tit">
+                      <img src="/white_label/lottery/web_code_tit.png" alt="">
+                    </div>
+                    <div class="bd_lottery__code-tip">
+                        <%if(lang.isCompany('tigerwit')){%>
+                            <% if (lang.isDemo()) {%>
+                                <img src="/white_label/lottery/lottery_demo.png">
+                            <%} else {%>
+                                <img src="/white_label/lottery/lottery_www.png">
+                            <%}%>
+                        <%}%>
+                        <% if (lang.isCompany('pandafx')) {%>
+                            <img src="/white_label/lottery/lottery_pandafx.png">
+                        <%}%>
+                    </div>
+                    <div class="bd_lottery__client">
+                      详情拨打客服：<%= lang.text('telephone')%>
+                    </div>
+                    <div class="bd_lottery__footer">
+                        <p class="tit">风险提示</p>
+                        <p>市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。 <%= lang.text('companyZhName')%>交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%if(lang.isCompany('tigerwit')){%>
+        <% include /common/nav/web.footer.html %>
+    <%}%>
+    <%- include('/common/statistic/_all.html') %>
+</body>
+<!-- build:js(client) /scripts/bd_lottery.js -->
+<script src="/scripts/common/config.service.js"></script>
+<script src="/scripts/common/account.service.js"></script>
+<script src="/scripts/common/authorization.service.js"></script>
+<script src="/scripts/common/navbar.directive.js"></script>
+<script src="/scripts/common/dropdown.directive.js"></script>
+<script src="/scripts/common/global.controller.js"></script>
+<script src="/scripts/common/loading_img.directive.js"></script>
+
+<script src="/scripts/common/pagination.directive.js"></script>
+<script src="/scripts/common/duration.filter.js"></script>
+
+<script src="/scripts/common/symbol_mod.filter.js"></script>
+<script src="/scripts/common/trader.service.js"></script>
+<script src="/scripts/common/lang.service.js"></script>
+<script src="/scripts/common/lang_data.service.js"></script>
+<script src="/scripts/common/redbag.service.js"></script>
+<script src="/scripts/plugins/layer.js"></script>
+<!-- endbuild -->
+</html>

@@ -333,14 +333,34 @@ $ratio: 1.165;
         border-right: 1px solid $trader-gray;
         text-align: center;
         margin-top: ratio(45);
+        position: relative;
         > span {
           display: block;
+
+          i {
+            width: 16px;
+            height: 16px;
+            border: 1px solid #188afa;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 16px;
+            color: #188afa;
+            margin-left: 4px;
+          }
         }
         > span:nth-child(1) {
           font-size: ratio(22);
         }
         > span:nth-child(2) {
 
+        }
+        .alert {
+          display: none;
+        }
+        &:hover {
+          .alert {
+            display: block;
+          }
         }
       }
       > li:nth-child(4n) {

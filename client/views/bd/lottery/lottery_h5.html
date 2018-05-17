@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <% include /common/meta/h5.html %>
+    <title>
+        <%= lang.text('companyZhName')%>
+    </title>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<body class="h5_lottery">
+    <!-- 引入组件 -->
+    <% include /common/component/h5.share_modal.html %>
+    <div class="h5_lottery_layout">
+        <div class="h5_lottery__focus">
+            <img src="/white_label/lottery/h5_focus.png" alt="">
+        </div>
+        <div class="h5_lottery__date">
+        <%if(lang.isCompany('tigerwit')){%>
+            2018.4.25 - 2018.5.25
+        <%}%>
+        <% if (lang.isCompany('pandafx')) {%>
+            2018.05.15 - 2018.06.15
+        <%}%>
+        </div>
+        <div class="h5_lottery__btn">
+            <span id="lottery_rule">活动规则</span>
+        </div>
+        <div class="h5_lottery__notice" style="opacity: 0;">
+            <span>&nbsp;</span>
+        </div>
+        <div class="h5_lottery__award">
+            <p class="bar">
+                <img src="/white_label/lottery/h5_bar.png" alt="">
+            </p>
+            <div class="award_box">
+                <h4 class="tip" id="lottery_status_tip"></h4>
+                <div class="lottery_box">
+                    <div class="h5_lottery__init" id="lottery_init"></div>
+                    <canvas class="h5_lottery__cover" id="lottery_cover"></canvas>
+                    <div class="h5_lottery__result" id="lottery_result">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="h5_lottery__btn" id="lottery_share_wrapper">
+            <span id="lottery_share">分享</span>
+        </div>
+        <div class="h5_lottery__list">
+            <h4><img src="/white_label/lottery/h5_list_tit.png" alt=""></h4>
+            <div class="details">
+                <%for(var i=0;i<reward_lst.length;i++) {%>
+                    <p>恭喜 用户<%= reward_lst[i].user%>获得<%= reward_lst[i].award%></p>    
+                <%}%>
+            </div>
+        </div>
+        <div class="h5_lottery__risk">
+            <p class="tit">风险提示</p>
+            <p>市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。 <%= lang.text('companyZhName')%>交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。</p>
+        </div>
+
+        <div class="" style="display: none;">
+            <div id="m_lottery_layer-rule">
+                <h4>－活动规则－</h4>
+                <p>1、活动期间每日实盘开仓用户可参加一次刮奖；</p>
+                <p>2、本活动奖品为随机美元现金，最高为99美元现金；</p>
+                <p>3、本活动抽中的现金奖品（美元）将直接存入“零钱包”；</p>
+                <p>4、如满足刮奖条件却未在活动期间内刮奖的用户，视为放弃本次刮奖机会；</p>
+                <p>5、本活动参与用户不得滥用活动权利，如AB仓对冲操作、外挂操作软件或其他经纪商进行对冲；</p>
+                <p>6、本活动仅适用于外汇、贵金属以及能源类产品，美元/人民币和CFD（指数）类产品的交易手数不计入统计范围；</p>
+                <p>7、本活动刮奖环节仅在<%= lang.text('companyZhName')%> APP内操作；</p>
+                <p>8、本活动最终解释权归<%= lang.text('companyZhName')%>平台所有，如有疑问请咨询在线客服或拨打 <%= lang.text('telephone')%>。</p>
+            </div>
+        </div>
+    </div>
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_lottery.js -->
+<script src="/scripts/bd/common/wx_share_config.js"></script>
+<script src="/scripts/plugins/lottery.js"></script>
+<script src="/scripts/bd/common/open_app.js"></script>
+<script src="/scripts/bd/lottery/lottery_h5.js"></script>
+<!-- endbuild -->
+
+<!-- 推广脚本footer -->
+<%- include('/common/statistic/all.html') %>
+</html>

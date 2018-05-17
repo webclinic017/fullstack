@@ -1,0 +1,178 @@
+.bd_t39_layer {
+    .bd_t39_detail_con__text {
+        background: -webkit-linear-gradient(top,#3ae3ca, #09a7d1) !important;
+        background: -moz-linear-gradient(top,#3ae3ca, #09a7d1) !important;
+        background: -o-linear-gradient(top,#3ae3ca, #09a7d1) !important;
+        background: linear-gradient(top,#3ae3ca, #09a7d1) !important;
+        border-radius: 10px;
+    }
+}
+.bd_t39.bd_t41 {
+	background: url("/images/bd_t41/web_bg.png") no-repeat;
+    background-size: auto 100%; // height: 5637px;
+    height: 2560px;
+    background-position: center top;
+    position: relative;
+    min-width: 1334px;
+    color: #fff;
+    .verify_code_btn {
+        color: #222;
+    }
+    .bd_t40__detail_wrapper {
+	    padding-left: 10px;
+        padding-top: 645px;
+
+    	.bd_t40__detail {
+    		width: 220px;
+    		height: 60px;
+    		background: url("/images/bd_t41/btn_bg.png") no-repeat;
+    		background-size: 100% 100%;
+    		color: #fff;
+    		text-align: center;
+    		line-height: 60px;
+    		font-size: 22px;
+    		display: block;
+    		cursor: pointer;
+    	}
+    }
+    .bd_t39__reg {
+    	top: 285px;
+    }
+    .bd_t40__btn {
+    	width: 130px;
+		height: 32px;
+		background: url("/images/bd_t41/btn_bg.png") no-repeat;
+		background-size: 100% 100%;
+		color: #fff;
+		text-align: center;
+		line-height: 32px;
+		font-size: 14px;
+		display: block;
+		cursor: pointer;
+		margin: 0 auto;
+    }
+    .bd_t41__title {
+        padding-top: 110px;
+        font-size: 40px;
+        color: #fff;
+        text-align: center;
+        .sub_tit {
+            font-size: 30px;
+            margin-top: 5px;
+        }
+    }
+    .bd_t41__lst {
+        margin-top: 60px;
+        li {
+            float: left;
+            width: 325px;
+            height: 185px;
+            padding: 20px;
+            text-align: center;
+            background-size: 100% 100%;
+            .tit {
+                font-size: 35px;
+                color: #fff;
+                font-weight: 600;
+            }
+            .tip {
+                font-size: 24px;
+                color: #fff;
+                font-weight: 200;
+                padding-top: 30px;
+            }
+            &.bd_t41__lst_item1 {
+                background: url("/images/bd_t41/list1_bg.png") no-repeat;
+            }
+            &.bd_t41__lst_item2 {
+                margin: 0 20px;
+                background: url("/images/bd_t41/list2_bg.png") no-repeat;
+            }
+            &.bd_t41__lst_item3 {
+                background: url("/images/bd_t41/list3_bg.png") no-repeat;
+            }
+        }
+    }
+    .bd_t41__btn2_wrapper {
+        padding-top: 48px;
+
+        .bd_t41__btn2 {
+            margin: 0 auto;
+            width: 265px;
+            height: 75px;
+            line-height: 75px;
+            background: url("/images/bd_t41/btn_bg.png") no-repeat;
+            background-size: 100% 100%;
+            color: #fff;
+            text-align: center;
+            font-size: 28px;
+            display: block;
+            cursor: pointer;
+        }
+    }
+    .bd_t40__bag {
+        margin-top: 20px;
+
+        .bag {
+            float: left;
+        }
+        .bag_200, .bag_800 {
+            width: 45%;
+
+            img {
+                height: 340px;
+                vertical-align: top;
+            }
+        }
+        .bag_200 {
+            text-align: right;
+            padding-right: 10px;
+        }
+        .bag_800 {
+            text-align: left;
+            padding-left: 6px;
+        }
+        .bag_plus {
+            text-align: center;
+            width: 100px;
+            height: 340px;
+            line-height: 340px;
+            font-size: 45px;
+            color: #fff;
+        }
+        .rule-1 {
+            margin-top: 20px;
+            text-align: center;
+            .bd_t41_rule-1 {
+                padding-top: 24px;
+                color: #eed783;
+                cursor: pointer;
+                font-size: 20px;
+            }
+        }
+        .rule-2 {
+            margin-top: 20px;
+            text-align: center;
+            .bd_t41_rule-2 {
+                padding-top: 24px;
+                color: #eed783;
+                cursor: pointer;
+                font-size: 20px;
+            }
+        }
+    }
+    .bd_t41__client {
+        text-align: center;
+        font-size: 18px;
+        margin-top: 120px;
+        color: #fff;
+    }
+    .bd_t41__footer {
+        line-height: 28px;
+        padding-top: 100px;
+        color: #fff;
+    }
+    .bd_t31__ltd {
+        color: #fff;
+    }
+}

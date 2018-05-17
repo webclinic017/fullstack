@@ -3,8 +3,8 @@
         // 微信分享配置
         if (wx) {
             wxShareConfig({
-                title: '王者归来，荣耀操盘 老虎外汇送大礼',
-                subTitle: '王者归来，荣耀操盘 老虎外汇再送最高1000元美金红包和电竞专用手柄',
+                title: '王者归来，荣耀操盘 TigerWit送大礼',
+                subTitle: '王者归来，荣耀操盘 TigerWit再送最高1000元美金红包和电竞专用手柄',
                 shareLink: window.location.href,
                 desc: '参与此活动最高1000元美金红包及手机电竞游戏专用手柄',
                 img: window.location.origin + '/activity/logo.png',

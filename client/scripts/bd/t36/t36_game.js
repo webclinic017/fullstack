@@ -74,10 +74,10 @@
     // 微信分享配置
     if (wx) {
         wxShareConfig({
-            title: '【抽奖赢福利】老虎外汇助力CMPT德扑赛事线上抽奖活动',
-            subTitle: '老虎外汇多重礼，700美金砸向你！',
+            title: '【抽奖赢福利】TigerWit助力CMPT德扑赛事线上抽奖活动',
+            subTitle: 'TigerWit多重礼，700美金砸向你！',
             shareLink: window.location.href,
-            desc: '你观赛未猜中冠军依然还有机会，来老虎外汇再试试你的手气！',
+            desc: '你观赛未猜中冠军依然还有机会，来TigerWit再试试你的手气！',
             img: window.location.origin + '/activity/logo.png',
             trackPage: window.location.pathname.replace(/\//gi, ''),
             debug: false
@@ -375,12 +375,12 @@
     function openLayerMsg (config) {
         config      = config || {};
         var tit     = config.title || '温馨提示';
-        var cont    = config.content || '老虎外汇<br>为您准备了一份薄礼';
+        var cont    = config.content || 'TigerWit<br>为您准备了一份薄礼';
         var btnArr  = config.btnArr || ['注册领红包'];
         var yesFunc = config.yesFunc || function () {layer.closeAll();};
         var noFunc  = config.noFunc || function () {ayer.closeAll();};
         layer.open({
-            content: '<i class="close"></i><p class="tit">'+ tit +'</p><p class="cont">'+ cont +'</p><p class="tip">详情咨询老虎外汇400-809-8509</p>',
+            content: '<i class="close"></i><p class="tit">'+ tit +'</p><p class="cont">'+ cont +'</p><p class="tip">详情咨询TigerWit400-809-8509</p>',
             className: "page-msg-layer",
             style: 'height: '+styleCfg.layerContentHeight+'px',
             shadeClose: false,

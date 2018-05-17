@@ -224,7 +224,7 @@
                     views: {
                         'content@space': {
                             templateUrl: '/views/asset/index.html',
-                            controller: ''
+                            controller: 'AssetIndexController'
                         }
                     }
                 })
