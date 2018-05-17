@@ -1,18 +1,7 @@
-<% if (pageInfo.id === 'proxy') { %>
-    <% var title = '代理合作' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'become') {%>
-    <% var title = '成为高手' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } %>
 <!DOCTYPE html>
 <html>
     <head>
         <% include /common/meta/web.html %>
-
-        <title><%=lang.text("companyZhName")%>｜<%= title %></title>
 
         <!-- build:css(.tmp) /styles/web.css -->
         <link rel="stylesheet" href="/styles/web.css">

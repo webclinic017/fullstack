@@ -839,7 +839,7 @@
                 idcard_type: $scope.realnameInfo.id_type.value,
                 real_name: $scope.realnameInfo.realname,
                 gender: $scope.realnameInfo.gender.value,
-                bitrh: $scope.realnameInfo.birthday,
+                birth: $scope.realnameInfo.birthday,
                 is_live: $scope.personal.is_live
             }).then(function (data) {
                 if (!data.is_succ) {

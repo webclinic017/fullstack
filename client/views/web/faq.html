@@ -1,38 +1,7 @@
-<% if (pageInfo.id === 'simulate') { %>
-    <% var title = '开立模拟帐户' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'real') { %>
-    <% var title = '开立帐户' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'wad') { %>
-    <% var title = '出入金' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'type') { %>
-    <% var title = '帐户类型' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'deal') {%>
-    <% var title = '交易' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'platform') {%>
-    <% var title = '平台' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'interest') {%>
-    <% var title = '隔夜利息' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } %>
 <!doctype html>
 <html>
     <head>
         <% include /common/meta/web.html %>
-
-        <title><%=lang.text("companyZhName")%>｜<%= title %></title>
         <!-- build:css(.tmp) /styles/web.css -->
         <link rel="stylesheet" href="/styles/web.css">
         <!-- endbuild -->
