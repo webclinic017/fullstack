@@ -1010,7 +1010,7 @@ module.exports = function (app) {
                     appType = 'pandafx';
                 }
             }
-            var system = req.query.os;
+            var system = req.query.os.toLowerCase();
             var versionNum = req.query.version.replace(/\./g, "");
             var versinInfo = require('./app_ctrl.config').getAppInfo(appType)[appLanguage];
             var currentVersionNum = versinInfo[system].app_info.version_name.replace(/[v\.]/ig, "");
