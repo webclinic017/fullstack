@@ -8,7 +8,7 @@ module.exports = {
         "en": "Q: How to open an account?"
     },
     "faqAccount2": {
-        "zh": "A：在TigerWit老虎外汇注册成功后，点击交易，系统会提醒您选择开立体验金账户或真实交易账户，按照流程完善资料后即可开立对应账户。",
+        "zh": "A：在TigerWit注册成功后，点击交易，系统会提醒您选择开立体验金账户或真实交易账户，按照流程完善资料后即可开立对应账户。",
         "en": "A: Register successfully at TigerWit, the system will remind you to choose to open an Experience Accountor Real Account before you transaction, after completing the relevant process can open an account."
     },
     "faqAccount3": {
@@ -16,15 +16,15 @@ module.exports = {
         "en": "Q: Can I open two or more accounts? Can I use different currencies to open accounts?"
     },
     "faqAccount4": {
-        "zh": "A：TigerWit老虎外汇允许同一张身份证开设2个或2个以上账户，但暂不支持同一个手机号绑定多个账户，如需添加更多账户，请联系您的客户经理。 ",
+        "zh": "A：TigerWit允许同一张身份证开设2个或2个以上账户，但暂不支持同一个手机号绑定多个账户，如需添加更多账户，请联系您的客户经理。 ",
         "en": "A: TigerWit allows two or more accounts on the same ID, but does not support the same phone binding multipleaccounts, if you want to add more accounts, please contact your account manager."
     },
     "faqAccount4_1": {
-        "zh": "TigerWit老虎外汇暂不支持不同货币，交易以美元执行。",
+        "zh": "TigerWit暂不支持不同货币，交易以美元执行。",
         "en": "TigerWit does not support different currencies and trades are executed in USD at this application."
     },
     "faqAccount4_1_uk": {
-        "zh": "TigerWit老虎外汇暂不支持不同货币，在本应用中交易以英镑执行。",
+        "zh": "TigerWit暂不支持不同货币，在本应用中交易以英镑执行。",
         "en": "TigerWit does not support different currencies and trades are executed in GBP at this application."
     },
     "faqAccount5": {
@@ -112,7 +112,7 @@ module.exports = {
         "en": "Q: How many trading products?"
     },
     "faqTrade2": {
-        "zh": "A：TigerWit老虎外汇向客户提供20多种外汇交易品种、2种贵金属（黄金、白银）、原油和天然气以及多种CFD股指差价合约。",
+        "zh": "A：TigerWit向客户提供20多种外汇交易品种、2种贵金属（黄金、白银）、原油和天然气以及多种CFD股指差价合约。",
         "en": "A: TigerWit offers more than 20 varieties of foreign exchange, precious metals (gold, silver), crude oil and natural gas, as well as a variety of index and CFD."
     },
     "faqTrade3": {
@@ -136,7 +136,7 @@ module.exports = {
         "en": "Q: How much leverages?"
     },
     "faqTrade8": {
-        "zh": "A：对于外汇和贵金属，TigerWit老虎外汇向客户同时提供3种杠杆， 50倍、100倍和200倍。",
+        "zh": "A：对于外汇和贵金属，TigerWit向客户同时提供3种杠杆， 50倍、100倍和200倍。",
         "en": "A: Fx, Precious metals: TigerWit offers 3 kinds of leverage, 50 leverage, 100 leverage, 200 leverage.    "
     },
     "faqTrade9": {

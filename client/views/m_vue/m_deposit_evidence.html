@@ -25,7 +25,9 @@
           <i class="fa fa-angle-up"></i>
         </div>
         <div class="m_evidence__item-content">
+          <$if (data[i].sub_title) {$>
             <div class="font-info"><$= data[i].sub_title$></div>
+          <$}$>
           <$for(var j=0;j<data[i].content.length;j++){$>
               <$if (data[i].content[j].title) {$>
                 <div class="sub-title">

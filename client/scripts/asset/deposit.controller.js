@@ -246,21 +246,11 @@
                                 });
                             } else if ($scope.deposit.type === 'cseWallet') {
                                 $scope.isLoading = false;
-                                $layer({
-                                    title: '系统提示',
-                                    // msgClass: 'font-danger',
-                                    size: 'sm',
-                                    btnsClass: 'text-right',
-                                    msg: '是否有CSE Wallet帐号？',
-                                    btns: {
-                                        '是': function () {
-                                            submitDeposit()
-                                        },
-                                        '否': function () {
-                                            window.open("https://www.csepay.com/zn/")
-                                        },
-                                    }
-                                })
+                                openDepositRuleMdl({
+                                    type: 'cseMessage',
+                                    tit: '系统提示',
+                                    callback: submitDeposit
+                                });
                             } else {
                                 submitDeposit();
                             }
@@ -383,18 +373,21 @@
             });
         }
 
-        function openDepositRuleMdl(type) {
+        function openDepositRuleMdl(params) {
             $modal.open({
                 templateUrl: '/views/asset/deposit_modal.html',
                 size: 'md',
                 backdrop: 'static',
                 controller: function ($scope, $modalInstance, $state) {
-                    $scope.type = type;
+                    $scope.type = params.type;
                     $scope.msgInfo = {
-                        msgTitle: '网银入金规则'
+                        msgTitle: params.tit || '提示'
                     };
+                    $scope.callback = params.callback || null;
                     $scope.closeModal = closeModal;
-
+                    $scope.toCse = function () {
+                        window.open("https://www.csepay.com/zn/");
+                    };
                     function closeModal() {
                         $modalInstance.dismiss();
                     }

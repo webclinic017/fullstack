@@ -99,12 +99,11 @@
                     };
                     $scope.withdrawNotice = data.data.notice;
                     $scope.maxAmountInvest = data.data.amount < 0 ? 0 : data.data.amount;
-                    $scope.withdraw.cseStatus = data.data.cse_status;
                     if ($scope.withdraw.type === 'invest') {
                         $scope.withdraw.maxAmount = $scope.maxAmountInvest;
                     }
                 }
-
+                $scope.withdraw.cseStatus = data.data.cse_status;
             } else {
                 $scope.message = {
                     is_succ: false,
