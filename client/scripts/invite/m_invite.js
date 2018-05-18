@@ -135,11 +135,12 @@
     }
 
     function nativeShare(type) {
+        var u = getCoName() === 'tigerwit' ? "https://bd.tigerwitfx.com" : window.location.origin;
         var callConfig = {
             type: type,
             title: lang.text('invite.share2'),
             description: lang.text('invite.share3') + (lang.curLang('zh') ? coMap[getCoName()] : '') + lang.text('invite.share1'),
-            url: 'https://bd.tigerwitfx.com/bd/t35',
+            url: u + "/m/invite01?user_code=" + ($.cookie("user_code") || ''),
             // url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || ''),
             imgUrl: window.location.origin + "/napi?action=get_share_img&user_code=" + ($.cookie("user_code") || '') + ".png",
         };
