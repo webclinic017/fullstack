@@ -107,7 +107,7 @@ $(document).ready(function () {
     }
     // setTimeout(function () {
     //     layer.closeAll();
-    //     getKycList();
+    //     // getKycList();
     //     step = 0;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
