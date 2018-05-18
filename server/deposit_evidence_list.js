@@ -1,5 +1,23 @@
 module.exports = [
   {
+    title: "第三方转账（CSE Wallet）",
+    sub_title: "注意：CSE Wallet入金凭证需上传两张",
+    content: [
+      {
+        title: null,
+        tip: [
+          "Step1：登录CSE Wallet官网",
+          "Step2：点击“转出记录”> 明细 > 找到充值记录",
+          "Step3： 截取对应的充值记录，截图内需包含持卡人姓名、银行账号、充值金额等内容。"
+        ],
+        pic: [
+          "/white_label/deposit/cse-1.jpg",
+          "/white_label/deposit/cse-2.jpg"
+        ]
+      }
+    ]
+  },
+  {
     title: "工商银行",
     sub_title: null,
     content: [
@@ -10,7 +28,7 @@ module.exports = [
           "二、手机银行：登陆后，请选择“最爱 > 账户管理 > 电子回单 > 查询电子回单”功能查询。"
         ],
         pic: [
-          "/white_label/deposit/icbc-1.jpg"
+          "/white_label/deposit/icbc-1.png"
         ]
       }
     ]
