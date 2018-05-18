@@ -139,7 +139,8 @@
             type: type,
             title: lang.text('invite.share2'),
             description: lang.text('invite.share3') + (lang.curLang('zh') ? coMap[getCoName()] : '') + lang.text('invite.share1'),
-            url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || ''),
+            url: 'https://bd.tigerwitfx.com/bd/t35',
+            // url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || ''),
             imgUrl: window.location.origin + "/napi?action=get_share_img&user_code=" + ($.cookie("user_code") || '') + ".png",
         };
         if (!isInTiger()) {
