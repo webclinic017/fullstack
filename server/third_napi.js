@@ -3,7 +3,7 @@ module.exports = function () {
     var hostname = req.hostname;
     var urlPath = hostname;
     // console.log(hostname);
-    if (hostname.indexOf('h5agent') !== -1) {
+    if (hostname.indexOf('h5dev.open.tigerwit.com') !== -1 || hostname.indexOf('h5.open.tigerwit.com') !== -1) {
       urlPath = 'https://' + hostname;
     }
 
