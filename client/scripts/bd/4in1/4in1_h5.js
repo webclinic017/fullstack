@@ -6,10 +6,10 @@
 			// 微信分享配置
 			if (wx && isTigerCo()) {
 				wxShareConfig({
-					title: '老虎外汇-四位一体的交易体验',
-					subTitle: '老虎外汇-四位一体的交易体验',
+					title: 'TigerWit-四位一体的交易体验',
+					subTitle: 'TigerWit-四位一体的交易体验',
 					shareLink: window.location.href,
-					desc: '选择老虎外汇，资金安全，操作便捷，用户尊享“四位一体”的交易体验，速来注册吧！',
+					desc: '选择TigerWit，资金安全，操作便捷，用户尊享“四位一体”的交易体验，速来注册吧！',
 					img: window.location.origin + '/activity/logo.png',
 					trackPage: window.location.pathname.replace(/\//gi, ''),
 					debug: false

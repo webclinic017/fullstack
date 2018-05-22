@@ -1,29 +1,7 @@
-<% if (pageInfo.id === 'rules') { %>
-    <% var title = '复制规则' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'select') { %>
-    <% var title = '选择高手' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'comment') { %>
-    <% var title = '每日汇评' %>
-    <% var description = '' %>
-    <% var keywords = '' %>    
-<% } else if (pageInfo.id === 'become') { %>
-    <% var title = '成为高手' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'calendar') { %>
-    <% var title = '财经日历' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } %>
 <!doctype html>
 <html>
     <head>
         <% include /common/meta/web.html %>
-        <title><%=lang.text("companyZhName")%>｜<%= title %></title>
         
         <!-- build:css(.tmp) /styles/web.css -->
         <link rel="stylesheet" href="/styles/web.css">

@@ -1,0 +1,35 @@
+<div class="sys_modal_v2 slim_case">
+    <button class="close" ng-click="closeModal()">×</button>
+
+    <h5 class="sys_modal_v2__title">
+        提现到
+    </h5>
+
+    <div class="sys_modal_v2__content">
+        <ul class="deposit_modal__type">
+           <li class="row" ng-click="selectType('bank')">
+               <div class="col-xs-3 deposit_modal__type-icon">
+                   <span class="btn-select fr" ng-class="{active: withdraw.accountType === 'bank'}"></span>
+               </div>
+               <div class="col-xs-9 deposit_modal__type-cont">
+                   <p class="tit">银行卡</p>
+               </div>
+           </li>
+           <li class="row" ng-click="selectType('cse')">
+               <div class="col-xs-3 deposit_modal__type-icon">
+                   <span class="btn-select fr" ng-class="{active: withdraw.accountType === 'cse'}"></span>
+               </div>
+               <div class="col-xs-9 deposit_modal__type-cont">
+                   <p class="tit">CSE平台账户</p>
+                   <p class="tip">请填写您的真实CSE钱包账号</p>
+               </div>
+           </li>
+        </ul>
+
+        <p class="btn_wrapper mg-bt-15">
+            <button class="btn btn-primary-gradient btn-sm" ng-click="changeType()">
+                确定
+            </button>
+        </p>
+    </div>
+</div>

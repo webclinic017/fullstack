@@ -73,10 +73,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V1.5.7",
-                        description : "本次更新：\n1.网银支付功能优化\n2.其他细节优化",
+                        version_name : "V1.5.8",
+                        description : "本次更新：\n1.网银支付功能优化\n2.提现功能优化\n3.申请高手功能优化\n4.登录安全优化， 不支持多设备同时登录\n5.修复高手最大跌幅显示的问题\n6.其他细节优化",
                         updated_description: "68%的用户正在使用新版本",
-                        url : "https://pandafx.tigerwit.com/downloads/apk/pandafx_v1.5.7.apk",
+                        url : "https://pandafx.tigerwit.com/downloads/apk/pandafx_v1.5.8.apk",
                         force_update : false
                     }
                 }
@@ -86,38 +86,38 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "",
-                        description: "",
+                        version_name : "V3.0.9",
+                        description: "This update\n1.Deposit/Withdrawal function has been optimization\n2.Experience account expiration support continues to apply\n3.The page of Deposit/Withdrawal has been optimization\n4.Details has been optimization",
                         updated_description: "",
-                        force_update : false
+                        force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V1.2.0",
-                        description: "Update：\n1.Payment of Internet Banking has been optimization\n2.Withdrawal function has been optimization\n3.Detail has been optimization",
+                        version_name : "V1.2.1",
+                        description: "This update\n1.Deposit/Withdrawal function has been optimization\n2.Experience account expiration support continues to apply\n3.The page of Deposit/Withdrawal has been optimization\n4.Details has been optimization",
                         updated_description: "70% users are using new version",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.0.apk",
-                        force_update : false
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.1.apk",
+                        force_update : true
                     }
                 }
             },
             cn: {
                 ios: {
                     app_info: {
-                        version_name : "",
-                        description: "",
-                        updated_description: "",
-                        force_update : false
+                        version_name : "V3.0.9",
+                        description: "本次更新：\n1.充值功能优化\n2.增加体验金账户续约功能\n3.充值/提现界面优化\n4.细节优化",
+                        updated_description: "70%的用户正在使用新版本",
+                        force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V1.2.0",
-                        description: "本次更新：\n1.网银支付功能优化\n2.提现功能优化\n3.细节优化\n上次更新：\n1.增加财经日历，可在个人中心查看\n2.跟随高手开仓订单可设置为不跟随平仓\n3.开户流程优化",
+                        version_name : "V1.2.1",
+                        description: "本次更新：\n1.充值功能优化\n2.增加体验金账户续约功能\n3.充值/提现界面优化\n4.细节优化",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.0.apk",
-                        force_update : false
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.1.apk",
+                        force_update : true
                     }
                 }
             }

@@ -1,31 +1,7 @@
-<% if (pageInfo.id === 'risk') { %>
-    <% var title = '风险披露书' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'statement') { %>
-    <% var title = '客户声明' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'notice') { %>
-    <% var title = '用户交易须知' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else if (pageInfo.id === 'legal') { %>
-    <% var title = '法律文件和声明' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<% } else {%>
-    <% var title = 'TigerWit 直通全球资本市场' %>
-    <% var description = '' %>
-    <% var keywords = '' %>
-<%}%>
 <!doctype html>
 <html>
     <head>
         <% include /common/meta/web.html %>
-    
-        <title><%=lang.text("companyZhName")%>｜<%= title %></title>
-        
         <!-- build:css(.tmp) /styles/web.css -->
         <link rel="stylesheet" href="/styles/web.css">
         <!-- endbuild -->

@@ -37,6 +37,18 @@
                 </ul>
             </div>
         </div>
+
+        <div class="tw-space-layout__con-nav">
+            <div class="nav-view">
+                <div class="space_nav">
+                    <ul class="space_nav__box" style="width: 940px;">
+                        <li class="space_nav__box-item">
+                            <a href="/payment/asset"><i class="fa fa-angle-left"></i> 返回</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
         
         <div class="tw-space-layout__con-content">
             <div class="content-view" ng-controller="ThirdEvidenceListController">
@@ -50,6 +62,7 @@
                             <i class="fa fa-angle-up" ng-show="item.show"></i>
                           </div>
                           <div class="web_evidence__item-content" ng-show="item.show">
+                            <div class="font-info">{{item.sub_title}}</div>
                             <div ng-repeat="cont in item.content">
                                 <div class="sub-title" ng-show="cont.title">
                                   {{cont.title}}

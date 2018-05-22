@@ -18,7 +18,18 @@
     </script>
 <%}%>
 <script>
-    if (window.location.href.indexOf('www.tigerwit.com') != -1) {
+    var allowPath = [
+        'www.tigerwit.com',
+        'cn.tigerwit.com',
+        'bd.tigerwitfx.com'
+    ];
+    var allowStatus = false;
+    for (var i=0;i<allowPath.length;i++) {
+        if (window.location.href.indexOf(allowPath[i]) != -1) {
+            allowStatus = true;
+        }
+    }
+    if (allowStatus) {
         (function(para) {
             var p = para.sdk_url, n = para.name, w = window, d = document, s = 'script',x = null,y = null;
             w['sensorsDataAnalytic201505'] = n;
@@ -103,5 +114,4 @@
             }
         })(window);
     }
-    
 </script>

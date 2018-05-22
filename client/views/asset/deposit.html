@@ -6,69 +6,24 @@
                 <form name="depositForm" novalidate>
                     <div class="form-control-wrapper">
                         <input class="form-control form-control-size-lg form-control-shape-capsule"
-                               ng-if="deposit.type === 'invest' || deposit.type === 'alipay' || deposit.type === 'cseWallet'"
                                name="amount"
                                type="text"
                                required
-                               ng-class="{'form-control-error': frontErr.amount.show && depositForm.amount.$invalid}"
                                ng-model="deposit.amount"
-                               ng-pattern="frontErr.amount.reg"
-                               twform-min="{{deposit.minAmount}}"
-                               ng-change="checkInputAmount()"
-                               ng-focus="hideErr('amount')"
-                               ng-blur="showErr('amount')">
-                        <input class="form-control form-control-size-lg form-control-shape-capsule"
-                               ng-if="deposit.type === 'wallet'"
-                               name="amount"
-                               type="text"
-                               required
-                               ng-class="{'form-control-error': frontErr.amount.show && depositForm.amount.$invalid}"
-                               ng-model="deposit.amount"
-                               ng-pattern="frontErr.amount.reg"
-                               ng-change="checkInputAmount()"
-                               ng-focus="hideErr('amount')"
-                               ng-blur="showErr('amount')">
-                        <input class="form-control form-control-size-lg form-control-shape-capsule"
-                               ng-if="deposit.type === 'tele'"
-                               name="amount"
-                               type="text"
-                               required
-                               ng-pattern="frontErr.amount.reg"
-                               ng-class="{'form-control-error': frontErr.amount.show && depositForm.amount.$invalid}"
-                               ng-model="deposit.amount"
-                               ng-change="checkInputAmount()"
-                               ng-focus="hideErr('amount')"
-                               ng-blur="showErr('amount')">
+                               ng-change="checkInputAmount()">
 
                         <span class="form-control-icon form-control-icon-size-lg">$</span>
-
-                        <div ng-show="frontErr.amount.show">
-                            <p class="alert alert-arrow_tp_lf" ng-show="depositForm.amount.$error.required">
-                                请输入入金金额
-                            </p>
-
-                            <p class="alert alert-arrow_tp_lf" ng-show="depositForm.amount.$error.pattern">
-                                输入的金额为大于零的整数或者小数（小数点后最多两位数字）
-                            </p>
-
-                            <p class="alert alert-arrow_tp_lf" ng-show="depositForm.amount.$error.twformMin">
-                                入金金额最少为 {{deposit.minAmount}} 美金
-                            </p>
-                        </div>
                     </div>
                 </form>
             </div>
         </div>
 
-        <div class="row" ng-show="deposit.type != 'cseWallet'">
+        <div class="row" ng-if="deposit.currency">
             <div class="col-xs-7 col-xs-offset-2 deposit__rate">
-                <p>
+                <p ng-show="deposit.currency.currency !== 'USD'">
                     <span class="font-danger">＊</span>今日汇率：1 美元 =
-                    <span>{{deposit.FXRate.value}}</span> 人民币
+                    <span>{{deposit.currency.rate_in}}</span> {{deposit.currency.currency_name}}
                 </p>
-                <!-- <p ng-show="deposit.type === 'invest'">
-                    额外收取2％手续费
-                </p> -->
             </div>
         </div>
 
@@ -76,48 +31,72 @@
             <div class="col-xs-2 text-right deposit__title-money">支付方式</div>
             <div class="col-xs-7">
                 <div class="deposit__way" ng-click="openChangeDepTypeMdl()">
-                    {{ depositTypeCN }}
+                    {{ deposit.type ? depositTypeLst[deposit.type].name : '请选择' }}
                 </div>
-                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'tele'}">电汇通常需要 3-5 个工作日到帐</p>
-                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'invest'}">单日交易限额以银行规定为准</p>
+                <p class="deposit__way-tip" ng-class="{active: deposit.type !== 'wallet'}">{{depositTypeLst[deposit.type].describe}}</p>
                 <p class="deposit__way-tip" ng-class="{active: deposit.type === 'wallet'}">当前零钱包余额：${{ walletAble || '0.00' }}</p>
-                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'alipay'}">单日交易限额 $3000.00</p>
-                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'cseWallet'}">需要跳转到第三方平台</p>
-                <a class="deposit__way-tip font-danger mg-tp-10 cursor_pointer" href="/third_usage" target="_blank" ng-class="{active: deposit.type === 'cseWallet'}">第三方充值教程</a>
+                <a class="deposit__way-tip font-danger mg-tp-10 cursor_pointer" ng-class="{active: deposit.type === 'cseWallet'}" href="/third_usage" target="_blank">
+                    第三方充值教程
+                </a>
                 <p class="deposit__way-desc" ng-class="{active: deposit.type === 'invest'}">
-                    <span ng-click="openDepositRuleMdl('depositRule')">网银支付规则</span>
+                    <span ng-click="openDepositRuleMdl({type: 'depositRule', tit: '网银入金规则'})">网银支付规则</span>
                 </p>
+            </div>
+        </div>
+        <div class="row mg-tp-30 deposit__pay_method" ng-if="deposit.type && depositTypeLst[deposit.type].currency.length > 1">
+            <div class="col-xs-2 text-right deposit__title-money">支付币种</div>
+            <div class="col-xs-2 relative">
+                <div class="deposit__currency-tit" ng-click="openCurrency($event)">{{deposit.currency.currency_name}}</div>
+                <ul class="deposit__currency-lst" ng-show="currencyStatus">
+                    <li ng-repeat="item in depositTypeLst[deposit.type].currency" ng-click="selcetCurrency(item)">
+                        {{item.currency_name}}
+                    </li>
+                </ul>
             </div>
         </div>
         <br>
         <div class="row">
             <div class="col-xs-2"></div>
             <div class="col-xs-7 text-center">
-                <div class="deposit__btn_wrapper">
-                    <button ng-if="!isLoading && ((deposit.type !== 'invest') || ((deposit.type === 'invest') && !deposit.quota_full_notice))" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-click="toDeposit()">
-                        <span ng-show="deposit.type !== 'tele'">充值</span>
-                        <span ng-show="deposit.type === 'tele'">提交</span>
-                    </button>
-                    <button ng-if="!isLoading && (deposit.type === 'invest') && deposit.quota_full_notice" class="tw-btn tw-btn-capsule-gradient tw-btn-full tw-btn-disabled disabled">
-                        {{deposit.quota_full_notice}}
-                    </button>
-                    <button ng-if="isLoading" class="tw-btn tw-btn-capsule-gradient tw-btn-full"><i class="loading_spinner fa fa-spinner"></i> 提交中</button>
+                <!-- 按钮逻辑 
+                    1.首先确定loading状态
+                    2.判断是否网银入金（invest）
+                        若是则判断deposit.quota_full_notice确定入金金额限制，若为ture则显示deposit.quota_full_notice，若为false，进入第3步
+                        若否进入第3步
+                    3.判断各入金方式的限制
+                -->
+                <div ng-if="!isLoading" class="deposit__btn_wrapper">
+                    <div ng-if="deposit.type === 'invest'">
+                        <div ng-if="deposit.quota_full_notice">
+                            <button class="tw-btn tw-btn-capsule-gradient tw-btn-full tw-btn-disabled disabled">
+                                {{deposit.quota_full_notice}}
+                            </button>
+                        </div>
+                        <div ng-if="!deposit.quota_full_notice">
+                            <button ng-if="deposit.submitBtn" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-click="toDeposit()">
+                                充值
+                            </button>
+                            <button ng-if="!deposit.submitBtn" class="tw-btn tw-btn-capsule-gradient tw-btn-full tw-btn-disabled disabled">
+                                充值
+                            </button>
+                        </div>
+                    </div>
+                    <div ng-if="deposit.type !== 'invest'">
+                        <button ng-if="deposit.submitBtn" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-click="toDeposit()">
+                            <span ng-show="deposit.type !== 'tele'">充值</span>
+                            <span ng-show="deposit.type === 'tele'">提交</span>
+                        </button>
+                        <button ng-if="!deposit.submitBtn" class="tw-btn tw-btn-capsule-gradient tw-btn-full tw-btn-disabled disabled">
+                            <span ng-show="deposit.type !== 'tele'">充值</span>
+                            <span ng-show="deposit.type === 'tele'">提交</span>
+                        </button>
+                    </div>
+                </div>
+                <div ng-if="isLoading" class="deposit__btn_wrapper">
+                    <button class="tw-btn tw-btn-capsule-gradient tw-btn-full"><i class="loading_spinner fa fa-spinner"></i> 提交中</button>
                 </div>
             </div>
         </div>
-
-        <!-- <div class="row">
-            <div class="col-xs-7 col-xs-offset-2 warn_tip_area mg-tp-15" ng-show="(deposit.type === 'invest') && deposit.notice">
-                <div class="warn_icon">
-                    ⚠️
-                </div>
-                <div class="warn_content">
-                    <div class="">
-                        <p>{{deposit.notice}}</p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         
         <div class="deposit_separator"></div>
 
@@ -133,13 +112,13 @@
             <br>
             <div class="row">
                 <p class="deposit__tele-tip">
-                    不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，老虎外汇不收取电汇入金手续费，入金金额将以实际到账为准。
+                    不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，TigerWit不收取电汇入金手续费，入金金额将以实际到账为准。
                 </p>
                 <p class="deposit__tele-tip">
                     请注意，我们不接受直接支付到我们银行账户的现金付款。为了您的注资能及时、准确到帐，在填写电汇申请单时，<span class="des">请您务必在汇款附言一栏里填写您的交易账号。</span>同时请提供您的电话号码，以便我们与您取得联系。
                 </p>
                 <p class="deposit__tele-tit">
-                    老虎外汇接受美元汇款，汇款详情如下：
+                    TigerWit接受美元汇款，汇款详情如下：
                 </p>
                 <p class="deposit__tele-msg">
                     收款人名称（Company）：<br>TFSL
@@ -172,10 +151,10 @@
                     反洗钱政策：
                 </p>
                 <p class="deposit__tele-tip">
-                    老虎外汇将根据各国适用法律尽最大努力以实际行动配合反洗钱及反恐怖方面的所有法律法规，具体包括报告及冻结可疑资产等。老虎外汇将不定期地查看账户记录以获取有洗钱嫌疑的交易证据，包括对如下几项的监控：
+                    TigerWit将根据各国适用法律尽最大努力以实际行动配合反洗钱及反恐怖方面的所有法律法规，具体包括报告及冻结可疑资产等。TigerWit将不定期地查看账户记录以获取有洗钱嫌疑的交易证据，包括对如下几项的监控：
                 </p>
                 <p class="deposit__tele-tip">
-                    1)  账户资金出入情况。电汇入金的用户，提现时若金额低于电汇入金时金额，老虎外汇只支持将提现金额提现至入金银行卡。<br>
+                    1)  账户资金出入情况。电汇入金的用户，提现时若金额低于电汇入金时金额，TigerWit只支持将提现金额提现至入金银行卡。<br>
                     2) 电汇汇款方及收款方<br>
                     3) 除正常业务外的其他行为。
                 </p>

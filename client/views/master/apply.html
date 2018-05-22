@@ -1,6 +1,6 @@
 <div class="space_apply">
     <div class="space_master__title">
-        <span ng-if="applyInfo.data.status != 0 && applyInfo.data.status != 3">成为老虎外汇高手，获取更多收益</span>
+        <span ng-if="applyInfo.data.status != 0 && applyInfo.data.status != 3">成为TigerWit高手，获取更多收益</span>
         <span ng-if="applyInfo.data.status == 0">高手申请审核中，请耐心等待</span>
         <span ng-if="applyInfo.data.status == 3">注意事项</span>
         <span class="btn btn-primary btn-sm" ng-if="applyInfo.data.status == -1" ng-click="applyMaster()">立即申请成为高手</span>
@@ -19,10 +19,10 @@
         </div>
         <ul class="space_apply__lst" ng-if="(applyInfo.data.status == 0) || (applyInfo.data.status == -1)">
             <li ng-class="{active: applyInfo.data.one == 1}">
-                <span>开通老虎外汇真实账户并完成实名认证</span>
+                <span>开通TigerWit真实账户并完成实名认证</span>
             </li>
             <li ng-class="{active: applyInfo.data.two == 1}">
-                <span>在老虎外汇交易平台真实入金并连续自主交易30个以上工作日</span>
+                <span>在TigerWit交易平台真实入金并连续自主交易30个以上工作日</span>
             </li>
             <li ng-class="{active: applyInfo.data.three == 1}">
                 <span>近30日收益率大于20%</span>

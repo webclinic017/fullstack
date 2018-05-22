@@ -179,6 +179,36 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-xs-3 text-left">
+                        <label>预留手机号：</label>
+                    </div>
+
+                    <div class="col-xs-9">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                    name="phone"
+                                    type="text"
+                                    required
+                                    ng-class="{'form-control-error': frontErr.phone.show && cardForm.phone.$invalid}"
+                                    ng-model="card.phone"
+                                    placeholder="请输入手机号"
+                                    ng-pattern="frontErr.phone.reg"
+                                    ng-focus="hideErr('phone')"
+                                    ng-blur="showErr('phone')">
+
+                            <div ng-show="frontErr.phone.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.phone.$error.required">
+                                    请输入手机号
+                                </p>
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.phone.$error.pattern">
+                                    {{frontErr.phone.tip}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </form>
             <!-- <p>
                 <span class="font-danger">*</span>

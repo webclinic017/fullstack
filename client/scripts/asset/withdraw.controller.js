@@ -36,10 +36,13 @@
                 // timestamp: ,
                 // RMB:         // 折合人民币
             },
-            type: $state.params.type || 'invest',
+            type: $state.params.type || 'invest',   // invest, wallet
+            accountType: 'bank',    // bank, cse
+            cseAccount: undefined,
             success: false,
             minAmount: companyName == 'tigerwit' ? 20 : 100,
-            maxAmount: 0
+            maxAmount: 0,
+            cseStatus: 0    // cse出金方式  1显示，0隐藏
         };
         $scope.frontErr = {
             amount: {
@@ -57,6 +60,7 @@
         $scope.openCardMdl = openCardMdl;
         $scope.openManageCardMdl = openManageCardMdl;
         $scope.changeWithdrawType = changeWithdrawType;
+        $scope.openChangeWithTypeMdl = openChangeWithTypeMdl;
 
         // 获取默认银行卡
         getCard();
@@ -81,7 +85,7 @@
         asset.getIsWithdraw().then(function (data) {
             layer.closeAll();
             if (!data) return;
-            // console.info(data);
+            console.info(data);
             $scope.withdrawMessageSucc = true;
             if (data.is_succ) {
                 if (data.data.status == 0) {
@@ -99,7 +103,7 @@
                         $scope.withdraw.maxAmount = $scope.maxAmountInvest;
                     }
                 }
-
+                $scope.withdraw.cseStatus = data.data.cse_status;
             } else {
                 $scope.message = {
                     is_succ: false,
@@ -378,7 +382,14 @@
             $scope.$emit('global.checkAuthenFlow', {
                 ctrlName: 'AssetWithdrawController',
                 callback: function () {
-                    if(!checkCardPhone($scope.withdraw.card)){ return }
+                    if ($scope.withdraw.type === 'invest') {
+                        if ($scope.withdraw.accountType === 'bank') {
+                            if(!checkCardPhone($scope.withdraw.card)){ return }
+                        }
+                    } else {
+                        if(!checkCardPhone($scope.withdraw.card)){ return }
+                    }
+
                     showErr('amount');
                     // console.info($scope.withdrawForm.$invalid);
                     if ($scope.withdrawForm.$invalid) {
@@ -423,7 +434,16 @@
                 }
 
                 function withdraw() {
-                    asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).then(function (data) {
+                    var paramsAsset = {
+                        amount: Number($scope.withdraw.amount).toFixed(2)
+                    };
+                    if ($scope.withdraw.accountType === 'bank') {
+                        paramsAsset.bank_card_id = $scope.withdraw.card.id;
+                    } else {
+                        paramsAsset.third_type = 1;
+                        paramsAsset.third_account = $scope.withdraw.cseAccount;
+                    }
+                    asset.withdraw(paramsAsset).then(function (data) {
                         if (!data) return;
                         $scope.clickable = true;
 
@@ -460,6 +480,48 @@
                 } else {
                     var msg = data.message;
                     openWithdrawMdl(msg);
+                }
+            });
+        }
+
+        function changeWithdrawAccountType (accountType) {
+            $scope.withdraw.accountType = accountType;
+        }
+
+        function openChangeWithTypeMdl () {
+            $modal.open({
+                templateUrl: '/views/asset/withdraw_dep_type_modal.html',
+                size: 'sm',
+                backdrop: 'static',
+                resolve: {
+                    passedScope: function () {
+                        return {
+                            withdrawType: $scope.withdraw.accountType
+                        };
+                    }
+                },
+                controller: function ($scope, $modalInstance, passedScope) {
+                    console.log(passedScope);
+                    $scope.withdraw = {
+                        accountType: passedScope.withdrawType
+                    };
+                    $scope.closeModal = closeModal;
+                    $scope.selectType = selectType;
+                    $scope.changeType = changeType;
+
+                    function selectType(accountType) {
+                        $scope.withdraw.accountType = accountType;
+                    }
+
+                    function changeType() {
+                        closeModal();
+                        changeWithdrawAccountType($scope.withdraw.accountType);
+                    }
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+
                 }
             });
         }

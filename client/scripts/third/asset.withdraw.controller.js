@@ -36,7 +36,9 @@
                 // timestamp: ,
                 // RMB:         // 折合人民币
             },
-            type: $state.params.type || 'invest',
+            type: $state.params.type || 'invest',   // invest, wallet
+            accountType: 'bank',    // bank, cse
+            cseAccount: undefined,
             success: false,
             minAmount: companyName == 'tigerwit' ? 20 : 100,
             maxAmount: 0
@@ -57,6 +59,7 @@
         $scope.openCardMdl = openCardMdl;
         $scope.openManageCardMdl = openManageCardMdl;
         $scope.changeWithdrawType = changeWithdrawType;
+        $scope.openChangeWithTypeMdl = openChangeWithTypeMdl;
 
         // 获取默认银行卡
         getCard();
@@ -139,6 +142,79 @@
             });
         }
 
+        function checkCardPhone(card) {
+            if (!card.phone) {
+                $modal.open({
+                    templateUrl: '/views/third/asset/card_phone_modal.html',
+                    size: 'md',
+                    controller: ['$scope', '$modalInstance', 'validator', function ($scope, $modalInstance, validator) {
+                        $scope.closeModal = $modalInstance.dismiss;
+                        $scope.hideErr = hideErr;
+                        $scope.showErr = showErr;
+                        $scope.card = card;
+                        $scope.frontErr = {
+                            phone: {
+                                show: false,
+                                reg: validator.regType.phone.reg,
+                                tip: validator.regType.phone.tip
+                            }
+                        }
+                        $scope.bindInfo = {
+                            success: false,
+                            loading: false,
+                            phone: ''
+                        }
+                        $scope.backErr = {
+                            show: false,
+                            msg: ''
+                        }
+                        function hideErr(name) {
+                            if ($scope.frontErr[name]) {
+                                $scope.frontErr[name].show = false;
+                            }
+                        }
+
+                        function showErr(name) {
+                            if ($scope.frontErr[name]) {
+                                $scope.frontErr[name].show = true;
+                            }
+                        }
+
+                        $scope.submitForm = function () {
+                            showErr('phone')
+                            if ($scope.cardForm.$invalid) {
+                                return;
+                            }
+                            $scope.bindInfo.loading = true
+                            asset.bindCardPhone(card.id, $scope.bindInfo.phone).then(function (data) {
+                                $scope.bindInfo.loading = false
+                                if (data.is_succ) {
+                                    $scope.bindInfo.success = true;
+                                    $scope.card.phone = $scope.bindInfo.phone
+                                } else {
+                                    $scope.backErr = {
+                                        show: true,
+                                        msg: data.message
+                                    }
+                                    setTimeout(function(){
+                                        $apply(function(){
+                                            $scope.backErr = {
+                                                show: false,
+                                                msg: data.message
+                                            }
+                                        })
+                                    }, 2000)
+                                }
+                            })
+                        }
+                    }]
+                })
+                return false
+            } else {
+                return true
+            }
+        }
+
         function openCardMdl() {
             if(parentScope.manageCardModalInstance){
                 parentScope.manageCardModalInstance.dismiss()
@@ -189,19 +265,20 @@
 
                     $scope.chooseCard = function (card) {
                         console.log(card)
-                        parentScope.withdraw.card.id = card.id;
-                        parentScope.withdraw.card.number = card.card_no;
-                        parentScope.withdraw.card.address = card.bank_addr;
-                        parentScope.withdraw.card.province = card.province;
-                        parentScope.withdraw.card.bank_name = card.bank_name;
-                        parentScope.withdraw.card.bank_name_cn = card.bank_name_cn;
-                        parentScope.withdraw.card.city = card.city;
-                        parentScope.withdraw.card.bank_code = card.bank_code;
-                        parentScope.withdraw.card.bank_img = card.bank_img;
-                        // 更改选中状态
-                        parentScope.hasChooseedCard = true;
-                        // 判断是否为英文简称
-                        parentScope.withdraw.card.is_short = /^[A-Za-z]/.test(card.bank_name);
+                        if(checkCardPhone(card)){
+                            parentScope.withdraw.card.id = card.id;
+                            parentScope.withdraw.card.number = card.card_no;
+                            parentScope.withdraw.card.address = card.bank_addr;
+                            parentScope.withdraw.card.province = card.province;
+                            parentScope.withdraw.card.bank_name = card.bank_name;
+                            parentScope.withdraw.card.bank_name_cn = card.bank_name_cn;
+                            parentScope.withdraw.card.city = card.city;
+                            parentScope.withdraw.card.bank_code = card.bank_code;
+                            parentScope.withdraw.card.bank_img = card.bank_img;
+                            parentScope.withdraw.card.phone = card.phone;
+                            // 更改选中状态
+                            parentScope.hasChooseedCard = true;
+                        }
                         closeModal()
                     }
 
@@ -303,6 +380,7 @@
             $scope.$emit('main.checkAuthenFlow', {
                 ctrlName: 'ThirdWithdrawController',
                 callback: function () {
+                    if(!checkCardPhone($scope.withdraw.card)){ return }
                     showErr('amount');
                     // console.info($scope.withdrawForm.$invalid);
                     if ($scope.withdrawForm.$invalid) {
@@ -347,7 +425,16 @@
                 }
 
                 function withdraw() {
-                    asset.withdraw($scope.withdraw.amount, $scope.withdraw.card.id).then(function (data) {
+                    var paramsAsset = {
+                        amount: Number($scope.withdraw.amount).toFixed(2)
+                    };
+                    if ($scope.withdraw.accountType === 'bank') {
+                        paramsAsset.bank_card_id = $scope.withdraw.card.id;
+                    } else {
+                        paramsAsset.third_type = 1;
+                        paramsAsset.third_account = $scope.withdraw.cseAccount;
+                    }
+                    asset.withdraw(paramsAsset).then(function (data) {
                         if (!data) return;
                         $scope.clickable = true;
 
@@ -384,6 +471,48 @@
                 } else {
                     var msg = data.message;
                     openWithdrawMdl(msg);
+                }
+            });
+        }
+        
+        function changeWithdrawAccountType (accountType) {
+            $scope.withdraw.accountType = accountType;
+        }
+
+        function openChangeWithTypeMdl () {
+            $modal.open({
+                templateUrl: '/views/asset/withdraw_dep_type_modal.html',
+                size: 'sm',
+                backdrop: 'static',
+                resolve: {
+                    passedScope: function () {
+                        return {
+                            withdrawType: $scope.withdraw.accountType
+                        };
+                    }
+                },
+                controller: function ($scope, $modalInstance, passedScope) {
+                    console.log(passedScope);
+                    $scope.withdraw = {
+                        accountType: passedScope.withdrawType
+                    };
+                    $scope.closeModal = closeModal;
+                    $scope.selectType = selectType;
+                    $scope.changeType = changeType;
+
+                    function selectType(accountType) {
+                        $scope.withdraw.accountType = accountType;
+                    }
+
+                    function changeType() {
+                        closeModal();
+                        changeWithdrawAccountType($scope.withdraw.accountType);
+                    }
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+
                 }
             });
         }

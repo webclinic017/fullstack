@@ -14,7 +14,7 @@ if ($(".m_vue").attr("data-page") === "helpSelf") {
                         imgSrc: [
                             'step1'
                         ],
-                        desp: cn == 'tigerwit' ? '打开老虎外汇APP，在页面下方点击“自选”进入交易产品列表页面。如上图' : '打开熊猫外汇APP，在页面下方点击“自选”进入交易产品列表页面。如上图'
+                        desp: cn == 'tigerwit' ? '打开TigerWit APP，在页面下方点击“自选”进入交易产品列表页面。如上图' : '打开熊猫外汇APP，在页面下方点击“自选”进入交易产品列表页面。如上图'
                     },
                     {
                         imgSrc: [
@@ -57,7 +57,7 @@ if ($(".m_vue").attr("data-page") === "helpSelf") {
                         imgSrc: [
                             'step1'
                         ],
-                        desp: cn == 'tigerwit' ? '打开老虎外汇APP，选择左下角“跟单”，在跟单页面中点击“高手跟单”，如上图:' : '打开熊猫外汇APP，选择左下角“跟单”，在跟单页面中点击“高手跟单”，如上图:'
+                        desp: cn == 'tigerwit' ? '打开TigerWit APP，选择左下角“跟单”，在跟单页面中点击“高手跟单”，如上图:' : '打开熊猫外汇APP，选择左下角“跟单”，在跟单页面中点击“高手跟单”，如上图:'
                     },
                     {
                         imgSrc: [

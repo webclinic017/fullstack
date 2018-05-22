@@ -44,14 +44,10 @@
          * @method withdraw
          * @param {String} amount 出金金额
          * @param {Number} cardId 出金银行卡的 id
+         * @param {String} cse_account CSE账号
          */
-        function withdraw(amount, cardId) {
-            amount = Number(amount).toFixed(2);
-
-            return publicHttp.dealPublicRequest(o.withdrawApi, 'POST', {
-                amount: amount,
-                bank_card_id: cardId
-            });
+        function withdraw(params) {
+            return publicHttp.dealPublicRequest(o.withdrawApi, 'POST', params);
         }
 
 
@@ -153,10 +149,11 @@
          *      
          * @params platform   支付宝入金 -> 4
          */
-        function deposit(amount, platform) {
+        function deposit(amount, platform, currency) {
             return publicHttp.dealPublicRequest(o.depositApi, 'POST', {
                 amount: amount,
-                platform: platform
+                platform: platform,
+                currency: currency
             });
         }
 

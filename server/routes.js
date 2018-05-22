@@ -822,7 +822,7 @@ module.exports = function (app) {
     // 刮奖
     app.route('/bd/lottery').get(function (req, res) {
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit') {
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
                 res.render('bd/lottery/lottery_h5.html', extendPublic({
                     reward_lst: require('./lottery_reward_lst')
@@ -1040,7 +1040,7 @@ module.exports = function (app) {
                     appType = 'pandafx';
                 }
             }
-            var system = req.query.os;
+            var system = req.query.os.toLowerCase();
             var versionNum = req.query.version.replace(/\./g, "");
             var versinInfo = require('./app_ctrl.config').getAppInfo(appType)[appLanguage];
             var currentVersionNum = versinInfo[system].app_info.version_name.replace(/[v\.]/ig, "");
@@ -1169,6 +1169,29 @@ module.exports = function (app) {
             }
             if (oError) {
                 rs.message = oError.error_msg;
+            }
+        }
+        res.json(rs);
+    });
+    app.route('/third_napi').get(function (req, res) {
+        var ThirdPath = require('./third_napi.js')()
+        var data = new ThirdPath(req);
+        var nError = null, rs = null;
+        if (data) {
+            rs = {
+                is_succ: true,
+                code: 0,
+                message: "",
+                data: data.oPath
+            }
+        } else {
+            rs = {
+                is_succ: false,
+                code: 1,
+                message: ""
+            }
+            if (nError) {
+                rs.message = nError.error_msg;
             }
         }
         res.json(rs);
