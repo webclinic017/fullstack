@@ -12,7 +12,7 @@
                 <ul class="info_box__detail">
                     <li>
                         <div class="item__number">
-                            {{ main.mt4_id }}
+                            {{ main.accountStatus == 1 ? main.mt4_id : '-' }}
                         </div>
                         <div class="item__text">
                             <span>MT4真实账户</span>
@@ -20,7 +20,7 @@
                     </li>
                     <li>
                         <div class="item__number">
-                            {{ main.balance }}
+                            {{ main.accountStatus == 1 ? main.balance : '-' }}
                         </div>
                         <div class="item__text">
                             <span>账户余额</span>
@@ -28,7 +28,7 @@
                     </li>
                     <li>
                         <div class="item__number">
-                            {{ main.wallet_balance }}
+                            {{ main.accountStatus == 1 ? main.wallet_balance : '-' }}
                         </div>
                         <div class="item__text">
                             <span>零钱包账户</span>
