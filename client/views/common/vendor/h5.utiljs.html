@@ -321,6 +321,18 @@
             systemTip: {
                 zh: '您当前的手机版本不支持图片上传功能，请升级手机系统或更换手机。',
                 en: 'Your current mobile’s system is not support the image upload function, please update the system or change your mobile.'
+            },
+            frontCardTip: {
+                zh: "点击上传证件正面",
+                en: "Upload front side"
+            },
+            backCardTip: {
+                zh: "点击上传证件反面",
+                en: "Upload back side"
+            },
+            cardTip: {
+                zh: "上传图片",
+                en: "Upload Image"
             }
         }
     }
@@ -328,6 +340,7 @@
     var lang = {
         text: function (moduleName) {
             var curLang = $.cookie('lang') || 'zh'
+            curLang !== 'en' && (curLang = 'zh')
             var moduleNameInfo = moduleName.split('.'), area = '', name = ""
             if (moduleNameInfo.length == 2) {
                 area = moduleNameInfo[0]

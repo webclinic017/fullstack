@@ -8,12 +8,12 @@ module.exports = {
       en: "Complete Information"
     },
     third_navBar3: {
-      zh: "审核",
-      en: "Verification"
+      zh: "实名认证",
+      en: "ID Verification"
     },
     third_navBar4: {
-      zh: "完成开户",
-      en: "Finish"
+      zh: "审核",
+      en: "Review"
     },
     third_next: {
       zh: "下一步",
@@ -22,6 +22,10 @@ module.exports = {
     third_submit: {
       zh: "提交审核",
       en: "Submit"
+    },
+    third_select: {
+      zh: '请选择',
+      en: 'Please Select'
     },
     third_index1: {
       zh: "开户就送",
@@ -45,7 +49,7 @@ module.exports = {
     },
     third_index6: {
       zh: "开户前请准备好在有效期内的身份证件",
-      en: "Please prepare the valid identity card before open an account"
+      en: "Please prepare the valid identity card before opening an account"
     },
     third_placeholder1: {
       zh: "请输入真实姓名",
@@ -57,11 +61,71 @@ module.exports = {
     },
     third_placeholder3: {
       zh: "请输入您的邮箱，有助于接收重要的提醒消息",
-      en: "Please fill in your E-mail"
+      en: "Email"
+    },
+    third_placeholder4: {
+      zh: "请选择国家/地区",
+      en: "Select Country/Region"
+    },
+    third_placeholder5: {
+      zh: "请输入您的完整居住地址",
+      en: "Enter your address"
+    },
+    third_username1: {
+      zh: "因监管要求，请您提供相关信息。请确认是您本人，审核通过后不可修改",
+      en: "Due to regulatory requirements, please ensure that you provide your personal information ensuring that it is correct and not fraudulent."
+    },
+    third_username2: {
+      zh: "男",
+      en: "Male"
+    },
+    third_username3: {
+      zh: "女",
+      en: "Female"
+    },
+    third_username4: {
+      zh: "姓名",
+      en: "Name"
+    },
+    third_username5: {
+      zh: "证件类型",
+      en: "Select type of certificate"
+    },
+    third_username6: {
+      zh: "请输入证件号码",
+      en: "Enter ID No."
+    },
+    third_username7: {
+      zh: "请选择您的出生日期",
+      en: "Select date of birth"
+    },
+    third_username8: {
+      zh: "台湾居民来往大陆通行证",
+      en: "Mainland travel permit for Taiwan residents, (MTP)"
+    },
+    third_username9: {
+      zh: "大陆居民身份证",
+      en: "Chinese ID Card"
+    },
+    third_username10: {
+      zh: "港澳居民来往内地通行证",
+      en: "Mainland Travel Permit for Hong Kong and Macao Residents"
+    },
+    third_username11: {
+      zh: "护照",
+      en: "Passport"
+    },
+    third_username12: {
+      zh: "驾驶证",
+      en: "Driver License"
+    },
+    third_username13: {
+      zh: "身份证",
+      en: "ID Card"
     },
     third_uploadCard: {
-      zh: "上传身份证进行实名验证",
-      en: "Upload images to complete the authentication"
+      zh: "证件类型：",
+      en: "Type of Certificate: "
     },
     third_uploadCardTip: {
       zh: "点击上传身份证照片（正面）",

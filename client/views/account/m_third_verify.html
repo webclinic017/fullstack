@@ -77,7 +77,7 @@
         </div>
     </div>
     <div class="m_third_userinfo">
-        <div class="m_third_userinfo__wrapper">
+        <!-- <div class="m_third_userinfo__wrapper">
             <input class="info realname"
                    type="text"
                    placeholder="<%=lang.text('third_placeholder1')%>">
@@ -86,13 +86,68 @@
             <input class="info id_no"
                    type="text"
                    placeholder="<%=lang.text('third_placeholder2')%>">
-        </div>
+        </div> -->
         <div class="m_third_userinfo__wrapper">
             <input class="info email"
-                   type="text"
-                   placeholder="<%=lang.text('third_placeholder3')%>">
+                type="text"
+                placeholder="<%=lang.text('third_placeholder3')%>">
         </div>
+        <div class="m_third_userinfo__wrapper">
+            <input class="info country"
+                type="text"
+                placeholder="<%=lang.text('third_placeholder4')%>">
+            <select class=""></select>
+        </div>
+        <div class="m_third_userinfo__wrapper">
+            <input class="info address"
+                type="text"
+                placeholder="<%=lang.text('third_placeholder5')%>">
+        </div>
+        <input type="text" style="display: none;">
         <div class="m_third_userinfo__btn">
+            <button class="btn btn-primary">
+                <%=lang.text('third_next')%>
+            </button>
+        </div>
+    </div>
+    <div class="m_third_username">
+        <p><%=lang.text('third_username1')%></p>
+        <div class="m_third_username__male">
+            <span class="male active" data-gender="1"><%=lang.text('third_username2')%></span>
+            <span class="female" data-gender="0"><%=lang.text('third_username3')%></span>
+        </div>
+        <div class="m_third_username__wrapper">
+            <input class="info realname"
+                   type="text"
+                   placeholder="<%=lang.text('third_username4')%>">
+        </div>
+        <div class="m_third_username__wrapper">
+            <input class="info card_type"
+                   type="text"
+                   placeholder="<%=lang.text('third_username5')%>">
+            <select class="">
+                <option value=""><%=lang.text('third_select')%></option>
+                <option value="2"><%=lang.text('third_username8')%></option>
+                <option value="0"><%=lang.text('third_username9')%></option>
+                <option value="1"><%=lang.text('third_username10')%></option>
+                <option value="3"><%=lang.text('third_username11')%></option>
+                <option value="4"><%=lang.text('third_username12')%></option>
+                <option value="5"><%=lang.text('third_username13')%></option>
+            </select>
+        </div>
+        <div class="m_third_username__wrapper">
+            <input class="info id_no"
+                    type="text"
+                    placeholder="<%=lang.text('third_username6')%>">
+        </div>
+        <div class="m_third_username__wrapper">
+            <input class="info birth"
+                    id="birth"
+                    type="text"
+                    placeholder="<%=lang.text('third_username7')%>">
+        </div>
+        <input type="text" style="display: none;">
+        <div class="m_third_username__btn">
             <button class="btn btn-primary">
                 <%=lang.text('third_next')%>
             </button>
@@ -101,8 +156,9 @@
     <div class="m_third_card">
         <div class="m_third_card__tip">
             <%=lang.text('third_uploadCard')%>
+            <span class=""></span>
         </div>
-        <div class="m_third_card__pic">
+        <div class="m_third_card__pic front">
             <div class="img front">
                 
             </div>
@@ -111,24 +167,18 @@
             </form>
 
             <div class="plus"></div>
-            <div class="tip">
-                <%=lang.text('third_uploadCardTip')%>
-            </div>
+            <div class="tip"></div>
         </div>
-        <% if (lang.currentLanguage() !== 'en') {%>
-            <div class="m_third_card__pic">
-                <div class="img back">
-                    
-                </div>
-                <form class="form">
-                    <input type="file" data-page="back" name="file" accept="image/*" />
-                </form>
-                <div class="plus"></div>
-                <div class="tip">
-                    点击上传身份证照片（背面）
-                </div>
+        <div class="m_third_card__pic back">
+            <div class="img back">
+                
             </div>
-        <%}%>
+            <form class="form">
+                <input type="file" data-page="back" name="file" accept="image/*" />
+            </form>
+            <div class="plus"></div>
+            <div class="tip"></div>
+        </div>
         <div class="m_third_card__btn">
             <button class="btn btn-primary">
                 <%=lang.text('third_submit')%>
@@ -233,5 +283,11 @@
                 </div>
             </div>
         <$}$>
+    <$}$>
+</script>
+<script id="template_country_info" type="text/html">
+    <option value=""><%=lang.text('third_select')%></option>
+    <$for(var i=0;i<data.length;i++){$>
+    <option value="<$= data[i].code$>"><% if (lang.currentLanguage() !== 'en') {%><$= data[i].name_cn$><%} else {%><$= data[i].name_en$><%}%></option>
     <$}$>
 </script>

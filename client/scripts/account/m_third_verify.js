@@ -14,13 +14,26 @@ $(document).ready(function () {
         kycInpCheckbox: ".m_third .m_third_kyc .m_third_kyc__single .m_third_kyc__single-list.checkbox",
         kycBtn: ".m_third .m_third_kyc .m_third_kyc__btn .btn",
         userinfo: ".m_third .m_third_userinfo",
-        userinfoName: ".m_third .m_third_userinfo .realname",
-        userinfoIdNo: ".m_third .m_third_userinfo .id_no",
         userinfoEmail: ".m_third .m_third_userinfo .email",
+        userinfoCountry: ".m_third .m_third_userinfo .country",
+        userinfoAddress: ".m_third .m_third_userinfo .address",
+        userinfoSelect: ".m_third .m_third_userinfo select",
         userinfoBtn: ".m_third .m_third_userinfo .m_third_userinfo__btn .btn",
+        username: ".m_third .m_third_username",
+        usernameGender: ".m_third .m_third_username .m_third_username__male span",
+        usernameName: ".m_third .m_third_username .realname",
+        usernameCardType: ".m_third .m_third_username .card_type",
+        usernameSelect: ".m_third .m_third_username select",
+        usernameIdNo: ".m_third .m_third_username .id_no",
+        usernameBirth: ".m_third .m_third_username .birth",
+        usernameBtn: ".m_third .m_third_username .m_third_username__btn .btn",
         card: ".m_third .m_third_card",
+        cardType: ".m_third .m_third_card .m_third_card__tip span",
         cardBtn: ".m_third .m_third_card .m_third_card__btn .btn",
         cardFile: ".m_third .m_third_card .m_third_card__pic .form input",
+        cardBack: ".m_third .m_third_card .m_third_card__pic.back",
+        cardFrontTip: ".m_third .m_third_card .m_third_card__pic.front .tip",
+        cardBackTip: ".m_third .m_third_card .m_third_card__pic.back .tip",
         verify: ".m_third .m_third_verify",
         success: ".m_third .m_third_success",
         successPassword: ".m_third .m_third_success input.info",
@@ -32,15 +45,21 @@ $(document).ready(function () {
     var eleIndex = {
         "0": "index",       // 未注册 -> 首页
         "1": "kyc",         // 已注册 -> kyc 页面
-        "2": "userinfo",    // 已经kyc认证 -> 姓名、身份证号页面
+        "2": "userinfo",    // 已经kyc认证 -> 填写完邮箱国家页面
         "3": "card",        // 已经填写真实姓名和身份证号 -> 身份证图片页面
-        "4": "userinfo",    // 审核拒绝 -> 姓名、身份证号页面
+        "4": "userinfo",    // 审核拒绝 -> 填写完邮箱国家页面
         "5": "verify",      // 待审核 -> 审核中页面
         "6": "success",     // 审核通过 -> 审核成功，设置MT4密码页面
         "7": "complete",    // 已经开户 -> MT4 帐号设置成功页面
+        "8": "username",    // 已经填写完邮箱国家 -> 姓名、身份证号页面 (新增逻辑)
     };
     var kycInfo = {};
     var kycInfoTmp = {};
+    var gender = "1";
+    var cardType = {
+        key: undefined,
+        value: undefined
+    };
     var cardBaseFile = {
         front: false,
         back: false,
@@ -84,6 +103,12 @@ $(document).ready(function () {
         setTimeout(function () {
             getUserStatus();
             getKycList();
+            getCountries();
+
+            laydate.render({
+                elem: '#birth',
+                lang: lang.curLang() === 'en' ? 'en' : 'cn'
+            });
         }, 300);
     }
 
@@ -108,9 +133,15 @@ $(document).ready(function () {
     // setTimeout(function () {
     //     layer.closeAll();
     //     // getKycList();
-    //     step = 0;
+    //     // getCountries();
+    //     step = 8;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
+
+    //     laydate.render({
+    //         elem: '#birth',
+    //         lang: lang.curLang() === 'en' ? 'en' : 'cn'
+    //     });
     // }, 1000);
     
     $(ele.indexBtn).on("tap", function () {
@@ -248,18 +279,88 @@ $(document).ready(function () {
     // userinfo
     $(ele.userinfoBtn).on("tap", function (e) {
         e.preventDefault();
-
-        if ($(ele.userinfoName).val() && $(ele.userinfoIdNo).val() && $(ele.userinfoEmail).val()) {
+        // console.log($(ele.userinfoEmail).val(), $(ele.userinfoCountry).val(), $(ele.userinfoCountry).attr("data-country"), $(ele.userinfoAddress).val())
+        if ($(ele.userinfoEmail).val() && $(ele.userinfoCountry).val() && $(ele.userinfoAddress).val()) {
             publicRequest('thirdSetUserInfo', 'PUT', {
                 email: $(ele.userinfoEmail).val(),
-                realname: $(ele.userinfoName).val(),
-                id_no: $(ele.userinfoIdNo).val()
+                world_code: $(ele.userinfoCountry).attr("data-country"),
+                address: $(ele.userinfoAddress).val()
             }).then(function (data) {
                 // console.log(data);
                 layer.closeAll();
                 if (!data) return;
                 if (data.is_succ) {
+                    step = 8;
+                    goStepPage();
+                    // 神策统计
+                    // sa.track('New_Realname');
+                } else {
+                    layer.open({
+                        content: data.message,
+                        skin: 'msg',
+                        time: 2
+                    });
+                }
+            });
+        } else {
+            layer.open({
+                content: lang.text('third.fillInfoTip'),
+                skin: 'msg',
+                time: 2
+            });
+        }
+    });
+
+    //选择国家
+    $(ele.userinfoSelect).on('change', function (e) {
+        var op = $(this).find('option:selected');
+        // console.log($(op).val(), $(op).text());
+        if ($(op).val()) {
+            $(ele.userinfoCountry).val($(op).text());
+            $(ele.userinfoCountry).attr("data-country", $(op).val());
+        } else {
+            $(ele.userinfoCountry).val(undefined);
+        }
+    });
+
+    // 获取国家、地区列表
+    function getCountries () {
+        publicRequest('getCountries', 'GET').then(function (data) {
+            // console.log(data);
+            if (data.is_succ) {
+                var countryList = {
+                    data: data.data
+                };
+                //使用template模版
+                var html=bt('template_country_info',countryList);
+                //渲染
+                $(".m_third_userinfo select").html(html);
+            }
+        });
+    }
+    // username
+    $(ele.usernameBtn).on("tap", function (e) {
+        e.preventDefault();
+        // console.log($(ele.usernameBirth).val().replace(/-/g, ''))
+        if ($(ele.usernameName).val() && $(ele.usernameCardType).val() && $(ele.usernameIdNo).val() && $(ele.usernameBirth).val()) {
+            publicRequest('thirdSetIdNo', 'PUT', {
+                real_name: $(ele.usernameName).val(),
+                gender: gender,
+                idcard_type: $(ele.usernameCardType).attr("data-type"),
+                id_no: $(ele.usernameIdNo).val(),
+                birth: $(ele.usernameBirth).val().replace(/-/g, '')
+            }).then(function (data) {
+                // console.log(data);
+                layer.closeAll();
+                if (!data) return;
+                if (data.is_succ) {
+                    // 同步证件类型
+                    cardType = {
+                        key: $(ele.usernameCardType).val(),
+                        value: $(ele.usernameCardType).attr("data-type")
+                    };
                     step = 3;
+                    initCardInfo();
                     goStepPage();
                     // 神策统计
                     sa.track('New_Realname');
@@ -279,6 +380,23 @@ $(document).ready(function () {
             });
         }
     });
+    // select gender
+    $(ele.usernameGender).on("tap", function (e) {
+        gender = $(this).attr("data-gender");
+        $(ele.usernameGender).removeClass("active");
+        $(this).addClass("active");
+    });
+    // select card type
+    $(ele.usernameSelect).on('change', function (e) {
+        var op = $(this).find('option:selected');
+        // console.log($(op).val(), $(op).text());
+        if ($(op).val()) {
+            $(ele.usernameCardType).val($(op).text());
+            $(ele.usernameCardType).attr("data-type", $(op).val());
+        } else {
+            $(ele.usernameCardType).val(undefined);
+        }
+    });
     // card
     $(ele.cardFile).on('change', function(e) {
         var file = e.target.files[0];
@@ -293,7 +411,7 @@ $(document).ready(function () {
             back: false,
         };
 
-        if (lang.curLang() === 'en') {  //只需传一张
+        if (cardType.value != '0') {  //只需传一张
             cardBaseFile.back = true;
             cardStatus.back = true;
         }
@@ -303,7 +421,7 @@ $(document).ready(function () {
             layer.open({type: 2, shadeClose: false});
 
             uploadCard('front');
-            if (lang.curLang() !== 'en') {  //只需传一张
+            if (cardType.value == '0') {  //只需传一张
                 uploadCard('back');
             }
             // console.log(cardBaseFile.front, cardBaseFile.back);
@@ -316,6 +434,18 @@ $(document).ready(function () {
             });
         }
     });
+    // 初始化证件页面
+    function initCardInfo () {
+        $(ele.cardType).html(cardType.key);
+
+        if (cardType.value == '0') {
+            $(ele.cardFrontTip).html(lang.text('third.frontCardTip'));
+            $(ele.cardBackTip).html(lang.text('third.backCardTip'));
+        } else {
+            $(ele.cardBack).css("display", "none");
+            $(ele.cardFrontTip).html(lang.text('third.cardTip'));
+        }
+    }
 
     // set Mt4 password
     $(ele.successBtn).on("tap", function (e) {
@@ -533,6 +663,7 @@ $(document).ready(function () {
                 }
             }  
             $(ele.navbarStep2).addClass("active");
+            $(ele.navbarStep3).addClass("active");
         }
         if (step === 4) {
             $(ele.navbarStep2).addClass("active");
@@ -541,6 +672,7 @@ $(document).ready(function () {
             $(ele.wrapper).addClass("bgm");
             $(ele.navbarStep2).addClass("active");
             $(ele.navbarStep3).addClass("active");
+            $(ele.navbarStep4).addClass("active");
         }
         if (step === 6) {
             $(ele.navbarStep2).addClass("active");
@@ -551,6 +683,10 @@ $(document).ready(function () {
             $(ele.navbarStep2).addClass("active");
             $(ele.navbarStep3).addClass("active");
             $(ele.navbarStep4).addClass("active");
+        }
+        if (step === 8) {
+            $(ele.navbarStep2).addClass("active");
+            $(ele.navbarStep3).addClass("active");
         }
     }
 
