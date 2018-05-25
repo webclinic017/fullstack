@@ -1,32 +1,15 @@
 <div class="space_center_statistics" ng-class="{'align-items-center': personal.basic === 'center.wallet.subpage'}" ng-if="personal.basic === 'center.index' || personal.basic === 'center.wallet.subpage'">
     <ul class="space_center_statistics__title">
-        <li class="space_center_statistics__title-item">${{ personal.my_total_balance || '--' }}</li>
-        <li class="space_center_statistics__title-item">资产总额</li>
-    </ul>
-    <ul class="space_center_statistics__list" ng-if="personal.basic === 'center.index'">
-        <li class="space_center_statistics__list-item">
-            <div>{{ personal.volume || '0.00' }}</div>
-            <div>总交易手数</div>
-        </li>
-        <li class="space_center_statistics__list-item"></li>
-        <li class="space_center_statistics__list-item">
-            <div ng-class="{'font-danger': personal.profit.indexOf('-') < 0, 'font-success': personal.profit.indexOf('-') >= 0}">${{ personal.profit || '0.00' }}</div>
-            <div>总收益</div>
-        </li>
-        <li class="space_center_statistics__list-item" ></li>
-        <li class="space_center_statistics__list-item">
-            <div ng-class="{'font-danger': personal.profit_rate.indexOf('-') < 0, 'font-success': personal.profit_rate.indexOf('-') >= 0}">{{ personal.profit_rate || '0.00' }}%</div>
-            <div>总收益率</div>
-        </li>
+        <li class="space_center_statistics__title-item">${{ personal.wallet_balance || '--' }}</li>
+        <li class="space_center_statistics__title-item">零钱包总额</li>
     </ul>
 
-    <div class="space_center_statistics__wallet" ng-if="personal.basic === 'center.wallet.subpage'">
+    <div class="space_center_statistics__wallet">
         <div class="block_btn_group text-right">
-            <a ui-sref="space.asset.subpage({ subpage: 'deposit', type: 'wallet'})" class="tw-btn tw-btn-capsule-gradient tw-btn-md">划入交易账户</a>
+            <a ui-sref="space.asset.subpage({ subpage: 'deposit', type: 'wallet'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md">充值</a>
             <a ui-sref="space.asset.subpage({ subpage: 'withdraw', type: 'wallet'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md">提现</a>
-            <a ng-if="personal.basic === 'center.index'" ui-sref="space.center.wallet.subpage({ subpage: 'summary'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md">查看明细</a>
-            <a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md">管理银行卡</a>
-            <a ng-if="personal.basic === 'center.wallet.subpage'" ui-sref="space.center.index" class="tw-btn tw-btn-capsule-bordered tw-btn-md">返回</a>
+            <a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md" ui-sref-active="tw-btn-capsule-gradient">查看明细</a>
+            <a ui-sref="space.center.wallet.subpage({ subpage: 'bankcard'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md" ui-sref-active="tw-btn-capsule-gradient">管理银行卡</a>
         </div>
     </div>
 </div>

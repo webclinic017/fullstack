@@ -19,16 +19,6 @@
             <div>总收益率</div>
         </li>
     </ul>
-
-    <div class="space_center_statistics__wallet" ng-if="personal.basic === 'center.wallet.subpage'">
-        <div class="block_btn_group text-right">
-            <a ui-sref="space.asset.subpage({ subpage: 'deposit', type: 'wallet'})" class="tw-btn tw-btn-capsule-gradient tw-btn-md">划入交易账户</a>
-            <a ui-sref="space.asset.subpage({ subpage: 'withdraw', type: 'wallet'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md">提现</a>
-            <a ng-if="personal.basic === 'center.index'" ui-sref="space.center.wallet.subpage({ subpage: 'summary'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md">查看明细</a>
-            <a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md">管理银行卡</a>
-            <a ng-if="personal.basic === 'center.wallet.subpage'" ui-sref="space.center.index" class="tw-btn tw-btn-capsule-bordered tw-btn-md">返回</a>
-        </div>
-    </div>
 </div>
 
 <div class="space_center_summary" ng-if="personal.basic === 'center.index'">
@@ -108,7 +98,7 @@
     </div>
 </div>
 
-<div class="space_block" ng-class="{'gapped': personal.basic != 'center.wallet.subpage'}" ng-if="personal.basic === 'center.index'">
+<!-- <div class="space_block" ng-class="{'gapped': personal.basic != 'center.wallet.subpage'}" ng-if="personal.basic === 'center.index'">
     <div class="row">
         <div class="col-xs-3">
             <div class="block_title">零钱包</div>
@@ -127,4 +117,4 @@
     <div class="row">
         <p class="block_tips">高手分成收益与代理商佣金收益会存入零钱包，您可以提现或划入交易账户。</p>
     </div>
-</div>
+</div> -->

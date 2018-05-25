@@ -213,13 +213,13 @@ $tw-btn-bg-black-end: #2b323e;
 }
 
 // 按钮形状
-.tw-btn-capsule-gradient {
-    @include tw-button-variant($tw-btn-color, none, none, $tw-btn-radius-capsule);
-    @include tw-button-gradient-vertical($tw-btn-bg-start, $tw-btn-bg-end);
-}
 .tw-btn-capsule-bordered {
     @include tw-button-variant($tw-btn-color, $tw-btn-border, $tw-btn-border-hover, $tw-btn-radius-capsule);
     @include tw-button-color-trans(lighten($tw-btn-color, 30%), $tw-btn-color);
+}
+.tw-btn-capsule-gradient {
+    @include tw-button-variant($tw-btn-color, none, none, $tw-btn-radius-capsule);
+    @include tw-button-gradient-vertical($tw-btn-bg-start, $tw-btn-bg-end);
 }
 .tw-btn-square-gradient {
     @include tw-button-variant($tw-btn-color, none, none, $tw-btn-radius-square);
