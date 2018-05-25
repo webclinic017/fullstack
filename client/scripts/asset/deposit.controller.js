@@ -248,7 +248,7 @@
                                 $scope.isLoading = false;
                                 openDepositRuleMdl({
                                     type: 'cseMessage',
-                                    tit: '系统提示',
+                                    tit: '是否有CSE Wallet帐号？',
                                     callback: submitDeposit
                                 });
                             } else {

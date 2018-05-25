@@ -104,6 +104,10 @@
         return false;
     });
 
+    DOM['$share_tel'].on("tap", function () {
+        sa.track('inp_PN');
+    });
+
     function invitation() {
         var versionName = getVersionName()
         var version = versionName ? Number(versionName.replace(/\./gi, '')) : 0
