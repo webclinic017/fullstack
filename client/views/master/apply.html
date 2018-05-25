@@ -3,16 +3,45 @@
         <span ng-if="applyInfo.data.status != 0 && applyInfo.data.status != 3">成为TigerWit高手，获取更多收益</span>
         <span ng-if="applyInfo.data.status == 0">高手申请审核中，请耐心等待</span>
         <span ng-if="applyInfo.data.status == 3">注意事项</span>
-        <span class="btn btn-primary btn-sm" ng-if="applyInfo.data.status == -1" ng-click="applyMaster()">立即申请成为高手</span>
-        <span class="btn btn-primary btn-sm" ng-if="applyInfo.data.status == 3 && !applyInfo.loading2" ng-click="comfirmApplyMaster()">确认提交</span>
-        <span class="btn btn-primary btn-sm" ng-if="applyInfo.data.status == 3 && applyInfo.loading2">提交中..</span>
+        <div class="process">
+            <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-if="applyInfo.data.status == -1" ng-click="applyMaster()">立即申请成为高手</span>
+            <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-if="applyInfo.data.status == 3 && !applyInfo.loading2" ng-click="comfirmApplyMaster()">确认提交</span>
+            <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-if="applyInfo.data.status == 3 && applyInfo.loading2">提交中..</span>
+        </div>
     </div>
     <div class="space_apply__loading" ng-if="applyInfo.loading">
         <img src="/ngsrc/loading.gif">
     </div>
     <div class="space_apply__content" ng-if="!applyInfo.loading">
         <div class="space_apply__tip" ng-if="applyInfo.data.status == -1">
-            榜单投资者被其他用户复制跟随，会获得复制者20%的盈利分成，申请成为高手需达成以下条件：
+            榜单投资者被其他用户复制跟随，会获得复制者20%的盈利分成，请选择账号：
+        </div>
+        <ul class="space_apply__list">
+            <li class="space_apply__list-item active">
+                <div class="account_title">
+                    <span>备用账号#1</span>
+                    <span>自主交易</span>
+                </div>
+                <ul class="account_details">
+                    <li>
+                        <p>$5000.00</p>
+                        <p>浮动收益</p>
+                    </li>
+                    <li>
+                        <p>$5000</p>
+                        <p>浮动收益</p>
+                    </li>
+                    <li>
+                        <p>$5000</p>
+                        <p>浮动收益</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="space_apply__content" ng-if="!applyInfo.loading">
+        <div class="space_apply__tip" ng-if="applyInfo.data.status == -1">
+            未达成以下高手申请条件，请继续努力
         </div>
         <div class="space_apply__tip" ng-if="applyInfo.data.status == 0">
             高手申请由工作人员人工审核，我们会尽快完成审核并将结果通知您

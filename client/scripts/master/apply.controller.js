@@ -19,7 +19,8 @@
         $scope.comfirmApplyMaster = comfirmApplyMaster;
 
         getMasterCondition();
-
+        // 模拟账号列表
+        $scope.applyInfo.data.accountList = {}
         function getMasterCondition() {
             trader.getMasterCondition().then(function (data) {
                 $scope.applyInfo.loading = false;

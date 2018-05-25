@@ -164,7 +164,7 @@
                     url: '/center/wallet/:subpage',
                     views: {
                         'basic@space.center.wallet': {
-                            templateUrl: '/views/space/center.html',
+                            templateUrl: '/views/wallet/toolbar.html',
                             controller: ''
                         },
                         'detail@space.center.wallet': {
