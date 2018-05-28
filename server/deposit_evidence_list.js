@@ -117,10 +117,11 @@ module.exports = [
         title: null,
         tip: [
           "Step1：登录招商银行官网",
-          "Step2：点击账户管理 > 交易查询 > 活期交易查询 > 找到充值记录",
+          "Step2：点击账户管理 > 交易查询 > 活期交易查询 > 找到充值记录 > 点击右上角“打印”按键",
           "Step3：截取对应的充值记录，截图内需包含持卡人姓名、银行账号、充值金额等内容。"
         ],
         pic: [
+          "/white_label/deposit/cmb-3.jpg",
           "/white_label/deposit/cmb-1.png"
         ]
       },
