@@ -11,7 +11,7 @@
         // 缓存当前父scope 给弹窗控制器使用
         var parentScope = $scope;
         parentScope.hasChooseedCard = false
-        parentScope.cardList = undefined;
+        parentScope.cardList = undefined;   // 银行卡列表
         parentScope.manageCardModalInstance = undefined;
 
         var companyName = $cookies["company_name"];

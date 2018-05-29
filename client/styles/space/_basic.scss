@@ -36,7 +36,6 @@ $font-space-gray-color: $gray-dark;
     @extend .block_btn_group;
 
 }
-
 // space.center
 @include b(space_center_summary){
     margin-bottom: 50px;
