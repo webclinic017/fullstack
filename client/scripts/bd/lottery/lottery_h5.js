@@ -99,7 +99,7 @@
             // console.log(data);
             isReady = true;
             if (data.is_succ) {
-                var message = data.message;
+                var message = data.data;
                 $("#lottery_status_tip").html(message.error_msg);
 
                 if (message.is_succ) {
