@@ -134,7 +134,7 @@
             var para = {};
             if ($scope.loginType == 'code') {
                 para = {
-                    phone: $scope.account.step1Phone,
+                    account: $scope.account.step1Phone,
                     password: $scope.account.step1Code,
                     login_type: 2,
                     remember: $scope.rememberLoginStatus ? 1 : 0,
@@ -145,7 +145,7 @@
                 };
             } else {
                 para = {
-                    phone: $scope.account.step2Phone,
+                    account: $scope.account.step2Phone,
                     password: account.encrypt($scope.account.step2Password),
                     login_type: 1,
                     remember: $scope.rememberLoginStatus ? 1 : 0
@@ -161,6 +161,13 @@
                 $scope.loginBtnStatus = true;
 
                 if (data.is_succ) {
+                    $timeout(function () {
+                        var user_id = $cookies['user_code'];
+                        // console.log(user_id);
+                        if (user_id) {
+                            sa.login(user_id);
+                        }
+                    }, 300);
                     if (($scope.loginType == 'code') && data.data.initial && (data.data.initial == 1)) {
                         // 新用户
                         $scope.loginStep1 = 2;
