@@ -134,7 +134,7 @@
             var para = {};
             if ($scope.loginType == 'code') {
                 para = {
-                    phone: $scope.account.step1Phone,
+                    account: $scope.account.step1Phone,
                     password: $scope.account.step1Code,
                     login_type: 2,
                     remember: $scope.rememberLoginStatus ? 1 : 0,
@@ -145,7 +145,7 @@
                 };
             } else {
                 para = {
-                    phone: $scope.account.step2Phone,
+                    account: $scope.account.step2Phone,
                     password: account.encrypt($scope.account.step2Password),
                     login_type: 1,
                     remember: $scope.rememberLoginStatus ? 1 : 0
