@@ -37,7 +37,7 @@
             if (logined) {
                 // 获取资产信息、个人信息
                 account.getPersonalInfo().then(function (data) {
-                    // console.log('info', data);
+                    console.log('info', data);
                     if (!data) return;
                     angular.extend($scope.main, data);
                 });

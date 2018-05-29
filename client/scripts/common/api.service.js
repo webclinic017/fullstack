@@ -69,6 +69,7 @@
             depositApi: urlOrigin2 + '/payment/deposit',
             getDepositLimitApi: urlOrigin2 + '/payment/deposit/limits',
             getDepositPlatformApi: urlOrigin2 + '/payment/deposit/platform',
+            getWithdrawPlatformApi: urlOrigin2 + '/payment/withdraw_list',
             getFXRateApi: urlOrigin2 + '/payment/rates',
             getIsWithdrawApi: urlOrigin2 + '/v2/payment/withdraw/limits',
             walletDepositApi: urlOrigin2 + '/wallet/deposit',
