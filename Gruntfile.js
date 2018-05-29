@@ -482,7 +482,8 @@ module.exports = function (grunt) {
         if (node_env == "dev") node_env = "development";
         if (node_env == "pro") node_env = "production";
         // set CDN URL
-        CDN_URL = url === 'www' ? 'https://static.tigerwitfx.com' : 'https://staticdemo.tigerwitfx.com';
+        // 通行证暂时不使用CDN 2018.05.29
+        // CDN_URL = url === 'www' ? 'https://static.tigerwitfx.com' : 'https://staticdemo.tigerwitfx.com';
         var url_path, login_public_key;
 
         url_path = companyInfo[company][url]["url_path"];

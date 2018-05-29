@@ -161,6 +161,13 @@
                 $scope.loginBtnStatus = true;
 
                 if (data.is_succ) {
+                    $timeout(function () {
+                        var user_id = $cookies['user_code'];
+                        // console.log(user_id);
+                        if (user_id) {
+                            sa.login(user_id);
+                        }
+                    }, 300);
                     if (($scope.loginType == 'code') && data.data.initial && (data.data.initial == 1)) {
                         // 新用户
                         $scope.loginStep1 = 2;

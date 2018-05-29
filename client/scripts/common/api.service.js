@@ -10,15 +10,15 @@
         // php接口要用http://proxy.tigerwit.com请求
 
         var urlOrigin = $cookies["access_origin"] || '';    // node 中写入cookie
-        var urlOrigin2 = $cookies["access_origin2"] || '';    // node 中写入cookie
+        var urlOrigin2 = $cookies["access_origin2"] || '/api';    // node 中写入cookie
         var o = urlOrigin;
         // console.log('urlOrigin2',urlOrigin2)
-
+        urlOrigin2 = urlOrigin2 + '/v3';
         var account = {
             getPersonalInfoDegreeApi: urlOrigin2 + '/user/perfect_degree',
             loginByMt4Api: urlOrigin2 + '/login/mt4_account',
-            loginApi: urlOrigin2 + '/v2/auth/login',
-            updataUserInfoApi: urlOrigin2 + '/v2/user/auth_info',
+            loginApi: urlOrigin2 + '/auth/login',
+            updataUserInfoApi: urlOrigin2 + '/user/auth_info',
             updataId: urlOrigin2 + '/user/update_idno',
             setUsername: urlOrigin2 + '/user/username',
             checkLoginedApi: urlOrigin2 + '/auth/check',
@@ -30,7 +30,7 @@
             uploadAvatarForm: urlOrigin2 + '/user/upload_avatar',
             setNewPwdApi: urlOrigin2 + '/forget_passwd',
             getPersonalInfoApi: urlOrigin2 + '/user/info',
-            getAssetInfoApi: urlOrigin2 + '/v2/centre/asset',
+            getAssetInfoApi: urlOrigin2 + '/centre/asset',
             getUnreadLengthApi: urlOrigin2 + '/notify/number',
             getNoticeListApi: urlOrigin2 + '/notify',
             getAllReadApi: urlOrigin2 + '/notify/read',
@@ -41,7 +41,7 @@
             setPhoneApi: urlOrigin2 + '/user/phone',
             logoutApi: urlOrigin2 + '/auth/logout',
             getKycApi: urlOrigin2 + '/user/kyc_map',
-            getAuthStatus: urlOrigin2 + '/v2/user/auth_status',
+            getAuthStatus: urlOrigin2 + '/user/auth_status',
             setKycApi: urlOrigin2 + '/user/kyc',
 
             // getRCaptchaApi: urlOrigin2 + '/validation/send_phone_code',
@@ -70,7 +70,7 @@
             getDepositLimitApi: urlOrigin2 + '/payment/deposit/limits',
             getDepositPlatformApi: urlOrigin2 + '/payment/deposit/platform',
             getFXRateApi: urlOrigin2 + '/payment/rates',
-            getIsWithdrawApi: urlOrigin2 + '/v2/payment/withdraw/limits',
+            getIsWithdrawApi: urlOrigin2 + '/payment/withdraw/limits',
             walletDepositApi: urlOrigin2 + '/wallet/deposit',
             walletWithdrawApi: urlOrigin2 + '/wallet/withdraw',
             walletCanWithdrawApi: urlOrigin2 + '/wallet/valid_balance',
