@@ -132,7 +132,11 @@ module.exports = {
       en: "Please upload your passport"
     },
     third_verify1: {
-      zh: "认证信息已提交，正在审核中",
+      zh: "认证信息已提交",
+      en: "Submitted"
+    },
+    third_verify1_1: {
+      zh: "正在审核中",
       en: "We’re now processing your application"
     },
     third_verify2: {
