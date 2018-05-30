@@ -36,7 +36,7 @@ function setEnvCf(req, res) {
     global_modelRegular = require('./model/modelRegular')();
     gloal_modelRegularDetail = require('./model/modelRegularDetail');
     // console.log(global_modelRegular);
-    setCompanyCookie(res);
+    setCompanyCookie(req, res);
 }
 
 function extendPublic(data, req) {
