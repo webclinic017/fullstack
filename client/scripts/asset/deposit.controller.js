@@ -380,7 +380,8 @@
                     $scope.type = params.type;
                     $scope.msgInfo = {
                         msgTitle: params.tit || '提示',
-                        msgPop: params.pop,
+                        msgPopTitle: params.pop.title,
+                        msgPopContent: params.pop.content,
                         msgUrl: params.url
                     };
                     $scope.callback = params.callback || null;

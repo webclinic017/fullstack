@@ -12,6 +12,9 @@
     <h5 class="sys_modal__sub_title" ng-if="copyTrade.title == 'copy'">
         {{ copyTrade.username }}
     </h5>
+    <h5 class="sys_modal__title" ng-if="copyTrade.title == 'tip'">
+        提示
+    </h5>
 
     <div class="sys_modal__content" ng-show="step == 1">
         <form class="mg-tp-30" name="copyForm" novalidate>
@@ -122,14 +125,14 @@
             <div class="clearfix" ng-if="!hasCanceled">
                 <button ng-if="!frontErr.insufficient.show && clickable.copy && copyTrade.title == 'copy'" 
                     class="btn btn-lt btn-dark fr" 
-                    ng-class="{ 'btn-dark' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
+                    ng-class="{ 'btn-disabled' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
                     ng-click="submitStep1(false)">
                     复制交易
                 </button>
 
                 <button ng-if="!frontErr.insufficient.show && clickable.copy && copyTrade.title == 'modify'" 
                     class="btn btn-lt btn-dark fr" 
-                    ng-class="{ 'btn-dark' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
+                    ng-class="{ 'btn-disabled' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
                     ng-click="submitStep1(false)">
                     修改
                 </button>
@@ -144,7 +147,7 @@
             <div class="clearfix" ng-if="hasCanceled">
                 <button ng-if="!frontErr.insufficient.show && clickable.copy" 
                     class="btn btn-lt btn-dark fr" 
-                    ng-class="{ 'btn-dark' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
+                    ng-class="{ 'btn-disabled' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
                     ng-click="submitStep1(true)">
                     确认修改
                 </button>
@@ -221,6 +224,19 @@
             <button class="btn btn-primary btn-lt fr" ng-click="closeModal()">
                 确定
             </button>
+        </div>
+    </div>
+
+    <div class="sys_modal__content" ng-if="step == 4">
+        <div>
+            <p class="text-center mg-tp-30 font-normal">
+                {{copyTrade.evidenceMsg}}
+            </p>
+        </div>
+        <div class="sys_modal__btn_wrapper mg-tp-20 clearfix">
+            <a class="btn btn-primary btn-lt fr" href="/space/#/space/asset/evidence">
+                上传凭证
+            </a>
         </div>
     </div>
 
