@@ -3,32 +3,32 @@
     <div class="web_agreement_modal_for_layer web_new_register">
         <div class="agment_mdl_con web font-size-16">
             <div class="agment_mdl_con__title font-size-24">
-                注册协议
+                <%= lang.text('agment_title1')%>
             </div>
             <div class="agment_mdl_con__detail mg-tp-20">
                 <p>
-                    <span class="font-bold-light">【审慎阅读】</span>
-                    您在申请注册流程中完成注册前，应当认真阅读以下协议。
-                    <span class="font-decoration font-bold-light">请您务必审慎阅读、充分理解协议中《条件和条款》及相关条款内容，其中包括： </span>
+                    <span class="font-bold-light"><%= lang.text('agment_subTitle1')%></span>
+                    <%= lang.text('agment_subTitle2')%>
+                    <span class="font-decoration font-bold-light"><%= lang.text('agment_subTitle3')%> </span>
                 </p>
-                <p class="font-decoration font-bold-light">1、与您约定免除或限制责任的条款； </p>
-                <p class="font-decoration font-bold-light">2、与您约定法律适用和管辖的条款； </p>
-                <p class="font-decoration font-bold-light">3、其他以粗体下划线标识的重要条款。 </p>
-                <p>如您对协议有任何疑问，可拨打客服热线<%= lang.text('telephone')%>进行咨询。 </p>
-                <p><span class="font-bold-light">【特别提示】</span> 当您阅读并同意协议且完成全部注册程序后，即表示您已充分阅读、理解并接受协议的全部内容。 </p>
-                <p class="text-indent6">您已知晓并同意<%= lang.text('companyZhName')%>将为您开通巴哈马的零售客户类型账户。 </p>
-                <p class="text-indent6">如您因平台服务与<%= lang.text('companyZhName')%>发生争议的，适用《利益冲突政策》处理。 </p>
-                <p class="font-decoration font-bold-light">阅读协议的过程中，如果您不同意相关协议或其中任何条款约定，您应立即停止注册程序。 </p>
-                <a class="link" target="_blank" href="/agreement/client">《客户协议》</a>
-                <a class="link" target="_blank" href="/agreement/risk">《风险披露声明》</a>
-                <a class="link" target="_blank" href="/agreement/cookie">《隐私政策》</a>
-                <a class="link" target="_blank" href="/agreement/legal">《法律声明》</a>
+                <p class="font-decoration font-bold-light"><%= lang.text('agment_tip1')%> </p>
+                <p class="font-decoration font-bold-light"><%= lang.text('agment_tip2')%>  </p>
+                <p class="font-decoration font-bold-light"><%= lang.text('agment_tip3')%>  </p>
+                <p><%= lang.text('agment_tip4')%>  </p>
+                <p><span class="font-bold-light"><%= lang.text('agment_tip5')%></span> <%= lang.text('agment_tip6')%> </p>
+                <p class="text-indent6"><%= lang.text('agment_tip7')%> </p>
+                <p class="text-indent6"><%= lang.text('agment_tip8')%> </p>
+                <p class="font-decoration font-bold-light"><%= lang.text('agment_tip9')%> </p>
+                <a class="link" target="_blank" href="/agreement/client"><%= lang.text('agment_tip10')%></a>
+                <a class="link" target="_blank" href="/agreement/risk"><%= lang.text('agment_tip11')%></a>
+                <a class="link" target="_blank" href="/agreement/cookie"><%= lang.text('agment_tip12')%></a>
+                <a class="link" target="_blank" href="/agreement/legal"><%= lang.text('agment_tip13')%></a>
                 <p class="text-center mg-tp-20">
                     <span class="agreement-btn agree_button" data-btn-action="webNew.agree_user_agreement">
-                        同意协议
+                        <%= lang.text('agment_btn1')%>
                     </span>
                     <span class="agree_button cancle" onclick="layer.closeAll()">
-                        取消
+                        <%= lang.text('agment_btn2')%>
                     </span>
                 </p>
             </div>
@@ -38,23 +38,23 @@
     <div class="web_agreement_modal_for_layer web_old_customer">
         <div class="agment_mdl_con web font-size-16">
             <div class="agment_mdl_con__title font-size-24">
-                温馨提示
+                <%= lang.text('agment_title2')%>
             </div>
             <div class="agment_mdl_con__detail mg-tp-20">
-                <p class="mg-tp-20 mg-bt-20">尊敬的用户，您好：</p>
+                <p class="mg-tp-20 mg-bt-20"><%= lang.text('agment_subTitle4')%></p>
                 <p class="">
-                    我们更新了服务协议，协议中有对您权利义务特别约定以及管辖约定等重要条款。请
-                    <a class="link" target="_blank" href="/web/blog/agreement">点击此处</a>
-                    查看。
+                    <%= lang.text('agment_subTitle5')%>
+                    <a class="link" target="_blank" href="/web/blog/agreement"><%= lang.text('agment_subTitle6')%></a>
+                    <%= lang.text('agment_subTitle7')%>
                 </p>
                 <p class="mg-tp-10">
-                    <span class="font-bold-light">【特别提示】</span>
-                    如果您继续使用我们的服务，表示您已充分阅读、理解并接受协议的全部内容。阅读过程中有任何疑问，可拨打客服热线进行咨询。如您不同意协议中任何条款，您应立即停止使用服务。
+                    <span class="font-bold-light"><%= lang.text('agment_tip5')%></span>
+                    <%= lang.text('agment_tip14')%>
                 </p>
 
                 <p class="text-center mg-tp-20">
                     <span class="agreement-btn btn btn-primary-gradient" data-btn-action="webOld.agree_user_agreement">
-                        知道了
+                        <%= lang.text('agment_btn3')%>
                     </span>
                 </p>
             </div>
@@ -65,38 +65,38 @@
     <div class="h5_agreement_modal_for_layer h5_new_register">
         <div class="agment_mdl_con h5">
             <div class="agment_mdl_con__title">
-                注册协议
+                <%= lang.text('agment_title1')%>
             </div>
             <p class="agree"></p>
             <div class="agment_mdl_con__detail clearfix">
                 <p>
-                    <span class="font-bold-light">【审慎阅读】</span>
-                    您在申请注册流程中完成注册前，应当认真阅读以下协议。
-                    <span class="font-decoration font-bold-light">请您务必审慎阅读、充分理解协议中《条件和条款》及相关条款内容，其中包括： </span>
+                    <span class="font-bold-light"><%= lang.text('agment_subTitle1')%></span>
+                    <%= lang.text('agment_subTitle2')%>
+                    <span class="font-decoration font-bold-light"><%= lang.text('agment_subTitle3')%> </span>
                 </p>
                 <p class="br_gap"></p>
-                <p class="font-decoration font-bold-light">1、与您约定免除或限制责任的条款； </p>
-                <p class="font-decoration font-bold-light">2、与您约定法律适用和管辖的条款； </p>
-                <p class="font-decoration font-bold-light">3、其他以粗体下划线标识的重要条款。 </p>
+                <p class="font-decoration font-bold-light"><%= lang.text('agment_tip1')%> </p>
+                <p class="font-decoration font-bold-light"><%= lang.text('agment_tip2')%>  </p>
+                <p class="font-decoration font-bold-light"><%= lang.text('agment_tip3')%>  </p>
                 <p class="br_gap"></p>
-                <p>如您对协议有任何疑问，可拨打客服热线<%= lang.text('telephone')%>进行咨询。 </p>
+                <p><%= lang.text('agment_tip4')%>  </p>
                 <p class="br_gap"></p>
-                <p><span class="font-bold-light">【特别提示】</span> 当您阅读并同意协议且完成全部注册程序后，即表示您已充分阅读、理解并接受协议的全部内容。 </p>
-                <p class="">您已知晓并同意<%= lang.text('companyZhName')%>将为您开通巴哈马的零售客户类型账户。 </p>
-                <p class="">如您因平台服务与<%= lang.text('companyZhName')%>发生争议的，适用《利益冲突政策》处理。 </p>
+                <p><span class="font-bold-light"><%= lang.text('agment_tip5')%></span> <%= lang.text('agment_tip6')%> </p>
+                <p class=""><%= lang.text('agment_tip7')%> </p>
+                <p class=""><%= lang.text('agment_tip8')%> </p>
                 <p class="br_gap"></p>
-                <p class="font-decoration font-bold-light">阅读协议的过程中，如果您不同意相关协议或其中任何条款约定，您应立即停止注册程序。 </p>
-                <a class="link" target="_blank" data-title="客户协议" href="/agreement/client">《客户协议》</a><br>
-                <a class="link" target="_blank" data-title="风险披露声明" href="/agreement/risk">《风险披露声明》</a><br>
-                <a class="link" target="_blank" data-title="隐私政策" href="/agreement/cookie">《隐私政策》</a><br>
-                <a class="link" target="_blank" data-title="法律声明" href="/agreement/legal">《法律声明》</a><br>
+                <p class="font-decoration font-bold-light"><%= lang.text('agment_tip9')%> </p>
+                <a class="link" target="_blank" data-title="客户协议" href="/agreement/client"><%= lang.text('agment_tip10')%></a><br>
+                <a class="link" target="_blank" data-title="风险披露声明" href="/agreement/risk"><%= lang.text('agment_tip11')%></a><br>
+                <a class="link" target="_blank" data-title="隐私政策" href="/agreement/cookie"><%= lang.text('agment_tip12')%></a><br>
+                <a class="link" target="_blank" data-title="法律声明" href="/agreement/legal"><%= lang.text('agment_tip13')%></a><br>
             </div>
             <p class="mg-tp-20 clearfix button-area">
                 <span class="agreement-btn agree_button sm-size fl" data-btn-action="h5New.agree_user_agreement">
-                    同意协议
+                    <%= lang.text('agment_btn1')%>
                 </span>
                 <span class="agree_button cancle agment_mdl_cancle fr" onclick="">
-                    取消
+                    <%= lang.text('agment_btn2')%>
                 </span>
             </p>
         </div>
@@ -106,22 +106,22 @@
     <div class="h5_agreement_modal_for_layer h5_old_customer">
         <div class="agment_mdl_con h5">
             <div class="agment_mdl_con__title">
-                温馨提示
+                <%= lang.text('agment_title2')%>
             </div>
             <div class="agment_mdl_con__detail">
-                <p class="agree">尊敬的用户，您好：</p>
+                <p class="agree"><%= lang.text('agment_subTitle4')%></p>
                 <p class="">
-                    我们更新了服务协议，协议中有对您权利义务特别约定以及管辖约定等重要条款。请
-                    <a class="link" target="_blank" data-title="用户协议" href="/m/h5_register/agreement">点击此处</a>
-                    查看。
+                    <%= lang.text('agment_subTitle5')%>
+                    <a class="link" target="_blank" data-title="用户协议" href="/m/h5_register/agreement"><%= lang.text('agment_subTitle6')%></a>
+                    <%= lang.text('agment_subTitle7')%>
                 </p>
                 <p class="mg-tp-10">
-                    <span class="font-bold-light">【特别提示】</span>
-                    如果您继续使用我们的服务，表示您已充分阅读、理解并接受协议的全部内容。阅读过程中有任何疑问，可拨打客服热线进行咨询。如您不同意协议中任何条款，您应立即停止使用服务。
+                    <span class="font-bold-light"><%= lang.text('agment_tip5')%></span>
+                    <%= lang.text('agment_tip14')%>
                 </p>
                 <p class="text-center mg-tp-30">
                     <span class="agreement-btn agree_button" data-btn-action="h5Old.agree_user_agreement">
-                        知道了
+                        <%= lang.text('agment_btn3')%>
                     </span>
                 </p>
             </div>

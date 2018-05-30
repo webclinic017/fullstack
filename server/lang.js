@@ -3,6 +3,7 @@
 module.exports = function () {
 
     function Lang(req) {
+        var url = require('url');
         var envConfig = require('./get_env_config').envConfig;
         var company_name = envConfig.company_name;
         var clonedBaidu = envConfig.isCloned;
@@ -21,7 +22,10 @@ module.exports = function () {
                 }
             }
         }
-        this.language = language;
+        if (url.parse(req.url, true).query.lang) {
+            language = url.parse(req.url, true).query.lang;
+        }
+        this.language = language === 'en' ? language : 'zh'; 
         this.data = data;
         this.req = req;
         this.company_name = company_name;
