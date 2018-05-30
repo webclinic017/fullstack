@@ -71,12 +71,12 @@
                 window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
 
                 setTimeout(function () {
-                    var user_code = $.cookie("user_code");
+                    var user_id = $.cookie("user_code");
                     // console.log(user_code);
                     if (user_id) {
                         sa.login(user_id);
                     }
-                }, 0);
+                }, 100);
 
                 return true;
             }
@@ -420,6 +420,7 @@
                             login_isNew: true,
                             login_type: '验证码登录'
                         });
+
                         /*跳转到注册成功页面*/
                         if (window.location.pathname.indexOf('t35') >= 0) {
                             var pandaDownloadUrl = '';
