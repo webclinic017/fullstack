@@ -56,15 +56,16 @@ $(document).ready(function () {
     var kycInfo = {};
     var kycInfoTmp = {};
     var gender = "1";
-    var cardType = {
+    var cardCountry = undefined;    //所选国家，生成证件类型列表
+    var cardType = {    //证件类型
         key: undefined,
         value: undefined
     };
-    var cardBaseFile = {
+    var cardBaseFile = {    //证件
         front: false,
         back: false,
     };
-    var cardStatus = {
+    var cardStatus = {      //证件上传状态
         front: false,
         back: false,
     };
@@ -290,7 +291,9 @@ $(document).ready(function () {
                 layer.closeAll();
                 if (!data) return;
                 if (data.is_succ) {
+                    cardCountry = $(ele.userinfoCountry).attr("data-country");
                     step = 8;
+                    initCardTypeInfo();
                     goStepPage();
                     // 神策统计
                     // sa.track('New_Realname');
@@ -397,6 +400,18 @@ $(document).ready(function () {
             $(ele.usernameCardType).val(undefined);
         }
     });
+    // 初始化证件类型
+    function initCardTypeInfo () {
+        var cardType = {
+            data: {
+                isCN: cardCountry === 'CN' ? true : false
+            }
+        };
+        //使用template模版
+        var html=bt('template_card_info',cardType);
+        //渲染
+        $(".m_third_username select").html(html);
+    }
     // card
     $(ele.cardFile).on('change', function(e) {
         var file = e.target.files[0];
