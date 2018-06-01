@@ -20,6 +20,7 @@
             deposit: deposit,
             getDepositLimit: getDepositLimit,
             getDepositPlatform: getDepositPlatform,
+            getWithdrawPlatform: getWithdrawPlatform,
             getFXRate: getFXRate,
             getIsWithdraw: getIsWithdraw,
             getMasterBonusSummary: getMasterBonusSummary,
@@ -65,16 +66,8 @@
          *
          * @method bindCard
          */
-        function bindCard(number, name, address, province, city, id, phone) {
-            return publicHttp.dealPublicRequest(o.bindCardApi, 'PUT', {
-                card_no: number,
-                bank_name: name,
-                bank_addr: address,
-                province: province,
-                city: city,
-                id: id,
-                phone: phone
-            });
+        function bindCard(oParams) {
+            return publicHttp.dealPublicRequest(o.bindCardApi, 'PUT', oParams);
         }
 
         /**
@@ -173,6 +166,15 @@
          */
         function getDepositPlatform () {
             return publicHttp.dealPublicRequest(o.getDepositPlatformApi, 'GET');
+        }
+
+        /**
+         * Asset Service 获取出金方式列表
+         *
+         * @method getWithdrawPlatform
+         */
+        function getWithdrawPlatform () {
+            return publicHttp.dealPublicRequest(o.getWithdrawPlatformApi, 'GET');
         }
 
         /**
@@ -278,11 +280,8 @@
          * @method walletWithdraw
          * @param {Number} amount
          */
-        function walletWithdraw(bank_card_id, amount) {
-            return publicHttp.dealPublicRequest(o.walletWithdrawApi, 'POST', {
-                bank_card_id: bank_card_id,
-                amount: amount
-            });
+        function walletWithdraw(params) {
+            return publicHttp.dealPublicRequest(o.walletWithdrawApi, 'POST', params);
         }
 
         /**
