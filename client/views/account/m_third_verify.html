@@ -125,15 +125,7 @@
             <input class="info card_type"
                    type="text"
                    placeholder="<%=lang.text('third_username5')%>">
-            <select class="">
-                <option value=""><%=lang.text('third_select')%></option>
-                <option value="2"><%=lang.text('third_username8')%></option>
-                <option value="0"><%=lang.text('third_username9')%></option>
-                <option value="1"><%=lang.text('third_username10')%></option>
-                <option value="3"><%=lang.text('third_username11')%></option>
-                <option value="4"><%=lang.text('third_username12')%></option>
-                <option value="5"><%=lang.text('third_username13')%></option>
-            </select>
+            <select class=""></select>
         </div>
         <div class="m_third_username__wrapper">
             <input class="info id_no"
@@ -290,5 +282,17 @@
     <option value=""><%=lang.text('third_select')%></option>
     <$for(var i=0;i<data.length;i++){$>
     <option value="<$= data[i].code$>"><% if (lang.currentLanguage() !== 'en') {%><$= data[i].name_cn$><%} else {%><$= data[i].name_en$><%}%></option>
+    <$}$>
+</script>
+<script id="template_card_info" type="text/html">
+    <option value=""><%=lang.text('third_select')%></option>
+    <$if(data.isCN){$> 
+    <option value="2"><%=lang.text('third_username8')%></option>
+    <option value="0"><%=lang.text('third_username9')%></option>
+    <option value="1"><%=lang.text('third_username10')%></option>
+    <$} else {$>
+    <option value="3"><%=lang.text('third_username11')%></option>
+    <option value="4"><%=lang.text('third_username12')%></option>
+    <option value="5"><%=lang.text('third_username13')%></option>
     <$}$>
 </script>
