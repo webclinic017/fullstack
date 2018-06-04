@@ -128,12 +128,21 @@
                         }
                     }
                 })
+                .state('space.center.invest.home', {
+                    url: '/center/invest/home',
+                    views: {
+                        'basic@space.center.invest': {
+                            templateUrl: '/views/invest/invest_home.html',
+                            controller: 'InvestHomeController'
+                        }
+                    }
+                })
                 .state('space.center.invest.subpage', {
                     authenticated: true,
                     url: '/center/invest/:subpage',
                     views: {
                         'basic@space.center.invest': {
-                            templateUrl: '/views/space/center.html',
+                            templateUrl: '/views/invest/single_account.html',
                             controller: ''
                         },
                         'detail@space.center.invest': {

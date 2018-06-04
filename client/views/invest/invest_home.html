@@ -1,0 +1,128 @@
+<div class="space_center_statistics" >
+    <ul class="space_center_statistics__title">
+        <li class="space_center_statistics__title-item">${{ totalDealAccount.total_balance || '--' }}</li>
+        <li class="space_center_statistics__title-item">资产总额</li>
+    </ul>
+    <ul class="space_center_statistics__list">
+        <li class="space_center_statistics__list-item">
+            <div>{{ totalDealAccount.total_volume || '0.00' }}</div>
+            <div>总交易手数</div>
+        </li>
+        <li class="space_center_statistics__list-item"></li>
+        <li class="space_center_statistics__list-item">
+            <div ng-class="{'font-danger': totalDealAccount.total_profit.indexOf('-') < 0, 'font-success': totalDealAccount.total_profit.indexOf('-') >= 0}">${{ totalDealAccount.total_profit || '0.00' }}</div>
+            <div>总盈利</div>
+        </li>
+        <li class="space_center_statistics__list-item" ></li>
+        <li class="space_center_statistics__list-item">
+            <div ng-class="{'font-danger': totalDealAccount.profit_rate.indexOf('-') < 0, 'font-success': totalDealAccount.profit_rate.indexOf('-') >= 0}">{{ totalDealAccount.profit_rate || '0.00' }}%</div>
+            <div>总收益率</div>
+        </li>
+    </ul>
+</div>
+
+
+<div class="space_center_trading">
+    <div class="row">
+        <div class="col-xs-5">
+            <div class="block_title">交易子账户</div>
+        </div>
+        <div class="col-xs-7">
+            <div class="block_btn_group text-right">
+                <a class="tw-btn tw-btn-capsule-bordered tw-btn-md">创建子账号</a>
+                <a ui-sref="space.center.index" class="tw-btn tw-btn-capsule-bordered tw-btn-md">申请高手</a>
+            </div>
+        </div>
+    </div>
+    <ul class="space_sub_account">
+        <li class="space_sub_account__list" ng-repeat="dealAccount in dealAccountList">
+            <ul class="space_sub_account_info">
+                <li class="space_sub_account_info__list">
+                    <ul>
+                        <li>
+                            <div>
+                                <span ng-if="!dealAccount.editName">
+                                    <span class="name" >{{ dealAccount.account_name || "账号" }}</span>
+                                    <span class="edit" ng-if="dealAccount.account_type !== 2" ng-click="editAccountName(dealAccount)">🖌</span>
+                                </span>
+                                <span class=“edit-name” ng-if="dealAccount.editName">
+                                    <input type="text" ng-model="info.account_name" ng-blur="confirmAccountName(dealAccount)">
+                                    <!-- <span ng-blur="confirmAccountName(dealAccount)">确定</span> -->
+                                </span>
+                                <span class="type superior" ng-if="dealAccount.account_type === 3">高手交易</span>
+                                <span class="type documentary" ng-if="dealAccount.account_type === 2">跟单交易</span>
+                            </div>
+                            <div class="mt4id">MT4 ID: {{ dealAccount.mt4_id }}</div>
+                        </li>
+                        <li>
+                            <a class="progress" title="复制人数">
+                                <span class="bar-bg">
+                                    <span class="bar-on">
+                                    
+                                    </span>
+                                </span> 
+                            </a>
+                            <div class="master_category">
+                                <span class="grade">高手类别<span>A</span></span><a class="details">查看详情 &gt;</a>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="space_sub_account_info__list">
+                    <ul>
+                        <li>
+                            <p>{{ dealAccount.equity }}</p>
+                            <p>资产净值</p>
+                        </li>
+                        <li>
+                            <p>{{ dealAccount.floating_profit }}</p>
+                            <p>浮动盈亏</p>
+                        </li>
+                        <li class="noLine">
+                            <p>{{ dealAccount.margin_level }}</p>
+                            <p>保证金比例</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="space_sub_account_info__list">
+                    <span>详情</span>
+                </li>
+            </ul>
+        </li>
+        <!-- <li class="space_sub_account__list">
+            <ul class="space_sub_account_info">
+                <li class="space_sub_account_info__list">
+                    <ul>
+                        <li>
+                            <div>
+                                <span class="name">跟单账号</span>
+                                <span class="edit">🖌</span>
+                                <span class="type " ng-class="{'superior':false, 'documentary': true}">跟单交易</span>
+                            </div>
+                            <div class="mt4id">MT4 ID: 1231231231</div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="space_sub_account_info__list">
+                    <ul>
+                        <li>
+                            <p>$1213123</p>
+                            <p>资产净值</p>
+                        </li>
+                        <li>
+                            <p>$1213123</p>
+                            <p>资产净值</p>
+                        </li>
+                        <li class="noLine">
+                            <p>$1213123</p>
+                            <p>资产净值</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="space_sub_account_info__list">
+                    <span>详情</span>
+                </li>
+            </ul>
+        </li> -->
+    </ul>
+</div>

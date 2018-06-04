@@ -277,7 +277,7 @@
     // border: 1px solid $gray;
     display: inline-block;
     vertical-align: middle;
-    padding-left: 30px;
+    // padding-left: 30px;
 
     > li {
         position: relative;
@@ -327,7 +327,7 @@
         }
 
         &:after {
-            background-color: $brand-primary;
+            background-color: $brand-primary-darkest;
         }
     }
 

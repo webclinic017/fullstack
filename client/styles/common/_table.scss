@@ -6,7 +6,6 @@ table {
     width: 100%;
     max-width: 100%;
     text-align: center;
-
     > thead,
     > tbody {
         > tr {
@@ -102,3 +101,13 @@ table {
         background-color: $gray-light; 
     }
 }
+// .table-fff {
+//     > thead {
+//         > tr {
+//             > th {
+//                 color: rgb(36, 42, 54);
+//                 background: none;
+//             }
+//         }
+//     }
+// }

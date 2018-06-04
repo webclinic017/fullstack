@@ -98,8 +98,8 @@
                         });
                     });
                     $scope.$on('$stateChangeStart', function (event, toState, toParams) {
-                        // console.log(toState.name);
-                        if (toState.name.indexOf('center') === -1) {
+                        // console.log(toState);
+                        if (toState.name !== "space.center.index") {
                             $interval.cancel(summaryId);
                         } else {
                             loopAsset();
@@ -127,10 +127,10 @@
                 // console.info(data);
                 if (data.is_succ) {
                     angular.extend($scope.personal, data.data);
-                    var my_total_balance = (Number(data.data.balance)+Number(data.data.wallet_balance)).toFixed(2);
-                    angular.extend($scope.personal, {
-                        my_total_balance: my_total_balance
-                    });
+                    // var my_total_balance = (Number(data.data.balance)+Number(data.data.wallet_balance)).toFixed(2);
+                    // angular.extend($scope.personal, {
+                    //     my_total_balance: my_total_balance
+                    // });
                 } 
             });
         }

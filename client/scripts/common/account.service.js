@@ -23,6 +23,9 @@
             getPersonalInfo: getPersonalInfo,
             getPersonalInfoDegree: getPersonalInfoDegree,
             getAssetInfo: getAssetInfo,
+            getTotalDealAccount: getTotalDealAccount,
+            getDealAccountList: getDealAccountList,
+            setDealAccountName: setDealAccountName,
             getUnreadLength: getUnreadLength,
             getNoticeList: getNoticeList,
             getAllRead: getAllRead,
@@ -279,6 +282,39 @@
         function getAssetInfo() {
             return publicHttp.dealPublicRequest(o.getAssetInfoApi, 'GET', {
                 type: 0
+            });
+        }
+
+        /**
+         * Account Service 获取交易账户信息
+         * 总余额、总交易手数、总收益等
+         *
+         * @method getTotalDealAccount
+         */
+        function getTotalDealAccount() {
+            return publicHttp.dealPublicRequest(o.getTotalDealAccountApi, 'GET');
+        }
+
+        /**
+         * Account Service 获取交易账户列表
+         * 交易账户类型、交易账户名称，交易账户MT4Id、浮动收益
+         *
+         * @method getDealAccountList
+         */
+        function getDealAccountList() {
+            return publicHttp.dealPublicRequest(o.getDealAccountListApi, 'GET');
+        }
+
+        /**
+         * Account Service 修改交易账户名称
+         * name值
+         *
+         * @method setDealAccountName
+         */
+        function setDealAccountName(mt4_id, account_name) {
+            return publicHttp.dealPublicRequest(o.setDealAccountNameApi, 'PUT', {
+                mt4_id: mt4_id,
+                account_name: account_name
             });
         }
 

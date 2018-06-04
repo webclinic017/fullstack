@@ -1,17 +1,17 @@
 <div class="space_center_statistics" ng-class="{'align-items-center': personal.basic === 'center.wallet.subpage'}" ng-if="personal.basic === 'center.index' || personal.basic === 'center.wallet.subpage'">
     <ul class="space_center_statistics__title">
-        <li class="space_center_statistics__title-item">${{ personal.my_total_balance || '--' }}</li>
+        <li class="space_center_statistics__title-item">${{ personal.total_balance || '--' }}</li>
         <li class="space_center_statistics__title-item">资产总额</li>
     </ul>
     <ul class="space_center_statistics__list" ng-if="personal.basic === 'center.index'">
         <li class="space_center_statistics__list-item">
-            <div>{{ personal.volume || '0.00' }}</div>
+            <div>{{ personal.total_volume || '0.00' }}</div>
             <div>总交易手数</div>
         </li>
         <li class="space_center_statistics__list-item"></li>
         <li class="space_center_statistics__list-item">
-            <div ng-class="{'font-danger': personal.profit.indexOf('-') < 0, 'font-success': personal.profit.indexOf('-') >= 0}">${{ personal.profit || '0.00' }}</div>
-            <div>总收益</div>
+            <div ng-class="{'font-danger': personal.total_profit.indexOf('-') < 0, 'font-success': personal.total_profit.indexOf('-') >= 0}">${{ personal.total_profit || '0.00' }}</div>
+            <div>总盈利</div>
         </li>
         <li class="space_center_statistics__list-item" ></li>
         <li class="space_center_statistics__list-item">
@@ -23,28 +23,31 @@
 
 <div class="space_center_summary" ng-if="personal.basic === 'center.index'">
     <ul class="space_center_summary__list clearfix">
-        <li class="space_center_summary__list-item" ng-class="{'btn-zero': false}">
-            <p class="summary_name">资产总额</p>
-            <p class="summary_amount">${{ personal.my_total_balance || '--' }}</p>
-        </li>
         <li class="space_center_summary__list-item">
-            <a ui-sref="space.center.invest.subpage({ subpage: 'current'})">
+            <!-- <a ui-sref="space.center.invest.home"> -->
                 <p class="summary_name">交易账户</p>
-                <p class="summary_amount">${{ personal.balance || '--' }}</p>
-                <p class="summary_btn"><span>管理</span></p>
-            </a>
+                <p class="summary_amount">${{ personal.trade_balance || '--' }}</p>
+                <p class="summary_btn" ng-if="personal.trade_user_status === 2"><span><a ui-sref="authen.subpage({subpage: 'investInfo'})">升级到真实账户 &gt;</a></span></p>
+                <p class="summary_btn" ng-if="personal.trade_user_status === 1"><span class="line">充值</span><span class="line">提现</span><span><a ui-sref="space.center.invest.home">详情</a></span></p>
+            <!-- </a> -->
         </li>
         <li class="space_center_summary__list-item">
-            <a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">
+            <!-- <a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})"> -->
                 <p class="summary_name">零钱包</p>
                 <p class="summary_amount">${{ personal.wallet_balance || '--' }}</p>
-                <p class="summary_btn"><span>管理</span></p>
-            </a>
+                <p class="summary_btn" ng-if="personal.wallet_user_status !== 1"><span><a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">详情</a></span></p>
+                <p class="summary_btn" ng-if="personal.wallet_user_status === 1"><span class="line"><a ui-sref="space.asset.subpage({ subpage: 'deposit', type: 'wallet'})">充值</a></span><span class="line">提现</span><span><a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">详情</a></span></p>
+            <!-- </a> -->
+        </li>
+        <li class="space_center_summary__list-item">
+            <p class="summary_name">资产总额</p>
+            <p class="summary_amount">${{ personal.total_balance || '--' }}</p>
+            <p class="summary_btn" ng-if="personal.trade_user_status == 1"><span>详情</span></p>
         </li>
     </ul>
 </div>
 
-<div class="space_center_trading" ng-if="personal.basic === 'center.index' || personal.basic === 'center.invest.subpage'">
+<!-- <div class="space_center_trading" ng-if="personal.basic === 'center.index' || personal.basic === 'center.invest.subpage'">
     <div class="row">
         <div class="col-xs-5">
             <div class="block_title">交易账户</div>
@@ -78,7 +81,7 @@
                 <p class="tip">保证金比例</p>
             </li>
             <li>
-                <p class="num">{{ personal.volume || '0.00' }}</p>
+                <p class="num">{{ personal.total_volume || '0.00' }}</p>
                 <p class="tip">总交易手数</p>
             </li>
             <li ng-mouseenter="show_close_profit=true" ng-mouseleave="show_close_profit=false" ng-class="{'active':show_close_profit}">
@@ -96,7 +99,7 @@
             </li>
         </ul>
     </div>
-</div>
+</div> -->
 
 <!-- <div class="space_block" ng-class="{'gapped': personal.basic != 'center.wallet.subpage'}" ng-if="personal.basic === 'center.index'">
     <div class="row">

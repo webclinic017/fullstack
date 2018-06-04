@@ -7,7 +7,7 @@
         <div class="col-xs-9 clearfix">
             <div class="withdraw__way account" ng-class="{active: withdraw.type === 'invest'}" ng-click="changeWithdrawType('invest')">
                 <span>交易帐户</span>
-                <span class="amount">${{ personal.balance || '0.00' }}</span>
+                <span class="amount">${{ personal.trade_balance || '0.00' }}</span>
             </div>
             <div class="withdraw__way wallet" ng-class="{active: withdraw.type === 'wallet'}" ng-click="changeWithdrawType('wallet')">
                 <span>零钱包</span>
