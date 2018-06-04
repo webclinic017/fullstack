@@ -35,7 +35,8 @@
             teleDeposit: teleDeposit,
             uploadPaymentEvidence: uploadPaymentEvidence,
             getPaymentEvidence: getPaymentEvidence,
-            cancelPaymentEvidence: cancelPaymentEvidence
+            cancelPaymentEvidence: cancelPaymentEvidence,
+            checkEvidenceStatus: checkEvidenceStatus
         };
         return service;
 
@@ -354,6 +355,16 @@
             return publicHttp.dealPublicRequest(o.cancelPaymentEvidenceApi, 'POST', {
                 id: id
             });
+        }
+
+        /**
+         * Asset Service 检查入金凭证状态
+         *
+         * @method checkEvidenceStatus
+         * 
+         */
+        function checkEvidenceStatus () {
+            return publicHttp.dealPublicRequest(o.checkEvidenceStatusApi, 'GET');
         }
     }
 })();

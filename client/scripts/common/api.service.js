@@ -84,7 +84,8 @@
             teleDepositApi: urlOrigin2 + '/payment/deposit/transfer',
             uploadPaymentEvidenceApi: urlOrigin2 + '/payment/evidence',
             getPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_list',
-            cancelPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_cancel'
+            cancelPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_cancel',
+            checkEvidenceStatusApi: urlOrigin2 + '/payment/evidence_status'
         };
         var forex = {
             
