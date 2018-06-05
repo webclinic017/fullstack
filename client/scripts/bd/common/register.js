@@ -25,25 +25,6 @@
     $(function () {
         var oReg = {};
 
-        function isRegSucceed() {
-            var location = window.location.href.indexOf("/succ") >= 0;
-            if (!!document.getElementById("regist_btn3") && location) {
-                /*统计注册成功*/
-                sa.track('btn_register_finish');
-                window._czc && _czc.push(["_trackEvent", "活动页", "立即注册且成功"]);
-                
-                setTimeout(function () {
-                    var user_code = $.cookie("user_code");
-                    // console.log(user_code);
-                    if (user_id) {
-                        sa.login(user_id);
-                    }
-                }, 0);
-
-                return true;
-            }
-        }
-
         function sendVerifyCode() {
             function isDisabled() {
                 var flag = $("#verify_code_btn").hasClass("disable");
@@ -315,7 +296,7 @@
                         });
                         window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
 
-                        $timeout(function () {
+                        setTimeout(function () {
                             window.location.href = '/space/#/center?type=new';
                         }, 100);
                     } else {
