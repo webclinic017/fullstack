@@ -17,17 +17,19 @@
                 clickChange: '&',   // 选项变化时事件
                 disabled: '@'       // 是否显示，支持表达式
             },
-            template:  `<div class="ddl" ng-show="disabled">
-                            <div ng-repeat="data in selectDataList" ng-if="data[defaultSelect.value] === defaultSelect.id" class="ddlTitle" ng-click="toggle()"><span ng-bind="data[defaultSelect.text]"></span><i class="fa fa-angle-down ddli"></i></div>
-                            <ul ng-show="showMe">
-                                <li ng-repeat="data in selectDataList" ng-click="clickLi(\'{{data}}\')">{{data.account_name}}</li>
+            template:  `<div class="zero_Spinner" ng-show="selectDataList && selectDataList.length > 0">
+                            <div ng-repeat="data in selectDataList" ng-if="data[defaultSelect.value] == defaultSelect.id" class="zero_Spinner__title align-item-c" ng-click="toggle()">
+                                <div class="align-item-c">
+                                    <span class="name">{{ data[defaultSelect.text] }}</span>
+                                    <span class="symbol" ng-if="data[defaultSelect.type] == 2">跟单交易</span>
+                                </div>
+                                <i class="fa fa-angle-down arrow"></i>
+                            </div>
+                            <ul ng-show="showMe" class="zero_Spinner__list">
+                                <li ng-repeat="data in selectDataList" ng-click="clickLi(data[defaultSelect.value])" class="zero_Spinner__list-item">{{ data[defaultSelect.text] }}</li>
                             </ul>
                         </div>`,
             link: function ($scope, $element, $attrs) {
-                console.log($scope.selectDataList)
-                // for(data in $scope.selectDataList){
-                //     console.log(data[defauitSelect.value])
-                // }
                 $scope.showMe = false;
                 $scope.disabled = true;
 
@@ -36,10 +38,13 @@
                 };
 
                 $scope.clickLi=function clickLi(data_){
-                    $scope.defaultSelect=data_;
+                    console.log(data_)
+                    $scope.defaultSelect.id = data_;
                     $scope.showMe = !$scope.showMe;
                 };
-
+                // $scope.$watch('selectDataList', function(value) {
+                //     console.log($scope.selectDataList)
+                // });
                 $scope.$watch('defaultSelect', function(value) {
                     $scope.clickChange();
                 });

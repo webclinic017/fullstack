@@ -290,9 +290,10 @@
          *
          * @method getAccountInfo
          */
-        function getAccountInfo() {
+        function getAccountInfo(mt4_id) {
             return publicHttp.dealPublicRequest(o.getAccountInfoApi, 'GET', {
-                type: 0
+                type: 0,
+                mt4_id: mt4_id
             });
         }
 
@@ -313,7 +314,9 @@
          * @method getDealAccountList
          */
         function getDealAccountList() {
-            return publicHttp.dealPublicRequest(o.getDealAccountListApi, 'GET');
+            return publicHttp.dealPublicRequest(o.getDealAccountListApi, 'GET', {
+                type: 0
+            });
         }
 
         /**

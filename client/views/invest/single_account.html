@@ -18,10 +18,6 @@
                 <p class="tip">资产净值</p>
             </li>
             <li>
-                <p class="num">${{ singleAccountInfo.credit || '0.00' }}</p>
-                <p class="tip">信用赠金</p>
-            </li>
-            <li>
                 <p class="num">${{ singleAccountInfo.margin_free || '0.00' }}</p>
                 <p class="tip">可用保证金</p>
             </li>
@@ -30,8 +26,12 @@
                 <p class="tip">保证金比例</p>
             </li>
             <li>
-                <p class="num">{{ singleAccountInfo.total_volume || '0.00' }}</p>
+                <p class="num">{{ singleAccountInfo.volume || '0.00' }}</p>
                 <p class="tip">总交易手数</p>
+            </li>
+            <li>
+                <p class="num">${{ singleAccountInfo.copy_num || '0' }}</p>
+                <p class="tip">复制高手</p>
             </li>
             <li ng-mouseenter="show_close_profit=true" ng-mouseleave="show_close_profit=false" ng-class="{'active':show_close_profit}">
                 <p class="num" ng-class="{'font-danger': singleAccountInfo.profit.indexOf('-') < 0, 'font-success': singleAccountInfo.profit.indexOf('-') >= 0}">${{ singleAccountInfo.profit || '0.00' }}</p>

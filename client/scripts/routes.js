@@ -110,7 +110,7 @@
                     views: {
                         'content@space': {
                             templateUrl: '/views/space/center.html',
-                            controller: ''
+                            controller: 'CenterHomeController'
                         }
                     }
                 })

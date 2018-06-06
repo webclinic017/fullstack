@@ -18,8 +18,9 @@
         }
         $scope.defaultSelect = {
             id: $state.params.mt4id,  // 默认id
-            text: "account_name",
-            value: "mt4_id"
+            text: "account_name",   // 下拉列表数据的内容
+            value: "mt4_id",    // 下拉列表数据的value
+            type: "account_type"
         },
         //获取某账号的相关信息。更换用户时需要触发重置。
         getSingleAccountInfo();
@@ -50,7 +51,7 @@
 
         // 获取单个交易账户信息
         function getAccountInfo() {
-            account.getAccountInfo().then(function (data) {
+            account.getAccountInfo($scope.defaultSelect.id).then(function (data) {
                 if (!data) return;
                 if (data.is_succ) {
                     $scope.singleAccountInfo = data.data
@@ -71,7 +72,7 @@
         
         // 下拉选项变化时触发
         $scope.changeSelect=function(){
-              console.log(0)
+            getAccountInfo()
         } 
     }
 })();

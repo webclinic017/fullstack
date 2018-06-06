@@ -5,16 +5,15 @@
     angular.module('fullstackApp')
         .controller('SpaceInfoController', SpaceInfoController);
 
-    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout', 'config', 'redbag', 'trader'];
+    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'config', 'redbag', 'trader'];
 
     /**
      * @name SpaceInfoController
      * @desc
      */
-    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config, redbag, trader) {
+    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, config, redbag, trader) {
         $scope.unreadLength = 0;        // 未读消息
         $scope.masterGradeInfo = {};    // 高手等级信息
-        var summaryId;
         var noticeId;
 
         //一次性获取用户的相关信息。更换用户时需要触发重置。
@@ -88,50 +87,7 @@
                     angular.extend($scope.personal, {
                         verifiedStatus: data.profile_check || 0
                     });
-
-                    //定时提取用户资产信息
-                    loopAsset();
-
-                    $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
-                        angular.extend($scope.personal, {
-                            basic: toState.name.substring(6)
-                        });
-                    });
-                    $scope.$on('$stateChangeStart', function (event, toState, toParams) {
-                        // console.log(toState);
-                        if (toState.name !== "space.center.index") {
-                            $interval.cancel(summaryId);
-                        } else {
-                            loopAsset();
-                        }
-                    });
                 }
-            });
-        }
-
-        function loopAsset () {
-            // console.log($scope.personal.profile_check);
-            getAssetInfo();
-            if ($scope.personal.profile_check == 3) {
-                $interval.cancel(summaryId);
-                summaryId = $interval(function () {
-                    getAssetInfo();
-                }, 5000);
-            }
-        }
-
-        // 获取个人资产概况
-        function getAssetInfo() {
-            account.getAssetInfo().then(function (data) {
-                if (!data) return;
-                // console.info(data);
-                if (data.is_succ) {
-                    angular.extend($scope.personal, data.data);
-                    // var my_total_balance = (Number(data.data.balance)+Number(data.data.wallet_balance)).toFixed(2);
-                    // angular.extend($scope.personal, {
-                    //     my_total_balance: my_total_balance
-                    // });
-                } 
             });
         }
 
