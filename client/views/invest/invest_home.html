@@ -30,7 +30,7 @@
         <div class="col-xs-7">
             <div class="block_btn_group text-right">
                 <a class="tw-btn tw-btn-capsule-bordered tw-btn-md">创建子账号</a>
-                <a ui-sref="space.center.index" class="tw-btn tw-btn-capsule-bordered tw-btn-md">申请高手</a>
+                <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="" class="tw-btn tw-btn-capsule-bordered tw-btn-md">申请高手</a>
             </div>
         </div>
     </div>
@@ -43,27 +43,55 @@
                             <div>
                                 <span ng-if="!dealAccount.editName">
                                     <span class="name" >{{ dealAccount.account_name || "账号" }}</span>
-                                    <span class="edit" ng-if="dealAccount.account_type !== 2" ng-click="editAccountName(dealAccount)">🖌</span>
+                                    <span class="edit" ng-if="dealAccount.account_type !== 2" ng-click="editAccountName(dealAccount)"></span>
+                                    <span class="type superior" ng-if="dealAccount.account_type === 3">高手交易</span>
+                                    <span class="type documentary" ng-if="dealAccount.account_type === 2">跟单交易</span>
                                 </span>
-                                <span class=“edit-name” ng-if="dealAccount.editName">
-                                    <input type="text" ng-model="info.account_name" ng-blur="confirmAccountName(dealAccount)">
-                                    <!-- <span ng-blur="confirmAccountName(dealAccount)">确定</span> -->
+                                <span class="edit-name" ng-class="{'submit-error': editAccountNameAwake.result.error, 'submit-success': editAccountNameAwake.result.success}" ng-if="dealAccount.editName">
+                                    <form name="editAccountNameForm" novalidate>
+                                        <span class="input-box" >
+                                            <input type="text" class="name" 
+                                                autocomplete="off"
+                                                name="account_name"
+                                                required 
+                                                ng-model="info.account_name" 
+                                                ng-pattern="/^[0-9A-Za-z\u4e00-\u9fa5]{2,8}$/"
+                                                ng-focus="editAccountNameTip.focus()"
+                                                ng-change="editAccountNameTip.change()"
+                                                ng-blur="confirmAccountName(dealAccount, editAccountNameForm.account_name.$invalid)">
+                                            <!-- <span ng-blur="confirmAccountName(dealAccount)">确定</span> -->
+                                            <!-- <span class="type superior" ng-if="dealAccount.account_type === 3">高手交易</span>
+                                            <span class="type documentary" ng-if="dealAccount.account_type === 2">跟单交易</span> -->
+                                        </span>
+                                        <div ng-show="editAccountNameAwake.account_name.show" class="error">
+                                            <p class="" ng-show="editAccountNameForm.account_name.$error.required">
+                                                请输入账号名称
+                                            </p>
+                                            <p class="" ng-show="editAccountNameForm.account_name.$error.pattern">
+                                                账号名称包含2-8个字符，支持中英文，数字
+                                            </p>
+                                        </div>
+                                        <div ng-show="!editAccountNameAwake.account_name.show" class="error">
+                                            <p class="">
+                                                {{editAccountNameAwake.account_name.tip}}
+                                            </p>
+                                        </div>
+                                    </form>
                                 </span>
-                                <span class="type superior" ng-if="dealAccount.account_type === 3">高手交易</span>
-                                <span class="type documentary" ng-if="dealAccount.account_type === 2">跟单交易</span>
                             </div>
                             <div class="mt4id">MT4 ID: {{ dealAccount.mt4_id }}</div>
                         </li>
-                        <li>
-                            <a class="progress" title="复制人数">
+                        <li ng-if="dealAccount.account_type === 3">
+                            <a class="progress" title="{{ dealAccount.master_info.available_amount }} / {{ dealAccount.master_info.follow_amount }}">
                                 <span class="bar-bg">
-                                    <span class="bar-on">
+                                    <span class="bar-on" ng-style="{'width': dealAccount.master_info.available_amount / dealAccount.master_info.follow_amount}">
                                     
                                     </span>
                                 </span> 
                             </a>
                             <div class="master_category">
-                                <span class="grade">高手类别<span>A</span></span><a class="details">查看详情 &gt;</a>
+                                <span class="grade">高手类别<span>{{ dealAccount.master_info.level || 'B' }}</span></span>
+                                <a ui-sref="space.master.subpage({subpage: 'grade'})" class="details">查看详情 &gt;</a>
                             </div>
                         </li>
                     </ul>
@@ -85,7 +113,7 @@
                     </ul>
                 </li>
                 <li class="space_sub_account_info__list">
-                    <span>详情</span>
+                    <a ui-sref="space.center.invest.subpage({ subpage: 'current' , mt4id: dealAccount.mt4_id})"><span>详情</span></a>
                 </li>
             </ul>
         </li>

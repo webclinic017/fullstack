@@ -23,6 +23,7 @@
             getPersonalInfo: getPersonalInfo,
             getPersonalInfoDegree: getPersonalInfoDegree,
             getAssetInfo: getAssetInfo,
+            getAccountInfo: getAccountInfo,
             getTotalDealAccount: getTotalDealAccount,
             getDealAccountList: getDealAccountList,
             setDealAccountName: setDealAccountName,
@@ -254,10 +255,8 @@
 
                     if (key === 'user_code') {
                         this['usercode'] = value;
-
-                    } else {
-                        this[key] = value;
                     }
+                    this[key] = value;
                 }, personal);
 
                 return personal;
@@ -281,6 +280,18 @@
          */
         function getAssetInfo() {
             return publicHttp.dealPublicRequest(o.getAssetInfoApi, 'GET', {
+                type: 0
+            });
+        }
+
+        /**
+         * Account Service 获取资产信息
+         * 获取单个账户信息(资产净值，信用赠金，保证金)等
+         *
+         * @method getAccountInfo
+         */
+        function getAccountInfo() {
+            return publicHttp.dealPublicRequest(o.getAccountInfoApi, 'GET', {
                 type: 0
             });
         }

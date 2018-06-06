@@ -114,6 +114,20 @@ $font-space-gray-color: $gray-dark;
 @include b(space_center_trading){
     @extend .space_block;
     
+    // @include e(select) {
+    //     min-width: 276px;
+    //     height: 50px;
+    //     border-radius: 8px;
+    //     margin-left: 20px;
+    //     font-size: 20px;
+    //     color: rgb(25, 79, 130);
+    //     padding: 13px 24px;
+    //     span {
+    //         display: inline-block;
+    //         background: #494949
+    //     }
+    // }
+
     @include b(trading_details) {
         margin-top: 75px;
         margin-bottom: 25px;

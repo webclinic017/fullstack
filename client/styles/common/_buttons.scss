@@ -137,16 +137,19 @@ $tw-btn-border: 1px solid #d6d7d9;
 $tw-btn-border-hover: 1px solid darken(#d6d7d9, 5%);
 
 $tw-btn-width-full: 100%;
+$tw-btn-width-lg200: 200px;
 $tw-btn-width-lg: 160px;
 $tw-btn-min-width-lg: 290px;
 $tw-btn-width-md: 130px;
 $tw-btn-width-sm: 100px;
 
+$tw-btn-height-lg46: 46px;
 $tw-btn-height-lg: 52px;
 $tw-btn-height-md: 40px;
 $tw-btn-height-sm: 35px;
 
 $tw-btn-fontsize-lg: 18px;
+$tw-btn-fontsize-lg16: 16px;
 $tw-btn-fontsize-md: 14px;
 $tw-btn-fontsize-sm: 12px;
 $tw-btn-fontsize-sl: 10px;
@@ -193,6 +196,9 @@ $tw-btn-bg-black-end: #2b323e;
 // 按钮尺寸
 .tw-btn-full {
     @include tw-button-size($tw-btn-width-full, $tw-btn-height-lg, $tw-btn-fontsize-lg)
+}
+.tw-btn-lg200 {
+    @include tw-button-size($tw-btn-width-lg200, $tw-btn-height-lg46, $tw-btn-fontsize-lg16)
 }
 .tw-btn-lg {
     @include tw-button-size($tw-btn-width-lg, $tw-btn-height-lg, $tw-btn-fontsize-lg)

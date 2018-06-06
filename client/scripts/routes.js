@@ -139,11 +139,11 @@
                 })
                 .state('space.center.invest.subpage', {
                     authenticated: true,
-                    url: '/center/invest/:subpage',
+                    url: '/center/invest/:subpage?mt4id',
                     views: {
                         'basic@space.center.invest': {
                             templateUrl: '/views/invest/single_account.html',
-                            controller: ''
+                            controller: 'SingleAccountController'
                         },
                         'detail@space.center.invest': {
                             templateUrl: function ($stateParams) {

@@ -31,6 +31,7 @@
             setNewPwdApi: urlOrigin2 + '/forget_passwd',
             getPersonalInfoApi: urlOrigin2 + '/user/info',
             getAssetInfoApi: urlOrigin2 + '/account/summary',
+            getAccountInfoApi: urlOrigin2 + '/trade_account/summary',
             getTotalDealAccountApi: urlOrigin2 + '/trade_account/summary',
             getDealAccountListApi: urlOrigin2 + '/trade_account/list',
             setDealAccountNameApi: urlOrigin2 + '/trade_account/name',

@@ -8,12 +8,13 @@
             </div>
             <div class="space_sidebar__user">
                 <span class="space_sidebar__user-username">{{ personal.username }}</span>
+                <div class="space_sidebar__user-usercode">通行证账号：{{ personal.user_code }}</div>
                 <!-- <span class="space_sidebar__user-position">
                     <i class="fa fa-map-marker"></i>
                     {{ personal.region.city_name || personal.region.state_name || personal.region.world_name || '中国' }}
                 </span> -->
             </div>
-            <ul ng-show="personal.dredged_type != 'unknow'" class="space_sidebar__detail clearfix">
+            <!-- <ul ng-show="personal.dredged_type != 'unknow'" class="space_sidebar__detail clearfix">
                 <li class="detail_item">
                     <div class="item__number">
                         {{ personal.mt4_id }}
@@ -30,8 +31,8 @@
                     </div>
                     <div class="item__text">复制人数</div>
                 </li>
-            </ul>
-            <div class="text-center mg-tp-15">
+            </ul> -->
+            <!-- <div class="text-center mg-tp-15">
                 <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="!personal.is_master" class="tw-btn tw-btn-full tw-btn-square-gradient">申请高手</a>
                 <div class="space_sidebar__grade" ng-if="personal.is_master">
                     <div class="space_sidebar__grade-bar">
@@ -47,8 +48,14 @@
                         </a>
                     </div>
                 </div>
+            </div> -->
+            <div ng-if="personal.trade_user_status === '1'" class="space_sidebar__real">
+                <a ui-sref="space.asset.subpage({subpage: 'deposit'})" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient">充值</a>
             </div>
-            <div ng-show="personal.dredged_type == 'unknow'" class="space_sidebar__real mg-tp-10">
+            <div ng-if="personal.trade_user_status === '1'" class="space_sidebar__real mg-tp-20">
+                <a ui-sref="space.asset.subpage({subpage: 'withdraw'})" class="tw-btn tw-btn-lg200 tw-btn-capsule-bordered">提现</a>
+            </div>
+            <div ng-if="personal.trade_user_status !== '1'" class="space_sidebar__real">
                 <a ng-click="openDredgeMdl({position: 'sidebar'})" class="tw-btn tw-btn-full tw-btn-square-gradient-black">快捷开户</a>
             </div>
         </div>
