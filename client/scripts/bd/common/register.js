@@ -255,7 +255,7 @@
         ;
         (function () {
 
-            function toLogin (is_agree) {
+            function toLogin (e, is_agree) {
                 
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
@@ -302,7 +302,7 @@
                     } else {
                         if ((data.code == 100402) || (data.code == 100403)) {
                             openWebAgmentModal(data.code, function(resolve, e){
-                                toLogin('is_agree');
+                                toLogin(e, 'is_agree');
                                 layer.close(resolve.layIndex)
                             })
                         } else {
