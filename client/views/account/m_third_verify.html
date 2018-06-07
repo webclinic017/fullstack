@@ -5,25 +5,25 @@
                 <li class="circle active">
                     <span class=""></span>
                     <div class="tit">
-                        开设帐户
+                        <%=lang.text('third_navBar1')%>
                     </div>
                 </li>
                 <li class="circle num1">
                     <span class=""></span>
                     <div class="tit">
-                        完善信息
+                        <%=lang.text('third_navBar2')%>
                     </div>
                 </li>
                 <li class="circle num2">
                     <span class=""></span>
                     <div class="tit">
-                        审核
+                        <%=lang.text('third_navBar3')%>
                     </div>
                 </li>
                 <li class="circle num3">
                     <span class=""></span>
                     <div class="tit">
-                        完成开户
+                        <%=lang.text('third_navBar4')%>
                     </div>
                 </li>
                 <li class="line num1">
@@ -45,8 +45,8 @@
                     <img src="/images/third-icon-1.png">
                 </li>
                 <li class="tip">
-                    <p class="t">开户就送</p>
-                    <p class="sub-t">$2000体验金 轻松玩外汇</p>
+                    <p class="t"><%=lang.text('third_index1')%></p>
+                    <p class="sub-t"><%=lang.text('third_index2')%></p>
                 </li>
             </ul>
             <ul class="clearfix">
@@ -54,16 +54,16 @@
                     <img src="/images/third-icon-2.png">
                 </li>
                 <li class="tip">
-                    <p class="t">新手豪礼</p>
-                    <p class="sub-t">多重红包豪礼等你拿</p>
+                    <p class="t"><%=lang.text('third_index3')%></p>
+                    <p class="sub-t"><%=lang.text('third_index4')%></p>
                 </li>
             </ul>
         </div>
         <div class="m_third_index__btn">
             <button class="btn btn-primary">
-                立即开户
+                <%=lang.text('third_index5')%>
             </button>
-            <p class="tip">开户前请准备好在有效期内的身份证件</p>
+            <p class="tip"><%=lang.text('third_index6')%></p>
         </div>
     </div>
     <div class="m_third_kyc">
@@ -72,37 +72,85 @@
 
         <div class="m_third_kyc__btn">
             <button class="btn btn-primary">
-                下一步
+                <%=lang.text('third_next')%>
             </button>
         </div>
     </div>
     <div class="m_third_userinfo">
-        <div class="m_third_userinfo__wrapper">
+        <!-- <div class="m_third_userinfo__wrapper">
             <input class="info realname"
                    type="text"
-                   placeholder="请输入真实姓名">
+                   placeholder="<%=lang.text('third_placeholder1')%>">
         </div>
         <div class="m_third_userinfo__wrapper">
             <input class="info id_no"
                    type="text"
-                   placeholder="请输入身份证号">
-        </div>
+                   placeholder="<%=lang.text('third_placeholder2')%>">
+        </div> -->
         <div class="m_third_userinfo__wrapper">
             <input class="info email"
-                   type="text"
-                   placeholder="请输入您的邮箱，有助于接收重要的提醒消息">
+                type="text"
+                placeholder="<%=lang.text('third_placeholder3')%>">
         </div>
+        <div class="m_third_userinfo__wrapper">
+            <input class="info country"
+                type="text"
+                placeholder="<%=lang.text('third_placeholder4')%>">
+            <select class=""></select>
+        </div>
+        <div class="m_third_userinfo__wrapper">
+            <input class="info address"
+                type="text"
+                placeholder="<%=lang.text('third_placeholder5')%>">
+        </div>
+        <input type="text" style="display: none;">
         <div class="m_third_userinfo__btn">
             <button class="btn btn-primary">
-                下一步
+                <%=lang.text('third_next')%>
+            </button>
+        </div>
+    </div>
+    <div class="m_third_username">
+        <p><%=lang.text('third_username1')%></p>
+        <div class="m_third_username__male">
+            <span class="male active" data-gender="1"><%=lang.text('third_username2')%></span>
+            <span class="female" data-gender="0"><%=lang.text('third_username3')%></span>
+        </div>
+        <div class="m_third_username__wrapper">
+            <input class="info realname"
+                   type="text"
+                   placeholder="<%=lang.text('third_username4')%>">
+        </div>
+        <div class="m_third_username__wrapper">
+            <input class="info card_type"
+                   type="text"
+                   placeholder="<%=lang.text('third_username5')%>">
+            <select class=""></select>
+        </div>
+        <div class="m_third_username__wrapper">
+            <input class="info id_no"
+                    type="text"
+                    placeholder="<%=lang.text('third_username6')%>">
+        </div>
+        <div class="m_third_username__wrapper">
+            <input class="info birth"
+                    id="birth"
+                    type="text"
+                    placeholder="<%=lang.text('third_username7')%>">
+        </div>
+        <input type="text" style="display: none;">
+        <div class="m_third_username__btn">
+            <button class="btn btn-primary">
+                <%=lang.text('third_next')%>
             </button>
         </div>
     </div>
     <div class="m_third_card">
         <div class="m_third_card__tip">
-            上传身份证进行实名验证
+            <%=lang.text('third_uploadCard')%>
+            <span class=""></span>
         </div>
-        <div class="m_third_card__pic">
+        <div class="m_third_card__pic front">
             <div class="img front">
                 
             </div>
@@ -111,11 +159,9 @@
             </form>
 
             <div class="plus"></div>
-            <div class="tip">
-                点击上传身份证照片（正面）
-            </div>
+            <div class="tip"></div>
         </div>
-        <div class="m_third_card__pic">
+        <div class="m_third_card__pic back">
             <div class="img back">
                 
             </div>
@@ -123,26 +169,25 @@
                 <input type="file" data-page="back" name="file" accept="image/*" />
             </form>
             <div class="plus"></div>
-            <div class="tip">
-                点击上传身份证照片（背面）
-            </div>
+            <div class="tip"></div>
         </div>
         <div class="m_third_card__btn">
             <button class="btn btn-primary">
-                提交审核
+                <%=lang.text('third_submit')%>
             </button>
         </div>
     </div>
     <div class="m_third_verify">
         <div class="m_third_verify__content">
-            <h3 class="tit">认证信息已提交，正在审核中</h3>
-            <p class="tip">审核时间：</p>
+            <h3 class="tit"><%=lang.text('third_verify1')%></h3>
+            <h4 class="sub_tit"><%=lang.text('third_verify1_1')%></h4>
+            <p class="tip"><%=lang.text('third_verify2')%></p>
             <div class="detail">
-                <p>工作日10:00-18:00：将在30分钟左右完成审核</p>
-                <p>工作日18:00以后：将在21:00、23:00统一审核；23:00后认证的将在次日审核</p>
-                <p>非工作日时间：将在10:00、16:00、22:00统一审核；22:00后认证的将在次日审核</p>
+                <p><%=lang.text('third_verify3')%></p>
+                <p><%=lang.text('third_verify4')%></p>
+                <p><%=lang.text('third_verify5')%></p>
             </div>
-            <p class="desc">请留意查询您的审核状态</p>
+            <p class="desc"><%=lang.text('third_verify6')%></p>
         </div>
     </div>
     <div class="m_third_success">
@@ -231,5 +276,23 @@
                 </div>
             </div>
         <$}$>
+    <$}$>
+</script>
+<script id="template_country_info" type="text/html">
+    <option value=""><%=lang.text('third_select')%></option>
+    <$for(var i=0;i<data.length;i++){$>
+    <option value="<$= data[i].code$>"><% if (lang.currentLanguage() !== 'en') {%><$= data[i].name_cn$><%} else {%><$= data[i].name_en$><%}%></option>
+    <$}$>
+</script>
+<script id="template_card_info" type="text/html">
+    <option value=""><%=lang.text('third_select')%></option>
+    <$if(data.isCN){$> 
+    <option value="2"><%=lang.text('third_username8')%></option>
+    <option value="0"><%=lang.text('third_username9')%></option>
+    <option value="1"><%=lang.text('third_username10')%></option>
+    <$} else {$>
+    <option value="3"><%=lang.text('third_username11')%></option>
+    <option value="4"><%=lang.text('third_username12')%></option>
+    <option value="5"><%=lang.text('third_username13')%></option>
     <$}$>
 </script>

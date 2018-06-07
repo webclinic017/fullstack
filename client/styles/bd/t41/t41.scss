@@ -8,7 +8,7 @@
     }
 }
 .bd_t39.bd_t41 {
-	background: url("/images/bd_t41/web_bg.png") no-repeat;
+	background: url("/images/bd_t41/web_bg_new.png") no-repeat;
     background-size: auto 100%; // height: 5637px;
     height: 2560px;
     background-position: center top;
@@ -18,9 +18,26 @@
     .verify_code_btn {
         color: #222;
     }
+    .bd_t40__focus {
+        padding-top: 230px;
+
+        .pic {
+            img {
+                width: 660px;
+            }
+        }
+        .tip {
+            font-size: 43px;
+            color: #f6d344;
+            font-weight: 500;
+        }
+        .date {
+            font-size: 30px;
+        }
+    }
     .bd_t40__detail_wrapper {
 	    padding-left: 10px;
-        padding-top: 645px;
+        padding-top: 60px;
 
     	.bd_t40__detail {
     		width: 220px;

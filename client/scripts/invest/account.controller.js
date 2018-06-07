@@ -13,6 +13,9 @@
      */
     function SingleAccountController($rootScope, $scope, $interval, $state, account, $modal) {
         var summaryId;
+        $scope.$on('$destroy',function(){  
+            $interval.cancel(summaryId);  
+        }) 
         $scope.accountInfo = {
             accountList: []
         }
@@ -22,23 +25,11 @@
             value: "mt4_id",    // 下拉列表数据的value
             type: "account_type"
         },
-        //获取某账号的相关信息。更换用户时需要触发重置。
+        //定时提取用户单个账号信息
         getSingleAccountInfo();
 
-        function getSingleAccountInfo(){
-            getVerifyStatus();
-        }
 
-        // 获取实名认证状态
-        function getVerifyStatus () {
-
-            //定时提取用户单个账号信息
-            loopSingleAccount();
-        }
-        // 切换交易账号弹窗
-
-
-        function loopSingleAccount () {
+        function getSingleAccountInfo () {
             // console.log($scope.personal.profile_check);
             getAccountInfo();
             if ($scope.personal.profile_check == 3) {

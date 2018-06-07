@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('SpaceInfoController', SpaceInfoController);
 
-    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'config', 'redbag', 'trader'];
+    SpaceInfoController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'config', 'redbag', 'trader', 'asset', '$modal'];
 
     /**
      * @name SpaceInfoController
      * @desc
      */
-    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, config, redbag, trader) {
+    function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, config, redbag, trader, asset, $modal) {
         $scope.unreadLength = 0;        // 未读消息
         $scope.masterGradeInfo = {};    // 高手等级信息
         var noticeId;
@@ -29,6 +29,7 @@
         function getOnceInfo(){
             getVerifyStatus();
             getRedBagNum();
+            checkEvidenceStatus();
         }
 
         var url = $location.search();
@@ -99,6 +100,50 @@
                     $scope.masterGradeInfo = data.data;
                     $scope.masterGradeInfo.scale = (($scope.masterGradeInfo.follow_amount - $scope.masterGradeInfo.available_amount) / $scope.masterGradeInfo.follow_amount * 100).toFixed(2)+'%';
                 }
+            });
+        }
+
+        //检查凭证状态
+        function checkEvidenceStatus () {
+            var isModal = false;
+            var msg = '';
+            asset.checkEvidenceStatus().then(function (data) {
+                var date = new Date().getDate();
+                var ls = localStorage.getItem("evidence");
+                console.log(date, ls);
+                if (data.data.evidence_code === 100605) {
+                    msg = '充值成功后请及时上传凭证，若超过两周未上传，将无法进行交易操作。';
+                    if (!ls) {
+                        localStorage.setItem("evidence", date);
+                        isModal = true;
+                    }
+                }
+                if (data.data.evidence_code === 100604) {
+                    msg = '您有入金凭证已超过一周未上传，请及时上传，否则将无法进行交易操作';
+                    if (!ls || ls < date) {
+                        localStorage.setItem("evidence", date);
+                        isModal = true;
+                    }
+                }
+                // console.log(data);
+                if (isModal) {
+                    $modal.open({
+                        templateUrl: '/views/space/evidence_modal.html',
+                        size: 'sm',
+                        backdrop: 'static',
+                        controller: function ($scope, $modalInstance, $state) {
+                            $scope.message = msg;
+                            
+                            $scope.closeModal = closeModal;
+                            
+                            function closeModal() {
+                                $modalInstance.dismiss();
+                            }
+        
+                        }
+                    });
+                }
+                
             });
         }
     }

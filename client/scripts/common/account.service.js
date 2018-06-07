@@ -454,8 +454,9 @@
          * @name setPhone
          * @desc setting 修改手机号码
          */
-        function setPhone(phone, captcha) {
+        function setPhone(phone_code, phone, captcha) {
             return publicHttp.dealPublicRequest(o.setPhoneApi, 'PUT', {
+                phone_code: phone_code,
                 phone: phone,
                 code: captcha
             });

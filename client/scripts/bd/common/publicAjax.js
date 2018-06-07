@@ -44,7 +44,8 @@
         thirdRegister: origin + '/third/auth/register', //post
         thirdGetKycList: origin + '/third/user/kyc_map', // get
         thirdSetKyc: origin + '/third/user/kyc', //post
-        thirdSetUserInfo: origin + '/third/user/auth_info', //put
+        thirdSetUserInfo: origin + '/third/v2/user/auth_info', //put
+        thirdSetIdNo: origin + '/third/user/update_idno', //put
         thirdUploadIdCard: origin + '/third/user/upload_base64_id_card', //put
         thirdSetPassword: origin + '/third/user/account', //post
         thirdChangePassword: origin + '/third/user/passwd', //put

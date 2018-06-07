@@ -18,19 +18,20 @@
     <br>
     <br>
     <br>
-    <div class="row mg-bt-30" ng-show="withdraw.type === 'invest'">
+    <div class="row mg-bt-30">
         <div class="col-xs-2 text-left deposit__title-money">
             提现到
         </div>
 
         <div class="col-xs-6">
             <div class="deposit__way" ng-click="openChangeWithTypeMdl()">
-                {{ withdraw.accountType === 'bank' ? '银行卡' : 'CSE平台账户' }}
+                {{ withdrawTypeLst[withdraw.accountType].name }}
             </div>
             <p class="deposit__way-tip" ng-class="{active: withdraw.accountType === 'cse'}">请填写您的真实CSE钱包账号</p>
+            <p class="deposit__way-tip" ng-class="{active: withdraw.accountType === 'paypal'}">请填写您的真实PayPal账号</p>
         </div>
     </div>
-    <div class="row mg-bt-30" ng-show="((withdraw.type === 'invest') && (withdraw.accountType === 'bank')) || (withdraw.type === 'wallet')">
+    <div class="row mg-bt-30" ng-show="withdraw.accountType === 'bank'">
         <div class="col-xs-2 text-left deposit__title-money">
             银行卡
         </div>
@@ -53,9 +54,24 @@
             <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl('manage')">管理银行卡</span>
         </div>
     </div>
-    <div class="row" ng-show="(withdraw.type === 'invest') && (withdraw.accountType === 'cse')">
+    <div class="row" ng-show="withdraw.accountType !== 'bank'">
         <div class="col-xs-2 text-left deposit__title-money">
-            CSE账号
+            姓名
+        </div>
+
+        <div class="col-xs-6">
+            <div class="form-control-wrapper">
+                <input class="form-control form-control-size-lg form-control-shape-capsule disabled"
+                    name="account"
+                    type="text"
+                    ng-model="main.realname"
+                    disabled>
+            </div>  
+        </div>      
+    </div>
+    <div class="row" ng-show="withdraw.accountType !== 'bank'">
+        <div class="col-xs-2 text-left deposit__title-money">
+            账号
         </div>
 
         <div class="col-xs-6">
@@ -63,9 +79,20 @@
                 <input class="form-control form-control-size-lg form-control-shape-capsule"
                     name="account"
                     type="text"
-                    ng-model="withdraw.cseAccount">
+                    ng-model="withdraw.thirdAccount">
             </div>  
         </div>      
+    </div>
+    <div class="row mg-bt-30 deposit__pay_method" ng-if="withdrawTypeLst[withdraw.accountType].currency.length > 1">
+        <div class="col-xs-2 deposit__title-money">选择币种</div>
+        <div class="col-xs-2 relative">
+            <div class="deposit__currency-tit" ng-click="openCurrency($event)">{{withdraw.currency.currency_name}}</div>
+            <ul class="deposit__currency-lst" ng-show="currencyStatus">
+                <li ng-repeat="item in withdrawTypeLst[withdraw.accountType].currency" ng-click="selcetCurrency(item)">
+                    {{item.currency_name}}
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="row">
         <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'invest' && withdrawMessageSucc && !message.is_succ">
@@ -139,9 +166,10 @@
                     <span class="font-danger">*</span>
                     可提取金额：<span>${{withdraw.maxAmount || '0.00'}}</span>
                 </p>
-                <p class="sys_tip1">
+                <p class="sys_tip1" ng-show="withdraw.currency.currency !== 'USD'">
                     <span class="font-danger">*</span>
-                    <span>今日汇率：1 美元 = {{withdraw.FXRate.value}}</span> 人民币
+                    <span>今日汇率：1 美元 =</span>
+                    <span>{{withdraw.currency.rate_out}}</span> {{withdraw.currency.currency_name}}
                 </p>
             </div>
         </div>

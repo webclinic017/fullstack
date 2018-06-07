@@ -22,7 +22,8 @@
 
             if (index === 'lang') {
                 // console.info(value, index);
-                language = value;
+                language = value === 'en' ? value : 'zh';
+
             }
             if (index === 'company_name') {
                 if (value === 'lonfx') {

@@ -13,6 +13,9 @@
      */
     function CenterHomeController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config, redbag, trader) {
         var summaryId;
+        $scope.$on('$destroy',function(){  
+            $interval.cancel(summaryId);  
+        }) 
         $scope.assetInfo = null
 
         //定时提取用户资产信息
