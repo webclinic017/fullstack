@@ -4,6 +4,27 @@
     </p>
     <div class="row">
         <form name="phoneForm" novalidate>
+            <div class="col-xs-2">
+                <div class="form-control-wrapper">
+                    <div class="select">
+                        <input class="select__input"
+                                name="location"
+                                type="text"
+                                placeholder="区号"
+                                required
+                                ng-model="phone.phone_code.key">
+                        
+                        <i class="select__icon fa fa-angle-down"></i>
+
+                        <ul class="select__dropdown" twform-select data-bind-model="phone_test">
+                            
+                            <li ng-repeat="world in worlds" ng-class="{'selected': world.code === phone.phone_code.value}">
+                                <span data-value="{{world.code}}" ng-click="selectWorld(world)">+{{world.phone_code}}({{world.name}})</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="col-xs-3">
                 <div class="form-control-wrapper">
                     <input class="form-control"
@@ -35,7 +56,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-3">
+            <div class="col-xs-2">
                 <div class="form-control-wrapper">
                     <input class="form-control" 
                            name="captcha" 
@@ -81,7 +102,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-3 text-center">
+            <div class="col-xs-2 text-center">
                 <button class="btn btn-primary btn-sm" type="submit" ng-if="clickable.submit" ng-click="submitForm('phoneForm')">
                     提交
                 </button>
