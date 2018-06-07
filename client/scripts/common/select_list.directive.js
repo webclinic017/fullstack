@@ -21,12 +21,17 @@
                             <div ng-repeat="data in selectDataList" ng-if="data[defaultSelect.value] == defaultSelect.id" class="zero_Spinner__title align-item-c" ng-click="toggle()">
                                 <div class="align-item-c">
                                     <span class="name">{{ data[defaultSelect.text] }}</span>
-                                    <span class="symbol" ng-if="data[defaultSelect.type] == 2">跟单交易</span>
+                                    <span class="symbol blue" ng-if="data[defaultSelect.type] == 2">跟单交易</span>
+                                    <span class="symbol yellow" ng-if="data[defaultSelect.type] == 3">高手交易</span>
                                 </div>
                                 <i class="fa fa-angle-down arrow"></i>
                             </div>
                             <ul ng-show="showMe" class="zero_Spinner__list">
-                                <li ng-repeat="data in selectDataList" ng-click="clickLi(data[defaultSelect.value])" class="zero_Spinner__list-item">{{ data[defaultSelect.text] }}</li>
+                                <li ng-repeat="data in selectDataList" ng-click="clickLi(data[defaultSelect.value])" class="zero_Spinner__list-item align-item-c">
+                                    <span>{{ data[defaultSelect.text] }}</span>
+                                    <span class="symbol blue" ng-if="data[defaultSelect.type] == 2">跟单交易</span>
+                                    <span class="symbol yellow" ng-if="data[defaultSelect.type] == 3">高手交易</span>
+                                </li>
                             </ul>
                         </div>`,
             link: function ($scope, $element, $attrs) {
@@ -38,7 +43,6 @@
                 };
 
                 $scope.clickLi=function clickLi(data_){
-                    console.log(data_)
                     $scope.defaultSelect.id = data_;
                     $scope.showMe = !$scope.showMe;
                 };

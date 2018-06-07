@@ -29,7 +29,7 @@
         function getOnceInfo(){
             getVerifyStatus();
             getRedBagNum();
-            checkEvidenceStatus();
+            // checkEvidenceStatus();
         }
 
         var url = $location.search();
