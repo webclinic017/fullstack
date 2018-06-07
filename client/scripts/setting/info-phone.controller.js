@@ -10,9 +10,17 @@
 
     function SettingInfoPhoneController($scope, $timeout, $cookies, validator, account) {
         $scope.phone = {
+            phone_code: {
+                key: '+86',
+                value: '86'
+            },
             phoneNew: undefined,
             captcha: undefined
         };
+        $scope.phone_test = {
+            key: undefined,
+            value: undefined
+        }
 
         $scope.frontErr = {
             phoneNew: {
@@ -52,8 +60,10 @@
         $scope.showErr = showErr;
         $scope.getCaptcha = getCaptcha;
         $scope.submitForm = submitForm;
+        $scope.selectWorld = selectWorld;
         var token;
         account.setToken();
+        getWorlds();
 
         function getCaptcha() {
             showErr('phoneForm', 'phoneNew');
@@ -88,6 +98,24 @@
             });
         }
 
+        function getWorlds() {
+            account.getWorlds().then(function (data) {
+                if (!data) return;
+                // console.log(data);
+                if (!data.is_succ) {
+                    return;
+                }
+                $scope.worlds = data.data;
+            });
+        }
+
+        function selectWorld (target) {
+            $scope.phone.phone_code = {
+                key: '+'+target.phone_code,
+                value: target.phone_code
+            }
+        }
+
         function submitForm(formName) {
             showErr(formName, 'phoneNew');
             showErr(formName, 'captcha');
@@ -97,7 +125,7 @@
             }
 
             $scope.clickable.submit = false;
-            account.setPhone($scope.phone.phoneNew, $scope.phone.captcha).then(function (data) {
+            account.setPhone($scope.phone.phone_code.value, $scope.phone.phoneNew, $scope.phone.captcha).then(function (data) {
                 $scope.backErr.system.show = true;
                 if (data.is_succ) {
                     $scope.backErr.system.status = 1;
