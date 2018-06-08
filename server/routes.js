@@ -1031,6 +1031,7 @@ module.exports = function (app) {
         if (action == "version_check") {
             var appType;   // global, uk, pandafx, old
             var appLanguage = req.query.lang || 'cn';
+            appLanguage == 'zh' && (appLanguage = 'cn');
             if (req.query.type) {
                 appType = req.query.type;
             } else {
