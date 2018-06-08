@@ -54,7 +54,7 @@
                             <i class="select__icon fa fa-angle-down"></i>
 
                             <ul class="select__dropdown" twform-select data-bind-model="realnameInfo.id_type">
-                                <li ng-repeat="id_type in idType" ng-class="{'selected': id_type.value === realnameInfo.id_type.value}">
+                                <li ng-repeat="id_type in idType" ng-class="{'selected': id_type.value === realnameInfo.id_type.value}" ng-if="(personal.region.world_code === 'CN' && id_type.isCN) || (personal.region.world_code !== 'CN' && id_type.isGlobal)">
                                     <span data-value="{{id_type.value}}">{{ id_type.key }}</span>
                                 </li>
                             </ul>
@@ -186,7 +186,7 @@
                 <div class="upload_id_card" tw-upload-id-card>
                     <i class="upload_id_card__icon fa fa-camera"></i>
                     <h3 class="upload_id_card__title">
-                        点击上传证件正面
+                        {{realnameInfo.id_type.value == '0' ? '点击上传证件正面' : '点击上传证件'}}
                     </h3>
     
                     <input class="upload_id_card__input" ng-click="hideErr('idFront')" name="file" type="file" accept="image/jpeg,image/png" data-face="front">
@@ -208,7 +208,7 @@
                 </div>
             </div>
     
-            <div class="col-xs-6">
+            <div class="col-xs-6" ng-if="realnameInfo.id_type.value == '0'">
                 <div class="upload_id_card" tw-upload-id-card>
                     <i class="upload_id_card__icon fa fa-camera"></i>
                     <h2 class="upload_id_card__title">
