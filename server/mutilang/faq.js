@@ -304,8 +304,12 @@ module.exports = {
         "en": "Q: How long will it take for funds to be received in my account after a withdrawal?"
     },
     "faqAsset8": {
-        "zh": "A：工作日内提交48小时内到账。",
-        "en": "A: After a withdrawal during workting days, it will take 48 hours for funds to be received into your account."
+        "zh": "A：客户工作日16点前申请出金，当天审核；2个工作日内提交银行出金。具体到账时间以银行为准。",
+        "en": "A: Customers apply for cash withdrawal before 16:00 on the working day,Day audit;Submit the payment to the bank within 2 working days.The specific arrival time is based on the bank."
+    },
+    "faqAsset8_2": {
+        "zh": "客户工作日16点后申请出金，下个工作日审核；3个工作日内提交银行出金。具体到账时间以银行为准。",
+        "en": "Customers apply for cash withdrawal after 16:00 on the working day.Next working day audit；Submit the payment to the bank within 3 working days.The specific arrival time is based on the bank."
     },
     "faqAsset9": {
         "zh": "Q：出金的费用？",
