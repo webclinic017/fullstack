@@ -25,7 +25,7 @@ module.exports = function () {
             webMt4Download: "https://www.tigerwit.com/files/tigerwit4setup.exe",
             androidApp: versionAndroidApp,
             // download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
-            download: "/m/blank",
+            download: "http://admin-shence.tigerwit.com:8106/r/C",
 
             // path
             logoPathZh: indexBasePath + "/tigerwit-logo-en.png",
