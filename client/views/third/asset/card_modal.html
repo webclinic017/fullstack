@@ -151,7 +151,7 @@
                         </div>
                     </div>
     
-                    <div class="row">
+                    <div class="row" ng-if="card.world && card.world.code !== 'CN'">
                         <div class="col-xs-3 text-left">
                             <label>银行机构鉴定代码：</label>
                         </div>
@@ -171,33 +171,6 @@
                                 <div ng-show="frontErr.swift_code.show">
                                     <p class="alert alert-arrow_tp_lf" ng-show="cardForm.swift_code.$error.required">
                                         请填写您的银行机构鉴定代码
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="row" ng-if="card.world">
-                        <div class="col-xs-3 text-left">
-                            <label ng-if="card.world && card.world.code === 'CN'">支行名称：</label>
-                            <label ng-if="card.world && card.world.code !== 'CN'">开户地址：</label>
-                        </div>
-    
-                        <div class="col-xs-9">
-                            <div class="form-control-wrapper">
-                                <input class="form-control"
-                                       name="address"
-                                       type="text"
-                                       required
-                                       ng-class="{'form-control-error': frontErr.address.show && cardForm.address.$invalid}"
-                                       ng-model="card.address"
-                                       placeholder="{{card.world && card.world.code === 'CN' ? '请输入支行名称' : '请输入开户地址'}}"
-                                       ng-focus="hideErr('address')"
-                                       ng-blur="showErr('address')">
-    
-                                <div ng-show="frontErr.address.show">
-                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.address.$error.required">
-                                        {{card.world && card.world.code === 'CN' ? '请输入支行名称' : '请输入开户地址'}}
                                     </p>
                                 </div>
                             </div>
@@ -253,6 +226,33 @@
                                 <div ng-show="frontErr.city.show">
                                     <p class="alert alert-arrow_tp_lf" ng-show="cardForm.city.$error.required">
                                         请选择开户市
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row" ng-if="card.world">
+                        <div class="col-xs-3 text-left">
+                            <label ng-if="card.world && card.world.code === 'CN'">支行名称：</label>
+                            <label ng-if="card.world && card.world.code !== 'CN'">开户地址：</label>
+                        </div>
+    
+                        <div class="col-xs-9">
+                            <div class="form-control-wrapper">
+                                <input class="form-control"
+                                       name="address"
+                                       type="text"
+                                       required
+                                       ng-class="{'form-control-error': frontErr.address.show && cardForm.address.$invalid}"
+                                       ng-model="card.address"
+                                       placeholder="{{card.world && card.world.code === 'CN' ? '请输入支行名称' : '请输入开户地址'}}"
+                                       ng-focus="hideErr('address')"
+                                       ng-blur="showErr('address')">
+    
+                                <div ng-show="frontErr.address.show">
+                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.address.$error.required">
+                                        {{card.world && card.world.code === 'CN' ? '请输入支行名称' : '请输入开户地址'}}
                                     </p>
                                 </div>
                             </div>
