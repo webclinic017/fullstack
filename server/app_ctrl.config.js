@@ -54,7 +54,7 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V1.6.0",
+                        version_name : "V0.0.0",
                         description : "本次更新：\n1.优化拍照功能\n2.适配三星手机\n3.其他细节优化",
                         updated_description: "68%的用户正在使用新版本",
                         url : "https://pandafx.tigerwit.com/downloads/apk/pandafx_v1.6.0.apk",
@@ -73,7 +73,7 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V1.6.0",
+                        version_name : "V0.0.0",
                         description : "本次更新：\n1.优化拍照功能\n2.适配三星手机\n3.其他细节优化",
                         updated_description: "68%的用户正在使用新版本",
                         url : "https://pandafx.tigerwit.com/downloads/apk/pandafx_v1.6.0.apk",
