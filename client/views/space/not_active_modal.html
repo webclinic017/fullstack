@@ -1,0 +1,19 @@
+<div class="sys_modal_v2 slim_case">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <h5 class="sys_modal_v2__title">
+    {{ contentModal.title }}
+    </h5>
+
+    <div class="sys_modal_v2__content">
+        <p class="sys_modal_v2__info mg-bt-15">
+            {{contentModal.message}}
+        </p>
+
+        <p class="btn_wrapper mg-bt-15">
+            <a class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
+                确定
+            </a>
+        </p>
+    </div>
+</div>

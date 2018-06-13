@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('InvestHistoryController', InvestHistoryController);
 
-    InvestHistoryController.$inject = ['$scope', 'invest', '$modal'];
+    InvestHistoryController.$inject = ['$scope', 'invest', '$modal', '$state'];
 
-    function InvestHistoryController($scope, invest, $modal) {
+    function InvestHistoryController($scope, invest, $modal, $state) {
         $scope.orderHistory = {};      // 自主交易历史订单概况
         $scope.orders = [];             // 自主交易历史订单
         $scope.traders = [];            // copied traders 列表
@@ -34,7 +34,7 @@
         getInvestHistoryTraders();
 
         function getInvestHistoryData () {
-            invest.getInvestHistoryData().then(function (data) {
+            invest.getInvestHistoryData($scope.investSelect.id).then(function (data) {
                 // console.log(data);
                 $scope.orderHistory = data.data;
                 $scope.orders = data.data.records;
@@ -55,7 +55,7 @@
 
         // 获取 copied traders 列表
         function getInvestHistoryTraders() {
-            invest.getInvestHistoryTraders().then(function (data) {
+            invest.getInvestHistoryTraders($scope.investSelect.id).then(function (data) {
                 if (!data) return;
                 // console.info(data);
                 $scope.traders = data.data;
@@ -68,7 +68,7 @@
         // 显示/隐藏 copied traders 列表的详情（复制交易历史订单）
         function showDetails(trader) {
 
-            if (nowTrader.usercode && nowTrader.usercode !== trader.usercode) {
+            if (nowTrader.master_id && nowTrader.master_id !== trader.master_id) {
                 nowTrader.detailsShow = false;
             }
             nowTrader = trader;
@@ -86,7 +86,7 @@
             page = page ? page : 1;
             var offset = (page-1)*pagesize;
 
-            invest.getInvestHistoryDetails(nowTrader.user_code, offset, pagesize).then(function (data) {
+            invest.getInvestHistoryDetails(nowTrader.master_id, offset, pagesize, $scope.investSelect.id).then(function (data) {
                 nowTrader.notFirstLoad = true;
                 // console.info(data);
                 nowTrader.orders = data.data.records;
@@ -119,7 +119,10 @@
                 templateUrl: '/views/invest/invest_detail_modal.html',
                 size: 'lg',
                 backdrop: true,
-                controller: function ($scope, invest, $modalInstance) {
+                resolve: {
+                    mt4_id: function() { return $scope.investSelect.id }
+                },
+                controller: function ($scope, invest, $modalInstance, mt4_id) {
                     
                     $scope.details = [];        // 交易详情 弹窗数据
                     $scope.modal = {
@@ -129,7 +132,7 @@
                     };
                     $scope.closeModal = closeModal;
                     
-                    invest.getInvestHistoryData().then(function (data) {
+                    invest.getInvestHistoryData(mt4_id).then(function (data) {
                         // console.info(data);
                         $scope.$broadcast('hideLoadingImg');
                         $scope.details = data.data.records;
@@ -144,7 +147,7 @@
         }
 
         function openInvestCopyDetailMdl (trader, event) {
-            var usercode = trader.usercode;
+            var master_id = trader.master_id;
             event.stopPropagation();
             event.stopImmediatePropagation();
 
@@ -154,7 +157,10 @@
                 templateUrl: '/views/invest/invest_detail_modal.html',
                 size: 'lg',
                 backdrop: true,
-                controller: function ($scope, invest, $modalInstance) {
+                resolve: {
+                    mt4_id: function() { return $scope.investSelect.id }
+                },
+                controller: function ($scope, invest, $modalInstance, mt4_id) {
 
                     $scope.details = [];        // 交易详情 弹窗数据
                     $scope.modal = {
@@ -183,7 +189,7 @@
                         var offset = (page-1)*pagesize;
                         $scope.$broadcast('showLoadingImg');
 
-                        invest.getInvestHistoryDetails(trader.user_code, offset, pagesize).then(function (data) {
+                        invest.getInvestHistoryDetails(trader.master_id, offset, pagesize, mt4_id).then(function (data) {
                             // console.info(data);
                             $scope.$broadcast('hideLoadingImg');
                             $scope.details = data.data.records;

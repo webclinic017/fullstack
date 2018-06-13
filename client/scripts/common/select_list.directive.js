@@ -13,28 +13,30 @@
             transclude : true,
             scope : {
                 defaultSelect: '=', // 默认选中值
+                defaultSelectKey: '=', // 默认key
                 selectDataList: '=selectDataList',  // 数据集如['张三','李四','王五']
                 clickChange: '&',   // 选项变化时事件
                 disabled: '@'       // 是否显示，支持表达式
             },
             template:  `<div class="zero_Spinner" ng-show="selectDataList && selectDataList.length > 0">
-                            <div ng-repeat="data in selectDataList" ng-if="data[defaultSelect.value] == defaultSelect.id" class="zero_Spinner__title align-item-c" ng-click="toggle()">
+                            <div ng-repeat="data in selectDataList" ng-if="data[defaultSelectKey.value] == defaultSelect.id" class="zero_Spinner__title align-item-c" ng-class="{'menu-hide': !showMe}" ng-click="toggle()">
                                 <div class="align-item-c">
-                                    <span class="name">{{ data[defaultSelect.text] }}</span>
-                                    <span class="symbol blue" ng-if="data[defaultSelect.type] == 2">跟单交易</span>
-                                    <span class="symbol yellow" ng-if="data[defaultSelect.type] == 3">高手交易</span>
+                                    <span class="name">{{ data[defaultSelectKey.text] || '默认' }}</span>
+                                    <span class="z-symbol z-documentary" ng-if="data[defaultSelectKey.type] == 2">跟单交易</span>
+                                    <span class="z-symbol z-superior" ng-if="data[defaultSelectKey.type] == 3">高手交易</span>
                                 </div>
                                 <i class="fa fa-angle-down arrow"></i>
                             </div>
                             <ul ng-show="showMe" class="zero_Spinner__list">
-                                <li ng-repeat="data in selectDataList" ng-click="clickLi(data[defaultSelect.value])" class="zero_Spinner__list-item align-item-c">
-                                    <span>{{ data[defaultSelect.text] }}</span>
-                                    <span class="symbol blue" ng-if="data[defaultSelect.type] == 2">跟单交易</span>
-                                    <span class="symbol yellow" ng-if="data[defaultSelect.type] == 3">高手交易</span>
+                                <li ng-repeat="data in selectDataList" ng-click="clickLi(data[defaultSelectKey.value])" class="zero_Spinner__list-item align-item-c" ng-class="{'active': data[defaultSelect.value] == defaultSelect.id}">
+                                    <span>{{ data[defaultSelectKey.text] || '默认' }}</span>
+                                    <span class="z-symbol z-documentary" ng-if="data[defaultSelectKey.type] == 2">跟单交易</span>
+                                    <span class="z-symbol z-superior" ng-if="data[defaultSelectKey.type] == 3">高手交易</span>
                                 </li>
                             </ul>
                         </div>`,
             link: function ($scope, $element, $attrs) {
+
                 $scope.showMe = false;
                 $scope.disabled = true;
 
@@ -49,10 +51,9 @@
                 // $scope.$watch('selectDataList', function(value) {
                 //     console.log($scope.selectDataList)
                 // });
-                $scope.$watch('defaultSelect', function(value) {
+                $scope.$watch('defaultSelect.id', function(value) {
                     $scope.clickChange();
                 });
-
                 // $scope.$watch( function() {
                 //     return $scope.$eval($attrs.setNgAnimate, $scope);
                 // }, function(valnew, valold){

@@ -8,50 +8,52 @@
     InvestCurrentController.$inject = ['$scope', 'invest', 'trader', '$timeout', '$modal', '$state'];
 
     function InvestCurrentController($scope, invest, trader, $timeout, $modal, $state) {
-        $scope.orderCurrent = {};
-        $scope.orders = [];
-        $scope.from_data = [];
-        $scope.traders = [];
+        $scope.orderCurrent = {}; // 当前自主交易订单
+        $scope.orders = [];  // 自主交易持仓订单详情
+        $scope.from_data = [];  // 复制持仓单
+        $scope.traders = [];   // 复制交易持仓订单
         $scope.modal = {};
         $scope.showOrders = showOrders;
-        $scope.showFromOrders = showFromOrders;
         $scope.showDetails = showDetails;
-        $scope.from_orders_profit = 0;
-        $scope.fromDetailsShow = false;
         $scope.openCopyMdl = openCopyMdl;
         $scope.openCancelCopyMdl = openCancelCopyMdl;
         $scope.openInvestCopyDetailMdl = openInvestCopyDetailMdl;
         $scope.openInvestOwnDetailMdl = openInvestOwnDetailMdl;
+        $scope.type = $scope.investSelect.type;
         // var avaCopyAmount;
+        $scope.$watch('investSelect.id', function(n){
+            if(!n) return;
+            $scope.$broadcast('showLoadingImg');
+            if($scope.investSelect.type == 2){
+                $scope.orderCurrent = {}; // 当前自主交易订单
+                $scope.orders = [];  // 自主交易持仓订单详情
+                getTraders();
+            }else{
+                $scope.from_data = [];  // 复制持仓单
+                $scope.traders = [];   // 复制交易持仓订单
+                getData();
+            }
+        })
 
-        getData();
-        getTraders();
         // getAvaCopyAmount();
 
         // 获取自主交易持仓订单和订单概况
         function getData() {
-            invest.getInvestCurrentData().then(function (data) {
+            invest.getInvestCurrentData($scope.investSelect.id).then(function (data) {
                 // console.log(data);
                 if (!data) return;
                 if (data.is_succ) {
                     data = data.data;
-                    $scope.orders = data.self_trades.records;
-                    $scope.from_data = angular.extend(data.uncopy_trades);
-                    angular.extend($scope.orderCurrent, data.self_trades);
-                    $scope.from_orders_profit = 0;
-                    var nProfit = 0;
-                    angular.forEach($scope.from_data, function (oData, index) {
-                        nProfit += (+oData.gross_profit) || 0;
-                    });
-                    $scope.from_orders_profit = nProfit.toFixed(2);
+                    $scope.orders = data.records;
+                    angular.extend($scope.orderCurrent, data);
 
-                    // $scope.$broadcast('hideLoadingImg');
+                    $scope.$broadcast('hideLoadingImg');
                 }
             });
         }
 
         function getTraders() {
-            invest.getInvestCurrentTraders().then(function (data) {
+            invest.getInvestCurrentTraders($scope.investSelect.id).then(function (data) {
                 $scope.$broadcast('hideLoadingImg');
                 if (!data) return;
                 // console.info(data);
@@ -61,7 +63,8 @@
                         return;
                     }
 
-                    $scope.traders = data.data;
+                    $scope.from_data = data.data.uncopy_masters;
+                    $scope.traders = data.data.copying_masters;
                     // console.log($scope.traders);
                 }
             });
@@ -74,9 +77,6 @@
             } else {
                 $scope.orderCurrent.detailsShow = true;
             }
-        }
-        function showFromOrders() {
-            $scope.fromDetailsShow = !$scope.fromDetailsShow;
         }
 
         // 显示或者隐藏 copied trader 的详情（复制交易持仓订单）
@@ -92,7 +92,7 @@
 
         // 获取 copied traders 列表的详情（复制交易持仓订单）
         function getDetails(trader) {
-            invest.getInvestCurrentDetails(trader.user_code).then(function (data) {
+            invest.getInvestCurrentDetails(trader.master_id, $scope.investSelect.id).then(function (data) {
                 trader.notFirstLoad = true;
                 trader.orders = data.data || [];
             });
@@ -112,7 +112,7 @@
             // console.log(trader);
             // 为了和高手主页复制高手公用一个controller，字段名做统一处理
             trader.copied = trader.copy_amount;
-            trader.usercode = trader.user_code;
+            trader.usercode = trader.master_id;
             $modal.open({
                 templateUrl: '/views/invest/copy_modal.html',
                 controller: 'TraderCopyController',
@@ -132,7 +132,7 @@
         }
 
         function openCancelCopyMdl(trader, event) {
-            var usercode = trader.user_code;
+            var master_id = trader.master_id;
             var username = trader.username;
             event.stopPropagation();
             event.stopImmediatePropagation();
@@ -155,7 +155,7 @@
                     function cancelCopy(auto_delete) {
                         $scope.clickable = false;
 
-                        trader.cancelCopy(usercode, auto_delete).then(function (data) {
+                        trader.cancelCopy(master_id, auto_delete).then(function (data) {
                             // console.info(data);
                             if (data.is_succ) {
                                 $scope.copyCancel.success = true;
@@ -196,6 +196,7 @@
         function openInvestOwnDetailMdl(type, event) {
             event.stopPropagation();
             event.stopImmediatePropagation();
+            var mt4_id = $scope.investSelect.id;
 
             $modal.open({
                 templateUrl: '/views/invest/invest_detail_modal.html',
@@ -211,10 +212,10 @@
                     $scope.follow_master = type === 'own' ? false : true;
                     $scope.closeModal = closeModal;
 
-                    invest.getInvestCurrentData().then(function (data) {
+                    invest.getInvestCurrentData(mt4_id).then(function (data) {
                         console.info(data);
                         $scope.$broadcast('hideLoadingImg');
-                        $scope.details = type === 'own' ? data.data.self_trades.records : data.uncopy_trades;
+                        $scope.details = data.data.records;
                         $scope.modal.show = true;
                     });
 
@@ -226,7 +227,8 @@
         }
 
         function openInvestCopyDetailMdl(trader, event) {
-            var usercode = trader.user_code;
+            var master_id = trader.master_id;
+            var mt4_id = $scope.investSelect.id;
             event.stopPropagation();
             event.stopImmediatePropagation();
 
@@ -243,7 +245,7 @@
                     };
                     $scope.closeModal = closeModal;
 
-                    invest.getInvestCurrentDetails(usercode).then(function (data) {
+                    invest.getInvestCurrentDetails(master_id, mt4_id).then(function (data) {
                         // console.info(data);
                         $scope.$broadcast('hideLoadingImg');
                         $scope.details = data.data;

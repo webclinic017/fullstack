@@ -5,25 +5,37 @@
     angular.module('fullstackApp')
         .controller('InvestHomeController', InvestHomeController);
 
-        InvestHomeController.$inject = ['$scope', '$interval', 'account', 'invite', '$timeout'];
+        InvestHomeController.$inject = ['$scope', '$interval', 'account', 'invite', '$timeout', '$state'];
 
     /**
      * @name InvestHomeController
      * @desc
      */
-    function InvestHomeController($scope, $interval, account, invite, $timeout) {
+    function InvestHomeController($scope, $interval, account, invite, $timeout, $state) {
         var summaryId;
         $scope.$on('$destroy',function(){  
             $interval.cancel(summaryId);  
         }) 
         $scope.totalDealAccount = {}; // 账户交易总详情
         $scope.dealAccountList = {};  // 账号列表
+        $scope.detailsUrl = function(id, type){
+            $scope.investSelect.id = id;
+            $scope.investSelect.type = type;
+            $state.go('space.center.invest.subpage',({ subpage: 'current' }))
+        }
+        // 记录当前修改的账户与修改的情况
+        $scope.info = {
+            mt4_id: undefined,
+            account_name: undefined
+        };
         // 获取交易账号信息与列表
-        getAccountInfo();
+        getDealAccount();
+        $scope.$watch('personal.profile_check', function () {
+            getAccountInfo();
+        })
 
         function getAccountInfo() {
-            console.log($scope.personal.profile_check + "23")
-            getDealAccount();
+            // console.log($scope.personal.profile_check)
             if ($scope.personal.profile_check == 3) {
                 $interval.cancel(summaryId);
                 summaryId = $interval(function () {
@@ -58,15 +70,12 @@
 
         // 修改账户名称前端与后台的验证
         errorTip();
-        // 记录当前修改的账户与修改的情况
-        $scope.info = {
-            mt4_id: undefined,
-            account_name: undefined
-        };
 
         $scope.editAccountNameTip = {
             focus: function(){
                 // $scope.editAccountNameAwake.account_name.show = true;
+                // 修改name时停止列表轮询
+                $interval.cancel(summaryId);  
             },
             change: function(){
                 errorTip();
@@ -75,6 +84,7 @@
 
         // 修改account_name
         $scope.editAccountName = function (dealAccount) {
+            // 初始化数据
             cancelEditAccountName();
             dealAccount.editName = true;
             $scope.info = { 
@@ -98,11 +108,12 @@
                         $scope.editAccountNameAwake.account_name.show = false;
                         $scope.editAccountNameAwake.account_name.tip = data.message;
                     }
+                    getAccountInfo();
 
                 });
             }
         }
-        // 初始化报错信息
+        // 初始化报错信息验证
         function errorTip() {
             $scope.editAccountNameAwake = {
                 account_name: {

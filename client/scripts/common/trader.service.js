@@ -147,8 +147,10 @@
          * trader 高手申请条件检查
          *
          */
-        function getMasterCondition() {
-            return publicHttp.dealPublicRequest(o.getMasterConditionApi, 'GET');
+        function getMasterCondition(mt4_id) {
+            return publicHttp.dealPublicRequest(o.getMasterConditionApi, 'GET', {
+                mt4_id,
+            });
         }
 
         /**

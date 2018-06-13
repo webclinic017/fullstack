@@ -98,8 +98,8 @@
             getInvestSummaryApi: urlOrigin2  + '/centre/trading_profile',
             getInvestProfitLineApi: urlOrigin2 + '/centre/trading_trend',
             getInvestBarChartApi: urlOrigin2 + '/centre/trading_symbols',
-            getInvestCurrentDataApi: urlOrigin2 + '/centre/active/self_trades',
-            getInvestCurrentTradersApi: urlOrigin2 + '/centre/active/copy_masters',
+            getInvestCurrentDataApi: urlOrigin2 + '/centre/active/self_trades',  // 自主交易订单列表
+            getInvestCurrentTradersApi: urlOrigin2 + '/centre/active/copy_masters', // 当前跟随的高手列表
             getInvestCurrentDetailsApi: urlOrigin2 + '/centre/active/copy_trades',
             getInvestHistoryDataApi: urlOrigin2 + '/centre/past/self_trades',
             getInvestHistoryTradersApi: urlOrigin2 + '/centre/past/copy_masters',

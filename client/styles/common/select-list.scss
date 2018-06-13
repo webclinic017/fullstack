@@ -3,30 +3,20 @@
     position: relative;
     cursor: pointer;
     margin: 0 20px;
-    .symbol {
-        margin: 0 10px;
-        height: 24px;
-        width: 80px;
-        display: inline-block;
-        text-align: center;
-        line-height: 24px;
-        border-radius: 46px;
-        font-size: 14px;
-        color: #fff;
-    }
-    .yellow {
-
-    }
-    .blue {
-        background-image: linear-gradient(to right, rgba(98, 131, 236, 0.98) 0%, rgb(92, 181, 237) 100%);
-    }
     @include e(title) {
         height: 50px;
         border: solid rgba(74, 74, 74, 0.2) 1px;
+        border-bottom-width: 0;
         min-width: 276px;
-        border-radius: 8px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
         padding: 14px 24px;
         justify-content: space-between;
+        &.menu-hide{
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border-bottom-width: 1px;
+        }
         > div {
             padding-right: 5px;
             .name {
@@ -41,20 +31,27 @@
         }
     }
     @include e(list) {
+        background-color: #fff;
         position:absolute;
         top: 100%;
         width: 100%;
         left: 0;
         border: solid #cccccc 1px;
-        border-bottom: none;
+        border-top: none;
         z-index: 3;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
         @include m(item) {
+            &.active {
+                background-color: rgb(232, 232, 232);
+            }
             color: rgb(25, 79, 130);
             font-size: 20px;
+            height: 50px;
             list-style:none;
             padding: 14px 24px;
             &:hover {
-                background-color: #eee;
+                background-color: rgb(232, 232, 232);
             }
         }
     }

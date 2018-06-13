@@ -42,10 +42,10 @@
                         <li>
                             <div>
                                 <span ng-if="!dealAccount.editName">
-                                    <span class="name" >{{ dealAccount.account_name || "账号" }}</span>
+                                    <span class="name" >{{ dealAccount.account_name || "默认" }}</span>
                                     <span class="edit" ng-if="dealAccount.account_type !== 2" ng-click="editAccountName(dealAccount)"></span>
-                                    <span class="type superior" ng-if="dealAccount.account_type === 3">高手交易</span>
-                                    <span class="type documentary" ng-if="dealAccount.account_type === 2">跟单交易</span>
+                                    <span class="z-symbol z-superior" ng-if="dealAccount.account_type === 3">高手交易</span>
+                                    <span class="z-symbol z-documentary" ng-if="dealAccount.account_type === 2">跟单交易</span>
                                 </span>
                                 <span class="edit-name" ng-class="{'submit-error': editAccountNameAwake.result.error, 'submit-success': editAccountNameAwake.result.success}" ng-if="dealAccount.editName">
                                     <form name="editAccountNameForm" novalidate>
@@ -60,8 +60,8 @@
                                                 ng-change="editAccountNameTip.change()"
                                                 ng-blur="confirmAccountName(dealAccount, editAccountNameForm.account_name.$invalid)">
                                             <!-- <span ng-blur="confirmAccountName(dealAccount)">确定</span> -->
-                                            <!-- <span class="type superior" ng-if="dealAccount.account_type === 3">高手交易</span>
-                                            <span class="type documentary" ng-if="dealAccount.account_type === 2">跟单交易</span> -->
+                                            <!-- <span class="z-symbol z-superior" ng-if="dealAccount.account_type === 3">高手交易</span>
+                                            <span class="z-symbol z-documentary" ng-if="dealAccount.account_type === 2">跟单交易</span> -->
                                         </span>
                                         <div ng-show="editAccountNameAwake.account_name.show" class="error">
                                             <p class="" ng-show="editAccountNameForm.account_name.$error.required">
@@ -113,7 +113,7 @@
                     </ul>
                 </li>
                 <li class="space_sub_account_info__list">
-                    <a ui-sref="space.center.invest.subpage({ subpage: 'current' , mt4id: dealAccount.mt4_id})"><span>详情</span></a>
+                    <span ng-click="detailsUrl(dealAccount.mt4_id, dealAccount.account_type)">详情</span>
                 </li>
             </ul>
         </li>
@@ -125,7 +125,7 @@
                             <div>
                                 <span class="name">跟单账号</span>
                                 <span class="edit">🖌</span>
-                                <span class="type " ng-class="{'superior':false, 'documentary': true}">跟单交易</span>
+                                <span class="z-symbol " ng-class="{'superior':false, 'documentary': true}">跟单交易</span>
                             </div>
                             <div class="mt4id">MT4 ID: 1231231231</div>
                         </li>

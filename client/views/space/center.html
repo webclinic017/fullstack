@@ -23,36 +23,40 @@
 
 <div class="space_center_summary">
     <ul class="space_center_summary__list clearfix">
-        <li class="space_center_summary__list-item">
+        <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.trade_user_status === 0}">
             <!-- <a ui-sref="space.center.invest.home"> -->
                 <p class="summary_name">交易账户</p>
-                <p class="summary_amount">${{ assetInfo.trade_balance || '--' }}</p>
-                <p class="summary_btn" ng-if="assetInfo.trade_user_status === 2"><span><a ui-sref="authen.subpage({subpage: 'investInfo'})">升级到真实账户 &gt;</a></span></p>
-                <p class="summary_btn" ng-if="assetInfo.trade_user_status === 1">
-                    <span class="line"><a ui-sref="space.asset.subpage({ subpage: 'deposit', type: ''})">充值</a></span>
-                    <span class="line"><a ui-sref="space.asset.subpage({ subpage: 'withdraw', type: ''})">提现</a></span>
-                    <span><a ui-sref="space.center.invest.home">详情</a></span>
-                </p>
-                <p class="summary_btn" ng-if="assetInfo.trade_user_status === 0"><span><a ui-sref="authen.subpage({subpage: 'investInfo'})">快捷开户 &gt;</a></span></p>
+                <p class="summary_btn" ng-if="assetInfo.trade_user_status === 0"><a ng-click="openDredgeMdl({position: 'sidebar'})">快捷开户 &gt;</a></p>
+                <span ng-if="assetInfo.trade_user_status !== 0">
+                    <p class="summary_amount">${{ assetInfo.trade_balance || '--' }}</p>
+                    <p class="summary_btn" ng-if="assetInfo.trade_user_status === 2"><span><a ui-sref="authen.subpage({subpage: 'investInfo'})">升级到真实账户 &gt;</a></span></p>
+                    <p class="summary_btn" ng-if="assetInfo.trade_user_status === 1">
+                        <span class="line"><a ui-sref="space.asset.subpage({ subpage: 'deposit', type: ''})">充值</a></span>
+                        <span class="line"><a ui-sref="space.asset.subpage({ subpage: 'withdraw', type: ''})">提现</a></span>
+                        <span><a ui-sref="space.center.invest.home">详情</a></span>
+                    </p>
+                </span>
             <!-- </a> -->
         </li>
-        <li class="space_center_summary__list-item">
+        <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.wallet_user_status === 0}">
             <!-- <a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})"> -->
                 <p class="summary_name">零钱包</p>
-                <p class="summary_amount">${{ assetInfo.wallet_balance || '--' }}</p>
-                <p class="summary_btn" ng-if="assetInfo.wallet_user_status !== 1"><span><a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">详情</a></span></p>
-                <p class="summary_btn" ng-if="assetInfo.wallet_user_status === 1">
-                    <span class="line"><a ui-sref="space.asset.subpage({ subpage: 'deposit', type: 'wallet'})">充值</a></span>
-                    <span class="line"><a ui-sref="space.asset.subpage({ subpage: 'withdraw', type: 'wallet'})">提现</a></span>
-                    <span><a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">详情</a></span>
-                </p>
+                <p class="summary_btn" ng-if="assetInfo.wallet_user_status === 0"><a ng-click="notActiveModal()">⨁ 未激活</a></p>
+                <span ng-if="assetInfo.wallet_user_status === 1">
+                    <p class="summary_amount">${{ assetInfo.wallet_balance || '--' }}</p>
+                    <p class="summary_btn" >
+                        <span class="line"><a ui-sref="space.asset.subpage({ subpage: 'deposit', type: 'wallet'})">充值</a></span>
+                        <span class="line"><a ui-sref="space.asset.subpage({ subpage: 'withdraw', type: 'wallet'})">提现</a></span>
+                        <span><a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">详情</a></span>
+                    </p>
+                </span>
             <!-- </a> -->
         </li>
-        <li class="space_center_summary__list-item">
+        <!-- <li class="space_center_summary__list-item">
             <p class="summary_name">资产总额</p>
             <p class="summary_amount">${{ assetInfo.total_balance || '--' }}</p>
             <p class="summary_btn" ng-if="assetInfo.trade_user_status == 1"><span>详情</span></p>
-        </li>
+        </li> -->
     </ul>
 </div>
 

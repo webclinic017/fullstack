@@ -49,13 +49,14 @@
                     </div>
                 </div>
             </div> -->
-            <div ng-if="personal.trade_user_status === '1'" class="space_sidebar__real">
+            <!-- TODO 缺参数 -->
+            <div ng-if="personal.trade_user_status !== '0'" class="space_sidebar__real">
                 <a ui-sref="space.asset.subpage({subpage: 'deposit'})" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient">充值</a>
             </div>
-            <div ng-if="personal.trade_user_status === '1'" class="space_sidebar__real mg-tp-20">
+            <div ng-if="personal.trade_user_status !== '0'" class="space_sidebar__real mg-tp-20">
                 <a ui-sref="space.asset.subpage({subpage: 'withdraw'})" class="tw-btn tw-btn-lg200 tw-btn-capsule-bordered">提现</a>
             </div>
-            <div ng-if="personal.trade_user_status !== '1'" class="space_sidebar__real">
+            <div ng-if="personal.trade_user_status === '0'" class="space_sidebar__real">
                 <a ng-click="openDredgeMdl({position: 'sidebar'})" class="tw-btn tw-btn-full tw-btn-square-gradient-black">快捷开户</a>
             </div>
         </div>

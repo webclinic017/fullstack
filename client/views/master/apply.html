@@ -17,25 +17,29 @@
             榜单投资者被其他用户复制跟随，会获得复制者20%的盈利分成，请选择账号：
         </div>
         <ul class="space_apply__list">
-            <li class="space_apply__list-item active">
-                <div class="account_title">
-                    <span>备用账号#1</span>
-                    <span>自主交易</span>
-                </div>
-                <ul class="account_details">
-                    <li>
-                        <p>$5000.00</p>
-                        <p>浮动收益</p>
-                    </li>
-                    <li>
-                        <p>$5000</p>
-                        <p>浮动收益</p>
-                    </li>
-                    <li>
-                        <p>$5000</p>
-                        <p>浮动收益</p>
-                    </li>
-                </ul>
+            <li class="space_apply__list-item active" ng-repeat="account in accountList" >
+                <a ng-click="masterApplication(account.mt4_id)">
+                    <div class="account_title">
+                        <span>{{ account.account_name || "默认" }}</span>
+                        <span ng-if="account.account_type == 1">自主交易</span>
+                        <span ng-if="account.account_type == 2">跟单交易</span>
+                        <span ng-if="account.account_type == 3">高手交易</span>
+                    </div>
+                    <ul class="account_details">
+                        <li>
+                            <p>{{ account.floating_profit }}</p>
+                            <p>浮动盈亏</p>
+                        </li>
+                        <li>
+                            <p>{{ account.equity }}</p>
+                            <p>资产净值</p>
+                        </li>
+                        <li>
+                            <p>{{ account.margin_level }}</p>
+                            <p>保证金比例</p>
+                        </li>
+                    </ul>
+                </a>
             </li>
         </ul>
     </div>

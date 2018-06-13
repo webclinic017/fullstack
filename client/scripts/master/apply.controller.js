@@ -10,7 +10,7 @@
     function MasterApplyController($scope, trader, $layer, validator, account, $cookies) {
 
         $scope.applyInfo = {
-            loading: true,
+            loading: false,
             loading2: false,
             data: {},
             condition: false
@@ -18,11 +18,18 @@
         $scope.applyMaster = applyMaster;
         $scope.comfirmApplyMaster = comfirmApplyMaster;
 
-        getMasterCondition();
-        // 模拟账号列表
-        $scope.applyInfo.data.accountList = {}
-        function getMasterCondition() {
-            trader.getMasterCondition().then(function (data) {
+        // 获取用户交易账户列表 TODO(方法要改)
+        account.getDealAccountList().then(function (data) {
+            if (!data) return;
+            if (data.is_succ) {
+                $scope.accountList = data.data; 
+            } 
+        });
+        $scope.masterApplication = getMasterCondition;
+       
+        function getMasterCondition(mt4_id) {
+            $scope.applyInfo.loading = true;
+            trader.getMasterCondition(mt4_id).then(function (data) {
                 $scope.applyInfo.loading = false;
                 // console.log(data);
                 if (data.is_succ) {
