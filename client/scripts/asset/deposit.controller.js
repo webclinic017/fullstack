@@ -18,7 +18,8 @@
             amount: undefined,                  // 充值金额
             teleFile: undefined,    //电汇凭证
             submitBtn: false,                   // 充值按钮true/false
-            isAbleDeposit: 0    //是否能够入金（是否上传凭证）evidence  0不需要上传，1需要上传，2未审核
+            isAbleDeposit: 0,    //是否能够入金（是否上传凭证）evidence  0不需要上传，1需要上传，2未审核
+            depositCard: undefined
         };
         $scope.currencyStatus = false; // 选择币种列表
         $scope.walletDepositSucc = false;
@@ -97,6 +98,24 @@
             }
         }
 
+        // 判断网银绑定银行卡
+        function checkInvestBank () {
+            if ($scope.deposit.type !== 'invest') return;
+            asset.checkInvestBank().then(function (data) {
+                // console.log(data);
+                if (data.is_succ) {
+                    if (data.data.depositCard) {
+                        $scope.deposit.depositCard = data.data.depositCard;
+                    } else {
+                        openDepositMdl('bindBankCard', null, {
+                            cardName: $scope.personal.realname,
+                            msgTitle: '填写支付银行卡信息'
+                        });
+                    }
+                }
+            });
+        }
+
         //判断按钮 deposit.submitBtn
         function checkInputAmount() {
             if ($scope.isLoading) return;
@@ -129,6 +148,7 @@
             $scope.deposit.currency = $scope.depositTypeLst[$scope.deposit.type].currency.length ? $scope.depositTypeLst[$scope.deposit.type].currency[0] : null;
             checkInvestLimit();
             checkInputAmount();
+            checkInvestBank();
         }
 
         // 切换充值方式弹窗
@@ -336,6 +356,12 @@
                     $scope.openChat = openChat;
                     $scope.depositSucc = depositSucc;
                     $scope.goOnDeposit = goOnDeposit;
+                    $scope.bindBankCard = bindBankCard;
+                    $scope.depositCard = {
+                        backErr: false,
+                        backMsg: '',
+                        num: msgInfo.cardNum || undefined
+                    };
 
                     // 去实名认证
                     function verify() {
@@ -361,6 +387,25 @@
                     function goOnDeposit() {
                         callback && callback();
                         closeModal();
+                    }
+                    // 绑定入金银行卡
+                    function bindBankCard () {
+                        if ($scope.depositCard.backErr) return;
+                        if (!$scope.depositCard.num) {
+                            $scope.depositCard.backErr = true;
+                            $scope.depositCard.backMsg = '请输入银行卡号';
+                            return
+                        };
+                        asset.bindInvestBank($scope.depositCard.num).then(function (data) {
+                            // console.log(data);
+                            if (data.is_succ) {
+                                checkInvestBank();
+                                closeModal();
+                            } else {
+                                $scope.depositCard.backErr = true;
+                                $scope.depositCard.backMsg = data.message;
+                            }
+                        });
                     }
 
                     function closeModal() {

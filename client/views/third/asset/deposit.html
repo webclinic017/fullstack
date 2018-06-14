@@ -55,6 +55,28 @@
             </div>
         </div>
         <br>
+        <div ng-if="deposit.type === 'invest' && deposit.depositCard">
+            <div class="row" style="padding-left: 65px;">
+                <div class="deposit__title-money">请使用该银行卡支付</div>
+            </div>
+            <div class="row mg-bt-10">
+                <div style="padding-left: 65px;" class="col-xs-2">持卡人</div>
+                <div class="col-xs-7">
+                    {{main.realname}}
+                </div>
+            </div>
+            <div class="row">
+                <div style="padding-left: 65px;" class="col-xs-2">银行卡号</div>
+                <div class="col-xs-7">
+                    {{deposit.depositCard}}&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span ng-click="openDepositMdl('bindBankCard', null, {
+                        cardName: main.realname,
+                        cardNum: deposit.depositCard,
+                        msgTitle: '填写支付银行卡信息'
+                    });" style="color: #4a90e2;cursor: pointer;">更换</span>
+                </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-xs-2"></div>
             <div class="col-xs-7 text-center">
