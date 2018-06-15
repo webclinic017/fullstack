@@ -95,9 +95,9 @@
          *
          * @method getInvestCurrentDetails
          */
-        function getInvestCurrentDetails(master_id, mt4_id) {
+        function getInvestCurrentDetails(account_code, mt4_id) {
             return publicHttp.dealPublicRequest(o.getInvestCurrentDetailsApi, 'GET', {
-                master_id,
+                account_code,
                 mt4_id,
             });
         }
@@ -134,10 +134,10 @@
          *
          * @method getHistoryDetails
          */
-        function getInvestHistoryDetails(master_id, offset, limit, mt4_id) {
+        function getInvestHistoryDetails(account_code, offset, limit, mt4_id) {
             return publicHttp.dealPublicRequest(o.getInvestHistoryDetailsApi, 'GET', {
                 mt4_id,
-                master_id,
+                account_code,
                 offset,
                 limit
             });

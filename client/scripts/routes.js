@@ -293,21 +293,21 @@
                     views: {
                         '@space.setting': {
                             templateUrl: function ($stateParams) {
-                                $stateParams.subpage = $stateParams.subpage || 'info';
+                                $stateParams.subpage = $stateParams.subpage || 'name';
                                 return '/views/setting/' + $stateParams.subpage + '.html';
                             },
                             controllerProvider: function ($stateParams) {
-                                $stateParams.subpage = $stateParams.subpage || 'info';
+                                // $stateParams.subpage = $stateParams.subpage || 'info';
 
-                                if ($stateParams.subpage === 'info') {
-                                    var ctrlPrefix = 'Setting';
-                                    var ctrlSuffix = 'Controller';
-                                    var ctrlRoot = modCtrlName($stateParams.subpage);
-                                    return ctrlPrefix + ctrlRoot + ctrlSuffix;
-                                } else {
+                                // if ($stateParams.subpage === 'info') {
+                                //     var ctrlPrefix = 'Setting';
+                                //     var ctrlSuffix = 'Controller';
+                                //     var ctrlRoot = modCtrlName($stateParams.subpage);
+                                //     return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                                // } else {
                                     // controller 在模板中指定（为了使用 ng-include）
                                     return '';
-                                }
+                                // }
                             }
                         }
                     }

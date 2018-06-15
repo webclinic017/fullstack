@@ -77,8 +77,14 @@
     </ul>
 
     <ul class="space_nav__box" ng-show="toState.name == 'space.setting.subpage'">
-        <li class="space_nav__box-item active">
-            <a>修改资料</a>
+        <li class="space_nav__box-item active" ui-sref-active="active">
+            <a ui-sref="space.setting.subpage({subpage: 'name'})">基本信息</a>
+        </li>
+        <li class="space_nav__box-item active" ui-sref-active="active">
+            <a ui-sref="space.setting.subpage({subpage: 'buddha'})">修改头像</a>
+        </li>
+        <li class="space_nav__box-item active" ui-sref-active="active">
+            <a ui-sref="space.setting.subpage({subpage: 'secure'})">账户安全</a>
         </li>
     </ul>
     

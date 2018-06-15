@@ -92,7 +92,7 @@
 
         // 获取 copied traders 列表的详情（复制交易持仓订单）
         function getDetails(trader) {
-            invest.getInvestCurrentDetails(trader.master_id, $scope.investSelect.id).then(function (data) {
+            invest.getInvestCurrentDetails(trader.account_code, $scope.investSelect.id).then(function (data) {
                 trader.notFirstLoad = true;
                 trader.orders = data.data || [];
             });
@@ -112,7 +112,7 @@
             // console.log(trader);
             // 为了和高手主页复制高手公用一个controller，字段名做统一处理
             trader.copied = trader.copy_amount;
-            trader.usercode = trader.master_id;
+            trader.usercode = trader.account_code;
             $modal.open({
                 templateUrl: '/views/invest/copy_modal.html',
                 controller: 'TraderCopyController',
@@ -132,7 +132,7 @@
         }
 
         function openCancelCopyMdl(trader, event) {
-            var master_id = trader.master_id;
+            var account_code = trader.account_code;
             var username = trader.username;
             event.stopPropagation();
             event.stopImmediatePropagation();
@@ -155,7 +155,7 @@
                     function cancelCopy(auto_delete) {
                         $scope.clickable = false;
 
-                        trader.cancelCopy(master_id, auto_delete).then(function (data) {
+                        trader.cancelCopy(account_code, auto_delete).then(function (data) {
                             // console.info(data);
                             if (data.is_succ) {
                                 $scope.copyCancel.success = true;
@@ -227,7 +227,7 @@
         }
 
         function openInvestCopyDetailMdl(trader, event) {
-            var master_id = trader.master_id;
+            var account_code = trader.account_code;
             var mt4_id = $scope.investSelect.id;
             event.stopPropagation();
             event.stopImmediatePropagation();
@@ -245,7 +245,7 @@
                     };
                     $scope.closeModal = closeModal;
 
-                    invest.getInvestCurrentDetails(master_id, mt4_id).then(function (data) {
+                    invest.getInvestCurrentDetails(account_code, mt4_id).then(function (data) {
                         // console.info(data);
                         $scope.$broadcast('hideLoadingImg');
                         $scope.details = data.data;

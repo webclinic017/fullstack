@@ -37,6 +37,7 @@
             getCities: getCities,
             setBasicInfo: setBasicInfo,
             setPwd: setPwd,
+            setAvatar: setAvatar,
             setPwdFirst: setPwdFirst,
             setPhone: setPhone,
             getVerifyStatus: getVerifyStatus,
@@ -449,6 +450,17 @@
                 confirm_passwd: newPwd
             });
         }
+
+        /**
+         * Account Service 修改头像
+         *
+         * @param {Number} file  (base64编码)
+         */
+        function setAvatar(file) {
+            return publicHttp.dealPublicRequest(o.uploadAvatarForm, 'POST', {
+                file: file
+            });
+        } 
 
         /**
          * @name setPhone

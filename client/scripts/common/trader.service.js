@@ -157,8 +157,10 @@
          * trader 高手申请
          *
          */
-        function applyMaster() {
-            return publicHttp.dealPublicRequest(o.applyMasterApi, 'POST');
+        function applyMaster(mt4_id) {
+            return publicHttp.dealPublicRequest(o.applyMasterApi, 'POST', {
+                mt4_id,
+            });
         }
     }
 })();

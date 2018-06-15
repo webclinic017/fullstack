@@ -10,7 +10,7 @@
     function MasterApplyController($scope, trader, $layer, validator, account, $cookies) {
 
         $scope.applyInfo = {
-            loading: false,
+            loading: true,
             loading2: false,
             data: {},
             condition: false
@@ -20,34 +20,36 @@
 
         // 获取用户交易账户列表 TODO(方法要改)
         account.getDealAccountList().then(function (data) {
+            $scope.applyInfo.loading = false;
             if (!data) return;
             if (data.is_succ) {
                 $scope.accountList = data.data; 
             } 
         });
-        $scope.masterApplication = getMasterCondition;
+        $scope.getMasterCondition = getMasterCondition;
        
         function getMasterCondition(mt4_id) {
+            $scope.selectAccount = mt4_id   // 选中账号mt4_id
             $scope.applyInfo.loading = true;
             trader.getMasterCondition(mt4_id).then(function (data) {
                 $scope.applyInfo.loading = false;
                 // console.log(data);
                 if (data.is_succ) {
                     $scope.applyInfo.data = data.data;
-
                     // 判断申请资格
                     if ($scope.applyInfo.data.status == -1) {
-                        if (($scope.applyInfo.data.one == 1) &&
-                            ($scope.applyInfo.data.two == 1) &&
-                            ($scope.applyInfo.data.three == 1) &&
-                            ($scope.applyInfo.data.four == 1)) {
-                            $scope.applyInfo.condition = true;
+                        $scope.applyInfo.condition = true;
+                        for(let condit in $scope.applyInfo.data.condition){
+                            if($scope.applyInfo.data.condition[condit].status  == 0){
+                                $scope.applyInfo.condition = false;
+                                return;
+                            }
                         }
                     }
                 }
             });
         }
-
+        // 立即申请成为高手
         function applyMaster() {
             if ($scope.applyInfo.condition) {
                 openApplyMdl('succ');
@@ -57,6 +59,7 @@
         }
 
         function openApplyMdl(s) {
+            // $scope.applyInfo.data.status = 3;
             if (s == 'succ') {
                 $layer({
                     title: '申请高手提醒',
@@ -87,10 +90,10 @@
                 })
             }
         }
-
+        // 申请高手确认成功
         function comfirmApplyMaster(){
             $scope.applyInfo.loading2 = true
-            trader.applyMaster().then(function (data) {
+            trader.applyMaster($scope.selectAccount).then(function (data) {
                 $scope.applyInfo.loading2 = false
                 $layer({
                     title: '申请高手提醒',
@@ -121,6 +124,7 @@
         $scope.editUsername = function () {
             $scope.masterInfo.edit = true;
         }
+        // 取消修改
         $scope.cancelEdit = function () {
             $scope.masterInfo.edit = false;
             $scope.personal.username = decodeURIComponent($cookies["username"] || '')

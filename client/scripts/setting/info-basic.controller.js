@@ -92,6 +92,14 @@
                 msg: ''
             }
         };
+        $scope.isEditName = false;
+        $scope.editName = function() {
+            $scope.isEditName = true;
+        }
+        if($scope.personal.is_master){
+            console.log($scope.personal)
+            $scope.permitEdit = false
+        }
         $scope.clickable = true;
         $scope.selectRegion = selectRegion;
         $scope.showErr = showErr;

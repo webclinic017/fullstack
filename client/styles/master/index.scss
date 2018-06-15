@@ -112,6 +112,10 @@
                 background-image: linear-gradient(to bottom, #ffc500 0%, #ffd240 100%);
                 background-repeat: repeat-x;
             }
+            &:hover {
+                background-image: linear-gradient(to bottom, #ffc500 0%, #ffd240 100%);
+                background-repeat: repeat-x;
+            }
             .account_title {
                 margin-bottom: 18px;
                 span {
@@ -175,11 +179,13 @@
                 right: 0;
                 width: 52px;
                 height: 52px;
+                background-repeat: no-repeat;
+                background-size: 100%;
                 // background-image: url("/images/icon-complete.png");
             }
             &.active {
                 &:before {
-                    background-image: url("/images/icon-complete.png");
+                    background-image: url("/images/icon-no-complete.png");
                 }
             }
 

@@ -68,7 +68,7 @@
         // 显示/隐藏 copied traders 列表的详情（复制交易历史订单）
         function showDetails(trader) {
 
-            if (nowTrader.master_id && nowTrader.master_id !== trader.master_id) {
+            if (nowTrader.account_code && nowTrader.account_code !== trader.account_code) {
                 nowTrader.detailsShow = false;
             }
             nowTrader = trader;
@@ -86,7 +86,7 @@
             page = page ? page : 1;
             var offset = (page-1)*pagesize;
 
-            invest.getInvestHistoryDetails(nowTrader.master_id, offset, pagesize, $scope.investSelect.id).then(function (data) {
+            invest.getInvestHistoryDetails(nowTrader.account_code, offset, pagesize, $scope.investSelect.id).then(function (data) {
                 nowTrader.notFirstLoad = true;
                 // console.info(data);
                 nowTrader.orders = data.data.records;
@@ -147,7 +147,7 @@
         }
 
         function openInvestCopyDetailMdl (trader, event) {
-            var master_id = trader.master_id;
+            var account_code = trader.account_code;
             event.stopPropagation();
             event.stopImmediatePropagation();
 
@@ -189,7 +189,7 @@
                         var offset = (page-1)*pagesize;
                         $scope.$broadcast('showLoadingImg');
 
-                        invest.getInvestHistoryDetails(trader.master_id, offset, pagesize, mt4_id).then(function (data) {
+                        invest.getInvestHistoryDetails(trader.account_code, offset, pagesize, mt4_id).then(function (data) {
                             // console.info(data);
                             $scope.$broadcast('hideLoadingImg');
                             $scope.details = data.data.records;
