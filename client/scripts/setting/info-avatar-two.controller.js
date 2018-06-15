@@ -21,13 +21,15 @@
                 msg: ''
             }
         };
-        if($scope.personal.is_master){
-            $scope.ban = {
-                msg: '您已是高手，不能再修改头像'
+        $scope.$watch('personal.has_master', function(){
+            if($scope.personal.has_master){
+                $scope.ban = {
+                    msg: '您已是高手，不能再修改头像'
+                }
+            } else {
+                $scope.ban = undefined
             }
-        } else {
-            $scope.ban = undefined
-        }
+        })
         $scope.$watch("selectHeadImg.avatar", function(n) {
             if (n) {
                 $scope.showSubmit = false    // 是否显示提交按钮

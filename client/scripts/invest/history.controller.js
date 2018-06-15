@@ -16,6 +16,18 @@
         $scope.openInvestOwnDetailMdl = openInvestOwnDetailMdl;
         $scope.openInvestCopyDetailMdl = openInvestCopyDetailMdl;
 
+        $scope.$watch('investSelect.id', function(n){
+            if(!n) return;
+            $scope.$broadcast('showLoadingImg');
+            if($scope.investSelect.type == 2){
+                $scope.orderHistory = {}; // 当前自主交易订单
+                $scope.orders = [];  // 自主交易持仓订单详情
+                getInvestHistoryTraders();
+            }else{
+                $scope.traders = [];   // 复制交易持仓订单
+                getInvestHistoryData();
+            }
+        })
         $scope.pagebar = {
             config: {
                 // total: , // 总页数
@@ -30,8 +42,6 @@
         var pagesize = 10;
         var nowTrader = {};          // 当前打开的copied trader
 
-        getInvestHistoryData();
-        getInvestHistoryTraders();
 
         function getInvestHistoryData () {
             invest.getInvestHistoryData($scope.investSelect.id).then(function (data) {
@@ -62,6 +72,7 @@
                 angular.forEach($scope.traders, function (value, key) {
                     $scope.traders[key].detailsShow = false;
                 });
+                $scope.$broadcast('hideLoadingImg');
             });
         }
 

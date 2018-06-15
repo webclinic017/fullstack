@@ -38,7 +38,7 @@
         }
 
         // 如果是高手账号，则获取高手等级
-        $scope.$watch('personal.is_master', function (newVal, oldVal) {
+        $scope.$watch('personal.has_master', function (newVal, oldVal) {
             // console.log(newVal, oldVal);
             if (newVal) {
                 getMasterGrade();

@@ -78,7 +78,7 @@
                         <div class="select">
                             {{ basicInfo.username }}
                         </div>
-                        <div class="edit" ng-click="editName()" ng-if="!permitEdit">
+                        <div class="edit" ng-click="editName()" ng-if="!personal.has_master">
                             修改
                         </div>
                     </div>

@@ -25,10 +25,10 @@
             pages: [],
             pagesBtn: [],
             // selectPage: , bind to pagination.selectPage
-            // getList: $scope.personal.is_master ? getMasterBonusList : getCopierBonusList         
+            // getList: $scope.personal.has_master ? getMasterBonusList : getCopierBonusList         
         };
         $timeout(function () {
-            $scope.pagebar.getList = $scope.personal.is_master ? getMasterBonusList : getCopierBonusList;
+            $scope.pagebar.getList = $scope.personal.has_master ? getMasterBonusList : getCopierBonusList;
         }, 1500);
         
         var date = new Date();

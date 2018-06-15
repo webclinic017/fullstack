@@ -25,9 +25,12 @@
             type: "account_type"
         },
         
-
+        // 监听账号id
+        $scope.$watch('investSelect.id', function(n){
+            if(!n) return;
+            getAccountInfo();
+        })
         //定时提取用户单个账号信息
-        getAccountInfo();
         $scope.$watch('personal.profile_check', function () {
             getSingleAccountInfo();
         })
@@ -51,26 +54,26 @@
                 } 
             });
         }
-
+        getAccountList();
         // 获取用户交易账户列表 TODO(方法要改)
-        account.getDealAccountList().then(function (data) {
-            if (!data) return;
-            if (data.is_succ) {
-                $scope.accountInfo.accountList = data.data; 
-                if($scope.accountInfo.accountList.length > 0){
-                    // 当全局mt4_id为空
-                    if(!$scope.investSelect.id){
-                        $scope.investSelect.id = $scope.accountInfo.accountList[0].mt4_id
-                        $scope.investSelect.type = $scope.accountInfo.accountList[0].account_type
+        function getAccountList(){
+            account.getDealAccountList().then(function (data) {
+                if (!data) return;
+                if (data.is_succ) {
+                    $scope.accountInfo.accountList = data.data; 
+                    if($scope.accountInfo.accountList.length > 0){
+                        // 当全局mt4_id为空
+                        if(!$scope.investSelect.id){
+                            $scope.investSelect.id = $scope.accountInfo.accountList[0].mt4_id
+                            $scope.investSelect.type = $scope.accountInfo.accountList[0].account_type
 
+                        }
                     }
-                }
-            } 
-        });
-
+                } 
+            });
+        }
         // 下拉选项变化时触发
         $scope.changeSelect=function(){
-            getAccountInfo()
             angular.forEach($scope.accountInfo.accountList, function(val, key){
                 if(val.mt4_id == $scope.investSelect.id) {
                     $scope.investSelect.type = val.account_type;

@@ -96,10 +96,6 @@
         $scope.editName = function() {
             $scope.isEditName = true;
         }
-        if($scope.personal.is_master){
-            console.log($scope.personal)
-            $scope.permitEdit = false
-        }
         $scope.clickable = true;
         $scope.selectRegion = selectRegion;
         $scope.showErr = showErr;
@@ -224,7 +220,7 @@
         }
 
         function submitForm(formName) {
-            if($scope.personal.is_master){
+            if($scope.personal.has_master){
                 $layer({
                     title: '错误提示',
                     size: 'sm',

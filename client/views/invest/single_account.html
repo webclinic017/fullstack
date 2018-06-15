@@ -4,7 +4,7 @@
             <div class="block_title">交易账户</div>
             <tw-select-list default-select-key="defaultSelectKey" default-select="investSelect" disabled="true" select-data-list="accountInfo.accountList" click-change="changeSelect()"></tw-select-list>
         </div>
-        <div class="col-xs-5">
+        <div class="col-xs-5"  ng-if="!personal.has_master">
             <div class="block_btn_group text-right">
                 <a ui-sref="space.master.subpage({ subpage: 'apply'})" class="tw-btn tw-btn-capsule-gradient tw-btn-md">申请高手</a>
             </div>

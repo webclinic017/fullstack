@@ -27,7 +27,11 @@
 
         $scope.cancelWithdraw = cancelWithdraw;
 
-        getList(1);
+        $scope.$watch('investSelect.id', function(n){
+            if(!n) return;
+            getList(1);
+            
+        })
 
         // 获取交易历史
         function getList(page) {

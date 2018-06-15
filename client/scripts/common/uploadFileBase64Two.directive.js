@@ -6,10 +6,10 @@
         .module('fullstackApp')
         .directive('twUploadFileBase64Two', twUploadFileBase64Two);
 
-    twUploadFileBase64Two.$inject = ['$timeout'];
+    twUploadFileBase64Two.$inject = ['$timeout', '$layer'];
 
     //通过base64上传图片
-    function twUploadFileBase64Two($timeout) {
+    function twUploadFileBase64Two($timeout, $layer) {
         return {
             restrict: 'A',
             replace: true,

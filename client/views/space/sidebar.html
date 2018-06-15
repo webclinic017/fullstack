@@ -26,15 +26,15 @@
                 </li>
                 <li class="detail_item">
                     <div class="item__number">
-                        <span ng-if="personal.is_master">0</span>
-                        <span ng-if="!personal.is_master">{{ personal.copy_num }}</span>
+                        <span ng-if="personal.has_master">0</span>
+                        <span ng-if="!personal.has_master">{{ personal.copy_num }}</span>
                     </div>
                     <div class="item__text">复制人数</div>
                 </li>
             </ul> -->
             <!-- <div class="text-center mg-tp-15">
-                <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="!personal.is_master" class="tw-btn tw-btn-full tw-btn-square-gradient">申请高手</a>
-                <div class="space_sidebar__grade" ng-if="personal.is_master">
+                <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="!personal.has_master" class="tw-btn tw-btn-full tw-btn-square-gradient">申请高手</a>
+                <div class="space_sidebar__grade" ng-if="personal.has_master">
                     <div class="space_sidebar__grade-bar">
                         <span ng-style="{width: 50}"></span>
                     </div>

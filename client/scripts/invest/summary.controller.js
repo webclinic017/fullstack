@@ -11,9 +11,13 @@
 
         $scope.summary = {};
 
-        getInvestSummary();
-        getInvestProfitLine();
-        getInvestBarChart();
+        $scope.$watch('investSelect.id', function(n){
+            if(!n) return;
+            $scope.$broadcast('showLoadingImg');
+            getInvestSummary();
+            getInvestProfitLine();
+            getInvestBarChart();
+        })
 
         function getInvestSummary () {
             invest.getInvestSummary($scope.investSelect.id).then(function (data) {

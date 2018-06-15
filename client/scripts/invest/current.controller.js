@@ -19,7 +19,6 @@
         $scope.openCancelCopyMdl = openCancelCopyMdl;
         $scope.openInvestCopyDetailMdl = openInvestCopyDetailMdl;
         $scope.openInvestOwnDetailMdl = openInvestOwnDetailMdl;
-        $scope.type = $scope.investSelect.type;
         // var avaCopyAmount;
         $scope.$watch('investSelect.id', function(n){
             if(!n) return;
