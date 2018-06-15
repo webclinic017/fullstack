@@ -88,7 +88,7 @@
             if ($scope.deposit.type !== 'invest') return;
             if ($scope.deposit.isAbleDeposit === 1) {
                 openDepositMdl('depositLimit', openChangeDepTypeMdl, {
-                    msgTip: '您网银入金累计已超过$3000，需上传历史充值凭证后才可继续使用网银支付功能。',
+                    msgTip: '您有未上传的充值凭证，需上传历史充值凭证后才可继续使用网银支付功能。',
                     msgBtn: '选择其他支付方式',
                     msgTitle: '提示'
                 });
@@ -128,6 +128,9 @@
                     $scope.deposit.submitBtn = false;
                 } else {
                     $scope.deposit.submitBtn = true;
+                }
+                if (!$scope.deposit.depositCard) {
+                    $scope.deposit.submitBtn = false;
                 }
                 return;
             }
