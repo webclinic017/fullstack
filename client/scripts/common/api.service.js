@@ -35,6 +35,7 @@
             getTotalDealAccountApi: urlOrigin2 + '/trade_account/summary',
             getDealAccountListApi: urlOrigin2 + '/trade_account/list',
             setDealAccountNameApi: urlOrigin2 + '/trade_account/name',
+            newSubAccountApi: urlOrigin2 + '/trade_account/add',
             getUnreadLengthApi: urlOrigin2 + '/notify/number',
             getNoticeListApi: urlOrigin2 + '/notify',
             getAllReadApi: urlOrigin2 + '/notify/read',

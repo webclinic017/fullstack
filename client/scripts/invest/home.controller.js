@@ -5,13 +5,13 @@
     angular.module('fullstackApp')
         .controller('InvestHomeController', InvestHomeController);
 
-        InvestHomeController.$inject = ['$scope', '$interval', 'account', 'invite', '$timeout', '$state'];
+        InvestHomeController.$inject = ['$scope', '$interval', 'account', 'invite', '$timeout', '$state', '$modal'];
 
     /**
      * @name InvestHomeController
      * @desc
      */
-    function InvestHomeController($scope, $interval, account, invite, $timeout, $state) {
+    function InvestHomeController($scope, $interval, account, invite, $timeout, $state, $modal) {
         var summaryId;
         $scope.$on('$destroy',function(){  
             $interval.cancel(summaryId);  
@@ -131,6 +131,16 @@
             errorTip();
             angular.forEach($scope.dealAccountList, function (value, index) {
                 value.editName = false;
+            });
+        }
+
+        // 新建子账号
+        $scope.newSubAccount = function(){
+            $modal.open({
+                templateUrl: '/views/invest/new_sub_account.html',
+                controller: 'AddAcountController',
+                size: 'sm',
+                backdrop: true
             });
         }
     }

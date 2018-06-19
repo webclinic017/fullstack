@@ -37,7 +37,7 @@
         function getList(page) {
             $scope.$emit('showLoadingImg');
             var offset = (page - 1) * pagesize;
-            asset.getHistory(offset, pagesize).then(function (data) {
+            asset.getHistory($scope.investSelect.id, offset, pagesize).then(function (data) {
                 // console.info(data);
                 $scope.$broadcast('hideLoadingImg');
                 if (!data) return;

@@ -128,11 +128,12 @@
          *                      // -5 出金成功
          * }
          */
-        function getHistory(offset, limit) {
+        function getHistory(mt4_id, offset, limit) {
             return publicHttp.dealPublicRequest(o.getHistoryApi, 'GET', {
+                mt4_id,
                 direction: 0,
-                offset: offset,
-                limit: limit
+                offset,
+                limit
             });
         }
 

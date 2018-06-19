@@ -3,11 +3,11 @@
     'use strict';
 
     angular.module('fullstackApp')
-        .controller('BonusIndexController', BonusIndexController);
+        .controller('InvestBonusController', InvestBonusController);
 
-    BonusIndexController.$inject = ['$scope', 'asset', '$modal', '$timeout'];
+        InvestBonusController.$inject = ['$scope', 'asset', '$modal', '$timeout'];
 
-    function BonusIndexController($scope, asset, $modal, $timeout) {
+    function InvestBonusController($scope, asset, $modal, $timeout) {
 
         $scope.success = false;
         $scope.backErr = {
@@ -23,13 +23,28 @@
                 page: 1    
             },
             pages: [],
-            pagesBtn: [],
-            // selectPage: , bind to pagination.selectPage
-            // getList: $scope.personal.has_master ? getMasterBonusList : getCopierBonusList         
+            pagesBtn: []    
         };
-        $timeout(function () {
-            $scope.pagebar.getList = $scope.personal.has_master ? getMasterBonusList : getCopierBonusList;
-        }, 1500);
+        $scope.$watch('investSelect.type',function(n){
+            if(n == 3){
+                // $scope.pagebar.getList = getMasterBonusList;
+                getMasterBonusSummary();
+            }else if(n == 2){
+                // $scope.pagebar.getList = getCopierBonusList;
+                getCopierBonusSummary();
+            }
+
+        })
+        $scope.$watch('investSelect.id',function(n){
+            if(n == 3){
+                getMasterBonusList();
+                getMasterBonusSummary();
+            }else if(n == 2){
+                getCopierBonusList();
+                getCopierBonusSummary();
+            }
+
+        })
         
         var date = new Date();
         var year = date.getFullYear();
@@ -69,9 +84,6 @@
         $scope.getMasterBonusList = getMasterBonusList;
         $scope.getCopierBonusList = getCopierBonusList;
         $scope.openBonusDetailMdl = openBonusDetailMdl;
-
-        getMasterBonusSummary();
-        getCopierBonusSummary();
 
         function getMasterBonusSummary() {
             asset.getMasterBonusSummary().then(function(data) {

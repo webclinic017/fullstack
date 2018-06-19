@@ -194,8 +194,6 @@
             });
 
         }
-
-        $scope.closeModal = closeModal;
         function closeModal() {
             $modalInstance.dismiss();
         }

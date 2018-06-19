@@ -1,29 +1,19 @@
 <!-- 我的分成 -->
 <div class="space_bonus space_block">
     <div class="space_bonus__total_box clearfix">
-        <div class="space_bonus__total">
-            <div class="item-num">
-                <span ng-if="personal && personal.has_master">{{ masterSummary.copy_count }}</span>
-                <span ng-if="personal && !personal.has_master">{{ copierSummary.copy_count }}</span>
-            </div>
-            <div class="item-tip">
-                <span ng-if="personal && personal.has_master">当前复制人数</span>
-                <span ng-if="personal && !personal.has_master">当前复制高手</span>
-            </div>
-        </div>
         <div class="space_bonus__total mid">
             <div class="item-num">
-                <span ng-if="personal && personal.has_master"><i class="fa fa-dollar"></i>{{ masterSummary.last_sum_pay }}</span>
-                <span ng-if="personal && !personal.has_master"><i class="fa fa-dollar"></i>{{ copierSummary.last_sum_pay }}</span>
+                <span ng-if="investSelect.type == 3"><i class="fa fa-dollar"></i>{{ masterSummary.last_sum_pay }}</span>
+                <span ng-if="investSelect.type == 2"><i class="fa fa-dollar"></i>{{ copierSummary.last_sum_pay }}</span>
             </div>
             <div class="item-tip">
-                <span ng-if="personal && personal.has_master">
+                <span ng-if="investSelect.type == 3">
                     上月分成
                     <i class="fa fa-info-circle" aria-hidden="true">
                         <span>上一个自然月的分成数据</span>
                     </i>
                 </span>
-                <span ng-if="personal && !personal.has_master">
+                <span ng-if="investSelect.type == 2">
                     上月扣除分成
                     <i class="fa fa-info-circle" aria-hidden="true">
                         <span>上一个自然月的分成数据</span>
@@ -33,14 +23,14 @@
         </div>
         <div class="space_bonus__total">
             <div class="item-num">
-                <span ng-if="personal && personal.has_master"><i class="fa fa-dollar"></i>{{ masterSummary.total_sum_pay }}</span>
-                <span ng-if="personal && !personal.has_master"><i class="fa fa-dollar"></i>{{ copierSummary.total_sum_pay }}</span>
+                <span ng-if="investSelect.type == 3"><i class="fa fa-dollar"></i>{{ masterSummary.total_sum_pay }}</span>
+                <span ng-if="investSelect.type == 2"><i class="fa fa-dollar"></i>{{ copierSummary.total_sum_pay }}</span>
             </div>
             <div class="item-tip">
-                <span ng-if="personal && personal.has_master">
+                <span ng-if="investSelect.type == 3">
                     获得分成总计
                 </span>
-                <span ng-if="personal && !personal.has_master">
+                <span ng-if="investSelect.type == 2">
                     扣除分成总计
                     <i class="fa fa-info-circle" aria-hidden="true">
                         <span>
@@ -53,22 +43,22 @@
     </div>
     <div class="space_bonus__title_box clearfix">
         <h4 class="tit">我的复制情况</h4>
-        <div ng-if="personal && personal.has_master" class="form-control-wrapper">
+        <div ng-if="investSelect.type == 3" class="form-control-wrapper">
             <input class="form-control" name="date" type="text" required ng-model="datepickerMaster.date" tw-datetimepicker get-bonus-list="getMasterBonusList()"
                 datetimepicker-options="{{datepickerMaster.options}}">
         </div>
-        <div ng-if="personal && !personal.has_master" class="form-control-wrapper">
+        <div ng-if="investSelect.type == 2" class="form-control-wrapper">
             <input class="form-control" name="date" type="text" required ng-model="datepickerCopier.date" tw-datetimepicker get-bonus-list="getCopierBonusList()"
                 datetimepicker-options="{{datepickerCopier.options}}">
         </div>
-        <div ng-if="personal && personal.has_master" class="remark">
+        <div ng-if="investSelect.type == 3" class="remark">
             <span class="font-info">注:</span> 每月10号结算上一月分成
         </div>
-        <div ng-if="personal && !personal.has_master" class="remark">
+        <div ng-if="investSelect.type == 2" class="remark">
             <span class="font-info">注:</span> 每月1号结算上一月分成
         </div>
     </div>
-    <div ng-if="personal && personal.has_master">
+    <div ng-if="investSelect.type == 3">
         <table class="table table-header table-hover table-striped table-bordered">
             <colgroup>
                 <col width="16.67%"></col>
@@ -108,7 +98,7 @@
             </tbody>
         </table>
     </div>
-    <div ng-if="personal && !personal.has_master">
+    <div ng-if="investSelect.type == 2">
         <table class="table table-header table-hover table-striped table-bordered">
             <colgroup>
                 <col width="16.67%"></col>

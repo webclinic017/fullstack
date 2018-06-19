@@ -27,6 +27,7 @@
             getTotalDealAccount: getTotalDealAccount,
             getDealAccountList: getDealAccountList,
             setDealAccountName: setDealAccountName,
+            newSubAccount: newSubAccount,
             getUnreadLength: getUnreadLength,
             getNoticeList: getNoticeList,
             getAllRead: getAllRead,
@@ -331,6 +332,16 @@
                 mt4_id: mt4_id,
                 account_name: account_name
             });
+        }
+
+        /**
+         * Account Service 添加子交易账户
+         * name值
+         *
+         * @method newSubAccount
+         */
+        function newSubAccount() {
+            return publicHttp.dealPublicRequest(o.newSubAccountApi, 'POST')
         }
 
         /**

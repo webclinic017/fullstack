@@ -29,7 +29,7 @@
         </div>
         <div class="col-xs-7">
             <div class="block_btn_group text-right">
-                <a class="tw-btn tw-btn-capsule-bordered tw-btn-md">创建子账号</a>
+                <a class="tw-btn tw-btn-capsule-bordered tw-btn-md" ng-click="newSubAccount()">创建子账号</a>
                 <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="!personal.has_master" class="tw-btn tw-btn-capsule-bordered tw-btn-md">申请高手</a>
             </div>
         </div>
@@ -42,7 +42,7 @@
                         <li>
                             <div>
                                 <span ng-if="!dealAccount.editName">
-                                    <span class="name" >{{ dealAccount.account_name || "默认" }}</span>
+                                    <span class="name" >{{ dealAccount.account_name || "交易账户" }}</span>
                                     <span class="edit" ng-if="dealAccount.account_type !== 2" ng-click="editAccountName(dealAccount)"></span>
                                     <span class="z-symbol z-superior" ng-if="dealAccount.account_type === 3">高手交易</span>
                                     <span class="z-symbol z-documentary" ng-if="dealAccount.account_type === 2">跟单交易</span>

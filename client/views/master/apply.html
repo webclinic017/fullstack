@@ -17,7 +17,7 @@
             <li class="space_apply__list-item" ng-repeat="account in accountList" ng-if="account.account_type == 1" ng-class="{'active': account.mt4_id == selectAccount}" >
                 <a ng-click="getMasterCondition(account.mt4_id)">
                     <div class="account_title">
-                        <span>{{ account.account_name || "默认" }}</span>
+                        <span>{{ account.account_name || "交易账号" }}</span>
                         <span>自主交易</span>
                     </div>
                     <ul class="account_details">

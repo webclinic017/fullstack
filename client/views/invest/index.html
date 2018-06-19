@@ -13,6 +13,12 @@
         <li ui-sref-active="active">
             <a ui-sref="space.center.invest.subpage({subpage: 'record'})">资金记录</a>
         </li>
+        <li ui-sref-active="active" ng-if="investSelect.type == 3">
+            <a ui-sref="space.center.invest.subpage({subpage: 'bonus'})">高手等级&佣金</a>
+        </li>
+        <li ui-sref-active="active" ng-if="investSelect.type == 2">
+            <a ui-sref="space.center.invest.subpage({subpage: 'bonus'})">跟单佣金</a>
+        </li>
     </ul>
 </div>
 
