@@ -24,7 +24,7 @@ module.exports = {
         "en": "Register to receive a "
     },
     "mInvite07": {
-        "zh": "2000美金",
+        "zh": "$2000体验金",
         "en": "$2000 coupons"
     },
     "mInvite08": {
@@ -32,7 +32,7 @@ module.exports = {
         "en": "In TigerWit, there have been 86,253 people who choose to follow the masters trading."
     },
     "mInvite09": {
-        "zh": "我刚刚在老虎外汇领取了2000美金,好东西",
+        "zh": "我刚刚在老虎外汇领取了$2000体验金,好东西",
         "en": "I just received $ 200 Coupons from TigerWit. "
     },
     "mInvite10": {

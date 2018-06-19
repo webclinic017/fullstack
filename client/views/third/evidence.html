@@ -12,7 +12,7 @@
                 <ul class="info_box__detail">
                     <li>
                         <div class="item__number">
-                            {{ main.mt4_id }}
+                            {{ main.accountStatus == 1 ? main.mt4_id : '-' }}
                         </div>
                         <div class="item__text">
                             <span>MT4真实账户</span>
@@ -20,7 +20,7 @@
                     </li>
                     <li>
                         <div class="item__number">
-                            {{ main.balance }}
+                            {{ main.accountStatus == 1 ? main.balance : '-' }}
                         </div>
                         <div class="item__text">
                             <span>账户余额</span>
@@ -28,13 +28,25 @@
                     </li>
                     <li>
                         <div class="item__number">
-                            {{ main.wallet_balance }}
+                            {{ main.accountStatus == 1 ? main.wallet_balance : '-' }}
                         </div>
                         <div class="item__text">
                             <span>零钱包账户</span>
                         </div>
                     </li>
                 </ul>
+            </div>
+        </div>
+
+        <div class="tw-space-layout__con-nav">
+            <div class="nav-view">
+                <div class="space_nav">
+                    <ul class="space_nav__box" style="width: 940px;">
+                        <li class="space_nav__box-item">
+                            <a href="/payment/asset"><i class="fa fa-angle-left"></i> 返回</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         
@@ -50,6 +62,7 @@
                             <i class="fa fa-angle-up" ng-show="item.show"></i>
                           </div>
                           <div class="web_evidence__item-content" ng-show="item.show">
+                            <div class="font-info">{{item.sub_title}}</div>
                             <div ng-repeat="cont in item.content">
                                 <div class="sub-title" ng-show="cont.title">
                                   {{cont.title}}

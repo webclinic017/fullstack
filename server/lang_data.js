@@ -25,7 +25,7 @@ module.exports = function () {
             webMt4Download: "https://static.tigerwitfx.com/files/tigerwit4setup.exe",
             androidApp: versionAndroidApp,
             // download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
-            download: "/m/blank",
+            download: "http://admin-shence.tigerwit.com:8106/r/C",
 
             // path
             logoPathZh: indexBasePath + "/tigerwit-logo-en.png",
@@ -2056,13 +2056,18 @@ module.exports = function () {
     // console.log(faq)
     var mInvite = replaceTiger(require('./mutilang/mInvite'))
     var mRegister = replaceTiger(require('./mutilang/mRegister'))
-
+    // 三方开户
+    var mThird = require('./mutilang/third')
+    // 注册协议 agment_mdl.html
+    var agment = replaceTiger(require('./mutilang/agment'))
     return _.merge(
         data,
         faq,
         tobeMaster,
         tradeFee,
         mInvite,
-        mRegister
+        mRegister,
+        mThird,
+        agment
     );
 }; 

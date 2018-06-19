@@ -663,8 +663,8 @@
         $scope.realnameInfo = {
             realname: '',
             id_type: {
-                key: "大陆",
-                value: 0
+                key: undefined,
+                value: undefined
             },
             idNum: '',
             year18: false,
@@ -723,16 +723,40 @@
 
         $scope.idType = [
             {
-                key: '大陆',
-                value: 0
+                key: '大陆居民身份证',
+                value: 0,
+                isCN: true,         //中国区
+                isGlobal: false     //国际区
             },
             {
-                key: '港澳',
-                value: 1
+                key: '港澳居民来往内地通行证',
+                value: 1,
+                isCN: true,
+                isGlobal: false
             },
             {
-                key: '台湾',
-                value: 2
+                key: '台湾居民来往大陆通行证',
+                value: 2,
+                isCN: true,
+                isGlobal: false
+            },
+            {
+                key: '护照',
+                value: 3,
+                isCN: true,
+                isGlobal: true
+            },
+            {
+                key: '驾驶证',
+                value: 4,
+                isCN: true,
+                isGlobal: true
+            },
+            {
+                key: '身份证',
+                value: 5,
+                isCN: false,
+                isGlobal: true
             }
         ]
 
@@ -819,7 +843,7 @@
                 showErr('idFront');
             }
 
-            if (!$scope.readyToUpload.hasOwnProperty('back')) {
+            if ($scope.realnameInfo.id_type.value == 0 && !$scope.readyToUpload.hasOwnProperty('back')) {
                 showErr('idBack');
                 return
             }

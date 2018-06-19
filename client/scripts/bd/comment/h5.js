@@ -237,7 +237,7 @@
             type: type,
             title: '每日汇评',
             description: pageData.main_title || 'TigerWit 每日汇评，分析师李彭专栏',
-            url: window.location.href
+            url: "https://bd.tigerwitfx.com"+window.location.pathname
         };
         if (!isInTiger()) {
             console.log("当前不是APP环境");

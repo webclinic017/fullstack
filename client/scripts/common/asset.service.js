@@ -20,6 +20,7 @@
             deposit: deposit,
             getDepositLimit: getDepositLimit,
             getDepositPlatform: getDepositPlatform,
+            getWithdrawPlatform: getWithdrawPlatform,
             getFXRate: getFXRate,
             getIsWithdraw: getIsWithdraw,
             getMasterBonusSummary: getMasterBonusSummary,
@@ -34,7 +35,8 @@
             teleDeposit: teleDeposit,
             uploadPaymentEvidence: uploadPaymentEvidence,
             getPaymentEvidence: getPaymentEvidence,
-            cancelPaymentEvidence: cancelPaymentEvidence
+            cancelPaymentEvidence: cancelPaymentEvidence,
+            checkEvidenceStatus: checkEvidenceStatus
         };
         return service;
 
@@ -44,14 +46,10 @@
          * @method withdraw
          * @param {String} amount 出金金额
          * @param {Number} cardId 出金银行卡的 id
+         * @param {String} cse_account CSE账号
          */
-        function withdraw(amount, cardId) {
-            amount = Number(amount).toFixed(2);
-
-            return publicHttp.dealPublicRequest(o.withdrawApi, 'POST', {
-                amount: amount,
-                bank_card_id: cardId
-            });
+        function withdraw(params) {
+            return publicHttp.dealPublicRequest(o.withdrawApi, 'POST', params);
         }
 
 
@@ -69,16 +67,8 @@
          *
          * @method bindCard
          */
-        function bindCard(number, name, address, province, city, id, phone) {
-            return publicHttp.dealPublicRequest(o.bindCardApi, 'PUT', {
-                card_no: number,
-                bank_name: name,
-                bank_addr: address,
-                province: province,
-                city: city,
-                id: id,
-                phone: phone
-            });
+        function bindCard(oParams) {
+            return publicHttp.dealPublicRequest(o.bindCardApi, 'PUT', oParams);
         }
 
         /**
@@ -177,6 +167,15 @@
          */
         function getDepositPlatform () {
             return publicHttp.dealPublicRequest(o.getDepositPlatformApi, 'GET');
+        }
+
+        /**
+         * Asset Service 获取出金方式列表
+         *
+         * @method getWithdrawPlatform
+         */
+        function getWithdrawPlatform () {
+            return publicHttp.dealPublicRequest(o.getWithdrawPlatformApi, 'GET');
         }
 
         /**
@@ -282,11 +281,8 @@
          * @method walletWithdraw
          * @param {Number} amount
          */
-        function walletWithdraw(bank_card_id, amount) {
-            return publicHttp.dealPublicRequest(o.walletWithdrawApi, 'POST', {
-                bank_card_id: bank_card_id,
-                amount: amount
-            });
+        function walletWithdraw(params) {
+            return publicHttp.dealPublicRequest(o.walletWithdrawApi, 'POST', params);
         }
 
         /**
@@ -359,6 +355,16 @@
             return publicHttp.dealPublicRequest(o.cancelPaymentEvidenceApi, 'POST', {
                 id: id
             });
+        }
+
+        /**
+         * Asset Service 检查入金凭证状态
+         *
+         * @method checkEvidenceStatus
+         * 
+         */
+        function checkEvidenceStatus () {
+            return publicHttp.dealPublicRequest(o.checkEvidenceStatusApi, 'GET');
         }
     }
 })();

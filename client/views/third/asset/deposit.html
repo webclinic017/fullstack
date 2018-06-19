@@ -35,11 +35,11 @@
                 </div>
                 <p class="deposit__way-tip" ng-class="{active: deposit.type !== 'wallet'}">{{depositTypeLst[deposit.type].describe}}</p>
                 <p class="deposit__way-tip" ng-class="{active: deposit.type === 'wallet'}">当前零钱包余额：${{ walletAble || '0.00' }}</p>
-                <a class="deposit__way-tip font-danger mg-tp-10 cursor_pointer" ng-class="{active: deposit.type === 'cseWallet'}" href="/third_usage" target="_blank">
+                <a class="deposit__way-tip font-danger mg-tp-10 cursor_pointer" ng-class="{active: deposit.type === 'cseWallet'}" href="/payment/cse_usage" target="_blank">
                     第三方充值教程
                 </a>
                 <p class="deposit__way-desc" ng-class="{active: deposit.type === 'invest'}">
-                    <span ng-click="openDepositRuleMdl('depositRule')">网银支付规则</span>
+                    <span ng-click="openDepositRuleMdl({type: 'depositRule', tit: '网银入金规则'})">网银支付规则</span>
                 </p>
             </div>
         </div>

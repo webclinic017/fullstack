@@ -37,7 +37,7 @@
             if (logined) {
                 // 获取资产信息、个人信息
                 account.getPersonalInfo().then(function (data) {
-                    // console.log('info', data);
+                    console.log('info', data);
                     if (!data) return;
                     angular.extend($scope.main, data);
                 });
@@ -56,6 +56,7 @@
                 //获取认证状态
                 account.getAuthStatus().then(function (data) {
                     if (data.is_succ) {
+                        main.accountStatus = data.data.account_status;
                         if (data.data.status == 6) {
                             main.verifyInfo = {
                                 status: true,

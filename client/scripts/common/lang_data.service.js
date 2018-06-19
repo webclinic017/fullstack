@@ -8,27 +8,24 @@
 
     function langData ($cookies) {
         var language = 'zh';
-        var companyConfig;
+        var companyConfig = {
+            companyNickName: "tigerwit",
+            companyNameZh: "TigerWit",
+            companyNameEn: "TigerWit",
+            telephone: "400 - 809 - 8509",
+            mt4Live: "TigerWit-Live",
+            companyCopyRules: "https://www.tigerwit.com/web/copy/rules",
+            webSite:"www.tigerwit.com",
+        };
         
         angular.forEach($cookies, function (value, index) {
 
             if (index === 'lang') {
                 // console.info(value, index);
-                language = value;
+                language = value === 'en' ? value : 'zh';
+
             }
             if (index === 'company_name') {
-                
-                if (value === 'tigerwit') {
-                    companyConfig = {
-                        companyNickName: "tigerwit",
-                        companyNameZh: "TigerWit",
-                        companyNameEn: "TigerWit",
-                        telephone: "400 - 809 - 8509",
-                        mt4Live: "TigerWit-Live",
-                        companyCopyRules: "https://cn.tigerwit.com/web/copy/rules",
-                        webSite:"www.tigerwit.com",
-                    };
-                }
                 if (value === 'lonfx') {
                     companyConfig = {
                         companyNickName: "lonfx",

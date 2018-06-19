@@ -15,34 +15,15 @@
         });
     }
 
-    set_token();
+    // set_token();
 
-    /*token 5分钟过期*/
-    setInterval(function () {
-        set_token();
-    }, 300000);
+    // /*token 5分钟过期*/
+    // setInterval(function () {
+    //     set_token();
+    // }, 300000);
 
     $(function () {
         var oReg = {};
-
-        function isRegSucceed() {
-            var location = window.location.href.indexOf("/succ") >= 0;
-            if (!!document.getElementById("regist_btn3") && location) {
-                /*统计注册成功*/
-                sa.track('btn_register_finish');
-                window._czc && _czc.push(["_trackEvent", "活动页", "立即注册且成功"]);
-                
-                setTimeout(function () {
-                    var user_code = $.cookie("user_code");
-                    // console.log(user_code);
-                    if (user_id) {
-                        sa.login(user_id);
-                    }
-                }, 0);
-
-                return true;
-            }
-        }
 
         function sendVerifyCode() {
             function isDisabled() {
@@ -57,10 +38,10 @@
 
             var interval = null;
 
-            if (!token) {
-                sa.track('set_token_failed');
-                layer.msg('网络异常,请刷新重试!');
-            }
+            // if (!token) {
+            //     sa.track('set_token_failed');
+            //     layer.msg('网络异常,请刷新重试!');
+            // }
 
             /*loading层*/
             layer.load(1, {shade: false});
@@ -90,12 +71,12 @@
                                 $("#verify_code_btn").removeClass("disable").html("重新获取");
                                 duration = 59;
                                 /*重新获取token*/
-                                set_token();
+                                // set_token();
                             }
                         }, 1000);
                     }
                 } else {
-                    set_token();
+                    // set_token();
                     layer.msg('获取失败,请重试!');
                 }
             });
@@ -105,9 +86,8 @@
             /*获取手机号*/
             var telephone = $("#telephone");
             var rPhone = telephone.val() ? telephone.val() : "";
-            var isMobile = /^(13|14|15|17|18)\d{9}$/;
-            var isPhone = /^((0\d{2,4})-)?(\d{7,8})(-(\d{2,}))?$/;
-            if ((telephone.val() == "") || (!isMobile.test(telephone.val()) && !isPhone.test(telephone.val()))) {
+            var isMobile = /^1\d{10}$/;
+            if ((telephone.val() == "") || !isMobile.test(telephone.val())) {
                 /*提示*/
                 layer.msg('请输入有效的手机号');
                 return false;
@@ -274,7 +254,7 @@
         ;
         (function () {
 
-            function toLogin (is_agree) {
+            function toLogin (e, is_agree) {
                 
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
@@ -315,13 +295,13 @@
                         });
                         window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
 
-                        $timeout(function () {
+                        setTimeout(function () {
                             window.location.href = '/space/#/center?type=new';
                         }, 100);
                     } else {
                         if ((data.code == 100402) || (data.code == 100403)) {
                             openWebAgmentModal(data.code, function(resolve, e){
-                                toLogin('is_agree');
+                                toLogin(e, 'is_agree');
                                 layer.close(resolve.layIndex)
                             })
                         } else {

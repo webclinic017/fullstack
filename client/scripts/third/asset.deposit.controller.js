@@ -208,8 +208,17 @@
                     function confirmDeposit() {
                         $scope.isLoading = true;
                         if (($scope.deposit.type !== 'wallet') && ($scope.deposit.type !== 'tele')) {
-                            //网银大额入金限制
-                            if ($scope.deposit.type === 'invest') {
+                            //第三方支付
+                            if ($scope.deposit.type === 'cseWallet') {
+                                $scope.isLoading = false;
+                                openDepositRuleMdl({
+                                    type: 'cseMessage',
+                                    tit: '是否有CSE Wallet帐号？',
+                                    pop: $scope.depositTypeLst[$scope.deposit.type].pop,
+                                    url: $scope.depositTypeLst[$scope.deposit.type].url,
+                                    callback: submitDeposit
+                                });
+                            } else if ($scope.deposit.type === 'invest') {
                                 asset.getDepositLimit().then(function (data) {
                                     // console.log(data);
                                     if (!data) return;
@@ -217,52 +226,31 @@
                                         $scope.deposit.isAbleDeposit = data.data.evidence;
                                         $scope.isLoading = false;
                                         if ($scope.deposit.isAbleDeposit === 0) {
-                                            var poundage = $scope.depositTypeLst.invest.poundage.substring(0, $scope.depositTypeLst.invest.poundage.length-1)*0.01;
-                                            var amountRMB = Number(amount*$scope.deposit.currency.rate_in).toFixed(2);
-                                            var amountFee = Number(amountRMB*poundage).toFixed(2);
-                                            openDepositMdl('confirmDeposit', submitDeposit, {
-                                                amountDollar: amount,
-                                                amountRMB: amountRMB,
-                                                amountFee: $scope.depositTypeLst.invest.poundage_status ? amountFee : '0.00',
-                                                amountTotal: $scope.depositTypeLst.invest.poundage_status ? (Number(amountRMB) + Number(amountFee)).toFixed(2) : Number(amountRMB).toFixed(2),
-                                                msgBtn: '确认'
-                                            });
+                                            computeAmount();
                                         } else {
                                             checkInvestLimit();
                                         }
                                     }
                                 });
-                            } else if ($scope.deposit.type === 'paypal') {
+                            } else {
                                 $scope.isLoading = false;
-                                var poundage = $scope.depositTypeLst.paypal.poundage.substring(0, $scope.depositTypeLst.paypal.poundage.length-1)*0.01;
-                                var amountFee = Number(amount*poundage).toFixed(2);
-                                openDepositMdl('confirmPaypalDeposit', submitDeposit, {
+                                computeAmount();
+                            }
+
+                            function computeAmount () {
+                                var poundage = $scope.depositTypeLst[$scope.deposit.type].poundage.substring(0, $scope.depositTypeLst[$scope.deposit.type].poundage.length-1)*0.01;
+                                var amountRMB = Number(amount*$scope.deposit.currency.rate_in).toFixed(2);
+                                var amountFee = Number(amountRMB*poundage).toFixed(2);
+                                openDepositMdl('confirmDeposit', submitDeposit, {
                                     amountDollar: amount,
+                                    amountRMB: amountRMB,
                                     amountFee: amountFee,
-                                    amountTotal: $scope.depositTypeLst.paypal.poundage_status ? (Number(amount) + Number(amountFee)).toFixed(2) : amount,
-                                    isFree: $scope.depositTypeLst.paypal.poundage_status,
-                                    desc: $scope.depositTypeLst.paypal.poundage_desc,
+                                    amountTotal: $scope.depositTypeLst[$scope.deposit.type].poundage_status ? (Number(amountRMB) + Number(amountFee)).toFixed(2) : Number(amountRMB).toFixed(2),
+                                    isFree: $scope.depositTypeLst[$scope.deposit.type].poundage_status,
+                                    desc: $scope.depositTypeLst[$scope.deposit.type].poundage_desc,
+                                    currency: $scope.deposit.currency,
                                     msgBtn: '确认'
                                 });
-                            } else if ($scope.deposit.type == 'cseWallet') {
-                                $scope.isLoading = false;                                
-                                $layer({
-                                    title: '系统提示',
-                                    // msgClass: 'font-danger',
-                                    size: 'sm',
-                                    btnsClass: 'text-right',
-                                    msg: '是否有CSE Wallet帐号？',
-                                    btns: {
-                                        '是': function () {
-                                            submitDeposit()
-                                        },
-                                        '否': function () {
-                                            window.open("https://www.csepay.com/zn/")
-                                        }
-                                    }
-                                })
-                            } else {
-                                submitDeposit();
                             }
 
                             function submitDeposit() {
@@ -384,18 +372,24 @@
                 }
             });
         }
-        function openDepositRuleMdl(type) {
+        function openDepositRuleMdl(params) {
             $modal.open({
                 templateUrl: '/views/third/asset/deposit_modal.html',
                 size: 'md',
                 backdrop: 'static',
                 controller: function ($scope, $modalInstance, $state) {
-                    $scope.type = type;
+                    $scope.type = params.type;
                     $scope.msgInfo = {
-                        msgTitle: '网银入金规则'
+                        msgTitle: params.tit || '提示',
+                        msgPopTitle: params.pop ? params.pop.title : '',
+                        msgPopContent: params.pop ? params.pop.content : '',
+                        msgUrl: params.url || ''
                     };
+                    $scope.callback = params.callback || null;
                     $scope.closeModal = closeModal;
-
+                    $scope.toCse = function () {
+                        window.open($scope.msgInfo.msgUrl);
+                    };
                     function closeModal() {
                         $modalInstance.dismiss();
                     }

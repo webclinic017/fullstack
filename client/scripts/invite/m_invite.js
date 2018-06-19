@@ -104,6 +104,10 @@
         return false;
     });
 
+    DOM['$share_tel'].on("tap", function () {
+        sa.track('inp_PN');
+    });
+
     function invitation() {
         var versionName = getVersionName()
         var version = versionName ? Number(versionName.replace(/\./gi, '')) : 0
@@ -135,11 +139,13 @@
     }
 
     function nativeShare(type) {
+        var u = getCoName() === 'tigerwit' ? "https://bd.tigerwitfx.com" : window.location.origin;
         var callConfig = {
             type: type,
             title: lang.text('invite.share2'),
             description: lang.text('invite.share3') + (lang.curLang('zh') ? coMap[getCoName()] : '') + lang.text('invite.share1'),
-            url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || ''),
+            url: u + "/m/invite01?user_code=" + ($.cookie("user_code") || ''),
+            // url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || ''),
             imgUrl: window.location.origin + "/napi?action=get_share_img&user_code=" + ($.cookie("user_code") || '') + ".png",
         };
         if (!isInTiger()) {

@@ -36,7 +36,7 @@ function setEnvCf(req, res) {
     global_modelRegular = require('./model/modelRegular')();
     gloal_modelRegularDetail = require('./model/modelRegularDetail');
     // console.log(global_modelRegular);
-    setCompanyCookie(res);
+    setCompanyCookie(req, res);
 }
 
 function extendPublic(data, req) {
@@ -113,7 +113,7 @@ module.exports = function (app) {
     });
     app.use('/', function(req, res, next){
         setEnvCf(req, res);
-        var allowPaths = ['/payment/login', '/payment/asset', '/payment/evidence', '/third/cse_usage', '/waiting', '/napi']
+        var allowPaths = ['/payment/login', '/payment/asset', '/payment/evidence', '/payment/cse_usage', '/waiting', '/napi']
         if(req.hostname.indexOf('dp') != -1) {
         // if(req.hostname.indexOf('w.dev.tigerwit.com') != -1) {
             if(allowPaths.indexOf(req.originalUrl) != -1){
@@ -1001,6 +1001,7 @@ module.exports = function (app) {
         if (action == "version_check") {
             var appType;   // global, uk, pandafx, old
             var appLanguage = req.query.lang || 'cn';
+            appLanguage == 'zh' && (appLanguage = 'cn');
             if (req.query.type) {
                 appType = req.query.type;
             } else {
@@ -1139,6 +1140,29 @@ module.exports = function (app) {
             }
             if (oError) {
                 rs.message = oError.error_msg;
+            }
+        }
+        res.json(rs);
+    });
+    app.route('/third_napi').get(function (req, res) {
+        var ThirdPath = require('./third_napi.js')()
+        var data = new ThirdPath(req);
+        var nError = null, rs = null;
+        if (data) {
+            rs = {
+                is_succ: true,
+                code: 0,
+                message: "",
+                data: data.oPath
+            }
+        } else {
+            rs = {
+                is_succ: false,
+                code: 1,
+                message: ""
+            }
+            if (nError) {
+                rs.message = nError.error_msg;
             }
         }
         res.json(rs);

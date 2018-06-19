@@ -69,6 +69,7 @@
             depositApi: urlOrigin2 + '/payment/deposit',
             getDepositLimitApi: urlOrigin2 + '/payment/deposit/limits',
             getDepositPlatformApi: urlOrigin2 + '/payment/deposit/platform',
+            getWithdrawPlatformApi: urlOrigin2 + '/payment/withdraw_list',
             getFXRateApi: urlOrigin2 + '/payment/rates',
             getIsWithdrawApi: urlOrigin2 + '/v2/payment/withdraw/limits',
             walletDepositApi: urlOrigin2 + '/wallet/deposit',
@@ -83,7 +84,8 @@
             teleDepositApi: urlOrigin2 + '/payment/deposit/transfer',
             uploadPaymentEvidenceApi: urlOrigin2 + '/payment/evidence',
             getPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_list',
-            cancelPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_cancel'
+            cancelPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_cancel',
+            checkEvidenceStatusApi: urlOrigin2 + '/payment/evidence_status'
         };
         var forex = {
             

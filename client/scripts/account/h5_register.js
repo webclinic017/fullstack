@@ -12,12 +12,12 @@
         });
     }
 
-    set_token();
+    // set_token();
     
     /*token 5分钟过期*/
-    setInterval(function () {
-        set_token();
-    }, 300000);
+    // setInterval(function () {
+    //     set_token();
+    // }, 300000);
 
     // setTimeout(function(){
     //     openH5AgmentModal(100402, function(resolve, e){
@@ -71,12 +71,12 @@
                 window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
 
                 setTimeout(function () {
-                    var user_code = $.cookie("user_code");
+                    var user_id = $.cookie("user_code");
                     // console.log(user_code);
                     if (user_id) {
                         sa.login(user_id);
                     }
-                }, 0);
+                }, 100);
 
                 return true;
             }
@@ -106,16 +106,16 @@
             if (isDisabled()) return;
 
             var interval = null;
-
-            if (!token) {
-                sa.track('set_token_failed');
-                layer.open({
-                    content: lang.text('register.networkErr'),
-                    skin: 'msg',
-                    anim: false,
-                    time: 2 /*1.2秒后自动关闭*/
-                });
-            }
+            
+            // if (!token) {
+            //     sa.track('set_token_failed');
+            //     layer.open({
+            //         content: lang.text('register.networkErr'),
+            //         skin: 'msg',
+            //         anim: false,
+            //         time: 2 /*1.2秒后自动关闭*/
+            //     });
+            // }
 
 
 
@@ -158,12 +158,12 @@
                                 $("#verify_code_btn").removeClass("disable").html(lang.text('register.resendCode'));
                                 duration = 59;
                                 /*重新获取token*/
-                                set_token();
+                                // set_token();
                             }
                         }, 1000);
                     }
                 } else {
-                    set_token();
+                    // set_token();
                     layer.open({
                         content: data.message,
                         skin: 'msg',
@@ -374,7 +374,7 @@
         ;
         (function () {
 
-            function toRegister (is_agree) {
+            function toRegister (e, is_agree) {
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
                 // if (!checkPassword()) return;
@@ -420,6 +420,7 @@
                             login_isNew: true,
                             login_type: '验证码登录'
                         });
+
                         /*跳转到注册成功页面*/
                         if (window.location.pathname.indexOf('t35') >= 0) {
                             var pandaDownloadUrl = '';
@@ -434,7 +435,7 @@
 
                         if ((data.code == 100402) || (data.code == 100403)) {
                             openH5AgmentModal(data.code, function(resolve, e){
-                                toRegister('is_agree');
+                                toRegister(e, 'is_agree');
                                 layer.close(resolve.layIndex)
                             })
                         } else {
@@ -451,8 +452,8 @@
                 });
 
             }
-            $("#submit_form").on("touchend", function () {
-                toRegister();
+            $("#submit_form").on("touchend", function (e) {
+                toRegister(e);
             });
         }());
 
