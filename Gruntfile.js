@@ -269,7 +269,8 @@ module.exports = function (grunt) {
                             return url;
                         }
                         // console.log('----- grunt-cdnify maped url -----', url)
-                        return CDN_URL + url;
+                        // return CDN_URL + url;
+                        return url;
                     }
                 },
                 files: [{
