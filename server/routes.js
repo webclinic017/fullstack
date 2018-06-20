@@ -329,11 +329,25 @@ module.exports = function (app) {
     app.route('/m/deposit/pay').get(function (req, res) {
         setEnvCf(req, res);
         var platform = 'pc';
+        var banklistStatus = 'static';
         if (isMobile(req)) {
             platform = 'mobile';
         }
         res.render('m_vue/m_deposit_pay', extendPublic({
-            platform: platform
+            platform: platform,
+            banklistStatus: banklistStatus
+        }, req));
+    });
+    app.route('/m/deposit/pay_select').get(function (req, res) {
+        setEnvCf(req, res);
+        var banklistStatus = 'select';
+        var platform = 'pc';
+        if (isMobile(req)) {
+            platform = 'mobile';
+        }
+        res.render('m_vue/m_deposit_pay', extendPublic({
+            platform: platform,
+            banklistStatus: banklistStatus
         }, req));
     });
     /* H5 充值成功 */
