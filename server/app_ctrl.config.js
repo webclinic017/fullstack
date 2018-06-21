@@ -86,10 +86,10 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V3.0.9",
-                        description: "This update\n1.Deposit/Withdrawal function has been optimization\n2.Experience account expiration support continues to apply\n3.The page of Deposit/Withdrawal has been optimization\n4.Details has been optimization",
-                        updated_description: "",
-                        force_update : true
+                        version_name : "V3.1.1",
+                        description: "This update\nThe new version optimizes the function Internet Banking deposit.\nUpdate now to enjoy the new trading experience!",
+                        updated_description: "70% users are using new version",
+                        force_update : false
                     }
                 },
                 android: {
@@ -105,10 +105,10 @@
             cn: {
                 ios: {
                     app_info: {
-                        version_name : "V3.0.9",
-                        description: "本次更新：\n1.充值功能优化\n2.增加体验金账户续约功能\n3.充值/提现界面优化\n4.细节优化",
+                        version_name : "V3.1.1",
+                        description: "本次更新：\n新版本优化了网银入金功能。赶快更新享受新的交易体验！",
                         updated_description: "70%的用户正在使用新版本",
-                        force_update : true
+                        force_update : false
                     }
                 },
                 android: {
