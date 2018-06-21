@@ -248,11 +248,11 @@
             $scope.$emit('main.checkAuthenFlow', {
                 ctrlName: 'ThirdWithdrawController',
                 callback: function () {
-                    var personal = {
-                        verified: $scope.main.verified,
-                        realname: $scope.main.realname,
-                        profile_check: $scope.main.profile_check,
-                    };
+                    // var personal = {
+                    //     verified: $scope.main.verified,
+                    //     realname: $scope.main.realname,
+                    //     profile_check: $scope.main.profile_check,
+                    // };
                     $modal.open({
                         templateUrl: '/views/third/asset/card_modal.html',
                         size: 'md',
@@ -260,7 +260,7 @@
                         resolve: {
                             passedScope: function () {
                                 return {
-                                    personal: personal,
+                                    personal: $scope.main,
                                     card: $scope.withdraw.card
                                 };
                             }

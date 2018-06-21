@@ -14,11 +14,12 @@
             //bank: ,           // 银行
             // address: ,       // 开户行
             binding: false,
-            realname: $scope.personal.realname
+            realname: $scope.personal.realname,
+            world: $scope.personal.region
         };
         $scope.banks = [];
         $scope.clickable = true;
-
+        
         $scope.worlds = [];
         $scope.provinces = [];
         $scope.citys = [];
@@ -157,13 +158,13 @@
             showErr('number');
             showErr('address');
             
-            if ($scope.card.world && $scope.card.world.code === 'CN') {
+            if ($scope.card.world && $scope.card.world.world_code === 'CN') {
                 showErr('bank');
                 showErr('province');
                 showErr('city');
                 showErr('phone');
             }
-            if ($scope.card.world && $scope.card.world.code !== 'CN') {
+            if ($scope.card.world && $scope.card.world.world_code !== 'CN') {
                 showErr('bankOther');
                 showErr('swift_code');
             }
@@ -174,10 +175,10 @@
 
             var oParams = {
                 card_no: $scope.card.number,
-                country: $scope.card.world.code,
+                country: $scope.card.world.world_code,
                 bank_addr: $scope.card.address,
             };
-            if ($scope.card.world && $scope.card.world.code === 'CN') {
+            if ($scope.card.world && $scope.card.world.world_code === 'CN') {
                 oParams.bank_name = $scope.card.bank.nameEN;
                 oParams.province = $scope.card.province.code;
                 oParams.city = $scope.card.city.code;
