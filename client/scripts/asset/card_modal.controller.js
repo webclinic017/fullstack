@@ -155,7 +155,6 @@
             showErr('realname');
             showErr('world');
             showErr('number');
-            showErr('swift_code');
             showErr('address');
             
             if ($scope.card.world && $scope.card.world.code === 'CN') {
@@ -166,6 +165,7 @@
             }
             if ($scope.card.world && $scope.card.world.code !== 'CN') {
                 showErr('bankOther');
+                showErr('swift_code');
             }
 
             if ($scope.cardForm.$invalid) {
@@ -175,7 +175,6 @@
             var oParams = {
                 card_no: $scope.card.number,
                 country: $scope.card.world.code,
-                swift_code: $scope.card.swift_code,
                 bank_addr: $scope.card.address,
             };
             if ($scope.card.world && $scope.card.world.code === 'CN') {
@@ -185,6 +184,7 @@
                 oParams.phone = $scope.card.phone;
             } else {
                 oParams.bank_name = $scope.card.bankOther;
+                oParams.swift_code = $scope.card.swift_code;
             }
             
             $scope.clickable = false;

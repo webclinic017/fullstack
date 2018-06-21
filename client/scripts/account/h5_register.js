@@ -374,7 +374,7 @@
         ;
         (function () {
 
-            function toRegister (is_agree) {
+            function toRegister (e, is_agree) {
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
                 // if (!checkPassword()) return;
@@ -435,7 +435,7 @@
 
                         if ((data.code == 100402) || (data.code == 100403)) {
                             openH5AgmentModal(data.code, function(resolve, e){
-                                toRegister('is_agree');
+                                toRegister(e, 'is_agree');
                                 layer.close(resolve.layIndex)
                             })
                         } else {
@@ -452,8 +452,8 @@
                 });
 
             }
-            $("#submit_form").on("touchend", function () {
-                toRegister();
+            $("#submit_form").on("touchend", function (e) {
+                toRegister(e);
             });
         }());
 

@@ -381,9 +381,9 @@
                     $scope.type = params.type;
                     $scope.msgInfo = {
                         msgTitle: params.tit || '提示',
-                        msgPopTitle: params.pop.title,
-                        msgPopContent: params.pop.content,
-                        msgUrl: params.url
+                        msgPopTitle: params.pop ? params.pop.title : '',
+                        msgPopContent: params.pop ? params.pop.content : '',
+                        msgUrl: params.url || ''
                     };
                     $scope.callback = params.callback || null;
                     $scope.closeModal = closeModal;

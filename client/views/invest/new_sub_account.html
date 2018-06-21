@@ -43,7 +43,18 @@
         <h5 class="sys_modal__title">
             子账号创建成功
         </h5>
-        <form name="setName" novalidate autocomplete="off" class="sys_modal__add_account">
+        <div class="sys_modal__add_account mg-tp-40">
+            <div class="text-center">
+                子账号创建成功，账号尚未激活，请及时充值
+            </div>
+        </div>
+
+        <div class="mg-tp-30 mg-bt-30 pd-tp-30 pd-bt-30 text-center">
+            <button class="tw-btn tw-btn-lg162 tw-btn-capsule-gradient" ng-click="closeModalReload()">
+                确定
+            </button>
+        </div>
+        <!-- <form name="setName" novalidate autocomplete="off" class="sys_modal__add_account">
             <div class="mg-tp-40 pd-lf-35 pd-rg-35">
                 <p class="sys_modal__add_account-tip">请设置子账号备注</p>
                 <div class="form-control-wrapper">
@@ -79,7 +90,8 @@
                     提交中
                 </button>
             </div>
-        </form>
+        </form> -->
+        
     </div>
 
 </div>

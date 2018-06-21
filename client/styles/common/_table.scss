@@ -111,3 +111,44 @@ table {
 //         }
 //     }
 // }
+
+// 新版通行证个人中心表格修改
+.table-traffic {
+    thead {
+        font-size: 16px;
+        tr{
+            th{
+                background-color: rgb(232, 232, 232);
+                padding: 20px 30px 16px;
+            }
+        }
+    }
+    tbody {
+        font-size: 14px;
+        color: rgba(36, 42, 54, 0.8);
+        tr {
+            border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+            td {
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+        }
+
+    }
+    .font-12{
+        font-size: 12px;
+        color: rgba(36, 42, 54, 0.6);
+        margin-top: 5px;
+    }
+    .font-14{
+        font-size: 14px;
+        color: rgba(36, 42, 54, 0.8);
+    }
+    .font-16{
+        font-size: 16px;
+        color: rgba(36, 42, 54, 1);
+    }
+    .font-info {
+        cursor: pointer;
+    }
+}

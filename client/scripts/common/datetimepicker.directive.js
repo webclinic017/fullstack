@@ -154,7 +154,7 @@
             restrict: 'AE',
             scope: {
                 datetimepickerOptions: '@',
-                getBonusList: '&'
+                // getBonusList: '&'
             },
             link: function (scope, element, attrs, controller) {
                 var passedOptions = scope.$eval(attrs.datetimepickerOptions);
@@ -168,7 +168,7 @@
                                 controller.$setViewValue(e.target.value);
                                 // console.info(controller);
                                 element.blur();
-                                scope.getBonusList();
+                                // scope.getBonusList();
                             });
                         }
                     })

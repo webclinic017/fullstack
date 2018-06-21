@@ -84,7 +84,7 @@
                         <li ng-if="dealAccount.account_type === 3">
                             <a class="progress" title="{{ dealAccount.master_info.available_amount }} / {{ dealAccount.master_info.follow_amount }}">
                                 <span class="bar-bg">
-                                    <span class="bar-on" ng-style="{'width': dealAccount.master_info.available_amount / dealAccount.master_info.follow_amount}">
+                                    <span class="bar-on" ng-style="{'width': ((dealAccount.master_info.follow_amount - dealAccount.master_info.available_amount) / dealAccount.master_info.follow_amount * 100) + '%'}">
                                     
                                     </span>
                                 </span> 

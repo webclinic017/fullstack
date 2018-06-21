@@ -25,7 +25,7 @@
 
         var pagesize = 10; // 单页显示数
 
-        $scope.cancelWithdraw = cancelWithdraw;
+        // $scope.cancelWithdraw = cancelWithdraw;
 
         $scope.$watch('investSelect.id', function(n){
             if(!n) return;
@@ -53,21 +53,21 @@
 
         }
 
-        function cancelWithdraw(code) {
-            asset.cancelWithdraw(code).then(function (data) {
-                if (!data) return;
-                //console.log(data);
-                if (!data.is_succ) {
-                    // console.log(data.message);
-                    layer.msg(data.message);
-                    return;
-                }
+        // function cancelWithdraw(code) {
+        //     asset.cancelWithdraw(code).then(function (data) {
+        //         if (!data) return;
+        //         //console.log(data);
+        //         if (!data.is_succ) {
+        //             // console.log(data.message);
+        //             layer.msg(data.message);
+        //             return;
+        //         }
 
-                getList(1);
+        //         getList(1);
 
-            });
+        //     });
 
 
-        }
+        // }
     }
 })();

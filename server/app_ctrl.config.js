@@ -54,7 +54,7 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V1.6.0",
+                        version_name : "V0.0.0",
                         description : "本次更新：\n1.优化拍照功能\n2.适配三星手机\n3.其他细节优化",
                         updated_description: "68%的用户正在使用新版本",
                         url : "https://pandafx.tigerwit.com/downloads/apk/pandafx_v1.6.0.apk",
@@ -73,7 +73,7 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V1.6.0",
+                        version_name : "V0.0.0",
                         description : "本次更新：\n1.优化拍照功能\n2.适配三星手机\n3.其他细节优化",
                         updated_description: "68%的用户正在使用新版本",
                         url : "https://pandafx.tigerwit.com/downloads/apk/pandafx_v1.6.0.apk",
@@ -94,10 +94,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V1.2.2",
+                        version_name : "V1.2.4",
                         description: "This update\n1.Deposit/Withdrawal function has been optimization\n2.Account opening process has been optimization\n3.Deposit credentials must upgrade in two weeks\n4.Details has been optimization",
                         updated_description: "70% users are using new version",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.2.apk",
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.4.apk",
                         force_update : false
                     }
                 }
@@ -113,10 +113,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V1.2.2",
+                        version_name : "V1.2.4",
                         description: "本次更新：\n1.充值/提现功能优化\n2.开户流程优化\n3.入金凭证必须两周内上传\n4.细节优化",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.2.apk",
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.4.apk",
                         force_update : false
                     }
                 }

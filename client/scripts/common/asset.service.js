@@ -207,8 +207,10 @@
          *
          * @method getMasterBonusSummary
          */
-        function getMasterBonusSummary() {
-            return publicHttp.dealPublicRequest(o.getMasterBonusSummaryApi, 'GET');
+        function getMasterBonusSummary(mt4_id) {
+            return publicHttp.dealPublicRequest(o.getMasterBonusSummaryApi, 'GET', {
+                mt4_id
+            });
         }
 
         /**
@@ -216,8 +218,10 @@
          *
          * @method getCopierBonusSummary
          */
-        function getCopierBonusSummary() {
-            return publicHttp.dealPublicRequest(o.getCopierBonusSummaryApi, 'GET');
+        function getCopierBonusSummary(mt4_id) {
+            return publicHttp.dealPublicRequest(o.getCopierBonusSummaryApi, 'GET', {
+                mt4_id
+            });
         }
 
         /**
@@ -225,8 +229,9 @@
          *
          * @method getMasterBonusList
          */
-        function getMasterBonusList(pay_zone, offset, limit) {
+        function getMasterBonusList(mt4_id, pay_zone, offset, limit) {
             return publicHttp.dealPublicRequest(o.getMasterBonusListApi, 'GET', {
+                mt4_id,
                 pay_zone: pay_zone,
                 offset: offset,
                 limit: limit
@@ -238,8 +243,9 @@
          *
          * @method getCopierBonusList
          */
-        function getCopierBonusList(pay_zone, offset, limit) {
+        function getCopierBonusList(mt4_id,pay_zone, offset, limit) {
             return publicHttp.dealPublicRequest(o.getCopierBonusListApi, 'GET', {
+                mt4_id,
                 pay_zone: pay_zone,
                 offset: offset,
                 limit: limit

@@ -25,27 +25,7 @@
             pages: [],
             pagesBtn: []    
         };
-        $scope.$watch('investSelect.type',function(n){
-            if(n == 3){
-                // $scope.pagebar.getList = getMasterBonusList;
-                getMasterBonusSummary();
-            }else if(n == 2){
-                // $scope.pagebar.getList = getCopierBonusList;
-                getCopierBonusSummary();
-            }
 
-        })
-        $scope.$watch('investSelect.id',function(n){
-            if(n == 3){
-                getMasterBonusList();
-                getMasterBonusSummary();
-            }else if(n == 2){
-                getCopierBonusList();
-                getCopierBonusSummary();
-            }
-
-        })
-        
         var date = new Date();
         var year = date.getFullYear();
         var lastMonth = date.getMonth();
@@ -63,7 +43,6 @@
         var dateString = year + '-' + month;
         var lastDateString = year + '-' + lastMonth;
         var pagesize = 10;
-
         $scope.datepickerMaster = {
             date: lastDateString,
             options: {
@@ -80,13 +59,33 @@
                 // endDate: endDateString,
             }
         };
+        // 不是高手或跟单账号跳转
+        $scope.$watch('investSelect.type',function(n){
+            if(n === '') return;
+            if(n != 3 && n != 2){
+                $state.go('space.center.invest.subpage', {subpage: 'current'})
+            }
+
+        })
+        // 监听账号类型
+        $scope.$watch('investSelect.id', function(n){
+            if(n === '') return;
+            if($scope.investSelect.type == 3){
+                getMasterBonusList();
+                getMasterBonusSummary();
+            }else if($scope.investSelect.type == 2){
+                getCopierBonusList();
+                getCopierBonusSummary();
+            }
+
+        })
 
         $scope.getMasterBonusList = getMasterBonusList;
         $scope.getCopierBonusList = getCopierBonusList;
         $scope.openBonusDetailMdl = openBonusDetailMdl;
 
         function getMasterBonusSummary() {
-            asset.getMasterBonusSummary().then(function(data) {
+            asset.getMasterBonusSummary($scope.investSelect.id).then(function(data) {
                 // console.log(data);
                 if (data && data.is_succ) {
                     $scope.masterSummary = data.data;
@@ -95,7 +94,7 @@
         }
 
         function getCopierBonusSummary() {
-            asset.getCopierBonusSummary().then(function(data) {
+            asset.getCopierBonusSummary($scope.investSelect.id).then(function(data) {
                 // console.log(data);
                 if (data && data.is_succ) {
                     $scope.copierSummary = data.data;
@@ -111,7 +110,7 @@
             $scope.backErr = {
                 msg: ''
             };
-            asset.getMasterBonusList($scope.datepickerMaster.date, offset, pagesize).then(function(data) {
+            asset.getMasterBonusList($scope.investSelect.id,$scope.datepickerMaster.date, offset, pagesize).then(function(data) {
                 // console.info(2, data);
                 $scope.success = true;
                 if (!data) return;
@@ -136,7 +135,7 @@
             $scope.backErr = {
                 msg: ''
             };
-            asset.getCopierBonusList($scope.datepickerCopier.date, offset, pagesize).then(function(data) {
+            asset.getCopierBonusList($scope.investSelect.id,$scope.datepickerCopier.date, offset, pagesize).then(function(data) {
                 // console.info(1, data);
                 $scope.success = true;
                 if (!data) return;

@@ -9,11 +9,11 @@
 
     @include e(total_box) {
         text-align: center;
+        padding: 0 268px;
     }
     
     @include e(total) {
-        border: 1px solid $gray;
-        width: 228px;
+        // border: 1px solid $gray;
         text-align: center;
 
         &:first-child {
@@ -27,21 +27,20 @@
         }
 
         > .item-num {
-            height: 68px;
-            line-height: 68px;
-            font-size: 28px;
-            border-bottom: 1px solid $gray;
+            font-size: 32px;
+            margin-bottom: 3px;
+            // border-bottom: 1px solid $gray;
         }
         > .item-tip {
-            height: 44px;
-            line-height: 44px;
-            background-color: $gray-lighter;
+            // background-color: $gray-lighter;
+            font-size: 16px;
             color: $gray-darker;
 
             &:hover {
                 .fa {
                     span {
                         display: block;
+                        z-index: 10;
                     }
                 }
             }
@@ -84,9 +83,8 @@
         }
     }
     @include e(title_box) {
-
-        margin-top: 50px;
-
+        color: rgba(36, 42, 54, 0.6);
+        margin-top: 38px;
         > .tit {
             float: left;
             margin: 0;
@@ -94,9 +92,22 @@
         }
 
         > .form-control-wrapper {
-            float: left;
-            width: 200px;
+            float: right;
+            width: 400px;
             margin-left: 10px;
+            margin-bottom: 12px;
+            justify-content: flex-end;
+            .input-date {
+                position: relative;
+                .form-control {
+                    width: 150px;
+                    height: 32px;
+
+                }
+            }
+            .tw-btn-capsule-bordered {
+                border-radius: 2px;
+            }
         }
 
         > .remark {

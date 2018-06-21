@@ -317,7 +317,8 @@
          */
         function getDealAccountList() {
             return publicHttp.dealPublicRequest(o.getDealAccountListApi, 'GET', {
-                type: 0
+                type: 0,
+                show_master_level: 1
             });
         }
 
