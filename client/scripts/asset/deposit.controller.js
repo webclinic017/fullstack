@@ -22,7 +22,7 @@
         };
         $scope.currencyStatus = false; // 选择币种列表
         $scope.walletDepositSucc = false;
-        $scope.teleDepositSucc = false;
+        $scope.teleDepositSucc = false;    // 上传凭证
         $scope.walletAble = 0;      //零钱包余额
 
         $scope.isLoading = false;

@@ -312,13 +312,15 @@
         /**
          * Account Service 获取交易账户列表
          * 交易账户类型、交易账户名称，交易账户MT4Id、浮动收益
+         * show_asset 是否显示净值、浮动收益、保证金比例字段；0:不显示，1:显示；默认值:1
+         * show_master_level 是否显示高手等级数据；0:不显示，1:显示；默认值:0
          *
          * @method getDealAccountList
          */
-        function getDealAccountList() {
+        function getDealAccountList(show_asset, show_master_level) {
             return publicHttp.dealPublicRequest(o.getDealAccountListApi, 'GET', {
-                type: 0,
-                show_master_level: 1
+                show_asset,
+                show_master_level
             });
         }
 

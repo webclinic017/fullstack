@@ -423,6 +423,9 @@
 }
 
 @include b(withdraw) {
+    &.zero_withdraw {
+        min-height: 520px;
+    }
     min-height: 700px;
     @include e(sys_tip) {
         margin-left: 92px;
@@ -468,6 +471,74 @@
             }
             &.wallet {
                 background-image: url('/images/asset/wallet_bg_active.png');
+            }
+        }
+    }
+    @include e(list){
+        @include m(item){
+            display: inline-block;
+            box-sizing: border-box;
+            float: left;
+            width: 210px;
+            height: 112px;
+            border-radius: 14px;
+            transition: all 0.22s linear;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 13px 24px 12px;
+            cursor: pointer;
+            &:hover {
+                box-shadow: 0 10px 60px $gray-dark;
+            }
+            &:nth-child(1) {
+                background-image: url('/images/space/space-trading.png');
+            }
+            &:nth-child(2) {
+                background-image: url('/images/space/space-wallet.png');
+                margin: 0 20px;
+            }
+            span {
+                display: inline-block;
+            }
+            p {
+                color: #fff;
+            }
+            &.not-active {
+                background-image: url('/images/space/not-active.png');
+            }
+            .summary_name {
+                font-size: 14px;
+            }
+            .summary_amount {
+                font-size: 20px;
+                font-weight: 500;
+                margin-top: 12px;
+            }
+            .summary_btn {
+                margin-top: 11px;
+                a {
+                    color: #fff;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                span {
+                    font-size: 12px;
+                    padding-right: 20px;
+                    margin-right: 20px;
+                    position: relative;
+                    &.line:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 3px;
+                        right: 0;
+                        width: 1px;
+                        height: 14px;
+                        background-color: #fff;
+                    }
+                }
             }
         }
     }

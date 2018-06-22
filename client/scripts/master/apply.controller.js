@@ -18,7 +18,7 @@
         $scope.applyMaster = applyMaster;
         $scope.comfirmApplyMaster = comfirmApplyMaster;
 
-        // 获取用户交易账户列表 TODO(方法要改)
+        // 获取用户交易账户列表
         account.getDealAccountList().then(function (data) {
             $scope.applyInfo.loading = false;
             if (!data) return;

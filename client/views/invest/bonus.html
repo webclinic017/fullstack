@@ -9,13 +9,13 @@
             <div class="item-tip">
                 <span ng-if="investSelect.type == 3">
                     上月分成
-                    <i class="fa fal fa-question-circle" aria-hidden="true">
+                    <i class="fa fa-question-circle-o" aria-hidden="true">
                         <span>上一个自然月的分成数据</span>
                     </i>
                 </span>
                 <span ng-if="investSelect.type == 2">
                     上月扣除分成
-                    <i class="fa fal fa-question-circle" aria-hidden="true">
+                    <i class="fa fa-question-circle-o" aria-hidden="true">
                         <span>上一个自然月的分成数据</span>
                     </i>
                 </span>
@@ -32,7 +32,7 @@
                 </span>
                 <span ng-if="investSelect.type == 2">
                     扣除分成总计
-                    <i class="fa fal fa-question-circle" aria-hidden="true">
+                    <i class="fa fa-question-circle-o" aria-hidden="true">
                         <span>
                             用户开户至今已扣除的分成总和
                         </span>
@@ -57,7 +57,7 @@
             <div class="input-date">
                 <input class="form-control" name="date" type="text" required ng-model="datepickerMaster.date" tw-datetimepicker
                 datetimepicker-options="{{datepickerMaster.options}}">
-                <!-- <i class="fa fa-calendar-alt"></i> -->
+                <i class="fa fa-calendar"></i>
             </div>
 
             <button class="btn tw-btn-capsule-bordered mg-lf-20" ng-click="getMasterBonusList()">查询</button>

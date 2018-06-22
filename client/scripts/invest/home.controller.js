@@ -26,7 +26,8 @@
         // 记录当前修改的账户与修改的情况
         $scope.info = {
             mt4_id: undefined,
-            account_name: undefined
+            account_name: undefined,
+            clickEdit: true
         };
         // 获取交易账号信息与列表
         getDealAccount();
@@ -46,7 +47,7 @@
 
         function getDealAccount() {
             // 获取用户交易账户信息
-            account.getDealAccountList().then(function (data) {
+            account.getDealAccountList(1, 1).then(function (data) {
                 if (!data) return;
                 // console.info(data);
                 if (data.is_succ) {
@@ -75,25 +76,33 @@
             focus: function(){
                 // $scope.editAccountNameAwake.account_name.show = true;
                 // 修改name时停止列表轮询
-                $interval.cancel(summaryId);  
+                $interval.cancel(summaryId);
+                $scope.info.clickEdit = false
             },
             change: function(){
                 errorTip();
             }
         }
-
-        // 修改account_name
-        $scope.editAccountName = function (dealAccount) {
-            // 初始化数据
-            cancelEditAccountName();
-            dealAccount.editName = true;
-            $scope.info = { 
-                mt4_id: dealAccount.mt4_id,
-                account_name: dealAccount.account_name
+        // 正在修改某个账户时不能点击修改
+        $scope.$watch('info.clickEdit', function(n){
+            if(n) {      
+                // 修改account_name
+                $scope.editAccountName = function (dealAccount) {
+                    console.log("修改")
+                    // 初始化数据
+                    cancelEditAccountName();
+                    dealAccount.editName = true;
+                    $scope.info.mt4_id = dealAccount.mt4_id;
+                    $scope.info.account_name = dealAccount.account_name
+                }
+            } else {
+                $scope.editAccountName = null
             }
-        }
+        })
+        // $scope.editAccountName = null
         // 提交修改account_name
         $scope.confirmAccountName = function (dealAccount, $invalid) {
+            console.log("提交")
             if(!$invalid){
                 // 修改用户子账号name值
                 account.setDealAccountName(dealAccount.mt4_id, $scope.info.account_name).then(function (data) {
@@ -108,6 +117,7 @@
                         $scope.editAccountNameAwake.account_name.show = false;
                         $scope.editAccountNameAwake.account_name.tip = data.message;
                     }
+                    $scope.info.clickEdit = true;
                     getAccountInfo();
 
                 });
