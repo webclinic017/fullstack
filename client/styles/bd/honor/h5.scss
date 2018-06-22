@@ -2,33 +2,26 @@
 
 }
 @include b(m_honor) {
-    min-height: px2rem(2400);
-    background: url('/images/bd_honor/m_honor_bg-new.jpg');
+    min-height: px2rem(2140);
+    background: url('/images/bd_honor/m_bg.png');
     background-position: center top;
     background-size: auto 100%;
     background-repeat: no-repeat;
     background-color: #000;
     color: #fff;
-    padding-top: px2rem(304);
+    padding-top: px2rem(310);
 
+    @include e(date) {
+        text-align: center;
+    }
     @include e(box1) {
-        width: px2rem(696);
-        height: px2rem(406);
-        background: url('/images/bd_honor/m_honor_1.png');
+        width: px2rem(710);
+        height: px2rem(440);
+        background: url('/images/bd_honor/m_tip1.png');
         background-size: 100% 100%;
-        margin: 0 auto;
-
-        .bag_tip {
-            padding-top: px2rem(75);
-            text-align: center;
-            font-size: px2rem(20);
-
-            span {
-                padding: px2rem(6) px2rem(24);
-            }
-        }
+        margin: px2rem(32) auto 0;
         .bag_wrapper {
-            padding-top: px2rem(32);
+            padding-top: px2rem(144);
             padding-left: px2rem(25);
             padding-right: px2rem(25);
         }
@@ -51,6 +44,7 @@
                 }
                 .tip {
                     font-size: px2rem(18);
+                    padding-top: px2rem(12);
                 }
             }
             .bag_btn_wrapper {
@@ -78,54 +72,28 @@
     }
 
     @include e(box2) {
-        width: px2rem(696);
-        height: px2rem(806);
-        background: url('/images/bd_honor/m_honor_2.png');
+        width: px2rem(710);
+        height: px2rem(320);
+        background: url('/images/bd_honor/m_tip3.png');
         background-size: 100% 100%;
         margin: px2rem(50) auto 0px;
 
         .bag_tip {
-            padding: px2rem(64) px2rem(64) 0;
-            text-align: center;
+            padding: px2rem(86) px2rem(32) 0;
             font-size: px2rem(20);
-        }
-        .bag_tit {
-            padding-top: px2rem(560);
-            text-align: center;
-            font-size: px2rem(25);
-        }
-        .bag_btn_wrapper {
-            text-align: center;
-            padding-top: px2rem(25);
-        }
-        .bag_btn {
-            width: px2rem(111);
-            height: px2rem(48);
-            font-size: px2rem(18);
-            color: #fff;
-            border: none;
-
-            &.is_recevie {
-                background: url('/images/bd_honor/m_honor_btn_2.png');
-                background-size: 100% 100%;   
-            }
-            &.not_recevie {
-                background: url('/images/bd_honor/m_honor_btn_1.png');
-                background-size: 100% 100%;
-            }
         }
     }
     @include e(rules) {
-        width: px2rem(696);
-        height: px2rem(453);
-        background: url('/images/bd_honor/m_honor_3.png');
+        width: px2rem(710);
+        height: px2rem(680);
+        background: url('/images/bd_honor/m_tip2.png');
         background-size: 100% 100%;
         margin: px2rem(50) auto 0px;
-        padding: px2rem(80) px2rem(32) 0px;
+        padding: px2rem(100) px2rem(32) 0px;
 
         p {
-            padding-bottom: px2rem(16);
-            font-size: px2rem(20);
+            padding-bottom: px2rem(32);
+            font-size: px2rem(24);
         }
     }
     @include e(footer) {
