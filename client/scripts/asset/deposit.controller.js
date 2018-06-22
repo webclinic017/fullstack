@@ -106,6 +106,7 @@
                 if (data.is_succ) {
                     if (data.data.depositCard) {
                         $scope.deposit.depositCard = data.data.depositCard;
+                        checkInputAmount();
                     } else {
                         openDepositMdl('bindBankCard', null, {
                             cardName: $scope.personal.realname,
