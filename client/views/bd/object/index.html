@@ -160,7 +160,7 @@
                 $viewWrapper.html(data.data.content);
 
                 if (data.data.visit) {
-                    pageView.num += Number(data.data.visit); 
+                    pageView.num = Number(pageView.num) + Number(data.data.visit); 
                 }
                 if (data.data.author) {
                     $editor.html(data.data.author);

@@ -36,7 +36,9 @@
             uploadPaymentEvidence: uploadPaymentEvidence,
             getPaymentEvidence: getPaymentEvidence,
             cancelPaymentEvidence: cancelPaymentEvidence,
-            checkEvidenceStatus: checkEvidenceStatus
+            checkEvidenceStatus: checkEvidenceStatus,
+            checkInvestBank: checkInvestBank,
+            bindInvestBank: bindInvestBank
         };
         return service;
 
@@ -372,6 +374,28 @@
          */
         function checkEvidenceStatus () {
             return publicHttp.dealPublicRequest(o.checkEvidenceStatusApi, 'GET');
+        }
+
+        /**
+         * Asset Service 获取用户绑定网银入金银行卡号
+         *
+         * @method checkInvestBank
+         * 
+         */
+        function checkInvestBank () {
+            return publicHttp.dealPublicRequest(o.checkInvestBankApi, 'GET');
+        }
+
+        /**
+         * Asset Service 绑定入金银行卡号
+         *
+         * @method bindInvestBank
+         * 
+         */
+        function bindInvestBank (depositCard) {
+            return publicHttp.dealPublicRequest(o.checkInvestBankApi, 'PUT', {
+                card_no: depositCard
+            });
         }
     }
 })();

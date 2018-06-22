@@ -420,6 +420,38 @@
         margin-top: 25px;
         color: #999;
     }
+    @include e(bank_card) {
+        .tit {
+            width: 70px;
+            display: inline-block;
+        }
+        .name {
+            color: #666;
+        }
+        .tip {
+            color: #999;
+
+            span {
+                display: block;
+            }
+        }
+        .back_err {
+            color: rgb( 245,82,79);
+        }
+        input {
+            border-color: transparent;
+            border-bottom-color: #ccc;
+            font-weight: 500;
+            color: #222;
+            font-size: 16px;
+
+            &:focus {
+                box-shadow: inherit;
+                border-color: transparent;
+                border-bottom-color: #ccc;
+            }
+        }
+    }
 }
 
 @include b(withdraw) {

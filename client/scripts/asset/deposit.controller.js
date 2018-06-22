@@ -18,7 +18,8 @@
             amount: undefined,                  // 充值金额
             teleFile: undefined,    //电汇凭证
             submitBtn: false,                   // 充值按钮true/false
-            isAbleDeposit: 0    //是否能够入金（是否上传凭证）evidence  0不需要上传，1需要上传，2未审核
+            isAbleDeposit: 0,    //是否能够入金（是否上传凭证）evidence  0不需要上传，1需要上传，2未审核
+            depositCard: undefined
         };
         $scope.currencyStatus = false; // 选择币种列表
         $scope.walletDepositSucc = false;
@@ -87,7 +88,7 @@
             if ($scope.deposit.type !== 'invest') return;
             if ($scope.deposit.isAbleDeposit === 1) {
                 openDepositMdl('depositLimit', openChangeDepTypeMdl, {
-                    msgTip: '您网银入金累计已超过$3000，需上传历史充值凭证后才可继续使用网银支付功能。',
+                    msgTip: '您有未上传的充值凭证，需上传历史充值凭证后才可继续使用网银支付功能。',
                     msgBtn: '选择其他支付方式',
                     msgTitle: '提示'
                 });
@@ -95,6 +96,25 @@
             if ($scope.deposit.isAbleDeposit === 2) {
                 openDepositMdl('depositLimitCheck');
             }
+        }
+
+        // 判断网银绑定银行卡
+        function checkInvestBank () {
+            if ($scope.deposit.type !== 'invest') return;
+            asset.checkInvestBank().then(function (data) {
+                // console.log(data);
+                if (data.is_succ) {
+                    if (data.data.depositCard) {
+                        $scope.deposit.depositCard = data.data.depositCard;
+                        checkInputAmount();
+                    } else {
+                        openDepositMdl('bindBankCard', null, {
+                            cardName: $scope.personal.realname,
+                            msgTitle: '填写支付银行卡信息'
+                        });
+                    }
+                }
+            });
         }
 
         //判断按钮 deposit.submitBtn
@@ -109,6 +129,9 @@
                     $scope.deposit.submitBtn = false;
                 } else {
                     $scope.deposit.submitBtn = true;
+                }
+                if (!$scope.deposit.depositCard) {
+                    $scope.deposit.submitBtn = false;
                 }
                 return;
             }
@@ -129,6 +152,7 @@
             $scope.deposit.currency = $scope.depositTypeLst[$scope.deposit.type].currency.length ? $scope.depositTypeLst[$scope.deposit.type].currency[0] : null;
             checkInvestLimit();
             checkInputAmount();
+            checkInvestBank();
         }
 
         // 切换充值方式弹窗
@@ -336,6 +360,12 @@
                     $scope.openChat = openChat;
                     $scope.depositSucc = depositSucc;
                     $scope.goOnDeposit = goOnDeposit;
+                    $scope.bindBankCard = bindBankCard;
+                    $scope.depositCard = {
+                        backErr: false,
+                        backMsg: '',
+                        num: msgInfo.cardNum || undefined
+                    };
 
                     // 去实名认证
                     function verify() {
@@ -361,6 +391,25 @@
                     function goOnDeposit() {
                         callback && callback();
                         closeModal();
+                    }
+                    // 绑定入金银行卡
+                    function bindBankCard () {
+                        if ($scope.depositCard.backErr) return;
+                        if (!$scope.depositCard.num) {
+                            $scope.depositCard.backErr = true;
+                            $scope.depositCard.backMsg = '请输入银行卡号';
+                            return
+                        };
+                        asset.bindInvestBank($scope.depositCard.num).then(function (data) {
+                            // console.log(data);
+                            if (data.is_succ) {
+                                checkInvestBank();
+                                closeModal();
+                            } else {
+                                $scope.depositCard.backErr = true;
+                                $scope.depositCard.backMsg = data.message;
+                            }
+                        });
                     }
 
                     function closeModal() {
