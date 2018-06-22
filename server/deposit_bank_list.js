@@ -51,7 +51,7 @@ module.exports = [
       bank_id: 'CMB',
       bank_name: '招商银行',
       img_url: 'https://www.tigerwit.com/downloads/static/deposit_bank/cmb.png',
-      bank_status: 'all',
+      bank_status: 'static',
       select: 'all',
       special: false
   },
