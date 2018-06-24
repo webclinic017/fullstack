@@ -97,7 +97,7 @@
                                 ng-blur="[showErr('emailCode')]"
                                 ng-focus="[hideErr('emailCode')]">
                         
-                        <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="sendCode('email')">发送验证码</span>
+                        <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="sendCode('email')">发送验证码至邮箱</span>
                         <span class="sender_btn" ng-show="completeInfo.hasSendCode" >{{ completeInfo.waitTime }}秒 后重新获取</span>
 
                         <div ng-show="frontErr.emailCode.show">
