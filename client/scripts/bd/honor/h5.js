@@ -194,17 +194,22 @@
             }).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
-                    $.each(data.data.records, function (index, value) {
-                        value.front_desc_fir = doDesc(value.pay_condition_desc);
-                        value.front_recevie_status = "立即领取";
-
-                        if (value.is_receive == 1) {
-                            value.front_recevie_status = "已领取";
-                            recevieStatus = true;
-                        }
-                    });
-                    bagList.data = data.data.records;
-                    insertTemp();
+                    if (data.data.records.length) {
+                        $.each(data.data.records, function (index, value) {
+                            value.front_desc_fir = doDesc(value.pay_condition_desc);
+                            value.front_recevie_status = "立即领取";
+    
+                            if (value.is_receive == 1) {
+                                value.front_recevie_status = "已领取";
+                                recevieStatus = true;
+                            }
+                        });
+                        bagList.data = data.data.records;
+                        insertTemp();
+                    } else {
+                        initBagList();
+                        insertTemp();
+                    }
                 }
             });
         }

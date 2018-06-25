@@ -78,16 +78,41 @@
                 $scope.success = true;
                 // console.log(data);
                 if (data.is_succ) {
-                    angular.forEach(data.data.records, function (value, index) {
-                        value.front_desc_fir = doDesc(value.pay_condition_desc);
-                        value.front_recevie_status = "立即领取";
-
-                        if (value.is_receive == 1) {
-                            value.front_recevie_status = "已领取";
-                            $scope.recevieStatus = true;
-                        }
-                    });
-                    $scope.bagList = data.data.records;
+                    if (data.data.records.length) {
+                        angular.forEach(data.data.records, function (value, index) {
+                            value.front_desc_fir = doDesc(value.pay_condition_desc);
+                            value.front_recevie_status = "立即领取";
+    
+                            if (value.is_receive == 1) {
+                                value.front_recevie_status = "已领取";
+                                $scope.recevieStatus = true;
+                            }
+                        });
+                        $scope.bagList = data.data.records;
+                    } else {
+                        $scope.bagList = [
+                            {
+                                amount: 2000,
+                                front_desc_fir: "完成500手交易",
+                                front_recevie_status: "立即领取"
+                            },
+                            {
+                                amount: 1000,
+                                front_desc_fir: "完成250手交易",
+                                front_recevie_status: "立即领取"
+                            },
+                            {
+                                amount: 500,
+                                front_desc_fir: "完成125手交易",
+                                front_recevie_status: "立即领取"
+                            },
+                            {
+                                amount: 200,
+                                front_desc_fir: "完成50手交易",
+                                front_recevie_status: "立即领取"
+                            }
+                        ];
+                    }
                 }
             });
         }
