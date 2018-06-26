@@ -14,7 +14,7 @@
             minAmount: 0,       // 网银最低充值金额
             currency: null,     // 支付币种
             quota_full_notice: null,    // 网银限额按钮提示
-            type: $state.params.type || null,   // 充值类型
+            type: null,   // 支付方式
             amount: undefined,                  // 充值金额
             teleFile: undefined,    //电汇凭证
             submitBtn: false,                   // 充值按钮true/false
@@ -25,7 +25,35 @@
         $scope.walletDepositSucc = false;
         $scope.teleDepositSucc = false;    // 上传凭证
         $scope.walletAble = 0;      //零钱包余额
-
+        $scope.withdraw = {   // 充值账户
+            type: '',
+            mt4_id: ''
+        }
+        $scope.$watch('selectWay.type', function(n){
+            if(!n) return;
+            $scope.withdraw.type = n
+            if(n === 'wallet'){
+                $scope.accountIsWallet = true;
+                if($scope.deposit.type === 'wallet'){
+                    angular.forEach($scope.depositTypeLst,function(value, index){
+                        console.log(value, index,'1')
+                        if(value.default) {
+                            changeDepositType(index)
+                            return
+                        }
+                    })
+                    if($scope.deposit.type === 'wallet') {
+                        changeDepositType(Object.keys($scope.depositTypeLst)[0])
+                    }
+                }
+            } else {
+                $scope.accountIsWallet = false;
+            }
+        })
+        $scope.$watch('accountItem.mt4_id', function(n){
+            if(!n) return;
+            $scope.withdraw.mt4_id = n
+        })
         $scope.isLoading = false;
         $scope.toDeposit = toDeposit;
         $scope.openDepositMdl = openDepositMdl;
@@ -35,7 +63,6 @@
         $scope.toHelp = toHelp;
         $scope.openCurrency = openCurrency;
         $scope.selcetCurrency = selcetCurrency;
-
         // 获取支付方式列表
         asset.getDepositPlatform().then(function (data) {
             if (data.is_succ) {
@@ -47,6 +74,7 @@
 
                     if (value.default && !$scope.deposit.type) {
                         $scope.deposit.type = value.key;
+                        console.log($scope.deposit.type)
                     }
 
                     $scope.depositTypeLst[value.key] = value;
@@ -166,7 +194,8 @@
                         return {
                             depositType: $scope.deposit.type,
                             walletAble: $scope.walletAble,
-                            depositTypeLst: $scope.depositTypeLst
+                            depositTypeLst: $scope.depositTypeLst,
+                            isWallet: $scope.accountIsWallet
                         };
                     }
                 },
@@ -177,6 +206,13 @@
                         walletAble: passedScope.walletAble,
                         depositTypeLst: passedScope.depositTypeLst
                     };
+                    $scope.isWallet = function(key){
+                        if(passedScope.isWallet){
+                            return key === 'wallet'? "false" : "true"
+                        } else {
+                            return true
+                        }
+                    }
                     $scope.closeModal = closeModal;
                     $scope.selectType = selectType;
                     $scope.changeType = changeType;
@@ -230,7 +266,7 @@
 
                     function confirmDeposit() {
                         $scope.isLoading = true;
-                        if (($scope.deposit.type !== 'wallet') && ($scope.deposit.type !== 'tele')) {
+                        if (($scope.deposit.type !== 'tele')) {
                             //第三方支付
                             if ($scope.deposit.type === 'cseWallet') {
                                 $scope.isLoading = false;
@@ -255,6 +291,8 @@
                                         }
                                     }
                                 });
+                            } else if ($scope.deposit.type === 'wallet') {
+                                submitDeposit();
                             } else {
                                 $scope.isLoading = false;
                                 computeAmount();
@@ -280,8 +318,11 @@
                                 var p = $scope.depositTypeLst[$scope.deposit.type].platform || undefined;
                                 var c = $scope.deposit.currency ? $scope.deposit.currency.currency : undefined;
                                 var w = $window.open('/waiting');
-
-                                asset.deposit(amount, p, c).then(function (data) {
+                                var mt4_id;
+                                if($scope.withdraw.type !== 'wallet'){
+                                    mt4_id = $scope.withdraw.mt4_id;
+                                }
+                                asset.deposit(amount, p, c, mt4_id).then(function (data) {
                                     $scope.isLoading = false;
                                     if (!data) return;
                                     if (data.is_succ) {
@@ -296,37 +337,12 @@
                                 });
                             }
                         }
-                        if ($scope.deposit.type === 'wallet') {
-                            asset.walletDeposit(amount).then(function (data) {
-                                $scope.isLoading = false;
-                                // console.log(data);
-                                if (!data) return;
-                                if (data.is_succ) {
-                                    $scope.walletDepositSucc = true;
-                                } else {
-                                    if ($scope.isDeposit) return;
-                                    $scope.isDeposit = true;
-
-                                    asset.walletDeposit(amount).then(function (data) {
-                                        $scope.isLoading = false;
-                                        // console.log(data);
-                                        $scope.isDeposit = false;
-                                        if (!data) return;
-                                        if (data.is_succ) {
-                                            $scope.walletDepositSucc = true;
-                                        } else {
-                                            layer.msg(data.message);
-                                        }
-                                    });
-                                }
-                            })
-                        }
                         if ($scope.deposit.type === 'tele') {
                             if (!$scope.deposit.teleFile) {
                                 $scope.isLoading = false;
                                 layer.msg('请上传电汇凭证');
                             } else {
-                                asset.teleDeposit(amount, $scope.deposit.teleFile).then(function (data) {
+                                asset.teleDeposit(amount, $scope.deposit.teleFile, mt4_id).then(function (data) {
                                     console.log(data);
                                     $scope.isLoading = false;
                                     if (data.is_succ) {

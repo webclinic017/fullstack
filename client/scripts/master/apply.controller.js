@@ -17,17 +17,23 @@
         };
         $scope.applyMaster = applyMaster;
         $scope.comfirmApplyMaster = comfirmApplyMaster;
-
+        console.log($scope.investSelect)
         // 获取用户交易账户列表
         account.getDealAccountList().then(function (data) {
             $scope.applyInfo.loading = false;
             if (!data) return;
             if (data.is_succ) {
-                $scope.accountList = data.data; 
+                var list;
+                list = data.data.filter(function(item, index, self){
+                    return item.account_type === 1
+                })
+                $scope.accountList = list; 
             } 
         });
         $scope.getMasterCondition = getMasterCondition;
-       
+        if($scope.investSelect.id !== ""){
+            getMasterCondition($scope.investSelect.id)
+        }
         function getMasterCondition(mt4_id) {
             $scope.selectAccount = mt4_id   // 选中账号mt4_id
             $scope.applyInfo.loading = true;

@@ -80,6 +80,7 @@
             walletDepositApi: urlOrigin2 + '/wallet/deposit',
             walletWithdrawApi: urlOrigin2 + '/wallet/withdraw',
             walletCanWithdrawApi: urlOrigin2 + '/wallet/valid_balance',
+            walletbalanceApi: urlOrigin2 + '/wallet/balance',
             getMasterBonusSummaryApi: urlOrigin2 + '/commission/master_profile',
             getCopierBonusSummaryApi: urlOrigin2 + '/commission/custom_profile',
             getMasterBonusListApi: urlOrigin2 + '/commission/master_settle',

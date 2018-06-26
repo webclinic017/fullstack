@@ -13,7 +13,6 @@
      */
     function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, config, redbag, trader, asset, $modal) {
         $scope.unreadLength = 0;        // 未读消息
-        $scope.masterGradeInfo = {};    // 高手等级信息
         $scope.investSelect = {id: '', type: ''};   // 记录账号页面选中的账号
         var noticeId;
         //一次性获取用户的相关信息。更换用户时需要触发重置。
@@ -28,7 +27,7 @@
         function getOnceInfo(){
             getVerifyStatus();
             getRedBagNum();
-            // checkEvidenceStatus();
+            checkEvidenceStatus();
         }
 
         var url = $location.search();
@@ -36,14 +35,6 @@
         if (url.type && (url.type == 'new')) {
             $scope.$emit('global.openDredgeMdl', {position: 'register'});
         }
-
-        // 如果是高手账号，则获取高手等级
-        $scope.$watch('personal.has_master', function (newVal, oldVal) {
-            // console.log(newVal, oldVal);
-            if (newVal) {
-                getMasterGrade();
-            }
-        });
 
         // 检查新消息
         $scope.$on('refreshNoticeList', function() {
@@ -87,17 +78,6 @@
                     angular.extend($scope.personal, {
                         verifiedStatus: data.profile_check || 0
                     });
-                }
-            });
-        }
-
-        // 获取高手等级
-        function getMasterGrade () {
-            trader.getMasterGrade($scope.personal.usercode).then(function (data) {
-                // console.log(data);
-                if (data.is_succ && data.code == 0) {
-                    $scope.masterGradeInfo = data.data;
-                    $scope.masterGradeInfo.scale = (($scope.masterGradeInfo.follow_amount - $scope.masterGradeInfo.available_amount) / $scope.masterGradeInfo.follow_amount * 100).toFixed(2)+'%';
                 }
             });
         }

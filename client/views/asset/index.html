@@ -1,6 +1,6 @@
 <div class="space_content">
     <div ng-if="authenAsset" class="space_block">
-        <div class="row" ng-if="stateParamsSubpage === 'deposit' || stateParamsSubpage === 'withdraw'">
+        <div class="row mg-tp-40" ng-if="stateParamsSubpage === 'deposit' || stateParamsSubpage === 'withdraw'">
             <div class="col-xs-2 text-right deposit__title-money" ng-if="stateParamsSubpage === 'withdraw'">
                 提现帐户
             </div>
@@ -8,18 +8,19 @@
                 充值账户
             </div>
             <div class="withdraw__list clearfix">
-                <div class="withdraw__list-item" ng-class="{'not-active': withdraw.type != 'invest'}" ng-click="changeWithdrawType('invest')">
+                <div class="withdraw__list-item" ng-class="{'not-active': selectWay.type != 'invest'}" ng-click="changeWithdrawType('invest')">
                     <p class="summary_name">交易帐户</p>
-                    <p class="summary_amount">{{ accountItem.account_name || '请选择' }}</p>
-                    <p class="summary_btn" ng-click="subAccountList()"><span>点击切换子账号 ></span></p>
+                    <p class="summary_amount">{{ accountItem.account_name || '交易账号' }}</p>
+                    <p class="summary_btn" ng-click="subAccountList()" ng-if="selectWay.type ==='invest'"><span>点击切换子账号 ></span></p>
+                    <p class="summary_btn" ng-if="selectWay.type !=='invest'"><span>点击切换子账号 ></span></p>
                 </div>
-                <div class="withdraw__list-item" ng-class="{'not-active': withdraw.type != 'wallet'}" ng-click="changeWithdrawType('wallet')">
+                <div class="withdraw__list-item" ng-class="{'not-active': selectWay.type != 'wallet'}" ng-click="changeWithdrawType('wallet')">
                     <p class="summary_name">零钱包</p>
-                    <p class="summary_amount">${{ personal.wallet_balance || '0.00' }}</p>
+                    <p class="summary_amount">${{ walletbalance || '0.00' }}</p>
                 </div>
             </div>
         </div>
-        <div ui-view>
+        <div ui-view class="mg-tp-40">
         </div>
     </div>
     <div ng-if="!authenAsset">

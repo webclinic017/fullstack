@@ -1,9 +1,6 @@
 <div class="deposit">
-    <br>
-    <br>
-    <br>
     <div ng-show="!walletDepositSucc && !teleDepositSucc">
-        <div class="row mg-tp-30">
+        <div class="row">
             <div class="col-xs-2 text-right deposit__title-money">充值金额</div>
             <div class="col-xs-7 deposit__input">
                 <form name="depositForm" novalidate>
@@ -57,8 +54,7 @@
                 </ul>
             </div>
         </div>
-        <br>
-        <div ng-if="deposit.type === 'invest' && deposit.depositCard">
+        <div ng-if="deposit.type === 'invest' && deposit.depositCard" class="mg-tp-30">
             <div class="row" style="padding-left: 65px;">
                 <div class="deposit__title-money">请使用该银行卡支付</div>
             </div>
@@ -80,7 +76,16 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+        <div class="mg-tp-50" ng-if="deposit.type === 'tele'">
+            <div class="row">
+                <div class="col-xs-2 text-right deposit__title-money">上传电汇凭证</div>
+                <div class="col-xs-6 deposit__tele_file mg-lf-15 mg-rg-15 mg-tp-0">
+                    点击上传电汇凭证
+                    <div tw-upload-file-base64 data-file-name="deposit.teleFile"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row mg-tp-50">
             <div class="col-xs-2"></div>
             <div class="col-xs-7 text-center">
                 <!-- 按钮逻辑 
@@ -125,16 +130,14 @@
         
         <div class="deposit_separator"></div>
 
-        <div class="deposit__tele" ng-if="deposit.type === 'tele'">
-            <div class="row">
+        <div class="deposit__tele mg-tp-10" ng-if="deposit.type === 'tele'">
+            <!-- <div class="row">
                 <div class="col-xs-2 text-right deposit__title-money">上传电汇凭证</div>
                 <div class="col-xs-7 deposit__tele_file">
                     点击上传电汇凭证
                     <div tw-upload-file-base64 data-file-name="deposit.teleFile"></div>
                 </div>
-            </div>
-            <br>
-            <br>
+            </div> -->
             <div class="row">
                 <p class="deposit__tele-tip">
                     不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，TigerWit不收取电汇入金手续费，入金金额将以实际到账为准。

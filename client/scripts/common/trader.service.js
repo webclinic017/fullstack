@@ -135,11 +135,13 @@
         /**
          * trader 获取高手等级信息
          * @param user_code 
+         * @param account_code  交易账户主键ID 
          *
          */
-        function getMasterGrade(user_code) {
+        function getMasterGrade(user_code, account_code) {
             return publicHttp.dealPublicRequest(o.getMasterGradeApi, 'GET', {
-                user_code: user_code
+                user_code,
+                account_code,
             });
         }
 

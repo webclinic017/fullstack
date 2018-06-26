@@ -75,12 +75,12 @@
                 </a>
             </li>
             <li class="space_sidebar__nav-menu" ui-sref-active="active">
-                <a ui-sref="space.asset.subpage">
-                    充值/提现
-                </a>
+                <a ui-sref="space.center.invest.home">交易账户</a>
             </li>
             <li class="space_sidebar__nav-menu" ui-sref-active="active">
-                <a ui-sref="space.bonus">复制分成</a>
+                <a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">
+                    零钱包
+                </a>
             </li>
             <li class="space_sidebar__nav-menu" ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
                 <a ui-sref="space.redbag.subpage">
@@ -91,12 +91,12 @@
             <li class="space_sidebar__nav-menu" ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
                 <a ui-sref="space.invite">邀请好友</a>
             </li>
-            <li class="space_sidebar__nav-menu" ui-sref-active="active">
+            <!-- <li class="space_sidebar__nav-menu" ui-sref-active="active">
                 <a ui-sref="space.notice.subpage({subpage: 'trade'})">
                     系统消息
                     <span class="space_sidebar__mes-num" ng-if="personal.unreadMsg.total > 0">{{ personal.unreadMsg.total }}</span>
                 </a>
-            </li>
+            </li> -->
             <li class="space_sidebar__nav-menu" ui-sref-active="active">
                 <a ui-sref="space.setting.subpage({subpage: 'name'})">账户设置</a>
             </li>

@@ -174,7 +174,7 @@
                     views: {
                         'basic@space.center.wallet': {
                             templateUrl: '/views/wallet/toolbar.html',
-                            controller: ''
+                            controller: 'WalletToolbarController'
                         },
                         'detail@space.center.wallet': {
                             templateUrl: function ($stateParams) {
@@ -239,7 +239,7 @@
                 })
                 .state('space.asset.subpage', {
                     authenticated: true,
-                    url: '/space/asset/:subpage?type&amount',
+                    url: '/space/asset/:subpage?account',
                     views: {
                         '@space.asset': {
                             templateUrl: function ($stateParams) {
@@ -365,7 +365,7 @@
                 })
                 .state('space.master.subpage', {
                     authenticated: true,
-                    url: '/space/master/:subpage',
+                    url: '/space/master/:subpage?account_code',
                     views: {
                         '@space.master': {
                             templateUrl: function ($stateParams) {

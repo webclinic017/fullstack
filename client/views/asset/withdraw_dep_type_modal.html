@@ -7,7 +7,7 @@
 
     <div class="sys_modal_v2__content">
         <ul class="deposit_modal__type">
-           <li class="row" ng-repeat="(key, value) in withdraw.withdrawTypeLst" ng-click="selectType(key)">
+           <li class="row" ng-repeat="(key, value) in withdraw.withdrawTypeLst" ng-click="selectType(key)" ng-if="isWallet(key)">
                <div class="col-xs-3 deposit_modal__type-icon">
                    <span class="btn-select fr" ng-class="{active: withdraw.accountType === key}"></span>
                </div>

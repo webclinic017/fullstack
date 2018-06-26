@@ -83,26 +83,20 @@
                 errorTip();
             }
         }
-        // 正在修改某个账户时不能点击修改
-        $scope.$watch('info.clickEdit', function(n){
-            if(n) {      
-                // 修改account_name
-                $scope.editAccountName = function (dealAccount) {
-                    console.log("修改")
-                    // 初始化数据
-                    cancelEditAccountName();
-                    dealAccount.editName = true;
-                    $scope.info.mt4_id = dealAccount.mt4_id;
-                    $scope.info.account_name = dealAccount.account_name
-                }
-            } else {
-                $scope.editAccountName = null
-            }
-        })
+        // 正在修改某个账户时不能点击修改(info.clickEdit)
+        // 修改account_name
+        $scope.editAccountName = function (dealAccount) {
+            // console.log("修改")
+            // 初始化数据
+            cancelEditAccountName();
+            dealAccount.editName = true;
+            $scope.info.mt4_id = dealAccount.mt4_id;
+            $scope.info.account_name = dealAccount.account_name
+        }
         // $scope.editAccountName = null
         // 提交修改account_name
         $scope.confirmAccountName = function (dealAccount, $invalid) {
-            console.log("提交")
+            // console.log("提交")
             if(!$invalid){
                 // 修改用户子账号name值
                 account.setDealAccountName(dealAccount.mt4_id, $scope.info.account_name).then(function (data) {

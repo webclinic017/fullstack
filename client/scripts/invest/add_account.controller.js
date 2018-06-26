@@ -49,7 +49,7 @@
         // 充值激活
         function depositActivate(){
             closeModal();
-            $state.go("space.asset", {subpage: 'deposit'});
+            $state.go("space.asset.subpage", {subpage: 'deposit'});
         }
         function closeModalReload(){
             closeModal();

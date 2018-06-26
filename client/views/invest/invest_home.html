@@ -43,7 +43,8 @@
                             <div>
                                 <span ng-if="!dealAccount.editName">
                                     <span class="name" >{{ dealAccount.account_name || "交易账户" }}</span>
-                                    <span class="edit" ng-if="dealAccount.account_type !== 2" ng-click="editAccountName(dealAccount)"></span>
+                                    <span class="edit" ng-if="dealAccount.account_type !== 2 && info.clickEdit" ng-click="editAccountName(dealAccount)"></span>
+                                    <span class="edit" ng-if="dealAccount.account_type !== 2 && !info.clickEdit"></span>
                                     <span class="z-symbol z-superior" ng-if="dealAccount.account_type === 3">高手交易</span>
                                     <span class="z-symbol z-documentary" ng-if="dealAccount.account_type === 2">跟单交易</span>
                                 </span>
@@ -91,7 +92,7 @@
                             </a>
                             <div class="master_category">
                                 <span class="grade">高手类别<span>{{ dealAccount.master_info.level || 'B' }}</span></span>
-                                <a ui-sref="space.master.subpage({subpage: 'grade'})" class="details">查看详情 &gt;</a>
+                                <a ui-sref="space.master.subpage({subpage: 'grade', account_code: dealAccount.account_code})" class="details">查看详情 &gt;</a>
                             </div>
                         </li>
                     </ul>

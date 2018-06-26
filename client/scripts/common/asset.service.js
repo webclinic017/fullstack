@@ -31,6 +31,7 @@
             walletDeposit: walletDeposit,
             walletWithdraw: walletWithdraw,
             walletCanWithdraw: walletCanWithdraw,
+            walletbalance: walletbalance,
             getBanks: getBanks,
             teleDeposit: teleDeposit,
             uploadPaymentEvidence: uploadPaymentEvidence,
@@ -146,11 +147,12 @@
          *      
          * @params platform   支付宝入金 -> 4
          */
-        function deposit(amount, platform, currency) {
+        function deposit(amount, platform, currency, mt4_id) {
             return publicHttp.dealPublicRequest(o.depositApi, 'POST', {
                 amount: amount,
                 platform: platform,
-                currency: currency
+                currency: currency,
+                mt4_id
             });
         }
 
@@ -197,9 +199,10 @@
          *
          */
 
-        function getIsWithdraw (amount) {
+        function getIsWithdraw (mt4_id, amount) {
             // console.info('getIsWithdraw is sending', amount);
             return publicHttp.dealPublicRequest(o.getIsWithdrawApi, 'GET', {
+                mt4_id,
                 amount: amount
             });
         }
@@ -305,6 +308,16 @@
         }
 
         /**
+         * Asset Service 获取零钱包余额
+         *
+         * @method walletbalance
+         * 
+         */
+        function walletbalance() {
+            return publicHttp.dealPublicRequest(o.walletbalanceApi, 'GET');
+        }
+
+        /**
          * Asset Service 获取银行列表
          *
          * @method getBanks
@@ -321,10 +334,11 @@
          * @param {Number} amount
          * @param {Number} file  (base64编码)
          */
-        function teleDeposit(amount, file) {
+        function teleDeposit(amount, file, mt4_id) {
             return publicHttp.dealPublicRequest(o.teleDepositApi, 'POST', {
                 amount: amount,
-                file: file
+                file: file,
+                mt4_id
             });
         } 
 

@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('InvestBonusController', InvestBonusController);
 
-        InvestBonusController.$inject = ['$scope', 'asset', '$modal', '$timeout'];
+        InvestBonusController.$inject = ['$scope', 'asset', '$modal', '$timeout', '$state'];
 
-    function InvestBonusController($scope, asset, $modal, $timeout) {
+    function InvestBonusController($scope, asset, $modal, $timeout, $state) {
 
         $scope.success = false;
         $scope.backErr = {

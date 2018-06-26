@@ -14,7 +14,7 @@
             榜单投资者被其他用户复制跟随，会获得复制者20%的盈利分成，请选择账号：
         </div>
         <ul class="space_apply__list">
-            <li class="space_apply__list-item" ng-repeat="account in accountList" ng-if="account.account_type == 1" ng-class="{'active': account.mt4_id == selectAccount}" >
+            <li class="space_apply__list-item" ng-repeat="account in accountList" ng-class="{'active': account.mt4_id == selectAccount}" >
                 <a ng-click="getMasterCondition(account.mt4_id)">
                     <div class="account_title">
                         <span>{{ account.account_name || "交易账号" }}</span>

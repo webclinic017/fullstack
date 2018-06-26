@@ -152,10 +152,11 @@
          * @params limit    默认值10
          *
          */
-        function getWalletHistory(offset, limit) {
+        function getWalletHistory(offset, limit, direction) {
             return publicHttp.dealPublicRequest(o.getWalletHistoryApi, 'GET', {
                 offset: offset,
-                limit: limit
+                limit: limit,
+                direction,
             });
         }
        
