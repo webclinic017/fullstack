@@ -212,6 +212,9 @@ $tw-btn-bg-black-end: #2b323e;
 .tw-btn-sm {
     @include tw-button-size($tw-btn-width-sm, $tw-btn-height-sm, $tw-btn-fontsize-sm, 400)
 }
+.tw-btn-sm130 {
+    @include tw-button-size($tw-btn-width-md, $tw-btn-height-sm, $tw-btn-fontsize-md, 400)
+}
 .tw-btn-sl {
     @include button-size(0, 0, $tw-btn-fontsize-sl, auto, 0)
 }

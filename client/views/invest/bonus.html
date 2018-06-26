@@ -34,7 +34,7 @@
                     扣除分成总计
                     <i class="fa fa-question-circle-o" aria-hidden="true">
                         <span>
-                            用户开户至今已扣除的分成总和
+                            用户开户至今扣除的分成总和
                         </span>
                     </i>
                 </span>
@@ -138,18 +138,18 @@
                         <p class="font-16">{{ copier.username }}</p>
                         <p class="font-12">扣除时间：{{ copier.pay_time }}</p> 
                     </td>
-                    <td><>
+                    <td>
                         <i class="fa fa-dollar"></i>{{ copier.copy_profit }}
                     </td>
-                    <td><>
-                        <!-- <i class="fa fa-dollar"></i>{{ copier.max_profit }} -->
-                    </td>
+                    <!-- <td>
+                        <i class="fa fa-dollar"></i>{{ copier.max_profit }}
+                    </td> -->
                     <td>
                         <i class="fa fa-dollar"></i>{{ copier.pay_noob }}
                     </td>
                     <!-- <td>{{ copier.pay_time }}</td> -->
                     <td>
-                        <button  class="font-info" ng-click="openBonusDetailMdl(copier)">详情</button>
+                        <span  class="font-info" ng-click="openBonusDetailMdl(copier)">详情</span>
                     </td>
                 </tr>
                 <tr ng-if="success && copierList.length <= 0">

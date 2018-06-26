@@ -77,7 +77,7 @@
             <li class="space_sidebar__nav-menu" ui-sref-active="active">
                 <a ui-sref="space.center.invest.home">交易账户</a>
             </li>
-            <li class="space_sidebar__nav-menu" ui-sref-active="active">
+            <li class="space_sidebar__nav-menu" ui-sref-active="active" ng-if="personal.wallet_user_id !== 0">
                 <a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">
                     零钱包
                 </a>

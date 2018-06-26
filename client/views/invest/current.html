@@ -4,7 +4,7 @@
         注：您复制高手的盈利部分将会扣除20%作为佣金给高手。详情请参考：
         <a ng-href="{{ lang.text('companyCopyRules') }}" target="_blank">{{ lang.text("companyCopyRules") }}</a>
     </div>
-    <table class="table table-header">
+    <table class="table table-traffic">
         <colgroup>
             <col width="35%">
             <col width="17%">
@@ -60,7 +60,7 @@
                         <i class="fa fa-dollar"></i>{{ orderCurrent.floating_profit }}
                     </th>
                     <th class="invest_orders__btn">
-                        <button href="" class="btn btn-primary btn-sm" ng-click="openInvestOwnDetailMdl('own', $event)">详情</button>
+                        <button href="" class="btn font-info font-size-16" ng-click="openInvestOwnDetailMdl('own', $event)">详情</button>
                     </th>
                 </tr>
             </thead>
@@ -147,8 +147,8 @@
                             <i class="fa fa-dollar"></i>{{ trader.floating_profit }}
                         </th>
                         <th class="invest_orders__btn">
-                            <button class="btn btn-primary btn-sm" ng-click="openInvestCopyDetailMdl(trader, $event)">详情</button>
-                            <button class="btn btn-default btn-sm" ng-click="openCancelCopyMdl(trader, $event)">取消复制</button>
+                            <button class="btn font-info font-size-16" ng-click="openInvestCopyDetailMdl(trader, $event)">详情</button>
+                            <button class="btn tw-btn-capsule-gradient tw-btn-sm" ng-click="openCancelCopyMdl(trader, $event)">取消复制</button>
                         </th>
                     </tr>
                 </thead>
@@ -190,8 +190,8 @@
                             </td>
                     
                             <td>
-                                <span ng-if="!order.cancel_control">跟随高手平仓</span>
-                                <span ng-if="!!order.cancel_control">不跟随平仓</span>
+                                <span ng-if="!order.cancel_control" class="font-size-12">跟随高手平仓</span>
+                                <span ng-if="!!order.cancel_control" class="font-size-12">不跟随平仓</span>
                             </td>
                         </tr>
                         <tr ng-if="trader.orders.length <= 0 && trader.detailsShow">
@@ -244,8 +244,8 @@
                             <i class="fa fa-dollar"></i>{{ data.floating_profit }}
                         </th>
                         <th class="invest_orders__btn">
-                            <button href="" class="btn btn-primary btn-sm" ng-click="openInvestCopyDetailMdl(data, $event)">详情</button>
-                            <p class="btn-msg">已取消复制</p>
+                            <button href="" class="btn font-info font-size-16" ng-click="openInvestCopyDetailMdl(data, $event)">详情</button>
+                            <p class="btn tw-btn-capsule-gradient tw-btn-disabled tw-btn-sm">已取消复制</p>
                         </th>
                     </tr>
                 </thead>
@@ -287,8 +287,8 @@
                             </td>
                     
                             <td>
-                                <span ng-if="!order.cancel_control">跟随高手平仓</span>
-                                <span ng-if="!!order.cancel_control">不跟随平仓</span>
+                                <span ng-if="!order.cancel_control" class="font-size-12">跟随高手平仓</span>
+                                <span ng-if="!!order.cancel_control" class="font-size-12">不跟随平仓</span>
                             </td>
                         </tr>
                         <tr ng-if="data.orders.length <= 0 && data.detailsShow">

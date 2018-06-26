@@ -89,7 +89,7 @@
             asset.checkEvidenceStatus().then(function (data) {
                 var date = new Date().getDate();
                 var ls = localStorage.getItem("evidence");
-                console.log(date, ls);
+                // console.log(date, ls);
                 if (data.data.evidence_code === 100605) {
                     msg = '充值成功后请及时上传凭证，若超过两周未上传，将无法进行交易操作。';
                     if (!ls) {

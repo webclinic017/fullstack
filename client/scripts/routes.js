@@ -124,7 +124,7 @@
                     views: {
                         'content@space': {
                             templateUrl: '/views/invest/index.html',
-                            controller: ''
+                            controller: 'InvestIndexController'
                         }
                     }
                 })

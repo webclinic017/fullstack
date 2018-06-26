@@ -95,6 +95,9 @@
                                 <a ui-sref="space.master.subpage({subpage: 'grade', account_code: dealAccount.account_code})" class="details">查看详情 &gt;</a>
                             </div>
                         </li>
+                        <li class="mg-tp-15" ng-if="!dealAccount.is_active">
+                            <a class="mg-lf-0 tw-btn tw-btn-sm130 tw-btn-capsule-gradient" ui-sref="space.asset.subpage({subpage: 'deposit', account: dealAccount.mt4_id})">充值激活账户</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="space_sub_account_info__list">
