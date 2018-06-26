@@ -74,7 +74,7 @@
         /*获取手机号*/
         var telephone = DOM.$share_tel;
         var rPhone = telephone.val() ? telephone.val() : "";
-        var isMobile = /^(13|14|15|17|18)\d{9}$/;
+        var isMobile = /^(11|12|13|14|15|16|17|18|19)\d{9}$/;
         var isPhone = /^((0\d{2,4})-)?(\d{7,8})(-(\d{2,}))?$/;
         if ((telephone.val() == "") || (!isMobile.test(telephone.val()) && !isPhone.test(telephone.val()))) {
             /*提示*/
