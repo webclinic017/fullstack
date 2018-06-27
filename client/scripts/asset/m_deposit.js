@@ -18,21 +18,29 @@ $(document).ready(function () {
             action: 'get_deposit_bank'
         }).then(function (data) {
             $.each(data.data, function (index, value) {
-                if (bankStatus === 'static') {
-                    if (value.bank_status === 'all' || value.bank_status === 'static') {
-                        if (platform === 'pc' || platform === 'all') {
-                            banksInfoLst.bankList.push(value);
+                var arrType = value.bank_status.split('_');
+                $.each(arrType, function (index2, value2) {
+                    if (bankStatus === 'static') {
+                        if (value2 === 'static') {
+                            if (platform === 'pc' || platform === 'all') {
+                                banksInfoLst.bankList.push(value);
+                            }
+                            if (platform === 'phone' || value.select === 'all') {
+                                banksInfoLst.bankList.push(value);
+                            }
                         }
-                        if (platform === 'phone' || value.select === 'all') {
+                    } else {
+                        if (value2 === bankStatus) {
+                            // 由于 selectV2 个别银行code码不同，在这里临时做下兼容
+                            if (bankStatus === 'selectV2') {
+                                if (value.bank_id === 'BOCM') value.bank_id = 'BCM';
+                                if (value.bank_id === 'PABC') value.bank_id = 'PAB';
+                                if (value.bank_id === 'BOS') value.bank_id = 'SHBANK';
+                            }
                             banksInfoLst.bankList.push(value);
                         }
                     }
-                } else {
-                    if (value.bank_status === 'all' || value.bank_status === 'select') {
-                        banksInfoLst.bankList.push(value);
-                    }
-                }
-                
+                });
             });
             //使用template模版
             var html=bt('template_banklist',banksInfoLst);
