@@ -45,7 +45,7 @@
                     // 判断申请资格
                     if ($scope.applyInfo.data.status == -1) {
                         $scope.applyInfo.condition = true;
-                        for(let condit in $scope.applyInfo.data.condition){
+                        for(var condit in $scope.applyInfo.data.condition){
                             if($scope.applyInfo.data.condition[condit].status  == 0){
                                 $scope.applyInfo.condition = false;
                                 return;

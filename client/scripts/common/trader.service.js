@@ -140,8 +140,8 @@
          */
         function getMasterGrade(user_code, account_code) {
             return publicHttp.dealPublicRequest(o.getMasterGradeApi, 'GET', {
-                user_code,
-                account_code,
+                user_code: user_code,
+                account_code: account_code,
             });
         }
 
@@ -151,7 +151,7 @@
          */
         function getMasterCondition(mt4_id) {
             return publicHttp.dealPublicRequest(o.getMasterConditionApi, 'GET', {
-                mt4_id,
+                mt4_id: mt4_id,
             });
         }
 
@@ -161,7 +161,7 @@
          */
         function applyMaster(mt4_id) {
             return publicHttp.dealPublicRequest(o.applyMasterApi, 'POST', {
-                mt4_id,
+                mt4_id: mt4_id,
             });
         }
     }

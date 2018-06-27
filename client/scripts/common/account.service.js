@@ -319,8 +319,8 @@
          */
         function getDealAccountList(show_asset, show_master_level) {
             return publicHttp.dealPublicRequest(o.getDealAccountListApi, 'GET', {
-                show_asset,
-                show_master_level
+                show_asset: show_asset,
+                show_master_level: show_master_level
             });
         }
 

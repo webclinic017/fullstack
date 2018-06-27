@@ -313,6 +313,7 @@ module.exports = function (grunt) {
         babel: {
             options: {
                 sourceMap: true,
+                presets: ['babel-preset-es2015'],
                 optional: [
                     'es7.classProperties'
                 ]
@@ -460,6 +461,7 @@ module.exports = function (grunt) {
         'ngAnnotate',
         'copy:dist',
         'cssmin',
+        // 'babel',
         'uglify',
         'filerev',
         'usemin',

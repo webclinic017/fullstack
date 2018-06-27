@@ -17,9 +17,7 @@
                 fileName: '=',
                 ban: '='
             },
-            template: `
-                        <input id="input" type="file" accept="image/*">
-                    `,
+            template: "<input id='input' type='file' accept='image/*'>",
             link: function (scope, element, attrs) {
                 $(element).on('change', function (e) {   
                     if(scope.ban){

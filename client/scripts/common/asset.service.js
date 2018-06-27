@@ -133,10 +133,10 @@
          */
         function getHistory(mt4_id, offset, limit) {
             return publicHttp.dealPublicRequest(o.getHistoryApi, 'GET', {
-                mt4_id,
+                mt4_id: mt4_id,
                 direction: 0,
-                offset,
-                limit
+                offset: offset,
+                limit: limit
             });
         }
 
@@ -152,7 +152,7 @@
                 amount: amount,
                 platform: platform,
                 currency: currency,
-                mt4_id
+                mt4_id: mt4_id
             });
         }
 
@@ -202,7 +202,7 @@
         function getIsWithdraw (mt4_id, amount) {
             // console.info('getIsWithdraw is sending', amount);
             return publicHttp.dealPublicRequest(o.getIsWithdrawApi, 'GET', {
-                mt4_id,
+                mt4_id: mt4_id,
                 amount: amount
             });
         }
@@ -214,7 +214,7 @@
          */
         function getMasterBonusSummary(mt4_id) {
             return publicHttp.dealPublicRequest(o.getMasterBonusSummaryApi, 'GET', {
-                mt4_id
+                mt4_id: mt4_id
             });
         }
 
@@ -225,7 +225,7 @@
          */
         function getCopierBonusSummary(mt4_id) {
             return publicHttp.dealPublicRequest(o.getCopierBonusSummaryApi, 'GET', {
-                mt4_id
+                mt4_id: mt4_id
             });
         }
 
@@ -236,7 +236,7 @@
          */
         function getMasterBonusList(mt4_id, pay_zone, offset, limit) {
             return publicHttp.dealPublicRequest(o.getMasterBonusListApi, 'GET', {
-                mt4_id,
+                mt4_id: mt4_id,
                 pay_zone: pay_zone,
                 offset: offset,
                 limit: limit
@@ -250,7 +250,7 @@
          */
         function getCopierBonusList(mt4_id,pay_zone, offset, limit) {
             return publicHttp.dealPublicRequest(o.getCopierBonusListApi, 'GET', {
-                mt4_id,
+                mt4_id: mt4_id,
                 pay_zone: pay_zone,
                 offset: offset,
                 limit: limit
@@ -338,7 +338,7 @@
             return publicHttp.dealPublicRequest(o.teleDepositApi, 'POST', {
                 amount: amount,
                 file: file,
-                mt4_id
+                mt4_id: mt4_id
             });
         } 
 
