@@ -3,10 +3,10 @@
         // 微信分享配置
         if (wx) {
             wxShareConfig({
-                title: '王者归来，荣耀操盘 TigerWit送大礼',
-                subTitle: '王者归来，荣耀操盘 TigerWit再送最高1000元美金红包和电竞专用手柄',
+                title: '风云再起 至尊豪礼 TigerWit送大礼',
+                subTitle: '风云再起 至尊豪礼 TigerWit再送最高2000元美金红包',
                 shareLink: window.location.href,
-                desc: '参与此活动最高1000元美金红包及手机电竞游戏专用手柄',
+                desc: '风云再起 至尊豪礼',
                 img: window.location.origin + '/activity/logo.png',
                 trackPage: window.location.pathname.replace(/\//gi, ''),
                 debug: false
@@ -190,22 +190,26 @@
             publicRequest('getRedBagPool', 'GET', {
                 offset: 0,
                 limit: 1000,
-                group: 'honorBag'
+                group: 'xyzj'
             }).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
-                    $.each(data.data.records, function (index, value) {
-                        value.front_desc_fir = doDesc(value.pay_condition_desc).r1;
-                        value.front_desc_sec = doDesc(value.pay_condition_desc).r2;
-                        value.front_recevie_status = "立即领取";
-
-                        if (value.is_receive == 1) {
-                            value.front_recevie_status = "已领取";
-                            recevieStatus = true;
-                        }
-                    });
-                    bagList.data = data.data.records;
-                    insertTemp();
+                    if (data.data.records.length) {
+                        $.each(data.data.records, function (index, value) {
+                            value.front_desc_fir = doDesc(value.pay_condition_desc);
+                            value.front_recevie_status = "立即领取";
+    
+                            if (value.is_receive == 1) {
+                                value.front_recevie_status = "已领取";
+                                recevieStatus = true;
+                            }
+                        });
+                        bagList.data = data.data.records;
+                        insertTemp();
+                    } else {
+                        initBagList();
+                        insertTemp();
+                    }
                 }
             });
         }
@@ -248,19 +252,16 @@
 
         function doDesc (desc) {
             var str = desc.split('(')[0];
-            return {
-                r1: str.split('，')[0],
-                r2: str.split('，')[1]
-            };
+            return str;
         }
 
         function toOpenApp () {
             // console.log(window.location);
             var o;
-            if (window.location.origin.indexOf("www.tigerwit.com") != -1) {
-                o = "www.tigerwit.com/bd/honor";
+            if (window.location.origin.indexOf("cndemo.tigerwit.com") != -1) {
+                o = "cndemo.tigerwit.com/bd/honor";
             } else {
-                o = "demo.tigerwit.com/bd/honor";
+                o = "cn.tigerwit.com/bd/honor";
             }
             openInApp(o);
         }
@@ -268,27 +269,23 @@
         function initBagList () {
             bagList.data = [
                 {
+                    amount: 2000,
+                    front_desc_fir: "完成500手交易",
+                    front_recevie_status: "立即领取"
+                },
+                {
                     amount: 1000,
-                    front_desc_fir: "完成180手交易",
-                    front_desc_sec: "兑换期限120天",
+                    front_desc_fir: "完成250手交易",
                     front_recevie_status: "立即领取"
                 },
                 {
                     amount: 500,
-                    front_desc_fir: "完成90手交易",
-                    front_desc_sec: "兑换期限120天",
+                    front_desc_fir: "完成125手交易",
                     front_recevie_status: "立即领取"
                 },
                 {
                     amount: 200,
-                    front_desc_fir: "完成40手交易",
-                    front_desc_sec: "兑换期限60天",
-                    front_recevie_status: "立即领取"
-                },
-                {
-                    amount: 100,
-                    front_desc_fir: "完成25手交易",
-                    front_desc_sec: "兑换期限60天",
+                    front_desc_fir: "完成50手交易",
                     front_recevie_status: "立即领取"
                 }
             ];

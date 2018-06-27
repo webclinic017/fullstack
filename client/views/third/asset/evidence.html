@@ -26,6 +26,10 @@
             <p class="tip">
                 审核驳回后，支付金额将原路退还，产生的1.5%手续费由您自行承担。
             </p>
+            <p class="tip font-danger">
+                注意：充值成功后请及时上传凭证，若超过两周未上传，将无法进行交易操作。<br>
+                ＊代表必须上传凭证
+            </p>
             <div class="desc">
               <a href="/payment/evidence" target="_blank">查看凭证示例</a>
             </div>
@@ -33,7 +37,7 @@
           <ul class="asset_evidence__content-lst">
             <li class="item" ng-repeat="evidence in evidenceList">
               <div class="tit clearfix">
-                <span class="fl">充值成功</span>
+                <span class="fl"><span ng-show="status === 1 && evidence.must" class="font-danger">＊</span>充值成功</span>
                 <span class="fr">${{evidence.amount}}</span>
               </div>
               <div class="date clearfix">

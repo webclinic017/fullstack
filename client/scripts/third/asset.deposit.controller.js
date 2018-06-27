@@ -148,6 +148,7 @@
 
         // 切换充值方式
         function changeDepositType(type) {
+            $scope.deposit.depositCard = undefined;
             $scope.deposit.type = type;
             $scope.deposit.currency = $scope.depositTypeLst[$scope.deposit.type].currency.length ? $scope.depositTypeLst[$scope.deposit.type].currency[0] : null;
             checkInvestLimit();
@@ -399,7 +400,7 @@
                         asset.bindInvestBank($scope.depositCard.num).then(function (data) {
                             // console.log(data);
                             if (data.is_succ) {
-                                checkInvestBank();
+                                fillBankCard(data.data.depositCard);
                                 closeModal();
                             } else {
                                 $scope.depositCard.backErr = true;
@@ -445,6 +446,12 @@
 
                 }
             });
+        }
+
+        //填写完成银行卡号后回调
+        function fillBankCard (card) {
+            $scope.deposit.depositCard = card;
+            checkInputAmount();
         }
     }
 })();
