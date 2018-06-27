@@ -111,7 +111,7 @@
             // console.log(trader);
             // 为了和高手主页复制高手公用一个controller，字段名做统一处理
             trader.copied = trader.copy_amount;
-            trader.usercode = trader.account_code;
+            trader.usercode = trader.user_code;
             $modal.open({
                 templateUrl: '/views/invest/copy_modal.html',
                 controller: 'TraderCopyController',
@@ -132,7 +132,7 @@
         }
 
         function openCancelCopyMdl(trader, event) {
-            console.log(trader)
+            // console.log(trader)
             var account_code = trader.account_code;
             var username = trader.username;
             event.stopPropagation();

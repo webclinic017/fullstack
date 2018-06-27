@@ -36,6 +36,7 @@
         })
         function goState(data) {
             console.log(data)
+            console.log($scope.personal)
             $scope.dredgingType = data.dredged_type || data.account_status
             $timeout(function () {
                 $state.go('authen.subpage', {
@@ -392,16 +393,16 @@
                     data = data.data
                     angular.extend($scope.completeInfo, {
                         country: {
-                            key: data.region_cn.world_name,
-                            value: data.region_cn.world_code,
+                            key: data.region.world_name,
+                            value: data.region.world_code,
                         },
                         province: {
-                            key: data.region_cn.state_name,
-                            value: data.state_code
+                            key: data.region.state_name,
+                            value: data.region.state_code
                         },
                         city: {
-                            key: data.region_cn.city_name,
-                            value: data.city_code
+                            key: data.region.city_name,
+                            value: data.region.city_code
                         }
                     });
                     // console.log('$scope.basicInfo.locationWorld', $scope.basicInfo.locationWorld);

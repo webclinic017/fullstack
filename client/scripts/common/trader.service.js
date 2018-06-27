@@ -73,9 +73,9 @@
          * @param {Boolean} isClose 是否平仓
          * @param {String} copyType 模拟复制或者真实复制
          */
-        function cancelCopy(usercode, auto_delete) {
+        function cancelCopy(account_code, auto_delete) {
             return publicHttp.dealPublicRequest(o.cancelCopyApi, 'POST', {
-                user_code: usercode,
+                account_code: account_code,
                 auto_delete: auto_delete
             });
         }
@@ -89,7 +89,7 @@
          */
         function getAvaCopyAmount(usercode) {
             return publicHttp.dealPublicRequest(o.getAvaCopyAmountApi, 'GET', {
-                user_code: usercode
+                user_code: usercode,
             });
         }
 
