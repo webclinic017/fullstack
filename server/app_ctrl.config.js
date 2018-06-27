@@ -94,11 +94,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V1.2.5",
-                        description: "Update\n1. Fill in the bank card number before online banking deposit.\n2. Deposit voucher mechanism has been optimization.\n3. Details have been optimization.\nTips:\nUsers with 8.0 and above mobile phone systems click the \"Install Now\" button may to fail to install.\nIf this happens, please step to the app market to manually download updates.",
+                        version_name : "V1.2.6",
+                        description: "Update\n1. Fill in the bank card number before online banking deposit.\n2. Deposit voucher mechanism has been optimization.\n3. Details have been optimization.\n4.Bug fixed\nTips:\nUsers with 8.0 and above mobile phone systems click the \"Install Now\" button may to fail to install.\nIf this happens, please step to the app market to manually download updates.",
                         updated_description: "70% users are using new version",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.5.apk",
-                        force_update : true
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.6.apk",
+                        force_update : false
                     }
                 }
             },
@@ -113,11 +113,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V1.2.5",
-                        description: "本次更新：\n1.网银充值需预先填写银行卡号\n2.入金凭证机制优化\n3.细节优化\n温馨提示：\n手机系统为8.0及以上的用户在此页点击“立即安装”按钮可能安装失败。\n若出现上述情况请移步至应用市场手动下载更新。",
+                        version_name : "V1.2.6",
+                        description: "本次更新：\n1.网银充值需预先填写银行卡号\n2.入金凭证机制优化\n3.细节优化\n4.修复已知问题\n温馨提示：\n手机系统为8.0及以上的用户在此页点击“立即安装”按钮可能安装失败。\n若出现上述情况请移步至应用市场手动下载更新。",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.5.apk",
-                        force_update : true
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.6.apk",
+                        force_update : false
                     }
                 }
             }
