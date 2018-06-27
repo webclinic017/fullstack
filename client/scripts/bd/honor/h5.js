@@ -256,14 +256,8 @@
         }
 
         function toOpenApp () {
-            // console.log(window.location);
-            var o;
-            if (window.location.origin.indexOf("cndemo.tigerwit.com") != -1) {
-                o = "cndemo.tigerwit.com/bd/honor";
-            } else {
-                o = "cn.tigerwit.com/bd/honor";
-            }
-            openInApp(o);
+            window.location.href = "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex";
+            return false;
         }
 
         function initBagList () {

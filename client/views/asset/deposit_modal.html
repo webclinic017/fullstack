@@ -139,9 +139,10 @@
         </div>
 
         <p class="btn_wrapper mg-bt-15">
-            <button class="btn btn-primary-gradient btn-sm" ng-click="bindBankCard()">
+            <button ng-show="!isLoading" class="btn btn-primary-gradient btn-sm" ng-click="bindBankCard()">
                 确认
             </button>
+            <button ng-show="isLoading" class="btn btn-primary-gradient btn-sm"><i class="loading_spinner fa fa-spinner"></i> 提交中</button>
         </p>
     </div>
 </div>
