@@ -22,7 +22,8 @@
 
             if (index === 'lang') {
                 // console.info(value, index);
-                language = value;
+                language = value === 'en' ? value : 'zh';
+
             }
             if (index === 'company_name') {
                 if (value === 'lonfx') {
@@ -223,6 +224,8 @@
             actLogin34: {zh: "跳过", en: "Jump Over"},
             actLogin35: {zh: "", en: ""},
             actLogin36: {zh: "", en: ""},
+            actLogin37: {zh: "账号或手机号", en: "Account / Phone No"},
+            actLogin38: {zh: "请输入您的账号或手机号", en: "Enter account / phone No"},
         };
 
         return data;

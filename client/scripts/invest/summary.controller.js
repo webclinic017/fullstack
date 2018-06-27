@@ -5,18 +5,22 @@
     angular.module('fullstackApp')
         .controller('InvestSummaryController', InvestSummaryController);
 
-    InvestSummaryController.$inject = ['$scope', 'invest'];
+    InvestSummaryController.$inject = ['$scope', 'invest', '$state'];
 
-    function InvestSummaryController($scope, invest) {
+    function InvestSummaryController($scope, invest, $state) {
 
         $scope.summary = {};
 
-        getInvestSummary();
-        getInvestProfitLine();
-        getInvestBarChart();
+        $scope.$watch('investSelect.id', function(n){
+            if(!n) return;
+            $scope.$broadcast('showLoadingImg');
+            getInvestSummary();
+            getInvestProfitLine();
+            getInvestBarChart();
+        })
 
         function getInvestSummary () {
-            invest.getInvestSummary().then(function (data) {
+            invest.getInvestSummary($scope.investSelect.id).then(function (data) {
                 // console.info(data);
                 if (data.is_succ) {
                     $scope.summary = data.data;
@@ -37,14 +41,14 @@
         }
 
         function getInvestProfitLine () {
-            invest.getInvestProfitLine().then(function (data) {
+            invest.getInvestProfitLine($scope.investSelect.id).then(function (data) {
                 // console.info(data);
                 $scope.$broadcast('paintLineChart', data.data);
             });
         }
 
         function getInvestBarChart () {
-            invest.getInvestBarChart().then(function (data) {
+            invest.getInvestBarChart($scope.investSelect.id).then(function (data) {
                 console.info(data);
                 $scope.bars = [];
                 var symbolBar = {};

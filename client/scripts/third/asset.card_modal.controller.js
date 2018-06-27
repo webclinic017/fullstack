@@ -14,11 +14,13 @@
             //bank: ,           // 银行
             // address: ,       // 开户行
             binding: false,
-            realname: $scope.personal.realname
+            realname: $scope.personal.realname,
+            world: $scope.personal.region
         };
         $scope.banks = [];
         $scope.clickable = true;
 
+        $scope.worlds = [];
         $scope.provinces = [];
         $scope.citys = [];
 
@@ -33,10 +35,19 @@
                 reg: validator.regType.phone.reg,
                 tip: validator.regType.phone.tip
             },
+            swift_code: {
+                show: false
+            },
             bank: {
                 show: false
             },
+            bankOther: {
+                show: false
+            },
             address: {
+                show: false
+            },
+            world: {
                 show: false
             },
             province: {
@@ -56,6 +67,7 @@
         $scope.submitForm = submitForm;
         $scope.getCity = getCity;
 
+        getWorlds();
         getProvince();
 
         asset.getBanks().then(function (data) {
@@ -87,6 +99,14 @@
                 if (bank.nameEN === passedScope.card.bank) {
                     $scope.card.bank = bank;
                     isBreak = true;
+                }
+            });
+        }
+
+        function getWorlds () {
+            account.getWorlds().then(function (data) {
+                if (data.is_succ) {
+                    $scope.worlds = data.data;
                 }
             });
         }
@@ -132,38 +152,47 @@
             });
         }
         function submitForm() {
-            // console.log($scope.card, $scope.card.bank.nameEN);
+            // console.log($scope.card);
             showErr('realname');
+            showErr('world');
             showErr('number');
-            showErr('bank');
             showErr('address');
-            showErr('province');
-            showErr('city');
-            showErr('phone');
-            // console.info($scope.cardForm.city);
+            
+            if ($scope.card.world && $scope.card.world.world_code === 'CN') {
+                showErr('bank');
+                showErr('province');
+                showErr('city');
+                showErr('phone');
+            }
+            if ($scope.card.world && $scope.card.world.world_code !== 'CN') {
+                showErr('bankOther');
+                showErr('swift_code');
+            }
 
             if ($scope.cardForm.$invalid) {
                 return;
             }
 
+            var oParams = {
+                card_no: $scope.card.number,
+                country: $scope.card.world.world_code,
+                bank_addr: $scope.card.address,
+            };
+            if ($scope.card.world && $scope.card.world.world_code === 'CN') {
+                oParams.bank_name = $scope.card.bank.nameEN;
+                oParams.province = $scope.card.province.code;
+                oParams.city = $scope.card.city.code;
+                oParams.phone = $scope.card.phone;
+            } else {
+                oParams.bank_name = $scope.card.bankOther;
+                oParams.swift_code = $scope.card.swift_code;
+            }
+            
             $scope.clickable = false;
 
             // 如果是第一次绑卡
             if (typeof $scope.card.id === 'undefined') {
-                asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address, $scope.card.province.code, $scope.card.city.code, null, $scope.card.phone).then(function (data) {
-                    $scope.clickable = true
-                    if (!data) return;
-                    if (data.is_succ) {
-                        $scope.card.binding = true;
-                        $scope.$emit('bindCardSuccess');
-                    } else {
-                        $scope.$emit('bindCardFail');
-                        alert(data.message);
-                    }
-                });
-            } else {
-                // 修改银行卡
-                asset.bindCard($scope.card.number, $scope.card.bank.nameEN, $scope.card.address, $scope.card.province.code, $scope.card.city.code, $scope.card.id, $scope.card.phone).then(function (data) {
+                asset.bindCard(oParams).then(function (data) {
                     $scope.clickable = true
                     if (!data) return;
                     if (data.is_succ) {

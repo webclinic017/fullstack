@@ -1,0 +1,51 @@
+<div class="space_center_trading" >
+    <div class="row align-item-c">
+        <div class="col-xs-7 align-item-c">
+            <div class="block_title">交易账户</div>
+            <tw-select-list default-select-key="defaultSelectKey" default-select="investSelect" disabled="true" select-data-list="accountInfo.accountList" click-change="changeSelect()"></tw-select-list>
+        </div>
+        <div class="col-xs-5"  ng-if="!personal.has_master">
+            <div class="block_btn_group text-right">
+                <a ui-sref="space.master.subpage({ subpage: 'apply'})" class="tw-btn tw-btn-capsule-gradient tw-btn-md">申请高手</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <ul class="trading_details clearfix">
+            <li>
+                <p class="num">${{ singleAccountInfo.equity || '0.00' }}</p>
+                <p class="tip">资产净值</p>
+            </li>
+            <li>
+                <p class="num">${{ singleAccountInfo.margin_free || '0.00' }}</p>
+                <p class="tip">可用保证金</p>
+            </li>
+            <li class="noLine">
+                <p class="num">{{ singleAccountInfo.margin_level || '0.00' }}%</p>
+                <p class="tip">保证金比例</p>
+            </li>
+            <li>
+                <p class="num">{{ singleAccountInfo.volume || '0.00' }}</p>
+                <p class="tip">总交易手数</p>
+            </li>
+            <li>
+                <p class="num">{{ singleAccountInfo.copy_num || '0' }}</p>
+                <p class="tip">复制高手</p>
+            </li>
+            <li ng-mouseenter="show_close_profit=true" ng-mouseleave="show_close_profit=false" ng-class="{'active':show_close_profit}">
+                <p class="num" ng-class="{'font-danger': singleAccountInfo.profit.indexOf('-') < 0, 'font-success': singleAccountInfo.profit.indexOf('-') >= 0}">${{ singleAccountInfo.profit || '0.00' }}</p>
+                <p class="tip">历史总收益</p>
+                <p class="space_center_hint">用户真实入金后平仓产生的收益总数</p>
+            </li>
+            <li>
+                <p class="num" ng-class="{'font-danger': singleAccountInfo.floating_profit.indexOf('-') < 0, 'font-success': singleAccountInfo.floating_profit.indexOf('-') >= 0}">${{ singleAccountInfo.floating_profit || '0.00' }}</p>
+                <p class="tip">浮动盈亏</p>
+            </li>
+            <li class="noLine">
+                <p class="num" ng-class="{'font-danger': singleAccountInfo.profit_rate.indexOf('-') < 0, 'font-success': singleAccountInfo.profit_rate.indexOf('-') >= 0}">{{ singleAccountInfo.profit_rate || '0.00' }}%</p>
+                <p class="tip">总收益率</p>
+            </li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,98 @@
+<div class="sys_modal">
+    <p class="clearfix">
+        <button class="close" ng-click="closeModal()">&times;</button>
+    </p>
+
+    <div ng-if="addAccountLogic.logic === 2">
+        <h5 class="sys_modal__title">
+            提示
+        </h5>
+        <div class="sys_modal__add_account mg-tp-40">
+            <div class="text-center">
+                {{ addAccountLogic.msg }}
+            </div>
+        </div>
+
+        <div class="mg-tp-30 mg-bt-30 pd-tp-30 pd-bt-30 text-center">
+            <button class="tw-btn tw-btn-lg162 tw-btn-capsule-gradient" ng-click="closeModal()" ng-if="addAccountLogic.code !== 100608">
+                确定
+            </button>
+            <a class="tw-btn tw-btn-lg162 tw-btn-capsule-gradient" ng-click="depositActivate()" ng-if="addAccountLogic.code === 100608">
+                充值激活
+            </a>
+        </div>
+    </div>
+    <div ng-if="addAccountLogic.logic === 1">
+        <h5 class="sys_modal__title">
+            新建子账号规则
+        </h5>
+        <div class="sys_modal__add_account mg-tp-40">
+            <ol class="sys_modal__add_account-ol">
+                <li>交易账户下最多支持免费创建七个账号；</li>
+                <li>新建子账号前需确保已充值激活所有已开通子账号</li>
+            </ol>
+        </div>
+
+        <div class="mg-tp-30 mg-bt-30 pd-tp-30 pd-bt-30 text-center">
+            <button class="tw-btn tw-btn-lg162 tw-btn-capsule-gradient" ng-click="addAccount()">
+                创建子账号
+            </button>
+        </div>
+    </div>
+    <div ng-if="addAccountLogic.logic === 0">
+        <h5 class="sys_modal__title">
+            子账号创建成功
+        </h5>
+        <div class="sys_modal__add_account mg-tp-40">
+            <div class="text-center">
+                子账号创建成功，账号尚未激活，请及时充值
+            </div>
+        </div>
+
+        <div class="mg-tp-30 mg-bt-30 pd-tp-30 pd-bt-30 text-center">
+            <button class="tw-btn tw-btn-lg162 tw-btn-capsule-gradient" ng-click="closeModalReload()">
+                确定
+            </button>
+        </div>
+        <!-- <form name="setName" novalidate autocomplete="off" class="sys_modal__add_account">
+            <div class="mg-tp-40 pd-lf-35 pd-rg-35">
+                <p class="sys_modal__add_account-tip">请设置子账号备注</p>
+                <div class="form-control-wrapper">
+                    <input class="form-control sys_modal__add_account-input"
+                        name="account_name"
+                        type="text"
+                        placeholder="交易账号"
+                        required
+                        ng-pattern="/^[0-9A-Za-z\u4e00-\u9fa5]{2,8}$/"
+                        ng-model="addAccountLogic.account_name"
+                        ng-focus="showErr()"
+                        ng-blur="">
+
+                    <div ng-show="formVerifyShow">
+                        <p class="alert-arrow_tp_lf" ng-show="setName.account_name.$error.required">
+                            请输入交易账号名称
+                        </p>
+
+                        <p class="alert-arrow_tp_lf" ng-show="setName.account_name.$error.pattern">
+                            账号名称包含2-8个字符，支持中英文，数字
+                        </p>
+                    </div>  
+                </div>
+                <p ng-show="setNameMsgShow" class="sys_modal__add_account-msg">{{ setNameMsg }}</p>
+            </div>
+            <div class="mg-tp-50 mg-bt-30 pd-tp-30 pd-bt-30 text-center">
+                <button class="tw-btn tw-btn-lg162 tw-btn-capsule-gradient" ng-click="setAccountName(setName.account_name.$invalid)" ng-if="clickable">
+                    提交
+                </button>
+
+                <button class="tw-btn tw-btn-lg162 tw-btn-capsule-gradient" disabled ng-if="!clickable">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    提交中
+                </button>
+            </div>
+        </form> -->
+        
+    </div>
+
+</div>
+

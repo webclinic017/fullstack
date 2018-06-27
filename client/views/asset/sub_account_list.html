@@ -1,0 +1,27 @@
+<div class="sys_modal_v2 slim_case">
+    <button class="close" ng-click="closeModal()">×</button>
+
+    <h5 class="sys_modal_v2__title">
+        选择交易账户
+    </h5>
+
+    <div class="sys_modal_v2__content">
+        <ul class="deposit_modal__type">
+            <li class="row" ng-repeat="(key, value) in account.dealAccountList" ng-click="selectType(value)">
+                <div class="col-xs-3 deposit_modal__type-icon">
+                    <span class="btn-select fr" ng-class="{active: account.accountItem.mt4_id === value.mt4_id}"></span>
+                </div>
+                <div class="col-xs-9 deposit_modal__type-cont">
+                    <p class="tit">{{value.account_name || "交易账号"}}</p>
+                    <p class="tip">账户余额：${{ value.balance }}<span>（{{ accountType[value.account_type] }}）</span></p>
+                </div>
+            </li>
+        </ul>
+
+        <p class="btn_wrapper mg-bt-15">
+            <button class="btn btn-primary-gradient btn-sm" ng-click="confirmSelectType()">
+                确定
+            </button>
+        </p>
+    </div>
+</div>

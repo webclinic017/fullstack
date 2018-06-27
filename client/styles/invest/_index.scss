@@ -1,6 +1,6 @@
 @include b(invest_content) {
     min-height: 450px;
-    margin-top: 50px;
+    margin-top: 44px;
 
     @include e(tip) {
         padding: 15px;
@@ -225,4 +225,233 @@
 }
 .icon-history{
     vertical-align:sub;
+}
+// 交易账户微调
+.align-item-c {
+    display: flex;
+    align-items: center;
+}
+.margin-top60 {
+    margin-top: 60px;
+}
+// 交易账户home页
+@include b(space_sub_account) {
+    margin-top: 32px;
+    @include e(list) {
+        padding: 32px 0 32px 2px;
+        border-top: 1px solid rgba(151, 151, 151, 0.2);
+    }
+
+}
+@include b(space_sub_account_info) {
+    display: flex;
+    align-items: center;
+    @include e(list) {
+        &:nth-child(1) {
+            > ul {
+                width: 240px;
+
+                > li {
+                    &:nth-child(1) {
+                        span {
+                            display: inline-block;
+                            vertical-align: middle;
+                        }
+                        line-height: 22px;
+                        > div {
+                            &:nth-child(1){
+                                display: flex;
+                                align-items: center;
+                            }
+                            > span {
+                                margin-bottom: 7px;
+                            }
+                        }
+                        .name {
+                            font-size: 20px;
+                            color: rgb(25, 79, 130);
+                            font-weight: 500;
+                        }
+                        .edit {
+                            width: 22px;
+                            height: 22px;
+                            background-size: 100%;
+                            background: url('/images/space/edit.png') center center no-repeat;
+                            color: rgb(255, 197, 0);
+                            margin-left: 7px;
+                        }
+                        .mt4id {
+                            font-size: 14px;
+                            color: rgb(74, 74, 74)
+                        }
+                        .edit-name {
+                            &.submit-success {
+                                .input-box{
+                                    padding-right: 44px;
+                                    &:before{ 
+                                        width: 20px;
+                                        height: 20px;
+                                        background: url('/images/space/success.png') center center no-repeat;
+                                    }
+                                }
+                            }
+                            &.submit-error {
+                                .input-box{
+                                    padding-right: 44px;
+                                    border: 1px solid rgb(245, 82, 79);
+                                    &:before{ 
+                                        width: 20px;
+                                        height: 20px;
+                                        background: url('/images/space/error.png') center center no-repeat;
+                                    }
+                                    input[name='account_name']{
+                                        color: rgb(245, 82, 79);
+                                    }
+                                }
+                                .error {
+                                    color: rgb(245, 82, 79);
+                                }
+                            }
+                            .input-box {
+                                position: relative;
+                                width: 190px;
+                                height: 36px;
+                                border: 1px solid rgba(74, 144, 226, 0.4);
+                                padding: 7px 12px; 
+                                border-radius: 4px;
+                                input[name='account_name']{
+                                    width: 100%;
+                                    height: 100%;
+                                    border: none;
+                                }
+                                &:before{
+                                    content: "";
+                                    position: absolute;
+                                    top: 7px;
+                                    right: 12px;
+
+                                }
+                            }
+                            .error {
+                                font-size: 12px;
+                                color: rgba(74, 74, 74, 0.6);
+                            }
+                        }
+                    }
+                    &:nth-child(2) {
+                        margin-top: 32px;
+                        margin-bottom: 5px;
+                        padding-right: 19px;
+                        .progress {
+                            display: block;
+                            .bar-bg {
+                                width: 100%;
+                                height: 12px;
+                                display: block;
+                                border-radius: 8px;
+                                background-color: rgb(243, 243, 243);
+                              }
+                              .bar-on {
+                                width: 1%;
+                                display: block;/* 设为block */
+                                border-radius: 8px;
+                                height: 12px; 
+                                background: linear-gradient(to right, rgb(249,226,102) 0%,rgb(255,189,67) 50%,rgb(255,94,67) 100%)
+                              }
+                        }
+                        .master_category {
+                            margin-top: 9px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .grade {
+                                font-size: 14px;
+                                color: rgba(36, 42, 54, 0.6);
+                                > span {
+                                    vertical-align: middle;
+                                    display: inline-block;
+                                    width: 20px;
+                                    height: 20px;
+                                    border-radius: 4px;
+                                    background-image: linear-gradient(90deg,rgb(251,245,175) 0%, rgb(255,210,2) 30%,rgb(255,189,67) 60%, rgb(255,145,24) 100%);
+                                    font-size:  18px;
+                                    text-align: center;
+                                    line-height: 20px;
+                                    color: #fff;
+                                    margin-left: 7px;
+                                }
+                            }
+                            .details {
+                                font-size: 12px;
+                                color: rgb(25, 79, 130);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &:nth-child(2) {
+            flex: 1;
+            padding: 0 25px 0 0;
+            > ul {
+                overflow: hidden;
+                > li {
+                    padding-left: 28px;
+                    width: 33.3%;
+                    float: left;
+                    position: relative;
+                    p {
+                        line-height: 22px;
+                        &:nth-child(1){
+                            margin-bottom: 3px;
+                            font-size: 18px;
+                            color: rgb(36, 42, 54);
+                        }
+                        &:nth-child(2){
+                            font-size: 12px;
+                            color: rgba(36,42,54,0.6);
+                        }
+                    }
+                    &:not(.noLine):before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 3px;
+                        right: 0;
+                        width: 1px;
+                        height: 47px;
+                        background-color: #d2d2d2;
+                    }
+                }
+            }
+        }
+        &:nth-child(3) {
+            span {
+                margin: 0 30px;
+                color: rgb(74,144,226);
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+// 跟单标志
+.z-documentary {
+    background-image: linear-gradient(to bottom, rgba(98, 131, 236, 0.98) 0%, rgb(92, 181, 237) 100%);
+}
+// 高手
+.z-superior {
+    background-image: linear-gradient(to bottom, rgb(249, 226, 102) 0%, rgb(255, 189, 67) 50%, rgb(255, 94, 67) 100%);
+}
+.z-symbol {
+    margin: 0 10px;
+    height: 24px;
+    width: 80px;
+    display: inline-block;
+    text-align: center;
+    line-height: 24px;
+    border-radius: 46px;
+    font-size: 14px;
+    color: #fff;
 }

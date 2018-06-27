@@ -25,25 +25,6 @@
     $(function () {
         var oReg = {};
 
-        function isRegSucceed() {
-            var location = window.location.href.indexOf("/succ") >= 0;
-            if (!!document.getElementById("regist_btn3") && location) {
-                /*统计注册成功*/
-                sa.track('btn_register_finish');
-                window._czc && _czc.push(["_trackEvent", "活动页", "立即注册且成功"]);
-                
-                setTimeout(function () {
-                    var user_code = $.cookie("user_code");
-                    // console.log(user_code);
-                    if (user_id) {
-                        sa.login(user_id);
-                    }
-                }, 0);
-
-                return true;
-            }
-        }
-
         function sendVerifyCode() {
             function isDisabled() {
                 var flag = $("#verify_code_btn").hasClass("disable");
@@ -105,9 +86,8 @@
             /*获取手机号*/
             var telephone = $("#telephone");
             var rPhone = telephone.val() ? telephone.val() : "";
-            var isMobile = /^(13|14|15|17|18)\d{9}$/;
-            var isPhone = /^((0\d{2,4})-)?(\d{7,8})(-(\d{2,}))?$/;
-            if ((telephone.val() == "") || (!isMobile.test(telephone.val()) && !isPhone.test(telephone.val()))) {
+            var isMobile = /^1\d{10}$/;
+            if ((telephone.val() == "") || !isMobile.test(telephone.val())) {
                 /*提示*/
                 layer.msg('请输入有效的手机号');
                 return false;
@@ -274,7 +254,7 @@
         ;
         (function () {
 
-            function toLogin (is_agree) {
+            function toLogin (e, is_agree) {
                 
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
@@ -315,13 +295,13 @@
                         });
                         window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
 
-                        $timeout(function () {
+                        setTimeout(function () {
                             window.location.href = '/space/#/center?type=new';
                         }, 100);
                     } else {
                         if ((data.code == 100402) || (data.code == 100403)) {
                             openWebAgmentModal(data.code, function(resolve, e){
-                                toLogin('is_agree');
+                                toLogin(e, 'is_agree');
                                 layer.close(resolve.layIndex)
                             })
                         } else {

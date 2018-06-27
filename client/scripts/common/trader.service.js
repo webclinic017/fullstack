@@ -135,11 +135,13 @@
         /**
          * trader 获取高手等级信息
          * @param user_code 
+         * @param account_code  交易账户主键ID 
          *
          */
-        function getMasterGrade(user_code) {
+        function getMasterGrade(user_code, account_code) {
             return publicHttp.dealPublicRequest(o.getMasterGradeApi, 'GET', {
-                user_code: user_code
+                user_code: user_code,
+                account_code: account_code,
             });
         }
 
@@ -147,16 +149,20 @@
          * trader 高手申请条件检查
          *
          */
-        function getMasterCondition() {
-            return publicHttp.dealPublicRequest(o.getMasterConditionApi, 'GET');
+        function getMasterCondition(mt4_id) {
+            return publicHttp.dealPublicRequest(o.getMasterConditionApi, 'GET', {
+                mt4_id: mt4_id,
+            });
         }
 
         /**
          * trader 高手申请
          *
          */
-        function applyMaster() {
-            return publicHttp.dealPublicRequest(o.applyMasterApi, 'POST');
+        function applyMaster(mt4_id) {
+            return publicHttp.dealPublicRequest(o.applyMasterApi, 'POST', {
+                mt4_id: mt4_id,
+            });
         }
     }
 })();

@@ -121,20 +121,19 @@
     @include e(way) {
         width: 100%;
         height: 35px;
-        color: #494949;
+        color: #4a90e2;
         font-size: 24px;
         font-weight: 500;
         cursor: pointer;
         position: relative;
-        &:before {
+        &:after {
             content: '';
-            display: block;
-            position: absolute;
-            top: 50%;
-            right: 0;
-            border: 6px solid transparent;
-            border-top-color: #666;
-            margin-top: -3px;
+            display: inline-block;
+            border: 9px solid transparent;
+            border-top-color: #4a90e2;
+            padding-top: 3px;
+            margin-left: 20px;
+            vertical-align: bottom;            
         }
         @include m(tip) {
             color: #999;
@@ -421,9 +420,44 @@
         margin-top: 25px;
         color: #999;
     }
+    @include e(bank_card) {
+        .tit {
+            width: 70px;
+            display: inline-block;
+        }
+        .name {
+            color: #666;
+        }
+        .tip {
+            color: #999;
+
+            span {
+                display: block;
+            }
+        }
+        .back_err {
+            color: rgb( 245,82,79);
+        }
+        input {
+            border-color: transparent;
+            border-bottom-color: #ccc;
+            font-weight: 500;
+            color: #222;
+            font-size: 16px;
+
+            &:focus {
+                box-shadow: inherit;
+                border-color: transparent;
+                border-bottom-color: #ccc;
+            }
+        }
+    }
 }
 
 @include b(withdraw) {
+    &.zero_withdraw {
+        min-height: 520px;
+    }
     min-height: 700px;
     @include e(sys_tip) {
         margin-left: 92px;
@@ -472,6 +506,74 @@
             }
         }
     }
+    @include e(list){
+        @include m(item){
+            display: inline-block;
+            box-sizing: border-box;
+            float: left;
+            width: 210px;
+            height: 112px;
+            border-radius: 14px;
+            transition: all 0.22s linear;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 13px 24px 12px;
+            cursor: pointer;
+            &:hover {
+                box-shadow: 0 10px 60px $gray-dark;
+            }
+            &:nth-child(1) {
+                background-image: url('/images/space/space-trading.png');
+            }
+            &:nth-child(2) {
+                background-image: url('/images/space/space-wallet.png');
+                margin: 0 20px;
+            }
+            span {
+                display: inline-block;
+            }
+            p {
+                color: #fff;
+            }
+            &.not-active {
+                background-image: url('/images/space/not-active.png');
+            }
+            .summary_name {
+                font-size: 14px;
+            }
+            .summary_amount {
+                font-size: 20px;
+                font-weight: 500;
+                margin-top: 12px;
+            }
+            .summary_btn {
+                margin-top: 11px;
+                a {
+                    color: #fff;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                span {
+                    font-size: 12px;
+                    padding-right: 20px;
+                    margin-right: 20px;
+                    position: relative;
+                    &.line:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 3px;
+                        right: 0;
+                        width: 1px;
+                        height: 14px;
+                        background-color: #fff;
+                    }
+                }
+            }
+        }
+    }
     @include e(card_handler) {
         @extend .flexBox;
         flex-flow: row nowrap;
@@ -515,6 +617,7 @@
 
         .title, .tip {
             color: #666;
+            line-height: 22px;
         }
         .desc {
             padding: 20px 0px;

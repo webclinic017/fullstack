@@ -279,6 +279,23 @@ module.exports = [
     ]
   },
   {
+    title: "民生银行",
+    sub_title: null,
+    content: [
+      {
+        title: null,
+        tip: [
+          "Step1：登录民生银行官网",
+          "Step2：选择转账 > 转账结果查询 > 收/付款查询，找到充值记录",
+          "Step3：截取对应充值记录，截图内需包含持卡人姓名、银行账号、充值金额等内容。"
+        ],
+        pic: [
+          "/white_label/deposit/cmbc-1.jpg"
+        ]
+      }
+    ]
+  },
+  {
     title: "其他银行",
     content: [
       {

@@ -1,9 +1,32 @@
 <div ng-controller="SettingInfoPhoneController">
-    <p class="pd-tp-20 pd-bt-10">您已经绑定了手机号码
+    <p class="pd-tp-20 pd-bt-30 setting_info_zero__list-title">
+        <span class="line">手机号码设置</span>
+        <span>您已经绑定了手机号码</span>
         <span class="font-info">{{settingInfo.phone}}</span>
     </p>
-    <div class="row">
+    <div class="row setting_info_zero__list-input">
         <form name="phoneForm" novalidate>
+            <div class="col-xs-2">
+                <div class="form-control-wrapper">
+                    <div class="select">
+                        <input class="select__input"
+                                name="location"
+                                type="text"
+                                placeholder="区号"
+                                required
+                                ng-model="phone.phone_code.key">
+                        
+                        <i class="select__icon fa fa-angle-down"></i>
+
+                        <ul class="select__dropdown" twform-select data-bind-model="phone_test">
+                            
+                            <li ng-repeat="world in worlds" ng-class="{'selected': world.code === phone.phone_code.value}">
+                                <span data-value="{{world.code}}" ng-click="selectWorld(world)">+{{world.phone_code}}({{world.name}})</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="col-xs-3">
                 <div class="form-control-wrapper">
                     <input class="form-control"
@@ -35,7 +58,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-3">
+            <div class="col-xs-2">
                 <div class="form-control-wrapper">
                     <input class="form-control" 
                            name="captcha" 
@@ -61,7 +84,7 @@
                 </div>
             </div>
 
-            <div class="col-xs-3 text-center">
+            <div class="col-xs-2 text-center">
                 <div class="relative">
                     <div class="captcha_btn" 
                             tw-captcha-timer 
@@ -81,12 +104,12 @@
                 </div>
             </div>
 
-            <div class="col-xs-3 text-center">
-                <button class="btn btn-primary btn-sm" type="submit" ng-if="clickable.submit" ng-click="submitForm('phoneForm')">
+            <div class="col-xs-3 text-right">
+                <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable.submit" ng-click="submitForm('phoneForm')">
                     提交
                 </button>
 
-                <button class="btn btn-primary btn-sm" ng-if="!clickable.submit">
+                <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" ng-if="!clickable.submit">
                     <i class="loading_spinner fa fa-spinner"></i>
                     提交中
                 </button>

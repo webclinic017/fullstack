@@ -25,93 +25,46 @@
 <% include /common/statistic/main.html %>
 <script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <body>
-<%- include('/common/component/h5.navbar.html') %>
 <div class="m_honor_layout">
     <div class="m_honor">
+        <div class="m_honor__date">
+            活动时间：2018.6.28-2018.7.15
+        </div>
         <div class="m_honor__box1">
-            <p class="bag_tip">
-                <span>仅可选择其中一个完成兑换</span>
-            </p>
             <div class="bag_wrapper">
                 <ul class="bag_list clearfix">
-                    <!-- <li class="bag_item">
-                        <div class="bag">
-                            <p class="tit">1000美金</p>
-                            <p class="tip">活动期间完成<br>180手交易</p>
-                        </div>
-                        <div class="bag_btn_wrapper">
-                            <button class="bag_btn">
-                                立即领取
-                            </button>
-                        </div>
-                    </li>
-                    <li class="bag_item">
-                        <div class="bag">
-                            <p class="tit">500美金</p>
-                            <p class="tip">活动期间完成<br>90手交易</p>
-                        </div>
-                        <div class="bag_btn_wrapper">
-                            <button class="bag_btn">
-                                立即领取
-                            </button>
-                        </div>
-                    </li>
-                    <li class="bag_item">
-                        <div class="bag">
-                            <p class="tit">200美金</p>
-                            <p class="tip">活动期间完成<br>40手交易</p>
-                        </div>
-                        <div class="bag_btn_wrapper">
-                            <button class="bag_btn">
-                                立即领取
-                            </button>
-                        </div>
-                    </li>
-                    <li class="bag_item">
-                        <div class="bag">
-                            <p class="tit">100美金</p>
-                            <p class="tip">活动期间完成<br>25手交易</p>
-                        </div>
-                        <div class="bag_btn_wrapper">
-                            <button class="bag_btn">
-                                立即领取
-                            </button>
-                        </div>
-                    </li> -->
                 </ul>
-            </div>
-        </div>
-        <div class="m_honor__box2">
-            <p class="bag_tip">
-                <span>活动期间累计入金≥1000美金，并完成一手交易，即可领取手机电竞游戏专用手柄</span>
-            </p>
-            <p class="bag_tit">
-                手机电竞游戏专用手柄
-            </p>
-            <div class="bag_btn_wrapper">
-                <button class="bag_btn btn-2 not_recevie">
-                    立即领取
-                </button>
             </div>
         </div>
         <div class="m_honor__rules">
             <p>
-                1.参与资格：TigerWit真实入金客户（首次入金时间早于2017年6月1日）且自6月1日至今无入金、开仓、平仓行为，当前账户资金量低于20美金。
+                1.本活动仅限TigerWit平台往期参与过信用赠金活动的用户；
             </p>
             <p>
-                2.  每位符合条件用户4个红包只能选择一个， 确定之后即可领取，在达成兑换条件后即可成功兑换。
+                2.每位参与用户仅能领取一次红包，且选择4档活动红包其中之一，达成所领红包兑现条件后即可兑现（所需完成交易手数均以在TigerWit平台首次交易开始累计计算）;
             </p>
             <p>
-                3.  本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，CFD（指数）类产品的交易手数不计入统计范围。
+                3.兑现红包将直接存入“零钱包”，提现时需账户余额≥0；
             </p>
             <p>
-                4.允许EA，但禁止EA剥头皮交易。违反规则用户，将被剥夺参与本次活动的权利。
+                4.本活动参与用户不得滥用活动权利，如AB仓对冲操作、外挂操作软件或其他经纪商进行对冲等行为；
             </p>
             <p>
-                5.本活动最终解释权归TigerWit平台所有。
+                5.本活动仅适用于外汇、贵金属以及能源类产品，美元/人民币和CFD（指数）类产品的交易手数不计入统计范围；
+            </p>
+            <p>
+                6.本活动最终解释权归TigerWit平台所有，如有疑问请咨询在线客服或拨打 400-809-8509 。
             </p>
         </div>
-        <div class="m_honor__footer">
+        <div class="m_honor__box2">
+            <p class="bag_tip">
+                <span>
+                    市场有风险，投资需谨慎。<br>
+                    金融市场的保证金交易存在较高风险，可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前，应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。TigerWit交易平台为广大交易高手及普通投资者提供复制交易服务，交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+                </span>
+            </p>
+        </div>
+        <!-- <div class="m_honor__footer">
             <div class="bd_honor_logo">
                 <img src="/images/basic_logo.png">
             </div>
@@ -124,7 +77,7 @@
                     进入TigerWit APP
                 </span>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 
@@ -133,7 +86,7 @@
         <li class="bag_item">
             <div class="bag">
                 <p class="tit"><$= data[i].amount$>美金</p>
-                <p class="tip"><$= data[i].front_desc_fir$><br><$= data[i].front_desc_sec$></p>
+                <p class="tip"><$= data[i].front_desc_fir$></p>
             </div>
             <div class="bag_btn_wrapper">
                 <button class="bag_btn btn-1" data-id="<$= data[i].id$>" data-amount="<$= data[i].amount$>">

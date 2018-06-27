@@ -29,8 +29,10 @@
          * @method getMasterSummary
          * 
          */
-        function getInvestSummary () {
-            return publicHttp.dealPublicRequest(o.getInvestSummaryApi, 'GET');
+        function getInvestSummary (mt4_id) {
+            return publicHttp.dealPublicRequest(o.getInvestSummaryApi, 'GET', {
+                mt4_id: mt4_id,
+            });
         }
 
         /**
@@ -40,8 +42,10 @@
          * @method getInvestProfitLine
          * 
          */
-        function getInvestProfitLine() {        
-            return publicHttp.dealPublicRequest(o.getInvestProfitLineApi, 'GET');
+        function getInvestProfitLine(mt4_id) {        
+            return publicHttp.dealPublicRequest(o.getInvestProfitLineApi, 'GET', {
+                mt4_id: mt4_id,
+            });
         }
 
         /**
@@ -51,9 +55,11 @@
          * @method getInvestBarChart
          * 
          */
-        function getInvestBarChart() {
+        function getInvestBarChart(mt4_id) {
             // return $http.get('/data/bar_chart.json');
-            return publicHttp.dealPublicRequest(o.getInvestBarChartApi, 'GET');
+            return publicHttp.dealPublicRequest(o.getInvestBarChartApi, 'GET', {
+                mt4_id: mt4_id,
+            });
         }
 
         /*
@@ -62,10 +68,11 @@
          *
          * @method getInvestCurrentData
          */
-        function getInvestCurrentData() {
+        function getInvestCurrentData(mt4_id) {
             return publicHttp.dealPublicRequest(o.getInvestCurrentDataApi, 'GET' ,{
-                  page: 1,
-                  pagesize: 1000
+                mt4_id: mt4_id,
+                page: 1,
+                pagesize: 1000
             });
         }
 
@@ -75,8 +82,11 @@
          *
          * @method getInvestCurrentTraders
          */
-        function getInvestCurrentTraders() {
-            return publicHttp.dealPublicRequest(o.getInvestCurrentTradersApi, 'GET');
+        function getInvestCurrentTraders(mt4_id) {
+            return publicHttp.dealPublicRequest(o.getInvestCurrentTradersApi, 'GET', {
+                include_uncopy: 1,
+                mt4_id: mt4_id
+            });
         }
 
         /*
@@ -85,9 +95,10 @@
          *
          * @method getInvestCurrentDetails
          */
-        function getInvestCurrentDetails(usercode) {
+        function getInvestCurrentDetails(account_code, mt4_id) {
             return publicHttp.dealPublicRequest(o.getInvestCurrentDetailsApi, 'GET', {
-                user_code: usercode
+                account_code: account_code,
+                mt4_id: mt4_id,
             });
         }
 
@@ -99,8 +110,9 @@
          * @param {Number} page 当前页
          * @param {Number} pagesize 单页显示数
          */
-        function getInvestHistoryData() {
+        function getInvestHistoryData(mt4_id) {
             return publicHttp.dealPublicRequest(o.getInvestHistoryDataApi, 'GET', {
+                mt4_id: mt4_id,
                 offset: 0,
                 limit: 1000
             });
@@ -111,8 +123,10 @@
          *
          * @method getCopiedTraders
          */
-        function getInvestHistoryTraders() {
-            return publicHttp.dealPublicRequest(o.getInvestHistoryTradersApi, 'GET');
+        function getInvestHistoryTraders(mt4_id) {
+            return publicHttp.dealPublicRequest(o.getInvestHistoryTradersApi, 'GET', {
+                mt4_id: mt4_id
+            });
         }
 
         /*
@@ -120,9 +134,10 @@
          *
          * @method getHistoryDetails
          */
-        function getInvestHistoryDetails(usercode, offset, limit) {
+        function getInvestHistoryDetails(account_code, offset, limit, mt4_id) {
             return publicHttp.dealPublicRequest(o.getInvestHistoryDetailsApi, 'GET', {
-                user_code: usercode,
+                mt4_id: mt4_id,
+                account_code: account_code,
                 offset: offset,
                 limit: limit
             });
@@ -137,10 +152,11 @@
          * @params limit    默认值10
          *
          */
-        function getWalletHistory(offset, limit) {
+        function getWalletHistory(offset, limit, direction) {
             return publicHttp.dealPublicRequest(o.getWalletHistoryApi, 'GET', {
                 offset: offset,
-                limit: limit
+                limit: limit,
+                direction: direction,
             });
         }
        

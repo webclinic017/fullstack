@@ -30,7 +30,12 @@
             uploadAvatarForm: urlOrigin2 + '/user/upload_avatar',
             setNewPwdApi: urlOrigin2 + '/forget_passwd',
             getPersonalInfoApi: urlOrigin2 + '/user/info',
-            getAssetInfoApi: urlOrigin2 + '/centre/asset',
+            getAssetInfoApi: urlOrigin2 + '/account/summary',
+            getAccountInfoApi: urlOrigin2 + '/trade_account/asset',
+            getTotalDealAccountApi: urlOrigin2 + '/trade_account/summary',
+            getDealAccountListApi: urlOrigin2 + '/trade_account/list',
+            setDealAccountNameApi: urlOrigin2 + '/trade_account/name',
+            newSubAccountApi: urlOrigin2 + '/trade_account/add',
             getUnreadLengthApi: urlOrigin2 + '/notify/number',
             getNoticeListApi: urlOrigin2 + '/notify',
             getAllReadApi: urlOrigin2 + '/notify/read',
@@ -69,11 +74,13 @@
             depositApi: urlOrigin2 + '/payment/deposit',
             getDepositLimitApi: urlOrigin2 + '/payment/deposit/limits',
             getDepositPlatformApi: urlOrigin2 + '/payment/deposit/platform',
+            getWithdrawPlatformApi: urlOrigin2 + '/payment/withdraw_list',
             getFXRateApi: urlOrigin2 + '/payment/rates',
             getIsWithdrawApi: urlOrigin2 + '/payment/withdraw/limits',
             walletDepositApi: urlOrigin2 + '/wallet/deposit',
             walletWithdrawApi: urlOrigin2 + '/wallet/withdraw',
             walletCanWithdrawApi: urlOrigin2 + '/wallet/valid_balance',
+            walletbalanceApi: urlOrigin2 + '/wallet/balance',
             getMasterBonusSummaryApi: urlOrigin2 + '/commission/master_profile',
             getCopierBonusSummaryApi: urlOrigin2 + '/commission/custom_profile',
             getMasterBonusListApi: urlOrigin2 + '/commission/master_settle',
@@ -83,7 +90,9 @@
             teleDepositApi: urlOrigin2 + '/payment/deposit/transfer',
             uploadPaymentEvidenceApi: urlOrigin2 + '/payment/evidence',
             getPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_list',
-            cancelPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_cancel'
+            cancelPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_cancel',
+            checkEvidenceStatusApi: urlOrigin2 + '/payment/evidence_status',
+            checkInvestBankApi: urlOrigin2 + '/payment/deposit_card'
         };
         var forex = {
             
@@ -92,8 +101,8 @@
             getInvestSummaryApi: urlOrigin2  + '/centre/trading_profile',
             getInvestProfitLineApi: urlOrigin2 + '/centre/trading_trend',
             getInvestBarChartApi: urlOrigin2 + '/centre/trading_symbols',
-            getInvestCurrentDataApi: urlOrigin2 + '/centre/active/self_trades',
-            getInvestCurrentTradersApi: urlOrigin2 + '/centre/active/copy_masters',
+            getInvestCurrentDataApi: urlOrigin2 + '/centre/active/self_trades',  // 自主交易订单列表
+            getInvestCurrentTradersApi: urlOrigin2 + '/centre/active/copy_masters', // 当前跟随的高手列表
             getInvestCurrentDetailsApi: urlOrigin2 + '/centre/active/copy_trades',
             getInvestHistoryDataApi: urlOrigin2 + '/centre/past/self_trades',
             getInvestHistoryTradersApi: urlOrigin2 + '/centre/past/copy_masters',
@@ -122,9 +131,9 @@
         var trader = {
             getMasterCurrentApi: urlOrigin2 + '/master/active/trades', 
             getMasterPastTradeApi: urlOrigin2 + '/master/past/trades', //替换getMasterHistoryApi
-            copyApi: urlOrigin2 + '/copy',
-            cancelCopyApi: urlOrigin2 + '/uncopy',
-            getAvaCopyAmountApi: urlOrigin2 + '/valid_copy',
+            copyApi: urlOrigin2 + '/copy/copy',
+            cancelCopyApi: urlOrigin2 + '/copy/uncopy',
+            getAvaCopyAmountApi: urlOrigin2 + '/copy/valid_copy',
             getHistoricalRateApi: urlOrigin2 + '/master/monthly_profit_rates',
             getMasterInfoApi: urlOrigin2 + '/master/trading_profile',
             getMonthlySymbolsApi: urlOrigin2 + '/master/trading_symbols',

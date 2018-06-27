@@ -1,0 +1,58 @@
+
+@include b(zero_Spinner){
+    position: relative;
+    cursor: pointer;
+    margin: 0 20px;
+    @include e(title) {
+        height: 50px;
+        border: solid rgba(74, 74, 74, 0.2) 1px;
+        border-bottom-width: 0;
+        min-width: 276px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        padding: 14px 24px;
+        justify-content: space-between;
+        &.menu-hide{
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            border-bottom-width: 1px;
+        }
+        > div {
+            padding-right: 5px;
+            .name {
+                color: rgb(25, 79, 130);
+                font-size: 20px;
+            }
+
+        }
+        .arrow {
+            font-size: 20px;
+            float: right;
+        }
+    }
+    @include e(list) {
+        background-color: #fff;
+        position:absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        border: solid #cccccc 1px;
+        border-top: none;
+        z-index: 3;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        @include m(item) {
+            &.active {
+                background-color: rgb(232, 232, 232);
+            }
+            color: rgb(25, 79, 130);
+            font-size: 20px;
+            height: 50px;
+            list-style:none;
+            padding: 14px 24px;
+            &:hover {
+                background-color: rgb(232, 232, 232);
+            }
+        }
+    }
+}

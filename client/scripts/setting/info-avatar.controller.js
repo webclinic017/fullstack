@@ -12,7 +12,7 @@
         $scope.avatar = {
             status: 0             
         };
-        if($scope.personal.is_master){
+        if($scope.personal.has_master){
             $scope.ban = {
                 msg: '您已是高手，不能再修改头像'
             }

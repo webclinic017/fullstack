@@ -20,6 +20,7 @@
             deposit: deposit,
             getDepositLimit: getDepositLimit,
             getDepositPlatform: getDepositPlatform,
+            getWithdrawPlatform: getWithdrawPlatform,
             getFXRate: getFXRate,
             getIsWithdraw: getIsWithdraw,
             getMasterBonusSummary: getMasterBonusSummary,
@@ -30,11 +31,15 @@
             walletDeposit: walletDeposit,
             walletWithdraw: walletWithdraw,
             walletCanWithdraw: walletCanWithdraw,
+            walletbalance: walletbalance,
             getBanks: getBanks,
             teleDeposit: teleDeposit,
             uploadPaymentEvidence: uploadPaymentEvidence,
             getPaymentEvidence: getPaymentEvidence,
-            cancelPaymentEvidence: cancelPaymentEvidence
+            cancelPaymentEvidence: cancelPaymentEvidence,
+            checkEvidenceStatus: checkEvidenceStatus,
+            checkInvestBank: checkInvestBank,
+            bindInvestBank: bindInvestBank
         };
         return service;
 
@@ -65,16 +70,8 @@
          *
          * @method bindCard
          */
-        function bindCard(number, name, address, province, city, id, phone) {
-            return publicHttp.dealPublicRequest(o.bindCardApi, 'PUT', {
-                card_no: number,
-                bank_name: name,
-                bank_addr: address,
-                province: province,
-                city: city,
-                id: id,
-                phone: phone
-            });
+        function bindCard(oParams) {
+            return publicHttp.dealPublicRequest(o.bindCardApi, 'PUT', oParams);
         }
 
         /**
@@ -134,8 +131,9 @@
          *                      // -5 出金成功
          * }
          */
-        function getHistory(offset, limit) {
+        function getHistory(mt4_id, offset, limit) {
             return publicHttp.dealPublicRequest(o.getHistoryApi, 'GET', {
+                mt4_id: mt4_id,
                 direction: 0,
                 offset: offset,
                 limit: limit
@@ -149,11 +147,12 @@
          *      
          * @params platform   支付宝入金 -> 4
          */
-        function deposit(amount, platform, currency) {
+        function deposit(amount, platform, currency, mt4_id) {
             return publicHttp.dealPublicRequest(o.depositApi, 'POST', {
                 amount: amount,
                 platform: platform,
-                currency: currency
+                currency: currency,
+                mt4_id: mt4_id
             });
         }
 
@@ -176,6 +175,15 @@
         }
 
         /**
+         * Asset Service 获取出金方式列表
+         *
+         * @method getWithdrawPlatform
+         */
+        function getWithdrawPlatform () {
+            return publicHttp.dealPublicRequest(o.getWithdrawPlatformApi, 'GET');
+        }
+
+        /**
          * Asset Service 获取美元对人民币汇率
          *
          * @method getFXRate
@@ -191,9 +199,10 @@
          *
          */
 
-        function getIsWithdraw (amount) {
+        function getIsWithdraw (mt4_id, amount) {
             // console.info('getIsWithdraw is sending', amount);
             return publicHttp.dealPublicRequest(o.getIsWithdrawApi, 'GET', {
+                mt4_id: mt4_id,
                 amount: amount
             });
         }
@@ -203,8 +212,10 @@
          *
          * @method getMasterBonusSummary
          */
-        function getMasterBonusSummary() {
-            return publicHttp.dealPublicRequest(o.getMasterBonusSummaryApi, 'GET');
+        function getMasterBonusSummary(mt4_id) {
+            return publicHttp.dealPublicRequest(o.getMasterBonusSummaryApi, 'GET', {
+                mt4_id: mt4_id
+            });
         }
 
         /**
@@ -212,8 +223,10 @@
          *
          * @method getCopierBonusSummary
          */
-        function getCopierBonusSummary() {
-            return publicHttp.dealPublicRequest(o.getCopierBonusSummaryApi, 'GET');
+        function getCopierBonusSummary(mt4_id) {
+            return publicHttp.dealPublicRequest(o.getCopierBonusSummaryApi, 'GET', {
+                mt4_id: mt4_id
+            });
         }
 
         /**
@@ -221,8 +234,9 @@
          *
          * @method getMasterBonusList
          */
-        function getMasterBonusList(pay_zone, offset, limit) {
+        function getMasterBonusList(mt4_id, pay_zone, offset, limit) {
             return publicHttp.dealPublicRequest(o.getMasterBonusListApi, 'GET', {
+                mt4_id: mt4_id,
                 pay_zone: pay_zone,
                 offset: offset,
                 limit: limit
@@ -234,8 +248,9 @@
          *
          * @method getCopierBonusList
          */
-        function getCopierBonusList(pay_zone, offset, limit) {
+        function getCopierBonusList(mt4_id,pay_zone, offset, limit) {
             return publicHttp.dealPublicRequest(o.getCopierBonusListApi, 'GET', {
+                mt4_id: mt4_id,
                 pay_zone: pay_zone,
                 offset: offset,
                 limit: limit
@@ -278,11 +293,8 @@
          * @method walletWithdraw
          * @param {Number} amount
          */
-        function walletWithdraw(bank_card_id, amount) {
-            return publicHttp.dealPublicRequest(o.walletWithdrawApi, 'POST', {
-                bank_card_id: bank_card_id,
-                amount: amount
-            });
+        function walletWithdraw(params) {
+            return publicHttp.dealPublicRequest(o.walletWithdrawApi, 'POST', params);
         }
 
         /**
@@ -293,6 +305,16 @@
          */
         function walletCanWithdraw() {
             return publicHttp.dealPublicRequest(o.walletCanWithdrawApi, 'GET');
+        }
+
+        /**
+         * Asset Service 获取零钱包余额
+         *
+         * @method walletbalance
+         * 
+         */
+        function walletbalance() {
+            return publicHttp.dealPublicRequest(o.walletbalanceApi, 'GET');
         }
 
         /**
@@ -312,10 +334,11 @@
          * @param {Number} amount
          * @param {Number} file  (base64编码)
          */
-        function teleDeposit(amount, file) {
+        function teleDeposit(amount, file, mt4_id) {
             return publicHttp.dealPublicRequest(o.teleDepositApi, 'POST', {
                 amount: amount,
-                file: file
+                file: file,
+                mt4_id: mt4_id
             });
         } 
 
@@ -354,6 +377,38 @@
         function cancelPaymentEvidence(id) {
             return publicHttp.dealPublicRequest(o.cancelPaymentEvidenceApi, 'POST', {
                 id: id
+            });
+        }
+
+        /**
+         * Asset Service 检查入金凭证状态
+         *
+         * @method checkEvidenceStatus
+         * 
+         */
+        function checkEvidenceStatus () {
+            return publicHttp.dealPublicRequest(o.checkEvidenceStatusApi, 'GET');
+        }
+
+        /**
+         * Asset Service 获取用户绑定网银入金银行卡号
+         *
+         * @method checkInvestBank
+         * 
+         */
+        function checkInvestBank () {
+            return publicHttp.dealPublicRequest(o.checkInvestBankApi, 'GET');
+        }
+
+        /**
+         * Asset Service 绑定入金银行卡号
+         *
+         * @method bindInvestBank
+         * 
+         */
+        function bindInvestBank (depositCard) {
+            return publicHttp.dealPublicRequest(o.checkInvestBankApi, 'PUT', {
+                card_no: depositCard
             });
         }
     }

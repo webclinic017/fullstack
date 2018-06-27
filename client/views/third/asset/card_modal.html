@@ -1,239 +1,326 @@
 <div class="sys_modal_v2 slim_case card_modal">
-    <button class="close" ng-click="closeModal()">&times;</button>
-
-    <div>
-        <h5 class="sys_modal_v2__title">
-            添加银行卡
-            <br>
-            <span class="desp">
-                请绑定认证用户本人的银行卡
-            </span>
-        </h5>
-        <div class="sys_modal_v2__content" ng-show="!card.binding">
-            <form name="cardForm" novalidate>
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>持卡人：</label>
-                    </div>
-
-                    <div class="col-xs-9">
-                        <!-- <label>{{personal.realname}}</label> -->
-                        <div class="form-control-wrapper">
-                            <input class="form-control"
-                                   name="realname"
-                                   type="text"
-                                   required
-                                   placeholder="请输入持卡人姓名"
-                                   ng-class="{'form-control-error': frontErr.realname.show && cardForm.realname.$invalid}"
-                                   ng-model="card.realname"
-                                   ng-disabled="card.realname != ''"
-                                   ng-focus="hideErr('realname')"
-                                   ng-init="card.realname = personal.realname"
-                                   ng-blur="showErr('realname')">
-                            <div ng-show="frontErr.realname.show">
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.realname.$error.required">
-                                    请输入持卡人姓名
-                                </p>
-                                <!-- <p class="alert alert-arrow_tp_lf" ng-show="cardForm.realname.$error.pattern">
-                                    {{frontErr.realname.tip}}
-                                </p> -->
+        <button class="close" ng-click="closeModal()">&times;</button>
+    
+        <div>
+            <h5 class="sys_modal_v2__title">
+                添加银行卡
+                <br>
+                <span class="desp">
+                    请绑定认证用户本人的银行卡
+                </span>
+            </h5>
+            <div class="sys_modal_v2__content" ng-show="!card.binding">
+                <form name="cardForm" novalidate>
+                    <div class="row">
+                        <div class="col-xs-3 text-left">
+                            <label>持卡人：</label>
+                        </div>
+    
+                        <div class="col-xs-9">
+                            <!-- <label>{{personal.realname}}</label> -->
+                            <div class="form-control-wrapper">
+                                <input class="form-control"
+                                       name="realname"
+                                       type="text"
+                                       required
+                                       placeholder="请输入持卡人姓名"
+                                       ng-class="{'form-control-error': frontErr.realname.show && cardForm.realname.$invalid}"
+                                       ng-model="card.realname"
+                                       ng-disabled="card.realname != ''"
+                                       ng-focus="hideErr('realname')"
+                                       ng-init="card.realname = personal.realname"
+                                       ng-blur="showErr('realname')">
+                                <div ng-show="frontErr.realname.show">
+                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.realname.$error.required">
+                                        请输入持卡人姓名
+                                    </p>
+                                    <!-- <p class="alert alert-arrow_tp_lf" ng-show="cardForm.realname.$error.pattern">
+                                        {{frontErr.realname.tip}}
+                                    </p> -->
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>卡号：</label>
-                    </div>
-
-                    <div class="col-xs-9">
-                        <div class="form-control-wrapper">
-                            <input class="form-control"
-                                   name="number"
-                                   type="text"
-                                   required
-                                   ng-class="{'form-control-error': frontErr.number.show && cardForm.number.$invalid}"
-                                   ng-model="card.number"
-                                   placeholder="请输入卡号"
-                                   ng-pattern="frontErr.number.reg"
-                                   ng-focus="hideErr('number')"
-                                   ng-blur="showErr('number')">
-
-                            <div ng-show="frontErr.number.show">
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.required">
-                                    请输入卡号
-                                </p>
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.pattern">
-                                    {{frontErr.number.tip}}
-                                </p>
-                            </div>
+    
+                    <div class="row">
+                        <div class="col-xs-3 text-left">
+                            <label>银行国家：</label>
                         </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>选择开户行：</label>
-                    </div>
-
-                    <div class="col-xs-9">
-                        <div class="form-control-wrapper">
-                            <select class="form-control"
-                                    name="bank"
-                                    required
-                                    ng-class="{'form-control-error': frontErr.bank.show && cardForm.bank.$invalid}"
-                                    ng-model="card.bank"
-                                    ng-options="bank.nameZH for bank in banks"
-                                    ng-focus="hideErr('bank')"
-                                    ng-blur="showErr('bank')">
-                                <option value="">请选择</option>
-                            </select>
-
-                            <div ng-show="frontErr.bank.show">
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bank.$error.required">
-                                    请选择开户行
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>支行名称：</label>
-                    </div>
-
-                    <div class="col-xs-9">
-                        <div class="form-control-wrapper">
-                            <input class="form-control"
-                                   name="address"
-                                   type="text"
-                                   required
-                                   ng-class="{'form-control-error': frontErr.address.show && cardForm.address.$invalid}"
-                                   ng-model="card.address"
-                                   placeholder="请输入支行名称"
-                                   ng-focus="hideErr('address')"
-                                   ng-blur="showErr('address')">
-
-                            <div ng-show="frontErr.address.show">
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.address.$error.required">
-                                    请输入支行名称
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>开户省：</label>
-                    </div>
-
-                    <div class="col-xs-9">
-                        <div class="form-control-wrapper">
-                            <select class="form-control"
-                                    name="province"
-                                    required
-                                    ng-class="{'form-control-error': frontErr.province.show && cardForm.province.$invalid}"
-                                    ng-model="card.province"
-                                    ng-options="province.name_cn for province in provinces"
-                                    ng-change="getCity()"
-                                    ng-focus="hideErr('province')"
-                                    ng-blur="showErr('province')">
-                                <option value="">请选择</option>
-                            </select>
-
-                            <div ng-show="frontErr.province.show">
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.province.$error.required">
-                                    请选择开户省
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>开户市：</label>
-                    </div>
-
-                    <div class="col-xs-9">
-                        <div class="form-control-wrapper">
-                            <select class="form-control"
-                                    name="city"
-                                    required
-                                    ng-class="{'form-control-error': frontErr.city.show && cardForm.city.$invalid}"
-                                    ng-model="card.city"
-                                    ng-options="city.name_cn for city in citys"
-                                    ng-focus="hideErr('city')"
-                                    ng-blur="showErr('city')">
-                                <option value="">请选择</option>
-                            </select>
-
-                            <div ng-show="frontErr.city.show">
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.city.$error.required">
-                                    请选择开户市
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xs-3 text-left">
-                        <label>预留手机号：</label>
-                    </div>
-
-                    <div class="col-xs-9">
-                        <div class="form-control-wrapper">
-                            <input class="form-control"
-                                    name="phone"
+    
+                        <div class="col-xs-9">
+                            <!-- <div class="form-control-wrapper">
+                                <select class="form-control"
+                                        name="world"
+                                        required
+                                        ng-class="{'form-control-error': frontErr.world.show && cardForm.world.$invalid}"
+                                        ng-model="card.world"
+                                        ng-options="world.name_cn for world in worlds"
+                                        ng-focus="hideErr('world')"
+                                        ng-blur="showErr('world')">
+                                    <option value="">请选择</option>
+                                </select>
+    
+                                <div ng-show="frontErr.world.show">
+                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.world.$error.required">
+                                        请选择开户国家
+                                    </p>
+                                </div>
+                            </div> -->
+                            <div class="form-control-wrapper">
+                                <input class="form-control"
+                                    name="world"
                                     type="text"
                                     required
-                                    ng-class="{'form-control-error': frontErr.phone.show && cardForm.phone.$invalid}"
-                                    ng-model="card.phone"
-                                    placeholder="请输入手机号"
-                                    ng-pattern="frontErr.phone.reg"
-                                    ng-focus="hideErr('phone')"
-                                    ng-blur="showErr('phone')">
-
-                            <div ng-show="frontErr.phone.show">
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.phone.$error.required">
-                                    请输入手机号
-                                </p>
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.phone.$error.pattern">
-                                    {{frontErr.phone.tip}}
-                                </p>
+                                    ng-model="card.world.world_name"
+                                    ng-disabled="card.world.world_name != ''">
                             </div>
                         </div>
                     </div>
-                </div>
-            </form>
-            <!-- <p>
-                <span class="font-danger">*</span>
-                开户行全称请精确到支行，如：中国工商银行 北京分行 清华园支行
-            </p> -->
-            <p class="btn_wrapper mg-bt-15">
-                <button class="btn btn-primary-gradient" ng-if="clickable" ng-click="submitForm()">
-                    确定
-                </button>
-                <button class="btn btn-primary-gradient" ng-if="!clickable">
-                    <i class="loading_spinner fa fa-spinner"></i>
-                    正在添加
-                </button>
-            </p>
-        </div>
-
-        <div class="sys_modal_v2__content" ng-if="card.binding">
-            <p class="system_modal__info">
-                银行卡 {{ card.number }} 绑定成功
-            </p>
-            <p class="btn_wrapper mg-bt-15">
-                <button class="btn btn-primary-gradient" ng-click="closeModal()">
-                    确定
-                </button>
-            </p>
+    
+                    <div class="row">
+                        <div class="col-xs-3 text-left">
+                            <label>卡号：</label>
+                        </div>
+    
+                        <div class="col-xs-9">
+                            <div class="form-control-wrapper">
+                                <input class="form-control"
+                                       name="number"
+                                       type="text"
+                                       required
+                                       ng-class="{'form-control-error': frontErr.number.show && cardForm.number.$invalid}"
+                                       ng-model="card.number"
+                                       placeholder="请输入卡号"
+                                       ng-pattern="frontErr.number.reg"
+                                       ng-focus="hideErr('number')"
+                                       ng-blur="showErr('number')">
+    
+                                <div ng-show="frontErr.number.show">
+                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.required">
+                                        请输入卡号
+                                    </p>
+                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.pattern">
+                                        {{frontErr.number.tip}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row" ng-if="card.world && card.world.world_code === 'CN'">
+                        <div class="col-xs-3 text-left">
+                            <label>选择开户行：</label>
+                        </div>
+    
+                        <div class="col-xs-9">
+                            <div class="form-control-wrapper">
+                                <select class="form-control"
+                                        name="bank"
+                                        required
+                                        ng-class="{'form-control-error': frontErr.bank.show && cardForm.bank.$invalid}"
+                                        ng-model="card.bank"
+                                        ng-options="bank.nameZH for bank in banks"
+                                        ng-focus="hideErr('bank')"
+                                        ng-blur="showErr('bank')">
+                                    <option value="">请选择</option>
+                                </select>
+    
+                                <div ng-show="frontErr.bank.show">
+                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bank.$error.required">
+                                        请选择开户行
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" ng-if="card.world && card.world.world_code !== 'CN'">
+                        <div class="col-xs-3 text-left">
+                            <label>填写开户行：</label>
+                        </div>
+    
+                        <div class="col-xs-9">
+                            <div class="form-control-wrapper">
+                                <input class="form-control"
+                                        name="bankOther"
+                                        type="text"
+                                        required
+                                        ng-class="{'form-control-error': frontErr.bankOther.show && cardForm.bankOther.$invalid}"
+                                        ng-model="card.bankOther"
+                                        placeholder="请填写您的银行名称"
+                                        ng-focus="hideErr('bankOther')"
+                                        ng-blur="showErr('bankOther')">
+    
+                                <div ng-show="frontErr.bankOther.show">
+                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bankOther.$error.required">
+                                        请填写您的银行名称
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row" ng-if="card.world && card.world.world_code !== 'CN'">
+                        <div class="col-xs-3 text-left">
+                            <label>银行机构鉴定代码：</label>
+                        </div>
+    
+                        <div class="col-xs-9">
+                            <div class="form-control-wrapper">
+                                <input class="form-control"
+                                        name="swift_code"
+                                        type="text"
+                                        required
+                                        ng-class="{'form-control-error': frontErr.swift_code.show && cardForm.swift_code.$invalid}"
+                                        ng-model="card.swift_code"
+                                        placeholder="请填写您的银行机构鉴定代码"
+                                        ng-focus="hideErr('swift_code')"
+                                        ng-blur="showErr('swift_code')">
+    
+                                <div ng-show="frontErr.swift_code.show">
+                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.swift_code.$error.required">
+                                        请填写您的银行机构鉴定代码
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row" ng-if="card.world && card.world.world_code === 'CN'">
+                        <div class="col-xs-3 text-left">
+                            <label>开户省：</label>
+                        </div>
+    
+                        <div class="col-xs-9">
+                            <div class="form-control-wrapper">
+                                <select class="form-control"
+                                        name="province"
+                                        required
+                                        ng-class="{'form-control-error': frontErr.province.show && cardForm.province.$invalid}"
+                                        ng-model="card.province"
+                                        ng-options="province.name_cn for province in provinces"
+                                        ng-change="getCity()"
+                                        ng-focus="hideErr('province')"
+                                        ng-blur="showErr('province')">
+                                    <option value="">请选择</option>
+                                </select>
+    
+                                <div ng-show="frontErr.province.show">
+                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.province.$error.required">
+                                        请选择开户省
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row" ng-if="card.world && card.world.world_code === 'CN'">
+                        <div class="col-xs-3 text-left">
+                            <label>开户市：</label>
+                        </div>
+    
+                        <div class="col-xs-9">
+                            <div class="form-control-wrapper">
+                                <select class="form-control"
+                                        name="city"
+                                        required
+                                        ng-class="{'form-control-error': frontErr.city.show && cardForm.city.$invalid}"
+                                        ng-model="card.city"
+                                        ng-options="city.name_cn for city in citys"
+                                        ng-focus="hideErr('city')"
+                                        ng-blur="showErr('city')">
+                                    <option value="">请选择</option>
+                                </select>
+    
+                                <div ng-show="frontErr.city.show">
+                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.city.$error.required">
+                                        请选择开户市
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row" ng-if="card.world">
+                        <div class="col-xs-3 text-left">
+                            <label ng-if="card.world && card.world.world_code === 'CN'">支行名称：</label>
+                            <label ng-if="card.world && card.world.world_code !== 'CN'">开户地址：</label>
+                        </div>
+    
+                        <div class="col-xs-9">
+                            <div class="form-control-wrapper">
+                                <input class="form-control"
+                                       name="address"
+                                       type="text"
+                                       required
+                                       ng-class="{'form-control-error': frontErr.address.show && cardForm.address.$invalid}"
+                                       ng-model="card.address"
+                                       placeholder="{{card.world && card.world.world_code === 'CN' ? '请输入支行名称' : '请输入开户地址'}}"
+                                       ng-focus="hideErr('address')"
+                                       ng-blur="showErr('address')">
+    
+                                <div ng-show="frontErr.address.show">
+                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.address.$error.required">
+                                        {{card.world && card.world.world_code === 'CN' ? '请输入支行名称' : '请输入开户地址'}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="row" ng-if="card.world && card.world.world_code === 'CN'">
+                        <div class="col-xs-3 text-left">
+                            <label>预留手机号：</label>
+                        </div>
+    
+                        <div class="col-xs-9">
+                            <div class="form-control-wrapper">
+                                <input class="form-control"
+                                       name="phone"
+                                       type="text"
+                                       required
+                                       ng-class="{'form-control-error': frontErr.phone.show && cardForm.phone.$invalid}"
+                                       ng-model="card.phone"
+                                       placeholder="请输入手机号"
+                                       ng-pattern="frontErr.phone.reg"
+                                       ng-focus="hideErr('phone')"
+                                       ng-blur="showErr('phone')">
+    
+                                <div ng-show="frontErr.phone.show">
+                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.phone.$error.required">
+                                        请输入手机号
+                                    </p>
+                                    <p class="alert alert-arrow_tp_lf" ng-show="cardForm.phone.$error.pattern">
+                                        {{frontErr.phone.tip}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- <p>
+                    <span class="font-danger">*</span>
+                    开户行全称请精确到支行，如：中国工商银行 北京分行 清华园支行
+                </p> -->
+                <p class="btn_wrapper mg-bt-15">
+                    <button class="btn btn-primary-gradient" ng-if="clickable" ng-click="submitForm()">
+                        确定
+                    </button>
+                    <button class="btn btn-primary-gradient" ng-if="!clickable">
+                        <i class="loading_spinner fa fa-spinner"></i>
+                        正在添加
+                    </button>
+                </p>
+            </div>
+    
+            <div class="sys_modal_v2__content" ng-if="card.binding">
+                <p class="system_modal__info">
+                    银行卡 {{ card.number }} 绑定成功
+                </p>
+                <p class="btn_wrapper mg-bt-15">
+                    <button class="btn btn-primary-gradient" ng-click="closeModal()">
+                        确定
+                    </button>
+                </p>
+            </div>
         </div>
     </div>
-</div>

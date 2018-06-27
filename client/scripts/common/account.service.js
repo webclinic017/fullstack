@@ -23,6 +23,11 @@
             getPersonalInfo: getPersonalInfo,
             getPersonalInfoDegree: getPersonalInfoDegree,
             getAssetInfo: getAssetInfo,
+            getAccountInfo: getAccountInfo,
+            getTotalDealAccount: getTotalDealAccount,
+            getDealAccountList: getDealAccountList,
+            setDealAccountName: setDealAccountName,
+            newSubAccount: newSubAccount,
             getUnreadLength: getUnreadLength,
             getNoticeList: getNoticeList,
             getAllRead: getAllRead,
@@ -33,6 +38,7 @@
             getCities: getCities,
             setBasicInfo: setBasicInfo,
             setPwd: setPwd,
+            setAvatar: setAvatar,
             setPwdFirst: setPwdFirst,
             setPhone: setPhone,
             getVerifyStatus: getVerifyStatus,
@@ -251,10 +257,8 @@
 
                     if (key === 'user_code') {
                         this['usercode'] = value;
-
-                    } else {
-                        this[key] = value;
                     }
+                    this[key] = value;
                 }, personal);
 
                 return personal;
@@ -280,6 +284,67 @@
             return publicHttp.dealPublicRequest(o.getAssetInfoApi, 'GET', {
                 type: 0
             });
+        }
+
+        /**
+         * Account Service 获取资产信息
+         * 获取单个账户信息(资产净值，信用赠金，保证金)等
+         *
+         * @method getAccountInfo
+         */
+        function getAccountInfo(mt4_id) {
+            return publicHttp.dealPublicRequest(o.getAccountInfoApi, 'GET', {
+                type: 0,
+                mt4_id: mt4_id
+            });
+        }
+
+        /**
+         * Account Service 获取交易账户信息
+         * 总余额、总交易手数、总收益等
+         *
+         * @method getTotalDealAccount
+         */
+        function getTotalDealAccount() {
+            return publicHttp.dealPublicRequest(o.getTotalDealAccountApi, 'GET');
+        }
+
+        /**
+         * Account Service 获取交易账户列表
+         * 交易账户类型、交易账户名称，交易账户MT4Id、浮动收益
+         * show_asset 是否显示净值、浮动收益、保证金比例字段；0:不显示，1:显示；默认值:1
+         * show_master_level 是否显示高手等级数据；0:不显示，1:显示；默认值:0
+         *
+         * @method getDealAccountList
+         */
+        function getDealAccountList(show_asset, show_master_level) {
+            return publicHttp.dealPublicRequest(o.getDealAccountListApi, 'GET', {
+                show_asset: show_asset,
+                show_master_level: show_master_level
+            });
+        }
+
+        /**
+         * Account Service 修改交易账户名称
+         * name值
+         *
+         * @method setDealAccountName
+         */
+        function setDealAccountName(mt4_id, account_name) {
+            return publicHttp.dealPublicRequest(o.setDealAccountNameApi, 'PUT', {
+                mt4_id: mt4_id,
+                account_name: account_name
+            });
+        }
+
+        /**
+         * Account Service 添加子交易账户
+         * name值
+         *
+         * @method newSubAccount
+         */
+        function newSubAccount() {
+            return publicHttp.dealPublicRequest(o.newSubAccountApi, 'POST')
         }
 
         /**
@@ -401,11 +466,23 @@
         }
 
         /**
+         * Account Service 修改头像
+         *
+         * @param {Number} file  (base64编码)
+         */
+        function setAvatar(file) {
+            return publicHttp.dealPublicRequest(o.uploadAvatarForm, 'POST', {
+                file: file
+            });
+        } 
+
+        /**
          * @name setPhone
          * @desc setting 修改手机号码
          */
-        function setPhone(phone, captcha) {
+        function setPhone(phone_code, phone, captcha) {
             return publicHttp.dealPublicRequest(o.setPhoneApi, 'PUT', {
+                phone_code: phone_code,
                 phone: phone,
                 code: captcha
             });

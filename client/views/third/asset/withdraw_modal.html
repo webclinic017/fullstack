@@ -1,35 +1,78 @@
-<div class="system_modal">
+<div class="sys_modal_v2 slim_case">
     <button class="close" ng-click="closeModal()">&times;</button>
 
-    <h5 class="system_modal__title">
-        系统提示
+    <h5 class="sys_modal_v2__title">
+        提示
     </h5>
 
-    <div class="system_modal__content" ng-if="!isWithdrawSucc">
-        <p class="system_modal__info">
+    <div class="sys_modal_v2__content" ng-if="params.type == 'withdrawFail'">
+        <p class="sys_modal_v2__info">
             无法进行出金操作
         </p>
-        <p class="system_modal__tip">
-            {{message}}
+        <p class="sys_modal_v2__tip">
+            {{params.message}}
         </p>
 
-        <p class="system_modal__btn_wrapper">
-            <button class="btn btn-primary btn-sm" ng-click="closeModal()">
+        <p class="btn_wrapper">
+            <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
                 确定
             </button>
         </p>
     </div>
 
-    <div class="system_modal__content" ng-if="isWithdrawSucc">
-        <p class="system_modal__info">
+    <div class="sys_modal_v2__content" ng-if="params.type == 'withdrawSucc'">
+        <p class="sys_modal_v2__info">
             出金 ${{withdrawAmount}} 申请已提交，我们会在两个工作日内处理完毕
         </p>
-        <p class="system_modal__btn_wrapper">
-            <button class="btn btn-primary btn-sm" ng-click="closeModal()">
+        <p class="btn_wrapper">
+            <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
                 确定
             </button>
         </p>
     </div>
 
+    <div class="sys_modal_v2__content" ng-if="params.type == 'withdrawTip'">
+        <p class="sys_modal_v2__info">
+            {{params.message}}
+        </p>
+        <p class="btn_wrapper">
+            <button class="btn btn-primary-gradient btn-sm mg-rg-15" ng-click="[params.callback(), closeModal()]">
+                继续提现
+            </button>
 
+            <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
+                取消
+            </button>
+        </p>
+    </div>
+
+    <div class="sys_modal_v2__content" ng-if="params.type === 'withdrawReady'">
+        <div class="sys_modal_v2__info">
+            <p class="deposit_modal__tit mg-bt-0" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountDollar}}</p>
+            <p class="text-center font-dark mg-bt-15">
+                <span>1 美元 =</span>
+                <span>{{params.currency.rate_out}}</span> {{params.currency.currency_name}}
+            </p>
+            <ul class="deposit_modal__lst">
+                <li class="clearfix">
+                    <span class="fl">提现金额：</span>
+                    <span class="fr" style="font-family: initial;">$ {{params.amountDollar}}</span>
+                </li>
+                <li class="clearfix" ng-if="params.currency.currency !== 'USD'">
+                    <span class="fl">折合{{params.currency.currency_name}}约：</span>
+                    <span class="fr" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountRMB}}</span>
+                </li>
+            </ul>
+            <p class="deposit_modal__tip" style="font-family: initial;">
+                {{params.desc}}
+            </p>
+        </div>
+
+        <p class="btn_wrapper mg-bt-15">
+            <button class="btn btn-primary-gradient btn-sm" ng-click="[params.callback(), closeModal()]">
+                确认
+            </button>
+        </p>
+    </div>
 </div>
+    

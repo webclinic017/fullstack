@@ -11,7 +11,8 @@
             <a>账户概况</a>
         </li>
     </ul>
-    <ul class="space_nav__box" ng-if="toState.name == 'space.center.invest.subpage'">
+    <!-- 交易账户导航移入页面中部 -->
+    <!-- <ul class="space_nav__box" ng-if="toState.name == 'space.center.invest.subpage'">
         <li class="space_nav__box-item" ui-sref-active="active">
             <a ui-sref="space.center.invest.subpage({subpage: 'current'})">当前交易</a>
         </li>
@@ -23,6 +24,11 @@
         </li>
         <li class="space_nav__box-item" ui-sref-active="active">
             <a ui-sref="space.center.invest.subpage({subpage: 'record'})">资金记录</a>
+        </li>
+    </ul> -->
+    <ul class="space_nav__box" ng-if="toState.name == 'space.center.invest.home'">
+        <li class="space_nav__box-item active">
+            <a>交易账户</a>
         </li>
     </ul>
     <ul class="space_nav__box" ng-if="toState.name == 'space.center.wallet.subpage'">
@@ -71,8 +77,14 @@
     </ul>
 
     <ul class="space_nav__box" ng-show="toState.name == 'space.setting.subpage'">
-        <li class="space_nav__box-item active">
-            <a>修改资料</a>
+        <li class="space_nav__box-item active" ui-sref-active="active">
+            <a ui-sref="space.setting.subpage({subpage: 'name'})">基本信息</a>
+        </li>
+        <li class="space_nav__box-item active" ui-sref-active="active">
+            <a ui-sref="space.setting.subpage({subpage: 'buddha'})">修改头像</a>
+        </li>
+        <li class="space_nav__box-item active" ui-sref-active="active">
+            <a ui-sref="space.setting.subpage({subpage: 'secure'})">账户安全</a>
         </li>
     </ul>
     

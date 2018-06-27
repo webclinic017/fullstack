@@ -19,51 +19,26 @@
                 </button>
             </p>
         </div>
-    
+
         <div class="sys_modal_v2__content" ng-if="type === 'confirmDeposit'">
             <div class="sys_modal_v2__info mg-bt-15">
-                <p class="deposit_modal__tit">¥ {{msgInfo.amountTotal}}</p>
+                <p class="deposit_modal__tit" style="font-family: initial;">{{msgInfo.currency.currency_symbol}} {{msgInfo.amountTotal}}</p>
                 <ul class="deposit_modal__lst">
                     <li class="clearfix">
                         <span class="fl">充值金额：</span>
-                        <span class="fr">${{msgInfo.amountDollar}}</span>
+                        <span class="fr" style="font-family: initial;">$ {{msgInfo.amountDollar}}</span>
                     </li>
-                    <li class="clearfix">
-                        <span class="fl">折合人民币约：</span>
-                        <span class="fr">¥{{msgInfo.amountRMB}}</span>
-                    </li>
-                    <li class="clearfix">
-                        <span class="fl">手续费：</span>
-                        <span class="fr">¥{{msgInfo.amountFee}}</span>
-                    </li>
-                </ul>
-                <p class="deposit_modal__tip">
-                    请务必使用实名认证本人银行卡进行充值，否则资金将被退回。充值成功后请及时上传支付凭证。
-                </p>
-            </div>
-    
-            <p class="btn_wrapper mg-bt-15">
-                <button class="btn btn-primary-gradient btn-sm" ng-click="goOnDeposit()">
-                    {{msgInfo.msgBtn}}
-                </button>
-            </p>
-        </div>
-
-        <div class="sys_modal_v2__content" ng-if="type === 'confirmPaypalDeposit'">
-            <div class="sys_modal_v2__info mg-bt-15">
-                <p class="deposit_modal__tit">$ {{msgInfo.amountTotal}}</p>
-                <ul class="deposit_modal__lst">
-                    <li class="clearfix">
-                        <span class="fl">充值金额：</span>
-                        <span class="fr">${{msgInfo.amountDollar}}</span>
+                    <li class="clearfix" ng-if="msgInfo.currency.currency !== 'USD'">
+                        <span class="fl">折合{{msgInfo.currency.currency_name}}约：</span>
+                        <span class="fr" style="font-family: initial;">{{msgInfo.currency.currency_symbol}} {{msgInfo.amountRMB}}</span>
                     </li>
                     <li class="clearfix">
                         <span class="fl">手续费：</span>
-                        <span class="fr">$ {{msgInfo.isFree ? msgInfo.amountFee : '0.00'}}</span>
+                        <span class="fr" style="font-family: initial;">{{msgInfo.currency.currency_symbol}} {{msgInfo.isFree ? msgInfo.amountFee : '0.00'}}</span>
                     </li>
                     <li class="clearfix" ng-if="!msgInfo.isFree">
                         <span class="fl"></span>
-                        <span class="fr" style="text-decoration: line-through; color: #f23244;">$ {{msgInfo.amountFee}}</span>
+                        <span class="fr" style="font-family: initial; text-decoration: line-through; color: #f23244;">{{msgInfo.currency.currency_symbol}} {{msgInfo.amountFee}}</span>
                     </li>
                 </ul>
                 <p class="deposit_modal__tip">
@@ -107,17 +82,15 @@
 
         <div class="sys_modal_v2__content" ng-if="type === 'depositRule'">
             <p class="sys_modal_v2__info mg-bt-15">
-                <p class="mg-bt-10">应监管要求，用户所有的网银入金，每笔都需要上传入金凭证。</p> 
-                <p>客户入金时，3000美金以内可以继续入金，大于3000美金限制入金并且上传凭证；</p> 
-                <p>客户出金时，如果有未上传和未审核通过的凭证，限制客户出金，上传后可出金，没有未上传或者未审核的凭证，客户可以正常出金。</p> 
+                <p class="mg-bt-10">应监管要求，客户的网银入金会随机抽查入金凭证，如客户的某笔入金被抽查需要客户按照提示和要求上传凭证。</p> 
+                <p>客户出金时，如果有未上传和未审核通过的凭证，将限制客户出金，上传审核通过后可正常出金，没有未上传或者未审核的凭证客户可以正常出金。</p> 
                 <p class="mg-bt-10 mg-tp-15">入金规定</p>
-                <p>1、客户必须使用本人银行卡入金</p>
-                <p>2、如使用他人银行卡入金，资金将原路退回，客户承担2%的手续费</p>
-                <p>3、如客户已产生交易订单，需在收到通知后1个工作日内全部平仓，否则将强制平仓</p>
-                <p>4、亏损部分由客户承担，相应的等比例盈利部分则清空，账号将关闭不予使用</p>
+                <p>1、客户必须使用本人银行卡入金；</p>
+                <p>2、若使用他人银行卡，资金将被原路退回，客户需承担2%手续费；</p>
+                <p>3、若已产生交易订单，客户需在收到通知后1个工作日内全部平仓，否则系统将进行强制平仓。平仓后资金原路退回，账号将被关闭不予使用。</p>
                 <p class="mg-bt-10 mg-tp-15">入金凭证要求及获取方式</p>
-                <p>1、入金凭证必须包含：账号姓名、账号号码（可部分内容为*）、入金时间、金额</p> 
-                <p>2、入金凭证网银获取路径可咨询银行客服</p>
+                <p>1、入金凭证必须包含：账号姓名、账号号码、入金时间、金额</p> 
+                <p>2、入金凭证网银获取路径可咨询银行客服。</p>
             </p>
     
             <p class="btn_wrapper mg-bt-15">
@@ -129,20 +102,43 @@
 
         <div class="sys_modal_v2__content" ng-if="type === 'cseMessage'">
             <p class="sys_modal_v2__info mg-bt-15">
-                <p class="mg-bt-10">是否有CSE Wallet帐号？</p> 
-                <p class="mg-bt-10">第三方转账充值流程：</p>
-                <p>1. 注册CSE钱包账户，并充值资金到CSE账户；</p>
-                <p>2.登录该支付平台，选择“第三方转账”方式，登录CSE钱包账户进行充值。</p>
-                <p>注意：请确保CSE钱包账户内拥有充足资金，如资金不足请先CSE钱包账户充值。</p> 
+                <pre>{{msgInfo.msgPopTitle}}</pre>
+                <pre>{{msgInfo.msgPopContent}}</pre>
             </p>
     
             <p class="btn_wrapper mg-bt-15">
-                <button class="btn btn-primary-gradient btn-sm mg-rg-15" ng-click="[toCse(), closeModal()]">
-                    否
-                </button>
-                <button class="btn btn-primary-gradient btn-sm" ng-click="[callback(), closeModal()]">
+                <button class="btn btn-primary-gradient btn-sm mg-rg-15" ng-click="[callback(), closeModal()]">
                     是
                 </button>
+                <button class="btn btn-primary-gradient btn-sm" ng-click="[toCse(), closeModal()]">
+                    否
+                </button>
+            </p>
+        </div>
+
+        <div class="sys_modal_v2__content" ng-if="type === 'bindBankCard'">
+            <div class="sys_modal_v2__info mg-bt-15 deposit_modal__bank_card">
+                <p class="mg-bt-10"><span class="tit">持卡人</span><span class="name">{{msgInfo.cardName}}</span></p>
+                <p><span>银行卡号</span></p>
+                <p class="form-control-wrapper">
+                    <input class="form-control" type="text" ng-focus="depositCard.backErr = false" ng-model="depositCard.num" placeholder="请输入银行卡号">
+                </p>
+                <p class="back_err" ng-if="depositCard.backErr">
+                    {{depositCard.backMsg}}
+                </p>
+                <p class="tip mg-tp-20">
+                    <span class="mg-bt-10">注意事项：</span>
+                    1、请务必使用填写的该银行卡进行网银支付；<br>
+                    2、上传该笔入金凭证截图中银行卡号必须与该支付卡号一致，否则审核将被驳回，影响出金操作。<br>
+                    如有其它疑问，请联系客服
+                </p>
+            </div>
+    
+            <p class="btn_wrapper mg-bt-15">
+                <button ng-show="!isLoading" class="btn btn-primary-gradient btn-sm" ng-click="bindBankCard()">
+                    确认
+                </button>
+                <button ng-show="isLoading" class="btn btn-primary-gradient btn-sm"><i class="loading_spinner fa fa-spinner"></i> 提交中</button>
             </p>
         </div>
     </div>

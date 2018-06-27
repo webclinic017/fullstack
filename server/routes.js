@@ -36,7 +36,7 @@ function setEnvCf(req, res) {
     global_modelRegular = require('./model/modelRegular')();
     gloal_modelRegularDetail = require('./model/modelRegularDetail');
     // console.log(global_modelRegular);
-    setCompanyCookie(res);
+    setCompanyCookie(req, res);
 }
 
 function extendPublic(data, req) {
@@ -329,11 +329,25 @@ module.exports = function (app) {
     app.route('/m/deposit/pay').get(function (req, res) {
         setEnvCf(req, res);
         var platform = 'pc';
+        var banklistStatus = 'static';
         if (isMobile(req)) {
             platform = 'mobile';
         }
         res.render('m_vue/m_deposit_pay', extendPublic({
-            platform: platform
+            platform: platform,
+            banklistStatus: banklistStatus
+        }, req));
+    });
+    app.route('/m/deposit/pay_select').get(function (req, res) {
+        setEnvCf(req, res);
+        var banklistStatus = 'select';
+        var platform = 'pc';
+        if (isMobile(req)) {
+            platform = 'mobile';
+        }
+        res.render('m_vue/m_deposit_pay', extendPublic({
+            platform: platform,
+            banklistStatus: banklistStatus
         }, req));
     });
     /* H5 充值成功 */
@@ -1031,6 +1045,7 @@ module.exports = function (app) {
         if (action == "version_check") {
             var appType;   // global, uk, pandafx, old
             var appLanguage = req.query.lang || 'cn';
+            appLanguage == 'zh' && (appLanguage = 'cn');
             if (req.query.type) {
                 appType = req.query.type;
             } else {

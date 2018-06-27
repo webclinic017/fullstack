@@ -1,0 +1,15 @@
+<div class="space_center_statistics align-items-center"  ng-if="personal.basic === 'center.index' || personal.basic === 'center.wallet.subpage'">
+    <ul class="space_center_statistics__title">
+        <li class="space_center_statistics__title-item">${{ walletbalance || '--' }}</li>
+        <li class="space_center_statistics__title-item">零钱包总额</li>
+    </ul>
+
+    <div class="space_center_statistics__wallet">
+        <div class="block_btn_group text-right">
+            <!-- <a ui-sref="space.asset.subpage({ subpage: 'deposit', account: 'wallet'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md">充值</a>
+            <a ui-sref="space.asset.subpage({ subpage: 'withdraw', account: 'wallet'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md">提现</a> -->
+            <a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md" ui-sref-active="tw-btn-capsule-gradient">查看明细</a>
+            <a ui-sref="space.center.wallet.subpage({ subpage: 'bankcard'})" class="tw-btn tw-btn-capsule-bordered tw-btn-md" ui-sref-active="tw-btn-capsule-gradient">管理银行卡</a>
+        </div>
+    </div>
+</div>

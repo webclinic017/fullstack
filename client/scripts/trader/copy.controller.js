@@ -170,6 +170,10 @@
                         btn_name: '复制'
                     });
 
+                } else if (data.code == 100603) {
+                    $scope.copyTrade.title = 'tip';
+                    $scope.copyTrade.evidenceMsg = data.message;
+                    goStep(4);
                 } else {
                     goStep(1);
                     $scope.hasCanceled = false;
@@ -190,8 +194,6 @@
             });
 
         }
-
-        $scope.closeModal = closeModal;
         function closeModal() {
             $modalInstance.dismiss();
         }

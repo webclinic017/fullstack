@@ -17,16 +17,23 @@ $(document).ready(function () {
         $.get('/napi', {
             action: 'get_deposit_bank'
         }).then(function (data) {
-            // console.log(data);
-            if (platform === 'pc') {
-                banksInfoLst.bankList = data.data;
-            } else {
-                $.each(data.data, function (index, value) {
-                    if (value.select === 'all') {
+            $.each(data.data, function (index, value) {
+                if (bankStatus === 'static') {
+                    if (value.bank_status === 'all' || value.bank_status === 'static') {
+                        if (platform === 'pc' || platform === 'all') {
+                            banksInfoLst.bankList.push(value);
+                        }
+                        if (platform === 'phone' || value.select === 'all') {
+                            banksInfoLst.bankList.push(value);
+                        }
+                    }
+                } else {
+                    if (value.bank_status === 'all' || value.bank_status === 'select') {
                         banksInfoLst.bankList.push(value);
                     }
-                });
-            }
+                }
+                
+            });
             //使用template模版
             var html=bt('template_banklist',banksInfoLst);
             $("#m_deposit_pay").html(html);

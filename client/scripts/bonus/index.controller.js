@@ -13,9 +13,9 @@
         $scope.backErr = {
             msg: ''
         };
-        $scope.masterSummary = {};
+        $scope.masterSummary = {};  // 高手分成总计
         $scope.copierSummary = {};
-        $scope.masterList = [];
+        $scope.masterList = [];   // 高手复制列表
         $scope.copierList = [];
         $scope.pagebar = {
             config: {
@@ -25,10 +25,10 @@
             pages: [],
             pagesBtn: [],
             // selectPage: , bind to pagination.selectPage
-            // getList: $scope.personal.is_master ? getMasterBonusList : getCopierBonusList         
+            // getList: $scope.personal.has_master ? getMasterBonusList : getCopierBonusList         
         };
         $timeout(function () {
-            $scope.pagebar.getList = $scope.personal.is_master ? getMasterBonusList : getCopierBonusList;
+            $scope.pagebar.getList = $scope.personal.has_master ? getMasterBonusList : getCopierBonusList;
         }, 1500);
         
         var date = new Date();
