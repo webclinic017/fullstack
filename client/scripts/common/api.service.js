@@ -132,8 +132,8 @@
             getMasterCurrentApi: urlOrigin2 + '/master/active/trades', 
             getMasterPastTradeApi: urlOrigin2 + '/master/past/trades', //替换getMasterHistoryApi
             copyApi: urlOrigin2 + '/copy',
-            cancelCopyApi: urlOrigin2 + '/uncopy',
-            getAvaCopyAmountApi: urlOrigin2 + '/valid_copy',
+            cancelCopyApi: urlOrigin2 + '/copy/uncopy',
+            getAvaCopyAmountApi: urlOrigin2 + '/copy/valid_copy',
             getHistoricalRateApi: urlOrigin2 + '/master/monthly_profit_rates',
             getMasterInfoApi: urlOrigin2 + '/master/trading_profile',
             getMonthlySymbolsApi: urlOrigin2 + '/master/trading_symbols',

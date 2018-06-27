@@ -121,6 +121,7 @@
                     passedScope: function () {
                         trader.copied = trader.copy_asset;
                         trader.minCopyAmount = trader.min_copy_amount;
+                        console.log(trader)
                         return {
                             copiedTrader: trader,
                             title: 'modify'
@@ -131,6 +132,7 @@
         }
 
         function openCancelCopyMdl(trader, event) {
+            console.log(trader)
             var account_code = trader.account_code;
             var username = trader.username;
             event.stopPropagation();
