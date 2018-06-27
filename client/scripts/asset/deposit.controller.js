@@ -416,8 +416,10 @@
                             $scope.depositCard.backMsg = '请输入银行卡号';
                             return
                         };
+                        $scope.isLoading = true;
                         asset.bindInvestBank($scope.depositCard.num).then(function (data) {
                             // console.log(data);
+                            $scope.isLoading = false;
                             if (data.is_succ) {
                                 fillBankCard(data.data.depositCard);
                                 closeModal();
