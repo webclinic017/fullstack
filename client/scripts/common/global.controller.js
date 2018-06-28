@@ -263,10 +263,10 @@
                     }
 
                     $scope.openDemo = function(){
-                        globalScope.personal.is_live = '0'
+                        globalScope.personal.is_live = '2'
                         $scope.loading.demo = true
                         getAuthStatus({
-                            is_live: '0'
+                            is_live: globalScope.personal.is_live
                         }).then(function(){
                             $scope.loading.demo = false
                             window.location.href = window.location.origin + '/space/#/authen/complete'
@@ -276,28 +276,30 @@
                     }
                     $scope.confirmLive = function () {
                         $modalInstance.dismiss()
-                        $layer({
-                            title: '提示',
-                            // msgClass: 'font-danger',
-                            size: 'sm',
-                            btnsClass: 'text-right',
-                            msg: '开通真实账户后，将不再支持开通体验金账户',
-                            autoClose: false,
-                            btns: {
-                                '取消': function () { },
-                                '继续': function (oScope) {
-                                    globalScope.personal.is_live = '1'
-                                    oScope.loading = 1
-                                    getAuthStatus({
-                                        is_live: '1'
-                                    }).then(function(){
-                                        oScope.loading = 2
-                                        window.location.href = window.location.origin + '/space/#/authen/'
-                                        toAuthenTypeSensorsdata('真实账户');
-                                    })
+                        $timeout(function(){
+                            $layer({
+                                title: '提示',
+                                // msgClass: 'font-danger',
+                                size: 'sm',
+                                btnsClass: 'text-right',
+                                msg: '开通真实账户后，将不再支持开通体验金账户',
+                                autoClose: false,
+                                btns: {
+                                    '取消': function () { },
+                                    '继续': function (oScope) {
+                                        globalScope.personal.is_live = '1'
+                                        oScope.loading = 1
+                                        getAuthStatus({
+                                            is_live: globalScope.personal.is_live
+                                        }).then(function(){
+                                            oScope.loading = 2
+                                            window.location.href = window.location.origin + '/space/#/authen/'
+                                            toAuthenTypeSensorsdata('真实账户');
+                                        })
+                                    }
                                 }
-                            }
-                        })
+                            })
+                        }, 450)
                     }
 
                     function closeModal() {
@@ -320,7 +322,6 @@
                 if (data.is_succ) {
                     // 开户类型(体验金、真实)
                     // var verify_status = 2
-                    // var accountStatus = data.data.account_status
                     var verify_status = data.data.status
                     var accountStatus = data.data.account_status
                     var accountStatusMap = {

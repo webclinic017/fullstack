@@ -163,11 +163,11 @@
          *   data: true     // true 存在 false 不存在
          * }
          */
-        function checkExist(key, number, mt4) {
+        function checkExist(key, number, user_code) {
             return publicHttp.dealPublicRequest(o.checkExistApi, 'GET', {
                 key: key,
                 value: number,
-                mt4_id: mt4
+                user_code: user_code
             });
         }
 
@@ -239,9 +239,9 @@
          * @name setNewPwd
          * @desc 通过手机号码和验证码来设置新密码，忘记密码功能的第二步
          */
-        function setNewPwd(phone, captcha, newPwd) {
+        function setNewPwd(account, captcha, newPwd) {
             return publicHttp.dealPublicRequest(o.setNewPwdApi, 'PUT', {
-                phone: phone,
+                account: account,
                 code: captcha,
                 password: newPwd
             });
