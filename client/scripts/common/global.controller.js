@@ -24,7 +24,7 @@
         $scope.uploadAvatarImg = '';
 
         $scope.personal = {};
-        $scope.personal.is_live = null;
+        $scope.personal.is_live = '1';
         $scope.process = {};
 
         $scope.logout = logout;

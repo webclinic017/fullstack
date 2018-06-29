@@ -265,6 +265,10 @@
                     confirmDeposit();
 
                     function confirmDeposit() {
+                        var mt4_id;
+                        if($scope.withdraw.type !== 'wallet'){
+                            mt4_id = $scope.withdraw.mt4_id;
+                        }
                         $scope.isLoading = true;
                         if (($scope.deposit.type !== 'tele')) {
                             //第三方支付
@@ -318,10 +322,6 @@
                                 var p = $scope.depositTypeLst[$scope.deposit.type].platform || undefined;
                                 var c = $scope.deposit.currency ? $scope.deposit.currency.currency : undefined;
                                 var w = $window.open('/waiting');
-                                var mt4_id;
-                                if($scope.withdraw.type !== 'wallet'){
-                                    mt4_id = $scope.withdraw.mt4_id;
-                                }
                                 asset.deposit(amount, p, c, mt4_id).then(function (data) {
                                     $scope.isLoading = false;
                                     if (!data) return;
