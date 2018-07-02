@@ -276,7 +276,7 @@
                                 $scope.isLoading = false;
                                 openDepositRuleMdl({
                                     type: 'cseMessage',
-                                    tit: '是否有CSE Wallet帐号？',
+                                    tit: '是否有CSE Wallet账号？',
                                     pop: $scope.depositTypeLst[$scope.deposit.type].pop,
                                     url: $scope.depositTypeLst[$scope.deposit.type].url,
                                     callback: submitDeposit

@@ -208,7 +208,7 @@ module.exports = {
         "en": "Q: Why has forced liquidation happened to the deal I made?"
     },
     "faqTrade23": {
-        "zh": "A：当普通账户保证金比率（保证金比例 = 净值 / 已用预付款 * 100%）低于100%，高手帐户的保证金比率（保证金比例 = 净值 / 已用预付款 * 100%）低于100%，系统将会启动强平机制，从您损失最大的订单开始平仓。",
+        "zh": "A：当普通账户保证金比率（保证金比例 = 净值 / 已用预付款 * 100%）低于100%，高手账户的保证金比率（保证金比例 = 净值 / 已用预付款 * 100%）低于100%，系统将会启动强平机制，从您损失最大的订单开始平仓。",
         "en": "A: When the margin ration (Margin Level=Equit / Margin *100%) is below 100% on common accounts and the margin ratio is below 100% on masters’accounts, the company will effect forced liquidation starting from your deal with the highest loss."
     },
     "faqTrade24": {

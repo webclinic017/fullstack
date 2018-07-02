@@ -35,8 +35,8 @@
             goState(data)
         })
         function goState(data) {
-            console.log(data)
-            console.log($scope.personal)
+            // console.log(data)
+            // console.log($scope.personal)
             $scope.dredgingType = data.dredged_type || data.account_status
             $timeout(function () {
                 $state.go('authen.subpage', {
