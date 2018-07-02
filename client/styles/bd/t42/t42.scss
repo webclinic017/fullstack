@@ -1,0 +1,102 @@
+.bd_t39_layer.bd_t42_layer {
+  .bd_t39_detail_con__text {
+      background: -webkit-linear-gradient(#0d5dcb, #4920a0) !important; /* Safari 5.1 - 6.0 */
+      background: -o-linear-gradient(#0d5dcb, #4920a0) !important; /* Opera 11.1 - 12.0 */
+      background: -moz-linear-gradient(#0d5dcb, #4920a0) !important; /* Firefox 3.6 - 15 */
+      background: linear-gradient(#0d5dcb, #4920a0) !important; /* 标准的语法 */
+      border-radius: 10px;
+  }
+}
+@include b(bd_t42) {
+  margin-top: 69px;
+  height: 3695px;
+  background: url("/images/bd_t42/web_bg.png") no-repeat;
+  background-position: center top;
+  background-size: auto 100%;
+  position: relative;
+
+  .bd_t39_detail_con {
+    display: none;
+  }
+
+  @include e(reg) {
+    top: 248px;
+    left: 740px;
+  }
+  @include e(btn) {
+    width: 180px;
+    height: 40px;
+    background: url("/images/bd_t42/web_btn.png") no-repeat;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+  @include e(details_btn) {
+    width: 180px;
+    height: 40px;
+    background: url("/images/bd_t42/web_btn.png") no-repeat;
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 20px;
+    position: absolute;
+    top: 405px;
+    left: 318px;
+    cursor: pointer;
+  }
+  @include e(btn_wrapper) {
+    text-align: center;
+    &.b1 {
+      margin-top: 2350px;
+    }
+    &.b2 {
+      margin-top: 62px;
+    }
+  }
+  @include e(title) {
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-size: 38px;
+    font-weight: 700;
+    top: 1023px;
+  }
+  @include e(bag_title) {
+    text-align: center;
+    margin-top: 70px;
+  }
+  @include e(bag) {
+    margin-top: 64px;
+    .bag {
+      float: left;
+      width: 50%;
+      text-align: center;
+      position: relative;
+    }
+    .rule {
+      color: #fff;
+      position: absolute;
+      bottom: 14px;
+      right: 68px;
+      cursor: pointer;
+    }
+  }
+  @include e(client) {
+    color: #fff;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 60px;
+  }
+  @include e(footer) {
+    color: #fff;
+    margin-top: 100px;
+  }
+  @include e(ltd) {
+    color: #fff;
+    margin-top: 20px;
+  }
+}
