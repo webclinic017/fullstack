@@ -891,8 +891,8 @@
                 birth: $scope.realnameInfo.birthday,
                 is_live: $scope.personal.is_live
             }).then(function (data) {
-                if (!data.is_succ) {
-                    layer.msg(data.message)
+                if (!data.is_succ || data.data.id_no_exists) {
+                    layer.msg(data.message || "身份证号已存在")
                     $scope.clickable = true;
                 } else {
                     sa.track('New_Realname');

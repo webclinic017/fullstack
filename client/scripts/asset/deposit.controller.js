@@ -36,12 +36,13 @@
                 $scope.accountIsWallet = true;
                 if($scope.deposit.type === 'wallet'){
                     angular.forEach($scope.depositTypeLst,function(value, index){
-                        console.log(value, index,'1')
+                        // console.log(value, index,'1')
                         if(value.default) {
                             changeDepositType(index)
                             return
                         }
                     })
+                    // 如果还等于零钱包
                     if($scope.deposit.type === 'wallet') {
                         changeDepositType(Object.keys($scope.depositTypeLst)[0])
                     }
@@ -106,7 +107,7 @@
             if (!data) return;
             // console.log(data);
             $scope.walletAble = data.data;
-            if ($state.params.type === 'wallet') {
+            if ($scope.deposit.type === 'wallet') {
                 $scope.deposit.amount = $scope.walletAble;
             }
         });
