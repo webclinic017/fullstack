@@ -35,7 +35,7 @@
             <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl('manage')">管理银行卡</span>
         </div>
     </div>
-    <div class="row" ng-show="withdraw.accountType !== 'bank'">
+    <div class="row" ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet'">
         <div class="col-xs-2 text-right deposit__title-money">
             姓名
         </div>
@@ -50,7 +50,7 @@
             </div>  
         </div>      
     </div>
-    <div class="row" ng-show="withdraw.accountType !== 'bank'">
+    <div class="row" ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet'">
         <div class="col-xs-2 text-right deposit__title-money">
             账号
         </div>
@@ -76,7 +76,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'invest' && withdrawMessageSucc && !message.is_succ">
+        <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdrawMessageSucc && !message.is_succ">
             <div class="warn_icon">
                 ⚠️
             </div>
@@ -87,7 +87,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'wallet' && withdrawMessageSucc && !messageWallet.is_succ">
+        <!-- <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'wallet' && withdrawMessageSucc && !messageWallet.is_succ">
             <div class="warn_icon">
                 ⚠️
             </div>
@@ -97,10 +97,10 @@
                     <p>如有疑问，请联系您的客户经理或联系客服（{{lang.text('telephone')}}）</p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     
-    <div ng-show="(withdraw.type === 'invest' && withdrawMessageSucc && message.is_succ) || (withdraw.type === 'wallet' && withdrawMessageSucc && messageWallet.is_succ)">
+    <div ng-show="(withdrawMessageSucc && message.is_succ)">
         <div class="row">
             <div class="col-xs-2 text-right deposit__title-money">提现金额</div>
             <div class="col-xs-6 deposit__input">
@@ -157,7 +157,7 @@
         <br>
         <br>
         <div class="row">
-            <div class="col-xs-9 col-xs-offset-2 text-center">
+            <div class="col-xs-9 col-xs-offset-1 text-center">
                 <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" ng-show="clickable" ng-click="toWithdraw()">提现</button>
                 <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" disabled ng-show="!clickable">
                     <i class="loading_spinner fa fa-spinner"></i>

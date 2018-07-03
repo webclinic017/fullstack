@@ -18,9 +18,9 @@
         var companyName = $cookies["company_name"];
 
         $scope.message = {};
-        $scope.messageWallet = {};
+        // $scope.messageWallet = {};
         $scope.maxAmountInvest = 0;
-        $scope.maxAmountWallet = 0;
+        // $scope.maxAmountWallet = 0;
         $scope.withdrawNotice = '';
         $scope.withdraw = {
             // amount: ,
@@ -76,7 +76,7 @@
         $scope.openWithdrawMdl = openWithdrawMdl;
         $scope.openCardMdl = openCardMdl;
         $scope.openManageCardMdl = openManageCardMdl;
-        $scope.changeWithdrawType = changeWithdrawType;
+        // $scope.changeWithdrawType = changeWithdrawType;
         $scope.openChangeWithTypeMdl = openChangeWithTypeMdl;
         $scope.openCurrency = openCurrency;
         $scope.selcetCurrency = selcetCurrency;
@@ -100,7 +100,7 @@
         }
         // 判断出金状态, 获取可提取的最大金额
         function getIsWithdraw(){
-            asset.getIsWithdraw(noIsWalletId()).then(function (data) {
+            asset.getIsWithdraw(undefined, noIsWalletId()).then(function (data) {
                 layer.closeAll();
                 if (!data) return;
                 // console.info(data);
@@ -124,47 +124,50 @@
                             is_succ: false,
                             error_msg: data.data.status_message
                         };
-                        if ($scope.withdraw.type === 'invest') {
-                            openWithdrawMdl({
-                                type: 'withdrawFail',
-                                message: data.data.status_message
-                            });
-                        }
+                        // if ($scope.withdraw.type === 'invest') {
+                        openWithdrawMdl({
+                            type: 'withdrawFail',
+                            message: data.data.status_message
+                        });
+                        // }
                     } else {
                         $scope.message = {
                             is_succ: true
                         };
                         $scope.withdrawNotice = data.data.notice;
                         $scope.maxAmountInvest = data.data.amount < 0 ? 0 : data.data.amount;
-                        if ($scope.withdraw.type === 'invest') {
-                            $scope.withdraw.maxAmount = $scope.maxAmountInvest;
+                        // if ($scope.withdraw.type === 'invest') {
+                        $scope.withdraw.maxAmount = $scope.maxAmountInvest;
+                        if(Number($scope.withdraw.amount) >= Number($scope.withdraw.maxAmount)){
+                            $scope.withdraw.amount = undefined
                         }
+                        // }
                     }
                 } else {
                     $scope.message = {
                         is_succ: false,
                         error_msg: data.message
                     };
-                    if ($scope.withdraw.type === 'invest') {
-                        openWithdrawMdl({
-                            type: 'withdrawFail',
-                            message: data.message
-                        });
-                    }
+                    // if ($scope.withdraw.type === 'invest') {
+                    openWithdrawMdl({
+                        type: 'withdrawFail',
+                        message: data.message
+                    });
+                    // }
                 }
             });
         }
         // wallet可出金金额
-        asset.walletCanWithdraw().then(function (data) {
-            if (!data) return;
-            // console.log(data);
-            // $scope.withdrawMessageSucc = true;
-            $scope.messageWallet = data;
-            $scope.maxAmountWallet = data.data;
-            if ($scope.withdraw.type === 'wallet') {
-                $scope.withdraw.maxAmount = $scope.maxAmountWallet;
-            }
-        });
+        // asset.walletCanWithdraw().then(function (data) {
+        //     if (!data) return;
+        //     // console.log(data);
+        //     // $scope.withdrawMessageSucc = true;
+        //     $scope.messageWallet = data;
+        //     $scope.maxAmountWallet = data.data;
+        //     if ($scope.withdraw.type === 'wallet') {
+        //         $scope.withdraw.maxAmount = $scope.maxAmountWallet;
+        //     }
+        // });
 
         // 获取出金方式列表
         asset.getWithdrawPlatform().then(function (data) {
@@ -417,10 +420,10 @@
             });
         }
 
-        function changeWithdrawType(type) {
-            $scope.withdraw.type = type;
-            $scope.withdraw.maxAmount = type === 'invest' ? $scope.maxAmountInvest : $scope.maxAmountWallet;
-        }
+        // function changeWithdrawType(type) {
+        //     $scope.withdraw.type = type;
+        //     $scope.withdraw.maxAmount = type === 'invest' ? $scope.maxAmountInvest : $scope.maxAmountWallet;
+        // }
 
         // 提现
         $scope.clickable = true;
@@ -450,6 +453,8 @@
                     };
                     if ($scope.withdraw.accountType === 'bank') {
                         paramsAsset.bank_card_id = $scope.withdraw.card.id;
+                    } else if($scope.withdraw.accountType === 'wallet'){
+                        paramsAsset.third_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].platform;
                     } else {
                         paramsAsset.third_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].platform;
                         paramsAsset.third_account = $scope.withdraw.thirdAccount;
@@ -461,7 +466,7 @@
         }
 
         function withdrawInvest(paramsAsset) {
-            asset.getIsWithdraw(noIsWalletId(), $scope.withdraw.amount).then(function (data) {
+            asset.getIsWithdraw($scope.withdraw.amount, noIsWalletId()).then(function (data) {
                 if (data.is_succ) {
                     if (data.code !== 0) {
                         if (codeRage.indexOf(data.code) == -1) data.code = 0;

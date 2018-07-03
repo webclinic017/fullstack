@@ -92,21 +92,25 @@
                     } else {
                         $scope.bagList = [
                             {
+                                id: 182,
                                 amount: 2000,
                                 front_desc_fir: "完成500手交易",
                                 front_recevie_status: "立即领取"
                             },
                             {
+                                id: 181,
                                 amount: 1000,
                                 front_desc_fir: "完成250手交易",
                                 front_recevie_status: "立即领取"
                             },
                             {
+                                id: 180,
                                 amount: 500,
                                 front_desc_fir: "完成125手交易",
                                 front_recevie_status: "立即领取"
                             },
                             {
+                                id: 179,
                                 amount: 200,
                                 front_desc_fir: "完成50手交易",
                                 front_recevie_status: "立即领取"

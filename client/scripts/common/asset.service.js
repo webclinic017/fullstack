@@ -199,11 +199,11 @@
          *
          */
 
-        function getIsWithdraw (mt4_id, amount) {
+        function getIsWithdraw (amount, mt4_id) {
             // console.info('getIsWithdraw is sending', amount);
             return publicHttp.dealPublicRequest(o.getIsWithdrawApi, 'GET', {
+                amount: amount,
                 mt4_id: mt4_id,
-                amount: amount
             });
         }
 
