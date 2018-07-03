@@ -595,9 +595,9 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t41/h5.html', extendPublic({}, req))
+                res.render('bd/t42/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t41/web.html', extendPublic({}, req));
+                res.render('bd/t42/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
@@ -609,9 +609,9 @@ module.exports = function (app) {
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
-                res.render('bd/t41/h5.html', extendPublic({}, req))
+                res.render('bd/t42/h5.html', extendPublic({}, req))
             } else {
-                res.render('bd/t41/web.html', extendPublic({}, req));
+                res.render('bd/t42/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
