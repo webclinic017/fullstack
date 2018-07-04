@@ -40,10 +40,11 @@
                     }else {
                         $scope.addAccountLogic.logic = 2;
                     }
-                    $scope.addAccountLogic.code = data.code;
-                    $scope.addAccountLogic.msg = data.message;
+                } else {
+                    $scope.addAccountLogic.logic = 2;
                 }
-
+                $scope.addAccountLogic.code = data.code;
+                $scope.addAccountLogic.msg = data.message;
             });
         }
         // 充值激活
