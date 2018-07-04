@@ -328,7 +328,7 @@ $(document).ready(function () {
 
     // 获取国家、地区列表
     function getCountries () {
-        publicRequest('getCountries', 'GET').then(function (data) {
+        publicRequest('thirdCountries', 'GET').then(function (data) {
             // console.log(data);
             if (data.is_succ) {
                 var countryList = {
