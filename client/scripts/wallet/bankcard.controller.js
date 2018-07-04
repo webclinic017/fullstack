@@ -10,6 +10,7 @@
     function WalletBankcardController($rootScope, $scope, $modal, $state, asset, validator, forex, $cookies, $layer) {
         // 缓存当前父scope 给弹窗控制器使用
         var parentScope = $scope;
+        parentScope.hasChooseedCard = false;
         parentScope.cardList = undefined;   // 银行卡列表
         parentScope.openAddCardModal = openCardMdl
 
@@ -26,6 +27,13 @@
                 parentScope.cardList = data.data
             })
         }
+        //绑定银行卡后获取银行卡信息
+        $rootScope.$on('bindCardSuccess', function () {
+            // 通知所有子控器 
+            if (!parentScope.hasChooseedCard) {
+                getCardList(parentScope)
+            }
+        });
 
         $scope.confirmDeleteCard = function (card) {
             openManageCardMdl(card)
@@ -45,10 +53,11 @@
                     $scope.deleteCard = function () {
                         asset.deleteCard(card.id).then(function (data) {
                             if (data.is_succ) {
-                                getCardList($scope).then(function () {
+                                getCardList(parentScope).then(function () {
                                     $scope.cardList = parentScope.cardList
                                     if ($scope.cardList.length == 0) {
                                         // 没有绑定银行卡
+                                        parentScope.cardList = undefined;   
                                     }
                                 })
                                 closeModal()
