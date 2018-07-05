@@ -28,7 +28,7 @@
         setClueCustomer: origin + '/auth/page_signup', // post
         setInviteCode: origin + '/invite_code', // post
         //交易品种
-        getSymbols: origin_app + '/symbols', //get
+        getSymbols: origin_app + '/symbol/list', //get
         // 荣耀王者活动
         checkLogined: origin_app + '/auth/check', // get
         getRedBagPool: origin_app + '/bonus/index', // get
