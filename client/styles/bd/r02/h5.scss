@@ -1,0 +1,203 @@
+.layui-m-layercont {
+  .layer_bdr02_dollar {
+      background: url("/images/bd_r02/h5_layer_bg.png") no-repeat;
+      background-position: center top;
+      background-size: 100% 100%;
+      .cont {
+          font-size: 1rem;
+          text-align: center;
+          width: 85%;
+          margin: 0 auto;
+
+          p {
+              padding-bottom: 5px;
+          }
+      }
+      .rule_close {
+        bottom: -3rem;
+        background: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+        font-size: 1.2rem;
+      }
+  }
+}
+@include b(bd_r02) {
+  .layer_contentBox, .layer_contentBox2 {
+    display: none;
+  }
+  background: url("/images/bd_r02/h5_bg.png") no-repeat;
+  background-position: center top;
+  background-size: 100% 100%;
+  position: relative;
+  height: px2rem(3354);
+  color: #fff;
+  padding-top: 18rem;
+
+  @include e(date) {
+    width: px2rem(507);
+    height: px2rem(109);
+    background: url("/images/bd_r02/comm_date.png") no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: px2rem(72);
+    margin: 0 auto;
+    font-size: 0.75rem;
+    
+  }
+  @include e(rule) {
+    margin-top: px2rem(64);
+    padding: 0 px2rem(50);
+    .tit {
+      text-align: center;
+      img {
+        width: px2rem(266);
+      }
+    }
+    .rule_lst {
+      margin-top: px2rem(36);
+      li {
+        font-size: 0.7rem;
+        padding-left: 1rem;
+        padding-bottom: 0.4rem;
+        position: relative;
+        line-height: 1rem;
+        .connect_us {
+          color: #fff;
+        }
+        &:before {
+          width: 0.5rem;
+          height: 0.5rem;
+          display: block;
+          content: '';
+          position: absolute;
+          top: 0.2rem;
+          left: 0;
+          background: #fff;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  @include e(reward_box) {
+    .tit {
+      margin: 0.8rem 3rem 0.5rem;
+      background: #df443d;
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-align: center;
+      padding: 0.4rem 0;
+    }
+    .detail {
+      background: url("/images/bd_r02/h5_reward_box.png") no-repeat;
+      background-position: center top;
+      background-size: 100% 100%;
+      position: relative;
+      height: px2rem(670);
+      overflow: hidden;
+      .golds {
+        width: px2rem(684);
+        height: px2rem(280);
+        background: url("/images/bd_r02/h5_reward_gold.png") no-repeat;
+        background-position: center top;
+        background-size: 100% 100%;
+        position: absolute;
+        bottom: 0;
+        left: px2rem(32);
+        z-index: 100;
+      }
+      .bar {
+        width: 0.8rem;
+        height: 2rem;
+        background: url("/images/bd_r02/h5_reward_bar.png") repeat-y;
+        background-position: center top;
+        background-size: 100% auto;
+        position: absolute;
+        top: 6.1rem;
+        left: 11.2rem;
+        z-index: 80;
+        transition: all 0.6s;
+      }
+      .hook {
+        width: 5rem;
+        position: absolute;
+        top: 7rem;
+        left: 9.25rem;
+        z-index: 90;
+        transition: all 0.6s;
+        &.active {
+          img.hook1 {
+            display: none;
+          }
+          img.hook2 {
+            display: block;
+          }
+        }
+        img {
+          width: 100%;
+          vertical-align: top;
+          &.hook1 {
+            display: block;
+          }
+          &.hook2 {
+            display: none;
+          }
+        }
+      }
+    }
+    .reward_btn {
+      width: px2rem(330);
+      height: px2rem(70);
+      background: url("/images/bd_r02/h5_reward_btn.png") no-repeat;
+      background-position: center top;
+      background-size: 100% 100%;
+      text-align: center;
+      line-height: px2rem(70);
+      margin: 1.5rem auto 0;
+      font-size: 1rem;
+    }
+  }
+  @include e(reward_lst) {
+    margin-top: px2rem(84);
+    .tit {
+      text-align: center;
+      img {
+        width: px2rem(266);
+      }
+    }
+    .detail {
+      width: px2rem(600);
+      height: px2rem(410);
+      background: url("/images/bd_r02/h5_list_box.png") no-repeat;
+      background-position: center top;
+      background-size: 100% 100%;
+      margin: 0.5rem auto 0;
+      padding: 1rem;
+
+      li {
+        color: #9b5f32;
+        text-align: center;
+        font-size: 1rem;
+        padding: 0.35rem 0;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+  @include e(client) {
+    color: #9b5f32;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: px2rem(64);
+  }
+  @include e(footer) {
+    color: #333;
+    font-size: 0.7rem;
+    padding: 1rem 1.2rem;
+    line-height: 1.1rem;
+
+    .ltd {
+      margin-top: 0.5rem;
+    }
+  }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="keywords" content="<%= lang.text('companyEnName')%> 跟单交易 外汇 CFD 指数 股指 互联网金融">
+    <meta name="description" content="<%= lang.text('companyZhName')%>倾力打造一个高手云集的平台，普通投资者可以选择随时随地跟随高手进行交易，随意选择想要跟随的金额，并且从中获利。">
+    <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyZhName')%>">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <!--禁用缓存-->
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>
+        <%= lang.text('companyZhName')%>
+    </title>
+    <% include /common/statistic/h5.jrtt.html %>
+</head>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+<body>
+
+<div class="bd_r02">
+  <div class="layer_contentBox" id="layer_contentBox">
+      <div class="layer_bdt39 layer_bdr02_dollar">
+          <div class="cont">
+              <p>恭喜您淘中<span class="num">0.00</span>美金</p>
+              <p>奖品已放入您的零钱包！</p>
+          </div>
+          <p class="rule_close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
+      </div>
+  </div>
+  <%if(lang.text('companyEnName') == 'TigerWit'){%>
+    <img src="/images/bd_t41/logo.png" alt="" class="m_t42__logo">
+  <%}%>
+  <%if(lang.text('companyEnName') == 'pandafx'){%>
+      <img src="/images/basic_logo_panda.png" alt="" class="m_t42__logo panda">
+  <%}%>
+  <div class="bd_r02__date">
+    活动时间：2018.7.14 - 2018.8.13
+  </div>
+  <div class="bd_r02__rule">
+    <p class="tit"><img src="/images/bd_r02/h5_rule_tit.png" alt=""></p>
+    <ul class="rule_lst">
+      <li>活动期间每日实盘开仓用户可参加一次淘金币活动；</li>
+      <li>本活动奖品为随机美元现金，每次最高淘金金额为$100；</li>
+      <li>本活动抽中的现金奖品（美元）将直接存入“零钱包”；</li>
+      <li>如满足淘金币条件却未在活动期间内淘金币的用户，视为放弃本次淘金币机会；</li>
+      <li>本活动参与用户不得滥用活动权利，如AB仓对冲操作、外挂操作软件或其他经纪商进行对冲；</li>
+      <li>本活动仅适用于外汇、贵金属以及能源类产品，美元/人民币和CFD（指数）类产品的交易手数不计入统计范围；</li>
+      <li>本活动淘金币环节仅在<%= lang.text('companyZhName')%>APP内操作；</li>
+      <li>本活动最终解释权归<%= lang.text('companyZhName')%>平台所有，如有疑问请咨询在线客服或拨打<a class="connect_us" style="text-decoration: underline;" href="tel:<%= lang.text('telephone')%>"><%= lang.text('telephone')%></a>。</li>
+    </ul>
+  </div>
+  <div class="bd_r02__reward_box">
+    <div class="tit">今天有<span>0</span>次机会，祝您淘到大奖！</div>
+    <div class="detail">
+      <div class="golds"></div>
+      <div class="bar"></div>
+      <div class="hook">
+        <img class="hook1" src="/images/bd_r02/h5_reward_hook.png" alt="">
+        <img class="hook2" src="/images/bd_r02/h5_reward_hook2.png" alt="">
+      </div>
+    </div>
+    <div class="reward_btn">
+      开始淘金
+    </div>
+  </div>
+  <div class="bd_r02__reward_lst">
+    <p class="tit"><img src="/images/bd_r02/h5_list_tit.png" alt=""></p>
+    <div class="detail">
+      <ul>
+        <li>恭喜188****2891 淘中12.88美元</li>
+        <li>恭喜138****7792 淘中0.88美元</li>
+        <li>恭喜176****1008 淘中1.68美元</li>
+        <li>恭喜158****3455 淘中26.88美元</li>
+        <li>恭喜187****8880 淘中8.88美元</li>
+      </ul>
+    </div>
+  </div>
+  <div class="bd_r02__client">
+    <p>如有疑问 请拨打客服电话</p>
+    <p><%= lang.text('telephone')%></p>
+  </div>
+  <div class="bd_r02__footer">
+      <p>风险警示：</p>
+      <p>
+          市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。
+          <%= lang.text("companyEnName")%>交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+      </p>
+      <%if(lang.text('companyEnName') == 'TigerWit'){%>
+        <p class="ltd">Tiger Financial Technology PTY. Ltd.版权所有</p>  
+      <%}%>
+  </div>
+</div>
+
+</body>
+
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_r02.js -->
+<script src="/scripts/bd/common/open_app.js"></script>
+<script src="/scripts/bd/common/wx_share_config.js"></script>
+<script src="/scripts/bd/r02/h5.js"></script>
+<!-- endbuild -->
+
+<!-- 推广脚本footer -->
+<%- include('/common/statistic/all.html') %>
+</html>

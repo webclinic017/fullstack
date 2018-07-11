@@ -1,0 +1,91 @@
+@include b(web_r02) {
+  background: url("/images/bd_r02/web_bg.png") no-repeat;
+  height: 2300px;
+  background-size: auto 100%;
+  background-position: center top;
+  position: relative;
+  margin-top: 69px;
+  color: #fff;
+  padding-top: 580px;
+  &.pandafx {
+    margin-top: 0px;
+  }
+
+  @include e(date) {
+    width: 507px;
+    height: 109px;
+    background: url("/images/bd_r02/comm_date.png") no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    text-align: center;
+    line-height: 72px;
+    margin: 0 auto;
+    font-size: 22px;
+  }
+  @include e(rule) {
+    margin-top: 80px;
+    .tit {
+      text-align: center;
+      margin-bottom: 58px;
+    }
+    .rule_lst {
+      padding-left: 50px;
+      li {
+        font-size: 18px;
+        padding-left: 22px;
+        padding-bottom: 16px;
+        position: relative;
+        line-height: 18px;
+        &:before {
+          width: 10px;
+          height: 10px;
+          display: block;
+          content: '';
+          position: absolute;
+          top: 3px;
+          left: 0;
+          background: #fff;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+  @include e(code_box) {
+    margin-top: 120px;
+    .tit {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .code_box {
+      width: 360px;
+      height: 348px;
+      background: url("/images/bd_r02/web_code_box.png") no-repeat;
+      background-position: center top;
+      background-size: 100% 100%;
+      margin: 0 auto;
+      padding: 40px 30px 50px;
+      text-align: center;
+      img {
+        margin: 0 auto;
+        height: 100%;
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+  @include e(client) {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 100px;
+  }
+  @include e(footer) {
+    color: #333;
+    margin-top: 80px;
+    line-height: 30px;
+    .ltd {
+      margin-top: 30px;
+    }
+  }
+}
