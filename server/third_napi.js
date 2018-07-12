@@ -2,7 +2,7 @@ module.exports = function () {
   function ThirdPath (req) {
     var hostname = req.hostname;
     var urlPath = '';
-    if (hostname.indexOf('w.dev.tigerwit.com') || hostname.indexOf('w.tigerwit.com') || hostname.indexOf('w.tmp.tigerwit.com')) {
+    if (hostname.indexOf('w.dev.tigerwit.com') != -1 || hostname.indexOf('w.tigerwit.com') != -1 || hostname.indexOf('w.tmp.tigerwit.com') != -1) {
       urlPath = 'http://'+hostname;
     } else {
       urlPath = 'https://'+hostname;
