@@ -144,7 +144,7 @@
             type: type,
             title: lang.text('invite.share2'),
             description: lang.text('invite.share3') + (lang.curLang('zh') ? coMap[getCoName()] : '') + lang.text('invite.share1'),
-            url: u + "/m/invite01?user_code=" + ($.cookie("user_code") || ''),
+            url: u + "/m/invite01?utm_source=invite_friends_app_cn&utm_campaign=share_invite_tigerwit&user_code=" + ($.cookie("user_code") || ''),
             // url: window.location.origin + "/m/invite01?user_code=" + ($.cookie("user_code") || ''),
             imgUrl: window.location.origin + "/napi?action=get_share_img&user_code=" + ($.cookie("user_code") || '') + ".png",
         };
