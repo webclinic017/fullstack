@@ -41,7 +41,7 @@
     });
 
     function checkReward () {
-      publicRequest('checkReward', 'POST', {
+      publicRequest('checkLotteryStatus', 'GET', {
           activity_id: activityId,
           reward_id: rewardId
       }).then(function (data) {
@@ -49,7 +49,7 @@
           if (data.is_succ) {
             rewardCount = data.data.num;
             $rewardChance.html(data.data.num);
-            message = data.data.message;
+            message = data.data.error_msg;
           } else {
             message = data.message;
           }
@@ -71,7 +71,7 @@
       });
       isDrawAward = true;
 
-      publicRequest('joinReward', 'POST', {
+      publicRequest('startLottery', 'GET', {
         activity_id: activityId,
         reward_id: rewardId
       }).then(function (data) {
