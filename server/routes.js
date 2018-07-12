@@ -788,6 +788,19 @@ module.exports = function (app) {
             res.render('404.html', extendPublic({}, req));
         }
     });
+    // 淘金币活动
+    app.route('/bd/r02').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('bd/r02/h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/r02/web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
 
     // 招募高手
     app.route('/bd/recruit_master').get(function (req, res) {

@@ -26,7 +26,7 @@ module.exports = function () {
             androidApp: versionAndroidApp,
             // download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
             // download: "http://admin-shence.tigerwit.com:8106/r/C",
-            download: "android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
+            download: "http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
 
             // path
             logoPathZh: indexBasePath + "/tigerwit-logo-en.png",
