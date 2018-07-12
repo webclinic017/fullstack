@@ -9,8 +9,8 @@
     var $rewardRuleBtn = $(".bd_r02 .bd_r02__rule");
     var isDrawAward = false;
     var isInTigerApp = false;
-    var activityId = 12;
-    var rewardId = 25;
+    var activityId = 5;
+    var rewardId = 5;
     var rewardCount = 0;
     var message = '请前往APP参与活动';
 
