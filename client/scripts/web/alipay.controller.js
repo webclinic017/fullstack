@@ -20,7 +20,7 @@
                 return;
             };
             var w = $window.open('/waiting');
-            asset.deposit(amount, 4).then(function (data) {
+            asset.deposit(amount, 10).then(function (data) {
                 if (!data) {
                     w.close();
                     return;

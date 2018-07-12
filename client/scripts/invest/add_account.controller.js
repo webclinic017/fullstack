@@ -14,7 +14,7 @@
             msg: '',
             code: '',
             logic: 1,
-            // mt4_id: '',
+            mt4_id: '',
             // account_name: ''
         };  // logic标题  0：子账号创建成功；1：新建账号规则；2：提示（有未入金账号）|| 提示（已满七个账号）
         $scope.closeModal = closeModal;
@@ -44,13 +44,14 @@
                     $scope.addAccountLogic.logic = 2;
                 }
                 $scope.addAccountLogic.code = data.code;
+                $scope.addAccountLogic.mt4_id = data.data.inactive_account.mt4_id;
                 $scope.addAccountLogic.msg = data.message;
             });
         }
         // 充值激活
         function depositActivate(){
             closeModal();
-            $state.go("space.asset.subpage", {subpage: 'deposit'});
+            $state.go("space.asset.subpage", {subpage: 'deposit', account: $scope.addAccountLogic.mt4_id});
         }
         function closeModalReload(){
             closeModal();

@@ -528,7 +528,7 @@
 
                             $state.go('space.asset.subpage', {
                                 subpage: 'withdraw',
-                                type: 'invest'
+                                account: paramsAsset.mt4_id
                             }, { reload: true });
                         } else {
                             var msg = data.message;

@@ -322,18 +322,27 @@
                             function submitDeposit() {
                                 var p = $scope.depositTypeLst[$scope.deposit.type].platform || undefined;
                                 var c = $scope.deposit.currency ? $scope.deposit.currency.currency : undefined;
-                                var w = $window.open('/waiting');
+                                if($scope.deposit.type !== 'wallet'){
+                                    var w = $window.open('/waiting');
+                                }
                                 asset.deposit(amount, p, c, mt4_id).then(function (data) {
                                     $scope.isLoading = false;
                                     if (!data) return;
                                     if (data.is_succ) {
-                                        var token = $cookies["token"] || '';
-                                        var url = data.data.url + '?token=' + token;
-                                        openDepositMdl('depositFinish');
-                                        w.location = url;
+                                        if($scope.deposit.type === 'wallet'){
+                                            $scope.$emit('asset.transfer')
+                                            $scope.walletDepositSucc = true;
+                                        } else {
+                                            var token = $cookies["token"] || '';
+                                            var url = data.data.url + '?token=' + token;
+                                            openDepositMdl('depositFinish');
+                                            w.location = url;
+                                        }
                                     } else {
                                         layer.msg(data.message);
-                                        w.close();
+                                        if($scope.deposit.type !== 'wallet'){
+                                            w.close();
+                                        }
                                     }
                                 });
                             }
@@ -347,6 +356,7 @@
                                     console.log(data);
                                     $scope.isLoading = false;
                                     if (data.is_succ) {
+                                        $scope.$emit('asset.transfer')
                                         $scope.teleDepositSucc = true;
                                     } else {
                                         layer.msg(data.message);
@@ -381,7 +391,7 @@
                     $scope.depositCard = {
                         backErr: false,
                         backMsg: '',
-                        num: msgInfo.cardNum || undefined
+                        num: $scope.msgInfo.cardNum || undefined
                     };
 
                     // 去实名认证
