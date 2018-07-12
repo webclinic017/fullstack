@@ -231,7 +231,7 @@
 
                     function confirmDeposit() {
                         $scope.isLoading = true;
-                        if (($scope.deposit.type !== 'wallet') && ($scope.deposit.type !== 'tele')) {
+                        if ($scope.deposit.type !== 'tele') {
                             //第三方支付
                             if ($scope.deposit.type === 'cseWallet') {
                                 $scope.isLoading = false;
@@ -256,6 +256,8 @@
                                         }
                                     }
                                 });
+                            } else if($scope.deposit.type === 'wallet' ){
+                                submitDeposit()
                             } else {
                                 $scope.isLoading = false;
                                 computeAmount();
@@ -280,48 +282,56 @@
                             function submitDeposit() {
                                 var p = $scope.depositTypeLst[$scope.deposit.type].platform || undefined;
                                 var c = $scope.deposit.currency ? $scope.deposit.currency.currency : undefined;
-                                var w = $window.open('/waiting');
+                                if($scope.deposit.type !== 'wallet'){
+                                    var w = $window.open('/waiting');
+                                }
 
-                                asset.deposit(amount, p, c).then(function (data) {
+                                asset.deposit(amount, p, c, $scope.main.trade_account.mt4_id).then(function (data) {
                                     $scope.isLoading = false;
                                     if (!data) return;
                                     if (data.is_succ) {
-                                        var token = $cookies["token"] || '';
-                                        var url = data.data.url + '?token=' + token;
-                                        w.location = url;
+                                        if($scope.deposit.type === 'wallet'){
+                                            $scope.walletDepositSucc = true;
+                                        } else {
+                                            var token = $cookies["token"] || '';
+                                            var url = data.data.url + '?token=' + token;
+                                            w.location = url;
+                                        }
                                     } else {
                                         layer.msg(data.message);
-                                        w.close();
+                                        if($scope.deposit.type !== 'wallet'){
+                                            w.close();
+                                        }
                                     }
                                 });
                             }
                         }
-                        if ($scope.deposit.type === 'wallet') {
+                        // if ($scope.deposit.type === 'wallet') {
 
-                            asset.walletDeposit(amount).then(function (data) {
-                                $scope.isLoading = false;
-                                // console.log(data);
-                                if (!data) return;
-                                if (data.is_succ) {
-                                    $scope.walletDepositSucc = true;
-                                } else {
-                                    if ($scope.isDeposit) return;
-                                    $scope.isDeposit = true;
+                        //     asset.walletDeposit(amount).then(function (data) {
+                        //         $scope.isLoading = false;
+                        //         // console.log(data);
+                        //         if (!data) return;
+                        //         if (data.is_succ) {
+                        //             $scope.walletDepositSucc = true;
+                        //         } else {
+                        //             if ($scope.isDeposit) return;
+                        //             $scope.isDeposit = true;
 
-                                    asset.walletDeposit(amount).then(function (data) {
-                                        $scope.isLoading = false;
-                                        // console.log(data);
-                                        $scope.isDeposit = false;
-                                        if (!data) return;
-                                        if (data.is_succ) {
-                                            $scope.walletDepositSucc = true;
-                                        } else {
-                                            layer.msg(data.message);
-                                        }
-                                    });
-                                }
-                            })
-                        }
+                        //             asset.walletDeposit(amount).then(function (data) {
+                        //                 $scope.isLoading = false;
+                        //                 // console.log(data);
+                        //                 $scope.isDeposit = false;
+                        //                 if (!data) return;
+                        //                 if (data.is_succ) {
+                        //                     $scope.walletDepositSucc = true;
+                        //                 } else {
+                        //                     layer.msg(data.message);
+                        //                 }
+                        //             });
+                        //         }
+                        //     })
+                        // }
 
                         if ($scope.deposit.type === 'tele') {
                             if (!$scope.deposit.teleFile) {

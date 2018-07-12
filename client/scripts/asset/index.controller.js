@@ -18,6 +18,9 @@
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
       $scope.stateParamsSubpage = toParams.subpage;
     })
+    $scope.$on('asset.transfer', function () {
+      $scope.stateParamsSubpage = '';
+    })
     // 被选中的账号
     $scope.accountItem = {
       account_name: '',

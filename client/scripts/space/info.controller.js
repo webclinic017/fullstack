@@ -125,5 +125,21 @@
                 
             });
         }
+        // 账号合并提醒
+        // accountInitializerTip();
+        function accountInitializerTip(){
+            $modal.open({
+                templateUrl: '/views/space/account_Initializer_tip.html',
+                size: 'sm',
+                backdrop: true,
+                controller: function ($scope, $modalInstance) {
+                    
+                    $scope.closeModal = closeModal;
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                },
+            });
+        }
     }
 })();

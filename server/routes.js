@@ -115,7 +115,7 @@ module.exports = function (app) {
         setEnvCf(req, res);
         var allowPaths = ['/payment/login', '/payment/asset', '/payment/evidence', '/payment/cse_usage', '/waiting', '/napi']
         if(req.hostname.indexOf('dp') != -1) {
-        // if(req.hostname.indexOf('w.dev.tigerwit.com') != -1) {
+        // if(req.hostname.indexOf('w.tmp.tigerwit.com') != -1) {
             if(allowPaths.indexOf(req.originalUrl) != -1){
                 var pageId = ''
                 if(req.originalUrl == allowPaths[0]){
@@ -405,7 +405,7 @@ module.exports = function (app) {
             else if (hostPrefix == 'demo' || hostPrefix2 == 'dev') {
                 masterApiPath = 'https://demo.tigerwit.com/api/v3'
             }
-            else if (hostPrefix == 'www' || hostPrefix == 'w') {
+            else if (hostPrefix == 'api-tmp' || hostPrefix == 'www' || hostPrefix == 'w') {
                 masterApiPath = 'https://api-tmp.tigerwit.com/api/v3'
             }
         }

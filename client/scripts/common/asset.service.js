@@ -109,11 +109,11 @@
          * Asset Service 撤消出金申请
          *
          * @method cancelWithdraw
-         * @param {Number} code 出入金历史纪录的编号
+         * @param {Number} id 出入金历史纪录的编号
          */
-        function cancelWithdraw(code) {
+        function cancelWithdraw(id) {
             return publicHttp.dealPublicRequest(o.cancelWithdrawApi, 'PUT', {
-                order_no: code
+                id: id
             });
         }
 

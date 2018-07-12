@@ -13,6 +13,7 @@
         parentScope.hasChooseedCard = false
         parentScope.cardList = undefined;
         parentScope.manageCardModalInstance = undefined;
+        var codeRage = [100602, 100605, 100608];
 
         var companyName = $cookies["company_name"];
 
@@ -71,58 +72,85 @@
             }
         });
 
+        
+        function noIsWalletId(){
+            var mt4_id;
+            if($scope.withdraw.type !== 'wallet'){
+                mt4_id = $scope.main.trade_account.mt4_id;
+            }
+            return mt4_id;
+        }
         // 判断出金状态, 获取可提取的最大金额
-        asset.getIsWithdraw().then(function (data) {
-            layer.closeAll();
-            if (!data) return;
-            // console.info(data);
-            $scope.withdrawMessageSucc = true;
-            if (data.is_succ) {
-                if (data.data.status == 0) {
-                    $scope.message = {
-                        is_succ: false,
-                        error_msg: data.data.status_message
-                    };
-                    if ($scope.withdraw.type === 'invest') {
+        getIsWithdraw();
+        function getIsWithdraw(){
+            asset.getIsWithdraw(undefined, noIsWalletId()).then(function (data) {
+                layer.closeAll();
+                if (!data) return;
+                // console.info(data);
+                $scope.withdrawMessageSucc = true;
+                if (data.is_succ) {
+                    if (data.code !== 0) {
+                        if (codeRage.indexOf(data.code) == -1) data.code = 0;
+                        $scope.message = {
+                            is_succ: false,
+                            error_msg: data.data.status_message
+                        };
+                        openWithdrawMdl({
+                            type: 'withdrawFail',
+                            code: data.code,
+                            message: data.data.status_message
+                        });
+                        return;
+                    }
+                    if (data.data.status == 0) {
+                        $scope.message = {
+                            is_succ: false,
+                            error_msg: data.data.status_message
+                        };
+                        // if ($scope.withdraw.type === 'invest') {
                         openWithdrawMdl({
                             type: 'withdrawFail',
                             message: data.data.status_message
                         });
+                        // }
+                    } else {
+                        $scope.message = {
+                            is_succ: true
+                        };
+                        $scope.withdrawNotice = data.data.notice;
+                        $scope.maxAmountInvest = data.data.amount < 0 ? 0 : data.data.amount;
+                        // if ($scope.withdraw.type === 'invest') {
+                        $scope.withdraw.maxAmount = $scope.maxAmountInvest;
+                        if(Number($scope.withdraw.amount) >= Number($scope.withdraw.maxAmount)){
+                            $scope.withdraw.amount = undefined
+                        }
+                        // }
                     }
                 } else {
                     $scope.message = {
-                        is_succ: true
+                        is_succ: false,
+                        error_msg: data.data.status_message
                     };
-                    $scope.withdrawNotice = data.data.notice;
-                    $scope.maxAmountInvest = data.data.amount < 0 ? 0 : data.data.amount;
-                    if ($scope.withdraw.type === 'invest') {
-                        $scope.withdraw.maxAmount = $scope.maxAmountInvest;
-                    }
-                }
-            } else {
-                $scope.message = {
-                    is_succ: false,
-                    error_msg: data.data.status_message
-                };
-                if ($scope.withdraw.type === 'invest') {
+                    // if ($scope.withdraw.type === 'invest') {
                     openWithdrawMdl({
                         type: 'withdrawFail',
                         message: data.data.status_message
                     });
+                    // }
                 }
-            }
-        });
+            });
+        }
         // wallet可出金情况
-        asset.walletCanWithdraw().then(function (data) {
-            if (!data) return;
-            // console.log(data);
-            // $scope.withdrawMessageSucc = true;
-            $scope.messageWallet = data;
-            $scope.maxAmountWallet = data.data;
-            if ($scope.withdraw.type === 'wallet') {
-                $scope.withdraw.maxAmount = $scope.maxAmountWallet;
-            }
-        });
+        // asset.walletCanWithdraw().then(function (data) {
+        //     if (!data) return;
+        //     // console.log(data);
+        //     // $scope.withdrawMessageSucc = true;
+        //     $scope.messageWallet = data;
+        //     $scope.maxAmountWallet = data.data;
+        //     if ($scope.withdraw.type === 'wallet') {
+        //         $scope.withdraw.maxAmount = $scope.maxAmountWallet;
+        //     }
+        // });
 
         // 获取出金方式列表
         asset.getWithdrawPlatform().then(function (data) {
@@ -375,6 +403,12 @@
 
         function changeWithdrawType(type) {
             $scope.withdraw.type = type;
+            if(type === 'wallet'){
+                if($scope.withdraw.accountType === 'wallet'){
+                    changeWithdrawAccountType('bank');
+                }
+            } 
+            getIsWithdraw();
             $scope.withdraw.maxAmount = type === 'invest' ? $scope.maxAmountInvest : $scope.maxAmountWallet;
         }
 
@@ -406,16 +440,13 @@
                     };
                     if ($scope.withdraw.accountType === 'bank') {
                         paramsAsset.bank_card_id = $scope.withdraw.card.id;
+                    } else if($scope.withdraw.accountType === 'wallet'){
+                        paramsAsset.third_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].platform;
                     } else {
                         paramsAsset.third_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].platform;
                         paramsAsset.third_account = $scope.withdraw.thirdAccount;
                     }
-                    
-                    if ($scope.withdraw.type === 'invest') {
-                        withdrawInvest(paramsAsset);
-                    } else {
-                        withdrawWallet(paramsAsset);
-                    }
+                    withdrawInvest(paramsAsset);
                 }
             })
         }
@@ -423,6 +454,15 @@
         function withdrawInvest(paramsAsset) {
             asset.getIsWithdraw($scope.withdraw.amount).then(function (data) {
                 if (data.is_succ) {
+                    if (data.code !== 0) {
+                        if (codeRage.indexOf(data.code) == -1) data.code = 0;
+                        openWithdrawMdl({
+                            type: 'withdrawFail',
+                            code: data.code,
+                            message: data.data.status_message
+                        });
+                        return;
+                    }
                     if (data.data.status == 0) {
                         openWithdrawMdl({
                             type: 'withdrawFail',
@@ -462,6 +502,9 @@
                 }
 
                 function withdraw() {
+                    if($scope.withdraw.type !== 'wallet'){
+                        paramsAsset.mt4_id = $scope.main.trade_account.mt4_id;
+                    }
                     asset.withdraw(paramsAsset).then(function (data) {
                         if (!data) return;
                         $scope.clickable = true;
@@ -484,40 +527,40 @@
             });
         }
 
-        function withdrawWallet(paramsAsset) {
-            var amount = Number($scope.withdraw.amount).toFixed(2);
-            var amountRMB = Number(amount*$scope.withdraw.currency.rate_out).toFixed(2);
-            openWithdrawMdl({
-                type: 'withdrawReady',
-                message: '',
-                amountDollar: amount,
-                amountRMB: amountRMB,
-                desc: $scope.withdrawNotice,
-                currency: $scope.withdraw.currency,
-                callback: withdraw
-            });
+        // function withdrawWallet(paramsAsset) {
+        //     var amount = Number($scope.withdraw.amount).toFixed(2);
+        //     var amountRMB = Number(amount*$scope.withdraw.currency.rate_out).toFixed(2);
+        //     openWithdrawMdl({
+        //         type: 'withdrawReady',
+        //         message: '',
+        //         amountDollar: amount,
+        //         amountRMB: amountRMB,
+        //         desc: $scope.withdrawNotice,
+        //         currency: $scope.withdraw.currency,
+        //         callback: withdraw
+        //     });
 
-            function withdraw () {
-                asset.walletWithdraw(paramsAsset).then(function (data) {
-                    // console.log(data);
-                    $scope.clickable = true;
-                    if (!data) return;
-                    if (data.is_succ) {
-                        $scope.withdraw.success = true;
-                        openWithdrawMdl({
-                            type: "withdrawSucc",
-                            message: ''
-                        });
-                    } else {
-                        var msg = data.message;
-                        openWithdrawMdl({
-                            type: 'withdrawFail',
-                            message: msg
-                        });
-                    }
-                });
-            }
-        }
+        //     function withdraw () {
+        //         asset.walletWithdraw(paramsAsset).then(function (data) {
+        //             // console.log(data);
+        //             $scope.clickable = true;
+        //             if (!data) return;
+        //             if (data.is_succ) {
+        //                 $scope.withdraw.success = true;
+        //                 openWithdrawMdl({
+        //                     type: "withdrawSucc",
+        //                     message: ''
+        //                 });
+        //             } else {
+        //                 var msg = data.message;
+        //                 openWithdrawMdl({
+        //                     type: 'withdrawFail',
+        //                     message: msg
+        //                 });
+        //             }
+        //         });
+        //     }
+        // }
         
         //选择币种
         $document.on('click', function () {
@@ -549,7 +592,8 @@
                     passedScope: function () {
                         return {
                             withdrawType: $scope.withdraw.accountType,
-                            withdrawTypeLst: $scope.withdrawTypeLst
+                            withdrawTypeLst: $scope.withdrawTypeLst,
+                            isWallet: $scope.withdraw.type === 'wallet'
                         };
                     }
                 },
@@ -562,6 +606,13 @@
                     $scope.closeModal = closeModal;
                     $scope.selectType = selectType;
                     $scope.changeType = changeType;
+                    $scope.isWallet = function(key){
+                        if(passedScope.isWallet){
+                            return key === 'wallet'? "false" : "true"
+                        } else {
+                            return true
+                        }
+                    }
 
                     function selectType(accountType) {
                         $scope.withdraw.accountType = accountType;

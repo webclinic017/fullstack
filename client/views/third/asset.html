@@ -64,7 +64,7 @@
                 <ul class="info_box__detail">
                     <li>
                         <div class="item__number">
-                            {{ main.accountStatus == 1 ? main.mt4_id : '-' }}
+                            {{ main.accountStatus == 1 ? main.trade_account.mt4_id : '-' }}
                         </div>
                         <div class="item__text">
                             <span>MT4账户</span>
@@ -72,7 +72,7 @@
                     </li>
                     <li>
                         <div class="item__number">
-                            {{ main.accountStatus == 1 ? main.balance : '-' }}
+                            {{ main.accountStatus == 1 ? main.trade_balance : '-' }}
                         </div>
                         <div class="item__text">
                             <span>账户余额</span>
