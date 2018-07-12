@@ -4,7 +4,9 @@
     var $rewardBar = $(".bd_r02__reward_box .bar");
     var $rewardHook = $(".bd_r02__reward_box .hook");
     var $rewardChance = $(".bd_r02__reward_box .tit span");
+    var $rewardCont = $(".bd_r02 .layer_bdr02_dollar .cont");
     var $rewardNum = $(".bd_r02 .layer_bdr02_dollar .num");
+    var $rewardRuleBtn = $(".bd_r02 .bd_r02__rule");
     var isDrawAward = false;
     var isInTigerApp = false;
     var activityId = 12;
@@ -24,6 +26,16 @@
       } else {
         toOpenApp();
       }
+
+      return false;
+    });
+    $rewardRuleBtn.on("tap", function () {
+      layer.open({
+        shadeClose: false,
+        content: $("#layer_ruleBox").html(),
+        style: 'padding:0;width:85%;border-radius:0;color:#000;background:rgba(0,0,0,0);'
+      });
+      $('.layui-m-layercont').css('padding', 0);
 
       return false;
     });
@@ -78,7 +90,12 @@
 
           setTimeout(function () {
             isDrawAward = false;
-            $rewardNum.html(data.data.prize);
+            if (data.data.type === 1) {
+              $rewardNum.html(data.data.prize);
+            } else {
+              $rewardCont.html(data.data.message);
+            }
+            
             layer.open({
               shadeClose: false,
               content: $("#layer_contentBox").html(),

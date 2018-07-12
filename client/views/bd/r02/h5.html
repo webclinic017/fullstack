@@ -40,6 +40,24 @@
           <p class="rule_close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
       </div>
   </div>
+  <div class="layer_contentBox" id="layer_ruleBox">
+      <div class="layer_bdt39 layer_bdr02_rule">
+          <div class="cont">
+              <p class="tit"><img src="/images/bd_r02/h5_rule_tit.png" alt=""></p>
+              <ul class="rule_lst">
+                <li>活动期间每日实盘开仓用户可参加一次淘金币活动；</li>
+                <li>本活动奖品为随机美元现金，每次最高淘金金额为$100；</li>
+                <li>本活动抽中的现金奖品（美元）将直接存入“零钱包”；</li>
+                <li>如满足淘金币条件却未在活动期间内淘金币的用户，视为放弃本次淘金币机会；</li>
+                <li>本活动参与用户不得滥用活动权利，如AB仓对冲操作、外挂操作软件或其他经纪商进行对冲；</li>
+                <li>本活动仅适用于外汇、贵金属以及能源类产品，美元/人民币和CFD（指数）类产品的交易手数不计入统计范围；</li>
+                <li>本活动淘金币环节仅在<%= lang.text('companyZhName')%>APP内操作；</li>
+                <li>本活动最终解释权归<%= lang.text('companyZhName')%>平台所有，如有疑问请咨询在线客服或拨打<a class="connect_us" style="text-decoration: underline;" href="tel:<%= lang.text('telephone')%>"><%= lang.text('telephone')%></a>。</li>
+              </ul>
+          </div>
+          <p class="rule_close" onclick="layer.closeAll()"><i class="fa fa-times" aria-hidden="true"></i></p>
+      </div>
+  </div>
   <%if(lang.text('companyEnName') == 'TigerWit'){%>
     <img src="/images/bd_t41/logo.png" alt="" class="m_t42__logo">
   <%}%>
@@ -47,9 +65,12 @@
       <img src="/images/basic_logo_panda.png" alt="" class="m_t42__logo panda">
   <%}%>
   <div class="bd_r02__date">
-    活动时间：2018.7.14 - 2018.8.13
+    活动时间：2018.7.13 - 2018.8.10
   </div>
   <div class="bd_r02__rule">
+      <img src="/images/bd_r02/h5_rule_btn.png" alt="">
+  </div>
+  <!-- <div class="bd_r02__rule">
     <p class="tit"><img src="/images/bd_r02/h5_rule_tit.png" alt=""></p>
     <ul class="rule_lst">
       <li>活动期间每日实盘开仓用户可参加一次淘金币活动；</li>
@@ -61,7 +82,7 @@
       <li>本活动淘金币环节仅在<%= lang.text('companyZhName')%>APP内操作；</li>
       <li>本活动最终解释权归<%= lang.text('companyZhName')%>平台所有，如有疑问请咨询在线客服或拨打<a class="connect_us" style="text-decoration: underline;" href="tel:<%= lang.text('telephone')%>"><%= lang.text('telephone')%></a>。</li>
     </ul>
-  </div>
+  </div> -->
   <div class="bd_r02__reward_box">
     <div class="tit">今天有<span>0</span>次机会，祝您淘到大奖！</div>
     <div class="detail">

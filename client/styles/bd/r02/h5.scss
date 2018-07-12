@@ -21,16 +21,62 @@
         font-size: 1.2rem;
       }
   }
+  .layer_bdr02_rule {
+    background: url("/images/bd_r02/h5_layer_rule_bg.png") no-repeat;
+    background-position: center top;
+    background-size: 100% 100%;
+    padding: 0;
+    .cont {
+      padding: 3rem 2rem 6rem;
+      .tit {
+        text-align: center;
+        img {
+          width: px2rem(266);
+        }
+      }
+      .rule_lst {
+        margin-top: px2rem(36);
+        li {
+          font-size: 0.7rem;
+          padding-left: 1rem;
+          padding-bottom: 0.4rem;
+          position: relative;
+          line-height: 1rem;
+          .connect_us {
+            color: #fff;
+          }
+          &:before {
+            width: 0.5rem;
+            height: 0.5rem;
+            display: block;
+            content: '';
+            position: absolute;
+            top: 0.2rem;
+            left: 0;
+            background: #fff;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+    .rule_close {
+      bottom: 0rem;
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      font-size: 1.2rem;
+    }
+  }
 }
 @include b(bd_r02) {
   .layer_contentBox, .layer_contentBox2 {
     display: none;
   }
-  background: url("/images/bd_r02/h5_bg.png") no-repeat;
+  background: url("/images/bd_r02/h5_bg_new.png") no-repeat;
   background-position: center top;
   background-size: 100% 100%;
   position: relative;
-  height: px2rem(3354);
+  height: px2rem(2848);
   color: #fff;
   padding-top: 18rem;
 
@@ -44,40 +90,16 @@
     line-height: px2rem(72);
     margin: 0 auto;
     font-size: 0.75rem;
-    
+    margin-bottom: 3rem;
   }
   @include e(rule) {
-    margin-top: px2rem(64);
-    padding: 0 px2rem(50);
-    .tit {
-      text-align: center;
-      img {
-        width: px2rem(266);
-      }
-    }
-    .rule_lst {
-      margin-top: px2rem(36);
-      li {
-        font-size: 0.7rem;
-        padding-left: 1rem;
-        padding-bottom: 0.4rem;
-        position: relative;
-        line-height: 1rem;
-        .connect_us {
-          color: #fff;
-        }
-        &:before {
-          width: 0.5rem;
-          height: 0.5rem;
-          display: block;
-          content: '';
-          position: absolute;
-          top: 0.2rem;
-          left: 0;
-          background: #fff;
-          border-radius: 50%;
-        }
-      }
+    position: absolute;
+    right: 0;
+    top: 21rem;
+    width: 5rem;
+    img {
+      width: 100%;
+      vertical-align: top;
     }
   }
   @include e(reward_box) {
