@@ -21,17 +21,21 @@
                 <p class="num">${{ singleAccountInfo.margin_free || '0.00' }}</p>
                 <p class="tip">可用保证金</p>
             </li>
-            <li class="noLine">
+            <li>
                 <p class="num">{{ singleAccountInfo.margin_level || '0.00' }}%</p>
                 <p class="tip">保证金比例</p>
             </li>
-            <li>
+            <li class="noLine">
                 <p class="num">{{ singleAccountInfo.volume || '0.00' }}</p>
                 <p class="tip">总交易手数</p>
             </li>
-            <li>
+            <li ng-if="investSelect.type === 2">
                 <p class="num">{{ singleAccountInfo.copy_num || '0' }}</p>
-                <p class="tip">复制高手</p>
+                <p class="tip">复制人数</p>
+            </li>
+            <li ng-if="investSelect.type === 3">
+                <p class="num">{{ singleAccountInfo.copy_num || '0' }}</p>
+                <p class="tip">跟随人数</p>
             </li>
             <li ng-mouseenter="show_close_profit=true" ng-mouseleave="show_close_profit=false" ng-class="{'active':show_close_profit}">
                 <p class="num" ng-class="{'font-danger': singleAccountInfo.profit.indexOf('-') < 0, 'font-success': singleAccountInfo.profit.indexOf('-') >= 0}">${{ singleAccountInfo.profit || '0.00' }}</p>
