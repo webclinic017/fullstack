@@ -1,6 +1,6 @@
 ;(function (w) {
     var url = {
-      openIos: 'tigerwitiOS://',
+      openIos: 'tigerwitGlobal://',
       openAndriod: 'tigerwit://',
       down: 'http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex'
     };
