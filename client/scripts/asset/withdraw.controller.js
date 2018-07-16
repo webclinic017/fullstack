@@ -521,10 +521,17 @@
 
                         if (data.is_succ) {
                             $scope.withdraw.success = true;
-                            openWithdrawMdl({
-                                type: "withdrawSucc",
-                                message: ''
-                            });
+                            if($scope.withdraw.accountType === 'wallet'){
+                                openWithdrawMdl({
+                                    type: "walletSuss",
+                                    message: ''
+                                });
+                            }else{
+                                openWithdrawMdl({
+                                    type: "withdrawSucc",
+                                    message: ''
+                                });
+                            }
 
                             $state.go('space.asset.subpage', {
                                 subpage: 'withdraw',
