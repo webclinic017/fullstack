@@ -543,6 +543,9 @@
                 font-size: 14px;
             }
             .summary_amount {
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
                 font-size: 20px;
                 font-weight: 500;
                 margin-top: 12px;
