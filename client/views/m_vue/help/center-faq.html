@@ -159,7 +159,11 @@
                     <%if(lang.isCompany('pandafx')){%>
                         <img src="/white_label/trade-time-pandafx.jpg" alt="">
                     <%} else { %>
-                        <img src="/white_label/trade-time.jpg" alt="">
+                        <%if(lang.currentLanguage() === 'en'){%>
+                        <img src="/white_label/trade-time-en.png" alt="">
+                        <%} else { %>
+                        <img src="/white_label/trade-time-cn.png" alt="">
+                        <%}%>
                     <%}%>
                     
                 </p>

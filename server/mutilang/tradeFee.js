@@ -92,7 +92,7 @@ module.exports = {
         "en": "Deposit Fees"
     },
     "tradeFee23": {
-        "zh": "电汇入金：不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，TigerWit不收取电汇入金手续费，入金金额将以实际到账为准。其他方式不收取任何手续费。",
+        "zh": "电汇入金：不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，TigerWit不收取电汇入金手续费，入金金额将以实际到账为准。",
         "en": "Wire transfer：TigerWit does not charge wire transfer fees, different banks in the purchase of foreign exchange and remittances will charge different fees (usually fee, telegraph fee and transit costs), the costs incurred in the purchase of foreign exchange and remittance shall be borne by the customer, TigerWit will be the actual amount of money to customers recharge."
     },
     "tradeFee24": {
@@ -104,7 +104,7 @@ module.exports = {
         "en": "Withdrawal Fees"
     },
     "tradeFee26": {
-        "zh": "每个账户每月拥有4次免费提现的机会，超过4次每笔提现将收取5元人民币手续费。",
+        "zh": "每个账户每月拥有4次免费提现的机会，超过4次每笔提现将收取1美元手续费。",
         "en": "Free withdrawals 4 times per month each account, more than 4 times, charge $1 for each withdrawal."
     },
     "tradeFee27": {
@@ -134,6 +134,10 @@ module.exports = {
     "tradeFee33": {
         "zh": "手续费",
         "en": "Swap"
-    }
+    },
+    "tradeFee34": {
+        "zh": "网银入金：支付通道收取的手续费由客户自行承担，移动端网银入金每笔收取2%费率，PC端网银入金每笔收取1.8%费率，TigerWit不收取任何手续费用。",
+        "en": "Payment Of Internet Banking: The fees charged by the payment channel is borne by the customer, mobile Internet Banking pays a 2% rate per payment, PC-side Internet Banking pays a 1.8% rate per payment, TigerWit does not charge any fees."
+    },
 }
 
