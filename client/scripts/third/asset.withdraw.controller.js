@@ -129,12 +129,12 @@
                 } else {
                     $scope.message = {
                         is_succ: false,
-                        error_msg: data.data.status_message
+                        error_msg: data.message
                     };
                     // if ($scope.withdraw.type === 'invest') {
                     openWithdrawMdl({
                         type: 'withdrawFail',
-                        message: data.data.status_message
+                        message: data.message
                     });
                     // }
                 }

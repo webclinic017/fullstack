@@ -271,6 +271,10 @@
                             font-size: 20px;
                             color: rgb(25, 79, 130);
                             font-weight: 500;
+                            overflow: hidden;
+                            max-width: 120px;
+                            text-overflow:ellipsis;
+                            white-space: nowrap;
                         }
                         .edit {
                             width: 22px;
