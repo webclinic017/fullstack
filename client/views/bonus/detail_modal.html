@@ -43,9 +43,12 @@
                     <td colspan="5"></td>
                     <td><i class="fa fa-dollar"></i>{{ total.pay_noob }}</td>
                 </tr> -->
-                <tr ng-if="success && details.length <= 0"><td colspan="7">无数据</td></tr>
                 <tr ng-if="! success"><td colspan="7">加载中...</td></tr>
             </tbody>
         </table>
+        <div ng-if="success && details.length <= 0" class="text-center mg-bt-20">
+            <img src="/images/no_data.png" alt="" class="mg-bt-40">
+            <p>暂无数据!</p> 
+        </div>
     </div>
 </div>

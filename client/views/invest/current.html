@@ -102,11 +102,12 @@
                         <td>
                         </td>
                     </tr>
-                    <tr ng-if="orders.length <= 0 && orderCurrent.detailsShow">
-                        <td colspan="5">无数据</td>
-                    </tr>
                 </tbody>
             </table>
+            <div ng-if="orders.length <= 0 && orderCurrent.detailsShow" class="text-center mg-bt-20">
+                <img src="/images/no_data.png" alt="" class="mg-bt-40">
+                <p>暂无数据!</p> 
+            </div>
         </div>
 
         <!-- 复制交易持仓订单 -->
@@ -305,6 +306,7 @@
         </div>
     </div>
     <div class="text-center mg-tp-15" ng-if="orders.length <= 0 && traders.length <= 0 && from_data <= 0">
-        <p class="">无数据</p>
+        <img src="/images/no_data.png" alt="" class="mg-bt-40">
+        <p>暂无数据!</p> 
     </div>
 </div>

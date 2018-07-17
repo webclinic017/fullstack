@@ -99,14 +99,15 @@
                         <button class="btn btn-primary btn-sm" ng-click="openBonusDetailMdl(master)">详情</button>
                     </td>
                 </tr>
-                <tr ng-if="success && masterList.length <= 0">
-                    <td colspan="6">{{ backErr.msg || '无数据'}}</td>
-                </tr>
                 <tr ng-if="! success">
                     <td colspan="6">加载中...</td>
                 </tr>
             </tbody>
         </table>
+        <div ng-if="success && masterList.length <= 0" class="text-center mg-bt-20">
+            <img src="/images/no_data.png" alt="" class="mg-bt-40">
+            <p>{{ backErr.msg || '暂无数据!'}}</p> 
+        </div>
     </div>
     <div ng-if="personal && !personal.has_master">
         <table class="table table-header table-hover table-striped table-bordered">
@@ -146,7 +147,10 @@
                     </td>
                 </tr>
                 <tr ng-if="success && copierList.length <= 0">
-                    <td colspan="6">{{ backErr.msg || '无数据'}}</td>
+                    <td colspan="6">
+                        <img src="/images/no_data.png" alt="" class="mg-bt-40">
+                        <p>{{ backErr.msg || '暂无数据!'}}</p> 
+                    </td>
                 </tr>
                 <tr ng-if="! success">
                     <td colspan="6">加载中...</td>
