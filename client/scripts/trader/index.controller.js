@@ -236,5 +236,26 @@
                 }
             });
         }
+        // 复制协议
+        // copyProtocolMdl()
+        function copyProtocolMdl(){
+            $modal.open({
+                templateUrl: '/views/web/trader/copy_protocol_modal.html',
+                size: 'sm',
+                resolve: {
+                    passedScope: function () {
+                        return {
+                            
+                        };
+                    }
+                },    
+                controller: function ($scope, passedScope, $modalInstance) {
+                    $scope.closeModal = closeModal;
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
     }
 })();
