@@ -3,7 +3,7 @@ module.exports = [
       bank_id: 'ICBC',
       bank_name: '工商银行',
       img_url: 'https://www.tigerwit.com/downloads/static/deposit_bank/icbc.png',
-      bank_status: 'static_select_selectV2',  //区分两个不同页面列表  static >> /m/deposit/pay, select >> /m/deposit/pay_select
+      bank_status: 'static_select',  //区分不同页面列表  static >> /m/deposit/pay, select >> /m/deposit/pay_select, selectV2 >> /m/deposit/pay_select_v2
       select: 'pc',
       special: false
   },
@@ -75,7 +75,7 @@ module.exports = [
       bank_id: 'HXB',
       bank_name: '华夏银行',
       img_url: 'https://www.tigerwit.com/downloads/static/deposit_bank/hxb.png',
-      bank_status: 'static_select_selectV2',
+      bank_status: 'static_select',
       select: 'pc',
       special: false
   },
@@ -123,7 +123,7 @@ module.exports = [
       bank_id: 'PABC',
       bank_name: '平安银行',
       img_url: 'https://www.tigerwit.com/downloads/static/deposit_bank/pabc.png',
-      bank_status: 'static_selectV2',
+      bank_status: 'static',
       select: 'pc',
       special: true
   },
