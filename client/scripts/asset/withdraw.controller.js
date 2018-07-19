@@ -512,9 +512,7 @@
                 }
 
                 function withdraw() {
-                    if($scope.withdraw.type !== 'wallet'){
-                        paramsAsset.mt4_id = $scope.withdraw.mt4_id;
-                    }
+                    paramsAsset.mt4_id = noIsWalletId();
                     asset.withdraw(paramsAsset).then(function (data) {
                         if (!data) return;
                         $scope.clickable = true;
