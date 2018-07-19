@@ -32,13 +32,44 @@
                 // address:         // 开户行
                 // banken:          // 银行英文名
             },
-            type: $state.params.type || 'invest',   // invest, wallet
+            type: 'invest',   // invest, wallet
+            mt4_id: '',
             accountType: 'bank',    // bank, cse
             thirdAccount: undefined,
             success: false,
             minAmount: companyName == 'tigerwit' ? 20 : 100,
             maxAmount: 0
         };
+        $scope.common_acount = {   // 账户
+            type: 'invest'
+        }
+        // 被选中的账号
+        $scope.accountItem = {
+          account_name: '',
+          mt4_id : ''
+        }
+
+        $scope.$watch('{id: accountItem.mt4_id, type: common_acount.type}', function(n){
+            if(n.type){
+                $scope.withdraw.type = n.type;
+                if(n.type === 'wallet'){
+                    $scope.accountIsWallet = true;
+                    if($scope.withdraw.accountType === 'wallet'){
+                        changeWithdrawAccountType('bank');
+                    }
+                } else {
+                    $scope.accountIsWallet = false;
+                }
+            }
+            if(n.id){
+                $scope.withdraw.mt4_id = n.id
+            }
+            if(n.id && n.type) {
+                getIsWithdraw()
+            }
+            
+        }, true)
+
         $scope.withdrawTypeLst = {}; // 出金方式列表
         $scope.currencyStatus = false; // 选择币种列表
         $scope.frontErr = {
@@ -76,7 +107,7 @@
         function noIsWalletId(){
             var mt4_id;
             if($scope.withdraw.type !== 'wallet'){
-                mt4_id = $scope.main.trade_account.mt4_id;
+                mt4_id = $scope.withdraw.mt4_id;
             }
             return mt4_id;
         }
@@ -452,7 +483,7 @@
         }
 
         function withdrawInvest(paramsAsset) {
-            asset.getIsWithdraw($scope.withdraw.amount).then(function (data) {
+            asset.getIsWithdraw($scope.withdraw.amount, noIsWalletId()).then(function (data) {
                 if (data.is_succ) {
                     if (data.code !== 0) {
                         if (codeRage.indexOf(data.code) == -1) data.code = 0;
@@ -502,9 +533,7 @@
                 }
 
                 function withdraw() {
-                    if($scope.withdraw.type !== 'wallet'){
-                        paramsAsset.mt4_id = $scope.main.trade_account.mt4_id;
-                    }
+                    paramsAsset.mt4_id = noIsWalletId();
                     asset.withdraw(paramsAsset).then(function (data) {
                         if (!data) return;
                         $scope.clickable = true;
@@ -593,7 +622,7 @@
                         return {
                             withdrawType: $scope.withdraw.accountType,
                             withdrawTypeLst: $scope.withdrawTypeLst,
-                            isWallet: $scope.withdraw.type === 'wallet'
+                            isWallet: $scope.accountIsWallet
                         };
                     }
                 },

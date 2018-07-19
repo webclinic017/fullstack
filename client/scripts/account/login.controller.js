@@ -185,9 +185,6 @@
                         login_isNew: false,
                         login_type: $scope.loginType == 'code' ? '验证码登录' : '账号密码登录'
                     });
-                    if(data.user_type){
-                        accountInitializerTip(data.user_type);
-                    }
                     $timeout(function () {
                         account.hasChecked = false;
                         $state.go('space.center.index', {reload: true});
@@ -299,23 +296,6 @@
                     $interval.cancel($scope.codeBtnStatus[codeType].timer);
                 }
             }, 1000);
-        }
-
-        // 账号合并提醒
-        // accountInitializerTip(1);
-        function accountInitializerTip(type){
-            $modal.open({
-                templateUrl: '/views/account/account_Initializer_tip.html',
-                size: 'sm',
-                backdrop: true,
-                controller: function ($scope, $modalInstance) {
-                    $scope.historyType = type;
-                    $scope.closeModal = closeModal;
-                    function closeModal() {
-                        $modalInstance.dismiss();
-                    }
-                },
-            });
         }
     }
 })();

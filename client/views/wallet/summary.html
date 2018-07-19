@@ -28,15 +28,14 @@
             </td>
             <td>${{ history.wallet_balance }}</td>
         </tr>
-        <tr ng-if="historyList.length <= 0">
-            <td colspan="5">
-                无数据!
-            </td>
-        </tr>
         </tbody>
     </table>
 
     <div class="text-center">
         <p tw-pagination></p>
+    </div>
+    <div ng-if="historyList.length <= 0" class="text-center mg-bt-20">
+        <img src="/images/no_data.png" alt="" class="mg-bt-40">
+        <p>暂无数据!</p> 
     </div>
 </div>

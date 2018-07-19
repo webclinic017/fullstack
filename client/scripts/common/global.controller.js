@@ -52,6 +52,9 @@
                     account.getPersonalInfo().then(function (data) {
                         // console.log('info', data);
                         if (!data) return;
+                        if(data.user_type){
+                            accountInitializerTip(data.user_type);
+                        }
                         angular.extend($scope.personal, data, {
                             profile_check_ready: true,
                             xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs + '?timestamp=' + (+new Date()),
@@ -65,6 +68,22 @@
                 }
             });
         });
+        // 账号合并提醒
+        // accountInitializerTip(1);
+        function accountInitializerTip(type){
+            $modal.open({
+                templateUrl: '/views/account/account_Initializer_tip.html',
+                size: 'sm',
+                backdrop: true,
+                controller: function ($scope, $modalInstance) {
+                    $scope.historyType = type;
+                    $scope.closeModal = closeModal;
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                },
+            });
+        }
         $scope.$on('refresh_personal_cookies_info', function (event, is_login, is_register) {
             // console.info('refresh_personal_cookies_info');
             if (is_login) {

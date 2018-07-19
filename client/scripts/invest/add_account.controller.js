@@ -30,23 +30,27 @@
         // $scope.showErr = showErr;
         $scope.closeModalReload = closeModalReload;
         function addAccount() {
-            account.newSubAccount().then(function (data) {
-                if (!data) return;
-                // console.info(data); 
-                if (data.is_succ) {
-                    if(data.code === 0) {
-                        $scope.addAccountLogic.logic = 0;
-                        // $scope.addAccountLogic.mt4_id = data.mt4_id;
-                    }else {
+            $scope.clickAddAccount = true;
+            $timeout(function(){
+                account.newSubAccount().then(function (data) {
+                    $scope.clickAddAccount = false;
+                    if (!data) return;
+                    // console.info(data); 
+                    if (data.is_succ) {
+                        if(data.code === 0) {
+                            $scope.addAccountLogic.logic = 0;
+                            // $scope.addAccountLogic.mt4_id = data.mt4_id;
+                        }else {
+                            $scope.addAccountLogic.logic = 2;
+                        }
+                    } else {
                         $scope.addAccountLogic.logic = 2;
                     }
-                } else {
-                    $scope.addAccountLogic.logic = 2;
-                }
-                $scope.addAccountLogic.code = data.code;
-                $scope.addAccountLogic.mt4_id = data.data.inactive_account.mt4_id;
-                $scope.addAccountLogic.msg = data.message;
-            });
+                    $scope.addAccountLogic.code = data.code;
+                    $scope.addAccountLogic.mt4_id = data.data.inactive_account.mt4_id;
+                    $scope.addAccountLogic.msg = data.message;
+                });
+            }, 1000)
         }
         // 充值激活
         function depositActivate(){

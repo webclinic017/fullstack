@@ -13,7 +13,7 @@
             minAmount: 0,       // 网银最低充值金额
             currency: null,     // 支付币种
             quota_full_notice: null,    // 网银限额按钮提示
-            type: $state.params.type || null,   // 充值类型
+            type: null,   // 充值类型
             amount: undefined,                  // 充值金额
             teleFile: undefined,    //电汇凭证
             submitBtn: false,                   // 充值按钮true/false
@@ -33,7 +33,35 @@
         $scope.openChangeDepTypeMdl = openChangeDepTypeMdl;
         $scope.openCurrency = openCurrency;
         $scope.selcetCurrency = selcetCurrency;
-
+        $scope.common_acount = {   // 账户
+            type: 'invest'
+        }
+        // 被选中的账号
+        $scope.accountItem = {
+          account_name: '',
+          mt4_id : ''
+        }
+        $scope.$watch('common_acount.type', function(n){
+            if(!n) return;
+            if(n === 'wallet'){
+                $scope.accountIsWallet = true;
+                if($scope.deposit.type === 'wallet'){
+                    angular.forEach($scope.depositTypeLst,function(value, index){
+                        // console.log(value, index,'1')
+                        if(value.default) {
+                            changeDepositType(index)
+                            return
+                        }
+                    })
+                    // 如果还等于零钱包
+                    if($scope.deposit.type === 'wallet') {
+                        changeDepositType(Object.keys($scope.depositTypeLst)[0])
+                    }
+                }
+            } else {
+                $scope.accountIsWallet = false;
+            }
+        })
         // 获取支付方式列表
         asset.getDepositPlatform().then(function (data) {
             if (data.is_succ) {
@@ -167,7 +195,8 @@
                         return {
                             depositType: $scope.deposit.type,
                             walletAble: $scope.walletAble,
-                            depositTypeLst: $scope.depositTypeLst
+                            depositTypeLst: $scope.depositTypeLst,
+                            isWallet: $scope.accountIsWallet
                         };
                     }
                 },
@@ -182,6 +211,13 @@
                     $scope.selectType = selectType;
                     $scope.changeType = changeType;
 
+                    $scope.isWallet = function(key){
+                        if(passedScope.isWallet){
+                            return key === 'wallet'? "false" : "true"
+                        } else {
+                            return true
+                        }
+                    }
                     function selectType(type) {
                         $scope.deposit.type = type;
                     }
@@ -230,6 +266,10 @@
                     confirmDeposit();
 
                     function confirmDeposit() {
+                        var mt4_id;
+                        if($scope.common_acount.type !== 'wallet'){
+                            mt4_id = $scope.accountItem.mt4_id;
+                        }
                         $scope.isLoading = true;
                         if ($scope.deposit.type !== 'tele') {
                             //第三方支付
@@ -286,7 +326,7 @@
                                     var w = $window.open('/waiting');
                                 }
 
-                                asset.deposit(amount, p, c, $scope.main.trade_account.mt4_id).then(function (data) {
+                                asset.deposit(amount, p, c, mt4_id).then(function (data) {
                                     $scope.isLoading = false;
                                     if (!data) return;
                                     if (data.is_succ) {
@@ -338,7 +378,7 @@
                                 $scope.isLoading = false;
                                 layer.msg('请上传电汇凭证');
                             } else {
-                                asset.teleDeposit(amount, $scope.deposit.teleFile).then(function (data) {
+                                asset.teleDeposit(amount, $scope.deposit.teleFile, mt4_id).then(function (data) {
                                     console.log(data);
                                     $scope.isLoading = false;
                                     if (data.is_succ) {
