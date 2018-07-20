@@ -1,0 +1,38 @@
+//H5复制规则
+.m_copy_rule {
+  padding: 16px;
+  .m_copy_rule_title {
+      font-size: 18px;
+      margin: 0;
+
+  }
+  .m_copy_rule_content {
+    font-size: 12px;
+    color: #999;
+  }
+  .m_copy_rule_sub_title {
+    font-size: 16px;
+    position: relative;
+    padding-left: 10px;
+    line-height: 16px;
+    span {
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background-color: #fedc01;
+      top: 0;
+      left: 0;
+    }
+  }
+  .m_copy_rule_tip {
+    color: #fe3b2f;
+    font-size: 12px;
+    margin: 5px 0px;
+  }
+  .m_copy_rule_concat {
+    font-size: 12px;
+    a {
+      color: #4a90e2;
+    }
+  }
+}

@@ -324,6 +324,11 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('m_vue/m_about_us', extendPublic({}, req));
     });
+    /*H5 复制规则*/
+    app.route('/m/copy/rule').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render("m_vue/m_copy_rule", extendPublic({}, req));
+    });
 
     /* H5 充值中转页面 */
     app.route('/m/deposit/pay').get(function (req, res) {
