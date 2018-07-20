@@ -232,6 +232,10 @@
         $scope.goForgetPassword = function () {
             $scope.loginStep2 = 2;
         };
+        // 回到密码登陆页
+        $scope.backPassword = function () {
+            $scope.loginStep2 = 1;
+        };
         // 忘记密码页 第二步
         $scope.goForgetPassword2 = function (formName) {
             if (!$scope.loginBtnStatus) return;

@@ -11,9 +11,7 @@
 
         $scope.depositTypeLst = {}; // 支付方式列表
         $scope.deposit = {
-            minAmount: 0,       // 网银最低充值金额
             currency: null,     // 支付币种
-            quota_full_notice: null,    // 网银限额按钮提示
             type: null,   // 支付方式
             amount: undefined,                  // 充值金额
             teleFile: undefined,    //电汇凭证
@@ -24,7 +22,7 @@
         $scope.currencyStatus = false; // 选择币种列表
         $scope.walletDepositSucc = false;
         $scope.teleDepositSucc = false;    // 上传凭证
-        $scope.walletAble = 0;      //零钱包余额
+        $scope.walletAble = 0;      //钱包余额
         $scope.withdraw = {   // 充值账户
             type: '',
             mt4_id: ''
@@ -42,7 +40,7 @@
                             return
                         }
                     })
-                    // 如果还等于零钱包
+                    // 如果还等于钱包
                     if($scope.deposit.type === 'wallet') {
                         changeDepositType(Object.keys($scope.depositTypeLst)[0])
                     }
@@ -89,20 +87,21 @@
         });
 
         // 获取入金限制
-        asset.getDepositLimit().then(function (data) {
-            // console.log(data);
-            if (!data) return;
-            if (data.is_succ) {
-                $scope.deposit.quota_full_notice = data.data.quota_full_notice;
-                $scope.deposit.minAmount = parseInt(data.data.min);
-                $scope.deposit.isAbleDeposit = data.data.evidence;
-                // $scope.deposit.isAbleDeposit = 1;
-                checkInputAmount();
-                // 网银入金限制
-                checkInvestLimit();
-            }
-        });
-        // 获取零钱包 可用金额
+        // 此接口限制合并到入金方式列表中，不再单独获取 2018.7.20
+        // asset.getDepositLimit().then(function (data) {
+        //     // console.log(data);
+        //     if (!data) return;
+        //     if (data.is_succ) {
+        //         $scope.deposit.quota_full_notice = data.data.quota_full_notice;
+        //         $scope.deposit.minAmount = parseInt(data.data.min);
+        //         $scope.deposit.isAbleDeposit = data.data.evidence;
+        //         // $scope.deposit.isAbleDeposit = 1;
+        //         checkInputAmount();
+        //         // 网银入金限制
+        //         checkInvestLimit();
+        //     }
+        // });
+        // 获取钱包 可用金额
         asset.walletCanWithdraw().then(function (data) {
             if (!data) return;
             // console.log(data);
@@ -114,7 +113,6 @@
 
         // 网银入金限制
         function checkInvestLimit () {
-            if ($scope.deposit.type !== 'invest') return;
             if ($scope.deposit.isAbleDeposit === 1) {
                 openDepositMdl('depositLimit', openChangeDepTypeMdl, {
                     msgTip: '您有未上传的充值凭证，需上传历史充值凭证后才可继续使用网银支付功能。',
@@ -130,6 +128,7 @@
         // 判断网银绑定银行卡
         function checkInvestBank () {
             if ($scope.deposit.type !== 'invest') return;
+            if ($scope.deposit.isAbleDeposit !== 0) return;
             asset.checkInvestBank().then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
@@ -153,12 +152,9 @@
                 return;
             }
             if ($scope.deposit.type === 'invest') {
-                if (Number($scope.deposit.amount) < $scope.deposit.minAmount) {
-                    $scope.deposit.submitBtn = false;
-                } else {
+                if ($scope.deposit.depositCard) {
                     $scope.deposit.submitBtn = true;
-                }
-                if (!$scope.deposit.depositCard) {
+                } else {
                     $scope.deposit.submitBtn = false;
                 }
                 return;
@@ -176,8 +172,10 @@
 
         // 切换充值方式
         function changeDepositType(type) {
+            if (!type) return;
             $scope.deposit.depositCard = undefined;
             $scope.deposit.type = type;
+            $scope.deposit.isAbleDeposit = $scope.depositTypeLst[$scope.deposit.type].evidence_status;
             $scope.deposit.currency = $scope.depositTypeLst[$scope.deposit.type].currency.length ? $scope.depositTypeLst[$scope.deposit.type].currency[0] : null;
             checkInvestLimit();
             checkInputAmount();
@@ -218,7 +216,8 @@
                     $scope.selectType = selectType;
                     $scope.changeType = changeType;
 
-                    function selectType(type) {
+                    function selectType(type, status) {
+                        if (status === 2) return;
                         $scope.deposit.type = type;
                     }
 
@@ -282,25 +281,15 @@
                                     url: $scope.depositTypeLst[$scope.deposit.type].url,
                                     callback: submitDeposit
                                 });
-                            } else if ($scope.deposit.type === 'invest') {
-                                asset.getDepositLimit().then(function (data) {
-                                    // console.log(data);
-                                    if (!data) return;
-                                    if (data.is_succ) {
-                                        $scope.deposit.isAbleDeposit = data.data.evidence;
-                                        $scope.isLoading = false;
-                                        if ($scope.deposit.isAbleDeposit === 0) {
-                                            computeAmount();
-                                        } else {
-                                            checkInvestLimit();
-                                        }
-                                    }
-                                });
                             } else if ($scope.deposit.type === 'wallet') {
                                 submitDeposit();
                             } else {
                                 $scope.isLoading = false;
-                                computeAmount();
+                                if ($scope.deposit.isAbleDeposit === 0) {
+                                    computeAmount();
+                                } else {
+                                    checkInvestLimit();
+                                }
                             }
 
                             function computeAmount () {

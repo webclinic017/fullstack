@@ -156,6 +156,11 @@
                 cursor: pointer;
             }
         }
+        span {
+            font-size: 16px;
+            padding-left: 5px;
+            color: #f5524f;
+        }
     }
     @include e(wallet_succ) {
         color: #494949;
@@ -383,6 +388,10 @@
         li {
             margin-bottom: 15px;
             cursor: pointer;
+            &.unable_select {
+                opacity: 0.5;
+                cursor: not-allowed;
+            }
         }
         @include m(icon) {
             padding-right: 0px;

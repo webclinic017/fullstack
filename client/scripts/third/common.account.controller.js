@@ -30,7 +30,7 @@
         }
       });
     }
-    // 切换交易账户或零钱包
+    // 切换交易账户或钱包
     $scope.changeWithdrawType = function(type){
       $scope.common_acount.type = type;
     }

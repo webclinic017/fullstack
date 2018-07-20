@@ -217,6 +217,7 @@
             actLogin27: {zh: "*已使用SSL加密技术保护您的网络安全", en: "Secure your network with SSL encryption technology"},
             actLogin28: {zh: "找回密码", en: "Retrieve the password"},
             actLogin29: {zh: "下一步", en: "Next"},
+            actLogin29_1: {zh: "上一步", en: "Prev"},
             actLogin30: {zh: "完成修改", en: "Submit"},
             actLogin31: {zh: "新密码设置成功", en: "The new password is set up successfully"},
             actLogin32: {zh: "重新登录", en: "Re-register"},
