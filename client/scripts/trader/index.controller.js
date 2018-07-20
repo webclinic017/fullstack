@@ -149,17 +149,22 @@
                             } else if (dredged_type === 'demo') {
                                 openSystemMdl('verify');
                             } else {
-                                var minCopyAmount = parseFloat($scope.master.min_copy_amount, 10);
-                                if (typeof avaCopyAmount === 'undefined') {
-                                    console.log('getting available copy amount');
-                                    return;
-                                }
-                                avaCopyAmount = parseFloat(avaCopyAmount, 10);
-                                // console.log(avaCopyAmount, minCopyAmount);
-                                if (avaCopyAmount < minCopyAmount) {
-                                    openSystemMdl('amount', minCopyAmount);
-                                } else {
-                                    openCopyMdl();
+                                var replication_protocol = localStorage['replication_protocol'];
+                                if(replication_protocol){
+                                    var minCopyAmount = parseFloat($scope.master.min_copy_amount, 10);
+                                    if (typeof avaCopyAmount === 'undefined') {
+                                        console.log('getting available copy amount');
+                                        return;
+                                    }
+                                    avaCopyAmount = parseFloat(avaCopyAmount, 10);
+                                    // console.log(avaCopyAmount, minCopyAmount);
+                                    if (avaCopyAmount < minCopyAmount) {
+                                        openSystemMdl('amount', minCopyAmount);
+                                    } else {
+                                        openCopyMdl();
+                                    }
+                                }else{
+                                    copyProtocolMdl();
                                 }
                             }
 
@@ -253,6 +258,13 @@
                     $scope.closeModal = closeModal;
                     function closeModal() {
                         $modalInstance.dismiss();
+                    }
+                    // 同意协议
+                    $scope.agreeProtocol = function(){
+                        closeModal();
+                        localStorage['replication_protocol'] = 1;
+                        $timeout(function(){toCopy()}, 500)
+                        
                     }
                 }
             });
