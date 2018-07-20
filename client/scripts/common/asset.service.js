@@ -276,7 +276,7 @@
         }
 
         /**
-         * Asset Service 零钱包入金
+         * Asset Service 钱包入金
          *
          * @method walletDeposit
          * @param {Number} amount
@@ -288,7 +288,7 @@
         }
 
         /**
-         * Asset Service 零钱包出金
+         * Asset Service 钱包出金
          *
          * @method walletWithdraw
          * @param {Number} amount
@@ -298,7 +298,7 @@
         }
 
         /**
-         * Asset Service 获取零钱包可出金金额
+         * Asset Service 获取钱包可出金金额
          *
          * @method walletCanWithdraw
          * 
@@ -308,7 +308,7 @@
         }
 
         /**
-         * Asset Service 获取零钱包余额
+         * Asset Service 获取钱包余额
          *
          * @method walletbalance
          * 

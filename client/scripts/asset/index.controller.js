@@ -28,7 +28,7 @@
     }
     // 打开交易账号列表
     $scope.subAccountList = subAccountList;
-    // 获取零钱包 金额
+    // 获取钱包 金额
     function walletBalanceFun(){
       asset.walletbalance().then(function (data) {
         if (!data) return;
@@ -66,7 +66,7 @@
         }
       });
     }
-    // 切换交易账户或零钱包
+    // 切换交易账户或钱包
     $scope.changeWithdrawType = function(type){
       $scope.selectWay.type = type;
     }

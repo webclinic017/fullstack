@@ -144,7 +144,7 @@
         }
 
         /**
-         * Asset Service 查询零钱包交易明细
+         * Asset Service 查询钱包交易明细
          *
          * @method getWalletHistory
          *

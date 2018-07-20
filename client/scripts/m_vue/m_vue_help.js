@@ -99,7 +99,7 @@ if ($(".m_vue").attr("data-page") === "help") {
                         },
                         {
                             param: 'operate-wallet',
-                            title: '什么是零钱包功能'
+                            title: '什么是钱包功能'
                         },
                         {
                             param: 'operate-redbag',
@@ -130,7 +130,7 @@ if ($(".m_vue").attr("data-page") === "help") {
                         },
                         {
                             param: 'operate-wallet',
-                            title: '什么是零钱包功能'
+                            title: '什么是钱包功能'
                         },
                         {
                             param: 'operate-redbag',

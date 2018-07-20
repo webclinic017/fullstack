@@ -40,7 +40,7 @@
         </li>
         <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.wallet_user_status === 0}">
             <!-- <a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})"> -->
-                <p class="summary_name">零钱包</p>
+                <p class="summary_name">钱包</p>
                 <p class="summary_btn" ng-if="assetInfo.wallet_user_status === 0"><a ng-click="notActiveModal()">未激活</a></p>
                 <span ng-if="assetInfo.wallet_user_status === 1">
                     <p class="summary_amount">${{ assetInfo.wallet_balance || '--' }}</p>
@@ -117,7 +117,7 @@
 <!-- <div class="space_block" ng-class="{'gapped': personal.basic != 'center.wallet.subpage'}" ng-if="personal.basic === 'center.index'">
     <div class="row">
         <div class="col-xs-3">
-            <div class="block_title">零钱包</div>
+            <div class="block_title">钱包</div>
         </div>
         <div class="col-xs-9">
             <div class="block_btn_group text-right">
@@ -131,6 +131,6 @@
     </div>
 
     <div class="row">
-        <p class="block_tips">高手分成收益与代理商佣金收益会存入零钱包，您可以提现或划入交易账户。</p>
+        <p class="block_tips">高手分成收益与代理商佣金收益会存入钱包，您可以提现或划入交易账户。</p>
     </div>
 </div> -->

@@ -9,7 +9,7 @@
 
     function WalletToolbarController($scope, asset) {
 
-        // 获取零钱包 金额
+        // 获取钱包 金额
         asset.walletbalance().then(function (data) {
             if (!data) return;
             // console.log(data);

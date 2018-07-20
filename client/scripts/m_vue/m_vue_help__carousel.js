@@ -1,5 +1,5 @@
 /**
- * 包含如何实名认证、什么是零钱包、红包相关教程、如何邀请好友
+ * 包含如何实名认证、什么是钱包、红包相关教程、如何邀请好友
  */
 if ($(".m_vue").attr("data-type") === "carousel") {
     var helpSelfApp = new Vue({
@@ -52,11 +52,11 @@ if ($(".m_vue").attr("data-type") === "carousel") {
                 wallet: [
                     {
                         imgSrc: cn == 'tigerwit' ? ['help_wallet-step1'] : ['help_wallet-pandafx-step1'],
-                        desp: '1.  交易高手所获分成将定期发放到“零钱包”中，高手可以点击“零钱包”查看。'
+                        desp: '1.  交易高手所获分成将定期发放到“钱包”中，高手可以点击“钱包”查看。'
                     },
                     {
                         imgSrc: cn == 'tigerwit' ? ['help_wallet-step2'] : ['help_wallet-pandafx-step2'],
-                        desp: '2. 进入“零钱包”查看分成收入，该金额可以充值到交易账户，也可进行提现，按照正常充值/提现流程操作即可。'
+                        desp: '2. 进入“钱包”查看分成收入，该金额可以充值到交易账户，也可进行提现，按照正常充值/提现流程操作即可。'
                     }
                 ],
             }

@@ -46,7 +46,7 @@
             });
         }
 
-        // 零钱包未激活弹窗
+        // 钱包未激活弹窗
         function notActiveModal() {
             $modal.open({
                 templateUrl: '/views/space/not_active_modal.html',
@@ -54,8 +54,8 @@
                 backdrop: true,
                 controller: function ($scope, $modalInstance) {
                     $scope.contentModal = {
-                        title: '激活零钱包提示',
-                        message: '零钱包不支持单独激活，交易类账户开通成功后，零钱包将自动激活。'
+                        title: '激活钱包提示',
+                        message: '钱包不支持单独激活，交易类账户开通成功后，钱包将自动激活。'
                     }
                     $scope.closeModal = closeModal;
                     function closeModal() {

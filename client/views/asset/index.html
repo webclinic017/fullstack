@@ -15,7 +15,7 @@
                     <p class="summary_btn" ng-if="selectWay.type !=='invest'"><span>点击切换子账号 ></span></p>
                 </div>
                 <div class="withdraw__list-item" ng-class="{'not-active': selectWay.type != 'wallet'}" ng-click="changeWithdrawType('wallet')">
-                    <p class="summary_name">零钱包</p>
+                    <p class="summary_name">钱包</p>
                     <p class="summary_amount">${{ walletbalance || '0.00' }}</p>
                 </div>
             </div>

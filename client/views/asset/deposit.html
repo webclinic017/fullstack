@@ -32,9 +32,10 @@
             <div class="col-xs-7">
                 <div class="deposit__way" ng-click="openChangeDepTypeMdl()">
                     {{ deposit.type ? depositTypeLst[deposit.type].name : '请选择' }}
+                    <span>{{ deposit.type ? depositTypeLst[deposit.type].hint : '' }}</span>
                 </div>
                 <p class="deposit__way-tip" ng-class="{active: deposit.type !== 'wallet'}">{{depositTypeLst[deposit.type].describe}}</p>
-                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'wallet'}">当前零钱包余额：${{ walletAble || '0.00' }}</p>
+                <p class="deposit__way-tip" ng-class="{active: deposit.type === 'wallet'}">当前钱包余额：${{ walletAble || '0.00' }}</p>
                 <a class="deposit__way-tip font-danger mg-tp-10 cursor_pointer" ng-class="{active: deposit.type === 'cseWallet'}" href="/third_usage" target="_blank">
                     第三方充值教程
                 </a>
@@ -88,39 +89,15 @@
         <div class="row mg-tp-50">
             <div class="col-xs-2"></div>
             <div class="col-xs-7 text-center">
-                <!-- 按钮逻辑 
-                    1.首先确定loading状态
-                    2.判断是否网银入金（invest）
-                        若是则判断deposit.quota_full_notice确定入金金额限制，若为ture则显示deposit.quota_full_notice，若为false，进入第3步
-                        若否进入第3步
-                    3.判断各入金方式的限制
-                -->
                 <div ng-if="!isLoading" class="deposit__btn_wrapper">
-                    <div ng-if="deposit.type === 'invest'">
-                        <div ng-if="deposit.quota_full_notice">
-                            <button class="tw-btn tw-btn-capsule-gradient tw-btn-full tw-btn-disabled disabled">
-                                {{deposit.quota_full_notice}}
-                            </button>
-                        </div>
-                        <div ng-if="!deposit.quota_full_notice">
-                            <button ng-if="deposit.submitBtn" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-click="toDeposit()">
-                                充值
-                            </button>
-                            <button ng-if="!deposit.submitBtn" class="tw-btn tw-btn-capsule-gradient tw-btn-full tw-btn-disabled disabled">
-                                充值
-                            </button>
-                        </div>
-                    </div>
-                    <div ng-if="deposit.type !== 'invest'">
-                        <button ng-if="deposit.submitBtn" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-click="toDeposit()">
-                            <span ng-show="deposit.type !== 'tele'">充值</span>
-                            <span ng-show="deposit.type === 'tele'">提交</span>
-                        </button>
-                        <button ng-if="!deposit.submitBtn" class="tw-btn tw-btn-capsule-gradient tw-btn-full tw-btn-disabled disabled">
-                            <span ng-show="deposit.type !== 'tele'">充值</span>
-                            <span ng-show="deposit.type === 'tele'">提交</span>
-                        </button>
-                    </div>
+                    <button ng-if="deposit.submitBtn" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-click="toDeposit()">
+                        <span ng-show="deposit.type !== 'tele'">充值</span>
+                        <span ng-show="deposit.type === 'tele'">提交</span>
+                    </button>
+                    <button ng-if="!deposit.submitBtn" class="tw-btn tw-btn-capsule-gradient tw-btn-full tw-btn-disabled disabled">
+                        <span ng-show="deposit.type !== 'tele'">充值</span>
+                        <span ng-show="deposit.type === 'tele'">提交</span>
+                    </button>
                 </div>
                 <div ng-if="isLoading" class="deposit__btn_wrapper">
                     <button class="tw-btn tw-btn-capsule-gradient tw-btn-full"><i class="loading_spinner fa fa-spinner"></i> 提交中</button>
