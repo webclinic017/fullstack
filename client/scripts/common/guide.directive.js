@@ -22,8 +22,8 @@
                 '</div>',
             link: function (scope, element, attrs) {
               var ind = 0;
-            //   if (localStorage[scope.guideType]) return;
-            //   localStorage[scope.guideType] = true;
+              if (localStorage[scope.guideType]) return;
+              localStorage[scope.guideType] = true;
               
               if (scope.srcList.length) {
                 scope.guideShow = true;
