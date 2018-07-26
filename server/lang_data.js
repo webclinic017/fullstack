@@ -755,7 +755,7 @@ module.exports = function () {
         copyRule22: {zh: "3.您取消复制关系选择跟随高手平仓时，系统将在跟随该高手的所有订单全部平仓后，对跟随该高手所有订单进行统计并结算，扣除总盈利的20%作为该高手分成。", en: "3．System will statistics and settlement all the orders and deduct 20% as commission after closed all following orders when you cancel and follow the close."},
         copyRule23: {zh: "4.只要跟随高手开仓的订单，都会进行分成结算。", en: "4. As long as you follow the orders of the master to open orders, the commissions will be settled."},
         copyRule24: {zh: "在决定复制高手时，您确认已经考虑了您的整体财务状况，包括财务承诺，并且您了解使用复制跟单服务具有高度投机性并且您可以承受巨大的损失用于复制高手。请注意，我们无法就任何特定投资，账户，投资组合或策略的表现提供任何保证。", en: "Before copy a master, please make sure you already consider your financial status and understand the copy service have highly speculative also could sustain a great loss.Caution, we cannot provide any assurance of the performance of any specific investment, account, portfolio or strategy."},
-        copyRule25: {zh: "如您对协议有任何疑问，可拨打客服热线", en: "If you have any question about the copy regulations, please contact the service center "},
+        copyRule25: {zh: "如您对规则有任何疑问，可拨打客服热线", en: "If you have any question about the copy regulations, please contact the service center "},
         copyRule26: {zh: "进行咨询。", en: "."},
 
 

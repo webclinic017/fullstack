@@ -18,6 +18,11 @@
         }) 
         $scope.assetInfo = null;
         $scope.notActiveModal = notActiveModal;
+        $scope.src = [
+            "/white_label/passport/01.png",
+            "/white_label/passport/02.png",
+            "/white_label/passport/03.png"
+        ];
 
         //定时提取用户资产信息
         getAssetInfo();

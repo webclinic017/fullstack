@@ -27,6 +27,9 @@
             type: '',
             mt4_id: ''
         }
+        $scope.src = [
+            "/white_label/passport/04.png"
+        ];
         $scope.$watch('selectWay.type', function(n){
             if(!n) return;
             $scope.withdraw.type = n

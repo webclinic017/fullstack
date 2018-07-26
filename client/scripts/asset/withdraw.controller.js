@@ -16,6 +16,10 @@
         var codeRage = [100602, 100605, 100608];
 
         var companyName = $cookies["company_name"];
+        $scope.src = [
+            "/white_label/passport/05.png",
+            "/white_label/passport/06.png"
+        ];
 
         $scope.message = {};
         // $scope.messageWallet = {};
