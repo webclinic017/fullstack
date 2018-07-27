@@ -49,7 +49,7 @@
             // 获取用户交易账户信息
             account.getDealAccountList(1, 1).then(function (data) {
                 if (!data) return;
-                // console.info(data);
+                console.info(data);
                 if (data.is_succ) {
                     var list = data.data;
                     angular.forEach(list, function (value, index) {

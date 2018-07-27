@@ -17,7 +17,8 @@
             teleFile: undefined,    //电汇凭证
             submitBtn: false,                   // 充值按钮true/false
             isAbleDeposit: 0,    //是否能够入金（是否上传凭证）evidence  0不需要上传，1需要上传，2未审核
-            depositCard: undefined
+            depositCard: undefined,
+            isNeedBank: 0
         };
         $scope.currencyStatus = false; // 选择币种列表
         $scope.walletDepositSucc = false;
@@ -130,7 +131,7 @@
 
         // 判断网银绑定银行卡
         function checkInvestBank () {
-            if ($scope.deposit.type !== 'invest') return;
+            if (!$scope.deposit.isNeedBank) return;
             if ($scope.deposit.isAbleDeposit !== 0) return;
             asset.checkInvestBank().then(function (data) {
                 // console.log(data);
@@ -154,19 +155,19 @@
                 $scope.deposit.submitBtn = false;
                 return;
             }
-            if ($scope.deposit.type === 'invest') {
-                if ($scope.deposit.depositCard) {
-                    $scope.deposit.submitBtn = true;
-                } else {
-                    $scope.deposit.submitBtn = false;
-                }
-                return;
-            }
             if ($scope.deposit.type === 'wallet') {
                 if (Number($scope.deposit.amount) > Number($scope.walletAble)) {
                     $scope.deposit.submitBtn = false;
                 } else {
                     $scope.deposit.submitBtn = true;
+                }
+                return;
+            }
+            if ($scope.deposit.isNeedBank) {
+                if ($scope.deposit.depositCard) {
+                    $scope.deposit.submitBtn = true;
+                } else {
+                    $scope.deposit.submitBtn = false;
                 }
                 return;
             }
@@ -178,6 +179,7 @@
             if (!type) return;
             $scope.deposit.depositCard = undefined;
             $scope.deposit.type = type;
+            $scope.deposit.isNeedBank = $scope.depositTypeLst[$scope.deposit.type].check_card;
             $scope.deposit.isAbleDeposit = $scope.depositTypeLst[$scope.deposit.type].evidence_status;
             $scope.deposit.currency = $scope.depositTypeLst[$scope.deposit.type].currency.length ? $scope.depositTypeLst[$scope.deposit.type].currency[0] : null;
             checkInvestLimit();
