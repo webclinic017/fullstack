@@ -400,7 +400,7 @@
                 }
                 
                 publicRequest('regOrLogin', 'POST', {
-                    phone: $("#telephone").val() || null,
+                    account: $("#telephone").val() || null,
                     phone_code: areaCode || null,
                     // password: $("#password").val() || null,
                     password: $("#verify_code").val() || $("#password").val() || null,
