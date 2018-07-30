@@ -97,7 +97,7 @@
                         version_name : "V1.2.7",
                         description: "Update\nAdded new payment channel",
                         updated_description: "70% users are using new version",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.7.apk",
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.0.1.apk",
                         force_update : false
                     }
                 }
@@ -116,7 +116,7 @@
                         version_name : "V1.2.7",
                         description: "本次更新：\n新增支付渠道",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v1.2.7.apk",
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.0.1.apk",
                         force_update : false
                     }
                 }
