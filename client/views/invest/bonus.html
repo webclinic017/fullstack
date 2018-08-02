@@ -95,7 +95,7 @@
                 <tr ng-repeat="master in masterList" ng-if="masterList.length > 0">
                     <td class="text-left">
                         <p class="font-16">{{ master.username }}</p>
-                        <p class="font-12">扣除时间：{{ master.pay_time }}</p> 
+                        <p class="font-12">扣除时间：{{ master.pay_time | dealTimestamp }}</p> 
                     </td>
                     <td><i class="fa fa-dollar"></i>{{ master.copy_profit }}</td>
                     <!-- <td><i class="fa fa-dollar"></i>{{ master.max_profit }}</td> -->
