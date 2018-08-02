@@ -18,6 +18,24 @@ module.exports = [
     ]
   },
   {
+    title: "支付宝",
+    sub_title: null,
+    content: [
+      {
+        title: null,
+        tip: [
+          "Step1：登录支付宝APP",
+          "Step2：点击我的 > 账单 > 找到充值订单并点击 > 查看订单性情并截图。",
+          "Step3：点击我的 > 点击个人头像处 > 点击身份认证 > 截取此页面。"
+        ],
+        pic: [
+          "/white_label/deposit/alipay-1.png",
+          "/white_label/deposit/alipay-2.png"
+        ]
+      }
+    ]
+  },
+  {
     title: "工商银行",
     sub_title: null,
     content: [
