@@ -27,7 +27,7 @@
         $scope.info = {
             mt4_id: undefined,
             account_name: undefined,
-            clickEdit: true
+            clickEdit: true  // 正在修改的账号未保存时不能点击其他修改
         };
         // 获取交易账号信息与列表
         getDealAccount();
