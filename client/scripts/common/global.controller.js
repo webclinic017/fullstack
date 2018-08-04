@@ -24,7 +24,7 @@
         $scope.uploadAvatarImg = '';
 
         $scope.personal = {};
-        $scope.personal.is_live = null;
+        $scope.personal.is_live = '1';
         $scope.process = {};
 
         $scope.logout = logout;
@@ -52,6 +52,9 @@
                     account.getPersonalInfo().then(function (data) {
                         // console.log('info', data);
                         if (!data) return;
+                        if(data.user_type){
+                            accountInitializerTip(data.user_type);
+                        }
                         angular.extend($scope.personal, data, {
                             profile_check_ready: true,
                             xsAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.xs + '?timestamp=' + (+new Date()),
@@ -65,6 +68,22 @@
                 }
             });
         });
+        // 账号合并提醒
+        // accountInitializerTip(1);
+        function accountInitializerTip(type){
+            $modal.open({
+                templateUrl: '/views/account/account_Initializer_tip.html',
+                size: 'sm',
+                backdrop: true,
+                controller: function ($scope, $modalInstance) {
+                    $scope.historyType = type;
+                    $scope.closeModal = closeModal;
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                },
+            });
+        }
         $scope.$on('refresh_personal_cookies_info', function (event, is_login, is_register) {
             // console.info('refresh_personal_cookies_info');
             if (is_login) {
@@ -263,10 +282,10 @@
                     }
 
                     $scope.openDemo = function(){
-                        globalScope.personal.is_live = '0'
+                        globalScope.personal.is_live = '2'
                         $scope.loading.demo = true
                         getAuthStatus({
-                            is_live: '0'
+                            is_live: globalScope.personal.is_live
                         }).then(function(){
                             $scope.loading.demo = false
                             window.location.href = window.location.origin + '/space/#/authen/complete'
@@ -276,28 +295,30 @@
                     }
                     $scope.confirmLive = function () {
                         $modalInstance.dismiss()
-                        $layer({
-                            title: '提示',
-                            // msgClass: 'font-danger',
-                            size: 'sm',
-                            btnsClass: 'text-right',
-                            msg: '开通真实账户后，将不再支持开通体验金账户',
-                            autoClose: false,
-                            btns: {
-                                '取消': function () { },
-                                '继续': function (oScope) {
-                                    globalScope.personal.is_live = '1'
-                                    oScope.loading = 1
-                                    getAuthStatus({
-                                        is_live: '1'
-                                    }).then(function(){
-                                        oScope.loading = 2
-                                        window.location.href = window.location.origin + '/space/#/authen/'
-                                        toAuthenTypeSensorsdata('真实账户');
-                                    })
+                        $timeout(function(){
+                            $layer({
+                                title: '提示',
+                                // msgClass: 'font-danger',
+                                size: 'sm',
+                                btnsClass: 'text-right',
+                                msg: '开通真实账户后，将不再支持开通体验金账户',
+                                autoClose: false,
+                                btns: {
+                                    '取消': function () { },
+                                    '继续': function (oScope) {
+                                        globalScope.personal.is_live = '1'
+                                        oScope.loading = 1
+                                        getAuthStatus({
+                                            is_live: globalScope.personal.is_live
+                                        }).then(function(){
+                                            oScope.loading = 2
+                                            window.location.href = window.location.origin + '/space/#/authen/'
+                                            toAuthenTypeSensorsdata('真实账户');
+                                        })
+                                    }
                                 }
-                            }
-                        })
+                            })
+                        }, 450)
                     }
 
                     function closeModal() {
@@ -320,7 +341,6 @@
                 if (data.is_succ) {
                     // 开户类型(体验金、真实)
                     // var verify_status = 2
-                    // var accountStatus = data.data.account_status
                     var verify_status = data.data.status
                     var accountStatus = data.data.account_status
                     var accountStatusMap = {

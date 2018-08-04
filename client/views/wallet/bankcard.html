@@ -1,0 +1,35 @@
+<div class="sys_modal_v2 mid_case">
+    <!-- 管理银行卡 -->
+    <div class="sys_modal_v2__content">
+        <h3 class="sys_modal_v2__title text-left">管理银行卡</h3>
+        <div tw-loading-img></div>
+        <table class="manage_card_list">
+            <colgroup>
+                <col width="40%">
+                <col width="30%">
+                <col width="30%">
+            </colgroup>
+            <tbody>
+                <tr class="manage_card_list__item" ng-repeat="card in cardList track by $index">
+                    <td>
+                        <div class="widthdraw__card_bg" style="width: 80%;">
+                            <img ng-show="card.bank_img" ng-src="{{ card.bank_img }}">
+                            <span>{{ card.bank_name ||  card.bank_code }}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="card_number text-center">{{ card.card_no }}</p>
+                    </td>
+                    <td>
+                        <p class="text-center">
+                            <a class="btn-text card_btn" ng-click="confirmDeleteCard(card)">删除</a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mg-tp-10 text-left">
+            <a class="btn-text" ng-click="openAddCardModal()">添加银行卡</a>
+        </div>
+    </div>
+</div>

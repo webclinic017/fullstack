@@ -1,25 +1,27 @@
-<div class="space_block withdraw" ng-controller="ThirdWithdrawController">
-    <div class="row">
+<div class="space_block withdraw" ng-controller="ThirdWithdrawController"> 
+    <div ng-include="'/views/third/asset/common_account.html'"></div>
+
+    <!-- <div class="row">
         <div class="col-xs-2 text-left deposit__title-money">
-            提现帐户
+            提现账户
         </div>
 
         <div class="col-xs-9 clearfix">
             <div class="withdraw__way account" ng-class="{active: withdraw.type === 'invest'}" ng-click="changeWithdrawType('invest')">
-                <span>交易帐户</span>
-                <span class="amount">${{ main.balance || '0.00' }}</span>
+                <span>交易账户</span>
+                <span class="amount">${{ main.trade_balance || '0.00' }}</span>
             </div>
             <div class="withdraw__way wallet" ng-class="{active: withdraw.type === 'wallet'}" ng-click="changeWithdrawType('wallet')">
-                <span>零钱包</span>
+                <span>钱包</span>
                 <span class="amount">${{ main.wallet_balance || '0.00' }}</span>
             </div>
         </div>
-    </div>
+    </div> -->
     <br>
     <br>
     <br>
     <div class="row mg-bt-30">
-        <div class="col-xs-2 text-left deposit__title-money">
+        <div class="col-xs-2 text-right deposit__title-money">
             提现到
         </div>
 
@@ -32,7 +34,7 @@
         </div>
     </div>
     <div class="row mg-bt-30" ng-show="withdraw.accountType === 'bank'">
-        <div class="col-xs-2 text-left deposit__title-money">
+        <div class="col-xs-2 text-right deposit__title-money">
             银行卡
         </div>
 
@@ -54,8 +56,8 @@
             <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl('manage')">管理银行卡</span>
         </div>
     </div>
-    <div class="row" ng-show="withdraw.accountType !== 'bank'">
-        <div class="col-xs-2 text-left deposit__title-money">
+    <div class="row" ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet'">
+        <div class="col-xs-2 text-right deposit__title-money">
             姓名
         </div>
 
@@ -69,8 +71,8 @@
             </div>  
         </div>      
     </div>
-    <div class="row" ng-show="withdraw.accountType !== 'bank'">
-        <div class="col-xs-2 text-left deposit__title-money">
+    <div class="row" ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet'">
+        <div class="col-xs-2 text-right deposit__title-money">
             账号
         </div>
 
@@ -95,7 +97,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'invest' && withdrawMessageSucc && !message.is_succ">
+        <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdrawMessageSucc && !message.is_succ">
             <div class="warn_icon">
                 ⚠️
             </div>
@@ -106,7 +108,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'wallet' && withdrawMessageSucc && !messageWallet.is_succ">
+        <!-- <div class="col-xs-8 col-xs-offset-2 warn_tip_area" ng-show="withdraw.type === 'wallet' && withdrawMessageSucc && !messageWallet.is_succ">
             <div class="warn_icon">
                 ⚠️
             </div>
@@ -116,12 +118,12 @@
                     <p>如有疑问，请联系您的客户经理或联系客服</p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
     
-    <div ng-show="(withdraw.type === 'invest' && withdrawMessageSucc && message.is_succ) || (withdraw.type === 'wallet' && withdrawMessageSucc && messageWallet.is_succ)">
+    <div ng-show="withdrawMessageSucc && message.is_succ">
         <div class="row">
-            <div class="col-xs-2 text-left deposit__title-money">提现金额</div>
+            <div class="col-xs-2 text-right deposit__title-money">提现金额</div>
             <div class="col-xs-6 deposit__input">
                 <form name="withdrawForm" novalidate>
                     <div class="form-control-wrapper">

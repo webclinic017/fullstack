@@ -1,9 +1,11 @@
 <div ng-controller="SettingInfoPhoneController">
-    <p class="pd-tp-20 pd-bt-10">您已经绑定了手机号码
+    <p class="pd-tp-20 pd-bt-30 setting_info_zero__list-title">
+        <span class="line">手机号码设置</span>
+        <span>您已经绑定了手机号码</span>
         <span class="font-info">{{settingInfo.phone}}</span>
     </p>
-    <div class="row">
-        <form name="phoneForm" novalidate>
+    <div class="row setting_info_zero__list-input">
+        <form name="phoneForm" novalidate autocomplete="off">
             <div class="col-xs-2">
                 <div class="form-control-wrapper">
                     <div class="select">
@@ -102,12 +104,12 @@
                 </div>
             </div>
 
-            <div class="col-xs-2 text-center">
-                <button class="btn btn-primary btn-sm" type="submit" ng-if="clickable.submit" ng-click="submitForm('phoneForm')">
+            <div class="col-xs-2 text-right pd-lf-0">
+                <button class="tw-btn tw-btn-md tw-btn-capsule-gradient mg-lf-0" type="submit" ng-if="clickable.submit" ng-click="submitForm('phoneForm')">
                     提交
                 </button>
 
-                <button class="btn btn-primary btn-sm" ng-if="!clickable.submit">
+                <button class="tw-btn tw-btn-md tw-btn-capsule-gradient mg-lf-0" ng-if="!clickable.submit">
                     <i class="loading_spinner fa fa-spinner"></i>
                     提交中
                 </button>

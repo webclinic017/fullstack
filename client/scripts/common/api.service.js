@@ -10,15 +10,15 @@
         // php接口要用http://proxy.tigerwit.com请求
 
         var urlOrigin = $cookies["access_origin"] || '';    // node 中写入cookie
-        var urlOrigin2 = $cookies["access_origin2"] || '';    // node 中写入cookie
+        var urlOrigin2 = $cookies["access_origin2"] || '/api';    // node 中写入cookie
         var o = urlOrigin;
         // console.log('urlOrigin2',urlOrigin2)
-
+        urlOrigin2 = urlOrigin2 + '/v3';
         var account = {
             getPersonalInfoDegreeApi: urlOrigin2 + '/user/perfect_degree',
             loginByMt4Api: urlOrigin2 + '/login/mt4_account',
-            loginApi: urlOrigin2 + '/v2/auth/login',
-            updataUserInfoApi: urlOrigin2 + '/v2/user/auth_info',
+            loginApi: urlOrigin2 + '/auth/login',
+            updataUserInfoApi: urlOrigin2 + '/user/auth_info',
             updataId: urlOrigin2 + '/user/update_idno',
             setUsername: urlOrigin2 + '/user/username',
             checkLoginedApi: urlOrigin2 + '/auth/check',
@@ -30,7 +30,12 @@
             uploadAvatarForm: urlOrigin2 + '/user/upload_avatar',
             setNewPwdApi: urlOrigin2 + '/forget_passwd',
             getPersonalInfoApi: urlOrigin2 + '/user/info',
-            getAssetInfoApi: urlOrigin2 + '/v2/centre/asset',
+            getAssetInfoApi: urlOrigin2 + '/account/summary',
+            getAccountInfoApi: urlOrigin2 + '/trade_account/asset',
+            getTotalDealAccountApi: urlOrigin2 + '/trade_account/summary',
+            getDealAccountListApi: urlOrigin2 + '/trade_account/list',
+            setDealAccountNameApi: urlOrigin2 + '/trade_account/name',
+            newSubAccountApi: urlOrigin2 + '/trade_account/add',
             getUnreadLengthApi: urlOrigin2 + '/notify/number',
             getNoticeListApi: urlOrigin2 + '/notify',
             getAllReadApi: urlOrigin2 + '/notify/read',
@@ -41,7 +46,7 @@
             setPhoneApi: urlOrigin2 + '/user/phone',
             logoutApi: urlOrigin2 + '/auth/logout',
             getKycApi: urlOrigin2 + '/user/kyc_map',
-            getAuthStatus: urlOrigin2 + '/v2/user/auth_status',
+            getAuthStatus: urlOrigin2 + '/user/auth_status',
             setKycApi: urlOrigin2 + '/user/kyc',
 
             // getRCaptchaApi: urlOrigin2 + '/validation/send_phone_code',
@@ -71,10 +76,11 @@
             getDepositPlatformApi: urlOrigin2 + '/payment/deposit/platform',
             getWithdrawPlatformApi: urlOrigin2 + '/payment/withdraw_list',
             getFXRateApi: urlOrigin2 + '/payment/rates',
-            getIsWithdrawApi: urlOrigin2 + '/v2/payment/withdraw/limits',
+            getIsWithdrawApi: urlOrigin2 + '/payment/withdraw/limits',
             walletDepositApi: urlOrigin2 + '/wallet/deposit',
             walletWithdrawApi: urlOrigin2 + '/wallet/withdraw',
             walletCanWithdrawApi: urlOrigin2 + '/wallet/valid_balance',
+            walletbalanceApi: urlOrigin2 + '/wallet/balance',
             getMasterBonusSummaryApi: urlOrigin2 + '/commission/master_profile',
             getCopierBonusSummaryApi: urlOrigin2 + '/commission/custom_profile',
             getMasterBonusListApi: urlOrigin2 + '/commission/master_settle',
@@ -95,8 +101,8 @@
             getInvestSummaryApi: urlOrigin2  + '/centre/trading_profile',
             getInvestProfitLineApi: urlOrigin2 + '/centre/trading_trend',
             getInvestBarChartApi: urlOrigin2 + '/centre/trading_symbols',
-            getInvestCurrentDataApi: urlOrigin2 + '/centre/active/self_trades',
-            getInvestCurrentTradersApi: urlOrigin2 + '/centre/active/copy_masters',
+            getInvestCurrentDataApi: urlOrigin2 + '/centre/active/self_trades',  // 自主交易订单列表
+            getInvestCurrentTradersApi: urlOrigin2 + '/centre/active/copy_masters', // 当前跟随的高手列表
             getInvestCurrentDetailsApi: urlOrigin2 + '/centre/active/copy_trades',
             getInvestHistoryDataApi: urlOrigin2 + '/centre/past/self_trades',
             getInvestHistoryTradersApi: urlOrigin2 + '/centre/past/copy_masters',
@@ -125,9 +131,9 @@
         var trader = {
             getMasterCurrentApi: urlOrigin2 + '/master/active/trades', 
             getMasterPastTradeApi: urlOrigin2 + '/master/past/trades', //替换getMasterHistoryApi
-            copyApi: urlOrigin2 + '/copy',
-            cancelCopyApi: urlOrigin2 + '/uncopy',
-            getAvaCopyAmountApi: urlOrigin2 + '/valid_copy',
+            copyApi: urlOrigin2 + '/copy/copy',
+            cancelCopyApi: urlOrigin2 + '/copy/uncopy',
+            getAvaCopyAmountApi: urlOrigin2 + '/copy/valid_copy',
             getHistoricalRateApi: urlOrigin2 + '/master/monthly_profit_rates',
             getMasterInfoApi: urlOrigin2 + '/master/trading_profile',
             getMonthlySymbolsApi: urlOrigin2 + '/master/trading_symbols',

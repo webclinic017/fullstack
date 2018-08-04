@@ -25,7 +25,7 @@
 
         var pagesize = 10; // 单页显示数
 
-        $scope.cancelWithdraw = cancelWithdraw;
+        // $scope.cancelWithdraw = cancelWithdraw;
 
         getList(1);
 
@@ -33,7 +33,7 @@
         function getList(page) {
             $scope.$emit('showLoadingImg');
             var offset = (page - 1) * pagesize;
-            asset.getHistory(offset, pagesize).then(function (data) {
+            asset.getHistory($scope.main.trade_account.mt4_id, offset, pagesize).then(function (data) {
                 // console.info(data);
                 $scope.$broadcast('hideLoadingImg');
                 if (!data) return;
@@ -48,17 +48,17 @@
             });
         }
 
-        function cancelWithdraw(code) {
-            asset.cancelWithdraw(code).then(function (data) {
-                if (!data) return;
-                //console.log(data);
-                if (!data.is_succ) {
-                    // console.log(data.message);
-                    layer.msg(data.message);
-                    return;
-                }
-                getList(1);
-            });
-        }
+        // function cancelWithdraw(code) {
+        //     asset.cancelWithdraw(code).then(function (data) {
+        //         if (!data) return;
+        //         //console.log(data);
+        //         if (!data.is_succ) {
+        //             // console.log(data.message);
+        //             layer.msg(data.message);
+        //             return;
+        //         }
+        //         getList(1);
+        //     });
+        // }
     }
 })();

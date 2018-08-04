@@ -90,8 +90,8 @@
 
     @include e(user) {
         text-align: center;
-        padding-top: 15px;
-        margin-bottom: 30px;
+        padding-top: 12px;
+        margin-bottom: 40px;
         @include m(username) {
             display: inline-block;
             white-space: nowrap;
@@ -101,6 +101,12 @@
             max-width: 100%;
             padding-right: 5px;
             font-size: 24px;
+        }
+
+        @include m(usercode) {
+            font-size: 14px;
+            color: rgb(36, 43, 54);
+            margin-top: 10px;
         }
 
         @include m(position) {
@@ -184,11 +190,9 @@
         }
     }
 
-    // @include e(real) {
-    //     text-align: center;
-    //     color: $gray-dark;
-    //     padding-bottom: 15px;
-    // }
+    @include e(real) {
+        text-align: center;
+    }
     // @include e(demo) {
     //     text-align: center;
     //     color: $gray-dark;

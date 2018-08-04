@@ -50,7 +50,7 @@ $(document).ready(function () {
         "4": "userinfo",    // 审核拒绝 -> 填写完邮箱国家页面
         "5": "verify",      // 待审核 -> 审核中页面
         "6": "success",     // 审核通过 -> 审核成功，设置MT4密码页面
-        "7": "complete",    // 已经开户 -> MT4 帐号设置成功页面
+        "7": "complete",    // 已经开户 -> MT4 账号设置成功页面
         "8": "username",    // 已经填写完邮箱国家 -> 姓名、身份证号页面 (新增逻辑)
     };
     var kycInfo = {};
@@ -328,7 +328,7 @@ $(document).ready(function () {
 
     // 获取国家、地区列表
     function getCountries () {
-        publicRequest('getCountries', 'GET').then(function (data) {
+        publicRequest('thirdCountries', 'GET').then(function (data) {
             // console.log(data);
             if (data.is_succ) {
                 var countryList = {

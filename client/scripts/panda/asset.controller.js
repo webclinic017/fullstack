@@ -12,7 +12,7 @@
         var depositType = {
             invest: "网银支付",
             tele: "电汇",
-            wallet: "零钱包",
+            wallet: "钱包",
             alipay: "支付宝"
         };
         $scope.deposit = {
@@ -67,7 +67,7 @@
                 $scope.deposit.minAmount = parseInt(data.data.min);
             }
         });
-        // 获取零钱包 可用金额
+        // 获取钱包 可用金额
         asset.walletCanWithdraw().then(function (data) {
             if (!data) return;
             // console.log(data);

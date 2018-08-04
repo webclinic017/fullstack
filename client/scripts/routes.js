@@ -110,7 +110,7 @@
                     views: {
                         'content@space': {
                             templateUrl: '/views/space/center.html',
-                            controller: ''
+                            controller: 'CenterHomeController'
                         }
                     }
                 })
@@ -124,7 +124,16 @@
                     views: {
                         'content@space': {
                             templateUrl: '/views/invest/index.html',
-                            controller: ''
+                            controller: 'InvestIndexController'
+                        }
+                    }
+                })
+                .state('space.center.invest.home', {
+                    url: '/center/invest/home',
+                    views: {
+                        'basic@space.center.invest': {
+                            templateUrl: '/views/invest/invest_home.html',
+                            controller: 'InvestHomeController'
                         }
                     }
                 })
@@ -133,8 +142,8 @@
                     url: '/center/invest/:subpage',
                     views: {
                         'basic@space.center.invest': {
-                            templateUrl: '/views/space/center.html',
-                            controller: ''
+                            templateUrl: '/views/invest/single_account.html',
+                            controller: 'SingleAccountController'
                         },
                         'detail@space.center.invest': {
                             templateUrl: function ($stateParams) {
@@ -164,8 +173,8 @@
                     url: '/center/wallet/:subpage',
                     views: {
                         'basic@space.center.wallet': {
-                            templateUrl: '/views/space/center.html',
-                            controller: ''
+                            templateUrl: '/views/wallet/toolbar.html',
+                            controller: 'WalletToolbarController'
                         },
                         'detail@space.center.wallet': {
                             templateUrl: function ($stateParams) {
@@ -230,7 +239,7 @@
                 })
                 .state('space.asset.subpage', {
                     authenticated: true,
-                    url: '/space/asset/:subpage?type&amount',
+                    url: '/space/asset/:subpage?account',
                     views: {
                         '@space.asset': {
                             templateUrl: function ($stateParams) {
@@ -284,21 +293,21 @@
                     views: {
                         '@space.setting': {
                             templateUrl: function ($stateParams) {
-                                $stateParams.subpage = $stateParams.subpage || 'info';
+                                $stateParams.subpage = $stateParams.subpage || 'name';
                                 return '/views/setting/' + $stateParams.subpage + '.html';
                             },
                             controllerProvider: function ($stateParams) {
-                                $stateParams.subpage = $stateParams.subpage || 'info';
+                                // $stateParams.subpage = $stateParams.subpage || 'info';
 
-                                if ($stateParams.subpage === 'info') {
-                                    var ctrlPrefix = 'Setting';
-                                    var ctrlSuffix = 'Controller';
-                                    var ctrlRoot = modCtrlName($stateParams.subpage);
-                                    return ctrlPrefix + ctrlRoot + ctrlSuffix;
-                                } else {
+                                // if ($stateParams.subpage === 'info') {
+                                //     var ctrlPrefix = 'Setting';
+                                //     var ctrlSuffix = 'Controller';
+                                //     var ctrlRoot = modCtrlName($stateParams.subpage);
+                                //     return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                                // } else {
                                     // controller 在模板中指定（为了使用 ng-include）
                                     return '';
-                                }
+                                // }
                             }
                         }
                     }
@@ -356,7 +365,7 @@
                 })
                 .state('space.master.subpage', {
                     authenticated: true,
-                    url: '/space/master/:subpage',
+                    url: '/space/master/:subpage?account_code',
                     views: {
                         '@space.master': {
                             templateUrl: function ($stateParams) {

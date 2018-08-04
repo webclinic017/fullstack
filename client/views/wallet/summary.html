@@ -1,12 +1,12 @@
 <div tw-loading-img></div>
-<div class="history pd-tp-30">
+<div class="history">
 
-    <table class="table table-personal table-hover table-bordered">
+    <table class="table table-personalF table-hover table-bordered">
         <colgroup>
             <col width="25%">
-            <col width="25%">
-            <col width="25%">
-            <col width="25%">
+            <col width="35%">
+            <col width="20%">
+            <col width="20%">
         </colgroup>
         <thead>
         <tr>
@@ -19,21 +19,23 @@
         <tbody>
         <tr ng-repeat="history in historyList" ng-if="historyList.length > 0">
             <td>{{ history.created_at | dateFormatter }}</td>
-            <td>{{ history.type }}</td>
+            <td>
+                <span>{{ history.type }}</span>
+                <span class="tw-btn font-info font-size-14" ng-click="backout(history.id)" ng-if="history.is_cancel === 1">撤销</span>
+            </td>
             <td ng-class="{'font-danger': history.amount.indexOf('-') < 0, 'font-success': history.amount.indexOf('-') >= 0}">
                 ${{ history.amount }}
             </td>
             <td>${{ history.wallet_balance }}</td>
-        </tr>
-        <tr ng-if="historyList.length <= 0">
-            <td colspan="5">
-                无数据!
-            </td>
         </tr>
         </tbody>
     </table>
 
     <div class="text-center">
         <p tw-pagination></p>
+    </div>
+    <div ng-if="historyList.length <= 0" class="text-center mg-bt-20">
+        <img src="/images/no_data.png" alt="" class="mg-bt-40">
+        <p>暂无数据!</p> 
     </div>
 </div>

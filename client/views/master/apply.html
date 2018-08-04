@@ -3,35 +3,57 @@
         <span ng-if="applyInfo.data.status != 0 && applyInfo.data.status != 3">成为TigerWit高手，获取更多收益</span>
         <span ng-if="applyInfo.data.status == 0">高手申请审核中，请耐心等待</span>
         <span ng-if="applyInfo.data.status == 3">注意事项</span>
-        <span class="btn btn-primary btn-sm" ng-if="applyInfo.data.status == -1" ng-click="applyMaster()">立即申请成为高手</span>
-        <span class="btn btn-primary btn-sm" ng-if="applyInfo.data.status == 3 && !applyInfo.loading2" ng-click="comfirmApplyMaster()">确认提交</span>
-        <span class="btn btn-primary btn-sm" ng-if="applyInfo.data.status == 3 && applyInfo.loading2">提交中..</span>
+        <div class="process">
+            <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-if="applyInfo.data.status == -1" ng-click="applyMaster()">立即申请成为高手</span>
+            <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-if="applyInfo.data.status == 3 && !applyInfo.loading2" ng-click="comfirmApplyMaster()">确认提交</span>
+            <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-if="applyInfo.data.status == 3 && applyInfo.loading2">提交中..</span>
+        </div>
+    </div>
+    <div class="space_apply__content">
+        <div class="space_apply__tip" ng-if="applyInfo.data.status == -1">
+            榜单投资者被其他用户复制跟随，会获得复制者20%的盈利分成，请选择账号：
+        </div>
+        <ul class="space_apply__list">
+            <li class="space_apply__list-item" ng-repeat="account in accountList" ng-class="{'active': account.mt4_id == selectAccount}" >
+                <a ng-click="getMasterCondition(account.mt4_id)">
+                    <div class="account_title">
+                        <span>{{ account.account_name || "交易账号" }}</span>
+                        <span>自主交易</span>
+                    </div>
+                    <ul class="account_details">
+                        <li>
+                            <p>{{ account.floating_profit }}</p>
+                            <p>浮动盈亏</p>
+                        </li>
+                        <li>
+                            <p>{{ account.equity }}</p>
+                            <p>资产净值</p>
+                        </li>
+                        <li>
+                            <p>{{ account.margin_level }}</p>
+                            <p>保证金比例</p>
+                        </li>
+                    </ul>
+                </a>
+            </li>
+        </ul>
     </div>
     <div class="space_apply__loading" ng-if="applyInfo.loading">
         <img src="/ngsrc/loading.gif">
     </div>
     <div class="space_apply__content" ng-if="!applyInfo.loading">
         <div class="space_apply__tip" ng-if="applyInfo.data.status == -1">
-            榜单投资者被其他用户复制跟随，会获得复制者20%的盈利分成，申请成为高手需达成以下条件：
+            未达成以下高手申请条件，请继续努力
         </div>
         <div class="space_apply__tip" ng-if="applyInfo.data.status == 0">
             高手申请由工作人员人工审核，我们会尽快完成审核并将结果通知您
         </div>
         <ul class="space_apply__lst" ng-if="(applyInfo.data.status == 0) || (applyInfo.data.status == -1)">
-            <li ng-class="{active: applyInfo.data.one == 1}">
-                <span>开通TigerWit真实账户并完成实名认证</span>
-            </li>
-            <li ng-class="{active: applyInfo.data.two == 1}">
-                <span>在TigerWit交易平台真实入金并连续自主交易30个以上工作日</span>
-            </li>
-            <li ng-class="{active: applyInfo.data.three == 1}">
-                <span>近30日收益率大于20%</span>
-            </li>
-            <li ng-class="{active: applyInfo.data.four == 1}">
-                <span>账户余额不得低于500美金</span>
+            <li ng-repeat="condit in applyInfo.data.condition" ng-class="{active: condit.status == 0}">
+                <span>{{ condit.text }}</span>
             </li>
         </ul>
-        <div class="space_apply__message" ng-if="applyInfo.data.status == 1">
+        <!-- <div class="space_apply__message" ng-if="applyInfo.data.status == 0">
             <div class="clearfix message_wrapper">
                 <div class="message_icon">
                     <img src="/images/icon-succ.png">
@@ -44,7 +66,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         <div class="space_apply__message" ng-if="applyInfo.data.status == 1">
             <div class="clearfix message_wrapper">
                 <div class="message_icon">

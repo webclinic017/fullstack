@@ -55,7 +55,7 @@ $(document).ready(function () {
             // console.info(urlPath);
             // 临时处理安卓入金问题
             if (location.hostname === 'proxy.tigerwit.com') {
-                urlPath = 'https://www.tigerwit.com';
+                urlPath = 'https://cn.tigerwit.com';
             }
 
             if (search) {
@@ -66,7 +66,7 @@ $(document).ready(function () {
                 $.each($pay, function (index, value) {
                     // console.log(index, value);
                     var pMode = $(value).attr("data-pmode");
-                    $(value).attr("href", urlPath+"/api/app/payment/deposit/dispatch?order_no="+order_no+"&pmode="+pMode+"&token="+token);
+                    $(value).attr("href", urlPath+"/api/payment/deposit/dispatch?order_no="+order_no+"&pmode="+pMode+"&token="+token);
                 });
             }
         });

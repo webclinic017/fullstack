@@ -1,0 +1,63 @@
+<div class="sys_modal">
+    <p class="clearfix">
+        <button class="close" ng-click="closeModal()">&times;</button>
+    </p>
+
+    <div>
+        <h5 class="sys_modal__title">
+            提示
+        </h5>
+        <div class="sys_modal__add_account mg-tp-40" ng-if="historyType == 3">
+                <div class="">
+                    <p>TigerWit交易账户支持开通多个子账号用于不同交易策略。</p>
+                    <p>您当前登录账号为上榜高手，系统已自动将账号身份定义为：</p>
+                </div>
+                <div class="text-center">
+                    <h2>高手账号</h2> 
+                </div>
+                <div>
+                    <h5>账号权限：</h5>
+                    <p>自主交易。</p>
+                </div>
+        </div>
+
+        <div class="sys_modal__add_account mg-tp-40" ng-if="historyType == 2">
+                <div class="">
+                    <p>TigerWit交易账户支持开通多个子账号用于不同交易策略。</p>
+                    <p>您当前登录账号存在跟随关系，系统已自动将账号身份定义为：</p>
+                </div>
+                <div class="text-center">
+                    <h2>跟单账号</h2> 
+                </div>
+                <div>
+                    <h5>账号权限：</h5>
+                    <p>仅用于高手跟单；</p>
+                    <p>该账号不再支持自主开仓操作,历史自主开仓的订单支持手动平仓。</p>
+                    <p class="mg-tp-10">为了不影响您自主开仓， 系统自动为您创建了自主交易账号。请在“我的-账户管理”查看。</p>
+                </div>
+        </div>
+
+        <div class="sys_modal__add_account mg-tp-40" ng-if="historyType == 1">
+                <div class="">
+                    <p>TigerWit交易账户支持开通多个子账号用于不同交易策略。</p>
+                    <p>您当前登录账号为自主开仓，系统已自动将账号身份定义为：</p>
+                </div>
+                <div class="text-center">
+                    <h2>自主交易</h2> 
+                </div>
+                <div>
+                    <h5>账号权限：</h5>
+                    <p>自主交易。</p>
+                    <p>申请成为高手。</p>
+                </div>
+        </div>
+
+        <div class="mg-tp-30 mg-bt-30 pd-bt-30 text-center">
+            <button class="tw-btn tw-btn-lg162 tw-btn-capsule-gradient" ng-click="closeModal()">
+                确定
+            </button>
+        </div>
+    </div>
+
+</div>
+

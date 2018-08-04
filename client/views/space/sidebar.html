@@ -8,12 +8,13 @@
             </div>
             <div class="space_sidebar__user">
                 <span class="space_sidebar__user-username">{{ personal.username }}</span>
+                <div class="space_sidebar__user-usercode">通行证账号：{{ personal.user_code }}</div>
                 <!-- <span class="space_sidebar__user-position">
                     <i class="fa fa-map-marker"></i>
                     {{ personal.region.city_name || personal.region.state_name || personal.region.world_name || '中国' }}
                 </span> -->
             </div>
-            <ul ng-show="personal.dredged_type != 'unknow'" class="space_sidebar__detail clearfix">
+            <!-- <ul ng-show="personal.dredged_type != 'unknow'" class="space_sidebar__detail clearfix">
                 <li class="detail_item">
                     <div class="item__number">
                         {{ personal.mt4_id }}
@@ -25,15 +26,15 @@
                 </li>
                 <li class="detail_item">
                     <div class="item__number">
-                        <span ng-if="personal.is_master">0</span>
-                        <span ng-if="!personal.is_master">{{ personal.copy_num }}</span>
+                        <span ng-if="personal.has_master">0</span>
+                        <span ng-if="!personal.has_master">{{ personal.copy_num }}</span>
                     </div>
                     <div class="item__text">复制人数</div>
                 </li>
-            </ul>
-            <div class="text-center mg-tp-15">
-                <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="!personal.is_master" class="tw-btn tw-btn-full tw-btn-square-gradient">申请高手</a>
-                <div class="space_sidebar__grade" ng-if="personal.is_master">
+            </ul> -->
+            <!-- <div class="text-center mg-tp-15">
+                <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="!personal.has_master" class="tw-btn tw-btn-full tw-btn-square-gradient">申请高手</a>
+                <div class="space_sidebar__grade" ng-if="personal.has_master">
                     <div class="space_sidebar__grade-bar">
                         <span ng-style="{width: 50}"></span>
                     </div>
@@ -47,8 +48,15 @@
                         </a>
                     </div>
                 </div>
+            </div> -->
+            <!-- TODO 缺参数 -->
+            <div ng-if="personal.trade_user_status !== '0'" class="space_sidebar__real">
+                <a ui-sref="space.asset.subpage({subpage: 'deposit'})" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient">充值</a>
             </div>
-            <div ng-show="personal.dredged_type == 'unknow'" class="space_sidebar__real mg-tp-10">
+            <div ng-if="personal.trade_user_status !== '0'" class="space_sidebar__real mg-tp-20">
+                <a ui-sref="space.asset.subpage({subpage: 'withdraw'})" class="tw-btn tw-btn-lg200 tw-btn-capsule-bordered">提现</a>
+            </div>
+            <div ng-if="personal.trade_user_status === '0'" class="space_sidebar__real">
                 <a ng-click="openDredgeMdl({position: 'sidebar'})" class="tw-btn tw-btn-full tw-btn-square-gradient-black">快捷开户</a>
             </div>
         </div>
@@ -62,16 +70,17 @@
             </li> -->
             <li class="space_sidebar__nav-menu" ui-sref-active="active">
                 <a ui-sref="space.center.index">
-                    <i class="fas fa-user-circle"></i> 账户概况
+                    <!-- <i class="fas fa-user-circle"></i>  -->
+                    账户概况
                 </a>
             </li>
             <li class="space_sidebar__nav-menu" ui-sref-active="active">
-                <a ui-sref="space.asset.subpage">
-                    充值/提现
-                </a>
+                <a ui-sref="space.center.invest.home">交易账户</a>
             </li>
-            <li class="space_sidebar__nav-menu" ui-sref-active="active">
-                <a ui-sref="space.bonus">复制分成</a>
+            <li class="space_sidebar__nav-menu" ui-sref-active="active" ng-if="personal.wallet_user_id !== 0">
+                <a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">
+                    钱包
+                </a>
             </li>
             <li class="space_sidebar__nav-menu" ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
                 <a ui-sref="space.redbag.subpage">
@@ -82,14 +91,14 @@
             <li class="space_sidebar__nav-menu" ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
                 <a ui-sref="space.invite">邀请好友</a>
             </li>
-            <li class="space_sidebar__nav-menu" ui-sref-active="active">
+            <!-- <li class="space_sidebar__nav-menu" ui-sref-active="active">
                 <a ui-sref="space.notice.subpage({subpage: 'trade'})">
                     系统消息
                     <span class="space_sidebar__mes-num" ng-if="personal.unreadMsg.total > 0">{{ personal.unreadMsg.total }}</span>
                 </a>
-            </li>
+            </li> -->
             <li class="space_sidebar__nav-menu" ui-sref-active="active">
-                <a ui-sref="space.setting.subpage">账户设置</a>
+                <a ui-sref="space.setting.subpage({subpage: 'name'})">账户设置</a>
             </li>
         </ul>
 

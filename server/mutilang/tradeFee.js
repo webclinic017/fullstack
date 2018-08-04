@@ -96,7 +96,7 @@ module.exports = {
         "en": "Wire transfer：TigerWit does not charge wire transfer fees, different banks in the purchase of foreign exchange and remittances will charge different fees (usually fee, telegraph fee and transit costs), the costs incurred in the purchase of foreign exchange and remittance shall be borne by the customer, TigerWit will be the actual amount of money to customers recharge."
     },
     "tradeFee24": {
-        "zh": "零钱包入金：TigerWit不收取任何费用。",
+        "zh": "钱包入金：TigerWit不收取任何费用。",
         "en": "Wallet Deposit: TigerWit does not charge any fees."
     },
     "tradeFee25": {

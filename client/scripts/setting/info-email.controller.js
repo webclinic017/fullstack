@@ -12,10 +12,8 @@
         // step1 => binding old Email , step2 => binding new Email
         $scope.step = 1;
 
-        $scope.$watch('settingInfo', function (newVal, oldVal) {
-            if (newVal !== oldVal) {
-                $scope.step = newVal.email ? 1 : 2;
-            }
+        $scope.$watch('settingInfo.email', function (newVal, oldVal) {
+            $scope.step = newVal ? 1 : 2;
         });
       
         $scope.emailInfo = {

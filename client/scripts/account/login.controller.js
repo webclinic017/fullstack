@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('AccountLoginController', AccountLoginController);
 
-    AccountLoginController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies', 'lang'];
+    AccountLoginController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies', 'lang', '$modal'];
 
-    function AccountLoginController($scope, $interval, $timeout, $window, $state, account, validator, $cookies, lang) {
+    function AccountLoginController($scope, $interval, $timeout, $window, $state, account, validator, $cookies, lang, $modal) {
         $scope.loginType = 'code';  // 登录方式 code ->验证码登录，pass ->密码登录
         $scope.loginStep1 = 1;      // 验证码登录进行到哪一步
         $scope.loginStep2 = 1;      // 密码登录进行到哪一步
@@ -134,7 +134,7 @@
             var para = {};
             if ($scope.loginType == 'code') {
                 para = {
-                    phone: $scope.account.step1Phone,
+                    account: $scope.account.step1Phone,
                     password: $scope.account.step1Code,
                     login_type: 2,
                     remember: $scope.rememberLoginStatus ? 1 : 0,
@@ -145,7 +145,7 @@
                 };
             } else {
                 para = {
-                    phone: $scope.account.step2Phone,
+                    account: $scope.account.step2Phone,
                     password: account.encrypt($scope.account.step2Password),
                     login_type: 1,
                     remember: $scope.rememberLoginStatus ? 1 : 0
@@ -156,40 +156,43 @@
             $scope.loginBtnStatus = false;
 
             account.login(para).then(function (data) {
-                // console.log(data);
                 layer.closeAll();
                 $scope.loginBtnStatus = true;
 
                 if (data.is_succ) {
                     $timeout(function () {
+                        // console.log($cookies['user_code']);
                         var user_id = $cookies['user_code'];
                         // console.log(user_id);
                         if (user_id) {
                             sa.login(user_id);
                         }
-                    }, 300);
+                    }, 100);
                     if (($scope.loginType == 'code') && data.data.initial && (data.data.initial == 1)) {
                         // 新用户
                         $scope.loginStep1 = 2;
                         $scope.$emit('relogin_info', 'is_register');
 
                         // 神策统计 - 登录
-                        sa.track('login', {
-                            login_isNew: true,
-                            login_type: '验证码登录'
-                        });
+                        $timeout(function () {
+                            sa.track('login', {
+                                login_isNew: true,
+                                login_type: '验证码登录'
+                            });
+                        }, 150);
                         return;
                     }
-                    // 神策统计 - 登录
-                    sa.track('login', {
-                        login_isNew: false,
-                        login_type: $scope.loginType == 'code' ? '验证码登录' : '账号密码登录'
-                    });
                     $timeout(function () {
+                        // 神策统计 - 登录
+                        sa.track('login', {
+                            login_isNew: false,
+                            login_type: $scope.loginType == 'code' ? '验证码登录' : '账号密码登录'
+                        });
+
                         account.hasChecked = false;
                         $state.go('space.center.index', {reload: true});
                         $scope.$emit('relogin_info');
-                    }, 100);
+                    }, 150);
                 } else {
                     if ((data.code == 100402) || (data.code == 100403)) {
                         openWebAgmentModal(data.code, function(resolve, e){
@@ -231,6 +234,10 @@
         // 忘记密码页
         $scope.goForgetPassword = function () {
             $scope.loginStep2 = 2;
+        };
+        // 回到密码登陆页
+        $scope.backPassword = function () {
+            $scope.loginStep2 = 1;
         };
         // 忘记密码页 第二步
         $scope.goForgetPassword2 = function (formName) {

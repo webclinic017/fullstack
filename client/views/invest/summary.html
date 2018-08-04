@@ -11,7 +11,7 @@
                             <span class="invest_order_loss">亏损订单</span>
                         </div>
                         <div class="invest_main__chart">
-                            <span class="num">{{ summary.order_count.open_trade }}</span>
+                            <span class="num">{{ summary.total_trade_count }}</span>
                             <br>
                             <span class="space_gray_color">平仓交易</span>
                         </div>
@@ -78,7 +78,8 @@
                 </li>
             </ul>
             <div class="text-center pd-tp-30" ng-if="bars.length <= 0">
-                无数据
+                <img src="/images/no_data.png" alt="" class="mg-bt-40">
+                <p>暂无数据!</p> 
             </div>
         </div>
     </div>

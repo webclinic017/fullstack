@@ -3,17 +3,17 @@
         <div class="account_login_box">
             <div class="account_login login_pass" ng-class="{active: loginType === 'pass'}" ng-show="loginStep1 != 2">
                 <div class="account_login__pos login_pass" ng-show="loginType !== 'pass'" ng-click="changeLoginType('pass')">
-                    帐号密码登录
+                    账号密码登录
                 </div>
                 <div class="account_login__pass" ng-show="loginType === 'pass'">
                     <div ng-show="loginStep2 == 1">
-                        <div class="account_login__title">帐号密码登录</div>
+                        <div class="account_login__title">账号密码登录</div>
                         <form name="loginForm3" class="account_login__form" novalidate>
                             <div class="account-form-control-wrapper">
                                 <input class="account-form-control"
                                        name="step2Phone"
                                        type="text"
-                                       placeholder="请输入您的帐号"
+                                       placeholder="请输入您的账号"
                                        required
                                        on-enter="login('loginForm3')"
                                        ng-model="account.step2Phone">

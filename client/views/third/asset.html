@@ -24,7 +24,7 @@
                         <div class="item__number">
                             <span>{{ main.mt4_id }}</span>
                         </div>
-                        <div class="item__text">MT4帐号</div>
+                        <div class="item__text">MT4账号</div>
                     </li>
                 </ul>
                 <br>
@@ -41,7 +41,7 @@
                         <div class="item__number">
                             <span>{{ main.wallet_balance }}</span>
                         </div>
-                        <div class="item__text">零钱包账户</div>
+                        <div class="item__text">钱包账户</div>
                     </li>
                 </ul>
             
@@ -64,7 +64,7 @@
                 <ul class="info_box__detail">
                     <li>
                         <div class="item__number">
-                            {{ main.accountStatus == 1 ? main.mt4_id : '-' }}
+                            {{ main.accountStatus == 1 ? main.trade_account.mt4_id : '-' }}
                         </div>
                         <div class="item__text">
                             <span>MT4账户</span>
@@ -72,7 +72,7 @@
                     </li>
                     <li>
                         <div class="item__number">
-                            {{ main.accountStatus == 1 ? main.balance : '-' }}
+                            {{ main.accountStatus == 1 ? main.trade_balance : '-' }}
                         </div>
                         <div class="item__text">
                             <span>账户余额</span>
@@ -83,7 +83,7 @@
                             {{ main.accountStatus == 1 ? main.wallet_balance : '-' }}
                         </div>
                         <div class="item__text">
-                            <span>零钱包账户</span>
+                            <span>钱包账户</span>
                         </div>
                     </li>
                 </ul>

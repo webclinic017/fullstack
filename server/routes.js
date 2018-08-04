@@ -324,6 +324,11 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('m_vue/m_about_us', extendPublic({}, req));
     });
+    /*H5 复制规则*/
+    app.route('/m/copy/rule').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render("m_vue/m_copy_rule", extendPublic({}, req));
+    });
 
     /* H5 充值中转页面 */
     app.route('/m/deposit/pay').get(function (req, res) {
@@ -389,7 +394,7 @@ module.exports = function (app) {
         // var apiOrigin = 'https://a.' + hostArr[hostArr.length - 2] + '.' + hostArr[hostArr.length - 1];
         var masterApiPath = '';
         if (process.env.COMPANY_NAME != 'tigerwit') {
-            masterApiPath = process.env.URL_PATH + '/api';
+            masterApiPath = process.env.URL_PATH + '/api/v3';
         } else {
             var hostPrefix = hostArr[0];
             var hostPrefix2 = hostArr[1];
@@ -400,13 +405,13 @@ module.exports = function (app) {
 
             // tigerwit.co.uk return hostname is ip 60.205.105.34
             if (hostname == '60.205.105.34') {
-                masterApiPath = 'https://www.tigerwit.com/api'
+                masterApiPath = 'https://api-tmp.tigerwit.com/api/v3'
             }
             else if (hostPrefix == 'demo' || hostPrefix2 == 'dev') {
-                masterApiPath = 'https://demo.tigerwit.com/api'
+                masterApiPath = 'https://demo.tigerwit.com/api/v3'
             }
-            else if (hostPrefix == 'www' || hostPrefix == 'w') {
-                masterApiPath = 'https://www.tigerwit.com/api'
+            else if (hostPrefix == 'api-tmp' || hostPrefix == 'www' || hostPrefix == 'w') {
+                masterApiPath = 'https://api-tmp.tigerwit.com/api/v3'
             }
         }
         // console.log('------masterApiPath', masterApiPath);

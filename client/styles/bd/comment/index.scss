@@ -153,7 +153,7 @@
         margin-bottom: px2rem(30);
     }
     @include e(btn) {
-        a {
+        span {
             color: #4990e2;
             font-size: px2rem(28);
         }

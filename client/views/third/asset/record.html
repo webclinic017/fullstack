@@ -25,9 +25,9 @@
                     </td>
                     <td>
                         <span>{{ history.status_explain }}</span>
-                            <span ng-if="history.withdraw === 1">
+                        <!-- <span ng-if="history.withdraw === 1">
                             <a class="deposit__pointer font-info" ng-click="cancelWithdraw(history.order_no)">撤销申请</a>
-                        </span>
+                        </span> -->
                     </td>
                 </tr>
                 </tbody>
@@ -37,7 +37,8 @@
                 <p tw-pagination></p>
             </div>
         </div>
-        <div ng-if="historyList.length <= 0">
-            <p class="text-center mg-tp-50">无数据!</p>
+        <div ng-if="historyList.length <= 0" class="text-center mg-tp-50">
+            <img src="/images/no_data.png" alt="" class="mg-bt-40">
+            <p>暂无数据!</p> 
         </div>
 </div>

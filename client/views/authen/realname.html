@@ -4,7 +4,7 @@
         <p class="authen_content__tip">因监管要求，请您提供相关信息。请确认是您本人，审核通过后不可修改。</p>
     </div>
     <div class="kyc mg-tp-40">
-        <form name="realnameForm" novalidate>
+        <form name="realnameForm" novalidate autocomplete="off">
             <div class="row">
                 <div class="col-xs-2">
                     <label>真实姓名</label>
@@ -186,7 +186,7 @@
                 <div class="upload_id_card" tw-upload-id-card>
                     <i class="upload_id_card__icon fa fa-camera"></i>
                     <h3 class="upload_id_card__title">
-                        {{realnameInfo.id_type.value == '0' ? '点击上传证件正面' : '点击上传证件'}}
+                        {{(realnameInfo.id_type.value == '0' || realnameInfo.id_type.value == '5') ? '点击上传证件正面' : '点击上传证件'}}
                     </h3>
     
                     <input class="upload_id_card__input" ng-click="hideErr('idFront')" name="file" type="file" accept="image/jpeg,image/png" data-face="front">
@@ -208,7 +208,7 @@
                 </div>
             </div>
     
-            <div class="col-xs-6" ng-if="realnameInfo.id_type.value == '0'">
+            <div class="col-xs-6" ng-if="realnameInfo.id_type.value == '0' || realnameInfo.id_type.value == '5'">
                 <div class="upload_id_card" tw-upload-id-card>
                     <i class="upload_id_card__icon fa fa-camera"></i>
                     <h2 class="upload_id_card__title">
