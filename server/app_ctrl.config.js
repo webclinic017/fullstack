@@ -46,38 +46,38 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "",
-                        description: "",
-                        updated_description: "",
-                        force_update : false
+                        version_name : "V2.0.0",
+                        description: "The new version updated the following, update now to enjoy the new trading experience!\n1.Update to PandaFX ID system;\n2.You can create more than one sub-account;\n3.You can own master account and copy account at once;\n4.The funds in sub-account could be withdrew to wallet.",
+                        updated_description: "70% users are using new version",
+                        force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V0.0.0",
-                        description : "本次更新：\n1.优化拍照功能\n2.适配三星手机\n3.其他细节优化",
-                        updated_description: "68%的用户正在使用新版本",
-                        url : "https://pandafx.tigerwit.com/downloads/apk/pandafx_v1.6.0.apk",
-                        force_update : false
+                        version_name : "V2.0.0",
+                        description : "The new version updated the following, update now to enjoy the new trading experience!\n1.Update to PandaFX ID system;\n2.You can create more than one sub-account;\n3.You can own master account and copy account at once;\n4.The funds in sub-account could be withdrew to wallet.\nTips:\nUsers with 8.0 and above mobile phone systems click the \"Install Now\" button may to fail to install.\nIf this happens, please step to the official website to manually download updates.",
+                        updated_description: "70%的用户正在使用新版本",
+                        url : "https://pandafx.tigerwit.com/downloads/apk/pandafx_v2.0.0.apk",
+                        force_update : true
                     }
                 }
             },
             cn: {
                 ios: {
                     app_info: {
-                        version_name : "",
-                        description: "",
-                        updated_description: "",
-                        force_update : false
+                        version_name : "V2.0.0",
+                        description: "新版本优化了以下功能。赶快更新享受新的交易体验！\n1.升级到PandaFX通行证系统；\n2.您可以同时创建多个子账号；\n3.通行证同时支持高手账号和跟单账号；\n4.支持子账号和钱包之间转账。",
+                        updated_description: "70%的用户正在使用新版本",
+                        force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V0.0.0",
-                        description : "本次更新：\n1.优化拍照功能\n2.适配三星手机\n3.其他细节优化",
-                        updated_description: "68%的用户正在使用新版本",
-                        url : "https://pandafx.tigerwit.com/downloads/apk/pandafx_v1.6.0.apk",
-                        force_update : false
+                        version_name : "V2.0.0",
+                        description : "新版本优化了以下功能。赶快更新享受新的交易体验！\n1.升级到PandaFX通行证系统；\n2.您可以同时创建多个子账号；\n3.通行证同时支持高手账号和跟单账号；\n4.支持子账号和钱包之间转账。\n温馨提示：\n手机系统为8.0及以上的用户在此页点击“立即安装”按钮可能安装失败。\n若出现上述情况请移步至官网手动下载更新。",
+                        updated_description: "70%的用户正在使用新版本",
+                        url : "https://pandafx.tigerwit.com/downloads/apk/pandafx_v2.0.0.apk",
+                        force_update : true
                     }
                 }
             }
@@ -86,38 +86,38 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V3.1.1",
-                        description: "This update\nThe new version optimizes the function Internet Banking deposit.\nUpdate now to enjoy the new trading experience!",
+                        version_name : "V4.0.0",
+                        description: "The new version updated the following, update now to enjoy the new trading experience!\n1.Update to TigerWit ID system;\n2.You can create more than one sub-account;\n3.You can own master account and copy account at once;\n4.The funds in sub-account could be withdrew to wallet.",
                         updated_description: "70% users are using new version",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V1.2.7",
-                        description: "Update\nAdded new payment channel",
+                        version_name : "V2.1.0",
+                        description: "The new version updated the following, update now to enjoy the new trading experience!\n1.Update to TigerWit ID system;\n2.You can create more than one sub-account;\n3.You can own master account and copy account at once;\n4.The funds in sub-account could be withdrew to wallet.\nTips:\nUsers with 8.0 and above mobile phone systems click the \"Install Now\" button may to fail to install.\nIf this happens, please step to the official website to manually download updates.",
                         updated_description: "70% users are using new version",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.0.1.apk",
-                        force_update : false
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.1.0.apk",
+                        force_update : true
                     }
                 }
             },
             cn: {
                 ios: {
                     app_info: {
-                        version_name : "V3.1.1",
-                        description: "本次更新：\n新版本优化了网银入金功能。赶快更新享受新的交易体验！",
+                        version_name : "V4.0.0",
+                        description: "新版本优化了以下功能。赶快更新享受新的交易体验！\n1.升级到TigerWit通行证系统；\n2.您可以同时创建多个子账号；\n3.通行证同时支持高手账号和跟单账号；\n4.支持子账号和钱包之间转账。",
                         updated_description: "70%的用户正在使用新版本",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V1.2.7",
-                        description: "本次更新：\n新增支付渠道",
+                        version_name : "V2.1.0",
+                        description: "新版本优化了以下功能。赶快更新享受新的交易体验！\n1.升级到TigerWit通行证系统；\n2.您可以同时创建多个子账号；\n3.通行证同时支持高手账号和跟单账号；\n4.支持子账号和钱包之间转账。\n温馨提示：\n手机系统为8.0及以上的用户在此页点击“立即安装”按钮可能安装失败。\n若出现上述情况请移步至官网手动下载更新。",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.0.1.apk",
-                        force_update : false
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.1.0.apk",
+                        force_update : true
                     }
                 }
             }
