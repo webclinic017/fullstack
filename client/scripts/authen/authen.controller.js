@@ -35,7 +35,8 @@
             goState(data)
         })
         function goState(data) {
-            console.log(data)
+            // console.log(data)
+            // console.log($scope.personal)
             $scope.dredgingType = data.dredged_type || data.account_status
             $timeout(function () {
                 $state.go('authen.subpage', {
@@ -262,19 +263,19 @@
 
     // complete
     function AuthenCompleteController($scope, validator, account, $timeout, $interval, $location, $modal, $cookies) {
-        console.log('$scope.personal', $scope.personal)
+        // console.log('$scope.personal', $scope.personal)
         $scope.completeInfo = {
             username: '',
-            email: ($scope.personal.email || ''),
+            email: '',
             emailCode: '',
-            phone: ($scope.personal.phone || ''),
+            phone: '',
             phoneCode: '',
             areaCode: {
                 key: undefined,
-                value: '+' + ($scope.personal.phone_code || '86')
+                value: ''
             },
             clickable: true,
-            overTime: 1500,
+            // overTime: 1500,
             country: {
                 key: undefined,
                 value: undefined
@@ -291,19 +292,19 @@
             hasSendCode: false,
             waitTime: 59
         }
-        console.log($scope.completeInfo)
-        getUserInfo('username');
-        function getUserInfo(name) {
-            if ($scope.completeInfo.overTime <= 0) { return };
-            if ($scope.personal[name]) {
-                $scope.completeInfo[name] = $scope.personal[name];
-            } else {
-                $timeout(function () {
-                    getUserInfo(name);
-                    $scope.completeInfo.overTime -= 500;
-                }, 500);
-            }
-        }
+        // console.log($scope.completeInfo)
+        // getUserInfo('username');
+        // function getUserInfo(name) {
+        //     if ($scope.completeInfo.overTime <= 0) { return };
+        //     if ($scope.personal[name]) {
+        //         $scope.completeInfo[name] = $scope.personal[name];
+        //     } else {
+        //         $timeout(function () {
+        //             getUserInfo(name);
+        //             $scope.completeInfo.overTime -= 500;
+        //         }, 500);
+        //     }
+        // }
 
         $scope.exsit = {
             username: {
@@ -327,14 +328,14 @@
             },
             email: {
                 show: false,
-                reg: $scope.completeInfo.email ? /[\s\S]*/ : validator.regType.email.reg
+                reg: new RegExp()
             },
             emailCode: {
                 show: false
             },
             phone: {
                 show: false,
-                reg: $scope.completeInfo.phone ? /[\s\S]*/ : validator.regType.phone.reg
+                reg: new RegExp()
             },
             phoneCode: {
                 show: false
@@ -368,6 +369,19 @@
                 msg: ''
             }
         }
+        var personalIsNan = $scope.$watch('personal.user_code', function(n){
+            if(!n) return;
+            $scope.completeInfo.username = $scope.personal.username;
+            $scope.completeInfo.email = ($scope.personal.email || '');
+            $scope.completeInfo.phone = ($scope.personal.phone || '');
+            $scope.completeInfo.areaCode.value = '+' + ($scope.personal.phone_code || '86');
+            $scope.frontErr.email.reg = $scope.completeInfo.email ? /[\s\S]*/ : validator.regType.email.reg;
+            $scope.frontErr.phone.reg = $scope.completeInfo.phone ? /[\s\S]*/ : validator.regType.phone.reg;
+            $scope.stopWatch = function(){
+                return personalIsNan()
+            }
+            $scope.stopWatch()
+        })
 
         $scope.areaCodes = []
 
@@ -392,16 +406,16 @@
                     data = data.data
                     angular.extend($scope.completeInfo, {
                         country: {
-                            key: data.region_cn.world_name,
-                            value: data.region_cn.world_code,
+                            key: data.region.world_name,
+                            value: data.region.world_code,
                         },
                         province: {
-                            key: data.region_cn.state_name,
-                            value: data.state_code
+                            key: data.region.state_name,
+                            value: data.region.state_code
                         },
                         city: {
-                            key: data.region_cn.city_name,
-                            value: data.city_code
+                            key: data.region.city_name,
+                            value: data.region.city_code
                         }
                     });
                     // console.log('$scope.basicInfo.locationWorld', $scope.basicInfo.locationWorld);
@@ -599,7 +613,7 @@
         }
 
         $scope.checkExsit = function (type) {
-            var mt4 = $scope.personal.mt4_id;
+            var user_code = $scope.personal.user_code;
             if (type == 1) {
                 var checkName = 'username';
                 if ($scope.personal.username == $scope.completeInfo.username) {
@@ -621,7 +635,7 @@
                 return
             }
 
-            account.checkExist(type, checkInfo, mt4 || null).then(function (data) {
+            account.checkExist(type, checkInfo, user_code || null).then(function (data) {
                 if (data.data) {
                     $scope.exsit[checkName].show = true;
                 } else {
@@ -802,14 +816,25 @@
             $scope.$apply(function () {
                 $scope.verification.id[data.face + 'Status'] = 2;
             });
-            if ($scope.uploadFinish.hasOwnProperty('front') &&
-                $scope.uploadFinish.hasOwnProperty('back') &&
-                ($scope.backErr.system.status != 3)
-            ) {
-                // 向authenController发送信息
-                $scope.$emit('goState', data.data);
-                // 神策数据统计
-                sa.track('btn_verify');
+            if($scope.realnameInfo.id_type.value == '0'){
+                if ($scope.uploadFinish.hasOwnProperty('front') &&
+                    $scope.uploadFinish.hasOwnProperty('back') &&
+                    ($scope.backErr.system.status != 3)
+                ) {
+                    // 向authenController发送信息
+                    $scope.$emit('goState', data.data);
+                    // 神策数据统计
+                    sa.track('btn_verify');
+                }
+            }else{
+                if ($scope.uploadFinish.hasOwnProperty('front') &&
+                    ($scope.backErr.system.status != 3)
+                ) {
+                    // 向authenController发送信息
+                    $scope.$emit('goState', data.data);
+                    // 神策数据统计
+                    sa.track('btn_verify');
+                }
             }
         });
 
@@ -866,8 +891,8 @@
                 birth: $scope.realnameInfo.birthday,
                 is_live: $scope.personal.is_live
             }).then(function (data) {
-                if (!data.is_succ) {
-                    layer.msg(data.message)
+                if (!data.is_succ || data.data.id_no_exists) {
+                    layer.msg(data.message || "身份证号已存在")
                     $scope.clickable = true;
                 } else {
                     sa.track('New_Realname');
@@ -882,14 +907,14 @@
 
         $scope.checkExsit = function (type) {
             var checkInfo = $scope.realnameInfo.id_num;
-            var mt4 = $scope.personal.mt4_id;
+            var user_code = $scope.personal.user_code;
             var checkName = 'id_num'
 
             if (!checkName || $scope.realnameForm[checkName].$invalid) {
                 return
             }
 
-            account.checkExist(type, checkInfo, mt4 || null).then(function (data) {
+            account.checkExist(type, checkInfo, user_code || null).then(function (data) {
                 if (data.data) {
                     $scope.exsit[checkName].show = true;
                 } else {

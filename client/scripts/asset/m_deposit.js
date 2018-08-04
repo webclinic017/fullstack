@@ -66,7 +66,7 @@ $(document).ready(function () {
                 $.each($pay, function (index, value) {
                     // console.log(index, value);
                     var pMode = $(value).attr("data-pmode");
-                    $(value).attr("href", urlPath+"/api/app/payment/deposit/dispatch?order_no="+order_no+"&pmode="+pMode+"&token="+token);
+                    $(value).attr("href", urlPath+"/api/payment/deposit/dispatch?order_no="+order_no+"&pmode="+pMode+"&token="+token);
                 });
             }
         });

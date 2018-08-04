@@ -1,6 +1,6 @@
 <div tw-loading-img></div>
 <div class="invest_content">
-    <table class="table table-header">
+    <table class="table table-traffic">
         <colgroup>
             <col width="35%">
             <col width="17%">
@@ -56,7 +56,7 @@
                         <i class="fa fa-dollar"></i>{{ orderHistory.profit }}
                     </th>
                     <th class="invest_orders__btn">
-                        <button class="btn btn-primary btn-sm" ng-click="openInvestOwnDetailMdl($event)">详情</button>
+                        <button class="btn font-info font-size-16" ng-click="openInvestOwnDetailMdl($event)">详情</button>
                     </th>
                 </tr>
             </thead>
@@ -103,11 +103,12 @@
                         <td>
                         </td>
                     </tr>
-                    <tr ng-if="orders.length <= 0 && orderHistory.detailsShow">
-                        <td colspan="5">无数据</td>
-                    </tr>
                 </tbody>
-            </table>           
+            </table>
+            <div ng-if="orders.length <= 0 && orderHistory.detailsShow" class="text-center mg-bt-20">
+                <img src="/images/no_data.png" alt="" class="mg-bt-40">
+                <p>暂无数据!</p> 
+            </div>           
         </div>
 
         <!-- 复制交易历史订单 -->
@@ -148,7 +149,7 @@
                             <i class="fa fa-dollar"></i>{{ trader.profit }}
                         </th>
                         <th class="invest_orders__btn">
-                            <button class="btn btn-primary btn-sm" ng-click="openInvestCopyDetailMdl(trader, $event)">详情</button>
+                            <button class="btn font-info font-size-16" ng-click="openInvestCopyDetailMdl(trader, $event)">详情</button>
                         </th>
                     </tr>
                 </thead>
@@ -213,6 +214,7 @@
         </div>
     </div>
     <div class="text-center mg-tp-15" ng-if="orders.length <= 0 && traders.length <= 0">
-        <p class="">无数据</p>
+        <img src="/images/no_data.png" alt="" class="mg-bt-40">
+        <p>暂无数据!</p> 
     </div>
 </div>

@@ -5,11 +5,12 @@
     angular.module('fullstackApp')
         .controller('WalletSummaryController', WalletSummaryController);
 
-    WalletSummaryController.$inject = ['$scope', 'invest', 'utils'];
+    WalletSummaryController.$inject = ['$scope', 'invest', 'utils', 'asset'];
 
-    function WalletSummaryController($scope, invest, utils) {
+    function WalletSummaryController($scope, invest, utils, asset) {
 
         $scope.historyList = [];
+        $scope.backout = backout;
 
         $scope.pagebar = {
             config: {
@@ -29,7 +30,7 @@
 
         function getWalletHistory (page) {
             var offset = page ? (page-1)*pagesize : 0;
-            invest.getWalletHistory(offset, pagesize).then(function (data) {
+            invest.getWalletHistory(offset, pagesize, 0).then(function (data) {
                 // console.log(data);
                 $scope.$broadcast('hideLoadingImg');
                 if (!data) return;
@@ -41,6 +42,19 @@
                         page: page
                     });
                 }
+            });
+        }
+
+        function backout(id){
+            asset.cancelWithdraw(id).then(function (data) {
+                if (!data) return;
+                //console.log(data);
+                if (!data.is_succ) {
+                    // console.log(data.message);
+                    layer.msg(data.message);
+                    return;
+                }
+                getWalletHistory(1);
             });
         }
     }

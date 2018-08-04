@@ -157,6 +157,28 @@
         padding-bottom: 30px; // border-top: 1px solid $gray;
         text-align: center;
     }
+    @include e(add_account) {
+        @include m(ol) {
+            > li {
+                margin: 8px 0;
+                list-style: disc;
+            }
+        }
+        @include m(tip) {
+            font-size: 18px;
+            line-height: 32px;
+            margin-bottom: 8px;
+            color: rgb(36, 42, 54);
+        }
+        @include m(input) {
+            padding: 13px 21px;
+            border-radius: 46px;
+            font-size: 16px;
+        }
+        @include m(msg) {
+            color: #ff0000;
+        }
+    }
 }
 
 @include b(sys_modal_v2) {

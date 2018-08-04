@@ -1,0 +1,20 @@
+<div class="row mg-tp-40" ng-controller="CommonAccountxController">
+    <div class="col-xs-2 text-right deposit__title-money" ng-if="main.pageCtrl === 'withdraw'">
+        提现账户
+    </div>
+    <div class="col-xs-2 text-right deposit__title-money" ng-if="main.pageCtrl === 'deposit'">
+        充值账户
+    </div>
+    <div class="withdraw__list clearfix">
+        <div class="withdraw__list-item" ng-class="{'not-active': common_acount.type != 'invest'}" ng-click="changeWithdrawType('invest')">
+            <p class="summary_name">交易账户</p>
+            <p class="summary_amount">{{ accountItem.account_name || '交易账号' }}</p>
+            <p class="summary_btn" ng-click="subAccountList()" ng-if="common_acount.type ==='invest'"><span>点击切换子账号 ></span></p>
+            <p class="summary_btn" ng-if="common_acount.type !=='invest'"><span>点击切换子账号 ></span></p>
+        </div>
+        <div class="withdraw__list-item" ng-class="{'not-active': common_acount.type != 'wallet'}" ng-click="changeWithdrawType('wallet')">
+            <p class="summary_name">钱包</p>
+            <p class="summary_amount">${{ main.wallet_balance || '0.00' }}</p>
+        </div>
+    </div>
+</div>

@@ -52,7 +52,7 @@
         </ul>
     </div>
 
-    <table class="table table-personal table-hover table-bordered mg-tp-30">
+    <table class="table table-header table-hover table-traffic mg-tp-30">
         <colgroup>
             <col width="33.3%">
             <col width="33.3%">
@@ -91,7 +91,8 @@
         <p tw-pagination></p>
     </div>
 
-    <div ng-if="bonusList.length <= 0">
-        <p class="text-center mg-tp-20">无数据！</p>
+    <div ng-if="bonusList.length <= 0" class="text-center mg-tp-20">
+        <img src="/images/no_data.png" alt="" class="mg-bt-40">
+        <p>暂无数据!</p> 
     </div>
 </div>

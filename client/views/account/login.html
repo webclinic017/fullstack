@@ -12,12 +12,12 @@
                             <input class="account-form-control"
                                    name="step2Phone"
                                    type="text"
-                                   placeholder="{{ lang.text('actLogin24') }}"
+                                   placeholder="{{ lang.text('actLogin38') }}"
                                    required
                                    ng-click="toTrackPhoneSensorsdata()"
                                    on-enter="login('loginForm3')"
                                    ng-model="account.step2Phone">
-                            <span class="account-form-control-tip" ng-show="account.step2Phone">{{ lang.text("actLogin17") }}</span>
+                            <span class="account-form-control-tip" ng-show="account.step2Phone">{{ lang.text("actLogin37") }}</span>
                             <span class="account_login__close" ng-show="account.step2Phone" ng-click="clearPhone('step2Phone')">
                                 <i class="fa fa-times" aria-hidden="true"></i>
                             </span>
@@ -107,6 +107,7 @@
                         </div>
                     </form>
                     <div class="account_login__btn_wrapper">
+                        <span class="account_login__btn mg-rg-15" ng-click="backPassword()">{{ lang.text('actLogin29_1') }}</span>
                         <span class="account_login__btn" ng-click="goForgetPassword2('loginForm4')">{{ lang.text('actLogin29') }}</span>
                     </div>
                 </div>
@@ -144,6 +145,7 @@
                         <p class="account_login__pass-tip2">{{ lang.text('actLogin23') }}</p>
                     </form>
                     <div class="account_login__btn_wrapper">
+                        <span class="account_login__btn mg-rg-15" ng-click="goForgetPassword()">{{ lang.text('actLogin29_1') }}</span>
                         <span class="account_login__btn" ng-click="setForgetPassword('loginForm5')">{{ lang.text('actLogin30') }}</span>
                     </div>
                 </div>

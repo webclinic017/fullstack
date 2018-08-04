@@ -11,7 +11,8 @@
             <a>账户概况</a>
         </li>
     </ul>
-    <ul class="space_nav__box" ng-if="toState.name == 'space.center.invest.subpage'">
+    <!-- 交易账户导航移入页面中部 -->
+    <!-- <ul class="space_nav__box" ng-if="toState.name == 'space.center.invest.subpage'">
         <li class="space_nav__box-item" ui-sref-active="active">
             <a ui-sref="space.center.invest.subpage({subpage: 'current'})">当前交易</a>
         </li>
@@ -24,10 +25,15 @@
         <li class="space_nav__box-item" ui-sref-active="active">
             <a ui-sref="space.center.invest.subpage({subpage: 'record'})">资金记录</a>
         </li>
+    </ul> -->
+    <ul class="space_nav__box" ng-if="toState.name == 'space.center.invest.home'">
+        <li class="space_nav__box-item active">
+            <a>交易账户</a>
+        </li>
     </ul>
     <ul class="space_nav__box" ng-if="toState.name == 'space.center.wallet.subpage'">
         <li class="space_nav__box-item active">
-            <a>零钱包</a>
+            <a>钱包</a>
         </li>
     </ul>
     
@@ -71,22 +77,29 @@
     </ul>
 
     <ul class="space_nav__box" ng-show="toState.name == 'space.setting.subpage'">
-        <li class="space_nav__box-item active">
-            <a>修改资料</a>
+        <li class="space_nav__box-item active" ui-sref-active="active">
+            <a ui-sref="space.setting.subpage({subpage: 'name'})">基本信息</a>
+        </li>
+        <li class="space_nav__box-item active" ui-sref-active="active">
+            <a ui-sref="space.setting.subpage({subpage: 'buddha'})">修改头像</a>
+        </li>
+        <li class="space_nav__box-item active" ui-sref-active="active">
+            <a ui-sref="space.setting.subpage({subpage: 'secure'})">账户安全</a>
         </li>
     </ul>
     
-    <div class="space_nav__prompt">
-        <a  
-            ng-if="personal.dredged_type == 'live' && personal.verify_status < 5"
-            ui-sref="authen.subpage({subpage: 'investInfo'})"
-            class="link">
-            您的帐户尚未完成认证审核，将无法进行交易和资金相关操作，点击此处完成审核。
-        </a>
-        <p ng-if="personal.dredged_type == 'demo' && personal.verify_status < 5" class="font-danger">
+    <div class="">
+        <p ng-if="personal.dredged_type == 'live' && personal.verify_status < 5" class="mg-tp-10"> 
+            <a  
+                ui-sref="authen.subpage({subpage: 'investInfo'})"
+                class="link font-danger">
+                您的账户尚未完成认证审核，将无法进行交易和资金相关操作，点击此处完成审核。
+            </a>  
+        </p>
+        <p ng-if="personal.dredged_type == 'demo' && personal.verify_status < 5" class="mg-tp-10">
             您当前账户为体验金账户，升级至真实账户只需两步：
-            <a class="link" ui-sref="authen.subpage" ng-click="toAuthenTypeSensorsdata('真实账户')">1.完整填写个人信息</a> &nbsp;&nbsp;
-            <a class="link" ui-sref="space.asset.subpage({subpage: 'deposit'})">2.充值激活</a>
+            <a class="link font-danger" ui-sref="authen.subpage" ng-click="toAuthenTypeSensorsdata('真实账户')">1.完整填写个人信息</a> &nbsp;&nbsp;
+            <a class="link font-danger" ui-sref="space.asset.subpage({subpage: 'deposit'})">2.充值激活</a>
         </p>
     </div>
 </div>

@@ -120,7 +120,7 @@
             "login11": {"en": "Login...", "zh": "登录中"},
             "login12": {"en": "Login too much, please try again after 5 minutes", "zh": "登录次数过多，请 5 分钟后重试"},
             "login13": {"en": "account No. or password is wrong", "zh": "用户名或者密码错误"},
-            "login14": {"en": "xx", "zh": "帐号已注销"},
+            "login14": {"en": "xx", "zh": "账号已注销"},
 
             // 注册 register
             "register1": {"en": "Register an account", "zh": "注册账户"},
@@ -217,6 +217,7 @@
             actLogin27: {zh: "*已使用SSL加密技术保护您的网络安全", en: "Secure your network with SSL encryption technology"},
             actLogin28: {zh: "找回密码", en: "Retrieve the password"},
             actLogin29: {zh: "下一步", en: "Next"},
+            actLogin29_1: {zh: "上一步", en: "Prev"},
             actLogin30: {zh: "完成修改", en: "Submit"},
             actLogin31: {zh: "新密码设置成功", en: "The new password is set up successfully"},
             actLogin32: {zh: "重新登录", en: "Re-register"},
@@ -224,6 +225,8 @@
             actLogin34: {zh: "跳过", en: "Jump Over"},
             actLogin35: {zh: "", en: ""},
             actLogin36: {zh: "", en: ""},
+            actLogin37: {zh: "账号或手机号", en: "Account / Phone No"},
+            actLogin38: {zh: "请输入您的账号或手机号", en: "Enter account / phone No"},
         };
 
         return data;

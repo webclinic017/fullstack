@@ -73,9 +73,9 @@
          * @param {Boolean} isClose 是否平仓
          * @param {String} copyType 模拟复制或者真实复制
          */
-        function cancelCopy(usercode, auto_delete) {
+        function cancelCopy(account_code, auto_delete) {
             return publicHttp.dealPublicRequest(o.cancelCopyApi, 'POST', {
-                user_code: usercode,
+                account_code: account_code,
                 auto_delete: auto_delete
             });
         }
@@ -89,7 +89,7 @@
          */
         function getAvaCopyAmount(usercode) {
             return publicHttp.dealPublicRequest(o.getAvaCopyAmountApi, 'GET', {
-                user_code: usercode
+                user_code: usercode,
             });
         }
 
@@ -135,11 +135,13 @@
         /**
          * trader 获取高手等级信息
          * @param user_code 
+         * @param account_code  交易账户主键ID 
          *
          */
-        function getMasterGrade(user_code) {
+        function getMasterGrade(user_code, account_code) {
             return publicHttp.dealPublicRequest(o.getMasterGradeApi, 'GET', {
-                user_code: user_code
+                user_code: user_code,
+                account_code: account_code,
             });
         }
 
@@ -147,16 +149,20 @@
          * trader 高手申请条件检查
          *
          */
-        function getMasterCondition() {
-            return publicHttp.dealPublicRequest(o.getMasterConditionApi, 'GET');
+        function getMasterCondition(mt4_id) {
+            return publicHttp.dealPublicRequest(o.getMasterConditionApi, 'GET', {
+                mt4_id: mt4_id,
+            });
         }
 
         /**
          * trader 高手申请
          *
          */
-        function applyMaster() {
-            return publicHttp.dealPublicRequest(o.applyMasterApi, 'POST');
+        function applyMaster(mt4_id) {
+            return publicHttp.dealPublicRequest(o.applyMasterApi, 'POST', {
+                mt4_id: mt4_id,
+            });
         }
     }
 })();

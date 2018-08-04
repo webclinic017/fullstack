@@ -139,24 +139,35 @@
                     } else {
                         // 获取开通状态
                         var dredged_type = $scope.personal.dredged_type;
-                        // 未开通
-                        if (dredged_type != 'unknow') {
-                            var minCopyAmount = parseFloat($scope.master.min_copy_amount, 10);
-                            if (typeof avaCopyAmount === 'undefined') {
-                                console.log('getting available copy amount');
-                                return;
-                            }
-                            avaCopyAmount = parseFloat(avaCopyAmount, 10);
-                            // console.log(avaCopyAmount, minCopyAmount);
-                            if (avaCopyAmount < minCopyAmount) {
-                                openSystemMdl('amount', minCopyAmount);
+                        if(dredged_type) {
+                            // 未开通
+                            if (dredged_type === 'unknow') {
+                                $scope.$emit('global.openDredgeMdl', {
+                                    position: 'TraderIndexController',
+                                });
+                                // 体验金
+                            } else if (dredged_type === 'demo') {
+                                openSystemMdl('verify');
                             } else {
-                                openCopyMdl();
+                                var replication_protocol = localStorage['replication_protocol'];
+                                if(replication_protocol){
+                                    var minCopyAmount = parseFloat($scope.master.min_copy_amount, 10);
+                                    if (typeof avaCopyAmount === 'undefined') {
+                                        console.log('getting available copy amount');
+                                        return;
+                                    }
+                                    avaCopyAmount = parseFloat(avaCopyAmount, 10);
+                                    // console.log(avaCopyAmount, minCopyAmount);
+                                    if (avaCopyAmount < minCopyAmount) {
+                                        openSystemMdl('amount', minCopyAmount);
+                                    } else {
+                                        openCopyMdl();
+                                    }
+                                }else{
+                                    copyProtocolMdl();
+                                }
                             }
-                        } else {
-                            $scope.$emit('global.openDredgeMdl', {
-                                position: 'TraderIndexController',
-                            });
+
                         }
                     }
                 }
@@ -226,6 +237,34 @@
                     $scope.closeModal = closeModal;
                     function closeModal() {
                         $modalInstance.dismiss();
+                    }
+                }
+            });
+        }
+        // 复制协议
+        // copyProtocolMdl()
+        function copyProtocolMdl(){
+            $modal.open({
+                templateUrl: '/views/web/trader/copy_protocol_modal.html',
+                size: 'sm',
+                resolve: {
+                    passedScope: function () {
+                        return {
+                            
+                        };
+                    }
+                },    
+                controller: function ($scope, passedScope, $modalInstance) {
+                    $scope.closeModal = closeModal;
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                    // 同意协议
+                    $scope.agreeProtocol = function(){
+                        closeModal();
+                        localStorage['replication_protocol'] = 1;
+                        $timeout(function(){toCopy()}, 500)
+                        
                     }
                 }
             });

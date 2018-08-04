@@ -48,6 +48,17 @@
             </button>
         </p>
     </div>
+    <div class="sys_modal_v2__content" ng-if="params.type == 'walletSuss'">
+        <p class="sys_modal_v2__info">
+            提现成功<br/>
+            到账时间约为10分钟，请耐心等待
+        </p>
+        <p class="btn_wrapper">
+            <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
+                确定
+            </button>
+        </p>
+    </div>
 
     <div class="sys_modal_v2__content" ng-if="params.type == 'withdrawTip'">
         <p class="sys_modal_v2__info">

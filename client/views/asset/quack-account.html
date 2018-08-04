@@ -1,0 +1,32 @@
+<div ng-controller="QuackAccountController">
+    <div class="asset-public__tip" ng-show="authenAssetStatus == 0">
+        <img style="height: 50px;" src="/ngsrc/loading.gif">
+    </div>
+    <div class="asset-public__tip" ng-show="authenAssetStatus == 1">
+        <img src="/images/enable_account.png" alt="" class="mg-bt-40">
+        <div class="text-center font-size-16 mg-bt-20">
+            您尚未开通任何账户，请先开户
+        </div>
+        <div class="text-center">
+            <a class="btn btn-primary-gradient btn-sm" ng-click="openDredgeMdl({position: 'sidebar'})">
+                快捷开户
+            </a>
+        </div>
+    </div>
+    <div class="asset-public__tip" ng-show="(authenAssetStatus == 2) || (authenAssetStatus == 4)">
+        <img src="/images/enable_account.png" alt="" class="mg-bt-40">
+        <div class="text-center font-size-16 mg-bt-20">
+            您当前的账户类型不支持使用该功能，请及时升级账户
+        </div>
+    </div>
+    <div class="asset-public__tip" ng-show="authenAssetStatus == 3">
+        <div class="text-center font-size-16 mg-bt-20">
+            认证信息已提交，正在审核中<br>
+            审核时间：<br>
+            工作日10:00-18:00：将在30分钟左右完成审核<br>
+            工作日18:00以后：将在21:00、23:00统一审核；23:00后认证的将在次日审核<br>
+            非工作日时间：将在10:00、16:00、22:00统一审核；22:00后认证的将在次日审核<br>
+            请留意查询您的审核状态。<br>
+        </div>
+    </div>
+</div>

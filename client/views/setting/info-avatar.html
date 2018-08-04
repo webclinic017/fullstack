@@ -1,5 +1,5 @@
-<div ng-controller="SettingInfoAvatarController">
-    <div class="upload_avatar text-center" tw-upload-avatar ban="ban" filename="personal.lgAvatar">
+<div ng-controller="SettingInfoAvatarTwoController">
+    <!-- <div class="upload_avatar text-center" tw-upload-avatar ban="ban" filename="personal.lgAvatar">
 
         <img class="upload_avatar__avatar" ng-show="!personal.addAvatarImg" ng-src="{{personal.lgAvatar}}" alt="头像">
         <img class="upload_avatar__avatar" ng-show="!!personal.addAvatarImg" ng-src="{{personal.addAvatarImg}}">
@@ -20,5 +20,33 @@
         <p class="upload_avatar__desc">
             只支持 jpg、png 格式且大小在 2MB 以内
         </p>
+    </div> -->
+
+
+
+
+
+    <div class="setting_info_zero__avatar mg-tp-40 pd-bt-50">
+        <p class="tip">只支持 jpg、png 格式且大小在 2MB 以内</p>
+        <img ng-src="{{ personal.lgAvatar }}" class="showImg"/>
+        <label for="input" class="setting_info_zero__avatar-file tw-btn-sm tw-btn-capsule-bordered">
+            <div tw-upload-file-base64-two data-file-name="selectHeadImg.avatar" ban="ban"></div>
+            <div class="select-head">选择头像</div>
+        </label>
+        <div class="text-center mg-bt-30 mg-tp-84" ng-if="!showSubmit">
+            <div ng-show="backErr.system.show">
+                <p class="alert-system">
+                    {{ backErr.system.msg }}
+                </p>
+            </div>
+            <button class="tw-btn-lg162 tw-btn-capsule-gradient" type="submit" ng-if="clickable" ng-click="submitAvatar()">
+                提交
+            </button>
+
+            <button class="tw-btn-lg162 tw-btn-capsule-gradient" ng-if="!clickable">
+                <i class="loading_spinner fa fa-spinner"></i>
+                提交中
+            </button>
+        </div>
     </div>
 </div>

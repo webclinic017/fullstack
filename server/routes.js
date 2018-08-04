@@ -318,6 +318,11 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('m_vue/m_about_us', extendPublic({}, req));
     });
+    /*H5 复制规则*/
+    app.route('/m/copy/rule').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render("m_vue/m_copy_rule", extendPublic({}, req));
+    });
 
     /* H5 充值中转页面 */
     app.route('/m/deposit/pay').get(function (req, res) {
@@ -379,7 +384,7 @@ module.exports = function (app) {
     app.route('/trader/:usercode').get(function (req, res) {
         setEnvCf(req, res);
         var usercode = req.params.usercode;
-        var masterApiPath = URL_PATH + '/api';
+        var masterApiPath = URL_PATH + '/api/v3';
         // console.log('------masterApiPath', masterApiPath);
         request(masterApiPath + '/master/trading_profile?user_code=' + usercode, function (error, response, body) {
             if (!error && response.statusCode == 200) {

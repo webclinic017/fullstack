@@ -92,6 +92,10 @@
                 msg: ''
             }
         };
+        $scope.isEditName = false;
+        $scope.editName = function() {
+            $scope.isEditName = true;
+        }
         $scope.clickable = true;
         $scope.selectRegion = selectRegion;
         $scope.showErr = showErr;
@@ -136,12 +140,12 @@
                             value: 'CN'
                         },
                         locationState: {
-                            key: data.region_cn.state_name,
-                            value: data.state_code
+                            key: data.region.state_name,
+                            value: data.region.state_code
                         },
                         locationCity: {
-                            key: data.region_cn.city_name,
-                            value: data.city_code
+                            key: data.region.city_name,
+                            value: data.region.city_code
                         }
                     });
 
@@ -216,7 +220,7 @@
         }
 
         function submitForm(formName) {
-            if($scope.personal.is_master){
+            if($scope.personal.has_master){
                 $layer({
                     title: '错误提示',
                     size: 'sm',

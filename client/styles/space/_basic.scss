@@ -7,6 +7,11 @@ $font-space-gray-color: $gray-dark;
     font-size: $font-space-size-sm;
 }
 
+.block_btn_group {
+    .tw-btn {
+        margin-left: 24px;
+    }
+}
 .space_block {
     background-color: #fff;
     border-radius: 10px;
@@ -28,14 +33,9 @@ $font-space-gray-color: $gray-dark;
         color: $gray-dark;
         margin: 80px 0;
     }
+    @extend .block_btn_group;
 
-    .block_btn_group {
-        .tw-btn:nth-child(2) {
-            margin: 0 24px;
-        }
-    }
 }
-
 // space.center
 @include b(space_center_summary){
     margin-bottom: 50px;
@@ -46,36 +46,100 @@ $font-space-gray-color: $gray-dark;
             float: left;
             width: 300px;
             height: 160px;
-            border-radius: 8px;
+            border-radius: 23px;
             transition: all 0.22s linear;
+            background-position: center;
             background-repeat: no-repeat;
-            background-size: 100% 100%;
+            background-size: cover;
+            padding: 25px 24px 18px;
             cursor: pointer;
-            padding: 25px;
             &:hover {
                 box-shadow: 0 10px 60px $gray-dark;
             }
             &:nth-child(1) {
-                background-image: url('/images/space/center-total.png');
+                background-image: url('/images/space/space-trading.png');
             }
             &:nth-child(2) {
-                background-image: url('/images/space/center-trading.png');
+                background-image: url('/images/space/space-wallet.png');
                 margin: 0 20px;
             }
             &:nth-child(3) {
-                background-image: url('/images/space/center-wallet.png');
+                background-image: url('/images/space/space-total.png');
+            }
+            span {
+                display: inline-block;
+            }
+            > a {
+                display: inline-block;
+                width: 100%;
+                height: 100%;
             }
             p {
                 color: #fff;
             }
+            &.not-active {
+                background-image: url('/images/space/not-active.png');
+                .summary_btn {
+                    text-align: center;
+                    font-size: 32px;
+                    margin-top: 14px;
+                    a{
+                        display: inline-block;
+                    }
+                    a:hover {
+                        text-decoration: none;
+                    }
+                    .add-o {
+                        display: inline-block;
+                        width: 40px;
+                        height: 40px;
+                        border: 1px solid #fff;
+                        border-radius: 50%;
+                        margin-right: 16px;
+                        margin-bottom: 3px;
+                        position: relative;
+                        vertical-align: middle;
+                        &::before{
+                            content: '+';
+                            position: absolute;
+                            top: -6px;
+                            left: 10px;
+                        }
+                    }
+                }
+            }
             .summary_name {
                 font-size: 16px;
-                margin-top: 10px;
             }
             .summary_amount {
-                font-size: 36px;
+                font-size: 32px;
                 font-weight: 500;
-                margin-top: 20px;
+                margin-top: 12px;
+            }
+            .summary_btn {
+                margin-top: 19px;
+                a {
+                    color: #fff;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                span {
+                    font-size: 14px;
+                    padding-right: 20px;
+                    margin-right: 20px;
+                    position: relative;
+                    &.line:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        top: 3px;
+                        right: 0;
+                        width: 1px;
+                        height: 14px;
+                        background-color: #fff;
+                    }
+                }
             }
         }
     }
@@ -84,8 +148,22 @@ $font-space-gray-color: $gray-dark;
 @include b(space_center_trading){
     @extend .space_block;
     
+    // @include e(select) {
+    //     min-width: 276px;
+    //     height: 50px;
+    //     border-radius: 8px;
+    //     margin-left: 20px;
+    //     font-size: 20px;
+    //     color: rgb(25, 79, 130);
+    //     padding: 13px 24px;
+    //     span {
+    //         display: inline-block;
+    //         background: #494949
+    //     }
+    // }
+
     @include b(trading_details) {
-        margin-top: 75px;
+        margin-top: 65px;
         margin-bottom: 25px;
         li {
             float: left;
@@ -127,10 +205,62 @@ $font-space-gray-color: $gray-dark;
             }
 
             &.active {
-                .space_center_hint{
+                .space_center_hint {
                     display:block
                 }
             }
         }
+    }
+}
+
+// 资产总额
+@include b(space_center_statistics) {
+    color: rgb(36, 42, 54);
+    margin-bottom: 50px;
+    display: flex;
+    align-items: flex-end;
+    &.align-items-center {
+        align-items: center;
+    }
+    @include e(title) {
+        margin-right: 80px;
+        min-width: 110px;
+        @include m(item) {
+            &:nth-child(1) {
+                font-size: 44px;
+                font-weight: 700;
+            }
+            &:nth-child(2){
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+    @include e(list) {
+        display: flex;
+        align-items: flex-end;
+        flex: 1;
+        @include m(item) {
+            line-height: 22px;
+            &:nth-child(odd) {
+                min-width: 130px;
+                div:nth-child(1) {
+                    font-size: 18px;
+                }
+                div:nth-child(2) {
+                    font-size: 12px;
+                }
+            }
+            &:nth-child(even) {
+                width: 1px;
+                background-color: rgb(151, 151, 151);
+                height: 40px;
+                margin: 0 25px;
+            }
+        }
+    }
+    @include e(wallet) {
+        flex: 1;
+        @extend .block_btn_group;
     }
 }
