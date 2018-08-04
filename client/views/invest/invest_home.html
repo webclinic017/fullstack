@@ -15,7 +15,7 @@
         </li>
         <li class="space_center_statistics__list-item" ></li>
         <li class="space_center_statistics__list-item">
-            <div ng-class="{'font-danger': totalDealAccount.profit_rate.indexOf('-') < 0, 'font-success': totalDealAccount.profit_rate.indexOf('-') >= 0}">{{ totalDealAccount.profit_rate || '0.00' }}%</div>
+            <div ng-class="{'font-danger': totalDealAccount.total_profit_rate.indexOf('-') < 0, 'font-success': totalDealAccount.total_profit_rate.indexOf('-') >= 0}">{{ totalDealAccount.total_profit_rate || '0.00' }}%</div>
             <div>总收益率</div>
         </li>
     </ul>
