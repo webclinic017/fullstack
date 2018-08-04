@@ -23,7 +23,7 @@
                 page: 1    
             },
             pages: [],
-            pagesBtn: []    
+            pagesBtn: [],
         };
 
         var date = new Date();
@@ -73,9 +73,11 @@
             if($scope.investSelect.type == 3){
                 getMasterBonusList();
                 getMasterBonusSummary();
+                $scope.pagebar.getList = getMasterBonusList;
             }else if($scope.investSelect.type == 2){
                 getCopierBonusList();
                 getCopierBonusSummary();
+                $scope.pagebar.getList = getCopierBonusList;
             }
 
         })
