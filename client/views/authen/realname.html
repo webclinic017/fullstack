@@ -79,7 +79,7 @@
                             ng-if="realnameInfo.id_type.value == 0"
                             name="id_num"
                             type="text"
-                            placeholder="请输入身份证号"
+                            placeholder="请输入证件号码"
                             required
                             ng-class="{'form-control-error': frontErr.id_num.show && realnameForm.id_num.$invalid}"
                             ng-model="realnameInfo.id_num"
@@ -92,7 +92,7 @@
                             ng-if="realnameInfo.id_type.value != 0"
                             name="id_num"
                             type="text"
-                            placeholder="请输入身份证号"
+                            placeholder="请输入证件号码"
                             required
                             ng-class="{'form-control-error': frontErr.id_num.show && realnameForm.id_num.$invalid}"
                             ng-model="realnameInfo.id_num"
@@ -101,7 +101,7 @@
         
                         <div ng-show="frontErr.id_num.show">
                             <p class="alert-arrow_tp_lf" ng-show="realnameForm.id_num.$error.required">
-                                请输入身份证号
+                                请输入证件号码
                             </p>
                             <p class="alert-arrow_tp_lf" ng-show="realnameForm.id_num.$error.pattern">
                                 {{ frontErr.id_num.tip }}
@@ -110,7 +110,7 @@
         
                         <div ng-show="exsit.id_num.show">
                             <p class="alert-arrow_tp_lf">
-                                身份证号已存在
+                                证件号码已存在
                             </p>
                         </div>
                     </div>
