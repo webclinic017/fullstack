@@ -76,8 +76,9 @@
                     if (value.key === 'cse_wallet') value.key = 'cseWallet';
 
                     if (value.default && !$scope.deposit.type) {
-                        $scope.deposit.type = value.key;
-                        console.log($scope.deposit.type)
+                        // $scope.deposit.type = value.key;
+                        changeDepositType(value.key)
+                        // console.log($scope.deposit.type)
                     }
 
                     $scope.depositTypeLst[value.key] = value;
