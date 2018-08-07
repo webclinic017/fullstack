@@ -1,4 +1,4 @@
-<div ng-if="authenAsset">
+<div ng-if="!quackUnknow">
     <div ui-view="basic"></div>
     <div class="nav-tabs-wrapper margin-top60" ng-if="personal.basic === 'center.invest.subpage'">
         <ul class="nav-tabs">
@@ -27,4 +27,4 @@
         <div ui-view="detail"></div>
     </div>
 </div>
-<div ng-if="!authenAsset" ng-include="'/views/asset/quack-account.html'" ></div>
+<div ng-if="quackUnknow" ng-include="'/views/asset/quack-account.html'" ></div>
