@@ -377,6 +377,11 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('m_vue/m_blank', extendPublic({}, req));
     });
+    // 打开APP
+    app.route('/to_app_website').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('m_vue/to_app_website', extendPublic({}, req));
+    });
 
     /*--------------------APP-End-------------------------*/
 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<body>
+
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/to_app_website.js -->
+<script src="/scripts/bd/common/open_app.js"></script>
+<script src="/scripts/web/to_app_website.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>
