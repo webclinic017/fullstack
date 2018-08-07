@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('ThirdDepositController', ThirdDepositController);
 
-    ThirdDepositController.$inject = ['$scope', '$window', '$document', '$cookies', '$modal', '$state', 'asset', 'validator', 'account', '$layer', 'previewImage'];
+    ThirdDepositController.$inject = ['$scope', '$window', '$document', '$cookies', '$modal', '$state', '$timeout', 'asset', 'validator', 'account', '$layer', 'previewImage'];
 
-    function ThirdDepositController($scope, $window, $document, $cookies, $modal, $state, asset, validator, account, $layer, previewImage) {
+    function ThirdDepositController($scope, $window, $document, $cookies, $modal, $state, $timeout, asset, validator, account, $layer, previewImage) {
         $scope.depositTypeLst = {}; // 支付方式列表
         $scope.deposit = {
             currency: null,     // 支付币种
@@ -71,7 +71,9 @@
                     if (value.key === 'cse_wallet') value.key = 'cseWallet';
 
                     if (value.default && !$scope.deposit.type) {
-                        changeDepositType(value.key)
+                        $timeout(function () {
+                            changeDepositType(value.key)
+                        }, 50);
                         // $scope.deposit.type = value.key;
                     }
 

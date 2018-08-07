@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('AssetDepositController', AssetDepositController);
 
-    AssetDepositController.$inject = ['$scope', '$window', '$document', '$cookies', '$modal', '$state', 'asset', 'validator', 'account', '$layer', 'previewImage'];
+    AssetDepositController.$inject = ['$scope', '$window', '$document', '$cookies', '$modal', '$state', '$timeout', 'asset', 'validator', 'account', '$layer', 'previewImage'];
 
-    function AssetDepositController($scope, $window, $document, $cookies, $modal, $state, asset, validator, account, $layer, previewImage) {
+    function AssetDepositController($scope, $window, $document, $cookies, $modal, $state, $timeout, asset, validator, account, $layer, previewImage) {
 
         $scope.depositTypeLst = {}; // 支付方式列表
         $scope.deposit = {
@@ -77,7 +77,9 @@
 
                     if (value.default && !$scope.deposit.type) {
                         // $scope.deposit.type = value.key;
-                        changeDepositType(value.key)
+                        $timeout(function () {
+                            changeDepositType(value.key)
+                        }, 50);
                         // console.log($scope.deposit.type)
                     }
 
@@ -177,6 +179,7 @@
 
         // 切换充值方式
         function changeDepositType(type) {
+            console.log($scope.depositTypeLst, type)
             if (!type) return;
             $scope.deposit.depositCard = undefined;
             $scope.deposit.type = type;
