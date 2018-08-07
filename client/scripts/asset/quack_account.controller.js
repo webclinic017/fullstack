@@ -13,7 +13,7 @@
     $scope.authenAssetStatus = 0; // 0 loading, 1 新注册用户, 2 已开通体验金账户, 3 开通真实账户，身份审核中, 4 开通真实账户，身份审核被拒绝
     $scope.$watch('personal.dredged_type', function (newVal, oldVal) {
       if (newVal) {
-        let quackUnknow;  // 是否为新注册用户
+        var quackUnknow;  // 是否为新注册用户
         // console.log($scope.personal.verify_status)
         if ($scope.personal.passedAuthen) {
           $scope.$emit('quack.result')
