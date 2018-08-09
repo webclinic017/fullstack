@@ -94,11 +94,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.1.0",
-                        description: "The new version updated the following, update now to enjoy the new trading experience!\n1.Update to TigerWit ID system;\n2.You can create more than one sub-account;\n3.You can own master account and copy account at once;\n4.The funds in sub-account could be withdrew to wallet.\nTips:\nUsers with 8.0 and above mobile phone systems click the \"Install Now\" button may to fail to install.\nIf this happens, please step to the official website to manually download updates.",
+                        version_name : "V2.2.0",
+                        description: "Fixing known problems and optimize the user experience.\nIf this happens, please step to the official website to manually download updates.",
                         updated_description: "70% users are using new version",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.1.0.apk",
-                        force_update : true
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.2.0.apk",
+                        force_update : false
                     }
                 }
             },
@@ -113,11 +113,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.1.0",
-                        description: "新版本优化了以下功能。赶快更新享受新的交易体验！\n1.升级到TigerWit通行证系统；\n2.您可以同时创建多个子账号；\n3.通行证同时支持高手账号和跟单账号；\n4.支持子账号和钱包之间转账。\n温馨提示：\n手机系统为8.0及以上的用户在此页点击“立即安装”按钮可能安装失败。\n若出现上述情况请移步至官网手动下载更新。",
+                        version_name : "V2.2.0",
+                        description: "修复已知问题，优化用户体验。\n若出现上述情况请移步至官网手动下载更新。",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.1.0.apk",
-                        force_update : true
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.2.0.apk",
+                        force_update : false
                     }
                 }
             }
