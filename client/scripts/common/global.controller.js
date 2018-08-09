@@ -200,7 +200,7 @@
 
         // change language into English or Chinese
         function reloadLanguage(lang) {
-            document.cookie = 'lang=' + lang + '; path=/';
+            document.cookie = 'lang=' + lang + '; path=/; domain=.tigerwit.com';
             location.reload();
         }
 
