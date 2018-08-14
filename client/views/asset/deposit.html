@@ -4,21 +4,34 @@
         <div class="row">
             <div class="col-xs-2 text-right deposit__title-money">充值金额</div>
             <div class="col-xs-7 deposit__input">
-                <form name="depositForm" novalidate>
+                <form name="depositForm" novalidate autocomplete="off">
                     <div class="form-control-wrapper">
                         <input class="form-control form-control-size-lg form-control-shape-capsule"
                                name="amount"
-                               type="text"
+                               type="number"
                                required
                                ng-model="deposit.amount"
                                ng-change="checkInputAmount()">
 
                         <span class="form-control-icon form-control-icon-size-lg">$</span>
+                        <div ng-if="amountVerify.show">
+                            <p class="alert alert-arrow_tp_lf">
+                                {{amountVerify.tip}}
+                            </p>
+                        </div>
                     </div>
                 </form>
             </div>
         </div>
 
+        <div class="row" ng-if="depositTypeLst[deposit.type].key === 'omipay'">
+            <ul class="col-xs-7 col-xs-offset-2 deposit__list">
+                <li class="deposit__list-item mg-rg-30" ng-click="selectMoney(100)">$100</li>
+                <li class="deposit__list-item mg-rg-30" ng-click="selectMoney(200)">$200</li>
+                <li class="deposit__list-item mg-rg-30" ng-click="selectMoney(500)">$500</li>
+                <li class="deposit__list-item" ng-click="selectMoney(1000)">$1000</li>
+            </ul>
+        </div>
         <div class="row" ng-if="deposit.currency">
             <div class="col-xs-7 col-xs-offset-2 deposit__rate">
                 <p ng-show="deposit.currency.currency !== 'USD'">
@@ -27,7 +40,6 @@
                 </p>
             </div>
         </div>
-
         <div class="row mg-tp-30 deposit__pay_method">
             <div class="col-xs-2 text-right deposit__title-money">支付方式</div>
             <div class="col-xs-7">

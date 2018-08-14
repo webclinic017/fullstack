@@ -227,6 +227,9 @@
             actLogin36: {zh: "", en: ""},
             actLogin37: {zh: "账号或手机号", en: "Account / Phone No"},
             actLogin38: {zh: "请输入您的账号或手机号", en: "Enter account / phone No"},
+
+            // 个人中心
+            
         };
 
         return data;
