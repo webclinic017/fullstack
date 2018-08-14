@@ -85,6 +85,21 @@
     ul>li {
         margin: 5px 0;
     }
+    @include e(list){
+        display: flex;
+        margin-bottom: 10px;
+        @include m(item){
+            border: 1px solid #eee;
+            border-radius: 25px;
+            padding: 3px 10px;
+            min-width: 70px;
+            text-align: center;
+            cursor: pointer;
+            &:hover{
+                background: #eee;
+            }
+        }
+    }
     @include e(rate) {
         color: #999;
         font-size: 14px;

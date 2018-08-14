@@ -84,6 +84,7 @@
                     }
 
                     $scope.depositTypeLst[value.key] = value;
+                    // console.log($scope.depositTypeLst)
                 });
                 
                 // 设置初始币种
@@ -150,14 +151,49 @@
                 }
             });
         }
-
+        // 输入框提示信息
+        $scope.amountVerify = {
+            show: false,
+            tip: ''
+        };
+        // 选择倍数金额
+        $scope.selectMoney = function(money){
+            $scope.deposit.amount = money;
+            checkInputAmount();
+        }
         //判断按钮 deposit.submitBtn
         function checkInputAmount() {
+            $scope.deposit.submitBtn = false;
+            $scope.amountVerify.show = false;
             if ($scope.isLoading) return;
             if (!$scope.deposit.type || !$scope.deposit.amount) {
-                $scope.deposit.submitBtn = false;
+                // $scope.deposit.submitBtn = false;
                 return;
             }
+            var type = $scope.depositTypeLst[$scope.deposit.type]; // 当前支付方式内容
+            // console.log(typeof $scope.deposit.amount)
+            if($scope.deposit.amount < Number(type.min)){
+                $scope.amountVerify.show = true;
+                $scope.amountVerify.tip = '当前支付方式最低充值金额为' + type.min;
+                return
+            }
+            if(type.max != "0.00"){
+                if($scope.deposit.amount > Number(type.max)){
+                    $scope.amountVerify.show = true;
+                    $scope.amountVerify.tip = '当前支付方式最高充值金额为' + type.max;
+                    return
+                }
+            }
+            // 需要判断金额倍数时
+            if(type.key === 'omipay'){
+                var re = (/^[0-9]*[0-9]$/i);
+                if(!(re.test($scope.deposit.amount) && $scope.deposit.amount%100 === 0)){
+                    $scope.amountVerify.show = true;
+                    $scope.amountVerify.tip = type.describe;
+                    return
+                }
+            }
+            // 支付方式为钱包时
             if ($scope.deposit.type === 'wallet') {
                 if (Number($scope.deposit.amount) > Number($scope.walletAble)) {
                     $scope.deposit.submitBtn = false;
@@ -166,6 +202,7 @@
                 }
                 return;
             }
+            // 是否需要添加银行卡
             if ($scope.deposit.isNeedBank) {
                 if ($scope.deposit.depositCard) {
                     $scope.deposit.submitBtn = true;
@@ -260,7 +297,7 @@
         }
 
         // 充值  还未完成
-        function toDeposit(amount) {
+        function toDeposit() {
             $scope.$emit('global.checkAuthenFlow', {
                 ctrlName: 'AssetDepositController',
                 callback: function () {
