@@ -4,13 +4,21 @@
     
     angular.module('fullstackApp').factory('lang', lang);
 
-    lang.$inject = ['langData'];
+    lang.$inject = ['langData', '$location'];
 
-    function lang (langData) {
+    function lang (langData, $location) {
 
         var lang = {
             isCompany: function () {
                 return langData["company"];
+            },
+            isDemo: function () {
+                // console.log($location.host());
+                if (($location.host().indexOf('demo.tigerwit.com') != -1) || ($location.host().indexOf('w.dev.tigerwit.com') != -1)) {
+                    return true;
+                } else {
+                    return false;
+                }
             },
             isEnglish: function () {
                 return langData["language"] == 'en' ? true : false;

@@ -11,14 +11,14 @@
         var is_cloned = envConfig.isCloned || '';
         var lang = url.parse(req.url, true).query.lang;
         var cArr = [
-            'company_name=' + company_name + '; path=/',
-            'access_origin=' + access_origin + '; path=/',
-            'access_origin2=' + access_origin2 + '; path=/',
-            'cdn_url=' + cdn_url + '; path=/',
-            'is_cloned=' + is_cloned + '; path=/',
+            'company_name=' + company_name + '; path=/; domain=.tigerwit.com',
+            'access_origin=' + access_origin + '; path=/; domain=.tigerwit.com',
+            'access_origin2=' + access_origin2 + '; path=/; domain=.tigerwit.com',
+            'cdn_url=' + cdn_url + '; path=/; domain=.tigerwit.com',
+            'is_cloned=' + is_cloned + '; path=/; domain=.tigerwit.com',
         ];
         if (lang) {
-            cArr.push('lang='+lang+'; path=/');
+            cArr.push('lang='+lang+'; path=/; domain=.tigerwit.com');
         }
         // console.info(cArr);
         res.setHeader('Set-Cookie', cArr);

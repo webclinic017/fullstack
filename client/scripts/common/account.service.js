@@ -58,6 +58,7 @@
             checkPhoneAndCaptcha: checkPhoneAndCaptcha,
             checkEmailCode: checkEmailCode,
             checkCode: checkCode,
+            checkAgent: checkAgent
         };
         var resolveValue;
         return service;
@@ -597,6 +598,10 @@
 
         function setUsername(params){
             return publicHttp.dealPublicRequest(o.setUsername, 'PUT', params);
+        }
+        //判断是否是代理商
+        function checkAgent(){
+            return publicHttp.dealPublicRequest(o.checkAgentApi, 'GET');
         }
     }
 })();
