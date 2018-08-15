@@ -16,8 +16,13 @@
                 return langData["language"] == 'en' ? true : false;
             },
             text: function(name){
+                var keys = name.split('.');
+                var key = langData;
+                for (var index = 0; index < keys.length; index++) {
+                    key = key[keys[index]]       
+                }
                 var text;
-                text = langData[name][langData["language"]];
+                text = key[langData["language"]];
                 return text;
             },
             image: function(name){

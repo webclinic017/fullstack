@@ -23,7 +23,6 @@
             "/white_label/passport/02.png",
             "/white_label/passport/03.png"
         ];
-
         //定时提取用户资产信息
         getAssetInfo();
         $scope.$watch('personal.profile_check', function (n) {
