@@ -385,7 +385,6 @@ module.exports = function (app) {
 
     /*--------------------APP-End-------------------------*/
 
-
     app.route('/trader/:usercode').get(function (req, res) {
         setEnvCf(req, res);
         var usercode = req.params.usercode;
