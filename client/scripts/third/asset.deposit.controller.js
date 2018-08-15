@@ -69,6 +69,8 @@
                     if (value.key === 'bank') value.key = 'invest';
                     if (value.key === 'transfer') value.key = 'tele';
                     if (value.key === 'cse_wallet') value.key = 'cseWallet';
+                    //因为后台设置时线上设置的key设置成大写了，要做一下兼容，（＊）
+                    if (value.key === 'Omipay') value.key = 'omipay';
 
                     if (value.default && !$scope.deposit.type) {
                         $timeout(function () {
