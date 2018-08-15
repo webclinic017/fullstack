@@ -391,41 +391,16 @@ module.exports = function (app) {
 
     /*--------------------APP-End-------------------------*/
 
-
     app.route('/trader/:usercode').get(function (req, res) {
+        setEnvCf(req, res);
         var usercode = req.params.usercode;
-        var hostname = req.hostname;
-        var hostArr = hostname.split('\.');
-        // var apiOrigin = 'https://a.' + hostArr[hostArr.length - 2] + '.' + hostArr[hostArr.length - 1];
-        var masterApiPath = '';
-        if (process.env.COMPANY_NAME != 'tigerwit') {
-            masterApiPath = process.env.URL_PATH + '/api/v3';
-        } else {
-            var hostPrefix = hostArr[0];
-            var hostPrefix2 = hostArr[1];
-            // www.tigerwit.com
-            // demo.tigerwit.com
-            // w.tigerwit.com
-            // w.dev.tigerwit.com
-
-            // tigerwit.co.uk return hostname is ip 60.205.105.34
-            if (hostname == '60.205.105.34') {
-                masterApiPath = 'https://api-tmp.tigerwit.com/api/v3'
-            }
-            else if (hostPrefix == 'demo' || hostPrefix2 == 'dev') {
-                masterApiPath = 'https://demo.tigerwit.com/api/v3'
-            }
-            else if (hostPrefix == 'api-tmp' || hostPrefix == 'www' || hostPrefix == 'w') {
-                masterApiPath = 'https://api-tmp.tigerwit.com/api/v3'
-            }
-        }
+        var masterApiPath = URL_PATH + '/api/v3';
         // console.log('------masterApiPath', masterApiPath);
         request(masterApiPath + '/master/trading_profile?user_code=' + usercode, function (error, response, body) {
-            // request('https://www.tigerwit.com/action/public/v5/get_master_info?user_code=' + usercode, function(error, response, body) {
             if (!error && response.statusCode == 200) {
-                setEnvCf(req, res);
+                setEnvCf(req, res); //再次设置避免tigerwit和pandafx混乱
                 body = JSON.parse(body);
-                console.info('-------body.data', body.data);
+                // console.info('-------body.data', body.data);
                 res.render('web/trader.html', extendPublic({
                     master: body.data,
                     usercode: usercode
