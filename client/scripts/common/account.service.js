@@ -58,10 +58,18 @@
             checkPhoneAndCaptcha: checkPhoneAndCaptcha,
             checkEmailCode: checkEmailCode,
             checkCode: checkCode,
-            checkAgent: checkAgent
+            checkAgent: checkAgent,
+            getFunctionSwitch: getFunctionSwitch
         };
         var resolveValue;
         return service;
+
+        /*
+         * 控制某些功能开关接口   
+         */
+        function getFunctionSwitch() {
+            return $http.get(o.getFunctionSwitch);
+        }
 
         /**
          * @name encrypt

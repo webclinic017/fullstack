@@ -66,13 +66,23 @@
                     lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg + '?timestamp=' + (+new Date())
                 });
             });
+            account.getFunctionSwitch().then(function (data) {
+                // console.log(data);
+                if (data.is_succ) {
+                    if (data.data.spaceAgentSwitch) {
+                        checkAgent();
+                    }
+                }
+            });
+        }
+
+        function checkAgent () {
             account.checkAgent().then(function (data) {
                 // console.log(data);
                 angular.extend($scope.personal, {
                     is_agent: data.data.user_code ? true : false
                 });
             });
-
         }
 
         // 获取实名认证状态

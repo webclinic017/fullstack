@@ -1130,6 +1130,12 @@ module.exports = function (app) {
         if (action == 'get_trade_fee') {
             data = require('./model/modelTradeFee.js') || {};
         }
+        //控制某些功能或者页面开关
+        if (action == "get_function_switch") {
+            data = {
+                spaceAgentSwitch: false,     //个人中心代理商后台入口
+            };
+        }
         // 获取邀请好友图片
         if (action == 'get_share_img') {
             (function(){
