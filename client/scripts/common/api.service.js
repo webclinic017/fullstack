@@ -62,6 +62,7 @@
             getSpreadInfoApi: urlOrigin2 + '/spread_info',
             getUserGroupApi: urlOrigin2 + '/user/group',
             getAdvertiseRecords: urlOrigin2 + '/position/records',
+            getFunctionSwitch: '/napi?action=get_function_switch',
         };
         var asset = {
             withdrawApi: urlOrigin2 + '/payment/withdraw',
