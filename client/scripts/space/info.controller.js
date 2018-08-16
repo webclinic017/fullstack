@@ -66,6 +66,12 @@
                     lgAvatar: config.avatarCfg.path + data.usercode + config.avatarCfg.lg + '?timestamp=' + (+new Date())
                 });
             });
+            account.checkAgent().then(function (data) {
+                // console.log(data);
+                angular.extend($scope.personal, {
+                    is_agent: data.data.user_code ? true : false
+                });
+            });
 
         }
 
