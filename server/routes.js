@@ -1139,7 +1139,7 @@ module.exports = function (app) {
         //控制某些功能或者页面开关
         if (action == "get_function_switch") {
             data = {
-                spaceAgentSwitch: false,     //个人中心代理商后台入口
+                spaceAgentSwitch: true,     //个人中心代理商后台入口
             };
         }
         // 获取邀请好友图片
