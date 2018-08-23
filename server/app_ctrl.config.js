@@ -94,11 +94,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.2.0",
-                        description: "Fixing known problems and optimize the user experience.\nIf this happens, please step to the official website to manually download updates.",
+                        version_name : "V2.2.3",
+                        description: "The new version optimizes the Fixing known bugs\nUpdate now to enjoy the new trading experience!",
                         updated_description: "70% users are using new version",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.2.0.apk",
-                        force_update : false
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.2.3.apk",
+                        force_update : true
                     }
                 }
             },
@@ -113,11 +113,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.2.0",
-                        description: "修复已知问题，优化用户体验。\n若出现上述情况请移步至官网手动下载更新。",
+                        version_name : "V2.2.3",
+                        description: "新版本修复了紧急BUG，赶快更新享受新的交易体验！",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.2.0.apk",
-                        force_update : false
+                        url: "https://www.tigerwit.com/downloads/apk/tigerwit_v2.2.3.apk",
+                        force_update : true
                     }
                 }
             }
