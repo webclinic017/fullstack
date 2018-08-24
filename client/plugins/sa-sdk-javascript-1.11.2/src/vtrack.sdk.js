@@ -119,8 +119,9 @@ function SdkMain() {
   this.sdkCssUrl = sd.para.vtrack_css_file || (sdk_url + '/vendor' + sdk_version + 'css' + sd.para.noCache);
 
   this.deployData = null;
-
-  this.init();
+  if(sd.para.auto_init === true){
+    this._init();
+  }
 }
 
 SdkMain.prototype = {
@@ -301,11 +302,15 @@ SdkMain.prototype = {
       me.deployData = data.binding;
     };
   },
-  init: function() {
-    this.initJsonp();
-    this.isShowVisual();
-  },
+  _init: function() {
 
+    sd._init();
+    this.initJsonp();
+    if(!sd.is_heatmap_render_mode){
+      this.isShowVisual();
+    }
+
+  },
   //------------visible mode
   enterVisibleMode: function() {
     var me = this;
@@ -365,7 +370,6 @@ SdkMain.prototype = {
     this.getDeployFile().then(function() {
       me.parseDeployFile();
     });
-    this.sdkInit();
   },
   parseDeployFile: function() {
     this.requireData = this.checkUrl(this.deployData);
@@ -446,12 +450,6 @@ SdkMain.prototype = {
         $lib_detail: String(data.trigger_id)
       }
     );
-  },
-  //--------------normal file
-  sdkInit: function() {
-
-    sd.init();
-
   },
   // 检测url是否符合当前页面
   checkUrl: function(data) {
