@@ -48,6 +48,7 @@
             getKycApi: urlOrigin2 + '/user/kyc_map',
             getAuthStatus: urlOrigin2 + '/user/auth_status',
             setKycApi: urlOrigin2 + '/user/kyc',
+            checkAgentApi: urlOrigin2 + '/auth/valid_agent',
 
             // getRCaptchaApi: urlOrigin2 + '/validation/send_phone_code',
             // sendEmailCodeApi: urlOrigin2 + '/validation/send_email_code',
@@ -61,6 +62,7 @@
             getSpreadInfoApi: urlOrigin2 + '/spread_info',
             getUserGroupApi: urlOrigin2 + '/user/group',
             getAdvertiseRecords: urlOrigin2 + '/position/records',
+            getFunctionSwitch: '/napi?action=get_function_switch',
         };
         var asset = {
             withdrawApi: urlOrigin2 + '/payment/withdraw',

@@ -58,9 +58,18 @@
             checkPhoneAndCaptcha: checkPhoneAndCaptcha,
             checkEmailCode: checkEmailCode,
             checkCode: checkCode,
+            checkAgent: checkAgent,
+            getFunctionSwitch: getFunctionSwitch
         };
         var resolveValue;
         return service;
+
+        /*
+         * 控制某些功能开关接口   
+         */
+        function getFunctionSwitch() {
+            return $http.get(o.getFunctionSwitch);
+        }
 
         /**
          * @name encrypt
@@ -601,6 +610,10 @@
 
         function setUsername(params){
             return publicHttp.dealPublicRequest(o.setUsername, 'PUT', params);
+        }
+        //判断是否是代理商
+        function checkAgent(){
+            return publicHttp.dealPublicRequest(o.checkAgentApi, 'GET');
         }
     }
 })();
