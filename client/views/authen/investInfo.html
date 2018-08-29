@@ -1,10 +1,10 @@
 <div class="authen_content mg-tp-30 ctn center">
-    <div class="authen_title">
-        <h2>投资信息确认</h2>
-        <p class="authen_content__tip">由于受最高监管的约束，需要您提供相关信息，我们只询问与开户相关的问题。您的资料始终保密，绝不公开。</p>
+    <div class="authen_title" ng-class="{'en': lang.isEnglish()}">
+        <h2>{{lang.text('tigerWitID.myAccount.questionnaire')}}</h2>
+        <p class="authen_content__tip">{{lang.text('tigerWitID.myAccount.tip21')}}</p>
         <div tw-loading-img></div>
     </div>
-    <div class="kyc mg-tp-40">
+    <div class="kyc mg-tp-40" ng-class="{'en': lang.isEnglish()}">
         <div ng-if="!isSetKyc">
             <form name="kycForm" novalidate autocomplete="off">
                 <div ng-repeat="(qId, question) in questions">
@@ -20,7 +20,7 @@
                                 ng-options="item.value for item in question.data.list track by item.key"
                                 ng-change="selectOption(question, industry, $index)"
                             >
-                                <option value="">您的职业所属行业</option>
+                                <option value="">{{ lang.text("tigerWitID.myAccount.occupationBelongsTo") }}</option>
                             </select>
                         </h3>
                     </div>
@@ -68,7 +68,7 @@
                     </div>
 
                     <button class="btn btn-sm btn-primary-gradient text-left" ng-if="clickable" ng-click="submitForm()">
-                        下一步
+                        {{lang.text('actLogin29')}}
                     </button>
 
                     <!-- <a class="btn btn-sm btn-primary-gradient text-left mg-lf-20" ui-sref="space.center.index">
@@ -77,14 +77,14 @@
 
                     <button class="btn btn-sm btn-primary-gradient text-left" ng-if="!clickable">
                         <i class="loading_spinner fa fa-spinner"></i>
-                        提交中
+                        {{lang.text('tigerWitID.submitting')}}
                     </button>
                     <!--<button class="btn btn-sm btn-info mg-lf-100" ng-if="type !== 'setting'" ng-click="goNextStep()">跳过</button>-->
                 </div>
             </form>
         </div>
         <div ng-show="isSetKyc" class="mg-tp-20">
-            您已完成KYC认证，感谢您的参与，请继续完成下一步操作。
+            {{ lang.text("tigerWitID.myAccount.tip22") }}
         </div>
     </div>
 </div>

@@ -22,7 +22,7 @@
                     key = key[keys[index]]       
                 }
                 var text;
-                text = key[langData["language"]];
+                text = !key ? name : (key[langData["language"]] || name);
                 return text;
             },
             image: function(name){

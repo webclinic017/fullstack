@@ -324,7 +324,9 @@
          * 
          */
         function getBanks() {
-            return publicHttp.dealPublicRequest(o.getBanksApi, 'GET');
+            return publicHttp.dealPublicRequest(o.getBanksApi, 'GET', {
+                type: 1,
+            });
         }
 
         /**

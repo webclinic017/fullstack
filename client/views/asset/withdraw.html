@@ -2,24 +2,24 @@
 <div class="withdraw zero_withdraw">
     <div class="row mg-bt-30">
         <div class="col-xs-2 text-right deposit__title-money">
-            提现到
+            {{lang.text('tigerWitID.depositWithdrawal.withdrawalTo')}}
         </div>
 
         <div class="col-xs-6">
             <div class="deposit__way" ng-click="openChangeWithTypeMdl()">
                 {{ withdrawTypeLst[withdraw.accountType].name }}
             </div>
-            <p class="deposit__way-tip" ng-class="{active: withdraw.accountType === 'cse'}">请填写您的真实CSE钱包账号</p>
-            <p class="deposit__way-tip" ng-class="{active: withdraw.accountType === 'paypal'}">请填写您的真实PayPal账号</p>
+            <p class="deposit__way-tip" ng-class="{active: withdraw.accountType === 'cse'}">{{lang.text('tigerWitID.depositWithdrawal.tip43')}}</p>
+            <p class="deposit__way-tip" ng-class="{active: withdraw.accountType === 'paypal'}">{{lang.text('tigerWitID.depositWithdrawal.tip44')}}</p>
         </div>
     </div>
     <div class="row mg-bt-30" ng-show="withdraw.accountType === 'bank'">
         <div class="col-xs-2 text-right deposit__title-money">
-            银行卡
+            {{lang.text('tigerWitID.depositWithdrawal.bankCard')}}
         </div>
 
         <div class="col-xs-10 pd-tp-10" ng-show="!withdraw.card.id">
-            <span class="deposit__pointer font-info" ng-click="openCardMdl()">点击绑定银行卡 ></span>
+            <span class="deposit__pointer font-info" ng-click="openCardMdl()">{{lang.text('tigerWitID.wallet.bindBankCard')}} ></span>
         </div>
 
         <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.card.id">
@@ -31,14 +31,14 @@
                 <span>
                     {{withdraw.card.number}} 
                 </span>
-                <span class="deposit__pointer font-info btn-text card_switch" ng-click="openManageCardMdl('switch')">切换银行卡 ></span>
+                <span class="deposit__pointer font-info btn-text card_switch" ng-click="openManageCardMdl('switch')">{{lang.text('tigerWitID.wallet.switchBankCard')}} ></span>
             </span>
-            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl('manage')">管理银行卡</span>
+            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl('manage')" ng-style="{width: lang.isEnglish() ? '160px' : ''}">{{lang.text('tigerWitID.wallet.manageBankCards')}}</span>
         </div>
     </div>
     <div class="row" ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet'">
         <div class="col-xs-2 text-right deposit__title-money">
-            姓名
+            {{lang.text('tigerWitID.depositWithdrawal.name')}}
         </div>
 
         <div class="col-xs-6">
@@ -53,7 +53,7 @@
     </div>
     <div class="row" ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet'">
         <div class="col-xs-2 text-right deposit__title-money">
-            账号
+            {{lang.text('tigerWitID.myAccount.accountNumber')}}
         </div>
 
         <div class="col-xs-6">
@@ -66,7 +66,7 @@
         </div>      
     </div>
     <div class="row mg-bt-30 deposit__pay_method" ng-if="withdrawTypeLst[withdraw.accountType].currency.length > 1">
-        <div class="col-xs-2 deposit__title-money">选择币种</div>
+        <div class="col-xs-2 deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.selectCurrency')}}</div>
         <div class="col-xs-2 relative">
             <div class="deposit__currency-tit" ng-click="openCurrency($event)">{{withdraw.currency.currency_name}}</div>
             <ul class="deposit__currency-lst" ng-show="currencyStatus">
@@ -83,8 +83,8 @@
             </div>
             <div class="warn_content">
                 <div class="">
-                    <p>系统提示：{{message.error_msg}}</p>
-                    <p>如有疑问，请联系您的客户经理或联系客服（{{lang.text('telephone')}}）</p>
+                    <p>{{lang.text('tigerWitID.systemPromptM')}}{{message.error_msg}}</p>
+                    <p>{{lang.text('tigerWitID.depositWithdrawal.tip48')}}（{{lang.text('telephone')}}）</p>
                 </div>
             </div>
         </div>
@@ -94,8 +94,8 @@
             </div>
             <div class="warn_content">
                 <div  class="">
-                    <p>系统提示：{{message.message}}</p>
-                    <p>如有疑问，请联系您的客户经理或联系客服（{{lang.text('telephone')}}）</p>
+                    <p>{{lang.text('tigerWitID.systemPromptM')}}{{message.message}}</p>
+                    <p>{{lang.text('tigerWitID.depositWithdrawal.tip48')}}（{{lang.text('telephone')}}）</p>
                 </div>
             </div>
         </div> -->
@@ -103,7 +103,7 @@
     
     <div ng-show="(withdrawMessageSucc && message.is_succ)">
         <div class="row">
-            <div class="col-xs-2 text-right deposit__title-money">提现金额</div>
+            <div class="col-xs-2 text-right deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.withdrawalAmountJ')}}</div>
             <div class="col-xs-6 deposit__input">
                 <form name="withdrawForm" novalidate>
                     <div class="form-control-wrapper">
@@ -123,18 +123,20 @@
 
                         <div ng-show="frontErr.amount.show">
                             <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.required">
-                                请输入出金金额
+                                {{lang.text('tigerWitID.depositWithdrawal.tip49')}}
                             </p>
 
                             <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.pattern">
-                                输入的金额为大于零的整数或者小数（小数点后最多两位数字）
+                                {{lang.text('tigerWitID.depositWithdrawal.tip50')}}
                             </p>
 
                             <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.twformMax">
+                                <!-- TODO -->
                                 出金金额最多为 {{withdraw.maxAmount || 0}} 美金
                             </p>
 
                             <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.twformMin">
+                                <!-- TODO -->
                                 出金金额最少为 {{withdraw.minAmount}} 美金
                             </p>
                         </div>
@@ -146,11 +148,11 @@
             <div class="col-xs-9 col-xs-offset-2">
                 <p class="sys_tip1">
                     <span class="font-danger">*</span>
-                    可提取金额：<span>${{withdraw.maxAmount || '0.00'}}</span>
+                    {{lang.text('tigerWitID.depositWithdrawal.extractableAmountM')}}<span>${{withdraw.maxAmount || '0.00'}}</span>
                 </p>
                 <p class="sys_tip1" ng-show="withdraw.currency.currency !== 'USD'">
                     <span class="font-danger">*</span>
-                    <span>今日汇率：1 美元 =</span>
+                    <span>{{lang.text('tigerWitID.depositWithdrawal.rate1d')}}</span>
                     <span>{{withdraw.currency.rate_out}}</span> {{withdraw.currency.currency_name}}
                 </p>
             </div>
@@ -159,10 +161,10 @@
         <br>
         <div class="row">
             <div class="col-xs-9 col-xs-offset-1 text-center">
-                <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" ng-show="clickable" ng-click="toWithdraw()">提现</button>
+                <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" ng-show="clickable" ng-click="toWithdraw()">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</button>
                 <button class="tw-btn tw-btn-capsule-gradient tw-btn-lg" disabled ng-show="!clickable">
                     <i class="loading_spinner fa fa-spinner"></i>
-                    提现中 
+                    {{lang.text('tigerWitID.depositWithdrawal.withdrawing')}}
                 </button>
             </div>
         </div>
@@ -175,11 +177,11 @@
                     ⚠️
                 </div>
                 <div class="warn_content">
-                    <p class="sys_tip2">1. 通过实名认证后才可以进行资金提现。</p>
-                    <p class="sys_tip2">2. 提现金额最少为20美金。</p>
-                    <p class="sys_tip2">3. 未充值，体验资金和盈利不可提取。</p>
-                    <p class="sys_tip2">4. 充值后交易手数未满足活动规则要求，体验资金和充值前的盈利不可提取。</p>
-                    <p class="sys_tip2">5. 存在复制关系的，提现时系统自动扣除复制金额，若要全部提现，请先手动取消复制关系。</p>
+                    <p class="sys_tip2">1. {{lang.text('tigerWitID.depositWithdrawal.tip53')}}</p>
+                    <p class="sys_tip2">2. {{lang.text('tigerWitID.depositWithdrawal.tip8')}}</p>
+                    <p class="sys_tip2">3. {{lang.text('tigerWitID.depositWithdrawal.tip10')}}</p>
+                    <p class="sys_tip2">4. {{lang.text('tigerWitID.depositWithdrawal.tip54')}}</p>
+                    <p class="sys_tip2">5. {{lang.text('tigerWitID.depositWithdrawal.tip55')}}</p>
                     <p class="sys_tip2" ng-bind-html="formatText(withdrawNotice) | bindhtml"></p>
                 </div>
             </div>

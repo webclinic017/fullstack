@@ -272,9 +272,10 @@
                         return position
                     }
                 },
-                controller: ['$scope', 'passedScope', '$modalInstance', '$state', '$timeout', '$location', '$layer', function ($scope, passedScope, $modalInstance, $state, $timeout, $location, $layer) {
+                controller: ['$scope', 'passedScope', '$modalInstance', '$state', '$timeout', '$location', '$layer', 'lang', function ($scope, passedScope, $modalInstance, $state, $timeout, $location, $layer, lang) {
                     $scope.closeModal = closeModal;
                     $scope.position = passedScope.position;
+                    $scope.lang = lang;
 
                     $scope.dredge_type = 'all';
                     $scope.loading = {
@@ -299,28 +300,28 @@
                     $scope.confirmLive = function () {
                         $modalInstance.dismiss()
                         $timeout(function(){
-                            $layer({
-                                title: '提示',
+                            var obj = {
+                                title: lang.text('tigerWitID.prompt'),
                                 // msgClass: 'font-danger',
                                 size: 'sm',
                                 btnsClass: 'text-right',
-                                msg: '开通真实账户后，将不再支持开通体验金账户',
+                                msg: lang.text("tigerWitID.myAccount.tip38"),
                                 autoClose: false,
-                                btns: {
-                                    '取消': function () { },
-                                    '继续': function (oScope) {
-                                        globalScope.personal.is_live = '1'
-                                        oScope.loading = 1
-                                        getAuthStatus({
-                                            is_live: globalScope.personal.is_live
-                                        }).then(function(){
-                                            oScope.loading = 2
-                                            window.location.href = window.location.origin + '/space/#/authen/'
-                                            toAuthenTypeSensorsdata('真实账户');
-                                        })
-                                    }
-                                }
-                            })
+                                btns: {}
+                            }
+                            obj.btns[lang.text("tigerWitID.cancel")] = function(){}
+                            obj.btns[lang.text("tigerWitID.continue")] = function (oScope) {
+                                globalScope.personal.is_live = '1'
+                                oScope.loading = 1
+                                getAuthStatus({
+                                    is_live: globalScope.personal.is_live
+                                }).then(function(){
+                                    oScope.loading = 2
+                                    window.location.href = window.location.origin + '/space/#/authen/'
+                                    toAuthenTypeSensorsdata('真实账户');
+                                })
+                            }
+                            $layer(obj)
                         }, 450)
                     }
 
@@ -372,9 +373,9 @@
             var verify_status = $scope.personal.verify_status;
             var passedAuthen = $scope.personal.passedAuthen;
             var reviewMsgMap = {
-                "TraderIndexController": "您的账户正在审核中，请等待审核通过后再进行复制操作",
-                "AssetWithdrawController": "您的账户正在审核中，请等待审核通过后再进行提现操作",
-                "AssetDepositController": "您的账户正在审核中，请等待审核通过后再进行充值操作"
+                "TraderIndexController": lang.text("tigerWitID.tradingAccount.tip25"),
+                "AssetWithdrawController": lang.text("tigerWitID.tradingAccount.tip26"),
+                "AssetDepositController": lang.text("tigerWitID.tradingAccount.tip27")
             }
 
             // 通过直接return
@@ -387,24 +388,25 @@
                     });
                 } else {
                     if (verify_status == 5) {
-                        $layer({
+                        var obj = {
                             // title: '系统提示',
                             // msgClass: 'font-danger',
                             size: 'sm',
                             btnsClass: 'text-right',
-                            msg: reviewMsgMap[ctrlName] || '您的账户正在审核中, 请等待审核通过再进行此操作',
-                            btns: {
-                                '确定': function () { }
-                            }
-                        })
+                            msg: reviewMsgMap[ctrlName] || lang.text("tigerWitID.tradingAccount.tip24"),
+                            btns: {}
+                        }
+                        obj.btns[lang.text("tigerWitID.confirm")] = function(){}
+                        $layer(obj)
                     } else {
                         // 没有完成实名认证
                         $modal.open({
                             templateUrl: '/views/asset/verify_modal.html',
                             size: 'sm',
                             backdrop: true,
-                            controller: function ($scope, $modalInstance) {
+                            controller: function ($scope, $modalInstance, lang) {
                                 $scope.closeModal = closeModal;
+                                $scope.lang = lang;
                                 $scope.dredged_type = dredged_type
                                 function closeModal() {
                                     $modalInstance.dismiss();

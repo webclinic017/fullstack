@@ -1,7 +1,7 @@
 <div class="ranklist_banner">
     <div class="ranklist_banner__tip">
-        <p>{{ lang.text("companyNameEn") }} 复制跟单系统</p>
-        <p>人人都是投资高手</p>
+        <p>{{ lang.text("companyNameEn") }} {{ lang.text("tigerWitID.master.masterSystem") }}</p>
+        <p>{{ lang.text("tigerWitID.master.tradeLikeMaster") }}</p>
     </div>
 </div>
 <div class="container">
@@ -9,15 +9,15 @@
         <div class="ranklist__navbar">
             <ul class="ranklist__navbar-lst clearfix">
                 <li ng-class="{active: rankOrder == 'thirty_profit_rate'}" ng-click="changeRankOrder('thirty_profit_rate')">
-                    收益率
+                    {{ lang.text("tigerWitID.master.highIncome") }}
                     <i class="fa fa-caret-down"></i>
                 </li>
                 <li ng-class="{active: rankOrder == 'thirty_max_retract'}" ng-click="changeRankOrder('thirty_max_retract')">
-                    最大跌幅
+                    {{ lang.text("tigerWitID.dataStatistics.maximumDrawdown") }}
                     <i class="fa fa-caret-down"></i>
                 </li>
                 <li ng-class="{active: rankOrder == 'thirty_win_rate'}" ng-click="changeRankOrder('thirty_win_rate')">
-                    胜率
+                    {{ lang.text("tigerWitID.master.exact") }}
                     <i class="fa fa-caret-down"></i>
                 </li>
             </ul>
@@ -35,13 +35,13 @@
                         </a>
                     </div>
                 </div>
-                <div class="ranklist_cont__master-trade clearfix">
+                <div class="ranklist_cont__master-trade">
                     <div class="profit">
                         <div class="num" ng-class="{'font-danger': (rank.thirty_profit_rate + '').indexOf('-') < 0, 'font-success': (rank.thirty_profit_rate + '').indexOf('-') != -1}">
                             {{ rank.thirty_profit_rate }}<span>%</span>
                         </div>
                         <div class="tip">
-                            近30日收益率
+                            {{ lang.text("tigerWitID.master.returnLast30D") }}
                         </div>
                     </div>
                     <div class="dropdown">
@@ -49,7 +49,7 @@
                             {{ rank.thirty_win_rate }}%
                         </div>
                         <div class="tip">
-                            近30日胜率
+                            {{ lang.text("tigerWitID.master.accuracyLast30D") }}
                         </div>
                     </div>
                 </div>
@@ -59,11 +59,11 @@
                             <span class="num">
                                 {{ rank.history_copy_count || '0' }}
                             </span>
-                            <span class="tip">历史跟随者</span>
+                            <span class="tip">{{ lang.text("tigerWitID.master.followers") }}</span>
                         </div>
                     </div>
                     <div class="copy_btn_wrapper">
-                        <a ng-href="/trader/{{rank.user_code}}/#/trader/summary" target="_blank" class="copy_btn">复制</a>
+                        <a ng-href="/trader/{{rank.user_code}}/#/trader/summary" target="_blank" class="copy_btn">{{ lang.text("tigerWitID.copy") }}</a>
                     </div>
                 </div>
             </div>

@@ -56,10 +56,11 @@
                 templateUrl: '/views/space/not_active_modal.html',
                 size: 'sm',
                 backdrop: true,
-                controller: function ($scope, $modalInstance) {
+                controller: function ($scope, $modalInstance, lang) {
+                    $scope.lang = lang;
                     $scope.contentModal = {
-                        title: '激活钱包提示',
-                        message: '钱包不支持单独激活，交易类账户开通成功后，钱包将自动激活。'
+                        title: lang.text("tigerWitID.settings.notificationActivateWallet"),
+                        message: lang.text("tigerWitID.settings.notificationActivateWalletCon")
                     }
                     $scope.closeModal = closeModal;
                     function closeModal() {

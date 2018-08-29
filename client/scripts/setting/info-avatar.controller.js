@@ -14,7 +14,7 @@
         };
         if($scope.personal.has_master){
             $scope.ban = {
-                msg: '您已是高手，不能再修改头像'
+                msg: $scope.lang.text("tigerWitID.settings.tip10")
             }
         } else {
             $scope.ban = undefined

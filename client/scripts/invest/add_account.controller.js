@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('AddAcountController', AddAcountController);
 
-        AddAcountController.$inject = ['$scope', '$timeout', '$modalInstance', 'account' , '$state'];
+        AddAcountController.$inject = ['$scope', '$timeout', '$modalInstance', 'account' , '$state', 'lang'];
 
-    function AddAcountController($scope, $timeout, $modalInstance, account, $state) {
+    function AddAcountController($scope, $timeout, $modalInstance, account, $state, lang) {
         // $scope.clickable = true;
         $scope.addAccountLogic = {
             msg: '',
@@ -18,6 +18,7 @@
             // account_name: ''
         };  // logic标题  0：子账号创建成功；1：新建账号规则；2：提示（有未入金账号）|| 提示（已满七个账号）
         $scope.closeModal = closeModal;
+        $scope.lang = lang;
         function closeModal() {
             $modalInstance.dismiss();
         }

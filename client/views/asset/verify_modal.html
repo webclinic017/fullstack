@@ -2,15 +2,15 @@
     <button class="close" ng-click="closeModal()">&times;</button>
 
     <h5 class="sys_modal_v2__title">
-        系统提示
+        {{lang.text('tigerWitID.systemPrompt')}}
     </h5>
 
     <div class="sys_modal_v2__content">
         <p class="sys_modal_v2__tip" ng-show="dredged_type == 'demo'">
-            受最高监管的约束，需要您通过认证审核后方可进行充值操作
+            {{lang.text('tigerWitID.depositWithdrawal.tip42')}}
         </p>
         <p class="sys_modal_v2__tip" ng-show="dredged_type == 'live'">
-            您的账户尚未通过认证审核，请先完善资料。
+            {{lang.text('tigerWitID.symbolPage.tip3')}}
         </p>
 
         <p class="btn_wrapper">

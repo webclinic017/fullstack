@@ -91,14 +91,14 @@
                 var ls = localStorage.getItem("evidence");
                 // console.log(date, ls);
                 if (data.data.evidence_code === 100605) {
-                    msg = '充值成功后请及时上传凭证，若超过两周未上传，将无法进行交易操作。';
+                    msg = $scope.lang.text("tigerWitID.depositWithdrawal.tip60");
                     if (!ls) {
                         localStorage.setItem("evidence", date);
                         isModal = true;
                     }
                 }
                 if (data.data.evidence_code === 100604) {
-                    msg = '您有入金凭证已超过一周未上传，请及时上传，否则将无法进行交易操作';
+                    msg = $scope.lang.text("tigerWitID.depositWithdrawal.tip61");
                     if (!ls || ls < date) {
                         localStorage.setItem("evidence", date);
                         isModal = true;
@@ -110,9 +110,9 @@
                         templateUrl: '/views/space/evidence_modal.html',
                         size: 'sm',
                         backdrop: 'static',
-                        controller: function ($scope, $modalInstance, $state) {
+                        controller: function ($scope, $modalInstance, $state, lang) {
                             $scope.message = msg;
-                            
+                            $scope.lang = lang;
                             $scope.closeModal = closeModal;
                             
                             function closeModal() {

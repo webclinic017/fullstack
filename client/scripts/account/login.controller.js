@@ -127,7 +127,7 @@
             // 神策统计 - 点击登录
             if(!is_agree) {
                 sa.track('click_login', {
-                    login_type: $scope.loginType == 'code' ? '验证码登录' : '账号密码登录'
+                    login_type: $scope.loginType == 'code' ? '验证码登录' : lang.text("actLogin2")
                 });
             }
             
@@ -186,7 +186,7 @@
                         // 神策统计 - 登录
                         sa.track('login', {
                             login_isNew: false,
-                            login_type: $scope.loginType == 'code' ? '验证码登录' : '账号密码登录'
+                            login_type: $scope.loginType == 'code' ? '验证码登录' : lang.text("actLogin2")
                         });
 
                         account.hasChecked = false;

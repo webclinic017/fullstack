@@ -1,7 +1,7 @@
 <div tw-loading-img></div>
 <div class="invest_content">
     <div class="invest_content__tip">
-        注：您复制高手的盈利部分将会扣除20%作为佣金给高手。详情请参考：
+        {{lang.text('tigerWitID.tradingAccount.tip1')}}
         <a ng-href="{{ lang.text('companyCopyRules') }}" target="_blank">{{ lang.text("companyCopyRules") }}</a>
     </div>
     <table class="table table-traffic">
@@ -14,10 +14,10 @@
         </colgroup>
         <thead>
             <tr>
-                <th>操作</th>
-                <th>开仓价</th>
-                <th>现价</th>           
-                <th>收益</th>
+                <th>{{lang.text('tigerWitID.details.operation')}}</th>
+                <th>{{lang.text('tigerWitID.details.openPrice')}}</th>
+                <th>{{lang.text('tigerWitID.details.currentPrice')}}</th>           
+                <th>{{lang.text('tigerWitID.details.profit')}}</th>
                 <th></th>
             </tr>
         </thead>
@@ -39,7 +39,7 @@
                 <tr class="invest_orders" ng-if="orders.length > 0" ng-click="showOrders()">
                     <th class="text-left invest_orders__user">
                         <a href="" class="invest_orders__user-avatar">
-                            <img ng-src="/avatar/{{ personal.usercode }}_50.jpg" alt="personal 头像">
+                            <img ng-src="/avatar/{{ personal.usercode }}_50.jpg" alt="personal {{lang.text('tigerWitID.settings.photo')}}">
                         </a>
                         
                         <div class="invest_orders__user-username">
@@ -48,19 +48,19 @@
                             </a>
                             <i class="fa fa-chevron-right" ng-show="!orderCurrent.detailsShow"></i>
                             <i class="fa fa-chevron-up font-info" ng-show="orderCurrent.detailsShow"></i><br>
-                            <span class="invest_orders__type own">自主交易</span>
+                            <span class="invest_orders__type own">{{lang.text('tigerWitID.details.autonomousTransaction')}}</span>
                         </div>
                     </th>
                     <th colspan="2" class="invest_orders__rate-promise">
                         <span ng-class="{'green': orderCurrent.margin_level > 200, 'orange': orderCurrent.margin_level > 150 && orderCurrent.margin_level <= 200, 'red': orderCurrent.margin_level <= 150}">
-                            保证金比例: {{ orderCurrent.margin_level }}%
+                            {{lang.text('tigerWitID.details.marginLevelM')}} {{ orderCurrent.margin_level }}%
                         </span>
                     </th>
                     <th ng-class="{'font-success': orderCurrent.floating_profit.indexOf('-') != -1, 'font-danger':  orderCurrent.floating_profit.indexOf('-') < 0}">
                         <i class="fa fa-dollar"></i>{{ orderCurrent.floating_profit }}
                     </th>
                     <th class="invest_orders__btn">
-                        <button href="" class="btn font-info font-size-16" ng-click="openInvestOwnDetailMdl('own', $event)">详情</button>
+                        <button href="" class="btn font-info font-size-16" ng-click="openInvestOwnDetailMdl('own', $event)">{{lang.text('tigerWitID.details.title')}}</button>
                     </th>
                 </tr>
             </thead>
@@ -106,7 +106,7 @@
             </table>
             <div ng-if="orders.length <= 0 && orderCurrent.detailsShow" class="text-center mg-bt-20">
                 <img src="/images/no_data.png" alt="" class="mg-bt-40">
-                <p>暂无数据!</p> 
+                <p>{{ lang.text('tigerWitID.noData') }}</p> 
             </div>
         </div>
 
@@ -125,7 +125,7 @@
                     <tr class="invest_orders" ng-click="showDetails(trader)">
                         <th class="text-left invest_orders__user">
                             <a href="" class="invest_orders__user-avatar">
-                                <img ng-src="/avatar/{{ trader.account_code }}_50.jpg" alt="trader 头像">
+                                <img ng-src="/avatar/{{ trader.account_code }}_50.jpg" alt="trader {{lang.text('tigerWitID.settings.photo')}}">
                             </a>
                             
                             <div class="invest_orders__user-username">
@@ -135,12 +135,12 @@
                                 <i class="fa fa-chevron-right" ng-show="!trader.detailsShow"></i>
                                 <i class="fa fa-chevron-up font-info" ng-show="trader.detailsShow"></i>
                                 <br>
-                                <span class="invest_orders__type copy">复制交易</span>
+                                <span class="invest_orders__type copy">{{lang.text('tigerWitID.details.copyTrade')}}</span>
                             </div>
                         </th>
                         <th colspan="2" class="invest_orders__rate-copy">
                             <span class="number" ng-click="openCopyMdl(trader, $event)">
-                                复制金额: {{ trader.copy_amount }}
+                                {{lang.text('tigerWitID.details.copyAmountM')}} {{ trader.copy_amount }}
                                 <i class="fa fa-caret-down font-info"></i>
                             </span>
                         </th>
@@ -148,8 +148,8 @@
                             <i class="fa fa-dollar"></i>{{ trader.floating_profit }}
                         </th>
                         <th class="invest_orders__btn">
-                            <button class="btn font-info font-size-16" ng-click="openInvestCopyDetailMdl(trader, $event)">详情</button>
-                            <button class="btn tw-btn-capsule-gradient tw-btn-sm" ng-click="openCancelCopyMdl(trader, $event)">取消复制</button>
+                            <button class="btn font-info font-size-16" ng-click="openInvestCopyDetailMdl(trader, $event)">{{lang.text('tigerWitID.details.title')}}</button>
+                            <button class="btn tw-btn-capsule-gradient tw-btn-sm" ng-click="openCancelCopyMdl(trader, $event)">{{lang.text('tigerWitID.details.cancel')}}</button>
                         </th>
                     </tr>
                 </thead>
@@ -191,12 +191,12 @@
                             </td>
                     
                             <td>
-                                <span ng-if="!order.cancel_control" class="font-size-12">跟随高手平仓</span>
-                                <span ng-if="!!order.cancel_control" class="font-size-12">不跟随平仓</span>
+                                <span ng-if="!order.cancel_control" class="font-size-12">{{lang.text('tigerWitID.tradingAccount.tip13')}}</span>
+                                <span ng-if="!!order.cancel_control" class="font-size-12">{{lang.text('tigerWitID.tradingAccount.tip14')}}</span>
                             </td>
                         </tr>
                         <tr ng-if="trader.orders.length <= 0 && trader.detailsShow">
-                            <td colspan="5">该高手没有持仓订单</td>
+                            <td colspan="5">{{lang.text('tigerWitID.tradingAccount.tip15')}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -222,7 +222,7 @@
                     <tr class="invest_orders" ng-click="showDetails(data)">
                         <th class="text-left invest_orders__user">
                             <a href="" class="invest_orders__user-avatar">
-                                <img ng-src="/avatar/{{ data.account_code }}_50.jpg" alt="personal 头像">
+                                <img ng-src="/avatar/{{ data.account_code }}_50.jpg" alt="personal {{lang.text('tigerWitID.settings.photo')}}">
                             </a>
                             
                             <div class="invest_orders__user-username">
@@ -232,12 +232,12 @@
                                 <i class="fa fa-chevron-right" ng-show="!data.detailsShow"></i>
                                 <i class="fa fa-chevron-up font-info" ng-show="data.detailsShow"></i>
                                 <br>
-                                <span class="invest_orders__type copy">跟随持仓</span>
+                                <span class="invest_orders__type copy">{{lang.text('tigerWitID.details.followOrders')}}</span>
                             </div>
                         </th>
                         <th colspan="2" class="invest_orders__rate-copy">
                             <!-- <span class="number" ng-click="openCopyMdl(data, $event)">
-                                复制金额: {{ data.copy_amount }}
+                                {{lang.text('tigerWitID.details.copyAmountM')}} {{ data.copy_amount }}
                                 <i class="fa fa-caret-down font-info"></i>
                             </span> -->
                         </th>
@@ -245,8 +245,8 @@
                             <i class="fa fa-dollar"></i>{{ data.floating_profit }}
                         </th>
                         <th class="invest_orders__btn">
-                            <button href="" class="btn font-info font-size-16" ng-click="openInvestCopyDetailMdl(data, $event)">详情</button>
-                            <p class="btn tw-btn-capsule-gradient tw-btn-disabled tw-btn-sm">已取消复制</p>
+                            <button href="" class="btn font-info font-size-16" ng-click="openInvestCopyDetailMdl(data, $event)">{{lang.text('tigerWitID.details.title')}}</button>
+                            <p class="btn tw-btn-capsule-gradient tw-btn-disabled tw-btn-sm">{{lang.text('tigerWitID.details.canceledCopy')}}</p>
                         </th>
                     </tr>
                 </thead>
@@ -288,12 +288,12 @@
                             </td>
                     
                             <td>
-                                <span ng-if="!order.cancel_control" class="font-size-12">跟随高手平仓</span>
-                                <span ng-if="!!order.cancel_control" class="font-size-12">不跟随平仓</span>
+                                <span ng-if="!order.cancel_control" class="font-size-12">{{lang.text('tigerWitID.tradingAccount.tip13')}}</span>
+                                <span ng-if="!!order.cancel_control" class="font-size-12">{{lang.text('tigerWitID.tradingAccount.tip14')}}</span>
                             </td>
                         </tr>
                         <tr ng-if="data.orders.length <= 0 && data.detailsShow">
-                            <td colspan="5">该高手没有持仓订单</td>
+                            <td colspan="5">{{lang.text('tigerWitID.tradingAccount.tip15')}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -307,6 +307,6 @@
     </div>
     <div class="text-center mg-tp-15" ng-if="orders.length <= 0 && traders.length <= 0 && from_data <= 0">
         <img src="/images/no_data.png" alt="" class="mg-bt-40">
-        <p>暂无数据!</p> 
+        <p>{{ lang.text('tigerWitID.noData') }}</p> 
     </div>
 </div>

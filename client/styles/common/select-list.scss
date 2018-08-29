@@ -42,6 +42,11 @@
         border-bottom-left-radius: 8px;
         border-bottom-right-radius: 8px;
         @include m(item) {
+            > .name{
+                overflow: hidden;
+                text-overflow:ellipsis;
+                white-space: nowrap;
+            }
             &.active {
                 background-color: rgb(232, 232, 232);
             }

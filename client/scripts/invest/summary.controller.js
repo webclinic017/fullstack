@@ -31,8 +31,8 @@
 
                 function broadcastPieData () {
                     var profitSum = [
-                        ['盈利订单',$scope.summary.profit_trade_count],
-                        ['亏损订单',$scope.summary.loss_trade_count]
+                        [$scope.lang.text("tigerWitID.dataStatistics.profitOrders"),$scope.summary.profit_trade_count],
+                        [$scope.lang.text("tigerWitID.dataStatistics.lossOrders"),$scope.summary.loss_trade_count]
                     ];
                     // console.info(profitSum);
                     $scope.$broadcast('paintPieChart', profitSum);

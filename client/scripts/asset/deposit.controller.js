@@ -123,9 +123,9 @@
         function checkInvestLimit () {
             if ($scope.deposit.isAbleDeposit === 1) {
                 openDepositMdl('depositLimit', openChangeDepTypeMdl, {
-                    msgTip: '您有未上传的充值凭证，需上传历史充值凭证后才可继续使用网银支付功能。',
-                    msgBtn: '选择其他支付方式',
-                    msgTitle: '提示'
+                    msgTip: $scope.lang.text("tigerWitID.depositWithdrawal.tip56"),
+                    msgBtn: $scope.lang.text("tigerWitID.depositWithdrawal.chooseOtherPayment"),
+                    msgTitle: $scope.lang.text('tigerWitID.prompt')
                 });
             }
             if ($scope.deposit.isAbleDeposit === 2) {
@@ -145,7 +145,7 @@
                     } else {
                         openDepositMdl('bindBankCard', null, {
                             cardName: $scope.personal.realname,
-                            msgTitle: '填写支付银行卡信息'
+                            msgTitle: $scope.lang.text('tigerWitID.depositWithdrawal.fillPayCardInfo')
                         });
                     }
                 }
@@ -232,7 +232,7 @@
         function openChangeDepTypeMdl () {
             $modal.open({
                 templateUrl: '/views/asset/deposit_dep_type_modal.html',
-                size: 'sm',
+                size: $scope.lang.isEnglish() ? 'md' : 'sm',
                 backdrop: 'static',
                 resolve: {
                     passedScope: function () {
@@ -244,13 +244,14 @@
                         };
                     }
                 },
-                controller: function ($scope, $modalInstance, passedScope) {
+                controller: function ($scope, $modalInstance, passedScope, lang) {
                     // console.log(passedScope);
                     $scope.deposit = {
                         type: passedScope.depositType,
                         walletAble: passedScope.walletAble,
                         depositTypeLst: passedScope.depositTypeLst
                     };
+                    $scope.lang = lang;
                     $scope.isWallet = function(key){
                         if(passedScope.isWallet){
                             return key === 'wallet'? "false" : "true"
@@ -350,7 +351,7 @@
                                     isFree: $scope.depositTypeLst[$scope.deposit.type].poundage_status,
                                     desc: $scope.depositTypeLst[$scope.deposit.type].poundage_desc,
                                     currency: $scope.deposit.currency,
-                                    msgBtn: '确认'
+                                    msgBtn: $scope.lang.text("tigerWitID.confirm")
                                 });
                             }
 
@@ -385,7 +386,7 @@
                         if ($scope.deposit.type === 'tele') {
                             if (!$scope.deposit.teleFile) {
                                 $scope.isLoading = false;
-                                layer.msg('请上传电汇凭证');
+                                layer.msg($scope.lang.text("tigerWitID.depositWithdrawal.uploadTeleTranVoucher"));
                             } else {
                                 asset.teleDeposit(amount, $scope.deposit.teleFile, mt4_id).then(function (data) {
                                     console.log(data);
@@ -414,9 +415,10 @@
                 templateUrl: '/views/asset/deposit_modal.html',
                 size: 'sm',
                 backdrop: 'static',
-                controller: function ($scope, $modalInstance, $state) {
+                controller: function ($scope, $modalInstance, $state, lang) {
                     $scope.msgInfo = msgInfo || {};
                     $scope.type = type;
+                    $scope.lang = lang;
                     $scope.closeModal = closeModal;
                     $scope.verify = verify;
                     $scope.openChat = openChat;
@@ -444,7 +446,7 @@
                     // 支付成功
                     function depositSucc() {
                         // umeng
-                        _czc.push(["_trackEvent", "入金页面", "充值"]);
+                        _czc.push(["_trackEvent", lang.text("tigerWitID.depositWithdrawal.depositPage"), lang.text("tigerWitID.depositWithdrawal.deposit")]);
 
                         closeModal();
                     }
@@ -459,7 +461,7 @@
                         if ($scope.depositCard.backErr) return;
                         if (!$scope.depositCard.num) {
                             $scope.depositCard.backErr = true;
-                            $scope.depositCard.backMsg = '请输入银行卡号';
+                            $scope.depositCard.backMsg = lang.text("tigerWitID.depositWithdrawal.enterBankCardNum");
                             return
                         };
                         $scope.isLoading = true;
@@ -489,10 +491,11 @@
                 templateUrl: '/views/asset/deposit_modal.html',
                 size: 'md',
                 backdrop: 'static',
-                controller: function ($scope, $modalInstance, $state) {
+                controller: function ($scope, $modalInstance, $state, lang) {
                     $scope.type = params.type;
+                    $scope.lang = lang;
                     $scope.msgInfo = {
-                        msgTitle: params.tit || '提示',
+                        msgTitle: params.tit || lang.text('tigerWitID.prompt'),
                         msgPopTitle: params.pop ? params.pop.title : '',
                         msgPopContent: params.pop ? params.pop.content : '',
                         msgUrl: params.url || ''

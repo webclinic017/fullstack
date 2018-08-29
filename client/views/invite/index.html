@@ -1,7 +1,7 @@
 <!-- side navbar -->
 <div class="invite-con space_block">
     <div class="invite-con__title">
-        邀请好友,赢取10美金
+        {{lang.text('tigerWitID.inviteFriends.inviteFriend')}}
     </div>
     <div class="row invite-con__link">
         <div class="col-xs-8">
@@ -19,29 +19,29 @@
             </p>
         </div>
         <div class="col-xs-2 invite_btn">
-            <a class="btn btn-primary btn-sm" ng-click="selectTxt()">复制</a>
+            <a class="btn btn-primary btn-sm" ng-click="selectTxt()">{{lang.text('tigerWitID.copy')}}</a>
         </div>
         <div class="col-xs-2">
             <p class="num">{{ friendsNum }}</p>
-            <p class="tip">当前邀请人数</p>
+            <p class="tip">{{lang.text('tigerWitID.inviteFriends.invitedFriends')}}</p>
         </div>
     </div>
 
     <div class="invite-con__rules">
-        <p class="font-base font-size-18">邀请好友规则：</p>
+        <p class="font-base font-size-18">{{lang.text('tigerWitID.inviteFriends.inviteFriendsRegulations')}}</p>
         <br>
         <ul>
             <!--<li>
                 1、邀请好友成功注册、认证、入金并投资满足5标准手（不包含CFD），即可获得20美元赠金。
             </li>-->
             <li>
-                1、注册即获得邀请类红包“人从众”，邀请3名好友注册，且至少有1人入金并完成1手交易即可兑现, 每位用户仅可领取一次；
+                {{lang.text('tigerWitID.inviteFriends.tip1')}}
             </li>
             <li>
-                2、您只有通过邀请链接进行注册的好友才算有效；
+                {{lang.text('tigerWitID.inviteFriends.tip2')}}
             </li>
             <li>
-                3、同一手机号，身份证号和银行卡号视为同一用户；
+                {{lang.text('tigerWitID.inviteFriends.tip3')}}
             </li>
             <li>
                 4、任何通过第三方作弊软件刷取好友邀请奖励，一经发现{{lang.text('companyNameZh')}}有权取消红包兑现奖励；
@@ -60,9 +60,9 @@
         </colgroup>
         <thead>
             <tr>
-                <th>好友昵称</th>
-                <th>入金状态</th>
-                <th>是否完成交易</th>
+                <th>{{lang.text('tigerWitID.inviteFriends.nameFriend')}}</th>
+                <th>{{lang.text('tigerWitID.inviteFriends.statusDeposit')}}</th>
+                <th>{{lang.text('tigerWitID.inviteFriends.statusTransactions')}}</th>
             </tr>
         </thead>
         <tbody>
@@ -70,18 +70,18 @@
                 <td>{{bonus.user_name}}</td>
                 <td>
                     <span style="color: #ffbd43;" ng-show="bonus.is_deposit == 1">
-                        已入金
+                        {{lang.text('tigerWitID.tradingAccount.deposited')}}
                     </span>
                     <span ng-show="bonus.is_deposit == 0">
-                        未入金
+                        {{lang.text('tigerWitID.tradingAccount.noDeposit')}}
                     </span>
                 </td>
                 <td>
                     <span style="color: #ffbd43;" ng-show="bonus.volume >= 1">
-                        是
+                        {{lang.text('tigerWitID.yes')}}
                     </span>
                     <span ng-show="bonus.volume < 1">
-                        否
+                        {{lang.text('tigerWitID.no')}}
                     </span>
                 </td>
             </tr>
@@ -93,6 +93,6 @@
 
     <div ng-if="bonusList.length <= 0" class="text-center mg-tp-20">
         <img src="/images/no_data.png" alt="" class="mg-bt-40">
-        <p>暂无数据!</p> 
+        <p>{{ lang.text('tigerWitID.noData') }}</p> 
     </div>
 </div>

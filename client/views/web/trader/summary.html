@@ -1,7 +1,7 @@
 <div class="trade_container">
     <div class="re_trader_chart trader_box">
         <div class="bridge clearfix">
-            <span id="whichYear" class="re_trader_chart__whichYear"><span ng-if="!selected">____</span>{{ selected.year }}年表现</span>
+            <span id="whichYear" class="re_trader_chart__whichYear"><span ng-if="!selected">____</span>{{ lang.isEnglish() ? (lang.text("tigerWitID.master.performanceOf")) : (selected.year + lang.text("tigerWitID.master.performanceOf")) }}</span>
             <select
                     class="re_trader_chart__changeYear"
                     name="changeYear" id="changeYear"
@@ -9,31 +9,31 @@
                     ng-options="item.year for item in columnData track by item.year"
                     ng-change="changeYear(selected)"
             ></select>
-            <span class="upData_tips">数据将于每天北京时间00:00更新</span>
+            <span class="upData_tips">{{ lang.text("tigerWitID.master.tip29") }}</span>
         </div>
         <div tw-column-chart style="width: 100%; height: 350px;"></div>
         <div class="re_trader_chart__chart_tips">
             <div class="clearfix">
                 <i class="info_box"><i class="fa fa-info" aria-hidden="true"></i></i>
-                <span>过往表现并不能完全代表未来交易的成功率,您需要理智的做出判断</span>
+                <span>{{ lang.text("tigerWitID.master.tip30") }}</span>
             </div>
         </div>
     </div>
     <div class="re_trader_detail clearfix">
         <div class="re_trader_detail__table trader_box">
             <ul class="re_trader_detail__table-square small-text-font">
-                <li><span class="square_num trader_blue"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_profit_close_rate }}%</span><span class="span square_des">准确率</span></li>
+                <li><span class="square_num trader_blue"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_profit_close_rate }}%</span><span class="span square_des">{{ lang.text("tigerWitID.dataStatistics.accuracy") }}</span></li>
                 <!-- <li><span class="square_num trader_blue"><span ng-if="!master_info">__ __</span>{{ master_info.max_retract }}</span><span class="span square_des">最大盈利点差</span></li> -->
-                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_max_volume }}手</span><span class="square_des">最大开仓</span></li>
-                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_total_close }}笔</span><span class="square_des">总平仓交易</span></li>
-                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.win_count }}笔</span><span class="square_des">盈利订单</span></li>
-                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.lose_count }}笔</span><span class="square_des">亏损订单</span></li>
-                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.avg_position_time }}</span><span class="square_des">平均持仓时间</span></li>
-                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.win_buy_count }}笔</span><span class="square_des">成功做多交易</span></li>
-                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.win_sell_count }}笔</span><span class="square_des">成功做空交易</span></li>
-                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_profit_rate }}%</span><span class="square_des">上一日交易日状况<i class="fa fa-info" aria-hidden="true"></i></span><span class="alert">指该高手最后一次有交易行为的数据统计。</span></li>
-                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_week_profit_rate }}%</span><span class="square_des">近七日交易状况<i class="fa fa-info" aria-hidden="true"></i></span><span class="alert">指从当前日期开始最近七个自然日交易状况。</span></li>
-                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.avg_month_close }}笔</span><span class="square_des">月平均交易笔数</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_max_volume }}手</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.maximumOpen") }}</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_total_close }}笔</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.totalClosingOrders") }}</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.win_count }}笔</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.profitOrders") }}</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.lose_count }}笔</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.lossOrders") }}</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.avg_position_time }}</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.avgHoldingTime") }}</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.win_buy_count }}笔</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.longsWon") }}</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.win_sell_count }}笔</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.shortsWon") }}</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_profit_rate }}%</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.lastTradingDay") }}<i class="fa fa-info" aria-hidden="true"></i></span><span class="alert">指该高手最后一次有交易行为的数据统计。</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.last_week_profit_rate }}%</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.nearly7DaysRateReturn") }}<i class="fa fa-info" aria-hidden="true"></i></span><span class="alert">指从当前日期开始最近七个自然日交易状况。</span></li>
+                <li><span class="square_num"><span ng-if="!master_info"><i class="fa fa-spinner" aria-hidden="true"></i></span>{{ master_info.avg_month_close }}笔</span><span class="square_des">{{ lang.text("tigerWitID.dataStatistics.numberMonthlyAverage") }}</span></li>
             </ul>
         </div>
         <!-- <div class="re_trader_detail__areaChart trader_box">
@@ -62,7 +62,7 @@
     </div>
     <div class="re_trader_type trader_box clearfix">
         <div class="re_trader_type__title">
-            <span>主要交易品种</span>
+            <span>{{ lang.text("tigerWitID.dataStatistics.mainTradingSymbols") }}</span>
             <select class="re_trader_chart__changeType"
                     name="changeYearType"
                     ng-options="item.month for item in monSymbols track by item.month"
@@ -75,7 +75,7 @@
             <div tw-bar-chart data-type='bar' style="width:100%;height:140px"></div>
         </div>
         <div class="re_trader_type__types ">
-            <h4 class="re_trader_type__average_time">平均持仓时间 :</h4>
+            <h4 class="re_trader_type__average_time">{{ lang.text("tigerWitID.dataStatistics.avgHoldingTimeM") }}</h4>
             <div class="trader_summary navbar_summary">
                 <div class="navbar_summary__content">
                     <div tw-loading-img></div>

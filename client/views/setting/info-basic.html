@@ -30,7 +30,7 @@
                     
                     <div ng-show="frontErr.locationState.show">
                         <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.locationState.$error.required">
-                            请选择省/市
+                            {{lang.text('tigerWitID.settings.selectProvincesCities')}}
                         </p>
                     </div>
                 </div>
@@ -61,7 +61,7 @@
 
                     <div ng-show="frontErr.locationCity.show">
                         <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.locationCity.$error.required">
-                            请选择市/区
+                            {{lang.text('tigerWitID.settings.selectCityDistrict')}}
                         </p>
                     </div>
                 </div>
@@ -70,7 +70,7 @@
         <div class="setting_info_zero__name-center">
             <div class="setting_info_zero__name-item align-item-c">
                 <div class="name-input">
-                    <label for="" class="stress">用户名：</label>
+                    <label for="" class="stress">{{lang.text('tigerWitID.settings.userNameM')}}</label>
                 </div>
                 
                 <div class="value-input">
@@ -79,14 +79,14 @@
                             {{ basicInfo.username }}
                         </div>
                         <div class="edit" ng-click="editName()" ng-if="!personal.has_master">
-                            修改
+                            {{lang.text('tigerWitID.edit')}}
                         </div>
                     </div>
                     <div class="form-control-wrapper" ng-if="isEditName">
                         <input class="form-control"
                                 name="username"
                                 type="text"
-                                placeholder="用户名"
+                                placeholder="{{lang.text('tigerWitID.settings.userName')}}"
                                 required
                                 ng-class="{'form-control-error': frontErr.username.show && basicInfoForm.username.$invalid}"
                                 ng-model="basicInfo.username"
@@ -99,7 +99,7 @@
 
                         <div ng-show="frontErr.username.show">
                             <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.username.$error.required">
-                                请输入用户名
+                                {{lang.text('tigerWitID.settings.enterUsername')}}
                             </p>
                             <p class="alert alert-arrow_tp_lf" ng-show="basicInfoForm.username.$error.twformValidTxt">
                                 {{frontErr.username.tip}}
@@ -110,7 +110,7 @@
             </div>
             <div class="setting_info_zero__name-item  align-item-c">
                 <div class="name-input">
-                    <label for="">国&#12288;家：</label>
+                    <label for="">{{lang.text('tigerWitID.settings.countryM')}}</label>
                 </div>
                 <div class="value-input">
                     <div class="form-control-wrapper">
@@ -118,7 +118,7 @@
                             <!-- <input class="form-control disabled"
                                 name="locationState"
                                 type="text"
-                                placeholder="国家"
+                                placeholder="{{lang.text('tigerWitID.settings.country')}}"
                                 disabled
                                 required
                                 ng-model="personal.region.world_name"
@@ -137,12 +137,12 @@
             </div>
             
             <button class="tw-btn-lg162 tw-btn-capsule-gradient" type="submit" ng-if="clickable" ng-click="submitForm('basicInfoForm')">
-                提交
+                {{lang.text('tigerWitID.submit')}}
             </button>
 
             <button class="tw-btn-lg162 tw-btn-capsule-gradient" disabled ng-if="!clickable">
                 <i class="loading_spinner fa fa-spinner"></i>
-                提交中
+                {{lang.text('tigerWitID.submitting')}}
             </button>
         </div>
     </form>

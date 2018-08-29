@@ -133,12 +133,13 @@
                 resolve: {
                     mt4_id: function() { return $scope.investSelect.id }
                 },
-                controller: function ($scope, invest, $modalInstance, mt4_id) {
+                controller: function ($scope, invest, $modalInstance, mt4_id, lang) {
                     
+                    $scope.lang = lang;
                     $scope.details = [];        // 交易详情 弹窗数据
                     $scope.modal = {
-                        price: '平仓价',
-                        asset: '投入资金',
+                        price: lang.text("tigerWitID.historyTransactions.closePrice"),
+                        asset: lang.text("tigerWitID.historyTransactions.margin"),
                         usage : "history", //历史要做一些细节修改：平仓类型，时间
                     };
                     $scope.closeModal = closeModal;
@@ -171,12 +172,13 @@
                 resolve: {
                     mt4_id: function() { return $scope.investSelect.id }
                 },
-                controller: function ($scope, invest, $modalInstance, mt4_id) {
+                controller: function ($scope, invest, $modalInstance, mt4_id, lang) {
 
+                    $scope.lang = lang;
                     $scope.details = [];        // 交易详情 弹窗数据
                     $scope.modal = {
-                        price: '平仓价',
-                        asset: '投入资金',
+                        price: lang.text("tigerWitID.historyTransactions.closePrice"),
+                        asset: lang.text("tigerWitID.historyTransactions.margin"),
                         usage : "history", //历史要做一些细节修改：平仓类型，时间
                         pageBar: true
                     };

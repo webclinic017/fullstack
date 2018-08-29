@@ -44,8 +44,8 @@
             newSubmit: true
         };
         $scope.countDownMsg = {
-            oldMsg: '获取验证码',
-            newMsg: '获取验证码'
+            oldMsg: $scope.lang.text("tigerWitID.settings.getVerificationCode"),
+            newMsg: $scope.lang.text("tigerWitID.settings.getVerificationCode")
         };
 
         $scope.showFrontErr = showFrontErr;
@@ -77,7 +77,7 @@
                             message: 'oldMsg',
                             time: 60,
                             callBack: function () {
-                                $scope.countDownMsg.oldMsg = '获取验证码';
+                                $scope.countDownMsg.oldMsg = $scope.lang.text("tigerWitID.settings.getVerificationCode");
                                 $scope.clickable.oldCode = true;
                             }
                         });
@@ -89,7 +89,7 @@
                             message: 'newMsg',
                             time: 60,
                             callBack: function () {
-                                $scope.countDownMsg.newMsg = '获取验证码';
+                                $scope.countDownMsg.newMsg = $scope.lang.text("tigerWitID.settings.getVerificationCode");
                                 $scope.clickable.newCode = true;
                             }
                         });
@@ -137,7 +137,7 @@
                 $scope.clickable.newSubmit = true;
                 if (!data) return;
                 if (data.is_succ) {
-                    layer.msg('新邮箱绑定成功', {
+                    layer.msg($scope.lang.text("tigerWitID.settings.bindNewEmailSucc"), {
                         time: 2000
                     });
                     $scope.settingInfo.email = $scope.emailInfo.newEmail;

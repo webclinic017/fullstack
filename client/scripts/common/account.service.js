@@ -414,19 +414,23 @@
             return publicHttp.dealPublicRequest(o.getPersonalInfoApi, 'GET');
         }
 
-        function getWorlds() {
-            return publicHttp.dealPublicRequest(o.getWorldsApi, 'GET');
-        }
-
-        function getStates(countryCode) {
-            return publicHttp.dealPublicRequest(o.getStatesApi, 'GET', {
-                country_code: countryCode
+        function getWorlds(lang) {
+            return publicHttp.dealPublicRequest(o.getWorldsApi, 'GET', {
+                lang: lang
             });
         }
 
-        function getCities(stateCode) {
+        function getStates(countryCode, lang) {
+            return publicHttp.dealPublicRequest(o.getStatesApi, 'GET', {
+                country_code: countryCode,
+                lang: lang
+            });
+        }
+
+        function getCities(stateCode, lang) {
             return publicHttp.dealPublicRequest(o.getCitiesApi, 'GET', {
-                parent_code: stateCode
+                parent_code: stateCode,
+                lang: lang
             });
         }
 

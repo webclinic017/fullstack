@@ -221,17 +221,15 @@
 
         function submitForm(formName) {
             if($scope.personal.has_master){
-                $layer({
-                    title: '错误提示',
+                var obj = {
+                    title: $scope.lang.text("tigerWitID.settings.error"),
                     size: 'sm',
                     msgClass: 'font-danger',
-                    msg: '您已是高手，暂不能修改基本资料',
-                    btns: {
-                        '确定': function () {
-
-                        }
-                    }
-                })
+                    msg: $scope.lang.text("tigerWitID.settings.tip11"),
+                    btns: {}
+                }
+                obj.btns[$scope.lang.text("tigerWitID.confirm")] = function(){}
+                $layer(obj)
                 return
             }
             showErr(formName, 'username');
