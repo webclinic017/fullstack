@@ -176,13 +176,13 @@
             // console.log(typeof $scope.deposit.amount)
             if($scope.deposit.amount < Number(type.min)){
                 $scope.amountVerify.show = true;
-                $scope.amountVerify.tip = '当前支付方式最低充值金额为' + type.min;
+                $scope.amountVerify.tip = $scope.lang.text('tigerWitID.depositWithdrawal.tip57') + type.min;
                 return
             }
             if(type.max != "0.00"){
                 if($scope.deposit.amount > Number(type.max)){
                     $scope.amountVerify.show = true;
-                    $scope.amountVerify.tip = '当前支付方式最高充值金额为' + type.max;
+                    $scope.amountVerify.tip = $scope.lang.text('tigerWitID.depositWithdrawal.tip58') + type.max;
                     return
                 }
             }
@@ -325,7 +325,7 @@
                                 $scope.isLoading = false;
                                 openDepositRuleMdl({
                                     type: 'cseMessage',
-                                    tit: '是否有CSE Wallet账号？',
+                                    tit: $scope.lang.text("tigerWitID.tip.tip13_1") + 'CSE Wallet' + $scope.lang.text("tigerWitID.tip.tip13_2"),
                                     pop: $scope.depositTypeLst[$scope.deposit.type].pop,
                                     url: $scope.depositTypeLst[$scope.deposit.type].url,
                                     callback: submitDeposit

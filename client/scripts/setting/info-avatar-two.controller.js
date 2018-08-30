@@ -46,7 +46,7 @@
             account.setAvatar($scope.selectHeadImg.avatar).then(function(data){
                 if (data.is_succ) {
                     $scope.backErr.system.show = true;
-                    $scope.backErr.system.msg = "提交成功";
+                    $scope.backErr.system.msg = $scope.lang.text("tigerWitID.settings.submitSuccess");
                     $timeout(function(){
                         $scope.selectHeadImg.avatar = undefined;
                         changeAvatar($scope.personal);

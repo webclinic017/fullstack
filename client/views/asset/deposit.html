@@ -53,7 +53,7 @@
                     {{lang.text('tigerWitID.depositWithdrawal.thirdParty')}}
                 </a>
                 <p class="deposit__way-desc" ng-class="{active: deposit.type === 'invest'}">
-                    <span ng-click="openDepositRuleMdl({type: 'depositRule', tit: '网银入金规则'})">{{lang.text('tigerWitID.depositWithdrawal.paymentRule')}}</span>
+                    <span ng-click="openDepositRuleMdl({type: 'depositRule', tit: lang.text('tigerWitID.depositWithdrawal.onlineBankingDepositRules') })">{{lang.text('tigerWitID.depositWithdrawal.paymentRule')}}</span>
                 </p>
             </div>
         </div>
@@ -133,9 +133,8 @@
                     {{lang.text('tigerWitID.depositWithdrawal.telegraphicTransferTip1')}}
                 </p>
                 <p class="deposit__tele-tip">
-                    <!-- TODO -->
                     <!-- {{lang.text('tigerWitID.depositWithdrawal.telegraphicTransferTip2')}} -->
-                    请注意，我们不接受直接支付到我们银行账户的现金付款。为了您的注资能及时、准确到账，在填写电汇申请单时，<span class="des">请您务必在汇款附言一栏里填写您的交易账号。</span>同时请提供您的电话号码，以便我们与您取得联系。
+                    {{lang.text('tigerWitID.depositWithdrawal.tip62_1')}}<span class="des">{{lang.text('tigerWitID.depositWithdrawal.tip62_2')}}</span>{{lang.text('tigerWitID.depositWithdrawal.tip62_3')}}
                 </p>
                 <p class="deposit__tele-tit">
                     {{lang.text('tigerWitID.depositWithdrawal.telegraphicTransferTip3')}}

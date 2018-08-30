@@ -190,7 +190,7 @@
                 // console.log(item.id);
                 if (!kycInfo[item.id]) {
                     $scope.tip.questions.show = true;
-                    $scope.tip.questions.msg = '请完成第' + (Number(index) + 1) + '题：' + item.title
+                    $scope.tip.questions.msg = $scope.lang.text("tigerWitID.tip.tip12_1") + (Number(index) + 1) + $scope.lang.text("tigerWitID.tip.tip12_2") + item.title
                     isBreak = true;
                 } else {
                     $scope.tip.questions.show = false;
@@ -225,7 +225,7 @@
                     sa.track('btn_kyc');
                     sa.track('New_information');
                     $scope.tip.system.show = true;
-                    $scope.tip.system.msg = 'KYC 认证信息提交成功';
+                    $scope.tip.system.msg = $scope.lang.text("tigerWitID.settings.verificationSucc_1") + 'KYC' + $scope.lang.text("tigerWitID.settings.verificationSucc_2");
 
                     // 向authenController发送信息
                     $scope.$emit('goState', data.data);

@@ -7,10 +7,10 @@
 
     <div class="system_modal__content" ng-if="modal.type === 'login'">
         <p class="system_modal__info">
-            无法进行{{ modal.info }}操作
+            {{lang.text('tigerWitID.myAccount.unableOperate_1')}}{{ modal.info }}{{lang.text('tigerWitID.myAccount.unableOperate_2')}}
         </p>
         <p class="system_modal__tip">
-            由于您没有登录，无法{{ modal.info }}高手
+            {{lang.text('tigerWitID.myAccount.tip40_1')}}{{ modal.info }}{{lang.text('tigerWitID.myAccount.tip40_2')}}
         </p>
 
         <p class="system_modal__btn_wrapper">
@@ -30,7 +30,7 @@
 
         <p class="system_modal__btn_wrapper">
             <a class="btn btn-primary btn-sm" ng-click="closeModal()" href="/space/#/authen/investInfo" target="_blank">
-                完善资料
+                {{lang.text('tigerWitID.wallet.completeInformation')}}
             </a>
         </p>
     </div>

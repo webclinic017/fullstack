@@ -27,7 +27,6 @@
                             <span class="number">{{ bag.amount || '0'}}</span>
                         </p>
                         <p class="redbag_single__top-type" title="{{ bag.bonus_name }}">{{ bag.bonus_name || '-'}}</p>
-                        <!-- TODO -->
                         <p class="redbag_single__top-tip" ng-if="bag.status != 3">{{lang.text('tigerWitID.coupon.exchangeValidUntil')}}{{ bag.valid_end || '-' }}</p>
                         <p class="redbag_single__top-tip" ng-if="bag.status == 3">
                             {{lang.text('tigerWitID.coupon.exchangeDate')}}{{ bag.pay_time || '-' }}

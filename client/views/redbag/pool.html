@@ -41,7 +41,7 @@
                     <div class="redbag_single__bottom-sign" ng-if="pool.is_receive == 4">
                         <span class="sign">
                             {{lang.text('tigerWitID.coupon.availableCoupons')}}<br>
-                            {{ pool.countdownTime.day }}天{{ pool.countdownTime.hour }}时{{ pool.countdownTime.minute }}分{{ pool.countdownTime.second }}秒
+                            {{ pool.countdownTime.day }}{{lang.text('tigerWitID.day')}}{{ pool.countdownTime.hour }}{{lang.text('tigerWitID.hour')}}{{ pool.countdownTime.minute }}{{lang.text('tigerWitID.minute')}}{{ pool.countdownTime.second }}{{lang.text('tigerWitID.second')}}
                         </span>
                     </div>
                 </div>

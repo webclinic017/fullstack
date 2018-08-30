@@ -131,13 +131,11 @@
                             </p>
 
                             <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.twformMax">
-                                <!-- TODO -->
-                                出金金额最多为 {{withdraw.maxAmount || 0}} 美金
+                                {{lang.text('tigerWitID.depositWithdrawal.tip64_1')}}{{withdraw.maxAmount || 0}}{{lang.text('tigerWitID.depositWithdrawal.tip64_2')}}
                             </p>
 
                             <p class="alert alert-arrow_tp_lf" ng-show="withdrawForm.amount.$error.twformMin">
-                                <!-- TODO -->
-                                出金金额最少为 {{withdraw.minAmount}} 美金
+                                {{lang.text('tigerWitID.depositWithdrawal.tip65_1')}}{{withdraw.minAmount}}{{lang.text('tigerWitID.depositWithdrawal.tip65_1')}}
                             </p>
                         </div>
                     </div>

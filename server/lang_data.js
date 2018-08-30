@@ -2114,6 +2114,7 @@ module.exports = function () {
             becomeMaster: {zh: "成为高手", en: "Become a master"},
             eliteTeam: {zh: "精英团队", en: "Elite team"},
             mediaReports: {zh: "媒体报道", en: "Media reports"},
+            copyRegulations: {zh: "复制规则", en: "Copy Regulations"},
             
         },
     };

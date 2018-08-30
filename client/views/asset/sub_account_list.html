@@ -2,7 +2,7 @@
     <button class="close" ng-click="closeModal()">×</button>
 
     <h5 class="sys_modal_v2__title">
-        选择交易账户
+        {{lang.text('tigerWitID.tradingAccount.chooseTradingAccount')}}
     </h5>
 
     <div class="sys_modal_v2__content">
@@ -12,8 +12,8 @@
                     <span class="btn-select fr" ng-class="{active: account.accountItem.mt4_id === value.mt4_id}"></span>
                 </div>
                 <div class="col-xs-9 deposit_modal__type-cont">
-                    <p class="tit">{{value.account_name || "交易账号"}}</p>
-                    <p class="tip">账户余额：${{ value.balance }}<span>（{{ accountType[value.account_type] }}）</span></p>
+                    <p class="tit">{{value.account_name || lang.text('tigerWitID.tradingAccount.tradingAccountg')}}</p>
+                    <p class="tip">{{lang.text('tigerWitID.tradingAccount.accountBalanceM')}}${{ value.balance }}<span>（{{ accountType[value.account_type] }}）</span></p>
                 </div>
             </li>
         </ul>

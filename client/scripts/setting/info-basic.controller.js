@@ -269,7 +269,7 @@
                 // 成功
                 if (data.is_succ) {
                     $scope.backErr.system.show = true;
-                    $scope.backErr.system.msg = "提交成功";
+                    $scope.backErr.system.msg = $scope.lang.text("tigerWitID.settings.submitSuccess");
                     $scope.clickable = true;
 
                     // 神策数据统计

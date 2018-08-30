@@ -48,7 +48,7 @@
                         $scope.addAccountLogic.logic = 2;
                     }
                     $scope.addAccountLogic.code = data.code;
-                    $scope.addAccountLogic.mt4_id = data.data.inactive_account.mt4_id;
+                    $scope.addAccountLogic.mt4_id = data.data.inactive_account.mt4_id ? data.data.inactive_account.mt4_id : '';
                     $scope.addAccountLogic.msg = data.message;
                 });
             }, 1000)

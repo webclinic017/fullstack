@@ -32,8 +32,7 @@
                     <span class="fr" style="font-family: initial;">$ {{msgInfo.amountDollar}}</span>
                 </li>
                 <li class="clearfix" ng-if="msgInfo.currency.currency !== 'USD'">
-                    <!-- TODO -->
-                    <span class="fl">折合{{msgInfo.currency.currency_name}}约：</span>
+                    <span class="fl">{{lang.text('tigerWitID.depositWithdrawal.tip59_1')}}{{msgInfo.currency.currency_name}}{{lang.text('tigerWitID.depositWithdrawal.tip59_2')}}</span>
                     <span class="fr" style="font-family: initial;">{{msgInfo.currency.currency_symbol}} {{msgInfo.amountRMB}}</span>
                 </li>
                 <li class="clearfix">
@@ -88,7 +87,7 @@
         <p class="sys_modal_v2__info mg-bt-15">
             <p class="mg-bt-10">{{lang.text('tigerWitID.depositWithdrawal.tip19')}}</p> 
             <p>{{lang.text('tigerWitID.depositWithdrawal.tip20')}}</p> 
-            <p class="mg-bt-10 mg-tp-15">入金规定</p>
+            <p class="mg-bt-10 mg-tp-15">{{lang.text('tigerWitID.depositWithdrawal.depositStipulation')}}</p>
             <p>{{lang.text('tigerWitID.depositWithdrawal.tip21')}}</p>
             <p>{{lang.text('tigerWitID.depositWithdrawal.tip22')}}</p>
             <p>{{lang.text('tigerWitID.depositWithdrawal.tip23')}}</p>

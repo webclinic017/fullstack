@@ -80,7 +80,6 @@
                     </div>
                 </div>
             </div>
-            <!-- TODO ss -->
             <div class="row" ng-if="!personal.email">
                 <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglish()}">
                     <label>{{lang.text('tigerWitID.settings.verifyEmail')}}</label>
@@ -98,8 +97,7 @@
                                 ng-focus="[hideErr('emailCode')]">
                         
                         <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="sendCode('email')">{{lang.text('tigerWitID.settings.sendVerificationToEmail')}}</span>
-                        <!-- TODO -->
-                        <span class="sender_btn" ng-show="completeInfo.hasSendCode" >{{ completeInfo.waitTime }}秒后重新获取</span>
+                        <span class="sender_btn" ng-show="completeInfo.hasSendCode" >{{lang.text('tigerWitID.myAccount.tip39_1')}}{{ completeInfo.waitTime }}{{lang.text('tigerWitID.myAccount.tip39_2')}}</span>
 
                         <div ng-show="frontErr.emailCode.show">
                             <p class="alert-arrow_tp_lf" ng-show="completeForm.emailCode.$error.required">
@@ -188,7 +186,6 @@
                         </div>
                     </div>
                 </div>
-                 <!-- TODO ss -->
                 <div class="row" ng-if="!personal.phone">
                     <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglish()}">
                         <label>{{lang.text('tigerWitID.settings.verifyPhoneg')}}</label>
@@ -206,8 +203,7 @@
                                     ng-focus="[hideErr('phoneCode')]">
                             
                             <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="sendCode('phone')">{{lang.text('tigerWitID.settings.sendVerificationCode')}}</span>
-                            <!-- TODO -->
-                            <span class="sender_btn" ng-show="completeInfo.hasSendCode" >{{ completeInfo.waitTime }}秒 {{lang.text('actLogin6')}}</span>
+                            <span class="sender_btn" ng-show="completeInfo.hasSendCode" >{{lang.text('tigerWitID.myAccount.tip39_1')}}{{ completeInfo.waitTime }}{{lang.text('tigerWitID.myAccount.tip39_2')}}</span>
     
                             <div ng-show="frontErr.phoneCode.show">
                                 <p class="alert-arrow_tp_lf" ng-show="completeForm.phoneCode.$error.required">

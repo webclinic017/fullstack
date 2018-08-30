@@ -40,8 +40,7 @@
 
     <div class="sys_modal_v2__content" ng-if="params.type == 'withdrawSucc'">
         <p class="sys_modal_v2__info">
-            <!-- TODO -->
-            出金 ${{withdrawAmount}} 申请已提交，我们会在两个工作日内处理完毕
+            {{lang.text('tigerWitID.depositWithdrawal.tip63_1')}} ${{withdrawAmount}} {{lang.text('tigerWitID.depositWithdrawal.tip63_2')}}
         </p>
         <p class="btn_wrapper">
             <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
@@ -89,8 +88,7 @@
                     <span class="fr" style="font-family: initial;">$ {{params.amountDollar}}</span>
                 </li>
                 <li class="clearfix" ng-if="params.currency.currency !== 'USD'">
-                        <!-- TODO -->
-                    <span class="fl">折合{{params.currency.currency_name}}约：</span>
+                    <span class="fl">{{lang.text('tigerWitID.depositWithdrawal.tip59_1')}}{{params.currency.currency_name}}{{lang.text('tigerWitID.depositWithdrawal.tip59_2')}}</span>
                     <span class="fr" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountRMB}}</span>
                 </li>
             </ul>

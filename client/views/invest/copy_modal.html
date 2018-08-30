@@ -46,7 +46,7 @@
                             </p>
 
                             <p class="alert-arrow_tp_lf" ng-show="copyForm.amount.$error.twformMin">
-                                最小复制金额为 ${{ copyTrade.minCopyAmount }} 
+                                {{lang.text('tigerWitID.tradingAccount.minimumCopyAmount')}}${{ copyTrade.minCopyAmount }} 
                             </p>
                         </div>
                     </div>
@@ -203,7 +203,7 @@
             
             <button class="btn btn-primary btn-lt active fr" disabled ng-if="!clickable.copy">
                 <i class="loading_spinner fa fa-spinner"></i>
-                正在提交
+                {{lang.text('tigerWitID.submitting')}}
             </button>
         </div>
     </div>
