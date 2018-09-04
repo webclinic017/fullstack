@@ -97,8 +97,8 @@
                     <tr ng-if="currentData.swap.length > 0" ng-repeat="swap in currentData.swap" ng-cloak>
                         <td>{{ swap.name }}</td>
                         <td>{{ swap.min }}</td>
-                        <td>{{ swap.tiger }}</td>
-                        <td>{{ swap.commission }}</td>
+                        <td>{{ swap.swap_long }}</td>
+                        <td>{{ swap.swap_short }}</td>
                     </tr>
                     <tr ng-if="currentData.swap.length <= 0" class="text-center">
                         <td colspan="20"><%=lang.text('nodata')%></td>

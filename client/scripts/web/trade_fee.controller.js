@@ -56,10 +56,12 @@
                 [] : []
             $scope.currentChecked[cate] = type
             $scope.showFolder[cate] = $scope.tradeFeeData[cate][type].length > 6;
-            console.log(cate, type, $scope.currentData[cate], $scope.showFolder)
+            // console.log(cate, type, $scope.currentData[cate], $scope.showFolder)
         }
         // 获取表格数据
-        getTradeFeeInfo()
+        var symbolList = [];
+        getTradeFeeInfo();
+        getSymbolList();
         function getTradeFeeInfo(cate, type) {
             product.getTradeFeeInfo().then(function (res) {
                 // console.log(res)
@@ -70,6 +72,32 @@
                     changeType('fee', 'forex')
                 }
             });
+        }
+
+        function getSymbolList () {
+            product.getSymbolList().then(function (data) {
+                // console.log(data);
+                if (data.is_succ) {
+                    symbolList = data.data;
+                }
+                angular.forEach($scope.tradeFeeData.swap, function (value, index) {
+                    angular.forEach(value, function (value2, index2) {
+                        value2.swap_long = getSymbolSwap(value2.name, 'swap_long');
+                        value2.swap_short = getSymbolSwap(value2.name, 'swap_short');
+                    });
+                });
+                console.log($scope.tradeFeeData.swap);
+            });
+        }
+
+        function getSymbolSwap (symbolName, swapName) {
+            var res;
+            angular.forEach(symbolList, function (value, index) {
+                if (value.symbol.indexOf(symbolName) != -1) {
+                    res = value[swapName];
+                }
+            })
+            return res;
         }
     }
 })();
