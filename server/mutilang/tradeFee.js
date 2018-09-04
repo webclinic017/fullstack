@@ -32,8 +32,8 @@ module.exports = {
         "en": "Overnight Interest usually happens in the case of positions overnight. Overnight Interest will be calculated at 5:00pm EST. Orders opened before this time are considered overnight positions and need to calculate overnight interest."
     },
     "tradeFee8": {
-        "zh": "TigerWit尽可能每日及时更新隔夜利息报价，但不排除由于无法预测的市场情况而导致的剧烈波动，隔夜利息可能在当日内有变动。",
-        "en": "TigerWit updates overnight Interest quotes as daily as possible, but does not rule out the dramatic fluctuations caused by unpredictable market conditions, overnight interest may change within the same day."
+        "zh": "TigerWit每周一更新隔夜利息报价，但不排除由于无法预测的市场情况而导致的剧烈波动，隔夜利息可能在当日内有变动。",
+        "en": "TigerWit updates overnight Interest quotes every Monday, but does not rule out the dramatic fluctuations caused by unpredictable market conditions, overnight interest may change within the same day."
     },
     "tradeFee9": {
         "zh": "隔夜利息的取值取决于当前现货价格和客户服务等级下两种货币利息之间的差额。该项服务不收取任何佣金或其他费用。您可以查阅隔夜利息报价。",

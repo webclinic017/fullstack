@@ -12,7 +12,8 @@
       getCommentList: getCommentList,
       getCommentDetails: getCommentDetails,
       getProductInfo: getProductInfo,
-      getTradeFeeInfo: getTradeFeeInfo
+      getTradeFeeInfo: getTradeFeeInfo,
+      getSymbolList: getSymbolList
     };
     return service;
 
@@ -54,6 +55,14 @@
     function getTradeFeeInfo(oParams) {
       return $http.get(o.getWebTradeFeeInfoApi, {
         params: oParams
+      });
+    }
+
+    function getSymbolList() {
+      return $http.get(o.getSymbolListApi, {
+        params: {
+          detail: 1
+        }
       });
     }
   }

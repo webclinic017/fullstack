@@ -424,8 +424,8 @@ module.exports = {
         "en": "Detailed operations: right-click the market quotation, choose the transaction variety list, click Forex or CFD list, then click the variety you want to check, and click “attribute” to check two-way swap rate information."
     },
     "faqSwap7": {
-        "zh": "老虎外汇尽可能每日及时更新隔夜利息报价，但不排除由于无法预测的市场情况而导致的剧烈波动，隔夜利息可能在当日内有变动。",
-        "en": "TigerWit will update swap rate quotation daily as far as possible, but there might be violent fluctuations because of unpredictable markets, which means that the swap rate might be subject to big changes on the same day."
+        "zh": "TigerWit每周一更新隔夜利息报价，但不排除由于无法预测的市场情况而导致的剧烈波动，隔夜利息可能在当日内有变动。",
+        "en": "TigerWit will update swap rate quotation daily every Monday, but there might be violent fluctuations because of unpredictable markets, which means that the swap rate might be subject to big changes on the same day."
     },
     "faqSwap8": {
         "zh": "Q：为什么有时候隔夜利息会不一样？",

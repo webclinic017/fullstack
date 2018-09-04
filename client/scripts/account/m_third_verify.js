@@ -338,6 +338,12 @@ $(document).ready(function () {
                 var html=bt('template_country_info',countryList);
                 //渲染
                 $(".m_third_userinfo select").html(html);
+
+                if (lang.curLang() != 'en') {
+                    $(".m_third_userinfo select").find("option[value=CN]").first().attr("selected", true);
+                    $(ele.userinfoCountry).val('中国');
+                    $(ele.userinfoCountry).attr("data-country", "CN");
+                }
             }
         });
     }
