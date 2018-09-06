@@ -267,7 +267,7 @@
                         if (url.local.indexOf(location.host) != -1 || (data.data.area_id == 1 && url.cn.indexOf(location.host) != -1) || (data.data.area_id == 2 && url.global.indexOf(location.host) != -1)) {
                             $state.go('space.center.index', {reload: true});
                         } else {
-                            if (data.data.area_id == 1) {
+                            if (data.data.area_id == 2) {
                                 if (location.host.indexOf('demo') != -1) {
                                     location.href = 'https://globaldemo.tigerwit.com/space/#/center'
                                 } else {
