@@ -10,6 +10,18 @@
         var cdn_url = envConfig.cdn_url || '';
         var is_cloned = envConfig.isCloned || '';
         var lang = url.parse(req.url, true).query.lang;
+        var parseCookie = function(cookie){
+            var cookies = {};
+            if(!cookie){
+                return cookies;
+            };
+            var list = cookie.split(';');
+            for(let i = 0; i < list.length; i++){
+                var pair = list[i].split('=');
+                cookies[pair[0].trim()] = pair[1];
+            }
+            return cookies;
+        }
         var cArr = [
             'company_name=' + company_name + '; path=/; domain=.tigerwit.com',
             'access_origin=' + access_origin + '; path=/; domain=.tigerwit.com',
@@ -17,7 +29,12 @@
             'cdn_url=' + cdn_url + '; path=/; domain=.tigerwit.com',
             'is_cloned=' + is_cloned + '; path=/; domain=.tigerwit.com',
         ];
+        //global未设置语言时默认英文
+        if (!parseCookie(req.headers.cookie).lang && (req.host.indexOf('global.tigerwit.com') != -1 || req.host.indexOf('globaldemo.tigerwit.com') != -1)) {
+            cArr.push('lang=en; path=/; domain=.tigerwit.com');
+        }
         if (lang) {
+            // cArr.push('lang=en; path=/; domain=.tigerwit.com');
             cArr.push('lang='+lang+'; path=/; domain=.tigerwit.com');
         }
         // console.info(cArr);
