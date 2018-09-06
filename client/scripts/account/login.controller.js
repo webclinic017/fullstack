@@ -166,10 +166,10 @@
             });
         };
         // 登录
-        openWebAgmentModal(100402, function(resolve, e){
-                    $scope.login(formName, 'is_agree');
-                    layer.close(resolve.layIndex)
-                })
+        // openWebAgmentModal(100402, function(resolve, e){
+        //             $scope.login(formName, 'is_agree');
+        //             layer.close(resolve.layIndex)
+        //         })
         $scope.login = function (formName, is_agree) {
             if (!$scope.loginBtnStatus) return;
             if ($scope[formName].$invalid) {
