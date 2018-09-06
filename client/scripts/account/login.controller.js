@@ -264,20 +264,20 @@
                             local: 'w.tigerwit.com,w.dev.tigerwit.com'
                         };
                         
-                        if (url.local.indexOf(location.host) != -1 || (data.data.area_id === '1' && url.cn.indexOf(location.host) != -1) || (data.data.area_id === '2' && url.global.indexOf(location.host) != -1)) {
+                        if (url.local.indexOf(location.host) != -1 || (data.data.area_id == 1 && url.cn.indexOf(location.host) != -1) || (data.data.area_id == 2 && url.global.indexOf(location.host) != -1)) {
                             $state.go('space.center.index', {reload: true});
                         } else {
-                            if (data.data.area_id === '1') {
+                            if (data.data.area_id == 1) {
                                 if (location.host.indexOf('demo') != -1) {
-                                    location.href = 'https://globaldemo.tigerwit.com/space/#/space/center/index'
+                                    location.href = 'https://globaldemo.tigerwit.com/space/#/center'
                                 } else {
-                                    location.href = 'https://global.tigerwit.com/space/#/space/center/index'
+                                    location.href = 'https://global.tigerwit.com/space/#/center'
                                 }
                             } else {
                                 if (location.host.indexOf('demo') != -1) {
-                                    location.href = 'https://cndemo.tigerwit.com/space/#/space/center/index'
+                                    location.href = 'https://cndemo.tigerwit.com/space/#/center'
                                 } else {
-                                    location.href = 'https://cn.tigerwit.com/space/#/space/center/index'
+                                    location.href = 'https://cn.tigerwit.com/space/#/center'
                                 }
                             }
                         }
