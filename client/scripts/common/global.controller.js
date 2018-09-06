@@ -26,7 +26,9 @@
         $scope.personal = {};
         $scope.personal.is_live = '1';
         $scope.process = {};
-
+        $scope.worldList = [];  //  ----|
+        // $scope.currentWorld = {}; ---| -- 选择国家
+        // $scope.entryWorld = '';  ----|
         $scope.logout = logout;
         $scope.reloadLanguage = reloadLanguage;
         $scope.openDredgeMdl = openDredgeMdl;
@@ -39,7 +41,21 @@
         setInterval(function () {
             getUnreadLength();
         }, 30000);
-
+        // 获取国家列表
+        getWorlds();
+        function getWorlds() {
+            account.getWorlds((lang.isEnglish() ? 'en' : 'cn')).then(function (data) {
+                if (!data) return;
+                // console.log(data);
+                if (!data.is_succ) {
+                    return;
+                }
+                $scope.worldList = data.data;
+            });
+        }
+        // $scope.setWorld = function(world){
+        //     $scope.currentWorld = world;
+        // }
         /*******************global 事件系统************************/
         $scope.$on('$stateChangeStart', function (event, toState, toParams) {
             $scope.toState = toState

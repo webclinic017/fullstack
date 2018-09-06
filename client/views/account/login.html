@@ -1,24 +1,38 @@
 <div class="account_login-bg">
     <div class="account_login_box">
-        <div class="account_login login_pass" ng-class="{active: loginType === 'pass'}" ng-show="loginStep1 != 2">
+        <!-- 密码登录 新用户不显示-->
+        <div class="account_login login_pass" ng-class="{active: loginType === 'pass'}">
             <div class="account_login__pos login_pass" ng-show="loginType !== 'pass'" ng-click="changeLoginType('pass')">
-                {{ lang.text("actLogin2") }}
+                {{ lang.text("tigerWitID.login.passwordLogin") }}
             </div>
             <div class="account_login__pass" ng-show="loginType === 'pass'">
-                <div ng-show="loginStep2 == 1">
-                    <div class="account_login__title">{{ lang.text("actLogin2") }}</div>
-                    <form name="loginForm3" class="account_login__form" novalidate>
+                <!-- 手机号密码登录页 -->
+                <div ng-show="loginStep2 == 1 && loginStep3 == 2">
+                    <div class="account_login__title"><span>{{ lang.text("tigerWitID.login.passwordLogin") }}</span><span ng-click="toggleLoginMethod(1)">{{lang.text('tigerWitID.login.loginWithEmail')}}</span></div>
+                    <form name="loginFormPhonePw" class="account_login__form" novalidate>
                         <div class="account-form-control-wrapper">
-                            <input class="account-form-control"
-                                   name="step2Phone"
+                            <div class="select-left">
+                                <input class="select__input" name="phoneArea" type="" autocomplete="off" placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="account.phoneArea.key">
+
+                                <i class="select__icon fa fa-angle-down"></i>
+
+                                <ul class="select__dropdown" twform-select data-bind-model="account.phoneArea2">
+
+                                    <li ng-repeat="world in worldList" ng-class="{'selected': world.phone_code === account.phoneArea.value}">
+                                        <span data-value="{{world.code}}" ng-click="selectArea(world)">+{{world.phone_code}}({{world.name}})</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input class="account-form-control select-right"
+                                   name="phonePwPhone"
                                    type="text"
-                                   placeholder="{{ lang.text('actLogin38') }}"
+                                   placeholder="{{lang.text('tigerWitID.login.enterPhoneNumber')}}"
                                    required
                                    ng-click="toTrackPhoneSensorsdata()"
-                                   on-enter="login('loginForm3')"
-                                   ng-model="account.step2Phone">
-                            <span class="account-form-control-tip" ng-show="account.step2Phone">{{ lang.text("actLogin37") }}</span>
-                            <span class="account_login__close" ng-show="account.step2Phone" ng-click="clearPhone('step2Phone')">
+                                   on-enter="login('loginFormPhonePw')"
+                                   ng-model="account.phonePwPhone">
+                            <span class="account-form-control-tip" ng-show="account.phonePwPhone">{{lang.text('tigerWitID.login.phoneNumber')}}</span>
+                            <span class="account_login__close" ng-show="account.phonePwPhone" ng-click="clearPhone('phonePwPhone')">
                                 <i class="fa fa-times" aria-hidden="true"></i>
                             </span>
                         </div>
@@ -29,7 +43,7 @@
                                    name="step2Password"
                                    type="password"
                                    placeholder="{{ lang.text('actLogin25') }}"
-                                   on-enter="login('loginForm3')"
+                                   on-enter="login('loginFormPhonePw')"
                                    required
                                    ng-model="account.step2Password">
                             <span class="account-form-control-tip" ng-show="account.step2Password">{{ lang.text('actLogin22') }}</span>
@@ -43,7 +57,7 @@
                                    name="step2Password"
                                    type="text"
                                    placeholder="{{ lang.text('actLogin25') }}"
-                                   on-enter="login('loginForm3')"
+                                   on-enter="login('loginFormPhonePw')"
                                    required
                                    ng-model="account.step2Password">
                             <span class="account-form-control-tip" ng-show="account.step2Password">{{ lang.text('actLogin22') }}</span>
@@ -65,22 +79,102 @@
                         </div>
                     </form>
                     <div class="account_login__btn_wrapper">
-                        <span class="account_login__btn" ng-click="login('loginForm3')">{{ lang.text('actLogin8') }}</span>
+                        <span class="account_login__btn" ng-click="login('loginFormPhonePw')">{{ lang.text('actLogin8') }}</span>
                     </div>
                     <div class="account_login__docs">
-                        <p>{{ lang.text('actLogin27') }}</p>
+                        <p>{{lang.text('tigerWitID.login.tip3')}}</p>
                     </div>
                 </div>
-                <div ng-show="loginStep2 == 2">
-                    <div class="account_login__title">{{ lang.text('actLogin28') }}</div>
-                    <form name="loginForm4" class="account_login__form" novalidate style="margin-bottom: 45px;">
+                <!-- 邮箱密码登录页 -->
+                <div ng-show="loginStep2 == 1 && loginStep3 == 1">
+                    <div class="account_login__title"><span>{{ lang.text("tigerWitID.login.passwordLogin") }}</span><span ng-click="toggleLoginMethod(2)">{{lang.text('tigerWitID.login.loginWithMobile')}}</span></div>
+                    <form name="loginFormEmailPw" class="account_login__form" novalidate>
                         <div class="account-form-control-wrapper">
                             <input class="account-form-control"
+                                    name="emailPwEmail"
+                                    type="text"
+                                    placeholder="{{lang.text('tigerWitID.login.enterEmail')}}"
+                                    required
+                                    ng-click="toTrackPhoneSensorsdata()"
+                                    on-enter="login('loginFormEmailPw')"
+                                    ng-model="account.emailPwEmail">
+                            <span class="account-form-control-tip" ng-show="account.emailPwEmail">{{lang.text('tigerWitID.login.email')}}</span>
+                            <span class="account_login__close" ng-show="account.emailPwEmail" ng-click="clearPhone('emailPwEmail')">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </span>
+                        </div>
+
+                        <div class="account-form-control-wrapper" ng-show="step2PasswordStatus">
+                            <input class="account-form-control"
+                                    autocomplete="off"
+                                    name="step2Password"
+                                    type="password"
+                                    placeholder="{{ lang.text('actLogin25') }}"
+                                    on-enter="login('loginFormEmailPw')"
+                                    required
+                                    ng-model="account.step2Password">
+                            <span class="account-form-control-tip" ng-show="account.step2Password">{{ lang.text('actLogin22') }}</span>
+                            <span class="account_login__close" ng-click="changePasswordStatus('step2PasswordStatus')">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="account-form-control-wrapper" ng-show="!step2PasswordStatus">
+                            <input class="account-form-control"
+                                    autocomplete="off"
+                                    name="step2Password"
+                                    type="text"
+                                    placeholder="{{ lang.text('actLogin25') }}"
+                                    on-enter="login('loginFormEmailPw')"
+                                    required
+                                    ng-model="account.step2Password">
+                            <span class="account-form-control-tip" ng-show="account.step2Password">{{ lang.text('actLogin22') }}</span>
+                            <span class="account_login__close" ng-click="changePasswordStatus('step2PasswordStatus')">
+                                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="clearfix">
+                            <div class="account_login__remenber fl">
+                                <span class="account_login__remenber-btn" ng-click="changeRememberLogin()">
+                                    <i class="fa fa-square-o" ng-show="!rememberLoginStatus"></i>
+                                    <i class="fa fa-check-square" ng-show="rememberLoginStatus"></i>
+                                    {{ lang.text('actLogin7') }}
+                                </span>
+                            </div>
+                            <p class="account_login__pass-tip">
+                                <span ng-click="goForgetPassword()">{{ lang.text("actLogin26") }}</span>
+                            </p>
+                        </div>
+                    </form>
+                    <div class="account_login__btn_wrapper">
+                        <span class="account_login__btn" ng-click="login('loginFormEmailPw')">{{ lang.text('actLogin8') }}</span>
+                    </div>
+                    <div class="account_login__docs">
+                        <p>{{lang.text('tigerWitID.login.tip3')}}</p>
+                    </div>
+                </div>
+                <!-- 忘记密码页 -->
+                <div ng-show="loginStep2 == 2 && loginStep3 == 2">
+                    <div class="account_login__title">{{ lang.text('actLogin28') }}</div>
+                    <form name="loginFormforgetPhonePw" class="account_login__form" novalidate style="margin-bottom: 45px;">
+                        <div class="account-form-control-wrapper">
+                            <div class="select-left">
+                                <input class="select__input" name="phoneArea"  autocomplete="off" type="text" placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="account.phoneArea.key">
+
+                                <i class="select__icon fa fa-angle-down"></i>
+
+                                <ul class="select__dropdown" twform-select data-bind-model="account.phoneArea2">
+
+                                    <li ng-repeat="world in worldList" ng-class="{'selected': world.phone_code === account.phoneArea.value}">
+                                        <span data-value="{{world.code}}" ng-click="selectArea(world)">+{{world.phone_code}}({{world.name}})</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input class="account-form-control select-right"
                                    autocomplete="off"
                                    name="forgetPhone"
                                    type="text"
                                    placeholder="{{ lang.text('actLogin3') }}"
-                                   on-enter="getCaptcha('loginForm4', 'forgetPhone')"
+                                   on-enter="getCaptcha('loginFormforgetPhonePw', 'forgetPhone')"
                                    required
                                    ng-model="account.forgetPhone">
                             <span class="account-form-control-tip" ng-show="account.forgetPhone">{{ lang.text("actLogin17") }}</span>
@@ -91,36 +185,77 @@
                         <div class="account-form-control-wrapper">
                             <input class="account-form-control"
                                    autocomplete="off"
-                                   name="forgetCode"
+                                   name="forgetPhoneCode"
                                    type="text"
                                    placeholder="{{ lang.text('actLogin4') }}"
-                                   on-enter="goForgetPassword2('loginForm4')"
+                                   on-enter="goForgetPassword2('loginFormforgetPhonePw', 'forgetPhone', 'forgetPhoneCode')"
                                    required
-                                   ng-model="account.forgetCode">
-                            <span class="account-form-control-tip" ng-show="account.forgetCode">{{ lang.text('actLogin18') }}</span>
-                            <span class="account_login__code_btn" ng-show="!codeBtnStatus.forgetPhone.count" ng-click="getCaptcha('loginForm4', 'forgetPhone')">
-                                {{ lang.text('actLogin5') }}
+                                   ng-model="account.forgetPhoneCode">
+                            <span class="account-form-control-tip" ng-show="account.forgetPhoneCode">{{ lang.text('actLogin18') }}</span>
+                            <span class="account_login__code_btn" ng-show="!codeBtnStatus.forgetPhone.count" ng-click="getCaptcha('loginFormforgetPhonePw', 'forgetPhone')">
+                                {{lang.text('tigerWitID.login.sendSMS')}}
                             </span>
                             <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.forgetPhone.count">
-                                {{ codeBtnStatus.forgetPhone.msg }}s {{ lang.text('actLogin6') }}
+                                {{lang.text('tigerWitID.myAccount.tip39_1')}}{{ codeBtnStatus.forgetPhone.msg }}{{lang.text('tigerWitID.myAccount.tip39_2')}}
                             </span>
                         </div>
                     </form>
                     <div class="account_login__btn_wrapper">
                         <span class="account_login__btn mg-rg-15" ng-click="backPassword()">{{ lang.text('actLogin29_1') }}</span>
-                        <span class="account_login__btn" ng-click="goForgetPassword2('loginForm4')">{{ lang.text('actLogin29') }}</span>
+                        <span class="account_login__btn" ng-click="goForgetPassword2('loginFormforgetPhonePw', 'forgetPhone', 'forgetPhoneCode')">{{ lang.text('actLogin29') }}</span>
                     </div>
                 </div>
+                <div ng-show="loginStep2 == 2 && loginStep3 == 1">
+                    <div class="account_login__title">{{ lang.text('actLogin28') }}</div>
+                    <form name="loginFormforgetEmailPw" class="account_login__form" novalidate style="margin-bottom: 45px;">
+                        <div class="account-form-control-wrapper">
+                            <input class="account-form-control"
+                                    autocomplete="off"
+                                    name="forgetEmail"
+                                    type="text"
+                                    placeholder="{{lang.text('tigerWitID.login.enterEmail')}}"
+                                    on-enter="getCaptcha('loginFormforgetEmailPw', 'forgetEmail')"
+                                    required
+                                    ng-model="account.forgetEmail">
+                            <span class="account-form-control-tip" ng-show="account.forgetEmail">{{lang.text('tigerWitID.login.email')}}</span>
+                            <span class="account_login__close" ng-show="account.forgetEmail" ng-click="clearPhone('forgetEmail')">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="account-form-control-wrapper">
+                            <input class="account-form-control"
+                                    autocomplete="off"
+                                    name="forgetEmailCode"
+                                    type="text"
+                                    placeholder="{{ lang.text('actLogin4') }}"
+                                    on-enter="goForgetPassword2('loginFormforgetEmailPw', 'forgetEmail', 'forgetEmailCode')"
+                                    required
+                                    ng-model="account.forgetEmailCode">
+                            <span class="account-form-control-tip" ng-show="account.forgetEmailCode">{{ lang.text('actLogin18') }}</span>
+                            <span class="account_login__code_btn" ng-show="!codeBtnStatus.forgetEmail.count" ng-click="getCaptcha('loginFormforgetEmailPw', 'forgetEmail')">
+                                {{lang.text('tigerWitID.login.sendCode')}}
+                            </span>
+                            <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.forgetEmail.count">
+                                {{lang.text('tigerWitID.myAccount.tip39_1')}}{{ codeBtnStatus.forgetEmail.msg }}{{lang.text('tigerWitID.myAccount.tip39_2')}}
+                            </span>
+                        </div>
+                    </form>
+                    <div class="account_login__btn_wrapper">
+                        <span class="account_login__btn mg-rg-15" ng-click="backPassword()">{{ lang.text('actLogin29_1') }}</span>
+                        <span class="account_login__btn" ng-click="goForgetPassword2('loginFormforgetEmailPw', 'forgetEmail', 'forgetEmailCode')">{{ lang.text('actLogin29') }}</span>
+                    </div>
+                </div>
+                <!-- 忘记密码 设置密码 -->
                 <div ng-show="loginStep2 == 3">
                     <div class="account_login__title">{{ lang.text('actLogin20') }}</div>
-                    <form name="loginForm5" class="account_login__form" novalidate style="margin-bottom: 45px;">
+                    <form name="loginFormSetPw" class="account_login__form" novalidate style="margin-bottom: 45px;">
                         <div class="account-form-control-wrapper" ng-show="forgetPasswordStatus">
                             <input class="account-form-control"
                                    autocomplete="off"
                                    name="forgetPassword"
                                    type="password"
                                    placeholder="{{ lang.text('actLogin21') }}"
-                                   on-enter="setForgetPassword('loginForm5')"
+                                   on-enter="setForgetPassword('loginFormSetPw')"
                                    required
                                    ng-model="account.forgetPassword">
                             <span class="account-form-control-tip" ng-show="account.forgetPassword">{{ lang.text('actLogin22') }}</span>
@@ -134,7 +269,7 @@
                                    name="forgetPassword"
                                    type="text"
                                    placeholder="{{ lang.text('actLogin21') }}"
-                                   on-enter="setForgetPassword('loginForm5')"
+                                   on-enter="setForgetPassword('loginFormSetPw')"
                                    required
                                    ng-model="account.forgetPassword">
                             <span class="account-form-control-tip" ng-show="account.forgetPassword">{{ lang.text('actLogin22') }}</span>
@@ -146,9 +281,10 @@
                     </form>
                     <div class="account_login__btn_wrapper">
                         <span class="account_login__btn mg-rg-15" ng-click="goForgetPassword()">{{ lang.text('actLogin29_1') }}</span>
-                        <span class="account_login__btn" ng-click="setForgetPassword('loginForm5')">{{ lang.text('actLogin30') }}</span>
+                        <span class="account_login__btn" ng-click="setForgetPassword('loginFormSetPw')">{{ lang.text('actLogin30') }}</span>
                     </div>
                 </div>
+                <!-- 设置密码成功 -->
                 <div ng-show="loginStep2 == 4">
                     <div class="account_login__title">{{ lang.text('actLogin20') }}</div>
                     <div class="account_login__tip">
@@ -160,45 +296,65 @@
                 </div>
             </div>
         </div>
+        <!-- 验证码登录 -->
         <div class="account_login login_code" ng-class="{active: loginType === 'code'}">
             <div class="account_login__pos login_code" ng-show="loginType !== 'code'" ng-click="changeLoginType('code')">
-                {{ lang.text("actLogin1") }}
+                {{ lang.text("tigerWitID.login.verificationCodeLogin") }}
             </div>
+            <!-- 手机号登陆 -->
             <div class="account_login__code" ng-show="loginType === 'code'">
-                <div ng-show="loginStep1 == 1">
-                    <div class="account_login__title">{{ lang.text("actLogin1") }}</div>
-                    <form name="loginForm1" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglish() ? '0px' : '20px'}">
+                <div ng-show="loginStep3 == 2">
+                    <div class="account_login__title"><span>{{ lang.text("tigerWitID.login.verificationCodeLogin") }}</span> <span ng-click="toggleLoginMethod(1)">{{lang.text('tigerWitID.login.loginWithEmail')}}</span></div>
+                    <form name="loginFormPhoneV" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglish() ? '0px' : '20px'}">
                         <div class="account-form-control-wrapper">
-                            <input class="account-form-control"
+                            <div class="select-left">
+                                <input class="select__input"
+                                        name="phoneArea"
+                                        autocomplete="off" 
+                                        type="text"
+                                        placeholder="{{lang.text('tigerWitID.areaCode')}}"
+                                        required
+                                        ng-model="account.phoneArea.key">
+                                
+                                <i class="select__icon fa fa-angle-down"></i>
+
+                                <ul class="select__dropdown" twform-select data-bind-model="account.phoneArea2">
+                                    
+                                    <li ng-repeat="world in worldList" ng-class="{'selected': world.phone_code === account.phoneArea.value}">
+                                        <span data-value="{{world.code}}" ng-click="selectArea(world)">+{{world.phone_code}}({{world.name}})</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input class="account-form-control select-right"
                                    autocomplete="off"
-                                   name="step1Phone"
+                                   name="phoneVePhone"
                                    type="text"
                                    placeholder="{{ lang.text('actLogin3') }}"
-                                   on-enter="getCaptcha('loginForm1', 'step1Phone')"
+                                   on-enter="getCaptcha('loginFormPhoneV', 'phoneVePhone')"
                                    required
                                    ng-click="toTrackPhoneSensorsdata()"
-                                   ng-model="account.step1Phone">
-                            <span class="account-form-control-tip" ng-show="account.step1Phone">{{ lang.text("actLogin17") }}</span>
-                            <span class="account_login__close" ng-show="account.step1Phone" ng-click="clearPhone('step1Phone')">
+                                   ng-model="account.phoneVePhone">
+                            <span class="account-form-control-tip" ng-show="account.phoneVePhone">{{ lang.text("actLogin17") }}</span>
+                            <span class="account_login__close" ng-show="account.phoneVePhone" ng-click="clearPhone('phoneVePhone')">
                                 <i class="fa fa-times" aria-hidden="true"></i>
-                            </span>
+                            </span>   
                         </div>
                         <div class="account-form-control-wrapper">
                             <input class="account-form-control"
                                    autocomplete="off"
-                                   name="step1Code"
+                                   name="phoneVeCode"
                                    type="text"
                                    placeholder="{{ lang.text('actLogin4') }}"
-                                   on-enter="login('loginForm1')"
+                                   on-enter="login('loginFormPhoneV')"
                                    required
                                    ng-click="toTrackCodeSensorsdata()"
-                                   ng-model="account.step1Code">
-                            <span class="account-form-control-tip" ng-if="account.step1Code">{{ lang.text('actLogin18') }}</span>
-                            <span class="account_login__code_btn" ng-show="!codeBtnStatus.step1Phone.count" ng-click="getCaptcha('loginForm1', 'step1Phone')">
-                                {{ lang.text('actLogin5') }}
+                                   ng-model="account.phoneVeCode">
+                            <span class="account-form-control-tip" ng-if="account.phoneVeCode">{{ lang.text('actLogin18') }}</span>
+                            <span class="account_login__code_btn" ng-show="!codeBtnStatus.phoneVePhone.count" ng-click="getCaptcha('loginFormPhoneV', 'phoneVePhone')">
+                                {{lang.text('tigerWitID.login.sendSMS')}}
                             </span>
-                            <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.step1Phone.count">
-                                {{ codeBtnStatus.step1Phone.msg }}s {{ lang.text('actLogin6') }}
+                            <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.phoneVePhone.count">
+                                {{lang.text('tigerWitID.myAccount.tip39_1')}}{{ codeBtnStatus.phoneVePhone.msg }}{{lang.text('tigerWitID.myAccount.tip39_2')}}
                             </span>
                         </div>
                         <div class="account_login__remenber">
@@ -210,10 +366,60 @@
                         </div>
                     </form>
                     <div class="account_login__btn_wrapper">
-                        <span class="account_login__btn" ng-click="login('loginForm1')">{{ lang.text('actLogin8') }}</span>
+                        <span class="account_login__btn" ng-click="login('loginFormPhoneV')">{{ lang.text('actLogin8') }}</span>
+                    </div>
+                </div> 
+                <!-- 邮箱登录    -->
+                <div ng-show="loginStep3 == 1">
+                    <div class="account_login__title"><span>{{ lang.text("tigerWitID.login.verificationCodeLogin") }}</span><span ng-click="toggleLoginMethod(2)">{{lang.text('tigerWitID.login.loginWithMobile')}}</span></div>
+                    <form name="loginFormEmailV" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglish() ? '0px' : '20px'}">
+                        <div class="account-form-control-wrapper">
+                            <input class="account-form-control"
+                                   autocomplete="off"
+                                   name="emailVeEmail"
+                                   type="text"
+                                   placeholder="{{lang.text('tigerWitID.login.enterEmail')}}"
+                                   on-enter="getCaptcha('loginFormEmailV', 'emailVeEmail')"
+                                   required
+                                   ng-click="toTrackPhoneSensorsdata()"
+                                   ng-model="account.emailVeEmail">
+                            <span class="account-form-control-tip" ng-show="account.emailVeEmail">{{lang.text('tigerWitID.login.email')}}</span>
+                            <span class="account_login__close" ng-show="account.emailVeEmail" ng-click="clearPhone('emailVeEmail')">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                            </span>
+                        </div>
+                        <div class="account-form-control-wrapper">
+                            <input class="account-form-control"
+                                   autocomplete="off"
+                                   name="emailVeCode"
+                                   type="text"
+                                   placeholder="{{ lang.text('actLogin4') }}"
+                                   on-enter="login('loginFormEmailV')"
+                                   required
+                                   ng-click="toTrackCodeSensorsdata()"
+                                   ng-model="account.emailVeCode">
+                            <span class="account-form-control-tip" ng-if="account.emailVeCode">{{ lang.text('actLogin18') }}</span>
+                            <span class="account_login__code_btn" ng-show="!codeBtnStatus.emailVeEmail.count" ng-click="getCaptcha('loginFormEmailV', 'emailVeEmail')">
+                                {{lang.text('tigerWitID.login.sendCode')}}
+                            </span>
+                            <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.emailVeEmail.count">
+                                {{lang.text('tigerWitID.myAccount.tip39_1')}}{{ codeBtnStatus.emailVeEmail.msg }}{{lang.text('tigerWitID.myAccount.tip39_2')}}
+                            </span>
+                        </div>
+                        <div class="account_login__remenber">
+                            <span class="account_login__remenber-btn" ng-click="changeRememberLogin()">
+                                <i class="fa fa-square-o" ng-show="!rememberLoginStatus"></i>
+                                <i class="fa fa-check-square" ng-show="rememberLoginStatus"></i>
+                                {{ lang.text('actLogin7') }}
+                            </span>
+                        </div>
+                    </form>
+                    <div class="account_login__btn_wrapper">
+                        <span class="account_login__btn" ng-click="login('loginFormEmailV')">{{ lang.text('actLogin8') }}</span>
                     </div>
                 </div>
-                <div ng-show="loginStep1 == 2">
+                <!-- 新用户 -->
+                <!-- <div ng-show="loginStep1 == 2">
                     <div class="account_login__title">{{ lang.text('actLogin20') }}</div>
                     <form name="loginForm2" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglish() ? '5px' : '25px'}">
                         <div class="account-form-control-wrapper" ng-show="step1PasswordStatus">
@@ -252,12 +458,15 @@
                     <div class="account_login__btn_wrapper">
                         <span class="account_login__btn" ng-click="setPassword('loginForm2')">{{ lang.text('actLogin33') }}</span>
                     </div>
-                </div>
-                <div class="account_login__docs">
-                    <p>{{ lang.text('actLogin9') }}</p>
+                </div> -->
+                <!-- <div class="account_login__docs">
                     <p ng-show="loginStep1 == 1">
                         {{ lang.text('actLogin10') }}<a class="" href="/agreement/client" target="_blank">{{ lang.text('actLogin11') }}</a>、<a class="" href="/agreement/risk" target="_blank">{{ lang.text('actLogin12') }}</a>、<a class="" href="/agreement/cookie" target="_blank">{{ lang.text('actLogin13') }}</a>{{ lang.text('actLogin15') }}<a class="" href="/agreement/legal" target="_blank">{{ lang.text('actLogin14') }}</a>
                     </p>
+                </div> -->
+
+                <div class="account_login__docs">
+                    <p>{{lang.text('tigerWitID.login.tip3')}}</p>
                 </div>
             </div>
         </div>

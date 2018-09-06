@@ -90,11 +90,12 @@
          * @param {String} password 登录密码/验证码
          * @param {int} login_type 登录验证方式，1-密码登录，2-验证码登录
          * @param {int} remember 是否记住登录状态，1：是，0：否
+         * @param {int} action 可选值：quick_login, register, login，默认值：quick_login
          * 
          */
         function login(params) {
 
-            return publicHttp.dealPublicRequest(o.loginApi, 'POST', params);
+            return publicHttp.dealPublicRequest(o.loginApi, 'POST', angular.extend({action: 'login'},params));
         }
         // 通过MT4登录
         function loginByMt4(params) {
@@ -198,7 +199,7 @@
          */
         function register(params) {
 
-            return publicHttp.dealPublicRequest(o.registerApi, 'POST', params);
+            return publicHttp.dealPublicRequest(o.registerApi, 'POST', angular.extend({action: 'register'},params));
         }
 
         /**
@@ -235,11 +236,12 @@
          * @param {Number} code 
          * @param {Number} account_type 1 手机号 2 邮箱
          */
-        function checkCode(account, code, account_type) {
+        function checkCode(account, code, account_type, phone_code) {
             return publicHttp.dealPublicRequest(
                 o.checkCodeApi, 'POST', 
                 angular.extend({
-                    code: code
+                    code: code,
+                    phone_code: phone_code,
                 }, account ? { account: account } : {account_type : account_type ? account_type : '1'}
             ));
         }
@@ -248,11 +250,12 @@
          * @name setNewPwd
          * @desc 通过手机号码和验证码来设置新密码，忘记密码功能的第二步
          */
-        function setNewPwd(account, captcha, newPwd) {
+        function setNewPwd(account, captcha, newPwd, phone_code) {
             return publicHttp.dealPublicRequest(o.setNewPwdApi, 'PUT', {
                 account: account,
                 code: captcha,
-                password: newPwd
+                password: newPwd,
+                phone_code: phone_code,
             });
         }
 

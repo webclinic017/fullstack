@@ -632,6 +632,19 @@ module.exports = function (app) {
             res.render('404.html', extendPublic({}, req));
         }
     });
+    // global活动页
+    app.route('/bonus').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('bd/g35/h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/g35/web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
 
     // 联众德州活动
     app.route('/bd/t36_game').get(function (req, res) {

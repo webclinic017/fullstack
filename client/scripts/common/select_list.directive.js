@@ -42,7 +42,7 @@
                     $scope.showMe = !$scope.showMe;
                 };
 
-                $scope.clickLi=function clickLi(data_){
+                $scope.clickLi = function clickLi(data_){
                     $scope.defaultSelect.id = data_;
                     $scope.showMe = !$scope.showMe;
                 };

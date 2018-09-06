@@ -24,7 +24,7 @@
             checkLoginedApi: urlOrigin2 + '/auth/check',
             setTokenApi: urlOrigin2 + '/validation/code_token',
             checkExistApi: urlOrigin2 + '/user/check_exists',
-            registerApi: urlOrigin2 + '/auth/register',
+            registerApi: urlOrigin2 + '/auth/login',
             uploadIdCardBase64: urlOrigin2 + '/user/upload_base64_id_card',
             uploadIdCardForm: urlOrigin2 + '/user/upload_id_card',
             uploadAvatarForm: urlOrigin2 + '/user/upload_avatar',

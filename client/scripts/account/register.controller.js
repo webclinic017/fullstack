@@ -6,242 +6,242 @@
         .module('fullstackApp')
         .controller('AccountRegisterController', AccountRegisterController);
 
-    AccountRegisterController.$inject = ['$scope', '$timeout', '$state', '$cookies', 'account', 'validator'];
+    AccountRegisterController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies', 'lang', '$modal'];
 
-    function AccountRegisterController($scope, $timeout, $state, $cookies, account, validator) {
-        $scope.progress = {
-            step: 1
+    function AccountRegisterController($scope, $interval, $timeout, $window, $state, account, validator, $cookies, lang, $modal) {
+        $scope.registerStep1 = 1;      // 验证码注册进行到哪一步
+        $scope.registerStep3 = 1;      // 2邮箱验证码注册1手机验证码注册
+        $scope.step1PasswordStatus = true;  // 验证码登录密码显示or隐藏
+        // $scope.rememberLoginStatus = true;  // 记住登录状态
+        $scope.registerBtnStatus = true;       // 登录按钮状态
+        $scope.codeBtnStatus = {            // 获取验证码按钮状态
+            step1Phone: {
+                count: false,       // 点击状态 false 可点击；true 不可点击
+                msg: '',            // 倒计时信息
+                timer: undefined    // 定时器
+            },
+            emailText: {
+                count: false,
+                msg: '',
+                timer: undefined
+            }
         };
+        // test
+        // openWebAgmentModal(100403, function(resolve, e){
+        //     // this 当前点击按钮
+        //     console.log(this, resolve, e)
+        //     layer.close(resolve.layIndex)
+        // })
+
+
         $scope.account = {
-            phone: undefined,
-            captcha: undefined,
-            password: undefined
-        };
-
-        // 前端错误
-        $scope.frontErr = {
-            phone: {
-                show: false,
-                reg: validator.regType.phone.reg
+            country: {
+                key: '',
+                value: ''
+            }, 
+            step1Phone: '',
+            step1Code: '',
+            step1Password: '',
+            emailText: '',
+            emailCode: '',
+            phoneArea: {
+                key: '',
+                value: ''
             },
-            captcha: {
-                show: false
-            },
-            password: {
-                show: false,
-                reg: validator.regType.password.reg,
-                tip: validator.regType.password.tip
-            }
+            phoneArea2: {
+                key: '',
+                value: ''
+            }, // 手机区号+国家(无用)
         };
-
-        // 后端错误
-        $scope.backErr = {
-            system: {
-                show: false,
-                msg: ''
-            }
-        };
-
-        // 按钮是否可点击
-        $scope.clickable = {
-            captcha: true,  // 获取验证码按钮
-            submit: true       // 提交按钮
-        };
-        $scope.voiceCaptcha = false;
-        $scope.showErr = showErr;
-        $scope.hideErr = hideErr;
-        $scope.checkPhoneCode = checkPhoneCode;
-        $scope.submitRegisterForm = submitRegisterForm;
-        $scope.getCaptcha = getCaptcha;
-        $scope.goNextStep = goNextStep;
-        var token;
-
-        // 设置 token 在获取手机验证码时提交该 token 解决更换 ip 批量注册的问题
-        account.setToken();
-        // 从 landing page 进入时
-        // $scope.account.username = $state.params.name;
-        $scope.account.phone = $state.params.phone;
-        // $scope.account.email = $state.params.email;
-
-        // if ($scope.account.username) {
-        //     if (!validator.isValidTxt('username', $scope.account.username, 4, 20)) {
-        //         $scope.account.username = undefined;
-        //     }
-        // }
-
-        if ($scope.account.phone) {
-            if (!validator.regType.phone.reg.test($scope.account.phone)) {
-                $scope.account.phone = undefined;
+        $scope.selectArea = selectPhoneArea;
+        function selectPhoneArea(target){
+            $scope.account.phoneArea = {
+                key: '+' + target.phone_code,
+                value: target.phone_code
             }
         }
+        // 选择国家
+        $scope.selectWorld = function (target) {
+            if(target.code === 'CN'){
+                $scope.registerStep3 = 1;
+            }
+            selectPhoneArea(target);
+        }
+        var token;
+        // console.log(lang.text("actLogin1"));
+        account.setToken();
+        $interval(function () {
+            account.setToken();
+        }, 300000);
 
-        // if ($scope.account.email) {
-        //     if (!validator.regType.email.reg.test($scope.account.email)) {
-        //         $scope.account.email = undefined;
-        //     }
-        // }
+        // 从 landing page 进入时
+        $scope.account.step1Phone = $state.params.phone;
+        // 验证码登录切换手机邮箱
+        $scope.toggleLoginMethod = function (n) {
+            $scope.registerStep3 = n;
+        }
 
-        function getCaptcha(formName) {
-            showErr(formName, 'phone');
+        // 清除registerStep1 手机号
+        $scope.clearPhone = function (phone) {
+            $scope.account[phone] = '';
+        };
+        // 切换密码显示or隐藏
+        $scope.changePasswordStatus = function (status) {
+            $scope[status] = !$scope[status];
+        };
+        // 是否记住登录状态
+        // $scope.changeRememberLogin = function () {
+        //     $scope.rememberLoginStatus = !$scope.rememberLoginStatus;
+        // };
+        // 获取验证码
+        $scope.getCaptcha = function (formName, name) {
+            var type = 1;
+            var phone_code = '';
 
-            if ($scope[formName]['phone'].$invalid) {
-                return;
+            // if ($scope[formName][name].$invalid) {
+            //     layer.msg(lang.text("actLogin3"));    //请填写手机号
+            //     return;
+            // }
+            
+            if(name == 'step1Phone'){
+                if(!($scope.account.phoneArea.value)){
+                    layer.msg(lang.text("tigerWitID.login.selectAreaCode"))
+                    return;
+                }
+                phone_code = $scope.account.phoneArea.value;
+                if ($scope[formName][name].$invalid) {
+                    layer.msg(lang.text("actLogin16"));     //请填写正确的手机号
+                    return;
+                }
+            }else if(name == 'emailText'){
+                phone_code = ''
+                if (!validator.regType.email.reg.test($scope[formName][name])) {
+                    layer.msg(lang.text("tigerWitID.login.enterCorrectEmail"));     //请填写正确的邮箱
+                    return;
+                }
             }
 
-            // umeng
-            _czc.push(["_trackEvent","注册页","获取验证码"]);
-            
-            // 神策数据统计
-            sa.track('btn_register_code');
-            
-            $scope.clickable.captcha = false;
             token = $cookies['code_token'];
-            var tmp;
-            if ($scope.voiceCaptcha) {
-                tmp = account.sendCode($scope.account.phone, token, 1);
-            } else {
-                tmp = account.sendCode($scope.account.phone, token, 1);
-            }
 
-            tmp.then(function (data) {
-                console.info(data);
-                if (!data) return;
+            account.sendCode($scope.account[name], token, type, phone_code).then(function (data) {
+                // console.log(data);
                 if (data.is_succ) {
-                    $scope.startTimer();
+                    countDown(name);
+                    sa.track('btn_register_code');
                 } else {
-                    $scope.clickable.captcha = true;
                     layer.msg(data.message);
                 }
             });
-        }
-
-        function checkPhoneCode (formName) {
-            showErr(formName, 'phone');
-            showErr(formName, 'captcha');
-
+        };
+        // 注册
+        $scope.register = function (formName, is_agree) {
+            if (!$scope.registerBtnStatus) return;
+            if(!($scope.account.country.value)){
+                layer.msg(lang.text("tigerWitID.login.selectCountry"));
+                return;
+            }
             if ($scope[formName].$invalid) {
+                layer.msg(lang.text("actLogin19"));       //请填写完整信息
                 return;
             }
 
-            account.checkCode($scope.account.phone, 
-                    $scope.account.captcha).then(function (data) {
-                if (!data) return;
-                if (data.is_succ) {
-                    goNextStep();
-                } else {
-
-                    $scope.backErr.system.show = true;
-                    $scope.backErr.system.msg = data.message;
-
-                    $timeout(function () {
-                        $scope.backErr.system.show = false;
-                        $scope.backErr.system.msg = '';
-                    }, 3000);
-                }
-            });
-        }
-
-        function hideErr(formName, controlName) {
-            if ($scope.frontErr[controlName]) {
-                $scope.frontErr[controlName].show = false;
+            // // 神策统计 - 点击登录
+            if(!is_agree) {
+                sa.track('click_login', {
+                    login_type: $scope.loginType == 'code' ? '验证码登录' : lang.text("actLogin2")
+                });
             }
-
-            // 如果需要后端验错，这里是隐藏错误，所以把状态重置为后端未验证的状态
-            if($scope.backErr[controlName]) {
-                $scope.backErr[controlName].show = false;
-                $scope.backErr[controlName].status = 0;
-            }
-        }
-
-        function showErr(formName, controlName) {
-            if ($scope.frontErr[controlName]) {
-                $scope.frontErr[controlName].show = true;
-            }
-
-            if ($scope[formName][controlName].$invalid) {
-                return;
-            }
-
-            if ($scope.backErr[controlName]) {
-                $scope.backErr[controlName].show = true;
-
-                if (controlName === 'username') {
-                    checkUsernameExist();
-                }
-
-                if (controlName === 'email') {
-                    checkEmailExist();
-                }
-            }
-        }
-
-        function goNextStep() {
-            // console.info($scope.progress.step);
-            $scope.progress.step ++;
-        }
-
-        function submitRegisterForm(formName) {
-
-            showErr(formName, 'password');
-
-            if ($scope[formName].$invalid) {
-                return;
-            }
-
-            // 神策数据统计
-            sa.track('btn_register_submit');
-
-            $scope.clickable.submit = false;
-            account.register({
-                phone: $scope.account.phone,
-                verify_code: $scope.account.captcha,
-                password: $scope.account.password,
+            var para = {
+                login_type: 2,
                 lp: $state.params.lp,
                 pid: $state.params.pid,
                 unit: $state.params.unit,
-                key: $state.params.key
-            }).then(function (data) {
-                $scope.clickable.submit = true;
-                if (!data) return;
+                key: $state.params.key,
+                country_code: $scope.account.country.value,
+            };
+            if($scope.registerStep3 == '2'){
+                // 邮箱注册
+                para = angular.extend({
+                    account: $scope.account.emailText,
+                    password: $scope.account.emailCode,
+                },para);
+            }else if($scope.registerStep3 == '1'){
+                // 手机号注册
+                para = angular.extend({
+                    account: $scope.account.step1Phone,
+                    password: $scope.account.step1Code,
+                    phone_code: $scope.account.phoneArea.value,
+                },para);
+            }
+            (is_agree == "is_agree") && (para.is_agree = 1);
+            layer.load();
+            $scope.registerBtnStatus = false;
+
+            account.register(para).then(function (data) {
+                layer.closeAll();
+                $scope.registerBtnStatus = true;
+
                 if (data.is_succ) {
+                    // 新用户
+                    $scope.registerStep1 = 2;
                     $scope.$emit('relogin_info', 'is_register');
-
-                    // umeng
-                    _czc.push(["_trackEvent","注册页","立即注册且成功"]);
-
-                    // 神策数据统计
-                    sa.track('btn_register_finish');
-                    
-                    $timeout(function () {
-                        var user_id = $cookies['user_code'];
-                        // console.log(user_id);
-                        if (user_id) {
-                            sa.login(user_id);
-                        }
-
-                        // 成功
-                        goNextStep();
-                    }, 300);
-                    
-                    window._hmt && _hmt.push(['_trackEvent', 'account', 'register']);
-                    window._mvq && _mvq.push(['$setGeneral', 'registered', '', $scope.account.username, $scope.account.phone]);
-
-
-                } else {
-
-                    $scope.backErr.system = {
-                        show: true,
-                        msg: data.message
-                    };
-
-                    $timeout(function () {
-                        $scope.backErr.system = {
-                            show: false,
-                            msg: ''
-                        };
-                    }, 3000);
+                    return;
+                }else {
+                    if ((data.code == 100402) || (data.code == 100403)) {
+                        openWebAgmentModal(data.code, function(resolve, e){
+                            $scope.register(formName, 'is_agree');
+                            layer.close(resolve.layIndex)
+                        })
+                    } else {
+                        // 注册时，用户已存在，返回 code 为 100503
+                        layer.msg(data.message);
+                    }
                 }
             });
+        };
+        // 验证码登录 新用户设置密码
+        $scope.setPassword = function (formName) {
+            if (!$scope.registerBtnStatus) return;
+            if ($scope[formName].$invalid) {
+                layer.msg(lang.text('actLogin21')); //请输入密码
+                return;
+            }
+            layer.load();
+            $scope.registerBtnStatus = false;
+
+            account.setPwdFirst($scope.account.step1Password).then(function (data) {
+                // console.log(data);
+                layer.closeAll();
+                $scope.registerBtnStatus = true;
+
+                if (data.is_succ) {
+                    $timeout(function () {
+                        $scope.$emit('global.openDredgeMdl', {position: 'register'});
+                        $state.go('space.center.index', {reload: true});
+                    }, 100);
+                    
+                } else {
+                    layer.msg(data.message);
+                }
+            });
+        };
+
+
+        // 获取验证码倒计时
+        function countDown (codeType) {
+            $scope.codeBtnStatus[codeType].count = true;
+            $scope.codeBtnStatus[codeType].msg = 60;
+
+            $interval.cancel($scope.codeBtnStatus[codeType].timer);
+            $scope.codeBtnStatus[codeType].timer = $interval(function () {
+                $scope.codeBtnStatus[codeType].msg --;
+
+                if ($scope.codeBtnStatus[codeType].msg <= 0) {
+                    $scope.codeBtnStatus[codeType].count = false;
+
+                    $interval.cancel($scope.codeBtnStatus[codeType].timer);
+                }
+            }, 1000);
         }
     }
 })();

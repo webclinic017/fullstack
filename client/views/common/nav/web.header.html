@@ -22,11 +22,33 @@
                 </ul>
             </div>
         <%}%>
-
+        <!-- <div class="select-country">
+            <div class="select-country__title" ng-bind="currentWorld.name || '选择国家'">
+                <i class="fa fa-sort-down"></i>
+            </div>
+            <div class="select-country__con">
+                <div>
+                    <div class="select-country__con-entry">
+                        <i class="fa fa-search search"></i>
+                        <input type="text" ng-model="entryWorld" placeholder="输入国家">
+                    </div>
+                    <ul class="select-country__con-list">
+                        
+                        <li ng-repeat="world in worldList | filter : entryWorld" ng-click="setWorld(world)">
+                            <a >{{world.name + "(" + world.code + ")"}}</a>
+                            <span ng-class="{select: world.code === currentWorld.code}"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div> -->
         <!-- 未登录时 -->
         <ul class="nav navbar-login navbar-right" ng-cloak ng-if="!personalCookiesInfo.userCode">
+            <li class="mg-rg-10">
+                <a class="signup2" ng-click="toTrackLoginSensorsdata()" href="/space/#/account/login"><%= lang.text("login")%></a>
+            </li> 
             <li>
-                <a class="signup" ng-click="toTrackLoginSensorsdata()" href="/space/#/account/login"><%= lang.text("login")%></a>
+                <a class="signup" href="/space/#/account/register"><%= lang.text("register")%></a>
             </li>
         </ul>
 

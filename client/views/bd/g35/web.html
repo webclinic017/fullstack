@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 需要兼容 -->
+    <% include /common/meta/web.html %>  
+    <% include /common/statistic/main.html %>
+    <!-- build:css(.tmp) /styles/web.css -->
+    <link rel="stylesheet" href="/styles/web.css">
+    <!-- endbuild -->
+    <% include /common/vendor/web.js.html %>
+</head>
+
+<body ng-app="fullstackApp" class="tw_en">
+    <div ng-controller="GlobalController">
+        <%if(lang.isCompany('tigerwit')){%>
+            <% include /common/nav/web.header.html %>
+        <%}%>
+        <div class="global_t35">
+            <div class="container relative">
+              <div class="global_t35__register_box">
+                <div class="form-control-wrapper">
+                  <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="form-control-wrapper">
+                  <input type="number" class="form-control" name="code" id="verify_code" placeholder="Verification code" style="padding-right: 168px;">
+                  <p class="verify_code_btn_wrapper">
+                      <span class="verify_code_btn" id="verify_code_btn">Obtain verification code</span>
+                  </p>
+                </div>
+        
+                <div class="global_t35__btn_wrapper">
+                  <button id="submit_form" class="global_t35__btn">Confirm Now!</button>
+                </div>
+              </div>
+              <div class="">
+                <div class="global_t35__focus">
+                  <img src="/images/bd_g35/web_focus.png" alt="">
+                </div>
+                <div class="global_t35__focus_tip">
+                    You can gain bonus US <span>$200</span> once registered
+                </div>
+                <div class="global_t35__date">
+                    20th,6,2018-31st,8,2018
+                </div>
+              </div>
+              <div class="global_t35__title t1">
+                <img src="/images/bd_g35/comm_title1.png" alt="">
+                <img class="bar" src="/images/bd_g35/web_bar.png" alt="">
+              </div>
+              <ul class="global_t35__plan clearfix">
+                <li class="clearfix l1">
+                  <div class="l">
+                    <p>
+                      US<br>
+                      <span>$2.00</span>
+                    </p>
+                  </div>
+                  <div class="r">
+                    <p>0.5 lot</br>
+                    within 14 days</p>
+                  </div>
+                </li>
+                <li class="clearfix l2">
+                  <div class="l">
+                    <p>US<br>
+                    <span>$6.00</span></p>
+                  </div>
+                  <div class="r">
+                    <p>3 lot</p>
+                    <p>within 30 days</p>
+                  </div>
+                </li>
+                <li class="clearfix l3">
+                  <div class="l">
+                    <p>US<br>
+                    <span>$18.00</span></p>
+                  </div>
+                  <div class="r">
+                    <p>8 lot</p>
+                    <p>within 60 days</p>
+                  </div>
+                </li>
+                <li class="clearfix l4">
+                  <div class="l">
+                    <p>US<br>
+                    <span>$25.00</span></p>
+                  </div>
+                  <div class="r">
+                    <p>15 lot</p>
+                    <p>within 90 days</p>
+                  </div>
+                </li>
+                <li class="clearfix l5">
+                  <div class="l">
+                    <p>US<br>
+                    <span>$50.00</span></p>
+                  </div>
+                  <div class="r">
+                    <p>30 lot</p>
+                    <p>within 90 days</p>
+                  </div>
+                </li>
+                <li class="clearfix l6">
+                  <div class="l">
+                    <p>US<br>
+                    <span>$99.00</span></p>
+                  </div>
+                  <div class="r">
+                    <p>50 lot</p>
+                    <p>within 90 days</p>
+                  </div>
+                </li>
+              </ul>
+              <div class="global_t35__title t2">
+                <img src="/images/bd_g35/comm_title2.png" alt="">
+              </div>
+              <ul class="global_t35__cont clearfix">
+                <li>
+                  <p><img src="/images/bd_g35/comm_icon1.png" alt=""></p>
+                  <p>Authority Supervision Regulation by FCA,  license number 679941</p>
+                </li>
+                <li>
+                  <p><img src="/images/bd_g35/comm_icon2.png" alt=""></p>
+                  <p>Copy trading with TigerWit Trading easier & faster</p>
+                </li>
+                <li>
+                  <p><img src="/images/bd_g35/comm_icon3.png" alt=""></p>
+                  <p>Min. deposit $50 Min. deposit trading $5 Max. Leverage 1:200</p>
+                </li>
+                <li>
+                  <p><img src="/images/bd_g35/comm_icon4.png" alt=""></p>
+                  <p>Buy & Sell are available  at 24 hours per day</p>
+                </li>
+              </ul>
+              <ul class="global_t35__download clearfix">
+                <li>
+                  <a href="https://itunes.apple.com/us/app/tigerwit/id1091437876?l=zh&ls=1&mt=8">
+                    <img src="/images/bd_g35/apple.png" alt="">
+                  </a>
+                </li>
+                <li>
+                  <a href="https://play.google.com/store/apps/details?id=com.tigerwit.forex">
+                    <img src="/images/bd_g35/google.png" alt="">
+                  </a>
+                </li>
+              </ul>
+              <div class="global_t35__title t3">
+                <img src="/images/bd_g35/comm_title3.png" alt="">
+              </div>
+              <div class="global_t35__details">
+                <span></span>
+                <p>
+                    You can gain the bonus once registered.
+                </p>
+              </div>
+              <div class="global_t35__details">
+                <span></span>
+                <p>
+                    You must meet the requirements before the specified date to claim the bonus.
+                </p>
+              </div>
+              <div class="global_t35__details">
+                <span></span>
+                <p>
+                  The bonus promotion will be applied only once, which will be deposited into the user’s account after redemption.
+                </p>
+              </div>
+              <div class="global_t35__details">
+                <span></span>
+                <p>
+                  The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign.
+                </p>
+              </div>
+              <div class="global_t35__details">
+                <span></span>
+                <p>
+                    While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification. 
+                </p>
+              </div>
+              <div class="global_t35__details">
+                <span></span>
+                <p>
+                    TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com. 
+                </p>
+              </div>
+              <div class="global_t35__warning">
+                <p class="tit">High Risk Warning: </p>
+                <p class="tit">
+                  Margin transactions in financial markets have a high level of risk and are not suitable for every investor.
+                  Investors should take into consideration their investment goals, ability to withstand losing part or all their 
+                  investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. 
+                </p>
+                <p>Copyright  2017 TigerWit. All rights reserved. </p>
+              </div>
+            </div>
+        </div>
+        <%if(lang.isCompany('tigerwit')){%>
+          <% include /common/nav/web.footer.html %>
+        <%}%>
+
+        <div class="global_t35__layer_wrapper">
+          <div id="bd_layer_modal">
+            <p class="tit">You have registered successfully, please click the verify account button in your email to verify.</p>
+            <div class="cont clearfix">
+              <p class="">
+                <a onclick="resendEmail()" href="javascript:;">Resend</a>
+              </p>
+              <p class="">
+                <a href="/space/#/account/login">LOGIN</a>
+              </p>
+            </div>
+            <span class="tip" onclick="layer.closeAll()">Modify Your Email Address*</span>
+          </div>
+        </div>
+    </div>
+    <!-- 注册协议相关弹窗 -->
+    <%include /common/component/agment_mdl.html %>  
+</body>
+
+<!-- build:js(client) /scripts/bd_g35.js -->
+<script src="/scripts/common/config.service.js"></script>
+<script src="/scripts/common/account.service.js"></script>
+<script src="/scripts/common/authorization.service.js"></script>
+<script src="/scripts/common/redbag.service.js"></script>
+<script src="/scripts/common/navbar.directive.js"></script>
+<script src="/scripts/common/dropdown.directive.js"></script>
+<script src="/scripts/common/global.controller.js"></script>
+<script src="/scripts/common/loading_img.directive.js"></script>
+
+<script src="/scripts/common/pagination.directive.js"></script>
+<script src="/scripts/common/duration.filter.js"></script>
+
+<script src="/scripts/common/symbol_mod.filter.js"></script>
+<script src="/scripts/common/trader.service.js"></script>
+<script src="/scripts/common/lang.service.js"></script>
+<script src="/scripts/common/lang_data.service.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<script src="/scripts/plugins/layer.js"></script>
+<script src="/scripts/bd/common/publicAjax.js"></script>
+<script src="/scripts/bd/common/register_global.js"></script>
+<!-- endbuild -->
+
+</html>
