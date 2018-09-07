@@ -121,43 +121,46 @@
                     <%}%>
                 </ul>
             </li>
-            <li class="dropdown" tw-dropdown <%= lang.text("navbar15")%>>
+            <% if (lang.currentLanguage() !== 'en') {%>
+                <li class="dropdown" tw-dropdown>
+                    <h2>
+                        <a data-navbar-trigger data-navbar-level="2" href="/web/agent/proxy"><%=lang.text('sidebar12')%></a>
+                    </h2>
+    
+                    <ul class="dropdown-menu">
+                        <li>
+                            <h2><a href="/web/agent/proxy"><%=lang.text('sidebar13')%></a></h2>
+                        </li>
+                        <li>
+                            <h2><a href="/web/agent/become"><%=lang.text('sidebar14')%></a></h2>
+                        </li>
+                    </ul>
+                </li>
+            <%} else {%>
+                <li>
+                    <h2>
+                        <a data-navbar-trigger href="/partner">
+                            Partner
+                        </a>
+                    </h2>
+                </li>
+            <%}%>
+            <li class="dropdown" tw-dropdown>
                 <h2>
-                    <a data-navbar-trigger data-navbar-level="2" href="/web/agent/proxy">合作伙伴</a>
+                    <a data-navbar-trigger data-navbar-level="2" href="/web/about/tigerwit"><%= lang.text("navbar10")%></a>
                 </h2>
 
                 <ul class="dropdown-menu">
                     <li>
-                        <h2><a href="/web/agent/proxy">代理合作</a></h2>
+                        <h2><a href="/web/about/tigerwit"><%= lang.text("navbar11")%></a></h2>
                     </li>
-                    <li>
-                        <h2><a href="/web/agent/become">成为高手</a></h2>
+                    <li <%= lang.text("navbar15")%>>
+                        <h2><a href="/web/about/team">精英团队</a></h2>
+                    </li>
+                    <li <%= lang.text("navbar15")%>>
+                        <h2><a href="/web/about/report">媒体报道</a></h2>
                     </li>
                 </ul>
-            </li>
-            <li class="dropdown" tw-dropdown>
-                <%if(lang.isCompany("tigerwit")){%>
-                    <h2>
-                        <a data-navbar-trigger data-navbar-level="2" href="/web/about/tigerwit"><%= lang.text("navbar10")%></a>
-                    </h2>
-
-                    <ul class="dropdown-menu">
-                        <li>
-                            <h2><a href="/web/about/tigerwit"><%= lang.text("navbar11")%></a></h2>
-                        </li>
-                        <li <%= lang.text("navbar15")%>>
-                            <h2><a href="/web/about/team">精英团队</a></h2>
-                        </li>
-                        <li <%= lang.text("navbar15")%>>
-                            <h2><a href="/web/about/report">媒体报道</a></h2>
-                        </li>
-                    </ul>
-                <%}%>
-                <%if(lang.isCompany("pkds")){%>
-                    <h2>
-                        <a data-navbar-trigger href="/web/about/stp"><%= lang.text("navbar12")%></a>
-                    </h2>
-                <%}%>
             </li>
             <li>
                 <h2>
@@ -166,15 +169,6 @@
                     </a>
                 </h2>
             </li>
-            <%if(lang.isCompany("pkds")){%>
-                <li>
-                    <h2>
-                        <a data-navbar-trigger href="/web/mt4">
-                            MT4 下载
-                        </a>
-                    </h2>
-                </li>
-            <%}%>
         </ul>
     </div>
 </div>

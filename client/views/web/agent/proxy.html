@@ -179,48 +179,61 @@
             </h5>
         </div>
     </div>
-
-    <div class="agent__form" ng-controller="WebAgentController">
-        <div class="container">
-            <div class="clearfix">
-                <div class="agent__phone">
-                    <div class="agent__phone-img"></div>
-                    <div class="agent__phone-tip">
-                        <p class="font-primary">24 小时免费咨询热线</p>
-                        <p class="num font-primary"><%= lang.text('telephone')%></p>
-                    </div>
-                </div>
-                <form name="agentForm" novalidate>
-                    <div class="form-control-wrapper">
-                        <input id="phone"
-                               class="form-control" 
-                               name="phone"
-                               type="text" 
-                               placeholder="请输入手机号"
-                               ng-model="becomeAgent.phone"
-                               ng-pattern="error.phone.reg"
-                               required
-                               ng-class="{'form-control-error': error.phone.show && agentForm.phone.$invalid}"
-                               ng-blur="showErr('phone')"
-                               ng-focus="hideErr('phone')">
-
-                        <i class="fa fa-phone"></i>
-                        <div ng-show="error.phone.show">
-                            <p class="alert-arrow_tp_lf" ng-show="agentForm.phone.$error.required">
-                                请输入手机号
-                            </p>
-
-                            <p class="alert-arrow_tp_lf" ng-show="agentForm.phone.$error.pattern">
-                                请输入正确的手机号
-                            </p>
-                        </div>
-                    </div>
-
-                    <button class="btn btn-primary btn-sm" ng-click="submitForm();">
-                        申请代理
-                    </button>
-                </form>
-            </div>
-        </div>
+    <p class="global_proxy_tip mg-tp-20">
+        请填写以下表格，我们将联系您提供更多的信息和回答任何问题。我们期待着您的信息。
+    </p>
+    <div class="global_proxy_form mg-tp-30" ng-controller="WebAgentController" ng-cloak>
+      <form class="account_login__form" name="agentForm" novalidate>
+          <div class="account-form-control-wrapper">
+              <input class="account-form-control"
+                     name="name"
+                     type="text"
+                     placeholder=""
+                     required
+                     ng-model="becomeAgent.name">
+              <span class="account-form-control-tip">姓名</span>
+              <span class="star_tip">*</span>
+          </div>
+          <div class="account-form-control-wrapper">
+              <input class="account-form-control"
+                     name="country"
+                     type="text"
+                     placeholder=""
+                     required
+                     ng-model="becomeAgent.country.name_cn">
+              <span class="account-form-control-tip">国家</span>
+              <span class="star_tip">*</span>
+              <select ng-model="becomeAgent.country" ng-options="country.name_cn for country in countryList">
+              </select>
+          </div>
+          <p class="global_proxy_tip mg-bt-20">
+             以下信息中邮箱和手机号必选一项填写
+          </p>
+          <div class="account-form-control-wrapper">
+              <input class="account-form-control"
+                     name="email"
+                     type="text"
+                     placeholder=""
+                     ng-model="becomeAgent.email">
+              <span class="account-form-control-tip">邮箱</span>
+          </div>
+          <div class="account-form-control-wrapper">
+              <input class="account-form-control"
+                     name="phone"
+                     type="text"
+                     placeholder=""
+                     ng-model="becomeAgent.phone">
+              <span class="account-form-control-tip">手机号</span>
+          </div>
+          <div class="account-form-control-wrapper">
+            <textarea class="account-form-control" name="message" ng-model="becomeAgent.message"></textarea>
+            <span class="account-form-control-tip">备注信息</span>
+          </div>
+      </form>
+      <div class="btn-wrapper" style="width: 800px;">
+        <button class="btn btn-primary-gradient" ng-show="!loading" ng-click="submitForm()">申请代理</button>
+        <button class="btn btn-primary-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading">申请代理</button>
+        <span class="global_proxy_err_tip" ng-class="{'font-success' : error.success, 'font-warning': !error.success}" ng-show="error.is_succ">{{error.message}}</span>
+      </div>
     </div>
 </div>
