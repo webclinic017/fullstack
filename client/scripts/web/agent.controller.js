@@ -6,16 +6,17 @@
         .module('fullstackApp')
         .controller('WebAgentController', WebAgentController);
 
-    WebAgentController.$inject = ['$scope', 'validator', '$modal', 'market', 'account'];
+    WebAgentController.$inject = ['$scope', 'validator', '$modal', 'market', 'account', 'lang'];
 
-    function WebAgentController ($scope, validator, $modal, market, account) {
+    function WebAgentController ($scope, validator, $modal, market, account, lang) {
 
         $scope.becomeAgent = {
             phone: undefined,
             name: undefined,
             country: {
                 code: undefined,
-                name_en: undefined
+                name_en: undefined,
+                name_cn: undefined
             },
             email: undefined,
             message: undefined
@@ -31,13 +32,19 @@
         $scope.showErr = showErr;
         $scope.submitForm = submitForm;
 
+        var degaultAD = lang.isEnglish() ? 4 : 3;
         var sources = getQueryString('q') || 1;
-        var ad_position = getQueryString('w') || 3;
-
+        var ad_position = getQueryString('w') || degaultAD;
+        console.log(ad_position);
         account.getWorlds().then(function (data) {
             // console.log(data);
             $scope.countryList = data.data;
         });
+
+        if (!lang.isEnglish()) {
+            $scope.becomeAgent.country.code = 'CN';
+            $scope.becomeAgent.country.name_cn = '中国';
+        }
 
         function submitForm () {
             $scope.error = {
