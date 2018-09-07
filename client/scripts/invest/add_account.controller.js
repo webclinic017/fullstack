@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('AddAcountController', AddAcountController);
 
-        AddAcountController.$inject = ['$scope', '$timeout', '$modalInstance', 'account' , '$state'];
+        AddAcountController.$inject = ['$scope', '$timeout', '$modalInstance', 'account' , '$state', 'lang'];
 
-    function AddAcountController($scope, $timeout, $modalInstance, account, $state) {
+    function AddAcountController($scope, $timeout, $modalInstance, account, $state, lang) {
         // $scope.clickable = true;
         $scope.addAccountLogic = {
             msg: '',
@@ -18,6 +18,7 @@
             // account_name: ''
         };  // logic标题  0：子账号创建成功；1：新建账号规则；2：提示（有未入金账号）|| 提示（已满七个账号）
         $scope.closeModal = closeModal;
+        $scope.lang = lang;
         function closeModal() {
             $modalInstance.dismiss();
         }
@@ -47,7 +48,7 @@
                         $scope.addAccountLogic.logic = 2;
                     }
                     $scope.addAccountLogic.code = data.code;
-                    $scope.addAccountLogic.mt4_id = data.data.inactive_account.mt4_id;
+                    $scope.addAccountLogic.mt4_id = data.data.inactive_account.mt4_id ? data.data.inactive_account.mt4_id : '';
                     $scope.addAccountLogic.msg = data.message;
                 });
             }, 1000)

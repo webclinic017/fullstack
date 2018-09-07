@@ -24,7 +24,7 @@
         $scope.$watch('personal.has_master', function(){
             if($scope.personal.has_master){
                 $scope.ban = {
-                    msg: '您已是高手，不能再修改头像'
+                    msg: $scope.lang.text("tigerWitID.settings.tip10")
                 }
             } else {
                 $scope.ban = undefined
@@ -46,7 +46,7 @@
             account.setAvatar($scope.selectHeadImg.avatar).then(function(data){
                 if (data.is_succ) {
                     $scope.backErr.system.show = true;
-                    $scope.backErr.system.msg = "提交成功";
+                    $scope.backErr.system.msg = $scope.lang.text("tigerWitID.settings.submitSuccess");
                     $timeout(function(){
                         $scope.selectHeadImg.avatar = undefined;
                         changeAvatar($scope.personal);

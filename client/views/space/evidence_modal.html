@@ -2,7 +2,7 @@
     <button class="close" ng-click="closeModal()">&times;</button>
 
     <h5 class="sys_modal_v2__title">
-        提示
+        {{lang.text('tigerWitID.prompt')}}
     </h5>
 
     <div class="sys_modal_v2__content">
@@ -12,7 +12,7 @@
 
         <p class="btn_wrapper mg-bt-15">
             <a class="btn btn-primary-gradient btn-sm" ng-click="closeModal()" ui-sref="space.asset.subpage({subpage: 'evidence'})">
-                上传凭证
+                {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
             </a>
         </p>
     </div>

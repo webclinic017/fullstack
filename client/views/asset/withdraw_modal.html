@@ -2,12 +2,12 @@
     <button class="close" ng-click="closeModal()">&times;</button>
 
     <h5 class="sys_modal_v2__title">
-        提示
+        {{lang.text('tigerWitID.prompt')}}
     </h5>
 
     <div class="sys_modal_v2__content" ng-if="params.type == 'withdrawFail'">
         <p class="sys_modal_v2__info">
-            无法进行出金操作
+            {{lang.text('tigerWitID.depositWithdrawal.tip45')}}
         </p>
         <p class="sys_modal_v2__tip">
             {{params.message}}
@@ -15,47 +15,47 @@
 
         <p class="btn_wrapper" ng-show="!params.code">
             <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
-                确定
+                {{lang.text('tigerWitID.confirm')}}
             </button>
         </p>
         <!--跳转跟随页面-->
         <p class="btn_wrapper" ng-show="params.code === 100602">
             <a class="btn btn-primary-gradient btn-sm" ng-click="closeModal()" ui-sref="space.center.invest.subpage">
-                前往取消复制
+                {{lang.text('tigerWitID.depositWithdrawal.goUncopy')}}
             </a>
         </p>
         <!--跳转上传凭证页面-->
         <p class="btn_wrapper" ng-show="params.code === 100605">
             <a class="btn btn-primary-gradient btn-sm" ng-click="closeModal()" ui-sref="space.asset.subpage({subpage: 'evidence'})">
-                上传凭证
+                {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
             </a>
         </p>
         <!--跳转入金页面-->
         <p class="btn_wrapper" ng-show="params.code === 100608">
             <a class="btn btn-primary-gradient btn-sm" ng-click="closeModal()" ui-sref="space.asset.subpage({subpage: 'deposit'})">
-                前往充值
+                {{lang.text('tigerWitID.depositWithdrawal.goDeposit')}}
             </a>
         </p>
     </div>
 
     <div class="sys_modal_v2__content" ng-if="params.type == 'withdrawSucc'">
         <p class="sys_modal_v2__info">
-            出金 ${{withdrawAmount}} 申请已提交，我们会在两个工作日内处理完毕
+            {{lang.text('tigerWitID.depositWithdrawal.tip63_1')}} ${{withdrawAmount}} {{lang.text('tigerWitID.depositWithdrawal.tip63_2')}}
         </p>
         <p class="btn_wrapper">
             <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
-                确定
+                {{lang.text('tigerWitID.confirm')}}
             </button>
         </p>
     </div>
     <div class="sys_modal_v2__content" ng-if="params.type == 'walletSuss'">
         <p class="sys_modal_v2__info">
-            提现成功<br/>
-            到账时间约为10分钟，请耐心等待
+            {{lang.text('tigerWitID.fundRecords.successfulWithdrawal')}}<br/>
+            {{lang.text('tigerWitID.depositWithdrawal.tip47')}}
         </p>
         <p class="btn_wrapper">
             <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
-                确定
+                {{lang.text('tigerWitID.confirm')}}
             </button>
         </p>
     </div>
@@ -66,11 +66,11 @@
         </p>
         <p class="btn_wrapper">
             <button class="btn btn-primary-gradient btn-sm mg-rg-15" ng-click="[params.callback(), closeModal()]">
-                继续提现
+                {{lang.text('tigerWitID.depositWithdrawal.continueWithdraw')}}
             </button>
 
             <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
-                取消
+                {{lang.text('tigerWitID.cancel')}}
             </button>
         </p>
     </div>
@@ -79,16 +79,16 @@
         <div class="sys_modal_v2__info">
             <p class="deposit_modal__tit mg-bt-0" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountRMB}}</p>
             <p class="text-center font-dark mg-bt-15">
-                <span>1 美元 =</span>
+                <span>{{lang.text('tigerWitID.depositWithdrawal.r1d')}}</span>
                 <span>{{params.currency.rate_out}}</span> {{params.currency.currency_name}}
             </p>
             <ul class="deposit_modal__lst">
                 <li class="clearfix">
-                    <span class="fl">提现金额：</span>
+                    <span class="fl">{{lang.text('tigerWitID.depositWithdrawal.withdrawalAmountM')}}</span>
                     <span class="fr" style="font-family: initial;">$ {{params.amountDollar}}</span>
                 </li>
                 <li class="clearfix" ng-if="params.currency.currency !== 'USD'">
-                    <span class="fl">折合{{params.currency.currency_name}}约：</span>
+                    <span class="fl">{{lang.text('tigerWitID.depositWithdrawal.tip59_1')}}{{params.currency.currency_name}}{{lang.text('tigerWitID.depositWithdrawal.tip59_2')}}</span>
                     <span class="fr" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountRMB}}</span>
                 </li>
             </ul>
@@ -99,7 +99,7 @@
 
         <p class="btn_wrapper mg-bt-15">
             <button class="btn btn-primary-gradient btn-sm" ng-click="[params.callback(), closeModal()]">
-                确认
+                {{lang.text('tigerWitID.confirm')}}
             </button>
         </p>
     </div>

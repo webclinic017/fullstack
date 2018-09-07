@@ -1,7 +1,7 @@
 <div class="sys_modal_v2 mid_case">
     <!-- 管理银行卡 -->
     <div class="sys_modal_v2__content">
-        <h3 class="sys_modal_v2__title text-left">管理银行卡</h3>
+        <h3 class="sys_modal_v2__title text-left">{{lang.text('tigerWitID.wallet.manageBankCards')}}</h3>
         <div tw-loading-img></div>
         <table class="manage_card_list">
             <colgroup>
@@ -22,14 +22,14 @@
                     </td>
                     <td>
                         <p class="text-center">
-                            <a class="btn-text card_btn" ng-click="confirmDeleteCard(card)">删除</a>
+                            <a class="btn-text card_btn" ng-click="confirmDeleteCard(card)">{{lang.text('tigerWitID.delete')}}</a>
                         </p>
                     </td>
                 </tr>
             </tbody>
         </table>
         <div class="mg-tp-10 text-left">
-            <a class="btn-text" ng-click="openAddCardModal()">添加银行卡</a>
+            <a class="btn-text" ng-click="openAddCardModal()">{{lang.text('tigerWitID.wallet.addBankCards')}}</a>
         </div>
     </div>
 </div>

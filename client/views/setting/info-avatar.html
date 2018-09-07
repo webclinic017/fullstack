@@ -10,7 +10,7 @@
             <i>选择图片</i>
             
             <span class="alert-arrow_tp_lf" ng-show="avatar.status === 1">
-                正在上传...
+                {{lang.text('tigerWitID.myAccount.uploading')}}...
             </span>
             <span class="alert-arrow_tp_lf" ng-show="avatar.status === 3">
                 图片大小超过 2MB 请重新选择
@@ -27,11 +27,11 @@
 
 
     <div class="setting_info_zero__avatar mg-tp-40 pd-bt-50">
-        <p class="tip">只支持 jpg、png 格式且大小在 2MB 以内</p>
+        <p class="tip">{{lang.text('tigerWitID.settings.onlySupport')}}</p>
         <img ng-src="{{ personal.lgAvatar }}" class="showImg"/>
         <label for="input" class="setting_info_zero__avatar-file tw-btn-sm tw-btn-capsule-bordered">
             <div tw-upload-file-base64-two data-file-name="selectHeadImg.avatar" ban="ban"></div>
-            <div class="select-head">选择头像</div>
+            <div class="select-head">{{lang.text('tigerWitID.settings.choosePhoto')}}</div>
         </label>
         <div class="text-center mg-bt-30 mg-tp-84" ng-if="!showSubmit">
             <div ng-show="backErr.system.show">
@@ -40,12 +40,12 @@
                 </p>
             </div>
             <button class="tw-btn-lg162 tw-btn-capsule-gradient" type="submit" ng-if="clickable" ng-click="submitAvatar()">
-                提交
+                {{lang.text('tigerWitID.submit')}}
             </button>
 
             <button class="tw-btn-lg162 tw-btn-capsule-gradient" ng-if="!clickable">
                 <i class="loading_spinner fa fa-spinner"></i>
-                提交中
+                {{lang.text('tigerWitID.submitting')}}
             </button>
         </div>
     </div>

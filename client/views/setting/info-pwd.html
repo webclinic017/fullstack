@@ -1,7 +1,7 @@
 <div ng-controller="SettingInfoPwdController">
     <p class="pd-tp-20 pd-bt-30 setting_info_zero__list-title">
         <span>
-            密码管理
+            {{lang.text('tigerWitID.settings.passwordManagement')}}
         </span>
     </p>
     <div class="row setting_info_zero__list-input">
@@ -11,7 +11,7 @@
                     <input class="form-control" 
                            name="pwdOld" 
                            type="password"
-                           placeholder="原密码"
+                           placeholder="{{lang.text('tigerWitID.settings.oldPassword')}}"
                            required
                            ng-class="{'form-control-error': (frontErr.pwdOld.show && pwdForm.pwdOld.$invalid) || (backErr.pwdOld.show && backErr.pwdOld.status > 0)}"
                            ng-model="password.pwdOld"
@@ -20,13 +20,13 @@
 
                     <div ng-show="frontErr.pwdOld.show">
                         <p class="alert-arrow_tp_lf" ng-show="pwdForm.pwdOld.$error.required">
-                            请输入原密码
+                            {{lang.text('tigerWitID.settings.enterOldPassword')}}
                         </p>
                     </div>
 
                     <div ng-show="backErr.pwdOld.show">
                         <p class="alert-arrow_tp_lf" ng-show="backErr.pwdOld.status == 1">
-                            输入的原密码不正确
+                            {{lang.text('tigerWitID.settings.oldPasswordNo')}}
                         </p>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                     <input class="form-control"
                            name="pwdNew"
                            type="password"
-                           placeholder="新密码"
+                           placeholder="{{lang.text('tigerWitID.settings.newPassword')}}"
                            required
                            ng-class="{'form-control-error': frontErr.pwdNew.show && pwdForm.pwdNew.$invalid}"
                            ng-model="password.pwdNew"
@@ -46,7 +46,7 @@
 
                     <div ng-show="frontErr.pwdNew.show">
                         <p class="alert-arrow_tp_lf" ng-show="pwdForm.pwdNew.$error.required">
-                            请输入新密码
+                            {{lang.text('tigerWitID.settings.enterNewPassword')}}
                         </p>
 
                         <p class="alert-arrow_tp_lf" ng-show="pwdForm.pwdNew.$error.twformValidPwd">
@@ -60,7 +60,7 @@
                     <input class="form-control" 
                            name="pwdConfirm" 
                            type="password"
-                           placeholder="确认新密码"
+                           placeholder="{{lang.text('tigerWitID.settings.confirmNewPassword')}}"
                            required
                            ng-class="{'form-control-error': frontErr.pwdConfirm.show && pwdForm.pwdConfirm.$invalid}"
                            ng-model="password.pwdConfirm"
@@ -70,11 +70,11 @@
 
                     <div ng-show="frontErr.pwdConfirm.show">
                         <p class="alert-arrow_tp_lf" ng-show="pwdForm.pwdConfirm.$error.required">
-                            请再次输入新密码
+                            {{lang.text('tigerWitID.settings.enterNewPasswordAgain')}}
                         </p>
 
                         <p class="alert-arrow_tp_lf" ng-show="pwdForm.pwdConfirm.$error.twformRepeat">
-                            两次输入密码不一致
+                            {{lang.text('tigerWitID.settings.passwordsNoMatch')}}
                         </p>
                     </div>  
                 </div>
@@ -82,12 +82,12 @@
 
             <div class="col-xs-3 text-right">
                 <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable" ng-click="submitForm('pwdForm')">
-                    提交
+                    {{lang.text('tigerWitID.submit')}}
                 </button>
 
                 <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" disabled ng-if="!clickable">
                     <i class="loading_spinner fa fa-spinner"></i>
-                    提交中
+                    {{lang.text('tigerWitID.submitting')}}
                 </button>
             </div>
         </form>
@@ -98,7 +98,7 @@
                     <input class="form-control"
                            name="password"
                            type="password"
-                           placeholder="密码"
+                           placeholder="{{lang.text('password')}}"
                            required
                            ng-class="{'form-control-error': frontErr.password.show && pwdFormNew.password.$invalid}"
                            ng-model="password.password"
@@ -108,7 +108,7 @@
 
                     <div ng-show="frontErr.password.show">
                         <p class="alert-arrow_tp_lf" ng-show="pwdFormNew.password.$error.required">
-                            请输入密码
+                            {{lang.text('register11')}}
                         </p>
 
                         <p class="alert-arrow_tp_lf" ng-show="pwdFormNew.password.$error.twformValidPwd">
@@ -122,12 +122,12 @@
 
             <div class="col-xs-3 text-right">
                 <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable" ng-click="submitFormNew('pwdFormNew')">
-                    提交
+                    {{lang.text('tigerWitID.submit')}}
                 </button>
 
                 <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" disabled ng-if="!clickable">
                     <i class="loading_spinner fa fa-spinner"></i>
-                    提交中
+                    {{lang.text('tigerWitID.submitting')}}
                 </button>
             </div>
         </form>
@@ -135,10 +135,10 @@
     
     <div class="text-center" ng-show="backErr.system.show">
         <p class="alert-system" ng-show="backErr.system.status === 1">
-            密码修改成功
+            {{lang.text('tigerWitID.settings.passwordChangedSucc')}}
         </p>
         <p class="alert-system" ng-show="backErr.system.status === 2">
-            {{ backErr.system.msg || '系统繁忙' }}
+            {{ backErr.system.msg || lang.text('tigerWitID.myAccount.systemBusy') }}
         </p>
     </div>
 </div>

@@ -14,7 +14,7 @@
                             <div class="trader_user">
                                 <h3 class="trader_user__username"><%= master.username%></h3>
                                 <span class="trader_user__position trader_gray_color">
-                                    <%= master.region_cn.world_name || '中国'%>
+                                    <%= master.region.world_name%>
                                 </span>
                             </div>
                             <h4 class="trader_tags">
@@ -43,20 +43,20 @@
                         <div class="trader_profit__item">
                             <span class="big-num-font">{{ master.history_copy_count || '0' }}</span>
                         </div>
-                        <h4 class="trader_gray_color">历史复制者</h4>
+                        <h4 class="trader_gray_color">{{ lang.text("tigerWitID.historyTransactions.historyFollower") }}</h4>
                     </li>
                     <li class="trader_profit">
                         <div class="trader_profit__item "
                              ng-class="{'font-danger': master.profit_rate.indexOf('-') >= 0, 'font-success': master.profit_rate.indexOf('-') < 0}">
                             <span class="big-num-font trader_blue">{{ master.total_profit_rate || '0.00' }}</span>%
                         </div>
-                        <h4 class="trader_gray_color">总收益率</h4>
+                        <h4 class="trader_gray_color">{{ lang.text("tigerWitID.dataStatistics.totalProfitRate") }}</h4>
                     </li>
                     <li class="trader_profit">
                         <div class="trader_profit__item">
                             <span class="big-num-font trader_green">{{ master.max_retract_percent || '0.00' }}</span>%
                         </div>
-                        <h4 class="trader_gray_color">最大跌幅</h4>
+                        <h4 class="trader_gray_color">{{ lang.text("tigerWitID.dataStatistics.maximumDrawdown") }}</h4>
                     </li>
                 </ul>
             </div>

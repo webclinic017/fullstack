@@ -79,9 +79,10 @@
                         }
                     }
                 },
-                controller: ['$scope', 'passedScope', '$modalInstance', '$state', function ($scope, passedScope, $modalInstance, $state) {
+                controller: ['$scope', 'passedScope', '$modalInstance', '$state', 'lang', function ($scope, passedScope, $modalInstance, $state, lang) {
                     angular.extend($scope, passedScope)
                     $scope.closeModal = closeModal;
+                    $scope.lang = lang;
                     function closeModal() {
                         $modalInstance.dismiss();
                     }
@@ -98,14 +99,14 @@
         function showErr4() {
             if ($scope.personal.verify_status == 4) {
                 if (!$scope.personal.showAuthenMsg) {
-                    $layer({
-                        title: '提示',
-                        msg: '您上传的身份证照片审核被拒绝，请重新填写相关信息，被拒原因请查看系统消息。',
+                    var obj = {
+                        title: $scope.lang.text('tigerWitID.prompt'),
+                        msg: $scope.lang.text('tigerWitID.settings.tip12'),
                         msgClass: 'font-danger',
-                        btns: {
-                            "好的": function(){}
-                        }
-                    })
+                        btns: {}
+                    }
+                    obj.btns[$scope.lang.text("tigerWitID.ok")] = function(){}
+                    $layer(obj)
 
                     $scope.personal.showAuthenMsg = true
                 }
@@ -189,7 +190,7 @@
                 // console.log(item.id);
                 if (!kycInfo[item.id]) {
                     $scope.tip.questions.show = true;
-                    $scope.tip.questions.msg = '请完成第' + (Number(index) + 1) + '题：' + item.title
+                    $scope.tip.questions.msg = $scope.lang.text("tigerWitID.tip.tip12_1") + (Number(index) + 1) + $scope.lang.text("tigerWitID.tip.tip12_2") + item.title
                     isBreak = true;
                 } else {
                     $scope.tip.questions.show = false;
@@ -224,7 +225,7 @@
                     sa.track('btn_kyc');
                     sa.track('New_information');
                     $scope.tip.system.show = true;
-                    $scope.tip.system.msg = 'KYC 认证信息提交成功';
+                    $scope.tip.system.msg = $scope.lang.text("tigerWitID.settings.verificationSucc_1") + 'KYC' + $scope.lang.text("tigerWitID.settings.verificationSucc_2");
 
                     // 向authenController发送信息
                     $scope.$emit('goState', data.data);
@@ -390,10 +391,10 @@
         $scope.selectRegion = selectRegion;
         $scope.address = {};
 
-        account.getWorlds().then(function(data){
+        account.getWorlds(($scope.lang.isEnglish() ? 'en' : 'cn')).then(function(data){
             angular.forEach(data.data, function(item, index){
                 $scope.areaCodes.push({
-                    key: item.name_cn,
+                    key: item.name,
                     value: '+' + item.phone_code,
                     name: item.name
                 })
@@ -443,13 +444,13 @@
 
             switch (regionName) {
                 case 'country':
-                    tmp = account.getWorlds();
+                    tmp = account.getWorlds(($scope.lang.isEnglish() ? 'en' : 'cn'));
                     break;
                 case 'province':
-                    tmp = account.getStates(upperRegionCode);
+                    tmp = account.getStates(upperRegionCode, ($scope.lang.isEnglish() ? 'en' : 'cn'));
                     break;
                 case 'city':
-                    tmp = upperRegionCode && account.getCities(upperRegionCode);
+                    tmp = upperRegionCode && account.getCities(upperRegionCode, ($scope.lang.isEnglish() ? 'en' : 'cn'));
                     break;
                 default:
                     break;
@@ -726,48 +727,48 @@
 
         $scope.genders = [
             {
-                key: '男',
+                key: $scope.lang.text("tigerWitID.male"),
                 value: '1'
             },
             {
-                key: '女',
+                key: $scope.lang.text("tigerWitID.female"),
                 value: '0'
             }
         ]
 
         $scope.idType = [
             {
-                key: '大陆居民身份证',
+                key: $scope.lang.text("tigerWitID.settings.mainlandResidentIdentityCard"),
                 value: 0,
                 isCN: true,         //中国区
                 isGlobal: false     //国际区
             },
             {
-                key: '港澳居民来往内地通行证',
+                key: $scope.lang.text("tigerWitID.settings.gAPermit"),
                 value: 1,
                 isCN: true,
                 isGlobal: false
             },
             {
-                key: '台湾居民来往大陆通行证',
+                key: $scope.lang.text("tigerWitID.settings.tPermit"),
                 value: 2,
                 isCN: true,
                 isGlobal: false
             },
             {
-                key: '护照',
+                key: $scope.lang.text("tigerWitID.settings.passport"),
                 value: 3,
                 isCN: true,
                 isGlobal: true
             },
             {
-                key: '驾驶证',
+                key: $scope.lang.text("tigerWitID.settings.driverLicense"),
                 value: 4,
                 isCN: true,
                 isGlobal: true
             },
             {
-                key: '身份证',
+                key: $scope.lang.text("tigerWitID.settings.iDCard"),
                 value: 5,
                 isCN: false,
                 isGlobal: true
@@ -878,7 +879,7 @@
             }
 
             if (!$scope.realnameInfo.year18 && $scope.realnameInfo.id_type.value == 0) {
-                layer.msg('您的年龄未满18周岁，不建议您进行外汇交易。')
+                layer.msg($scope.lang.text("tigerWitID.settings.tip13"))
                 return
             }
 
@@ -892,7 +893,7 @@
                 is_live: $scope.personal.is_live
             }).then(function (data) {
                 if (!data.is_succ || data.data.id_no_exists) {
-                    layer.msg(data.message || "身份证号已存在")
+                    layer.msg(data.message || $scope.lang.text("tigerWitID.settings.idNumExists"))
                     $scope.clickable = true;
                 } else {
                     sa.track('New_Realname');
@@ -943,13 +944,13 @@
             }
             if (parseInt(age) < 18) {
                 $scope.realnameInfo.year18 = false
-                layer.msg('您的年龄未满18周岁，不建议您进行外汇交易。')
+                layer.msg($scope.lang.text("tigerWitID.settings.tip13"))
             } else {
                 $scope.realnameInfo.year18 = true
                 if (parseInt(age) >= 75) {
-                    layer.msg('外汇市场波动较大，基于您的年龄考虑，小老虎提醒您慎重交易。', {
+                    layer.msg($scope.lang.text("tigerWitID.myAccount.tip37"), {
                         time: 0,
-                        btn: ['好的'],
+                        btn: [$scope.lang.text("tigerWitID.ok")],
                         yes: function (index) {
                             layer.close(index)
                         }

@@ -43,8 +43,9 @@
                 templateUrl: '/views/wallet/delete_card.html',
                 size: 'md',
                 backdrop: 'true',
-                controller: ['$scope', '$modalInstance', '$state', 'asset', '$timeout', function ($scope, $modalInstance, $state, asset, $timeout) {
-                    parentScope.manageCardModalInstance = $modalInstance
+                controller: ['$scope', '$modalInstance', '$state', 'asset', '$timeout', 'lang', function ($scope, $modalInstance, $state, asset, $timeout, lang) {
+                    parentScope.manageCardModalInstance = $modalInstance;
+                    $scope.lang = lang;
                     $timeout(function () {
                         $scope.$broadcast('hideLoadingImg');
                     }, 0)

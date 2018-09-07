@@ -1,11 +1,11 @@
 <div class="sys_modal_v2 mid_case">
     <!-- 删除银行卡 -->
     <div class="sys_modal_v2__content">
-        <h3 class="sys_modal_v2__title text-left">删除银行卡</h3>
-        <p class="sys_modal_v2__desp mg-tp-20">确认删除本银行卡，如需再次使用需重新验证</p>
+        <h3 class="sys_modal_v2__title text-left">{{lang.text('tigerWitID.wallet.deleteBankCard')}}</h3>
+        <p class="sys_modal_v2__desp mg-tp-20">{{lang.text('tigerWitID.wallet.tip3')}}</p>
         <div class="btn_wrapper text-right clearfix">
-            <a class="btn-text fr mg-lf-20" ng-click="closeModal()">取消</a>
-            <a class="btn-text fr" ng-click="deleteCard()">删除</a>
+            <a class="btn-text fr mg-lf-20" ng-click="closeModal()">{{lang.text('tigerWitID.cancel')}}</a>
+            <a class="btn-text fr" ng-click="deleteCard()">{{lang.text('tigerWitID.delete')}}</a>
         </div>
     </div>
 </div>

@@ -99,7 +99,7 @@
         }
 
         function getWorlds() {
-            account.getWorlds().then(function (data) {
+            account.getWorlds(($scope.lang.isEnglish() ? 'en' : 'cn')).then(function (data) {
                 if (!data) return;
                 // console.log(data);
                 if (!data.is_succ) {

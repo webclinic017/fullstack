@@ -256,6 +256,9 @@
                         span {
                             display: inline-block;
                             vertical-align: middle;
+                            overflow: hidden;
+                            white-space:nowrap;
+                            text-overflow:ellipsis;
                         }
                         line-height: 22px;
                         > div {
@@ -461,4 +464,7 @@
     border-radius: 46px;
     font-size: 14px;
     color: #fff;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
 }

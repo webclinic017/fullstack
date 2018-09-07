@@ -4,7 +4,9 @@
 
     angular.module('fullstackApp').factory('config', config);
 
-    function config() {
+    config.$inject = ['lang'];
+
+    function config(lang) {
         var service = {
                 httpTimeout: 30000,
                 avatarCfg: {
@@ -43,7 +45,7 @@
                 ],
                 highchartNoDataOptions: {
                     title: {
-                        text: '暂无记录'
+                        text: lang.text('tigerWitID.noData')
                     },
                     yAxis: {
                         title: {

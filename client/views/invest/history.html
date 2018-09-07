@@ -10,10 +10,10 @@
         </colgroup>
         <thead>
             <tr>
-                <th>投资组合</th>
-                <th>交易手数</th>
+                <th>{{lang.text('tigerWitID.historyTransactions.portfolio')}}</th>
+                <th>{{lang.text('tigerWitID.historyTransactions.lots')}}</th>
                 <!--<th>保证金</th>-->
-                <th>收益</th>
+                <th>{{lang.text('tigerWitID.historyTransactions.profit')}}</th>
                 <th></th>
             </tr>
         </thead>
@@ -34,7 +34,7 @@
                 <tr class="invest_orders" ng-if="orders.length > 0" ng-click="showOrders()">
                     <th class="text-left invest_orders__user">
                         <a href="" class="invest_orders__user-avatar">
-                            <img ng-src="/avatar/{{ personal.usercode }}_80.jpg" alt="personal 头像">
+                            <img ng-src="/avatar/{{ personal.usercode }}_80.jpg" alt="personal {{lang.text('tigerWitID.settings.photo')}}">
                         </a>
                         
                         <div class="invest_orders__user-username">
@@ -43,7 +43,7 @@
                             </a>
                             <i class="fa fa-chevron-right" ng-show="!orderHistory.detailsShow"></i>
                             <i class="fa fa-chevron-up font-info" ng-show="orderHistory.detailsShow"></i><br>
-                            <span class="invest_orders__type own">自主交易</span>
+                            <span class="invest_orders__type own">{{lang.text('tigerWitID.historyTransactions.trading')}}</span>
                         </div>
                     </th>
                     <th class="">
@@ -56,7 +56,7 @@
                         <i class="fa fa-dollar"></i>{{ orderHistory.profit }}
                     </th>
                     <th class="invest_orders__btn">
-                        <button class="btn font-info font-size-16" ng-click="openInvestOwnDetailMdl($event)">详情</button>
+                        <button class="btn font-info font-size-16" ng-click="openInvestOwnDetailMdl($event)">{{lang.text('tigerWitID.details.title')}}</button>
                     </th>
                 </tr>
             </thead>
@@ -107,7 +107,7 @@
             </table>
             <div ng-if="orders.length <= 0 && orderHistory.detailsShow" class="text-center mg-bt-20">
                 <img src="/images/no_data.png" alt="" class="mg-bt-40">
-                <p>暂无数据!</p> 
+                <p>{{ lang.text('tigerWitID.noData') }}</p> 
             </div>           
         </div>
 
@@ -126,7 +126,7 @@
                     <tr class="invest_orders" ng-click="showDetails(trader)">
                         <th class="text-left invest_orders__user">
                             <a href="" class="invest_orders__user-avatar">
-                                <img ng-src="/avatar/{{ trader.user_code }}_80.jpg" alt="trader 头像">
+                                <img ng-src="/avatar/{{ trader.user_code }}_80.jpg" alt="trader {{lang.text('tigerWitID.settings.photo')}}">
                             </a>
                             
                             <div class="invest_orders__user-username">
@@ -136,7 +136,7 @@
                                 <i class="fa fa-chevron-right" ng-show="!trader.detailsShow"></i>
                                 <i class="fa fa-chevron-up font-info" ng-show="trader.detailsShow"></i>
                                 <br>
-                                <span class="invest_orders__type copy">复制交易</span>
+                                <span class="invest_orders__type copy">{{lang.text('tigerWitID.historyTransactions.copy')}}</span>
                             </div>
                         </th>
                         <th class="">
@@ -149,7 +149,7 @@
                             <i class="fa fa-dollar"></i>{{ trader.profit }}
                         </th>
                         <th class="invest_orders__btn">
-                            <button class="btn font-info font-size-16" ng-click="openInvestCopyDetailMdl(trader, $event)">详情</button>
+                            <button class="btn font-info font-size-16" ng-click="openInvestCopyDetailMdl(trader, $event)">{{lang.text('tigerWitID.details.title')}}</button>
                         </th>
                     </tr>
                 </thead>
@@ -198,7 +198,7 @@
                             </td>
                         </tr>
                         <tr ng-if="trader.orders.length <= 0 && trader.detailsShow">
-                            <td colspan="5">该高手没有持仓订单</td>
+                            <td colspan="5">{{lang.text('tigerWitID.tradingAccount.tip15')}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -215,6 +215,6 @@
     </div>
     <div class="text-center mg-tp-15" ng-if="orders.length <= 0 && traders.length <= 0">
         <img src="/images/no_data.png" alt="" class="mg-bt-40">
-        <p>暂无数据!</p> 
+        <p>{{ lang.text('tigerWitID.noData') }}</p> 
     </div>
 </div>

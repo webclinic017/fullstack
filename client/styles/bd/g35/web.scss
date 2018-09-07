@@ -1,0 +1,264 @@
+.bd_layer {
+  .layui-layer-content {
+    padding: 35px 15px 30px;
+    position: relative;
+  }
+  .tit {
+    text-align: center
+  }
+  .cont {
+    margin-top: 20px;
+    p {
+      float: left;
+      width: 50%;
+
+      a {
+        width: 60%;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        padding: 5px 0px;
+        color: #333;
+        background: -webkit-linear-gradient(left, #fbd427, #e4c548); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(left, #fbd427, #e4c548); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(left, #fbd427, #e4c548); /* Firefox 3.6 - 15 */
+        background: linear-gradient(left, #fbd427, #e4c548); /* 标准的语法 */
+        border-radius: 2px;
+
+        &.unable {
+          background: #ccc;
+        }
+      }
+    }
+  }
+  .tip {
+    position: absolute;
+    bottom: 4px;
+    right: 15px;
+    color: #1099ad;
+    cursor: pointer;
+  }
+}
+@include b(global_t35) {
+  height: 2700px;
+  background-image: url('/images/bd_g35/web_bg_new.png');
+  background-position: center top;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  color: #fff;
+
+  @include e(layer_wrapper) {
+    display: none;
+  }
+  @include e(register_box) {
+    position: absolute;
+    top: 300px;
+    right: 0px;
+    border: 1px solid #ccc;
+    background: rgba(255,255,255,.25);
+    border-radius: 2px;
+    padding: 25px;
+    width: 350px;
+
+    .form-control-wrapper {
+      margin-bottom: 20px;
+
+      .form-control {
+        padding: 8px 10px;
+        border-radius: 4px;
+        width: 100%;
+        color: #333;
+        background-color: #fff;
+      }
+    }
+  }
+  @include e(btn_wrapper) {
+    text-align: center;
+  }
+  @include e(btn) {
+    color: #222;
+    font-weight: 500;
+    padding: 10px 15px;
+    border-radius: 4px;
+    font-size: 16px;
+    display: inline-block;
+    border: none;
+    box-shadow: 0px 0px 15px 1px #ccc;
+    background: -webkit-linear-gradient(left, #fbd427, #e4c548); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(left, #fbd427, #e4c548); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(left, #fbd427, #e4c548); /* Firefox 3.6 - 15 */
+    background: linear-gradient(left, #fbd427, #e4c548); /* 标准的语法 */
+  }
+
+  @include e(focus) {
+    margin-top: 265px;
+    width: 575px;
+
+    img {
+      width: 100%;
+    }
+  }
+  @include e(focus_tip) {
+    font-size: 20px;
+    padding-left: 20px;
+
+    span {
+      font-weight: 500;
+      font-size: 30px;
+    }
+  }
+  @include e(date) {
+    font-weight: 500;
+    font-size: 26px;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+
+  @include e(title) {
+    text-align: center;
+    position: relative;
+
+    &.t1 {
+      margin-top: 260px;
+      .bar {
+        position: absolute;
+        top: -85px;
+        left: 0;
+        width: 100%;
+      }
+    }
+    &.t2 {
+      margin-top: 115px;
+    }
+    &.t3 {
+      margin-top: 120px;
+      margin-bottom: 50px;
+    }
+  }
+  @include e(plan) {
+    li {
+      text-align: center;
+      float: left;
+      width: 166px;
+      margin-right: 5px;
+      font-size: 16px;
+
+      span {
+        font-size: 20px;
+      }
+
+      .l {
+        height: 50%;
+        font-size: 18px;
+        line-height: 22px;
+        display: table;
+        width: 100%;
+
+        p {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+      .r {
+        height: 50%;
+        line-height: 18px;
+        line-height: 22px;
+      }
+      &:first-child {
+        .r {
+          padding-top: 10px;
+        }
+      }
+      &.l1 {
+        height: 130px;
+        background: rgba(5,8,39,.4);
+        margin-top: 185px;
+      }
+      &.l2 {
+        height: 165px;
+        background: rgba(220,220,220,.4);
+        margin-top: 150px;
+      }
+      &.l3 {
+        height: 200px;
+        background: rgba(5,8,39,.4);
+        margin-top: 115px;
+      }
+      &.l4 {
+        height: 240px;
+        background: rgba(220,220,220,.4);
+        margin-top: 75px;
+      }
+      &.l5 {
+        height: 280px;
+        background: rgba(5,8,39,.4);
+        margin-top: 35px;
+      }
+      &.l6 {
+        height: 340px;
+        background: rgba(220,220,220,.4);
+        margin-top: -25px;
+      }
+    }
+  }
+  @include e(cont) {
+    margin-top: 50px;
+
+    li {
+      float: left;
+      width: 25%;
+      text-align: center;
+      padding: 0 35px;
+
+      img {
+        height: 110px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+  @include e(download) {
+    margin-top: 50px;
+
+    li {
+      float: left;
+      width: 50%;
+      text-align: center;
+      img {
+        width: 80%;
+      }
+
+      &:first-child {
+        padding-left: 20%;
+      }
+      &:last-child {
+        padding-right: 20%;
+      }
+    }
+  }
+  @include e(details) {
+    position: relative;
+    font-size: 16px;
+    line-height: 22px;
+
+    span {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+      top: 7px;
+      left: 4px;
+      background-color: #fff;
+      border-radius: 8px;
+    }
+    p {
+      padding-left: 24px;
+      padding-bottom: 15px;
+    }
+  }
+  @include e(warning) {
+    .tit {
+      margin-bottom: 10px;
+    }
+    font-size: 16px;
+    margin-top: 150px;
+  }
+}

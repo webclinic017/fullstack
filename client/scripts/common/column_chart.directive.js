@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').directive('twColumnChart', twColumnChart);
 
-    twColumnChart.$inject = ['config','whiteLabel'];
+    twColumnChart.$inject = ['config','whiteLabel', 'lang'];
 
-    function twColumnChart(config,whiteLabel) {
+    function twColumnChart(config,whiteLabel, lang) {
         var col_color = whiteLabel.columnChart;
         var noData = config.highchartNoDataOptions;
         var options = {
@@ -19,7 +19,7 @@
             },
             /*X轴设置*/
             xAxis: {
-                categories: ['一月', '二月', '三月', '四月', '五月', '六月', '七月', '八月', '九月', '十月', '十一月', '十二月'],
+                categories: [lang.text('tigerWitID.january'), lang.text('tigerWitID.february'), lang.text('tigerWitID.march'), lang.text('tigerWitID.april'), lang.text('tigerWitID.may'), lang.text('tigerWitID.june'), lang.text('tigerWitID.july'), lang.text('tigerWitID.august'), lang.text('tigerWitID.september'), lang.text('tigerWitID.october'), lang.text('tigerWitID.november'), lang.text('tigerWitID.december')],
                 lineColor: '#eee',
                 tickColor: '#eee',
                 labels: {
@@ -147,9 +147,9 @@
                 name: ''
             },
             tooltip: {
-                name: '月收益率',
+                name: lang.text('tigerWitID.dataStatistics.monthlyReturns'),
                 formatter: function () {
-                    return '<b style="color:#009dff;font-size:14px">' + this.y + '%<br>月收益率</b><br>' + this.x;
+                    return '<b style="color:#009dff;font-size:14px">' + this.y + '%<br>'+ lang.text('tigerWitID.dataStatistics.monthlyReturns') +'</b><br>' + this.x;
                 },
                 style: {
                     padding: 15

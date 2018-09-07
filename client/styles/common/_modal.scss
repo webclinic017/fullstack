@@ -206,7 +206,6 @@
         @extend .font-base;
     }
     @include e(title) {
-        margin: 0;
         padding: 8px 0;
         line-height: 20px;
         @extend .font-base;

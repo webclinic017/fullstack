@@ -5,56 +5,56 @@
 
     <div>
         <h5 class="sys_modal__title">
-            提示
+            {{lang.text('tigerWitID.prompt')}}
         </h5>
         <div class="sys_modal__add_account mg-tp-40" ng-if="historyType == 3">
                 <div class="">
-                    <p>TigerWit交易账户支持开通多个子账号用于不同交易策略。</p>
-                    <p>您当前登录账号为上榜高手，系统已自动将账号身份定义为：</p>
+                    <p>{{lang.text('tigerWitID.oneLogin.tip1')}}</p>
+                    <p>{{lang.text('tigerWitID.oneLogin.tip2')}}</p>
                 </div>
                 <div class="text-center">
-                    <h2>高手账号</h2> 
+                    <h2>{{lang.text('tigerWitID.oneLogin.masterAccount')}}</h2> 
                 </div>
                 <div>
-                    <h5>账号权限：</h5>
-                    <p>自主交易。</p>
+                    <h5>{{lang.text('tigerWitID.oneLogin.accountAccessM')}}</h5>
+                    <p>{{lang.text('tigerWitID.oneLogin.independentTrading0')}}</p>
                 </div>
         </div>
 
         <div class="sys_modal__add_account mg-tp-40" ng-if="historyType == 2">
                 <div class="">
-                    <p>TigerWit交易账户支持开通多个子账号用于不同交易策略。</p>
-                    <p>您当前登录账号存在跟随关系，系统已自动将账号身份定义为：</p>
+                    <p>{{lang.text('tigerWitID.oneLogin.tip1')}}</p>
+                    <p>{{lang.text('tigerWitID.oneLogin.tip7')}}</p>
                 </div>
                 <div class="text-center">
-                    <h2>跟单账号</h2> 
+                    <h2>{{lang.text('tigerWitID.oneLogin.copyAccount')}}</h2> 
                 </div>
                 <div>
-                    <h5>账号权限：</h5>
-                    <p>仅用于高手跟单；</p>
-                    <p>该账号不再支持自主开仓操作,历史自主开仓的订单支持手动平仓。</p>
-                    <p class="mg-tp-10">为了不影响您自主开仓， 系统自动为您创建了自主交易账号。请在“我的-账户管理”查看。</p>
+                    <h5>{{lang.text('tigerWitID.oneLogin.accountAccessM')}}</h5>
+                    <p>{{lang.text('tigerWitID.oneLogin.tip3')}}</p>
+                    <p>{{lang.text('tigerWitID.oneLogin.tip4')}}</p>
+                    <p class="mg-tp-10">{{lang.text('tigerWitID.oneLogin.tip5')}}</p>
                 </div>
         </div>
 
         <div class="sys_modal__add_account mg-tp-40" ng-if="historyType == 1">
                 <div class="">
-                    <p>TigerWit交易账户支持开通多个子账号用于不同交易策略。</p>
-                    <p>您当前登录账号为自主开仓，系统已自动将账号身份定义为：</p>
+                    <p>{{lang.text('tigerWitID.oneLogin.tip1')}}</p>
+                    <p>{{lang.text('tigerWitID.oneLogin.tip6')}}</p>
                 </div>
                 <div class="text-center">
-                    <h2>自主交易</h2> 
+                    <h2>{{lang.text('tigerWitID.oneLogin.independentTrading')}}</h2> 
                 </div>
                 <div>
-                    <h5>账号权限：</h5>
-                    <p>自主交易。</p>
-                    <p>申请成为高手。</p>
+                    <h5>{{lang.text('tigerWitID.oneLogin.accountAccessM')}}</h5>
+                    <p>{{lang.text('tigerWitID.oneLogin.independentTrading0')}}</p>
+                    <p>{{lang.text('tigerWitID.oneLogin.applyToMaster')}}</p>
                 </div>
         </div>
 
         <div class="mg-tp-30 mg-bt-30 pd-bt-30 text-center">
             <button class="tw-btn tw-btn-lg162 tw-btn-capsule-gradient" ng-click="closeModal()">
-                确定
+                {{lang.text('tigerWitID.confirm')}}
             </button>
         </div>
     </div>

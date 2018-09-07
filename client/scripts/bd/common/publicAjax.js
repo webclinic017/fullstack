@@ -24,6 +24,7 @@
         setToken: origin + '/validation/code_token', // post
         checkExists: origin + '/user/check_exists', // get
         getPhoneCode: origin + '/validation/send_code', // post
+        sendCode: origin + '/validation/send_code', // post
         getInviteList: origin_app + '/user/invites', // get
         setClueCustomer: origin + '/auth/page_signup', // post
         setInviteCode: origin + '/invite_code', // post

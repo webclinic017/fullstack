@@ -119,7 +119,7 @@
                                         required
                                         ng-class="{'form-control-error': frontErr.bank.show && cardForm.bank.$invalid}"
                                         ng-model="card.bank"
-                                        ng-options="bank.nameZH for bank in banks"
+                                        ng-options="bank.name for bank in banks"
                                         ng-focus="hideErr('bank')"
                                         ng-blur="showErr('bank')">
                                     <option value="">请选择</option>
@@ -197,7 +197,7 @@
                                         required
                                         ng-class="{'form-control-error': frontErr.province.show && cardForm.province.$invalid}"
                                         ng-model="card.province"
-                                        ng-options="province.name_cn for province in provinces"
+                                        ng-options="province.name for province in provinces"
                                         ng-change="getCity()"
                                         ng-focus="hideErr('province')"
                                         ng-blur="showErr('province')">
@@ -225,7 +225,7 @@
                                         required
                                         ng-class="{'form-control-error': frontErr.city.show && cardForm.city.$invalid}"
                                         ng-model="card.city"
-                                        ng-options="city.name_cn for city in citys"
+                                        ng-options="city.name for city in citys"
                                         ng-focus="hideErr('city')"
                                         ng-blur="showErr('city')">
                                     <option value="">请选择</option>

@@ -1,11 +1,11 @@
 <div class="sys_modal_v2 slim_case card_modal">
     <button class="close" ng-click="closeModal()">&times;</button>
     <h5 class="sys_modal_v2__title">
-        系统提示
+        {{lang.text('tigerWitID.systemPrompt')}}
     </h5>
     <div ng-show="!bindInfo.success">
         <span class="desp font-danger">
-            因要求，请填写该银行卡的预留手机号
+            {{lang.text('tigerWitID.wallet.tip1')}}
         </span>
         <br>
         <br>
@@ -25,7 +25,7 @@
             <form name="cardForm" novalidate>
                 <div class="row">
                     <div class="col-xs-9 font-bold-light text-left">
-                        预留手机号：
+                        {{lang.text('tigerWitID.wallet.reservedPhoneNumberM')}}
                     </div>
                 </div>
                 <br>
@@ -38,14 +38,14 @@
                                    required
                                    ng-class="{'form-control-error': frontErr.phone.show && cardForm.phone.$invalid}"
                                    ng-model="bindInfo.phone"
-                                   placeholder="请输入手机号"
+                                   placeholder="{{lang.text('actLogin3')}}"
                                    ng-pattern="frontErr.phone.reg"
                                    ng-focus="hideErr('phone')"
                                    ng-blur="showErr('phone')">
 
                             <div ng-show="frontErr.phone.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.phone.$error.required">
-                                    请输入手机号
+                                    {{lang.text('actLogin3')}}
                                 </p>
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.phone.$error.pattern">
                                     {{frontErr.phone.tip}}
@@ -62,22 +62,22 @@
             </p>
             <p class="btn_wrapper mg-bt-15">
                 <button class="tw-btn tw-btn-lg tw-btn-capsule-gradient" ng-if="!bindInfo.loading" ng-click="submitForm()">
-                    确定
+                    {{lang.text('tigerWitID.confirm')}}
                 </button>
                 <button class="tw-btn tw-btn-lg tw-btn-capsule-gradient" ng-if="bindInfo.loading">
                     <i class="loading_spinner fa fa-spinner"></i>
-                    请稍等
+                    {{lang.text('tigerWitID.pleaseWait')}}
                 </button>
             </p>
         </div>
     </div>
     <div class="sys_modal_v2__content" ng-if="bindInfo.success">
             <p class="system_modal__info">
-                手机号绑定成功
+                {{lang.text('tigerWitID.wallet.tip2')}}
             </p>
             <p class="btn_wrapper mg-bt-15">
                 <button class="tw-btn tw-btn-lg tw-btn-capsule-gradient" ng-click="closeModal()">
-                    确定
+                    {{lang.text('tigerWitID.confirm')}}
                 </button>
             </p>
         </div>
