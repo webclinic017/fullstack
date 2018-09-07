@@ -1,37 +1,37 @@
 <div class="space_apply">
     <div class="space_master__title">
-        <span ng-if="applyInfo.data.status != 0 && applyInfo.data.status != 3">成为TigerWit高手，获取更多收益</span>
-        <span ng-if="applyInfo.data.status == 0">高手申请审核中，请耐心等待</span>
-        <span ng-if="applyInfo.data.status == 3">注意事项</span>
+        <span ng-if="applyInfo.data.status != 0 && applyInfo.data.status != 3">{{lang.text('tigerWitID.master.tip9')}}</span>
+        <span ng-if="applyInfo.data.status == 0">{{lang.text('tigerWitID.master.tip17')}}{{lang.text('tigerWitID.master.tip18')}}</span>
+        <span ng-if="applyInfo.data.status == 3">{{lang.text('tigerWitID.master.precautions')}}</span>
         <div class="process">
-            <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-if="applyInfo.data.status == -1" ng-click="applyMaster()">立即申请成为高手</span>
-            <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-if="applyInfo.data.status == 3 && !applyInfo.loading2" ng-click="comfirmApplyMaster()">确认提交</span>
-            <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-if="applyInfo.data.status == 3 && applyInfo.loading2">提交中..</span>
+            <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-if="applyInfo.data.status == -1" ng-click="applyMaster()">{{lang.text('tigerWitID.master.tip16')}}</span>
+            <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-if="applyInfo.data.status == 3 && !applyInfo.loading2" ng-click="comfirmApplyMaster()">{{lang.text('tigerWitID.tradingAccount.submit')}}</span>
+            <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-if="applyInfo.data.status == 3 && applyInfo.loading2">{{lang.text('tigerWitID.submitting')}}</span>
         </div>
     </div>
     <div class="space_apply__content">
         <div class="space_apply__tip" ng-if="applyInfo.data.status == -1">
-            榜单投资者被其他用户复制跟随，会获得复制者20%的盈利分成，请选择账号：
+            {{lang.text('tigerWitID.master.tip10')}} {{lang.text('tigerWitID.master.pleaseChooseAccount')}}
         </div>
         <ul class="space_apply__list">
             <li class="space_apply__list-item" ng-repeat="account in accountList" ng-class="{'active': account.mt4_id == selectAccount}" >
                 <a ng-click="getMasterCondition(account.mt4_id)">
                     <div class="account_title">
-                        <span>{{ account.account_name || "交易账号" }}</span>
-                        <span>自主交易</span>
+                        <span>{{ account.account_name || lang.text('tigerWitID.tradingAccount.title') }}</span>
+                        <span>{{lang.text('tigerWitID.details.autonomousTransaction')}}</span>
                     </div>
                     <ul class="account_details">
                         <li>
                             <p>{{ account.floating_profit }}</p>
-                            <p>浮动盈亏</p>
+                            <p>{{lang.text('tigerWitID.details.floatingPL')}}</p>
                         </li>
                         <li>
                             <p>{{ account.equity }}</p>
-                            <p>资产净值</p>
+                            <p>{{lang.text('tigerWitID.details.netAssetValue')}}</p>
                         </li>
                         <li>
                             <p>{{ account.margin_level }}</p>
-                            <p>保证金比例</p>
+                            <p>{{lang.text('tigerWitID.details.marginLevel')}}</p>
                         </li>
                     </ul>
                 </a>
@@ -43,10 +43,10 @@
     </div>
     <div class="space_apply__content" ng-if="!applyInfo.loading">
         <div class="space_apply__tip" ng-if="applyInfo.data.status == -1">
-            未达成以下高手申请条件，请继续努力
+            {{lang.text('tigerWitID.master.masterRequirements')}}
         </div>
         <div class="space_apply__tip" ng-if="applyInfo.data.status == 0">
-            高手申请由工作人员人工审核，我们会尽快完成审核并将结果通知您
+            {{lang.text('tigerWitID.master.tip19')}}
         </div>
         <ul class="space_apply__lst" ng-if="(applyInfo.data.status == 0) || (applyInfo.data.status == -1)">
             <li ng-repeat="condit in applyInfo.data.condition" ng-class="{active: condit.status == 0}">
@@ -73,10 +73,10 @@
                     <img src="/images/icon-succ.png">
                 </div>
                 <div class="message_tip">
-                    <div class="tit">高手申请已通过审核</div>
+                    <div class="tit">{{lang.text('tigerWitID.master.tip21')}}</div>
                     <div class="reason">
-                        <span>恭喜您的高手申请已通过审核！
-                            <br>您的交易账户已被推荐到高手榜。</span>
+                        <span>{{lang.text('tigerWitID.master.tip22')}}
+                            <br>{{lang.text('tigerWitID.master.tip23')}}</span>
                     </div>
                 </div>
             </div>
@@ -87,14 +87,14 @@
                     <div ng-controller="SettingInfoAvatarController">
                         <div class="upload_avatar text-center" tw-upload-avatar filename="personal.lgAvatar" ban="ban">
                             <label class="upload_avatar__label includeImg" for="input">
-                                <img class="upload_avatar__avatar select_directly" ng-src="{{personal.lgAvatar}}" alt="头像">
+                                <img class="upload_avatar__avatar select_directly" ng-src="{{personal.lgAvatar}}" alt="{{lang.text('tigerWitID.settings.photo')}}">
                                 <input id="input" class="upload_avatar__input" name="file" type="file" accept="image/jpeg,image/png">
                                 <!-- <i>选择图片</i> -->
                                 <span class="alert-arrow_tp_lf" style="left: 42%;" ng-show="avatar.status === 1">
-                                    正在上传...
+                                    {{lang.text('tigerWitID.myAccount.uploading')}}...
                                 </span>
                                 <span class="alert-arrow_tp_lf" style="left: 42%;" ng-show="avatar.status === 3">
-                                    图片大小超过 2MB 请重新选择
+                                    {{lang.text('tigerWitID.master.masterRequirements1')}}
                                 </span>
                             </label>
                         </div>
@@ -110,7 +110,7 @@
                                 ng-focus="hideErr()"
                                 ng-init="masterInfo.username = personal.username"
                                 ng-model="masterInfo.username"
-                                placeholder="昵称"
+                                placeholder="{{lang.text('username')}}"
                                 on-enter="comfirmEdit()"
                             >
                             <span ng-if="masterInfo.error.invalid" class="alert-arrow_tp_lf">{{ masterInfo.error.invalid_tip }}</span>
@@ -121,23 +121,23 @@
                         <span ng-if="!masterInfo.edit"  class="btn-icon btn-sm" ng-click="editUsername()">
                             <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                         </span>
-                        <span ng-if="masterInfo.edit && !masterInfo.loading"  class="btn btn-text pd-lf btn-lt" ng-click="cancelEdit()">取消</span>
-                        <span ng-if="masterInfo.edit && !masterInfo.loading"  class="btn btn-text pd-lf btn-lt" ng-click="comfirmEdit()">确认</span>
+                        <span ng-if="masterInfo.edit && !masterInfo.loading"  class="btn btn-text pd-lf btn-lt" ng-click="cancelEdit()">{{lang.text('tigerWitID.cancel')}}</span>
+                        <span ng-if="masterInfo.edit && !masterInfo.loading"  class="btn btn-text pd-lf btn-lt" ng-click="comfirmEdit()">{{lang.text('tigerWitID.confirm')}}</span>
                         <span ng-if="masterInfo.edit && masterInfo.loading"  class="btn btn-sm btn-text">
                             <i class="loading_spinner fa fa-spinner"></i>
-                            正在提交
+                            {{lang.text('tigerWitID.submitting')}}
                         </span>
                     </li>
                 </ul>
                 <br>
                 <div class="master_notice">
-                    <p>1.昵称使用规范：昵称应体现个人属性，避免选用官方化、敏感时政词汇、不雅词汇、广告名称、手机号码、社交联系方式等</p>
+                    <p>1.{{lang.text('tigerWitID.master.masterRequirements2')}}</p>
                     <br>
-                    <p>2.头像使用规范：头像禁止使用选用政治敏感图片、不雅图片、广告图片、品牌LOGO、广告物料等</p>
+                    <p>2.{{lang.text('tigerWitID.master.masterRequirements3')}}</p>
                     <br>
-                    <p>3.成为高手后昵称及头像将不能再次修改，请谨慎填写</p>
+                    <p>3.{{lang.text('tigerWitID.master.masterRequirements4')}}</p>
                     <br>
-                    <p class="font-danger">违背以上情况，申请将会被驳回。</p>
+                    <p class="font-danger">{{lang.text('tigerWitID.master.masterRequirements5')}}</p>
                 </div>
             </div>
         </div>

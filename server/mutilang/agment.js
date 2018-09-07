@@ -1,7 +1,7 @@
 module.exports = {
   agment_title1: {
     zh: "注册协议",
-    en: "Registration Agreement"
+    en: "Registration Agreements"
   },
   agment_title2: {
     zh: "温馨提示",

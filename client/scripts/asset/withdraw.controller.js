@@ -222,10 +222,11 @@
                 $modal.open({
                     templateUrl: '/views/asset/card_phone_modal.html',
                     size: 'md',
-                    controller: ['$scope', '$modalInstance', 'validator', function ($scope, $modalInstance, validator) {
+                    controller: ['$scope', '$modalInstance', 'validator', 'lang', function ($scope, $modalInstance, validator, lang) {
                         $scope.closeModal = $modalInstance.dismiss;
                         $scope.hideErr = hideErr;
                         $scope.showErr = showErr;
+                        $scope.lang = lang;
                         $scope.card = card;
                         $scope.frontErr = {
                             phone: {
@@ -325,13 +326,14 @@
                 templateUrl: '/views/asset/manage_card_modal.html',
                 size: 'md',
                 backdrop: 'true',
-                controller: ['$scope', '$modalInstance', '$state', 'asset', '$timeout', function ($scope, $modalInstance, $state, asset, $timeout) {
+                controller: ['$scope', '$modalInstance', '$state', 'asset', '$timeout', 'lang', function ($scope, $modalInstance, $state, asset, $timeout, lang) {
                     parentScope.manageCardModalInstance = $modalInstance
                     $timeout(function () {
                         $scope.$broadcast('hideLoadingImg');
                     }, 0)
                     $scope.closeModal = closeModal;
-                    $scope.manageType = type
+                    $scope.manageType = type;
+                    $scope.lang = lang;
                     $scope.openAddCardModal = openCardMdl
                     //刷新列表 
                     getCardList($scope).then(function () {
@@ -405,12 +407,12 @@
                 templateUrl: '/views/asset/withdraw_modal.html',
                 size: 'sm',
                 backdrop: 'static',
-                controller: function ($scope, $modalInstance, $state) {
+                controller: function ($scope, $modalInstance, $state, lang) {
                     $scope.withdrawAmount = withdraw.amount;
                     $scope.closeModal = closeModal;
                     $scope.bindCard = bindCard;
                     $scope.params = params;
-
+                    $scope.lang = lang;
                     // 绑定银行卡
                     function bindCard() {
                         closeModal();
@@ -503,7 +505,7 @@
                             $scope.clickable = true;
                             openWithdrawMdl({
                                 type: 'withdrawTip',
-                                message: '现在提现会导致您的账户红包失效，是否继续提现？',
+                                message: $scope.lang.text("tigerWitID.depositWithdrawal.tip5"),
                                 callback: withdraw
                             });
                         }
@@ -627,12 +629,13 @@
                         };
                     }
                 },
-                controller: function ($scope, $modalInstance, passedScope) {
+                controller: function ($scope, $modalInstance, passedScope, lang) {
                     // console.log(passedScope);
                     $scope.withdraw = {
                         accountType: passedScope.withdrawType,
                         withdrawTypeLst: passedScope.withdrawTypeLst
                     };
+                    $scope.lang = lang;
                     $scope.closeModal = closeModal;
                     $scope.selectType = selectType;
                     $scope.changeType = changeType;

@@ -8,17 +8,17 @@
                 <p class="notice__li-info" ng-bind-html="formatText(notice.contentOmit, 'sys') | bindhtml">
                 </p>
                 <div ng-if="notice.content.length > 150 && notice.openOrClose == 'open'" class="text-right">
-                    <a class="notice__open" href="" ng-click="openNotice(notice, 1)">展开</a>
+                    <a class="notice__open" href="" ng-click="openNotice(notice, 1)">{{lang.text('tigerWitID.unfold')}}</a>
                 </div>
                 <div ng-if="notice.content.length > 150 && notice.openOrClose == 'close'" class="text-right">
-                    <a class="notice__close" href="" ng-click="openNotice(notice, 0)">收起</a>
+                    <a class="notice__close" href="" ng-click="openNotice(notice, 0)">{{lang.text('tigerWitID.fold')}}</a>
                 </div>
             </div>
         </div>
     </li>
     <li class="notice__list-li text-center mg-bt-20" ng-if="noticeList.system.length == 0">
         <img src="/images/no_news.png" alt="" class="mg-bt-40">
-        <p>暂无提醒!</p> 
+        <p>{{lang.text('tigerWitID.noRemember')}}</p> 
     </li>
 </ul>
 

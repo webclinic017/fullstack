@@ -67,33 +67,31 @@
         function openApplyMdl(s) {
             // $scope.applyInfo.data.status = 3;
             if (s == 'succ') {
-                $layer({
-                    title: '申请高手提醒',
+                var obj = {
+                    title: $scope.lang.text("tigerWitID.master.applyMasterReminder"),
                     // msgClass: 'font-danger',
                     size: 'sm',
                     btnsClass: 'text-right',
                     // autoClose: true,
-                    msg: '确定申请高手吗？',
-                    btns: {
-                        '确定': function (oScope) {
-                            $scope.applyInfo.data.status = 3;
-                        }
-                    }
-                })
+                    msg: $scope.lang.text("tigerWitID.master.sureAboutApply"),
+                    btns: {}
+                }
+                obj.btns[$scope.lang.text("tigerWitID.confirm")] = function (oScope) {
+                    $scope.applyInfo.data.status = 3;
+                }
+                $layer(obj)
             }
             if (s == 'fail') {
-                $layer({
-                    title: '申请高手提醒',
+                var obj = {
+                    title: $scope.lang.text("tigerWitID.master.applyMasterReminder"),
                     size: 'sm',
                     btnsClass: 'text-right',
                     msgClass: 'font-danger',
-                    msg: '未达成高手申请条件，请继续努力',
-                    btns: {
-                        '确定': function () {
-
-                        }
-                    }
-                })
+                    msg: $scope.lang.text("tigerWitID.master.sureAboutApply1"),
+                    btns: {}
+                };
+                obj.btns[$scope.lang.text("tigerWitID.confirm")] = function(){};
+                $layer(obj)
             }
         }
         // 申请高手确认成功
@@ -101,16 +99,16 @@
             $scope.applyInfo.loading2 = true
             trader.applyMaster($scope.selectAccount).then(function (data) {
                 $scope.applyInfo.loading2 = false
-                $layer({
-                    title: '申请高手提醒',
+                var obj = {
+                    title: $scope.lang.text("tigerWitID.master.applyMasterReminder"),
                     size: 'sm',
                     btnsClass: 'text-right',
                     msgClass: data.is_succ ? 'font-succ' : 'font-danger',
-                    msg: data.is_succ ? '申请已提交！' : data.message,
-                    btns: {
-                        '确定': function () {}
-                    }
-                })
+                    msg: data.is_succ ? $scope.lang.text("tigerWitID.master.applicationSubmitted") : data.message,
+                    btns: {}
+                }
+                obj.btns[$scope.lang.text("tigerWitID.confirm")] = function () {};
+                $layer(obj)
             });
         }
 
@@ -150,17 +148,15 @@
             }).then(function(data){
                 $scope.masterInfo.loading = false
                 if(!data.is_succ){
-                    $layer({
-                        title: '错误提示',
+                    var obj = {
+                        title: $scope.lang.text("tigerWitID.settings.error"),
                         size: 'sm',
                         msgClass: 'font-danger',
-                        msg: data.message || '昵称修改失败',
-                        btns: {
-                            '确定': function () {
-    
-                            }
-                        }
-                    })
+                        msg: data.message || $scope.lang.text("tigerWitID.settings.failModifyUsername"),
+                        btns: {}
+                    }
+                    obj.btns[$scope.lang.text("tigerWitID.confirm")] = function () {}
+                    $layer(obj)
                 } else {
                     $scope.masterInfo.edit = false;
                     $scope.personal.username = $scope.masterInfo.username

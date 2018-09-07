@@ -141,7 +141,7 @@
                         if (staYear == endYear) {
                             while (staMon <= endMon) {
                                 staMon = staMon < 10 ? '0' + staMon : staMon;
-                                result.push({month: staYear + '年' + staMon + '月'});
+                                result.push({month: staYear + '-' + staMon});
                                 staMon++;
                             }
                             staYear ++;
@@ -151,7 +151,7 @@
                                 staYear++;
                             }
                             staMon = staMon < 10 ? '0' + staMon : staMon;
-                            result.push({month: staYear + '年' + staMon + '月'});
+                            result.push({month: staYear + '-' + staMon});
                             staMon++;
                         }
                     }

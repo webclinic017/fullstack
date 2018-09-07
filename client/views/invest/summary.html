@@ -1,49 +1,49 @@
 <div class="invest_content">
     <div class="navbar_summary">
-        <h5 class="navbar_summary__title">交易概况</h5>
+        <h5 class="navbar_summary__title">{{lang.text('tigerWitID.dataStatistics.transactionsProfile')}}</h5>
         <div class="navbar_summary__content">
             <div class="invest_main">
                 <div class="row">
                     <div class="col-xs-6">
                         <div tw-pie-chart data-pie-type="space"></div>
                         <div class="invest_main__order">
-                            <span class="invest_order_profit">盈利订单</span>
-                            <span class="invest_order_loss">亏损订单</span>
+                            <span class="invest_order_profit">{{lang.text('tigerWitID.dataStatistics.profitOrders')}}</span>
+                            <span class="invest_order_loss">{{lang.text('tigerWitID.dataStatistics.lossOrders')}}</span>
                         </div>
                         <div class="invest_main__chart">
                             <span class="num">{{ summary.total_trade_count }}</span>
                             <br>
-                            <span class="space_gray_color">平仓交易</span>
+                            <span class="space_gray_color">{{lang.text('tigerWitID.dataStatistics.closedOrders')}}</span>
                         </div>
                     </div>
                     <div class="col-xs-6">
                         <div class="row">
                             <div class="col-xs-6 no_padding">
                                 <div class="invest_main__rt">
-                                    <div class="space_gray_color">平均持仓时间</div>
+                                    <div class="space_gray_color">{{lang.text('tigerWitID.dataStatistics.avgHoldingTime')}}</div>
                                     <div>{{ summary.avg_position_time || '0.00' | duration }}</div>
                                 </div>
                                 <div class="invest_main__rt">
-                                    <div class="space_gray_color">月平均交易次数</div>
+                                    <div class="space_gray_color">{{lang.text('tigerWitID.dataStatistics.avgNumberTransactionsPerMonth')}}</div>
                                     <div>{{ summary.avg_monthly_trade_count || '0'  }}</div>
                                 </div>
                                 <div class="invest_main__rt no-border">
-                                    <div class="space_gray_color">月回报率</div>
+                                    <div class="space_gray_color">{{lang.text('tigerWitID.dataStatistics.monthlyRateReturn')}}</div>
                                     <div>{{ summary.monthly_profit_rate || '0.00' }}%</div>
                                 </div>
                             </div>
                             <div class="col-xs-6 no_padding">
                                 <span class="navbar_summary__divider"></span>
                                 <div class="invest_main__rt">
-                                    <div class="space_gray_color">最大回撤</div>
+                                    <div class="space_gray_color">{{lang.text('tigerWitID.dataStatistics.maxDrawdown')}}</div>
                                     <div>{{ summary.max_retract || '0.00' }}%</div>
                                 </div>
                                 <div class="invest_main__rt">
-                                    <div class="space_gray_color">最大盈利点差</div>
+                                    <div class="space_gray_color">{{lang.text('tigerWitID.dataStatistics.maxProfitMargin')}}</div>
                                     <div>{{ summary.max_profit || '0.00' }}</div>
                                 </div>
                                 <div class="invest_main__rt no-border">
-                                    <div class="space_gray_color">总收益率</div>
+                                    <div class="space_gray_color">{{lang.text('tigerWitID.dataStatistics.totalProfitRate')}}</div>
                                     <div>{{ summary.total_profit_rate || '0.00' }}%</div>
                                 </div>
                             </div>
@@ -54,7 +54,7 @@
         </div>
     </div>
     <div class="navbar_summary">
-        <h5 class="navbar_summary__title">交易走势图</h5>
+        <h5 class="navbar_summary__title">{{lang.text('tigerWitID.dataStatistics.tradingChart')}}</h5>
         <div class="navbar_summary__content">
             <div class="invest_chart">
                 <div tw-line-chart data-type="investDetail"></div>
@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="navbar_summary">
-        <h5 class="navbar_summary__title">主要交易品种</h5>
+        <h5 class="navbar_summary__title">{{lang.text('tigerWitID.dataStatistics.mainTradingSymbols')}}</h5>
         <div class="navbar_summary__content">
             <div tw-loading-img></div>
 
@@ -70,7 +70,7 @@
                 <li ng-repeat="bar in bars" class="invest_type__item row">
                     <div class="col-xs-5">
                         <span class="invest_type__icon icon-forex-{{ bar.symbol_mod.toLowerCase() }}"></span>
-                        <span class="invest_type__tit">{{ bar.symbol_mod | symbolMod:'zh' }} ({{ bar.symbol_mod }})</span>
+                        <span class="invest_type__tit">{{lang.isEnglish() ? (bar.symbol_mod) : ((bar.symbol_mod | symbolMod:'zh') + '(' + bar.symbol_mod + ')')}}</span>
                     </div>
                     <div class="col-xs-7">
                         <div new-scale-bar data-type="investDetail"></div>
@@ -79,7 +79,7 @@
             </ul>
             <div class="text-center pd-tp-30" ng-if="bars.length <= 0">
                 <img src="/images/no_data.png" alt="" class="mg-bt-40">
-                <p>暂无数据!</p> 
+                <p>{{ lang.text('tigerWitID.noData') }}</p> 
             </div>
         </div>
     </div>

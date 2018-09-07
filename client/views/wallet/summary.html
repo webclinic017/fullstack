@@ -10,10 +10,10 @@
         </colgroup>
         <thead>
         <tr>
-            <th>日期</th>
-            <th>类型</th>
-            <th>金额</th>
-            <th>余额</th>
+            <th>{{lang.text('tigerWitID.date')}}</th>
+            <th>{{lang.text('tigerWitID.type')}}</th>
+            <th>{{lang.text('tigerWitID.amount')}}</th>
+            <th>{{lang.text('tigerWitID.balance')}}</th>
         </tr>
         </thead>
         <tbody>
@@ -21,7 +21,7 @@
             <td>{{ history.created_at | dateFormatter }}</td>
             <td>
                 <span>{{ history.type }}</span>
-                <span class="tw-btn font-info font-size-14" ng-click="backout(history.id)" ng-if="history.is_cancel === 1">撤销</span>
+                <span class="tw-btn font-info font-size-14" ng-click="backout(history.id)" ng-if="history.is_cancel === 1">{{lang.text('tigerWitID.revocation')}}</span>
             </td>
             <td ng-class="{'font-danger': history.amount.indexOf('-') < 0, 'font-success': history.amount.indexOf('-') >= 0}">
                 ${{ history.amount }}
@@ -36,6 +36,6 @@
     </div>
     <div ng-if="historyList.length <= 0" class="text-center mg-bt-20">
         <img src="/images/no_data.png" alt="" class="mg-bt-40">
-        <p>暂无数据!</p> 
+        <p>{{ lang.text('tigerWitID.noData') }}</p> 
     </div>
 </div>

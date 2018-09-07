@@ -2,84 +2,84 @@
     <button class="close" ng-click="closeModal()">&times;</button>
 
     <h5 class="system_modal__title">
-        系统提示
+        {{lang.text('tigerWitID.systemPrompt')}}
     </h5>
 
     <div class="system_modal__content" ng-if="modal.type === 'login'">
         <p class="system_modal__info">
-            无法进行{{ modal.info }}操作
+            {{lang.text('tigerWitID.myAccount.unableOperate_1')}}{{ modal.info }}{{lang.text('tigerWitID.myAccount.unableOperate_2')}}
         </p>
         <p class="system_modal__tip">
-            由于您没有登录，无法{{ modal.info }}高手
+            {{lang.text('tigerWitID.myAccount.tip40_1')}}{{ modal.info }}{{lang.text('tigerWitID.myAccount.tip40_2')}}
         </p>
 
         <p class="system_modal__btn_wrapper">
             <a class="btn btn-primary btn-sm" ng-click="closeModal()" href="/space/#/account/login">
-                立即登录
+                {{lang.text('tigerWitID.commission.loginNow')}}
             </a>
         </p>
     </div>
 
     <div class="system_modal__content" ng-if="modal.type === 'verify'">
         <p class="system_modal__info">
-            无法进行复制操作
+            {{lang.text('tigerWitID.commission.cannotCopy')}}
         </p>
         <p class="system_modal__tip">
-            您的账户尚未通过认证审核，请先完善资料。
+            {{lang.text('tigerWitID.symbolPage.tip3')}}
         </p>
 
         <p class="system_modal__btn_wrapper">
             <a class="btn btn-primary btn-sm" ng-click="closeModal()" href="/space/#/authen/investInfo" target="_blank">
-                完善资料
+                {{lang.text('tigerWitID.wallet.completeInformation')}}
             </a>
         </p>
     </div>
 
     <div class="system_modal__content" ng-if="modal.type === 'amount'">
         <p class="system_modal__info">
-            无法进行复制操作
+            {{lang.text('tigerWitID.commission.cannotCopy')}}
         </p>
         <p class="system_modal__tip">
-            您的可用复制金额不足，无法复制高手
+            {{lang.text('tigerWitID.commission.cannotCopy1')}}
         </p>
 
         <p class="system_modal__tip font-danger">
-            高手最低复制金额为 <i class="fa fa-dollar"></i>{{ modal.info.toFixed(2) }} 请先充值
+            {{lang.text('tigerWitID.commission.cannotCopy2_1')}} <i class="fa fa-dollar"></i>{{ modal.info.toFixed(2) }} {{lang.text('tigerWitID.commission.cannotCopy2_2')}}
         </p>
 
         <p class="system_modal__btn_wrapper">
             <a class="btn btn-primary btn-sm" ng-click="closeModal()" href="/space/#/space/asset/deposit">
-                立即充值
+                {{lang.text('tigerWitID.commission.depositNow')}}
             </a>
         </p>
     </div>
     
     <div class="system_modal__content" ng-if="modal.type === 'isMaster'">
         <p class="system_modal__info">
-            无法进行复制操作
+            {{lang.text('tigerWitID.commission.cannotCopy')}}
         </p>
         <p class="system_modal__tip">
-            您已经是高手了，无法复制其他高手
+            {{lang.text('tigerWitID.commission.cannotCopy3')}}
         </p>
 
         <p class="system_modal__btn_wrapper">
             <a class="btn btn-primary btn-sm" ng-click="closeModal()" href="">
-                确定
+                {{lang.text('tigerWitID.confirm')}}
             </a>
         </p>
     </div>
     
     <div class="system_modal__content" ng-if="modal.type === 'isumam'">
         <p class="system_modal__info">
-            无法进行复制操作
+            {{lang.text('tigerWitID.commission.cannotCopy')}}
         </p>
         <p class="system_modal__tip">
-            您的资金处于封闭期，无法使用复制功能
+            {{lang.text('tigerWitID.commission.cannotCopy4')}}
         </p>
 
         <p class="system_modal__btn_wrapper">
             <a class="btn btn-primary btn-sm" ng-click="closeModal()" href="">
-                确定
+                {{lang.text('tigerWitID.confirm')}}
             </a>
         </p>
     </div>

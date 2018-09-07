@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .directive('newScaleBar', newScaleBar);
 
-    newScaleBar.$inject = [];
+    newScaleBar.$inject = ['lang'];
 
-    function newScaleBar() {
+    function newScaleBar(lang) {
         return {
             restrict: 'A',
             replace: true,
@@ -28,7 +28,7 @@
                 if (type === 'masterDetail' || type === 'investDetail') {
 
                     el.item.width(scope.bar.scale + '%');
-                    el.info.html(scope.bar.number +' 笔 &nbsp;&nbsp;' + scope.bar.scale + '%');
+                    el.info.html(scope.bar.number + lang.text("tigerWitID.lot2") +'&nbsp;&nbsp;' + scope.bar.scale + '%');
                 }
 
                 if (type === 'spaceSidebar') {

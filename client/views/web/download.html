@@ -26,17 +26,17 @@
                                 <li class="phone">
                                     <a href="<%= lang.text('androidApp')%>">
                                         <i class="fa fa-android" aria-hidden="true"></i>
-                                        Android 版
+                                        <%= lang.text('downloadApp.androidVersion')%>
                                     </a>
-                                    <p>支持Android2.3.3及以上</p>
+                                    <p><%= lang.text('downloadApp.tip3')%></p>
                                 </li>
                                 <% if(lang.isCompany('tigerwit')){%>
                                 <li class="phone">
                                     <a href="https://itunes.apple.com/app/id1091437876">
                                         <i class="fa fa-apple" aria-hidden="true"></i>
-                                        iPhone 版
+                                        <%= lang.text('downloadApp.iPhoneVersion')%>
                                     </a>
-                                    <p>支持ios7.0及以上</p>
+                                    <p><%= lang.text('downloadApp.tip4')%></p>
                                 </li>
                                 <%}%>
                             </ul>
@@ -45,8 +45,8 @@
                                 <div class="img_box">
                                     <img src="/images/web/download_m_blank.png" alt="code" draggable=false>
                                 </div>
-                                <p>扫码轻松赚收益</p>
-                                <p>请使用手机浏览器扫描功能</p>
+                                <p><%= lang.text('downloadApp.tip5')%></p>
+                                <p><%= lang.text('downloadApp.tip6')%></p>
                             </div>
                             <%}%>
                         </div>
@@ -55,20 +55,20 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <div class="download_banner__ctn-des">
-                                    <h2>复制跟单</h2>
-                                    <span>无需精通外汇知识,跟着高手坐享其成</span>
+                                    <h2><%= lang.text('downloadApp.tip1')%></h2>
+                                    <span><%= lang.text('downloadApp.tip2')%></span>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="download_banner__ctn-des">
-                                    <h2>定期跟单</h2>
-                                    <span>专业外汇交易团队带你钱生钱</span>
+                                    <h2><%= lang.text('downloadApp.regularFollow')%></h2>
+                                    <span><%= lang.text('downloadApp.tip18')%></span>
                                 </div>
                             </div>
                             <div class="swiper-slide">
                                 <div class="download_banner__ctn-des">
-                                    <h2>移动端交易系统</h2>
-                                    <span>随时随地一键交易,把握财富主动权</span>
+                                    <h2><%= lang.text('downloadApp.mobileEndTradingSystem')%></h2>
+                                    <span><%= lang.text('downloadApp.tip19')%></span>
                                 </div>
                             </div>
                         </div>
@@ -78,40 +78,40 @@
                 </div>
                 <div class="download_advantage">
                     <div class="download_title">
-                        <h3>六大投资优势 体验完美交易</h3>
-                        <p>在<%= lang.text('companyZhName')%>,已有 86523人选择外汇跟单交易</p>
+                        <h3><%= lang.text('downloadApp.tip7')%></h3>
+                        <p><%= lang.text('downloadApp.tip8_1') + lang.text('companyZhName') + lang.text('downloadApp.tip8_2')%></p>
                     </div>
                     <ul class="download_advantage__detail">
                         <li>
-                            <h4>门槛低</h4>
-                            <p>开户就送$200体验金 <br>最低10$就能交易</p>
+                            <h4><%= lang.text('downloadApp.lowThreshold')%></h4>
+                            <p><%= lang.text('downloadApp.tip9_1')%><br><%= lang.text('downloadApp.tip9_2')%><br><%= lang.text('downloadApp.tip9_3')%></p>
                         </li>
                         <li>
-                            <h4>高收益</h4>
-                            <p>涨跌皆有机会盈利,多倍杠杆,<br>$200当做$20000使用</p>
+                            <h4><%= lang.text('downloadApp.highIncome')%></h4>
+                            <p><%= lang.text('downloadApp.tip10_1')%><br><%= lang.text('downloadApp.tip10_2')%><br><%= lang.text('downloadApp.tip10_3')%></p>
                         </li>
                         <li>
-                            <h4>易操作</h4>
-                            <p>移动端交易,简便易懂,<br>会炒股就会操作</p>
+                            <h4><%= lang.text('downloadApp.easyOperation')%></h4>
+                            <p><%= lang.text('downloadApp.tip11_1')%><br><%= lang.text('downloadApp.tip11_2')%></p>
                         </li>
                         <li>
-                            <h4>机会多</h4>
-                            <p>24小时交易、T+0交易,<br>大小行情不错过</p>
+                            <h4><%= lang.text('downloadApp.moreOpportunities')%></h4>
+                            <p><%= lang.text('downloadApp.tip12_1')%><br><%= lang.text('downloadApp.tip12_2')%></p>
                         </li>
                         <li>
-                            <h4>高手跟单</h4>
-                            <p>无需精通理财知识,复制交易高手, <br>把握操盘机会</p>
+                            <h4><%= lang.text('downloadApp.followMasters')%></h4>
+                            <p><%= lang.text('downloadApp.tip13_1')%><br><%= lang.text('downloadApp.tip13_2')%></p>
 
                         </li>
                         <li>
-                            <h4>市场公平</h4>
-                            <p>国际市场,每天5万亿以上成交量</p>
+                            <h4><%= lang.text('downloadApp.fairMarket')%></h4>
+                            <p><%= lang.text('downloadApp.tip14')%></p>
                         </li>
                     </ul>
                 </div>
                 <div class="download_title">
-                    <h3><%= lang.text('companyZhName')%>APP 链接全球金融市场</h3>
-                    <p>人人都是投资高手——你准备好了吗？</p>
+                    <h3><%= lang.text('companyZhName') + lang.text('downloadApp.tip15')%></h3>
+                    <p><%= lang.text('downloadApp.tip16')%></p>
                 </div>
                 <div class="download_bottom">
                     <div class="download_bottom__ctn <%= lang.background().company%>">
@@ -119,14 +119,14 @@
                             <li class="phone">
                                 <a href="<%= lang.text('androidApp')%>">
                                     <i class="fa fa-android" aria-hidden="true"></i>
-                                    Android 版
+                                    <%= lang.text('downloadApp.androidVersion')%>
                                 </a>
                             </li>
                             <% if(lang.isCompany('tigerwit')){%>
                             <li class="phone">
                                 <a href="https://itunes.apple.com/cn/app/%E8%80%81%E8%99%8E%E5%A4%96%E6%B1%87/id1091437876?platform=iphone&preserveScrollPosition=true#platform/iphone">
                                     <i class="fa fa-apple" aria-hidden="true"></i>
-                                    iPhone 版
+                                    <%= lang.text('downloadApp.iPhoneVersion')%>
                                 </a>
                             </li>
                             <%}%>

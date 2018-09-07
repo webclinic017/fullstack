@@ -7,13 +7,13 @@
         .controller('TraderCopyController', TraderCopyController);
 
     TraderCopyController.$inject = ['$scope', '$timeout', '$modalInstance', 'trader',
-        'validator', 'passedScope'];
+        'validator', 'passedScope', 'lang'];
 
-    function TraderCopyController($scope, $timeout, $modalInstance, trader, validator, passedScope) {
+    function TraderCopyController($scope, $timeout, $modalInstance, trader, validator, passedScope, lang) {
         var copiedTrader = passedScope.copiedTrader;
         var avaCopyInfo = passedScope.AvaCopyInfo || undefined;
         // console.log(copiedTrader,avaCopyInfo);
-
+        $scope.lang = lang;
         $scope.copyTrade = {
             title: passedScope.title || '',
             username: copiedTrader.username,          // 高手 username
@@ -85,7 +85,7 @@
             },
             insufficient: {
                 show: false,
-                msg: '可用复制金额不足'
+                msg: lang.text('tigerWitID.tradingAccount.tip11')
             }
         };
 

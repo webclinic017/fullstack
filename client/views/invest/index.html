@@ -3,22 +3,22 @@
     <div class="nav-tabs-wrapper margin-top60" ng-if="personal.basic === 'center.invest.subpage'">
         <ul class="nav-tabs">
             <li ui-sref-active="active">
-                <a ui-sref="space.center.invest.subpage({subpage: 'current'})">当前交易</a>
+                <a ui-sref="space.center.invest.subpage({subpage: 'current'})">{{lang.text('tigerWitID.details.currentTrading')}}</a>
             </li>
             <li ui-sref-active="active">
-                <a ui-sref="space.center.invest.subpage({subpage: 'history'})">历史交易</a>
+                <a ui-sref="space.center.invest.subpage({subpage: 'history'})">{{lang.text('tigerWitID.historyTransactions.title')}}</a>
             </li>
             <li ui-sref-active="active">
-                <a ui-sref="space.center.invest.subpage({subpage: 'summary'})">数据统计</a>
+                <a ui-sref="space.center.invest.subpage({subpage: 'summary'})">{{lang.text('tigerWitID.dataStatistics.title')}}</a>
             </li>
             <li ui-sref-active="active">
-                <a ui-sref="space.center.invest.subpage({subpage: 'record'})">资金记录</a>
+                <a ui-sref="space.center.invest.subpage({subpage: 'record'})">{{lang.text('tigerWitID.fundRecords.title')}}</a>
             </li>
             <li ui-sref-active="active" ng-if="investSelect.type == 3">
-                <a ui-sref="space.center.invest.subpage({subpage: 'bonus'})">高手等级&佣金</a>
+                <a ui-sref="space.center.invest.subpage({subpage: 'bonus'})">{{lang.text('tigerWitID.tradingAccount.masterLevelCommission')}}</a>
             </li>
             <li ui-sref-active="active" ng-if="investSelect.type == 2">
-                <a ui-sref="space.center.invest.subpage({subpage: 'bonus'})">跟单佣金</a>
+                <a ui-sref="space.center.invest.subpage({subpage: 'bonus'})">{{lang.text('tigerWitID.tradingAccount.commission')}}</a>
             </li>
         </ul>
     </div>

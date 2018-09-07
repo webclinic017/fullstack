@@ -393,20 +393,40 @@ module.exports = function (app) {
 
     app.route('/trader/:usercode').get(function (req, res) {
         setEnvCf(req, res);
+        console.log('---------cookies---------', req.headers.cookie);
         var usercode = req.params.usercode;
         var masterApiPath = URL_PATH + '/api/v3';
-        // console.log('------masterApiPath', masterApiPath);
-        request(masterApiPath + '/master/trading_profile?user_code=' + usercode, function (error, response, body) {
+        console.log('------masterApiPath', masterApiPath);
+
+        request({
+            url: masterApiPath + '/master/trading_profile?user_code=' + usercode,
+            headers: {
+                'cookie': req.headers.cookie
+            }
+        }, function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 setEnvCf(req, res); //再次设置避免tigerwit和pandafx混乱
                 body = JSON.parse(body);
-                // console.info('-------body.data', body.data);
+                console.info('-------body.data', body.data);
                 res.render('web/trader.html', extendPublic({
                     master: body.data,
                     usercode: usercode
                 }, req));
             }
-        });
+        })
+
+
+        // request(masterApiPath + '/master/trading_profile?user_code=' + usercode, function (error, response, body) {
+        //     if (!error && response.statusCode == 200) {
+        //         setEnvCf(req, res); //再次设置避免tigerwit和pandafx混乱
+        //         body = JSON.parse(body);
+        //         console.info('-------body.data', body.data);
+        //         res.render('web/trader.html', extendPublic({
+        //             master: body.data,
+        //             usercode: usercode
+        //         }, req));
+        //     }
+        // });
     });
 
     // WEB 入金凭证
@@ -637,6 +657,19 @@ module.exports = function (app) {
                 res.render('bd/t42/h5.html', extendPublic({}, req))
             } else {
                 res.render('bd/t42/web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+    // global活动页
+    app.route('/bonus').get(function (req, res) {
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('bd/g35/h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/g35/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));

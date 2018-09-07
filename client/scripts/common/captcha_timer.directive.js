@@ -20,10 +20,10 @@
             },
             template: 
                 '<div>' + 
-                    '<span ng-show="timer.start">' + '{{ lang.text("register6") }}' + '</span>' +
-                    '<span ng-show="timer.running">' + '{{timer.seconds}}' + ' 秒</span>' +
+                    '<span ng-show="timer.start">' + lang.text("register6") + '</span>' +
+                    '<span ng-show="timer.running">' + '{{timer.seconds}}' + lang.text("tigerWitID.second") +'</span>' +
                     '<span ng-show="timer.restart && voiceCaptcha">' + 
-                        '{{timer.voiceCaptchaTimes === 1 ? "获取语音验证码" : "再次获取语音"}}' + 
+                        '{{timer.voiceCaptchaTimes === 1 ? lang.text("tigerWitID.getCodeAgain") : lang.text("tigerWitID.getVoiceCodeAgain") }}' + 
                     '</span>' +
                 '</div>',
             link: function (scope, element, attrs) {

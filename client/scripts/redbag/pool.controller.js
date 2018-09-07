@@ -90,7 +90,7 @@
                 $scope.receiveLoading = false;
                 o.receiveLoading = false;
                 if (data.is_succ) {
-                    layer.msg('红包领取成功', {
+                    layer.msg($scope.lang.text("tigerWitID.coupon.receiveCouponSucc"), {
                         time: 2000
                     });
                     getRedbagPool($scope.page);
