@@ -474,6 +474,16 @@ module.exports = function (app) {
             pageInfo: pageInfo
         }, req));
     });
+    //global代理
+    app.route('/partner').get(function (req, res) {
+        var pageInfo = {
+            id: 'proxy'
+        };
+        setEnvCf(req, res);
+        res.render('web/agent.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
 
     // 条件和条款
     app.route('/web/blog/:subpage(agreement|risk|statement|notice|legal|trade_fee)').get(function (req, res) {
