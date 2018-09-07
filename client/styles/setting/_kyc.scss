@@ -2,6 +2,9 @@
     width: 600px;
     margin-left: auto;
     margin-right: auto;
+    &.en{
+        width: 700px;
+    }
     label {
         color: $gray-darker;
         line-height: 40px;
@@ -16,6 +19,7 @@
         font-weight: 400;
         @include m(kyc_selection) {
             height: 32px;
+            max-width: 300px;
         }
     }
 }

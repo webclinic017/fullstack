@@ -2,13 +2,13 @@
     <!-- toState为global.controller 中的 $scope.toState -->
     <ul class="space_nav__box" ng-show="toState.name == 'space.master.subpage'">
         <li class="space_nav__box-item active">
-            <a>申请高手</a>
+            <a>{{lang.text('tigerWitID.tradingAccount.becomeMaster')}}</a>
         </li>
     </ul>
 
     <ul class="space_nav__box" ng-if="toState.name == 'space.center.index'">
         <li class="space_nav__box-item active">
-            <a>账户概况</a>
+            <a>{{lang.text('tigerWitID.myAccount.title')}}</a>
         </li>
     </ul>
     <!-- 交易账户导航移入页面中部 -->
@@ -28,63 +28,63 @@
     </ul> -->
     <ul class="space_nav__box" ng-if="toState.name == 'space.center.invest.home'">
         <li class="space_nav__box-item active">
-            <a>交易账户</a>
+            <a>{{lang.text('tigerWitID.myAccount.tradingAccount')}}</a>
         </li>
     </ul>
     <ul class="space_nav__box" ng-if="toState.name == 'space.center.wallet.subpage'">
         <li class="space_nav__box-item active">
-            <a>钱包</a>
+            <a>{{lang.text('tigerWitID.myAccount.wallet')}}</a>
         </li>
     </ul>
     
     <ul class="space_nav__box" ng-show="toState.name == 'space.asset.subpage'">
         <li class="space_nav__box-item" ui-sref-active="active">
-            <a ui-sref="space.asset.subpage({subpage: 'deposit'})">充值</a>
+            <a ui-sref="space.asset.subpage({subpage: 'deposit'})">{{lang.text('tigerWitID.myAccount.deposit')}}</a>
         </li>
         <li class="space_nav__box-item" ui-sref-active="active">
-            <a ui-sref="space.asset.subpage({subpage: 'withdraw'})">提现</a>
+            <a ui-sref="space.asset.subpage({subpage: 'withdraw'})">{{lang.text('tigerWitID.myAccount.withdrawal')}}</a>
         </li>
         <li class="space_nav__box-item" ui-sref-active="active">
-            <a ui-sref="space.asset.subpage({subpage: 'evidence'})">凭证记录</a>
+            <a ui-sref="space.asset.subpage({subpage: 'evidence'})">{{lang.text('tigerWitID.depositWithdrawal.voucher')}}</a>
         </li>
     </ul>
 
     <ul class="space_nav__box" ng-show="toState.name == 'space.bonus'">
         <li class="space_nav__box-item active">
-            <a>复制和分成</a>
+            <a>{{lang.text('tigerWitID.commission.title')}}</a>
         </li>
     </ul>
 
     <ul class="space_nav__box" ng-show="toState.name == 'space.redbag.subpage'">
         <li class="space_nav__box-item" ui-sref-active="active">
-            <a ui-sref="space.redbag.subpage({subpage: 'own'})">我的红包</a>
+            <a ui-sref="space.redbag.subpage({subpage: 'own'})">{{lang.text('tigerWitID.coupon.title')}}</a>
         </li>
     </ul>
 
     <ul class="space_nav__box" ng-show="toState.name == 'space.invite'">
         <li class="space_nav__box-item active">
-            <a>邀请好友</a>
+            <a>{{lang.text('tigerWitID.inviteFriends.title')}}</a>
         </li>
     </ul>
 
     <ul class="space_nav__box" ng-show="toState.name == 'space.notice.subpage'">
         <li class="space_nav__box-item" ng-class="{ 'red_point': personal.unreadMsg.trade > 0 }" ui-sref-active="active">
-            <a ui-sref="space.notice.subpage({subpage: 'trade'})">交易提醒</a>
+            <a ui-sref="space.notice.subpage({subpage: 'trade'})">{{lang.text('tigerWitID.myAccount.transaction')}}</a>
         </li>
         <li class="space_nav__box-item" ng-class="{ 'red_point': personal.unreadMsg.system > 0 }" ui-sref-active="active">
-            <a ui-sref="space.notice.subpage({subpage: 'system'})">系统提醒</a>
+            <a ui-sref="space.notice.subpage({subpage: 'system'})">{{lang.text('tigerWitID.myAccount.system')}}</a>
         </li>
     </ul>
 
     <ul class="space_nav__box" ng-show="toState.name == 'space.setting.subpage'">
         <li class="space_nav__box-item active" ui-sref-active="active">
-            <a ui-sref="space.setting.subpage({subpage: 'name'})">基本信息</a>
+            <a ui-sref="space.setting.subpage({subpage: 'name'})">{{lang.text('tigerWitID.settings.general')}}</a>
         </li>
         <li class="space_nav__box-item active" ui-sref-active="active">
-            <a ui-sref="space.setting.subpage({subpage: 'buddha'})">修改头像</a>
+            <a ui-sref="space.setting.subpage({subpage: 'buddha'})">{{lang.text('tigerWitID.settings.setPhotos')}}</a>
         </li>
         <li class="space_nav__box-item active" ui-sref-active="active">
-            <a ui-sref="space.setting.subpage({subpage: 'secure'})">账户安全</a>
+            <a ui-sref="space.setting.subpage({subpage: 'secure'})">{{lang.text('tigerWitID.settings.security')}}</a>
         </li>
     </ul>
     
@@ -93,13 +93,13 @@
             <a  
                 ui-sref="authen.subpage({subpage: 'investInfo'})"
                 class="link font-danger">
-                您的账户尚未完成认证审核，将无法进行交易和资金相关操作，点击此处完成审核。
+                {{lang.text('tigerWitID.myAccount.tip34')}}
             </a>  
         </p>
         <p ng-if="personal.dredged_type == 'demo' && personal.verify_status < 5" class="mg-tp-10">
-            您当前账户为体验金账户，升级至真实账户只需两步：
-            <a class="link font-danger" ui-sref="authen.subpage" ng-click="toAuthenTypeSensorsdata('真实账户')">1.完整填写个人信息</a> &nbsp;&nbsp;
-            <a class="link font-danger" ui-sref="space.asset.subpage({subpage: 'deposit'})">2.充值激活</a>
+            {{lang.text('tigerWitID.myAccount.tip35')}}
+            <a class="link font-danger" ui-sref="authen.subpage" ng-click="toAuthenTypeSensorsdata('真实账户')">1.{{lang.text('tigerWitID.myAccount.tip36')}}</a> &nbsp;&nbsp;
+            <a class="link font-danger" ui-sref="space.asset.subpage({subpage: 'deposit'})">2.{{lang.text('tigerWitID.tradingAccount.depositActivation')}}</a>
         </p>
     </div>
 </div>

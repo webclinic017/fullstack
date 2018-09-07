@@ -82,12 +82,20 @@ module.exports = function () {
         currentLanguage: function () {
             return this.language;
         },
+        isEnglish: function () {
+            return this.language == 'en' ? true : false;
+        },
         text: function (name) {
             var _this = this;
             var text;
-            if (_this.data[name]) {
+            var key = _this.data;
+            var keys = name.split('.');
+            for (var index = 0; index < keys.length; index++) {
+                key = key[keys[index]]       
+            }
+            if (key) {
                 //console.info('langData load successful!',data[name][this.language])
-                text = _this.data[name][this.language] || 'NODE-loadERR';
+                text = key[this.language] || 'NODE-loadERR';
             } else {
                 console.error(' - - - langData load error! in word - ', name);
                 text = 'NODE-loadERR'

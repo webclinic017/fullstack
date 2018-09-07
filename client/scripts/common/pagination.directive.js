@@ -5,9 +5,9 @@
         .module('fullstackApp')
         .directive('twPagination', twPagination);
 
-    twPagination.$inject = [];
+    twPagination.$inject = ['lang'];
 
-    function twPagination() {
+    function twPagination(lang) {
         var pagination = {
             config: {
                 total: 1, // 总页数
@@ -92,9 +92,9 @@
             var lastPage = this.makePage(this.config.total, this.config.total,
                     this.isActive(this.config.total), false);
             pages.push(lastPage);
-            var previousPage = this.makePage(this.config.page - 1, '< 上一页', false, this.noPrevious());
+            var previousPage = this.makePage(this.config.page - 1, '< ' + lang.text("tigerWitID.next"), false, this.noPrevious());
             pages.unshift(previousPage);
-            var nextPage = this.makePage(this.config.page + 1, '下一页 >', false, this.noNext());
+            var nextPage = this.makePage(this.config.page + 1, lang.text("tigerWitID.previous") + ' >', false, this.noNext());
             pages.push(nextPage);
             return pages;
         }

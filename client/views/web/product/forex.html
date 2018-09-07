@@ -69,7 +69,7 @@
             <table class="table table-personal table-hover table-bordered font-size-12">
                 <colgroup>
                     <col width="10%">
-                    <col width="10%">
+                    <col width="10%" ng-if="!lang.isEnglish()">
                     <col width="11%">
                     <col width="12%">
                     <col width="14%">
@@ -80,7 +80,7 @@
                 <thead>
                     <tr>
                         <th><%= lang.text("forex21")%></th>
-                        <th><%= lang.text("forex22")%></th>
+                        <th ng-if="!lang.isEnglish()"><%= lang.text("forex22")%></th>
                         <th class="pro-public__no-padding"><%= lang.text("forex23")%> <br>(<%= lang.text("forex24")%>)</th>
                         <th class="pro-public__no-padding"><%= lang.text("forex25")%></th>
                         <th><%= lang.text("forex26")%></th>
@@ -92,7 +92,7 @@
                 <tbody>
                     <tr ng-if="forex" ng-cloak ng-repeat="item in forex">
                         <td>{{ item.name_en }}</td>
-                        <td>{{ item.name_zh }}</td>
+                        <td ng-if="!lang.isEnglish()">{{ item.name_zh }}</td>
                         <td>{{ item.dot }}</td>
                         <td>{{ item.lever }}</td>
                         <td>{{ item.fixed }}</td>

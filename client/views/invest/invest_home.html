@@ -1,22 +1,22 @@
 <div class="space_center_statistics" >
     <ul class="space_center_statistics__title">
         <li class="space_center_statistics__title-item">${{ totalDealAccount.total_balance || '--' }}</li>
-        <li class="space_center_statistics__title-item">资产总额</li>
+        <li class="space_center_statistics__title-item">{{lang.text('tigerWitID.tradingAccount.totalAssets')}}</li>
     </ul>
     <ul class="space_center_statistics__list">
         <li class="space_center_statistics__list-item">
             <div>{{ totalDealAccount.total_volume || '0.00' }}</div>
-            <div>总交易手数</div>
+            <div>{{lang.text('tigerWitID.tradingAccount.totalLots')}}</div>
         </li>
         <li class="space_center_statistics__list-item"></li>
         <li class="space_center_statistics__list-item">
             <div ng-class="{'font-danger': totalDealAccount.total_profit.indexOf('-') < 0, 'font-success': totalDealAccount.total_profit.indexOf('-') >= 0}">${{ totalDealAccount.total_profit || '0.00' }}</div>
-            <div>总盈利</div>
+            <div>{{lang.text('tigerWitID.tradingAccount.totalEarnings')}}</div>
         </li>
         <li class="space_center_statistics__list-item" ></li>
         <li class="space_center_statistics__list-item">
             <div ng-class="{'font-danger': totalDealAccount.total_profit_rate.indexOf('-') < 0, 'font-success': totalDealAccount.total_profit_rate.indexOf('-') >= 0}">{{ totalDealAccount.total_profit_rate || '0.00' }}%</div>
-            <div>总收益率</div>
+            <div>{{lang.text('tigerWitID.tradingAccount.totalProfitRate')}}</div>
         </li>
     </ul>
 </div>
@@ -25,12 +25,12 @@
 <div class="space_center_trading">
     <div class="row">
         <div class="col-xs-5">
-            <div class="block_title">交易子账户</div>
+            <div class="block_title">{{lang.text('tigerWitID.tradingAccount.tradingSubAccounts')}}</div>
         </div>
         <div class="col-xs-7">
             <div class="block_btn_group text-right">
-                <a class="tw-btn tw-btn-capsule-bordered tw-btn-md" ng-click="newSubAccount()">新建账号</a>
-                <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="!personal.has_master" class="tw-btn tw-btn-capsule-bordered tw-btn-md">申请高手</a>
+                <a class="tw-btn tw-btn-capsule-bordered tw-btn-md" ng-click="newSubAccount()">{{lang.text('tigerWitID.tradingAccount.createAccount')}}</a>
+                <a ui-sref="space.master.subpage({subpage: 'apply'})" ng-if="!personal.has_master" class="tw-btn tw-btn-capsule-bordered tw-btn-md">{{lang.text('tigerWitID.tradingAccount.becomeMaster')}}</a>
             </div>
         </div>
     </div>
@@ -42,11 +42,11 @@
                         <li>
                             <div>
                                 <span ng-if="!dealAccount.editName">
-                                    <span class="name" >{{ dealAccount.account_name || "交易账户" }}</span>
+                                    <span class="name" >{{ dealAccount.account_name || lang.text('tigerWitID.tradingAccount.title') }}</span>
                                     <span class="edit" ng-if="info.clickEdit" ng-click="editAccountName(dealAccount)"></span>
                                     <span class="edit" ng-if="!info.clickEdit"></span>
-                                    <span class="z-symbol z-superior" ng-if="dealAccount.account_type === 3">高手账号</span>
-                                    <span class="z-symbol z-documentary" ng-if="dealAccount.account_type === 2">跟单账号</span>
+                                    <span class="z-symbol z-superior" ng-if="dealAccount.account_type === 3">{{lang.text('tigerWitID.tradingAccount.masterAccount')}}</span>
+                                    <span class="z-symbol z-documentary" ng-if="dealAccount.account_type === 2">{{lang.text('tigerWitID.tradingAccount.copyAccount')}}</span>
                                 </span>
                                 <span class="edit-name" ng-class="{'submit-error': editAccountNameAwake.result.error, 'submit-success': editAccountNameAwake.result.success}" ng-if="dealAccount.editName">
                                     <form name="editAccountNameForm" novalidate>
@@ -61,15 +61,15 @@
                                                 ng-change="editAccountNameTip.change()"
                                                 ng-blur="confirmAccountName(dealAccount, editAccountNameForm.account_name.$invalid)">
                                             <!-- <span ng-blur="confirmAccountName(dealAccount)">确定</span> -->
-                                            <!-- <span class="z-symbol z-superior" ng-if="dealAccount.account_type === 3">高手账号</span>
-                                            <span class="z-symbol z-documentary" ng-if="dealAccount.account_type === 2">跟单账号</span> -->
+                                            <!-- <span class="z-symbol z-superior" ng-if="dealAccount.account_type === 3">{{lang.text('tigerWitID.tradingAccount.masterAccount')}}</span>
+                                            <span class="z-symbol z-documentary" ng-if="dealAccount.account_type === 2">{{lang.text('tigerWitID.tradingAccount.copyAccount')}}</span> -->
                                         </span>
                                         <div ng-show="editAccountNameAwake.account_name.show" class="error">
                                             <p class="" ng-show="editAccountNameForm.account_name.$error.required">
-                                                请输入账号名称
+                                                {{lang.text('tigerWitID.tradingAccount.enterAccountName')}}
                                             </p>
                                             <p class="" ng-show="editAccountNameForm.account_name.$error.pattern">
-                                                账号名称包含2-8个字符，支持中英文，数字
+                                                {{lang.text('tigerWitID.tradingAccount.tip16')}}
                                             </p>
                                         </div>
                                         <div ng-show="!editAccountNameAwake.account_name.show" class="error">
@@ -91,12 +91,12 @@
                                 </span> 
                             </a>
                             <div class="master_category">
-                                <span class="grade">高手类别<span>{{ dealAccount.master_info.level || 'B' }}</span></span>
-                                <a ui-sref="space.master.subpage({subpage: 'grade', account_code: dealAccount.account_code})" class="details">查看详情 &gt;</a>
+                                <span class="grade">{{lang.text('tigerWitID.master.masterLevels')}}<span>{{ dealAccount.master_info.level || 'B' }}</span></span>
+                                <a ui-sref="space.master.subpage({subpage: 'grade', account_code: dealAccount.account_code})" class="details">{{lang.text('tigerWitID.tradingAccount.details')}} &gt;</a>
                             </div>
                         </li>
                         <li class="mg-tp-15" ng-if="!dealAccount.is_active">
-                            <a class="mg-lf-0 tw-btn tw-btn-sm130 tw-btn-capsule-gradient" ui-sref="space.asset.subpage({subpage: 'deposit', account: dealAccount.mt4_id})">充值激活账户</a>
+                            <a class="mg-lf-0 tw-btn tw-btn-sm130 tw-btn-capsule-gradient" ui-sref="space.asset.subpage({subpage: 'deposit', account: dealAccount.mt4_id})">{{lang.text('tigerWitID.tradingAccount.depositToActivate')}}</a>
                         </li>
                     </ul>
                 </li>
@@ -104,20 +104,20 @@
                     <ul>
                         <li>
                             <p>{{ dealAccount.equity }}</p>
-                            <p>资产净值</p>
+                            <p>{{lang.text('tigerWitID.tradingAccount.netAssetValue')}}</p>
                         </li>
                         <li>
                             <p>{{ dealAccount.floating_profit }}</p>
-                            <p>浮动盈亏</p>
+                            <p>{{lang.text('tigerWitID.tradingAccount.floatingPL')}}</p>
                         </li>
                         <li class="noLine">
                             <p>{{ dealAccount.margin_level }}</p>
-                            <p>保证金比例</p>
+                            <p>{{lang.text('tigerWitID.tradingAccount.marginLevel')}}</p>
                         </li>
                     </ul>
                 </li>
                 <li class="space_sub_account_info__list">
-                    <span ng-click="detailsUrl(dealAccount.mt4_id, dealAccount.account_type)">详情</span>
+                    <span ng-click="detailsUrl(dealAccount.mt4_id, dealAccount.account_type)">{{lang.text('tigerWitID.details.title')}}</span>
                 </li>
             </ul>
         </li>
@@ -127,9 +127,9 @@
                     <ul>
                         <li>
                             <div>
-                                <span class="name">跟单账号</span>
+                                <span class="name">{{lang.text('tigerWitID.tradingAccount.copyAccount')}}</span>
                                 <span class="edit">🖌</span>
-                                <span class="z-symbol " ng-class="{'superior':false, 'documentary': true}">跟单账号</span>
+                                <span class="z-symbol " ng-class="{'superior':false, 'documentary': true}">{{lang.text('tigerWitID.tradingAccount.copyAccount')}}</span>
                             </div>
                             <div class="mt4id">MT4 ID: 1231231231</div>
                         </li>

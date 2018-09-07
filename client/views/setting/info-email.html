@@ -1,12 +1,12 @@
 <div ng-controller="SettingInfoEmailController">
     <div ng-if="settingInfo.email" class="pd-tp-20 pd-bt-30 setting_info_zero__list-title">
-        <span class="line">电子邮箱设置</span>
-        <span>您已经绑定了电子邮箱</span>
+        <span class="line">{{lang.text('tigerWitID.settings.mailboxSettings')}}</span>
+        <span>{{lang.text('tigerWitID.settings.alreadyBoundEmail')}}</span>
         <span class="font-info">{{ settingInfo.email }}</span>
     </div>
     <div ng-if="!settingInfo.email" class="pd-tp-20 pd-bt-10">
-        <span class="line">电子邮箱设置</span>
-        <span>您未绑定任何邮箱</span>
+        <span class="line">{{lang.text('tigerWitID.settings.mailboxSettings')}}</span>
+        <span>{{lang.text('tigerWitID.settings.noBindEmail')}}</span>
     </div>
     <div ng-show="step === 1" class="setting_info_zero__list-input">
         <div class="row">
@@ -26,7 +26,7 @@
                         <input class="form-control"
                                 name="oldCode"
                                 type="text"
-                                placeholder="旧邮箱验证码"
+                                placeholder="{{lang.text('tigerWitID.settings.oldEmailVerificationCode')}}"
                                 required
                                 ng-class="{'form-control-error': frontErr.oldCode.show && oldEmailForm.oldCode.$invalid}"
                                 ng-model="emailInfo.oldCode"
@@ -35,7 +35,7 @@
 
                         <div ng-show="frontErr.oldCode.show">
                             <p class="alert alert-arrow_tp_lf" ng-show="oldEmailForm.oldCode.$error.required">
-                                请输入验证码
+                                {{lang.text('tigerWitID.settings.enterVerificationCode')}}
                             </p>
                         </div>
                     </div>
@@ -43,12 +43,12 @@
 
                 <div class="col-xs-6 text-right">
                     <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable.oldSubmit" ng-click="checkEmailCode()">
-                        提交
+                        {{lang.text('tigerWitID.submit')}}
                     </button>
 
                     <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" ng-if="!clickable.oldSubmit">
                         <i class="loading_spinner fa fa-spinner"></i>
-                        提交中
+                        {{lang.text('tigerWitID.submitting')}}
                     </button>
                 </div>
             </form>
@@ -62,7 +62,7 @@
                         <input class="form-control"
                                 name="newEmail"
                                 type="text"
-                                placeholder="新邮箱"
+                                placeholder="{{lang.text('tigerWitID.settings.newEmail')}}"
                                 required
                                 ng-class="{'form-control-error': frontErr.newEmail.show && newEmailForm.newEmail.$invalid}"
                                 ng-model="emailInfo.newEmail"
@@ -72,10 +72,10 @@
 
                         <div ng-show="frontErr.newEmail.show">
                             <p class="alert alert-arrow_tp_lf" ng-show="newEmailForm.newEmail.$error.required">
-                                请输入新邮箱
+                                {{lang.text('tigerWitID.settings.enterNewEmail')}}
                             </p>
                             <p class="alert alert-arrow_tp_lf" ng-show="newEmailForm.newEmail.$error.pattern">
-                                邮箱格式错误
+                                {{lang.text('tigerWitID.settings.emailFormatError')}}
                             </p>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                         <input class="form-control"
                                 name="newCode"
                                 type="text"
-                                placeholder="新邮箱验证码"
+                                placeholder="{{lang.text('tigerWitID.settings.newEmailVerCode')}}"
                                 required
                                 ng-class="{'form-control-error': frontErr.newCode.show && newEmailForm.newCode.$invalid}"
                                 ng-model="emailInfo.newCode"
@@ -105,7 +105,7 @@
 
                         <div ng-show="frontErr.newCode.show">
                             <p class="alert alert-arrow_tp_lf" ng-show="newEmailForm.newCode.$error.required">
-                                请输入验证码
+                                {{lang.text('tigerWitID.settings.enterVerificationCode')}}
                             </p>
                         </div>
                     </div>
@@ -113,12 +113,12 @@
 
                 <div class="col-xs-3 text-right">
                     <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" type="submit" ng-if="clickable.newSubmit" ng-click="setBindEmail()">
-                        提交
+                        {{lang.text('tigerWitID.submit')}}
                     </button>
 
                     <button class="tw-btn tw-btn-md tw-btn-capsule-gradient" ng-if="!clickable.newSubmit">
                         <i class="loading_spinner fa fa-spinner"></i>
-                        提交中
+                        {{lang.text('tigerWitID.submitting')}}
                     </button>
                 </div>
             </form>

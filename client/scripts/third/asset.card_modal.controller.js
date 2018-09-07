@@ -73,14 +73,7 @@
         asset.getBanks().then(function (data) {
             // console.log(data);
             if (data.is_succ) {
-                var b = [];
-                angular.forEach(data.data, function (val, key) {
-                    b.push({
-                        nameEN: key,
-                        nameZH: val
-                    });
-                });
-                $scope.banks = b;
+                $scope.banks = data.data;
             }
         });
 
@@ -96,7 +89,7 @@
                 if (isBreak) {
                     return;
                 }
-                if (bank.nameEN === passedScope.card.bank) {
+                if (bank.code === passedScope.card.bank) {
                     $scope.card.bank = bank;
                     isBreak = true;
                 }
@@ -179,7 +172,7 @@
                 bank_addr: $scope.card.address,
             };
             if ($scope.card.world && $scope.card.world.world_code === 'CN') {
-                oParams.bank_name = $scope.card.bank.nameEN;
+                oParams.bank_name = $scope.card.bank.code;
                 oParams.province = $scope.card.province.code;
                 oParams.city = $scope.card.city.code;
                 oParams.phone = $scope.card.phone;

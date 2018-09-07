@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').directive('twLineChart', twLineChart);
 
-    twLineChart.$inject = [];
+    twLineChart.$inject = ['lang'];
 
-    function twLineChart() {
+    function twLineChart(lang) {
         var options = {
             chart: {
                 type: 'line',
@@ -41,7 +41,7 @@
 
             yAxis: {
                 title: {
-                    text: '收益率（%）' ,
+                    text: lang.text('tigerWitID.dataStatistics.profitRate') + '（%）',
                     style: {
                         color: '#999'
                     }
@@ -132,7 +132,7 @@
                                         (date.getDate());
 
                                 return '<p style="color:' + this.series.color +
-                                        ';">收益率：</br>' +  this.y + '%</p>';
+                                        ';">'+ lang.text('tigerWitID.dataStatistics.profitRateM') +'</br>' +  this.y + '%</p>';
                             }
                         },
 
@@ -195,7 +195,7 @@
 
                         yAxis: {
                             title: {
-                                text: '收益率（%）'
+                                text: lang.text('tigerWitID.dataStatistics.profitRate') + '（%）'
                             },
                             gridLineColor: '#f0f0f0',
                             labels: {
@@ -215,7 +215,7 @@
                                         (date.getDate());
 
                                 return '<p style="color:' + this.series.color + ';">' +
-                                    dateStr + '</p><p style="color:' + this.series.color + ';">收益率：' +
+                                    dateStr + '</p><p style="color:' + this.series.color + ';">' + lang.text('tigerWitID.dataStatistics.profitRateM') + 
                                     this.y + '%</p>';
                             }
                         },
@@ -281,7 +281,7 @@
 
                         yAxis: {
                             title: {
-                                text: '收益率（%）'
+                                text: lang.text('tigerWitID.dataStatistics.profitRate') + '（%）'
                             },
                             gridLineColor: '#f0f0f0',
                             labels: {
@@ -301,7 +301,7 @@
                                         (date.getDate());
 
                                 return '<p style="color:' + this.series.color + ';">' +
-                                    dateStr + '</p><p style="color:' + this.series.color + ';">收益率：' +
+                                    dateStr + '</p><p style="color:' + this.series.color + ';">' + lang.text('tigerWitID.dataStatistics.profitRateM') + 
                                     this.y + '%</p>';
                             }
                         },

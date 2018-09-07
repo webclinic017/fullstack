@@ -172,7 +172,7 @@
                     }
                 }
             } else {
-                openSystemMdl('login', '复制');
+                openSystemMdl('login', $scope.lang.text("tigerWitID.copy"));
             }
         }
 
@@ -182,7 +182,8 @@
                 templateUrl: '/views/web/trader/system_modal.html',
                 size: 'sm',
                 backdrop: true,
-                controller: function ($scope, $modalInstance) {
+                controller: function ($scope, $modalInstance, lang) {
+                    $scope.lang = lang;
                     $scope.modal = {
                         type: type, // 系统弹窗类型：login, verify, isumam（封闭期） isMaster（已经是高手）, amount（可用复制金额不足）
                         info: info
@@ -230,8 +231,8 @@
                         };
                     }
                 },    
-                controller: function ($scope, passedScope, $modalInstance) {
-
+                controller: function ($scope, passedScope, $modalInstance, lang) {
+                    $scope.lang = lang;
                     $scope.gradeList = passedScope.gradeList;
 
                     $scope.closeModal = closeModal;
@@ -254,7 +255,8 @@
                         };
                     }
                 },    
-                controller: function ($scope, passedScope, $modalInstance) {
+                controller: function ($scope, passedScope, $modalInstance, lang) {
+                    $scope.lang = lang;
                     $scope.closeModal = closeModal;
                     function closeModal() {
                         $modalInstance.dismiss();

@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('AssetCardController', AssetCardController);
 
-    AssetCardController.$inject = ['$scope', 'config', '$state', '$modalInstance', 'validator', 'account', 'asset', 'passedScope'];
+    AssetCardController.$inject = ['$scope', 'config', '$state', '$modalInstance', 'validator', 'account', 'asset', 'passedScope', 'lang'];
 
-    function AssetCardController($scope, config, $state, $modalInstance, validator, account, asset, passedScope) {
+    function AssetCardController($scope, config, $state, $modalInstance, validator, account, asset, passedScope, lang) {
         $scope.personal = passedScope.personal;
         $scope.card = {
             //number: ,         // 卡号
@@ -17,6 +17,7 @@
             realname: $scope.personal.realname,
             world: $scope.personal.region
         };
+        $scope.lang = lang;
         $scope.banks = [];
         $scope.clickable = true;
         
@@ -73,14 +74,7 @@
         asset.getBanks().then(function (data) {
             // console.log(data);
             if (data.is_succ) {
-                var b = [];
-                angular.forEach(data.data, function (val, key) {
-                    b.push({
-                        nameEN: key,
-                        nameZH: val
-                    });
-                });
-                $scope.banks = b;
+                $scope.banks = data.data;
             }
         });
 
@@ -96,7 +90,7 @@
                 if (isBreak) {
                     return;
                 }
-                if (bank.nameEN === passedScope.card.bank) {
+                if (bank.code === passedScope.card.bank) {
                     $scope.card.bank = bank;
                     isBreak = true;
                 }
@@ -104,7 +98,7 @@
         }
 
         function getWorlds () {
-            account.getWorlds().then(function (data) {
+            account.getWorlds((lang.isEnglish() ? 'en' : 'cn')).then(function (data) {
                 if (data.is_succ) {
                     $scope.worlds = data.data;
                 }
@@ -112,7 +106,7 @@
         }
 
         function getProvince() {
-            account.getStates('CN').then(function (data) {
+            account.getStates('CN', (lang.isEnglish() ? 'en' : 'cn')).then(function (data) {
                 if (!data) return;
                 // console.info(data);
                 $scope.provinces = data.data;
@@ -133,7 +127,7 @@
             });
         }
         function getCity() {
-            account.getCities($scope.card.province.code).then(function (data) {
+            account.getCities($scope.card.province.code, (lang.isEnglish() ? 'en' : 'cn')).then(function (data) {
                 if (!data) return;
                 // console.info(data);
                 $scope.citys = data.data;
@@ -179,7 +173,7 @@
                 bank_addr: $scope.card.address,
             };
             if ($scope.card.world && $scope.card.world.world_code === 'CN') {
-                oParams.bank_name = $scope.card.bank.nameEN;
+                oParams.bank_name = $scope.card.bank.code;
                 oParams.province = $scope.card.province.code;
                 oParams.city = $scope.card.city.code;
                 oParams.phone = $scope.card.phone;

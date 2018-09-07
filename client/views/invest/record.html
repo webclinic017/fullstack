@@ -10,10 +10,10 @@
         </colgroup>
         <thead>
         <tr>
-            <th>日期</th>
-            <th>全部类型</th>
-            <th>金额</th>
-            <th>状态</th>
+            <th>{{lang.text('tigerWitID.date')}}</th>
+            <th>{{lang.text('tigerWitID.types')}}</th>
+            <th>{{lang.text('tigerWitID.amount')}}</th>
+            <th>{{lang.text('tigerWitID.state')}}</th>
         </tr>
         <!-- <th>备注</th> -->
         </thead>
@@ -50,5 +50,5 @@
 </div>
 <div ng-if="historyList.length <= 0" class="text-center mg-tp-50">
     <img src="/images/no_data.png" alt="" class="mg-bt-40">
-    <p>暂无数据!</p> 
+    <p>{{ lang.text('tigerWitID.noData') }}</p> 
 </div>

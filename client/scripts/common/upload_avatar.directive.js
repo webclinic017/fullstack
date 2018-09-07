@@ -4,9 +4,9 @@
 
     angular
         .module('fullstackApp')
-        .directive('twUploadAvatar', ['api', '$cookies', '$layer',twUploadAvatar]);
+        .directive('twUploadAvatar', ['api', '$cookies', '$layer', 'lang', twUploadAvatar]);
 
-    function twUploadAvatar(api, $cookies, $layer) {
+    function twUploadAvatar(api, $cookies, $layer, lang) {
         return {
             restrict: 'A',
             scope: {
@@ -47,17 +47,15 @@
                             base64PreviewImg = this.result
                         };
                         if(scope.ban){
-                            $layer({
-                                title: '系统提示',
+                            var obj = {
+                                title: lang.text('tigerWitID.systemPrompt'),
                                 size: 'sm',
                                 msgClass: 'font-danger',
                                 msg: scope.ban.msg,
-                                btns: {
-                                    '确定': function () {
-            
-                                    }
-                                }
-                            })
+                                btns: {}
+                            }
+                            obj.btns[lang.text("tigerWitID.confirm")] = function () {};
+                            $layer(obj)
                         } else {
                             data.submit();
                         }

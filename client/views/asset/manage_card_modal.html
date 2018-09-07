@@ -3,8 +3,8 @@
 
     <!-- 选择银行卡/管理银行卡 -->
     <div class="sys_modal_v2__content" ng-if="manageType == 'switch' || manageType == 'manage'">
-        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'switch'">切换银行卡</h3>
-        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'manage'">管理银行卡</h3>
+        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'switch'">{{lang.text('tigerWitID.wallet.switchBankCard')}}</h3>
+        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'manage'">{{lang.text('tigerWitID.wallet.manageBankCards')}}</h3>
         <div tw-loading-img></div>
         <table class="manage_card_list">
             <colgroup>
@@ -25,27 +25,27 @@
                     </td>
                     <td>
                         <p class="text-center" ng-if="manageType == 'switch'">
-                            <a class="btn-text card_btn" ng-click="chooseCard(card)">选择</a>
+                            <a class="btn-text card_btn" ng-click="chooseCard(card)">{{lang.text('tigerWitID.select')}}</a>
                         </p>
                         <p class="text-center" ng-if="manageType == 'manage'">
-                            <a class="btn-text card_btn" ng-click="confirmDeleteCard(card)">删除</a>
+                            <a class="btn-text card_btn" ng-click="confirmDeleteCard(card)">{{lang.text('tigerWitID.delete')}}</a>
                         </p>
                     </td>
                 </tr>
             </tbody>
         </table>
         <div class="mg-tp-10 text-left" ng-if="manageType == 'manage'">
-            <a class="btn-text" ng-click="openAddCardModal()">添加银行卡</a>
+            <a class="btn-text" ng-click="openAddCardModal()">{{lang.text('tigerWitID.wallet.addBankCards')}}</a>
         </div>
     </div>
 
     <!-- 删除银行卡 -->
     <div class="sys_modal_v2__content" ng-if="manageType == 'delete'">
-        <h3 class="sys_modal_v2__title text-left">删除银行卡</h3>
-        <p class="sys_modal_v2__desp mg-tp-20">确认删除本银行卡，如需再次使用需重新验证</p>
+        <h3 class="sys_modal_v2__title text-left">{{lang.text('tigerWitID.wallet.deleteBankCard')}}</h3>
+        <p class="sys_modal_v2__desp mg-tp-20">{{lang.text('tigerWitID.wallet.tip3')}}</p>
         <div class="btn_wrapper text-right clearfix">
-            <a class="btn-text fr mg-lf-20" ng-click="closeModal()">取消</a>
-            <a class="btn-text fr" ng-click="deleteCard()">删除</a>
+            <a class="btn-text fr mg-lf-20" ng-click="closeModal()">{{lang.text('tigerWitID.cancel')}}</a>
+            <a class="btn-text fr" ng-click="deleteCard()">{{lang.text('tigerWitID.delete')}}</a>
         </div>
     </div>
 </div>

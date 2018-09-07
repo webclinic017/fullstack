@@ -5,6 +5,9 @@
     background-position: center center;
     background-size: cover;
     @include img-normal($image-path-base + "ranklist/ranklist-banner-new.jpg");
+    &.imgEn{
+        @include img-normal($image-path-base + "ranklist/ranklist-banner-new_en.jpg");
+    }
 
     @include e(tip) {
         text-align: center;
@@ -191,11 +194,11 @@
         @include m(trade) {
             padding: 42px 0;
             border-bottom: 1px solid #e6e7e8;
-
+            display: flex;
             > .profit {
-                float: left;
+                flex: 1;
                 border-right: 1px solid #e6e7e8;
-                width: 180px;
+                max-width: 180px;
 
                 > .num {
                     font-size: 26px;
@@ -211,7 +214,6 @@
                 }
             }
             > .dropdown {
-                float: left;
                 padding-left: 20px;
                 color: #626364;
 

@@ -49,7 +49,7 @@
         if (data.is_succ) {
           var list = data.data;
           if(list.length == 0) {
-            alert("请重新登录")
+            alert($scope.lang.text("tigerWitID.myAccount.loginAgain"))
             return;
           }
           angular.forEach(list, function (value, index) {
@@ -83,17 +83,18 @@
                 };
             }
         },
-        controller: function ($scope, $modalInstance, passedScope) {
+        controller: function ($scope, $modalInstance, passedScope, lang) {
             // console.log(passedScope);
             $scope.account = {
                 accountItem: passedScope.accountItem,
                 dealAccountList: passedScope.dealAccountList
             };
+            $scope.lang = lang;
             $scope.accountType = {
-              0: "体验金账号" ,
-              1: "自主交易账号" ,
-              2: "跟随账号" ,
-              3: "高手账号" ,
+              0: lang.text('tigerWitID.tradingAccount.experienceAccount'),
+              1: lang.text('tigerWitID.tradingAccount.tradingAccount'),
+              2: lang.text('tigerWitID.tradingAccount.copyAccounts'),
+              3: lang.text('tigerWitID.tradingAccount.masterAccount'),
             }
             $scope.closeModal = closeModal;
             $scope.selectType = selectType;

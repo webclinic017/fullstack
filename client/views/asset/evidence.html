@@ -2,47 +2,47 @@
   <div class="asset_evidence">
     <ul class="asset_evidence__nav clearfix">
       <li class="asset_evidence__nav-item" ng-class="{active: status === 1}" ng-click="changeEvidenceStatus(1)">
-        待上传
+        {{lang.text('tigerWitID.depositWithdrawal.toUpload')}}
       </li>
       <li class="asset_evidence__nav-item" ng-class="{active: status === 2}" ng-click="changeEvidenceStatus(2)">
-        审核中
+        {{lang.text('tigerWitID.depositWithdrawal.underReview')}}
       </li>
       <li class="asset_evidence__nav-item" ng-class="{active: status === 0}" ng-click="changeEvidenceStatus(0)">
-        审核成功
+        {{lang.text('tigerWitID.depositWithdrawal.successfully')}}
       </li>
     </ul>
     <div class="asset_evidence__content">
         <div ng-if="status === 1">
-          <h4 class="title">凭证注意事项</h4>
+          <h4 class="title">{{lang.text('tigerWitID.depositWithdrawal.voucherConsiderations')}}</h4>
           <p class="tip">
-              1.凭证信息必须显示姓名、银行卡号、支付金额等内容
+              {{lang.text('tigerWitID.depositWithdrawal.tip36')}}
           </p>
           <p class="tip">
-              2.凭证信息必须为实名认证本人银行账户。
+              {{lang.text('tigerWitID.depositWithdrawal.tip37')}}
           </p>
           <p class="tip">
-              未满足以上要求，审核将被驳回。
+              {{lang.text('tigerWitID.depositWithdrawal.tip38')}}
           </p>
           <p class="tip">
-              审核驳回后，支付金额将原路退还，产生的1.5%手续费由您自行承担。
+              {{lang.text('tigerWitID.depositWithdrawal.tip39')}}
           </p>
           <p class="tip font-danger">
-              注意：充值成功后请及时上传凭证，若超过两周未上传，将无法进行交易操作。<br>
-              ＊代表必须上传凭证
+              {{lang.text('tigerWitID.depositWithdrawal.tip40')}}<br>
+              {{lang.text('tigerWitID.depositWithdrawal.tip41')}}
           </p>
           <div class="desc">
-            <a href="/web/deposit/evidence" target="_blank">查看凭证示例</a>
+            <a href="/web/deposit/evidence" target="_blank">{{lang.text('tigerWitID.depositWithdrawal.vouchersInstance')}}</a>
           </div>
         </div>        
         <ul class="asset_evidence__content-lst">
           <li class="item" ng-repeat="evidence in evidenceList">
             <div class="tit clearfix">
-              <span class="fl"><span ng-show="status === 1 && evidence.must" class="font-danger">＊</span>充值成功</span>
+              <span class="fl"><span ng-show="status === 1 && evidence.must" class="font-danger">＊</span>{{lang.text('tigerWitID.fundRecords.rechargeSuccess')}}</span>
               <span class="fr">${{evidence.amount}}</span>
             </div>
             <div class="date clearfix">
               <span class="fl">{{evidence.created_at | dealTimestamp}}</span>
-              <span ng-if="status !== 1" class="fr">交易成功</span>
+              <span ng-if="status !== 1" class="fr">{{lang.text('tigerWitID.depositWithdrawal.transactionSuccessful')}}</span>
               <span ng-if="status === 1" class="fr">{{evidence.reason}}</span>
             </div>
             <div class="info clearfix" ng-if="status === 1">
@@ -59,11 +59,11 @@
               </div>
               <div class="fr">
                   <button ng-if="!evidence.files.length" class="tw-btn tw-btn-capsule-gradient">
-                    上传凭证
+                      {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
                     <div tw-upload-file-base64 data-file-name="evidence.files[0]"></div>
                   </button>
                   <button ng-if="evidence.files.length" class="tw-btn tw-btn-capsule-bordered" ng-click="uploadEvidence(evidence, $index)">
-                    提交审核    
+                    {{lang.text('tigerWitID.depositWithdrawal.submitAudition')}}  
                   </button>
               </div>
             </div>
@@ -75,14 +75,14 @@
                 </div>
                 <div class="fr">
                     <button ng-if="status === 2" class="tw-btn tw-btn-capsule-bordered" ng-click="cancelEvidence(evidence, $index)">
-                      撤销
+                      {{lang.text('tigerWitID.revocation')}}
                     </button>
                 </div>
               </div>
           </li>
           <li ng-if="!evidenceList.length" class="text-center font-size-16">
             <img src="/images/no_voucher.png" alt="" class="mg-bt-40">
-            <p>当前没有凭证</p> 
+            <p>{{lang.text('tigerWitID.depositWithdrawal.noVouchers')}}</p> 
           </li>
         </ul>
     </div>

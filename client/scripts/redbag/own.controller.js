@@ -117,7 +117,7 @@
                 $scope.exchangeLoading = false;
                 o.exchangeLoading = false;
                 if (data.is_succ) {
-                    layer.msg('红包兑换成功', {
+                    layer.msg($scope.lang.text("tigerWitID.coupon.exchangeCouponSucc"), {
                         time: 2000
                     });
                     getRedbagList($scope.page);

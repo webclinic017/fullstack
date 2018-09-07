@@ -277,6 +277,9 @@
         &.default {
             @include img-normal($image-path-home + "banner-default.png");
         }
+        &.default_en {
+            @include img-normal($image-path-home + "banner-default_en.png");
+        }
     }
     //.index2-slide4 {
     //    overflow: hidden;

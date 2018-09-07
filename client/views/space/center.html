@@ -2,22 +2,22 @@
 <div class="space_center_statistics">
     <ul class="space_center_statistics__title">
         <li class="space_center_statistics__title-item">${{ assetInfo.total_balance || '--' }}</li>
-        <li class="space_center_statistics__title-item">资产总额</li>
+        <li class="space_center_statistics__title-item">{{lang.text('tigerWitID.myAccount.totalAssets')}}</li>
     </ul>
     <ul class="space_center_statistics__list">
         <li class="space_center_statistics__list-item">
             <div>{{ assetInfo.total_volume || '0.00' }}</div>
-            <div>总交易手数</div>
+            <div>{{lang.text('tigerWitID.myAccount.totalLots')}}</div>
         </li>
         <li class="space_center_statistics__list-item"></li>
         <li class="space_center_statistics__list-item">
             <div ng-class="{'font-danger': assetInfo.total_profit.indexOf('-') < 0, 'font-success': assetInfo.total_profit.indexOf('-') >= 0}">${{ assetInfo.total_profit || '0.00' }}</div>
-            <div>总盈利</div>
+            <div>{{lang.text('tigerWitID.myAccount.totalEarnings')}}</div>
         </li>
         <!-- <li class="space_center_statistics__list-item" ></li>
         <li class="space_center_statistics__list-item">
             <div ng-class="{'font-danger': assetInfo.profit_rate.indexOf('-') < 0, 'font-success': assetInfo.profit_rate.indexOf('-') >= 0}">{{ assetInfo.profit_rate || '0.00' }}%</div>
-            <div>总收益率</div>
+            <div>{{lang.text('tigerWitID.myAccount.totalProfitRate')}}总收益率</div>
         </li> -->
     </ul>
 </div>
@@ -26,29 +26,29 @@
     <ul class="space_center_summary__list clearfix">
         <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.trade_user_status === 0}">
             <!-- <a ui-sref="space.center.invest.home"> -->
-                <p class="summary_name">交易账户</p>
-                <p class="summary_btn" ng-if="assetInfo.trade_user_status === 0"><a ng-click="openDredgeMdl({position: 'sidebar'})"><i class="add-o"></i>快捷开户</a></p>
+                <p class="summary_name">{{lang.text('tigerWitID.myAccount.tradingAccount')}}</p>
+                <p class="summary_btn" ng-if="assetInfo.trade_user_status === 0"><a ng-click="openDredgeMdl({position: 'sidebar'})"><i class="add-o" ng-style="{marginRight: lang.isEnglish() ? '5px' : ''}"></i>{{lang.text('tigerWitID.myAccount.quickOpenAccount')}}</a></p>
                 <span ng-if="assetInfo.trade_user_status !== 0">
                     <p class="summary_amount">${{ assetInfo.trade_balance || '--' }}</p>
-                    <p class="summary_btn" ng-if="assetInfo.trade_user_status === 2"><span><a ui-sref="authen.subpage({subpage: 'investInfo'})">升级到真实账户 &gt;</a></span></p>
+                    <p class="summary_btn" ng-if="assetInfo.trade_user_status === 2"><span><a ui-sref="authen.subpage({subpage: 'investInfo'})">{{lang.text('tigerWitID.myAccount.upgradeToLiveAccount')}} &gt;</a></span></p>
                     <p class="summary_btn" ng-if="assetInfo.trade_user_status === 1">
-                        <span class="line"><a ui-sref="space.asset.subpage({ subpage: 'deposit' })">充值</a></span>
-                        <span class="line"><a ui-sref="space.asset.subpage({ subpage: 'withdraw' })">提现</a></span>
-                        <span><a ui-sref="space.center.invest.home">详情</a></span>
+                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'deposit' })">{{lang.text('tigerWitID.myAccount.deposit')}}</a></span>
+                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'withdraw' })">{{lang.text('tigerWitID.myAccount.withdrawal')}}</a></span>
+                        <span ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.center.invest.home">{{lang.text('tigerWitID.details.title')}}</a></span>
                     </p>
                 </span>
             <!-- </a> -->
         </li>
         <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.wallet_user_status === 0}">
             <!-- <a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})"> -->
-                <p class="summary_name">钱包</p>
-                <p class="summary_btn" ng-if="assetInfo.wallet_user_status === 0"><a ng-click="notActiveModal()">未激活</a></p>
+                <p class="summary_name">{{lang.text('tigerWitID.myAccount.wallet')}}</p>
+                <p class="summary_btn" ng-if="assetInfo.wallet_user_status === 0"><a ng-click="notActiveModal()">{{lang.text('tigerWitID.myAccount.unactivated')}}</a></p>
                 <span ng-if="assetInfo.wallet_user_status === 1">
                     <p class="summary_amount">${{ assetInfo.wallet_balance || '--' }}</p>
                     <p class="summary_btn" >
-                        <span class="line"><a ui-sref="space.asset.subpage({ subpage: 'deposit', account: 'wallet'})">充值</a></span>
-                        <span class="line"><a ui-sref="space.asset.subpage({ subpage: 'withdraw', account: 'wallet'})">提现</a></span>
-                        <span><a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">详情</a></span>
+                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'deposit', account: 'wallet'})">{{lang.text('tigerWitID.myAccount.deposit')}}</a></span>
+                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'withdraw', account: 'wallet'})">{{lang.text('tigerWitID.myAccount.withdrawal')}}</a></span>
+                        <span ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">{{lang.text('tigerWitID.details.title')}}</a></span>
                     </p>
                 </span>
             <!-- </a> -->
@@ -101,7 +101,7 @@
             <li ng-mouseenter="show_close_profit=true" ng-mouseleave="show_close_profit=false" ng-class="{'active':show_close_profit}">
                 <p class="num" ng-class="{'font-danger': personal.profit.indexOf('-') < 0, 'font-success': personal.profit.indexOf('-') >= 0}">${{ personal.profit || '0.00' }}</p>
                 <p class="tip">历史总收益</p>
-                <p class="space_center_hint">用户真实入金后平仓产生的收益总数</p>
+                <p class="space_center_hint">{{lang.text('tigerWitID.tradingAccount.tip21')}}</p>
             </li>
             <li>
                 <p class="num" ng-class="{'font-danger': personal.floating_profit.indexOf('-') < 0, 'font-success': personal.floating_profit.indexOf('-') >= 0}">${{ personal.floating_profit || '0.00' }}</p>

@@ -4,9 +4,9 @@
 
     angular
         .module('fullstackApp')
-        .directive('twUploadIdCard', ['api', '$cookies', '$layer',twUploadIdCard]);
+        .directive('twUploadIdCard', ['api', '$cookies', '$layer', 'lang', twUploadIdCard]);
 
-    function twUploadIdCard(api, $cookies, $layer) {
+    function twUploadIdCard(api, $cookies, $layer, lang) {
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
@@ -37,7 +37,7 @@
 
                         console.log(data.originalFiles[0]);
                         if (data.originalFiles[0]['type'].length && !acceptFileTypes.test(data.originalFiles[0]['type'])) {
-                            uploadErrors.push('对不起,目前仅支持png和jpg格式图片!');
+                            uploadErrors.push(lang.text('tigerWitID.settings.tip8'));
                         }
 
                         console.log('当前文件大小' + data.originalFiles[0]['size'] / 1024 + 'KB');
@@ -58,7 +58,7 @@
 
                         /*判断大小*/
                         if (data.originalFiles[0]['size'] > 2 * 1024 * 1024) {
-                            uploadErrors.push('对不起，暂时不支持大于2M的文件，请压缩后再试!');
+                            uploadErrors.push(lang.text('tigerWitID.settings.tip9'));
                             scope.$emit('uploadIdCardFail', {
                                 face: face
                             });
@@ -67,14 +67,14 @@
                         }
 
                         if (uploadErrors.length > 0) {
-                            $layer({
-                                title: '提示',
+                            var obj = {
+                                title: lang.text('tigerWitID.prompt'),
                                 msg: uploadErrors.join("\n"),
                                 msgClass: 'font-danger',
-                                btns: {
-                                    "好的": function(){}
-                                }
-                            })
+                                btns: {}
+                            }
+                            obj.btns[lang.text("tigerWitID.ok")] = function(){}
+                            $layer(obj)
                         } else {
                             data.face = face;
                             /*将利用插件生成的上传控件存入controller*/

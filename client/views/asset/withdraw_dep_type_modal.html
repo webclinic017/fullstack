@@ -2,7 +2,7 @@
     <button class="close" ng-click="closeModal()">×</button>
 
     <h5 class="sys_modal_v2__title">
-        提现到
+        {{lang.text('tigerWitID.depositWithdrawal.withdrawalTo')}}
     </h5>
 
     <div class="sys_modal_v2__content">
@@ -14,15 +14,15 @@
                <div class="col-xs-9 deposit_modal__type-cont">
                    <p class="tit">{{value.name}}</p>
                    <p class="tip" ng-show="key === 'bank'">&nbsp;</p>
-                   <p class="tip" ng-show="key === 'cse'">请填写您的真实CSE钱包账号</p>
-                   <p class="tip" ng-show="key === 'paypal'">请填写您的真实PayPal账号</p>
+                   <p class="tip" ng-show="key === 'cse'">{{lang.text('tigerWitID.depositWithdrawal.tip43')}}</p>
+                   <p class="tip" ng-show="key === 'paypal'">{{lang.text('tigerWitID.depositWithdrawal.tip44')}}</p>
                </div>
            </li>
         </ul>
 
         <p class="btn_wrapper mg-bt-15">
             <button class="btn btn-primary-gradient btn-sm" ng-click="changeType()">
-                确定
+                {{lang.text('tigerWitID.confirm')}}
             </button>
         </p>
     </div>

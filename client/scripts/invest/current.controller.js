@@ -142,7 +142,7 @@
                 templateUrl: '/views/invest/cancel_copy_modal.html',
                 size: 'sm',
                 backdrop: true,
-                controller: function ($scope, trader, $modalInstance) {
+                controller: function ($scope, trader, $modalInstance, lang) {
                     $scope.copyCancel = {
                         username: username,
                         success: false,     // 是否取消复制成功
@@ -150,6 +150,7 @@
                         failMsg: ''
                     };
                     $scope.clickable = true;
+                    $scope.lang = lang;
                     $scope.cancelCopy = cancelCopy;
                     $scope.closeModal = closeModal;
 
@@ -203,12 +204,13 @@
                 templateUrl: '/views/invest/invest_detail_modal.html',
                 size: 'lg',
                 backdrop: true,
-                controller: function ($scope, invest, $modalInstance) {
+                controller: function ($scope, invest, $modalInstance, lang) {
+                    $scope.lang = lang;
 
                     $scope.details = [];        // 交易详情 弹窗数据
                     $scope.modal = {
-                        price: '现价',
-                        asset: '资金占用'
+                        price: lang.text("tigerWitID.details.currentPrice"),
+                        asset: lang.text("tigerWitID.details.fundsOccupying")
                     };
                     $scope.follow_master = type === 'own' ? false : true;
                     $scope.closeModal = closeModal;
@@ -237,12 +239,13 @@
                 templateUrl: '/views/invest/invest_detail_modal.html',
                 size: 'lg',
                 backdrop: true,
-                controller: function ($scope, invest, $modalInstance) {
+                controller: function ($scope, invest, $modalInstance, lang) {
+                    $scope.lang = lang;
 
                     $scope.details = [];        // 交易详情 弹窗数据
                     $scope.modal = {
-                        price: '现价',
-                        asset: '资金占用'
+                        price: lang.text("tigerWitID.details.currentPrice"),
+                        asset: lang.text("tigerWitID.details.fundsOccupying")
                     };
                     $scope.closeModal = closeModal;
 
