@@ -68,7 +68,7 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <input class="account-form-control select-right" autocomplete="off" name="step1Phone" type="text" placeholder="{{ lang.text('actLogin3') }}"
+                                <input class="account-form-control select-right" autocomplete="off" name="step1Phone" type="text" placeholder="{{lang.text('tigerWitID.login.enterPhoneNumber')}}"
                                     on-enter="getCaptcha('registerForm1', 'step1Phone')" required ng-click="toTrackPhoneSensorsdata()"
                                     ng-model="account.step1Phone">
                                 <span class="account-form-control-tip" ng-show="account.step1Phone">{{ lang.text("actLogin17") }}</span>
@@ -98,7 +98,7 @@
                     <div class="account_login__title">{{ lang.text('actLogin20') }}</div>
                     <form name="registerForm2" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglish() ? '5px' : '25px'}">
                         <div class="account-form-control-wrapper" ng-show="step1PasswordStatus">
-                            <input class="account-form-control" autocomplete="off" name="step1Password" type="password" placeholder="{{ lang.text('actLogin21') }}"
+                            <input class="account-form-control" autocomplete="off" name="step1Password" type="password" placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}"
                                 on-enter="setPassword('registerForm2')" required ng-model="account.step1Password">
                             <span class="account-form-control-tip" ng-show="account.step1Password">{{ lang.text('actLogin22') }}</span>
                             <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
@@ -107,7 +107,7 @@
                         </div>
                         <div class="account-form-control-wrapper" ng-show="!step1PasswordStatus">
                             <input class="account-form-control" autocomplete="off" name="step1Password" type="text" on-enter="setPassword('registerForm2')"
-                                placeholder="{{ lang.text('actLogin21') }}" required ng-model="account.step1Password">
+                                placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}" required ng-model="account.step1Password">
                             <span class="account-form-control-tip" ng-show="account.step1Password">{{ lang.text('actLogin22') }}</span>
                             <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
                                 <i class="fa fa-eye-slash" aria-hidden="true"></i>
@@ -124,12 +124,12 @@
                 </div>
                 <div class="account_login__docs">
                     <p ng-show="registerStep1 == 1">
-                        {{ lang.text('actLogin10') }}
-                        <a class="" href="/agreement/client" target="_blank">{{ lang.text('actLogin11') }}</a>、
-                        <a class="" href="/agreement/risk" target="_blank">{{ lang.text('actLogin12') }}</a>、
-                        <a class="" href="/agreement/cookie" target="_blank">{{ lang.text('actLogin13') }}</a>{{ lang.text('actLogin15') }}
+                        {{ lang.text('tigerWitID.login.tip1_1') }}
+                        <a class="" href="/agreement/client" target="_blank">{{ lang.text('tigerWitID.login.tip1_2') }}</a>、
+                        <a class="" href="/agreement/risk" target="_blank">{{ lang.text('tigerWitID.login.tip1_3') }}</a>、
+                        <a class="" href="/agreement/cookie" target="_blank">{{ lang.text('tigerWitID.login.tip1_4') }}</a>{{ lang.text('tigerWitID.login.tip1_5') }}
                         <a class="" href="/agreement/legal"
-                            target="_blank">{{ lang.text('actLogin14') }}</a>
+                            target="_blank">{{ lang.text('tigerWitID.login.tip1_6') }}</a>
                     </p>
                 </div>
             </div>

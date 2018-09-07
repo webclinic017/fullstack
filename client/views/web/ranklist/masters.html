@@ -1,5 +1,5 @@
-<div class="ranklist_banner">
-    <div class="ranklist_banner__tip">
+<div class="ranklist_banner" ng-class="{'imgEn': lang.isEnglish()}">
+    <div class="ranklist_banner__tip" ng-if="!lang.isEnglish()">
         <p>{{ lang.text("companyNameEn") }} {{ lang.text("tigerWitID.master.masterSystem") }}</p>
         <p>{{ lang.text("tigerWitID.master.tradeLikeMaster") }}</p>
     </div>

@@ -42,7 +42,7 @@
                                    autocomplete="off"
                                    name="step2Password"
                                    type="password"
-                                   placeholder="{{ lang.text('actLogin25') }}"
+                                   placeholder="{{lang.text('tigerWitID.login.enterPassword')}}"
                                    on-enter="login('loginFormPhonePw')"
                                    required
                                    ng-model="account.step2Password">
@@ -56,7 +56,7 @@
                                    autocomplete="off"
                                    name="step2Password"
                                    type="text"
-                                   placeholder="{{ lang.text('actLogin25') }}"
+                                   placeholder="{{lang.text('tigerWitID.login.enterPassword')}}"
                                    on-enter="login('loginFormPhonePw')"
                                    required
                                    ng-model="account.step2Password">
@@ -109,7 +109,7 @@
                                     autocomplete="off"
                                     name="step2Password"
                                     type="password"
-                                    placeholder="{{ lang.text('actLogin25') }}"
+                                    placeholder="{{lang.text('tigerWitID.login.enterPassword')}}"
                                     on-enter="login('loginFormEmailPw')"
                                     required
                                     ng-model="account.step2Password">
@@ -123,7 +123,7 @@
                                     autocomplete="off"
                                     name="step2Password"
                                     type="text"
-                                    placeholder="{{ lang.text('actLogin25') }}"
+                                    placeholder="{{lang.text('tigerWitID.login.enterPassword')}}"
                                     on-enter="login('loginFormEmailPw')"
                                     required
                                     ng-model="account.step2Password">
@@ -173,7 +173,7 @@
                                    autocomplete="off"
                                    name="forgetPhone"
                                    type="text"
-                                   placeholder="{{ lang.text('actLogin3') }}"
+                                   placeholder="{{lang.text('tigerWitID.login.enterPhoneNumber')}}"
                                    on-enter="getCaptcha('loginFormforgetPhonePw', 'forgetPhone')"
                                    required
                                    ng-model="account.forgetPhone">
@@ -254,7 +254,7 @@
                                    autocomplete="off"
                                    name="forgetPassword"
                                    type="password"
-                                   placeholder="{{ lang.text('actLogin21') }}"
+                                   placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}"
                                    on-enter="setForgetPassword('loginFormSetPw')"
                                    required
                                    ng-model="account.forgetPassword">
@@ -268,7 +268,7 @@
                                    autocomplete="off"
                                    name="forgetPassword"
                                    type="text"
-                                   placeholder="{{ lang.text('actLogin21') }}"
+                                   placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}"
                                    on-enter="setForgetPassword('loginFormSetPw')"
                                    required
                                    ng-model="account.forgetPassword">
@@ -329,7 +329,7 @@
                                    autocomplete="off"
                                    name="phoneVePhone"
                                    type="text"
-                                   placeholder="{{ lang.text('actLogin3') }}"
+                                   placeholder="{{lang.text('tigerWitID.login.enterPhoneNumber')}}"
                                    on-enter="getCaptcha('loginFormPhoneV', 'phoneVePhone')"
                                    required
                                    ng-click="toTrackPhoneSensorsdata()"
@@ -365,7 +365,7 @@
                             </span>
                         </div>
                     </form>
-                    <div class="account_login__btn_wrapper">
+                    <div class="account_login__btn_wrapper mg-tp-10">
                         <span class="account_login__btn" ng-click="login('loginFormPhoneV')">{{ lang.text('actLogin8') }}</span>
                     </div>
                 </div> 
@@ -414,7 +414,7 @@
                             </span>
                         </div>
                     </form>
-                    <div class="account_login__btn_wrapper">
+                    <div class="account_login__btn_wrapper mg-tp-10">
                         <span class="account_login__btn" ng-click="login('loginFormEmailV')">{{ lang.text('actLogin8') }}</span>
                     </div>
                 </div>
@@ -427,7 +427,7 @@
                                    autocomplete="off"
                                    name="step1Password"
                                    type="password"
-                                   placeholder="{{ lang.text('actLogin21') }}"
+                                   placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}"
                                    on-enter="setPassword('loginForm2')"
                                    required
                                    ng-model="account.step1Password">
@@ -442,7 +442,7 @@
                                    name="step1Password"
                                    type="text"
                                    on-enter="setPassword('loginForm2')"
-                                   placeholder="{{ lang.text('actLogin21') }}"
+                                   placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}"
                                    required
                                    ng-model="account.step1Password">
                             <span class="account-form-control-tip" ng-show="account.step1Password">{{ lang.text('actLogin22') }}</span>

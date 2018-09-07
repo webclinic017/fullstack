@@ -37,6 +37,7 @@
             getStates: getStates,
             getCities: getCities,
             setBasicInfo: setBasicInfo,
+            setBasicInfoNameEn: setBasicInfoNameEn,
             setPwd: setPwd,
             setAvatar: setAvatar,
             setPwdFirst: setPwdFirst,
@@ -459,6 +460,15 @@
             });
         }
 
+        /**
+         * @name setBasicInfoNameEn
+         * @desc setting 模块设置基本信息
+         */
+        function setBasicInfoNameEn(username) {
+            return publicHttp.dealPublicRequest(o.setUserNameEnApi, 'PUT', {
+                username: username,
+            });
+        }
         /**
          * @name setPwdFirst
          * @desc 首次 设置密码

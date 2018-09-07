@@ -203,7 +203,7 @@
         $scope.setPassword = function (formName) {
             if (!$scope.registerBtnStatus) return;
             if ($scope[formName].$invalid) {
-                layer.msg(lang.text('actLogin21')); //请输入密码
+                layer.msg(lang.text('tigerWitID.login.enterPassword')); //请输入密码
                 return;
             }
             layer.load();

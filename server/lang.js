@@ -68,6 +68,9 @@ module.exports = function () {
         currentLanguage: function () {
             return this.language;
         },
+        isEnglish: function () {
+            return this.language == 'en' ? true : false;
+        },
         text: function (name) {
             var _this = this;
             var text;

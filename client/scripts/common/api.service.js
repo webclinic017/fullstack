@@ -30,6 +30,7 @@
             uploadAvatarForm: urlOrigin2 + '/user/upload_avatar',
             setNewPwdApi: urlOrigin2 + '/forget_passwd',
             getPersonalInfoApi: urlOrigin2 + '/user/info',
+            setUserNameEnApi: urlOrigin2 + '/user/username_en',
             getAssetInfoApi: urlOrigin2 + '/account/summary',
             getAccountInfoApi: urlOrigin2 + '/trade_account/asset',
             getTotalDealAccountApi: urlOrigin2 + '/trade_account/summary',

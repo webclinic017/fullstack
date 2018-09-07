@@ -112,9 +112,9 @@
         }
         > span:last-child {
             float: right;
-            color: #10bcef;
+            color: #4A90E2;
             font-size: 14px;
-            font-weight: 100;
+            font-weight: 500;
         }
     }
     @include e(close) {
@@ -206,7 +206,8 @@
             margin-top: -10px;
 
             span {
-                color: #10bcef;
+                color: #4A90E2;
+                font-weight: 300;
                 cursor: pointer;
             }
         }

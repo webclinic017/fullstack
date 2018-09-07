@@ -5,6 +5,9 @@
     background-position: center center;
     background-size: cover;
     @include img-normal($image-path-base + "ranklist/ranklist-banner-new.jpg");
+    &.imgEn{
+        @include img-normal($image-path-base + "ranklist/ranklist-banner-new_en.jpg");
+    }
 
     @include e(tip) {
         text-align: center;

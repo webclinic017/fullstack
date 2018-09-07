@@ -38,6 +38,10 @@
                 tip: lang.text("tigerWitID.tip.tip5"), // 昵称包含2-16个字符，支持中英文、数字
                 reg: /^[\u4e00-\u9fa5A-Za-z0-9]{2,16}$/
             },
+            username_en: {
+                tip: lang.text("tigerWitID.settings.tip14"),
+                reg: /^[a-zA-Z]+$/
+            },
 
             school: {
                 tip: lang.text("tigerWitID.tip.tip6"),// 学校名称包含 4-20 个字符，由汉字、字母组成，超过字符限制的用简称代替
