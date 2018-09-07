@@ -1,0 +1,102 @@
+<div class="agent">
+  <div class="global_proxy_banner"></div>
+  <div class="global_proxy_content">
+    <h3 class="global_proxy_title">
+        <span>Become a TigerWit partner today</span>
+    </h3>
+    <p class="global_proxy_tip">
+        With TigerWit, the success of our partners comes from developing long-term profitable relationships. 
+    </p>
+    <p class="global_proxy_tip">
+        We aim to bring a fresh technological approach to an industry in need of change that benefits both partners and traders. 
+    </p>
+    <p class="global_proxy_tip">
+        Our innovative ‘Distributed Ledger Technology’ can provide you with an unique and significant advantage over your competitors. 
+    </p>
+    <p class="global_proxy_tip">
+        TigerWit’s open-source distributed trading ledger is just the first step. Visit tech.tigerwit.com for more information on our blockchain technology.
+    </p>
+    <h4 class="global_proxy_sub_title">
+        <img src="/images/web/proxy-circle.png" alt=""> 
+        <span>Why partner with TigerWit?</span>
+    </h4>
+    <p class="global_proxy_tip">
+        Access to all the tools and support your business needs to build and market a successful local or global brand.
+    </p>
+    <ul class="global_proxy_lst">
+      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Innovative distributed trading ledger</li>
+      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Copy-trading technology</li>
+      <li>•&nbsp;&nbsp;&nbsp;&nbsp;24/5 client and technology support</li>
+      <li>•&nbsp;&nbsp;&nbsp;&nbsp;An easy-to-use, highly intuitive mobile trading app</li>
+      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Competitive spreads</li>
+      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Deep market liquidity</li>
+      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Advanced reporting</li>
+      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Exclusive promotions with our partner, Liverpool FC</li>
+      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Regulation by FCA and SCB</li>
+    </ul>
+    <h3 class="global_proxy_title">
+        <span>Looking to grow your business?</span><br>
+        <span>Let TigerWit’s experts deliver</span><br>
+        <span>a solution tailored to you.</span>
+    </h3>
+    <p class="global_proxy_tip">
+        Please complete the form below and we will be in touch to provide more information and answer any questions. We look forward to hearing from you.
+    </p>
+    <div class="global_proxy_form mg-tp-30" ng-controller="WebAgentController" ng-cloak>
+      <form class="account_login__form" name="agentForm" novalidate>
+          <div class="account-form-control-wrapper">
+              <input class="account-form-control"
+                     name="name"
+                     type="text"
+                     placeholder=""
+                     required
+                     ng-model="becomeAgent.name">
+              <span class="account-form-control-tip">Name</span>
+              <span class="star_tip">*</span>
+          </div>
+          <div class="account-form-control-wrapper">
+              <input class="account-form-control"
+                     name="country"
+                     type="text"
+                     placeholder=""
+                     required
+                     ng-model="becomeAgent.country.name_en">
+              <span class="account-form-control-tip">Country</span>
+              <span class="star_tip">*</span>
+              <select ng-model="becomeAgent.country" ng-options="country.name_en for country in countryList">
+                <!-- <option value=""></option>
+                <option ng-repeat="country in countryList">{{country.name_en}}</option> -->
+              </select>
+          </div>
+          <p class="global_proxy_tip mg-bt-20">
+              You should fill in one of email address or phone number as complusory information
+          </p>
+          <div class="account-form-control-wrapper">
+              <input class="account-form-control"
+                     name="email"
+                     type="text"
+                     placeholder=""
+                     ng-model="becomeAgent.email">
+              <span class="account-form-control-tip">Email</span>
+          </div>
+          <div class="account-form-control-wrapper">
+              <input class="account-form-control"
+                     name="phone"
+                     type="text"
+                     placeholder=""
+                     ng-model="becomeAgent.phone">
+              <span class="account-form-control-tip">Phone</span>
+          </div>
+          <div class="account-form-control-wrapper">
+            <textarea class="account-form-control" name="message" ng-model="becomeAgent.message"></textarea>
+            <span class="account-form-control-tip">Message</span>
+          </div>
+      </form>
+      <div class="btn-wrapper" style="width: 800px;">
+        <button class="btn btn-primary-gradient" ng-show="!loading" ng-click="submitForm()">Send</button>
+        <button class="btn btn-primary-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading">Send</button>
+        <span class="global_proxy_err_tip" ng-class="{'font-success' : error.success, 'font-warning': !error.success}" ng-show="error.is_succ">{{error.message}}</span>
+      </div>
+    </div>
+  </div>
+</div>
