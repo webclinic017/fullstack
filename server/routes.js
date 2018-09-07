@@ -27,16 +27,15 @@ var recordAccessTimes = require('./record_access_times');
 
 function setEnvCf(req, res) {
     new SetEnvConfig(req);
-
     envConfig = require('./get_env_config').envConfig;
-    URL_PATH = envConfig.url_path;
     COMPANY_NAME = envConfig.company_name;
-    Lang = require('./lang')();
     setCompanyCookie = require('./set_company_cookie');
+    setCompanyCookie(req, res);
+    Lang = require('./lang')();
+    URL_PATH = envConfig.url_path;
     global_modelRegular = require('./model/modelRegular')();
     gloal_modelRegularDetail = require('./model/modelRegularDetail');
     // console.log(global_modelRegular);
-    setCompanyCookie(req, res);
 }
 
 function extendPublic(data, req) {
@@ -56,6 +55,15 @@ function isMobile(req) {
     var deviceAgent = req.headers["user-agent"].toLowerCase();
     //var agentID = deviceAgent.match(/(iphone|ipod|ipad|android)/);
     return deviceAgent.match(/(iphone|ipod|ipad|android)/);
+}
+
+function checkGlobalOrCN (req, res, u) {
+    // u 是需要跳转404的域名 cn/global
+    // console.log(req.protocol);
+    var ou = u === 'cn' ? 'cn.tigerwit.com,cndemo.tigerwit.com' : 'globaldemo.tigerwit.com,global.tigerwit.com';
+    if (ou.indexOf(req.host) != -1) {
+        res.redirect(req.protocol+'://'+req.host+'/404');
+    }
 }
 
 module.exports = function (app) {
@@ -631,6 +639,7 @@ module.exports = function (app) {
     
     // 11月份活动
     app.route('/bd/t35').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
