@@ -1,6 +1,6 @@
 <div class="ranklist_banner" ng-class="{'imgEn': lang.isEnglish()}">
-    <div class="ranklist_banner__tip" ng-if="!lang.isEnglish()">
-        <p>{{ lang.text("companyNameEn") }} {{ lang.text("tigerWitID.master.masterSystem") }}</p>
+    <div class="ranklist_banner__tip">
+        <p>{{ lang.text("companyNameEn") }}{{ lang.text("tigerWitID.master.masterSystem") }}</p>
         <p>{{ lang.text("tigerWitID.master.tradeLikeMaster") }}</p>
     </div>
 </div>
@@ -13,7 +13,7 @@
                     <i class="fa fa-caret-down"></i>
                 </li>
                 <li ng-class="{active: rankOrder == 'thirty_max_retract'}" ng-click="changeRankOrder('thirty_max_retract')">
-                    {{ lang.text("tigerWitID.dataStatistics.maximumDrawdown") }}
+                    {{ lang.text("tigerWitID.dataStatistics.steadyg") }}
                     <i class="fa fa-caret-down"></i>
                 </li>
                 <li ng-class="{active: rankOrder == 'thirty_win_rate'}" ng-click="changeRankOrder('thirty_win_rate')">

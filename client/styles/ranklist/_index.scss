@@ -6,7 +6,7 @@
     background-size: cover;
     @include img-normal($image-path-base + "ranklist/ranklist-banner-new.jpg");
     &.imgEn{
-        @include img-normal($image-path-base + "ranklist/ranklist-banner-new_en.jpg");
+        @include img-normal($image-path-base + "ranklist/ranklist-banner-en.jpg");
     }
 
     @include e(tip) {

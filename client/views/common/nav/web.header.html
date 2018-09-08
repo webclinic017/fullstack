@@ -66,7 +66,7 @@
                     <!-- SettingInfoAvatarController -->
                     <img class="navbar_info__avatar" ng-show="!personal.addAvatarImg" ng-src="{{personalCookiesInfo.userAvatar}}">
                     <img class="navbar_info__avatar" ng-show="!!personal.addAvatarImg" ng-src="{{personal.addAvatarImg}}">
-                    <h2 class="navbar_info__username">{{personalCookiesInfo.userName || '**'}}</h2>
+                    <h2 class="navbar_info__username">{{(lang.isEnglish() && personalCookiesInfo.userNameEn) ? personalCookiesInfo.userNameEn : (personalCookiesInfo.userName || '**')}}</h2>
                 </a>
 
                 <a class="navbar_info__logout" href="" ng-click="logout()">

@@ -81,7 +81,7 @@
             <table class="table table-personal table-hover table-bordered font-size-12">
                 <colgroup>
                     <col width="8%">
-                    <col width="8%">
+                    <col width="8%" ng-if="!lang.isEnglish()">
                     <col width="8%">
                     <col width="8%">
                     <col width="9%">
@@ -94,7 +94,7 @@
                 <thead>
                     <tr>
                         <th><%= lang.text("oil23")%></th>
-                        <th class="pro-public__no-padding"><%= lang.text("oil24")%></th>
+                        <th class="pro-public__no-padding" ng-if="!lang.isEnglish()"><%= lang.text("oil24")%></th>
                         <th class="pro-public__no-padding"><%= lang.text("oil25")%></th>
                         <th><%= lang.text("oil26")%></th>
                         <th class="pro-public__no-padding"><%= lang.text("oil27")%></th>
@@ -108,7 +108,7 @@
                 <tbody>
                     <tr ng-if="oil" ng-cloak ng-repeat="item in oil">
                         <td>{{ item.name_en }}</td>
-                        <td>{{ item.name_zh }}</td>
+                        <td ng-if="!lang.isEnglish()">{{ item.name_zh }}</td>
                         <td class="pro-public__no-padding">{{ item.volum }}</td>
                         <td>{{ item.unit }}</td>
                         <td>{{ item.min_volum }}</td>

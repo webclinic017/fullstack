@@ -95,7 +95,7 @@
                                     type="text"
                                     placeholder="{{lang.text('tigerWitID.login.enterEmail')}}"
                                     required
-                                    ng-click="toTrackPhoneSensorsdata()"
+                                    ng-click="toTrackEmailSensorsdata()"
                                     on-enter="login('loginFormEmailPw')"
                                     ng-model="account.emailPwEmail">
                             <span class="account-form-control-tip" ng-show="account.emailPwEmail">{{lang.text('tigerWitID.login.email')}}</span>
@@ -381,7 +381,7 @@
                                    placeholder="{{lang.text('tigerWitID.login.enterEmail')}}"
                                    on-enter="getCaptcha('loginFormEmailV', 'emailVeEmail')"
                                    required
-                                   ng-click="toTrackPhoneSensorsdata()"
+                                   ng-click="toTrackEmailSensorsdata()"
                                    ng-model="account.emailVeEmail">
                             <span class="account-form-control-tip" ng-show="account.emailVeEmail">{{lang.text('tigerWitID.login.email')}}</span>
                             <span class="account_login__close" ng-show="account.emailVeEmail" ng-click="clearPhone('emailVeEmail')">
@@ -396,7 +396,7 @@
                                    placeholder="{{ lang.text('actLogin4') }}"
                                    on-enter="login('loginFormEmailV')"
                                    required
-                                   ng-click="toTrackCodeSensorsdata()"
+                                   ng-click="toTrackEmailCodeSensorsdata()"
                                    ng-model="account.emailVeCode">
                             <span class="account-form-control-tip" ng-if="account.emailVeCode">{{ lang.text('actLogin18') }}</span>
                             <span class="account_login__code_btn" ng-show="!codeBtnStatus.emailVeEmail.count" ng-click="getCaptcha('loginFormEmailV', 'emailVeEmail')">
