@@ -159,12 +159,11 @@ module.exports = function (app) {
         }
     })
 
-    app.route('/cn').get(function (req, res) {
+    app.route('/').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
             if (COMPANY_NAME === 'tigerwit') {
-                // res.redirect('http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex');
-                res.redirect('https://www.tigerwit.com/download');
+                res.redirect('https://cn.tigerwit.com/download');
                 return
             }
         } else {
@@ -175,11 +174,6 @@ module.exports = function (app) {
                 return
             }
         }
-    });
-
-    app.route('/').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('entry/index.html', extendPublic({}, req));
     });
 
     app.route('/blockchain').get(function (req, res) {
