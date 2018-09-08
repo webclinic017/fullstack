@@ -7,7 +7,7 @@
                 </a>
             </div>
             <div class="space_sidebar__user">
-                <span class="space_sidebar__user-username">{{ personal.username }}</span>
+                <span class="space_sidebar__user-username">{{(lang.isEnglish() && personal.username_en) ? personal.username_en : personal.username }}</span>
                 <div class="space_sidebar__user-usercode">{{lang.text('tigerWitID.titleM')}}{{ personal.user_code }}</div>
                 <!-- <span class="space_sidebar__user-position">
                     <i class="fa fa-map-marker"></i>

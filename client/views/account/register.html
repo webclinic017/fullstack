@@ -29,7 +29,7 @@
                         <form name="registerForm6" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglish() ? '0px' : '20px'}">
                             <div class="account-form-control-wrapper">
                                 <input class="account-form-control" autocomplete="off" name="emailText" type="text" placeholder="{{lang.text('tigerWitID.login.enterEmail')}}"
-                                    on-enter="getCaptcha('registerForm6', 'emailText')" required ng-click="toTrackPhoneSensorsdata()"
+                                    on-enter="getCaptcha('registerForm6', 'emailText')" required ng-click="toTrackEmailSensorsdata()"
                                     ng-model="account.emailText">
                                 <span class="account-form-control-tip" ng-show="account.emailText">{{ lang.text("actLogin17") }}</span>
                                 <span class="account_login__close" ng-show="account.emailText" ng-click="clearPhone('emailText')">
@@ -38,7 +38,7 @@
                             </div>
                             <div class="account-form-control-wrapper">
                                 <input class="account-form-control" autocomplete="off" name="emailCode" type="text" placeholder="{{ lang.text('actLogin4') }}"
-                                    on-enter="register('registerForm6')" required ng-click="toTrackCodeSensorsdata()" ng-model="account.emailCode">
+                                    on-enter="register('registerForm6')" required ng-click="toTrackEmailCodeSensorsdata()" ng-model="account.emailCode">
                                 <span class="account-form-control-tip" ng-if="account.emailCode">{{ lang.text('actLogin18') }}</span>
                                 <span class="account_login__code_btn" ng-show="!codeBtnStatus.emailText.count" ng-click="getCaptcha('registerForm6', 'emailText')">
                                     {{lang.text('tigerWitID.login.sendCode')}}
@@ -115,7 +115,7 @@
                         </div>
                         <p class="account_login__code-tip">{{ lang.text('actLogin23') }}</p>
                         <p class="account_login__code-jump">
-                            <a ui-sref="space.center.index" ng-click="openDredgeMdl({position: 'register'})">{{ lang.text('actLogin34') }}</a>
+                            <a ui-sref="space.center.index" ng-click="actLogin34()">{{ lang.text('actLogin34') }}</a>
                         </p>
                     </form>
                     <div class="account_login__btn_wrapper">

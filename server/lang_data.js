@@ -392,11 +392,11 @@ module.exports = function () {
         "home17": { "en": "Enjoy the same strategic trading as the masters.", "zh": "享受高手同策略交易" },
         "home18": { "en": "Be a master, earn 20% of followers' profit.", "zh": "成为高手，您将获得复制者盈利的20%" },
         "home19": { "en": "A Variety Of Trading Products", "zh": "多样化的交易产品" },
-        "home20": { "en": "Get access to investment of various international financial products through only one account.", "zh": "开设一个交易账户，轻松参与多个国际金融产品投资" },
+        "home20": { "en": "One account may be used to trade a variety of international financial products.", "zh": "开设一个交易账户，轻松参与多个国际金融产品投资" },
         //"home21": {"en": "Enjoy three kinds of leverages at the same time", "zh": "同时享受3种杠杆"},
         "home21": { "en": "Access 60+ Forex Pairs", "zh": "60余种货币对" },
         //"home22": {"en": "DMA service", "zh": "市场DMA直通式报价服务"},
-        "home22": { "en": "Enjoy Three types Forex Leverage: 50:1,100:1,200:1", "zh": "享受50、100、200倍3种杠杆" },
+        "home22": { "en": "Enjoy Three types Forex", "zh": "享受50、100、200倍3种杠杆" },
         //"home23": {"en": "STP, safe, transparent and assured", "zh": "STP交易安全，透明，放心"},
         "home23": { "en": "STP Quotation Service", "zh": "STP直通式报价服务" },
         //"home24": {"en": "High leverage, but low trading cost", "zh": "杠杆高，交易成本低"},
@@ -427,9 +427,9 @@ module.exports = function () {
         "home41": { "en": "One to one support service, VIP-level professional service", "zh": "一对一客服支持，VIP级专业服务" },
         "home42": { "en": "Leverage utilization", "zh": "杠杆利用" },
         "home43": { "en": "50-,100- and 200-times leverage, flexibly satisfying your needs in terms of risk control and capital management.", "zh": "50倍、100倍、200倍杠杆交易，灵活满足您对风险控制，资金管理的需求" },
-        "home44": { "en": "Convenient Payment Method", "zh": "便捷支付" },
-        "home45_2": { "en": "Mobile payment is convenient and fast", "zh": "移动支付方便、快速" },
-        "home45_3": { "en": "Deposit and withdrawal is efficient,safe and secure", "zh": "出入金高效、安全、稳妥" },
+        "home44": { "en": "Instant deposit and withdrawal", "zh": "便捷支付" },
+        "home45_2": { "en": "Real-time deposit and withdrawal.", "zh": "移动支付方便、快速" },
+        "home45_3": { "en": "Efficient,safe and secure.", "zh": "出入金高效、安全、稳妥" },
         "home46": { "en": "" + companyConfig.companyNameEn + "-Trade like a master", "zh": "" + companyConfig.companyNameZh + " — 人人都是投资高手" },
         "home47": { "en": "The secret of successful investment does not lie in the social influence and development prospect of a certain industry, but in a company's competitive edges and the sustainability of such edges. Only everlasting and profound product and service superiorities can generate generous returns for investors.", "zh": "投资的秘诀、不是评估某一行业对社会的影响有多大、或它的发展前景有多好、而是一间公司有多强的竞争优势、这优势可以维持多久。产品和服务的优越性持久而深厚、才能给投资者带来优厚的回报。" },
         "home48": { "en": "-Warren Buffett", "zh": "—— 沃伦·巴菲特" },
@@ -1003,7 +1003,7 @@ module.exports = function () {
         "video2": { "en": "" + companyConfig.companyNameEn + " on CCTV", "zh": "" + companyConfig.companyNameZh + "首席策略分析师李彭为您解盘。" },
 
         // 复制跟单-个人首页 traderIndex
-        "traderIndex1": { "en": "COPY", "zh": "复制" },
+        "traderIndex1": { "en": "Follow", "zh": "复制" },
         "traderIndex2": { "en": "COPIED", "zh": "已复制" },
         "traderIndex3": { "en": "Copiers", "zh": "复制者" },
         "traderIndex4": { "en": "Total Return", "zh": "总收益率" },
@@ -1020,8 +1020,8 @@ module.exports = function () {
         "traderIndex15": { "en": "Strategy", "zh": "交易策略" },
         "traderIndex16": { "en": "More Info", "zh": "更多介绍" },
         "traderIndex17": { "en": "Stats", "zh": "数据统计" },
-        "traderIndex18": { "en": "Holding Trades", "zh": "当前交易" },
-        "traderIndex19": { "en": "Trading History", "zh": "历史交易" },
+        "traderIndex18": { "en": "Open trades", "zh": "当前交易" },
+        "traderIndex19": { "en": "Trade history", "zh": "历史交易" },
 
         /*
          *  H5 页面 变量名格式为 m + 名字 eg: mAssetWithdraw

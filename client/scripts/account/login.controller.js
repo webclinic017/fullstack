@@ -159,6 +159,9 @@
                 // console.log(data);
                 if (data.is_succ) {
                     countDown(name);
+                    if( $scope.loginStep3 == 1){
+                        sa.track('email_code')
+                    }
                     sa.track('btn_register_code');
                 } else {
                     layer.msg(data.message);
@@ -178,11 +181,11 @@
             }
 
             // 神策统计 - 点击登录
-            // if(!is_agree) {
-            //     sa.track('click_login', {
-            //         login_type: $scope.loginType == 'code' ? '验证码登录' : lang.text("actLogin2")
-            //     });
-            // }
+            if(!is_agree) {
+                sa.track('click_login', {
+                    login_type: $scope.loginType == 'code' ? '验证码登录' : lang.text("actLogin2")
+                });
+            }
             
             var para = {};
             para.remember = $scope.rememberLoginStatus ? 1 : 0;
@@ -219,7 +222,7 @@
                     }, para);
                 }
             }
-            // (is_agree == "is_agree") && (para.is_agree = 1);
+            (is_agree == "is_agree") && (para.is_agree = 1);
             layer.load();
             $scope.loginBtnStatus = false;
 
@@ -286,14 +289,14 @@
                     }, 150);
                 } else {
                     // 登录时，用户不存在，返回 code 为 100504
-                    // if ((data.code == 100402) || (data.code == 100403)) {
-                    //     openWebAgmentModal(data.code, function(resolve, e){
-                    //         $scope.login(formName, 'is_agree');
-                    //         layer.close(resolve.layIndex)
-                    //     })
-                    // } else {
-                    layer.msg(data.message);
-                    // }
+                    if ((data.code == 100402) || (data.code == 100403)) {
+                        openWebAgmentModal(data.code, function(resolve, e){
+                            $scope.login(formName, 'is_agree');
+                            layer.close(resolve.layIndex)
+                        })
+                    } else {
+                        layer.msg(data.message);
+                    }
                 }
             });
         };

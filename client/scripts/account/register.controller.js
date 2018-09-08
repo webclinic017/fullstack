@@ -127,6 +127,9 @@
                 // console.log(data);
                 if (data.is_succ) {
                     countDown(name);
+                    if( $scope.registerStep3 == 2){
+                        sa.track('email_code')
+                    }
                     sa.track('btn_register_code');
                 } else {
                     layer.msg(data.message);
@@ -146,11 +149,11 @@
             }
 
             // // 神策统计 - 点击登录
-            if(!is_agree) {
-                sa.track('click_login', {
-                    login_type: $scope.loginType == 'code' ? '验证码登录' : lang.text("actLogin2")
-                });
-            }
+            // if(!is_agree) {
+            //     sa.track('click_login', {
+            //         login_type: $scope.loginType == 'code' ? '验证码登录' : lang.text("actLogin2")
+            //     });
+            // }
             var para = {
                 login_type: 2,
                 lp: $state.params.lp,
@@ -185,6 +188,13 @@
                     // 新用户
                     $scope.registerStep1 = 2;
                     $scope.$emit('relogin_info', 'is_register');
+                    // 神策统计 - 注册
+                    $timeout(function () {
+                        sa.track('login', {
+                            login_isNew: true,
+                            registration_type: $scope.registerStep3 == 1 ? "手机注册" : "邮箱注册"
+                        });
+                    }, 150);
                     return;
                 }else {
                     if ((data.code == 100402) || (data.code == 100403)) {
@@ -225,7 +235,12 @@
                 }
             });
         };
-
+        $scope.actLogin34 = function(){
+            $timeout(function () {
+                sa.track('skip_register');
+            }, 150);
+            $scope.$emit('global.openDredgeMdl', {position: 'register'});
+        }
 
         // 获取验证码倒计时
         function countDown (codeType) {

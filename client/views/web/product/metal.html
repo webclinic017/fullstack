@@ -79,7 +79,7 @@
             <table class="table table-personal table-hover table-brodered font-size-12">
                 <colgroup>
                     <col width="10%">
-                    <col width="10%">
+                    <col width="10%" ng-if="!lang.isEnglish()">
                     <col width="10%">
                     <col width="10%">
                     <col width="11%">
@@ -90,7 +90,7 @@
                 <thead>
                     <tr>
                         <th><%= lang.text("metal18")%></th>
-                        <th><%= lang.text("metal19")%></th>
+                        <th ng-if="!lang.isEnglish()"><%= lang.text("metal19")%></th>
                         <th><%= lang.text("metal20")%><br>(<%= lang.text("metal21")%>)</th>
                         <th><%= lang.text("metal22")%></th>
                         <th><%= lang.text("metal23")%></th>
@@ -101,8 +101,8 @@
                 </thead>
                 <tbody>
                     <tr ng-if="metal" ng-repeat="item in metal" ng-cloak>
-                         <td>{{ item.name_en }}</td>
-                        <td class="pro-public__no-padding">{{ item.name_zh }}</td>
+                        <td>{{ item.name_en }}</td>
+                        <td class="pro-public__no-padding" ng-if="!lang.isEnglish()">{{ item.name_zh }}</td>
                         <td>{{ item.dot }}</td>
                         <td>{{ item.lever }}</td>
                         <td>{{ item.fixed }}</td>
@@ -113,7 +113,7 @@
                 </tbody>
             </table>
             <div style="padding-top: 10px;">
-                注：MT4平台时间为GMT+3时间
+                <%= lang.text("platformTimeNote")%>
             </div>
         </div>
     </div>

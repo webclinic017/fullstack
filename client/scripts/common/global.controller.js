@@ -15,6 +15,7 @@
         $rootScope.personalCookiesInfo = {
             userCode: $cookies["user_code"],
             userName: decodeURIComponent($cookies["username"] || ''),
+            userNameEn: $cookies["username_en"] || '',
             userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md + '?timestamp=' + (+new Date())
         };
         $scope.userstatus = { logined: false };
@@ -106,6 +107,7 @@
                 $rootScope.personalCookiesInfo = {
                     userCode: $cookies["user_code"],
                     userName: decodeURIComponent($cookies["username"] || ''),
+                    userNameEn: $cookies["username_en"] || '',
                     userAvatar: config.avatarCfg.path + $cookies["user_code"] + config.avatarCfg.md + '?timestamp=' + (+new Date())
                 };
             } else {
@@ -119,6 +121,7 @@
                     $rootScope.personalCookiesInfo = {
                         userCode: $cookies["user_code"],
                         userName: decodeURIComponent($cookies["username"] || ''),
+                        userNameEn: $cookies["username_en"] || '',
                         userAvatar: config.avatarCfg.path + 'male' + config.avatarCfg.md
                     };
                 }, 100);
@@ -255,8 +258,14 @@
         $scope.toTrackPhoneSensorsdata = function () {  // 点击手机号码输入框
             sa.track('inp_PN');
         };
+        $scope.toTrackEmailSensorsdata = function () {  // 点击邮箱输入框
+            sa.track('inp_email');
+        };
         $scope.toTrackCodeSensorsdata = function () {  // 点击验证码输入框
             sa.track('inp_code');
+        };
+        $scope.toTrackEmailCodeSensorsdata = function () {  // 点击邮箱验证码输入框
+            sa.track('inp_email_code');
         };
         $scope.toAuthenTypeSensorsdata = toAuthenTypeSensorsdata;
         function toAuthenTypeSensorsdata (type) {  // 选择开户类型
