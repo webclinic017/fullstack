@@ -10,10 +10,10 @@
 
     function WebDownloadController ($scope) {
 
-        $(".img_box").qrcode({
-            text: "http://192.168.1.61/m/blank",
-            width: 114,
-            height: 114
-        });
+        // $(".img_box").qrcode({
+        //     text: "http://192.168.1.61/m/blank",
+        //     width: 114,
+        //     height: 114
+        // });
     }
 })();

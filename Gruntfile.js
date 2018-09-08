@@ -269,7 +269,8 @@ module.exports = function (grunt) {
                             return url;
                         }
                         // console.log('----- grunt-cdnify maped url -----', url)
-                        return CDN_URL + url;
+                        // return CDN_URL + url;
+                        return url;
                     }
                 },
                 files: [{
@@ -492,7 +493,7 @@ module.exports = function (grunt) {
         login_public_key = companyInfo[company][url]["login_public_key"];
 
         var envConfig = fs.readFileSync(envConfigPath + 'processENV.origin.config.js', 'utf8');
-        envConfig = envConfig.replace('tigerwit', company).replace('development', node_env).replace('path', url_path);
+        envConfig = envConfig.replace('tigerwit', company).replace('development', node_env).replace('path', url_path).replace('tiger_cdn', CDN_URL);
         fs.writeFileSync(envConfigPath + 'processENV.config.js', envConfig, 'utf8');
         var companyName = require(envConfigPath + 'processENV.config').COMPANY_NAME;
 

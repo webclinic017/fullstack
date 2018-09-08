@@ -1,25 +1,29 @@
-<%if(lang.isCompany("tigerwit")){%>
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '246588836047542');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=246588836047542&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
 <script>
     //声明_czc对象:
     var _czc = _czc || [];
     //绑定siteid
     _czc.push(["_setAccount", "1260394016"]);
 </script>
-<%} else if(lang.isCompany("pkds")){%>
-<script>
-    //声明_czc对象:
-    var _czc = _czc || [];
-    //绑定siteid
-    _czc.push(["_setAccount", "1260871639"]);
-</script>
-<%} else {%>
-    <script>
-        var _czc = _czc || [];
-    </script>
-<%}%>
 <script>
     var allowPath = [
-        'www.tigerwit.com',
+        'global.tigerwit.com',
         'cn.tigerwit.com',
         'bd.tigerwitfx.com'
     ];
