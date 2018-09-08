@@ -32,7 +32,7 @@
                                 </li>
                                 <% if(lang.isCompany('tigerwit')){%>
                                 <li class="phone">
-                                    <a href="https://itunes.apple.com/app/id1091437876">
+                                    <a href="<%= req.host.indexOf('global') != -1 ? 'https://itunes.apple.com/us/app/tigerwit/id1091437876?l=zh&ls=1&mt=8' : 'https://itunes.apple.com/app/id1091437876'%>">
                                         <i class="fa fa-apple" aria-hidden="true"></i>
                                         <%= lang.text('downloadApp.iPhoneVersion')%>
                                     </a>
@@ -40,7 +40,20 @@
                                 </li>
                                 <%}%>
                             </ul>
-                            <% if(lang.isCompany('tigerwit')){%>
+                            <% if (req.host.indexOf('global') != -1) {%>
+                            <div class="code global">
+                                <div class="img_box">
+                                    <img src="/images/web/download_andriod_global.png" alt="code" draggable=false>
+                                    <span>Andriod</span>
+                                </div>
+                                <div class="img_box">
+                                    <img src="/images/web/download_ios_global.png" alt="code" draggable=false>
+                                    <span>Ios</span>
+                                </div>
+                                <p><%= lang.text('downloadApp.tip5')%></p>
+                                <p><%= lang.text('downloadApp.tip6')%></p>
+                            </div>
+                            <%} else {%>
                             <div class="code">
                                 <div class="img_box">
                                     <img src="/images/web/download_m_blank.png" alt="code" draggable=false>
@@ -53,26 +66,25 @@
                     </div>
                     <div class="swiper-container" tw-carousel data-type="gradient">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                            <div class="swiper-slide <%= lang.currentLanguage()%>">
                                 <div class="download_banner__ctn-des">
                                     <h2><%= lang.text('downloadApp.tip1')%></h2>
                                     <span><%= lang.text('downloadApp.tip2')%></span>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide <%= lang.currentLanguage()%>">
                                 <div class="download_banner__ctn-des">
                                     <h2><%= lang.text('downloadApp.regularFollow')%></h2>
                                     <span><%= lang.text('downloadApp.tip18')%></span>
                                 </div>
                             </div>
-                            <div class="swiper-slide">
+                            <div class="swiper-slide <%= lang.currentLanguage()%>">
                                 <div class="download_banner__ctn-des">
                                     <h2><%= lang.text('downloadApp.mobileEndTradingSystem')%></h2>
                                     <span><%= lang.text('downloadApp.tip19')%></span>
                                 </div>
                             </div>
                         </div>
-                        <!-- Add Pagination -->
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
@@ -113,7 +125,7 @@
                     <h3><%= lang.text('companyZhName') + lang.text('downloadApp.tip15')%></h3>
                     <p><%= lang.text('downloadApp.tip16')%></p>
                 </div>
-                <div class="download_bottom">
+                <!-- <div class="download_bottom">
                     <div class="download_bottom__ctn <%= lang.background().company%>">
                         <ul class="download_bottom__ctn-plat">
                             <li class="phone">
@@ -132,7 +144,7 @@
                             <%}%>
                         </ul>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="footer">
