@@ -92,9 +92,9 @@
             var lastPage = this.makePage(this.config.total, this.config.total,
                     this.isActive(this.config.total), false);
             pages.push(lastPage);
-            var previousPage = this.makePage(this.config.page - 1, '< ' + lang.text("tigerWitID.next"), false, this.noPrevious());
+            var previousPage = this.makePage(this.config.page - 1, '< ' + lang.text("tigerWitID.previous"), false, this.noPrevious());
             pages.unshift(previousPage);
-            var nextPage = this.makePage(this.config.page + 1, lang.text("tigerWitID.previous") + ' >', false, this.noNext());
+            var nextPage = this.makePage(this.config.page + 1, lang.text("tigerWitID.next") + ' >', false, this.noNext());
             pages.push(nextPage);
             return pages;
         }

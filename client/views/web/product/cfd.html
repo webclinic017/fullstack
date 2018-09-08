@@ -75,7 +75,7 @@
             <table class="table table-personal table-hover table-bordered font-size-12">
                 <colgroup>
                     <col width="8%">
-                    <col width="12%">
+                    <col width="12%" ng-if="!lang.isEnglish()">
                     <col width="12%">
                     <col width="10%">
                     <col width="8%">
@@ -86,7 +86,7 @@
                 <thead>
                     <tr>
                         <th><%= lang.text("cfd22")%></th>
-                        <th><%= lang.text("cfd23")%></th>
+                        <th ng-if="!lang.isEnglish()"><%= lang.text("cfd23")%></th>
                         <th><%= lang.text("cfd24")%></th>
                         <th class="pro-public__no-padding"><%= lang.text("cfd26")%></th>
                         <th class="pro-public__no-padding"><%= lang.text("cfd27")%></th>
@@ -98,7 +98,7 @@
                 <tbody>
                     <tr ng-if="cfd" ng-repeat="item in cfd" ng-cloak>
                         <td>{{ item.name_en }}</td>
-                        <td class="pro-public__no-padding">{{ item.name_zh }}</td>
+                        <td class="pro-public__no-padding" ng-if="!lang.isEnglish()">{{ item.name_zh }}</td>
                         <td>{{ item.volum }}</td>
                         <td>{{ item.min_volum }}</td>
                         <td>{{ item.max_volum }}</td>
