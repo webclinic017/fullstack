@@ -590,6 +590,7 @@ module.exports = function (app) {
 
     //理财江湖
     app.route('/bd/t34').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit') {
             if (isMobile(req)) {
@@ -604,6 +605,7 @@ module.exports = function (app) {
 
     // 新手介绍页
     app.route('/bd/greenhand').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit') {
             if (isMobile(req)) {
@@ -617,6 +619,7 @@ module.exports = function (app) {
     });
     // 直播落地页
     app.route('/bd/live').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit') {
             if (isMobile(req)) {
@@ -628,6 +631,7 @@ module.exports = function (app) {
     });
     // 王者荣耀活动页
     app.route('/bd/honor').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit') {
             if (isMobile(req)) {
@@ -639,12 +643,14 @@ module.exports = function (app) {
     });
     // 微信小游戏
     app.route('/bd/t31_game').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         res.render('bd/t31/h5.game.html', extendPublic({}, req))
     });
 
     // t33 作为固定推广链接，要更新最新的落地页到这个地址
     app.route('/bd/t33').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
@@ -673,6 +679,7 @@ module.exports = function (app) {
     });
     // global活动页
     app.route('/bonus').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'cn');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
@@ -687,6 +694,7 @@ module.exports = function (app) {
 
     // 联众德州活动
     app.route('/bd/t36_game').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (isMobile(req)) {
             res.render('bd/t36/h5.game.html', extendPublic({}, req))
@@ -697,6 +705,7 @@ module.exports = function (app) {
 
     // 品牌部活动 － 申请代理
     app.route('/bd/brand_proxy').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         res.render('bd/brand/proxy', extendPublic({
             in_phone: isMobile(req) ? 'y' : 'n'
@@ -704,12 +713,14 @@ module.exports = function (app) {
     });
     // 品牌部活动 － fx168
     app.route('/bd/brand_fx168').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         res.render('bd/brand/fx168_web', extendPublic({}, req));
     });
 
     // 抽奖活动
     app.route('/bd/prize').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         // console.log(req.query.source);
         var s = req.query.source;
 
@@ -729,6 +740,7 @@ module.exports = function (app) {
     });
     // 市场部 - 月报生成
     app.route('/bd/mon_report').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         res.render('bd/mon_report/index', extendPublic({}, req));
     });
@@ -802,6 +814,7 @@ module.exports = function (app) {
 
     // 一键原谅活动
     app.route('/bd/forgiveme').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
@@ -816,6 +829,7 @@ module.exports = function (app) {
 
     // 四位一体
     app.route('/bd/4in1').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
@@ -830,6 +844,7 @@ module.exports = function (app) {
 
     // 电汇入金活动
     app.route('/bd/tele').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
@@ -844,6 +859,7 @@ module.exports = function (app) {
 
     // 新春抽奖活动
     app.route('/bd/r01').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit') {
             if (isMobile(req)) {
@@ -857,6 +873,7 @@ module.exports = function (app) {
     });
     // 淘金币活动
     app.route('/bd/r02').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
@@ -871,6 +888,7 @@ module.exports = function (app) {
 
     // 招募高手
     app.route('/bd/recruit_master').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit') {
             if (isMobile(req)) {
@@ -897,6 +915,7 @@ module.exports = function (app) {
     });
     // 刮奖
     app.route('/bd/lottery').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {

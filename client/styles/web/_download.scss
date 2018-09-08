@@ -68,6 +68,9 @@
   }
   .swiper-slide:nth-child(1) {
     background: url($image-path-web + 'download_banner3.png') no-repeat top center;
+    &.en {
+      background: url($image-path-web + 'download_banner3_en.png') no-repeat top center;
+    }
   }
   .swiper-slide:nth-child(2) {
     background: url($image-path-web + 'download_banner1.png') no-repeat top center;
@@ -149,6 +152,17 @@
           p {
             text-align: center;
             font-size: 13px;
+          }
+          &.global {
+            margin-left: 30px;
+            .img_box {
+              float: left;
+              width: inherit;
+              text-align: center;
+              margin-bottom: 30px;
+              margin-right: 10px;
+              overflow: inherit;
+            }
           }
         }
       }

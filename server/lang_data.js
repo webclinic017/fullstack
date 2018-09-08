@@ -2073,7 +2073,7 @@ module.exports = function () {
             tip3: {zh: "支持Android2.3.3及以上", en: "Support Android2.3.3 and above"},
             tip4: {zh: "支持苹果IOS7.0及以上", en: "Support apple IOS7.0 and above"},
             tip5: {zh: "扫码轻松赚收益", en: "Scan QR code and take profit easily"},
-            tip6: {zh: "请使用手机浏览器扫描功能", en: "Please use Please use the mobile browser scan function"},
+            tip6: {zh: "请使用手机浏览器扫描功能", en: "Please use the mobile browser scan function"},
             tip7: {zh: "六大投资优势 体验完美交易", en: "Six investment advantages, experience perfect trading."},
             tip8_1: {zh: "在", en: "In "},
             tip8_2: {zh: "，已有86523人选择外汇跟单交易", en: ", 86,523 people have chosen transaction by following masters"},
