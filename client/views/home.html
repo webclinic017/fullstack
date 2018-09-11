@@ -9,7 +9,7 @@
     <!-- endbuild -->
 
     <% include /common/statistic/main.html %>
-
+<%if (req.host.indexOf('global') != -1) {%>
 <!-- Code for Action: TigerWit - Landing pixel Global -->
 <!-- Begin Sizmek DSP Conversion Action Tracking Code Version 9 -->
 <script type='text/javascript'>
@@ -40,6 +40,7 @@
 </iframe>
 </noscript>
 <!-- End Sizmek DSP Conversion Action Tracking Code Version 9 -->
+<%}%>
 </head>
 <body ng-app="fullstackApp" class="<%= lang_class%>">
 <div ng-controller="GlobalController">

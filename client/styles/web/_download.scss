@@ -232,16 +232,14 @@
       margin: 0 auto;
       padding-left: 100px;
       padding-right: 50px;
-      // background: url($image-path-web + "download_phone.png") no-repeat bottom right;
-      // background-size: 545px;
+      position: relative;
 
-      &.tigerwit {
-        background: url($image-path-web + "download_phone_new.png") no-repeat bottom right;
-        background-size: 545px;
-      }
-      &.pkds {
-        background: url($image-path-web + "download_phone_pkds.png") no-repeat bottom right;
-        background-size: 545px;
+      img {
+        height: 520px;
+        float: right;
+        position: absolute;
+        right: 30px;
+        bottom: -42px;
       }
       @include m(plat) {
         margin-top: 200px;
