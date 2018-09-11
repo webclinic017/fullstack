@@ -56,7 +56,7 @@
                             <%} else {%>
                             <div class="code">
                                 <div class="img_box">
-                                    <img src="/images/web/download_m_blank.png" alt="code" draggable=false>
+                                    <img src="/images/web/download_m_blank_new.png" alt="code" draggable=false>
                                 </div>
                                 <p><%= lang.text('downloadApp.tip5')%></p>
                                 <p><%= lang.text('downloadApp.tip6')%></p>
@@ -125,7 +125,7 @@
                     <h3><%= lang.text('companyZhName') + lang.text('downloadApp.tip15')%></h3>
                     <p><%= lang.text('downloadApp.tip16')%></p>
                 </div>
-                <!-- <div class="download_bottom">
+                <div class="download_bottom">
                     <div class="download_bottom__ctn <%= lang.background().company%>">
                         <ul class="download_bottom__ctn-plat">
                             <li class="phone">
@@ -134,17 +134,20 @@
                                     <%= lang.text('downloadApp.androidVersion')%>
                                 </a>
                             </li>
-                            <% if(lang.isCompany('tigerwit')){%>
                             <li class="phone">
                                 <a href="https://itunes.apple.com/cn/app/%E8%80%81%E8%99%8E%E5%A4%96%E6%B1%87/id1091437876?platform=iphone&preserveScrollPosition=true#platform/iphone">
                                     <i class="fa fa-apple" aria-hidden="true"></i>
                                     <%= lang.text('downloadApp.iPhoneVersion')%>
                                 </a>
                             </li>
-                            <%}%>
                         </ul>
+                        <% if (lang.currentLanguage() === 'en') {%>
+                            <img src="/images/web/download_phone_en.png" alt="">
+                        <%} else {%>
+                            <img src="/images/web/download_phone_cn.png" alt="">
+                        <%}%>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
         <div class="footer">
