@@ -1,0 +1,278 @@
+@include b(third_app_common) {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+  ul {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px;
+    li {
+      padding: 0 5px;
+      span {
+        color: #999;
+        font-size: 16px;
+        padding-bottom: 2px;
+        &.active {
+          color: #333;
+          border-bottom: 2px solid #333;
+        }
+      }
+    }
+  }
+  @include e(item) {
+    float: left;
+    width: 25%;
+
+  }
+  @include e(select) {
+    float: left;
+    width: 75%;
+    line-height: 20px;
+    .info {
+      color: #4a90e2;
+      font-size: 16px;
+    }
+    .tag {
+      font-size: 12px;
+      padding: 0px 10px;
+      border-radius: 100px;
+    }
+    .tip {
+      color: #999;
+      padding-top: 5px;
+    }
+    .detail {
+      color: #4a90e2;
+      padding-top: 5px;
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+  }
+  @include e(inp) {
+    float: left;
+    width: 100%;
+    font-size: 26px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+    position: relative;
+    .icon {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    input {
+      width: 100%;
+      padding-left: 24px;
+    }
+    input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+      font-size: 26px;
+    } 
+    input:-moz-placeholder, textarea:-moz-placeholder { 
+        font-size: 26px;
+    } 
+    input::-moz-placeholder, textarea::-moz-placeholder { 
+        font-size: 26px;
+    } 
+    input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+        font-size: 26px;
+    }
+  }
+  @include e(btn) {
+    .btn-tip {
+      font-size: 12px;
+      padding-bottom: 5px;
+      color: #fe3b2f;
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    .btn {
+      width: 100%;
+      border-radius: 200px;
+      margin: 0px;
+      &.disabled {
+        opacity: 0.5;
+      }
+    }
+  }
+  @include e(rate) {
+    float: left;
+    font-size: 12px;
+    color: #999;
+    margin-top: 8px;
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
+  @include e(message) {
+    display: none;
+    .tit, .sub_tit {
+      font-size: 24px;
+    }
+    .tip {
+      color: #666;
+    }
+    .btn-wrapper {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+    }
+    .wallet, .transfer {
+      display: none;
+      &.active {
+        display: block;
+      }
+    }
+    &.active {
+      display: block;
+    }
+  }
+}
+.third_app_deposit, .third_app_withdraw, .third_app_evidence {
+  display: none;
+  padding: 45px 16px 20px;
+  &.active {
+    display: block;
+  }
+}
+.third_app_template_wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.2);
+  z-index: 10000;
+  display: none;
+  .loading_modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    .loading_wrapper {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -30px;
+      margin-left: -30px;
+      background: rgba(255,255,255,0.8);
+      border-radius: 6px;
+      text-align: center;
+    }
+    img {
+      width: 50%;
+      margin-top: 25%;
+    }
+    &.active {
+      display: block;
+    }
+  }
+  .message_modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    p {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      max-width: 80%;
+      background: rgba(0,0,0,0.5);
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      border-radius: 4px;
+    }
+    &.active {
+      display: block;
+    }
+  }
+  .bottom_modal {
+    position: absolute;
+    bottom: -400px;
+    left: 0;
+    height: 400px;
+    width: 100%;
+    transition: all 0.2s;
+    background: #fff;
+    .title {
+      position: relative;
+      margin: 15px 16px;
+      .cancel {
+        font-size: 14px;
+        font-weight: 400;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        color: #4a90e2;
+      }
+    }
+    .sub_title {
+      font-weight: 400;
+      margin-left: 20px;
+    }
+    .content {
+      max-height: 345px;
+      overflow-y: auto;
+      padding: 0 16px;
+      &.account_content {
+        max-height: 228px;
+      }
+      &.confirm_content {
+        max-height: 280px;
+      }
+    }
+  }
+  .middle_modal {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 100%;
+    transition: all 0.2s;
+    background: #fff;
+    padding: 20px 20px 40px;
+    border-radius: 16px;
+    .title {
+      margin: 0;
+      text-align: center;
+      position: relative;
+      .cancel {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 24px;
+        line-height: 22px;
+        font-weight: 400;
+      }
+    }
+    .detail {
+      .tip {
+        color: #999;
+        padding: 15px 0px 30px;
+      }
+      .btn_wrapper {
+        .btn {
+          width: 100%;
+          font-size: 14px;
+          &.btn-info {
+            background-color: transparent;
+            border-color: #ccc;
+          }
+        }
+      }
+    }
+  }
+  &.active {
+    display: block;
+  }
+}

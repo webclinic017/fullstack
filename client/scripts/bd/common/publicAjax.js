@@ -71,6 +71,19 @@
         checkLotteryStatus: origin_app + '/activity/user_status', //get
         startLottery: origin_app + '/activity/scratch', //get
         shareLottery: origin_app + '/activity/share', //get
+
+        //第三方充值体现相关页面
+        getThirdDepositPlatform: origin + '/payment/deposit/platform', //get
+        getThirdTradeAccount: origin + '/trade_account/list', //get
+        getThirdWalletBalance: origin + '/wallet/valid_balance', //get
+        getThirdInfo: origin + '/user/info', //get
+        depositThird: origin + '/payment/deposit', //post
+        depositThirdTele: origin + '/payment/deposit/transfer', //post
+        checkThirdDepositBank: origin + '/payment/deposit_card', //put
+        getThirdEvidenceLst: origin + '/payment/evidence_list', //get
+        uploadThirdEvidence: origin + '/payment/evidence', //post
+        cancelThirdEvidence: origin + '/payment/evidence_cancel', //post
+        getThirdWithdrawPlatform: origin + '/payment/withdraw_list' //get
     };
 
     w.publicRequest = publicRequest;
@@ -135,9 +148,16 @@
 
         function toLogin () {
             setTimeout(function () {
-                callNative({
-                    type: "login"
-                });
+                try {
+                    callNative({
+                        type: "login"
+                    });
+                } catch (e) {}
+                try {
+                    openThirdNative({
+                        type: "login"
+                    });
+                } catch (e) {}
             }, 1000);
         }
 
