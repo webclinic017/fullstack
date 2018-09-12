@@ -17,7 +17,7 @@
                         version_name : "V3.1.0",
                         description: "本次更新：\n1.新版本完善了开户流程\n2.优化了电汇入金功能\n3支持中英文语言切换\n4.适配Android8.0\n5.bug修复\n赶快更新享受新的交易体验！",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/apk/tigerwit_v1.0.1.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v1.0.1.apk",
                         force_update : true
                     }
                 }
@@ -36,7 +36,7 @@
                         version_name : "V3.1.0",
                         description: "本次更新：\n1.新版本完善了开户流程\n2.优化了电汇入金功能\n3支持中英文语言切换\n4.适配Android8.0\n5.bug修复\n赶快更新享受新的交易体验！",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/apk/tigerwit_v1.0.1.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v1.0.1.apk",
                         force_update : true
                     }
                 }
@@ -97,7 +97,7 @@
                         version_name : "V2.2.3",
                         description: "The new version optimizes the Fixing known bugs\nUpdate now to enjoy the new trading experience!",
                         updated_description: "70% users are using new version",
-                        url: "https://static.tigerwitfx.com/apk/tigerwit_v2.2.3.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.2.3.apk",
                         force_update : true
                     }
                 }
@@ -116,7 +116,7 @@
                         version_name : "V2.2.3",
                         description: "新版本修复了紧急BUG，赶快更新享受新的交易体验！",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/apk/tigerwit_v2.2.3.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.2.3.apk",
                         force_update : true
                     }
                 }
