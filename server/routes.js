@@ -176,6 +176,23 @@ module.exports = function (app) {
         }
     });
 
+    app.route('/cn').get(function (req, res) {
+        setEnvCf(req, res);
+        if (isMobile(req)) {
+            if (COMPANY_NAME === 'tigerwit') {
+                res.redirect('https://cn.tigerwit.com/download');
+                return
+            }
+        } else {
+            if (COMPANY_NAME === 'tigerwit') {
+                res.render('home.html', extendPublic({
+                    pageInfo: {}
+                }, req));
+                return
+            }
+        }
+    });
+
     app.route('/blockchain').get(function (req, res) {
         setEnvCf(req, res);
         res.render('entry/blockchain.html', extendPublic({}, req));
