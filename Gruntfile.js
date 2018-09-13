@@ -270,6 +270,7 @@ module.exports = function (grunt) {
                         }
                         // console.log('----- grunt-cdnify maped url -----', url)
                         return CDN_URL + url;
+                        // return url;
                     }
                 },
                 files: [{
@@ -485,14 +486,14 @@ module.exports = function (grunt) {
         if (node_env == "pro") node_env = "production";
         // set CDN URL
         // 通行证暂时不使用CDN 2018.05.29
-        // CDN_URL = url === 'www' ? 'https://static.tigerwitfx.com' : 'https://staticdemo.tigerwitfx.com';
+        CDN_URL = url === 'www' ? 'https://static.tigerwitfx.com' : 'https://staticdemo.tigerwitfx.com';
         var url_path, login_public_key;
 
         url_path = companyInfo[company][url]["url_path"];
         login_public_key = companyInfo[company][url]["login_public_key"];
 
         var envConfig = fs.readFileSync(envConfigPath + 'processENV.origin.config.js', 'utf8');
-        envConfig = envConfig.replace('tigerwit', company).replace('development', node_env).replace('path', url_path);
+        envConfig = envConfig.replace('tigerwit', company).replace('development', node_env).replace('path', url_path).replace('tiger_cdn', CDN_URL);
         fs.writeFileSync(envConfigPath + 'processENV.config.js', envConfig, 'utf8');
         var companyName = require(envConfigPath + 'processENV.config').COMPANY_NAME;
 
@@ -501,12 +502,6 @@ module.exports = function (grunt) {
         AS = AS.replace('tigerwit', companyName).replace('publicKey', login_public_key);
         fs.writeFileSync(scriptPath + 'whiteLabel.service.js', AS, 'utf8');
 
-        // param -> tigerwit, pkds
-        var param = companyName || "tiger";
-        // console.info("tiger ->", stylePath, param);
-        var cont = fs.readFileSync(whiteLabelPath + '_variables_' + param + '.scss', 'utf8');
-        // console.info("tiger", cont);
-        fs.writeFileSync(stylePath + '_variables.scss', cont, 'utf8');
         console.log('whiteLabel task finished...');
     }
 

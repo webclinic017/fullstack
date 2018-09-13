@@ -68,6 +68,9 @@
   }
   .swiper-slide:nth-child(1) {
     background: url($image-path-web + 'download_banner3.png') no-repeat top center;
+    &.en {
+      background: url($image-path-web + 'download_banner3_en.png') no-repeat top center;
+    }
   }
   .swiper-slide:nth-child(2) {
     background: url($image-path-web + 'download_banner1.png') no-repeat top center;
@@ -150,6 +153,17 @@
             text-align: center;
             font-size: 13px;
           }
+          &.global {
+            margin-left: 30px;
+            .img_box {
+              float: left;
+              width: inherit;
+              text-align: center;
+              margin-bottom: 30px;
+              margin-right: 10px;
+              overflow: inherit;
+            }
+          }
         }
       }
     }
@@ -218,16 +232,14 @@
       margin: 0 auto;
       padding-left: 100px;
       padding-right: 50px;
-      // background: url($image-path-web + "download_phone.png") no-repeat bottom right;
-      // background-size: 545px;
+      position: relative;
 
-      &.tigerwit {
-        background: url($image-path-web + "download_phone_new.png") no-repeat bottom right;
-        background-size: 545px;
-      }
-      &.pkds {
-        background: url($image-path-web + "download_phone_pkds.png") no-repeat bottom right;
-        background-size: 545px;
+      img {
+        height: 520px;
+        float: right;
+        position: absolute;
+        right: 30px;
+        bottom: -42px;
       }
       @include m(plat) {
         margin-top: 200px;

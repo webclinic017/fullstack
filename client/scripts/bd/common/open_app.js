@@ -10,7 +10,10 @@
     var timer = null;
 
     w.openInApp = function (page) {
-        console.log(page);
+        // console.log(w.location.hostname);
+        if (w.location.hostname === 'global.tigerwit.com' || w.location.hostname === 'globaldemo.tigerwit.com') {
+            url.down = isAndriod() ? 'https://play.google.com/store/apps/details?id=com.tigerwit.forex' : 'https://itunes.apple.com/cn/app/id1091437876?mt=8';
+        }
         var userAgent = navigator.userAgent;
         if(/MicroMessenger/gi.test(userAgent)) {
             // 微信浏览器中

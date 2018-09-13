@@ -904,7 +904,10 @@
         margin-top: 77px;
         width: 489px;
         height: 432px;
-        padding-top: 16.5px
+        padding-top: 16.5px;
+        &.en {
+            padding-top: 53px;
+        }
     }
 
     @include e(title) {
@@ -931,7 +934,6 @@
         text-align: right;
         .index2-product__btn {
             &:hover {
-                border: none;
                 background: #fff;
                 color: $brand-primary;
             }

@@ -54,11 +54,11 @@ module.exports = {
     },
     "mInvite14": {
         "zh": "赢取10美金",
-        "en": "Win $10"
+        "en": "Earn USD10"
     },
     "mInvite15": {
         "zh": "您还没有邀请好友哦",
-        "en": "You have not invite a friend"
+        "en": "You have not invited ant friends"
     },
     "mInvite16": {
         "zh": "已邀请人数",
