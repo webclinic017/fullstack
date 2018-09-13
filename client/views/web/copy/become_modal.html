@@ -30,6 +30,7 @@
                                        type="text"
                                        placeholder="请选择"
                                        required
+                                       disabled
                                        ng-model="becomeModal.tradeExperience.key"
                                        ng-class="{'form-control-error': error.tradeExperience.show && becomeMasterForm.tradeExperience.$invalid}"
                                        ng-blur="showErr('tradeExperience')"
@@ -64,6 +65,7 @@
                                        type="text"
                                        placeholder="请选择"
                                        required
+                                       disabled
                                        ng-model="becomeModal.tradeWay.key"
                                        ng-class="{'form-control-error': error.tradeWay.show && becomeMasterForm.tradeWay.$invalid}"
                                        ng-blur="showErr('tradeWay')"

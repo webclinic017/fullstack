@@ -1,45 +1,48 @@
 <div class="account_login-bg">
     <div class="account_login_box">
+        <div class="account_describe">
+            <!-- <h3 class="account_describe__title">高效•创新•可信赖</h3>
+            <div class="account_describe__content">
+                TigerWit是一家外汇交易和差价合约的国际券商，且接受多家国际权威机构监管。
+            </div> -->
+        </div>
         <!-- 手机验证码注册 -->
         <div class="account_login login_code active height">
             <div class="account_login__code">
                 <div ng-show="registerStep1 == 1">
                     <div class="account_login__title">
                         <span>{{lang.text("tigerWitID.login.register")}}</span>
-                        <span>
-                            <span ng-click="toggleLoginMethod(1)" ng-if="registerStep3 == 2 && account.country.value !== 'CN'">{{lang.text("tigerWitID.login.registerViaPhoneNumber")}}</span>
-                            <span ng-click="toggleLoginMethod(2)" ng-if="registerStep3 == 1 && account.country.value !== 'CN'">{{lang.text("tigerWitID.login.registerViaEmail")}}</span>
-                        </span>
                     </div>
-                    <div class="account-form-control-wrapper">
-                        <span class="account-form-control-tip" ng-show="account.country.value">{{lang.text("tigerWitID.login.countryRegion")}}</span>
-                        <input class="account-form-control select__input" name="country" type="text" placeholder="{{lang.text('tigerWitID.login.countryRegion')}}" required ng-model="account.country.key">
+                    <div class="account-form-control-wrapper-new">
+                        <span class="account-form-control-tip-new" ng-show="account.country.value">{{lang.text("tigerWitID.login.countryRegion")}}</span>
+                        <input class="account-form-control-new select__input" disabled name="country" type="text" placeholder="{{lang.text('tigerWitID.login.countryRegion')}}" required ng-model="account.country.key">
 
                         <i class="select__icon fa fa-angle-down"></i>
 
                         <ul class="select__dropdown" twform-select data-bind-model="account.country">
 
-                            <li ng-repeat="world in worldList" ng-class="{'selected': world.code === account.country.value}">
+                            <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderCountry"><i class="fa fa-search"></i></li>
+                            <li ng-repeat="world in worldList | filter : placeholderCountry" ng-class="{'selected': world.code === account.country.value}">
                                 <span data-value="{{world.code}}" ng-click="selectWorld(world)">{{world.name}}</span>
                             </li>
                         </ul>
                     </div>
                     <!-- 邮箱注册 -->
                     <div ng-show="registerStep3 == 2">
-                        <form name="registerForm6" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglish() ? '0px' : '20px'}">
-                            <div class="account-form-control-wrapper">
-                                <input class="account-form-control" autocomplete="off" name="emailText" type="text" placeholder="{{lang.text('tigerWitID.login.enterEmail')}}"
+                        <form name="registerForm6" class="account_login__form" novalidate>
+                            <div class="account-form-control-wrapper-new">
+                                <input class="account-form-control-new" autocomplete="off" name="emailText" type="text" placeholder="{{lang.text('tigerWitID.login.enterEmail')}}"
                                     on-enter="getCaptcha('registerForm6', 'emailText')" required ng-click="toTrackEmailSensorsdata()"
                                     ng-model="account.emailText">
-                                <span class="account-form-control-tip" ng-show="account.emailText">{{ lang.text("actLogin17") }}</span>
+                                <span class="account-form-control-tip-new" ng-show="account.emailText">{{ lang.text("actLogin17") }}</span>
                                 <span class="account_login__close" ng-show="account.emailText" ng-click="clearPhone('emailText')">
                                     <i class="fa fa-times" aria-hidden="true"></i>
                                 </span>
                             </div>
-                            <div class="account-form-control-wrapper">
-                                <input class="account-form-control" autocomplete="off" name="emailCode" type="text" placeholder="{{ lang.text('actLogin4') }}"
+                            <div class="account-form-control-wrapper-new">
+                                <input class="account-form-control-new" autocomplete="off" name="emailCode" type="text" placeholder="{{ lang.text('actLogin4') }}"
                                     on-enter="register('registerForm6')" required ng-click="toTrackEmailCodeSensorsdata()" ng-model="account.emailCode">
-                                <span class="account-form-control-tip" ng-if="account.emailCode">{{ lang.text('actLogin18') }}</span>
+                                <span class="account-form-control-tip-new" ng-if="account.emailCode">{{ lang.text('tigerWitID.login.verificationCodej') }}</span>
                                 <span class="account_login__code_btn" ng-show="!codeBtnStatus.emailText.count" ng-click="getCaptcha('registerForm6', 'emailText')">
                                     {{lang.text('tigerWitID.login.sendCode')}}
                                 </span>
@@ -47,48 +50,59 @@
                                     {{lang.text('tigerWitID.myAccount.tip39_1')}}{{ codeBtnStatus.emailText.msg }}{{lang.text('tigerWitID.myAccount.tip39_2')}}
                                 </span>
                             </div>
+                            <div class="account_login__remenber" ng-if="registerStep3 == 2 && account.country.value !== 'CN'">
+                                <p class="account_login__remenber-switch">
+                                    <span ng-click="toggleLoginMethod(1)">{{lang.text("tigerWitID.login.registerViaEmail")}}</span>
+                                </p>
+                            </div>
                         </form>
-                        <div class="account_login__btn_wrapper">
-                            <span class="account_login__btn" ng-click="register('registerForm6')">{{lang.text("tigerWitID.login.register")}}</span>
+                        <div class="account_login__btn_wrapper pd-tp-15">
+                            <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="register('registerForm6')">{{lang.text("tigerWitID.login.register")}}</button>
                         </div>
                     </div>
                     <!-- 手机号注册   -->
                     <div ng-show="registerStep3 == 1">
-                        <form name="registerForm1" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglish() ? '0px' : '20px'}">
-                            <div class="account-form-control-wrapper">
+                        <form name="registerForm1" class="account_login__form" novalidate>
+                            <div class="account-form-control-wrapper-new">
                                 <div class="select-left">
-                                    <input class="select__input" name="phoneArea" type="text" placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="account.phoneArea.key">
-    
-                                    <i class="select__icon fa fa-angle-down"></i>
+                                    <input class="select__input" name="phoneArea" disabled type="text" placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="account.phoneArea.key">
     
                                     <ul class="select__dropdown" twform-select data-bind-model="account.phoneArea2">
     
-                                        <li ng-repeat="world in worldList" ng-class="{'selected': world.phone_code === account.phoneArea.value}">
+                                        <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderArea"><i class="fa fa-search"></i></li>
+                                        <li ng-repeat="world in worldList | filter : placeholderArea" ng-class="{'selected': world.phone_code === account.phoneArea.value}">
                                             <span data-value="{{world.code}}" ng-click="selectArea(world)">+{{world.phone_code}}({{world.name}})</span>
                                         </li>
                                     </ul>
                                 </div>
-                                <input class="account-form-control select-right" autocomplete="off" name="step1Phone" type="text" placeholder="{{lang.text('tigerWitID.login.enterPhoneNumber')}}"
+                                <input class="account-form-control-new select-right" autocomplete="off" name="step1Phone" type="text" placeholder="{{lang.text('tigerWitID.login.enterPhoneNumber')}}"
                                     on-enter="getCaptcha('registerForm1', 'step1Phone')" required ng-click="toTrackPhoneSensorsdata()"
                                     ng-model="account.step1Phone">
-                                <span class="account-form-control-tip" ng-show="account.step1Phone">{{ lang.text("actLogin17") }}</span>
+                                <span class="account-form-control-tip-new" ng-show="account.step1Phone">{{ lang.text("actLogin17") }}</span>
                                 <span class="account_login__close" ng-show="account.step1Phone" ng-click="clearPhone('step1Phone')">
                                     <i class="fa fa-times" aria-hidden="true"></i>
                                 </span>
                             </div>
-                            <div class="account-form-control-wrapper">
-                                <input class="account-form-control" autocomplete="off" name="step1Code" type="text" placeholder="{{ lang.text('actLogin4') }}"
+                            <div class="account-form-control-wrapper-new">
+                                <input class="account-form-control-new" autocomplete="off" name="step1Code" type="text" placeholder="{{ lang.text('actLogin4') }}"
                                     on-enter="register('registerForm1')" required ng-click="toTrackCodeSensorsdata()" ng-model="account.step1Code">
-                                <span class="account-form-control-tip" ng-if="account.step1Code">{{ lang.text('actLogin18') }}</span>
+                                <span class="account-form-control-tip-new" ng-if="account.step1Code">{{ lang.text('tigerWitID.login.verificationCodej') }}</span>
                                 <span class="account_login__code_btn" ng-show="!codeBtnStatus.step1Phone.count" ng-click="getCaptcha('registerForm1', 'step1Phone')">
                                     {{lang.text('tigerWitID.login.sendSMS')}}
                                 </span>
                                 <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.step1Phone.count">
                                     {{lang.text('tigerWitID.myAccount.tip39_1')}}{{ codeBtnStatus.step1Phone.msg }}{{lang.text('tigerWitID.myAccount.tip39_2')}}
                                 </span>
-                            </div>                        </form>
-                        <div class="account_login__btn_wrapper">
-                            <span class="account_login__btn" ng-click="register('registerForm1')">{{lang.text("tigerWitID.login.register")}}</span>
+                            </div>
+
+                            <div class="account_login__remenber" ng-if="registerStep3 == 1 && account.country.value !== 'CN'">
+                                <p class="account_login__remenber-switch">
+                                    <span ng-click="toggleLoginMethod(2)">{{lang.text("tigerWitID.login.registerViaPhoneNumber")}}</span>
+                                </p>
+                            </div>
+                        </form>
+                        <div class="account_login__btn_wrapper pd-tp-15">
+                            <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="register('registerForm1')">{{lang.text("tigerWitID.login.register")}}</button>
                         </div>
                     </div>
                 </div>
@@ -97,33 +111,39 @@
                 <div ng-show="registerStep1 == 2">
                     <div class="account_login__title">{{ lang.text('actLogin20') }}</div>
                     <form name="registerForm2" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglish() ? '5px' : '25px'}">
-                        <div class="account-form-control-wrapper" ng-show="step1PasswordStatus">
-                            <input class="account-form-control" autocomplete="off" name="step1Password" type="password" placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}"
+                        <div class="account-form-control-wrapper-new">
+                            <input class="account-form-control-new" autocomplete="off" name="step1Password" type="password" placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}"
                                 on-enter="setPassword('registerForm2')" required ng-model="account.step1Password">
-                            <span class="account-form-control-tip" ng-show="account.step1Password">{{ lang.text('actLogin22') }}</span>
-                            <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
+                            <span class="account-form-control-tip-new" ng-show="account.step1Password">{{ lang.text('actLogin22') }}</span>
+                            <!-- <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
                                 <i class="fa fa-eye" aria-hidden="true"></i>
-                            </span>
+                            </span> -->
                         </div>
-                        <div class="account-form-control-wrapper" ng-show="!step1PasswordStatus">
-                            <input class="account-form-control" autocomplete="off" name="step1Password" type="text" on-enter="setPassword('registerForm2')"
+                        <!-- <div class="account-form-control-wrapper-new" ng-show="!step1PasswordStatus">
+                            <input class="account-form-control-new" autocomplete="off" name="step1Password" type="text" on-enter="setPassword('registerForm2')"
                                 placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}" required ng-model="account.step1Password">
-                            <span class="account-form-control-tip" ng-show="account.step1Password">{{ lang.text('actLogin22') }}</span>
+                            <span class="account-form-control-tip-new" ng-show="account.step1Password">{{ lang.text('actLogin22') }}</span>
                             <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
                                 <i class="fa fa-eye-slash" aria-hidden="true"></i>
                             </span>
+                        </div> -->
+                        <div class="account-form-control-wrapper-new">
+                            <input class="account-form-control-new" autocomplete="off" name="step2Password" type="password" placeholder="{{ lang.text('tigerWitID.login.confirmPassword') }}"
+                                on-enter="setPassword('registerForm2')" required ng-model="account.step2Password">
+                            <span class="account-form-control-tip-new" ng-show="account.step2Password">{{ lang.text('tigerWitID.login.confirmPasswordj') }}</span>
+                            <!-- <span class="account_login__close" ng-click="changePasswordStatus('step1PasswordStatus')">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </span> -->
                         </div>
-                        <p class="account_login__code-tip">{{ lang.text('actLogin23') }}</p>
-                        <p class="account_login__code-jump">
-                            <a ui-sref="space.center.index" ng-click="actLogin34()">{{ lang.text('actLogin34') }}</a>
-                        </p>
+                        <!-- <p class="account_login__code-tip">{{ lang.text('actLogin23') }}</p> -->
                     </form>
-                    <div class="account_login__btn_wrapper">
-                        <span class="account_login__btn" ng-click="setPassword('registerForm2')">{{ lang.text('actLogin33') }}</span>
+                    <div class="account_login__btn_wrapper pd-tp-15">
+                        <button class="tw-btn-md tw-btn-capsule-gradient mg-rg-30" ng-click="setPassword('registerForm2')">{{ lang.text('actLogin33') }}</button>
+                        <button ui-sref="space.center.index" class="tw-btn-md tw-btn-capsule-bordered mg-rg-30" ng-click="skipSetPass()">{{ lang.text('tigerWitID.login.skip') }}</button>
                     </div>
                 </div>
-                <div class="account_login__docs">
-                    <p ng-show="registerStep1 == 1">
+                <div class="account_login__docs mg-tp-20" ng-show="registerStep1 == 1">
+                    <p class="account_login__docs-deal" >
                         {{ lang.text('tigerWitID.login.tip1_1') }}
                         <a class="" href="/agreement/client" target="_blank">{{ lang.text('tigerWitID.login.tip1_2') }}</a>、
                         <a class="" href="/agreement/risk" target="_blank">{{ lang.text('tigerWitID.login.tip1_3') }}</a>、
@@ -131,6 +151,9 @@
                         <a class="" href="/agreement/legal"
                             target="_blank">{{ lang.text('tigerWitID.login.tip1_6') }}</a>
                     </p>
+                    <div class="account_login__docs-go mg-tp-10">
+                        <span>{{lang.text('tigerWitID.login.alreadyHas')}}</span><a class="account_login__remenber-switch" ng-href="/space/#/account/login">{{ lang.text('tigerWitID.login.login') }}</a>
+                    </div>
                 </div>
             </div>
         </div>

@@ -6,15 +6,15 @@
         .module('fullstackApp')
         .controller('AccountLoginController', AccountLoginController);
 
-    AccountLoginController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies', 'lang', '$modal'];
+    AccountLoginController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies', 'lang', '$modal', '$layer'];
 
-    function AccountLoginController($scope, $interval, $timeout, $window, $state, account, validator, $cookies, lang, $modal) {
+    function AccountLoginController($scope, $interval, $timeout, $window, $state, account, validator, $cookies, lang, $modal, $layer) {
         $scope.loginType = 'pass';  // 登录方式 code ->验证码登录，pass ->密码登录
         $scope.loginStep2 = 1;      // 密码登录进行到哪一步
         $scope.loginStep3 = 2;      // 1邮箱登录2手机登录
-        $scope.step1PasswordStatus = true;  // 验证码登录密码显示or隐藏
-        $scope.step2PasswordStatus = true;  // 密码登录密码显示or隐藏
-        $scope.forgetPasswordStatus = true; // 忘记密码设置密码显示or隐藏
+        // $scope.step1PasswordStatus = true;  // 验证码登录密码显示or隐藏
+        // $scope.step2PasswordStatus = true;  // 密码登录密码显示or隐藏
+        // $scope.forgetPasswordStatus = true; // 忘记密码设置密码显示or隐藏
         $scope.rememberLoginStatus = true;  // 记住登录状态
         $scope.loginBtnStatus = true;       // 登录按钮状态
         $scope.codeBtnStatus = {            // 获取验证码按钮状态
@@ -47,18 +47,22 @@
         // })
 
         $scope.account = {
-            phonePwPhone: '',
-            phoneVePhone: '',
-            phoneVeCode: '',
-            emailVeEmail: '',
+            // phonePwPhone: '', //---|
+            // phoneVePhone: '', //---|--合为phonePhone
+            // forgetPhone: '',  //---|
+            phonePhone: '',
+            phoneVeCode: '', 
+            // emailVeEmail: '', //-----|
+            // emailPwEmail: '', //-----|---合为emailEmail
+            // forgetEmail: '',  //-----|
+            emailEmali: '',
             emailVeCode: '',
             step1Password: '',
             step2Password: '',
-            forgetPhone: '',
-            forgetEmail: '',
             forgetPhoneCode: '',
             forgetEmailCode: '',
             forgetPassword: '',
+            forgetPassword2: '',
             phoneArea: {
                 key: '',
                 value: ''
@@ -87,7 +91,7 @@
         }, 300000);
 
         // 从 landing page 进入时
-        $scope.account.phoneVePhone = $state.params.phone;
+        $scope.account.phonePhone = $state.params.phone;
         // 验证码登录切换手机邮箱
         $scope.toggleLoginMethod = function (n) {
             $scope.loginStep3 = n;
@@ -98,8 +102,8 @@
             $scope.loginType = loginType;
         };
         // 清除loginStep1 手机号
-        $scope.clearPhone = function (phone) {
-            $scope.account[phone] = '';
+        $scope.clearPhone = function (account_num) {
+            $scope.account[account_num] = '';
         };
         // 切换密码显示or隐藏
         $scope.changePasswordStatus = function (status) {
@@ -111,8 +115,8 @@
         };
         // 获取验证码
         $scope.getCaptcha = function (formName, name) {
-            var type;
-            var phone_code;
+            var type; // 类型
+            var phone_code, account_num, msg; // 区号， 账号， msg
 
             // if ($scope[formName][phoneName].$invalid) {
             //     layer.msg(lang.text("actLogin3"));    //请填写手机号
@@ -122,32 +126,35 @@
             //     layer.msg(lang.text("actLogin16"));     //请填写正确的手机号
             //     return;
             // }
+            // 手机登录
             if($scope.loginStep3 == 2){
                 if(!($scope.account.phoneArea.value)){
                     layer.msg(lang.text("tigerWitID.login.selectAreaCode"))
                     return;
                 }
-                phone_code = $scope.account.phoneArea.value;
-                if ($scope[formName][name].$invalid) {
+                if (!($scope.account.phonePhone)) {
                     layer.msg(lang.text("actLogin16"));     //请填写正确的手机号
                     return;
                 }
+                phone_code = $scope.account.phoneArea.value;
+                account_num = $scope.account.phonePhone;
+                msg = lang.text('tigerWitID.login.tip6_21')
             }else if($scope.loginStep3 == 1){
-                phone_code = ''
-                if (!validator.regType.email.reg.test($scope[formName][name])) {
+                if (!validator.regType.email.reg.test($scope.account.emailEmali)) {
                     layer.msg(validator.regType.email.tip);     //请填写正确的邮箱
                     return;
                 }
+                phone_code = ''
+                account_num = $scope.account.emailEmali;
+                msg = lang.text('tigerWitID.login.tip6_2')
             }
             token = $cookies['code_token'];
 
-            switch (name) {
-                case 'phoneVePhone':
-                case 'emailVeEmail':
+            switch ($scope.loginStep2) {
+                case 1:
                     type = 4;       // 登录
                     break;
-                case 'forgetPhone':
-                case 'forgetEmail':
+                case 2:
                     type = 2;       // 忘记密码
                     break;
                 default:
@@ -155,10 +162,20 @@
                     break;
             }
 
-            account.sendCode($scope.account[name], token, type, phone_code).then(function (data) {
+            account.sendCode(account_num, token, type, phone_code).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
                     countDown(name);
+                    var obj = {
+                        title: lang.text('tigerWitID.login.verificationCodeSent'),
+                        titleClass: 'account_login__layer-title',
+                        msg: lang.text('tigerWitID.login.tip6_1') + msg + account_num + lang.text('tigerWitID.login.tip6_3'),
+                        msgClass: 'account_login__layer-msg',
+                        btns: {},
+                        btnsClass: 'account_login__layer-btns'
+                    }
+                    obj.btns[lang.text("tigerWitID.confirm2")] = function(){};
+                    $layer(obj);
                     if( $scope.loginStep3 == 1){
                         sa.track('email_code')
                     }
@@ -169,10 +186,6 @@
             });
         };
         // 登录
-        // openWebAgmentModal(100402, function(resolve, e){
-        //             $scope.login(formName, 'is_agree');
-        //             layer.close(resolve.layIndex)
-        //         })
         $scope.login = function (formName, is_agree) {
             if (!$scope.loginBtnStatus) return;
             if ($scope[formName].$invalid) {
@@ -187,39 +200,46 @@
                 });
             }
             
+            var msg;
             var para = {};
             para.remember = $scope.rememberLoginStatus ? 1 : 0;
+            // 验证码登录
             if ($scope.loginType == 'code') {
                 para.login_type = 2;
-                if($scope.loginStep3 == 1){
+                // 邮箱登录
+                if ($scope.loginStep3 == 1){
                     para = angular.extend({
-                        account: $scope.account.emailVeEmail,
+                        account: $scope.account.emailEmali,
                         password: $scope.account.emailVeCode,
                     }, para);
-                }else{
+                    msg = lang.text('tigerWitID.login.tip7_21');
+                } else {
                     // 手机
                     para = angular.extend({
-                        account: $scope.account.phoneVePhone,
+                        account: $scope.account.phonePhone,
                         password: $scope.account.phoneVeCode,
                         phone_code: $scope.account.phoneArea.value,
 
                     }, para);
+                    msg = lang.text('tigerWitID.login.tip7_2');
                 }
             } else {
                 para.login_type = 1;
-                if($scope.loginStep3 == 1){
+                if ($scope.loginStep3 == 1){
                     para = angular.extend({
-                        account: $scope.account.emailPwEmail,
-                        password: account.encrypt($scope.account.step2Password),
+                        account: $scope.account.emailEmali,
+                        password: account.encrypt($scope.account.step1Password),
                     }, para);
-                }else{
+                    msg = lang.text('tigerWitID.login.tip7_21');
+                } else {
                     // 手机
                     para = angular.extend({
-                        account: $scope.account.phonePwPhone,
+                        account: $scope.account.phonePhone,
                         password: account.encrypt($scope.account.step2Password),
                         phone_code: $scope.account.phoneArea.value,
 
                     }, para);
+                    msg = lang.text('tigerWitID.login.tip7_2');
                 }
             }
             (is_agree == "is_agree") && (para.is_agree = 1);
@@ -289,7 +309,21 @@
                     }, 150);
                 } else {
                     // 登录时，用户不存在，返回 code 为 100504
-                    if ((data.code == 100402) || (data.code == 100403)) {
+                    if(data.code == 100504) {
+                        var obj = {
+                            title: lang.text('tigerWitID.login.tip7_1') + msg + lang.text('tigerWitID.login.tip7_3'),
+                            titleClass: 'account_login__layer-title',
+                            msg: lang.text('tigerWitID.login.tip9_1') + msg + lang.text('tigerWitID.login.tip9_3'),
+                            msgClass: 'account_login__layer-msg',
+                            btns: {},
+                            btnsClass: 'account_login__layer-btns'
+                        }
+                        obj.btns[lang.text('tigerWitID.login.goRegister')] = function(){
+                            $state.go('account.subpage', {subpage: 'register'});
+                        }
+                        obj.btns[lang.text("tigerWitID.cancel")] = function(){};
+                        $layer(obj)
+                    } else if ((data.code == 100402) || (data.code == 100403)) {  // 未确认注册协议
                         openWebAgmentModal(data.code, function(resolve, e){
                             $scope.login(formName, 'is_agree');
                             layer.close(resolve.layIndex)
@@ -361,14 +395,19 @@
                 layer.msg(lang.text("actLogin25"));     //请输入您的账户密码
                 return;
             }
+            if($scope.account.forgetPassword !== $scope.account.forgetPassword2) {
+                layer.msg(lang.text('tigerWitID.login.passwordsEnteredDoNotMatch'));     //两次输入的密码不一致
+                return;
+            }
             layer.load();
             $scope.loginBtnStatus = false;
             var forgetPhone, forgetCode;
+            // 邮箱登录
             if($scope.loginStep3 == 1){
-                forgetPhone = $scope.account.forgetEmail;
+                forgetPhone = $scope.account.emailEmali;
                 forgetCode = $scope.account.forgetEmailCode;
             }else{
-                forgetPhone = $scope.account.forgetPhone;
+                forgetPhone = $scope.account.phonePhone;
                 forgetCode = $scope.account.forgetPhoneCode;
             }
             account.setNewPwd(forgetPhone, forgetCode, $scope.account.forgetPassword, $scope.account.phoneArea.value).then(function (data) {
@@ -377,16 +416,28 @@
                 $scope.loginBtnStatus = true;
 
                 if (data.is_succ) {
-                    $scope.loginStep2 = 4;
+                    var obj = {
+                        title: lang.text('tigerWitID.login.tip10'),
+                        titleClass: 'account_login__layer-title',
+                        msg: lang.text('tigerWitID.login.tip11'),
+                        msgClass: 'account_login__layer-msg',
+                        btns: {},
+                        btnsClass: 'account_login__layer-btns'
+                    }
+                    obj.btns[lang.text('tigerWitID.login.goLogin')] = function(){
+                        $scope.loginStep2 = 1;
+                    }
+                    obj.btns[lang.text("tigerWitID.cancel")] = function(){};
+                    $layer(obj)
                 } else {
                     layer.msg(data.message);
                 }
             });
         };
         // 重新登陆
-        $scope.goLogin = function () {
-            $scope.loginStep2 = 1;
-        };
+        // $scope.goLogin = function () {
+        //     $scope.loginStep2 = 1;
+        // };
 
 
         // 获取验证码倒计时

@@ -141,6 +141,88 @@
     }
 }
 
+// 登录新版样式tigerwit登录注册
+.account-form-control-wrapper-new {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+
+    input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+    }  // 清除Chrome input自动填充后黄色背景
+    
+    /*placeholder字体大小*/  
+    ::-webkit-input-placeholder { /* WebKit browsers */  
+        font-size: 14px;
+        color: #c8c8c8;
+    }  
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
+        font-size: 14px;
+        color: #c8c8c8;
+    }  
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */  
+        font-size: 14px;
+        color: #c8c8c8;
+    }  
+    :-ms-input-placeholder { /* Internet Explorer 10+ */  
+        font-size: 14px;
+        color: #c8c8c8;
+    }  
+    .select-left{
+        height: 100%;
+        position: absolute;
+        width: 56px;
+        top: 0;
+        left: 0;
+        .select__input{
+            padding: 0 10px 0 0;
+            height: 22px;
+            margin-top: 11px;
+            border: none;
+            &:focus{
+                box-shadow: none;
+            }
+        }
+
+    }
+    .select-right{
+        padding-left: 58px;
+    }
+}
+.account-form-control-new {
+    display: block;
+    width: 100%;
+    height: 44px;
+    padding: 0px;
+    padding-left: 0;
+    border: none;
+    border-bottom: 1px solid $border-color-base; 
+    line-height: 46px;
+    font-size: 18px;
+    color: #4a4a4a;
+    font-weight: 400;
+}
+.account-form-control-new:focus{
+    border-bottom: 1px solid #4A90E2; 
+    &+.account-form-control-tip-new {
+        color: #4A90E2;
+    }
+}
+.account-form-control-tip-new {
+    position: absolute;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    top: -11px;
+    left: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #b5b5b5;
+    z-index: 100;
+}
+
+
+
 //== 登录input样式
 .account-form-control-wrapper {
     position: relative;
@@ -304,7 +386,8 @@
         top: $input-height-base + 5px;
         z-index: $zindex-dropdown;
         display: none;
-        min-width: 100%;
+        min-width: max-content;
+        width: 100%;
         max-height: 300px;
         border: 1px solid $gray-form-border;
         border-radius: $border-radius-base;
@@ -328,6 +411,30 @@
         > li.selected > span,
         > li > span:hover {
             background-color: $gray-lighter;
+        }
+        > li {
+            border-bottom: 1px solid rgba(211,223,239,0.3);
+            &:last-child {
+                border: none;
+            }
+        }
+        .first_li {
+            position: relative;
+            input[type="text"] {
+                width: 100%;
+                border: none;
+                padding: 8px 10px 4px 35px;
+                height: 36px;
+                font-weight:400;
+                color:rgba(62,74,89,1);
+            }
+            i {
+                position: absolute;
+                top: 5px;
+                left: 6px;
+                color: rgba(211,223,239,1);
+                zoom: 1.5;
+            }
         }
     }
 }
