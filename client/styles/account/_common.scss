@@ -61,20 +61,20 @@
     min-height: 400px;
     width: 50%;
     float: right;
-    background-color: #fff;
+    background-color: $bg-fff;
     padding: 62px 38px 62px;
 
     @include e(title) {
         font-size: 30px;
         line-height: 42px;
         font-weight: 600;
-        color:rgba(36,42,54,1);
+        color: $main-char-color-100;
         margin-bottom: 50px;
         > span{
             cursor: pointer;
         }
         > .no_active{
-            color: rgba(187,196,215,1);
+            color: $main-char-color-30;
         }
     }
     @include e(content) {
@@ -96,7 +96,7 @@
             line-height: 44px;
         }
         @include m(tip2) {
-            color: #b5b5b5;
+            color: $main-char-color-30;
             font-size: 12px;
             padding-bottom: 20px;
         }
@@ -106,7 +106,7 @@
         padding: 0 3px;
         margin-bottom: 30px;
         @include m(btn) {
-            color: #666;
+            color: $main-char-color-50;
             cursor: pointer;
             font-weight:400;
         }
@@ -117,19 +117,19 @@
         }
     }
     @include e(btn) { 
-        color: #ffbd43;
+        color: $main-color;
         font-size: 22px;
         font-weight: 500;
         cursor: pointer;
         // text-align: center;
     }
     @include e(docs) {
-        color: rgba(0,0,0,1);
+        color: $main-char-color-100;
         font-size: 12px;
         line-height: 17px;
         @include m(go) {
             font-size: 13px;
-            color: rgba(187, 196, 215, 1);
+            color: $main-char-color-30;
         }
         @include m(deal) {
             font-weight:400;
@@ -146,7 +146,7 @@
         height: 20px;
         line-height: 20px;
         cursor: pointer;
-        color: #3e3e3e;
+        color: $main-char-color-100;
     }
     @include e(code_btn) {
         position: absolute;
@@ -158,7 +158,7 @@
         cursor: pointer;
 
         &.notAllowed {
-            color: #ccc;
+            color: $main-char-color-30;
             cursor: not-allowed;
         }
     }
@@ -166,14 +166,14 @@
         @include m(title) {
             font-size:24px;
             font-weight:600;
-            color:rgba(36,42,54,1);
+            color:$main-char-color-100;
             text-align: center;
             margin-bottom: 29px;
         }
         @include m(msg) {
             font-size:14px;
             font-weight:400;
-            color:rgba(36,42,54,1);
+            color:$main-char-color-100;
             line-height:20px;
             text-align: center;
             padding-bottom: 42px;
@@ -186,10 +186,10 @@
         @include m(btns) {
             > a {
                 font-weight:600;
-                color:rgba(36,42,54,1);
+                color:$main-char-color-100;
                 &:last-child{
                     background: transparent;
-                    border: 1px solid #d6d7d9;
+                    border: 1px solid $main-char-color-30;
                 }
             }
         }
@@ -224,10 +224,10 @@
             position: absolute;
             top: 0;
             left: 0;
-            border-right: 1px solid #ccc;
+            border-right: 1px solid $main-char-color-30;
             text-align: center;
             line-height: 40px;
-            color: #666;
+            color: $main-char-color-50;
         }
         input[name=phone] {
             padding-left: 60px;
@@ -240,7 +240,7 @@
             padding-right: 0;
         }
         .captcha_btn {
-            border-color: #ccc;
+            border-color: $main-char-color-30;
         }
 
         a.font-info:hover {
@@ -259,7 +259,7 @@
             left: 0;
             text-align: center;
             line-height: 40px;
-            color: #666;
+            color: $main-char-color-50;
         }
         input[name=password] {
             padding-left: 90px;
@@ -286,7 +286,7 @@
     margin-right: -100px;
     padding-bottom: 10px;
     padding-left: 100px;
-    border-bottom: 2px solid #e5e5e5;
+    border-bottom: 2px solid $main-char-color-8;
 
     @include e(step) {
         display: inline-block;
@@ -307,13 +307,13 @@
             margin-bottom: 0;
             font-size: 16px;
             padding-left: 20px;
-            color: #a3a3a3;
+            color: $main-char-color-50;
 
             > span {
                 display: inline-block;
                 width: 22px;
                 height: 22px;
-                background-color: #eee;
+                background-color: $main-char-color-8;
                 text-align: center;
                 line-height: 22px;
                 font-size: 16px;
@@ -328,7 +328,7 @@
             }
             
             > p {
-                color: #333;
+                color: $main-char-color-100;
                 font-weight: 700;
 
                 > span {

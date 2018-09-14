@@ -99,13 +99,13 @@
         height: 26px;
         text-align: center;
         line-height: 26px;
-        border-left: 1px solid #ccc;
-        color: #333;
+        border-left: 1px solid $main-char-color-30;
+        color: $main-char-color-100;
         .verify_code_btn {
             cursor: pointer;
 
             &.unable {
-                color: #ccc;
+                color: $main-char-color-30;
                 cursor: not-allowed;
             }
         }
@@ -154,19 +154,19 @@
     /*placeholder字体大小*/  
     ::-webkit-input-placeholder { /* WebKit browsers */  
         font-size: 14px;
-        color: #c8c8c8;
+        color: $main-char-color-30;
     }  
     :-moz-placeholder { /* Mozilla Firefox 4 to 18 */  
         font-size: 14px;
-        color: #c8c8c8;
+        color: $main-char-color-30;
     }  
     ::-moz-placeholder { /* Mozilla Firefox 19+ */  
         font-size: 14px;
-        color: #c8c8c8;
+        color: $main-char-color-30;
     }  
     :-ms-input-placeholder { /* Internet Explorer 10+ */  
         font-size: 14px;
-        color: #c8c8c8;
+        color: $main-char-color-30;
     }  
     .select-left{
         height: 100%;
@@ -179,6 +179,7 @@
             height: 22px;
             margin-top: 11px;
             border: none;
+            color: $main-char-color-100;
             &:focus{
                 box-shadow: none;
             }
@@ -199,7 +200,7 @@
     border-bottom: 1px solid $border-color-base; 
     line-height: 46px;
     font-size: 18px;
-    color: #4a4a4a;
+    color: $main-char-color-100;
     font-weight: 400;
 }
 .account-form-control-new:focus{
@@ -217,7 +218,7 @@
     left: 0;
     padding: 0;
     background-color: #fff;
-    color: #b5b5b5;
+    color: $main-char-color-30;
     z-index: 100;
 }
 
@@ -282,7 +283,7 @@
     border-radius: 14px;
     line-height: 46px;
     font-size: 18px;
-    color: #4a4a4a;
+    color: $main-char-color-100;
     font-weight: 100;
     
 }
@@ -295,7 +296,7 @@
     left: 22px;
     padding: 0 8px;
     background-color: #fff;
-    color: #b5b5b5;
+    color: $main-char-color-30;
     z-index: 100;
 }
 
@@ -413,7 +414,7 @@
             background-color: $gray-lighter;
         }
         > li {
-            border-bottom: 1px solid rgba(211,223,239,0.3);
+            border-bottom: 1px solid $main-char-color-8;
             &:last-child {
                 border: none;
             }
@@ -426,13 +427,13 @@
                 padding: 8px 10px 4px 35px;
                 height: 36px;
                 font-weight:400;
-                color:rgba(62,74,89,1);
+                color:$main-char-color-100;
             }
             i {
                 position: absolute;
                 top: 5px;
                 left: 6px;
-                color: rgba(211,223,239,1);
+                color: $login-line;
                 zoom: 1.5;
             }
         }

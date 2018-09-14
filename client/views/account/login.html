@@ -9,7 +9,8 @@
         <div class="account_login">
             <div class="account_login__title" ng-show="loginStep2 == 1">
                 <span ng-class="{no_active: loginType !== 'pass'}" ng-click="changeLoginType('pass')">{{ lang.text("tigerWitID.login.passwordLogin") }}</span>
-                <span ng-class="{no_active: loginType !== 'code'}" ng-click="changeLoginType('code')"> / {{ lang.text("tigerWitID.login.verificationCodeLogin") }}</span>
+                <span class="no_active"> / </span>
+                <span ng-class="{no_active: loginType !== 'code'}" ng-click="changeLoginType('code')">{{ lang.text("tigerWitID.login.verificationCodeLogin") }}</span>
             </div>
             <!-- 密码登录 -->
             <div class="account_login__content" ng-show="loginType === 'pass'">
