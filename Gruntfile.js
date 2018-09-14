@@ -269,8 +269,8 @@ module.exports = function (grunt) {
                             return url;
                         }
                         // console.log('----- grunt-cdnify maped url -----', url)
-                        return CDN_URL + url;
-                        // return url;
+                        // return CDN_URL + url;
+                        return url;
                     }
                 },
                 files: [{
@@ -486,7 +486,7 @@ module.exports = function (grunt) {
         if (node_env == "pro") node_env = "production";
         // set CDN URL
         // 通行证暂时不使用CDN 2018.05.29
-        CDN_URL = url === 'www' ? 'https://static.tigerwitfx.com' : 'https://staticdemo.tigerwitfx.com';
+        // CDN_URL = url === 'www' ? 'https://static.tigerwitfx.com' : 'https://staticdemo.tigerwitfx.com';
         var url_path, login_public_key;
 
         url_path = companyInfo[company][url]["url_path"];
