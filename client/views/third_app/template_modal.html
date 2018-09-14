@@ -39,7 +39,7 @@
     <span class="cancel third_app_template_cancel">取消</span>
   </h3>
   <ul class="content">
-    <li class="clearfix deposit_template_item account_item <$= data.currentAccount == 'wallet' ? 'active' : ''$>" data-type="<$= data.type$>" data-account="wallet" data-name="钱包" data-tag="">
+    <li class="clearfix deposit_template_item account_item <$= data.currentAccount == 'wallet' ? 'active' : ''$>" data-type="<$= data.type$>" data-account="wallet" data-name="钱包" data-tag="" data-amount="<$= data.walletBalance || '0.00'$>">
       <div class="item-icon"><span></span></div>
       <div class="item-info">
         <p class="name">
@@ -52,7 +52,7 @@
   <h4 class="sub_title">交易账户</h4>
   <ul class="content account_content">
     <$ for(var i=0;i<data.lst.length;i++) {$>
-      <li class="clearfix deposit_template_item account_item <$= data.lst[i].mt4_id == data.currentAccount ? 'active' : ''$>" data-type="<$= data.type$>" data-account="<$= data.lst[i].mt4_id$>" data-name="<$= data.lst[i].account_name$>" data-tag="<$= data.tradeAccountType[data.lst[i].account_type] || ''$>">
+      <li class="clearfix deposit_template_item account_item <$= data.lst[i].mt4_id == data.currentAccount ? 'active' : ''$>" data-type="<$= data.type$>" data-account="<$= data.lst[i].mt4_id$>" data-name="<$= data.lst[i].account_name$>" data-tag="<$= data.tradeAccountType[data.lst[i].account_type] || ''$>" data-amount="<$= data.lst[i].balance || '0.00'$>">
         <div class="item-icon"><span></span></div>
         <div class="item-info">
           <p class="name">

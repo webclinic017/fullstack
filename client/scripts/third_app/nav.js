@@ -56,8 +56,12 @@ $(document).on("tap", "#third_app_bottom_template .account_item", function () {
   }
   if (cType === 'withdraw') {
     withdrawAccount = cAccount;
+    var aName = cAccount === 'wallet' ? '钱包' : '账户';
     $(eleWithdraw.payAccountName).html(cName);
     $(eleWithdraw.payAccountTag).html(cTag);
+    $(eleWithdraw.payAccountAmout).addClass('active');
+    $(eleWithdraw.payAccountAmout).find(".name").html(aName);
+    $(eleWithdraw.payAccountAmout).find(".num").html($(this).attr("data-amount"));
     // setDepositBtnStatus();
     //为钱包充值时，支付方式不能为钱包
     // if (cAccount === 'wallet' && depositType === 'wallet') changeDepositType();
@@ -95,7 +99,7 @@ function getTradeAccount () {
   });
 }
 function changePageIndex (page) {
-  pageIndex = page || "1";
+  pageIndex = page || "2";
   $(ele.nav).find('span').removeClass('active');
   $.each($(ele.nav).find('span'), function (index, value) {
     if ($(value).attr("data-page") == pageIndex) {

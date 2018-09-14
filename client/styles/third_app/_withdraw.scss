@@ -1,0 +1,6 @@
+@include b(third_app_withdraw) {
+  @include e(account_lst) {
+    float: left;
+    width: 100%;
+  }
+}

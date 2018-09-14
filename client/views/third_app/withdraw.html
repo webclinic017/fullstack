@@ -10,10 +10,24 @@
     <div class="third_app_common__item">提现金额</div>
     <div class="third_app_common__inp mg-tp-10">
       <span class="icon">$</span>
-      <input type="text" class="" placeholder="" id="third_app_withdraw_amount">
+      <input type="text" class="" placeholder="最低20美元" id="third_app_withdraw_amount">
     </div>
-    <div class="third_app_common__rate" id="third_app_withdraw_currency">
-      当前汇率：1美元=<span class="num">6.1234</span><span class="cur">人民币</span>
+    <div class="third_app_common__rate" id="third_app_withdraw_account_amount">
+      <span class="name"></span>余额：$<span class="num"></span>
     </div>
   </div>
+  <div class="clearfix mg-bt-15">
+    <div class="third_app_common__item">提现到</div>
+    <ul class="third_app_withdraw__account_lst" id="third_app_withdraw_account_list">
+      
+    </ul>
+  </div>
 </div>
+
+<script id="template_withdraw_account_type" type="text/html">
+<$ for(var i=0;i<data.lst.length;i++) {$>
+  <li class="">
+    <$= data.lst[i].name$>
+  </li>
+<$}$>
+</script>
