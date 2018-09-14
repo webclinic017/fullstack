@@ -1,236 +1,362 @@
-<div class="faq-public mg-bt-100" tw-dropdown-faq>
-    <div>
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade20")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade21")%>
-            <table class="table">
-                <colgroup>
-                    <col width="15%">
-                    <col width="21%">
-                    <col width="32%">
-                    <col width="32%">
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th colspan="4"><%= lang.text("deal3")%></th>
-                    </tr>
-                    <tr>
-                        <td><%= lang.text("deal4")%></td>
-                        <td><%= lang.text("deal5")%></td>
-                        <td><%= lang.text("deal6")%></td>
-                        <td><%= lang.text("deal7")%></td>
-                    </tr>
-                    <tr>
-                        <td><%= lang.text("deal8")%></td>
-                        <td><%= lang.text("deal9")%></td>
-                        <td><%= lang.text("deal10")%></td>
-                        <td><%= lang.text("deal11")%></td>
-                    </tr>
-                    <tr>
-                        <td><%= lang.text("deal12")%></td>
-                        <td colspan="3"><%= lang.text("deal13")%></td>
-                    </tr>
-                    <tr>
-                        <td><%= lang.text("deal14")%></td>
-                        <td><%= lang.text("deal15")%></td>
-                        <td><%= lang.text("deal16")%></td>
-                        <td><%= lang.text("deal17")%></td>
-                    </tr>
-                    <tr>
-                        <td><%= lang.text("deal18")%></td>
-                        <td colspan="3"><%= lang.text("deal19")%></td>
-                    </tr>
-                    <tr>
-                        <th colspan="4"><%= lang.text("deal20")%></th>
-                    </tr>
-                    <tr>
-                        <td><%= lang.text("deal21")%></td>
-                        <td><%= lang.text("deal22")%></td>
-                        <td><%= lang.text("deal23")%></td>
-                        <td><%= lang.text("deal24")%></td>
-                    </tr>
-                    <tr>
-                        <td><%= lang.text("deal25")%></td>
-                        <td><%= lang.text("deal26")%></td>
-                        <td><%= lang.text("deal27")%></td>
-                        <td><%= lang.text("deal28")%></td>
-                    </tr>
-                    <tr>
-                        <td><%= lang.text("deal29")%></td>
-                        <td colspan="3"><%= lang.text("deal30")%></td>
-                    </tr>
-                    <tr>
-                        <td><%= lang.text("deal31")%></td>
-                        <td><%= lang.text("deal32")%></td>
-                        <td><%= lang.text("deal33")%></td>
-                        <td><%= lang.text("deal34")%></td>
-                    </tr>
-                    <tr>
-                        <td><%= lang.text("deal35")%></td>
-                        <td colspan="3"><%= lang.text("deal36")%></td>
-                    </tr>
-                </tbody>
-            </table>
+<% if(lang.isEnglish()) { %> 
+    <div class="faq-public mg-bt-100" tw-dropdown-faq>
+        <div>
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                When is the platform open? 
+            </h4>
+            <div class="faq-public__answer">
+                During UK summer time London is UTC plus 1 hour otherwise it is the same as UTC.
+                <table class="table">
+                    <colgroup>
+                        <col width="25%">
+                        <col width="25%">
+                        <col width="50%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th colspan="3">Platform Availability</th>
+                        </tr>
+                        <tr>
+                            <td>Time</td>
+                            <td>Week</td>
+                            <td>TigerWit trading access</td>
+                        </tr>
+                        <tr>
+                            <td>UTC</td>
+                            <td>From Monday to Friday</td>
+                            <td>From 22.05 on Sunday to 21:00 on Friday</td>
+                        </tr>
+                        <tr>
+                            <td>Description</td>
+                            <td colspan="2">From 21:00 on Friday to 22:05 on Sunday UTC TigerWit performs platform maintenance and no price quotation are provided.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                Will you close any of my positions?
+            </h4>
+            <div class="faq-public__answer">
+                When the margin ratio (margin/free margin) is below 50%, TigerWit will effect liquidation starting from your position showing the highest loss. Please maintain sufficient margin on your account at all times
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                What is a price re-quotation and when might it happen?
+            </h4>
+            <div class="faq-public__answer">
+                The most common reasons for a price re-quotation are:
+                <ol>
+                    <li>•   Volatility: When markets are experiencing high volatility, the price may change dramatically.</li>
+                    <li>•   Slow connectivity: You may be trading on a poor internet connection which can result in price latency.</li>
+                </ol>
+                In cases such as these we may offer a revised market quote to you. You can choose to accept the re-quoted price (which may itself then require a re-quote) or cancel the order.
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                What is slippage and when might it occur?
+            </h4>
+            <div class="faq-public__answer">
+                In case of liquidation of a position, or when a stop-loss is triggered, the trade is executed at the actual market price. Immediately following a stop-loss or liquidation being triggered, the actual market price may no longer be at the trigger level. In the case of gaps, the trade will be made at the first available market price following the gap, which may differ from the previously quoted price.
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                What is the minimum lot size I can trade?
+            </h4>
+            <div class="faq-public__answer">
+                The minimum lot size is 0.01 Lot for FX and precious metals and 0.1 Lot for indices and oils
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                How can I view the details of the trading products?
+            </h4>
+            <div class="faq-public__answer">
+                On the app, click on the ‘?’ icon at the top of the trading symbol to view product details.
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                What leverage do you offer?
+            </h4>
+            <div class="faq-public__answer">
+                TigerWit offers leverage 200 : 1 depending on the market, although Crypto Currency (Bitcoin etc) leverage is 2 :1. Higher leverage may be available if you are eligible to be treated as a Professional Client. Please contact Client Support for more information at customerservice@tigerwit.com.
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                What trading fees do you charge?
+            </h4>
+            <div class="faq-public__answer">
+                TigerWit only charges the spread. There is no commission applicable.
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                Is there a time limit on holding open positions or orders to open?
+            </h4>
+            <div class="faq-public__answer">
+                There is no time limit for open orders or positions. There is no limit on the number of orders or positions you can have open at any time so long as you maintain sufficient margin to cover any losses and swap charges.
+            </div>
         </div>
     </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade1")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade2")%>
+<% } else { %> 
+    <div class="faq-public mg-bt-100" tw-dropdown-faq>
+        <div>
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade20")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade21")%>
+                <table class="table">
+                    <colgroup>
+                        <col width="15%">
+                        <col width="21%">
+                        <col width="32%">
+                        <col width="32%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <th colspan="4"><%= lang.text("deal3")%></th>
+                        </tr>
+                        <tr>
+                            <td><%= lang.text("deal4")%></td>
+                            <td><%= lang.text("deal5")%></td>
+                            <td><%= lang.text("deal6")%></td>
+                            <td><%= lang.text("deal7")%></td>
+                        </tr>
+                        <tr>
+                            <td><%= lang.text("deal8")%></td>
+                            <td><%= lang.text("deal9")%></td>
+                            <td><%= lang.text("deal10")%></td>
+                            <td><%= lang.text("deal11")%></td>
+                        </tr>
+                        <tr>
+                            <td><%= lang.text("deal12")%></td>
+                            <td colspan="3"><%= lang.text("deal13")%></td>
+                        </tr>
+                        <tr>
+                            <td><%= lang.text("deal14")%></td>
+                            <td><%= lang.text("deal15")%></td>
+                            <td><%= lang.text("deal16")%></td>
+                            <td><%= lang.text("deal17")%></td>
+                        </tr>
+                        <tr>
+                            <td><%= lang.text("deal18")%></td>
+                            <td colspan="3"><%= lang.text("deal19")%></td>
+                        </tr>
+                        <tr>
+                            <th colspan="4"><%= lang.text("deal20")%></th>
+                        </tr>
+                        <tr>
+                            <td><%= lang.text("deal21")%></td>
+                            <td><%= lang.text("deal22")%></td>
+                            <td><%= lang.text("deal23")%></td>
+                            <td><%= lang.text("deal24")%></td>
+                        </tr>
+                        <tr>
+                            <td><%= lang.text("deal25")%></td>
+                            <td><%= lang.text("deal26")%></td>
+                            <td><%= lang.text("deal27")%></td>
+                            <td><%= lang.text("deal28")%></td>
+                        </tr>
+                        <tr>
+                            <td><%= lang.text("deal29")%></td>
+                            <td colspan="3"><%= lang.text("deal30")%></td>
+                        </tr>
+                        <tr>
+                            <td><%= lang.text("deal31")%></td>
+                            <td><%= lang.text("deal32")%></td>
+                            <td><%= lang.text("deal33")%></td>
+                            <td><%= lang.text("deal34")%></td>
+                        </tr>
+                        <tr>
+                            <td><%= lang.text("deal35")%></td>
+                            <td colspan="3"><%= lang.text("deal36")%></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade1")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade2")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade3")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade4")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade5")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade6")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade7")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade8")%>
+                <br>
+                <%= lang.text("faqTrade9")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade10")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade11")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade12")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade13")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade16")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade17")%></br>
+                <%= lang.text("faqTrade17_2")%></span></br>
+                <%= lang.text("faqTrade17_3")%></span>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade18")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade19")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade22")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade23")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade24")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade25")%></span><br>
+                <%= lang.text("faqTrade26")%></span>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade27")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%=lang.text("faqTrade28")%></br>
+                <%=lang.text("faqTrade28_2")%></span>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade29")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade30")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade31")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade32")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade33")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade34")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqTrade35")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqTrade36")%>
+            </div>
         </div>
     </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade3")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade4")%>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade5")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade6")%>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade7")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade8")%>
-            <br>
-            <%= lang.text("faqTrade9")%>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade10")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade11")%>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade12")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade13")%>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade16")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade17")%></br>
-            <%= lang.text("faqTrade17_2")%></span></br>
-            <%= lang.text("faqTrade17_3")%></span>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade18")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade19")%>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade22")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade23")%>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade24")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade25")%></span><br>
-            <%= lang.text("faqTrade26")%></span>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade27")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%=lang.text("faqTrade28")%></br>
-            <%=lang.text("faqTrade28_2")%></span>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade29")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade30")%>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade31")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade32")%>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade33")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade34")%>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqTrade35")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqTrade36")%>
-        </div>
-    </div>
-</div>
+<% } %>
