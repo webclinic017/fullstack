@@ -52,7 +52,7 @@
                             </div>
                             <div class="account_login__remenber" ng-if="registerStep3 == 2 && account.country.value !== 'CN'">
                                 <p class="account_login__remenber-switch">
-                                    <span ng-click="toggleLoginMethod(1)">{{lang.text("tigerWitID.login.registerViaEmail")}}</span>
+                                    <span ng-click="toggleLoginMethod(1)">{{lang.text("tigerWitID.login.registerViaPhoneNumber")}}</span>
                                 </p>
                             </div>
                         </form>
@@ -97,7 +97,7 @@
 
                             <div class="account_login__remenber" ng-if="registerStep3 == 1 && account.country.value !== 'CN'">
                                 <p class="account_login__remenber-switch">
-                                    <span ng-click="toggleLoginMethod(2)">{{lang.text("tigerWitID.login.registerViaPhoneNumber")}}</span>
+                                    <span ng-click="toggleLoginMethod(2)">{{lang.text("tigerWitID.login.registerViaEmail")}}</span>
                                 </p>
                             </div>
                         </form>

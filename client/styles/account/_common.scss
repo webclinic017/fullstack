@@ -21,7 +21,7 @@
     overflow: hidden;
     padding-bottom: 80px;
     background-position: center center;
-    background-size: 100% 100%;
+    background-size: cover;
     @include img-normal($image-path-base + "login_bg_new2.jpg");
 
 }
@@ -37,7 +37,6 @@
     float: left;
     margin-bottom: -9999px;
     padding-bottom: 9999px;
-    background-size: 100%;
     // color: #fff;
     @include img-normal($image-path-base + "login_left.png");
     &.en{
@@ -88,7 +87,7 @@
 
         @include m(tip) {
             font-size: 13px;
-            color: #4A90E2;
+            color: $login-link;
             font-weight: 600;
             cursor: pointer;
             position: absolute;
@@ -112,7 +111,7 @@
             font-weight:400;
         }
         @include m(switch) {
-            color: #4A90E2;
+            color: $login-link;
             font-weight: 600;
             cursor: pointer;
         }
@@ -155,7 +154,7 @@
         height: 22px;
         line-height: 22px;
         right: 0px;
-        color: #c8c8c8;
+        color: $login-link;
         cursor: pointer;
 
         &.notAllowed {

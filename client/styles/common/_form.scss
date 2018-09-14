@@ -203,9 +203,9 @@
     font-weight: 400;
 }
 .account-form-control-new:focus{
-    border-bottom: 1px solid #4A90E2; 
+    border-bottom: 1px solid $login-link; 
     &+.account-form-control-tip-new {
-        color: #4A90E2;
+        color: $login-link;
     }
 }
 .account-form-control-tip-new {
