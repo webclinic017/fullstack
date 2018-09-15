@@ -16,14 +16,20 @@
             </div>
             
             <div class="body" style="background-color: #fafafa">
-                <div class="layout-2">
-                    <div class="layout-2__side mg-tp-30">
-                        <%- include('./about/sidebar.html') %>
-                    </div>
-                    <div class="layout-2__content mg-tp-30">
+                <% if(pageInfo.id == 'liverpool') { %> 
+                    <div class="mg-tp-30">
                         <%- include('./about/' + pageInfo.id + '.html') %>
                     </div>
-                </div>
+                <% } else { %> 
+                    <div class="layout-2">
+                        <div class="layout-2__side mg-tp-30">
+                            <%- include('./about/sidebar.html') %>
+                        </div>
+                        <div class="layout-2__content mg-tp-30">
+                            <%- include('./about/' + pageInfo.id + '.html') %>
+                        </div>
+                    </div>
+                <% } %>
             </div>
         <% include /common/vendor/web.js.html %>
 
