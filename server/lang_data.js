@@ -2143,6 +2143,8 @@ module.exports = function () {
     var mThird = require('./mutilang/third')
     // 注册协议 agment_mdl.html
     var agment = replaceTiger(require('./mutilang/agment'))
+    // 首页新UI
+    var home = replaceTiger(require('./mutilang/home'))
     return _.merge(
         data,
         faq,
@@ -2151,6 +2153,7 @@ module.exports = function () {
         mInvite,
         mRegister,
         mThird,
-        agment
+        agment,
+        home
     );
 }; 

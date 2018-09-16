@@ -1,0 +1,355 @@
+@include b(index_new) {
+  @include e (container) {
+    width: 1310px;
+    margin: 0 auto;
+    font-size: 16px;
+    position: relative;
+  }
+  @include e(focus) {
+    height: 1099px !important;
+    background-position: center center;
+    background-size: auto 100%;
+    color: #fff;
+    &.cn {
+      background-image: url("/white_label/home/focus-cn.png");
+    }
+    &.en {
+      background-image: url("/white_label/home/focus-en.png");
+    }
+    @include m(title) {
+      margin: 0;
+      font-size: 45px;
+      padding-top: 310px;
+    }
+    @include m(sub_tit) {
+      margin-bottom: 75px;
+    }
+    @include m(icon_box) {
+      margin-bottom: 80px;
+      li {
+        float: left;
+        width: 123px;
+        text-align: center;
+        margin: 0 5px;
+        img {
+          height: 58px;
+        }
+      }
+    }
+    @include m(btn_box) {
+      .tw-btn-capsule-bordered {
+        margin-left: 10px;
+        color: #fff;
+      }
+    }
+    @include m(download) {
+      position: absolute;
+      top: 980px;
+      right: 80px;
+    }
+  }
+  @include e(copy) {
+    position: relative;
+    z-index: 10;
+    @include m(title) {
+      font-size: 56px;
+      text-align: center;
+      color: rgb(36,42,54);
+      margin: 136px 0px 26px;
+    }
+    @include m(sub_tit) {
+      color: rgb(187,196,215);
+      text-align: center;
+      font-size: 18px;
+    }
+    @include m(lst) {
+      display: flex;
+      justify-content: space-between;
+      margin: 70px 0px 88px;
+      li {
+        width: 242px;
+        height: 252px;
+        box-shadow: 2px 2px 10px 3px #eee;
+        border-radius: 26px;
+        text-align: center;
+        padding: 12px 22px;
+        .num {
+          font-size: 40px;
+          color: rgba(36,42,54,0.3);
+          margin: 10px 0px 5px;
+        }
+        .tip {
+          color: rgb(36,42,54);
+        }
+      }
+    }
+    @include m(btn_box) {
+      text-align: center;
+    }
+  }
+  @include e(flexible) {
+    margin-top: 160px;
+    .curcle-1 {
+      position: absolute;
+      top: -620px;
+      left: -636px;
+    }
+    @include m(title) {
+      font-size: 56px;
+      text-align: center;
+      color: rgb(36,42,54);
+      margin: 0px 0px 80px;
+    }
+    @include m(box) {
+      position: relative;
+      z-index: 100;
+      width: 1070px;
+      margin: 0 auto;
+      background-color: #eee;
+      border-radius: 20px;
+      box-shadow: 2px 2px 10px 3px #eee;
+      padding: 30px 90px;
+      .content {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 50px 80px;
+      }
+    }
+    @include m(lst) {
+      width: 1100px;
+      display: flex;
+      justify-content: space-between;
+      margin: 90px auto 45px;
+      li {
+        text-align: center;
+        img {
+          height: 32px;
+        }
+        h5 {
+          color: rgb(36,42,54);
+          font-size: 24px;
+        }
+        p {
+          color: rgb(187,196,215);
+        }
+      }
+    }
+    @include m(btn_box) {
+      text-align: center;
+    }
+  }
+  @include e(block) {
+    margin-top: 147px;
+    @include m(title) {
+      font-size: 56px;
+      text-align: center;
+      color: rgb(36,42,54);
+    }
+    @include m(sub_tit) {
+      color: rgb(187,196,215);
+      text-align: center;
+      font-size: 18px;
+    }
+    @include m(content) {
+      width: 1100px;
+      height: 500px;
+      border: 1px solid #eee;
+      margin: 50px auto;
+    }
+  }
+  @include e(tools) {
+    background-image: url("/white_label/home/tools-bg-cn.png");
+    height: 1000px !important;
+    background-position: center center;
+    background-size: auto 100%;
+    @include m(title) {
+      font-size: 56px;
+      color: rgb(11,11,11);
+      padding: 320px 0px 30px;
+    }
+    @include m(sub_tit) {
+      color: rgba(11,11,11,0.7);
+    }
+    @include m(download) {
+      margin-top: 35px;
+    }
+  }
+  @include e(reliable) {
+    margin-top: 184px;
+    @include m(title) {
+      text-align: center;
+      font-size: 56px;
+      color: rgb(11,11,11);
+      margin-bottom: 65px;
+    }
+    @include m(lst) {
+      display: flex;
+      justify-content: space-between;
+      width: 1000px;
+      margin: 0 auto;
+      li {
+        width: 476px;
+        height: 232px;
+        box-shadow: 2px 2px 10px 3px #eee;
+        border-radius: 10px;
+        text-align: center;
+        h5 {
+          font-size: 24px;
+          color: rgb(36,42,54);
+          &.f {
+            margin-top: 80px;
+          }
+          &.b {
+            margin-top: 65px;
+          }
+        }
+        p {
+          color: rgb(187,196,215);
+        }
+      }
+    }
+    @include m(btn_box) {
+      margin-top: 120px;
+      text-align: center;
+    }
+  }
+  @include e(client) {
+    text-align: center;
+    @include m(title) {
+      font-size: 56px;
+      margin: 230px 0px 50px;
+    }
+  }
+  @include e(float_box) {
+    position: relative;
+    margin-bottom: 50px;
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: 1.5%;
+      width: 97%;
+      height: 8px;
+      border-radius: 4px;
+      background: rgb(253,216,53);
+    }
+  }
+  @include e(float) {
+    margin-top: 200px;
+    position: relative;
+    border-radius: 30px;
+    padding: 25px 70px 100px;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.06);
+    z-index: 100;
+    background: #fff;
+    .f {
+      width: 78%;
+    }
+    .b {
+      width: 22%;
+      margin-top: 90px;
+    }
+    h3 {
+      font-size: 40px;
+      margin: 0;
+    }
+    p {
+      font-size: 24px;
+      color: rgb(187,196,215);
+    }
+  }
+}
+
+// 报价
+@include b(index_new_qupte) {
+  @include e(title) {
+      float: left;
+      width: 48%;
+      padding-bottom: 20px;
+      color: #393939;
+      &.h_border {
+        width: 52%;
+      }
+
+      li {
+          float: left;
+          text-align: center;
+
+          &.pro {
+              width: 40%;
+          }
+          &.sell {
+              width: 30%;
+          }
+          &.buy {
+              width: 30%;
+          }
+      }
+  }
+  @include e(tip) {
+      padding-top: 35px;
+      text-align: center;
+      color: #aaa;
+  }
+  @include e(content) {
+      float: left;
+      width: 48%;
+      padding: 17px 0;
+      color: #393939;
+
+      &.h_border {
+          width: 52%;
+          border-right: 1px solid #ccc;
+      }
+
+      li {
+          float: left;
+          text-align: center;
+
+          span {
+              padding: 1px 0px;
+              display: inline-block;
+              border-radius: 4px;
+              width: 65px;
+              font-size: 14px;
+          }
+
+          &.pro {
+              width: 40%;
+          }
+          &.sell {
+              width: 30%;
+
+              &.up {
+                  span {
+                      background-color: #f05452;
+                      color: #fff;
+                  }
+              }
+              &.down {
+                  span {
+                      background-color: #25c875;
+                      color: #fff;
+                  }
+              }
+          }
+          &.buy {
+              width: 30%;
+
+              &.up {
+                  span {
+                      background-color: #f05452;
+                      color: #fff;
+                  }
+              }
+              &.down {
+                  span {
+                      background-color: #25c875;
+                      color: #fff;
+                  }
+              }
+          }
+      }
+  }
+}
