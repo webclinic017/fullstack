@@ -127,7 +127,7 @@
                                     type="text"
                                     placeholder="{{lang.text('tigerWitID.areaCode')}}"
                                     required
-                                    ng-disabled="personal.phone"
+                                    disabled
                                     ng-model="completeInfo.areaCode.value"
                                     ng-class="{'form-control-error': frontErr.areaCode.show && completeForm.areaCode.$invalid, 'disabled': personal.phone }"
                                     ng-blur="showErr('areaCode')"
@@ -137,7 +137,8 @@
     
                                 <ul style="width: 150%;" ng-if="!personal.phone" class="select__dropdown" twform-select data-bind-model="completeInfo.areaCode">
                                     
-                                    <li ng-repeat="areaCode in areaCodes" ng-class="{'selected': areaCode.value === completeInfo.areaCode.value}">
+                                    <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderArea"><i class="fa fa-search"></i></li>
+                                    <li ng-repeat="areaCode in areaCodes | filter : placeholderArea" ng-class="{'selected': areaCode.value === completeInfo.areaCode.value}">
                                         <span data-value="{{ areaCode.value }}">{{ areaCode.value }}({{ areaCode.name }})</span>
                                     </li>
                                 </ul>
@@ -227,6 +228,7 @@
                                 type="text"
                                 placeholder="{{lang.text('tigerWitID.provinces')}}"
                                 required
+                                disabled
                                 ng-model="completeInfo.province.key"
                                 ng-class="{'form-control-error': frontErr.province.show && completeForm.province.$invalid}"
                                 ng-blur="showErr('province')"
@@ -257,6 +259,7 @@
                                 type="text"
                                 placeholder="{{lang.text('tigerWitID.city')}}"
                                 required
+                                disabled
                                 ng-model="completeInfo.city.key"
                                 ng-class="{'form-control-error': frontErr.province.show && completeForm.city.$invalid}"
                                 ng-blur="showErr('city')"
