@@ -14,13 +14,15 @@
                                 type="text"
                                 placeholder="{{lang.text('tigerWitID.areaCode')}}"
                                 required
+                                disabled
                                 ng-model="phone.phone_code.key">
                         
                         <i class="select__icon fa fa-angle-down"></i>
 
                         <ul class="select__dropdown" twform-select data-bind-model="phone_test">
                             
-                            <li ng-repeat="world in worlds" ng-class="{'selected': world.code === phone.phone_code.value}">
+                            <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderArea"><i class="fa fa-search"></i></li>
+                            <li ng-repeat="world in worlds | filter : placeholderArea" ng-class="{'selected': world.code === phone.phone_code.value}">
                                 <span data-value="{{world.code}}" ng-click="selectWorld(world)">+{{world.phone_code}}({{world.name}})</span>
                             </li>
                         </ul>

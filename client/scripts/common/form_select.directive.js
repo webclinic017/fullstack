@@ -20,29 +20,37 @@
                 var select = element.parent();
                 var dropdown = element;
                 
-                select.on('focus', selector.input, function () {
+                select.on('click', function (e) {
                     dropdown.addClass('active');
+                    e.stopPropagation();
                 });
 
-                select.on('blur', selector.input, function () {
+                // select.on('blur', selector.input, function () {
+                //     setTimeout(function () {
+                //         dropdown.removeClass('active');    
+                //     }, 150);
+                // });
+                $(document).on('click', function () {
                     setTimeout(function () {
                         dropdown.removeClass('active');    
                     }, 150);
                 });
-
                 select.on('click', selector.dropdown, function (e) {
                     var target = $(e.target);
-                    
+                    console.log(scope)
                     if (target.is('span[data-value]')) {
                         scope.bindModel.key = target.text();
                         scope.bindModel.value = target.attr('data-value');
+                        setTimeout(function () {
+                            dropdown.removeClass('active');    
+                        }, 150);
                         scope.$apply();
                     }
                 });
 
-                select.on('keydown', selector.input, function (e) {
-                    e.preventDefault();
-                });
+                // select.on('keydown', selector.input, function (e) {
+                //     e.preventDefault();
+                // });
 
                 select.on('contextmenu', selector.input, function (e) {
                     e.preventDefault();

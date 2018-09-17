@@ -1,323 +1,466 @@
 <div class="m_vue m_vue_bgc" data-type="helpNavi" id="helpNavi">
     <ul class="help1-navi-title">
         <p class="help1-navi-title__back_top" data-action="backTop-naviBox"><%=lang.text("faqCommon0")%></p>
-        <li class="help1-navi-title__item">
-            <h5 class="help1-navi-title__item-title" data-action="openDetail-desp"><%=lang.text("openAccount")%></h5>
-            <div class="help1-navi-title__item-desp">
-                <h6 class="desp_title faq"><%=lang.text("faqAccount1")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAccount2")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAccount3")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAccount4")%> <br>
-                    <%if(lang.isVersion('uk')){%>
-                        <%=lang.text("faqAccount4_1_uk")%> 
-                    <%} else {%>
-                        <%=lang.text("faqAccount4_1")%> 
-                    <%}%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAccount5")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAccount6")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAccount7")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAccount8")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAccount9")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAccount10")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAccount11")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAccount12")%> <br>
-                    <%=lang.text("faqAccount12_1")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAccount13")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAccount14")%>  
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAccount15")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAccount16")%> </br>
-                    <%=lang.text("faqAccount17")%> </br>
-                    <%=lang.text("faqAccount18")%> </br>
-                    <%=lang.text("faqAccount19")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAccount20")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAccount21")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAccount22")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAccount23")%>
-                </p>
-            </div>
-        </li>
-        <li class="help1-navi-title__item">
-            <h5 class="help1-navi-title__item-title" data-action="openDetail-desp"><%=lang.text("trading")%></h5>
-            <div class="help1-navi-title__item-desp">
-                <h6 class="desp_title faq"><%=lang.text("faqTrade1")%></h6>
-                <%if(!lang.isTigerSpecial()){%>
+        <% if(lang.isEnglish()) { %> 
+            <li class="help1-navi-title__item">
+                <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">Opening an account</h5>
+                <div class="help1-navi-title__item-desp">
+                    <h6 class="desp_title faq">How do I open an account?</h6>
                     <p class="desp_subdesp faq">
-                        <%=lang.text("faqTrade2")%>
+                        To open a Live or Experience account, download the app and click on ‘Register’. <a href="/download">download the app</a>
                     </p>
-                <%} else { %>
+                    <h6 class="desp_title faq">Can I open more than one Live account?</h6>
                     <p class="desp_subdesp faq">
-                        A：<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>向客户提供20多种外汇交易品种、2种贵金属（黄金、白银）、原油和天然气以及多种CFD股指差价合约。
+                        You can have up to seven Live sub-accounts on the same ID. 
                     </p>
-                <%}%>
-                
-                <h6 class="desp_title faq"><%=lang.text("faqTrade3")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade4")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqTrade5")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade6")%>
-                </p>
-
-                <%if(!lang.isVersion('uk')){%>
-                    <h6 class="desp_title faq"><%=lang.text("faqTrade7")%></h6>
-                    <%if(lang.isTigerSpecial()){%>
-                        <p class="desp_subdesp faq">
-                            A：对于外汇，<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>向客户同时提供3种杠杆， 50倍、100倍和200倍。 
-                            </br>
-                            对于CFD股指差价合约，我们只提供一种杠杆1:100。
-                        </p>
-                    <%} else { %>
-                        <p class="desp_subdesp faq">
-                            <%=lang.text("faqTrade8")%>
-                            </br>
-                            <%=lang.text("faqTrade9")%>
-                        </p>
-                    <%}%>
-                    
-                    <h6 class="desp_title faq"><%=lang.text("faqTrade10")%></h6>
+                    <h6 class="desp_title faq">Can I open a joint Live account?</h6>
                     <p class="desp_subdesp faq">
-                        <%=lang.text("faqTrade11")%>
+                        Yes, Please contact Customer Service for more information at customerservice@tigerwit.com.
                     </p>
-                <%}%>
-                
-                <h6 class="desp_title faq"><%=lang.text("faqTrade12")%></h6>
-                <%if(!lang.isTigerSpecial()){%>
+                    <h6 class="desp_title faq">How long does it take to open an account? </h6>
                     <p class="desp_subdesp faq">
+                        You can open an Experience account immediately. Normally a Live account can be set up within minutes although we may ask you for further information as part of the process. 
+                    </p>
+                    <h6 class="desp_title faq">What information or documents do I need to open an account? </h6>
+                    <p class="desp_subdesp faq">
+                        We will require copies of your passport or your government-issued national ID card with a photo. 
+                    </p>
+                </div>
+            </li>
+            <li class="help1-navi-title__item">
+                <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">Trading</h5>
+                <div class="help1-navi-title__item-desp">
+                    <h6 class="desp_title faq">When is the platform open?</h6>
+                    <div class="desp_subdesp faq">
+                        During UK summer time London is UTC plus 1 hour otherwise it is the same as UTC. <br>
+                        <img src="/white_label/trade-time-pandafxE.jpg" alt="">
+                    </div>
+                    <h6 class="desp_title faq">Will you close any of my positions?</h6>
+                    <p class="desp_subdesp faq">
+                        When the margin ratio (margin/free margin) is below 50%, TigerWit will effect liquidation starting from your position showing the highest loss. Please maintain sufficient margin on your account at all times
+                    </p>
+                    <h6 class="desp_title faq">What is a price re-quotation and when might it happen?</h6>
+                    <p class="desp_subdesp faq">
+                        The most common reasons for a price re-quotation are: <br>
+                        &nbsp; •&nbsp;	Volatility: When markets are experiencing high volatility, the price may change dramatically. <br>
+                        &nbsp; •&nbsp;	Slow connectivity: You may be trading on a poor internet connection which can result in price latency. <br>
+                        
+                        In cases such as these we may offer a revised market quote to you. You can choose to accept the re-quoted price (which may itself then require a re-quote) or cancel the order.
+                    </p>
+                    <h6 class="desp_title faq">What is slippage and when might it occur?</h6>
+                    <p class="desp_subdesp faq">
+                        In case of liquidation of a position, or when a stop-loss is triggered, the trade is executed at the actual market price. Immediately following a stop-loss or liquidation being triggered, the actual market price may no longer be at the trigger level. In the case of gaps, the trade will be made at the first available market price following the gap, which may differ from the previously quoted price.
+                    </p>
+                    <h6 class="desp_title faq">What is the minimum lot size I can trade?</h6>
+                    <p class="desp_subdesp faq">
+                        The minimum lot size is 0.01 Lot for FX and precious metals and 0.1 Lot for indices and oils
+                    </p>
+                    <h6 class="desp_title faq">How can I view the details of the trading products?</h6>
+                    <p class="desp_subdesp faq">
+                        On the app, click on the ‘?’ icon at the top of the trading symbol to view product details.
+                    </p>
+                    <h6 class="desp_title faq">What leverage do you offer?</h6>
+                    <p class="desp_subdesp faq">
+                        TigerWit offers leverage 200 : 1 depending on the market, although Crypto Currency (Bitcoin etc) leverage is 2 :1. Higher leverage may be available if you are eligible to be treated as a Professional Client. Please contact Client Support for more information at customerservice@tigerwit.com.
+                    </p>
+                    <h6 class="desp_title faq">What trading fees do you charge?</h6>
+                    <p class="desp_subdesp faq">
+                        TigerWit only charges the spread. There is no commission applicable.
+                    </p>
+                    <h6 class="desp_title faq">Is there a time limit on holding open positions or orders to open?</h6>
+                    <p class="desp_subdesp faq">
+                        There is no time limit for open orders or positions. There is no limit on the number of orders or positions you can have open at any time so long as you maintain sufficient margin to cover any losses and swap charges.
+                    </p>
+                </div>
+            </li>
+            <li class="help1-navi-title__item">
+                <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">Deposit and withdrawal</h5>
+                <div class="help1-navi-title__item-desp">
+                    <h6 class="desp_title faq">How do I deposit money into my account?</h6>
+                    <p class="desp_subdesp faq">
+                        You can deposit money into your account via telegraphic transfer, PayPal, Neteller, Omipay and AIB by visiting ‘Deposit’ on the app.
+                    </p>
+                    <h6 class="desp_title faq">How do I withdraw funds from my account?</h6>
+                    <p class="desp_subdesp faq">
+                        You can withdraw funds at any time by visiting ‘Withdrawal’ on the app. We recommend that you monitor your account closely to ensure you maintain sufficient margin. 
+                    </p>
+                    <h6 class="desp_title faq">How long does it take to transfer funds?</h6>
+                    <p class="desp_subdesp faq">
+                        Crediting funds: funds are usually credited to your account instantly. <br><br>
+                        Withdrawing funds: TigerWit will transmit funds within two days. It may take longer for funds to appear in your bank account depending on your bank’s processing procedure and whether the withdrawal was made on a weekday or weekend.
+                    </p>
+                    <h6 class="desp_title faq">What is the minimum deposit required?</h6>
+                    <p class="desp_subdesp faq">
+                        The minimum deposit amount is USD200
+                    </p>
+                    <h6 class="desp_title faq">Are there withdrawal fees?</h6>
+                    <p class="desp_subdesp faq">
+                        TigerWit does not usually charge any withdrawal fees
+                    </p>
+                </div>
+            </li>
+            <li class="help1-navi-title__item">
+                <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">Copy trading</h5>
+                <div class="help1-navi-title__item-desp">
+                    <h6 class="desp_title faq">Earning commission</h6>
+                    <p class="desp_subdesp faq">
+                        TigerWit Masters earn 20% of the value of successful trades made by followers. This amount is credited to the Master’s account automatically. 
+                    </p>
+                    <h6 class="desp_title faq">Paying commission</h6>
+                    <p class="desp_subdesp faq">
+                        Followers pay 20% of the profit made by following a Master’s trade to the Master. Commission is deducted automatically
+                    </p>
+                    <h6 class="desp_title faq">Unfollow</h6>
+                    <p class="desp_subdesp faq">
+                        If you choose to unfollow a Master’s trade your position will remain open until it is manually closed or you choose ‘Unfollow and force-flat’. You will still be liable for 20% commission payable to the Master when the position is closed. <br><br>
+                        If you do not choose ‘Unfollow and force-flat’ your position will remain open and you will still be liable for 20% commission payable to the Master.
+                    </p>
+                </div>
+            </li>
+            <li class="help1-navi-title__item">
+                <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">Swap rate</h5>
+                <div class="help1-navi-title__item-desp">
+                    <h6 class="desp_title faq">What is the swap rate?</h6>
+                    <p class="desp_subdesp faq">
+                        The swap rate is the interest applied when you hold open positions overnight. No swap rate applies if you open and then close a position during a trading day’s transaction period.
+                    </p>
+                    <h6 class="desp_title faq">Does the swap rate change for different products?</h6>
+                    <p class="desp_subdesp faq">
+                        The swap rate for each currency pair is different for different trading directions.
+                    </p>
+                    <h6 class="desp_title faq">When is the swap rate applied?</h6>
+                    <p class="desp_subdesp faq">
+                        Swap rates will be calculated at 22.00 UTC and TigerWit may update swap rates without notice. If you hold a position open overnight on Wednesday/Thursday, then the swap rate applicable is tripled. This triple charge covers the weekend period and is a market convention routed in settlement times for real forex trades (as opposed to CFDs). Given two day settlement, a trade made on Wednesday evening will be settled on Friday evening and the swap charge applied therefore reflected the weekend.
+                    </p>
+                    <h6 class="desp_title faq">Where can I check the swap rate quotation?</h6>
+                    <p class="desp_subdesp faq">
+                        On the app, visit the product's trading page. Click on the ‘?’ icon to view the swap rate information.
+                    </p>
+                    <h6 class="desp_title faq">Where can I check the previous swap rate charges?</h6>
+                    <p class="desp_subdesp faq">
+                        On the app click ‘Trade’ / ‘History’ / ‘Closed Orders’
+                    </p>
+                </div>
+            </li>
+        <% } else { %>    
+            <li class="help1-navi-title__item">
+                <h5 class="help1-navi-title__item-title" data-action="openDetail-desp"><%=lang.text("openAccount")%></h5>
+                <div class="help1-navi-title__item-desp">
+                    <h6 class="desp_title faq"><%=lang.text("faqAccount1")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAccount2")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqAccount3")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAccount4")%> <br>
                         <%if(lang.isVersion('uk')){%>
-                            <%=lang.text("faqTrade13_uk")%> 
+                            <%=lang.text("faqAccount4_1_uk")%> 
                         <%} else {%>
-                            <%=lang.text("faqTrade13")%>
+                            <%=lang.text("faqAccount4_1")%> 
                         <%}%>
                     </p>
-                <%} else { %>
+                    <h6 class="desp_title faq"><%=lang.text("faqAccount5")%></h6>
                     <p class="desp_subdesp faq">
-                        A：CFD股指差价合约每手10美金手续费，外汇、贵金属、原油、天然气没有佣金和手续费，只收取相应的点差。
+                        <%=lang.text("faqAccount6")%>
                     </p>
-                <%}%>
-                <!-- <h6 class="desp_title faq"><%=lang.text("faqTrade14")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade15")%>
-                </p> -->
-                <h6 class="desp_title faq"><%=lang.text("faqTrade16")%></h6>
-                <%if(!lang.isTigerSpecial()){%>
+                    <h6 class="desp_title faq"><%=lang.text("faqAccount7")%></h6>
                     <p class="desp_subdesp faq">
-                        <%= lang.text("faqTrade17")%></br>
-                        <span style="text-indent: 2em;"><%= lang.text("faqTrade17_2")%></span></br>
-                        <span style="text-indent: 2em;"><%= lang.text("faqTrade17_3")%></span>
+                        <%=lang.text("faqAccount8")%>
                     </p>
-                <%} else { %>
+                    <h6 class="desp_title faq"><%=lang.text("faqAccount9")%></h6>
                     <p class="desp_subdesp faq">
-                        A：外汇、原油及贵金属产品最低开仓为0.01手，天然气最低开仓为0.1手，CFD产品最低开仓为1手。
-                        </br> 
-                        外汇、贵金属单张订单交易的开仓上限为50手，能源交易单张订单开仓上限为20手，CFD产品单张订单开仓上限为10手。 
-                        </br>                     
-                        但是如果账户资金足够大，那么可以下多张订单，我们对订单的数量是没有限制。
+                        <%=lang.text("faqAccount10")%>
                     </p>
-                <%}%>
-                
-                <h6 class="desp_title faq"><%=lang.text("faqTrade18")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade19")%>
-                </p>
-                <!-- <h6 class="desp_title faq">Q：你们平台会不会发生“跳空”和“滑点”？</h6>
-                <p class="desp_subdesp faq">
-                    A：跳空是外汇交易中不可避免的，当市场有大的波动时，就会产生跳空。 
-                    </br>
-                    我们平台是按照市场价成交的，即银行端服务器接收到您的订单的那个时间点的价格进行成交。如果因为网络传输等不可控原因可能会使成交价与您看到的价格微微不同。
-                </p>
-                <h6 class="desp_title faq">Q：如果发生跳空怎么办？</h6>
-                <p class="desp_subdesp faq">
-                    A：按照此时有执行的单子，那么按照跳空后的第一个价格成交。
-                </p>
-                <h6 class="desp_title faq">Q：为什么成交时候的价格跟我刚刚交易看到的价格不一样？</h6>
-                <p class="desp_subdesp faq">
-                    A：我们平台是按照市价成交的。在外汇交易中，报价变动特别快，成交时是以服务器收到指令时市场最新价格成交的。所以可能与您看到的价格微微有些出入，在行情变动非常频繁的时候，价格变动更加迅速，我们的所有报价全部都是从市场上获得的原始报价，交易速度造成的滑点是避免不了的，建议您在市场波动过大的时候减少或者不要交易。
-                </p> -->
-                <h6 class="desp_title faq"><%=lang.text("faqTrade20")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade21")%>
-                    <%if(lang.isCompany('pandafx')){%>
-                        <img src="/white_label/trade-time-pandafx.jpg" alt="">
+                    <h6 class="desp_title faq"><%=lang.text("faqAccount11")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAccount12")%> <br>
+                        <%=lang.text("faqAccount12_1")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqAccount13")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAccount14")%>  
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqAccount15")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAccount16")%> </br>
+                        <%=lang.text("faqAccount17")%> </br>
+                        <%=lang.text("faqAccount18")%> </br>
+                        <%=lang.text("faqAccount19")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqAccount20")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAccount21")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqAccount22")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAccount23")%>
+                    </p>
+                </div>
+            </li>
+            <li class="help1-navi-title__item">
+                <h5 class="help1-navi-title__item-title" data-action="openDetail-desp"><%=lang.text("trading")%></h5>
+                <div class="help1-navi-title__item-desp">
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade1")%></h6>
+                    <%if(!lang.isTigerSpecial()){%>
+                        <p class="desp_subdesp faq">
+                            <%=lang.text("faqTrade2")%>
+                        </p>
                     <%} else { %>
-                        <%if(lang.currentLanguage() === 'en'){%>
-                        <img src="/white_label/trade-time-en.png" alt="">
-                        <%} else { %>
-                        <img src="/white_label/trade-time-cn.png" alt="">
-                        <%}%>
+                        <p class="desp_subdesp faq">
+                            A：<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>向客户提供20多种外汇交易品种、2种贵金属（黄金、白银）、原油和天然气以及多种CFD股指差价合约。
+                        </p>
                     <%}%>
                     
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqTrade22")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade23")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqTrade24")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade25")%>
-                    </br>
-                    <%=lang.text("faqTrade26")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqTrade27")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade28")%></br>
-                    <%=lang.text("faqTrade28_2")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqTrade29")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade30")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqTrade31")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade32")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqTrade33")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade34")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqTrade35")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqTrade36")%>
-                </p>
-            </div>
-        </li>
-        <li class="help1-navi-title__item">
-            <h5 class="help1-navi-title__item-title" data-action="openDetail-desp"><%=lang.text("depAndWith")%></h5>
-            <div class="help1-navi-title__item-desp">
-                <!-- <h6 class="desp_title faq">Q: 入金币种？</h6>
-                <p class="desp_subdesp faq">
-                    A:入金仅支持人民币入金，交易以美元执行。
-                </p>
-                <h6 class="desp_title faq">Q: 入金方式？</h6>
-                <p class="desp_subdesp faq">
-                    A:入金方式支持银联在线支付，海外汇款。
-                </p> -->
-                <h6 class="desp_title faq"><%=lang.text("faqAsset1")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAsset2")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAsset3")%></h6>
-                <%if(lang.isVersion('uk')){%>
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade3")%></h6>
                     <p class="desp_subdesp faq">
-                        <%=lang.text("faqAsset4_uk")%>
+                        <%=lang.text("faqTrade4")%>
                     </p>
-                <%} else {%>
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade5")%></h6>
                     <p class="desp_subdesp faq">
-                        <%=lang.text("faqAsset4")%>
+                        <%=lang.text("faqTrade6")%>
                     </p>
-                <%}%>
-                <h6 class="desp_title faq"><%=lang.text("faqAsset5")%></h6>
-                
-                <%if(lang.isVersion('uk')){%>
+
+                    <%if(!lang.isVersion('uk')){%>
+                        <h6 class="desp_title faq"><%=lang.text("faqTrade7")%></h6>
+                        <%if(lang.isTigerSpecial()){%>
+                            <p class="desp_subdesp faq">
+                                A：对于外汇，<%=lang.text("companyEnName")%><%=lang.text("companyZhName")%>向客户同时提供3种杠杆， 50倍、100倍和200倍。 
+                                </br>
+                                对于CFD股指差价合约，我们只提供一种杠杆1:100。
+                            </p>
+                        <%} else { %>
+                            <p class="desp_subdesp faq">
+                                <%=lang.text("faqTrade8")%>
+                                </br>
+                                <%=lang.text("faqTrade9")%>
+                            </p>
+                        <%}%>
+                        
+                        <h6 class="desp_title faq"><%=lang.text("faqTrade10")%></h6>
+                        <p class="desp_subdesp faq">
+                            <%=lang.text("faqTrade11")%>
+                        </p>
+                    <%}%>
+                    
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade12")%></h6>
+                    <%if(!lang.isTigerSpecial()){%>
+                        <p class="desp_subdesp faq">
+                            <%if(lang.isVersion('uk')){%>
+                                <%=lang.text("faqTrade13_uk")%> 
+                            <%} else {%>
+                                <%=lang.text("faqTrade13")%>
+                            <%}%>
+                        </p>
+                    <%} else { %>
+                        <p class="desp_subdesp faq">
+                            A：CFD股指差价合约每手10美金手续费，外汇、贵金属、原油、天然气没有佣金和手续费，只收取相应的点差。
+                        </p>
+                    <%}%>
+                    <!-- <h6 class="desp_title faq"><%=lang.text("faqTrade14")%></h6>
                     <p class="desp_subdesp faq">
-                        <%=lang.text("faqAsset6_uk")%>
-                    </p>
-                <%} else {%>
+                        <%=lang.text("faqTrade15")%>
+                    </p> -->
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade16")%></h6>
+                    <%if(!lang.isTigerSpecial()){%>
+                        <p class="desp_subdesp faq">
+                            <%= lang.text("faqTrade17")%></br>
+                            <span style="text-indent: 2em;"><%= lang.text("faqTrade17_2")%></span></br>
+                            <span style="text-indent: 2em;"><%= lang.text("faqTrade17_3")%></span>
+                        </p>
+                    <%} else { %>
+                        <p class="desp_subdesp faq">
+                            A：外汇、原油及贵金属产品最低开仓为0.01手，天然气最低开仓为0.1手，CFD产品最低开仓为1手。
+                            </br> 
+                            外汇、贵金属单张订单交易的开仓上限为50手，能源交易单张订单开仓上限为20手，CFD产品单张订单开仓上限为10手。 
+                            </br>                     
+                            但是如果账户资金足够大，那么可以下多张订单，我们对订单的数量是没有限制。
+                        </p>
+                    <%}%>
+                    
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade18")%></h6>
                     <p class="desp_subdesp faq">
-                        <%=lang.text("faqAsset6")%>
+                        <%=lang.text("faqTrade19")%>
                     </p>
-                <%}%>
-                <h6 class="desp_title faq"><%=lang.text("faqAsset7")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAsset8")%><br>
-                    <%=lang.text("faqAsset8_2")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAsset9")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAsset10")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAsset11")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAsset12")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAsset13")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAsset14")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAsset15")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAsset16")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAsset17")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAsset18")%> <br>
-                    <%=lang.text("faqAsset18_1")%> <br>
-                    <%=lang.text("faqAsset18_2")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqAsset19")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqAsset20")%> <br>
-                    <%=lang.text("faqAsset20_1")%>
-                </p>
-            </div>
-        </li>
-        <li class="help1-navi-title__item">
-            <h5 class="help1-navi-title__item-title" data-action="openDetail-desp"><%=lang.text("homeMt4")%></h5>
-            <div class="help1-navi-title__item-desp">
-                <h6 class="desp_title faq"><%=lang.text("faqMeta1")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqMeta2")%>
-                    <a style="color: #188afa;text-decoration: underline;" href="https://itunes.apple.com/cn/app/metatrader-4/id496212596?l=en&mt=8">IOS;</a>
-                    <a style="color: #188afa;text-decoration: underline;margin-left: 0.5rem;" href="http://zhushou.360.cn/detail/index/soft_id/260622?recrefer=SE_D_meta">Android</a>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqMeta3")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqMeta4")%>
-                </p>
-            </div>
-        </li>
-        <li class="help1-navi-title__item">
-            <h5 class="help1-navi-title__item-title" data-action="openDetail-desp"><%=lang.text("sidebar10")%></h5>
-            <div class="help1-navi-title__item-desp">
-                <h6 class="desp_title faq"><%=lang.text("faqSwap1")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqSwap2")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqSwap3")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqSwap4")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqSwap5")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqSwap6")%><br>
-                    <%=lang.text("faqSwap6_2")%><br>
-                    <%=lang.text("faqSwap6_3")%><br>
-                    <%=lang.text("faqSwap6_4")%><br>
-                    <%=lang.text("faqSwap7")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqSwap8")%></h6>
-                <p class="desp_subdesp faq">
-                        <%=lang.text("faqSwap9")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqSwap10")%></h6>
-                <p class="desp_subdesp faq">
-                    <%=lang.text("faqSwap11")%>
-                </p>
-                <h6 class="desp_title faq"><%=lang.text("faqSwap12")%></h6>
-                <p class="desp_subdesp faq" style="text-align: left;">
-                    <%= lang.text("faqSwap13")%><br>
-                    <%= lang.text("faqSwap13_2")%>
-                </p>
-            </div>
-        </li>
+                    <!-- <h6 class="desp_title faq">Q：你们平台会不会发生“跳空”和“滑点”？</h6>
+                    <p class="desp_subdesp faq">
+                        A：跳空是外汇交易中不可避免的，当市场有大的波动时，就会产生跳空。 
+                        </br>
+                        我们平台是按照市场价成交的，即银行端服务器接收到您的订单的那个时间点的价格进行成交。如果因为网络传输等不可控原因可能会使成交价与您看到的价格微微不同。
+                    </p>
+                    <h6 class="desp_title faq">Q：如果发生跳空怎么办？</h6>
+                    <p class="desp_subdesp faq">
+                        A：按照此时有执行的单子，那么按照跳空后的第一个价格成交。
+                    </p>
+                    <h6 class="desp_title faq">Q：为什么成交时候的价格跟我刚刚交易看到的价格不一样？</h6>
+                    <p class="desp_subdesp faq">
+                        A：我们平台是按照市价成交的。在外汇交易中，报价变动特别快，成交时是以服务器收到指令时市场最新价格成交的。所以可能与您看到的价格微微有些出入，在行情变动非常频繁的时候，价格变动更加迅速，我们的所有报价全部都是从市场上获得的原始报价，交易速度造成的滑点是避免不了的，建议您在市场波动过大的时候减少或者不要交易。
+                    </p> -->
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade20")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqTrade21")%>
+                        <%if(lang.isCompany('pandafx')){%>
+                            <img src="/white_label/trade-time-pandafx.jpg" alt="">
+                        <%} else { %>
+                            <%if(lang.currentLanguage() === 'en'){%>
+                            <img src="/white_label/trade-time-en.png" alt="">
+                            <%} else { %>
+                            <img src="/white_label/trade-time-cn.png" alt="">
+                            <%}%>
+                        <%}%>
+                        
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade22")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqTrade23")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade24")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqTrade25")%>
+                        </br>
+                        <%=lang.text("faqTrade26")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade27")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqTrade28")%></br>
+                        <%=lang.text("faqTrade28_2")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade29")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqTrade30")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade31")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqTrade32")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade33")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqTrade34")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqTrade35")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqTrade36")%>
+                    </p>
+                </div>
+            </li>
+            <li class="help1-navi-title__item">
+                <h5 class="help1-navi-title__item-title" data-action="openDetail-desp"><%=lang.text("depAndWith")%></h5>
+                <div class="help1-navi-title__item-desp">
+                    <!-- <h6 class="desp_title faq">Q: 入金币种？</h6>
+                    <p class="desp_subdesp faq">
+                        A:入金仅支持人民币入金，交易以美元执行。
+                    </p>
+                    <h6 class="desp_title faq">Q: 入金方式？</h6>
+                    <p class="desp_subdesp faq">
+                        A:入金方式支持银联在线支付，海外汇款。
+                    </p> -->
+                    <h6 class="desp_title faq"><%=lang.text("faqAsset1")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAsset2")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqAsset3")%></h6>
+                    <%if(lang.isVersion('uk')){%>
+                        <p class="desp_subdesp faq">
+                            <%=lang.text("faqAsset4_uk")%>
+                        </p>
+                    <%} else {%>
+                        <p class="desp_subdesp faq">
+                            <%=lang.text("faqAsset4")%>
+                        </p>
+                    <%}%>
+                    <h6 class="desp_title faq"><%=lang.text("faqAsset5")%></h6>
+                    
+                    <%if(lang.isVersion('uk')){%>
+                        <p class="desp_subdesp faq">
+                            <%=lang.text("faqAsset6_uk")%>
+                        </p>
+                    <%} else {%>
+                        <p class="desp_subdesp faq">
+                            <%=lang.text("faqAsset6")%>
+                        </p>
+                    <%}%>
+                    <h6 class="desp_title faq"><%=lang.text("faqAsset7")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAsset8")%><br>
+                        <%=lang.text("faqAsset8_2")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqAsset9")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAsset10")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqAsset11")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAsset12")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqAsset13")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAsset14")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqAsset15")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAsset16")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqAsset17")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAsset18")%> <br>
+                        <%=lang.text("faqAsset18_1")%> <br>
+                        <%=lang.text("faqAsset18_2")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqAsset19")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqAsset20")%> <br>
+                        <%=lang.text("faqAsset20_1")%>
+                    </p>
+                </div>
+            </li>
+            <li class="help1-navi-title__item">
+                <h5 class="help1-navi-title__item-title" data-action="openDetail-desp"><%=lang.text("homeMt4")%></h5>
+                <div class="help1-navi-title__item-desp">
+                    <h6 class="desp_title faq"><%=lang.text("faqMeta1")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqMeta2")%>
+                        <a style="color: #188afa;text-decoration: underline;" href="https://itunes.apple.com/cn/app/metatrader-4/id496212596?l=en&mt=8">IOS;</a>
+                        <a style="color: #188afa;text-decoration: underline;margin-left: 0.5rem;" href="http://zhushou.360.cn/detail/index/soft_id/260622?recrefer=SE_D_meta">Android</a>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqMeta3")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqMeta4")%>
+                    </p>
+                </div>
+            </li>
+            <li class="help1-navi-title__item">
+                <h5 class="help1-navi-title__item-title" data-action="openDetail-desp"><%=lang.text("sidebar10")%></h5>
+                <div class="help1-navi-title__item-desp">
+                    <h6 class="desp_title faq"><%=lang.text("faqSwap1")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqSwap2")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqSwap3")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqSwap4")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqSwap5")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqSwap6")%><br>
+                        <%=lang.text("faqSwap6_2")%><br>
+                        <%=lang.text("faqSwap6_3")%><br>
+                        <%=lang.text("faqSwap6_4")%><br>
+                        <%=lang.text("faqSwap7")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqSwap8")%></h6>
+                    <p class="desp_subdesp faq">
+                            <%=lang.text("faqSwap9")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqSwap10")%></h6>
+                    <p class="desp_subdesp faq">
+                        <%=lang.text("faqSwap11")%>
+                    </p>
+                    <h6 class="desp_title faq"><%=lang.text("faqSwap12")%></h6>
+                    <p class="desp_subdesp faq" style="text-align: left;">
+                        <%= lang.text("faqSwap13")%><br>
+                        <%= lang.text("faqSwap13_2")%>
+                    </p>
+                </div>
+            </li>
+        <% } %>
     </ul>
 </div>

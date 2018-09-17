@@ -11,6 +11,7 @@
          * params {
          *   size: 弹窗大小 || 'sm'
          *   title: 提示标题 || '系统提示'
+         *   titleClass: 标题class || ''
          *   msg:  提示内容 || ''
          *   msgClass:  消息class || 'text-center'
          *   btnsClass:  按钮class || 'text-center'
