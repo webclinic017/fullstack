@@ -158,10 +158,15 @@
     }
   }
   @include e(tools) {
-    background-image: url("/white_label/home/tools-bg-cn.png");
     height: 1000px !important;
     background-position: center center;
     background-size: auto 100%;
+    &.cn {
+      background-image: url("/white_label/home/tools-bg-cn.png");
+    }
+    &.en {
+      background-image: url("/white_label/home/tools-bg-en.png");
+    }
     @include m(title) {
       font-size: 56px;
       color: rgb(11,11,11);

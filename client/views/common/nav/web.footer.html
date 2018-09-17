@@ -88,7 +88,7 @@
                     </p>
                 </h2>
                 <ul>
-                    <%if(!lang.isCloned()){%>
+                    <%if (req.host.indexOf('global') != -1) {%>
                         <li>
                             <p>
                                 <i class="fa fa-phone"></i>&nbsp;&nbsp;
@@ -131,14 +131,14 @@
         </div>
         <div class="footer_con mg-tp-30">
             <p class="mg-bt-30">
-                <%= lang.text("foot12")%>
-            </p>
-
-            <p>
-                <%= lang.text("foot_35")%>
+                <strong><%= lang.text("foot_38")%></strong>
+                <span><%= lang.text("foot_39")%></span>
             </p>
             <p class="mg-bt-30">
-                <%= lang.text("foot_37")%>
+                <%= lang.text("foot_40")%>
+            </p>
+            <p class="mg-bt-30">
+                <%= lang.text("foot_41")%>
             </p>
         </div>
     </div>
