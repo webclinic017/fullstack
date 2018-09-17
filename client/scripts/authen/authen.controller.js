@@ -687,7 +687,7 @@
                 key: '',
                 value: ''
             },
-            birthday: ''
+            birthday: '1998-04-08'
         }
 
         $scope.frontErr = {

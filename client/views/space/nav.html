@@ -11,6 +11,12 @@
             <a>{{lang.text('tigerWitID.myAccount.title')}}</a>
         </li>
     </ul>
+    <!-- 更新证件 -->
+    <ul class="space_nav__box" ng-if="toState.name == 'space.update'">
+        <li class="space_nav__box-item active">
+            <a>更新证件</a>
+        </li>
+    </ul>
     <!-- 交易账户导航移入页面中部 -->
     <!-- <ul class="space_nav__box" ng-if="toState.name == 'space.center.invest.subpage'">
         <li class="space_nav__box-item" ui-sref-active="active">
