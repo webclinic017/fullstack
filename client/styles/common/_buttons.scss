@@ -159,8 +159,8 @@ $tw-btn-radius-square: 4px;
 
 $tw-btn-fontweight: 500;
 
-$tw-btn-bg-start: #ffc500;
-$tw-btn-bg-end: #ffd240;
+$tw-btn-bg-start: rgba(254,233,0,1);
+$tw-btn-bg-end: rgba(253,216,53,1);
 $tw-btn-bg-black-start: #242a36;
 $tw-btn-bg-black-end: #2b323e;
 .tw-btn {
@@ -231,15 +231,15 @@ $tw-btn-bg-black-end: #2b323e;
 }
 .tw-btn-capsule-gradient {
     @include tw-button-variant($tw-btn-color, none, none, $tw-btn-radius-capsule);
-    @include tw-button-gradient-vertical($tw-btn-bg-start, $tw-btn-bg-end);
+    @include tw-button-gradient-horizontal($tw-btn-bg-start, $tw-btn-bg-end);
 }
 .tw-btn-square-gradient {
     @include tw-button-variant($tw-btn-color, none, none, $tw-btn-radius-square);
-    @include tw-button-gradient-vertical($tw-btn-bg-start, $tw-btn-bg-end);
+    @include tw-button-gradient-horizontal($tw-btn-bg-start, $tw-btn-bg-end);
 }
 .tw-btn-square-gradient-black {
     @include tw-button-variant(#fff, none, none, $tw-btn-radius-square);
-    @include tw-button-gradient-vertical($tw-btn-bg-black-start, $tw-btn-bg-black-end);
+    @include tw-button-gradient-horizontal($tw-btn-bg-black-start, $tw-btn-bg-black-end);
 }
 .tw-btn-square-bordered {
     @include tw-button-variant($tw-btn-color, $tw-btn-border, $tw-btn-border-hover, $tw-btn-radius-square);
@@ -248,5 +248,5 @@ $tw-btn-bg-black-end: #2b323e;
 .tw-btn-disabled {
     cursor: not-allowed;
     color: $gray-darker;
-    @include tw-button-gradient-vertical($gray-dark, $gray);
+    @include tw-button-gradient-horizontal($gray-dark, $gray);
 }

@@ -1,26 +1,26 @@
 <div class="sys_modal_v2 slim_case" ng-class="layClass">
     <button class="close" ng-click="closeModal()">&times;</button>
 
-    <h5 class="sys_modal_v2__title">
+    <h5 class="sys_modal_v2__title" ng-class="titleClass">
         {{ title || '系统提示' }}
     </h5>
 
     <div class="sys_modal_v2__content">
-        <p class="sys_modal_v2__tip" ng-class="msgClass">
-            {{ msg }}
+        <p class="sys_modal_v2__tip pd-bt-10" ng-class="msgClass">
+            <span>{{ msg }}</span>
         </p>
-        <p class="mg-tp-30 text-center" ng-if="btns && loading == 0" ng-class="btnsClass">
-            <a ng-repeat="(key, value) in btns track by $index" class="btn btn-primary-gradient btn-lt mg-lf-15" ng-click="handler(value)">
+        <p class="mg-tp-20 text-center" ng-if="btns && loading == 0" ng-class="btnsClass">
+            <a ng-repeat="(key, value) in btns track by $index" class="btn tw-btn-capsule-gradient btn-lt" ng-class="{'mg-lf-15': $index !== 0}" ng-click="handler(value)">
                 {{ key }}
             </a>
         </p>
-        <p class="mg-tp-30 text-center" ng-if="loading == 1" ng-class="btnsClass">
-            <a class="btn btn-primary-gradient btn-lt mg-lf-15">
+        <p class="mg-tp-20 text-center" ng-if="loading == 1" ng-class="btnsClass">
+            <a class="btn tw-btn-capsule-gradient btn-lt">
                 提交中..
             </a>
         </p>
-        <p class="mg-tp-30 text-center" ng-if="loading == 2" ng-class="btnsClass">
-            <a class="btn btn-primary-gradient btn-lt mg-lf-15" ng-click="closeModal()">
+        <p class="mg-tp-20 text-center" ng-if="loading == 2" ng-class="btnsClass">
+            <a class="btn tw-btn-capsule-gradient btn-lt" ng-click="closeModal()">
                 确定
             </a>
         </p>
