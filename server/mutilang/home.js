@@ -37,31 +37,31 @@ module.exports = {
     },
     newhome_10: {
       zh: "复制跟单",
-      en: "Copy trading"
+      en: "Self-directed and copy trading"
     },
     newhome_11: {
       zh: "复制高手交易，立享同步收益，超过十万用户在TigerWit选择跟单交易",
-      en: "Easy to start copy trading by following a leader 100,000+clients to choose copy trading"
+      en: "Follow a TigerWit Master with a single click and trade using their strategies. Pay just 20% commission to your Master."
     },
     newhome_12: {
       zh: "选择自己喜欢的高手",
-      en: "Choose your favorite leader"
+      en: "Select a Master from the ranking table."
     },
     newhome_13: {
       zh: "输入复制金额，点击复制",
-      en: "Enter the required amount and click follow"
+      en: "Select the Master’s trade you want to."
     },
     newhome_14: {
       zh: "享受高手同策略交易",
-      en: "Follow a leader with strategic trading"
+      en: "Set your order value."
     },
     newhome_15: {
       zh: "成为高手，您将获得复制者盈利的20%",
-      en: "Become a TigerWit leader and get 20% sharing profit"
+      en: "Become a TigerWit Master and earn 20% commission on your follower’s profits."
     },
     newhome_16: {
       zh: "选择高手",
-      en: "Choose the master"
+      en: "Select a Master"
     },
     newhome_17: {
       zh: "灵活的交易品种 ",
