@@ -1,9 +1,12 @@
-<div class="authen_content ctn center">
-    <div class="authen_title">
+<div class="asset-public__tip" ng-show="toState.name == 'space.update' && !(personal.updatePapers.profile_check >= 0)">
+    <img style="height: 50px;" src="/ngsrc/loading.gif">
+</div>
+<div class="authen_content ctn center" ng-class="{'update': toState.name == 'space.update'}" ng-if="toState.name == 'space.update' && (personal.updatePapers.profile_check != 2)">
+    <div class="authen_title" ng-if="toState.name != 'space.update'">
         <h2>{{lang.text('tigerWitID.wallet.uploadIdentification')}}</h2>
         <p class="authen_content__tip">{{lang.text('tigerWitID.myAccount.tip24')}}</p>
     </div>
-    <div class="kyc mg-tp-40">
+    <div class="kyc" ng-class="{'mg-tp-40': toState.name != 'space.update', 'update': toState.name == 'space.update'}">
         <form name="realnameForm" novalidate autocomplete="off">
             <div class="row">
                 <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglish()}">
@@ -11,11 +14,12 @@
                 </div>        
                 <div class="col-xs-6">
                     <div class="form-control-wrapper">
-                        <input class="form-control"
+                        <input class="form-control" 
                                 name="realname"
                                 type="text"
                                 placeholder="{{lang.text('tigerWitID.myAccount.fillName')}}"
                                 required
+                                ng-disabled="personal.updatePapers.real_name"
                                 ng-class="{'form-control-error': frontErr.realname.show && realnameForm.realname.$invalid}"
                                 ng-model="realnameInfo.realname"
                                 ng-pattern="frontErr.realname.reg"
@@ -47,6 +51,7 @@
                                 placeholder="{{lang.text('tigerWitID.myAccount.selectCertificateType')}}"
                                 required
                                 disabled
+                                no-active="{{personal.updatePapers.idcard_type >= 0}}"
                                 ng-model="realnameInfo.id_type.key"
                                 ng-class="{'form-control-error': frontErr.id_type.show && realnameForm.id_type.$invalid}"
                                 ng-blur="showErr('id_type')"
@@ -82,6 +87,7 @@
                             type="text"
                             placeholder="{{lang.text('tigerWitID.myAccount.fillCertificateNumber')}}"
                             required
+                            ng-disabled="personal.updatePapers.id_no"
                             ng-class="{'form-control-error': frontErr.id_num.show && realnameForm.id_num.$invalid}"
                             ng-model="realnameInfo.id_num"
                             ng-pattern="frontErr.id_num.reg"
@@ -95,6 +101,7 @@
                             type="text"
                             placeholder="{{lang.text('tigerWitID.myAccount.fillCertificateNumber')}}"
                             required
+                            ng-disabled="personal.updatePapers.id_no"
                             ng-class="{'form-control-error': frontErr.id_num.show && realnameForm.id_num.$invalid}"
                             ng-model="realnameInfo.id_num"
                             ng-blur="[showErr('id_num'),checkExsit(4)]"
@@ -131,6 +138,7 @@
                                 placeholder="{{lang.text('tigerWitID.gender')}}"
                                 required
                                 disabled
+                                no-active="{{personal.updatePapers.gender >= 0}}"
                                 ng-model="realnameInfo.gender.key"
                                 ng-class="{'form-control-error': frontErr.gender.show && realnameForm.gender.$invalid}"
                                 ng-blur="showErr('gender')"
@@ -167,6 +175,7 @@
                             placeholder="{{lang.text('tigerWitID.myAccount.birthday')}}"
                             data-type="day"
                             required
+                            ng-disabled="personal.updatePapers.birth"
                             ng-model="realnameInfo.birthday"
                             data-bind-model="realnameInfo.birthday"
                             data-formatter="yyyymmdd"
@@ -256,16 +265,16 @@
             </div>
 
             <div class="btn_wrapper text-left">
-                <button class="btn btn-sm btn-primary-gradient" ng-if="clickable" ng-click="submitForm()">
-                    {{lang.text('actLogin29')}}
+                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="clickable" ng-click="submitForm()">
+                    {{toState.name == 'space.update' ? lang.text('tigerWitID.submit') : lang.text('actLogin29')}}
                 </button>
 
-                <a class="btn btn-sm btn-primary-gradient" ng-if="!clickable">
+                <a class="btn btn-sm tw-btn-capsule-gradient" ng-if="!clickable">
                     <i class="loading_spinner fa fa-spinner"></i>
                     {{lang.text('tigerWitID.submitting')}}
                 </a>
 
-                <a ng-if="dredgingType == 'live'" ui-sref="space.center.index" class="btn btn-sm btn-primary-gradient mg-lf-20">
+                <a ng-if="dredgingType == 'live'" ui-sref="space.center.index" class="btn btn-sm tw-btn-capsule-gradient mg-lf-20">
                     {{lang.text('actLogin34')}}
                 </a>
             </div>    
@@ -274,15 +283,23 @@
 </div>
 
 <!-- 认证审核中 -->
-<div class="mg-tp-30" ng-if="verification.status === 2">
-    <p>{{lang.text('tigerWitID.myAccount.tip27')}}</p>
-    <p class="font-danger">{{lang.text('tigerWitID.myAccount.tip28')}}</p>
+<div class="mg-tp-30" ng-if="toState.name == 'space.update' && personal.updatePapers.profile_check == 2">
+    <div class="authen_content pd-lf-0 pd-tp-0">
+        <div class="authen_submit pd-lf-0">
+            <h3 class="text-left">{{lang.text('tigerWitID.myAccount.tip15')}}</h3>
+            <p class="tip">{{lang.text('tigerWitID.myAccount.auditHourM')}}</p>
+            <div class="detail">
+                <p>{{lang.text('tigerWitID.myAccount.tip16')}}</p>
+                <p>{{lang.text('tigerWitID.myAccount.tip17')}}</p>
+                <p>{{lang.text('tigerWitID.myAccount.tip18')}}</p>
+            </div>
+            <p class="desc">{{lang.text('tigerWitID.myAccount.tip19')}}</p>
+        </div>
+    </div>
 </div>
 
 <!-- 已认证 -->
-<div class="mg-tp-30" ng-if="verification.status === 3">
-    {{lang.text('tigerWitID.myAccount.dear')}}
-    <span class="font-danger">{{verification.realname || '**'}}</span> {{lang.text('tigerWitID.myAccount.tip29')}}
-    <!--<span class="font-danger">{{verification.id.number || '**'}}</span>-->
-</div>
+<!-- <div class="mg-tp-30" ng-if="toState.name == 'space.update' && personal.updatePapers.profile_check == 3">
+    认证成功
+</div> -->
 </div>

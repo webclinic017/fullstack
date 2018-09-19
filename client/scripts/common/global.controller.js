@@ -26,6 +26,7 @@
 
         $scope.personal = {};
         $scope.personal.is_live = '1';
+        $scope.personal.updatePapers = {};
         $scope.process = {};
         $scope.worldList = [];  //  ----|
         // $scope.currentWorld = {}; ---| -- 选择国家
@@ -386,6 +387,14 @@
                         passedAuthen: passedAuthen
                     }
                     angular.extend($scope.personal, params);
+                    if(accountStatus == '1'){
+                        account.getIdcard().then(function (data) {
+                            console.log(data)
+                            if (data.is_succ) {
+                                angular.extend($scope.personal.updatePapers, data.data);
+                            }
+                        })
+                    }
                     para.callback && angular.isFunction(para.callback) && para.callback(params)
                     return data
                 }

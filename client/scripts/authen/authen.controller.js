@@ -681,61 +681,24 @@
                 key: undefined,
                 value: undefined
             },
-            idNum: '',
-            year18: false,
+            id_num: '',
+            year18: '',
             gender: {
                 key: '',
                 value: ''
             },
-            birthday: '1998-04-08'
+            birthday: ''
         }
-
-        $scope.frontErr = {
-            idFront: {
-                show: false
-            },
-            idBack: {
-                show: false
-            },
-            realname: {
-                show: false,
-                reg: validator.regType.realname.reg,
-                tip: validator.regType.realname.tip,
-            },
-            id_num: {
-                show: false,
-                reg: validator.regType.idNumber.reg,
-                tip: validator.regType.idNumber.tip
-            },
-            id_type: {
-                show: false
-            },
-            gender: {
-                show: false
-            },
-            birthday: {
-                show: false
-            }
-        };
-
-        $scope.backErr = {
-            system: {
-                show: false,
-                status: 0
-            }
-        };
-
         $scope.genders = [
-            {
-                key: $scope.lang.text("tigerWitID.male"),
-                value: '1'
-            },
             {
                 key: $scope.lang.text("tigerWitID.female"),
                 value: '0'
+            },
+            {
+                key: $scope.lang.text("tigerWitID.male"),
+                value: '1'
             }
         ]
-
         $scope.idType = [
             {
                 key: $scope.lang.text("tigerWitID.settings.mainlandResidentIdentityCard"),
@@ -774,10 +737,57 @@
                 isGlobal: true
             }
         ]
+        $scope.$watch('personal.updatePapers', function (newVal, oldVal) {
+            if(JSON.stringify(newVal) != "{}"){
+                $scope.realnameInfo.realname = newVal.real_name;
+                $scope.realnameInfo.id_type.key = $scope.idType[newVal.idcard_type].key;
+                $scope.realnameInfo.id_type.value = $scope.idType[newVal.idcard_type].value;
+                $scope.realnameInfo.id_num = newVal.id_no;
+                $scope.realnameInfo.gender.key = $scope.genders[newVal.gender].key;
+                $scope.realnameInfo.gender.value = $scope.genders[newVal.gender].value;
+                var date = newVal.birth;
+                $scope.realnameInfo.birthday = date.substr(0,4)+'-'+date.substr(4,2)+'-'+date.substr(6,2);
+            }
+        }, true)
+        $scope.frontErr = {
+            idFront: {
+                show: false
+            },
+            idBack: {
+                show: false
+            },
+            realname: {
+                show: false,
+                reg: validator.regType.realname.reg,
+                tip: validator.regType.realname.tip,
+            },
+            id_num: {
+                show: false,
+                reg: validator.regType.idNumber.reg,
+                tip: validator.regType.idNumber.tip
+            },
+            id_type: {
+                show: false
+            },
+            gender: {
+                show: false
+            },
+            birthday: {
+                show: false
+            }
+        };
+
+        $scope.backErr = {
+            system: {
+                show: false,
+                status: 0
+            }
+        };
+
 
         $scope.exsit = {
             id_num: {
-                show: false
+                show: ''
             }
         }
 
@@ -822,17 +832,25 @@
                     $scope.uploadFinish.hasOwnProperty('back') &&
                     ($scope.backErr.system.status != 3)
                 ) {
-                    // 向authenController发送信息
-                    $scope.$emit('goState', data.data);
+                    if($scope.toState.name == 'space.update'){
+                        $scope.personal.updatePapers.profile_check == 2;
+                    }else{
+                        // 向authenController发送信息
+                        $scope.$emit('goState', data.data);
+                    }
                     // 神策数据统计
                     sa.track('btn_verify');
                 }
             }else{
                 if ($scope.uploadFinish.hasOwnProperty('front') &&
                     ($scope.backErr.system.status != 3)
-                ) {
-                    // 向authenController发送信息
-                    $scope.$emit('goState', data.data);
+                ) { 
+                    if($scope.toState.name == 'space.update'){
+                        $scope.personal.updatePapers.profile_check == 2;
+                    }else{
+                        // 向authenController发送信息
+                        $scope.$emit('goState', data.data);
+                    }
                     // 神策数据统计
                     sa.track('btn_verify');
                 }
@@ -876,6 +894,13 @@
 
             if ($scope.realnameForm.$invalid) {
                 return
+            }
+            // 兼容更新证件
+            if($scope.exsit.id_num.show == ''){
+                $scope.checkExsit(4);
+            }
+            if($scope.realnameInfo.id_type.value == 0 && $scope.realnameInfo.year18 == ''){
+                $scope.checkBirthday();
             }
 
             if (!$scope.realnameInfo.year18 && $scope.realnameInfo.id_type.value == 0) {

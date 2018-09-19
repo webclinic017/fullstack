@@ -72,10 +72,10 @@
                 </ul>
             </li> -->
             <!-- 更新证件 -->
-            <li class="space_sidebar__nav-menu" ui-sref-active="active">
+            <li class="space_sidebar__nav-menu" ui-sref-active="active" ng-if="personal.updatePapers.hint == 1">
                 <a ui-sref="space.update">
                     <!-- <i class="fas fa-user-circle"></i>  -->
-                    更新证件
+                    {{lang.text('tigerWitID.myAccount.updateID')}}
                 </a>
             </li>
             <li class="space_sidebar__nav-menu" ui-sref-active="active">

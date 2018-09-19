@@ -1,32 +1,48 @@
 <div ng-controller="QuackAccountController">
-    <div class="asset-public__tip" ng-show="authenAssetStatus == 0">
-        <img style="height: 50px;" src="/ngsrc/loading.gif">
+    <div ng-show="personal.updatePapers.profile_check != 4">
+        <div class="asset-public__tip" ng-show="authenAssetStatus == 0">
+            <img style="height: 50px;" src="/ngsrc/loading.gif">
+        </div>
+        <div class="asset-public__tip" ng-show="authenAssetStatus == 1">
+            <img src="/images/enable_account.png" alt="" class="mg-bt-40">
+            <div class="text-center font-size-16 mg-bt-20">
+                {{lang.text('tigerWitID.myAccount.tip13')}}
+            </div>
+            <div class="text-center">
+                <a class="btn btn-primary-gradient btn-sm" ng-click="openDredgeMdl({position: 'sidebar'})">
+                    {{lang.text('tigerWitID.myAccount.quickOpenAccount')}}
+                </a>
+            </div>
+        </div>
+        <div class="asset-public__tip" ng-show="(authenAssetStatus == 2) || (authenAssetStatus == 4)">
+            <img src="/images/enable_account.png" alt="" class="mg-bt-40">
+            <div class="text-center font-size-16 mg-bt-20">
+                {{lang.text('tigerWitID.myAccount.tip14')}}
+            </div>
+        </div>
+        <div class="authen_content pd-lf-0 pd-tp-0" ng-show="authenAssetStatus == 3">
+            <div class="authen_submit pd-lf-0">
+                <h3 class="text-left">{{lang.text('tigerWitID.myAccount.tip15')}}</h3>
+                <p class="tip">{{lang.text('tigerWitID.myAccount.auditHourM')}}</p>
+                <div class="detail">
+                    <p>{{lang.text('tigerWitID.myAccount.tip16')}}</p>
+                    <p>{{lang.text('tigerWitID.myAccount.tip17')}}</p>
+                    <p>{{lang.text('tigerWitID.myAccount.tip18')}}</p>
+                </div>
+                <p class="desc">{{lang.text('tigerWitID.myAccount.tip19')}}</p>
+            </div>
+        </div>
     </div>
-    <div class="asset-public__tip" ng-show="authenAssetStatus == 1">
+    
+    <div class="asset-public__tip" ng-show="personal.updatePapers.profile_check == 4">
         <img src="/images/enable_account.png" alt="" class="mg-bt-40">
         <div class="text-center font-size-16 mg-bt-20">
-            {{lang.text('tigerWitID.myAccount.tip13')}}
+            {{lang.text('tigerWitID.myAccount.updateIDTip')}}
         </div>
         <div class="text-center">
-            <a class="btn btn-primary-gradient btn-sm" ng-click="openDredgeMdl({position: 'sidebar'})">
-                {{lang.text('tigerWitID.myAccount.quickOpenAccount')}}
+            <a class="btn btn-primary-gradient btn-sm" ng-href="/space/#/space/update">
+            {{lang.text('tigerWitID.myAccount.updateID')}}
             </a>
-        </div>
-    </div>
-    <div class="asset-public__tip" ng-show="(authenAssetStatus == 2) || (authenAssetStatus == 4)">
-        <img src="/images/enable_account.png" alt="" class="mg-bt-40">
-        <div class="text-center font-size-16 mg-bt-20">
-            {{lang.text('tigerWitID.myAccount.tip14')}}
-        </div>
-    </div>
-    <div class="asset-public__tip" ng-show="authenAssetStatus == 3">
-        <div class="text-center font-size-16 mg-bt-20">
-            {{lang.text('tigerWitID.myAccount.tip15')}}<br>
-            {{lang.text('tigerWitID.myAccount.auditHourM')}}<br>
-            {{lang.text('tigerWitID.myAccount.tip16')}}<br>
-            {{lang.text('tigerWitID.myAccount.tip17')}}<br>
-            {{lang.text('tigerWitID.myAccount.tip18')}}<br>
-            {{lang.text('tigerWitID.myAccount.tip19')}}<br>
         </div>
     </div>
 </div>
