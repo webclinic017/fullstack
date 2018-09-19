@@ -162,7 +162,7 @@
                 <li>
                     <h2>
                         <a data-navbar-trigger href="/partner">
-                            Partner
+                            Partners
                         </a>
                     </h2>
                 </li>
@@ -176,12 +176,22 @@
                     <li>
                         <h2><a href="/web/about/tigerwit"><%= lang.text("navbar11")%></a></h2>
                     </li>
-                    <li <%= lang.text("navbar15")%>>
-                        <h2><a href="/web/about/team">精英团队</a></h2>
-                    </li>
-                    <li <%= lang.text("navbar15")%>>
-                        <h2><a href="/web/about/report">媒体报道</a></h2>
-                    </li>
+                    <% if(lang.isEnglish()) { %> 
+                        <li>
+                            <h2><a href="/web/about/liverpool">Liverpool FC</a></h2>
+                        </li>
+                        <li>
+                            <h2><a href="/web/about/media">Press releases</a></h2>
+                        </li>
+                    <% } else { %> 
+                        <li>
+                            <h2><a href="/web/about/team">精英团队</a></h2>
+                        </li>
+                        <li>
+                            <h2><a href="/web/about/report">媒体报道</a></h2>
+                        </li>
+                    <% } %>
+                    
                 </ul>
             </li>
             <li>

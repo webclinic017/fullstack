@@ -7,9 +7,10 @@
     <!-- build:css(.tmp) /styles/web.css -->
     <link rel="stylesheet" href="/styles/web.css">
     <!-- endbuild -->
+    <meta name="viewport" content="width=device-width,initial-scale=0.5">
 
     <% include /common/statistic/main.html %>
-
+<%if (req.host.indexOf('global') != -1) {%>
 <!-- Code for Action: TigerWit - Landing pixel Global -->
 <!-- Begin Sizmek DSP Conversion Action Tracking Code Version 9 -->
 <script type='text/javascript'>
@@ -40,8 +41,9 @@
 </iframe>
 </noscript>
 <!-- End Sizmek DSP Conversion Action Tracking Code Version 9 -->
+<%}%>
 </head>
-<body ng-app="fullstackApp" class="<%= lang_class%>">
+<body ng-app="fullstackApp" class="<%= lang_class%>" style="background-color: #fff;">
 <div ng-controller="GlobalController">
     <div class="header">
         <%- include('/common/nav/web.header.html',{
@@ -49,7 +51,7 @@
         }) %>
     </div>
     <div class="body">
-        <% include /web/home/index.html %>
+        <% include /web/home/index_new.html %>
     </div>
 
     <% include /common/vendor/web.js.html %>

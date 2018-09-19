@@ -502,12 +502,6 @@ module.exports = function (grunt) {
         AS = AS.replace('tigerwit', companyName).replace('publicKey', login_public_key);
         fs.writeFileSync(scriptPath + 'whiteLabel.service.js', AS, 'utf8');
 
-        // param -> tigerwit, pkds
-        var param = companyName || "tiger";
-        // console.info("tiger ->", stylePath, param);
-        var cont = fs.readFileSync(whiteLabelPath + '_variables_' + param + '.scss', 'utf8');
-        // console.info("tiger", cont);
-        fs.writeFileSync(stylePath + '_variables.scss', cont, 'utf8');
         console.log('whiteLabel task finished...');
     }
 

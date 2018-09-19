@@ -46,6 +46,7 @@
                                 type="text"
                                 placeholder="{{lang.text('tigerWitID.myAccount.selectCertificateType')}}"
                                 required
+                                disabled
                                 ng-model="realnameInfo.id_type.key"
                                 ng-class="{'form-control-error': frontErr.id_type.show && realnameForm.id_type.$invalid}"
                                 ng-blur="showErr('id_type')"
@@ -129,6 +130,7 @@
                                 type="text"
                                 placeholder="{{lang.text('tigerWitID.gender')}}"
                                 required
+                                disabled
                                 ng-model="realnameInfo.gender.key"
                                 ng-class="{'form-control-error': frontErr.gender.show && realnameForm.gender.$invalid}"
                                 ng-blur="showErr('gender')"

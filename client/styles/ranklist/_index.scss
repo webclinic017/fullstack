@@ -1,20 +1,48 @@
 @include b(ranklist_banner) {
     overflow: hidden;
     margin-top: 69px;
-    height: 432px;
+    height: 550px;
     background-position: center center;
     background-size: cover;
-    @include img-normal($image-path-base + "ranklist/ranklist-banner-new.jpg");
+    background-image: url("/white_label/ranklist/ranklist-banner.jpg");
     &.imgEn{
-        @include img-normal($image-path-base + "ranklist/ranklist-banner-en.jpg");
+        background-image: url("/white_label/ranklist/ranklist-banner.jpg");
     }
 
     @include e(tip) {
-        text-align: center;
         color: #fff;
-        font-size: 50px;
         padding-top: 80px;
-        font-weight: 600;
+        width: 1300px;
+        margin: 0 auto;
+
+        .tit {
+            font-size: 46px;
+            margin: 0;
+            text-align: center;
+        }
+        .sub-tit {
+            font-size: 18px;
+            margin-left: 100px;
+            padding: 10px 0px;
+        }
+        .step {
+            font-size: 22px;
+            color: #ffd521;
+            margin: 40px 0px;
+            text-align: center;
+            line-height: 30px;
+            height: 30px;
+            img {
+                height: 32px;
+                padding: 0px 10px;
+                vertical-align: top;
+            }
+        }
+        .tip {
+            font-size: 14px;
+            opacity: 0.5;
+            margin-left: 100px;
+        }
 
         > p {
             margin: 0;

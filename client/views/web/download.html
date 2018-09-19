@@ -24,7 +24,7 @@
                         <div class="download_banner__ctn-action">
                             <ul class="plat">
                                 <li class="phone">
-                                    <a href="<%= lang.text('androidApp')%>">
+                                    <a href="<%= req.host.indexOf('global') != -1 ? lang.text('downloadGlobalAndroid') : lang.text('androidApp') %>">
                                         <i class="fa fa-android" aria-hidden="true"></i>
                                         <%= lang.text('downloadApp.androidVersion')%>
                                     </a>
@@ -32,7 +32,7 @@
                                 </li>
                                 <% if(lang.isCompany('tigerwit')){%>
                                 <li class="phone">
-                                    <a href="<%= req.host.indexOf('global') != -1 ? 'https://itunes.apple.com/us/app/tigerwit/id1091437876?l=zh&ls=1&mt=8' : 'https://itunes.apple.com/app/id1091437876'%>">
+                                    <a href="<%= req.host.indexOf('global') != -1 ? lang.text('downloadGlobalIos') : 'https://itunes.apple.com/app/id1091437876'%>">
                                         <i class="fa fa-apple" aria-hidden="true"></i>
                                         <%= lang.text('downloadApp.iPhoneVersion')%>
                                     </a>
@@ -43,11 +43,11 @@
                             <% if (req.host.indexOf('global') != -1) {%>
                             <div class="code global">
                                 <div class="img_box">
-                                    <img src="/images/web/download_andriod_global.png" alt="code" draggable=false>
+                                    <img src="/images/web/download_andriod_global_new.png" alt="code" draggable=false>
                                     <span>Andriod</span>
                                 </div>
                                 <div class="img_box">
-                                    <img src="/images/web/download_ios_global.png" alt="code" draggable=false>
+                                    <img src="/images/web/download_ios_global_new.png" alt="code" draggable=false>
                                     <span>Ios</span>
                                 </div>
                                 <p><%= lang.text('downloadApp.tip5')%></p>
@@ -56,7 +56,7 @@
                             <%} else {%>
                             <div class="code">
                                 <div class="img_box">
-                                    <img src="/images/web/download_m_blank.png" alt="code" draggable=false>
+                                    <img src="/images/web/download_m_blank_new.png" alt="code" draggable=false>
                                 </div>
                                 <p><%= lang.text('downloadApp.tip5')%></p>
                                 <p><%= lang.text('downloadApp.tip6')%></p>
@@ -88,7 +88,7 @@
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <div class="download_advantage">
+                <!-- <div class="download_advantage">
                     <div class="download_title">
                         <h3><%= lang.text('downloadApp.tip7')%></h3>
                         <p><%= lang.text('downloadApp.tip8_1') + lang.text('companyZhName') + lang.text('downloadApp.tip8_2')%></p>
@@ -120,31 +120,49 @@
                             <p><%= lang.text('downloadApp.tip14')%></p>
                         </li>
                     </ul>
-                </div>
+                </div> -->
                 <div class="download_title">
                     <h3><%= lang.text('companyZhName') + lang.text('downloadApp.tip15')%></h3>
                     <p><%= lang.text('downloadApp.tip16')%></p>
                 </div>
-                <!-- <div class="download_bottom">
+                <div class="download_bottom">
                     <div class="download_bottom__ctn <%= lang.background().company%>">
                         <ul class="download_bottom__ctn-plat">
-                            <li class="phone">
-                                <a href="<%= lang.text('androidApp')%>">
-                                    <i class="fa fa-android" aria-hidden="true"></i>
-                                    <%= lang.text('downloadApp.androidVersion')%>
-                                </a>
-                            </li>
-                            <% if(lang.isCompany('tigerwit')){%>
-                            <li class="phone">
-                                <a href="https://itunes.apple.com/cn/app/%E8%80%81%E8%99%8E%E5%A4%96%E6%B1%87/id1091437876?platform=iphone&preserveScrollPosition=true#platform/iphone">
-                                    <i class="fa fa-apple" aria-hidden="true"></i>
-                                    <%= lang.text('downloadApp.iPhoneVersion')%>
-                                </a>
-                            </li>
+                            <% if (req.host.indexOf('global') != -1) {%>
+                                <li class="phone">
+                                    <a href="<%= lang.text('downloadGlobalAndroid')%>">
+                                        <i class="fa fa-android" aria-hidden="true"></i>
+                                        <%= lang.text('downloadApp.androidVersion')%>
+                                    </a>
+                                </li>
+                                <li class="phone">
+                                    <a href="<%= lang.text('downloadGlobalIos')%>">
+                                        <i class="fa fa-apple" aria-hidden="true"></i>
+                                        <%= lang.text('downloadApp.iPhoneVersion')%>
+                                    </a>
+                                </li>
+                            <%} else {%>
+                                <li class="phone">
+                                    <a href="<%= lang.text('androidApp') %>">
+                                        <i class="fa fa-android" aria-hidden="true"></i>
+                                        <%= lang.text('downloadApp.androidVersion')%>
+                                    </a>
+                                </li>
+                                <li class="phone">
+                                    <a href="https://itunes.apple.com/cn/app/%E8%80%81%E8%99%8E%E5%A4%96%E6%B1%87/id1091437876?platform=iphone&preserveScrollPosition=true#platform/iphone">
+                                        <i class="fa fa-apple" aria-hidden="true"></i>
+                                        <%= lang.text('downloadApp.iPhoneVersion')%>
+                                    </a>
+                                </li>
                             <%}%>
                         </ul>
+                        <% if (lang.currentLanguage() === 'en') {%>
+                            <img src="/images/web/download_phone_en.png" alt="">
+                        <%} else {%>
+                            <img src="/images/web/download_phone_cn.png" alt="">
+                        <%}%>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
         <div class="footer">

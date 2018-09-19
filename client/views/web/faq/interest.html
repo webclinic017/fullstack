@@ -1,67 +1,122 @@
-<div class="faq-public mg-bt-100" tw-dropdown-faq>
-    <div>
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqSwap1")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqSwap2")%>
+<% if(lang.isEnglish()) { %> 
+    <div class="faq-public mg-bt-100" tw-dropdown-faq>
+        <div>
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                What is the swap rate? 
+            </h4>
+            <div class="faq-public__answer">
+                The swap rate is the interest applied when you hold open positions overnight. No swap rate applies if you open and then close a position during a trading day’s transaction period.
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                Does the swap rate change for different products?
+            </h4>
+            <div class="faq-public__answer">
+                The swap rate for each currency pair is different for different trading directions.
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                When is the swap rate applied?
+            </h4>
+            <div class="faq-public__answer">
+                Swap rates will be calculated at 22.00 UTC and TigerWit may update swap rates without notice. If you hold a position open overnight on Wednesday/Thursday, then the swap rate applicable is tripled. This triple charge covers the weekend period and is a market convention routed in settlement times for real forex trades (as opposed to CFDs). Given two day settlement, a trade made on Wednesday evening will be settled on Friday evening and the swap charge applied therefore reflected the weekend.
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                Where can I check the swap rate quotation? 
+            </h4>
+            <div class="faq-public__answer">
+                On the app, visit the product's trading page. Click on the ‘?’ icon to view the swap rate information.
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                Where can I check the previous swap rate charges?
+            </h4>
+            <div class="faq-public__answer">
+                On the app click ‘Trade’ / ‘History’ / ‘Closed Orders’
+            </div>
         </div>
     </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqSwap3")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqSwap4")%>
+<% } else { %> 
+    <div class="faq-public mg-bt-100" tw-dropdown-faq>
+        <div>
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqSwap1")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqSwap2")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqSwap3")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqSwap4")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqSwap5")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%=lang.text("faqSwap6")%><br>
+                <%=lang.text("faqSwap6_2")%></span></br>
+                <%=lang.text("faqSwap6_3")%></span></br>
+                <%=lang.text("faqSwap6_4")%></span></br>
+                <%=lang.text("faqSwap7")%></span></br>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqSwap8")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqSwap9")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqSwap10")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqSwap11")%>
+            </div>
+        </div>
+        <div class="mg-tp-10">
+            <h4 class="faq-public__question">
+                <i class="fa fa-angle-right"></i>
+                <i class="fa fa-angle-down"></i>
+                <%= lang.text("faqSwap12")%>
+            </h4>
+            <div class="faq-public__answer">
+                <%= lang.text("faqSwap13")%><br>
+                <%= lang.text("faqSwap13_2")%></span>
+            </div>
         </div>
     </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqSwap5")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%=lang.text("faqSwap6")%><br>
-            <%=lang.text("faqSwap6_2")%></span></br>
-            <%=lang.text("faqSwap6_3")%></span></br>
-            <%=lang.text("faqSwap6_4")%></span></br>
-            <%=lang.text("faqSwap7")%></span></br>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqSwap8")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqSwap9")%>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqSwap10")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqSwap11")%>
-        </div>
-    </div>
-    <div class="mg-tp-10">
-        <h4 class="faq-public__question">
-            <i class="fa fa-angle-right"></i>
-            <i class="fa fa-angle-down"></i>
-            <%= lang.text("faqSwap12")%>
-        </h4>
-        <div class="faq-public__answer">
-            <%= lang.text("faqSwap13")%><br>
-            <%= lang.text("faqSwap13_2")%></span>
-        </div>
-    </div>
-</div>
+<% } %>

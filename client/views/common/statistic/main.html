@@ -1,3 +1,4 @@
+<%if (req.host.indexOf('global') != -1) {%>
 <!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -15,6 +16,9 @@ fbq('track', 'PageView');
 src="https://www.facebook.com/tr?id=246588836047542&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Facebook Pixel Code -->
+<!--here is the tracking code for the global website, we need to make sure this is implemented across every page.-->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-121223990-2"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'UA-121223990-2'); </script>
+<%}%>
 <script>
     //声明_czc对象:
     var _czc = _czc || [];
