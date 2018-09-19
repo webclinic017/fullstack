@@ -833,7 +833,7 @@
                     ($scope.backErr.system.status != 3)
                 ) {
                     if($scope.toState.name == 'space.update'){
-                        $scope.personal.updatePapers.profile_check == 2;
+                        $scope.personal.updatePapers.profile_check = 2;
                     }else{
                         // 向authenController发送信息
                         $scope.$emit('goState', data.data);
@@ -846,7 +846,7 @@
                     ($scope.backErr.system.status != 3)
                 ) { 
                     if($scope.toState.name == 'space.update'){
-                        $scope.personal.updatePapers.profile_check == 2;
+                        $scope.personal.updatePapers.profile_check = 2;
                     }else{
                         // 向authenController发送信息
                         $scope.$emit('goState', data.data);
