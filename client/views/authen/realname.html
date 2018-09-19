@@ -1,7 +1,7 @@
 <div class="asset-public__tip" ng-show="toState.name == 'space.update' && !(personal.updatePapers.profile_check >= 0)">
     <img style="height: 50px;" src="/ngsrc/loading.gif">
 </div>
-<div class="authen_content ctn center" ng-class="{'update': toState.name == 'space.update'}" ng-show="toState.name == 'space.update' ? (personal.updatePapers.profile_check && personal.updatePapers.profile_check != 2) : true">
+<div class="authen_content ctn center" ng-class="{'update': toState.name == 'space.update'}" ng-show="toState.name != 'space.update' || (toState.name == 'space.update' && personal.updatePapers.profile_check && personal.updatePapers.profile_check != 2)">
     <div class="authen_title" ng-if="toState.name != 'space.update'">
         <h2>{{lang.text('tigerWitID.wallet.uploadIdentification')}}</h2>
         <p class="authen_content__tip">{{lang.text('tigerWitID.myAccount.tip24')}}</p>
