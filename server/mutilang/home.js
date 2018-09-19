@@ -185,7 +185,7 @@ module.exports = {
     },
     newhome_38: {
       zh: "监管号： SIA-F185",
-      en: "TigerWit Limited is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185.All client funds are held in a segregated client trust account."
+      en: "TigerWit Limited is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. We provide protection to our clients in accordance with the highest global regulatory standards. All client funds are held in a segregated client trust accounts."
     },
     newhome_39: {
       zh: "资金安全",
