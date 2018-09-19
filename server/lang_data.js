@@ -27,6 +27,8 @@ module.exports = function () {
             // download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
             // download: "http://admin-shence.tigerwit.com:8106/r/C",
             download: "http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
+            downloadGlobalIos: "http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
+            downloadGlobalAndroid: "http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
 
             // path
             logoPathZh: indexBasePath + "/tigerwit-logo-en.png",
@@ -234,6 +236,8 @@ module.exports = function () {
         "webMt4Download": { "zh": companyConfig.webMt4Download, "en": companyConfig.webMt4Download },
         "androidApp": { "zh": companyConfig.androidApp, "en": companyConfig.androidApp },
         "download": { "zh": companyConfig.download, "en": companyConfig.download },
+        "downloadGlobalIos": { "zh": companyConfig.downloadGlobalIos, "en": companyConfig.downloadGlobalIos },
+        "downloadGlobalAndroid": { "zh": companyConfig.downloadGlobalAndroid, "en": companyConfig.downloadGlobalAndroid },
 
         // 公用 public
         "lijifuzhi": { "en": "Copy now", "zh": "立即复制" },
@@ -299,8 +303,8 @@ module.exports = function () {
 
         // 导航栏 navbar
         "navbar1": { "en": "Home", "zh": "首页" },
-        "navbar2": { "en": "Master", "zh": "复制跟单" },
-        "navbar3": { "en": "Follow master's Trading", "zh": "高手跟单" },
+        "navbar2": { "en": "Copy trading", "zh": "复制跟单" },
+        "navbar3": { "en": "Follow a master", "zh": "高手跟单" },
         "navbar4": { "en": "Follow masters' move regularly", "zh": "定期跟单" },
         "navbar5": { "en": "Products", "zh": "产品介绍" },
         "navbar6": { "en": "Foreign Exchange", "zh": "外汇交易" },
@@ -316,21 +320,21 @@ module.exports = function () {
         "navbar16": { "en": "App", "zh": "下载APP" },
 
         // 底部 footer
-        "foot1": { "en": "Trading Software", "zh": "交易工具" },
-        "foot2": { "en": "MT4 Download", "zh": "MT4 下载" },
-        "foot3": { "en": "MT4 Web Version", "zh": "MT4 网页版" },
-        "foot4": { "en": "Learning Center", "zh": "学习中心" },
+        "foot1": { "en": "Trading software", "zh": "交易工具" },
+        "foot2": { "en": "MT4 download", "zh": "MT4 下载" },
+        "foot3": { "en": "MT4 web version", "zh": "MT4 网页版" },
+        "foot4": { "en": "Learning center", "zh": "学习中心" },
         "foot5": { "en": "Basic knowledge", "zh": "基础知识" },
         "foot6": { "en": "Video", "zh": "学习视频" },
         "foot7": { "en": "Important information", "zh": "条件和条款" },
         "foot8": { "en": "Risk Disclosure Statement", "zh": "风险披露书" },
         "foot9": { "en": "Declaration by Client", "zh": "客户声明" },
         "foot10": { "en": "User Instructions", "zh": "用户交易须知" },
-        "foot11": { "en": "Contact Us", "zh": "联系我们" },
+        "foot11": { "en": "Contact us", "zh": "联系我们" },
         "foot12": { "en": "High Risk Warning: Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results.", "zh": "高风险投资警告：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险，不适合所有投资者。增大杠杆意味着高风险与高收益并存。在您决定交易之前，必须确认投资目标、投资经验及风险承受能力，并且选择适合自己的投资方式。您需要知晓金融市场的保证金交易具有全部或者部分亏损的可能。" + companyConfig.companyNameZh + "交易平台为广大交易高手和普通投资者提供复制交易服务。网站发布的任何信息，包括实时交易提醒、投资文章及其他资源等均来自互联网。所有用户必须需仔细考量并权衡投资风险及安全性。交易高手的历史数据不代表未来操作能力，用户因此所产生的的任何风险需自己承担。" },
         "foot13": { "en": "col-xs-3", "zh": "col-xs-2" },
-        "foot14": { "en": "Support Documents", "zh": "帮助文档" },
-        "foot15": { "en": "Trade Fees", "zh": "交易费用" },
+        "foot14": { "en": "Support documents", "zh": "帮助文档" },
+        "foot15": { "en": "Trade fees", "zh": "交易费用" },
         "footlang": { "en": "English", "zh": "简体中文" },
         "footzh": { "en": "简体中文", "zh": "简体中文" },
 
@@ -1030,7 +1034,7 @@ module.exports = function () {
         "traderIndex14": { "en": "Feature", "zh": "交易特色" },
         "traderIndex15": { "en": "Strategy", "zh": "交易策略" },
         "traderIndex16": { "en": "More Info", "zh": "更多介绍" },
-        "traderIndex17": { "en": "Stats", "zh": "数据统计" },
+        "traderIndex17": { "en": "Statistics", "zh": "数据统计" },
         "traderIndex18": { "en": "Open trades", "zh": "当前交易" },
         "traderIndex19": { "en": "Trade history", "zh": "历史交易" },
 
