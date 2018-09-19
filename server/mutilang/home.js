@@ -61,7 +61,7 @@ module.exports = {
     },
     newhome_13: {
       zh: "输入复制金额，点击复制",
-      en: "Select the Master’s trade you want to."
+      en: "Select the Master’s trade you want to follow."
     },
     newhome_14: {
       zh: "享受高手同策略交易",
@@ -69,7 +69,7 @@ module.exports = {
     },
     newhome_15: {
       zh: "成为高手，您将获得复制者盈利的20%",
-      en: "Become a TigerWit Master and earn 20% commission on your follower’s profits."
+      en: "Become a TigerWit Master and earn 20% commission on your followers’ profits."
     },
     newhome_16: {
       zh: "选择高手",
@@ -136,8 +136,8 @@ module.exports = {
       en: "Powered by blockchain"
     },
     newhome_31: {
-      zh: "TigerWit is harnessing the power of blockchain through a distributed trading ledger.A cryptographically encoded, highly-detailed record of transactions shared across the trading network. TigerWit’s distributed trading ledger is founded upon blockchain-based trade settlement, delivering more efficiency, greater security, transparency and trust.",
-      en: "TigerWit is harnessing the power of blockchain through a distributed trading ledger.A cryptographically encoded, highly-detailed record of transactions shared across the trading network. TigerWit’s distributed trading ledger is founded upon blockchain-based trade settlement, delivering more efficiency, greater security, transparency and trust."
+      zh: "TigerWit is harnessing the power of blockchain through a distributed trading ledger. A cryptographically encoded, highly-detailed record of transactions shared across the trading network. TigerWit’s distributed trading ledger is founded upon blockchain-based trade settlement, delivering more efficiency, greater security, transparency and trust.",
+      en: "TigerWit is harnessing the power of blockchain through a distributed trading ledger. A cryptographically encoded, highly-detailed record of transactions shared across the trading network. TigerWit’s distributed trading ledger is founded upon blockchain-based trade settlement, delivering more efficiency, greater security, transparency and trust."
     },
     newhome_31_1: {
       zh: "Find out more about blockchain technology",
@@ -160,8 +160,8 @@ module.exports = {
       en: "Built around you. Personalised by you."
     },
     newhome_35_1: {
-      zh: "Download the app and open a USD10,000 Experience account instantly.",
-      en: "Download the app and open a USD10,000 Experience account instantly."
+      zh: "Download the app and open an USD10,000 Experience account instantly.",
+      en: "Download the app and open an USD10,000 Experience account instantly."
     },
     newhome_35_2: {
       zh: "Open a Live account within minutes.",
@@ -201,7 +201,7 @@ module.exports = {
     },
     newhome_42: {
       zh: "更多用户的选择",
-      en: "Trading Client"
+      en: "Trading with TigerWit"
     },
     newhome_42_1: {
       zh: "TigerWit clients worldwide access the most heavily-traded global products, delivering immediate access to the most liquid markets.",
