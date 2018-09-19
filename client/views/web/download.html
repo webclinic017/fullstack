@@ -24,7 +24,7 @@
                         <div class="download_banner__ctn-action">
                             <ul class="plat">
                                 <li class="phone">
-                                    <a href="<%= lang.text('androidApp')%>">
+                                    <a href="<%= req.host.indexOf('global') != -1 ? lang.text('downloadGlobalAndroid') : lang.text('androidApp') %>">
                                         <i class="fa fa-android" aria-hidden="true"></i>
                                         <%= lang.text('downloadApp.androidVersion')%>
                                     </a>
@@ -32,7 +32,7 @@
                                 </li>
                                 <% if(lang.isCompany('tigerwit')){%>
                                 <li class="phone">
-                                    <a href="<%= req.host.indexOf('global') != -1 ? 'https://itunes.apple.com/us/app/tigerwit/id1091437876?l=zh&ls=1&mt=8' : 'https://itunes.apple.com/app/id1091437876'%>">
+                                    <a href="<%= req.host.indexOf('global') != -1 ? lang.text('downloadGlobalIos') : 'https://itunes.apple.com/app/id1091437876'%>">
                                         <i class="fa fa-apple" aria-hidden="true"></i>
                                         <%= lang.text('downloadApp.iPhoneVersion')%>
                                     </a>
@@ -43,11 +43,11 @@
                             <% if (req.host.indexOf('global') != -1) {%>
                             <div class="code global">
                                 <div class="img_box">
-                                    <img src="/images/web/download_andriod_global.png" alt="code" draggable=false>
+                                    <img src="/images/web/download_andriod_global_new.png" alt="code" draggable=false>
                                     <span>Andriod</span>
                                 </div>
                                 <div class="img_box">
-                                    <img src="/images/web/download_ios_global.png" alt="code" draggable=false>
+                                    <img src="/images/web/download_ios_global_new.png" alt="code" draggable=false>
                                     <span>Ios</span>
                                 </div>
                                 <p><%= lang.text('downloadApp.tip5')%></p>
@@ -130,13 +130,13 @@
                         <ul class="download_bottom__ctn-plat">
                             <% if (req.host.indexOf('global') != -1) {%>
                                 <li class="phone">
-                                    <a href="https://play.google.com/store/apps/details?id=com.tigerwit.forex">
+                                    <a href="<%= lang.text('downloadGlobalAndroid')%>">
                                         <i class="fa fa-android" aria-hidden="true"></i>
                                         <%= lang.text('downloadApp.androidVersion')%>
                                     </a>
                                 </li>
                                 <li class="phone">
-                                    <a href="https://itunes.apple.com/us/app/tigerwit/id1091437876?l=zh&ls=1&mt=8">
+                                    <a href="<%= lang.text('downloadGlobalIos')%>">
                                         <i class="fa fa-apple" aria-hidden="true"></i>
                                         <%= lang.text('downloadApp.iPhoneVersion')%>
                                     </a>
