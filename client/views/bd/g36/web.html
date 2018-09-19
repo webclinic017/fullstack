@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 需要兼容 -->
+    <% include /common/meta/web.html %>  
+    <% include /common/statistic/main.html %>
+    <!-- build:css(.tmp) /styles/web.css -->
+    <link rel="stylesheet" href="/styles/web.css">
+    <!-- endbuild -->
+    <% include /common/vendor/web.js.html %>
+</head>
+
+<body ng-app="fullstackApp" class="tw_en">
+    <div ng-controller="GlobalController">
+        <%if(lang.isCompany('tigerwit')){%>
+            <% include /common/nav/web.header.html %>
+        <%}%>
+        <div class="global_g36">
+            <div class="container relative">
+                <div class="global_g36__whatsapp">
+                  
+
+                </div>
+            </div>
+        </div>
+        <%if(lang.isCompany('tigerwit')){%>
+          <% include /common/nav/web.footer.html %>
+        <%}%>
+
+    </div>
+</body>
+
+<!-- build:js(client) /scripts/bd_g36.js -->
+<script src="/scripts/common/config.service.js"></script>
+<script src="/scripts/common/account.service.js"></script>
+<script src="/scripts/common/authorization.service.js"></script>
+<script src="/scripts/common/redbag.service.js"></script>
+<script src="/scripts/common/navbar.directive.js"></script>
+<script src="/scripts/common/dropdown.directive.js"></script>
+<script src="/scripts/common/global.controller.js"></script>
+<script src="/scripts/common/loading_img.directive.js"></script>
+
+<script src="/scripts/common/pagination.directive.js"></script>
+<script src="/scripts/common/duration.filter.js"></script>
+
+<script src="/scripts/common/symbol_mod.filter.js"></script>
+<script src="/scripts/common/trader.service.js"></script>
+<script src="/scripts/common/lang.service.js"></script>
+<script src="/scripts/common/lang_data.service.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<script src="/scripts/plugins/layer.js"></script>
+<script src="/scripts/bd/common/publicAjax.js"></script>
+<!-- endbuild -->
+
+</html>

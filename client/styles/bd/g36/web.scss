@@ -1,0 +1,15 @@
+
+@include b(global_g36) {
+  height: 4649px;
+  background-image: url('/white_label/bd/g36/web_bg.png');
+  background-position: center top;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  color: #fff;
+
+  @include e(whatsapp) {
+    background-image: url('/white_label/bd/g36/banner.png');
+    height: 924px;
+    margin-top: 197px;
+  }
+}

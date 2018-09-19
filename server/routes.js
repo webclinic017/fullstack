@@ -690,13 +690,27 @@ module.exports = function (app) {
     });
     // global活动页
     app.route('/bonus').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'cn');
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
                 res.render('bd/g35/h5.html', extendPublic({}, req))
             } else {
                 res.render('bd/g35/web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
+    // 新增邮件-海外种子用户加群 
+    app.route('/whatsapp').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'global');
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('bd/g36/h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/g36/web.html', extendPublic({}, req));
             }
         } else {
             res.render('404.html', extendPublic({}, req));
