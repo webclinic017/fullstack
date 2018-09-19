@@ -45,12 +45,12 @@
         $scope.advertiseLst = [];
 
         // 此为index2 首页的高手信息
-        ranklist.getIndexMasters().then(function (data) {
-            // console.info(data);
-            $scope.indexMasters[0] = data.data.profit[0];
-            $scope.indexMasters[1] = data.data.retract[0];
-            $scope.indexMasters[2] = data.data.win[0];
-        });
+        // ranklist.getIndexMasters().then(function (data) {
+        //     // console.info(data);
+        //     $scope.indexMasters[0] = data.data.profit[0];
+        //     $scope.indexMasters[1] = data.data.retract[0];
+        //     $scope.indexMasters[2] = data.data.win[0];
+        // });
 
         function getUserParam() {
             var hostnameUrl = window.location.hostname;
@@ -102,7 +102,7 @@
         // 轮播图信息
         $scope.getBannerSucc = false;
 
-        getAdvertiseRecords();
+        // getAdvertiseRecords();
         function getAdvertiseRecords() {
             account.getAdvertiseRecords('wheel').then(function (data) {
                 // console.log(data);

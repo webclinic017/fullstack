@@ -307,13 +307,13 @@ module.exports = function () {
         "navbar7": { "en": "Crude Oil", "zh": "原油交易" },
         "navbar8": { "en": "Precious Metals", "zh": "贵金属交易" },
         "navbar9": { "en": "Contracts for Difference", "zh": "指数差价合约" },
-        "navbar10": { "en": "About" + companyConfig.companyNameEn, "zh": "关于" + companyConfig.companyNameZh },
+        "navbar10": { "en": "About " + companyConfig.companyNameEn, "zh": "关于" + companyConfig.companyNameZh },
         "navbar11": { "en": "About " + companyConfig.companyNameEn, "zh": "关于" + companyConfig.companyNameZh },
         "navbar12": { "en": "STP", "zh": "STP交易模式" },
         "navbar13": { "en": "", "zh": "" },
         "navbar14": { "en": "no-banner", "zh": "" },
         "navbar15": { "en": "style=display:none;", "zh": "style" },
-        "navbar16": { "en": "Download App", "zh": "下载APP" },
+        "navbar16": { "en": "App", "zh": "下载APP" },
 
         // 底部 footer
         "foot1": { "en": "Trading Software", "zh": "交易工具" },
@@ -322,7 +322,7 @@ module.exports = function () {
         "foot4": { "en": "Learning Center", "zh": "学习中心" },
         "foot5": { "en": "Basic knowledge", "zh": "基础知识" },
         "foot6": { "en": "Video", "zh": "学习视频" },
-        "foot7": { "en": "Conditions and Clauses", "zh": "条件和条款" },
+        "foot7": { "en": "Important information", "zh": "条件和条款" },
         "foot8": { "en": "Risk Disclosure Statement", "zh": "风险披露书" },
         "foot9": { "en": "Declaration by Client", "zh": "客户声明" },
         "foot10": { "en": "User Instructions", "zh": "用户交易须知" },
@@ -330,7 +330,7 @@ module.exports = function () {
         "foot12": { "en": "High Risk Warning: Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results.", "zh": "高风险投资警告：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险，不适合所有投资者。增大杠杆意味着高风险与高收益并存。在您决定交易之前，必须确认投资目标、投资经验及风险承受能力，并且选择适合自己的投资方式。您需要知晓金融市场的保证金交易具有全部或者部分亏损的可能。" + companyConfig.companyNameZh + "交易平台为广大交易高手和普通投资者提供复制交易服务。网站发布的任何信息，包括实时交易提醒、投资文章及其他资源等均来自互联网。所有用户必须需仔细考量并权衡投资风险及安全性。交易高手的历史数据不代表未来操作能力，用户因此所产生的的任何风险需自己承担。" },
         "foot13": { "en": "col-xs-3", "zh": "col-xs-2" },
         "foot14": { "en": "Support Documents", "zh": "帮助文档" },
-        "foot15": { "en": "Trade Fee", "zh": "交易费用" },
+        "foot15": { "en": "Trade Fees", "zh": "交易费用" },
         "footlang": { "en": "English", "zh": "简体中文" },
         "footzh": { "en": "简体中文", "zh": "简体中文" },
 
@@ -371,7 +371,18 @@ module.exports = function () {
         "foot_35": { "zh": "TigerWit受巴哈马证券交易委员会（SCB）的授权和监管，监管号：SIA-F185。", "en": "TigerWit has obtained authoritative regulatory license from Financial Conduct Authority(FCA) and Securities Commission of The Bahamas(SCB), which authorises TigerWit to carry on a financial services business in British and Bahamas and other areas." },
         "foot_36": { "zh": "TigerWit澳大利亚子公司Tiger Financial Technology Pty Ltd (ACN 614 234 687)，是HLK Group Pty Ltd (ACN 161 284 500)的机构授权代表(CAR No. 001 247 008)，被授权在协议内提供个人和一般性建议以及管理委托账户。", "en": "Tiger Financial Technology Pty Ltd (ACN 614 234 687), Australian subsidiary of TgerWit Group, is a Corporate Authorised Representative (CAR No. 001 247 008) of HLK Group Pty Ltd (ACN 161 284 500) with AFSL No. 435746, and is authorized to give personal and general advice under the agreement, and manage discretionary accounts." },
         "foot_37": { "zh": "TigerWit受英国金融行为监管局（FCA）的授权和监管，授权编号为：679941。", "en": "TigerWit Limited (UK) and TigerWit Limited (Bahamas) are subsidiaries of TigerWit Holding Limited.TigerWit Limited (UK) is regulated by Financial Conduct Authority（FCA）, license number 679941. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas（SCB）, license number SIA-F185."},
-
+        //footer 页脚修改 － 2018.09.17
+        "foot_38": {"zh": "High Risk Warning:", "en": "High Risk Warning:"},
+        "foot_39": {"zh": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results.", "en": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results."},
+        "foot_40": {"zh": "TigerWit Limited (UK) and TigerWit Limited (Bahamas) are subsidiaries of TigerWit Holding Limited. TigerWit Limited (UK) is regulated by Financial Conduct Authority (FCA), license number 679941. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185.", "en": "TigerWit Limited (UK) and TigerWit Limited (Bahamas) are subsidiaries of TigerWit Holding Limited. TigerWit Limited (UK) is regulated by Financial Conduct Authority (FCA), license number 679941. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185."},
+        "foot_41": {"zh": "TigerWit Limited, Seventh Floor, Augustine House, 6a Austin Friars, London, EC2N 2HA. Company number 09479466. Registered in England and Wales. VAT registered number: 269995518.", "en": "TigerWit Limited, Seventh Floor, Augustine House, 6a Austin Friars, London, EC2N 2HA. Company number 09479466. Registered in England and Wales. VAT registered number: 269995518."},
+        "foot_42": {"zh": "你要在线咨询", "en": "Which kind of consultation do you need?"},
+        "foot_43": {"zh": "普通咨询", "en": "Normal consultation"},
+        "foot_44": {"zh": "我是普通用户，咨询交易相关的问题", "en": "I'm a normal user,"},
+        "foot_44_2": {"zh": " ", "en": "asking questions about transactions"},
+        "foot_45": {"zh": "代理商咨询", "en": "Agent consultation"},
+        "foot_46": {"zh": "我是代理商或需要代理服务", "en": "I’m a agent or need to consult "},
+        "foot_47": {"zh": "咨询代理相关的问题", "en": "the proxy service related questions"},
         // 首页 home
         "home1": { "en": "Follow masters' move", "zh": "复制跟单" },
         "home2": { "en": "To be an investment master", "zh": "人人都是投资高手" },
@@ -453,7 +464,7 @@ module.exports = function () {
         "home64": { "en": "Markets", "zh": "交易产品" },
         "home65": { "en": "Sell", "zh": "卖出价" },
         "home66": { "en": "Buy", "zh": "买入价" },
-        "home67": { "en": "Above data is updated automatically in real time except on Saturdays and Sundays", "zh": "数据实时自动更新，周六日停盘无报价" },
+        "home67": { "en": "Prices are indicative. No quotations are updated over Saturdays and Sundays.", "zh": "数据实时自动更新，周六日停盘无报价" },
 
         // 产品介绍－外汇交易 forex
         //"forex1": {"en": "Foreign exchange transaction involves buying and/or selling a kind of foreign currency. In terms of the largest single product market in the world, trades valuing over USD 5 trillion are achieved on the current foreign exchange market. The foreign exchange and price is mainly influenced by international trade, economy and policies of countries and investment flow direction and the foreign exchange market is featured as transparent information, tremendous turnover and great fairness and transparency.", "zh": "外汇交易涉及买入一个外国货币和/或卖出另一个外国货币。全球最大的单一产品市场，当今外汇市场每天拥有超过5万亿美元的成交额，外汇市场和价格主要受国际间的交易，各国经济和政策以及投资流向的影响，外汇市场信息透明，流通量巨大，公平透明。"},
@@ -2143,6 +2154,8 @@ module.exports = function () {
     var mThird = require('./mutilang/third')
     // 注册协议 agment_mdl.html
     var agment = replaceTiger(require('./mutilang/agment'))
+    // 首页新UI
+    var home = replaceTiger(require('./mutilang/home'))
     return _.merge(
         data,
         faq,
@@ -2151,6 +2164,7 @@ module.exports = function () {
         mInvite,
         mRegister,
         mThird,
-        agment
+        agment,
+        home
     );
 }; 
