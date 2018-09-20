@@ -228,7 +228,7 @@
                     // websocket is closed.
                     console.log("Connection is closed...");
                     //console.log(e);
-                    connectSocket();
+                    // connectSocket();
                 };
                 ws.onerror = function (e) {
                     // websocket is error.

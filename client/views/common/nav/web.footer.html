@@ -130,15 +130,10 @@
             
         </div>
         <div class="footer_con mg-tp-30">
-            <p class="mg-bt-30">
+            <p class="mg-bt-50">
                 <strong><%= lang.text("foot_38")%></strong>
                 <span><%= lang.text("foot_39")%></span>
-            </p>
-            <p class="mg-bt-30">
-                <%= lang.text("foot_40")%>
-            </p>
-            <p class="mg-bt-30">
-                <%= lang.text("foot_41")%>
+                <a href="https://uk.tigerwit.com">https://uk.tigerwit.com</a>
             </p>
         </div>
     </div>
@@ -189,13 +184,13 @@
      </span>
     <%if (req.host.indexOf('global') != -1) {%>
         <%if (lang.currentLanguage() === 'en') {%>
-            <img style="cursor: pointer;" src="/images/footer-layer/global-en-new.png">
+            <img style="cursor: pointer;" src="/images/footer-layer/global-en.png">
         <%} else {%>
             <img style="cursor: pointer;" src="/images/footer-layer/global-cn-new.png">
         <%}%>
     <%} else {%>
         <%if (lang.currentLanguage() === 'en') {%>
-            <img style="cursor: pointer;" src="/images/footer-layer/cn-en-new.png"
+            <img style="cursor: pointer;" src="/images/footer-layer/cn-en.png"
             onclick="OpenChat();">
         <%} else {%>
             <img style="cursor: pointer;" src="/images/footer-layer/cn-cn-new.png"
