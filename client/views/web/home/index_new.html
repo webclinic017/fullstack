@@ -105,16 +105,29 @@
                         {{ quoteSymbol.symbol }}
                         <%}%>
                     </li>
-                    <li class="sell" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                    <%if (req.host.indexOf('global') != -1) {%>
+                    <li class="sell" ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down'}">
                         <span>
                             {{ quoteSymbol.sell }}
                         </span>
                     </li>
-                    <li class="buy" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                    <li class="buy" ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down'}">
                         <span>
                             {{ quoteSymbol.buy }}
                         </span>
                     </li>
+                    <%} else {%>
+                      <li class="sell" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                          <span>
+                              {{ quoteSymbol.sell }}
+                          </span>
+                      </li>
+                      <li class="buy" ng-class="{up: quoteSymbol.type === 'up', down: quoteSymbol.type === 'down'}">
+                          <span>
+                              {{ quoteSymbol.buy }}
+                          </span>
+                      </li>
+                    <%}%>
                 </ul>
             </div>
             <div class="index_new_qupte__tip">
