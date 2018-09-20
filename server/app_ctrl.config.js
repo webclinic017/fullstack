@@ -94,10 +94,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V0.0.1",
+                        version_name : "V2.3.1",
                         description: "Update：\nOptimized register and login functions;\nAdd guest mode for international area user;\nOptimized user interface;\nFixed known bugs, optimized user experience.",
                         updated_description: "70% users are using new version",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.2.3.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.3.1.apk",
                         force_update : false
                     }
                 }
@@ -113,10 +113,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V0.0.1",
+                        version_name : "V2.3.1",
                         description: "本次更新：\n注册/登录功能优化；\n国际区用户增加【游客模式】；\n界面视觉优化；\n修复已知BUG，优化用户体验；",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.2.3.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.3.1.apk",
                         force_update : false
                     }
                 }
