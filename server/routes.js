@@ -690,7 +690,7 @@ module.exports = function (app) {
     });
     // global活动页
     app.route('/bonus').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
+        checkGlobalOrCN(req, res, 'cn');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {
@@ -704,7 +704,7 @@ module.exports = function (app) {
     });
     // 新增邮件-海外种子用户加群 
     app.route('/whatsapp').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
+        checkGlobalOrCN(req, res, 'cn');
         setEnvCf(req, res);
         if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
             if (isMobile(req)) {

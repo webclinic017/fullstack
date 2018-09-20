@@ -7,9 +7,116 @@
   background-repeat: no-repeat;
   color: #fff;
 
-  // @include e(whatsapp) {
-  //   background-image: url('/white_label/bd/g36/banner.png');
-  //   height: 924px;
-  //   margin-top: 197px;
-  // }
+  @include e(container) {
+    width: 1183px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+  }
+  @include e(whatsapp) {
+    padding-top: 255px;
+  }
+  @include e(whatsappTip) {
+    padding-top: 164px;
+    font-size: 37.68px;
+    color: #444444;
+    text-align: center;
+    line-height: 50px;
+  }
+  @include e(whatsappBtn) {
+    width: 871px;
+    height: 147px;
+    padding: 17px 0;
+    border-radius: 72px;
+    display: block;
+    background-color: #ffe28c;
+    font-size: 57.51px;
+    text-align: center;
+    margin: 121px auto 0; 
+    box-shadow:0 10px 5px #d29a00;
+    @include m(btn){
+      color: #000;
+      span{
+        vertical-align: middle;
+      }
+      .img{
+        margin: 0 35px;
+        vertical-align: middle;
+      }
+    }
+  }
+  @include e(recommend){
+    margin-top: 148px;
+    padding: 66px 30px;
+    border-radius: 52px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 10px #f7b910;
+    @include m(title){
+      text-align: center;
+      position: relative;
+      .left{
+        position: absolute;
+        top: 70px;
+        left: 6px;
+      }
+      .tit{
+        font-size: 56px;
+        color: #444444;
+        line-height: 67px;
+      }
+      .right{
+        position: absolute;
+        top: 70px;
+        right: 6px;
+      }
+    }
+    @include m(con){
+      width: 825px;
+      padding: 90px 0 64px;
+      margin: 0 auto;
+      overflow: hidden;
+      .right{
+        font-size: 34px;
+        color: #767c83;
+        line-height: 41px;
+        margin-left: 121px;
+        float: left;
+        margin-top: 14px;
+      }
+      .left{
+        float: left;
+      }
+    }
+    @include m(contact){
+      width: 745px;
+      margin: 0 auto;
+      padding: 37px 0;
+      border-bottom: 2px solid #ffedcc;
+      text-align: center;
+      .right{
+        font-size: 36px;
+        color: #444444;
+        margin-left: 35px;
+      }
+      .left, .right{
+        vertical-align: middle;
+      }
+      &:last-child{
+        border-bottom: none;
+        margin-bottom: 30px;
+      }
+    }
+  }
+  @include e(highRiskWarning){
+    width: 1008px;
+    color: #7c5404;
+    font-size: 31px;
+    line-height: 47px;
+    margin: 0 auto;
+    padding-top: 135px;
+    font-weight: 100;
+    font-family: OpenSans Light;
+  }
 }

@@ -1,299 +1,134 @@
-@include b(m_global_t35_success) {
-  width: 100%;
-  height: 100%;
-  background-image: url('/images/bd_t35/h5_succ_bg.png');
+@include b(global_g36) {
+  padding-bottom: 60px;
+  background-image: url('/white_label/bd/g36/web_bg.png');
   background-position: center top;
   background-size: auto 100%;
   background-repeat: no-repeat;
   color: #fff;
-  display: none;
 
-  &.active {
-    display: block;
-  }
-  .m_global_t35__btn_wrapper {
-    text-align: left;
-    margin-top: 15px;
-  }
-
-  @include e(tip) {
-    font-size: 16px;
-    padding-bottom: 50px;
-
-    p {
-      padding-bottom: 5px;
-    }
-  }
-  @include e(download) {
-    font-size: 16px;
-    margin-top: 30px;
-    text-decoration: underline;
-  }
-
-  @include e(layout) {
-    padding: 60px 30px 0px;
-  }
-}
-@include b(m_global_t35) {
-  height: 2400px;
-  background-image: url('/images/bd_g35/h5_bg.png');
-  background-position: center top;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  color: #fff;
-  display: none;
-
-  &.active {
-    display: block;
-  }
-
-  .m_global_t35_layout {
-    padding: 10px 15px;
-  }
-
-  @include e(btn_wrapper) {
-    text-align: center;
-  }
-  @include e(btn) {
-    color: #222;
-    font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 4px;
-    font-size: 16px;
-    display: inline-block;
-    box-shadow: 0px 0px 15px 1px #ccc;
-    background: -webkit-linear-gradient(left, #fbd427, #e4c548); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(left, #fbd427, #e4c548); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(left, #fbd427, #e4c548); /* Firefox 3.6 - 15 */
-    background: linear-gradient(left, #fbd427, #e4c548); /* 标准的语法 */
-
-    &.unable {
-      background: #ccc;
-    }
-  }
-  @include e(float_box) {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+  @include e(container) {
     width: 100%;
-    font-weight: 500;
-    padding: 15px 0px;
-    text-align: center;
-    font-size: 16px;
-    box-shadow: 0px 0px 15px 1px #ccc;
-    background: -webkit-linear-gradient(left, #fbd427, #e4c548); /* Safari 5.1 - 6.0 */
-    background: -o-linear-gradient(left, #fbd427, #e4c548); /* Opera 11.1 - 12.0 */
-    background: -moz-linear-gradient(left, #fbd427, #e4c548); /* Firefox 3.6 - 15 */
-    background: linear-gradient(left, #fbd427, #e4c548); /* 标准的语法 */
-
-    a {
-      display: block;
-      color: #222;
-    }
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 7px;
+    padding-right: 7px;
+    font-weight: bold;
+    max-width: 700px;
   }
-
-  @include e(logo) {
-    width: 40%;
-    margin-top: 25px;
-
-    img {
+  @include e(whatsapp) {
+    img{
       width: 100%;
     }
+    padding-top: 74px;
   }
-  @include e(focus) {
-    text-align: center;
-    margin-top: 80px;
-
-    img {
-      width: 100%;
-    }
-  }
-  @include e(focus_tip) {
-    text-align: center;
-
-    span {
-      font-weight: 500;
-      font-size: 18px;
-    }
-  }
-  @include e(date) {
-    text-align: center;
-    font-size: 18px;
-    padding-top: 20px;
-    font-weight: 500;
-    padding-bottom: 40px;
-  }
-  @include e(title) {
-    text-align: center;
-
-    &.t1 {
-      margin-top: 60px;
-
-      img {
-        width: 70%;
-      }
-    }
-    &.t2 {
-      margin-top: 60px;
-
-      img {
-        width: 75%;
-      }
-    }
-    &.t3 {
-      margin-top: 60px;
-      margin-bottom: 10px;
-
-      img {
-        width: 50%;
-      }
-    }
-  }
-  @include e(cont-1) {
-    margin-top: 20px;
-    margin-left: 20px;
-    .cont-left {
-      float: left;
-      height: 375px;
-
-      img {
-        height: 100%;
-      }
-    }
-    .cont-right {
-      float: left;
-      padding-left: 20px;
-
-      li {
-        padding: 5px 0px;
-        margin-bottom: 15px;
-        .l {
-          float: left;
-          width: 70px;
-          text-align: center;
-          font-size: 16px;
-          line-height: 20px;
-        }
-        .r {
-          float: left;
-          line-height: 18px;
-          padding-top: 2px;
-        }
-        &.l1 {
-          width: 175px;
-          background: rgba(5,8,39,.4);
-        }
-        &.l2 {
-          width: 195px;
-          background: rgba(220,220,220,.4);
-        }
-        &.l3 {
-          width: 215px;
-          background: rgba(5,8,39,.4);
-        }
-        &.l4 {
-          width: 235px;
-          background: rgba(220,220,220,.4);
-        }
-        &.l5 {
-          width: 255px;
-          background: rgba(5,8,39,.4);
-        }
-        &.l6 {
-          width: 275px;
-          background: rgba(220,220,220,.4);
-          margin-bottom: 0px;
-        }
-      }
-    }
-  }
-  @include e(cont-2) {
-    margin-top: 20px;
-
-    li {
-      float: left;
-      width: 50%;
-      text-align: center;
-      padding: 0 12px;
-
-      img {
-        height: 60px;
-        margin-bottom: 15px;
-      }
-    }
-  }
-  @include e(download) {
-    margin-top: 30px;
-
-    li {
-      float: left;
-      width: 50%;
-      text-align: center;
-      img {
-        width: 80%;
-      }
-    }
-  }
-  @include e(cont-3) {
-    position: relative;
-
-    span {
-      width: 8px;
-      height: 8px;
-      position: absolute;
-      top: 5px;
-      left: 4px;
-      background-color: #fff;
-      border-radius: 8px;
-    }
-    p {
-      padding-left: 20px;
-      padding-bottom: 10px;
-    }
-  }
-  @include e(register_box) {
-    border: 1px solid #ccc;
-    background: rgba(255,255,255,.25);
-    border-radius: 2px;
-    padding: 25px;
-    margin: 10px 30px 0px;
-
-    .form-control-wrapper {
-      margin-bottom: 15px;
-      position: relative;
-      .verify_code_btn_wrapper {
-        position: absolute;
-        top: 6px;
-        right: 0;
-        width: 100px;
-        height: 20px;
-        text-align: center;
-        line-height: 20px;
-        border-left: 1px solid #ccc;
-        color: #333;
-
-        .verify_code_btn {
-
-          &.unable {
-              color: #ccc;
-          }
-        }
-      }
-
-      .form-control {
-        padding: 8px 10px;
-        border-radius: 4px;
-        width: 100%;
-        color: #333;
-      }
-    }
-  }
-  @include e(warning) {
-    .tit {
-      margin-bottom: 10px;
-    }
-    color: #6e859e;
+  @include e(whatsappTip) {
+    padding-top: 43px;
     font-size: 12px;
-    margin-top: 50px;
+    color: #444444;
+    text-align: center;
+    line-height: 20px;
+  }
+  @include e(whatsappBtn) {
+    width: 74%;
+    max-width: 240px;
+    height: 44px;
+    padding: 5px 0;
+    border-radius: 22px;
+    display: block;
+    background-color: #ffe28c;
+    font-size: 16.8px;
+    text-align: center;
+    margin: 25px auto 0; 
+    box-shadow:0 5px 3px #d29a00;
+    @include m(btn){
+      color: #000;
+      span{
+        vertical-align: middle;
+      }
+      .img{
+        width: 36px;
+        margin: 0 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+  @include e(recommend){
+    max-width: 350px;
+    margin: 30px auto 0;
+    padding: 20px 11px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 5px #f7b910;
+    @include m(title){
+      text-align: center;
+      position: relative;
+      .left, .right{
+        width: 74px;
+        position: absolute;
+        top: 17px;
+      }
+      .left{
+        left: 0;
+      }
+      .tit{
+        font-size: 16.4px;
+        color: #444444;
+        line-height: 21px;
+      }
+      .right{
+        right: 0;
+      }
+    }
+    @include m(con){
+      width: 72%;
+      min-width: 268px;
+      padding: 25px 0 20px;
+      margin: 0 auto;
+      overflow: hidden;
+      .right{
+        font-size: 12px;
+        color: #767c83;
+        line-height: 17px;
+        margin-left: 25px;
+        float: left;
+      }
+      .left{
+        float: left;
+        width: 38px;
+      }
+    }
+    @include m(contact){
+      width: 76%;
+      min-width: 268px;
+      margin: 0 auto;
+      padding: 11px 0;
+      border-bottom: 1px solid #ffedcc;
+      text-align: center;
+      .right{
+        font-size: 12px;
+        color: #444444;
+        margin-left: 10px;
+      }
+      .left{
+        height: 14px;
+      }
+      .left, .right{
+        vertical-align: middle;
+      }
+      &:last-child{
+        border-bottom: none;
+        margin-bottom: 26px;
+      }
+    }
+  }
+  @include e(highRiskWarning){
+    width: 88.7%;
+    color: #7c5404;
+    font-size: 12px;
+    line-height: 16px;
+    margin: 0 auto;
+    padding-top: 35px;
+    font-weight: 100;
+    font-family: OpenSans Light;
   }
 }
