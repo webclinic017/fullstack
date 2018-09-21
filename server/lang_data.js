@@ -1161,6 +1161,8 @@ module.exports = function () {
         "mWapForget3": { "zh": "新密码", "en": "New Password" },
         "mWapForget4": { "zh": "确认新密码", "en": "Confirm New Password" },
 
+        mDepositSuccess: {zh: "充值确认中，请耐心等待", en: "Deposit is being confirmed, please wait patiently"},
+
         /*
             条件和条款文档中英文翻译 － 适用于WEB 、H5
             添加于 2017年10月26日
