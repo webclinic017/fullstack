@@ -1,4 +1,4 @@
-<div class="asset-public__tip" ng-show="toState.name == 'space.update' && !(personal.updatePapers.profile_check >= 0)">
+<div class="asset-public__tip" ng-show="toState.name == 'space.update' && !(personal.updatePapers.hint >= 0)">
     <img style="height: 50px;" src="/ngsrc/loading.gif">
 </div>
 <div class="authen_content ctn center" ng-class="{'update': toState.name == 'space.update'}" ng-show="toState.name != 'space.update' || (toState.name == 'space.update' && personal.updatePapers.profile_check && personal.updatePapers.profile_check != 2)">
@@ -19,7 +19,7 @@
                                 type="text"
                                 placeholder="{{lang.text('tigerWitID.myAccount.fillName')}}"
                                 required
-                                ng-disabled="personal.updatePapers.real_name"
+                                ng-disabled="personal.updatePapers.hint == 1"
                                 ng-class="{'form-control-error': frontErr.realname.show && realnameForm.realname.$invalid}"
                                 ng-model="realnameInfo.realname"
                                 ng-pattern="frontErr.realname.reg"
@@ -51,7 +51,7 @@
                                 placeholder="{{lang.text('tigerWitID.myAccount.selectCertificateType')}}"
                                 required
                                 disabled
-                                no-active="{{personal.updatePapers.idcard_type >= 0}}"
+                                no-active="{{personal.updatePapers.hint == 1}}"
                                 ng-model="realnameInfo.id_type.key"
                                 ng-class="{'form-control-error': frontErr.id_type.show && realnameForm.id_type.$invalid}"
                                 ng-blur="showErr('id_type')"
@@ -87,7 +87,7 @@
                             type="text"
                             placeholder="{{lang.text('tigerWitID.myAccount.fillCertificateNumber')}}"
                             required
-                            ng-disabled="personal.updatePapers.id_no"
+                            ng-disabled="personal.updatePapers.hint == 1"
                             ng-class="{'form-control-error': frontErr.id_num.show && realnameForm.id_num.$invalid}"
                             ng-model="realnameInfo.id_num"
                             ng-pattern="frontErr.id_num.reg"
@@ -101,7 +101,7 @@
                             type="text"
                             placeholder="{{lang.text('tigerWitID.myAccount.fillCertificateNumber')}}"
                             required
-                            ng-disabled="personal.updatePapers.id_no"
+                            ng-disabled="personal.updatePapers.hint == 1"
                             ng-class="{'form-control-error': frontErr.id_num.show && realnameForm.id_num.$invalid}"
                             ng-model="realnameInfo.id_num"
                             ng-blur="[showErr('id_num'),checkExsit(4)]"
@@ -138,7 +138,7 @@
                                 placeholder="{{lang.text('tigerWitID.gender')}}"
                                 required
                                 disabled
-                                no-active="{{personal.updatePapers.gender >= 0}}"
+                                no-active="{{personal.updatePapers.hint == 1}}"
                                 ng-model="realnameInfo.gender.key"
                                 ng-class="{'form-control-error': frontErr.gender.show && realnameForm.gender.$invalid}"
                                 ng-blur="showErr('gender')"
@@ -175,7 +175,7 @@
                             placeholder="{{lang.text('tigerWitID.myAccount.birthday')}}"
                             data-type="day"
                             required
-                            ng-disabled="personal.updatePapers.birth"
+                            ng-disabled="personal.updatePapers.hint == 1"
                             ng-model="realnameInfo.birthday"
                             data-bind-model="realnameInfo.birthday"
                             data-formatter="yyyymmdd"
@@ -265,8 +265,11 @@
             </div>
 
             <div class="btn_wrapper text-left">
-                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="clickable" ng-click="submitForm()">
-                    {{toState.name == 'space.update' ? lang.text('tigerWitID.submit') : lang.text('actLogin29')}}
+                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="toState.name == 'space.update' && clickable" ng-click="updatePaper()">
+                    {{lang.text('tigerWitID.submit')}}
+                </button>
+                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="toState.name != 'space.update' && clickable" ng-click="submitForm()">
+                    {{lang.text('actLogin29')}}
                 </button>
 
                 <a class="btn btn-sm tw-btn-capsule-gradient" ng-if="!clickable">

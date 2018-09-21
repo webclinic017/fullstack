@@ -738,7 +738,7 @@
             }
         ]
         $scope.$watch('personal.updatePapers', function (newVal, oldVal) {
-            if(JSON.stringify(newVal) != "{}"){
+            if(JSON.stringify(newVal) != "{}" && newVal.hint == 1){
                 $scope.realnameInfo.realname = newVal.real_name;
                 $scope.realnameInfo.id_type.key = $scope.idType[newVal.idcard_type].key;
                 $scope.realnameInfo.id_type.value = $scope.idType[newVal.idcard_type].value;
@@ -794,6 +794,7 @@
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
         $scope.submitForm = submitForm;
+        $scope.updatePaper = updatePaper;
         $scope.readyToUpload = {};
         $scope.uploadFinish = {};
         $scope.clickable = true;
@@ -885,6 +886,7 @@
 
             if (!$scope.readyToUpload.hasOwnProperty('front')) {
                 showErr('idFront');
+                return
             }
 
             if ($scope.realnameInfo.id_type.value == 0 && !$scope.readyToUpload.hasOwnProperty('back')) {
@@ -895,18 +897,12 @@
             if ($scope.realnameForm.$invalid) {
                 return
             }
-            // 兼容更新证件
-            if($scope.exsit.id_num.show == ''){
-                $scope.checkExsit(4);
-            }
-            if($scope.realnameInfo.id_type.value == 0 && $scope.realnameInfo.year18 == ''){
-                $scope.checkBirthday();
-            }
 
             if (!$scope.realnameInfo.year18 && $scope.realnameInfo.id_type.value == 0) {
                 layer.msg($scope.lang.text("tigerWitID.settings.tip13"))
                 return
             }
+            $scope.clickable = false;
 
             // 提交身份信息
             account.updataId({
@@ -924,11 +920,27 @@
                     sa.track('New_Realname');
                     sa.track('New_uploadcard');
                     /*上传图片*/
-                    angular.forEach($scope.readyToUpload, function (data, index, array) {
-                        data.submit();
-                    });
+                    paperUpdate();
                 }
             })
+        }
+        function updatePaper(){
+            if (!$scope.readyToUpload.hasOwnProperty('front')) {
+                showErr('idFront');
+                return
+            }
+
+            if ($scope.realnameInfo.id_type.value == 0 && !$scope.readyToUpload.hasOwnProperty('back')) {
+                showErr('idBack');
+                return
+            }
+            $scope.clickable = false;
+            paperUpdate();
+        }
+        function paperUpdate(){
+            angular.forEach($scope.readyToUpload, function (data, index, array) {
+                data.submit();
+            });
         }
 
         $scope.checkExsit = function (type) {
