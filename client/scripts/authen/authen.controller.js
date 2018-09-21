@@ -835,6 +835,7 @@
                 ) {
                     if($scope.toState.name == 'space.update'){
                         $scope.personal.updatePapers.profile_check = 2;
+                        $scope.personal.verify_status = 5;
                     }else{
                         // 向authenController发送信息
                         $scope.$emit('goState', data.data);
@@ -848,6 +849,7 @@
                 ) { 
                     if($scope.toState.name == 'space.update'){
                         $scope.personal.updatePapers.profile_check = 2;
+                        $scope.personal.verify_status = 5;
                     }else{
                         // 向authenController发送信息
                         $scope.$emit('goState', data.data);
