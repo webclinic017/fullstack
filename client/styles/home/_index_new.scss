@@ -1,0 +1,399 @@
+
+@media screen and (max-width:1600px){
+  .index_new__container, .index_new__reliable-lst {
+    width: 1100px!important;
+  }
+}
+
+@include b(index_new) {
+  @include e (container) {
+    width: 1310px;
+    margin: 0 auto;
+    font-size: 16px;
+    position: relative;
+  }
+  @include e(focus) {
+    height: 1099px !important;
+    background-position: center center;
+    background-size: auto 100%;
+    color: #fff;
+    padding-top: 310px;
+    &.cn {
+      background-image: url("/white_label/home/focus-cn.png");
+    }
+    &.en {
+      background-image: url("/white_label/home/focus-en.png");
+    }
+    @include m(title) {
+      margin: 0;
+      font-size: 45px;
+      line-height: 52px;
+    }
+    @include m(sub_tit) {
+      margin-top: 15px;
+      margin-bottom: 75px;
+    }
+    @include m(icon_box) {
+      margin-bottom: 80px;
+      li {
+        float: left;
+        width: 123px;
+        text-align: center;
+        margin: 0 5px;
+        img {
+          height: 58px;
+        }
+      }
+    }
+    @include m(btn_box) {
+      .tw-btn-capsule-bordered {
+        margin-left: 10px;
+        color: #fff;
+      }
+      .focus_btn {
+        width: 310px;
+      }
+    }
+    @include m(download) {
+      position: absolute;
+      top: 650px;
+      right: 80px;
+    }
+  }
+  @include e(copy) {
+    position: relative;
+    z-index: 10;
+    @include m(title) {
+      font-size: 56px;
+      text-align: center;
+      color: rgb(36,42,54);
+      margin: 100px 0px 26px;
+    }
+    @include m(sub_tit) {
+      color: rgb(187,196,215);
+      text-align: center;
+      font-size: 18px;
+    }
+    @include m(lst) {
+      display: flex;
+      justify-content: space-between;
+      margin: 70px 0px 88px;
+      li {
+        width: 242px;
+        height: 270px;
+        box-shadow: 2px 2px 10px 3px #eee;
+        border-radius: 26px;
+        text-align: center;
+        padding: 20px 22px;
+        .num {
+          font-size: 40px;
+          color: rgba(36,42,54,0.3);
+          margin: 10px 0px 5px;
+        }
+        .tip {
+          color: rgb(36,42,54);
+        }
+
+        &:last-child {
+          .tip {
+            padding-top: 35px;
+          }
+        }
+      }
+    }
+    @include m(btn_box) {
+      text-align: center;
+    }
+  }
+  @include e(flexible) {
+    margin-top: 100px;
+    .curcle-1 {
+      position: absolute;
+      top: -620px;
+      left: -636px;
+    }
+    @include m(title) {
+      font-size: 56px;
+      text-align: center;
+      color: rgb(36,42,54);
+      margin: 0px 0px 26px;
+      position: relative;
+      z-index: 100;
+    }
+    @include m(sub_tit) {
+      color: #bbc4d7;
+      text-align: center;
+      font-size: 18px;
+      position: relative;
+      z-index: 100;
+    }
+    @include m(box) {
+      position: relative;
+      z-index: 100;
+      width: 1070px;
+      margin: 0 auto;
+      background-color: #eee;
+      border-radius: 20px;
+      box-shadow: 2px 2px 10px 3px #eee;
+      padding: 30px 90px;
+      margin-top: 80px;
+      .content {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 50px 80px;
+      }
+    }
+    @include m(lst) {
+      width: 1100px;
+      display: flex;
+      justify-content: space-between;
+      margin: 90px auto 45px;
+      li {
+        text-align: center;
+        img {
+          height: 32px;
+        }
+        h5 {
+          color: rgb(36,42,54);
+          font-size: 20px;
+        }
+        p {
+          color: rgb(187,196,215);
+          font-size: 14px;
+        }
+      }
+    }
+    @include m(btn_box) {
+      text-align: center;
+
+      .flexible_btn {
+        width: 365px;
+      }
+    }
+  }
+  @include e(block) {
+    margin-top: 100px;
+    @include m(title) {
+      font-size: 56px;
+      text-align: center;
+      color: rgb(36,42,54);
+    }
+    @include m(sub_tit) {
+      color: rgb(187,196,215);
+      text-align: center;
+      font-size: 18px;
+      width: 1100px;
+      margin: 0 auto;
+    }
+    @include m(content) {
+      width: 1100px;
+      height: 500px;
+      text-align: center;
+      margin: 50px auto;
+    }
+  }
+  @include e(tools) {
+    height: 1000px !important;
+    background-position: center center;
+    background-size: auto 100%;
+    margin-top: 100px;
+    &.cn {
+      background-image: url("/white_label/home/tools-bg-cn.png");
+    }
+    &.en {
+      background-image: url("/white_label/home/tools-bg-en.png");
+    }
+    @include m(title) {
+      font-size: 56px;
+      color: rgb(11,11,11);
+      padding: 320px 0px 30px;
+    }
+    @include m(sub_tit) {
+      color: rgba(11,11,11,0.7);
+    }
+    @include m(download) {
+      margin-top: 35px;
+    }
+  }
+  @include e(reliable) {
+    margin-top: 100px;
+    @include m(title) {
+      text-align: center;
+      font-size: 56px;
+      color: rgb(11,11,11);
+      margin-bottom: 65px;
+    }
+    @include m(lst) {
+      display: flex;
+      justify-content: space-between;
+      width: 1200px;
+      margin: 0 auto;
+      li {
+        width: 360px;
+        height: 355px;
+        box-shadow: 2px 2px 10px 3px #eee;
+        border-radius: 10px;
+        text-align: center;
+        padding: 0 20px;
+        h5 {
+          font-size: 24px;
+          color: rgb(36,42,54);
+          margin-top: 55px;
+        }
+        p {
+          color: rgb(187,196,215);
+        }
+      }
+    }
+    @include m(btn_box) {
+      margin-top: 120px;
+      text-align: center;
+    }
+  }
+  @include e(client) {
+    text-align: center;
+    @include m(title) {
+      font-size: 56px;
+      margin: 100px 0px 26px;
+    }
+    @include m(sub_tit) {
+      color: #bbc4d7;
+      text-align: center;
+      font-size: 18px;
+      margin-bottom: 50px;
+    }
+  }
+  @include e(float_box) {
+    position: relative;
+    margin-bottom: 50px;
+    &:before {
+      display: block;
+      content: '';
+      position: absolute;
+      top: -4px;
+      left: 1.5%;
+      width: 97%;
+      height: 8px;
+      border-radius: 4px;
+      background: rgb(253,216,53);
+    }
+  }
+  @include e(float) {
+    margin-top: 100px;
+    position: relative;
+    border-radius: 30px;
+    padding: 40px 70px;
+    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.06);
+    z-index: 100;
+    background: #fff;
+    .f {
+      width: 78%;
+    }
+    .b {
+      width: 22%;
+      margin-top: 90px;
+    }
+    h3 {
+      font-size: 40px;
+      margin: 0;
+    }
+    p {
+      font-size: 20px;
+      color: rgb(187,196,215);
+      padding-right: 100px;
+    }
+  }
+}
+
+// 报价
+@include b(index_new_qupte) {
+  @include e(title) {
+      float: left;
+      width: 48%;
+      padding-bottom: 20px;
+      color: #393939;
+      &.h_border {
+        width: 52%;
+      }
+
+      li {
+          float: left;
+          text-align: center;
+
+          &.pro {
+              width: 40%;
+          }
+          &.sell {
+              width: 30%;
+          }
+          &.buy {
+              width: 30%;
+          }
+      }
+  }
+  @include e(tip) {
+      padding-top: 35px;
+      text-align: center;
+      color: #aaa;
+  }
+  @include e(content) {
+      float: left;
+      width: 48%;
+      padding: 17px 0;
+      color: #393939;
+
+      &.h_border {
+          width: 52%;
+          border-right: 1px solid #ccc;
+      }
+
+      li {
+          float: left;
+          text-align: center;
+
+          span {
+              padding: 1px 0px;
+              display: inline-block;
+              border-radius: 4px;
+              width: 65px;
+              font-size: 14px;
+          }
+
+          &.pro {
+              width: 40%;
+          }
+          &.sell {
+              width: 30%;
+
+              &.up {
+                  span {
+                      background-color: #f05452;
+                      color: #fff;
+                  }
+              }
+              &.down {
+                  span {
+                      background-color: #25c875;
+                      color: #fff;
+                  }
+              }
+          }
+          &.buy {
+              width: 30%;
+
+              &.up {
+                  span {
+                      background-color: #f05452;
+                      color: #fff;
+                  }
+              }
+              &.down {
+                  span {
+                      background-color: #25c875;
+                      color: #fff;
+                  }
+              }
+          }
+      }
+  }
+}

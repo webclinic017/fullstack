@@ -27,6 +27,8 @@ module.exports = function () {
             // download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
             // download: "http://admin-shence.tigerwit.com:8106/r/C",
             download: "http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
+            downloadGlobalIos: "http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
+            downloadGlobalAndroid: "http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
 
             // path
             logoPathZh: indexBasePath + "/tigerwit-logo-en.png",
@@ -234,6 +236,8 @@ module.exports = function () {
         "webMt4Download": { "zh": companyConfig.webMt4Download, "en": companyConfig.webMt4Download },
         "androidApp": { "zh": companyConfig.androidApp, "en": companyConfig.androidApp },
         "download": { "zh": companyConfig.download, "en": companyConfig.download },
+        "downloadGlobalIos": { "zh": companyConfig.downloadGlobalIos, "en": companyConfig.downloadGlobalIos },
+        "downloadGlobalAndroid": { "zh": companyConfig.downloadGlobalAndroid, "en": companyConfig.downloadGlobalAndroid },
 
         // 公用 public
         "lijifuzhi": { "en": "Copy now", "zh": "立即复制" },
@@ -299,38 +303,38 @@ module.exports = function () {
 
         // 导航栏 navbar
         "navbar1": { "en": "Home", "zh": "首页" },
-        "navbar2": { "en": "Master", "zh": "复制跟单" },
-        "navbar3": { "en": "Follow master's Trading", "zh": "高手跟单" },
+        "navbar2": { "en": "Copy trading", "zh": "复制跟单" },
+        "navbar3": { "en": "Follow a Master", "zh": "高手跟单" },
         "navbar4": { "en": "Follow masters' move regularly", "zh": "定期跟单" },
         "navbar5": { "en": "Products", "zh": "产品介绍" },
         "navbar6": { "en": "Foreign Exchange", "zh": "外汇交易" },
         "navbar7": { "en": "Crude Oil", "zh": "原油交易" },
         "navbar8": { "en": "Precious Metals", "zh": "贵金属交易" },
         "navbar9": { "en": "Contracts for Difference", "zh": "指数差价合约" },
-        "navbar10": { "en": "About" + companyConfig.companyNameEn, "zh": "关于" + companyConfig.companyNameZh },
+        "navbar10": { "en": "About " + companyConfig.companyNameEn, "zh": "关于" + companyConfig.companyNameZh },
         "navbar11": { "en": "About " + companyConfig.companyNameEn, "zh": "关于" + companyConfig.companyNameZh },
         "navbar12": { "en": "STP", "zh": "STP交易模式" },
         "navbar13": { "en": "", "zh": "" },
         "navbar14": { "en": "no-banner", "zh": "" },
         "navbar15": { "en": "style=display:none;", "zh": "style" },
-        "navbar16": { "en": "Download App", "zh": "下载APP" },
+        "navbar16": { "en": "App", "zh": "下载APP" },
 
         // 底部 footer
-        "foot1": { "en": "Trading Software", "zh": "交易工具" },
-        "foot2": { "en": "MT4 Download", "zh": "MT4 下载" },
-        "foot3": { "en": "MT4 Web Version", "zh": "MT4 网页版" },
-        "foot4": { "en": "Learning Center", "zh": "学习中心" },
+        "foot1": { "en": "Trading software", "zh": "交易工具" },
+        "foot2": { "en": "MT4 download", "zh": "MT4 下载" },
+        "foot3": { "en": "MT4 web version", "zh": "MT4 网页版" },
+        "foot4": { "en": "Learning center", "zh": "学习中心" },
         "foot5": { "en": "Basic knowledge", "zh": "基础知识" },
         "foot6": { "en": "Video", "zh": "学习视频" },
-        "foot7": { "en": "Conditions and Clauses", "zh": "条件和条款" },
+        "foot7": { "en": "Important information", "zh": "条件和条款" },
         "foot8": { "en": "Risk Disclosure Statement", "zh": "风险披露书" },
         "foot9": { "en": "Declaration by Client", "zh": "客户声明" },
         "foot10": { "en": "User Instructions", "zh": "用户交易须知" },
-        "foot11": { "en": "Contact Us", "zh": "联系我们" },
+        "foot11": { "en": "Contact us", "zh": "联系我们" },
         "foot12": { "en": "High Risk Warning: Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results.", "zh": "高风险投资警告：市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险，不适合所有投资者。增大杠杆意味着高风险与高收益并存。在您决定交易之前，必须确认投资目标、投资经验及风险承受能力，并且选择适合自己的投资方式。您需要知晓金融市场的保证金交易具有全部或者部分亏损的可能。" + companyConfig.companyNameZh + "交易平台为广大交易高手和普通投资者提供复制交易服务。网站发布的任何信息，包括实时交易提醒、投资文章及其他资源等均来自互联网。所有用户必须需仔细考量并权衡投资风险及安全性。交易高手的历史数据不代表未来操作能力，用户因此所产生的的任何风险需自己承担。" },
         "foot13": { "en": "col-xs-3", "zh": "col-xs-2" },
-        "foot14": { "en": "Support Documents", "zh": "帮助文档" },
-        "foot15": { "en": "Trade Fee", "zh": "交易费用" },
+        "foot14": { "en": "Support documents", "zh": "帮助文档" },
+        "foot15": { "en": "Trade fees", "zh": "交易费用" },
         "footlang": { "en": "English", "zh": "简体中文" },
         "footzh": { "en": "简体中文", "zh": "简体中文" },
 
@@ -371,7 +375,16 @@ module.exports = function () {
         "foot_35": { "zh": "TigerWit受巴哈马证券交易委员会（SCB）的授权和监管，监管号：SIA-F185。", "en": "TigerWit has obtained authoritative regulatory license from Financial Conduct Authority(FCA) and Securities Commission of The Bahamas(SCB), which authorises TigerWit to carry on a financial services business in British and Bahamas and other areas." },
         "foot_36": { "zh": "TigerWit澳大利亚子公司Tiger Financial Technology Pty Ltd (ACN 614 234 687)，是HLK Group Pty Ltd (ACN 161 284 500)的机构授权代表(CAR No. 001 247 008)，被授权在协议内提供个人和一般性建议以及管理委托账户。", "en": "Tiger Financial Technology Pty Ltd (ACN 614 234 687), Australian subsidiary of TgerWit Group, is a Corporate Authorised Representative (CAR No. 001 247 008) of HLK Group Pty Ltd (ACN 161 284 500) with AFSL No. 435746, and is authorized to give personal and general advice under the agreement, and manage discretionary accounts." },
         "foot_37": { "zh": "TigerWit受英国金融行为监管局（FCA）的授权和监管，授权编号为：679941。", "en": "TigerWit Limited (UK) and TigerWit Limited (Bahamas) are subsidiaries of TigerWit Holding Limited.TigerWit Limited (UK) is regulated by Financial Conduct Authority（FCA）, license number 679941. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas（SCB）, license number SIA-F185."},
-
+        //footer 页脚修改 － 2018.09.17
+        "foot_38": {"zh": "Risk Warning:", "en": "Risk Warning:"},
+        "foot_39": {"zh": "Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: https://uk.tigerwit.com", "en": "Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: "},
+        "foot_42": {"zh": "你要在线咨询", "en": "Which kind of consultation do you need?"},
+        "foot_43": {"zh": "普通咨询", "en": "Normal consultation"},
+        "foot_44": {"zh": "我是普通用户，咨询交易相关的问题", "en": "I'm a normal user,"},
+        "foot_44_2": {"zh": " ", "en": "asking questions about transactions"},
+        "foot_45": {"zh": "代理商咨询", "en": "Agent consultation"},
+        "foot_46": {"zh": "我是代理商或需要代理服务", "en": "I’m a agent or need to consult "},
+        "foot_47": {"zh": "咨询代理相关的问题", "en": "the proxy service related questions"},
         // 首页 home
         "home1": { "en": "Follow masters' move", "zh": "复制跟单" },
         "home2": { "en": "To be an investment master", "zh": "人人都是投资高手" },
@@ -453,7 +466,7 @@ module.exports = function () {
         "home64": { "en": "Markets", "zh": "交易产品" },
         "home65": { "en": "Sell", "zh": "卖出价" },
         "home66": { "en": "Buy", "zh": "买入价" },
-        "home67": { "en": "Above data is updated automatically in real time except on Saturdays and Sundays", "zh": "数据实时自动更新，周六日停盘无报价" },
+        "home67": { "en": "Prices are indicative. No quotations are updated over Saturdays and Sundays.", "zh": "数据实时自动更新，周六日停盘无报价" },
 
         // 产品介绍－外汇交易 forex
         //"forex1": {"en": "Foreign exchange transaction involves buying and/or selling a kind of foreign currency. In terms of the largest single product market in the world, trades valuing over USD 5 trillion are achieved on the current foreign exchange market. The foreign exchange and price is mainly influenced by international trade, economy and policies of countries and investment flow direction and the foreign exchange market is featured as transparent information, tremendous turnover and great fairness and transparency.", "zh": "外汇交易涉及买入一个外国货币和/或卖出另一个外国货币。全球最大的单一产品市场，当今外汇市场每天拥有超过5万亿美元的成交额，外汇市场和价格主要受国际间的交易，各国经济和政策以及投资流向的影响，外汇市场信息透明，流通量巨大，公平透明。"},
@@ -654,42 +667,43 @@ module.exports = function () {
         "about10": { "en": companyConfig.companyNameEn + "’s goal is to establish quality financial service companies in advanced and highly regulated jurisdictions.", "zh": companyConfig.companyNameZh + "致力于在全球受监管的区域设立金融服务公司以服务当地市场，目前已经在中国和澳大利亚设立办公室。" },
         "about11": { "en": "Tiger Financial Technology Pty Ltd (ACN 614 234 687), Australian subsidiary of TgerWit Group, is a Corporate Authorised Representative (CAR No. 001 247 008) of HLK Group Pty Ltd (ACN 161 284 500) with AFSL No. 435746, and is authorized to give personal and general advice under the agreement, and manage discretionary accounts.", "zh": companyConfig.companyNameZh + "澳大利亚子公司Tiger Financial Technology Pty Ltd (ACN 614 234 687)，是HLK Group Pty Ltd (ACN 161 284 500)的机构授权代表(CAR No. 001 247 008)，被授权在协议内提供个人和一般性建议以及管理委托账户。" },
 
-        "about_1": { "zh": "为何选择TigerWit", "en": "What We Do" },
+        "about_1": { "zh": "为何选择TigerWit", "en": "What we do" },
         "about_2": { "zh": "创新的交易系统", "en": "Trading Platforms" },
-        "about_3": { "zh": "TigerWit为客户提供独一无二的交易体验，当用户的交易订单通过专有的在线和移动交易系统交付到市场，与其他经纪商相比，TigerWit更具优势。", "en": "TigerWit provides its clients with an extraordinary trading experience delivered through its proprietary online and mobile trading platforms.  This experience is unique and gives TigerWit an advantage in comparison to other brokers." },
-        "about_4": { "zh": "TigerWit通过自主研发的移动端交易系统，极大地简化了客户的操作，同时最大限度地保留用户使用习惯，从而使TigerWit将投资和开发全部集中在一个创新的交易环境中，避免为多个受众开发多个接口。", "en": "TigerWit’s Apps simplify and streamline the client journey, and minimise variability of user experience. This enables TigerWit to focus investment and development wholly on innovation within one dealing environment rather than having to maintain and develop multiple interfaces for multiple audiences." },
+        "about_3": { "zh": "TigerWit为客户提供独一无二的交易体验，当用户的交易订单通过专有的在线和移动交易系统交付到市场，与其他经纪商相比，TigerWit更具优势。", "en": "TigerWit provides its clients with an extraordinary trading experience delivered through its proprietary online and mobile trading platforms. This experience is unique and gives TigerWit an advantage in comparison to other brokers." },
+        "about_4": { "zh": "TigerWit通过自主研发的移动端交易系统，极大地简化了客户的操作，同时最大限度地保留用户使用习惯，从而使TigerWit将投资和开发全部集中在一个创新的交易环境中，避免为多个受众开发多个接口。", "en": "TigerWit’s Apps simplify and streamline the client journey and minimise variability of user experience. This enables TigerWit to focus investment and development wholly on innovation within one dealing environment rather than having to maintain and develop multiple interfaces for multiple audiences." },
         "about_5": { "zh": "TigerWit金融服务", "en": "Financial Services" },
-        "about_6": { "zh": "TigerWit提供自主交易账户，一般咨询和交易执行服务通过在线交易平台与流动性提供商提供。TigerWit的特定授权金融服务业务活动包括：", "en": "TigerWit offers self-directed trading accounts, general advisory and trade execution services made through the online trading platform with liquidity providers. TigerWit’s specific authorized financial services business activities include:" },
-        "about_7": { "zh": "1.作为代理人或委托人处理外汇、差价合约、指数、大宗商品和衍生品；", "en": "Dealing as agent or principal, in Forex, CFDs, Indices, Commodities and Derivatives;" },
-        "about_8": { "zh": "2.安排包含外汇、差价合约、指数、大宗商品和衍生品在内的证券交易；", "en": "Arranging deals in securities including Forex, CFDs, Indices, Commodities and Derivatives;" },
+        "about_6": { "zh": "TigerWit提供自主交易账户，一般咨询和交易执行服务通过在线交易平台与流动性提供商提供。TigerWit的特定授权金融服务业务活动包括：", "en": "TigerWit offers self-directed trading accounts, general advisory and trade execution services made through the online trading platform via liquidity providers. TigerWit’s specific authorised financial services business activities include: " },
+        "about_7": { "zh": "1.作为代理人或委托人处理外汇、差价合约、指数、大宗商品和衍生品；", "en": "Dealing as agent or principal, in Forex, CFDs, indices, commodities and derivatives;" },
+        "about_8": { "zh": "2.安排包含外汇、差价合约、指数、大宗商品和衍生品在内的证券交易；", "en": "Arranging deals in securities including Forex, CFDs, indices, commodities and derivatives;" },
         "about_9": { "zh": "3.酌情管理证券；", "en": "Managing securities on a discretionary basis;" },
         "about_10": { "zh": "4.证券咨询。", "en": "Advising on securities." },
-        "about_11": { "zh": "外汇、衍生品和差价合约交易的一般建议", "en": "General Advice in Forex, Derivatives and Contracts for Difference (CFDs)" },
-        "about_12": { "zh": "TigerWit在非个性化的基础上为批发和零售客户提供一般建议。活动包括一般产品信息，研讨会/网络研讨会，通讯，一般知识和教育。", "en": "TigerWit provides general advice to wholesale or retail clients on a non-personalised basis.  Activities include general product information, seminars, webinars, newsletters, general knowledge and education." },
-        "about_13": { "zh": "外汇、衍生品和差价合约的安排和交易", "en": "Arranging and Dealing Forex, Derivatives and Contracts for Difference (CFDs)" },
+        "about_11": { "zh": "外汇、衍生品和差价合约交易的一般建议", "en": "General advice in Forex, Derivatives and Contracts for Difference (CFDs)" },
+        "about_12": { "zh": "TigerWit在非个性化的基础上为批发和零售客户提供一般建议。活动包括一般产品信息，研讨会/网络研讨会，通讯，一般知识和教育。", "en": "TigerWit provides general advice to wholesale or retail clients on a non-personalised basis. Activities include general product information, seminars, webinars, newsletters, general knowledge and education." },
+        "about_13": { "zh": "外汇、衍生品和差价合约的安排和交易", "en": "Arranging and dealing Forex, Derivatives and Contracts for Difference (CFDs)" },
         "about_14": { "zh": "TigerWit的在线交易平台通过场外交易代表客户执行交易。差价合约是使用交易平台提供买入和卖出价格的基础资产的金融工具。差价合约以主要货币，指数，贵金属和商品交易。", "en": "TigerWit’s online trading platform executes a client’s trade on behalf of the client through an over-the-counter market transaction. CFDs are financial instruments using underlying assets with the buy and sell prices offered through the trading platform. CFDs are transacted in major currencies, Indices, precious metals and commodities." },
-        "about_15": { "zh": "当市场开放时，每天24小时提供交易，并提供客户支持，语言，电话，聊天和电子邮件。", "en": "Trading is offered 24 hours a day when markets are open and customer support is available." },
-        "about_16": { "zh": "客户在线登录", "en": "Client On-Boarding" },
-        "about_17": { "zh": "客户在线使用过程中收集客户的姓名和身份进行KYC和MAL检查。将手机有关客户的信息，以确保产品符合客户的经验和风险特征。该过程可通过网站https://www.tigerwit.com查看。当客户被接受时，系统将在客户端建立账户，并为用户提供登录凭证。", "en": "Clients are on-boarded using an on-line process that gathers the client’s name and identification in order to perform KYC and AML checks. Information about the client will be collected to ensure the product suits the client’s level of experience and risk profile. The process is available for viewing through the website https://www.tigerwit.com. When the client is accepted, the client’s account is established and login credentials are provided to the client." },
+        "about_15": { "zh": "当市场开放时，每天24小时提供交易，并提供客户支持，语言，电话，聊天和电子邮件。", "en": "Trading is offered 24 hours a day when markets are open." },
+        "about_16": { "zh": "客户在线登录", "en": "Client on-boarding" },
+        "about_17": { "zh": "客户在线使用过程中收集客户的姓名和身份进行KYC和MAL检查。将手机有关客户的信息，以确保产品符合客户的经验和风险特征。该过程可通过网站https://www.tigerwit.com查看。当客户被接受时，系统将在客户端建立账户，并为用户提供登录凭证。", "en": "Clients are on-boarded using an on-line process that gathers the client’s name and identification in order to perform KYC and AML checks. Information about the client will be collected to ensure the product suits the client’s level of experience and risk profile. The process is available for viewing through the website https://global.tigerwit.com/" },
+        "about_17_1": {"zh": " ", "en": "When the client is accepted, the client’s account is established and login credentials are provided to the client."},
         "about_18": { "zh": "客户资金安全", "en": "Safety of Client Funds" },
         "about_19": { "zh": "当客户向TigerWit存入资金时，这些资金与TigerWit的资金完全隔离，并存放在独立的银行账户。保护客户的资金不被用于任何其他目的，并确保客户发起提现请求时可以快速无缝地提款。", "en": "When clients deposit funds with TigerWit, those funds are segregated from TigerWit’s operating accounts. Client Segregated Accounts safeguard client funds and ensure quick and seamless withdrawals when requested by a client." },
-        "about_20": { "zh": "更多服务", "en": "Why We Do It" },
-        "about_21": { "zh": "由于交易者有机会获利，自主交易者欣赏投机者对基础资产价格的变动。开户时，客户对账户内的所有资产保留合法和实益的所有权，并自行结算账户。TigerWit的交易平台允许客户访问与传统投资相比相关性较低的工具。", "en": "Self-directed traders appreciate speculating on movements in the price of underlying assets because traders have an opportunity to profit. When opening an account, the client retains legal and beneficial ownership of all assets within the account, and trades their account on their own discretionary basis. TigerWit’s trading platforms allows the client to access instruments with low correlation in comparison with traditional investing." },
+        "about_20": { "zh": "更多服务", "en": "Why we do it" },
+        "about_21": { "zh": "由于交易者有机会获利，自主交易者欣赏投机者对基础资产价格的变动。开户时，客户对账户内的所有资产保留合法和实益的所有权，并自行结算账户。TigerWit的交易平台允许客户访问与传统投资相比相关性较低的工具。", "en": "Self-directed traders appreciate speculating on movements in the price of underlying assets. When opening an account, the client retains legal and beneficial ownership of all assets within the account and trades their account on their own discretionary basis. TigerWit’s trading platforms allows the client to access instruments with low correlation in comparison with traditional investing." },
         "about_22": { "zh": "TigerWit提供的主要功能包括：", "en": "Key features of TigerWit’s offering includes:" },
         "about_23": { "zh": "波动性风险", "en": "Exposure to volatility" },
         "about_24": { "zh": "在当今的市场投资波动性是很重要的。", "en": "Investments that can navigate volatility are important in today’s markets." },
-        "about_25": { "zh": "金融工具", "en": "Exposure to financial instruments " },
+        "about_25": { "zh": "金融工具", "en": "Exposure to financial instruments" },
         "about_26": { "zh": "货币，商品和指数享有高流动性，低成本，能在在上涨和下跌的市场中获利。", "en": "Currencies, commodities and indices enjoy high liquidity, low cost and the ability to achieve results in both rising and falling markets." },
         "about_27": { "zh": "杠杆作用", "en": "Leverage" },
         "about_28": { "zh": "客户可采取与收益递增的目标杠杆头寸，但杠杆作用也可能导致损失增加。", "en": "The client may take leveraged positions with the aim of increasing returns, but leverage can also lead to increased losses." },
         "about_29": { "zh": "多样化的方法", "en": "Diversified approach" },
         "about_30": { "zh": "广泛的交易方式和策略。", "en": "A wide range of trading methods and strategies." },
-        "about_31": { "zh": "一般市场风险因素的相关性较低", "en": "Low correlation to general market risk factors " },
+        "about_31": { "zh": "一般市场风险因素的相关性较低", "en": "Low correlation to general market risk factors" },
         "about_32": { "zh": "与传统资产类别（如股票和债券）相比绝对回报。", "en": "Absolute returns compared to traditional asset classes such as equities and bonds." },
         "about_33": { "zh": "投资主体多元化", "en": "Investment diversification" },
         "about_34": { "zh": "上涨和下跌市场均有正回报潜力。", "en": "Potential for positive returns in both rising and falling markets." },
         "about_35": { "zh": "透明灵活", "en": "Transparent and flexible" },
-        "about_36": { "zh": "客户可以完全访问和保留对其资金的控制权。", "en": "lients have full access to and retain control of their funds." },
+        "about_36": { "zh": "客户可以完全访问和保留对其资金的控制权。", "en": "Clients have full access to and retain control of their funds." },
 
 
         // 关于老虎－stp交易模式 stp
@@ -1019,7 +1033,7 @@ module.exports = function () {
         "traderIndex14": { "en": "Feature", "zh": "交易特色" },
         "traderIndex15": { "en": "Strategy", "zh": "交易策略" },
         "traderIndex16": { "en": "More Info", "zh": "更多介绍" },
-        "traderIndex17": { "en": "Stats", "zh": "数据统计" },
+        "traderIndex17": { "en": "Statistics", "zh": "数据统计" },
         "traderIndex18": { "en": "Open trades", "zh": "当前交易" },
         "traderIndex19": { "en": "Trade history", "zh": "历史交易" },
 
@@ -2143,6 +2157,8 @@ module.exports = function () {
     var mThird = require('./mutilang/third')
     // 注册协议 agment_mdl.html
     var agment = replaceTiger(require('./mutilang/agment'))
+    // 首页新UI
+    var home = replaceTiger(require('./mutilang/home'))
     return _.merge(
         data,
         faq,
@@ -2151,6 +2167,7 @@ module.exports = function () {
         mInvite,
         mRegister,
         mThird,
-        agment
+        agment,
+        home
     );
 }; 
