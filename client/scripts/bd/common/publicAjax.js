@@ -72,7 +72,7 @@
         startLottery: origin_app + '/activity/scratch', //get
         shareLottery: origin_app + '/activity/share', //get
 
-        //第三方充值体现相关页面
+        //第三方充值提现相关页面
         getThirdDepositPlatform: origin + '/payment/deposit/platform', //get
         getThirdTradeAccount: origin + '/trade_account/list', //get
         getThirdWalletBalance: origin + '/wallet/valid_balance', //get
@@ -83,7 +83,8 @@
         getThirdEvidenceLst: origin + '/payment/evidence_list', //get
         uploadThirdEvidence: origin + '/payment/evidence', //post
         cancelThirdEvidence: origin + '/payment/evidence_cancel', //post
-        getThirdWithdrawPlatform: origin + '/payment/withdraw_list' //get
+        getThirdWithdrawPlatform: origin + '/payment/withdraw_list', //get
+        getThirdBankLst: origin + '/user/bank_card/lists', //get
     };
 
     w.publicRequest = publicRequest;

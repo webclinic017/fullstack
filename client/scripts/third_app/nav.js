@@ -62,9 +62,9 @@ $(document).on("tap", "#third_app_bottom_template .account_item", function () {
     $(eleWithdraw.payAccountAmout).addClass('active');
     $(eleWithdraw.payAccountAmout).find(".name").html(aName);
     $(eleWithdraw.payAccountAmout).find(".num").html($(this).attr("data-amount"));
-    // setDepositBtnStatus();
+    canWithdrawAmount = Number($(this).attr("data-amount")) || 0;
     //为钱包充值时，支付方式不能为钱包
-    // if (cAccount === 'wallet' && depositType === 'wallet') changeDepositType();
+    addWithdrawAccount();
   }
   return false;
 });

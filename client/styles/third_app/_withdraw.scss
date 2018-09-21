@@ -2,5 +2,49 @@
   @include e(account_lst) {
     float: left;
     width: 100%;
+    li {
+      padding: 5px 0px;
+      span {
+        float: left;
+      }
+      span.icon {
+        margin-right: 6px;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #999;
+        border-radius: 50%;
+        position: relative;
+        background-color: transparent;
+      }
+      &.un_active {
+        display: none;
+      }
+      &.active{
+        span.icon {
+          border-color: #ffbf44;
+          &:before {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ffbf44;
+            top: 2px;
+            left: 2px;
+          }
+        }
+      }
+      &.s-select {
+        padding-left: 20px;
+        p {
+          padding: 4px 8px;
+          display: inline-block;
+          background: linear-gradient(to right, #49aafc, #f76769);
+          border-radius: 4px;
+          color: #fff;
+          font-size: 12px;
+        }
+      }
+    }
   }
 }

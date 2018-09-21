@@ -3,6 +3,7 @@
     height: 65px;
     border-bottom: 1px solid #eee;
     padding: 10px 0px;
+    position: relative;
     .item-icon {
       float: left;
       width: 20%;
@@ -35,7 +36,16 @@
       .desc {
         font-size: 12px;
         color: #ccc;
+        &.col {
+          color: #666;
+        }
       }
+    }
+    .del {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fe3b2f;
     }
     &.active {
       .item-icon {

@@ -124,3 +124,23 @@
     </div>
   </div>
 </script>
+<script id="template_withdraw_bank_list" type="text/html">
+  <h3 class="title">
+    <span>银行账户</span>
+    <span class="cancel third_app_template_cancel">取消</span>
+  </h3>
+  <ul class="content">
+    <$ for(var i=0;i<data.lst.length;i++) {$>
+      <li class="clearfix deposit_template_item bank_item <$= data.lst[i].id == data.id ? 'active' : ''$>" data-id="<$= data.lst[i].id$>" data-name="<$= data.lst[i].bank_name || ''$>" data-no="<$= data.lst[i].card_no$>">
+        <div class="item-icon"><span></span></div>
+        <div class="item-info">
+          <p class="name">
+            <$= data.lst[i].card_no$>
+          </p>
+          <p class="desc col"><$= data.lst[i].bank_name || ''$></p>
+        </div>
+        <span class="del third_app_template_del_bank" data-id="<$= data.lst[i].id$>">删除</span>
+      </li>
+    <$}$>
+  </ul>
+</script>

@@ -18,16 +18,18 @@
   </div>
   <div class="clearfix mg-bt-15">
     <div class="third_app_common__item">提现到</div>
-    <ul class="third_app_withdraw__account_lst" id="third_app_withdraw_account_list">
-      
-    </ul>
+    <ul class="third_app_withdraw__account_lst" id="third_app_withdraw_account_list"></ul>
+  </div>
+  <div class="btn-wrapper third_app_common__btn mg-tp-25">
+    <button class="btn btn-primary-gradient disabled" id="third_app_withdraw_btn">确认提现</button>
   </div>
 </div>
 
 <script id="template_withdraw_account_type" type="text/html">
 <$ for(var i=0;i<data.lst.length;i++) {$>
-  <li class="">
-    <$= data.lst[i].name$>
+  <li class="clearfix <$= data.isToWallet && data.lst[i].key === 'wallet' ? 'un_active' : ''$>" data-type="<$= data.lst[i].key$>">
+    <span class="icon"></span>
+    <span><$= data.lst[i].name$></span>
   </li>
 <$}$>
 </script>
