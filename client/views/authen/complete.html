@@ -138,8 +138,8 @@
                                 <ul style="width: 150%;" ng-if="!personal.phone" class="select__dropdown" twform-select data-bind-model="completeInfo.areaCode">
                                     
                                     <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderArea"><i class="fa fa-search"></i></li>
-                                    <li ng-repeat="areaCode in areaCodes | filter : placeholderArea" ng-class="{'selected': areaCode.value === completeInfo.areaCode.value}">
-                                        <span data-value="{{ areaCode.value }}">{{ areaCode.value }}({{ areaCode.name }})</span>
+                                    <li ng-repeat="areaCode in areaCodes | filter : placeholderArea" ng-class="{'selected': areaCode.value == completeInfo.areaCode.value}">
+                                        <span data-value="{{ areaCode.value }}" data-disabled='{"disabled": {{areaCode.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}' ng-class="{'font-light': areaCode.disabled}">{{ areaCode.value }}({{ areaCode.name }})</span>
                                     </li>
                                 </ul>
                             </div>

@@ -37,7 +37,12 @@
                 });
                 select.on('click', selector.dropdown, function (e) {
                     var target = $(e.target);
-                    console.log(scope)
+                    var disabled = angular.fromJson(target.attr('data-disabled'));
+                    // console.log(target.attr('data-disabled'))
+                    if(disabled && disabled.disabled) {
+                        layer.msg(disabled.msg)
+                        return
+                    }
                     if (target.is('span[data-value]')) {
                         scope.bindModel.key = target.text();
                         scope.bindModel.value = target.attr('data-value');
