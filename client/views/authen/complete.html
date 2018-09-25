@@ -216,7 +216,7 @@
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row" ng-if="completeInfo.country.value == 'CN'">
                 <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglish()}">
                     <label>{{lang.text('tigerWitID.settings.residentialAddress')}}</label>
                 </div>        
@@ -286,7 +286,7 @@
 
             <div class="row">
                 <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglish()}">
-                    <label>&nbsp;</label>
+                    <label>{{completeInfo.country.value == 'CN' ? '&nbsp;' : lang.text('tigerWitID.settings.residentialAddress')}}</label>
                 </div>
                 <div class="col-xs-8">
                     <div class="form-control-wrapper">

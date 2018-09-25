@@ -391,14 +391,16 @@
         $scope.selectRegion = selectRegion;
         $scope.address = {};
 
-        account.getWorlds(($scope.lang.isEnglish() ? 'en' : 'cn')).then(function(data){
-            angular.forEach(data.data, function(item, index){
-                $scope.areaCodes.push({
-                    key: item.name,
-                    value: '+' + item.phone_code,
-                    name: item.name
+        $scope.$watch('worldList', function(n, o){
+            if(n.length > 0) {
+                angular.forEach(n, function(item, index){
+                    $scope.areaCodes.push({
+                        key: item.name,
+                        value: '+' + item.phone_code,
+                        name: item.name
+                    })
                 })
-            })
+            }
         })
 
         function initLocation() {
@@ -426,7 +428,7 @@
             });
 
             $scope.$on('locationInfoReady', function () {
-                getRegions('country', 'countries');
+                // getRegions('country', 'countries');
 
                 if ($scope.completeInfo.country.value == 'CN') {
                     getRegions('province', 'provinces', $scope.completeInfo.country.value);
@@ -539,8 +541,10 @@
                 $scope.showErr('emailCode');
             }
             $scope.showErr('username');
-            $scope.showErr('province');
-            $scope.showErr('city');
+            if($scope.completeInfo.country.value == 'CN'){
+                $scope.showErr('province');
+                $scope.showErr('city');
+            }
             $scope.showErr('address');
 
             console.log('$scope.completeForm.$invalid', $scope.completeForm.$invalid);
@@ -681,61 +685,24 @@
                 key: undefined,
                 value: undefined
             },
-            idNum: '',
-            year18: false,
+            id_num: '',
+            year18: '',
             gender: {
                 key: '',
                 value: ''
             },
             birthday: ''
         }
-
-        $scope.frontErr = {
-            idFront: {
-                show: false
-            },
-            idBack: {
-                show: false
-            },
-            realname: {
-                show: false,
-                reg: validator.regType.realname.reg,
-                tip: validator.regType.realname.tip,
-            },
-            id_num: {
-                show: false,
-                reg: validator.regType.idNumber.reg,
-                tip: validator.regType.idNumber.tip
-            },
-            id_type: {
-                show: false
-            },
-            gender: {
-                show: false
-            },
-            birthday: {
-                show: false
-            }
-        };
-
-        $scope.backErr = {
-            system: {
-                show: false,
-                status: 0
-            }
-        };
-
         $scope.genders = [
-            {
-                key: $scope.lang.text("tigerWitID.male"),
-                value: '1'
-            },
             {
                 key: $scope.lang.text("tigerWitID.female"),
                 value: '0'
+            },
+            {
+                key: $scope.lang.text("tigerWitID.male"),
+                value: '1'
             }
         ]
-
         $scope.idType = [
             {
                 key: $scope.lang.text("tigerWitID.settings.mainlandResidentIdentityCard"),
@@ -774,16 +741,64 @@
                 isGlobal: true
             }
         ]
+        $scope.$watch('personal.updatePapers', function (newVal, oldVal) {
+            if(JSON.stringify(newVal) != "{}" && newVal.hint == 1){
+                $scope.realnameInfo.realname = newVal.real_name;
+                $scope.realnameInfo.id_type.key = $scope.idType[newVal.idcard_type].key;
+                $scope.realnameInfo.id_type.value = $scope.idType[newVal.idcard_type].value;
+                $scope.realnameInfo.id_num = newVal.id_no;
+                $scope.realnameInfo.gender.key = $scope.genders[newVal.gender].key;
+                $scope.realnameInfo.gender.value = $scope.genders[newVal.gender].value;
+                var date = newVal.birth;
+                $scope.realnameInfo.birthday = date.substr(0,4)+'-'+date.substr(4,2)+'-'+date.substr(6,2);
+            }
+        }, true)
+        $scope.frontErr = {
+            idFront: {
+                show: false
+            },
+            idBack: {
+                show: false
+            },
+            realname: {
+                show: false,
+                reg: validator.regType.realname.reg,
+                tip: validator.regType.realname.tip,
+            },
+            id_num: {
+                show: false,
+                reg: validator.regType.idNumber.reg,
+                tip: validator.regType.idNumber.tip
+            },
+            id_type: {
+                show: false
+            },
+            gender: {
+                show: false
+            },
+            birthday: {
+                show: false
+            }
+        };
+
+        $scope.backErr = {
+            system: {
+                show: false,
+                status: 0
+            }
+        };
+
 
         $scope.exsit = {
             id_num: {
-                show: false
+                show: ''
             }
         }
 
         $scope.showErr = showErr;
         $scope.hideErr = hideErr;
         $scope.submitForm = submitForm;
+        $scope.updatePaper = updatePaper;
         $scope.readyToUpload = {};
         $scope.uploadFinish = {};
         $scope.clickable = true;
@@ -822,17 +837,27 @@
                     $scope.uploadFinish.hasOwnProperty('back') &&
                     ($scope.backErr.system.status != 3)
                 ) {
-                    // 向authenController发送信息
-                    $scope.$emit('goState', data.data);
+                    if($scope.toState.name == 'space.update'){
+                        $scope.personal.updatePapers.profile_check = 2;
+                        $scope.personal.verify_status = 5;
+                    }else{
+                        // 向authenController发送信息
+                        $scope.$emit('goState', data.data);
+                    }
                     // 神策数据统计
                     sa.track('btn_verify');
                 }
             }else{
                 if ($scope.uploadFinish.hasOwnProperty('front') &&
                     ($scope.backErr.system.status != 3)
-                ) {
-                    // 向authenController发送信息
-                    $scope.$emit('goState', data.data);
+                ) { 
+                    if($scope.toState.name == 'space.update'){
+                        $scope.personal.updatePapers.profile_check = 2;
+                        $scope.personal.verify_status = 5;
+                    }else{
+                        // 向authenController发送信息
+                        $scope.$emit('goState', data.data);
+                    }
                     // 神策数据统计
                     sa.track('btn_verify');
                 }
@@ -867,6 +892,7 @@
 
             if (!$scope.readyToUpload.hasOwnProperty('front')) {
                 showErr('idFront');
+                return
             }
 
             if ($scope.realnameInfo.id_type.value == 0 && !$scope.readyToUpload.hasOwnProperty('back')) {
@@ -882,6 +908,7 @@
                 layer.msg($scope.lang.text("tigerWitID.settings.tip13"))
                 return
             }
+            $scope.clickable = false;
 
             // 提交身份信息
             account.updataId({
@@ -899,11 +926,27 @@
                     sa.track('New_Realname');
                     sa.track('New_uploadcard');
                     /*上传图片*/
-                    angular.forEach($scope.readyToUpload, function (data, index, array) {
-                        data.submit();
-                    });
+                    paperUpdate();
                 }
             })
+        }
+        function updatePaper(){
+            if (!$scope.readyToUpload.hasOwnProperty('front')) {
+                showErr('idFront');
+                return
+            }
+
+            if ($scope.realnameInfo.id_type.value == 0 && !$scope.readyToUpload.hasOwnProperty('back')) {
+                showErr('idBack');
+                return
+            }
+            $scope.clickable = false;
+            paperUpdate();
+        }
+        function paperUpdate(){
+            angular.forEach($scope.readyToUpload, function (data, index, array) {
+                data.submit();
+            });
         }
 
         $scope.checkExsit = function (type) {

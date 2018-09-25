@@ -281,29 +281,7 @@
                         });
 
                         account.hasChecked = false;
-                        var url = {
-                            cn: 'cn.tigerwit.com,cndemo.tigerwit.com',
-                            global: 'global.tigerwit.com,globaldemo.tigerwit.com',
-                            local: 'w.tigerwit.com,w.dev.tigerwit.com'
-                        };
-                        
-                        if (url.local.indexOf(location.host) != -1 || (data.data.area_id == 1 && url.cn.indexOf(location.host) != -1) || (data.data.area_id == 2 && url.global.indexOf(location.host) != -1)) {
-                            $state.go('space.center.index', {reload: true});
-                        } else {
-                            if (data.data.area_id == 2) {
-                                if (location.host.indexOf('demo') != -1) {
-                                    location.href = 'https://globaldemo.tigerwit.com/space/#/center'
-                                } else {
-                                    location.href = 'https://global.tigerwit.com/space/#/center'
-                                }
-                            } else {
-                                if (location.host.indexOf('demo') != -1) {
-                                    location.href = 'https://cndemo.tigerwit.com/space/#/center'
-                                } else {
-                                    location.href = 'https://cn.tigerwit.com/space/#/center'
-                                }
-                            }
-                        }
+                        lang.globalOrCn($state, data.data.area_id);
 
                         $scope.$emit('relogin_info');
                     }, 150);

@@ -60,7 +60,8 @@
             checkEmailCode: checkEmailCode,
             checkCode: checkCode,
             checkAgent: checkAgent,
-            getFunctionSwitch: getFunctionSwitch
+            getFunctionSwitch: getFunctionSwitch,
+            getIdcard: getIdcard,
         };
         var resolveValue;
         return service;
@@ -627,6 +628,10 @@
         //判断是否是代理商
         function checkAgent(){
             return publicHttp.dealPublicRequest(o.checkAgentApi, 'GET');
+        }
+        //获取身份认证信息
+        function getIdcard(){
+            return publicHttp.dealPublicRequest(o.getIdcardApi, 'GET');
         }
     }
 })();
