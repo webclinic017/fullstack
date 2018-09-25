@@ -26,6 +26,7 @@
                 timer: undefined
             }
         };
+        $scope.area_id = ''; // 1为国内，2为国际区
         // test
         // openWebAgmentModal(100403, function(resolve, e){
         //     // this 当前点击按钮
@@ -181,7 +182,7 @@
                 pid: $state.params.pid,
                 unit: $state.params.unit,
                 key: $state.params.key,
-                country_code: $scope.account.country.value,
+                world_code: $scope.account.country.value,
             };
             if($scope.registerStep3 == '2'){
                 // 邮箱注册
@@ -210,6 +211,7 @@
                 if (data.is_succ) {
                     // 新用户
                     $scope.registerStep1 = 2;
+                    $scope.area_id = data.data.area_id;
                     $scope.$emit('relogin_info', 'is_register');
                     // 神策统计 - 注册
                     $timeout(function () {
@@ -268,7 +270,7 @@
                 if (data.is_succ) {
                     $timeout(function () {
                         $scope.$emit('global.openDredgeMdl', {position: 'register'});
-                        $state.go('space.center.index', {reload: true});
+                        lang.globalOrCn($state, $scope.area_id);
                     }, 100);
                     
                 } else {
@@ -281,6 +283,7 @@
                 sa.track('skip_register');
             }, 150);
             $scope.$emit('global.openDredgeMdl', {position: 'register'});
+            lang.globalOrCn($state, $scope.area_id);
         }
 
         // 获取验证码倒计时
