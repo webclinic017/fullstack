@@ -85,6 +85,13 @@
         cancelThirdEvidence: origin + '/payment/evidence_cancel', //post
         getThirdWithdrawPlatform: origin + '/payment/withdraw_list', //get
         getThirdBankLst: origin + '/user/bank_card/lists', //get
+        delThirdBank: origin + '/user/bank_card/destroy', //post
+        getThirdBankNames: origin + '/bank_names', //get
+        getThirdProvinces: origin + '/region/provinces', //get
+        getThirdCities: origin + '/region/cities', //get
+        uploadThirdBankInfo: origin + '/user/bank_card', //put
+        checkThirdWithdrawLimit: origin + '/payment/withdraw/limits', //get
+        withdrawThird: origin + '/payment/withdraw' //post
     };
 
     w.publicRequest = publicRequest;

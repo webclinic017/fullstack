@@ -92,35 +92,43 @@
     </div>
   </div>
 </script>
-<script id="template_deposit_confirm" type="text/html">
+<script id="template_asset_confirm" type="text/html">
   <h3 class="title text-center">
     <span><$= data.title || '提示'$></span>
     <span class="cancel third_app_template_cancel">取消</span>
   </h3>
   <div class="content confirm_content">
-    <h3 class="deposit_confirm_amount"><$= data.currencySymbol$><$= data.amountTotal || '0.00'$></h3>
-    <p class="deposit_confirm_item clearfix">
+    <h3 class="common_confirm_amount"><code><$= data.currencySymbol$></code><$= data.amountTotal || '0.00'$></h3>
+    <p class="common_confirm_rate">1美元 = <$= data.rate$><$= data.currencyName$></p>
+    <p class="common_confirm_item clearfix">
       <span class="tip">充值金额</span>
-      <span class="num">$<$= data.amountDollar || '0.00'$></span>
+      <span class="num"><code>$</code><$= data.amountDollar || '0.00'$></span>
     </p>
-    <p class="deposit_confirm_item clearfix">
+    <p class="common_confirm_item clearfix">
       <span class="tip">折合<$= data.currencyName$>约</span>
-      <span class="num"><$= data.currencySymbol$><$= data.amountCur || '0.00'$></span>
+      <span class="num"><code><$= data.currencySymbol$></code><$= data.amountCur || '0.00'$></span>
     </p>
-    <p class="deposit_confirm_item clearfix">
-      <span class="tip">手续费</span>
-      <span class="num"><$= data.currencySymbol$><$= data.isFee ? data.amountFee : '0.00'$></span>
-    </p>
-    <$if (!data.isFee) {$>
-      <p class="clearfix">
-        <span class="deposit_confirm_fee"><$= data.currencySymbol$><$= data.amountFee || '0.00'$></span>
+    <$if (data.type === 'deposit') {$>
+      <p class="common_confirm_item clearfix">
+        <span class="tip">手续费</span>
+        <span class="num"><code><$= data.currencySymbol$></code><$= data.isFee ? data.amountFee : '0.00'$></span>
       </p>
     <$}$>
-    <p class="deposit_confirm_desc">
+    <$if (data.type === 'deposit' && !data.isFee) {$>
+      <p class="clearfix">
+        <span class="common_confirm_fee"><code><$= data.currencySymbol$></code><$= data.amountFee || '0.00'$></span>
+      </p>
+    <$}$>
+    <p class="common_confirm_desc">
       <$= data.desc || ''$>
     </p>
-    <div class="deposit_confirm_btn_wrapper">
-      <button class="btn btn-primary-gradient" id="deposit_submit_btn">确认</button>
+    <div class="common_confirm_btn_wrapper">
+      <$if (data.type === 'deposit') {$>
+        <button class="btn btn-primary-gradient" id="deposit_submit_btn">确认</button>
+      <$}$>
+      <$if (data.type === 'withdraw') {$>
+        <button class="btn btn-primary-gradient" id="withdraw_submit_btn">确认</button>
+      <$}$>
     </div>
   </div>
 </script>
@@ -129,7 +137,7 @@
     <span>银行账户</span>
     <span class="cancel third_app_template_cancel">取消</span>
   </h3>
-  <ul class="content">
+  <ul class="content bank_content">
     <$ for(var i=0;i<data.lst.length;i++) {$>
       <li class="clearfix deposit_template_item bank_item <$= data.lst[i].id == data.id ? 'active' : ''$>" data-id="<$= data.lst[i].id$>" data-name="<$= data.lst[i].bank_name || ''$>" data-no="<$= data.lst[i].card_no$>">
         <div class="item-icon"><span></span></div>
@@ -142,5 +150,11 @@
         <span class="del third_app_template_del_bank" data-id="<$= data.lst[i].id$>">删除</span>
       </li>
     <$}$>
+    <$ if (!data.lst.length) {$>
+      <li class="text-center">暂未添加银行卡</li>
+    <$}$>
   </ul>
+  <div class="btn-wrapper third_app_template_btn">
+    <button class="btn btn-primary-gradient" id="third_app_add_bank_card">添加银行卡</button>
+  </div>
 </script>

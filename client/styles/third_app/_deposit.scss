@@ -71,39 +71,6 @@
       display: none;
     }
   }
-  .deposit_confirm_amount {
-    text-align: center;
-    font-size: 26px;
-  }
-  .deposit_confirm_item {
-    padding: 12px 0px;
-    border-bottom: 1px solid #eee;
-    line-height: 20px;
-    .tip {
-      float: left;
-    }
-    .num {
-      float: right;
-      font-size: 16px;
-    }
-  }
-  .deposit_confirm_fee {
-    float: right;
-    color: #f23244;
-    padding: 10px 0px;
-    font-size: 16px;
-    text-decoration: line-through;
-  }
-  .deposit_confirm_desc {
-    padding: 10px 0px;
-    color: #999;
-  }
-  .deposit_confirm_btn_wrapper {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-  }
 }
 @include b(third_app_deposit) {
   @include e(bank_info) {

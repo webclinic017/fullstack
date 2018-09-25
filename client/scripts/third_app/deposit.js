@@ -132,6 +132,8 @@ function computeAmount () {
   var amountFee = (amountCur*(selectKeyFromType('poundage').replace(/%/,'')*0.01)).toFixed(2);
   var depositTemplate = {
     data: {
+      type: 'deposit',
+      rate: deoisitCurrency.rate_in,
       currencySymbol: deoisitCurrency.currency_symbol,
       currencyName: deoisitCurrency.currency_name,
       isFee: selectKeyFromType('poundage_status'),
@@ -142,7 +144,7 @@ function computeAmount () {
       amountTotal: selectKeyFromType('poundage_status') ? Number(amountCur)+Number(amountFee) : amountCur
     }
   }
-  var html=bt('template_deposit_confirm',depositTemplate);
+  var html=bt('template_asset_confirm',depositTemplate);
   $("#third_app_bottom_template").html(html);
   openBottomMdl();
 }

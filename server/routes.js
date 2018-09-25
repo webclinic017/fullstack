@@ -134,9 +134,9 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('third_app/bank_rule.html', extendPublic({}, req));
     });
-    app.route('/m/third/cse_wallet').get(function (req, res) {
+    app.route('/m/third/add_bank').get(function (req, res) {
         setEnvCf(req, res);
-        res.render('third_app/cse_wallet.html', extendPublic({}, req));
+        res.render('third_app/add_bank.html', extendPublic({}, req));
     });
 
     /*
