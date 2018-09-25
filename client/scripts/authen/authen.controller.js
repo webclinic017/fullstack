@@ -391,14 +391,16 @@
         $scope.selectRegion = selectRegion;
         $scope.address = {};
 
-        account.getWorlds(($scope.lang.isEnglish() ? 'en' : 'cn')).then(function(data){
-            angular.forEach(data.data, function(item, index){
-                $scope.areaCodes.push({
-                    key: item.name,
-                    value: '+' + item.phone_code,
-                    name: item.name
+        $scope.$watch('worldList', function(n, o){
+            if(n.length > 0) {
+                angular.forEach(n, function(item, index){
+                    $scope.areaCodes.push({
+                        key: item.name,
+                        value: '+' + item.phone_code,
+                        name: item.name
+                    })
                 })
-            })
+            }
         })
 
         function initLocation() {
@@ -426,7 +428,7 @@
             });
 
             $scope.$on('locationInfoReady', function () {
-                getRegions('country', 'countries');
+                // getRegions('country', 'countries');
 
                 if ($scope.completeInfo.country.value == 'CN') {
                     getRegions('province', 'provinces', $scope.completeInfo.country.value);
@@ -539,8 +541,10 @@
                 $scope.showErr('emailCode');
             }
             $scope.showErr('username');
-            $scope.showErr('province');
-            $scope.showErr('city');
+            if($scope.completeInfo.country.value == 'CN'){
+                $scope.showErr('province');
+                $scope.showErr('city');
+            }
             $scope.showErr('address');
 
             console.log('$scope.completeForm.$invalid', $scope.completeForm.$invalid);
