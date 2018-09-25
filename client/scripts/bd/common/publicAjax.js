@@ -71,6 +71,27 @@
         checkLotteryStatus: origin_app + '/activity/user_status', //get
         startLottery: origin_app + '/activity/scratch', //get
         shareLottery: origin_app + '/activity/share', //get
+
+        //第三方充值提现相关页面
+        getThirdDepositPlatform: origin + '/payment/deposit/platform', //get
+        getThirdTradeAccount: origin + '/trade_account/list', //get
+        getThirdWalletBalance: origin + '/wallet/valid_balance', //get
+        getThirdInfo: origin + '/user/info', //get
+        depositThird: origin + '/payment/deposit', //post
+        depositThirdTele: origin + '/payment/deposit/transfer', //post
+        checkThirdDepositBank: origin + '/payment/deposit_card', //put
+        getThirdEvidenceLst: origin + '/payment/evidence_list', //get
+        uploadThirdEvidence: origin + '/payment/evidence', //post
+        cancelThirdEvidence: origin + '/payment/evidence_cancel', //post
+        getThirdWithdrawPlatform: origin + '/payment/withdraw_list', //get
+        getThirdBankLst: origin + '/user/bank_card/lists', //get
+        delThirdBank: origin + '/user/bank_card/destroy', //post
+        getThirdBankNames: origin + '/bank_names', //get
+        getThirdProvinces: origin + '/region/provinces', //get
+        getThirdCities: origin + '/region/cities', //get
+        uploadThirdBankInfo: origin + '/user/bank_card', //put
+        checkThirdWithdrawLimit: origin + '/payment/withdraw/limits', //get
+        withdrawThird: origin + '/payment/withdraw' //post
     };
 
     w.publicRequest = publicRequest;
@@ -135,9 +156,16 @@
 
         function toLogin () {
             setTimeout(function () {
-                callNative({
-                    type: "login"
-                });
+                try {
+                    callNative({
+                        type: "login"
+                    });
+                } catch (e) {}
+                try {
+                    openThirdNative({
+                        type: "login"
+                    });
+                } catch (e) {}
             }, 1000);
         }
 

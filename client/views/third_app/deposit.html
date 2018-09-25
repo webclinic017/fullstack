@@ -1,0 +1,100 @@
+<div id="third_app_deposit">
+  <div class="clearfix mg-bt-15">
+    <div class="third_app_common__item">充值到</div>
+    <div class="third_app_common__select" id="third_app_deposit_account_btn">
+      <span class="info" id="third_app_deposit_account_name">请选择</span>
+      <span class="tag btn btn-primary-gradient" id="third_app_deposit_account_tag"></span>
+    </div>
+  </div>
+  <div class="clearfix mg-bt-15">
+    <div class="third_app_common__item">支付方式</div>
+    <div class="third_app_common__select" id="third_app_deposit_type_btn">
+      <span class="info" id="third_app_deposit_type_name">请选择</span>
+      <p class="tip" id="third_app_deposit_type_tip"></p>
+      <p class="detail" id="third_app_deposit_type_detail"></p>
+    </div>
+  </div>
+  <div class="clearfix mg-bt-15">
+    <div class="third_app_common__item">充值金额</div>
+    <div class="third_app_common__inp mg-tp-10">
+      <span class="icon">$</span>
+      <input type="text" class="" placeholder="" id="third_app_deposit_amount">
+    </div>
+    <div class="third_app_common__rate" id="third_app_deposit_currency">
+      当前汇率：1美元=<span class="num"></span><span class="cur">人民币</span>
+    </div>
+  </div>
+  <div class="third_app_deposit__omipay" id="third_app_deposit_omipay">
+    <span data-amount="100">$100</span>
+    <span data-amount="200">$200</span>
+    <span data-amount="500">$500</span>
+    <span data-amount="1000">$1000</span>
+  </div>
+  <div class="third_app_deposit__bank_info" id="third_app_deposit_bank">
+    <div class="mg-bt-10">支付银行卡信息</div>
+    <div class="item mg-bt-10 clearfix">
+      <span class="tit">持卡人</span>
+      <span class="info" id="third_app_deposit_bank_name"></span>
+    </div>
+    <div class="item mg-bt-10 clearfix">
+      <span class="tit">银行卡号</span>
+      <input type="number" class="info" placeholder="请输入银行卡号" id="third_app_deposit_bank_no">
+    </div>
+  </div>
+  <div class="third_app_deposit__transfer_info">
+    <div class="third_app_deposit__transfer_pic" id="third_app_deposit_transfer">
+      <div class="img"></div>
+      <form class="form">
+        <input type="file" name="file" accept="image/*" />
+      </form>
+      <div class="tip">点击上传电汇凭证</div>
+    </div>
+  </div>
+  <div class="btn-wrapper third_app_common__btn mg-tp-25">
+    <p class="btn-tip" id="third_app_deposit_btn_tip"></p>
+    <button class="btn btn-primary-gradient disabled" id="third_app_deposit_btn">确认充值</button>
+  </div>
+  <div class="third_app_deposit__invest_info">
+    <h5 class="invest_tit">注意事项：</h5>
+    <p class="invest_tip">
+      1、请务必使用填写的该银行卡进行网银支付；<br>
+      2、上传该笔入金凭证截图中银行卡号必须与该支付卡号一致，否则审核将被驳回，影响出金操作。<br>
+      如有其它疑问，请联系客服
+    </p>
+  </div>
+  <div class="third_app_deposit__transfer_info">
+    <h5 class="transfer_tit">电汇费用</h5>
+    <p class="transfer_tip">
+      TigerWit不收取电汇入金手续费，不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，TigerWit将以实际到账的金额为客服入金。
+    </p>
+    <h5 class="transfer_tit">
+      反洗钱政策
+    </h5>
+    <p class="transfer_tip">
+      TigerWit将根据各国适用法律尽最大努力以实际行动配合反洗钱及反恐怖方面的所有法律法规，具体包括报告及冻结可疑资产等。TigerWit将不定期地查看账户记录以获取有洗钱嫌疑的交易证据，包括对如下几项的监控：
+    </p>
+    <p class="transfer_tip">
+      1) 账户资金出入情况。电汇入金的用户，提现时若金额低于电汇入金时金额，TigerWit只支持将提现金额提现至入金银行卡。<br>
+      2) 电汇汇款方及收款方<br>
+      3) 除正常业务外的其他行为。<br>
+    </p>
+    <p class="transfer_tip">
+      如您有疑问，请联系在线客服获得帮助。
+    </p>
+  </div>
+</div>
+
+<div class="third_app_common__message" id="third_app_deposit_message">
+  <div class="wallet">
+    <p class="tit">充值成功</p>
+    <p class="sub_tit">零钱已划入交易账户</p>
+    <p class="tip">到账约为10分钟，请耐心等待</p>
+  </div>
+  <div class="transfer">
+    <p class="tit">电汇凭证已提交</p>
+    <p class="sub_tit">大概需要3-5个工作日到账</p>
+  </div>
+  <div class="btn-wrapper">
+    <button class="btn btn-primary-gradient" id="third_app_deposit_message_btn">确认</button>
+  </div>
+</div>
