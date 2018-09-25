@@ -702,6 +702,20 @@ module.exports = function (app) {
             res.render('404.html', extendPublic({}, req));
         }
     });
+    // 新增邮件-海外种子用户加群 
+    app.route('/whatsapp').get(function (req, res) {
+        checkGlobalOrCN(req, res, 'cn');
+        setEnvCf(req, res);
+        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
+            if (isMobile(req)) {
+                res.render('bd/g36/h5.html', extendPublic({}, req))
+            } else {
+                res.render('bd/g36/web.html', extendPublic({}, req));
+            }
+        } else {
+            res.render('404.html', extendPublic({}, req));
+        }
+    });
 
     // 联众德州活动
     app.route('/bd/t36_game').get(function (req, res) {

@@ -22,8 +22,8 @@
                         <ul class="select__dropdown" twform-select data-bind-model="phone_test">
                             
                             <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderArea"><i class="fa fa-search"></i></li>
-                            <li ng-repeat="world in worlds | filter : placeholderArea" ng-class="{'selected': world.code === phone.phone_code.value}">
-                                <span data-value="{{world.code}}" ng-click="selectWorld(world)">+{{world.phone_code}}({{world.name}})</span>
+                            <li ng-repeat="world in worlds | filter : placeholderArea" ng-class="{'selected': world.code == phone.phone_code.value}">
+                                <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}' ng-click="world.disabled || selectWorld(world)" ng-class="{'font-light': world.disabled}">+{{world.phone_code}}({{world.name}})</span>
                             </li>
                         </ul>
                     </div>

@@ -64,6 +64,12 @@
         padding-top: 30px;
         border-top: 1px solid $gray-darker;
         color: $gray-darker;
+        strong {
+            color: #999;
+        }
+        a {
+            color: $gray-darker; 
+        }
     }
 }
 
