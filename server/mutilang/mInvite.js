@@ -159,5 +159,9 @@ module.exports = {
     "mInvite41": {
         "zh": "Twitter",
         "en": "Twitter"
+    },
+    "mInvite42": {
+        "zh": "复制链接",
+        "en": "Copy Link"
     }
 }
