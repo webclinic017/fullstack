@@ -251,8 +251,11 @@
             type: 1, 
             content: $('#share02_box').html(),
             anim: 'up',
-            style: 'position:fixed; bottom:0; left:0; width: 100%; height: 350px; padding:10px 0; border:none;'
+            style: 'position:fixed; bottom:0; left:0; width: 100%; height: 100px; padding:10px 0; border:none;'
         });
+        setTimeout(function () {
+            $(".copy_link").val("https://bd.tigerwitfx.com"+window.location.pathname);
+        }, 10);
         return false;
     });
     $(document).on('touchend', '.share02_modal', function (e) {
@@ -290,5 +293,15 @@
         }
         nativeShare(type);
         layer.close(layIndex);
+    });
+
+    $(document).on('touchend', '#copy_link_btn', function () {
+        $('.copy_link').select();
+        document.execCommand("Copy");
+        layer.open({
+            skin: 'msg',
+            content: '复制成功',
+            time: 2
+        })
     });
 })();
