@@ -393,3 +393,244 @@
         }
     }
 }
+
+// About Tigerwit
+@include b(about){
+    font-family: regular;
+    .abouts_conter {
+        .center {
+            width: 100%;
+            margin: 0 auto;
+            h3 {
+                font-size: 34px;
+                color: #ffffff;
+                font-family: semibold;
+                margin: 50px 0 20px;
+                span {
+                background-color: #212934;
+                padding: 0px 10px;
+                }
+            }
+            p {
+                font-size: 16px;
+            }
+            .tip {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .holderCircle{
+        width:500px;
+        height:500px;
+        border-radius:100%;
+        margin:100px auto;
+        position:relative;
+    }
+    
+    .dotCircle{
+        width:100%;
+        height:100%;
+        position:absolute;
+        margin:auto;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        border-radius:100%;
+        z-index:20;
+    }
+    .dotCircle  .itemDot {
+        display:block;
+        width:80px;
+        height:80px;
+        position:absolute;
+        background:#ddd;
+        color:#fff;
+        border-radius:100%;
+        text-align: center;
+        font-size:12px;
+        z-index:3;
+        cursor:pointer;
+        span {
+            display: block;
+            width: 80px;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            padding: 0 3px;
+        }
+    }
+    
+    
+    .dotCircle  .itemDot1{
+        background: #1f2934;
+    }
+    .dotCircle  .itemDot1::before{
+        border-color: #1f2934
+    }
+    .dotCircle  .itemDot2{
+        background: #1f2934;
+    }
+    .dotCircle  .itemDot2::before{
+        border-color: #1f2934
+    }
+    .dotCircle  .itemDot3{
+        background:#1f2934;
+    }
+    .dotCircle  .itemDot3::before{
+        border-color:#1f2934;
+    }
+    .dotCircle  .itemDot4{
+        background:#1f2934;
+    }
+    .dotCircle  .itemDot4::before{
+        border-color:#1f2934;
+    }
+    .dotCircle  .itemDot5{
+        background:#1f2934;
+    }
+    .dotCircle  .itemDot5::before{	
+        border-color:#1f2934;
+    }
+    .dotCircle  .itemDot6{
+        background:#1f2934;
+    }
+    .dotCircle  .itemDot6::before{	
+        border-color:#1f2934;
+    }
+    
+    .dotCircle  .itemDot7{
+        background:#1f2934;
+    }
+    
+    .dotCircle  .itemDot7::before{
+        border-color:#1f2934;	
+    }
+    
+    .dotCircle  .itemDot8{
+        background:#1f2934;
+    }
+
+    .dotCircle  .itemDot8::before{	
+        border-color:#1f2934;
+    }
+    
+    .dotCircle  .itemDot9{
+        background:#1f2934;
+    }
+
+    .dotCircle  .itemDot9::before{
+        border-color:#1f2934;	
+    }
+    .dotCircle  .itemDot10{
+        background:#1f2934;
+    }
+    
+    .dotCircle  .itemDot10::before{	
+        border-color:#1f2934;
+    }
+    
+    .dotCircle .itemDot.active{
+        background:#fed230;
+        color:#fff;
+        transition:0.5s;
+    }
+    .dotCircle .itemDot.active::before{
+        border-color:#34495e;
+    }
+    .dotCircle  .itemDot .forActive{
+        width:56px;
+        height:56px;
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        display:none;
+    }
+    
+    .dotCircle  .itemDot .forActive::after{
+        content: '';
+        width: 5px;
+        height: 5px;
+        border: 3px solid #FE9290;
+        bottom: -31px;
+        left: -14px;
+        filter: blur(1px);
+        position: absolute;
+        border-radius: 100%;
+    }
+    .dotCircle  .itemDot .forActive::before{
+        content: '';
+        width: 6px;
+        height: 6px;
+        filter: blur(5px);
+        top: -15px;
+        position: absolute;
+        transform: rotate(-45deg);
+        border: 6px solid #F48E2A;
+        right: -39px;
+    }
+    
+    .dotCircle  .itemDot.active .forActive{
+        display:block;
+    }
+        
+    
+    .contentCircle{
+        width: 410px;
+        height: 410px;
+        border-radius: 100%;
+        color: #fff;
+        position: relative;
+        top: 50px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        z-index: 500;
+    }
+    
+    .contentCircle .CirItem{
+        border-radius: 100%;
+        color: #fff;
+        position: absolute;
+        text-align: center;
+        bottom: 0;
+        left: 0;
+        opacity: 0;
+        transition: 0.5s;
+        font-weight: bold;
+        font-size: 13px;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+        margin: auto;
+        background: #fed230;
+        p {
+            width: 320px;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+            span {
+                font-size: 16px;
+                font-weight: 600;
+            }
+        }
+    }
+    .CirItem.active{
+        z-index:1;
+        opacity:1;
+        transform:scale(1);
+        transition:0.5s;
+    }
+    .contentCircle .CirItem2, .CirItem3, .CirItem4, .CirItem5, .CirItem6, .CirItem7, .CirItem8, .CirItem9, .CirItem10{
+        background: #fed230;
+    }
+    .contentCircle .CirItem0 {
+        background: #1f2934;
+    }
+}
