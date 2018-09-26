@@ -4,23 +4,28 @@
             <h4 class="side_navbar__title"><%= lang.text("navbar10")%></h4>
 
             <ul class="side_navbar__menu">
-
-                <li>
-                    <h2><a data-navbar-trigger href="/web/about/tigerwit"><%= lang.text("navbar11")%></a></h2>
-                </li>
                 <% if(lang.isEnglish()) { %> 
                     <li>
-                        <h2><a data-navbar-trigger href="/web/about/liverpool">Liverpool FC</a></h2>
+                        <h2><a data-navbar-trigger href="/web/aboutus/abouttigerwit"><%= lang.text("navbar11")%></a></h2>
                     </li>
                     <li>
-                        <h2><a data-navbar-trigger href="/web/about/media">Press releases</a></h2>
+                        <h2><a data-navbar-trigger href="/web/aboutus/liverpool">Liverpool FC</a></h2>
+                    </li>
+                    <li>
+                        <h2><a data-navbar-trigger href="/web/aboutus/companyinformation"><%= lang.text("navbar11_f")%></a></h2>
+                    </li>
+                    <li>
+                        <h2><a data-navbar-trigger href="/web/aboutus/medianewsandcontact">Media news and contact</a></h2>
                     </li>
                 <% } else { %> 
                     <li>
-                        <h2><a data-navbar-trigger href="/web/about/team"><%= lang.text("downloadApp.eliteTeam")%></a></h2>
+                        <h2><a data-navbar-trigger href="/web/aboutus/companyinformation"><%= lang.text("navbar11_f")%></a></h2>
                     </li>
                     <li>
-                        <h2><a data-navbar-trigger href="/web/about/report"><%= lang.text("downloadApp.mediaReports")%></a></h2>
+                        <h2><a data-navbar-trigger href="/web/aboutus/team"><%= lang.text("downloadApp.eliteTeam")%></a></h2>
+                    </li>
+                    <li>
+                        <h2><a data-navbar-trigger href="/web/aboutus/report"><%= lang.text("downloadApp.mediaReports")%></a></h2>
                     </li>
                 <% } %>
             </ul>

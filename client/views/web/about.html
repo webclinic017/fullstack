@@ -32,7 +32,7 @@
                 <% } %>
             </div>
         <% include /common/vendor/web.js.html %>
-
+        <% if(pageInfo.id == 'abouttigerwit') { %> <script src="/scripts/web/about_tigerwit.js"></script>  <% }  %>
         <!-- build:js(client) /scripts/web_about.js -->
         <script src="/scripts/common/config.service.js"></script>
         <script src="/scripts/common/account.service.js"></script>
