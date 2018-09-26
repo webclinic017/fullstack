@@ -311,8 +311,9 @@ module.exports = function () {
         "navbar7": { "en": "Crude Oil", "zh": "原油交易" },
         "navbar8": { "en": "Precious Metals", "zh": "贵金属交易" },
         "navbar9": { "en": "Contracts for Difference", "zh": "指数差价合约" },
-        "navbar10": { "en": "About " + companyConfig.companyNameEn, "zh": "关于" + companyConfig.companyNameZh },
+        "navbar10": { "en": "About us", "zh": "关于" + companyConfig.companyNameZh },
         "navbar11": { "en": "About " + companyConfig.companyNameEn, "zh": "关于" + companyConfig.companyNameZh },
+        "navbar11_f": { "en": "Company information", "zh": "关于" + companyConfig.companyNameZh },
         "navbar12": { "en": "STP", "zh": "STP交易模式" },
         "navbar13": { "en": "", "zh": "" },
         "navbar14": { "en": "no-banner", "zh": "" },
@@ -1160,6 +1161,8 @@ module.exports = function () {
         "mWapForget2": { "zh": "注意：您的 MT4 登陆密码同时被修改为新密码", "en": "Note: your MT4 login password has been modified to the new password" },
         "mWapForget3": { "zh": "新密码", "en": "New Password" },
         "mWapForget4": { "zh": "确认新密码", "en": "Confirm New Password" },
+
+        mDepositSuccess: {zh: "充值确认中，请耐心等待", en: "Deposit is being confirmed, please wait patiently"},
 
         /*
             条件和条款文档中英文翻译 － 适用于WEB 、H5

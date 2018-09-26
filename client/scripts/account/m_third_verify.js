@@ -135,7 +135,7 @@ $(document).ready(function () {
     //     layer.closeAll();
     //     // getKycList();
     //     // getCountries();
-    //     step = 8;
+    //     step = 3;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
 
@@ -420,6 +420,7 @@ $(document).ready(function () {
     }
     // card
     $(ele.cardFile).on('change', function(e) {
+        // console.log(e.target.files[0]);
         var file = e.target.files[0];
         var pageClass = "."+$(e.target).attr("data-page");
         preview(file, pageClass);
@@ -570,6 +571,11 @@ $(document).ready(function () {
     //     mpImg.render(cardBaseFile[face], { maxWidth: 640, maxHeight: 640, quality: 0.5 });
     // }
     function previewBase64(file, face) {
+        console.log(file.size);
+        var quality = 1;
+        if (file.size > 5*1024*1024) {  //大于 5M 压缩
+            quality = 0.5
+        }
         var reader = new FileReader();
 
         reader.onload = function(e) {
@@ -578,7 +584,7 @@ $(document).ready(function () {
 
             $(img).on('load', function (e) {
                 cardBaseFile[face]=new Image();
-                renderImage(cardBaseFile[face], img, { maxWidth: 640, maxHeight: 640, quality: 0.5 });
+                renderImage(cardBaseFile[face], img, { maxWidth: 960, maxHeight: 960, quality: quality });
             
             });
             
