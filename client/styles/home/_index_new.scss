@@ -303,6 +303,20 @@
       padding-right: 100px;
     }
   }
+  @include e(camber){
+    overflow: hidden;
+    margin-top: -200px;
+    &::after{
+      content:'';
+      height: 200px;
+      background-color: #222;
+      border-top-right-radius: 100%;
+      border-top-left-radius: 100%;
+      margin: 0 -100px 0;
+      display: block;
+    }
+
+  }
 }
 
 // 报价
