@@ -162,7 +162,10 @@ module.exports = function (app) {
     app.route('/').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
-            if (COMPANY_NAME === 'tigerwit') {
+            if (req.host.indexOf('global') != -1) {
+                res.redirect('https://global.tigerwit.com/download');
+                return
+            } else {
                 res.redirect('https://cn.tigerwit.com/download');
                 return
             }
