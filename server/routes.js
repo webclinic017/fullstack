@@ -104,13 +104,15 @@ module.exports = function (app) {
 
     // 熊猫外汇页面路径
     app.route('/panda').get(function (req, res) {
-        res.redirect('https://ibonline.tigerwit.com');
+        res.redirect('https://dp.tigerwit.com');
     });
     app.route('/panda/:subpage(login|asset)').get(function (req, res) {
-        res.redirect('https://ibonline.tigerwit.com');
+        res.redirect('https://dpdev.tigerwit.com');
     });
-    // 三方相关页面
-    // 第三方认证流程
+    /*
+     * 三方相关页面 start
+     */
+    // 第三开户认证流程
     app.route('/m/third/register').get(function (req, res) {
         setEnvCf(req, res);
         res.render('m_vue/m_third_verify', extendPublic({}, req));
@@ -119,6 +121,27 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('m_vue/m_third_password', extendPublic({}, req));
     });
+    // 第三方充值提现相关页面
+    app.route('/m/third/asset').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('third_app/asset.html', extendPublic({}, req));
+    });
+    app.route('/m/third/transfer').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('third_app/transfer.html', extendPublic({}, req));
+    });
+    app.route('/m/third/bank_rule').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('third_app/bank_rule.html', extendPublic({}, req));
+    });
+    app.route('/m/third/add_bank').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('third_app/add_bank.html', extendPublic({}, req));
+    });
+
+    /*
+     * 三方相关页面 end
+     */
     app.use('/', function(req, res, next){
         setEnvCf(req, res);
         var allowPaths = ['/payment/login', '/payment/asset', '/payment/evidence', '/payment/cse_usage', '/waiting', '/napi']
@@ -162,7 +185,10 @@ module.exports = function (app) {
     app.route('/').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
-            if (COMPANY_NAME === 'tigerwit') {
+            if (req.host.indexOf('global') != -1) {
+                res.redirect('https://global.tigerwit.com/download');
+                return
+            } else {
                 res.redirect('https://cn.tigerwit.com/download');
                 return
             }

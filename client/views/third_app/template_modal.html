@@ -1,0 +1,160 @@
+<div class="third_app_template_wrapper" id="third_app_template_wrapper">
+  <div class="loading_modal" id="third_app_loading_template">
+    <div class="loading_wrapper">
+      <img src="/ngsrc/loading.gif" alt="">
+    </div>
+  </div>
+  <div class="message_modal" id="third_app_message_template">
+    <p></p>
+  </div>
+  <div class="bottom_modal" id="third_app_bottom_template"></div>
+  <div class="middle_modal" id="third_app_middle_template"></div>
+</div>
+
+<script id="template_deposit_type" type="text/html">
+  <h3 class="title">
+    <span><$= data.title$></span>
+    <span class="cancel third_app_template_cancel">取消</span>
+  </h3>
+  <ul class="content">
+    <$ for(var i=0;i<data.lst.length;i++) {$>
+      <li class="clearfix deposit_template_item deposit_type_item <$= data.lst[i].status === 2 ? 'un_able' : ''$> <$= data.lst[i].key === data.depositType ? 'active' : ''$> <$= data.isToWallet && data.lst[i].key === 'wallet' ? 'un_active' : ''$>" data-action="<$= data.lst[i].status$>" data-type="<$= data.lst[i].key$>">
+        <div class="item-icon"><span></span></div>
+        <div class="item-info">
+          <p class="name">
+            <$= data.lst[i].name$>
+            <$if (data.lst[i].hint) {$>
+              <span><$= data.lst[i].hint || ''$></span>
+            <$}$>
+          </p>
+          <p class="desc"><$= data.lst[i].describe || ''$></p>
+        </div>
+      </li>
+    <$}$>
+  </ul>
+</script>
+<script id="template_deposit_account" type="text/html">
+  <h3 class="title">
+    <span><$= data.title$></span>
+    <span class="cancel third_app_template_cancel">取消</span>
+  </h3>
+  <ul class="content">
+    <li class="clearfix deposit_template_item account_item <$= data.currentAccount == 'wallet' ? 'active' : ''$>" data-type="<$= data.type$>" data-account="wallet" data-name="钱包" data-tag="" data-amount="<$= data.walletBalance || '0.00'$>">
+      <div class="item-icon"><span></span></div>
+      <div class="item-info">
+        <p class="name">
+          钱包
+        </p>
+        <p class="desc">钱包余额：$<$= data.walletBalance || '0.00'$></p>
+      </div>
+    </li>
+  </ul>
+  <h4 class="sub_title">交易账户</h4>
+  <ul class="content account_content">
+    <$ for(var i=0;i<data.lst.length;i++) {$>
+      <li class="clearfix deposit_template_item account_item <$= data.lst[i].mt4_id == data.currentAccount ? 'active' : ''$>" data-type="<$= data.type$>" data-account="<$= data.lst[i].mt4_id$>" data-name="<$= data.lst[i].account_name$>" data-tag="<$= data.tradeAccountType[data.lst[i].account_type] || ''$>" data-amount="<$= data.lst[i].balance || '0.00'$>">
+        <div class="item-icon"><span></span></div>
+        <div class="item-info">
+          <p class="name">
+            <$= data.lst[i].account_name$>
+            <span><$= data.tradeAccountType[data.lst[i].account_type] || ''$></span>
+          </p>
+          <p class="desc">账户余额：$<$= data.lst[i].balance || '0.00'$></p>
+        </div>
+      </li>
+    <$}$>
+  </ul>
+</script>
+<script id="template_deposit_upload_evidence" type="text/html">
+  <h3 class="title">
+    <span><$= data.title || '提示'$></span>
+    <span class="cancel third_app_template_cancel">×</span>
+  </h3>
+  <div class="detail">
+    <p class="tip"><$= data.tip || ''$></p>
+    <div class="btn_wrapper" id="third_app_deposit_evidence_btn">
+      <button class="btn btn-primary-gradient" data-action="evidence"><$= data.btnMsg$></button>
+      <button class="btn btn-info" data-action="other">选择其他支付方式</button>
+    </div>
+  </div>
+</script>
+<script id="template_deposit_cse_wallet" type="text/html">
+  <h3 class="title">
+    <span>是否有CSE账户？</span>
+    <span class="cancel third_app_template_cancel">×</span>
+  </h3>
+  <div class="detail">
+    <p class="sub-tit" style="padding-top: 20px;"><$= data.title$></p>
+    <p class="tip" style="font-size: 12px;"><$= data.content || ''$><br><$= data.notice || ''$></p>
+    <div class="btn_wrapper" id="third_app_deposit_cse_btn">
+      <button class="btn btn-primary-gradient">是</button>
+      <button class="btn btn-info" data-action="<$= data.link$>">否</button>
+    </div>
+  </div>
+</script>
+<script id="template_asset_confirm" type="text/html">
+  <h3 class="title text-center">
+    <span><$= data.title || '提示'$></span>
+    <span class="cancel third_app_template_cancel">取消</span>
+  </h3>
+  <div class="content confirm_content">
+    <h3 class="common_confirm_amount"><code><$= data.currencySymbol$></code><$= data.amountTotal || '0.00'$></h3>
+    <p class="common_confirm_rate">1美元 = <$= data.rate$><$= data.currencyName$></p>
+    <p class="common_confirm_item clearfix">
+      <span class="tip">充值金额</span>
+      <span class="num"><code>$</code><$= data.amountDollar || '0.00'$></span>
+    </p>
+    <p class="common_confirm_item clearfix">
+      <span class="tip">折合<$= data.currencyName$>约</span>
+      <span class="num"><code><$= data.currencySymbol$></code><$= data.amountCur || '0.00'$></span>
+    </p>
+    <$if (data.type === 'deposit') {$>
+      <p class="common_confirm_item clearfix">
+        <span class="tip">手续费</span>
+        <span class="num"><code><$= data.currencySymbol$></code><$= data.isFee ? data.amountFee : '0.00'$></span>
+      </p>
+    <$}$>
+    <$if (data.type === 'deposit' && !data.isFee) {$>
+      <p class="clearfix">
+        <span class="common_confirm_fee"><code><$= data.currencySymbol$></code><$= data.amountFee || '0.00'$></span>
+      </p>
+    <$}$>
+    <p class="common_confirm_desc">
+      <$= data.desc || ''$>
+    </p>
+    <div class="common_confirm_btn_wrapper">
+      <$if (data.type === 'deposit') {$>
+        <button class="btn btn-primary-gradient" id="deposit_submit_btn">确认</button>
+      <$}$>
+      <$if (data.type === 'withdraw') {$>
+        <button class="btn btn-primary-gradient" id="withdraw_submit_btn">确认</button>
+      <$}$>
+    </div>
+  </div>
+</script>
+<script id="template_withdraw_bank_list" type="text/html">
+  <h3 class="title">
+    <span>银行账户</span>
+    <span class="cancel third_app_template_cancel">取消</span>
+  </h3>
+  <ul class="content bank_content">
+    <$ for(var i=0;i<data.lst.length;i++) {$>
+      <li class="clearfix deposit_template_item bank_item <$= data.lst[i].id == data.id ? 'active' : ''$>" data-id="<$= data.lst[i].id$>" data-name="<$= data.lst[i].bank_name || ''$>" data-no="<$= data.lst[i].card_no$>">
+        <div class="item-icon"><span></span></div>
+        <div class="item-info">
+          <p class="name">
+            <$= data.lst[i].card_no$>
+          </p>
+          <p class="desc col"><$= data.lst[i].bank_name || ''$></p>
+        </div>
+        <span class="del third_app_template_del_bank" data-id="<$= data.lst[i].id$>">删除</span>
+      </li>
+    <$}$>
+    <$ if (!data.lst.length) {$>
+      <li class="text-center">暂未添加银行卡</li>
+    <$}$>
+  </ul>
+  <div class="btn-wrapper third_app_template_btn">
+    <button class="btn btn-primary-gradient" id="third_app_add_bank_card">添加银行卡</button>
+  </div>
+</script>

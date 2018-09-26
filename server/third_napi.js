@@ -9,7 +9,8 @@ module.exports = function () {
     }
     this.oPath = {
       register: urlPath + '/m/third/register',    //开户认证流程
-      evidence: urlPath + '/m/deposit/evidence'   //入金凭证示例
+      evidence: urlPath + '/m/deposit/evidence',   //入金凭证示例
+      asset: urlPath + '/m/third/asset'   //出入金
     }
     
   }
