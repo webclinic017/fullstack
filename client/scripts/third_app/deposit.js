@@ -69,9 +69,8 @@ $(eleDeposit.payDepositBtn).on("tap", function () {
   return false;
 });
 $(eleDeposit.payDepositMsgBtn).on("tap", function () {
-  openThirdNative({
-    type: "backPersonal"
-  });
+  $(eleDeposit.payDeposit).css("display", "block");
+  $(eleDeposit.payDepositMsg).removeClass('active');
   return false;
 });
 $(document).on("tap", "#third_app_deposit_cse_btn .btn", function () {
@@ -103,6 +102,7 @@ function confirmDeposit () {
       if (data.is_succ) {
         $(eleDeposit.payDeposit).css("display", "none");
         $(eleDeposit.payDepositMsg).addClass('active');
+        $(eleDeposit.payDepositMsg).find('.wallet').removeClass('active');
         $(eleDeposit.payDepositMsg).find('.transfer').addClass('active');
       } else {
         showBackErr(data.message);
@@ -161,6 +161,7 @@ function submitDeposit () {
       if (depositType === 'wallet') {
         $(eleDeposit.payDeposit).css("display", "none");
         $(eleDeposit.payDepositMsg).addClass('active');
+        $(eleDeposit.payDepositMsg).find('.transfer').removeClass('active');
         $(eleDeposit.payDepositMsg).find('.wallet').addClass('active');
       } else {
         var token = $.cookie('token');
