@@ -1067,7 +1067,7 @@ module.exports = function (app) {
     // nodeAPI
     app.route('/napi').get(function (req, res) {
         setEnvCf(req, res);
-
+        req.query.action = Array.isArray(req.query.action) ? req.query.action[1] : req.query.action;
         var action = req.query.action;
         // var model = require('./model/modelRegular');
         var napiConfigInfo = require('./app_napi.config.js');
