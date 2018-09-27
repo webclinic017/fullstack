@@ -33,9 +33,8 @@ $(eleWithdraw.payWithdrawBtn).on("tap", function () {
   return false;
 });
 $(eleWithdraw.payWithdrawMsgBtn).on("tap", function () {
-  openThirdNative({
-    type: "backPersonal"
-  });
+  $(eleWithdraw.payWithdraw).css("display", "block");
+  $(eleWithdraw.payWithdrawMsg).removeClass('active');
   return false;
 });
 $(document).on("tap", eleWithdraw.payWithdrawSubmitBtn, function () {
@@ -79,9 +78,11 @@ function submitWithdraw () {
       $(eleWithdraw.payWithdraw).css("display", "none");
       $(eleWithdraw.payWithdrawMsg).addClass('active');
       if (withdrawType === 'wallet') {
+        $(eleWithdraw.payWithdrawMsg).find('.bank').removeClass('active');
         $(eleWithdraw.payWithdrawMsg).find('.wallet').addClass('active');
       }
       if (withdrawType === 'bank_account') {
+        $(eleWithdraw.payWithdrawMsg).find('.wallet').removeClass('active');
         $(eleWithdraw.payWithdrawMsg).find('.bank').addClass('active');
       }
     } else {

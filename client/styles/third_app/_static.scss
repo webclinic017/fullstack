@@ -88,3 +88,21 @@
     background: #fff;
   }
 }
+@include b(third_app_login) {
+  padding: 30px 16px;
+  @include e(wrapper) {
+    margin-bottom: 10px;
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  }
+  @include e(btn_wrapper) {
+    .btn {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+}

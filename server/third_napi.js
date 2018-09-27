@@ -10,6 +10,7 @@ module.exports = function () {
     this.oPath = {
       register: urlPath + '/m/third/register',    //开户认证流程
       evidence: urlPath + '/m/deposit/evidence',   //入金凭证示例
+      payment_login: urlPath + '/m/third/payment/login',  //进入出入金页面前MT4登录页
       asset: urlPath + '/m/third/asset'   //出入金
     }
     
