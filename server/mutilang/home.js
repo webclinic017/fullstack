@@ -128,8 +128,8 @@ module.exports = {
       en: "Multiple product options"
     },
     newhome_29: {
-      zh: "开始交易",
-      en: "Start Trading Now"
+      zh: "了解更多",
+      en: "Find out more"
     },
     newhome_30: {
       zh: "Powered by blockchain",
@@ -209,7 +209,7 @@ module.exports = {
     },
     newhome_43: {
       zh: "灵活满足用户对风险控制、资金管理的需求 ",
-      en: "Open an account - online or on the app"
+      en: "Download the app to open an account"
     },
     newhome_44: {
       zh: "Open an Experience account with USD10,000 of virtual funds and test your strategies with real-time prices in a risk-free environment.",

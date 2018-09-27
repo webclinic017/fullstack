@@ -41,7 +41,7 @@
                 });
                 select.on('click', selector.dropdown, function (e) {
                     var target = $(e.target);
-                    var disabled = angular.fromJson(target.attr('data-disabled').replace(': ,', ': false,'));
+                    var disabled = angular.fromJson(target.attr('data-disabled') && target.attr('data-disabled').replace(': ,', ': false,'));
                     // console.log(target.attr('data-disabled'))
                     if(disabled && disabled.disabled) {
                         layer.msg(disabled.msg)
