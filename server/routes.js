@@ -1152,6 +1152,14 @@ module.exports = function (app) {
             });
         }
         if (action == "version_check") {
+            console.log(req.query);
+            console.log('-----array-----', Array.isArray(req.query.lang));
+            // www域名请求会重复携带query数据，这里临时做一下兼容
+            req.query.lang = Array.isArray(req.query.lang) ? req.query.lang[1] : req.query.lang;
+            req.query.action = Array.isArray(req.query.action) ? req.query.action[1] : req.query.action;
+            req.query.os = Array.isArray(req.query.os) ? req.query.os[1] : req.query.os;
+            req.query.type = Array.isArray(req.query.type) ? req.query.type[1] : req.query.type;
+            req.query.version = Array.isArray(req.query.version) ? req.query.version[1] : req.query.version;
             var appType;   // global, uk, pandafx, old
             var appLanguage = req.query.lang || 'cn';
             appLanguage == 'zh' && (appLanguage = 'cn');
