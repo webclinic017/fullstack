@@ -22,7 +22,7 @@
                     <form name="loginFormPhonePw" class="account_login__form" novalidate>
                         <div class="account-form-control-wrapper-new">
                             <div class="select-left">
-                                <input class="select__input" name="phoneArea" disabled type="" autocomplete="off" placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="account.phoneArea.key">
+                                <input class="select__input" name="phoneArea" readonly type="" autocomplete="off" placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="account.phoneArea.key">
 
                                 <ul class="select__dropdown" twform-select data-bind-model="account.phoneArea2">
                                     <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderArea"><i class="fa fa-search"></i></li>
@@ -158,7 +158,7 @@
                     <form name="loginFormforgetPhonePw" class="account_login__form" novalidate>
                         <div class="account-form-control-wrapper-new">
                             <div class="select-left">
-                                <input class="select__input" name="phoneArea" disabled  autocomplete="off" type="text" placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="account.phoneArea.key">
+                                <input class="select__input" name="phoneArea" readonly  autocomplete="off" type="text" placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="account.phoneArea.key">
 
                                 <ul class="select__dropdown" twform-select data-bind-model="account.phoneArea2">
 
@@ -320,7 +320,7 @@
                             <div class="select-left">
                                 <input class="select__input"
                                         name="phoneArea"
-                                        disabled
+                                        readonly
                                         autocomplete="off" 
                                         type="text"
                                         placeholder="{{lang.text('tigerWitID.areaCode')}}"

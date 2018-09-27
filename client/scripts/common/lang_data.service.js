@@ -920,7 +920,7 @@
                     paymentRule: {zh: "网银支付规则", en: "Rules for online banking payment"},
                     thirdParty: {zh: "第三方充值教程", en: "Third party deposit tutorial"},
                     useBankPay: {zh: "请使用该银行卡支付", en: "Please use this card to pay"},
-                    paymentCurrency: {zh: "支付币种", en: "Payment currency"},
+                    paymentCurrency: {zh: "支付币种", en: "Currency"},
                     replace: {zh: "更换", en: "Replace"},
                     fillPayCardInfo: {zh: "填写支付银行卡信息", en: "Fill in the payment card information"},
                     clickUpload: {zh: "点击上传电汇凭证", en: "Click to upload wire transfer voucher"},

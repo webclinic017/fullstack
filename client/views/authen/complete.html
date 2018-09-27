@@ -127,7 +127,7 @@
                                     type="text"
                                     placeholder="{{lang.text('tigerWitID.areaCode')}}"
                                     required
-                                    disabled
+                                    readonly
                                     ng-model="completeInfo.areaCode.value"
                                     ng-class="{'form-control-error': frontErr.areaCode.show && completeForm.areaCode.$invalid, 'disabled': personal.phone }"
                                     ng-blur="showErr('areaCode')"
@@ -228,7 +228,7 @@
                                 type="text"
                                 placeholder="{{lang.text('tigerWitID.provinces')}}"
                                 required
-                                disabled
+                                readonly
                                 ng-model="completeInfo.province.key"
                                 ng-class="{'form-control-error': frontErr.province.show && completeForm.province.$invalid}"
                                 ng-blur="showErr('province')"
@@ -259,7 +259,7 @@
                                 type="text"
                                 placeholder="{{lang.text('tigerWitID.city')}}"
                                 required
-                                disabled
+                                readonly
                                 ng-model="completeInfo.city.key"
                                 ng-class="{'form-control-error': frontErr.province.show && completeForm.city.$invalid}"
                                 ng-blur="showErr('city')"
