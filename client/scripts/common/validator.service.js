@@ -13,9 +13,14 @@
                 reg: /(^\d{15}$)|(^\d{17}([0-9]|X)$)/
             },
 
+            // phone: {
+            //     tip: lang.text("tigerWitID.tip.tip2"), //手机号码为 1 开头的 11 位数字
+            //     reg: /^1\d{10}$/
+            // },
+            // 为匹配国际手机号，前端不做限制
             phone: {
-                tip: lang.text("tigerWitID.tip.tip2"), //手机号码为 1 开头的 11 位数字
-                reg: /^1\d{10}$/
+                tip: lang.text("actLogin16"), //请输入正确的手机号
+                reg: /^[0-9]*$/
             },
 
             amount: {
@@ -40,7 +45,7 @@
             },
             username_en: {
                 tip: lang.text("tigerWitID.settings.tip14"),
-                reg: /^[a-zA-Z]+$/
+                reg: /^[a-z_A-Z0-9-\./]+$/
             },
 
             school: {
@@ -48,9 +53,15 @@
                 reg: /^[\u4e00-\u9fa5A-Za-z]+$/
             },
 
+            // realname: {
+            //     tip: lang.text("tigerWitID.tip.tip7"),// 真实姓名由2-20个汉字以及 · 号组成
+            //     reg: /^([\u4e00-\u9fa5]{2,20}|[\u4e00-\u9fa5]{1,10}·[\u4e00-\u9fa5]{1,10})$/
+            // },
+
+            // 为匹配国际，前端不做限制
             realname: {
-                tip: lang.text("tigerWitID.tip.tip7"),// 真实姓名由2-20个汉字以及 · 号组成
-                reg: /^([\u4e00-\u9fa5]{2,20}|[\u4e00-\u9fa5]{1,10}·[\u4e00-\u9fa5]{1,10})$/
+                tip: lang.text("tigerWitID.myAccount.fillName"),// 请输入真实姓名
+                reg: /(^\s*)|(\s*$)/,    // 不能为空
             },
 
             bankCardNumber: {

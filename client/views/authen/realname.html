@@ -50,7 +50,7 @@
                                 type="text"
                                 placeholder="{{lang.text('tigerWitID.myAccount.selectCertificateType')}}"
                                 required
-                                disabled
+                                readonly
                                 no-active="{{personal.updatePapers.hint == 1}}"
                                 ng-model="realnameInfo.id_type.key"
                                 ng-class="{'form-control-error': frontErr.id_type.show && realnameForm.id_type.$invalid}"
@@ -137,7 +137,7 @@
                                 type="text"
                                 placeholder="{{lang.text('tigerWitID.gender')}}"
                                 required
-                                disabled
+                                readonly
                                 no-active="{{personal.updatePapers.hint == 1}}"
                                 ng-model="realnameInfo.gender.key"
                                 ng-class="{'form-control-error': frontErr.gender.show && realnameForm.gender.$invalid}"
