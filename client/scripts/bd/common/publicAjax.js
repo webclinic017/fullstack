@@ -73,6 +73,7 @@
         shareLottery: origin_app + '/activity/share', //get
 
         //第三方充值提现相关页面
+        loginThird: origin + '/login/mt4_account',
         getThirdDepositPlatform: origin + '/payment/deposit/platform', //get
         getThirdTradeAccount: origin + '/trade_account/list', //get
         getThirdWalletBalance: origin + '/wallet/valid_balance', //get

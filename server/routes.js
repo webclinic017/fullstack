@@ -122,6 +122,10 @@ module.exports = function (app) {
         res.render('m_vue/m_third_password', extendPublic({}, req));
     });
     // 第三方充值提现相关页面
+    app.route('/m/third/login').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('third_app/login.html', extendPublic({}, req));
+    });
     app.route('/m/third/asset').get(function (req, res) {
         setEnvCf(req, res);
         res.render('third_app/asset.html', extendPublic({}, req));
