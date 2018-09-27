@@ -1,5 +1,18 @@
 <div class="index_new">
-  <div class="index_new__focus <%= lang.currentLanguage() === 'en' ? 'en' : 'cn'%>">
+  <div class="index_new__focus
+   <%if (req.host.indexOf('global') != -1) {%>
+      <%if (lang.currentLanguage() === 'en') {%>
+        globalEn
+      <%} else {%>
+        globalCn
+      <%}%>
+    <%} else {%>
+      <%if (lang.currentLanguage() === 'en') {%>
+        cnEn
+      <%} else {%>
+        cnCn
+      <%}%>
+    <%}%>">
     <div class="index_new__container">
       <h3 class="index_new__focus-title"><%= lang.text("newhome_1")%></h3>
       <h3 class="index_new__focus-title"><%= lang.text("newhome_1_1")%></h3>
@@ -23,8 +36,11 @@
           <p><%= lang.text("newhome_7")%></p>
         </li>
       </ul>
-      <div class="index_new__focus-btn_box">
+      <!-- <div class="index_new__focus-btn_box">
         <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient focus_btn"><%= lang.text("newhome_9_1")%></a>
+      </div> -->
+      <div class="index_new__focus-btn_box">
+          <%= lang.text("newhome_9_1")%>
       </div>
       <div class="index_new__focus-download">
         <a href="<%= lang.text('downloadGlobalIos')%>"><img src="/white_label/home/focus-icon-ios-new.png" alt=""></a>

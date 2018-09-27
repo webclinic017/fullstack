@@ -44,8 +44,8 @@ module.exports = {
       en: "Experience account"
     },
     newhome_9_1: {
-      zh: "Register to open an account online",
-      en: "Register to open an account online"
+      zh: "Download the app to open an account",
+      en: "Download the app to open an account"
     },
     newhome_10: {
       zh: "复制跟单",
@@ -169,7 +169,7 @@ module.exports = {
     },
     newhome_36: {
       zh: "值得信赖",
-      en: "Reliable and Trustworthy"
+      en: "Reliable and trustworthy"
     },
     newhome_37_1: {
       zh: "Secured by blockchain",
@@ -197,7 +197,7 @@ module.exports = {
     },
     newhome_41: {
       zh: "用户资金仅用于交易",
-      en: "is stored in a segregated trust account"
+      en: "All client funds are stored in a segregated trust account."
     },
     newhome_42: {
       zh: "更多用户的选择",
