@@ -281,7 +281,7 @@
                         });
 
                         account.hasChecked = false;
-                        lang.globalOrCn($state, data.data.area_id);
+                        lang.globalOrCn(data.data.area_id);
 
                         $scope.$emit('relogin_info');
                     }, 150);
