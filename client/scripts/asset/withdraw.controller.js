@@ -499,21 +499,25 @@
                                 amountRMB: amountRMB,
                                 desc: $scope.withdrawNotice,
                                 currency: $scope.withdraw.currency,
-                                callback: withdraw
+                                callback: data.data.status_message ? openWithdrawTip(data.data.status_message) : withdraw
                             });
                         } else {
                             $scope.clickable = true;
-                            openWithdrawMdl({
-                                type: 'withdrawTip',
-                                message: $scope.lang.text("tigerWitID.depositWithdrawal.tip5"),
-                                callback: withdraw
-                            });
+                            openWithdrawTip($scope.lang.text("tigerWitID.depositWithdrawal.tip5"));
                         }
                     }
                 } else {
                     openWithdrawMdl({
                         type: 'withdrawFail',
                         message: data.message
+                    });
+                }
+
+                function openWithdrawTip (tip) {
+                    openWithdrawMdl({
+                        type: 'withdrawTip',
+                        message: tip,
+                        callback: withdraw
                     });
                 }
 

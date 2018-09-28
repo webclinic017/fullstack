@@ -510,15 +510,11 @@
                                 amountRMB: amountRMB,
                                 desc: $scope.withdrawNotice,
                                 currency: $scope.withdraw.currency,
-                                callback: withdraw
+                                callback: data.data.status_message ? openWithdrawTip(data.data.status_message) : withdraw
                             });
                         } else {
                             $scope.clickable = true;
-                            openWithdrawMdl({
-                                type: 'withdrawTip',
-                                message: '现在提现会导致您的账户红包失效，是否继续提现？',
-                                callback: withdraw
-                            });
+                            openWithdrawTip('现在提现会导致您的账户红包失效，是否继续提现？')
                         }
                     }
                 } else {
@@ -529,6 +525,14 @@
                     openWithdrawMdl({
                         type: 'withdrawFail',
                         message: data.message
+                    });
+                }
+
+                function openWithdrawTip (tip) {
+                    openWithdrawMdl({
+                        type: 'withdrawTip',
+                        message: tip,
+                        callback: withdraw
                     });
                 }
 
