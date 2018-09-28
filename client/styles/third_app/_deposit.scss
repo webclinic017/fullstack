@@ -1,0 +1,176 @@
+.third_app_template_wrapper .bottom_modal {
+  .deposit_template_item {
+    height: 65px;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0px;
+    position: relative;
+    .item-icon {
+      float: left;
+      width: 20%;
+      margin-top: 4px;
+      span {
+        display: block;
+        width: 16px;
+        height: 16px;
+        border: 1px solid #999;
+        border-radius: 50%;
+        position: relative;
+        background-color: transparent;
+        float: right;
+      }
+    }
+    .item-info {
+      width: 80%;
+      float: left;
+      padding-left: 10px;
+      .name {
+        font-size: 16px;
+        span {
+          font-size: 10px;
+          padding: 2px 6px;
+          border-radius: 100px;
+          color: #fff;
+          background-color: #fe3b2f;
+        }
+      }
+      .desc {
+        font-size: 12px;
+        color: #ccc;
+        &.col {
+          color: #666;
+        }
+      }
+    }
+    .del {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fe3b2f;
+    }
+    &.active {
+      .item-icon {
+        span {
+          border-color: #ffbf44;
+          &:before {
+            position: absolute;
+            content: '';
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ffbf44;
+            top: 2px;
+            left: 2px;
+          }
+        }
+      }
+    }
+    &.un_able {
+      opacity: 0.5;
+    }
+    &.un_active {
+      display: none;
+    }
+  }
+}
+@include b(third_app_deposit) {
+  @include e(bank_info) {
+    display: none;
+    .item {
+      .tit {
+        float: left;
+        width: 30%;
+      }
+      .info {
+        float: left;
+        width: 70%;
+      }
+    }
+    &.active {
+      display: block;
+    }
+  }
+  @include e(transfer_info) {
+    display: none;
+    .transfer_tit {
+      font-size: 12px;
+      margin: 15px 0px 10px;
+    }
+    .transfer_tip {
+      font-size: 12px;
+      color: #999;
+      margin: 10px 0px;
+    }
+    &.active {
+      display: block;
+    }
+  }
+  @include e(invest_info) {
+    display: none;
+    .invest_tit {
+      font-size: 12px;
+      margin: 15px 0px 10px;
+      font-weight: 400;
+    }
+    .invest_tip {
+      font-size: 12px;
+      color: #999;
+      margin: 10px 0px;
+    }
+    &.active {
+      display: block;
+    }
+  }
+
+  @include e(transfer_pic) {
+    height: 165px;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    .tip {
+      font-size: 14px;
+      color: #ccc;
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      margin-top: -10px;
+    }
+    .img {
+      height: 100%;
+      text-align: center;
+      img {
+        max-width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 10;
+      }
+    }
+    input[type=file] {
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 20;
+    }
+  }
+  @include e(omipay) {
+    display: none;
+    span {
+      border: 1px solid #999;
+      padding: 4px 10px;
+      border-radius: 100px;
+      font-size: 12px;
+      margin-right: 10px;
+      &.active {
+        background-color: #ffbf44;
+        border-color: #ffbf44;
+      }
+    }
+    &.active {
+      display: block;
+    }
+  }
+}

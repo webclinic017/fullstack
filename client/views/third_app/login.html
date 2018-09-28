@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+  <div class="third_app_login">
+    <form action="">
+      <p class="third_app_login__wrapper"><input id="third_app_login_account" type="text" placeholder="MT4账号"></p>
+      <p class="third_app_login__wrapper"><input id="third_app_login_password" type="password" placeholder="密码"></p>
+
+      <div class="third_app_login__btn_wrapper">
+        <button class="btn btn-primary-gradient" id="third_app_login_btn">登录</button>
+      </div>
+    </form>
+  </div>
+</body>
+<% include /common/vendor/h5.js.html %>
+<% include /third_app/template_modal.html %>
+<!-- 注册协议相关弹窗 -->
+<%include /common/component/agment_mdl.html %>
+<!-- build:js(client) /scripts/third_app_login.js -->
+<script src="/scripts/third_app/login.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

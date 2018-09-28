@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+  <div class="third_app_bank">
+    <h3 class="third_app_bank__title">添加银行账户</h3>
+    <p class="third_app_bank__sub_tit">请绑定认证用户本人的银行账户，当前不支持信用卡提现，请绑定储蓄卡</p>
+    <form action="">
+      <div class="third_app_bank__item">
+        <p class="name active" data-name="realname">持卡人</p>
+        <input type="text" class="cont" disabled name="realname" placeholder="">
+      </div>
+      <div class="third_app_bank__item">
+        <p class="name active" data-name="country">银行国家</p>
+        <input type="text" class="cont" disabled name="country" placeholder="">
+      </div>
+      <div class="third_app_bank__item">
+        <p class="name" data-name="card">卡号</p>
+        <input type="text" class="cont" name="card" placeholder="请填写银行卡号">
+      </div>
+      <div class="third_app_bank__item">
+        <p class="name" data-name="bank_name">银行名称</p>
+        <input type="text" class="cont" name="bank_name" placeholder="请选择您的银行名称">
+        <select name="bank_name" id="third_app_bank_bank_name"></select>
+      </div>
+      <div class="third_app_bank__item">
+        <p class="name" data-name="province">省份</p>
+        <input type="text" class="cont" name="province" placeholder="请选择您的开户省">
+        <select name="province" id="third_app_bank_province"></select>
+      </div>
+      <div class="third_app_bank__item">
+        <p class="name" data-name="city">城市</p>
+        <input type="text" class="cont" name="city" placeholder="请选择您的开户市">
+        <select name="city" id="third_app_bank_city"></select>
+      </div>
+      <div class="third_app_bank__item">
+        <p class="name" data-name="address">支行名称</p>
+        <input type="text" class="cont" name="address" placeholder="请填写支行名称">
+      </div>
+      <div class="third_app_bank__item">
+        <p class="name" data-name="phone">预留手机号</p>
+        <input type="text" class="cont" name="phone" placeholder="请填写银行卡预留手机号">
+      </div>
+    </form>
+    <div class="btn-wrapper third_app_bank__btn_wrapper">
+      <button class="btn btn-primary-gradient" id="third_app_bank_btn">提交</button>
+    </div>
+  </div>
+</body>
+<script id="template_add_bank_lst" type="text/html">
+  <option value=""></option>
+<$ for(var i=0;i<data.lst.length;i++) {$>
+  <option value="<$= data.lst[i][data.value]$>"><$= data.lst[i][data.key]$></option>
+<$}$>
+</script>
+<% include /common/vendor/h5.js.html %>
+<% include /third_app/template_modal.html %>
+<!-- 注册协议相关弹窗 -->
+<%include /common/component/agment_mdl.html %>
+<!-- build:js(client) /scripts/third_app_bank.js -->
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/third_app/common.js"></script>
+<script src="/scripts/third_app/add_bank.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>
