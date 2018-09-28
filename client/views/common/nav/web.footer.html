@@ -177,16 +177,31 @@
             } catch (e) {}
         }
     }
+    window.setPositioningQRCode = function () {
+        sessionStorage.setItem('positioningQRCode', true)
+        document.getElementById('positioningQRCode').style.display='none';
+    }
+    window.getPositioningQRCode = function () {
+        var positioningQRCode;
+        positioningQRCode = sessionStorage.getItem('positioningQRCode')
+        if(!positioningQRCode){
+            document.getElementById('positioningQRCode').style.display='block';
+        }
+    }
+    window.onload = function (){
+        window.getPositioningQRCode();
+    }
+
 </script>
-<div style="position: fixed; padding: 5px; line-height: 20px; color: #fff; bottom: 40px; right: 10px;z-index: 8888;" <%= lang.text("navbar15")%>>
-     <span style="position: absolute; top: -2px; left: -10px; width: 25px; height: 25px; cursor: pointer;" onclick="this.parentNode.style.display='none';">
+<div style="position: fixed; padding: 5px; line-height: 20px; color: #fff; bottom: 40px; right: 10px;z-index: 8888; display: none;" id="positioningQRCode">
+     <span style="position: absolute; top: -2px; left: -10px; width: 25px; height: 25px; cursor: pointer;" onclick="setPositioningQRCode()">
          <img src="/images/footer-customer-close-icon.png">
      </span>
     <%if (req.host.indexOf('global') != -1) {%>
         <%if (lang.currentLanguage() === 'en') {%>
-            <img style="cursor: pointer;" src="/images/footer-layer/global-en.png">
+            <img style="cursor: pointer;" src="/white_label/footer-layer/global-en.png">
         <%} else {%>
-            <img style="cursor: pointer;" src="/images/footer-layer/global-cn-new.png">
+            <img style="cursor: pointer;" src="/white_label/footer-layer/global-cn.png">
         <%}%>
     <%} else {%>
         <%if (lang.currentLanguage() === 'en') {%>

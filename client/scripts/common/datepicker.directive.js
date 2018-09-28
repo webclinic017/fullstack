@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .directive('twDatePicker', twDatePicker);
 
-        twDatePicker.$inject = ['$timeout'];    
+        twDatePicker.$inject = ['$timeout', 'lang'];    
 
-    function twDatePicker($timeout) {
+    function twDatePicker($timeout, lang) {
         return {
             restrict: 'A',
             scope: {
@@ -37,7 +37,7 @@
                 }
                 
                 var options = {
-                    language: "zh-CN",
+                    language: lang.isEnglish() ? '' : "zh-CN",
                     autoclose: true,
                     clearBtn: attrs.clearBtn == 'false' ? false : true,
                     startView: 2,
@@ -51,7 +51,7 @@
                 }
                 else if (attrs.type == 'month') {
                     options = {
-                        language: "zh-CN",
+                        language: lang.isEnglish() ? '' : "zh-CN",
                         startView: 2,
                         maxViewMode: 2,
                         minViewMode:1,

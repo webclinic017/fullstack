@@ -44,8 +44,8 @@ module.exports = {
       en: "Experience account"
     },
     newhome_9_1: {
-      zh: "Register to open an account online",
-      en: "Register to open an account online"
+      zh: "Download the app to open an account",
+      en: "Download the app to open an account"
     },
     newhome_10: {
       zh: "复制跟单",
@@ -128,8 +128,8 @@ module.exports = {
       en: "Multiple product options"
     },
     newhome_29: {
-      zh: "开始交易",
-      en: "Start Trading Now"
+      zh: "了解更多",
+      en: "Find out more"
     },
     newhome_30: {
       zh: "Powered by blockchain",
@@ -169,7 +169,7 @@ module.exports = {
     },
     newhome_36: {
       zh: "值得信赖",
-      en: "Reliable and Trustworthy"
+      en: "Reliable and trustworthy"
     },
     newhome_37_1: {
       zh: "Secured by blockchain",
@@ -197,7 +197,7 @@ module.exports = {
     },
     newhome_41: {
       zh: "用户资金仅用于交易",
-      en: "is stored in a segregated trust account"
+      en: "All client funds are stored in a segregated trust account."
     },
     newhome_42: {
       zh: "更多用户的选择",
@@ -209,7 +209,7 @@ module.exports = {
     },
     newhome_43: {
       zh: "灵活满足用户对风险控制、资金管理的需求 ",
-      en: "Open an account - online or on the app"
+      en: "Download the app to open an account"
     },
     newhome_44: {
       zh: "Open an Experience account with USD10,000 of virtual funds and test your strategies with real-time prices in a risk-free environment.",

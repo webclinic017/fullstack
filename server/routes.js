@@ -162,7 +162,10 @@ module.exports = function (app) {
     app.route('/').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
-            if (COMPANY_NAME === 'tigerwit') {
+            if (req.host.indexOf('global') != -1) {
+                res.redirect('https://global.tigerwit.com/download');
+                return
+            } else {
                 res.redirect('https://cn.tigerwit.com/download');
                 return
             }
@@ -484,7 +487,7 @@ module.exports = function (app) {
     })
 
     // 关于老虎金融
-    app.route('/web/about/:subpage(stp|team|report|control|tigerwit|partner|liverpool|media)').get(function (req, res) {
+    app.route('/web/aboutus/:subpage(stp|team|report|control|companyinformation|partner|liverpool|medianewsandcontact|abouttigerwit)').get(function (req, res) {
         var subpage = req.params.subpage || 'forex';
         var pageInfo = {
             id: subpage

@@ -13,7 +13,7 @@
                                type="text"
                                placeholder="省/市"
                                required
-                                disabled
+                                readonly
                                ng-model="basicInfo.locationState.key"
                                ng-class="{'form-control-error': frontErr.locationState.show && basicInfoForm.locationState.$invalid}"
                                ng-blur="showErr('basicInfoForm', 'locationState')"
@@ -45,7 +45,7 @@
                                type="text"
                                placeholder="市/区"
                                required
-                                disabled
+                                readonly
                                ng-model="basicInfo.locationCity.key"
                                ng-class="{'form-control-error': frontErr.locationCity.show && basicInfoForm.locationCity.$invalid}"
                                ng-blur="showErr('basicInfoForm', 'locationCity')"

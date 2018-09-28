@@ -21,7 +21,11 @@
                 var dropdown = element;
                 
                 select.on('click', function (e) {
-                    dropdown.addClass('active');
+                    // console.log($(e.target).is('input[no-active]'));
+                    if(!($(e.target).is("input[no-active='true']"))){
+                        dropdown.addClass('active');
+                    }   // input 有no-active属性则不可点击，相当于disabled
+
                     e.stopPropagation();
                 });
 
@@ -37,7 +41,7 @@
                 });
                 select.on('click', selector.dropdown, function (e) {
                     var target = $(e.target);
-                    var disabled = angular.fromJson(target.attr('data-disabled'));
+                    var disabled = angular.fromJson(target.attr('data-disabled') && target.attr('data-disabled').replace(': ,', ': false,'));
                     // console.log(target.attr('data-disabled'))
                     if(disabled && disabled.disabled) {
                         layer.msg(disabled.msg)
