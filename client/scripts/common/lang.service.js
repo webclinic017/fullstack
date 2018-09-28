@@ -39,7 +39,7 @@
             background: function () {
                 return langData["language"] == 'en' ? true : false;
             },
-            globalOrCn: function (state, area_id) {
+            globalOrCn: function (area_id) {
                 var url = {
                     cn: 'cn.tigerwit.com,cndemo.tigerwit.com',
                     global: 'global.tigerwit.com,globaldemo.tigerwit.com',
@@ -47,7 +47,8 @@
                 };
                 
                 if (url.local.indexOf($location.host()) != -1 || (area_id == 1 && url.cn.indexOf($location.host()) != -1) || (area_id == 2 && url.global.indexOf($location.host()) != -1)) {
-                    state.go('space.center.index', {reload: true});
+                    // state.go('space.center.index', {reload: true});
+                    window.location.href="/space/#/center";
                 } else {
                     if (area_id == 1) {
                         if ($location.host().indexOf('demo') != -1) {
