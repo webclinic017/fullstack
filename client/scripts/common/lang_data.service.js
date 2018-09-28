@@ -955,7 +955,6 @@
                     tip45: {zh: "无法进行出金操作", en: "Cannot withdrawal"},
                     goUncopy: {zh: "前往取消复制", en: "Go to unfollow"},
                     goDeposit: {zh: "前往充值", en: "Go to deposit"},
-                    withdrawal: {zh: "出金", en: "Withdrawal"},
                     tip46: {zh: "申请已提交，我们会在两个工作日内处理完毕", en: "The application has been submitted and will be processed within two working days"},
                     tip47: {zh: "到账时间约为10分钟，请耐心等待。", en: "The arrival time is about 10 minutes, please wait patiently."},
                     continueWithdraw: {zh: "继续提现", en: "Continue to withdraw"},

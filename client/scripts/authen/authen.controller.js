@@ -559,7 +559,9 @@
             if(!$scope.personal.email || !$scope.personal.phone){
                 account.checkCode(
                     $scope.personal.phone ? $scope.completeInfo.email : $scope.completeInfo.phone,
-                    $scope.completeInfo.phoneCode || $scope.completeInfo.emailCode || null
+                    $scope.personal.phone ? $scope.completeInfo.emailCode : $scope.completeInfo.phoneCode,
+                    '',
+                    $scope.personal.phone ? null : $scope.completeInfo.areaCode.value.replace(/\+/gi, '')
                 ).then(function(data){
                     if(data.is_succ){
                         confirmSubmit()
