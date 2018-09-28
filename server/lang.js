@@ -119,6 +119,24 @@ module.exports = function () {
                 company: _this.company_name
             };
             return backgroundName;
+        },
+        // global的中英文与cn的中英文
+        showScheme: function (cnEn, globalEn, cnCn, globalCn) {
+            var _this = this;
+            // console.log(_this.req.host)
+            if (_this.req.host.indexOf('global') != -1) {
+                if (this.language === 'en') {
+                    return globalEn;
+                } else {
+                    return globalCn || globalEn;
+                }
+            } else {
+                if (this.language === 'en') {
+                    return cnEn
+                } else {
+                    return cnCn || cnEn;
+                }
+            }
         }
     };
     return Lang;

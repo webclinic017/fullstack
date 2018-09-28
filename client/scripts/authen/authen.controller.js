@@ -581,6 +581,7 @@
             function confirmSubmit(){
                 var params = {
                     username: $scope.completeInfo.username,
+                    world_code: $scope.personal.region.world_code,
                     state_code: $scope.completeInfo.province.value,
                     city_code: $scope.completeInfo.city.value,
                     address: $scope.completeInfo.address,
