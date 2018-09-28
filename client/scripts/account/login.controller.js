@@ -355,7 +355,7 @@
             }
             layer.load();
             $scope.loginBtnStatus = false;
-            account.checkCode($scope.account[name], $scope.account[code],'', $scope.account.phoneArea.value).then(function (data) {
+            account.checkCode($scope.account[name], $scope.account[code],'', $scope.loginStep3 == 1 ? null : $scope.account.phoneArea.value).then(function (data) {
                 layer.closeAll();
                 $scope.loginBtnStatus = true;
 
