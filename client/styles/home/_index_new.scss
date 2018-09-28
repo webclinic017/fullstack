@@ -18,11 +18,17 @@
     background-size: auto 100%;
     color: #fff;
     padding-top: 310px;
-    &.cn {
-      background-image: url("/white_label/home/focus-cn.png");
+    &.cnCn {
+      background-image: url("/white_label/home/focus-cnCn.png");
     }
-    &.en {
-      background-image: url("/white_label/home/focus-en.png");
+    &.cnEn {
+      background-image: url("/white_label/home/focus-cnEn.png");
+    }
+    &.globalCn {
+      background-image: url("/white_label/home/focus-globalCn.png");
+    }
+    &.globalEn {
+      background-image: url("/white_label/home/focus-globalEn.png");
     }
     @include m(title) {
       margin: 0;
@@ -34,7 +40,7 @@
       margin-bottom: 75px;
     }
     @include m(icon_box) {
-      margin-bottom: 80px;
+      margin-bottom: 50px;
       li {
         float: left;
         width: 123px;
@@ -46,18 +52,20 @@
       }
     }
     @include m(btn_box) {
-      .tw-btn-capsule-bordered {
-        margin-left: 10px;
-        color: #fff;
-      }
-      .focus_btn {
-        width: 310px;
-      }
+      font-size: 20px;
+      padding-left: 20px;
+      // .tw-btn-capsule-bordered {
+      //   margin-left: 10px;
+      //   color: #fff;
+      // }
+      // .focus_btn {
+      //   width: 310px;
+      // }
     }
     @include m(download) {
       position: absolute;
-      top: 650px;
-      right: 80px;
+      top: 470px;
+      left: 22px;
     }
   }
   @include e(copy) {
@@ -70,7 +78,7 @@
       margin: 100px 0px 26px;
     }
     @include m(sub_tit) {
-      color: rgb(187,196,215);
+      color: $main-char-color-50;
       text-align: center;
       font-size: 18px;
     }
@@ -121,7 +129,7 @@
       z-index: 100;
     }
     @include m(sub_tit) {
-      color: #bbc4d7;
+      color: $main-char-color-50;
       text-align: center;
       font-size: 18px;
       position: relative;
@@ -158,7 +166,7 @@
           font-size: 20px;
         }
         p {
-          color: rgb(187,196,215);
+          color: $main-char-color-50;
           font-size: 14px;
         }
       }
@@ -179,7 +187,7 @@
       color: rgb(36,42,54);
     }
     @include m(sub_tit) {
-      color: rgb(187,196,215);
+      color: $main-char-color-50;
       text-align: center;
       font-size: 18px;
       width: 1100px;
@@ -197,11 +205,17 @@
     background-position: center center;
     background-size: auto 100%;
     margin-top: 100px;
-    &.cn {
-      background-image: url("/white_label/home/tools-bg-cn.png");
+    &.cnCn {
+      background-image: url("/white_label/home/tools-bg-cnCn.png");
     }
-    &.en {
-      background-image: url("/white_label/home/tools-bg-en.png");
+    &.cnEn {
+      background-image: url("/white_label/home/tools-bg-cnEn.png");
+    }
+    &.globalCn {
+      background-image: url("/white_label/home/tools-bg-globalCn.png");
+    }
+    &.globalEn {
+      background-image: url("/white_label/home/tools-bg-globalEn.png");
     }
     @include m(title) {
       font-size: 56px;
@@ -241,7 +255,7 @@
           margin-top: 55px;
         }
         p {
-          color: rgb(187,196,215);
+          color: $main-char-color-50;
         }
       }
     }
@@ -257,7 +271,7 @@
       margin: 100px 0px 26px;
     }
     @include m(sub_tit) {
-      color: #bbc4d7;
+      color: $main-char-color-50;
       text-align: center;
       font-size: 18px;
       margin-bottom: 50px;
@@ -287,11 +301,11 @@
     z-index: 100;
     background: #fff;
     .f {
-      width: 78%;
+      width: 74%;
     }
     .b {
-      width: 22%;
-      margin-top: 90px;
+      width: 26%;
+      margin-top: 70px;
     }
     h3 {
       font-size: 40px;
@@ -299,7 +313,7 @@
     }
     p {
       font-size: 20px;
-      color: rgb(187,196,215);
+      color: $main-char-color-50;
       padding-right: 100px;
     }
   }
@@ -334,7 +348,7 @@
   @include e(tip) {
       padding-top: 35px;
       text-align: center;
-      color: #aaa;
+      color: $main-char-color-50;
   }
   @include e(content) {
       float: left;

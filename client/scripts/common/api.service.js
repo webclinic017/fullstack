@@ -64,6 +64,7 @@
             getUserGroupApi: urlOrigin2 + '/user/group',
             getAdvertiseRecords: urlOrigin2 + '/position/records',
             getFunctionSwitch: '/napi?action=get_function_switch',
+            getIdcardApi: urlOrigin2 + '/user/idcard',
         };
         var asset = {
             withdrawApi: urlOrigin2 + '/payment/withdraw',

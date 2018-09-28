@@ -21,7 +21,11 @@
                 var dropdown = element;
                 
                 select.on('click', function (e) {
-                    dropdown.addClass('active');
+                    // console.log($(e.target).is('input[no-active]'));
+                    if(!($(e.target).is("input[no-active='true']"))){
+                        dropdown.addClass('active');
+                    }   // input 有no-active属性则不可点击，相当于disabled
+
                     e.stopPropagation();
                 });
 

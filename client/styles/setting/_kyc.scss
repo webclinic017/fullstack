@@ -2,6 +2,9 @@
     width: 600px;
     margin-left: auto;
     margin-right: auto;
+    &.update{
+        margin-left: 0;
+    }
     &.en{
         width: 700px;
     }
@@ -9,9 +12,16 @@
         color: $gray-darker;
         line-height: 40px;
     }
-    .answers {
-        height: 50px;
+    .investInfo{
+        overflow: hidden;
+        .answers {
+            float: left;
+            min-width: 25%; 
+            padding: 0 15px;
+            height: 50px;
+        }
     }
+    
     @include e(title) {
         margin-top: 10px;
         margin-bottom: 15px;

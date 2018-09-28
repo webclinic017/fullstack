@@ -374,6 +374,11 @@
         &.disabled {
             cursor: not-allowed;
         }
+        &[readonly]{
+            outline: none;
+            box-shadow: none;
+
+        }
     }
     @include e(icon) {
         position: absolute;
@@ -387,7 +392,7 @@
         top: $input-height-base + 5px;
         z-index: $zindex-dropdown;
         display: none;
-        min-width: max-content;
+        min-width: 200px;
         width: 100%;
         max-height: 300px;
         border: 1px solid $gray-form-border;
@@ -431,10 +436,10 @@
             }
             i {
                 position: absolute;
-                top: 5px;
+                top: 8px;
                 left: 6px;
                 color: $login-line;
-                zoom: 1.5;
+                font-size: 23px;
             }
         }
     }
