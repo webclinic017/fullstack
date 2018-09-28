@@ -311,6 +311,9 @@
                 // 账户概况
                 myAccount:{
                     title: {zh: "账户概况", en: "My Account"},
+                    updateID: {zh: "更新证件", en: "Update ID"},
+                    updateIDTip: {zh: "您的证件已过期，无法进行该操作，请及时上传有效证件。点击“更新证件”，即可完成相关操作。", en: "Your credential has expired and cannot be operated. Please upload your valid certificate in time. Click on the \"Update ID\" to complete the related operations."},
+                    updateIDTip2: {zh: "您的证件已过期，无法进行该操作，请及时上传有效证件。", en: "Your credential has expired and cannot be operated. Please upload your valid certificate in time."},
                     totalAssets: {zh: "资产总额", en: "Total Assets"},
                     totalLots: {zh: "总交易手数", en: "Total Lots"},
                     totalEarnings: {zh: "总盈利", en: "Total Earnings"},
