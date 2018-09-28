@@ -203,7 +203,8 @@
             skin: 'msg',
             content: '复制成功',
             time: 2
-        })
+        });
+        $('.copy_link').blur();
     });
 
     /*请求已邀请好友数据*/
