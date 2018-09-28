@@ -39,6 +39,7 @@
             background: function () {
                 return langData["language"] == 'en' ? true : false;
             },
+            // 登录注册时跳转
             globalOrCn: function (state, area_id) {
                 var url = {
                     cn: 'cn.tigerwit.com,cndemo.tigerwit.com',

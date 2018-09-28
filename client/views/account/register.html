@@ -15,7 +15,7 @@
                     </div>
                     <div class="account-form-control-wrapper-new">
                         <span class="account-form-control-tip-new" ng-show="account.country.value">{{lang.text("tigerWitID.login.countryRegion")}}</span>
-                        <input class="account-form-control-new select__input" disabled name="country" type="text" placeholder="{{lang.text('tigerWitID.login.countryRegion')}}" required ng-model="account.country.key">
+                        <input class="account-form-control-new select__input" readonly name="country" type="text" placeholder="{{lang.text('tigerWitID.login.countryRegion')}}" required ng-model="account.country.key">
 
                         <i class="select__icon fa fa-angle-down"></i>
 
@@ -65,7 +65,7 @@
                         <form name="registerForm1" class="account_login__form" novalidate>
                             <div class="account-form-control-wrapper-new">
                                 <div class="select-left">
-                                    <input class="select__input" name="phoneArea" disabled type="text" placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="account.phoneArea.key">
+                                    <input class="select__input" name="phoneArea" readonly type="text" placeholder="{{lang.text('tigerWitID.areaCode')}}" required ng-model="account.phoneArea.key">
     
                                     <ul class="select__dropdown" twform-select data-bind-model="account.phoneArea2">
     

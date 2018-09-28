@@ -208,7 +208,7 @@
                         
                     }
                 })
-
+                // 邀请好友
                 .state('space.invite', {
                     authenticated: true,
                     url: '/space/invite',
@@ -216,6 +216,16 @@
                         'content@space': {
                             templateUrl: '/views/invite/index.html',
                             controller: 'InviteIndexController'
+                        }
+                    }
+                })
+                // 更新证件
+                .state('space.update', {
+                    url: '/space/update',
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/authen/realname.html',
+                            controller: 'AuthenRealnameController'
                         }
                     }
                 })
