@@ -402,6 +402,7 @@
             // console.log(params);
             var withdraw = $scope.withdraw;
             // var isMessage = $scope.message;
+            var parentScope = $scope;
 
             $modal.open({
                 templateUrl: '/views/asset/withdraw_modal.html',
@@ -419,7 +420,10 @@
                         openCardMdl();
                     }
 
-                    function closeModal() {
+                    function closeModal(r) {
+                        if (r) {
+                            parentScope.clickable = true;
+                        }
                         $modalInstance.dismiss();
                     }
                 }
