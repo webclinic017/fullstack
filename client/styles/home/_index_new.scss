@@ -65,7 +65,7 @@
     @include m(download) {
       position: absolute;
       top: 470px;
-      left: 52px;
+      left: 22px;
     }
   }
   @include e(copy) {
@@ -205,11 +205,17 @@
     background-position: center center;
     background-size: auto 100%;
     margin-top: 100px;
-    &.cn {
-      background-image: url("/white_label/home/tools-bg-cn.png");
+    &.cnCn {
+      background-image: url("/white_label/home/tools-bg-cnCn.png");
     }
-    &.en {
-      background-image: url("/white_label/home/tools-bg-en.png");
+    &.cnEn {
+      background-image: url("/white_label/home/tools-bg-cnEn.png");
+    }
+    &.globalCn {
+      background-image: url("/white_label/home/tools-bg-globalCn.png");
+    }
+    &.globalEn {
+      background-image: url("/white_label/home/tools-bg-globalEn.png");
     }
     @include m(title) {
       font-size: 56px;
@@ -295,11 +301,11 @@
     z-index: 100;
     background: #fff;
     .f {
-      width: 78%;
+      width: 74%;
     }
     .b {
-      width: 22%;
-      margin-top: 90px;
+      width: 26%;
+      margin-top: 70px;
     }
     h3 {
       font-size: 40px;
