@@ -1,86 +1,6 @@
 <div class="footer-wrap">
     <div class="container">
         <div class="row mg-tp-50">
-            <div class="col-xs-2">
-                <h2>
-                    <p class="mg-bt-20">
-                        <span><%= lang.text("foot1")%></span>
-                    </p>
-                </h2>
-                <ul>
-                    <li>
-                        <h3>
-                            <a href="/web/mt4">
-                                <i class="fa fa-angle-right"></i>
-                                &nbsp;<%= lang.text("foot2")%>
-                            </a>
-                        </h3>
-                    </li>
-                    <%if(lang.isCompany("tigerwit")){%>
-                    <li>
-                        <h3>
-                            <a href="/web/product/trade">
-                                <i class="fa fa-angle-right"></i>
-                                &nbsp;<%= lang.text("foot3")%>
-                            </a>
-                        </h3>
-                    </li>
-                    <%}%>
-                </ul>
-            </div>
-            <div class="col-xs-2">
-                <h2>
-                    <p class="mg-bt-20">
-                        <span><%= lang.text("foot4")%></span>
-                    </p>
-                </h2>
-                <ul>
-                    <li>
-                        <h3>
-                            <a href="/web/faq/real">
-                                <i class="fa fa-angle-right"></i>
-                                &nbsp;<%= lang.text("faq")%>
-                            </a>
-                        </h3>
-                    </li>
-                    <%if(lang.currentLanguage() !== 'en'){%>
-                    
-                    <li>
-                        <h3>
-                            <a href="/help/#/help/introduce">
-                                <i class="fa fa-angle-right"></i>
-                                &nbsp;<%= lang.text("foot14")%>
-                            </a>
-                        </h3>
-                    </li>
-                    <%}%>
-                </ul>
-            </div>
-            <div class="<%= lang.text('foot13')%>">
-                <h2>
-                    <p class="mg-bt-20">
-                        <span><%= lang.text("foot7")%></span>
-                    </p>
-                </h2>
-                <ul>
-                    <li>
-                        <h3>
-                            <a href="/web/blog/agreement">
-                                <i class="fa fa-angle-right"></i>
-                                &nbsp;<%= lang.text("foot7")%>
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/web/blog/trade_fee">
-                                <i class="fa fa-angle-right"></i>
-                                &nbsp;<%= lang.text("foot15")%>
-                            </a>
-                        </h3>
-                    </li>
-                </ul>
-            </div>
             <div class="col-xs-4">
                 <h2>
                     <p class="mg-bt-20">
@@ -127,6 +47,80 @@
                     <div class="footer-follow-tip">订阅每日必读的投资干货</div>
                 </div>
             <%}%>
+            <div class="col-xs-2">
+                <h2>
+                    <p class="mg-bt-20">
+                        <span><%= lang.text("foot1")%></span>
+                    </p>
+                </h2>
+                <ul>
+                    <li>
+                        <h3>
+                            <a href="/web/mt4">
+                                &nbsp;<%= lang.text("foot2")%>
+                            </a>
+                        </h3>
+                    </li>
+                    <%if(lang.isCompany("tigerwit")){%>
+                    <li>
+                        <h3>
+                            <a href="/web/product/trade">
+                                &nbsp;<%= lang.text("foot3")%>
+                            </a>
+                        </h3>
+                    </li>
+                    <%}%>
+                </ul>
+            </div>
+            <div class="col-xs-2">
+                <h2>
+                    <p class="mg-bt-20">
+                        <span><%= lang.text("foot4")%></span>
+                    </p>
+                </h2>
+                <ul>
+                    <li>
+                        <h3>
+                            <a href="/web/faq/real">
+                                &nbsp;<%= lang.text("faq")%>
+                            </a>
+                        </h3>
+                    </li>
+                    <%if(lang.currentLanguage() !== 'en'){%>
+                    
+                    <li>
+                        <h3>
+                            <a href="/help/#/help/introduce">
+                                &nbsp;<%= lang.text("foot14")%>
+                            </a>
+                        </h3>
+                    </li>
+                    <%}%>
+                </ul>
+            </div>
+            <div class="<%= lang.text('foot13')%>">
+                <h2>
+                    <p class="mg-bt-20">
+                        <span><%= lang.text("foot7")%></span>
+                    </p>
+                </h2>
+                <ul>
+                    <li>
+                        <h3>
+                            <a href="/web/blog/agreement">
+                                &nbsp;<%= lang.text("foot7")%>
+                            </a>
+                        </h3>
+                    </li>
+                    <li>
+                        <h3>
+                            <a href="/web/blog/trade_fee">
+                                &nbsp;<%= lang.text("foot15")%>
+                            </a>
+                        </h3>
+                    </li>
+                </ul>
+            </div>
             
         </div>
         <div class="footer_con mg-tp-30">
