@@ -51,6 +51,8 @@
         $(".more").on("click",'span', function(){
             $('.more').show();
             $('.limit_line').hide();
+            $('.ellipsis').show();
+            $(this).parent().parent('li').children('.content').children('.ellipsis').hide();
             $(this).parent().parent('li').children('.content').children('.limit_line').show();
             $(this).parent().hide();
         })

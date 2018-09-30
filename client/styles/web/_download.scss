@@ -669,6 +669,7 @@
       color: $bg-fff;
       font-size: px2rem(50);
       padding: px2rem(70) px2rem(40) px2rem(30);
+      margin: 0;
     }
     p {
       color: rgba(255, 255, 255, 0.6);
@@ -783,7 +784,7 @@
           box-shadow: 2px 2px 8px 0px rgba(0,0,0,0.1);
           float: left;
           border-radius: px2rem(26);
-          min-height: px2rem(280);
+          min-height: px2rem(265);
           padding: px2rem(10);
           img{
             height: px2rem(80);
@@ -798,7 +799,6 @@
             color:rgba(33,44,63,1);
             font-size: px2rem(20);
             line-height: px2rem(24);
-            margin-bottom: px2rem(10);
           }
         }
       }
@@ -1076,7 +1076,7 @@
             margin-bottom: px2rem(10);
             padding: 0 px2rem(40);
             text-align: left;
-            span{
+            .limit_line{
               display: none;
             }
           }
