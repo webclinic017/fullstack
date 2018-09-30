@@ -109,7 +109,7 @@ module.exports = {
     },
     newhome_24: {
       zh: "最低交易手数0.01手",
-      en: "Trade from a minimum of just 0.1 Lot"
+      en: "Trade from a minimum of just 0.01 Lot"
     },
     newhome_25: {
       zh: "外汇，贵金属，原油，差价合约等",

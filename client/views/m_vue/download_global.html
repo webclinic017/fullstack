@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-title" content="<%= lang.text('companyZhName')%>">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0"/>
+    <meta name="format-detection" content="telephone=no">
+    <title><%= lang.text('companyZhName')%></title>
+</head>
+
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/vendor/h5.js.html %>
+<% include /common/statistic/main.html %>
+<body class="m_download">
+<!-- 引入H5导航条 -->
+<div class="m_download_layout">
+    <!--<div class="m_download_layout__loading_mask">-->
+        <!--<div class="m_download_layout__loading_mask">-->
+            <!--<div class="loading_percentage"></div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <div class="full_page" id="dowebok_global">
+
+        <div class="section section1">
+            <%- include('/common/component/h5.navbar.html') %>
+            <h5>
+                Trade the markets you want The way you want to trade Powered by blockchain
+            </h5>
+            <p class="line1">Open an account in minutes - online</p>
+            <p class="line2">or on the app – and start to trade.</p>
+            <div class="download_app">
+                <a class="download_btn" href="<%= lang.text('downloadGlobalIos')%>"><img src="/white_label/m_download_global/focus-icon-ios-en.png" alt=""></a>
+                <a class="download_btn" href="<%= lang.text('downloadGlobalAndroid')%>"><img src="/white_label/m_download_global/focus-icon-google-en.png" alt=""></a>
+            </div>
+            <p class="next" id="next">∨</p>
+        </div>
+        <div class="section section2">
+            <h5>Self-directed and copy trading</h5>
+            <p class="line1">Follow a TigerWit Master with a single click and trade using their strategies. Pay just 20% commission to your Master.</p>
+
+            <ul class="self_directed">
+                <li>
+                    <img src="/white_label/m_download_global/section2-icon-1.png">
+                    <p class="sequence">1</p>
+                    <p class="content">Select a Master from the ranking table.</p>
+                </li>
+                <li>
+                    <img src="/white_label/m_download_global/section2-icon-2.png">
+                    <p class="sequence">2</p>
+                    <p class="content">Select the Master’s trade you want to follow.</p>
+                </li>
+                <li>
+                    <img src="/white_label/m_download_global/section2-icon-3.png">
+                    <p class="sequence">3</p>
+                    <p class="content">Set your order value.</p>
+                </li>
+                <li>
+                    <img src="/white_label/m_download_global/section2-icon-4.png">
+                    <p class="sequence">4</p>
+                    <p class="content">Become a TigerWit Master and earn 20% commission on your followers’ profits.</p>
+                </li>
+            </ul>
+            <div class="download_app">
+                <a class="download_btn" href="<%= lang.text('downloadGlobalIos')%>"><img src="/white_label/m_download_global/focus-icon-ios-en.png" alt=""></a>
+                <a class="download_btn" href="<%= lang.text('downloadGlobalAndroid')%>"><img src="/white_label/m_download_global/focus-icon-google-en.png" alt=""></a>
+            </div>
+            
+        </div>
+        <div class="section section3">
+            <h5>The markets you want</h5>
+            <p class="line1">TigerWit offers the most heavily-traded global products, delivering immediate access to the most liquid markets. FX, precious metals, commodities and indices, all by CFD.</p>
+
+            <ul class="self_directed">
+                <li>
+                    <img src="/white_label/m_download_global/section3-icon-1.png">
+                    <p class="title">Flexible leverage</p>
+                    <p class="content">Choose 50/100/200:1</p>
+                </li>
+                <li>
+                    <img src="/white_label/m_download_global/section3-icon-2.png">
+                    <p class="title">USD50 minimum deposit</p>
+                    <p class="content">Open a Live account with an initial deposit of as little as USD50</p>
+                </li>
+                <li>
+                    <img src="/white_label/m_download_global/section3-icon-3.png">
+                    <p class="title">Low minimum order value</p>
+                    <p class="content">Trade from a minimum of just 0.1 Lot</p>
+                </li>
+                <li>
+                    <img src="/white_label/m_download_global/section3-icon-4.png">
+                    <p class="title">Multiple product options</p>
+                    <p class="content">FX, precious metals, commoditiesand indices</p>
+                </li>
+            </ul>
+            <div class="download_app">
+                <a class="download_btn" href="<%= lang.text('downloadGlobalIos')%>"><img src="/white_label/m_download_global/focus-icon-ios-en.png" alt=""></a>
+                <a class="download_btn" href="<%= lang.text('downloadGlobalAndroid')%>"><img src="/white_label/m_download_global/focus-icon-google-en.png" alt=""></a>
+            </div>
+        </div>
+        <div class="section section4">
+            <h5>The way you want to trade</h5>
+            <p class="line1">On a sleeker, smarter, highly-intuitive app.</p>
+            <p class="line1">Nimble, sophisticated but easy to use.</p>
+            <p class="line1">Built around you. Personalised by you.</p>
+            <p class="line1"> Download the app and open an USD10,000 Experience account instantly. Open a Live account within minutes.</p>
+            <div class="download_app">
+                <a class="download_btn" href="<%= lang.text('downloadGlobalIos')%>"><img src="/white_label/m_download_global/focus-icon-ios-en.png" alt=""></a>
+                <a class="download_btn" href="<%= lang.text('downloadGlobalAndroid')%>"><img src="/white_label/m_download_global/focus-icon-google-en.png" alt=""></a>
+            </div>
+        </div>
+        <div class="section section5">
+            <h5>Reliable and Trustworthy</h5>
+            <ul class="self_directed">
+                <li>
+                    <p class="title">Secured by blockchain</p>
+                    <p class="content">To ensure the highest levels of data security and privacy only the summary of transactions <span class="ellipsis">...</span><span class="limit_line"> - also known as a digital digest - will be recorded onto the blockchain ledger. The digest is generated by a hash-based algorithm. Any change to the ledger will lead to a new value of the digest being displayed for verification, ensuring the immutability of the original transaction data.</span></p>
+                    <p class="more"><span>More</span></p>
+                </li>
+                <li>
+                    <p class="title">Client protection</p>
+                    <p class="content">TigerWit Limited is regulated by Securities Commission of The Bahamas (SCB), license number <span class="ellipsis">...</span><span class="limit_line"> SIA-F185. We provide protection to our clients in accordance with the highest global regulatory standards. All client funds are held in a segregated client trust accounts.</span></p>
+                    <p class="more"><span>More</span></p>
+                </li>
+                <li>
+                    <p class="title">Negative balance protection</p>
+                    <p class="content">When you trade with TigerWit you are covered by our Negative Balance Protection policy <span class="ellipsis">...</span><span class="limit_line">. This means that even if your trading performance is unsuccessful, you will never owe TigerWit any monies. You cannot lose any more than your account equity. All client funds are stored in a segregated trust account.</span></p>
+                    <p class="more"><span>More</span></p>
+                </li>
+            </ul>
+            <div class="download_app">
+                <a class="download_btn" href="<%= lang.text('downloadGlobalIos')%>"><img src="/white_label/m_download_global/focus-icon-ios-en.png" alt=""></a>
+                <a class="download_btn" href="<%= lang.text('downloadGlobalAndroid')%>"><img src="/white_label/m_download_global/focus-icon-google-en.png" alt=""></a>
+            </div>
+        </div>
+
+        <div class="section section6">
+            <h5>Trading with TigerWit</h5>
+            <p class="line1">TigerWit clients worldwide invest in the most heavily-traded global products with immediate access to the most liquid markets.</p>
+            <div class="download_app">
+                <a class="download_btn" href="<%= lang.text('downloadGlobalIos')%>"><img src="/white_label/m_download_global/focus-icon-ios-en.png" alt=""></a>
+                <a class="download_btn" href="<%= lang.text('downloadGlobalAndroid')%>"><img src="/white_label/m_download_global/focus-icon-google-en.png" alt=""></a>
+            </div>
+        </div>
+        <div class="section section7">
+            <h5>Download the app to open an account</h5>
+            <p class="line1">Open an Experience account with USD10,000 of virtual funds and test your strategies with real-time prices in a risk-free environment.</p>
+            <p class="line1">Open a Live account and use up to seven sub-accounts for self-directed and copy-trading.</p>
+            <div class="download_app">
+                <a class="download_btn" href="<%= lang.text('downloadGlobalIos')%>"><img src="/white_label/m_download_global/focus-icon-ios-en.png" alt=""></a>
+                <a class="download_btn" href="<%= lang.text('downloadGlobalAndroid')%>"><img src="/white_label/m_download_global/focus-icon-google-en.png" alt=""></a>
+            </div>
+            <p class="footer">Risk Warning: Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: <a href="https://uk.tigerwit.com">https://uk.tigerwit.com</a></p>
+        </div>
+    </div>
+</div>
+</body>
+
+<!-- build:js(client) /scripts/m_download_global.js -->
+<script src="/scripts/product/m_download_global.js"></script>
+<!-- endbuild -->
+<!-- 推广脚本footer -->
+<%- include('/common/statistic/all.html') %>
+</html>
