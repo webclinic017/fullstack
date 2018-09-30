@@ -48,7 +48,12 @@
         // function hide_btn(index) {
         //     $("#download_btn" + index).fadeOut(500);
         // }
-
+        $(".more").on("click",'span', function(){
+            $('.more').show();
+            $('.limit_line').hide();
+            $(this).parent().parent('li').children('.content').children('.limit_line').show();
+            $(this).parent().hide();
+        })
         $('#dowebok_global').fullpage({
             navigation: true,
             navigationColor: "#fbd71f",

@@ -1076,14 +1076,17 @@
             margin-bottom: px2rem(10);
             padding: 0 px2rem(40);
             text-align: left;
+            span{
+              display: none;
+            }
           }
-          // .more{
-          //   text-align: right;
-          //   color:rgba(74,144,226,1);
-          //   font-size: px2rem(22);
-          //   padding: 0 px2rem(60) 0;
-          //   cursor: pointer;
-          // }
+          .more{
+            text-align: right;
+            color:rgba(74,144,226,1);
+            font-size: px2rem(22);
+            padding: 0 px2rem(60) 0;
+            cursor: pointer;
+          }
         }
       }
       h5 {
