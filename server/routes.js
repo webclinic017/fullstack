@@ -104,13 +104,15 @@ module.exports = function (app) {
 
     // 熊猫外汇页面路径
     app.route('/panda').get(function (req, res) {
-        res.redirect('https://ibonline.tigerwit.com');
+        res.redirect('https://dp.tigerwit.com');
     });
     app.route('/panda/:subpage(login|asset)').get(function (req, res) {
-        res.redirect('https://ibonline.tigerwit.com');
+        res.redirect('https://dpdev.tigerwit.com');
     });
-    // 三方相关页面
-    // 第三方认证流程
+    /*
+     * 三方相关页面 start
+     */
+    // 第三开户认证流程
     app.route('/m/third/register').get(function (req, res) {
         setEnvCf(req, res);
         res.render('m_vue/m_third_verify', extendPublic({}, req));
@@ -119,6 +121,31 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('m_vue/m_third_password', extendPublic({}, req));
     });
+    // 第三方充值提现相关页面
+    app.route('/m/third/payment/login').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('third_app/login.html', extendPublic({}, req));
+    });
+    app.route('/m/third/asset').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('third_app/asset.html', extendPublic({}, req));
+    });
+    app.route('/m/third/transfer').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('third_app/transfer.html', extendPublic({}, req));
+    });
+    app.route('/m/third/bank_rule').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('third_app/bank_rule.html', extendPublic({}, req));
+    });
+    app.route('/m/third/add_bank').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('third_app/add_bank.html', extendPublic({}, req));
+    });
+
+    /*
+     * 三方相关页面 end
+     */
     app.use('/', function(req, res, next){
         setEnvCf(req, res);
         var allowPaths = ['/payment/login', '/payment/asset', '/payment/evidence', '/payment/cse_usage', '/waiting', '/napi']
@@ -1073,7 +1100,7 @@ module.exports = function (app) {
     // nodeAPI
     app.route('/napi').get(function (req, res) {
         setEnvCf(req, res);
-
+        req.query.action = Array.isArray(req.query.action) ? req.query.action[1] : req.query.action;
         var action = req.query.action;
         // var model = require('./model/modelRegular');
         var napiConfigInfo = require('./app_napi.config.js');
@@ -1158,6 +1185,14 @@ module.exports = function (app) {
             });
         }
         if (action == "version_check") {
+            console.log(req.query);
+            console.log('-----array-----', Array.isArray(req.query.lang));
+            // www域名请求会重复携带query数据，这里临时做一下兼容
+            req.query.lang = Array.isArray(req.query.lang) ? req.query.lang[1] : req.query.lang;
+            req.query.action = Array.isArray(req.query.action) ? req.query.action[1] : req.query.action;
+            req.query.os = Array.isArray(req.query.os) ? req.query.os[1] : req.query.os;
+            req.query.type = Array.isArray(req.query.type) ? req.query.type[1] : req.query.type;
+            req.query.version = Array.isArray(req.query.version) ? req.query.version[1] : req.query.version;
             var appType;   // global, uk, pandafx, old
             var appLanguage = req.query.lang || 'cn';
             appLanguage == 'zh' && (appLanguage = 'cn');

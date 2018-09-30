@@ -86,18 +86,18 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V4.0.0",
-                        description: "The new version updated the following, update now to enjoy the new trading experience!\n1.Update to TigerWit ID system;\n2.You can create more than one sub-account;\n3.You can own master account and copy account at once;\n4.The funds in sub-account could be withdrew to wallet.",
+                        version_name : "V4.0.4",
+                        description: "New Version\n70% users are using new version\nThe new version optimizes the Fixing known bugs\nUpdate now to enjoy the new trading experience!",
                         updated_description: "70% users are using new version",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.3.2",
-                        description: "Update：\nOptimized register and login functions;\nAdd guest mode for international area user;\nOptimized user interface;\nFixed known bugs, optimized user experience.",
+                        version_name : "V2.4.1",
+                        description: "Update：\nChina shows the relevant data with \"red rise and green fall\";\nInternational zone show the relevant data with \"red fall and green rise\";\nAdd “update ID” function to update ID two weeks in advance before the ID expires;\nOptimize the default comment name of the autonomous trading account；\nPart UI update to optimize visual effects;\nRepair known BUG and optimize user experience.",
                         updated_description: "70% users are using new version",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.3.2.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.4.1.apk",
                         force_update : false
                     }
                 }
@@ -105,18 +105,18 @@
             cn: {
                 ios: {
                     app_info: {
-                        version_name : "V4.0.0",
-                        description: "新版本优化了以下功能。赶快更新享受新的交易体验！\n1.升级到TigerWit通行证系统；\n2.您可以同时创建多个子账号；\n3.通行证同时支持高手账号和跟单账号；\n4.支持子账号和钱包之间转账。",
+                        version_name : "V4.0.4",
+                        description: "发现全新版本 v4.0.4\n70%的用户正在使用新版本\n新版本修复了紧急BUG，赶快更新享受新的交易体验！",
                         updated_description: "70%的用户正在使用新版本",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.3.2",
-                        description: "本次更新：\n注册/登录功能优化；\n国际区用户增加【游客模式】；\n界面视觉优化；\n修复浮动收益显示错误的问题；",
+                        version_name : "V2.4.1",
+                        description: "本次更新：\n中国区以“红涨绿跌”展示相关数据，国际区以“红跌绿涨”展示相关数据；\n新增更新证件功能，可在身份证到期前两周更新身份证件信息；\n优化自主交易账号的默认备注名；\n部分UI更新，优化视觉效果；\n修复已知BUG，优化用户体验。",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.3.2.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.4.1.apk",
                         force_update : false
                     }
                 }
