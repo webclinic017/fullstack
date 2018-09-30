@@ -159,14 +159,15 @@ module.exports = function (app) {
         }
     })
 
+    // TODO 可能需要改
     app.route('/').get(function (req, res) {
         setEnvCf(req, res);
         if (isMobile(req)) {
             if (req.host.indexOf('global') != -1) {
-                res.redirect('https://global.tigerwit.com/download');
+                res.redirect('/download');
                 return
             } else {
-                res.redirect('https://cn.tigerwit.com/download');
+                res.redirect('/download');
                 return
             }
         } else {
@@ -224,7 +225,12 @@ module.exports = function (app) {
                     coInfo: "Tiger Financial Technology PTY. Ltd."
                 }
             }
-            res.render('m_vue/download.html', extendPublic(extendObj, req));
+            // TODO 可能需要改
+            if (req.host.indexOf('global') == -1) {
+                res.render('m_vue/download.html', extendPublic(extendObj, req));
+            }else{
+                res.render('m_vue/download_global.html', extendPublic(extendObj, req));
+            }
         } else {
             res.render('web/download.html', extendPublic({}, req));
         }
