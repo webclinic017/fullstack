@@ -1,5 +1,5 @@
 <div class="sys_modal_v2 slim_case">
-    <button class="close" ng-click="closeModal()">&times;</button>
+    <button class="close" ng-click="closeModal(true)">&times;</button>
 
     <h5 class="sys_modal_v2__title">
         {{lang.text('tigerWitID.prompt')}}
@@ -98,7 +98,7 @@
         </div>
 
         <p class="btn_wrapper mg-bt-15">
-            <button class="btn btn-primary-gradient btn-sm" ng-click="[params.callback(), closeModal()]">
+            <button class="btn btn-primary-gradient btn-sm" ng-click="[params.callback(params.callbackPara), closeModal()]">
                 {{lang.text('tigerWitID.confirm')}}
             </button>
         </p>
