@@ -302,6 +302,7 @@
             skin: 'msg',
             content: '复制成功',
             time: 2
-        })
+        });
+        $('.copy_link').blur();
     });
 })();

@@ -1,4 +1,4 @@
-<div ng-controller="ThirdRecordController">
+<div ng-controller="ThirdWalletRecordController">
     <div tw-loading-img></div>
         <div class="invest_content space_block history" ng-if="historyList.length > 0" style="padding: 0; overflow: hidden;">
             <table class="table table-personal table-hover table-bordered">
@@ -13,21 +13,18 @@
                     <th>日期</th>
                     <th>类型</th>
                     <th>金额</th>
-                    <th>状态</th>
+                    <th>余额</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr ng-repeat="history in historyList">
-                    <td>{{ history.order_date | dateFormatter }}</td>
-                    <td>{{ history.status_type }}</td>
+                    <td>{{ history.created_at | dateFormatter }}</td>
+                    <td>{{ history.type }}</td>
                     <td ng-class="{'font-danger': history.status === 2, 'font-success': history.status === 4, 'font-base': history.status === -2}">
                         ${{ history.amount }}
                     </td>
                     <td>
-                        <span>{{ history.status_explain }}</span>
-                        <!-- <span ng-if="history.withdraw === 1">
-                            <a class="deposit__pointer font-info" ng-click="cancelWithdraw(history.order_no)">撤销申请</a>
-                        </span> -->
+                        <span>${{ history.wallet_balance }}</span>
                     </td>
                 </tr>
                 </tbody>

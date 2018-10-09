@@ -126,7 +126,7 @@
             style: 'position:fixed; bottom:0; left:0; width: 100%; height: 100px; padding:10px 0; border:none;'
         });
         setTimeout(function () {
-            $(".copy_link").val('https://bd.tigerwitfx.com/m/invite01?utm_source=invite_friends_app_cn&utm_campaign=share_invite_tigerwit&user_code='+$.cookie("user_code"));
+            $(".copy_link").val(window.location.origin+'/m/invite01?utm_source=invite_friends_app_cn&utm_campaign=share_invite_tigerwit&user_code='+$.cookie("user_code"));
         }, 10);
     }
 

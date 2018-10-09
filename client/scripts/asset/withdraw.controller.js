@@ -402,6 +402,7 @@
             // console.log(params);
             var withdraw = $scope.withdraw;
             // var isMessage = $scope.message;
+            var parentScope = $scope;
 
             $modal.open({
                 templateUrl: '/views/asset/withdraw_modal.html',
@@ -419,7 +420,10 @@
                         openCardMdl();
                     }
 
-                    function closeModal() {
+                    function closeModal(r) {
+                        if (r) {
+                            parentScope.clickable = true;
+                        }
                         $modalInstance.dismiss();
                     }
                 }
@@ -499,7 +503,8 @@
                                 amountRMB: amountRMB,
                                 desc: $scope.withdrawNotice,
                                 currency: $scope.withdraw.currency,
-                                callback: data.data.status_message ? openWithdrawTip(data.data.status_message) : withdraw
+                                callback: data.data.status_message ? openWithdrawTip : withdraw,
+                                callbackPara: data.data.status_message
                             });
                         } else {
                             $scope.clickable = true;

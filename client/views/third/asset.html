@@ -120,8 +120,11 @@
                 <div ng-include="'/views/third/asset/record.html'"></div>
             </div>
             <div class="content-view relative" ng-if="main.pageCtrl == 'evidence'">
-                    <div ng-include="'/views/third/asset/evidence.html'"></div>
-                </div>
+                <div ng-include="'/views/third/asset/evidence.html'"></div>
+            </div>
+            <div class="content-view relative" ng-if="main.pageCtrl == 'wallet'">
+                <div ng-include="'/views/third/asset/wallet_record.html'"></div>
+            </div>
         </div>
     </div>
 </div>
