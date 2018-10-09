@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+  <div class="third_app_static">
+    <p class="third_app_static__transfer-tip">
+        请注意，我们不接受直接支付到我们银行账户的现金付款。为了您的注资能及时、准确到账，在填写电汇申请单时，
+        <span>请您务必在汇款附言一栏里填写您的交易账号。</span>
+        同时请提供您的电话号码，以便我们与您取得联系。
+    </p>
+    <div class="third_app_static__transfer-details">
+      
+    </div>
+  </div>
+</body>
+<script id="template_transfer_info" type="text/html">
+  <p class="tit">TigerWit接受美元汇款，汇款详情如下：</p>
+  <ul class="content account_content">
+    <$ for(var i=0;i<data.length;i++) {$>
+      <li>
+        <p class="clearfix">
+          <span class="fl"><$=data[i].name$></span>
+          <span class="fr copy" data-details="<$=data[i].cont$>">复制</span>
+        </p>
+        <p class="cont"><$=data[i].cont$></p>
+      </li>
+      <li>
+        <p class="clearfix">
+          <span class="fl">汇款附言：</span>
+        </p>
+        <p class="cont">姓名：您的姓名拼音，交易账号：12345678</p>
+      </li>
+    <$}$>
+  </ul>
+</script>
+<% include /common/vendor/h5.js.html %>
+<!-- 注册协议相关弹窗 -->
+<%include /common/component/agment_mdl.html %>
+<!-- build:js(client) /scripts/third_app_transfer.js -->
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/third_app/transfer.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

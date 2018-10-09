@@ -123,8 +123,11 @@
             type: 1, 
             content: DOM['$share02_box'].html(),
             anim: 'up',
-            style: 'position:fixed; bottom:0; left:0; width: 100%; height: 350px; padding:10px 0; border:none;'
+            style: 'position:fixed; bottom:0; left:0; width: 100%; height: 100px; padding:10px 0; border:none;'
         });
+        setTimeout(function () {
+            $(".copy_link").val(window.location.origin+'/m/invite01?utm_source=invite_friends_app_cn&utm_campaign=share_invite_tigerwit&user_code='+$.cookie("user_code"));
+        }, 10);
     }
 
     window.tigerwitWeb = function (isLogin) {
@@ -191,6 +194,17 @@
         }
         nativeShare(type);
         layer.close(layIndex);
+    });
+
+    $(document).on('touchend', '#copy_link_btn', function () {
+        $('.copy_link').select();
+        document.execCommand("Copy");
+        layer.open({
+            skin: 'msg',
+            content: '复制成功',
+            time: 2
+        });
+        $('.copy_link').blur();
     });
 
     /*请求已邀请好友数据*/

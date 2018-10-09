@@ -15,6 +15,8 @@
         <div class="withdraw__list-item" ng-class="{'not-active': common_acount.type != 'wallet'}" ng-click="changeWithdrawType('wallet')">
             <p class="summary_name">钱包</p>
             <p class="summary_amount">${{ main.wallet_balance || '0.00' }}</p>
+            <p class="text-right mg-tp-10" ng-click="main.switchPage('wallet')" ng-if="common_acount.type ==='wallet'"><span>钱包记录</span></p>
+            <p class="text-right mg-tp-10" ng-if="common_acount.type !=='wallet'"><span>钱包记录</span></p>
         </div>
     </div>
 </div>

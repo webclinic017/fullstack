@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+  <% include /third_app/nav.html %>
+  <div class="third_app_deposit" id="page_deposit">
+    <% include /third_app/deposit.html %>
+  </div>
+  <div class="third_app_withdraw" id="page_withdraw">
+    <% include /third_app/withdraw.html %>
+  </div>
+  <div class="third_app_evidence" id="page_evidence">
+    <% include /third_app/evidence.html %>
+  </div>
+</body>
+<% include /common/vendor/h5.js.html %>
+<% include /third_app/template_modal.html %>
+<!-- 注册协议相关弹窗 -->
+<%include /common/component/agment_mdl.html %>
+<!-- build:js(client) /scripts/third_app.js -->
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/third_app/renderImage.js"></script>
+<script src="/scripts/third_app/common.js"></script>
+<script src="/scripts/third_app/nav.js"></script>
+<script src="/scripts/third_app/deposit.js"></script>
+<script src="/scripts/third_app/withdraw.js"></script>
+<script src="/scripts/third_app/evidence.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

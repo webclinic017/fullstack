@@ -1,5 +1,5 @@
 <div class="sys_modal_v2 slim_case">
-    <button class="close" ng-click="closeModal()">&times;</button>
+    <button class="close" ng-click="closeModal(true)">&times;</button>
 
     <h5 class="sys_modal_v2__title">
         {{lang.text('tigerWitID.prompt')}}
@@ -64,12 +64,12 @@
         <p class="sys_modal_v2__info">
             {{params.message}}
         </p>
-        <p class="btn_wrapper">
-            <button class="btn btn-primary-gradient btn-sm mg-rg-15" ng-click="[params.callback(), closeModal()]">
+        <p class="btn_wrapper mg-tp-0">
+            <button class="btn btn-primary-gradient btn-sm mg-rg-15 mg-tp-30" ng-click="[params.callback(), closeModal()]">
                 {{lang.text('tigerWitID.depositWithdrawal.continueWithdraw')}}
             </button>
 
-            <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
+            <button class="btn btn-primary-gradient btn-sm mg-tp-30" ng-click="closeModal(true)">
                 {{lang.text('tigerWitID.cancel')}}
             </button>
         </p>
@@ -98,7 +98,7 @@
         </div>
 
         <p class="btn_wrapper mg-bt-15">
-            <button class="btn btn-primary-gradient btn-sm" ng-click="[params.callback(), closeModal()]">
+            <button class="btn btn-primary-gradient btn-sm" ng-click="[params.callback(params.callbackPara), closeModal()]">
                 {{lang.text('tigerWitID.confirm')}}
             </button>
         </p>
