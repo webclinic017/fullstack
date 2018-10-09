@@ -1252,7 +1252,7 @@
                 },
                 date: {zh: "日期", en: "Date"},
                 dateM: {zh: "日期：", en: "Date:"},
-                types: {zh: "全部类型", en: "Types"},
+                types: {zh: "类型", en: "Types"},
                 amount: {zh: "金额", en: "Amount"},
                 state: {zh: "状态", en: "State"},
                 balance: {zh: "余额", en: "Balance"},

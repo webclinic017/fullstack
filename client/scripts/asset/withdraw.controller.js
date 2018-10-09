@@ -503,7 +503,8 @@
                                 amountRMB: amountRMB,
                                 desc: $scope.withdrawNotice,
                                 currency: $scope.withdraw.currency,
-                                callback: data.data.status_message ? openWithdrawTip(data.data.status_message) : withdraw
+                                callback: data.data.status_message ? openWithdrawTip : withdraw,
+                                callbackPara: data.data.status_message
                             });
                         } else {
                             $scope.clickable = true;
