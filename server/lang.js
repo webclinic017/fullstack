@@ -125,17 +125,26 @@ module.exports = function () {
             var _this = this;
             // console.log(_this.req.host)
             if (_this.req.host.indexOf('global') != -1) {
-                if (this.language === 'en') {
+                if (_this.language === 'en') {
                     return globalEn;
                 } else {
                     return globalCn || globalEn;
                 }
             } else {
-                if (this.language === 'en') {
+                if (_this.language === 'en') {
                     return cnEn
                 } else {
                     return cnCn || cnEn;
                 }
+            }
+        },
+        // 中文或者英文
+        cnOrEn: function(cn, en) {
+            var _this = this;
+            if (_this.language === 'en') {
+                return en;
+            } else {
+                return cn;
             }
         }
     };
