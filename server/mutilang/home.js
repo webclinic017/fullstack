@@ -160,8 +160,8 @@ module.exports = {
       en: "Built around you. Personalised by you."
     },
     newhome_35_1: {
-      zh: "Download the app and open an USD10,000 Experience account instantly.",
-      en: "Download the app and open an USD10,000 Experience account instantly."
+      zh: "Download the app and open an USD2,000 Experience account instantly.",
+      en: "Download the app and open an USD2,000 Experience account instantly."
     },
     newhome_35_2: {
       zh: "Open a Live account within minutes.",
@@ -212,8 +212,8 @@ module.exports = {
       en: "Download the app to open an account"
     },
     newhome_44: {
-      zh: "Open an Experience account with USD10,000 of virtual funds and test your strategies with real-time prices in a risk-free environment.",
-      en: "Open an Experience account with USD10,000 of virtual funds and test your strategies with real-time prices in a risk-free environment."
+      zh: "Open an Experience account with USD2,000 of virtual funds and test your strategies with real-time prices in a risk-free environment.",
+      en: "Open an Experience account with USD2,000 of virtual funds and test your strategies with real-time prices in a risk-free environment."
     },
     newhome_45: {
       zh: "Open a Live account and use up to seven sub-accounts for self-directed and copy-trading.",
