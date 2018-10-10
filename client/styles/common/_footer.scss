@@ -7,91 +7,62 @@
         font-weight: normal;
     }
 
-    div > h2 > p > span {
-        font-size: 20px;
-        // padding-bottom: 5px;
-        // border-bottom: 1px solid $brand-primary;
+    .contact-us {
+        h2 {
+            p {
+                font-size:14px;
+                line-height:27px;
+            }
+        }
+        .phone {
+            font-size:40px;
+            font-weight:500;
+        }
     }
-
-    .col-xs-2 > ul > li {
-        margin-bottom: 10px;
-    }
-
-    .col-xs-2, .col-xs-3 { 
-        > ul > li > h3 {
-        line-height: 18px;
-
-        > a{
-            color: $gray-dark;
+    .link-list {
+        h2 {
+            p {
+                font-size:20px;
+                font-weight:500;
+                line-height:27px;
+            }
+        }
+        a{
+            color: $white-50;
             font-size: 14px;
-    
+
             &:hover {
                 color: $brand-primary;
             }
         }
     }
-
-    }
-    .col-xs-3 > ul > li > h3 > a{
-        color: $gray-dark;
-        font-size: 14px;
-        &:hover {
-            color: $brand-primary;
+    .footer_con {
+        color: $white-30;
+        a {
+            color: $white-30;
         }
     }
-
-    a > i {
-        font-size: $font-size-h3;
-        vertical-align: top;
-    }
-
-    .col-xs-4 {
-        color: $gray-dark;
-
-        ul > li:first-child {
-            span {
-                font-size: $font-size-h1;
-                color: $brand-primary;
+    .scb-fca{
+        overflow: hidden;
+        > div{
+            float: right;
+            p {
+                font-size:12px;
+                line-height:17px;
             }
         }
-
-        p > i {
-            margin-right: 5px;
-        }
-    }
-
-    .footer_con {
-        padding-top: 30px;
-        border-top: 1px solid $gray-darker;
-        color: $gray-darker;
-        strong {
-            color: #999;
-        }
-        a {
-            color: $gray-darker; 
-        }
+        
     }
 }
 
 .footer-weibo {
     position: relative;
     float: left;
-    padding-right: 15px;
+    padding-right: 11px;
 
-    &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 5px;
-        right: 0px;
-        width: 1px;
-        height: 15px;
-        background-color: $brand-primary;
-    }
 }
 .footer-weixin {
     float: left;
-    padding-left: 15px;
     position: relative;
 
     span {
@@ -108,11 +79,11 @@
     }
 }
 .footer-follow {
-    padding-top: 10px;
+    padding-top: 20px;
 }
 .footer-follow-tip {
-    font-size: 12px;
-    color:  #999;
+    font-size:14px;
+    line-height:19px;
 }
 
 
