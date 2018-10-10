@@ -47,6 +47,10 @@ module.exports = {
       zh: "Download the app to open an account",
       en: "Download the app to open an account"
     },
+    link_register: {
+      zh: "Register to open an account online",
+      en: "Register to open an account online"
+    },
     newhome_10: {
       zh: "复制跟单",
       en: "Self-directed and copy trading"
