@@ -1,13 +1,16 @@
 .footer-wrap {
     background-color: $gray-base;
     color: $gray-light;
-
+    .footer-container {
+        width: 1300px;
+    }
     h2, h3 {
         margin: 0px;
         font-weight: normal;
     }
 
     .contact-us {
+        float: left;
         h2 {
             p {
                 font-size:14px;
@@ -20,20 +23,32 @@
         }
     }
     .link-list {
-        h2 {
-            p {
-                font-size:20px;
-                font-weight:500;
-                line-height:27px;
+        float: right;
+        overflow: hidden;
+        .link-list__item {
+            float: left;
+            margin: 0 80px;
+            h2 {
+                p {
+                    font-size:20px;
+                    font-weight:500;
+                    line-height:27px;
+                }
             }
-        }
-        a{
-            color: $white-50;
-            font-size: 14px;
+            h3 {
+                a{
+                    color: $white-50;
+                    font-size: 14px;
 
-            &:hover {
-                color: $brand-primary;
+                    &:hover {
+                        color: $brand-primary;
+                    }
+                }
             }
+           &:last-child {
+               margin-right: 0;
+           }
+
         }
     }
     .footer_con {
@@ -44,6 +59,7 @@
     }
     .scb-fca{
         overflow: hidden;
+        padding-bottom: 80px;
         > div{
             float: right;
             p {
@@ -54,7 +70,9 @@
         
     }
 }
-
+.img-20 {
+    height: 20px;
+}
 .footer-weibo {
     position: relative;
     float: left;
@@ -64,14 +82,12 @@
 .footer-weixin {
     float: left;
     position: relative;
-
     span {
         display: none;
         position: absolute;
         left: 108%;
         top: -70%;
     }
-
     &:hover {
         span {
             display: block;

@@ -386,6 +386,7 @@
                     tip29: {zh: "您好，您上传的身份信息已经通过审核，请放心交易", en: "The identity information you uploaded has been approved. Please feel free to trade."},
                     transaction: {zh: "交易提醒", en: "Transaction"},
                     system: {zh: "系统提醒", en: "System"},
+                    systemMessages: {zh: "系统消息", en: "System messages"},
                     tip34: {zh: "您的账户尚未完成认证审核，将无法进行交易和资金相关操作，点击此处完成审核。", en: "This account has not yet been certified, trading and money-related operations will not be possible，click here to complete the review."},
                     tip35: {zh: "您当前账户为体验金账户，升级至真实账户只需两步：", en: "Your current account is an experiential account, which can be upgraded to live account in two steps:"},
                     tip36: {zh: "完整填写个人信息", en: "Complete personal information"},

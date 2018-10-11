@@ -1,7 +1,7 @@
 <div class="footer-wrap">
-    <div class="container">
+    <div class="container footer-container">
         <div class="row mg-tp-50">
-            <div class="<%= lang.cnOrEn('col-xs-6', 'col-xs-4')%> contact-us">
+            <div class="contact-us">
             <%if (req.host.indexOf('global') == -1) {%>
                 <h2>
                     <p>
@@ -18,11 +18,11 @@
                 <ul class="pd-tp-20 clearfix">
                     <li class="footer-weibo">
                         <a href="http://weibo.com/TigerWit?refer_flag=1001030102_&is_hot=1" target="_blank">
-                            <img src="/images/footer-weibo.png">
+                            <img class="img-20" src="/white_label/footer/footer-icon-weibo.png">
                         </a>
                     </li>
                     <li class="footer-weixin">
-                        <img src="/images/footer-weixin.png">
+                        <img class="img-20" src="/white_label/footer/footer-icon-weChat.png">
                         <span>
                             <img src="/images/footer-weixin-code.png">
                         </span>
@@ -30,104 +30,107 @@
                 </ul>
             <%}%>
             <%if (req.host.indexOf('global') != -1) {%>
-            <ul class="pd-tp-20 clearfix">
-                <li class="footer-weibo">
-                    <a href="" target="_blank">
-                        <img src="/white_label/footer/footer-icon—face-book.png">
-                    </a>
-                </li>
-                <li class="footer-weixin">
-                    <img src="/white_label/footer/footer-icon—twitter.png">
-                    <!-- <span>
-                        <img src="/images/footer-weixin-code.png">
-                    </span> -->
-                </li>
-            </ul>
+                <ul class="pd-tp-20 clearfix">
+                    <li class="footer-weibo">
+                        <a href="" target="_blank">
+                            <img class="img-20" src="/white_label/footer/footer-icon-face-book.png">
+                        </a>
+                    </li>
+                    <li class="footer-weixin">
+                        <img class="img-20" src="/white_label/footer/footer-icon-twitter.png">
+                        <!-- <span>
+                            <img src="/images/footer-weixin-code.png">
+                        </span> -->
+                    </li>
+                </ul>
             <%}%>
-            <div class="footer-follow-tip pd-tp-10">
-                <p>
-                    订阅每日必读的投资干货
-                </p> 
-                <p>
-                    <!-- <i class="fa fa-envelope"></i> -->
-                    <%=lang.text("supportEmail")%>
-                </p>
-            </div>
-            </div>
-            <div class="<%= lang.text('foot13')%> link-list">
-                <h2>
-                    <p class="mg-bt-20">
-                        <span><%= lang.text("foot1")%></span>
+                <div class="footer-follow-tip pd-tp-10">
+                    <p>
+                        订阅每日必读的投资干货
+                    </p> 
+                    <p>
+                        <!-- <i class="fa fa-envelope"></i> -->
+                        <%=lang.text("supportEmail")%>
                     </p>
-                </h2>
-                <ul>
-                    <li>
-                        <h3>
-                            <a href="/web/mt4">
-                                &nbsp;<%= lang.text("foot2")%>
-                            </a>
-                        </h3>
-                    </li>
-                    <%if(lang.isCompany("tigerwit")){%>
-                    <li>
-                        <h3>
-                            <a href="/web/product/trade">
-                                &nbsp;<%= lang.text("foot3")%>
-                            </a>
-                        </h3>
-                    </li>
-                    <%}%>
-                </ul>
+                </div>
             </div>
-            <div class="col-xs-2 link-list">
-                <h2>
-                    <p class="mg-bt-20">
-                        <span><%= lang.text("foot4")%></span>
-                    </p>
-                </h2>
-                <ul>
-                    <li>
-                        <h3>
-                            <a href="/web/faq/real">
-                                &nbsp;<%= lang.text("faq")%>
-                            </a>
-                        </h3>
-                    </li>
-                    <%if(lang.currentLanguage() !== 'en'){%>
-                    
-                    <li>
-                        <h3>
-                            <a href="/help/#/help/introduce">
-                                &nbsp;<%= lang.text("foot14")%>
-                            </a>
-                        </h3>
-                    </li>
-                    <%}%>
-                </ul>
+            <div class="link-list">
+                <div class="link-list__item">
+                    <h2>
+                        <p class="mg-bt-20">
+                            <span><%= lang.text("foot1")%></span>
+                        </p>
+                    </h2>
+                    <ul>
+                        <li class="mg-bt-15">
+                            <h3>
+                                <a href="/web/mt4">
+                                    &nbsp;<%= lang.text("foot2")%>
+                                </a>
+                            </h3>
+                        </li>
+                        <%if(lang.isCompany("tigerwit")){%>
+                        <li>
+                            <h3>
+                                <a href="/web/product/trade">
+                                    &nbsp;<%= lang.text("foot3")%>
+                                </a>
+                            </h3>
+                        </li>
+                        <%}%>
+                    </ul>
+                </div>
+                <div class="link-list__item">
+                    <h2>
+                        <p class="mg-bt-20">
+                            <span><%= lang.text("foot4")%></span>
+                        </p>
+                    </h2>
+                    <ul>
+                        <li class="mg-bt-15">
+                            <h3>
+                                <a href="/web/faq/real">
+                                    &nbsp;<%= lang.text("faq")%>
+                                </a>
+                            </h3>
+                        </li>
+                        <%if(lang.currentLanguage() !== 'en'){%>
+                        
+                        <li>
+                            <h3>
+                                <a href="/help/#/help/introduce">
+                                    &nbsp;<%= lang.text("foot14")%>
+                                </a>
+                            </h3>
+                        </li>
+                        <%}%>
+                    </ul>
+                </div>
+                <div class="link-list__item">
+                    <h2>
+                        <p class="mg-bt-20">
+                            <span><%= lang.text("foot7")%></span>
+                        </p>
+                    </h2>
+                    <ul>
+                        <li class="mg-bt-15">
+                            <h3>
+                                <a href="/web/blog/agreement">
+                                    &nbsp;<%= lang.text("foot7")%>
+                                </a>
+                            </h3>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="/web/blog/trade_fee">
+                                    &nbsp;<%= lang.text("foot15")%>
+                                </a>
+                            </h3>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="<%= lang.text('foot13')%> link-list">
-                <h2>
-                    <p class="mg-bt-20">
-                        <span><%= lang.text("foot7")%></span>
-                    </p>
-                </h2>
-                <ul>
-                    <li>
-                        <h3>
-                            <a href="/web/blog/agreement">
-                                &nbsp;<%= lang.text("foot7")%>
-                            </a>
-                        </h3>
-                    </li>
-                    <li>
-                        <h3>
-                            <a href="/web/blog/trade_fee">
-                                &nbsp;<%= lang.text("foot15")%>
-                            </a>
-                        </h3>
-                    </li>
-                </ul>
-            </div>
+
             
         </div>
         <div class="footer_con mg-tp-100">
@@ -137,7 +140,7 @@
                 <a href="https://uk.tigerwit.com">https://uk.tigerwit.com</a>
             </p>
         </div>
-        <div class="scb-fca mg-bt-80">
+        <div class="scb-fca">
             <div>
                 <p>TigerWit受巴哈马证券交易委员会（SCB）的授权和监管，监管号：SIA-F185。</p>
                 <p>TigerWit受英国金融行为监管局（FCA）的授权和监管，授权编号为：679941。</p>

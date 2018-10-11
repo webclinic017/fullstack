@@ -54,12 +54,12 @@
 
         <!-- 登录后 -->
         <div class="navbar_info" ng-cloak ng-if="personalCookiesInfo.userCode">
-            <a class="navbar_info__msg" href="/space/#/space/notice/">
-                <!-- 有新消息时显示 -->
+            <!-- <a class="navbar_info__msg" href="/space/#/space/notice/">
+                有新消息时显示
                 <span class="navbar_info__number" ng-if="personal.unreadMsg.total > 0">
                     {{ personal.unreadMsg.total }}
                 </span>
-            </a>
+            </a> -->
 
             <div class="navbar_info__psl">
                 <a href="/space/#/center">
@@ -67,16 +67,15 @@
                     <img class="navbar_info__avatar" ng-show="!personal.addAvatarImg" ng-src="{{personalCookiesInfo.userAvatar}}">
                     <img class="navbar_info__avatar" ng-show="!!personal.addAvatarImg" ng-src="{{personal.addAvatarImg}}">
                     <h2 class="navbar_info__username">{{(lang.isEnglish() && personalCookiesInfo.userNameEn) ? personalCookiesInfo.userNameEn : (personalCookiesInfo.userName || '**')}}</h2>
-                </a>
-
-                <a class="navbar_info__logout" href="" ng-click="logout()">
-                    <i class="fa fa-sign-out"></i>
-                    <%= lang.text("signout")%>
-                </a>
+                </a>               
+            </div> 
+            <div class="navbar_info__logout" ng-click="logout()">
+                <!-- <i class="fa fa-sign-out"></i> -->
+                <%= lang.text("signout")%>
             </div>
         </div>
 
-        <ul class="nav navbar-nav navbar-left">
+        <ul class="nav navbar-nav">
             <li>
                 <h2>
                     <a data-navbar-trigger href="/">

@@ -101,12 +101,12 @@
             <li class="space_sidebar__nav-menu" ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
                 <a ui-sref="space.invite">{{lang.text('tigerWitID.inviteFriends.title')}}</a>
             </li>
-            <!-- <li class="space_sidebar__nav-menu" ui-sref-active="active">
+            <li class="space_sidebar__nav-menu" ui-sref-active="active">
                 <a ui-sref="space.notice.subpage({subpage: 'trade'})">
-                    系统消息
+                    {{lang.text('tigerWitID.myAccount.systemMessages')}}
                     <span class="space_sidebar__mes-num" ng-if="personal.unreadMsg.total > 0">{{ personal.unreadMsg.total }}</span>
                 </a>
-            </li> -->
+            </li>
             <li class="space_sidebar__nav-menu" ui-sref-active="active">
                 <a ui-sref="space.setting.subpage({subpage: 'name'})">{{lang.text('tigerWitID.settings.title')}}</a>
             </li>

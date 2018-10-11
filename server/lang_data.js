@@ -31,10 +31,10 @@ module.exports = function () {
             downloadGlobalAndroid: "http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
 
             // path
-            logoPathZh: indexBasePath + "/tigerwit-logo-en.png",
+            logoPathZh: indexBasePath + "/header/tigerwit-logo-en.png",
             h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            logoPathEn: indexBasePath + "/header/tigerwit-logo-en.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
             homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
             homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
@@ -68,10 +68,10 @@ module.exports = function () {
             download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
 
             // path
-            logoPathZh: indexBasePath + "/tigerwit-logo.png",
+            logoPathZh: indexBasePath + "/header/tigerwit-logo.png",
             h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            logoPathEn: indexBasePath + "/header/tigerwit-logo-en.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
             homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
             homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
@@ -106,10 +106,10 @@ module.exports = function () {
             download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.pandaforex.forex",
 
             // path
-            logoPathZh: indexBasePath + "/tigerwit-logo.png",
+            logoPathZh: indexBasePath + "/header/tigerwit-logo.png",
             h5_register_logo: indexBasePath + "/h5_register_logo_Panda.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            logoPathEn: indexBasePath + "/header/tigerwit-logo-en.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
             homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
             homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
@@ -143,10 +143,10 @@ module.exports = function () {
             download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex",
 
             // path
-            logoPathZh: indexBasePath + "/pkds-logo.png",
+            logoPathZh: indexBasePath + "/header/pkds-logo.png",
             h5_register_logo: indexBasePath + "/h5_register_logo_Pakerdawson.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-            logoPathEn: indexBasePath + "/pkds-logo.png",
+            logoPathEn: indexBasePath + "/header/pkds-logo.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
             homeTradePathZh: indexBasePath + "/index2-trade-img-pkds.png",
             homeTradePathEn: indexBasePath + "/index2-trade-img-pkds.png",
@@ -158,7 +158,7 @@ module.exports = function () {
             webAgentBecome: indexBasePath + "/become-banner-pkds.jpg",
 
             icoPath: indexBasePath + "/pkds.ico",
-            t33_logo: indexBasePath + "/pkds-logo.png"
+            t33_logo: indexBasePath + "/header/pkds-logo.png"
 
         };
 
