@@ -468,7 +468,7 @@
                 return false;
             }
             if (!($scope.account.phonePhone)) {
-                layer.msg(lang.text("actLogin16"));     //请填写正确的手机号
+                layer.msg(lang.text("register8"));     //请填写手机号
                 return false;
             }
             return true;

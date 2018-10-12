@@ -310,7 +310,7 @@
                 return false;
             }
             if (!($scope.account.step1Phone)) {
-                layer.msg(lang.text("actLogin16"));     //请填写正确的手机号
+                layer.msg(lang.text("register8"));     //请填写手机号
                 return false;
             }
             return true;
@@ -319,7 +319,7 @@
         // 验证邮箱
         function showEmaliVel () {
             if (!validator.regType.email.reg.test($scope.account.emailText)) {
-                layer.msg(lang.text("tigerWitID.login.enterCorrectEmail"));     //请填写正确的邮箱
+                layer.msg(validator.regType.email.tip);     //请填写正确的邮箱
                 return false;
             }
             return true;

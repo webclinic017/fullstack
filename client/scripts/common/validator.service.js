@@ -35,7 +35,8 @@
             },
 
             email: {
-                tip: lang.text("tigerWitID.tip.tip4"),// 邮箱前缀由字母、数字、下划线、减号、点号组成，以字母、数字结尾
+                // tip: lang.text("tigerWitID.tip.tip4"),// 邮箱前缀由字母、数字、下划线、减号、点号组成，以字母、数字结尾
+                tip: lang.text("tigerWitID.login.enterCorrectEmail"),// 请填写正确的邮箱
                 reg: /^\w+([-.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
             },
 
