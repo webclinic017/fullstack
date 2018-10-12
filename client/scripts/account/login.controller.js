@@ -397,7 +397,7 @@
         $scope.setForgetPassword = function (formName) {
             if (!$scope.loginBtnStatus) return;
             if ($scope[formName].$invalid) {
-                layer.msg(lang.text("actLogin25"));     //请输入您的账户密码
+                layer.msg(lang.text("register11"));     //请输入密码
                 return;
             }
             if($scope.account.forgetPassword !== $scope.account.forgetPassword2) {
@@ -476,6 +476,10 @@
 
         // 验证邮箱
         function showEmaliVel () {
+            if (!($scope.account.emailEmali)) {
+                layer.msg(lang.text("tigerWitID.login.enterEmail"));     //请输入邮箱
+                return false;
+            }
             if (!validator.regType.email.reg.test($scope.account.emailEmali)) {
                 layer.msg(validator.regType.email.tip);     //请填写正确的邮箱
                 return false;
