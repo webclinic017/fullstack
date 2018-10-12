@@ -112,18 +112,12 @@
             display: inline-block;
             margin-bottom: 10px;
             a {
-              width: 180px;
-              height: 50px;
               display: inline-block;
               border-radius: 4px;
               text-align: center;
               color: $brand-primary;
-              border: 1px solid $gray-dark;
               font-size: 16px;
               line-height: 50px;
-              i {
-                font-size: 22px;
-              }
             }
             p {
               margin-top: 5px;

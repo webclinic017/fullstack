@@ -24,21 +24,17 @@
                         <div class="download_banner__ctn-action">
                             <ul class="plat">
                                 <li class="phone">
-                                    <a href="<%= req.host.indexOf('global') != -1 ? lang.text('downloadGlobalAndroid') : lang.text('androidApp') %>">
-                                        <i class="fa fa-android" aria-hidden="true"></i>
-                                        <%= lang.text('downloadApp.androidVersion')%>
+                                    <a href="<%= lang.showScheme(lang.text('androidApp'), lang.text('downloadGlobalAndroid')) %>">
+                                        <img src="/white_label/download/<%= lang.showScheme('focus-icon-android-en', 'focus-icon-google-en', 'focus-icon-android-cn', 'focus-icon-google-cn') %>.png" alt="">
                                     </a>
                                     <!-- <p><%= lang.text('downloadApp.tip3')%></p> -->
                                 </li>
-                                <% if(lang.isCompany('tigerwit')){%>
                                 <li class="phone">
                                     <a href="<%= lang.text('downloadGlobalIos')%>">
-                                        <i class="fa fa-apple" aria-hidden="true"></i>
-                                        <%= lang.text('downloadApp.iPhoneVersion')%>
+                                        <img src="/white_label/download/<%= lang.cnOrEn('focus-icon-ios-cn', 'focus-icon-ios-en') %>.png" alt="">
                                     </a>
                                     <!-- <p><%= lang.text('downloadApp.tip4')%></p> -->
                                 </li>
-                                <%}%>
                             </ul>
                             <% if (req.host.indexOf('global') != -1) {%>
                             <div class="code global">
