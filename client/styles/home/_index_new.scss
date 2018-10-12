@@ -101,11 +101,11 @@
           color: rgb(36,42,54);
         }
 
-        &:last-child {
-          .tip {
-            padding-top: 35px;
-          }
-        }
+        // &:last-child {
+        //   .tip {
+        //     padding-top: 35px;
+        //   }
+        // }
       }
     }
     @include m(btn_box) {
