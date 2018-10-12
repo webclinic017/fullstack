@@ -53,7 +53,7 @@
             phoneArea2: {
                 key: '',
                 value: ''
-            }, // 手机区号+国家(无用)
+            }, // 手机区号+国家(无用只为兼容指令)
         };
         $scope.selectArea = selectPhoneArea;
         function selectPhoneArea(target){
@@ -112,22 +112,12 @@
             // }
             // 手机
             if($scope.registerStep3 == 1){
-                if(!($scope.account.phoneArea.value)){
-                    layer.msg(lang.text("tigerWitID.login.selectAreaCode"))
-                    return;
-                }
-                if (!($scope.account.step1Phone)) {
-                    layer.msg(lang.text("actLogin16"));     //请填写正确的手机号
-                    return;
-                }
+                if(!showPhoneVel()){ return };
                 phone_code = $scope.account.phoneArea.value;
                 account_num = $scope.account.step1Phone;
                 msg = lang.text('tigerWitID.login.tip6_21')
             }else if($scope.registerStep3 == 2){
-                if (!validator.regType.email.reg.test($scope.account.emailText)) {
-                    layer.msg(lang.text("tigerWitID.login.enterCorrectEmail"));     //请填写正确的邮箱
-                    return;
-                }
+                if(!showEmaliVel()){ return };
                 phone_code = ''
                 account_num = $scope.account.emailText;
                 msg = lang.text('tigerWitID.login.tip6_2')
@@ -165,10 +155,10 @@
                 layer.msg(lang.text("tigerWitID.login.selectCountry"));
                 return;
             }
-            if ($scope[formName].$invalid) {
-                layer.msg(lang.text("actLogin19"));       //请填写完整信息
-                return;
-            }
+            // if ($scope[formName].$invalid) {
+            //     layer.msg(lang.text("actLogin19"));       //请填写完整信息
+            //     return;
+            // }
             var msg;
             // // 神策统计 - 点击登录
             // if(!is_agree) {
@@ -186,6 +176,11 @@
             };
             if($scope.registerStep3 == '2'){
                 // 邮箱注册
+                if(!showEmaliVel()){ return };
+                if (!($scope.account.emailCode)) {
+                    layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
+                    return;
+                }
                 para = angular.extend({
                     account: $scope.account.emailText,
                     password: $scope.account.emailCode,
@@ -193,6 +188,11 @@
                 msg = lang.text('tigerWitID.login.tip8_21');
             }else if($scope.registerStep3 == '1'){
                 // 手机号注册
+                if(!showPhoneVel()){ return };
+                if (!($scope.account.step1Code)) {
+                    layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
+                    return;
+                }
                 para = angular.extend({
                     account: $scope.account.step1Phone,
                     password: $scope.account.step1Code,
@@ -252,7 +252,7 @@
         $scope.setPassword = function (formName) {
             if (!$scope.registerBtnStatus) return;
             if ($scope[formName].$invalid) {
-                layer.msg(lang.text('tigerWitID.login.enterPassword')); //请输入密码
+                layer.msg(lang.text('register11')); //请输入密码
                 return;
             }
             if($scope.account.step1Password !== $scope.account.step2Password) {
@@ -301,6 +301,32 @@
                     $interval.cancel($scope.codeBtnStatus[codeType].timer);
                 }
             }, 1000);
+        }
+
+        // 验证手机号与区号
+        function showPhoneVel () {
+            if(!($scope.account.phoneArea.value)){
+                layer.msg(lang.text("tigerWitID.login.selectAreaCode"))
+                return false;
+            }
+            if (!($scope.account.step1Phone)) {
+                layer.msg(lang.text("register8"));     //请填写手机号
+                return false;
+            }
+            return true;
+        }
+
+        // 验证邮箱
+        function showEmaliVel () {
+            if (!($scope.account.emailText)) {
+                layer.msg(lang.text("tigerWitID.login.enterEmail"));     //请输入邮箱
+                return false;
+            }
+            if (!validator.regType.email.reg.test($scope.account.emailText)) {
+                layer.msg(validator.regType.email.tip);     //请填写正确的邮箱
+                return false;
+            }
+            return true;
         }
     }
 })();
