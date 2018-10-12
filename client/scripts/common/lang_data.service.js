@@ -191,7 +191,7 @@
             actLogin2: {zh: "账号密码登录", en: "Password Login"},
             actLogin3: {zh: "请输入手机号码", en: "Please Type in the Phone Number"},
             actLogin4: {zh: "请输入验证码", en: "Please enter verification code"},
-            actLogin5: {zh: "获取验证码", en: "Send Code"},
+            actLogin5: {zh: "获取验证码", en: "Send code"},
             actLogin6: {zh: "后重新获取", en: "after resend"},
             actLogin7: {zh: "记住登录状态", en: "Remember login status"},
             actLogin8: {zh: "登录", en: "Login"},
@@ -241,8 +241,8 @@
                     verifyWithEmail: {zh: "邮箱获取验证码", en: "Verify with email"},
                     verifyWithPhoneNumber: {zh: "手机号获取验证码", en: "Verify with phone number"},
                     verificationCode: {zh: "请输入验证码", en: "Please enter verification code"},
-                    sendSMS: {zh: "获取验证码", en: "Send Code"}, // （手机号获取）
-                    sendCode: {zh: "获取验证码", en: "Send Code"}, // （邮箱获取）
+                    sendSMS: {zh: "获取验证码", en: "Send code"}, // （手机号获取）
+                    sendCode: {zh: "获取验证码", en: "Send code"}, // （邮箱获取）
                     keepMeLogin: {zh: "记住登录状态", en: "Keep me login"},
                     enterAccountPhoneNo: {zh: "请输入您的账号或手机号", en: "Enter account/phone No"},
                     enterAccountPhoneNoOrEmail: {zh: "请输入您的账号、手机号或邮箱", en: "Enter account/phone No. or email"},  // (global)
@@ -1203,7 +1203,7 @@
                     phoneNumErr: {zh: "手机号码不正确", en: "Phone number is not correct"},
                     phoneNumExists: {zh: "手机号已存在", en: "Phone number already exists"},
                     verifyPhoneg: {zh: "验证手机", en: "Verify phone"},
-                    sendVerificationCode: {zh: "发送验证码", en: "Send Code"},
+                    sendVerificationCode: {zh: "发送验证码", en: "Send code"},
                     residentialAddress: {zh: "居住地址", en: "Residential address"},
                     selectProvincesCities: {zh: "请选择省/市", en: "Please select provinces/cities"},
                     selectCityDistrict: {zh: "请选择市/区", en: "Please select city/district"},
