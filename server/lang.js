@@ -47,7 +47,7 @@ module.exports = function () {
         // return this;         
     }
     Lang.prototype = {
-        isCompany: function (name) {
+        isCompany: function (name) {  // 暂时无用
             var _this = this;
             if (_this.company_name == name) {
                 return true;
