@@ -28,18 +28,20 @@
 
     // 获取phonecode，默认值为 86
     var areaCode = '86'
+    var world_code = 'CN'
     var areaCodes = []
     var $areaCode = $('#areaCode')
     if($areaCode[0]){
         $areaCode.on('change', function(e){
-            areaCode = e.target.value
+            areaCode = e.target.value;
+            world_code = $(this).find('option:selected').data('code');
             $('#areaCodeShow').html(e.target.value ? '+ '+ e.target.value : 'Area Code')
         })
         publicRequest('getCountries', 'GET').then(function (data) {
             var temp = "<option value=''>"+lang.text('register.areaCode')+"</option>"
             data.data.forEach(function(item){
                 var selected = item.phone_code == 86 ? 'selected' : ''
-                temp += "<option "+ selected +" value="+ item.phone_code  +">"+ '+' + item.phone_code+ " ("+ (lang.curLang('en') ? item.name_en : item.name_cn) +")" +"</option>"
+                temp += "<option "+ selected +" value="+ item.phone_code  +" data-code="+ item.code +">"+ '+' + item.phone_code+ " ("+ (lang.curLang('en') ? item.name_en : item.name_cn) +")" +"</option>"
             })
             $('#areaCodeShow').html('+86')
             $areaCode.html(temp)
@@ -402,6 +404,7 @@
                 publicRequest('regOrLogin', 'POST', {
                     account: $("#telephone").val() || null,
                     phone_code: areaCode || null,
+                    world_code: world_code,
                     // password: $("#password").val() || null,
                     password: $("#verify_code").val() || $("#password").val() || null,
                     login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录
