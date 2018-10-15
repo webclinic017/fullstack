@@ -286,13 +286,7 @@
 </script>
 <script id="template_card_info" type="text/html">
     <option value=""><%=lang.text('third_select')%></option>
-    <$if(data.isCN){$> 
-    <option value="2"><%=lang.text('third_username8')%></option>
-    <option value="0"><%=lang.text('third_username9')%></option>
-    <option value="1"><%=lang.text('third_username10')%></option>
-    <$} else {$>
-    <option value="3"><%=lang.text('third_username11')%></option>
-    <option value="4"><%=lang.text('third_username12')%></option>
-    <option value="5"><%=lang.text('third_username13')%></option>
+    <$for (var i=0;i<data.length;i++){$>
+        <option value="<$= data[i].value$>"><$= data[i].key$></option>
     <$}$>
 </script>
