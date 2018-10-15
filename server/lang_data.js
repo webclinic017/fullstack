@@ -22,7 +22,7 @@ module.exports = function () {
             ibEmail: "support@tigerwit.com",
             telephone: "400 - 809 - 8509",
             webSite: "www.tigerwit.com",
-            webMt4Download: "https://static.tigerwitfx.com/files/tigerwit4setup.exe",
+            webMt4Download: "https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
             androidApp: versionAndroidApp,
             // download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
             // download: "http://admin-shence.tigerwit.com:8106/r/C",
