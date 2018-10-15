@@ -94,10 +94,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.4.1",
-                        description: "Update：\nChina shows the relevant data with \"red rise and green fall\";\nInternational zone show the relevant data with \"red fall and green rise\";\nAdd “update ID” function to update ID two weeks in advance before the ID expires;\nOptimize the default comment name of the autonomous trading account；\nPart UI update to optimize visual effects;\nRepair known BUG and optimize user experience.",
+                        version_name : "V2.4.3",
+                        description: "Update：\n1.Increase the cash withdrawal progress, clearly understand the withdrawal process.\n2.Repair known BUG and optimize user experience.",
                         updated_description: "70% users are using new version",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.4.1.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.4.3.apk",
                         force_update : false
                     }
                 }
@@ -113,10 +113,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.4.1",
-                        description: "本次更新：\n中国区以“红涨绿跌”展示相关数据，国际区以“红跌绿涨”展示相关数据；\n新增更新证件功能，可在身份证到期前两周更新身份证件信息；\n优化自主交易账号的默认备注名；\n部分UI更新，优化视觉效果；\n修复已知BUG，优化用户体验。",
+                        version_name : "V2.4.3",
+                        description: "本次更新：\n1.增加提现进度，清楚了解提现进程；\n2.修复已知BUG，优化用户体验；",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.4.1.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.4.3.apk",
                         force_update : false
                     }
                 }
