@@ -252,7 +252,7 @@
         $scope.setPassword = function (formName) {
             if (!$scope.registerBtnStatus) return;
             if ($scope[formName].$invalid) {
-                layer.msg(lang.text('tigerWitID.login.enterPassword')); //请输入密码
+                layer.msg(lang.text('register11')); //请输入密码
                 return;
             }
             if($scope.account.step1Password !== $scope.account.step2Password) {
@@ -310,7 +310,7 @@
                 return false;
             }
             if (!($scope.account.step1Phone)) {
-                layer.msg(lang.text("actLogin16"));     //请填写正确的手机号
+                layer.msg(lang.text("register8"));     //请填写手机号
                 return false;
             }
             return true;
@@ -318,8 +318,12 @@
 
         // 验证邮箱
         function showEmaliVel () {
+            if (!($scope.account.emailText)) {
+                layer.msg(lang.text("tigerWitID.login.enterEmail"));     //请输入邮箱
+                return false;
+            }
             if (!validator.regType.email.reg.test($scope.account.emailText)) {
-                layer.msg(lang.text("tigerWitID.login.enterCorrectEmail"));     //请填写正确的邮箱
+                layer.msg(validator.regType.email.tip);     //请填写正确的邮箱
                 return false;
             }
             return true;
