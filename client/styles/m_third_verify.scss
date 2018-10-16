@@ -422,6 +422,21 @@
     &.active {
         display: block;
     }
+    @include e(eg) {
+        margin-top: px2rem(40);
+        .tit {
+            padding-bottom: px2rem(20);
+        }
+        .item {
+            width: 25%;
+            img {
+                width: 90%;
+            }
+            p {
+                font-size: px2rem(28);
+            }
+        }
+    }
 }
 @include b(m_third_verify) {
     display: none;
