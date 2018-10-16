@@ -2,7 +2,7 @@
   .download_title {
     background-color: $gray-lightest;
     text-align: center;
-    padding: 35px 0;
+    padding: 60px 0 0 0;
     h3 {
       font-size: 36px;
       margin: 0;
@@ -67,95 +67,102 @@
     text-align: center;
   }
   .swiper-slide:nth-child(1) {
-    background: url($image-path-web + 'download_banner3.png') no-repeat top center;
+    background: url($image-white + 'download/download_banner.png') no-repeat top center;
     &.en {
-      background: url($image-path-web + 'download_banner3_en.png') no-repeat top center;
+      background: url($image-white + 'download/download_banner.png') no-repeat top center;
     }
   }
-  .swiper-slide:nth-child(2) {
-    background: url($image-path-web + 'download_banner1.png') no-repeat top center;
-  }
-  .swiper-slide:nth-child(3) {
-    background: url($image-path-web + 'download_banner2.png') no-repeat top center;
-  }
-  .swiper-slide:nth-child(4) {
-    background: url($image-path-web + 'download_banner3.png') no-repeat top center;
-  }
-  .swiper-slide:nth-child(5) {
-    background: url($image-path-web + 'download_banner1.png') no-repeat top center;
-  }
+  // .swiper-slide:nth-child(2) {
+  //   background: url($image-path-web + 'download_banner1.png') no-repeat top center;
+  // }
+  // .swiper-slide:nth-child(3) {
+  //   background: url($image-path-web + 'download_banner2.png') no-repeat top center;
+  // }
+  // .swiper-slide:nth-child(4) {
+  //   background: url($image-white + 'download/download_banner.png') no-repeat top center;
+  // }
+  // .swiper-slide:nth-child(5) {
+  //   background: url($image-path-web + 'download_banner1.png') no-repeat top center;
+  // }
   @include b(download_banner) {
     border-top: 69px solid $brand-button-color;
     color: $gray;
     width: 100%;
-    height: 516px;
+    height: 751px;
     position: relative;
     //background: url($image-path-web + 'download_banner1.png') no-repeat top center;
 
     @include e(ctn) {
       width: 100%;
-      height: 80%;
+      // height: 80%;
       position: absolute;
       z-index: 1000;
       @include m(action) {
-        margin: 0 auto;
-        padding-top: 210px;
-        padding-left: 95px;
         width: 1030px;
-        height: 100%;
-        .plat {
-          width: 180px;
+        margin: 0 auto;
+        padding-top: 155px;
+        text-align: right;
+        .content{
           display: inline-block;
-          float: left;
-          li {
-            width: 180px;
-            display: inline-block;
-            margin-bottom: 10px;
-            a {
-              display: inline-block;
-              border-radius: 4px;
-              text-align: center;
-              color: $brand-primary;
-              font-size: 16px;
-              line-height: 50px;
+          text-align: left;
+          max-width: 660px;
+          .title {
+            margin-bottom: 55px;
+            h2 {
+              font-size:57px;
+              line-height:56px;    
+              margin-bottom: 30px;        
             }
             p {
-              margin-top: 5px;
-              line-height: 12px;
-              font-size: 12px;
-              font-weight: 200;
+              font-size:28px;
+              line-height:35px;
             }
           }
-        }
-        .code {
-          float: left;
-          margin-left: 20px;
-          .img_box {
-            width: 100%;
-            height: 120px;
-            border-radius: 4px;
+          .download{
             overflow: hidden;
-            margin-bottom: 10px;
-            img {
-              display: block;
-              margin: 0 auto;
-              width: 120px;
-              
-            }
-          }
-          p {
-            text-align: center;
-            font-size: 13px;
-          }
-          &.global {
-            margin-left: 30px;
-            .img_box {
+            .plat {
               float: left;
-              width: inherit;
-              text-align: center;
-              margin-bottom: 30px;
-              margin-right: 10px;
-              overflow: inherit;
+              li {
+                margin-bottom: 27px;
+                a {
+                  display: inline-block;
+                }
+                p {
+                  margin-top: 5px;
+                  line-height: 12px;
+                  font-size: 12px;
+                  font-weight: 200;
+                }
+              }
+            }
+            .code {
+              float: left;
+              margin-left: 20px;
+              .img_box {
+                overflow: hidden;
+                margin-bottom: 10px;
+                img {
+                  display: block;
+                  margin: 0 auto;
+                  width: 163px;
+                  
+                }
+              }
+              p {
+                text-align: center;
+                font-size: 13px;
+              }
+              &.global {
+                margin-left: 30px;
+                .img_box {
+                  float: left;
+                  width: inherit;
+                  text-align: center;
+                  margin-bottom: 30px;
+                  margin-right: 10px;
+                  overflow: inherit;
+                }
+              }
             }
           }
         }

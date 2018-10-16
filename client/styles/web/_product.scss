@@ -1,7 +1,10 @@
 // 通用
 @include b(pro-public) {
-    color: $gray-darker;
-
+    color: $main-char-color-30;
+    p {
+        font-size: 18px;
+        line-height: 30px;
+    }
     @include e(forex-banner) {
         height: 320px;
         width: 100%;
@@ -35,10 +38,6 @@
         width: 100%;
         background-size: 100%;
         @include img-normal($image-path-web + "deal-banner.png");
-    }
-
-    @include e(con) {
-
     }
 
     @include e(title) {

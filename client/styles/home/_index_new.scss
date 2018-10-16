@@ -295,7 +295,7 @@
     }
   }
   @include e(float) {
-    margin-top: 100px;
+    margin-top: 70px;
     position: relative;
     border-radius: 30px;
     padding: 40px 70px;
@@ -307,7 +307,10 @@
     }
     .b {
       width: 26%;
-      margin-top: 70px;
+      position: absolute;
+      top: 50%;
+      right: 70px;
+      margin-top: -23px;
     }
     h3 {
       font-size: 40px;

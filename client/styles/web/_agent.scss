@@ -4,7 +4,6 @@
     background-image: url("/images/web/proxy-global-banner.png");
     background-size: auto 100%;
     background-position: center center;
-    margin-top: 60px;
 }
 @include b(agent) {
     margin-bottom: 50px;
@@ -195,16 +194,6 @@
             }
         }
     }
-
-    .global_proxy_content {
-        min-height: 100px;
-        background-color: #fff;
-        border-radius: 4px;
-        box-shadow: 0px 0px 3px 3px #fff;
-        width: 1030px;
-        margin: -200px auto 0px;
-        padding: 50px 30px;
-    }
     .global_proxy_title {
         margin: 0;
         color: #fff;
@@ -219,15 +208,6 @@
         color: #999;
         font-size: 16px;
         padding: 10px 0px;
-    }
-    .global_proxy_sub_title {
-        font-size: 30px;
-        height: 35px;
-        line-height: 35px;
-        span {
-            vertical-align: top;
-            padding-left: 5px;
-        }
     }
     .global_proxy_lst {
         color: #999;

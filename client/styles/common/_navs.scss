@@ -2,7 +2,7 @@
 // Navs
 // --------------------------------------------------
 .has_navBar{
-    padding-top: 69px;
+    padding-top: $navbar-height;
 }
 
 .nav {
@@ -35,7 +35,7 @@
     @extend .clearfix;
     position: relative;
     // min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
-    height: 69px;
+    height: $navbar-height;
     border-radius: 0;
     background-color: #141414;
 
@@ -44,7 +44,7 @@
     @extend .clearfix;
     position: relative;
     // min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
-    height: 69px;
+    height: $navbar-height;
     border-radius: 0;
     @include img-normal($image-path-base + "navbar-bg.png");
 
@@ -61,7 +61,7 @@
     .lang {
         position: relative;
         display: inline-block;
-        height: 69px;
+        height: $navbar-height;
         margin-left: 9px;
 
         &:hover {
@@ -127,7 +127,7 @@
 .select-country{
     float: right;
     position: relative;
-    height: 69px;
+    height: $navbar-height;
     margin-left: 15px;
     @include e(title){
         color: #fff;
@@ -288,22 +288,22 @@
 }
 
 // Brand/project name
-.navbar-brand {
-    float: left;
-    padding: $navbar-padding-top $navbar-padding-horizontal;
-    font-size: 18px;
-    line-height: $line-height-computed;
-    height: $navbar-height;
+// .navbar-brand {
+//     float: left;
+//     padding: $navbar-padding-top $navbar-padding-horizontal;
+//     font-size: 18px;
+//     line-height: $line-height-computed;
+//     height: $navbar-height;
 
-    &:hover,
-    &:focus {
-        text-decoration: none;
-    }
+//     &:hover,
+//     &:focus {
+//         text-decoration: none;
+//     }
 
-    > img {
-        display: block;
-    }
-}
+//     > img {
+//         display: block;
+//     }
+// }
 
 
 .navbar-nav {
@@ -325,8 +325,8 @@
 
             &:hover,
             &:active {
-                color: $brand-primary;
-                border-bottom-color: $brand-primary;
+                color: $primary-darker;
+                border-bottom-color: $primary-darker;
             }
         }
     }
@@ -336,13 +336,13 @@
         &:hover,
         &:active,
         &:focus {
-            color: $brand-primary;
-            border-bottom-color: $brand-primary;
+            color: $primary-darker;
+            border-bottom-color: $primary-darker;
         }
     }
 
     .dropdown-menu {
-        top: 69px;
+        top: $navbar-height;
     }
 }
 

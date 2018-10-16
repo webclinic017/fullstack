@@ -127,10 +127,13 @@ $image-path-master:          "/images/master/";
 $image-path-account:         "/images/account/";
 $image-path-about_us:        "/images/about_us/";
 $image-path-web:             "/images/web/";
-$image-path-study:             "/images/study/";
+$image-path-study:           "/images/study/";
 $image-path-media:           "/images/media/";
 $icon-path-forex:            "/images/icons-forex/";
 $icon-path-bank:             "/images/icons-bank/";
+
+// 新增
+$image-white:               "/white_label/";
 
 //== Icon name
 $forex-names: audcad, audchf, audjpy, audnzd, audusd, cadchf, cadjpy, chfjpy, dax,
@@ -203,8 +206,8 @@ $container-lg:                      1350px !default;
 $container-main:                    1060px !default;
 
 //== Navs
-$navbar-height:                     84px !default;
-$navbar-line-height:                84px !default;
+$navbar-height:                     69px !default;
+$navbar-line-height:                69px !default;
 $navbar-border-radius:              $border-radius-base !default;
 $navbar-margin-horizontal:          15px !default;
 $navbar-padding-horizontal:         0 !default;
@@ -357,6 +360,7 @@ $base-trans-time:                      0.22s;
 
 // 登录页新版配色
 $main-color:                        #FFD521;
+$primary-darker:                    #ffd933;
 $main-char-color-100:               #212c3f;
 $main-char-color-50:                #90959f;
 $main-char-color-30:                #bcbfc5;
@@ -370,3 +374,7 @@ $bg-f1:                             #f1f1f1;
 $white-100:                         #fff;
 $white-50:                          rgba(255, 255, 255, 0.5);
 $white-30:                          rgba(255, 255, 255, 0.3);
+$new-body:                          rgba(187,196,215,0.1);
+
+//== Background image path  /white_label
+$white_label_image:            "/white_label/";

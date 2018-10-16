@@ -48,16 +48,19 @@
 
         &:hover,
         &:focus {
-            text-decoration: none;
+            // text-decoration: none;
             color: $gray-base;
             background-color: $main-color;
-            border-bottom-color: $brand-primary;
+            // border-bottom-color: $brand-primary;
         }
     }
-
-    > li:last-child {
-       > h2 > a {
-            border-bottom: none;
-        }
+    > li.active >h2 > a {
+        color: $gray-base;
+        background-color: $main-color;
     }
+    // > li:last-child {
+    //    > h2 > a {
+    //         border-bottom: none;
+    //     }
+    // }
 }
