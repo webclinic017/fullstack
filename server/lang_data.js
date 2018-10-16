@@ -265,7 +265,7 @@ module.exports = function () {
         "CFD": { "en": "CFD", "zh": "差价合约" },
         "faq": { "en": "FAQ", "zh": "常见问题" },
         "login": { "en": "Login", "zh": "登录" },
-        "register": { "en": "Register", "zh": "注册" },
+        "register": { "en": "Open an account", "zh": "注册" },
         "signout": { "en": "sign out", "zh": "退出" },
         "password": { "en": "Password", "zh": "密码" },
         "username": { "en": "Username", "zh": "昵称" },
