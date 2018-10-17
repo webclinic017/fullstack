@@ -49,7 +49,7 @@ module.exports = {
     },
     link_register: {
       zh: "注册交易账户",
-      en: "Register to open an account"
+      en: "Open an account"
     },
     newhome_10: {
       zh: "复制跟单",
@@ -165,7 +165,7 @@ module.exports = {
     },
     newhome_35_1: {
       zh: "现在立刻下载APP，",
-      en: "Download the app and open an USD2,000 Experience account instantly."
+      en: "Download the app and open a USD2,000 Experience account instantly."
     },
     newhome_35_2: {
       zh: "即可享受2000美元账户体验金。",
