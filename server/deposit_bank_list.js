@@ -3,7 +3,7 @@ module.exports = [
       bank_id: 'ICBC',
       bank_name: '工商银行',
       img_url: 'https://static.tigerwitfx.com/downloads/static/deposit_bank/icbc.png',
-      bank_status: 'static_select',  //区分不同页面列表  static >> /m/deposit/pay, select >> /m/deposit/pay_select, selectV2 >> /m/deposit/pay_select_v2
+      bank_status: 'static_select_selectV3',  //区分不同页面列表  static >> /m/deposit/pay, select >> /m/deposit/pay_select, selectV2 >> /m/deposit/pay_select_v2, selectV3 >> /m/deposit/pay_select_v3
       select: 'pc',
       special: false
   },
@@ -11,7 +11,7 @@ module.exports = [
       bank_id: 'ABC',
       bank_name: '农业银行',
       img_url: 'https://static.tigerwitfx.com/downloads/static/deposit_bank/abc.png',
-      bank_status: 'static_select_selectV2',
+      bank_status: 'static_select_selectV2_selectV3',
       select: 'pc',
       special: false
   },
@@ -27,7 +27,7 @@ module.exports = [
       bank_id: 'CCB',
       bank_name: '建设银行',
       img_url: 'https://static.tigerwitfx.com/downloads/static/deposit_bank/ccb.png',
-      bank_status: 'static_select_selectV2',
+      bank_status: 'static_select_selectV2_selectV3',
       select: 'pc',
       special: false
   },
@@ -35,7 +35,7 @@ module.exports = [
     bank_id: 'GDB',
     bank_name: '广发银行',
     img_url: 'https://static.tigerwitfx.com/downloads/static/deposit_bank/gdb.png',
-    bank_status: 'select_selectV2',
+    bank_status: 'select_selectV2_selectV3',
     select: 'pc',
     special: false
   },
@@ -59,7 +59,7 @@ module.exports = [
       bank_id: 'CMBC',
       bank_name: '民生银行',
       img_url: 'https://static.tigerwitfx.com/downloads/static/deposit_bank/cmbc.png',
-      bank_status: 'static_selectV2',
+      bank_status: 'static_selectV2_selectV3',
       select: 'pc',
       special: false
   },
@@ -91,7 +91,7 @@ module.exports = [
       bank_id: 'BOB',
       bank_name: '北京银行',
       img_url: 'https://static.tigerwitfx.com/downloads/static/deposit_bank/bob.png',
-      bank_status: 'static_selectV2',
+      bank_status: 'static_selectV2_selectV3',
       select: 'pc',
       special: false
   },
@@ -115,7 +115,7 @@ module.exports = [
       bank_id: 'PSBC',
       bank_name: '中国邮政储蓄银行',
       img_url: 'https://static.tigerwitfx.com/downloads/static/deposit_bank/psbc.png',
-      bank_status: 'static_select_selectV2',
+      bank_status: 'static_select_selectV2_selectV3',
       select: 'pc',
       special: false
   },
@@ -131,7 +131,7 @@ module.exports = [
       bank_id: 'CEB',
       bank_name: '光大银行',
       img_url: 'https://static.tigerwitfx.com/downloads/static/deposit_bank/ceb.png',
-      bank_status: 'static_select_selectV2',
+      bank_status: 'static_select_selectV2_selectV3',
       select: 'pc',
       special: true
   }
