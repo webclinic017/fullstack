@@ -8,6 +8,16 @@
         width: 1201px;
         margin: -200px auto 0px;
         padding: 46px 35px;
+        p {
+            color: $main-char-color-50;
+            font-size: 18px;
+            line-height: 30px;
+        }
+        .font-tip {
+            font-size:14px;
+            color:rgba(36,42,54,0.7);
+            line-height:33px;
+        }
     }
     @include e(circle-title) {
         font-size:32px;
@@ -38,12 +48,13 @@
             visibility: hidden;
         }
         @include m(item) {
-            padding: 0 30px 30px 0;
-            &:nth-child(3n+3) {
-                padding-right: 0;
+            padding: 0;
+            &:nth-child(3n+3) > div {
+                margin-right: 0;
             }
             > div {
                 @include img-normal($white_label_image + "semicircle.png");
+                margin: 0 30px 30px 0;
                 background-position: 0 0;
                 background-repeat: no-repeat;
                 background-color:$primary-darker;
@@ -65,6 +76,7 @@
             }
         }
     }
+    
 }
 
 

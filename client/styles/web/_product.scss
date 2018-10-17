@@ -1,10 +1,5 @@
 // 通用
 @include b(pro-public) {
-    color: $main-char-color-30;
-    p {
-        font-size: 18px;
-        line-height: 30px;
-    }
     @include e(forex-banner) {
         height: 320px;
         width: 100%;
