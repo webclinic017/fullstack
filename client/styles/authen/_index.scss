@@ -114,3 +114,19 @@
         }
     }
 }
+@include b(authen_card_eg) {
+    width: 800px;
+    .tit {
+        font-size: 16px;
+        padding: 20px 0px 10px;
+    }
+    .item {
+        margin-right: 20px;
+        img {
+            width: 160px;
+        }
+        p {
+            padding-top: 6px;
+        }
+    }
+}
