@@ -511,7 +511,8 @@
                 $scope.completeInfo[type],
                 $cookies['code_token'],
                 1,
-                $scope.completeInfo.areaCode.value.replace(/\+/gi, '') || null
+                $scope.completeInfo.areaCode.value.replace(/\+/gi, '') || null,
+                type == 'phone' ? 1 : 2
             ).then(function(data){
                 $scope.completeInfo.hasSendCode = data.is_succ
                 $scope.codeErr[type] = {
@@ -560,7 +561,7 @@
                 account.checkCode(
                     $scope.personal.phone ? $scope.completeInfo.email : $scope.completeInfo.phone,
                     $scope.personal.phone ? $scope.completeInfo.emailCode : $scope.completeInfo.phoneCode,
-                    '',
+                    $scope.personal.phone ? 2 : 1,
                     $scope.personal.phone ? null : $scope.completeInfo.areaCode.value.replace(/\+/gi, '')
                 ).then(function(data){
                     if(data.is_succ){
