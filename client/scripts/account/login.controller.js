@@ -116,7 +116,7 @@
         // 获取验证码
         $scope.getCaptcha = function (formName, name) {
             var type; // 类型
-            var phone_code, account_num, msg; // 区号， 账号， msg
+            var phone_code, account_num, msg, account_type = 0; // 区号， 账号， msg
 
             // if ($scope[formName][phoneName].$invalid) {
             //     layer.msg(lang.text("actLogin3"));    //请填写手机号
@@ -131,11 +131,13 @@
                 if(!showPhoneVel()){ return };
                 phone_code = $scope.account.phoneArea.value;
                 account_num = $scope.account.phonePhone;
+                account_type = 1;
                 msg = lang.text('tigerWitID.login.tip6_21')
             }else if($scope.loginStep3 == 1){
                 if(!showEmaliVel()){ return };
-                phone_code = ''
+                phone_code = '';
                 account_num = $scope.account.emailEmali;
+                account_type = 2;
                 msg = lang.text('tigerWitID.login.tip6_2')
             }
             token = $cookies['code_token'];
@@ -152,7 +154,7 @@
                     break;
             }
 
-            account.sendCode(account_num, token, type, phone_code).then(function (data) {
+            account.sendCode(account_num, token, type, phone_code, account_type).then(function (data) {
                 // console.log(data);
                 if (data.is_succ) {
                     countDown(name);
@@ -364,6 +366,8 @@
             //     layer.msg(lang.text("actLogin19"));   //请填写完整信息
             //     return;
             // }
+            var phone_code = null;
+            var account_type = 0;
             if($scope.loginStep3 == 1){
                 // 邮箱登录
                 if(!showEmaliVel()){ return };
@@ -371,6 +375,8 @@
                     layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
                     return;
                 }
+                phone_code = null;
+                account_type = 2;
             } else {
                 // 手机登录
                 if(!showPhoneVel()){ return };
@@ -378,11 +384,12 @@
                     layer.msg(lang.text('tigerWitID.login.verificationCode'));     //请填写验证码
                     return;
                 }
-
+                phone_code = $scope.account.phoneArea.value;
+                account_type = 1;
             }
             layer.load();
             $scope.loginBtnStatus = false;
-            account.checkCode($scope.account[name], $scope.account[code],'', $scope.loginStep3 == 1 ? null : $scope.account.phoneArea.value).then(function (data) {
+            account.checkCode($scope.account[name], $scope.account[code], account_type, phone_code).then(function (data) {
                 layer.closeAll();
                 $scope.loginBtnStatus = true;
 
