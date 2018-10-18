@@ -15,17 +15,8 @@
             </div>
 
             <div class="new_body" ng-controller="WebProductController">
-                <div class="global_proxy_banner"></div>
+                <div class="product_banner"></div>
                 <%- include('./product/' + pageInfo.id + '.html') %>
-
-                <div class="layout-2" style="display: none">
-                    <div class="layout-2__side mg-tp-30">
-                        <%- include('./product/sidebar.html') %>
-                    </div>
-                    <div class="layout-2__content mg-tp-30" ng-controller="WebProductController">
-                       <%- include('./product/' + pageInfo.id + '.html') %>
-                    </div>
-                </div>
             </div>
 
 

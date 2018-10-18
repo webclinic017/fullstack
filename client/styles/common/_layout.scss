@@ -7,7 +7,7 @@
         box-shadow: 0px 0px 3px 3px #fff;
         width: 1201px;
         margin: -200px auto 0px;
-        padding: 46px 35px;
+        padding: 46px 58px;
         p {
             color: $main-char-color-50;
             font-size: 18px;
@@ -80,6 +80,7 @@
 }
 
 
+// 通用布局
 @include b(layout-1) {
     margin-top: $navbar-height;
 }

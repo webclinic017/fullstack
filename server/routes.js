@@ -612,9 +612,15 @@ module.exports = function (app) {
         }, req));
     });
 
-    app.route('/help').get(function (req, res) {
+    app.route('/web/help/:subpage(introduce|regular_web|regular_app|copy_web|copy_app|minMarket_app)').get(function (req, res) {
+        var subpage = req.params.subpage || 'introduce';
+        var pageInfo = {
+            id: subpage
+        };
         setEnvCf(req, res);
-        res.render('web/help.html', extendPublic({}, req));
+        res.render('web/help.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
     });
 
     app.route('/api_test').get(function (req, res, next) {
