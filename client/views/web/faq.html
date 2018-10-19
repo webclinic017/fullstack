@@ -15,14 +15,12 @@
                 <% include /common/nav/web.header.html %>
             </div>
             
-            <div class="body" style="background-color: #fafafa">
-                <div class="layout-2" style="margin-bottom: 200px;">
-                    <div class="layout-2__side mg-tp-30">
-                        <%- include('./faq/sidebar.html') %>
-                    </div>
-                    <div class="layout-2__content mg-tp-30">
-                        <%- include('./faq/' + pageInfo.id + '.html') %>
-                    </div>
+            <div class="new_body">
+                <div class="help_banner"></div>
+                <div class="mg-200__bg">
+                    <h3 class="mg-200__circle-title" ng-bind="lang.text('faq')"></h3>
+
+                    <%- include('./faq/' + pageInfo.id + '.html') %>
                 </div>
             </div>
        <% include /common/vendor/web.js.html %>
