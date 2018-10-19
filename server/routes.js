@@ -422,6 +422,18 @@ module.exports = function (app) {
             banklistStatus: banklistStatus
         }, req));
     });
+    app.route('/m/deposit/pay_select_v3').get(function (req, res) {
+        setEnvCf(req, res);
+        var banklistStatus = 'selectV3';
+        var platform = 'pc';
+        if (isMobile(req)) {
+            platform = 'mobile';
+        }
+        res.render('m_vue/m_deposit_pay', extendPublic({
+            platform: platform,
+            banklistStatus: banklistStatus
+        }, req));
+    });
     /* H5 充值成功 */
     app.route('/m/deposit/success').get(function (req, res) {
         setEnvCf(req, res);

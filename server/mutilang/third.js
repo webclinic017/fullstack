@@ -158,5 +158,10 @@ module.exports = {
     third_verify6: {
       zh: "请留意查询您的审核状态。",
       en: "Please pay attention to check your application status."
-    }
+    },
+    third_cardEgTitle: {zh: "拍摄示例", en: "Shooting examples"},
+    third_cardEgTip1: {zh: "标准", en: "Standard"},
+    third_cardEgTip2: {zh: "图像过小", en: "Picture small"},
+    third_cardEgTip3: {zh: "图像模糊", en: "Picture fuzzy"},
+    third_cardEgTip4: {zh: "照片反光", en: "Picture reflective"},
 }

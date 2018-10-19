@@ -405,7 +405,12 @@
                     unableOperate_1: {zh: "无法进行", en: "Unable to operate "},
                     unableOperate_2: {zh: "操作", en: " "},
                     agentManagement: {zh: "代理商管理后台", en: "Agent management"},
-                    unableCountry: {zh: "【暂不提供该国家的相关服务。】", en: "We are unable to offer trading <br> services for this country."}
+                    unableCountry: {zh: "【暂不提供该国家的相关服务。】", en: "We are unable to offer trading <br> services for this country."},
+                    cardEgTitle: {zh: "拍摄示例", en: "Shooting examples"},
+                    cardEgTip1: {zh: "标准", en: "Standard"},
+                    cardEgTip2: {zh: "图像过小", en: "Picture small"},
+                    cardEgTip3: {zh: "图像模糊", en: "Picture fuzzy"},
+                    cardEgTip4: {zh: "照片反光", en: "Picture reflective"},
                 },
                 tip: {
                     tip1: {zh: "身份证号为 15 或 18 位数字，最后一位为字母时用大写 X", en: "ID number is 15 or 18 digits, with a capital X when it for the last letter"},
