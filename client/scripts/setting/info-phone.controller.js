@@ -75,9 +75,9 @@
             token = $cookies['code_token'];
             var tmp;
             if ($scope.voiceCaptcha) {
-                tmp = account.sendCode($scope.phone.phoneNew, token, 3);
+                tmp = account.sendCode($scope.phone.phoneNew, token, 3, '', 1);
             } else {
-                tmp = account.sendCode($scope.phone.phoneNew, token, 3);  
+                tmp = account.sendCode($scope.phone.phoneNew, token, 3, '', 1);  
             }
 
             tmp.then(function (data) {
