@@ -14,15 +14,9 @@
                 <% include /common/nav/web.header.html %>
             </div>
 
-            <div class="body" style="background-color: #fafafa">
-                <div class="layout-2">
-                    <div class="layout-2__side mg-tp-30">
-                        <%- include('./product/sidebar.html') %>
-                    </div>
-                    <div class="layout-2__content mg-tp-30" ng-controller="WebProductController">
-                       <%- include('./product/' + pageInfo.id + '.html') %>
-                    </div>
-                </div>
+            <div class="new_body" ng-controller="WebProductController">
+                <div class="product_banner"></div>
+                <%- include('./product/' + pageInfo.id + '.html') %>
             </div>
 
 
@@ -45,6 +39,7 @@
         <script src="/scripts/common/global.controller.js"></script>
         <script src="/scripts/common/bind_html.filter.js"></script>
         <script src="/scripts/common/product.service.js"></script>
+        <script src="/scripts/common/highest-match.directive.js"></script>
         <script src="/scripts/web/product.controller.js"></script>
 
         <!-- endbuild -->

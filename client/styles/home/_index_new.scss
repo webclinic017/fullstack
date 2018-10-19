@@ -295,7 +295,7 @@
     }
   }
   @include e(float) {
-    margin-top: 100px;
+    margin-top: 70px;
     position: relative;
     border-radius: 30px;
     padding: 40px 70px;
@@ -307,7 +307,10 @@
     }
     .b {
       width: 26%;
-      margin-top: 70px;
+      position: absolute;
+      top: 50%;
+      right: 70px;
+      margin-top: -23px;
     }
     h3 {
       font-size: 40px;
@@ -318,6 +321,20 @@
       color: $main-char-color-50;
       padding-right: 100px;
     }
+  }
+  @include e(camber){
+    overflow: hidden;
+    margin-top: -200px;
+    &::after{
+      content:'';
+      height: 200px;
+      background-color: #222;
+      border-top-right-radius: 100%;
+      border-top-left-radius: 100%;
+      margin: 0 -100px 0;
+      display: block;
+    }
+
   }
 }
 

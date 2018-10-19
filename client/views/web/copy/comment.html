@@ -1,5 +1,5 @@
-<div class="pro-comment" ng-controller="ProductCommentController" ng-cloak>
-    <h3 class="pro-comment__title">每日汇评</h3>
+<div class="pro-comment mg-200__bg" ng-controller="ProductCommentController" ng-cloak>
+    <h3 class="mg-200__circle-title pd-bt-20">每日汇评</h3>
     <div class="pro-comment__loading" ng-show="loading">
         <img src="/ngsrc/loading.gif">
     </div>
@@ -11,7 +11,7 @@
                     <span class="morning" ng-show="comment.morning_night == 1">早评</span>
                     <span class="night" ng-show="comment.morning_night == 2">晚评</span>
                 </div>
-                <div class="pro-comment__details-content">{{ comment.content.substring(0,50) }}...</div>
+                <div class="pro-comment__details-content">{{ comment.content.substring(0,70) }}...</div>
                 <div class="pro-comment__details-date">
                     <span>分析师{{comment.analyst}}专栏</span>
                     <span class="time">{{comment.issue_date}}</span>

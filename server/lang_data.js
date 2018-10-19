@@ -20,7 +20,7 @@ module.exports = function () {
             titleEn: "TigerWit",
             supportEmail: "support@tigerwit.com",
             ibEmail: "support@tigerwit.com",
-            telephone: "400 - 809 - 8509",
+            telephone: "400-809-8509",
             webSite: "www.tigerwit.com",
             webMt4Download: "https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
             androidApp: versionAndroidApp,
@@ -31,10 +31,10 @@ module.exports = function () {
             downloadGlobalAndroid: "http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
 
             // path
-            logoPathZh: indexBasePath + "/tigerwit-logo-en.png",
+            logoPathZh: indexBasePath + "/header/tigerwit-logo-en.png",
             h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            logoPathEn: indexBasePath + "/header/tigerwit-logo-en.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
             homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
             homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
@@ -61,17 +61,17 @@ module.exports = function () {
             titleEn: "lonfx",
             supportEmail: "support@tigerwit.com",
             ibEmail: "support@tigerwit.com",
-            telephone: "400 - 809 - 8509",
+            telephone: "400-809-8509",
             webSite: "lonfx.tigerwit.com",
             webMt4Download: "https://static.tigerwitfx.com/files/tigerwit_setup_151111.exe",
             androidApp: versionAndroidApp,
             download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
 
             // path
-            logoPathZh: indexBasePath + "/tigerwit-logo.png",
+            logoPathZh: indexBasePath + "/header/tigerwit-logo.png",
             h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            logoPathEn: indexBasePath + "/header/tigerwit-logo-en.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
             homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
             homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
@@ -106,10 +106,10 @@ module.exports = function () {
             download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.pandaforex.forex",
 
             // path
-            logoPathZh: indexBasePath + "/tigerwit-logo.png",
+            logoPathZh: indexBasePath + "/header/tigerwit-logo.png",
             h5_register_logo: indexBasePath + "/h5_register_logo_Panda.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            logoPathEn: indexBasePath + "/header/tigerwit-logo-en.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
             homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
             homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
@@ -143,10 +143,10 @@ module.exports = function () {
             download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex",
 
             // path
-            logoPathZh: indexBasePath + "/pkds-logo.png",
+            logoPathZh: indexBasePath + "/header/pkds-logo.png",
             h5_register_logo: indexBasePath + "/h5_register_logo_Pakerdawson.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-            logoPathEn: indexBasePath + "/pkds-logo.png",
+            logoPathEn: indexBasePath + "/header/pkds-logo.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
             homeTradePathZh: indexBasePath + "/index2-trade-img-pkds.png",
             homeTradePathEn: indexBasePath + "/index2-trade-img-pkds.png",
@@ -158,7 +158,7 @@ module.exports = function () {
             webAgentBecome: indexBasePath + "/become-banner-pkds.jpg",
 
             icoPath: indexBasePath + "/pkds.ico",
-            t33_logo: indexBasePath + "/pkds-logo.png"
+            t33_logo: indexBasePath + "/header/pkds-logo.png"
 
         };
 
@@ -378,7 +378,7 @@ module.exports = function () {
         "foot_37": { "zh": "TigerWit Limited （英国）和TigerWit Limited （巴哈马）是TigerWit Limited的子公司。TigerWit Limited （英国）由英国金融行为监管局（FCA）监管，授权代表编号为：679941。TigerWit Limited （巴哈马）由巴哈马证券委员会（SCB）监管，监管号为：SIA-F185。", "en": "TigerWit Limited (UK) and TigerWit Limited (Bahamas) are subsidiaries of TigerWit Holding Limited.TigerWit Limited (UK) is regulated by Financial Conduct Authority（FCA）, license number 679941. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas（SCB）, license number SIA-F185."},
         //footer 页脚修改 － 2018.09.17
         "foot_38": {"zh": "Risk Warning:", "en": "Risk Warning:"},
-        "foot_39": {"zh": "Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: https://uk.tigerwit.com", "en": "Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: "},
+        "foot_39": {"zh": "Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: ", "en": "Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: "},
         "foot_42": {"zh": "你要在线咨询", "en": "Which kind of consultation do you need?"},
         "foot_43": {"zh": "普通咨询", "en": "Normal consultation"},
         "foot_44": {"zh": "我是普通用户，咨询交易相关的问题", "en": "I'm a normal user,"},

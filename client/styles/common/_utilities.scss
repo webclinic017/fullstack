@@ -5,6 +5,11 @@
 .body {
     min-height: 69px;
 }
+.new_body {
+    @extend .pd-bt-50;
+    min-height: 69px;
+    background: $new-body;
+}
 //== 定位
 .relative {
     position: relative !important;

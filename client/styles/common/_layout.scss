@@ -1,11 +1,110 @@
+// 通用样式
+@include b(mg-200) {
+    @include e(bg) {
+        min-height: 100px;
+        background-color: #fff;
+        border-radius: 6px;
+        box-shadow: 0px 0px 3px 3px #fff;
+        width: 1201px;
+        margin: -200px auto 0px;
+        padding: 46px 58px;
+        p {
+            color: $main-char-color-50;
+            font-size: 18px;
+            line-height: 30px;
+        }
+        .font-tip {
+            font-size:14px;
+            color:rgba(36,42,54,0.7);
+            line-height:33px;
+        }
+    }
+    @include e(circle-title) {
+        font-size:32px;
+        color:$main-char-color-100;
+        line-height:43px;
+        position: relative;
+        padding-left: 50px;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 7px;
+            left: 0;
+            width:30px;
+            height:30px;
+            border:6px solid $primary-darker;
+            border-radius: 50px;
+            display: inline-block;
+        }
+    }
+    @include e(two-title) {
+        font-size:24px;
+        font-weight:600;
+        color:rgba(33,44,63,1);
+        line-height:33px;
+    }
+    @include e(three-title) {
+        font-size:24px;
+        font-weight:600;
+        color:rgba(33,44,63,1);
+        line-height:33px;
+        border-bottom: 1px solid #ebebeb;
+    }
+    @include e(list-bg) {
+        &.none {
+            visibility: hidden;
+        }
+        @include m(item) {
+            padding: 0;
+            &:nth-child(3n+3) > div {
+                margin-right: 0;
+            }
+            > div {
+                @include img-normal($white_label_image + "semicircle.png");
+                margin: 0 30px 30px 0;
+                background-position: 0 0;
+                background-repeat: no-repeat;
+                background-color:$primary-darker;
+                border-radius:30px;
+                padding: 11px 29px 31px;
+                .title {
+                    font-size:18px;
+                    font-weight:600;
+                    color:rgba(33,44,63,1);
+                    line-height:33px;
+                }
+                .content {
+                    font-size:16px;
+                    font-weight:400;
+                    color:rgba(33,44,63,0.7);
+                    line-height:21px;
+                    padding-top: 17px;
+                }
+            }
+        }
+    }
+    @include e(circle) {
+        padding-left: 22px;
+        position: relative;
+        &::before{
+          content: '●';
+          position: absolute;
+          left: 0;
+          font-size: 18px;
+        }
+      }
+    
+}
+
+
+// 通用布局
 @include b(layout-1) {
-    @extend .container;
     margin-top: $navbar-height;
 }
 
 @include b(layout-2) {
     @extend .container;
-    margin-top: 69px;
+    margin-top: $navbar-height;
     padding: 0;
     @include e(side) {
         @extend .col-xs-3;
@@ -49,7 +148,7 @@
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    margin-top: 69px;
+    margin-top: $navbar-height;
     width: 1320px;
     min-height: 800px;
     @extend .clearfix;

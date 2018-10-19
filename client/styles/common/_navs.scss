@@ -2,7 +2,7 @@
 // Navs
 // --------------------------------------------------
 .has_navBar{
-    padding-top: 69px;
+    padding-top: $navbar-height;
 }
 
 .nav {
@@ -35,9 +35,8 @@
     @extend .clearfix;
     position: relative;
     // min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
-    height: 69px;
+    height: $navbar-height;
     border-radius: 0;
-    // background-color: #141414;
     background-color: #141414;
 
 }
@@ -45,7 +44,7 @@
     @extend .clearfix;
     position: relative;
     // min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
-    height: 69px;
+    height: $navbar-height;
     border-radius: 0;
     @include img-normal($image-path-base + "navbar-bg.png");
 
@@ -62,8 +61,8 @@
     .lang {
         position: relative;
         display: inline-block;
-        height: 69px;
-        margin-left: 15px;
+        height: $navbar-height;
+        margin-left: 9px;
 
         &:hover {
             .lang-menu {
@@ -74,8 +73,8 @@
         .lang-toggle {
             color: #fff;
             cursor: pointer;
-            margin-top: 24px;
-            padding: 4px 15px;
+            margin-top: 25px;
+            padding: 4px 17px 4px 7px;
             border-left: 1px solid #fff;
 
             .fa {
@@ -96,20 +95,19 @@
             overflow: hidden;
         
             li {
-                background-color: rgba(34, 33, 33, 0.8);
+                background-color: rgb(36, 42, 54);
                 padding: 8px 10px;
-                color: #fedd0a;
 
                 &:hover {
-                    background-color: #fedd0a;
+                    background-color: $main-color;
 
                     a {
-                        color: #000;
+                        color: $gray-base;
                     }
                 }
 
                 a {
-                    color: #fedd0a;
+                    color: $white-100;
                 }
             }
         }
@@ -129,7 +127,7 @@
 .select-country{
     float: right;
     position: relative;
-    height: 69px;
+    height: $navbar-height;
     margin-left: 15px;
     @include e(title){
         color: #fff;
@@ -248,7 +246,7 @@
 
     .logo {
         margin: 15px 0 0 0;
-        width: 150px;
+        height: 39px;
         // vertical-align: middle;
     }
 
@@ -290,48 +288,45 @@
 }
 
 // Brand/project name
-.navbar-brand {
-    float: left;
-    padding: $navbar-padding-top $navbar-padding-horizontal;
-    font-size: 18px;
-    line-height: $line-height-computed;
-    height: $navbar-height;
+// .navbar-brand {
+//     float: left;
+//     padding: $navbar-padding-top $navbar-padding-horizontal;
+//     font-size: 18px;
+//     line-height: $line-height-computed;
+//     height: $navbar-height;
 
-    &:hover,
-    &:focus {
-        text-decoration: none;
-    }
+//     &:hover,
+//     &:focus {
+//         text-decoration: none;
+//     }
 
-    > img {
-        display: block;
-    }
-}
+//     > img {
+//         display: block;
+//     }
+// }
 
 
 .navbar-nav {
-    float: left;
+    float: right;
     margin: 0;
-    padding-left: 206px;
-    &.navbar-right:last-child {
-        margin-right: -$navbar-padding-horizontal;
-    }
+    padding-right: 70px;
 
     > li {
         float: left;
 
         > h2 > a {
-            margin: 0 10px;
+            margin: 0 16px;
             padding: 28px 0 25px;
             border-bottom: 2px solid transparent;
             line-height: 14px;
             text-decoration: none;
             font-size: 14px;
-            color: $gray-lighter;
+            color: $white-100;
 
             &:hover,
             &:active {
-                color: $brand-primary;
-                border-bottom-color: $brand-primary;
+                color: $primary-darker;
+                border-bottom-color: $primary-darker;
             }
         }
     }
@@ -341,13 +336,13 @@
         &:hover,
         &:active,
         &:focus {
-            color: $brand-primary;
-            border-bottom-color: $brand-primary;
+            color: $primary-darker;
+            border-bottom-color: $primary-darker;
         }
     }
 
     .dropdown-menu {
-        top: 69px;
+        top: $navbar-height;
     }
 }
 
@@ -470,23 +465,23 @@
         }
 
         .signup {
-            padding: 11px 29px;
-            margin-top: 17px;
+            padding: 7px 12px;
+            margin-top: 24px;
             // width: 120px;
             line-height: 14px;
-            background: $brand-primary;
+            background: #F8E71C;
             text-decoration: none;
             text-align: center;
             font-size: 14px;
-            color: $gray-base;
+            color: $main-char-color-100;
             display: block;
         }
         .signup2{
-            padding: 11px 29px;
-            margin-top: 17px;
+            padding: 7px 12px;
+            margin-top: 24px;
             // width: 120px;
             line-height: 14px;
-            color: $brand-primary;
+            color: $white-100;
             text-decoration: none;
             text-align: center;
             font-size: 14px;
@@ -497,40 +492,41 @@
 
 //== 导航条个人信息
 @include b(navbar_info) {
-    $navbar_info_height: 45px;
+    $navbar_info_height: 32px;
 
     @extend .clearfix;
     float: right;
-
     margin-top: 15px;
 
     @include e(psl) {
+        float: left;
         text-overflow:ellipsis;
-        display: inline-block;
-        width: 125px;
-        height: $navbar_info_height;
-        vertical-align: middle;
+        padding-top: 6px;
     }
 
     @include e(avatar) {
-        float: left;
+        vertical-align: middle;
         width: $navbar_info_height;
         height: $navbar_info_height;
-        margin-right: 8px;
+        margin-right: 12px;
         border: 2px solid $brand-primary;
         border-radius: 50%;
     }
 
     @include e(username) {
         @extend .text-inline;
-        margin-bottom: 2px !important;
-        font-size: 16px;
-        font-weight: 400;
-        color: $brand-primary;
+        display: inline-block;
+        vertical-align: middle;
+        color: $white-100;
+        font-size:14px;
     }
 
     @include e(logout) {
-        color: $gray-dark;
+        float: left;
+        padding-top: 14px;
+        padding-left: 18px;
+        color: $white-100;
+        cursor: pointer;
     }
 
     @include e(msg) {

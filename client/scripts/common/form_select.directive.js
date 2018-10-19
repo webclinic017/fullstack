@@ -1,3 +1,11 @@
+/**
+ * input模拟下拉列表
+ * 传递参数
+ * no-active  因禁用readonly所以添加no-active增加是否可点击效果 true不可点击
+ * data-value
+ * data-bind-model
+ * data-disabled 对象字符串 列表中不可点击的内容，若disabled为true，不可点击，弹出msg提示
+ */
 ;
 (function () {
     'use strict';

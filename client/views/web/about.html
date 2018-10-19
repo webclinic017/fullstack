@@ -15,20 +15,17 @@
                 <% include /common/nav/web.header.html %>
             </div>
             
-            <div class="body" style="background-color: #fafafa">
-                <% if(pageInfo.id == 'liverpool') { %> 
-                    <div class="mg-tp-30">
-                        <%- include('./about/' + pageInfo.id + '.html') %>
-                    </div>
-                <% } else { %> 
-                    <div class="layout-2">
-                        <div class="layout-2__side mg-tp-30">
-                            <%- include('./about/sidebar.html') %>
-                        </div>
-                        <div class="layout-2__content mg-tp-30">
-                            <%- include('./about/' + pageInfo.id + '.html') %>
-                        </div>
-                    </div>
+            <div class="body">
+                <% if(pageInfo.id == 'liverpool') { %>
+                <div class="layout-1">
+                    <%- include('./about/' + pageInfo.id + '.html') %>
+                </div>
+                <% } else { %>
+                
+                <div class="new_body">
+                    <div class="about_banner"></div>
+                    <%- include('./about/' + pageInfo.id + '.html') %>
+                </div>
                 <% } %>
             </div>
         <% include /common/vendor/web.js.html %>
