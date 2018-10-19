@@ -15,19 +15,14 @@
                 <% include /common/nav/web.header.html %>
             </div>
             <div class="body">
-                <% if (lang.currentLanguage() !== 'en' || pageInfo.id !== 'proxy') {%>
-                <div class="layout-2">
-                    <div class="layout-2__side mg-tp-30">
-                        <%- include('./agent/sidebar.html') %>
-                    </div>
-                    <div class="layout-2__content mg-tp-30">
-                        <%- include('./agent/' + pageInfo.id + '.html') %>
-                    </div>
-                </div>
-                <%} else {%>
+                <div class="new_body">
                     <div class="agent_banner"></div>
-                    <%- include('./agent/global_proxy.html') %>
-                <%}%>
+                    <% if (lang.currentLanguage() !== 'en' || pageInfo.id !== 'proxy') {%>
+                        <%- include('./agent/' + pageInfo.id + '.html') %>
+                    <%} else {%>
+                        <%- include('./agent/global_proxy.html') %>
+                    <%}%>
+                </div>
             </div>
         <% include /common/vendor/web.js.html %>
         <!-- build:js(client) /scripts/web_agent.js -->

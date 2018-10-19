@@ -1,7 +1,7 @@
 // 背景
 .copy_banner {
     height: 550px;
-    background-image: url("/images/web/proxy-global-banner.png");
+    @include img-normal($white_label_new_bg + "copy-bg.png");
     background-size: auto 100%;
     background-position: center center;
 }
@@ -166,7 +166,7 @@
 
     @include e(content) {
         border-bottom: 1px solid $gray;
-        padding-bottom: 50px;
+        padding-bottom: 30px;
 
         h5 {
             margin-bottom: 0;

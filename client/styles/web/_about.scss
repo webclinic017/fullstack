@@ -8,10 +8,15 @@
         @include img-normal($image-path-base + "test-en.png");        
     }
 }
-
+// 背景
+.about_banner {
+    height: 550px;
+    @include img-normal($white_label_new_bg + "about-bg.png");
+    background-size: auto 100%;
+    background-position: center center;
+}
 
 @include b(about-public) {
-    color: $gray-darker;
 
     @include e(stp-banner) {
         height: 320px;
@@ -48,9 +53,6 @@
         @include img-normal($image-path-web + "report-banner.jpg");
     }
 
-    @include e(con) {
-        
-    }
     .team-name {
         margin: 0px;
     }
@@ -194,8 +196,6 @@
 
 // report
 @include b(report) {
-    margin-top: 30px;
-
     > table > tbody > tr {
         border-bottom: 1px solid #eee;
 
@@ -353,8 +353,6 @@
     h3 {
       font-size: 34px;
       color: #ffffff;
-      margin-top: 50px;
-      margin-bottom: 20px;
       span {
         background-color: #212934;
         padding: 0px 10px;
@@ -366,7 +364,6 @@
     }
     @include e(content_list) {
         & > div {
-            padding: 0px 0 60px;
             div {
                 float: left;
                 margin-right: 38px;
@@ -402,14 +399,10 @@
             h3 {
                 font-size: 34px;
                 color: #ffffff;
-                margin: 50px 0 20px;
                 span {
-                background-color: #212934;
-                padding: 0px 10px;
+                    background-color: #212934;
+                    padding: 0px 10px;
                 }
-            }
-            p {
-                font-size: 16px;
             }
             .tip {
                 margin-bottom: 20px;
@@ -587,41 +580,43 @@
         left: 0;
         margin: auto;
         z-index: 500;
-    }
-    
-    .contentCircle .CirItem{
-        border-radius: 100%;
-        color: #fff;
-        position: absolute;
-        text-align: center;
-        bottom: 0;
-        left: 0;
-        opacity: 0;
-        transition: 0.5s;
-        font-size: 13px;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        right: 0;
-        margin: auto;
-        background: #fed230;
-        p {
-            width: 320px;
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%,-50%);
-            span {
-                font-size: 16px;
+        .CirItem{
+            border-radius: 100%;
+            color: #fff;
+            position: absolute;
+            text-align: center;
+            bottom: 0;
+            left: 0;
+            opacity: 0;
+            transition: 0.5s;
+            font-size: 13px;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            right: 0;
+            margin: auto;
+            background: #fed230;
+            p {
+                width: 320px;
+                position:absolute;
+                font-size: 14px;
+                color: #fff;
+                line-height: 18px;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+                span {
+                    font-size: 16px;
+                }
+            }
+            &.active{
+                z-index:1;
+                opacity:1;
+                transform:scale(1);
+                transition:0.5s;
             }
         }
-    }
-    .CirItem.active{
-        z-index:1;
-        opacity:1;
-        transform:scale(1);
-        transition:0.5s;
-    }
+    } 
     .contentCircle .CirItem2, .CirItem3, .CirItem4, .CirItem5, .CirItem6, .CirItem7, .CirItem8, .CirItem9, .CirItem10{
         background: #fed230;
     }
