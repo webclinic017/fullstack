@@ -1,4 +1,4 @@
-<div class="agent  mg-200__bg">
+<div class="agent mg-200__bg">
 
     <div class="agent__title">
         <h3 class="mg-200__circle-title pd-bt-20">招募机构代理商</h3>
@@ -9,7 +9,7 @@
     </div>
 
     <div class="agent__content">
-        <h4 class="mg-200__two-title pd-bt-20">优秀代理商扶持计划</h4>
+        <h4 class="mg-200__two-title pd-bt-20 pd-tp-20">优秀代理商扶持计划</h4>
 
         <div class="row">
             <div class="col-xs-6 agent__tip">
@@ -121,7 +121,7 @@
 
     <%if(lang.isCompany("tigerwit")){%>
         <div class="agent__content">
-            <h4 class="mg-200__two-title pd-bt-20">合作代理商评价</h4>
+            <h4 class="mg-200__two-title">合作代理商评价</h4>
 
             <div class="row agent__word">
                 <div class="col-xs-3 mg-tp-20">
@@ -228,8 +228,8 @@
           </div>
       </form>
       <div class="btn-wrapper" style="width: 800px;">
-        <button class="btn btn-primary-gradient" ng-show="!loading" ng-click="submitForm()">申请代理</button>
-        <button class="btn btn-primary-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading">申请代理</button>
+        <button class="btn tw-btn-capsule-gradient" ng-show="!loading" ng-click="submitForm()">申请代理</button>
+        <button class="btn tw-btn-capsule-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading">申请代理</button>
         <span class="global_proxy_err_tip" ng-class="{'font-success' : error.success, 'font-warning': !error.success}" ng-show="error.is_succ">{{error.message}}</span>
       </div>
     </div>
