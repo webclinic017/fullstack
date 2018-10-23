@@ -77,7 +77,8 @@
 
             account.checkCode(
                 $scope.account.phone,
-                $scope.account.captcha
+                $scope.account.captcha,
+                1
                 
             ).then(function (data) {
                 if (!data) return;
@@ -142,9 +143,9 @@
             token = $cookies['code_token'];
             var tmp;
             if ($scope.voiceCaptcha) {
-                tmp = account.sendCode($scope.account.phone, token, 2);
+                tmp = account.sendCode($scope.account.phone, token, 2, '', 1);
             } else {
-                tmp = account.sendCode($scope.account.phone, token, 2);
+                tmp = account.sendCode($scope.account.phone, token, 2, '', 1);
             }
             tmp.then(function (data) {
                 if (!data) return;

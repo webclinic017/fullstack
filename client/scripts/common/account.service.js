@@ -236,16 +236,15 @@
          * 检测验证码是否正确
          * @param {String} account 
          * @param {Number} code 
-         * @param {Number} account_type 1 手机号 2 邮箱
+         * @param {Number} account_type 1 手机号 2 邮箱 0 自动识别
          */
         function checkCode(account, code, account_type, phone_code) {
-            return publicHttp.dealPublicRequest(
-                o.checkCodeApi, 'POST', 
-                angular.extend({
-                    code: code,
-                    phone_code: phone_code,
-                }, account ? { account: account } : {account_type : account_type ? account_type : '1'}
-            ));
+            return publicHttp.dealPublicRequest(o.checkCodeApi, 'POST', {
+                account: account,
+                code: code,
+                account_type : account_type || 0,
+                phone_code: phone_code,
+            });
         }
 
         /**
@@ -558,16 +557,16 @@
          * @param {String} account 手机号
          * @param {String} code_token 
          * @param {Number} type 1-注册/绑定,2-忘记密码,3-修改绑定,4-登录,5-代理商申请
-         * @param {Number} account_type 1-手机号,2-邮箱
-         * account_type 和account 不能同时存在
+         * @param {Number} account_type 1-手机号,2-邮箱 0 自动识别
          */
         function sendCode(account, code_token, type, phone_code, account_type) {
-            return publicHttp.dealPublicRequest(o.sendCodeApi, 'POST', angular.extend({
-                    code_token: code_token,
-                    type: type,
-                    phone_code: phone_code
-                }, account ? { account: account } : {account_type : account_type ? account_type : '1'})
-            );
+            return publicHttp.dealPublicRequest(o.sendCodeApi, 'POST', {
+                account: account,
+                code_token: code_token,
+                type: type,
+                phone_code: phone_code,
+                account_type: account_type || 0
+            });
         }
 
         /**
