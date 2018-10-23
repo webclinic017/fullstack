@@ -94,10 +94,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.4.3",
-                        description: "Update：\n1.Increase the cash withdrawal progress, clearly understand the withdrawal process.\n2.Repair known BUG and optimize user experience.",
+                        version_name : "V2.4.4",
+                        description: "This update: \nOptimize user experience.",
                         updated_description: "70% users are using new version",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.4.3.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.4.4.apk",
                         force_update : false
                     }
                 }
@@ -113,10 +113,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.4.3",
-                        description: "本次更新：\n1.增加提现进度，清楚了解提现进程；\n2.修复已知BUG，优化用户体验；",
+                        version_name : "V2.4.4",
+                        description: "本次更新：\n优化用户体验",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.4.3.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.4.4.apk",
                         force_update : false
                     }
                 }
