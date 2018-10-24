@@ -93,6 +93,11 @@
           font-size: 18px;
         }
       }
+    @include responsive(wide-screens) {
+        @include e(bg) {
+            width: 1100px;
+        }
+    }
     
 }
 

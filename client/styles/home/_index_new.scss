@@ -1,5 +1,5 @@
 
-@media screen and (max-width:1600px){
+@include responsive(wide-screens){
   .index_new__container, .index_new__reliable-lst {
     width: 1100px!important;
   }

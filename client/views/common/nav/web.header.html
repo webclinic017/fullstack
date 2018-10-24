@@ -142,9 +142,10 @@
                     <%}%>
                 </ul>
             </li>
-            <li class="dropdown" tw-dropdown>
+            <!-- 内容无翻译，英文暂时隐藏 -->
+            <li class="dropdown" tw-dropdown ng-show="!(lang.isEnglish())">
                 <h2>
-                    <a data-navbar-trigger data-navbar-level="2" href="/web/help/introduce">教育</a>
+                    <a data-navbar-trigger data-navbar-level="2" data-default="/web/faq,/web/help,/web/course" href="/web/help/introduce">教育</a>
                 </h2>
 
                 <ul class="dropdown-menu">
@@ -159,6 +160,12 @@
                     </li>
                     <li>
                         <h2><a data-navbar-trigger href="/help/cfd"><%= lang.text("navbar9")%></a></h2> -->
+                    </li>
+                    <li>
+                        <h2><a data-navbar-trigger data-navbar-level="2" href="/web/faq/real"><%= lang.text("faq")%></a></h2>
+                    </li>
+                    <li>
+                        <h2><a data-navbar-trigger data-navbar-level="2" href="/web/course/forex_basics">教程</a></h2>
                     </li>
                 </ul>
             </li>

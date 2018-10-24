@@ -35,7 +35,7 @@
 
         @include m(detail) {
             color: $gray-darker;
-            padding-left: 26px;
+            padding-left: 20px;
             line-height: 20px;
             font-weight: normal;
         }
@@ -139,10 +139,6 @@
 
 // 成为高手
 @include b(become_master) {
-
-    h3  {
-        font-size: 22px;
-    }
 
     @include e(banner) {
         height: 320px;

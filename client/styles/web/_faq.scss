@@ -1,25 +1,51 @@
 @include b(faq-public) {
+    @include e(url_list){
+        overflow: hidden;
+        padding: 40px 22px 80px;
+        > li {
+            margin: 10px 10px;
+            h2 {
+                margin: 0;
+                text-align: center;
+            }
+            a {
+                font-size:24px;
+                font-weight:600;
+                color:$main-char-color-100;
+            }
+            &.active {
+                background-color: $primary-darker;
+            }
+            float: left;
+            min-width:164px;
+            background: $main-char-color-8;
+            border-radius:26px;
+            padding: 9px 30px;
+        }
+    }
 
     @include e(question) {
-        font-size: 18px;
-        color: $gray-base;
+        font-size:18px;
+        font-weight:600;
+        line-height:25px;
+        color: $main-char-color-100;
         cursor: pointer;
         margin: 0px;
-        font-weight: normal;
         
-        .fa-angle-down {
-            display: none;
-        }
-        &:hover {
-            color: $brand-info;
-        }
+        // .fa-angle-down {
+        //     display: none;
+        // }
+        // &:hover {
+        //     color: $brand-info;
+        // }
     }
     @include e(answer) {
         display: none;
-        margin-top: 5px;
-        font-size: 16px;
-        color: $gray-darker;
-        padding-left: 20px;
+        margin-top: 20px;
+        color: $main-char-color-50;
+        font-size:18px;
+        font-weight:400;
+        line-height:44px;
     }
     
     i {

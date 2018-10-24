@@ -634,6 +634,16 @@ module.exports = function (app) {
             pageInfo: pageInfo
         }, req));
     });
+    app.route('/web/course/:subpage(*)').get(function (req, res) {
+        var subpage = req.params.subpage || '';
+        var pageInfo = {
+            id: subpage
+        };
+        setEnvCf(req, res);
+        res.render('web/course.html', extendPublic({
+            pageInfo: pageInfo
+        }, req));
+    });
 
     app.route('/api_test').get(function (req, res, next) {
         // accountApi.checkLogined(function (data) {

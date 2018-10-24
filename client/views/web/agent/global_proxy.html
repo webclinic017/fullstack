@@ -91,8 +91,8 @@
           </div>
       </form>
       <div class="btn-wrapper" style="width: 800px;">
-        <button class="btn btn-primary-gradient" ng-show="!loading" ng-click="submitForm()">Send</button>
-        <button class="btn btn-primary-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading">Send</button>
+        <button class="btn tw-btn-capsule-gradient" ng-show="!loading" ng-click="submitForm()">Send</button>
+        <button class="btn tw-btn-capsule-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading">Send</button>
         <span class="global_proxy_err_tip" ng-class="{'font-success' : error.success, 'font-warning': !error.success}" ng-show="error.is_succ">{{error.message}}</span>
       </div>
     </div>
