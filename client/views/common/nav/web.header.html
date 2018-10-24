@@ -142,7 +142,8 @@
                     <%}%>
                 </ul>
             </li>
-            <li class="dropdown" tw-dropdown>
+            <!-- 内容无翻译，英文暂时隐藏 -->
+            <li class="dropdown" tw-dropdown ng-show="!(lang.isEnglish())">
                 <h2>
                     <a data-navbar-trigger data-navbar-level="2" data-default="/web/faq,/web/help,/web/course" href="/web/help/introduce">教育</a>
                 </h2>
