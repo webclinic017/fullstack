@@ -64,30 +64,30 @@
                     }
                 })
 
-                .state('help', {
-                    views: {
-                        '@': {
-                            templateUrl: '/views/web/help/index.html',
-                            controller: ''
-                        }
-                    }
-                })
+                // .state('help', {
+                //     views: {
+                //         '@': {
+                //             templateUrl: '/views/web/help/index.html',
+                //             controller: ''
+                //         }
+                //     }
+                // })
 
-                .state('help.subpage', {
-                    url: '/help/:subpage',
-                    replace:'false',
-                    views: {
-                        'content@help': {
-                            templateUrl: function ($stateParams) {
-                                $stateParams.subpage = $stateParams.subpage || 'introduce';
-                                return '/views/web/help/help_' + $stateParams.subpage + '.html';
-                            },
-                            controllerProvider: function () {
-                                return "HelpController";
-                            }
-                        }
-                    }
-                })
+                // .state('help.subpage', {
+                //     url: '/help/:subpage',
+                //     replace:'false',
+                //     views: {
+                //         'content@help': {
+                //             templateUrl: function ($stateParams) {
+                //                 $stateParams.subpage = $stateParams.subpage || 'introduce';
+                //                 return '/views/web/help/help_' + $stateParams.subpage + '.html';
+                //             },
+                //             controllerProvider: function () {
+                //                 return "HelpController";
+                //             }
+                //         }
+                //     }
+                // })
 
                 .state('space', {
                     views: {
