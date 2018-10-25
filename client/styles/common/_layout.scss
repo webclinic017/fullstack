@@ -19,6 +19,12 @@
             line-height:33px;
         }
     }
+    @include responsive(wide-screens) {
+        @include e(bg) {
+            width: 1100px;
+        }
+    }
+    
     @include e(circle-title) {
         font-size:32px;
         color:$main-char-color-100;
@@ -93,11 +99,6 @@
           font-size: 18px;
         }
       }
-    @include responsive(wide-screens) {
-        @include e(bg) {
-            width: 1100px;
-        }
-    }
     
 }
 

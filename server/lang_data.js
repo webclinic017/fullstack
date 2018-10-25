@@ -2137,6 +2137,16 @@ module.exports = function () {
             copyRegulations: {zh: "复制规则", en: "Copy Regulations"},
             
         },
+        header: {
+            education: {zh: "教育", en: "Education"},
+            course: {zh: "教程", en: "Course"},
+        },
+        footer: {
+            serviceTime: {zh: "客服电话（服务时间 8:00-22:00）", en: "Customer service telephone (service time from 8:00 to 22:00)"},
+            subscribeArticle: {zh: "订阅每日必读的投资干货", en: "Subscribe daily investment article"},
+            scb: {zh: "TigerWit受巴哈马证券交易委员会（SCB）的授权和监管，监管号：SIA-F185。", en: "TigerWit is authorized and supervised by Securities Commission of the Bahamas (SCB), the regulation number SIA-F185."},
+            fca: {zh: "TigerWit受英国金融行为监管局（FCA）的授权和监管，授权编号为：679941。", en: "TigerWit is authorized and supervised by Financial Conduct Authority (FCA), the authorization number 679941."},
+        }
     };
 
     function replaceTiger(str) {
