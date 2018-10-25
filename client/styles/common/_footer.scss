@@ -2,7 +2,7 @@
     background-color: $gray-base;
     color: $gray-light;
     .footer-container {
-        width: 1300px;
+        width: 1200px;
     }
     h2, h3 {
         margin: 0px;
@@ -10,7 +10,7 @@
     }
 
     .contact-us {
-        float: left;
+        float: right;
         h2 {
             p {
                 font-size:14px;
@@ -23,11 +23,11 @@
         }
     }
     .link-list {
-        float: right;
+        float: left;
         overflow: hidden;
         .link-list__item {
             float: left;
-            margin: 0 80px;
+            margin: 0 60px;
             h2 {
                 p {
                     font-size:20px;
@@ -45,8 +45,8 @@
                     }
                 }
             }
-           &:last-child {
-               margin-right: 0;
+           &:first-child {
+               margin-left: 0;
            }
 
         }

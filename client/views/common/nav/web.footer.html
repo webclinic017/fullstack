@@ -1,59 +1,6 @@
 <div class="footer-wrap">
     <div class="container footer-container">
         <div class="row mg-tp-50">
-            <div class="contact-us">
-            <%if (req.host.indexOf('global') == -1) {%>
-                <h2>
-                    <p>
-                        <span class="font-light">客服电话（服务时间 8:00-22:00）</span>
-                    </p>
-                </h2>
-                <div class="phone">
-                    <p>
-                        <span>
-                            +<%=lang.text("telephone")%>
-                        </span>
-                    </p>
-                </div>
-                <ul class="pd-tp-20 clearfix">
-                    <li class="footer-weibo">
-                        <a href="http://weibo.com/TigerWit?refer_flag=1001030102_&is_hot=1" target="_blank">
-                            <img class="img-20" src="/white_label/footer/footer-icon-weibo.png">
-                        </a>
-                    </li>
-                    <li class="footer-weixin">
-                        <img class="img-20" src="/white_label/footer/footer-icon-weChat.png">
-                        <span>
-                            <img src="/images/footer-weixin-code.png">
-                        </span>
-                    </li>
-                </ul>
-            <%}%>
-            <%if (req.host.indexOf('global') != -1) {%>
-                <ul class="pd-tp-20 clearfix">
-                    <li class="footer-weibo">
-                        <a href="" target="_blank">
-                            <img class="img-20" src="/white_label/footer/footer-icon-face-book.png">
-                        </a>
-                    </li>
-                    <li class="footer-weixin">
-                        <img class="img-20" src="/white_label/footer/footer-icon-twitter.png">
-                        <!-- <span>
-                            <img src="/images/footer-weixin-code.png">
-                        </span> -->
-                    </li>
-                </ul>
-            <%}%>
-                <div class="footer-follow-tip pd-tp-10">
-                    <p>
-                        订阅每日必读的投资干货
-                    </p> 
-                    <p>
-                        <!-- <i class="fa fa-envelope"></i> -->
-                        <%=lang.text("supportEmail")%>
-                    </p>
-                </div>
-            </div>
             <div class="link-list">
                 <div class="link-list__item">
                     <h2>
@@ -130,22 +77,74 @@
                     </ul>
                 </div>
             </div>
+            <div class="contact-us">
+            <%if (req.host.indexOf('global') == -1) {%>
+                <h2>
+                    <p>
+                        <span class="font-light"><%= lang.text("footer.serviceTime")%></span>
+                    </p>
+                </h2>
+                <div class="phone">
+                    <p>
+                        <span>
+                            +<%=lang.text("telephone")%>
+                        </span>
+                    </p>
+                </div>
+                <ul class="pd-tp-20 clearfix">
+                    <li class="footer-weibo">
+                        <a href="http://weibo.com/TigerWit?refer_flag=1001030102_&is_hot=1" target="_blank">
+                            <img class="img-20" src="/white_label/footer/footer-icon-weibo.png">
+                        </a>
+                    </li>
+                    <li class="footer-weixin">
+                        <img class="img-20" src="/white_label/footer/footer-icon-weChat.png">
+                        <span>
+                            <img src="/images/footer-weixin-code.png">
+                        </span>
+                    </li>
+                </ul>
+            <%}%>
+            <%if (req.host.indexOf('global') != -1) {%>
+                <!-- <ul class="pd-tp-20 clearfix">
+                    <li class="footer-weibo">
+                        <a href="" target="_blank">
+                            <img class="img-20" src="/white_label/footer/footer-icon-face-book.png">
+                        </a>
+                    </li>
+                    <li class="footer-weixin">
+                        <img class="img-20" src="/white_label/footer/footer-icon-twitter.png">
+                        <span>
+                            <img src="/images/footer-weixin-code.png">
+                        </span>
+                    </li>
+                </ul> -->
+            <%}%>
+                <div class="footer-follow-tip pd-tp-10 <%if (req.host.indexOf('global') != -1) {%> mg-lf-80 <%}%>" >
+                    <p>
+                        <%= lang.text("footer.subscribeArticle")%>
+                    </p> 
+                    <p class=" pd-tp-10">
+                        <%=lang.text("supportEmail")%>
+                    </p>
+                </div>
+            </div>
 
             
         </div>
         <div class="footer_con mg-tp-100">
-            <p class="mg-bt-40">
+            <p class="mg-bt-80">
                 <strong><%= lang.text("foot_38")%></strong>
                 <span><%= lang.text("foot_39")%></span>
                 <a href="https://uk.tigerwit.com">https://uk.tigerwit.com</a>
             </p>
         </div>
-        <div class="scb-fca">
+        <!-- <div class="scb-fca">
             <div>
-                <p>TigerWit受巴哈马证券交易委员会（SCB）的授权和监管，监管号：SIA-F185。</p>
-                <p>TigerWit受英国金融行为监管局（FCA）的授权和监管，授权编号为：679941。</p>
+                <p><%= lang.text("footer.scb")%></p>
+                <p><%= lang.text("footer.fca")%></p>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 <div id="footer-service-wrapper" style="display:none;">
