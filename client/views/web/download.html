@@ -37,12 +37,12 @@
                                         </li>
                                         <li class="phone">
                                             <a href="<%= lang.text('downloadGlobalIos')%>">
-                                                <img src="/white_label/download/<%= lang.cnOrEn('focus-icon-ios-cn', 'focus-icon-ios-en') %>.png" alt="">
+                                                <img src="/white_label/download/<%= lang.cnOrEn('focus-icon-ios-cn-1.0', 'focus-icon-ios-en') %>.png" alt="">
                                             </a>
                                             <!-- <p><%= lang.text('downloadApp.tip4')%></p> -->
                                         </li>
                                     </ul>
-                                    <% if (req.host.indexOf('global') != -1) {%>
+                                    <% if (req.host.indexOf('global') == -1) {%>
                                     <div class="code global">
                                         <div class="img_box">
                                             <img src="/white_label/download/download_andriod_global.png" alt="code" draggable=false>
@@ -50,7 +50,7 @@
                                         </div>
                                         <div class="img_box">
                                             <img src="/white_label/download/download_ios_global.png" alt="code" draggable=false>
-                                            <span>Ios</span>
+                                            <span>iOS</span>
                                         </div>
                                         <p><%= lang.text('downloadApp.tip5')%></p>
                                         <p><%= lang.text('downloadApp.tip6')%></p>
@@ -178,8 +178,8 @@
                     </div>
                     <div class="b text-center">
             
-                        <!-- <a href="<%= lang.text('downloadGlobalIos') %>"><img src="/white_label/home/<%= lang.showScheme('focus-icon-ios-en', 'focus-icon-ios-en', 'focus-icon-ios-cn', 'focus-icon-ios-cn') %>.png" alt=""></a>
-                        <a href="<%= lang.showScheme(lang.text('androidApp'), lang.text('downloadGlobalAndroid')) %>"><img src="/white_label/home/<%= lang.showScheme('focus-icon-cn-android-en', 'focus-icon-google-en', 'focus-icon-cn-android-cn', 'focus-icon-google-cn') %>.png" alt=""></a> -->
+                        <!-- <a href="<%= lang.text('downloadGlobalIos') %>"><img src="/white_label/home/<%= lang.showScheme('focus-icon-ios-en', 'focus-icon-ios-en', 'focus-icon-ios-cn-1.0', 'focus-icon-ios-cn-1.0') %>.png" alt=""></a>
+                        <a href="<%= lang.showScheme(lang.text('androidApp'), lang.text('downloadGlobalAndroid')) %>"><img src="/white_label/home/<%= lang.showScheme('focus-icon-cn-android-en', 'focus-icon-google-en-1.0', 'focus-icon-cn-android-cn', 'focus-icon-google-cn') %>.png" alt=""></a> -->
                         <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%= lang.text("newhome_46")%></a>
                     </div>
                     </div>
