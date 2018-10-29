@@ -1,7 +1,6 @@
 <div class="agent">
-  <div class="global_proxy_banner"></div>
-  <div class="global_proxy_content">
-    <h3 class="global_proxy_title">
+  <div class="mg-200__bg">
+    <h3 class="global_proxy_title mg-bt-30">
         <span>Become a TigerWit partner today</span>
     </h3>
     <p class="global_proxy_tip">
@@ -16,10 +15,9 @@
     <p class="global_proxy_tip">
         TigerWit’s distributed trading ledger is just the first step. Visit tech.tigerwit.com for more information on our blockchain technology.
     </p>
-    <h4 class="global_proxy_sub_title">
-        <img src="/images/web/proxy-circle.png" alt=""> 
-        <span>Why partner with TigerWit?</span>
-    </h4>
+    <h3 class="mg-200__circle-title">
+        Why partner with TigerWit?
+    </h3>
     <p class="global_proxy_tip">
         Access to all the tools and support your business needs to build and market a successful local or global brand.
     </p>
@@ -34,7 +32,7 @@
       <li>•&nbsp;&nbsp;&nbsp;&nbsp;Exclusive promotions with our partner, Liverpool FC</li>
       <li>•&nbsp;&nbsp;&nbsp;&nbsp;Regulation by FCA and SCB</li>
     </ul>
-    <h3 class="global_proxy_title">
+    <h3 class="global_proxy_title mg-bt-30 pd-tp-20">
         <span>Looking to grow your business?</span><br>
         <span>Let TigerWit’s experts deliver</span><br>
         <span>a solution tailored to you.</span>
@@ -93,8 +91,8 @@
           </div>
       </form>
       <div class="btn-wrapper" style="width: 800px;">
-        <button class="btn btn-primary-gradient" ng-show="!loading" ng-click="submitForm()">Send</button>
-        <button class="btn btn-primary-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading">Send</button>
+        <button class="btn tw-btn-capsule-gradient" ng-show="!loading" ng-click="submitForm()">Send</button>
+        <button class="btn tw-btn-capsule-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading">Send</button>
         <span class="global_proxy_err_tip" ng-class="{'font-success' : error.success, 'font-warning': !error.success}" ng-show="error.is_succ">{{error.message}}</span>
       </div>
     </div>

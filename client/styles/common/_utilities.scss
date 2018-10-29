@@ -5,6 +5,11 @@
 .body {
     min-height: 69px;
 }
+.new_body {
+    @extend .pd-bt-50;
+    min-height: 69px;
+    background: $new-body;
+}
 //== 定位
 .relative {
     position: relative !important;
@@ -277,7 +282,9 @@
 .mg-lf-30 {
     margin-left: 30px;
 }
-
+.mg-lf-80 {
+    margin-left: 80px;
+}
 .mg-lf-100 {
     margin-left: 100px;
 }
@@ -327,7 +334,9 @@
 .pd-tp-110 {
     padding-top: 110px !important;
 }
-
+.pd-bt-0 {
+    padding-bottom: 0;
+}
 .pd-bt-10 {
     padding-bottom: 10px;
 }
@@ -378,6 +387,10 @@
 .pd-lf-50 {
     padding-left: 50px !important;
 }
+.pd-lf-100 {
+    padding-left: 100px !important;
+}
+
 
 .pd-rg-0 {
     padding-right: 0 !important;

@@ -1,22 +1,24 @@
 <div class="ranklist_banner" ng-class="{'imgEn': lang.isEnglish()}">
     <div class="ranklist_banner__tip">
-        <h4 class="tit">With TigerWit’s fully-automated copy-trading technology</h4>
-        <h4 class="tit">anyone can be the Master of their own trading</h4>
+        <h4 class="tit">{{ lang.text("tigerWitID.master.copyTrading") }}</h4>
         <p class="step">
-            <span>Choose a Master</span>
+            <span>{{ lang.text("tigerWitID.master.chooseMaster") }}</span>
             <img src="/white_label/ranklist/arrow.png" alt="">
-            <span>Copy with one click</span>
+            <span>{{ lang.text("tigerWitID.master.clickCopy") }}</span>
             <img src="/white_label/ranklist/arrow.png" alt="">
-            <span>Take profit</span>
+            <span>{{ lang.text("tigerWitID.master.takeProfit") }}</span>
         </p>
-        <p class="sub-tit">Select the Master whose trades you wish to follow by comparing their performance using three different measurements:</p>
-        <p class="tip">Profitability – a Master’s overall return on investment. The top-ranked Master has generated the greatest overall profit over the selected time-period.</p>
-        <p class="tip">Stability – a Master’s averaged rate of return. The top-ranked Master has created the greatest profit averaged over the selected time period.</p>
-        <p class="tip">Consistency: a Master’s overall ratio of winning to losing trades. The top-ranked Master has the highest ratio of winning to losing trades over the selected time-period.</p>
-        <p class="sub-tit">To qualify for Master status a trader must have met the following requirements:</p>
-        <p class="tip">• Self-trade more than 30 days</p>
-        <p class="tip">• Achieve a 30-day rate of return greater than 20%</p>
-        <p class="tip">• Maintain an account balance of at least USD500</p>
+        <div ng-class="{'pd-lf-100' : !(lang.isEnglish())}">
+            <p class="sub-tit">{{ lang.text("tigerWitID.master.selectMaster") }}</p>
+            <p class="tip">{{ lang.text("tigerWitID.master.selectMaster_1") }}</p>
+            <p class="tip">{{ lang.text("tigerWitID.master.selectMaster_2") }}</p>
+            <p class="tip">{{ lang.text("tigerWitID.master.selectMaster_3") }}</p>
+            <p class="sub-tit">{{ lang.text("tigerWitID.master.qualifyMaster") }}</p>
+            <p class="tip">• {{ lang.text("tigerWitID.master.qualifyMaster_1") }}</p>
+            <p class="tip">• {{ lang.text("tigerWitID.master.qualifyMaster_2") }}</p>
+            <p class="tip">• {{ lang.text("tigerWitID.master.qualifyMaster_3") }}</p>
+        </div>
+        
     </div>
 </div>
 <div class="container">

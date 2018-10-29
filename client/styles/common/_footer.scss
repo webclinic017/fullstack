@@ -1,106 +1,93 @@
 .footer-wrap {
     background-color: $gray-base;
     color: $gray-light;
-
+    .footer-container {
+        width: 1200px;
+    }
     h2, h3 {
         margin: 0px;
         font-weight: normal;
     }
 
-    div > h2 > p > span {
-        font-size: $font-size-h4;
-        padding-bottom: 5px;
-        border-bottom: 1px solid $brand-primary;
-    }
-
-    .col-xs-2 > ul > li {
-        margin-bottom: 10px;
-    }
-
-    .col-xs-2, .col-xs-3 { 
-        > ul > li > h3 {
-        line-height: 18px;
-
-        > a{
-            color: $gray-dark;
-            font-size: 14px;
-    
-            &:hover {
-                color: $brand-primary;
+    .contact-us {
+        float: right;
+        h2 {
+            p {
+                font-size:14px;
+                line-height:27px;
             }
         }
-    }
-
-    }
-    .col-xs-3 > ul > li > h3 > a{
-        color: $gray-dark;
-        font-size: 14px;
-        &:hover {
-            color: $brand-primary;
+        .phone {
+            font-size:40px;
+            font-weight:500;
         }
     }
-
-    a > i {
-        font-size: $font-size-h3;
-        vertical-align: top;
-    }
-
-    .col-xs-4 {
-        color: $gray-dark;
-
-        ul > li:first-child {
-            span {
-                font-size: $font-size-h1;
-                color: $brand-primary;
+    .link-list {
+        float: left;
+        overflow: hidden;
+        .link-list__item {
+            float: left;
+            margin: 0 60px;
+            h2 {
+                p {
+                    font-size:20px;
+                    font-weight:500;
+                    line-height:27px;
+                }
             }
-        }
+            h3 {
+                a{
+                    color: $white-50;
+                    font-size: 14px;
 
-        p > i {
-            margin-right: 5px;
+                    &:hover {
+                        color: $brand-primary;
+                    }
+                }
+            }
+           &:first-child {
+               margin-left: 0;
+           }
+
         }
     }
-
     .footer_con {
-        padding-top: 30px;
-        border-top: 1px solid $gray-darker;
-        color: $gray-darker;
-        strong {
-            color: #999;
-        }
+        color: $white-30;
         a {
-            color: $gray-darker; 
+            color: $white-30;
         }
+    }
+    .scb-fca{
+        overflow: hidden;
+        padding-bottom: 80px;
+        > div{
+            float: right;
+            p {
+                font-size:12px;
+                line-height:17px;
+            }
+        }
+        
     }
 }
-
+.img-20 {
+    height: 20px;
+}
 .footer-weibo {
     position: relative;
     float: left;
-    padding-right: 15px;
+    padding-right: 11px;
 
-    &:before {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 5px;
-        right: 0px;
-        width: 1px;
-        height: 15px;
-        background-color: $brand-primary;
-    }
 }
 .footer-weixin {
     float: left;
-    padding-left: 15px;
     position: relative;
-
     span {
         display: none;
         position: absolute;
         left: 108%;
         top: -70%;
     }
-
     &:hover {
         span {
             display: block;
@@ -108,11 +95,11 @@
     }
 }
 .footer-follow {
-    padding-top: 10px;
+    padding-top: 20px;
 }
 .footer-follow-tip {
-    font-size: 12px;
-    color:  #999;
+    font-size:14px;
+    line-height:19px;
 }
 
 
