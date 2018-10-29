@@ -1,0 +1,17 @@
+// media 媒体查询三个阶段
+$web-width-small: 960px; 
+$web-width-medium: 1200px;
+$web-width-large: 1600px;
+
+// $width可以单独设置某一断点的媒体查询
+@mixin responsive($width) {
+    @if $width == wide-screens {
+        @media only screen and (max-width: $web-width-large) { @content; }
+    }
+    @else if $width == medium-screens {
+        @media only screen and (max-width: $web-width-medium) { @content; }
+    }
+    @else if $width == small-screens {
+        @media only screen and (max-width: $web-width-small) { @content; }
+    }
+}

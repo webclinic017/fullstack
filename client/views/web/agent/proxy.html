@@ -1,10 +1,7 @@
-<div class="agent">
-    <div class="agent__banner">
-        <img src="<%= lang.image('webAgentProxy')%>">
-    </div>
+<div class="agent mg-200__bg">
 
     <div class="agent__title">
-        <h3 class="font-bold">招募机构代理商</h3>
+        <h3 class="mg-200__circle-title pd-bt-20">招募机构代理商</h3>
 
         <p class="font-darker">
             <%= lang.text('companyZhName')%>代理商扶持计划正式启动，我们致力于帮助代理商增长业务量，获取更多的佣金回报。我们为投资者提供丰富多样的产品，包括外汇、贵金属、原油、指数差价合约。我们的特别之处在于复制跟单系统，点击复制即可全自动跟单，方便了不懂交易的投资者，解决了您开发客户难以及成本高的问题。成为<%= lang.text('companyZhName')%>代理商，并在客户交易的过程中享受佣金回报，并且还可以享受独一无二的各种扶持计划。
@@ -12,7 +9,7 @@
     </div>
 
     <div class="agent__content">
-        <h4 class="font-bold">优秀代理商扶持计划</h4>
+        <h4 class="mg-200__two-title pd-bt-20 pd-tp-20">优秀代理商扶持计划</h4>
 
         <div class="row">
             <div class="col-xs-6 agent__tip">
@@ -89,7 +86,7 @@
     </div>
 
     <div class="agent__content">
-        <h4 class="font-bold">返佣方式</h4>
+        <h4 class="mg-200__two-title pd-bt-20">返佣方式</h4>
 
         <div class="agent__tip">
             <h5 class="agent__tip-point">
@@ -124,10 +121,10 @@
 
     <%if(lang.isCompany("tigerwit")){%>
         <div class="agent__content">
-            <h4 class="font-bold">合作代理商评价</h4>
+            <h4 class="mg-200__two-title">合作代理商评价</h4>
 
             <div class="row agent__word">
-                <div class="col-xs-3">
+                <div class="col-xs-3 mg-tp-20">
                     <div class="agent__word-avatar">
                         <img src="/images/web/agent-avatar-1.jpg">
                     </div>
@@ -140,7 +137,7 @@
                 </div>
             </div>
             <div class="row agent__word">
-                <div class="col-xs-3">
+                <div class="col-xs-3 mg-tp-20">
                     <div class="agent__word-avatar">
                         <img src="/images/web/agent-avatar-2.jpg">
                     </div>
@@ -156,7 +153,7 @@
     <%}%>
 
     <div class="agent__content">
-        <h4 class="font-bold">成为代理商流程</h4>
+        <h4 class="mg-200__two-title pd-bt-20">成为代理商流程</h4>
 
         <div class="clearfix">
             <h5 class="agent__step">
@@ -231,8 +228,8 @@
           </div>
       </form>
       <div class="btn-wrapper" style="width: 800px;">
-        <button class="btn btn-primary-gradient" ng-show="!loading" ng-click="submitForm()">申请代理</button>
-        <button class="btn btn-primary-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading">申请代理</button>
+        <button class="btn tw-btn-capsule-gradient" ng-show="!loading" ng-click="submitForm()">申请代理</button>
+        <button class="btn tw-btn-capsule-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading">申请代理</button>
         <span class="global_proxy_err_tip" ng-class="{'font-success' : error.success, 'font-warning': !error.success}" ng-show="error.is_succ">{{error.message}}</span>
       </div>
     </div>

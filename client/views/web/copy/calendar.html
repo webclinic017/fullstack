@@ -1,151 +1,154 @@
-<div class="pro-calendar" ng-controller="ProductCalendarController" ng-cloak>
-    <div class="pro-calendar__title clearfix">
-        <h3 class="tit">财经日历</h3>
-        
-        <span class="calendar_icon" tw-date-picker data-type="day" data-orientation="right" data-clear-btn="false" data-bind-model="selectStr" data-formatter="yyyymmdd">
-            <i class="fa fa-calendar"></i>
-        </span>
-
-        <div class="select_box">
-            <div class="select_btn" ng-click="showSelectBox($event)">
-                <span>筛选</span>
-                <i class="fa fa-caret-down"></i>
-            </div>
-            <div class="select_content" ng-class="{active: selectBoxStatus}" ng-click="$event.stopPropagation();">
-                <div class="select_title">
-                    按国家
-                </div>
-                <ul class="select_country clearfix">
-                    <li ng-repeat="country in countryList" ng-class="{active: country.select}" ng-click="dealNewsInfo(country)">
-                        {{country.key}}
-                    </li>
-                </ul>
-                <div class="select_title">
-                    按重要程度
-                </div>
-                <ul class="select_imp clearfix">
-                    <li ng-repeat="star in starList" ng-class="{active: star.select}" ng-click="dealNewsInfo(star)">
-                        <i class="fa fa-star" ng-class="{active: star.stars >= 1}"></i>
-                        <i class="fa fa-star" ng-class="{active: star.stars >= 2}"></i>
-                        <i class="fa fa-star" ng-class="{active: star.stars >= 3}"></i>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="pro-calendar__content">
-        <div class="date_list_box">
-            <div class="date_list_tit">{{selectDate.year}}年{{toDou(selectDate.month+1)}}月</div>
-            <div class="date_list_wrapper">
-                <span class="prev" ng-click="setDateList('prev')">
-                    <i class="fa fa-chevron-left"></i>
-                    上周
-                </span>
-                <ul class="date_list clearfix">
-                    <li ng-repeat="date in dateList">
-                        <span class="w">{{ weekList[date.day] }}</span>
-                        <div class="d" ng-class="{active: date.select, today: (date.year == nowDate.year) && (date.month == nowDate.month) && (date.date == nowDate.date)}" ng-click="checkDate(date)">
-                            {{ toDou(date.date) }}
-                        </div>
-                    </li>
-                </ul>
-                <span class="next" ng-click="setDateList('next')">
-                    下周
-                    <i class="fa fa-chevron-right"></i>
-                </span>
-            </div>
-        </div>
-
-        <div class="date_info_box clearfix">
-            <div class="fl">
+<div class="pro-calendar mg-200__bg" ng-controller="ProductCalendarController" ng-cloak>
+    <h3 class="mg-200__circle-title pd-bt-10">财经日历</h3>
+    <div class="pro-calendar__bg">
+        <div class="pro-calendar__title clearfix pd-tp-20 pd-bt-10">
+            <div class="tit">财经日历</div>
+            
+            <span class="calendar_icon" tw-date-picker data-type="day" data-orientation="right" data-clear-btn="false" data-bind-model="selectStr" data-formatter="yyyymmdd">
                 <i class="fa fa-calendar"></i>
-                <span>本周：</span>
-                <span>{{dateList[0].year}}年{{toDou(dateList[0].month+1)}}月{{toDou(dateList[0].date)}}日</span>
-                <i class="fa fa-arrow-right"></i>
-                <span>{{dateList[dateList.length-1].year}}年{{toDou(dateList[dateList.length-1].month+1)}}月{{toDou(dateList[dateList.length-1].date)}}日</span>
-            </div>
-            <div class="fr">
-                <span class="return_today" ng-click="checkDate(nowDate)">回到今天</span>
+            </span>
+
+            <div class="select_box">
+                <div class="select_btn" ng-click="showSelectBox($event)">
+                    <span>筛选</span>
+                    <i class="fa fa-caret-down"></i>
+                </div>
+                <div class="select_content" ng-class="{active: selectBoxStatus}" ng-click="$event.stopPropagation();">
+                    <div class="select_title">
+                        按国家
+                    </div>
+                    <ul class="select_country clearfix">
+                        <li ng-repeat="country in countryList" ng-class="{active: country.select}" ng-click="dealNewsInfo(country)">
+                            {{country.key}}
+                        </li>
+                    </ul>
+                    <div class="select_title">
+                        按重要程度
+                    </div>
+                    <ul class="select_imp clearfix">
+                        <li ng-repeat="star in starList" ng-class="{active: star.select}" ng-click="dealNewsInfo(star)">
+                            <i class="fa fa-star" ng-class="{active: star.stars >= 1}"></i>
+                            <i class="fa fa-star" ng-class="{active: star.stars >= 2}"></i>
+                            <i class="fa fa-star" ng-class="{active: star.stars >= 3}"></i>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-        <ul class="info_list_box">
-            <li class="info_list" ng-repeat="news in newsInfo">
-                <div class="tip_info">
-                    <i class="fa fa-bell-o"></i>
-                    <span>{{news.tw_time}}</span>
-                    <i class="fa fa-star" ng-class="{active: news.importance >= 1}"></i>
-                    <i class="fa fa-star" ng-class="{active: news.importance >= 2}"></i>
-                    <i class="fa fa-star" ng-class="{active: news.importance >= 3}"></i>
-                </div>
-                <div class="tit_info clearfix" ng-click="showDetails(news)">
-                    <img ng-src="{{news.flagURL}}">
-                    <span class="title">
-                        {{news.mark && news.country}}{{news.title}}
+        <div class="pro-calendar__content">
+            <div class="date_list_box">
+                <div class="date_list_tit">{{selectDate.year}}年{{toDou(selectDate.month+1)}}月</div>
+                <div class="date_list_wrapper">
+                    <span class="prev" ng-click="setDateList('prev')">
+                        <i class="fa fa-chevron-left"></i>
+                        上周
                     </span>
-                    <span class="icon">
-                        <i class="fa fa-chevron-down" ng-show="!news.open"></i>
-                        <i class="fa fa-chevron-up" ng-show="news.open"></i>
+                    <ul class="date_list clearfix">
+                        <li ng-repeat="date in dateList">
+                            <span class="w">{{ weekList[date.day] }}</span>
+                            <div class="d" ng-class="{active: date.select, today: (date.year == nowDate.year) && (date.month == nowDate.month) && (date.date == nowDate.date)}" ng-click="checkDate(date)">
+                                {{ toDou(date.date) }}
+                            </div>
+                        </li>
+                    </ul>
+                    <span class="next" ng-click="setDateList('next')">
+                        下周
+                        <i class="fa fa-chevron-right"></i>
                     </span>
                 </div>
-                <div class="cont_info">
-                    <p class="active">
-                        今值
-                        <span>{{news.actual || '--'}}</span>
-                    </p>
-                    <p>
-                        预期
-                        <span>{{news.forecast || '--'}}</span>
-                    </p>
-                    <p>
-                        前值
-                        <span>{{news.previous || '--'}}</span>
-                    </p>
+            </div>
+
+            <div class="date_info_box clearfix">
+                <div class="fl">
+                    <i class="fa fa-calendar"></i>
+                    <span>本周：</span>
+                    <span>{{dateList[0].year}}年{{toDou(dateList[0].month+1)}}月{{toDou(dateList[0].date)}}日</span>
+                    <i class="fa fa-arrow-right"></i>
+                    <span>{{dateList[dateList.length-1].year}}年{{toDou(dateList[dateList.length-1].month+1)}}月{{toDou(dateList[dateList.length-1].date)}}日</span>
                 </div>
+                <div class="fr">
+                    <span class="return_today" ng-click="checkDate(nowDate)">回到今天</span>
+                </div>
+            </div>
 
-                <div class="info_details_box" ng-show="news.open">
-                    <div class="info_details">
-                        <div class="title">{{news.mark && news.country}}{{news.title}}</div>
+            <ul class="info_list_box">
+                <li class="info_list" ng-repeat="news in newsInfo">
+                    <div class="tip_info">
+                        <i class="fa fa-bell-o"></i>
+                        <span>{{news.tw_time}}</span>
+                        <i class="fa fa-star" ng-class="{active: news.importance >= 1}"></i>
+                        <i class="fa fa-star" ng-class="{active: news.importance >= 2}"></i>
+                        <i class="fa fa-star" ng-class="{active: news.importance >= 3}"></i>
+                    </div>
+                    <div class="tit_info clearfix" ng-click="showDetails(news)">
+                        <img ng-src="{{news.flagURL}}">
+                        <span class="title">
+                            {{news.mark && news.country}}{{news.title}}
+                        </span>
+                        <span class="icon">
+                            <i class="fa fa-chevron-down" ng-show="!news.open"></i>
+                            <i class="fa fa-chevron-up" ng-show="news.open"></i>
+                        </span>
+                    </div>
+                    <div class="cont_info">
+                        <p class="active">
+                            今值
+                            <span>{{news.actual || '--'}}</span>
+                        </p>
+                        <p>
+                            预期
+                            <span>{{news.forecast || '--'}}</span>
+                        </p>
+                        <p>
+                            前值
+                            <span>{{news.previous || '--'}}</span>
+                        </p>
+                    </div>
 
-                        <div style="min-width: 400px; height: 300px; margin: 20px 0px;">
-                            <div tw-spline-chart bind-chart-options="news.bindChartOptions"></div>
+                    <div class="info_details_box" ng-show="news.open">
+                        <div class="info_details">
+                            <div class="title">{{news.mark && news.country}}{{news.title}}</div>
+
+                            <div style="min-width: 400px; height: 300px; margin: 20px 0px;">
+                                <div tw-spline-chart bind-chart-options="news.bindChartOptions"></div>
+                            </div>
+
+                            <div class="tip_item">下次公布时间：{{getDetailTime(news.details.detail.next_fab_time)}}</div>
+                            <div class="tip_item">数据公布机构：{{news.details.detail.public_organization}}</div>
+                            <div class="tip_item">发布频率：{{news.details.detail.release_frequency}}</div>
+                            <div class="tip_item">统计方法：{{news.details.detail.statistical_method}}</div>
+
+                            <ul class="desc_item">
+                                <li class="item">
+                                    <div class="tit">
+                                        <i class="fa fa-share-alt" aria-hidden="true"></i>
+                                        <strong>数据影响</strong>
+                                    </div>
+                                    <div class="tip">{{news.details.detail.data_influence}}</div>
+                                </li>
+                                <li class="item">
+                                    <div class="tit">
+                                        <i class="fa fa-question" aria-hidden="true"></i>
+                                        <strong>数据释义</strong>
+                                    </div>
+                                    <div class="tip">{{news.details.detail.data_paraphrase}}</div>
+                                </li>
+                                <li class="item">
+                                    <div class="tit">
+                                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                                        <strong>关注理由</strong>
+                                    </div>
+                                    <div class="tip">{{news.details.detail.focus_reason}}</div>
+                                </li>
+                            </ul>
                         </div>
 
-                        <div class="tip_item">下次公布时间：{{getDetailTime(news.details.detail.next_fab_time)}}</div>
-                        <div class="tip_item">数据公布机构：{{news.details.detail.public_organization}}</div>
-                        <div class="tip_item">发布频率：{{news.details.detail.release_frequency}}</div>
-                        <div class="tip_item">统计方法：{{news.details.detail.statistical_method}}</div>
-
-                        <ul class="desc_item">
-                            <li class="item">
-                                <div class="tit">
-                                    <i class="fa fa-share-alt" aria-hidden="true"></i>
-                                    <strong>数据影响</strong>
-                                </div>
-                                <div class="tip">{{news.details.detail.data_influence}}</div>
-                            </li>
-                            <li class="item">
-                                <div class="tit">
-                                    <i class="fa fa-question" aria-hidden="true"></i>
-                                    <strong>数据释义</strong>
-                                </div>
-                                <div class="tip">{{news.details.detail.data_paraphrase}}</div>
-                            </li>
-                            <li class="item">
-                                <div class="tit">
-                                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                                    <strong>关注理由</strong>
-                                </div>
-                                <div class="tip">{{news.details.detail.focus_reason}}</div>
-                            </li>
-                        </ul>
+                        <div ng-show="news.errMsg" class="info_details_msg">
+                            {{news.errMsg}}
+                        </div>
                     </div>
-
-                    <div ng-show="news.errMsg" class="info_details_msg">
-                        {{news.errMsg}}
-                    </div>
-                </div>
-            </li>
-        </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
