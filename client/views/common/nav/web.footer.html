@@ -76,6 +76,37 @@
                         </li>
                     </ul>
                 </div>
+                <%if (req.host.indexOf('global') != -1) {%>
+                        <div class="link-list__item">
+                            <h2>
+                                <p class="mg-bt-20">
+                                    <span><%= lang.text("foot11")%></span>
+                                </p>
+                            </h2>
+                            <ul>
+                                <li class="mg-bt-15">
+                                    <h3>
+                                        <a>
+                                            &nbsp;<%= lang.text("supportEmail")%>
+                                        </a>
+                                    </h3>
+                                </li>
+                            </ul>
+                        </div>
+                    <!-- <ul class="pd-tp-20 clearfix">
+                        <li class="footer-weibo">
+                            <a href="" target="_blank">
+                                <img class="img-20" src="/white_label/footer/footer-icon-face-book.png">
+                            </a>
+                        </li>
+                        <li class="footer-weixin">
+                            <img class="img-20" src="/white_label/footer/footer-icon-twitter.png">
+                            <span>
+                                <img src="/images/footer-weixin-code.png">
+                            </span>
+                        </li>
+                    </ul> -->
+                <%}%>
             </div>
             <div class="contact-us">
             <%if (req.host.indexOf('global') == -1) {%>
@@ -112,40 +143,6 @@
                         <%=lang.text("supportEmail")%>
                     </p>
                 </div>
-            <%}%>
-            <%if (req.host.indexOf('global') != -1) {%>
-
-                <div class="link-list">
-                    <div class="link-list__item">
-                        <h2>
-                            <p class="mg-bt-20">
-                                <span><%= lang.text("foot11")%></span>
-                            </p>
-                        </h2>
-                        <ul>
-                            <li class="mg-bt-15">
-                                <h3>
-                                    <a href="/web/blog/agreement">
-                                        &nbsp;<%= lang.text("supportEmail")%>
-                                    </a>
-                                </h3>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- <ul class="pd-tp-20 clearfix">
-                    <li class="footer-weibo">
-                        <a href="" target="_blank">
-                            <img class="img-20" src="/white_label/footer/footer-icon-face-book.png">
-                        </a>
-                    </li>
-                    <li class="footer-weixin">
-                        <img class="img-20" src="/white_label/footer/footer-icon-twitter.png">
-                        <span>
-                            <img src="/images/footer-weixin-code.png">
-                        </span>
-                    </li>
-                </ul> -->
             <%}%>
             </div>
 
