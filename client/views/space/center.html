@@ -32,8 +32,8 @@
                     <p class="summary_amount">${{ assetInfo.trade_balance || '--' }}</p>
                     <p class="summary_btn" ng-if="assetInfo.trade_user_status === 2"><span><a ui-sref="authen.subpage({subpage: 'investInfo'})">{{lang.text('tigerWitID.myAccount.upgradeToLiveAccount')}} &gt;</a></span></p>
                     <p class="summary_btn" ng-if="assetInfo.trade_user_status === 1">
-                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'deposit' })">{{lang.text('tigerWitID.myAccount.deposit')}}</a></span>
-                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'withdraw' })">{{lang.text('tigerWitID.myAccount.withdrawal')}}</a></span>
+                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'deposit' })">{{lang.text('tigerWitID.depositWithdrawal.deposit')}}</a></span>
+                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'withdraw' })">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</a></span>
                         <span ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.center.invest.home">{{lang.text('tigerWitID.details.title')}}</a></span>
                     </p>
                 </span>
@@ -46,8 +46,8 @@
                 <span ng-if="assetInfo.wallet_user_status === 1">
                     <p class="summary_amount">${{ assetInfo.wallet_balance || '--' }}</p>
                     <p class="summary_btn" >
-                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'deposit', account: 'wallet'})">{{lang.text('tigerWitID.myAccount.deposit')}}</a></span>
-                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'withdraw', account: 'wallet'})">{{lang.text('tigerWitID.myAccount.withdrawal')}}</a></span>
+                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'deposit', account: 'wallet'})">{{lang.text('tigerWitID.depositWithdrawal.deposit')}}</a></span>
+                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'withdraw', account: 'wallet'})">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</a></span>
                         <span ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.center.wallet.subpage({ subpage: 'summary'})">{{lang.text('tigerWitID.details.title')}}</a></span>
                     </p>
                 </span>
