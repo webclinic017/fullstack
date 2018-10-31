@@ -389,15 +389,17 @@ $(document).ready(function () {
                     step = 8;
                     initCardTypeInfo();
                     //加载证件类型缓存
-                    if (userCacheInfo.idcard_type !== '') {
-                        $.each(cardTypeList.data, function (index, value) {
-                            if (userCacheInfo.idcard_type == value.value) {
-                                $(ele.usernameCardType).val(value.key);
-                            }
-                        });
-                        $(".m_third_username select").find("option[value="+userCacheInfo.idcard_type+"]").first().attr("selected", true);
-                        $(ele.usernameCardType).attr("data-type", userCacheInfo.idcard_type);
-                    }
+                    try {
+                        if (userCacheInfo.idcard_type !== '') {
+                            $.each(cardTypeList.data, function (index, value) {
+                                if (userCacheInfo.idcard_type == value.value) {
+                                    $(ele.usernameCardType).val(value.key);
+                                }
+                            });
+                            $(".m_third_username select").find("option[value="+userCacheInfo.idcard_type+"]").first().attr("selected", true);
+                            $(ele.usernameCardType).attr("data-type", userCacheInfo.idcard_type);
+                        }
+                    } catch (e) {}
                     goStepPage();
                     // 神策统计
                     // sa.track('New_Realname');
