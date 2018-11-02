@@ -165,10 +165,10 @@ module.exports = {
     },
     newhome_35_1: {
       zh: "现在立刻下载APP，",
-      en: "Download the app and open a USD2,000 Experience account instantly."
+      en: "Download the app and open a USD10,000 Experience account instantly."
     },
     newhome_35_2: {
-      zh: "即可享受2000美元账户体验金。",
+      zh: "即可享受10000美元账户体验金。",
       en: "Open a Live account within minutes."
     },
     newhome_36: {
@@ -217,8 +217,8 @@ module.exports = {
       en: "Open an account - online or on the app"
     },
     newhome_44: {
-      zh: "使用一个2000美元的体验金账户，即可零风险参与市场实时交易。",
-      en: "Open an Experience account with USD2,000 of virtual funds and test your strategies with real-time prices in a risk-free environment."
+      zh: "使用一个10000美元的体验金账户，即可零风险参与市场实时交易。",
+      en: "Open an Experience account with USD10,000 of virtual funds and test your strategies with real-time prices in a risk-free environment."
     },
     newhome_45: {
       zh: "开设一个真实账户，最多可使用七个子账户进行自主交易和复制跟单交易。",
