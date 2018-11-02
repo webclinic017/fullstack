@@ -32,8 +32,8 @@ module.exports = {
       en: "Once open an account, you will get"
     },
     third_index2: {
-      zh: "$2000体验金 轻松玩外汇",
-      en: "$2000 experience money to help you play good at foreign exchange."
+      zh: "$10000体验金 轻松玩外汇",
+      en: "$10000 experience money to help you play good at foreign exchange."
     },
     third_index3: {
       zh: "新手豪礼",
