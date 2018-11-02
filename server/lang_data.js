@@ -20,7 +20,7 @@ module.exports = function () {
             titleEn: "TigerWit",
             supportEmail: "support@tigerwit.com",
             ibEmail: "support@tigerwit.com",
-            telephone: "400 - 809 - 8509",
+            telephone: "400-809-8509",
             webSite: "www.tigerwit.com",
             webMt4Download: "https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
             androidApp: versionAndroidApp,
@@ -31,10 +31,10 @@ module.exports = function () {
             downloadGlobalAndroid: "http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
 
             // path
-            logoPathZh: indexBasePath + "/tigerwit-logo-en.png",
+            logoPathZh: indexBasePath + "/header/tigerwit-logo-en.png",
             h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            logoPathEn: indexBasePath + "/header/tigerwit-logo-en.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
             homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
             homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
@@ -61,17 +61,17 @@ module.exports = function () {
             titleEn: "lonfx",
             supportEmail: "support@tigerwit.com",
             ibEmail: "support@tigerwit.com",
-            telephone: "400 - 809 - 8509",
+            telephone: "400-809-8509",
             webSite: "lonfx.tigerwit.com",
             webMt4Download: "https://static.tigerwitfx.com/files/tigerwit_setup_151111.exe",
             androidApp: versionAndroidApp,
             download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.tigerwit.forex",
 
             // path
-            logoPathZh: indexBasePath + "/tigerwit-logo.png",
+            logoPathZh: indexBasePath + "/header/tigerwit-logo.png",
             h5_register_logo: indexBasePath + "/h5_register_logo_TigerWit.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            logoPathEn: indexBasePath + "/header/tigerwit-logo-en.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
             homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
             homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
@@ -106,10 +106,10 @@ module.exports = function () {
             download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.pandaforex.forex",
 
             // path
-            logoPathZh: indexBasePath + "/tigerwit-logo.png",
+            logoPathZh: indexBasePath + "/header/tigerwit-logo.png",
             h5_register_logo: indexBasePath + "/h5_register_logo_Panda.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-            logoPathEn: indexBasePath + "/tigerwit-logo-en.png",
+            logoPathEn: indexBasePath + "/header/tigerwit-logo-en.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
             homeTradePathZh: indexBasePath + "/index2-trade-img-tigerwit.png",
             homeTradePathEn: indexBasePath + "/index2-trade-img-tigerwit-en.png",
@@ -143,10 +143,10 @@ module.exports = function () {
             download: "http://a.app.qq.com/o/simple.jsp?pkgname=com.parkerdawson.forex",
 
             // path
-            logoPathZh: indexBasePath + "/pkds-logo.png",
+            logoPathZh: indexBasePath + "/header/pkds-logo.png",
             h5_register_logo: indexBasePath + "/h5_register_logo_Pakerdawson.png",
             helpLogo: indexBasePath + "/help-logo-tigerwit.png",
-            logoPathEn: indexBasePath + "/pkds-logo.png",
+            logoPathEn: indexBasePath + "/header/pkds-logo.png",
             homePersonPath: indexBasePath + "/index-person-tiger.jpg",
             homeTradePathZh: indexBasePath + "/index2-trade-img-pkds.png",
             homeTradePathEn: indexBasePath + "/index2-trade-img-pkds.png",
@@ -158,7 +158,7 @@ module.exports = function () {
             webAgentBecome: indexBasePath + "/become-banner-pkds.jpg",
 
             icoPath: indexBasePath + "/pkds.ico",
-            t33_logo: indexBasePath + "/pkds-logo.png"
+            t33_logo: indexBasePath + "/header/pkds-logo.png"
 
         };
 
@@ -295,7 +295,7 @@ module.exports = function () {
         "typesOfAccounts": { "en": "Types of accounts", "zh": "账户类型" },
         "trading": { "en": "Trading", "zh": "交易" },
         "platform": { "en": "Platform", "zh": "平台" },
-        "swapRate": { "en": "Swap rate", "zh": "隔夜利息" },
+        "swapRate": { "en": "Swaps", "zh": "隔夜利息" },
         "nodata": { "en": "No data", "zh": "暂无数据" },
         "more": { "en": "Click for More", "zh": "点击查看更多信息" },
         "fold": { "en": "Fold", "zh": "收起" },
@@ -378,7 +378,7 @@ module.exports = function () {
         "foot_37": { "zh": "TigerWit Limited （英国）和TigerWit Limited （巴哈马）是TigerWit Limited的子公司。TigerWit Limited （英国）由英国金融行为监管局（FCA）监管，授权代表编号为：679941。TigerWit Limited （巴哈马）由巴哈马证券委员会（SCB）监管，监管号为：SIA-F185。", "en": "TigerWit Limited (UK) and TigerWit Limited (Bahamas) are subsidiaries of TigerWit Holding Limited.TigerWit Limited (UK) is regulated by Financial Conduct Authority（FCA）, license number 679941. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas（SCB）, license number SIA-F185."},
         //footer 页脚修改 － 2018.09.17
         "foot_38": {"zh": "Risk Warning:", "en": "Risk Warning:"},
-        "foot_39": {"zh": "Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: https://uk.tigerwit.com", "en": "Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: "},
+        "foot_39": {"zh": "Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: ", "en": "Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: "},
         "foot_42": {"zh": "你要在线咨询", "en": "Which kind of consultation do you need?"},
         "foot_43": {"zh": "普通咨询", "en": "Normal consultation"},
         "foot_44": {"zh": "我是普通用户，咨询交易相关的问题", "en": "I'm a normal user,"},
@@ -745,17 +745,20 @@ module.exports = function () {
         // 复制规则 2018.7.20
         copyRule1: {zh: companyConfig.companyNameEn + "复制规则", en: companyConfig.companyNameEn + " Copy Regulations"},
         copyRule2: {zh: "复制账号", en: "Copy Account"},
+        copyRule2M: {zh: "复制账号：", en: "Copy Account:"},
         copyRule2_1: {zh: "系统将使用跟单专用账号复制高手，无跟单账号复制时将自动生成，所有复制操作均使用该跟单账号进行；", en: "System will use the special copy account to follow masters, the special copy account will be generated if there is no one, and all copy operation will use this special account."},
         copyRule2_2: {zh: "复制高手", en: "Copy Master"},
+        copyRule2_2M: {zh: "复制高手：", en: "Copy Master:"},
         copyRule2_3: {zh: "您最多可以复制 10 位高手。每位交易高手的复制金额不同，您可以根据自己的账户情况选择高手进行复制。", en: "You can copy up to 10 masters. Each transaction masters’ copy amount is not the same, you can choose one to follow depend on your account situation."},
         copyRule3: {zh: "复制资金", en: "Copy Amount"},
+        copyRule3M: {zh: "复制资金：", en: "Copy Amount:"},
         copyRule4: {zh: "复制资金可自行设置，最小值不可低于高手的最低复制金额，最大值不可超过您账户的可用复制金额", en: "The copy amount can be set by yourself, the minimum amount cannot lower than the master’s minimum copy amount, and the maximum amount cannot greater than your account available amount."},
         copyRule5: {zh: "* 可用复制资金=余额-已复制高手资金", en: "*Available amount = Balance – Copied funds"},
         copyRule6: {zh: "复制高手开仓", en: "Copy master open order"},
         copyRule7: {zh: "1. 复制成功后，高手开仓，账户跟随高手同步开仓。", en: "1. After successful copy, the copy account will open orders with master synchronously."},
         copyRule8: {zh: "* 用户跟单手数=（高手订单手数*跟单者资金）/高手余额", en: "* User copy lots = (Master order lots*Follower funds)/Master balance"},
-        copyRule9: {zh: "用户开仓可用保证金=跟单者资金-跟随高手的持仓单占用保证金+跟随高手持仓单的浮动的盈亏", en: "Free margin = Follower’s funds - Occupied margin + Floating P/L"},
-        copyRule10: {zh: "当复制资金不足时，将不再跟随高手下单", en: "When the copy funds are short, will no longer place orders with the master."},
+        copyRule9: {zh: "用户开仓可用保证金=跟单者资金-跟随高手的持仓单占用保证金+跟随高手持仓单的浮动的盈亏，", en: "Free margin = Follower’s funds - Occupied margin + Floating P/L,"},
+        copyRule10: {zh: "当复制资金不足时，将不再跟随高手下单。", en: "When the copy funds are short, will no longer place orders with the master."},
         copyRule11: {zh: "2. 高手极短时间内开仓后立即平仓，可能会导致跟单失败", en: "2. It may cause the failure of follow orders when the master open and close orders in a short time."},
         copyRule12: {zh: "3. 账户只复制高手开仓订单，高手的挂单交易不会复制，挂单成交会跟随开仓。", en: "3. The account only copy master’s open orders but not pending orders, and will copy the pending orders when it closed."},
         copyRule13: {zh: "跟随高手平仓", en: "Follow master to close orders"},
@@ -834,7 +837,7 @@ module.exports = function () {
         "mt4-1": { "en": "MT4 Software Download", "zh": "MT4 交易软件下载" },
         "mt4-2": { "en": "", "zh": "操作方便，高效易用" },
         "mt4-3": { "en": "MT4 trading platform can instantly view of gold, silver, foreign exchange, stock and futures market, and can be simulated trading. Powerful MT4 trading platform, the page is simple, easy to operate, the most important feature is easy to use opening positions, investors can only make a stop set for risk control. MT4 trading platform in addition to providing real-time quotes and trading functions, including 18 kinds of line drawing tool, 9 trading session chart options, 30 kinds of international popular technical indicators and sound warning prompt. Users can be the next single, open, limit orders, stop, only to win, view real-time news, announcements, warning, view the report, as well as data analysis and processing operations.", "zh": "MT4 交易平台可以即时查看黄金、白银、外汇、股票、期货等行情，同时可以进行模拟交易。MT4 交易平台功能强大，页面简洁，操作方便，最主要的开仓平仓功能简单易用，投资者可以通过设置止赚止损来进行风险控制。MT4 交易平台除了提供实时行情和交易功能外，还包括 18 种画线工具、9 个交易时段图表选项、30 种国际流行技术指标和声音预警提示。用户可进行下单、平仓、限价单、止损、止赢、查看实时新闻、公告、预警、查看报表，以及数据分析和处理等操作。" },
-        "mt4-4": { "en": "MT4 For iPhone", "zh": "IOS 下载" },
+        "mt4-4": { "en": "MT4 For iPhone", "zh": "iOS 下载" },
         "mt4-5": { "en": "MT4 For Android", "zh": "Android 下载" },
         "mt4-6": { "en": "MT4 For PC", "zh": "PC端下载" },
 
@@ -2088,7 +2091,7 @@ module.exports = function () {
             tip1: {zh: "复制跟单", en: "Follow a master to trade"},
             tip2: {zh: "无需精通外汇知识，跟着高手坐享其成", en: "No need to master forex knowledge, just follow a master and enjoy the profit."},
             tip3: {zh: "支持Android2.3.3及以上", en: "Support Android2.3.3 and above"},
-            tip4: {zh: "支持苹果IOS7.0及以上", en: "Support apple IOS7.0 and above"},
+            tip4: {zh: "支持苹果iOS7.0及以上", en: "Support apple iOS7.0 and above"},
             tip5: {zh: "扫码轻松赚收益", en: "Scan QR code and take profit easily"},
             tip6: {zh: "请使用手机浏览器扫描功能", en: "Please use the mobile browser scan function"},
             tip7: {zh: "六大投资优势 体验完美交易", en: "Six investment advantages, experience perfect trading."},
@@ -2134,6 +2137,16 @@ module.exports = function () {
             copyRegulations: {zh: "复制规则", en: "Copy Regulations"},
             
         },
+        header: {
+            education: {zh: "教育", en: "Education"},
+            course: {zh: "教程", en: "Course"},
+        },
+        footer: {
+            serviceTime: {zh: "客服电话（服务时间 8:00-22:00）", en: "Customer service telephone (service time from 8:00 to 22:00)"},
+            subscribeArticle: {zh: "订阅每日必读的投资干货", en: "Subscribe daily investment article"},
+            scb: {zh: "TigerWit受巴哈马证券交易委员会（SCB）的授权和监管，监管号：SIA-F185。", en: "TigerWit is authorized and supervised by Securities Commission of the Bahamas (SCB), the regulation number SIA-F185."},
+            fca: {zh: "TigerWit受英国金融行为监管局（FCA）的授权和监管，授权编号为：679941。", en: "TigerWit is authorized and supervised by Financial Conduct Authority (FCA), the authorization number 679941."},
+        }
     };
 
     function replaceTiger(str) {

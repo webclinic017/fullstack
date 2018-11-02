@@ -14,15 +14,9 @@
                 <% include /common/nav/web.header.html %>
             </div>
             
-            <div class="body">
-                <div class="layout-2">
-                    <div class="layout-2__side mg-tp-30">
-                        <%- include('./copy/sidebar.html') %>
-                    </div>
-                    <div class="layout-2__content mg-tp-30">
-                        <%- include('./copy/' + pageInfo.id + '.html') %>
-                    </div>
-                </div>
+            <div class="new_body">
+                <div class="copy_banner"></div>
+                <%- include('./copy/' + pageInfo.id + '.html') %>
             </div>
 
         <% include /common/vendor/web.js.html %>

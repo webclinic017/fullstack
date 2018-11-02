@@ -54,12 +54,12 @@
 
         <!-- 登录后 -->
         <div class="navbar_info" ng-cloak ng-if="personalCookiesInfo.userCode">
-            <a class="navbar_info__msg" href="/space/#/space/notice/">
-                <!-- 有新消息时显示 -->
+            <!-- <a class="navbar_info__msg" href="/space/#/space/notice/">
+                有新消息时显示
                 <span class="navbar_info__number" ng-if="personal.unreadMsg.total > 0">
                     {{ personal.unreadMsg.total }}
                 </span>
-            </a>
+            </a> -->
 
             <div class="navbar_info__psl">
                 <a href="/space/#/center">
@@ -67,16 +67,15 @@
                     <img class="navbar_info__avatar" ng-show="!personal.addAvatarImg" ng-src="{{personalCookiesInfo.userAvatar}}">
                     <img class="navbar_info__avatar" ng-show="!!personal.addAvatarImg" ng-src="{{personal.addAvatarImg}}">
                     <h2 class="navbar_info__username">{{(lang.isEnglish() && personalCookiesInfo.userNameEn) ? personalCookiesInfo.userNameEn : (personalCookiesInfo.userName || '**')}}</h2>
-                </a>
-
-                <a class="navbar_info__logout" href="" ng-click="logout()">
-                    <i class="fa fa-sign-out"></i>
-                    <%= lang.text("signout")%>
-                </a>
+                </a>               
+            </div> 
+            <div class="navbar_info__logout" ng-click="logout()">
+                <!-- <i class="fa fa-sign-out"></i> -->
+                <%= lang.text("signout")%>
             </div>
         </div>
 
-        <ul class="nav navbar-nav navbar-left">
+        <ul class="nav navbar-nav">
             <li>
                 <h2>
                     <a data-navbar-trigger href="/">
@@ -92,11 +91,11 @@
                 </h2>
                 <ul class="dropdown-menu">
                     <li>
-                        <h2><a href="/ranklist/#/ranklist/masters"><%= lang.text("navbar3")%></a></h2>
+                        <h2><a data-navbar-trigger href="/ranklist/#/ranklist/masters"><%= lang.text("navbar3")%></a></h2>
                     </li>
-                    <li <%= lang.text("navbar15")%>>
-                        <h2><a href="/regular"><%= lang.text("navbar4")%></a></h2>
-                    </li>
+                    <!-- <li <%= lang.text("navbar15")%>>
+                        <h2><a data-navbar-trigger href="/regular"><%= lang.text("navbar4")%></a></h2>
+                    </li> -->
                 </ul>
             </li>
             <li class="dropdown" tw-dropdown>
@@ -106,18 +105,18 @@
 
                 <ul class="dropdown-menu">
                     <li>
-                        <h2><a href="/web/product/forex"><%= lang.text("navbar6")%></a></h2>
+                        <h2><a data-navbar-trigger href="/web/product/forex"><%= lang.text("navbar6")%></a></h2>
                     </li>
                     <%if(!lang.isCloned()){%>
                         <li>
-                            <h2><a href="/web/product/oil"><%= lang.text("navbar7")%></a></h2>
+                            <h2><a data-navbar-trigger href="/web/product/oil"><%= lang.text("navbar7")%></a></h2>
                         </li>
                         <li>
-                            <h2><a href="/web/product/metal"><%= lang.text("navbar8")%></a></h2>
+                            <h2><a data-navbar-trigger href="/web/product/metal"><%= lang.text("navbar8")%></a></h2>
                         </li>
                     <%}%>
                     <li>
-                      <h2><a href="/web/product/cfd"><%= lang.text("navbar9")%></a></h2>
+                      <h2><a data-navbar-trigger href="/web/product/cfd"><%= lang.text("navbar9")%></a></h2>
                     </li>
                 </ul>
             </li>
@@ -128,19 +127,46 @@
 
                 <ul class="dropdown-menu">
                     <li>
-                        <h2><a href="/web/copy/rules"><%= lang.text("downloadApp.copyRegulations")%></a></h2>
+                        <h2><a data-navbar-trigger href="/web/copy/rules"><%= lang.text("downloadApp.copyRegulations")%></a></h2>
                     </li>
                     <li>
-                        <h2><a href="/web/copy/select"><%= lang.text("downloadApp.howChooseMaster")%></a></h2>
+                        <h2><a data-navbar-trigger href="/web/copy/select"><%= lang.text("downloadApp.howChooseMaster")%></a></h2>
                     </li>
                     <%if(lang.isCompany("tigerwit")){%>
                         <li>
-                            <h2><a href="/web/copy/comment"><%= lang.text("downloadApp.analysis")%></a></h2>
+                            <h2><a data-navbar-trigger href="/web/copy/comment"><%= lang.text("downloadApp.analysis")%></a></h2>
                         </li>
                         <li>
-                            <h2><a href="/web/copy/calendar"><%= lang.text("downloadApp.calendar")%></a></h2>
+                            <h2><a data-navbar-trigger href="/web/copy/calendar"><%= lang.text("downloadApp.calendar")%></a></h2>
                         </li>
                     <%}%>
+                </ul>
+            </li>
+            <!-- 内容无翻译，英文暂时隐藏 -->
+            <li class="dropdown" tw-dropdown>
+                <h2>
+                    <a data-navbar-trigger data-navbar-level="2" data-default="/web/faq,/web/help,/web/course" href="/web/faq/real"><%= lang.text("header.education")%></a>
+                </h2>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <h2><a data-navbar-trigger data-navbar-level="2" href="/web/faq/real"><%= lang.text("faq")%></a></h2>
+                    </li>
+                    <li ng-show="!(lang.isEnglish())">
+                        <h2><a data-navbar-trigger data-navbar-level="2" href="/web/help/introduce"><%= lang.text("foot14")%></a></h2>
+                    <!-- </li>
+                    <li>
+                        <h2><a data-navbar-trigger href="/help/oil"><%= lang.text("navbar7")%></a></h2>
+                    </li>
+                    <li>
+                        <h2><a data-navbar-trigger href="/help/metal"><%= lang.text("navbar8")%></a></h2>
+                    </li>
+                    <li>
+                        <h2><a data-navbar-trigger href="/help/cfd"><%= lang.text("navbar9")%></a></h2> -->
+                    </li>
+                    <li ng-show="false">
+                        <h2><a data-navbar-trigger data-navbar-level="2" href="/web/course/forex_basics"><%= lang.text("header.course")%></a></h2>
+                    </li>
                 </ul>
             </li>
             <% if (lang.currentLanguage() !== 'en') {%>
@@ -151,10 +177,10 @@
     
                     <ul class="dropdown-menu">
                         <li>
-                            <h2><a href="/web/agent/proxy"><%= lang.text("downloadApp.agencies")%></a></h2>
+                            <h2><a data-navbar-trigger href="/web/agent/proxy"><%= lang.text("downloadApp.agencies")%></a></h2>
                         </li>
                         <li>
-                            <h2><a href="/web/agent/become"><%= lang.text("downloadApp.becomeMaster")%></a></h2>
+                            <h2><a data-navbar-trigger href="/web/agent/become"><%= lang.text("downloadApp.becomeMaster")%></a></h2>
                         </li>
                     </ul>
                 </li>
@@ -175,23 +201,23 @@
                 <ul class="dropdown-menu">
                     <% if(lang.isEnglish()) { %> 
                         <li>
-                            <h2><a href="/web/aboutus/abouttigerwit"><%= lang.text("navbar11")%></a></h2>
+                            <h2><a data-navbar-trigger href="/web/aboutus/abouttigerwit"><%= lang.text("navbar11")%></a></h2>
                         </li>
                         <li>
-                            <h2><a href="/web/aboutus/liverpool">Liverpool FC</a></h2>
+                            <h2><a data-navbar-trigger href="/web/aboutus/liverpool">Liverpool FC</a></h2>
                         </li>
                         <li>
-                            <h2><a href="/web/aboutus/medianewsandcontact">Media news and contact</a></h2>
+                            <h2><a data-navbar-trigger href="/web/aboutus/medianewsandcontact">Media news and contact</a></h2>
                         </li>
                     <% } else { %> 
                         <li>
-                            <h2><a href="/web/aboutus/companyinformation"><%= lang.text("navbar11_f")%></a></h2>
+                            <h2><a data-navbar-trigger href="/web/aboutus/companyinformation"><%= lang.text("navbar11_f")%></a></h2>
                         </li>
                         <li>
-                            <h2><a href="/web/aboutus/team"><%= lang.text("downloadApp.eliteTeam")%></a></h2>
+                            <h2><a data-navbar-trigger href="/web/aboutus/team"><%= lang.text("downloadApp.eliteTeam")%></a></h2>
                         </li>
                         <li>
-                            <h2><a href="/web/aboutus/report"><%= lang.text("downloadApp.mediaReports")%></a></h2>
+                            <h2><a data-navbar-trigger href="/web/aboutus/report"><%= lang.text("downloadApp.mediaReports")%></a></h2>
                         </li>
                     <% } %>
                     

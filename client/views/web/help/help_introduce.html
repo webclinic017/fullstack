@@ -1,1 +1,48 @@
-<div class="help_content__introduce" id="search_text">    <h1>{{ lang.text("companyNameZh") }}产品使用手册</h1>    <p class="pgh">{{ lang.text("companyNameZh") }}是一家结合互联网金融科技和专业外汇券商的外汇交易平台,凭借雄厚的资本,结合强大的产品创新能力,自主研发了复制跟单系统和微盘交易系统,提供近百种外汇、原油、贵金属和差价合约产品。</p>    <p class="itd">{{ lang.text("companyNameZh") }}主要产品 : </p>    <ul>        <li><span class="circle">●</span>复制跟单</li>        <li><span class="circle">●</span>定期跟单</li>        <li><span class="circle">●</span>微盘交易</li>    </ul>    <ul class="list_box pgh route_list">        <p class="itd">{{ lang.text("companyNameZh") }}主要产品使用说明如下</p>        <li>            <a ui-sref="help.subpage({subpage: 'regular_web'})" ui-sref-active="active">                <span class="circle">●</span>{{ lang.text("companyNameZh") }}定期跟单系统详解-网页版            </a>        </li>        <li>            <a ui-sref="help.subpage({subpage: 'regular_app'})" ui-sref-active="active">                <span class="circle">●</span>{{ lang.text("companyNameZh") }}定期跟单系统详解-APP版            </a>        </li>        <li>            <a ui-sref="help.subpage({subpage: 'copy_web'})" ui-sref-active="active">                <span class="circle">●</span>{{ lang.text("companyNameZh") }}复制跟单系统详解-网页版            </a>        </li>        <li>            <a ui-sref="help.subpage({subpage: 'copy_app'})" ui-sref-active="active">                <span class="circle">●</span>{{ lang.text("companyNameZh") }}复制跟单系统详解-APP版            </a>        </li>        <li>            <a ui-sref="help.subpage({subpage: 'minMarket_app'})" ui-sref-active="active">                <span class="circle">●</span>{{ lang.text("companyNameZh") }}移动端交易系统详解-APP版            </a>        </li>    </ul></div><!-- <div class="help_authen">    Copyright &nbsp;    <i class="fa fa-copyright" aria-hidden="true"></i>    2014-2016&nbsp;&nbsp;{{ lang.text("companyNameEn") }}    Prime Limited&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://{{ lang.text('webSite') }}">{{ lang.text("webSite") }}</a></div> -->
+<div class="help_content mg-200__bg">
+    <h3 class="mg-200__circle-title pd-bt-20"><%= lang.text("companyZhName") %>产品使用手册</h3>
+    <p class=""><%= lang.text("companyZhName") %>是一家结合互联网金融科技和专业外汇券商的外汇交易平台,凭借雄厚的资本,结合强大的产品创新能力,自主研发了复制跟单系统和微盘交易系统,提供近百种外汇、原油、贵金属和差价合约产品。</p>
+    <h4 class="mg-200__two-title"><%= lang.text("companyZhName") %>主要产品 : </h4>
+    <div class="text-center mg-tp-70 pd-bt-50">
+        <ul class="help_content__products clearfix">
+            <li class="help_content__products-item">复制跟单</li>
+            <!-- <li class="help_content__products-item">定期跟单</li> -->
+            <li class="help_content__products-item">微盘交易</li>
+        </ul>
+    </div>
+   
+
+    <h4 class="mg-200__two-title"><%= lang.text("companyZhName") %>主要产品使用说明如下</h4>
+    <ul class="route_list">
+        <!-- <li>
+            <a href="/web/help/regular_web" class="mg-200__circle">
+                <%= lang.text("companyZhName") %>定期跟单系统详解-网页版
+            </a>
+        </li>
+        <li>
+            <a href="/web/help/regular_app" class="mg-200__circle">
+                <%= lang.text("companyZhName") %>定期跟单系统详解-APP版
+            </a>
+        </li> -->
+        <li>
+            <a href="/web/help/copy_web" class="mg-200__circle">
+                <%= lang.text("companyZhName") %>复制跟单系统详解-网页版
+            </a>
+        </li>
+        <li>
+            <a href="/web/help/copy_app" class="mg-200__circle">
+                <%= lang.text("companyZhName") %>复制跟单系统详解-APP版
+            </a>
+        </li>
+        <li>
+            <a href="/web/help/minMarket_app" class="mg-200__circle">
+                <%= lang.text("companyZhName") %>移动端交易系统详解-APP版
+            </a>
+        </li>
+    </ul>
+</div>
+<!-- <div class="help_authen">
+    Copyright &nbsp;
+    <i class="fa fa-copyright" aria-hidden="true"></i>
+    2014-2016&nbsp;&nbsp;{{ lang.text("companyNameEn") }}
+    Prime Limited&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://{{ lang.text('webSite') }}">{{ lang.text("webSite") }}</a>
+</div> -->

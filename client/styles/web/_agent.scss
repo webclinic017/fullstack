@@ -1,5 +1,11 @@
+// 背景
+.agent_banner {
+    height: 550px;
+    @include img-normal($white_label_new_bg + "agent-bg.png");
+    background-size: auto 100%;
+    background-position: center center;
+}
 @include b(agent) {
-    margin-bottom: 50px;
     
     @include e(banner) {
         // height: 320px;
@@ -12,30 +18,14 @@
         }
     }
 
-    @include e(title) {
 
-        > h3 {
-            border-bottom: 1px solid $gray;
-            margin-top: 75px;
-            margin-bottom: 30px;
-            padding-bottom: 30px;
-            text-align: center;
-            font-size: 28px;
-        }
-
-        > p {
-            line-height: 24px;
-        }
-    }
 
     @include e(content) {
 
         > h4 {
-            border-bottom: 1px solid $gray;
-            font-size: 22px;
-            margin-top: 35px;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
+            // border-bottom: 1px solid $gray;
+            // margin-top: 35px;
+            // margin-bottom: 20px;
         }
     }
 
@@ -187,28 +177,9 @@
             }
         }
     }
-
-    .global_proxy_banner {
-        height: 550px;
-        background-image: url("/images/web/proxy-global-banner.png");
-        background-size: auto 100%;
-        background-position: center center;
-        margin-top: 60px;
-    }
-    .global_proxy_content {
-        min-height: 100px;
-        background-color: #fff;
-        border-radius: 4px;
-        box-shadow: 0px 0px 3px 3px #fff;
-        width: 1030px;
-        margin: -200px auto 0px;
-        padding: 50px 30px;
-    }
     .global_proxy_title {
-        margin: 0;
         color: #fff;
-        font-size: 50px;
-        margin-bottom: 20px;
+        font-size: 34px;
         span {
             background: #242a36;
             padding: 6px 10px;
@@ -218,15 +189,6 @@
         color: #999;
         font-size: 16px;
         padding: 10px 0px;
-    }
-    .global_proxy_sub_title {
-        font-size: 30px;
-        height: 35px;
-        line-height: 35px;
-        span {
-            vertical-align: top;
-            padding-left: 5px;
-        }
     }
     .global_proxy_lst {
         color: #999;

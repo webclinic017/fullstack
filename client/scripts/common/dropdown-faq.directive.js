@@ -18,8 +18,8 @@
 
                 $('.faq-public__question').click(function() {
                     $(this).parent().find('.faq-public__answer').slideToggle();
-                    $(this).children('i[class$=right]').toggle();
-                    $(this).children('i[class$=down]').toggle();
+                    // $(this).children('i[class$=right]').toggle();
+                    // $(this).children('i[class$=down]').toggle();
                 });
             }
         }

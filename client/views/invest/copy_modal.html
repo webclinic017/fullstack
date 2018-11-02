@@ -119,27 +119,27 @@
                 </p>
             </div>
 
-            <button ng-if="frontErr.insufficient.show" class="btn btn-primary btn-lt fr">
+            <button ng-if="frontErr.insufficient.show" class="btn btn-primary btn-lt">
                <a href="/space/#/space/asset/deposit" target="_blank" class="font-base">{{lang.text('tigerWitID.tradingAccount.goDeposit')}}</a>
             </button>
 
             <!--正常提交按钮-->
             <div class="clearfix" ng-if="!hasCanceled">
                 <button ng-if="!frontErr.insufficient.show && clickable.copy && copyTrade.title == 'copy'" 
-                    class="btn btn-lt btn-dark fr" 
+                    class="btn btn-lt btn-dark" 
                     ng-class="{ 'btn-disabled' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
                     ng-click="submitStep1(false)">
                     {{lang.text('tigerWitID.details.copyTrade')}}
                 </button>
 
                 <button ng-if="!frontErr.insufficient.show && clickable.copy && copyTrade.title == 'modify'" 
-                    class="btn btn-lt btn-dark fr" 
+                    class="btn btn-lt btn-dark" 
                     ng-class="{ 'btn-disabled' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
                     ng-click="submitStep1(false)">
                     {{lang.text('tigerWitID.edit')}}
                 </button>
 
-                <button class="btn btn-primary btn-lt active fr" disabled ng-if="!clickable.copy">
+                <button class="btn btn-primary btn-lt active" disabled ng-if="!clickable.copy">
                     <i class="loading_spinner fa fa-spinner"></i>
                     {{lang.text('tigerWitID.submitting')}}
                 </button>
@@ -148,13 +148,13 @@
             <!--返回修改按钮-->
             <div class="clearfix" ng-if="hasCanceled">
                 <button ng-if="!frontErr.insufficient.show && clickable.copy" 
-                    class="btn btn-lt btn-dark fr" 
+                    class="btn btn-lt btn-dark" 
                     ng-class="{ 'btn-disabled' : copyTrade.amount < 200, 'btn-primary' : copyTrade.amount >= 200 }"
                     ng-click="submitStep1(true)">
                     {{lang.text('tigerWitID.tradingAccount.confirm')}}
                 </button>
 
-                <button class="btn btn-primary btn-lt active fr" disabled ng-if="!clickable.copy">
+                <button class="btn btn-primary btn-lt active" disabled ng-if="!clickable.copy">
                     <i class="loading_spinner fa fa-spinner"></i>
                     {{lang.text('tigerWitID.submitting')}}
                 </button>
@@ -193,15 +193,15 @@
 
         <!--强制继续按钮组-->
         <div class="sys_modal__btn_wrapper clearfix">
-            <button class="btn btn-primary btn-lt fr" ng-click="submitForm()" ng-if="clickable.copy">
+            <button class="btn btn-primary btn-lt" ng-click="submitForm()" ng-if="clickable.copy">
                 {{lang.text('tigerWitID.continue')}}
             </button>
 
-            <button class="btn btn-primary btn-lt fr mg-rg-15" ng-click="cancleSubmit()" ng-if="clickable.copy">
+            <button class="btn btn-primary btn-lt mg-lf-15" ng-click="cancleSubmit()" ng-if="clickable.copy">
                 {{lang.text('tigerWitID.cancel')}}
             </button>
             
-            <button class="btn btn-primary btn-lt active fr" disabled ng-if="!clickable.copy">
+            <button class="btn btn-primary btn-lt active" disabled ng-if="!clickable.copy">
                 <i class="loading_spinner fa fa-spinner"></i>
                 {{lang.text('tigerWitID.submitting')}}
             </button>
@@ -223,7 +223,7 @@
             </p>
         </div>
         <div class="sys_modal__btn_wrapper mg-tp-30 clearfix">
-            <button class="btn btn-primary btn-lt fr" ng-click="closeModal()">
+            <button class="btn btn-primary btn-lt" ng-click="closeModal()">
                 {{lang.text('tigerWitID.finish')}}
             </button>
         </div>
@@ -236,7 +236,7 @@
             </p>
         </div>
         <div class="sys_modal__btn_wrapper mg-tp-20 clearfix">
-            <a class="btn btn-primary btn-lt fr" href="/space/#/space/asset/evidence">
+            <a class="btn btn-primary btn-lt" href="/space/#/space/asset/evidence">
                 {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
             </a>
         </div>

@@ -1,0 +1,43 @@
+// 首页列表
+
+@include b(course) {
+    p {
+        font-size:16px;
+    }
+    @include e(lst){
+        margin: 0 -10px;
+        @include m(item) {
+            float: left;
+            width: 25%;
+            div {
+                cursor: pointer;
+                padding: 10px;
+                text-align: center;
+                &:hover{
+                background-color: #fff;
+                box-shadow: 0 0 10px 8px #f3f3f3;
+                border-radius: 4px;
+                border-color: transparent;
+                }
+                > p{
+                    color:rgba(36,42,54,1);
+                    line-height:22px;
+                    text-align: left;
+                    margin: 28px 0 10px;
+                }
+                > img{
+                    height: 194px;
+                }
+            }
+        }
+    }
+
+}
+// 详情
+.primary_darker{
+    background-color: $primary-darker;
+    padding: 3px 9px;
+}
+@include b(tutorial){
+
+}

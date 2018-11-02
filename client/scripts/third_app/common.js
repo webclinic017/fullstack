@@ -2,6 +2,7 @@ var bt=baidu.template;
 var timer = null;
 var personalInfo = {};
 var thirdToken = getUrlParam("token") || '';
+var os = getUrlParam("os") || '';
 
 if (thirdToken) {
   $.cookie("token", thirdToken , { path: '/', domain: '.tigerwit.com'});
