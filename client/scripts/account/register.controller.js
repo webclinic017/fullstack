@@ -217,6 +217,14 @@
                     $scope.$emit('relogin_info', 'is_register');
                     // 神策统计 - 注册
                     $timeout(function () {
+                        // console.log($cookies['user_code']);
+                        var user_id = $cookies['user_code'];
+                        // console.log(user_id);
+                        if (user_id) {
+                            sa.login(user_id);
+                        }
+                    }, 100);
+                    $timeout(function () {
                         sa.track('login', {
                             login_isNew: true,
                             registration_type: $scope.registerStep3 == 1 ? "手机注册" : "邮箱注册"
