@@ -126,9 +126,9 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V3.0.0",
+                        version_name : "V1.1.0",
                         description: "This update: \nHow old are you",
-                        updated_description: "120% users are using new version",
+                        updated_description: "99% users are using new version",
                         force_update : true
                     }
                 },
@@ -145,9 +145,9 @@
             cn: {
                ios: {
                     app_info: {
-                        version_name : "V3.0.0",
-                        description: "本次更新：\n当前版本3.0.0了哦～",
-                        updated_description: "120%的用户正在使用新版本",
+                        version_name : "V1.1.0",
+                        description: "本次更新：\n需要更新了哦～",
+                        updated_description: "99%的用户正在使用新版本",
                         force_update : true
                     }
                 },
