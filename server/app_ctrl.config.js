@@ -126,7 +126,7 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V3.0.0",
+                        version_name : "V1.9.0",
                         description: "This update: \nHow old are you",
                         updated_description: "99% users are using new version",
                         force_update : true
@@ -137,7 +137,7 @@
                         version_name : "V3.0.0",
                         description: "This update: \nHow old are you",
                         updated_description: "99% users are using new version",
-                        url: "https://static.tigerwitfx.com/xxxx",
+                        url: "https://staticdemo.tigerwitfx.com/downloads/apk/tigerwit_uk_v3.0.0.apk",
                         force_update : true
                     }
                 }
@@ -145,7 +145,7 @@
             cn: {
                ios: {
                     app_info: {
-                        version_name : "V3.0.0",
+                        version_name : "V1.9.0",
                         description: "本次更新：\n需要更新了哦～",
                         updated_description: "99%的用户正在使用新版本",
                         force_update : true
@@ -156,7 +156,7 @@
                         version_name : "V3.0.0",
                         description: "本次更新：\n需要更新了哦～",
                         updated_description: "99%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/xxxx",
+                        url: "https://staticdemo.tigerwitfx.com/downloads/apk/tigerwit_uk_v3.0.0.apk",
                         force_update : true
                     }
                 } 
