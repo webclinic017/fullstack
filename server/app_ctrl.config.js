@@ -128,15 +128,15 @@
                     app_info: {
                         version_name : "",
                         description: "This update: \nHow old are you",
-                        updated_description: "V2.0.0 has been updated, multi-account management system will give you better trading experience.",
+                        updated_description: "Version 2.0.0 available",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
                         version_name : "V3.0.0",
-                        description: "",
-                        updated_description: "V2.0.0 has been updated, multi-account management system will give you better trading experience.",
+                        description: "-  Multi-accounts management\n- Tourist mode\n- Withdrawal when have position orders\n- Bug fixes",
+                        updated_description: "Version 2.0.0 available",
                         url: "https://staticdemo.tigerwitfx.com/downloads/apk/tigerwit_uk_v3.0.0.apk",
                         force_update : true
                     }
@@ -147,15 +147,15 @@
                     app_info: {
                         version_name : "",
                         description: "本次更新：\n需要更新了哦～",
-                        updated_description: "V2.0.0 has been updated, multi-account management system will give you better trading experience.",
+                        updated_description: "Version 2.0.0 available",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
                         version_name : "V3.0.0",
-                        description: "",
-                        updated_description: "V2.0.0 has been updated, multi-account management system will give you better trading experience.",
+                        description: "-  Multi-accounts management\n- Tourist mode\n- Withdrawal when have position orders\n- Bug fixes",
+                        updated_description: "Version 2.0.0 available",
                         url: "https://staticdemo.tigerwitfx.com/downloads/apk/tigerwit_uk_v3.0.0.apk",
                         force_update : true
                     }
