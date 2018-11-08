@@ -128,15 +128,15 @@
                     app_info: {
                         version_name : "V1.9.0",
                         description: "This update: \nHow old are you",
-                        updated_description: "99% users are using new version",
+                        updated_description: "70% users are using new version",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
                         version_name : "V3.0.0",
-                        description: "This update: \nHow old are you",
-                        updated_description: "99% users are using new version",
+                        description: "This update\nMulti-accounts management\nTourist mode\nWithdrawal when have position orders\nBug fixes",
+                        updated_description: "70% users are using new version",
                         url: "https://staticdemo.tigerwitfx.com/downloads/apk/tigerwit_uk_v3.0.0.apk",
                         force_update : true
                     }
@@ -147,15 +147,15 @@
                     app_info: {
                         version_name : "V1.9.0",
                         description: "本次更新：\n需要更新了哦～",
-                        updated_description: "99%的用户正在使用新版本",
+                        updated_description: "70%的用户正在使用新版本",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
                         version_name : "V3.0.0",
-                        description: "本次更新：\n需要更新了哦～",
-                        updated_description: "99%的用户正在使用新版本",
+                        description: "This update\nMulti-accounts management\nTourist mode\nWithdrawal when have position orders\nBug fixes",
+                        updated_description: "70%的用户正在使用新版本",
                         url: "https://staticdemo.tigerwitfx.com/downloads/apk/tigerwit_uk_v3.0.0.apk",
                         force_update : true
                     }
