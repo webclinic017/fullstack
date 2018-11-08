@@ -128,7 +128,7 @@
                     app_info: {
                         version_name : "V3.0.0",
                         description: "This update: \nHow old are you",
-                        updated_description: "120%的用户正在使用新版本",
+                        updated_description: "120% users are using new version",
                         force_update : true
                     }
                 },
