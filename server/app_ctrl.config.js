@@ -126,7 +126,7 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V1.1.0",
+                        version_name : "V3.0.0",
                         description: "This update: \nHow old are you",
                         updated_description: "99% users are using new version",
                         force_update : true
@@ -134,18 +134,18 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "",
-                        description : "",
-                        updated_description: "",
-                        url : "",
-                        force_update : false
+                        version_name : "V3.0.0",
+                        description: "This update: \nHow old are you",
+                        updated_description: "99% users are using new version",
+                        url: "https://static.tigerwitfx.com/xxxx",
+                        force_update : true
                     }
                 }
             },
             cn: {
                ios: {
                     app_info: {
-                        version_name : "V1.1.0",
+                        version_name : "V3.0.0",
                         description: "本次更新：\n需要更新了哦～",
                         updated_description: "99%的用户正在使用新版本",
                         force_update : true
@@ -153,11 +153,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "",
-                        description : "",
-                        updated_description: "",
-                        url : "",
-                        force_update : false
+                        version_name : "V3.0.0",
+                        description: "本次更新：\n需要更新了哦～",
+                        updated_description: "99%的用户正在使用新版本",
+                        url: "https://static.tigerwitfx.com/xxxx",
+                        force_update : true
                     }
                 } 
             }
