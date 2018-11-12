@@ -226,6 +226,19 @@
             document.cookie = 'lang=' + lang + '; path=/; domain=.tigerwit.com';
             location.reload();
         }
+        //设置允许使用cookie
+        $scope.getAllowCookie = function () {
+            var allow = localStorage["allowUserCookie"];
+            if (allow && allow === 'allow') {
+                $scope.allowUseCookie = false;
+            } else {
+                $scope.allowUseCookie = true;
+            }
+        };
+        $scope.setAllowCookie = function () {
+            $scope.allowUseCookie = false;
+            localStorage["allowUserCookie"] = 'allow';
+        }
 
         /*
          * 神策数据 统计

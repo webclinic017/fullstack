@@ -319,6 +319,11 @@ module.exports = function () {
         "navbar14": { "en": "no-banner", "zh": "" },
         "navbar15": { "en": "style=display:none;", "zh": "style" },
         "navbar16": { "en": "App", "zh": "下载APP" },
+        "navbar_setCookie1": {"en": "How we use cookies", "zh": "我们如何使用cookies"},
+        "navbar_setCookie2": {"en": "We use cookies for a number of reasons, such as keeping TigerWit sites reliable and secure, personalising content and ads, providing social media features and to analyse how our sites are used. See our ", "zh": "我们使用网站功能所需的cookie，增强TigerWit官网的可靠性和安全性、展示个性化的内容和广告、提供社交媒体功能以及分析我们网站的使用方式。请参阅我们的"},
+        "navbar_setCookie3": {"en": "Cookie Policy", "zh": "Cookie政策"},
+        "navbar_setCookie4": {"en": " for more details", "zh": "了解更多详情"},
+        "navbar_setCookie5": {"en": "ACCEPT AND CONTINUE", "zh": "接受并继续"},
 
         // 底部 footer
         "foot1": { "en": "Trading software", "zh": "交易工具" },
