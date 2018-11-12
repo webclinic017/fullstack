@@ -168,7 +168,7 @@
 </div>
 
 <!-- global客服系统接入 2018.11.12 -->
-<%if (req.host.indexOf('global') == -1) {%>
+<%if (req.host.indexOf('global') != -1) {%>
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=6138171f-eb82-4329-82ae-30f553ce7dc3"> </script>
 <%}%>
 
