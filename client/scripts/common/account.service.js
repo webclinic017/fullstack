@@ -45,6 +45,7 @@
             getVerifyStatus: getVerifyStatus,
             setKyc: setKyc,
             getKyc: getKyc,
+            getAgentAuthStatus: getAgentAuthStatus,
             logout: logout,
             setBindEmail: setBindEmail,
             getSpreadInfo: getSpreadInfo,
@@ -521,6 +522,14 @@
          */
         function logout() {
             return publicHttp.dealPublicRequest(o.logoutApi, 'POST');
+        }
+
+        /**
+         * @name getAgentAuthStatus
+         * @desc 获取代理商认证状态
+         */
+        function getAgentAuthStatus() {
+            return publicHttp.dealPublicRequest(o.getAgentAuthStatusApi, 'GET');
         }
 
         /**

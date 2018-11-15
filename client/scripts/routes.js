@@ -229,6 +229,16 @@
                         }
                     }
                 })
+                // 开通代理商
+                .state('space.agent', {
+                    url: '/space/agent',
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/authen/agent_status.html',
+                            controller: 'AgentStatusController'
+                        }
+                    }
+                })
                 // 点击邀请链接对应的路由
                 .state('space.come', {
                     url: '/space/invite/come?usercode',

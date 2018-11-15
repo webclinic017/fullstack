@@ -17,7 +17,7 @@
 
     // 主控制器
     function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout, $modal, $layer) {
-        $scope.dredgingType = 'unkown'
+        $scope.dredgingType = 'unkown'  // 交易账户开通状态
         $scope.flow = {
             step: 1,
             authStatusMap: {
@@ -934,6 +934,7 @@
                 }
             })
         }
+        // 更新证件
         function updatePaper(){
             if (!$scope.readyToUpload.hasOwnProperty('front')) {
                 showErr('idFront');
