@@ -19,7 +19,8 @@ html,body{
     text-align: center;
     color: $gray-lightest;
     &.invite01{
-      background: url("/images/mobile/share01_bg2_20180130.png") no-repeat;
+      background: url("/images/mobile/share01_bg2_20181113.jpg") no-repeat;
+
       background-size: auto 100%;
       background-position: center bottom;
     }
@@ -37,7 +38,7 @@ html,body{
         width: 100%;
         margin:0;
         font-weight: 500;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         span{
           color: $brand-primary-dark;
           font-size: 2rem;

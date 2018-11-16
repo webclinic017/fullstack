@@ -33,7 +33,7 @@ module.exports = {
     },
     "mInvite09": {
         "zh": "我刚刚在老虎外汇领取了$10000体验金,好东西",
-        "en": "I just received $ 10000 Coupons from TigerWit. "
+        "en": "I just received $10000 Coupons from TigerWit. "
     },
     "mInvite10": {
         "zh": "必须分享,你也快来看看",
