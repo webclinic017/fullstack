@@ -27,7 +27,7 @@
     background-color: rgb(36, 42, 54);
     border-radius: 0 0 2px 2px;
     overflow: hidden;
-    padding: 10px 0;
+    padding: 6px 0;
     
     // &.pull-right {
     //     right: 0;
@@ -38,13 +38,12 @@
     }
     > li > h2 > a {
         display: block;
-        padding: 4px 29px;
+        padding: 10px 16px;
         clear: both;
         line-height: $line-height-base;
         white-space: nowrap;
         color: $white-100;
         font-size: 14px;
-        text-align: center;
 
         &:hover,
         &:focus {
