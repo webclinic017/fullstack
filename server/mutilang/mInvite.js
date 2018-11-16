@@ -24,16 +24,16 @@ module.exports = {
         "en": "Register to receive a "
     },
     "mInvite07": {
-        "zh": "$2000体验金",
-        "en": "$2000 coupons"
+        "zh": "$10000体验金",
+        "en": "$10000 coupons"
     },
     "mInvite08": {
         "zh": "在老虎外汇, 已经有86253 人选择外汇跟单交易",
         "en": "In TigerWit, there have been 86,253 people who choose to follow the masters trading."
     },
     "mInvite09": {
-        "zh": "我刚刚在老虎外汇领取了$2000体验金,好东西",
-        "en": "I just received $ 200 Coupons from TigerWit. "
+        "zh": "我刚刚在老虎外汇领取了$10000体验金,好东西",
+        "en": "I just received $10000 Coupons from TigerWit. "
     },
     "mInvite10": {
         "zh": "必须分享,你也快来看看",

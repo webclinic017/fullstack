@@ -291,7 +291,7 @@ function setDepositBtnStatus () {
 //获取充值方式列表
 function getDepositPlatform() {
   if (pageLoadStatus.deposit) return;
-  publicRequest('getThirdDepositPlatform', 'GET').then(function (data) {
+  publicRequest('getThirdDepositPlatform', 'GET', {os: os}).then(function (data) {
     // console.log(data);
     pageLoadStatus.deposit = true;
     if (!data) return;
