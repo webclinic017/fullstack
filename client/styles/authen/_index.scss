@@ -130,3 +130,68 @@
         }
     }
 }
+@include b(agent_activate) {
+    @include e(title) {
+
+    }
+    @include e(flow) {
+        display: inline-block;
+        > li {
+            margin: 0 5px;
+            position: relative;
+            > .num {
+                position: absolute;
+                top: -18px;
+                margin-left: -18px;
+                display: inline-block;
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+                text-align: center;
+                border-radius: 100%;
+                border: 1px dashed #979797;
+                z-index: 10;
+
+            }
+            > .content {
+                position: relative;
+                width: 162px;
+                height: 198px;
+                border-radius:7px;
+                background-color: #F0F0F0;
+                overflow: hidden;
+                color: #9B9B9B;
+                .not_complete {
+                    width:100px;
+                    height:100px;
+                    background-color: #D8D8D8;
+                    color: #D80000;
+                    /* Rotate div */
+                    transform:rotate(45deg);
+                    -ms-transform:rotate(45deg); /* Internet Explorer */
+                    -moz-transform:rotate(45deg); /* Firefox */
+                    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+                    -o-transform:rotate(45deg); /* Opera */
+                    position: absolute;
+                    right: -55px;
+                    top: -57px;
+                    text-align: center;
+                    padding-top: 77px;
+                    > span {
+                        font-size: 12px;
+                        font-style: normal;
+                    }
+                }
+            }
+            &.complete {
+                > .num {
+                    border-width: 0;
+                    background-color: #FFCA18;
+                }
+                > .content {
+                    color: #242A36;
+                }
+            }
+        }
+    }
+}

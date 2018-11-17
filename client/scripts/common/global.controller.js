@@ -413,7 +413,17 @@
                 }
             });
         }
-
+        // 获取代理商认证状态
+        $scope.$on('gloabl.agentAuthStatus', function (event, resolve) {
+            account.getAgentAuthStatus().then(function (data) {
+                if (!data) return;
+                // console.log(data);
+                if (data.is_succ) {
+                    $scope.personal.agentAuthStatus = data.data;
+                    resolve && resolve.callback()
+                }
+            });
+        })
         // 校验认证状态，以及相关弹窗操作
         function checkAuthenFlow(dredged_type, ctrlName) {
             var dredged_type = $scope.personal.dredged_type;

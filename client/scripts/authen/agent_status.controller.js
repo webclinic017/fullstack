@@ -12,16 +12,9 @@
      * @desc
      */
     function AgentStatusController($rootScope, $scope, account) {
+        $scope.kycAuthStatus = ['(待审核)', '(已通过)', '(已拒绝)'];
+        $scope.idcardAuthStatus = ['(未认证)', '(已拒绝)', '(需要审核)', '(已通过)', '(未知状态)'];
 
-        getAgentStatus()
-        function getAgentStatus() {
-            account.getAgentAuthStatus().then(function (data) {
-                if (!data) return;
-                // console.log(data);
-                if (data.is_succ) {
-                    console.log(data.data)
-                }
-            });
-        }
+        $scope.$emit('gloabl.agentAuthStatus')
     }
 })();

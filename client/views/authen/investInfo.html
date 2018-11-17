@@ -51,6 +51,9 @@
                                 {{ option.value }}
                             </label>
                         </div>
+                        <div class="inputText" ng-if="question.data.type == 4">
+                            <input type="text" required ng-model="question.answer" ng-change="selectOption(question)">
+                        </div>
                     </div>
                 </div>
                 

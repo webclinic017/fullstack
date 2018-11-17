@@ -544,8 +544,8 @@
          * @name getKyc
          * @desc 获取KYC认证列表
          */
-        function getKyc() {
-            return publicHttp.dealPublicRequest(o.getKycApi, 'GET');
+        function getKyc(params) {
+            return publicHttp.dealPublicRequest(o.getKycApi, 'GET', params);
         }
 
         // 获取认证状态
