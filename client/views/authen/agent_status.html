@@ -1,52 +1,52 @@
 <div class="space_block agent_activate">
     <h3 class="agent_activate__title text-center">
-        激活代理商产品流程
+        {{lang.text('tigerWitID.partner.activeAgentFlow')}}
     </h3>
     <div class="text-center pd-tp-50">
         <ul class="agent_activate__flow clearfix">
             <li class="fl" ng-class="{'complete': personal.agentAuthStatus.info.status == 1}">
                 <strong class="num">1</strong>
                 <div class="content ">
-                    <h5 class="pd-tp-30 pd-bt-10">完善资料</h5>
+                    <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.completeInformation')}}</h5>
                     <p><img src="/white_label/authen/{{personal.agentAuthStatus.info.status == 1 ? 'activate1' : 'activate1-no' }}.png" alt=""></p>
                     <!-- <p class="mg-tp-10">图像过小</p> -->
-                    <i class="not_complete" ng-if="personal.agentAuthStatus.info.status != 1"><span>未达成</span></i>
+                    <i class="not_complete" ng-if="personal.agentAuthStatus.info.status != 1"><span>{{lang.text('tigerWitID.partner.noMetNeed')}}</span></i>
                 </div>
             </li>
 
             <li class="fl" ng-class="{'complete': personal.agentAuthStatus.kyc.status == 1}">
                 <strong class="num">2</strong>
                 <div class="content ">
-                    <h5 class="pd-tp-30 pd-bt-10">投资信息确认</h5>
+                    <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.tradingExperience')}}</h5>
                     <p><img src="/white_label/authen/{{ personal.agentAuthStatus.kyc.status == 1 ? 'activate2' : 'activate2-no' }}.png" alt=""></p>
                     <p class="mg-tp-10">{{personal.agentAuthStatus.kyc.reason + kycAuthStatus[personal.agentAuthStatus.kyc.auth_status]}}</p>
-                    <i class="not_complete" ng-if="personal.agentAuthStatus.kyc.status != 1"><span>未达成</span></i>
+                    <i class="not_complete" ng-if="personal.agentAuthStatus.kyc.status != 1"><span>{{lang.text('tigerWitID.partner.noMetNeed')}}</span></i>
                 </div>
             </li>
 
             <li class="fl" ng-class="{'complete': personal.agentAuthStatus.idcard.status == 1}">
                 <strong class="num">3</strong>
                 <div class="content ">
-                    <h5 class="pd-tp-30 pd-bt-10">实名认证</h5>
+                    <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.iDVerification')}}</h5>
                     <p><img src="/white_label/authen/{{ personal.agentAuthStatus.idcard.status == 1 ? 'activate3' : 'activate3-no'}}.png" alt=""></p>
                     <p class="mg-tp-10">{{personal.agentAuthStatus.idcard.reason + idcardAuthStatus[personal.agentAuthStatus.idcard.auth_status]}}</p>
-                    <i class="not_complete" ng-if="personal.agentAuthStatus.idcard.status != 1"><span>未达成</span></i>
+                    <i class="not_complete" ng-if="personal.agentAuthStatus.idcard.status != 1"><span>{{lang.text('tigerWitID.partner.noMetNeed')}}</span></i>
                 </div>
             </li>
 
             <li class="fl" ng-class="{'complete': personal.agentAuthStatus.status == 6}">
                 <strong class="num">4</strong>
                 <div class="content ">
-                    <h5 class="pd-tp-30 pd-bt-10">成功激活</h5>
+                    <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.activeSucc')}}</h5>
                     <p><img src="/white_label/authen/{{ personal.agentAuthStatus.status == 6 ? 'activate4' : 'activate4-no' }}.png" alt=""></p>
                     <!-- <p class="mg-tp-10">图像过小</p> -->
-                    <i class="not_complete" ng-if="personal.agentAuthStatus.status != 6"><span>未达成</span></i>
+                    <i class="not_complete" ng-if="personal.agentAuthStatus.status != 6"><span>{{lang.text('tigerWitID.partner.noMetNeed')}}</span></i>
                 </div>
             </li>
         </ul>
     </div>
     <div class="text-center mg-tp-40 mg-bt-20">
-        <a ui-sref="authen.subpage({isAgent: 'isAgent'})" class="tw-btn tw-btn-md tw-btn-capsule-gradient">继续认证</a>
+        <a ui-sref="authen.subpage({isAgent: 'isAgent'})" class="tw-btn tw-btn-md tw-btn-capsule-gradient">{{lang.text('tigerWitID.partner.continueCertification')}}</a>
     </div>
 
 </div>

@@ -1,20 +1,106 @@
 // 背景
-.agent_banner {
+@include b(agent_banner) {
     height: 550px;
     @include img-normal($white_label_new_bg + "agent-bg.png");
     background-size: auto 100%;
     background-position: center center;
+    @include e(con) {
+        width: 1315px;
+        margin: 0 auto;
+        font-weight:600;
+        color:rgba(255,255,255,1);
+        text-align: center;
+        h3 {
+            padding-top: 170px;
+            font-size:56px;
+            line-height:78px;
+        }
+        p {
+            padding-top: 9px;
+            padding-bottom: 70px;
+            font-size:18px;
+            line-height:25px;
+            text-align: left;
+        }
+    }
 }
 @include b(agent) {
     
-    @include e(banner) {
-        // height: 320px;
-        // width: 100%;
-        // background-size: 100%;
-        // @include img-normal($image-path-web + "agent-banner.jpg");
-
-        img {
-            height: 320px;
+    @include e(proxy) {
+        @include img-normal("/white_label/agent/proxy/proxy-bg.jpg");
+        background-size: cover;
+        background-position: center center;
+        @include m(con) {
+            min-height: 100px;
+            width: 1301px;
+            margin: 0 auto;
+            padding: 20px 0 50px;
+            .offer {
+                text-align: center;
+                > li {
+                    display: inline-block;
+                    padding: 50px 36px;
+                    > img {
+                        vertical-align: middle;
+                    }
+                }
+            }
+            .tit {
+                font-size:30px;
+                font-weight:600;
+                color:rgba(33,44,63,1);
+                line-height:42px;
+            }
+            .tit1 {
+                font-size:18px;
+                font-weight:500;
+                color:rgba(33,44,63,1);
+                line-height:26px;
+            }
+            .font1 {
+                font-size:18px;
+                font-weight:400;
+                color:rgba(36,42,54,1);
+                line-height:25px;
+            }
+        }
+        @include m(flow) {
+            display: inline-block;
+            > li {
+                padding: 30px 55px;
+                border-bottom: 8px solid #D8D8D8;
+                position: relative;
+                min-width: 310px;
+                .tit2 {
+                    font-size:22px;
+                    font-weight:600;
+                    color:rgba(36,42,54,1);
+                    line-height:30px;
+                }
+                .icon {
+                    position: absolute;
+                    bottom: -24px;
+                    left: 50%;
+                    margin-left: -20px;
+                    font-size:28px;
+                    font-weight:600;
+                    font-style: normal;
+                    color:rgba(36,42,54,1);
+                    line-height:40px;
+                    width:41px;
+                    height:41px;
+                    background-color:rgba(155,155,155,1);
+                    text-align: center;
+                    border-radius: 100%
+                }
+                &.active {
+                    border-bottom-color: #FFD933;
+                    .icon {
+                        background-color: #FFD933;
+                    }
+                }
+            }
+            
         }
     }
 
@@ -177,29 +263,15 @@
             }
         }
     }
-    .global_proxy_title {
-        color: #fff;
-        font-size: 34px;
-        span {
-            background: #242a36;
-            padding: 6px 10px;
-        }
-    }
     .global_proxy_tip {
         color: #999;
         font-size: 16px;
         padding: 10px 0px;
     }
-    .global_proxy_lst {
-        color: #999;
-        font-size: 16px;
-        margin: 20px 0px;
-        li {
-            padding: 6px 0px;
-        }
-    }
+
     .global_proxy_form {
         width: 500px;
+        margin: 0 auto;
         .star_tip {
             position: absolute;
             top: 0;
@@ -222,11 +294,12 @@
             resize: none;
         }
         .global_proxy_tip {
-            width: 600px;
+            text-align: center;
             font-size: 14px;
         }
     }
     .global_proxy_err_tip {
         padding-left: 10px;
     }
+
 }

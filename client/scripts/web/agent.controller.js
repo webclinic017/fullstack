@@ -56,14 +56,14 @@
             if ($scope.agentForm.$invalid) {
                 $scope.error = {
                     is_succ: true,
-                    message:  $scope.lang.isEnglish() ? 'Please Fill in Name and Country' : '请填写姓名和国家'
+                    message: $scope.lang.text("tigerWitID.partner.fillNameCoun")
                 };
                 return;
             }
             if (!$scope.becomeAgent.phone && !$scope.becomeAgent.email) {
                 $scope.error = {
                     is_succ: true,
-                    message:  $scope.lang.isEnglish() ? 'You should fill in one of email address or phone number' : '邮箱和手机号必选一项填写'
+                    message: $scope.lang.text("tigerWitID.partner.fillEmailPhone")
                 };
                 return;
             }
@@ -84,7 +84,7 @@
                     $scope.error = {
                         is_succ: true,
                         success: true,
-                        message: $scope.lang.isEnglish() ? 'Submit successfully!' : '信息提交成功!'
+                        message: $scope.lang.text("tigerWitID.partner.submittedSucc")
                     };
                 } else {
                     $scope.error = {

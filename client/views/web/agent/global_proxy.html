@@ -1,100 +1,145 @@
-<div class="agent">
-  <div class="mg-200__bg">
-    <h3 class="global_proxy_title mg-bt-30">
-        <span>Become a TigerWit partner today</span>
-    </h3>
-    <p class="global_proxy_tip">
-        With TigerWit, the success of our partners comes from developing long-term profitable relationships. 
-    </p>
-    <p class="global_proxy_tip">
-        We aim to bring a fresh technological approach to an industry in need of change that benefits both partners and traders. 
-    </p>
-    <p class="global_proxy_tip">
-        Our innovative ‘Distributed Ledger Technology’ can provide you with an unique and significant advantage over your competitors. 
-    </p>
-    <p class="global_proxy_tip">
-        TigerWit’s distributed trading ledger is just the first step. Visit tech.tigerwit.com for more information on our blockchain technology.
-    </p>
-    <h3 class="mg-200__circle-title">
-        Why partner with TigerWit?
-    </h3>
-    <p class="global_proxy_tip">
-        Access to all the tools and support your business needs to build and market a successful local or global brand.
-    </p>
-    <ul class="global_proxy_lst">
-      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Innovative distributed trading ledger</li>
-      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Copy-trading technology</li>
-      <li>•&nbsp;&nbsp;&nbsp;&nbsp;24/5 client and technology support</li>
-      <li>•&nbsp;&nbsp;&nbsp;&nbsp;An easy-to-use, highly intuitive mobile trading app</li>
-      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Competitive spreads</li>
-      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Deep market liquidity</li>
-      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Advanced reporting</li>
-      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Exclusive promotions with our partner, Liverpool FC</li>
-      <li>•&nbsp;&nbsp;&nbsp;&nbsp;Regulation by FCA and SCB</li>
-    </ul>
-    <h3 class="global_proxy_title mg-bt-30 pd-tp-20">
-        <span>Looking to grow your business?</span><br>
-        <span>Let TigerWit’s experts deliver</span><br>
-        <span>a solution tailored to you.</span>
-    </h3>
-    <p class="global_proxy_tip">
-        Please complete the form below and we will be in touch to provide more information and answer any questions. We look forward to hearing from you.
-    </p>
-    <div class="global_proxy_form mg-tp-30" ng-controller="WebAgentController" ng-cloak>
-      <form class="account_login__form" name="agentForm" novalidate>
-          <div class="account-form-control-wrapper">
-              <input class="account-form-control"
-                     name="name"
-                     type="text"
-                     placeholder=""
-                     required
-                     ng-model="becomeAgent.name">
-              <span class="account-form-control-tip">Name</span>
-              <span class="star_tip">*</span>
-          </div>
-          <div class="account-form-control-wrapper">
-              <input class="account-form-control"
-                     name="country"
-                     type="text"
-                     placeholder=""
-                     required
-                     ng-model="becomeAgent.country.name_en">
-              <span class="account-form-control-tip">Country</span>
-              <span class="star_tip">*</span>
-              <select ng-model="becomeAgent.country" ng-options="country.name_en for country in countryList">
-                <!-- <option value=""></option>
-                <option ng-repeat="country in countryList">{{country.name_en}}</option> -->
-              </select>
-          </div>
-          <p class="global_proxy_tip mg-bt-20">
-              You should fill in one of email address or phone number as complusory information
-          </p>
-          <div class="account-form-control-wrapper">
-              <input class="account-form-control"
-                     name="email"
-                     type="text"
-                     placeholder=""
-                     ng-model="becomeAgent.email">
-              <span class="account-form-control-tip">Email</span>
-          </div>
-          <div class="account-form-control-wrapper">
-              <input class="account-form-control"
-                     name="phone"
-                     type="text"
-                     placeholder=""
-                     ng-model="becomeAgent.phone">
-              <span class="account-form-control-tip">Phone</span>
-          </div>
-          <div class="account-form-control-wrapper">
-            <textarea class="account-form-control" name="message" ng-model="becomeAgent.message"></textarea>
-            <span class="account-form-control-tip">Message</span>
-          </div>
-      </form>
-      <div class="btn-wrapper" style="width: 800px;">
-        <button class="btn tw-btn-capsule-gradient" ng-show="!loading" ng-click="submitForm()">Send</button>
-        <button class="btn tw-btn-capsule-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading">Send</button>
-        <span class="global_proxy_err_tip" ng-class="{'font-success' : error.success, 'font-warning': !error.success}" ng-show="error.is_succ">{{error.message}}</span>
-      </div>
+<div class="agent agent__proxy">
+  <div class="agent__proxy-con">
+    <div>
+        <h4 class="tit text-center pd-tp-10 pd-bt-30"><%=lang.text('partner.whyPartner')%></h4>
+        <ul class="clearfix">
+            <li class="col-xs-4 pd-lf-20 pd-rg-20">
+                <img src="/white_label/agent/proxy/select1.png" alt="">
+                <p class="tit1 text-center mg-tp-10"><%=lang.text('partner.supportPlan')%></p>
+                <p class="font1 mg-tp-30"><%=lang.text('partner.supportPlan_1')%></p>
+            </li>
+            <li class="col-xs-4 pd-lf-20 pd-rg-20">
+                <img src="/white_label/agent/proxy/select2.png" alt="">
+                <p class="tit1 text-center mg-tp-10"><%=lang.text('partner.customerPromotionSystem')%></p>
+                <p class="font1 mg-tp-30"><%=lang.text('partner.customerPromotionSystem_1')%></p>
+            </li>
+            <li class="col-xs-4 pd-lf-20 pd-rg-20">
+                <img src="/white_label/agent/proxy/select3.png" alt="">
+                <p class="tit1 text-center mg-tp-10"><%=lang.text('partner.safeReliable')%></p>
+                <p class="font1 mg-tp-30"><%=lang.text('partner.safeReliable_1')%></p>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <h4 class="tit text-center pd-tp-50"><%=lang.text('partner.whatOffer')%></h4>
+        <ul class="offer">
+            <li>
+                <img src="/white_label/agent/proxy/offer1.png" alt="">
+                <span class="tit1"><%=lang.text('partner.offer_1')%></span>
+            </li>
+            <li>
+                <img src="/white_label/agent/proxy/offer2.png" alt="">
+                <span class="tit1"><%=lang.text('partner.offer_2')%></span>
+            </li>
+            <li>
+                <img src="/white_label/agent/proxy/offer3.png" alt="">
+                <span class="tit1"><%=lang.text('partner.offer_3')%></span>
+            </li>
+            <li>
+                <img src="/white_label/agent/proxy/offer4.png" alt="">
+                <span class="tit1"><%=lang.text('partner.offer_4')%></span>
+            </li>
+            <li>
+                <img src="/white_label/agent/proxy/offer5.png" alt="">
+                <span class="tit1"><%=lang.text('partner.offer_5')%></span>
+            </li>
+            <li>
+                <img src="/white_label/agent/proxy/offer6.png" alt="">
+                <span class="tit1"><%=lang.text('partner.offer_6')%></span>
+            </li>
+            <li>
+                <img src="/white_label/agent/proxy/offer7.png" alt="">
+                <span class="tit1"><%=lang.text('partner.offer_8')%></span>
+            </li>
+            <li>
+                <img src="/white_label/agent/proxy/offer8.png" alt="">
+                <span class="tit1"><%=lang.text('partner.offer_7')%></span>
+            </li>
+            <li>
+                <img src="/white_label/agent/proxy/offer9.png" alt="">
+                <span class="tit1"><%=lang.text('partner.offer_9')%></span>
+            </li>
+        </ul>
+    </div>
+    <div class="text-center mg-tp-20">
+        <div class="mg-bt-20"><img src="/white_label/agent/proxy/select3.png" alt=""></div>
+        <!-- <button class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient "><%=lang.text('partner.sendAgent')%></button> -->
+    </div>
+    <div class="text-center pd-tp-40 pd-bt-30">
+        <h4 class="tit"><%=lang.text('partner.becomePartnerFlow')%></h4>
+        <ul class="agent__proxy-flow clearfix pd-tp-15">
+            <li class="fl active">
+                <p class="tit2"><%=lang.text('partner.signUpAccount')%></p>
+                <i class="icon">1</i>
+            </li>
+            <li class="fl">
+                <p class="tit2"><%=lang.text('partner.overProbationPeriod')%></p>
+                <i class="icon">2</i>
+            </li>
+            <li class="fl">
+                <p class="tit2"><%=lang.text('partner.endTrial')%></p>
+                <i class="icon">3</i>
+            </li>
+        </ul>
+    </div> 
+    <div class="global_proxy_form mg-tp-50" ng-controller="WebAgentController" ng-cloak>
+        <p class="global_proxy_tip">
+            <%=lang.text('partner.becomePartnerFlow_1')%><%=lang.text('partner.becomePartnerFlow_2')%>
+        </p>
+        <form class="account_login__form pd-tp-30" name="agentForm" novalidate>
+            <div class="account-form-control-wrapper">
+                <input class="account-form-control"
+                        name="name"
+                        type="text"
+                        placeholder=""
+                        required
+                        ng-model="becomeAgent.name">
+                <span class="account-form-control-tip"><%=lang.text('partner.name')%></span>
+                <span class="star_tip">*</span>
+            </div>
+            <div class="account-form-control-wrapper">
+                <input class="account-form-control"
+                        name="country"
+                        type="text"
+                        placeholder=""
+                        required
+                        ng-model="becomeAgent.country.name_en">
+                <span class="account-form-control-tip"><%=lang.text('partner.country')%></span>
+                <span class="star_tip">*</span>
+                <select ng-model="becomeAgent.country" ng-options="country.name_en for country in countryList">
+                    <!-- <option value=""></option>
+                    <option ng-repeat="country in countryList">{{country.name_en}}</option> -->
+                </select>
+            </div>
+            <p class="global_proxy_tip mg-bt-20">
+                <%=lang.text('partner.complusoryInformation')%>
+            </p>
+            <div class="account-form-control-wrapper">
+                <input class="account-form-control"
+                        name="email"
+                        type="text"
+                        placeholder=""
+                        ng-model="becomeAgent.email">
+                <span class="account-form-control-tip"><%=lang.text('partner.email')%></span>
+            </div>
+            <div class="account-form-control-wrapper">
+                <input class="account-form-control"
+                        name="phone"
+                        type="text"
+                        placeholder=""
+                        ng-model="becomeAgent.phone">
+                <span class="account-form-control-tip"><%=lang.text('partner.phone')%></span>
+            </div>
+            <div class="account-form-control-wrapper">
+                <textarea class="account-form-control" name="message" ng-model="becomeAgent.message"></textarea>
+                <span class="account-form-control-tip"><%=lang.text('partner.message')%></span>
+            </div>
+        </form>
+        <div class="btn-wrapper text-center">
+            <button class="btn tw-btn-lg200 tw-btn-capsule-gradient" ng-show="!loading" ng-click="submitForm()"><%=lang.text('partner.sendAgent')%></button>
+            <button class="btn tw-btn-lg200 tw-btn-capsule-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading"><%=lang.text('partner.sendAgent')%></button>
+            <span class="global_proxy_err_tip" ng-class="{'font-success' : error.success, 'font-warning': !error.success}" ng-show="error.is_succ">{{error.message}}</span>
+        </div>
     </div>
   </div>
 </div>

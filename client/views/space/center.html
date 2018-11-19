@@ -53,14 +53,14 @@
                 </span>
             <!-- </a> -->
         </li>
-        <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.wallet_user_status === 0}">
+        <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.agent_user_status === 0}">
             <!-- <a ui-sref="space.agent"> -->
-                <p class="summary_name">代理商</p>
-                <p class="summary_btn" ng-if="assetInfo.wallet_user_status === 0"><a ui-sref="space.agent">{{lang.text('tigerWitID.myAccount.unactivated')}}</a></p>
-                <span ng-if="assetInfo.wallet_user_status === 1">
-                    <p class="summary_amount">${{ assetInfo.wallet_balance || '--' }}</p>
+                <p class="summary_name">{{lang.text('tigerWitID.partner.title')}}</p>
+                <p class="summary_btn" ng-if="assetInfo.agent_user_status === 0"><a ui-sref="space.agent">{{lang.text('tigerWitID.myAccount.unactivated')}}</a></p>
+                <span ng-if="assetInfo.agent_user_status === 1">
+                    <p class="summary_amount">${{ assetInfo.agent_balance || '--' }}</p>
                     <p class="summary_btn" >
-                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'withdraw', account: 'wallet'})">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</a></span>
+                        <span class="line" ng-class="{'en': lang.isEnglish()}"><a ui-sref="space.asset.subpage({ subpage: 'withdraw'})">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</a></span>
                         <span ng-class="{'en': lang.isEnglish()}"><a ng-href="{{lang.isDemo()?'https://ibdev.tigerwit.com':'https://ib.tigerwit.com'}}" target="_blank">{{lang.text('tigerWitID.details.title')}}</a></span>
                     </p>
                 </span>

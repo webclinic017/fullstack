@@ -12,8 +12,8 @@
      * @desc
      */
     function AgentStatusController($rootScope, $scope, account) {
-        $scope.kycAuthStatus = ['(待审核)', '(已通过)', '(已拒绝)'];
-        $scope.idcardAuthStatus = ['(未认证)', '(已拒绝)', '(需要审核)', '(已通过)', '(未知状态)'];
+        $scope.kycAuthStatus = [$scope.lang.text('tigerWitID.partner.pending'), $scope.lang.text('tigerWitID.partner.approved'), $scope.lang.text('tigerWitID.partner.rejected')];
+        $scope.idcardAuthStatus = [$scope.lang.text('tigerWitID.partner.unverified'), $scope.lang.text('tigerWitID.partner.rejected'), $scope.lang.text('tigerWitID.partner.pending'), $scope.lang.text('tigerWitID.partner.approved'), $scope.lang.text('tigerWitID.partner.unknown')];
 
         $scope.$emit('gloabl.agentAuthStatus')
     }
