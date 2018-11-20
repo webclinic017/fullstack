@@ -110,7 +110,7 @@
                 <!-- 设置密码 -->
                 <div ng-show="registerStep1 == 2">
                     <div class="account_login__title">{{ lang.text('actLogin20') }}</div>
-                    <form name="registerForm2" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglish() ? '5px' : '25px'}">
+                    <form name="registerForm2" class="account_login__form" novalidate ng-style="{'margin-bottom': lang.isEnglishArea() ? '5px' : '25px'}">
                         <div class="account-form-control-wrapper-new">
                             <input class="account-form-control-new" autocomplete="off" name="step1Password" type="password" placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}"
                                 on-enter="setPassword('registerForm2')" required ng-model="account.step1Password">

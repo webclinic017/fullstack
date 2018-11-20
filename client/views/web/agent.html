@@ -17,7 +17,7 @@
             <div class="body">
                 <div class="new_body">
                     <div class="agent_banner"></div>
-                    <% if (lang.currentLanguage() !== 'en' || pageInfo.id !== 'proxy') {%>
+                    <% if (!lang.isEnglishArea() || pageInfo.id !== 'proxy') {%>
                         <%- include('./agent/' + pageInfo.id + '.html') %>
                     <%} else {%>
                         <%- include('./agent/global_proxy.html') %>

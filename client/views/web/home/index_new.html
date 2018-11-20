@@ -1,5 +1,9 @@
 <div class="index_new">
-  <div class="index_new__focus <%= lang.showScheme('cnEn', 'globalEn', 'cnCn', 'globalCn')%>">
+  <%if (req.host.indexOf('global') != -1) {%>
+  <div class="index_new__focus" style='background-image: url("<%= lang.image('homeFocusGlobal')%>")'>
+  <%} else {%>
+    <div class="index_new__focus" style='background-image: url("<%= lang.image('homeFocusCn')%>")'>
+  <%}%>
     <div class="index_new__container">
       <h3 class="index_new__focus-title"><%= lang.text("newhome_1")%></h3>
       <h3 class="index_new__focus-title"><%= lang.text("newhome_1_1")%></h3>
@@ -30,8 +34,12 @@
           <%= lang.text("newhome_9_1")%>
       </div>
       <div class="index_new__focus-download">
-        <a href="<%= lang.text('downloadGlobalIos') %>"><img src="/white_label/home/<%= lang.cnOrEn('focus-icon-ios-cn-1.0', 'focus-icon-ios-en') %>.png" alt=""></a>
-        <a href="<%= lang.showScheme(lang.text('androidApp'), lang.text('downloadGlobalAndroid')) %>"><img src="/white_label/home/<%= lang.showScheme('focus-icon-android-en', 'focus-icon-google-en-1.0', 'focus-icon-android-cn', 'focus-icon-google-cn') %>.png" alt=""></a>
+        <a href="<%= lang.text('downloadGlobalIos') %>"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
+        <%if (req.host.indexOf('global') != -1) {%>
+          <a href="<%= lang.text('downloadGlobalAndroid') %>"><img src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
+        <%} else {%>
+          <a href="<%= lang.text('androidApp') %>"><img src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
+        <%}%>
       </div>
     </div>
   </div>
@@ -102,7 +110,7 @@
             <div class="clearfix">
                 <ul ng-repeat="quoteSymbol in quoteSymbols" class="index_new_qupte__content clearfix" ng-class="{h_border: $index%2 === 0}">
                     <li class="pro">
-                        <%if (lang.currentLanguage() === 'zh'){%>
+                        <%if (!lang.isEnglishArea()){%>
                         {{ quoteSymbol.symbol_zh }}({{ quoteSymbol.symbol }})
                         <%}else {%>
                         {{ quoteSymbol.symbol }}
@@ -185,7 +193,11 @@
       </div>
     </div>
   </div>
-  <div class="index_new__tools <%= lang.showScheme('cnEn', 'globalEn', 'cnCn', 'globalCn')%>">
+  <%if (req.host.indexOf('global') != -1) {%>
+    <div class="index_new__tools" style='background-image: url("<%= lang.image('homeToolsBgGlobal')%>")'>
+  <%} else {%>
+    <div class="index_new__tools" style='background-image: url("<%= lang.image('homeToolsBgCn')%>")'>
+  <%}%>
     <div class="index_new__container">
       <h3 class="index_new__tools-title"><%= lang.text("newhome_32")%></h3>
       <p class="index_new__tools-sub_tit"><%= lang.text("newhome_33")%></p>
@@ -194,8 +206,12 @@
       <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35_1")%></p>
       <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35_2")%></p>
       <div class="index_new__tools-download">
-        <a href="<%= lang.text('downloadGlobalIos') %>"><img src="/white_label/home/<%= lang.cnOrEn('focus-icon-ios-cn-1.0', 'focus-icon-ios-en') %>.png" alt=""></a>
-        <a href="<%= lang.showScheme(lang.text('androidApp'), lang.text('downloadGlobalAndroid')) %>"><img src="/white_label/home/<%= lang.showScheme('focus-icon-android-en', 'focus-icon-google-en-1.0', 'focus-icon-android-cn', 'focus-icon-google-cn') %>.png" alt=""></a>
+        <a href="<%= lang.text('downloadGlobalIos') %>"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
+        <%if (req.host.indexOf('global') != -1) {%>
+          <a href="<%= lang.text('downloadGlobalAndroid') %>"><img src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
+        <%} else {%>
+          <a href="<%= lang.text('androidApp') %>"><img src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
+        <%}%>
       </div>
     </div>
   </div>
@@ -226,7 +242,7 @@
     <div class="index_new__client">
       <h3 class="index_new__client-title"><%= lang.text("newhome_42")%></h3>
       <p class="index_new__client-sub_tit"><%= lang.text("newhome_42_1")%></p>
-      <% if (lang.currentLanguage() === 'en') {%>
+      <% if (lang.isEnglishArea()) {%>
         <img src="/white_label/home/client-map-en-en.png" alt="">
       <%} else {%>
         <img src="/white_label/home/client-map-cn-cn.png" alt="">
@@ -242,9 +258,6 @@
           <p><%= lang.text("newhome_45")%></p>
         </div>
         <div class="b text-center">
-
-          <!-- <a href="<%= lang.text('downloadGlobalIos') %>"><img src="/white_label/home/<%= lang.showScheme('focus-icon-ios-en', 'focus-icon-ios-en', 'focus-icon-ios-cn-1.0', 'focus-icon-ios-cn-1.0') %>.png" alt=""></a>
-          <a href="<%= lang.showScheme(lang.text('androidApp'), lang.text('downloadGlobalAndroid')) %>"><img src="/white_label/home/<%= lang.showScheme('focus-icon-cn-android-en', 'focus-icon-google-en-1.0', 'focus-icon-cn-android-cn', 'focus-icon-google-cn') %>.png" alt=""></a> -->
           <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%= lang.text("newhome_46")%></a>
         </div>
       </div>

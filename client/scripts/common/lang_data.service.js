@@ -58,6 +58,12 @@
                 vi: "^^-^^",
                 "zh-Hant": "www.tigerwit.com"
             },
+            china: {
+                zh: "中国",
+                en: "China",
+                vi: "China",
+                "zh-Hant": "中國"
+            },
             lijifuzhi: {
                 en: "Copy now",
                 zh: "立即复制",

@@ -98,7 +98,7 @@
         }
 
         function getWorlds () {
-            account.getWorlds((lang.isEnglish() ? 'en' : 'cn')).then(function (data) {
+            account.getWorlds((lang.isEnglishArea() ? 'en' : 'cn')).then(function (data) {
                 if (data.is_succ) {
                     $scope.worlds = data.data;
                 }
@@ -106,7 +106,7 @@
         }
 
         function getProvince() {
-            account.getStates('CN', (lang.isEnglish() ? 'en' : 'cn')).then(function (data) {
+            account.getStates('CN', (lang.isEnglishArea() ? 'en' : 'cn')).then(function (data) {
                 if (!data) return;
                 // console.info(data);
                 $scope.provinces = data.data;
@@ -127,7 +127,7 @@
             });
         }
         function getCity() {
-            account.getCities($scope.card.province.code, (lang.isEnglish() ? 'en' : 'cn')).then(function (data) {
+            account.getCities($scope.card.province.code, (lang.isEnglishArea() ? 'en' : 'cn')).then(function (data) {
                 if (!data) return;
                 // console.info(data);
                 $scope.citys = data.data;

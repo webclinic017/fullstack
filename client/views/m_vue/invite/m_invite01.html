@@ -19,7 +19,7 @@
                 <h4><span>$1000</span>等你领</h4>
                 <p>红包领取规则请见官网</p>
             <%} else {%>
-                <%if(!lang.currentLanguage() == 'en'){%>
+                <%if(!lang.isEnglishArea()){%>
                     <h4><%=lang.text('mInvite05')%></h4>
                 <%}%>
                 <h4><%=lang.text('mInvite06')%><span><%=lang.text('mInvite07')%></span></h4>

@@ -32,7 +32,7 @@
         $scope.showErr = showErr;
         $scope.submitForm = submitForm;
 
-        var degaultAD = lang.isEnglish() ? 4 : 3;
+        var degaultAD = lang.isEnglishArea() ? 4 : 3;
         var sources = getQueryString('q') || 1;
         var ad_position = getQueryString('w') || degaultAD;
         console.log(ad_position);
@@ -41,7 +41,7 @@
             $scope.countryList = data.data;
         });
 
-        if (!lang.isEnglish()) {
+        if (!lang.isEnglishArea()) {
             $scope.becomeAgent.country.code = 'CN';
             $scope.becomeAgent.country.name_cn = '中国';
         }
@@ -56,14 +56,14 @@
             if ($scope.agentForm.$invalid) {
                 $scope.error = {
                     is_succ: true,
-                    message:  $scope.lang.isEnglish() ? 'Please Fill in Name and Country' : '请填写姓名和国家'
+                    message:  $scope.lang.isEnglishArea() ? 'Please Fill in Name and Country' : '请填写姓名和国家'
                 };
                 return;
             }
             if (!$scope.becomeAgent.phone && !$scope.becomeAgent.email) {
                 $scope.error = {
                     is_succ: true,
-                    message:  $scope.lang.isEnglish() ? 'You should fill in one of email address or phone number' : '邮箱和手机号必选一项填写'
+                    message:  $scope.lang.isEnglishArea() ? 'You should fill in one of email address or phone number' : '邮箱和手机号必选一项填写'
                 };
                 return;
             }
@@ -84,7 +84,7 @@
                     $scope.error = {
                         is_succ: true,
                         success: true,
-                        message: $scope.lang.isEnglish() ? 'Submit successfully!' : '信息提交成功!'
+                        message: $scope.lang.isEnglishArea() ? 'Submit successfully!' : '信息提交成功!'
                     };
                 } else {
                     $scope.error = {

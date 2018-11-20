@@ -1,6 +1,6 @@
 <div class="sys_modal_v2 slim_case">
   <button class="close" ng-click="closeModal()">&times;</button>
-  <div class="sys_modal_v2__content" ng-if="!lang.isEnglish()">
+  <div class="sys_modal_v2__content" ng-if="!lang.isEnglishArea()">
     <div class="dredge_box mg-bt-40" ng-show="dredge_type == 'live' || dredge_type == 'all'">
       <h3 class="sys_modal_v2__title text-center">{{lang.text('tigerWitID.settings.openLiveAccount')}}</h3>
       <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.settings.openLiveAccountTip1')}}</p>
@@ -28,7 +28,7 @@
       </div>
     </div>
   </div>
-  <div class="sys_modal_v2__content" ng-if="lang.isEnglish()">
+  <div class="sys_modal_v2__content" ng-if="lang.isEnglishArea()">
     <div class="dredge_box mg-bt-40" ng-show="dredge_type == 'live' || dredge_type == 'all'">
       <h3 class="sys_modal_v2__title text-center">Live account</h3>
       <p class="sys_modal_v2__desp">Open a Live account and trade the markets you want, the way you want them</p>

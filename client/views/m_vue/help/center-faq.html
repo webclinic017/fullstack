@@ -1,7 +1,7 @@
 <div class="m_vue m_vue_bgc" data-type="helpNavi" id="helpNavi">
     <ul class="help1-navi-title">
         <p class="help1-navi-title__back_top" data-action="backTop-naviBox"><%=lang.text("faqCommon0")%></p>
-        <% if(lang.isEnglish()) { %> 
+        <% if(lang.isEnglishArea()) { %> 
             <li class="help1-navi-title__item">
                 <h5 class="help1-navi-title__item-title" data-action="openDetail-desp">Opening an account</h5>
                 <div class="help1-navi-title__item-desp">
@@ -311,16 +311,12 @@
                     <h6 class="desp_title faq"><%=lang.text("faqTrade20")%></h6>
                     <p class="desp_subdesp faq">
                         <%=lang.text("faqTrade21")%>
-                        <%if(lang.isCompany('pandafx')){%>
-                            <img src="/white_label/trade-time-pandafx.jpg" alt="">
-                        <%} else { %>
-                            <%if(lang.currentLanguage() === 'en'){%>
-                            <img src="/white_label/trade-time-en.png" alt="">
-                            <%} else { %>
-                            <img src="/white_label/trade-time-cn.png" alt="">
-                            <%}%>
+                        <%if(lang.isEnglishArea()){%>
+                        <img src="/white_label/trade-time-en.png" alt="">
                         <%}%>
-                        
+                        <%if(!lang.isEnglishArea()){%>
+                        <img src="/white_label/trade-time-cn.png" alt="">
+                        <%}%>
                     </p>
                     <h6 class="desp_title faq"><%=lang.text("faqTrade22")%></h6>
                     <p class="desp_subdesp faq">

@@ -234,7 +234,7 @@
         function openChangeDepTypeMdl () {
             $modal.open({
                 templateUrl: '/views/asset/deposit_dep_type_modal.html',
-                size: $scope.lang.isEnglish() ? 'md' : 'sm',
+                size: $scope.lang.isEnglishArea() ? 'md' : 'sm',
                 backdrop: 'static',
                 resolve: {
                     passedScope: function () {

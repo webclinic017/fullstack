@@ -30,14 +30,20 @@
                                 <div class="download">
                                     <ul class="plat">
                                         <li class="phone">
-                                            <a href="<%= lang.showScheme(lang.text('androidApp'), lang.text('downloadGlobalAndroid')) %>">
-                                                <img src="/white_label/download/<%= lang.showScheme('focus-icon-android-en', 'focus-icon-google-en', 'focus-icon-android-cn', 'focus-icon-google-cn') %>.png" alt="">
-                                            </a>
+                                            <%if (req.host.indexOf('global') != -1) {%>
+                                                <a href="<%= lang.text('downloadGlobalAndroid') %>">
+                                                    <img src="<%= lang.image('downloadAppAndroidGlobal')%>" alt="">
+                                                </a>
+                                            <%} else {%>
+                                                <a href="<%= lang.text('androidApp') %>">
+                                                    <img src="<%= lang.image('downloadAppAndroidCn')%>" alt="">
+                                                </a>
+                                            <%}%>
                                             <!-- <p><%= lang.text('downloadApp.tip3')%></p> -->
                                         </li>
                                         <li class="phone">
                                             <a href="<%= lang.text('downloadGlobalIos')%>">
-                                                <img src="/white_label/download/<%= lang.cnOrEn('focus-icon-ios-cn-1.0', 'focus-icon-ios-en') %>.png" alt="">
+                                                <img src="<%= lang.image('downloadAppIos')%>" alt="">
                                             </a>
                                             <!-- <p><%= lang.text('downloadApp.tip4')%></p> -->
                                         </li>
@@ -70,103 +76,20 @@
                     </div>
                     <div class="swiper-container" tw-carousel data-type="gradient">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide <%= lang.currentLanguage()%>">
+                            <div class="swiper-slide <%= lang.isEnglishArea() ? 'en' : ''%>">
                                 <!-- <div class="download_banner__ctn-des">
                                     <h2><%= lang.text('downloadApp.tip1')%></h2>
                                     <span><%= lang.text('downloadApp.tip2')%></span>
                                 </div> -->
                             </div>
-                            <!-- <div class="swiper-slide <%= lang.currentLanguage()%>">
-                                <div class="download_banner__ctn-des">
-                                    <h2><%= lang.text('downloadApp.regularFollow')%></h2>
-                                    <span><%= lang.text('downloadApp.tip18')%></span>
-                                </div>
-                            </div>
-                            <div class="swiper-slide <%= lang.currentLanguage()%>">
-                                <div class="download_banner__ctn-des">
-                                    <h2><%= lang.text('downloadApp.mobileEndTradingSystem')%></h2>
-                                    <span><%= lang.text('downloadApp.tip19')%></span>
-                                </div>
-                            </div> -->
                         </div>
                         <div class="swiper-pagination"></div>
                     </div>
                 </div>
-                <!-- <div class="download_advantage">
-                    <div class="download_title">
-                        <h3><%= lang.text('downloadApp.tip7')%></h3>
-                        <p><%= lang.text('downloadApp.tip8_1') + lang.text('companyZhName') + lang.text('downloadApp.tip8_2')%></p>
-                    </div>
-                    <ul class="download_advantage__detail">
-                        <li>
-                            <h4><%= lang.text('downloadApp.lowThreshold')%></h4>
-                            <p><%= lang.text('downloadApp.tip9_1')%><br><%= lang.text('downloadApp.tip9_2')%><br><%= lang.text('downloadApp.tip9_3')%></p>
-                        </li>
-                        <li>
-                            <h4><%= lang.text('downloadApp.highIncome')%></h4>
-                            <p><%= lang.text('downloadApp.tip10_1')%><br><%= lang.text('downloadApp.tip10_2')%><br><%= lang.text('downloadApp.tip10_3')%></p>
-                        </li>
-                        <li>
-                            <h4><%= lang.text('downloadApp.easyOperation')%></h4>
-                            <p><%= lang.text('downloadApp.tip11_1')%><br><%= lang.text('downloadApp.tip11_2')%></p>
-                        </li>
-                        <li>
-                            <h4><%= lang.text('downloadApp.moreOpportunities')%></h4>
-                            <p><%= lang.text('downloadApp.tip12_1')%><br><%= lang.text('downloadApp.tip12_2')%></p>
-                        </li>
-                        <li>
-                            <h4><%= lang.text('downloadApp.followMasters')%></h4>
-                            <p><%= lang.text('downloadApp.tip13_1')%><br><%= lang.text('downloadApp.tip13_2')%></p>
-
-                        </li>
-                        <li>
-                            <h4><%= lang.text('downloadApp.fairMarket')%></h4>
-                            <p><%= lang.text('downloadApp.tip14')%></p>
-                        </li>
-                    </ul>
-                </div> -->
                 <div class="download_title">
                     <h3><%= lang.text('companyZhName') + lang.text('downloadApp.tip15')%></h3>
                     <p><%= lang.text('downloadApp.tip16')%></p>
                 </div>
-                <!-- <div class="download_bottom">
-                    <div class="download_bottom__ctn <%= lang.background().company%>">
-                        <ul class="download_bottom__ctn-plat">
-                            <% if (req.host.indexOf('global') != -1) {%>
-                                <li class="phone">
-                                    <a href="<%= lang.text('downloadGlobalAndroid')%>">
-                                        <i class="fa fa-android" aria-hidden="true"></i>
-                                        <%= lang.text('downloadApp.androidVersion')%>
-                                    </a>
-                                </li>
-                                <li class="phone">
-                                    <a href="<%= lang.text('downloadGlobalIos')%>">
-                                        <i class="fa fa-apple" aria-hidden="true"></i>
-                                        <%= lang.text('downloadApp.iPhoneVersion')%>
-                                    </a>
-                                </li>
-                            <%} else {%>
-                                <li class="phone">
-                                    <a href="<%= lang.text('androidApp') %>">
-                                        <i class="fa fa-android" aria-hidden="true"></i>
-                                        <%= lang.text('downloadApp.androidVersion')%>
-                                    </a>
-                                </li>
-                                <li class="phone">
-                                    <a href="https://itunes.apple.com/cn/app/%E8%80%81%E8%99%8E%E5%A4%96%E6%B1%87/id1091437876?platform=iphone&preserveScrollPosition=true#platform/iphone">
-                                        <i class="fa fa-apple" aria-hidden="true"></i>
-                                        <%= lang.text('downloadApp.iPhoneVersion')%>
-                                    </a>
-                                </li>
-                            <%}%>
-                        </ul>
-                        <% if (lang.currentLanguage() === 'en') {%>
-                            <img src="/images/web/download_phone_en.png" alt="">
-                        <%} else {%>
-                            <img src="/images/web/download_phone_cn.png" alt="">
-                        <%}%>
-                    </div>
-                </div> -->
             </div>
             <div class="index_new__container">
                 <div class="index_new__float_box">
@@ -177,9 +100,6 @@
                         <p><%= lang.text("newhome_45")%></p>
                     </div>
                     <div class="b text-center">
-            
-                        <!-- <a href="<%= lang.text('downloadGlobalIos') %>"><img src="/white_label/home/<%= lang.showScheme('focus-icon-ios-en', 'focus-icon-ios-en', 'focus-icon-ios-cn-1.0', 'focus-icon-ios-cn-1.0') %>.png" alt=""></a>
-                        <a href="<%= lang.showScheme(lang.text('androidApp'), lang.text('downloadGlobalAndroid')) %>"><img src="/white_label/home/<%= lang.showScheme('focus-icon-cn-android-en', 'focus-icon-google-en-1.0', 'focus-icon-cn-android-cn', 'focus-icon-google-cn') %>.png" alt=""></a> -->
                         <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%= lang.text("newhome_46")%></a>
                     </div>
                     </div>
