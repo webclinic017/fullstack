@@ -16,7 +16,6 @@
                                 </a>
                             </h3>
                         </li>
-                        <%if(lang.isCompany("tigerwit")){%>
                         <li>
                             <h3>
                                 <a href="/web/product/trade">
@@ -24,7 +23,6 @@
                                 </a>
                             </h3>
                         </li>
-                        <%}%>
                     </ul>
                 </div>
                 <div class="link-list__item">
@@ -41,8 +39,7 @@
                                 </a>
                             </h3>
                         </li>
-                        <%if(lang.currentLanguage() !== 'en'){%>
-                        
+                        <%if(!lang.isEnglishArea()){%>
                         <li>
                             <h3>
                                 <a href="/web/help/introduce">
@@ -168,7 +165,6 @@
     <h4><%= lang.text("foot_42")%></h4><ul class="clearfix"><li class="ordinary_serv"><span><img src="/images/footer-service-1.png"></span><%= lang.text("foot_43")%></li><li class="agent_serv"><span><img src="/images/footer-service-2.png"></span><%= lang.text("foot_45")%></li></ul><div class="tip clearfix"><p><%= lang.text("foot_44")%><br><%= lang.text("foot_44_2")%></p><p> <%= lang.text("foot_46")%><br><%= lang.text("foot_47")%></p></div>
 </div>
 
-<%if(lang.isCompany("tigerwit")){%>
 <!-- Live800Online operator icon:online service(in use)[Floating icon] Start-->
 <script language="javascript">
     window.OpenChat = function () {
@@ -223,19 +219,20 @@
      <span style="position: absolute; top: -2px; left: -10px; width: 25px; height: 25px; cursor: pointer;" onclick="setPositioningQRCode()">
          <img src="/images/footer-customer-close-icon.png">
      </span>
-     <%- lang.showScheme('<img style="cursor: pointer;" src="/images/footer-layer/cn-en.png" onclick="OpenChat();">', '<img style="cursor: pointer;" src="/white_label/footer-layer/global-en-new.png">', '<img style="cursor: pointer;" src="/images/footer-layer/cn-cn-new.png" onclick="OpenChat();">', '<img style="cursor: pointer;" src="/white_label/footer-layer/global-cn.png">') %>
+     <%if (req.host.indexOf('global') != -1) {%>
+        <img style="cursor: pointer;" src="<%= lang.image('footerCustomerGloabal')%>">
+     <%} else {%>
+        <img style="cursor: pointer;" src="<%= lang.image('footerCustomerCn')%>">
+     <%}%>
 </div>
 <!-- Online operator icon:online service(in use) End-->
-<%}%>
 <!-- 友盟统计 2016.09.21 -->
-<%if(lang.isCompany("tigerwit")){%>
 <div style="display:none">
     <script type="text/javascript">
         var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
         document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260394016'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260394016' type='text/javascript'%3E%3C/script%3E"));
     </script>
 </div>
-<%}%>
 <script>
     var _hmt = _hmt || [];
     (function () {

@@ -51,19 +51,6 @@
             }
         }
     }
-    @include e(banner_pkds) {
-        @include img-normal($image-path-base + "ranklist/fix-list-bg-pkds.png");
-
-        .container {
-            height: 418px;
-            
-            img {
-                height: 100%;
-            }
-        }
-
-        
-    }
 
     @include e(con) {
 
@@ -87,15 +74,7 @@
         background: #fff;
         background-repeat: no-repeat;
 
-        &.tigerwit {
-            @include img-normal($image-path-base + "ranklist/little-dq.jpg");
-        }
-        &.lonfx {
-            @include img-normal($image-path-base + "ranklist/little-dq.jpg");
-        }
-        &.pkds {
-            @include img-normal($image-path-base + "ranklist/little-dq-pkds.png");
-        }
+        @include img-normal($image-path-base + "ranklist/little-dq.jpg");
 
 
         @include m(con1) {
@@ -307,12 +286,7 @@
             height: 34px;
             width: 34px;
 
-            &.tigerwit {
-                @include img-normal($image-path-base + "ranklist/huiying-tel.png");
-            }
-            &.pkds {
-                @include img-normal($image-path-base + "ranklist/huiying-tel-pkds.png");
-            }
+            @include img-normal($image-path-base + "ranklist/huiying-tel.png");
         }
 
         @include m(span2) {

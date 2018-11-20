@@ -7,7 +7,7 @@
                 </a>
             </div>
             <div class="space_sidebar__user">
-                <span class="space_sidebar__user-username">{{(lang.isEnglish() && personal.username_en) ? personal.username_en : personal.username }}</span>
+                <span class="space_sidebar__user-username">{{(lang.isEnglishArea() && personal.username_en) ? personal.username_en : personal.username }}</span>
                 <div class="space_sidebar__user-usercode">{{lang.text('tigerWitID.titleM')}}{{ personal.user_code }}</div>
                 <!-- <span class="space_sidebar__user-position">
                     <i class="fa fa-map-marker"></i>
@@ -92,13 +92,13 @@
                     {{lang.text('tigerWitID.myAccount.wallet')}}
                 </a>
             </li>
-            <li class="space_sidebar__nav-menu" ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
+            <li class="space_sidebar__nav-menu" ui-sref-active="active">
                 <a ui-sref="space.redbag.subpage">
                     {{lang.text('tigerWitID.coupon.title')}}
                     <span class="space_sidebar__bag-num" ng-show="personal.redbagUnreadNum && personal.redbagUnreadNum > 0">{{ personal.redbagUnreadNum || '0' }}</span>
                 </a>
             </li>
-            <li class="space_sidebar__nav-menu" ui-sref-active="active" ng-if="lang.isCompany() === 'tigerwit'">
+            <li class="space_sidebar__nav-menu" ui-sref-active="active">
                 <a ui-sref="space.invite">{{lang.text('tigerWitID.inviteFriends.title')}}</a>
             </li>
             <li class="space_sidebar__nav-menu" ui-sref-active="active">

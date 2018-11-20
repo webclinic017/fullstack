@@ -6,99 +6,14 @@ module.exports = function () {
     var company_name = envConfig.company_name;
     var url_path = envConfig.url_path;
     var companyConfig = {};
-    var indexBasePath = "/white_label";
     var date = require('./tools').date;
     var app_version = company_name == 'tigerwit' ? 'global' : 'pandafx';
     var versionAndroidApp = require('./app_ctrl.config').getAppInfo(app_version)['cn'].android.app_info.url;
+    var imagePath = require('./mutilang/imagePath');
 
     var data = {
         // image path
-        image: {
-            logo: {
-                en: indexBasePath + "/header/tigerwit-logo-en.png",
-                zh: indexBasePath + "/header/tigerwit-logo-en.png",
-                vi: indexBasePath + "/header/tigerwit-logo-en.png",
-                "zh-Hant": indexBasePath + "/header/tigerwit-logo-en.png"
-            },
-            helpLogo: {
-                en: indexBasePath + "/help-logo-tigerwit.png",
-                zh: indexBasePath + "/help-logo-tigerwit.png",
-                vi: indexBasePath + "/help-logo-tigerwit.png",
-                "zh-Hant": indexBasePath + "/help-logo-tigerwit.png"
-            },
-            homePerson: {
-                en: indexBasePath + "/index-person-tiger.jpg",
-                zh: indexBasePath + "/index-person-tiger.jpg",
-                vi: indexBasePath + "/index-person-tiger.jpg",
-                "zh-Hant": indexBasePath + "/index-person-tiger.jpg"
-            },
-            homeTrade: {
-                en: indexBasePath + "/index2-trade-img-tigerwit-en.png",
-                zh: indexBasePath + "/index2-trade-img-tigerwit.png",
-                vi: indexBasePath + "/index2-trade-img-tigerwit-en.png",
-                "zh-Hant": indexBasePath + "/index2-trade-img-tigerwit.png"
-            },
-            homePlus: {
-                en: indexBasePath + "/index2-master-jia-tiger.png",
-                zh: indexBasePath + "/index2-master-jia-tiger.png",
-                vi: indexBasePath + "/index2-master-jia-tiger.png",
-                "zh-Hant": indexBasePath + "/index2-master-jia-tiger.png"
-            },
-            webCopyRule: {
-                en: indexBasePath + "/rules-banner-tigerwit.jpg",
-                zh: indexBasePath + "/rules-banner-tigerwit.jpg",
-                vi: indexBasePath + "/rules-banner-tigerwit.jpg",
-                "zh-Hant": indexBasePath + "/rules-banner-tigerwit.jpg"
-            },
-            webCopySelect: {
-                en: indexBasePath + "/select-banner-tigerwit.jpg",
-                zh: indexBasePath + "/select-banner-tigerwit.jpg",
-                vi: indexBasePath + "/select-banner-tigerwit.jpg",
-                "zh-Hant": indexBasePath + "/select-banner-tigerwit.jpg"
-            },
-            webAgentProxy: {
-                en: indexBasePath + "/agent-banner-tigerwit-new.jpg",
-                zh: indexBasePath + "/agent-banner-tigerwit-new.jpg",
-                vi: indexBasePath + "/agent-banner-tigerwit-new.jpg",
-                "zh-Hant": indexBasePath + "/agent-banner-tigerwit-new.jpg"
-            },
-            webAgentBecome: {
-                en: indexBasePath + "/become-banner-tigerwit.png",
-                zh: indexBasePath + "/become-banner-tigerwit.png",
-                vi: indexBasePath + "/become-banner-tigerwit.png",
-                "zh-Hant": indexBasePath + "/become-banner-tigerwit.png"
-            },
-            ico: {
-                en: indexBasePath + "/tigerwit.ico",
-                zh: indexBasePath + "/tigerwit.ico",
-                vi: indexBasePath + "/tigerwit.ico",
-                "zh-Hant": indexBasePath + "/tigerwit.ico"
-            },
-            h5RegisterLogo: {
-                en: indexBasePath + "/h5_register_logo_TigerWit.png",
-                zh: indexBasePath + "/h5_register_logo_TigerWit.png",
-                vi: indexBasePath + "/h5_register_logo_TigerWit.png",
-                "zh-Hant": indexBasePath + "/h5_register_logo_TigerWit.png"
-            },
-            t33_logo: {
-                en: indexBasePath + "/t33_logo-tigerwit.png",
-                zh: indexBasePath + "/t33_logo-tigerwit.png",
-                vi: indexBasePath + "/t33_logo-tigerwit.png",
-                "zh-Hant": indexBasePath + "/t33_logo-tigerwit.png"
-            },
-            basicLogoBlack: {
-                en: indexBasePath + "/basic_logo_tiger_black.png",
-                zh: indexBasePath + "/basic_logo_tiger_black.png",
-                vi: indexBasePath + "/basic_logo_tiger_black.png",
-                "zh-Hant": indexBasePath + "/basic_logo_tiger_black.png"
-            },
-            basicLogoWhite: {
-                en: indexBasePath + "/basic_logo_tiger_white.png",
-                zh: indexBasePath + "/basic_logo_tiger_white.png",
-                vi: indexBasePath + "/basic_logo_tiger_white.png",
-                "zh-Hant": indexBasePath + "/basic_logo_tiger_white.png"
-            }
-        },
+        image: imagePath,
 
         registerPath: {
             zh: url_path + '/space/#/account/register',
@@ -11074,6 +10989,7 @@ module.exports = function () {
                 .replace(/tigerwit/g, "TigerWit")
                 .replace(/tigerWit/g, "TigerWit")
                 .replace(/老虎外汇/g, "TigerWit")
+                .replace(/老虎外匯/g, "TigerWit")
         )
     }
 

@@ -60,7 +60,7 @@
         </div>
         <div class="m_share02_layout">
             <div class="share_box" id="share02_box">
-                <div class="share02_modal clearfix <%=lang.currentLanguage()%>" id="share02_modal">
+                <div class="share02_modal clearfix <%= lang.isEnglishArea() ? 'en' : 'zh' %>" id="share02_modal">
                     <input type="text" class="copy_link">
                     <span id="copy_link_btn"><%=lang.text('mInvite42')%></span>
                 </div>
