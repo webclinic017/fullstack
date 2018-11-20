@@ -37,7 +37,7 @@
                 }
                 
                 var options = {
-                    language: lang.isEnglish() ? '' : "zh-CN",
+                    language: lang.isEnglishArea() ? '' : "zh-CN",
                     autoclose: true,
                     clearBtn: attrs.clearBtn == 'false' ? false : true,
                     startView: 2,
@@ -51,7 +51,7 @@
                 }
                 else if (attrs.type == 'month') {
                     options = {
-                        language: lang.isEnglish() ? '' : "zh-CN",
+                        language: lang.isEnglishArea() ? '' : "zh-CN",
                         startView: 2,
                         maxViewMode: 2,
                         minViewMode:1,

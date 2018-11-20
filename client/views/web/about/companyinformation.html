@@ -1,6 +1,6 @@
 <div class="about-public mg-200__bg">
     <div class="">
-        <%if(lang.currentLanguage() == 'en'){%>
+        <%if(lang.isEnglishArea()){%>
             <h3 class="mg-200__circle-title pd-bt-20">
                 About us
             </h3>
@@ -26,7 +26,8 @@
             <p class=" mg-tp-20">
                 TigerWit’s founders are experienced individuals with successful backgrounds and a long history of achievement, who bring together a team of professionals with diverse academic and applied backgrounds experienced in trading Forex, CFD and spread betting, regulatory compliance, investment management, research & development of online platforms and global sales & marketing.
             </p>
-        <%} else {%>
+        <%}%>  
+        <%if(!lang.isEnglishArea()){%>
             <h3 class="mg-200__circle-title pd-bt-20">
                 关于我们
             </h3>
@@ -53,7 +54,7 @@
         <p class=" mg-tp-10">
             <%= lang.text("about_4")%>
         </p>
-        <%if(lang.currentLanguage() == 'zh'){%>
+        <%if(!lang.isEnglishArea()){%>
             <h4 class="font-darkest font-normal font-size-18 mg-tp-20">
                 所受监管
             </h4>

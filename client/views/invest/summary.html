@@ -70,7 +70,7 @@
                 <li ng-repeat="bar in bars" class="invest_type__item row">
                     <div class="col-xs-5">
                         <span class="invest_type__icon icon-forex-{{ bar.symbol_mod.toLowerCase() }}"></span>
-                        <span class="invest_type__tit">{{lang.isEnglish() ? (bar.symbol_mod) : ((bar.symbol_mod | symbolMod:'zh') + '(' + bar.symbol_mod + ')')}}</span>
+                        <span class="invest_type__tit">{{lang.isEnglishArea() ? (bar.symbol_mod) : ((bar.symbol_mod | symbolMod:'zh') + '(' + bar.symbol_mod + ')')}}</span>
                     </div>
                     <div class="col-xs-7">
                         <div new-scale-bar data-type="investDetail"></div>

@@ -32,7 +32,7 @@
         $scope.showErr = showErr;
         $scope.submitForm = submitForm;
 
-        var degaultAD = lang.isEnglish() ? 4 : 3;
+        var degaultAD = lang.isEnglishArea() ? 4 : 3;
         var sources = getQueryString('q') || 1;
         var ad_position = getQueryString('w') || degaultAD;
         console.log(ad_position);
@@ -41,7 +41,7 @@
             $scope.countryList = data.data;
         });
 
-        if (!lang.isEnglish()) {
+        if (!lang.isEnglishArea()) {
             $scope.becomeAgent.country.code = 'CN';
             $scope.becomeAgent.country.name_cn = '中国';
         }
