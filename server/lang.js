@@ -39,7 +39,7 @@ module.exports = function () {
         if (url.parse(req.url, true).query.lang) {
             language = url.parse(req.url, true).query.lang;
         }
-        this.language = language === 'en' ? language : 'zh'; 
+        this.language = language === 'cn' ? 'zh' : language;
         this.data = data;
         this.req = req;
         this.company_name = company_name;
