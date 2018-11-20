@@ -134,11 +134,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.0.0",
-                        description: "Multi-accounts management\nTourist mode\nWithdrawal when have position orders\nBug fixes",
-                        updated_description: "Version 2.0.0 available",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.0.0.apk",
-                        force_update : true
+                        version_name : "V2.0.1",
+                        description: "- Optimize user experience.\n- Fix some bugs.",
+                        updated_description: "Version 2.0.1 available",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.0.1.apk",
+                        force_update : false
                     }
                 }
             },
@@ -153,11 +153,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.0.0",
-                        description: "Multi-accounts management\nTourist mode\nWithdrawal when have position orders\nBug fixes",
-                        updated_description: "Version 2.0.0 available",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.0.0.apk",
-                        force_update : true
+                        version_name : "V2.0.1",
+                        description: "- Optimize user experience.\n- Fix some bugs.",
+                        updated_description: "Version 2.0.1 available",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.0.1.apk",
+                        force_update : false
                     }
                 } 
             }

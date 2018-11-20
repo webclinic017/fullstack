@@ -64,10 +64,7 @@
             // 100103,  // 令牌验证失败  
             // 100104,  // 令牌未定义
             if (data.code >= 100100 && data.code <= 100199) {
-                if (lang.isCompany() === 'pandafx') {
-                    $window.location.href='/panda/login';
-                }
-                else if($window.location.host.indexOf('ibonline') != -1){
+                if($window.location.host.indexOf('ibonline') != -1){
                     $window.location.href='/payment/login';
                 }
                 else if($window.location.host.indexOf('dp') != -1){

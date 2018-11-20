@@ -7,7 +7,7 @@
     <div class="mg-tp-40 kyc">
        <form name="completeForm" novalidate autocomplete="off">
             <div class="row">
-                <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglish()}">
+                <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
                     <label>{{lang.text('tigerWitID.settings.setNickname')}}</label>
                 </div>        
                 <div class="col-xs-8">
@@ -45,7 +45,7 @@
             </div>
 
             <div class="row">
-                <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglish()}">
+                <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
                     <label>{{lang.text('tigerWitID.settings.editEmail')}}</label>
                 </div>        
                 <div class="col-xs-8">
@@ -81,7 +81,7 @@
                 </div>
             </div>
             <div class="row" ng-if="!personal.email">
-                <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglish()}">
+                <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
                     <label>{{lang.text('tigerWitID.settings.verifyEmail')}}</label>
                 </div>        
                 <div class="col-xs-8">
@@ -116,7 +116,7 @@
 
             <div>
                 <div class="row">
-                    <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglish()}">
+                    <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
                         <label>{{lang.text('tigerWitID.settings.verifyPhone')}}</label>
                     </div>        
                     <div class="col-xs-8 bind_phone">
@@ -188,7 +188,7 @@
                     </div>
                 </div>
                 <div class="row" ng-if="!personal.phone">
-                    <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglish()}">
+                    <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
                         <label>{{lang.text('tigerWitID.settings.verifyPhoneg')}}</label>
                     </div>        
                     <div class="col-xs-8">
@@ -217,7 +217,7 @@
             </div>
 
             <div class="row" ng-if="completeInfo.country.value == 'CN'">
-                <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglish()}">
+                <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
                     <label>{{lang.text('tigerWitID.settings.residentialAddress')}}</label>
                 </div>        
                 <div class="col-xs-4">
@@ -285,7 +285,7 @@
             </div>
 
             <div class="row">
-                <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglish()}">
+                <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
                     <label>{{completeInfo.country.value == 'CN' ? '&nbsp;' : lang.text('tigerWitID.settings.residentialAddress')}}</label>
                 </div>
                 <div class="col-xs-8">

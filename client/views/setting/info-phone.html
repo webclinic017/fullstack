@@ -73,7 +73,7 @@
                            ng-blur="showErr('phoneForm', 'captcha')">
 
                     <div ng-show="frontErr.captcha.show">
-                        <p class="alert-arrow_tp_lf" ng-show="phoneForm.captcha.$error.required" ng-style="{padding: lang.isEnglish() ? '8px 7px' : ''}">
+                        <p class="alert-arrow_tp_lf" ng-show="phoneForm.captcha.$error.required" ng-style="{padding: lang.isEnglishArea() ? '8px 7px' : ''}">
                             {{lang.text('tigerWitID.settings.enterVerificationCode')}}
                         </p>
                     </div>

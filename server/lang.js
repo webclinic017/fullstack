@@ -39,7 +39,12 @@ module.exports = function () {
         if (url.parse(req.url, true).query.lang) {
             language = url.parse(req.url, true).query.lang;
         }
-        this.language = language === 'en' ? language : 'zh'; 
+        this.language = language === 'cn' ? 'zh' : language;
+        //越南语本周兼容成英文，set_company_cookie.js 同步修改 2018.11.20
+        if (language === 'vi') {
+            this.language = 'en';
+        }
+        //越南语翻译上线删除此配置
         this.data = data;
         this.req = req;
         this.company_name = company_name;
@@ -47,43 +52,18 @@ module.exports = function () {
         // return this;         
     }
     Lang.prototype = {
-        isCompany: function (name) {  // 暂时无用
-            var _this = this;
-            if (_this.company_name == name) {
-                return true;
-            } else {
-                return false;
+        isEnglishArea: function () {
+            /**
+             * date: 2018.11.20
+             * 判断语言环境使用此方法，若需要单独对某地区进行特殊处理，再另行添加方法。
+             * 英语地区 en, vi
+             * 非英语地区 cn, zh-Hant
+             *  */
+            var isEngArea = false;
+            if (this.language === 'en' || this.language === 'vi') {
+                isEngArea = true;
             }
-        },
-        isDemo: function () {
-            console.log(this.req.hostname);
-            if ((this.req.hostname.indexOf('demo.tigerwit.com') != -1) || (this.req.hostname.indexOf('w.dev.tigerwit.com') != -1)) {
-                return true;
-            } else {
-                return false;
-            }
-        },
-        isCloned: function(){
-            return this.clonedBaidu;
-        },
-        isTigerSpecial: function(){
-            // console.log("this.req.headers['user-agent']", this.req.headers['user-agent'])
-            return this.req.headers['user-agent'].indexOf('tiger_special') != -1;
-        },
-        isVersion: function(version){
-            var vMap = {
-                global: 'tigerwell_global',
-                special: 'tiger_special',
-                uk: 'tigerwell_uk',
-                pandafx: 'panda_app'
-            }
-            return this.req.headers['user-agent'].indexOf(vMap[version]) != -1;
-        },
-        currentLanguage: function () {
-            return this.language;
-        },
-        isEnglish: function () {
-            return this.language == 'en' ? true : false;
+            return isEngArea;
         },
         text: function (name) {
             var _this = this;
@@ -112,7 +92,42 @@ module.exports = function () {
             }
             return path;
         },
-        background: function () {
+        isDemo: function () {
+            console.log(this.req.hostname);
+            if ((this.req.hostname.indexOf('demo.tigerwit.com') != -1) || (this.req.hostname.indexOf('w.dev.tigerwit.com') != -1)) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        isVersion: function(version){
+            var vMap = {
+                global: 'tigerwell_global',
+                special: 'tiger_special',
+                uk: 'tigerwell_uk',
+                pandafx: 'panda_app'
+            }
+            return this.req.headers['user-agent'].indexOf(vMap[version]) != -1;
+        },
+        isTigerSpecial: function(){
+            // console.log("this.req.headers['user-agent']", this.req.headers['user-agent'])
+            return this.req.headers['user-agent'].indexOf('tiger_special') != -1;
+        },
+        isCompany: function (name) {  //此方法废弃 2018.11.20
+            var _this = this;
+            if (_this.company_name == name) {
+                return true;
+            } else {
+                return false;
+            }
+        },
+        isCloned: function(){  //此方法废弃 2018.11.20
+            return this.clonedBaidu;
+        },
+        currentLanguage: function () {  //此方法废弃 2018.11.20
+            return this.language;
+        },
+        background: function () {  //此方法废弃 2018.11.20 (背景图使用image方法)
             var _this = this;
             var backgroundName = {
                 en: _this.language === 'en' ? 'en' : '',
@@ -121,7 +136,7 @@ module.exports = function () {
             return backgroundName;
         },
         // global的中英文与cn的中英文
-        showScheme: function (cnEn, globalEn, cnCn, globalCn) {
+        showScheme: function (cnEn, globalEn, cnCn, globalCn) {  //此方法废弃 2018.11.20
             var _this = this;
             // console.log(_this.req.host)
             if (_this.req.host.indexOf('global') != -1) {
@@ -139,7 +154,7 @@ module.exports = function () {
             }
         },
         // 中文或者英文
-        cnOrEn: function(cn, en) {
+        cnOrEn: function(cn, en) {  //此方法废弃 2018.11.20
             var _this = this;
             if (_this.language === 'en') {
                 return en;

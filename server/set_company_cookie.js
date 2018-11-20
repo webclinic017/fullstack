@@ -30,13 +30,20 @@
             'is_cloned=' + is_cloned + '; path=/; domain=.tigerwit.com',
         ];
         //global未设置语言时默认英文
-        if (!parseCookie(req.headers.cookie).lang && (req.host.indexOf('global.tigerwit.com') != -1 || req.host.indexOf('globaldemo.tigerwit.com') != -1)) {
+        if (!lang && !parseCookie(req.headers.cookie).lang && (req.host.indexOf('global.tigerwit.com') != -1 || req.host.indexOf('globaldemo.tigerwit.com') != -1)) {
             cArr.push('lang=en; path=/; domain=.tigerwit.com');
         }
         if (lang) {
+            //越南语本周兼容成英文，lang.js 同步修改 2018.11.20
+            if (lang === 'vi') lang = 'en';
+            //越南语翻译上线删除此配置
             // cArr.push('lang=en; path=/; domain=.tigerwit.com');
             cArr.push('lang='+lang+'; path=/; domain=.tigerwit.com');
+        //越南语本周兼容成英文，lang.js 同步修改 2018.11.20
+        } else if (parseCookie(req.headers.cookie).lang === 'vi') {
+            cArr.push('lang=en; path=/; domain=.tigerwit.com');
         }
+        //越南语翻译上线删除此配置
         // console.info(cArr);
         res.setHeader('Set-Cookie', cArr);
     };
