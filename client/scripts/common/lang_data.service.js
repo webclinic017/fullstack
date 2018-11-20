@@ -5423,10 +5423,10 @@
                         "zh-Hant": "開通老虎外匯真實帳護並完成實名認證"
                     },
                     tip13: {
-                        zh: "在老虎外汇交易平台真实入金并连续自主交易30个以上工作日",
-                        en: "In the TigerWit trading platform deposit and continuous self-trading more than 30 working days",
+                        zh: "在老虎外汇交易平台真实入金并连续自主交易20个以上工作日",
+                        en: "In the TigerWit trading platform deposit and continuous self-trading more than 20 working days",
                         vi: "--",
-                        "zh-Hant": "在老虎外匯交易平臺真實入金並連續自主交易30個以上工作日"
+                        "zh-Hant": "在老虎外匯交易平臺真實入金並連續自主交易20個以上工作日"
                     },
                     tip14: {
                         zh: "近30日收益率大于20%",
@@ -5771,10 +5771,10 @@
                         "zh-Hant": "成為高手，妳將滿足以下條件："
                     },
                     qualifyMaster_1: {
-                        zh: "入金并连续自主交易30个工作日以上；",
-                        en: "Self-trade more than 30 days",
+                        zh: "入金并连续自主交易20个工作日以上；",
+                        en: "Self-trade more than 20 days",
                         vi: "--",
-                        "zh-Hant": "入金並連續自主交易30個工作日以上；"
+                        "zh-Hant": "入金並連續自主交易20個工作日以上；"
                     },
                     qualifyMaster_2: {
                         zh: "近30日内的收益回报率大于20%",

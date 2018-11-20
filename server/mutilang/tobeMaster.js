@@ -31,7 +31,7 @@ module.exports = {
     },
     tobeMaster4_2: {
         zh: "开通TigerWit真实账户，并完成实名认证。",
-        en: "Open TigerWit's live account, and complete the verification.",
+        en: "Open a TigerWit live account, and complete the verification process.",
         vi: "^^-^^",
         "zh-Hant": "開通TigerWit真實賬戶，並完成實名認證。"
     },
@@ -48,20 +48,20 @@ module.exports = {
         "zh-Hant": "TigerWit交易員榜單隨著交易表現變動，進階為入圍交易高手的要求："
     },
     tobeMaster6: {
-        zh: "在老虎外汇交易平台入金并连续自主交易30个以上工作日；",
-        en: "Deposit and self-trading more than 30 days;",
+        zh: "在老虎外汇交易平台入金并连续自主交易20个以上工作日；",
+        en: "Make minimum initial deposit and self-trade for at least 20 trading days;",
         vi: "^^-^^",
-        "zh-Hant": "在老虎外匯交易平臺入金並連續自主交易30個以上工作日；"
+        "zh-Hant": "在老虎外匯交易平臺入金並連續自主交易20個以上工作日；"
     },
     tobeMaster7: {
         zh: "近30日收益率大于20%；",
-        en: "Nearly 30 days' rate of return greater than 20%;",
+        en: "Your overall profit must be 20% or more;",
         vi: "^^-^^",
         "zh-Hant": "近30日收益率大於20%；"
     },
     tobeMaster8: {
         zh: "账户余额不得低于500美金。",
-        en: "Account balance should not be less than $500.",
+        en: "Your overall account equity is no less than USD500.",
         vi: "^^-^^",
         "zh-Hant": "賬戶余額不得低於500美金。"
     },
@@ -91,7 +91,7 @@ module.exports = {
     },
     tobeMaster12: {
         zh: "胜率：即交易准确率。胜率=平仓盈利订单/总平仓订单*100%。",
-        en: "Accuracy：The proportion of profitable orders",
+        en: "Accuracy：The proportion of profitable orders.",
         vi: "^^-^^",
         "zh-Hant": "勝率：即交易準確率。勝率=平倉盈利訂單/總平倉訂單*100%。"
     },
@@ -124,5 +124,11 @@ module.exports = {
         en: "The factors affecting ranking are ultimately based on TigerWit official statistics. If you need any help, please contact customer service or send e-mail to: ",
         vi: "^^-^^",
         "zh-Hant": "影響排名因素最終以TigerWit官方統計數據為準。若需人工服務，請聯系客服或者發郵件至："
+    },
+    tobeMaster18: {
+        zh: "开通TigerWit真实账户并完成实名认证；",
+        en: "Complete ID verification and open a Live account;",
+        vi: "^^-^^",
+        "zh-Hant": "開通TigerWit真實帳護並完成實名認證；"
     }
 };
