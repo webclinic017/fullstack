@@ -52,23 +52,12 @@
                                 <span class="p-num"><%= status != "before_appoint" ? model.progress:0 %>%</span>
                             </div>
                         </div>
-                        <%if(lang.isCompany("pkds")){%>
-                            <div class="hy-detail__con-progress">
-                                <span class="hy-detail__con-circle"></span> 
-                                <span class="font-size-16" ng-if="countdownTime.type === 1">预约已结束</span>
-                                <span class="font-size-16" ng-if="countdownTime.type === 2">开始预约倒计时</span>
-                                <span class="font-size-16" ng-if="countdownTime.type === 3">结束预约倒计时</span>
-                                <div class="hy-detail__con-countdown">
-                                    <span>{{countdownTime.day || 0}}</span>天<span>{{countdownTime.hour || 0}}</span>时<span>{{countdownTime.minute || 0}}</span>分<span>{{countdownTime.second || 0}}</span>秒
-                                </div>
-                            </div>
-                        <%}%>
                     </div>
                 </div>
             </div>
             <div class="col-xs-4">
                 <div class="hy-detail__title">
-                    <span class="hy-detail__title-tel <%= lang.background().company %>"></span>
+                    <span class="hy-detail__title-tel"></span>
                     <span class="hy-detail__title-span2">产品咨询：<%= lang.text('telephone')%></span>
                 </div>
                 <div class="hy-detail__con">

@@ -15,11 +15,7 @@
         <div class="share02_main__box">
             <div class="share02_main__title clearfix">
                 <p class="tit"><span><%=lang.text('mInvite13')%></span><span><%=lang.text('mInvite14')%></span></p>
-                <%if(lang.isCompany("tigerwit")){%>
-                    <p class="pic"><img src="/images/basic_logo_tw.png"></p>
-                <%} else if (lang.isCompany("pandafx")) {%>
-                    <p class="pic"><img src="/images/basic_logo_panda_black.png"></p>
-                <%}%>
+                <p class="pic"><img src="/images/basic_logo_tw.png"></p>
             </div>
             <div class="share02_main__list" id="invite_history_list">
                 <div class="init"><%=lang.text('mInvite15')%></div>
@@ -58,7 +54,7 @@
             <span id="send_invitation" class="<%= lang.text('companyEnName') %>"><%=lang.text('mInvite23')%></span>
         </div>
         <div class="share_box" id="share02_box">
-            <div class="share02_modal clearfix <%=lang.currentLanguage()%>" id="share02_modal">
+            <div class="share02_modal clearfix <%= lang.isEnglishArea() ? 'en' : 'zh' %>" id="share02_modal">
                 <!-- <h5><%=lang.text('mInvite24')%></h5> -->
                 <!-- <span class="share_to_friends show_in_all"   id="share_to_friends">  <img src="/images/mobile/share2wx.png"><br><%=lang.text('mInvite25')%></span>
                 <span class="share_to_circle show_in_all"    id="share_to_circle">   <img src="/images/mobile/share2circle.png"><br><%=lang.text('mInvite26')%></span>

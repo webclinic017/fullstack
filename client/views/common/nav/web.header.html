@@ -1,6 +1,6 @@
 <%if (req.host.indexOf('global') != -1) {%>
 <!--增加 cookie 提示-->
-<div class="clearfix navbar-fixed-top" style="position: fixed; background: #eee;width: 100%;height: 110px;z-index: 1060;padding: 20px 0px;top:-110px;left: 0;font-family: regular;transition: all .4s;" ng-style="{top: allowUseCookie ? '0px' : '-110px'}" ng-init="getAllowCookie()">
+<div class="clearfix navbar-fixed-top" style="position: fixed; background: #eee;width: 100%;height: 110px;z-index: 1060;padding: 20px 0px;top:-110px;left: 0;transition: all .4s;" ng-style="{top: allowUseCookie ? '0px' : '-110px'}" ng-init="getAllowCookie()">
     <div class="header-container">
         <div class="fl" style="width: 70%">
             <h3 style="margin: 0px;"><%= lang.text("navbar_setCookie1")%></h3>
@@ -20,7 +20,7 @@
                         <a href="" ng-click="reloadLanguage('en')">English</a>
                     </li>
                     <li>
-                        <a href="" ng-click="reloadLanguage('zh')">简体中文</a>
+                        <a href="" ng-click="reloadLanguage('cn')">简体中文</a>
                     </li>
                 </ul>
             </div>
@@ -36,42 +36,20 @@
             </a>
         </h1>
     
-        <%if(lang.isCompany("tigerwit")){%>
-            <div class="lang navbar-right">
-                <div class="lang-toggle">
-                    <%= lang.text("footlang")%>
-                    <i class="fa fa-sort-down"></i>
-                </div>
-                <ul class="lang-menu">
-                    <li>
-                        <a href="" ng-click="reloadLanguage('en')">English</a>
-                    </li>
-                    <li>
-                        <a href="" ng-click="reloadLanguage('zh')">简体中文</a>
-                    </li>
-                </ul>
-            </div>
-        <%}%>
-        <!-- <div class="select-country">
-            <div class="select-country__title" ng-bind="currentWorld.name || '选择国家'">
+        <div class="lang navbar-right">
+            <div class="lang-toggle">
+                <%= lang.text("footlang")%>
                 <i class="fa fa-sort-down"></i>
             </div>
-            <div class="select-country__con">
-                <div>
-                    <div class="select-country__con-entry">
-                        <i class="fa fa-search search"></i>
-                        <input type="text" ng-model="entryWorld" placeholder="输入国家">
-                    </div>
-                    <ul class="select-country__con-list">
-                        
-                        <li ng-repeat="world in worldList | filter : entryWorld" ng-click="setWorld(world)">
-                            <a >{{world.name + "(" + world.code + ")"}}</a>
-                            <span ng-class="{select: world.code === currentWorld.code}"></span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div> -->
+            <ul class="lang-menu">
+                <li>
+                    <a href="" ng-click="reloadLanguage('en')">English</a>
+                </li>
+                <li>
+                    <a href="" ng-click="reloadLanguage('cn')">简体中文</a>
+                </li>
+            </ul>
+        </div>
         <!-- 未登录时 -->
         <ul class="nav navbar-login navbar-right" ng-cloak ng-if="!personalCookiesInfo.userCode">
             <li class="mg-rg-10">
@@ -96,7 +74,7 @@
                     <!-- SettingInfoAvatarController -->
                     <img class="navbar_info__avatar" ng-show="!personal.addAvatarImg" ng-src="{{personalCookiesInfo.userAvatar}}">
                     <img class="navbar_info__avatar" ng-show="!!personal.addAvatarImg" ng-src="{{personal.addAvatarImg}}">
-                    <h2 class="navbar_info__username">{{(lang.isEnglish() && personalCookiesInfo.userNameEn) ? personalCookiesInfo.userNameEn : (personalCookiesInfo.userName || '**')}}</h2>
+                    <h2 class="navbar_info__username">{{(lang.isEnglishArea() && personalCookiesInfo.userNameEn) ? personalCookiesInfo.userNameEn : (personalCookiesInfo.userName || '**')}}</h2>
                 </a>               
             </div> 
             <div class="navbar_info__logout" ng-click="logout()">
@@ -137,14 +115,12 @@
                     <li>
                         <h2><a data-navbar-trigger href="/web/product/forex"><%= lang.text("navbar6")%></a></h2>
                     </li>
-                    <%if(!lang.isCloned()){%>
-                        <li>
-                            <h2><a data-navbar-trigger href="/web/product/oil"><%= lang.text("navbar7")%></a></h2>
-                        </li>
-                        <li>
-                            <h2><a data-navbar-trigger href="/web/product/metal"><%= lang.text("navbar8")%></a></h2>
-                        </li>
-                    <%}%>
+                    <li>
+                        <h2><a data-navbar-trigger href="/web/product/oil"><%= lang.text("navbar7")%></a></h2>
+                    </li>
+                    <li>
+                        <h2><a data-navbar-trigger href="/web/product/metal"><%= lang.text("navbar8")%></a></h2>
+                    </li>
                     <li>
                       <h2><a data-navbar-trigger href="/web/product/cfd"><%= lang.text("navbar9")%></a></h2>
                     </li>
@@ -162,14 +138,12 @@
                     <li>
                         <h2><a data-navbar-trigger href="/web/copy/select"><%= lang.text("downloadApp.howChooseMaster")%></a></h2>
                     </li>
-                    <%if(lang.isCompany("tigerwit")){%>
-                        <li>
-                            <h2><a data-navbar-trigger href="/web/copy/comment"><%= lang.text("downloadApp.analysis")%></a></h2>
-                        </li>
-                        <li>
-                            <h2><a data-navbar-trigger href="/web/copy/calendar"><%= lang.text("downloadApp.calendar")%></a></h2>
-                        </li>
-                    <%}%>
+                    <li>
+                        <h2><a data-navbar-trigger href="/web/copy/comment"><%= lang.text("downloadApp.analysis")%></a></h2>
+                    </li>
+                    <li>
+                        <h2><a data-navbar-trigger href="/web/copy/calendar"><%= lang.text("downloadApp.calendar")%></a></h2>
+                    </li>
                 </ul>
             </li>
             <!-- 内容无翻译，英文暂时隐藏 -->
@@ -182,7 +156,7 @@
                     <li>
                         <h2><a data-navbar-trigger data-navbar-level="2" href="/web/faq/real"><%= lang.text("faq")%></a></h2>
                     </li>
-                    <li ng-show="!(lang.isEnglish())">
+                    <li ng-show="!(lang.isEnglishArea())">
                         <h2><a data-navbar-trigger data-navbar-level="2" href="/web/help/introduce"><%= lang.text("foot14")%></a></h2>
                     <!-- </li>
                     <li>
@@ -199,7 +173,7 @@
                     </li>
                 </ul>
             </li>
-            <% if (lang.currentLanguage() !== 'en') {%>
+            <% if (!lang.isEnglishArea()) {%>
                 <li class="dropdown" tw-dropdown>
                     <h2>
                         <a data-navbar-trigger data-navbar-level="2" href="/web/agent/proxy"><%= lang.text("downloadApp.partners")%></a>
@@ -214,7 +188,8 @@
                         </li>
                     </ul>
                 </li>
-            <%} else {%>
+            <%}%>
+            <% if (lang.isEnglishArea()) {%>
                 <li>
                     <h2>
                         <a data-navbar-trigger href="/partner">
@@ -225,11 +200,11 @@
             <%}%>
             <li class="dropdown" tw-dropdown>
                 <h2>
-                    <a data-navbar-trigger data-navbar-level="2" href=<%= lang.isEnglish() ? "/web/aboutus/abouttigerwit" : "/web/aboutus/companyinformation" %>><%= lang.text("navbar10")%></a>
+                    <a data-navbar-trigger data-navbar-level="2" href=<%= lang.isEnglishArea() ? "/web/aboutus/abouttigerwit" : "/web/aboutus/companyinformation" %>><%= lang.text("navbar10")%></a>
                 </h2>
 
                 <ul class="dropdown-menu">
-                    <% if(lang.isEnglish()) { %> 
+                    <% if(lang.isEnglishArea()) { %> 
                         <li>
                             <h2><a data-navbar-trigger href="/web/aboutus/abouttigerwit"><%= lang.text("navbar11")%></a></h2>
                         </li>

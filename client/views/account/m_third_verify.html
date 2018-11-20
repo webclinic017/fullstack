@@ -302,7 +302,7 @@
 <script id="template_country_info" type="text/html">
     <option value=""><%=lang.text('third_select')%></option>
     <$for(var i=0;i<data.length;i++){$>
-    <option value="<$= data[i].code$>"><% if (lang.currentLanguage() !== 'en') {%><$= data[i].name_cn$><%} else {%><$= data[i].name_en$><%}%></option>
+    <option value="<$= data[i].code$>"><% if (!lang.isEnglishArea()) {%><$= data[i].name_cn$><%} else {%><$= data[i].name_en$><%}%></option>
     <$}$>
 </script>
 <script id="template_card_info" type="text/html">

@@ -1,38 +1,29 @@
 
 <div class="fix-list">
-    <%if(lang.isCompany("tigerwit") || lang.isCompany("lonfx")){%>
-        <div class="fix-list__banner">
-            <div class="container">
-                <ul class="fix-list__banner-ul">
-                    <li>
-                        <div>
-                            <span>专业</span>
-                            <span>团队</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <span>灵活</span>
-                            <span>选择</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            <span>坐享</span>
-                            <span>收益</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+    <div class="fix-list__banner">
+        <div class="container">
+            <ul class="fix-list__banner-ul">
+                <li>
+                    <div>
+                        <span>专业</span>
+                        <span>团队</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>灵活</span>
+                        <span>选择</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span>坐享</span>
+                        <span>收益</span>
+                    </div>
+                </li>
+            </ul>
         </div>
-    <%}%>
-    <%if(lang.isCompany("pkds")){%>
-        <div class="fix-list__banner_pkds">
-            <div class="container">
-                <img src="/images/ranklist/fix-list-banner-pkds.png">
-            </div>
-        </div>
-    <%}%>
+    </div>
     
     <div class="fix-list__con mg-tp-20">
         <div class="container">
@@ -40,7 +31,7 @@
     model.products.forEach(function(product, index){
         var status = model.judgeStatus(product);
 %>
-            <div class="fix-list__list <%= lang.background().company %>">
+            <div class="fix-list__list">
                 <div class="fix-list__list-con1">
                     <div class="fix-list__list-title-con">
                         <a class="fix-list__list-title" href="/regular/detail/<%= product.id%>"><%= product.name %></a>
@@ -65,12 +56,7 @@
         }
         if(status == "end_trade"){
 %>
-                                <%if(lang.isCompany("tigerwit")){%>
                                 <span>已结算年化收益率</span>
-                                <%}%>
-                                <%if(lang.isCompany("pkds")){%>
-                                <span>已结算周收益率</span>
-                                <%}%>
                                 <span class="fix-list__list-red"><%= product.profit_rate_now %></span>
                                 <span class="font-darker">预期年化收益率<span class="font-warning"><%= product.profit_rate_wish %></span></span>
 <%

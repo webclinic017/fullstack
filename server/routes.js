@@ -224,11 +224,6 @@ module.exports = function (app) {
         }
     });
 
-    app.route('/blockchain').get(function (req, res) {
-        setEnvCf(req, res);
-        res.render('entry/blockchain.html', extendPublic({}, req));
-    });
-
     app.route('/ranklist').get(function (req, res) {
         setEnvCf(req, res);
         res.render('web/ranklist.html', extendPublic({}, req));
@@ -662,79 +657,25 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('waiting', extendPublic({}, req));
     });
-
-    //理财江湖
-    app.route('/bd/t34').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit') {
-            if (isMobile(req)) {
-                res.render('bd/lake/h5.html', extendPublic({}, req));
-            } else {
-                res.render('bd/lake/web.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('404.html', extendPublic({}, req));
-        }
-    });
-
-    // 新手介绍页
-    app.route('/bd/greenhand').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit') {
-            if (isMobile(req)) {
-                res.render('bd/greenhand/h5.html', extendPublic({}, req));
-            } else {
-                res.render('bd/greenhand/web.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('404.html', extendPublic({}, req));
-        }
-    });
     // 直播落地页
     app.route('/bd/live').get(function (req, res) {
         checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit') {
-            if (isMobile(req)) {
-                res.render('bd/live/h5', extendPublic({}, req));
-            } else {
-                res.render('bd/live/web', extendPublic({}, req));
-            }
+        if (isMobile(req)) {
+            res.render('bd/live/h5', extendPublic({}, req));
+        } else {
+            res.render('bd/live/web', extendPublic({}, req));
         }
-    });
-    // 王者荣耀活动页
-    app.route('/bd/honor').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit') {
-            if (isMobile(req)) {
-                res.render('bd/honor/h5', extendPublic({}, req));
-            } else {
-                res.render('bd/honor/web', extendPublic({}, req));
-            }
-        }
-    });
-    // 微信小游戏
-    app.route('/bd/t31_game').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
-        res.render('bd/t31/h5.game.html', extendPublic({}, req))
     });
 
     // t33 作为固定推广链接，要更新最新的落地页到这个地址
     app.route('/bd/t33').get(function (req, res) {
         checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
-            if (isMobile(req)) {
-                res.render('bd/t42/h5.html', extendPublic({}, req))
-            } else {
-                res.render('bd/t42/web.html', extendPublic({}, req));
-            }
+        if (isMobile(req)) {
+            res.render('bd/t42/h5.html', extendPublic({}, req))
         } else {
-            res.render('404.html', extendPublic({}, req));
+            res.render('bd/t42/web.html', extendPublic({}, req));
         }
     });
     
@@ -742,91 +683,34 @@ module.exports = function (app) {
     app.route('/bd/t35').get(function (req, res) {
         checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
-            if (isMobile(req)) {
-                res.render('bd/t42/h5.html', extendPublic({}, req))
-            } else {
-                res.render('bd/t42/web.html', extendPublic({}, req));
-            }
+        if (isMobile(req)) {
+            res.render('bd/t42/h5.html', extendPublic({}, req))
         } else {
-            res.render('404.html', extendPublic({}, req));
+            res.render('bd/t42/web.html', extendPublic({}, req));
         }
     });
     // global活动页
     app.route('/bonus').get(function (req, res) {
         checkGlobalOrCN(req, res, 'cn');
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
-            if (isMobile(req)) {
-                res.render('bd/g35/h5.html', extendPublic({}, req))
-            } else {
-                res.render('bd/g35/web.html', extendPublic({}, req));
-            }
+        if (isMobile(req)) {
+            res.render('bd/g35/h5.html', extendPublic({}, req))
         } else {
-            res.render('404.html', extendPublic({}, req));
+            res.render('bd/g35/web.html', extendPublic({}, req));
         }
     });
     // 新增邮件-海外种子用户加群 
     app.route('/whatsapp').get(function (req, res) {
         checkGlobalOrCN(req, res, 'cn');
         setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
-            if (isMobile(req)) {
-                res.render('bd/g36/h5.html', extendPublic({}, req))
-            } else {
-                res.render('bd/g36/web.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('404.html', extendPublic({}, req));
-        }
-    });
-
-    // 联众德州活动
-    app.route('/bd/t36_game').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
         if (isMobile(req)) {
-            res.render('bd/t36/h5.game.html', extendPublic({}, req))
+            res.render('bd/g36/h5.html', extendPublic({}, req))
         } else {
-            res.render('bd/t36/web.game.html', extendPublic({}, req));
+            res.render('bd/g36/web.html', extendPublic({}, req));
         }
     });
 
-    // 品牌部活动 － 申请代理
-    app.route('/bd/brand_proxy').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
-        res.render('bd/brand/proxy', extendPublic({
-            in_phone: isMobile(req) ? 'y' : 'n'
-        }, req));
-    });
-    // 品牌部活动 － fx168
-    app.route('/bd/brand_fx168').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
-        res.render('bd/brand/fx168_web', extendPublic({}, req));
-    });
-
-    // 抽奖活动
-    app.route('/bd/prize').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        // console.log(req.query.source);
-        var s = req.query.source;
-
-        recordAccessTimes.recordPrizeQrTimes('/prize_qr_times.txt', s, function (num) {
-
-            setEnvCf(req, res);
-            if (isMobile(req)) {
-                res.render('bd/prize/h5.html', extendPublic({}, req));
-            } else {
-                if (COMPANY_NAME === 'tigerwit') {
-                    res.render('bd/prize/web.html', extendPublic({
-                        num: num
-                    }, req));
-                }
-            }
-        });
-    });
+    
     // 市场部 - 月报生成
     app.route('/bd/mon_report').get(function (req, res) {
         checkGlobalOrCN(req, res, 'global');
@@ -900,219 +784,6 @@ module.exports = function (app) {
         }    
     });
 
-
-    // 一键原谅活动
-    app.route('/bd/forgiveme').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
-            if (isMobile(req)) {
-                res.render('bd/forgive/h5.html', extendPublic({}, req))
-            } else {
-                res.render('bd/forgive/web.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('404.html', extendPublic({}, req));
-        }
-    });
-
-    // 四位一体
-    app.route('/bd/4in1').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
-            if (isMobile(req)) {
-                res.render('bd/4in1/4in1_h5.html', extendPublic({}, req))
-            } else {
-                res.render('bd/4in1/4in1_web.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('404.html', extendPublic({}, req));
-        }
-    });
-
-    // 电汇入金活动
-    app.route('/bd/tele').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'lonfx' || COMPANY_NAME === 'pandafx') {
-            if (isMobile(req)) {
-                res.render('bd/tele/tele_h5.html', extendPublic({}, req))
-            } else {
-                res.render('bd/tele/tele_web.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('404.html', extendPublic({}, req));
-        }
-    });
-
-    // 新春抽奖活动
-    app.route('/bd/r01').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit') {
-            if (isMobile(req)) {
-                res.render('bd/r01/h5.html', extendPublic({}, req))
-            } else {
-                res.render('bd/r01/web.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('404.html', extendPublic({}, req));
-        }
-    });
-    // 淘金币活动
-    app.route('/bd/r02').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
-            if (isMobile(req)) {
-                res.render('bd/r02/h5.html', extendPublic({}, req))
-            } else {
-                res.render('bd/r02/web.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('404.html', extendPublic({}, req));
-        }
-    });
-
-    // 招募高手
-    app.route('/bd/recruit_master').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit') {
-            if (isMobile(req)) {
-                res.render('bd/recruit/h5.html', extendPublic({}, req))
-            } else {
-                res.render('bd/recruit/web.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('404.html', extendPublic({}, req));
-        }
-    });
-    app.route('/bd/recruit_master/:subpage(info|complete)').get(function (req, res) {
-        var subpage = req.params.subpage || 'info';
-        setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit') {
-            if (isMobile(req)) {
-                res.render('bd/recruit/h5_'+subpage+'.html', extendPublic({}, req))
-            } else {
-                res.render('bd/recruit/h5_'+subpage+'.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('404.html', extendPublic({}, req));
-        }
-    });
-    // 刮奖
-    app.route('/bd/lottery').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
-        setEnvCf(req, res);
-        if (COMPANY_NAME === 'tigerwit' || COMPANY_NAME === 'pandafx') {
-            if (isMobile(req)) {
-                res.render('bd/lottery/lottery_h5.html', extendPublic({
-                    reward_lst: require('./lottery_reward_lst')
-                }, req))
-            } else {
-                res.render('bd/lottery/lottery_web.html', extendPublic({}, req));
-            }
-        } else {
-            res.render('404.html', extendPublic({}, req));
-        }
-    });
-
-    /* 从 wap 项目迁移过来的功能 >> vue 项目 start*/
-    /*
-        设置     ->     info, password, binding, 
-        忘记密码  ->     forget
-    */
-    app.route('/m/wap/:subpage(info|password|binding|forget)').get(function (req, res) {
-        var subpage = req.params.subpage || 'info';
-        var pageInfo = {
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('m_vue/index.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
-    // 基本信息修改 -> 头像、昵称、所在地
-    app.route('/m/wap/info_avatar/:subpage(index)').get(function (req, res) {
-        var subpage = req.params.subpage || 'index';
-        var pageInfo = {
-            page: 'avatar',
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('m_vue/m_vue_info.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
-    app.route('/m/wap/info_username/:subpage(index)').get(function (req, res) {
-        var subpage = req.params.subpage || 'index';
-        var pageInfo = {
-            page: 'username',
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('m_vue/m_vue_info.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
-    app.route('/m/wap/info_location/:subpage(index)').get(function (req, res) {
-        var subpage = req.params.subpage || 'index';
-        var pageInfo = {
-            page: 'location',
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('m_vue/m_vue_info.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
-    // 密码管理 -> 修改密码
-    app.route('/m/wap/password_modify/:subpage(index)').get(function (req, res) {
-        var subpage = req.params.subpage || 'index';
-        var pageInfo = {
-            page: 'modify',
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('m_vue/m_vue_password.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
-    // 绑定设置 -> 邮箱、手机号
-    app.route('/m/wap/binding_email/:subpage(old|old_code|new|new_code|succ|fail)').get(function (req, res) {
-        var subpage = req.params.subpage || 'old';
-        var pageInfo = {
-            page: 'email',
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('m_vue/m_vue_binding.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
-    app.route('/m/wap/binding_phone/:subpage(index)').get(function (req, res) {
-        var subpage = req.params.subpage || 'index';
-        var pageInfo = {
-            page: 'phone',
-            id: subpage
-        };
-        setEnvCf(req, res);
-        res.render('m_vue/m_vue_binding.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
-    // FAQ
-    app.route('/m/wap/faq/:subpage(index|simulate|real|depwith|type|transaction|mt4|overnight)').get(function (req, res) {
-        var subpage = req.params.subpage || 'index';
-
-        setEnvCf(req, res);
-        res.render('m_vue/m_vue_faq.html', extendPublic({
-            pageInfo: subpage
-        }, req));
-    });
-
     // help
     app.route('/m/wap/help/:subpage(*)').get(function (req, res) {
         var subpage = req.params.subpage || 'index';
@@ -1122,8 +793,6 @@ module.exports = function (app) {
             pageInfo: subpage
         }, req));
     });
-
-    /* end */
 
     // nodeAPI
     app.route('/napi').get(function (req, res) {

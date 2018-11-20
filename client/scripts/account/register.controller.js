@@ -71,7 +71,7 @@
         }
         // 根据域名判断是否为cn
         if('cn.tigerwit.com,cndemo.tigerwit.com,w.dev.tigerwit.com'.indexOf(location.host)!= -1){
-            $scope.account.country.key = lang.isEnglish() ? 'China' : '中国';
+            $scope.account.country.key = lang.text("china");
             $scope.account.country.value = 'CN';
             $scope.selectWorld({phone_code: 86, code: 'CN'})
         }
