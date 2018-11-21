@@ -680,8 +680,8 @@ module.exports = function () {
         footlang: {
             en: "English",
             zh: "简体中文",
-            vi: "^^-^^",
-            "zh-Hant": "簡體中文"
+            vi: "Tiếng Việt",
+            "zh-Hant": "繁體中文"
         },
         footzh: {
             en: "简体中文",
