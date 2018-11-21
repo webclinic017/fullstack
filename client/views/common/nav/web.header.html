@@ -126,7 +126,7 @@
                     </li>
                 </ul>
             </li>
-            <li class="dropdown" tw-dropdown <%= lang.text("navbar15")%>>
+            <li class="dropdown" tw-dropdown>
                 <h2>
                     <a data-navbar-trigger data-navbar-level="2" href="/web/copy/rules"><%= lang.text("downloadApp.guides")%></a>
                 </h2>
@@ -135,6 +135,7 @@
                     <li>
                         <h2><a data-navbar-trigger href="/web/copy/rules"><%= lang.text("downloadApp.copyRegulations")%></a></h2>
                     </li>
+                    <% if(!lang.isEnglishArea()) { %> 
                     <li>
                         <h2><a data-navbar-trigger href="/web/copy/select"><%= lang.text("downloadApp.howChooseMaster")%></a></h2>
                     </li>
@@ -144,6 +145,7 @@
                     <li>
                         <h2><a data-navbar-trigger href="/web/copy/calendar"><%= lang.text("downloadApp.calendar")%></a></h2>
                     </li>
+                    <% } %>
                 </ul>
             </li>
             <!-- 内容无翻译，英文暂时隐藏 -->
