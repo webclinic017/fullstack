@@ -40,11 +40,6 @@ module.exports = function () {
             language = url.parse(req.url, true).query.lang;
         }
         this.language = language === 'cn' ? 'zh' : language;
-        //越南语本周兼容成英文，set_company_cookie.js 同步修改 2018.11.20
-        if (language === 'vi') {
-            this.language = 'en';
-        }
-        //越南语翻译上线删除此配置
         this.data = data;
         this.req = req;
         this.company_name = company_name;
