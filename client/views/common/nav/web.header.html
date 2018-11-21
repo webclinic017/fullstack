@@ -175,31 +175,20 @@
                     </li>
                 </ul>
             </li>
-            <% if (!lang.isEnglishArea()) {%>
-                <li class="dropdown" tw-dropdown>
-                    <h2>
-                        <a data-navbar-trigger data-navbar-level="2" href="/web/agent/proxy"><%= lang.text("downloadApp.partners")%></a>
-                    </h2>
-    
-                    <ul class="dropdown-menu">
-                        <li>
-                            <h2><a data-navbar-trigger href="/web/agent/proxy"><%= lang.text("downloadApp.agencies")%></a></h2>
-                        </li>
-                        <li>
-                            <h2><a data-navbar-trigger href="/web/agent/become"><%= lang.text("downloadApp.becomeMaster")%></a></h2>
-                        </li>
-                    </ul>
-                </li>
-            <%}%>
-            <% if (lang.isEnglishArea()) {%>
-                <li>
-                    <h2>
-                        <a data-navbar-trigger href="/partner">
-                            Partners
-                        </a>
-                    </h2>
-                </li>
-            <%}%>
+            <li class="dropdown" tw-dropdown>
+                <h2>
+                    <a data-navbar-trigger data-navbar-level="2" href=<%= lang.isEnglishArea() ? "/partner" : "/web/agent/proxy" %>><%= lang.text("downloadApp.partners")%></a>
+                </h2>
+
+                <ul class="dropdown-menu">
+                    <li>
+                        <h2><a data-navbar-trigger href=<%= lang.isEnglishArea() ? "/partner" : "/web/agent/proxy" %>><%= lang.text("downloadApp.agencies")%></a></h2>
+                    </li>
+                    <li>
+                        <h2><a data-navbar-trigger href="/web/agent/become"><%= lang.text("downloadApp.becomeMaster")%></a></h2>
+                    </li>
+                </ul>
+            </li>
             <li class="dropdown" tw-dropdown>
                 <h2>
                     <a data-navbar-trigger data-navbar-level="2" href=<%= lang.isEnglishArea() ? "/web/aboutus/abouttigerwit" : "/web/aboutus/companyinformation" %>><%= lang.text("navbar10")%></a>
