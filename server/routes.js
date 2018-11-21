@@ -563,7 +563,7 @@ module.exports = function (app) {
         }, req));
     });
     //global代理
-    app.route('/partner').get(function (req, res) {
+    app.route('/web/agent/partner').get(function (req, res) {
         var pageInfo = {
             id: 'proxy'
         };
