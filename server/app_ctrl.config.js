@@ -94,10 +94,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.4.5",
-                        description: "This update: \n1. User's live account can close part of positions.\n2. The experience account mechanism modification, experience time is adjusted to 30 days, experience funds amount is adjusted to $10,000.\n3. Repair known bugs and optimize user experience.",
+                        version_name : "V3.0.0",
+                        description: "This update: \n1.Support Vietnamese and Traditional Chinese;\n2.Optimize the function of invite friend.",
                         updated_description: "70% users are using new version",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.4.5.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.0.0.apk",
                         force_update : false
                     }
                 }
@@ -113,10 +113,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.4.5",
-                        description: "本次更新：\n1. 用户自主交易账号部分平仓功能；\n2. 体验金机制修改，使用期限更改为30天，体验金额更改为10000美金；\n3. 修复已知问题，优化用户体验；",
+                        version_name : "V3.0.0",
+                        description: "本次更新：\n1.支持越南语、繁体中文；\n2.优化邀请好友",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v2.4.5.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.0.0.apk",
                         force_update : false
                     }
                 }
