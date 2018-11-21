@@ -157,6 +157,12 @@
         vi: indexBasePath + "/footer-layer/global-en-new.png",
         "zh-Hant": indexBasePath + "/footer-layer/global-cn.png"
     },
+    recordForm: {
+        en: indexBasePath + "/agent/proxy/record-form-en.png",
+        zh: indexBasePath + "/agent/proxy/record-form-cn.png",
+        vi: indexBasePath + "/agent/proxy/record-form-en.png",
+        "zh-Hant": indexBasePath + "/agent/proxy/record-form-cn.png"
+    },
   };
   module.exports = data;
 })();

@@ -10911,7 +10911,7 @@ module.exports = function () {
             },
             agencies: {
                 zh: "代理合作",
-                en: "Agencies",
+                en: "Partners",
                 vi: "^^-^^",
                 "zh-Hant": "代理合作"
             },
