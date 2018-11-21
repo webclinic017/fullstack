@@ -220,9 +220,9 @@
          <img src="/images/footer-customer-close-icon.png">
      </span>
      <%if (req.host.indexOf('global') != -1) {%>
-        <img style="cursor: pointer;" src="<%= lang.image('footerCustomerGloabal')%>">
+        <img style="cursor: pointer;" src="<%= lang.image('footerCustomerGloabal')%>" onclick="OpenChat();">
      <%} else {%>
-        <img style="cursor: pointer;" src="<%= lang.image('footerCustomerCn')%>">
+        <img style="cursor: pointer;" src="<%= lang.image('footerCustomerCn')%>" onclick="OpenChat();">
      <%}%>
 </div>
 <!-- Online operator icon:online service(in use) End-->
