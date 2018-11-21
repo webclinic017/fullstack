@@ -108,10 +108,10 @@
                 </ul>
             </div>
             <div class="clearfix">
-                <ul ng-repeat="quoteSymbol in quoteSymbols" class="index_new_qupte__content clearfix" ng-class="{h_border: $index%2 === 0}">
+                <ul ng-repeat="quoteSymbol in quoteSymbols" class="index_new_qupte__content " ng-class="{h_border: $index%2 === 0}">
                     <li class="pro">
                         <%if (!lang.isEnglishArea()){%>
-                        {{ quoteSymbol.symbol_zh }}({{ quoteSymbol.symbol }})
+                        {{ quoteSymbol.symbol_zh }}<br>({{ quoteSymbol.symbol }})
                         <%}else {%>
                         {{ quoteSymbol.symbol }}
                         <%}%>
