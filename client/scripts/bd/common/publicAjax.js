@@ -28,6 +28,7 @@
         getInviteList: origin_app + '/user/invites', // get
         setClueCustomer: origin + '/auth/page_signup', // post
         setInviteCode: origin + '/invite_code', // post
+        setCustomerPromotion: origin + '/agent_ib_pid', // post
         //交易品种
         getSymbols: origin_app + '/symbol/list', //get
         // 荣耀王者活动

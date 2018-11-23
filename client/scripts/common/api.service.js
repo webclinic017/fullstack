@@ -51,6 +51,7 @@
             setKycApi: urlOrigin2 + '/user/kyc',
             checkAgentApi: urlOrigin2 + '/auth/valid_agent',
             getAgentAuthStatusApi: urlOrigin2 + '/user/agent_auth_status',
+            setAgentPromotionApi: urlOrigin2 + '/agent_ib_pid',
 
             // getRCaptchaApi: urlOrigin2 + '/validation/send_phone_code',
             // sendEmailCodeApi: urlOrigin2 + '/validation/send_email_code',

@@ -455,6 +455,13 @@
                 });
 
             }
+            // 客户推广
+            if(oReg.search_arr.ib_pid) {
+                publicRequest('setCustomerPromotion', 'POST', {
+                    type: 1,
+                    ib_pid: oReg.search_arr.ib_pid
+                })
+            }
             $("#submit_form").on("touchend", function (e) {
                 toRegister(e);
             });

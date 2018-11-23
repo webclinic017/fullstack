@@ -63,6 +63,7 @@
             checkAgent: checkAgent,
             getFunctionSwitch: getFunctionSwitch,
             getIdcard: getIdcard,
+            setAgentPromotion: setAgentPromotion,
         };
         var resolveValue;
         return service;
@@ -561,6 +562,17 @@
             return publicHttp.dealPublicRequest(o.setKycApi, 'POST', json);
         }
 
+        /**
+         * @name getAgentPromotion
+         * @desc 代理商推广
+         */
+        function setAgentPromotion(ib_pid) {
+            return publicHttp.dealPublicRequest(o.setAgentPromotionApi, 'POST', {
+                ib_pid: ib_pid,
+                type: 0    // 0是代理商推广， 1为客户推广，默认0
+            });
+        }
+        
         /**
          * 发送验证码合并接口
          * @param {String} account 手机号

@@ -21,12 +21,12 @@
                     <%- include('./agent/' + pageInfo.id + '.html') %>
                 </div>
                 <%} else {%>
-                <div class="new_body">
+                <div class="new_body"  ng-controller="AgentProxyController">
                     <div class="agent_banner">
                         <div class="agent_banner__con">
                             <h3><%=lang.text('partner.becomePartner')%></h3>
                             <p><%=lang.text('partner.becomePartner_1')%></p>
-                            <button class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%=lang.text('partner.joinUs')%></button>
+                            <button class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" ng-click="goInto()"><%=lang.text('partner.joinUs')%></button>
                         </div>
                     </div>
                     <%- include('./agent/global_proxy.html') %>
@@ -43,6 +43,7 @@
         <script src="/scripts/common/market.service.js"></script>
         <script src="/scripts/common/lang.service.js"></script>
         <script src="/scripts/common/lang_data.service.js"></script>
+        <script src="/scripts/common/fun.service.js"></script>
         <script src="/scripts/common/redbag.service.js"></script>
         <script src="/scripts/common/navbar.directive.js"></script>
         <script src="/scripts/common/dropdown.directive.js"></script>
@@ -52,6 +53,7 @@
         <script src="/scripts/common/global.controller.js"></script>
         <script src="/scripts/web/become_master.controller.js"></script>
         <script src="/scripts/web/become_modal.controller.js"></script>
+        <script src="/scripts/web/proxy.controller.js"></script>
         <script src="/scripts/web/agent.controller.js"></script>
         <!-- endbuild -->
             <div class="footer">

@@ -64,7 +64,14 @@ $(document).ready(function () {
       return false;
     }
   }
-
+  // 客户推广
+  if(oReg.search_arr.ib_pid) {
+    publicRequest('setCustomerPromotion', 'POST', {
+        type: 1,
+        ib_pid: oReg.search_arr.ib_pid
+    })
+  }
+ 
   function toRegister (is_agree) {
     if (!checkEmail()) return;
     if (!checkVerifyCode()) return;
