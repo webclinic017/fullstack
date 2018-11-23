@@ -60,6 +60,9 @@ module.exports = function () {
             }
             return isEngArea;
         },
+        currentLanguage: function () {  //此方法只用来调整单个语言的特殊性，一般情况优先使用 isEnglishArea 方法
+            return this.language;
+        },
         text: function (name) {
             var _this = this;
             var text;
@@ -118,9 +121,6 @@ module.exports = function () {
         },
         isCloned: function(){  //此方法废弃 2018.11.20
             return this.clonedBaidu;
-        },
-        currentLanguage: function () {  //此方法废弃 2018.11.20
-            return this.language;
         },
         background: function () {  //此方法废弃 2018.11.20 (背景图使用image方法)
             var _this = this;

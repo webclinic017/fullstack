@@ -22,6 +22,9 @@
                 }
                 return isEngArea;
             },
+            currentLanguage: function () {  //此方法只用来调整单个语言的特殊性，一般情况优先使用 isEnglishArea 方法
+                return langData["language"];
+            },
             text: function(name){
                 var keys = name.split('.');
                 var key = langData;

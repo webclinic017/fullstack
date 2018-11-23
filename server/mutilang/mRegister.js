@@ -58,29 +58,5 @@ module.exports = {
         en: "Download App",
         vi: "^^-^^",
         "zh-Hant": "下載APP"
-    },
-    mRegister11: {
-        zh: "",
-        en: "",
-        vi: "^^-^^",
-        "zh-Hant": ""
-    },
-    mRegister12: {
-        zh: "",
-        en: "",
-        vi: "^^-^^",
-        "zh-Hant": ""
-    },
-    mRegister13: {
-        zh: "",
-        en: "",
-        vi: "^^-^^",
-        "zh-Hant": ""
-    },
-    mRegister14: {
-        zh: "",
-        en: "",
-        vi: "^^-^^",
-        "zh-Hant": ""
     }
 };

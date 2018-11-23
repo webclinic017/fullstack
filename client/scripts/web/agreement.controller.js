@@ -50,43 +50,43 @@
             conditions: {
                 zh: "降低风险的指令或策略,价格,信息延迟,点差扩大,滑点,汇价跳空,系统报价风险(错价),套汇和操控,价位操纵,交易与第三者参与,交易平台时间,流通量,保证金追加,周末风险,网络交易,手续费,断线时紧急异常处理申请,注意事项说明,常见问题解答,客户服务部,其他联系人",
                 en: "Functions or strategies to mitigate risks,Price,Information delay,Spread Fluctuations,Slippage,Exchange rate gap,Risk of System Quotation (Mispricing),Arbitrage and control,Price manipulation,Trade and third-party participation,Platform Trading Hours,Circulation,Margin call,Risks over weekends,Online trading,Commission charge,Application for abnormal conditions,The announcement,FAQs,Customer Support Department,Additional Contacts",
-                vi: "",
+                vi: "Chức năng hoặc chiến lược để giảm thiểu rủi ro,Giá bán,Trì hoãn thông tin,Biến độngSpread,Slippage (Trượt giá),Khoảng cách tỷ giá hối đoái,Rủi ro hệ thống báo giá (Mispricing-Báo giá sai),Giao dịch chênh lệch giá và kiểm soát,Thao túng giá,Giao dịch và tham gia của bên thứ ba,Giờ giao dịch của nền tảng,Lưu hành,Yêu cầu Bảo Chứng,Rủi ro cuối tuần,Giao dịch trực tuyến,Phí hoa hồng,Đơn đăng kí cho điều kiện bất thường,Bản thông báo,FAQs,Bộ Phận Hỗ Trợ Khách Hàng,Địa Chỉ Liên Hệ Bổ Sung",
                 "zh-Hant": "降低風險的指令或策略,價格,信息延遲,點差擴大,滑點,匯價跳空,系統報價風險(錯價),套匯和操控,價位操縱,交易與第三者參與,交易平臺時間,流通量,保證金追加,周末風險,網絡交易,手續費,斷線時緊急異常處理申請,註意事項說明,常見問題解答,客戶服務部,其他聯系人"
             },
             statement: {
                 zh: "客户声明,TigerWit交易平台风险提示及免责条款",
                 en: "Declaration by Client,Risk Warning and Exemptions for Trading on TigerWit Trading Platform",
-                vi: "",
+                vi: "Tuyên bố của khách hàng,Cảnh báo rủi ro và miễn trừ giao dịch trên nền tảng giao dịch TigerWit",
                 "zh-Hant": "客戶聲明,TigerWit交易平臺風險提示及免責條款"
             },
             categorization: {
                 zh: "序言,分类标准,申请不同的类型,保护权,常见问题解答,联系方式",
                 en: "Introduction,Categorization Criteria,Request for Different Categorization,Protection Rights,FAQs,Contacts",
-                vi: "",
+                vi: "Giới thiệu,Tiêu chí phân loại,Yêu Cầu Phân Loại Khác,Quyền bảo vệ,FAQs,LIÊN HỆ",
                 "zh-Hant": "序言,分類標準,申請不同的類型,保護權,常見問題解答,聯系方式"
             },
             funds: {
                 zh: "资金隔离,我们采取的其他措施",
                 en: "Segregation of Funds,Additional Measures We Take",
-                vi: "",
+                vi: "Phân chia các quỹ,Các Biện Pháp Bổ Sung Mà Chúng Tôi Thực Hiện",
                 "zh-Hant": "資金隔離,我們采取的其他措施"
             },
             execution: {
                 zh: "序言,范围和服务,最佳执行,执行场所,监控和审查,客户同意书,重要信息,常见问题,其他联系人",
                 en: "Introduction,Scope and Services,Best Execution,Execution Venues,Monitor and Review,Client Consent,Important Information,FAQs,Additional Contacts",
-                vi: "",
+                vi: "Giới thiệu,Phạm vi và dịch vụ,Khớp Lệnh Tốt Nhất,Địa điểm Thực Thi Lệnh,Giám Sát và Kiểm Tra,Khách Hàng Đồng Ý,Thông tin quan trọng,FAQs,Địa Chỉ Liên Hệ Bổ Sung",
                 "zh-Hant": "序言,範圍和服務,最佳執行,執行場所,監控和審查,客戶同意書,重要信息,常見問題,其他聯系人"
             },
             conflicts: {
                 zh: "序言,政策范围,识别利益冲突,管理利益冲突,披露,常见问题解答,其他联系人",
                 en: "Introduction,Scope of the Policy,Identification of Conflicts of Interest,Managing Conflicts of Interest,Disclosure,Frequently Asked Questions,Additional Contacts",
-                vi: "",
+                vi: "Giới thiệu,Phạm Vi Của Chính Sách,Xác định xung đột lợi ích,Giải quyết xung đột lợi ích,Tiết lộ,Các Câu Hỏi Thường Gặp,Địa Chỉ Bổ Sung",
                 "zh-Hant": "序言,政策範圍,識別利益沖突,管理利益沖突,披露,常見問題解答,其他聯系人"
             },
             complaint: {
                 zh: "投诉程序概述,序言,条款解释,投诉处理程序的范围,投诉的定义,程序,常见问题,联系方式",
                 en: "SUMMARY OF COMPLAINTS PROCEDURE,INTRODUCTION,INTERPRETATION OF TERMS,SCOPE OF THE COMPLAINTS HANDLING PROCEDURE,DEFINITION OF A COMPLAINT,PROCEDURE,FAQs,CONTACTS",
-                vi: "",
+                vi: "TÓM TẮT QUY TRÌNH GIẢI QUYẾT PHÀN NÀN,GIỚI THIỆU,GIẢI THÍCH CÁC ĐIỀU KHOẢN,PHẠM VI THỦ TỤC XỬ LÝ KHIẾU NẠI,ĐỊNH NGHĨA KHIẾU NẠI,QUY TRÌNH,FAQs,LIÊN HỆ",
                 "zh-Hant": "投訴程序概述,序言,條款解釋,投訴處理程序的範圍,投訴的定義,程序,常見問題,聯系方式"
             }
         };
@@ -106,7 +106,8 @@
         });
 
         function setTabList () {
-            var lst = lang.isEnglishArea() ? agreementList[$scope.listType]["en"].split(',') : agreementList[$scope.listType]["zh"].split(',');
+            console.log(lang.currentLanguage());
+            var lst = agreementList[$scope.listType][lang.currentLanguage()].split(',');
             angular.forEach(lst, function (value, index) {
                 $scope.tabList.push({
                     title: value,

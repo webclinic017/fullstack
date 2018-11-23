@@ -227,7 +227,7 @@ var cfd = {
         "max_volum": "100",
         "trade_time": "vào thứ Hai - vào thứ Sáu 07: 15-04: 15 (ngày hôm sau)",
         "quote_time": "vào thứ Hai - vào thứ Sáu 07: 15-04: 15 (ngày hôm sau)",
-        "desp": "Stock index of 500 leading enterprises in USA"
+        "desp": "Chỉ số chứng khoán của 500 doanh nghiệp hàng đầu tại Mỹ"
     },
     {
         "name_en": "HK50",
@@ -237,7 +237,7 @@ var cfd = {
         "max_volum": "100",
         "trade_time": "vào thứ Hai - vào thứ Sáu 07: 15-04: 15 (ngày hôm sau)",
         "quote_time": "vào thứ Hai - vào thứ Sáu 07: 15-04: 15 (ngày hôm sau)",
-        "desp": "Hang Seng Midcap 50 Index (HK50) is acquired from the weighted average of the market value of 50 largest enterprises listed in Hong Kong Stock Exchange. The index includes 60% market value and involves well-known enterprises, such as HSBC Group, China Construction Bank and China Mobile"
+        "desp": "Chỉ số Hang Seng Midcap 50 (HK50) được lấy từ mức trung bình số của giá trị thị trường của 50 doanh nghiệp lớn nhất được niêm yết trên Sở Giao dịch Chứng khoán Hồng Kông. Chỉ số này bao gồm 60% giá trị thị trường và bao gồm các doanh nghiệp nổi tiếng như Tập đoàn HSBC, Ngân hàng Xây dựng Trung Quốc và China Mobile"
     }
     ],
     "zh-Hant": [{

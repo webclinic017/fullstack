@@ -23,12 +23,6 @@ module.exports = {
         vi: "Mở một tài khoản chỉ trong vòng vài phút- mở trực tuyến hoặc trên app-và bắt đầu giao dịch.",
         "zh-Hant": "打開官網或APP，開始交易。"
     },
-    newhome_3: {
-        zh: "instant access to key global markets.",
-        en: "instant access to key global markets.",
-        vi: "^^-^^",
-        "zh-Hant": "instant access to key global markets."
-    },
     newhome_4: {
         zh: "外汇",
         en: "FX",
@@ -53,18 +47,6 @@ module.exports = {
         vi: "Các loại chỉ số",
         "zh-Hant": "股指"
     },
-    newhome_8: {
-        zh: "真实账户",
-        en: "Live account",
-        vi: "^^-^^",
-        "zh-Hant": "真實賬戶"
-    },
-    newhome_9: {
-        zh: "体验金账户 ",
-        en: "Experience account",
-        vi: "^^-^^",
-        "zh-Hant": "體驗金賬戶 "
-    },
     newhome_9_1: {
         zh: "下载注册交易账户",
         en: "Download the app to open an account",
@@ -86,7 +68,7 @@ module.exports = {
     newhome_11: {
         zh: "一键点击跟随TigerWit高手，立享高手同步交易策略。你仅需付给高手20%的佣金。",
         en: "Follow a TigerWit Master with a single click and trade using their strategies. Pay just 20% commission to your Master.",
-        vi: "^^-^^",
+        vi: "Theo dõi Nhà Giao Dịch Chính của TigerWit với chỉ một click và giao dịch bằng cách sử dụng các chiến thuật của họ.",
         "zh-Hant": "壹鍵點擊跟隨TigerWit高手，立享高手同步交易策略。妳僅需付給高手20%的傭金。"
     },
     newhome_12: {
@@ -248,7 +230,7 @@ module.exports = {
     newhome_35_1: {
         zh: "现在立刻下载APP，",
         en: "Download the app and open a USD10,000 Experience account instantly.",
-        vi: "^^-^^",
+        vi: "Tải xuống ứng dụng và mở tài khoản Trải nghiệm USD10,000 ngay lập tức.",
         "zh-Hant": "現在立刻下載APP，"
     },
     newhome_35_2: {
