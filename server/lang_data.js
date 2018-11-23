@@ -6644,7 +6644,7 @@ module.exports = function () {
         amtClient195: {
             zh: "常见问题解答",
             en: "FAQs",
-            vi: "^^-^^",
+            vi: "Câu Hỏi Thường Gặp",
             "zh-Hant": "常見問題解答"
         },
         amtClient196: {
@@ -6656,25 +6656,25 @@ module.exports = function () {
         amtClient197: {
             zh: "2.客户服务部",
             en: "2.Customer Support Department",
-            vi: "^^-^^",
+            vi: "2.Bộ Phận Hỗ Trợ Khách Hàng",
             "zh-Hant": "2.客戶服務部"
         },
         amtClient198: {
             zh: "电话：+86 400 809 8509",
             en: "Phone: +86 400 809 8509",
-            vi: "^^-^^",
+            vi: "Điện thoại: +86 400 809 8509",
             "zh-Hant": "電話：+86 400 809 8509"
         },
         amtClient199: {
             zh: "电邮：support@tigerwit.com",
             en: "Email: support@tigerwit.com",
-            vi: "^^-^^",
+            vi: "E-mail: support@tigerwit.com",
             "zh-Hant": "電郵：support@tigerwit.com"
         },
         amtClient200: {
             zh: "其他联系人",
             en: "Additional Contacts",
-            vi: "^^-^^",
+            vi: "Địa Chỉ Liên Hệ Bổ Sung",
             "zh-Hant": "其他聯系人"
         },
         amtClient201: {
@@ -6686,13 +6686,13 @@ module.exports = function () {
         amtClient202: {
             zh: "电话：+86 400 809 8509",
             en: "Phone: +86 400 809 8509",
-            vi: "^^-^^",
+            vi: "Điện thoại: +86 400 809 8509",
             "zh-Hant": "電話：+86 400 809 8509"
         },
         amtClient203: {
             zh: "电邮：dealing@tigerwit.com",
             en: "Email: dealing@tigerwit.com",
-            vi: "^^-^^",
+            vi: "E-mail: dealing@tigerwit.com",
             "zh-Hant": "電郵：dealing@tigerwit.com"
         },
         amtClient204: {
@@ -6704,13 +6704,13 @@ module.exports = function () {
         amtClient205: {
             zh: "电话：+1 (242) 676 7306",
             en: "Phone: +1 (242) 676 7306",
-            vi: "^^-^^",
+            vi: "Điện thoại: +1 (242) 676 7306",
             "zh-Hant": "電話：+1 (242) 676 7306"
         },
         amtClient206: {
             zh: "电邮：compliance@tigerwit.com",
             en: "Email: compliance@tigerwit.com",
-            vi: "^^-^^",
+            vi: "E-mail: compliance@tigerwit.com",
             "zh-Hant": "電郵：compliance@tigerwit.com"
         },
         amtRisk1: {
@@ -7832,7 +7832,7 @@ module.exports = function () {
         amtBusiness110: {
             zh: "常见问题",
             en: "FAQs",
-            vi: "^^-^^",
+            vi: "Câu Hỏi Thường Gặp",
             "zh-Hant": "常見問題"
         },
         amtBusiness111: {
@@ -7850,13 +7850,13 @@ module.exports = function () {
         amtBusiness113: {
             zh: "电子邮件：support@tigerwit.com",
             en: "Email: support@tigerwit.com",
-            vi: "^^-^^",
+            vi: "E-mail: support@tigerwit.com",
             "zh-Hant": "電子郵件：support@tigerwit.com"
         },
         amtBusiness114: {
             zh: "其他联系人",
             en: "Additional Contacts",
-            vi: "^^-^^",
+            vi: "Địa Chỉ Liên Hệ Bổ Sung",
             "zh-Hant": "其他聯系人"
         },
         amtBusiness115: {
@@ -7868,13 +7868,13 @@ module.exports = function () {
         amtBusiness116: {
             zh: "电话：+86 400 809 8509",
             en: "Phone: +86 400 809 8509",
-            vi: "^^-^^",
+            vi: "Điện thoại: +86 400 809 8509",
             "zh-Hant": "電話：+86 400 809 8509"
         },
         amtBusiness117: {
             zh: "电子邮件：dealing@tigerwit.com",
             en: "Email: dealing@tigerwit.com",
-            vi: "^^-^^",
+            vi: "E-mail: dealing@tigerwit.com",
             "zh-Hant": "電子郵件：dealing@tigerwit.com"
         },
         amtBusiness118: {
@@ -7886,7 +7886,7 @@ module.exports = function () {
         amtBusiness119: {
             zh: "电子邮件：compliance@tigerwit.com",
             en: "Email: compliance@tigerwit.com",
-            vi: "^^-^^",
+            vi: "E-mail: compliance@tigerwit.com",
             "zh-Hant": "電子郵件：compliance@tigerwit.com"
         },
         amtResponsibly1: {
@@ -7928,445 +7928,445 @@ module.exports = function () {
         amtConditions1: {
             zh: "依据监管规则，TigerWit 提醒您应详细阅读本交易须知。除非您了解所签订的合约性质以及所面临之风险程度，否则不应冒然进行类似的衍生性金融商品交易，同时您应根据本身的条件和财务状况，自行衡量该产品是否适合进行投资。",
             en: "In accordance with the supervisory regulations, TigerWit reminds you to read these trading notes carefully. Unless you have learnt the nature of the contract concluded and the degree of potential risks to be confronted, it is not recommended to involve in trade of similar financial derivatives and clients are recommended to judge whether the product is suitable at his/her own discretion based on the conditions and financial status.",
-            vi: "^^-^^",
+            vi: "Theo quy định giám sát, TigerWit nhắc bạn đọc kỹ các ghi chú giao dịch này. Trừ khi bạn đã học được bản chất của hợp đồng được ký kết và mức độ rủi ro có thể phải đối mặt, không nên tham gia vào việc giao dịch các sản phẩm tài chính phái sinh  tương tự và khách hàng được khuyến cáo tự mình đánh giá xem sản phẩm có phù hợp với hay không về điều kiện và tình trạng tài chính.Các chiến lược đầu tư khác nhau kéo theo những rủi ro tiềm ẩn ở các mức độ khác nhau.",
             "zh-Hant": "依據監管規則，TigerWit 提醒您應詳細閱讀本交易須知。除非您了解所簽訂的合約性質以及所面臨之風險程度，否則不應冒然進行類似的衍生性金融商品交易，同時您應根據本身的條件和財務狀況，自行衡量該產品是否適合進行投資。"
         },
         amtConditions2: {
             zh: "不同的投资策略涉及不同程度的风险，因此在决定是否使用该类投资策略时，客户应了解以下各点：",
             en: "Different investment strategies would expect risks of different degrees. Thus, before deciding whether to apply the investment strategy, the client should learn the following information.",
-            vi: "^^-^^",
+            vi: "Do đó, trước khi quyết định áp dụng chiến lược đầu tư, khách hàng nên tìm hiểu các thông tin sau.",
             "zh-Hant": "不同的投資策略涉及不同程度的風險，因此在決定是否使用該類投資策略時，客戶應了解以下各點："
         },
         amtConditions3: {
             zh: "降低风险的指令或策略",
             en: "Functions or strategies to mitigate risks",
-            vi: "^^-^^",
+            vi: "Chức năng hoặc chiến lược để giảm thiểu rủi ro",
             "zh-Hant": "降低風險的指令或策略"
         },
         amtConditions4: {
             zh: "下达某些指令(例如“止损”或“止损-限价”)目的在将损失控制在特定金额范围内，但有可能并不总是见效，因为市场情况或技术限制可能致使上述指令难以执行。",
             en: "Provision of a certain functions (such as ‘stop loss’, or ‘stop loss-buy limit’) is to control the losses within a specific range. However, it may fail to produce the desired result given market situations or technical restrictions. In case of trade through (gap), the resting order (including stop loss, take profit, buy stop, sell stop, buy limit and sell limit) will become market order. ",
-            vi: "^^-^^",
+            vi: "Việc cung cấp một số chức năng nhất định (chẳng hạn như 'dừng lỗ' hoặc 'giới hạn mua- dừng lỗ') để kiểm soát các tổn thất trong một phạm vi cụ thể. Tuy nhiên, nó có thể không tạo ra kết quả mong muốn cho các tình huống thị trường hoặc các hạn chế kỹ thuật. Trong trường hợp giao dịch thông qua (khoảng cách), lệnh đặt lệnh (bao gồm dừng lỗ, chốt lời, dừng mua, dừng bán, mua giới hạn và bán giới hạn) sẽ trở thành lệnh thị trường.",
             "zh-Hant": "下達某些指令(例如“止損”或“止損-限價”)目的在將損失控制在特定金額範圍內，但有可能並不總是見效，因為市場情況或技術限制可能致使上述指令難以執行。"
         },
         amtConditions5: {
             zh: "当穿价 (跳空) 时，挂单(含 stop loss、take profit、buy stop、sell stop、buy limit、sell limit) 将会变为市价单；穿价 (跳空)在快市（重大数据公布前后）或是市场清淡时都有可能发生，虽然设置了挂单，但仍有可能因为市场流通量的不同而成交在市场价。",
             en: "In case of fast market (before and after release of important data) or sluggish market, trade through (gap) may arise. Though resting order is set, a trade may be concluded at market price due to different market circulation.",
-            vi: "^^-^^",
+            vi: "Trong trường hợp thị trường nhanh (trước và sau khi phát hành dữ liệu quan trọng) hoặc thị trường chậm chạp, giao dịch thông qua (khoảng cách) có thể phát sinh. Mặc dù lệnh được thiết lập, một giao dịch có thể được kết luận theo giá thị trường do lưu thông thị trường khác nhau.",
             "zh-Hant": "當穿價 (跳空) 時，掛單(含 stop loss、take profit、buy stop、sell stop、buy limit、sell limit) 將會變為市價單；穿價 (跳空)在快市（重大數據公布前後）或是市場清淡時都有可能發生，雖然設置了掛單，但仍有可能因為市場流通量的不同而成交在市場價。"
         },
         amtConditions6: {
             zh: "当重大数据或消息公布前后，市场价格常会出现大幅剧烈波动，在该情况下，各商品的挂价距离也会随之变大 。",
             en: "During the period before and after important data or information is released, market [rice may encounter sharp fluctuation. In such a situation, the gap of listing price of commodities may also become greater accordingly.",
-            vi: "^^-^^",
+            vi: "Trong khoảng thời gian trước và sau khi dữ liệu hoặc thông tin quan trọng được phát hành, thị trường [gạo có thể gặp phải sự dao động mạnh. Trong tình huống như vậy, khoảng cách giá niêm yết của hàng hóa cũng có thể trở nên lớn hơn.",
             "zh-Hant": "當重大數據或消息公布前後，市場價格常會出現大幅劇烈波動，在該情況下，各商品的掛價距離也會隨之變大 。"
         },
         amtConditions7: {
             zh: "建议客户在重大数据公布前，慎重考量做单交易的风险。",
             en: "Clients should give prudent consideration to potential risks thereof before important data are released.",
-            vi: "^^-^^",
+            vi: "Khách hàng nên cân nhắc cẩn thận trước những rủi ro tiềm ẩn trước khi dữ liệu quan trọng được phát hành.",
             "zh-Hant": "建議客戶在重大數據公布前，慎重考量做單交易的風險。"
         },
         amtConditions8: {
             zh: "价格",
             en: "Price",
-            vi: "^^-^^",
+            vi: "Giá bán",
             "zh-Hant": "價格"
         },
         amtConditions9: {
             zh: "在线系统中发布的价格不一定能反映更广大的市场。尽管本公司希望该价格与被俗称为银行间市场的价格合理相关，但本公司使用的价格可能与银行以及银行间市场的其他参与者的报价不同。",
             en: "Prices published in our online system may not reflect the general market.Although TigerWit hopes that the prices could be reasonably relevant with bank valuation, prices published in our online system may not be exactly the same as prices from interbank markets as well as other participants",
-            vi: "^^-^^",
+            vi: "Mặc dù TigerWit hy vọng rằng giá cả có thể có liên quan hợp lý với định giá ngân hàng, giá được công bố trong hệ thống trực tuyến của chúng tôi có thể không chính xác giống như giá thị trường liên ngân hàng cũng như những người tham gia khác",
             "zh-Hant": "在線系統中發布的價格不壹定能反映更廣大的市場。盡管本公司希望該價格與被俗稱為銀行間市場的價格合理相關，但本公司使用的價格可能與銀行以及銀行間市場的其他參與者的報價不同。"
         },
         amtConditions10: {
             zh: "信息延迟",
             en: "Information delay",
-            vi: "^^-^^",
+            vi: "Trì hoãn thông tin",
             "zh-Hant": "信息延遲"
         },
         amtConditions11: {
             zh: "下单指令可能基于不同原因而导致延迟执行，例如客户端连接到 TigerWit 服务器间的网络技术导致下单指令传递延迟；或因无线或有线网络连接的信号较弱；或连接路径的中断等因素，均可能导致交易平台不能正常运作，致使客户端与本公司间的讯息传递延迟，未能以指定价位成交。交易前请确认与 TigerWit 服务器的链接是否正常。",
             en: "When clients place an order, the instructions may be delayed due to various reasons, such as: 1. When clients connect to TigerWit server, there might be web technology issues that delay the instructions of order placement. 2. Weak signal of wired and wireless networks. 3. Interruption of connection path. All these facts could result in abnormal function in trading platform, contributing to a delay of information transmission between clients and TigerWit server, which leads to orders could not be placed at desired prices. Please make sure the connection between clients and TigerWit server works well before place an order.",
-            vi: "^^-^^",
+            vi: "Khi khách hang đặt lệnh, hướng dẫn  của họ có thể bị trì hoãn vì nhiều lý do khác nhau, chẳng hạn như: 1. Khi khách hàng kết nối với máy chủ TigerWit, có thể có sự cố kĩ thuật của web làm chậm trễ hướng dẫn đặt lệnh. 2. Tín hiệu của mạng có dây và không dây yếu. 3. Gián đoạn đường dẫn kết nối. Tất cả những sự kiện này có thể dẫn đến chức năng bất thường trong nền tảng giao dịch, góp phần vào sự chậm trễ truyền tải thông tin giữa khách hàng và máy chủ TigerWit, dẫn đến các lệnh không thể được đặt ở mức giá mong muốn. Vui lòng đảm bảo kết nối giữa máy khách và máy chủ TigerWit hoạt động tốt trước khi đặt lệnh.",
             "zh-Hant": "下單指令可能基於不同原因而導致延遲執行，例如客戶端連接到 TigerWit 服務器間的網絡技術導致下單指令傳遞延遲；或因無線或有線網絡連接的信號較弱；或連接路徑的中斷等因素，均可能導致交易平臺不能正常運作，致使客戶端與本公司間的訊息傳遞延遲，未能以指定價位成交。交易前請確認與 TigerWit 服務器的鏈接是否正常。"
         },
         amtConditions12: {
             zh: "点差扩大",
             en: "Spread Fluctuations",
-            vi: "^^-^^",
+            vi: "Biến độngSpread",
             "zh-Hant": "點差擴大"
         },
         amtConditions13: {
             zh: "TigerWit 交易平台所有商品在市场剧烈波动或交易清淡时，点差将会随市场而有所变动。在重大数据公布期间，买卖价差可能会大幅提高，以真实反映当时市场的波动。TigerWit 强烈建议交易者在重大数据公布期间应特别谨慎从事交易，避免因市场巨幅震荡造成超出预期的损失。",
             en: "During the period of dramatic fluctuation in the market and slack season of trading, spreads among all types of commodities in TigerWit trading platform might vary in degree. During the announcement periods of industry data, spreads might be enlarged in order to align with actual market fluctuation. TigerWit strongly recommends that traders should be cautious in their trades during these periods, which could help them avoid unpredictable loss resulted from unstable market.",
-            vi: "^^-^^",
+            vi: "Trong giai đoạn biến động mạnh trên thị trường và thời gian giao dịch chững lại, spread giữa tất cả các loại hàng hóa trong nền tảng giao dịch TigerWit có thể khác nhau về mức độ. Trong thời gian công bố dữ liệu ngành, spread có thể được mở rộng để phù hợp với biến động thị trường thực tế. TigerWit đặc biệt khuyến nghị các nhà đầu tư nên thận trọng trong các giao dịch trong thời gian này, điều này có thể giúp họ tránh được sự mất mát không lường trước được do thị trường không ổn định.",
             "zh-Hant": "TigerWit 交易平臺所有商品在市場劇烈波動或交易清淡時，點差將會隨市場而有所變動。在重大數據公布期間，買賣價差可能會大幅提高，以真實反映當時市場的波動。TigerWit 強烈建議交易者在重大數據公布期間應特別謹慎從事交易，避免因市場巨幅震蕩造成超出預期的損失。"
         },
         amtConditions14: {
             zh: "滑点",
             en: "Slippage",
-            vi: "^^-^^",
+            vi: "Slippage (Trượt giá)",
             "zh-Hant": "滑點"
         },
         amtConditions15: {
             zh: "TigerWit 为客户提供最佳报价并依要求的价格成交。但有时因市场激烈震荡或交易量变化，可能造成滑点而难以成交，这种状况尤其在重大数据公布期间最为常见。",
             en: "TigerWit provides customers with the best price and make the deals at requested prices, but sometimes because of dramatic fluctuation in market or changes of trading volumes, it may result in slippage and difficulties to complete a deal, which is quite common during the announcement periods of industry data.",
-            vi: "^^-^^",
+            vi: "TigerWit cung cấp cho khách hàng mức giá tốt nhất và thực hiện giao dịch theo giá yêu cầu, nhưng đôi khi do sự biến động mạnh về thị trường hoặc thay đổi khối lượng giao dịch, điều này có thể dẫn đến tình trạng trượt giá và khó khăn trong việc hoàn thành giao dịch, điều khá phổ biến trong thời kì dữ liệu các ngành được công bố.",
             "zh-Hant": "TigerWit 為客戶提供最佳報價並依要求的價格成交。但有時因市場激烈震蕩或交易量變化，可能造成滑點而難以成交，這種狀況尤其在重大數據公布期間最為常見。"
         },
         amtConditions16: {
             zh: "汇价跳空",
             en: "Exchange rate gap",
-            vi: "^^-^^",
+            vi: "Khoảng cách tỷ giá hối đoái",
             "zh-Hant": "匯價跳空"
         },
         amtConditions17: {
             zh: "每周的第一个交易日开盘价有可能与上周的最后一个交易日收盘价相同或不同。遇到重大数据公布期间或不可抗拒因素或经济指数事件改变市场对于某种货币价值的看法时，可能会出现较大幅度的跳空。交易者持有仓位或挂单过周末应注意汇价可能有跳空的情况。",
             en: "It happens that the opening price on the first trading day in a week may be different with the closing price on the last trading day in last week. The following causes may contribute to substantial gaps: The announcement periods of industry data, force majeure and economic index number events that may change how participants of the market consider the value of some certain currencies. Traders with positions or pending orders should be aware that gaps are likely to emerge during weekends.",
-            vi: "^^-^^",
+            vi: "Điều đó xảy ra là giá mở cửa trong ngày giao dịch đầu tiên trong một tuần có thể khác với giá đóng cửa vào ngày giao dịch cuối cùng trong tuần trước. Những nguyên nhân sau đây có thể góp phần vào những khoảng cách giá đáng kể: Thời gian công bố dữ liệu ngành, bất khả kháng và các biến số chỉ số kinh tế có thể thay đổi cách thức người tham gia thị trường xem xét giá trị của một số loại tiền nhất định. Nhà đầu tư có vị thế hoặc lệnh chờ cần lưu ý rằng những khoảng cách giá có khả năng xuất hiện vào cuối tuần.",
             "zh-Hant": "每周的第壹個交易日開盤價有可能與上周的最後壹個交易日收盤價相同或不同。遇到重大數據公布期間或不可抗拒因素或經濟指數事件改變市場對於某種貨幣價值的看法時，可能會出現較大幅度的跳空。交易者持有倉位或掛單過周末應註意匯價可能有跳空的情況。"
         },
         amtConditions18: {
             zh: "系统报价风险(错价)",
             en: "Risk of System Quotation (Mispricing)",
-            vi: "^^-^^",
+            vi: "Rủi ro hệ thống báo giá (Mispricing-Báo giá sai)",
             "zh-Hant": "系統報價風險(錯價)"
         },
         amtConditions19: {
             zh: "客户与 TigerWit 进行交易，实际上是与不同的主要银行及金融机构提供的汇价进行买卖。网上交易技术并非万无一失，某些情况下，报价可能会受到干扰，导致报价错误。这种情况可能只持续很短时间。",
             en: "In fact, when customers trade through TigerWit, they are trading according to quotations provided by major banks and financial institutions. In some cases, these quotations might be subject to interference and wrong quotations due to some temporary issues of trading technology. Usually, these problems may only occur a short time.",
-            vi: "^^-^^",
+            vi: "Trên thực tế, khi khách hàng giao dịch qua TigerWit, họ đang giao dịch theo các báo giá do các ngân hàng và tổ chức tài chính lớn cung cấp. Trong một số trường hợp, các báo giá này có thể bị nhiễu và báo giá sai do một số vấn đề tạm thời của công nghệ giao dịch. Thông thường, những vấn đề này chỉ có thể xảy ra trong một thời gian ngắn.",
             "zh-Hant": "客戶與 TigerWit 進行交易，實際上是與不同的主要銀行及金融機構提供的匯價進行買賣。網上交易技術並非萬無壹失，某些情況下，報價可能會受到幹擾，導致報價錯誤。這種情況可能只持續很短時間。"
         },
         amtConditions20: {
             zh: "TigerWit 建议客户一旦遇到上述情况，应该避免在最佳可成交价下单，此最佳可成交价之价格并不真实，成交价可能与实际市场价格相差颇大的点数。倘若成交价并非银行及金融机构提供给 TigerWit 的实际汇价，TigerWit 将对有关交易保留撤销的权利。交易一经撤销，视同未成交。",
             en: "TigerWit recommends that if customers encounter these situations, please avoid dealing at best prices, because these exchange prices might be untrue resulting in considerable spreads with the actual market prices. If the exchange prices are not the actual prices offered by banks and financial institutions, TigerWit has the right to revoke these orders. Once the orders are revoked, these transactions will be regarded as invalid ones.",
-            vi: "^^-^^",
+            vi: "TigerWit khuyến cáo rằng nếu khách hàng gặp phải những tình huống này, vui lòng tránh giao dịch ở mức giá tốt nhất, bởi vì giá hối đoái này có thể là không đúng sự thật dẫn đến chênh lệch đáng kể với giá thị trường thực tế. Nếu giá hối đoái không phải là giá thực tế được cung cấp bởi các ngân hàng và tổ chức tài chính, TigerWit có quyền thu hồi các lệnh này. Khi lệnh bị thu hồi, các giao dịch này sẽ bị coi là giao dịch không hợp lệ.",
             "zh-Hant": "TigerWit 建議客戶壹旦遇到上述情況，應該避免在最佳可成交價下單，此最佳可成交價之價格並不真實，成交價可能與實際市場價格相差頗大的點數。倘若成交價並非銀行及金融機構提供給 TigerWit 的實際匯價，TigerWit 將對有關交易保留撤銷的權利。交易壹經撤銷，視同未成交。"
         },
         amtConditions21: {
             zh: "请注意，虽然上述情况不常见，但建议客户在此情况下先暂停交易以避免相关的风险。",
             en: "Please note: although the situations mentioned above are relatively rare, TigerWit advices customers to halt the transaction to avoid related risks.",
-            vi: "^^-^^",
+            vi: "Xin lưu ý: mặc dù các tình huống nêu trên khá hiếm, TigerWit khuyên khách hàng phải tạm dừng giao dịch để tránh rủi ro liên quan.",
             "zh-Hant": "請註意，雖然上述情況不常見，但建議客戶在此情況下先暫停交易以避免相關的風險。"
         },
         amtConditions22: {
             zh: "当系统报价发生错误时，客户可能无法交易，TigerWit 将尽可能在最短时间内以站内通知或mail 或手机短信发送的方式通知客户，并秉持着公平公正的交易原则，对错价的成交单不论盈亏，均予以回复、撤销或酌情处理。",
             en: "When quotations of system are incorrect, customers sometimes cannot complete trading, TigerWit will inform all the customers via system announcement, email or text as soon as possible. Following the trading principles of fairness and equitability, TigerWit may revoke mispriced deals regardless of profit or loss.",
-            vi: "^^-^^",
+            vi: "Khi các báo giá của hệ thống không chính xác, khách hàng đôi khi không thể hoàn tất giao dịch, TigerWit sẽ thông báo cho tất cả khách hàng thông qua hệ thống thông báo, email hoặc văn bản càng sớm càng tốt. Theo nguyên tắc sự công bằng và bình đẳng, TigerWit có thể thu hồi các giao dịch sai lệch bất kể lời hay thua lỗ.",
             "zh-Hant": "當系統報價發生錯誤時，客戶可能無法交易，TigerWit 將盡可能在最短時間內以站內通知或mail 或手機短信發送的方式通知客戶，並秉持著公平公正的交易原則，對錯價的成交單不論盈虧，均予以回復、撤銷或酌情處理。"
         },
         amtConditions23: {
             zh: "套汇和操控",
             en: "Arbitrage and control",
-            vi: "^^-^^",
+            vi: "Giao dịch chênh lệch giá và kiểm soát",
             "zh-Hant": "套匯和操控"
         },
         amtConditions24: {
             zh: "网络、连接延迟及报价上的误差有时会造成显示在 TigerWit 交易平台的报价无法准确地反映实时市场价格。“套汇(arbitrage)”及“剥头皮(scalping)”或因网络连接的延误而利用差价获利的行为，并不能存在于客户直接向做市商进行交易的场外交易市场中(OTC)。TigerWit 不允许客户在本公司的交易平台上进行此等套汇或利用网络连接延迟的投机行为。依靠因价格滞后带来的套汇机会进行的交易有可能会被撤销。对涉及上述交易的账户 TigerWit 保留处置权利，包含必要的修改和调整，TigerWit 可能依个别情况判断，要求交易员进行干预或对指令进行核准所有单据和/或终止有关客户的账户，而无须事先通知客户。对于因套汇及/或操控而产生的任何纠纷，TigerWit 将依据个别情况判断进行解决。TigerWit 保留提款扣留的权利直至以上的问题能够解决。于此陈述的任何行动或决议将不会损害或放弃 TigerWit 对阁下、阁下的公司和其职员的任何权利或赔偿。",
             en: "The internet, connection delay and error of quotations may cause prices published in TigerWit trading platform cannot reflect actual market prices. Profit taking behaviors that take advantage of price spread, such as arbitrage, scalping or utilizing the internet delay, are not allowed in Over The Counter (OTC) market that basically trade directly between two parties, without the supervision of an exchange. TigerWit do not allow any clients get involved in these opportunistic practices such as arbitrage or utilizing internet delay and etc. These transactions that resulted from arbitrage behavior based on price lag are very likely to be canceled. TigerWit reserves the rights of settlement for accounts that engage in the opportunistic practices above. These rights include necessary adjustments and modifications. TigerWit may estimate these practices depending on specific conditions then require dealers to intervene and examine the related accounts or close them when it is necessary, which does not need to inform clients in advance. In terms of disputes due to arbitrage and manipulation, TigerWit will resolve these cases basing on specific conditions. TigerWit reserves deposit detention rights until these issues could be solved. Practices or decisions mentioned here would not impair or give up any rights or compensation to you, your companies and employees by TigerWit.",
-            vi: "^^-^^",
+            vi: "Sự chậm trễ do kết nối Internet, và lỗi báo giá có thể khiến giá được công bố trên nền tảng giao dịch TigerWit không thể phản ánh giá thị trường thực tế. Hành vi kiếm lời từ lợi dụng chênh lệch giá, chẳng hạn như giao dịch chênh lệch giá (arbitrage, scalping hoặc lợi dụng sự chậm trễ internet, không được cho phép trong thị trường Over The Counter (OTC) trong đó cơ bản giao dịch trực tiếp giữa hai bên, mà không có sự giám sát của một cuộc trao đổi. TigerWit không cho phép bất kỳ khách hàng nào tham gia vào thủ thuật cơ hội như giao dịch chênh lệnh giá choặc sử dụng chậm trễ internet và vv. Các giao dịch có hành vi chênh lệch giá dựa trên chênh lệch giá rất có thể  bị hủy bỏ. TigerWit có quyền giải quyết các tài khoản tham gia vào các hoạt động lợi dụng ở trên. Các quyền này bao gồm các điều chỉnh và sửa đổi cần thiết. TigerWit có thể ước tính các thực hành này tùy thuộc vào điều kiện cụ thể sau đó yêu cầu các đại lý can thiệp và kiểm tra các tài khoản liên quan hoặc đóng chúng khi cần thiết, không cần phải thông báo trước cho khách hàng. Về tranh chấp do chênh lệch và thao tác, TigerWit sẽ giải quyết những trường hợp này dựa trên các điều kiện cụ thể. TigerWit bảo lưu quyền tạm giữ tiền gửi cho đến khi những vấn đề này có thể được giải quyết. Các thao tác hoặc phán quyết được đề cập ở đây sẽ không ảnh hưởng hoặc từ bỏ bất kỳ quyền hoặc bồi thường nào cho bạn, các công ty và nhân viên của bạn bởi TigerWit.",
             "zh-Hant": "網絡、連接延遲及報價上的誤差有時會造成顯示在 TigerWit 交易平臺的報價無法準確地反映實時市場價格。“套匯(arbitrage)”及“剝頭皮(scalping)”或因網絡連接的延誤而利用差價獲利的行為，並不能存在於客戶直接向做市商進行交易的場外交易市場中(OTC)。TigerWit 不允許客戶在本公司的交易平臺上進行此等套匯或利用網絡連接延遲的投機行為。依靠因價格滯後帶來的套匯機會進行的交易有可能會被撤銷。對涉及上述交易的賬戶 TigerWit 保留處置權利，包含必要的修改和調整，TigerWit 可能依個別情況判斷，要求交易員進行幹預或對指令進行核準所有單據和/或終止有關客戶的賬戶，而無須事先通知客戶。對於因套匯及/或操控而產生的任何糾紛，TigerWit 將依據個別情況判斷進行解決。TigerWit 保留提款扣留的權利直至以上的問題能夠解決。於此陳述的任何行動或決議將不會損害或放棄 TigerWit 對閣下、閣下的公司和其職員的任何權利或賠償。"
         },
         amtConditions25: {
             zh: "价位操纵",
             en: "Price manipulation",
-            vi: "^^-^^",
+            vi: "Thao túng giá",
             "zh-Hant": "價位操縱"
         },
         amtConditions26: {
             zh: "TigerWit 绝对禁止对其价格、执行及平台进行任何形式的操控，不接受客户“剥头皮”交易方式。",
             en: "TigerWit absolutely forbids any kinds of manipulation for prices, execution and platform, and does not accept any illegal trading modes such as scalping.",
-            vi: "^^-^^",
+            vi: "TigerWit hoàn toàn cấm bất kỳ loại thao tác nào thao túng giá, bàn khớp lệnh và nền tảng, và không chấp nhận bất kỳ chế độ giao dịch bất hợp pháp nào như scalping.",
             "zh-Hant": "TigerWit 絕對禁止對其價格、執行及平臺進行任何形式的操控，不接受客戶“剝頭皮”交易方式。"
         },
         amtConditions27: {
             zh: "若 TigerWit 怀疑任何账户从事操控或不接受的交易方式，TigerWit 保留相关权利，对账户进行调查及覆核，并从涉嫌账户中扣除由相关活动所赚取的盈利款项，尤其是价格滞后带来的套汇机会进行的交易有可能会被撤销，调查及覆核期间账户可能被冻结交易，TigerWit 保留了结此类客户所有未平仓头寸以及关闭其账户的权利。对于涉嫌从事操控的账户，TigerWit 保留对相关账户进行必要更正或调整的权利。",
             en: "If TigerWit suspects any accounts are manipulating or doing unacceptable trading, we reserve related rights to investigate and audit these accounts and deduct profits earned in relevant transactions from accounts suspected. Especially, transactions of arbitrage resulted from price delay might be canceled investigated or frozen, TigerWit has the right to close open positions or accounts of these clients. For suspected accounts that manipulate prices, TigerWit has the rights to process necessary adjustment or modification.",
-            vi: "^^-^^",
+            vi: "Nếu TigerWit nghi ngờ bất kỳ tài khoản nào đang thao túng hoặc giao dịch không được chấp nhận, chúng tôi bảo lưu quyền liên quan để điều tra và kiểm tra các tài khoản này và khấu trừ lợi nhuận kiếm được trong các giao dịch có liên quan từ các tài khoản bị nghi ngờ. Đặc biệt, các giao dịch chênh lệch do việc trì hoãn giá có thể bị hủy bỏ điều tra hoặc bị đóng băng, TigerWit có quyền đóng các vị thế mở hoặc các tài khoản của các khách hàng này. Đối với các tài khoản nghi ngờ thao túng giá, TigerWit có quyền xử lý các điều chỉnh hoặc sửa đổi cần thiết.",
             "zh-Hant": "若 TigerWit 懷疑任何賬戶從事操控或不接受的交易方式，TigerWit 保留相關權利，對賬戶進行調查及覆核，並從涉嫌賬戶中扣除由相關活動所賺取的盈利款項，尤其是價格滯後帶來的套匯機會進行的交易有可能會被撤銷，調查及覆核期間賬戶可能被凍結交易，TigerWit 保留了結此類客戶所有未平倉頭寸以及關閉其賬戶的權利。對於涉嫌從事操控的賬戶，TigerWit 保留對相關賬戶進行必要更正或調整的權利。"
         },
         amtConditions28: {
             zh: "交易与第三者参与",
             en: "Trade and third-party participation",
-            vi: "^^-^^",
+            vi: "Giao dịch và tham gia của bên thứ ba",
             "zh-Hant": "交易與第三者參與"
         },
         amtConditions29: {
             zh: "客户有义务将密码保密存放，确保第三方无法以用户名称及密码进入平台取得客户在此平台账户的权利，在任何时候，交易应当由客户本人进行。无论是否出于自主权，客户将交易权力或对其账户的控制授予第三者，或根据任何第三者（交易代理人）的信息、建议或指令行事，风险由客户自行承担。TigerWit 不承担对客户所选择的交易代理人进行覆核或提供有关建议的任何责任。TigerWit 不就任何交易代理人作出任何声明或保证。TigerWit 不对客户因交易代理人的行为遭受的任何损失承担责任。",
             en: "Users have obligations to maintain their own passwords secrecy and confirm all the third parties are not able to login TigerWit or obtain rights of users in platform via users’ account names and passwords. In any cases, trading should be operated by users themselves only. If users authorize the usage of their account by any third party or trade according to others’ information, advice or instructions, no matter whether it is from users’ own decisions, the risks should be borne by users themselves. TigerWit is not responsible for any confirms or advice gave by third parties authorized by users. TigerWit does not offer any states or guarantees to any trading agents. TigerWit is not responsible for the loss of users caused by the practices of third parties.",
-            vi: "^^-^^",
+            vi: "Người dùng có nghĩa vụ duy trì bí mật mật khẩu của riêng mình và xác nhận tất cả các bên thứ ba không thể đăng nhập TigerWit hoặc có được quyền của người dùng trên nền tảng thông qua tên và mật khẩu của người dùng. Trong mọi trường hợp, giao dịch chỉ được vận hành bởi người dùng. Nếu người dùng ủy quyền việc sử dụng tài khoản của họ cho bất kỳ bên thứ ba hoặc giao dịch nào theo thông tin, lời khuyên hoặc hướng dẫn của người khác, cho dù đó là do quyết định của người dùng, thì rủi ro sẽ do chính người dùng gánh chịu. TigerWit không chịu trách nhiệm về bất kỳ xác nhận hoặc lời khuyên nào được cung cấp bởi các bên thứ ba được người dùng ủy quyền. TigerWit không cung cấp bất kỳ tuyên bố hoặc bảo đảm nào cho bất kỳ đại lý giao dịch nào. TigerWit không chịu trách nhiệm về sự mất mát của người dùng do các hoạt động của các bên thứ ba.",
             "zh-Hant": "客戶有義務將密碼保密存放，確保第三方無法以用戶名稱及密碼進入平臺取得客戶在此平臺賬戶的權利，在任何時候，交易應當由客戶本人進行。無論是否出於自主權，客戶將交易權力或對其賬戶的控制授予第三者，或根據任何第三者（交易代理人）的信息、建議或指令行事，風險由客戶自行承擔。TigerWit 不承擔對客戶所選擇的交易代理人進行覆核或提供有關建議的任何責任。TigerWit 不就任何交易代理人作出任何聲明或保證。TigerWit 不對客戶因交易代理人的行為遭受的任何損失承擔責任。"
         },
         amtConditions30: {
             zh: "交易平台时间",
             en: "Platform Trading Hours",
-            vi: "^^-^^",
+            vi: "Giờ giao dịch của nền tảng",
             "zh-Hant": "交易平臺時間"
         },
         amtConditions31: {
             zh: "冬令时间：北京时间周一早上 6 点 15 分开盘，至周六早上 5 点收盘。",
             en: " ",
-            vi: "^^-^^",
+            vi: " ",
             "zh-Hant": "冬令時間：北京時間周壹早上 6 點 15 分開盤，至周六早上 5 點收盤。"
         },
         amtConditions32: {
             zh: "夏令时间：北京时间周一早上 5 点 15 分开盘，至周六早上 4 点收盘。",
             en: " ",
-            vi: "^^-^^",
+            vi: " ",
             "zh-Hant": "夏令時間：北京時間周壹早上 5 點 15 分開盤，至周六早上 4 點收盤。"
         },
         amtConditions33: {
             zh: "交易平台的报价来自银行及金融机构，所以开盘或收盘时间可能因银行及金融机构延长或提前结束报价而有所变动。开盘时的报价会依市场 价 格 而 有 所 调 整 或 报 价 可 能 受 到 干 扰 ，TigerWit 将在市场价格稳定后开盘。",
             en: "The quotations in TigerWit platform are offered by banks and financial institutions, thus, the hours of opening or closing quotations might start early or extend, because banks and financial institutions to do so. The opening quotations might be adjusted or affected due to the market quotations. TigerWit usually opens quotations under a stable market.",
-            vi: "^^-^^",
+            vi: "Các chào giá trong nền tảng TigerWit được cung cấp bởi các ngân hàng và tổ chức tài chính, do đó, giờ mở cửa hoặc đóng cửa các chào giá có thể bắt đầu sớm hoặc kéo dài, bởi vì các ngân hàng và các tổ chức tài chính làm như vậy. Các chào giá mở có thể được điều chỉnh hoặc bị ảnh hưởng do các chào giá của thị trường. TigerWit thường mở các chào giá dưới một thị trường ổn định.",
             "zh-Hant": "交易平臺的報價來自銀行及金融機構，所以開盤或收盤時間可能因銀行及金融機構延長或提前結束報價而有所變動。開盤時的報價會依市場 價 格 而 有 所 調 整 或 報 價 可 能 受 到 幹 擾 ，TigerWit 將在市場價格穩定後開盤。"
         },
         amtConditions34: {
             zh: "流通量",
             en: "Circulation",
-            vi: "^^-^^",
+            vi: "Lưu hành",
             "zh-Hant": "流通量"
         },
         amtConditions35: {
             zh: "交易者请注意，在开市后前几个小时的交易流通量通常较为清淡。市场清淡时买家及卖家较少，差价将会随着市场而有所变动。",
             en: "Traders please note: during a couple of hours around market opening, the amount of trading in circulation usually relatively small. At that time, the buyers and sellers are relatively few and spreads might be affected by the market.",
-            vi: "^^-^^",
+            vi: "Nhà đầu tư xin lưu ý: trong một vài giờ trong thời gian mở cửa thị trường, số lượng giao dịch đang lưu thông thường tương đối nhỏ. Vào thời điểm đó, người mua và người bán là tương đối ít và phí spread có thể bị ảnh hưởng bởi thị trường.",
             "zh-Hant": "交易者請註意，在開市後前幾個小時的交易流通量通常較為清淡。市場清淡時買家及賣家較少，差價將會隨著市場而有所變動。"
         },
         amtConditions36: {
             zh: "保证金追加",
             en: "Margin call",
-            vi: "^^-^^",
+            vi: "Yêu cầu Bảo Chứng",
             "zh-Hant": "保證金追加"
         },
         amtConditions37: {
             zh: "保证金减少的情势可能会因买卖差价的变动而扩大，导致账户内可用保证金余额减少。假如保证金不足以维持任何开仓部位，账户可能会因为保证金不足而强制平仓。虽然持有长短仓令交易者觉得受市场变动的影响有限，实际上在任何时间买卖差价扩大而可用保证金不足，都可能出现全部仓位被强制平仓。",
             en: "Margin decreases may widen as the result of spreads and lead to the reduction of free margin left in the account. If the margin is insufficient to maintain all open positions, the account may need to close the position due to insufficient margin. Although traders who held both long and short positions may feel the impact is limited from the market changes, in fact, a margin call on all open positions may occur at any time when spreads are widening and the free margin is insufficient.",
-            vi: "^^-^^",
+            vi: "Các lần giảm số tiền kí quỹ có thể tăng lên do kết quả của spread và dẫn đến việc giảm số dư ký quỹ còn lại trong tài khoản. Nếu lợi nhuận không đủ để duy trì tất cả các vị thế mở, tài khoản có thể cần phải đóng vị thế do không đủ số dư. Mặc dù các nhà giao dịch nắm giữ cả vị thế mua và bán dài hạn có thể cảm thấy tác động từ các thay đổi từ thị trường bị giới hạn trên thực tế, một yêu cầu bảo chứng trên tất cả các vị thế mở có thể xảy ra bất kỳ lúc nào khi spread tăng lênh và mức margin có thể đặt lệnh không đủ.",
             "zh-Hant": "保證金減少的情勢可能會因買賣差價的變動而擴大，導致賬戶內可用保證金余額減少。假如保證金不足以維持任何開倉部位，賬戶可能會因為保證金不足而強制平倉。雖然持有長短倉令交易者覺得受市場變動的影響有限，實際上在任何時間買賣差價擴大而可用保證金不足，都可能出現全部倉位被強制平倉。"
         },
         amtConditions38: {
             zh: "周末风险",
             en: "Risks over weekends",
-            vi: "^^-^^",
+            vi: "Rủi ro cuối tuần",
             "zh-Hant": "周末風險"
         },
         amtConditions39: {
             zh: "在货币市场通常停止交易的周末（冬令时间：北京时间周六早上 5 点，至周一早上 6 点 15分，夏令时间：北京时间周六早上 4 点，至周一上午 5 点 15 分），可能会发生诸多情形、发展变化或事件。这可能会导致货币市场的开盘价与上个星期五下午收盘时的价格截然不同。",
             en: "When the markets are closed over the weekends and holidays all kinds of situations, developments, changes or big events may occur, which may lead to large gaps between the opening quotations and the closing quotations of Friday afternoon of the previous week.",
-            vi: "^^-^^",
+            vi: "Khi thị trường đóng cửa vào cuối tuần và ngày lễ, tất cả các tình huống, diễn biến, thay đổi hoặc sự kiện lớn có thể xảy ra, điều này có thể dẫn đến khoảng cách lớn giữa các báo giá mở và báo giá đóng cửa vào chiều thứ Sáu của tuần trước đó.",
             "zh-Hant": "在貨幣市場通常停止交易的周末（冬令時間：北京時間周六早上 5 點，至周壹早上 6 點 15分，夏令時間：北京時間周六早上 4 點，至周壹上午 5 點 15 分），可能會發生諸多情形、發展變化或事件。這可能會導致貨幣市場的開盤價與上個星期五下午收盤時的價格截然不同。"
         },
         amtConditions40: {
             zh: "本公司的客户不能在周末以及市场关闭的其他时间内使用在线系统来设定或更改指令。客户持有的仓位经过周末，为保护该持有的仓位所设置的止损指令，可能会在比停损指令指定的价格更糟的位置执行。",
             en: "Users in TigerWit cannot set up or change instructions through platform during weekends and closing time. If users hold the position during weekends, it is likely that the instructions would carry out at a worse price than the desired price in order to protect stop-loss instructions for holding positions.",
-            vi: "^^-^^",
+            vi: "Người dùng của TigerWit không thể thiết lập hoặc thay đổi hướng dẫn đặt lệnh thông qua nền tảng vào cuối tuần và giờ đóng cửa. Nếu người dùng giữ vị thế trong các ngày cuối tuần, có khả năng các hướng dẫn sẽ thực hiện ở mức giá thấp hơn giá mong muốn để bảo vệ hướng dẫn lệnh dừng lỗ cho các vị thế đang được nắm giữ.",
             "zh-Hant": "本公司的客戶不能在周末以及市場關閉的其他時間內使用在線系統來設定或更改指令。客戶持有的倉位經過周末，為保護該持有的倉位所設置的止損指令，可能會在比停損指令指定的價格更糟的位置執行。"
         },
         amtConditions41: {
             zh: "网络交易",
             en: "Online trading",
-            vi: "^^-^^",
+            vi: "Giao dịch trực tuyến",
             "zh-Hant": "網絡交易"
         },
         amtConditions42: {
             zh: "通过网络工具进行场外合约交易与在另一个电子交易系统进行的交易不同，也与在传统的市场中进行的交易不同。",
             en: "Trades placed in TigerWit platform on Over The Counter (OTC) contracts differ from that in other electronic trading platforms on traditional trading market",
-            vi: "^^-^^",
+            vi: "Các giao dịch được đặt trong nền tảng TigerWit trên các hợp đồng Over The Counter (OTC) khác với các giao dịch điện tử khác trên thị trường giao dịch truyền thống",
             "zh-Hant": "通過網絡工具進行場外合約交易與在另壹個電子交易系統進行的交易不同，也與在傳統的市場中進行的交易不同。"
         },
         amtConditions43: {
             zh: "在网络交易系统中进行交易的客户，将暴露在与该系统有关的风险之中，包括硬件和软件故障和系统故障，就网络工具来说，包括单独的客户系统故障，以及连接平台和客户的通信基础设施（例如互联网）故障。",
             en: "Users of online trading platform engaged in the risks that are related with system condition including bugs in hardware, software and system. The internet tools are comprised of single system bugs of users and communication facilities bugs of TigerWit that connect platform and users, such as the internet.",
-            vi: "^^-^^",
+            vi: "Người dùng nền tảng giao dịch trực tuyến tham gia vào các rủi ro có liên quan đến tình trạng hệ thống bao gồm các lỗi trong phần cứng, phần mềm và hệ thống. Các công cụ internet bao gồm các lỗi hệ thống đơn lẻ của người dùng và các lỗi cơ sở truyền thông của TigerWit kết nối nền tảng và người dùng, chẳng hạn như internet.",
             "zh-Hant": "在網絡交易系統中進行交易的客戶，將暴露在與該系統有關的風險之中，包括硬件和軟件故障和系統故障，就網絡工具來說，包括單獨的客戶系統故障，以及連接平臺和客戶的通信基礎設施（例如互聯網）故障。"
         },
         amtConditions44: {
             zh: "手续费",
             en: "Commission charge",
-            vi: "^^-^^",
+            vi: "Phí hoa hồng",
             "zh-Hant": "手續費"
         },
         amtConditions45: {
             zh: "在客户开始交易之前，客户应取得有关应缴的所有手续费与其他费用的详细信息。若有任何费用未于开户申请书中订明，客户亦应了解相关规定的费用。",
             en: "Before making any transactions, customers should obtain detailed information of all commissions and other fees payable. Users should be aware that TigerWit may pass on other charges or regulatory fees not specified in the account application.",
-            vi: "^^-^^",
+            vi: "Trước khi thực hiện bất kỳ giao dịch nào, khách hàng sẽ nhận được thông tin chi tiết về tất cả các khoản hoa hồng và các khoản phí khác phải trả. Người dùng cần lưu ý rằng TigerWit có thể chuyển các khoản phí khác hoặc các khoản phí pháp lý không được quy định trong đơn đăng ký tài khoản.",
             "zh-Hant": "在客戶開始交易之前，客戶應取得有關應繳的所有手續費與其他費用的詳細信息。若有任何費用未於開戶申請書中訂明，客戶亦應了解相關規定的費用。"
         },
         amtConditions46: {
             zh: "断线时紧急异常处理申请",
             en: "Application for abnormal conditions",
-            vi: "^^-^^",
+            vi: "Đơn đăng kí cho điều kiện bất thường",
             "zh-Hant": "斷線時緊急異常處理申請"
         },
         amtConditions47: {
             zh: "当系统断线或发生异常状况时，建议客户先自行判定您的在仓单是否要平仓或取消挂单，当您一旦决定提出申请时，请至在线申请异常处理。",
             en: "When system occurs disconnection or abnormal conditions, we recommend that users should make the decision whether close the positions or not at the first place. Once users make up their mind, please operate the online application for abnormal conditions.",
-            vi: "^^-^^",
+            vi: "Khi hệ thống xảy ra ngắt kết nối hoặc điều kiện bất thường, chúng tôi khuyên người dùng nên đưa ra quyết định xem có đóng vị thế hay không ở vị thế đầu tiên. Sau khi người dùng quyết định, hãy vận hành đơn đăng kí trực tuyến cho các điều kiện bất thường.",
             "zh-Hant": "當系統斷線或發生異常狀況時，建議客戶先自行判定您的在倉單是否要平倉或取消掛單，當您壹旦決定提出申請時，請至在線申請異常處理。"
         },
         amtConditions48: {
             zh: "注意事项说明：",
             en: "The announcement: ",
-            vi: "^^-^^",
+            vi: "Bản thông báo:",
             "zh-Hant": "註意事項說明："
         },
         amtConditions49: {
             zh: "1. 交易系统断线时，客户请致电客服电话，TigerWit 仅代为平仓或取消挂单，无法代为建立新仓或挂止损/停利单。",
             en: "1. While system disconnected, client needs to contact the support center. TigerWit only close the position or cancel the order on client's behalf, and will not open a new position or place the loss/take profit order for client.",
-            vi: "^^-^^",
+            vi: "1. Trong khi hệ thống bị ngắt kết nối, khách hàng cần liên hệ với trung tâm hỗ trợ. TigerWit chỉ đóng vị thế hoặc hủy lệnh thay mặt khách hàng và sẽ không mở một vị thế mới hoặc đặt lệnh thua lỗ / chốt lời cho khách hàng.",
             "zh-Hant": "1. 交易系統斷線時，客戶請致電客服電話，TigerWit 僅代為平倉或取消掛單，無法代為建立新倉或掛止損/停利單。"
         },
         amtConditions50: {
             zh: "2. TigerWit 客服代客户平仓时，因电话延迟和网络延迟，造成电话报价与最终成交价格并不完全一致，客户知晓并同意 TigerWit 的代为处理，此间价差由客户承担。TigerWit 只是作为代客执行交易的代理，并不是作为交易员给予客户报价。所以，当您在依规定的时间内提出紧急处理申请后，TigerWit 依据断线或报价异常期间之正确市场价格予以平仓处理。请注意:TigerWit 不接受指定价格平仓。",
             en: "2. When TigerWit support center closes the position on client’s behalf, the quotations in the phone call may not exactly aligned with final trading quotations due to the delay of phone call or the internet. Clients should be aware and agree the settlement of TigerWit and take the responsibilities of the spreads mentioned above. TigerWit is only an authorized agent to execute for client, and does not quote to client as a trader. Therefore, if you apply for the abnormal condition settlement during the effective time, TigerWit will close the position by the accurate price according to the price while system disconnection or abnormality occurs. Attention: TigerWit does not accept any assigned price to close the position.",
-            vi: "^^-^^",
+            vi: "2. Khi trung tâm hỗ trợ TigerWit đóng vị thế thay mặt khách hàng, các chào giá trong cuộc gọi điện thoại có thể không khớp chính xác với các chào giá giao dịch cuối cùng do sự chậm trễ của cuộc gọi điện thoại hoặc internet. Khách hàng cần phải nhận thức và đồng ý việc giải quyết của TigerWit và chịu trách nhiệm các khoản spread nêu trên. TigerWit chỉ là một đại lý được ủy quyền để thực hiện cho khách hàng và không báo giá cho khách hàng là một nhà giao dịch. Do đó, nếu bạn áp dụng cho việc giải quyết tình trạng bất thường trong thời gian hiệu lực, TigerWit sẽ đóng vị thế theo giá chính xác theo giá trong khi ngắt kết nối hệ thống hoặc bất thường xảy ra.",
             "zh-Hant": "2. TigerWit 客服代客戶平倉時，因電話延遲和網絡延遲，造成電話報價與最終成交價格並不完全壹致，客戶知曉並同意 TigerWit 的代為處理，此間價差由客戶承擔。TigerWit 只是作為代客執行交易的代理，並不是作為交易員給予客戶報價。所以，當您在依規定的時間內提出緊急處理申請後，TigerWit 依據斷線或報價異常期間之正確市場價格予以平倉處理。請註意:TigerWit 不接受指定價格平倉。"
         },
         amtConditions51: {
             zh: "3. 当您发出紧急处理申请之后切勿再对已申请的 单 子 做 任 何 平 仓 动 作 ， 若 有 此 情 形 ，TigerWit 仍将以依据断线或报价异常期间之正确市场价格予以平仓处理。",
             en: "3. After you apply for the abnormal condition settlement, please do not close any position that you applied for. If you still act in this way, TigerWit support center will still close the position by the accurate price according to the price while system disconnection or abnormality occurs.",
-            vi: "^^-^^",
+            vi: "3. Sau khi bạn áp dụng cho việc giải quyết tình trạng bất thường, xin vui lòng không đóng bất kỳ vị thế mà bạn áp dụng cho. Nếu bạn vẫn hoạt động theo cách này, trung tâm hỗ trợ TigerWit sẽ vẫn đóng vị thế theo giá chính xác theo giá trong khi ngắt kết nối hệ thống hoặc bất thường xảy ra.",
             "zh-Hant": "3. 當您發出緊急處理申請之後切勿再對已申請的 單 子 做 任 何 平 倉 動 作 ， 若 有 此 情 形 ，TigerWit 仍將以依據斷線或報價異常期間之正確市場價格予以平倉處理。"
         },
         amtConditions52: {
             zh: "常见问题解答",
             en: "FAQs",
-            vi: "^^-^^",
+            vi: "Câu Hỏi Thường Gặp",
             "zh-Hant": "常見問題解答"
         },
         amtConditions53: {
             zh: "关于交易条件的问题首先传达给客户服务部。",
             en: "Questions regarding trading conditions should be addressed, in the first instance, to the Customer Support Department.",
-            vi: "^^-^^",
+            vi: "Các câu hỏi liên quan đến điều kiện giao dịch cần được giải quyết, trong lần đầu tiên, được gửi đến Bộ phận hỗ trợ khách hàng.",
             "zh-Hant": "關於交易條件的問題首先傳達給客戶服務部。"
         },
         amtConditions54: {
             zh: "客户服务部",
             en: "Customer Support Department",
-            vi: "^^-^^",
+            vi: "Bộ Phận Hỗ Trợ Khách Hàng",
             "zh-Hant": "客戶服務部"
         },
         amtConditions55: {
             zh: "电话：+86 400 809 8509",
             en: "Phone: +86 400 809 8509",
-            vi: "^^-^^",
+            vi: "Điện thoại: +86 400 809 8509",
             "zh-Hant": "電話：+86 400 809 8509"
         },
         amtConditions56: {
             zh: "电子邮件：support@tigerwit.com",
             en: "Email: support@tigerwit.com",
-            vi: "^^-^^",
+            vi: "Email: support@tigerwit.com",
             "zh-Hant": "電子郵件：support@tigerwit.com"
         },
         amtConditions57: {
             zh: "其他联系人",
             en: "Additional Contacts",
-            vi: "^^-^^",
+            vi: "Địa Chỉ Liên Hệ Bổ Sung",
             "zh-Hant": "其他聯系人"
         },
         amtConditions58: {
             zh: "TigerWit 合规部门",
             en: "TigerWit Compliance Department",
-            vi: "^^-^^",
+            vi: "Bộ Phận Giám Sát của TigerWit",
             "zh-Hant": "TigerWit 合規部門"
         },
         amtConditions59: {
             zh: "电话：+1 (242) 676 7306",
             en: "Phone: +1 (242) 676 7306",
-            vi: "^^-^^",
+            vi: "Điện thoại: +1 (242) 676 7306",
             "zh-Hant": "電話：+1 (242) 676 7306"
         },
         amtConditions60: {
             zh: "电子邮件：compliance@tigerwit.com",
             en: "Email: compliance@tigerwit.com",
-            vi: "^^-^^",
+            vi: "Email: compliance@tigerwit.com",
             "zh-Hant": "電子郵件：compliance@tigerwit.com"
         },
         amtStatement1: {
             zh: "客户声明",
             en: "Declaration by Client",
-            vi: "^^-^^",
+            vi: "Tuyên bố của khách hàng",
             "zh-Hant": "客戶聲明"
         },
         amtStatement2: {
             zh: "本人已阅读跟随外汇交易的相关《风险披露书》、《TigerWit交易平台风险提示免责条款》，并已完全理解和接受上述文件的全部内容，清楚了解跟单交易的内容及可能出现的风险。本人的投资决策完全基于本人的独立自主判断做出，并自愿承担因此产生的相关风险和全部后果。",
             en: "I have read the Risk Disclosure Statement related to foreign exchange trade and Risk Warning and Exemptions for Trading on TigerWit Trading Platform, and have fully understood and accepted all contents contained in the above documents and learnt and acknowledged the contents and potential risks of order following trade. The investment decision of mine is made fully based on my independent judgment and I will bear all related risks and all consequences incurred thereby.",
-            vi: "^^-^^",
+            vi: "Tôi đã đọc Tuyên bố Tiết lộ Rủi ro liên quan đến giao dịch ngoại hối và Cảnh báo Rủi ro và Miễn trừ Giao dịch trên Sàn Giao dịch TigerWit, và đã hiểu và chấp nhận đầy đủ tất cả các nội dung trong các tài liệu trên và đã học và thừa nhận nội dung và rủi ro . Quyết định đầu tư của tôi được thực hiện hoàn toàn dựa trên phán quyết độc lập của tôi và tôi sẽ chịu mọi rủi ro liên quan và mọi hậu quả phát sinh từ đó.",
             "zh-Hant": "本人已閱讀跟隨外匯交易的相關《風險披露書》、《TigerWit交易平臺風險提示免責條款》，並已完全理解和接受上述文件的全部內容，清楚了解跟單交易的內容及可能出現的風險。本人的投資決策完全基於本人的獨立自主判斷做出，並自願承擔因此產生的相關風險和全部後果。"
         },
         amtStatement3: {
             zh: "我同意并特此授权TigerWit作为我的委托人，自我点击“同意”此项授权之时起，以我的名义代我行使交易之权利，并同意采用跟单方式跟随我自选的“交易高手”的信号进行交易，由此产生的一切责任和风险均由我个人承担。",
             en: "I agree and hereby appoint TigerWit as my consignor, which will exercise the trading right on behalf of me after I clicked \"Agree\", and agree to make trade in the mode of following the \"trading master\" opted by me and all obligations and risks produced thereby shall be undertaken by myself.",
-            vi: "^^-^^",
+            vi: "Tôi đồng ý và chỉ định TigerWit làm người cung cấp dịch vụ của mình, sẽ thực hiện quyền giao dịch thay mặt cho tôi sau khi tôi nhấp vào \"Đồng ý\" và đồng ý giao dịch theo phương thức \"nhà giao dịch chính\" được tôi chọn và mọi nghĩa vụ và rủi ro do đó nảy sinh sẽ do chính tôi chịu trách nhiệm.",
             "zh-Hant": "我同意並特此授權TigerWit作為我的委托人，自我點擊“同意”此項授權之時起，以我的名義代我行使交易之權利，並同意采用跟單方式跟隨我自選的“交易高手”的信號進行交易，由此產生的壹切責任和風險均由我個人承擔。"
         },
         amtStatement4: {
             zh: "我已知晓TigerWit的跟单规则：按照跟随资金与“交易高手”账户资金等比例开仓，不足0.01的按照0.01开仓，开仓订单即为跟随订单。我已知晓在TigerWit开户的所有客户均可以成为TigerWit的“交易高手”，TigerWit对于其客户成为“交易高手”没有设定具体的条件和标准。",
             en: "I have acknowledged the following rules of TigerWit that position will be opened based on the proportion between following capital and capital in account of the \"trading master\" and that position will be opened based on that of 0.01 for those less than 0.01 and the open order would be the following order.I have known that all customers in the TigerWit's foreign exchange accounts can become a foreign exchange trading master, tiger foreign exchange for its customers to become a trading master did not set specific conditions and standards.",
-            vi: "^^-^^",
+            vi: "Tôi đã thừa nhận các quy tắc sau đây của TigerWit rằng vị thế sẽ được mở dựa trên tỷ lệ giữa vốn và vốn trong tài khoản của \"nhà  giao dịch chính\" và vị thế đó sẽ được mở dựa trên 0,01 cho những lệnh nhỏ hơn 0,01 và lệnh mở sẽ là lệnh sao chép theo sau.NODE-loadERR",
             "zh-Hant": "我已知曉TigerWit的跟單規則：按照跟隨資金與“交易高手”賬戶資金等比例開倉，不足0.01的按照0.01開倉，開倉訂單即為跟隨訂單。我已知曉在TigerWit開戶的所有客戶均可以成為TigerWit的“交易高手”，TigerWit對於其客戶成為“交易高手”沒有設定具體的條件和標準。"
         },
         amtStatement5: {
             zh: "我同意并授权TigerWit从我在任一自然月内已平仓的订单实时扣除20%利润，并于下一自然月15日前核对上一自然月整体盈利金额并核算佣金或奖金后，将其支付给“交易高手”作为跟单佣金或奖励。我确定已知晓跟单交易中存在的风险，知晓“交易高手”历史成绩或历史业绩不代表未来成绩或业绩，任何跟单操作导致的损失及责任由我个人承担。",
             en: "I agree and authorize TigerWit to deduct 20% profits in real time from the concluded order at any natural month and check the overall amount of profits of the previous natural month prior to the 15th day of the following month. The 20% profit is the only fee for “trading master”. In addition, after calculating the commissions or bonuses, they will be paid to the \"trading master\" as commissions or bonuses for the following orders. I have confirmed and acknowledged that there are risks in order following trading and also learned that the historical performance of the \"trading master\" does not represent performance in the future and that all losses and responsibilities incurred by order following shall be borne by myself.",
-            vi: "^^-^^",
+            vi: "Tôi đồng ý và ủy quyền cho TigerWit khấu trừ 20% lợi nhuận trong thời gian thực từ lệnh đã kết thúc vào bất kỳ tháng tự nhiên nào và kiểm tra tổng số lợi nhuận của tháng trước đó trước ngày 15 của tháng tiếp theo. Ngoài ra, sau khi tính tiền hoa hồng hoặc tiền thưởng, khoản tiền này sẽ được trả cho \"nhà giao dịch chính\" làm hoa hồng hoặc tiền thưởng cho các lệnh sao chép theo sau. Tôi đã xác nhận và thừa nhận rằng có những rủi ro trong giao dịch sau và cũng biết rằng hiệu suất trước đây trong quá khứ của \"nhà giao dịch chính\" không đại diện cho kết quả trong tương lai và tất cả các tổn thất và trách nhiệm phát sinh do lệnh sao chép theo dõi sẽ do chính bản thân tôi chịu.",
             "zh-Hant": "我同意並授權TigerWit從我在任壹自然月內已平倉的訂單實時扣除20%利潤，並於下壹自然月15日前核對上壹自然月整體盈利金額並核算傭金或獎金後，將其支付給“交易高手”作為跟單傭金或獎勵。我確定已知曉跟單交易中存在的風險，知曉“交易高手”歷史成績或歷史業績不代表未來成績或業績，任何跟單操作導致的損失及責任由我個人承擔。"
         },
         amtStatement6: {
             zh: "TigerWit交易平台风险提示及免责条款",
             en: "Risk Warning and Exemptions for Trading on TigerWit Trading Platform",
-            vi: "^^-^^",
+            vi: "Cảnh báo rủi ro và miễn trừ giao dịch trên nền tảng giao dịch TigerWit",
             "zh-Hant": "TigerWit交易平臺風險提示及免責條款"
         },
         amtStatement7: {
             zh: "1. TigerWit交易平台是从事为个人投资者提供全球化社交化投资平台， TigerWit向投资者提供的一切服务，均依托于法律法规之约束。",
             en: "1. TigerWit trading platform is a global social investment platform for individual investors and all services rendered by TigerWit are all in compliance with the law.",
-            vi: "^^-^^",
+            vi: "1. Nền tảng giao dịch TigerWit là một nền tảng đầu tư xã hội toàn cầu cho các nhà đầu tư cá nhân và tất cả các dịch vụ do TigerWit cung cấp đều tuân thủ luật pháp.",
             "zh-Hant": "1. TigerWit交易平臺是從事為個人投資者提供全球化社交化投資平臺， TigerWit向投資者提供的壹切服務，均依托於法律法規之約束。"
         },
         amtStatement8: {
             zh: "2. TigerWit仅就跟单服务承担其责任，对于任何客户的任何操作（包括但不限于以“交易高手”之交易行为作为基础的跟单交易行为），其交易风险和交易结果均由客户自行承担。",
             en: "2. TigerWit shall bear responsibilities for the order following services rendered, while all trading risks and consequences incurred by any operation (including but not limited to order following trade based on the trading behaviors of the \"trading master\") of any clients shall be borne by the client.",
-            vi: "^^-^^",
+            vi: "2. TigerWit chịu trách nhiệm về lệnh dịch vụ sao chép lệnh được cung cấp, trong khi tất cả các rủi ro và hậu quả kinh doanh phát sinh từ bất kỳ hoạt động nào (bao gồm nhưng không giới hạn các lệnh giao dịch sao chép dựa trên hành vi giao dịch của \"nhà giao dịch chính\") của bất kỳ khách hàng nào sẽ do khách hàng chịu.",
             "zh-Hant": "2. TigerWit僅就跟單服務承擔其責任，對於任何客戶的任何操作（包括但不限於以“交易高手”之交易行為作為基礎的跟單交易行為），其交易風險和交易結果均由客戶自行承擔。"
         },
         amtStatement9: {
             zh: "3. TigerWit不承担任何客户的任何交易盈亏风险或交易损失，除非有任何相反证据表明TigerWit对于某项交易应承担部分或全部风险或责任。",
             en: "3. TigerWit shall not bear any profit and loss risks in trading or trading losses, unless there is any evidence proving that TigerWit should assume partial or all risks or responsibilities for a certain trade.",
-            vi: "^^-^^",
+            vi: "3. TigerWit không chịu bất kỳ rủi ro lợi nhuận và lỗ nào khi giao dịch hoặc thua lỗ khi giao dịch, trừ khi có bất kỳ bằng chứng chứng minh rằng TigerWit nên chịu một phần hoặc toàn bộ rủi ro hoặc trách nhiệm đối với một giao dịch nhất định.",
             "zh-Hant": "3. TigerWit不承擔任何客戶的任何交易盈虧風險或交易損失，除非有任何相反證據表明TigerWit對於某項交易應承擔部分或全部風險或責任。"
         },
         amtStatement10: {
             zh: "4. TigerWit网站出现的任何信息包括但不限于评论、预测、图表、指标、理论、直接的或暗示的指示均只作为参考，您须对任何自主决定的行为负责。",
             en: "4. Any information on TigerWit's website, including but not limited to comment, forecast, charts, indicators, theories, explicit or implied instructions, is for reference only. The investor shall bear liabilities on his/her own for any independent decisions.",
-            vi: "^^-^^",
+            vi: "4. Bất kỳ thông tin nào trên trang web của TigerWit, bao gồm nhưng không giới hạn bình luận, dự báo, biểu đồ, chỉ số, lý thuyết, hướng dẫn rõ ràng hoặc ẩn ý nào, chỉ là để tham khảo. Chủ đầu tư tự chịu trách nhiệm về bất kỳ quyết định độc lập nào.",
             "zh-Hant": "4. TigerWit網站出現的任何信息包括但不限於評論、預測、圖表、指標、理論、直接的或暗示的指示均只作為參考，您須對任何自主決定的行為負責。"
         },
         amtStatement11: {
             zh: "5. TigerWit所提供之“交易高手”及相关信息，TigerWit保证其历史数据的准确性，TigerWit不对因上述资料全部或部分内容产生的或因依赖该资料而引致的任何损失承担任何责任。",
             en: "5. As for the \"trading masters\" and relevant information offered by TigerWit, TigerWit shall guarantee the accuracy of the historical data thereof, but shall not bear any liability for any losses caused by partial or all the above information or incurred by reliance on the above information.",
-            vi: "^^-^^",
+            vi: "5. Đối với \"nhà giao dịch chính \" và thông tin liên quan do TigerWit cung cấp, TigerWit phải đảm bảo tính chính xác của dữ liệu trong lịch sử, nhưng sẽ không chịu bất kỳ trách nhiệm nào đối với bất kỳ tổn thất nào phát sinh dựa trên một phần hoặc toàn bộ thông tin trên.",
             "zh-Hant": "5. TigerWit所提供之“交易高手”及相關信息，TigerWit保證其歷史數據的準確性，TigerWit不對因上述資料全部或部分內容產生的或因依賴該資料而引致的任何損失承擔任何責任。"
         },
         amtStatement12: {
             zh: "6. TigerWit对于使用的跟单服务或无法使用跟单服务所导致的任何直接、间接、衍生或特别损害，不负任何赔偿责任，除非有任何相反证据表明TigerWit应对此承担责任。",
             en: "6. TigerWit shall not assume any liability for compensation for any direct, indirect, derived or special losses due to use or failure to use order following services, unless there is any evidence proving that TigerWit shall be responsible for such losses.",
-            vi: "^^-^^",
+            vi: "6. TigerWit không chịu trách nhiệm bồi thường cho bất kỳ tổn thất trực tiếp, gián tiếp, có nguồn gốc hoặc đặc biệt nào do sử dụng hoặc không sử dụng các dịch vụ theo dõi sao chép lệnh giao dịch, trừ khi có bất kỳ bằng chứng nào chứng minh rằng TigerWit chịu trách nhiệm về những tổn thất đó.",
             "zh-Hant": "6. TigerWit對於使用的跟單服務或無法使用跟單服務所導致的任何直接、間接、衍生或特別損害，不負任何賠償責任，除非有任何相反證據表明TigerWit應對此承擔責任。"
         },
         amtStatement13: {
             zh: "7. TigerWit可能因合作方或网络提供商或电信部门的互联网软硬件设备故障或失灵、或人为操作疏忽而全部或部分中断、延迟、遗漏、误导或造成资料传输或储存上的错误、或遭第三人侵入系统篡改或伪造变造资料等，除非有相反证据否则TigerWit不承担任何责任。",
             en: "7. In case of partial or full interruption, delay, misdirection or wrong data transmission or storage due to malfunction or failure of Internet software and hardware devices or human errors, or in case of garbled or forged data by third-party invasion system, TigerWit shall not bear any liabilities unless there is any contrary evidence.",
-            vi: "^^-^^",
+            vi: "7. Trong trường hợp gián đoạn một phần hoặc toàn bộ, trì hoãn, chuyển hướng sai hoặc truyền dữ liệu sai hoặc lưu trữ do sự cố hoặc lỗi của phần mềm Internet và thiết bị phần cứng hoặc lỗi của con người hoặc trong trường hợp dữ liệu bị cắt xén hoặc giả mạo bởi hệ thống xâm nhập của bên thứ ba, TigerWit sẽ không chịu bất kỳ khoản nợ nào trừ khi có bất kỳ bằng chứng nào ngược lại.",
             "zh-Hant": "7. TigerWit可能因合作方或網絡提供商或電信部門的互聯網軟硬件設備故障或失靈、或人為操作疏忽而全部或部分中斷、延遲、遺漏、誤導或造成資料傳輸或儲存上的錯誤、或遭第三人侵入系統篡改或偽造變造資料等，除非有相反證據否則TigerWit不承擔任何責任。"
         },
         amtStatement14: {
             zh: "8. TigerWit在获得客户同意并授权的情况下，可以为客户开启跟单操作及进行跟单交易、按约定实时扣除客户跟单净利润盈利中的20%支付给“交易高手”作为佣金或奖励。客户已知晓并同意接受该跟单交易模式，接受利润扣除方案，并愿意接受该交易模式的交易风险。",
             en: "8. With the consent and authorization of the client, TigerWit can initiate order following operation, perform order following transactions and deduct 20% of net profits earned by the client by order following to pay to the \"trading master\" as commissions or bonuses. The client has acknowledged and agreed to accept this order following mode and the profit deduction scheme and is also willing to bear the trading risks caused thereby.",
-            vi: "^^-^^",
+            vi: "8. Với sự đồng ý và ủy quyền của khách hàng, TigerWit có thể kích hoạt hoạt động của lệnh sao chép theo sau, thực hiện các giao dịch theo dõi và trừ 20% lợi nhuận ròng mà khách hàng thu được nhờ lệnh sao chép để trả cho \"nhà giao dịch chính \" làm hoa hồng hoặc tiền thưởng. Khách hàng đã thừa nhận và đồng ý chấp nhận lệnh này theo phương thức và phương án khấu trừ lợi nhuận và cũng sẵn sàng chịu rủi ro giao dịch do đó gây ra.",
             "zh-Hant": "8. TigerWit在獲得客戶同意並授權的情況下，可以為客戶開啟跟單操作及進行跟單交易、按約定實時扣除客戶跟單凈利潤盈利中的20%支付給“交易高手”作為傭金或獎勵。客戶已知曉並同意接受該跟單交易模式，接受利潤扣除方案，並願意接受該交易模式的交易風險。"
         },
         
@@ -8379,2275 +8379,2275 @@ module.exports = function () {
         copytransaction6: {
             zh: "TigerWit交易平台风险提示及免责条款",
             en: "Risk Warning and Exemptions for Trading on TigerWit Trading Platform",
-            vi: "^^-^^",
+            vi: "Cảnh báo rủi ro và miễn trừ giao dịch trên nền tảng giao dịch TigerWit",
             "zh-Hant": "TigerWit交易平臺風險提示及免責條款"
         },
         copytransaction7: {
             zh: "1. TigerWit交易平台是从事为个人投资者提供全球化社交化投资平台， TigerWit向投资者提供的一切服务，均依托于法律法规之约束。",
             en: "1. TigerWit trading platform is a global social investment platform for individual investors and all services rendered by TigerWit are all in compliance with the law.",
-            vi: "^^-^^",
+            vi: "1. Nền tảng giao dịch TigerWit là một nền tảng đầu tư xã hội toàn cầu cho các nhà đầu tư cá nhân và tất cả các dịch vụ do TigerWit cung cấp đều tuân thủ luật pháp.",
             "zh-Hant": "1. TigerWit交易平臺是從事為個人投資者提供全球化社交化投資平臺， TigerWit向投資者提供的壹切服務，均依托於法律法規之約束。"
         },
         copytransaction8: {
             zh: "2. TigerWit仅就跟单服务承担其责任，对于任何客户的任何操作（包括但不限于以“交易高手”之交易行为作为基础的跟单交易行为），其交易风险和交易结果均由客户自行承担。",
             en: "2. TigerWit shall bear responsibilities for the order following services rendered, while all trading risks and consequences incurred by any operation (including but not limited to order following trade based on the trading behaviours of the \"trading master\") of any clients shall be borne by the client.",
-            vi: "^^-^^",
+            vi: "2. TigerWit chịu trách nhiệm về lệnh dịch vụ sao chép lệnh được cung cấp, trong khi tất cả các rủi ro và hậu quả kinh doanh phát sinh từ bất kỳ hoạt động nào (bao gồm nhưng không giới hạn các lệnh giao dịch sao chép dựa trên hành vi giao dịch của \"nhà giao dịch chính\") của bất kỳ khách hàng nào sẽ do khách hàng chịu.",
             "zh-Hant": "2. TigerWit僅就跟單服務承擔其責任，對於任何客戶的任何操作（包括但不限於以“交易高手”之交易行為作為基礎的跟單交易行為），其交易風險和交易結果均由客戶自行承擔。"
         },
         copytransaction9: {
             zh: "3. TigerWit不承担任何客户的任何交易盈亏风险或交易损失，除非有任何相反证据表明TigerWit对于某项交易应承担部分或全部风险或责任。",
             en: "3. TigerWit shall not bear any profit and loss risks in trading or trading losses, unless there is any evidence proving that TigerWit should assume partial or all risks or responsibilities for a certain trade.",
-            vi: "^^-^^",
+            vi: "3. TigerWit không chịu bất kỳ rủi ro lợi nhuận và lỗ nào khi giao dịch hoặc thua lỗ khi giao dịch, trừ khi có bất kỳ bằng chứng chứng minh rằng TigerWit nên chịu một phần hoặc toàn bộ rủi ro hoặc trách nhiệm đối với một giao dịch nhất định.",
             "zh-Hant": "3. TigerWit不承擔任何客戶的任何交易盈虧風險或交易損失，除非有任何相反證據表明TigerWit對於某項交易應承擔部分或全部風險或責任。"
         },
         copytransaction10: {
             zh: "4. TigerWit网站出现的任何信息包括但不限于评论、预测、图表、指标、理论、直接的或暗示的指示均只作为参考，您须对任何自主决定的行为负责。",
             en: "4. Any information on TigerWit's website, including but not limited to comment, forecast, charts, indicators, theories, explicit or implied instructions, is for reference only. The investor shall bear liabilities on his/her own for any independent decisions.",
-            vi: "^^-^^",
+            vi: "4. Bất kỳ thông tin nào trên trang web của TigerWit, bao gồm nhưng không giới hạn bình luận, dự báo, biểu đồ, chỉ số, lý thuyết, hướng dẫn rõ ràng hoặc ẩn ý nào, chỉ là để tham khảo. Chủ đầu tư tự chịu trách nhiệm về bất kỳ quyết định độc lập nào.",
             "zh-Hant": "4. TigerWit網站出現的任何信息包括但不限於評論、預測、圖表、指標、理論、直接的或暗示的指示均只作為參考，您須對任何自主決定的行為負責。"
         },
         copytransaction11: {
             zh: "5. TigerWit所提供之“交易高手”及相关信息，TigerWit保证其历史数据的准确性，TigerWit不对因上述资料全部或部分内容产生的或因依赖该资料而引致的任何损失承担任何责任。",
             en: "5. As for the \"trading masters\" and relevant information offered by TigerWit, TigerWit shall guarantee the accuracy of the historical data thereof, but shall not bear any liability for any losses caused by partial or all the above information or incurred by reliance on the above information.",
-            vi: "^^-^^",
+            vi: "5. Đối với \"nhà giao dịch chính \" và thông tin liên quan do TigerWit cung cấp, TigerWit phải đảm bảo tính chính xác của dữ liệu trong lịch sử, nhưng sẽ không chịu bất kỳ trách nhiệm nào đối với bất kỳ tổn thất nào phát sinh dựa trên một phần hoặc toàn bộ thông tin trên.",
             "zh-Hant": "5. TigerWit所提供之“交易高手”及相關信息，TigerWit保證其歷史數據的準確性，TigerWit不對因上述資料全部或部分內容產生的或因依賴該資料而引致的任何損失承擔任何責任。"
         },
         copytransaction12: {
             zh: "6. TigerWit对于使用的跟单服务或无法使用跟单服务所导致的任何直接、间接、衍生或特别损害，不负任何赔偿责任，除非有任何相反证据表明TigerWit应对此承担责任。",
             en: "6. TigerWit shall not assume any liability for compensation for any direct, indirect, derived or special losses due to use or failure to use order following services, unless there is any evidence proving that TigerWit shall be responsible for such losses.",
-            vi: "^^-^^",
+            vi: "6. TigerWit không chịu trách nhiệm bồi thường cho bất kỳ tổn thất trực tiếp, gián tiếp, có nguồn gốc hoặc đặc biệt nào do sử dụng hoặc không sử dụng các dịch vụ theo dõi sao chép lệnh giao dịch, trừ khi có bất kỳ bằng chứng nào chứng minh rằng TigerWit chịu trách nhiệm về những tổn thất đó.",
             "zh-Hant": "6. TigerWit對於使用的跟單服務或無法使用跟單服務所導致的任何直接、間接、衍生或特別損害，不負任何賠償責任，除非有任何相反證據表明TigerWit應對此承擔責任。"
         },
         copytransaction13: {
             zh: "7. TigerWit可能因合作方或网络提供商或电信部门的互联网软硬件设备故障或失灵、或人为操作疏忽而全部或部分中断、延迟、遗漏、误导或造成资料传输或储存上的错误、或遭第三人侵入系统篡改或伪造变造资料等，除非有相反证据否则TigerWit不承担任何责任。",
             en: "7. In case of partial or full interruption, delay, misdirection or wrong data transmission or storage due to malfunction or failure of Internet software and hardware devices or human errors, or in case of garbled or forged data by third-party invasion system, TigerWit shall not bear any liabilities unless there is any contrary evidence.",
-            vi: "^^-^^",
+            vi: "7. Trong trường hợp gián đoạn một phần hoặc toàn bộ, trì hoãn, chuyển hướng sai hoặc truyền dữ liệu sai hoặc lưu trữ do sự cố hoặc lỗi của phần mềm Internet và thiết bị phần cứng hoặc lỗi của con người hoặc trong trường hợp dữ liệu bị cắt xén hoặc giả mạo bởi hệ thống xâm nhập của bên thứ ba, TigerWit sẽ không chịu bất kỳ khoản nợ nào trừ khi có bất kỳ bằng chứng nào ngược lại.",
             "zh-Hant": "7. TigerWit可能因合作方或網絡提供商或電信部門的互聯網軟硬件設備故障或失靈、或人為操作疏忽而全部或部分中斷、延遲、遺漏、誤導或造成資料傳輸或儲存上的錯誤、或遭第三人侵入系統篡改或偽造變造資料等，除非有相反證據否則TigerWit不承擔任何責任。"
         },
         copytransaction14: {
             zh: "8. TigerWit在获得客户同意并授权的情况下，可以为客户开启跟单操作及进行跟单交易、按约定实时扣除客户跟单净利润盈利中的20%支付给“交易高手”作为佣金或奖励。客户已知晓并同意接受该跟单交易模式，接受利润扣除方案，并愿意接受该交易模式的交易风险。",
             en: "8. With the consent and authorization of the client, TigerWit can initiate order following operation, perform order following transactions and deduct 20% of net profits earned by the client by order following to pay to the \"trading master\" as commissions or bonuses. The client has acknowledged and agreed to accept this order following mode and the profit deduction scheme and is also willing to bear the trading risks caused thereby.",
-            vi: "^^-^^",
+            vi: "8. Với sự đồng ý và ủy quyền của khách hàng, TigerWit có thể kích hoạt hoạt động của lệnh sao chép theo sau, thực hiện các giao dịch theo dõi và trừ 20% lợi nhuận ròng mà khách hàng thu được nhờ lệnh sao chép để trả cho \"nhà giao dịch chính \" làm hoa hồng hoặc tiền thưởng. Khách hàng đã thừa nhận và đồng ý chấp nhận lệnh này theo phương thức và phương án khấu trừ lợi nhuận và cũng sẵn sàng chịu rủi ro giao dịch do đó gây ra.",
             "zh-Hant": "8. TigerWit在獲得客戶同意並授權的情況下，可以為客戶開啟跟單操作及進行跟單交易、按約定實時扣除客戶跟單凈利潤盈利中的20%支付給“交易高手”作為傭金或獎勵。客戶已知曉並同意接受該跟單交易模式，接受利潤扣除方案，並願意接受該交易模式的交易風險。"
         },
         copytransaction1: {
             zh: "客户声明",
             en: "Declaration by Client",
-            vi: "^^-^^",
+            vi: "Tuyên bố của khách hàng",
             "zh-Hant": "客戶聲明"
         },
         copytransaction2: {
             zh: "本人已阅读跟随外汇交易的相关《风险披露书》、《TigerWit交易平台风险提示免责条款》，并已完全理解和接受上述文件的全部内容，清楚了解跟单交易的内容及可能出现的风险。本人的投资决策完全基于本人的独立自主判断做出，并自愿承担因此产生的相关风险和全部后果。",
             en: "I have read the Risk Disclosure Statement related to foreign exchange trade and Risk Warning and Exemptions for Trading on TigerWit Trading Platform, and have fully understood and accepted all contents contained in the above documents and learnt and acknowledged the contents and potential risks of order following trade. The investment decision of mine is made fully based on my independent judgment and I will bear all related risks and all consequences incurred thereby.",
-            vi: "^^-^^",
+            vi: "Tôi đã đọc Tuyên bố Tiết lộ Rủi ro liên quan đến giao dịch ngoại hối và Cảnh báo Rủi ro và Miễn trừ Giao dịch trên Sàn Giao dịch TigerWit, và đã hiểu và chấp nhận đầy đủ tất cả các nội dung trong các tài liệu trên và đã học và thừa nhận nội dung và rủi ro . Quyết định đầu tư của tôi được thực hiện hoàn toàn dựa trên phán quyết độc lập của tôi và tôi sẽ chịu mọi rủi ro liên quan và mọi hậu quả phát sinh từ đó.",
             "zh-Hant": "本人已閱讀跟隨外匯交易的相關《風險披露書》、《TigerWit交易平臺風險提示免責條款》，並已完全理解和接受上述文件的全部內容，清楚了解跟單交易的內容及可能出現的風險。本人的投資決策完全基於本人的獨立自主判斷做出，並自願承擔因此產生的相關風險和全部後果。"
         },
         copytransaction3: {
             zh: "我同意并特此授权TigerWit作为我的委托人，自我点击“同意”此项授权之时起，以我的名义代我行使交易之权利，并同意采用跟单方式跟随我自选的“交易高手”的信号进行交易，由此产生的一切责任和风险均由我个人承担。",
             en: "I agree and hereby appoint TigerWit as my consignor, which will exercise the trading right on behalf of me after I click \"Agree\", and agree to make trades in the mode of following the \"trading master\" opted by me and all obligations and risks produced thereby shall be undertaken by myself.",
-            vi: "^^-^^",
+            vi: "Tôi đồng ý và chỉ định TigerWit làm người cung cấp dịch vụ của mình, sẽ thực hiện quyền giao dịch thay mặt cho tôi sau khi tôi nhấp vào \"Đồng ý\" và đồng ý giao dịch theo phương thức \"nhà giao dịch chính\" được tôi chọn và mọi nghĩa vụ và rủi ro do đó nảy sinh sẽ do chính tôi chịu trách nhiệm.",
             "zh-Hant": "我同意並特此授權TigerWit作為我的委托人，自我點擊“同意”此項授權之時起，以我的名義代我行使交易之權利，並同意采用跟單方式跟隨我自選的“交易高手”的信號進行交易，由此產生的壹切責任和風險均由我個人承擔。"
         },
         copytransaction4: {
             zh: "我已知晓TigerWit的跟单规则：按照跟随资金与“交易高手”账户资金等比例开仓，不足0.01的按照0.01开仓，开仓订单即为跟随订单。我已知晓在TigerWit开户的所有客户均可以成为TigerWit的“交易高手”，TigerWit对于其客户成为“交易高手”没有设定具体的条件和标准。",
             en: "I have acknowledged the following rules of TigerWit that position will be opened based on the proportion between following capital and capital in account of the \"trading master\" and that position will be opened based on that of 0.01 for those less than 0.01 and the open order would be the following order.I have known that all customers in the TigerWit's foreign exchange accounts can become a foreign exchange trading master, tiger foreign exchange for its customers to become a trading master did not set specific conditions and standards.",
-            vi: "^^-^^",
+            vi: "Tôi đã thừa nhận các quy tắc sau đây của TigerWit rằng vị thế sẽ được mở dựa trên tỷ lệ giữa vốn và vốn trong tài khoản của \"nhà  giao dịch chính\" và vị thế đó sẽ được mở dựa trên 0,01 cho những lệnh nhỏ hơn 0,01 và lệnh mở sẽ là lệnh sao chép theo sau.NODE-loadERR",
             "zh-Hant": "我已知曉TigerWit的跟單規則：按照跟隨資金與“交易高手”賬戶資金等比例開倉，不足0.01的按照0.01開倉，開倉訂單即為跟隨訂單。我已知曉在TigerWit開戶的所有客戶均可以成為TigerWit的“交易高手”，TigerWit對於其客戶成為“交易高手”沒有設定具體的條件和標準。"
         },
         copytransaction5: {
             zh: "我同意并授权TigerWit从我在任一自然月内已平仓的订单实时扣除20%利润，并于下一自然月15日前核对上一自然月整体盈利金额并核算佣金或奖金后，将其支付给“交易高手”作为跟单佣金或奖励。我确定已知晓跟单交易中存在的风险，知晓“交易高手”历史成绩或历史业绩不代表未来成绩或业绩，任何跟单操作导致的损失及责任由我个人承担。",
             en: "I agree and authorize TigerWit to deduct 20% profits in real time from the concluded order at any natural month and check the overall amount of profits of the previous natural month prior to the 15th day of the following month. In addition, after calculating the commissions or bonuses, they will be paid to the \"trading master\" as commissions or bonuses for the following orders. I have confirmed and acknowledged that there are risks in order following trading and also learned that the historical performance of the \"trading master\" does not represent performance in the future and that all losses and responsibilities incurred by order following shall be borne by myself.",
-            vi: "^^-^^",
+            vi: "Tôi đồng ý và ủy quyền cho TigerWit khấu trừ 20% lợi nhuận trong thời gian thực từ lệnh đã kết thúc vào bất kỳ tháng tự nhiên nào và kiểm tra tổng số lợi nhuận của tháng trước đó trước ngày 15 của tháng tiếp theo. Ngoài ra, sau khi tính tiền hoa hồng hoặc tiền thưởng, khoản tiền này sẽ được trả cho \"nhà giao dịch chính\" làm hoa hồng hoặc tiền thưởng cho các lệnh sao chép theo sau. Tôi đã xác nhận và thừa nhận rằng có những rủi ro trong giao dịch sau và cũng biết rằng hiệu suất trước đây trong quá khứ của \"nhà giao dịch chính\" không đại diện cho kết quả trong tương lai và tất cả các tổn thất và trách nhiệm phát sinh do lệnh sao chép theo dõi sẽ do chính bản thân tôi chịu.",
             "zh-Hant": "我同意並授權TigerWit從我在任壹自然月內已平倉的訂單實時扣除20%利潤，並於下壹自然月15日前核對上壹自然月整體盈利金額並核算傭金或獎金後，將其支付給“交易高手”作為跟單傭金或獎勵。我確定已知曉跟單交易中存在的風險，知曉“交易高手”歷史成績或歷史業績不代表未來成績或業績，任何跟單操作導致的損失及責任由我個人承擔。"
         },
         amtCategorization1: {
             zh: "序言",
             en: "Introduction",
-            vi: "^^-^^",
+            vi: "Giới thiệu",
             "zh-Hant": "序言"
         },
         amtCategorization2: {
             zh: "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
             en: "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-            vi: "^^-^^",
+            vi: "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Công ty\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
             "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。"
         },
         amtCategorization3: {
             zh: "2.无论是哪一种客户类型，本公司均不向客户提供投资建议。",
             en: "2.The Firm does not offer investment advice to its Client regardless of client categorization.",
-            vi: "^^-^^",
+            vi: "2.Công ty không cung cấp tư vấn đầu tư cho Khách hàng của mình bất kể phân loại khách hàng.",
             "zh-Hant": "2.無論是哪壹種客戶類型，本公司均不向客戶提供投資建議。"
         },
         amtCategorization4: {
             zh: "3.本公司对“客户”的定义如下：",
             en: "3.The Firm will assume a person whom the Firm provides, intends to provide or has provided",
-            vi: "^^-^^",
+            vi: "3.Công ty sẽ đảm nhận một người mà Công ty cung cấp, dự định cung cấp hoặc đã cung cấp",
             "zh-Hant": "3.本公司對“客戶”的定義如下："
         },
         amtCategorization5: {
             zh: "（a）在从事受监管活动过程中提供、打算提供或已经提供服务的人士；",
             en: "(a) a service in the course of carrying on a regulated activity, or ",
-            vi: "^^-^^",
+            vi: "(a) một dịch vụ trong quá trình thực hiện một hoạt động được quy định, hoặc",
             "zh-Hant": "（a）在從事受監管活動過程中提供、打算提供或已經提供服務的人士；"
         },
         amtCategorization6: {
             zh: "（b）或提供、打算提供、已经提供辅助性服务的人士，均属于本公司的“客户”。客户包括潜在客户。",
             en: "(b) an ancillary service, is a “Client” of the Firm. A “Client” includes a potential client.",
-            vi: "^^-^^",
+            vi: "(b) một dịch vụ phụ trợ, là một “Khách hàng” của Công ty. \"Khách hàng\" bao gồm khách hàng tiềm năng.",
             "zh-Hant": "（b）或提供、打算提供、已經提供輔助性服務的人士，均屬於本公司的“客戶”。客戶包括潛在客戶。"
         },
         amtCategorization7: {
             zh: "根据巴哈马证券监察委员会对金融投资推广的规定，如果公司向某人或可能向某人推广金融服务，那么该人士就是公司所联系或批准的“客户”。",
             en: "In relation to the SCB’s Financial Promotion rules, a person to whom a financial promotion is or is likely to be communicated is a “Client” of the Firm that communicates or approves it.",
-            vi: "^^-^^",
+            vi: "Liên quan đến các quy tắc Khuyến mãi tài chính của SCB, một người quảng cáo tài chính hoặc có khả năng được cho là là “Khách hàng” của Công ty truyền đạt hoặc phê duyệt nó.",
             "zh-Hant": "根據巴哈馬證券監察委員會對金融投資推廣的規定，如果公司向某人或可能向某人推廣金融服務，那麽該人士就是公司所聯系或批準的“客戶”。"
         },
         amtCategorization8: {
             zh: "分类标准",
             en: "Categorization Criteria",
-            vi: "^^-^^",
+            vi: "Tiêu chí phân loại",
             "zh-Hant": "分類標準"
         },
         amtCategorization9: {
             zh: "1.客户分类有三种。不同的类别享受不同级别的保护。",
             en: "1.There are three Client categories. Each category has a different level of protection afforded to it.",
-            vi: "^^-^^",
+            vi: "1.Có ba loại Khách hàng. Mỗi loại có một mức độ bảo vệ khác nhau dành cho từng loại.",
             "zh-Hant": "1.客戶分類有三種。不同的類別享受不同級別的保護。"
         },
         amtCategorization10: {
             zh: "本公司会对客户进行适当的调查问卷，需要客户配合回答相关问题，以便了解客户对希望开设的交易账户所具备的相关交易经验和知识。",
             en: "As part of the Firm’s account opening procedure the Firm conducts an Appropriateness Test where the Client is asked a number of questions to enable the Firm to assess the Client’s experience and knowledge of trading for the requested trading account you wish to open.",
-            vi: "^^-^^",
+            vi: "Là một phần của thủ tục mở tài khoản của Công ty, Công ty tiến hành Kiểm tra mức độ phù hợp trong đó Khách hàng được hỏi một số câu hỏi để cho phép Công ty đánh giá kinh nghiệm của Khách hàng và kiến thức giao dịch cho tài khoản giao dịch mà bạn muốn mở.",
             "zh-Hant": "本公司會對客戶進行適當的調查問卷，需要客戶配合回答相關問題，以便了解客戶對希望開設的交易賬戶所具備的相關交易經驗和知識。"
         },
         amtCategorization11: {
             zh: "本公司会将所有客户自动归类为零售客户，并在本公司的客户协议中通知客户。",
             en: "The Firm will automatically categorise all Clients as a Retail Client as notified to the Client within the Firm’s Client Agreement.",
-            vi: "^^-^^",
+            vi: "Công ty sẽ tự động phân loại tất cả Khách hàng là Khách hàng cá nhân như được thông báo cho Khách hàng trong Thỏa thuận khách hàng của công ty.",
             "zh-Hant": "本公司會將所有客戶自動歸類為零售客戶，並在本公司的客戶協議中通知客戶。"
         },
         amtCategorization12: {
             zh: "若客户希望被重新分类，需要联系本公司并通过书面方式提出重新分类的申请，以便于本公司考虑和审核。",
             en: "If the Client wishes to be re-classified then the client should contact the Firm in writing with his/her/their re-categorization request for the Firm’s consideration and review.",
-            vi: "^^-^^",
+            vi: "Nếu Khách hàng muốn được phân loại lại thì khách hàng nên liên hệ với Công ty bằng văn bản với yêu cầu phân loại lại của anh ấy/ chị ấy/họ để Công ty cân nhắc và xem xét.",
             "zh-Hant": "若客戶希望被重新分類，需要聯系本公司並通過書面方式提出重新分類的申請，以便於本公司考慮和審核。"
         },
         amtCategorization13: {
             zh: "本公司保留不时审核客户分类的权利，必要时可能进行重新分类。",
             en: "The Firm reserves the right to review the Client’s categorization from time to time and may re- categorise you if necessary.",
-            vi: "^^-^^",
+            vi: "Công ty có quyền xem xét phân loại Khách hàng theo thời gian và có thể phân loại lại bạn nếu cần.",
             "zh-Hant": "本公司保留不時審核客戶分類的權利，必要時可能進行重新分類。"
         },
         amtCategorization14: {
             zh: "相关法律设定的客户分类标准如下：",
             en: "The categorization criteria set by the relevant legislation for Clients are as follows: ",
-            vi: "^^-^^",
+            vi: "Các tiêu chí phân loại được đặt ra bởi pháp luật liên quan cho Khách hàng như sau:",
             "zh-Hant": "相關法律設定的客戶分類標準如下："
         },
         amtCategorization15: {
             zh: "2.“零售客户”是指不属于专业客户或和资格交易对手的个人或公司。一般而言，零售客户被视为在投资领域并无相关经验或经验不足的客户。因此，根据 SCB 的规定，零售客户有权获得最高级别的保护。包括：客户资金独立于本公司自有资金；获得金融申诉服务机构和金融服务赔偿计划的保障。",
             en: "2.‘Retail Client’ is a client who is not a Professional Client or an Eligible Counterparty. Generally, a Retail Client is not considered to have relevant or sufficient experience for investment business. Therefore, Retail Clients are afforded with the highest level of protection under SCB regulation. Such protection includes the segregation of client money from the Firm’s own money along with access to the Financial Ombudsman Service and the Financial Services Compensation Scheme.",
-            vi: "^^-^^",
+            vi: "2.Khách hàng Lẻ ’là khách hàng không phải là Khách hàng Chuyên nghiệp hoặc Đối tác với tư cách Pháp lý. Nói chung, một Khách hàng Lẻ không được coi là có kinh nghiệm có liên quan hoặc đủ để đầu tư kinh doanh. Do đó, Khách hàng Lẻ được hưởng mức bảo hộ cao nhất theo quy định của SCB. Sự bảo vệ này bao gồm việc phân chia tiền của khách hàng từ tiền riêng của Công ty cùng với quyền truy cập vào Dịch vụ Thanh tra Tài chính và Đề án Bồi thường Dịch vụ Tài chính.",
             "zh-Hant": "2.“零售客戶”是指不屬於專業客戶或和資格交易對手的個人或公司。壹般而言，零售客戶被視為在投資領域並無相關經驗或經驗不足的客戶。因此，根據 SCB 的規定，零售客戶有權獲得最高級別的保護。包括：客戶資金獨立於本公司自有資金；獲得金融申訴服務機構和金融服務賠償計劃的保障。"
         },
         amtCategorization16: {
             zh: "3.“专业客户”是指固有专业客户（PerSe Professional Client ） 或 选 择 性 专 业 客 户（Elective Prefessional Client）。",
             en: "3.‘Professional Client’ is a client that is either a per se professional client or an elective professional client",
-            vi: "^^-^^",
+            vi: "3.Khách hàng chuyên nghiệp ’là một khách hàng là khách hàng chuyên nghiệp hoặc một khách hàng chuyên nghiệp tự chọn",
             "zh-Hant": "3.“專業客戶”是指固有專業客戶（PerSe Professional Client ） 或 選 擇 性 專 業 客 戶（Elective Prefessional Client）。"
         },
         amtCategorization17: {
             zh: "4.“固有专业客户”",
             en: "4.‘Per Se Professional Client’",
-            vi: "^^-^^",
+            vi: "4.‘Khách Hàng Chuyên Nghiệp Cá Nhân’",
             "zh-Hant": "4.“固有專業客戶”"
         },
         amtCategorization18: {
             zh: "固有专业客户包括以下范围：",
             en: " ",
-            vi: "^^-^^",
+            vi: " ",
             "zh-Hant": "固有專業客戶包括以下範圍："
         },
         amtCategorization19: {
             zh: "A 在金融市场中需要经授权并接受监管而运营的实体，包括：(1) 信贷机构；(2) 投资公司；(3) 任何其他获得授权和监管的金融机构；(4) 保险公司；(5) 集 体 投 资 基 金 （ Collective investmentschemes）或该类基金的管理公司；(6) 退休基金和退休基金的管理公司；(7) 商品或商品衍生工具交易商；(8) 任何其他机构投资者。",
             en: "A Per se professional client is an entity required to be authorised to operate in the financial markets, including: (1) A credit institution; (2) An investment firm; (3) Any other authorised and regulated financial institution; (4) An insurance company; (5) A collective investment scheme or the management company of such a scheme; (6) A pension fund or the management company of a pension fund; (7) A commodity or commodity derivative dealer; (8) Any other institutional investor.",
-            vi: "^^-^^",
+            vi: "Một khách hàng chuyên nghiệp Cá Nhân là một thực thể được cho phép hoạt động trên thị trường tài chính, bao gồm: (1) Một tổ chức tín dụng; (2) Một công ty đầu tư; (3) Bất kỳ tổ chức tài chính được ủy quyền và quản lý nào khác; (4) Một công ty bảo hiểm; (5) Một dự án kế hoạch đầu tư tập thể hoặc công ty quản lý của một dự án như vậy; (6) Một quỹ hưu trí hoặc công ty quản lý quỹ hưu trí; (7) Một đại lý phái sinh hàng hóa hoặc hàng hóa; (8) Bất kỳ nhà đầu tư tổ chức nào khác.",
             "zh-Hant": "A 在金融市場中需要經授權並接受監管而運營的實體，包括：(1) 信貸機構；(2) 投資公司；(3) 任何其他獲得授權和監管的金融機構；(4) 保險公司；(5) 集 體 投 資 基 金 （ Collective investmentschemes）或該類基金的管理公司；(6) 退休基金和退休基金的管理公司；(7) 商品或商品衍生工具交易商；(8) 任何其他機構投資者。"
         },
         amtCategorization20: {
             zh: "B 满足以下任意两个要求的大型企业：（1）公司资产总额达 2000 万美元或以上；（2）净营业额达 4000 万美元或以上；（3）自有资金达 200 万美元或以上。",
             en: "A large undertaking meeting two of the following conditions size requirements on a company basis: (1) Balance sheet total of $20 million or over; (2) New turnover of $40 million or over; (3) Own funds of $2 million or more.",
-            vi: "^^-^^",
+            vi: "Một công việc kinh doanh lớn đáp ứng hai yêu cầu điều kiện về quy mô sau đây trên cơ sở tiêu chí công ty: (1) Tổng số dư của bảng cân đối là 20 triệu đô la trở lên; (2) Doanh thu mới từ 40 triệu đô la trở lên; (3) Các quỹ riêng từ 2 triệu đô la trở lên.",
             "zh-Hant": "B 滿足以下任意兩個要求的大型企業：（1）公司資產總額達 2000 萬美元或以上；（2）凈營業額達 4000 萬美元或以上；（3）自有資金達 200 萬美元或以上。"
         },
         amtCategorization21: {
             zh: "C 满足以下条件的大型企业或机构：",
             en: "Or, a large undertaking meeting any of the following conditions: ",
-            vi: "^^-^^",
+            vi: "Hoặc, một công việc kinh doanh lớn đáp ứng bất kỳ điều kiện nào sau đây:",
             "zh-Hant": "C 滿足以下條件的大型企業或機構："
         },
         amtCategorization22: {
-            zh: "(a)现有（或前两年内任一时间拥有）已催缴股本或净资产不少于 5000 万美元（或在同时期内等值外币金额）的法人团体（包括有限责任公司合伙企业），或法人团体的控股公司或子公司；",
+            zh: "(a) 现有（或前两年内任一时间拥有）已催缴股本或净资产不少于 5000 万美元（或在同时期内等值外币金额）的法人团体（包括有限责任公司合伙企业），或法人团体的控股公司或子公司；",
             en: "(a) A body corporate (including a limited liability partnership) which has (or any of whose holding companies or subsidiaries has) (or has had at any time during the previous two years) called up share capital or net assets, of at least $50 million (or its equivalent in any other currency at the relevant time);",
-            vi: "^^-^^",
+            vi: "(a) Một thực thể Công ty (bao gồm cả công ty trách nhiệm hữu hạn) đã (hoặc bất kỳ công ty mẹ hoặc công ty con nào có) (hoặc đã có tại bất kỳ thời điểm nào trong hai năm trước) gọi vốn cổ phần hoặc tài sản ròng, ít nhất 50 triệu đô la (hoặc tương đương với bất kỳ loại tiền tệ nào khác tại thời điểm thích hợp);",
             "zh-Hant": "(a)現有（或前兩年內任壹時間擁有）已催繳股本或凈資產不少於 5000 萬美元（或在同時期內等值外幣金額）的法人團體（包括有限責任公司合夥企業），或法人團體的控股公司或子公司；"
         },
         amtCategorization23: {
-            zh: "(b)符合以下任意两项标准的企业（或其控股公司或子公司）：(i) 公司资产总额达 1250 万美元；(ii) 净营业额达 2500 万美元；(iii) 同时期内员工平均数量为 250 人；",
+            zh: "(b) 符合以下任意两项标准的企业（或其控股公司或子公司）：(i) 公司资产总额达 1250 万美元；(ii) 净营业额达 2500 万美元；(iii) 同时期内员工平均数量为 250 人；",
             en: "(b) An undertaking that meets (or any of whose holding companies or subsidiaries meets) two of the following tests: (i) A balance sheet total of $12.5m; (ii) A net turnover of $25m; (iii) An average number of employees during the year of 250;",
-            vi: "^^-^^",
+            vi: "(b) Một cam kết đáp ứng (hoặc bất kỳ công ty mẹ hoặc công ty con nào đáp ứng) hai trong số các điều kiện kiểm tra sau đây: (i) Tổng giá trị bảng cân đối kế toán là $ 12.5m; (ii) Doanh thu thuần là 25 triệu đô la; (iii) Số lượng nhân viên trung bình trong năm là 250;",
             "zh-Hant": "(b)符合以下任意兩項標準的企業（或其控股公司或子公司）：(i) 公司資產總額達 1250 萬美元；(ii) 凈營業額達 2500 萬美元；(iii) 同時期內員工平均數量為 250 人；"
         },
         amtCategorization24: {
-            zh: "(c)现有（或前两年内任一时间拥有）净资产不少于 500 万美元（或在同时期内的等值外币金额）的合伙企业或非法人团体，且在有限合伙关系的情况下相关资产包含任何合伙人的负债；",
+            zh: "(c) 现有（或前两年内任一时间拥有）净资产不少于 500 万美元（或在同时期内的等值外币金额）的合伙企业或非法人团体，且在有限合伙关系的情况下相关资产包含任何合伙人的负债；",
             en: "(c) A partnership or unincorporated association which has (or has had at any time during the previous two years) net assets of at least $5 million (or its equivalent in any other currency at the relevant time) and calculated in the case of a limited partnership without deducting loans owing to any of the partners;",
-            vi: "^^-^^",
+            vi: "(c) Đối tác hoặc một tổ chức không có tư cách pháp nhân (hoặc đã có bất kỳ lúc nào trong hai năm trước) tài sản ròng ít nhất 5 triệu đô la (hoặc tương đương với bất kỳ loại tiền tệ nào khác tại thời điểm thích hợp) và được tính trong trường hợp doanh nghiệp hợp danh hữu hạn, trong đó không khấu trừ các khoản vay của bất kỳ đối tác nào;",
             "zh-Hant": "(c)現有（或前兩年內任壹時間擁有）凈資產不少於 500 萬美元（或在同時期內的等值外幣金額）的合夥企業或非法人團體，且在有限合夥關系的情況下相關資產包含任何合夥人的負債；"
         },
         amtCategorization25: {
-            zh: "(d)现有（或前两年内任一时间拥有）净资产不少于 1000 万美元（或在同时期内的等值外币金额）信托的受托人（职业养老金计划、个人养老金计划或利益相关者养老金计划除外），此金额等于现金价值和信托资产指定投资的总和（含负债）；",
+            zh: "(d) 现有（或前两年内任一时间拥有）净资产不少于 1000 万美元（或在同时期内的等值外币金额）信托的受托人（职业养老金计划、个人养老金计划或利益相关者养老金计划除外），此金额等于现金价值和信托资产指定投资的总和（含负债）；",
             en: "(d) A trustee of a trust (other than an occupational pension scheme, personal pension scheme or stakeholder pension scheme) which has (or has had at any time during the previous two years) assets of at least $10 million (or its equivalent in any other currency at the relevant time) calculated by aggregating the value of cash and designated investments forming part of the trust’s assets, but before deducting its liabilities;",
-            vi: "^^-^^",
+            vi: "(d) Người được ủy thác từ một sự ủy nhiệm (không phải là khung chế độ hưu bổng nghề nghiệp, chế độ hưu trí cá nhân hoặc chế độ hưu trí cho cổ đông ) có (hoặc đã có bất kỳ lúc nào trong hai năm trước) tài sản ít nhất 10 triệu đô la (hoặc tương đương với bất kỳ loại tiền tệ nào khác) vào thời điểm thích hợp) được tính bằng cách tổng hợp giá trị tiền mặt và các khoản đầu tư được chỉ định tạo thành một phần tài sản của tín thác, nhưng trước khi trừ đi các khoản nợ của nó;",
             "zh-Hant": "(d)現有（或前兩年內任壹時間擁有）凈資產不少於 1000 萬美元（或在同時期內的等值外幣金額）信托的受托人（職業養老金計劃、個人養老金計劃或利益相關者養老金計劃除外），此金額等於現金價值和信托資產指定投資的總和（含負債）；"
         },
         amtCategorization26: {
             zh: "(e) 信托的受托人（职业养老金计划、个人养老金计划或利益相关者养老金计划除外），现有（或前两年内任一时间拥有）（i）至少 50 名成员（ii）资产管理规模不少于 1000 万美元（或在同时期内的等值外币金额）",
             en: "(e) A trustee of a trust (other than an occupational pension scheme, personal pension scheme or stakeholder pension scheme where the scheme has (or has had at any time during the previous two years): (i) At least 50 members; and (ii) Assets under management of at least $10 million (or its equivalent in any other currency at the relevant time);",
-            vi: "^^-^^",
+            vi: "(e) Người được ủy thác từ một sự ủy thác (không phải là người hưởng chế độ hưu bổng nghề nghiệp, chế độ hưu trí cá nhân hoặc chương trình hưu trí của bên liên quan nơi chế độ này đã có (hoặc đã có bất kỳ lúc nào trong hai năm trước): (i) Ít nhất 50 thành viên và (ii) Tài sản được quản lý ít nhất 10 triệu đô la (hoặc tương đương với bất kỳ loại tiền tệ nào khác tại thời điểm thích hợp);",
             "zh-Hant": "(e) 信托的受托人（職業養老金計劃、個人養老金計劃或利益相關者養老金計劃除外），現有（或前兩年內任壹時間擁有）（i）至少 50 名成員（ii）資產管理規模不少於 1000 萬美元（或在同時期內的等值外幣金額）"
         },
         amtCategorization27: {
-            zh: "(f)地方政府或公共机关。",
+            zh: "(f) 地方政府或公共机关。",
             en: "(f) A local authority or public authority.",
-            vi: "^^-^^",
+            vi: "(f) Chính quyền địa phương hoặc cơ quan công quyền.",
             "zh-Hant": "(f)地方政府或公共機關。"
         },
         amtCategorization28: {
             zh: "国家或地方政府、管理公债的公共机构、中央银行、国际性或跨国机构（例如世界银行、国际货币基金组织、ECP、欧洲投资银行）或其他类似的国际组织；",
             en: "A national or regional government, a public body that manages public debt, a central bank, an international or supernatural institution (such as the World Bank, the IMF, the ECP, the EIB) or another similar international organisation;",
-            vi: "^^-^^",
+            vi: "Chính phủ quốc gia hoặc khu vực, cơ quan công quyền quản lý nợ công, ngân hàng trung ương, tổ chức quốc tế hoặc tổ chức siêu lớn (như Ngân hàng Thế giới, IMF, ECP, EIB) hoặc một tổ chức quốc tế tương tự khác;",
             "zh-Hant": "國家或地方政府、管理公債的公共機構、中央銀行、國際性或跨國機構（例如世界銀行、國際貨幣基金組織、ECP、歐洲投資銀行）或其他類似的國際組織；"
         },
         amtCategorization29: {
             zh: "任何主业是投资于金融工具或指定投资（与公司其他业务相关的）的其他机构投资者。其中包括专门从事资产证券化或其他融资交易的实体。",
             en: "Another institutional investor whose main activity is to invest in financial instruments or designated investments (in relation to the firm’s other business). This includes entities dedicated to the securitisation of assets or other financing transactions.",
-            vi: "^^-^^",
+            vi: "Một nhà đầu tư tổ chức khác có hoạt động chính là đầu tư vào các công cụ tài chính hoặc các khoản đầu tư được chỉ định (liên quan đến doanh nghiệp khác của công ty). Điều này bao gồm các thực thể dành riêng cho việc chứng khoán hóa tài sản hoặc các giao dịch tài chính khác.",
             "zh-Hant": "任何主業是投資於金融工具或指定投資（與公司其他業務相關的）的其他機構投資者。其中包括專門從事資產證券化或其他融資交易的實體。"
         },
         amtCategorization30: {
             zh: "5.“选择性专业客户”",
             en: "5.‘Elective Professional Client’",
-            vi: "^^-^^",
+            vi: "5.‘Khách Hàng Chuyên Nghiệp Được Chọn’",
             "zh-Hant": "5.“選擇性專業客戶”"
         },
         amtCategorization31: {
             zh: "如果要被分为选择性专业客户，需要满足以下（1）和（3）的条件，且在适当情况下满足（2）的条件：",
             en: "A firm may treat a client as an elective professional client if it complies with (1) and (3) and, where applicable, (2): ",
-            vi: "^^-^^",
+            vi: "Công ty có thể coi khách hàng là khách hàng chuyên nghiệp được chọn nếu tuân thủ (1) và (3) và, nếu có, (2): ",
             "zh-Hant": "如果要被分為選擇性專業客戶，需要滿足以下（1）和（3）的條件，且在適當情況下滿足（2）的條件："
         },
         amtCategorization32: {
             zh: "(1)本公司根据预期交易或服务的性质对客户的专业资格、经验和知识进行充分评估，以认定客户有能力自行做出投资决定并了解其中的风险（“定性测试”）；",
             en: "(1) the firm undertakes an adequate assessment of the expertise, experience and knowledge of the client that gives reasonable assurance, in light of the nature of the transactions or services envisaged, that the client is capable of making his own investment decisions and understanding the risks involved (the \"qualitative test\");",
-            vi: "^^-^^",
+            vi: "(1) công ty cam kết đánh giá đầy đủ về chuyên môn, kinh nghiệm và kiến thức của khách hàng cho thấy sự đảm bảo hợp lý, do bản chất của các giao dịch hoặc dịch vụ được dự tính, rằng khách hàng có khả năng tự quyết định đầu tư và hiểu các rủi ro liên quan ( \"kiểm tra định tính\");",
             "zh-Hant": "(1)本公司根據預期交易或服務的性質對客戶的專業資格、經驗和知識進行充分評估，以認定客戶有能力自行做出投資決定並了解其中的風險（“定性測試”）；"
         },
         amtCategorization33: {
             zh: "(2)在评估的过程中，需要至少满足以下其中两项标准：",
             en: "(2) in the course of that assessment, at least two of the following criteria are satisfied: ",
-            vi: "^^-^^",
+            vi: "(2) trong quá trình đánh giá đó, ít nhất hai tiêu chí sau đây được thỏa mãn:",
             "zh-Hant": "(2)在評估的過程中，需要至少滿足以下其中兩項標準："
         },
         amtCategorization34: {
             zh: "(i)客户在过去四个季度内以每季度 10次的平均频率在相关市场开展大规模交易；",
             en: "(i) The client has carried out transactions, in significant size, on the relevant market at an average frequency of 10 per quarter over the previous four quarters;",
-            vi: "^^-^^",
+            vi: "(i) Khách hàng đã thực hiện các giao dịch, với quy mô đáng kể, trên thị trường liên quan với tần suất trung bình là 10 mỗi quý trong bốn quý trước;",
             "zh-Hant": "(i)客戶在過去四個季度內以每季度 10次的平均頻率在相關市場開展大規模交易；"
         },
         amtCategorization35: {
             zh: "(ii)客户金融工具投资组合的规模（包括现金存款及金融工具）超过 50 万美元；",
             en: "(ii) The size of the client’s financial instrument portfolio, defined as including cash deposits and financial instruments, exceeds $500,000;",
-            vi: "^^-^^",
+            vi: "(ii) Kích thước của danh mục đầu tư công cụ tài chính của khách hàng, được định nghĩa là bao gồm tiền gửi tiền mặt và công cụ tài chính, vượt quá 500.000 đô la;",
             "zh-Hant": "(ii)客戶金融工具投資組合的規模（包括現金存款及金融工具）超過 50 萬美元；"
         },
         amtCategorization36: {
             zh: "(iii)客户目前或曾经在金融领域工作一年，担任专业职务，其工作需要用到拟定交易或服务的相关知识；（“定量测试”），而且",
             en: "(iii) The client works or has worked in the financial sector for at least one year in a professional position, which requires knowledge of the transactions or services envisaged; (the “quantitative test”); and",
-            vi: "^^-^^",
+            vi: "(iii) Khách hàng làm việc hoặc đã làm việc trong lĩnh vực tài chính trong ít nhất một năm ở một vị trí chuyên nghiệp, đòi hỏi kiến thức về các giao dịch hoặc dịch vụ được dự kiến; (“kiểm tra định lượng”); và",
             "zh-Hant": "(iii)客戶目前或曾經在金融領域工作壹年，擔任專業職務，其工作需要用到擬定交易或服務的相關知識；（“定量測試”），而且"
         },
         amtCategorization37: {
             zh: "(3)并且遵循以下程序：",
             en: "(3) The following procedure is followed: ",
-            vi: "^^-^^",
+            vi: "(3) Các thủ tục sau đây được tuân theo:",
             "zh-Hant": "(3)並且遵循以下程序："
         },
         amtCategorization38: {
             zh: "(i)客户必须以书面形式向本公司声明希望在一般情况下或仅在某种类型服务或某种类型交易的情况下被视为专业客户；",
             en: "(i) The client must state in writing to the firm that it wishes to be treated as a professional client either generally or in respect of a particular service or transaction or type of transaction or product;",
-            vi: "^^-^^",
+            vi: "(i) Khách hàng phải nêu rõ bằng văn bản với công ty rằng họ muốn được coi là khách hàng chuyên nghiệp nói chung hoặc đối với một dịch vụ hoặc giao dịch cụ thể hoặc loại giao dịch hoặc sản phẩm;",
             "zh-Hant": "(i)客戶必須以書面形式向本公司聲明希望在壹般情況下或僅在某種類型服務或某種類型交易的情況下被視為專業客戶；"
         },
         amtCategorization39: {
             zh: "(ii)本公司必须向客户发出清晰的书面警告，说明客户可能失去保障以及投资者获得赔偿的权利；而且",
             en: "(ii) The firm must give the client a clear written warning of the protections and investor compensation rights the client may lose; and",
-            vi: "^^-^^",
+            vi: "(ii) Công ty phải cung cấp cho khách hàng một thông báo bằng văn bản rõ ràng về các biện pháp bảo vệ và quyền bồi thường của nhà đầu tư mà khách hàng có thể bị mất; và",
             "zh-Hant": "(ii)本公司必須向客戶發出清晰的書面警告，說明客戶可能失去保障以及投資者獲得賠償的權利；而且"
         },
         amtCategorization40: {
             zh: "(iii)客户必须在独立于合约的文件中作出书面声明，指出客户清楚失去保护的后果。",
             en: "(iii) The client must state in writing, in a separate document from the contract, that it is aware of the consequences of losing protections.",
-            vi: "^^-^^",
+            vi: "(iii) Khách hàng phải nêu bằng văn bản, trong một tài liệu riêng biệt ngoài hợp đồng, rằng họ nhận thức được hậu quả của việc mất sự bảo vệ.",
             "zh-Hant": "(iii)客戶必須在獨立於合約的文件中作出書面聲明，指出客戶清楚失去保護的後果。"
         },
         amtCategorization41: {
             zh: "6.“合资格交易对手”",
             en: "6.‘Eligible Counterparty’",
-            vi: "^^-^^",
+            vi: "6.Đối Tác Đủ Điều Kiện Pháp Nhân",
             "zh-Hant": "6.“合資格交易對手”"
         },
         amtCategorization42: {
             zh: "合资格交易对手被分类为固有合资格交易对手或选择性合资格交易对手的客户。如果本公司为客户开展下列活动，则该客户只能是合资格交易对手：",
             en: "A client that is either a per se eligible or an elective eligible counterparty. Clients can only be an eligible counterparty if the firm is undertaking one of the following activities for them: ",
-            vi: "^^-^^",
+            vi: "Một khách hàng đủ điều kiện hoặc một đối tác đủ điều kiện được chọn. Khách hàng chỉ có thể là đối tác đủ điều kiện nếu công ty đang thực hiện một trong các hoạt động sau đây cho họ:",
             "zh-Hant": "合資格交易對手被分類為固有合資格交易對手或選擇性合資格交易對手的客戶。如果本公司為客戶開展下列活動，則該客戶只能是合資格交易對手："
         },
         amtCategorization43: {
             zh: "(i)执行订单（代表客户达成买卖一个或多个金融工具的协议）；",
             en: "(i) Executing orders (acting to conclude agreements to buy or sell one or one financial instruments on behalf of clients);",
-            vi: "^^-^^",
+            vi: "(i) Thực hiện các lệnh (hành động ký kết các thỏa thuận mua hoặc bán một hoặc một công cụ tài chính thay mặt cho khách hàng);",
             "zh-Hant": "(i)執行訂單（代表客戶達成買賣壹個或多個金融工具的協議）；"
         },
         amtCategorization44: {
             zh: "(ii)交易客户自身的账户（交易自有资金，从而完成一个或多个金融工具的交易）；",
             en: "(ii) Dealing on their own account (trading against proprietary capital resulting in the conclusion of transactions in one or more financial instruments);",
-            vi: "^^-^^",
+            vi: "(ii) Vận hành tài khoản của mình (giao dịch với các loại vốn sở hữu dẫn đến kết luận giao dịch với một hoặc nhiều công cụ tài chính);",
             "zh-Hant": "(ii)交易客戶自身的賬戶（交易自有資金，從而完成壹個或多個金融工具的交易）；"
         },
         amtCategorization45: {
             zh: "(iii)接受及传输订单。",
             en: "(iii) Receiving and transmitting orders.",
-            vi: "^^-^^",
+            vi: "(iii) Nhận và truyền các lệnh.",
             "zh-Hant": "(iii)接受及傳輸訂單。"
         },
         amtCategorization46: {
             zh: "若本公司不进行此类交易，那么客户不能被划分为合资格交易对手。",
             en: "If the firm is not conducting any of these transactions then the client cannot be classed as an eligible counterparty.",
-            vi: "^^-^^",
+            vi: "Nếu công ty không thực hiện bất kỳ giao dịch nào trong số này thì khách hàng không thể được xếp vào nhóm đối tác đủ điều kiện.",
             "zh-Hant": "若本公司不進行此類交易，那麽客戶不能被劃分為合資格交易對手。"
         },
         amtCategorization47: {
             zh: "7.“固有合资格交易对手”",
             en: "7.‘Per se Eligible Counterparty’",
-            vi: "^^-^^",
+            vi: "7.‘Đối tác Đủ Điều Kiện Pháp Lý’",
             "zh-Hant": "7.“固有合資格交易對手”"
         },
         amtCategorization48: {
             zh: "固有合资格交易对手包括任意以下各方并且执行合资格交易对手的业务，除非且仅限于已被划分为另一类型：",
             en: "Each of the following is a per se eligible counterparty unless and to the extent it is given a different categorization: ",
-            vi: "^^-^^",
+            vi: "Mỗi điều sau đây là một điều kiện để trở thành một đối tác đủ tư cách pháp nhân trừ khi có các trong phạm vi được phân loại khác nhau:",
             "zh-Hant": "固有合資格交易對手包括任意以下各方並且執行合資格交易對手的業務，除非且僅限於已被劃分為另壹類型："
         },
         amtCategorization49: {
             zh: "(1) 投资公司；(2) 信贷机构；(3) 保险公司；(4) 经 UCITS 指令或其管理公司授权的集合投资计划；(5) 退休基金或其管理公司；(6) 经同等监管机构授权或受其监管的其他金融机构；(7) 不受监管的企业；(8) 国家政府或其相应的办事处，包括管理公债的公共机构；(9) 中央银行；(10) 跨国机构。",
             en: "(1) An investment firm; (2) A credit institution; (3) An insurance company; (4) A collective investment scheme authorised under the UCITS Directive or its management company; (5) A pension fund or its management company; (6) Another financial institution authorised or regulated under an equivalent regulator; (7) An undertaking exempted from regulations; (8) A national government or its corresponding office, including a public body that deals with the public debt; (9) A central bank; (10) A supernational organisation.",
-            vi: "^^-^^",
+            vi: "(1) Một công ty đầu tư; (2) Tổ chức tín dụng; (3) Một công ty bảo hiểm; (4) Một kế hoạch đầu tư tập thể được ủy quyền theo Chỉ thị UCITS hoặc công ty quản lý của nó; (5) Quỹ hưu trí hoặc công ty quản lý quỹ hưu trí; (6) Một tổ chức tài chính khác được ủy quyền hoặc điều chỉnh theo một cơ quan quản lý tương đương; (7) Một cam kết được miễn quy định; (8) Một chính phủ quốc gia hoặc văn phòng tương ứng, bao gồm một cơ quan công xử lý nợ công; (9) Một ngân hàng trung ương; (10) Một tổ chức siêu quốc gia.",
             "zh-Hant": "(1) 投資公司；(2) 信貸機構；(3) 保險公司；(4) 經 UCITS 指令或其管理公司授權的集合投資計劃；(5) 退休基金或其管理公司；(6) 經同等監管機構授權或受其監管的其他金融機構；(7) 不受監管的企業；(8) 國家政府或其相應的辦事處，包括管理公債的公共機構；(9) 中央銀行；(10) 跨國機構。"
         },
         amtCategorization50: {
             zh: "8.“选择性合资格交易对手”",
             en: "8.‘Elective Eligible Counterparty’",
-            vi: "^^-^^",
+            vi: "8.Đối tác Đủ Tư Cách Pháp Nhân Được Lựa Chọn",
             "zh-Hant": "8.“選擇性合資格交易對手”"
         },
         amtCategorization51: {
             zh: "在下列情况下，公司可将客户视为选择性合资格交易对手：",
             en: "A firm may treat a client as an elective eligible counterparty if: ",
-            vi: "^^-^^",
+            vi: "Công ty có thể coi khách hàng là đối tác có tư cách pháp lý được chọn nếu:",
             "zh-Hant": "在下列情況下，公司可將客戶視為選擇性合資格交易對手："
         },
         amtCategorization52: {
             zh: "(1)客户是一家企业而且：",
             en: "(1) The client is an undertaking and: ",
-            vi: "^^-^^",
+            vi: "(1) Khách hàng là một công việc kinh doanh và:",
             "zh-Hant": "(1)客戶是壹家企業而且："
         },
         amtCategorization53: {
             zh: "(a)固有专业客户；",
             en: "(a) Is a per se professional client; or",
-            vi: "^^-^^",
+            vi: "(a) Là một khách hàng chuyên nghiệp; hoặc là",
             "zh-Hant": "(a)固有專業客戶；"
         },
         amtCategorization54: {
             zh: "(2)公司获得意向交易对手确认，同意被视为合资格交易对手。",
             en: "(2) The firm has obtained express confirmation from the prospective counterparty that it agrees to be treated as an eligible counterparty.",
-            vi: "^^-^^",
+            vi: "Công ty đã nhận được xác nhận rõ ràng từ đối tác tiềm năng rằng họ đồng ý được coi là đối tác có tư cách pháp lý.",
             "zh-Hant": "(2)公司獲得意向交易對手確認，同意被視為合資格交易對手。"
         },
         amtCategorization55: {
             zh: "倘若满足上述条件和要求，选择性合资格交易对手的类型包括相应的机构。",
             en: "The categories of elective eligible counterparties include an equivalent undertaking provided the above conditions and requirements are satisfied.",
-            vi: "^^-^^",
+            vi: "Các loại phân loại của các đối tác với tư cách pháp lý bao gồm một công việc kinh doanh tương đương có các điều kiện và yêu cầu trên được thỏa mãn.",
             "zh-Hant": "倘若滿足上述條件和要求，選擇性合資格交易對手的類型包括相應的機構。"
         },
         amtCategorization56: {
             zh: "申请不同的类型",
             en: "Request for Different Categorization",
-            vi: "^^-^^",
+            vi: "Yêu Cầu Phân Loại Khác",
             "zh-Hant": "申請不同的類型"
         },
         amtCategorization57: {
             zh: "1.本公司允许专业客户或合资格交易对手申请重新分类，从而享受更高级别的保护。",
             en: "1.The Firm may allow a Professional Client or an Eligible Counterparty to request re- categorization as a Client that benefits from a higher degree of protection.",
-            vi: "^^-^^",
+            vi: "1.Công ty có thể cho phép Khách hàng Chuyên nghiệp hoặc Đối tác có tư cách pháp nhân yêu cầu phân loại lại với tư cách là Khách hàng được hưởng mức độ bảo vệ cao hơn.",
             "zh-Hant": "1.本公司允許專業客戶或合資格交易對手申請重新分類，從而享受更高級別的保護。"
         },
         amtCategorization58: {
             zh: "2.因此公司应通知被划分为专业客户或合资格交易对手的客户，无论本公司同意与否，客户都有权申请不同的类型。但是，如果客户准备考虑作出申请，公司只需要告知客户其有权申请不同的分类，包括保护级别可能降低。",
             en: "2.A firm will therefore notify a client that is categorised as a professional client or an eligible counterparty of its right to request a different categorization whether or not the firm will agree to such requests. However, a firm need only notify a client of a right to request a different categorization involving a lower level of protection if it is prepared to consider such requests",
-            vi: "^^-^^",
+            vi: "2.Do đó, công ty sẽ thông báo cho khách hàng được phân loại là khách hàng chuyên nghiệp hoặc đối tác có tư cách pháp nhân về quyền yêu cầu phân loại khác nhau cho dù công ty có đồng ý với yêu cầu đó hay không. Tuy nhiên, công ty chỉ cần thông báo cho khách hàng về quyền yêu cầu phân loại khác nhau liên quan đến mức bảo vệ thấp hơn nếu công ty có khả năng xem xét các yêu cầu đó",
             "zh-Hant": "2.因此公司應通知被劃分為專業客戶或合資格交易對手的客戶，無論本公司同意與否，客戶都有權申請不同的類型。但是，如果客戶準備考慮作出申請，公司只需要告知客戶其有權申請不同的分類，包括保護級別可能降低。"
         },
         amtCategorization59: {
             zh: "3.当专业客户或合资格交易对手认为他/她/他们无法妥当评估或管理相关风险时，他/她/他们有责任要求获得更高级别的保护。",
             en: "3.It is the responsibility of a Professional Client or Eligible Counterparty to ask for a higher level of protection when he/she/they deems he/she/they are unable to properly assess or manage the risks involved.",
-            vi: "^^-^^",
+            vi: "3.Việc yêu cầu mức độ bảo vệ cao hơn khi cho rằng không thể đánh giá hoặc quản lý các rủi ro liên quan là trách nhiệm của một Khách hàng Chuyên nghiệp hoặc Đối tác Đủ Tư cách Pháp lý.",
             "zh-Hant": "3.當專業客戶或合資格交易對手認為他/她/他們無法妥當評估或管理相關風險時，他/她/他們有責任要求獲得更高級別的保護。"
         },
         amtCategorization60: {
             zh: "4.本公司会主动回应相关客户申请：",
             en: "4.The Firm may, either on its own initiative or at the request of the Client ",
-            vi: "^^-^^",
+            vi: "4.Công ty có thể, hoặc theo quyền hạn riêng của mình hoặc theo yêu cầu của Khách hàng",
             "zh-Hant": "4.本公司會主動回應相關客戶申請："
         },
         amtCategorization61: {
             zh: "(1) 将可能被划分成“固有合资格交易对手”的客户视为专业客户或零售客户；",
             en: "(1) treat as a professional client or a retail client a client that might otherwise be categorised as a per se eligible counterparty;",
-            vi: "^^-^^",
+            vi: "(1) áp dụng các điều khoản với một khách hàng người có thể là một cá nhân có tư cách pháp lý như là khách hàng chuyên nghiệp hoặc khách hàng lẻ;",
             "zh-Hant": "(1) 將可能被劃分成“固有合資格交易對手”的客戶視為專業客戶或零售客戶；"
         },
         amtCategorization62: {
             zh: "(2) 将可能被划分成“固有专业客户”的客户视为零售客户；",
             en: "(2) treat as a retail client a client that might otherwise be categorised as a per se professional client;",
-            vi: "^^-^^",
+            vi: "(2) áp dụng các điều khoản như là một khách hàng lẻ với các khách hàng có thể được xem là một cá nhân khách hàng chuyên nghiệp;",
             "zh-Hant": "(2) 將可能被劃分成“固有專業客戶”的客戶視為零售客戶；"
         },
         amtCategorization63: {
             zh: "若是如此，将据此将客户重新分类。",
             en: "and if it does so, the client will be re-categorised accordingly.",
-            vi: "^^-^^",
+            vi: "và nếu có, khách hàng sẽ được phân loại lại tương ứng.",
             "zh-Hant": "若是如此，將據此將客戶重新分類。"
         },
         amtCategorization64: {
             zh: "5.如果客户自身为合资格交易对手，申请作为公司的客户，其与公司所开展的业务受业务经营保护；若公司同意了该申请且没有明确要求将其视为零售客户，公司必须将合资格交易对手视为专业客户。",
             en: "5.If a per se eligible counterparty requests treatment as a client whose business with the firm is subject to conduct of business protections, but does not expressly request treatment as a retail client and the firm agrees to that request, the firm must treat that eligible counterparty as a professional client.",
-            vi: "^^-^^",
+            vi: "5.Nếu một cá nhân có tư cách pháp nhân yêu cầu được áp dụng các điều khoản với tư cách là khách hàng mà doanh nghiệp của họ phải tuân thủ các biện pháp bảo vệ doanh nghiệp, nhưng không yêu cầu được xem như là khách hàng lẻ và công ty đồng ý với yêu cầu đó, công ty phải làm việc với khách hàng có tư cách pháp lý đó như là một khách hàng chuyên nghiệp.",
             "zh-Hant": "5.如果客戶自身為合資格交易對手，申請作為公司的客戶，其與公司所開展的業務受業務經營保護；若公司同意了該申請且沒有明確要求將其視為零售客戶，公司必須將合資格交易對手視為專業客戶。"
         },
         amtCategorization65: {
             zh: "6.(1)如果固有专业客户或固有合资格交易对手的一方申请，公司将其视为零售客户，倘若该客户与公司签订书面协议，明确适用的业务经营机制，公司不将其视为专业客户或合资格交易对手，则该客户将被划分为零售客户。",
             en: "6.(1) If, a per se professional client or a per se eligible counterparty requests treatment as a retail client, the client will be classified as a retail client if it enters into a written agreement with the firm to the effect that it will not be treated as a professional client or eligible counterparty for the purposes of the applicable conduct of business regime.",
-            vi: "^^-^^",
+            vi: "6.(1) Nếu khách hàng chuyên nghiệp hoặc khách hàng chuyên nghiệp đủ tư cách pháp nhân được coi là khách hàng lẻ, khách hàng sẽ được phân loại là khách hàng lẻ nếu họ ký thỏa thuận bằng văn bản với công ty có hiệu lực sẽ không được coi là khách hàng chuyên nghiệp hoặc đối tác có tư cách pháp lý nhằm mục đích thực hiện các chế độ kinh doanh.",
             "zh-Hant": "6.(1)如果固有專業客戶或固有合資格交易對手的壹方申請，公司將其視為零售客戶，倘若該客戶與公司簽訂書面協議，明確適用的業務經營機制，公司不將其視為專業客戶或合資格交易對手，則該客戶將被劃分為零售客戶。"
         },
         amtCategorization66: {
             zh: "(2) 此协议必须说明重新分类的范畴，例如是否适用于一个或多个特定的服务或交易，是否适用于一类或多类产品或交易，或是否适用于一种或多种规定。",
             en: "(2) This agreement must specify the scope of the re-categorization, such as whether it applies to one or more particular services or transactions, to one or more types of product or transaction or to one or more rules.",
-            vi: "^^-^^",
+            vi: "(2) Thỏa thuận này phải chỉ định phạm vi phân loại lại, chẳng hạn như liệu nó có áp dụng cho một hoặc nhiều dịch vụ hoặc giao dịch cụ thể hay không, cho một hoặc nhiều loại sản phẩm hoặc giao dịch hoặc cho một hoặc nhiều quy tắc.",
             "zh-Hant": "(2) 此協議必須說明重新分類的範疇，例如是否適用於壹個或多個特定的服務或交易，是否適用於壹類或多類產品或交易，或是否適用於壹種或多種規定。"
         },
         amtCategorization67: {
             zh: "7.(1) 根据“与客户沟通”的原则，若本公司根据本节规定主动将客户重新分类，本公司应告知客户根据本节规定其所属的新类型。",
             en: "7.(1) In accordance with the principle ‘communications with clients’, if a firm at its own initiative re- categorises a client in accordance with this section, it should notify that client of its new category under this section.",
-            vi: "^^-^^",
+            vi: "7.(1) Theo nguyên tắc 'liên lạc với khách hàng', nếu một công ty có quyền phân loại lại khách hàng theo mục này, nó sẽ thông báo cho khách hàng về danh mục mới của mình trong phần này.",
             "zh-Hant": "7.(1) 根據“與客戶溝通”的原則，若本公司根據本節規定主動將客戶重新分類，本公司應告知客戶根據本節規定其所屬的新類型。"
         },
         amtCategorization68: {
             zh: "(2) 若本公司已经与客户签订协议，在修正协议时也应将任何契约要求考虑在内。",
             en: "(2) If the firm already has an agreement with the client, it should also consider any contractual requirements concerning the amendment of that agreement.",
-            vi: "^^-^^",
+            vi: "(2) Nếu công ty đã có thỏa thuận với khách hàng, công ty cũng nên xem xét mọi yêu cầu hợp đồng liên quan đến việc sửa đổi thỏa thuận đó.",
             "zh-Hant": "(2) 若本公司已經與客戶簽訂協議，在修正協議時也應將任何契約要求考慮在內。"
         },
         amtCategorization69: {
             zh: "8.根据本节规定，可为客户提供额外保护的方式包括：(1) 一般性重新分类；(2) 按每次交易重新分类；(3) 就一条或多条规定重新分类；(4) 就一项或多项特定服务或交易重新分类；(5) 就一类或多类产品或服务重新分类。",
             en: "8.The ways in which a client may be provided with additional protections under this section include re- categorization: (1) on a general basis; or (2) on a trade by trade basis; or (3) in respect of one or more specified rules; or (4) in respect of one or more particular services or transactions; or (5) in respect of one or more types of product or transaction.",
-            vi: "^^-^^",
+            vi: "8.Các cách thức mà khách hàng có thể được cung cấp các biện pháp bảo vệ bổ sung theo phần này bao gồm phân loại lại: (1) trên cơ sở chung; hoặc (2) trên giao dịch thương mại; hoặc (3) đối với một hoặc nhiều quy tắc được chỉ định; hoặc (4) đối với một hoặc nhiều dịch vụ hoặc giao dịch cụ thể; hoặc (5) đối với một hoặc nhiều loại sản phẩm hoặc giao dịch.",
             "zh-Hant": "8.根據本節規定，可為客戶提供額外保護的方式包括：(1) 壹般性重新分類；(2) 按每次交易重新分類；(3) 就壹條或多條規定重新分類；(4) 就壹項或多項特定服務或交易重新分類；(5) 就壹類或多類產品或服務重新分類。"
         },
         amtCategorization70: {
             zh: "9.根据本节规定将客户重新分类为零售客户，并不意味着客户将成为符合巴哈马证券监察委员会规定的合资格申诉人。",
             en: "9.Re-categorising a client as a retail client under this section does not necessarily mean it will become an eligible complainant under SCB rules.",
-            vi: "^^-^^",
+            vi: "9.Việc phân loại lại khách hàng là khách hàng lẻ theo phần này không có nghĩa là khách hàng sẽ trở thành người khiếu nại có tư cách pháp lý theo quy định của SCB.",
             "zh-Hant": "9.根據本節規定將客戶重新分類為零售客戶，並不意味著客戶將成為符合巴哈馬證券監察委員會規定的合資格申訴人。"
         },
         amtCategorization71: {
             zh: "10.如果本公司得知客户不再符合作为选择性专业客户分类的初始条件，公司将采取适当的行动。",
             en: "10.If the Firm becomes aware that a Client no longer fulfils the initial conditions that made him/her/them eligible for categorization as an Elective Professional Client, the firm will take the appropriate action.",
-            vi: "^^-^^",
+            vi: "10.Nếu Công ty nhận thức Khách hàng không còn đáp ứng các điều kiện ban đầu giúp họ đủ điều kiện để được phân loại là Khách hàng Chuyên nghiệp được lựa chọn, công ty sẽ thực hiện hành động thích hợp.",
             "zh-Hant": "10.如果本公司得知客戶不再符合作為選擇性專業客戶分類的初始條件，公司將采取適當的行動。"
         },
         amtCategorization72: {
             zh: "11.适当行动包括将客户重新分类为零售客户，本公司会将重新分类的情况告知客户。",
             en: "11.Where the appropriate action involves re-categorising that client as a Retail Client, the Firm will notify that Client of its new categorization.",
-            vi: "^^-^^",
+            vi: "11.Khi hành động thích hợp liên quan đến việc phân loại lại khách hàng đó thành Khách hàng lẻ, Công ty sẽ thông báo cho Khách hàng về phân loại mới của mình.",
             "zh-Hant": "11.適當行動包括將客戶重新分類為零售客戶，本公司會將重新分類的情況告知客戶。"
         },
         amtCategorization73: {
             zh: "保护权",
             en: "Protection Rights",
-            vi: "^^-^^",
+            vi: "Quyền bảo vệ",
             "zh-Hant": "保護權"
         },
         amtCategorization74: {
             zh: "1.零售客户 / 专业客户",
             en: "1.Retail Clients / Professional Clients",
-            vi: "^^-^^",
+            vi: "1.Khách hàng lẻ / Khách hàng chuyên nghiệp",
             "zh-Hant": "1.零售客戶 / 專業客戶"
         },
         amtCategorization75: {
             zh: "当本公司将客户视为零售客户时，根据法规，他/她/他们将享有最高级别的保护，超过专业客户或合资格交易对手。",
             en: "Where the Firm treats the Client as a Retail Client, he/she/they will be afforded with the highest level of protection under the regulations, more so than a Professional Client or Eligible Counterparty.",
-            vi: "^^-^^",
+            vi: "Trường hợp Công ty phân loại Khách hàng với tư cách là Khách hàng lẻ, họ sẽ được cung cấp mức bảo vệ cao nhất theo quy định, nhiều hơn so với Khách hàng Chuyên nghiệp hoặc Đối tác có Tư cách Pháp Lý.",
             "zh-Hant": "當本公司將客戶視為零售客戶時，根據法規，他/她/他們將享有最高級別的保護，超過專業客戶或合資格交易對手。"
         },
         amtCategorization76: {
             zh: "例如，会向零售客户提供更多关于本公司、本公司产品、服务、收费及佣金方面的信息和披露资料。本公司需要确保客户文书的安全措施到位，将客户资金与本公司自有资金分离，根据巴哈马证券监察委员会的规定，客户资金应存放在指定的客户银行账户中。",
             en: "A Retail Client will for example be given more information and disclosures with regard to the Firm, its products, services, charges, and commission charges. The Firm is required to ensure the safeguarding of Client instruments and the segregation of Client money from the Firm’s own money which must be held in designated client bank accounts as per SCB rules.",
-            vi: "^^-^^",
+            vi: "Ví dụ, một Khách hàng lẻ sẽ được cung cấp thêm thông tin và tiết lộ liên quan đến Công ty, các sản phẩm, dịch vụ, chi phí và phí hoa hồng của Công ty. Công ty được yêu cầu để đảm bảo việc bảo vệ các công cụ của Khách hàng và phân tách tiền của Khách hàng từ tiền của Công ty phải được giữ trong các tài khoản ngân hàng của khách hàng được chỉ định theo các quy tắc của SCB.",
             "zh-Hant": "例如，會向零售客戶提供更多關於本公司、本公司產品、服務、收費及傭金方面的信息和披露資料。本公司需要確保客戶文書的安全措施到位，將客戶資金與本公司自有資金分離，根據巴哈馬證券監察委員會的規定，客戶資金應存放在指定的客戶銀行賬戶中。"
         },
         amtCategorization77: {
             zh: "本公司必须遵守巴哈马证券监察委员会规定，以确保所有零售客户的资金得到保护及完全分隔。本公司将客户资金存放在独立的客户银行账户中，通过这种方式将客户资金与公司资金明确分离。分离客户资金可确保在本公司破产的情况下，扣除行政管理人处理和分派资金的成本后，在这些账户中存放的资金将退还给客户，而不被本公司的一般债权人视为可收回资产。",
             en: "The Firm must comply with SCB rules to ensure that all Retail Client money is protected and fully segregated. The Firm clearly distinguishes client money from its own by holding such funds in segregated client bank accounts. Segregation of client money ensures that in the event the Firm becomes insolvent, funds held in these accounts will be returned to the clients, minus the administrators’ cost in handling and distributing these funds, instead of being treated as recoverable assets by general creditors of the Firm.",
-            vi: "^^-^^",
+            vi: "Công ty phải tuân thủ các quy tắc của SCB để đảm bảo rằng tất cả tiền của Khách hàng bán lẻ được bảo vệ và phân tách hoàn toàn. Công ty phân biệt rõ ràng tiền của khách hàng bằng cách giữ các khoản tiền đó trong các tài khoản ngân hàng khách hàng tách biệt. Phân chia tiền của khách hàng đảm bảo rằng trong trường hợp Công ty không trả được nợ, tiền được giữ trong các tài khoản này sẽ được trả lại cho khách hàng, trừ đi chi phí quản lý và phân phối các khoản tiền này, thay vì được coi là tài sản có thể thu hồi của chủ nợ chung của Công ty.",
             "zh-Hant": "本公司必須遵守巴哈馬證券監察委員會規定，以確保所有零售客戶的資金得到保護及完全分隔。本公司將客戶資金存放在獨立的客戶銀行賬戶中，通過這種方式將客戶資金與公司資金明確分離。分離客戶資金可確保在本公司破產的情況下，扣除行政管理人處理和分派資金的成本後，在這些賬戶中存放的資金將退還給客戶，而不被本公司的壹般債權人視為可收回資產。"
         },
         amtCategorization78: {
             zh: "倘若代表本公司保存客户资金的银行停业清算（次级投资），零售客户将按照在清算银行存放总金额中所占比例分摊损失。",
             en: "In the event the Firm’s bank holding client money on behalf of the Firm goes into liquidation (secondary pooling), any losses would be shared by the Retail Client in proportion to their share of total funds held with a bank which has failed.",
-            vi: "^^-^^",
+            vi: "Trong trường hợp ngân hàng của Công ty nắm giữ tiền khách hàng thay mặt cho Công ty được thanh lý (gộp chung), bất kỳ tổn thất nào sẽ được Khách hàng lẻ chia sẻ tương ứng với tổng số tiền của họ được nắm giữ với một ngân hàng không thành công.",
             "zh-Hant": "倘若代表本公司保存客戶資金的銀行停業清算（次級投資），零售客戶將按照在清算銀行存放總金額中所占比例分攤損失。"
         },
         amtCategorization79: {
             zh: "本公司有权作出假设，专业客户具有足够经验和知识，了解与本公司特定投资服务、交易或产品相关的风险，并知晓公司为此已对客户进行适宜性评估且将客户划分为专业客户。",
             en: "The Firm shall be entitled to assume that a Professional Client has the necessary experience and knowledge in order to understand the risks involved in relation to the Firm’s particular investment services, transactions, or products, for which the Client has been assessed for appropriateness and is classified as a Professional Client.",
-            vi: "^^-^^",
+            vi: "Công ty có quyền giả định rằng một khách hàng chuyên nghiệp có kinh nghiệm và kiến thức cần thiết để hiểu các rủi ro liên quan đến các dịch vụ đầu tư, giao dịch hoặc sản phẩm cụ thể của Công ty mà Khách hàng đã đánh giá tính thích hợp và được phân loại là một khách hàng chuyên nghiệp.",
             "zh-Hant": "本公司有權作出假設，專業客戶具有足夠經驗和知識，了解與本公司特定投資服務、交易或產品相關的風險，並知曉公司為此已對客戶進行適宜性評估且將客戶劃分為專業客戶。"
         },
         amtCategorization80: {
             zh: "专业客户享有的保护将少于零售客户。包括：专业客户可能会失去向监管机构投诉的权利。大型机构和受监管公司等部分专业客户和合资格交易对手不会被视为合资格申诉人。",
             en: "Professional Clients are afforded significantly fewer protections than those afforded to Retail Clients. Professional Clients may lose their right to refer complaints to the regulator. Some Professional Clients and Eligible Counterparties such as large institutions and regulated Firms will not be considered as an eligible complainant.",
-            vi: "^^-^^",
+            vi: "Khách hàng chuyên nghiệp được bảo vệ ít hơn đáng kể so mức bảo vệ dành cho Khách hàng lẻ. Khách hàng Chuyên nghiệp có thể mất quyền đưa đến đơn khiếu nại cho cơ quan quản lý. Một số Khách hàng Chuyên nghiệp và Đối tác Đủ tư cách pháp lý như các tổ chức lớn và Công ty được quy định sẽ không được coi là người khiếu nại có tư cách pháp nhân.",
             "zh-Hant": "專業客戶享有的保護將少於零售客戶。包括：專業客戶可能會失去向監管機構投訴的權利。大型機構和受監管公司等部分專業客戶和合資格交易對手不會被視為合資格申訴人。"
         },
         amtCategorization81: {
             zh: "本公司可能会为专业客户提供未经巴哈马证券监察委员会授权认可人士批准，且不符合巴哈马证券监察委员会所颁布规定的金融投资推广。作为专业客户，应能够了解投资于此类推广的风险，并对所涉及的风险作出适当评估。",
             en: "The Firm may provide Professional Clients with financial promotions that may not have been approved by an approved person authorised by the SCB and which may not conform to the rules issues by the SCB. As a Professional Client should be in a position to understand and make proper evaluation of the risks involved in investing in such promotions.",
-            vi: "^^-^^",
+            vi: "Công ty có thể cung cấp cho Khách hàng Chuyên nghiệp các chương trình khuyến mãi tài chính có thể không được chấp thuận bởi một người được ủy nhiệm được SCB ủy quyền và có thể không tuân thủ các vấn đề quy tắc của SCB. Một khách hàng chuyên nghiệp nên ở trong điều kiện để hiểu và có các đánh giá thích hợp các rủi ro liên quan đến việc đầu tư vào các chương trình khuyến mãi như vậy.",
             "zh-Hant": "本公司可能會為專業客戶提供未經巴哈馬證券監察委員會授權認可人士批準，且不符合巴哈馬證券監察委員會所頒布規定的金融投資推廣。作為專業客戶，應能夠了解投資於此類推廣的風險，並對所涉及的風險作出適當評估。"
         },
         amtCategorization82: {
             zh: "执行订单时，提供投资服务的投资公司和信贷机构必须采取所有的合理措施，以实现客户订单的“最佳执行”，即帮客户实现最佳结果。",
             en: "When executing orders, investment firms and credit institutions providing investment services must take all reasonable steps to achieve what is called “best execution” of the Client’s orders; that is, to obtain the best possible result for their Clients.",
-            vi: "^^-^^",
+            vi: "Khi thực hiện các lệnh, các công ty đầu tư và tổ chức tín dụng cung cấp dịch vụ đầu tư phải thực hiện tất cả các bước hợp lý để đạt được những gì được gọi là \" sự khớp lệnh tốt nhất\" các lệnh của Khách hàng; nghĩa là, để có được kết quả tốt nhất có thể cho Khách hàng của họ.",
             "zh-Hant": "執行訂單時，提供投資服務的投資公司和信貸機構必須采取所有的合理措施，以實現客戶訂單的“最佳執行”，即幫客戶實現最佳結果。"
         },
         amtCategorization83: {
             zh: "当本公司代表零售客户执行订单时，最佳结果应由代表金融工具价格以及相关执行成本的综合考虑决定，包括与订单执行直接相关的、客户产生的所有费用（包括执行场地费用、清算与结算费用以及向订单执行相关的第三方支付的其他费用）。请参阅 TigerWit 订单执行政策，了解更多信息。",
             en: "Where the Firm executes an order on behalf of a Retail Client, the best possible result shall be determined in terms of the total consideration, representing the price of the financial instrument and the costs related to execution, which shall include all expenses incurred by the Client which are directly related to the execution of the order, including execution venue fees, clearing and settlement fees and any other fees paid to third parties involved in the execution of the order. Further information can be found on TigerWit’s Order Execution Policy.",
-            vi: "^^-^^",
+            vi: "Trong trường hợp Công ty thực hiện một lệnh thay cho Khách hàng lẻ, kết quả tốt nhất có thể được xác định theo tổng giá trị, thể hiện giá của công cụ tài chính và chi phí liên quan đến việc thực hiện, bao gồm tất cả các chi phí phát sinh của Khách hàng có liên quan trực tiếp đến việc thực hiện lệnh, bao gồm phí địa điểm thực hiện, phí thanh toán bù trừ và phí thanh toán và bất kỳ khoản phí nào khác được thanh toán cho bên thứ ba liên quan đến việc thực hiện lệnh. Bạn có thể tìm thêm thông tin về Chính sách thực thi lệnh của TigerWit.",
             "zh-Hant": "當本公司代表零售客戶執行訂單時，最佳結果應由代表金融工具價格以及相關執行成本的綜合考慮決定，包括與訂單執行直接相關的、客戶產生的所有費用（包括執行場地費用、清算與結算費用以及向訂單執行相關的第三方支付的其他費用）。請參閱 TigerWit 訂單執行政策，了解更多信息。"
         },
         amtCategorization84: {
             zh: "为专业客户提供最佳执行时，公司无需将交易总成本视作为客户实现最佳执行的最重要因素。",
             en: "When providing Professional Client with best execution the Company is not required to prioritise the overall costs of the transaction as being the most important factor in achieving best execution for them.",
-            vi: "^^-^^",
+            vi: "Khi cung cấp cho Khách hàng Chuyên nghiệp kết quả chốt lệnh tốt nhất Công ty không bắt buộc phải ưu tiên chi phí tổng thể của giao dịch như là yếu tố quan trọng nhất trong việc đạt được việc khớp lệnh tốt nhất cho họ.",
             "zh-Hant": "為專業客戶提供最佳執行時，公司無需將交易總成本視作為客戶實現最佳執行的最重要因素。"
         },
         amtCategorization85: {
             zh: "(a)提供投资服务的投资公司和信贷机构必须从客户处取得公司或信贷机构（视情况而定）所需的资料，用以了解客户基本的真实情况，以便有合理的依据相信及斟酌所提供服务和拟推荐交易的性质和范畴，或在过程中提供投资组合管理服务。相关信息需满足以下标准：(i) 信息符合客户的投资目标；(ii) 信息能说明客户有经济能力可承受任何与其投资目标一致的相关投资风险；(iii) 信息能说明客户具备必要的经验和知识，以便了解交易或投资组合管理所涉及的风险。当本公司向专业客户提供投资服务时，出于上文第(iii)款的目的，本公司有权假设，对于向已分类客户提供的产品、交易和服务，客户拥有必要的经验以及知识水平。另外在一定情况下，本公司应有权假设专业客户有经济能力可承受任何与其投资目标一致的相关投资风险。",
             en: "(a) Investment firms and credit institutions providing investment services must obtain from clients such information as is necessary for the firm or credit institution, as the case may be, to understand the essential facts about the client and to have a reasonable basis for believing, giving due consideration to the nature and extent of the service provided, that the specific transaction to be recommended, or entered into in the course of providing a portfolio management service, satisfies the following criteria: (i) It meets the investment objectives of the Client in question; (ii) It is such that the Client is able financially to bear any related investment risks consistent with his investment objectives; (iii) It is such that the client has the necessary experience and knowledge in order to understand risks involved in the transaction or in the management of his portfolio. Where the Firm provides an investment service to a Professional Client it shall be entitled to assume that, in relation to the products, transactions and services for which it is so classified, the Client has the necessary level of experience and knowledge for the purposes of paragraph (iii) above. In addition, under certain circumstances, the Firm shall be entitled to assume that a Professional Client is able financially to bear any investment risks consistent with its investment objectives.",
-            vi: "^^-^^",
+            vi: "(a) Các công ty đầu tư và tổ chức tín dụng cung cấp dịch vụ đầu tư phải có được từ khách hàng những thông tin cần thiết cho tổ chức tín dụng hoặc doanh nghiệp, để hiểu được các thông tin cần thiết về khách hàng và có cơ sở hợp lý để tin tưởng, mang đến sự đánh giá thích hợp với bản chất và mức độ của các dịch vụ được cung cấp, giao dịch cụ thể được giới thiệu, hoặc tham gia vào quá trình cung cấp dịch vụ quản lý danh mục đầu tư, thỏa mãn các tiêu chí sau:  (i) Đáp ứng các mục tiêu đầu tư của Khách hàng được đề cập; (ii) Khách hàng có khả năng tài chính để chịu bất kỳ rủi ro đầu tư liên quan nào phù hợp với mục tiêu đầu tư của mình; (iii) Khách hàng có kinh nghiệm và kiến thức cần thiết để hiểu các rủi ro liên quan đến giao dịch hoặc trong việc quản lý danh mục đầu tư của mình. Trường hợp Công ty cung cấp dịch vụ đầu tư cho một Khách hàng Chuyên nghiệp, và có quyền giả định rằng, liên quan đến các sản phẩm, giao dịch và dịch vụ được phân loại, Khách hàng có trình độ và kinh nghiệm cần thiết cho các mục đích của đoạn (iii) ở trên. Ngoài ra, trong một số trường hợp, Công ty có quyền giả định rằng một khách hàng chuyên nghiệp có khả năng tài chính để chịu mọi rủi ro đầu tư phù hợp với mục tiêu đầu tư của mình.",
             "zh-Hant": "(a)提供投資服務的投資公司和信貸機構必須從客戶處取得公司或信貸機構（視情況而定）所需的資料，用以了解客戶基本的真實情況，以便有合理的依據相信及斟酌所提供服務和擬推薦交易的性質和範疇，或在過程中提供投資組合管理服務。相關信息需滿足以下標準：(i) 信息符合客戶的投資目標；(ii) 信息能說明客戶有經濟能力可承受任何與其投資目標壹致的相關投資風險；(iii) 信息能說明客戶具備必要的經驗和知識，以便了解交易或投資組合管理所涉及的風險。當本公司向專業客戶提供投資服務時，出於上文第(iii)款的目的，本公司有權假設，對於向已分類客戶提供的產品、交易和服務，客戶擁有必要的經驗以及知識水平。另外在壹定情況下，本公司應有權假設專業客戶有經濟能力可承受任何與其投資目標壹致的相關投資風險。"
         },
         amtCategorization86: {
             zh: "(b)一旦发现问题，公司必须当即告知零售客户有关正确执行其订单的重大问题。",
             en: "(b) The Firm must inform retail clients of material difficulties relevant to the proper carrying out of their order(s) promptly upon becoming aware of the difficulty.",
-            vi: "^^-^^",
+            vi: "(b) Công ty phải thông báo cho khách hàng bán lẻ về những khó khăn vật chất liên quan đến việc thực hiện đúng (các) lệnh của họ ngay khi nhận thức được sự khó khăn.",
             "zh-Hant": "(b)壹旦發現問題，公司必須當即告知零售客戶有關正確執行其訂單的重大問題。"
         },
         amtCategorization87: {
             zh: "(c)提供以下相关信息：(i) 多除了投资组合管理，对于订单执行的更多信息，零售客户应获得比专业客户更多的信息(ii) 对代表客户所进行的投资组合管理活动的定期报表，零售客户应获得比专业客户更频繁的信息",
             en: "(c) The Firm is required to provide Retail Clients; (i) With more information than Professional Clients as regards to the execution of orders, other than for portfolio management (ii) With periodic statements in respect of portfolio management activities carried out on their behalf, more frequently than for Professional Clients",
-            vi: "^^-^^",
+            vi: "(c) Công ty được yêu cầu cung cấp cho Khách hàng lẻ; (i) Với nhiều thông tin hơn các khách hàng chuyên nghiệp liên quan đến việc thực hiện các lệnh, ngoài quản lý danh mục đầu tư (ii) Với các báo cáo định kỳ về hoạt động quản lý danh mục được thực hiện thay mặt cho họ, thường xuyên hơn cho các khách hàng chuyên nghiệp",
             "zh-Hant": "(c)提供以下相關信息：(i) 多除了投資組合管理，對於訂單執行的更多信息，零售客戶應獲得比專業客戶更多的信息(ii) 對代表客戶所進行的投資組合管理活動的定期報表，零售客戶應獲得比專業客戶更頻繁的信息"
         },
         amtCategorization88: {
             zh: "(d)若本公司向新的零售客户提供的是投资服务而非投资建议，本公司必须与客户签订基本书面协议，列明公司和客户的基本权利与义务。",
             en: "(d) If the Firm provides an investment service other than investment advice to a new Retail Client, the Firm must enter into a written basic agreement with the Client, setting out the essential rights and obligations of the Firm and the Client.",
-            vi: "^^-^^",
+            vi: "(d) Nếu Công ty cung cấp dịch vụ đầu tư không phải là tư vấn đầu tư cho Khách hàng lẻ mới, Công ty phải ký thỏa thuận cơ bản bằng văn bản với Khách hàng, nêu rõ các quyền và nghĩa vụ thiết yếu của Công ty và Khách hàng.",
             "zh-Hant": "(d)若本公司向新的零售客戶提供的是投資服務而非投資建議，本公司必須與客戶簽訂基本書面協議，列明公司和客戶的基本權利與義務。"
         },
         amtCategorization89: {
             zh: "(e)未经零售客户签字或采用等效替代机制，使其明确表示同意根据特定条款应用金融产品，本公司一概不得代表客户自身账户或另一个客户账户使用金融产品。",
             en: "(e) We shall not use financial instruments held by us on behalf of a Client for his/her own account or the account of another Client of ourselves, without the Client’s express consent to the use of the instruments on specified terms, as evidenced, in the case of a Retail Client, by his/her signature or equivalent alternative mechanism.",
-            vi: "^^-^^",
+            vi: "(e) Chúng tôi sẽ không tự ý sử dụng các công cụ tài chính mà chúng tôi nắm giữ đại diện cho Khách hàng trên tài khoản của chính họ hoặc tài khoản của Khách hàng khác mà không có sự đồng ý rõ ràng của Khách hàng đối với việc sử dụng các công cụ theo các điều khoản cụ thể, mà không có bằng chứng sự đồng ý của khách hàng, trong trường hợp Khách Hàng Lẻ, là chữ kí hoặc một bằng chứng tương đương.",
             "zh-Hant": "(e)未經零售客戶簽字或采用等效替代機制，使其明確表示同意根據特定條款應用金融產品，本公司壹概不得代表客戶自身賬戶或另壹個客戶賬戶使用金融產品。"
         },
         amtCategorization90: {
             zh: "2.合资格交易对手",
             en: "2.Eligible Counterparties",
-            vi: "^^-^^",
+            vi: "2.Đối tác đủ tư cách pháp nhân.",
             "zh-Hant": "2.合資格交易對手"
         },
         amtCategorization91: {
             zh: "若本公司将客户视为合资格交易对手，客户有权依法享有比专业客户更低的保护。以下情况除外：",
             en: "Where the Firm treats the Client as an Eligible Counterparty, the Client will be entitled to fewer protections under the law than he/she/they would be entitled to as a Professional Client. In particular, and in addition to the above: ",
-            vi: "^^-^^",
+            vi: "Trong trường hợp Công ty phân loại Khách hàng là Đối tác Đủ tư cách pháp nhân, Khách hàng sẽ được hưởng ít sự bảo vệ theo luật hơn là Khách hàng sẽ được quyền làm Khách hàng Chuyên nghiệp. Đặc biệt, và ngoài những điều trên:",
             "zh-Hant": "若本公司將客戶視為合資格交易對手，客戶有權依法享有比專業客戶更低的保護。以下情況除外："
         },
         amtCategorization92: {
             zh: "(a)本公司在执行客户订单时，无需向客户提供最佳执行；",
             en: "(a) The Firm is not required to provide the Client with best execution in executing the Client’s orders;",
-            vi: "^^-^^",
+            vi: "(a) Công ty không bắt buộc phải cung cấp cho Khách hàng thực hiện tốt nhất trong việc thực hiện các lệnh của Khách hàng;",
             "zh-Hant": "(a)本公司在執行客戶訂單時，無需向客戶提供最佳執行；"
         },
         amtCategorization93: {
             zh: "(b)本公司无需向客户披露有关本公司支付或收取的任何费用或佣金的情况；",
             en: "(b) The Firm is not required to disclose Client Information regarding any fees or commissions that the Firm pays or receives;",
-            vi: "^^-^^",
+            vi: "(b) Công ty không bắt buộc phải tiết lộ Thông tin Khách hàng về bất kỳ khoản phí hoặc hoa hồng nào mà Công ty trả hoặc nhận;",
             "zh-Hant": "(b)本公司無需向客戶披露有關本公司支付或收取的任何費用或傭金的情況；"
         },
         amtCategorization94: {
             zh: "(c)本公司无需评估向客户所提供产品或服务的适用性或恰当性，但可以假设客户具备为自己选择最适宜产品或服务的专业知识，他/她/他们有实现投资目标的经济能力；",
             en: "(c) The Firm is not required to assess the suitability or appropriateness of a product or service that it provides to the Client but can assume that the Client has the expertise to choose the most appropriate product or service for him/her/them and that he/she/they is/are able financially to bear any investment objectives;",
-            vi: "^^-^^",
+            vi: "(c) Công ty không bắt buộc phải đánh giá tính phù hợp hoặc thích hợp của sản phẩm hoặc dịch vụ mà nó cung cấp cho Khách hàng nhưng có thể giả định rằng Khách hàng có chuyên môn để chọn sản phẩm hoặc dịch vụ phù hợp nhất cho họ và họ / họ có / có khả năng tài chính để thực hiện bất kỳ mục tiêu đầu tư nào;",
             "zh-Hant": "(c)本公司無需評估向客戶所提供產品或服務的適用性或恰當性，但可以假設客戶具備為自己選擇最適宜產品或服務的專業知識，他/她/他們有實現投資目標的經濟能力；"
         },
         amtCategorization95: {
             zh: "(d)本公司无需向客户提供有关本公司、其服务以及本公司酬劳安排的信息；",
             en: "(d) The Firm is not required to provide the Client information about the Firm, its services and the arrangements through which the Firm will be remunerated;",
-            vi: "^^-^^",
+            vi: "(d) Công ty không bắt buộc phải cung cấp thông tin cho Khách hàng về Công ty, các dịch vụ của Công ty và các thỏa thuận mà Công ty sẽ được trả thù lao;",
             "zh-Hant": "(d)本公司無需向客戶提供有關本公司、其服務以及本公司酬勞安排的信息；"
         },
         amtCategorization96: {
             zh: "(e)本公司无需向客户提供他/她/他们通过本公司所选择的产品或服务的相关风险披露；",
             en: "(e) The Firm is not required to provide the Client with risk disclosures on the products or services that he/she/they select/s from the Firm; and",
-            vi: "^^-^^",
+            vi: "(e) Công ty không bắt buộc phải cung cấp cho Khách hàng những tiết lộ rủi ro về các sản phẩm hoặc dịch vụ mà họ chọn / s từ Công ty; và",
             "zh-Hant": "(e)本公司無需向客戶提供他/她/他們通過本公司所選擇的產品或服務的相關風險披露；"
         },
         amtCategorization97: {
             zh: "(f)本公司无需向客户提供其订单的执行报告或其投资的管理报告。",
             en: "(f) The Firm is not required to provide reports to the Client on the execution of his/her/their orders or the management of his/her/their investments.",
-            vi: "^^-^^",
+            vi: "(f) Công ty không bắt buộc phải cung cấp báo cáo cho Khách hàng về việc thực hiện các lệnh của họ / hoặc lệnh của họ hoặc việc quản lý các khoản đầu tư của họ.",
             "zh-Hant": "(f)本公司無需向客戶提供其訂單的執行報告或其投資的管理報告。"
         },
         amtCategorization98: {
             zh: "常见问题解答",
             en: "FAQs",
-            vi: "^^-^^",
+            vi: "Câu Hỏi Thường Gặp",
             "zh-Hant": "常見問題解答"
         },
         amtCategorization99: {
             zh: "1.关于此工作程序的问题首先传达给客户服务部。",
             en: "Questions regarding this procedure should be addressed, in the first instance, to the Customer Support Department.",
-            vi: "^^-^^",
+            vi: "Các câu hỏi liên quan đến thủ tục này nên được giải quyết, trong trường hợp đầu tiên, được gửi đến Bộ phận hỗ trợ khách hàng.",
             "zh-Hant": "1.關於此工作程序的問題首先傳達給客戶服務部。"
         },
         amtCategorization100: {
             zh: "联系方式",
             en: "Contacts",
-            vi: "^^-^^",
+            vi: "LIÊN HỆ",
             "zh-Hant": "聯系方式"
         },
         amtCategorization101: {
             zh: "客户服务部：",
             en: "Customer Support Department: ",
-            vi: "^^-^^",
+            vi: "Bộ Phận Hỗ Trợ Khách Hàng: ",
             "zh-Hant": "客戶服務部："
         },
         amtCategorization102: {
             zh: "电话：+86 400 809 8509",
             en: "Phone: +86 400 809 8509",
-            vi: "^^-^^",
+            vi: "Điện thoại: +86 400 809 8509",
             "zh-Hant": "電話：+86 400 809 8509"
         },
         amtCategorization103: {
             zh: "电邮：support@tigerwit.com",
             en: "Email: support@tigerwit.com",
-            vi: "^^-^^",
+            vi: "Email: support@tigerwit.com",
             "zh-Hant": "電郵：support@tigerwit.com"
         },
         amtCategorization104: {
             zh: "合规部：",
             en: "Compliance Department: ",
-            vi: "^^-^^",
+            vi: "Bộ Phận Giám Sát: ",
             "zh-Hant": "合規部："
         },
         amtCategorization105: {
             zh: "电话：+1 (242) 676 7306",
             en: "Phone: +1 (242) 676 7306",
-            vi: "^^-^^",
+            vi: "Điện thoại: +1 (242) 676 7306",
             "zh-Hant": "電話：+1 (242) 676 7306"
         },
         amtCategorization106: {
             zh: "电邮：compliance@tigerwit.com",
             en: "Email: compliance@tigerwit.com",
-            vi: "^^-^^",
+            vi: "Email: compliance@tigerwit.com",
             "zh-Hant": "電郵：compliance@tigerwit.com"
         },
         amtFunds1: {
             zh: "作为一家受监管的实体，TigerWit Limited 符合下列有关客户资金的监管要求：",
             en: "As a regulated entity, TigerWit Limited meets the following regulatory requirements relating to client funds: ",
-            vi: "^^-^^",
+            vi: "Là một thực thể có quy định, TigerWit Limited đáp ứng các yêu cầu pháp lý sau đây liên quan đến quỹ khách hàng:",
             "zh-Hant": "作為壹家受監管的實體，TigerWit Limited 符合下列有關客戶資金的監管要求："
         },
         amtFunds2: {
             zh: "资金隔离",
             en: "Segregation of Funds",
-            vi: "^^-^^",
+            vi: "Phân chia các quỹ",
             "zh-Hant": "資金隔離"
         },
         amtFunds3: {
             zh: "所有存入 TigerWit 的客户资金与本公司自有的资金完全隔离，并存放在独立的银行账户。这确保了属于客户的资金不能被用于任何其他目的。我们的中期和年度财务报表接受外部审计，确保我们的操作尽可能按照最高的标准进行。",
             en: "All client funds deposited with TigerWit are fully segregated from the company’s own funds and are kept in separate bank accounts. This ensures that funds belonging to clients cannot be used for any other purpose. Our interim and annual financial reports are externally audited, ensuring that our operations are conducted to the highest possible standards.",
-            vi: "^^-^^",
+            vi: "Tất cả các quỹ của khách hàng được ký quỹ với TigerWit được tách biệt hoàn toàn khỏi các quỹ của chính công ty và được giữ trong các tài khoản ngân hàng riêng biệt. Điều này đảm bảo rằng các quỹ thuộc về khách hàng không thể được sử dụng cho bất kỳ mục đích nào khác. Báo cáo tài chính tạm thời và hàng năm của chúng tôi được kiểm toán bên ngoài, đảm bảo rằng các hoạt động của chúng tôi được thực hiện theo các tiêu chuẩn cao nhất có thể.",
             "zh-Hant": "所有存入 TigerWit 的客戶資金與本公司自有的資金完全隔離，並存放在獨立的銀行賬戶。這確保了屬於客戶的資金不能被用於任何其他目的。我們的中期和年度財務報表接受外部審計，確保我們的操作盡可能按照最高的標準進行。"
         },
         amtFunds4: {
             zh: "我们采取的其他措施",
             en: "Additional Measures We Take",
-            vi: "^^-^^",
+            vi: "Các Biện Pháp Bổ Sung Mà Chúng Tôi Thực Hiện",
             "zh-Hant": "我們采取的其他措施"
         },
         amtFunds5: {
             zh: "TigerWit 与多家主要银行机构合作，客户资金被存放在银行，例如汇丰银行（HSBC）和澳洲联邦银行（CBA）等。内部限制确保了客户资金分散在不同的银行之间，同时会定期监控信用风险。客户资金仅存放在客户资金隔离受当地法律框架支持的司法管辖区。",
             en: "TigerWit is partnered with several major banking institutions, with client funds kept in banks such as HSBC and CBA. Internal limits ensure a diversification of client funds among banks, while credit risk is regularly monitored. Client funds are only kept in jurisdictions where segregation of client funds is supported by the local legal framework.",
-            vi: "^^-^^",
+            vi: "TigerWit hợp tác với một số tổ chức ngân hàng lớn, với các quỹ khách hàng được giữ tại các ngân hàng như HSBC và CBA. Các giới hạn nội bộ đảm bảo đa dạng hóa các quỹ khách hàng giữa các ngân hàng, trong khi rủi ro tín dụng thường xuyên được theo dõi. Các quỹ của khách hàng chỉ được giữ ở các khu vực pháp lý, nơi sự phân chia các quỹ của khách hàng được hỗ trợ bởi khung pháp lý địa phương.",
             "zh-Hant": "TigerWit 與多家主要銀行機構合作，客戶資金被存放在銀行，例如匯豐銀行（HSBC）和澳洲聯邦銀行（CBA）等。內部限制確保了客戶資金分散在不同的銀行之間，同時會定期監控信用風險。客戶資金僅存放在客戶資金隔離受當地法律框架支持的司法管轄區。"
         },
         amtFunds6: {
             zh: "只要没有受到操纵且真诚接受，TigerWit 向所有客户提供负结余保护保证，作为客户协议的组成部分。我们承诺执行严格的政策，确保客户的损失永远不会超过他们的总入金。",
             en: "TigerWit offers Negative Balance Protection guarantee to all clients as part of the Client Agreement, as long as it is not manipulated and is accepted in good faith. We are committed to a strict policy ensuring that clients may never lose more than their total deposits.",
-            vi: "^^-^^",
+            vi: "TigerWit cung cấp cho khách hàng chính sách bảo vệ tránh số dư âm cho tất cả khách hàng như là một phần của Hợp đồng khách hàng, miễn là điều này không được thao túng và được chấp nhận với thiện chí. Chúng tôi cam kết một chính sách nghiêm ngặt đảm bảo rằng khách hàng không bao giờ có thể mất nhiều hơn tổng số tiền gửi của họ.",
             "zh-Hant": "只要沒有受到操縱且真誠接受，TigerWit 向所有客戶提供負結余保護保證，作為客戶協議的組成部分。我們承諾執行嚴格的政策，確保客戶的損失永遠不會超過他們的總入金。"
         },
         amtExecution1: {
             zh: "序言",
             en: "Introduction",
-            vi: "^^-^^",
+            vi: "Giới thiệu",
             "zh-Hant": "序言"
         },
         amtExecution2: {
             zh: "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
             en: "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-            vi: "^^-^^",
+            vi: "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Doanh nghiệp\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
             "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。"
         },
         amtExecution3: {
             zh: "2.本订单执行政策（以下称“本政策”）构成客户协议的一部分。所以，您与本公司签署客户协议，即同意本公司所提供的与金融工具有关的执行政策的条款，本文件所载合同规范可在网站 http://global.tigerwit.com（“金融工具”）在线获取。",
             en: "2.This Order Execution Policy (hereinafter the “Policy”) forms part of the Client Agreement. Therefore, by entering into the Client Agreement with the Firm, you are also agreeing to the terms of our Order Execution Policy relating to financial instruments provided by the Firm, the contract specifications of which are available online at http://global.tigerwit.com (the \"Financial Instruments\"), as set out in this document. ",
-            vi: "^^-^^",
+            vi: "2.Chính sách Thực thi Lệnh này (sau đây gọi là “Chính sách”) là một phần của Hợp đồng Khách hàng. Do đó, bằng cách ký kết Hợp đồng Khách hàng với Công ty, bạn cũng đồng ý với các điều khoản của Chính sách Thực hiện Lệnh liên quan đến các công cụ tài chính do Công ty cung cấp, thông số hợp đồng có sẵn trên mạng tại http: //global.tigerwit. com (\"Công cụ tài chính\"), như được nêu trong tài liệu này.",
             "zh-Hant": "2.本訂單執行政策（以下稱“本政策”）構成客戶協議的壹部分。所以，您與本公司簽署客戶協議，即同意本公司所提供的與金融工具有關的執行政策的條款，本文件所載合同規範可在網站 http://global.tigerwit.com（“金融工具”）在線獲取。"
         },
         amtExecution4: {
             zh: "除非另有规定，本政策中使用的术语应具有 SCB 条例赋予的相同含义。",
             en: "Unless otherwise defined, any defined terms in this Policy will have the same meaning given by SCB regulations. ",
-            vi: "^^-^^",
+            vi: "Trừ khi được định nghĩa khác, bất kỳ điều khoản nào được xác định trong Chính sách này sẽ có cùng ý nghĩa theo quy định của SCB.",
             "zh-Hant": "除非另有規定，本政策中使用的術語應具有 SCB 條例賦予的相同含義。"
         },
         amtExecution5: {
             zh: "范围和服务",
             en: "Scope and Services",
-            vi: "^^-^^",
+            vi: "Phạm vi và dịch vụ",
             "zh-Hant": "範圍和服務"
         },
         amtExecution6: {
             zh: "1.本政策从 2017 年 6 月起生效，适用于所有客户（零售和专业客户）。",
             en: "1.The Policy is effective from June 2017 and applies to all clients, retail and professional.",
-            vi: "^^-^^",
+            vi: "1.Chính sách có hiệu lực từ tháng 6 năm 2017 và áp dụng cho tất cả khách hàng, đơn lẻ và chuyên nghiệp.",
             "zh-Hant": "1.本政策從 2017 年 6 月起生效，適用於所有客戶（零售和專業客戶）。"
         },
         amtExecution7: {
             zh: "2.本政策在执行本公司提供的金融工具交易时适用。本公司所提供的金融工具为差价合约。本公司可裁量决定可用于交易的金融工具类型以及发布可进行交易的价格。本公司通过其交易平台向客户提供实时滚动价格“报价”，以及从第三方流动性供应商收到的可用数量（“市场深度”）细分。本公司始终是所有交易的对手方（或做市商）；所以如果客户决定在本公司开设金融工具头寸，该头寸只能通过本公司平仓。",
             en: "2.This Policy applies when executing transactions in the Financial Instruments provided by the Firm. The Financial Instruments provided by the Firm are Contracts for Difference. It is up to the Firm’s discretion to decide which types of Financial Instruments to make available and to publish the prices at which these can be traded. The Firm, through its trading platform, provides the client with live streaming prices, “Quotes”, along with a breakdown of the available volumes (“market depth”) as received from its third-party liquidity providers. The Firm is always the counterparty (or principal) to every trade; therefore, if the Client decides to open a position in a Financial Instrument with the Firm, that position can only be closed with the Firm.",
-            vi: "^^-^^",
+            vi: "2. Chính sách này áp dụng khi thực hiện giao dịch với các Công cụ tài chính do Công ty cung cấp là Hợp Đồng Chênh Lệch. Tùy theo quyết định của Công ty để quyết định loại Công cụ tài chính nào có sẵn và công bố giá mà tại đó chúng có thể được giao dịch. Công ty, thông qua nền tảng giao dịch, cung cấp cho khách hàng dòng giá trực tiếp, “Báo giá”, cùng với sự đột phá xuống của các khối lượng sẵn có (“độ sâu thị trường”) nhận được từ các nhà cung cấp thanh khoản của bên thứ ba. Công ty luôn là đối tác (hoặc người chịu trách nhiệm chính) cho mọi giao dịch; do đó, nếu Khách hàng quyết định mở một vị thế đối với Công cụ tài chính với Công ty, vị thế đó chỉ có thể được đóng lại với Công ty.",
             "zh-Hant": "2.本政策在執行本公司提供的金融工具交易時適用。本公司所提供的金融工具為差價合約。本公司可裁量決定可用於交易的金融工具類型以及發布可進行交易的價格。本公司通過其交易平臺向客戶提供實時滾動價格“報價”，以及從第三方流動性供應商收到的可用數量（“市場深度”）細分。本公司始終是所有交易的對手方（或做市商）；所以如果客戶決定在本公司開設金融工具頭寸，該頭寸只能通過本公司平倉。"
         },
         amtExecution8: {
             zh: "订单类型的定义请参看附件 I 执行要素价格",
             en: "Order Type Definitions Please refer to Appendix I Execution Elements Prices",
-            vi: "^^-^^",
+            vi: "Định nghĩa Các Loại Lệnh Vui lòng tham khảo Phụ lục I Các Yếu Tố Thực Hiện Giá.",
             "zh-Hant": "訂單類型的定義請參看附件 I 執行要素價格"
         },
         amtExecution9: {
             zh: "TigerWit 从部分世界领先的流动性供应商获得价格。拥有多个流动性供应商非常重要，尤其是在非正常的市场条件下，例如发生极端的波动时。在这些情况下，即使是一定数量的流动性供应商决定扩大点差或完全停止报价，本公司仍然能够向客户提供有竞争力的价格，对交易平台包括 TigerWit 的加价。其余的流动性供应商会继续竞相向 TigerWit 提供最佳的“买价”和“卖价”。",
             en: "TigerWit receives price feeds from some of the world’s leading liquidity providers. Having multiple liquidity providers is important especially during abnormal market conditions, such as times of extreme volatility. Under these conditions and even if a certain number of liquidity providers decide to widen the spreads or stop quoting prices at all, the Firm is still able to provide clients with competitive prices which for the trading platforms include TigerWit’s mark-up. The remaining liquidity providers shall continue competing to provide TigerWit the best ‘bid’ and ‘ask’ prices.",
-            vi: "^^-^^",
+            vi: "TigerWit nhận được nguồn cập nhật dữ liệu giá từ một số nhà cung cấp thanh khoản hàng đầu thế giới. Có nhiều nhà cung cấp thanh khoản là đặc biệt quan trọng là trong điều kiện thị trường bất thường, chẳng hạn như thời điểm thị trường cực kì biến động. Dưới những điều kiện này và ngay cả khi một số nhà cung cấp thanh khoản nhất định quyết định tăng spread giá hoặc ngừng đưa ra chào giá, Công ty vẫn có thể cung cấp cho khách hàng mức giá cạnh tranh cho nền tảng giao dịch bao gồm lợi nhuận gộp của TigerWit. Các nhà cung cấp thanh khoản còn lại sẽ tiếp tục cạnh tranh để cung cấp cho TigerWit giá 'giá chào bán' và ' giá mua' tốt nhất.",
             "zh-Hant": "TigerWit 從部分世界領先的流動性供應商獲得價格。擁有多個流動性供應商非常重要，尤其是在非正常的市場條件下，例如發生極端的波動時。在這些情況下，即使是壹定數量的流動性供應商決定擴大點差或完全停止報價，本公司仍然能夠向客戶提供有競爭力的價格，對交易平臺包括 TigerWit 的加價。其余的流動性供應商會繼續競相向 TigerWit 提供最佳的“買價”和“賣價”。"
         },
         amtExecution10: {
             zh: "重新报价",
             en: "Re-quoting ",
-            vi: "^^-^^",
+            vi: "Chào giá lại",
             "zh-Hant": "重新報價"
         },
         amtExecution11: {
             zh: "这是在已提交“即时订单”之后向客户提供二次报价的做法；客户必须在执行订单前同意这一报价。如果客户原来指定的申请价格不能使用，TigerWit 将对“即时订单”重新报价。提供给客户的二次报价是 TigerWit 从第三方流动性供应商获得的次优价格。TigerWit 对“挂单”不予重新报价。",
             en: "This is the practice of providing a secondary quote to the client after an ‘instant order’ has been submitted; the client must agree to this quote before the order is executed. TigerWit will re- quote ‘instant orders’ if the requested price originally specified by the client is not available. The secondary quote provided to the client is the next available price received by TigerWit from its thirdparty liquidity providers. TigerWit does not requote ‘pending orders’",
-            vi: "^^-^^",
+            vi: "Đây là việc cung cấp một báo giá thứ cấp cho khách hàng sau khi một 'lệnh tức thì' đã được gửi; khách hàng phải đồng ý với báo giá này trước khi lệnh được thực thi. TigerWit sẽ báo lại 'các lệnh tức thì' nếu giá được yêu cầu ban đầu do khách hàng chỉ định không có sẵn. Báo giá thứ cấp được cung cấp cho khách hàng là giá sẵn có tiếp theo mà TigerWit nhận được từ các nhà cung cấp thanh khoản của bên thứ ba. TigerWit không yêu cầu 'lệnh chờ xử lý'",
             "zh-Hant": "這是在已提交“即時訂單”之後向客戶提供二次報價的做法；客戶必須在執行訂單前同意這壹報價。如果客戶原來指定的申請價格不能使用，TigerWit 將對“即時訂單”重新報價。提供給客戶的二次報價是 TigerWit 從第三方流動性供應商獲得的次優價格。TigerWit 對“掛單”不予重新報價。"
         },
         amtExecution12: {
             zh: "滑点",
             en: "Slippage",
-            vi: "^^-^^",
+            vi: "Slippage (trượt giá)",
             "zh-Hant": "滑點"
         },
         amtExecution13: {
             zh: "在订单被提交用于执行之时，客户申请的指定价格可能无法使用，所以订单的执行价将与客户申请的价格接近，或者存在几个点的差距。如果执行价格优于客户申请的价格，这被称为“正滑点”。相反，如果执行价格差于客户申请的价格，这被称为“负滑点”。请注意，“滑点”是正常的市场操作，也是外汇交易市场和股市在类似流动性和波动性因新闻发布、经济事件和市场开盘而发生变化的情况下的常规特征*。TigerWit 的自动执行软件不会根据与通过任何特定客户账户执行订单有关的个人参数操作。",
             en: "At the time that an order is presented for execution, the specific price requested by the client may not be available; therefore, the order will be executed close to or a number of pips away from the client’s requested price. If the execution price is better than the price requested by the client this is referred to as ‘positive slippage’. In contrast, if the execution price is worse than the price requested by the client this is referred to as ‘negative slippage’. Please be advised that ‘slippage’ is a normal market practise and a regular feature of the foreign exchange and stock markets under conditions* such as illiquidity and volatility due to news announcements, economic events and market openings. TigerWit’s automated execution software does not operate based on any individual parameters related to the execution of orders through any specific client accounts.",
-            vi: "^^-^^",
+            vi: "Vào thời điểm một lệnh được được ra để khớp lệnh, giá cụ thể theo yêu cầu của khách hàng có thể không có sẵn; do đó, lệnh này sẽ được khớp với mức gần với một số pip ra so với yêu cầu của khách hàng. Nếu giá khớp tốt hơn giá được khách hàng yêu cầu, điều này được gọi là 'trượt dương'. Ngược lại, nếu giá thực hiện thấp hơn giá mà khách hàng yêu cầu, điều này được gọi là \"trượt âm\". Xin lưu ý rằng 'trượt' là hoạt động thị trường bình thường và tính năng thường xuyên của thị trường ngoại hối và thị trường chứng khoán trong điều kiện * như tính thanh khoản và biến động do thông báo tin tức, sự kiện kinh tế và thị trường mở. Phần mềm khớp lệnh tự động của TigerWit không hoạt động dựa trên bất kỳ thông số riêng lẻ nào liên quan đến việc thực hiện các lệnh thông qua bất kỳ tài khoản khách hàng cụ thể nào.",
             "zh-Hant": "在訂單被提交用於執行之時，客戶申請的指定價格可能無法使用，所以訂單的執行價將與客戶申請的價格接近，或者存在幾個點的差距。如果執行價格優於客戶申請的價格，這被稱為“正滑點”。相反，如果執行價格差於客戶申請的價格，這被稱為“負滑點”。請註意，“滑點”是正常的市場操作，也是外匯交易市場和股市在類似流動性和波動性因新聞發布、經濟事件和市場開盤而發生變化的情況下的常規特征*。TigerWit 的自動執行軟件不會根據與通過任何特定客戶賬戶執行訂單有關的個人參數操作。"
         },
         amtExecution14: {
             zh: "* 请注意，这不是详尽清单。",
             en: "* Please note that this is not an exhaustive list.",
-            vi: "^^-^^",
+            vi: "* Xin lưu ý rằng đây không phải là danh sách đầy đủ",
             "zh-Hant": "* 請註意，這不是詳盡清單。"
         },
         amtExecution15: {
             zh: "部分执行 如果当时市场上没有足够流动性的情况下，会部分地执行订单，以按照特定的价格执行整个订单。部分执行可能以不同的价格执行。",
             en: "Partial fills This is the practice of executing an order in parts if there is not enough liquidity in the market at the time in order to fill-in the full order at a specific price. Partial fills may be executed at different prices.",
-            vi: "^^-^^",
+            vi: "Điền một phần Đây là thực hành khớp một lệnh trong các bộ phận nếu không có đủ thanh khoản trên thị trường vào thời điểm đó để lấp đầy đủ vào một mức giá cụ thể. Việc điền một phần có thể được thực hiện ở các mức giá khác nhau.",
             "zh-Hant": "部分執行 如果當時市場上沒有足夠流動性的情況下，會部分地執行訂單，以按照特定的價格執行整個訂單。部分執行可能以不同的價格執行。"
         },
         amtExecution16: {
             zh: "佣金",
             en: "Commission",
-            vi: "^^-^^",
+            vi: "Hoa hồng",
             "zh-Hant": "傭金"
         },
         amtExecution17: {
             zh: "客户在通过本平台交易基于外汇和金属的 CFD时，可能被收取佣金。更多信息可在本网页在线获取：http://global.tigerwit.com。",
             en: "Clients may be charged commission when trading CFDs on forex and metals through the platform. Further information is available online at: http://global.tigerwit.com. ",
-            vi: "^^-^^",
+            vi: "Khách hàng có thể bị tính phí hoa hồng khi giao dịch CFD trên ngoại hối và kim loại thông qua nền tảng này. Thông tin thêm có sẵn trực tuyến tại: http://global.tigerwit.com.",
             "zh-Hant": "客戶在通過本平臺交易基於外匯和金屬的 CFD時，可能被收取傭金。更多信息可在本網頁在線獲取：http://global.tigerwit.com。"
         },
         amtExecution18: {
             zh: "加价",
             en: "Mark-up",
-            vi: "^^-^^",
+            vi: "Lợi Nhuận Gộp",
             "zh-Hant": "加價"
         },
         amtExecution19: {
             zh: "客户在通过交易平台交易基于外汇、金属、石油、股票、指数和期货 CFD 时，会被收取加价。更 多 信 息 可 在 本 网 页 在 线 获 取 ：http://global.tigerwit.com。",
             en: "Clients shall be charged a mark-up on spread when trading CFDs on forex, metals, oil, equities, indices and futures through the trading platform. Further information is available online at: http://global.tigerwit.com. ",
-            vi: "^^-^^",
+            vi: "Khách hàng sẽ phải trả một khoản chênh lệch trên spread khi giao dịch CFD trên ngoại hối, kim loại, dầu, cổ phiếu, chỉ số và tương lai thông qua sàn giao dịch. Thông tin khác có tại: http://global.tigerwit.com.",
             "zh-Hant": "客戶在通過交易平臺交易基於外匯、金屬、石油、股票、指數和期貨 CFD 時，會被收取加價。更 多 信 息 可 在 本 網 頁 在 線 獲 取 ：http://global.tigerwit.com。"
         },
         amtExecution20: {
             zh: "订单类型",
             en: "Order Type",
-            vi: "^^-^^",
+            vi: "Loại Lệnh",
             "zh-Hant": "訂單類型"
         },
         amtExecution21: {
             zh: "执行即时订单",
             en: "Execution Instant Order(s)",
-            vi: "^^-^^",
+            vi: "(Các) Lệnh Khớp Tức Thì",
             "zh-Hant": "執行即時訂單"
         },
         amtExecution22: {
             zh: "即时订单：这是在客户提交订单执行时以报价流所显示的“卖价”或“买价”（分别）买入或卖出的订单。",
             en: "Instant Order: this is an order to either buy or sell at the ‘ask’ or ‘bid’ price (respectively) as it appears in the quotes flow at the time the client presents the order for execution.",
-            vi: "^^-^^",
+            vi: "Lệnh khớp tức thì: đây là một loại lệnh để mua hoặc bán với giá 'yêu cầu' hoặc 'giá thầu' (tương ứng) khi nó xuất hiện trong luồng báo giá tại thời điểm khách đặt lệnh này để khớp lệnh.",
             "zh-Hant": "即時訂單：這是在客戶提交訂單執行時以報價流所顯示的“賣價”或“買價”（分別）買入或賣出的訂單。"
         },
         amtExecution23: {
             zh: "挂单 止损单",
             en: "Pending Order(s) Stop Orders",
-            vi: "^^-^^",
+            vi: "(Các )Lệnh Dừng Lệnh Chờ",
             "zh-Hant": "掛單 止損單"
         },
         amtExecution24: {
             zh: "这是在市场到达“止损价格”时，立即买入或卖出的订单。一旦到达“止损价格”，“止损单”将被触发并被作为“市价单”对待。如果“止损单”没有被触发，将被系统保留到后面的日期，受“取消前有效”部分所规定的条件约束。对于基于外汇、现货金属、股票、指数和期货的CFD，“止损单”应当设置离当前市价差距最小的点数，以使其有效。在当前买卖价差范围内设置的止损单将被自动移除",
             en: "This is an order to buy or sell once the market reaches the ‘stop price’. Once the market reaches the ‘stop price’ the ‘stop order’ is triggered and treated as a ‘market order’*. If the ‘stop order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. For CFDs on FX, spot metals, equities, indices and futures, ‘stop orders’ should be placed a minimum number of pips away from the current market price in order for these to be valid. Stop Orders placed within the current bidask spread will be automatically removed.",
-            vi: "^^-^^",
+            vi: "Đây là lệnh mua hoặc bán khi thị trường đạt đến 'giá dừng'. Khi thị trường đạt đến ‘giá dừng’, ‘lệnh dừng’ được kích hoạt và được coi là ‘lệnh thị trường’ *. Nếu 'lệnh dừng' không được kích hoạt, nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó tùy thuộc vào các điều kiện được mô tả trong phần ‘Good‘ til Canceled ’. Đối với CFD trên FX, kim loại giao ngay, chứng khoán, chỉ số và tương lai, 'lệnh dừng' phải được đặt số pip tối thiểu ra khỏi giá thị trường hiện tại để chúng có giá trị. Lệnh dừng được đặt trong phạm vi giá thầu hiện tại sẽ tự động bị xóa.",
             "zh-Hant": "這是在市場到達“止損價格”時，立即買入或賣出的訂單。壹旦到達“止損價格”，“止損單”將被觸發並被作為“市價單”對待。如果“止損單”沒有被觸發，將被系統保留到後面的日期，受“取消前有效”部分所規定的條件約束。對於基於外匯、現貨金屬、股票、指數和期貨的CFD，“止損單”應當設置離當前市價差距最小的點數，以使其有效。在當前買賣價差範圍內設置的止損單將被自動移除"
         },
         amtExecution25: {
             zh: "止损",
             en: "Stop Loss",
-            vi: "^^-^^",
+            vi: "Dừng Lỗ",
             "zh-Hant": "止損"
         },
         amtExecution26: {
             zh: "这个订单是为了尽量减少亏损。一旦市场到达“止损价格”，该订单将被触发并被作为“市价单”对待*。如果“止损价格”没有被触发，将被系统保留在后面的日期。对于基于外汇、现货金属、股票、指数和期货的 CFD，“止损”单应当设置离当前市价差距最小的点数，以使其有效。在当前买卖价差范围内设置的“止损”单将被自动移除。",
             en: "This is an order to minimise losses. Once the market reaches the ‘stop loss price’ the order is triggered and treated as a ‘market order’*. If the ‘stop loss’ is not triggered it shall remain in the system until a later date. For CFDs on FX, spot metals, equities, indices and futures, ‘stop loss’ orders should be placed a minimum number of pips away from the current market price in order for these to be valid. ‘Stop Loss’ orders placed within the current bid-ask spread will be automatically removed.",
-            vi: "^^-^^",
+            vi: "Đây là một lệnh để giảm thiểu tổn thất. Khi thị trường đạt đến 'giá thua lỗ', lệnh được kích hoạt và được coi là 'lệnh thị trường' *. Nếu 'dừng lỗ' không được kích hoạt thì nó sẽ vẫn còn trong hệ thống cho đến ngày sau đó. Đối với CFD trên FX, kim loại giao ngay, chứng khoán, chỉ số và tương lai, lệnh 'dừng lỗ' phải được đặt số pip tối thiểu ra khỏi giá thị trường hiện tại để các giá trị này hợp lệ. Các lệnh ‘Stop Loss ( Dừng Lỗ)  được đặt trong phạm vi trong đó spread giá thầu hiện tại sẽ tự động bị xóa.",
             "zh-Hant": "這個訂單是為了盡量減少虧損。壹旦市場到達“止損價格”，該訂單將被觸發並被作為“市價單”對待*。如果“止損價格”沒有被觸發，將被系統保留在後面的日期。對於基於外匯、現貨金屬、股票、指數和期貨的 CFD，“止損”單應當設置離當前市價差距最小的點數，以使其有效。在當前買賣價差範圍內設置的“止損”單將被自動移除。"
         },
         amtExecution27: {
             zh: "限价单",
             en: "Limit Orders",
-            vi: "^^-^^",
+            vi: "Các Lệnh Giới Hạn",
             "zh-Hant": "限價單"
         },
         amtExecution28: {
             zh: "一旦市场到达“限制价格”时，立即买入或卖出的订单。一旦市场达到“限制价格”，“限价单”将以“限制价格”或更佳的价格触发和执行。如果“限制价格”没有被触发，将被系统保留到后面的日期，受“取消前有效”部分所规定的条件约束。对于基于外汇、现货金属、股票、指数和期货的 CFD，“限价单”应当设置离当前市价差距最小的点数，以使其有效。在当前买卖价差范围内设置的限价单将被自动移除。",
             en: "This is an order to buy or sell once the market reaches the ‘limit price’. Once the market reaches the ‘limit price’ the ‘limit order’ is triggered and executed at the ‘limit price’ or better. If the ‘limit order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. For CFDs on FX, spot metals, equities, indices and futures, ‘limit orders’ should be placed a minimum number of pips away from the current market price in order for these to be valid. Limit Orders placed within the current bid-ask spread will be automatically removed.",
-            vi: "^^-^^",
+            vi: "Đây là lệnh mua hoặc bán khi thị trường đạt đến 'giá giới hạn'. Khi thị trường đạt đến 'giới hạn giá', ‘lệnh giới hạn’ được kích hoạt và được thực hiện ở 'mức giá giới hạn' hoặc cao hơn. Nếu ‘lệnh giới hạn’ không được kích hoạt, nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó tùy thuộc vào các điều kiện được mô tả trong phần ‘Good‘ til Canceled ’. Đối với CFD trên FX, kim loại giao ngay, chứng khoán, chỉ số và tương lai, 'lệnh giới hạn' phải được đặt số pip tối thiểu ra khỏi giá thị trường hiện tại để chúng có giá trị. Các lệnh giới hạn được đặt trong phạm vi chênh lệch giá thầu hiện tại sẽ tự động bị xóa.",
             "zh-Hant": "壹旦市場到達“限制價格”時，立即買入或賣出的訂單。壹旦市場達到“限制價格”，“限價單”將以“限制價格”或更佳的價格觸發和執行。如果“限制價格”沒有被觸發，將被系統保留到後面的日期，受“取消前有效”部分所規定的條件約束。對於基於外匯、現貨金屬、股票、指數和期貨的 CFD，“限價單”應當設置離當前市價差距最小的點數，以使其有效。在當前買賣價差範圍內設置的限價單將被自動移除。"
         },
         amtExecution29: {
             zh: "止盈",
             en: "Take Profit",
-            vi: "^^-^^",
+            vi: "Chốt Lời",
             "zh-Hant": "止盈"
         },
         amtExecution30: {
             zh: "此订单是为了确保盈利。一旦市场到达“止盈价格”，该订单将被触发并被作为“限价单”对待。如果“止盈”没有被触发，将被系统保留到后面的日期。对于基于外汇、现货金属、股票、指数和期货的 CFD，“止盈”单应当设置离当前市价差距最小的点数，以使其有效。在当前买卖价差范围内设置的“止盈”单将被自动移除。",
             en: "This is an order to secure profits. Once the market reaches the ‘take profit price’ the order is triggered and treated as a ‘limit order’. If the ‘take profit’ is not triggered it shall remain in the system until a later date. For CFDs on FX, spot metals, equities, indices and futures, ‘take profit’ orders should be placed a minimum number of pips away from the current market price in order for these to be valid. ‘Take Profit’ orders placed within the current bidask spread will be automatically removed.",
-            vi: "^^-^^",
+            vi: "Đây là một lệnh để đảm bảo lợi nhuận. Khi thị trường đạt đến 'giá lợi nhuận', lệnh được kích hoạt và được coi là 'lệnh giới hạn'. Nếu ‘take profit’ (chốt lời ) không được kích hoạt thì nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó. Đối với CFD trên FX, kim loại giao ngay, chứng khoán, chỉ số và tương lai, lệnh ‘take profit’ (chốt lời) phải được đặt số pip tối thiểu ra khỏi giá thị trường hiện tại để các giá trị này hợp lệ. Các lệnh 'Chốt lời' được đặt trong phạm vi giá chào bán và chào mua hiện tại sẽ tự động bị xóa.",
             "zh-Hant": "此訂單是為了確保盈利。壹旦市場到達“止盈價格”，該訂單將被觸發並被作為“限價單”對待。如果“止盈”沒有被觸發，將被系統保留到後面的日期。對於基於外匯、現貨金屬、股票、指數和期貨的 CFD，“止盈”單應當設置離當前市價差距最小的點數，以使其有效。在當前買賣價差範圍內設置的“止盈”單將被自動移除。"
         },
         amtExecution31: {
             zh: "* 市价单",
             en: "* Market Order",
-            vi: "^^-^^",
+            vi: "* Lệnh Thị Trường",
             "zh-Hant": "* 市價單"
         },
         amtExecution32: {
             zh: "这是以当前可获的市场价格买入或卖出的订单。系统自动合并从第三方流动性供应商收到的成交量，并按成交量加权平均价（VWAP）执行“市价单”，VWAP 是在执行时可用的最佳价格的平均值。如果“市价单”没有被触发，将受“取消前有效”部分所规定的条件约束。",
             en: "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution. Once the ‘market order’ is triggered it shall be subject to the conditions described in the ‘Good ‘til Cancelled’ section.",
-            vi: "^^-^^",
+            vi: "Đây là lệnh mua hoặc bán với giá thị trường hiện tại. Hệ thống sẽ tự động tổng hợp khối lượng nhận được từ nhà cung cấp thanh khoản của bên thứ ba và thực hiện ‘lệnh thị trường’ tại VWAP (‘Giá trung bình theo kích thước”) là mức giá trung bình và tốt nhất có sẵn tại thời điểm thực hiện. Khi 'lệnh thị trường' được kích hoạt, nó sẽ phải tuân theo các điều kiện được mô tả trong phần ‘Good’ ‘til Cancelled’ (Hết hạn).",
             "zh-Hant": "這是以當前可獲的市場價格買入或賣出的訂單。系統自動合並從第三方流動性供應商收到的成交量，並按成交量加權平均價（VWAP）執行“市價單”，VWAP 是在執行時可用的最佳價格的平均值。如果“市價單”沒有被觸發，將受“取消前有效”部分所規定的條件約束。"
         },
         amtExecution33: {
             zh: "取消前有效（简称“GTC”）（=到期）",
             en: "Good ‘til Cancelled (‘GTC’) (= Expiry)",
-            vi: "^^-^^",
+            vi: "Good ‘til Cancelled  (‘GTC’) (= hết hạn)",
             "zh-Hant": "取消前有效（簡稱“GTC”）（=到期）"
         },
         amtExecution34: {
             zh: "这是客户可适用于“挂单”的执行设置。订单会保持“有效”并等待执行，直到订单被触发并作为市价单对待，或被客户取消时为止。",
             en: "This is an execution setting that the client may apply to ‘pending orders’. The order may remain ‘live’ and pending for execution until such time as the order is triggered and treated as a market order or cancelled by the client.",
-            vi: "^^-^^",
+            vi: "Đây là cài đặt thực khớp lệnh mà khách hàng có thể áp dụng cho 'các lệnh đang chờ xử lý'. Lệnh có thể vẫn còn 'đang hoạt động' và đang chờ xử lý cho đến khi lệnh được kích hoạt và được coi là lệnh thị trường hoặc bị hủy bởi khách hàng.",
             "zh-Hant": "這是客戶可適用於“掛單”的執行設置。訂單會保持“有效”並等待執行，直到訂單被觸發並作為市價單對待，或被客戶取消時為止。"
         },
         amtExecution35: {
             zh: "挂单修改/取消",
             en: "Pending Order Modification/Cancellation",
-            vi: "^^-^^",
+            vi: "Điều chỉnh / Hủy lệnh đang chờ xử lý",
             "zh-Hant": "掛單修改/取消"
         },
         amtExecution36: {
             zh: "如果市场没有到达客户所指定的价格水平，客户可以修改或取消“挂单”。",
             en: "The client may modify/ cancel a ‘pending order’ if the market did not reach the level of the price specified by the client.",
-            vi: "^^-^^",
+            vi: "Khách hàng có thể chỉnh sửa / hủy một 'lệnh chờ' nếu thị trường không đạt đến mức giá mà khách hàng chỉ định.",
             "zh-Hant": "如果市場沒有到達客戶所指定的價格水平，客戶可以修改或取消“掛單”。"
         },
         amtExecution37: {
             zh: "注意：如上所述，大多数订单应由 TigerWit 的交易平台自动执行。但请注意，TigerWit 保留对于主要货币对的 100 手或以上的订单拥有自由裁量权，可全部或部分手动执行的权利。这一做法也适用于次要货币对的大规模订单。此外，在合理怀疑存在与市场失效无关的套利行为的情况下，本公司可自行手动执行订单，包括但不限于潜伏套利和掉期套利。",
             en: "NOTE: Most of the orders shall be automatically executed by TigerWit’s trading platform, as described above. But it should be noted that TigerWit reserves the right, at its absolute discretion, to manually execute in whole or in part an order of 100 lots or above, for major currency pairs. The same practice applies for orders of a significant size for minor currency pairs. In addition, orders may be manually executed at the discretion of the Firm in the event of a reasonable suspicion of arbitrage practices unrelated to market inefficiencies, including, but not limited to, latency arbitrage and swap arbitrage.",
-            vi: "^^-^^",
+            vi: "LƯU Ý: Hầu hết các lệnh sẽ được tự động thực hiện bởi nền tảng giao dịch của TigerWit, như được mô tả ở trên. Nhưng cần lưu ý rằng TigerWit bảo lưu quyền, trong thẩm quyền của mình, để khớp lệnh thủ công toàn bộ hoặc một phần lệnh từ 100 lô trở lên đối với các cặp tiền tệ lớn. Các tiến hành tương tự cũng áp dụng cho các lệnh có kích thước đáng kể đối với các cặp tiền tệ nhỏ. Ngoài ra, lệnh có thể được thực hiện theo quyết định của Công ty trong trường hợp có sự nghi ngờ hợp lý về các hành vi kinh doanh chênh lệch giá không liên quan đến sự thiếu hiệu quả của thị trường, bao gồm, nhưng không giới hạn, chênh lệch do độ trễ và swap.",
             "zh-Hant": "註意：如上所述，大多數訂單應由 TigerWit 的交易平臺自動執行。但請註意，TigerWit 保留對於主要貨幣對的 100 手或以上的訂單擁有自由裁量權，可全部或部分手動執行的權利。這壹做法也適用於次要貨幣對的大規模訂單。此外，在合理懷疑存在與市場失效無關的套利行為的情況下，本公司可自行手動執行訂單，包括但不限於潛伏套利和掉期套利。"
         },
         amtExecution38: {
             zh: "市价单 市价单",
             en: "Market Order(s) Market Order",
-            vi: "^^-^^",
+            vi: "(Các) Lệnh Thị Trường  Lệnh Thị Trường",
             "zh-Hant": "市價單 市價單"
         },
         amtExecution39: {
             zh: "这是以当前可获的市场价格买入或卖出的订单。系统自动合并从第三方流动性供应商收到的成交量并按成交量加权平均价（VWAP）执行“市价单”，VWAP 是在执行时可用的最佳价格的平均值。",
             en: "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution.",
-            vi: "^^-^^",
+            vi: "Đây là lệnh mua hoặc bán với giá thị trường hiện tại. Hệ thống sẽ tự động tổng hợp khối lượng nhận được từ nhà cung cấp thanh khoản của bên thứ ba và thực hiện ‘lệnh thị trường’ tại VWAP (‘Giá trung bình theo kích thước”) là mức giá trung bình và tốt nhất có sẵn tại thời điểm thực hiện.",
             "zh-Hant": "這是以當前可獲的市場價格買入或賣出的訂單。系統自動合並從第三方流動性供應商收到的成交量並按成交量加權平均價（VWAP）執行“市價單”，VWAP 是在執行時可用的最佳價格的平均值。"
         },
         amtExecution40: {
             zh: "挂单 止损单",
             en: "Pending Order(s) Stop Orders",
-            vi: "^^-^^",
+            vi: "(Các) Lệnh Chờ Lệnh Dừng",
             "zh-Hant": "掛單 止損單"
         },
         amtExecution41: {
             zh: "这是在市场到达“止损价格”时，立即买入或卖出的订单。一旦到达“止损价格”，“止损单”将被触发并被作为“市价单”对待*。如果“止损价格”没有被触发，将被系统保留到后面的日期，受“取消前有效”部分所规定的条件约束。“止损单”的设置可以尽可能与当前市场价相近；没有限制。",
             en: "This is an order to buy or sell once the market reaches the ‘stop price’. Once the market reaches the ‘stop price’, the ‘stop order’ is triggered and treated as a ‘market order’*. If the ‘stop order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. ‘Stop orders’ can be placed as close to the current market price as possible; there is no restriction.",
-            vi: "^^-^^",
+            vi: "Đây là lệnh mua hoặc bán khi thị trường đạt đến 'giá dừng'. Khi thị trường đạt đến ‘giá dừng’, ‘lệnh dừng’ được kích hoạt và được coi là ‘lệnh thị trường’ *. Nếu 'lệnh dừng' không được kích hoạt, nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó tùy thuộc vào các điều kiện được mô tả trong phần ‘Good‘ til Canceled ’ (Hết hạn). 'Lệnh dừng' có thể được đặt gần giá thị trường hiện tại nhất có thể; không có giới hạn.",
             "zh-Hant": "這是在市場到達“止損價格”時，立即買入或賣出的訂單。壹旦到達“止損價格”，“止損單”將被觸發並被作為“市價單”對待*。如果“止損價格”沒有被觸發，將被系統保留到後面的日期，受“取消前有效”部分所規定的條件約束。“止損單”的設置可以盡可能與當前市場價相近；沒有限制。"
         },
         amtExecution42: {
             zh: "止损",
             en: "Stop Loss",
-            vi: "^^-^^",
+            vi: "Dừng Lỗ",
             "zh-Hant": "止損"
         },
         amtExecution43: {
             zh: "这个订单是为了尽量减少亏损。一旦市场到达“止损价格”，该订单将被触发并被作为“市价单”对待*。如果“止损价格”没有被触发，将被系统保留在后面的日期。“止损单”可以设置尽可能与当前市场价相近；没有限制。",
             en: "This is an order to minimise losses. Once the market reaches the ‘stop loss price’ the order is triggered and treated as a ‘market order’*. If the ‘stop loss’ is not triggered it shall remain in the system until a later date. ‘Stop loss’ can be placed as close to the current market price as possible; there is no restriction.",
-            vi: "^^-^^",
+            vi: "Đây là một lệnh để giảm thiểu tổn thất. Khi thị trường đạt đến 'giá thua lỗ', lệnh được kích hoạt và được coi là 'lệnh thị trường' *. Nếu 'dừng lỗ' không được kích hoạt thì nó sẽ vẫn còn trong hệ thống cho đến ngày sau đó. 'Dừng lỗ' có thể được đặt càng gần với giá thị trường hiện tại càng tốt; không có giới hạn.",
             "zh-Hant": "這個訂單是為了盡量減少虧損。壹旦市場到達“止損價格”，該訂單將被觸發並被作為“市價單”對待*。如果“止損價格”沒有被觸發，將被系統保留在後面的日期。“止損單”可以設置盡可能與當前市場價相近；沒有限制。"
         },
         amtExecution44: {
             zh: "止损限价单",
             en: "Stop-Limit Order",
-            vi: "^^-^^",
+            vi: "Lệnh Dừng Giới Hạn",
             "zh-Hant": "止損限價單"
         },
         amtExecution45: {
             zh: "指的是结合了止损单和限价单特性的订单。止损限价单将在市场到达给定的止损价之后在指定（或更佳）的价格执行。一旦到达止损价，止损限价单立即变成以限定或更佳的价格买入（或卖出）的限价单。",
             en: "Shall mean an order that combines the features of stop order with those of a limit order. A stop-limit order will be executed at a specified price (or better) after a given stop price has been reached. Once the stop price is reached, the stop-limit order becomes a limit order to buy (or sell) at the limit price or better.",
-            vi: "^^-^^",
+            vi: "Có nghĩa là một lệnh kết hợp các tính năng của lệnh dừng với lệnh của lệnh giới hạn. Lệnh dừng giới hạn sẽ được thực hiện ở một mức giá cụ thể (hoặc tốt hơn) sau khi đạt được giá dừng đã cho. Khi đạt đến giá dừng, lệnh giới hạn dừng sẽ trở thành lệnh giới hạn để mua (hoặc bán) ở mức giá giới hạn hoặc tốt hơn.",
             "zh-Hant": "指的是結合了止損單和限價單特性的訂單。止損限價單將在市場到達給定的止損價之後在指定（或更佳）的價格執行。壹旦到達止損價，止損限價單立即變成以限定或更佳的價格買入（或賣出）的限價單。"
         },
         amtExecution46: {
             zh: "* 市价单（“ 止损单”和“止损”可适用）",
             en: "* Market Order (Applicable for ‘Stop Orders’ and Stop Loss’)",
-            vi: "^^-^^",
+            vi: "* Lệnh thị trường (Áp dụng cho 'Lệnh dừng' và Dừng lỗ ')",
             "zh-Hant": "* 市價單（“ 止損單”和“止損”可適用）"
         },
         amtExecution47: {
             zh: "这是以当前可获的市场价格买入或卖出的订单。系统自动合并从第三方流动性供应商收到的成交量，并按成交量加权平均价（VWAP）执行“市价单”，VWAP 是在执行时可用的最佳价格的平均值。一旦“市价单”被触发，将受“在指定日前有效”和“取消前有效”部分所规定的条件约束。",
             en: "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution. Once the ‘market order’ is triggered it shall be subject to the conditions described in the ‘Good ‘til Date’ and ‘Good ‘til Cancelled’ sections.",
-            vi: "^^-^^",
+            vi: "Đây là lệnh mua hoặc bán với giá thị trường hiện tại. Hệ thống sẽ tự động tổng hợp khối lượng nhận được từ nhà cung cấp thanh khoản của bên thứ ba và thực hiện ‘lệnh thị trường’ tại VWAP (‘Giá trung bình theo kích thước”) là mức giá trung bình và tốt nhất có sẵn tại thời điểm thực hiện. Khi ‘thứ tự thị trường’ được kích hoạt, nó sẽ phải tuân thủ các điều kiện được mô tả trong phần‘Good ‘til Date’ (Hiệu lực ' đến Ngày') và ‘Good ‘til Cancelled’ (Hiệu lực đến Hủy).",
             "zh-Hant": "這是以當前可獲的市場價格買入或賣出的訂單。系統自動合並從第三方流動性供應商收到的成交量，並按成交量加權平均價（VWAP）執行“市價單”，VWAP 是在執行時可用的最佳價格的平均值。壹旦“市價單”被觸發，將受“在指定日前有效”和“取消前有效”部分所規定的條件約束。"
         },
         amtExecution48: {
             zh: "取消前有效（简称“GTC”）（=到期）",
             en: "Good ‘til Cancelled (‘GTC’) (= Expiry)",
-            vi: "^^-^^",
+            vi: "Good ‘til Cancelled  (‘GTC’) (= hết hạn)",
             "zh-Hant": "取消前有效（簡稱“GTC”）（=到期）"
         },
         amtExecution49: {
             zh: "这是客户可适用于“挂单”的执行设置。订单会保持“有效”并等待执行，直到订单被触发并作为市价单对待，或被客户取消时为止。",
             en: "This is an execution setting that the client may apply to ‘pending orders’. The order may remain ‘live’ and pending for execution until such time as the order is triggered and treated as a market order or cancelled by the client.",
-            vi: "^^-^^",
+            vi: "Đây là cài đặt thực khớp lệnh mà khách hàng có thể áp dụng cho 'các lệnh đang chờ xử lý'. Lệnh có thể vẫn còn 'đang hoạt động' và đang chờ xử lý cho đến khi lệnh được kích hoạt và được coi là lệnh thị trường hoặc bị hủy bởi khách hàng.",
             "zh-Hant": "這是客戶可適用於“掛單”的執行設置。訂單會保持“有效”並等待執行，直到訂單被觸發並作為市價單對待，或被客戶取消時為止。"
         },
         amtExecution50: {
             zh: "在指定日前有效（简称“GTD”）",
             en: "Good ‘til Date (‘GTD’)",
-            vi: "^^-^^",
+            vi: "Hiệu Lực Đến Ngày’(‘GTD’)",
             "zh-Hant": "在指定日前有效（簡稱“GTD”）"
         },
         amtExecution51: {
             zh: "这是一种执行设置，适用于通过交易平台交易的“挂单”。客户可以选择未来一个特定的日期，订单会保持“有效”和等待执行，直到这一日期为止。如果在预设的时间范围内订单没有触发，订单将会从系统删除。",
             en: "This is an execution setting that applies to ‘pending orders’ traded through the trading platform. The client may choose a specific date in the future until which the order shall remain ‘live’ and pending for execution. If the order is not triggered during this pre-determined timeframe it shall be deleted from the system.",
-            vi: "^^-^^",
+            vi: "Đây là cài đặt thực thi lệnh áp dụng cho 'các lệnh đang chờ xử lý' được giao dịch thông qua sàn giao dịch. Khách hàng có thể chọn một ngày cụ thể trong tương lai cho đến khi lệnh này sẽ vẫn còn 'đang hiệu lực' và đang chờ xử lý. Nếu lệnh không được kích hoạt trong khung thời gian được xác định trước này, nó sẽ bị xóa khỏi hệ thống.",
             "zh-Hant": "這是壹種執行設置，適用於通過交易平臺交易的“掛單”。客戶可以選擇未來壹個特定的日期，訂單會保持“有效”和等待執行，直到這壹日期為止。如果在預設的時間範圍內訂單沒有觸發，訂單將會從系統刪除。"
         },
         amtExecution52: {
             zh: "限价单",
             en: "Limit Orders",
-            vi: "^^-^^",
+            vi: "Các Lệnh Giới Hạn",
             "zh-Hant": "限價單"
         },
         amtExecution53: {
             zh: "一旦市场到达“限制价格”时，立即买入或卖出的订单。一旦市场达到“限制价格”，订单将以“限制价格”或更佳的价格触发和执行。如果限价单只是获得部分执行，对未行使交易量将自动生成新的限价单，并在市场价格到达原来申请的“限制价格”时执行。如果“限制价格”没有被触发，将被系统保留到后面的日期，受“取消前有效”部分所规定的条件约束。对于基于外汇、现货金属、股票、指数和期货的 CFD，“限价单”应当设置离当前市价差距最小的点数，以使其有效。在当前买卖价差范围内设置的限价单将被自动移除。",
             en: "This is an order to buy or sell once the market reaches the ‘limit price’. Once the market reaches the ‘limit price’ the order is triggered and executed at the ‘limit price’ or better. If the limit order is partially filled, a new Limit order will be automatically created for the outstanding volume and executed once the market price reaches the originally requested ‘limit price’. If the ‘limit order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. For CFDs on FX, spot metals, equities, indices and futures, ‘limit orders’ should be placed a minimum number of pips away from the current market price in order for these to be valid. Limit Orders placed within the current bidask spread will be automatically removed.",
-            vi: "^^-^^",
+            vi: "Đây là lệnh mua hoặc bán khi thị trường đạt đến 'giá giới hạn'. Khi thị trường đạt đến 'giới hạn giá', lệnh được kích hoạt và được thực hiện ở 'giá giới hạn' hoặc cao hơn. Nếu lệnh giới hạn được điền một phần, một Lệnh giới hạn mới sẽ được tự động tạo cho khối lượng chưa thanh toán và được thực hiện khi giá thị trường đạt đến 'giá giới hạn' ban đầu được yêu cầu. Nếu ‘thứ tự giới hạn’ không được kích hoạt, nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó tùy thuộc vào các điều kiện được mô tả trong phần ‘Good‘ til Canceled ’ (Hết Hạn). Đối với CFD trên FX, kim loại giao ngay, chứng khoán, chỉ số và tương lai, 'lệnh giới hạn' phải được đặt số pip tối thiểu ra khỏi giá thị trường hiện tại để chúng có giá trị. Các lệnh giới hạn được đặt trong phạm vi giá chào bán chào mua hiện tại sẽ tự động bị xóa.",
             "zh-Hant": "壹旦市場到達“限制價格”時，立即買入或賣出的訂單。壹旦市場達到“限制價格”，訂單將以“限制價格”或更佳的價格觸發和執行。如果限價單只是獲得部分執行，對未行使交易量將自動生成新的限價單，並在市場價格到達原來申請的“限制價格”時執行。如果“限制價格”沒有被觸發，將被系統保留到後面的日期，受“取消前有效”部分所規定的條件約束。對於基於外匯、現貨金屬、股票、指數和期貨的 CFD，“限價單”應當設置離當前市價差距最小的點數，以使其有效。在當前買賣價差範圍內設置的限價單將被自動移除。"
         },
         amtExecution54: {
             zh: "止盈",
             en: "Take Profit",
-            vi: "^^-^^",
+            vi: "Chốt Lời",
             "zh-Hant": "止盈"
         },
         amtExecution55: {
             zh: "此订单是为了确保盈利。一旦市场到达“止盈价格”，该订单将被触发并被作为“限价单”对待。如果“止盈”没有被触发，将被系统保留到后面的日期。对于基于外汇、现货金属、股票、指数和期货的 CFD，“止盈”单应当设置离当前市价差距最小的点数，以使其有效。在当前买卖价差范围内设置的“止盈”单将被自动移除。",
             en: "This is an order to secure profits. Once the market reaches the ‘take profit price’ the order is triggered and treated as a ‘limit order’. If the ‘take profit’ is not triggered it shall remain in the system until a later date. For CFDs on FX, spot metals, equities, indices and futures, ‘take profit’ orders should be placed a minimum number of pips away from the current market price in order for these to be valid. ‘Take Profit’ orders placed within the current bidask spread will be automatically removed.",
-            vi: "^^-^^",
+            vi: "Đây là một lệnh để đảm bảo lợi nhuận. Khi thị trường đạt đến 'giá lợi nhuận', lệnh được kích hoạt và được coi là 'lệnh giới hạn'. Nếu ‘take profit’ (chốt lời ) không được kích hoạt thì nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó. Đối với CFD trên FX, kim loại giao ngay, chứng khoán, chỉ số và tương lai, lệnh ‘take profit’ (chốt lời) phải được đặt số pip tối thiểu ra khỏi giá thị trường hiện tại để các giá trị này hợp lệ. Các lệnh 'Chốt lời' được đặt trong phạm vi giá chào bán và chào mua hiện tại sẽ tự động bị xóa.",
             "zh-Hant": "此訂單是為了確保盈利。壹旦市場到達“止盈價格”，該訂單將被觸發並被作為“限價單”對待。如果“止盈”沒有被觸發，將被系統保留到後面的日期。對於基於外匯、現貨金屬、股票、指數和期貨的 CFD，“止盈”單應當設置離當前市價差距最小的點數，以使其有效。在當前買賣價差範圍內設置的“止盈”單將被自動移除。"
         },
         amtExecution56: {
             zh: "挂单修改/取消",
             en: "Pending Order Modification/ Cancellation",
-            vi: "^^-^^",
+            vi: "Điều chỉnh / Hủy lệnh đang chờ xử lý",
             "zh-Hant": "掛單修改/取消"
         },
         amtExecution57: {
             zh: "如果市场没有到达客户所指定的价格水平，而同时订单没有被取消， 客户可以修改订单。",
             en: "An order can be modified by the client if the market did not reach the price level specified by the client and the order was not cancelled in the meantime.",
-            vi: "^^-^^",
+            vi: "Lệnh có thể được khách hàng sửa đổi nếu thị trường không đạt đến mức giá do khách hàng chỉ định và lệnh không bị hủy trong thời gian chờ đợi.",
             "zh-Hant": "如果市場沒有到達客戶所指定的價格水平，而同時訂單沒有被取消， 客戶可以修改訂單。"
         },
         amtExecution58: {
             zh: "如果发生下列任一情况，订单将被取消：a. 客户在市场到达客户指定的价格前手动取消订单；或b. 客户设置了有效期而且已经到期；更多详情，请参考附件 II",
             en: "An order will be cancelled in the event any of the following occurs: a. if a client manually cancels an order prior to the market reaching the price level specified by the client; or b. if a client places an expiration time frame and this is reached; For further details, please refer to Appendix II",
-            vi: "^^-^^",
+            vi: "Một lệnh sẽ bị hủy trong trường hợp xảy ra bất kỳ điều sau đây: a. nếu một khách hàng tự hủy bỏ lệnh trước khi thị trường đạt đến mức giá do khách hàng chỉ định; hoặc b. nếu một khách hàng đặt một khung thời gian hết hạn và điều này đạt được; Để biết thêm chi tiết, vui lòng tham khảo Phụ lục II",
             "zh-Hant": "如果發生下列任壹情況，訂單將被取消：a. 客戶在市場到達客戶指定的價格前手動取消訂單；或b. 客戶設置了有效期而且已經到期；更多詳情，請參考附件 II"
         },
         amtExecution59: {
             zh: "即时订单（即时）市",
             en: "Instant Order(s)",
-            vi: "^^-^^",
+            vi: "(Các )Lệnh Tức Thì",
             "zh-Hant": "即時訂單（即時）市"
         },
         amtExecution60: {
             zh: "价单",
             en: "(Instant) Market Order",
-            vi: "^^-^^",
+            vi: "Lệnh Thị Trường (Lập Tức)",
             "zh-Hant": "價單"
         },
         amtExecution61: {
             zh: "这是以当前可获的市场价格买入或卖出的订单。系统自动合并从第三方流动性供应商收到的成交量，并按成交量加权平均价（VWAP）执行“市价单”，VWAP 是在执行时可用的最佳价格的平均值。",
             en: "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution.",
-            vi: "^^-^^",
+            vi: "Đây là lệnh mua hoặc bán với giá thị trường hiện tại. Hệ thống sẽ tự động tổng hợp khối lượng nhận được từ nhà cung cấp thanh khoản của bên thứ ba và thực hiện ‘lệnh thị trường’ tại VWAP (‘Giá trung bình theo Kích Thước”) là mức giá trung bình và tốt nhất có sẵn tại thời điểm thực hiện.",
             "zh-Hant": "這是以當前可獲的市場價格買入或賣出的訂單。系統自動合並從第三方流動性供應商收到的成交量，並按成交量加權平均價（VWAP）執行“市價單”，VWAP 是在執行時可用的最佳價格的平均值。"
         },
         amtExecution62: {
             zh: "挂单 止损单",
             en: "Pending Order(s) Stop Orders",
-            vi: "^^-^^",
+            vi: "(Các )Lệnh Chờ Lệnh Dừng",
             "zh-Hant": "掛單 止損單"
         },
         amtExecution63: {
             zh: "这是在市场到达“止损价格”时，立即买入或卖出的订单。一旦到达“止损价格”，“止损单”将被触发并被作为“市价单”对待*。如果“止损价格”没有被触发，将被系统保留到后面的日期，受“取消前有效”部分所规定的条件约束。“止损单”可以设置尽可能与当前市场价相近；没有限制。",
             en: "This is an order to buy or sell once the market reaches the ‘stop price’. Once the market reaches the ‘stop price’, the ‘stop order’ is triggered and treated as a ‘market order’*. If the ‘stop order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. ‘Stop orders’ can be placed as close to the current market price as possible; there is no restriction.",
-            vi: "^^-^^",
+            vi: "Đây là lệnh mua hoặc bán khi thị trường đạt đến 'giá dừng'. Khi thị trường đạt đến ‘giá dừng’, ‘lệnh dừng’ được kích hoạt và được coi là ‘lệnh thị trường’ *. Nếu 'lệnh dừng' không được kích hoạt, nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó tùy thuộc vào các điều kiện được mô tả trong phần ‘Good‘ til Canceled ’ (Hết hạn). 'Lệnh dừng' có thể được đặt gần giá thị trường hiện tại nhất có thể; không có giới hạn.",
             "zh-Hant": "這是在市場到達“止損價格”時，立即買入或賣出的訂單。壹旦到達“止損價格”，“止損單”將被觸發並被作為“市價單”對待*。如果“止損價格”沒有被觸發，將被系統保留到後面的日期，受“取消前有效”部分所規定的條件約束。“止損單”可以設置盡可能與當前市場價相近；沒有限制。"
         },
         amtExecution64: {
             zh: "止损",
             en: "Stop Loss",
-            vi: "^^-^^",
+            vi: "Dừng Lỗ",
             "zh-Hant": "止損"
         },
         amtExecution65: {
             zh: "这个订单是为了尽量减少亏损。一旦到达“止损价格”，该订单将被触发并被作为“市价单”对待*。如果“止损价格”没有被触发，将被系统保留在后面的日期。“止损”单可以设置尽可能与当前市场价相近；没有限制。",
             en: "This is an order to minimise losses. Once the market reaches the ‘stop loss price’ the order is triggered and treated as a ‘market order’*. If the ‘stop loss’ is not triggered it shall remain in the system until a later date. ‘Stop loss’ orders can be placed as close to the current market price as possible; there is no restriction.",
-            vi: "^^-^^",
+            vi: "Đây là một lệnh để giảm thiểu lỗ. Khi thị trường đạt đến 'giá thua lỗ', lệnh được kích hoạt và được coi là 'lệnh thị trường' *. Nếu 'dừng lỗ' không được kích hoạt thì nó sẽ vẫn còn trong hệ thống cho đến ngày sau đó. Các lệnh 'Stop loss' có thể được đặt càng sát với giá thị trường hiện tại càng tốt; không có giới hạn.",
             "zh-Hant": "這個訂單是為了盡量減少虧損。壹旦到達“止損價格”，該訂單將被觸發並被作為“市價單”對待*。如果“止損價格”沒有被觸發，將被系統保留在後面的日期。“止損”單可以設置盡可能與當前市場價相近；沒有限制。"
         },
         amtExecution66: {
             zh: "限价单",
             en: "Limit Orders",
-            vi: "^^-^^",
+            vi: "Các Lệnh Giới Hạn",
             "zh-Hant": "限價單"
         },
         amtExecution67: {
             zh: "一旦市场到达“限制价格”时，立即买入或卖出的订单。一旦到达“限制价格”，此订单将被触发并在“限制价格”或更佳的价格执行。如果限价单只是获得部分执行，对未行使交易量将自动生成新的限价单，并在市场价格到达原来申请的“限制价格”时执行。如果“限制价格”没有被触发，将被系统保留到后面的日期，受“取消前有效”部分所规定的条件约束。“限价单”可以设置尽可能与当前市场价相近；没有限制。",
             en: "This is an order to buy or sell once the market reaches the ‘limit price’. Once the market reaches the ‘limit price’ the order is triggered and executed at the ‘limit price’ or better. If the limit order is partially filled, a new Limit order will be automatically created for the outstanding volume and executed once the market price reaches the originally requested ‘limit price’. If the ‘limit order’ is not triggered it shall remain in the system until a later date subject to the conditions described in the ‘Good ‘til Cancelled’ section. ‘Limit orders’ can be placed as close to the current market price as possible; there is no restriction.",
-            vi: "^^-^^",
+            vi: "Đây là lệnh mua hoặc bán khi thị trường đạt đến 'giá giới hạn'. Khi thị trường đạt đến 'giới hạn giá', lệnh được kích hoạt và được thực hiện ở 'giá giới hạn' hoặc cao hơn. Nếu lệnh giới hạn được điền một phần, một Lệnh giới hạn mới sẽ được tự động tạo cho khối lượng chưa thanh toán và được thực hiện khi giá thị trường đạt đến 'giá giới hạn' ban đầu được yêu cầu. Nếu ‘thứ tự giới hạn’ không được kích hoạt, nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó tùy thuộc vào các điều kiện được mô tả trong phần ‘Good‘ til Canceled ’ (Hết hạn). 'Lệnh giới hạn' có thể được đặt gần với giá thị trường hiện tại nhất có thể; không có giới hạn.",
             "zh-Hant": "壹旦市場到達“限制價格”時，立即買入或賣出的訂單。壹旦到達“限制價格”，此訂單將被觸發並在“限制價格”或更佳的價格執行。如果限價單只是獲得部分執行，對未行使交易量將自動生成新的限價單，並在市場價格到達原來申請的“限制價格”時執行。如果“限制價格”沒有被觸發，將被系統保留到後面的日期，受“取消前有效”部分所規定的條件約束。“限價單”可以設置盡可能與當前市場價相近；沒有限制。"
         },
         amtExecution68: {
             zh: "止盈",
             en: "Take Profit",
-            vi: "^^-^^",
+            vi: "Chốt Lời",
             "zh-Hant": "止盈"
         },
         amtExecution69: {
             zh: "此订单是为了确保盈利。一旦市场到达“止盈价格”，该订单将被触发并被作为“限价单”对待。如果“止盈”没有被触发，将被系统保留到后面的日期。“止盈”可以设置尽可能与当前市场价相近；没有限制。",
             en: "This is an order to secure profits. Once the market reaches the ‘take profit price’ the order is triggered and treated as a ‘limit order’. If the ‘take profit’ is not triggered it shall remain in the system until a later date. ‘Take profit’ can be placed as close to the current market price as possible; there is no restriction.",
-            vi: "^^-^^",
+            vi: "Đây là một lệnh để đảm bảo lợi nhuận. Khi thị trường đạt đến 'giá lợi nhuận', lệnh được kích hoạt và được coi là 'lệnh giới hạn'. Nếu ‘take profit’ (Lệnh chốt lời) không được kích hoạt thì nó sẽ vẫn còn trong hệ thống cho đến một ngày sau đó. ‘Lệnh Chốt Lời’ có thể được đặt càng gần với giá thị trường hiện tại càng tốt; không có giới hạn.",
             "zh-Hant": "此訂單是為了確保盈利。壹旦市場到達“止盈價格”，該訂單將被觸發並被作為“限價單”對待。如果“止盈”沒有被觸發，將被系統保留到後面的日期。“止盈”可以設置盡可能與當前市場價相近；沒有限制。"
         },
         amtExecution70: {
             zh: "* （挂单）市价单",
             en: "* (Pending) Market Order",
-            vi: "^^-^^",
+            vi: "Lệnh Thị Trường ( Đang Chờ)",
             "zh-Hant": "* （掛單）市價單"
         },
         amtExecution71: {
             zh: "这是以当前可获的市场价格买入或卖出的订单。系统自动合并从第三方流动性供应商收到的成交量，并按成交量加权平均价（VWAP）执行“市价单”，VWAP 是在执行时可用的最佳价格的平均值。一旦“市价单”被触发，将受“在指定日前有效”和“取消前一直有效”部分所规定的条件约束。",
             en: "This is an order to buy or sell at the current market price that is available. The system automatically aggregates the volume received from third party liquidity providers and executes the ‘market order’ at VWAP (‘Volume-Weighted Average Price’) that is the average and best available price at the time of the execution. Once the ‘market order’ is triggered it shall be subject to the conditions described in the ‘Good ‘til Date’ and ‘Good ‘til Cancelled’ sections.",
-            vi: "^^-^^",
+            vi: "Đây là lệnh mua hoặc bán với giá thị trường hiện tại. Hệ thống sẽ tự động tổng hợp khối lượng nhận được từ nhà cung cấp thanh khoản của bên thứ ba và thực hiện ‘lệnh thị trường’ tại VWAP (‘Giá trung bình theo kích thước”) là mức giá trung bình và tốt nhất có sẵn tại thời điểm thực hiện. Khi ‘thứ tự thị trường’ được kích hoạt, nó sẽ phải tuân thủ các điều kiện được mô tả trong phần‘Good ‘til Date’ (Hiệu lực ' đến Ngày') và ‘Good ‘til Cancelled’ (Hiệu lực đến Hủy).",
             "zh-Hant": "這是以當前可獲的市場價格買入或賣出的訂單。系統自動合並從第三方流動性供應商收到的成交量，並按成交量加權平均價（VWAP）執行“市價單”，VWAP 是在執行時可用的最佳價格的平均值。壹旦“市價單”被觸發，將受“在指定日前有效”和“取消前壹直有效”部分所規定的條件約束。"
         },
         amtExecution72: {
             zh: "取消前有效（简称“GTC”）（=到期）",
             en: "Good ‘til Cancelled (‘GTC’) (= Expiry)",
-            vi: "^^-^^",
+            vi: "Good ‘til Cancelled (‘GTC’) (=Hết hạn)",
             "zh-Hant": "取消前有效（簡稱“GTC”）（=到期）"
         },
         amtExecution73: {
             zh: "这是客户可适用于“挂单”的执行设置。订单会保持“有效”并等待执行，直到订单被触发并作为市价单对待，或被客户取消时为止。",
             en: "This is an execution setting that the client may apply to ‘pending orders’. The order may remain ‘live’ and pending for execution until such time as the order is triggered and treated as a market order or cancelled by the client.",
-            vi: "^^-^^",
+            vi: "Đây là cài đặt thực thi lệnh mà khách hàng có thể áp dụng cho 'các lệnh hàng đang chờ xử lý'. Lệnh có thể vẫn còn 'đang hoạt động' và đang chờ xử lý cho đến khi lệnh được kích hoạt và được coi là lệnh thị trường hoặc bị hủy bởi khách hàng.",
             "zh-Hant": "這是客戶可適用於“掛單”的執行設置。訂單會保持“有效”並等待執行，直到訂單被觸發並作為市價單對待，或被客戶取消時為止。"
         },
         amtExecution74: {
             zh: "在指定日前有效（简称“GTD”）",
             en: "Good ‘til Date (‘GTD’)",
-            vi: "^^-^^",
+            vi: "Hiệu Lực Đến Ngày (‘GTD’)",
             "zh-Hant": "在指定日前有效（簡稱“GTD”）"
         },
         amtExecution75: {
             zh: "这是一种执行设置，适用于通过交易平台交易的“挂单”。客户可以选择未来一个特定的日期，订单会保持“有效”和等待执行，直到这一日期为止。如果在预设的时间范围内订单没有触发，订单将会从系统删除。",
             en: "This is an execution setting that applies to ‘pending orders’ traded through the trading platform. The client may choose a specific date in the future until which the order shall remain ‘live’ and pending for execution. If the order is not triggered during this pre-determined timeframe it shall be deleted from the system.",
-            vi: "^^-^^",
+            vi: "Đây là cài đặt thực thi lệnh áp dụng cho 'các lệnh đang chờ xử lý' được giao dịch thông qua sàn giao dịch. Khách hàng có thể chọn một ngày cụ thể trong tương lai cho đến khi lệnh vẫn còn 'đang hoạt động' và đang chờ xử lý. Nếu thứ tự không được kích hoạt trong khung thời gian được xác định trước này, nó sẽ bị xóa khỏi hệ thống.",
             "zh-Hant": "這是壹種執行設置，適用於通過交易平臺交易的“掛單”。客戶可以選擇未來壹個特定的日期，訂單會保持“有效”和等待執行，直到這壹日期為止。如果在預設的時間範圍內訂單沒有觸發，訂單將會從系統刪除。"
         },
         amtExecution76: {
             zh: "挂单修改/取消",
             en: "Pending Order Modification/Cancellation",
-            vi: "^^-^^",
+            vi: "Điều Chỉnh Lệnh Chờ/Hủy",
             "zh-Hant": "掛單修改/取消"
         },
         amtExecution77: {
             zh: "如果市场没有到达客户所指定的价格水平，而同时订单没有被取消， 客户可以修改订单。如果发生下列任一情况，订单将被取消：a. 申请的价格与市场价格相差超过 50,000点；或b. 客户在市场到达客户指定的价格前手动取消订单；或c. 客户设置了有效期而且已经到期；或d. 尝试执行订单不成功超过 200 次。更多详情，请参考附件 II",
             en: "An order can be modified by the client if the market did not reach the price level specified by the client and the order was not cancelled in the meantime. An order will be cancelled in the event any of the following occurs: a. if the requested price is more than 50,000 pips from the market price; or b. if a client manually cancels an order prior to the market reaching the price level specified by the client; or c. if a client places an expiration time frame and this is reached; or d. after 200 unsuccessful attempts to execute the order. For further details, please refer to Appendix II",
-            vi: "^^-^^",
+            vi: "Một lệnh có thể được khách hàng sửa đổi nếu thị trường không đạt đến mức giá do khách hàng chỉ định và lệnh này không bị hủy trong thời gian chờ đợi. Một lệnh sẽ bị hủy trong trường hợp xảy ra bất kỳ điều sau đây: a. nếu giá được yêu cầu cao hơn 50.000 pip so với giá thị trường; hoặc b. nếu một khách hàng tự hủy bỏ lệnh trước khi thị trường đạt đến mức giá do khách hàng chỉ định; hoặc c. nếu một khách hàng đặt một khung thời gian hết hạn và đã đến thời hạn này; hoặc d. sau 200 lần thực hiện lệnh không thành công. Để biết thêm chi tiết, vui lòng tham khảo Phụ lục II",
             "zh-Hant": "如果市場沒有到達客戶所指定的價格水平，而同時訂單沒有被取消， 客戶可以修改訂單。如果發生下列任壹情況，訂單將被取消：a. 申請的價格與市場價格相差超過 50,000點；或b. 客戶在市場到達客戶指定的價格前手動取消訂單；或c. 客戶設置了有效期而且已經到期；或d. 嘗試執行訂單不成功超過 200 次。更多詳情，請參考附件 II"
         },
         amtExecution78: {
             zh: "企业行动 派息",
             en: "Corporate Actions Dividends",
-            vi: "^^-^^",
+            vi: "Các Hành Động Chia Cổ Tức Công Ty",
             "zh-Hant": "企業行動 派息"
         },
         amtExecution79: {
             zh: "TigerWit 保留在派息前增加保证金要求的权利。",
             en: "TigerWit reserves the right to increase margin requirements prior to the release of a dividend.",
-            vi: "^^-^^",
+            vi: "TigerWit có quyền tăng yêu cầu ký quỹ trước khi phát hành cổ tức.",
             "zh-Hant": "TigerWit 保留在派息前增加保證金要求的權利。"
         },
         amtExecution80: {
             zh: "长仓",
             en: "Long Positions",
-            vi: "^^-^^",
+            vi: "Các Vị Thế Mua",
             "zh-Hant": "長倉"
         },
         amtExecution81: {
             zh: "持有长仓的客户在除息日将以现金调整形式收到派息（入金）。",
             en: "Clients holding long positions on the ex-div date will receive a dividend in the form of a cash adjustment (deposit).",
-            vi: "^^-^^",
+            vi: "Khách hàng nắm giữ các vị thế mua vào ngày giao dịch trước sẽ nhận cổ tức dưới hình thức điều chỉnh tiền mặt (tiền gửi).",
             "zh-Hant": "持有長倉的客戶在除息日將以現金調整形式收到派息（入金）。"
         },
         amtExecution82: {
             zh: "短仓",
             en: "Short Positions",
-            vi: "^^-^^",
+            vi: "Các Vị Thế Ngắn",
             "zh-Hant": "短倉"
         },
         amtExecution83: {
             zh: "持有短仓的客户在除息日将以现金调整形式被收取派息（出金）。",
             en: "Clients holding short positions on the ex-div date will be charged the dividend amount in the form of a cash adjustment (withdrawal).",
-            vi: "^^-^^",
+            vi: "Khách hàng nắm giữ các vị thế ngắn vào ngày giao dịch cũ sẽ được tính số tiền cổ tức dưới hình thức điều chỉnh tiền mặt (rút tiền).",
             "zh-Hant": "持有短倉的客戶在除息日將以現金調整形式被收取派息（出金）。"
         },
         amtExecution84: {
             zh: "注意：股票可作为派息提供。派息金额应当用股价来计算以确定现金调整额（请参看碎股调整）。",
             en: "NOTE: Stocks may be offered as a dividend. The dividend amount should be calculated using the share price to determine the cash adjustment (see fractional share adjustments).",
-            vi: "^^-^^",
+            vi: "LƯU Ý: Cổ phiếu có thể được chào bán như cổ tức. Số tiền cổ tức nên được tính bằng cách sử dụng giá cổ phiếu để xác định điều chỉnh tiền mặt (xem điều chỉnh tỷ lệ phân số).",
             "zh-Hant": "註意：股票可作為派息提供。派息金額應當用股價來計算以確定現金調整額（請參看碎股調整）。"
         },
         amtExecution85: {
             zh: "碎股调整",
             en: "Fractional Share Adjustments",
-            vi: "^^-^^",
+            vi: "Điều chỉnh Cổ Phiếu Lẻ",
             "zh-Hant": "碎股調整"
         },
         amtExecution86: {
             zh: "在本公司行动产生碎股的情况下，零碎部分会表示为现金调整，独立于非零碎头寸来处理。调整价值将等于零碎头寸乘以除息日前一天经调整的收盘价。",
             en: "In the event the corporate action results in a fractional position, the fractional component may be represented as a cash adjustment independent of the handling for the non-fractional position. The adjustment value will equal the fractional position times the adjusted closing price on the day prior to the ex-date.",
-            vi: "^^-^^",
+            vi: "Trong trường hợp kết quả hành động của công ty ở một vị thế lẻ, thành phần lẻ có thể được biểu diễn dưới dạng điều chỉnh tiền mặt độc lập với việc xử lý cho vị thế không lẻ. Giá trị điều chỉnh sẽ bằng với vị thế lẻ nhân với giá đóng cửa được điều chỉnh vào ngày trước ngày hết hạn.",
             "zh-Hant": "在本公司行動產生碎股的情況下，零碎部分會表示為現金調整，獨立於非零碎頭寸來處理。調整價值將等於零碎頭寸乘以除息日前壹天經調整的收盤價。"
         },
         amtExecution87: {
             zh: "股票拆分 正常股",
             en: "Stock Splits",
-            vi: "^^-^^",
+            vi: "Chia Tách Cổ Phiếu",
             "zh-Hant": "股票拆分 正常股"
         },
         amtExecution88: {
             zh: "票拆分",
             en: "Normal Stock Split",
-            vi: "^^-^^",
+            vi: "Chia Tách Cổ Phiếu Thông Thường",
             "zh-Hant": "票拆分"
         },
         amtExecution89: {
             zh: "由于不影响公司的市值，实施这一行动将使用公布的拆分比率反映客户原有的股份。请参考我们的网站了解更多信息：http://global.tigerwit. com。",
             en: "As there is no impact on the company’s market capitalisation the action carried out is to reflect the clients existing share position using the split ratio announced. Please see our website for more information: http://global.tigerwit.com. ",
-            vi: "^^-^^",
+            vi: "Vì không có tác động đến vốn hóa thị trường của công ty nên hành động được thực hiện là phản ánh vị thế cổ phiếu hiện tại của khách hàng bằng cách sử dụng tỷ lệ phân chia được công bố. Vui lòng xem trang web của chúng tôi để biết thêm thông tin: http://global.tigerwit.com.",
             "zh-Hant": "由於不影響公司的市值，實施這壹行動將使用公布的拆分比率反映客戶原有的股份。請參考我們的網站了解更多信息：http://global.tigerwit. com。"
         },
         amtExecution90: {
             zh: "反向股票拆分",
             en: "Reverse Stock Split",
-            vi: "^^-^^",
+            vi: "Phân Chia cổ phiếu ngược",
             "zh-Hant": "反向股票拆分"
         },
         amtExecution91: {
             zh: "对公司市值不造成影响，客户的股份数需要调整以反映新的股价。请参考我们的网站了解更多信息：http://global.tigerwit.com。",
             en: "There is no impact on the company’s market cap and the clients’ positions need to be amended to reflect the new share price. Please see our website for more information: http://global.tigerwit.com. ",
-            vi: "^^-^^",
+            vi: "Không có tác động đến vốn thị trường của công ty và vị thế của khách hàng cần được sửa đổi để phản ánh giá cổ phiếu mới. Vui lòng xem trang web của chúng tôi để biết thêm thông tin: http://global.tigerwit.com.",
             "zh-Hant": "對公司市值不造成影響，客戶的股份數需要調整以反映新的股價。請參考我們的網站了解更多信息：http://global.tigerwit.com。"
         },
         amtExecution92: {
             zh: "供股",
             en: "Rights Issue",
-            vi: "^^-^^",
+            vi: "Phát Hành Quyền Mua Cổ Phiếu",
             "zh-Hant": "供股"
         },
         amtExecution93: {
             zh: "导致下列结果之一：供股交割、发行基于权利或现金调整的 CFD。",
             en: "Results in one of the following: Delivery of right security, issuance of CFD on the right or cash adjustment.",
-            vi: "^^-^^",
+            vi: "Kết quả từ một trong những điều sau đây: Việc cung cấp quyền bảo mật, phát hành CFD về quyền hoặc điều chỉnh tiền mặt.",
             "zh-Hant": "導致下列結果之壹：供股交割、發行基於權利或現金調整的 CFD。"
         },
         amtExecution94: {
             zh: "虽然供股将为客户提供以折扣价购股的选择，但股价将由于股份增加稀释价值而被降低公告后防范做空股票的行动",
             en: "Although a rights issue will give the client an option of purchasing the share at a discounted price, the share price will be reduced also as the additional share will dilute the share value Action to prevent shorting of share after announcement",
-            vi: "^^-^^",
+            vi: "Mặc dù vấn đề phát hành quyền cổ phiếu sẽ mang lại cho khách hàng một tùy chọn mua cổ phần với mức giá chiết khấu, giá cổ phiếu sẽ được giảm cũng vì phần bổ sung sẽ pha loãng giá trị cổ phiếu Hành động để ngăn chặn việc thiếu cổ phần sau khi thông báo",
             "zh-Hant": "雖然供股將為客戶提供以折扣價購股的選擇，但股價將由於股份增加稀釋價值而被降低公告後防範做空股票的行動"
         },
         amtExecution95: {
             zh: "最佳执行",
             en: "Best Execution",
-            vi: "^^-^^",
+            vi: "Khớp Lệnh Tốt Nhất",
             "zh-Hant": "最佳執行"
         },
         amtExecution96: {
             zh: "1.当针对本公司报价执行客户订单时，本公司应考虑以下因素，采取一切合理措施为客户获得尽可能最佳的结果。 在为我们的客户执行交易时，价格、成本和货币转换最为重要。",
             en: "1.The Firm shall take all reasonable steps to obtain the best possible result for its clients taking into account the following factors when executing Clients orders against the Firm’s quoted prices. Prices, costs and currency conversion carry the highest importance when executing transactions for our clients.",
-            vi: "^^-^^",
+            vi: "1.Công ty sẽ thực hiện tất cả các bước hợp lý để có được kết quả tốt nhất có thể cho khách hàng của mình khi tính đến các yếu tố sau khi thực hiện lệnh của Khách hàng so với giá niêm yết của Công ty. Giá cả, chi phí và chuyển đổi tiền tệ mang lại tầm quan trọng cao nhất khi thực hiện giao dịch cho khách hàng của chúng tôi.",
             "zh-Hant": "1.當針對本公司報價執行客戶訂單時，本公司應考慮以下因素，采取壹切合理措施為客戶獲得盡可能最佳的結果。 在為我們的客戶執行交易時，價格、成本和貨幣轉換最為重要。"
         },
         amtExecution97: {
             zh: "2.价格",
             en: "2.Price",
-            vi: "^^-^^",
+            vi: "2.Giá",
             "zh-Hant": "2.價格"
         },
         amtExecution98: {
             zh: "a) 买卖点差：对于任意特定金融工具，本公司将报出两个价格：客户可以买入（做多）该金融工具的较高价格（卖价），以及客户可以卖出（做空）该金融工具的较低价格（买价）；二者统称为本公司的价格。某个特定金融工具的较低价格和较高价格之差，就是“点差”，对于交易平台而言含有 TigerWit 的加价。",
             en: "a) Bid – Ask Spread: For any given Financial Instrument, the Firm will quote two prices: the higher price (ASK) at which the client can buy (go long) that Financial Instrument, and the lower price (BID) at which the client can sell (go short) that Financial Instrument; collectively referred to as the Firm’s prices. The difference between the lower and the higher price of a given Financial Instrument is the spread which for trading platform includes TigerWit’s mark-up.",
-            vi: "^^-^^",
+            vi: "a) Spread giá chào mua-chào bán: Đối với bất kỳ Công cụ tài chính cụ thể nào, Công ty sẽ báo giá hai mức giá: giá cao hơn (ASK) mà khách hàng có thể mua (vị thế mua) Công cụ tài chính đó và giá thấp hơn (BID) mà khách hàng có thể bán (vị thế bán) Công cụ tài chính đó; gọi chung là giá của Công ty. Sự khác biệt giữa giá thấp hơn và cao hơn của một Công cụ tài chính cụ thể là mức spread cho sàn giao dịch bao gồm lợi nhuận gộp của TigerWit.",
             "zh-Hant": "a) 買賣點差：對於任意特定金融工具，本公司將報出兩個價格：客戶可以買入（做多）該金融工具的較高價格（賣價），以及客戶可以賣出（做空）該金融工具的較低價格（買價）；二者統稱為本公司的價格。某個特定金融工具的較低價格和較高價格之差，就是“點差”，對於交易平臺而言含有 TigerWit 的加價。"
         },
         amtExecution99: {
             zh: "b) 挂单：针对未平仓空头头寸的买入限价单、买入止损单和止损/止盈但这类订单按照卖价执行。针对未平仓多头头寸的卖出限价单、卖出止损单和止损/止盈但这类订单按照买价执行。",
             en: "b) Pending Orders: Such orders as Buy Limit, Buy Stop and Stop Loss/Take profit for opened short position are executed at ASK price. Such orders as Sell Limit, Sell Stop and Stop Loss/Take profit for opened long position are executed at BID price.",
-            vi: "^^-^^",
+            vi: "b) Lệnh chờ: Các lệnh như Mua giới hạn, Dừng mua và Dừng lỗ / Chốt lời cho lệnh bán mở được thực hiện ở mức giá ASK (giá chào bán). Các lệnh như Bán giới hạn, Bán và Dừng lỗ / Chốt lời cho lệnh dài mở được thực hiện theo giá BID (giá chào mua)",
             "zh-Hant": "b) 掛單：針對未平倉空頭頭寸的買入限價單、買入止損單和止損/止盈但這類訂單按照賣價執行。針對未平倉多頭頭寸的賣出限價單、賣出止損單和止損/止盈但這類訂單按照買價執行。"
         },
         amtExecution100: {
             zh: "c) 本公司特定金融工具的价格参考本公司从第三方流动性提供商获得的相关标的金融工具的价格计算。本公司按照技术和通讯连接允许的最大频率更新价格。本公司不会在公司营业时间（请参考下列执行场所） 外做任何报价，所以客户在这段时间不能下达订单。",
             en: "c) The Firm’s price for a given Financial Instrument is calculated by reference to the price of the relevant underlying financial instrument, which the Firm obtains from third party liquidity providers. The Firm updates its prices as frequently as the limitations of technology and communications links allow. The Firm will not quote any price outside Firm’s operations time (see execution venue below) therefore no orders can be placed by the Client during that time.",
-            vi: "^^-^^",
+            vi: "c) Giá của Công ty đối với một Công cụ tài chính cụ thể được tính bằng cách tham chiếu đến giá của công cụ tài chính cơ bản có liên quan mà Công ty thu được từ các nhà cung cấp thanh khoản của bên thứ ba. Công ty cập nhật giá của nó thường xuyên trong khả năng cho phép của các liên kết truyền thông và kĩ thuật. Công ty sẽ không báo giá bất kỳ giá nào ngoài thời gian hoạt động của Công ty (xem địa điểm thực hiện bên dưới) do đó không có lệnh nào có thể được Khách hàng đặt trong thời gian đó.",
             "zh-Hant": "c) 本公司特定金融工具的價格參考本公司從第三方流動性提供商獲得的相關標的金融工具的價格計算。本公司按照技術和通訊連接允許的最大頻率更新價格。本公司不會在公司營業時間（請參考下列執行場所） 外做任何報價，所以客戶在這段時間不能下達訂單。"
         },
         amtExecution101: {
             zh: "d) 对电子通讯网络（ECN）平台而言，交易价格通过电子执行系统直接从流动性供应商获得。本系统自动向选择的流动性供应商询价。对于价格，本公司按照从第三方流动性提供商获得的可用流动性（或“市场深度”）报出。本公司软件将自动以尽可能获得的最佳价格合并可用的流动性，并按照成交量加权平均价（VWAP）执行。",
             en: "d) For ECN platforms, trades prices are obtained directly from the liquidity providers through an electronic execution system. This system automatically requests a quote from a selection of liquidity providers. In conjunction with the price, the Firm quotes the available liquidity, (or ‘market depth’), as obtained from its third-party liquidity providers. The Firm’s software will automatically aggregate all available liquidity at the best possible prices available and fill at the VolumeWeighted Average Price (VWAP).",
-            vi: "^^-^^",
+            vi: "d) Đối với các nền tảng ECN, giá giao dịch được lấy trực tiếp từ các nhà cung cấp thanh khoản thông qua một hệ thống thực hiện điện tử. Hệ thống này tự động yêu cầu báo giá từ một lựa chọn các nhà cung cấp thanh khoản. Cùng với giá, Công ty báo giá tính thanh khoản có sẵn, (hoặc ‘độ sâu thị trường’), như được lấy từ các nhà cung cấp thanh khoản của bên thứ ba. Phần mềm của Công ty sẽ tự động tổng hợp tất cả các khoản thanh toán có sẵn với mức giá tốt nhất có thể có và điền vào Giá Khối lượng Trung bình (VWAP).",
             "zh-Hant": "d) 對電子通訊網絡（ECN）平臺而言，交易價格通過電子執行系統直接從流動性供應商獲得。本系統自動向選擇的流動性供應商詢價。對於價格，本公司按照從第三方流動性提供商獲得的可用流動性（或“市場深度”）報出。本公司軟件將自動以盡可能獲得的最佳價格合並可用的流動性，並按照成交量加權平均價（VWAP）執行。"
         },
         amtExecution102: {
             zh: "成本",
             en: "Costs",
-            vi: "^^-^^",
+            vi: "Các loại Chi phí",
             "zh-Hant": "成本"
         },
         amtExecution103: {
             zh: "3.客户要开设某种类型金融工具的头寸，会被要求支付佣金或其他费用（如果适用）；金额披露在合同规范中，可在本公司网站上查看。",
             en: "3.For opening a position in some types of Financial Instruments the Client may be required to pay commission or other fees, if applicable; these amounts are disclosed in the contract specifications available in the Firm’s website.",
-            vi: "^^-^^",
+            vi: "3.Để mở một vị thế trong một số loại Công cụ Tài chính, Khách hàng có thể được yêu cầu trả hoa hồng hoặc các khoản phí khác, nếu có; những số tiền này được tiết lộ trong các thông số hợp đồng có sẵn trên trang web của Công ty.",
             "zh-Hant": "3.客戶要開設某種類型金融工具的頭寸，會被要求支付傭金或其他費用（如果適用）；金額披露在合同規範中，可在本公司網站上查看。"
         },
         amtExecution104: {
             zh: "a) 佣金：佣金将按固定的金额收取，可访问本公司网站 http://global.tigerwit.com 查看。",
             en: "a) Commissions: Commissions will be charged as a fixed amount and can be found on the Firm’s website at http://global.tigerwit.com.",
-            vi: "^^-^^",
+            vi: "a) Hoa hồng: Các khoản hoa hồng sẽ được tính như một số tiền cố định và có thể được tìm thấy trên trang web của Công ty tại http://global.tigerwit.com.",
             "zh-Hant": "a) 傭金：傭金將按固定的金額收取，可訪問本公司網站 http://global.tigerwit.com 查看。"
         },
         amtExecution105: {
             zh: "b) 融资费：如果有融资费产生，未平仓的某种类型金融工具的头寸将因合同期内每日融资费的“掉期”增加或减少。融资费按照主流市场利率执行，并会有变化。适用的每日融资费详情可在本公司网站上金融工具合约规范部分获取。",
             en: "b) Financing Fee: In the case of financing fees, the value of opened positions in some types of Financial Instruments is increased or reduced by a daily financing fee “swap” throughout the life of the contract. Financing fees are based on prevailing market interest rates, which may vary. Details of daily financing fees applied are available on the Financial Instruments Contracts Specifications section in the Firm’s website.",
-            vi: "^^-^^",
+            vi: "b) Phí tài chính: Trong trường hợp phí tài chính, giá trị của các vị thế mở trong một số loại Công cụ tài chính được tăng hoặc giảm bằng khoản phí tài chính hàng ngày “swap” trong suốt thời hạn của hợp đồng. Phí tài chính dựa trên lãi suất thị trường hiện hành, có thể thay đổi. Chi tiết về phí tài chính hàng ngày được áp dụng có sẵn trên phần Thông số Hợp đồng Công cụ Tài chính trong trang web của Công ty.",
             "zh-Hant": "b) 融資費：如果有融資費產生，未平倉的某種類型金融工具的頭寸將因合同期內每日融資費的“掉期”增加或減少。融資費按照主流市場利率執行，並會有變化。適用的每日融資費詳情可在本公司網站上金融工具合約規範部分獲取。"
         },
         amtExecution106: {
             zh: "对于本公司提供的所有类型的金融工具，佣金和融资费不纳入本公司的报价，而是明确向客户账户收取。",
             en: "For all types of Financial Instruments that the Firm offers, the commission and financing fees are not incorporated into the Firm’s quoted price and are instead charged explicitly to the Client account.",
-            vi: "^^-^^",
+            vi: "Đối với tất cả các loại Công cụ tài chính mà Công ty cung cấp, phí hoa hồng và tài chính không được đưa vào giá niêm yết của Công ty và thay vào đó được tính phí rõ ràng trong phần Tài khoản Khách hàng.",
             "zh-Hant": "對於本公司提供的所有類型的金融工具，傭金和融資費不納入本公司的報價，而是明確向客戶賬戶收取。"
         },
         amtExecution107: {
             zh: "4.币种转换",
             en: "4.Currency Conversion",
-            vi: "^^-^^",
+            vi: "4.Chuyển đổi ngoại tệ",
             "zh-Hant": "4.幣種轉換"
         },
         amtExecution108: {
             zh: "本公司提供由客户的基础货币转换成相关金融工具币种的币种转换报价。这不会反映客户账户中实际的货币转换，而只是为了方便以基础货币进行计算。",
             en: "The Firm may provide a currency conversion quote from the Client’s base currency to the currency of the relevant Financial Instrument. This will not reflect and actual conversion of currency in the Client’s account, and serves the purpose of calculating consideration in the base currency only.",
-            vi: "^^-^^",
+            vi: "Công ty có thể cung cấp báo giá được chuyển đổi tiền tệ từ đơn vị tiền tệ gốc của Khách hàng sang đơn vị tiền tệ của Công cụ tài chính có liên quan. Điều này sẽ không phản ánh và chuyển đổi tiền tệ thực tế trong tài khoản của Khách hàng và chỉ nhằm mục đích các phép tính cân nhắc chỉ loại tiền cơ sở.",
             "zh-Hant": "本公司提供由客戶的基礎貨幣轉換成相關金融工具幣種的幣種轉換報價。這不會反映客戶賬戶中實際的貨幣轉換，而只是為了方便以基礎貨幣進行計算。"
         },
         amtExecution109: {
             zh: "执行速度",
             en: "Speed of Execution",
-            vi: "^^-^^",
+            vi: "Tốc Độ Khớp Lệnh",
             "zh-Hant": "執行速度"
         },
         amtExecution110: {
             zh: "5.本公司极其重视客户订单的执行，并致力于在技术和通信连接的极限范围内提供高速的执行。无线连接或拨号连接，或客户端任何其他形式的不稳定链接，可能导致连通性差或连通中断，或缺乏信号强度，导致在使用本公司电子交易平台时，客户和本公司之间数据传输被延迟。",
             en: "5.The Firm places a significant importance when executing Client’s orders and strives to offer high speed of execution within the limitations of technology and communications links. The use of wireless connection or dial-up connection or any other form of unstable connection at the Client’s end, may result in poor or interrupted connectivity or lack of signal strength causing delays in the transmission of data between the Client and Firm’s when using the Firm’s electronic trading platform.",
-            vi: "^^-^^",
+            vi: "5.Công ty đặt tầm quan trọng đáng kể khi thực hiện các lệnh của Khách hàng và cố gắng cung cấp tốc độ khớp lệnh cao trong khả năng cho phép của các kết nối kĩ thuật và truyền phát. Việc sử dụng kết nối không dây hoặc kết nối quay số hoặc bất kỳ hình thức kết nối không ổn định nào khác ở đầu của Khách hàng có thể dẫn đến kết nối kém hoặc bị gián đoạn hoặc thiếu tín hiệu gây ra sự chậm trễ trong việc truyền dữ liệu giữa Khách hàng và Công ty khi sử dụng nền tảng giao dịch điện tử của Công ty.",
             "zh-Hant": "5.本公司極其重視客戶訂單的執行，並致力於在技術和通信連接的極限範圍內提供高速的執行。無線連接或撥號連接，或客戶端任何其他形式的不穩定鏈接，可能導致連通性差或連通中斷，或缺乏信號強度，導致在使用本公司電子交易平臺時，客戶和本公司之間數據傳輸被延遲。"
         },
         amtExecution111: {
             zh: "执行的可能性",
             en: "Likelihood of Execution",
-            vi: "^^-^^",
+            vi: "Khả Năng Thực Hiện Lệnh",
             "zh-Hant": "執行的可能性"
         },
         amtExecution112: {
             zh: "6.本公司在价格和可用数量方面有赖于第三方流动性提供商，所以客户订单的执行将取决于提供商的价格和可用的流动性。虽然客户下达的所有订单都由本公司安排执行，本公司保留拒绝任何类型订单的权利。",
             en: "6.The Firm relies on third party liquidity providers for prices and available volume, therefore execution of the Client’s orders will depend on the pricing and available liquidity of the providers. Although the Firm executes all orders placed by the Clients, it reserves the right to decline an order of any type.",
-            vi: "^^-^^",
+            vi: "6.Công ty dựa vào các nhà cung cấp thanh khoản của bên thứ ba về giá và khối lượng có sẵn, do đó việc thực hiện các lệnh của Khách hàng sẽ phụ thuộc vào giá cả và tính thanh khoản có sẵn của các nhà cung cấp. Mặc dù Công ty thực hiện tất cả các lệnh do Khách hàng đặt, nhưng Công ty có quyền từ chối lệnh thuộc bất kỳ loại nào.",
             "zh-Hant": "6.本公司在價格和可用數量方面有賴於第三方流動性提供商，所以客戶訂單的執行將取決於提供商的價格和可用的流動性。雖然客戶下達的所有訂單都由本公司安排執行，本公司保留拒絕任何類型訂單的權利。"
         },
         amtExecution113: {
             zh: "订单",
             en: "Orders",
-            vi: "^^-^^",
+            vi: "Các Loại Lệnh",
             "zh-Hant": "訂單"
         },
         amtExecution114: {
             zh: "订单的市价单、买入限价单、卖出限价单、卖出止损单、买入止损单、止损单、止盈单以上面“订单执行”部分说明的方式执行。应当注意的是，在异常市场条件下，交易的执行价格可能与原来申请的价格显著不同。例如，这种情况在下列情况下可能发生：",
             en: "Market Order, Buy Limit, Sell Limit, Sell Stop, Buy Stop, Stop Loss, Take Profit on Financial Instrument are executed in the manner explained in ‘Order Execution’ section above. It should be noted that the price at which a trade is executed at may vary significantly from original requested price during abnormal market conditions. This may occur, for example, at the following cases: ",
-            vi: "^^-^^",
+            vi: "Lệnh thị trường, Giới hạn mua, Giới hạn bán, Dừng bán, Dừng mua, Dừng lỗ, Chốt lời trên Công cụ tài chính được thực hiện theo cách được giải thích trong phần ‘Thực Hiện lệnh’ ở trên. Cần lưu ý rằng giá mà tại đó một giao dịch được thực hiện tại có thể khác nhau đáng kể so với giá yêu cầu ban đầu trong điều kiện thị trường bất thường. Điều này có thể xảy ra, ví dụ, trong các trường hợp sau:",
             "zh-Hant": "訂單的市價單、買入限價單、賣出限價單、賣出止損單、買入止損單、止損單、止盈單以上面“訂單執行”部分說明的方式執行。應當註意的是，在異常市場條件下，交易的執行價格可能與原來申請的價格顯著不同。例如，這種情況在下列情況下可能發生："
         },
         amtExecution115: {
             zh: "a) 市场开市时，b) 新闻发布期间，c) 市场波动期间，价格可能剧烈上下波动，及远离报价，d) 价格快速变化，当价格在一个交易时段的涨跌导致根据相关交易所规则，交易被暂停或限制，e) 如果按照报价执行特定数量的流动性不足，",
             en: "a) During Market opening times, b) During news times, c) During volatile periods where prices may move significantly up or down and away from declared price, d) Where there is rapid price movement, if the price rises or falls in one trading session to such an extent that under the rules of the relevant exchange, trading is suspended or restricted, e) If there is insufficient liquidity for the execution of the specific volume at the declared price,",
-            vi: "^^-^^",
+            vi: "a) Trong thời gian mở cửa thị trường, b) Trong thời gian tin tức, c) Trong thời gian biến động, giá có thể tăng hoặc giảm đáng kể và khác xa giá đã khai báo, d) Trường hợp biến động giá nhanh, giá tăng hoặc giảm trong một phiên giao dịch mức độ như vậy theo các quy tắc của trao đổi có liên quan, giao dịch bị đình chỉ hoặc hạn chế, e) Nếu không có đủ thanh khoản để thực hiện khối lượng cụ thể ở mức giá đã khai báo,",
             "zh-Hant": "a) 市場開市時，b) 新聞發布期間，c) 市場波動期間，價格可能劇烈上下波動，及遠離報價，d) 價格快速變化，當價格在壹個交易時段的漲跌導致根據相關交易所規則，交易被暫停或限制，e) 如果按照報價執行特定數量的流動性不足，"
         },
         amtExecution116: {
             zh: "7.本公司将竭力向客户尽可能提供最佳价格，并尽一切努力和作出必要的安排。",
             en: "7.The Firm strives to provide the best possible price to its clients, and makes every effort and necessary arrangements to do so.",
-            vi: "^^-^^",
+            vi: "7.Công ty cố gắng cung cấp mức giá tốt nhất có thể cho khách hàng của mình và cố gắng hết sức và sắp xếp cần thiết để thực hiện điều đó.",
             "zh-Hant": "7.本公司將竭力向客戶盡可能提供最佳價格，並盡壹切努力和作出必要的安排。"
         },
         amtExecution117: {
             zh: "结算的可能性",
             en: "Likelihood of Settlement",
-            vi: "^^-^^",
+            vi: "Khả Năng Thanh Toán",
             "zh-Hant": "結算的可能性"
         },
         amtExecution118: {
             zh: "8.交易一旦执行，本公司就应当进行所有交易的结算。",
             en: "8.The Firm shall proceed to a settlement of all transactions upon execution of such transactions.",
-            vi: "^^-^^",
+            vi: "8.Công ty sẽ tiến hành thanh toán tất cả các giao dịch khi thực hiện các giao dịch đó.",
             "zh-Hant": "8.交易壹旦執行，本公司就應當進行所有交易的結算。"
         },
         amtExecution119: {
             zh: "订单规模",
             en: "Size of Order",
-            vi: "^^-^^",
+            vi: "Kích Thước Lệnh",
             "zh-Hant": "訂單規模"
         },
         amtExecution120: {
             zh: "9.本交易平台上最小订单规模为 0.01 手。虽然对客户可以下达给本公司的最大订单规模没有限制，本公司保留依照与客户签订的协议中的说明拒绝订单的权利。",
             en: "9.The minimum size of an order is 0.01 lots on the trading platforms. Although there is no maximum size of an order where the Client can place with the Firm, the Firm reserves the right to decline an order as explained in the agreement entered with the Client.",
-            vi: "^^-^^",
+            vi: "9.Kích thước tối thiểu của một lệnh là 0,01 lot trên các sàn giao dịch. Mặc dù không có kích thước tối đa của một lệnh mà Khách hàng có thể đặt với Công ty, Công ty bảo lưu quyền từ chối một lệnh như được giải thích trong hợp đồng đã kí với Khách hàng.",
             "zh-Hant": "9.本交易平臺上最小訂單規模為 0.01 手。雖然對客戶可以下達給本公司的最大訂單規模沒有限制，本公司保留依照與客戶簽訂的協議中的說明拒絕訂單的權利。"
         },
         amtExecution121: {
             zh: "不论成交量如何，本公司都尽全力执行客户的订单。但如果可以实现，将以可用的最佳价格，因为市场流动性可能在执行时满足条件（请参看“执行的可能性”）。",
             en: "The Firm makes every effort to fill the order of the client irrespective of the volume. However, if this is achieved, it may be at the best available price, as the market liquidity may allow at the time of execution (See ‘Likelihood of Execution’).",
-            vi: "^^-^^",
+            vi: "Công ty thực hiện mọi nỗ lực để lấp đầy thứ tự của khách hàng bất kể khối lượng. Tuy nhiên, nếu điều này đạt được, nó có thể ở mức giá tốt nhất có sẵn, vì tính thanh khoản của thị trường có thể cho phép tại thời điểm thực hiện (Xem ‘Khả năng thực thi Lệnh’).",
             "zh-Hant": "不論成交量如何，本公司都盡全力執行客戶的訂單。但如果可以實現，將以可用的最佳價格，因為市場流動性可能在執行時滿足條件（請參看“執行的可能性”）。"
         },
         amtExecution122: {
             zh: "10.TigerWit 保留对合约数量设置上限，和/或对特定工具每个组合总的净持仓设限的权利。在这种情况下，本公司将尽一切可能的努力在此类情况发生前通知客户。",
             en: "10.TigerWit reserves the right to place a cap on the number of contracts and/ or limit on the total net position value per profile for a specific instrument. In such an event, the Firm will undertake all possible efforts to notify clients prior to such an event.",
-            vi: "^^-^^",
+            vi: "10.TigerWit có quyền đặt giới hạn về số lượng hợp đồng và / hoặc giới hạn trên tổng giá trị vị thế ròng trên mỗi cấu hình cho một sản phẩm cụ thể. Trong một sự kiện như vậy, Công ty sẽ thực hiện mọi nỗ lực có thể để thông báo cho khách hàng trước một sự kiện như vậy.",
             "zh-Hant": "10.TigerWit 保留對合約數量設置上限，和/或對特定工具每個組合總的凈持倉設限的權利。在這種情況下，本公司將盡壹切可能的努力在此類情況發生前通知客戶。"
         },
         amtExecution123: {
             zh: "市场影响",
             en: "Market Impact",
-            vi: "^^-^^",
+            vi: "Ảnh Hưởng Thị Trường",
             "zh-Hant": "市場影響"
         },
         amtExecution124: {
             zh: "11.某些因素可能快速影响标的金融工具的价格，而对金融工具所报出的实价来源于此。这些因素可能影响以上所列的部分因素。本公司将采取一切合理措施，以尽可能为客户获得最佳价格。",
             en: "11.Some factors may affect rapidly the price of the underlying financial instruments from which the quoted firm price for its Financial Instruments is derived. These factors may influence some of the factors listed above. The Firm will take all reasonable steps to obtain the best possible result for its Clients",
-            vi: "^^-^^",
+            vi: "11.Một số yếu tố có thể ảnh hưởng nhanh đến giá của các công cụ tài chính cơ bản mà từ đó giá công ty được chào giá cho Công cụ tài chính được chào giá. Những yếu tố này có thể ảnh hưởng đến một số yếu tố được liệt kê ở trên. Công ty sẽ thực hiện tất cả các bước hợp lý để có được kết quả tốt nhất có thể cho Khách hàng của mình",
             "zh-Hant": "11.某些因素可能快速影響標的金融工具的價格，而對金融工具所報出的實價來源於此。這些因素可能影響以上所列的部分因素。本公司將采取壹切合理措施，以盡可能為客戶獲得最佳價格。"
         },
         amtExecution125: {
             zh: "本公司并没有穷尽考虑第 3.2 到 3.9 款所列的全部因素，而且出现以上因素的订单将不被视作优先考虑因素。",
             en: "The Firm does not consider the factors at paragraphs 3.2 to 3.9 exhaustive and the order in which the above factors are presented shall not be taken as priority factor.",
-            vi: "^^-^^",
+            vi: "Công ty không xem xét các yếu tố ở các đoạn từ 3.2 đến 3.9 đầy đủ và thứ tự các yếu tố trên được trình bày sẽ không được coi là yếu tố ưu tiên.",
             "zh-Hant": "本公司並沒有窮盡考慮第 3.2 到 3.9 款所列的全部因素，而且出現以上因素的訂單將不被視作優先考慮因素。"
         },
         amtExecution126: {
             zh: "不过，只要客户发出特定指示，本公司都应当确保客户的订单按照特定的指示获得执行。",
             en: "Nevertheless, whenever there is a specific instruction from the client the Firm shall make sure that the Client’s order shall be executed following the specific instruction.",
-            vi: "^^-^^",
+            vi: "Tuy nhiên, bất cứ khi nào có một hướng dẫn cụ thể từ khách hàng, Công ty sẽ đảm bảo rằng lệnh của Khách hàng sẽ được thực hiện theo hướng dẫn cụ thể.",
             "zh-Hant": "不過，只要客戶發出特定指示，本公司都應當確保客戶的訂單按照特定的指示獲得執行。"
         },
         amtExecution127: {
             zh: "本公司将使用商业判断和基于市场上可获得信息的经验，并考虑下列规定的标准，确定以上因素的相对重要性：",
             en: "The Firm will determine the relative importance of the above factors by using its commercial judgment and experience in the light of the information available on the market and taking into account the criteria described below: ",
-            vi: "^^-^^",
+            vi: "Công ty sẽ xác định tầm quan trọng tương đối của các yếu tố trên bằng cách sử dụng đánh giá thương mại và kinh nghiệm của mình theo thông tin có sẵn trên thị trường và có tính đến các tiêu chí được mô tả dưới đây:",
             "zh-Hant": "本公司將使用商業判斷和基於市場上可獲得信息的經驗，並考慮下列規定的標準，確定以上因素的相對重要性："
         },
         amtExecution128: {
             zh: "(a) 客户的特点，包括客户是零售投资者还是专业投资者的分类(b) 客户订单的特点(c) 作为订单标的金融工具的特点(d) 订单可能指示的执行场所的特点",
             en: "(a) the characteristics of the client including the categorisation of the client as retail or professional (b) the characteristics of the client’s order (c) the characteristics of the underlying financial instruments that are the subject of that order (d) the characteristics of the execution venues to which that order can be directed",
-            vi: "^^-^^",
+            vi: "(a) các đặc điểm của khách hàng bao gồm phân loại khách hàng là lẻ hoặc chuyên nghiệp (b) các đặc điểm của lệnh của khách hàng (c) đặc điểm của các công cụ tài chính cơ bản là chủ đề của lệnh đó (d) đặc điểm của các địa điểm thực hiện mà lệnh đó có thể được chuyển hướng",
             "zh-Hant": "(a) 客戶的特點，包括客戶是零售投資者還是專業投資者的分類(b) 客戶訂單的特點(c) 作為訂單標的金融工具的特點(d) 訂單可能指示的執行場所的特點"
         },
         amtExecution129: {
             zh: "客户可能的最佳结果将按照代表金融工具价格和相关执行成本的总成本进行判定，其中包括客户发生的与订单执行直接相关的所有费用。",
             en: "The best possible result for a client shall be determined in terms of the total consideration, representing the price of the financial instrument and the costs related to execution, which shall include all expenses incurred by the client which are directly related to the execution of the order.",
-            vi: "^^-^^",
+            vi: "Kết quả tốt nhất có thể cho khách hàng sẽ được xác định theo tổng giá trị, thể hiện giá của công cụ tài chính và chi phí liên quan đến việc thực hiện, bao gồm tất cả các chi phí phát sinh của khách hàng liên quan trực tiếp đến việc thực hiện lệnh.",
             "zh-Hant": "客戶可能的最佳結果將按照代表金融工具價格和相關執行成本的總成本進行判定，其中包括客戶發生的與訂單執行直接相關的所有費用。"
         },
         amtExecution130: {
             zh: "执行场所",
             en: "Execution Venues",
-            vi: "^^-^^",
+            vi: "Địa điểm Thực Thi Lệnh",
             "zh-Hant": "執行場所"
         },
         amtExecution131: {
             zh: "执行场所是订单下达所在或本公司传输执行订单的实体。就本公司提供的金融工具订单而言，本公司始终充当做市商而不是客户的代理人；尽管本公司会将您的执行订单通过自己的电子通讯平台传输给第三方流动性提供商，但根据合同约定，本公司是您交易的唯一对手方，而且所有订单的执行都是以本公司的名义完成，所以本公司是客户订单唯一的执行地点。",
             en: "Execution Venues are the entities with which the orders are placed or to which the Firm transmits orders for execution. For the purposes of orders for the Financial Instrument provided by the Firm, the Firm acts as Principal and not as Agent on the Client’s behalf at all times; although the Firm may transmit your orders for execution to third party liquidity providers through its Electronic Communication Platform, contractually the Firm is the sole counterparty to your trades and any execution of orders is done in the Firm’s name, therefore the Firm is the sole Execution Venue for the execution of the Client’s orders.",
-            vi: "^^-^^",
+            vi: "Địa điểm thực hiện là các thực thể mà các lệnh được đặt hoặc Công ty truyền các lệnh để thực thi lệnh. Đối với mục đích của các lệnh cho Công cụ tài chính do Công ty cung cấp, Công ty hoạt động với tư cách là Hiệu trưởng và không phải là Đại lý thay mặt Khách hàng vào mọi lúc; mặc dù Công ty có thể truyền phát các lệnh của bạn để thực hiện cho các nhà cung cấp thanh khoản của bên thứ ba thông qua Nền tảng Giao tiếp Điện tử, Công ty là đối tác duy nhất cho các giao dịch của bạn và việc thực hiện các lệnh được thực hiện bằng tên của Công ty, do đó Công ty là Địa điểm Thực hiện duy nhất để thực hiện các lệnh của Khách hàng.",
             "zh-Hant": "執行場所是訂單下達所在或本公司傳輸執行訂單的實體。就本公司提供的金融工具訂單而言，本公司始終充當做市商而不是客戶的代理人；盡管本公司會將您的執行訂單通過自己的電子通訊平臺傳輸給第三方流動性提供商，但根據合同約定，本公司是您交易的唯壹對手方，而且所有訂單的執行都是以本公司的名義完成，所以本公司是客戶訂單唯壹的執行地點。"
         },
         amtExecution132: {
             zh: "1.本公司营业时间：从格林威治时间星期天 22:00:01 到格林威治时间星期五 22:00:00。非工作时间：从格林威治时间星期五 22:00:01到格林威治时间星期天 22:00:00。本公司应通过交易终端的内部电子邮件系统通知客户任何假期。",
             en: "1.The Firm operation time: round–the–clock from 22:00:01 GMT Sunday through to 22:00:00 GMT Friday. Non-working periods: from 22:00:01 GMT Friday through 22.00.00 GMT Sunday. Holidays will be announced through the internal mail of the trading terminal supplied by the Firm.",
-            vi: "^^-^^",
+            vi: "1.Thời gian hoạt động của Công ty: tròn-đồng hồ từ 22:00:01 GMT Chủ Nhật đến 22:00:00 GMT Thứ Sáu. Thời gian không làm việc: từ 22:00:01 GMT Thứ Sáu đến 22.00.00 GMT Chủ Nhật. Ngày lễ sẽ được thông báo qua thư nội bộ của nhà giao dịch do Công ty cung cấp.",
             "zh-Hant": "1.本公司營業時間：從格林威治時間星期天 22:00:01 到格林威治時間星期五 22:00:00。非工作時間：從格林威治時間星期五 22:00:01到格林威治時間星期天 22:00:00。本公司應通過交易終端的內部電子郵件系統通知客戶任何假期。"
         },
         amtExecution133: {
             zh: "2.根据上文第 3 款所述的因素，本公司严重依赖以上执行场所以及他们的相对重要性。本公司的政策规定需要保持此类内部流程和原则，从而确定这些因素的相对重要性，代表客户的最佳利益行事，并在与他们交易时尽 可 能 为 他 们 提 供 最 佳 结 果 （ 或 “ 最 佳 执行”）。",
             en: "2.The Firm places significant reliance to the above Execution Venue based on the above- mentioned factors set out at paragraph 3 and their relative importance. It is the Firm’s policy to maintain such internal procedures and principles in order to determine the relative importance of these factors and to act for the best interest of its Clients and provide them the best possible result (or “best execution”) when dealing with them.",
-            vi: "^^-^^",
+            vi: "2.Công ty có sự phụ thuộc đáng kể vào Địa điểm Thực Thi Lệnh ở trên dựa trên các yếu tố nêu trên được nêu tại khoản 3 và tầm quan trọng tương đối của chúng. Chính sách của Công ty là duy trì các quy trình và nguyên tắc nội bộ để xác định tầm quan trọng tương đối của các yếu tố này và hành động vì lợi ích tốt nhất của Khách hàng và cung cấp cho họ kết quả tốt nhất có thể (hoặc “thực hiện lệnh tốt nhất”) khi giao dịch với họ .",
             "zh-Hant": "2.根據上文第 3 款所述的因素，本公司嚴重依賴以上執行場所以及他們的相對重要性。本公司的政策規定需要保持此類內部流程和原則，從而確定這些因素的相對重要性，代表客戶的最佳利益行事，並在與他們交易時盡 可 能 為 他 們 提 供 最 佳 結 果 （ 或 “ 最 佳 執行”）。"
         },
         amtExecution134: {
             zh: "3.客户确认，与本公司进行的金融工具的交易不是在公认的交易所，而是通过本公司的交易平台进行，因此，它们可能使客户面临比在受监管的交易所交易更大的风险。 所以，在某些情况下（包括但不限于交易平台的技术错误），本公司可能不会执行订单，或可能修改订单的开仓或平仓价格。条款和条件以及交易规则完全由对手方（即本公司）创建。客户有义务在本公司交易平台的开放时间内，对任何给定金融工具的未平仓头寸进行平仓。客户还必须关闭所有与同一对手方（即本公司）原先订立的任何头寸。",
             en: "3.The Client acknowledges that the transactions entered in Financial Instruments with the Firm are not undertaken on a recognised exchange, rather they are undertaken through the Firm’s Trading Platform and, accordingly, they may expose the Client to greater risks than regulated exchange transactions. Therefore, the Firm may not execute an order, or it may change the opening or closing price of an order in certain cases including but not limited to instances of a technical failure of the trading platform. The terms and conditions and trading rules are established solely by the counterparty which in this case is the Firm. The Client is obliged to close an open position of any given Financial Instruments during the opening hours of the Firm’s Trading Platform. The Client also has to close any position with the same counterparty with whom it was originally entered into, thus the Firm.",
-            vi: "^^-^^",
+            vi: "3.Khách hàng thừa nhận rằng các giao dịch được nhập vào Công cụ tài chính với Công ty không được thực hiện trên sàn giao dịch được công nhận, thay vào đó chúng được thực hiện thông qua Nền tảng giao dịch của Công ty và theo đó, chúng có thể khiến Khách hàng gặp nhiều rủi ro hơn các giao dịch hối đoái được quy định. Do đó, Công ty có thể không thực hiện một lệnh, hoặc nó có thể thay đổi giá mở hoặc đóng của một lệnh trong một số trường hợp nhất định bao gồm nhưng không giới hạn trong các trường hợp sự cố kỹ thuật của sàn giao dịch. Các điều khoản và điều kiện và quy tắc giao dịch được thành lập chỉ bởi đối tác mà trong trường hợp này là Công ty. Khách hàng có nghĩa vụ đóng một vị thế mở của bất kỳ Công cụ tài chính cụ thể nào trong giờ mở cửa của Sàn giao dịch của Công ty. Khách hàng cũng phải đóng bất kỳ vị thế nào với cùng một đối tác mà họ đã được nhập vào ban đầu, do đó Công ty.",
             "zh-Hant": "3.客戶確認，與本公司進行的金融工具的交易不是在公認的交易所，而是通過本公司的交易平臺進行，因此，它們可能使客戶面臨比在受監管的交易所交易更大的風險。 所以，在某些情況下（包括但不限於交易平臺的技術錯誤），本公司可能不會執行訂單，或可能修改訂單的開倉或平倉價格。條款和條件以及交易規則完全由對手方（即本公司）創建。客戶有義務在本公司交易平臺的開放時間內，對任何給定金融工具的未平倉頭寸進行平倉。客戶還必須關閉所有與同壹對手方（即本公司）原先訂立的任何頭寸。"
         },
         amtExecution135: {
             zh: "监控和审查",
             en: "Monitor and Review",
-            vi: "^^-^^",
+            vi: "Giám Sát và Kiểm Tra",
             "zh-Hant": "監控和審查"
         },
         amtExecution136: {
             zh: "1.本公司将会定期监督和评估本政策和订单执行安排秩序的效果，尤其是本政策所说明流程的执行质量，从而尽可能向客户提供最佳结果。在适当情况下，本公司保留修改本政策任何缺陷和改善执行安排的的权利。",
             en: "1.The Firm will monitor and assess on a regular basis the effectiveness of this Policy and the order of its order execution arrangements and, in particular, the execution quality of the procedures explained in the Policy in order to deliver the best possible result for the client, and, where appropriate, the Firm reserves the right to correct any deficiencies in this Policy and make improvements to its execution arrangements.",
-            vi: "^^-^^",
+            vi: "1.Công ty sẽ theo dõi và đánh giá thường xuyên tính hiệu quả của Chính sách này và thứ tự sắp xếp thực hiện các lệnh và đặc biệt là chất lượng thực hiện các thủ tục được giải thích trong Chính sách nhằm mang lại kết quả tốt nhất có thể cho khách hàng, và, nếu thích hợp, Công ty bảo lưu quyền sửa bất kỳ thiếu sót nào trong Chính sách này và thực hiện các cải thiện đối với các trình tự thực thi lệnh của nó.",
             "zh-Hant": "1.本公司將會定期監督和評估本政策和訂單執行安排秩序的效果，尤其是本政策所說明流程的執行質量，從而盡可能向客戶提供最佳結果。在適當情況下，本公司保留修改本政策任何缺陷和改善執行安排的的權利。"
         },
         amtExecution137: {
             zh: "2.此外，本公司将至少每年检查一次本政策及订单执行安排。当发生影响本公司继续使用本政策内规定场所，以持续尽可能为客户订单实现最佳执行结果的重大变化时，也将开展检查。",
             en: "2.In addition, Firm will review the Policy as well as its order execution arrangements at least annually. A review will also be carried out whenever a material change occurs that affects the ability of the Firm to continue to the best possible result for the execution of its client orders on a consistent basis using the venues included in this Policy.",
-            vi: "^^-^^",
+            vi: "2.Ngoài ra, Công ty sẽ xem xét Chính sách cũng như sắp xếp thực hiện lệnh của mình ít nhất hàng năm. Việc xem xét cũng sẽ được thực hiện bất cứ khi nào có thay đổi về vật chất ảnh hưởng đến khả năng của Công ty để tiếp tục kết quả tốt nhất có thể cho việc thực hiện các lệnh của khách hàng một cách nhất quán bằng cách sử dụng các địa điểm trong Chính sách này.",
             "zh-Hant": "2.此外，本公司將至少每年檢查壹次本政策及訂單執行安排。當發生影響本公司繼續使用本政策內規定場所，以持續盡可能為客戶訂單實現最佳執行結果的重大變化時，也將開展檢查。"
         },
         amtExecution138: {
             zh: "本公司将对其政策或订单执行安排的任何重大变动对客户发出通知。",
             en: "The Firm will notify its affected clients on any material changes in its Policy or order execution arrangements.",
-            vi: "^^-^^",
+            vi: "Công ty sẽ thông báo cho các khách hàng bị ảnh hưởng của mình về bất kỳ thay đổi vật chất nào trong Chính sách hoặc các thỏa thuận thực hiện lệnh của nó.",
             "zh-Hant": "本公司將對其政策或訂單執行安排的任何重大變動對客戶發出通知。"
         },
         amtExecution139: {
             zh: "客户同意书",
             en: "Client Consent",
-            vi: "^^-^^",
+            vi: "Khách Hàng Đồng Ý",
             "zh-Hant": "客戶同意書"
         },
         amtExecution140: {
             zh: "1.在与客户建立业务关系时，本公司必须获得客户对本政策的事先同意。",
             en: "1.When establishing a business relation with the Client, the Firm is required to obtain the Client’s prior consent to this Policy.",
-            vi: "^^-^^",
+            vi: "1.Khi thiết lập quan hệ kinh doanh với Khách hàng, Công ty bắt buộc phải có được sự đồng ý trước của Khách hàng đối với Chính sách này.",
             "zh-Hant": "1.在與客戶建立業務關系時，本公司必須獲得客戶對本政策的事先同意。"
         },
         amtExecution141: {
             zh: "2.客户与本公司签署本协议，即表示客户按照 6.1 款的规定给予同意书，即客户获知，对于所有就本公司提供金融工具而向本公司下达的所有订单，本公司充当做市商，而且本公司是非监管市场的唯一执行地点。",
             en: "2.By entering into the Client Agreement, the Client provides the consents referred to in paragraph 6.1 where the Client is informed that any orders placed with the Firm for the Financial Instruments offered by the Firm, the Firm acts as the principal and the Firm is the sole Execution Venue which is a non-regulated market.",
-            vi: "^^-^^",
+            vi: "2.Bằng cách kí kết Hợp đồng Khách hàng, Khách hàng cung cấp các thỏa thuận được đề cập trong đoạn 6.1, trong đó Khách hàng được thông báo rằng bất kỳ lệnh nào được đặt với Công ty cho Công cụ Tài chính do Công ty cung cấp, Công ty đóng vai trò là người đứng đầu và Công ty là đơn vị duy nhất Địa điểm Khớp Lệnh là một thị trường không quy định.",
             "zh-Hant": "2.客戶與本公司簽署本協議，即表示客戶按照 6.1 款的規定給予同意書，即客戶獲知，對於所有就本公司提供金融工具而向本公司下達的所有訂單，本公司充當做市商，而且本公司是非監管市場的唯壹執行地點。"
         },
         amtExecution142: {
             zh: "重要信息",
             en: "Important Information",
-            vi: "^^-^^",
+            vi: "Thông tin quan trọng",
             "zh-Hant": "重要信息"
         },
         amtExecution143: {
             zh: "1.对可用工具可能有特定的杠杆限制。了解更多信息，请访问本网站。",
             en: "1.There may be specific leverage limits on the instruments available. For more information please visit our website.",
-            vi: "^^-^^",
+            vi: "1.Có thể có giới hạn đòn bẩy cụ thể trên các công cụ có sẵn. Để biết thêm thông tin, vui lòng truy cập trang web của chúng tôi.",
             "zh-Hant": "1.對可用工具可能有特定的杠桿限制。了解更多信息，請訪問本網站。"
         },
         amtExecution144: {
             zh: "2.某些交易可能不允许对冲。在这种情况下，客户再次开设同一工具的头寸，将会抵消原有未平仓头寸。",
             en: "2.On some trading platforms hedging may not be permitted. In the event a Client opens a second position on the same instrument, this will be netted-off against the existing open position.",
-            vi: "^^-^^",
+            vi: "2.Trên một số nền tảng hedging (giao dịch bảo hiểm) có thể không được phép. Trong trường hợp Khách hàng mở một vị thế thứ hai trên cùng một công cụ, điều này sẽ được bù trừ theo vị thế mở hiện tại.",
             "zh-Hant": "2.某些交易可能不允許對沖。在這種情況下，客戶再次開設同壹工具的頭寸，將會抵消原有未平倉頭寸。"
         },
         amtExecution145: {
             zh: "举例：如果客户开设 2 手欧元美元的多头，然后开设 1 手欧元美元的的空头，由于货币对相同，将会产生净头寸。这导致客户留下 1 手欧元美元的多头，并由于净额计算，在平仓时得到由 1 手头寸产生的盈亏。",
             en: "Example: If client has an open BUY position of 2 lots EURUSD and then enters a sell position of 1 lot EURUSD, these positions will net as they are the same currency pair, resulting in the client having a remaining position of BUY 1 lot EURUSD and a realized P/L from the 1 lot position closed due to the netting.",
-            vi: "^^-^^",
+            vi: "Ví dụ: Nếu khách hàng có một vị trí MUA mở là 2 lot EURUSD và sau đó nhập vào vị thế bán 1 lot EURUSD, các vị trí này sẽ ròng vì chúng là cùng một cặp tiền tệ, dẫn đến khách hàng có vị trí MUA 1 lot EURUSD và một P / L đã nhận ra từ 1 lot vị thế đã đóng do bù trừ ròng.",
             "zh-Hant": "舉例：如果客戶開設 2 手歐元美元的多頭，然後開設 1 手歐元美元的的空頭，由於貨幣對相同，將會產生凈頭寸。這導致客戶留下 1 手歐元美元的多頭，並由於凈額計算，在平倉時得到由 1 手頭寸產生的盈虧。"
         },
         amtExecution146: {
             zh: "3.CFD 在若干司法管辖区或国家没有销售资格。本政策不针对其发布、提供或分发将违反当地法律或法规的司法管辖区或国家，包括美国发布、提供或分发。本政策不构成购买或出售 CFD 的要约、邀请或招揽。未经事先书面许可，不得向任何其他人士（全部或部分）复制或披露相关内容。本政策并不构成评估客户交易差价合约（CFD）决策的唯一依据。",
             en: "3.CFDs are not eligible for sale in certain jurisdictions or countries. The Policy is not directed to any jurisdiction or country where its publication, availability or distribution would be contrary to local laws or regulations, including the United States of America. The Policy does not constitute an offer, invitation or solicitation to buy or sell CFDs. It may not be reproduced or disclosed (in whole or in part) to any other person without prior written permission. The Policy is not intended to constitute the sole basis for the evaluation of the client’s decision to trade in Contracts for Difference (CFDs).",
-            vi: "^^-^^",
+            vi: "3.CFD không đủ điều kiện pháp lý để bán tại một số quốc gia hoặc quốc gia nhất định. Chính sách không hướng đến bất kỳ khu vực định chế pháp lý hoặc quốc gia nào nơi việc xuất bản, tính khả dụng hoặc phân phối của nó sẽ trái với luật pháp hoặc quy định của địa phương, bao gồm cả Hoa Kỳ. Chính sách này không cấu thành đề nghị, lời mời hoặc yêu cầu mua hoặc bán CFD. Nó không được sao chép hoặc tiết lộ (toàn bộ hoặc một phần) cho bất kỳ người nào khác mà không có sự cho phép trước bằng văn bản. Chính sách không nhằm tạo cơ sở duy nhất cho việc đánh giá quyết định giao dịch của khách hàng trong Hợp đồng chênh lệch (CFDs).",
             "zh-Hant": "3.CFD 在若幹司法管轄區或國家沒有銷售資格。本政策不針對其發布、提供或分發將違反當地法律或法規的司法管轄區或國家，包括美國發布、提供或分發。本政策不構成購買或出售 CFD 的要約、邀請或招攬。未經事先書面許可，不得向任何其他人士（全部或部分）復制或披露相關內容。本政策並不構成評估客戶交易差價合約（CFD）決策的唯壹依據。"
         },
         amtExecution147: {
             zh: "常见问题",
             en: "FAQs",
-            vi: "^^-^^",
+            vi: "Câu Hỏi Thường Gặp",
             "zh-Hant": "常見問題"
         },
         amtExecution148: {
             zh: "1.关于政策问题首先传达给客户服务部。",
             en: "1.Questions regarding the Policy should be addressed, in the first instance, to the Customer Support Department.",
-            vi: "^^-^^",
+            vi: "1.Các câu hỏi liên quan đến Chính sách nên được giải quyết, trong trường hợp đầu tiên, được đến Bộ Phận Hỗ Trợ Khách Hàng.",
             "zh-Hant": "1.關於政策問題首先傳達給客戶服務部。"
         },
         amtExecution149: {
             zh: "2.客户服务部",
             en: "2.Customer Support Department",
-            vi: "^^-^^",
+            vi: "2.Bộ Phận Hỗ Trợ Khách Hàng",
             "zh-Hant": "2.客戶服務部"
         },
         amtExecution150: {
             zh: "电话：+86 400 809 8509",
             en: "Phone: +86 400 809 8509",
-            vi: "^^-^^",
+            vi: "Điện thoại: +86 400 809 8509",
             "zh-Hant": "電話：+86 400 809 8509"
         },
         amtExecution151: {
             zh: "电子邮件：support@tigerwit.com",
             en: "Email: support@tigerwit.com",
-            vi: "^^-^^",
+            vi: "Email: support@tigerwit.com",
             "zh-Hant": "電子郵件：support@tigerwit.com"
         },
         amtExecution152: {
             zh: "其他联系人",
             en: "Additional Contacts",
-            vi: "^^-^^",
+            vi: "Địa Chỉ Liên Hệ Bổ Sung",
             "zh-Hant": "其他聯系人"
         },
         amtExecution153: {
             zh: "1.TigerWit 合规部门",
             en: "1.TigerWit Compliance Department",
-            vi: "^^-^^",
+            vi: "1.Bộ Phận Giám Sát TigerWIt",
             "zh-Hant": "1.TigerWit 合規部門"
         },
         amtExecution154: {
             zh: "电话：+1 (242) 676 7306",
             en: "Phone: +1 (242) 676 7306",
-            vi: "^^-^^",
+            vi: "Điện thoại: +1 (242) 676 7306",
             "zh-Hant": "電話：+1 (242) 676 7306"
         },
         amtExecution155: {
             zh: "电子邮件：compliance@tigerwit.com",
             en: "Email: compliance@tigerwit.com",
-            vi: "^^-^^",
+            vi: "Email: compliance@tigerwit.com",
             "zh-Hant": "電子郵件：compliance@tigerwit.com"
         },
         amtConflicts1: {
             zh: "序言",
             en: "Introduction",
-            vi: "^^-^^",
+            vi: "Giới thiệu",
             "zh-Hant": "序言"
         },
         amtConflicts2: {
             zh: "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
             en: "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-            vi: "^^-^^",
+            vi: "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Công ty\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
             "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。"
         },
         amtConflicts3: {
             zh: "2.本公司向客户及潜在客户提供利益冲突政策（以下简称本“政策”）的摘要。",
             en: "2.The Company provides its clients and potential clients with a summary of its Conflicts of Interest Policy (hereinafter the “Policy”).",
-            vi: "^^-^^",
+            vi: "2.Công ty cung cấp cho khách hàng và khách hàng tiềm năng của mình một bản tóm tắt Chính sách giải quyết xung đột lợi ích (sau đây gọi là “Chính sách”).",
             "zh-Hant": "2.本公司向客戶及潛在客戶提供利益沖突政策（以下簡稱本“政策”）的摘要。"
         },
         amtConflicts4: {
             zh: "3.根据本政策，本公司须采取一切合理措施，发现并避免以下双方之间的利益冲突：",
             en: "3.Under this Policy, the Company is required to take all reasonable steps to detect and avoid conflicts of interest between: ",
-            vi: "^^-^^",
+            vi: "3.Theo Chính sách này, Công ty bắt buộc phải thực hiện tất cả các bước hợp lý để phát hiện và tránh xung đột lợi ích giữa:",
             "zh-Hant": "3.根據本政策，本公司須采取壹切合理措施，發現並避免以下雙方之間的利益沖突："
         },
         amtConflicts5: {
             zh: "(1) 本公司，包含其管理人员、员工、指定代表（或适用情况下的专职代理人）或受上述人员直接或间接管理的相关人士，与本公司客户之间的利益冲突；",
             en: "(1) the firm, including its managers, employee, appointed representatives (or where applicable tied agents), or any person directly or indirectly linked to them by control, and a client of the firm; or",
-            vi: "^^-^^",
+            vi: "(1) công ty, bao gồm các nhà quản lý, nhân viên, đại diện được chỉ định (hoặc tại địa điểm các đại lý của công ty (nếu có) ) hoặc bất kỳ người nào trực tiếp hoặc gián tiếp liên quan với họ bằng việc kiểm soát và khách hàng của công ty; hoặc là",
             "zh-Hant": "(1) 本公司，包含其管理人員、員工、指定代表（或適用情況下的專職代理人）或受上述人員直接或間接管理的相關人士，與本公司客戶之間的利益沖突；"
         },
         amtConflicts6: {
             zh: "(2) 本公司的某位客户与另一位客户之间的利益冲突。",
             en: "(2) one client of the firm and another client. ",
-            vi: "^^-^^",
+            vi: "(2) một khách hàng của công ty và một khách hàng khác.",
             "zh-Hant": "(2) 本公司的某位客戶與另壹位客戶之間的利益沖突。"
         },
         amtConflicts7: {
             zh: "本公司承诺，在提供与此服务相关的投资服务及其他辅助服务时以诚信、公正、专业、符合客户最佳利益的方式行事且尤其遵守上述法律所规定的原则。",
             en: "The Company is committed to act honestly, fairly and professionally and in the best interests of its clients and to comply, in particular, with the principles set out in the above legislation when providing investment services and other ancillary services related to such services.",
-            vi: "^^-^^",
+            vi: "Công ty cam kết hành động trung thực, công bằng và chuyên nghiệp và vì lợi ích tốt nhất của khách hàng và tuân thủ các nguyên tắc được quy định trong luật trên khi cung cấp dịch vụ đầu tư và các dịch vụ thứ cấp khác liên quan đến các dịch vụ đó",
             "zh-Hant": "本公司承諾，在提供與此服務相關的投資服務及其他輔助服務時以誠信、公正、專業、符合客戶最佳利益的方式行事且尤其遵守上述法律所規定的原則。"
         },
         amtConflicts8: {
             zh: "4.我们在此提供一份本政策的摘要，以便管理我们向客户承担责任时所涉及的利益冲突。",
             en: "4.We provide here a summary of the Policy we maintain in order to manage conflicts of interest in respect of the duties we owe to our clients.",
-            vi: "^^-^^",
+            vi: "4.Tại đây, chúng tôi cung cấp bản tóm tắt chính sách mà chúng tôi duy trì để giải quyết các xung đột lợi ích liên quan đến các nghĩa vụ mà chúng tôi chịu trách nhiệm với khách hàng của mình.",
             "zh-Hant": "4.我們在此提供壹份本政策的摘要，以便管理我們向客戶承擔責任時所涉及的利益沖突。"
         },
         amtConflicts9: {
             zh: "5.本政策无意且不会创建在不提供本政策的情况下不存在的任何第三方权利或义务，也不构成本公司与任何客户之间的任何合同内容。",
             en: "5.This Policy is not intended to, and does not, create third party rights or duties that would not already exist if the Policy had not been made available, nor does it form part of any contract between the Company and any client.",
-            vi: "^^-^^",
+            vi: "5.Chính sách này không nhằm mục đích, và không tạo ra các quyền hoặc nghĩa vụ của bên thứ ba mà không tồn tại nếu Chính sách chưa được cung cấp, cũng không phải là một phần của bất kỳ hợp đồng nào giữa Công ty và bất kỳ khách hàng nào.",
             "zh-Hant": "5.本政策無意且不會創建在不提供本政策的情況下不存在的任何第三方權利或義務，也不構成本公司與任何客戶之間的任何合同內容。"
         },
         amtConflicts10: {
             zh: "政策范围",
             en: "Scope of the Policy",
-            vi: "^^-^^",
+            vi: "Phạm Vi Của Chính Sách",
             "zh-Hant": "政策範圍"
         },
         amtConflicts11: {
             zh: "1.本政策根据 SCB 提供，其基准是您计划在 TigerWit 平台交易差价合约（“CFD”），CFD 是杠杆产品，涉及很高的风险，可能导致您亏损所有的投资资金。",
             en: "1.The Policy is provided to you in accordance with the SCB on the basis that you are proposing to trade with TigerWit in contracts for difference (‘CFDs’) which are leveraged products, incur a high level of risk and can result in the loss of all your invested capital",
-            vi: "^^-^^",
+            vi: "1.Chính sách được cung cấp cho bạn theo SCB trên cơ sở bạn đang đề nghị giao dịch với TigerWit trong các hợp đồng chênh lệch ('CFDs') là sản phẩm có đòn bẩy, chịu rủi ro cao và có thể dẫn đến mất tất cả vốn đầu tư của bạn.",
             "zh-Hant": "1.本政策根據 SCB 提供，其基準是您計劃在 TigerWit 平臺交易差價合約（“CFD”），CFD 是杠桿產品，涉及很高的風險，可能導致您虧損所有的投資資金。"
         },
         amtConflicts12: {
             zh: "2.本文件旨在阐明 TigerWit 为识别及管理企业活动过程中可能产生的利益冲突而采用的方法。本政策适用于 TigerWit 所有董事、员工、本公司直接或间接关联人士（以下简称“相关人员”），并涉及与所有客户进行的一切互动行为。",
             en: "2.The purpose this document is to set out the Company’s approach to identifying and managing conflicts of interest which may arise during the course of its business activities. The Policy applies to all its directors, employees, any persons directly or indirectly linked to the Company (hereinafter called “related persons”) and refers to all interactions with all clients.",
-            vi: "^^-^^",
+            vi: "2.Mục đích của tài liệu này là trình bày cách thức tiếp cận của Công ty để xác định và giải quyết các xung đột lợi ích có thể phát sinh trong quá trình hoạt động kinh doanh của Công ty. Chính sách áp dụng cho tất cả các giám đốc, nhân viên, bất kỳ người nào liên quan trực tiếp hoặc gián tiếp với Công ty (sau đây gọi là \"người có liên quan\") và đề cập đến tất cả các tương tác với tất cả khách hàng.",
             "zh-Hant": "2.本文件旨在闡明 TigerWit 為識別及管理企業活動過程中可能產生的利益沖突而采用的方法。本政策適用於 TigerWit 所有董事、員工、本公司直接或間接關聯人士（以下簡稱“相關人員”），並涉及與所有客戶進行的壹切互動行為。"
         },
         amtConflicts13: {
             zh: "3.我们政策的目标是识别并防止本公司与客户之间或本公司不同客户之间可能产生的利益冲突。为实现这一目标，我们采用的利益冲突政策规定了相关程序、办法和管理措施。",
             en: "3.The aim of our Policy is to identify and prevent conflicts of interest which may arise between the Company and its clients or between one client and another. Accordingly, we have adopted a conflicts of interest policy setting out the procedures, practices and controls in place to achieve this.",
-            vi: "^^-^^",
+            vi: "3.Mục đích điều khoản Chính sách này của chúng tôi là xác định và ngăn chặn xung đột lợi ích có thể phát sinh giữa Công ty và khách hàng của mình hoặc giữa một khách hàng và một khách hàng khác. Theo đó, chúng tôi đã áp dụng một khung quy trình giải quyết xung đột lợi ích, các thủ tục và biện pháp kiểm soát tại chỗ để đạt được điều này.",
             "zh-Hant": "3.我們政策的目標是識別並防止本公司與客戶之間或本公司不同客戶之間可能產生的利益沖突。為實現這壹目標，我們采用的利益沖突政策規定了相關程序、辦法和管理措施。"
         },
         amtConflicts14: {
             zh: "识别利益冲突",
             en: "Identification of Conflicts of Interest",
-            vi: "^^-^^",
+            vi: "Xác định xung đột lợi ích",
             "zh-Hant": "識別利益沖突"
         },
         amtConflicts15: {
             zh: "1.为了能够识别投资服务、辅助服务或上述组合服务提供时所产生的可能损害客户利益的利益冲突类型，TigerWit 应顾及本公司、相关人员或受本公司直接或间接管理的相关人士是否处于以下任何一种情况，不论是否出于提供投资或辅助服务、投资活动或其他活动的原因：",
             en: "1.For the purposes of identifying the types of conflict of interest that arise in the course of providing investment and ancillary services or a combination thereof and whose existence may damage the interests of a client, the Company takes into account, whether the Company or a relevant person or a person directly or indirectly linked by control to the firm, is in any of the following situations, whether as a result of providing investment or ancillary services or investment activities or otherwise: ",
-            vi: "^^-^^",
+            vi: "1.Với mục đích xác định các loại xung đột lợi ích phát sinh trong quá trình cung cấp đầu tư và dịch vụ phụ trợ liên quan hoặc sự kết hợp của chúng và sự tồn tại của các yếu tố có thể làm tổn hại lợi ích của khách hàng, Công ty sẽ bao gồm việc Công ty hoặc người có liên quan hoặc một người trực tiếp hoặc gián tiếp liên quan đến công ty bằng cách kiểm soát công ty, trong bất kỳ trường hợp nào sau đây, cho dù là kết quả của việc cung cấp đầu tư hay dịch vụ phụ trợ hoặc hoạt động đầu tư hay các cách khác:",
             "zh-Hant": "1.為了能夠識別投資服務、輔助服務或上述組合服務提供時所產生的可能損害客戶利益的利益沖突類型，TigerWit 應顧及本公司、相關人員或受本公司直接或間接管理的相關人士是否處於以下任何壹種情況，不論是否出於提供投資或輔助服務、投資活動或其他活動的原因："
         },
         amtConflicts16: {
             zh: "(a) 本公司或相关人员可能在损害客户利益的情况下，获取经济利益或避免经济损失；",
             en: "(a) The Company or relevant person is likely to make a financial gain, or avoid a financial loss, at the expense of the client;",
-            vi: "^^-^^",
+            vi: "(a) Công ty hoặc người có liên quan có khả năng được hưởng lợi nhuận tài chính hoặc tránh mất mát tài chính, từ chi phí của khách hang chi trả;",
             "zh-Hant": "(a) 本公司或相關人員可能在損害客戶利益的情況下，獲取經濟利益或避免經濟損失；"
         },
         amtConflicts17: {
             zh: "(b) 为客户提供服务或代表客户进行交易的结果牵扯本公司或相关人士的利益，该结果明显与客户可获得的利益不同；",
             en: "(b) The Company or relevant person has an interest in the outcome of a service provided to the client or of a transaction carried out on behalf of the client, which is distinct from the client's interest in that outcome;",
-            vi: "^^-^^",
+            vi: "(b) Công ty hoặc người có liên quan có quan tâm đến kết quả của một dịch vụ được cung cấp cho khách hàng hoặc của một giao dịch được thực hiện trên danh nghĩa khách hàng, không phục vụ lợi ích của khách hàng trong kết quả đó;",
             "zh-Hant": "(b) 為客戶提供服務或代表客戶進行交易的結果牽扯本公司或相關人士的利益，該結果明顯與客戶可獲得的利益不同；"
         },
         amtConflicts18: {
             zh: "(c) 本公司或相关人员有经济上或其他方面的动机，试图向另一位客户或其它客户提供比该客户更优惠的待遇；",
             en: "(c) The Company or relevant person has a financial or other incentive to favour the interest of another client or group of clients over the interests of the client;",
-            vi: "^^-^^",
+            vi: "(c) Công ty hoặc người có liên quan có một ưu đãi tài chính hoặc ưu đãi khác nhằm mục đích có lợi cho lợi ích của một khách hàng hoặc một nhóm khách hàng khác thay vì lợi ích của khách hàng;",
             "zh-Hant": "(c) 本公司或相關人員有經濟上或其他方面的動機，試圖向另壹位客戶或其它客戶提供比該客戶更優惠的待遇；"
         },
         amtConflicts19: {
             zh: "(d) 本公司或相关人员与客户开展同一业务；",
             en: "(d) The Company or relevant person carries on the same business as the client;",
-            vi: "^^-^^",
+            vi: "(d) Công ty hoặc người có liên quan thực hiện cùng một công việc với tư cách khách hàng;",
             "zh-Hant": "(d) 本公司或相關人員與客戶開展同壹業務；"
         },
         amtConflicts20: {
             zh: "(e) 本公司或相关人员就提供给客户的服务接收或将会接收除了客户以外的其它人士以金钱、商品或服务形式给予的赠予，这些赠予不是该服务相关的标准佣金或费用。",
             en: "(e) The Company or relevant person receives or will receive from a person other than the client an inducement in relation to a service provided to the client, in the form of monies, goods or services, other than the standard commission or fee for that service.",
-            vi: "^^-^^",
+            vi: "(e) Công ty hoặc người có liên quan nhận hoặc sẽ nhận được từ một người không phải là khách hàng một sự ưu đãi liên quan đến dịch vụ được cung cấp cho khách hàng, dưới hình thức tiền, hàng hóa hoặc dịch vụ, ngoài hoa hồng hoặc phí dịch vụ theo quy định chuẩn.",
             "zh-Hant": "(e) 本公司或相關人員就提供給客戶的服務接收或將會接收除了客戶以外的其它人士以金錢、商品或服務形式給予的贈予，這些贈予不是該服務相關的標準傭金或費用。"
         },
         amtConflicts21: {
             zh: "管理利益冲突",
             en: "Managing Conflicts of Interest",
-            vi: "^^-^^",
+            vi: "Giải quyết xung đột lợi ích",
             "zh-Hant": "管理利益沖突"
         },
         amtConflicts22: {
             zh: "1.本公司已制定内部政策并设有内部合规部门，负责识别并管理潜在的利益冲突。本公司及内部合规部门还将更新相关内部程序，并确保遵守此类程序。",
             en: "1.The Company has set up internal policies and has an in-house Compliance Department that are responsible for identifying and managing potential conflicts of interests. The above will also update the relevant internal procedures and ensure compliance with such procedures.",
-            vi: "^^-^^",
+            vi: "1.Công ty đã thiết lập các chính sách nội bộ và có Phòng Giám sát nội bộ chịu trách nhiệm xác định và giải quyết các xung đột quyền lợi có thể xảy ra. Các bộ phận trên cũng sẽ cập nhật các thủ tục nội bộ có liên quan và đảm bảo tuân thủ các thủ tục đó.",
             "zh-Hant": "1.本公司已制定內部政策並設有內部合規部門，負責識別並管理潛在的利益沖突。本公司及內部合規部門還將更新相關內部程序，並確保遵守此類程序。"
         },
         amtConflicts23: {
             zh: "2.本公司维护并运行有效的组织及管理程序，以管理并防止已识别的利益冲突构成或引发客户利益的重大损失风险。本公司同样持续监视商业活动，以确保适当的内部管理。",
             en: "2.The Company maintains and operates effective organizational and administrative procedures to manage and prevent the identified conflicts of interest from constituting or giving rise to a material risk of damage to the interests of its clients. The Company also undertakes ongoing monitoring of business activities to ensure that internal controls are appropriate.",
-            vi: "^^-^^",
+            vi: "2.Công ty duy trì và vận hành các thủ tục tổ chức và hành chính hiệu quả để giải quyết và ngăn chặn các xung đột lợi ích được xác định từ việc hình thành hoặc gây ra nguy cơ thiệt hại vật chất cho lợi ích của khách hàng. Công ty cũng thực hiện giám sát liên tục các hoạt động kinh doanh để đảm bảo rằng các biện pháp kiểm soát nội bộ là phù hợp.",
             "zh-Hant": "2.本公司維護並運行有效的組織及管理程序，以管理並防止已識別的利益沖突構成或引發客戶利益的重大損失風險。本公司同樣持續監視商業活動，以確保適當的內部管理。"
         },
         amtConflicts24: {
             zh: "3.采取的措施旨在确保相关人员在从事涉及利益冲突的不同业务活动时，依照适应本公司或其集团规模和活动，且符合客户利益损失风险实质的独立性级别开展上述业务活动。",
             en: "3.The measures adopted are designed to ensure that relevant persons engaged in different business activities involving a conflict of interest carry on those activities at a level of independence at a level of independence appropriate to the size and activities of the firm and its Group, and to the materiality of the risk of damage to the interests of the client.",
-            vi: "^^-^^",
+            vi: "3.Các biện pháp áp dụng được thiết lập để đảm bảo rằng những người liên quan tham gia vào các hoạt động kinh doanh khác nhau liên quan đến xung đột lợi ích thực hiện các hoạt động đó  ở mức độ độc lập phù hợp với quy mô và hoạt động của công ty và Tập đoàn, ở tính chất vật chất của nguy cơ làm ảnh hưởng đến các lợi ích của khách hàng.",
             "zh-Hant": "3.采取的措施旨在確保相關人員在從事涉及利益沖突的不同業務活動時，依照適應本公司或其集團規模和活動，且符合客戶利益損失風險實質的獨立性級別開展上述業務活動。"
         },
         amtConflicts25: {
             zh: "一般而言，为了确保必要的独立性，本公司就利益冲突所遵循的程序与管理包含如下级别的措施：",
             en: "In general, the procedures and controls that the Company follows regarding conflicts of interest include the following measures to ensure the requisite degree of independence: ",
-            vi: "^^-^^",
+            vi: "Nói chung, các thủ tục và sự kiểm soát mà Công ty tuân theo liên quan đến các xung đột lợi ích bao gồm các biện pháp sau đây để đảm bảo mức độ độc lập cần thiết:",
             "zh-Hant": "壹般而言，為了確保必要的獨立性，本公司就利益沖突所遵循的程序與管理包含如下級別的措施："
         },
         amtConflicts26: {
             zh: "(a) 防止或管理参与涉及利益冲突活动的相关人员之间信息交流的有效程序，前提是该信息的交流可能损害一个或多个客户的利益；",
             en: "(a) Effective procedures to prevent or control the exchange of information between relevant persons engaged in activities involving a risk of a conflict of interest where the exchange of that information may harm the interests of one or more clients;",
-            vi: "^^-^^",
+            vi: "(a) Các thủ tục hiệu quả để ngăn chặn hoặc kiểm soát việc trao đổi thông tin giữa những người có liên quan tham gia vào các hoạt động liên quan đến nguy cơ xung đột lợi ích mà việc trao đổi thông tin đó có thể gây hại cho lợi ích của một hoặc nhiều khách hàng;",
             "zh-Hant": "(a) 防止或管理參與涉及利益沖突活動的相關人員之間信息交流的有效程序，前提是該信息的交流可能損害壹個或多個客戶的利益；"
         },
         amtConflicts27: {
             zh: "(b) 针对主要职能涉及代表利益相冲突的客户开展活动或向其提供服务的相关人员，或以其他方式代表可能相冲突的不同利益（包括本公司利益在内）的相关人员进行单独监管；",
             en: "(b) The separate supervision of relevant persons whose principal functions involve carrying out activities on behalf of, or providing services to, clients whose interests may conflict, or who otherwise represent different interests that may conflict, including those of the Company;",
-            vi: "^^-^^",
+            vi: "(b) Sự giám sát riêng biệt của những người liên quan có chức năng chính tham gia vào việc thực hiện các hoạt động thay mặt hoặc cung cấp dịch vụ cho khách hàng có quyền lợi xung đột hoặc đại diện cho những lợi ích khác nhau có thể xung đột, bao gồm cả những lợi ích của Công ty;",
             "zh-Hant": "(b) 針對主要職能涉及代表利益相沖突的客戶開展活動或向其提供服務的相關人員，或以其他方式代表可能相沖突的不同利益（包括本公司利益在內）的相關人員進行單獨監管；"
         },
         amtConflicts28: {
             zh: "(c) 如果相关活动的开展可能会造成任何利益冲突，则取消主要参与一项活动的相关人员的报酬与主要参与另一项活动的不同相关人员的报酬或创造的收入之间的任何直接联系；",
             en: "(c) The removal of any direct link between the remuneration of relevant persons principally engaged in one activity and the remuneration of, or revenues generated by, different relevant persons principally engaged in another activity, where a conflict of interest may arise in relation to those activities;",
-            vi: "^^-^^",
+            vi: "(c) Việc loại bỏ bất kỳ liên kết trực tiếp nào giữa thù lao của người có liên quan chủ yếu tham gia vào một hoạt động và thù lao, hoặc doanh thu được tạo ra bởi những người có liên quan khác nhau chủ yếu tham gia vào hoạt động khác, trường hợp xung đột lợi ích có thể phát sinh liên quan đến các hoạt động đó;",
             "zh-Hant": "(c) 如果相關活動的開展可能會造成任何利益沖突，則取消主要參與壹項活動的相關人員的報酬與主要參與另壹項活動的不同相關人員的報酬或創造的收入之間的任何直接聯系；"
         },
         amtConflicts29: {
             zh: "(d) 防止或限制任何人士对相关人员开展投资或辅助服务或活动造成不良影响的措施；",
             en: "(d) Measures to prevent or limit any person from exercising inappropriate influence over the way in which a relevant person carries out investment or ancillary services or activities;",
-            vi: "^^-^^",
+            vi: "(d) Các biện pháp ngăn chặn hoặc hạn chế bất kỳ người nào thực hiện ảnh hưởng không phù hợp theo cách thức mà một người có liên quan thực hiện đầu tư hoặc các dịch vụ phụ trợ hoặc các hoạt động;",
             "zh-Hant": "(d) 防止或限制任何人士對相關人員開展投資或輔助服務或活動造成不良影響的措施；"
         },
         amtConflicts30: {
             zh: "(e) 如果某些参与可能妨碍对利益冲突的适当管理，则采取预防或管理相关人员同时或连续参与单独的投资或辅助服务或活动的措施。",
             en: "(e) Measures to prevent or control the simultaneous or sequential involvement of a relevant person in separate investment or ancillary services or activities where such involvement may impair the proper management of conflicts of interest.",
-            vi: "^^-^^",
+            vi: "(e) Các biện pháp ngăn chặn hoặc kiểm soát sự tham gia đồng thời hoặc tuần tự của một người có liên quan trong các hoạt động đầu tư hoặc dịch vụ phụ trợ riêng biệt hoặc sự tham gia có thể làm giảm sự quản lý thích hợp các xung đột lợi ích.",
             "zh-Hant": "(e) 如果某些參與可能妨礙對利益沖突的適當管理，則采取預防或管理相關人員同時或連續參與單獨的投資或輔助服務或活動的措施。"
         },
         amtConflicts31: {
             zh: "4.为防止利益冲突而制定的部分政策及程序所示如下：",
             en: "4.Some of these policies and procedures established to prevent Conflicts of Interests are shown below: ",
-            vi: "^^-^^",
+            vi: "4.Một số chính sách và thủ tục được thiết lập để ngăn chặn Xung đột lợi ích được trình bày bên dưới: ",
             "zh-Hant": "4.為防止利益沖突而制定的部分政策及程序所示如下："
         },
         amtConflicts32: {
             zh: "- “需者方知”政策，管理保密信息或内部信息在集团内的传播",
             en: "- A ‘need to know’ policy governing the dissemination of confidential or inside information within the Group",
-            vi: "^^-^^",
+            vi: "- Một chính sách ‘cần biết’ quy định việc phát tán thông tin bảo mật hoặc nội bộ trong Tập đoàn",
             "zh-Hant": "- “需者方知”政策，管理保密信息或內部信息在集團內的傳播"
         },
         amtConflicts33: {
             zh: "- 利用“防火墙”限制保密信息及内部信息在本公司流通，以及部门之间物理隔离",
             en: "- Chinese walls restricting the flow of confidential and inside information within our company, and physical separation of departments",
-            vi: "^^-^^",
+            vi: "- Các rào cản tại Trung Quốc hạn chế dòng của thông tin bảo mật và bên trong trong công ty chúng tôi, và sự phân chia vật lý giữa các phòng ban",
             "zh-Hant": "- 利用“防火墻”限制保密信息及內部信息在本公司流通，以及部門之間物理隔離"
         },
         amtConflicts34: {
             zh: "- 管理电子数据访问的程序",
             en: "- Procedures governing access to electronic data",
-            vi: "^^-^^",
+            vi: "- Thủ tục điều chỉnh quyền truy cập vào dữ liệu điện tử",
             "zh-Hant": "- 管理電子數據訪問的程序"
         },
         amtConflicts35: {
             zh: "- 职权分离，避免由一人兼任数职而可能产生的利益冲突",
             en: "- Segregation of duties that may give rise to conflicts of interest if carried on by the same individual",
-            vi: "^^-^^",
+            vi: "- Phân chia các nhiệm vụ có thể dẫn đến xung đột lợi ích nếu được thực hiện bởi cùng một cá nhân",
             "zh-Hant": "- 職權分離，避免由壹人兼任數職而可能產生的利益沖突"
         },
         amtConflicts36: {
             zh: "- 适用于相关人员自行投资时的个人账户交易规定",
             en: "- Personal account dealing requirements applicable to relevant persons in relation to their own investments",
-            vi: "^^-^^",
+            vi: "- Các yêu cầu giao dịch tài khoản cá nhân áp dụng cho người liên đới liên quan đến khoản đầu tư của họ",
             "zh-Hant": "- 適用於相關人員自行投資時的個人賬戶交易規定"
         },
         amtConflicts37: {
             zh: "- 礼品及赠予记录，登记某些福利的招揽、提供或收取",
             en: "- A gifts and inducements log registering the solicitation, offer or receipt of certain benefits",
-            vi: "^^-^^",
+            vi: "- Các món quà và các hình thức khuyến khích, kêu gọi đăng kí, đề nghị hoặc việc nhận các lợi ích nhất định",
             "zh-Hant": "- 禮品及贈予記錄，登記某些福利的招攬、提供或收取"
         },
         amtConflicts38: {
             zh: "- 除非提供董事会批准，禁止外部商业利益与集团就其高级职员与员工的利益产生冲突",
             en: "- The prohibition of external business interests conflicting with our interests as far as the Group’s officers and employees are concerned, unless board approval is provided",
-            vi: "^^-^^",
+            vi: "- Việc nghiêm cấm các lợi ích kinh doanh bên ngoài xung đột với lợi ích của chúng tôi theo ý kiến của các nhân viên và nhân viên của Nhóm có liên quan, trừ khi được hội đồng quản trị phê duyệt.",
             "zh-Hant": "- 除非提供董事會批準，禁止外部商業利益與集團就其高級職員與員工的利益產生沖突"
         },
         amtConflicts39: {
             zh: "- 一项旨在限制因给予和接受赠予而引起利益冲突的政策",
             en: "- A policy designed to limit the conflict of interest arising from the giving and receiving of inducements",
-            vi: "^^-^^",
+            vi: "- Một chính sách được biên soạn để hạn chế xung đột lợi ích phát sinh từ việc cho và nhận các khoản khuyến mãi.",
             "zh-Hant": "- 壹項旨在限制因給予和接受贈予而引起利益沖突的政策"
         },
         amtConflicts40: {
             zh: "- 设立内部合规部门，就上述内容进行监督并向本公司董事会作出报告",
             en: "- Establishment of in-house Compliance Department to monitor and report on the above to the Company’s Board of Directors",
-            vi: "^^-^^",
+            vi: "- Thành lập Phòng Giám Sát nội bộ để theo dõi và báo cáo ở trên cho Ban Giám đốc của Công ty",
             "zh-Hant": "- 設立內部合規部門，就上述內容進行監督並向本公司董事會作出報告"
         },
         amtConflicts41: {
             zh: "- 任命内部审计师，确保适当地维护制度和管理措施并向本公司董事会报告",
             en: "- Appointment of Internal auditor to ensure that appropriate systems and controls are maintained and report to the Company’s Board of Directors",
-            vi: "^^-^^",
+            vi: "- Bổ nhiệm kiểm toán viên nội bộ để đảm bảo rằng các hệ thống và kiểm soát thích hợp được duy trì và báo cáo cho Ban Giám đốc của Công ty",
             "zh-Hant": "- 任命內部審計師，確保適當地維護制度和管理措施並向本公司董事會報告"
         },
         amtConflicts42: {
             zh: "- 建立“四眼监控”原则，监督本公司活动",
             en: "- Establishment of the four-eyes principle in supervising the Company’s activities",
-            vi: "^^-^^",
+            vi: "- Thiết lập nguyên tắc bốn mắt trong việc giám sát hoạt động của Công ty",
             "zh-Hant": "- 建立“四眼監控”原則，監督本公司活動"
         },
         amtConflicts43: {
             zh: "披露",
             en: "Disclosure",
-            vi: "^^-^^",
+            vi: "Tiết lộ",
             "zh-Hant": "披露"
         },
         amtConflicts44: {
             zh: "1.如果本公司所作的安排不足以使其有合理信心确保能使客户的利益免受损害，而本公司意识到冲突，则在为客户承担投资业务前，将向该客户披露利益冲突的一般性质及来源。利益冲突的披露将以书面通知的方式进行，通知将包含足够细节以确保客户能够在发生利益冲突的情况下就服务作出明智决定。本公司识别的潜在利益冲突之详情载于本政策附件（可能不时修订）。",
             en: "1.Where arrangements made by the firm are not sufficient to ensure, with reasonable confidence, that risks of damage to the interests of the client will be prevented, the Company will, if it is aware of it, disclose the general nature and/or sources of conflicts of interest to a client prior to undertaking investment business for that client. The disclosure will be made by way of a written notice and will include sufficient detail to enable the client to take an informed decision with respect to the service in the context of which the conflict of interest arises. Details of potential conflicts of interest identified by the Firm are contained in the Annex to this Policy, which may be amended from time to time.",
-            vi: "^^-^^",
+            vi: "1.Trường hợp các hình thức tổ chức của công ty không đủ để đảm bảo, với sự đảm bảo có thể chấp nhận được, rằng nguy cơ thiệt hại đến lợi ích của khách hàng sẽ được ngăn chặn, Công ty sẽ, nếu nhận thức được điều này, sẽ tiết lộ bản chất và / hoặc nguồn gốc của xung đột lợi ích cho khách hàng trước khi tiến hành việc kinh doanh các khoản đầu tư với khách hàng đó. Việc tiết lộ sẽ được thực hiện bằng cách thông báo bằng văn bản và sẽ bao gồm đầy đủ chi tiết để cho phép khách hàng đưa ra quyết định sáng suốt đối với dịch vụ trong trường hợp xung đột lợi ích phát sinh. Chi tiết về xung đột lợi ích có thể phát sinh được Công ty xác định được nêu trong Phụ lục của Chính sách này, có thể được sửa đổi theo thời gian.",
             "zh-Hant": "1.如果本公司所作的安排不足以使其有合理信心確保能使客戶的利益免受損害，而本公司意識到沖突，則在為客戶承擔投資業務前，將向該客戶披露利益沖突的壹般性質及來源。利益沖突的披露將以書面通知的方式進行，通知將包含足夠細節以確保客戶能夠在發生利益沖突的情況下就服務作出明智決定。本公司識別的潛在利益沖突之詳情載於本政策附件（可能不時修訂）。"
         },
         amtConflicts45: {
             zh: "如果本公司认为披露冲突不适用于冲突管理，我们可能会选择不再继续进行引起利益冲突的交易或事项。",
             en: "If the firm does not believe that disclosure is appropriate to manage the conflict, we may choose not to proceed with the transaction or matter giving rise to the conflict.",
-            vi: "^^-^^",
+            vi: "Nếu công ty không tin rằng thông tin tiết lộ là thích hợp để quản lý xung đột, chúng tôi có thể chọn không tiếp tục xử lý việc giao dịch hoặc vấn đề làm phát sinh xung đột.",
             "zh-Hant": "如果本公司認為披露沖突不適用於沖突管理，我們可能會選擇不再繼續進行引起利益沖突的交易或事項。"
         },
         amtConflicts46: {
             zh: "2.本公司保留在其认为适当的时候复核或修订其政策和安排的权利。有关本政策的更多详情可向我方咨询。",
             en: "2.The Company reserves the right to review and/or amend its Policy and arrangements whenever it deems this appropriate. Further information about the Policy is available upon request.",
-            vi: "^^-^^",
+            vi: "2.Công ty có quyền xem xét và / hoặc sửa đổi Chính sách và các thỏa thuận của mình bất cứ khi nào xét thấy phù hợp. Thông tin thêm về Chính sách có sẵn theo yêu cầu.",
             "zh-Hant": "2.本公司保留在其認為適當的時候復核或修訂其政策和安排的權利。有關本政策的更多詳情可向我方咨詢。"
         },
         amtConflicts47: {
             zh: "常见问题解答",
             en: "Frequently Asked Questions",
-            vi: "^^-^^",
+            vi: "Các Câu Hỏi Thường Gặp",
             "zh-Hant": "常見問題解答"
         },
         amtConflicts48: {
             zh: "1.有关利益冲突政策的问题首先应向客户服务部咨询。",
             en: "1.Questions regarding the Conflicts of Interest Policy should be addressed, in the first instance, to the Customer Support Department.",
-            vi: "^^-^^",
+            vi: "1.Các câu hỏi về Chính sách xung đột lợi ích cần được giải quyết, đầu tiên được gửi đến Bộ Phận Hỗ Trợ Khách Hàng.",
             "zh-Hant": "1.有關利益沖突政策的問題首先應向客戶服務部咨詢。"
         },
         amtConflicts49: {
             zh: "2.客户服务部",
             en: "2.Customer Support Department",
-            vi: "^^-^^",
+            vi: "2.Bộ Phận Hỗ Trợ Khách Hàng",
             "zh-Hant": "2.客戶服務部"
         },
         amtConflicts50: {
             zh: "电话：+86 400 809 8509",
             en: "Phone: +86 400 809 8509",
-            vi: "^^-^^",
+            vi: "Điện thoại: +86 400 809 8509",
             "zh-Hant": "電話：+86 400 809 8509"
         },
         amtConflicts51: {
             zh: "电子邮件：support@tigerwit.com",
             en: "Email: support@tigerwit.com",
-            vi: "^^-^^",
+            vi: "Email: support@tigerwit.com",
             "zh-Hant": "電子郵件：support@tigerwit.com"
         },
         amtConflicts52: {
             zh: "其他联系人",
             en: "Additional Contacts",
-            vi: "^^-^^",
+            vi: "Địa Chỉ Bổ Sung",
             "zh-Hant": "其他聯系人"
         },
         amtConflicts53: {
             zh: "TigerWit 合规部门",
             en: "TigerWit Compliance Department",
-            vi: "^^-^^",
+            vi: "Bộ Phận Giám Sát của TigerWit",
             "zh-Hant": "TigerWit 合規部門"
         },
         amtConflicts54: {
             zh: "电话：+1 (242) 676 7306",
             en: "Phone: +1 (242) 676 7306",
-            vi: "^^-^^",
+            vi: "Điện thoại: +1 (242) 676 7306",
             "zh-Hant": "電話：+1 (242) 676 7306"
         },
         amtConflicts55: {
             zh: "电子邮件：compliance@tigerwit.com",
             en: "Email: compliance@tigerwit.com",
-            vi: "^^-^^",
+            vi: "Email: compliance@tigerwit.com",
             "zh-Hant": "電子郵件：compliance@tigerwit.com"
         },
         amtComplaint1: {
             zh: "投诉程序概述",
             en: "SUMMARY OF COMPLAINTS PROCEDURE",
-            vi: "^^-^^",
+            vi: "TÓM TẮT QUY TRÌNH GIẢI QUYẾT PHÀN NÀN",
             "zh-Hant": "投訴程序概述"
         },
         amtComplaint2: {
             zh: "1) 我们将在收到您的投诉 48 小时内确认收到，并告知由哪位专业人员处理您的投诉。",
             en: "1) We will acknowledge your complaint within 48 hours of receipt and let you know which senior person will be dealing with your complaint.",
-            vi: "^^-^^",
+            vi: "1) Chúng tôi sẽ giải quyết khiếu nại, phàn nàn của bạn trong vòng 48 giờ tiếp nhận và cho bạn biết Chuyên viên nào đang giải quyết khiếu nại của bạn.",
             "zh-Hant": "1) 我們將在收到您的投訴 48 小時內確認收到，並告知由哪位專業人員處理您的投訴。"
         },
         amtComplaint3: {
             zh: "2) 我们将调查您的投诉并努力在收到您投诉后的四（4）周内给您最终答复。如果我们在这段时间内不能给您最终答复，我们会向您发送最新情况。",
             en: "2) We will investigate your complaint and endeavor to send a final response to you within four (4) weeks of receipt of your complaint. If we are unable to provide you with a final response within this time we will send you an update.",
-            vi: "^^-^^",
+            vi: "2) Chúng tôi sẽ kiểm tra khiếu nại của bạn và nỗ lực để gửi đến cho bạn phản hồi cuối cùng trong vòng bốn (4) tuần sau khi nhận được khiếu nại của bạn. Nếu chúng tôi có thể đưa ra phản hồi cuối cùng trong khoảng thời gian này, chúng tôi sẽ gửi đến bạn cập nhật mới nhất.",
             "zh-Hant": "2) 我們將調查您的投訴並努力在收到您投訴後的四（4）周內給您最終答復。如果我們在這段時間內不能給您最終答復，我們會向您發送最新情況。"
         },
         amtComplaint4: {
             zh: "3) 我们将努力在收到您的投诉八（8）周内给您最终答复。如果我们在这段时间内不能给您最终答复，我们会向您书面解释原因并告知您何时会给您最终答复。",
             en: "3) We will endeavor to send a final response to you within eight (8) weeks of receipt of your complaint. If we are unable to provide you with a final response within this time frame, we will write to you explaining why and advise you when you can expect a final response.",
-            vi: "^^-^^",
+            vi: "3) Chúng tôi sẽ cố gắng gửi đến bạn phản hồi cuối cùng trong vòng tám (8) tuần kể từ khi nhận được khiếu nại của bạn. Nếu chúng tôi không thể đưa ra phản hồi trong khung thời gian này, chúng tôi sẽ viết thư để giải thích lý do và thông báo thời hạn bạn có thể nhận được phản hồi cuối cùng.",
             "zh-Hant": "3) 我們將努力在收到您的投訴八（8）周內給您最終答復。如果我們在這段時間內不能給您最終答復，我們會向您書面解釋原因並告知您何時會給您最終答復。"
         },
         amtComplaint5: {
             zh: "4) 如果从您投诉之日起已经过去了超过八（8）周，并且未收到最终答复，或是您对已经收到的最终答复不满意，您有权将投诉送交巴哈马证券监察委员会（SCB），他们的联系方式如下：",
             en: "4) If more than eight (8) weeks from the date of your complaint has past and you haven’t received a final response, or you are dissatisfied with the final response you have received from us, you are entitled to refer your complaint to the Securities Commission of The Bahamas (SCB), they can be contacted at the following: ",
-            vi: "^^-^^",
+            vi: "4) Nếu hơn tám (8) tuần kể từ khi bạn gửi khiếu nại và bạn chưa nhận được phản hồi cuối cùng, hoặc bạn không hài lòng với phản hồi cuối cùng từ chúng tôi, bạn có quyền gửi khiếu nại của mình đến Ủy ban Chứng khoán Bahamas (SCB), bạn có thể liên hệ theo địa chỉ sau:",
             "zh-Hant": "4) 如果從您投訴之日起已經過去了超過八（8）周，並且未收到最終答復，或是您對已經收到的最終答復不滿意，您有權將投訴送交巴哈馬證券監察委員會（SCB），他們的聯系方式如下："
         },
         amtComplaint6: {
             zh: "http://www.scb.gov.bs/e_complaints.html",
             en: "http://www.scb.gov.bs/e_complaints.html",
-            vi: "^^-^^",
+            vi: "http://www.scb.gov.bs/e_complaints.html",
             "zh-Hant": "http://www.scb.gov.bs/e_complaints.html"
         },
         amtComplaint7: {
             zh: "Securities Commission of The Bahamas",
             en: "Securities Commission of The Bahamas",
-            vi: "^^-^^",
+            vi: "Ủy Ban Chứng khoán Bahamas",
             "zh-Hant": "Securities Commission of The Bahamas"
         },
         amtComplaint8: {
             zh: "3rd Floor, Charlotte House",
             en: "3rd Floor, Charlotte House",
-            vi: "^^-^^",
+            vi: "Tầng 3, Charlotte House",
             "zh-Hant": "3rd Floor, Charlotte House"
         },
         amtComplaint9: {
             zh: "Shirley and Charlotte",
             en: "Shirley and Charlotte Streets",
-            vi: "^^-^^",
+            vi: "Đường Shirley và Charlotte",
             "zh-Hant": "Shirley and Charlotte"
         },
         amtComplaint10: {
             zh: "Streets PO Box N8347",
             en: "PO Box N8347",
-            vi: "^^-^^",
+            vi: "PO Box N8347",
             "zh-Hant": "Streets PO Box N8347"
         },
         amtComplaint11: {
             zh: "Nassau, Bahamas",
             en: "Nassau, Bahamas",
-            vi: "^^-^^",
+            vi: "Nassau, Bahamas",
             "zh-Hant": "Nassau, Bahamas"
         },
         amtComplaint12: {
             zh: "电话：+1 (242) 397 4100",
             en: "Phone: +1 (242) 397 4100",
-            vi: "^^-^^",
+            vi: "Điện thoại: +1 (242) 397 4100",
             "zh-Hant": "電話：+1 (242) 397 4100"
         },
         amtComplaint13: {
             zh: "电邮：info@scb.gov.bs",
             en: "Email: info@scb.gov.bs",
-            vi: "^^-^^",
+            vi: "Email: info@scb.gov.bs",
             "zh-Hant": "電郵：info@scb.gov.bs"
         },
         amtComplaint14: {
             zh: "您必须在收到最终答复之日起六（6）个月内向金融申诉服务机构提交投诉。",
             en: "You must refer your complaint to the Financial Ombudsman within six (6) months of the date on the final response",
-            vi: "^^-^^",
+            vi: "Bạn phải gửi khiếu nại đến Thanh Tra Tài Chính trong vòng sáu (6) tháng kể từ ngày nhận được phản hồi cuối cùng.",
             "zh-Hant": "您必須在收到最終答復之日起六（6）個月內向金融申訴服務機構提交投訴。"
         },
         amtComplaint15: {
             zh: "序言",
             en: "INTRODUCTION",
-            vi: "^^-^^",
+            vi: "GIỚI THIỆU",
             "zh-Hant": "序言"
         },
         amtComplaint16: {
             zh: "1.TigerWit Limited（以下统称为“TigerWit”、“公司”或“本公司”）在 巴 哈 马 国 注 册 成 立 （ 注 册 证 书 编 号198255B）。我们的注册办事处位于 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈马证券监察委员会授权和监管（注册编号 SIA-F185）。",
             en: "1.TigerWit Limited (hereinafter referred to as ‘TigerWit’, the ‘Firm’ or the 'Company') is incorporated (Certificate of Incorporation No. 198255B) in The Commonwealth of The Bahamas. Our registered office is 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, The Bahamas. TigerWit is authorised and regulated by the Securities Commission of The Bahamas (licence No. SIA-F185).",
-            vi: "^^-^^",
+            vi: "1.TigerWit Limited (sau đây gọi tắt là \"TigerWit\", \"Công ty\" hoặc \"Công ty\") được thành lập (Giấy chứng nhận thành lập số 198255B) trong Khối thịnh vượng chung Bahamas. Văn phòng đăng ký của chúng tôi là 201 Church Street, Sandyport, P. O. Box SP 64368. Nassau, Bahamas. TigerWit được ủy quyền và quản lý bởi Ủy ban Chứng khoán Bahamas (giấy phép số SIA-F185).",
             "zh-Hant": "1.TigerWit Limited（以下統稱為“TigerWit”、“公司”或“本公司”）在 巴 哈 馬 國 註 冊 成 立 （ 註 冊 證 書 編 號198255B）。我們的註冊辦事處位於 201 ChurchStreet, Sandyport, P. O. Box SP 64368.Nassau, TheBahamas。TigerWit 受巴哈馬證券監察委員會授權和監管（註冊編號 SIA-F185）。"
         },
         amtComplaint17: {
             zh: "条款解释",
             en: "INTERPRETATION OF TERMS",
-            vi: "^^-^^",
+            vi: "GIẢI THÍCH CÁC ĐIỀU KHOẢN",
             "zh-Hant": "條款解釋"
         },
         amtComplaint18: {
             zh: "1.除非有相反的说明，本报告中包含的术语应具有特定含义，并可酌情以单数或复数使用（如恰当）。",
             en: "1.Unless indicated to the contrary, the terms included in this Report shall have a specific meaning and may be used in the singular or plural as appropriate.",
-            vi: "^^-^^",
+            vi: "1.Trừ khi được chỉ định ngược lại, các điều khoản trong Báo cáo này sẽ có ý nghĩa cụ thể và có thể được sử dụng ở dạng số ít hoặc số nhiều nếu thích hợp.",
             "zh-Hant": "1.除非有相反的說明，本報告中包含的術語應具有特定含義，並可酌情以單數或復數使用（如恰當）。"
         },
         amtComplaint19: {
             zh: "2.客户: 指“客户协议”定义的“客户”，客户协议可在网页 http://global.tigerwit.com 查看。",
             en: "2.Client: Means the ‘client’ as defined in the ‘Client Agreement’ available online at http://global.tigerwit.com. ",
-            vi: "^^-^^",
+            vi: "2.Khách hàng: Có nghĩa là 'khách hàng' được xác định trong 'Thỏa thuận khách hàng' được trình bày tại http://global.tigerwit.com.",
             "zh-Hant": "2.客戶: 指“客戶協議”定義的“客戶”，客戶協議可在網頁 http://global.tigerwit.com 查看。"
         },
         amtComplaint20: {
             zh: "投诉处理程序的范围",
             en: "SCOPE OF THE COMPLAINTS HANDLING PROCEDURE",
-            vi: "^^-^^",
+            vi: "PHẠM VI THỦ TỤC XỬ LÝ KHIẾU NẠI",
             "zh-Hant": "投訴處理程序的範圍"
         },
         amtComplaint21: {
             zh: "1.本投诉处理程序（简称“本程序”）列出了在处理收到客户投诉时所使用的程序。",
             en: "1.The Complaints Handling Procedure (‘the Procedure’) sets out the processes employed when dealing with complaints received by clients.",
-            vi: "^^-^^",
+            vi: "1.Thủ tục Xử lý Khiếu nại (‘Thủ tục’) quy định các quy trình được sử dụng khi giải quyết các khiếu nại từ khách hàng",
             "zh-Hant": "1.本投訴處理程序（簡稱“本程序”）列出了在處理收到客戶投訴時所使用的程序。"
         },
         amtComplaint22: {
             zh: "投诉的定义",
             en: "DEFINITION OF A COMPLAINT",
-            vi: "^^-^^",
+            vi: "ĐỊNH NGHĨA KHIẾU NẠI",
             "zh-Hant": "投訴的定義"
         },
         amtComplaint23: {
             zh: "1.投诉是指客户对 TigerWit 提供的投资服务和/或辅助服务表示不满意。",
             en: "1.A complaint is an expression of dissatisfaction by a client regarding the provision of investment and/ or ancillary services provided by TigerWit.",
-            vi: "^^-^^",
+            vi: "1.Đơn khiếu nại là cách thức thể hiện sự không hài lòng của khách hàng về việc cung cấp các dịch vụ đầu tư và / hoặc dịch vụ phụ trợ do TigerWit cung cấp.",
             "zh-Hant": "1.投訴是指客戶對 TigerWit 提供的投資服務和/或輔助服務表示不滿意。"
         },
         amtComplaint24: {
             zh: "2.投诉应当包括：",
             en: "2.A complaint shall include: ",
-            vi: "^^-^^",
+            vi: "2.Khiếu nại bao gồm:",
             "zh-Hant": "2.投訴應當包括："
         },
         amtComplaint25: {
             zh: "客户姓名；客户的交易账号；受影响的订单号；问题出现的日期和时间；问题详情描述。",
             en: "the client’s name and surname; the client’s trading account number; the affected transaction numbers, if applicable; the date and time that the issue arose; and a description of the issue.",
-            vi: "^^-^^",
+            vi: "tên và họ của khách hàng; số tài khoản giao dịch của khách hàng; số giao dịch bị ảnh hưởng, nếu có; ngày và giờ phát sinh vấn đề; và trình bày vấn đề.",
             "zh-Hant": "客戶姓名；客戶的交易賬號；受影響的訂單號；問題出現的日期和時間；問題詳情描述。"
         },
         amtComplaint26: {
             zh: "3.投诉不得包含针对 TigerWit 或 TigerWit员工的冒犯性语言。",
             en: "3.A complaint must not include offensive language directed either to TigerWit or an TigerWit employee.",
-            vi: "^^-^^",
+            vi: "3.Đơn khiếu nại không chứa ngôn ngữ xúc phạm hướng đến TigerWit hoặc nhân viên TigerWit.",
             "zh-Hant": "3.投訴不得包含針對 TigerWit 或 TigerWit員工的冒犯性語言。"
         },
         amtComplaint27: {
             zh: "程序",
             en: "PROCEDURE",
-            vi: "^^-^^",
+            vi: "QUY TRÌNH",
             "zh-Hant": "程序"
         },
         amtComplaint28: {
             zh: "1.所有投诉必须书面进行，且应当首先传达给客户服务部。如果客户收到客户服务部的答复，但认为应当进一步投诉，客户可要求客户服务部将投诉提交合规部，或直接联系合规部（compliance@tigerwit.com），该部门将独立和公正地展开调查。",
             en: "1.All complaints must be in writing and shall be addressed, in the first instance, to the Customer Support Department. If the client receives a response from Customer Support but deems that the complaint needs to be raised further the client may either ask Customer Support to escalate it to the Compliance Department or directly contact Compliance (compliance@tigerwit.com), which will independently and impartially investigate it.",
-            vi: "^^-^^",
+            vi: "1.Tất cả các khiếu nại phải bằng văn bản và sẽ được giải quyết, trong trường hợp đầu tiên, đến Bộ phận hỗ trợ khách hàng. Nếu khách hàng nhận được phản hồi từ bộ phận Hỗ trợ Khách hàng nhưng cho rằng khiếu nại cần được đưa lên cấp cao hơn, khách hàng có thể yêu cầu Bộ phận Hỗ trợ Khách hàng chuyển nó đến Phòng Kiểm Soát hoặc liên hệ trực tiếp với Bộ phận Kiểm Soát(compliance@tigerwit.com), sẽ là nơi điều tra công tâm và độc lập.",
             "zh-Hant": "1.所有投訴必須書面進行，且應當首先傳達給客戶服務部。如果客戶收到客戶服務部的答復，但認為應當進壹步投訴，客戶可要求客戶服務部將投訴提交合規部，或直接聯系合規部（compliance@tigerwit.com），該部門將獨立和公正地展開調查。"
         },
         amtComplaint29: {
             zh: "2.客户服务部和合规部都应当按要求彻底调查所有投诉（对本公司文书和记录所含的所有信息进行考察，包括但不限于客户交易账户的日志），以获得公平的结论。",
             en: "2.Both the Customer Support Department and the Compliance Department shall thoroughly examine any complaints as required (taking into account any information contained within the books and records of the Firm, including but not limited to the client’s trading account journal) to reach a fair outcome.",
-            vi: "^^-^^",
+            vi: "2.Cả Bộ phận Hỗ trợ Khách hàng và Phòng Giám sát sẽ kiểm tra kỹ mọi khiếu nại theo yêu cầu (xem xét bất kỳ thông tin nào có trong sách và hồ sơ của Công ty, bao gồm nhưng không giới hạn trong lịch sử tài khoản giao dịch của khách hàng) để đạt được kết quả công bằng.",
             "zh-Hant": "2.客戶服務部和合規部都應當按要求徹底調查所有投訴（對本公司文書和記錄所含的所有信息進行考察，包括但不限於客戶交易賬戶的日誌），以獲得公平的結論。"
         },
         amtComplaint30: {
             zh: "3.客户服务部和合规部都必须：",
             en: "3.Both the Customer Support Department and the Compliance Department shall: ",
-            vi: "^^-^^",
+            vi: "3.Cả Bộ Phận Hỗ Trợ Khách Hàng và Giám Sát sẽ:",
             "zh-Hant": "3.客戶服務部和合規部都必須："
         },
         amtComplaint31: {
             zh: "(i) 在 48 小时内向客户发送初步的答复，",
             en: "(i) send an initial response to the client within 48 hours,",
-            vi: "^^-^^",
+            vi: "(i) gửi phản hồi ban đầu cho khách hàng trong vòng 48 giờ,",
             "zh-Hant": "(i) 在 48 小時內向客戶發送初步的答復，"
         },
         amtComplaint32: {
             zh: "(ii) 按照合理可行的方式尽快解决投诉，并",
             en: "(ii) resolve complaints as soon as reasonably practicable, and",
-            vi: "^^-^^",
+            vi: "(ii) giải quyết khiếu nại ngay khi có thể thực hiện hợp lý và",
             "zh-Hant": "(ii) 按照合理可行的方式盡快解決投訴，並"
         },
         amtComplaint33: {
             zh: "(iii) 通知相应客户。",
             en: "(iii) inform the client accordingly.",
-            vi: "^^-^^",
+            vi: "(iii) thông báo cho khách hàng cho thích hợp.",
             "zh-Hant": "(iii) 通知相應客戶。"
         },
         amtComplaint34: {
             zh: "4.所有投诉都应保密。",
             en: "4.All complaints shall be treated confidentially.",
-            vi: "^^-^^",
+            vi: "4.Tất cả các khiếu nại sẽ được xử lý một cách bảo mật.",
             "zh-Hant": "4.所有投訴都應保密。"
         },
         amtComplaint35: {
             zh: "常见问题",
             en: "FAQs",
-            vi: "^^-^^",
+            vi: "Câu Hỏi Thường Gặp",
             "zh-Hant": "常見問題"
         },
         amtComplaint36: {
             zh: "1.关于此程序的问题首先传达给客户服务部。",
             en: "1.Questions regarding this Procedure should be addressed, in the first instance, to the Customer Service Department.",
-            vi: "^^-^^",
+            vi: "1.Các câu hỏi liên quan đến thủ tục này cần được giải quyết, trong trường hợp đầu tiên, đến Bộ Phận Dịch Vụ Khách Hàng.",
             "zh-Hant": "1.關於此程序的問題首先傳達給客戶服務部。"
         },
         amtComplaint37: {
             zh: "联系方式",
             en: "CONTACTS",
-            vi: "^^-^^",
+            vi: "LIÊN HỆ",
             "zh-Hant": "聯系方式"
         },
         amtComplaint38: {
             zh: "1.客户服务部",
             en: "1.Customer Support Department",
-            vi: "^^-^^",
+            vi: "1.Bộ Phận Hỗ Trỡ Khách Hàng",
             "zh-Hant": "1.客戶服務部"
         },
         amtComplaint39: {
             zh: "电话：+86 400 809 8509",
             en: "Phone: +86 400 809 8509",
-            vi: "^^-^^",
+            vi: "Điện thoại: +86 400 809 8509",
             "zh-Hant": "電話：+86 400 809 8509"
         },
         amtComplaint40: {
             zh: "电子邮件：support@tigerwit.com",
             en: "E-mail: support@tigerwit.com",
-            vi: "^^-^^",
+            vi: "E-mail: support@tigerwit.com",
             "zh-Hant": "電子郵件：support@tigerwit.com"
         },
         amtComplaint41: {
             zh: "2.合规部门",
             en: "2.Compliance Department",
-            vi: "^^-^^",
+            vi: "2.Phòng Kiểm Soát",
             "zh-Hant": "2.合規部門"
         },
         amtComplaint42: {
             zh: "电话：+1 (242) 676 7306",
             en: "Phone: +1 (242) 676 7306",
-            vi: "^^-^^",
+            vi: "Điện thoại: +1 (242) 676 7306",
             "zh-Hant": "電話：+1 (242) 676 7306"
         },
         amtComplaint43: {
             zh: "电子邮件：compliance@tigerwit.com",
             en: "E-mail: compliance@tigerwit.com",
-            vi: "^^-^^",
+            vi: "E-mail: compliance@tigerwit.com",
             "zh-Hant": "電子郵件：compliance@tigerwit.com"
         },
         downloadApp: {
@@ -10660,25 +10660,25 @@ module.exports = function () {
             tip1: {
                 zh: "复制跟单",
                 en: "Follow a master to trade",
-                vi: "^^-^^",
+                vi: "Theo dõi một nhà giao dịch chính để giao dịch",
                 "zh-Hant": "復制跟單"
             },
             tip2: {
                 zh: "无需精通外汇知识，跟着高手坐享其成",
                 en: "No need to master forex knowledge, just follow a master and enjoy the profit.",
-                vi: "^^-^^",
+                vi: "Không cần phải nắm vững kiến ​​thức ngoại hối, chỉ cần làm theo một nhà giao dịch và tận hưởng lợi nhuận.",
                 "zh-Hant": "無需精通外匯知識，跟著高手坐享其成"
             },
             tip3: {
                 zh: "支持Android2.3.3及以上",
                 en: "Support Android2.3.3 and above",
-                vi: "^^-^^",
+                vi: "Phiên bản android hỗ trợ Android2.3.3 trở lên",
                 "zh-Hant": "支持Android2.3.3及以上"
             },
             tip4: {
                 zh: "支持苹果iOS7.0及以上",
                 en: "Support apple iOS7.0 and above",
-                vi: "^^-^^",
+                vi: "Hỗ trợ apple iOS7.0 trở lên",
                 "zh-Hant": "支持蘋果iOS7.0及以上"
             },
             tip5: {
@@ -10690,194 +10690,20 @@ module.exports = function () {
             tip6: {
                 zh: "请使用手机浏览器扫描功能",
                 en: "Please use the mobile browser scan function",
-                vi: "^^-^^",
+                vi: "Vui lòng sử dụng chức năng quét trình duyệt di động",
                 "zh-Hant": "請使用手機瀏覽器掃描功能"
-            },
-            tip7: {
-                zh: "六大投资优势 体验完美交易",
-                en: "Six investment advantages, experience perfect trading.",
-                vi: "^^-^^",
-                "zh-Hant": "六大投資優勢 體驗完美交易"
-            },
-            tip8_1: {
-                zh: "在",
-                en: "In ",
-                vi: "^^-^^",
-                "zh-Hant": "在"
-            },
-            tip8_2: {
-                zh: "，已有86523人选择外汇跟单交易",
-                en: ", 86,523 people have chosen transaction by following masters",
-                vi: "^^-^^",
-                "zh-Hant": "，已有86523人選擇外匯跟單交易"
-            },
-            lowThreshold: {
-                zh: "门槛低",
-                en: "Low threshold",
-                vi: "^^-^^",
-                "zh-Hant": "門檻低"
-            },
-            tip9_1: {
-                zh: "开户就送$200体验金，",
-                en: "TigerWit will send you $200 experience",
-                vi: "^^-^^",
-                "zh-Hant": "開戶就送$200體驗金，"
-            },
-            tip9_2: {
-                zh: "最低$10元就能交易",
-                en: " funds when you open an account, and a minimum",
-                vi: "^^-^^",
-                "zh-Hant": "最低$10元就能交易"
-            },
-            tip9_3: {
-                zh: " ",
-                en: "of $10 can be traded",
-                vi: "^^-^^",
-                "zh-Hant": " "
-            },
-            highIncome: {
-                zh: "高收益",
-                en: "High income",
-                vi: "^^-^^",
-                "zh-Hant": "高收益"
-            },
-            tip10_1: {
-                zh: "涨跌皆有机会盈利，多倍杠杆，",
-                en: "You will always have chance to take profit",
-                vi: "^^-^^",
-                "zh-Hant": "漲跌皆有機會盈利，多倍杠桿，"
-            },
-            tip10_2: {
-                zh: "$200当做$2000使用",
-                en: "no matter rise or fall, multiple levers, ",
-                vi: "^^-^^",
-                "zh-Hant": "$200當做$2000使用"
-            },
-            tip10_3: {
-                zh: " ",
-                en: "$200 could be used as $2000",
-                vi: "^^-^^",
-                "zh-Hant": " "
-            },
-            easyOperation: {
-                zh: "易操作",
-                en: "Easy operation",
-                vi: "^^-^^",
-                "zh-Hant": "易操作"
-            },
-            tip11_1: {
-                zh: "移动端交易，简便易懂，",
-                en: "Mobile end trade, easy to understand, ",
-                vi: "^^-^^",
-                "zh-Hant": "移動端交易，簡便易懂，"
-            },
-            tip11_2: {
-                zh: "会炒股就会简单操作",
-                en: "the operation could be very easy if you ever trade stocks",
-                vi: "^^-^^",
-                "zh-Hant": "會炒股就會簡單操作"
-            },
-            moreOpportunities: {
-                zh: "机会多",
-                en: "More opportunities",
-                vi: "^^-^^",
-                "zh-Hant": "機會多"
-            },
-            tip12_1: {
-                zh: "24小时交易、T+0交易，",
-                en: "Trade 24 hours, T+0 trading, ",
-                vi: "^^-^^",
-                "zh-Hant": "24小時交易、T+0交易，"
-            },
-            tip12_2: {
-                zh: "大小行情不错过",
-                en: "never miss one market",
-                vi: "^^-^^",
-                "zh-Hant": "大小行情不錯過"
-            },
-            followMasters: {
-                zh: "高手跟单",
-                en: "Follow masters",
-                vi: "^^-^^",
-                "zh-Hant": "高手跟單"
-            },
-            tip13_1: {
-                zh: "无需精通理财知识，复制交易高手，",
-                en: "No need to master forex knowledge, just follow a master, ",
-                vi: "^^-^^",
-                "zh-Hant": "無需精通理財知識，復制交易高手，"
-            },
-            tip13_2: {
-                zh: "把握操盘机会",
-                en: "grasp the opportunity of operating",
-                vi: "^^-^^",
-                "zh-Hant": "把握操盤機會"
-            },
-            fairMarket: {
-                zh: "市场公平",
-                en: "Fair market",
-                vi: "^^-^^",
-                "zh-Hant": "市場公平"
-            },
-            tip14: {
-                zh: "国际市场，每天5万亿以上成交量",
-                en: "International market, over 5 trillion transactions a day.",
-                vi: "^^-^^",
-                "zh-Hant": "國際市場，每天5萬億以上成交量"
             },
             tip15: {
                 zh: "APP 链接全球金融市场",
                 en: "APP Link to global financial markets",
-                vi: "^^-^^",
+                vi: "APP Liên kết với các thị trường tài chính toàn cầu",
                 "zh-Hant": "APP 鏈接全球金融市場"
             },
             tip16: {
                 zh: "人人都是投资高手—你准备好了吗？",
                 en: "Trade like a master—Are you ready for it?",
-                vi: "^^-^^",
+                vi: "Giao dịch như một bậc thầy - Bạn đã sẵn sàng chưa?",
                 "zh-Hant": "人人都是投資高手—妳準備好了嗎？"
-            },
-            androidVersion: {
-                zh: "Android版",
-                en: "Android Version",
-                vi: "^^-^^",
-                "zh-Hant": "Android版"
-            },
-            iPhoneVersion: {
-                zh: "iPhone版",
-                en: "iPhone Version",
-                vi: "^^-^^",
-                "zh-Hant": "iPhone版"
-            },
-            tip17: {
-                zh: "扫码轻松赚收益",
-                en: "Scan QR code and take profit easily",
-                vi: "^^-^^",
-                "zh-Hant": "掃碼輕松賺收益"
-            },
-            tip18: {
-                zh: "专业外汇交易团队带你钱生钱",
-                en: "Professional trading team with your money to make money",
-                vi: "^^-^^",
-                "zh-Hant": "專業外匯交易團隊帶妳錢生錢"
-            },
-            tip19: {
-                zh: "随时随地一键交易,把握财富主动权",
-                en: "Trading anytime anywhere, hold the wealth initiative",
-                vi: "^^-^^",
-                "zh-Hant": "隨時隨地壹鍵交易,把握財富主動權"
-            },
-            mobileEndTradingSystem: {
-                zh: "移动端交易系统",
-                en: "Mobile-end trading system",
-                vi: "^^-^^",
-                "zh-Hant": "移動端交易系統"
-            },
-            regularFollow: {
-                zh: "定期跟单",
-                en: "Regular Follow",
-                vi: "^^-^^",
-                "zh-Hant": "定期跟單"
             },
             howChooseMaster: {
                 zh: "如何选择高手",
@@ -10906,7 +10732,7 @@ module.exports = function () {
             partners: {
                 zh: "合作伙伴",
                 en: "Partners",
-                vi: "^^-^^",
+                vi: "Đối tác",
                 "zh-Hant": "合作夥伴"
             },
             agencies: {
@@ -10918,7 +10744,7 @@ module.exports = function () {
             becomeMaster: {
                 zh: "成为高手",
                 en: "Become a master",
-                vi: "^^-^^",
+                vi: "Trở Thành một Bậc Thầy",
                 "zh-Hant": "成為高手"
             },
             eliteTeam: {
