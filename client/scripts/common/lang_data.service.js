@@ -25,37 +25,31 @@
             companyCopyRules: {
                 zh: "https://www.tigerwit.com/web/copy/rules",
                 en: "https://www.tigerwit.com/web/copy/rules",
-                vi: "^^-^^",
+                vi: "https://www.tigerwit.com/web/copy/rules",
                 "zh-Hant": "https://www.tigerwit.com/web/copy/rules"
             },
             companyNameEn: {
                 zh: "TigerWit",
                 en: "TigerWit",
-                vi: "^^-^^",
+                vi: "TigerWit",
                 "zh-Hant": "TigerWit"
             },
             companyNameZh: {
                 zh: "TigerWit",
                 en: "TigerWit",
-                vi: "^^-^^",
+                vi: "TigerWit",
                 "zh-Hant": "TigerWit"
             },
             telephone: {
                 zh: "400-809-8509",
                 en: "400-809-8509",
-                vi: "^^-^^",
+                vi: "400-809-8509",
                 "zh-Hant": "400-809-8509"
-            },
-            mt4Live: {
-                zh: "TigerWit-Live",
-                en: "TigerWit-Live",
-                vi: "^^-^^",
-                "zh-Hant": "TigerWit-Live"
             },
             webSite: {
                 zh: "www.tigerwit.com",
                 en: "www.tigerwit.com",
-                vi: "^^-^^",
+                vi: "www.tigerwit.com",
                 "zh-Hant": "www.tigerwit.com"
             },
             china: {
@@ -64,143 +58,11 @@
                 vi: "China",
                 "zh-Hant": "中國"
             },
-            lijifuzhi: {
-                en: "Copy now",
-                zh: "立即复制",
-                vi: "^^-^^",
-                "zh-Hant": "立即復制"
-            },
-            fuzhi: {
-                zh: "复制",
-                en: "Copy",
-                vi: "^^-^^",
-                "zh-Hant": "復制"
-            },
-            lijizhuce: {
-                en: "Register now",
-                zh: "立即注册",
-                vi: "^^-^^",
-                "zh-Hant": "立即註冊"
-            },
-            liaojiexiangqing: {
-                en: "Learn more",
-                zh: "了解详情",
-                vi: "^^-^^",
-                "zh-Hant": "了解詳情"
-            },
-            xuanzegaoshou: {
-                en: "Select a master",
-                zh: "选择高手",
-                vi: "^^-^^",
-                "zh-Hant": "選擇高手"
-            },
-            shouyilv: {
-                en: "yield rate",
-                zh: "收益率",
-                vi: "^^-^^",
-                "zh-Hant": "收益率"
-            },
-            zongshouyilv: {
-                en: "Total Return",
-                zh: "总收益率",
-                vi: "^^-^^",
-                "zh-Hant": "總收益率"
-            },
-            fengxian: {
-                en: "risks",
-                zh: "风险",
-                vi: "^^-^^",
-                "zh-Hant": "風險"
-            },
-            low: {
-                en: "low",
-                zh: "低",
-                vi: "^^-^^",
-                "zh-Hant": "低"
-            },
-            middle: {
-                en: "middle",
-                zh: "中",
-                vi: "^^-^^",
-                "zh-Hant": "中"
-            },
-            high: {
-                en: "high",
-                zh: "高",
-                vi: "^^-^^",
-                "zh-Hant": "高"
-            },
             fuzhirenshu: {
                 en: "Copiers",
                 zh: "复制人数",
                 vi: "^^-^^",
                 "zh-Hant": "復制人數"
-            },
-            lishifuzhirenshu: {
-                en: "Historical Copiers",
-                zh: "历史复制人数",
-                vi: "^^-^^",
-                "zh-Hant": "歷史復制人數"
-            },
-            zuidifuzhijine: {
-                en: "MIN copy",
-                zh: "最低复制金额",
-                vi: "^^-^^",
-                "zh-Hant": "最低復制金額"
-            },
-            zoushitu: {
-                en: "Trend Chart",
-                zh: "走势图",
-                vi: "^^-^^",
-                "zh-Hant": "走勢圖"
-            },
-            zuidahuiche: {
-                en: "MAX drawdown",
-                zh: "最大回撤",
-                vi: "^^-^^",
-                "zh-Hant": "最大回撤"
-            },
-            waihui: {
-                en: "Foreign exchange",
-                zh: "外汇",
-                vi: "^^-^^",
-                "zh-Hant": "外匯"
-            },
-            guijinshu: {
-                en: "Precious metal",
-                zh: "贵金属",
-                vi: "^^-^^",
-                "zh-Hant": "貴金屬"
-            },
-            yuanyou: {
-                en: "Crude oil",
-                zh: "原油",
-                vi: "^^-^^",
-                "zh-Hant": "原油"
-            },
-            faq: {
-                en: "FAQ",
-                zh: "常见问题",
-                vi: "^^-^^",
-                "zh-Hant": "常見問題"
-            },
-            login: {
-                en: "Login",
-                zh: "登录",
-                vi: "^^-^^",
-                "zh-Hant": "登錄"
-            },
-            register: {
-                en: "Register",
-                zh: "注册",
-                vi: "^^-^^",
-                "zh-Hant": "註冊"
-            },
-            signout: {
-                en: "sign out",
-                zh: "退出",
-                vi: "^^-^^",
-                "zh-Hant": "退出"
             },
             password: {
                 en: "Password",
@@ -229,134 +91,14 @@
             verifycode: {
                 en: "Verification code",
                 zh: "验证码",
-                vi: "^^-^^",
+                vi: "Mã xác nhận",
                 "zh-Hant": "驗證碼"
-            },
-            rank1: {
-                en: "Ranking",
-                zh: "综合排名",
-                vi: "^^-^^",
-                "zh-Hant": "綜合排名"
-            },
-            login1: {
-                en: "Mobile No.",
-                zh: "手机号码",
-                vi: "^^-^^",
-                "zh-Hant": "手機號碼"
-            },
-            login2: {
-                en: "Please enter your account No.",
-                zh: "请输入账号",
-                vi: "^^-^^",
-                "zh-Hant": "請輸入賬號"
-            },
-            login3: {
-                en: "xx",
-                zh: "账号格式不正确",
-                vi: "^^-^^",
-                "zh-Hant": "賬號格式不正確"
-            },
-            login4: {
-                en: "xx",
-                zh: "账号尚未注册",
-                vi: "^^-^^",
-                "zh-Hant": "賬號尚未註冊"
-            },
-            login6: {
-                en: "Log in automatically next time",
-                zh: "下次自动登陆",
-                vi: "^^-^^",
-                "zh-Hant": "下次自動登陸"
-            },
-            login7: {
-                en: "Forgot password",
-                zh: "忘记密码",
-                vi: "^^-^^",
-                "zh-Hant": "忘記密碼"
-            },
-            login8: {
-                en: "SSL login is adopted in TigerWit and data transmission is safe.",
-                zh: "您在TigerWit登录采用 SSL 登录方式数据传输安全",
-                vi: "^^-^^",
-                "zh-Hant": "您在TigerWit登錄采用 SSL 登錄方式數據傳輸安全"
-            },
-            login9: {
-                en: "Login",
-                zh: "登 录",
-                vi: "^^-^^",
-                "zh-Hant": "登 錄"
-            },
-            login10: {
-                en: "Register",
-                zh: "注 册",
-                vi: "^^-^^",
-                "zh-Hant": "註 冊"
-            },
-            login11: {
-                en: "Login...",
-                zh: "登录中",
-                vi: "^^-^^",
-                "zh-Hant": "登錄中"
-            },
-            login12: {
-                en: "Login too much, please try again after 5 minutes",
-                zh: "登录次数过多，请 5 分钟后重试",
-                vi: "^^-^^",
-                "zh-Hant": "登錄次數過多，請 5 分鐘後重試"
-            },
-            login13: {
-                en: "account No. or password is wrong",
-                zh: "用户名或者密码错误",
-                vi: "^^-^^",
-                "zh-Hant": "用戶名或者密碼錯誤"
-            },
-            login14: {
-                en: "xx",
-                zh: "账号已注销",
-                vi: "^^-^^",
-                "zh-Hant": "賬號已註銷"
-            },
-            register1: {
-                en: "Register an account",
-                zh: "注册账户",
-                vi: "^^-^^",
-                "zh-Hant": "註冊賬戶"
-            },
-            register2: {
-                en: "Real name certification",
-                zh: "实名认证",
-                vi: "^^-^^",
-                "zh-Hant": "實名認證"
-            },
-            register3: {
-                en: "KYC authentication",
-                zh: "KYC 认证",
-                vi: "^^-^^",
-                "zh-Hant": "KYC 認證"
-            },
-            register4: {
-                en: "Registration done",
-                zh: "完成注册",
-                vi: "^^-^^",
-                "zh-Hant": "完成註冊"
-            },
-            register5: {
-                en: "Confirm password",
-                zh: "确认密码",
-                vi: "^^-^^",
-                "zh-Hant": "確認密碼"
             },
             register6: {
                 en: "Obtain verification code",
                 zh: "获取验证码",
-                vi: "^^-^^",
+                vi: "Nhận Mã xác nhận",
                 "zh-Hant": "獲取驗證碼"
-            },
-            register7: {
-                en: "Please enter username",
-                zh: "请输入昵称",
-                vi: "^^-^^",
-                "zh-Hant": "請輸入昵稱"
             },
             register8: {
                 en: "Please enter phone number",
@@ -370,23 +112,11 @@
                 vi: "^^-^^",
                 "zh-Hant": "請輸入驗證碼"
             },
-            register10: {
-                en: "Please enter your e-mail",
-                zh: "请输入电子邮箱",
-                vi: "^^-^^",
-                "zh-Hant": "請輸入電子郵箱"
-            },
             register11: {
                 en: "Please enter password",
                 zh: "请输入密码",
                 vi: "^^-^^",
                 "zh-Hant": "請輸入密碼"
-            },
-            register12: {
-                en: "Please re-enter your password",
-                zh: "请再次输入密码",
-                vi: "^^-^^",
-                "zh-Hant": "請再次輸入密碼"
             },
             register13: {
                 en: "Registration means that you have agreed the relevant regulations",
@@ -412,12 +142,6 @@
                 vi: "^^-^^",
                 "zh-Hant": "用戶交易須知"
             },
-            register17: {
-                en: "Register in 30s and open the journey to fortune",
-                zh: "30 秒注册 开启财富之旅",
-                vi: "^^-^^",
-                "zh-Hant": "30 秒註冊 開啟財富之旅"
-            },
             register20: {
                 en: "Register now to receive $200",
                 zh: "立即注册 领取$1000",
@@ -436,112 +160,28 @@
                 vi: "^^-^^",
                 "zh-Hant": "立即登錄"
             },
-            traderSummary1: {
-                en: "Summary",
-                zh: "交易概况",
-                vi: "^^-^^",
-                "zh-Hant": "交易概況"
-            },
-            traderSummary2: {
-                en: "Success rate",
-                zh: "准确率",
-                vi: "^^-^^",
-                "zh-Hant": "準確率"
-            },
-            traderSummary3: {
-                en: "Margin Cost",
-                zh: "最大保证金占用",
-                vi: "^^-^^",
-                "zh-Hant": "最大保證金占用"
-            },
-            traderSummary4: {
-                en: "Profit",
-                zh: "盈利订单",
-                vi: "^^-^^",
-                "zh-Hant": "盈利訂單"
-            },
-            traderSummary5: {
-                en: "Lose",
-                zh: "亏损订单",
-                vi: "^^-^^",
-                "zh-Hant": "虧損訂單"
-            },
-            traderSummary6: {
-                en: "Close Out",
-                zh: "平仓交易",
-                vi: "^^-^^",
-                "zh-Hant": "平倉交易"
-            },
-            traderSummary7: {
-                en: "Avg. Holding time",
-                zh: "平均持仓时间",
-                vi: "^^-^^",
-                "zh-Hant": "平均持倉時間"
-            },
-            traderSummary8: {
-                en: "Avg. Trades/Month",
-                zh: "月平均交易次数",
-                vi: "^^-^^",
-                "zh-Hant": "月平均交易次數"
-            },
-            traderSummary9: {
-                en: "Profitable/Month",
-                zh: "月回报率",
-                vi: "^^-^^",
-                "zh-Hant": "月回報率"
-            },
-            traderSummary10: {
-                en: "Max Drawdown",
-                zh: "最大回撤",
-                vi: "^^-^^",
-                "zh-Hant": "最大回撤"
-            },
-            traderSummary11: {
-                en: "Largest Profit Spread",
-                zh: "最大盈利点差",
-                vi: "^^-^^",
-                "zh-Hant": "最大盈利點差"
-            },
-            traderSummary12: {
-                en: "Total Return",
-                zh: "总收益率",
-                vi: "^^-^^",
-                "zh-Hant": "總收益率"
-            },
-            traderSummary13: {
-                en: "Trading Chart",
-                zh: "交易走势图",
-                vi: "^^-^^",
-                "zh-Hant": "交易走勢圖"
-            },
-            traderSummary14: {
-                en: "Main Symble",
-                zh: "主要交易品种",
-                vi: "^^-^^",
-                "zh-Hant": "主要交易品種"
-            },
             traderSummary15: {
                 en: "No Data",
                 zh: "无数据",
-                vi: "^^-^^",
+                vi: "Không dữ liệu",
                 "zh-Hant": "無數據"
             },
             HoldingTrades1: {
                 en: "Operation",
                 zh: "操作",
-                vi: "^^-^^",
+                vi: "Hoạt động",
                 "zh-Hant": "操作"
             },
             HoldingTrades2: {
                 en: "Open price",
                 zh: "开仓价",
-                vi: "^^-^^",
+                vi: "Giá Mở",
                 "zh-Hant": "開倉價"
             },
             HoldingTrades3: {
                 en: "Current Price",
                 zh: "现价",
-                vi: "^^-^^",
+                vi: "Giá Hiện Tại",
                 "zh-Hant": "現價"
             },
             HoldingTrades4: {
@@ -559,25 +199,13 @@
             HoldingTrades6: {
                 en: "Profit",
                 zh: "收益",
-                vi: "^^-^^",
+                vi: "Lợi nhuận",
                 "zh-Hant": "收益"
-            },
-            HoldingTrades7: {
-                en: "Sell",
-                zh: "买跌",
-                vi: "^^-^^",
-                "zh-Hant": "買跌"
-            },
-            HoldingTrades8: {
-                en: "Buy",
-                zh: "买涨",
-                vi: "^^-^^",
-                "zh-Hant": "買漲"
             },
             HoldingTrades9: {
                 en: "No Data",
                 zh: "无数据",
-                vi: "^^-^^",
+                vi: "Không dữ liệu",
                 "zh-Hant": "無數據"
             },
             HoldingTrades10: {
@@ -586,28 +214,22 @@
                 vi: "^^-^^",
                 "zh-Hant": "註：當前交易僅顯示高手最近壹周持倉訂單"
             },
-            HoldingTrades11: {
-                en: "en",
-                zh: "zh",
-                vi: "^^-^^",
-                "zh-Hant": "zh"
-            },
             TradingHistory1: {
                 en: "Operation",
                 zh: "操作",
-                vi: "^^-^^",
+                vi: "Hoạt động",
                 "zh-Hant": "操作"
             },
             TradingHistory2: {
                 en: "Open price",
                 zh: "开仓价",
-                vi: "^^-^^",
+                vi: "Giá Mở",
                 "zh-Hant": "開倉價"
             },
             TradingHistory3: {
                 en: "Close price",
                 zh: "平仓价",
-                vi: "^^-^^",
+                vi: "Giá Đóng",
                 "zh-Hant": "平倉價"
             },
             TradingHistory4: {
@@ -625,25 +247,13 @@
             TradingHistory6: {
                 en: "Profit",
                 zh: "收益",
-                vi: "^^-^^",
+                vi: "Lợi nhuận",
                 "zh-Hant": "收益"
-            },
-            TradingHistory7: {
-                en: "Sell",
-                zh: "买跌",
-                vi: "^^-^^",
-                "zh-Hant": "買跌"
-            },
-            TradingHistory8: {
-                en: "Buy",
-                zh: "买涨",
-                vi: "^^-^^",
-                "zh-Hant": "買漲"
             },
             TradingHistory9: {
                 en: "No Data",
                 zh: "无数据",
-                vi: "^^-^^",
+                vi: "Không dữ liệu",
                 "zh-Hant": "無數據"
             },
             TradingHistory10: {
@@ -651,12 +261,6 @@
                 zh: "前",
                 vi: "^^-^^",
                 "zh-Hant": "前"
-            },
-            TradingHistory11: {
-                en: "en",
-                zh: "zh",
-                vi: "^^-^^",
-                "zh-Hant": "zh"
             },
             actLogin1: {
                 zh: "快捷登录",
@@ -681,36 +285,6 @@
                 en: "Please enter verification code",
                 vi: "^^-^^",
                 "zh-Hant": "請輸入驗證碼"
-            },
-            actLogin5: {
-                zh: "获取验证码",
-                en: "Send code",
-                vi: "^^-^^",
-                "zh-Hant": "獲取驗證碼"
-            },
-            actLogin6: {
-                zh: "后重新获取",
-                en: "after resend",
-                vi: "^^-^^",
-                "zh-Hant": "後重新獲取"
-            },
-            actLogin7: {
-                zh: "记住登录状态",
-                en: "Remember login status",
-                vi: "^^-^^",
-                "zh-Hant": "記住登錄狀態"
-            },
-            actLogin8: {
-                zh: "登录",
-                en: "Login",
-                vi: "^^-^^",
-                "zh-Hant": "登錄"
-            },
-            actLogin9: {
-                zh: "未注册TigerWit的手机号，登录时将自动注册",
-                en: "Logging in will turn to registration if the Phone Number hasn't been registered.",
-                vi: "^^-^^",
-                "zh-Hant": "未註冊TigerWit的手機號，登錄時將自動註冊"
             },
             actLogin10: {
                 zh: "提交代表您已阅读并同意",
@@ -760,12 +334,6 @@
                 vi: "^^-^^",
                 "zh-Hant": "手機號"
             },
-            actLogin18: {
-                zh: "校验码",
-                en: "Verification code",
-                vi: "^^-^^",
-                "zh-Hant": "校驗碼"
-            },
             actLogin19: {
                 zh: "请填写完整信息",
                 en: "Please Type in the complete information",
@@ -795,30 +363,6 @@
                 en: "Please set a password for your account，6-15 bit of Letters, numbers, or combinations of symbols",
                 vi: "^^-^^",
                 "zh-Hant": "請為您的賬戶設置密碼，6-15位字母、數字或符號組合"
-            },
-            actLogin24: {
-                zh: "请输入您的账号",
-                en: "Please Type in the Phone Number",
-                vi: "^^-^^",
-                "zh-Hant": "請輸入您的賬號"
-            },
-            actLogin25: {
-                zh: "请输入您的账户密码",
-                en: "Please Type in the Password",
-                vi: "^^-^^",
-                "zh-Hant": "請輸入您的賬戶密碼"
-            },
-            actLogin26: {
-                zh: "忘记密码",
-                en: "Forget the Password?",
-                vi: "^^-^^",
-                "zh-Hant": "忘記密碼"
-            },
-            actLogin27: {
-                zh: "*已使用SSL加密技术保护您的网络安全",
-                en: "Secure your network with SSL encryption technology",
-                vi: "^^-^^",
-                "zh-Hant": "*已使用SSL加密技術保護您的網絡安全"
             },
             actLogin28: {
                 zh: "找回密码",
@@ -868,43 +412,19 @@
                 vi: "^^-^^",
                 "zh-Hant": "跳過"
             },
-            actLogin35: {
-                zh: "",
-                en: "",
-                vi: "^^-^^",
-                "zh-Hant": ""
-            },
-            actLogin36: {
-                zh: "",
-                en: "",
-                vi: "^^-^^",
-                "zh-Hant": ""
-            },
-            actLogin37: {
-                zh: "账号或手机号",
-                en: "Account / Phone No",
-                vi: "^^-^^",
-                "zh-Hant": "賬號或手機號"
-            },
-            actLogin38: {
-                zh: "请输入您的账号或手机号",
-                en: "Enter account / phone No",
-                vi: "^^-^^",
-                "zh-Hant": "請輸入您的賬號或手機號"
-            },
 
             // 通行证个人中心
             tigerWitID: {
                 title: {
                     zh: "通行证账号",
                     en: "TigerWitID",
-                    vi: "^^-^^",
+                    vi: "IDTigerWit",
                     "zh-Hant": "通行證帳號"
                 },
                 titleM: {
                     zh: "通行证账号：",
                     en: "TigerWitID: ",
-                    vi: "^^-^^",
+                    vi: "IDTigerWit: ",
                     "zh-Hant": "通行證帳號："
                 },
                 login: {
@@ -917,14 +437,8 @@
                     country: {
                         zh: "国家",
                         en: "Country",
-                        vi: "--",
+                        vi: "Quốc gia",
                         "zh-Hant": "國家"
-                    },
-                    fastLogin: {
-                        zh: "快捷登录",
-                        en: "Fast Login",
-                        vi: "--",
-                        "zh-Hant": "快捷登錄"
                     },
                     passwordLogin: {
                         zh: "密码登录",
@@ -959,13 +473,13 @@
                     sendSMS: {
                         zh: "获取验证码",
                         en: "Send code",
-                        vi: "--",
+                        vi: "Nhận Mã xác nhận",
                         "zh-Hant": "獲取驗證碼"
                     },
                     sendCode: {
                         zh: "获取验证码",
                         en: "Send code",
-                        vi: "--",
+                        vi: "Nhận Mã xác nhận",
                         "zh-Hant": "獲取驗證碼"
                     },
                     keepMeLogin: {
@@ -1325,7 +839,7 @@
                     verificationCodej: {
                         zh: "验证码",
                         en: "Verification code",
-                        vi: "--",
+                        vi: "Mã xác nhận",
                         "zh-Hant": "驗證碼"
                     },
                     tip11: {
@@ -1351,7 +865,7 @@
                     title: {
                         zh: "账户概况",
                         en: "My Account",
-                        vi: "--",
+                        vi: "Tài khoản của tôi",
                         "zh-Hant": "帳護概況"
                     },
                     updateID: {
@@ -1375,67 +889,67 @@
                     totalAssets: {
                         zh: "资产总额",
                         en: "Total Assets",
-                        vi: "--",
+                        vi: "Tổng các tài sản",
                         "zh-Hant": "資產總額"
                     },
                     totalLots: {
                         zh: "总交易手数",
                         en: "Total Lots",
-                        vi: "--",
+                        vi: "Tổng Lot",
                         "zh-Hant": "總交易手數"
                     },
                     totalEarnings: {
                         zh: "总盈利",
                         en: "Total Earnings",
-                        vi: "--",
+                        vi: "Tổng Thu Nhập",
                         "zh-Hant": "總盈利"
                     },
                     totalProfitRate: {
                         zh: "总收益率",
                         en: "Total Profit Rate",
-                        vi: "--",
+                        vi: "Tỷ Suất Tổng Lợi Nhuận",
                         "zh-Hant": "總收益率"
                     },
                     tradingAccount: {
                         zh: "交易账户",
                         en: "Trade Account",
-                        vi: "--",
+                        vi: "Tài Khoản Giao Dịch",
                         "zh-Hant": "交易帳護"
                     },
                     upgradeToLiveAccount: {
                         zh: "升级到真实账户",
                         en: "Upgrade to a live account",
-                        vi: "--",
+                        vi: "Nâng cấp lên tài khoản thực",
                         "zh-Hant": "升級到真實帳護"
                     },
                     wallet: {
                         zh: "钱包",
                         en: "Wallet",
-                        vi: "--",
+                        vi: "Ví",
                         "zh-Hant": "錢包"
                     },
                     unactivated: {
                         zh: "未激活",
                         en: "Unactivated",
-                        vi: "--",
+                        vi: "Ngừng kích hoạt",
                         "zh-Hant": "未激活"
                     },
                     deposit: {
                         zh: "充值",
                         en: "DEPOSIT",
-                        vi: "--",
+                        vi: "KÍ QUỸ",
                         "zh-Hant": "充值"
                     },
                     withdrawal: {
                         zh: "提现",
                         en: "WITHDRAWAL",
-                        vi: "--",
+                        vi: "RÚT",
                         "zh-Hant": "提現"
                     },
                     exit: {
                         zh: "退出",
                         en: "EXIT",
-                        vi: "--",
+                        vi: "THOÁT",
                         "zh-Hant": "退出"
                     },
                     grantCredit: {
@@ -1447,13 +961,13 @@
                     freeDeposit: {
                         zh: "可用保证金",
                         en: "Free Deposit",
-                        vi: "--",
+                        vi: "Margin Tự Do",
                         "zh-Hant": "可用保證金"
                     },
                     marginLevel: {
                         zh: "保证金比例",
                         en: "Margin Level",
-                        vi: "--",
+                        vi: "Mức Margin",
                         "zh-Hant": "保證金比例"
                     },
                     volume: {
@@ -1513,7 +1027,7 @@
                     depositToActivate: {
                         zh: "充值激活账户。",
                         en: "Deposit to activate the account.",
-                        vi: "--",
+                        vi: "Kí quỹ để Kích hoạt Tài Khoản.",
                         "zh-Hant": "充值激活帳護。"
                     },
                     tip7: {
@@ -2093,85 +1607,85 @@
                     title: {
                         zh: "交易账户",
                         en: "Trade Account",
-                        vi: "--",
+                        vi: "Tài Khoản Giao Dịch",
                         "zh-Hant": "交易帳護"
                     },
                     totalAssets: {
                         zh: "资产总额",
                         en: "Total Assets",
-                        vi: "--",
+                        vi: "Tổng các tài sản",
                         "zh-Hant": "資產總額"
                     },
                     totalLots: {
                         zh: "总交易手数",
                         en: "Total Lots",
-                        vi: "--",
+                        vi: "Tổng Lot",
                         "zh-Hant": "總交易手數"
                     },
                     totalEarnings: {
                         zh: "总盈利",
                         en: "Total Earnings",
-                        vi: "--",
+                        vi: "Tổng Thu Nhập",
                         "zh-Hant": "總盈利"
                     },
                     totalProfitRate: {
                         zh: "总收益率",
                         en: "Total Profit Rate",
-                        vi: "--",
+                        vi: "Tỷ Suất Tổng Lợi Nhuận",
                         "zh-Hant": "總收益率"
                     },
                     tradingSubAccounts: {
                         zh: "交易子账户",
                         en: "Trade Sub-accounts",
-                        vi: "--",
+                        vi: "Giao Dịch Tài Khoản Phụ",
                         "zh-Hant": "交易子帳護"
                     },
                     createAccount: {
                         zh: "新建账号",
                         en: "Create account",
-                        vi: "--",
+                        vi: "Tạo Tài Khoản",
                         "zh-Hant": "新建帳號"
                     },
                     becomeMaster: {
                         zh: "申请高手",
                         en: "Become a master",
-                        vi: "--",
+                        vi: "Trở Thành một Bậc Thầy",
                         "zh-Hant": "申請高手"
                     },
                     netAssetValue: {
                         zh: "资产净值",
                         en: "Equity",
-                        vi: "--",
+                        vi: "Vốn tức thời",
                         "zh-Hant": "資產凈值"
                     },
                     floatingPL: {
                         zh: "浮动盈亏",
                         en: "Floating P/L",
-                        vi: "--",
+                        vi: "P/L Nổi",
                         "zh-Hant": "浮動盈虧"
                     },
                     marginLevel: {
                         zh: "保证金比例",
                         en: "Margin level",
-                        vi: "--",
+                        vi: "Mức Margin",
                         "zh-Hant": "保證金比例"
                     },
                     depositToActivate: {
                         zh: "充值激活账户",
                         en: "Deposit to activate",
-                        vi: "--",
+                        vi: "Kí quỹ để Kích hoạt Tài Khoản",
                         "zh-Hant": "充值激活帳護"
                     },
                     openTrades: {
                         zh: "当前交易",
                         en: "Open Trades",
-                        vi: "--",
+                        vi: "Giao dịch Hiện tại",
                         "zh-Hant": "當前交易"
                     },
                     tip1: {
                         zh: "注：您复制高手的盈利部分将会扣除20%作为佣金给高手。详情请参考：",
                         en: "The earnings you gained with the master and the agent will be deducted 20% to the master as a commission. Please refer to the details：",
-                        vi: "--",
+                        vi: "Lưu ý: 20% lợi nhuận bạn đạt được khi sao chép bậc thầy sẽ được trừ như là hoa hồng, vui lòng xem phần:",
                         "zh-Hant": "註：您復制高手的盈利部分將會扣除20%作為傭金給高手。詳情請慘考："
                     },
                     modifyCopyAmount: {
@@ -2213,7 +1727,7 @@
                     goDeposit: {
                         zh: "去充值",
                         en: "deposit",
-                        vi: "--",
+                        vi: "KÍ QUỸ",
                         "zh-Hant": "去充值"
                     },
                     cancelFollow: {
@@ -2477,7 +1991,7 @@
                     copyAccount: {
                         zh: "跟单账号",
                         en: "Copy account",
-                        vi: "--",
+                        vi: "Tài khoản Sao Chép",
                         "zh-Hant": "跟單帳號"
                     },
                     enterAccountName: {
@@ -2495,7 +2009,7 @@
                     details: {
                         zh: "查看详情",
                         en: "Details",
-                        vi: "--",
+                        vi: "Chi Tiết",
                         "zh-Hant": "查看詳情"
                     },
                     depositActivation: {
@@ -2659,67 +2173,67 @@
                     title: {
                         zh: "详情",
                         en: "Details",
-                        vi: "--",
+                        vi: "Chi Tiết",
                         "zh-Hant": "詳情"
                     },
                     netAssetValue: {
                         zh: "资产净值",
                         en: "Equity",
-                        vi: "--",
+                        vi: "Vốn tức thời",
                         "zh-Hant": "資產凈值"
                     },
                     freeMargin: {
                         zh: "可用保证金",
                         en: "Free margin",
-                        vi: "--",
+                        vi: "Margin Tự Do",
                         "zh-Hant": "可用保證金"
                     },
                     marginLevel: {
                         zh: "保证金比例",
                         en: "Margin level",
-                        vi: "--",
+                        vi: "Mức Margin",
                         "zh-Hant": "保證金比例"
                     },
                     marginLevelM: {
                         zh: "保证金比例：",
                         en: "Margin level: ",
-                        vi: "--",
+                        vi: "Mức Margin: ",
                         "zh-Hant": "保證金比例："
                     },
                     totalLots: {
                         zh: "总交易手数",
                         en: "Total Lots",
-                        vi: "--",
+                        vi: "Tổng Lot",
                         "zh-Hant": "總交易手數"
                     },
                     historicalTotalEarning: {
                         zh: "历史总收益",
                         en: "History Total Earnings",
-                        vi: "--",
+                        vi: "Lịch Sử Tổng Thu Nhập",
                         "zh-Hant": "歷史總收益"
                     },
                     floatingPL: {
                         zh: "浮动盈亏",
                         en: "Floating P/L",
-                        vi: "--",
+                        vi: "P/L Nổi",
                         "zh-Hant": "浮動盈虧"
                     },
                     totalProfitRate: {
                         zh: "总收益率",
                         en: "Total Profit Rate",
-                        vi: "--",
+                        vi: "Tỷ Suất Tổng Lợi Nhuận",
                         "zh-Hant": "總收益率"
                     },
                     currentTrading: {
                         zh: "当前交易",
                         en: "Current Trading",
-                        vi: "--",
+                        vi: "Giao dịch Hiện tại",
                         "zh-Hant": "當前交易"
                     },
                     deducted20Note: {
                         zh: "注：您复制高手的盈利部分将会扣除20%作为佣金给高手。详情请参考：",
                         en: "Note：The 20% profit that you gain by following the master will be deducted as commission. Please refer to: ",
-                        vi: "--",
+                        vi: "Lưu ý: 20% lợi nhuận bạn đạt được khi sao chép bậc thầy sẽ được trừ như là hoa hồng, vui lòng xem phần:",
                         "zh-Hant": "註：您復制高手的盈利部分將會扣除20%作為傭金給高手。詳情請慘考："
                     },
                     operation: {
@@ -2731,25 +2245,25 @@
                     openPrice: {
                         zh: "开仓价",
                         en: "Open price",
-                        vi: "--",
+                        vi: "Giá Mở",
                         "zh-Hant": "開倉價"
                     },
                     currentPrice: {
                         zh: "现价",
                         en: "Current price",
-                        vi: "--",
+                        vi: "Giá Hiện Tại",
                         "zh-Hant": "現價"
                     },
                     profit: {
                         zh: "收益",
                         en: "Profit",
-                        vi: "--",
+                        vi: "Lợi nhuận",
                         "zh-Hant": "收益"
                     },
                     autonomousTransaction: {
                         zh: "自主交易",
                         en: "Independent Trading",
-                        vi: "--",
+                        vi: "Giao Dịch Độc Lập",
                         "zh-Hant": "自主交易"
                     },
                     copyTrade: {
@@ -2791,43 +2305,43 @@
                     lots: {
                         zh: "交易量",
                         en: "Lots",
-                        vi: "--",
+                        vi: "Lot",
                         "zh-Hant": "交易量"
                     },
                     fundsOccupying: {
                         zh: "资金占用",
                         en: "Funds Occupying",
-                        vi: "--",
+                        vi: "Quỹ Đang Sử Dụng",
                         "zh-Hant": "資金占用"
                     },
                     P_L: {
                         zh: "订单盈亏",
                         en: "P/L",
-                        vi: "--",
+                        vi: "P/L",
                         "zh-Hant": "訂單盈虧"
                     },
                     swap: {
                         zh: "库存费",
                         en: "Swap",
-                        vi: "--",
+                        vi: "Swap",
                         "zh-Hant": "庫存費"
                     },
                     commission: {
                         zh: "手续费",
                         en: "Commission",
-                        vi: "--",
+                        vi: "Hoa hồng",
                         "zh-Hant": "手續費"
                     },
                     profitRate: {
                         zh: "收益率",
                         en: "Profit Rate",
-                        vi: "--",
+                        vi: "Tỷ Suất Lợi Nhuận",
                         "zh-Hant": "收益率"
                     },
                     investedFunds: {
                         zh: "投入资金",
                         en: "Invested Funds",
-                        vi: "--",
+                        vi: "Quỹ đã Đầu Tư",
                         "zh-Hant": "投入資金"
                     },
                     buy_gbpusd: {
@@ -2857,7 +2371,7 @@
                     openPriceg: {
                         zh: "开仓价格",
                         en: "Open Price",
-                        vi: "--",
+                        vi: "Giá Mở",
                         "zh-Hant": "開倉價格"
                     },
                     currentPriceg: {
@@ -3021,7 +2535,7 @@
                     operation: {
                         zh: "操作",
                         en: "Operation",
-                        vi: "--",
+                        vi: "Hoạt động",
                         "zh-Hant": "操作"
                     },
                     lots: {
@@ -3033,13 +2547,13 @@
                     profit: {
                         zh: "收益",
                         en: "Profit",
-                        vi: "--",
+                        vi: "Lợi nhuận",
                         "zh-Hant": "收益"
                     },
                     autonomousTransaction: {
                         zh: "自主交易",
                         en: "Independent Trading",
-                        vi: "--",
+                        vi: "Giao Dịch Độc Lập",
                         "zh-Hant": "自主交易"
                     },
                     portfolio: {
@@ -3051,7 +2565,7 @@
                     trading: {
                         zh: "自主交易",
                         en: "Trading",
-                        vi: "--",
+                        vi: "Giao Dịch Độc Lập",
                         "zh-Hant": "自主交易"
                     },
                     copy: {
@@ -3063,13 +2577,13 @@
                     closePrice: {
                         zh: "平仓价",
                         en: "Close price",
-                        vi: "--",
+                        vi: "Giá Đóng",
                         "zh-Hant": "平倉價"
                     },
                     margin: {
                         zh: "投入资金",
                         en: "Margin",
-                        vi: "--",
+                        vi: "Quỹ đã Đầu Tư",
                         "zh-Hant": "投入資金"
                     },
                     manualClose: {
@@ -3167,79 +2681,79 @@
                     title: {
                         zh: "数据统计",
                         en: "Data statistics",
-                        vi: "--",
+                        vi: "Thống kê Dữ liệu",
                         "zh-Hant": "數據統計"
                     },
                     transactionsProfile: {
                         zh: "交易概况",
                         en: "Transactions profile",
-                        vi: "--",
+                        vi: "Hồ sơ Giao Dịch",
                         "zh-Hant": "交易概況"
                     },
                     closedOrders: {
                         zh: "平仓交易",
                         en: "Closed Orders",
-                        vi: "--",
+                        vi: "Các Lệnh Đã Đóng",
                         "zh-Hant": "平倉交易"
                     },
                     profitOrders: {
                         zh: "盈利订单",
                         en: "Profit",
-                        vi: "--",
+                        vi: "Lệnh Lời",
                         "zh-Hant": "盈利訂單"
                     },
                     lossOrders: {
                         zh: "亏损订单",
                         en: "Loss",
-                        vi: "--",
+                        vi: "Lệnh Lỗ",
                         "zh-Hant": "虧損訂單"
                     },
                     avgHoldingTime: {
                         zh: "平均持仓时间",
                         en: "Avg. holding time",
-                        vi: "--",
+                        vi: "Thời gian giữ trung bình",
                         "zh-Hant": "平均持倉時間"
                     },
                     avgHoldingTimeM: {
                         zh: "平均持仓时间：",
                         en: "Avg. holding time: ",
-                        vi: "--",
+                        vi: "Thời gian giữ trung bình:",
                         "zh-Hant": "平均持倉時間："
                     },
                     maxDrawdown: {
                         zh: "最大回撤",
                         en: "Max Drawdown",
-                        vi: "--",
+                        vi: "Max Drawdown",
                         "zh-Hant": "最大回撤"
                     },
                     avgNumberTransactionsPerMonth: {
                         zh: "月平均交易次数",
                         en: "Avg Number of Transactions per Month",
-                        vi: "--",
+                        vi: "Số giao dịch trung bình mỗi tháng",
                         "zh-Hant": "月平均交易次數"
                     },
                     maxProfitMargin: {
                         zh: "最大盈利点差",
                         en: "Max Profit Margin",
-                        vi: "--",
+                        vi: "Lợi nhuận tối đa",
                         "zh-Hant": "最大盈利點差"
                     },
                     monthlyRateReturn: {
                         zh: "月回报率",
                         en: "Monthly Rate of Return",
-                        vi: "--",
+                        vi: "Tỷ lệ hoàn trả mỗi tháng",
                         "zh-Hant": "月回報率"
                     },
                     totalProfitRate: {
                         zh: "总收益率",
                         en: "Total profit rate",
-                        vi: "--",
+                        vi: "Tỷ Suất Tổng Lợi Nhuận",
                         "zh-Hant": "總收益率"
                     },
                     tradingChart: {
                         zh: "交易走势图",
                         en: "Trading Chart",
-                        vi: "--",
+                        vi: "Biểu đồ giao dịch",
                         "zh-Hant": "交易走勢圖"
                     },
                     monthlyReturns: {
@@ -3251,19 +2765,19 @@
                     profitRate: {
                         zh: "收益率",
                         en: "Profit Rate",
-                        vi: "--",
+                        vi: "Tỷ Suất Lợi Nhuận",
                         "zh-Hant": "收益率"
                     },
                     profitRateM: {
                         zh: "收益率：",
                         en: "Profit Rate: ",
-                        vi: "--",
+                        vi: "Tỷ Suất Lợi Nhuận:",
                         "zh-Hant": "收益率："
                     },
                     mainTradingSymbols: {
                         zh: "主要交易品种",
                         en: "Monthly analytics",
-                        vi: "--",
+                        vi: "Ký hiệu giao dịch chính",
                         "zh-Hant": "主要交易品種"
                     },
                     recommendation: {
@@ -3561,25 +3075,25 @@
                     title: {
                         zh: "钱包",
                         en: "Wallet",
-                        vi: "--",
+                        vi: "Ví",
                         "zh-Hant": "錢包"
                     },
                     details: {
                         zh: "查看明细",
                         en: "Details",
-                        vi: "--",
+                        vi: "Chi tiết",
                         "zh-Hant": "查看明細"
                     },
                     manageBankCards: {
                         zh: "管理银行卡",
                         en: "Manage Bank Cards",
-                        vi: "--",
+                        vi: "Quản lý những thẻ ngân hàng",
                         "zh-Hant": "管理銀行卡"
                     },
                     addBankCards: {
                         zh: "添加银行卡",
                         en: "Add Bank Cards",
-                        vi: "--",
+                        vi: "Thêm thẻ ngân hàng",
                         "zh-Hant": "添加銀行卡"
                     },
                     name: {
@@ -3809,31 +3323,31 @@
                     title: {
                         zh: "我的红包",
                         en: "Coupon",
-                        vi: "--",
+                        vi: "Thưởng",
                         "zh-Hant": "我的紅包"
                     },
                     available: {
                         zh: "可用红包",
                         en: "Available",
-                        vi: "--",
+                        vi: "Có áp dụng",
                         "zh-Hant": "可用紅包"
                     },
                     records: {
                         zh: "红包记录",
                         en: "Records",
-                        vi: "--",
+                        vi: "Hồ sơ",
                         "zh-Hant": "紅包記錄"
                     },
                     automaticReceive: {
                         zh: "自动领取红包",
                         en: "Automatic Receive",
-                        vi: "--",
+                        vi: "Nhận tự động",
                         "zh-Hant": "自動領取紅包"
                     },
                     exchangeValidUntil: {
                         zh: "兑换有效期截止至",
                         en: "Exchange valid until ",
-                        vi: "--",
+                        vi: "Trao đổi hợp lệ cho đến khi",
                         "zh-Hant": "兌換有效期截止至"
                     },
                     exchangeDate: {
@@ -3907,91 +3421,91 @@
                     title: {
                         zh: "邀请好友",
                         en: "Invite Friends",
-                        vi: "--",
+                        vi: "Mời bạn bè",
                         "zh-Hant": "邀請好友"
                     },
                     inviteFriend: {
                         zh: "邀请好友，赢取10美元",
                         en: "Invite a friend and win 10 dollar",
-                        vi: "--",
+                        vi: "Mời bạn bè và nhận 10 đô la.",
                         "zh-Hant": "邀請好友，贏取10美元"
                     },
                     invitedFriends: {
                         zh: "当前邀请人数",
                         en: "Invited Friends",
-                        vi: "--",
+                        vi: "Đã Mời bạn",
                         "zh-Hant": "當前邀請人數"
                     },
                     inviteFriendsRegulations: {
                         zh: "邀请好友规则：",
                         en: "Invite Friends Regulations: ",
-                        vi: "--",
+                        vi: "Quy định mời bạn bè: ",
                         "zh-Hant": "邀請好友規則："
                     },
                     tip1: {
                         zh: "1、注册即获得邀请类红包“人从众”，邀请3名好友注册，且至少有1人入金并完成1手交易即可兑现, 每位用户仅可领取一次；",
                         en: "1. A reward coupon will be delivered to your account when you registered, it can be cashed once you invited three friends and at least one of them deposited and had one lot transaction.",
-                        vi: "--",
+                        vi: "1. Một phiếu thưởng sẽ được gửi đến tài khoản của bạn khi bạn đăng ký, nó có thể được đổi thành tiền mặt khi bạn mời ba người bạn và ít nhất một người trong số họ gửi tiền và có một giao dịch rất nhiều.",
                         "zh-Hant": "1、註冊即獲得邀請類紅包“人從眾”，邀請3名好友註冊，且至少有1人入金並完成1手交易即可兌現, 每位用護僅可領取壹次；"
                     },
                     tip2: {
                         zh: "2、您只有通过邀请链接进行注册的好友才算有效；",
                         en: "2. It can be effective only when your friend is registered by the invite link.",
-                        vi: "--",
+                        vi: "2. Nó sẽ có hiệu lực chỉ khi bạn bè của bạn đã được đăng ký bởi liên kết mời.",
                         "zh-Hant": "2、您只有通過邀請鏈接進行註冊的好友才算有效；"
                     },
                     tip3: {
                         zh: "3、同一手机号，身份证号和银行卡号视为同一用户；",
                         en: "3.Same cellphone, ID and bank card number will be treated as same user.",
-                        vi: "--",
+                        vi: "3. Số điện thoại di động, ID và số thẻ ngân hàng trùng khớp sẽ được coi là cùng một người dùng.",
                         "zh-Hant": "3、同壹手機號，身份證號和銀行卡號視為同壹用護；"
                     },
                     tip4_1: {
                         zh: "4、任何通过第三方作弊软件刷取好友邀请奖励，一经发现",
-                        en: "4.Any cheating, if discovered by ",
-                        vi: "--",
+                        en: "4. Any cheating, if discovered by ",
+                        vi: "4. ",
                         "zh-Hant": "4、任何通過第三方作弊軟件刷取好友邀請獎勵，壹經發現"
                     },
                     tip4_2: {
                         zh: "有权取消红包兑现奖励；",
                         en: ", will be disqualified.",
-                        vi: "--",
+                        vi: " có quyền hủy bỏ phần thưởng coupon sau khi tăng phần thưởng mời nếu tìm thấy phần mềm gian lận một bên thứ 3.",
                         "zh-Hant": "有權取消紅包兌現獎勵；"
                     },
                     tip5_1: {
                         zh: "5、本活动最终解释权归",
-                        en: "5.The final interpretation of this activity owned by ",
-                        vi: "--",
+                        en: "5. The final interpretation of this activity owned by ",
+                        vi: "5. ",
                         "zh-Hant": "5、本活動最終解釋權歸"
                     },
                     tip5_2: {
                         zh: "所有。如有疑问，请咨询客服",
                         en: ". If you have other questions，please contact ",
-                        vi: "--",
+                        vi: " bảo lưu tất cả các quyền đưa ra lời giải thích cuối cùng. Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với trung tâm dịch vụ khách hàng của chúng tôi ",
                         "zh-Hant": "所有。如有疑問，請咨詢客服"
                     },
                     tip5_3: {
                         zh: "。",
                         en: " customer service.",
-                        vi: "--",
+                        vi: ".",
                         "zh-Hant": "。"
                     },
                     nameFriend: {
                         zh: "好友昵称",
                         en: "Name of friend",
-                        vi: "--",
+                        vi: "Tên của bạn",
                         "zh-Hant": "好友昵稱"
                     },
                     statusDeposit: {
                         zh: "入金状态",
                         en: "Status in deposit",
-                        vi: "--",
+                        vi: "Trạng thái gửi tiền",
                         "zh-Hant": "入金狀態"
                     },
                     statusTransactions: {
                         zh: "是否完成交易",
                         en: "Status in transactions",
-                        vi: "--",
+                        vi: "Trạng thái giao dịch",
                         "zh-Hant": "是否完成交易"
                     }
                 },
@@ -4205,7 +3719,7 @@
                     deposit: {
                         zh: "充值",
                         en: "Deposit",
-                        vi: "--",
+                        vi: "KÍ QUỸ",
                         "zh-Hant": "充值"
                     },
                     withdrawal: {
@@ -4229,13 +3743,13 @@
                     tradingAccount: {
                         zh: "交易账户",
                         en: "Trading account",
-                        vi: "--",
+                        vi: "Tài Khoản Giao Dịch",
                         "zh-Hant": "交易帳護"
                     },
                     wallet: {
                         zh: "钱包",
                         en: "Wallet",
-                        vi: "--",
+                        vi: "Ví",
                         "zh-Hant": "錢包"
                     },
                     withdrawalToBankCard: {
@@ -5593,7 +5107,7 @@
                     highIncome: {
                         zh: "收益率",
                         en: "Profitability",
-                        vi: "--",
+                        vi: "Tỷ Suất Lợi Nhuận",
                         "zh-Hant": "收益率"
                     },
                     exact: {
@@ -5835,7 +5349,7 @@
                     copyAccount: {
                         zh: "跟单账号",
                         en: "Copy account",
-                        vi: "--",
+                        vi: "Tài khoản Sao Chép",
                         "zh-Hant": "跟單帳號"
                     },
                     accountAccess: {
@@ -5853,13 +5367,13 @@
                     independentTrading: {
                         zh: "自主交易",
                         en: "Independent Trading",
-                        vi: "--",
+                        vi: "Giao Dịch Độc Lập",
                         "zh-Hant": "自主交易"
                     },
                     independentTrading0: {
                         zh: "自主交易。",
                         en: "Independent Trading.",
-                        vi: "--",
+                        vi: "Giao Dịch Độc Lập.",
                         "zh-Hant": "自主交易。"
                     },
                     tip3: {
@@ -6163,7 +5677,7 @@
                     title: {
                         zh: "账户设置",
                         en: "Settings",
-                        vi: "--",
+                        vi: "Cài đặt",
                         "zh-Hant": "帳護設置"
                     },
                     profile: {
@@ -6211,7 +5725,7 @@
                     clickGet: {
                         zh: "获取验证码",
                         en: "Click Get",
-                        vi: "--",
+                        vi: "Nhận Mã xác nhận",
                         "zh-Hant": "獲取驗證碼"
                     },
                     newEmail: {
@@ -6229,7 +5743,7 @@
                     general: {
                         zh: "基本信息",
                         en: "General",
-                        vi: "--",
+                        vi: "Thông tin cơ bản",
                         "zh-Hant": "基本信息"
                     },
                     userName: {
@@ -6259,7 +5773,7 @@
                     modify: {
                         zh: "修改",
                         en: "Modify",
-                        vi: "--",
+                        vi: "Sửa đổi",
                         "zh-Hant": "修改"
                     },
                     country: {
@@ -6277,85 +5791,85 @@
                     setPhotos: {
                         zh: "修改头像",
                         en: "Set Photos",
-                        vi: "--",
+                        vi: "Đặt hình ảnh",
                         "zh-Hant": "修改頭像"
                     },
                     choosePhoto: {
                         zh: "选择头像",
                         en: "Choose a Photo",
-                        vi: "--",
+                        vi: "Chọn hình ảnh",
                         "zh-Hant": "選擇頭像"
                     },
                     onlySupport: {
                         zh: "只支持 jpg、png 格式且大小在 2MB 以内",
                         en: "Only support JPG, PNG format and size within 2MB",
-                        vi: "--",
+                        vi: "Chỉ hỗ trợ định dạng và kích thước JPG, PNG trong phạm vi 2MB",
                         "zh-Hant": "只支持 jpg、png 格式且大小在 2MB 以內"
                     },
                     security: {
                         zh: "账户安全",
                         en: "Security",
-                        vi: "--",
+                        vi: "Bảo mật",
                         "zh-Hant": "帳護安全"
                     },
                     passwordManagement: {
                         zh: "密码管理",
                         en: "Password Management",
-                        vi: "--",
+                        vi: "Quản lý Mật khẩu",
                         "zh-Hant": "密碼管理"
                     },
                     oldPassword: {
                         zh: "原密码",
                         en: "Old password",
-                        vi: "--",
+                        vi: "Mật khẩu cũ",
                         "zh-Hant": "原密碼"
                     },
                     newPassword: {
                         zh: "新密码",
                         en: "New password",
-                        vi: "--",
+                        vi: "Mật khẩu mới",
                         "zh-Hant": "新密碼"
                     },
                     confirmNewPassword: {
                         zh: "确认新密码",
                         en: "Confirm new password",
-                        vi: "--",
+                        vi: "Xác nhận lại mật khẩu mới",
                         "zh-Hant": "確認新密碼"
                     },
                     phoneNumberSettings: {
                         zh: "手机号码设置",
                         en: "Phone number settings",
-                        vi: "--",
+                        vi: "Cài đặt số điện thoại",
                         "zh-Hant": "手機號碼設置"
                     },
                     boundPhoneXXX: {
                         zh: "您已经绑定了手机号",
                         en: "You have now bound phone number ",
-                        vi: "--",
+                        vi: "Bây giờ bạn đã bị ràng buộc số điện thoại ",
                         "zh-Hant": "您已經邦定了手機號"
                     },
                     newPhoneNumber: {
                         zh: "新手机号码",
                         en: "New phone number",
-                        vi: "--",
+                        vi: "Số điện thoại mới",
                         "zh-Hant": "新手機號碼"
                     },
                     verificationCode: {
                         zh: "验证码",
                         en: "Verification code",
-                        vi: "--",
+                        vi: "Mã xác nhận",
                         "zh-Hant": "驗證碼"
                     },
                     getVerificationCode: {
                         zh: "获取验证码",
                         en: "Get verification code",
-                        vi: "--",
+                        vi: "Nhận Mã xác nhận",
                         "zh-Hant": "獲取驗證碼"
                     },
                     mailboxSettings: {
                         zh: "电子邮箱设置",
                         en: "Mailbox settings",
-                        vi: "--",
+                        vi: "Cài đặt hộp thư",
                         "zh-Hant": "電子郵箱設置"
                     },
                     notificationActivateWallet: {
@@ -6988,19 +6502,19 @@
                 date: {
                     zh: "日期",
                     en: "Date",
-                    vi: "^^-^^",
+                    vi: "Ngày",
                     "zh-Hant": "日期"
                 },
                 dateM: {
                     zh: "日期：",
                     en: "Date: ",
-                    vi: "^^-^^",
+                    vi: "Ngày: ",
                     "zh-Hant": "日期："
                 },
                 types: {
                     zh: "类型",
                     en: "Types",
-                    vi: "^^-^^",
+                    vi: "Chủng loại",
                     "zh-Hant": "類型"
                 },
                 amount: {
@@ -7012,37 +6526,37 @@
                 state: {
                     zh: "状态",
                     en: "State",
-                    vi: "^^-^^",
+                    vi: "Trạng thái",
                     "zh-Hant": "狀態"
                 },
                 balance: {
                     zh: "余额",
                     en: "Balance",
-                    vi: "^^-^^",
+                    vi: "Số dư",
                     "zh-Hant": "余額"
                 },
                 delete: {
                     zh: "删除",
                     en: "Delete",
-                    vi: "^^-^^",
+                    vi: "Xóa",
                     "zh-Hant": "刪除"
                 },
                 copy: {
                     zh: "复制",
                     en: "Follow",
-                    vi: "^^-^^",
+                    vi: "Sao chép",
                     "zh-Hant": "復制"
                 },
                 noData: {
                     zh: "暂无数据！",
                     en: "No data!",
-                    vi: "^^-^^",
+                    vi: "Không dữ liệu!",
                     "zh-Hant": "暫無數據！"
                 },
                 submit: {
                     zh: "提交",
                     en: "SUBMIT",
-                    vi: "^^-^^",
+                    vi: "GỬI ĐI",
                     "zh-Hant": "提交"
                 },
                 confirm: {
@@ -7066,7 +6580,7 @@
                 edit: {
                     zh: "修改",
                     en: "Edit",
-                    vi: "^^-^^",
+                    vi: "Sửa đổi",
                     "zh-Hant": "修改"
                 },
                 add: {
@@ -7306,7 +6820,7 @@
                 signOut: {
                     zh: "退出登录",
                     en: "Sign out",
-                    vi: "^^-^^",
+                    vi: "THOÁT",
                     "zh-Hant": "退出登錄"
                 },
                 type: {
