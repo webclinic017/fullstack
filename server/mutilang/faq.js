@@ -958,7 +958,7 @@ module.exports = {
         platform1Q: {
             zh: "Earning commission",
             en: "Earning commission",
-            vi: "Thu hoa hồng.",
+            vi: "Thu hoa hồng",
             "zh-Hant": "Earning commission"
         },
         platform1A: {
@@ -970,7 +970,7 @@ module.exports = {
         platform2Q: {
             zh: "Paying commission",
             en: "Paying commission",
-            vi: "Thanh toán hoa hồng.",
+            vi: "Thanh toán hoa hồng",
             "zh-Hant": "Paying commission"
         },
         platform2A: {
