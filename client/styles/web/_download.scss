@@ -66,12 +66,6 @@
     z-index: 20;
     text-align: center;
   }
-  .swiper-slide:nth-child(1) {
-    background: url($image-white + 'download/download_banner.png') no-repeat top center;
-    &.en {
-      background: url($image-white + 'download/download_banner-en.png') no-repeat top center;
-    }
-  }
   // .swiper-slide:nth-child(2) {
   //   background: url($image-path-web + 'download_banner1.png') no-repeat top center;
   // }

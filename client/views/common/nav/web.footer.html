@@ -25,7 +25,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="link-list__item">
+                <div class="link-list__item <%= lang.currentLanguage()%>">
                     <h2>
                         <p class="mg-bt-20">
                             <span><%= lang.text("foot4")%></span>
@@ -50,7 +50,7 @@
                         <%}%>
                     </ul>
                 </div>
-                <div class="link-list__item">
+                <div class="link-list__item <%= lang.currentLanguage()%>">
                     <h2>
                         <p class="mg-bt-20">
                             <span><%= lang.text("foot7")%></span>
@@ -108,7 +108,7 @@
             <div class="contact-us">
             <%if (req.host.indexOf('global') == -1) {%>
                 <h2>
-                    <p>
+                    <p style="max-width: 400px;">
                         <span class="font-light"><%= lang.text("footer.serviceTime")%></span>
                     </p>
                 </h2>
