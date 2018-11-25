@@ -1027,7 +1027,7 @@
                     depositToActivate: {
                         zh: "充值激活账户。",
                         en: "Deposit to activate the account.",
-                        vi: "Kí quỹ để kích hoạt Tài Khoản.",
+                        vi: "Sao Chép.",
                         "zh-Hant": "充值激活帳護。"
                     },
                     tip7: {
@@ -1649,7 +1649,7 @@
                     becomeMaster: {
                         zh: "申请高手",
                         en: "Become a master",
-                        vi: "Trở Thành một Bậc Thầy",
+                        vi: "Trở Thành Master",
                         "zh-Hant": "申請高手"
                     },
                     netAssetValue: {
@@ -1673,7 +1673,7 @@
                     depositToActivate: {
                         zh: "充值激活账户",
                         en: "Deposit to activate",
-                        vi: "Kí quỹ để kích hoạt tài Khoản",
+                        vi: "Sao Chép",
                         "zh-Hant": "充值激活帳護"
                     },
                     openTrades: {
@@ -2759,7 +2759,7 @@
                     monthlyReturns: {
                         zh: "月收益率",
                         en: "Monthly returns",
-                        vi: "--",
+                        vi: "Hoàn trả hàng tháng",
                         "zh-Hant": "月收益率"
                     },
                     profitRate: {
@@ -4313,7 +4313,7 @@
                     uploadVoucher: {
                         zh: "上传凭证",
                         en: "Upload voucher",
-                        vi: "Tải lên giấy xác nhận",
+                        vi: "Tải lên",
                         "zh-Hant": "上傳憑證"
                     },
                     tip18: {
@@ -5131,7 +5131,7 @@
                     followers: {
                         zh: "历史跟随者",
                         en: "Followers",
-                        vi: "Những người theo dõi",
+                        vi: "Người theo dõi",
                         "zh-Hant": "歷史跟隨者"
                     },
                     performanceOf: {

@@ -1555,198 +1555,198 @@ module.exports = function () {
             "zh-Hant": "聲明：傳送到本網站的所有數據都視為TigerWit的財產。TigerWit保留根據其認為合適的資料和其監管機構發布數據的權利。本網站上的數據不適用於TigerWit需要註冊使用許可的任何管轄區，也不適用於違法的地方。"
         },
         /**
-         * 复制规则 页面没有入口
+         * 复制规则
          *  */
         copyRule1: {
             zh: "TigerWit复制规则",
             en: "TigerWit copy rules",
-            vi: "^^-^^",
+            vi: "Quy chế sao chép của TigerWit",
             "zh-Hant": "TigerWit復制規則"
         },
         copyRule2: {
             zh: "复制账号",
             en: "Copy account",
-            vi: "^^-^^",
+            vi: "Tài khoản sao chép",
             "zh-Hant": "復制賬號"
         },
         copyRule2M: {
             zh: "复制账号：",
             en: "Copy account: ",
-            vi: "^^-^^",
+            vi: "Tài khoản sao chép: ",
             "zh-Hant": "復制賬號："
         },
         copyRule2_1: {
             zh: "系统将使用跟单专用账号复制高手，无跟单账号复制时将自动生成，所有复制操作均使用该跟单账号进行；",
             en: "The system will use the specific account to copy Master, will be automatically generated when no copy account, all copy operations are performed using the specific copy account;",
-            vi: "^^-^^",
+            vi: "Hệ thống sẽ sử dụng tài khoản cụ thể để sao chép nhà giao dịch chính, sẽ được tạo tự động khi không có tài khoản sao chép, tất cả các thao tác sao chép được thực hiện bằng tài khoản sao chép cụ thể;",
             "zh-Hant": "系統將使用跟單專用賬號復制高手，無跟單賬號復制時將自動生成，所有復制操作均使用該跟單賬號進行；"
         },
         copyRule2_2: {
             zh: "复制高手",
             en: "Follow the Master",
-            vi: "^^-^^",
+            vi: "Theo dõi nhà giao dịch chính",
             "zh-Hant": "復制高手"
         },
         copyRule2_2M: {
             zh: "复制高手：",
             en: "Follow the Master: ",
-            vi: "^^-^^",
+            vi: "Theo dõi nhà giao dịch chính: ",
             "zh-Hant": "復制高手："
         },
         copyRule2_3: {
             zh: "您最多可以复制 10 位高手。每位交易高手的复制金额不同，您可以根据自己的账户情况选择高手进行复制。",
             en: "You can follow up to 10 masters. Each master has a different level of copying, and you can choose to copy it according to your account.",
-            vi: "^^-^^",
+            vi: "Bạn có thể theo dõi tối đa 10 nhà giao dịch chính. Mỗi tổng thể có một mức sao chép khác nhau và bạn có thể chọn sao chép theo tài khoản của mình.",
             "zh-Hant": "您最多可以復制 10 位高手。每位交易高手的復制金額不同，您可以根據自己的賬戶情況選擇高手進行復制。"
         },
         copyRule3: {
             zh: "复制资金",
             en: "Copy funds",
-            vi: "^^-^^",
+            vi: "Sao chép quỹ",
             "zh-Hant": "復制資金"
         },
         copyRule3M: {
             zh: "复制资金：",
             en: "Copy funds: ",
-            vi: "^^-^^",
+            vi: "Sao chép quỹ: ",
             "zh-Hant": "復制資金："
         },
         copyRule4: {
             zh: "复制资金可自行设置，最小值不可低于高手的最低复制金额，最大值不可超过您账户的可用复制金额。",
             en: "The copy funds can be set by themselves. The minimum value cannot be lower than the minimum copy amount of the master. The maximum value cannot exceed the available copy amount of your account.",
-            vi: "^^-^^",
+            vi: "Các quỹ sao chép có thể được thiết lập một mình. Giá trị tối thiểu không thể thấp hơn số tiền bản sao tối thiểu của bản gốc. Giá trị tối đa không thể vượt quá số tiền bản sao có sẵn của tài khoản của bạn.",
             "zh-Hant": "復制資金可自行設置，最小值不可低於高手的最低復制金額，最大值不可超過您賬戶的可用復制金額。"
         },
         copyRule5: {
             zh: "* 可用复制资金=余额-已复制高手资金",
             en: "* Available copy funds = balance - copied master funds",
-            vi: "^^-^^",
+            vi: "* Các quỹ sao chép có sẵn = Số dư – sao chép quỹ nhà giao dịch chính",
             "zh-Hant": "* 可用復制資金=余額-已復制高手資金"
         },
         copyRule6: {
             zh: "复制高手开仓",
             en: "Follow master open positions",
-            vi: "^^-^^",
+            vi: "Theo dõi các lệnh đang mở của nhà giao dịch chính",
             "zh-Hant": "復制高手開倉"
         },
         copyRule7: {
             zh: "1. 复制成功后，高手开仓，账户跟随高手同步开仓。",
             en: "1. Once the user has successfully followed the master, the master will open position and the user's account will begin to copy the master.",
-            vi: "^^-^^",
+            vi: "1. Sau khi người dùng đã theo dõi thành công nhà giao dịch chính, nhà giao dịch chính sẽ mở các lệnh mở và tài khoản của người dùng sẽ bắt đầu sao chép nhà giao dịch chính.",
             "zh-Hant": "1. 復制成功後，高手開倉，賬戶跟隨高手同步開倉。"
         },
         copyRule8: {
             zh: "* 用户跟单手数=（高手订单手数*跟单者资金）/高手余额",
             en: "* User open positions = (master's orders lot * follower funds) / master's balance",
-            vi: "^^-^^",
+            vi: "* Các vị thế mở của người dùng = (số lượng đơn đặt hàng của nhà giao dịch chính* số tiền theo dõi) / số dư của tổng thể",
             "zh-Hant": "* 用戶跟單手數=（高手訂單手數*跟單者資金）/高手余額"
         },
         copyRule9: {
             zh: "用户开仓可用保证金=跟单者资金-跟随高手的持仓单占用保证金+跟随高手持仓单的浮动的盈亏，",
             en: "User open trading available margin = follower funds - follow margin + follow profit and loss.",
-            vi: "^^-^^",
+            vi: "Người dùng mở giao dịch ký quỹ có sẵn = quỹ đi theo dõi - theo margin + theo lãi và lỗ.",
             "zh-Hant": "用戶開倉可用保證金=跟單者資金-跟隨高手的持倉單占用保證金+跟隨高手持倉單的浮動的盈虧，"
         },
         copyRule10: {
             zh: "当复制资金不足时，将不再跟随高手下单。",
             en: "when the copy of funds is insufficient, will no longer follow the master orders.",
-            vi: "^^-^^",
+            vi: "khi bản sao của quỹ không đủ, sẽ không còn tuân theo các lệnh chính.",
             "zh-Hant": "當復制資金不足時，將不再跟隨高手下單。"
         },
         copyRule11: {
             zh: "2. 高手极短时间内开仓后立即平仓，可能会导致跟单失败。",
             en: "2. If the master closes immediately after opening the position in a very short time, this may cause the order to fail.",
-            vi: "^^-^^",
+            vi: "2. Nếu tổng thể đóng ngay lập tức sau khi mở vị trí trong một thời gian rất ngắn, điều này có thể khiến cho lệnh thất bại.",
             "zh-Hant": "2. 高手極短時間內開倉後立即平倉，可能會導致跟單失敗。"
         },
         copyRule12: {
             zh: "3. 账户只复制高手开仓订单，高手的挂单交易不会复制，挂单成交会跟随开仓。",
             en: "3. User's account only follows the master's open positions, the master's pending order transaction will not be copied. When the pending order becomes position, the user's account will follow the open position.",
-            vi: "^^-^^",
+            vi: "3. Tài khoản của người dùng chỉ theo vị thế mở của nhà giao dịch chính, giao dịch lệnh chờ của nhà giao dịch chính sẽ không được sao chép. Khi lệnh chờ trở thành vị trí, tài khoản của người dùng sẽ theo vị thế mở.",
             "zh-Hant": "3. 賬戶只復制高手開倉訂單，高手的掛單交易不會復制，掛單成交會跟隨開倉。"
         },
         copyRule13: {
             zh: "跟随高手平仓",
             en: "Follow the master to close the position",
-            vi: "^^-^^",
+            vi: "Thực hiện theo các nhà giao dịch chính để đóng vị thế",
             "zh-Hant": "跟隨高手平倉"
         },
         copyRule14: {
             zh: "1. 复制成功后，高手平仓，账户会跟随高手同步平仓，该笔订单盈亏将会记入复制金额内。",
             en: "1. After successfully follow the master, when the master closes the position, the user's account will follow to close the position, and the order profit and loss will be recorded in the copy amount.",
-            vi: "^^-^^",
+            vi: "1. Sau khi thực hiện thành công nhà giao dịch chính, khi nhà giao dịch chính đóng vị trí, tài khoản của người dùng sẽ theo sau để đóng vị trí, và số tiền lãi và thua lỗ sẽ được ghi vào số tiền sao chép.",
             "zh-Hant": "1. 復制成功後，高手平倉，賬戶會跟隨高手同步平倉，該筆訂單盈虧將會記入復制金額內。"
         },
         copyRule15: {
             zh: "2. 您可以手动平仓复制高手的订单，不会取消复制关系。",
             en: "2. You can manually close the follow position without canceling the following relationship.",
-            vi: "^^-^^",
+            vi: "2. Bạn có thể đóng vị trí theo dõi theo cách thủ công mà không hủy bỏ mối quan hệ sau.",
             "zh-Hant": "2. 您可以手動平倉復制高手的訂單，不會取消復制關系。"
         },
         copyRule16: {
             zh: "3. 您可以修改订单状态，跟随高手开仓的订单可在APP中修改为：不跟随高手平仓。状态修改成功后，高手平仓，该笔订单将不会跟随平仓，由您手动平仓或设置止盈/止损平仓。",
             en: "3. You can modify the position status, the follow position can be modified in the APP as: Do not follow to close. After the status is successfully modified, the master closes the position, the order will not be closed, and you can manually close the position or set the take profit/stop loss to close the position.",
-            vi: "^^-^^",
+            vi: "3. Bạn có thể sửa đổi trạng thái vị trí, vị trí sau có thể được sửa đổi trong APP như sau: Không theo sau để đóng. Sau khi trạng thái được sửa đổi thành công, tổng thể đóng vị trí, thứ tự sẽ không bị đóng và bạn có thể đóng vị trí theo cách thủ công hoặc đặt mất lợi nhuận / dừng lỗ để đóng vị trí.",
             "zh-Hant": "3. 您可以修改訂單狀態，跟隨高手開倉的訂單可在APP中修改為：不跟隨高手平倉。狀態修改成功後，高手平倉，該筆訂單將不會跟隨平倉，由您手動平倉或設置止盈/止損平倉。"
         },
         copyRule17: {
             zh: "4. 您取消复制关系时，可自主选择强行平仓或者跟随高手平仓正在持仓中订单。",
             en: "4. When you cancel the follow relationship, you can choose to force the position to close or follow the master to close the order in the position.",
-            vi: "^^-^^",
+            vi: "4. Khi bạn hủy bỏ mối quan hệ tiếp theo, bạn có thể chọn để buộc vị trí đóng hoặc theo nhà giao dịch chính để đóng lệnh ở vị trí đó.",
             "zh-Hant": "4. 您取消復制關系時，可自主選擇強行平倉或者跟隨高手平倉正在持倉中訂單。"
         },
         copyRule18: {
             zh: "5. 用户复制高手所产生的盈利或亏损，网站不承担任何责任。",
             en: "5. TigerWit does not bear any responsibility for the profit or loss generated by the user following the master.",
-            vi: "^^-^^",
+            vi: "5. TigerWit không chịu bất kỳ trách nhiệm nào về lợi nhuận hoặc thua lỗ do người dùng tạo ra theo nhà giao dịch chính.",
             "zh-Hant": "5. 用戶復制高手所產生的盈利或虧損，網站不承擔任何責任。"
         },
         copyRule19: {
             zh: "复制高手盈利分成",
             en: "Following master profit commission",
-            vi: "^^-^^",
+            vi: "Theo dõi lợi nhuận hoa hồng của nhà giao dịch chính",
             "zh-Hant": "復制高手盈利分成"
         },
         copyRule20: {
             zh: "1. 每月1日，系统对您跟随高手的情况进行统计并结算，扣除跟随该高手盈利部分的20%作为该高手的分成；每月10日，系统对高手进行分成结算。",
             en: "1. On the 1st of each month, the system counts and settles the user's follow situation, deducting 20% of the profit part as the commission of the master; on the 10th of each month, the system settles the commission for the master.",
-            vi: "^^-^^",
+            vi: "1. Vào ngày đầu tiên của mỗi tháng, hệ thống sẽ đếm và giải quyết tình huống theo dõi của người dùng, trừ 20% phần lợi nhuận là hoa hồng của nhà giao dịch chính; vào ngày 10 mỗi tháng, hệ thống sẽ thanh toán hoa hồng cho nhà giao dịch chính.",
             "zh-Hant": "1. 每月1日，系統對您跟隨高手的情況進行統計並結算，扣除跟隨該高手盈利部分的20%作為該高手的分成；每月10日，系統對高手進行分成結算。"
         },
         copyRule21: {
             zh: "2. 您取消复制关系选择强制平仓时，系统将对跟随该高手的所有订单进行统计并结算，扣除盈利部分的20%作为该高手分成。",
             en: "2. If the user cancels the follow relationship and selects 'Cancel following and force-close your order', the system will count and settle all orders following the master, deducting 20% of the profit portion as the commission of the master.",
-            vi: "^^-^^",
+            vi: "2. Nếu người dùng hủy bỏ mối quan hệ tiếp theo và chọn 'Huỷ theo sau và buộc đóng lệnh của bạn', hệ thống sẽ tính và thanh toán tất cả các đơn đặt hàng theo chủ, trừ 20% phần lợi nhuận như hoa hồng của nhà giao dịch chính.",
             "zh-Hant": "2. 您取消復制關系選擇強制平倉時，系統將對跟隨該高手的所有訂單進行統計並結算，扣除盈利部分的20%作為該高手分成。"
         },
         copyRule22: {
             zh: "3. 您取消复制关系选择跟随高手平仓时，系统将在跟随该高手的所有订单全部平仓后，对跟随该高手所有订单进行统计并结算，扣除总盈利的20%作为该高手分成。",
             en: "3. If the user cancels the following relationship and selects 'Cancel following but do not close order', when all the positions of following the master are closed, the system will count all the orders following the master and settle, deducting 20% of the profit portion as the commission of the master.",
-            vi: "^^-^^",
+            vi: "3. Nếu người dùng hủy bỏ mối quan hệ sau và chọn 'Hủy theo dõi nhưng không đóng thứ tự', khi tất cả các vị trí theo sau tổng thể được đóng, hệ thống sẽ tính tất cả các đơn đặt hàng theo nhà giao dịch chính và thanh toán, trừ 20% phần lợi nhuận như ủy ban của nhà giao dịch chính",
             "zh-Hant": "3. 您取消復制關系選擇跟隨高手平倉時，系統將在跟隨該高手的所有訂單全部平倉後，對跟隨該高手所有訂單進行統計並結算，扣除總盈利的20%作為該高手分成。"
         },
         copyRule23: {
             zh: "4. 只要跟随高手开仓的订单，都会进行分成结算。",
             en: "4. As long as you open the position follow the master, the commission will be settled.",
-            vi: "^^-^^",
+            vi: "4. Miễn là bạn mở vị trí theo chủ, hoa hồng sẽ được giải quyết.",
             "zh-Hant": "4. 只要跟隨高手開倉的訂單，都會進行分成結算。"
         },
         copyRule24: {
             zh: "在决定复制高手时，您确认已经考虑了您的整体财务状况，包括财务承诺，并且您了解使用复制跟单服务具有高度投机性并且您可以承受巨大的损失用于复制高手。请注意，我们无法就任何特定投资，账户，投资组合或策略的表现提供任何保证。",
             en: "When deciding to follow masters, you confirm that you have considered your overall financial situation, including financial commitments, and that you understand that using copy-to-order services is highly speculative and you can afford potential losses for copying masters. Please note that we are unable to provide any guarantees regarding the performance of any particular investment, account, portfolio or strategy.",
-            vi: "^^-^^",
+            vi: "Khi quyết định theo dõi nhà giao dịch chính, bạn xác nhận rằng bạn đã xem xét tình hình tài chính tổng thể của mình, bao gồm các cam kết tài chính và bạn hiểu rằng việc sử dụng dịch vụ sao chép theo đơn đặt hàng mang tính đầu cơ cao và bạn có khả năng thua lỗ. Xin lưu ý rằng chúng tôi không thể cung cấp bất kỳ đảm bảo nào về hiệu suất của bất kỳ khoản đầu tư, tài khoản, danh mục đầu tư hoặc chiến lược cụ thể nào.",
             "zh-Hant": "在決定復制高手時，您確認已經考慮了您的整體財務狀況，包括財務承諾，並且您了解使用復制跟單服務具有高度投機性並且您可以承受巨大的損失用於復制高手。請註意，我們無法就任何特定投資，賬戶，投資組合或策略的表現提供任何保證。"
         },
         copyRule25: {
             zh: "如您对规则有任何疑问，可发邮件至",
             en: "If you have any questions about the rules, please contact customer service or send e-mail to ",
-            vi: "^^-^^",
+            vi: "Nếu bạn có bất kỳ câu hỏi nào về quy tắc, vui lòng liên hệ với bộ phận dịch vụ khách hàng hoặc gửi e-mail đến",
             "zh-Hant": "如您對規則有任何疑問，可發郵件至"
         },
         copyRule26: {
             zh: "进行咨询。",
             en: ".",
-            vi: "^^-^^",
+            vi: ".",
             "zh-Hant": "進行咨詢。"
         },
         "mt4-1": {
@@ -2458,187 +2458,187 @@ module.exports = function () {
         amtIndex1: {
             zh: "条件和条款",
             en: "Conditions and Clauses",
-            vi: "^^-^^",
+            vi: "Điều kiện và điều khoản",
             "zh-Hant": "條件和條款"
         },
         amtIndex2: {
             zh: "版本生效日期：",
             en: "Valid from: ",
-            vi: "^^-^^",
+            vi: "Có giá trị từ: ",
             "zh-Hant": "版本生效日期："
         },
         amtIndex3: {
             zh: "2017年10月30日",
             en: "Oct. 30th, 2017",
-            vi: "^^-^^",
+            vi: "Ngày 30 tháng 10 năm 2017",
             "zh-Hant": "2017年10月30日"
         },
         amtIndex4: {
             zh: "法律声明",
             en: "Legal Notices",
-            vi: "^^-^^",
+            vi: "Thông báo pháp lý",
             "zh-Hant": "法律聲明"
         },
         amtIndex5: {
             zh: "阅读有关使用本网站应遵守的条款和条件、声明及通知。",
             en: "Read the terms, conditions and notices regarding the use of this website.",
-            vi: "^^-^^",
+            vi: "Đọc các điều khoản, điều kiện và thông báo liên quan đến việc sử dụng trang web này.",
             "zh-Hant": "閱讀有關使用本網站應遵守的條款和條件、聲明及通知。"
         },
         amtIndex6: {
             zh: "客户协议",
             en: "Client Agreement",
-            vi: "^^-^^",
+            vi: "Thỏa thuận khách hàng",
             "zh-Hant": "客戶協議"
         },
         amtIndex7: {
             zh: "客户协议将约束TigerWit与您之间的关系。",
             en: "The Client Agreement will constrain the relationship between TigerWit and you.",
-            vi: "^^-^^",
+            vi: "Thỏa thuận khách hàng sẽ hạn chế mối quan hệ giữa TigerWit và bạn.",
             "zh-Hant": "客戶協議將約束TigerWit與您之間的關系。"
         },
         amtIndex8: {
             zh: "风险披露声明",
             en: "Risk Disclosure Notice",
-            vi: "^^-^^",
+            vi: "Thông báo tiết lộ rủi ro",
             "zh-Hant": "風險披露聲明"
         },
         amtIndex9: {
             zh: "在您使用TigerWit服务之前，您必须根据您的情况和财务情况，慎重考虑您是否适合进行CFD交易。",
             en: "Before you use the TigerWit’s service, you must consider carefully whether you are suitable for CFD trading based on your circumstances and financial situation.",
-            vi: "^^-^^",
+            vi: "Trước khi bạn sử dụng dịch vụ của TigerWit, bạn phải cân nhắc kỹ liệu bạn có phù hợp với giao dịch CFD dựa trên hoàn cảnh và tình hình tài chính của bạn hay không.",
             "zh-Hant": "在您使用TigerWit服務之前，您必須根據您的情況和財務情況，慎重考慮您是否適合進行CFD交易。"
         },
         amtIndex10: {
             zh: "隐私政策和Cookie披露声明",
             en: "Privacy Policy and Cookie Disclosure",
-            vi: "^^-^^",
+            vi: "Chính sách bảo mật và tiết lộ cookie",
             "zh-Hant": "隱私政策和Cookie披露聲明"
         },
         amtIndex11: {
             zh: "本文档详述有关TigerWit管理个人资料的政策。",
             en: "This document describes the management of TigerWit Personal Data Policy in detail.",
-            vi: "^^-^^",
+            vi: "Tài liệu này mô tả chi tiết việc quản lý Chính sách dữ liệu cá nhân của TigerWit.",
             "zh-Hant": "本文檔詳述有關TigerWit管理個人資料的政策。"
         },
         amtIndex12: {
             zh: "商业条件及条款",
             en: "Terms and Conditions of Business",
-            vi: "^^-^^",
+            vi: "Điều khoản và Điều kiện kinh doanh",
             "zh-Hant": "商業條件及條款"
         },
         amtIndex13: {
             zh: "本文档详述TigerWit的金融服务指南，旨在帮助您决定是否使用我们提供的服务。",
             en: "This document describes TigerWit Limited Services Guide in detail, designed to help you decide whether to use the services we provide or not.",
-            vi: "^^-^^",
+            vi: "Tài liệu này mô tả chi tiết Hướng dẫn Dịch vụ Giới hạn TigerWit, được thiết kế để giúp bạn quyết định có sử dụng các dịch vụ chúng tôi cung cấp hay không.",
             "zh-Hant": "本文檔詳述TigerWit的金融服務指南，旨在幫助您決定是否使用我們提供的服務。"
         },
         amtIndex14: {
             zh: "负责任交易声明",
             en: "Trade Responsibly Notice",
-            vi: "^^-^^",
+            vi: "Thông báo trách nhiệm",
             "zh-Hant": "負責任交易聲明"
         },
         amtIndex15: {
             zh: "本文档旨在提醒您了解市场和知晓相关风险以及有效地利用杠杆优势。",
             en: "This document is designed to remind you of knowing the market, knowing the relative and using leverage advantage effectively.",
-            vi: "^^-^^",
+            vi: "Tài liệu này được thiết kế để nhắc nhở bạn về việc biết thị trường, biết mối quan hệ và sử dụng lợi thế đòn bẩy một cách hiệu quả.",
             "zh-Hant": "本文檔旨在提醒您了解市場和知曉相關風險以及有效地利用杠桿優勢。"
         },
         amtIndex16: {
             zh: "交易条件声明",
             en: "Trading Conditions Notice",
-            vi: "^^-^^",
+            vi: "Điều kiện giao dịch",
             "zh-Hant": "交易條件聲明"
         },
         amtIndex17: {
             zh: "本文档详述不同的投资策略涉及不同程度的风险，旨在帮助您决定是否使用我们提供的服务。",
             en: "This document describes different investment strategies that involve varying degrees of risk in detail, designed to help you decide whether to use the services we provide or not.",
-            vi: "^^-^^",
+            vi: "Tài liệu này mô tả các chiến lược đầu tư khác nhau liên quan đến mức độ rủi ro khác nhau một cách chi tiết, được thiết kế để giúp bạn quyết định có nên sử dụng các dịch vụ mà chúng tôi cung cấp hay không.",
             "zh-Hant": "本文檔詳述不同的投資策略涉及不同程度的風險，旨在幫助您決定是否使用我們提供的服務。"
         },
         amtIndex18: {
             zh: "客户声明",
             en: "Declaration by Client",
-            vi: "^^-^^",
+            vi: "Tuyên bố của khách hàng",
             "zh-Hant": "客戶聲明"
         },
         amtIndex19: {
             zh: "阅读并了解TigerWit交易平台风险提示及免责条款。",
             en: "Read and understand the TigerWit Trading Risk Reminder and Exemption Clauses.",
-            vi: "^^-^^",
+            vi: "Đọc và hiểu các Nhắc nhở Rủi ro Giao dịch TigerWit và các Điều khoản Miễn.",
             "zh-Hant": "閱讀並了解TigerWit交易平臺風險提示及免責條款。"
         },
         amtIndex20: {
             zh: "客户分类通知",
             en: "Client Categorization Notice",
-            vi: "^^-^^",
+            vi: "Thông báo Phân loại Khách hàng",
             "zh-Hant": "客戶分類通知"
         },
         amtIndex21: {
             zh: "查阅我们对客户的定义以及分类标准。",
             en: "Check the Definition of Client and Client Categorization Criteria.",
-            vi: "^^-^^",
+            vi: "Kiểm tra các tiêu chí phân loại khách hàng và định nghĩa.",
             "zh-Hant": "查閱我們對客戶的定義以及分類標準。"
         },
         amtIndex22: {
             zh: "保护客户资金",
             en: "Protecting Client Funds",
-            vi: "^^-^^",
+            vi: "Bảo vệ quỹ khách hàng",
             "zh-Hant": "保護客戶資金"
         },
         amtIndex23: {
             zh: "本文档详述有关TigerWit保护您的资金所采取的措施。",
             en: "This document describes the measures taken by TigerWit to protect your funds in detail.",
-            vi: "^^-^^",
+            vi: "Tài liệu này mô tả các biện pháp được thực hiện bởi TigerWit để bảo vệ chi tiết tiền của bạn.",
             "zh-Hant": "本文檔詳述有關TigerWit保護您的資金所采取的措施。"
         },
         amtIndex24: {
             zh: "订单执行政策",
             en: "Order Execution Policy",
-            vi: "^^-^^",
+            vi: "Chính sách thực thi lệnh",
             "zh-Hant": "訂單執行政策"
         },
         amtIndex25: {
             zh: "阅读并了解我们提供的与金融工具有关的执行政策的条款。此文档构成客户协议的一部分。 ",
             en: "Read and understand the terms which are about the Execution Policy of our financial instruments. This document is a part of the Client Agreement.",
-            vi: "^^-^^",
+            vi: "Đọc và hiểu các điều khoản về Chính sách thực thi của các công cụ tài chính của chúng tôi. Tài liệu này là một phần của Thỏa thuận khách hàng.",
             "zh-Hant": "閱讀並了解我們提供的與金融工具有關的執行政策的條款。此文檔構成客戶協議的壹部分。 "
         },
         amtIndex26: {
             zh: "利益冲突政策",
             en: "Conflicts of Interest Policy",
-            vi: "^^-^^",
+            vi: "Xung đột lợi ích chính sách",
             "zh-Hant": "利益沖突政策"
         },
         amtIndex27: {
             zh: "本文档详述当发现利益冲突时我们将采取的有效预防措施。",
             en: "This document describes the effective precautions we will take when Conflicts of Interest are found in detail.",
-            vi: "^^-^^",
+            vi: "Tài liệu này mô tả các biện pháp phòng ngừa hiệu quả mà chúng tôi sẽ thực hiện khi có Xung đột lợi ích được tìm thấy chi tiết.",
             "zh-Hant": "本文檔詳述當發現利益沖突時我們將采取的有效預防措施。"
         },
         amtIndex28: {
             zh: "投诉处理流程",
             en: "Complaint Handling Procedure",
-            vi: "^^-^^",
+            vi: "Thủ tục xử lý khiếu nại",
             "zh-Hant": "投訴處理流程"
         },
         amtIndex29: {
             zh: "了解投诉处理的程序。",
             en: "Understand the Complaint Handling Procedure.",
-            vi: "^^-^^",
+            vi: "Hiểu thủ tục xử lý khiếu nại.",
             "zh-Hant": "了解投訴處理的程序。"
         },
         amtIndex30: {
             zh: "复制交易说明",
             en: "Trade Copying Declaration",
-            vi: "^^-^^",
+            vi: "Tuyên bố sao chép thương mại",
             "zh-Hant": "復制交易說明"
         },
         amtIndex31: {
             zh: "阅读并了解TigerWit交易平台的跟单交易声明。",
             en: "Read and understand the TigerWit Trading Trade Copying Declaration.",
-            vi: "^^-^^",
+            vi: "Đọc và hiểu Tuyên bố sao chép thương mại TigerWit.",
             "zh-Hant": "閱讀並了解TigerWit交易平臺的跟單交易聲明。"
         },
         amtLegal1: {
@@ -4012,247 +4012,247 @@ module.exports = function () {
         amtRisk1: {
             zh: "风险警告：差价合约（CFD）是复杂的金融产品，其中大部分没有设定到期日。因此，CFD 头寸在您选择关闭现有未平仓头寸之日到期。CFD是一种杠杆产品，会产生较高的风险并可能导致您损失全部的投资资本。因此，CFD 可能并不适合所有人士。您所承担的风险不应超过已经做好准备承担的损失。在决定进行交易之前，您应该确保了解所涉及的风险，并考虑自己的经验水平。如果有必要，您应该寻求独立建议。",
             en: "RISK WARNING: Contracts for Difference (‘CFDs’) are complex financial products, most of which have no set maturity date. Therefore, a CFD position matures on the date you choose to close an existing open position. CFDs, which are leveraged products, incur a high level of risk and can result in the loss of all of your invested capital. As a result, CFDs may not be suitable for all individuals. You should not risk more than you are prepared to lose. Before deciding to trade, you should ensure that you understand the risks involved and take into account your level of experience. You should seek independent advice, if necessary.",
-            vi: "^^-^^",
+            vi: "CẢNH BÁO RỦI RO: Contracts for Difference (‘CFDs’) là những sản phẩm tài chính phức tạp, hầu hết trong số đó không có ngày đáo hạn đã định. Do đó, một vị thế CFD đáo hạn vào ngày bạn chọn đóng một vị thế mở hiện tại. CFDs, là sản phẩm đòn bẩy, chịu rủi ro cao và có thể dẫn đến mất tất cả vốn đầu tư của bạn. Kết quả là, CFD có thể không phù hợp với tất cả các cá nhân. Bạn không nên mạo hiểm nhiều hơn bạn chuẩn bị để mất. Trước khi quyết định giao dịch, bạn nên đảm bảo rằng bạn hiểu những rủi ro có liên quan và tính đến mức độ kinh nghiệm của bạn. Bạn nên tìm tư vấn độc lập, nếu cần. ",
             "zh-Hant": "風險警告：差價合約（CFD）是復雜的金融產品，其中大部分沒有設定到期日。因此，CFD 頭寸在您選擇關閉現有未平倉頭寸之日到期。CFD是壹種杠桿產品，會產生較高的風險並可能導致您損失全部的投資資本。因此，CFD 可能並不適合所有人士。您所承擔的風險不應超過已經做好準備承擔的損失。在決定進行交易之前，您應該確保了解所涉及的風險，並考慮自己的經驗水平。如果有必要，您應該尋求獨立建議。"
         },
         amtRisk2: {
             zh: "本声明的范围",
             en: "Scope of This Notice",
-            vi: "^^-^^",
+            vi: "Phạm vi thông báo",
             "zh-Hant": "本聲明的範圍"
         },
         amtRisk3: {
             zh: "1.TigerWit Limited（以下简称“TigerWit”、“本公司”、“我们”）为您提供“风险披露声明”（“声明”），以帮助您了解交易差价合约（“CFD”）时可能会出现的风险。但是您需要牢记，该声明并没有包含交易 CFD 所涉及的所有风险和问题。客户（以下称为“客户”、“您”、和“您自己”）应仔细阅读“声明”和“客户协议”、“订单执行政策”以及您可通过我们的网站获取的文件和信息。",
             en: "1.TigerWit Limited (referred to as ‘TigerWit’, the ‘Firm’, ‘us’, ‘we’ and ‘our’) provides you with this ‘Risk Disclosure Notice’ (the ‘Notice’) to help you understand the risks that might arise when trading Contracts for Difference (‘CFDs’). However, you need to bear in mind that the Notice does not contain all the risks and aspects involved in trading CFDs. The Client (referred to as the ‘Client’, ‘you’, ‘your’ and ‘yourself’) should carefully read the Notice in conjunction with the ‘Client Agreement’, the ‘Order Execution Policy’ and the documentation and information available to you through our Website.",
-            vi: "^^-^^",
+            vi: "1.TigerWit Limited (được gọi là ‘TigerWit’, ‘Công ty’, ‘chúng tôi’, ‘chúng tôi’, và ‘của chúng tôi’) cung cấp cho bạn ‘Thông báo Tiết lộ Rủi ro’ (‘Thông báo’) để giúp bạn hiểu những rủi ro có thể phát sinh khi giao dịch Hợp đồng Chênh Lệch (‘CFD’). Tuy nhiên, bạn cần lưu ý rằng Thông basokhoong chứa tất cả các rủi ro và các khía cạnh liên quan đến giao dịch CFD. Khách hàng (được gọi là ‘Khách hàng’, ‘bạn’, ‘của bạn’ và ‘ bản thân bạn’) nên đọc kỹ Thông báo cùng với ‘Thỏa thuận khách hàng’, ‘ Chính sách thực hiện đơn hàng’ và tài liệu và thông tin có sẵn cho bạn thông qua trang web của chúng tôi. ",
             "zh-Hant": "1.TigerWit Limited（以下簡稱“TigerWit”、“本公司”、“我們”）為您提供“風險披露聲明”（“聲明”），以幫助您了解交易差價合約（“CFD”）時可能會出現的風險。但是您需要牢記，該聲明並沒有包含交易 CFD 所涉及的所有風險和問題。客戶（以下稱為“客戶”、“您”、和“您自己”）應仔細閱讀“聲明”和“客戶協議”、“訂單執行政策”以及您可通過我們的網站獲取的文件和信息。"
         },
         amtRisk4: {
             zh: "2.您需要确保在知情的基础上，根据自身的知识和经验以及您的个人情况（包括但不限于您的财务状况）来作出交易 CFD 的所有决策。此外，您要确保了解 CFD 的性质以及交易 CFD所涉及所有风险和问题的程度。",
             en: "2.You need to ensure that any decision to engage in trading CFDs is made on an informed basis and in light of your knowledge and experience as well as to your personal circumstances (including but not limited to your financial position). In addition, you need to ensure that you understand the nature of CFDs and the extent of all risks and aspects involved in trading CFDs.",
-            vi: "^^-^^",
+            vi: "2.Bạn cần đảm bảo rằng mọi quyết định tham gia vào giaodijch CFD đều được thực hiện trên cơ sở thông tin và hiểu biết và kinh nghiệm cũng như hoàn cảnh cá nhân của bạn (bao gồm nhưng không giới hạn ở vị trí tài chính của bạn). Ngoài ra, bạn cần đảm bảo rằng bạn hiểu bẩn chất của CFD và mức độ rủi ro và khía cạnh liên quan đến giao dịch CFD. ",
             "zh-Hant": "2.您需要確保在知情的基礎上，根據自身的知識和經驗以及您的個人情況（包括但不限於您的財務狀況）來作出交易 CFD 的所有決策。此外，您要確保了解 CFD 的性質以及交易 CFD所涉及所有風險和問題的程度。"
         },
         amtRisk5: {
             zh: "3.请注意，CFD 是杠杆式金融产品，因此就这一点而论，交易 CFD 涉及较高的损失风险，价格变动受客户所使用杠杆的影响。例如，如果客户使用 50 倍杠杆，0.5%的变动将导致 25%的收益或亏损。尽管如此，由于“负余额保护”（“NBP”），您的损失不会超过您的初始投资。",
             en: "3.Please note that CFDs are leveraged financial products and therefore as such, trading CFDs involves a high risk of loss as price movements are influenced by the amount of leverage the client is using. For example, if a client is using 50 times leverage a movement of 0.5% will result in a gain or a loss of 25%. Nonetheless, as a result of the ‘Negative Balance Protection’ (‘NBP’) you may not lose more than your initial investment.",
-            vi: "^^-^^",
+            vi: "3.Xin lưu ý rằng CFD là các sản phẩm tài chính có đòn bẩy và do đó, các giao dịch CFD liên quan đến rủi ro thua lỗ cao do biến động giá bị ảnh hưởng bởi số tiền đòn bẩy mà khách hàng đang sử dụng. Ví du, nếu một khách hàng đang sử dụng 50 lần đòn bẩy một chuyển động là 0,5% sẽ dần tăng lên hoặc mất 25%. Tuy nhiên, do “Bảo vệ số dư âm” (‘NBP’), bạn có thể không bị mất nhiều hơn số tiền đầu tư ban đầu của bạn. ",
             "zh-Hant": "3.請註意，CFD 是杠桿式金融產品，因此就這壹點而論，交易 CFD 涉及較高的損失風險，價格變動受客戶所使用杠桿的影響。例如，如果客戶使用 50 倍杠桿，0.5%的變動將導致 25%的收益或虧損。盡管如此，由於“負余額保護”（“NBP”），您的損失不會超過您的初始投資。"
         },
         amtRisk6: {
             zh: "4.交易 CFD 并不适合所有人士。任何情况下，您所承担的风险不应超过已经做好准备承担的损失。",
             en: "4.Trading CFDs is not be appropriate for all persons. Under no circumstances, you should risk more than you are prepared to lose.",
-            vi: "^^-^^",
+            vi: "4.Giao dịch CFDs không phù hợp với tất cả mọi người. Trong mọi trường hợp, bạn nên mạo hiểm nhiền hơn bạn đã sẵn sàng để mất.",
             "zh-Hant": "4.交易 CFD 並不適合所有人士。任何情況下，您所承擔的風險不應超過已經做好準備承擔的損失。"
         },
         amtRisk7: {
             zh: "5.对于本声明中未定义的任何术语，请参阅“客户协议”的附表 A（“词汇表”）。",
             en: "5.For any capitalised term, which has not been defined in the Notice, please refer to Schedule A (‘Glossary’) of the ‘Client Agreement’.",
-            vi: "^^-^^",
+            vi: "5.Đối với bất kỳ thuật ngữ viết hoa nào chưa được xác định trong Thông báo, vui lòng tham khảo Mục A (‘Bảng thuật ngữ’) của ‘Thỏa thuận khách hàng’.",
             "zh-Hant": "5.對於本聲明中未定義的任何術語，請參閱“客戶協議”的附表 A（“詞匯表”）。"
         },
         amtRisk8: {
             zh: "适当性评估",
             en: "Appropriateness Assessment",
-            vi: "^^-^^",
+            vi: "Đánh Giá Phù Hợp",
             "zh-Hant": "適當性評估"
         },
         amtRisk9: {
             zh: "1.在处理您的“开户表格”时，TigerWit 会对您进行 CFD 交易的适当性进行评估，并根据您提供给我们的信息确定您是否具备足够的知识和经验来了解交易 CFD 所涉及的风险。我们将通知您评估结果，但您仍然必须仔细考虑是否需要与我们交易 CFD。如果我们提醒，交易 CFD 可能不适合您，您应避免交易 CFD，直到获得足够的知识和经验，例如，您可以在真实环境中交易 CFD 之前在体验金账户上进行交易，并且充分熟悉相关风险。",
             en: "1.When processing your ‘Account Opening Form’ TigerWit carries out an assessment of your appropriateness to trade CFDs and determines, based on information you provide us with, if you have sufficient knowledge and experience to understand the risks involved in trading CFDs. We will inform you of the results of our assessment but this does not relieve you of the need to carefully consider whether to trade CFDs with us. If we warn you that trading CFDs may not be appropriate for you, then you should refrain from trading CFDs until you attain sufficient knowledge and experience, for example you may trade CFDs on a demo account prior to trading CFDs in a live environment and you acquainted yourself sufficiently with the relevant risks.",
-            vi: "^^-^^",
+            vi: "1.Khi xử lý ‘Biểu mẫu mở tài khoản’,TigerWit thực hiện đánh giá sự phù hợp của bạn để giao dịch CFD và xác định, dựa trên thông tin bạn cung cấp cho chúng tôi, nếu bạn có đủ kiến thức và kinh nghiệm để hiểu các rủi ro liên quan đến giao dịch CFD. Chúng tôi sẽ thông báo cho bạn kết quả đánh giá của chúng tôi nhưng điều này không giúp đỡ bạn về sự cần thiết phải cân nhắc kỹ lưỡng xem có nên giao dịch CFD với chúng tôi hay không. Nếu chúng tôi cảnh báo bạn rang giao dịch CFD có thể không phù hợp với bạn, bạn nên hạn chế giao dịch CFD cho đến khi bạn có đủ kiến thức và kinh nghiệm, ví dụ bạn có thể giao dịch CFD trên tài khoản demo trước khi giao dịch CFD trong môi trường sống và bạn đã quen cho mình đầy đủ với những rủi ro có liên quan. ",
             "zh-Hant": "1.在處理您的“開戶表格”時，TigerWit 會對您進行 CFD 交易的適當性進行評估，並根據您提供給我們的信息確定您是否具備足夠的知識和經驗來了解交易 CFD 所涉及的風險。我們將通知您評估結果，但您仍然必須仔細考慮是否需要與我們交易 CFD。如果我們提醒，交易 CFD 可能不適合您，您應避免交易 CFD，直到獲得足夠的知識和經驗，例如，您可以在真實環境中交易 CFD 之前在體驗金賬戶上進行交易，並且充分熟悉相關風險。"
         },
         amtRisk10: {
             zh: "CFD 的性质",
             en: "Nature of CFDs",
-            vi: "^^-^^",
+            vi: "Bản chất của CFDs",
             "zh-Hant": "CFD 的性質"
         },
         amtRisk11: {
             zh: "1.CFD 是用于交易签订协议时和结束协议时特定工具或货币价差的协议。CFD 使本公司的客户能复制交易特定货币或其他工具的经济效果，而无需实际拥有这些资产；您可在我们的网站上找到 TigerWit 所提供 CFD 的完整清单。",
             en: "1.CFDs are agreements to exchange the difference in value of a particular instrument or currency between the time at which the agreement is entered into and the time at which it is closed. CFDs allow the Firm’s Clients to replicate the economic effect of trading in particular currencies or other instruments without requiring actual ownership of those assets; a full list of the CFDs on offer by TigerWit is available on our Website.",
-            vi: "^^-^^",
+            vi: "1.CFDs là các thỏa thuận để trao đổi sự khác biệt về giá trị của một công cụ hoặc tiền tệ cụ thể giữa thời điểm thỏa thuận được ký kết và thời gian đóng cửa thỏa thuận. CFD cho phép Khách hàng của Công ty nhân rộng hiệu quả kinh tế của giao dịch bằng các loại tiền tệ cụ thể hoặc các công cụ khác mà không yêu cầu quyền sở hữu thực sự của các tài sản đó; danh sách đầy đủ các CFD do TigerWit cung cấp có sẵn trên trang web của chúng tôi. 	",
             "zh-Hant": "1.CFD 是用於交易簽訂協議時和結束協議時特定工具或貨幣價差的協議。CFD 使本公司的客戶能復制交易特定貨幣或其他工具的經濟效果，而無需實際擁有這些資產；您可在我們的網站上找到 TigerWit 所提供 CFD 的完整清單。"
         },
         amtRisk12: {
             zh: "2.CFD 是场外交易（或“OTC”）的衍生产品交易；这意味着在任何时候 TigerWit 都是与客户进行交易的交易对方，与本公司签订的任何 CFD 交易，只能由我们来关闭。您开立或关闭交易的能力取决于我们交易平台的可用性。",
             en: "2.CFDs are derivative products traded off- exchange (or Over-the-Counter (‘OTC’)); this means TigerWit is at all times the counterparty to the Client trades and any CFD trades entered into with the Firm, can only be closed with us. Your ability to open and/or close trades is dependent on the availability of our trading platform(s).",
-            vi: "^^-^^",
+            vi: "2.CFD là các sản phẩm phái sinh được giao dịch ngoại hối (hoặc Over-the-Counter (‘OTC’)); điều này có nghĩa là TigerWit luôn là đối tác của các giaodijch Khách hàng và mọi giao dịch CFD được ký kết với Công ty, chỉ có thể đóng với chúng tôi. Khả năng mở và/ hoặc đóng giao dịch của bạn phụ thuộc vào sự sẵn có của (các) sàn giao dịch của chúng tôi.",
             "zh-Hant": "2.CFD 是場外交易（或“OTC”）的衍生產品交易；這意味著在任何時候 TigerWit 都是與客戶進行交易的交易對方，與本公司簽訂的任何 CFD 交易，只能由我們來關閉。您開立或關閉交易的能力取決於我們交易平臺的可用性。"
         },
         amtRisk13: {
             zh: "3.您了解自己无权实物交付您正在交易的CFD 基础工具（或参考工具），您在基础工具中也不会拥有权利（例如，如果您交易的是股票 CFD，此权利为投票权）。",
             en: "3.You understand that you are not entitled to the physical delivery of the underlying instrument (or reference instrument) of the CFDs you are trading and you have no rights in the underlying instrument (such as voting rights in case you are trading CFDs on shares).",
-            vi: "^^-^^",
+            vi: "3.Bạn hiểu rằng bạn không có quyền giao hàng vật lý của công cụ cơ bản (hoặc công cụ tham chiếu) của CFD mà bạn đang giao dịch và bạn không có quyền trong công cụ cơ bản (như quyền biểu quyết trong trường hợp bạn đang giao dịch CFD trên cổ phiếu).",
             "zh-Hant": "3.您了解自己無權實物交付您正在交易的CFD 基礎工具（或參考工具），您在基礎工具中也不會擁有權利（例如，如果您交易的是股票 CFD，此權利為投票權）。"
         },
         amtRisk14: {
             zh: "4.CFD 在一天当中会出现价格波动；CFD的价格变动由许多因素决定，包括但不限于市场信息的可用性。",
             en: "4.CFDs fluctuate in value during the day; the price movements of CFDs are determined by a number of factors including but not limited to availability of market information.",
-            vi: "^^-^^",
+            vi: "4.CFD biến động về giá trị trong ngày; biến động giá của CFD được xác định bởi một số yếu tố bao gồm nhưng không giới hạn ở tính sẵn có của thông tin thị trường. ",
             "zh-Hant": "4.CFD 在壹天當中會出現價格波動；CFD的價格變動由許多因素決定，包括但不限於市場信息的可用性。"
         },
         amtRisk15: {
             zh: "价格和成本",
             en: "Prices and Costs",
-            vi: "^^-^^",
+            vi: "Giá cả và chi phí",
             "zh-Hant": "價格和成本"
         },
         amtRisk16: {
             zh: "1.我们交易平台产生的价格来自相关基础工具的价格，此价格由本公司从第三方流动性提供商获得。您与我们交易 CFD 的价格包括一个加价；这意味着我们提供的差价包括 (i) 从流动性提供商接收到的原始差价和 (ii) 加价（如果适用）。",
             en: "1.The prices generated by our trading platform(s) are derived from the prices of the relevant underlying instruments, which the Firm obtains from third party liquidity/ price providers. The prices of CFDs that you trade with us include a mark-up; this means that the spreads offered by us comprise of (i) the raw spreads received from liquidity/ price provider(s) and (ii) a mark-up (where applicable).",
-            vi: "^^-^^",
+            vi: "1.Giá được tạo ra bởi (các) nền tảng giao dịch của chúng tôi bắt nguồn từ giá của các công cụ cơ bản có liên quan mà Công ty thu được từ các nhà cung cấp liquidity/ giá của bên thứ ba. Giá CFD mà bạn giao dịch với chúng tôi bao gồm mark-up, có nghĩa là các khoản chênh lệch do chúng tôi cung cấp bao gồm (i) chênh lệch thô nhận được từ liquidity/ nhà cung cấp giá và (ii) mark-up (nếu có).",
             "zh-Hant": "1.我們交易平臺產生的價格來自相關基礎工具的價格，此價格由本公司從第三方流動性提供商獲得。您與我們交易 CFD 的價格包括壹個加價；這意味著我們提供的差價包括 (i) 從流動性提供商接收到的原始差價和 (ii) 加價（如果適用）。"
         },
         amtRisk17: {
             zh: "2.为了交易某些 CFD，客户可能需要支付佣金或其他费用；您可以在我们的网站中查看详细的说明。对于本公司提供的所有类型 CFD，佣金（如果适用）和隔夜费用并不纳入本公司的报价中，而是直接向客户账户收取相关费用。如果存在隔夜费用，某些类型金融工具的未平仓头寸价格需要加上或减去在整个交易期间的每 日 隔 夜 费 用 （ 标 注 ： “掉 期 ”是 否 可 以 去掉？）。融资费用以现行市场利率为准。从星期一到星期五，每个工作日对掉期收取一次费用，星期三掉期收取三倍的费用，其中包括周末的费用；有关日常隔夜费用的详细信息，请访问我们的网站。",
             en: "2.For trading certain CFDs, the Client may be required to pay a commission and/ or other fees; these instances are described in detail in our Website. For all type of CFDs offered by the Firm, the commission (if applicable) and financing/ overnight fees are not incorporated into the Firm’s quoted prices and are instead charged explicitly to the Client Account(s). In the case of financing/ overnight fees, the value of opened positions in some types of financial instruments is increased or reduced by a daily financing fee ‘swap’ throughout the life of the trade. The financing fees are based on prevailing market interest rates. From Mondays to Fridays swap is charged once for every business day and on Wednesdays swap is charged in triple size in order to account for the weekend; details of daily financing/ overnight fees applied, are available in our Website",
-            vi: "^^-^^",
+            vi: "2.Để giao dịch CFDs nhất định, Khách hàng có thể được yêu cầu trả hoa hồng và/ hoặc các khoản phí khác; những trường hợp này được mô tả chi tiết trong trang web của chúng tôi. Đối với tất cả các loại CFD do Công ty cung cấp, hoa hồng (nếu có) và phí tài chính/ qua đêm không được tính vào giá niêm yết của Công ty và thay vào đó được tính phí một cách rõ rang cho (các) Tài khoản Khách hàng. Trong trường hợp tài chính/ phí qua đêm, giá trị của các vị trí mở trong một số loại công cụ tài chính được tăng hoặc giảm bằng khoản phí tài chính hàng ngày ‘hoán đổi’ trong suốt thời gian giao dịch. Phí tài chính dựa trên lãi suất thị trường hiện hành. Từ thứ Hai đến thứ Sáu, phí hoán đổi được tính một lần cho mỗi ngày làm việc và vào ngày thứ Tư, hoán đổi được tính theo ba lần kích thước để tính vào cuối tuần; chi tiết về phí tài chính/ phí qua đêm hàng ngày được áp dụng, có sẵn trên trang web của chúng tôi.",
             "zh-Hant": "2.為了交易某些 CFD，客戶可能需要支付傭金或其他費用；您可以在我們的網站中查看詳細的說明。對於本公司提供的所有類型 CFD，傭金（如果適用）和隔夜費用並不納入本公司的報價中，而是直接向客戶賬戶收取相關費用。如果存在隔夜費用，某些類型金融工具的未平倉頭寸價格需要加上或減去在整個交易期間的每 日 隔 夜 費 用 （ 標 註 ： “掉 期 ”是 否 可 以 去掉？）。融資費用以現行市場利率為準。從星期壹到星期五，每個工作日對掉期收取壹次費用，星期三掉期收取三倍的費用，其中包括周末的費用；有關日常隔夜費用的詳細信息，請訪問我們的網站。"
         },
         amtRisk18: {
             zh: "3.TigerWit 在执行客户交易时充当做市商，本公司可能会从任何客户损失中获利。",
             en: "3.TigerWit acts as market maker when executing Client trades and the Firm may profit from any Client losses.",
-            vi: "^^-^^",
+            vi: "3.TigerWit đóng vai trò là nhà sản xuất thị trường khi thực hiện các giao dịch của Khách hàng và Công ty có thể hưởng lợi từ bất kỳ tổn thất nào của Khách hàng.",
             "zh-Hant": "3.TigerWit 在執行客戶交易時充當做市商，本公司可能會從任何客戶損失中獲利。"
         },
         amtRisk19: {
             zh: "4.您不应使用从任何信贷机构（包括银行贷款或其他方式）获得的钱来为您的账户提供资金。您应该明白，这将会显著增加您的总体风险。例如，如果您的交易出现损失，您仍然必须偿还所有借款金额以及所有利息或其他费用。因此，您绝不应使用这些借款资金进行任何交易，且绝不应依靠任何交易的利润来偿还这些金额。",
             en: "4.You should not fund your Account using money obtained from any credit facility (including bank loan or otherwise). You should understand that your overall risks will be significantly increased. For instance, if you incur a loss on your trades, you will still have to repay any amount borrowed plus any interest or other costs. Therefore, you shall never finance any trades on such borrowed money and you should never rely on being able to profit on any trade, in order to repay such amounts.",
-            vi: "^^-^^",
+            vi: "4.Bạn không nên nạp tiền vào Tài khoản của bạn bằng cách sử dụng tiền thu được từ bất kỳ cơ sở tín dụng nào (bao gồm cả khoản vay ngân hàng hoặc bằng cách khác). Bạn nên hiểu rằng rủi ro tổng thể của bạn sẽ được tăng lên đáng kể. Ví dụ, nếu bạn bị thua lỗ trên các giao dịch của mình, bạn sẽ vẫn phải hoàn trả bất kỳ số tiền nào được vay cộng với bất kỳ khoản lãi hoặc các chi phí nào khác. Do đó, bạn sẽ không bao giờ tài trợ bất kỳ giao dịch nào trên số tiền vay đó và bạn không nên dựa vào việc có thể kiếm lời trên bất kỳ giao dịch nào, để trả lại số tiền đó.",
             "zh-Hant": "4.您不應使用從任何信貸機構（包括銀行貸款或其他方式）獲得的錢來為您的賬戶提供資金。您應該明白，這將會顯著增加您的總體風險。例如，如果您的交易出現損失，您仍然必須償還所有借款金額以及所有利息或其他費用。因此，您絕不應使用這些借款資金進行任何交易，且絕不應依靠任何交易的利潤來償還這些金額。"
         },
         amtRisk20: {
             zh: "市场状况、所需保证金、杠杆和强平水平",
             en: "Market Conditions, Required Margin, Leverage and Stop-Out Levels",
-            vi: "^^-^^",
+            vi: "Điều kiện thị trường, yêu cầu Margin, đòn bẩy và mức dừng.",
             "zh-Hant": "市場狀況、所需保證金、杠桿和強平水平"
         },
         amtRisk21: {
             zh: "1.交易 CFD 使您能够利用杠杆来开立交易，其方式是预付交易总额的一小部分；这意味着相对较小的市场走势可能导致您的交易价值出现成比例的重大波动。为了计算保证金，使用的杠杆水平将是以下二者中的较低者：(i) 账户或 (ii) 交易的产品。此逻辑适用于我们所有的交易平台。",
             en: "1.Trading CFDs enables you to use leverage to open a trade by depositing a fraction of the total trade value; this means that a relatively small market movement may lead to a proportionately much larger movement in the value of your trade. For margin calculation purposes, the leverage level used will be the lower of: (i) the Account or (ii) symbol traded. This logic applies on all our trading platforms. ",
-            vi: "^^-^^",
+            vi: "1.Gaio dịch CFD cho phép bạn sử dụng đòn bẩy để mở một giao dịch bắng cách gửi một phần nhỏ của tổng giá trị giao dịch; điều này có nghĩa là một phong trào thị trường tương đối nhỏ có thể dẫn đến một phong trào lớn hơn nhiều trong giá trị của thương mại của bạn. Đối với mục đích tính toán Margin, mức đòn bẩy được sử dụng sẽ thaaso hơn; (i) Tài khoản hoặc (ii)biểu tượng được giao dịch. Logic này được áp dụng trên tất cả các nền tảng giao dịch của chúng tôi.",
             "zh-Hant": "1.交易 CFD 使您能夠利用杠桿來開立交易，其方式是預付交易總額的壹小部分；這意味著相對較小的市場走勢可能導致您的交易價值出現成比例的重大波動。為了計算保證金，使用的杠桿水平將是以下二者中的較低者：(i) 賬戶或 (ii) 交易的產品。此邏輯適用於我們所有的交易平臺。"
         },
         amtRisk22: {
             zh: "2.在开户过程中，默认杠杆设置为 1:50。您保留权利申请更高的杠杆，但这将由本公司裁量决定，并受到客户适当性评估结果的影响。",
             en: "2.During the account opening process the default leverage is set at 1:50. You reserve the right to request a higher leverage but this will be at the discretion of the Firm and subject to the Client’s appropriateness assessment.",
-            vi: "^^-^^",
+            vi: "2.Trong quá trình mở tài khoản đòn bẩy mặc định được đặt oqr 1:50. Bạn bảo lưu quyền yêu cần đòn bẩy cao hơn nhưng điều này sẽ tùy thuộc vào quyết định của Công ty và tùy thuộc vào đánh giá phù hợp của Khách hàng. ",
             "zh-Hant": "2.在開戶過程中，默認杠桿設置為 1:50。您保留權利申請更高的杠桿，但這將由本公司裁量決定，並受到客戶適當性評估結果的影響。"
         },
         amtRisk23: {
             zh: "3.金融市场可能会迅速波动，以反映本公司或您控制之外的事件；因此，价格将会变得不稳定。价格波动的一种形式是“跳空”，当价格从一个水平突然转变到另一个水平时，就会发生这种波动。这可能是由于某些原因（例如，在交易时间之内或之外意外的经济事件或市场公告）造成。因此，TigerWit 可能无法以您申请的价格执行指令。此外，如果价格向不利的方向变动，将对您的交易产生直接和实时的影响，并且可能引发自动强平。您所有的交易都有可能被强平，而不仅是产生损失的那些交易。",
             en: "3.Financial markets may fluctuate rapidly to reflect events that are outside the control of the Firm and/or your control; as a result, prices will become volatile. One form of price volatility is ‘gapping’, which occurs when there is a sudden shift in prices from one level to another. This can be caused, for example by unexpected economic events or market announcements, within or outside trading hours. Consequently, TigerWit may be unable to execute your instructions at the requested price. In addition, if prices move against you, this will have a direct and real time impact on your trades, which may be automatically stopped-out. It is possible that you all your trades will be stopped-out; not just the ones that are loss making.",
-            vi: "^^-^^",
+            vi: "3.Thị trường tài chính có thể biến động nhanh chóng để phản ánh các sự kiện nằm ngoài tầm kiểm soát của Công ty và / hoặc kiểm soát của bạn; kết quả là, giá sẽ trở nên dễ bay hơi. Một dạng biến động giá là 'gapping', xảy ra khi có sự thay đổi đột ngột về giá từ mức này sang cấp khác. Điều này có thể được gây ra, ví dụ như các sự kiện kinh tế bất ngờ hoặc thông báo thị trường, trong hoặc ngoài giờ giao dịch. Do đó, TigerWit có thể không thực hiện được các hướng dẫn của bạn với mức giá được yêu cầu. Ngoài ra, nếu giá di chuyển theo bạn, điều này sẽ có tác động trực tiếp và thời gian thực trên các giao dịch của bạn, điều này có thể tự động bị ngừng lại. Có thể tất cả các giao dịch của bạn sẽ bị ngừng lại; không chỉ là những người đang thua lỗ.",
             "zh-Hant": "3.金融市場可能會迅速波動，以反映本公司或您控制之外的事件；因此，價格將會變得不穩定。價格波動的壹種形式是“跳空”，當價格從壹個水平突然轉變到另壹個水平時，就會發生這種波動。這可能是由於某些原因（例如，在交易時間之內或之外意外的經濟事件或市場公告）造成。因此，TigerWit 可能無法以您申請的價格執行指令。此外，如果價格向不利的方向變動，將對您的交易產生直接和實時的影響，並且可能引發自動強平。您所有的交易都有可能被強平，而不僅是產生損失的那些交易。"
         },
         amtRisk24: {
             zh: "4.您应当注意，已经开始交易的账户，对您的杠杆水平进行任何更改都可能会立即影响您的未平仓头寸，并可能导致强平",
             en: "4.You should note that any changes made to your leverage level, on an already traded Account, can immediately affect your open positions and may result in a stop-out.",
-            vi: "^^-^^",
+            vi: "4.Bạn nên lưu ý rằng bất kỳ thay dổi nào được thực hiện đối với mức đòn bẩy của bạn, trên một tài khoản đã được giao dịch, có thể ảnh hưởng ngay lập tức đến các vị thế đang mở của bạn và có thể dẫn đến việc dừng hoạt động.",
             "zh-Hant": "4.您應當註意，已經開始交易的賬戶，對您的杠桿水平進行任何更改都可能會立即影響您的未平倉頭寸，並可能導致強平"
         },
         amtRisk25: {
             zh: "5.您有责任监控自己未平仓头寸所需的保证金，为避免强平，您可能需要为账户补充资金。",
             en: "5.It is your responsibility to monitor the required margin of your open positions and in order to avoid a stop-out you may have to fund your Account.",
-            vi: "^^-^^",
+            vi: "5.Bạn có trách nhiệm theo dõi biên độ bắt buộc của các vị thế mở của mình và để tránh bị ngừng, bạn có thể phải chuyển tiền vào Tài khoản của mình.",
             "zh-Hant": "5.您有責任監控自己未平倉頭寸所需的保證金，為避免強平，您可能需要為賬戶補充資金。"
         },
         amtRisk26: {
             zh: "6.有关详细信息，请参阅“订单执行政策”的“保证金和杠杆”小节。",
             en: "6.For further information, please refer to the ‘Margin and Leverage’ section of the ‘Order Execution Policy’.",
-            vi: "^^-^^",
+            vi: "6.Để biết thêm thông tin , vui lòng tham khảo mục ‘Margin và đòn bẩy’ của ‘ Chính sách thực hiện lệnh’.",
             "zh-Hant": "6.有關詳細信息，請參閱“訂單執行政策”的“保證金和杠桿”小節。"
         },
         amtRisk27: {
             zh: "外汇和其他相关风险",
             en: "Foreign Exchange and Other Related Risks",
-            vi: "^^-^^",
+            vi: "Rủi ro ngoại hối và các rủi ro liên quan khác",
             "zh-Hant": "外匯和其他相關風險"
         },
         amtRisk28: {
             zh: "1.如果您交易的产品以您账户货币以外的货币进行计值，您将受到外汇价格变动的影响。由本公司使用交叉即期汇率计算客户账户计值货币与相关 CFD 货币的兑换。",
             en: "1.You will be impacted by foreign exchange movements, if you are trading in a product that is denominated in a currency other than the currency of your Account. Any currency conversion calculations are provided by the Firm to the Client in the currency in which the Client account is denominated and the currency of the relevant CFD, using the cross-spot rate.",
-            vi: "^^-^^",
+            vi: "1.Bạn sẽ bị ảnh hưởng bởi các phong trào ngoại hối, nếu bạn đang giao dịch bằng một sản phẩm có giá trị bằng đơn vị tiền tệ khác với đơn vị tiền tệ trong Tài khoản của bạn. Bất kỳ tính toán chuyển đổi tiền tệ nào được Công ty cung cấp cho Khách hàng bằng đơn vị tiền tệ trong đó tài khoản Khách hàng có mệnh giá và đơn vị tiền tệ của CFD có liên quan, sử dụng tỷ giá giao ngay.",
             "zh-Hant": "1.如果您交易的產品以您賬戶貨幣以外的貨幣進行計值，您將受到外匯價格變動的影響。由本公司使用交叉即期匯率計算客戶賬戶計值貨幣與相關 CFD 貨幣的兌換。"
         },
         amtRisk29: {
             zh: "2.您的 CFD 交易能力也可能受到法律、法规、税务环境和其他因素变化的影响。",
             en: "2.Your capacity to trade CFDs may also be affected as a result of changes in the legal, regulatory, taxation environment and/or other.",
-            vi: "^^-^^",
+            vi: "2.Khả năng giao dịch CFD của bạn cũng có thể bị ảnh hưởng do các thay đổi trong môi trường pháp lý, quy chế, thuế và/ hoăc khác.",
             "zh-Hant": "2.您的 CFD 交易能力也可能受到法律、法規、稅務環境和其他因素變化的影響。"
         },
         amtRisk30: {
             zh: "技术风险",
             en: "Technical Risks",
-            vi: "^^-^^",
+            vi: "Rủi Ro Kỹ Thuật",
             "zh-Hant": "技術風險"
         },
         amtRisk31: {
             zh: "1.我们试图持续提供价格，并让您在我们网站上指明的交易期间访问我们的交易平台。但是，有些情况会导致无法访问交易平台。例如，电信/互联网连接不畅、系统错误和中断或其他因素的情况。以上情况可能会导致发布订单时的价格和本公司收到订单时的价格发生变化。此外，这些技术风险可能会严重影响您订单的执行情况。",
             en: "1.We try to generate prices continuously and provide you with access* to our trading platforms throughout the trading sessions as indicated on our Website. However, there are instances where this is not possible; for example, instances of poor telecommunication/ internet connectivity, system errors and outages and/or other factors. The above may cause prices to change between the time an order is placed and the time the order has been received by the Firm. In addition, these technical risks may significantly impact the execution of your orders.",
-            vi: "^^-^^",
+            vi: "1.Chúng tôi cố gắng tạo ra giá liên tục và cung cấp cho bạn quyền truy cập * vào các nền tảng giao dịch của chúng tôi trong suốt các phiên giao dịch như được nêu trên Trang web của chúng tôi. Tuy nhiên, có những trường hợp mà điều này là không thể; ví dụ, các trường hợp kết nối viễn thông / internet kém, lỗi hệ thống và mất điện và / hoặc các yếu tố khác. Các điều trên có thể khiến giá thay đổi giữa thời điểm đặt hàng và thời điểm Công ty nhận được đơn đặt hàng. Ngoài ra, những rủi ro kỹ thuật này có thể ảnh hưởng đáng kể đến việc thực hiện các đơn đặt hàng của bạn.",
             "zh-Hant": "1.我們試圖持續提供價格，並讓您在我們網站上指明的交易期間訪問我們的交易平臺。但是，有些情況會導致無法訪問交易平臺。例如，電信/互聯網連接不暢、系統錯誤和中斷或其他因素的情況。以上情況可能會導致發布訂單時的價格和本公司收到訂單時的價格發生變化。此外，這些技術風險可能會嚴重影響您訂單的執行情況。"
         },
         amtRisk32: {
             zh: "*包括通过移动应用程序访问我们的交易平台",
             en: "* Access to our trading platforms includes access via mobile applications",
-            vi: "^^-^^",
+            vi: "* Access to our trading platforms includes access via mobile applications",
             "zh-Hant": "*包括通過移動應用程序訪問我們的交易平臺"
         },
         amtRisk33: {
             zh: "客户资金",
             en: "Client Money",
-            vi: "^^-^^",
+            vi: "Tiền của Khách hàng",
             "zh-Hant": "客戶資金"
         },
         amtRisk34: {
             zh: "1.如果您被分类为零售客户，我们代表您持有的任何资金将保存在由位于巴哈马境内或境外的机构所持有的一个或多个独立账户中，这部分资金与本公司的资金是分开的。客户资金将与属于其他客户的资金汇集在一起（“综合账户”）；因此，如果出现破产的情况，个人客户将不能针对具体账户中的特定款项提出索赔。客户的索赔将针对综合账户中的客户资金。一般而言，由机构持有的账户（包括综合账户）面临各种风险，包括在机构违约的情况下被作为一 个账户处理的潜在风险。在这种情况下，可能会在不考虑综合账户最终利益拥有者的情况下实施国家存款保障计划。另一项风险可能是，如果 TigerWit 无法履行对其他客户的义务，则综合账户中的资金可能会受到 TigerWit 与此类客户的头寸相关义务的影响。如果 TigerWit用于保存客户资金的机构偿付能力部分或完全受到损害，任何损失将由您而非本公司来承担。如果任何此类机构出现违约，客户不得向本公司要求赔偿。",
             en: "1.If you are categorised as a retail client, any money that we hold on your behalf will be kept in one or more segregated accounts with an institution within or outside The Bahamas, separated from the Firm’s money. The Client Money will be pooled with money belonging to other Clients (the ‘Omnibus Account’); therefore, an individual Client will not have a claim against a specific sum in a specific account, in the event of insolvency. A Client’s claim may be against the Client Money in the Omnibus Account. In general, accounts held with institutions, including omnibus account(s), face various risks, including the potential risk of being treated as one (1) account in case the institution defaults. Under such circumstances, the enforcement of the national deposit guarantee scheme may be applied without consideration of the ultimate beneficial owners of the Omnibus Account. Another risk might be that the funds in the Omnibus Account may be exposed to obligations of TigerWit connected with the positions of other Clients in case TigerWit is unable to meet its obligations towards them. In the event that the solvency of the institution that TigerWit utilises to keep Client Money is partially or fully compromised, any loss shall be borne by you not us. In the event that any such institution defaults, the Client shall have no redress against the Firm.",
-            vi: "^^-^^",
+            vi: "1.Nếu bạn được phân loại là khách hàng bán lẻ, bất kỳ khoản tiền nào chúng tôi giữ thay mặt bạn sẽ được giữ trong một hoặc nhiều tài khoản riêng biệt với một tổ chức trong hoặc ngoài Bahamas, tách biệt với tiền của Công ty. Tiền khách hàng sẽ được gộp chung với tiền thuộc về các Khách hàng khác (‘Tài khoản Omnibus’); do đó, một Khách hàng cá nhân sẽ không có yêu cầu chống lại một khoản tiền cụ thể trong một tài khoản cụ thể, trong trường hợp mất khả năng thanh toán. Khiếu nại của Khách hàng có thể chống lại Tiền của Khách hàng trong Tài khoản Omnibus. Nói chung, các tài khoản được tổ chức với các tổ chức, bao gồm các tài khoản omnibus, phải đối mặt với nhiều rủi ro khác nhau, bao gồm rủi ro tiềm ẩn được coi là một (1) tài khoản trong trường hợp cơ sở mặc định. Trong những trường hợp như vậy, việc thực thi kế hoạch bảo lãnh tiền gửi quốc gia có thể được áp dụng mà không xem xét các chủ sở hữu có lợi cuối cùng của Tài khoản Omnibus. Một rủi ro khác có thể là tiền trong Tài khoản Omnibus có thể bị ràng buộc với các nghĩa vụ của TigerWit được kết nối với các vị trí của các Khách hàng khác trong trường hợp TigerWit không thể đáp ứng các nghĩa vụ của mình đối với họ. Trong trường hợp khả năng thanh toán của tổ chức mà TigerWit sử dụng để giữ cho Khách hàng Tiền bị tổn hại một phần hoặc toàn bộ, mọi tổn thất sẽ do bạn không phải chịu. Trong trường hợp bất kỳ tổ chức như vậy mặc định, Khách hàng sẽ không có sự cố đối với Công ty.",
             "zh-Hant": "1.如果您被分類為零售客戶，我們代表您持有的任何資金將保存在由位於巴哈馬境內或境外的機構所持有的壹個或多個獨立賬戶中，這部分資金與本公司的資金是分開的。客戶資金將與屬於其他客戶的資金匯集在壹起（“綜合賬戶”）；因此，如果出現破產的情況，個人客戶將不能針對具體賬戶中的特定款項提出索賠。客戶的索賠將針對綜合賬戶中的客戶資金。壹般而言，由機構持有的賬戶（包括綜合賬戶）面臨各種風險，包括在機構違約的情況下被作為壹 個賬戶處理的潛在風險。在這種情況下，可能會在不考慮綜合賬戶最終利益擁有者的情況下實施國家存款保障計劃。另壹項風險可能是，如果 TigerWit 無法履行對其他客戶的義務，則綜合賬戶中的資金可能會受到 TigerWit 與此類客戶的頭寸相關義務的影響。如果 TigerWit用於保存客戶資金的機構償付能力部分或完全受到損害，任何損失將由您而非本公司來承擔。如果任何此類機構出現違約，客戶不得向本公司要求賠償。"
         },
         amtRisk35: {
             zh: "不作建议",
             en: "No Advice",
-            vi: "^^-^^",
+            vi: "Không có lời khuyên",
             "zh-Hant": "不作建議"
         },
         amtRisk36: {
             zh: "1.TigerWit 可能不时（根据本公司认为适当 的 频 率 ） 发 布 或 分 发 第 三 方 材 料 （ “ 材料”），其中含有的信息包括但不限于通过我们网站和其他媒体发布的或您收到的金融市场状况的信息 。应当注意的是，该材料仅被视为营销沟通，不包含且不应被视为投资意见或投资建议或金融工具交易的要约或诱使；在作出任何交易决策之前，应由客户自行评估各自的情况。TigerWit 对所提供信息的准确性或完整性不承担任何责任，也不负责承担任何根据 TigerWit 员工、第三方或其他人员所提供的建议、预测或其他信息所进行的任何投资而产生的任何损失。本材料并非按照促进投资研究独立性的法律要求而编制，不受任何散播投资研究前交易禁令的约束。本材料中包含的所有意见表述如有更改，恕不另行通知。任何意见都是作者的个人观点，而不代表 TigerWit 的意见。",
             en: "1.TigerWit may, from time to time and as often as it deems appropriate, issue and/or distribute third party material (the ‘Material’), which contains information including but not limited to the conditions of the financial markets, posted through our Website and other media and/or received by you. It should be noted that the Material is considered to be marketing communication only and does not contain, and should not be construed as containing, investment advice and/or an investment recommendation and/or, an offer of or solicitation for any transactions in financial instruments; any decision to enter into a specific transaction shall be made by the Client following an assessment by him/herself of their situation. TigerWit makes no representation and assumes no liability as to the accuracy or completeness of the information provided, nor any loss arising from any investment based on a recommendation, forecast or other information supplied by any employee of TigerWit, a third party or otherwise. The Material is not prepared in accordance with legal requirements promoting the independence of investment research and it is not subject to any prohibition on dealing ahead of the dissemination of investment research. All expressions of opinion included in the Material are subject to change without notice. Any opinions made may be personal to the author and may not reflect the opinions of TigerWit.",
-            vi: "^^-^^",
+            vi: "1.TigerWit có thể, theo thời gian và thường xuyên xét thấy thích hợp, phát hành và / hoặc phân phối tài liệu của bên thứ ba ('Tài liệu'), chứa thông tin bao gồm nhưng không giới hạn ở các điều kiện của thị trường tài chính, được đăng trên trang web của chúng tôi và phương tiện truyền thông khác và / hoặc nhận được bởi bạn. Cần lưu ý rằng Tài liệu được coi là thông tin tiếp thị và không chứa và không được hiểu là có chứa, tư vấn đầu tư và / hoặc khuyến nghị đầu tư và / hoặc đề nghị hoặc chào mời bất kỳ giao dịch nào trong các công cụ tài chính ; bất kỳ quyết định nào để tham gia vào một giao dịch cụ thể sẽ do Khách hàng thực hiện sau khi được đánh giá bởi chính họ về tình hình của họ. TigerWit không đại diện và không chịu trách nhiệm về tính chính xác hoặc đầy đủ của thông tin được cung cấp, cũng như bất kỳ tổn thất nào phát sinh từ bất kỳ khoản đầu tư nào dựa trên đề xuất, dự báo hoặc thông tin khác được cung cấp bởi bất kỳ nhân viên nào của TigerWit. Các tài liệu không được chuẩn bị phù hợp với các yêu cầu pháp lý thúc đẩy sự độc lập của nghiên cứu đầu tư và nó không phải chịu bất kỳ lệnh cấm xử lý trước việc phổ biến nghiên cứu đầu tư. Tất cả các biểu thức của ý kiến ​​được bao gồm trong Tài liệu có thể thay đổi mà không cần thông báo. Bất kỳ ý kiến ​​nào có thể mang tính cá nhân đối với tác giả và có thể không phản ánh ý kiến ​​của TigerWit.",
             "zh-Hant": "1.TigerWit 可能不時（根據本公司認為適當 的 頻 率 ） 發 布 或 分 發 第 三 方 材 料 （ “ 材料”），其中含有的信息包括但不限於通過我們網站和其他媒體發布的或您收到的金融市場狀況的信息 。應當註意的是，該材料僅被視為營銷溝通，不包含且不應被視為投資意見或投資建議或金融工具交易的要約或誘使；在作出任何交易決策之前，應由客戶自行評估各自的情況。TigerWit 對所提供信息的準確性或完整性不承擔任何責任，也不負責承擔任何根據 TigerWit 員工、第三方或其他人員所提供的建議、預測或其他信息所進行的任何投資而產生的任何損失。本材料並非按照促進投資研究獨立性的法律要求而編制，不受任何散播投資研究前交易禁令的約束。本材料中包含的所有意見表述如有更改，恕不另行通知。任何意見都是作者的個人觀點，而不代表 TigerWit 的意見。"
         },
         amtRisk37: {
             zh: "2.TigerWit 不提供与投资或交易 CFD 有关的投资、财务、法律、税务、监管或其他建议。通过我们的网站、交易平台、营销、培训活动或其他方式提供给您的任何材料或信息或其他功能都是一般性的，不应将其视为适合您或根据您个人情况考虑得出的建议。在与我们进行CFD 交易之前，如果有必要，您应该向合格的顾问寻求独立的专业意见。",
             en: "2.TigerWit does not provide investment, financial, legal, tax, regulatory or other advice relating to investments or trading CFDs. Any material or information or other features, which may be provided to you through our Website, trading platforms, marketing or training events or otherwise, is generic and shall not be treated as advice appropriate for you or based on a consideration of your personal circumstances. You should seek independent professional advice from a suitably qualified advisor, if necessary, prior to engaging in trading CFD with us.",
-            vi: "^^-^^",
+            vi: "2.TigerWit không cung cấp tư vấn đầu tư, tài chính, pháp lý, thuế, quy định hoặc tư vấn khác liên quan đến đầu tư hoặc giao dịch CFD. Bất kỳ tài liệu hoặc thông tin hoặc các tính năng khác, có thể được cung cấp cho bạn thông qua trang web, nền tảng giao dịch, sự kiện tiếp thị hoặc đào tạo hoặc nói cách khác là chung chung và sẽ không được coi là lời khuyên phù hợp với bạn hoặc dựa trên việc xem xét hoàn cảnh cá nhân của bạn. Bạn nên tìm kiếm lời khuyên chuyên nghiệp độc lập từ",
             "zh-Hant": "2.TigerWit 不提供與投資或交易 CFD 有關的投資、財務、法律、稅務、監管或其他建議。通過我們的網站、交易平臺、營銷、培訓活動或其他方式提供給您的任何材料或信息或其他功能都是壹般性的，不應將其視為適合您或根據您個人情況考慮得出的建議。在與我們進行CFD 交易之前，如果有必要，您應該向合格的顧問尋求獨立的專業意見。"
         },
         amtRisk38: {
             zh: "过往业绩",
             en: "Past Performance",
-            vi: "^^-^^",
+            vi: "cố vấn có trình độ phù hợp, nếu cần, trước khi tham gia giao dịch CFD với chúng tôi.Past Performance",
             "zh-Hant": "過往業績"
         },
         amtRisk39: {
             zh: "1.CFD 的过往业绩、模拟或预测并不代表未来业绩。您应该注意到，随着标的资产市价向下（或向上）波动，您的投资价值可能会减少（以及增加）。",
             en: "1.Past performance, simulation or prediction of CFDs does not constitute an indication of future results. You should note that the value of your investment can decrease (as well as increase) as the market price of the underlying asset may fluctuate downwards (or upwards).",
-            vi: "^^-^^",
+            vi: "1.Hiệu suất, mô phỏng hoặc dự đoán trước đây của CFD không phải là dấu hiệu của các kết quả trong tương lai. Bạn nên lưu ý rằng giá trị đầu tư của bạn có thể giảm (cũng như tăng) khi giá thị trường của tài sản cơ bản có thể dao động xuống (hoặc trở lên).",
             "zh-Hant": "1.CFD 的過往業績、模擬或預測並不代表未來業績。您應該註意到，隨著標的資產市價向下（或向上）波動，您的投資價值可能會減少（以及增加）。"
         },
         amtRisk40: {
             zh: "更多信息",
             en: "Additional Information",
-            vi: "^^-^^",
+            vi: "Thông tin bổ sung",
             "zh-Hant": "更多信息"
         },
         amtRisk41: {
             zh: "1.如需了解更多信息，或者您了解本风险披露、我们的商业条款和条件、客户协议，或者您不知道交易 CFD 将如何影响您的投资，您必须寻求独立顾问的帮助。",
             en: "1.For further information, or if you do understand this Risk Disclosure, our Terms and Conditions of Business, the Client Agreement, or you do not know how trading CFDs may affect your investments, you must seek independent counsel.",
-            vi: "^^-^^",
+            vi: "1.Để biết thêm thông tin, hoặc nếu bạn hiểu điều này, hoặc Điều khoản và Điều kiện kinh doanh, Thỏa thuận khách hàng, hoặc bạn không biết cách giao dịch CFD có thể ảnh hưởng đến khoản đầu tư của bạn, bạn phải tìm kiếm tư vấn độc lập. ",
             "zh-Hant": "1.如需了解更多信息，或者您了解本風險披露、我們的商業條款和條件、客戶協議，或者您不知道交易 CFD 將如何影響您的投資，您必須尋求獨立顧問的幫助。"
         },
         amtCookie1: {
@@ -5669,7 +5669,7 @@ module.exports = function () {
         copytransaction0: {
             zh: "复制交易声明",
             en: "Trade Copying Declaration",
-            vi: "^^-^^",
+            vi: "Tuyên bố sao chép thương mại",
             "zh-Hant": "復制交易聲明"
         },
         copytransaction6: {
@@ -7980,7 +7980,7 @@ module.exports = function () {
             tip5: {
                 zh: "扫码轻松赚收益",
                 en: "Scan QR code and take profit easily",
-                vi: "Scan QR code and take profit easily",
+                vi: "Quét mã QR và nhận lợi nhuận dễ dàng",
                 "zh-Hant": "掃碼輕松賺收益"
             },
             tip6: {
@@ -8022,7 +8022,7 @@ module.exports = function () {
             guides: {
                 zh: "交易指南",
                 en: "Guides",
-                vi: "Guides",
+                vi: "Hướng dẫn",
                 "zh-Hant": "交易指南"
             },
             partners: {
@@ -8034,13 +8034,13 @@ module.exports = function () {
             agencies: {
                 zh: "代理合作",
                 en: "Agencies",
-                vi: "Agencies",
+                vi: "Các đại lý",
                 "zh-Hant": "代理合作"
             },
             becomeMaster: {
                 zh: "成为高手",
                 en: "Become a master",
-                vi: "Trở Thành một Bậc Thầy",
+                vi: "Trở Thành Master",
                 "zh-Hant": "成為高手"
             },
             eliteTeam: {
@@ -8058,7 +8058,7 @@ module.exports = function () {
             copyRegulations: {
                 zh: "复制规则",
                 en: "Copy Regulations",
-                vi: "Copy Regulations",
+                vi: "Quy chế sao chép",
                 "zh-Hant": "復制規則"
             }
         },
@@ -8066,13 +8066,13 @@ module.exports = function () {
             education: {
                 zh: "教育",
                 en: "Education",
-                vi: "Education",
+                vi: "Hỏi đáp",
                 "zh-Hant": "教育"
             },
             course: {
                 zh: "教程",
                 en: "Course",
-                vi: "Course",
+                vi: "Khóa học",
                 "zh-Hant": "教程"
             }
         },
@@ -8080,13 +8080,13 @@ module.exports = function () {
             serviceTime: {
                 zh: "客服电话（服务时间 8:00-22:00）",
                 en: "Customer service telephone (service time from 8:00 to 22:00)",
-                vi: "Customer service telephone (service time from 8:00 to 22:00)",
+                vi: "Số điện thoại dịch vụ chăm sóc khách hàng ( thời gian phục vụ từ 8:00 đến 22:00)",
                 "zh-Hant": "客服電話（服務時間 8:00-22:00）"
             },
             subscribeArticle: {
                 zh: "订阅每日必读的投资干货",
                 en: "Subscribe daily investment article",
-                vi: "Subscribe daily investment article",
+                vi: "Theo dõi bài viết đầu tư hàng ngày",
                 "zh-Hant": "訂閱每日必讀的投資幹貨"
             },
             scb: {

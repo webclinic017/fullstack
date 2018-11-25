@@ -2,7 +2,7 @@ module.exports = {
     newhome_1: {
         zh: "你需要的交易市场",
         en: "Trade the markets you want",
-        vi: "Giao dịch trên các thị trường mà bạn muốn",
+        vi: "Giao dịch trên nhiều thị trường",
         "zh-Hant": "妳需要的交易市場"
     },
     newhome_1_1: {
@@ -92,7 +92,7 @@ module.exports = {
     newhome_15: {
         zh: "成为TigerWit高手，你将获得跟随者盈利的20%。",
         en: "Become a TigerWit Master and earn 20% commission on your followers’ profits.",
-        vi: "Trở thành một Nhà Giao Địch Chính của TigerWit và nhận 20% hoa hồng từ lợi nhuận của những người theo dõi.",
+        vi: "Trở thành Nhà Giao Dịch Chính TigerWit và nhận 20% hoa hồng lợi nhuận từ người theo dõi.",
         "zh-Hant": "成為TigerWit高手，妳將獲得跟隨者盈利的20%。"
     },
     newhome_16: {
