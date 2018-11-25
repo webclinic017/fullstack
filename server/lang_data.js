@@ -116,7 +116,7 @@ module.exports = function () {
         guijinshu: {
             en: "Precious metal",
             zh: "贵金属",
-            vi: "kim loại quý",
+            vi: "Kim loại quý",
             "zh-Hant": "貴金屬"
         },
         nengyuan: {
@@ -8132,6 +8132,8 @@ module.exports = function () {
     var agment = replaceTiger(require('./mutilang/agment'))
     // 首页新UI
     var home = replaceTiger(require('./mutilang/home'))
+    //关于我们非中文
+    var aboutus = replaceTiger(require('./mutilang/aboutus'))
     return _.merge(
         data,
         faq,
@@ -8143,6 +8145,7 @@ module.exports = function () {
         mRegister,
         mThird,
         agment,
-        home
+        home,
+        aboutus
     );
 }; 

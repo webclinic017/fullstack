@@ -5956,6 +5956,92 @@
                         vi: "Không rủi ro",
                         "zh-Hant": "不用承擔任何風險"
                     },
+                    //开户弹窗英文和越南文用下面文案 start
+                    openAcount1: {
+                        zh: "",
+                        en: "Live account",
+                        vi: "Tài khoản thực",
+                        "zh-Hant": ""
+                    },
+                    openAcount2: {
+                        zh: "",
+                        en: "Open a Live account and trade the markets you want, the way you want them.",
+                        vi: "Mở một tài khoản Thực và giao dịch với các thị trường bạn muốn, theo cách bạn muốn.",
+                        "zh-Hant": ""
+                    },
+                    openAcount3: {
+                        zh: "",
+                        en: "Key FX, precious metals, commodities and indices via CFD",
+                        vi: "Sản phẩm FX chính, các kim loại quý, hàng hóa và chỉ số thông qua CFD",
+                        "zh-Hant": ""
+                    },
+                    openAcount4: {
+                        zh: "",
+                        en: "Trade on a smarter, personalised, highly intuitive app",
+                        vi: "Giao dịch trên ứng dụng thông minh, được cá nhân hóa, trực quan hơn",
+                        "zh-Hant": ""
+                    },
+                    openAcount5: {
+                        zh: "",
+                        en: "Copy-trade by following a Master",
+                        vi: "Sao chép giao dịch bằng cách theo dõi một Nhà Giao Dịch Chính",
+                        "zh-Hant": ""
+                    },
+                    openAcount6: {
+                        zh: "",
+                        en: "Become a Master and share your followers’ profits",
+                        vi: "Trở thành một Nhà giao dịch chính và chia sẻ lợi nhuận của người theo dõi của bạn",
+                        "zh-Hant": ""
+                    },
+                    openAcount7: {
+                        zh: "",
+                        en: "Trading powered by blockchain",
+                        vi: "Giao dịch được hỗ trợ bởi blockchain",
+                        "zh-Hant": ""
+                    },
+                    openAcount8: {
+                        zh: "",
+                        en: "Open a Live account",
+                        vi: "Mở một tài khoản Thực",
+                        "zh-Hant": ""
+                    },
+                    openAcount9: {
+                        zh: "",
+                        en: "Experience account",
+                        vi: "Tài khoản Trải Nghiệm",
+                        "zh-Hant": ""
+                    },
+                    openAcount10: {
+                        zh: "",
+                        en: "Open an Experience account and practice trading in a risk-free environment with USD10,000of virtual funds.",
+                        vi: "Mở một tài khoản Trải nghiệm và thực hành giao dịch trong một môi trường phi rủi ro với 10,000 USD trong quỹ ảo.",
+                        "zh-Hant": ""
+                    },
+                    openAcount11: {
+                        zh: "",
+                        en: "Instant account-opening",
+                        vi: "Mở tài khoản ngay lập tức",
+                        "zh-Hant": ""
+                    },
+                    openAcount12: {
+                        zh: "",
+                        en: "Practice risk-free trading with virtual funds",
+                        vi: "Thực hành giao dịch phi rủi ro với các quỹ ảo",
+                        "zh-Hant": ""
+                    },
+                    openAcount13: {
+                        zh: "",
+                        en: "Upgrade quickly and easily to a Live account",
+                        vi: "Nâng cấp lên Tài khoản Thực nhanh chóng và dễ dàng",
+                        "zh-Hant": ""
+                    },
+                    openAcount14: {
+                        zh: "",
+                        en: "Open an Experience account",
+                        vi: "Mở một tài khoản Trải Nghiệm",
+                        "zh-Hant": ""
+                    },
+                    //END
                     provideService: {
                         zh: "定制您的个性化服务",
                         en: "To provide you with personalized service",
