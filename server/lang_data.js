@@ -8101,7 +8101,8 @@ module.exports = function () {
                 vi: "TigerWit is authorized and supervised by Financial Conduct Authority (FCA), the authorization number 679941.",
                 "zh-Hant": "TigerWit受英國金融行為監管局（FCA）的授權和監管，授權編號為：679941。"
             }
-        }
+        },
+
     };
 
     function replaceTiger(str) {
@@ -8117,6 +8118,8 @@ module.exports = function () {
 
     // 处理faq相关字段
     var faq = replaceTiger(require('./mutilang/faq'))
+    var liverpool = replaceTiger(require('./mutilang/liverpool'))
+    var medianewsandcontact = replaceTiger(require('./mutilang/medianewsandcontact'))
     var tobeMaster = replaceTiger(require('./mutilang/tobeMaster'))
     var tradeFee = replaceTiger(require('./mutilang/tradeFee'))
 
@@ -8132,6 +8135,8 @@ module.exports = function () {
     return _.merge(
         data,
         faq,
+        liverpool,
+        medianewsandcontact,
         tobeMaster,
         tradeFee,
         mInvite,
