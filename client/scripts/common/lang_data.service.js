@@ -6404,20 +6404,20 @@
                     },
                     completeInformation:{
                         zh:"完善资料",
-                        en:"Complete the information",
-                        vi:"^^-^^",
+                        en:"Complete information",
+                        vi:"Hoàn thành thông tin",
                         "zh-Hant":"完善資料"
                     },
                     tradingExperience:{
                         zh:"投资信息确认",
-                        en:"Trading Experience and Understanding",
-                        vi:"^^-^^",
+                        en:"Questionnaire",
+                        vi:"Bảng câu hỏi",
                         "zh-Hant":"投資信息確認"
                     },
                     iDVerification:{
                         zh:"实名认证",
                         en:"ID Verification",
-                        vi:"^^-^^",
+                        vi:"Xác nhận ID",
                         "zh-Hant":"實名認證"
                     },
                     activeSucc:{
