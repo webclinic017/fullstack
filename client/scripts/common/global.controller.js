@@ -46,7 +46,7 @@
         // 获取国家列表
         getWorlds();
         function getWorlds() {
-            account.getWorlds((lang.isEnglishArea() ? 'en' : 'cn')).then(function (data) {
+            account.getWorlds().then(function (data) {
                 if (!data) return;
                 // console.log(data);
                 if (!data.is_succ) {

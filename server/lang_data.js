@@ -140,7 +140,7 @@ module.exports = function () {
         login: {
             en: "Login",
             zh: "登录",
-            vi: "Login",
+            vi: "Đăng nhập",
             "zh-Hant": "登錄"
         },
         register: {
@@ -5602,7 +5602,7 @@ module.exports = function () {
         amtStatement4: {
             zh: "我已知晓TigerWit的跟单规则：按照跟随资金与“交易高手”账户资金等比例开仓，不足0.01的按照0.01开仓，开仓订单即为跟随订单。我已知晓在TigerWit开户的所有客户均可以成为TigerWit的“交易高手”，TigerWit对于其客户成为“交易高手”没有设定具体的条件和标准。",
             en: "I have acknowledged the following rules of TigerWit that position will be opened based on the proportion between following capital and capital in account of the \"trading master\" and that position will be opened based on that of 0.01 for those less than 0.01 and the open order would be the following order.I have known that all customers in the TigerWit's foreign exchange accounts can become a foreign exchange trading master, tiger foreign exchange for its customers to become a trading master did not set specific conditions and standards.",
-            vi: "Tôi đã thừa nhận các quy tắc sau đây của TigerWit rằng vị thế sẽ được mở dựa trên tỷ lệ giữa vốn và vốn trong tài khoản của \"nhà  giao dịch chính\" và vị thế đó sẽ được mở dựa trên 0,01 cho những lệnh nhỏ hơn 0,01 và lệnh mở sẽ là lệnh sao chép theo sau.NODE-loadERR",
+            vi: "Tôi đã thừa nhận các quy tắc sau đây của TigerWit rằng vị thế sẽ được mở dựa trên tỷ lệ giữa vốn và vốn trong tài khoản của \"nhà  giao dịch chính\" và vị thế đó sẽ được mở dựa trên 0.01 cho những lệnh nhỏ hơn 0.01 và lệnh mở sẽ là lệnh sao chép theo sau.NODE-loadERR",
             "zh-Hant": "我已知曉TigerWit的跟單規則：按照跟隨資金與“交易高手”賬戶資金等比例開倉，不足0.01的按照0.01開倉，開倉訂單即為跟隨訂單。我已知曉在TigerWit開戶的所有客戶均可以成為TigerWit的“交易高手”，TigerWit對於其客戶成為“交易高手”沒有設定具體的條件和標準。"
         },
         amtStatement5: {
@@ -5747,7 +5747,7 @@ module.exports = function () {
         copytransaction4: {
             zh: "我已知晓TigerWit的跟单规则：按照跟随资金与“交易高手”账户资金等比例开仓，不足0.01的按照0.01开仓，开仓订单即为跟随订单。我已知晓在TigerWit开户的所有客户均可以成为TigerWit的“交易高手”，TigerWit对于其客户成为“交易高手”没有设定具体的条件和标准。",
             en: "I have acknowledged the following rules of TigerWit that position will be opened based on the proportion between following capital and capital in account of the \"trading master\" and that position will be opened based on that of 0.01 for those less than 0.01 and the open order would be the following order.I have known that all customers in the TigerWit's foreign exchange accounts can become a foreign exchange trading master, tiger foreign exchange for its customers to become a trading master did not set specific conditions and standards.",
-            vi: "Tôi đã thừa nhận các quy tắc sau đây của TigerWit rằng vị thế sẽ được mở dựa trên tỷ lệ giữa vốn và vốn trong tài khoản của \"nhà  giao dịch chính\" và vị thế đó sẽ được mở dựa trên 0,01 cho những lệnh nhỏ hơn 0,01 và lệnh mở sẽ là lệnh sao chép theo sau.NODE-loadERR",
+            vi: "Tôi đã thừa nhận các quy tắc sau đây của TigerWit rằng vị thế sẽ được mở dựa trên tỷ lệ giữa vốn và vốn trong tài khoản của \"nhà  giao dịch chính\" và vị thế đó sẽ được mở dựa trên 0.01 cho những lệnh nhỏ hơn 0.01 và lệnh mở sẽ là lệnh sao chép theo sau.NODE-loadERR",
             "zh-Hant": "我已知曉TigerWit的跟單規則：按照跟隨資金與“交易高手”賬戶資金等比例開倉，不足0.01的按照0.01開倉，開倉訂單即為跟隨訂單。我已知曉在TigerWit開戶的所有客戶均可以成為TigerWit的“交易高手”，TigerWit對於其客戶成為“交易高手”沒有設定具體的條件和標準。"
         },
         copytransaction5: {
@@ -7145,7 +7145,7 @@ module.exports = function () {
         amtExecution120: {
             zh: "9.本交易平台上最小订单规模为 0.01 手。虽然对客户可以下达给本公司的最大订单规模没有限制，本公司保留依照与客户签订的协议中的说明拒绝订单的权利。",
             en: "9.The minimum size of an order is 0.01 lots on the trading platforms. Although there is no maximum size of an order where the Client can place with the Firm, the Firm reserves the right to decline an order as explained in the agreement entered with the Client.",
-            vi: "9.Kích thước tối thiểu của một lệnh là 0,01 lot trên các sàn giao dịch. Mặc dù không có kích thước tối đa của một lệnh mà Khách hàng có thể đặt với Công ty, Công ty bảo lưu quyền từ chối một lệnh như được giải thích trong hợp đồng đã kí với Khách hàng.",
+            vi: "9.Kích thước tối thiểu của một lệnh là 0.01 lot trên các sàn giao dịch. Mặc dù không có kích thước tối đa của một lệnh mà Khách hàng có thể đặt với Công ty, Công ty bảo lưu quyền từ chối một lệnh như được giải thích trong hợp đồng đã kí với Khách hàng.",
             "zh-Hant": "9.本交易平臺上最小訂單規模為 0.01 手。雖然對客戶可以下達給本公司的最大訂單規模沒有限制，本公司保留依照與客戶簽訂的協議中的說明拒絕訂單的權利。"
         },
         amtExecution121: {
