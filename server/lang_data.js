@@ -140,13 +140,13 @@ module.exports = function () {
         login: {
             en: "Login",
             zh: "登录",
-            vi: "Đăng nhập",
+            vi: "Login",
             "zh-Hant": "登錄"
         },
         register: {
             en: "Open an account",
             zh: "注册",
-            vi: "Mở một tài khoản",
+            vi: "Mở tài khoản",
             "zh-Hant": "註冊"
         },
         signout: {
@@ -238,13 +238,13 @@ module.exports = function () {
         navbar1: {
             en: "Home",
             zh: "首页",
-            vi: "Trang chủ",
+            vi: "Home",
             "zh-Hant": "首頁"
         },
         navbar2: {
             en: "Copy trading",
             zh: "复制跟单",
-            vi: "Sao chép giao dịch",
+            vi: "Copy Giao Dịch",
             "zh-Hant": "復制跟單"
         },
         navbar3: {
@@ -292,7 +292,7 @@ module.exports = function () {
         navbar10: {
             en: "About us",
             zh: "关于TigerWit",
-            vi: "Về chúng tôi",
+            vi: "Chúng tôi",
             "zh-Hant": "關於TigerWit"
         },
         navbar11: {
@@ -322,7 +322,7 @@ module.exports = function () {
         navbar_setCookie2: {
             en: "We use cookies for a number of reasons, such as keeping TigerWit sites reliable and secure, personalising content and ads, providing social media features and to analyse how our sites are used. See our ",
             zh: "我们使用网站功能所需的cookie，增强TigerWit官网的可靠性和安全性、展示个性化的内容和广告、提供社交媒体功能以及分析我们网站的使用方式。请参阅我们的",
-            vi: "Chúng tôi sử dụng cookie vì một số lý do, chẳng hạn như giữ các trang TigerWit đáng tin cậy và bảo mật, cá nhân hóa nội dung và quảng cáo, cung cấp các tính năng truyền thông xã hội và phân tích cách trang web của chúng tôi được sử dụng.",
+            vi: "Chúng tôi sử dụng cookie vì một số lý do, chẳng hạn như giữ các trang TigerWit đáng tin cậy và bảo mật, cá nhân hóa nội dung và quảng cáo, cung cấp các tính năng truyền thông xã hội và phân tích cách trang web của chúng tôi được sử dụng ",
             "zh-Hant": "我們使用網站功能所需的cookie，增強TigerWit官網的可靠性和安全性、展示個性化的內容和廣告、提供社交媒體功能以及分析我們網站的使用方式。請參閱我們的"
         },
         navbar_setCookie3: {
@@ -426,7 +426,7 @@ module.exports = function () {
         foot_39_1: {
             zh: "差价合约交易涉及风险，可能导致你的资本损失。TigerWit有限公司(巴哈马)由巴哈马证券委员会(SCB)监管，牌照号码SIA-F185。要访问TigerWit 有限公司(英国)的网站，请点击这里：",
             en: "Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: ",
-            vi: " Giao dịch CFD liên quan đến rủi ro và có thể dẫn đến mất vốn của bạn. TigerWit Limited (Bahamas) được quản lý bởi Ủy ban Chứng khoán Bahamas (SCB), số giấy phép SIA-F185. Để truy cập trang web cho TigerWit Limited (UK), được ủy quyền và quản lý tại Vương quốc Anh bởi Cơ quan quản lý tài chính (FCA), vui lòng bấm vào đây:",
+            vi: " Giao dịch CFD liên quan đến rủi ro và có thể dẫn đến mất vốn của bạn. TigerWit Limited (Bahamas) được quản lý bởi Ủy ban Chứng khoán Bahamas (SCB), số giấy phép SIA-F185. Để truy cập trang web cho TigerWit Limited (UK), được ủy quyền và quản lý tại Vương quốc Anh bởi Cơ quan quản lý tài chính (FCA), vui lòng bấm vào đây: ",
             "zh-Hant": "差價合約交易涉及風險，可能導致妳的資本損失。TigerWit有限公司(巴哈馬)由巴哈馬證券委員會(SCB)監管，牌照號碼SIA-F185。要訪問TigerWit 有限公司(英國)的網站，請點擊這裏："
         },
         foot_39_2: {
@@ -735,7 +735,7 @@ module.exports = function () {
         oil8: {
             en: "The trading leverage of crude oil in TigerWit is as high as 50 times, thus consuming less margin. As a result, less investment cost is required, while the leverage can double that of the spot crude oil in China. The formula mode of international spot crude oil per ton is roughly USD 50 *current rate / (converted by 1000*weights and measures), while the cost formula mode of domestic spot crude oil is point difference + current price * 0.12%",
             zh: "在TigerWit做原油交易杠杆高达 50 倍以上，占用保证金更低。所以TigerWit所需的投资成本更低，而杠杆可超过国内现货原油的一倍以上。国际现货原油的成本折合到每吨的计算方式是：50 美金左右 * 当日汇率 / (1000 * 度量衡折换)。而国内现货原油的陈本计算方式是：点差 + 当日价格 * 0.12% 。",
-            vi: "Đòn bẩy giao dịch dầu thô ở TigerWit cao tới 50 lần, do đó đòi hỏi ít số tiền kí quỹ hơn. Kết quả là, chi phí đầu tư cần thiết ít hơn, trong khi đòn bẩy có thể tăng gấp đôi so với dầu thô tại Trung Quốc. Công thức dầu thô giao ngay trên thị trường quốc tế tính theo tấn là 50 USD * tỷ giá hiện hành / (chuyển đổi bằng 1000 * trọng lượng và biện pháp), trong khi phương thức giá dầu thô tại chỗ là chênh lệch điểm + giá hiện tại * 0,12%",
+            vi: "Đòn bẩy giao dịch dầu thô ở TigerWit cao tới 50 lần, do đó đòi hỏi ít số tiền kí quỹ hơn. Kết quả là, chi phí đầu tư cần thiết ít hơn, trong khi đòn bẩy có thể tăng gấp đôi so với dầu thô tại Trung Quốc. Công thức dầu thô giao ngay trên thị trường quốc tế tính theo tấn là 50 USD * tỷ giá hiện hành / (chuyển đổi bằng 1000 * trọng lượng và biện pháp), trong khi phương thức giá dầu thô tại chỗ là chênh lệch điểm + giá hiện tại * 0.12%",
             "zh-Hant": "在TigerWit做原油交易杠桿高達 50 倍以上，占用保證金更低。所以TigerWit所需的投資成本更低，而杠桿可超過國內現貨原油的壹倍以上。國際現貨原油的成本折合到每噸的計算方式是：50 美金左右 * 當日匯率 / (1000 * 度量衡折換)。而國內現貨原油的陳本計算方式是：點差 + 當日價格 * 0.12% 。"
         },
         oil9: {
@@ -1722,7 +1722,7 @@ module.exports = function () {
         copyRule22: {
             zh: "3. 您取消复制关系选择跟随高手平仓时，系统将在跟随该高手的所有订单全部平仓后，对跟随该高手所有订单进行统计并结算，扣除总盈利的20%作为该高手分成。",
             en: "3. If the user cancels the following relationship and selects 'Cancel following but do not close order', when all the positions of following the master are closed, the system will count all the orders following the master and settle, deducting 20% of the profit portion as the commission of the master.",
-            vi: "3. Nếu người dùng hủy bỏ mối quan hệ sau và chọn 'Hủy theo dõi nhưng không đóng thứ tự', khi tất cả các vị trí theo sau tổng thể được đóng, hệ thống sẽ tính tất cả các đơn đặt hàng theo nhà giao dịch chính và thanh toán, trừ 20% phần lợi nhuận như ủy ban của nhà giao dịch chính",
+            vi: "3. Nếu người dùng hủy bỏ mối quan hệ sau và chọn 'Hủy theo dõi nhưng không đóng thứ tự', khi tất cả các vị trí theo sau tổng thể được đóng, hệ thống sẽ tính tất cả các đơn đặt hàng theo nhà giao dịch chính và thanh toán, trừ 20% phần lợi nhuận như ủy ban của nhà giao dịch chính.",
             "zh-Hant": "3. 您取消復制關系選擇跟隨高手平倉時，系統將在跟隨該高手的所有訂單全部平倉後，對跟隨該高手所有訂單進行統計並結算，扣除總盈利的20%作為該高手分成。"
         },
         copyRule23: {
@@ -1740,7 +1740,7 @@ module.exports = function () {
         copyRule25: {
             zh: "如您对规则有任何疑问，可发邮件至",
             en: "If you have any questions about the rules, please contact customer service or send e-mail to ",
-            vi: "Nếu bạn có bất kỳ câu hỏi nào về quy tắc, vui lòng liên hệ với bộ phận dịch vụ khách hàng hoặc gửi e-mail đến",
+            vi: "Nếu bạn có bất kỳ câu hỏi nào về quy tắc, vui lòng liên hệ với bộ phận dịch vụ khách hàng hoặc gửi e-mail đến ",
             "zh-Hant": "如您對規則有任何疑問，可發郵件至"
         },
         copyRule26: {
@@ -1815,7 +1815,7 @@ module.exports = function () {
         sidebar5: {
             en: "Open an account",
             zh: "开立账户",
-            vi: "Mở một tài khoản",
+            vi: "Mở tài khoản",
             "zh-Hant": "開立賬戶"
         },
         sidebar6: {
@@ -2686,13 +2686,13 @@ module.exports = function () {
         amtLegal8: {
             zh: "本网站上的信息“依原样”提供。本公司不就任何目的对此处所提供材料的准确性作出（明示或暗示）保证，并明确不就任何特定目的而对材料的适销性和适合性作出保证。本公司对所有由第三方对任何您通过本网站获取信息的截取可能导致的损失或损害概不承担责任。尽管本网站对您提供的信息是从我们认为可靠的来源获取或编辑的，本公司不就任何特定目的保证您获取的任何信息或数据的准确性、有效性、时间性或完整性。本公司及其任何关联方的董事、管理人员和员工，或任何第三方供应商，不对由于本网站故障或中断，或由参与制作本网站的任何其他方的作为或不作为，或您获得的资料中包含的任何数据，或由于任何与您访问、不能访问，或使用本网站或这些资料等其他原因导致您产生的任何损失或损害而承担责任，无论引起这种原因的情况是否受本公司或任何提供软件服务支持供应商的控制。本公司在任何情况下对任何使用或不能使用本网站或网站的任何部分引起的附带的、偶发的、特殊的、惩罚或损害性赔偿不予担责，无论本公司是否已获悉此类损害发生的可能性，也无论采用何种行动形式，是否属于合同内、侵权（包括过失）、严格责任或其他。本网站所含信息仅以参考为目的。所以，对于不获授权发出此类要约或招揽，或相关要约或招揽可能属于非法的该司法管辖区，相关信息不应视作对相关司法管辖区任何人士的邀约或招揽，也不应被作为对任何特定投资的推荐买入、卖出或其他处理。我们强烈建议您在处理任何投资前获得独立的投资、金融、法律和税务建议。本网站上的任何内容均不得阅读或解释为构成本公司、或其任何关联方、董事、管理人员或员工所作的投资建议。对金融工具的投资性质是，不是所有金融工具都适合所有人，除非他们：",
             en: "The information on this site is provided \"As it is\". The Company does not warrant the accuracy of the materials provided herein, either expressly or impliedly, for any particular purpose and expressly disclaims any warranties of merchantability or fitness for a particular purpose. The Company will not be responsible for any loss or damage that could result from interception by third parties of any information made available to you via this site. Although the information provided to you on this site is obtained or compiled from sources we believe to be reliable, the Company cannot and does not guarantee the accuracy, validity, timeliness or completeness of any information or data made available to you for any particular purpose. Neither the Company, nor any of its affiliates, directors, officers or employees, nor any third party vendor will be liable or have any responsibility of any kind for any loss or damage that you incur in the event of any failure or interruption of this site, or resulting from the act or omission of any other party involved in making this site or the data contained therein available to you, or from any other cause relating to your access to, inability to access, or use of the site or these materials, whether or not the circumstances giving rise to such cause may have been within the control of the Company or of any vendor providing software or services support. Under no circumstances will the Company be liable for any consequential, incidental, special, punitive or exemplary damages arising out of any use of or inability to use this site or any portion thereof, regardless of whether the Company has been apprised of the likelihood of such damages occurring and regardless of the form of action, whether in Contract, Tort (including negligence), Strict Liability, or otherwise. The information contained in this site is intended for information purposes only. Therefore, it should not be regarded as an offer or solicitation to any person in any jurisdiction in which such an offer or solicitation is not authorised or to any person to whom it would be unlawful to make such an offer or solicitation, nor regarded as recommendation to buy, sell or otherwise deal with any particular investment. You are strongly advised to obtain independent investment, financial, legal and tax advice before proceeding with any investment. Nothing in this site should be read or construed as constituting investment advice on the part of the Company, or any of its affiliates, directors, officers or employees. The nature of investment in Financial Instruments is such that not all Financial instruments are suitable for everyone unless they: ",
-            vi: "Thông tin trên trang này được cung cấp \"Vì nó là\". Công ty không đảm bảo tính chính xác của các tài liệu được cung cấp ở đây, hoặc rõ ràng hoặc ngụ ý, cho bất kỳ mục đích cụ thể nào và từ chối rõ ràng bất kỳ sự bảo đảm nào về khả năng bán hàng hoặc sự thích hợp đối với một mục đích cụ thể. Công ty sẽ không chịu trách nhiệm cho bất kỳ tổn thất hoặc thiệt hại nào có thể phát sinh từ việc các bên thứ ba của bất kỳ thông tin nào được cung cấp cho bạn thông qua trang web này. Mặc dù thông tin được cung cấp cho bạn trên trang web này được thu thập hoặc biên soạn từ các nguồn mà chúng tôi cho là đáng tin cậy, Công ty không thể và không đảm bảo tính chính xác, hợp lệ, kịp thời hoặc đầy đủ của bất kỳ thông tin hoặc dữ liệu nào có sẵn cho bạn cho bất kỳ mục đích cụ thể nào. Không phải Công ty, cũng như bất kỳ chi nhánh, giám đốc, nhân viên hoặc nhân viên nào, cũng không phải bất kỳ nhà cung cấp bên thứ ba nào sẽ chịu trách nhiệm hoặc bất kỳ trách nhiệm nào về bất kỳ tổn thất hoặc thiệt hại nào bạn gặp phải trong trường hợp có sự cố hoặc gián đoạn trang web này hoặc do hành động hoặc thiếu sót của bất kỳ bên nào khác liên quan đến việc tạo trang web này hoặc dữ liệu chứa trong đó hoặc bất kỳ nguyên nhân nào khác liên quan đến quyền truy cập của bạn, không có khả năng truy cập hoặc sử dụng trang web hoặc các tài liệu này, có hay không hoàn cảnh gây ra nguyên nhân như vậy có thể nằm trong sự kiểm soát của Công ty hoặc của bất kỳ nhà cung cấp nào cung cấp hỗ trợ phần mềm hoặc dịch vụ. Trong mọi trường hợp, Công ty sẽ không chịu trách nhiệm về bất kỳ thiệt hại mang tính nhân quả logic, ngẫu nhiên, đặc biệt, khắc nghiệt hoặc làm mẫu phát sinh từ việc sử dụng hoặc không có khả năng sử dụng trang web này hoặc bất kỳ phần nào của trang web đó, bất kể Công ty đã được thông báo về khả năng như vậy thiệt hại xảy ra và bất kể hình thức hành động, cho dù trong hợp đồng, sai lầm của cá nhân (bao gồm sơ suất), trách nhiệm pháp lý nghiêm ngặt, hoặc các trường hợp khác. Thông tin trong trang này chỉ dành cho mục đích thông tin. Do đó, nó không nên được coi là lời đề nghị hoặc chào mời với bất kỳ người nào trong bất định chế nào trong đó đề nghị hoặc chào mời này không được ủy quyền hoặc cho bất kỳ người nào mà các lời đề nghị này là không hợp pháp khi đưa ra lời đề nghị hoặc chào mời đó để mua, bán hoặc nói cách khác quản lý bất kỳ khoản đầu tư cụ thể nào. Bạn nên có tư vấn đầu tư độc lập, tư vấn tài chính, pháp lý và thuế trước khi tiến hành khoản đầu tư bất kỳ. Không có nội dung nào trong trang web này được đọc hoặc hiểu là tư vấn đầu tư cấu thành một phần của Công ty hoặc bất kỳ chi nhánh, giám đốc, cán bộ hoặc nhân viên nào của Công ty. Bản chất của đầu tư vào Công cụ tài chính là không phải tất cả các công cụ tài chính đều phù hợp với mọi người trừ khi chúng:",
+            vi: "Thông tin trên trang này được cung cấp \"Vì nó là\". Công ty không đảm bảo tính chính xác của các tài liệu được cung cấp ở đây, hoặc rõ ràng hoặc ngụ ý, cho bất kỳ mục đích cụ thể nào và từ chối rõ ràng bất kỳ sự bảo đảm nào về khả năng bán hàng hoặc sự thích hợp đối với một mục đích cụ thể. Công ty sẽ không chịu trách nhiệm cho bất kỳ tổn thất hoặc thiệt hại nào có thể phát sinh từ việc các bên thứ ba của bất kỳ thông tin nào được cung cấp cho bạn thông qua trang web này. Mặc dù thông tin được cung cấp cho bạn trên trang web này được thu thập hoặc biên soạn từ các nguồn mà chúng tôi cho là đáng tin cậy, Công ty không thể và không đảm bảo tính chính xác, hợp lệ, kịp thời hoặc đầy đủ của bất kỳ thông tin hoặc dữ liệu nào có sẵn cho bạn cho bất kỳ mục đích cụ thể nào. Không phải Công ty, cũng như bất kỳ chi nhánh, giám đốc, nhân viên hoặc nhân viên nào, cũng không phải bất kỳ nhà cung cấp bên thứ ba nào sẽ chịu trách nhiệm hoặc bất kỳ trách nhiệm nào về bất kỳ tổn thất hoặc thiệt hại nào bạn gặp phải trong trường hợp có sự cố hoặc gián đoạn trang web này hoặc do hành động hoặc thiếu sót của bất kỳ bên nào khác liên quan đến việc tạo trang web này hoặc dữ liệu chứa trong đó hoặc bất kỳ nguyên nhân nào khác liên quan đến quyền truy cập của bạn, không có khả năng truy cập hoặc sử dụng trang web hoặc các tài liệu này, có hay không hoàn cảnh gây ra nguyên nhân như vậy có thể nằm trong sự kiểm soát của Công ty hoặc của bất kỳ nhà cung cấp nào cung cấp hỗ trợ phần mềm hoặc dịch vụ. Trong mọi trường hợp, Công ty sẽ không chịu trách nhiệm về bất kỳ thiệt hại mang tính nhân quả logic, ngẫu nhiên, đặc biệt, khắc nghiệt hoặc làm mẫu phát sinh từ việc sử dụng hoặc không có khả năng sử dụng trang web này hoặc bất kỳ phần nào của trang web đó, bất kể Công ty đã được thông báo về khả năng như vậy thiệt hại xảy ra và bất kể hình thức hành động, cho dù trong hợp đồng, sai lầm của cá nhân (bao gồm sơ suất), trách nhiệm pháp lý nghiêm ngặt, hoặc các trường hợp khác. Thông tin trong trang này chỉ dành cho mục đích thông tin. Do đó, nó không nên được coi là lời đề nghị hoặc chào mời với bất kỳ người nào trong bất định chế nào trong đó đề nghị hoặc chào mời này không được ủy quyền hoặc cho bất kỳ người nào mà các lời đề nghị này là không hợp pháp khi đưa ra lời đề nghị hoặc chào mời đó để mua, bán hoặc nói cách khác quản lý bất kỳ khoản đầu tư cụ thể nào. Bạn nên có tư vấn đầu tư độc lập, tư vấn tài chính, pháp lý và thuế trước khi tiến hành khoản đầu tư bất kỳ. Không có nội dung nào trong trang web này được đọc hoặc hiểu là tư vấn đầu tư cấu thành một phần của Công ty hoặc bất kỳ chi nhánh, giám đốc, cán bộ hoặc nhân viên nào của Công ty. Bản chất của đầu tư vào Công cụ tài chính là không phải tất cả các công cụ tài chính đều phù hợp với mọi người trừ khi chúng: ",
             "zh-Hant": "本網站上的信息“依原樣”提供。本公司不就任何目的對此處所提供材料的準確性作出（明示或暗示）保證，並明確不就任何特定目的而對材料的適銷性和適合性作出保證。本公司對所有由第三方對任何您通過本網站獲取信息的截取可能導致的損失或損害概不承擔責任。盡管本網站對您提供的信息是從我們認為可靠的來源獲取或編輯的，本公司不就任何特定目的保證您獲取的任何信息或數據的準確性、有效性、時間性或完整性。本公司及其任何關聯方的董事、管理人員和員工，或任何第三方供應商，不對由於本網站故障或中斷，或由參與制作本網站的任何其他方的作為或不作為，或您獲得的資料中包含的任何數據，或由於任何與您訪問、不能訪問，或使用本網站或這些資料等其他原因導致您產生的任何損失或損害而承擔責任，無論引起這種原因的情況是否受本公司或任何提供軟件服務支持供應商的控制。本公司在任何情況下對任何使用或不能使用本網站或網站的任何部分引起的附帶的、偶發的、特殊的、懲罰或損害性賠償不予擔責，無論本公司是否已獲悉此類損害發生的可能性，也無論采用何種行動形式，是否屬於合同內、侵權（包括過失）、嚴格責任或其他。本網站所含信息僅以參考為目的。所以，對於不獲授權發出此類要約或招攬，或相關要約或招攬可能屬於非法的該司法管轄區，相關信息不應視作對相關司法管轄區任何人士的邀約或招攬，也不應被作為對任何特定投資的推薦買入、賣出或其他處理。我們強烈建議您在處理任何投資前獲得獨立的投資、金融、法律和稅務建議。本網站上的任何內容均不得閱讀或解釋為構成本公司、或其任何關聯方、董事、管理人員或員工所作的投資建議。對金融工具的投資性質是，不是所有金融工具都適合所有人，除非他們："
         },
         amtLegal9: {
             zh: "- 对投资事务有着深刻的了解。",
             en: "- are knowledgeable in investment matters. ",
-            vi: "- am hiểu về các vấn đề đầu tư",
+            vi: "- am hiểu về các vấn đề đầu tư.",
             "zh-Hant": "- 對投資事務有著深刻的了解。"
         },
         amtLegal10: {
@@ -2860,13 +2860,13 @@ module.exports = function () {
         amtClient15: {
             zh: "1.除非有相反的说明，客户协议中包含的术语应具有特定含义，并可酌情以单数或复数使用。",
             en: "1.Unless indicated to the contrary, the defined terms included in the Client Agreement shall have a specific meaning and may be used in the singular or plural as appropriate.",
-            vi: "1.Trừ khi  được chỉ định điều khoản ngược lại, các điều khoản được xác định trong Hợp đồng khách hàng  sẽ có một ý nghĩa cụ thể và có thể được sử dụng dưới dạng số ít hay số nhiều một cách thích hợp",
+            vi: "1.Trừ khi  được chỉ định điều khoản ngược lại, các điều khoản được xác định trong Hợp đồng khách hàng  sẽ có một ý nghĩa cụ thể và có thể được sử dụng dưới dạng số ít hay số nhiều một cách thích hợp.",
             "zh-Hant": "1.除非有相反的說明，客戶協議中包含的術語應具有特定含義，並可酌情以單數或復數使用。"
         },
         amtClient16: {
             zh: "除非另有规定，本客户协议中使用的术语应具有 SCB 规则和条例赋予的相同含义。",
             en: "Unless otherwise defined the terms used in this Client Agreement shall have the same meaning given under SCB Rules and Regulations.",
-            vi: "Trừ khi được định nghĩa khác, các điều khoản được sử dụng trong Hợp đồng khách hàng này sẽ có cùng ý nghĩa theo các Quy tắc và Quy định của SCB",
+            vi: "Trừ khi được định nghĩa khác, các điều khoản được sử dụng trong Hợp đồng khách hàng này sẽ có cùng ý nghĩa theo các Quy tắc và Quy định của SCB.",
             "zh-Hant": "除非另有規定，本客戶協議中使用的術語應具有 SCB 規則和條例賦予的相同含義。"
         },
         amtClient17: {
@@ -2931,7 +2931,7 @@ module.exports = function () {
         },
         amtClient27: {
             zh: "自由保证金 - 指可用于开立头寸的资金。计算方法如下：自由保证金=账户净值-保证金",
-            en: "Free Margin - shall mean funds that are available for opening a position. It is calculated as: Free Margin = Equity – Margin",
+            en: "Free Margin - shall mean funds that are available for opening a position. It is calculated as: Free Margin = Equity – Margin.",
             vi: "Số tiền có thể giao dịch tiếp (free-margin) (số tiền kí quỹ - nghĩa là số tiền có sẵn để mở một vị thế. Nó được tính như sau: Số tiền có thể giao dịch tiếp (Free margin) = Số dư thực (Equity) - tiền đặt lệnh (Margin).",
             "zh-Hant": "自由保證金 - 指可用於開立頭寸的資金。計算方法如下：自由保證金=賬戶凈值-保證金"
         },
@@ -2956,7 +2956,7 @@ module.exports = function () {
         amtClient31: {
             zh: "保证金水平- 指账户净值与保证金比率，计算如下：保证金水平= 账户净值/保证金",
             en: "Margin Level - shall mean the Equity to Margin ratio calculated as: Margin Level = Equity / Margin",
-            vi: "Mức ký quỹ (margin level) - có nghĩa là tỷ lệ vốn thực sở hữu (equity) so với số tiền đặt lệnh (margin) được tính như sau: Mức ký quỹ (Margin Level) = Vốn thực sở hữu (Equity)/ Số tiền đặt lệnh.",
+            vi: "Mức ký quỹ (margin level) - có nghĩa là tỷ lệ vốn thực sở hữu (equity) so với số tiền đặt lệnh (margin) được tính như sau: Mức ký quỹ (Margin Level) = Vốn thực sở hữu (Equity)/ Số tiền đặt lệnh",
             "zh-Hant": "保證金水平- 指賬戶凈值與保證金比率，計算如下：保證金水平= 賬戶凈值/保證金"
         },
         amtClient32: {
@@ -3015,7 +3015,7 @@ module.exports = function () {
         },
         amtClient41: {
             zh: "1.TigerWit 由 SCB 授权担任做市商。已授权的指定投资业务及其辅助服务的详情可以在SCB 登记簿中找到。",
-            en: "1.TigerWit is authorised by the SCB to act as Principle. Details of our authorised designated investment business and ancillary services can be found on the SCB register",
+            en: "1.TigerWit is authorised by the SCB to act as Principle. Details of our authorised designated investment business and ancillary services can be found on the SCB register.",
             vi: "1.TigerWit được SCB cho phép hoạt động theo Nguyên tắc của nó. Thông tin chi tiết về hoạt động kinh doanh đầu tư được chỉ định của chúng tôi và các dịch vụ phụ trợ có thể được trình bằng trong sổ đăng ký của SCB.",
             "zh-Hant": "1.TigerWit 由 SCB 授權擔任做市商。已授權的指定投資業務及其輔助服務的詳情可以在SCB 登記簿中找到。"
         },
@@ -3045,13 +3045,13 @@ module.exports = function () {
         },
         amtClient46: {
             zh: "5.TigerWit 可以不时及按其认为适当的频率，通过其网站或其他媒体发布包含金融市场状况等信息的资料（以下简称“信息资料”）。请留意，该信息资料仅视作营销传播，并不包含且不得解释为包含投资意见或投资建议，或任何金融工具交易的邀约或邀请。TigerWit 对于所提供信息的准确性或完整性不作任何声明或承担任何责任，也不对基于 TigerWit 的任何雇员、第三方等提供的声明、预测或其他信息所作任何投资产生的任何损失承担责任。该信息资料并未按照提倡投资研究独立性的法律要求编制，且在投资研究传播前不受任何交易禁止。信息资料中包含的所有意见表述如有更改恕不另行通知。任何意见都可能出自作者个人观点，不一定反映TigerWit 的意见。",
-            en: "5.TigerWit, from time to time and as often as it deems appropriate, may issue material (‘the Information Material’), which contains information including but not limited to the conditions of the financial market, published via its website and other media. It should be noted the Information Material is considered to be marketingcommunication only and does not contain, and should not be construed as containing investment advice or an investment recommendation or, an offer of or solicitation for any transactions in financial instruments. TigerWit makes no representation and assumes no liability as to the accuracy or completeness of the information provided, nor any loss arising from any investment based on a statement, forecast or other information supplied by any employee of TigerWit, a third party or otherwise. The Information Material is not prepared in accordance with legal requirements promoting the independence of investment research and it is not subject to any prohibition on dealing ahead of the dissemination of investment research. All expressions of opinion included in the Information Material are subject to change without notice. Any opinions made may be personal to the author and may not reflect the opinions of TigerWit",
+            en: "5.TigerWit, from time to time and as often as it deems appropriate, may issue material (‘the Information Material’), which contains information including but not limited to the conditions of the financial market, published via its website and other media. It should be noted the Information Material is considered to be marketingcommunication only and does not contain, and should not be construed as containing investment advice or an investment recommendation or, an offer of or solicitation for any transactions in financial instruments. TigerWit makes no representation and assumes no liability as to the accuracy or completeness of the information provided, nor any loss arising from any investment based on a statement, forecast or other information supplied by any employee of TigerWit, a third party or otherwise. The Information Material is not prepared in accordance with legal requirements promoting the independence of investment research and it is not subject to any prohibition on dealing ahead of the dissemination of investment research. All expressions of opinion included in the Information Material are subject to change without notice. Any opinions made may be personal to the author and may not reflect the opinions of TigerWit.",
             vi: "5. TigerWit, tùy từng thời điểm và thấy phù hợp, có thể phát hành tài liệu (Tài liệu Thông tin), chứa thông tin bao gồm nhưng không giới hạn ở các điều kiện của thị trường tài chính, được xuất bản qua trang web và các phương tiện khác. Cần lưu ý rằng Tài liệu Thông tin được coi là chỉ tiếp thị và không chứa và không được hiểu là có chứa lời khuyên đầu tư hoặc khuyến nghị đầu tư hoặc đề nghị hoặc chào mời bất kỳ giao dịch nào trong các công cụ tài chính. TigerWit không đại diện và không chịu trách nhiệm về tính chính xác hoặc đầy đủ của thông tin được cung cấp, cũng như bất kỳ tổn thất nào phát sinh từ bất kỳ khoản đầu tư nào dựa trên tuyên bố, dự báo hoặc thông tin khác được cung cấp bởi bất kỳ nhân viên nào của TigerWit hay bất kì một bên thứ ba hay bên nào khác. Thông Tin Tài Liệu không được chuẩn bị theo các điều kiện pháp luật cho biết sự độc lập của việc nghiên cứu và không thay đổi bất kì điều khoản nào của sự phổ biến nghiên cứu đầu tư. Tất cả các việc thể hiện ý kiến được bao gồm trong Tài Liệu Thông Tin có thể được thay đổi mà không cần có thông báo. Bất kì ý kiến nào được đưa có thể mang tính cá nhân từ tác giả và không thể hiện ý kiến của TigerWit.",
             "zh-Hant": "5.TigerWit 可以不時及按其認為適當的頻率，通過其網站或其他媒體發布包含金融市場狀況等信息的資料（以下簡稱“信息資料”）。請留意，該信息資料僅視作營銷傳播，並不包含且不得解釋為包含投資意見或投資建議，或任何金融工具交易的邀約或邀請。TigerWit 對於所提供信息的準確性或完整性不作任何聲明或承擔任何責任，也不對基於 TigerWit 的任何雇員、第三方等提供的聲明、預測或其他信息所作任何投資產生的任何損失承擔責任。該信息資料並未按照提倡投資研究獨立性的法律要求編制，且在投資研究傳播前不受任何交易禁止。信息資料中包含的所有意見表述如有更改恕不另行通知。任何意見都可能出自作者個人觀點，不壹定反映TigerWit 的意見。"
         },
         amtClient47: {
             zh: "6.客户理解不得通过其交易账户进行相关差价合约标的工具（或参考工具）的实际交割。",
-            en: "6.The client understands that no physical delivery of a CFD’s underlying instrument (or reference instrument) that he/she traded through his/her trading account shall occur",
+            en: "6.The client understands that no physical delivery of a CFD’s underlying instrument (or reference instrument) that he/she traded through his/her trading account shall occur.",
             vi: "6.Khách hàng hiểu rằng sẽ không có việc giao hàng về mặt vật lý của một hợp đồng CFD tài sản cơ bản (hoặc công cụ tham chiếu) mà họ giao dịch thông qua tài khoản giao dịch của mình.",
             "zh-Hant": "6.客戶理解不得通過其交易賬戶進行相關差價合約標的工具（或參考工具）的實際交割。"
         },
@@ -3088,7 +3088,7 @@ module.exports = function () {
         amtClient53: {
             zh: "如果客户希望被重新分类为专业客户或合格对手方，则客户需要向本公司发出书面申请。公司在对客户作出定量及定性评估等情况审核后，应酌情考量上述申请。如客人个人情况发生变化，客户有责任告知公司。",
             en: "If a client desires to be re-classified as either a Professional Client or an Eligible Counterparty then the client needs to send the Firm a written request. The Firm shall consider such requests at its discretion after reviewing the client’s circumstances, including the quantitative and qualitative assessments. The client is responsible for notifying the Firm of his/her change of personal circumstances.",
-            vi: "Nếu khách hàng muốn được phân loại lại là Khách hàng Chuyên nghiệp hoặc Đối tác Đủ điều kiện thì khách hàng cần gửi cho Công ty một yêu cầu bằng văn bản. Công ty sẽ xem xét các yêu cầu đó theo quyết định của mình sau khi xem xét hoàn cảnh của khách hàng, bao gồm các đánh giá định tính và định lượng. Khách hàng chịu trách nhiệm thông báo cho Công ty về việc thay đổi hoàn cảnh cá nhân của mình",
+            vi: "Nếu khách hàng muốn được phân loại lại là Khách hàng Chuyên nghiệp hoặc Đối tác Đủ điều kiện thì khách hàng cần gửi cho Công ty một yêu cầu bằng văn bản. Công ty sẽ xem xét các yêu cầu đó theo quyết định của mình sau khi xem xét hoàn cảnh của khách hàng, bao gồm các đánh giá định tính và định lượng. Khách hàng chịu trách nhiệm thông báo cho Công ty về việc thay đổi hoàn cảnh cá nhân của mình.",
             "zh-Hant": "如果客戶希望被重新分類為專業客戶或合格對手方，則客戶需要向本公司發出書面申請。公司在對客戶作出定量及定性評估等情況審核後，應酌情考量上述申請。如客人個人情況發生變化，客戶有責任告知公司。"
         },
         amtClient54: {
@@ -3183,7 +3183,7 @@ module.exports = function () {
         },
         amtClient69: {
             zh: "2.巴哈马群岛境外持有的客户资金可能受该地区管辖，相应地，客户权利有所不同。TigerWit 对持有客户资金的任何银行机构的偿付能力、作为或不作为概不负责。但 TigerWit 将运用一切适当技能、谨慎勤勉地对客户资金存入机构进行选择、任用和定期审核。",
-            en: "2.Client Money held outside The Bahamas may be subject to the jurisdiction of that territory and client rights may differ accordingly. TigerWit shall not be responsible for the solvency, act(s) or omission(s) of any banking institution with which Client Money is held. However, TigerWit will exercise all due skill, care and diligence in the selection, appointment and periodic review of the institution where the Client Money is deposited",
+            en: "2.Client Money held outside The Bahamas may be subject to the jurisdiction of that territory and client rights may differ accordingly. TigerWit shall not be responsible for the solvency, act(s) or omission(s) of any banking institution with which Client Money is held. However, TigerWit will exercise all due skill, care and diligence in the selection, appointment and periodic review of the institution where the Client Money is deposited.",
             vi: "2.Tiền Khách Hàng được giữ bên ngoài Bahamas có thể phải chịu sự quản lý của lãnh thổ đó và quyền của khách hàng có thể khác nhau theo đó. TigerWit sẽ không chịu trách nhiệm về khả năng thanh toán, hành động hoặc thiếu sót của bất kỳ tổ chức ngân hàng nào mà Khách hàng được giữ tiền. Tuy nhiên, TigerWit sẽ thực hiện tất cả các chức năng, chăm sóc và nỗ lực trong việc lựa chọn, bổ nhiệm và đánh giá định kỳ của tổ chức nơi mà tiền gửi của khách hàng được gửi.",
             "zh-Hant": "2.巴哈馬群島境外持有的客戶資金可能受該地區管轄，相應地，客戶權利有所不同。TigerWit 對持有客戶資金的任何銀行機構的償付能力、作為或不作為概不負責。但 TigerWit 將運用壹切適當技能、謹慎勤勉地對客戶資金存入機構進行選擇、任用和定期審核。"
         },
@@ -3262,7 +3262,7 @@ module.exports = function () {
         amtClient82: {
             zh: "15.在以下情况下，本公司有权关闭客户资金余额无人提取的账户以及从独立客户银行账户中释放任何客户资金余额的账户：",
             en: "15.The Firm reserves the right to close an account in connection with an unclaimed client money balance and releasing any client money balances from segregated client bank accounts if: ",
-            vi: "15.Công ty có quyền đóng tài khoản liên quan đến số dư tiền của khách hàng chưa được xác nhận và giải phóng số dư tiền của khách hàng từ các tài khoản ngân hàng khách hàng tách biệt nếu:",
+            vi: "15.Công ty có quyền đóng tài khoản liên quan đến số dư tiền của khách hàng chưa được xác nhận và giải phóng số dư tiền của khách hàng từ các tài khoản ngân hàng khách hàng tách biệt nếu: ",
             "zh-Hant": "15.在以下情況下，本公司有權關閉客戶資金余額無人提取的賬戶以及從獨立客戶銀行賬戶中釋放任何客戶資金余額的賬戶："
         },
         amtClient83: {
@@ -3273,7 +3273,7 @@ module.exports = function () {
         },
         amtClient84: {
             zh: "本公司已发送书面通知至客户的最后所知地址，告知客户本公司不再将账户余额视为客户资金的意图，并给予客户 28 天时间提出索赔。",
-            en: "the Firm has sent written notice to the client at the last known address informing the client of the Firm's intention of no longer treating that balance as client money, and giving the client 28 days to make a claim",
+            en: "the Firm has sent written notice to the client at the last known address informing the client of the Firm's intention of no longer treating that balance as client money, and giving the client 28 days to make a claim.",
             vi: "Công ty đã gửi thông báo bằng văn bản cho khách hàng tại địa chỉ được biết mới nhất để thông báo cho khách hàng về ý định của Công ty không còn xử lý số dư đó làm tiền của khách hàng và cho phép 28 ngày để khách hàng gửi yêu cầu rút tiền.",
             "zh-Hant": "本公司已發送書面通知至客戶的最後所知地址，告知客戶本公司不再將賬戶余額視為客戶資金的意圖，並給予客戶 28 天時間提出索賠。"
         },
@@ -3369,7 +3369,7 @@ module.exports = function () {
         },
         amtClient100: {
             zh: "2.对于某自然人或法人向本公司提供有关客户金融工具交易的执行信息时的任何作为或不作为，TigerWit 概不负责，除非该作为或不作为是 TigerWit 方面的疏忽或欺诈造成的。",
-            en: "2.TigerWit bears no responsibility for any acts or omissions concluded by either a natural or legal person that provides the Firm with information in relation to the execution of the client’s transactions in financial instruments, unless such acts or omissions were the result of negligence or fraud on behalf of TigerWit",
+            en: "2.TigerWit bears no responsibility for any acts or omissions concluded by either a natural or legal person that provides the Firm with information in relation to the execution of the client’s transactions in financial instruments, unless such acts or omissions were the result of negligence or fraud on behalf of TigerWit.",
             vi: "2.TigerWit không chịu trách nhiệm đối với bất kỳ hành vi hoặc thiếu sót nào được đưa ra bởi một người tự nhiên hoặc pháp nhân cung cấp cho Công ty thông tin liên quan đến việc thực hiện giao dịch của khách hàng trong các công cụ tài chính, trừ khi hành động hoặc thiếu sót đó là kết quả của sự sơ suất hoặc gian lận thay mặt cho TigerWit.",
             "zh-Hant": "2.對於某自然人或法人向本公司提供有關客戶金融工具交易的執行信息時的任何作為或不作為，TigerWit 概不負責，除非該作為或不作為是 TigerWit 方面的疏忽或欺詐造成的。"
         },
@@ -3435,7 +3435,7 @@ module.exports = function () {
         },
         amtClient111: {
             zh: "2.TigerWit 保留随时修订客户协议中任何内容的权利，包括本公司认为根据有合法管辖权的监管机构发布的公告必须做出的修订。在此 情 况 下 ， 应 以 书 面 形 式 或 通 过 公 司 网 站(http://global.tigerwit.com)通知客户，客户保留接受或拒绝此类修订的权利。应当注意的是，客户的许可不适用于任何立即生效的修订。",
-            en: "2.TigerWit reserves the right to amend, from time to time, any part of the Client Agreement, including where the Firm deems that such amendments are necessary given an announcement by a regulatory authority of a competent jurisdiction. Under such circumstances, the client shall be notified either in writing or through the Firm’s site (http://global.tigerwit.com) accordingly and shall reserve the right to accept or deny the amendments; it should be noted that the client’s consent is not required for any amendment to be effective immediately",
+            en: "2.TigerWit reserves the right to amend, from time to time, any part of the Client Agreement, including where the Firm deems that such amendments are necessary given an announcement by a regulatory authority of a competent jurisdiction. Under such circumstances, the client shall be notified either in writing or through the Firm’s site (http://global.tigerwit.com) accordingly and shall reserve the right to accept or deny the amendments; it should be noted that the client’s consent is not required for any amendment to be effective immediately.",
             vi: "2.TigerWit có quyền sửa đổi, theo thời gian, bất kỳ phần nào của Hợp đồng khách hàng, bao gồm cả nơi Công ty cho rằng các sửa đổi đó là cần thiết do một cơ quan có thẩm quyền của một cơ quan có thẩm quyền công bố. Trong những trường hợp như vậy, khách hàng sẽ được thông báo bằng văn bản hoặc thông qua trang web của Công ty (http://global.tigerwit.com) cho phù hợp và sẽ bảo lưu quyền chấp nhận hoặc từ chối các sửa đổi; cần lưu ý rằng sự đồng ý của khách hàng là không cần thiết cho bất kỳ sửa đổi nào có hiệu lực ngay lập tức.",
             "zh-Hant": "2.TigerWit 保留隨時修訂客戶協議中任何內容的權利，包括本公司認為根據有合法管轄權的監管機構發布的公告必須做出的修訂。在此 情 況 下 ， 應 以 書 面 形 式 或 通 過 公 司 網 站(http://global.tigerwit.com)通知客戶，客戶保留接受或拒絕此類修訂的權利。應當註意的是，客戶的許可不適用於任何立即生效的修訂。"
         },
@@ -3574,7 +3574,7 @@ module.exports = function () {
         amtClient134: {
             zh: "您的个人信息可能保留在计算机记录中，并不会向其他方披露，以下基于“需者方知”原则获得明确允许的情况除外：",
             en: "Your personal information may be maintained on computer records and will not be disclosed to other parties except where we are expressly permitted to on a ‘need to know’ basis: ",
-            vi: "Thông tin cá nhân của bạn có thể được lưu giữ trên hồ sơ máy tính và sẽ không được tiết lộ cho các bên khác ngoại trừ nơi chúng tôi được cho phép rõ ràng trên cơ sở cần biết cơ sở:",
+            vi: "Thông tin cá nhân của bạn có thể được lưu giữ trên hồ sơ máy tính và sẽ không được tiết lộ cho các bên khác ngoại trừ nơi chúng tôi được cho phép rõ ràng trên cơ sở cần biết cơ sở: ",
             "zh-Hant": "您的個人信息可能保留在計算機記錄中，並不會向其他方披露，以下基於“需者方知”原則獲得明確允許的情況除外："
         },
         amtClient135: {
@@ -3747,7 +3747,7 @@ module.exports = function () {
         },
         amtClient163: {
             zh: "2.客户声明，客户（如为自然人）年满十八(18)周岁，或（如为法人）具有完全行为能力；因此，客户可以订立本客户协议。",
-            en: "2.The client declares that he/ she is over 18 (eighteen) years of age (in case the client is a natural person) or has full capacity (in case the client is a legal person); therefore, the client may enter into the Client Agreement",
+            en: "2.The client declares that he/ she is over 18 (eighteen) years of age (in case the client is a natural person) or has full capacity (in case the client is a legal person); therefore, the client may enter into the Client Agreement.",
             vi: "2.Khách hàng tuyên bố rằng anh ta / cô ta trên 18 (mười tám) tuổi (trong trường hợp khách hàng là một cơ thể người tự nhiên) hoặc có đủ năng lực (trong trường hợp khách hàng là pháp nhân); do đó, khách hàng có thể tham gia vào Hợp đồng khách hàng.",
             "zh-Hant": "2.客戶聲明，客戶（如為自然人）年滿十八(18)周歲，或（如為法人）具有完全行為能力；因此，客戶可以訂立本客戶協議。"
         },
@@ -3825,14 +3825,14 @@ module.exports = function () {
         },
         amtClient176: {
             zh: "2.不可抗力事件包括但不限于金融工具交易之后发生的任何自然、技术、政治、政府、社会、经济（包括但不限于暂停货币）等方面的事件或情况，而且交易进行当日无法预料到此类事件或情况的发生。除上述情况外，不可抗力事件还包括针对 TigerWit 服务器的非法操作事件，并且不在客户或 TigerWit 的控制范围内。",
-            en: "2.A force majeure event is as an event or circumstance, including but not limited to any natural, technological, political, governmental, social, economic (including without limitation to the suspension of a currency) or similar event or circumstance that occurred after a transaction in a financial instrument occurred and such event or circumstance has not been anticipated at the date of entering into the transaction. In addition to the above, a force majeure event may include instances of illegitimate actions against the TigerWit servers that may be outside the control of with the client or TigerWit",
+            en: "2.A force majeure event is as an event or circumstance, including but not limited to any natural, technological, political, governmental, social, economic (including without limitation to the suspension of a currency) or similar event or circumstance that occurred after a transaction in a financial instrument occurred and such event or circumstance has not been anticipated at the date of entering into the transaction. In addition to the above, a force majeure event may include instances of illegitimate actions against the TigerWit servers that may be outside the control of with the client or TigerWit.",
             vi: "2.Sự kiện bất khả kháng là một sự kiện hoặc hoàn cảnh, bao gồm nhưng không giới hạn với bất kỳ sự kiện tự nhiên, công nghệ, chính trị, chính trị, xã hội, kinh tế (bao gồm nhưng không giới hạn việc đình chỉ tiền tệ) hoặc sự kiện hoặc hoàn cảnh tương tự xảy ra sau giao dịch trong một công cụ tài chính đã xảy ra và sự kiện hoặc hoàn cảnh đó chưa được dự đoán tại ngày giao dịch. Ngoài ra, một sự kiện bất khả kháng có thể bao gồm các trường hợp hành động bất hợp pháp đối với các máy chủ TigerWit có thể nằm ngoài tầm kiểm soát của khách hàng hoặc TigerWit.",
             "zh-Hant": "2.不可抗力事件包括但不限於金融工具交易之後發生的任何自然、技術、政治、政府、社會、經濟（包括但不限於暫停貨幣）等方面的事件或情況，而且交易進行當日無法預料到此類事件或情況的發生。除上述情況外，不可抗力事件還包括針對 TigerWit 服務器的非法操作事件，並且不在客戶或 TigerWit 的控制範圍內。"
         },
         amtClient177: {
             zh: "3.如果 TigerWit 确定已发生不可抗力事件，在不影响客户根据客户协议项下任何其他权利的情况下，本公司可以：",
             en: "3.If TigerWit determines that a force majeure event occurred, without prejudice to any other rights of the client under the Client Agreement, the Firm may: ",
-            vi: "3.Nếu TigerWit xác định rằng một sự kiện bất khả kháng xảy ra, không ảnh hưởng đến bất kỳ quyền nào khác của khách hàng theo Hợp đồng khách hàng, Công ty có thể:",
+            vi: "3.Nếu TigerWit xác định rằng một sự kiện bất khả kháng xảy ra, không ảnh hưởng đến bất kỳ quyền nào khác của khách hàng theo Hợp đồng khách hàng, Công ty có thể: ",
             "zh-Hant": "3.如果 TigerWit 確定已發生不可抗力事件，在不影響客戶根據客戶協議項下任何其他權利的情況下，本公司可以："
         },
         amtClient178: {
@@ -4107,7 +4107,7 @@ module.exports = function () {
         },
         amtRisk17: {
             zh: "2.为了交易某些 CFD，客户可能需要支付佣金或其他费用；您可以在我们的网站中查看详细的说明。对于本公司提供的所有类型 CFD，佣金（如果适用）和隔夜费用并不纳入本公司的报价中，而是直接向客户账户收取相关费用。如果存在隔夜费用，某些类型金融工具的未平仓头寸价格需要加上或减去在整个交易期间的每 日 隔 夜 费 用 （ 标 注 ： “掉 期 ”是 否 可 以 去掉？）。融资费用以现行市场利率为准。从星期一到星期五，每个工作日对掉期收取一次费用，星期三掉期收取三倍的费用，其中包括周末的费用；有关日常隔夜费用的详细信息，请访问我们的网站。",
-            en: "2.For trading certain CFDs, the Client may be required to pay a commission and/ or other fees; these instances are described in detail in our Website. For all type of CFDs offered by the Firm, the commission (if applicable) and financing/ overnight fees are not incorporated into the Firm’s quoted prices and are instead charged explicitly to the Client Account(s). In the case of financing/ overnight fees, the value of opened positions in some types of financial instruments is increased or reduced by a daily financing fee ‘swap’ throughout the life of the trade. The financing fees are based on prevailing market interest rates. From Mondays to Fridays swap is charged once for every business day and on Wednesdays swap is charged in triple size in order to account for the weekend; details of daily financing/ overnight fees applied, are available in our Website",
+            en: "2.For trading certain CFDs, the Client may be required to pay a commission and/ or other fees; these instances are described in detail in our Website. For all type of CFDs offered by the Firm, the commission (if applicable) and financing/ overnight fees are not incorporated into the Firm’s quoted prices and are instead charged explicitly to the Client Account(s). In the case of financing/ overnight fees, the value of opened positions in some types of financial instruments is increased or reduced by a daily financing fee ‘swap’ throughout the life of the trade. The financing fees are based on prevailing market interest rates. From Mondays to Fridays swap is charged once for every business day and on Wednesdays swap is charged in triple size in order to account for the weekend; details of daily financing/ overnight fees applied, are available in our Website.",
             vi: "2.Để giao dịch CFDs nhất định, Khách hàng có thể được yêu cầu trả hoa hồng và/ hoặc các khoản phí khác; những trường hợp này được mô tả chi tiết trong trang web của chúng tôi. Đối với tất cả các loại CFD do Công ty cung cấp, hoa hồng (nếu có) và phí tài chính/ qua đêm không được tính vào giá niêm yết của Công ty và thay vào đó được tính phí một cách rõ rang cho (các) Tài khoản Khách hàng. Trong trường hợp tài chính/ phí qua đêm, giá trị của các vị trí mở trong một số loại công cụ tài chính được tăng hoặc giảm bằng khoản phí tài chính hàng ngày ‘hoán đổi’ trong suốt thời gian giao dịch. Phí tài chính dựa trên lãi suất thị trường hiện hành. Từ thứ Hai đến thứ Sáu, phí hoán đổi được tính một lần cho mỗi ngày làm việc và vào ngày thứ Tư, hoán đổi được tính theo ba lần kích thước để tính vào cuối tuần; chi tiết về phí tài chính/ phí qua đêm hàng ngày được áp dụng, có sẵn trên trang web của chúng tôi.",
             "zh-Hant": "2.為了交易某些 CFD，客戶可能需要支付傭金或其他費用；您可以在我們的網站中查看詳細的說明。對於本公司提供的所有類型 CFD，傭金（如果適用）和隔夜費用並不納入本公司的報價中，而是直接向客戶賬戶收取相關費用。如果存在隔夜費用，某些類型金融工具的未平倉頭寸價格需要加上或減去在整個交易期間的每 日 隔 夜 費 用 （ 標 註 ： “掉 期 ”是 否 可 以 去掉？）。融資費用以現行市場利率為準。從星期壹到星期五，每個工作日對掉期收取壹次費用，星期三掉期收取三倍的費用，其中包括周末的費用；有關日常隔夜費用的詳細信息，請訪問我們的網站。"
         },
@@ -4125,7 +4125,7 @@ module.exports = function () {
         },
         amtRisk20: {
             zh: "市场状况、所需保证金、杠杆和强平水平",
-            en: "Market Conditions, Required Margin, Leverage and Stop-Out Levels",
+            en: "Market Conditions, Required Margin, Leverage and Stop-Out Levels.",
             vi: "Điều kiện thị trường, yêu cầu Margin, đòn bẩy và mức dừng.",
             "zh-Hant": "市場狀況、所需保證金、杠桿和強平水平"
         },
@@ -4503,14 +4503,14 @@ module.exports = function () {
         },
         amtBusiness6: {
             zh: "3.客户承认本公司的官方语言是英语。",
-            en: "3.The client acknowledges that the Firm’s official language is the English language",
+            en: "3.The client acknowledges that the Firm’s official language is the English language.",
             vi: "3.Khách hàng thừa nhận rằng ngôn ngữ chính thức của Công ty là ngôn ngữ tiếng Anh.",
             "zh-Hant": "3.客戶承認本公司的官方語言是英語。"
         },
         amtBusiness7: {
             zh: "商业条款和条件的范围",
             en: "Scope of the Terms and Conditions of Business",
-            vi: "Phạm vi điều khoản và điều kiện kinh doanh.",
+            vi: "Phạm vi điều khoản và điều kiện kinh doanh",
             "zh-Hant": "商業條款和條件的範圍"
         },
         amtBusiness8: {
@@ -4528,7 +4528,7 @@ module.exports = function () {
         amtBusiness10: {
             zh: "条款解释",
             en: "Interpretation of Terms",
-            vi: "Giải thích về Điều khoản.",
+            vi: "Giải thích về Điều khoản",
             "zh-Hant": "條款解釋"
         },
         amtBusiness11: {
@@ -4624,7 +4624,7 @@ module.exports = function () {
         amtBusiness26: {
             zh: "可用保证金 － 指可用于开立头寸的资金，计算方法如下：可用保证金＝净值-已用保证金",
             en: "Free Margin - shall mean funds that are available for opening a position and it is calculated as: Free Margin = Equity - Margin",
-            vi: "Ký quỹ tự do – nghĩa là các quỹ có sẵn để mở một vị thế và được tính như sau: Ký Quỹ tự do = Vốn tức thời– Ký Quỹ.",
+            vi: "Ký quỹ tự do – nghĩa là các quỹ có sẵn để mở một vị thế và được tính như sau: Ký Quỹ tự do = Vốn tức thời– Ký Quỹ",
             "zh-Hant": "可用保證金 － 指可用於開立頭寸的資金，計算方法如下：可用保證金＝凈值-已用保證金"
         },
         amtBusiness27: {
@@ -4653,7 +4653,7 @@ module.exports = function () {
         },
         amtBusiness31: {
             zh: "保证金水平 - 指账户净值与保证金的比率。",
-            en: "Margin Level - shall mean the Equity to Margin ratio",
+            en: "Margin Level - shall mean the Equity to Margin ratio.",
             vi: "Mức độ Ký quỹ - có nghĩa là tỷ lệ vốn chủ sở hữu so với tỷ lệ ký quỹ.",
             "zh-Hant": "保證金水平 - 指賬戶凈值與保證金的比率。"
         },
@@ -4936,7 +4936,7 @@ module.exports = function () {
         amtBusiness78: {
             zh: "公司行为",
             en: "Corporate Actions",
-            vi: "Động thái của công ty.",
+            vi: "Động thái của công ty",
             "zh-Hant": "公司行為"
         },
         amtBusiness79: {
@@ -5193,8 +5193,8 @@ module.exports = function () {
         },
         amtResponsibly2: {
             zh: "差价合约（CFD）是让交易者能在不拥有资产的情况下对资产价格的变动进行投机的衍生工具。由于十分复杂，CFD 具有高度的风险，尤其是对于首次交易者或未获得良好市场教育的投资者而言。",
-            en: "Contracts for Difference (CFDs) are derivative instruments that allow traders to speculate on the changing values of an asset without taking ownership of that asset. Due to their complexity, trading CFDs carries a high level of risk, particularly for first-time traders or investors who are not well-educated about the markets",
-            vi: "Hợp đồng chênh lệch (CFDs) là các công cụ phái sinh cho phép các nhà đầu tư suy đoán về giá trị thay đổi của một tài sản mà không có quyền sở hữu tài sản đó. Do sự phức tạp của chúng, việc giao dịch CFD mang lại mức độ rủi ro cao, đặc biệt đối với các nhà đầu tư hoặc nhà đầu tư lần đầu tiên không được đào tạo tốt về thị trường",
+            en: "Contracts for Difference (CFDs) are derivative instruments that allow traders to speculate on the changing values of an asset without taking ownership of that asset. Due to their complexity, trading CFDs carries a high level of risk, particularly for first-time traders or investors who are not well-educated about the markets.",
+            vi: "Hợp đồng chênh lệch (CFDs) là các công cụ phái sinh cho phép các nhà đầu tư suy đoán về giá trị thay đổi của một tài sản mà không có quyền sở hữu tài sản đó. Do sự phức tạp của chúng, việc giao dịch CFD mang lại mức độ rủi ro cao, đặc biệt đối với các nhà đầu tư hoặc nhà đầu tư lần đầu tiên không được đào tạo tốt về thị trường.",
             "zh-Hant": "差價合約（CFD）是讓交易者能在不擁有資產的情況下對資產價格的變動進行投機的衍生工具。由於十分復雜，CFD 具有高度的風險，尤其是對於首次交易者或未獲得良好市場教育的投資者而言。"
         },
         amtResponsibly3: {
@@ -5879,7 +5879,7 @@ module.exports = function () {
         amtCategorization21: {
             zh: "C 满足以下条件的大型企业或机构：",
             en: "Or, a large undertaking meeting any of the following conditions: ",
-            vi: "Hoặc, một công việc kinh doanh lớn đáp ứng bất kỳ điều kiện nào sau đây:",
+            vi: "Hoặc, một công việc kinh doanh lớn đáp ứng bất kỳ điều kiện nào sau đây: ",
             "zh-Hant": "C 滿足以下條件的大型企業或機構："
         },
         amtCategorization22: {
@@ -6005,7 +6005,7 @@ module.exports = function () {
         amtCategorization42: {
             zh: "合资格交易对手被分类为固有合资格交易对手或选择性合资格交易对手的客户。如果本公司为客户开展下列活动，则该客户只能是合资格交易对手：",
             en: "A client that is either a per se eligible or an elective eligible counterparty. Clients can only be an eligible counterparty if the firm is undertaking one of the following activities for them: ",
-            vi: "Một khách hàng đủ điều kiện hoặc một đối tác đủ điều kiện được chọn. Khách hàng chỉ có thể là đối tác đủ điều kiện nếu công ty đang thực hiện một trong các hoạt động sau đây cho họ:",
+            vi: "Một khách hàng đủ điều kiện hoặc một đối tác đủ điều kiện được chọn. Khách hàng chỉ có thể là đối tác đủ điều kiện nếu công ty đang thực hiện một trong các hoạt động sau đây cho họ: ",
             "zh-Hant": "合資格交易對手被分類為固有合資格交易對手或選擇性合資格交易對手的客戶。如果本公司為客戶開展下列活動，則該客戶只能是合資格交易對手："
         },
         amtCategorization43: {
@@ -7109,7 +7109,7 @@ module.exports = function () {
         amtExecution114: {
             zh: "订单的市价单、买入限价单、卖出限价单、卖出止损单、买入止损单、止损单、止盈单以上面“订单执行”部分说明的方式执行。应当注意的是，在异常市场条件下，交易的执行价格可能与原来申请的价格显著不同。例如，这种情况在下列情况下可能发生：",
             en: "Market Order, Buy Limit, Sell Limit, Sell Stop, Buy Stop, Stop Loss, Take Profit on Financial Instrument are executed in the manner explained in ‘Order Execution’ section above. It should be noted that the price at which a trade is executed at may vary significantly from original requested price during abnormal market conditions. This may occur, for example, at the following cases: ",
-            vi: "Lệnh thị trường, Giới hạn mua, Giới hạn bán, Dừng bán, Dừng mua, Dừng lỗ, Chốt lời trên Công cụ tài chính được thực hiện theo cách được giải thích trong phần ‘Thực Hiện lệnh’ ở trên. Cần lưu ý rằng giá mà tại đó một giao dịch được thực hiện tại có thể khác nhau đáng kể so với giá yêu cầu ban đầu trong điều kiện thị trường bất thường. Điều này có thể xảy ra, ví dụ, trong các trường hợp sau:",
+            vi: "Lệnh thị trường, Giới hạn mua, Giới hạn bán, Dừng bán, Dừng mua, Dừng lỗ, Chốt lời trên Công cụ tài chính được thực hiện theo cách được giải thích trong phần ‘Thực Hiện lệnh’ ở trên. Cần lưu ý rằng giá mà tại đó một giao dịch được thực hiện tại có thể khác nhau đáng kể so với giá yêu cầu ban đầu trong điều kiện thị trường bất thường. Điều này có thể xảy ra, ví dụ, trong các trường hợp sau: ",
             "zh-Hant": "訂單的市價單、買入限價單、賣出限價單、賣出止損單、買入止損單、止損單、止盈單以上面“訂單執行”部分說明的方式執行。應當註意的是，在異常市場條件下，交易的執行價格可能與原來申請的價格顯著不同。例如，這種情況在下列情況下可能發生："
         },
         amtExecution115: {
@@ -7168,8 +7168,8 @@ module.exports = function () {
         },
         amtExecution124: {
             zh: "11.某些因素可能快速影响标的金融工具的价格，而对金融工具所报出的实价来源于此。这些因素可能影响以上所列的部分因素。本公司将采取一切合理措施，以尽可能为客户获得最佳价格。",
-            en: "11.Some factors may affect rapidly the price of the underlying financial instruments from which the quoted firm price for its Financial Instruments is derived. These factors may influence some of the factors listed above. The Firm will take all reasonable steps to obtain the best possible result for its Clients",
-            vi: "11.Một số yếu tố có thể ảnh hưởng nhanh đến giá của các công cụ tài chính cơ bản mà từ đó giá công ty được chào giá cho Công cụ tài chính được chào giá. Những yếu tố này có thể ảnh hưởng đến một số yếu tố được liệt kê ở trên. Công ty sẽ thực hiện tất cả các bước hợp lý để có được kết quả tốt nhất có thể cho Khách hàng của mình",
+            en: "11.Some factors may affect rapidly the price of the underlying financial instruments from which the quoted firm price for its Financial Instruments is derived. These factors may influence some of the factors listed above. The Firm will take all reasonable steps to obtain the best possible result for its Clients.",
+            vi: "11.Một số yếu tố có thể ảnh hưởng nhanh đến giá của các công cụ tài chính cơ bản mà từ đó giá công ty được chào giá cho Công cụ tài chính được chào giá. Những yếu tố này có thể ảnh hưởng đến một số yếu tố được liệt kê ở trên. Công ty sẽ thực hiện tất cả các bước hợp lý để có được kết quả tốt nhất có thể cho Khách hàng của mình.",
             "zh-Hant": "11.某些因素可能快速影響標的金融工具的價格，而對金融工具所報出的實價來源於此。這些因素可能影響以上所列的部分因素。本公司將采取壹切合理措施，以盡可能為客戶獲得最佳價格。"
         },
         amtExecution125: {
@@ -7187,7 +7187,7 @@ module.exports = function () {
         amtExecution127: {
             zh: "本公司将使用商业判断和基于市场上可获得信息的经验，并考虑下列规定的标准，确定以上因素的相对重要性：",
             en: "The Firm will determine the relative importance of the above factors by using its commercial judgment and experience in the light of the information available on the market and taking into account the criteria described below: ",
-            vi: "Công ty sẽ xác định tầm quan trọng tương đối của các yếu tố trên bằng cách sử dụng đánh giá thương mại và kinh nghiệm của mình theo thông tin có sẵn trên thị trường và có tính đến các tiêu chí được mô tả dưới đây:",
+            vi: "Công ty sẽ xác định tầm quan trọng tương đối của các yếu tố trên bằng cách sử dụng đánh giá thương mại và kinh nghiệm của mình theo thông tin có sẵn trên thị trường và có tính đến các tiêu chí được mô tả dưới đây: ",
             "zh-Hant": "本公司將使用商業判斷和基於市場上可獲得信息的經驗，並考慮下列規定的標準，確定以上因素的相對重要性："
         },
         amtExecution128: {
@@ -8022,7 +8022,7 @@ module.exports = function () {
             guides: {
                 zh: "交易指南",
                 en: "Guides",
-                vi: "Hướng dẫn",
+                vi: "Chỉ dẫn",
                 "zh-Hant": "交易指南"
             },
             partners: {
