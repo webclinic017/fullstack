@@ -186,7 +186,7 @@
                 };
                 $scope.quoteSymbols.push(symbol);
             });
-            getUserGroup();
+            connectSocket();
         }
 
         // function getSpreadInfo() {
@@ -275,26 +275,8 @@
                             if (value.symbol === quote[0]) {
                                 value.type = quote[1];
                                 value.timestamp = quote[4];
-
-                                // 处理点差
-                                if ($scope.userGroup) {
-                                    var s = $scope.spreadInfo.spread_special_offset[$scope.userGroup[$scope.spreadInfo.security[value.symbol]]];
-                                    groupSpread = s ? s / 2 : 0;
-                                }
-
-                                // commonSpread = $scope.spreadInfo.spread_common[$scope.spreadInfo.security[value.symbol]] / 2;
-                                var fix = '1';
-                                spreadLength = quote[3].split('.')[1].length;
-                                for (var i = 0; i < spreadLength; i++) {
-                                    fix = fix + '0';
-                                }
-                                // commonSpread = commonSpread / fix;
-                                groupSpread = groupSpread / fix;
-                                buy = (Number(quote[3]) + groupSpread).toFixed(spreadLength);
-                                sell = (Number(quote[2]) - groupSpread).toFixed(spreadLength);
-
-                                value.sell = sell;
-                                value.buy = buy;
+                                value.sell = quote[2];
+                                value.buy = quote[3];
                             }
                         });
                     });
