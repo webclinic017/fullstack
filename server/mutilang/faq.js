@@ -868,7 +868,7 @@ module.exports = {
         deal5A: {
             zh: "Our minimum order size is 0.01 lot for FX and precious metals, and 0.1 for commodities and indices.",
             en: "Our minimum order size is 0.01 lot for FX and precious metals, and 0.1 for commodities and indices.",
-            vi: "Kích thước lệnh tối thiểu của chúng tôi là 0,01 lot cho FX và kim loại quý và 0,1 cho hàng hóa và chỉ số.",
+            vi: "Kích thước lệnh tối thiểu của chúng tôi là 0.01 lot cho FX và kim loại quý và 0,1 cho hàng hóa và chỉ số.",
             "zh-Hant": "Our minimum order size is 0.01 lot for FX and precious metals, and 0.1 for commodities and indices."
         },
         deal6Q: {

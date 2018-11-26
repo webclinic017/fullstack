@@ -431,7 +431,7 @@
                     login: {
                         zh: "登录",
                         en: "Login",
-                        vi: "Login",
+                        vi: "Đăng nhập",
                         "zh-Hant": "登錄"
                     },
                     country: {
@@ -443,7 +443,7 @@
                     passwordLogin: {
                         zh: "密码登录",
                         en: "Password Login",
-                        vi: "Mật khẩu truy cập",
+                        vi: "Mật khẩu",
                         "zh-Hant": "密碼登錄"
                     },
                     enterPhoneNumber: {
@@ -605,7 +605,7 @@
                     verificationCodeLogin: {
                         zh: "验证码登录",
                         en: "Code Login",
-                        vi: "Mã truy cập",
+                        vi: "Mã xác nhận",
                         "zh-Hant": "驗證碼登錄"
                     },
                     enterPassword: {
@@ -5645,7 +5645,7 @@
                     tip4: {
                         zh: "只允许买0.01的倍数",
                         en: "Only allow a multiple of 0.01",
-                        vi: "Chỉ cho phép một bội số của 0,01",
+                        vi: "Chỉ cho phép một bội số của 0.01",
                         "zh-Hant": "只允許買0.01的倍數"
                     },
                     tip5: {
@@ -5669,7 +5669,7 @@
                     tip8: {
                         zh: "您确定要买入0.01手吗？",
                         en: "Are you sure to buy 0.01 lots?",
-                        vi: "Bạn có chắc chắn mua 0,01 lot không ",
+                        vi: "Bạn có chắc chắn mua 0.01 lot không ",
                         "zh-Hant": "您確定要買入0.01手嗎？"
                     }
                 },

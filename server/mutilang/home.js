@@ -152,7 +152,7 @@ module.exports = {
     newhome_24: {
         zh: "最低交易手数0.01手",
         en: "Trade from a minimum of just 0.01 Lot",
-        vi: "Giao dịch từ mức tối thiểu chỉ 0,01 Lot",
+        vi: "Giao dịch từ mức tối thiểu chỉ 0.01 Lot",
         "zh-Hant": "最低交易手數0.01手"
     },
     newhome_25: {
