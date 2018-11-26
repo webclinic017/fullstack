@@ -3087,7 +3087,7 @@
                     manageBankCards: {
                         zh: "管理银行卡",
                         en: "Manage Bank Cards",
-                        vi: "Quản Lý Những Thẻ Ngân Hàng",
+                        vi: "Quản Lý Thẻ Ngân Hàng",
                         "zh-Hant": "管理銀行卡"
                     },
                     addBankCards: {
@@ -5748,26 +5748,26 @@
                     },
                     userName: {
                         zh: "用户名（中文）",
-                        en: "User Name(Chines)",
-                        vi: "Tên người dung (Trung Quốc)",
+                        en: "User Name(Chines) ",
+                        vi: "Tên người dung (Trung Quốc) ",
                         "zh-Hant": "用護名（中文）"
                     },
                     userNameEn: {
                         zh: "用户名（英文）",
-                        en: "User Name(English)",
-                        vi: "Tên người dung (Tiếng Anh)",
+                        en: "User Name(English) ",
+                        vi: "Tên người dung (Tiếng Anh) ",
                         "zh-Hant": "用護名（英文）"
                     },
                     userNameM: {
                         zh: "用户名（中文）：",
                         en: "User Name(Chinese): ",
-                        vi: "Tên người dung (Trung Quốc)",
+                        vi: "Tên người dung (Trung Quốc): ",
                         "zh-Hant": "用護名（中文）："
                     },
                     userNameEnM: {
                         zh: "用户名（英文）：",
                         en: "User Name(English): ",
-                        vi: "Tên người dung (Tiếng Anh)",
+                        vi: "Tên người dung (Tiếng Anh): ",
                         "zh-Hant": "用護名（英文）："
                     },
                     modify: {
@@ -5785,7 +5785,7 @@
                     countryM: {
                         zh: "国 家：",
                         en: "Country: ",
-                        vi: "Quốc gia",
+                        vi: "Quốc gia: ",
                         "zh-Hant": "國 家："
                     },
                     setPhotos: {

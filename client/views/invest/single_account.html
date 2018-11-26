@@ -1,10 +1,10 @@
 <div class="space_center_trading" >
-    <div class="row align-item-c">
-        <div class="col-xs-7 align-item-c">
+    <div class="item-center space-between">
+        <div class="item-center">
             <div class="block_title">{{lang.text('tigerWitID.tradingAccount.title')}}</div>
             <tw-select-list default-select-key="defaultSelectKey" default-select="investSelect" disabled="true" select-data-list="accountInfo.accountList" click-change="changeSelect()"></tw-select-list>
         </div>
-        <div class="col-xs-5"  ng-if="!personal.has_master">
+        <div class=""  ng-if="!personal.has_master">
             <div class="block_btn_group text-right">
                 <a ui-sref="space.master.subpage({ subpage: 'apply'})" class="tw-btn tw-btn-capsule-gradient tw-btn-md">{{lang.text('tigerWitID.tradingAccount.becomeMaster')}}</a>
             </div>
