@@ -71,7 +71,7 @@
         en: indexBasePath + "/home/client-map-en-en.png",
         zh: indexBasePath + "/home/client-map-cn-cn.png",
         vi: indexBasePath + "/home/client-map-vi-vi.png",
-        "zh-Hant": indexBasePath + "/home/client-map-cn-cn.png"
+        "zh-Hant": indexBasePath + "/home/client-map-cn-ht.png"
     },
     downloadAppIos: {
         en: indexBasePath + "/download/focus-icon-ios-en.png",

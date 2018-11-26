@@ -26,7 +26,7 @@ module.exports = {
     tradeFee4: {
         zh: "请查看TigerWitTigerWit各交易品种点差详情",
         en: "Please check TigerWit spread details of each symbol",
-        vi: "Vui lòng kiểm tra chi tiết chênh lệch giữa giá bán và giá mua truyền TigerWit của mỗi biểu tượng.",
+        vi: "Vui lòng kiểm tra chi tiết chênh lệch giữa giá bán và giá mua truyền TigerWit của mỗi biểu tượng",
         "zh-Hant": "請查看TigerWitTigerWit各交易品種點差詳情"
     },
     tradeFee5: {
@@ -115,7 +115,7 @@ module.exports = {
     },
     tradeFee19: {
         zh: "当您取消复制关系并选择强制平仓时，系统将对跟随该高手的所有订单进行统计并结算，扣除未结算盈利部分的20%作为该高手佣金。",
-        en: "When you chose 'Unfollow and force close the orders', the system will calculation and settle all orders following the master, and deducts 20% of the profit portion as a high commission",
+        en: "When you chose 'Unfollow and force close the orders', the system will calculation and settle all orders following the master, and deducts 20% of the profit portion as a high commission.",
         vi: "Khi bạn chọn 'Hủy theo dõi và buộc đóng các đơn đặt hàng', hệ thống sẽ tính toán và thanh toán tất cả các đơn đặt hàng theo quy tắc chính và khấu trừ 20% phần lợi nhuận dưới dạng hoa hồng cao.",
         "zh-Hant": "當您取消復制關系並選擇強制平倉時，系統將對跟隨該高手的所有訂單進行統計並結算，扣除未結算盈利部分的20%作為該高手傭金。"
     },

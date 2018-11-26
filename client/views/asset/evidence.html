@@ -30,7 +30,7 @@
               {{lang.text('tigerWitID.depositWithdrawal.tip40')}}<br>
               {{lang.text('tigerWitID.depositWithdrawal.tip41')}}
           </p>
-          <div class="desc">
+          <div class="desc" ng-if="personal.region.world_code == 'CN'">
             <a href="/web/deposit/evidence" target="_blank">{{lang.text('tigerWitID.depositWithdrawal.vouchersInstance')}}</a>
           </div>
         </div>        

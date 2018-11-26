@@ -210,9 +210,9 @@
             },
             HoldingTrades10: {
                 en: "Note：Trades won't be shown here before 7 days.",
-                zh: "注：当前交易仅显示高手最近一周持仓订单",
-                vi: "Lưu ý: Những giao dịch sẽ không được hiển thị trước 7 ngày",
-                "zh-Hant": "註：當前交易僅顯示高手最近壹周持倉訂單"
+                zh: "注：当前交易仅显示高手最近一周持仓订单。",
+                vi: "Lưu ý: Những giao dịch sẽ không được hiển thị trước 7 ngày.",
+                "zh-Hant": "註：當前交易僅顯示高手最近壹周持倉訂單。"
             },
             TradingHistory1: {
                 en: "Operation",
@@ -361,7 +361,7 @@
             actLogin23: {
                 zh: "请为您的账户设置密码，6-15位字母、数字或符号组合",
                 en: "Please set a password for your account，6-15 bit of Letters, numbers, or combinations of symbols",
-                vi: "Vui lòng đặt mật khẩu cho tài khoản của bạn ， 6-15 bit chữ cái, số hoặc kết hợp các ký hiệu ",
+                vi: "Vui lòng đặt mật khẩu cho tài khoản của bạn ， 6-15 bit chữ cái, số hoặc kết hợp các ký hiệu",
                 "zh-Hant": "請為您的賬戶設置密碼，6-15位字母、數字或符號組合"
             },
             actLogin28: {
@@ -431,7 +431,7 @@
                     login: {
                         zh: "登录",
                         en: "Login",
-                        vi: "Truy cập",
+                        vi: "Login",
                         "zh-Hant": "登錄"
                     },
                     country: {
@@ -569,7 +569,7 @@
                     tip2: {
                         zh: "该手机号已存在，请更换手机号进行注册或前往登录。",
                         en: "This phone number already exists. Please use another valid phone number for registration.",
-                        vi: "Số điện thoại này đã tồn tại. Vui lòng sử dụng một số điện thoại có hiệu lực để đăng ký",
+                        vi: "Số điện thoại này đã tồn tại. Vui lòng sử dụng một số điện thoại có hiệu lực để đăng ký.",
                         "zh-Hant": "該手機號已存在，請更換手機號進行註冊或前往登錄。"
                     },
                     setPasswordToStart: {
@@ -821,7 +821,7 @@
                     tip8_3: {
                         zh: "已存在，请更换",
                         en: "already exists. Please use another valid ",
-                        vi: "đã tồn tại. Vui lòng sử dụng một cái khác có hiệu lực",
+                        vi: "đã tồn tại. Vui lòng sử dụng một cái khác có hiệu lực ",
                         "zh-Hant": "已存在，請更換"
                     },
                     tip8_4: {
@@ -845,7 +845,7 @@
                     tip11: {
                         zh: "您可直接使用新密码进行登录。",
                         en: "You can login directly using the new password.",
-                        vi: "Bạn có thể đăng nhập ngay lập tức bằng cách sử dụng mật khẩu mới",
+                        vi: "Bạn có thể đăng nhập ngay lập tức bằng cách sử dụng mật khẩu mới.",
                         "zh-Hant": "您可直接使用新密碼進行登錄。"
                     },
                     tip10: {
@@ -877,13 +877,13 @@
                     updateIDTip: {
                         zh: "您的证件已过期，无法进行该操作，请及时上传有效证件。点击“更新证件”，即可完成相关操作。",
                         en: "Your credential has expired and cannot be operated. Please upload your valid certificate in time. Click on the \"Update ID\" to complete the related operations.",
-                        vi: "Thông tin xác thực của bạn đã hết hạn và không thể hoạt động. Vui lòng tải lên chứng chỉ hợp lệ của bạn kịp thời. Nhấp vào \"Cập nhật ID \" để hoàn thành các hoạt động liên quan ",
+                        vi: "Thông tin xác thực của bạn đã hết hạn và không thể hoạt động. Vui lòng tải lên chứng chỉ hợp lệ của bạn kịp thời. Nhấp vào \"Cập nhật ID \" để hoàn thành các hoạt động liên quan.",
                         "zh-Hant": "您的證件已過期，無法進行該操作，請及時上傳有效證件。點擊“更新證件”，即可完成相關操作。"
                     },
                     updateIDTip2: {
                         zh: "您的证件已过期，无法进行该操作，请及时上传有效证件。",
                         en: "Your credential has expired and cannot be operated. Please upload your valid certificate in time.",
-                        vi: "Thông tin của bạn đã hết hạn và không thể hoạt động. Vui lòng cập nhật chứng chỉ có hiệu lực của bạn lên đúng thời gian",
+                        vi: "Thông tin của bạn đã hết hạn và không thể hoạt động. Vui lòng cập nhật chứng chỉ có hiệu lực của bạn lên đúng thời gian.",
                         "zh-Hant": "您的證件已過期，無法進行該操作，請及時上傳有效證件。"
                     },
                     totalAssets: {
@@ -979,7 +979,7 @@
                     tip1: {
                         zh: "高手分成收益与代理商佣金收益会存入钱包，您可以提现或划入交易帐户。",
                         en: "The earnings you gained with the master and the agent will be deposited in the wallet，You can choose to withdrawal or transfer to the trading account.",
-                        vi: "Thu nhập bạn kiếm được với nhà giao dịch chính và đại lý sẽ được gửi vào ví ， Bạn có thể chọn rút tiền hoặc chuyển khoản vào tài khoản giao dịch ",
+                        vi: "Thu nhập bạn kiếm được với nhà giao dịch chính và đại lý sẽ được gửi vào ví ， Bạn có thể chọn rút tiền hoặc chuyển khoản vào tài khoản giao dịch.",
                         "zh-Hant": "高手分成收益與代理商傭金收益會存入錢包，您可以提現或劃入交易帳護。"
                     },
                     quickOpenAccount: {
@@ -1021,7 +1021,7 @@
                     tip6: {
                         zh: "完整填写您的个人信息并通过审核；",
                         en: "Complete and verify your personal information;",
-                        vi: "Hoàn thành và xác nhận thông tin cá nhân của bạn.",
+                        vi: "Hoàn thành và xác nhận thông tin cá nhân của bạn;",
                         "zh-Hant": "完整填寫您的個人信息並通過審核；"
                     },
                     depositToActivate: {
@@ -1039,7 +1039,7 @@
                     tip8: {
                         zh: "您离交易还差两步：1.上传身份审核 2.入金",
                         en: "You are two steps away from transaction: 1.Upload identity audit 2.Deposit",
-                        vi: "Bạn còn cách hai bước từ giao dịch: 1.Tải lên nhận dạng kiểm toán 2.Kí quỹ ",
+                        vi: "Bạn còn cách hai bước từ giao dịch: 1.Tải lên nhận dạng kiểm toán 2.Kí quỹ",
                         "zh-Hant": "您離交易還差兩步：1.上傳身份審核 2.入金"
                     },
                     tip9: {
@@ -1057,7 +1057,7 @@
                     tip11: {
                         zh: "客户资金完全与公司资金隔离，保存在独立银行账户中，确保属于客户的资金不会被用于任何其他目的。",
                         en: "Customer funds are completely segregated from company funds and kept in separate bank accounts to ensure that funds belonging to customers are not used for any other purpose.",
-                        vi: "Quỹ khách hàng được tách biệt hoàn toàn khỏi quỹ của công ty và được giữ trong các tài khoản ngân hàng riêng biệt để đảm bảo rằng các quỹ thuộc về khách hàng không được sử dụng cho bất kỳ mục đích nào khác ",
+                        vi: "Quỹ khách hàng được tách biệt hoàn toàn khỏi quỹ của công ty và được giữ trong các tài khoản ngân hàng riêng biệt để đảm bảo rằng các quỹ thuộc về khách hàng không được sử dụng cho bất kỳ mục đích nào khác.",
                         "zh-Hant": "客護資金完全與公司資金隔離，保存在獨立銀行帳護中，確保屬於客護的資金不會被用於任何其他目的。"
                     },
                     tip12: {
@@ -1075,7 +1075,7 @@
                     tip14: {
                         zh: "您当前的账户类型不支持使用该功能，请及时升级账户",
                         en: "Your current account type does not support using this function, please update the account in time",
-                        vi: "Loại tài khoản hiện tại của bạn không hỗ trợ sử dụng chức năng này, vui lòng cập nhật tài khoản kịp thời” ",
+                        vi: "Loại tài khoản hiện tại của bạn không hỗ trợ sử dụng chức năng này, vui lòng cập nhật tài khoản kịp thời",
                         "zh-Hant": "您當前的帳護類型不支持使用該功能，請及時升級帳護"
                     },
                     tip15: {
@@ -1099,7 +1099,7 @@
                     tip16: {
                         zh: "工作日10:00-18:00：将在30分钟左右完成审核",
                         en: "Work day 10:00-18:00: the review will be completed in about 30 minutes",
-                        vi: "Ngày làm việc 10: 00-18: 00: quá trình đánh giá sẽ hoàn thành sau khoảng 30 phút ",
+                        vi: "Ngày làm việc 10: 00-18: 00: quá trình đánh giá sẽ hoàn thành sau khoảng 30 phút",
                         "zh-Hant": "工作日10:00-18:00：將在30分鐘左右完成審核"
                     },
                     tip17: {
@@ -1117,7 +1117,7 @@
                     tip19: {
                         zh: "请留意查询您的审核状态。",
                         en: "Please check your audit status.",
-                        vi: "Vui lòng kiểm tra trạng thái kiểm tra của bạn",
+                        vi: "Vui lòng kiểm tra trạng thái kiểm tra của bạn.",
                         "zh-Hant": "請留意查詢您的審核狀態。"
                     },
                     accountNumber: {
@@ -1273,7 +1273,7 @@
                     uploadWait: {
                         zh: "文件上传中,请耐心等待",
                         en: "Uploading, please wait a minute.",
-                        vi: "Đang tải lên, vui lòng đợi trong chốc lát",
+                        vi: "Đang tải lên, vui lòng đợi trong chốc lát.",
                         "zh-Hant": "文件上傳中,請耐心等待"
                     },
                     systemBusy: {
@@ -1285,13 +1285,13 @@
                     tip27: {
                         zh: "您上传的身份证正在审核中，审核通过后，我们将通过短信或邮件的方式通知您，请注意查收",
                         en: "The ID card you uploaded is under review. After the audit, we will inform you by SMS or email, please note to check.",
-                        vi: "Thẻ ID bạn đã tải lên đang được xem xét. Sau khi kiểm toán, chúng tôi sẽ thông báo cho bạn bằng tin nhắn SMS hoặc email, xin lưu ý để kiểm tra",
+                        vi: "Thẻ ID bạn đã tải lên đang được xem xét. Sau khi kiểm toán, chúng tôi sẽ thông báo cho bạn bằng tin nhắn SMS hoặc email, xin lưu ý để kiểm tra.",
                         "zh-Hant": "您上傳的身份證正在審核中，審核通過後，我們將通過短信或郵件的方式通知您，請註意查收"
                     },
                     tip28: {
                         zh: "注意：审核期间并不影响您的正常交易",
                         en: "Note: the audit period does not affect your normal transactions",
-                        vi: "Ghi chú: giai đoạn kiểm tra không ảnh hưởng đến các giao dịch bình thường của bạn ",
+                        vi: "Ghi chú: giai đoạn kiểm tra không ảnh hưởng đến các giao dịch bình thường của bạn",
                         "zh-Hant": "註意：審核期間並不影響您的正常交易"
                     },
                     dear: {
@@ -1303,7 +1303,7 @@
                     tip29: {
                         zh: "您好，您上传的身份信息已经通过审核，请放心交易",
                         en: "The identity information you uploaded has been approved. Please feel free to trade.",
-                        vi: "Thông tin danh tính bạn tải lên đã được chấp thuận. Vui long giao dịch ",
+                        vi: "Thông tin danh tính bạn tải lên đã được chấp thuận. Vui long giao dịch.",
                         "zh-Hant": "您好，您上傳的身份信息已經通過審核，請放心交易"
                     },
                     transaction: {
@@ -1327,13 +1327,13 @@
                     tip34: {
                         zh: "您的账户尚未完成认证审核，将无法进行交易和资金相关操作，点击此处完成审核。",
                         en: "This account has not yet been certified, trading and money-related operations will not be possible，click here to complete the review.",
-                        vi: "Tài khoản này chưa được chứng nhận, giao dịch và các hoạt động liên quan đến tiền bạc sẽ không thể thực hiện được ， nhấp vào đây để hoàn thành việc xem xét ",
+                        vi: "Tài khoản này chưa được chứng nhận, giao dịch và các hoạt động liên quan đến tiền bạc sẽ không thể thực hiện được ， nhấp vào đây để hoàn thành việc xem xét.",
                         "zh-Hant": "您的帳護尚未完成認證審核，將無法進行交易和資金相關操作，點擊此處完成審核。"
                     },
                     tip35: {
                         zh: "您当前账户为体验金账户，升级至真实账户只需两步：",
                         en: "Your current account is an experiential account, which can be upgraded to live account in two steps: ",
-                        vi: "Tài khoản hiện tại của bạn là tài khoản trải nghiệm, có thể được nâng cấp lên tài khoản thực theo hai bước:",
+                        vi: "Tài khoản hiện tại của bạn là tài khoản trải nghiệm, có thể được nâng cấp lên tài khoản thực theo hai bước: ",
                         "zh-Hant": "您當前帳護為體驗金帳護，升級至真實帳護只需兩步："
                     },
                     tip36: {
@@ -1387,7 +1387,7 @@
                     tip38: {
                         zh: "开通真实账户后，将不再支持开通体验金账户",
                         en: "After opening live account, it will no longer be supported to open experience account",
-                        vi: "Sau khi mở tài khoản thực, tài khoản sẽ không còn được hỗ trợ để mở tài khoản trải nghiệm ",
+                        vi: "Sau khi mở tài khoản thực, tài khoản sẽ không còn được hỗ trợ để mở tài khoản trải nghiệm",
                         "zh-Hant": "開通真實帳護後，將不再支持開通體驗金帳護"
                     },
                     experienceAccount: {
@@ -1399,7 +1399,7 @@
                     tip39_1: {
                         zh: " ",
                         en: "Resend(",
-                        vi: "Gửi lại",
+                        vi: "Gửi lại(",
                         "zh-Hant": " "
                     },
                     tip39_2: {
@@ -1441,7 +1441,7 @@
                     unableCountry: {
                         zh: "【暂不提供该国家的相关服务。】",
                         en: "We are unable to offer trading <br> services for this country.",
-                        vi: "Chúng tôi không thể cung cấp dịch vụ giao dịch <br> cho quốc gia này ",
+                        vi: "Chúng tôi không thể cung cấp dịch vụ giao dịch <br> cho quốc gia này.",
                         "zh-Hant": "【暫不提供該國家的相關服務。】"
                     },
                     cardEgTitle: {
@@ -1533,7 +1533,7 @@
                     tip9: {
                         zh: "密码由字母、数字和符号两种及以上组合，长度为 6-15个字符",
                         en: "A password consists of two or more combinations of letters, Numbers, and symbols and is 6-15 characters long",
-                        vi: "Mật khẩu bao gồm hai hoặc nhiều kết hợp chữ cái, số và ký hiệu và dài từ 6-15 ký tự ",
+                        vi: "Mật khẩu bao gồm hai hoặc nhiều kết hợp chữ cái, số và ký hiệu và dài từ 6-15 ký tự",
                         "zh-Hant": "密碼由字母、數字和符號兩種及以上組合，長度為 6-15個字符"
                     },
                     simplifiedChinese: {
@@ -1563,13 +1563,13 @@
                     tip10: {
                         zh: "字符数不符合要求",
                         en: "The number of characters does not meet the requirement",
-                        vi: "Số lượng ký tự không đáp ứng yêu cầu ",
+                        vi: "Số lượng ký tự không đáp ứng yêu cầu",
                         "zh-Hant": "字符數不符合要求"
                     },
                     tip11: {
                         zh: "位数不正确或者包含非法字符",
                         en: "The number of digits is incorrect or contains illegal characters",
-                        vi: "Số chữ số không chính xác hoặc chứa ký tự không hợp lệ ",
+                        vi: "Số chữ số không chính xác hoặc chứa ký tự không hợp lệ",
                         "zh-Hant": "位數不正確或者包含非法字符"
                     },
                     passwordWeak: {
@@ -1769,7 +1769,7 @@
                     tip4: {
                         zh: "成为老虎外汇高手，获取20%盈利分成",
                         en: "Become a tigerwit’s master, get 20% profit share",
-                        vi: "Để trở thành nhà giao dịch chính của TigerWit, nhận 20% chia sẻ lợi nhuận ",
+                        vi: "Để trở thành nhà giao dịch chính của TigerWit, nhận 20% chia sẻ lợi nhuận",
                         "zh-Hant": "成為老虎外匯高手，獲取20%盈利分成"
                     },
                     help: {
@@ -1805,7 +1805,7 @@
                     tip5: {
                         zh: "继续完成以下操作，即可开始交易：",
                         en: "Continue to complete the following operations to start transaction: ",
-                        vi: "Tiếp tục hoàn tất các hoạt động sau để bắt đầu giao dịch ",
+                        vi: "Tiếp tục hoàn tất các hoạt động sau để bắt đầu giao dịch: ",
                         "zh-Hant": "繼續完成以下操作，即可開始交易："
                     },
                     tip6: {
@@ -1835,7 +1835,7 @@
                     tip8: {
                         zh: "用户开户至今扣除的分成总和",
                         en: "Total deductions commission of user from open account date",
-                        vi: "Tổng số tiền hoa hồng khấu trừ của người dùng từ ngày mở tài khoản ",
+                        vi: "Tổng số tiền hoa hồng khấu trừ của người dùng từ ngày mở tài khoản",
                         "zh-Hant": "用護開護至今扣除的分成總和"
                     },
                     follower: {
@@ -1913,7 +1913,7 @@
                     tip10: {
                         zh: "若复制金额低于建议复制金额，可能会导致跟单失败。",
                         en: "You must enter a copy amount at least equal to the recommended copy amount or the order may not be executed.",
-                        vi: "Bạn phải nhập số tiền sao chép thấp nhất bằng với số tiền sao chép được đề nghị hoặc lệnh sẽ không được thực thi ",
+                        vi: "Bạn phải nhập số tiền sao chép thấp nhất bằng với số tiền sao chép được đề nghị hoặc lệnh sẽ không được thực thi.",
                         "zh-Hant": "若復制金額低於建議復制金額，可能會導致跟單失敗。"
                     },
                     tip11: {
@@ -2003,7 +2003,7 @@
                     tip16: {
                         zh: "账号名称包含2-8个字符，支持中英文，数字",
                         en: "The account name contains 2-8 characters and supports both Chinese，English and Numbers.",
-                        vi: "Tên tài khoản bao gồm từ 2 đến 8 ký tự và được hỗ trợ cả tiếng Trung Quốc, Tiếng Anh và con số",
+                        vi: "Tên tài khoản bao gồm từ 2 đến 8 ký tự và được hỗ trợ cả tiếng Trung Quốc, Tiếng Anh và con số.",
                         "zh-Hant": "帳號名稱包含2-8個字符，支持中英文，數字"
                     },
                     details: {
@@ -2033,7 +2033,7 @@
                     tip18: {
                         zh: "新建子账号前需确保已充值激活所有已开通子账号",
                         en: "Make sure that all the accounts have been deposited and activated before create new sub-account.",
-                        vi: "Đảm bảo rằng tất cả các tài khoản đã được gửi và kích hoạt trước khi tạo tài khoản phụ mới ",
+                        vi: "Đảm bảo rằng tất cả các tài khoản đã được gửi và kích hoạt trước khi tạo tài khoản phụ mới.",
                         "zh-Hant": "新建子帳號前需確保已充值激活所有已開通子帳號"
                     },
                     createSubAccount: {
@@ -2075,7 +2075,7 @@
                     tip22: {
                         zh: "任何通过第三方作弊软件刷取好友邀请奖励，一经发现有权取消红包兑现奖励；",
                         en: "Any cheating, if discovered by TigerWit, will be disqualified.",
-                        vi: "Bất kỳ hành vi gian lận nào,nếu bị phát hiện bởi TigerWit sẽ bị loại",
+                        vi: "Bất kỳ hành vi gian lận nào,nếu bị phát hiện bởi TigerWit sẽ bị loại.",
                         "zh-Hant": "任何通過第三方作弊軟件刷取好友邀請獎勵，壹經發現有權取消紅包兌現獎勵；"
                     },
                     tip23: {
@@ -2233,7 +2233,7 @@
                     deducted20Note: {
                         zh: "注：您复制高手的盈利部分将会扣除20%作为佣金给高手。详情请参考：",
                         en: "Note：The 20% profit that you gain by following the master will be deducted as commission. Please refer to: ",
-                        vi: "Lưu ý: 20% lợi nhuận bạn đạt được khi sao chép nhà giao dịch chính sẽ được trừ như là hoa hồng, vui lòng xem phần:",
+                        vi: "Lưu ý: 20% lợi nhuận bạn đạt được khi sao chép nhà giao dịch chính sẽ được trừ như là hoa hồng, vui lòng xem phần: ",
                         "zh-Hant": "註：您復制高手的盈利部分將會扣除20%作為傭金給高手。詳情請慘考："
                     },
                     operation: {
@@ -2353,7 +2353,7 @@
                     includeCommissionSwap: {
                         zh: "包含手续费、库存费",
                         en: "Include commission and swap",
-                        vi: "Bao gồm hoa hồng và phí qua đêm ",
+                        vi: "Bao gồm hoa hồng và phí qua đêm",
                         "zh-Hant": "包含手續費、庫存費"
                     },
                     orderNumber: {
@@ -2461,7 +2461,7 @@
                     tip1: {
                         zh: "修改止盈/止损价格，参考范围以现在的价格为准",
                         en: "Modify the SL / TP, the reference range to the current price shall prevail",
-                        vi: "Sửa đổi SL / TP, phạm vi tham chiếu đến giá hiện tại sẽ chiếm ưu thế ",
+                        vi: "Sửa đổi SL / TP, phạm vi tham chiếu đến giá hiện tại sẽ chiếm ưu thế",
                         "zh-Hant": "修改止盈/止損價格，慘考範圍以現在的價格為準"
                     },
                     orderPrice: {
@@ -2619,7 +2619,7 @@
                     totalCopyBrokerage: {
                         zh: "总计跟单分成",
                         en: "Total Copy Brokerage",
-                        vi: "Tổng Số Mô Giới Sao Chép ",
+                        vi: "Tổng Số Mô Giới Sao Chép",
                         "zh-Hant": "總計跟單分成"
                     },
                     closedOrders: {
@@ -2795,7 +2795,7 @@
                     revenueLeading: {
                         zh: "收益领先 表现突出",
                         en: "Revenue leading, outstanding performance",
-                        vi: "Doanh thu dẫn đầu, hiệu suất vượt trội ",
+                        vi: "Doanh thu dẫn đầu, hiệu suất vượt trội",
                         "zh-Hant": "收益領先 表現突出"
                     },
                     steady: {
@@ -2975,25 +2975,25 @@
                     tigerWitCopyAgreements1: {
                         zh: "使用TigerWit复制跟单服务时，请您务必审慎阅读、充分理解以下协议内容：",
                         en: "When you use TigerWit follow service, please make sure to read and fully understand the following contant of agreements: ",
-                        vi: "Khi bạn sử dụng dịch vụ theo dõi của TigerWit, vui lòng đảm bảo rằng bạn đã đọc và thật sự hiểu các mục của thỏa thuận.",
+                        vi: "Khi bạn sử dụng dịch vụ theo dõi của TigerWit, vui lòng đảm bảo rằng bạn đã đọc và thật sự hiểu các mục của thỏa thuận: ",
                         "zh-Hant": "使用TigerWit復制跟單服務時，請您務必審慎閱讀、充分理解以下協議內容："
                     },
                     tigerWitCopyAgreements2: {
                         zh: "1.系统将使用跟单专用账号复制高手，无跟单账号复制时将自动生成，所有复制操作均使用该跟单账号进行；",
                         en: "1. System will use the special copy account to follow masters, the special copy account will be generated if there is no one, and all copy operation will use this special account;",
-                        vi: "Hệ thống sẽ sử dụng tài khoản sao chép đặc biệt để theo dõi nhà giao dịch chính, tài khoản sao chép đặc biệt sẽ được tạo nếu không có ai, và tất cả hoạt động sao chép sẽ sử dụng tài khoản đặc biệt này ",
+                        vi: "Hệ thống sẽ sử dụng tài khoản sao chép đặc biệt để theo dõi nhà giao dịch chính, tài khoản sao chép đặc biệt sẽ được tạo nếu không có ai, và tất cả hoạt động sao chép sẽ sử dụng tài khoản đặc biệt này;",
                         "zh-Hant": "1.系統將使用跟單專用帳號復制高手，無跟單帳號復制時將自動生成，所有復制操作均使用該跟單帳號進行；"
                     },
                     tigerWitCopyAgreements3: {
                         zh: "2.复制成功后，跟单账号自动跟随高手进行同步开平仓交易；",
                         en: "2. After successful follow, the copy account will open orders with master synchronously;",
-                        vi: "Sauk hi theo dõi thành công, tài khoản sao chép sẽ đồng bộ mở các lệnh với nhà giao dịch chính.",
+                        vi: "Sauk hi theo dõi thành công, tài khoản sao chép sẽ đồng bộ mở các lệnh với nhà giao dịch chính;",
                         "zh-Hant": "2.復制成功後，跟單帳號自動跟隨高手進行同步開平倉交易；"
                     },
                     tigerWitCopyAgreements4: {
                         zh: "3.系统将定时对您跟随高手的情况进行统计并结算，扣除跟随该高手盈利部分的20%作为该高手佣金。",
                         en: "3. System will statistics and settlement all the orders and deduct 20% as commission when you cancel and force a flat.",
-                        vi: "Hệ thống sẽ thống kê và thanh toán tất cả các lệnh và khấu trừ 20% lợi nhuận hoa hồng khi bạn hủy và buộc đóng hết các lệnh",
+                        vi: "Hệ thống sẽ thống kê và thanh toán tất cả các lệnh và khấu trừ 20% lợi nhuận hoa hồng khi bạn hủy và buộc đóng hết các lệnh.",
                         "zh-Hant": "3.系統將定時對您跟隨高手的情況進行統計並結算，扣除跟隨該高手盈利部分的20%作為該高手傭金。"
                     },
                     tigerWitCopyAgreements5: {
@@ -3005,7 +3005,7 @@
                     tigerWitCopyAgreements6: {
                         zh: "请注意，我们无法就任何特定投资，账户，投资组合或策略的表现提供任何保证。",
                         en: "Caution, we cannot provide any assurance of the performance of any specific investment, account, portfolio or strategy.",
-                        vi: "Thận trọng, chúng tôi không thể cung cấp bất kỳ sự đảm bảo nào về hiệu suất của bất kỳ đầu tư, tài khoản, danh mục đầu tư hoặc chiến lược cụ thể nào ",
+                        vi: "Thận trọng, chúng tôi không thể cung cấp bất kỳ sự đảm bảo nào về hiệu suất của bất kỳ đầu tư, tài khoản, danh mục đầu tư hoặc chiến lược cụ thể nào.",
                         "zh-Hant": "請註意，我們無法就任何特定投資，帳護，投資組合或策略的表現提供任何保證。"
                     },
                     tigerWitCopyAgreements7_1: {
@@ -3029,13 +3029,13 @@
                     tip4: {
                         zh: "指从当前日期开始最近七个自然日交易状况。",
                         en: "Master’s return over previous 7 days of trading.",
-                        vi: "Lợi nhuận của nhà giao dịch chính trong 7 ngày giao dịch trước đó ",
+                        vi: "Lợi nhuận của nhà giao dịch chính trong 7 ngày giao dịch trước đó.",
                         "zh-Hant": "指從當前日期開始最近七個自然日交易狀況。"
                     },
                     tip5: {
                         zh: "指该高手最后一次有交易行为的数据统计。",
                         en: "Master’s return over previous trading day.",
-                        vi: "Lợi nhuận của nhà giao dịch chính trong những ngày trước đó",
+                        vi: "Lợi nhuận của nhà giao dịch chính trong những ngày trước đó.",
                         "zh-Hant": "指該高手最後壹次有交易行為的數據統計。"
                     }
                 },
@@ -3261,7 +3261,7 @@
                     tip1: {
                         zh: "因要求，请填写该银行卡的预留手机号",
                         en: "Please fill in the reserved phone number of the bank card as required",
-                        vi: "Vui lòng điền số điện thoại dự phòng của thẻ ngân hàng theo yêu cầu ",
+                        vi: "Vui lòng điền số điện thoại dự phòng của thẻ ngân hàng theo yêu cầu",
                         "zh-Hant": "因要求，請填寫該銀行卡的預留手機號"
                     },
                     tip2: {
@@ -3273,7 +3273,7 @@
                     switchBankCard: {
                         zh: "切换银行卡",
                         en: "Switch bank card",
-                        vi: "Chuyển đổi thẻ ngân hàng",
+                        vi: "Chuyển thẻ ngân hàng",
                         "zh-Hant": "切換銀行卡"
                     },
                     deleteBankCard: {
@@ -3285,7 +3285,7 @@
                     tip3: {
                         zh: "确认删除本银行卡，如需再次使用需重新验证",
                         en: "Confirm to delete this bank card. If it needs to be used again, it needs to be verified again",
-                        vi: "Xác nhận xóa thẻ ngân hàng này. Nếu nó cần phải được sử dụng một lần nữa, nó cần phải được xác minh lại ",
+                        vi: "Xác nhận xóa thẻ ngân hàng này. Nếu nó cần phải được sử dụng một lần nữa, nó cần phải được xác minh lại",
                         "zh-Hant": "確認刪除本銀行卡，如需再次使用需重新驗證"
                     },
                     bindBankCard: {
@@ -3347,7 +3347,7 @@
                     exchangeValidUntil: {
                         zh: "兑换有效期截止至",
                         en: "Exchange valid until ",
-                        vi: "Trao đổi hợp lệ cho đến khi",
+                        vi: "Trao đổi hợp lệ cho đến khi ",
                         "zh-Hant": "兌換有效期截止至"
                     },
                     exchangeDate: {
@@ -3487,7 +3487,7 @@
                     tip5_3: {
                         zh: "。",
                         en: " customer service.",
-                        vi: " dịch vụ khách hàng",
+                        vi: " dịch vụ khách hàng.",
                         "zh-Hant": "。"
                     },
                     nameFriend: {
@@ -3543,7 +3543,7 @@
                     tp1: {
                         zh: "注：每月1号结算上一月分成",
                         en: "Monthly commissions will be settled on the 1st of next month",
-                        vi: "Hoa hồng hàng tháng sẽ được thanh toán vào ngày 1 của tháng tiếp theo ",
+                        vi: "Hoa hồng hàng tháng sẽ được thanh toán vào ngày 1 của tháng tiếp theo",
                         "zh-Hant": "註：每月1號結算上壹月分成"
                     },
                     nameMaster: {
@@ -3585,13 +3585,13 @@
                     cannotCopy1: {
                         zh: "您的可用复制金额不足，无法复制高手",
                         en: "Available amount is insufficient, cannot follow other master",
-                        vi: "Số tiền có sẵn là không đủ, không thể theo dõi các nhà giao dịch khác ",
+                        vi: "Số tiền có sẵn là không đủ, không thể theo dõi các nhà giao dịch khác",
                         "zh-Hant": "您的可用復制金額不足，無法復制高手"
                     },
                     cannotCopy2_1: {
                         zh: "高手最低复制金额为",
-                        en: "The minimum copy amount of the master is ",
-                        vi: "Số tiền sao chép tối thiểu của nhà giao dịch chính là ",
+                        en: "The minimum copy amount of the master is",
+                        vi: "Số tiền sao chép tối thiểu của nhà giao dịch chính là",
                         "zh-Hant": "高手最低復制金額為"
                     },
                     cannotCopy2_2: {
@@ -3677,7 +3677,7 @@
                     switchAccount: {
                         zh: "点击切换子账号",
                         en: "Switch account",
-                        vi: "Chuyển đổi tài khoản",
+                        vi: "Chuyển tài khoản",
                         "zh-Hant": "點擊切換子帳號"
                     },
                     depositAmount: {
@@ -3803,7 +3803,7 @@
                     tip6: {
                         zh: "出金银行卡用户姓名必须与开户姓名一致",
                         en: "The name of the bank card must be the same as the name of the account",
-                        vi: "Tên của thẻ ngân hàng phải trùng khớp với tên của tài khoản ",
+                        vi: "Tên của thẻ ngân hàng phải trùng khớp với tên của tài khoản",
                         "zh-Hant": "出金銀行卡用護姓名必須與開護姓名壹致"
                     },
                     tip7: {
@@ -3832,8 +3832,8 @@
                     },
                     tip11: {
                         zh: "存在复制关系，提现时系统自动扣除复制金额，若要全部提现，请先手动取消复制关系。",
-                        en: "Please cancel the follow relationship, if you want to all withdrawal",
-                        vi: "Vui lòng hủy bỏ mối quan hệ theo dõi, nếu bạn muốn rút tiền ",
+                        en: "Please cancel the follow relationship, if you want to all withdrawal.",
+                        vi: "Vui lòng hủy bỏ mối quan hệ theo dõi, nếu bạn muốn rút tiền.",
                         "zh-Hant": "存在復制關系，提現時系統自動扣除復制金額，若要全部提現，請先手動取消復制關系。"
                     },
                     cardNumber: {
@@ -4043,7 +4043,7 @@
                     tip15: {
                         zh: "高手分成收益与代理商佣金收益会存入钱包，您可以提现或划入交易账户",
                         en: "The winner is divided into earnings and the agency’s commission income will be credited to the purse, which you can cash in or out of the trading account",
-                        vi: "Người chiến thắng được chia thành thu nhập và thu nhập hoa hồng của đại lý sẽ được ghi có vào ví, bạn có thể rút tiền vào hoặc ra khỏi tài khoản giao dịch ",
+                        vi: "Người chiến thắng được chia thành thu nhập và thu nhập hoa hồng của đại lý sẽ được ghi có vào ví, bạn có thể rút tiền vào hoặc ra khỏi tài khoản giao dịch",
                         "zh-Hant": "高手分成收益與代理商傭金收益會存入錢包，您可以提現或劃入交易帳護"
                     },
                     telegraphicTransferTip1: {
@@ -4067,7 +4067,7 @@
                     telegraphicTransferTip4: {
                         zh: "老虎外汇将根据各国适用法律尽最大努力以实际行动配合反洗钱及反恐怖方面的所有法律法规，具体包括报告及冻结可疑资产等。老虎外汇将不定期地查看账户记录以获取有洗钱嫌疑的交易证据，包括对如下几项的监控：",
                         en: "TigerWit will do its best to cooperate with all laws and regulations on anti-money laundering and anti-terrorism, including reporting and freezing of suspicious assets, in accordance with the applicable laws of each country. TigerWit will view the account records from time to time to obtain evidence of transaction evidence of money laundering, including the following: ",
-                        vi: "TigerWit sẽ cố hết sức hợp tác với tất cả các luật và quy định về chống rửa tiền và chống khủng bố, bao gồm báo cáo và đóng băng các tài sản đáng ngờ, phù hợp với luật áp dụng của mỗi quốc gia. TigerWit sẽ xem hồ sơ tài khoản theo thời gian để có được bằng chứng về bằng chứng giao dịch về rửa tiền, bao gồm những điều sau đây:",
+                        vi: "TigerWit sẽ cố hết sức hợp tác với tất cả các luật và quy định về chống rửa tiền và chống khủng bố, bao gồm báo cáo và đóng băng các tài sản đáng ngờ, phù hợp với luật áp dụng của mỗi quốc gia. TigerWit sẽ xem hồ sơ tài khoản theo thời gian để có được bằng chứng về bằng chứng giao dịch về rửa tiền, bao gồm những điều sau đây: ",
                         "zh-Hant": "老虎外匯將根據各國這用法律盡最大努力以實際行動配合反洗錢及反恐怖方面的所有法律法規，具體包括報告及凍結可疑資產等。老虎外匯將不定期地查看帳護記錄以獲取有洗錢嫌疑的交易證據，包括對如下幾項的監控："
                     },
                     telegraphicTransferTip5: {
@@ -4085,7 +4085,7 @@
                     telegraphicTransferTip7: {
                         zh: "除正常业务外的其他行为。",
                         en: "Other than normal business.",
-                        vi: "Khác với kinh doanh bình thường ",
+                        vi: "Khác với kinh doanh bình thường.",
                         "zh-Hant": "除正常業務外的其他行為。"
                     },
                     telegraphicTransferTip8_1: {
@@ -4283,7 +4283,7 @@
                     tip17: {
                         zh: "支付完成后，请根据您支付的情况点击下面按钮",
                         en: "After the payment is completed, please click the button below according to your payment situation",
-                        vi: "Sau khi thanh toán đã hoàn thành, vui lòng nhấp vào nút bên dưới theo tình hình thanh toán của bạn. ",
+                        vi: "Sau khi thanh toán đã hoàn thành, vui lòng nhấp vào nút bên dưới theo tình hình thanh toán của bạn",
                         "zh-Hant": "支付完成後，請根據您支付的情況點擊下面按鈕"
                     },
                     runIntoProblem: {
@@ -4343,7 +4343,7 @@
                     tip22: {
                         zh: "2、若使用他人银行卡，资金将被原路退回，客户需承担1.8%手续费；",
                         en: "2.If customer use someone else's bank card, the money will be returned and the customer shall bear a charge of 1.8%;",
-                        vi: "2. Nếu khách hàng sử dụng thẻ ngân hàng của ai đó, tiền sẽ không được trả lại và khách hàng sẽ chịu phí phạt 1.8 %",
+                        vi: "2. Nếu khách hàng sử dụng thẻ ngân hàng của ai đó, tiền sẽ không được trả lại và khách hàng sẽ chịu phí phạt 1.8 %;",
                         "zh-Hant": "2、若使用他人銀行卡，資金將被原路退回，客護需承擔1.8%手續費；"
                     },
                     tip23: {
@@ -4355,13 +4355,13 @@
                     tip24: {
                         zh: "入金凭证要求及获取方式",
                         en: "Requirements and methods of obtaining the deposit vouchers",
-                        vi: "Yêu cầu và phương pháp thu thập chứng từ tiền gửi ",
+                        vi: "Yêu cầu và phương pháp thu thập chứng từ tiền gửi",
                         "zh-Hant": "入金憑證要求及獲取方式"
                     },
                     tip25: {
                         zh: "1、入金凭证必须包含：账号姓名、账号号码、入金时间、金额",
                         en: "1.The voucher must include: account name, account number, deposit time and amount",
-                        vi: "1. Chứng từ gửi tiền phải bao gồm: tên tài khoản, số tài khoản, thời gian gửi và số tiền ",
+                        vi: "1. Chứng từ gửi tiền phải bao gồm: tên tài khoản, số tài khoản, thời gian gửi và số tiền",
                         "zh-Hant": "1、入金憑證必須包含：帳號姓名、帳號號碼、入金時間、金額"
                     },
                     tip26: {
@@ -4379,7 +4379,7 @@
                     tip27: {
                         zh: "1、请务必使用填写的该银行卡进行网银支付；",
                         en: "1.Please be sure to use the card that you filled to make online payment.",
-                        vi: "Vui lòng đảm bảo rằng bạn sử dụng thẻ mà bạn đã đăng ký phương thức thanh toán trực tuyến",
+                        vi: "Vui lòng đảm bảo rằng bạn sử dụng thẻ mà bạn đã đăng ký phương thức thanh toán trực tuyến.",
                         "zh-Hant": "1、請務必使用填寫的該銀行卡進行網銀支付；"
                     },
                     tip28: {
@@ -4391,7 +4391,7 @@
                     tip29: {
                         zh: "如有其它疑问，请联系TigerWit客服：",
                         en: "If you have any other questions, please contact TigerWit customer support: ",
-                        vi: "Nếu bạn có bất kì câu hỏi nào, vui lòng liên hệ với phòng chăm sóc khách hàng của TigerWit để được hỗ trợ",
+                        vi: "Nếu bạn có bất kì câu hỏi nào, vui lòng liên hệ với phòng chăm sóc khách hàng của TigerWit để được hỗ trợ: ",
                         "zh-Hant": "如有其它疑問，請聯系TigerWit客服："
                     },
                     rate1: {
@@ -4415,7 +4415,7 @@
                     thirdParty: {
                         zh: "第三方充值教程",
                         en: "Third party deposit tutorial",
-                        vi: "Hướng dẫn gửi tiền của bên thứ ba ",
+                        vi: "Hướng dẫn gửi tiền của bên thứ ba",
                         "zh-Hant": "第三方充值教程"
                     },
                     useBankPay: {
@@ -4469,13 +4469,13 @@
                     tip32: {
                         zh: "您的姓名拼音，交易账号：",
                         en: "Your name spell, trading account number: ",
-                        vi: "Đánh vần tên của bạn, số tài khoản giao dich",
+                        vi: "Đánh vần tên của bạn, số tài khoản giao dich: ",
                         "zh-Hant": "您的姓名拼音，交易帳號："
                     },
                     tip33: {
                         zh: "充值已提交，到账约为10分钟，请耐心等待",
                         en: "Deposit has been submitted, and will arrive account about 10 minutes. Please wait patiently",
-                        vi: "Tiền gửi đã được gửi và sẽ đến tài khoản khoảng 10 phút. Xin hãy kiên nhẫn chờ đợi ",
+                        vi: "Tiền gửi đã được gửi và sẽ đến tài khoản khoảng 10 phút. Xin hãy kiên nhẫn chờ đợi",
                         "zh-Hant": "充值已提交，到帳約為10分鐘，請耐心等待"
                     },
                     tip34: {
@@ -4487,7 +4487,7 @@
                     tip35: {
                         zh: "电汇凭证已提交",
                         en: "The wire transfer voucher has been submitted",
-                        vi: "Chứng từ chuyển khoản ngân hàng đã được gửi ",
+                        vi: "Chứng từ chuyển khoản ngân hàng đã được gửi",
                         "zh-Hant": "電匯憑證已提交"
                     },
                     toUpload: {
@@ -4511,25 +4511,25 @@
                     voucherConsiderations: {
                         zh: "凭证注意事项",
                         en: "Voucher considerations ",
-                        vi: "Xem xét giấy tờ xác nhận",
+                        vi: "Xem xét giấy tờ xác nhận ",
                         "zh-Hant": "憑證註意事項"
                     },
                     tip36: {
                         zh: "凭证信息必须显示姓名、银行卡号、支付金额等内容",
                         en: "The voucher information must show the name, bank card number, payment amount and other contents",
-                        vi: "Thông tin chứng từ phải thể hiện tên, số thẻ ngân hàng, số tiền thanh toán và các nội dung khác ",
+                        vi: "Thông tin chứng từ phải thể hiện tên, số thẻ ngân hàng, số tiền thanh toán và các nội dung khác",
                         "zh-Hant": "憑證信息必須顯示姓名、銀行卡號、支付金額等內容"
                     },
                     tip37: {
                         zh: "凭证信息必须为实名认证本人银行账户。",
                         en: "The voucher information must be verified bank account of customer himself.",
-                        vi: "Giấy tờ xác nhận phải được xác nhận lại tài khoản ngân hàng của chính khách hàng",
+                        vi: "Giấy tờ xác nhận phải được xác nhận lại tài khoản ngân hàng của chính khách hàng.",
                         "zh-Hant": "憑證信息必須為實名認證本人銀行帳護。"
                     },
                     tip38: {
                         zh: "未满足以上要求，审核将被驳回。",
-                        en: "If the above requirements are not met, the audit will be rejected",
-                        vi: "Nếu các yêu cầu trên không được đáp ứng, kiểm toán sẽ bị từ chối ",
+                        en: "If the above requirements are not met, the audit will be rejected.",
+                        vi: "Nếu các yêu cầu trên không được đáp ứng, kiểm toán sẽ bị từ chối.",
                         "zh-Hant": "未滿足以上要求，審核將被駁回。"
                     },
                     tip39: {
@@ -4691,7 +4691,7 @@
                     tip53: {
                         zh: "通过实名认证后才可以进行资金提现。",
                         en: "You can withdrawal only if you passed the verification.",
-                        vi: "Bạn có thể rút tiền chỉ khi bạn vượt qua xác nhận",
+                        vi: "Bạn có thể rút tiền chỉ khi bạn vượt qua xác nhận.",
                         "zh-Hant": "通過實名認證後才可以進行資金提現。"
                     },
                     tip54: {
@@ -4805,7 +4805,7 @@
                     tip62_3: {
                         zh: "同时请提供您的电话号码，以便我们与您取得联系。",
                         en: " Please also provide your phone number so that we can get in touch with you.",
-                        vi: " Vui lòng cung cấp số điện thoại của bạn để chúng tôi liên lạc với bạn",
+                        vi: " Vui lòng cung cấp số điện thoại của bạn để chúng tôi liên lạc với bạn.",
                         "zh-Hant": "同時請提供您的電話號碼，以便我們與您取得聯系。"
                     },
                     tip63_1: {
@@ -4879,7 +4879,7 @@
                     tip3: {
                         zh: "若当前累计复制资金量达到限额，系统将提醒高手进行账户升级，高手确认并更改账户级别后，用户方能继续复制；",
                         en: "If the current cumulative amount of funds to meet the limit, the system will remind the master to upgrade the account, experts confirm and change the account level, the user can continue to copy",
-                        vi: "Nếu số tiền tích lũy hiện tại của các quỹ để đáp ứng các giới hạn, hệ thống sẽ nhắc nhở nhà giao dịch chính để nâng cấp tài khoản, các chuyên gia xác nhận và thay đổi cấp tài khoản, người dùng có thể tiếp tục sao chép ",
+                        vi: "Nếu số tiền tích lũy hiện tại của các quỹ để đáp ứng các giới hạn, hệ thống sẽ nhắc nhở nhà giao dịch chính để nâng cấp tài khoản, các chuyên gia xác nhận và thay đổi cấp tài khoản, người dùng có thể tiếp tục sao chép",
                         "zh-Hant": "若當前累計復制資金量達到限額，系統將提醒高手進行帳護升級，高手確認並更改帳護級別後，用護方能繼續復制；"
                     },
                     tip4: {
@@ -5059,13 +5059,13 @@
                     tip6: {
                         zh: "为了最大限度地规避交易风险，老虎外汇根据高手的当前跟随金额调整杠杆使用范围：",
                         en: "In order to maximize the risk of dealing with the transaction, the tiger foreign exchange according to the current amount of the master to adjust the use of leverage range: ",
-                        vi: "để tối đa hóa rủi ro giao dịch với giao dịch, sàn giao dịch ngoại hối tiger theo số tiền hiện tại của nhà giao dịch chính để điều chỉnh việc sử dụng phạm vi đòn bẩy:",
+                        vi: "để tối đa hóa rủi ro giao dịch với giao dịch, sàn giao dịch ngoại hối tiger theo số tiền hiện tại của nhà giao dịch chính để điều chỉnh việc sử dụng phạm vi đòn bẩy: ",
                         "zh-Hant": "為了最大限度地規避交易風險，老虎外匯根據高手的當前跟隨金額調整杠桿使用範圍："
                     },
                     tip7: {
                         zh: "当前跟随金额＞$20万，高手可使用100倍、50倍杠杆进行交易",
                         en: "Current amount of follow > $200,000 , master can use 100, 50 times the lever to trade;",
-                        vi: "Số tiền theo dõi hiện tại> 200.000 đô la, tổng thể có thể sử dụng đòn bẩy 100, 50 lần để giao dịch ",
+                        vi: "Số tiền theo dõi hiện tại> 200.000 đô la, tổng thể có thể sử dụng đòn bẩy 100, 50 lần để giao dịch;",
                         "zh-Hant": "當前跟隨金額＞$20萬，高手可使用100倍、50倍杠桿進行交易"
                     },
                     tip8: {
@@ -5149,7 +5149,7 @@
                     tip30: {
                         zh: "过往表现并不能完全代表未来交易的成功率，您需要做出理智的判断",
                         en: "Past performance is no guarantee of future performance.",
-                        vi: "Hiệu suất trước đây không đảm bảo hiệu suất trong tương lai ",
+                        vi: "Hiệu suất trước đây không đảm bảo hiệu suất trong tương lai.",
                         "zh-Hant": "過往表現並不能完全代表未來交易的成功率，您需要做出理智的判斷"
                     },
                     totalClosedOrders: {
@@ -5325,19 +5325,19 @@
                     tip1: {
                         zh: "TigerWit交易账户支持开通多个子账号用于不同交易策略。",
                         en: "TigerWit transaction account supports opening multiple sub-accounts for different transaction strategies.",
-                        vi: "Tài khoản giao dịch TigerWit hỗ trợ mở nhiều tài khoản phụ cho các chiến lược giao dịch khác nhau ",
+                        vi: "Tài khoản giao dịch TigerWit hỗ trợ mở nhiều tài khoản phụ cho các chiến lược giao dịch khác nhau.",
                         "zh-Hant": "TigerWit交易帳護支持開通多個子帳號用於不同交易策略。"
                     },
                     tip2: {
                         zh: "您当前登录账号为上榜高手，系统已自动将账号身份定义为：",
                         en: "You currently login the master account that on the masters list, the system has automatically defined the account identity as: ",
-                        vi: "Bạn hiện đang đăng nhập tài khoản chính trên danh sách chính, hệ thống đã tự động xác định danh tính tài khoản là:",
+                        vi: "Bạn hiện đang đăng nhập tài khoản chính trên danh sách chính, hệ thống đã tự động xác định danh tính tài khoản là: ",
                         "zh-Hant": "您當前登錄帳號為上榜高手，系統已自動將帳號身份定義為："
                     },
                     tip7: {
                         zh: "您当前登录账号存在跟随关系，系统已自动将账号身份定义为：",
                         en: "Your current login account has a follow relationship, and the system has automatically defined the account identity as: ",
-                        vi: "tài khoản đăng nhập hiện tại của chúng tôi có mối quan hệ theo dõi và hệ thống đã tự động xác định danh tính tài khoản là:",
+                        vi: "tài khoản đăng nhập hiện tại của chúng tôi có mối quan hệ theo dõi và hệ thống đã tự động xác định danh tính tài khoản là: ",
                         "zh-Hant": "您當前登錄帳號存在跟隨關系，系統已自動將帳號身份定義為："
                     },
                     masterAccount: {
@@ -5403,7 +5403,7 @@
                     tip6: {
                         zh: "您当前登录账号为自主开仓，系统已自动将账号身份定义为：",
                         en: "You currently login the independent account that on the masters list, the system has automatically defined the account identity as: ",
-                        vi: "Bạn hiện đang đăng nhập vào tài khoản độc lập có trong danh sách chính, hệ thống đã tự động xác định danh tính tài khoản là:",
+                        vi: "Bạn hiện đang đăng nhập vào tài khoản độc lập có trong danh sách chính, hệ thống đã tự động xác định danh tính tài khoản là: ",
                         "zh-Hant": "您當前登錄帳號為自主開倉，系統已自動將帳號身份定義為："
                     }
                 },
@@ -5881,7 +5881,7 @@
                     notificationActivateWalletCon: {
                         zh: "钱包不支持单独激活，交易类账户开通成功后，钱包将自动激活。",
                         en: "Wallet does not support individual activation，after successful opening of transaction account, wallet will be automatically activated.",
-                        vi: "Wallet không hỗ trợ kích hoạt riêng lẻ ， sau khi mở tài khoản giao dịch thành công, ví tiền sẽ được kích hoạt tự động ",
+                        vi: "Wallet không hỗ trợ kích hoạt riêng lẻ ， sau khi mở tài khoản giao dịch thành công, ví tiền sẽ được kích hoạt tự động.",
                         "zh-Hant": "錢包不支持單獨激活，交易類帳護開通成功後，錢包將自動激活。"
                     },
                     openLiveAccount: {
@@ -5893,19 +5893,19 @@
                     openLiveAccountTip1: {
                         zh: "开户即得$200交易红包，入金可获$800红包！",
                         en: "Open a live account and receive a $200 coupon, deposit and receive $800 coupon.",
-                        vi: "Mở tài khoản thực và nhận phiếu thưởng $ 200, gửi tiền và nhận phiếu thưởng $ 800 ",
+                        vi: "Mở tài khoản thực và nhận phiếu thưởng $ 200, gửi tiền và nhận phiếu thưởng $ 800.",
                         "zh-Hant": "開護即得$200交易紅包，入金可獲$800紅包！"
                     },
                     openLiveAccountTip2: {
                         zh: "同时享受更多交易体验：",
-                        en: "You will enjoy more transaction experiences at the same time：",
-                        vi: "Bạn sẽ tận hưởng nhiều trải nghiệm giao dịch hơn cùng một lúc:",
+                        en: "You will enjoy more transaction experiences at the same time: ",
+                        vi: "Bạn sẽ tận hưởng nhiều trải nghiệm giao dịch hơn cùng một lúc: ",
                         "zh-Hant": "同時享受更多交易體驗："
                     },
                     openLiveAccountTip3: {
                         zh: "自由交易，享受灵活杠杆",
                         en: "Freely trading, flexible level.",
-                        vi: "Tự do giao dịch, mức linh hoạt ",
+                        vi: "Tự do giao dịch, mức linh hoạt.",
                         "zh-Hant": "自由交易，享受靈活杠桿"
                     },
                     openLiveAccountTip4: {
@@ -5917,7 +5917,7 @@
                     openLiveAccountTip5: {
                         zh: "申请成为高手获得盈利分成",
                         en: "Apply for a master and obtain commissions.",
-                        vi: "Áp dụng cho một bậc thầy và nhận hoa hồng ",
+                        vi: "Áp dụng cho một bậc thầy và nhận hoa hồng.",
                         "zh-Hant": "申請成為高手獲得盈利分成"
                     },
                     freeOpening: {
@@ -5935,7 +5935,7 @@
                     openExperienceAccountTip1: {
                         zh: "开户即送$10000交易体验金。",
                         en: "Open the experience account and receive a $10000 virtual balance.",
-                        vi: "Mở tài khoản trải nghiệm và nhận số dư ảo 10.000 đô la ",
+                        vi: "Mở tài khoản trải nghiệm và nhận số dư ảo 10.000 đô la.",
                         "zh-Hant": "開護即送$10000交易體驗金。"
                     },
                     openExperienceAccountTip2: {
@@ -5953,9 +5953,95 @@
                     openExperienceAccountTip4: {
                         zh: "不用承担任何风险",
                         en: "Take no risk.",
-                        vi: "Không rủi ro",
+                        vi: "Không rủi ro.",
                         "zh-Hant": "不用承擔任何風險"
                     },
+                    //开户弹窗英文和越南文用下面文案 start
+                    openAcount1: {
+                        zh: "",
+                        en: "Live account",
+                        vi: "Tài khoản thực",
+                        "zh-Hant": ""
+                    },
+                    openAcount2: {
+                        zh: "",
+                        en: "Open a Live account and trade the markets you want, the way you want them.",
+                        vi: "Mở một tài khoản Thực và giao dịch với các thị trường bạn muốn, theo cách bạn muốn.",
+                        "zh-Hant": ""
+                    },
+                    openAcount3: {
+                        zh: "",
+                        en: "Key FX, precious metals, commodities and indices via CFD",
+                        vi: "Sản phẩm FX chính, các kim loại quý, hàng hóa và chỉ số thông qua CFD",
+                        "zh-Hant": ""
+                    },
+                    openAcount4: {
+                        zh: "",
+                        en: "Trade on a smarter, personalised, highly intuitive app",
+                        vi: "Giao dịch trên ứng dụng thông minh, được cá nhân hóa, trực quan hơn",
+                        "zh-Hant": ""
+                    },
+                    openAcount5: {
+                        zh: "",
+                        en: "Copy-trade by following a Master",
+                        vi: "Sao chép giao dịch bằng cách theo dõi một Nhà Giao Dịch Chính",
+                        "zh-Hant": ""
+                    },
+                    openAcount6: {
+                        zh: "",
+                        en: "Become a Master and share your followers’ profits",
+                        vi: "Trở thành một Nhà giao dịch chính và chia sẻ lợi nhuận của người theo dõi của bạn",
+                        "zh-Hant": ""
+                    },
+                    openAcount7: {
+                        zh: "",
+                        en: "Trading powered by blockchain",
+                        vi: "Giao dịch được hỗ trợ bởi blockchain",
+                        "zh-Hant": ""
+                    },
+                    openAcount8: {
+                        zh: "",
+                        en: "Open a Live account",
+                        vi: "Mở một tài khoản Thực",
+                        "zh-Hant": ""
+                    },
+                    openAcount9: {
+                        zh: "",
+                        en: "Experience account",
+                        vi: "Tài khoản Trải Nghiệm",
+                        "zh-Hant": ""
+                    },
+                    openAcount10: {
+                        zh: "",
+                        en: "Open an Experience account and practice trading in a risk-free environment with USD10,000of virtual funds.",
+                        vi: "Mở một tài khoản Trải nghiệm và thực hành giao dịch trong một môi trường phi rủi ro với 10,000 USD trong quỹ ảo.",
+                        "zh-Hant": ""
+                    },
+                    openAcount11: {
+                        zh: "",
+                        en: "Instant account-opening",
+                        vi: "Mở tài khoản ngay lập tức",
+                        "zh-Hant": ""
+                    },
+                    openAcount12: {
+                        zh: "",
+                        en: "Practice risk-free trading with virtual funds",
+                        vi: "Thực hành giao dịch phi rủi ro với các quỹ ảo",
+                        "zh-Hant": ""
+                    },
+                    openAcount13: {
+                        zh: "",
+                        en: "Upgrade quickly and easily to a Live account",
+                        vi: "Nâng cấp lên Tài khoản Thực nhanh chóng và dễ dàng",
+                        "zh-Hant": ""
+                    },
+                    openAcount14: {
+                        zh: "",
+                        en: "Open an Experience account",
+                        vi: "Mở một tài khoản Trải Nghiệm",
+                        "zh-Hant": ""
+                    },
+                    //END
                     provideService: {
                         zh: "定制您的个性化服务",
                         en: "To provide you with personalized service",
@@ -6019,7 +6105,7 @@
                     tip4: {
                         zh: "如有其它疑问，请联系老虎外汇客服",
                         en: "If you have other questions，please contact TigerWit customer service",
-                        vi: "Nếu bạn có câu hỏi khác, vui lòng liên hệ với dịch vụ khách hàng TigerWit ",
+                        vi: "Nếu bạn có câu hỏi khác, vui lòng liên hệ với dịch vụ khách hàng TigerWit",
                         "zh-Hant": "如有其它疑問，請聯系老虎外匯客服"
                     },
                     editEmail: {
@@ -6049,7 +6135,7 @@
                     tip6: {
                         zh: "如实填写个人信息是核实您真实身份，保障您资金和账号安全，隐私信息的重要依据",
                         en: "Truthfully filling in personal information is an important basis for verifying your true identity, ensuring the security of your funds and account number and privacy information",
-                        vi: "Việc điền thông tin cá nhân một cách trung thực là cơ sở quan trọng để xác minh danh tính thực sự của bạn, đảm bảo an toàn cho số tiền và số tài khoản cũng như thông tin bảo mật của bạn ",
+                        vi: "Việc điền thông tin cá nhân một cách trung thực là cơ sở quan trọng để xác minh danh tính thực sự của bạn, đảm bảo an toàn cho số tiền và số tài khoản cũng như thông tin bảo mật của bạn",
                         "zh-Hant": "如實填寫個人信息是核實您真實身份，保障您資金和帳號安全，隱私信息的重要依據"
                     },
                     setNickname: {
@@ -6061,13 +6147,13 @@
                     tip7: {
                         zh: "请为账户设置昵称，有助于您登上高手榜",
                         en: "Please set a nickname for your account to help you get on the list",
-                        vi: "Vui lòng đặt biệt hiệu cho tài khoản của bạn để giúp bạn có được danh sách ",
+                        vi: "Vui lòng đặt biệt hiệu cho tài khoản của bạn để giúp bạn có được danh sách",
                         "zh-Hant": "請為帳護設置昵稱，有助於您登上高手榜"
                     },
                     pleaseSetNickname: {
                         zh: "请为账户设置昵称",
                         en: "Please set nickname",
-                        vi: "Vui lòng đặt biệt hiệu ",
+                        vi: "Vui lòng đặt biệt hiệu",
                         "zh-Hant": "請為帳護設置昵稱"
                     },
                     nicknameHasBeenTaken: {
@@ -6235,7 +6321,7 @@
                     phoneNumSetSucc: {
                         zh: "手机号码修改成功",
                         en: "The phone number was modified successfully",
-                        vi: "Số điện thoại đã được sửa đổi thành công ",
+                        vi: "Số điện thoại đã được sửa đổi thành công",
                         "zh-Hant": "手機號碼修改成功"
                     },
                     verificationCodeNo: {
@@ -6277,13 +6363,13 @@
                     tip8: {
                         zh: "对不起,目前仅支持png和jpg格式图片!",
                         en: "Sorry, currently only support PNG and JPG format pictures!",
-                        vi: "Xin lỗi, hiện tại chỉ hỗ trợ hình ảnh định dạng PNG và JPG ",
+                        vi: "Xin lỗi, hiện tại chỉ hỗ trợ hình ảnh định dạng PNG và JPG!",
                         "zh-Hant": "對不起,目前僅支持png和jpg格式圖片!"
                     },
                     tip9: {
                         zh: "对不起，暂时不支持大于2M的文件，请压缩后再试!",
                         en: "Sorry, we do not support files larger than 2M, please try again after compression!",
-                        vi: "Rất tiếc, chúng tôi không hỗ trợ tệp lớn hơn 2M, vui lòng thử lại sau khi nén ",
+                        vi: "Rất tiếc, chúng tôi không hỗ trợ tệp lớn hơn 2M, vui lòng thử lại sau khi nén!",
                         "zh-Hant": "對不起，暫時不支持大於2M的文件，請壓縮後再試!"
                     },
                     failModifyUsername: {
@@ -6343,7 +6429,7 @@
                     gAPermit: {
                         zh: "港澳居民来往内地通行证",
                         en: "Mainland Travel Permit for Hong Kong and Macao Residents",
-                        vi: "Giấy phép du lịch đại lục cho cư dân Hồng Kông và Macao ",
+                        vi: "Giấy phép du lịch đại lục cho cư dân Hồng Kông và Macao",
                         "zh-Hant": "港澳居民來往內地通行證"
                     },
                     tPermit: {
@@ -6373,7 +6459,7 @@
                     tip13: {
                         zh: "您的年龄未满18周岁，不建议您进行外汇交易。",
                         en: "You are under the age of 18 years old, foreign exchange transactions are not recommended.",
-                        vi: "Bạn dưới 18 tuổi, giao dịch ngoại hối không được khuyến khích ",
+                        vi: "Bạn dưới 18 tuổi, giao dịch ngoại hối không được khuyến khích.",
                         "zh-Hant": "您的年齡未滿18周歲，不建議您進行外匯交易。"
                     },
                     idNumExists: {

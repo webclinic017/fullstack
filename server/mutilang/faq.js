@@ -758,10 +758,10 @@ module.exports = {
             "zh-Hant": "How do I withdraw funds?"
         },
         wad2A: {
-            zh: "Manage withdrawals in the Withdraw' section of the app. You can withdraw funds at any time, although we recommend that you maintain a surplus of margin in your account if you have open positions. There is no charge for withdrawals",
-            en: "Manage withdrawals in the Withdraw' section of the app. You can withdraw funds at any time, although we recommend that you maintain a surplus of margin in your account if you have open positions. There is no charge for withdrawals",
+            zh: "Manage withdrawals in the Withdraw' section of the app. You can withdraw funds at any time, although we recommend that you maintain a surplus of margin in your account if you have open positions. There is no charge for withdrawals.",
+            en: "Manage withdrawals in the Withdraw' section of the app. You can withdraw funds at any time, although we recommend that you maintain a surplus of margin in your account if you have open positions. There is no charge for withdrawals.",
             vi: "Quản lý việc rút tiền trong phần Rút tiền ’của ứng dụng. Bạn có thể rút tiền bất kỳ lúc nào, mặc dù chúng tôi khuyên bạn nên duy trì số dư ký quỹ trong tài khoản của mình nếu bạn có các lệnh đang mở. Không thu phí rút tiền.",
-            "zh-Hant": "Manage withdrawals in the Withdraw' section of the app. You can withdraw funds at any time, although we recommend that you maintain a surplus of margin in your account if you have open positions. There is no charge for withdrawals"
+            "zh-Hant": "Manage withdrawals in the Withdraw' section of the app. You can withdraw funds at any time, although we recommend that you maintain a surplus of margin in your account if you have open positions. There is no charge for withdrawals."
         },
         wad3Q: {
             zh: "How long does it take to transfer funds?",
@@ -928,7 +928,7 @@ module.exports = {
         interest2A: {
             zh: "Swap rates are calculated at 22:00 UTC and applied to eligible accounts shortly afterwards. If positions are held over a weekend swap rates will increase to reflect that fact.",
             en: "Swap rates are calculated at 22:00 UTC and applied to eligible accounts shortly afterwards. If positions are held over a weekend swap rates will increase to reflect that fact.",
-            vi: "Tỷ giá swap được tính tại 23.59 UTC và được áp dụng cho các tài khoản đủ điều kiện ngay sau đó. Nếu các vị thế được giữ qua cuối tuần, tỷ giá swap sẽ tăng lên để phản ánh thực tế đó",
+            vi: "Tỷ giá swap được tính tại 23.59 UTC và được áp dụng cho các tài khoản đủ điều kiện ngay sau đó. Nếu các vị thế được giữ qua cuối tuần, tỷ giá swap sẽ tăng lên để phản ánh thực tế đó.",
             "zh-Hant": "Swap rates are calculated at 22:00 UTC and applied to eligible accounts shortly afterwards. If positions are held over a weekend swap rates will increase to reflect that fact."
         },
         interest3Q: {
@@ -952,14 +952,14 @@ module.exports = {
         interest4A: {
             zh: "Accumulated swap adjustments are detailed in your 'Trade History on the app in the 'Closed positions' section.",
             en: "Accumulated swap adjustments are detailed in your 'Trade History on the app in the 'Closed positions' section.",
-            vi: "Điều chỉnh swap tích lũy được nêu chi tiết trong ‘Lịch sử giao dịch’ trong phần ‘Vị thế đóng’",
+            vi: "Điều chỉnh swap tích lũy được nêu chi tiết trong ‘Lịch sử giao dịch’ trong phần ‘Vị thế đóng’.",
             "zh-Hant": "Accumulated swap adjustments are detailed in your 'Trade History on the app in the 'Closed positions' section."
         },
         platform1Q: {
-            zh: "Earning commission",
-            en: "Earning commission",
-            vi: "Thu hoa hồng.",
-            "zh-Hant": "Earning commission"
+            zh: "Earning commission?",
+            en: "Earning commission?",
+            vi: "Thu hoa hồng?",
+            "zh-Hant": "Earning commission?"
         },
         platform1A: {
             zh: "TigerWit Masters earn 20% of the value of successful trades made by followers. This amount is credited to the Master's account automatically.",
@@ -968,10 +968,10 @@ module.exports = {
             "zh-Hant": "TigerWit Masters earn 20% of the value of successful trades made by followers. This amount is credited to the Master's account automatically."
         },
         platform2Q: {
-            zh: "Paying commission",
-            en: "Paying commission",
-            vi: "Thanh toán hoa hồng.",
-            "zh-Hant": "Paying commission"
+            zh: "Paying commission?",
+            en: "Paying commission?",
+            vi: "Thanh toán hoa hồng?",
+            "zh-Hant": "Paying commission?"
         },
         platform2A: {
             zh: "Followers pay 20% of the profit made by following a Master's trade to the Master. Commission is deducted automatically.",
@@ -980,10 +980,10 @@ module.exports = {
             "zh-Hant": "Followers pay 20% of the profit made by following a Master's trade to the Master. Commission is deducted automatically."
         },
         platform3Q: {
-            zh: "Unfollowing a Master",
-            en: "Unfollowing a Master",
-            vi: "Hủy theo dõi một Nhà Giao Dịch Chính",
-            "zh-Hant": "Unfollowing a Master"
+            zh: "Unfollowing a Master?",
+            en: "Unfollowing a Master?",
+            vi: "Hủy theo dõi một Nhà Giao Dịch Chính?",
+            "zh-Hant": "Unfollowing a Master?"
         },
         platform3A_1: {
             zh: "If you choose to unfollow a Master your position will remain open unless you choose 'Cancel following and force close your order', or the Master closes their original position. After the Master closes their position, you can keep your position open if you choose 'Do not follow to close'.",
@@ -1022,10 +1022,10 @@ module.exports = {
             "zh-Hant": " page and select the operating system that you want to use. Alternatively, you can use the "
         },
         protect1A_4: {
-            zh: "TigerWit MT4 web version",
-            en: "TigerWit MT4 web version",
+            zh: "TigerWit MT4 web version.",
+            en: "TigerWit MT4 web version.",
             vi: "phiên bản web TigerWit MT4.",
-            "zh-Hant": "TigerWit MT4 web version"
+            "zh-Hant": "TigerWit MT4 web version."
         },
         protect2Q: {
             zh: "How do I login to my MT4 trading platform?",
