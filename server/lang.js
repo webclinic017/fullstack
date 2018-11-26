@@ -10,7 +10,8 @@ module.exports = function () {
         var data = require('./lang_data.js')();
         var querystring = require('querystring');
         var cookieList = querystring.parse(req.headers.cookie, '; ');
-        var language = 'zh';
+        var language = 'zh', languageTemp = 'zh';
+        var langArr = ['cn', 'en', 'vi', 'zh-Hant'];
         var parseCookie = function(cookie){
             var cookies = {};
             if(!cookie){
@@ -27,17 +28,23 @@ module.exports = function () {
             // console.info(name);
             if (name === 'lang') {
                 if(cookieList[name] instanceof Array){
-                    language = cookieList[name][0];
+                    languageTemp = cookieList[name][0];
                 } else {
-                    language = cookieList[name];
+                    languageTemp = cookieList[name];
                 }
             }
         }
         if (!parseCookie(req.headers.cookie).lang && (req.host.indexOf('global.tigerwit.com') != -1 || req.host.indexOf('globaldemo.tigerwit.com') != -1)) {
-            language = 'en';
+            languageTemp = 'en';
         }
         if (url.parse(req.url, true).query.lang) {
-            language = url.parse(req.url, true).query.lang;
+            languageTemp = url.parse(req.url, true).query.lang;
+        }
+        for (var i=0;i<langArr.length;i++) {    //判断是否在语言包内
+            // console.log(langArr[i], '-----language-----');
+            if (langArr[i] === languageTemp) {
+                language = languageTemp;
+            }
         }
         this.language = language === 'cn' ? 'zh' : language;
         this.data = data;
