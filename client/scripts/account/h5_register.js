@@ -41,7 +41,7 @@
             var temp = "<option value=''>"+lang.text('register.areaCode')+"</option>"
             data.data.forEach(function(item){
                 var selected = item.phone_code == 86 ? 'selected' : ''
-                temp += "<option "+ selected +" value="+ item.phone_code  +" data-code="+ item.code +">"+ '+' + item.phone_code+ " ("+ (lang.curLang('en') ? item.name_en : item.name_cn) +")" +"</option>"
+                temp += "<option "+ selected +" value="+ item.phone_code  +" data-code="+ item.code +">"+ '+' + item.phone_code+ " ("+ (item.name) +")" +"</option>"
             })
             $('#areaCodeShow').html('+86')
             $areaCode.html(temp)

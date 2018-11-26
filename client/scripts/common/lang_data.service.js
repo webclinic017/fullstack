@@ -5119,7 +5119,7 @@
                     returnLast30D: {
                         zh: "近30日收益率",
                         en: "Return(last 30D)",
-                        vi: "Lợi nhuận ít nhất 30 ngày",
+                        vi: "Lời/lỗ(30 ngày gần nhất)",
                         "zh-Hant": "近30日收益率"
                     },
                     accuracyLast30D: {
