@@ -528,12 +528,12 @@
 
 // css3垂直居中
 .item-center {
-    display: flex;
+    display: flex !important;
     align-items: center;
 }
 // 水平两侧对齐
 .space-between{
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
 }
 .flex1 {
