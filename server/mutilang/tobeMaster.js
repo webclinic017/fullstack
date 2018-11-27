@@ -44,7 +44,7 @@ module.exports = {
     tobeMaster5_2: {
         zh: "TigerWit交易员榜单随着交易表现变动，进阶为入围交易高手的要求：",
         en: "TigerWit’s master list changes with the trading performance, demands of become a finalist are as follow: ",
-        vi: "Danh sách nhà giao dịch chính tổng thể của TigerWit thay đổi với hiệu suất giao dịch, nhu cầu trở thành nhà giao dịch cuối cùng như sau:",
+        vi: "Danh sách nhà giao dịch chính tổng thể của TigerWit thay đổi với hiệu suất giao dịch, nhu cầu trở thành nhà giao dịch cuối cùng như sau: ",
         "zh-Hant": "TigerWit交易員榜單隨著交易表現變動，進階為入圍交易高手的要求："
     },
     tobeMaster6: {
@@ -74,7 +74,7 @@ module.exports = {
     tobeMaster9_2: {
         zh: "TigerWit会在入围交易者中综合评定上榜高手，影响上榜的决定性因素有：",
         en: "TigerWit will comprehensively assess the finalists,in order to decide who can get on the masters' list. The decisive factors are as follow: ",
-        vi: "TigerWit sẽ đánh giá toàn diện những người vào danh sách cuối cùng, để quyết định ai có thể vào danh sách của các nhà giao dịch chính. Các yếu tố quyết định như sau:",
+        vi: "TigerWit sẽ đánh giá toàn diện những người vào danh sách cuối cùng, để quyết định ai có thể vào danh sách của các nhà giao dịch chính. Các yếu tố quyết định như sau: ",
         "zh-Hant": "TigerWit會在入圍交易者中綜合評定上榜高手，影響上榜的決定性因素有："
     },
     tobeMaster10: {
@@ -86,7 +86,7 @@ module.exports = {
     tobeMaster11: {
         zh: "交易订单量：交易员交易订单的数量。考量交易活跃度，交易订单量与交易活跃度成正比；",
         en: "Order quantity：The number of trading orders.",
-        vi: "Số lượng đặt hàng: Số lượng lệnh giao dịch",
+        vi: "Số lượng đặt hàng: Số lượng lệnh giao dịch.",
         "zh-Hant": "交易訂單量：交易員交易訂單的數量。考量交易活躍度，交易訂單量與交易活躍度成正比；"
     },
     tobeMaster12: {
@@ -98,7 +98,7 @@ module.exports = {
     tobeMaster13: {
         zh: "交易高手权益和义务",
         en: "Master's Rights and Obligations",
-        vi: "Quyền và nghĩa vụ của Nhà giao dịch chính.",
+        vi: "Quyền và nghĩa vụ của Nhà giao dịch chính",
         "zh-Hant": "交易高手權益和義務"
     },
     tobeMaster14: {

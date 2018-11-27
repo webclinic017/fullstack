@@ -152,7 +152,7 @@ module.exports = {
     newhome_24: {
         zh: "最低交易手数0.01手",
         en: "Trade from a minimum of just 0.01 Lot",
-        vi: "Giao dịch từ mức tối thiểu chỉ 0,01 Lot",
+        vi: "Giao dịch từ mức tối thiểu chỉ 0.01 Lot",
         "zh-Hant": "最低交易手數0.01手"
     },
     newhome_25: {
@@ -296,13 +296,13 @@ module.exports = {
     newhome_42_1: {
         zh: "TigerWit提供全球交易量最大、最具流动性的市场。",
         en: "TigerWit clients worldwide access the most heavily-traded global products, delivering immediate access to the most liquid markets.",
-        vi: "Khách hàng của TigerWit trên toàn thế giới truy cập vào các sản phẩm toàn cầu được giao dịch nhiều nhất, cung cấp quyền truy cập ngay lập tức vào các thị trường thanh khoản nhất",
+        vi: "Khách hàng của TigerWit trên toàn thế giới truy cập vào các sản phẩm toàn cầu được giao dịch nhiều nhất, cung cấp quyền truy cập ngay lập tức vào các thị trường thanh khoản nhất.",
         "zh-Hant": "TigerWit提供全球交易量最大、最具流動性的市場。"
     },
     newhome_43: {
         zh: "灵活满足用户对风险控制、资金管理的需求 ",
-        en: "Open an account - online or on the app",
-        vi: "Mở tài khoản - trực tuyến hoặc trên ứng dụng",
+        en: "Open an account - online or on the app ",
+        vi: "Mở tài khoản - trực tuyến hoặc trên ứng dụng ",
         "zh-Hant": "靈活滿足用戶對風險控制、資金管理的需求 "
     },
     newhome_44: {
