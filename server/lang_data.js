@@ -2422,7 +2422,7 @@ module.exports = function () {
         traderIndex1: {
             en: "Follow",
             zh: "复制",
-            vi: "Theo dõi",
+            vi: "Làm Theo",
             "zh-Hant": "復制"
         },
         traderIndex2: {
@@ -7956,13 +7956,13 @@ module.exports = function () {
             tip1: {
                 zh: "复制跟单",
                 en: "Follow a master to trade",
-                vi: "Theo dõi một nhà giao dịch chính để giao dịch",
+                vi: "Làm theo một bậc thầy để giao dịch",
                 "zh-Hant": "復制跟單"
             },
             tip2: {
                 zh: "无需精通外汇知识，跟着高手坐享其成",
                 en: "No need to master forex knowledge, just follow a master and enjoy the profit.",
-                vi: "Không cần phải nắm vững kiến ​​thức ngoại hối, chỉ cần làm theo một nhà giao dịch và tận hưởng lợi nhuận.",
+                vi: "Không cần thành thạo kiến thức forex, chỉ cần làm theo một bậc thầy và hưởng lợi nhuận.",
                 "zh-Hant": "無需精通外匯知識，跟著高手坐享其成"
             },
             tip3: {

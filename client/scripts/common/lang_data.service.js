@@ -2485,7 +2485,7 @@
                     follow: {
                         zh: "跟随",
                         en: "Follow",
-                        vi: "Theo dõi",
+                        vi: "Làm Theo",
                         "zh-Hant": "跟隨"
                     },
                     following: {
@@ -2927,7 +2927,7 @@
                     follow: {
                         zh: "复制高手",
                         en: "Follow",
-                        vi: "Theo dõi",
+                        vi: "Làm Theo",
                         "zh-Hant": "復制高手"
                     },
                     tip1: {
@@ -3633,7 +3633,7 @@
                     follow: {
                         zh: "关注",
                         en: "Follow",
-                        vi: "Theo dõi",
+                        vi: "Làm Theo",
                         "zh-Hant": "關註"
                     },
                     unfollow: {
@@ -5164,11 +5164,23 @@
                         vi: "MUA",
                         "zh-Hant": "多單"
                     },
+                    buyD: {
+                        zh: "多单，",
+                        en: "BUY,",
+                        vi: "MUA,",
+                        "zh-Hant": "多單，"
+                    },
                     sell: {
                         zh: "空单",
                         en: "SELL",
                         vi: "BÁN",
                         "zh-Hant": "空單"
+                    },
+                    sellD: {
+                        zh: "空单，",
+                        en: "SELL,",
+                        vi: "BÁN,",
+                        "zh-Hant": "空單，"
                     },
                     pleaseChooseAccount: {
                         zh: "请选择账号：",
@@ -5419,6 +5431,12 @@
                         en: "Products",
                         vi: "Sản phẩm",
                         "zh-Hant": "交易品種"
+                    },
+                    productsM: {
+                        zh: "交易品种：",
+                        en: "Products: ",
+                        vi: "Sản phẩm: ",
+                        "zh-Hant": "交易品種："
                     },
                     newPrice: {
                         zh: "最新价格",
@@ -6526,7 +6544,7 @@
                 copy: {
                     zh: "复制",
                     en: "Follow",
-                    vi: "Sao chép",
+                    vi: "Làm Theo",
                     "zh-Hant": "復制"
                 },
                 noData: {
