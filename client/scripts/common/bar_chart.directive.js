@@ -3,9 +3,9 @@
 
 	angular.module('fullstackApp').directive('twBarChart', twBarChart);
 
-	twBarChart.$inject = ['config'];
+	twBarChart.$inject = ['config', 'lang'];
 
-	function twBarChart(config) {
+	function twBarChart(config, lang) {
 		var noData = config.highchartNoDataOptions;
 		var options = {
 			colors: ['#bfe103', '#ffc601', '#fc5401', '#41b6ea', '#492970', '#f28f43', '#77a1e5', '#c42525', '#a6c96a','#101010','#61cb28','#fff230','#37bc9b','#AC9711','#188afa'],
@@ -27,7 +27,7 @@
 				}
 			},
 			xAxis: {
-				categories: ['交易品种:'],
+				categories: [lang.text('tigerWitID.symbolPage.productsM')],
 				labels: {
 					style: {
 						color: '#101010'

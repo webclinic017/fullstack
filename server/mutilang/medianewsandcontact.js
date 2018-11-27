@@ -3,7 +3,7 @@ module.exports = {
         nav: {
             zh: "Media news and contact",
             en: "Media news and contact",
-            vi: "Media news and contact",
+            vi: "Tin tức và liên hệ về phương tiện",
             "zh-Hant": "Media news and contact"
         },
         medianewsandcontact1: {

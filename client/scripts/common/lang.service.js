@@ -4,9 +4,9 @@
     
     angular.module('fullstackApp').factory('lang', lang);
 
-    lang.$inject = ['langData', '$location'];
+    lang.$inject = ['langData', '$location', '$timeout'];
 
-    function lang (langData, $location) {
+    function lang (langData, $location, $timeout) {
 
         var lang = {
             isEnglishArea: function () {
@@ -52,7 +52,9 @@
                 
                 if (url.local.indexOf($location.host()) != -1 || (area_id == 1 && url.cn.indexOf($location.host()) != -1) || (area_id == 2 && url.global.indexOf($location.host()) != -1)) {
                     // state.go('space.center.index', {reload: true});
-                    window.location.href="/space/#/center";
+                    $timeout(function () {
+                        window.location.href="/space/#/center";
+                    }, 100)
                 } else {
                     if (area_id == 1) {
                         if ($location.host().indexOf('demo') != -1) {

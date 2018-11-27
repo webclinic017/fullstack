@@ -380,6 +380,7 @@
             return account.getAuthStatus({
                 is_live: para.is_live
             }).then(function (data) {
+                if (!data) return;
                 // console.log('global.getAuthStatus', data);
                 if (data.is_succ) {
                     // 开户类型(体验金、真实)
@@ -402,7 +403,7 @@
                     angular.extend($scope.personal, params);
                     if(accountStatus == '1'){
                         account.getIdcard().then(function (data) {
-                            console.log(data)
+                            if (!data) return;
                             if (data.is_succ) {
                                 angular.extend($scope.personal.updatePapers, data.data);
                             }
