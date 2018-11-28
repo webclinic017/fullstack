@@ -86,13 +86,13 @@
                                         {{ detail.cmd_name }}
                                     </span>
                                     <a class="invest_orders__symbol" href="">
-                                        {{ detail.symbol_cn }}
+                                        {{lang.isEnglishArea() ? detail.symbol_origin : detail.symbol_cn + ' (' + detail.symbol_origin + ')' }}
                                     </a>        
                                 </p>
 
-                                <p class="text-left font-size-12" ng-if="modal.usage =='history'" >
-                                    <span class="history-operation-way">{{detail.close_type_name}}</span>
-                                    <span>{{detail.passed_time | duration}}前</span>
+                                <p class="font-size-12" ng-if="modal.usage =='history'" >
+                                    <span class="history-operation-way">{{detail.close_type_name}}</span><br>
+                                    <span>{{ lang.text('tigerWitID.before') }} {{detail.passed_time | duration}}</span>
                                 </p>  
                             </div>
                         </td>

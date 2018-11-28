@@ -691,7 +691,7 @@ var oil = {
         "charge": "0",
         "trade_time": "on Monday－on Friday 07:00-06:00(next day)",
         "quote_time": "on Monday－on Friday 07:00-06:00(next day)",
-        "desp": "Change: As for energy contract taking NYMEX US natural gas products as the benchmark, natural gas satisfies about 1/4 energy demands of the US and can also be used as hedging tool for such products as electricity option. To: Natural gas is a fuel representing an alternative energy source to oil and other traditional resources such as coal. As oil in particular becomes more expensive to access, natural gas is becoming an established source of ‘cleaner’ energy, currently providing around one third of the UK’s energy supply."
+        "desp": "Natural gas is a fuel representing an alternative energy source to oil and other traditional resources such as coal. As oil in particular becomes more expensive to access, natural gas is becoming an established source of ‘cleaner’ energy, currently providing around one third of the UK’s energy supply."
     },
     {
         "name_en": "XTIUSD",
@@ -703,7 +703,7 @@ var oil = {
         "charge": "0",
         "trade_time": "on Monday－on Friday 07:00-06:00(next day)",
         "quote_time": "on Monday－on Friday 07:00-06:00(next day)",
-        "desp": "Change: Desulfurized light crude oil contract with NYMEX US crude oil as the benchmark is one of the two crude oil benchmarking products in the world and is applied by many countries as the pricing datum of crude oil products, which is also the energy contract with the largest trading volume in the world. To: US Oil, or Texas Light Sweet, is one of the two most important benchmarks used globally by investors to determine the value of a barrel of a particular grade of oil. US oil is considered ‘sweet’ crude as it has a lower concentration of sulphur than its North Sea equivalent. Our Oil CFD’s allow our clients to speculate on real time price movements determined by the effects of global supply and demand."
+        "desp": "US Oil, or Texas Light Sweet, is one of the two most important benchmarks used globally by investors to determine the value of a barrel of a particular grade of oil. US oil is considered ‘sweet’ crude as it has a lower concentration of sulphur than its North Sea equivalent. Our Oil CFD’s allow our clients to speculate on real time price movements determined by the effects of global supply and demand."
     },
     {
         "name_en": "XBRUSD",
@@ -715,7 +715,7 @@ var oil = {
         "charge": "0",
         "trade_time": "on Monday－on Friday 09:00-06:00(next day)",
         "quote_time": "on Monday－on Friday 09:00-06:00(next day)",
-        "desp": "Change: Commonly known as North Sea oil, which is also desulfurized light crude oil. Pricing datum of crude oil in Europe and one of the two major crude oil benchmarking products in the world, which can also be applied as hedging product against West Texas crude oil. To: North Sea Oil is the second important global benchmark for oil prices. This type of oil is mainly used to refine into diesel fuel and gasoline. Our CFD allows our clients to speculate on the price of this alternative benchmark to US Oil."
+        "desp": "North Sea Oil is the second important global benchmark for oil prices. This type of oil is mainly used to refine into diesel fuel and gasoline. Our CFD allows our clients to speculate on the price of this alternative benchmark to US Oil."
     }
     ],
     vi: [{
