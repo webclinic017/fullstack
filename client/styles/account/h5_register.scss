@@ -54,7 +54,12 @@
         width: 100%;
         height: 35%;
         line-height: 2.8rem;
-        display: flex;
+        display:box;  /*（伸缩盒最老版本）*/
+        display:-webkit-box;  /* iOS 6-, Safari 3.1-6 */
+        display:-webkit-flex; /* Chrome */
+        display:-moz-box;     /* Firefox 19 */
+        display:-ms-flexbox;   
+        display:flex;  /*flex容器*/
         border-bottom: 1px solid $gray;
         &:last-child {
           border: none;

@@ -665,7 +665,7 @@
                     enterEmail: {
                         zh: "请输入邮箱",
                         en: "Please enter email",
-                        vi: "vui lòng nhập email",
+                        vi: "Vui lòng nhập email",
                         "zh-Hant": "請輸入郵箱"
                     },
                     phoneNumber: {
@@ -2771,7 +2771,7 @@
                     profitRateM: {
                         zh: "收益率：",
                         en: "Profit Rate: ",
-                        vi: "Tỷ Suất Lợi Nhuận:",
+                        vi: "Tỷ Suất Lợi Nhuận: ",
                         "zh-Hant": "收益率："
                     },
                     mainTradingSymbols: {
@@ -3767,7 +3767,7 @@
                     extractableAmountM: {
                         zh: "可提取金额：",
                         en: "Extractable amount: ",
-                        vi: "Số lượng có thể trích",
+                        vi: "Số lượng có thể trích: ",
                         "zh-Hant": "可提取金額："
                     },
                     tip1: {
@@ -6637,6 +6637,12 @@
                     vi: "Vui lòng chờ",
                     "zh-Hant": "請稍等"
                 },
+                before: {
+                    zh: "过去",
+                    en: "last",
+                    vi: "trước",
+                    "zh-Hant": "過去"
+                },
                 yes: {
                     zh: "是",
                     en: "Yes",
@@ -6706,7 +6712,7 @@
                 weeks: {
                     zh: "周",
                     en: " weeks ",
-                    vi: " Các tuần",
+                    vi: " Tuần",
                     "zh-Hant": "周"
                 },
                 month: {
@@ -6748,7 +6754,7 @@
                 just: {
                     zh: "刚刚",
                     en: " just",
-                    vi: " Chỉ",
+                    vi: " Bây giờ",
                     "zh-Hant": "剛剛"
                 },
                 areaCode: {
