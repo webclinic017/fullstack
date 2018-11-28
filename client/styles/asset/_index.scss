@@ -1,13 +1,4 @@
-.flexBox {
-    display: -webkit-flex;
-    /* 新版本语法: Chrome 21+ */
-    display: flex;
-    /* 新版本语法: Opera 12.1, Firefox 22+ */
-    display: -moz-box;
-    /* 老版本语法: Firefox (buggy) */
-    display: -ms-flexbox;
-    /* 混合版本语法: IE 10 */
-}
+
 
 // asset
 @include b (asset-public) {
@@ -32,10 +23,10 @@
     }
     @include e(tip) {
         height: 600px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include displayFlex();
+        @include flexDirection(column);
+        @include justifyContent(center);
+        @include alignItems(center);
 
         a {
             color: #333;
@@ -48,9 +39,9 @@
     line-height: 22px;
     color: $gray-darker;
     background-color: rgb(255, 255, 234);
-    @extend .flexBox;
+    @include displayFlex();
     flex-flow: row nowrap;
-    justify-content: flex-start;
+    @include justifyContent(flex-start);
     padding: 22px 24px;
     border-radius: 10px;
     .warn_icon {
@@ -70,8 +61,8 @@
     text-align: left;
     padding: 0 15px;
     flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
+    @include justifyContent(flex-start);
+    @include alignItems(center);
     span {
         font-weight: 500;
         font-size: 12px;
@@ -97,7 +88,7 @@
         margin: 5px 0;
     }
     @include e(list){
-        display: flex;
+        @include displayFlex();
         margin-bottom: 10px;
         @include m(item){
             border: 1px solid #eee;
@@ -602,16 +593,16 @@
         }
     }
     @include e(card_handler) {
-        @extend .flexBox;
+        @include displayFlex();
         flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: center;
+        @include justifyContent(flex-start);
+        @include alignItems(center);
         .card_number {
             font-weight: 500;
             font-size: 22px;
             margin-left: 20px;
-            @extend .flexBox;
-            align-items: center;
+            @include displayFlex();
+            @include alignItems(center);
         }
         .card_switch {
             font-size: 14px;

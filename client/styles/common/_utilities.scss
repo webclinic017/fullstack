@@ -518,17 +518,27 @@
 
 // css3垂直居中
 .item-center {
-    display: flex !important;
-    align-items: center;
+    display: box !important;  /*（伸缩盒最老版本）*/
+    display: -webkit-box !important;  /* iOS 6-, Safari 3.1-6 */
+    display: -webkit-flex !important; /* Chrome */
+    display: -moz-box !important;     /* Firefox 19 */
+    display: -ms-flexbox !important;   
+    display: flex !important;  /*flex容器*/
+    @include alignItems(center);
 }
 // 水平两侧对齐
 .space-between{
-    display: flex !important;
-    justify-content: space-between;
+    display: box !important;  /*（伸缩盒最老版本）*/
+    display: -webkit-box !important;  /* iOS 6-, Safari 3.1-6 */
+    display: -webkit-flex !important; /* Chrome */
+    display: -moz-box !important;     /* Firefox 19 */
+    display: -ms-flexbox !important;   
+    display: flex;  /*flex容器*/
+    @include justifyContent(space-between);
 }
 .flex1 {
-    flex: 1;
+    @include flex(1);
 }
 .flex0 {
-    flex: 0;
+    @include flex(0);
 }
