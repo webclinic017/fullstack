@@ -65,18 +65,6 @@ module.exports = {
         vi: "^^-^^",
         "zh-Hant": "A：只要您提供完備的信息，您可以在老虎外匯即時開戶。"
     },
-    faqAccount9: {
-        zh: "Q：我能在真实账户中开设一个联名账户吗",
-        en: "Q: Can I open a joint account in Live account?",
-        vi: "^^-^^",
-        "zh-Hant": "Q：我能在真實賬戶中開設壹個聯名賬戶嗎"
-    },
-    faqAccount10: {
-        zh: "A：可以，需要的话请咨询客服或服务您的业务经理。",
-        en: "A: Yes, please consult client service center or contact your client manager if you need.",
-        vi: "^^-^^",
-        "zh-Hant": "A：可以，需要的話請咨詢客服或服務您的業務經理。"
-    },
     faqAccount11: {
         zh: "Q：我什么时候可以开始交易？",
         en: "Q: When can I make deals?",
