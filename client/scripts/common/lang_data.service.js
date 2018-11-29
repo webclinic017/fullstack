@@ -6499,6 +6499,12 @@
                         "zh-Hant": "英文昵稱為2-18位英文字母"
                     }
                 },
+                noMetNeed:{
+                    zh:"未达成",
+                    en:"unfinished",
+                    vi:"không đạt",
+                    "zh-Hant":"未達成"
+                },
                 date: {
                     zh: "日期",
                     en: "Date",
