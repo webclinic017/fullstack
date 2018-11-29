@@ -40,11 +40,6 @@ module.exports = function () {
             language = url.parse(req.url, true).query.lang;
         }
         this.language = language === 'cn' ? 'zh' : language;
-        //越南语本周兼容成英文，set_company_cookie.js 同步修改 2018.11.20
-        if (language === 'vi') {
-            this.language = 'en';
-        }
-        //越南语翻译上线删除此配置
         this.data = data;
         this.req = req;
         this.company_name = company_name;
@@ -64,6 +59,9 @@ module.exports = function () {
                 isEngArea = true;
             }
             return isEngArea;
+        },
+        currentLanguage: function () {  //此方法只用来调整单个语言的特殊性，一般情况优先使用 isEnglishArea 方法
+            return this.language;
         },
         text: function (name) {
             var _this = this;
@@ -123,9 +121,6 @@ module.exports = function () {
         },
         isCloned: function(){  //此方法废弃 2018.11.20
             return this.clonedBaidu;
-        },
-        currentLanguage: function () {  //此方法废弃 2018.11.20
-            return this.language;
         },
         background: function () {  //此方法废弃 2018.11.20 (背景图使用image方法)
             var _this = this;

@@ -159,8 +159,9 @@
                 templateUrl: '/views/bonus/detail_modal.html',
                 size: 'lg',
                 backdrop: true,
-                controller: function($scope, $modalInstance) {
+                controller: function($scope, $modalInstance, lang) {
 
+                    $scope.lang = lang;
                     $scope.success = false;
                     $scope.username = trader.username;
                     $scope.details = [];

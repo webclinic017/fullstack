@@ -12,7 +12,7 @@
 <% include /common/statistic/main.html %>
 <script>
     var nodeResponseInfo = {
-        isEnglish: '<%= lang.isEnglishArea() %>' == 'true' ? true : false,
+        currentLang: '<%= lang.currentLanguage() %>',
     };
 </script>
 <body>

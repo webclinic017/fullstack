@@ -4,9 +4,9 @@
     
     angular.module('fullstackApp').factory('lang', lang);
 
-    lang.$inject = ['langData', '$location'];
+    lang.$inject = ['langData', '$location', '$timeout'];
 
-    function lang (langData, $location) {
+    function lang (langData, $location, $timeout) {
 
         var lang = {
             isEnglishArea: function () {
@@ -21,6 +21,9 @@
                     isEngArea = true;
                 }
                 return isEngArea;
+            },
+            currentLanguage: function () {  //此方法只用来调整单个语言的特殊性，一般情况优先使用 isEnglishArea 方法
+                return langData["language"];
             },
             text: function(name){
                 var keys = name.split('.');
@@ -40,8 +43,7 @@
                 //暂时未用到，若后期有涉及到angular目录中背景图语言问题，请参照node中使用image方法 2018.11.20
                 return langData["language"] == 'en' ? true : false;
             },
-            // 登录注册时跳转
-            globalOrCn: function (state, area_id) {
+            globalOrCn: function (area_id) {
                 var url = {
                     cn: 'cn.tigerwit.com,cndemo.tigerwit.com',
                     global: 'global.tigerwit.com,globaldemo.tigerwit.com',
@@ -49,7 +51,10 @@
                 };
                 
                 if (url.local.indexOf($location.host()) != -1 || (area_id == 1 && url.cn.indexOf($location.host()) != -1) || (area_id == 2 && url.global.indexOf($location.host()) != -1)) {
-                    state.go('space.center.index', {reload: true});
+                    // state.go('space.center.index', {reload: true});
+                    $timeout(function () {
+                        window.location.href="/space/#/center";
+                    }, 100)
                 } else {
                     if (area_id == 1) {
                         if ($location.host().indexOf('demo') != -1) {

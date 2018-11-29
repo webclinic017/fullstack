@@ -118,10 +118,10 @@
         height: 165px;
         border: 8px solid;
         border-radius: 100%;
-        display: flex;
+        @include displayFlex();
+        @include justifyContent(center);
+        @include alignItems(center);
         padding: 8px;
-        align-items:center;/*垂直居中*/
-        justify-content: center;/*水平居中*/
         position: relative;
         margin: 0 29px;
         font-size: 24px;

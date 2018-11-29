@@ -30,32 +30,29 @@
   </div>
   <div class="sys_modal_v2__content" ng-if="lang.isEnglishArea()">
     <div class="dredge_box mg-bt-40" ng-show="dredge_type == 'live' || dredge_type == 'all'">
-      <h3 class="sys_modal_v2__title text-center">Live account</h3>
-      <p class="sys_modal_v2__desp">Open a Live account and trade the markets you want, the way you want them</p>
-      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> All key FX, precious metals, commodities and indices via CFD</p>
-      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> Trade on a smarter, personalized, highly intuitive app</p>
-      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> Copy-trade by following a Master’s trading strategy</p>
-      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> Become a TigerWit Master and share your followers’ profits</p>
-      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> Trading powered by blockchain</p>
-      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> Trems & Conditions apply</p>
+      <h3 class="sys_modal_v2__title text-center">{{lang.text('tigerWitID.settings.openAcount1')}}</h3>
+      <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.settings.openAcount2')}}</p>
+      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount3')}}</p>
+      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount4')}}</p>
+      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount5')}}</p>
+      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount6')}}</p>
+      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount7')}}</p>
       <div class="btn_wrapper">
           <a class="btn btn-primary-gradient btn-sm" ng-click="confirmLive()">
-            {{lang.text('tigerWitID.settings.freeOpening')}}
+            {{lang.text('tigerWitID.settings.openAcount8')}}
           </a>
       </div>
     </div>
     <div class="text-left" ng-show="dredge_type == 'demo' || dredge_type == 'all'">
-      <h3 class="sys_modal_v2__title text-center">Experience account</h3>
-      <p class="sys_modal_v2__desp">Open an Experience account and practice and strategies with a USD10000 virtual balance.</p>
-      <p class="sys_modal_v2__desp pd-tp-10">Just one step you can enjoy:</p>
-      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> Instant account-opening</p>
-      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> Risk-free trading practice account with virtual funds</p>
-      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> Easy upgrade to a Live account</p>
-      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> Note: Experience accounts do not support withdrawal</p>
+      <h3 class="sys_modal_v2__title text-center">{{lang.text('tigerWitID.settings.openAcount9')}}</h3>
+      <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.settings.openAcount10')}}</p>
+      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount11')}}</p>
+      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount12')}}</p>
+      <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount13')}}</p>
       <div class="btn_wrapper">
           <a class="btn btn-primary-gradient btn-sm" ng-click="openDemo()">
             <i class="loading fa fa-spinner loading_spinner" ng-show="loading.demo"></i>
-            {{lang.text('tigerWitID.settings.freeOpening')}}
+            {{lang.text('tigerWitID.settings.openAcount14')}}
           </a>
       </div>
     </div>

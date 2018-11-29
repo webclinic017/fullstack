@@ -280,7 +280,7 @@
                 if (data.is_succ) {
                     $timeout(function () {
                         $scope.$emit('global.openDredgeMdl', {position: 'register'});
-                        lang.globalOrCn($state, $scope.area_id);
+                        lang.globalOrCn($scope.area_id);
                     }, 100);
                     
                 } else {
@@ -293,7 +293,7 @@
                 sa.track('skip_register');
             }, 150);
             $scope.$emit('global.openDredgeMdl', {position: 'register'});
-            lang.globalOrCn($state, $scope.area_id);
+            lang.globalOrCn($scope.area_id);
         }
 
         // 获取验证码倒计时

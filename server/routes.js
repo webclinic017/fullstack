@@ -563,7 +563,7 @@ module.exports = function (app) {
         }, req));
     });
     //global代理
-    app.route('/partner').get(function (req, res) {
+    app.route('/web/agent/partner').get(function (req, res) {
         var pageInfo = {
             id: 'proxy'
         };
@@ -574,8 +574,8 @@ module.exports = function (app) {
     });
 
     // 条件和条款
-    app.route('/web/blog/:subpage(agreement|risk|statement|notice|legal|trade_fee)').get(function (req, res) {
-        var subpage = req.params.subpage || 'risk';
+    app.route('/web/blog/:subpage(agreement|trade_fee)').get(function (req, res) {
+        var subpage = req.params.subpage || 'trade_fee';
         var pageInfo = {
             id: subpage
         };

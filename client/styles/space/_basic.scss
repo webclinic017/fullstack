@@ -16,7 +16,7 @@ $font-space-gray-color: $gray-dark;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 15px $gray;
-    padding: 25px;
+    padding: 23px;
     width: 940px;
     &.gapped {
         margin-top: 50px;
@@ -221,8 +221,8 @@ $font-space-gray-color: $gray-dark;
 @include b(space_center_statistics) {
     color: rgb(36, 42, 54);
     margin-bottom: 50px;
-    display: flex;
-    align-items: flex-end;
+    @include displayFlex();
+    @include alignItems(flex-end);
     &.align-items-center {
         align-items: center;
     }
@@ -241,9 +241,9 @@ $font-space-gray-color: $gray-dark;
         }
     }
     @include e(list) {
-        display: flex;
-        align-items: flex-end;
-        flex: 1;
+        @include displayFlex();
+        @include alignItems(flex-end);
+        @include flex(1);
         @include m(item) {
             line-height: 22px;
             &:nth-child(odd) {
@@ -264,7 +264,7 @@ $font-space-gray-color: $gray-dark;
         }
     }
     @include e(wallet) {
-        flex: 1;
+        @include flex(1);
         @extend .block_btn_group;
     }
 }

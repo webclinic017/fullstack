@@ -25,7 +25,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="link-list__item">
+                <div class="link-list__item <%= lang.currentLanguage()%>">
                     <h2>
                         <p class="mg-bt-20">
                             <span><%= lang.text("foot4")%></span>
@@ -50,7 +50,7 @@
                         <%}%>
                     </ul>
                 </div>
-                <div class="link-list__item">
+                <div class="link-list__item <%= lang.currentLanguage()%>">
                     <h2>
                         <p class="mg-bt-20">
                             <span><%= lang.text("foot7")%></span>
@@ -73,76 +73,68 @@
                         </li>
                     </ul>
                 </div>
+                <div class="link-list__item">
+                    <h2>
+                        <p class="mg-bt-20">
+                            <span><%= lang.text("foot11")%></span>
+                        </p>
+                    </h2>
                 <%if (req.host.indexOf('global') != -1) {%>
-                        <div class="link-list__item">
-                            <h2>
-                                <p class="mg-bt-20">
-                                    <span><%= lang.text("foot11")%></span>
-                                </p>
-                            </h2>
-                            <ul>
-                                <li class="mg-bt-15">
-                                    <h3>
-                                        <a>
-                                            &nbsp;<%= lang.text("supportEmail")%>
-                                        </a>
-                                    </h3>
-                                </li>
-                            </ul>
-                        </div>
-                    <!-- <ul class="pd-tp-20 clearfix">
-                        <li class="footer-weibo">
-                            <a href="" target="_blank">
-                                <img class="img-20" src="/white_label/footer/footer-icon-face-book.png">
-                            </a>
+                    <ul>
+                        <li class="mg-bt-15">
+                            <h3>
+                                <a class="font-dark" href='mailto:<%=lang.text("supportEmail")%>'>
+                                    &nbsp;<%= lang.text("supportEmail")%>
+                                </a>
+                            </h3>
                         </li>
-                        <li class="footer-weixin">
-                            <img class="img-20" src="/white_label/footer/footer-icon-twitter.png">
-                            <span>
-                                <img src="/images/footer-weixin-code.png">
-                            </span>
-                        </li>
-                    </ul> -->
+                    </ul>
                 <%}%>
-            </div>
-            <div class="contact-us">
-            <%if (req.host.indexOf('global') == -1) {%>
-                <h2>
-                    <p>
-                        <span class="font-light"><%= lang.text("footer.serviceTime")%></span>
-                    </p>
-                </h2>
-                <div class="phone">
-                    <p>
-                        <span>
-                            +<%=lang.text("telephone")%>
-                        </span>
-                    </p>
+                <%if (req.host.indexOf('global') == -1) {%>
+                    <div class="contact-us pd-tp-5">
+                        <div class="">
+                            <p>
+                                <a class="font-dark" href='mailto:<%=lang.text("supportEmail")%>'>
+                                    <%=lang.text("supportEmail")%>
+                                </a>
+                            </p>
+                        </div>
+                        <ul class="pd-tp-20 clearfix">
+                            <li class="footer-weibo">
+                                <a href="http://weibo.com/TigerWit?refer_flag=1001030102_&is_hot=1" target="_blank">
+                                    <img class="img-20" src="/white_label/footer/footer-icon-weibo.png">
+                                </a>
+                            </li>
+                            <li class="footer-weixin">
+                                <img class="img-20" src="/white_label/footer/footer-icon-weChat.png">
+                                <span>
+                                    <img src="/images/footer-weixin-code.png">
+                                </span>
+                            </li>
+                        </ul>
+                        <!-- <ul class="pd-tp-20 clearfix">
+                            <li class="footer-weibo">
+                                <a href="" target="_blank">
+                                    <img class="img-20" src="/white_label/footer/footer-icon-face-book.png">
+                                </a>
+                            </li>
+                            <li class="footer-weixin">
+                                <img class="img-20" src="/white_label/footer/footer-icon-twitter.png">
+                                <span>
+                                    <img src="/images/footer-weixin-code.png">
+                                </span>
+                            </li>
+                        </ul> -->
+                        <div class="footer-follow-tip pd-tp-10" >
+                            <p>
+                                <%= lang.text("footer.subscribeArticle")%>
+                            </p> 
+                        </div>
+                    </div>
+                <%}%>
                 </div>
-                <ul class="pd-tp-20 clearfix">
-                    <li class="footer-weibo">
-                        <a href="http://weibo.com/TigerWit?refer_flag=1001030102_&is_hot=1" target="_blank">
-                            <img class="img-20" src="/white_label/footer/footer-icon-weibo.png">
-                        </a>
-                    </li>
-                    <li class="footer-weixin">
-                        <img class="img-20" src="/white_label/footer/footer-icon-weChat.png">
-                        <span>
-                            <img src="/images/footer-weixin-code.png">
-                        </span>
-                    </li>
-                </ul>
-                <div class="footer-follow-tip pd-tp-10" >
-                    <p>
-                        <%= lang.text("footer.subscribeArticle")%>
-                    </p> 
-                    <p class=" pd-tp-10">
-                        <%=lang.text("supportEmail")%>
-                    </p>
-                </div>
-            <%}%>
+                
             </div>
-
             
         </div>
         <div class="footer_con mg-tp-100">
@@ -164,6 +156,11 @@
 <div id="footer-service-wrapper" style="display:none;">
     <h4><%= lang.text("foot_42")%></h4><ul class="clearfix"><li class="ordinary_serv"><span><img src="/images/footer-service-1.png"></span><%= lang.text("foot_43")%></li><li class="agent_serv"><span><img src="/images/footer-service-2.png"></span><%= lang.text("foot_45")%></li></ul><div class="tip clearfix"><p><%= lang.text("foot_44")%><br><%= lang.text("foot_44_2")%></p><p> <%= lang.text("foot_46")%><br><%= lang.text("foot_47")%></p></div>
 </div>
+
+<!-- global客服系统接入 2018.11.12 -->
+<%if (req.host.indexOf('global') != -1) {%>
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=6138171f-eb82-4329-82ae-30f553ce7dc3"> </script>
+<%}%>
 
 <!-- Live800Online operator icon:online service(in use)[Floating icon] Start-->
 <script language="javascript">

@@ -226,11 +226,6 @@
 .icon-history{
     vertical-align:sub;
 }
-// 交易账户微调
-.align-item-c {
-    display: flex;
-    align-items: center;
-}
 .margin-top60 {
     margin-top: 60px;
 }
@@ -244,8 +239,8 @@
 
 }
 @include b(space_sub_account_info) {
-    display: flex;
-    align-items: center;
+    @include displayFlex();
+    @include alignItems(center);
     @include e(list) {
         &:nth-child(1) {
             > ul {
@@ -263,8 +258,8 @@
                         line-height: 22px;
                         > div {
                             &:nth-child(1){
-                                display: flex;
-                                align-items: center;
+                                @include displayFlex();
+                                @include alignItems(center);
                             }
                             > span {
                                 margin-bottom: 7px;
@@ -371,9 +366,9 @@
                         }
                         .master_category {
                             margin-top: 9px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
+                            @include displayFlex();
+                            @include alignItems(center);
+                            @include justifyContent(space-between);
                             .grade {
                                 font-size: 14px;
                                 color: rgba(36, 42, 54, 0.6);
@@ -401,7 +396,7 @@
             }
         }
         &:nth-child(2) {
-            flex: 1;
+            @include flex(1);
             padding: 0 25px 0 0;
             > ul {
                 overflow: hidden;
