@@ -9,7 +9,7 @@
   WebProductController.$inject = ['$scope', '$cookies', '$location', 'product'];
 
   function WebProductController($scope, $cookies, $location, product) {
-    var lang = $cookies['lang'] || 'zh';
+    var lang = $cookies['lang'] || 'cn';
     var location = $location.$$absUrl.split('/');
    	var curProduct = location[location.length - 1] || '';
 

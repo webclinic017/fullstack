@@ -80,9 +80,9 @@
         .module('fullstackApp')
         .factory('authorization', authorization);
 
-    authorization.$inject = ['$rootScope', '$state', 'principal'];
+    authorization.$inject = ['$rootScope', 'principal'];
 
-    function authorization($rootScope, $state, principal) {
+    function authorization($rootScope, principal) {
         var service = {
             authorize: authorize
         };

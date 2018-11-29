@@ -515,3 +515,20 @@
     width: 12px;
     height: 12px;
 }
+
+// css3垂直居中
+.item-center {
+    display: flex !important;
+    align-items: center;
+}
+// 水平两侧对齐
+.space-between{
+    display: flex !important;
+    justify-content: space-between;
+}
+.flex1 {
+    flex: 1;
+}
+.flex0 {
+    flex: 0;
+}

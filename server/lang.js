@@ -10,7 +10,8 @@ module.exports = function () {
         var data = require('./lang_data.js')();
         var querystring = require('querystring');
         var cookieList = querystring.parse(req.headers.cookie, '; ');
-        var language = 'zh';
+        var language = 'zh', languageTemp = 'zh';
+        var langArr = ['cn', 'en', 'vi', 'zh-Hant'];
         var parseCookie = function(cookie){
             var cookies = {};
             if(!cookie){
@@ -27,24 +28,25 @@ module.exports = function () {
             // console.info(name);
             if (name === 'lang') {
                 if(cookieList[name] instanceof Array){
-                    language = cookieList[name][0];
+                    languageTemp = cookieList[name][0];
                 } else {
-                    language = cookieList[name];
+                    languageTemp = cookieList[name];
                 }
             }
         }
         if (!parseCookie(req.headers.cookie).lang && (req.host.indexOf('global.tigerwit.com') != -1 || req.host.indexOf('globaldemo.tigerwit.com') != -1)) {
-            language = 'en';
+            languageTemp = 'en';
         }
         if (url.parse(req.url, true).query.lang) {
-            language = url.parse(req.url, true).query.lang;
+            languageTemp = url.parse(req.url, true).query.lang;
+        }
+        for (var i=0;i<langArr.length;i++) {    //判断是否在语言包内
+            // console.log(langArr[i], '-----language-----');
+            if (langArr[i] === languageTemp) {
+                language = languageTemp;
+            }
         }
         this.language = language === 'cn' ? 'zh' : language;
-        //越南语本周兼容成英文，set_company_cookie.js 同步修改 2018.11.20
-        if (language === 'vi') {
-            this.language = 'en';
-        }
-        //越南语翻译上线删除此配置
         this.data = data;
         this.req = req;
         this.company_name = company_name;
@@ -64,6 +66,9 @@ module.exports = function () {
                 isEngArea = true;
             }
             return isEngArea;
+        },
+        currentLanguage: function () {  //此方法只用来调整单个语言的特殊性，一般情况优先使用 isEnglishArea 方法
+            return this.language;
         },
         text: function (name) {
             var _this = this;
@@ -123,9 +128,6 @@ module.exports = function () {
         },
         isCloned: function(){  //此方法废弃 2018.11.20
             return this.clonedBaidu;
-        },
-        currentLanguage: function () {  //此方法废弃 2018.11.20
-            return this.language;
         },
         background: function () {  //此方法废弃 2018.11.20 (背景图使用image方法)
             var _this = this;

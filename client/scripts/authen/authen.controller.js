@@ -446,13 +446,13 @@
 
             switch (regionName) {
                 case 'country':
-                    tmp = account.getWorlds(($scope.lang.isEnglishArea() ? 'en' : 'cn'));
+                    tmp = account.getWorlds();
                     break;
                 case 'province':
-                    tmp = account.getStates(upperRegionCode, ($scope.lang.isEnglishArea() ? 'en' : 'cn'));
+                    tmp = account.getStates(upperRegionCode);
                     break;
                 case 'city':
-                    tmp = upperRegionCode && account.getCities(upperRegionCode, ($scope.lang.isEnglishArea() ? 'en' : 'cn'));
+                    tmp = upperRegionCode && account.getCities(upperRegionCode);
                     break;
                 default:
                     break;

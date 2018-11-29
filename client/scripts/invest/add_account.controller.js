@@ -48,8 +48,10 @@
                         $scope.addAccountLogic.logic = 2;
                     }
                     $scope.addAccountLogic.code = data.code;
-                    $scope.addAccountLogic.mt4_id = data.data.inactive_account.mt4_id ? data.data.inactive_account.mt4_id : '';
                     $scope.addAccountLogic.msg = data.message;
+                    if(data.data && data.data.inactive_account) {
+                        $scope.addAccountLogic.mt4_id = data.data.inactive_account.mt4_id ? data.data.inactive_account.mt4_id : '';
+                    }
                 });
             }, 1000)
         }

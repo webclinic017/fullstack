@@ -70,7 +70,7 @@
         </li>
       </ul>
       <div class="index_new__copy-btn_box">
-        <a href="/ranklist/#/ranklist/masters" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%= lang.text("newhome_16")%></a>
+        <a href="/ranklist/#/ranklist/masters" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" style="width: 220px;"><%= lang.text("newhome_16")%></a>
       </div>
     </div>
   </div>
@@ -108,10 +108,10 @@
                 </ul>
             </div>
             <div class="clearfix">
-                <ul ng-repeat="quoteSymbol in quoteSymbols" class="index_new_qupte__content clearfix" ng-class="{h_border: $index%2 === 0}">
+                <ul ng-repeat="quoteSymbol in quoteSymbols" class="index_new_qupte__content " ng-class="{h_border: $index%2 === 0}">
                     <li class="pro">
                         <%if (!lang.isEnglishArea()){%>
-                        {{ quoteSymbol.symbol_zh }}({{ quoteSymbol.symbol }})
+                        {{ quoteSymbol.symbol_zh }}<br>({{ quoteSymbol.symbol }})
                         <%}else {%>
                         {{ quoteSymbol.symbol }}
                         <%}%>
@@ -242,11 +242,7 @@
     <div class="index_new__client">
       <h3 class="index_new__client-title"><%= lang.text("newhome_42")%></h3>
       <p class="index_new__client-sub_tit"><%= lang.text("newhome_42_1")%></p>
-      <% if (lang.isEnglishArea()) {%>
-        <img src="/white_label/home/client-map-en-en.png" alt="">
-      <%} else {%>
-        <img src="/white_label/home/client-map-cn-cn.png" alt="">
-      <%}%>
+      <img src="<%= lang.image('homeMap')%>" alt="">
     </div>
   </div>
   <div class="index_new__container">
