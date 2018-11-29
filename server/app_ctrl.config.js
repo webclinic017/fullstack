@@ -94,10 +94,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V3.0.0",
-                        description: "This update: \n1.Support Vietnamese and Traditional Chinese;\n2.Optimize the function of invite friend.",
+                        version_name : "V3.0.1",
+                        description: "This update: \n1.Optimize the function of invite friend.\n2.Repair known BUG and optimize user experience",
                         updated_description: "70% users are using new version",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.0.0.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.0.1.apk",
                         force_update : false
                     }
                 }
@@ -113,10 +113,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V3.0.0",
-                        description: "本次更新：\n1.支持越南语、繁体中文；\n2.优化邀请好友",
+                        version_name : "V3.0.1",
+                        description: "本次更新：\n1.优化邀请好友\n2.修复已知BUG，优化用户体验",
                         updated_description: "70%的用户正在使用新版本",
-                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.0.0.apk",
+                        url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.0.1.apk",
                         force_update : false
                     }
                 }
