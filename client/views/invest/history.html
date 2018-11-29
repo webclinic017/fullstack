@@ -85,12 +85,12 @@
                                         {{ order.cmd_name }}
                                     </span>
                                     <a class="invest_orders__symbol" href="">
-                                        {{ order.symbol_cn }}
+                                        {{lang.isEnglishArea() ? order.symbol_origin : order.symbol_cn + ' (' + order.symbol_origin + ')' }}
                                     </a>        
                                 </p>
                                 <p class="text-left font-size-12">
                                     <span class="history-operation-way">{{order.close_type_name}}</span>
-                                    <span>{{order.passed_time | duration}}</span>
+                                    <span>{{ lang.text('tigerWitID.before') }} {{order.passed_time | duration}}</span>
                                 </p>   
                             </div>
                         </td>
@@ -179,12 +179,12 @@
                                             {{ order.cmd_name }}
                                         </span>
                                         <a class="invest_orders__symbol" href="">
-                                            {{ order.symbol_cn }}
+                                            {{lang.isEnglishArea() ? order.symbol_origin : order.symbol_cn + ' (' + order.symbol_origin + ')' }}
                                         </a>        
                                     </p>
                                     <p class="text-left font-size-12">
                                         <span class="history-operation-way">{{order.close_type_name}}</span>
-                                        <span>{{order.passed_time | duration}}前</span>
+                                        <span>{{ lang.text('tigerWitID.before') }} {{order.passed_time | duration}}</span>
                                     </p>                                    
                                 </div>
                             </td>

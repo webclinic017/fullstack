@@ -654,7 +654,7 @@ var oil = {
         "charge": "0",
         "trade_time": "周一－周五 07:00-06:00（次日）",
         "quote_time": "周一－周五 07:00-06:00（次日）",
-        "desp": "以NYMEX交易所美国天然气产品为基准的能源合约，天然气提供了美国四分之一左右的能源需求，同时可作为电力期权等产品的对冲工具"
+        "desp": "天然气是代表石油和其他传统资源（如煤炭）的替代能源的燃料。 由于石油特别昂贵，天然气正成为“清洁”能源的既定来源，目前提供约三分之一的英国能源供应。"
     },
     {
         "name_en": "XTIUSD",
@@ -666,7 +666,7 @@ var oil = {
         "charge": "0",
         "trade_time": "周一－周五 07:00-06:00（次日）",
         "quote_time": "周一－周五 07:00-06:00（次日）",
-        "desp": "以NYMEX交易所美国原油为基准的脱硫轻质原油合约，是全球两大原油基准产品之一，被用于多国原油产品的定价基准。也是世界上交易量最大的能源合约"
+        "desp": "美国石油公司（Texas Light）或Texas Light Sweet公司是投资者在全球范围内用于确定特定等级石油价值的两个最重要的基准之一。 美国石油被认为是“甜”原油，因为它的硫浓度低于北海当量。 我们的石油差价合约允许我们的客户推测由全球供需影响决定的实时价格变动。"
     },
     {
         "name_en": "XBRUSD",
@@ -678,7 +678,7 @@ var oil = {
         "charge": "0",
         "trade_time": "周一－周五 09:00-06:00（次日）",
         "quote_time": "周一－周五 09:00-06:00（次日）",
-        "desp": "即是俗称的北海油，同样是脱硫轻质原油。是欧洲地区的原油定价基准，也是全球两大原油基准产品之一，可以用于与西德州原油进行对冲的产品"
+        "desp": "北海石油是全球第二个重要的油价基准。 这种类型的油主要用于精炼成柴油和汽油。 我们的差价合约允许我们的客户推测美国石油的替代基准价格。"
     }
     ],
     en: [{
@@ -691,7 +691,7 @@ var oil = {
         "charge": "0",
         "trade_time": "on Monday－on Friday 07:00-06:00(next day)",
         "quote_time": "on Monday－on Friday 07:00-06:00(next day)",
-        "desp": "As for energy contract taking NYMEX US natural gas products as the benchmark, natural gas satisfies about 1/4 energy demands of the US and can also be used as hedging tool for such products as electricity option."
+        "desp": "Natural gas is a fuel representing an alternative energy source to oil and other traditional resources such as coal. As oil in particular becomes more expensive to access, natural gas is becoming an established source of ‘cleaner’ energy, currently providing around one third of the UK’s energy supply."
     },
     {
         "name_en": "XTIUSD",
@@ -703,7 +703,7 @@ var oil = {
         "charge": "0",
         "trade_time": "on Monday－on Friday 07:00-06:00(next day)",
         "quote_time": "on Monday－on Friday 07:00-06:00(next day)",
-        "desp": "Desulfurized light crude oil contract with NYMEX US crude oil as the benchmark is one of the two crude oil benchmarking products in the world and is applied by many countries as the pricing datum of crude oil products, which is also the energy contract with the largest trading volume in the world."
+        "desp": "US Oil, or Texas Light Sweet, is one of the two most important benchmarks used globally by investors to determine the value of a barrel of a particular grade of oil. US oil is considered ‘sweet’ crude as it has a lower concentration of sulphur than its North Sea equivalent. Our Oil CFD’s allow our clients to speculate on real time price movements determined by the effects of global supply and demand."
     },
     {
         "name_en": "XBRUSD",
@@ -715,7 +715,7 @@ var oil = {
         "charge": "0",
         "trade_time": "on Monday－on Friday 09:00-06:00(next day)",
         "quote_time": "on Monday－on Friday 09:00-06:00(next day)",
-        "desp": "Commonly known as North Sea oil, which is also desulfurized light crude oil. Pricing datum of crude oil in Europe and one of the two major crude oil benchmarking products in the world, which can also be applied as hedging product against West Texas crude oil"
+        "desp": "North Sea Oil is the second important global benchmark for oil prices. This type of oil is mainly used to refine into diesel fuel and gasoline. Our CFD allows our clients to speculate on the price of this alternative benchmark to US Oil."
     }
     ],
     vi: [{
@@ -728,7 +728,7 @@ var oil = {
         "charge": "0",
         "trade_time": "vào Thứ Hai-Thứ Sáu 06:00-05:00(ngày tiếp theo)",
         "quote_time": "vào Thứ Hai-Thứ Sáu 06:00-05:00(ngày tiếp theo)",
-        "desp": "Đối với hợp đồng năng lượng lấy các sản phẩm khí tự nhiên của NYMEX Mỹ làm chuẩn mực, khí đốt tự nhiên đáp"
+        "desp": "Khí tự nhiên là một loại nhiên liệu đại diên cho một nguồn năng lượng thay thế cho dầu mỏ và các nguồn tài nguyên truyền thống khác như than đá. Khi dầu đặc biệt trở nên đắt hơn để tiếp cận, khí tự nhiên đang trở thành nguồn năng lượng sạch hơn, hiện đang cung cấp khoảng 1/3 năng lượng của Vương Quốc Anh."
     },
     {
         "name_en": "XTIUSD",
@@ -740,7 +740,7 @@ var oil = {
         "charge": "0",
         "trade_time": "vào Thứ Hai-Thứ Sáu 06:00-05:00(ngày tiếp theo)",
         "quote_time": "vào Thứ Hai-Thứ Sáu 06:00-05:00(ngày tiếp theo)",
-        "desp": "Đối với hợp đồng năng lượng lấy các sản phẩm khí tự nhiên của NYMEX Mỹ làm chuẩn mực, khí đốt tự nhiên đáp ứng khoảng 1/4 nhu cầu năng lượng của Mỹ và cũng có thể được sử dụng như công cụ bảo hiểm rủi ro cho các sản phẩm như hợp đồng tùy chọn với điện."
+        "desp": "US Oil, hay Texas Light Sweer, là một trong hai tiêu chí quan trọng nhất được các nhà đầu tư sử dụng trên toàn cầu để xác định giá trị của một thùng dầu cấp đặc biệt. Dầu của Mỹ được coi là dầu thô “ngọt” vì nó có chứa hàm lượng lưu huỳnh thấp hơn so với tương đương với Biển Bắc. Dầu CFD của chúng tôi cho phép khách hàng của chúng tôi suy đoán về các biến động giá theo thời gian thực được xác định bởi ảnh hưởng của cung và cầu toàn cầu."
     },
     {
         "name_en": "XBRUSD",
@@ -752,7 +752,7 @@ var oil = {
         "charge": "0",
         "trade_time": "vào Thứ Hai-Thứ Sáu 06:00-05:00(ngày tiếp theo)",
         "quote_time": "vào Thứ Hai-Thứ Sáu 06:00-05:00(ngày tiếp theo)",
-        "desp": "Thường được gọi là dầu Biển Bắc, cũng là dầu thô nhẹ được khử lưu huỳnh. Giá dầu thô của dầu thô ở châu Âu và một trong hai sản phẩm dầu thô chính trên thế giới, cũng có thể được áp dụng như sản phẩm bảo hiểm rủi ro chống lại dầu thô Tây Texas"
+        "desp": "Dầu biển Bắc là tiêu chuẩn quan trọng thứ hai toàn cầu về giá dầu. Loại dầu này chủ yếu được sử dụng để tinh chế thành nhiên liệu diesel và xăng. CFD của chúng tôi cho phép khách hàng của chúng tôi suy đoán về mức giá của tiêu chuẩn thay thế này đối với US Oil."
     }
     ],
     "zh-Hant": [{
@@ -765,7 +765,7 @@ var oil = {
         "charge": "0",
         "trade_time": "周壹－周五 07:00-06:00（次日）",
         "quote_time": "周壹－周五 07:00-06:00（次日）",
-        "desp": "以NYMEX交易所美國天然氣產品為基準的能源合約，天然氣提供了美國四分之壹左右的能源需求，同時可作為電力期權等產品的對沖工具"
+        "desp": "天然氣是代表石油和其他傳統資源（如煤炭）的替代能源的燃料。 由於石油特別昂貴，天然氣正成為“清潔”能源的既定來源，目前提供約三分之壹的英國能源供應。"
     },
     {
         "name_en": "XTIUSD",
@@ -777,7 +777,7 @@ var oil = {
         "charge": "0",
         "trade_time": "周壹－周五 07:00-06:00（次日）",
         "quote_time": "周壹－周五 07:00-06:00（次日）",
-        "desp": "以NYMEX交易所美國原油為基準的脫硫輕質原油合約，是全球兩大原油基準產品之壹，被用於多國原油產品的定價基準。也是世界上交易量最大的能源合約"
+        "desp": "美國石油公司（Texas Light）或Texas Light Sweet公司是投資者在全球範圍內用於確定特定等級石油價值的兩個最重要的基準之壹。 美國石油被認為是“甜”原油，因為它的硫濃度低於北海當量。 我們的石油差價合約允許我們的客戶推測由全球供需影響決定的實時價格變動。"
     },
     {
         "name_en": "XBRUSD",
@@ -789,7 +789,7 @@ var oil = {
         "charge": "0",
         "trade_time": "周壹－周五 09:00-06:00（次日）",
         "quote_time": "周壹－周五 09:00-06:00（次日）",
-        "desp": "即是俗稱的北海油，同樣是脫硫輕質原油。是歐洲地區的原油定價基準，也是全球兩大原油基準產品之壹，可以用於與西德州原油進行對沖的產品"
+        "desp": "北海石油是全球第二個重要的油價基準。 這種類型的油主要用於精煉成柴油和汽油。 我們的差價合約允許我們的客戶推測美國石油的替代基準價格。"
     }
     ]
 

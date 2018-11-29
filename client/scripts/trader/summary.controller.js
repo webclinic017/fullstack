@@ -103,8 +103,8 @@
             $scope.$broadcast('showLoadingImg');
             /*数据处理*/
             $scope.barsNowDate = mon;
-            var year = mon.month.split('年')[0];
-            var month = mon.month.split('年')[1].split('月')[0];
+            var year = mon.month.split('-')[0];
+            var month = mon.month.split('-')[1].split('-')[0];
             var date = year + '-' + month;
             /*获取数据*/
             getMonthlySymbols(usercode, date);

@@ -124,3 +124,39 @@
         color: $color;
     }
 }
+
+@mixin displayFlex() {
+    display: box;  /*（伸缩盒最老版本）*/
+    display: -webkit-box;  /* iOS 6-, Safari 3.1-6 */
+    display: -webkit-flex; /* Chrome */
+    display: -moz-box;     /* Firefox 19 */
+    display: -ms-flexbox;   
+    display: flex;  /*flex容器*/
+}
+@mixin flex($num) {
+    -prefix-box-flex: $num; 
+    -webkit-box-flex: $num; 
+    -webkit-flex: $num; 
+    -moz-box-flex: $num; 
+    -ms-flex: $num; 
+    flex: $num;
+}
+@mixin alignItems($dire) {
+    -webkit-align-items: $dire;
+    -moz-align-items: $dire;
+    -ms-align-items: $dire;
+    -o-align-items: $dire;
+    align-items: $dire;
+}
+@mixin justifyContent($dire) {
+    -webkit-justify-content: $dire;
+    -moz-justify-content: $dire;
+    -ms-justify-content: $dire;
+    -o-justify-content: $dire;
+    justify-content: $dire;
+}
+@mixin flexDirection($dire) {
+    -webkit-flex-direction: $dire;
+    -ms-flex-direction: $dire;
+    flex-direction: $dire;
+}

@@ -2,23 +2,23 @@
     <button class="close" ng-click="closeModal()">&times;</button>
 
     <h5 ng-if="personal.disable" class="system_modal__title">
-        分成详情
+        {{lang.text('tigerWitID.historyTransactions.details')}}
     </h5>
     <h5 ng-if="! personal.disable" class="system_modal__title">
-        复制{{ username }}详情
+        {{lang.text('tigerWitID.copy')}}{{ username }}{{lang.text('tigerWitID.details.title')}}
     </h5>
 
     <div class="space_bonus__modal-content">
         <table class="table table-header table-hover table-striped table-bordered">
             <thead>
                 <tr>
-                    <th>操作</th>
-                    <th>开仓时间</th>
-                    <th>平仓时间</th>
-                    <th>开仓价</th>
-                    <th>平仓价</th>
-                    <th>交易量</th>
-                    <th>收益</th>
+                    <th>{{lang.text('tigerWitID.details.operation')}}</th>
+                    <th>{{lang.text('tigerWitID.details.openTime')}}</th>
+                    <th>{{lang.text('tigerWitID.details.closeTime')}}</th>
+                    <th>{{lang.text('tigerWitID.details.openPrice')}}</th>
+                    <th>{{lang.text('tigerWitID.historyTransactions.closePrice')}}</th>
+                    <th>{{lang.text('tigerWitID.details.lots')}}</th>
+                    <th>{{lang.text('tigerWitID.details.profit')}}</th>
                 </tr>
             </thead>
             <tbody>
@@ -43,12 +43,12 @@
                     <td colspan="5"></td>
                     <td><i class="fa fa-dollar"></i>{{ total.pay_noob }}</td>
                 </tr> -->
-                <tr ng-if="! success"><td colspan="7">加载中...</td></tr>
+                <tr ng-if="! success"><td colspan="7">{{lang.text('tigerWitID.loading')}}...</td></tr>
             </tbody>
         </table>
         <div ng-if="success && details.length <= 0" class="text-center mg-bt-20">
             <img src="/images/no_data.png" alt="" class="mg-bt-40">
-            <p>暂无数据!</p> 
+            <p>{{lang.text('tigerWitID.noData')}}</p> 
         </div>
     </div>
 </div>
