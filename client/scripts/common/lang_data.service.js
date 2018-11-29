@@ -6530,12 +6530,6 @@
                         vi:"^^-^^",
                         "zh-Hant":"成功激活"
                     },
-                    noMetNeed:{
-                        zh:"未达成",
-                        en:"Hasn't met the needs",
-                        vi:"^^-^^",
-                        "zh-Hant":"未達成"
-                    },
                     activeAgent:{
                         zh:"激活代理商",
                         en:"激活代理商",

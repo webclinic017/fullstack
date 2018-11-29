@@ -10,7 +10,7 @@
                     <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.completeInformation')}}</h5>
                     <p><img src="/white_label/authen/{{personal.agentAuthStatus.info.status == 1 ? 'activate1' : 'activate1-no' }}.png" alt=""></p>
                     <!-- <p class="mg-tp-10">图像过小</p> -->
-                    <i class="not_complete" ng-if="personal.agentAuthStatus.info.status != 1"><span>{{lang.text('tigerWitID.partner.noMetNeed')}}</span></i>
+                    <i class="not_complete" ng-if="personal.agentAuthStatus.info.status != 1"><span>{{lang.text('tigerWitID.noMetNeed')}}</span></i>
                 </div>
             </li>
 
@@ -20,7 +20,7 @@
                     <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.tradingExperience')}}</h5>
                     <p><img src="/white_label/authen/{{ personal.agentAuthStatus.kyc.status == 1 ? 'activate2' : 'activate2-no' }}.png" alt=""></p>
                     <p class="mg-tp-10">{{personal.agentAuthStatus.kyc.reason + kycAuthStatus[personal.agentAuthStatus.kyc.auth_status]}}</p>
-                    <i class="not_complete" ng-if="personal.agentAuthStatus.kyc.status != 1"><span>{{lang.text('tigerWitID.partner.noMetNeed')}}</span></i>
+                    <i class="not_complete" ng-if="personal.agentAuthStatus.kyc.status != 1"><span>{{lang.text('tigerWitID.noMetNeed')}}</span></i>
                 </div>
             </li>
 
@@ -30,7 +30,7 @@
                     <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.iDVerification')}}</h5>
                     <p><img src="/white_label/authen/{{ personal.agentAuthStatus.idcard.status == 1 ? 'activate3' : 'activate3-no'}}.png" alt=""></p>
                     <p class="mg-tp-10">{{personal.agentAuthStatus.idcard.reason + idcardAuthStatus[personal.agentAuthStatus.idcard.auth_status]}}</p>
-                    <i class="not_complete" ng-if="personal.agentAuthStatus.idcard.status != 1"><span>{{lang.text('tigerWitID.partner.noMetNeed')}}</span></i>
+                    <i class="not_complete" ng-if="personal.agentAuthStatus.idcard.status != 1"><span>{{lang.text('tigerWitID.noMetNeed')}}</span></i>
                 </div>
             </li>
 
@@ -40,7 +40,7 @@
                     <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.activeSucc')}}</h5>
                     <p><img src="/white_label/authen/{{ personal.agentAuthStatus.status == 6 ? 'activate4' : 'activate4-no' }}.png" alt=""></p>
                     <!-- <p class="mg-tp-10">图像过小</p> -->
-                    <i class="not_complete" ng-if="personal.agentAuthStatus.status != 6"><span>{{lang.text('tigerWitID.partner.noMetNeed')}}</span></i>
+                    <i class="not_complete" ng-if="personal.agentAuthStatus.status != 6"><span>{{lang.text('tigerWitID.noMetNeed')}}</span></i>
                 </div>
             </li>
         </ul>

@@ -78,6 +78,7 @@
 
         function checkAgent () {
             account.checkAgent().then(function (data) {
+                if (!data) return;
                 // console.log(data);
                 angular.extend($scope.personal, {
                     is_agent: data.data.user_code ? true : false
