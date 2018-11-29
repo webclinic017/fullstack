@@ -73,76 +73,68 @@
                         </li>
                     </ul>
                 </div>
+                <div class="link-list__item">
+                    <h2>
+                        <p class="mg-bt-20">
+                            <span><%= lang.text("foot11")%></span>
+                        </p>
+                    </h2>
                 <%if (req.host.indexOf('global') != -1) {%>
-                        <div class="link-list__item">
-                            <h2>
-                                <p class="mg-bt-20">
-                                    <span><%= lang.text("foot11")%></span>
-                                </p>
-                            </h2>
-                            <ul>
-                                <li class="mg-bt-15">
-                                    <h3>
-                                        <a>
-                                            &nbsp;<%= lang.text("supportEmail")%>
-                                        </a>
-                                    </h3>
-                                </li>
-                            </ul>
-                        </div>
-                    <!-- <ul class="pd-tp-20 clearfix">
-                        <li class="footer-weibo">
-                            <a href="" target="_blank">
-                                <img class="img-20" src="/white_label/footer/footer-icon-face-book.png">
-                            </a>
+                    <ul>
+                        <li class="mg-bt-15">
+                            <h3>
+                                <a class="font-dark" href='mailto:<%=lang.text("supportEmail")%>'>
+                                    &nbsp;<%= lang.text("supportEmail")%>
+                                </a>
+                            </h3>
                         </li>
-                        <li class="footer-weixin">
-                            <img class="img-20" src="/white_label/footer/footer-icon-twitter.png">
-                            <span>
-                                <img src="/images/footer-weixin-code.png">
-                            </span>
-                        </li>
-                    </ul> -->
+                    </ul>
                 <%}%>
-            </div>
-            <div class="contact-us">
-            <%if (req.host.indexOf('global') == -1) {%>
-                <h2>
-                    <p style="max-width: 400px;">
-                        <span class="font-light"><%= lang.text("footer.serviceTime")%></span>
-                    </p>
-                </h2>
-                <div class="phone">
-                    <p>
-                        <span>
-                            +<%=lang.text("telephone")%>
-                        </span>
-                    </p>
+                <%if (req.host.indexOf('global') == -1) {%>
+                    <div class="contact-us pd-tp-5">
+                        <div class="">
+                            <p>
+                                <a class="font-dark" href='mailto:<%=lang.text("supportEmail")%>'>
+                                    <%=lang.text("supportEmail")%>
+                                </a>
+                            </p>
+                        </div>
+                        <ul class="pd-tp-20 clearfix">
+                            <li class="footer-weibo">
+                                <a href="http://weibo.com/TigerWit?refer_flag=1001030102_&is_hot=1" target="_blank">
+                                    <img class="img-20" src="/white_label/footer/footer-icon-weibo.png">
+                                </a>
+                            </li>
+                            <li class="footer-weixin">
+                                <img class="img-20" src="/white_label/footer/footer-icon-weChat.png">
+                                <span>
+                                    <img src="/images/footer-weixin-code.png">
+                                </span>
+                            </li>
+                        </ul>
+                        <!-- <ul class="pd-tp-20 clearfix">
+                            <li class="footer-weibo">
+                                <a href="" target="_blank">
+                                    <img class="img-20" src="/white_label/footer/footer-icon-face-book.png">
+                                </a>
+                            </li>
+                            <li class="footer-weixin">
+                                <img class="img-20" src="/white_label/footer/footer-icon-twitter.png">
+                                <span>
+                                    <img src="/images/footer-weixin-code.png">
+                                </span>
+                            </li>
+                        </ul> -->
+                        <div class="footer-follow-tip pd-tp-10" >
+                            <p>
+                                <%= lang.text("footer.subscribeArticle")%>
+                            </p> 
+                        </div>
+                    </div>
+                <%}%>
                 </div>
-                <ul class="pd-tp-20 clearfix">
-                    <li class="footer-weibo">
-                        <a href="http://weibo.com/TigerWit?refer_flag=1001030102_&is_hot=1" target="_blank">
-                            <img class="img-20" src="/white_label/footer/footer-icon-weibo.png">
-                        </a>
-                    </li>
-                    <li class="footer-weixin">
-                        <img class="img-20" src="/white_label/footer/footer-icon-weChat.png">
-                        <span>
-                            <img src="/images/footer-weixin-code.png">
-                        </span>
-                    </li>
-                </ul>
-                <div class="footer-follow-tip pd-tp-10" >
-                    <p>
-                        <%= lang.text("footer.subscribeArticle")%>
-                    </p> 
-                    <p class=" pd-tp-10">
-                        <%=lang.text("supportEmail")%>
-                    </p>
-                </div>
-            <%}%>
+                
             </div>
-
             
         </div>
         <div class="footer_con mg-tp-100">

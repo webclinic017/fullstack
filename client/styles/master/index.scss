@@ -166,28 +166,29 @@
             display: table;
             margin-bottom: 30px;
             border: 1px solid #eee;
-            span {
+            overflow: hidden;
+            > span {
                 display: table-cell;
                 vertical-align: middle;
                 padding: 0px 100px;
             }
-            &:before {
-                content: '';
-                display: block;
-                position: absolute;
-                top: 0;
-                right: 0;
-                width: 52px;
-                height: 52px;
-                background-repeat: no-repeat;
-                background-size: 100%;
-                // background-image: url("/images/icon-complete.png");
-            }
-            &.active {
-                &:before {
-                    background-image: url("/images/icon-no-complete.png");
-                }
-            }
+            // &:before {
+            //     content: '';
+            //     display: block;
+            //     position: absolute;
+            //     top: 0;
+            //     right: 0;
+            //     width: 52px;
+            //     height: 52px;
+            //     background-repeat: no-repeat;
+            //     background-size: 100%;
+            //     // background-image: url("/images/icon-complete.png");
+            // }
+            // &.active {
+            //     &:before {
+            //         background-image: url("/images/icon-no-complete.png");
+            //     }
+            // }
 
             
         }

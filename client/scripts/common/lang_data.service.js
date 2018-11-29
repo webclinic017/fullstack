@@ -6597,6 +6597,12 @@
                         "zh-Hant":"（未知狀態）"
                     }
                 },
+                noMetNeed:{
+                    zh:"未达成",
+                    en:"unfinished",
+                    vi:"không đạt",
+                    "zh-Hant":"未達成"
+                },
                 date: {
                     zh: "日期",
                     en: "Date",
@@ -7007,25 +7013,25 @@
                 },
                 january: {
                     zh: "一月",
-                    en: "January",
+                    en: "Jan.",
                     vi: "Tháng 1",
                     "zh-Hant": "壹月"
                 },
                 february: {
                     zh: "二月",
-                    en: "February",
+                    en: "Feb.",
                     vi: "Tháng 2",
                     "zh-Hant": "二月"
                 },
                 march: {
                     zh: "三月",
-                    en: "March",
+                    en: "Mar.",
                     vi: "Tháng 3",
                     "zh-Hant": "三月"
                 },
                 april: {
                     zh: "四月",
-                    en: "April",
+                    en: "Apr.",
                     vi: "Tháng 4",
                     "zh-Hant": "四月"
                 },
@@ -7037,43 +7043,43 @@
                 },
                 june: {
                     zh: "六月",
-                    en: "June",
+                    en: "Jun.",
                     vi: "Tháng 6",
                     "zh-Hant": "六月"
                 },
                 july: {
                     zh: "七月",
-                    en: "July",
+                    en: "Jul.",
                     vi: "Tháng 7",
                     "zh-Hant": "七月"
                 },
                 august: {
                     zh: "八月",
-                    en: "August",
+                    en: "Aug.",
                     vi: "Tháng 8",
                     "zh-Hant": "八月"
                 },
                 september: {
                     zh: "九月",
-                    en: "September",
+                    en: "Sep.",
                     vi: "Tháng 9",
                     "zh-Hant": "九月"
                 },
                 october: {
                     zh: "十月",
-                    en: "October",
+                    en: "Oct.",
                     vi: "Tháng 10",
                     "zh-Hant": "十月"
                 },
                 november: {
                     zh: "十一月",
-                    en: "November",
+                    en: "Nov.",
                     vi: "Tháng 11",
                     "zh-Hant": "十壹月"
                 },
                 december: {
                     zh: "十二月",
-                    en: "December",
+                    en: "Dec.",
                     vi: "Tháng 12",
                     "zh-Hant": "十二月"
                 }

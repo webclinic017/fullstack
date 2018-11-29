@@ -314,6 +314,9 @@
 .pd-tp-0 {
     padding-top: 0 !important;
 }
+.pd-tp-5 {
+    padding-top: 5px;
+}
 .pd-tp-10 {
     padding-top: 10px;
 }
@@ -524,6 +527,28 @@
 .swiper-pagination-bullet {
     width: 12px;
     height: 12px;
+}
+// 未达成右上角样式
+.not_complete {
+    width:100px;
+    height:100px;
+    background-color: #D8D8D8;
+    color: #D80000;
+    /* Rotate div */
+    transform:rotate(45deg);
+    -ms-transform:rotate(45deg); /* Internet Explorer */
+    -moz-transform:rotate(45deg); /* Firefox */
+    -webkit-transform:rotate(45deg); /* Safari 和 Chrome */
+    -o-transform:rotate(45deg); /* Opera */
+    position: absolute;
+    right: -55px;
+    top: -57px;
+    text-align: center;
+    padding-top: 77px;
+    > span {
+        font-size: 12px;
+        font-style: normal;
+    }
 }
 
 // css3垂直居中
