@@ -134,10 +134,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.0.1",
-                        description: "- Optimize user experience.\n- Fix some bugs.",
-                        updated_description: "Version 2.0.1 available",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.0.1.apk",
+                        version_name : "V2.0.2",
+                        description: "Fixed bugs\nOptimize user experience\nFixed the price feeds of visitor mode",
+                        updated_description: "Version 2.0.2 available",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.0.2.apk",
                         force_update : false
                     }
                 }
@@ -153,10 +153,10 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.0.1",
-                        description: "- Optimize user experience.\n- Fix some bugs.",
-                        updated_description: "Version 2.0.1 available",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.0.1.apk",
+                        version_name : "V2.0.2",
+                        description: "Fixed bugs\nOptimize user experience\nFixed the price feeds of visitor mode",
+                        updated_description: "Version 2.0.2 available",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.0.2.apk",
                         force_update : false
                     }
                 } 

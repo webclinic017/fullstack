@@ -28,6 +28,11 @@ $(".third_app_bank__item select[name=city]").on("tap", function () {
   }
 });
 
+$("#third_app_bank_cancel").on("tap", function () {
+  window.location.href="/m/third/asset";
+  return false;
+});
+
 $("#third_app_bank_btn").on("tap", function () {
   var card = $(".third_app_bank__item input[name=card]").val();
   var bank_name = $(".third_app_bank__item select[name=bank_name]").val();
@@ -75,10 +80,11 @@ $("#third_app_bank_btn").on("tap", function () {
     if (!data.is_succ) {
       openMessageMdl('添加成功');
       setTimeout(function () {
-        console.log('backPrev');
-        openThirdNative({
-          type: "backPrev"
-        });
+        // console.log('backPrev');
+        // openThirdNative({
+        //   type: "backPrev"
+        // });
+        window.location.href="/m/third/asset";
       }, 1000);
     } else {
       openMessageMdl(data.message);
