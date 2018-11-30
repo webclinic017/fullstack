@@ -6503,7 +6503,7 @@
                     title:{
                         zh:"代理商",
                         en:"Agent",
-                        vi:"^^-^^",
+                        vi:"Đại lý",
                         "zh-Hant":"代理商"
                     },
                     completeInformation:{
@@ -6526,74 +6526,74 @@
                     },
                     activeSucc:{
                         zh:"成功激活",
-                        en:"Active Successfully",
-                        vi:"^^-^^",
+                        en:"Successful activation",
+                        vi:"Kích hoạt thành công",
                         "zh-Hant":"成功激活"
                     },
                     activeAgent:{
                         zh:"激活代理商",
-                        en:"激活代理商",
-                        vi:"^^-^^",
+                        en:"Activate agents",
+                        vi:"Kích hoạt các đại lý",
                         "zh-Hant":"激活代理商"
                     },
                     activeAgentFlow:{
                         zh:"激活代理商产品流程",
-                        en:"激活代理商产品流程",
-                        vi:"^^-^^",
+                        en:"Activate the agent product process",
+                        vi:"Kích hoạt quá trình sản phẩm đại lý",
                         "zh-Hant":"激活代理商產品流程"
                     },
                     continueCertification:{
                         zh:"继续认证",
-                        en:"继续认证",
-                        vi:"^^-^^",
+                        en:"Continuing certification",
+                        vi:"Tiếp tục xác nhận",
                         "zh-Hant":"繼續認證"
                     },
                     submittedSucc:{
                         zh:"信息提交成功",
                         en:"Information submitted successfully",
-                        vi:"^^-^^",
+                        vi:"Đã gửi thông tin thành công",
                         "zh-Hant":"信息提交成功"
                     },
                     fillNameCoun:{
                         zh:"请填写姓名和国家",
                         en:"Please fill in your name and country",
-                        vi:"^^-^^",
+                        vi:"Vui lòng điền tên và quốc gia",
                         "zh-Hant":"請填寫姓名和國家"
                     },
                     fillEmailPhone:{
                         zh:"请填写邮箱或手机号",
                         en:"Please fill in your email or phone number",
-                        vi:"^^-^^",
+                        vi:"Vui lòng điền vào email hoặc số điện thoại",
                         "zh-Hant":"請填寫郵箱或手機號"
                     },
                     unverified:{
                         zh:"（未认证）",
                         en:"(Unverified)",
-                        vi:"^^-^^",
+                        vi:"(Không xác nhận)",
                         "zh-Hant":"（未認證）"
                     },
                     rejected:{
                         zh:"（已拒绝）",
                         en:"(Rejected)",
-                        vi:"^^-^^",
+                        vi:"(Đã từ chối)",
                         "zh-Hant":"（已拒絕）"
                     },
                     pending:{
                         zh:"（需要审核）",
                         en:"(Pending)",
-                        vi:"^^-^^",
+                        vi:"(Chờ xử lý)",
                         "zh-Hant":"（需要審核）"
                     },
                     approved:{
                         zh:"（已通过）",
                         en:"(Approved)",
-                        vi:"^^-^^",
+                        vi:"(Chấp nhận)",
                         "zh-Hant":"（已通過）"
                     },
                     unknown:{
                         zh:"（未知状态）",
                         en:"(Unknown)",
-                        vi:"^^-^^",
+                        vi:"(Không rõ)",
                         "zh-Hant":"（未知狀態）"
                     }
                 },

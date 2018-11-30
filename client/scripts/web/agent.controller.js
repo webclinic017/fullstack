@@ -15,8 +15,7 @@
             name: undefined,
             country: {
                 code: undefined,
-                name_en: undefined,
-                name_cn: undefined
+                name: undefined,
             },
             email: undefined,
             message: undefined
@@ -26,7 +25,7 @@
             message: ''
         };
         $scope.loading = false;
-        $scope.countryList = [];
+        // $scope.countryList = [];
 
         $scope.hideErr = hideErr;
         $scope.showErr = showErr;
@@ -36,15 +35,15 @@
         var sources = getQueryString('q') || 1;
         var ad_position = getQueryString('w') || degaultAD;
         console.log(ad_position);
-        account.getWorlds().then(function (data) {
-            // console.log(data);
-            $scope.countryList = data.data;
-        });
+        // account.getWorlds().then(function (data) {
+        //     // console.log(data);
+        //     $scope.countryList = data.data;
+        // });
 
-        if (!lang.isEnglishArea()) {
-            $scope.becomeAgent.country.code = 'CN';
-            $scope.becomeAgent.country.name_cn = '中国';
-        }
+        // if (!lang.isEnglishArea()) {
+        //     $scope.becomeAgent.country.code = 'CN';
+        //     $scope.becomeAgent.country.name_cn = '中国';
+        // }
 
         function submitForm () {
             $scope.error = {

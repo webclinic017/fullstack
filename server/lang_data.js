@@ -8130,13 +8130,13 @@ module.exports = function () {
             whyPartner_1:{
                 zh:"让TigerWit的专家为您提供量身定制的解决方案",
                 en:"Looking to grow your business? Let TigerWit’s experts deliver a solution tailored to you.",
-                vi:"^^-^^",
+                vi:"Bạn đang tìm kiếm cơ hội phát triển sự nghiệp của bạn? Hãy để những chuyên gia của TigerWit mang đến giải pháp phù hợp với bạn.",
                 "zh-Hant":"讓TigerWit的專家為您提供量身定制的解決方案"
             },
             supportPlan:{
                 zh:"优秀代理商扶持计划",
                 en:"Excellent agency support plan",
-                vi:"Kế hoạch hỗ trợ đại lý tuyệt vời",
+                vi:"Một đối tác xuất sắc để hỗ trợ kế hoạch của bạn",
                 "zh-Hant":"優秀代理商扶持計劃"
             },
             supportPlan_1:{
@@ -8165,7 +8165,7 @@ module.exports = function () {
             },
             safeReliable_1:{
                 zh:"团队汇集了具有不同学术和应用背景的专业人士，分别在外汇交易、差价合约、监管合规性、投资管理、在线平台研发和全球营销等方面拥有丰富的经验，为您的资金保驾护航！",
-                en:"With a strong technological core built upon a philosophy of transparency, credibility and integrity, TigerWit offers its clients exceptional capabilities to trade in the markets. TigerWit’s founders are experienced individuals with successful backgrounds and a long history of achievement, who bring together a team of professionals with diverse academic and applied backgrounds experienced in trading Forex, CFD and spread betting, regulatory compliance, investment management, research & development of online platforms and global sales & marketing.",
+                en:"With a strong technological core built upon a philosophy of transparency, credibility and integrity, TigerWit offers its clients exceptional capabilities to trade in the markets.",
                 vi:"Với cốt lõi công nghệ mạnh mẽ được xây dựng dựa trên triết lý minh bạch, uy tín và toàn vẹn, TigerWit mang đến cho khách hàng những khả năng đặc biệt để giao dịch trên thị trường. Những người sáng lập của TigerWit là những cá nhân có kinh nghiệm với thành công và lịch sử lâu dài, mang đến một đội ngũ chuyên gia với nhiều nền tảng học thuật và ứng dụng đa dạng. và bán hàng & tiếp thị toàn cầu.",
                 "zh-Hant":"團隊匯集了具有不同學術和應用背景的專業人士，分別在外匯交易、差價合約、監管合規性、投資管理、在線平臺研發和全球營銷等方面擁有豐富的經驗，為您的資金保駕護航！"
             },
@@ -8178,7 +8178,7 @@ module.exports = function () {
             whatOffer_1:{
                 zh:"获得所有的工具和支持，以建立和推广一个成功的本地或全球品牌",
                 en:"Access to all the tools and support your business needs to build and market a successful local or global brand.",
-                vi:"^^-^^",
+                vi:"Truy cập vào tất cả các công cụ và hỗ trợ doanh nghiệp của bạn cần xây dựng và quảng bá cho một thương hiệu địa phương và toàn cầu thành công.",
                 "zh-Hant":"獲得所有的工具和支持，以建立和推廣壹個成功的本地或全球品牌"
             },
             offer_1:{
@@ -8214,7 +8214,7 @@ module.exports = function () {
             offer_6:{
                 zh:"深度市场流动性",
                 en:"Deep market liquidity",
-                vi:"^^-^^",
+                vi:"Thanh khoản thị trường sâu",
                 "zh-Hant":"深度市場流動性"
             },
             offer_7:{
@@ -8310,7 +8310,7 @@ module.exports = function () {
             sendAgent:{
                 zh:"申请代理",
                 en:"Send",
-                vi:"^^-^^",
+                vi:"Gửi",
                 "zh-Hant":"申請代理"
             }
           }

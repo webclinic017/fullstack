@@ -1,80 +1,81 @@
 <div class="new_body agent"  ng-controller="AgentProxyController">
     <div class="agent_banner">
-        <div class="agent_banner__con">
+        <img src="<%=lang.image('agentBgH5')%>" alt="">
+        <!-- <div class="agent_banner__con">
             <h3><%=lang.text('partner.becomePartner')%></h3>
             <p><%=lang.text('partner.becomePartner_1')%></p>
-            <button class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" ng-click="goInto()"><%=lang.text('partner.joinUs')%></button>
-        </div>
+            <a class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient h5-btn" ng-click="goInto()"><%=lang.text('partner.joinUs')%></a>
+        </div> -->
     </div>    
-    <div class="agent__proxy">
+    <div class=" agent__proxy">
         <div class="agent__proxy-con">
             <div>
-                <h4 class="tit text-center pd-tp-10 pd-bt-30"><%=lang.text('partner.whyPartner')%></h4>
-                <ul class="clearfix">
-                    <li class="col-xs-4 pd-lf-20 pd-rg-20">
+                <h4 class="tit text-center"><%=lang.text('partner.whyPartner')%></h4>
+                <ul class="why-select">
+                    <li class="text-center">
                         <img src="/white_label/agent/proxy/select1.png" alt="">
-                        <p class="tit1 text-center mg-tp-10"><%=lang.text('partner.supportPlan')%></p>
-                        <p class="font1 mg-tp-30"><%=lang.text('partner.supportPlan_1')%></p>
+                        <p class="tit1"><%=lang.text('partner.supportPlan')%></p>
+                        <p class="font1"><%=lang.text('partner.supportPlan_1')%></p>
                     </li>
-                    <li class="col-xs-4 pd-lf-20 pd-rg-20">
+                    <li class="text-center">
                         <img src="/white_label/agent/proxy/select2.png" alt="">
-                        <p class="tit1 text-center mg-tp-10"><%=lang.text('partner.customerPromotionSystem')%></p>
-                        <p class="font1 mg-tp-30"><%=lang.text('partner.customerPromotionSystem_1')%></p>
+                        <p class="tit1"><%=lang.text('partner.customerPromotionSystem')%></p>
+                        <p class="font1"><%=lang.text('partner.customerPromotionSystem_1')%></p>
                     </li>
-                    <li class="col-xs-4 pd-lf-20 pd-rg-20">
+                    <li class="text-center">
                         <img src="/white_label/agent/proxy/select3.png" alt="">
-                        <p class="tit1 text-center mg-tp-10"><%=lang.text('partner.safeReliable')%></p>
-                        <p class="font1 mg-tp-30"><%=lang.text('partner.safeReliable_1')%></p>
+                        <p class="tit1"><%=lang.text('partner.safeReliable')%></p>
+                        <p class="font1"><%=lang.text('partner.safeReliable_1')%></p>
                     </li>
                 </ul>
             </div>
             <div>
-                <h4 class="tit text-center pd-tp-50"><%=lang.text('partner.whatOffer')%></h4>
+                <h4 class="tit text-center"><%=lang.text('partner.whatOffer')%></h4>
                 <ul class="offer">
                     <li>
                         <img src="/white_label/agent/proxy/offer1.png" alt="">
-                        <span class="tit1"><%=lang.text('partner.offer_1')%></span>
+                        <span><%=lang.text('partner.offer_1')%></span>
                     </li>
                     <li>
                         <img src="/white_label/agent/proxy/offer2.png" alt="">
-                        <span class="tit1"><%=lang.text('partner.offer_2')%></span>
+                        <span><%=lang.text('partner.offer_2')%></span>
                     </li>
                     <li>
                         <img src="/white_label/agent/proxy/offer3.png" alt="">
-                        <span class="tit1"><%=lang.text('partner.offer_3')%></span>
+                        <span><%=lang.text('partner.offer_3')%></span>
                     </li>
                     <li>
                         <img src="/white_label/agent/proxy/offer4.png" alt="">
-                        <span class="tit1"><%=lang.text('partner.offer_4')%></span>
+                        <span><%=lang.text('partner.offer_4')%></span>
                     </li>
                     <li>
                         <img src="/white_label/agent/proxy/offer5.png" alt="">
-                        <span class="tit1"><%=lang.text('partner.offer_5')%></span>
+                        <span><%=lang.text('partner.offer_5')%></span>
                     </li>
                     <li>
                         <img src="/white_label/agent/proxy/offer6.png" alt="">
-                        <span class="tit1"><%=lang.text('partner.offer_6')%></span>
+                        <span><%=lang.text('partner.offer_6')%></span>
                     </li>
                     <li>
                         <img src="/white_label/agent/proxy/offer7.png" alt="">
-                        <span class="tit1"><%=lang.text('partner.offer_8')%></span>
+                        <span><%=lang.text('partner.offer_8')%></span>
                     </li>
                     <li>
                         <img src="/white_label/agent/proxy/offer8.png" alt="">
-                        <span class="tit1"><%=lang.text('partner.offer_7')%></span>
+                        <span><%=lang.text('partner.offer_7')%></span>
                     </li>
                     <li>
                         <img src="/white_label/agent/proxy/offer9.png" alt="">
-                        <span class="tit1"><%=lang.text('partner.offer_9')%></span>
+                        <span><%=lang.text('partner.offer_9')%></span>
                     </li>
                 </ul>
             </div>
-            <div class="text-center mg-tp-20">
-                <div class="mg-bt-20"><img src="<%= lang.image('recordForm')%>" alt=""></div>
-                <a ng-if="spread" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" ng-click="agentPromotion()"><%=lang.text('partner.sendAgent')%></a>
+            <div class="text-center today-data">
+                <div><img src="<%= lang.image('recordForm')%>" alt=""></div>
+                <a ng-if="spread" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient h5-btn mg-tp-20" ng-click="agentPromotion()"><%=lang.text('partner.sendAgent')%></a>
             </div>
             <div ng-if="!spread">
-                <div class="text-center pd-tp-40 pd-bt-30">
+                <div class="text-center">
                     <h4 class="tit"><%=lang.text('partner.becomePartnerFlow')%></h4>
                     <ul class="agent__proxy-flow clearfix pd-tp-15">
                         <li class="fl active">
@@ -91,7 +92,7 @@
                         </li>
                     </ul>
                 </div> 
-                <div class="global_proxy_form mg-tp-50" ng-controller="WebAgentController" ng-cloak>
+                <div class="global_proxy_form pd-tp-20 pd-bt-30" ng-controller="WebAgentController" ng-cloak>
                     <p class="global_proxy_tip">
                         <%=lang.text('partner.becomePartnerFlow_1')%><%=lang.text('partner.becomePartnerFlow_2')%>
                     </p>
@@ -144,13 +145,16 @@
                             <span class="account-form-control-tip"><%=lang.text('partner.message')%></span>
                         </div>
                     </form>
-                    <div class="btn-wrapper text-center">
-                        <button class="btn tw-btn-lg200 tw-btn-capsule-gradient" ng-show="!loading" ng-click="submitForm()"><%=lang.text('partner.sendAgent')%></button>
-                        <button class="btn tw-btn-lg200 tw-btn-capsule-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading"><%=lang.text('partner.sendAgent')%></button>
+                    <div class="btn-wrapper text-center ">
+                        <a class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient h5-btn" ng-show="!loading" ng-click="submitForm()"><%=lang.text('partner.sendAgent')%></a>
+                        <a class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient h5-btn disabled" disabled style="opacity: 0.5;" ng-show="loading"><%=lang.text('partner.sendAgent')%></a>
                         <span class="global_proxy_err_tip" ng-class="{'font-success' : error.success, 'font-warning': !error.success}" ng-show="error.is_succ">{{error.message}}</span>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="email-us">
+        <%= lang.text("foot11")%> <a href='mailto:<%=lang.text("supportEmail")%>'><%=lang.text("supportEmail")%></a>
     </div>
 </div>

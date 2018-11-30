@@ -66,10 +66,8 @@ $(document).ready(function () {
   }
   // 客户推广
   if(oReg.search_arr.ib_pid) {
-    publicRequest('setCustomerPromotion', 'POST', {
-        type: 1,
-        ib_pid: oReg.search_arr.ib_pid
-    })
+    $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '.tigerwit.com'});
+    $.cookie('invite_status', 1, {expires: 1, path: '.tigerwit.com'});
   }
  
   function toRegister (is_agree) {
@@ -86,6 +84,8 @@ $(document).ready(function () {
     }
 
     publicRequest('regOrLogin', 'POST', {
+      ib_pid: $.cookie('ib_pid') || null,
+      invite_status: $.cookie('invite_status') || null,
       account: $("#email").val(),
       password: $("#verify_code").val(),
       login_type: 2,

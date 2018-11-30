@@ -21,16 +21,7 @@
                     <%- include('./agent/' + pageInfo.id + '.html') %>
                 </div>
                 <%} else {%>
-                <div class="new_body"  ng-controller="AgentProxyController">
-                    <div class="agent_banner">
-                        <div class="agent_banner__con">
-                            <h3><%=lang.text('partner.becomePartner')%></h3>
-                            <p><%=lang.text('partner.becomePartner_1')%></p>
-                            <button class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" ng-click="goInto()"><%=lang.text('partner.joinUs')%></button>
-                        </div>
-                    </div>
                     <%- include('./agent/global_proxy.html') %>
-                </div>
                 <%}%>
             </div>
         <% include /common/vendor/web.js.html %>

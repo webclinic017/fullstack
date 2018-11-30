@@ -568,8 +568,7 @@
          */
         function setAgentPromotion(ib_pid) {
             return publicHttp.dealPublicRequest(o.setAgentPromotionApi, 'POST', {
-                ib_pid: ib_pid,
-                type: 0    // 0是代理商推广， 1为客户推广，默认0
+                ib_pid: ib_pid
             });
         }
         
