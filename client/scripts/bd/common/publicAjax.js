@@ -73,6 +73,8 @@
         checkLotteryStatus: origin_app + '/activity/user_status', //get
         startLottery: origin_app + '/activity/scratch', //get
         shareLottery: origin_app + '/activity/share', //get
+        //获取邮箱电话等信息
+        getEmailPhone: origin + '/sys/messages',   
 
         //第三方充值提现相关页面
         loginThird: origin + '/login/mt4_account',

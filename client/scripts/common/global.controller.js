@@ -43,6 +43,7 @@
         setInterval(function () {
             getUnreadLength();
         }, 30000);
+        getEmailPhone();
         // 获取国家列表
         getWorlds();
         function getWorlds() {
@@ -238,6 +239,23 @@
         $scope.setAllowCookie = function () {
             $scope.allowUseCookie = false;
             localStorage["allowUserCookie"] = 'allow';
+        }
+        //获取邮箱电话等信息
+        function getEmailPhone() {
+            console.log($cookies["sysMessage"]);
+            if ($cookies["sysMessage"]) {
+                $rootScope.sysMessage = JSON.parse($cookies["sysMessage"]);
+            } else {
+                var d = new Date();
+                d.setTime(d.getTime() + (1*24*60*60*1000));
+                account.getEmailPhone().then(function (data) {
+                    console.log(data);
+                    if (data.is_succ) {
+                        $rootScope.sysMessage = data.data;
+                        document.cookie = 'sysMessage=' + JSON.stringify(data.data) + '; path=/; domain=.tigerwit.com; expires='+d.toUTCString();
+                    }
+                });
+            }
         }
 
         /*

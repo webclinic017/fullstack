@@ -67,6 +67,7 @@
             getAdvertiseRecords: urlOrigin2 + '/position/records',
             getFunctionSwitch: '/napi?action=get_function_switch',
             getIdcardApi: urlOrigin2 + '/user/idcard',
+            getEmailPhone: urlOrigin2 + '/sys/messages'
         };
         var asset = {
             withdrawApi: urlOrigin2 + '/payment/withdraw',

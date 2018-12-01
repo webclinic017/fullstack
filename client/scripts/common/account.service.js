@@ -64,6 +64,7 @@
             getFunctionSwitch: getFunctionSwitch,
             getIdcard: getIdcard,
             setAgentPromotion: setAgentPromotion,
+            getEmailPhone: getEmailPhone
         };
         var resolveValue;
         return service;
@@ -651,6 +652,10 @@
         //获取身份认证信息
         function getIdcard(){
             return publicHttp.dealPublicRequest(o.getIdcardApi, 'GET');
+        }
+        //获取邮箱电话等信息
+        function getEmailPhone () {
+            return publicHttp.dealPublicRequest(o.getEmailPhone, 'GET');
         }
     }
 })();

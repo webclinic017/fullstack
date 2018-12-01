@@ -43,12 +43,6 @@
                 vi: "TigerWit",
                 "zh-Hant": "TigerWit"
             },
-            telephone: {
-                zh: "400-809-8509",
-                en: "400-809-8509",
-                vi: "400-809-8509",
-                "zh-Hant": "400-809-8509"
-            },
             webSite: {
                 zh: "www.tigerwit.com",
                 en: "www.tigerwit.com",
@@ -3774,22 +3768,22 @@
                         "zh-Hant": "可提取金額："
                     },
                     tip1: {
-                        zh: "提示：您还有持仓订单，请平仓后再提现如有疑问，请联系您的客户经理或联系客服（400 - 809 - 8509）",
-                        en: "Notice:You have position orders, please close out and then withdrawal If you have any questions, please contact your account manager or contact customer service (400 - 809 - 8509)",
-                        vi: "Lưu ý: Bạn có lệnh giao dịch, vui lòng đóng và rút tiền Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với người quản lý tài khoản của bạn hoặc liên hệ với dịch vụ khách hàng (400 - 809 - 8509)",
-                        "zh-Hant": "提示：您還有持倉訂單，請平倉後再提現如有疑問，請聯系您的客護經理或聯系客服（400 - 809 - 8509）"
+                        zh: "提示：您还有持仓订单，请平仓后再提现如有疑问，请联系您的客户经理或联系客服",
+                        en: "Notice:You have position orders, please close out and then withdrawal If you have any questions, please contact your account manager or contact customer service",
+                        vi: "Lưu ý: Bạn có lệnh giao dịch, vui lòng đóng và rút tiền Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với người quản lý tài khoản của bạn hoặc liên hệ với dịch vụ khách hàng",
+                        "zh-Hant": "提示：您還有持倉訂單，請平倉後再提現如有疑問，請聯系您的客護經理或聯系客服"
                     },
                     tip2: {
-                        zh: "提示：您未实名认证，请完成实名认证，如有疑问，请联系您的客户经理或联系客服（400 - 809 - 8509）",
-                        en: "Notice:You don't have real-name authentication，please complete it If you have any questions, please contact your account manager or contact customer service (400 - 809 - 8509)",
-                        vi: "Lưu ý: Bạn không có xác thực tên thật ， vui lòng hoàn thành nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với người quản lý tài khoản của bạn hoặc liên hệ với bộ phận dịch vụ khách hàng (400 - 809 - 8509)",
-                        "zh-Hant": "提示：您未實名認證，請完成實名認證，如有疑問，請聯系您的客護經理或聯系客服（400 - 809 - 8509）"
+                        zh: "提示：您未实名认证，请完成实名认证，如有疑问，请联系您的客户经理或联系客服",
+                        en: "Notice:You don't have real-name authentication，please complete it If you have any questions, please contact your account manager or contact customer service",
+                        vi: "Lưu ý: Bạn không có xác thực tên thật ， vui lòng hoàn thành nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với người quản lý tài khoản của bạn hoặc liên hệ với bộ phận dịch vụ khách hàng",
+                        "zh-Hant": "提示：您未實名認證，請完成實名認證，如有疑問，請聯系您的客護經理或聯系客服"
                     },
                     tip3: {
-                        zh: "提示：您还有正在复制的高手，请取消复制关系后再提现，如有疑问，请联系您的客户经理或联系客服（400 - 809 - 8509）",
-                        en: "Notice: You still have following masters,please cancel the follow relationship then withdraw the money If you have any questions, please contact your account manager or contact customer service (400 - 809 - 8509)",
-                        vi: "Lưu ý: Bạn vẫn có quan hệ theo dõi nhà giao dịch chính, vui lòng hủy bỏ mối quan hệ sau đó rút tiền Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với người quản lý tài khoản của bạn hoặc liên hệ với dịch vụ khách hàng (400 - 809 - 8509",
-                        "zh-Hant": "提示：您還有正在復制的高手，請取消復制關系後再提現，如有疑問，請聯系您的客護經理或聯系客服（400 - 809 - 8509）"
+                        zh: "提示：您还有正在复制的高手，请取消复制关系后再提现，如有疑问，请联系您的客户经理或联系客服",
+                        en: "Notice: You still have following masters,please cancel the follow relationship then withdraw the money If you have any questions, please contact your account manager or contact customer service",
+                        vi: "Lưu ý: Bạn vẫn có quan hệ theo dõi nhà giao dịch chính, vui lòng hủy bỏ mối quan hệ sau đó rút tiền Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với người quản lý tài khoản của bạn hoặc liên hệ với dịch vụ khách hàng",
+                        "zh-Hant": "提示：您還有正在復制的高手，請取消復制關系後再提現，如有疑問，請聯系您的客護經理或聯系客服"
                     },
                     tip4: {
                         zh: "提现金额不能大于可提现金额",
@@ -3924,10 +3918,10 @@
                         "zh-Hant": "電匯通常需要3-5個工作日到帳"
                     },
                     tip12: {
-                        zh: "提示：手机端充值最低限额$50.00，每天最高限额$7000.00，充值成功后，到账时间约为10分钟，请耐心等待。如有问题，可在电脑端登录官网（）操作。客户热线：xxxx",
-                        en: "The minimum deposit for mobile phones is $ 50.00，maximum daily limit of $ 7000.00. After the success of the deposit, the arrival time is about 10 minutes, please be patient.If there are problems, you can log on the computer side of the official website (www.tigerwit.com) operation.Customer Hotline:400-xxx-xxx",
-                        vi: "Khoản tiền gửi tối thiểu cho điện thoại di động là $ 50,00 ， giới hạn tối đa hàng ngày là $ 7000.00. Sau khi thành công của tiền gửi, thời gian đến là khoảng 10 phút, hãy kiên nhẫn. Nếu có vấn đề, bạn có thể đăng nhập bằng máy tính của trang web chính thức (www.tigerwit.com) hoạt động.  Hotline Khách Hàng: 400-xxx -xxx",
-                        "zh-Hant": "提示：手機端充值最低限額$50.00，每天最高限額$7000.00，充值成功後，到帳時間約為10分鐘，請耐心等待。如有問題，可在電腦端登錄官網（）操作。客護熱線：xxxx"
+                        zh: "提示：手机端充值最低限额$50.00，每天最高限额$7000.00，充值成功后，到账时间约为10分钟，请耐心等待。如有问题，可在电脑端登录官网（）操作。",
+                        en: "The minimum deposit for mobile phones is $ 50.00，maximum daily limit of $ 7000.00. After the success of the deposit, the arrival time is about 10 minutes, please be patient.If there are problems, you can log on the computer side of the official website (www.tigerwit.com) operation.",
+                        vi: "Khoản tiền gửi tối thiểu cho điện thoại di động là $ 50,00 ， giới hạn tối đa hàng ngày là $ 7000.00. Sau khi thành công của tiền gửi, thời gian đến là khoảng 10 phút, hãy kiên nhẫn. Nếu có vấn đề, bạn có thể đăng nhập bằng máy tính của trang web chính thức (www.tigerwit.com) hoạt động.",
+                        "zh-Hant": "提示：手機端充值最低限額$50.00，每天最高限額$7000.00，充值成功後，到帳時間約為10分鐘，請耐心等待。如有問題，可在電腦端登錄官網（）操作。"
                     },
                     accountBalance: {
                         zh: "当前交易账户余额",
