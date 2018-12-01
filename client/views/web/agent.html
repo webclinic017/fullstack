@@ -15,14 +15,14 @@
                 <% include /common/nav/web.header.html %>
             </div>
             <div class="body">
-                <div class="new_body">
+                <% if (pageInfo.id !== 'proxy') {%>
+                <div class="new_body pd-bt-50">
                     <div class="agent_banner"></div>
-                    <% if (!lang.isEnglishArea() || pageInfo.id !== 'proxy') {%>
-                        <%- include('./agent/' + pageInfo.id + '.html') %>
-                    <%} else {%>
-                        <%- include('./agent/global_proxy.html') %>
-                    <%}%>
+                    <%- include('./agent/' + pageInfo.id + '.html') %>
                 </div>
+                <%} else {%>
+                    <%- include('./agent/global_proxy.html') %>
+                <%}%>
             </div>
         <% include /common/vendor/web.js.html %>
         <!-- build:js(client) /scripts/web_agent.js -->
@@ -34,6 +34,7 @@
         <script src="/scripts/common/market.service.js"></script>
         <script src="/scripts/common/lang.service.js"></script>
         <script src="/scripts/common/lang_data.service.js"></script>
+        <script src="/scripts/common/fun.service.js"></script>
         <script src="/scripts/common/redbag.service.js"></script>
         <script src="/scripts/common/navbar.directive.js"></script>
         <script src="/scripts/common/dropdown.directive.js"></script>
@@ -43,6 +44,7 @@
         <script src="/scripts/common/global.controller.js"></script>
         <script src="/scripts/web/become_master.controller.js"></script>
         <script src="/scripts/web/become_modal.controller.js"></script>
+        <script src="/scripts/web/proxy.controller.js"></script>
         <script src="/scripts/web/agent.controller.js"></script>
         <!-- endbuild -->
             <div class="footer">

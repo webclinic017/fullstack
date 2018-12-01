@@ -6502,6 +6502,104 @@
                         "zh-Hant": "英文昵稱為2-18位英文字母"
                     }
                 },
+                partner: {
+                    title:{
+                        zh:"代理商",
+                        en:"Agent",
+                        vi:"Đại lý",
+                        "zh-Hant":"代理商"
+                    },
+                    completeInformation:{
+                        zh:"完善资料",
+                        en:"Complete information",
+                        vi:"Hoàn thành thông tin",
+                        "zh-Hant":"完善資料"
+                    },
+                    tradingExperience:{
+                        zh:"投资信息确认",
+                        en:"Questionnaire",
+                        vi:"Bảng câu hỏi",
+                        "zh-Hant":"投資信息確認"
+                    },
+                    iDVerification:{
+                        zh:"实名认证",
+                        en:"ID Verification",
+                        vi:"Xác nhận ID",
+                        "zh-Hant":"實名認證"
+                    },
+                    activeSucc:{
+                        zh:"成功激活",
+                        en:"Successful activation",
+                        vi:"Kích hoạt thành công",
+                        "zh-Hant":"成功激活"
+                    },
+                    activeAgent:{
+                        zh:"激活代理商",
+                        en:"Activate agents",
+                        vi:"Kích hoạt các đại lý",
+                        "zh-Hant":"激活代理商"
+                    },
+                    activeAgentFlow:{
+                        zh:"激活代理商产品流程",
+                        en:"Activate the agent product process",
+                        vi:"Kích hoạt quá trình sản phẩm đại lý",
+                        "zh-Hant":"激活代理商產品流程"
+                    },
+                    continueCertification:{
+                        zh:"继续认证",
+                        en:"Continuing certification",
+                        vi:"Tiếp tục xác nhận",
+                        "zh-Hant":"繼續認證"
+                    },
+                    submittedSucc:{
+                        zh:"信息提交成功",
+                        en:"Information submitted successfully",
+                        vi:"Đã gửi thông tin thành công",
+                        "zh-Hant":"信息提交成功"
+                    },
+                    fillNameCoun:{
+                        zh:"请填写姓名和国家",
+                        en:"Please fill in your name and country",
+                        vi:"Vui lòng điền tên và quốc gia",
+                        "zh-Hant":"請填寫姓名和國家"
+                    },
+                    fillEmailPhone:{
+                        zh:"请填写邮箱或手机号",
+                        en:"Please fill in your email or phone number",
+                        vi:"Vui lòng điền vào email hoặc số điện thoại",
+                        "zh-Hant":"請填寫郵箱或手機號"
+                    },
+                    unverified:{
+                        zh:"（未认证）",
+                        en:"(Unverified)",
+                        vi:"(Không xác nhận)",
+                        "zh-Hant":"（未認證）"
+                    },
+                    rejected:{
+                        zh:"（已拒绝）",
+                        en:"(Rejected)",
+                        vi:"(Đã từ chối)",
+                        "zh-Hant":"（已拒絕）"
+                    },
+                    pending:{
+                        zh:"（需要审核）",
+                        en:"(Pending)",
+                        vi:"(Chờ xử lý)",
+                        "zh-Hant":"（需要審核）"
+                    },
+                    approved:{
+                        zh:"（已通过）",
+                        en:"(Approved)",
+                        vi:"(Chấp nhận)",
+                        "zh-Hant":"（已通過）"
+                    },
+                    unknown:{
+                        zh:"（未知状态）",
+                        en:"(Unknown)",
+                        vi:"(Không rõ)",
+                        "zh-Hant":"（未知狀態）"
+                    }
+                },
                 noMetNeed:{
                     zh:"未达成",
                     en:"unfinished",

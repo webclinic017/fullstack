@@ -8033,7 +8033,7 @@ module.exports = function () {
             },
             agencies: {
                 zh: "代理合作",
-                en: "Agencies",
+                en: "Partners",
                 vi: "Các đại lý",
                 "zh-Hant": "代理合作"
             },
@@ -8102,7 +8102,218 @@ module.exports = function () {
                 "zh-Hant": "TigerWit受英國金融行為監管局（FCA）的授權和監管，授權編號為：679941。"
             }
         },
-
+        partner: {
+            becomePartner:{
+                zh:"诚招合作伙伴",
+                en:"Become a TigerWit partner today",
+                vi:"Trở thành đối tác của TigerWit hôm nay",
+                "zh-Hant":"誠招合作夥伴"
+            },
+            becomePartner_1:{
+                zh:"运用新的技术建立和推广一个成功的本地或全球品牌是我们的愿景，这需要TigerWit与您共同实现。成为我们的代理商，您可以获得TigerWit所有工具支持，同时享受多项优秀代理商扶持计划，轻松实现合作共赢、财富共享。与我们合作，利用您富余的资源创造意想不到的价值！",
+                en:"With TigerWit, the success of our partners comes from developing long-term profitable relationships. We aim to bring a fresh technological approach to an industry in need of change that benefits both partners and traders. Our innovative ‘Distributed Ledger Technology’ can provide you with an unique and significant advantage over your competitors. TigerWit’s distributed trading ledger is just the first step. Visit tech.tigerwit.com for more information on our blockchain technology.",
+                vi:"Với TigerWit, sự thành công của các đối tác của chúng tôi đến từ việc phát triển các mối quan hệ có lợi nhuận lâu dài. Chúng tôi mong muốn mang đến một phương pháp tiếp cận công nghệ mới cho một ngành công nghiệp có nhu cầu thay đổi mang lại lợi ích cho cả đối tác và thương nhân. Công nghệ Ledger phân phối sáng tạo của chúng tôi có thể cung cấp cho bạn một lợi thế độc đáo và đáng kể so với các đối thủ cạnh tranh của bạn. Sổ cái giao dịch phân phối của TigerWit chỉ là bước đầu tiên. Truy cập tech.tigerwit.com để biết thêm thông tin về công nghệ blockchain của chúng tôi.",
+                "zh-Hant":"運用新的技術建立和推廣壹個成功的本地或全球品牌是我們的願景，這需要TigerWit與您共同實現。成為我們的代理商，您可以獲得TigerWit所有工具支持，同時享受多項優秀代理商扶持計劃，輕松實現合作共贏、財富共享。與我們合作，利用您富余的資源創造意想不到的價值！"
+            },
+            joinUs:{
+                zh:"加入我们",
+                en:"Join us",
+                vi:"Tham gia với chúng tôi",
+                "zh-Hant":"加入我們"
+            },
+            whyPartner:{
+                zh:"为什么选择我们？",
+                en:"Why partner with TigerWit?",
+                vi:"Tại sao hợp tác với TigerWit?",
+                "zh-Hant":"為什麽選擇我們？"
+            },
+            whyPartner_1:{
+                zh:"让TigerWit的专家为您提供量身定制的解决方案",
+                en:"Looking to grow your business? Let TigerWit’s experts deliver a solution tailored to you.",
+                vi:"Bạn đang tìm kiếm cơ hội phát triển sự nghiệp của bạn? Hãy để những chuyên gia của TigerWit mang đến giải pháp phù hợp với bạn.",
+                "zh-Hant":"讓TigerWit的專家為您提供量身定制的解決方案"
+            },
+            supportPlan:{
+                zh:"优秀代理商扶持计划",
+                en:"Excellent agency support plan",
+                vi:"Một đối tác xuất sắc để hỗ trợ kế hoạch của bạn",
+                "zh-Hant":"優秀代理商扶持計劃"
+            },
+            supportPlan_1:{
+                zh:"薪资支持、客户服务支持、激励支持、返佣支持、培训支持、公关支持等丰富的扶持成长体系，帮您快速成为专业代理人，实现人生小目标！",
+                en:"Rich support and growth systems, such as salary support, customer service support, incentive support, commission return support, training support, and public relations support, help you quickly become a professional agent to achieve your life goals!",
+                vi:"Các hệ thống hỗ trợ và tăng trưởng phong phú, như hỗ trợ tiền lương, hỗ trợ dịch vụ khách hàng, hỗ trợ khuyến khích, hỗ trợ hoa hồng, hỗ trợ đào tạo và hỗ trợ quan hệ công chúng, giúp bạn nhanh chóng trở thành một đại lý chuyên nghiệp để đạt được mục tiêu cuộc sống của bạn!",
+                "zh-Hant":"薪資支持、客戶服務支持、激勵支持、返傭支持、培訓支持、公關支持等豐富的扶持成長體系，幫您快速成為專業代理人，實現人生小目標！"
+            },
+            customerPromotionSystem:{
+                zh:"客户推广系统",
+                en:"Customer promotion system",
+                vi:"Hệ thống khuyến mãi khách hàng",
+                "zh-Hant":"客戶推廣系統"
+            },
+            customerPromotionSystem_1:{
+                zh:"节庆日宣传图、二维码及推广链接、汇评咨询推文等一键获取，满足您多种推广需求，简单快捷！",
+                en:"Get designed promotion photo, QR code, promotion link, strategy comments, and tweets to meet your needs, simple and fast!",
+                vi:"Hệ thống khuyến mãi của khách hàngNhận ảnh quảng cáo được thiết kế, mã QR, liên kết quảng cáo, nhận xét chiến lược và tweet để đáp ứng nhu cầu của bạn, đơn giản và nhanh chóng!",
+                "zh-Hant":"節慶日宣傳圖、二維碼及推廣鏈接、匯評咨詢推文等壹鍵獲取，滿足您多種推廣需求，簡單快捷！"
+            },
+            safeReliable:{
+                zh:"安全可靠",
+                en:"Safe and reliable",
+                vi:"An toàn và đáng tin cậy",
+                "zh-Hant":"安全可靠"
+            },
+            safeReliable_1:{
+                zh:"团队汇集了具有不同学术和应用背景的专业人士，分别在外汇交易、差价合约、监管合规性、投资管理、在线平台研发和全球营销等方面拥有丰富的经验，为您的资金保驾护航！",
+                en:"With a strong technological core built upon a philosophy of transparency, credibility and integrity, TigerWit offers its clients exceptional capabilities to trade in the markets.",
+                vi:"Với cốt lõi công nghệ mạnh mẽ được xây dựng dựa trên triết lý minh bạch, uy tín và toàn vẹn, TigerWit mang đến cho khách hàng những khả năng đặc biệt để giao dịch trên thị trường. Những người sáng lập của TigerWit là những cá nhân có kinh nghiệm với thành công và lịch sử lâu dài, mang đến một đội ngũ chuyên gia với nhiều nền tảng học thuật và ứng dụng đa dạng. và bán hàng & tiếp thị toàn cầu.",
+                "zh-Hant":"團隊匯集了具有不同學術和應用背景的專業人士，分別在外匯交易、差價合約、監管合規性、投資管理、在線平臺研發和全球營銷等方面擁有豐富的經驗，為您的資金保駕護航！"
+            },
+            whatOffer:{
+                zh:"我们提供什么？",
+                en:"What do we offer?",
+                vi:"Chúng tôi cung cấp những gì?",
+                "zh-Hant":"我們提供什麽？"
+            },
+            whatOffer_1:{
+                zh:"获得所有的工具和支持，以建立和推广一个成功的本地或全球品牌",
+                en:"Access to all the tools and support your business needs to build and market a successful local or global brand.",
+                vi:"Truy cập vào tất cả các công cụ và hỗ trợ doanh nghiệp của bạn cần xây dựng và quảng bá cho một thương hiệu địa phương và toàn cầu thành công.",
+                "zh-Hant":"獲得所有的工具和支持，以建立和推廣壹個成功的本地或全球品牌"
+            },
+            offer_1:{
+                zh:"区块链技术",
+                en:"Innovative distributed trading ledger",
+                vi:"Sổ cái giao dịch phân phối cải tiến",
+                "zh-Hant":"區塊鏈技術"
+            },
+            offer_2:{
+                zh:"复制跟单模式",
+                en:"Copy-trading technology",
+                vi:"Công nghệ sao chép giao dịch",
+                "zh-Hant":"復制跟單模式"
+            },
+            offer_3:{
+                zh:"24/5客户及技术支持",
+                en:"24/5 client and technology support",
+                vi:"24 giờ trên 5 ngày hỗ trợ khách hàng và công nghệ",
+                "zh-Hant":"24/5客戶及技術支持"
+            },
+            offer_4:{
+                zh:"智能便捷的交易APP",
+                en:"An easy-to-use, highly intuitive mobile trading app",
+                vi:"Ứng dụng giao dịch di động trực quan, dễ sử dụng",
+                "zh-Hant":"智能便捷的交易APP"
+            },
+            offer_5:{
+                zh:"快速简易传播",
+                en:"Competitive spreads",
+                vi:"Spreads cạnh tranh",
+                "zh-Hant":"快速簡易傳播"
+            },
+            offer_6:{
+                zh:"深度市场流动性",
+                en:"Deep market liquidity",
+                vi:"Thanh khoản thị trường sâu",
+                "zh-Hant":"深度市場流動性"
+            },
+            offer_7:{
+                zh:"独家合作伙伴英超利物浦",
+                en:"Exclusive promotions with our partner, Liverpool FC",
+                vi:"Chương trình khuyến mãi độc quyền với đối tác của chúng tôi, Liverpool FC",
+                "zh-Hant":"獨家合作夥伴英超利物浦"
+            },
+            offer_8:{
+                zh:"直观数据报告",
+                en:"Advanced reporting",
+                vi:"Báo cáo nâng cao",
+                "zh-Hant":"直觀數據報告"
+            },
+            offer_9:{
+                zh:"FCA、SCB监管",
+                en:"Regulation by FCA and SCB",
+                vi:"Quy định của FCA và SCB",
+                "zh-Hant":"FCA、SCB監管"
+            },
+            becomePartnerFlow:{
+                zh:"成为合作伙伴流程",
+                en:"Become a partner",
+                vi:"Trở thành đối tác ",
+                "zh-Hant":"成為合作夥伴流程"
+            },
+            signUpAccount:{
+                zh:"注册账户",
+                en:"Sign up for an account",
+                vi:"Đăng ký một tài khoản",
+                "zh-Hant":"註冊賬戶"
+            },
+            overProbationPeriod:{
+                zh:"完成磨合期条件",
+                en:"Over the probation period",
+                vi:"Trong thời gian chạy thử",
+                "zh-Hant":"完成磨合期條件"
+            },
+            endTrial:{
+                zh:"磨合结束，成为代理",
+                en:"End of trial, become an official agent",
+                vi:"Kết thúc thời gian chạy thử, trở thành đại lý chính thức",
+                "zh-Hant":"磨合結束，成為代理"
+            },
+            becomePartnerFlow_1:{
+                zh:"请填写以下表格，我们将联系您提供更多的信息和回答任何问题。",
+                en:"Please complete the form below and we will be in touch to provide more information and answer any questions.",
+                vi:"Vui lòng điền vào mẫu dưới đây và chúng tôi sẽ liên hệ để cung cấp thêm thông tin và trả lời bất kỳ câu hỏi nào.",
+                "zh-Hant":"請填寫以下表格，我們將聯系您提供更多的信息和回答任何問題。"
+            },
+            becomePartnerFlow_2:{
+                zh:"我们期待着您的信息。",
+                en:"We look forward to hearing from you.",
+                vi:"Chúng tôi mong muốn được nghe từ bạn.",
+                "zh-Hant":"我們期待著您的信息。"
+            },
+            name:{
+                zh:"姓名",
+                en:"Name",
+                vi:"Tên",
+                "zh-Hant":"姓名"
+            },
+            country:{
+                zh:"国家",
+                en:"Country",
+                vi:"Quốc gia",
+                "zh-Hant":"國家"
+            },
+            email:{
+                zh:"邮箱",
+                en:"Email",
+                vi:"Thư điện tử",
+                "zh-Hant":"郵箱"
+            },
+            phone:{
+                zh:"手机号",
+                en:"Phone",
+                vi:"Số điện thoại",
+                "zh-Hant":"手機號"
+            },
+            message:{
+                zh:"备注信息（选填）",
+                en:"Message(optional)",
+                vi:"Tin nhắn (tùy chon)",
+                "zh-Hant":"備註信息（選填）"
+            },
+            complusoryInformation:{
+                zh:"以下信息中邮箱和手机号必选一项填写",
+                en:"You should fill in one of email address or phone number as complusory information",
+                vi:"Bạn nên điền vào một trong các địa chỉ email hoặc số điện thoại như thông tin bắt buộc.",
+                "zh-Hant":"以下信息中郵箱和手機號必選壹項填寫"
+            },
+            sendAgent:{
+                zh:"申请代理",
+                en:"Send",
+                vi:"Gửi",
+                "zh-Hant":"申請代理"
+            }
+          }
     };
 
     function replaceTiger(str) {

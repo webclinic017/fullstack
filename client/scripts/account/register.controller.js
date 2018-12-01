@@ -175,6 +175,8 @@
                 unit: $state.params.unit,
                 key: $state.params.key,
                 world_code: $scope.account.country.value,
+                ib_pid: $cookies['ib_pid'] || null,  // 代理推广
+                invite_status: $cookies['invite_status'] || null,
             };
             if($scope.registerStep3 == '2'){
                 // 邮箱注册

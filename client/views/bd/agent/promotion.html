@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+    <head>
+        <meta name="description" content="Tigerwit get access for The global capital market。">
+        <meta name="keywords" content="tigerwit，老虎外汇，Duplicate transaction，Forex，Metal，CFD">
+        <meta name="apple-mobile-web-app-title">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no">
+
+        <!--禁用缓存-->
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-Control" content="no-cache">
+        <meta http-equiv="Expires" content="0">
+        <!-- 删除默认的苹果工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <!-- 苹果状态栏颜色 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <title>
+            <%= lang.text('companyZhName')%>
+        </title>
+    </head>
+    <!-- 引入H5 CSS -->
+    <!-- build:css(.tmp) /styles/h5_common.css -->
+    <link rel="stylesheet" href="/styles/h5_common.css">
+    <!-- endbuild -->
+    <!--引入公用头部-->
+    <% include /common/vendor/h5.utiljs.html %>
+    <% include /common/statistic/main.html %>
+    <body style="height: 100%;" ng-app="fullstackApp">
+        <div ng-controller="GlobalController">
+            <div class="body">
+                <% if (pageInfo.id == 'proxy') {%>
+                    <%- include('./global_proxy.html') %>
+                <%}%>
+            </div>
+        <% include /common/vendor/web.js.html %>
+        <!-- build:js(client) /scripts/h5_agent.js -->
+        <script src="/scripts/common/config.service.js"></script>
+        <script src="/scripts/common/account.service.js"></script>
+        <script src="/scripts/common/authorization.service.js"></script>
+        
+        <script src="/scripts/common/validator.service.js"></script>
+        <script src="/scripts/common/market.service.js"></script>
+        <script src="/scripts/common/lang.service.js"></script>
+        <script src="/scripts/common/lang_data.service.js"></script>
+        <script src="/scripts/common/fun.service.js"></script>
+        <script src="/scripts/common/redbag.service.js"></script>
+        <script src="/scripts/common/navbar.directive.js"></script>
+        <script src="/scripts/common/dropdown.directive.js"></script>
+        <script src="/scripts/common/form_select.directive.js"></script>
+        <script src="/scripts/common/upload_history_file.directive.js"></script>
+        
+        <script src="/scripts/common/global.controller.js"></script>
+        <script src="/scripts/web/become_master.controller.js"></script>
+        <script src="/scripts/web/become_modal.controller.js"></script>
+        <script src="/scripts/bd/agent/proxy.controller.js"></script>
+        <script src="/scripts/web/agent.controller.js"></script>
+        <!-- endbuild -->
+        </div>
+    </body>
+</html>

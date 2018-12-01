@@ -15,8 +15,7 @@
             name: undefined,
             country: {
                 code: undefined,
-                name_en: undefined,
-                name_cn: undefined
+                name: undefined,
             },
             email: undefined,
             message: undefined
@@ -26,7 +25,7 @@
             message: ''
         };
         $scope.loading = false;
-        $scope.countryList = [];
+        // $scope.countryList = [];
 
         $scope.hideErr = hideErr;
         $scope.showErr = showErr;
@@ -36,15 +35,15 @@
         var sources = getQueryString('q') || 1;
         var ad_position = getQueryString('w') || degaultAD;
         console.log(ad_position);
-        account.getWorlds().then(function (data) {
-            // console.log(data);
-            $scope.countryList = data.data;
-        });
+        // account.getWorlds().then(function (data) {
+        //     // console.log(data);
+        //     $scope.countryList = data.data;
+        // });
 
-        if (!lang.isEnglishArea()) {
-            $scope.becomeAgent.country.code = 'CN';
-            $scope.becomeAgent.country.name_cn = '中国';
-        }
+        // if (!lang.isEnglishArea()) {
+        //     $scope.becomeAgent.country.code = 'CN';
+        //     $scope.becomeAgent.country.name_cn = '中国';
+        // }
 
         function submitForm () {
             $scope.error = {
@@ -56,14 +55,14 @@
             if ($scope.agentForm.$invalid) {
                 $scope.error = {
                     is_succ: true,
-                    message:  $scope.lang.isEnglishArea() ? 'Please Fill in Name and Country' : '请填写姓名和国家'
+                    message: $scope.lang.text("tigerWitID.partner.fillNameCoun")
                 };
                 return;
             }
             if (!$scope.becomeAgent.phone && !$scope.becomeAgent.email) {
                 $scope.error = {
                     is_succ: true,
-                    message:  $scope.lang.isEnglishArea() ? 'You should fill in one of email address or phone number' : '邮箱和手机号必选一项填写'
+                    message: $scope.lang.text("tigerWitID.partner.fillEmailPhone")
                 };
                 return;
             }
@@ -84,7 +83,7 @@
                     $scope.error = {
                         is_succ: true,
                         success: true,
-                        message: $scope.lang.isEnglishArea() ? 'Submit successfully!' : '信息提交成功!'
+                        message: $scope.lang.text("tigerWitID.partner.submittedSucc")
                     };
                 } else {
                     $scope.error = {

@@ -20,6 +20,16 @@
             padding: 0 15px;
             height: 50px;
         }
+        .inputText {
+            float: left;
+            padding: 0 25px;
+            width: 100%;
+            input {
+                min-width: 80%; 
+                height:40px;
+                padding: 0 10px;
+            }
+        }
     }
     
     @include e(title) {
@@ -32,4 +42,5 @@
             max-width: 300px;
         }
     }
+
 }

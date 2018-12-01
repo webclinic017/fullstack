@@ -1,0 +1,191 @@
+// 背景
+@include b(agent_banner) {
+    > img {
+        width: 100%;
+    }
+    @include e(con) {
+        width: px2rem(604);
+        margin: 0 auto;
+        font-weight:600;
+        color:rgba(255,255,255,1);
+        text-align: center;
+        h3 {
+            padding-top: px2rem(100);
+            font-size: px2rem(40);
+            line-height: px2rem(56);
+            margin: 0;
+        }
+        p {
+            padding-top: px2rem(9);
+            padding-bottom: px2rem(17);
+            font-size: px2rem(24);
+            line-height: px2rem(28);
+            text-align: left;
+        }
+    }
+}
+@include b(agent) {
+    .h5-btn {
+        width: px2rem(180);
+        height: px2rem(45);
+        font-size: px2rem(24);
+        line-height: px2rem(45);
+        text-align: center;
+        padding: 0;
+    }
+    .email-us {
+        @include img-normal($white_label_image + "agent/proxy/email-bg-h5.jpg");
+        font-size:px2rem(28);
+        font-weight:600;
+        color:rgba(255,255,255,1);
+        line-height: px2rem(131);
+        text-align: center;
+        width: 100%;
+        > a {
+            color: #fff;
+        }
+    }
+    @include e(proxy) {
+        @include img-normal($white_label_image + "agent/proxy/proxy-bg-h5.jpg");
+        background-size: cover;
+        background-position: center center;
+        @include m(con) {
+            min-height: px2rem(90);
+            width: px2rem(604);
+            margin: 0 auto;
+            padding: px2rem(20) 0 0;
+            .why-select {
+                > li {
+                    padding-bottom: px2rem(16);
+                    img {
+                        height: px2rem(188);
+                    }
+                }
+            }
+            .offer {
+                text-align: center;
+                > li {
+                    display: inline-block;
+                    padding: px2rem(15);
+                    > img {
+                        height: px2rem(44);
+                    }
+                    > span {
+                        display: block;
+                        font-size:px2rem(18);
+                        font-weight:500;
+                        color:rgba(36,42,54,1);
+                        line-height:px2rem(25);
+                    }
+                }
+            }
+            .today-data {
+                padding: px2rem(60) 0 px2rem(30);
+                img {
+                    width: 100%;
+                }
+            }
+            .tit {
+                font-size:px2rem(32);
+                font-weight:600;
+                color:rgba(33,44,63,1);
+                line-height:px2rem(45);
+                margin: px2rem(30) 0;
+            }
+            .tit1 {
+                font-size:px2rem(28);
+                font-weight:500;
+                color:rgba(33,44,63,1);
+                line-height:px2rem(33);
+                margin: px2rem(8) 0 px2rem(24);
+            }
+            .font1 {
+                font-size:px2rem(18);
+                font-weight:400;
+                color:rgba(36,42,54,1);
+                line-height:px2rem(25);
+                text-align: left;
+            }
+        }
+        @include m(flow) {
+            display: inline-block;
+            > li {
+                padding: px2rem(30) px2rem(10);
+                border-bottom: px2rem(8) solid #D8D8D8;
+                position: relative;
+                min-width: px2rem(180);
+                .tit2 {
+                    font-size:px2rem(24);
+                    font-weight:600;
+                    color:rgba(36,42,54,1);
+                    line-height:px2rem(24);
+                }
+                .icon {
+                    position: absolute;
+                    bottom: px2rem(-24);
+                    left: 50%;
+                    margin-left: px2rem(-20);
+                    font-size:px2rem(28);
+                    font-weight:600;
+                    font-style: normal;
+                    color:rgba(36,42,54,1);
+                    line-height:px2rem(30);
+                    width:px2rem(30);
+                    height:px2rem(30);
+                    background-color:rgba(155,155,155,1);
+                    text-align: center;
+                    border-radius: 100%
+                }
+                &.active {
+                    border-bottom-color: #FFD933;
+                    .icon {
+                        background-color: #FFD933;
+                    }
+                }
+            }
+            
+        }
+    }
+    .global_proxy_tip {
+        color: #999;
+        font-size: 16px;
+        padding: 10px 0px;
+    }
+
+    .global_proxy_form {
+        width: px2rem(500);
+        margin: 0 auto;
+        .account_login__form {
+            padding: 0 px2rem(50);
+        }
+        .star_tip {
+            position: absolute;
+            top: 0;
+            left: 102%;
+            height: 46px;
+            line-height: 46px;
+            font-size: 26px;
+            color: #666;
+        }
+        select {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+        }
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+        .global_proxy_tip {
+            text-align: center;
+            font-size: 14px;
+        }
+    }
+    .global_proxy_err_tip {
+        padding-left: 10px;
+    }
+
+}

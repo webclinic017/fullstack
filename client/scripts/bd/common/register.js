@@ -270,6 +270,8 @@
                 }
 
                 publicRequest('regOrLogin', 'POST', {
+                    ib_pid: $.cookie('ib_pid') || null,
+                    invite_status: $.cookie('invite_status') || null,
                     account: $("#telephone").val() || null,
                     // password: $("#password").val() || null,
                     password: $("#verify_code").val() || null,
@@ -310,7 +312,14 @@
                     }
                 });
             }
+            // 客户推广
+            if(oReg.search_arr.ib_pid) {
+                $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '/', domain: '.tigerwit.com'});
+                $.cookie('invite_status', 1, {expires: 1, path: '/', domain: '.tigerwit.com'});
+            }
             $("#submit_form").on("click", toLogin);
+
+
         }());
     });
 }());

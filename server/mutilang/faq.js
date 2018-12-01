@@ -24,10 +24,10 @@ module.exports = {
         "zh-Hant": "Q：我可以開設 2 個甚至 2 個以上的賬戶嗎？可以用不同貨幣開戶嗎？"
     },
     faqAccount4: {
-        zh: "A：TigerWit允许同一张身份证开设2个或2个以上账户，但暂不支持同一个手机号绑定多个账户，如需添加更多账户，请联系您的客户经理。 ",
+        zh: "A：不可以；同一个身份证、手机号和邮箱只能开通一个通行证账户。",
         en: "A: TigerWit allows two or more accounts on the same ID, but does not support the same phone binding multipleaccounts, if you want to add more accounts, please contact your account manager.",
         vi: "^^-^^",
-        "zh-Hant": "A：TigerWit允許同壹張身份證開設2個或2個以上賬戶，但暫不支持同壹個手機號綁定多個賬戶，如需添加更多賬戶，請聯系您的客戶經理。 "
+        "zh-Hant": "A：不可以；同一個身份證、手機號和郵箱只能開通一個通行證帳戶。"
     },
     faqAccount4_1: {
         zh: "TigerWit暂不支持不同货币，交易以美元执行。",
@@ -408,16 +408,16 @@ module.exports = {
         "zh-Hant": "Q：最低入金金額是多少？"
     },
     faqAsset4: {
-        zh: "A：200美元",
-        en: "A: $200",
+        zh: "A：50美元",
+        en: "A: $50",
         vi: "^^-^^",
-        "zh-Hant": "A：200美元"
+        "zh-Hant": "A：50美元"
     },
     faqAsset4_uk: {
-        zh: "A：200英镑",
-        en: "A: £200",
+        zh: "A：50英镑",
+        en: "A: £50",
         vi: "^^-^^",
-        "zh-Hant": "A：200英鎊"
+        "zh-Hant": "A：50英鎊"
     },
     faqAsset5: {
         zh: "Q：出金有何限制？",
@@ -426,10 +426,10 @@ module.exports = {
         "zh-Hant": "Q：出金有何限制？"
     },
     faqAsset6: {
-        zh: "A：出金最低限额20美元；入金后需有交易行为；出金时账户需无持仓单、无复制关系。",
+        zh: "A：出金最低限额20美元；入金后需有交易行为；出金时跟单账号无复制关系，高手账号无持仓单，自主交易账号可持仓提现。",
         en: "A: The minimum withdrawal limit of $20; needs to have a transaction record after the deposit; The account cannot have the open orders and follow relationship before withdrawal.",
         vi: "^^-^^",
-        "zh-Hant": "A：出金最低限額20美元；入金後需有交易行為；出金時賬戶需無持倉單、無復制關系。"
+        "zh-Hant": "A：出金最低限額20美元；入金後需有交易行為；出金時跟單帳號無複製關係，高手帳號無持倉單，自主交易帳號可持倉提現。"
     },
     faqAsset6_uk: {
         zh: "A：出金最低限额20英镑；入金后需有交易行为；出金时账户需无持仓单、无复制关系。",
@@ -462,10 +462,10 @@ module.exports = {
         "zh-Hant": "Q：出金的費用？"
     },
     faqAsset10: {
-        zh: "A：正常交易的客户每月有4次免费取款，超过4次，每次收5元人民币取款费用。",
+        zh: "A：正常交易的客户每月有4次免费取款，超过4次，每次收取1美元取款费用。",
         en: "A: The first 4 withdrawals are free. After that a fee of £5 will be charged for each withdrawal.",
         vi: "^^-^^",
-        "zh-Hant": "A：正常交易的客戶每月有4次免費取款，超過4次，每次收5元人民幣取款費用。"
+        "zh-Hant": "A：正常交易的客戶每月有4次免費取款，超過4次，每次收取1美元取款費用。"
     },
     faqAsset11: {
         zh: "Q：交易账户中的资金已显示移除，为什么我的银行卡还没有收到出金金额？",

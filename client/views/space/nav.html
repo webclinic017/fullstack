@@ -72,6 +72,12 @@
             <a>{{lang.text('tigerWitID.inviteFriends.title')}}</a>
         </li>
     </ul>
+    
+    <ul class="space_nav__box" ng-show="toState.name == 'space.agent'">
+        <li class="space_nav__box-item active">
+            <a>{{lang.text('tigerWitID.partner.activeAgent')}}</a>
+        </li>
+    </ul>
 
     <ul class="space_nav__box" ng-show="toState.name == 'space.notice.subpage'">
         <li class="space_nav__box-item" ng-class="{ 'red_point': personal.unreadMsg.trade > 0 }" ui-sref-active="active">
