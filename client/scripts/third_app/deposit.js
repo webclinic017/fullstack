@@ -206,12 +206,13 @@ $(document).on("tap", "#third_app_deposit_evidence_btn .btn", function () {
   return false;
 });
 $(eleDeposit.payTypeDetail).on("tap", function () {
-  console.log(depositTypeDetail[depositType].url);
-  openThirdNative({
-    type: "openUrl",
-    title: depositTypeDetail[depositType].text,
-    url: depositTypeDetail[depositType].url
-  });
+  // console.log(depositTypeDetail[depositType].url);
+  // openThirdNative({
+  //   type: "openUrl",
+  //   title: depositTypeDetail[depositType].text,
+  //   url: depositTypeDetail[depositType].url
+  // });
+  window.location.href = depositTypeDetail[depositType].url;
   return false;
 });
 $(eleDeposit.payOmipay).find("span").on("tap", function () {
