@@ -1788,8 +1788,8 @@ module.exports = function () {
         trade_tool: {
             en: "en",
             zh: "zh",
-            vi: "en",
-            "zh-Hant": "zh"
+            vi: "vi",
+            "zh-Hant": "zh-Hant"
         },
         /**
          * 弃用sidebar

@@ -8,13 +8,16 @@
 
     function langData ($cookies) {
         var language = 'zh';
+        var langArr = ['cn', 'en', 'vi', 'zh-Hant'];
         
         angular.forEach($cookies, function (value, index) {
 
             if (index === 'lang') {
-                // console.info(value, index);
-                language = value === 'cn' ? 'zh' : value;
-
+                angular.forEach(langArr, function (value2, index2) {
+                    if (value === value2) {
+                        language = value === 'cn' ? 'zh' : value;
+                    }
+                });
             }
         });
 
