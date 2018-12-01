@@ -193,7 +193,10 @@
             }
             
             var msg;
-            var para = {};
+            var para = {
+                ib_pid: $cookies['ib_pid'] || null,  // 代理推广
+                invite_status: $cookies['invite_status'] || null,
+            };
             para.remember = $scope.rememberLoginStatus ? 1 : 0;
             // 验证码登录
             if ($scope.loginType == 'code') {

@@ -133,10 +133,11 @@
     background: rgba(255,255,255,0.2);
     border: 1px solid rgba(255,255,255,0.4);
     border-radius: px2rem(4);
+    padding: 0 px2rem(48);
 
     .verify_code_btn_wrapper {
         position: absolute;
-        top: px2rem(12);
+        top: px2rem(20);
         right: 0;
         width: px2rem(180);
         height: px2rem(42);
@@ -150,7 +151,7 @@
     }
 
     .form-control-wrapper {
-        margin: px2rem(48) px2rem(48) 0;
+        margin: px2rem(48) 0;
     }
     
     input[type=number] {

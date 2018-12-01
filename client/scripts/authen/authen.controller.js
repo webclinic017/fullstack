@@ -17,7 +17,8 @@
 
     // 主控制器
     function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout, $modal, $layer) {
-        $scope.dredgingType = 'unkown'
+
+        $scope.dredgingType = 'unkown'  // 交易账户开通状态
         $scope.flow = {
             step: 1,
             authStatusMap: {
@@ -32,8 +33,13 @@
         }
 
         $scope.$on('goState', function (e, data) {
-            goState(data)
+            if($location.search().isAgent) {
+                agentStatus()
+            } else {
+                goState(data)
+            }
         })
+        // 开户认证
         function goState(data) {
             // console.log(data)
             // console.log($scope.personal)
@@ -44,27 +50,44 @@
                 });
             })
         }
-
-        if ($scope.personal.verify_status) {
-            // 防止不能跳转到本页
-            goState({
-                verify_status: $scope.personal.verify_status,
-                dredged_type: {
-                    '0': 'unknow',
-                    '1': 'live',
-                    '2': 'demo',
-                }[$scope.personal.verify_status]
-            });
-            showErr4()
-        } else {
-            $scope.$emit('global.getAuthStatus', {
-                ctrlName: 'AuthenController',
-                callback: function (data) {
-                    goState(data)
-                    showErr4()
+        // 代理商认证
+        function agentStatus() {
+            $scope.$emit('gloabl.agentAuthStatus', {
+                callback: function() {
+                    $timeout(function () {
+                        $state.go('authen.subpage', {
+                            subpage: $scope.flow.authStatusMap[$scope.personal.agentAuthStatus.status],
+                            isAgent: 'isAgent'
+                        });
+                    })
                 }
             })
         }
+        if($location.search().isAgent) {
+            agentStatus()
+        } else {
+            if ($scope.personal.verify_status) {
+                // 防止不能跳转到本页
+                goState({
+                    verify_status: $scope.personal.verify_status,
+                    dredged_type: {
+                        '0': 'unknow',
+                        '1': 'live',
+                        '2': 'demo',
+                    }[$scope.personal.verify_status]
+                });
+                showErr4()
+            } else {
+                $scope.$emit('global.getAuthStatus', {
+                    ctrlName: 'AuthenController',
+                    callback: function (data) {
+                        goState(data)
+                        showErr4()
+                    }
+                })
+            }
+        }
+     
 
         var parentScope = $scope;
         $scope.$on('open_alert_modal', function (e) {
@@ -115,7 +138,7 @@
     }
 
     // kyc
-    function AuthenInvestInfoController($scope, $state, $timeout, account) {
+    function AuthenInvestInfoController($scope, $state, $timeout, account, $location) {
         // window.onbeforeunload = function () {
         //     return '确认离开当前页面吗？未保存的数据将会丢失！'
         // }
@@ -143,8 +166,8 @@
         }
 
         function selectOption(question, option, $index) {
-            // console.log('question', question);
-            // console.log('option', option);
+            console.log('question', question);
+            console.log('option', option);
             $scope.tip.questions.show = false;
             $scope.tip.questions.msg = undefined;
 
@@ -156,6 +179,9 @@
                 option.checked = option.checked ? false : true;
                 muiltiSelect[question.id][$index] = option.checked ? option.key : undefined;
                 console.log(muiltiSelect[question.id]);
+            }
+            else if(question.data.type == 4) {
+                kycInfo[question.id] = question.answer;
             }
             // 单选
             else {
@@ -181,8 +207,8 @@
             mapMuiltiSelectToKycInfo();
             var isBreak = false;
             var hasFinishAll = false;
-            // console.log(isBreak);
-            // console.log(kycInfo);
+            console.log(isBreak);
+            console.log(kycInfo);
             angular.forEach($scope.questions, function (item, index) {
                 if (isBreak) {
                     return;
@@ -204,11 +230,16 @@
 
             $scope.clickable = false;
 
-            account.setKyc(
+            if($location.search().isAgent) {
+                angular.extend(kycInfo, {
+                    type: 2
+                })
+            } else {
                 angular.extend(kycInfo, {
                     is_live: $scope.personal.is_live
                 })
-            ).then(function (data) {
+            }
+            account.setKyc(kycInfo).then(function (data) {
                 console.info(data);
                 $scope.clickable = true;
                 if (data.is_succ) {
@@ -238,10 +269,13 @@
                 }
             });
         }
-
-        getKyc();
-        function getKyc() {
-            account.getKyc().then(function (data) {
+        if($location.search().isAgent) {
+            getKyc({type: 2});
+        } else {
+            getKyc();
+        }
+        function getKyc(params) {
+            account.getKyc(params).then(function (data) {
                 $scope.$broadcast("hideLoadingImg");
                 console.info('data', data);
                 angular.forEach(data.data, function (data, index, array) {
@@ -253,8 +287,8 @@
                     $scope.questions.push(json);
                 });
                 console.log('questions', $scope.questions)
-                $scope.industry = $scope.questions[0].data.list[0].value
-
+                $scope.industry = {} // 默认职业所属行业
+                // console.log($scope.industry)
                 angular.forEach($scope.questions, function (question) {
                     kycInfo[question.id] = '';
                 });
@@ -934,6 +968,7 @@
                 }
             })
         }
+        // 更新证件
         function updatePaper(){
             if (!$scope.readyToUpload.hasOwnProperty('front')) {
                 showErr('idFront');

@@ -43,7 +43,7 @@
                     }
                 })
                 .state('authen.subpage',{
-                    url: '/authen/:subpage?dredge_type',
+                    url: '/authen/:subpage?dredge_type&isAgent',
                     views: {
                         // 'nav@authen':{
                         //     templateUrl: '/views/authen/nav.html'
@@ -226,6 +226,16 @@
                         'content@space': {
                             templateUrl: '/views/authen/realname.html',
                             controller: 'AuthenRealnameController'
+                        }
+                    }
+                })
+                // 开通代理商
+                .state('space.agent', {
+                    url: '/space/agent',
+                    views: {
+                        'content@space': {
+                            templateUrl: '/views/authen/agent_status.html',
+                            controller: 'AgentStatusController'
                         }
                     }
                 })

@@ -552,26 +552,38 @@ module.exports = function (app) {
     });
 
     // 代理合作
-    app.route('/web/agent/:subpage(proxy|become)').get(function (req, res) {
-        var subpage = req.params.subpage || 'skill';
-        var pageInfo = {
-            id: subpage
-        };
+    app.route('/web/agent/:subpage(proxy|become|partner)').get(function (req, res) {
+        var subpage = req.params.subpage || 'proxy';
+        if(subpage == 'partner') {
+            var pageInfo = {
+                id: 'proxy'
+            };
+        } else {
+            var pageInfo = {
+                id: subpage
+            };
+        }
         setEnvCf(req, res);
-        res.render('web/agent.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
+        if (isMobile(req) && pageInfo.id == 'proxy') {
+            res.render('bd/agent/promotion.html', extendPublic({
+                pageInfo: pageInfo
+            }, req));
+        } else {
+            res.render('web/agent.html', extendPublic({
+                pageInfo: pageInfo
+            }, req));
+        }
     });
     //global代理
-    app.route('/web/agent/partner').get(function (req, res) {
-        var pageInfo = {
-            id: 'proxy'
-        };
-        setEnvCf(req, res);
-        res.render('web/agent.html', extendPublic({
-            pageInfo: pageInfo
-        }, req));
-    });
+    // app.route('/web/agent/partner').get(function (req, res) {
+    //     var pageInfo = {
+    //         id: 'proxy'
+    //     };
+    //     setEnvCf(req, res);
+    //     res.render('web/agent.html', extendPublic({
+    //         pageInfo: pageInfo
+    //     }, req));
+    // });
 
     // 条件和条款
     app.route('/web/blog/:subpage(agreement|trade_fee)').get(function (req, res) {

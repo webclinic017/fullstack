@@ -45,6 +45,7 @@
             getVerifyStatus: getVerifyStatus,
             setKyc: setKyc,
             getKyc: getKyc,
+            getAgentAuthStatus: getAgentAuthStatus,
             logout: logout,
             setBindEmail: setBindEmail,
             getSpreadInfo: getSpreadInfo,
@@ -62,6 +63,7 @@
             checkAgent: checkAgent,
             getFunctionSwitch: getFunctionSwitch,
             getIdcard: getIdcard,
+            setAgentPromotion: setAgentPromotion,
         };
         var resolveValue;
         return service;
@@ -524,6 +526,14 @@
         }
 
         /**
+         * @name getAgentAuthStatus
+         * @desc 获取代理商认证状态
+         */
+        function getAgentAuthStatus() {
+            return publicHttp.dealPublicRequest(o.getAgentAuthStatusApi, 'GET');
+        }
+
+        /**
          * @name getVerifyStatus
          * @desc 获取实名认证状态
          */
@@ -535,8 +545,8 @@
          * @name getKyc
          * @desc 获取KYC认证列表
          */
-        function getKyc() {
-            return publicHttp.dealPublicRequest(o.getKycApi, 'GET');
+        function getKyc(params) {
+            return publicHttp.dealPublicRequest(o.getKycApi, 'GET', params);
         }
 
         // 获取认证状态
@@ -552,6 +562,16 @@
             return publicHttp.dealPublicRequest(o.setKycApi, 'POST', json);
         }
 
+        /**
+         * @name getAgentPromotion
+         * @desc 代理商推广
+         */
+        function setAgentPromotion(ib_pid) {
+            return publicHttp.dealPublicRequest(o.setAgentPromotionApi, 'POST', {
+                ib_pid: ib_pid
+            });
+        }
+        
         /**
          * 发送验证码合并接口
          * @param {String} account 手机号
