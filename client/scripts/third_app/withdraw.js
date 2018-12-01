@@ -163,11 +163,12 @@ $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank",
 });
 $(document).on("tap", "#third_app_add_bank_card", function () {
   closeAllMdl();
-  openThirdNative({
-    type: "openUrl",
-    title: "添加银行卡",
-    url: window.location.origin + '/m/third/add_bank'
-  });
+  // openThirdNative({
+  //   type: "openUrl",
+  //   title: "添加银行卡",
+  //   url: window.location.origin + '/m/third/add_bank'
+  // });
+  window.location.href='/m/third/add_bank';
   return false;
 });
 //监听amout

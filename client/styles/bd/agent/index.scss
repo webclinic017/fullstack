@@ -31,6 +31,7 @@
         font-size: px2rem(24);
         line-height: px2rem(45);
         text-align: center;
+        padding: 0;
     }
     .email-us {
         @include img-normal($white_label_image + "agent/proxy/email-bg-h5.jpg");
