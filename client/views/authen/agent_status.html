@@ -2,7 +2,7 @@
     <h3 class="agent_activate__title text-center">
         {{lang.text('tigerWitID.partner.activeAgentFlow')}}
     </h3>
-    <div class="text-center pd-tp-50">
+    <div class="text-center pd-tp-50 pd-bt-30">
         <ul class="agent_activate__flow clearfix">
             <li class="fl" ng-class="{'complete': personal.agentAuthStatus.info.status == 1}">
                 <strong class="num">1</strong>
@@ -45,7 +45,7 @@
             </li>
         </ul>
     </div>
-    <div class="text-center mg-tp-40 mg-bt-20">
+    <div class="text-center mg-bt-20" ng-if="personal.agentAuthStatus.status != 6">
         <a ui-sref="authen.subpage({isAgent: 'isAgent'})" class="tw-btn tw-btn-md tw-btn-capsule-gradient">{{lang.text('tigerWitID.partner.continueCertification')}}</a>
     </div>
 

@@ -93,7 +93,8 @@
                 templateUrl: '/views/account/account_Initializer_tip.html',
                 size: 'sm',
                 backdrop: true,
-                controller: function ($scope, $modalInstance) {
+                controller: function ($scope, $modalInstance, lang) {
+                    $scope.lang = lang;
                     $scope.historyType = type;
                     $scope.closeModal = closeModal;
                     function closeModal() {
