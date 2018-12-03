@@ -2,7 +2,7 @@ module.exports = {
     tobeMaster0: {
         zh: "成为明星交易员",
         en: "Become TigerWit's Master",
-        vi: "Trở thành Nhà giao dịch chính của TigerWit",
+        vi: "Trở thành Bậc Thầy của TigerWit",
         "zh-Hant": "成為明星交易員"
     },
     tobeMaster1: {
@@ -14,13 +14,13 @@ module.exports = {
     tobeMaster2: {
         zh: "如何登上TigerWit高手榜",
         en: "How to get on the TigerWit Masters' List",
-        vi: "Làm thế nào để có được danh sách nhà giao dịch chính của TigerWit",
+        vi: "Làm thế nào để có được danh sách bậc thầy của TigerWit",
         "zh-Hant": "如何登上TigerWit高手榜"
     },
     tobeMaster3: {
         zh: "TigerWit对交易员榜单按照其交易表现进行排名，表现越优秀排名越居前端。",
         en: "TigerWit ranks according to master's trading performance, the better the performance, the better the ranking is.",
-        vi: "TigerWit xếp hạng theo hiệu suất giao dịch của các nhà giao dịch chính, hiệu suất càng tốt thì xếp hạng càng tốt.",
+        vi: "TigerWit xếp hạng theo hiệu suất giao dịch của các bậc thầy, hiệu suất càng tốt thì xếp hạng càng tốt.",
         "zh-Hant": "TigerWit對交易員榜單按照其交易表現進行排名，表現越優秀排名越居前端。"
     },
     tobeMaster4_1: {
@@ -44,7 +44,7 @@ module.exports = {
     tobeMaster5_2: {
         zh: "TigerWit交易员榜单随着交易表现变动，进阶为入围交易高手的要求：",
         en: "TigerWit’s master list changes with the trading performance, demands of become a finalist are as follow: ",
-        vi: "Danh sách nhà giao dịch chính tổng thể của TigerWit thay đổi với hiệu suất giao dịch, nhu cầu trở thành nhà giao dịch cuối cùng như sau: ",
+        vi: "Danh sách bậc thầy tổng thể của TigerWit thay đổi với hiệu suất giao dịch, nhu cầu trở thành nhà giao dịch cuối cùng như sau: ",
         "zh-Hant": "TigerWit交易員榜單隨著交易表現變動，進階為入圍交易高手的要求："
     },
     tobeMaster6: {
@@ -74,7 +74,7 @@ module.exports = {
     tobeMaster9_2: {
         zh: "TigerWit会在入围交易者中综合评定上榜高手，影响上榜的决定性因素有：",
         en: "TigerWit will comprehensively assess the finalists,in order to decide who can get on the masters' list. The decisive factors are as follow: ",
-        vi: "TigerWit sẽ đánh giá toàn diện những người vào danh sách cuối cùng, để quyết định ai có thể vào danh sách của các nhà giao dịch chính. Các yếu tố quyết định như sau: ",
+        vi: "TigerWit sẽ đánh giá toàn diện những người vào danh sách cuối cùng, để quyết định ai có thể vào danh sách của các bậc thầy. Các yếu tố quyết định như sau: ",
         "zh-Hant": "TigerWit會在入圍交易者中綜合評定上榜高手，影響上榜的決定性因素有："
     },
     tobeMaster10: {
@@ -92,31 +92,31 @@ module.exports = {
     tobeMaster12: {
         zh: "胜率：即交易准确率。胜率=平仓盈利订单/总平仓订单*100%。",
         en: "Accuracy：The proportion of profitable orders.",
-        vi: "Độ chính xác: Tỷ lệ các đơn đặt hàng có lãi.",
+        vi: "Độ chính xác: Tỷ lệ các lệnh có lãi.",
         "zh-Hant": "勝率：即交易準確率。勝率=平倉盈利訂單/總平倉訂單*100%。"
     },
     tobeMaster13: {
         zh: "交易高手权益和义务",
         en: "Master's Rights and Obligations",
-        vi: "Quyền và nghĩa vụ của Nhà giao dịch chính",
+        vi: "Quyền và nghĩa vụ của Bậc Thầy",
         "zh-Hant": "交易高手權益和義務"
     },
     tobeMaster14: {
         zh: "交易高手被其他用户复制跟随，会获得复制者20%的盈利分成；",
         en: "The master is copied by other users, will get 20% of the profits of the replicator;",
-        vi: "Nhà giao dịch chính được sao chép bởi những người dùng khác, sẽ nhận được 20% lợi nhuận của bản sao;",
+        vi: "Bậc Thầy được sao chép bởi những người dùng khác, sẽ nhận được 20% lợi nhuận của lệnh sao chép;",
         "zh-Hant": "交易高手被其他用戶復制跟隨，會獲得復制者20%的盈利分成；"
     },
     tobeMaster15: {
         zh: "交易高手的交易策略将被老虎外汇平台推广展示；",
         en: "Master’s trading strategies will be promoted by TigerWit;",
-        vi: "Các chiến lược giao dịch của các nhà giao dịch chính sẽ được TigerWit quảng cáo;",
+        vi: "Các chiến lược giao dịch của các bậc thầy sẽ được TigerWit quảng cáo;",
         "zh-Hant": "交易高手的交易策略將被老虎外匯平臺推廣展示；"
     },
     tobeMaster16: {
         zh: "成为高手的交易员不可再复制其他交易高手。",
         en: "The account which became a master can not follow other masters.",
-        vi: "Các tài khoản mà đã trở thành một nhà giao dịch chính không thể làm theo các nhà giao dịch chính khác.",
+        vi: "Các tài khoản mà đã trở thành một bậc thầy không thể sao chép các bậc thầy khác.",
         "zh-Hant": "成為高手的交易員不可再復制其他交易高手。"
     },
     tobeMaster17: {

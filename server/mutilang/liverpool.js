@@ -27,7 +27,7 @@ module.exports = {
         liverpool4: {
             zh: "make sure to follow our Facebook page.",
             en: "make sure to follow our Facebook page.",
-            vi: "đảm bảo theo dõi trang Facebook của chúng tôi.",
+            vi: "đảm bảo sao chép trang Facebook của chúng tôi.",
             "zh-Hant": "make sure to follow our Facebook page."
         },
         liverpool5: {
@@ -69,7 +69,7 @@ module.exports = {
         liverpool11: {
             zh: "Commercial Officer,Liverpool FC",
             en: "Commercial Officer,Liverpool FC",
-            vi: "Cán bộ thương mại, Liverpool FC",
+            vi: "thương mại, Liverpool FC",
             "zh-Hant": "Commercial Officer,Liverpool FC"
         },
         liverpool12: {

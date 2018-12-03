@@ -982,7 +982,7 @@
                     tip1: {
                         zh: "高手分成收益与代理商佣金收益会存入钱包，您可以提现或划入交易帐户。",
                         en: "The earnings you gained with the master and the agent will be deposited in the wallet，You can choose to withdrawal or transfer to the trading account.",
-                        vi: "Thu nhập bạn kiếm được với nhà giao dịch chính và đại lý sẽ được gửi vào ví ， Bạn có thể chọn rút tiền hoặc chuyển khoản vào tài khoản giao dịch.",
+                        vi: "Thu nhập bạn kiếm được với bậc thầy và đại lý sẽ được gửi vào ví ， Bạn có thể chọn rút tiền hoặc chuyển khoản vào tài khoản giao dịch.",
                         "zh-Hant": "高手分成收益與代理商傭金收益會存入錢包，您可以提現或劃入交易帳護。"
                     },
                     quickOpenAccount: {
@@ -994,7 +994,7 @@
                     applyToMaster: {
                         zh: "申请成为高手",
                         en: "Apply to be a master",
-                        vi: "Chấp nhận như một nhà giao dịch chính",
+                        vi: "Chấp nhận như một bậc thầy",
                         "zh-Hant": "申請成為高手"
                     },
                     tip2: {
@@ -1420,7 +1420,7 @@
                     tip40_2: {
                         zh: "高手",
                         en: " master",
-                        vi: " Nhà giao dịch chính",
+                        vi: " Bậc Thầy",
                         "zh-Hant": "高手"
                     },
                     unableOperate_1: {
@@ -1652,7 +1652,7 @@
                     becomeMaster: {
                         zh: "申请高手",
                         en: "Become a master",
-                        vi: "Trở Thành Master",
+                        vi: "Trở Thành Bậc Thầy",
                         "zh-Hant": "申請高手"
                     },
                     netAssetValue: {
@@ -1718,7 +1718,7 @@
                     tip2: {
                         zh: "若复制金额低于建议复制金额，当高手下单手数较小时，可能会导致跟单失败。",
                         en: "If the amount of the copy less than the recommended amount, the master's trade is too small, your follow order will be failed.",
-                        vi: "Nếu số lượng bản sao ít hơn số tiền được đề nghị, giao dịch của nhà giao dịch chính quá nhỏ, lệnh theo dõi của bạn sẽ không thành công.",
+                        vi: "Nếu số lượng bản sao ít hơn số tiền được đề nghị, giao dịch của bậc thầy quá nhỏ, lệnh sao chép của bạn sẽ không thành công.",
                         "zh-Hant": "若復制金額低於建議復制金額，當高手下單手數較小時，可能會導致跟單失敗。"
                     },
                     amountInsufficient: {
@@ -1736,25 +1736,25 @@
                     cancelFollow: {
                         zh: "取消复制",
                         en: "Cancel follow",
-                        vi: "Hủy theo dõi",
+                        vi: "Hủy sao chép",
                         "zh-Hant": "取消復制"
                     },
                     sureCancelFollow: {
                         zh: "是否确定取消复制?",
                         en: "Are you sure to cancel following ?",
-                        vi: "Bạn có chắc muốn hủy theo dõi?",
+                        vi: "Bạn có chắc muốn hủy sao chép?",
                         "zh-Hant": "是否確定取消復制?"
                     },
                     tip3: {
                         zh: "若取消复制关系，您复制此高手的订单可以选择跟随高手平仓或立即强行平仓",
                         en: "If you cancel the following relationship, the ordor you following the master can be position closing or compulsory position close.",
-                        vi: "Nếu bạn hủy bỏ mối quan hệ theo dõi, lệnh bạn theo dõi của nhà giao dịch chính có thể là đóng vị thế hoặc vị thế bắt buộc đóng.",
+                        vi: "Nếu bạn hủy bỏ mối quan hệ sao chép, lệnh bạn sao chép của bậc thầy có thể là đóng vị thế hoặc vị thế bắt buộc đóng.",
                         "zh-Hant": "若取消復制關系，您復制此高手的訂單可以選擇跟隨高手平倉或立即強行平倉"
                     },
                     cancelFollowClose: {
                         zh: "取消复制并跟随高手平仓",
                         en: "Cancel and follow the close",
-                        vi: "Hủy và theo dõi đóng lệnh",
+                        vi: "Hủy và sao chép đóng lệnh",
                         "zh-Hant": "取消復制並跟隨高手平倉"
                     },
                     cancelForceFlat: {
@@ -1772,7 +1772,7 @@
                     tip4: {
                         zh: "成为老虎外汇高手，获取20%盈利分成",
                         en: "Become a tigerwit’s master, get 20% profit share",
-                        vi: "Để trở thành nhà giao dịch chính của TigerWit, nhận 20% chia sẻ lợi nhuận",
+                        vi: "Để trở thành bậc thầy của TigerWit, nhận 20% chia sẻ lợi nhuận",
                         "zh-Hant": "成為老虎外匯高手，獲取20%盈利分成"
                     },
                     help: {
@@ -1790,13 +1790,13 @@
                     masterAccount: {
                         zh: "高手账号",
                         en: "Master account",
-                        vi: "Tài khoản Nhà Giao Dịch Chính",
+                        vi: "Tài khoản Bậc Thầy",
                         "zh-Hant": "高手帳號"
                     },
                     masterLevelCommission: {
                         zh: "高手等级&佣金",
                         en: "Master level & Commission",
-                        vi: "Cấp độ của Nhà Giao Dịch Chính và Hoa Hồng",
+                        vi: "Cấp độ của Bậc Thầy và Hoa Hồng",
                         "zh-Hant": "高手等級&傭金"
                     },
                     commission: {
@@ -1844,7 +1844,7 @@
                     follower: {
                         zh: "复制者",
                         en: "Follower",
-                        vi: "Người theo dõi",
+                        vi: "Người sao chép",
                         "zh-Hant": "復制者"
                     },
                     gainCommission: {
@@ -1862,13 +1862,13 @@
                     cancelCopyTransactions: {
                         zh: "取消复制交易",
                         en: "Cancel follow transactions",
-                        vi: "Hủy theo dõi các giao dịch",
+                        vi: "Hủy sao chép các giao dịch",
                         "zh-Hant": "取消復制交易"
                     },
                     cancelCopyFailed: {
                         zh: "取消复制失败",
                         en: "Cancel follow failed",
-                        vi: "Hủy theo dõi thất bại",
+                        vi: "Hủy sao chép thất bại",
                         "zh-Hant": "取消復制失敗"
                     },
                     enterCopyAmount: {
@@ -1898,19 +1898,19 @@
                     remainingCopiableFunds: {
                         zh: "高手剩余可复制金额",
                         en: "Master remaining",
-                        vi: "Nhà giao dịch chính còn lại",
+                        vi: "Bậc Thầy còn lại",
                         "zh-Hant": "高手剩余可復制金額"
                     },
                     remainingCopiableFundsM: {
                         zh: "高手剩余可复制金额：",
                         en: "Master remaining: ",
-                        vi: "Nhà giao dịch chính còn lại",
+                        vi: "Bậc Thầy còn lại",
                         "zh-Hant": "高手剩余可復制金額："
                     },
                     tip9: {
                         zh: "系统将使用跟单专用账号复制高手，无跟单账号复制时将自动生成，所有复制操作均使用该跟单账号进行；",
                         en: "TigerWit’s automated systems allow you to follow a TigerWit Master via your copy account. If you have not yet set up a copy account the system will generate one automatically for you and all following copy trades will beexecuted from this copy account.",
-                        vi: "Hệ thống tự động của TigerWit cho phép bạn theo dõi Nhà Giao Dịch chính của TigerWit qua tài khoản sao chép của bạn. Nếu bạn chưa thiết lập tài khoản sao chép, hệ thống sẽ tự động tạo một tài khoản cho bạn và tất cả các giao dịch sao chép sau sẽ được thực hiện từ tài khoản sao chép này.",
+                        vi: "Hệ thống tự động của TigerWit cho phép bạn sao chép Bậc Thầy của TigerWit qua tài khoản sao chép của bạn. Nếu bạn chưa thiết lập tài khoản sao chép, hệ thống sẽ tự động tạo một tài khoản cho bạn và tất cả các giao dịch sao chép sau sẽ được thực hiện từ tài khoản sao chép này.",
                         "zh-Hant": "系統將使用跟單專用帳號復制高手，無跟單帳號復制時將自動生成，所有復制操作均使用該跟單帳號進行；"
                     },
                     tip10: {
@@ -1952,7 +1952,7 @@
                     copySuccess: {
                         zh: "复制成功",
                         en: "Follow success",
-                        vi: "Theo dõi thành công",
+                        vi: "Sao chép thành công",
                         "zh-Hant": "復制成功"
                     },
                     copyAmountSucc: {
@@ -1964,19 +1964,19 @@
                     tip13: {
                         zh: "跟随高手平仓",
                         en: "Follow master to close positions",
-                        vi: "Theo dõi nhà giao dịch chính để đóng các vị thế",
+                        vi: "Sao chép bậc thầy để đóng các vị thế",
                         "zh-Hant": "跟隨高手平倉"
                     },
                     tip14: {
                         zh: "不跟随平仓",
                         en: "Don’t follow master to close positions",
-                        vi: "Không theo dõi nhà giao dịch chính để đóng các vị thế",
+                        vi: "Không sao chép bậc thầy để đóng các vị thế",
                         "zh-Hant": "不跟隨平倉"
                     },
                     tip15: {
                         zh: "该高手没有持仓订单",
                         en: "The master has no position order",
-                        vi: "Nhà giao dịch chính không có lệnh ",
+                        vi: "Bậc Thầy không có lệnh ",
                         "zh-Hant": "該高手沒有持倉訂單"
                     },
                     detailInformation: {
@@ -1988,7 +1988,7 @@
                     followedMaster: {
                         zh: "所跟高手",
                         en: "Followed master",
-                        vi: "Đã theo dõi nhà giao dịch chính",
+                        vi: "Đã sao chép bậc thầy",
                         "zh-Hant": "所跟高手"
                     },
                     copyAccount: {
@@ -2066,7 +2066,7 @@
                     followerAmount: {
                         zh: "跟随人数",
                         en: "Follower amount",
-                        vi: "Số tiền của người theo dõi",
+                        vi: "Số tiền của người sao chép",
                         "zh-Hant": "跟隨人數"
                     },
                     tip21: {
@@ -2156,7 +2156,7 @@
                     tip25: {
                         zh: "您的账户正在审核中，请等待审核通过后再进行复制操作",
                         en: "Account is under review, please re-follow after submission",
-                        vi: "Tài khoản đang được xem xét, vui lòng theo dõi lại sau khi nộp hồ sơ",
+                        vi: "Tài khoản đang được xem xét, vui lòng sao chép lại sau khi nộp hồ sơ",
                         "zh-Hant": "您的帳護正在審核中，請等待審核通過後再進行復制操作"
                     },
                     tip26: {
@@ -2236,7 +2236,7 @@
                     deducted20Note: {
                         zh: "注：您复制高手的盈利部分将会扣除20%作为佣金给高手。详情请参考：",
                         en: "Note：The 20% profit that you gain by following the master will be deducted as commission. Please refer to: ",
-                        vi: "Lưu ý: 20% lợi nhuận bạn đạt được khi sao chép nhà giao dịch chính sẽ được trừ như là hoa hồng, vui lòng xem phần: ",
+                        vi: "Lưu ý: 20% lợi nhuận bạn đạt được khi sao chép bậc thầy sẽ được trừ như là hoa hồng, vui lòng xem phần: ",
                         "zh-Hant": "註：您復制高手的盈利部分將會扣除20%作為傭金給高手。詳情請慘考："
                     },
                     operation: {
@@ -2272,7 +2272,7 @@
                     copyTrade: {
                         zh: "复制交易",
                         en: "Follow masters' transaction mode",
-                        vi: "Theo dõi nhà giao dịch chính’chế độ giao dịch",
+                        vi: "Sao chép bậc thầy’chế độ giao dịch",
                         "zh-Hant": "復制交易"
                     },
                     cancel: {
@@ -2284,13 +2284,13 @@
                     followOrders: {
                         zh: "跟随持仓",
                         en: "Follow orders",
-                        vi: "Theo dõi các lệnh",
+                        vi: "Sao chép các lệnh",
                         "zh-Hant": "跟隨持倉"
                     },
                     canceledCopy: {
                         zh: "已取消复制",
                         en: "Canceled follow",
-                        vi: "Hủy theo dõi",
+                        vi: "Hủy sao chép",
                         "zh-Hant": "已取消復制"
                     },
                     copyAmount: {
@@ -2368,7 +2368,7 @@
                     followMaster: {
                         zh: "跟随高手",
                         en: "Follow Master",
-                        vi: "Theo dõi Nhà Giao Dịch Chính",
+                        vi: "Sao chép Bậc Thầy",
                         "zh-Hant": "跟隨高手"
                     },
                     openPriceg: {
@@ -2494,13 +2494,13 @@
                     following: {
                         zh: "跟随中",
                         en: "Following",
-                        vi: "Đang theo dõi",
+                        vi: "Đang sao chép",
                         "zh-Hant": "跟隨中"
                     },
                     tip2: {
                         zh: "您还没有跟随过高手",
                         en: "You have not followed the master yet",
-                        vi: "Bạn đã không theo dõi nhà giao dịch chính",
+                        vi: "Bạn đã không sao chép bậc thầy",
                         "zh-Hant": "您還沒有跟隨過高手"
                     },
                     noRecord: {
@@ -2512,7 +2512,7 @@
                     masterPage: {
                         zh: "高手主页",
                         en: "Master Page",
-                        vi: "Trang của nhà giao dịch chính",
+                        vi: "Trang của bậc thầy",
                         "zh-Hant": "高手主頁"
                     },
                     buyEurusd: {
@@ -2676,7 +2676,7 @@
                     historyFollower: {
                         zh: "历史复制者",
                         en: "Accumulated followers",
-                        vi: "Tích lũy những người theo dõi",
+                        vi: "Tích lũy những người sao chép",
                         "zh-Hant": "歷史復制者"
                     }
                 },
@@ -2834,7 +2834,7 @@
                     historyFollow: {
                         zh: "历史复制人数",
                         en: "History Follow",
-                        vi: "Lịch sử Theo Dõi",
+                        vi: "Lịch sử Sao chép",
                         "zh-Hant": "歷史復制人數"
                     },
                     last30DaysAccuracy: {
@@ -2936,7 +2936,7 @@
                     tip1: {
                         zh: "若复制金额低于建议复制金额，当高手下单手数较小时,可能会导致跟单失败。为了保障您的利益，最好填写建议复制金额。",
                         en: "If the copy amount is lower than the recommended amount of replication, when the master single hand count is small, may lead to a single failure. In order to protect your interests, it is best to fill in the recommended copy amount.",
-                        vi: "Nếu số lượng sao chép thấp hơn số lượng sao chép được đề nghị, khi tổng số lượng nhà giao dịch chính nhỏ, có thể dẫn đến một lỗi duy nhất. Để bảo vệ lợi ích của bạn, tốt nhất bạn nên điền số tiền sao chép được đề xuất.",
+                        vi: "Nếu số lượng sao chép thấp hơn số lượng sao chép được đề nghị, khi tổng số lượng bậc thầy nhỏ, có thể dẫn đến một lỗi duy nhất. Để bảo vệ lợi ích của bạn, tốt nhất bạn nên điền số tiền sao chép được đề xuất.",
                         "zh-Hant": "若復制金額低於建議復制金額，當高手下單手數較小時,可能會導致跟單失敗。為了保障您的利益，最好填寫建議復制金額。"
                     },
                     tip2: {
@@ -2948,13 +2948,13 @@
                     tip3: {
                         zh: "复制高手成功",
                         en: "Follow Successful",
-                        vi: "Theo dõi thành công",
+                        vi: "Sao chép thành công",
                         "zh-Hant": "復制高手成功"
                     },
                     cancelFollow: {
                         zh: "解除跟随关系",
                         en: "Cancel Follow",
-                        vi: "Hủy Theo dõi",
+                        vi: "Hủy Sao chép",
                         "zh-Hant": "解除跟隨關系"
                     },
                     currentCopyAmount: {
@@ -2978,19 +2978,19 @@
                     tigerWitCopyAgreements1: {
                         zh: "使用TigerWit复制跟单服务时，请您务必审慎阅读、充分理解以下协议内容：",
                         en: "When you use TigerWit follow service, please make sure to read and fully understand the following contant of agreements: ",
-                        vi: "Khi bạn sử dụng dịch vụ theo dõi của TigerWit, vui lòng đảm bảo rằng bạn đã đọc và thật sự hiểu các mục của thỏa thuận: ",
+                        vi: "Khi bạn sử dụng dịch vụ sao chép của TigerWit, vui lòng đảm bảo rằng bạn đã đọc và thật sự hiểu các mục của thỏa thuận: ",
                         "zh-Hant": "使用TigerWit復制跟單服務時，請您務必審慎閱讀、充分理解以下協議內容："
                     },
                     tigerWitCopyAgreements2: {
                         zh: "1.系统将使用跟单专用账号复制高手，无跟单账号复制时将自动生成，所有复制操作均使用该跟单账号进行；",
                         en: "1. System will use the special copy account to follow masters, the special copy account will be generated if there is no one, and all copy operation will use this special account;",
-                        vi: "Hệ thống sẽ sử dụng tài khoản sao chép đặc biệt để theo dõi nhà giao dịch chính, tài khoản sao chép đặc biệt sẽ được tạo nếu không có ai, và tất cả hoạt động sao chép sẽ sử dụng tài khoản đặc biệt này;",
+                        vi: "Hệ thống sẽ sử dụng tài khoản sao chép đặc biệt để sao chép bậc thầy, tài khoản sao chép đặc biệt sẽ được tạo nếu không có ai, và tất cả hoạt động sao chép sẽ sử dụng tài khoản đặc biệt này;",
                         "zh-Hant": "1.系統將使用跟單專用帳號復制高手，無跟單帳號復制時將自動生成，所有復制操作均使用該跟單帳號進行；"
                     },
                     tigerWitCopyAgreements3: {
                         zh: "2.复制成功后，跟单账号自动跟随高手进行同步开平仓交易；",
                         en: "2. After successful follow, the copy account will open orders with master synchronously;",
-                        vi: "Sauk hi theo dõi thành công, tài khoản sao chép sẽ đồng bộ mở các lệnh với nhà giao dịch chính;",
+                        vi: "Sauk hi sao chép thành công, tài khoản sao chép sẽ đồng bộ mở các lệnh với bậc thầy;",
                         "zh-Hant": "2.復制成功後，跟單帳號自動跟隨高手進行同步開平倉交易；"
                     },
                     tigerWitCopyAgreements4: {
@@ -3002,7 +3002,7 @@
                     tigerWitCopyAgreements5: {
                         zh: "在决定复制高手时，您确认已经考虑了您的整体财务状况，包括财务承诺，并且您了解使用复制跟单服务具有高度投机性并且您可以承受巨大的损失用于复制高手。",
                         en: "Before follow a master, please make sure you already consider your financial status and understand the copy service have highly speculative also could sustain a great loss.",
-                        vi: "Trước khi làm theo một nhà giao dịch chính, hãy chắc chắn rằng bạn đã xem xét tình trạng tài chính của bạn và hiểu các dịch vụ sao chép có tính đầu cơ cao cũng có thể duy trì số lỗ lớn.",
+                        vi: "Trước khi làm theo một bậc thầy, hãy chắc chắn rằng bạn đã xem xét tình trạng tài chính của bạn và hiểu các dịch vụ sao chép có tính đầu cơ cao cũng có thể duy trì số lỗ lớn.",
                         "zh-Hant": "在抉定復制高手時，您確認已經考慮了您的整體材務狀況，包括材務承諾，並且您了解使用復制跟單服務具有高度投機性並且您可以承受巨大的損失用於復制高手。"
                     },
                     tigerWitCopyAgreements6: {
@@ -3032,13 +3032,13 @@
                     tip4: {
                         zh: "指从当前日期开始最近七个自然日交易状况。",
                         en: "Master’s return over previous 7 days of trading.",
-                        vi: "Lợi nhuận của nhà giao dịch chính trong 7 ngày giao dịch trước đó.",
+                        vi: "Lợi nhuận của bậc thầy trong 7 ngày giao dịch trước đó.",
                         "zh-Hant": "指從當前日期開始最近七個自然日交易狀況。"
                     },
                     tip5: {
                         zh: "指该高手最后一次有交易行为的数据统计。",
                         en: "Master’s return over previous trading day.",
-                        vi: "Lợi nhuận của nhà giao dịch chính trong những ngày trước đó.",
+                        vi: "Lợi nhuận của bậc thầy trong những ngày trước đó.",
                         "zh-Hant": "指該高手最後壹次有交易行為的數據統計。"
                     }
                 },
@@ -3522,7 +3522,7 @@
                     followingMaster: {
                         zh: "当前复制高手",
                         en: "Following the master",
-                        vi: "Đang theo dõi nhà giao dịch chính",
+                        vi: "Đang sao chép bậc thầy",
                         "zh-Hant": "當前復制高手"
                     },
                     deductedCommissionsLastMonth: {
@@ -3540,7 +3540,7 @@
                     myFollowingStatus: {
                         zh: "我的复制情况",
                         en: "My Following status",
-                        vi: "Trạng thái theo dõi của tôi",
+                        vi: "Trạng thái sao chép của tôi",
                         "zh-Hant": "我的復制情況"
                     },
                     tp1: {
@@ -3552,7 +3552,7 @@
                     nameMaster: {
                         zh: "高手名称",
                         en: "The name of master",
-                        vi: "Tên nhà giao dịch chính",
+                        vi: "Tên bậc thầy",
                         "zh-Hant": "高手名稱"
                     },
                     deductedCommissions: {
@@ -3582,19 +3582,19 @@
                     cannotCopy: {
                         zh: "无法进行复制操作",
                         en: "Cannot follow",
-                        vi: "Không thể theo dõi",
+                        vi: "Không thể sao chép",
                         "zh-Hant": "無法進行復制操作"
                     },
                     cannotCopy1: {
                         zh: "您的可用复制金额不足，无法复制高手",
                         en: "Available amount is insufficient, cannot follow other master",
-                        vi: "Số tiền có sẵn là không đủ, không thể theo dõi các nhà giao dịch khác",
+                        vi: "Số tiền có sẵn là không đủ, không thể sao chép các nhà giao dịch khác",
                         "zh-Hant": "您的可用復制金額不足，無法復制高手"
                     },
                     cannotCopy2_1: {
                         zh: "高手最低复制金额为",
                         en: "The minimum copy amount of the master is",
-                        vi: "Số tiền sao chép tối thiểu của nhà giao dịch chính là",
+                        vi: "Số tiền sao chép tối thiểu của bậc thầy là",
                         "zh-Hant": "高手最低復制金額為"
                     },
                     cannotCopy2_2: {
@@ -3606,7 +3606,7 @@
                     cannotCopy3: {
                         zh: "您已经是高手了，无法复制其他高手",
                         en: "You are already a master, cannot follow other master",
-                        vi: "Bạn đã là nhà giao dịch chính, không thể theo dõi các nhà giao dịch chính khác",
+                        vi: "Bạn đã là bậc thầy, không thể sao chép các bậc thầy khác",
                         "zh-Hant": "您已經是高手了，無法復制其他高手"
                     },
                     cannotCopy4: {
@@ -3642,13 +3642,13 @@
                     unfollow: {
                         zh: "取消关注",
                         en: "Unfollow",
-                        vi: "Không theo dõi",
+                        vi: "Không sao chép",
                         "zh-Hant": "取消關註"
                     },
                     followed: {
                         zh: "已关注",
                         en: "Followed",
-                        vi: "Đã theo dõi",
+                        vi: "Đã sao chép",
                         "zh-Hant": "已關註"
                     }
                 },
@@ -3788,7 +3788,7 @@
                     tip3: {
                         zh: "提示：您还有正在复制的高手，请取消复制关系后再提现，如有疑问，请联系您的客户经理或联系客服（400 - 809 - 8509）",
                         en: "Notice: You still have following masters,please cancel the follow relationship then withdraw the money If you have any questions, please contact your account manager or contact customer service (400 - 809 - 8509)",
-                        vi: "Lưu ý: Bạn vẫn có quan hệ theo dõi nhà giao dịch chính, vui lòng hủy bỏ mối quan hệ sau đó rút tiền Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với người quản lý tài khoản của bạn hoặc liên hệ với dịch vụ khách hàng (400 - 809 - 8509",
+                        vi: "Lưu ý: Bạn vẫn có quan hệ sao chép bậc thầy, vui lòng hủy bỏ mối quan hệ sau đó rút tiền Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với người quản lý tài khoản của bạn hoặc liên hệ với dịch vụ khách hàng (400 - 809 - 8509",
                         "zh-Hant": "提示：您還有正在復制的高手，請取消復制關系後再提現，如有疑問，請聯系您的客護經理或聯系客服（400 - 809 - 8509）"
                     },
                     tip4: {
@@ -3836,7 +3836,7 @@
                     tip11: {
                         zh: "存在复制关系，提现时系统自动扣除复制金额，若要全部提现，请先手动取消复制关系。",
                         en: "Please cancel the follow relationship, if you want to all withdrawal.",
-                        vi: "Vui lòng hủy bỏ mối quan hệ theo dõi, nếu bạn muốn rút tiền.",
+                        vi: "Vui lòng hủy bỏ mối quan hệ sao chép, nếu bạn muốn rút tiền.",
                         "zh-Hant": "存在復制關系，提現時系統自動扣除復制金額，若要全部提現，請先手動取消復制關系。"
                     },
                     cardNumber: {
@@ -4250,7 +4250,7 @@
                     followMaster: {
                         zh: "逛逛高手榜",
                         en: "Follow the Master",
-                        vi: "Theo dõi Nhà Giao Dịch Chính",
+                        vi: "Sao chép Bậc Thầy",
                         "zh-Hant": "逛逛高手榜"
                     },
                     notice: {
@@ -4610,7 +4610,7 @@
                     goUncopy: {
                         zh: "前往取消复制",
                         en: "Go to unfollow",
-                        vi: "Chuyển đến không theo dõi",
+                        vi: "Chuyển đến không sao chép",
                         "zh-Hant": "前往取消復制"
                     },
                     goDeposit: {
@@ -4864,13 +4864,13 @@
                     masterLevelInstructions: {
                         zh: "高手等级说明",
                         en: "Master Level Instructions",
-                        vi: "Hướng Dẫn Cấp Độ Của Nhà Giao Dịch Chính",
+                        vi: "Hướng Dẫn Cấp Độ Của Bậc Thầy",
                         "zh-Hant": "高手等級說明"
                     },
                     tip1: {
                         zh: "为了最大限度地规避交易风险，老虎外汇根据高手等级限制可复制总额范围：",
                         en: "In order to maximize the risk of dealing with the transaction, the TigerWit according master’s level limit to be followed Total range: ",
-                        vi: "Để tối đa hóa rủi ro giao dịch với giao dịch, TigerWit theo cấp độ của nhà giao dịch chính giới hạn theo phạm vi Tổng:",
+                        vi: "Để tối đa hóa rủi ro giao dịch với giao dịch, TigerWit theo cấp độ của bậc thầy giới hạn theo phạm vi Tổng:",
                         "zh-Hant": "為了最大限度地規避交易風險，老虎外匯根據高手等級限制可復制總額範圍："
                     },
                     tip2: {
@@ -4882,19 +4882,19 @@
                     tip3: {
                         zh: "若当前累计复制资金量达到限额，系统将提醒高手进行账户升级，高手确认并更改账户级别后，用户方能继续复制；",
                         en: "If the current cumulative amount of funds to meet the limit, the system will remind the master to upgrade the account, experts confirm and change the account level, the user can continue to copy",
-                        vi: "Nếu số tiền tích lũy hiện tại của các quỹ để đáp ứng các giới hạn, hệ thống sẽ nhắc nhở nhà giao dịch chính để nâng cấp tài khoản, các chuyên gia xác nhận và thay đổi cấp tài khoản, người dùng có thể tiếp tục sao chép",
+                        vi: "Nếu số tiền tích lũy hiện tại của các quỹ để đáp ứng các giới hạn, hệ thống sẽ nhắc nhở bậc thầy để nâng cấp tài khoản, các chuyên gia xác nhận và thay đổi cấp tài khoản, người dùng có thể tiếp tục sao chép",
                         "zh-Hant": "若當前累計復制資金量達到限額，系統將提醒高手進行帳護升級，高手確認並更改帳護級別後，用護方能繼續復制；"
                     },
                     tip4: {
                         zh: "高手只能使用账户级别内支持的杠杆进行交易，复制者跟随高手进行同杠杆开仓交易。",
                         en: "The master can only use the account level to support the leverage of the transaction, the user to follow the master with the lever to open the transaction.",
-                        vi: "Nhà giao dịch chính chỉ có thể sử dụng cấp độ tài khoản để hỗ trợ đòn bẩy của giao dịch, người dùng phải làm theo chủ với đòn bẩy để mở giao dịch.",
+                        vi: "Bậc Thầy chỉ có thể sử dụng cấp độ tài khoản để hỗ trợ đòn bẩy của giao dịch, người dùng phải làm theo chủ với đòn bẩy để mở giao dịch.",
                         "zh-Hant": "高手只能使用帳護級別內支持的杠桿進行交易，復制者跟隨高手進行同杠桿開倉交易。"
                     },
                     masterLevel: {
                         zh: "高手等级",
                         en: "Master Level",
-                        vi: "Cấp độ nhà giao dịch chính",
+                        vi: "Cấp độ bậc thầy",
                         "zh-Hant": "高手等級"
                     },
                     currentLevel: {
@@ -4984,25 +4984,25 @@
                     tip19: {
                         zh: "高手申请由工作人员人工审核，我们会尽快完成审核并将结果通知您",
                         en: "The master application is manually audited by the staff, and we will complete the review as soon as possible and inform the result",
-                        vi: "Đơn đăng kí nhà giao dịch chính được kiểm tra bởi nhân viên và chúng tôi sẽ hoàn thành việc xem xét càng sớm càng tốt và thông báo kết quả ",
+                        vi: "Đơn đăng kí bậc thầy được kiểm tra bởi nhân viên và chúng tôi sẽ hoàn thành việc xem xét càng sớm càng tốt và thông báo kết quả ",
                         "zh-Hant": "高手申請由工作人員人工審核，我們會盡快完成審核並將結果通知您"
                     },
                     tip20: {
                         zh: "高手申请被拒绝",
                         en: "The master application was rejected",
-                        vi: "Đơn đăng kí nhà giao dịch chính đã bị từ chối ",
+                        vi: "Đơn đăng kí bậc thầy đã bị từ chối ",
                         "zh-Hant": "高手申請被拒絕"
                     },
                     tip21: {
                         zh: "高手申请已通过审核",
                         en: "The master application has been approved",
-                        vi: "Đơn đăng kí nhà giao dịch chính đã được phê duyệt ",
+                        vi: "Đơn đăng kí bậc thầy đã được phê duyệt ",
                         "zh-Hant": "高手申請已通過審核"
                     },
                     tip22: {
                         zh: "恭喜您的高手申请已通过审核！",
                         en: "Congratulations to your master application has been approved!",
-                        vi: "Xin chúc mừng đơn đăng kí nhà giao dịch chính của bạn đã được phê duyệt ",
+                        vi: "Xin chúc mừng đơn đăng kí bậc thầy của bạn đã được phê duyệt ",
                         "zh-Hant": "恭喜您的高手申請已通過審核！"
                     },
                     tip23: {
@@ -5014,7 +5014,7 @@
                     tip24: {
                         zh: "高手申请已成功提交",
                         en: "The master application has been successfully submitted",
-                        vi: "Đơn đăng kí nhà giao dịch chính đã gửi thành công",
+                        vi: "Đơn đăng kí bậc thầy đã gửi thành công",
                         "zh-Hant": "高手申請已成功提交"
                     },
                     tip25: {
@@ -5038,7 +5038,7 @@
                     masterLevels: {
                         zh: "高手类别",
                         en: "Master Level",
-                        vi: "Cấp độ nhà giao dịch chính",
+                        vi: "Cấp độ bậc thầy",
                         "zh-Hant": "高手類別"
                     },
                     last30AaysYield: {
@@ -5062,19 +5062,19 @@
                     tip6: {
                         zh: "为了最大限度地规避交易风险，老虎外汇根据高手的当前跟随金额调整杠杆使用范围：",
                         en: "In order to maximize the risk of dealing with the transaction, the tiger foreign exchange according to the current amount of the master to adjust the use of leverage range: ",
-                        vi: "để tối đa hóa rủi ro giao dịch với giao dịch, sàn giao dịch ngoại hối tiger theo số tiền hiện tại của nhà giao dịch chính để điều chỉnh việc sử dụng phạm vi đòn bẩy: ",
+                        vi: "để tối đa hóa rủi ro giao dịch với giao dịch, sàn giao dịch ngoại hối tiger theo số tiền hiện tại của bậc thầy để điều chỉnh việc sử dụng phạm vi đòn bẩy: ",
                         "zh-Hant": "為了最大限度地規避交易風險，老虎外匯根據高手的當前跟隨金額調整杠桿使用範圍："
                     },
                     tip7: {
                         zh: "当前跟随金额＞$20万，高手可使用100倍、50倍杠杆进行交易",
                         en: "Current amount of follow > $200,000 , master can use 100, 50 times the lever to trade;",
-                        vi: "Số tiền theo dõi hiện tại> 200.000 đô la, tổng thể có thể sử dụng đòn bẩy 100, 50 lần để giao dịch;",
+                        vi: "Số tiền sao chép hiện tại> 200.000 đô la, tổng thể có thể sử dụng đòn bẩy 100, 50 lần để giao dịch;",
                         "zh-Hant": "當前跟隨金額＞$20萬，高手可使用100倍、50倍杠桿進行交易"
                     },
                     tip8: {
                         zh: "当前跟随金额≤$20万，高手可使用全部杠杆进行交易",
                         en: " Current amount of follow ≤ $200,000 , master can use all the leverage to trade;",
-                        vi: "Số tiền hiện tại theo sau ≤ 200.000 đô la, nhà giao dịch chính có thể sử dụng tất cả đòn bẩy để giao dịch;",
+                        vi: "Số tiền hiện tại theo sau ≤ 200.000 đô la, bậc thầy có thể sử dụng tất cả đòn bẩy để giao dịch;",
                         "zh-Hant": "當前跟隨金額≤$20萬，高手可使用全部杠桿進行交易"
                     },
                     masterSystem: {
@@ -5092,13 +5092,13 @@
                     tradeLikeMaster: {
                         zh: "人人都是投资高手",
                         en: "Everyone is the master of investment",
-                        vi: "Mọi người đều là nhà giao dịch chính về đầu tư",
+                        vi: "Mọi người đều là bậc thầy về đầu tư",
                         "zh-Hant": "人人都是投資高手"
                     },
                     clickFollow: {
                         zh: "一键复制",
                         en: "Click to follow",
-                        vi: "Nhấp để theo dõi",
+                        vi: "Nhấp để sao chép",
                         "zh-Hant": "壹鍵復制"
                     },
                     enjoyProfits: {
@@ -5134,7 +5134,7 @@
                     followers: {
                         zh: "历史跟随者",
                         en: "Followers",
-                        vi: "Người theo dõi",
+                        vi: "Người sao chép",
                         "zh-Hant": "歷史跟隨者"
                     },
                     performanceOf: {
@@ -5230,7 +5230,7 @@
                     applyMasterReminder: {
                         zh: "申请高手提醒",
                         en: "Apply for master reminder",
-                        vi: "Lời nhắc Đăng kí nhà giao dịch chính ",
+                        vi: "Lời nhắc Đăng kí bậc thầy ",
                         "zh-Hant": "申請高手提醒"
                     },
                     sureAboutApply: {
@@ -5242,7 +5242,7 @@
                     sureAboutApply1: {
                         zh: "未达成高手申请条件，请继续努力",
                         en: "Did not meet the master application conditions, please keep trying",
-                        vi: "Không đáp ứng các điều kiện đăng ký nhà giao dịch chính, vui lòng tiếp tục thử ",
+                        vi: "Không đáp ứng các điều kiện đăng ký bậc thầy, vui lòng tiếp tục thử ",
                         "zh-Hant": "未達成高手申請條件，請繼續努力"
                     },
                     applicationSubmitted: {
@@ -5254,13 +5254,13 @@
                     copyTrading: {
                         zh: "复制跟单交易模式，人人都是投资高手",
                         en: "With TigerWit’s fully-automated copy-trading technology anyone can be the Master of their own trading",
-                        vi: "Với công nghệ giao dịch sao chép hoàn toàn tự động của TigerWit, bất kỳ ai cũng có thể là Chủ nhân giao dịch của chính họ ",
+                        vi: "Với công nghệ giao dịch sao chép hoàn toàn tự động của TigerWit, bất kỳ ai cũng có thể là Bậc thầy Giao dịch của chính họ ",
                         "zh-Hant": "復制跟單交易模式，人人都是投資高手"
                     },
                     chooseMaster: {
                         zh: "选择高手",
                         en: "Choose a Master",
-                        vi: "Chọn nhà giao dịch chính",
+                        vi: "Chọn Bậc thầy",
                         "zh-Hant": "選擇高手"
                     },
                     clickCopy: {
@@ -5278,31 +5278,31 @@
                     selectMaster: {
                         zh: "系统从三个维度来比较排列出高手列表，可根据自身需求来选择高手：",
                         en: "Select the Master whose trades you wish to follow by comparing their performance using three different measurements: ",
-                        vi: "Chọn Nhà giao dịch chính có giao dịch bạn muốn theo dõi bằng cách so sánh hiệu suất của chúng bằng cách sử dụng ba phép đo khác nhau ",
+                        vi: "Chọn Bậc Thầy có giao dịch bạn muốn sao chép bằng cách so sánh hiệu suất của Họ bằng cách sử dụng ba phép đo khác nhau ",
                         "zh-Hant": "系統從三個維度來比較排列出高手列表，可根據自身需求來選擇高手："
                     },
                     selectMaster_1: {
                         zh: "收益率——高手的整体收益率。",
                         en: "Profitability – a Master’s overall return on investment. The top-ranked Master has generated the greatest overall profit over the selected time-period.",
-                        vi: "Khả năng sinh lời - lợi tức đầu tư tổng thể của Nhà giao dịch chính. Nhà giao dịch chính hàng đầu đã tạo ra lợi nhuận tổng thể lớn nhất trong khoảng thời gian đã chọn.",
+                        vi: "Khả năng sinh lời - lợi tức đầu tư tổng thể của Bậc Thầy. Bậc Thầy hàng đầu đã tạo ra lợi nhuận tổng thể lớn nhất trong khoảng thời gian đã chọn.",
                         "zh-Hant": "收益率——高手的整體收益率。"
                     },
                     selectMaster_2: {
                         zh: "最大跌幅-高手的最大浮动亏损占比。",
                         en: "Stability – a Master’s averaged rate of return. The top-ranked Master has created the greatest profit averaged over the selected time period.",
-                        vi: "Tính ổn định - tỷ lệ hoàn vốn trung bình của Nhà giao dịch chính. Nhà giao dịch chính hàng đầu đã tạo ra lợi nhuận lớn nhất được tính trung bình trong khoảng thời gian đã chọn.",
+                        vi: "Tính ổn định - tỷ lệ hoàn vốn trung bình của Bậc Thầy. Bậc Thầy hàng đầu đã tạo ra lợi nhuận lớn nhất được tính trung bình trong khoảng thời gian đã chọn.",
                         "zh-Hant": "最大跌幅-高手的最大浮動虧損占比。"
                     },
                     selectMaster_3: {
                         zh: "准确率：高手平仓的订单中盈利订单的占比。",
                         en: "Consistency: a Master’s overall ratio of winning to losing trades. The top-ranked Master has the highest ratio of winning to losing trades over the selected time-period.",
-                        vi: "Tính nhất quán: tỷ lệ thắng của tổng thể để thua các giao dịch. Nhà giao dịch chính được xếp hạng cao nhất có tỷ lệ thắng thua cao nhất trong khoảng thời gian đã chọn.",
+                        vi: "Tính nhất quán: tỷ lệ thắng của tổng thể để thua các giao dịch. Bậc Thầy được xếp hạng cao nhất có tỷ lệ thắng thua cao nhất trong khoảng thời gian đã chọn.",
                         "zh-Hant": "準確率：高手平倉的訂單中盈利訂單的占比。"
                     },
                     qualifyMaster: {
                         zh: "成为高手，你将满足以下条件：",
                         en: "To qualify for Master status a trader must have met the following requirements: ",
-                        vi: "Để hội đủ điều kiện cho trạng thái Nhà giao dịch chính, nhà giao dịch phải đáp ứng các yêu cầu sau:",
+                        vi: "Để hội đủ điều kiện cho trạng thái Bậc Thầy, nhà giao dịch phải đáp ứng các yêu cầu sau:",
                         "zh-Hant": "成為高手，妳將滿足以下條件："
                     },
                     qualifyMaster_1: {
@@ -5352,13 +5352,13 @@
                     tip7: {
                         zh: "您当前登录账号存在跟随关系，系统已自动将账号身份定义为：",
                         en: "Your current login account has a follow relationship, and the system has automatically defined the account identity as: ",
-                        vi: "tài khoản đăng nhập hiện tại của chúng tôi có mối quan hệ theo dõi và hệ thống đã tự động xác định danh tính tài khoản là: ",
+                        vi: "tài khoản đăng nhập hiện tại của chúng tôi có mối quan hệ sao chép và hệ thống đã tự động xác định danh tính tài khoản là: ",
                         "zh-Hant": "您當前登錄帳號存在跟隨關系，系統已自動將帳號身份定義為："
                     },
                     masterAccount: {
                         zh: "高手账号",
                         en: "Master account",
-                        vi: "tài khoản nhà giao dịch chính",
+                        vi: "tài khoản bậc thầy",
                         "zh-Hant": "高手帳號"
                     },
                     copyAccount: {
@@ -5394,13 +5394,13 @@
                     tip3: {
                         zh: "仅用于高手跟单；",
                         en: "Only used for following masters;",
-                        vi: "Chỉ được sử dụng để theo dõi những nhà giao dịch chính",
+                        vi: "Chỉ được sử dụng để sao chép những bậc thầy",
                         "zh-Hant": "僅用於高手跟單；"
                     },
                     applyToMaster: {
                         zh: "申请成为高手。",
                         en: "Apply to be a master.",
-                        vi: "Đăng kí làm nhà giao dịch chính",
+                        vi: "Đăng kí làm bậc thầy",
                         "zh-Hant": "申請成為高手。"
                     },
                     tip4: {
@@ -5932,7 +5932,7 @@
                     openLiveAccountTip4: {
                         zh: "复制高手获得收益",
                         en: "Get profit by following masters.",
-                        vi: "Nhận lợi nhuận bằng cách theo dõi các bậc thầy.",
+                        vi: "Nhận lợi nhuận bằng cách sao chép các bậc thầy.",
                         "zh-Hant": "復制高手獲得收益"
                     },
                     openLiveAccountTip5: {
@@ -6005,13 +6005,13 @@
                     openAcount5: {
                         zh: "",
                         en: "Copy-trade by following a Master",
-                        vi: "Sao chép giao dịch bằng cách theo dõi một Nhà Giao Dịch Chính",
+                        vi: "Sao chép giao dịch bằng cách sao chép một Bậc Thầy",
                         "zh-Hant": ""
                     },
                     openAcount6: {
                         zh: "",
                         en: "Become a Master and share your followers’ profits",
-                        vi: "Trở thành một Nhà giao dịch chính và chia sẻ lợi nhuận của người theo dõi của bạn",
+                        vi: "Trở thành một Bậc Thầy và chia sẻ lợi nhuận của người sao chép của bạn",
                         "zh-Hant": ""
                     },
                     openAcount7: {
@@ -6408,13 +6408,13 @@
                     tip10: {
                         zh: "您已是高手，不能再修改头像",
                         en: "You already are a master, cannot modify the profile photo",
-                        vi: "Bạn đã là nhà giao dịch chính, không thể sửa đổi hình ảnh đại diện",
+                        vi: "Bạn đã là bậc thầy, không thể sửa đổi hình ảnh đại diện",
                         "zh-Hant": "您已是高手，不能再修改頭像"
                     },
                     tip11: {
                         zh: "您已是高手，暂不能修改基本资料",
                         en: "You already are a master, cannot modify the profile photo",
-                        vi: "Bạn đã là nhà giao dịch chính, không thể sửa đổi hình ảnh đại diện ",
+                        vi: "Bạn đã là bậc thầy, không thể sửa đổi hình ảnh đại diện ",
                         "zh-Hant": "您已是高手，暫不能修改基本資料"
                     },
                     bindNewEmailSucc: {
@@ -6651,7 +6651,7 @@
                 copy: {
                     zh: "复制",
                     en: "Follow",
-                    vi: "Làm Theo",
+                    vi: "Sao chép",
                     "zh-Hant": "復制"
                 },
                 noData: {

@@ -126,15 +126,13 @@
 }
 
 @mixin displayFlex() {
-    display: box;  /*（伸缩盒最老版本）*/
-    display: -webkit-box;  /* iOS 6-, Safari 3.1-6 */
-    display: -webkit-flex; /* Chrome */
-    display: -moz-box;     /* Firefox 19 */
-    display: -ms-flexbox;   
-    display: flex;  /*flex容器*/
+    display: -webkit-box;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box;     /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox;  /* 混合版本语法: IE 10 */
+    display: -webkit-flex; /* 新版本语法: Chrome 21+ */
+    display: flex;         /* 新版本语法: Opera 12.1, Firefox 22+ */
 }
 @mixin flex($num) {
-    -prefix-box-flex: $num; 
     -webkit-box-flex: $num; 
     -webkit-flex: $num; 
     -moz-box-flex: $num; 
