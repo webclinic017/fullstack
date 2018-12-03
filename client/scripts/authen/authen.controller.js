@@ -7,13 +7,15 @@
         .controller('AuthenInvestInfoController', AuthenInvestInfoController)
         .controller('AuthenCompleteController', AuthenCompleteController)
         .controller('AuthenRealnameController', AuthenRealnameController)
+        .controller('AuthenAddressController', AuthenAddressController)
         .controller('AuthenSubmitController', function () { })
         .controller('AuthenSuccessController', function () { });
 
     AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state', '$stateParams', '$timeout', '$modal', '$layer'];
     AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account', '$location', '$modal'];
     AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval', '$location', '$modal', '$cookies'];
-    AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location', '$layer'];
+    AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
+    AuthenAddressController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
 
     // 主控制器
     function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout, $modal, $layer) {
@@ -28,6 +30,7 @@
                 '4': 'realname',     // 审核拒绝 完善资料信息
                 "5": "submit",       // 待审核 -> 审核中页面
                 "6": 'success',      // 审核通过
+                "7": 'address',      // 真实地址
                 "10": 'success',     // 审核通过
             }
         }
@@ -928,59 +931,57 @@
             showErr('gender');
             showErr('birthday');
 
-            if (!$scope.readyToUpload.hasOwnProperty('front')) {
-                showErr('idFront');
-                return
-            }
-
-            if ($scope.realnameInfo.id_type.value == 0 && !$scope.readyToUpload.hasOwnProperty('back')) {
-                showErr('idBack');
-                return
-            }
-
-            if ($scope.realnameForm.$invalid) {
-                return
-            }
-
-            if (!$scope.realnameInfo.year18 && $scope.realnameInfo.id_type.value == 0) {
-                layer.msg($scope.lang.text("tigerWitID.settings.tip13"))
-                return
-            }
-            $scope.clickable = false;
-
-            // 提交身份信息
-            account.updataId({
-                id_no: $scope.realnameInfo.id_num,
-                idcard_type: $scope.realnameInfo.id_type.value,
-                real_name: $scope.realnameInfo.realname,
-                gender: $scope.realnameInfo.gender.value,
-                birth: $scope.realnameInfo.birthday,
-                is_live: $scope.personal.is_live
-            }).then(function (data) {
-                if (!data.is_succ || data.data.id_no_exists) {
-                    layer.msg(data.message || $scope.lang.text("tigerWitID.settings.idNumExists"))
-                    $scope.clickable = true;
-                } else {
-                    sa.track('New_Realname');
-                    sa.track('New_uploadcard');
-                    /*上传图片*/
-                    paperUpdate();
+          
+            if(twoDecide()) {
+                if ($scope.realnameForm.$invalid) {
+                    return
                 }
-            })
+
+                if (!$scope.realnameInfo.year18 && $scope.realnameInfo.id_type.value == 0) {
+                    layer.msg($scope.lang.text("tigerWitID.settings.tip13"))
+                    return
+                }
+                $scope.clickable = false;
+
+                // 提交身份信息
+                account.updataId({
+                    id_no: $scope.realnameInfo.id_num,
+                    idcard_type: $scope.realnameInfo.id_type.value,
+                    real_name: $scope.realnameInfo.realname,
+                    gender: $scope.realnameInfo.gender.value,
+                    birth: $scope.realnameInfo.birthday,
+                    is_live: $scope.personal.is_live
+                }).then(function (data) {
+                    if (!data.is_succ || data.data.id_no_exists) {
+                        layer.msg(data.message || $scope.lang.text("tigerWitID.settings.idNumExists"))
+                        $scope.clickable = true;
+                    } else {
+                        sa.track('New_Realname');
+                        sa.track('New_uploadcard');
+                        /*上传图片*/
+                        paperUpdate();
+                    }
+                })
+            }
         }
         // 更新证件
         function updatePaper(){
+            if(twoDecide()) {
+                $scope.clickable = false;
+                paperUpdate();
+            }
+        }
+        function twoDecide() {
             if (!$scope.readyToUpload.hasOwnProperty('front')) {
                 showErr('idFront');
-                return
+                return false;
             }
 
-            if ($scope.realnameInfo.id_type.value == 0 && !$scope.readyToUpload.hasOwnProperty('back')) {
+            if (($scope.realnameInfo.id_type.value == 0 || $scope.realnameInfo.id_type.value == 5 || $scope.realnameInfo.id_type.value == 4) && !$scope.readyToUpload.hasOwnProperty('back')) {
                 showErr('idBack');
-                return
+                return false;
             }
-            $scope.clickable = false;
-            paperUpdate();
+            return true;
         }
         function paperUpdate(){
             angular.forEach($scope.readyToUpload, function (data, index, array) {
@@ -1038,6 +1039,46 @@
                         }
                     })
                 }
+            }
+        }
+    }
+
+    // Address
+    function AuthenAddressController($scope, $state, $modal, validator, account, $timeout) {
+        $scope.backErr = {
+            show: false,
+            msg: ''
+        }
+        $scope.clickable = true;
+        $scope.addressImg = undefined;
+        $scope.uploadAddress = uploadAddress;
+        function uploadAddress(){
+            if($scope.addressImg){
+                $scope.clickable = false;
+                account.setUploadAddressProve({file: $scope.addressImg}).then(function (data) {
+                    $scope.clickable = true;
+                    if(!data) return;
+                    if (data.is_succ) {
+                        // 向authenController发送信息
+                        $scope.$emit('goState', data.data);
+                    } else {
+                        $scope.backErr.show = true;
+                        $scope.backErr.msg = data.message;
+
+                        $timeout(function () {
+                            $scope.backErr.show = false;
+                            $scope.backErr.msg = '';
+                        }, 2000);
+                    }
+                })
+            }else {
+                $scope.backErr.show = true;
+                $scope.backErr.msg = $scope.lang.text('tigerWitID.authen.pUploadAddress');
+
+                $timeout(function () {
+                    $scope.backErr.show = false;
+                    $scope.backErr.msg = '';
+                }, 2000);
             }
         }
     }

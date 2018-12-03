@@ -864,6 +864,56 @@
                         "zh-Hant": ""
                     }
                 },
+                authen: {
+                    proofAddress: {
+                        zh: "上传地址证明",
+                        en: "Proof of Address",
+                        vi: "Địa chỉ xác thực",
+                        "zh-Hant": "上傳地址證明"
+                    },
+                    acceptFollow: {
+                        zh: "我们将接受以下文件：",
+                        en: "We will accept the following documents:",
+                        vi: "Chúng tôi sẽ chấp nhận những tài liệu sau:",
+                        "zh-Hant": "我們將接受以下文件："
+                    },
+                    utilityBill: {
+                        zh: "电费单（水，煤气，电）",
+                        en: "Utility Bill (water, gas, electricity)",
+                        vi: "Hóa đơn tiện ích (nước, gas, điện)",
+                        "zh-Hant": "電費單（水，煤氣，電）"
+                    },
+                    landlineTel: {
+                        zh: "固定电话费",
+                        en: "Landline telephone bill",
+                        vi: "Điện thoại cố định",
+                        "zh-Hant": "固定電話費"
+                    },
+                    bankStatement: {
+                        zh: "银行对帐单",
+                        en: "Bank statement",
+                        vi: "Bảng sao kê ngân hàng",
+                        "zh-Hant": "銀行對帳單"
+                    },
+                    noCan: {
+                        zh: "该文件不应超过3个月。 我们不接受手机账单，信用卡账单，发票或收据。",
+                        en: "The document should not be no more than 3 months old. We cannot accept mobile phone bills, credit card bills, invoices or receipts.",
+                        vi: "Tài liệu không quá 3 tháng. Chúng tôi không chấp nhận hóa đơn điện thoại, hoá đơn thẻ tín dụng, hóa đơn hoặc biên nhận.",
+                        "zh-Hant": "該文件不應超過3個月。我們不接受手機賬單，信用卡賬單，發票或收據。"
+                    },
+                    uploadAddress: {
+                        zh: "上传地址证明",
+                        en: "Upload the proof of address",
+                        vi: "Tải lên bằng chứng địa chỉ ",
+                        "zh-Hant": "上傳地址證明"
+                    },
+                    pUploadAddress: {
+                        zh: "请上传地址证明",
+                        en: "Please upload the proof of address",
+                        vi: "Vui lòng tải lên bằng chứng địa chỉ",
+                        "zh-Hant": "請上傳地址證明"
+                    }
+                },
                 myAccount: {
                     title: {
                         zh: "账户概况",
@@ -6445,7 +6495,7 @@
                         zh: "大陆居民身份证",
                         en: "Mainland resident identity card",
                         vi: "Chứng minh nhân dân đại lục",
-                        "zh-Hant": "大六居民身份證"
+                        "zh-Hant": "大陸居民身份證"
                     },
                     gAPermit: {
                         zh: "港澳居民来往内地通行证",
@@ -6457,7 +6507,7 @@
                         zh: "台湾居民来往大陆通行证 ",
                         en: "Mainland travel permit for Taiwan residents",
                         vi: "Giấy phép du lịch đại lục cho cư dân Đài Loan ",
-                        "zh-Hant": "臺灣居民來往大六通行證 "
+                        "zh-Hant": "臺灣居民來往大陸通行證 "
                     },
                     passport: {
                         zh: "护照",

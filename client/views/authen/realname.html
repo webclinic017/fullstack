@@ -197,7 +197,7 @@
                 <div class="upload_id_card" tw-upload-id-card>
                     <i class="upload_id_card__icon fa fa-camera"></i>
                     <h3 class="upload_id_card__title">
-                        {{(realnameInfo.id_type.value == '0' || realnameInfo.id_type.value == '5') ? lang.text('tigerWitID.myAccount.uploadFrontSide') : lang.text('tigerWitID.wallet.clickUploadDocuments') }}
+                        {{(realnameInfo.id_type.value == '0' || realnameInfo.id_type.value == '5' || realnameInfo.id_type.value == '4') ? lang.text('tigerWitID.myAccount.uploadFrontSide') : lang.text('tigerWitID.wallet.clickUploadDocuments') }}
                     </h3>
     
                     <input class="upload_id_card__input" ng-click="hideErr('idFront')" name="file" type="file" accept="image/jpeg,image/png" data-face="front">
@@ -219,7 +219,7 @@
                 </div>
             </div>
     
-            <div class="col-xs-6" ng-if="realnameInfo.id_type.value == '0' || realnameInfo.id_type.value == '5'">
+            <div class="col-xs-6" ng-if="realnameInfo.id_type.value == '0' || realnameInfo.id_type.value == '5' || realnameInfo.id_type.value == '4'">
                 <div class="upload_id_card" tw-upload-id-card>
                     <i class="upload_id_card__icon fa fa-camera"></i>
                     <h2 class="upload_id_card__title">

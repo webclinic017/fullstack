@@ -1,0 +1,67 @@
+
+<div class="authen_content ctn center"">
+    <div class="authen_title">
+        <h2>{{lang.text('tigerWitID.authen.proofAddress')}}</h2>
+        <p class="authen_content__tip">{{lang.text('tigerWitID.authen.acceptFollow')}}</p>
+        <p class="authen_content__tip">{{lang.text('tigerWitID.authen.utilityBill')}}</p>
+        <p class="authen_content__tip">{{lang.text('tigerWitID.authen.landlineTel')}}</p>
+        <p class="authen_content__tip">{{lang.text('tigerWitID.authen.bankStatement')}}</p><br>
+        <p class="authen_content__tip">{{lang.text('tigerWitID.authen.noCan')}}</p>
+    </div>
+    <div class="kyc mg-tp-40">
+        <div class="row">
+            <div class="col-xs-6">
+                <div class="upload_id_card">
+                    <i class="upload_id_card__icon fa fa-camera"></i>
+                    <h2 class="upload_id_card__title">
+                        {{lang.text('tigerWitID.authen.uploadAddress')}}
+                    </h2>
+                    <div tw-upload-file-base64 data-file-name="addressImg"></div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="authen_card_eg">
+            <p class="tit">{{lang.text('tigerWitID.myAccount.cardEgTitle')}}</p>
+            <ul class="clearfix">
+                <li class="item fl text-center">
+                    <img src="/white_label/icons/authen-address-1.png" alt="">
+                    <p>{{lang.text('tigerWitID.myAccount.cardEgTip1')}}</p>
+                </li>
+                <li class="item fl text-center">
+                    <img src="/white_label/icons/authen-address-2.png" alt="">
+                    <p>{{lang.text('tigerWitID.myAccount.cardEgTip2')}}</p>
+                </li>
+                <li class="item fl text-center">
+                    <img src="/white_label/icons/authen-address-3.png" alt="">
+                    <p>{{lang.text('tigerWitID.myAccount.cardEgTip3')}}</p>
+                </li>
+                <li class="item fl text-center">
+                    <img src="/white_label/icons/authen-address-4.png" alt="">
+                    <p>{{lang.text('tigerWitID.myAccount.cardEgTip4')}}</p>
+                </li>
+            </ul>
+        </div>
+        <p class="text-left mg-tp-15 font-dark">
+            {{lang.text('tigerWitID.myAccount.tip26')}}
+        </p>
+        <div class="text-center mg-tp-50">
+            <div ng-show="backErr.show">
+                <p class="alert-system">
+                    {{ backErr.msg }}
+                </p>
+            </div>
+            <div class="btn_wrapper text-left">
+                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="clickable" ng-click="uploadAddress()">
+                    {{lang.text('tigerWitID.submit')}}
+                </button>
+
+                <a class="btn btn-sm tw-btn-capsule-gradient" ng-if="!clickable">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    {{lang.text('tigerWitID.submitting')}}
+                </a>
+            </div>    
+        </div>
+    </div>
+</div>
