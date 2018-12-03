@@ -23,7 +23,7 @@
     padding-top: 150px;
     background-position: center center;
     background-size: cover;
-    @include img-normal($image-path-base + "login_bg_new2.jpg");
+    @include img-normal($image-path-base + "login_bg_new3.jpg");
 
 }
 @include b(account_login_box) {
