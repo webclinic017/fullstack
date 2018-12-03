@@ -50,6 +50,24 @@
 
     }
 
+    //设置邮箱
+    function getEmailPhone (ele) {
+        if ($.cookie('sysMessage')) {
+            $(ele).html(JSON.parse($.cookie('sysMessage')).email);
+        } else {
+            var d = new Date();
+            d.setTime(d.getTime() + (1*24*60*60*1000));
+            publicRequest('getEmailPhone', 'GET').then(function (data) {
+                // console.log(data);
+                if (!data) return;
+                if (data.is_succ) {
+                  $(ele).html(data.data.email);
+                  document.cookie = 'sysMessage=' + JSON.stringify(data.data) + '; path=/; domain=.tigerwit.com; expires='+d.toUTCString();
+                }
+            });
+        }
+    }
+
     /*判断是否在APP中*/
     function isInTiger() {
         var userPlatForm = window.navigator.userAgent;

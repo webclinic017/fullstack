@@ -14,7 +14,7 @@
                 <p class="font-decoration font-bold-light"><%= lang.text('agment_tip1')%> </p>
                 <p class="font-decoration font-bold-light"><%= lang.text('agment_tip2')%>  </p>
                 <p class="font-decoration font-bold-light"><%= lang.text('agment_tip3')%>  </p>
-                <p><%= lang.text('agment_tip4')%>  </p>
+                <p><%= lang.text('agment_tip4')%>{{sysMessage.email}}</p>
                 <p><span class="font-bold-light"><%= lang.text('agment_tip5')%></span> <%= lang.text('agment_tip6')%> </p>
                 <p class="text-indent6"><%= lang.text('agment_tip7')%> </p>
                 <p class="text-indent6"><%= lang.text('agment_tip8')%> </p>
@@ -79,7 +79,7 @@
                 <p class="font-decoration font-bold-light"><%= lang.text('agment_tip2')%>  </p>
                 <p class="font-decoration font-bold-light"><%= lang.text('agment_tip3')%>  </p>
                 <p class="br_gap"></p>
-                <p><%= lang.text('agment_tip4')%>  </p>
+                <p><%= lang.text('agment_tip4')%> <span class="sys_message_email"></span> </p>
                 <p class="br_gap"></p>
                 <p><span class="font-bold-light"><%= lang.text('agment_tip5')%></span> <%= lang.text('agment_tip6')%> </p>
                 <p class=""><%= lang.text('agment_tip7')%> </p>
@@ -179,6 +179,7 @@
 
         window.openH5AgmentModal = function (code, callback) {
             // 100402(new) 100403(old)
+            getEmailPhone(".sys_message_email");
             $('.agment_mdl_con__detail').css('max-height', innerSize().height * 0.6 + "px")
             var layMap = {
                 "100402": {

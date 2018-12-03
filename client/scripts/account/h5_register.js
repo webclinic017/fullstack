@@ -19,12 +19,12 @@
     //     set_token();
     // }, 300000);
 
-    // setTimeout(function(){
-    //     openH5AgmentModal(100402, function(resolve, e){
-    //         toRegister('is_agree');
-    //         layer.close(resolve.layIndex)
-    //     })
-    // }, 500)
+    setTimeout(function(){
+        openH5AgmentModal(100402, function(resolve, e){
+            toRegister('is_agree');
+            layer.close(resolve.layIndex)
+        })
+    }, 500)
 
     // 获取phonecode，默认值为 86
     var areaCode = '86'

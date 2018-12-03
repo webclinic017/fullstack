@@ -28,11 +28,11 @@
         };
         $scope.area_id = ''; // 1为国内，2为国际区
         // test
-        // openWebAgmentModal(100403, function(resolve, e){
-        //     // this 当前点击按钮
-        //     console.log(this, resolve, e)
-        //     layer.close(resolve.layIndex)
-        // })
+        openWebAgmentModal(100402, function(resolve, e){
+            // this 当前点击按钮
+            console.log(this, resolve, e)
+            layer.close(resolve.layIndex)
+        })
 
 
         $scope.account = {

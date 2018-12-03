@@ -85,7 +85,7 @@
     var tabList=[];
     var listType = $(".m_agreement_common").attr("data-list-type");
 
-    getEmailPhone();
+    getEmailPhone(".sys_message_email");
     setTabList();
     var html=bt('template_tab_list',{
         tabList: tabList
@@ -123,23 +123,6 @@
         var t = $(document).find("[data-action="+type+"]").offset().top - 10;
         $("body,html").animate({ scrollTop: t }, 200);
     });
-
-    function getEmailPhone () {
-        if ($.cookie('sysMessage')) {
-            $(".sys_message_email").html(JSON.parse($.cookie('sysMessage')).email);
-        } else {
-            var d = new Date();
-            d.setTime(d.getTime() + (1*24*60*60*1000));
-            publicRequest('getEmailPhone', 'GET').then(function (data) {
-                // console.log(data);
-                if (!data) return;
-                if (data.is_succ) {
-                  $(".sys_message_email").html(data.data.email);
-                  document.cookie = 'sysMessage=' + JSON.stringify(data.data) + '; path=/; domain=.tigerwit.com; expires='+d.toUTCString();
-                }
-            });
-        }
-    }
 
     function setTabList () {
         var lst = agreementList[listType][nodeResponseInfo.currentLang].split(',');
