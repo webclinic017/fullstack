@@ -34,6 +34,7 @@
         $scope.logout = logout;
         $scope.reloadLanguage = reloadLanguage;
         $scope.openDredgeMdl = openDredgeMdl;
+        $scope.getEmailPhone = getEmailPhone;
         var globalScope = $scope;
 
         window.$scope = $scope;
@@ -241,9 +242,9 @@
             localStorage["allowUserCookie"] = 'allow';
         }
         //获取邮箱电话等信息
-        function getEmailPhone() {
-            console.log($cookies["sysMessage"]);
-            if ($cookies["sysMessage"]) {
+        function getEmailPhone(force_update) {
+            // console.log($cookies["sysMessage"]);
+            if (!force_update && $cookies["sysMessage"]) {
                 $rootScope.sysMessage = JSON.parse($cookies["sysMessage"]);
             } else {
                 var d = new Date();
