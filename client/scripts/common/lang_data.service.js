@@ -1145,32 +1145,32 @@
                     },
                     auditHourM: {
                         zh: "审核时间：",
-                        en: "Audit hour: ",
-                        vi: "Giờ kiểm toán",
+                        en: " ",
+                        vi: " ",
                         "zh-Hant": "審核時間："
                     },
                     tip16: {
                         zh: "工作日10:00-18:00：将在30分钟左右完成审核",
-                        en: "Work day 10:00-18:00: the review will be completed in about 30 minutes",
-                        vi: "Ngày làm việc 10: 00-18: 00: quá trình đánh giá sẽ hoàn thành sau khoảng 30 phút",
+                        en: "We are pleasured to inform you that your information has been submitted. ",
+                        vi: "Chúng tôi rất vui được thông báo với bạn rằng thông tin của bạn đã được gửi. ",
                         "zh-Hant": "工作日10:00-18:00：將在30分鐘左右完成審核"
                     },
                     tip17: {
                         zh: "工作日18:00以后：将在21:00、23:00统一审核；23:00后认证的将在次日审核",
-                        en: "Working days after 18:00: it will be reviewed at 21:00 and 23:00.",
-                        vi: "Ngày làm việc sau 18:00: sẽ được xem xét vào lúc 21:00 và 23:00",
+                        en: "Our compliance team will verify your account within 24 hours.",
+                        vi: "Nhóm giám sát của chúng tôi sẽ xác minh tài khoản của bạn trong vòng 24 giờ.",
                         "zh-Hant": "工作日18:00以後：將在21:00、23:00統壹審核；23:00後認證的將在次日審核"
                     },
                     tip18: {
                         zh: "非工作日时间：将在10:00、16:00、22:00统一审核；22:00后认证的将在次日审核",
-                        en: "Certification after 23:00 will be reviewed the next day",
-                        vi: "Chứng nhận sau 23:00 sẽ được xem xét vào ngày hôm sau ",
+                        en: " ",
+                        vi: " ",
                         "zh-Hant": "非工作日時間：將在10:00、16:00、22:00統壹審核；22:00後認證的將在次日審核"
                     },
                     tip19: {
                         zh: "请留意查询您的审核状态。",
-                        en: "Please check your audit status.",
-                        vi: "Vui lòng kiểm tra trạng thái kiểm tra của bạn.",
+                        en: "If there are more information to be required you will be contacted by phone or email.",
+                        vi: "Nếu có thêm thông tin cần thiết, bạn sẽ được liên lạc qua điện thoại hoặc email.",
                         "zh-Hant": "請留意查詢您的審核狀態。"
                     },
                     accountNumber: {
