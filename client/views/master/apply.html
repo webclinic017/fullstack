@@ -49,7 +49,7 @@
             {{lang.text('tigerWitID.master.tip19')}}
         </div>
         <ul class="space_apply__lst" ng-if="(applyInfo.data.status == 0) || (applyInfo.data.status == -1)">
-            <li ng-repeat="condit in applyInfo.data.condition">
+            <li ng-repeat="condit in applyInfo.data.condition" class="item-center">
                 <i class="not_complete" ng-if="condit.status == 0"><span>{{lang.text('tigerWitID.noMetNeed')}}</span></i>
                 <span>{{ condit.text }}</span>
             </li>

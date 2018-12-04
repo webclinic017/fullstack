@@ -22,7 +22,7 @@
                             &nbsp;&nbsp;{{ order.cmd_name }}
                         </span>
                         <span class="" ng-show="!lang.isEnglishArea()">
-                            {{ order.symbol_cn }}
+                            {{ order.symbol_cn + ' ('+ order.symbol +')' }}
                         </span>
                         <span class="" ng-show="lang.isEnglishArea()">
                             {{ order.symbol }}

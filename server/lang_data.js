@@ -244,13 +244,13 @@ module.exports = function () {
         navbar2: {
             en: "Copy trading",
             zh: "复制跟单",
-            vi: "Copy Giao Dịch",
+            vi: "Copy giao dịch",
             "zh-Hant": "復制跟單"
         },
         navbar3: {
             en: "Follow a Master",
             zh: "高手跟单",
-            vi: "Theo dõi một Nhà Giao Dịch Chính",
+            vi: "Sao chép Bậc thầy",
             "zh-Hant": "高手跟單"
         },
         navbar4: {
@@ -366,7 +366,7 @@ module.exports = function () {
         foot4: {
             en: "Learning center",
             zh: "学习中心",
-            vi: "Trung tâm học tập",
+            vi: "Hướng dẫn",
             "zh-Hant": "學習中心"
         },
         foot7: {
@@ -408,7 +408,7 @@ module.exports = function () {
         foot15: {
             en: "Trade fees",
             zh: "交易费用",
-            vi: "Liên hệ chúng tôi",
+            vi: "Phí giao dịch",
             "zh-Hant": "交易費用"
         },
         footlang: {
@@ -518,7 +518,7 @@ module.exports = function () {
         forex4: {
             en: "TigerWit with simple, quick, efficient and safe cash depositing and withdrawal mode, TigerWit renders services of all major currency pairs and cross currency pairs. With the provision of more flexible, transparent and competitive foreign exchange agreement, TigerWit also provides a creative order following mode and serves as a bond to link investment masters and common investors.",
             zh: "TigerWit密切关注全球市场。出入金模式简单、快捷、高效、安全，涵盖所有主流货币对及交叉货币对。我们提供更灵活、更透明、更具竞争力的外汇合约，同时您还可以享受到TigerWit所提供的创新性的跟单交易模式，是连接高手和普通投资者的纽带。",
-            vi: "TigerWit với chế độ rút tiền và kí quỹ đơn giản, nhanh chóng, hiệu quả và an toàn, TigerWit hiển thị các dịch vụ của tất cả các cặp tiền tệ chính và cặp tiền tệ chéo. Với việc cung cấp thỏa thuận ngoại hối linh hoạt, minh bạch và cạnh tranh hơn, TigerWit cũng mang đến bước đột phá khi đặt lệnh một cách sáng tạo theo trạng thái và đóng vai trò như một sợi dây để kết nối các nhà giao dịch chính và các nhà đầu tư phổ biến.",
+            vi: "TigerWit với chế độ rút tiền và kí quỹ đơn giản, nhanh chóng, hiệu quả và an toàn, TigerWit hiển thị các dịch vụ của tất cả các cặp tiền tệ chính và cặp tiền tệ chéo. Với việc cung cấp thỏa thuận ngoại hối linh hoạt, minh bạch và cạnh tranh hơn, TigerWit cũng mang đến bước đột phá khi đặt lệnh một cách sáng tạo theo trạng thái và đóng vai trò như một sợi dây để kết nối các bậc thầy và các nhà đầu tư phổ biến.",
             "zh-Hant": "TigerWit密切關註全球市場。出入金模式簡單、快捷、高效、安全，涵蓋所有主流貨幣對及交叉貨幣對。我們提供更靈活、更透明、更具競爭力的外匯合約，同時您還可以享受到TigerWit所提供的創新性的跟單交易模式，是連接高手和普通投資者的紐帶。"
         },
         forex5: {
@@ -542,13 +542,13 @@ module.exports = function () {
         forex9: {
             en: "Follow masters' move",
             zh: "复制跟单交易",
-            vi: "Theo dõi hành động của nhà giao dịch chính",
+            vi: "Sao chép hành động của bậc thầy",
             "zh-Hant": "復制跟單交易"
         },
         forex10: {
             en: "TigerWit provides advanced and creative full-automatic order following system and gathers numerous investment masters with great profit-making capabilities. The investors have the ability to gain the earnings of the same proportion with the masters through following them. Masters can also gain more earnings through increasing their followers continuously.",
             zh: "TigerWit提供业内最先进，最具创新性的全自动复制跟单系统，并且汇聚众多颇具盈利能力的投资高手，投资者可通过复制高手交易获得同比例投资收益。高手也可通过不断增加跟随者而获得更多收益。",
-            vi: "TigerWit cung cấp hệ thống theo thứ tự hoàn toàn tiên tiến, đầy sáng tạo và tập hợp nhiều nhà đầu tư chuyên nghiệp với khả năng tạo lợi nhuận lớn. Các nhà đầu tư có khả năng để đạt được thu nhập của cùng một tỷ lệ với các nhà đầu tư chính thông qua việc theo dõi họ. Các nhà đầu tư chính cũng có thể có được nhiều thu nhập hơn thông qua việc tăng số lượng người theo dõi của họ liên tục.",
+            vi: "TigerWit cung cấp hệ thống theo thứ tự hoàn toàn tiên tiến, đầy sáng tạo và tập hợp nhiều nhà đầu tư chuyên nghiệp với khả năng tạo lợi nhuận lớn. Các nhà đầu tư có khả năng để đạt được thu nhập của cùng một tỷ lệ với các nhà đầu tư chính thông qua việc Sao chép họ. Các nhà đầu tư chính cũng có thể có được nhiều thu nhập hơn thông qua việc tăng số lượng người Sao chép của họ liên tục.",
             "zh-Hant": "TigerWit提供業內最先進，最具創新性的全自動復制跟單系統，並且匯聚眾多頗具盈利能力的投資高手，投資者可通過復制高手交易獲得同比例投資收益。高手也可通過不斷增加跟隨者而獲得更多收益。"
         },
         forex13: {
@@ -717,7 +717,7 @@ module.exports = function () {
         oil3: {
             en: "In addition to Brent crude oil and West Texas crude oil, both of which sees the largest trading volume in the world, TigerWit also provides US natural gas contracts.TigerWit wholeheartedly provides the clients with the flexible leverage, competitive point difference advantages and also obtains the quotation data sources from world-leading banks in the financial sector. Meanwhile, it also renders an innovative order following system.",
             zh: "TigerWit除了提供两大全球交易量最大的原油：布伦特原油和西德州原油合约以外，同时提供美国天然气合约。TigerWit竭诚为客户提供灵活的杠杆、具有竞争优势的点差，来源于全球金融界领先银行的报价。同时也提供创新性的跟单系统服务。",
-            vi: "Ngoài dầu thô Brent và dầu thô Tây Texas, cả hai đều có khối lượng giao dịch lớn nhất trên thế giới, TigerWit cũng cung cấp các hợp đồng khí đốt tự nhiên của Mỹ.TigerWit luôn cố gắng cung cấp cho khách hàng mức đòn bẩy linh hoạt,  điểm chênh lệch thấp và cũng có được báo giá với nguồn dữ liệu từ các ngân hàng hàng đầu thế giới trong lĩnh vực tài chính. Trong khi đó, điều này cũng cho thấy một hệ thống theo dõi lệnh tiên tiến hơn.",
+            vi: "Ngoài dầu thô Brent và dầu thô Tây Texas, cả hai đều có khối lượng giao dịch lớn nhất trên thế giới, TigerWit cũng cung cấp các hợp đồng khí đốt tự nhiên của Mỹ.TigerWit luôn cố gắng cung cấp cho khách hàng mức đòn bẩy linh hoạt,  điểm chênh lệch thấp và cũng có được báo giá với nguồn dữ liệu từ các ngân hàng hàng đầu thế giới trong lĩnh vực tài chính. Trong khi đó, điều này cũng cho thấy một hệ thống sao chép lệnh tiên tiến hơn.",
             "zh-Hant": "TigerWit除了提供兩大全球交易量最大的原油：布倫特原油和西德州原油合約以外，同時提供美國天然氣合約。TigerWit竭誠為客戶提供靈活的杠桿、具有競爭優勢的點差，來源於全球金融界領先銀行的報價。同時也提供創新性的跟單系統服務。"
         },
         oil4: {
@@ -777,13 +777,13 @@ module.exports = function () {
         oil15: {
             en: "Follow masters' move",
             zh: "复制跟单交易",
-            vi: "Theo dõi hành động của nhà giao dịch chính",
+            vi: "Sao chép hành động của bậc thầy",
             "zh-Hant": "復制跟單交易"
         },
         oil16: {
             en: "For inexperienced investors in crude oil trading, the move of the masters in crude oil trading can be followed directly, through which earnings of the same proportion can be realized and the trading risks of beginner investors are also reduced.",
             zh: "针对于一些对原油交易不熟悉的投资者，可选择原油交易的高手直接复制，即可同比例盈利，降低了初级投资者的交易风险。",
-            vi: "Đối với các nhà đầu tư thiếu kinh nghiệm trong giao dịch với dầu thô,  các hành động của các chủ đầu tư trong giao dịch dầu thô có thể được theo dõi trực tiếp, qua đó giúp tạo ra thu nhập với cùng một tỷ lệ và rủi ro giao dịch của các nhà đầu tư mới bắt đầu cũng giảm.",
+            vi: "Đối với các nhà đầu tư thiếu kinh nghiệm trong giao dịch với dầu thô,  các hành động của các chủ đầu tư trong giao dịch dầu thô có thể được sao chép trực tiếp, qua đó giúp tạo ra thu nhập với cùng một tỷ lệ và rủi ro giao dịch của các nhà đầu tư mới bắt đầu cũng giảm.",
             "zh-Hant": "針對於壹些對原油交易不熟悉的投資者，可選擇原油交易的高手直接復制，即可同比例盈利，降低了初級投資者的交易風險。"
         },
         oil17: {
@@ -988,13 +988,13 @@ module.exports = function () {
         metal15: {
             en: "Follow masters' move",
             zh: "复制跟单交易",
-            vi: "Theo dõi hành động của nhà giao dịch chính",
+            vi: "Sao chép hành động của bậc thầy",
             "zh-Hant": "復制跟單交易"
         },
         metal16: {
             en: "TigerWit provides advanced and creative full-automatic order following system and gathers numerous investment masters with great profit-making capabilities. The investors have the ability to gain the earnings of the same proportion with the masters through following them. Masters can also gain more earnings through increasing their followers continuously.",
             zh: "TigerWit提供业内先进创新的全自动订单复制跟单系统，并且汇聚众多颇具盈利能力的投资高手，投资者可通过复制高手交易获得同比例投资收益。高手也可以通过不断增加跟随者而获得更多收益。",
-            vi: "TigerWit cung cấp hện thống theo dõi lệnh toàn diện, cao cấp và hoàn toàn tự động, cùng với việc tập hợp hàng loạt các nhà đầu tư chính với khả năng sinh lời lớn. Các nhà đầu tư có khả năng kiếm được lợi nhuận với mức tỷ lệ tương tụ như các nhà giao dịch chính thông qua việc theo dõi họ. Các nhà giao dịch chính cũng có thể kiếm được nhiều lợi nhuận thông qua việc liên tục tăng số lượng người theo dõi của họ.",
+            vi: "TigerWit cung cấp hện thống sao chép lệnh toàn diện, cao cấp và hoàn toàn tự động, cùng với việc tập hợp hàng loạt các nhà đầu tư chính với khả năng sinh lời lớn. Các nhà đầu tư có khả năng kiếm được lợi nhuận với mức tỷ lệ tương tụ như các bậc thầy thông qua việc sao chép họ. Các bậc thầy cũng có thể kiếm được nhiều lợi nhuận thông qua việc liên tục tăng số lượng người sao chép của họ.",
             "zh-Hant": "TigerWit提供業內先進創新的全自動訂單復制跟單系統，並且匯聚眾多頗具盈利能力的投資高手，投資者可通過復制高手交易獲得同比例投資收益。高手也可以通過不斷增加跟隨者而獲得更多收益。"
         },
         metal17: {
@@ -1163,13 +1163,13 @@ module.exports = function () {
         cfd14: {
             en: "Follow masters' move",
             zh: "复制跟单交易",
-            vi: "Theo dõi hành động của nhà giao dịch chính",
+            vi: "Sao chép hành động của bậc thầy",
             "zh-Hant": "復制跟單交易"
         },
         cfd15: {
             en: "TigerWit provides advanced and creative full-automatic order following system and gathers numerous investment masters with great profit-making capabilities. The investors have the ability to gain the earnings of the same proportion with the masters through following them. Masters can also gain more earnings through increasing their followers continuously.",
             zh: "TigerWit提供业内先进创新的全自动订单复制跟单系统，并且汇聚众多颇具盈利能力的投资高手，投资者可通过复制高手交易获得同比例投资收益。高手也可以通过不断增加跟随者而获得更多收益。",
-            vi: "TigerWit cung cấp một hệ thống theo dõi lệnh tiên tiến và đột phá hoàn toàn tự động và tập hợp nhiều nhà giao dịch chính với khả năng sinh lời lớn. Các nhà đầu tư có khả năng đạt được mức lợi nhuận với cùng một tỷ lệ với nhà giao dịch chính thông qua việc theo dõi họ. Những nhà giao dịch chính cũng có thể tăng thu nhập của mình thông qua việc liên tục tăng số lượng người theo dõi của họ.",
+            vi: "TigerWit cung cấp một hệ thống sao chép lệnh tiên tiến và đột phá hoàn toàn tự động và tập hợp nhiều bậc thầy với khả năng sinh lời lớn. Các nhà đầu tư có khả năng đạt được mức lợi nhuận với cùng một tỷ lệ với bậc thầy thông qua việc sao chép họ. Những bậc thầy cũng có thể tăng thu nhập của mình thông qua việc liên tục tăng số lượng người sao chép của họ.",
             "zh-Hant": "TigerWit提供業內先進創新的全自動訂單復制跟單系統，並且匯聚眾多頗具盈利能力的投資高手，投資者可通過復制高手交易獲得同比例投資收益。高手也可以通過不斷增加跟隨者而獲得更多收益。"
         },
         cfd16: {
@@ -1578,25 +1578,25 @@ module.exports = function () {
         copyRule2_1: {
             zh: "系统将使用跟单专用账号复制高手，无跟单账号复制时将自动生成，所有复制操作均使用该跟单账号进行；",
             en: "The system will use the specific account to copy Master, will be automatically generated when no copy account, all copy operations are performed using the specific copy account;",
-            vi: "Hệ thống sẽ sử dụng tài khoản cụ thể để sao chép nhà giao dịch chính, sẽ được tạo tự động khi không có tài khoản sao chép, tất cả các thao tác sao chép được thực hiện bằng tài khoản sao chép cụ thể;",
+            vi: "Hệ thống sẽ sử dụng tài khoản cụ thể để sao chép bậc thầy, sẽ được tạo tự động khi không có tài khoản sao chép, tất cả các thao tác sao chép được thực hiện bằng tài khoản sao chép cụ thể;",
             "zh-Hant": "系統將使用跟單專用賬號復制高手，無跟單賬號復制時將自動生成，所有復制操作均使用該跟單賬號進行；"
         },
         copyRule2_2: {
             zh: "复制高手",
             en: "Follow the Master",
-            vi: "Theo dõi nhà giao dịch chính",
+            vi: "Sao chép bậc thầy",
             "zh-Hant": "復制高手"
         },
         copyRule2_2M: {
             zh: "复制高手：",
             en: "Follow the Master: ",
-            vi: "Theo dõi nhà giao dịch chính: ",
+            vi: "Sao chép bậc thầy: ",
             "zh-Hant": "復制高手："
         },
         copyRule2_3: {
             zh: "您最多可以复制 10 位高手。每位交易高手的复制金额不同，您可以根据自己的账户情况选择高手进行复制。",
             en: "You can follow up to 10 masters. Each master has a different level of copying, and you can choose to copy it according to your account.",
-            vi: "Bạn có thể theo dõi tối đa 10 nhà giao dịch chính. Mỗi tổng thể có một mức sao chép khác nhau và bạn có thể chọn sao chép theo tài khoản của mình.",
+            vi: "Bạn có thể sao chép tối đa 10 bậc thầy. Mỗi tổng thể có một mức sao chép khác nhau và bạn có thể chọn sao chép theo tài khoản của mình.",
             "zh-Hant": "您最多可以復制 10 位高手。每位交易高手的復制金額不同，您可以根據自己的賬戶情況選擇高手進行復制。"
         },
         copyRule3: {
@@ -1620,31 +1620,31 @@ module.exports = function () {
         copyRule5: {
             zh: "* 可用复制资金=余额-已复制高手资金",
             en: "* Available copy funds = balance - copied master funds",
-            vi: "* Các quỹ sao chép có sẵn = Số dư – sao chép quỹ nhà giao dịch chính",
+            vi: "* Các quỹ sao chép có sẵn = Số dư – sao chép quỹ bậc thầy",
             "zh-Hant": "* 可用復制資金=余額-已復制高手資金"
         },
         copyRule6: {
             zh: "复制高手开仓",
             en: "Follow master open positions",
-            vi: "Theo dõi các lệnh đang mở của nhà giao dịch chính",
+            vi: "Sao chép các lệnh đang mở của bậc thầy",
             "zh-Hant": "復制高手開倉"
         },
         copyRule7: {
             zh: "1. 复制成功后，高手开仓，账户跟随高手同步开仓。",
             en: "1. Once the user has successfully followed the master, the master will open position and the user's account will begin to copy the master.",
-            vi: "1. Sau khi người dùng đã theo dõi thành công nhà giao dịch chính, nhà giao dịch chính sẽ mở các lệnh mở và tài khoản của người dùng sẽ bắt đầu sao chép nhà giao dịch chính.",
+            vi: "1. Sau khi người dùng đã sao chép thành công bậc thầy, bậc thầy sẽ mở các lệnh mở và tài khoản của người dùng sẽ bắt đầu sao chép bậc thầy.",
             "zh-Hant": "1. 復制成功後，高手開倉，賬戶跟隨高手同步開倉。"
         },
         copyRule8: {
             zh: "* 用户跟单手数=（高手订单手数*跟单者资金）/高手余额",
             en: "* User open positions = (master's orders lot * follower funds) / master's balance",
-            vi: "* Các vị thế mở của người dùng = (số lượng đơn đặt hàng của nhà giao dịch chính* số tiền theo dõi) / số dư của tổng thể",
+            vi: "* Các vị thế mở của người dùng = (số lượng đơn đặt hàng của bậc thầy* số tiền sao chép) / số dư của tổng thể",
             "zh-Hant": "* 用戶跟單手數=（高手訂單手數*跟單者資金）/高手余額"
         },
         copyRule9: {
             zh: "用户开仓可用保证金=跟单者资金-跟随高手的持仓单占用保证金+跟随高手持仓单的浮动的盈亏，",
             en: "User open trading available margin = follower funds - follow margin + follow profit and loss.",
-            vi: "Người dùng mở giao dịch ký quỹ có sẵn = quỹ đi theo dõi - theo margin + theo lãi và lỗ.",
+            vi: "Người dùng mở giao dịch ký quỹ có sẵn = quỹ đi sao chép - theo margin + theo lãi và lỗ.",
             "zh-Hant": "用戶開倉可用保證金=跟單者資金-跟隨高手的持倉單占用保證金+跟隨高手持倉單的浮動的盈虧，"
         },
         copyRule10: {
@@ -1662,25 +1662,25 @@ module.exports = function () {
         copyRule12: {
             zh: "3. 账户只复制高手开仓订单，高手的挂单交易不会复制，挂单成交会跟随开仓。",
             en: "3. User's account only follows the master's open positions, the master's pending order transaction will not be copied. When the pending order becomes position, the user's account will follow the open position.",
-            vi: "3. Tài khoản của người dùng chỉ theo vị thế mở của nhà giao dịch chính, giao dịch lệnh chờ của nhà giao dịch chính sẽ không được sao chép. Khi lệnh chờ trở thành vị trí, tài khoản của người dùng sẽ theo vị thế mở.",
+            vi: "3. Tài khoản của người dùng chỉ theo vị thế mở của bậc thầy, giao dịch lệnh chờ của bậc thầy sẽ không được sao chép. Khi lệnh chờ trở thành vị trí, tài khoản của người dùng sẽ theo vị thế mở.",
             "zh-Hant": "3. 賬戶只復制高手開倉訂單，高手的掛單交易不會復制，掛單成交會跟隨開倉。"
         },
         copyRule13: {
             zh: "跟随高手平仓",
             en: "Follow the master to close the position",
-            vi: "Thực hiện theo các nhà giao dịch chính để đóng vị thế",
+            vi: "Thực hiện theo các bậc thầy để đóng vị thế",
             "zh-Hant": "跟隨高手平倉"
         },
         copyRule14: {
             zh: "1. 复制成功后，高手平仓，账户会跟随高手同步平仓，该笔订单盈亏将会记入复制金额内。",
             en: "1. After successfully follow the master, when the master closes the position, the user's account will follow to close the position, and the order profit and loss will be recorded in the copy amount.",
-            vi: "1. Sau khi thực hiện thành công nhà giao dịch chính, khi nhà giao dịch chính đóng vị trí, tài khoản của người dùng sẽ theo sau để đóng vị trí, và số tiền lãi và thua lỗ sẽ được ghi vào số tiền sao chép.",
+            vi: "1. Sau khi thực hiện thành công bậc thầy, khi bậc thầy đóng vị trí, tài khoản của người dùng sẽ theo sau để đóng vị trí, và số tiền lãi và thua lỗ sẽ được ghi vào số tiền sao chép.",
             "zh-Hant": "1. 復制成功後，高手平倉，賬戶會跟隨高手同步平倉，該筆訂單盈虧將會記入復制金額內。"
         },
         copyRule15: {
             zh: "2. 您可以手动平仓复制高手的订单，不会取消复制关系。",
             en: "2. You can manually close the follow position without canceling the following relationship.",
-            vi: "2. Bạn có thể đóng vị trí theo dõi theo cách thủ công mà không hủy bỏ mối quan hệ sau.",
+            vi: "2. Bạn có thể đóng vị trí sao chép theo cách thủ công mà không hủy bỏ mối quan hệ sau.",
             "zh-Hant": "2. 您可以手動平倉復制高手的訂單，不會取消復制關系。"
         },
         copyRule16: {
@@ -1692,37 +1692,37 @@ module.exports = function () {
         copyRule17: {
             zh: "4. 您取消复制关系时，可自主选择强行平仓或者跟随高手平仓正在持仓中订单。",
             en: "4. When you cancel the follow relationship, you can choose to force the position to close or follow the master to close the order in the position.",
-            vi: "4. Khi bạn hủy bỏ mối quan hệ tiếp theo, bạn có thể chọn để buộc vị trí đóng hoặc theo nhà giao dịch chính để đóng lệnh ở vị trí đó.",
+            vi: "4. Khi bạn hủy bỏ mối quan hệ tiếp theo, bạn có thể chọn để buộc vị trí đóng hoặc theo bậc thầy để đóng lệnh ở vị trí đó.",
             "zh-Hant": "4. 您取消復制關系時，可自主選擇強行平倉或者跟隨高手平倉正在持倉中訂單。"
         },
         copyRule18: {
             zh: "5. 用户复制高手所产生的盈利或亏损，网站不承担任何责任。",
             en: "5. TigerWit does not bear any responsibility for the profit or loss generated by the user following the master.",
-            vi: "5. TigerWit không chịu bất kỳ trách nhiệm nào về lợi nhuận hoặc thua lỗ do người dùng tạo ra theo nhà giao dịch chính.",
+            vi: "5. TigerWit không chịu bất kỳ trách nhiệm nào về lợi nhuận hoặc thua lỗ do người dùng tạo ra theo bậc thầy.",
             "zh-Hant": "5. 用戶復制高手所產生的盈利或虧損，網站不承擔任何責任。"
         },
         copyRule19: {
             zh: "复制高手盈利分成",
             en: "Following master profit commission",
-            vi: "Theo dõi lợi nhuận hoa hồng của nhà giao dịch chính",
+            vi: "Sao chép lợi nhuận hoa hồng của bậc thầy",
             "zh-Hant": "復制高手盈利分成"
         },
         copyRule20: {
             zh: "1. 每月1日，系统对您跟随高手的情况进行统计并结算，扣除跟随该高手盈利部分的20%作为该高手的分成；每月10日，系统对高手进行分成结算。",
             en: "1. On the 1st of each month, the system counts and settles the user's follow situation, deducting 20% of the profit part as the commission of the master; on the 10th of each month, the system settles the commission for the master.",
-            vi: "1. Vào ngày đầu tiên của mỗi tháng, hệ thống sẽ đếm và giải quyết tình huống theo dõi của người dùng, trừ 20% phần lợi nhuận là hoa hồng của nhà giao dịch chính; vào ngày 10 mỗi tháng, hệ thống sẽ thanh toán hoa hồng cho nhà giao dịch chính.",
+            vi: "1. Vào ngày đầu tiên của mỗi tháng, hệ thống sẽ đếm và giải quyết tình huống sao chép của người dùng, trừ 20% phần lợi nhuận là hoa hồng của bậc thầy; vào ngày 10 mỗi tháng, hệ thống sẽ thanh toán hoa hồng cho bậc thầy.",
             "zh-Hant": "1. 每月1日，系統對您跟隨高手的情況進行統計並結算，扣除跟隨該高手盈利部分的20%作為該高手的分成；每月10日，系統對高手進行分成結算。"
         },
         copyRule21: {
             zh: "2. 您取消复制关系选择强制平仓时，系统将对跟随该高手的所有订单进行统计并结算，扣除盈利部分的20%作为该高手分成。",
             en: "2. If the user cancels the follow relationship and selects 'Cancel following and force-close your order', the system will count and settle all orders following the master, deducting 20% of the profit portion as the commission of the master.",
-            vi: "2. Nếu người dùng hủy bỏ mối quan hệ tiếp theo và chọn 'Huỷ theo sau và buộc đóng lệnh của bạn', hệ thống sẽ tính và thanh toán tất cả các đơn đặt hàng theo chủ, trừ 20% phần lợi nhuận như hoa hồng của nhà giao dịch chính.",
+            vi: "2. Nếu người dùng hủy bỏ mối quan hệ tiếp theo và chọn 'Huỷ theo sau và buộc đóng lệnh của bạn', hệ thống sẽ tính và thanh toán tất cả các đơn đặt hàng theo chủ, trừ 20% phần lợi nhuận như hoa hồng của bậc thầy.",
             "zh-Hant": "2. 您取消復制關系選擇強制平倉時，系統將對跟隨該高手的所有訂單進行統計並結算，扣除盈利部分的20%作為該高手分成。"
         },
         copyRule22: {
             zh: "3. 您取消复制关系选择跟随高手平仓时，系统将在跟随该高手的所有订单全部平仓后，对跟随该高手所有订单进行统计并结算，扣除总盈利的20%作为该高手分成。",
             en: "3. If the user cancels the following relationship and selects 'Cancel following but do not close order', when all the positions of following the master are closed, the system will count all the orders following the master and settle, deducting 20% of the profit portion as the commission of the master.",
-            vi: "3. Nếu người dùng hủy bỏ mối quan hệ sau và chọn 'Hủy theo dõi nhưng không đóng thứ tự', khi tất cả các vị trí theo sau tổng thể được đóng, hệ thống sẽ tính tất cả các đơn đặt hàng theo nhà giao dịch chính và thanh toán, trừ 20% phần lợi nhuận như ủy ban của nhà giao dịch chính.",
+            vi: "3. Nếu người dùng hủy bỏ mối quan hệ sau và chọn 'Hủy sao chép nhưng không đóng thứ tự', khi tất cả các vị trí theo sau tổng thể được đóng, hệ thống sẽ tính tất cả các đơn đặt hàng theo bậc thầy và thanh toán, trừ 20% phần lợi nhuận như ủy ban của bậc thầy.",
             "zh-Hant": "3. 您取消復制關系選擇跟隨高手平倉時，系統將在跟隨該高手的所有訂單全部平倉後，對跟隨該高手所有訂單進行統計並結算，扣除總盈利的20%作為該高手分成。"
         },
         copyRule23: {
@@ -1734,7 +1734,7 @@ module.exports = function () {
         copyRule24: {
             zh: "在决定复制高手时，您确认已经考虑了您的整体财务状况，包括财务承诺，并且您了解使用复制跟单服务具有高度投机性并且您可以承受巨大的损失用于复制高手。请注意，我们无法就任何特定投资，账户，投资组合或策略的表现提供任何保证。",
             en: "When deciding to follow masters, you confirm that you have considered your overall financial situation, including financial commitments, and that you understand that using copy-to-order services is highly speculative and you can afford potential losses for copying masters. Please note that we are unable to provide any guarantees regarding the performance of any particular investment, account, portfolio or strategy.",
-            vi: "Khi quyết định theo dõi nhà giao dịch chính, bạn xác nhận rằng bạn đã xem xét tình hình tài chính tổng thể của mình, bao gồm các cam kết tài chính và bạn hiểu rằng việc sử dụng dịch vụ sao chép theo đơn đặt hàng mang tính đầu cơ cao và bạn có khả năng thua lỗ. Xin lưu ý rằng chúng tôi không thể cung cấp bất kỳ đảm bảo nào về hiệu suất của bất kỳ khoản đầu tư, tài khoản, danh mục đầu tư hoặc chiến lược cụ thể nào.",
+            vi: "Khi quyết định sao chép bậc thầy, bạn xác nhận rằng bạn đã xem xét tình hình tài chính tổng thể của mình, bao gồm các cam kết tài chính và bạn hiểu rằng việc sử dụng dịch vụ sao chép theo đơn đặt hàng mang tính đầu cơ cao và bạn có khả năng thua lỗ. Xin lưu ý rằng chúng tôi không thể cung cấp bất kỳ đảm bảo nào về hiệu suất của bất kỳ khoản đầu tư, tài khoản, danh mục đầu tư hoặc chiến lược cụ thể nào.",
             "zh-Hant": "在決定復制高手時，您確認已經考慮了您的整體財務狀況，包括財務承諾，並且您了解使用復制跟單服務具有高度投機性並且您可以承受巨大的損失用於復制高手。請註意，我們無法就任何特定投資，賬戶，投資組合或策略的表現提供任何保證。"
         },
         copyRule25: {
@@ -2758,7 +2758,7 @@ module.exports = function () {
         amtLegal20: {
             zh: "您提供给我们的任何个人信息将被保密对待，只共享给本公司、本公司的关联方和本公司的业务伙伴，除非出于法规或法律程序要求，否则不会披露给任何第三方。本公司网站使用的追踪系统会搜集您所访问网页、您如何发现此网站、网站访问频率等详细资料；本公司获取这类资料，是为了改善本公司网站的内容，TigerWit也可通过适当的方式与您联系，为您提供本公司认为对您有用的信息。",
             en: "Any personal information you provide us will be treated as confidential and shared only within the Company, its affiliates and its business partners and will not be disclosed to any third party except under any regulatory or legal proceedings. Web site tracking systems may also collect data detailing the pages you have accessed, how you discovered this site, the frequency of visits and so on. The information we obtain is used to improve the content of our web site and may be used by us to contact you, by any appropriate means, and to provide you with any information we believe may be useful to you.",
-            vi: "Bất kỳ thông tin cá nhân nào bạn cung cấp cho chúng tôi sẽ được coi là bí mật và chỉ được chia sẻ trong Công ty, các chi nhánh và các đối tác kinh doanh của Công ty và sẽ không được tiết lộ cho bất kỳ bên thứ ba nào ngoại trừ trường hợp có bất kỳ thủ tục quy định hoặc pháp lý nào được tiến hành. Hệ thống theo dõi trang web cũng có thể thu thập dữ liệu chi tiết các trang bạn đã truy cập, cách bạn biết đến trang web này, tần suất truy cập, v.v. Thông tin chúng tôi nhận được được sử dụng để cải thiện nội dung trang web của chúng tôi và có thể được chúng tôi sử dụng để liên lạc với bạn, bằng bất kỳ phương tiện phù hợp nào và cung cấp cho bạn bất kỳ thông tin nào mà chúng tôi tin rằng có thể hữu ích cho bạn.",
+            vi: "Bất kỳ thông tin cá nhân nào bạn cung cấp cho chúng tôi sẽ được coi là bí mật và chỉ được chia sẻ trong Công ty, các chi nhánh và các đối tác kinh doanh của Công ty và sẽ không được tiết lộ cho bất kỳ bên thứ ba nào ngoại trừ trường hợp có bất kỳ thủ tục quy định hoặc pháp lý nào được tiến hành. Hệ thống sao chép trang web cũng có thể thu thập dữ liệu chi tiết các trang bạn đã truy cập, cách bạn biết đến trang web này, tần suất truy cập, v.v. Thông tin chúng tôi nhận được được sử dụng để cải thiện nội dung trang web của chúng tôi và có thể được chúng tôi sử dụng để liên lạc với bạn, bằng bất kỳ phương tiện phù hợp nào và cung cấp cho bạn bất kỳ thông tin nào mà chúng tôi tin rằng có thể hữu ích cho bạn.",
             "zh-Hant": "您提供給我們的任何個人信息將被保密對待，只共享給本公司、本公司的關聯方和本公司的業務夥伴，除非出於法規或法律程序要求，否則不會披露給任何第三方。本公司網站使用的追蹤系統會搜集您所訪問網頁、您如何發現此網站、網站訪問頻率等詳細資料；本公司獲取這類資料，是為了改善本公司網站的內容，TigerWit也可通過適當的方式與您聯系，為您提供本公司認為對您有用的信息。"
         },
         amtLegal21: {
@@ -4156,7 +4156,7 @@ module.exports = function () {
         amtRisk25: {
             zh: "5.您有责任监控自己未平仓头寸所需的保证金，为避免强平，您可能需要为账户补充资金。",
             en: "5.It is your responsibility to monitor the required margin of your open positions and in order to avoid a stop-out you may have to fund your Account.",
-            vi: "5.Bạn có trách nhiệm theo dõi biên độ bắt buộc của các vị thế mở của mình và để tránh bị ngừng, bạn có thể phải chuyển tiền vào Tài khoản của mình.",
+            vi: "5.Bạn có trách nhiệm sao chép biên độ bắt buộc của các vị thế mở của mình và để tránh bị ngừng, bạn có thể phải chuyển tiền vào Tài khoản của mình.",
             "zh-Hant": "5.您有責任監控自己未平倉頭寸所需的保證金，為避免強平，您可能需要為賬戶補充資金。"
         },
         amtRisk26: {
@@ -4336,7 +4336,7 @@ module.exports = function () {
         amtCookie14: {
             zh: "本公司网站使用的追踪系统会搜集您所访问网页、您如何发现此网站、网站访问频率等详细资料；本公司获取这类资料，是为了改善本公司网站的内容，TigerWit 也可能通过适当的方式与您联系，为您提供本公司认为对您有用的信息。",
             en: "Tracking systems used on the Firm’s site(s) may collect data detailing the pages you have accessed, how you discovered this site, the frequency of visits etc; this information is obtained in order to improve the content of the Firm’s site(s) and may also be used by TigerWit to contact you, through an appropriate mean, and provide you with any information the Firm believes to be useful.",
-            vi: "Các hệ thống theo dõi được sử dụng trên (các) trang web của Công ty có thể thu thập dữ liệu chi tiết các trang bạn đã truy cập, cách bạn khám phá trang web này, tần suất truy cập, v.v. thông tin này thu được để cải thiện nội dung của (các) trang web của Công ty và cũng có thể được TigerWit sử dụng để liên hệ với bạn, thông qua một phương tiện thích hợp và cung cấp cho bạn bất kỳ thông tin nào mà Công ty cho là hữu ích.",
+            vi: "Các hệ thống sao chép được sử dụng trên (các) trang web của Công ty có thể thu thập dữ liệu chi tiết các trang bạn đã truy cập, cách bạn khám phá trang web này, tần suất truy cập, v.v. thông tin này thu được để cải thiện nội dung của (các) trang web của Công ty và cũng có thể được TigerWit sử dụng để liên hệ với bạn, thông qua một phương tiện thích hợp và cung cấp cho bạn bất kỳ thông tin nào mà Công ty cho là hữu ích.",
             "zh-Hant": "本公司網站使用的追蹤系統會搜集您所訪問網頁、您如何發現此網站、網站訪問頻率等詳細資料；本公司獲取這類資料，是為了改善本公司網站的內容，TigerWit 也可能通過適當的方式與您聯系，為您提供本公司認為對您有用的信息。"
         },
         amtCookie15: {
@@ -4384,7 +4384,7 @@ module.exports = function () {
         amtCookie22: {
             zh: "TigerWit 出于统计的目的设置持久 cookie。持久cookie 可帮助本公司追踪和确定位置以及访问TigerWit 网站的用户的偏好，从而提升我们的服务体验。",
             en: "TigerWit sets a persistent cookie for statistical purposes. Persistent cookies also enable the Firm to track and target the location and the interests of users that access the TigerWit site(s) and to enhance the experience of services offered.",
-            vi: "TigerWit đặt một cookie liên tục cho các mục đích thống kê. Cookie liên tục cũng cho phép Công ty theo dõi và nhắm mục tiêu vị trí và sở thích của người dùng truy cập (các) trang web TigerWit và để nâng cao trải nghiệm của các dịch vụ được cung cấp.",
+            vi: "TigerWit đặt một cookie liên tục cho các mục đích thống kê. Cookie liên tục cũng cho phép Công ty sao chép và nhắm mục tiêu vị trí và sở thích của người dùng truy cập (các) trang web TigerWit và để nâng cao trải nghiệm của các dịch vụ được cung cấp.",
             "zh-Hant": "TigerWit 出於統計的目的設置持久 cookie。持久cookie 可幫助本公司追蹤和確定位置以及訪問TigerWit 網站的用戶的偏好，從而提升我們的服務體驗。"
         },
         amtCookie23: {
@@ -5596,7 +5596,7 @@ module.exports = function () {
         amtStatement3: {
             zh: "我同意并特此授权TigerWit作为我的委托人，自我点击“同意”此项授权之时起，以我的名义代我行使交易之权利，并同意采用跟单方式跟随我自选的“交易高手”的信号进行交易，由此产生的一切责任和风险均由我个人承担。",
             en: "I agree and hereby appoint TigerWit as my consignor, which will exercise the trading right on behalf of me after I clicked \"Agree\", and agree to make trade in the mode of following the \"trading master\" opted by me and all obligations and risks produced thereby shall be undertaken by myself.",
-            vi: "Tôi đồng ý và chỉ định TigerWit làm người cung cấp dịch vụ của mình, sẽ thực hiện quyền giao dịch thay mặt cho tôi sau khi tôi nhấp vào \"Đồng ý\" và đồng ý giao dịch theo phương thức \"nhà giao dịch chính\" được tôi chọn và mọi nghĩa vụ và rủi ro do đó nảy sinh sẽ do chính tôi chịu trách nhiệm.",
+            vi: "Tôi đồng ý và chỉ định TigerWit làm người cung cấp dịch vụ của mình, sẽ thực hiện quyền giao dịch thay mặt cho tôi sau khi tôi nhấp vào \"Đồng ý\" và đồng ý giao dịch theo phương thức \"bậc thầy\" được tôi chọn và mọi nghĩa vụ và rủi ro do đó nảy sinh sẽ do chính tôi chịu trách nhiệm.",
             "zh-Hant": "我同意並特此授權TigerWit作為我的委托人，自我點擊“同意”此項授權之時起，以我的名義代我行使交易之權利，並同意采用跟單方式跟隨我自選的“交易高手”的信號進行交易，由此產生的壹切責任和風險均由我個人承擔。"
         },
         amtStatement4: {
@@ -5608,7 +5608,7 @@ module.exports = function () {
         amtStatement5: {
             zh: "我同意并授权TigerWit从我在任一自然月内已平仓的订单实时扣除20%利润，并于下一自然月15日前核对上一自然月整体盈利金额并核算佣金或奖金后，将其支付给“交易高手”作为跟单佣金或奖励。我确定已知晓跟单交易中存在的风险，知晓“交易高手”历史成绩或历史业绩不代表未来成绩或业绩，任何跟单操作导致的损失及责任由我个人承担。",
             en: "I agree and authorize TigerWit to deduct 20% profits in real time from the concluded order at any natural month and check the overall amount of profits of the previous natural month prior to the 15th day of the following month. The 20% profit is the only fee for “trading master”. In addition, after calculating the commissions or bonuses, they will be paid to the \"trading master\" as commissions or bonuses for the following orders. I have confirmed and acknowledged that there are risks in order following trading and also learned that the historical performance of the \"trading master\" does not represent performance in the future and that all losses and responsibilities incurred by order following shall be borne by myself.",
-            vi: "Tôi đồng ý và ủy quyền cho TigerWit khấu trừ 20% lợi nhuận trong thời gian thực từ lệnh đã kết thúc vào bất kỳ tháng tự nhiên nào và kiểm tra tổng số lợi nhuận của tháng trước đó trước ngày 15 của tháng tiếp theo. Ngoài ra, sau khi tính tiền hoa hồng hoặc tiền thưởng, khoản tiền này sẽ được trả cho \"nhà giao dịch chính\" làm hoa hồng hoặc tiền thưởng cho các lệnh sao chép theo sau. Tôi đã xác nhận và thừa nhận rằng có những rủi ro trong giao dịch sau và cũng biết rằng hiệu suất trước đây trong quá khứ của \"nhà giao dịch chính\" không đại diện cho kết quả trong tương lai và tất cả các tổn thất và trách nhiệm phát sinh do lệnh sao chép theo dõi sẽ do chính bản thân tôi chịu.",
+            vi: "Tôi đồng ý và ủy quyền cho TigerWit khấu trừ 20% lợi nhuận trong thời gian thực từ lệnh đã kết thúc vào bất kỳ tháng tự nhiên nào và kiểm tra tổng số lợi nhuận của tháng trước đó trước ngày 15 của tháng tiếp theo. Ngoài ra, sau khi tính tiền hoa hồng hoặc tiền thưởng, khoản tiền này sẽ được trả cho \"bậc thầy\" làm hoa hồng hoặc tiền thưởng cho các lệnh sao chép theo sau. Tôi đã xác nhận và thừa nhận rằng có những rủi ro trong giao dịch sau và cũng biết rằng hiệu suất trước đây trong quá khứ của \"bậc thầy\" không đại diện cho kết quả trong tương lai và tất cả các tổn thất và trách nhiệm phát sinh do lệnh sao chép sao chép sẽ do chính bản thân tôi chịu.",
             "zh-Hant": "我同意並授權TigerWit從我在任壹自然月內已平倉的訂單實時扣除20%利潤，並於下壹自然月15日前核對上壹自然月整體盈利金額並核算傭金或獎金後，將其支付給“交易高手”作為跟單傭金或獎勵。我確定已知曉跟單交易中存在的風險，知曉“交易高手”歷史成績或歷史業績不代表未來成績或業績，任何跟單操作導致的損失及責任由我個人承擔。"
         },
         amtStatement6: {
@@ -5626,7 +5626,7 @@ module.exports = function () {
         amtStatement8: {
             zh: "2. TigerWit仅就跟单服务承担其责任，对于任何客户的任何操作（包括但不限于以“交易高手”之交易行为作为基础的跟单交易行为），其交易风险和交易结果均由客户自行承担。",
             en: "2. TigerWit shall bear responsibilities for the order following services rendered, while all trading risks and consequences incurred by any operation (including but not limited to order following trade based on the trading behaviors of the \"trading master\") of any clients shall be borne by the client.",
-            vi: "2. TigerWit chịu trách nhiệm về lệnh dịch vụ sao chép lệnh được cung cấp, trong khi tất cả các rủi ro và hậu quả kinh doanh phát sinh từ bất kỳ hoạt động nào (bao gồm nhưng không giới hạn các lệnh giao dịch sao chép dựa trên hành vi giao dịch của \"nhà giao dịch chính\") của bất kỳ khách hàng nào sẽ do khách hàng chịu.",
+            vi: "2. TigerWit chịu trách nhiệm về lệnh dịch vụ sao chép lệnh được cung cấp, trong khi tất cả các rủi ro và hậu quả kinh doanh phát sinh từ bất kỳ hoạt động nào (bao gồm nhưng không giới hạn các lệnh giao dịch sao chép dựa trên hành vi giao dịch của \"bậc thầy\") của bất kỳ khách hàng nào sẽ do khách hàng chịu.",
             "zh-Hant": "2. TigerWit僅就跟單服務承擔其責任，對於任何客戶的任何操作（包括但不限於以“交易高手”之交易行為作為基礎的跟單交易行為），其交易風險和交易結果均由客戶自行承擔。"
         },
         amtStatement9: {
@@ -5644,13 +5644,13 @@ module.exports = function () {
         amtStatement11: {
             zh: "5. TigerWit所提供之“交易高手”及相关信息，TigerWit保证其历史数据的准确性，TigerWit不对因上述资料全部或部分内容产生的或因依赖该资料而引致的任何损失承担任何责任。",
             en: "5. As for the \"trading masters\" and relevant information offered by TigerWit, TigerWit shall guarantee the accuracy of the historical data thereof, but shall not bear any liability for any losses caused by partial or all the above information or incurred by reliance on the above information.",
-            vi: "5. Đối với \"nhà giao dịch chính \" và thông tin liên quan do TigerWit cung cấp, TigerWit phải đảm bảo tính chính xác của dữ liệu trong lịch sử, nhưng sẽ không chịu bất kỳ trách nhiệm nào đối với bất kỳ tổn thất nào phát sinh dựa trên một phần hoặc toàn bộ thông tin trên.",
+            vi: "5. Đối với \"bậc thầy \" và thông tin liên quan do TigerWit cung cấp, TigerWit phải đảm bảo tính chính xác của dữ liệu trong lịch sử, nhưng sẽ không chịu bất kỳ trách nhiệm nào đối với bất kỳ tổn thất nào phát sinh dựa trên một phần hoặc toàn bộ thông tin trên.",
             "zh-Hant": "5. TigerWit所提供之“交易高手”及相關信息，TigerWit保證其歷史數據的準確性，TigerWit不對因上述資料全部或部分內容產生的或因依賴該資料而引致的任何損失承擔任何責任。"
         },
         amtStatement12: {
             zh: "6. TigerWit对于使用的跟单服务或无法使用跟单服务所导致的任何直接、间接、衍生或特别损害，不负任何赔偿责任，除非有任何相反证据表明TigerWit应对此承担责任。",
             en: "6. TigerWit shall not assume any liability for compensation for any direct, indirect, derived or special losses due to use or failure to use order following services, unless there is any evidence proving that TigerWit shall be responsible for such losses.",
-            vi: "6. TigerWit không chịu trách nhiệm bồi thường cho bất kỳ tổn thất trực tiếp, gián tiếp, có nguồn gốc hoặc đặc biệt nào do sử dụng hoặc không sử dụng các dịch vụ theo dõi sao chép lệnh giao dịch, trừ khi có bất kỳ bằng chứng nào chứng minh rằng TigerWit chịu trách nhiệm về những tổn thất đó.",
+            vi: "6. TigerWit không chịu trách nhiệm bồi thường cho bất kỳ tổn thất trực tiếp, gián tiếp, có nguồn gốc hoặc đặc biệt nào do sử dụng hoặc không sử dụng các dịch vụ sao chép sao chép lệnh giao dịch, trừ khi có bất kỳ bằng chứng nào chứng minh rằng TigerWit chịu trách nhiệm về những tổn thất đó.",
             "zh-Hant": "6. TigerWit對於使用的跟單服務或無法使用跟單服務所導致的任何直接、間接、衍生或特別損害，不負任何賠償責任，除非有任何相反證據表明TigerWit應對此承擔責任。"
         },
         amtStatement13: {
@@ -5662,7 +5662,7 @@ module.exports = function () {
         amtStatement14: {
             zh: "8. TigerWit在获得客户同意并授权的情况下，可以为客户开启跟单操作及进行跟单交易、按约定实时扣除客户跟单净利润盈利中的20%支付给“交易高手”作为佣金或奖励。客户已知晓并同意接受该跟单交易模式，接受利润扣除方案，并愿意接受该交易模式的交易风险。",
             en: "8. With the consent and authorization of the client, TigerWit can initiate order following operation, perform order following transactions and deduct 20% of net profits earned by the client by order following to pay to the \"trading master\" as commissions or bonuses. The client has acknowledged and agreed to accept this order following mode and the profit deduction scheme and is also willing to bear the trading risks caused thereby.",
-            vi: "8. Với sự đồng ý và ủy quyền của khách hàng, TigerWit có thể kích hoạt hoạt động của lệnh sao chép theo sau, thực hiện các giao dịch theo dõi và trừ 20% lợi nhuận ròng mà khách hàng thu được nhờ lệnh sao chép để trả cho \"nhà giao dịch chính \" làm hoa hồng hoặc tiền thưởng. Khách hàng đã thừa nhận và đồng ý chấp nhận lệnh này theo phương thức và phương án khấu trừ lợi nhuận và cũng sẵn sàng chịu rủi ro giao dịch do đó gây ra.",
+            vi: "8. Với sự đồng ý và ủy quyền của khách hàng, TigerWit có thể kích hoạt hoạt động của lệnh sao chép theo sau, thực hiện các giao dịch sao chép và trừ 20% lợi nhuận ròng mà khách hàng thu được nhờ lệnh sao chép để trả cho \"bậc thầy \" làm hoa hồng hoặc tiền thưởng. Khách hàng đã thừa nhận và đồng ý chấp nhận lệnh này theo phương thức và phương án khấu trừ lợi nhuận và cũng sẵn sàng chịu rủi ro giao dịch do đó gây ra.",
             "zh-Hant": "8. TigerWit在獲得客戶同意並授權的情況下，可以為客戶開啟跟單操作及進行跟單交易、按約定實時扣除客戶跟單凈利潤盈利中的20%支付給“交易高手”作為傭金或獎勵。客戶已知曉並同意接受該跟單交易模式，接受利潤扣除方案，並願意接受該交易模式的交易風險。"
         },
         
@@ -5687,7 +5687,7 @@ module.exports = function () {
         copytransaction8: {
             zh: "2. TigerWit仅就跟单服务承担其责任，对于任何客户的任何操作（包括但不限于以“交易高手”之交易行为作为基础的跟单交易行为），其交易风险和交易结果均由客户自行承担。",
             en: "2. TigerWit shall bear responsibilities for the order following services rendered, while all trading risks and consequences incurred by any operation (including but not limited to order following trade based on the trading behaviours of the \"trading master\") of any clients shall be borne by the client.",
-            vi: "2. TigerWit chịu trách nhiệm về lệnh dịch vụ sao chép lệnh được cung cấp, trong khi tất cả các rủi ro và hậu quả kinh doanh phát sinh từ bất kỳ hoạt động nào (bao gồm nhưng không giới hạn các lệnh giao dịch sao chép dựa trên hành vi giao dịch của \"nhà giao dịch chính\") của bất kỳ khách hàng nào sẽ do khách hàng chịu.",
+            vi: "2. TigerWit chịu trách nhiệm về lệnh dịch vụ sao chép lệnh được cung cấp, trong khi tất cả các rủi ro và hậu quả kinh doanh phát sinh từ bất kỳ hoạt động nào (bao gồm nhưng không giới hạn các lệnh giao dịch sao chép dựa trên hành vi giao dịch của \"bậc thầy\") của bất kỳ khách hàng nào sẽ do khách hàng chịu.",
             "zh-Hant": "2. TigerWit僅就跟單服務承擔其責任，對於任何客戶的任何操作（包括但不限於以“交易高手”之交易行為作為基礎的跟單交易行為），其交易風險和交易結果均由客戶自行承擔。"
         },
         copytransaction9: {
@@ -5705,13 +5705,13 @@ module.exports = function () {
         copytransaction11: {
             zh: "5. TigerWit所提供之“交易高手”及相关信息，TigerWit保证其历史数据的准确性，TigerWit不对因上述资料全部或部分内容产生的或因依赖该资料而引致的任何损失承担任何责任。",
             en: "5. As for the \"trading masters\" and relevant information offered by TigerWit, TigerWit shall guarantee the accuracy of the historical data thereof, but shall not bear any liability for any losses caused by partial or all the above information or incurred by reliance on the above information.",
-            vi: "5. Đối với \"nhà giao dịch chính \" và thông tin liên quan do TigerWit cung cấp, TigerWit phải đảm bảo tính chính xác của dữ liệu trong lịch sử, nhưng sẽ không chịu bất kỳ trách nhiệm nào đối với bất kỳ tổn thất nào phát sinh dựa trên một phần hoặc toàn bộ thông tin trên.",
+            vi: "5. Đối với \"bậc thầy \" và thông tin liên quan do TigerWit cung cấp, TigerWit phải đảm bảo tính chính xác của dữ liệu trong lịch sử, nhưng sẽ không chịu bất kỳ trách nhiệm nào đối với bất kỳ tổn thất nào phát sinh dựa trên một phần hoặc toàn bộ thông tin trên.",
             "zh-Hant": "5. TigerWit所提供之“交易高手”及相關信息，TigerWit保證其歷史數據的準確性，TigerWit不對因上述資料全部或部分內容產生的或因依賴該資料而引致的任何損失承擔任何責任。"
         },
         copytransaction12: {
             zh: "6. TigerWit对于使用的跟单服务或无法使用跟单服务所导致的任何直接、间接、衍生或特别损害，不负任何赔偿责任，除非有任何相反证据表明TigerWit应对此承担责任。",
             en: "6. TigerWit shall not assume any liability for compensation for any direct, indirect, derived or special losses due to use or failure to use order following services, unless there is any evidence proving that TigerWit shall be responsible for such losses.",
-            vi: "6. TigerWit không chịu trách nhiệm bồi thường cho bất kỳ tổn thất trực tiếp, gián tiếp, có nguồn gốc hoặc đặc biệt nào do sử dụng hoặc không sử dụng các dịch vụ theo dõi sao chép lệnh giao dịch, trừ khi có bất kỳ bằng chứng nào chứng minh rằng TigerWit chịu trách nhiệm về những tổn thất đó.",
+            vi: "6. TigerWit không chịu trách nhiệm bồi thường cho bất kỳ tổn thất trực tiếp, gián tiếp, có nguồn gốc hoặc đặc biệt nào do sử dụng hoặc không sử dụng các dịch vụ sao chép sao chép lệnh giao dịch, trừ khi có bất kỳ bằng chứng nào chứng minh rằng TigerWit chịu trách nhiệm về những tổn thất đó.",
             "zh-Hant": "6. TigerWit對於使用的跟單服務或無法使用跟單服務所導致的任何直接、間接、衍生或特別損害，不負任何賠償責任，除非有任何相反證據表明TigerWit應對此承擔責任。"
         },
         copytransaction13: {
@@ -5723,7 +5723,7 @@ module.exports = function () {
         copytransaction14: {
             zh: "8. TigerWit在获得客户同意并授权的情况下，可以为客户开启跟单操作及进行跟单交易、按约定实时扣除客户跟单净利润盈利中的20%支付给“交易高手”作为佣金或奖励。客户已知晓并同意接受该跟单交易模式，接受利润扣除方案，并愿意接受该交易模式的交易风险。",
             en: "8. With the consent and authorization of the client, TigerWit can initiate order following operation, perform order following transactions and deduct 20% of net profits earned by the client by order following to pay to the \"trading master\" as commissions or bonuses. The client has acknowledged and agreed to accept this order following mode and the profit deduction scheme and is also willing to bear the trading risks caused thereby.",
-            vi: "8. Với sự đồng ý và ủy quyền của khách hàng, TigerWit có thể kích hoạt hoạt động của lệnh sao chép theo sau, thực hiện các giao dịch theo dõi và trừ 20% lợi nhuận ròng mà khách hàng thu được nhờ lệnh sao chép để trả cho \"nhà giao dịch chính \" làm hoa hồng hoặc tiền thưởng. Khách hàng đã thừa nhận và đồng ý chấp nhận lệnh này theo phương thức và phương án khấu trừ lợi nhuận và cũng sẵn sàng chịu rủi ro giao dịch do đó gây ra.",
+            vi: "8. Với sự đồng ý và ủy quyền của khách hàng, TigerWit có thể kích hoạt hoạt động của lệnh sao chép theo sau, thực hiện các giao dịch sao chép và trừ 20% lợi nhuận ròng mà khách hàng thu được nhờ lệnh sao chép để trả cho \"bậc thầy \" làm hoa hồng hoặc tiền thưởng. Khách hàng đã thừa nhận và đồng ý chấp nhận lệnh này theo phương thức và phương án khấu trừ lợi nhuận và cũng sẵn sàng chịu rủi ro giao dịch do đó gây ra.",
             "zh-Hant": "8. TigerWit在獲得客戶同意並授權的情況下，可以為客戶開啟跟單操作及進行跟單交易、按約定實時扣除客戶跟單凈利潤盈利中的20%支付給“交易高手”作為傭金或獎勵。客戶已知曉並同意接受該跟單交易模式，接受利潤扣除方案，並願意接受該交易模式的交易風險。"
         },
         copytransaction1: {
@@ -5741,7 +5741,7 @@ module.exports = function () {
         copytransaction3: {
             zh: "我同意并特此授权TigerWit作为我的委托人，自我点击“同意”此项授权之时起，以我的名义代我行使交易之权利，并同意采用跟单方式跟随我自选的“交易高手”的信号进行交易，由此产生的一切责任和风险均由我个人承担。",
             en: "I agree and hereby appoint TigerWit as my consignor, which will exercise the trading right on behalf of me after I click \"Agree\", and agree to make trades in the mode of following the \"trading master\" opted by me and all obligations and risks produced thereby shall be undertaken by myself.",
-            vi: "Tôi đồng ý và chỉ định TigerWit làm người cung cấp dịch vụ của mình, sẽ thực hiện quyền giao dịch thay mặt cho tôi sau khi tôi nhấp vào \"Đồng ý\" và đồng ý giao dịch theo phương thức \"nhà giao dịch chính\" được tôi chọn và mọi nghĩa vụ và rủi ro do đó nảy sinh sẽ do chính tôi chịu trách nhiệm.",
+            vi: "Tôi đồng ý và chỉ định TigerWit làm người cung cấp dịch vụ của mình, sẽ thực hiện quyền giao dịch thay mặt cho tôi sau khi tôi nhấp vào \"Đồng ý\" và đồng ý giao dịch theo phương thức \"bậc thầy\" được tôi chọn và mọi nghĩa vụ và rủi ro do đó nảy sinh sẽ do chính tôi chịu trách nhiệm.",
             "zh-Hant": "我同意並特此授權TigerWit作為我的委托人，自我點擊“同意”此項授權之時起，以我的名義代我行使交易之權利，並同意采用跟單方式跟隨我自選的“交易高手”的信號進行交易，由此產生的壹切責任和風險均由我個人承擔。"
         },
         copytransaction4: {
@@ -5753,7 +5753,7 @@ module.exports = function () {
         copytransaction5: {
             zh: "我同意并授权TigerWit从我在任一自然月内已平仓的订单实时扣除20%利润，并于下一自然月15日前核对上一自然月整体盈利金额并核算佣金或奖金后，将其支付给“交易高手”作为跟单佣金或奖励。我确定已知晓跟单交易中存在的风险，知晓“交易高手”历史成绩或历史业绩不代表未来成绩或业绩，任何跟单操作导致的损失及责任由我个人承担。",
             en: "I agree and authorize TigerWit to deduct 20% profits in real time from the concluded order at any natural month and check the overall amount of profits of the previous natural month prior to the 15th day of the following month. In addition, after calculating the commissions or bonuses, they will be paid to the \"trading master\" as commissions or bonuses for the following orders. I have confirmed and acknowledged that there are risks in order following trading and also learned that the historical performance of the \"trading master\" does not represent performance in the future and that all losses and responsibilities incurred by order following shall be borne by myself.",
-            vi: "Tôi đồng ý và ủy quyền cho TigerWit khấu trừ 20% lợi nhuận trong thời gian thực từ lệnh đã kết thúc vào bất kỳ tháng tự nhiên nào và kiểm tra tổng số lợi nhuận của tháng trước đó trước ngày 15 của tháng tiếp theo. Ngoài ra, sau khi tính tiền hoa hồng hoặc tiền thưởng, khoản tiền này sẽ được trả cho \"nhà giao dịch chính\" làm hoa hồng hoặc tiền thưởng cho các lệnh sao chép theo sau. Tôi đã xác nhận và thừa nhận rằng có những rủi ro trong giao dịch sau và cũng biết rằng hiệu suất trước đây trong quá khứ của \"nhà giao dịch chính\" không đại diện cho kết quả trong tương lai và tất cả các tổn thất và trách nhiệm phát sinh do lệnh sao chép theo dõi sẽ do chính bản thân tôi chịu.",
+            vi: "Tôi đồng ý và ủy quyền cho TigerWit khấu trừ 20% lợi nhuận trong thời gian thực từ lệnh đã kết thúc vào bất kỳ tháng tự nhiên nào và kiểm tra tổng số lợi nhuận của tháng trước đó trước ngày 15 của tháng tiếp theo. Ngoài ra, sau khi tính tiền hoa hồng hoặc tiền thưởng, khoản tiền này sẽ được trả cho \"bậc thầy\" làm hoa hồng hoặc tiền thưởng cho các lệnh sao chép theo sau. Tôi đã xác nhận và thừa nhận rằng có những rủi ro trong giao dịch sau và cũng biết rằng hiệu suất trước đây trong quá khứ của \"bậc thầy\" không đại diện cho kết quả trong tương lai và tất cả các tổn thất và trách nhiệm phát sinh do lệnh sao chép sao chép sẽ do chính bản thân tôi chịu.",
             "zh-Hant": "我同意並授權TigerWit從我在任壹自然月內已平倉的訂單實時扣除20%利潤，並於下壹自然月15日前核對上壹自然月整體盈利金額並核算傭金或獎金後，將其支付給“交易高手”作為跟單傭金或獎勵。我確定已知曉跟單交易中存在的風險，知曉“交易高手”歷史成績或歷史業績不代表未來成績或業績，任何跟單操作導致的損失及責任由我個人承擔。"
         },
         amtCategorization1: {
@@ -6419,7 +6419,7 @@ module.exports = function () {
         amtFunds5: {
             zh: "TigerWit 与多家主要银行机构合作，客户资金被存放在银行，例如汇丰银行（HSBC）和澳洲联邦银行（CBA）等。内部限制确保了客户资金分散在不同的银行之间，同时会定期监控信用风险。客户资金仅存放在客户资金隔离受当地法律框架支持的司法管辖区。",
             en: "TigerWit is partnered with several major banking institutions, with client funds kept in banks such as HSBC and CBA. Internal limits ensure a diversification of client funds among banks, while credit risk is regularly monitored. Client funds are only kept in jurisdictions where segregation of client funds is supported by the local legal framework.",
-            vi: "TigerWit hợp tác với một số tổ chức ngân hàng lớn, với các quỹ khách hàng được giữ tại các ngân hàng như HSBC và CBA. Các giới hạn nội bộ đảm bảo đa dạng hóa các quỹ khách hàng giữa các ngân hàng, trong khi rủi ro tín dụng thường xuyên được theo dõi. Các quỹ của khách hàng chỉ được giữ ở các khu vực pháp lý, nơi sự phân chia các quỹ của khách hàng được hỗ trợ bởi khung pháp lý địa phương.",
+            vi: "TigerWit hợp tác với một số tổ chức ngân hàng lớn, với các quỹ khách hàng được giữ tại các ngân hàng như HSBC và CBA. Các giới hạn nội bộ đảm bảo đa dạng hóa các quỹ khách hàng giữa các ngân hàng, trong khi rủi ro tín dụng thường xuyên được sao chép. Các quỹ của khách hàng chỉ được giữ ở các khu vực pháp lý, nơi sự phân chia các quỹ của khách hàng được hỗ trợ bởi khung pháp lý địa phương.",
             "zh-Hant": "TigerWit 與多家主要銀行機構合作，客戶資金被存放在銀行，例如匯豐銀行（HSBC）和澳洲聯邦銀行（CBA）等。內部限制確保了客戶資金分散在不同的銀行之間，同時會定期監控信用風險。客戶資金僅存放在客戶資金隔離受當地法律框架支持的司法管轄區。"
         },
         amtFunds6: {
@@ -7241,7 +7241,7 @@ module.exports = function () {
         amtExecution136: {
             zh: "1.本公司将会定期监督和评估本政策和订单执行安排秩序的效果，尤其是本政策所说明流程的执行质量，从而尽可能向客户提供最佳结果。在适当情况下，本公司保留修改本政策任何缺陷和改善执行安排的的权利。",
             en: "1.The Firm will monitor and assess on a regular basis the effectiveness of this Policy and the order of its order execution arrangements and, in particular, the execution quality of the procedures explained in the Policy in order to deliver the best possible result for the client, and, where appropriate, the Firm reserves the right to correct any deficiencies in this Policy and make improvements to its execution arrangements.",
-            vi: "1.Công ty sẽ theo dõi và đánh giá thường xuyên tính hiệu quả của Chính sách này và thứ tự sắp xếp thực hiện các lệnh và đặc biệt là chất lượng thực hiện các thủ tục được giải thích trong Chính sách nhằm mang lại kết quả tốt nhất có thể cho khách hàng, và, nếu thích hợp, Công ty bảo lưu quyền sửa bất kỳ thiếu sót nào trong Chính sách này và thực hiện các cải thiện đối với các trình tự thực thi lệnh của nó.",
+            vi: "1.Công ty sẽ sao chép và đánh giá thường xuyên tính hiệu quả của Chính sách này và thứ tự sắp xếp thực hiện các lệnh và đặc biệt là chất lượng thực hiện các thủ tục được giải thích trong Chính sách nhằm mang lại kết quả tốt nhất có thể cho khách hàng, và, nếu thích hợp, Công ty bảo lưu quyền sửa bất kỳ thiếu sót nào trong Chính sách này và thực hiện các cải thiện đối với các trình tự thực thi lệnh của nó.",
             "zh-Hant": "1.本公司將會定期監督和評估本政策和訂單執行安排秩序的效果，尤其是本政策所說明流程的執行質量，從而盡可能向客戶提供最佳結果。在適當情況下，本公司保留修改本政策任何缺陷和改善執行安排的的權利。"
         },
         amtExecution137: {
@@ -7595,7 +7595,7 @@ module.exports = function () {
         amtConflicts40: {
             zh: "- 设立内部合规部门，就上述内容进行监督并向本公司董事会作出报告",
             en: "- Establishment of in-house Compliance Department to monitor and report on the above to the Company’s Board of Directors",
-            vi: "- Thành lập Phòng Giám Sát nội bộ để theo dõi và báo cáo ở trên cho Ban Giám đốc của Công ty",
+            vi: "- Thành lập Phòng Giám Sát nội bộ để sao chép và báo cáo ở trên cho Ban Giám đốc của Công ty",
             "zh-Hant": "- 設立內部合規部門，就上述內容進行監督並向本公司董事會作出報告"
         },
         amtConflicts41: {
@@ -8086,7 +8086,7 @@ module.exports = function () {
             subscribeArticle: {
                 zh: "订阅每日必读的投资干货",
                 en: "Subscribe daily investment article",
-                vi: "Theo dõi bài viết đầu tư hàng ngày",
+                vi: "Sao chép bài viết đầu tư hàng ngày",
                 "zh-Hant": "訂閱每日必讀的投資幹貨"
             },
             scb: {

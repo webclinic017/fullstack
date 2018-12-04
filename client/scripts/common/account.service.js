@@ -184,7 +184,7 @@
                 user_code: user_code
             });
         }
-
+        // 完善信息
         function updataUserInfo(params) {
             return publicHttp.dealPublicRequest(o.updataUserInfoApi, 'PUT', params)
         }
@@ -648,7 +648,7 @@
         function checkAgent(){
             return publicHttp.dealPublicRequest(o.checkAgentApi, 'GET');
         }
-        //获取身份认证信息
+        //真实账户请求获取身份认证信息（更新证件接口）
         function getIdcard(){
             return publicHttp.dealPublicRequest(o.getIdcardApi, 'GET');
         }

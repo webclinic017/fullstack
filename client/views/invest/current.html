@@ -89,7 +89,7 @@
                                         {{ order.cmd_name }}
                                     </span>
                                     <a class="invest_orders__symbol" href="">
-                                        {{ order.symbol_cn }}
+                                        {{ lang.isEnglishArea() ? order.symbol : order.symbol_cn + ' ('+ order.symbol +')' }}
                                     </a>        
                                 </p>
                             </div>
@@ -179,7 +179,7 @@
                                             {{ order.cmd_name }}
                                         </span>
                                         <a class="invest_orders__symbol" href="">
-                                            {{ order.symbol_cn }}
+                                            {{ lang.isEnglishArea() ? order.symbol : order.symbol_cn + ' ('+ order.symbol +')' }}
                                         </a>        
                                     </p>
                                 </div>
@@ -276,7 +276,7 @@
                                             {{ order.cmd_name }}
                                         </span>
                                         <a class="invest_orders__symbol" href="">
-                                            {{ order.symbol_cn }}
+                                            {{ lang.isEnglishArea() ? order.symbol : order.symbol_cn + ' ('+ order.symbol +')' }}
                                         </a>        
                                     </p>
                                 </div>

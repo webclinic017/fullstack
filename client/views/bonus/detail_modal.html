@@ -5,7 +5,7 @@
         {{lang.text('tigerWitID.historyTransactions.details')}}
     </h5>
     <h5 ng-if="! personal.disable" class="system_modal__title">
-        {{lang.text('tigerWitID.copy')}}{{ username }}{{lang.text('tigerWitID.details.title')}}
+        {{lang.text('tigerWitID.copy')}} {{ username }} {{lang.text('tigerWitID.details.title')}}
     </h5>
 
     <div class="space_bonus__modal-content">
@@ -23,7 +23,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="detail in details" ng-if="success && details.length > 0">
-                    <td>{{ detail.cmd_name }} {{ detail.symbol_cn }}</td>
+                    <td>{{ detail.cmd_name }} {{ lang.isEnglishArea() ? detail.symbol : detail.symbol_cn + ' ('+ detail.symbol +')' }}</td>
                     <td>
                         {{ detail.open_time | dealTimestamp }}
                     </td>

@@ -431,8 +431,8 @@
     }
     .dotCircle  .itemDot {
         display:block;
-        width:80px;
-        height:80px;
+        width:100px;
+        height:100px;
         position:absolute;
         background:#ddd;
         color:#fff;
@@ -443,7 +443,7 @@
         cursor:pointer;
         span {
             display: block;
-            width: 80px;
+            width: 100px;
             position:absolute;
             top:50%;
             left:50%;
