@@ -73,7 +73,7 @@ $(document).ready(function () {
     var bt=baidu.template;
     var mt4Id = '';
     var company = '';
-    var userCacheInfo = null;   //用户缓存信息
+    var userCacheInfo = {};   //用户缓存信息
     var isSetCountryCache = false;  //是否设置国家缓存
     var countryList = {
         data: null
@@ -94,6 +94,14 @@ $(document).ready(function () {
             {
                 key: lang.text('third.third_username10'),
                 value: 1
+            },
+            {
+                key: lang.text('third.third_username11'),
+                value: 3
+            },
+            {
+                key: lang.text('third.third_username12'),
+                value: 4
             }
         ],
         en: [
@@ -143,7 +151,6 @@ $(document).ready(function () {
             getUserStatus();
             getKycList();
             getCountries();
-            getUserCacheInfo();
 
         }, 300);
     }
@@ -155,6 +162,25 @@ $(document).ready(function () {
             if (!data) return;
             if (data.is_succ) {
                 step = data.data.status === 3 ? 2 : data.data.status;//若是返回3，从第二步开始
+                //加载缓存
+                if (step != 0) {
+                    getUserCacheInfo();
+                } else {
+                    // console.log(countryList.data);
+                    if (countryList.data) {
+                        if (lang.curLang() != 'en') {
+                            $(".m_third_userinfo select").find("option[value=CN]").first().attr("selected", true);
+                            $(ele.userinfoCountry).val('中国');
+                            $(ele.userinfoCountry).attr("data-country", "CN");
+                        }
+                    } else {
+                        isSetCountryCache = true;
+                    }
+                    laydate.render({
+                        elem: '#birth',
+                        lang: lang.curLang() === 'en' ? 'en' : 'cn'
+                    });
+                }
                 $(ele.wrapper).addClass("active");
                 goStepPage();
             } else {
