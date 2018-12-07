@@ -14,6 +14,7 @@
     function SpaceInfoController($rootScope,$scope, $location, $interval, $state, account, config, redbag, trader, asset, $modal) {
         $scope.unreadLength = 0;        // 未读消息
         $scope.investSelect = {id: '', type: ''};   // 记录账号页面选中的账号
+        // $scope.updatePaper = updatePaper;
         var noticeId;
         //一次性获取用户的相关信息。更换用户时需要触发重置。
         getOnceInfo();
@@ -142,5 +143,8 @@
                 
             });
         }
+        // function updatePaper() {
+            // $state.go('space.update.subpage', {subpage: 'realname'})
+        // }
     }
 })();

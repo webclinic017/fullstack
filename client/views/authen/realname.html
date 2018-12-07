@@ -1,12 +1,12 @@
-<div class="asset-public__tip" ng-show="toState.name == 'space.update' && !(personal.updatePapers.hint >= 0)">
+<div class="asset-public__tip" ng-show="toState.name.indexOf('space.update') != -1 && personal.updatePapers.hint < 0">
     <img style="height: 50px;" src="/ngsrc/loading.gif">
 </div>
-<div class="authen_content ctn center" ng-class="{'update': toState.name == 'space.update'}" ng-show="(toState.name == 'space.update' && personal.updatePapers.profile_check && personal.updatePapers.profile_check != 2) || toState.name == 'authen.subpage'">
-    <div class="authen_title" ng-if="toState.name != 'space.update'">
+<div class="authen_content ctn center" ng-class="{'update': toState.name.indexOf('space.update') != -1}">
+    <div class="authen_title" ng-if="toState.name.indexOf('space.update') == -1">
         <h2>{{lang.text('tigerWitID.wallet.uploadIdentification')}}</h2>
         <p class="authen_content__tip">{{lang.text('tigerWitID.myAccount.tip24')}}</p>
     </div>
-    <div class="kyc" ng-class="{'mg-tp-40': toState.name != 'space.update', 'update': toState.name == 'space.update'}">
+    <div class="kyc" ng-class="{'mg-tp-40': toState.name.indexOf('space.update') == -1, 'update': toState.name.indexOf('space.update') != -1}">
         <form name="realnameForm" novalidate autocomplete="off">
             <div class="row">
                 <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
@@ -287,10 +287,10 @@
             </div>
 
             <div class="btn_wrapper text-left">
-                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="toState.name == 'space.update' && clickable" ng-click="updatePaper()">
+                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="toState.name.indexOf('space.update') != -1 && clickable" ng-click="updatePaper()">
                     {{lang.text('tigerWitID.submit')}}
                 </button>
-                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="toState.name != 'space.update' && clickable" ng-click="submitForm()">
+                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="toState.name.indexOf('space.update') == -1 && clickable" ng-click="submitForm()">
                     {{lang.text('actLogin29')}}
                 </button>
 
@@ -299,32 +299,10 @@
                     {{lang.text('tigerWitID.submitting')}}
                 </a>
 
-                <a ng-if="dredgingType == 'live'" ui-sref="space.center.index" class="btn btn-sm tw-btn-capsule-gradient mg-lf-20">
+                <a ng-if="dredgingType == 'live' && toState.name.indexOf('space.update') == -1" ui-sref="space.center.index" class="btn btn-sm tw-btn-capsule-gradient mg-lf-20">
                     {{lang.text('actLogin34')}}
                 </a>
             </div>    
         </div>
     </div>
-</div>
-
-<!-- 更新证件认证审核中 -->
-<div class="mg-tp-30" ng-if="toState.name == 'space.update' && personal.updatePapers.profile_check == 2">
-    <div class="authen_content pd-lf-0 pd-tp-0">
-        <div class="authen_submit pd-lf-0">
-            <h3 class="text-left">{{lang.text('tigerWitID.myAccount.tip15')}}</h3>
-            <p class="tip">{{lang.text('tigerWitID.myAccount.auditHourM')}}</p>
-            <div class="detail">
-                <p>{{lang.text('tigerWitID.myAccount.tip16')}}</p>
-                <p>{{lang.text('tigerWitID.myAccount.tip17')}}</p>
-                <p>{{lang.text('tigerWitID.myAccount.tip18')}}</p>
-            </div>
-            <p class="desc">{{lang.text('tigerWitID.myAccount.tip19')}}</p>
-        </div>
-    </div>
-</div>
-
-<!-- 已认证 -->
-<!-- <div class="mg-tp-30" ng-if="toState.name == 'space.update' && personal.updatePapers.profile_check == 3">
-    认证成功
-</div> -->
 </div>

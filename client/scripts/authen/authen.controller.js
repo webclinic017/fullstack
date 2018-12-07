@@ -14,12 +14,11 @@
     AuthenController.$inject = ['$scope', '$cookies', '$location', 'account', '$state', '$stateParams', '$timeout', '$modal', '$layer'];
     AuthenInvestInfoController.$inject = ['$scope', '$state', '$timeout', 'account', '$location', '$modal'];
     AuthenCompleteController.$inject = ['$scope', 'validator', 'account', '$timeout', '$interval', '$location', '$modal', '$cookies'];
-    AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account'];
+    AuthenRealnameController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$location', '$layer'];
     AuthenAddressController.$inject = ['$scope', '$state', '$modal', 'validator', 'account', '$timeout'];
 
     // 主控制器
     function AuthenController($scope, $cookies, $location, account, $state, $stateParams, $timeout, $modal, $layer) {
-
         $scope.dredgingType = 'unkown'  // 交易账户开通状态
         $scope.flow = {
             step: 1,
@@ -48,7 +47,7 @@
             // console.log($scope.personal)
             $scope.dredgingType = data.dredged_type || data.account_status
             $timeout(function () {
-                $state.go('authen.subpage', {
+                $state.go($state.current.name, {
                     subpage: $scope.flow.authStatusMap[data.verify_status || data.status]
                 });
             })
@@ -58,7 +57,7 @@
             $scope.$emit('gloabl.agentAuthStatus', {
                 callback: function() {
                     $timeout(function () {
-                        $state.go('authen.subpage', {
+                        $state.go($state.current.name, {
                             subpage: $scope.flow.authStatusMap[$scope.personal.agentAuthStatus.status],
                             isAgent: 'isAgent'
                         });
@@ -69,8 +68,10 @@
         if($location.search().isAgent) {
             agentStatus()
         } else {
+            
             if ($scope.personal.verify_status) {
                 // 防止不能跳转到本页
+                setVerifyStatus();
                 goState({
                     verify_status: $scope.personal.verify_status,
                     dredged_type: {
@@ -84,13 +85,19 @@
                 $scope.$emit('global.getAuthStatus', {
                     ctrlName: 'AuthenController',
                     callback: function (data) {
+                        setVerifyStatus();
                         goState(data)
                         showErr4()
                     }
                 })
             }
         }
-     
+        // 如果处于待更新证件的情况跳入上传身份证页面
+        function setVerifyStatus() {
+            if($scope.personal.updatePapers.hint == 1 && $scope.personal.updatePapers.personal == 3) {
+                $scope.personal.verify_status = 3;
+            }
+        }
 
         var parentScope = $scope;
         $scope.$on('open_alert_modal', function (e) {
@@ -878,13 +885,8 @@
                     $scope.uploadFinish.hasOwnProperty('back') &&
                     ($scope.backErr.system.status != 3)
                 ) {
-                    if($scope.toState.name == 'space.update'){
-                        $scope.personal.updatePapers.profile_check = 2;
-                        $scope.personal.verify_status = 5;
-                    }else{
-                        // 向authenController发送信息
-                        $scope.$emit('goState', data.data);
-                    }
+                    // 向authenController发送信息
+                    $scope.$emit('goState', data.data);
                     // 神策数据统计
                     sa.track('btn_verify');
                 }
@@ -892,13 +894,8 @@
                 if ($scope.uploadFinish.hasOwnProperty('front') &&
                     ($scope.backErr.system.status != 3)
                 ) { 
-                    if($scope.toState.name == 'space.update'){
-                        $scope.personal.updatePapers.profile_check = 2;
-                        $scope.personal.verify_status = 5;
-                    }else{
-                        // 向authenController发送信息
-                        $scope.$emit('goState', data.data);
-                    }
+                    // 向authenController发送信息
+                    $scope.$emit('goState', data.data);
                     // 神策数据统计
                     sa.track('btn_verify');
                 }
@@ -931,7 +928,7 @@
             showErr('gender');
             showErr('birthday');
 
-          
+         
             if(twoDecide()) {
                 if ($scope.realnameForm.$invalid) {
                     return
