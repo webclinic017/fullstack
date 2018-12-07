@@ -94,7 +94,12 @@
         getThirdCities: origin + '/region/cities', //get
         uploadThirdBankInfo: origin + '/user/bank_card', //put
         checkThirdWithdrawLimit: origin + '/payment/withdraw/limits', //get
-        withdrawThird: origin + '/payment/withdraw' //post
+        withdrawThird: origin + '/payment/withdraw', //post
+        getDefaultThirdAccountApi: origin + '/third/account',  //get
+        getThirdPlatformsApi: origin + '/third/platforms', //get
+        setThirdBindAccountApi: origin + '/third/accounts/bind',   //post
+        getThirdAccountListApi: origin + '/third/accounts/lists',  //get
+        destroyThirdAccountApi: origin + '/third/accounts/destroy'  //post
     };
 
     w.publicRequest = publicRequest;
