@@ -5,8 +5,9 @@
     angular.module('fullstackApp')
         .controller('ThirdMainController', ThirdMainController);
 
-    ThirdMainController.$inject = ['$rootScope', '$scope', '$state', '$window', '$location', 'config', 'account', 'authorization', '$cookies', '$timeout', '$cookieStore', '$modal', '$layer'];
-    function ThirdMainController($rootScope, $scope, $state, $window, $location, config, account, authorization, $cookies, $timeout, $cookieStore, $modal, $layer) {
+    ThirdMainController.$inject = ['$rootScope', '$scope', '$state', '$window', '$location', 'config', 'account', 'authorization', '$cookies', '$timeout', '$cookieStore', '$modal', '$layer', 'lang'];
+    function ThirdMainController($rootScope, $scope, $state, $window, $location, config, account, authorization, $cookies, $timeout, $cookieStore, $modal, $layer, lang) {
+        $scope.lang = lang;
         // main存储全局共享数据
         var main = $scope.main = $rootScope.main = {}
 
@@ -84,7 +85,7 @@
             main.pageCtrl = page
         }
         
-        $scope.$on('main.checkAuthenFlow', function (e, resolve) {
+        $scope.$on('global.checkAuthenFlow', function (e, resolve) {
             if (resolve && resolve.ctrlName) {
                 if (checkAuthenFlow()) {
                     resolve.callback()
@@ -111,13 +112,13 @@
                 return false;
             }
         }
-
         function openMsgMdl(params) {
             $modal.open({
                 templateUrl: '/views/template/$layer_modal.html',
                 size: params.size || 'sm',
                 backdrop: true,
-                controller: ['$scope', '$modalInstance', function ($scope, $modalInstance) {
+                controller: ['$scope', '$modalInstance', 'lang', function ($scope, $modalInstance, lang) {
+                    $scope.lang = lang;
                     // 绑定参数
                     angular.extend($scope, params)
                     //$scope.loading = 0;   0 未loading；1 正在loading；2 loading完毕

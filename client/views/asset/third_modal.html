@@ -1,0 +1,85 @@
+<div class="sys_modal_v2 slim_case card_modal">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <div>
+        <h5 class="sys_modal_v2__title">
+            {{lang.text('tigerWitID.wallet.completeInfo')}}
+        </h5>
+        <div class="sys_modal_v2__content pd-tp-30" ng-show="!third.binding">
+            <form name="thirdForm" novalidate autocomplete="off">
+                <div class="row">
+                    <div class="col-xs-3 text-left">
+                        <label>{{lang.text('tigerWitID.wallet.accountNameM')}}</label>
+                    </div>
+
+                    <div class="col-xs-9">
+                        <div class="form-control-wrapper">
+                            <select class="form-control"
+                                    name="platform"
+                                    required
+                                    ng-class="{'form-control-error': frontErr.platform.show && thirdForm.platform.$invalid}"
+                                    ng-model="third.platform"
+                                    ng-options="platform.name for platform in thirdPlatforms"
+                                    ng-focus="hideErr('platform')"
+                                    ng-blur="showErr('platform')">
+                                <option value="">{{lang.text('tigerWitID.pleaseSelect')}}</option>
+                            </select>
+
+                            <div ng-show="frontErr.platform.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="thirdForm.platform.$error.required">
+                                    {{lang.text('tigerWitID.wallet.completeInfo')}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-3 text-left">
+                        <label>{{lang.text('tigerWitID.wallet.fillAccountM')}}</label>
+                    </div>
+
+                    <div class="col-xs-9">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                    name="account"
+                                    type="text"
+                                    required
+                                    placeholder="{{lang.text('tigerWitID.wallet.fillAccount')}}"
+                                    ng-class="{'form-control-error': frontErr.account.show && thirdForm.account.$invalid}"
+                                    ng-model="third.account"
+                                    ng-focus="hideErr('account')"
+                                    ng-blur="showErr('account')">
+                            <div ng-show="frontErr.account.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="thirdForm.account.$error.required">
+                                    {{lang.text('tigerWitID.wallet.fillAccount')}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+            <p class="btn_wrapper mg-bt-15">
+                <button class="btn btn-primary-gradient" ng-if="clickable" ng-click="submitForm()">
+                    {{lang.text('tigerWitID.confirm')}}
+                </button>
+                <button class="btn btn-primary-gradient" ng-if="!clickable">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    {{lang.text('tigerWitID.wallet.adding')}}
+                </button>
+            </p>
+        </div>
+
+        <div class="sys_modal_v2__content" ng-if="third.binding">
+            <p class="system_modal__info">
+                {{ third.platform.name +" "+ third.account }}{{lang.text('tigerWitID.wallet.tip4_2')}}
+            </p>
+            <p class="btn_wrapper mg-bt-15">
+                <button class="btn btn-primary-gradient" ng-click="closeModal()">
+                    {{lang.text('tigerWitID.confirm')}}
+                </button>
+            </p>
+        </div>
+    </div>
+</div>

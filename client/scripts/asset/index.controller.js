@@ -15,6 +15,7 @@
       getDealAccountList();
     })
 
+    // 交易成功隐藏卡片
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
       $scope.stateParamsSubpage = toParams.subpage;
     })

@@ -12,30 +12,37 @@
         <p class="sys_modal_v2__tip">
             {{params.message}}
         </p>
-
-        <p class="btn_wrapper" ng-show="!params.code">
+        <p class="btn_wrapper" ng-if="lang.isThird()">
             <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
                 {{lang.text('tigerWitID.confirm')}}
             </button>
         </p>
-        <!--跳转跟随页面-->
-        <p class="btn_wrapper" ng-show="params.code === 100602">
-            <a class="btn btn-primary-gradient btn-sm" ng-click="closeModal()" ui-sref="space.center.invest.subpage">
-                {{lang.text('tigerWitID.depositWithdrawal.goUncopy')}}
-            </a>
-        </p>
-        <!--跳转上传凭证页面-->
-        <p class="btn_wrapper" ng-show="params.code === 100605">
-            <a class="btn btn-primary-gradient btn-sm" ng-click="closeModal()" ui-sref="space.asset.subpage({subpage: 'evidence'})">
-                {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
-            </a>
-        </p>
-        <!--跳转入金页面-->
-        <p class="btn_wrapper" ng-show="params.code === 100608">
-            <a class="btn btn-primary-gradient btn-sm" ng-click="closeModal()" ui-sref="space.asset.subpage({subpage: 'deposit'})">
-                {{lang.text('tigerWitID.depositWithdrawal.goDeposit')}}
-            </a>
-        </p>
+        <div ng-if="!lang.isThird()">
+            <p class="btn_wrapper" ng-show="!params.code">
+                <button class="btn btn-primary-gradient btn-sm" ng-click="closeModal()">
+                    {{lang.text('tigerWitID.confirm')}}
+                </button>
+            </p>
+            <!--跳转跟随页面-->
+            <p class="btn_wrapper" ng-show="params.code === 100602">
+                <a class="btn btn-primary-gradient btn-sm" ng-click="closeModal()" ui-sref="space.center.invest.subpage">
+                    {{lang.text('tigerWitID.depositWithdrawal.goUncopy')}}
+                </a>
+            </p>
+            <!--跳转上传凭证页面-->
+            <p class="btn_wrapper" ng-show="params.code === 100605">
+                <a class="btn btn-primary-gradient btn-sm" ng-click="closeModal()" ui-sref="space.asset.subpage({subpage: 'evidence'})">
+                    {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
+                </a>
+            </p>
+            <!--跳转入金页面-->
+            <p class="btn_wrapper" ng-show="params.code === 100608">
+                <a class="btn btn-primary-gradient btn-sm" ng-click="closeModal()" ui-sref="space.asset.subpage({subpage: 'deposit'})">
+                    {{lang.text('tigerWitID.depositWithdrawal.goDeposit')}}
+                </a>
+            </p>
+        </div>
+       
     </div>
 
     <div class="sys_modal_v2__content" ng-if="params.type == 'withdrawSucc'">
@@ -98,7 +105,10 @@
         </div>
 
         <p class="btn_wrapper mg-bt-15">
-            <button class="btn btn-primary-gradient btn-sm" ng-click="[params.callback(params.callbackPara), closeModal()]">
+            <button ng-if="lang.isThird()" class="btn btn-primary-gradient btn-sm" ng-click="[params.callback(), closeModal()]">
+                {{lang.text('tigerWitID.confirm')}}
+            </button>
+            <button ng-if="!lang.isThird()" class="btn btn-primary-gradient btn-sm" ng-click="[params.callback(params.callbackPara), closeModal()]">
                 {{lang.text('tigerWitID.confirm')}}
             </button>
         </p>

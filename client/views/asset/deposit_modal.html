@@ -14,9 +14,9 @@
         </p>
 
         <p class="btn_wrapper mg-bt-15">
-            <button class="btn-primary-gradient tw-btn-lg162 mg-rg-15" ng-click="openChat()">
+            <!-- <button class="btn-primary-gradient tw-btn-lg162 mg-rg-15" ng-click="openChat()">
                 {{lang.text('tigerWitID.depositWithdrawal.runIntoProblem')}}
-            </button>
+            </button> -->
             <button class="btn-info tw-btn-lg162" style="border-radius: 100px;" ng-click="depositSucc()">
                 {{lang.text('tigerWitID.depositWithdrawal.paymentSuccess')}}
             </button>
@@ -62,7 +62,10 @@
         </p>
 
         <p class="btn_wrapper mg-bt-15">
-            <a ui-sref="space.asset.subpage({subpage: 'evidence'})" ng-click="closeModal()" class="btn btn-info btn-sm" style="width: 70%; border-radius: 100px;">
+            <button ng-click="[closeModal(), gotoEvidence()]" class="btn btn-info btn-sm" style="width: 70%; border-radius: 100px;" ng-if="lang.isThird()">
+                上传凭证
+            </button>
+            <a ui-sref="space.asset.subpage({subpage: 'evidence'})" ng-click="closeModal()" class="btn btn-info btn-sm" style="width: 70%; border-radius: 100px;" ng-if="!lang.isThird()">
                 {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
             </a>
             <button class="btn btn-primary-gradient btn-sm" style="width: 70%; margin-top:20px;" ng-click="[closeModal(), goOnDeposit()]">

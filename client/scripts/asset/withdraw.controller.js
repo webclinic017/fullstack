@@ -5,13 +5,14 @@
     angular.module('fullstackApp')
         .controller('AssetWithdrawController', AssetWithdrawController);
 
-    AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', 'forex', '$cookies', '$layer', '$document'];
+    AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', '$cookies', '$layer', '$document'];
 
-    function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, forex, $cookies, $layer, $document) {
+    function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, $cookies, $layer, $document) {
         // 缓存当前父scope 给弹窗控制器使用
         var parentScope = $scope;
         parentScope.hasChooseedCard = false
         parentScope.cardList = undefined;   // 银行卡列表
+        parentScope.ThirdList = undefined;   // 第三方列表
         parentScope.manageCardModalInstance = undefined;
         var codeRage = [100602, 100605, 100608];
 
@@ -20,7 +21,6 @@
             "/white_label/passport/05.png",
             "/white_label/passport/06.png"
         ];
-
         $scope.message = {};
         // $scope.messageWallet = {};
         $scope.maxAmountInvest = 0;
@@ -35,6 +35,14 @@
                 //bank: ,           // 银行名
                 // address:         // 开户行
                 // banken:          // 银行英文名
+            },
+            third: {
+                //id: ,    	    //主键ID
+                //account: ,    	//账号-用来显示
+                //account_f: ,    //完整账号-出金接口的third_account参数
+                //third_type: ,   //第三方平台ID-出金接口的third_type参数
+                //platform: ,    	//平台昵称
+                //status: ,    	//状态：0不可用，1可用
             },
             type: '',   // invest, wallet
             mt4_id: '',
@@ -79,7 +87,9 @@
         $scope.toWithdraw = toWithdraw;
         $scope.openWithdrawMdl = openWithdrawMdl;
         $scope.openCardMdl = openCardMdl;
+        $scope.openThirdMdl = openThirdMdl;
         $scope.openManageCardMdl = openManageCardMdl;
+        $scope.openManageThirdMdl = openManageThirdMdl;
         // $scope.changeWithdrawType = changeWithdrawType;
         $scope.openChangeWithTypeMdl = openChangeWithTypeMdl;
         $scope.openCurrency = openCurrency;
@@ -87,6 +97,8 @@
 
         // 获取默认银行卡
         getCard();
+        // 获取默认第三方
+        getThird();
 
         //绑定银行卡后获取银行卡信息
         $rootScope.$on('bindCardSuccess', function () {
@@ -94,6 +106,11 @@
             if (!parentScope.hasChooseedCard) {
                 getCard()
             }
+        });
+        //绑定第三方账户后获取账号信息
+        $rootScope.$on('bindThirdSuccess', function () {
+            // 通知所有子控器 
+            getThird()
         });
         function noIsWalletId(){
             var mt4_id;
@@ -180,14 +197,14 @@
                 // 因为使用此接口之前已经定义好了各出金方式的key，所以这里沿用以前的key，做一下替换
                 angular.forEach(data.data, function (value, index) {
                     if (value.key === 'bank_account') value.key = 'bank';
-                    if (value.key === 'third_account') {
-                        angular.forEach(value.child, function (value2, index2) {
-                            if (value2.key === 'cse_wallet') value2.key = 'cse';
-                            $scope.withdrawTypeLst[value2.key] = value2;
-                        });
-                    } else {
-                        $scope.withdrawTypeLst[value.key] = value;
-                    }
+                    // if (value.key === 'third_account') {
+                    //     angular.forEach(value.child, function (value2, index2) {
+                    //         if (value2.key === 'cse_wallet') value2.key = 'cse';
+                    //         $scope.withdrawTypeLst[value2.key] = value2;
+                    //     });
+                    // } else {
+                    $scope.withdrawTypeLst[value.key] = value;
+                    // }
                 });
                 
                 // 设置初始币种
@@ -216,7 +233,21 @@
                 }
             });
         }
-
+        // 获取默认第三方信息
+        function getThird() {
+            asset.getDefaultThirdAccount().then(function (data) {
+                if (!data) return;
+                // console.log(data);
+                if (data.is_succ && data.data) {
+                    $scope.withdraw.third.id = data.data.id;
+                    $scope.withdraw.third.account = data.data.account;
+                    $scope.withdraw.third.account_f = data.data.account_f;
+                    $scope.withdraw.third.third_type = data.data.third_type;
+                    $scope.withdraw.third.platform = data.data.platform;
+                    $scope.withdraw.third.status = data.data.status;
+                }
+            });
+        }
         function checkCardPhone(card) {
             if (!card.phone) {
                 $modal.open({
@@ -290,7 +321,7 @@
                 return true
             }
         }
-
+        // 添加银行卡
         function openCardMdl() {
             if (parentScope.manageCardModalInstance) {
                 parentScope.manageCardModalInstance.dismiss()
@@ -311,7 +342,7 @@
                         resolve: {
                             passedScope: function () {
                                 return {
-                                    personal: $scope.personal,
+                                    personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
                                     card: $scope.withdraw.card
                                 };
                             }
@@ -321,6 +352,29 @@
             })
         }
 
+        // 添加第三方
+        function openThirdMdl() {
+            if (parentScope.manageCardModalInstance) {
+                parentScope.manageCardModalInstance.dismiss()
+            }
+            // 检测认证状态
+            $scope.$emit('global.checkAuthenFlow', {
+                ctrlName: 'AssetWithdrawController',
+                callback: function () {
+                    $modal.open({
+                        templateUrl: '/views/asset/third_modal.html',
+                        size: 'md',
+                        resolve: {
+                            passedScope: function () {
+                                return {};
+                            }
+                        },
+                        controller: 'AssetThirdController'
+                    });
+                }
+            })
+        }
+        // 管理银行账号
         function openManageCardMdl(type, card) {
             $modal.open({
                 templateUrl: '/views/asset/manage_card_modal.html',
@@ -384,7 +438,70 @@
                 }]
             });
         }
+        // 管理第三方账号
+        function openManageThirdMdl(type, third) {
+            $modal.open({
+                templateUrl: '/views/asset/manage_third_modal.html',
+                size: 'md',
+                backdrop: 'true',
+                controller: ['$scope', '$modalInstance', '$state', 'asset', '$timeout', 'lang', function ($scope, $modalInstance, $state, asset, $timeout, lang) {
+                    parentScope.manageCardModalInstance = $modalInstance
+                    $timeout(function () {
+                        $scope.$broadcast('hideLoadingImg');
+                    }, 0)
+                    $scope.closeModal = closeModal;
+                    $scope.manageType = type;
+                    $scope.lang = lang;
+                    $scope.openAddThirdModal = openThirdMdl
+                    // $scope.errorTipStatus = false;
+                    //刷新列表 
+                    getThirdList($scope).then(function () {
+                        $scope.thirdList = parentScope.thirdList
+                    })
 
+                    $scope.chooseThird = function (third) {
+                        parentScope.withdraw.third.id = third.id;
+                        parentScope.withdraw.third.account = third.account;
+                        parentScope.withdraw.third.account_f = third.account_f;
+                        parentScope.withdraw.third.third_type = third.third_type;
+                        parentScope.withdraw.third.platform = third.platform;
+                        parentScope.withdraw.third.status = third.status;
+                        // 更改选中状态
+                        // parentScope.hasChooseedCard = true;
+                        closeModal()
+                    }
+
+                    $scope.confirmDeleteThird = function (third) {
+                        closeModal()
+                        openManageThirdMdl('delete', third)
+                    }
+
+                    $scope.deleteThird = function () {
+                        asset.destroyThirdAccount({id: third.id}).then(function (data) {
+                            if (data.is_succ) {
+                                getThirdList($scope).then(function () {
+                                    $scope.thirdList = parentScope.thirdList
+                                    if ($scope.thirdList.length == 0) {
+                                        parentScope.withdraw.third = {}
+                                    }
+                                })
+                                getThird()
+                                closeModal()
+                            }
+                        })
+                    }
+                    // function errorTip() {
+                    //     $timeout(function () {
+                    //         $scope.$broadcast('hideLoadingImg');
+                    //     }, 0)
+                    // }
+
+                    function closeModal() {
+                        $modalInstance.dismiss();
+                    }
+                }]
+            });
+        }
         function getCardList(_scope) {
             _scope.$emit('showLoadingImg');
             return asset.getCardList().then(function (data) {
@@ -396,7 +513,18 @@
                 parentScope.cardList = data.data
             })
         }
-
+        // 第三方列表
+        function getThirdList(_scope) {
+            _scope.$emit('showLoadingImg');
+            return asset.getThirdAccountList({limit: 100}).then(function (data) {
+                _scope.$broadcast('hideLoadingImg');
+                if (!data) {
+                    console.info('获取第三方列表失败！')
+                    return
+                }
+                parentScope.thirdList = data.data.records;
+            })
+        }
         // 提现相关的各种弹窗提示
         function openWithdrawMdl(params) {
             // console.log(params);
@@ -447,8 +575,11 @@
                     }
 
                     showErr('amount');
-                    // console.info($scope.withdrawForm.$invalid);
-                    if ($scope.withdrawForm.$invalid) {
+                    var withdrawForm = {
+                        amount: true
+                    }
+                    $scope.$broadcast('getwithdrawForm', withdrawForm);
+                    if (withdrawForm.amount) {
                         return;
                     }
                     if ($scope.clickable == false) {
@@ -465,6 +596,9 @@
                         paramsAsset.bank_card_id = $scope.withdraw.card.id;
                     } else if($scope.withdraw.accountType === 'wallet'){
                         paramsAsset.third_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].platform;
+                    } else if($scope.withdraw.accountType === 'third_account'){
+                        paramsAsset.third_type = $scope.withdraw.third.third_type;
+                        paramsAsset.third_account = $scope.withdraw.third.account_f;
                     } else {
                         paramsAsset.third_type = $scope.withdrawTypeLst[$scope.withdraw.accountType].platform;
                         paramsAsset.third_account = $scope.withdraw.thirdAccount;
@@ -534,22 +668,29 @@
 
                         if (data.is_succ) {
                             $scope.withdraw.success = true;
-                            if($scope.withdraw.accountType === 'wallet'){
-                                openWithdrawMdl({
-                                    type: "walletSuss",
-                                    message: ''
-                                });
-                            }else{
+                            if($scope.lang.isThird()) {
                                 openWithdrawMdl({
                                     type: "withdrawSucc",
                                     message: ''
                                 });
-                            }
+                            } else {
+                                if($scope.withdraw.accountType === 'wallet'){
+                                    openWithdrawMdl({
+                                        type: "walletSuss",
+                                        message: ''
+                                    });
+                                }else{
+                                    openWithdrawMdl({
+                                        type: "withdrawSucc",
+                                        message: ''
+                                    });
+                                }
 
-                            $state.go('space.asset.subpage', {
-                                subpage: 'withdraw',
-                                account: paramsAsset.mt4_id
-                            }, { reload: true });
+                                $state.go('space.asset.subpage', {
+                                    subpage: 'withdraw',
+                                    account: paramsAsset.mt4_id
+                                }, { reload: true });
+                            }
                         } else {
                             var msg = data.message;
                             openWithdrawMdl({

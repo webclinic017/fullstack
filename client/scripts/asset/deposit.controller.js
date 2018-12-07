@@ -24,16 +24,11 @@
         $scope.walletDepositSucc = false;
         $scope.teleDepositSucc = false;    // 上传凭证
         $scope.walletAble = 0;      //钱包余额
-        $scope.withdraw = {   // 充值账户
-            type: '',
-            mt4_id: ''
-        }
         $scope.src = [
             "/white_label/passport/04.png"
         ];
         $scope.$watch('selectWay.type', function(n){
             if(!n) return;
-            $scope.withdraw.type = n
             if(n === 'wallet'){
                 $scope.accountIsWallet = true;
                 if($scope.deposit.type === 'wallet'){
@@ -52,10 +47,6 @@
             } else {
                 $scope.accountIsWallet = false;
             }
-        })
-        $scope.$watch('accountItem.mt4_id', function(n){
-            if(!n) return;
-            $scope.withdraw.mt4_id = n
         })
         $scope.isLoading = false;
         $scope.toDeposit = toDeposit;
@@ -146,7 +137,7 @@
                         $scope.deposit.depositCard = data.data.depositCard;
                     } else {
                         openDepositMdl('bindBankCard', null, {
-                            cardName: $scope.personal.realname,
+                            cardName: $scope.lang.isThird() ? $scope.main.realname : $scope.personal.realname,
                             msgTitle: $scope.lang.text('tigerWitID.depositWithdrawal.fillPayCardInfo')
                         });
                     }
@@ -315,8 +306,8 @@
 
                     function confirmDeposit() {
                         var mt4_id;
-                        if($scope.withdraw.type !== 'wallet'){
-                            mt4_id = $scope.withdraw.mt4_id;
+                        if($scope.selectWay.type !== 'wallet'){
+                            mt4_id = $scope.accountItem.mt4_id;
                         }
                         $scope.isLoading = true;
                         if (($scope.deposit.type !== 'tele')) {
@@ -410,22 +401,22 @@
         function toHelp() {
             OpenChat();
         }
-
         // 入金相关的各种弹窗提示
         function openDepositMdl(type, callback, msgInfo) {
             $modal.open({
                 templateUrl: '/views/asset/deposit_modal.html',
                 size: 'sm',
                 backdrop: 'static',
-                controller: function ($scope, $modalInstance, $state, lang) {
+                controller: function ($rootScope, $scope, $modalInstance, $state, lang) {
                     $scope.msgInfo = msgInfo || {};
                     $scope.type = type;
                     $scope.lang = lang;
                     $scope.closeModal = closeModal;
                     $scope.verify = verify;
-                    $scope.openChat = openChat;
+                    // $scope.openChat = openChat;
                     $scope.depositSucc = depositSucc;
                     $scope.goOnDeposit = goOnDeposit;
+                    $scope.gotoEvidence = gotoEvidence;
                     $scope.bindBankCard = bindBankCard;
                     $scope.depositCard = {
                         backErr: false,
@@ -439,11 +430,11 @@
                         closeModal();
                     }
 
-                    // 支付遇到问题
-                    function openChat() {
-                        OpenChat();
-                        closeModal();
-                    }
+                    // // 支付遇到问题
+                    // function openChat() {
+                    //     OpenChat();
+                    //     closeModal();
+                    // }
 
                     // 支付成功
                     function depositSucc() {
@@ -479,7 +470,12 @@
                             }
                         });
                     }
-
+                    // 兼容第三方
+                    function gotoEvidence () {
+                        console.log($scope.main)
+                        $rootScope.main.switchPage('evidence');
+                        closeModal();
+                    }
                     function closeModal() {
                         $modalInstance.dismiss();
                     }

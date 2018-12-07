@@ -1,0 +1,54 @@
+<div class="sys_modal_v2 mid_case">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <!-- 选择第三方/管理第三方 -->
+    <div class="sys_modal_v2__content" ng-if="manageType == 'switch' || manageType == 'manage'">
+        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'switch'">{{lang.text('tigerWitID.wallet.switchThird')}}</h3>
+        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'manage'">{{lang.text('tigerWitID.wallet.manageThird')}}</h3>
+        <div tw-loading-img></div>
+        <table class="manage_card_list">
+            <colgroup>
+                <col width="40%">
+                <col width="30%">
+                <col width="30%">
+            </colgroup>
+            <tbody>
+                <tr class="manage_card_list__item" ng-repeat="third in thirdList track by $index">
+                    <td>
+                        <div class="widthdraw__card_font" style="width: 80%;">
+                            <!-- <img ng-show="third.bank_img" ng-src="{{ third.bank_img }}"> -->
+                            <span>{{ third.platform }}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="card_number text-center">{{ third.account }}</p>
+                    </td>
+                    <td>
+                        <p class="text-center" ng-if="manageType == 'switch' && third.status == 1">
+                            <a class="btn-text card_btn" ng-click="chooseThird(third)">{{lang.text('tigerWitID.select')}}</a>
+                        </p>
+                        <p class="text-center" ng-if="manageType == 'switch' && third.status == 0">
+                            <a class="btn-text card_btn disabled">{{lang.text('tigerWitID.wallet.thirdAccNoSupport')}}</a>
+                        </p>
+                        <p class="text-center" ng-if="manageType == 'manage'">
+                            <a class="btn-text card_btn" ng-click="confirmDeleteThird(third)">{{lang.text('tigerWitID.delete')}}</a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mg-tp-10 text-left" ng-if="manageType == 'manage'">
+            <a class="btn-text" ng-click="openAddThirdModal()">{{lang.text('tigerWitID.wallet.addThirdAccount')}}</a>
+        </div>
+    </div>
+
+    <!-- 删除第三方账号 -->
+    <div class="sys_modal_v2__content" ng-if="manageType == 'delete'">
+        <h3 class="sys_modal_v2__title text-left">{{lang.text('tigerWitID.wallet.deleteThirdAccount')}}</h3>
+        <p class="sys_modal_v2__desp mg-tp-20">删除提示</p>
+        <div class="btn_wrapper text-right clearfix">
+            <a class="btn-text fr mg-lf-20" ng-click="closeModal()">{{lang.text('tigerWitID.cancel')}}</a>
+            <a class="btn-text fr" ng-click="deleteThird()">{{lang.text('tigerWitID.delete')}}</a>
+        </div>
+    </div>
+</div>

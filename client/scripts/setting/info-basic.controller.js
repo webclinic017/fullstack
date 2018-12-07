@@ -273,7 +273,7 @@
             // console.info($scope.basicInfo.desc);
 
             $scope.clickable = false;
-            account.setBasicInfo(
+            account.setBasicInfoName(
                 $scope.basicInfo.username
                 // $scope.basicInfo.locationWorld.value,
                 // $scope.basicInfo.locationState.value,

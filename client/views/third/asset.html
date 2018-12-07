@@ -109,21 +109,31 @@
                 </div>
             </div>
         </div>
-        <div class="tw-space-layout__con-content">
-            <div class="content-view" ng-if="main.pageCtrl == 'deposit'">
-                <div ng-include="'/views/third/asset/deposit.html'"></div>
-            </div>
-            <div class="content-view" ng-if="main.pageCtrl == 'withdraw'">
-                <div ng-include="'/views/third/asset/withdraw.html'"></div>
-            </div>
-            <div class="content-view relative" ng-if="main.pageCtrl == 'record'">
-                <div ng-include="'/views/third/asset/record.html'"></div>
-            </div>
-            <div class="content-view relative" ng-if="main.pageCtrl == 'evidence'">
-                <div ng-include="'/views/third/asset/evidence.html'"></div>
-            </div>
-            <div class="content-view relative" ng-if="main.pageCtrl == 'wallet'">
-                <div ng-include="'/views/third/asset/wallet_record.html'"></div>
+        <div class="tw-space-layout__con-content" ng-controller="AssetIndexController">
+            <div ng-controller="CommonAccountxController">
+                <div class="content-view" ng-if="main.pageCtrl == 'deposit'">
+                    <div class="space_block" ng-controller="AssetDepositController">
+                        <div ng-include="'/views/third/asset/common_account.html'" ng-show="!walletDepositSucc && !teleDepositSucc"></div>
+                        <div class="mg-tp-40" ng-include="'/views/asset/deposit.html'"></div>
+                    </div>
+                </div>
+                <div class="content-view" ng-if="main.pageCtrl == 'withdraw'">
+                    <div class="space_block" ng-controller="AssetWithdrawController">
+                        <div ng-include="'/views/third/asset/common_account.html'"></div>
+                        <div class="mg-tp-40" ng-include="'/views/asset/withdraw.html'"></div>
+                    </div>
+                </div>
+                <div class="content-view relative" ng-if="main.pageCtrl == 'record'">
+                    <div ng-include="'/views/third/asset/record.html'"></div>
+                </div>
+                <div class="content-view relative" ng-if="main.pageCtrl == 'evidence'">
+                    <div ng-controller="AssetEvidenceController">
+                        <div ng-include="'/views/asset/evidence.html'"></div>
+                    </div>
+                </div>
+                <div class="content-view relative" ng-if="main.pageCtrl == 'wallet'">
+                    <div ng-include="'/views/third/asset/wallet_record.html'"></div>
+                </div>
             </div>
         </div>
     </div>

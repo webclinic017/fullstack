@@ -18,9 +18,9 @@
         var companyName = $cookies["company_name"];
 
         $scope.message = {};
-        $scope.messageWallet = {};
+        // $scope.messageWallet = {};
         $scope.maxAmountInvest = 0;
-        $scope.maxAmountWallet = 0;
+        // $scope.maxAmountWallet = 0;
         $scope.withdrawNotice = '';
         $scope.withdraw = {
             // amount: ,
@@ -40,16 +40,7 @@
             minAmount: companyName == 'tigerwit' ? 20 : 100,
             maxAmount: 0
         };
-        $scope.common_acount = {   // 账户
-            type: 'invest'
-        }
-        // 被选中的账号
-        $scope.accountItem = {
-          account_name: '',
-          mt4_id : ''
-        }
-
-        $scope.$watch('{id: accountItem.mt4_id, type: common_acount.type}', function(n){
+        $scope.$watch('{id: accountItem.mt4_id, type: selectWay.type}', function(n){
             if(n.type){
                 $scope.withdraw.type = n.type;
                 if(n.type === 'wallet'){
@@ -87,7 +78,7 @@
         $scope.openWithdrawMdl = openWithdrawMdl;
         $scope.openCardMdl = openCardMdl;
         $scope.openManageCardMdl = openManageCardMdl;
-        $scope.changeWithdrawType = changeWithdrawType;
+        // $scope.changeWithdrawType = changeWithdrawType;
         $scope.openChangeWithTypeMdl = openChangeWithTypeMdl;
         $scope.openCurrency = openCurrency;
         $scope.selcetCurrency = selcetCurrency;
@@ -112,7 +103,7 @@
             return mt4_id;
         }
         // 判断出金状态, 获取可提取的最大金额
-        getIsWithdraw();
+        // getIsWithdraw();
         function getIsWithdraw(){
             asset.getIsWithdraw(undefined, noIsWalletId()).then(function (data) {
                 layer.closeAll();
@@ -304,8 +295,8 @@
                 parentScope.manageCardModalInstance.dismiss()
             }
             // 检测认证状态
-            $scope.$emit('main.checkAuthenFlow', {
-                ctrlName: 'ThirdWithdrawController',
+            $scope.$emit('global.checkAuthenFlow', {
+                ctrlName: 'AssetWithdrawController',
                 callback: function () {
                     // var personal = {
                     //     verified: $scope.main.verified,
@@ -436,23 +427,23 @@
             });
         }
 
-        function changeWithdrawType(type) {
-            $scope.withdraw.type = type;
-            if(type === 'wallet'){
-                if($scope.withdraw.accountType === 'wallet'){
-                    changeWithdrawAccountType('bank');
-                }
-            } 
-            getIsWithdraw();
-            $scope.withdraw.maxAmount = type === 'invest' ? $scope.maxAmountInvest : $scope.maxAmountWallet;
-        }
+        // function changeWithdrawType(type) {
+        //     $scope.withdraw.type = type;
+        //     if(type === 'wallet'){
+        //         if($scope.withdraw.accountType === 'wallet'){
+        //             changeWithdrawAccountType('bank');
+        //         }
+        //     } 
+        //     getIsWithdraw();
+        //     $scope.withdraw.maxAmount = type === 'invest' ? $scope.maxAmountInvest : $scope.maxAmountWallet;
+        // }
 
         // 提现
         $scope.clickable = true;
         function toWithdraw() {
             // 通过认证
-            $scope.$emit('main.checkAuthenFlow', {
-                ctrlName: 'ThirdWithdrawController',
+            $scope.$emit('global.checkAuthenFlow', {
+                ctrlName: 'AssetWithdrawController',
                 callback: function () {
                     if ($scope.withdraw.accountType === 'bank' && $scope.withdraw.card.country === 'CN') {
                         if(!checkCardPhone($scope.withdraw.card)){ return }

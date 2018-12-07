@@ -2,7 +2,7 @@
     <button class="close" ng-click="closeModal()">&times;</button>
 
     <h5 class="sys_modal_v2__title" ng-class="titleClass">
-        {{ title || '系统提示' }}
+        {{ title || lang.text('tigerWitID.systemPrompt') }}
     </h5>
 
     <div class="sys_modal_v2__content">
@@ -16,12 +16,12 @@
         </p>
         <p class="mg-tp-20 text-center" ng-if="loading == 1" ng-class="btnsClass">
             <a class="btn tw-btn-capsule-gradient btn-lt">
-                提交中..
+                {{lang.text('tigerWitID.submitting')}}..
             </a>
         </p>
         <p class="mg-tp-20 text-center" ng-if="loading == 2" ng-class="btnsClass">
             <a class="btn tw-btn-capsule-gradient btn-lt" ng-click="closeModal()">
-                确定
+                {{lang.text('tigerWitID.confirm')}}
             </a>
         </p>
     </div>

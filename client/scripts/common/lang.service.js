@@ -81,6 +81,10 @@
             },
             isCompany: function () {  //此方法废弃 2018.11.20
                 return langData["company"];
+            },
+            // 为合并第三方充值提现判断
+            isThird: function() {
+                return ($location.absUrl().indexOf('payment/asset') !== -1)
             }
         };
         return lang;
