@@ -54,7 +54,7 @@
             <!-- </a> -->
         </li>
         <!-- agent_user_status代理商激活状态,1:未激活-无归属,2:已激活,3:未激活有归属,与cookie中ib_pid共同判断 -->
-        <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.agent_user_status !== 2}" ng-if="ibPid || assetInfo.agent_user_status !== 3">
+        <li class="space_center_summary__list-item" ng-class="{'not-active': assetInfo.agent_user_status !== 2}" ng-if="assetInfo.agent_user_status !== 0 && (ibPid || assetInfo.agent_user_status !== 3)">
             <!-- <a ui-sref="space.agent"> -->
                 <p class="summary_name">{{lang.text('tigerWitID.partner.title')}}</p>
                 <p class="summary_btn" ng-if="assetInfo.agent_user_status !== 2"><a ui-sref="space.agent">{{lang.text('tigerWitID.myAccount.unactivated')}}</a></p>
