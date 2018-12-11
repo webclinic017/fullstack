@@ -23,7 +23,10 @@
                 <span>{{ history.type }}</span>
                 <span class="tw-btn font-info font-size-14" ng-click="backout(history.id)" ng-if="history.is_cancel === 1">{{lang.text('tigerWitID.revocation')}}</span>
             </td>
-            <td ng-class="{'font-danger': history.amount.indexOf('-') < 0, 'font-success': history.amount.indexOf('-') >= 0}">
+            <td ng-class="{'font-danger': history.amount.indexOf('-') < 0, 'font-success': history.amount.indexOf('-') >= 0}" ng-if="lang.hostIsCn()">
+                ${{ history.amount }}
+            </td>
+            <td ng-class="{'font-success': history.amount.indexOf('-') < 0, 'font-danger': history.amount.indexOf('-') >= 0}" ng-if="!lang.hostIsCn()">
                 ${{ history.amount }}
             </td>
             <td>${{ history.wallet_balance }}</td>

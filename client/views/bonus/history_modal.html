@@ -32,7 +32,10 @@
                     <td>{{ bonusDetail.open_price }}</td>
                     <td>{{ bonusDetail.close_price }}</td>
                     <td>{{ bonusDetail.volume }}</td>
-                    <td ng-class="{'font-success': bonusDetail.profit.indexOf('-') < 0, 'font-danger': bonusDetail.profit.indexOf('-') >= 0}">
+                    <td ng-class="{'font-danger': bonusDetail.profit.indexOf('-') < 0, 'font-success': bonusDetail.profit.indexOf('-') >= 0}" ng-if="lang.hostIsCn()">
+                        ${{ bonusDetail.profit }}
+                    </td>
+                    <td ng-class="{'font-success': bonusDetail.profit.indexOf('-') < 0, 'font-danger': bonusDetail.profit.indexOf('-') >= 0}" ng-if="!lang.hostIsCn()">
                         ${{ bonusDetail.profit }}
                     </td>
                 </tr>

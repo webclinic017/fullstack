@@ -100,10 +100,12 @@
                         <td>{{ detail.close_price }}</td>
                         <td>{{ detail.volume }}</td>
                         <td><i class="fa fa-dollar"></i>{{ detail.margin }}</td>
-                        <td ng-class="{'font-success': detail.gross_profit.indexOf('-') != -1, 'font-danger': detail.gross_profit.indexOf('-') < 0}"><i class="fa fa-dollar"></i>{{ detail.gross_profit }}</td>
+                        <td ng-class="{'font-success': detail.gross_profit.indexOf('-') != -1, 'font-danger': detail.gross_profit.indexOf('-') < 0}" ng-if="lang.hostIsCn()"><i class="fa fa-dollar"></i>{{ detail.gross_profit }}</td>
+                        <td ng-class="{'font-danger': detail.gross_profit.indexOf('-') != -1, 'font-success': detail.gross_profit.indexOf('-') < 0}" ng-if="!lang.hostIsCn()"><i class="fa fa-dollar"></i>{{ detail.gross_profit }}</td>
                         <td>{{ detail.swaps }}</td>
                         <td>{{ detail.commission }}</td>
-                        <td ng-class="{'font-success': detail.profit_rate.indexOf('-') != -1, 'font-danger': detail.profit_rate.indexOf('-') < 0}">{{ detail.profit_rate }}%</td>
+                        <td ng-class="{'font-success': detail.profit_rate.indexOf('-') != -1, 'font-danger': detail.profit_rate.indexOf('-') < 0}" ng-if="lang.hostIsCn()">{{ detail.profit_rate }}%</td>
+                        <td ng-class="{'font-danger': detail.profit_rate.indexOf('-') != -1, 'font-success': detail.profit_rate.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">{{ detail.profit_rate }}%</td>
                         <td ng-if="follow_master">{{ detail.master_name }}</td>
                     </tr>
                 </tbody>

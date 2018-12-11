@@ -46,8 +46,10 @@
                         <h4 class="trader_gray_color">{{ lang.text("tigerWitID.historyTransactions.historyFollower") }}</h4>
                     </li>
                     <li class="trader_profit">
-                        <div class="trader_profit__item "
-                             ng-class="{'font-danger': master.profit_rate.indexOf('-') >= 0, 'font-success': master.profit_rate.indexOf('-') < 0}">
+                        <div class="trader_profit__item" ng-class="{'font-success': master.profit_rate.indexOf('-') >= 0, 'font-danger': master.profit_rate.indexOf('-') < 0}" ng-if="lang.hostIsCn()">
+                            <span class="big-num-font trader_blue">{{ master.total_profit_rate || '0.00' }}</span>%
+                        </div>
+                        <div class="trader_profit__item" ng-class="{'font-danger': master.profit_rate.indexOf('-') >= 0, 'font-success': master.profit_rate.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
                             <span class="big-num-font trader_blue">{{ master.total_profit_rate || '0.00' }}</span>%
                         </div>
                         <h4 class="trader_gray_color">{{ lang.text("tigerWitID.dataStatistics.totalProfitRate") }}</h4>
