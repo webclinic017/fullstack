@@ -6,6 +6,8 @@ var withdrawBankId;   //当前选择提现到银行卡ID
 var withdrawBtnStatus = false; //提现按钮状态
 var canWithdrawAmount = 0; //可提现金额
 var withdrawNotice = ''; //提现提示语
+var thirdThirdType = '';  // 第三方平台ID-出金接口的third_type参数
+var thirdThirdAccount = '';  // 完整账号-出金接口的third_account参数
 var eleWithdraw = {
   payWithdraw: '#third_app_withdraw',
   payWithdrawMsg: '#third_app_withdraw_message',
@@ -64,13 +66,21 @@ function confirmWithdraw () {
 }
 function submitWithdraw () {
   openLoadingMdl();
-  publicRequest('withdrawThird', 'POST', {
+  var params = {
     amount: Number($(eleWithdraw.payWithdrawAmount).val()),
     currency: selectKeyFromTypeForWithdraw('currency')[0].currency,
     mt4_id: withdrawAccount !== 'wallet' ? withdrawAccount : undefined,
-    third_type: withdrawType === 'wallet' ? selectKeyFromTypeForWithdraw('platform') : undefined,
-    bank_card_id: withdrawType === 'bank_account' ? withdrawBankId : undefined
-  }).then(function (data) {
+  }
+  if(withdrawType === 'wallet') {
+    params.third_type = selectKeyFromTypeForWithdraw('platform');
+  } else if(withdrawType === 'bank_account') {
+    params.bank_card_id = withdrawBankId;
+
+  } else if(withdrawType === 'third_account'){
+    params.third_type = thirdThirdType;
+    params.third_account = thirdThirdAccount;
+  }
+  publicRequest('withdrawThird', 'POST', params).then(function (data) {
     // console.log(data);
     closeAllMdl();
     if (!data) return;
@@ -81,7 +91,7 @@ function submitWithdraw () {
         $(eleWithdraw.payWithdrawMsg).find('.bank').removeClass('active');
         $(eleWithdraw.payWithdrawMsg).find('.wallet').addClass('active');
       }
-      if (withdrawType === 'bank_account') {
+      if (withdrawType === 'bank_account' || withdrawType === 'third_account') {
         $(eleWithdraw.payWithdrawMsg).find('.wallet').removeClass('active');
         $(eleWithdraw.payWithdrawMsg).find('.bank').addClass('active');
       }
@@ -111,11 +121,11 @@ $(eleWithdraw.payAccountLst).on("tap", "li", function () {
     $(this).addClass('active');
     withdrawType = cType;
     withdrawBankId = undefined;
-    $(eleWithdraw.payAccountLst).find("li[data-type=bank_select]").remove();
+    $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
     setWithdrawBtnStatus();
   } else {
     openLoadingMdl();
-    getBankLst();
+    getBankLst(cType);
   }
   return false;
 });
@@ -123,25 +133,37 @@ $(document).on("tap", "#third_app_bottom_template .bank_item", function () {
   var cId = $(this).attr("data-id");
   var cNo = $(this).attr("data-no");
   var cName = $(this).attr("data-name");
+  var cType = $(this).attr("data-type");
   if (cId == withdrawBankId) return;
   $("#third_app_bottom_template .bank_item").removeClass('active');
   $(this).addClass('active');
   closeAllMdl();
-  withdrawType = 'bank_account';
+  withdrawType = cType;
   withdrawBankId = cId;
-  var tp = '<li class="s-select" data-type="bank_select"><p>'+cName+'('+cNo.substring(cNo.length-4)+')'+'</p></li>';
-  $(eleWithdraw.payAccountLst).find("li[data-type=bank_select]").remove();
+  if(withdrawType == 'third_account') {
+    thirdThirdType = $(this).attr("data-third-type");
+    thirdThirdAccount = $(this).attr("data-third-account");
+  }
+  var tp = '<li class="s-select" data-select="bank_chosen" data-type="'+ cType +'"><p>'+cName+'('+cNo.substring(cNo.length-4)+')'+'</p></li>';
+  $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
   $(eleWithdraw.payAccountLst).find("li").removeClass('active');
-  $(eleWithdraw.payAccountLst).find("li[data-type=bank_account]").addClass('active').after(tp);
+  $(eleWithdraw.payAccountLst).find("li[data-type="+ withdrawType +"]").addClass('active').after(tp);
   setWithdrawBtnStatus();
   return false;
 });
 $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank", function () {
   var cId = $(this).attr("data-id");
+  var cType = $(this).attr("data-type");
   openLoadingMdl();
-  publicRequest('delThirdBank', 'POST', {
-    id: cId
-  }).then(function (data) {
+  var different = {
+    'bank_account': {
+      params: ['delThirdBank', 'POST', {id: cId}]
+    },
+    'third_account': {
+      params: ['destroyThirdAccount', 'POST', {id: cId}]
+    }
+  }
+  publicRequest.apply(this, different[cType].params).then(function (data) {
     // console.log(data);
     $("#third_app_loading_template").removeClass('active');
     if (!data) return;
@@ -152,7 +174,7 @@ $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank",
         withdrawType = undefined;
         withdrawBankId = undefined;
         $(eleWithdraw.payAccountLst).find("li").removeClass('active');
-        $(eleWithdraw.payAccountLst).find("li[data-type=bank_select]").remove();
+        $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
         setWithdrawBtnStatus();
       }
     } else {
@@ -161,14 +183,23 @@ $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank",
   });
   return false;
 });
-$(document).on("tap", "#third_app_add_bank_card", function () {
+$(document).on("tap", "#third_app_bottom_template .third_app_add_card", function () {
+  var cType = $(this).attr("data-type");
   closeAllMdl();
+  var different = {
+    'bank_account': {
+      link: '/m/third/add_bank'
+    },
+    'third_account': {
+      link: '/m/third/add_third'
+    }
+  }
   // openThirdNative({
   //   type: "openUrl",
   //   title: "添加银行卡",
   //   url: window.location.origin + '/m/third/add_bank'
   // });
-  window.location.href='/m/third/add_bank';
+  window.location.href= different[cType].link;
   return false;
 });
 //监听amout
@@ -262,19 +293,34 @@ function addWithdrawAccount () {
   setWithdrawBtnStatus();
 }
 //获取银行列表
-function getBankLst () {
-  publicRequest('getThirdBankLst', 'GET').then(function (data) {
+function getBankLst (withdrawType) {
+  var withdrawType = withdrawType || '';
+  var different = {
+    'bank_account': {
+      id: 'template_withdraw_bank_list',
+      params: ['getThirdBankLst', 'GET']
+    },
+    // 获取第三方账号列表
+    'third_account': {
+      id: 'template_withdraw_third_list',
+      params: ['getThirdAccountList', 'GET', {limit: 100}]
+    }
+  }
+  // apply将数组转为参数传递
+  publicRequest.apply(this, different[withdrawType].params).then(function (data) {
     // console.log(data);
     closeAllMdl();
     if (!data) return;
     if (data.is_succ) {
       var bankLstTemplate = {
         data: {
+          type: withdrawType,
           id: withdrawBankId,
           lst: data.data
         }
       };
-      var html=bt('template_withdraw_bank_list',bankLstTemplate);
+
+      var html=bt(different[withdrawType].id, bankLstTemplate);
       $("#third_app_bottom_template").html(html);
       openBottomMdl();
     } else {

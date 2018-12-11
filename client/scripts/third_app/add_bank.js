@@ -77,7 +77,7 @@ $("#third_app_bank_btn").on("tap", function () {
   }).then(function (data) {
     closeAllMdl();
     if (!data) return;
-    if (!data.is_succ) {
+    if (data.is_succ) {
       openMessageMdl('添加成功');
       setTimeout(function () {
         // console.log('backPrev');

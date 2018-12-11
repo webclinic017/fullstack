@@ -95,11 +95,11 @@
         uploadThirdBankInfo: origin + '/user/bank_card', //put
         checkThirdWithdrawLimit: origin + '/payment/withdraw/limits', //get
         withdrawThird: origin + '/payment/withdraw', //post
-        getDefaultThirdAccountApi: origin + '/third/account',  //get
-        getThirdPlatformsApi: origin + '/third/platforms', //get
-        setThirdBindAccountApi: origin + '/third/accounts/bind',   //post
-        getThirdAccountListApi: origin + '/third/accounts/lists',  //get
-        destroyThirdAccountApi: origin + '/third/accounts/destroy'  //post
+        getDefaultThirdAccount: origin + '/third/account',  //get
+        getThirdPlatforms: origin + '/third/platforms', //get
+        setThirdBindAccount: origin + '/third/accounts/bind',   //post
+        getThirdAccountList: origin + '/third/accounts/lists',  //get
+        destroyThirdAccount: origin + '/third/accounts/destroy'  //post
     };
 
     w.publicRequest = publicRequest;
