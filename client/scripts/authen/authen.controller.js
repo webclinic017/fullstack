@@ -880,7 +880,7 @@
             $scope.$apply(function () {
                 $scope.verification.id[data.face + 'Status'] = 2;
             });
-            if($scope.realnameInfo.id_type.value == '0'){
+            if($scope.realnameInfo.id_type.value == '0' || $scope.realnameInfo.id_type.value == '5' || $scope.realnameInfo.id_type.value == '4'){
                 if ($scope.uploadFinish.hasOwnProperty('front') &&
                     $scope.uploadFinish.hasOwnProperty('back') &&
                     ($scope.backErr.system.status != 3)

@@ -1210,10 +1210,10 @@
                         "zh-Hant": "您已完成KYC認證，感謝您的慘與，請繼續完成下壹步操作。"
                     },
                     tip24: {
-                        zh: "因监管要求，请您提供相关信息。请确认是您本人，审核通过后不可修改。",
-                        en: "Please provide relevant information due to regulatory requirements. Please confirm that it is you, and it cannot be modified after passing the audit.",
-                        vi: "Vui lòng cung cấp thông tin có liên quan vì lý do các yêu cầu quản lý. Vui lòng xác nhận rằng đó là bạn và không thể sửa đổi sau khi vượt qua kiểm toán.",
-                        "zh-Hant": "因監管要求，請您提供相關信息。請確認是您本人，審核通過後不可修改。"
+                        zh: "请确保证件边框完整、大小适中、字迹清晰、亮度均衡、证件信息与填写信息一致、证件未过期、已满18周岁。",
+                        en: "We require colour copies of a government-issued drive license, passport and ID card. For ID cards and drive license, we require copies of the card’s front and back.",
+                        vi: "Chúng tôi yêu cầu bản sao màu giấy phép lái xe cấp bởi chính phủ, hộ chiếu và thẻ ID. Với thẻ ID và bằng lái xe, chúng tôi yêu cầu bản sao mặt trước và mặt sau.",
+                        "zh-Hant": "請確保證件邊框完整、大小適中、字迹清晰、亮度均衡、證件資訊與填寫資訊一致、證件未過期、已滿18周歲。"
                     },
                     realName: {
                         zh: "真实姓名",
@@ -3264,10 +3264,10 @@
                         "zh-Hant": "上傳身份證明"
                     },
                     clickUploadDocuments: {
-                        zh: "点击上传证件",
-                        en: "Click to upload documents",
-                        vi: "Nhấp vào để tải hố sơ lên",
-                        "zh-Hant": "點擊上傳證件"
+                        zh: "点击上传证件进行实名验证",
+                        en: "Upload",
+                        vi: "Tải lên",
+                        "zh-Hant": "點擊上傳證件進行實名驗證"
                     },
                     completeInformation: {
                         zh: "完善资料",
@@ -6517,7 +6517,7 @@
                     },
                     driverLicense: {
                         zh: "驾驶证",
-                        en: "Driver’s license",
+                        en: "Driver license",
                         vi: "Bằng lái xe",
                         "zh-Hant": "駕駛證"
                     },
