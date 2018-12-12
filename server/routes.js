@@ -153,8 +153,8 @@ module.exports = function (app) {
     app.use('/', function(req, res, next){
         setEnvCf(req, res);
         var allowPaths = ['/payment/login', '/payment/asset', '/payment/evidence', '/payment/cse_usage', '/waiting', '/napi']
-        if(req.hostname.indexOf('dp') != -1) {
-        // if(req.hostname.indexOf('w.dev.tigerwit.com') != -1) {
+        // if(req.hostname.indexOf('dp') != -1) {
+        if(req.hostname.indexOf('w.dev.tigerwit.com') != -1) {
             if(allowPaths.indexOf(req.originalUrl) != -1){
                 var pageId = ''
                 if(req.originalUrl == allowPaths[0]){

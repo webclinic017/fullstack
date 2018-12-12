@@ -20,7 +20,7 @@
                 <tr ng-repeat="history in historyList">
                     <td>{{ history.order_date | dateFormatter }}</td>
                     <td>{{ history.status_type }}</td>
-                    <td ng-class="{'font-danger': history.status === 2, 'font-success': history.status === 4, 'font-base': history.status === -2}">
+                    <td ng-class="{'font-danger': history.status === 2, 'font-success': history.status === 1, 'font-base': history.status === 0}">
                         ${{ history.amount }}
                     </td>
                     <td>

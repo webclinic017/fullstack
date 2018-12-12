@@ -85,6 +85,9 @@
             // 为合并第三方充值提现判断
             isThird: function() {
                 return ($location.absUrl().indexOf('payment/asset') !== -1)
+            },
+            hostIsCn: function() {
+               return 'cn.tigerwit.com,cndemo.tigerwit.com,w.dev.tigerwit.com'.indexOf($location.host())!= -1;
             }
         };
         return lang;
