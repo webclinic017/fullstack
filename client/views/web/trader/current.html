@@ -37,10 +37,16 @@
                     <td>
                         {{ order.position_time | duration }}
                     </td>
-                    <td ng-class="{'font-danger': order.profit.indexOf('-') < 0, 'font-success': order.profit.indexOf('-') != -1}">
+                    <td ng-class="{'font-danger': order.profit.indexOf('-') < 0, 'font-success': order.profit.indexOf('-') != -1}" ng-if="lang.hostIsCn()">
                         {{ order.points }}
                     </td>
-                    <td ng-class="{'font-danger': order.gross_profit.indexOf('-') < 0, 'font-success': order.gross_profit.indexOf('-') != -1}">
+                    <td ng-class="{'font-success': order.profit.indexOf('-') < 0, 'font-danger': order.profit.indexOf('-') != -1}" ng-if="!lang.hostIsCn()">
+                        {{ order.points }}
+                    </td>
+                    <td ng-class="{'font-danger': order.gross_profit.indexOf('-') < 0, 'font-success': order.gross_profit.indexOf('-') != -1}" ng-if="lang.hostIsCn()">
+                        <i class="fa fa-dollar"></i>{{ order.gross_profit }}
+                    </td>
+                    <td ng-class="{'font-success': order.gross_profit.indexOf('-') < 0, 'font-danger': order.gross_profit.indexOf('-') != -1}" ng-if="!lang.hostIsCn()">
                         <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                     </td>
                 </tr>

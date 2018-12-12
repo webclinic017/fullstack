@@ -10,12 +10,14 @@
         </li>
         <li class="space_center_statistics__list-item"></li>
         <li class="space_center_statistics__list-item">
-            <div ng-class="{'font-danger': totalDealAccount.total_profit.indexOf('-') < 0, 'font-success': totalDealAccount.total_profit.indexOf('-') >= 0}">${{ totalDealAccount.total_profit || '0.00' }}</div>
+            <div ng-class="{'font-danger': totalDealAccount.total_profit.indexOf('-') < 0, 'font-success': totalDealAccount.total_profit.indexOf('-') >= 0}" ng-if="lang.hostIsCn()">${{ totalDealAccount.total_profit || '0.00' }}</div>
+            <div ng-class="{'font-success': totalDealAccount.total_profit.indexOf('-') < 0, 'font-danger': totalDealAccount.total_profit.indexOf('-') >= 0}" ng-if="!lang.hostIsCn()">${{ totalDealAccount.total_profit || '0.00' }}</div>
             <div>{{lang.text('tigerWitID.tradingAccount.totalEarnings')}}</div>
         </li>
         <li class="space_center_statistics__list-item" ></li>
         <li class="space_center_statistics__list-item">
-            <div ng-class="{'font-danger': totalDealAccount.total_profit_rate.indexOf('-') < 0, 'font-success': totalDealAccount.total_profit_rate.indexOf('-') >= 0}">{{ totalDealAccount.total_profit_rate || '0.00' }}%</div>
+            <div ng-class="{'font-danger': totalDealAccount.total_profit_rate.indexOf('-') < 0, 'font-success': totalDealAccount.total_profit_rate.indexOf('-') >= 0}" ng-if="lang.hostIsCn()">{{ totalDealAccount.total_profit_rate || '0.00' }}%</div>
+            <div ng-class="{'font-success': totalDealAccount.total_profit_rate.indexOf('-') < 0, 'font-danger': totalDealAccount.total_profit_rate.indexOf('-') >= 0}" ng-if="!lang.hostIsCn()">{{ totalDealAccount.total_profit_rate || '0.00' }}%</div>
             <div>{{lang.text('tigerWitID.tradingAccount.totalProfitRate')}}</div>
         </li>
     </ul>
