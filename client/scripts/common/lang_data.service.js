@@ -865,6 +865,12 @@
                     }
                 },
                 authen: {
+                    address: {
+                        zh: "地址证明",
+                        en: "Proof of Address",
+                        vi: "Địa chỉ xác thực",
+                        "zh-Hant": "地址證明"
+                    },
                     proofAddress: {
                         zh: "上传地址证明",
                         en: "Proof of Address",
@@ -6648,6 +6654,12 @@
                         en:"(Unknown)",
                         vi:"(Không rõ)",
                         "zh-Hant":"（未知狀態）"
+                    },
+                    certificateExpired:{
+                        zh:"(证件过期)",
+                        en:"(Certificate expired)",
+                        vi:"(Hết hạn giấy tờ)",
+                        "zh-Hant":"（證件過期）"
                     }
                 },
                 noMetNeed:{

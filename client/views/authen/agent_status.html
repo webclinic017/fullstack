@@ -43,7 +43,7 @@
             <li class="fl" ng-class="{'complete': personal.agentAuthStatus.addr.status == 1}" ng-if="personal.agentAuthStatus.addr.status != 2">
                 <strong class="num">4</strong>
                 <div class="content ">
-                    <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.partner.iDVerification')}}</h5>
+                    <h5 class="pd-tp-30 pd-bt-10">{{lang.text('tigerWitID.authen.address')}}</h5>
                     <p><img src="/white_label/authen/{{ personal.agentAuthStatus.addr.status == 1 ? 'activate5' : 'activate5-no'}}.png" alt=""></p>
                     <p class="mg-tp-10">{{(personal.agentAuthStatus.addr.reason || '') + idcardAuthStatus[personal.agentAuthStatus.addr.auth_status]}}</p>
                     <i class="not_complete" ng-if="personal.agentAuthStatus.addr.status == 0"><span>{{lang.text('tigerWitID.noMetNeed')}}</span></i>
