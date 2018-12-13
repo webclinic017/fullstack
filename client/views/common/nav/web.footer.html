@@ -158,12 +158,18 @@
 </div>
 
 <!-- global客服系统接入 2018.11.12 -->
-<%if (req.host.indexOf('global') != -1) {%>
-<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=6138171f-eb82-4329-82ae-30f553ce7dc3"> </script>
-<%}%>
+<!-- Start of tigerwitglobal Zendesk Widget script -->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=45a3b87d-f9e0-42f0-b1f6-d4348ca7bc54"> </script>
+<script>
+zE(function() {
+  zE.setLocale('<%= lang.currentLanguage()%>');
+});
+</script>
+<!-- End of tigerwitglobal Zendesk Widget script -->
 
+<!-- Live800下线 2018.12.10 -->
 <!-- Live800Online operator icon:online service(in use)[Floating icon] Start-->
-<script language="javascript">
+<!-- <script language="javascript">
     window.OpenChat = function () {
         var chatUrl = "";
         layer.open({
@@ -221,7 +227,7 @@
      <%} else {%>
         <img style="cursor: pointer;" src="<%= lang.image('footerCustomerCn')%>" onclick="OpenChat();">
      <%}%>
-</div>
+</div> -->
 <!-- Online operator icon:online service(in use) End-->
 <!-- 友盟统计 2016.09.21 -->
 <div style="display:none">
