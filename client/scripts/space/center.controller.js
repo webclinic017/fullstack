@@ -5,14 +5,15 @@
     angular.module('fullstackApp')
         .controller('CenterHomeController', CenterHomeController);
 
-    CenterHomeController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout', 'config', 'redbag', 'trader', '$modal'];
+    CenterHomeController.$inject = ['$rootScope','$scope', '$location', '$interval', '$state', 'account', 'invite', '$timeout', 'config', 'redbag', 'trader', '$modal', '$cookies'];
 
     /**
      * @name CenterHomeController
      * @desc
      */
-    function CenterHomeController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config, redbag, trader, $modal) {
+    function CenterHomeController($rootScope,$scope, $location, $interval, $state, account, invite, $timeout, config, redbag, trader, $modal, $cookies) {
         var summaryId;
+        $scope.ibPid = $cookies['ib_pid'];
         $scope.$on('$destroy',function(){  
             $interval.cancel(summaryId);  
         }) 

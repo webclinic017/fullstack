@@ -81,6 +81,9 @@
             },
             isCompany: function () {  //此方法废弃 2018.11.20
                 return langData["company"];
+            },
+            hostIsCn: function() {
+               return 'cn.tigerwit.com,cndemo.tigerwit.com,w.dev.tigerwit.com'.indexOf($location.host())!= -1;
             }
         };
         return lang;

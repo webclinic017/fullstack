@@ -79,7 +79,10 @@
                     </div>
                     <div class="ranklist_cont__master-trade">
                         <div class="profit">
-                            <div class="num" ng-class="{'font-danger': (rank.thirty_profit_rate + '').indexOf('-') < 0, 'font-success': (rank.thirty_profit_rate + '').indexOf('-') != -1}">
+                            <div class="num" ng-class="{'font-danger': (rank.thirty_profit_rate + '').indexOf('-') < 0, 'font-success': (rank.thirty_profit_rate + '').indexOf('-') != -1}" ng-if="lang.hostIsCn()">
+                                {{ rank.thirty_profit_rate }}<span>%</span>
+                            </div>
+                            <div class="num" ng-class="{'font-success': (rank.thirty_profit_rate + '').indexOf('-') < 0, 'font-danger': (rank.thirty_profit_rate + '').indexOf('-') != -1}" ng-if="!lang.hostIsCn()">
                                 {{ rank.thirty_profit_rate }}<span>%</span>
                             </div>
                             <div class="tip">
@@ -87,7 +90,10 @@
                             </div>
                         </div>
                         <div class="dropdown">
-                            <div class="num" ng-class="{'font-danger': (rank.thirty_win_rate + '').indexOf('-') < 0, 'font-success': (rank.thirty_win_rate + '').indexOf('-') != -1}">
+                            <div class="num" ng-class="{'font-danger': (rank.thirty_win_rate + '').indexOf('-') < 0, 'font-success': (rank.thirty_win_rate + '').indexOf('-') != -1}" ng-if="lang.hostIsCn()">
+                                {{ rank.thirty_win_rate }}%
+                            </div>
+                            <div class="num" ng-class="{'font-success': (rank.thirty_win_rate + '').indexOf('-') < 0, 'font-danger': (rank.thirty_win_rate + '').indexOf('-') != -1}" ng-if="!lang.hostIsCn()">
                                 {{ rank.thirty_win_rate }}%
                             </div>
                             <div class="tip">
