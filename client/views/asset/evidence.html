@@ -61,11 +61,11 @@
                 </div>
               </div>
               <div class="fr">
-                  <button ng-if="!evidence.files.length" class="tw-btn tw-btn-capsule-gradient">
+                  <button ng-if="!evidence.files.length" class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient relative">
                       {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
                     <div tw-upload-file-base64 data-file-name="evidence.files[0]"></div>
                   </button>
-                  <button ng-if="evidence.files.length" class="tw-btn tw-btn-capsule-bordered" ng-click="uploadEvidence(evidence, $index)">
+                  <button ng-if="evidence.files.length" class="tw-btn tw-btn-sm130 tw-btn-capsule-bordered" ng-click="uploadEvidence(evidence, $index)">
                     {{lang.text('tigerWitID.depositWithdrawal.submitAudition')}}  
                   </button>
               </div>

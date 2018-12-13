@@ -124,7 +124,10 @@
                     </div>
                 </div>
                 <div class="content-view relative" ng-if="main.pageCtrl == 'record'">
-                    <div ng-include="'/views/third/asset/record.html'"></div>
+                    <div ng-controller="InvestRecordController">
+                        <div tw-loading-img></div>
+                        <div ng-include="'/views/invest/record.html'"></div>
+                    </div>
                 </div>
                 <div class="content-view relative" ng-if="main.pageCtrl == 'evidence'">
                     <div ng-controller="AssetEvidenceController">
@@ -132,7 +135,10 @@
                     </div>
                 </div>
                 <div class="content-view relative" ng-if="main.pageCtrl == 'wallet'">
-                    <div ng-include="'/views/third/asset/wallet_record.html'"></div>
+                    <div ng-controller="WalletSummaryController">
+                        <div tw-loading-img></div>
+                        <div ng-include="'/views/wallet/summary.html'"></div>
+                    </div>
                 </div>
             </div>
         </div>
