@@ -63,7 +63,7 @@
 
         <p class="btn_wrapper mg-bt-15">
             <button ng-click="[closeModal(), gotoEvidence()]" class="btn btn-info btn-sm" style="width: 70%; border-radius: 100px;" ng-if="lang.isThird()">
-                上传凭证
+                {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
             </button>
             <a ui-sref="space.asset.subpage({subpage: 'evidence'})" ng-click="closeModal()" class="btn btn-info btn-sm" style="width: 70%; border-radius: 100px;" ng-if="!lang.isThird()">
                 {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}

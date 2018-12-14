@@ -32,7 +32,6 @@
         // $scope.currentWorld = {}; ---| -- 选择国家
         // $scope.entryWorld = '';  ----|
         $scope.logout = logout;
-        $scope.reloadLanguage = reloadLanguage;
         $scope.openDredgeMdl = openDredgeMdl;
         var globalScope = $scope;
 
@@ -217,15 +216,6 @@
 
                 }
             });
-        }
-
-        // change language into English or Chinese
-        function reloadLanguage(lang) {
-            var d = new Date();
-            d.setTime(d.getTime() + (-1*24*60*60*1000));
-            document.cookie = 'lang=' + lang + '; path=/; expires='+d.toUTCString();
-            document.cookie = 'lang=' + lang + '; path=/; domain=.tigerwit.com';
-            location.reload();
         }
         //设置允许使用cookie
         $scope.getAllowCookie = function () {

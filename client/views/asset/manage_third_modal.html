@@ -45,7 +45,7 @@
     <!-- 删除第三方账号 -->
     <div class="sys_modal_v2__content" ng-if="manageType == 'delete'">
         <h3 class="sys_modal_v2__title text-left">{{lang.text('tigerWitID.wallet.deleteThirdAccount')}}</h3>
-        <p class="sys_modal_v2__desp mg-tp-20">删除提示</p>
+        <p class="sys_modal_v2__desp mg-tp-20">{{lang.text('tigerWitID.wallet.deleteThirdAccountTip')}}</p>
         <div class="btn_wrapper text-right clearfix">
             <a class="btn-text fr mg-lf-20" ng-click="closeModal()">{{lang.text('tigerWitID.cancel')}}</a>
             <a class="btn-text fr" ng-click="deleteThird()">{{lang.text('tigerWitID.delete')}}</a>

@@ -61,6 +61,12 @@
                 vi: "Trung Quốc",
                 "zh-Hant": "中國"
             },
+            footlang: {
+                zh: "简体中文",
+                en: "English",
+                vi: "Tiếng Việt",
+                "zh-Hant": "繁體中文"
+            },
             fuzhirenshu: {
                 en: "Copiers",
                 zh: "复制人数",
@@ -3164,6 +3170,12 @@
                         en: "Delete the third-party account",
                         vi: "Xóa tài khoản bên thứ 3",
                         "zh-Hant": "刪除賬戶"
+                    },
+                    deleteThirdAccountTip: {
+                        zh: "确定删除该账户？",
+                        en: "Are you sure to delete this account?",
+                        vi: "Bạn có chắc muốn xóa tài khoản này?",
+                        "zh-Hant": "確定刪除該賬戶？"
                     },
                     switchThird: {
                         zh: "切换第三方账户",
@@ -6670,6 +6682,14 @@
                         en:"(Unknown)",
                         vi:"(Không rõ)",
                         "zh-Hant":"（未知狀態）"
+                    }
+                },
+                imgPath: {
+                    thirdLogin: {
+                        zh:"/white_label/third/third_deposit_bg.png",
+                        en:"/white_label/third/third_deposit_bg.png",
+                        vi:"/white_label/third/third_deposit_bg.png",
+                        "zh-Hant":"/white_label/third/third_deposit_bg.png"
                     }
                 },
                 noMetNeed:{

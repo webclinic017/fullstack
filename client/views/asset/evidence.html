@@ -31,7 +31,7 @@
               {{lang.text('tigerWitID.depositWithdrawal.tip41')}}
           </p>
           <div class="desc" ng-if="lang.isThird() && main.region.world_code == 'CN'">
-              <a href="/payment/evidence" target="_blank">查看凭证示例</a>
+              <a href="/payment/evidence" target="_blank">{{lang.text('tigerWitID.depositWithdrawal.vouchersInstance')}}</a>
           </div>
           <div class="desc" ng-if="!lang.isThird() && personal.region.world_code == 'CN'">
               <a href="/web/deposit/evidence" target="_blank">{{lang.text('tigerWitID.depositWithdrawal.vouchersInstance')}}</a>

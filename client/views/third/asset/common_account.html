@@ -1,19 +1,19 @@
 <div class="row mg-tp-40">
     <div class="col-xs-2 text-right deposit__title-money" ng-if="main.pageCtrl === 'withdraw'">
-        提现账户
+        {{lang.text('tigerWitID.depositWithdrawal.withdrawAccountJ')}}
     </div>
     <div class="col-xs-2 text-right deposit__title-money" ng-if="main.pageCtrl === 'deposit'">
-        充值账户
+        {{lang.text('tigerWitID.depositWithdrawal.depositAccountJ')}}
     </div>
     <div class="withdraw__list clearfix">
         <div class="withdraw__list-item" ng-class="{'not-active': selectWay.type != 'invest'}" ng-click="changeWithdrawType('invest')">
-            <p class="summary_name">交易账户</p>
-            <p class="summary_amount">{{ accountItem.account_name || '交易账号' }}</p>
-            <p class="summary_btn" ng-click="subAccountList()" ng-if="selectWay.type ==='invest'"><span>点击切换子账号 ></span></p>
-            <p class="summary_btn" ng-if="selectWay.type !=='invest'"><span>点击切换子账号 ></span></p>
+            <p class="summary_name">{{lang.text('tigerWitID.depositWithdrawal.tradingAccount')}}</p>
+            <p class="summary_amount">{{ accountItem.account_name || lang.text('tigerWitID.depositWithdrawal.tradingAccount') }}</p>
+            <p class="summary_btn" ng-click="subAccountList()" ng-if="selectWay.type ==='invest'"><span>{{lang.text('tigerWitID.depositWithdrawal.switchAccount')}} ></span></p>
+            <p class="summary_btn" ng-if="selectWay.type !=='invest'"><span>{{lang.text('tigerWitID.depositWithdrawal.switchAccount')}} ></span></p>
         </div>
         <div class="withdraw__list-item" ng-class="{'not-active': selectWay.type != 'wallet'}" ng-click="changeWithdrawType('wallet')">
-            <p class="summary_name">钱包</p>
+            <p class="summary_name">{{lang.text('tigerWitID.depositWithdrawal.wallet')}}</p>
             <p class="summary_amount">${{ main.wallet_balance || '0.00' }}</p>
             <p class="text-right mg-tp-10" ng-click="main.switchPage('wallet')" ng-if="selectWay.type ==='wallet'"><span>钱包记录</span></p>
             <p class="text-right mg-tp-10" ng-if="selectWay.type !=='wallet'"><span>钱包记录</span></p>

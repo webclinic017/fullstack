@@ -82,6 +82,14 @@
             isCompany: function () {  //此方法废弃 2018.11.20
                 return langData["company"];
             },
+            // global与第三方设置语言
+            reloadLanguage: function(lang) {
+                var d = new Date();
+                d.setTime(d.getTime() + (-1*24*60*60*1000));
+                document.cookie = 'lang=' + lang + '; path=/; expires='+d.toUTCString();
+                document.cookie = 'lang=' + lang + '; path=/; domain=.tigerwit.com';
+                location.reload();
+            },
             // 为合并第三方充值提现判断
             isThird: function() {
                 return ($location.absUrl().indexOf('payment/asset') !== -1)
