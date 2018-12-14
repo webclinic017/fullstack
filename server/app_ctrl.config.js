@@ -126,38 +126,38 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V2.0.0",
-                        description: "Multi-accounts management\nTourist mode\nWithdrawal when have position orders\nBug fixes",
-                        updated_description: "Version 2.0.0 available",
+                        version_name : "V2.1.0",
+                        description: "Optimise onboarding process\nAdded TC trading strategies\nAdd Multi account management function Allow transfer of funds between sub-accounts Fingerprint unlock feature optimised\nUpdated UI of Wallet and trading history\nAdd live chat function\nFix bugs",
+                        updated_description: "Version 2.1.0 available",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.0.2",
-                        description: "Fixed bugs\nOptimize user experience\nFixed the price feeds of visitor mode",
-                        updated_description: "Version 2.0.2 available",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.0.2.apk",
-                        force_update : false
+                        version_name : "V2.1.0",
+                        description: "Optimise onboarding process\nAdded TC trading strategies\nAdd Multi account management function Allow transfer of funds between sub-accounts Fingerprint unlock feature optimised\nUpdated UI of Wallet and trading history\nAdd live chat function\nFix bugs",
+                        updated_description: "Version 2.1.0 available",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.1.0.apk",
+                        force_update : true
                     }
                 }
             },
             cn: {
                ios: {
                     app_info: {
-                        version_name : "V2.0.0",
-                        description: "Multi-accounts management\nTourist mode\nWithdrawal when have position orders\nBug fixes",
-                        updated_description: "Version 2.0.0 available",
+                        version_name : "V2.1.0",
+                        description: "Optimise onboarding process\nAdded TC trading strategies\nAdd Multi account management function Allow transfer of funds between sub-accounts Fingerprint unlock feature optimised\nUpdated UI of Wallet and trading history\nAdd live chat function\nFix bugs",
+                        updated_description: "Version 2.1.0 available",
                         force_update : true
                     }
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.0.2",
-                        description: "Fixed bugs\nOptimize user experience\nFixed the price feeds of visitor mode",
-                        updated_description: "Version 2.0.2 available",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.0.2.apk",
-                        force_update : false
+                        version_name : "V2.1.0",
+                        description: "Optimise onboarding process\nAdded TC trading strategies\nAdd Multi account management function Allow transfer of funds between sub-accounts Fingerprint unlock feature optimised\nUpdated UI of Wallet and trading history\nAdd live chat function\nFix bugs",
+                        updated_description: "Version 2.1.0 available",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.1.0.apk",
+                        force_update : true
                     }
                 } 
             }
