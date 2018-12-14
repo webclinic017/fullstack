@@ -443,6 +443,18 @@
                         vi: "Đăng nhập",
                         "zh-Hant": "登錄"
                     },
+                    walletRecord: {
+                        zh: "钱包记录",
+                        en: "Wallet record",
+                        vi: "Hồ Sơ ví",
+                        "zh-Hant": "錢包記錄"
+                    },
+                    mt4Account: {
+                        zh: "MT4账户",
+                        en: "MT4 account",
+                        vi: "Tài khoản MT4",
+                        "zh-Hant": "MT4帳戶"
+                    },
                     country: {
                         zh: "国家",
                         en: "Country",

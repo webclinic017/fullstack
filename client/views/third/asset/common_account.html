@@ -15,8 +15,8 @@
         <div class="withdraw__list-item" ng-class="{'not-active': selectWay.type != 'wallet'}" ng-click="changeWithdrawType('wallet')">
             <p class="summary_name">{{lang.text('tigerWitID.depositWithdrawal.wallet')}}</p>
             <p class="summary_amount">${{ main.wallet_balance || '0.00' }}</p>
-            <p class="text-right mg-tp-10" ng-click="main.switchPage('wallet')" ng-if="selectWay.type ==='wallet'"><span>钱包记录</span></p>
-            <p class="text-right mg-tp-10" ng-if="selectWay.type !=='wallet'"><span>钱包记录</span></p>
+            <p class="text-right mg-tp-10" ng-click="main.switchPage('wallet')" ng-if="selectWay.type ==='wallet'"><span>{{lang.text('tigerWitID.login.walletRecord')}}</span></p>
+            <p class="text-right mg-tp-10" ng-if="selectWay.type !=='wallet'"><span>{{lang.text('tigerWitID.login.walletRecord')}}</span></p>
         </div>
     </div>
 </div>
