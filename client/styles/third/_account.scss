@@ -42,11 +42,6 @@
     &.login_code {
         top: 118px;
     }
-    @include e(lang) {
-        position: absolute;
-        right: 30px;
-        top: 25px;
-    }
     @include e(switch_lang) { 
         display: inline-block;
         &:hover {
@@ -92,6 +87,14 @@
                     color: $white-100;
                 }
             }
+        }
+    }
+    @include e(lang) {
+        position: absolute;
+        right: 30px;
+        top: 25px;
+        .lang-toggle {
+            color: rgb(36, 42, 54);
         }
     }
     @include e(btn_wrapper) {
