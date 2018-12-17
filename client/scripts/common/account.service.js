@@ -38,6 +38,7 @@
             getCities: getCities,
             setBasicInfo: setBasicInfo,
             setBasicInfoNameEn: setBasicInfoNameEn,
+            setBasicInfoName: setBasicInfoName,
             setPwd: setPwd,
             setAvatar: setAvatar,
             setPwdFirst: setPwdFirst,
@@ -464,10 +465,20 @@
 
         /**
          * @name setBasicInfoNameEn
-         * @desc setting 模块设置基本信息
+         * @desc setting 模块设置基本信息英文昵称
          */
         function setBasicInfoNameEn(username) {
             return publicHttp.dealPublicRequest(o.setUserNameEnApi, 'PUT', {
+                username: username,
+            });
+        }
+        
+        /**
+         * @name setBasicInfoName
+         * @desc setting 模块设置基本信息中文昵称
+         */
+        function setBasicInfoName(username) {
+            return publicHttp.dealPublicRequest(o.setUserNameApi, 'PUT', {
                 username: username,
             });
         }

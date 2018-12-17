@@ -51,6 +51,13 @@
     }
 }
 
+.widthdraw__card_font {
+    font-size:24px;
+    font-weight:600;
+    color:rgba(36,42,54,1);
+    line-height:22px;
+    padding: 0 15px;
+}
 .widthdraw__card_bg {
     display: inline-flex;
     height: 50px;
@@ -659,12 +666,6 @@
                 }
                 .info {
                     height: 55px;
-                    .tw-btn {
-                        width: 100px;
-                        padding: 8px 22px;
-                        margin-top: 10px;
-                        position: relative;
-                    }
                     .pic {
                         border: 1px solid #eee;
                         border-radius: 6px;

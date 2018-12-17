@@ -299,7 +299,7 @@ function getDepositPlatform() {
     if (data.is_succ) {
       depositTypeLst = data.data;
       $.each(depositTypeLst, function (index, value) {
-        if (value.default) {
+        if (value.default && !depositType) {
           changeDepositType(value.key);
         }
       });

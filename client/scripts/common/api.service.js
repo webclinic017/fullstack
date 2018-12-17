@@ -31,6 +31,7 @@
             setNewPwdApi: urlOrigin2 + '/forget_passwd',
             getPersonalInfoApi: urlOrigin2 + '/user/info',
             setUserNameEnApi: urlOrigin2 + '/user/username_en',
+            setUserNameApi: urlOrigin2 + '/user/username',
             getAssetInfoApi: urlOrigin2 + '/account/summary',
             getAccountInfoApi: urlOrigin2 + '/trade_account/asset',
             getTotalDealAccountApi: urlOrigin2 + '/trade_account/summary',
@@ -98,7 +99,12 @@
             getPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_list',
             cancelPaymentEvidenceApi: urlOrigin2 + '/payment/evidence_cancel',
             checkEvidenceStatusApi: urlOrigin2 + '/payment/evidence_status',
-            checkInvestBankApi: urlOrigin2 + '/payment/deposit_card'
+            checkInvestBankApi: urlOrigin2 + '/payment/deposit_card',
+            getDefaultThirdAccountApi: urlOrigin2 + '/third/account',
+            getThirdPlatformsApi: urlOrigin2 + '/third/platforms',
+            setThirdBindAccountApi: urlOrigin2 + '/third/accounts/bind',
+            getThirdAccountListApi: urlOrigin2 + '/third/accounts/lists',
+            destroyThirdAccountApi: urlOrigin2 + '/third/accounts/destroy',
         };
         var forex = {
             

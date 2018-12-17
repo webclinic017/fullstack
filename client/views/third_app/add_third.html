@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+
+<body>
+  <div class="third_app_bank">
+    <h3 class="third_app_bank__title">
+      添加第三方账户
+      <span class="cancel" id="third_app_bank_cancel">取消</span>
+    </h3>
+    <p class="third_app_bank__sub_tit"></p>
+    <form action="">
+      <div class="third_app_bank__item">
+        <p class="name" data-name="platform">账户名称</p>
+        <input type="text" class="cont" name="platform" placeholder="请选择">
+        <select name="platform" id="third_app_platform"></select>
+      </div>
+      <div class="third_app_bank__item">
+        <p class="name" data-name="account">请填写账号</p>
+        <input type="text" class="cont" name="account" placeholder="请填写账号">
+      </div>
+    </form>
+    <div class="btn-wrapper third_app_bank__btn_wrapper">
+      <button class="btn btn-primary-gradient" id="third_app_bank_btn">提交</button>
+    </div>
+  </div>
+</body>
+<script id="template_add_bank_lst" type="text/html">
+  <option value=""></option>
+<$ for(var i=0;i<data.lst.length;i++) {$>
+  <option value="<$= data.lst[i][data.value]$>"><$= data.lst[i][data.key]$></option>
+<$}$>
+</script>
+<% include /common/vendor/h5.js.html %>
+<% include /third_app/template_modal.html %>
+<!-- 注册协议相关弹窗 -->
+<%include /common/component/agment_mdl.html %>
+<!-- build:js(client) /scripts/third_app_third.js -->
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/third_app/common.js"></script>
+<script src="/scripts/third_app/add_third.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

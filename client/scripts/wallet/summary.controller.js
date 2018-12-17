@@ -29,6 +29,7 @@
         getWalletHistory(1);
 
         function getWalletHistory (page) {
+            $scope.$emit('showLoadingImg');
             var offset = page ? (page-1)*pagesize : 0;
             invest.getWalletHistory(offset, pagesize, 0).then(function (data) {
                 // console.log(data);

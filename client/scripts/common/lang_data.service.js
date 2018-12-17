@@ -61,6 +61,12 @@
                 vi: "Trung Quốc",
                 "zh-Hant": "中國"
             },
+            footlang: {
+                zh: "简体中文",
+                en: "English",
+                vi: "Tiếng Việt",
+                "zh-Hant": "繁體中文"
+            },
             fuzhirenshu: {
                 en: "Copiers",
                 zh: "复制人数",
@@ -310,7 +316,7 @@
             actLogin13: {
                 zh: "隐私政策",
                 en: "Privacy Policy ",
-                vi: "Điều Khoản Cá Nhân",
+                vi: "Điều Khoản Cá Nhân ",
                 "zh-Hant": "隱私政策"
             },
             actLogin14: {
@@ -322,7 +328,7 @@
             actLogin15: {
                 zh: "及其他",
                 en: "and other ",
-                vi: "Và cái khác",
+                vi: "Và cái khác ",
                 "zh-Hant": "及其他"
             },
             actLogin16: {
@@ -437,6 +443,18 @@
                         vi: "Đăng nhập",
                         "zh-Hant": "登錄"
                     },
+                    walletRecord: {
+                        zh: "钱包记录",
+                        en: "Wallet record",
+                        vi: "Hồ Sơ ví",
+                        "zh-Hant": "錢包記錄"
+                    },
+                    mt4Account: {
+                        zh: "MT4账户",
+                        en: "MT4 account",
+                        vi: "Tài khoản MT4",
+                        "zh-Hant": "MT4帳戶"
+                    },
                     country: {
                         zh: "国家",
                         en: "Country",
@@ -530,13 +548,13 @@
                     tip1_4: {
                         zh: "隐私政策",
                         en: "Privacy Policy ",
-                        vi: "Chính Sách Cá Nhân",
+                        vi: "Chính Sách Cá Nhân ",
                         "zh-Hant": "隱私政策"
                     },
                     tip1_5: {
                         zh: "及其他",
                         en: "and any other ",
-                        vi: "Và nhũng cái khác",
+                        vi: "Và nhũng cái khác ",
                         "zh-Hant": "及其他"
                     },
                     tip1_6: {
@@ -548,7 +566,7 @@
                     alreadyHas: {
                         zh: "已有TigerWit账号？",
                         en: "Already have an account? ",
-                        vi: "Bạn đã sẵn sang để tạo tài khoản?",
+                        vi: "Bạn đã sẵn sang để tạo tài khoản? ",
                         "zh-Hant": "已有TigerWit帳號？"
                     },
                     registerViaEmail: {
@@ -638,7 +656,7 @@
                     tip3: {
                         zh: "已使用SSL加密技术保护您的网络安全",
                         en: "The TigerWit network is secured with SSL encryption technology",
-                        vi: "Mạng TigerWit được bảo mật bằng công nghệ mã hóa SSL ",
+                        vi: "Mạng TigerWit được bảo mật bằng công nghệ mã hóa SSL",
                         "zh-Hant": "已使用SSL加密技術保護您的網酪安全"
                     },
                     tip4: {
@@ -740,7 +758,7 @@
                     tip6_21: {
                         zh: "手机号：",
                         en: "phone number: ",
-                        vi: "Số điện thoại",
+                        vi: "Số điện thoại: ",
                         "zh-Hant": "手機號："
                     },
                     tip6_3: {
@@ -758,13 +776,13 @@
                     tip7_2: {
                         zh: "手机号",
                         en: "phone number ",
-                        vi: "Số điện thoại",
+                        vi: "Số điện thoại ",
                         "zh-Hant": "手機號"
                     },
                     tip7_21: {
                         zh: "邮箱",
                         en: "email ",
-                        vi: "Thư điện tử",
+                        vi: "Thư điện tử ",
                         "zh-Hant": "郵箱"
                     },
                     tip7_3: {
@@ -776,7 +794,7 @@
                     tip9_1: {
                         zh: "该",
                         en: "This ",
-                        vi: "Đây là",
+                        vi: "Đây là ",
                         "zh-Hant": "該"
                     },
                     tip9_3: {
@@ -818,7 +836,7 @@
                     tip8_21: {
                         zh: "邮箱",
                         en: "email ",
-                        vi: "thư điện tử",
+                        vi: "thư điện tử ",
                         "zh-Hant": "郵箱"
                     },
                     tip8_3: {
@@ -1114,7 +1132,7 @@
                     tip18: {
                         zh: "非工作日时间：将在10:00、16:00、22:00统一审核；22:00后认证的将在次日审核",
                         en: "Certification after 23:00 will be reviewed the next day",
-                        vi: "Chứng nhận sau 23:00 sẽ được xem xét vào ngày hôm sau ",
+                        vi: "Chứng nhận sau 23:00 sẽ được xem xét vào ngày hôm sau",
                         "zh-Hant": "非工作日時間：將在10:00、16:00、22:00統壹審核；22:00後認證的將在次日審核"
                     },
                     tip19: {
@@ -1482,7 +1500,7 @@
                     tip1: {
                         zh: "身份证号为 15 或 18 位数字，最后一位为字母时用大写 X",
                         en: "ID number is 15 or 18 digits, with a capital X when it for the last letter",
-                        vi: "Số ID là 15 hoặc 18 chữ số, với chữ X khi chữ cái cuối cùng ",
+                        vi: "Số ID là 15 hoặc 18 chữ số, với chữ X khi chữ cái cuối cùng",
                         "zh-Hant": "身份證號為 15 或 18 位數字，最後壹位為字母時用大寫 X"
                     },
                     tip2: {
@@ -1506,7 +1524,7 @@
                     tip4: {
                         zh: "邮箱前缀由字母、数字、下划线、减号、点号组成，以字母、数字结尾",
                         en: "The mailbox prefix consists of letters, Numbers, underscores, minus and dots, and ends with letters and Numbers",
-                        vi: "Tiền tố hộp thư bao gồm các chữ cái, số, dấu gạch dưới, dấu trừ và dấu chấm, và kết thúc bằng chữ cái và số ",
+                        vi: "Tiền tố hộp thư bao gồm các chữ cái, số, dấu gạch dưới, dấu trừ và dấu chấm, và kết thúc bằng chữ cái và số",
                         "zh-Hant": "郵箱前綴由字母、數字、下劃線、減號、點號組成，以字母、數字結尾"
                     },
                     tip5: {
@@ -1524,7 +1542,7 @@
                     tip7: {
                         zh: "真实姓名由2-20个汉字以及 · 号组成",
                         en: "The real name consists of 2-20 Chinese characters and ‘·’symbol",
-                        vi: "Tên thật bao gồm 2 đến 20 ký tự và biểu tượng tiếng Trung Quốc. ",
+                        vi: "Tên thật bao gồm 2 đến 20 ký tự và biểu tượng tiếng Trung Quốc.",
                         "zh-Hant": "真實姓名由2-20個漢字以及 · 號組成"
                     },
                     tip8: {
@@ -1694,7 +1712,7 @@
                     modifyCopyAmount: {
                         zh: "修改复制金额",
                         en: "Modify the Copy Amount",
-                        vi: "Sửa đổi Số Tiền Sao Chép ",
+                        vi: "Sửa đổi Số Tiền Sao Chép",
                         "zh-Hant": "修改復制金額"
                     },
                     availableAmount: {
@@ -1712,7 +1730,7 @@
                     recommendedM: {
                         zh: "建议复制金额：",
                         en: "Recommended: ",
-                        vi: "Đề nghị",
+                        vi: "Đề nghị: ",
                         "zh-Hant": "建議復制金額："
                     },
                     tip2: {
@@ -1880,7 +1898,7 @@
                     minimumCopyAmount: {
                         zh: "最小复制金额为",
                         en: "The minimum copy amount is ",
-                        vi: "Hạn mức nhỏ nhất số tiền sao chép là",
+                        vi: "Hạn mức nhỏ nhất số tiền sao chép là ",
                         "zh-Hant": "最小復制金額為"
                     },
                     availableCopyAmount: {
@@ -1892,7 +1910,7 @@
                     availableCopyAmountM: {
                         zh: "可用复制金额：",
                         en: "Available: ",
-                        vi: "Hiện có",
+                        vi: "Hiện có: ",
                         "zh-Hant": "可用復制金額："
                     },
                     remainingCopiableFunds: {
@@ -1904,7 +1922,7 @@
                     remainingCopiableFundsM: {
                         zh: "高手剩余可复制金额：",
                         en: "Master remaining: ",
-                        vi: "Bậc Thầy còn lại",
+                        vi: "Bậc Thầy còn lại: ",
                         "zh-Hant": "高手剩余可復制金額："
                     },
                     tip9: {
@@ -1922,13 +1940,13 @@
                     tip11: {
                         zh: "可用复制金额不足",
                         en: "Available copy amount is insufficient",
-                        vi: "Số lượng sao chép có sẵn không đủ ",
+                        vi: "Số lượng sao chép có sẵn không đủ",
                         "zh-Hant": "可用復制金額不足"
                     },
                     confirm: {
                         zh: "确认修改",
                         en: "Confirm",
-                        vi: "Xác nhận ",
+                        vi: "Xác nhận",
                         "zh-Hant": "確認修改"
                     },
                     tip12: {
@@ -1946,7 +1964,7 @@
                     suggestedAmountM: {
                         zh: "建议金额：",
                         en: "Suggested amount: ",
-                        vi: "Số tiền đề nghị",
+                        vi: "Số tiền đề nghị: ",
                         "zh-Hant": "建議金額："
                     },
                     copySuccess: {
@@ -1976,7 +1994,7 @@
                     tip15: {
                         zh: "该高手没有持仓订单",
                         en: "The master has no position order",
-                        vi: "Bậc Thầy không có lệnh ",
+                        vi: "Bậc Thầy không có lệnh",
                         "zh-Hant": "該高手沒有持倉訂單"
                     },
                     detailInformation: {
@@ -2108,7 +2126,7 @@
                     experienceAccount: {
                         zh: "体验金账号",
                         en: "Experience account",
-                        vi: "Tài khoản trải nghiệm ",
+                        vi: "Tài khoản trải nghiệm",
                         "zh-Hant": "體驗金帳號"
                     },
                     tradingAccount: {
@@ -2144,7 +2162,7 @@
                     accountBalanceM: {
                         zh: "账户余额：",
                         en: "Account balance: ",
-                        vi: "Số dư tài khoản",
+                        vi: "Số dư tài khoản: ",
                         "zh-Hant": "帳護余額："
                     },
                     tip24: {
@@ -2302,7 +2320,7 @@
                     copyAmountM: {
                         zh: "复制金额：",
                         en: "Copy amount: ",
-                        vi: "Sao chép tiền gửi",
+                        vi: "Sao chép tiền gửi: ",
                         "zh-Hant": "復制金額："
                     },
                     lots: {
@@ -2440,7 +2458,7 @@
                     expectedLoss: {
                         zh: "预计亏损",
                         en: "Expected Loss",
-                        vi: "Lỗ dự kiến ",
+                        vi: "Lỗ dự kiến",
                         "zh-Hant": "預計虧損"
                     },
                     expectedProfit: {
@@ -2452,7 +2470,7 @@
                     precautions: {
                         zh: "注意事项：",
                         en: "Precautions: ",
-                        vi: "Các biện pháp phòng ngừa",
+                        vi: "Các biện pháp phòng ngừa: ",
                         "zh-Hant": "註意事項："
                     },
                     Price: {
@@ -2610,7 +2628,7 @@
                     copyProfit: {
                         zh: "跟单收益",
                         en: "Copy Profit",
-                        vi: "Sao Chép Lợi Nhuận ",
+                        vi: "Sao Chép Lợi Nhuận",
                         "zh-Hant": "跟單收益"
                     },
                     totalEarnings: {
@@ -2720,7 +2738,7 @@
                     avgHoldingTimeM: {
                         zh: "平均持仓时间：",
                         en: "Avg. holding time: ",
-                        vi: "Thời gian giữ trung bình:",
+                        vi: "Thời gian giữ trung bình: ",
                         "zh-Hant": "平均持倉時間："
                     },
                     maxDrawdown: {
@@ -2786,7 +2804,7 @@
                     recommendation: {
                         zh: "分类高手",
                         en: "Recommendation",
-                        vi: "Sự giới thiệu ",
+                        vi: "Sự giới thiệu",
                         "zh-Hant": "分類高手"
                     },
                     highIncome: {
@@ -2942,7 +2960,7 @@
                     tip2: {
                         zh: "可用金额不足，去充值",
                         en: "Available amount is insufficient, deposit",
-                        vi: "Số tiền có sẵn không đủ, tiền gửi ",
+                        vi: "Số tiền có sẵn không đủ, tiền gửi",
                         "zh-Hant": "可用金額不足，去充值"
                     },
                     tip3: {
@@ -2966,7 +2984,7 @@
                     currentCopyAmountM: {
                         zh: "当前复制金额：",
                         en: "Current copy amount: ",
-                        vi: "Sao chép số tiền hiện tại ",
+                        vi: "Sao chép số tiền hiện tại: ",
                         "zh-Hant": "當前復制金額："
                     },
                     tigerWitCopyAgreements: {
@@ -3108,13 +3126,13 @@
                     nameM: {
                         zh: "持卡人：",
                         en: "Name: ",
-                        vi: "Tên",
+                        vi: "Tên: ",
                         "zh-Hant": "持卡人："
                     },
                     cardholderName: {
                         zh: "请输入持卡人姓名",
                         en: "Type cardholder's name",
-                        vi: "Nhập tên chủ thẻ ",
+                        vi: "Nhập tên chủ thẻ",
                         "zh-Hant": "請輸入持卡人姓名"
                     },
                     bankCountry: {
@@ -3126,8 +3144,56 @@
                     bankCountryM: {
                         zh: "银行国家：",
                         en: "Bank’s country: ",
-                        vi: "Ngân hàng quốc gia",
+                        vi: "Ngân hàng quốc gia: ",
                         "zh-Hant": "銀行國家："
+                    },
+                    thirdAccNoSupport: {
+                        zh: "暂不支持",
+                        en: "Numbered Mode",
+                        vi: "Tạm không ủng hộ.",
+                        "zh-Hant": "暫不支持"
+                    },
+                    pSelectThirdAccount: {
+                        zh: "请选择第三方平台",
+                        en: "请选择第三方平台",
+                        vi: "请选择第三方平台",
+                        "zh-Hant": "請選擇協力廠商平臺"
+                    },
+                    thirdPartyAccount: {
+                        zh: "第三方账户",
+                        en: "Third-party accounts",
+                        vi: "Các tài khoản bên thứ 3",
+                        "zh-Hant": "第三方賬戶"
+                    },
+                    manageThird: {
+                        zh: "管理第三方账户",
+                        en: "Manage",
+                        vi: "Quản lý",
+                        "zh-Hant": "管理第三方賬戶"
+                    },
+                    addThirdAccount: {
+                        zh: "添加账户",
+                        en: "Add the third-party account",
+                        vi: "Thêm vào tài khoản bên thứ 3",
+                        "zh-Hant": "添加賬戶"
+                    },
+                    deleteThirdAccount: {
+                        zh: "删除账户",
+                        en: "Delete the third-party account",
+                        vi: "Xóa tài khoản bên thứ 3",
+                        "zh-Hant": "刪除賬戶"
+                    },
+                    deleteThirdAccountTip: {
+                        zh: "确定删除该账户？",
+                        en: "Are you sure to delete this account?",
+                        vi: "Bạn có chắc muốn xóa tài khoản này?",
+                        "zh-Hant": "確定刪除該賬戶？"
+                    },
+                    switchThird: {
+                        zh: "切换第三方账户",
+                        en: "Switch",
+                        vi: "Chuyển đổi",
+                        "zh-Hant": "切換賬戶"
                     },
                     pSelectBank: {
                         zh: "请选择开户行",
@@ -3138,14 +3204,38 @@
                     selectBank: {
                         zh: "选择开户行",
                         en: "Select opening account bank",
-                        vi: "Chọn mở một tài khoản ngân hàng ",
+                        vi: "Chọn mở một tài khoản ngân hàng",
                         "zh-Hant": "選擇開護行"
                     },
                     selectBankM: {
                         zh: "选择开户行：",
                         en: "Select opening account bank: ",
-                        vi: "Chọn mở một tài khoản ngân hàng",
+                        vi: "Chọn mở một tài khoản ngân hàng: ",
                         "zh-Hant": "選擇開護行："
+                    },
+                    fillAccount: {
+                        zh: "请填写账号",
+                        en: "Fill in the account",
+                        vi: "Điền vào tài khoản",
+                        "zh-Hant": "請填寫賬號"
+                    },
+                    fillAccountM: {
+                        zh: "请填写账号：",
+                        en: "Fill in the account: ",
+                        vi: "Điền vào tài khoản: ",
+                        "zh-Hant": "請填寫賬號："
+                    },
+                    accountNameM: {
+                        zh: "账户名称：",
+                        en: "Account name: ",
+                        vi: "Tên tài khoản: ",
+                        "zh-Hant": "賬戶名稱："
+                    },
+                    completeInfo: {
+                        zh: "请完善第三方账户信息",
+                        en: "Please complete third party account information",
+                        vi: "Vui lòng xóa thông tin tài khoản bên thứ ba",
+                        "zh-Hant": "請完善第三方賬戶信息"
                     },
                     bankName: {
                         zh: "请填写您的银行名称",
@@ -3162,7 +3252,7 @@
                     fillBankM: {
                         zh: "填写开户行：",
                         en: "Fill in the opening account bank: ",
-                        vi: "Điền thông tin vào tài khoản ngân hàng mở ",
+                        vi: "Điền thông tin vào tài khoản ngân hàng mở: ",
                         "zh-Hant": "填寫開護行："
                     },
                     bankIdentificationCode: {
@@ -3186,7 +3276,7 @@
                     selectAccountPro: {
                         zh: "请选择开户省",
                         en: "Select opening account province",
-                        vi: "Chọn mở tài khoản tỉnh ",
+                        vi: "Chọn mở tài khoản tỉnh",
                         "zh-Hant": "請選擇開護省"
                     },
                     selectAccountCity: {
@@ -3234,7 +3324,7 @@
                     bankAddressM: {
                         zh: "开户地址：",
                         en: "Opening account bank’s address: ",
-                        vi: "Địa chỉ tài khoản ngân hàng mở",
+                        vi: "Địa chỉ tài khoản ngân hàng mở: ",
                         "zh-Hant": "開護地址："
                     },
                     reservedPhoneNumber: {
@@ -3246,7 +3336,7 @@
                     reservedPhoneNumberM: {
                         zh: "预留手机号：",
                         en: "Reserved phone number: ",
-                        vi: "Số điện thoại dự phòng",
+                        vi: "Số điện thoại dự phòng: ",
                         "zh-Hant": "預留手機號："
                     },
                     adding: {
@@ -3270,7 +3360,7 @@
                     tip2: {
                         zh: "手机号绑定成功",
                         en: "The phone number is bound successfully",
-                        vi: "Số điện thoại được liên kết thành công ",
+                        vi: "Số điện thoại được liên kết thành công",
                         "zh-Hant": "手機號邦定成功"
                     },
                     switchBankCard: {
@@ -3356,7 +3446,7 @@
                     exchangeDate: {
                         zh: "兑换日期：",
                         en: "Exchange date: ",
-                        vi: "Thay đổi ngày",
+                        vi: "Thay đổi ngày: ",
                         "zh-Hant": "兌換日期："
                     },
                     exchanging: {
@@ -3374,7 +3464,7 @@
                     receiveTime: {
                         zh: "可领取时间：",
                         en: "Receive time: ",
-                        vi: "Thời gian nhận",
+                        vi: "Thời gian nhận: ",
                         "zh-Hant": "可領取時間："
                     },
                     receiveNow: {
@@ -3404,7 +3494,7 @@
                     availableCoupons: {
                         zh: "距可领取还剩：",
                         en: "Available coupons: ",
-                        vi: "Những điểm thưởng có hiệu lực",
+                        vi: "Những điểm thưởng có hiệu lực: ",
                         "zh-Hant": "距可領取還剩："
                     },
                     exchangeCouponSucc: {
@@ -3570,7 +3660,7 @@
                     timeDeductingCommissionM: {
                         zh: "扣除时间：",
                         en: "The time of deducting commission: ",
-                        vi: "Thời điểm khấu trừ hoa hồng",
+                        vi: "Thời điểm khấu trừ hoa hồng: ",
                         "zh-Hant": "扣除時間："
                     },
                     accept: {
@@ -3698,7 +3788,7 @@
                     depositAmountM: {
                         zh: "充值金额：",
                         en: "Deposit Amount: ",
-                        vi: "Số tiền gửi",
+                        vi: "Số tiền gửi: ",
                         "zh-Hant": "充值金額："
                     },
                     rechargeMethod: {
@@ -3794,7 +3884,7 @@
                     tip4: {
                         zh: "提现金额不能大于可提现金额",
                         en: "Withdraw amount can not be greater than the extractable amount",
-                        vi: "Số tiền rút không thể lớn hơn số tiền có thể trích ",
+                        vi: "Số tiền rút không thể lớn hơn số tiền có thể trích",
                         "zh-Hant": "提現金額不能大於可提現金額"
                     },
                     tip5: {
@@ -3848,7 +3938,7 @@
                     cardNumberM: {
                         zh: "卡号：",
                         en: "Card Number: ",
-                        vi: "Số thẻ",
+                        vi: "Số thẻ: ",
                         "zh-Hant": "卡號："
                     },
                     bank: {
@@ -3866,7 +3956,7 @@
                     informationBankAccount: {
                         zh: "添加银行卡",
                         en: "The information of bank account",
-                        vi: "Thông tin tài khoản ",
+                        vi: "Thông tin tài khoản",
                         "zh-Hant": "添加銀行卡"
                     },
                     depositOptions: {
@@ -3950,7 +4040,7 @@
                     withdrawalAmountM: {
                         zh: "提现金额：",
                         en: "Withdrawal Amount: ",
-                        vi: "Số Tiền Rút",
+                        vi: "Số Tiền Rút: ",
                         "zh-Hant": "提現金額："
                     },
                     youCanWithdrawal: {
@@ -3986,7 +4076,7 @@
                     bindUserBankCard: {
                         zh: "请绑定认证用户本人的银行卡",
                         en: "Please bind the user’s own bank card",
-                        vi: "Vui lòng liên kết thẻ ngân hàng của riêng người dùng ",
+                        vi: "Vui lòng liên kết thẻ ngân hàng của riêng người dùng",
                         "zh-Hant": "請邦定認證用護本人的銀行卡"
                     },
                     enterCardNumber: {
@@ -4010,7 +4100,7 @@
                     branchM: {
                         zh: "支行名称：",
                         en: "Branch: ",
-                        vi: "Chi nhánh",
+                        vi: "Chi nhánh: ",
                         "zh-Hant": "支行名稱："
                     },
                     province: {
@@ -4022,7 +4112,7 @@
                     provinceM: {
                         zh: "开户省：",
                         en: "Province: ",
-                        vi: "Tỉnh",
+                        vi: "Tỉnh: ",
                         "zh-Hant": "開護省："
                     },
                     city: {
@@ -4034,7 +4124,7 @@
                     cityM: {
                         zh: "开户市：",
                         en: "City: ",
-                        vi: "Thành phố",
+                        vi: "Thành phố: ",
                         "zh-Hant": "開護市："
                     },
                     details: {
@@ -4064,7 +4154,7 @@
                     telegraphicTransferTip3: {
                         zh: "老虎外汇接受美元汇款，汇款详情如下：",
                         en: "TigerWit to receive US dollar remittance, remittance details are as follows：",
-                        vi: "TigerWit nhận tiền chuyển đô la Mỹ, chi tiết chuyển tiền như sau ",
+                        vi: "TigerWit nhận tiền chuyển đô la Mỹ, chi tiết chuyển tiền như sau: ",
                         "zh-Hant": "老虎外匯接受美元匯款，匯款詳情如下："
                     },
                     telegraphicTransferTip4: {
@@ -4112,13 +4202,13 @@
                     beneficiaryName: {
                         zh: "收款人名称（Company）：",
                         en: "Beneficiary’s Name: ",
-                        vi: "Tên Người thụ hưởng ",
+                        vi: "Tên Người thụ hưởng: ",
                         "zh-Hant": "收款人名稱（Company）："
                     },
                     beneficiaryBank: {
                         zh: "收款行所在国家（地区）：",
                         en: "Beneficiary’s Bank Country(Region): ",
-                        vi: "Ngân hàng quốc gia của Người thụ hưởng (Khu vực ",
+                        vi: "Ngân hàng quốc gia của Người thụ hưởng (Khu vực: ",
                         "zh-Hant": "收款行所在國家（地區）："
                     },
                     australia: {
@@ -4130,49 +4220,49 @@
                     beneA_CNo: {
                         zh: "收款人账号（Account）：",
                         en: "Bene’s A/C/ No: ",
-                        vi: "Bene’s A/C? NO",
+                        vi: "Bene’s A/C? NO: ",
                         "zh-Hant": "收款人帳號（Account）："
                     },
                     swift: {
                         zh: "收款银行机构鉴定代码（Swift）：",
                         en: "Swift: ",
-                        vi: "Swift",
+                        vi: "Swift: ",
                         "zh-Hant": "收款銀行機構鑒定代碼（Swift）："
                     },
                     beneficiaryBankName: {
                         zh: "收款人开户行（Bank）：",
                         en: "Beneficiary’s Bank Name: ",
-                        vi: "Tên Ngân Hàng Của Người Thụ Hưởng ",
+                        vi: "Tên Ngân Hàng Của Người Thụ Hưởng: ",
                         "zh-Hant": "收款人開護行（Bank）："
                     },
                     beneficiaryBankAddress: {
                         zh: "银行地址（Address）：",
                         en: "Beneficiary’s Bank Address: ",
-                        vi: "Địa Chỉ Ngân Hàng Của Người Thụ Hưởng",
+                        vi: "Địa Chỉ Ngân Hàng Của Người Thụ Hưởng: ",
                         "zh-Hant": "銀行地址（Address）："
                     },
                     bsb: {
                         zh: "清算号（BSB）：",
                         en: "BSB: ",
-                        vi: "BSB",
+                        vi: "BSB: ",
                         "zh-Hant": "清算號（BSB）："
                     },
                     beneficiaryAddress: {
                         zh: "收款人地址（Address）：",
                         en: "Beneficiary’s Address: ",
-                        vi: "Địa Chỉ Của Người Thụ Hưởng",
+                        vi: "Địa Chỉ Của Người Thụ Hưởng: ",
                         "zh-Hant": "收款人地址（Address）："
                     },
                     remittanceInformation: {
                         zh: "汇款附言：",
                         en: "Remittance Information: ",
-                        vi: "Thông Tin Chuyển Tiền",
+                        vi: "Thông Tin Chuyển Tiền: ",
                         "zh-Hant": "匯款附言："
                     },
                     anti_MoneyLaunderingPolicy: {
                         zh: "反洗钱政策：",
                         en: "Anti-Money Laundering Policy: ",
-                        vi: "Chính Sách Chống Rửa Tiền ",
+                        vi: "Chính Sách Chống Rửa Tiền: ",
                         "zh-Hant": "反洗錢政策："
                     },
                     openTrades: {
@@ -4274,8 +4364,14 @@
                     walletBalanceM: {
                         zh: "当前钱包余额：",
                         en: "Wallet balance: ",
-                        vi: "Số dư trong ví",
+                        vi: "Số dư trong ví: ",
                         "zh-Hant": "當前錢包余額："
+                    },
+                    confirmAccount: {
+                        zh: "为保证充值成功，请务必使用本人银行卡和账户",
+                        en: "In order to ensure successful deposit, please use your bank card and account",
+                        vi: "Để đảm bảo kí quỹ thành công, xin sử dụng thẻ và tài khoản ngân hàng của bạn",
+                        "zh-Hant": "為保證充值成功，請務必使用本人銀行卡和賬戶"
                     },
                     tip16: {
                         zh: "支付完成前，请不要关闭支付验证窗口",
@@ -4448,7 +4544,7 @@
                     clickUpload: {
                         zh: "点击上传电汇凭证",
                         en: "Click to upload wire transfer voucher",
-                        vi: "Nhấp để tải lên chứng từ chuyển khoản ngân hàng ",
+                        vi: "Nhấp để tải lên chứng từ chuyển khoản ngân hàng",
                         "zh-Hant": "點擊上傳電匯憑證"
                     },
                     tip30: {
@@ -4466,7 +4562,7 @@
                     remittancePostscript: {
                         zh: "汇款附言：",
                         en: "Remittance postscript: ",
-                        vi: "Bản ghi chuyển tiền",
+                        vi: "Bản ghi chuyển tiền: ",
                         "zh-Hant": "匯款附言："
                     },
                     tip32: {
@@ -4556,7 +4652,7 @@
                     vouchersInstance: {
                         zh: "查看凭证示例",
                         en: "Vouchers instance",
-                        vi: "Ví dụ chứng từ ",
+                        vi: "Ví dụ chứng từ",
                         "zh-Hant": "查看憑證示例"
                     },
                     transactionSuccessful: {
@@ -4586,19 +4682,19 @@
                     withdrawalTo: {
                         zh: "提现到",
                         en: "Withdrawal to",
-                        vi: "Rút tiền ",
+                        vi: "Rút tiền",
                         "zh-Hant": "提現到"
                     },
                     tip43: {
                         zh: "请填写您的真实CSE钱包账号",
                         en: "Please fill out your true CSE wallet account",
-                        vi:"Vui lòng điền vào tài khoản ví điện tử CSE thực của bạn ",
+                        vi:"Vui lòng điền vào tài khoản ví điện tử CSE thực của bạn",
                         "zh-Hant": "請填寫您的真實CSE錢包帳號"
                     },
                     tip44: {
                         zh: "请填写您的真实PayPal账号",
                         en: "Please fill out your real PayPal account",
-                        vi: "Vui lòng điền vào tài khoản PayPal thực của bạn ",
+                        vi: "Vui lòng điền vào tài khoản PayPal thực của bạn",
                         "zh-Hant": "請填寫您的真實PayPal帳號"
                     },
                     tip45: {
@@ -4622,7 +4718,7 @@
                     tip46: {
                         zh: "申请已提交，我们会在两个工作日内处理完毕",
                         en: "The application has been submitted and will be processed within two working days",
-                        vi: "Đơn đăng ký đã được gửi và sẽ được xử lý trong vòng hai ngày làm việc ",
+                        vi: "Đơn đăng ký đã được gửi và sẽ được xử lý trong vòng hai ngày làm việc",
                         "zh-Hant": "申請已提交，我們會在兩個工作日內處理完畢"
                     },
                     tip47: {
@@ -4652,7 +4748,7 @@
                     tip50: {
                         zh: "输入的金额为大于零的整数或者小数（小数点后最多两位数字）",
                         en: "Entered amount should be Integer or decimal and greater than zero (No more than two digits after the decimal point)",
-                        vi: "Số tiền đã nhập phải là Số nguyên hoặc thập phân và lớn hơn 0 (Không quá hai chữ số sau dấu thập phân ",
+                        vi: "Số tiền đã nhập phải là Số nguyên hoặc thập phân và lớn hơn 0 (Không quá hai chữ số sau dấu thập phân)",
                         "zh-Hant": "輸入的金額為大於零的整數或者小數（小數點後最多兩位數字）"
                     },
                     tip51: {
@@ -4736,7 +4832,7 @@
                     tip57: {
                         zh: "当前支付方式最低充值金额为",
                         en: "The minimum deposit amount of current payment method is",
-                        vi: "Số tiền gửi tối thiểu của phương thức thanh toán hiện tại là ",
+                        vi: "Số tiền gửi tối thiểu của phương thức thanh toán hiện tại là",
                         "zh-Hant": "當前支付方式最低充值金額為"
                     },
                     tip58: {
@@ -4754,7 +4850,7 @@
                     uploadTeleTranVoucher: {
                         zh: "请上传电汇凭证",
                         en: "Upload telegraphic transfer voucher",
-                        vi: "Tải lên phiếu chuyển tiền điện báo ",
+                        vi: "Tải lên phiếu chuyển tiền điện báo",
                         "zh-Hant": "請上傳電匯憑證"
                     },
                     depositPage: {
@@ -4778,7 +4874,7 @@
                     tip59_2: {
                         zh: "约：",
                         en: ": ",
-                        vi: ":",
+                        vi: ": ",
                         "zh-Hant": "約："
                     },
                     tip60: {
@@ -4876,7 +4972,7 @@
                     tip2: {
                         zh: "用户复制高手的复制资金不可超过高手当前账户级别的限额；",
                         en: "The user’s copy of the funds shall not exceed the current account level limit",
-                        vi: "Sao chép tiền của người dùng không được vượt quá giới hạn cấp tài khoản hiện tại ",
+                        vi: "Sao chép tiền của người dùng không được vượt quá giới hạn cấp tài khoản hiện tại",
                         "zh-Hant": "用護復制高手的復制資金不可超過高手當前帳護級別的限額；"
                     },
                     tip3: {
@@ -4906,25 +5002,25 @@
                     leverageRangeM: {
                         zh: "杠杆使用范围：",
                         en: "Leverage Range: ",
-                        vi: "Phạm Vi Đòn Bẩy",
+                        vi: "Phạm Vi Đòn Bẩy: ",
                         "zh-Hant": "杠桿使用範圍："
                     },
                     copyAmountLimitM: {
                         zh: "复制金额限额：",
                         en: "Copy Amount Limit: ",
-                        vi: "Số Tiền Sao Chép Giới Hạn",
+                        vi: "Số Tiền Sao Chép Giới Hạn: ",
                         "zh-Hant": "復制金額限額："
                     },
                     remainingCopyableAmountM: {
                         zh: "剩余可复制金额：",
                         en: "Remaining Copyable Amount: ",
-                        vi: "Duy Trì Số Tiền Sao Chép",
+                        vi: "Duy Trì Số Tiền Sao Chép: ",
                         "zh-Hant": "剩余可復制金額："
                     },
                     tip9: {
                         zh: "成为老虎外汇高手 获取更多收益",
                         en: "Become a TigerWit’s master to get more income",
-                        vi: "Trở Thành Bậc Thầy của TigerWit để có thêm thu nhập ",
+                        vi: "Trở Thành Bậc Thầy của TigerWit để có thêm thu nhập",
                         "zh-Hant": "成為老虎外匯高手 獲取更多收益"
                     },
                     tip10: {
@@ -4936,19 +5032,19 @@
                     tip11: {
                         zh: "申请成为高手需达成以下条件",
                         en: "Application to become a master to meet the following conditions",
-                        vi: "Đơn đăng kí để trở thành một bậc thầy để đáp ứng các điều kiện sau ",
+                        vi: "Đơn đăng kí để trở thành một bậc thầy để đáp ứng các điều kiện sau",
                         "zh-Hant": "申請成為高手需達成以下條件"
                     },
                     tip12: {
                         zh: "开通老虎外汇真实账户并完成实名认证",
                         en: "Open the real account of the TigerWit and complete the verification",
-                        vi: "Mở tài khoản thực của TigerWit và hoàn thành xác minh ",
+                        vi: "Mở tài khoản thực của TigerWit và hoàn thành xác minh",
                         "zh-Hant": "開通老虎外匯真實帳護並完成實名認證"
                     },
                     tip13: {
                         zh: "在老虎外汇交易平台真实入金并连续自主交易20个以上工作日",
                         en: "In the TigerWit trading platform deposit and continuous self-trading more than 20 working days",
-                        vi: "Trong nền tảng giao dịch TigerWit tiền gửi và tự giao dịch liên tục hơn 20 ngày làm việc ",
+                        vi: "Trong nền tảng giao dịch TigerWit tiền gửi và tự giao dịch liên tục hơn 20 ngày làm việc",
                         "zh-Hant": "在老虎外匯交易平臺真實入金並連續自主交易20個以上工作日"
                     },
                     tip14: {
@@ -4990,19 +5086,19 @@
                     tip20: {
                         zh: "高手申请被拒绝",
                         en: "The master application was rejected",
-                        vi: "Đơn đăng kí bậc thầy đã bị từ chối ",
+                        vi: "Đơn đăng kí bậc thầy đã bị từ chối",
                         "zh-Hant": "高手申請被拒絕"
                     },
                     tip21: {
                         zh: "高手申请已通过审核",
                         en: "The master application has been approved",
-                        vi: "Đơn đăng kí bậc thầy đã được phê duyệt ",
+                        vi: "Đơn đăng kí bậc thầy đã được phê duyệt",
                         "zh-Hant": "高手申請已通過審核"
                     },
                     tip22: {
                         zh: "恭喜您的高手申请已通过审核！",
                         en: "Congratulations to your master application has been approved!",
-                        vi: "Xin chúc mừng đơn đăng kí bậc thầy của bạn đã được phê duyệt ",
+                        vi: "Xin chúc mừng đơn đăng kí bậc thầy của bạn đã được phê duyệt",
                         "zh-Hant": "恭喜您的高手申請已通過審核！"
                     },
                     tip23: {
@@ -5080,13 +5176,13 @@
                     masterSystem: {
                         zh: "复制跟单系统",
                         en: "’s fully-automated order-following system",
-                        vi: "Hệ thống theo thứ tự hoàn toàn tự động ",
+                        vi: "Hệ thống theo thứ tự hoàn toàn tự động",
                         "zh-Hant": "復制跟單系統"
                     },
                     tip28: {
                         zh: "直通全球资本市场",
                         en: "Direct access to global capital markets",
-                        vi: "Truy cập trực tiếp vào thị trường vốn toàn cầu ",
+                        vi: "Truy cập trực tiếp vào thị trường vốn toàn cầu",
                         "zh-Hant": "直通全球資本市場"
                     },
                     tradeLikeMaster: {
@@ -5140,7 +5236,7 @@
                     performanceOf: {
                         zh: "年表现",
                         en: "Performance: ",
-                        vi: "Hiệu suất",
+                        vi: "Hiệu suất: ",
                         "zh-Hant": "年表現"
                     },
                     tip29: {
@@ -5188,7 +5284,7 @@
                     pleaseChooseAccount: {
                         zh: "请选择账号：",
                         en: "Please choose account: ",
-                        vi: "Vui lòng chọn tài khoản",
+                        vi: "Vui lòng chọn tài khoản: ",
                         "zh-Hant": "請選擇帳號："
                     },
                     masterRequirements: {
@@ -5230,7 +5326,7 @@
                     applyMasterReminder: {
                         zh: "申请高手提醒",
                         en: "Apply for master reminder",
-                        vi: "Lời nhắc Đăng kí bậc thầy ",
+                        vi: "Lời nhắc Đăng kí bậc thầy",
                         "zh-Hant": "申請高手提醒"
                     },
                     sureAboutApply: {
@@ -5242,7 +5338,7 @@
                     sureAboutApply1: {
                         zh: "未达成高手申请条件，请继续努力",
                         en: "Did not meet the master application conditions, please keep trying",
-                        vi: "Không đáp ứng các điều kiện đăng ký bậc thầy, vui lòng tiếp tục thử ",
+                        vi: "Không đáp ứng các điều kiện đăng ký bậc thầy, vui lòng tiếp tục thử",
                         "zh-Hant": "未達成高手申請條件，請繼續努力"
                     },
                     applicationSubmitted: {
@@ -5302,7 +5398,7 @@
                     qualifyMaster: {
                         zh: "成为高手，你将满足以下条件：",
                         en: "To qualify for Master status a trader must have met the following requirements: ",
-                        vi: "Để hội đủ điều kiện cho trạng thái Bậc Thầy, nhà giao dịch phải đáp ứng các yêu cầu sau:",
+                        vi: "Để hội đủ điều kiện cho trạng thái Bậc Thầy, nhà giao dịch phải đáp ứng các yêu cầu sau: ",
                         "zh-Hant": "成為高手，妳將滿足以下條件："
                     },
                     qualifyMaster_1: {
@@ -5376,7 +5472,7 @@
                     accountAccessM: {
                         zh: "账号权限：",
                         en: "Account access: ",
-                        vi: "Truy cập tài khoản",
+                        vi: "Truy cập tài khoản: ",
                         "zh-Hant": "帳號權限："
                     },
                     independentTrading: {
@@ -5563,8 +5659,8 @@
                     },
                     minimalSpread: {
                         zh: "最小点差（近14天统计数据）",
-                        en: "Minimal Spread（Statistics for the last 14 days）",
-                        vi: "Spread tối thiểu （Thống kê trong 14 ngày qua ",
+                        en: "Minimal Spread (Statistics for the last 14 days) ",
+                        vi: "Spread tối thiểu (Thống kê trong 14 ngày qua) ",
                         "zh-Hant": "最小點差（近14天統計數據）"
                     },
                     stopsLevel: {
@@ -5690,7 +5786,7 @@
                     tip8: {
                         zh: "您确定要买入0.01手吗？",
                         en: "Are you sure to buy 0.01 lots?",
-                        vi: "Bạn có chắc chắn mua 0.01 lot không ",
+                        vi: "Bạn có chắc chắn mua 0.01 lot không?",
                         "zh-Hant": "您確定要買入0.01手嗎？"
                     }
                 },
@@ -5734,7 +5830,7 @@
                     alreadyBoundEmail: {
                         zh: "您已经绑定了电子邮箱 ",
                         en: "You have already bound the email ",
-                        vi: "Bạn đã đăng kí email",
+                        vi: "Bạn đã đăng kí email ",
                         "zh-Hant": "您已經邦定了電子郵箱 "
                     },
                     oldEmailVerificationCode: {
@@ -5962,7 +6058,7 @@
                     openExperienceAccountTip2: {
                         zh: "只需一步，即刻享受",
                         en: "Just one step, and you will enjoy: ",
-                        vi: "Chỉ một bước, và bạn sẽ hài lòng",
+                        vi: "Chỉ một bước, và bạn sẽ hài lòng: ",
                         "zh-Hant": "只需壹步，即刻享受"
                     },
                     openExperienceAccountTip3: {
@@ -6066,7 +6162,7 @@
                     provideService: {
                         zh: "定制您的个性化服务",
                         en: "To provide you with personalized service",
-                        vi: "cung cấp cho bạn dịch vụ cá nhân hóa ",
+                        vi: "cung cấp cho bạn dịch vụ cá nhân hóa",
                         "zh-Hant": "定制您的個性化服務"
                     },
                     basicInformationg: {
@@ -6102,19 +6198,19 @@
                     tip1: {
                         zh: "为了您的账户安全，请先验证身份",
                         en: "To ensure your account is safe, please verify your identity first",
-                        vi: "Để đảm bảo tài khoản của bạn an toàn, trước tiên hãy xác minh danh tính của bạn ",
+                        vi: "Để đảm bảo tài khoản của bạn an toàn, trước tiên hãy xác minh danh tính của bạn",
                         "zh-Hant": "為了您的帳護安全，請先驗證身份"
                     },
                     tip2: {
                         zh: "我们将向您的原手机号发送验证码",
                         en: "We will send the verification code to the original phone",
-                        vi: "Chúng tôi sẽ gửi mã xác minh đến điện thoại ban đầu ",
+                        vi: "Chúng tôi sẽ gửi mã xác minh đến điện thoại ban đầu",
                         "zh-Hant": "我們將向您的原手機號發送驗證碼"
                     },
                     tip3: {
                         zh: "身份验证通过后，方可进行下一步操作",
                         en: "Need to verify before proceeding",
-                        vi: "Cần xác minh trước khi tiếp tục ",
+                        vi: "Cần xác minh trước khi tiếp tục",
                         "zh-Hant": "身份驗證通過後，方可進行下壹步操作"
                     },
                     enterVerificationCode: {
@@ -6396,7 +6492,7 @@
                     failModifyUsername: {
                         zh: "昵称修改失败",
                         en: "Fail to modify the username",
-                        vi: "Không sửa đổi tên người dùng ",
+                        vi: "Không sửa đổi tên người dùng",
                         "zh-Hant": "昵稱修改失敗"
                     },
                     error: {
@@ -6414,7 +6510,7 @@
                     tip11: {
                         zh: "您已是高手，暂不能修改基本资料",
                         en: "You already are a master, cannot modify the profile photo",
-                        vi: "Bạn đã là bậc thầy, không thể sửa đổi hình ảnh đại diện ",
+                        vi: "Bạn đã là bậc thầy, không thể sửa đổi hình ảnh đại diện",
                         "zh-Hant": "您已是高手，暫不能修改基本資料"
                     },
                     bindNewEmailSucc: {
@@ -6456,7 +6552,7 @@
                     tPermit: {
                         zh: "台湾居民来往大陆通行证 ",
                         en: "Mainland travel permit for Taiwan residents",
-                        vi: "Giấy phép du lịch đại lục cho cư dân Đài Loan ",
+                        vi: "Giấy phép du lịch đại lục cho cư dân Đài Loan",
                         "zh-Hant": "臺灣居民來往大六通行證 "
                     },
                     passport: {
@@ -6600,6 +6696,14 @@
                         "zh-Hant":"（未知狀態）"
                     }
                 },
+                imgPath: {
+                    thirdLogin: {
+                        zh:"/white_label/third/third_deposit_bg.png",
+                        en:"/white_label/third/third_deposit_bg.png",
+                        vi:"/white_label/third/third_deposit_bg.png",
+                        "zh-Hant":"/white_label/third/third_deposit_bg.png"
+                    }
+                },
                 noMetNeed:{
                     zh:"未达成",
                     en:"unfinished",
@@ -6735,7 +6839,7 @@
                 systemPromptM: {
                     zh: "系统提示：",
                     en: "The system prompt: ",
-                    vi: "Lời nhắc hệ thống",
+                    vi: "Lời nhắc hệ thống: ",
                     "zh-Hant": "系統提示："
                 },
                 pleaseWait: {
@@ -6818,7 +6922,7 @@
                 },
                 weeks: {
                     zh: "周",
-                    en: " weeks ",
+                    en: " weeks",
                     vi: " Tuần",
                     "zh-Hant": "周"
                 },
@@ -6885,7 +6989,7 @@
                 unknownError: {
                     zh: "未知错误，请联系管理员",
                     en: "Unknown error, please contact administrator",
-                    vi: "Lỗi không xác định, vui lòng liên hệ với quản trị viên ",
+                    vi: "Lỗi không xác định, vui lòng liên hệ với quản trị viên",
                     "zh-Hant": "未知錯誤，請聯系管理員"
                 },
                 gender: {

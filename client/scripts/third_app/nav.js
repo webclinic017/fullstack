@@ -38,10 +38,17 @@ $(document).on("tap", "#third_app_bottom_template .account_item", function () {
   var cAccount = $(this).attr("data-account");
   var cName = $(this).attr("data-name");
   var cTag = $(this).attr("data-tag");
+  var cAmount = $(this).attr("data-amount");
   if ((cType === 'deposit' && cAccount == depositAccount) || (cType === 'withdraw' && cAccount == withdrawAccount)) return;
   $("#third_app_bottom_template .account_item").removeClass('active');
   $(this).addClass('active');
   closeAllMdl();
+  selectAccount(cType, cAccount, cName, cTag, cAmount);
+  return false;
+});
+
+//选择账户后操作
+function selectAccount(cType, cAccount, cName, cTag, cAmount) {
   if (cType === 'deposit') {
     depositAccount = cAccount;
     $(eleDeposit.payAccountName).html(cName);
@@ -57,14 +64,13 @@ $(document).on("tap", "#third_app_bottom_template .account_item", function () {
     $(eleWithdraw.payAccountTag).html(cTag);
     $(eleWithdraw.payAccountAmout).addClass('active');
     $(eleWithdraw.payAccountAmout).find(".name").html(aName);
-    $(eleWithdraw.payAccountAmout).find(".num").html($(this).attr("data-amount"));
-    canWithdrawAmount = Number($(this).attr("data-amount")) || 0;
+    $(eleWithdraw.payAccountAmout).find(".num").html(cAmount);
+    canWithdrawAmount = Number(cAmount) || 0;
     //为钱包充值时，支付方式不能为钱包
     addWithdrawAccount();
     checkWithdrawLimit();
   }
-  return false;
-});
+}
 
 //获取零钱包可用余额
 function getWalletBalance () {
@@ -83,6 +89,28 @@ function getTradeAccount () {
     if (!data) return;
     if (data.is_succ) {
       tradeAccountLst = data.data;
+      var deposit = true;
+      var withdraw = true;
+      if(depositAccount || withdrawAccount) {
+        $.each(tradeAccountLst, function(index, value) {
+          if(value.mt4_id == depositAccount) {
+            selectAccount('deposit', value.mt4_id, value.account_name, tradeAccountType[value.account_type] || '', value.balance);
+            deposit = false;
+          }
+          if(value.mt4_id == withdrawAccount) {
+            selectAccount('withdraw', value.mt4_id, value.account_name, tradeAccountType[value.account_type] || '', value.balance);
+            withdraw = false;
+          }
+        })
+      }
+     
+      if(deposit) {
+        selectAccount('deposit', tradeAccountLst[0].mt4_id, tradeAccountLst[0].account_name, tradeAccountType[tradeAccountLst[0].account_type] || '', tradeAccountLst[0].balance);
+      };
+      if(withdraw) {
+        selectAccount('withdraw', tradeAccountLst[0].mt4_id, tradeAccountLst[0].account_name, tradeAccountType[tradeAccountLst[0].account_type] || '', tradeAccountLst[0].balance);
+      }
+
     }
   });
 }

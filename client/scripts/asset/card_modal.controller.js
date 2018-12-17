@@ -184,8 +184,8 @@
             
             $scope.clickable = false;
 
-            // 如果是第一次绑卡
-            if (typeof $scope.card.id === 'undefined') {
+            // 如果是第一次绑卡()
+            // if (typeof $scope.card.id === 'undefined') {
                 asset.bindCard(oParams).then(function (data) {
                     $scope.clickable = true
                     if (!data) return;
@@ -193,11 +193,11 @@
                         $scope.card.binding = true;
                         $scope.$emit('bindCardSuccess');
                     } else {
-                        $scope.$emit('bindCardFail');
+                        // $scope.$emit('bindCardFail');
                         alert(data.message);
                     }
                 });
-            }
+            // }
         }
         // 去实名认证
         $scope.verify = verify;

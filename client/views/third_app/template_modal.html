@@ -132,6 +132,7 @@
     </div>
   </div>
 </script>
+<!-- 添加银行卡 -->
 <script id="template_withdraw_bank_list" type="text/html">
   <h3 class="title">
     <span>银行账户</span>
@@ -139,7 +140,7 @@
   </h3>
   <ul class="content bank_content">
     <$ for(var i=0;i<data.lst.length;i++) {$>
-      <li class="clearfix deposit_template_item bank_item <$= data.lst[i].id == data.id ? 'active' : ''$>" data-id="<$= data.lst[i].id$>" data-name="<$= data.lst[i].bank_name || ''$>" data-no="<$= data.lst[i].card_no$>">
+      <li class="clearfix deposit_template_item bank_item <$= data.lst[i].id == data.id ? 'active' : ''$>" data-id="<$= data.lst[i].id$>" data-name="<$= data.lst[i].bank_name || ''$>" data-no="<$= data.lst[i].card_no$>" data-type="<$= data.type$>">
         <div class="item-icon"><span></span></div>
         <div class="item-info">
           <p class="name">
@@ -147,7 +148,7 @@
           </p>
           <p class="desc col"><$= data.lst[i].bank_name || ''$></p>
         </div>
-        <span class="del third_app_template_del_bank" data-id="<$= data.lst[i].id$>">删除</span>
+        <span class="del third_app_template_del_bank" data-id="<$= data.lst[i].id$>" data-type="<$= data.type$>">删除</span>
       </li>
     <$}$>
     <$ if (!data.lst.length) {$>
@@ -155,6 +156,33 @@
     <$}$>
   </ul>
   <div class="btn-wrapper third_app_template_btn">
-    <button class="btn btn-primary-gradient" id="third_app_add_bank_card">添加银行卡</button>
+    <button class="btn btn-primary-gradient third_app_add_card" data-type="<$= data.type$>">添加银行卡</button>
+  </div>
+</script>
+<!-- 添加第三方账户 -->
+<script id="template_withdraw_third_list" type="text/html">
+  <h3 class="title">
+    <span>第三方账户</span>
+    <span class="cancel third_app_template_cancel">取消</span>
+  </h3>
+  <ul class="content bank_content">
+    <$ for(var i=0;i<data.lst.records.length;i++) {$>
+      <li class="clearfix deposit_template_item bank_item <$= data.lst.records[i].id == data.id ? 'active' : ''$>" data-id="<$= data.lst.records[i].id$>" data-name="<$= data.lst.records[i].platform || ''$>" data-no="<$= data.lst.records[i].account_f$>" data-type="<$= data.type$>" data-third-type="<$= data.lst.records[i].third_type$>" data-third-account="<$= data.lst.records[i].account_f$>">
+        <div class="item-icon"><span></span></div>
+        <div class="item-info">
+          <p class="name">
+            <$= data.lst.records[i].account$>
+          </p>
+          <p class="desc col"><$= data.lst.records[i].platform || ''$></p>
+        </div>
+        <span class="del third_app_template_del_bank" data-id="<$= data.lst.records[i].id$>" data-type="<$= data.type$>">删除</span>
+      </li>
+    <$}$>
+    <$ if (!data.lst.records.length) {$>
+      <li class="text-center">暂未添加第三方账户</li>
+    <$}$>
+  </ul>
+  <div class="btn-wrapper third_app_template_btn">
+    <button class="btn btn-primary-gradient third_app_add_card" data-type="<$= data.type$>">添加第三方账户</button>
   </div>
 </script>

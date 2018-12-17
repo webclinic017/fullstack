@@ -5,12 +5,12 @@
     angular.module('fullstackApp')
         .controller('InvestRecordController', InvestRecordController);
 
-    InvestRecordController.$inject = ['$scope', 'asset', 'utils'];
+    InvestRecordController.$inject = ['$scope', 'asset', 'lang'];
 
-    function InvestRecordController($scope, asset, utils) {
+    function InvestRecordController($scope, asset, lang) {
         $scope.records = [];
         $scope.historyList = [];
-
+        var mt4Id = '';
         $scope.pagebar = {
             config: {
                 // total: , 总页数
@@ -27,17 +27,17 @@
 
         // $scope.cancelWithdraw = cancelWithdraw;
 
-        $scope.$watch('investSelect.id', function(n){
+        $scope.$watch(lang.isThird() ? 'main.trade_account.mt4_id' : 'investSelect.id', function(n){
             if(!n) return;
+            mt4Id = n;
             getList(1);
-            
         })
 
         // 获取交易历史
         function getList(page) {
             $scope.$emit('showLoadingImg');
             var offset = (page - 1) * pagesize;
-            asset.getHistory($scope.investSelect.id, offset, pagesize).then(function (data) {
+            asset.getHistory(mt4Id, offset, pagesize).then(function (data) {
                 // console.info(data);
                 $scope.$broadcast('hideLoadingImg');
                 if (!data) return;
