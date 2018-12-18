@@ -65,6 +65,7 @@
             getFunctionSwitch: getFunctionSwitch,
             getIdcard: getIdcard,
             setAgentPromotion: setAgentPromotion,
+            setUploadAddressProve: setUploadAddressProve,
         };
         var resolveValue;
         return service;
@@ -662,6 +663,10 @@
         //真实账户请求获取身份认证信息（更新证件接口）
         function getIdcard(){
             return publicHttp.dealPublicRequest(o.getIdcardApi, 'GET');
+        }
+        // 上传地址证明
+        function setUploadAddressProve(params) {
+            return publicHttp.dealPublicRequest(o.setUploadAddressProveApi, 'post', params);
         }
     }
 })();

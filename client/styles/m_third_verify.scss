@@ -503,46 +503,16 @@
 @include b(m_third_complete) {
     display: none;
 
-    @include e(tit) {
-        text-align: center;
-        padding: px2rem(30) 0 px2rem(15);
-
-        .icon {
-            display: inline-block;
-            width: px2rem(50);
-            vertical-align: top;
-
-            img {
-                width: 100%;
-            }
-        }
-        .tip {
-            font-size: px2rem(48);
-            line-height: px2rem(48);
-        }
-    }
-    @include e(id) {
-        text-align: center;
-        color: #4a4a4a;
-        font-size: px2rem(28);
-        padding: px2rem(20) 0;
-    }
-    @include e(server) {
-        text-align: center;
-        color: #4a4a4a;
-        font-size: px2rem(28);
+    @include e(tip) {
+        
     }
     @include e(btn) {
-        padding-top: px2rem(320);
+        margin-top: px2rem(40);
+        padding-bottom: px2rem(32);
 
-        .tip {
-            text-align: center;
-            font-size: px2rem(22);
-            color: #4a4a4a;
-            padding-bottom: px2rem(26);
-        }
         .btn {
             width: 100%;
+            margin: 0;
         }
     }
 
