@@ -575,3 +575,6 @@
 .flex0 {
     @include flex(0);
 }
+.cursor_pointer {
+    cursor: pointer;
+}

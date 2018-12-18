@@ -54,6 +54,7 @@
         thirdChangePassword: origin_third + '/user/passwd', //put
         thirdCountries: origin_third + '/region/countries', // get
         thirdGetCacheInfo: origin_third + '/user/auth_info', // get
+        thirdUploadAddress: origin_third + '/user/upload_address_prove', //post
 
         // 获取交易月报
         getMonReport: origin_app + '/user/monthly_report',     // get
