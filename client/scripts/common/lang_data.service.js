@@ -4184,13 +4184,13 @@
                     telegraphicTransferTip8_1: {
                         zh: "如您有疑问，请",
                         en: "If you have any questions, please ",
-                        vi: "Nếu bạn có bất kỳ câu hỏi nào, Vui lòng",
+                        vi: "Nếu bạn có bất kỳ câu hỏi nào, Vui lòng ",
                         "zh-Hant": "如您有疑問，請"
                     },
                     telegraphicTransferTip8_2: {
                         zh: "点击此处",
                         en: "click here ",
-                        vi: "nhấp vào đây",
+                        vi: "nhấp vào đây ",
                         "zh-Hant": "點擊此處"
                     },
                     telegraphicTransferTip8_3: {

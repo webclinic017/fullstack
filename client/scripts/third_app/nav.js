@@ -12,7 +12,7 @@ var pageLoadStatus = {  //页面脏检测
   withdraw: false,
   evidence: false,
 };
-var tradeAccountType = ["体验金账号", "自主交易账号", "跟随账号", "高手账号"];
+var tradeAccountType = [thirdH5.experienceAccount, thirdH5.tradingAccount, thirdH5.copyAccounts, thirdH5.masterAccount];
 var walletBalance = 0;
 var tradeAccountLst = [];
 $(document).on("tap", '#third_app_bottom_template, #third_app_middle_template, #third_app_loading_template, #third_app_message_template', function (e) {
@@ -59,7 +59,7 @@ function selectAccount(cType, cAccount, cName, cTag, cAmount) {
   }
   if (cType === 'withdraw') {
     withdrawAccount = cAccount;
-    var aName = cAccount === 'wallet' ? '钱包' : '账户';
+    var aName = cAccount === 'wallet' ? thirdH5.wallet : thirdH5.account;
     $(eleWithdraw.payAccountName).html(cName);
     $(eleWithdraw.payAccountTag).html(cTag);
     $(eleWithdraw.payAccountAmout).addClass('active');

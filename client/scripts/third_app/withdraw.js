@@ -107,7 +107,7 @@ function submitWithdraw () {
 $(eleWithdraw.payAccountBtn).on("tap", function (e) {
   openChangeAccountMdl({
     type: 'withdraw',
-    title: '提现账户',
+    title: thirdH5.withdrawAccountJ,
     currentAccount: withdrawAccount
   });
   return false;
@@ -168,7 +168,7 @@ $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank",
     $("#third_app_loading_template").removeClass('active');
     if (!data) return;
     if (data.is_succ) {
-      openMessageMdl('删除成功', true);
+      openMessageMdl(thirdH5.deleteSuccessful, true);
       $("#third_app_bottom_template .bank_item[data-id="+cId+"]").remove();
       if (cId == withdrawBankId) {
         withdrawType = undefined;

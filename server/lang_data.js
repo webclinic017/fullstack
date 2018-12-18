@@ -8345,6 +8345,9 @@ module.exports = function () {
     var home = replaceTiger(require('./mutilang/home'))
     //关于我们非中文
     var aboutus = replaceTiger(require('./mutilang/aboutus'))
+    // third h5
+    var thirdH5 = replaceTiger(require('./mutilang/thirdH5'))
+
     return _.merge(
         data,
         faq,
@@ -8357,6 +8360,7 @@ module.exports = function () {
         mThird,
         agment,
         home,
-        aboutus
+        aboutus,
+        thirdH5
     );
 }; 
