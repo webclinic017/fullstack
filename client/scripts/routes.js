@@ -220,12 +220,29 @@
                     }
                 })
                 // 更新证件
-                .state('space.update', {
-                    url: '/space/update',
+                .state('space.update',{
                     views: {
                         'content@space': {
-                            templateUrl: '/views/authen/realname.html',
-                            controller: 'AuthenRealnameController'
+                            templateUrl: '/views/account/layout.html',
+                            controller: 'AuthenController'
+                        }
+                    }
+                })
+                .state('space.update.subpage', {
+                    url: '/space/update/:subpage',
+                    views: {
+                        'content@space.update': {
+                            templateUrl: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'realname';
+                                return '/views/authen/' + $stateParams.subpage + '.html';
+                            },
+                            controllerProvider: function ($stateParams) {
+                                $stateParams.subpage = $stateParams.subpage || 'realname';
+                                var ctrlPrefix = 'Authen';
+                                var ctrlSuffix = 'Controller';
+                                var ctrlRoot = modCtrlName($stateParams.subpage);
+                                return ctrlPrefix + ctrlRoot + ctrlSuffix;
+                            }
                         }
                     }
                 })

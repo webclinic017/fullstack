@@ -12,9 +12,9 @@
         </li>
     </ul>
     <!-- 更新证件 -->
-    <ul class="space_nav__box" ng-if="toState.name == 'space.update'">
+    <ul class="space_nav__box" ng-if="toState.name.indexOf('space.update') != -1">
         <li class="space_nav__box-item active">
-            <a>更新证件</a>
+            <a>{{lang.text('tigerWitID.myAccount.updateID')}}</a>
         </li>
     </ul>
     <!-- 交易账户导航移入页面中部 -->
@@ -101,21 +101,22 @@
     </ul>
     
     <div class="" ng-if="personal.updatePapers.hint != 1">
-        <p ng-if="personal.dredged_type == 'live' && personal.verify_status < 5" class="mg-tp-10"> 
+        <p ng-if="personal.dredged_type == 'live' && (personal.verify_status < 5 || personal.verify_status == 7)" class="mg-tp-10"> 
             <a  
                 ui-sref="authen.subpage({subpage: 'investInfo'})"
                 class="link font-danger">
                 {{lang.text('tigerWitID.myAccount.tip34')}}
             </a>  
         </p>
-        <p ng-if="personal.dredged_type == 'demo' && personal.verify_status < 5" class="mg-tp-10">
+        <p ng-if="personal.dredged_type == 'demo' && (personal.verify_status < 5 || personal.verify_status == 7)" class="mg-tp-10">
             {{lang.text('tigerWitID.myAccount.tip35')}}
             <a class="link font-danger" ui-sref="authen.subpage" ng-click="toAuthenTypeSensorsdata('真实账户')">1.{{lang.text('tigerWitID.myAccount.tip36')}}</a> &nbsp;&nbsp;
             <a class="link font-danger" ui-sref="space.asset.subpage({subpage: 'deposit'})">2.{{lang.text('tigerWitID.tradingAccount.depositActivation')}}</a>
         </p>
     </div>
     <div class="" ng-if="personal.updatePapers.hint == 1 && personal.updatePapers.profile_check == 4">
-            
-        <p class="mg-tp-10 font-danger">{{lang.text('tigerWitID.myAccount.updateIDTip2')}}</p>
+        <p class="mg-tp-10 font-danger">
+            <a class="link font-danger" ui-sref="space.update.subpage">{{lang.text('tigerWitID.myAccount.updateIDTip2')}}</a>
+        </p>
     </div>
 </div>

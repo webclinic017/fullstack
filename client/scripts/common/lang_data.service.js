@@ -882,6 +882,62 @@
                         "zh-Hant": ""
                     }
                 },
+                authen: {
+                    address: {
+                        zh: "地址证明",
+                        en: "Proof of Address",
+                        vi: "Địa chỉ xác thực",
+                        "zh-Hant": "地址證明"
+                    },
+                    proofAddress: {
+                        zh: "上传地址证明",
+                        en: "Proof of Address",
+                        vi: "Địa chỉ xác thực",
+                        "zh-Hant": "上傳地址證明"
+                    },
+                    acceptFollow: {
+                        zh: "我们将接受以下文件：",
+                        en: "We will accept the following documents:",
+                        vi: "Chúng tôi sẽ chấp nhận những tài liệu sau:",
+                        "zh-Hant": "我們將接受以下文件："
+                    },
+                    utilityBill: {
+                        zh: "电费单（水，煤气，电）",
+                        en: "Utility Bill (water, gas, electricity)",
+                        vi: "Hóa đơn tiện ích (nước, gas, điện)",
+                        "zh-Hant": "電費單（水，煤氣，電）"
+                    },
+                    landlineTel: {
+                        zh: "固定电话费",
+                        en: "Landline telephone bill",
+                        vi: "Điện thoại cố định",
+                        "zh-Hant": "固定電話費"
+                    },
+                    bankStatement: {
+                        zh: "银行对帐单",
+                        en: "Bank statement",
+                        vi: "Bảng sao kê ngân hàng",
+                        "zh-Hant": "銀行對帳單"
+                    },
+                    noCan: {
+                        zh: "该文件不应超过3个月。 我们不接受手机账单，信用卡账单，发票或收据。",
+                        en: "The document should not be no more than 3 months old. We cannot accept mobile phone bills, credit card bills, invoices or receipts.",
+                        vi: "Tài liệu không quá 3 tháng. Chúng tôi không chấp nhận hóa đơn điện thoại, hoá đơn thẻ tín dụng, hóa đơn hoặc biên nhận.",
+                        "zh-Hant": "該文件不應超過3個月。我們不接受手機賬單，信用卡賬單，發票或收據。"
+                    },
+                    uploadAddress: {
+                        zh: "上传地址证明",
+                        en: "Upload the proof of address",
+                        vi: "Tải lên bằng chứng địa chỉ ",
+                        "zh-Hant": "上傳地址證明"
+                    },
+                    pUploadAddress: {
+                        zh: "请上传地址证明",
+                        en: "Please upload the proof of address",
+                        vi: "Vui lòng tải lên bằng chứng địa chỉ",
+                        "zh-Hant": "請上傳地址證明"
+                    }
+                },
                 myAccount: {
                     title: {
                         zh: "账户概况",
@@ -1113,32 +1169,32 @@
                     },
                     auditHourM: {
                         zh: "审核时间：",
-                        en: "Audit hour: ",
-                        vi: "Giờ kiểm toán",
+                        en: " ",
+                        vi: " ",
                         "zh-Hant": "審核時間："
                     },
                     tip16: {
                         zh: "工作日10:00-18:00：将在30分钟左右完成审核",
-                        en: "Work day 10:00-18:00: the review will be completed in about 30 minutes",
-                        vi: "Ngày làm việc 10: 00-18: 00: quá trình đánh giá sẽ hoàn thành sau khoảng 30 phút",
+                        en: "We are pleasured to inform you that your information has been submitted. ",
+                        vi: "Chúng tôi rất vui được thông báo với bạn rằng thông tin của bạn đã được gửi. ",
                         "zh-Hant": "工作日10:00-18:00：將在30分鐘左右完成審核"
                     },
                     tip17: {
                         zh: "工作日18:00以后：将在21:00、23:00统一审核；23:00后认证的将在次日审核",
-                        en: "Working days after 18:00: it will be reviewed at 21:00 and 23:00.",
-                        vi: "Ngày làm việc sau 18:00: sẽ được xem xét vào lúc 21:00 và 23:00",
+                        en: "Our compliance team will verify your account within 24 hours.",
+                        vi: "Nhóm giám sát của chúng tôi sẽ xác minh tài khoản của bạn trong vòng 24 giờ.",
                         "zh-Hant": "工作日18:00以後：將在21:00、23:00統壹審核；23:00後認證的將在次日審核"
                     },
                     tip18: {
                         zh: "非工作日时间：将在10:00、16:00、22:00统一审核；22:00后认证的将在次日审核",
-                        en: "Certification after 23:00 will be reviewed the next day",
-                        vi: "Chứng nhận sau 23:00 sẽ được xem xét vào ngày hôm sau",
+                        en: " ",
+                        vi: " ",
                         "zh-Hant": "非工作日時間：將在10:00、16:00、22:00統壹審核；22:00後認證的將在次日審核"
                     },
                     tip19: {
                         zh: "请留意查询您的审核状态。",
-                        en: "Please check your audit status.",
-                        vi: "Vui lòng kiểm tra trạng thái kiểm tra của bạn.",
+                        en: "If there are more information to be required you will be contacted by phone or email.",
+                        vi: "Nếu có thêm thông tin cần thiết, bạn sẽ được liên lạc qua điện thoại hoặc email.",
                         "zh-Hant": "請留意查詢您的審核狀態。"
                     },
                     accountNumber: {
@@ -1178,10 +1234,10 @@
                         "zh-Hant": "您已完成KYC認證，感謝您的慘與，請繼續完成下壹步操作。"
                     },
                     tip24: {
-                        zh: "因监管要求，请您提供相关信息。请确认是您本人，审核通过后不可修改。",
-                        en: "Please provide relevant information due to regulatory requirements. Please confirm that it is you, and it cannot be modified after passing the audit.",
-                        vi: "Vui lòng cung cấp thông tin có liên quan vì lý do các yêu cầu quản lý. Vui lòng xác nhận rằng đó là bạn và không thể sửa đổi sau khi vượt qua kiểm toán.",
-                        "zh-Hant": "因監管要求，請您提供相關信息。請確認是您本人，審核通過後不可修改。"
+                        zh: "请确保证件边框完整、大小适中、字迹清晰、亮度均衡、证件信息与填写信息一致、证件未过期、已满18周岁。",
+                        en: "We require colour copies of a government-issued drive license, passport and ID card. For ID cards and drive license, we require copies of the card’s front and back.",
+                        vi: "Chúng tôi yêu cầu bản sao màu giấy phép lái xe cấp bởi chính phủ, hộ chiếu và thẻ ID. Với thẻ ID và bằng lái xe, chúng tôi yêu cầu bản sao mặt trước và mặt sau.",
+                        "zh-Hant": "請確保證件邊框完整、大小適中、字迹清晰、亮度均衡、證件資訊與填寫資訊一致、證件未過期、已滿18周歲。"
                     },
                     realName: {
                         zh: "真实姓名",
@@ -3304,10 +3360,10 @@
                         "zh-Hant": "上傳身份證明"
                     },
                     clickUploadDocuments: {
-                        zh: "点击上传证件",
-                        en: "Click to upload documents",
-                        vi: "Nhấp vào để tải hố sơ lên",
-                        "zh-Hant": "點擊上傳證件"
+                        zh: "点击上传证件进行实名验证",
+                        en: "Upload",
+                        vi: "Tải lên",
+                        "zh-Hant": "點擊上傳證件進行實名驗證"
                     },
                     completeInformation: {
                         zh: "完善资料",
@@ -6541,7 +6597,7 @@
                         zh: "大陆居民身份证",
                         en: "Mainland resident identity card",
                         vi: "Chứng minh nhân dân đại lục",
-                        "zh-Hant": "大六居民身份證"
+                        "zh-Hant": "大陸居民身份證"
                     },
                     gAPermit: {
                         zh: "港澳居民来往内地通行证",
@@ -6552,8 +6608,8 @@
                     tPermit: {
                         zh: "台湾居民来往大陆通行证 ",
                         en: "Mainland travel permit for Taiwan residents",
-                        vi: "Giấy phép du lịch đại lục cho cư dân Đài Loan",
-                        "zh-Hant": "臺灣居民來往大六通行證 "
+                        vi: "Giấy phép du lịch đại lục cho cư dân Đài Loan ",
+                        "zh-Hant": "臺灣居民來往大陸通行證 "
                     },
                     passport: {
                         zh: "护照",
@@ -6563,7 +6619,7 @@
                     },
                     driverLicense: {
                         zh: "驾驶证",
-                        en: "Driver’s license",
+                        en: "Driver license",
                         vi: "Bằng lái xe",
                         "zh-Hant": "駕駛證"
                     },
@@ -6694,6 +6750,12 @@
                         en:"(Unknown)",
                         vi:"(Không rõ)",
                         "zh-Hant":"（未知狀態）"
+                    },
+                    certificateExpired:{
+                        zh:"(证件过期)",
+                        en:"(Certificate expired)",
+                        vi:"(Hết hạn giấy tờ)",
+                        "zh-Hant":"（證件過期）"
                     }
                 },
                 imgPath: {
