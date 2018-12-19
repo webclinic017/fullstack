@@ -889,6 +889,17 @@ module.exports = {
             vi: "1 đô la",
             "zh-Hant": "1 美元 ="
         },
-        
+        bindBankPhoneTip: {
+            zh: "因要求，请填写该银行卡的预留手机号",
+            en: "Please fill in the reserved phone number of the bank card as required",
+            vi: "Vui lòng điền số điện thoại dự phòng của thẻ ngân hàng theo yêu cầu",
+            "zh-Hant": "因要求，請填寫該銀行卡的預留手機號"
+        },
+        bindBankPhoneTip2: {
+            zh: "预留手机号",
+            en: "Reserved phone number",
+            vi: "Số điện thoại dự phòng",
+            "zh-Hant": "預留手機號"
+        },
     }
 };
