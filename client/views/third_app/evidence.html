@@ -1,23 +1,23 @@
 <div class="">
   <div class="third_app_evidence__comm">
     <div class="clearfix third_app_evidence__comm-tit">
-      <h4 class="fl">凭证注意事项</h4>
-      <span class="fr" id="third_app_evidence_example">查看凭证示例</span>
+      <h4 class="fl"><%=lang.text('thirdH5.voucherConsiderations')%></h4>
+      <span class="fr" id="third_app_evidence_example"><%=lang.text('thirdH5.vouchersInstance')%></span>
     </div>
     <p class="third_app_evidence__comm-tip">
-      1.凭证信息必须显示姓名、银行卡号、支付金额等内容 <br>
-      2.凭证信息必须为实名认证本人银行账户。<br>
-      3.未满足以上要求，审核将被驳回。<br>
-      4.审核驳回后，支付金额将原路退还，产生的1.5%手续费由您自行承担。<br>
+      1.<%=lang.text('thirdH5.vouchersInstanceTip1')%> <br>
+      2.<%=lang.text('thirdH5.vouchersInstanceTip2')%><br>
+      3.<%=lang.text('thirdH5.vouchersInstanceTip3')%><br>
+      4.<%=lang.text('thirdH5.vouchersInstanceTip4')%><br>
       <span>
-        注意：充值成功后请及时上传凭证，若超过两周未上传，将无法进行交易操作。<br>
-        ＊代表必须上传凭证
+        <%=lang.text('thirdH5.vouchersInstanceTip5')%><br>
+        <%=lang.text('thirdH5.vouchersInstanceTip6')%>
       </span>
     </p>
     <ul class="third_app_evidence__comm-navbar" id="third_app_evidence_navbar">
-      <li><span data-page="1">待上传</span></li>
-      <li><span data-page="2">审核中</span></li>
-      <li><span data-page="0">审核成功</span></li>
+      <li><span data-page="1"><%=lang.text('thirdH5.toUpload')%></span></li>
+      <li><span data-page="2"><%=lang.text('thirdH5.underReview')%></span></li>
+      <li><span data-page="0"><%=lang.text('thirdH5.successfully')%></span></li>
     </ul>
   </div>
   <div class="third_app_evidence__details" id="third_app_evidence_details">
@@ -25,7 +25,7 @@
   </div>
   <div class="third_app_evidence__details-default text-center" id="third_app_evidence_details_default">
     <img src="/images/no_voucher.png" alt="">
-    <p class="mg-tp-10">当前没有凭证</p>
+    <p class="mg-tp-10"><%=lang.text('thirdH5.noVouchers')%></p>
   </div>
 </div>
 
@@ -38,7 +38,7 @@
             <$if (data.lst[i].must) {$>
               <i>＊</i>
             <$}$>
-            充值成功
+            <%=lang.text('thirdH5.rechargeSuccess')%>
           </span>
           <span class="fr">
             $<$= data.lst[i].amount$>
@@ -46,7 +46,7 @@
         </div>
         <div class="item-date clearfix">
           <span class="fl"><$= dealTimestamp(data.lst[i].created_at)$></span>
-          <span class="fr"><$= data.pageEvidenceIndex === '1' ? data.lst[i].reason || '' : '交易成功'$></span>
+          <span class="fr"><$= data.pageEvidenceIndex === '1' ? data.lst[i].reason || '' : '<%=lang.text('thirdH5.transactionSuccessful')%>'$></span>
         </div>
         <div class="item-op clearfix">
           <div class="fl op-append-file" data-id="<$= data.lst[i].id$>">
@@ -55,12 +55,12 @@
           <div class="fr">
           <$if (data.pageEvidenceIndex === '1') {$>
             <button class="btn btn-primary-gradient third_app_evidence_file_btn active" data-id="<$= data.lst[i].id$>">
-              上传凭证
+              <%=lang.text('thirdH5.uploadVoucher')%>
               <input type="file" name="file" accept="image/*" data-id="<$= data.lst[i].id$>" data-action="0" />
             </button>
-            <button class="btn btn-info third_app_evidence_submit_btn" data-id="<$= data.lst[i].id$>">提交审核</button>
+            <button class="btn btn-info third_app_evidence_submit_btn" data-id="<$= data.lst[i].id$>"><%=lang.text('thirdH5.submitAudition')%></button>
           <$} else if (data.pageEvidenceIndex === '2') {$>
-            <button class="btn btn-info third_app_evidence_cancel_btn active" data-id="<$= data.lst[i].id$>">撤销</button>
+            <button class="btn btn-info third_app_evidence_cancel_btn active" data-id="<$= data.lst[i].id$>"><%=lang.text('thirdH5.revocation')%></button>
           <$}$>
           </div>
         </div>

@@ -14,7 +14,7 @@
 <script id="template_deposit_type" type="text/html">
   <h3 class="title">
     <span><$= data.title$></span>
-    <span class="cancel third_app_template_cancel">取消</span>
+    <span class="cancel third_app_template_cancel"><%=lang.text('thirdH5.cancel')%></span>
   </h3>
   <ul class="content">
     <$ for(var i=0;i<data.lst.length;i++) {$>
@@ -36,20 +36,20 @@
 <script id="template_deposit_account" type="text/html">
   <h3 class="title">
     <span><$= data.title$></span>
-    <span class="cancel third_app_template_cancel">取消</span>
+    <span class="cancel third_app_template_cancel"><%=lang.text('thirdH5.cancel')%></span>
   </h3>
   <ul class="content">
-    <li class="clearfix deposit_template_item account_item <$= data.currentAccount == 'wallet' ? 'active' : ''$>" data-type="<$= data.type$>" data-account="wallet" data-name="钱包" data-tag="" data-amount="<$= data.walletBalance || '0.00'$>">
+    <li class="clearfix deposit_template_item account_item <$= data.currentAccount == 'wallet' ? 'active' : ''$>" data-type="<$= data.type$>" data-account="wallet" data-name="<%=lang.text('thirdH5.wallet')%>" data-tag="" data-amount="<$= data.walletBalance || '0.00'$>">
       <div class="item-icon"><span></span></div>
       <div class="item-info">
         <p class="name">
-          钱包
+          <%=lang.text('thirdH5.wallet')%>
         </p>
-        <p class="desc">钱包余额：$<$= data.walletBalance || '0.00'$></p>
+        <p class="desc"><%=lang.text('thirdH5.walletBalanceM')%>$<$= data.walletBalance || '0.00'$></p>
       </div>
     </li>
   </ul>
-  <h4 class="sub_title">交易账户</h4>
+  <h4 class="sub_title"><%=lang.text('thirdH5.tradingAccount')%></h4>
   <ul class="content account_content">
     <$ for(var i=0;i<data.lst.length;i++) {$>
       <li class="clearfix deposit_template_item account_item <$= data.lst[i].mt4_id == data.currentAccount ? 'active' : ''$>" data-type="<$= data.type$>" data-account="<$= data.lst[i].mt4_id$>" data-name="<$= data.lst[i].account_name$>" data-tag="<$= data.tradeAccountType[data.lst[i].account_type] || ''$>" data-amount="<$= data.lst[i].balance || '0.00'$>">
@@ -59,7 +59,7 @@
             <$= data.lst[i].account_name$>
             <span><$= data.tradeAccountType[data.lst[i].account_type] || ''$></span>
           </p>
-          <p class="desc">账户余额：$<$= data.lst[i].balance || '0.00'$></p>
+          <p class="desc"><%=lang.text('thirdH5.accountBalanceM')%>$<$= data.lst[i].balance || '0.00'$></p>
         </div>
       </li>
     <$}$>
@@ -67,50 +67,50 @@
 </script>
 <script id="template_deposit_upload_evidence" type="text/html">
   <h3 class="title">
-    <span><$= data.title || '提示'$></span>
+    <span><$= data.title || '<%=lang.text('thirdH5.notice')%>'$></span>
     <span class="cancel third_app_template_cancel">×</span>
   </h3>
   <div class="detail">
     <p class="tip"><$= data.tip || ''$></p>
     <div class="btn_wrapper" id="third_app_deposit_evidence_btn">
       <button class="btn btn-primary-gradient" data-action="evidence"><$= data.btnMsg$></button>
-      <button class="btn btn-info" data-action="other">选择其他支付方式</button>
+      <button class="btn btn-info" data-action="other"><%=lang.text('thirdH5.chooseOtherPayment')%></button>
     </div>
   </div>
 </script>
 <script id="template_deposit_cse_wallet" type="text/html">
   <h3 class="title">
-    <span>是否有CSE账户？</span>
+    <span><%=lang.text('thirdH5.cseAccount')%></span>
     <span class="cancel third_app_template_cancel">×</span>
   </h3>
   <div class="detail">
     <p class="sub-tit" style="padding-top: 20px;"><$= data.title$></p>
     <p class="tip" style="font-size: 12px;"><$= data.content || ''$><br><$= data.notice || ''$></p>
     <div class="btn_wrapper" id="third_app_deposit_cse_btn">
-      <button class="btn btn-primary-gradient">是</button>
-      <button class="btn btn-info" data-action="<$= data.link$>">否</button>
+      <button class="btn btn-primary-gradient"><%=lang.text('thirdH5.yes')%></button>
+      <button class="btn btn-info" data-action="<$= data.link$>"><%=lang.text('thirdH5.no')%></button>
     </div>
   </div>
 </script>
 <script id="template_asset_confirm" type="text/html">
   <h3 class="title text-center">
-    <span><$= data.title || '提示'$></span>
-    <span class="cancel third_app_template_cancel">取消</span>
+    <span><$= data.title || '<%=lang.text('thirdH5.notice')%>'$></span>
+    <span class="cancel third_app_template_cancel"><%=lang.text('thirdH5.cancel')%></span>
   </h3>
   <div class="content confirm_content">
     <h3 class="common_confirm_amount"><code><$= data.currencySymbol$></code><$= data.amountTotal || '0.00'$></h3>
-    <p class="common_confirm_rate">1美元 = <$= data.rate$><$= data.currencyName$></p>
+    <p class="common_confirm_rate">1$ = <$= data.rate$><$= data.currencyName$></p>
     <p class="common_confirm_item clearfix">
-      <span class="tip">充值金额</span>
+      <span class="tip"><%=lang.text('thirdH5.depositAmountJ')%></span>
       <span class="num"><code>$</code><$= data.amountDollar || '0.00'$></span>
     </p>
     <p class="common_confirm_item clearfix">
-      <span class="tip">折合<$= data.currencyName$>约</span>
+      <span class="tip"><%=lang.text('thirdH5.equivalent')%><$= data.currencyName$><%=lang.text('thirdH5.about')%></span>
       <span class="num"><code><$= data.currencySymbol$></code><$= data.amountCur || '0.00'$></span>
     </p>
     <$if (data.type === 'deposit') {$>
       <p class="common_confirm_item clearfix">
-        <span class="tip">手续费</span>
+        <span class="tip"><%=lang.text('thirdH5.commission')%></span>
         <span class="num"><code><$= data.currencySymbol$></code><$= data.isFee ? data.amountFee : '0.00'$></span>
       </p>
     <$}$>
@@ -124,10 +124,10 @@
     </p>
     <div class="common_confirm_btn_wrapper">
       <$if (data.type === 'deposit') {$>
-        <button class="btn btn-primary-gradient" id="deposit_submit_btn">确认</button>
+        <button class="btn btn-primary-gradient" id="deposit_submit_btn"><%=lang.text('thirdH5.confirm')%></button>
       <$}$>
       <$if (data.type === 'withdraw') {$>
-        <button class="btn btn-primary-gradient" id="withdraw_submit_btn">确认</button>
+        <button class="btn btn-primary-gradient" id="withdraw_submit_btn"><%=lang.text('thirdH5.confirm')%></button>
       <$}$>
     </div>
   </div>
@@ -135,8 +135,8 @@
 <!-- 添加银行卡 -->
 <script id="template_withdraw_bank_list" type="text/html">
   <h3 class="title">
-    <span>银行账户</span>
-    <span class="cancel third_app_template_cancel">取消</span>
+    <span><%=lang.text('thirdH5.bankAccount')%></span>
+    <span class="cancel third_app_template_cancel"><%=lang.text('thirdH5.cancel')%></span>
   </h3>
   <ul class="content bank_content">
     <$ for(var i=0;i<data.lst.length;i++) {$>
@@ -148,22 +148,22 @@
           </p>
           <p class="desc col"><$= data.lst[i].bank_name || ''$></p>
         </div>
-        <span class="del third_app_template_del_bank" data-id="<$= data.lst[i].id$>" data-type="<$= data.type$>">删除</span>
+        <span class="del third_app_template_del_bank" data-id="<$= data.lst[i].id$>" data-type="<$= data.type$>"><%=lang.text('thirdH5.delete')%></span>
       </li>
     <$}$>
     <$ if (!data.lst.length) {$>
-      <li class="text-center">暂未添加银行卡</li>
+      <li class="text-center"><%=lang.text('thirdH5.noBankCard')%></li>
     <$}$>
   </ul>
   <div class="btn-wrapper third_app_template_btn">
-    <button class="btn btn-primary-gradient third_app_add_card" data-type="<$= data.type$>">添加银行卡</button>
+    <button class="btn btn-primary-gradient third_app_add_card" data-type="<$= data.type$>"><%=lang.text('thirdH5.addBankCards')%></button>
   </div>
 </script>
 <!-- 添加第三方账户 -->
 <script id="template_withdraw_third_list" type="text/html">
   <h3 class="title">
-    <span>第三方账户</span>
-    <span class="cancel third_app_template_cancel">取消</span>
+    <span><%=lang.text('thirdH5.thirdPartyAccount')%></span>
+    <span class="cancel third_app_template_cancel"><%=lang.text('thirdH5.cancel')%></span>
   </h3>
   <ul class="content bank_content">
     <$ for(var i=0;i<data.lst.records.length;i++) {$>
@@ -175,14 +175,14 @@
           </p>
           <p class="desc col"><$= data.lst.records[i].platform || ''$></p>
         </div>
-        <span class="del third_app_template_del_bank" data-id="<$= data.lst.records[i].id$>" data-type="<$= data.type$>">删除</span>
+        <span class="del third_app_template_del_bank" data-id="<$= data.lst.records[i].id$>" data-type="<$= data.type$>"><%=lang.text('thirdH5.delete')%></span>
       </li>
     <$}$>
     <$ if (!data.lst.records.length) {$>
-      <li class="text-center">暂未添加第三方账户</li>
+      <li class="text-center"><%=lang.text('thirdH5.noThirdParty')%></li>
     <$}$>
   </ul>
   <div class="btn-wrapper third_app_template_btn">
-    <button class="btn btn-primary-gradient third_app_add_card" data-type="<$= data.type$>">添加第三方账户</button>
+    <button class="btn btn-primary-gradient third_app_add_card" data-type="<$= data.type$>"><%=lang.text('thirdH5.addingThirdParty')%></button>
   </div>
 </script>

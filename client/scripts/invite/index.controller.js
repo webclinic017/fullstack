@@ -73,7 +73,7 @@
             if (document.execCommand("Copy")) {
                 console.log("已复制到剪贴板");
             } else {
-                consoel.log("浏览器不支持复制到剪贴板");
+                console.log("浏览器不支持复制到剪贴板");
             }
             
         }

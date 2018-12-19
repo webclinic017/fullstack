@@ -4240,13 +4240,13 @@
                     telegraphicTransferTip8_1: {
                         zh: "如您有疑问，请",
                         en: "If you have any questions, please ",
-                        vi: "Nếu bạn có bất kỳ câu hỏi nào, Vui lòng",
+                        vi: "Nếu bạn có bất kỳ câu hỏi nào, Vui lòng ",
                         "zh-Hant": "如您有疑問，請"
                     },
                     telegraphicTransferTip8_2: {
                         zh: "点击此处",
                         en: "click here ",
-                        vi: "nhấp vào đây",
+                        vi: "nhấp vào đây ",
                         "zh-Hant": "點擊此處"
                     },
                     telegraphicTransferTip8_3: {
@@ -6758,14 +6758,14 @@
                         "zh-Hant":"（證件過期）"
                     }
                 },
-                imgPath: {
-                    thirdLogin: {
-                        zh:"/white_label/third/third_deposit_bg.png",
-                        en:"/white_label/third/third_deposit_bg.png",
-                        vi:"/white_label/third/third_deposit_bg.png",
-                        "zh-Hant":"/white_label/third/third_deposit_bg.png"
-                    }
-                },
+                // imgPath: {
+                //     thirdLogin: {
+                //         zh:"/white_label/third/third_deposit_bg.png",
+                //         en:"/white_label/third/third_deposit_bg.png",
+                //         vi:"/white_label/third/third_deposit_bg.png",
+                //         "zh-Hant":"/white_label/third/third_deposit_bg.png"
+                //     }
+                // },
                 noMetNeed:{
                     zh:"未达成",
                     en:"unfinished",

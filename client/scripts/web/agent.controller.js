@@ -66,6 +66,20 @@
                 };
                 return;
             }
+            if ($scope.becomeAgent.phone && !(validator.regType.phone.reg.test($scope.becomeAgent.phone))) {
+                $scope.error = {
+                    is_succ: true,
+                    message: validator.regType.phone.tip
+                };
+                return;
+            }
+            if ($scope.becomeAgent.email && !(validator.regType.email.reg.test($scope.becomeAgent.email))) {
+                $scope.error = {
+                    is_succ: true,
+                    message: validator.regType.email.tip
+                };
+                return;
+            }
             $scope.loading = true;
             market.checkPhone({
                 phone: $scope.becomeAgent.phone,

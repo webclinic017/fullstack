@@ -28,11 +28,11 @@ $("#third_app_bank_btn").on("tap", function () {
   var platform = $(".third_app_bank__item select[name=platform]").val();
   var account = $(".third_app_bank__item input[name=account]").val();
   if (!platform) {
-    openMessageMdl('请完善第三方账户信息');
+    openMessageMdl(thirdH5.completeInfo);
     return false;
   }
   if (!account) {
-    openMessageMdl('请填写账号');
+    openMessageMdl(thirdH5.fillAccount);
     return false;
   }
   // console.log(account, platform);
@@ -44,7 +44,7 @@ $("#third_app_bank_btn").on("tap", function () {
     closeAllMdl();
     if (!data) return;
     if (data.is_succ) {
-      openMessageMdl('添加成功');
+      openMessageMdl(thirdH5.addSuccess);
       setTimeout(function () {
         // console.log('backPrev');
         // openThirdNative({

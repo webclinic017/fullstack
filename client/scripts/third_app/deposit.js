@@ -32,15 +32,15 @@ var eleDeposit = {
 };
 var depositTypeDetail = {
   bank: {
-    text: '网银支付规则',
+    text: thirdH5.paymentRule,
     url: window.location.origin + '/m/third/bank_rule'
   },
   cse_wallet: {
-    text: '第三方充值教程',
+    text: thirdH5.thirdParty,
     url: window.location.origin + '/third_usage'
   },
   transfer: {
-    text: '汇款详情',
+    text: thirdH5.detailsRemittance,
     url: window.location.origin + '/m/third/transfer'
   },
 };
@@ -177,7 +177,7 @@ function submitDeposit () {
 $(eleDeposit.payAccountBtn).on("tap", function (e) {
   openChangeAccountMdl({
     type: 'deposit',
-    title: '充值到',
+    title: thirdH5.rechargeTo,
     currentAccount: depositAccount
   });
   return false;
@@ -312,7 +312,7 @@ function getDepositPlatform() {
 function openChangeDepositTypeMdl () {
   var depositTemplate = {
     data: {
-      title: '支付方式',
+      title: thirdH5.depositOptionsJ,
       depositType: depositType,
       isToWallet: depositAccount === 'wallet' ? true : false,
       lst: depositTypeLst
@@ -328,7 +328,7 @@ function changeDepositType (cType) {
   var desc = '', placeholder = '';
   depositType = cType;
   if (!cType) {
-    $(eleDeposit.payTypeName).html('请选择');
+    $(eleDeposit.payTypeName).html(thirdH5.pleaseSelect);
     $(eleDeposit.payTypeTip).html(desc);
     $(eleDeposit.payDepositAmount).attr("placeholder", placeholder);
     setDepositBtnStatus();
@@ -337,16 +337,16 @@ function changeDepositType (cType) {
   deoisitCurrency = selectKeyFromType('currency')[0];
   //设置入金金额范围
   if (selectKeyFromType('min') > 0 && selectKeyFromType('max') > 0) {
-    placeholder = selectKeyFromType('min')+"-"+selectKeyFromType('max')+"美元";
+    placeholder = selectKeyFromType('min')+"-"+selectKeyFromType('max')+"$";
   } else if (selectKeyFromType('min') > 0) {
-    placeholder = "最低"+selectKeyFromType('min')+"美元";
+    placeholder = thirdH5.minimum+selectKeyFromType('min')+"$";
   } else if (selectKeyFromType('max') > 0) {
-    placeholder = "最高"+selectKeyFromType('max')+"美元";
+    placeholder = thirdH5.highest+selectKeyFromType('max')+"$";
   }
   $(eleDeposit.payDepositAmount).attr("placeholder", placeholder);
   //支付方式name&tip
   if (depositType === 'wallet') {
-    desc = '当前钱包余额：$'+walletBalance;
+    desc = thirdH5.walletBalanceM + '$'+walletBalance;
   } else {
     desc = selectKeyFromType('describe');
   }
@@ -397,7 +397,7 @@ function changeDepositType (cType) {
     var depositTemplate = {
       data: {
         tip: selectKeyFromType('evidence_desc'),
-        btnMsg: selectKeyFromType('evidence_status') === 1 ? '上传凭证' : '查看凭证'
+        btnMsg: selectKeyFromType('evidence_status') === 1 ? thirdH5.uploadVoucher : thirdH5.viewVoucher
       }
     };
     var html=bt('template_deposit_upload_evidence',depositTemplate);
