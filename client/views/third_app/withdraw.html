@@ -50,3 +50,24 @@
   </li>
 <$}$>
 </script>
+<!-- 为银行卡绑定手机号 -->
+<script id="template_withdraw_bind_bank_phone" type="text/html">
+  <h3 class="title">
+    <span><%=lang.text('thirdH5.notice')%></span>
+    <span class="cancel third_app_template_cancel">×</span>
+  </h3>
+  <div class="content">
+    <p class="bind_bank_phone_tit"><%=lang.text('thirdH5.bindBankPhoneTip')%></p>
+    <p class="bind_bank_phone_card">
+      <span class="name"><$= data.bankName$></span>
+      <span><$= data.bankCard$></span>
+    </p>
+    <div class="bind_bank_phone_info">
+      <p class=""><%=lang.text('thirdH5.bindBankPhoneTip2')%></p>
+      <input type="number" class="form-control" autofocus name="" placeholder="" id="bind_bank_phone_card">
+    </div>
+    <div class="btn-wrapper third_app_template_btn">
+      <button class="btn btn-primary-gradient" id="bind_bank_phone_btn"><%=lang.text('thirdH5.confirm')%></button>
+    </div>
+  </div>
+</script>

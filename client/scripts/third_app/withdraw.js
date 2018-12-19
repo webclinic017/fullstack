@@ -2,6 +2,7 @@ var withdrawLimit = true;  //出金限制 false 不限制, true 限制
 var withdrawTypeLst = {};  //提现到列表
 var withdrawAccount; //当前选择提现账号 交易账户为mt4 ID，零钱包设置为wallet
 var withdrawType;   //当前选择提现到帐号
+var withdrawBankList;   //当前选择提现到银行卡列表
 var withdrawBankId;   //当前选择提现到银行卡ID
 var withdrawBtnStatus = false; //提现按钮状态
 var canWithdrawAmount = 0; //可提现金额
@@ -46,6 +47,9 @@ $(document).on("tap", eleWithdraw.payWithdrawSubmitBtn, function () {
 });
 
 function confirmWithdraw () {
+  if (withdrawType === 'bank_account') {
+    if(!checkCardPhone(withdrawBankId)){ return }
+  }
   var amount = Number($(eleWithdraw.payWithdrawAmount).val()).toFixed(2);
   var amountCur = (amount*selectKeyFromTypeForWithdraw('currency')[0].rate_out).toFixed(2);
   var depositTemplate = {
@@ -229,6 +233,54 @@ function checkWithdrawLimit () {
   });
 }
 
+// 检查银行卡绑定情况
+function checkCardPhone(card) {
+  var cardInfo = null;
+  // console.log(card, withdrawBankList);
+  $.each(withdrawBankList, function (index, value) {
+    if (card == value.id) {
+      cardInfo = value;
+    }
+  });
+  if (cardInfo.country_code === 'CN' && !cardInfo.phone) {
+      var html=bt('template_withdraw_bind_bank_phone', {
+        data: {
+          bankName: cardInfo.bank_name,
+          bankCard: cardInfo.card_no
+        }
+      });
+      $("#third_app_bottom_template").html(html);
+      openBottomMdl();
+      return false;
+  } else {
+      return true
+  }
+}
+$(document).on('tap', '#bind_bank_phone_card', function () {
+  $(this).focus();
+});
+$(document).on('tap', '#bind_bank_phone_btn', function () {
+  // console.log($('#bind_bank_phone_card').val());
+  var val = $('#bind_bank_phone_card').val();
+  if (!val) return;
+  closeAllMdl();
+  openLoadingMdl(true);
+  publicRequest('bindCardPhone', 'POST', {
+    id: withdrawBankId,
+    phone: val
+  }).then(function (data) {
+    closeAllMdl();
+    // console.log(data);
+    if (!data) return;
+    if (data.is_succ) {
+      openMessageMdl(thirdH5.addSuccess);
+      getBankLst(withdrawType, true);
+    } else {
+      openMessageMdl(data.message);
+    }
+  });
+});
+
 /*
  * 设置提现按钮状态
  * 需要调用的地方
@@ -293,7 +345,7 @@ function addWithdrawAccount () {
   setWithdrawBtnStatus();
 }
 //获取银行列表
-function getBankLst (withdrawType) {
+function getBankLst (withdrawType, notInsertTemp) {
   var withdrawType = withdrawType || '';
   var different = {
     'bank_account': {
@@ -319,7 +371,11 @@ function getBankLst (withdrawType) {
           lst: data.data
         }
       };
+      if (withdrawType === 'bank_account') {
+        withdrawBankList = data.data;
+      }
 
+      if (notInsertTemp) return;
       var html=bt(different[withdrawType].id, bankLstTemplate);
       $("#third_app_bottom_template").html(html);
       openBottomMdl();
