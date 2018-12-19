@@ -2,153 +2,153 @@ module.exports = {
     thirdH5: {
         rechargeTo: {
             zh: "充值到",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Deposit to",
+            vi: "Nạp tiền",
+            "zh-Hant": "充值到"
         },
         rmb: {
             zh: "人民币",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "RMB",
+            vi: "RMB",
+            "zh-Hant": "人民幣"
         },
         confirmRecharge: {
             zh: "确认充值",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Confirm",
+            vi: "Xác nhận",
+            "zh-Hant": "確認充值"
         },
         telegraphicCharges: {
             zh: "电汇费用",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Telegraphic transfer fees",
+            vi: "Phí chuyển tiền điện báo",
+            "zh-Hant": "電匯費用"
         },
         changePutInto: {
-            zh: "零钱已划入交易账户",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            zh: "已划入交易账户",
+            en: "Transfer to trade account.",
+            vi: "Chuyển tiền đến tài khoản giao dịch.",
+            "zh-Hant": "已劃入交易帳戶"
         },
         detailsRemittance: {
             zh: "汇款详情",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Remittance details",
+            vi: "Chi tiết chuyển tiền",
+            "zh-Hant": "匯款詳情"
         },
         viewVoucher: {
             zh: "查看凭证",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Vouchers",
+            vi: "Phiếu giảm giá",
+            "zh-Hant": "查看憑證"
         },
         minimum: {
             zh: "最低",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Minimum",
+            vi: "Ít nhất",
+            "zh-Hant": "最低"
         },
         highest: {
             zh: "最高",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Maximum",
+            vi: "Nhiều nhất",
+            "zh-Hant": "最高"
         },
         unsuccessful: {
             zh: "撤销成功",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Successful",
+            vi: "Thành công",
+            "zh-Hant": "撤銷成功"
         },
         deleteSuccessful: {
             zh: "删除成功",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Successful",
+            vi: "Thành công",
+            "zh-Hant": "删除成功"
         },
         account: {
             zh: "账户",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Account",
+            vi: "Tài khoản",
+            "zh-Hant": "帳戶"
         },
         enterNumPassword: {
             zh: "请输入帐号和密码",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Please enter your account number and password.",
+            vi: "Vui lòng nhập số tài khoản và mật khẩu.",
+            "zh-Hant": "請輸入帳號和密碼"
         },
         addSuccess: {
             zh: "添加成功",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Successful",
+            vi: "Thành công",
+            "zh-Hant": "添加成功"
         },
         bindAccountBind: {
-            zh: "请绑定认证用户本人的银行账户，当前不支持信用卡提现，请绑定储蓄卡",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            zh: "请绑定认证用户本人的银行账户或储蓄卡，当前不支持信用卡提现",
+            en: "Please bind your own bank card, Tigerwit don’t support credit card withdrawal.",
+            vi: "Vui lòng ràng buộc thẻ ngân hàng của riêng bạn, TigerWit không hỗ trợ rút tiền qua thẻ tín dụng.",
+            "zh-Hant": "請綁定認證用戶本人的銀行賬戶或儲蓄卡，當前不支持信用卡提現"
         },
         bankAccount: {
             zh: "银行账户",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Bank account",
+            vi: "Tài khoản ngân hàng",
+            "zh-Hant": "銀行帳戶"
         },
         noBankCard: {
             zh: "暂未添加银行卡",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "No bank card added",
+            vi: "Không thẻ ngân hàng nào được thêm",
+            "zh-Hant": "暫未添加銀行卡"
         },
         noThirdParty: {
             zh: "暂未添加第三方账户",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "No third-party account",
+            vi: "Không có tài khoản phụ",
+            "zh-Hant": "暫未添加協力廠商帳戶"
         },
         addingThirdParty : {
             zh: "添加第三方账户",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Add third-party account",
+            vi: "Thêm tài khoản phụ",
+            "zh-Hant": "添加協力廠商帳戶"
         },
         minimum$20: {
             zh: "最低20美元",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Min. $20",
+            vi: "Ít nhất $20",
+            "zh-Hant": "最低20美元"
         },
         balance: {
-            zh: "余额：",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            zh: "账户余额：",
+            en: "Account balance:",
+            vi: "Số dư tài khoản:",
+            "zh-Hant": "賬戶余額："
         },
         confirmationWithdrawals: {
             zh: "确认提现",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "Confirm",
+            vi: "Xác nhận",
+            "zh-Hant": "確認提現"
         },
         putIntoWallet: {
-            zh: "零钱已划入钱包",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            zh: "已划入钱包",
+            en: "Transfer to wallet.",
+            vi: "Chuyển vào ví.",
+            "zh-Hant": "已劃入錢包"
         },
         applicationPayment: {
             zh: "出金申请已提交",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "The application has been submitted.",
+            vi: "Chứng từ đã được nộp.",
+            "zh-Hant": "出金申請已提交"
         },
         twoWorkingDays: {
             zh: "我们会在两个工作日内处理完毕",
-            en: "",
-            vi: "",
-            "zh-Hant": ""
+            en: "The application will be processed within two working days.",
+            vi: "Yêu cầu  sẽ được xử lý trong vòng hai ngày làm việc.",
+            "zh-Hant": "我們會在兩個工作日內處理完畢"
         },
 
         copySuccess: {

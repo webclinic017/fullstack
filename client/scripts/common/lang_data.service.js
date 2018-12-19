@@ -6758,14 +6758,14 @@
                         "zh-Hant":"（證件過期）"
                     }
                 },
-                imgPath: {
-                    thirdLogin: {
-                        zh:"/white_label/third/third_deposit_bg.png",
-                        en:"/white_label/third/third_deposit_bg.png",
-                        vi:"/white_label/third/third_deposit_bg.png",
-                        "zh-Hant":"/white_label/third/third_deposit_bg.png"
-                    }
-                },
+                // imgPath: {
+                //     thirdLogin: {
+                //         zh:"/white_label/third/third_deposit_bg.png",
+                //         en:"/white_label/third/third_deposit_bg.png",
+                //         vi:"/white_label/third/third_deposit_bg.png",
+                //         "zh-Hant":"/white_label/third/third_deposit_bg.png"
+                //     }
+                // },
                 noMetNeed:{
                     zh:"未达成",
                     en:"unfinished",
