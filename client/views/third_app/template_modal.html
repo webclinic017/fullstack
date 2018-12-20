@@ -101,7 +101,12 @@
     <h3 class="common_confirm_amount"><code><$= data.currencySymbol$></code><$= data.amountTotal || '0.00'$></h3>
     <p class="common_confirm_rate">1$ = <$= data.rate$><$= data.currencyName$></p>
     <p class="common_confirm_item clearfix">
-      <span class="tip"><%=lang.text('thirdH5.depositAmountJ')%></span>
+      <$if (data.type === 'deposit') {$>
+        <span class="tip"><%=lang.text('thirdH5.depositAmountJ')%></span>
+      <$}$>
+      <$if (data.type === 'withdraw') {$>
+        <span class="tip"><%=lang.text('thirdH5.withdrawalAmountJ')%></span>
+      <$}$>
       <span class="num"><code>$</code><$= data.amountDollar || '0.00'$></span>
     </p>
     <p class="common_confirm_item clearfix">

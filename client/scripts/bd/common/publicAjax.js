@@ -100,7 +100,8 @@
         getThirdPlatforms: origin + '/third/platforms', //get
         setThirdBindAccount: origin + '/third/accounts/bind',   //post
         getThirdAccountList: origin + '/third/accounts/lists',  //get
-        destroyThirdAccount: origin + '/third/accounts/destroy'  //post
+        destroyThirdAccount: origin + '/third/accounts/destroy',  //post
+        bindCardPhone: origin + '/user/bank_card/phone'  //post
     };
 
     w.publicRequest = publicRequest;
