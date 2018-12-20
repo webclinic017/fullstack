@@ -168,7 +168,7 @@ $(document).ready(function () {
                 } else {
                     // console.log(countryList.data);
                     if (countryList.data) {
-                        if (lang.curLang() != 'en') {
+                        if (lang.curLang() == 'cn') {
                             $(".m_third_userinfo select").find("option[value=CN]").first().attr("selected", true);
                             $(ele.userinfoCountry).val('中国');
                             $(ele.userinfoCountry).attr("data-country", "CN");
@@ -178,7 +178,7 @@ $(document).ready(function () {
                     }
                     laydate.render({
                         elem: '#birth',
-                        lang: lang.curLang() === 'en' ? 'en' : 'cn'
+                        lang: lang.curLang() !== 'cn' ? 'en' : 'cn'
                     });
                 }
                 $(ele.wrapper).addClass("active");
@@ -208,16 +208,12 @@ $(document).ready(function () {
                     if (userCacheInfo.world_code) {
                         $.each(countryList.data, function (index, value) {
                             if (userCacheInfo.world_code == value.code) {
-                                if (lang.curLang() != 'en') {
-                                    $(ele.userinfoCountry).val(value.name_cn);
-                                } else {
-                                    $(ele.userinfoCountry).val(value.name_en);
-                                }
+                                $(ele.userinfoCountry).val(value.name);
                             }
                         });
                         $(".m_third_userinfo select").find("option[value="+userCacheInfo.world_code+"]").first().attr("selected", true);
                         $(ele.userinfoCountry).attr("data-country", userCacheInfo.world_code);
-                    } else if (lang.curLang() != 'en') {
+                    } else if (lang.curLang() == 'cn') {
                         $(".m_third_userinfo select").find("option[value=CN]").first().attr("selected", true);
                         $(ele.userinfoCountry).val('中国');
                         $(ele.userinfoCountry).attr("data-country", "CN");
@@ -235,7 +231,7 @@ $(document).ready(function () {
                 $(ele.usernameIdNo).val(userCacheInfo.id_no);
                 laydate.render({
                     elem: '#birth',
-                    lang: lang.curLang() === 'en' ? 'en' : 'cn',
+                    lang: lang.curLang() !== 'cn' ? 'en' : 'cn',
                     value: userCacheInfo.birth ? userCacheInfo.birth.substring(0,4)+'-'+userCacheInfo.birth.substring(4,6)+'-'+userCacheInfo.birth.substring(6,8) : ''
                 });
                 //card
@@ -476,16 +472,12 @@ $(document).ready(function () {
                 if (userCacheInfo.world_code) {
                     $.each(countryList.data, function (index, value) {
                         if (userCacheInfo.world_code == value.code) {
-                            if (lang.curLang() != 'en') {
-                                $(ele.userinfoCountry).val(value.name_cn);
-                            } else {
-                                $(ele.userinfoCountry).val(value.name_en);
-                            }
+                            $(ele.userinfoCountry).val(value.name);
                         }
                     });
                     $(".m_third_userinfo select").find("option[value="+userCacheInfo.world_code+"]").first().attr("selected", true);
                     $(ele.userinfoCountry).attr("data-country", userCacheInfo.world_code);
-                } else if (lang.curLang() != 'en') {
+                } else if (lang.curLang() == 'cn') {
                     $(".m_third_userinfo select").find("option[value=CN]").first().attr("selected", true);
                     $(ele.userinfoCountry).val('中国');
                     $(ele.userinfoCountry).attr("data-country", "CN");
@@ -555,6 +547,7 @@ $(document).ready(function () {
     });
     // 初始化证件类型
     function initCardTypeInfo () {
+        console.log(cardTypeListTemp.cn);
         cardTypeList = {
             data: cardCountry === 'CN' ? cardTypeListTemp.cn : cardTypeListTemp.en
         };
