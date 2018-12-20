@@ -134,11 +134,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.1.0",
-                        description: "Optimise onboarding process\nAdded TC trading strategies\nAdd Multi account management function Allow transfer of funds between sub-accounts Fingerprint unlock feature optimised\nUpdated UI of Wallet and trading history\nAdd live chat function\nFix bugs",
-                        updated_description: "Version 2.1.0 available",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.1.0.apk",
-                        force_update : true
+                        version_name : "V2.1.1",
+                        description: "Fix bugs",
+                        updated_description: "Version 2.1.1 available",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.1.1.apk",
+                        force_update : false
                     }
                 }
             },
@@ -153,11 +153,11 @@
                 },
                 android: {
                     app_info: {
-                        version_name : "V2.1.0",
-                        description: "Optimise onboarding process\nAdded TC trading strategies\nAdd Multi account management function Allow transfer of funds between sub-accounts Fingerprint unlock feature optimised\nUpdated UI of Wallet and trading history\nAdd live chat function\nFix bugs",
-                        updated_description: "Version 2.1.0 available",
-                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.1.0.apk",
-                        force_update : true
+                        version_name : "V2.1.1",
+                        description: "Fix bugs",
+                        updated_description: "Version 2.1.1 available",
+                        url : "https://static.tigerwitfx.com/downloads/apk/tigerwit_uk_v2.1.1.apk",
+                        force_update : false
                     }
                 } 
             }
