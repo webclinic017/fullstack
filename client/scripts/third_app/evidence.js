@@ -13,12 +13,13 @@ $(eleEvidence.payNav).find('span').on('tap', function () {
   return false;
 });
 $(eleEvidence.payEvidenceExample).on('tap', function () {
-  console.log(window.location.origin + '/m/deposit/evidence');
-  openThirdNative({
-    type: "openUrl",
-    title: '凭证示例',
-    url: window.location.origin + '/m/deposit/evidence'
-  });
+  // console.log(window.location.origin + '/m/deposit/evidence');
+  // openThirdNative({
+  //   type: "openUrl",
+  //   title: '凭证示例',
+  //   url: window.location.origin + '/m/deposit/evidence'
+  // });
+  window.location.href = '/m/deposit/evidence';
   return false;
 });
 $(eleEvidence.pageEvidenceDetails).on('change', 'input[name=file]', function (e) {
@@ -120,7 +121,7 @@ function uploadEvidence (id) {
     // console.log(data);
     if (data.is_succ) {
       changeEvidencePageIndex('1');
-      openMessageMdl('提交成功');
+      openMessageMdl(thirdH5.submitSuccess);
     } else {
       openMessageMdl(data.message);
     }
@@ -136,7 +137,7 @@ function cancelEvidence (id) {
     console.log(data);
     if (data.is_succ) {
       changeEvidencePageIndex('2');
-      openMessageMdl('撤销成功');
+      openMessageMdl(thirdH5.unsuccessful);
     } else {
       openMessageMdl(data.message);
     }

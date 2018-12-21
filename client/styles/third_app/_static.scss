@@ -44,11 +44,26 @@
 }
 
 @include b(third_app_bank) {
-  padding: 25px 16px 50px;
+  padding: 65px 16px 50px;
   @include e(title) {
     margin: 0;
     font-size: 26px;
     font-weight: normal;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    padding: 25px 16px 0px;
+    background-color: #fff;
+    z-index: 100;
+    .cancel {
+      font-size: 14px;
+      font-weight: 400;
+      position: absolute;
+      right: 16px;
+      top: 32px;
+      color: #4a90e2;
+    }
   }
   @include e(sub_tit) {
     font-size: 12px;

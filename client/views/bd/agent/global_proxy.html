@@ -72,7 +72,7 @@
             </div>
             <div class="text-center today-data">
                 <div><img src="<%= lang.image('recordForm')%>" alt=""></div>
-                <a ng-if="spread" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient h5-btn mg-tp-20" ng-click="agentPromotion()"><%=lang.text('partner.sendAgent')%></a>
+                <a ng-if="spread" class="btn btn-primary-gradient  h5-btn mg-tp-20" ng-click="agentPromotion()"><%=lang.text('partner.sendAgent')%></a>
             </div>
             <div ng-if="!spread">
                 <div class="text-center">
@@ -146,8 +146,8 @@
                         </div>
                     </form>
                     <div class="btn-wrapper text-center ">
-                        <a class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient h5-btn" ng-show="!loading" ng-click="submitForm()"><%=lang.text('partner.sendAgent')%></a>
-                        <a class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient h5-btn disabled" disabled style="opacity: 0.5;" ng-show="loading"><%=lang.text('partner.sendAgent')%></a>
+                        <a class="btn btn-primary-gradient h5-btn" ng-show="!loading" ng-click="submitForm()"><%=lang.text('partner.sendAgent')%></a>
+                        <a class="btn btn-primary-gradient h5-btn disabled" disabled style="opacity: 0.5;" ng-show="loading"><%=lang.text('partner.sendAgent')%></a>
                         <span class="global_proxy_err_tip" ng-class="{'font-success' : error.success, 'font-warning': !error.success}" ng-show="error.is_succ">{{error.message}}</span>
                     </div>
                 </div>

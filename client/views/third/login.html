@@ -1,16 +1,38 @@
 <div ng-controller="ThirdLoginController" tw-window-height data-min-height="900" data-min-width="1300">
-        <div class="account_login-bg panda" style="height: 100%;">
+        <div class="account_login-bg relative" style="height: 100%;">
+            <div class="account_login__lang">
+                <div class="account_login__switch_lang">
+                    <div class="lang-toggle">
+                        {{ lang.text("footlang") }}
+                        <i class="fa fa-sort-down"></i>
+                    </div>
+                    <ul class="lang-menu">
+                        <li>
+                            <a href="" ng-click="lang.reloadLanguage('en')">English</a>
+                        </li>
+                        <li>
+                            <a href="" ng-click="lang.reloadLanguage('cn')">简体中文</a>
+                        </li>
+                        <li>
+                            <a href="" ng-click="lang.reloadLanguage('vi')">Tiếng Việt</a>
+                        </li>
+                        <li>
+                            <a href="" ng-click="lang.reloadLanguage('zh-Hant')">繁體中文</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div class="account_login_box">
                 <div class="account_login login_pass active">
                     <div class="account_login__pass">
                         <div>
-                            <div class="account_login__title">登录</div>
+                            <div class="account_login__title">{{lang.text('tigerWitID.login.login')}}</div>
                             <form name="loginForm3" class="account_login__form" novalidate>
                                 <div class="account-form-control-wrapper">
                                     <input class="account-form-control"
                                            name="mt4"
                                            type="text"
-                                           placeholder="MT4账号"
+                                           placeholder="{{lang.text('tigerWitID.login.mt4Account')}}"
                                            required
                                            on-enter="login('loginForm3')"
                                            ng-model="account.mt4">
@@ -26,7 +48,7 @@
                                            autocomplete="off"
                                            name="password"
                                            type="password"
-                                           placeholder="密码"
+                                           placeholder="{{lang.text('tigerWitID.login.password')}}"
                                            on-enter="login('loginForm3')"
                                            required
                                            ng-model="account.password">
@@ -35,11 +57,11 @@
                                            autocomplete="off"
                                            name="password"
                                            type="text"
-                                           placeholder="密码"
+                                           placeholder="{{lang.text('tigerWitID.login.password')}}"
                                            on-enter="login('loginForm3')"
                                            required
                                            ng-model="account.password">
-                                    <span class="account-form-control-tip" ng-show="account.password">密码</span>
+                                    <span class="account-form-control-tip" ng-show="account.password">{{lang.text('tigerWitID.login.password')}}</span>
                                     <span class="account_login__close" ng-click="changeLoginStatus('showPassword')">
                                         <i class="fa fa-eye" aria-hidden="true"></i>
                                     </span>
@@ -50,13 +72,13 @@
                                         <span class="account_login__remenber-btn" ng-click="changeLoginStatus('remember')">
                                             <i class="fa fa-square-o" ng-show="!account.remember"></i>
                                             <i class="fa fa-check-square" ng-show="account.remember"></i>
-                                            记住登录状态
+                                            {{lang.text('tigerWitID.login.keepMeLogin')}}
                                         </span>
                                     </div>
                                 </div>
                             </form>
                             <div class="account_login__btn_wrapper text-left">
-                                <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-click="login('loginForm3')">登录</span>
+                                <span class="tw-btn tw-btn-capsule-gradient tw-btn-md" ng-click="login('loginForm3')">{{lang.text('tigerWitID.login.login')}}</span>
                             </div>
                             <!-- <div class="account_login__docs text-left">
                                 *已使用SSL加密技术保护您的网络安全

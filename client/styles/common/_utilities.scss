@@ -553,22 +553,20 @@
 
 // css3垂直居中
 .item-center {
-    display: box !important;  /*（伸缩盒最老版本）*/
-    display: -webkit-box !important;  /* iOS 6-, Safari 3.1-6 */
-    display: -webkit-flex !important; /* Chrome */
-    display: -moz-box !important;     /* Firefox 19 */
-    display: -ms-flexbox !important;   
-    display: flex !important;  /*flex容器*/
+    display: -webkit-box !important;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box !important;     /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox !important;  /* 混合版本语法: IE 10 */
+    display: -webkit-flex !important; /* 新版本语法: Chrome 21+ */
+    display: flex !important;         /* 新版本语法: Opera 12.1, Firefox 22+ */
     @include alignItems(center);
 }
 // 水平两侧对齐
 .space-between{
-    display: box !important;  /*（伸缩盒最老版本）*/
-    display: -webkit-box !important;  /* iOS 6-, Safari 3.1-6 */
-    display: -webkit-flex !important; /* Chrome */
-    display: -moz-box !important;     /* Firefox 19 */
-    display: -ms-flexbox !important;   
-    display: flex;  /*flex容器*/
+    display: -webkit-box !important;  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+    display: -moz-box !important;     /* 老版本语法: Firefox (buggy) */
+    display: -ms-flexbox !important;  /* 混合版本语法: IE 10 */
+    display: -webkit-flex !important; /* 新版本语法: Chrome 21+ */
+    display: flex !important;         /* 新版本语法: Opera 12.1, Firefox 22+ */
     @include justifyContent(space-between);
 }
 .flex1 {
@@ -576,4 +574,7 @@
 }
 .flex0 {
     @include flex(0);
+}
+.cursor_pointer {
+    cursor: pointer;
 }

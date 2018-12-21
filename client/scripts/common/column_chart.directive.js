@@ -8,7 +8,6 @@
 
     function twColumnChart(config, whiteLabel, lang) {
         var col_color = whiteLabel.columnChart;
-        var hostIsCn = ('cn.tigerwit.com,cndemo.tigerwit.com,w.dev.tigerwit.com'.indexOf(location.host)!= -1);
         var noData = config.highchartNoDataOptions;
         var options = {
             chart: {
@@ -157,8 +156,8 @@
                 }
             },
             series: [{
-                color: hostIsCn ? col_color.positive : col_color.negative, /*正值的颜色*/
-                negativeColor: hostIsCn ? col_color.negative : col_color.positive,//负值的颜色
+                color: lang.hostIsCn() ? col_color.positive : col_color.negative, /*正值的颜色*/
+                negativeColor: lang.hostIsCn() ? col_color.negative : col_color.positive,//负值的颜色
                 pointPadding: 0, //数据点之间的距离值
                 groupPadding: 0, //分组之间的距离值
                 borderWidth: 0,

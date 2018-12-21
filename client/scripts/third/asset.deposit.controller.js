@@ -32,15 +32,8 @@
         $scope.openChangeDepTypeMdl = openChangeDepTypeMdl;
         $scope.openCurrency = openCurrency;
         $scope.selcetCurrency = selcetCurrency;
-        $scope.common_acount = {   // 账户
-            type: 'invest'
-        }
-        // 被选中的账号
-        $scope.accountItem = {
-          account_name: '',
-          mt4_id : ''
-        }
-        $scope.$watch('common_acount.type', function(n){
+
+        $scope.$watch('selectWay.type', function(n){
             if(!n) return;
             if(n === 'wallet'){
                 $scope.accountIsWallet = true;
@@ -294,8 +287,8 @@
 
         // 充值  还未完成
         function toDeposit() {
-            $scope.$emit('main.checkAuthenFlow', {
-                ctrlName: 'ThirdDepositController',
+            $scope.$emit('global.checkAuthenFlow', {
+                ctrlName: 'AssetDepositController',
                 callback: function () {
                     var amount = $scope.deposit.amount;
                     if (typeof amount === 'undefined') {
@@ -308,7 +301,7 @@
 
                     function confirmDeposit() {
                         var mt4_id;
-                        if($scope.common_acount.type !== 'wallet'){
+                        if($scope.selectWay.type !== 'wallet'){
                             mt4_id = $scope.accountItem.mt4_id;
                         }
                         $scope.isLoading = true;

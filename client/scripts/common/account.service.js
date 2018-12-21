@@ -38,6 +38,7 @@
             getCities: getCities,
             setBasicInfo: setBasicInfo,
             setBasicInfoNameEn: setBasicInfoNameEn,
+            setBasicInfoName: setBasicInfoName,
             setPwd: setPwd,
             setAvatar: setAvatar,
             setPwdFirst: setPwdFirst,
@@ -64,6 +65,7 @@
             getFunctionSwitch: getFunctionSwitch,
             getIdcard: getIdcard,
             setAgentPromotion: setAgentPromotion,
+            setUploadAddressProve: setUploadAddressProve,
             getEmailPhone: getEmailPhone
         };
         var resolveValue;
@@ -185,7 +187,7 @@
                 user_code: user_code
             });
         }
-
+        // 完善信息
         function updataUserInfo(params) {
             return publicHttp.dealPublicRequest(o.updataUserInfoApi, 'PUT', params)
         }
@@ -465,10 +467,20 @@
 
         /**
          * @name setBasicInfoNameEn
-         * @desc setting 模块设置基本信息
+         * @desc setting 模块设置基本信息英文昵称
          */
         function setBasicInfoNameEn(username) {
             return publicHttp.dealPublicRequest(o.setUserNameEnApi, 'PUT', {
+                username: username,
+            });
+        }
+        
+        /**
+         * @name setBasicInfoName
+         * @desc setting 模块设置基本信息中文昵称
+         */
+        function setBasicInfoName(username) {
+            return publicHttp.dealPublicRequest(o.setUserNameApi, 'PUT', {
                 username: username,
             });
         }
@@ -649,9 +661,13 @@
         function checkAgent(){
             return publicHttp.dealPublicRequest(o.checkAgentApi, 'GET');
         }
-        //获取身份认证信息
+        //真实账户请求获取身份认证信息（更新证件接口）
         function getIdcard(){
             return publicHttp.dealPublicRequest(o.getIdcardApi, 'GET');
+        }
+        // 上传地址证明
+        function setUploadAddressProve(params) {
+            return publicHttp.dealPublicRequest(o.setUploadAddressProveApi, 'post', params);
         }
         //获取邮箱电话等信息
         function getEmailPhone () {

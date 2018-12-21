@@ -326,63 +326,89 @@
         third: {
             fillInfoTip: {
                 zh: '请填写完整信息',
-                en: 'Please fill in the complete information'
+                en: 'Please fill in the complete information',
+                vi: "Hãy điền đầy đủ thông tin",
+                "zh-Hant": "請填寫完整資訊"
             },
             select: {
                 zh: '请选择',
-                en: 'Please Select'
+                en: 'Please Select',
+                vi: "Vui lòng chọn",
+                "zh-Hant": "請選擇"
             },
             uploadCard: {
-                zh: '请上传身份证',
-                en: 'Please upload your passport'
+                zh: '请上传证件',
+                en: 'Please upload your passport',
+                vi: "Xin hãy tải lên tờ",
+                "zh-Hant": "請上傳證件"
             },
             systemTip: {
                 zh: '您当前的手机版本不支持图片上传功能，请升级手机系统或更换手机。',
-                en: 'Your current mobile’s system is not support the image upload function, please update the system or change your mobile.'
+                en: 'Your current mobile’s system is not support the image upload function, please update the system or change your mobile.',
+                vi: "Phiên bản điện thoại di động hiện thời của bạn không hỗ trợ chức năng hình ảnh đã được tải lên, xin nâng cấp hệ thống điện thoại hoặc thay thế điện thoại di động.",
+                "zh-Hant": "您當前的手機版本不支持圖片上傳功能，請陞級手機系統或更換手機。"
             },
             frontCardTip: {
                 zh: "点击上传证件正面",
-                en: "Upload front side"
+                en: "Upload front side",
+                vi: "Lượt tải lên mặt trước tờ",
+                "zh-Hant": "點擊上傳證件正面"
             },
             backCardTip: {
                 zh: "点击上传证件反面",
-                en: "Upload back side"
+                en: "Upload back side",
+                vi: "Lượt tải lên mặt sau tờ",
+                "zh-Hant": "點擊上傳證件反面"
             },
             cardTip: {
                 zh: "上传图片",
-                en: "Upload Image"
+                en: "Upload Image",
+                vi: "Đang tải hình ảnh",
+                "zh-Hant": "上傳圖片"
             },
             third_username8: {
                 zh: "台湾居民来往大陆通行证",
-                en: "Mainland travel permit for Taiwan residents, (MTP)"
+                en: "Mainland travel permit for Taiwan residents, (MTP)",
+                vi: "Giấy phép du lịch đại lục cho cư dân Đài Loan, (MTP)",
+                "zh-Hant": "臺灣居民來往大陸通行證"
             },
             third_username9: {
                 zh: "大陆居民身份证",
-                en: "Chinese ID Card"
+                en: "Chinese ID Card",
+                vi: "Thẻ ID Trung Quốc",
+                "zh-Hant": "大陸居民身份證"
             },
             third_username10: {
                 zh: "港澳居民来往内地通行证",
-                en: "Mainland Travel Permit for Hong Kong and Macao Residents"
+                en: "Mainland Travel Permit for Hong Kong and Macao Residents",
+                vi: "Giấy phép du lịch đại lục cho cư dân Hồng Kông và Macao",
+                "zh-Hant": "港澳居民來往內地通行證"
             },
             third_username11: {
                 zh: "护照",
-                en: "Passport"
+                en: "Passport",
+                vi: "Hộ chiếu",
+                "zh-Hant": "護照"
             },
             third_username12: {
                 zh: "驾驶证",
-                en: "Driver License"
+                en: "Driver License",
+                vi: "Giấy phép Lái Xe",
+                "zh-Hant": "駕駛證"
             },
             third_username13: {
                 zh: "身份证",
-                en: "ID Card"
-            },
+                en: "ID Card",
+                vi: "Thẻ ID",
+                "zh-Hant": "身份證"
+            }
         }
     }
 
     var lang = {
         text: function (moduleName) {
-            var curLang = $.cookie('lang') || 'zh'
-            curLang !== 'en' && (curLang = 'zh')
+            var curLang = $.cookie('lang') || 'cn'
+            curLang = curLang == 'cn' ? 'zh' : curLang;
             var moduleNameInfo = moduleName.split('.'), area = '', name = ""
             if (moduleNameInfo.length == 2) {
                 area = moduleNameInfo[0]
@@ -397,7 +423,7 @@
             if(lang){
                 return $.cookie('lang') == lang
             } else {
-                return $.cookie('lang') || 'zh'
+                return $.cookie('lang') || 'cn'
             }
         }
     }

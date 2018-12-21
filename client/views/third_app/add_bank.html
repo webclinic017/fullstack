@@ -8,50 +8,63 @@
 <!-- endbuild -->
 <% include /common/vendor/h5.utiljs.html %>
 <% include /common/statistic/main.html %>
-
+<script>
+    var thirdH5 = {
+      selectAccountPro: '<%= lang.text("thirdH5.selectAccountPro") %>',
+      enterCardNumber: '<%= lang.text("thirdH5.enterCardNumber") %>',
+      enterBranchBankName: '<%= lang.text("thirdH5.enterBranchBankName") %>',
+      selectAccountCity: '<%= lang.text("thirdH5.selectAccountCity") %>',
+      enterReservedPhoneNumber: '<%= lang.text("thirdH5.enterReservedPhoneNumber") %>',
+      enterBankName: '<%= lang.text("thirdH5.enterBankName") %>',
+      addSuccess: '<%= lang.text("thirdH5.addSuccess") %>',
+    };
+</script>
 <body>
   <div class="third_app_bank">
-    <h3 class="third_app_bank__title">添加银行账户</h3>
-    <p class="third_app_bank__sub_tit">请绑定认证用户本人的银行账户，当前不支持信用卡提现，请绑定储蓄卡</p>
+    <h3 class="third_app_bank__title">
+      <%=lang.text('thirdH5.addBankCards')%>
+      <span class="cancel" id="third_app_bank_cancel"><%=lang.text('thirdH5.cancel')%></span>
+    </h3>
+    <p class="third_app_bank__sub_tit"><%=lang.text('thirdH5.bindAccountBind')%></p>
     <form action="">
       <div class="third_app_bank__item">
-        <p class="name active" data-name="realname">持卡人</p>
+        <p class="name active" data-name="realname"><%=lang.text('thirdH5.name')%></p>
         <input type="text" class="cont" disabled name="realname" placeholder="">
       </div>
       <div class="third_app_bank__item">
-        <p class="name active" data-name="country">银行国家</p>
+        <p class="name active" data-name="country"><%=lang.text('thirdH5.bankCountry')%></p>
         <input type="text" class="cont" disabled name="country" placeholder="">
       </div>
       <div class="third_app_bank__item">
-        <p class="name" data-name="card">卡号</p>
-        <input type="text" class="cont" name="card" placeholder="请填写银行卡号">
+        <p class="name" data-name="card"><%=lang.text('thirdH5.cardNumber')%></p>
+        <input type="text" class="cont" name="card" placeholder="<%=lang.text('thirdH5.enterCardNumber')%>">
       </div>
       <div class="third_app_bank__item">
-        <p class="name" data-name="bank_name">银行名称</p>
-        <input type="text" class="cont" name="bank_name" placeholder="请选择您的银行名称">
+        <p class="name" data-name="bank_name"><%=lang.text('thirdH5.bankName')%></p>
+        <input type="text" class="cont" name="bank_name" placeholder="<%=lang.text('thirdH5.enterBankName')%>">
         <select name="bank_name" id="third_app_bank_bank_name"></select>
       </div>
       <div class="third_app_bank__item">
-        <p class="name" data-name="province">省份</p>
-        <input type="text" class="cont" name="province" placeholder="请选择您的开户省">
+        <p class="name" data-name="province"><%=lang.text('thirdH5.provinces')%></p>
+        <input type="text" class="cont" name="province" placeholder="<%=lang.text('thirdH5.selectAccountPro')%>">
         <select name="province" id="third_app_bank_province"></select>
       </div>
       <div class="third_app_bank__item">
-        <p class="name" data-name="city">城市</p>
-        <input type="text" class="cont" name="city" placeholder="请选择您的开户市">
+        <p class="name" data-name="city"><%=lang.text('thirdH5.city')%></p>
+        <input type="text" class="cont" name="city" placeholder="<%=lang.text('thirdH5.selectAccountCity')%>">
         <select name="city" id="third_app_bank_city"></select>
       </div>
       <div class="third_app_bank__item">
-        <p class="name" data-name="address">支行名称</p>
-        <input type="text" class="cont" name="address" placeholder="请填写支行名称">
+        <p class="name" data-name="address"><%=lang.text('thirdH5.branch')%></p>
+        <input type="text" class="cont" name="address" placeholder="<%=lang.text('thirdH5.enterBranchBankName')%>">
       </div>
       <div class="third_app_bank__item">
-        <p class="name" data-name="phone">预留手机号</p>
-        <input type="text" class="cont" name="phone" placeholder="请填写银行卡预留手机号">
+        <p class="name" data-name="phone"><%=lang.text('thirdH5.reservedPhoneNumber')%></p>
+        <input type="text" class="cont" name="phone" placeholder="<%=lang.text('thirdH5.enterReservedPhoneNumber')%>">
       </div>
     </form>
     <div class="btn-wrapper third_app_bank__btn_wrapper">
-      <button class="btn btn-primary-gradient" id="third_app_bank_btn">提交</button>
+      <button class="btn btn-primary-gradient" id="third_app_bank_btn"><%=lang.text('thirdH5.submit')%></button>
     </div>
   </div>
 </body>

@@ -56,7 +56,10 @@
                             {{lang.text('tigerWitID.details.marginLevelM')}} {{ orderCurrent.margin_level }}%
                         </span>
                     </th>
-                    <th ng-class="{'font-success': orderCurrent.floating_profit.indexOf('-') != -1, 'font-danger':  orderCurrent.floating_profit.indexOf('-') < 0}">
+                    <th ng-class="{'font-success': orderCurrent.floating_profit.indexOf('-') != -1, 'font-danger':  orderCurrent.floating_profit.indexOf('-') < 0}" ng-if="lang.hostIsCn()">
+                        <i class="fa fa-dollar"></i>{{ orderCurrent.floating_profit }}
+                    </th>
+                    <th ng-class="{'font-danger': orderCurrent.floating_profit.indexOf('-') != -1, 'font-success':  orderCurrent.floating_profit.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
                         <i class="fa fa-dollar"></i>{{ orderCurrent.floating_profit }}
                     </th>
                     <th class="invest_orders__btn">
@@ -89,14 +92,17 @@
                                         {{ order.cmd_name }}
                                     </span>
                                     <a class="invest_orders__symbol" href="">
-                                        {{ order.symbol_cn }}
+                                        {{ lang.isEnglishArea() ? order.symbol : order.symbol_cn + ' ('+ order.symbol +')' }}
                                     </a>        
                                 </p>
                             </div>
                         </td>
                         <td>{{ order.open_price }}</td>
                         <td>{{ order.close_price }}</td>
-                        <td ng-class="{'font-success': order.gross_profit.indexOf('-') != -1, 'font-danger': order.gross_profit.indexOf('-') < 0}">
+                        <td ng-class="{'font-success': order.gross_profit.indexOf('-') != -1, 'font-danger': order.gross_profit.indexOf('-') < 0}" ng-if="lang.hostIsCn()">
+                            <i class="fa fa-dollar"></i>{{ order.gross_profit }}
+                        </td>
+                        <td ng-class="{'font-danger': order.gross_profit.indexOf('-') != -1, 'font-success': order.gross_profit.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
                             <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                         </td>
                         <td>
@@ -144,7 +150,10 @@
                                 <i class="fa fa-caret-down font-info"></i>
                             </span>
                         </th>
-                        <th ng-class="{'font-success': trader.profit.indexOf('-') != -1, 'font-danger':  trader.profit.indexOf('-') < 0}">
+                        <th ng-class="{'font-success': trader.profit.indexOf('-') != -1, 'font-danger':  trader.profit.indexOf('-') < 0}" ng-if="lang.hostIsCn()">
+                            <i class="fa fa-dollar"></i>{{ trader.floating_profit }}
+                        </th>
+                        <th ng-class="{'font-danger': trader.profit.indexOf('-') != -1, 'font-success':  trader.profit.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
                             <i class="fa fa-dollar"></i>{{ trader.floating_profit }}
                         </th>
                         <th class="invest_orders__btn">
@@ -179,14 +188,17 @@
                                             {{ order.cmd_name }}
                                         </span>
                                         <a class="invest_orders__symbol" href="">
-                                            {{ order.symbol_cn }}
+                                            {{ lang.isEnglishArea() ? order.symbol : order.symbol_cn + ' ('+ order.symbol +')' }}
                                         </a>        
                                     </p>
                                 </div>
                             </td>
                             <td><i class="fa fa-dollar"></i>{{ order.open_price }}</td>
                             <td><i class="fa fa-dollar"></i>{{ order.close_price }}</td>
-                            <td ng-class="{'font-success': order.gross_profit.indexOf('-') != -1, 'font-danger': order.gross_profit.indexOf('-') < 0}">
+                            <td ng-class="{'font-success': order.gross_profit.indexOf('-') != -1, 'font-danger': order.gross_profit.indexOf('-') < 0}" ng-if="lang.hostIsCn()">
+                                <i class="fa fa-dollar"></i>{{ order.gross_profit }}
+                            </td>
+                            <td ng-class="{'font-danger': order.gross_profit.indexOf('-') != -1, 'font-success': order.gross_profit.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
                                 <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                             </td>
                     
@@ -241,7 +253,10 @@
                                 <i class="fa fa-caret-down font-info"></i>
                             </span> -->
                         </th>
-                        <th ng-class="{'font-success': data.profit.indexOf('-') != -1, 'font-danger':  data.profit.indexOf('-') < 0}">
+                        <th ng-class="{'font-success': data.profit.indexOf('-') != -1, 'font-danger':  data.profit.indexOf('-') < 0}" ng-if="lang.hostIsCn()">
+                            <i class="fa fa-dollar"></i>{{ data.floating_profit }}
+                        </th>
+                        <th ng-class="{'font-danger': data.profit.indexOf('-') != -1, 'font-success':  data.profit.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
                             <i class="fa fa-dollar"></i>{{ data.floating_profit }}
                         </th>
                         <th class="invest_orders__btn">
@@ -276,14 +291,17 @@
                                             {{ order.cmd_name }}
                                         </span>
                                         <a class="invest_orders__symbol" href="">
-                                            {{ order.symbol_cn }}
+                                            {{ lang.isEnglishArea() ? order.symbol : order.symbol_cn + ' ('+ order.symbol +')' }}
                                         </a>        
                                     </p>
                                 </div>
                             </td>
                             <td><i class="fa fa-dollar"></i>{{ order.open_price }}</td>
                             <td><i class="fa fa-dollar"></i>{{ order.close_price }}</td>
-                            <td ng-class="{'font-success': order.gross_profit.indexOf('-') != -1, 'font-danger': order.gross_profit.indexOf('-') < 0}">
+                            <td ng-class="{'font-success': order.gross_profit.indexOf('-') != -1, 'font-danger': order.gross_profit.indexOf('-') < 0}" ng-if="lang.hostIsCn()">
+                                <i class="fa fa-dollar"></i>{{ order.gross_profit }}
+                            </td>
+                            <td ng-class="{'font-danger': order.gross_profit.indexOf('-') != -1, 'font-success': order.gross_profit.indexOf('-') < 0}" ng-if="!lang.hostIsCn()">
                                 <i class="fa fa-dollar"></i>{{ order.gross_profit }}
                             </td>
                     

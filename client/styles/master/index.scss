@@ -163,15 +163,11 @@
             text-align: center;
             font-weight: 500;
             position: relative;
-            display: table;
             margin-bottom: 30px;
             border: 1px solid #eee;
             overflow: hidden;
-            > span {
-                display: table-cell;
-                vertical-align: middle;
-                padding: 0px 100px;
-            }
+            padding: 0px 60px;
+            @include justifyContent(center)
             // &:before {
             //     content: '';
             //     display: block;

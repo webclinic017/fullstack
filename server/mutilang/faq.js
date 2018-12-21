@@ -844,13 +844,13 @@ module.exports = {
         deal4A: {
             zh: "TigerWit does not charge any commission - only spread. Our FX spreads are variable and from 0.6. Overnight swaps and financing adjustments are applied to positions held overnight.",
             en: "TigerWit does not charge any commission - only spread. Our FX spreads are variable and from 0.6. Overnight swaps and financing adjustments are applied to positions held overnight.",
-            vi: "TigerWit không tính phí hoa hồng - chỉ ó spread. Chênh lệch tỷ giá hối đoái của chúng tôi biến động và từ 0,6. Các phí swap qua đêm và điều chỉnh tài chính được áp dụng cho các vị thế được giữ qua đêm.",
+            vi: "TigerWit không tính phí hoa hồng – chỉ có spread. Chênh lệch tỷ giá hối đoái của chúng tôi biến động và từ 0,6. Các phí swap qua đêm và điều chỉnh tài chính được áp dụng cho các vị thế được giữ qua đêm.",
             "zh-Hant": "TigerWit does not charge any commission - only spread. Our FX spreads are variable and from 0.6. Overnight swaps and financing adjustments are applied to positions held overnight."
         },
         deal5Q: {
             zh: "What is the minimum order size?",
             en: "What is the minimum order size?",
-            vi: "Kích lệnh tối thiểu là bao nhiêu?",
+            vi: "Kích thước lệnh tối thiểu là bao nhiêu?",
             "zh-Hant": "What is the minimum order size?"
         },
         deal5A: {
@@ -940,7 +940,7 @@ module.exports = {
         interest4A: {
             zh: "Accumulated swap adjustments are detailed in your 'Trade History on the app in the 'Closed positions' section.",
             en: "Accumulated swap adjustments are detailed in your 'Trade History on the app in the 'Closed positions' section.",
-            vi: "Điều chỉnh swap tích lũy được nêu chi tiết trong ‘Lịch sử giao dịch’ trong phần ‘Vị thế đóng’.",
+            vi: "Thay đổi phí swap cộng dồn được nêu chi tiết trong ‘Lịch sử giao dịch’ trong phần ‘Vị thế đóng’.",
             "zh-Hant": "Accumulated swap adjustments are detailed in your 'Trade History on the app in the 'Closed positions' section."
         },
         platform1Q: {
@@ -952,7 +952,7 @@ module.exports = {
         platform1A: {
             zh: "TigerWit Masters earn 20% of the value of successful trades made by followers. This amount is credited to the Master's account automatically.",
             en: "TigerWit Masters earn 20% of the value of successful trades made by followers. This amount is credited to the Master's account automatically.",
-            vi: "Nhà Giao Dịch Chính của TigerWit kiếm được 20% giá trị của các giao dịch thành công được thực hiện bởi những người theo dõi. Số tiền này được tự động ghi có vào tài khoản của Nhà Giao Dịch Chính.",
+            vi: "Bậc Thầy của TigerWit kiếm được 20% giá trị của các giao dịch thành công được thực hiện bởi những người sao chép. Số tiền này được tự động ghi có vào tài khoản của Bậc Thầy.",
             "zh-Hant": "TigerWit Masters earn 20% of the value of successful trades made by followers. This amount is credited to the Master's account automatically."
         },
         platform2Q: {
@@ -964,25 +964,25 @@ module.exports = {
         platform2A: {
             zh: "Followers pay 20% of the profit made by following a Master's trade to the Master. Commission is deducted automatically.",
             en: "Followers pay 20% of the profit made by following a Master's trade to the Master. Commission is deducted automatically.",
-            vi: "Người theo dõi trả 20% lợi nhuận được thực hiện bằng cách sao chép giao dịch của Nhà Giao Dịch Chính. Hoa hồng được trừ tự động.",
+            vi: "Người sao chép trả 20% lợi nhuận được thực hiện bằng cách sao chép giao dịch của Bậc Thầy. Hoa hồng được trừ tự động.",
             "zh-Hant": "Followers pay 20% of the profit made by following a Master's trade to the Master. Commission is deducted automatically."
         },
         platform3Q: {
             zh: "Unfollowing a Master?",
             en: "Unfollowing a Master?",
-            vi: "Hủy theo dõi một Nhà Giao Dịch Chính?",
+            vi: "Hủy sao chép một Bậc Thầy?",
             "zh-Hant": "Unfollowing a Master?"
         },
         platform3A_1: {
             zh: "If you choose to unfollow a Master your position will remain open unless you choose 'Cancel following and force close your order', or the Master closes their original position. After the Master closes their position, you can keep your position open if you choose 'Do not follow to close'.",
             en: "If you choose to unfollow a Master your position will remain open unless you choose 'Cancel following and force close your order', or the Master closes their original position. After the Master closes their position, you can keep your position open if you choose 'Do not follow to close'.",
-            vi: "Nếu bạn chọn hủy theo dõi một Nhà giao dịch chính, vị thế của bạn sẽ vẫn mở trừ khi bạn chọn ‘Hủy theo dõi và buộc đóng đơn lệnh của bạn’ hoặc Nhà giao dịch chính đóng vị thế ban đầu của họ. Sau khi Nhà Giao dịch chính đóng vị thế của họ, bạn có thể giữ vị thế của mình mở nếu bạn chọn ‘Hủy theo dõi để đóng’.",
+            vi: "Nếu bạn chọn hủy sao chép một Bậc Thầy, vị thế của bạn sẽ vẫn mở trừ khi bạn chọn ‘Hủy sao chép và buộc đóng đơn lệnh của bạn’ hoặc Bậc Thầy đóng vị thế ban đầu của họ. Sau khi Bậc Thầy đóng vị thế của họ, bạn có thể giữ vị thế của mình mở nếu bạn chọn ‘Hủy sao chép để đóng’.",
             "zh-Hant": "If you choose to unfollow a Master your position will remain open unless you choose 'Cancel following and force close your order', or the Master closes their original position. After the Master closes their position, you can keep your position open if you choose 'Do not follow to close'."
         },
         platform3A_2: {
             zh: "If you choose 'Cancel following but do not close order' your position will remain open until the Master's order you were following is closed by the Master. If you choose 'Do not follow to close' your position will remain open until you close out manually. You remain liable for commission at whatever point the position is closed.",
             en: "If you choose 'Cancel following but do not close order' your position will remain open until the Master's order you were following is closed by the Master. If you choose 'Do not follow to close' your position will remain open until you close out manually. You remain liable for commission at whatever point the position is closed.",
-            vi: "Nếu bạn chọn ‘Hủy theo dõi nhưng không đóng lệnh’ thì vị thế của bạn sẽ vẫn mở cho đến khi lệnh của Nhà Giao Dịch Chính mà bạn đang theo dõi bị Nhà Giao Dịch Chính đóng lại. Nếu bạn chọn ‘Không theo dõi để đóng’, vị thế của bạn sẽ vẫn mở cho đến khi bạn đóng thủ công. Bạn vẫn chịu trách nhiệm cho hoa hồng tại bất kỳ điểm nào vị thế đóng.",
+            vi: "Nếu bạn chọn ‘Hủy sao chép nhưng không đóng lệnh’ thì vị thế của bạn sẽ vẫn mở cho đến khi lệnh của Bậc Thầy mà bạn đang sao chép bị Bậc Thầy đóng lại. Nếu bạn chọn ‘Không sao chép để đóng’, vị thế của bạn sẽ vẫn mở cho đến khi bạn đóng thủ công. Bạn vẫn chịu trách nhiệm cho hoa hồng tại bất kỳ điểm nào vị thế đóng.",
             "zh-Hant": "If you choose 'Cancel following but do not close order' your position will remain open until the Master's order you were following is closed by the Master. If you choose 'Do not follow to close' your position will remain open until you close out manually. You remain liable for commission at whatever point the position is closed."
         },
         protect1Q: {

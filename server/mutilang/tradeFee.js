@@ -98,37 +98,37 @@ module.exports = {
     tradeFee16: {
         zh: "复制高手佣金",
         en: "The Master's Commission",
-        vi: "Hoa hồng nhà giao dịch chính",
+        vi: "Hoa hồng bậc thầy",
         "zh-Hant": "復制高手傭金"
     },
     tradeFee17: {
         zh: "TigerWit提供业内先进创新的全自动订单复制跟单系统。投资者可通过复制高手交易获得同比例投资收益。TigerWit在获得客户同意并授权的情况下，可以为客户开启跟单操作及进行跟单交易、按约定实时扣除客户跟单净利润盈利中的20%支付给交易高手作为佣金或奖励。",
         en: "TigerWit provides the industry's advanced and innovative automated order copying system. Investors can obtain the same proportion of investment income by following master trading. TigerWit opens the copy order function for the customer on the condition that the masters agrees and authorizes it, and according to the agreement, TigerWit will deduct 20% of the profit of the customer's as the commission of the masters.",
-        vi: "TigerWit cung cấp hệ thống sao chép tự động tiên tiến và tiên tiến của ngành. Các nhà đầu tư có thể thu được cùng một tỷ lệ thu nhập đầu tư bằng cách làm theo giao dịch chính. TigerWit mở chức năng đặt hàng sao chép cho khách hàng với điều kiện là các nhà giao dịch chính đồng ý và ủy quyền cho nó, và theo thỏa thuận, TigerWit sẽ khấu trừ 20% lợi nhuận của khách hàng là hoa hồng của các nhà giao dịch chính.",
+        vi: "TigerWit cung cấp hệ thống sao chép tự động tiên tiến và tiên tiến của ngành. Các nhà đầu tư có thể thu được cùng một tỷ lệ thu nhập đầu tư bằng cách làm theo giao dịch chính. TigerWit mở chức năng đặt hàng sao chép cho khách hàng với điều kiện là các bậc thầy đồng ý và ủy quyền cho nó, và theo thỏa thuận, TigerWit sẽ khấu trừ 20% lợi nhuận của khách hàng là hoa hồng của các bậc thầy.",
         "zh-Hant": "TigerWit提供業內先進創新的全自動訂單復制跟單系統。投資者可通過復制高手交易獲得同比例投資收益。TigerWit在獲得客戶同意並授權的情況下，可以為客戶開啟跟單操作及進行跟單交易、按約定實時扣除客戶跟單凈利潤盈利中的20%支付給交易高手作為傭金或獎勵。"
     },
     tradeFee18: {
         zh: "每月1日，系统将对您跟随高手的情况进行统计并结算，扣除跟随该高手盈利部分的20%作为该高手的分成；每月10日，系统将对高手进行分成结算。",
         en: "On the 1st of every month, the system calculates the profit which following masters, and deducts 20% of the profit portion as master's commission; on the 10th of every month, the system settles the commission to the master.",
-        vi: "Vào ngày đầu tiên của mỗi tháng, hệ thống tính toán lợi nhuận mà sau nhà giao dịch chính, và khấu trừ 20% phần lợi nhuận như hoa hồng của nhà giao dịch chính; vào ngày 10 hàng tháng, hệ thống sẽ thanh toán hoa hồng cho nhà giao dịch chính.",
+        vi: "Vào ngày đầu tiên của mỗi tháng, hệ thống tính toán lợi nhuận mà sau bậc thầy, và khấu trừ 20% phần lợi nhuận như hoa hồng của bậc thầy; vào ngày 10 hàng tháng, hệ thống sẽ thanh toán hoa hồng cho bậc thầy.",
         "zh-Hant": "每月1日，系統將對您跟隨高手的情況進行統計並結算，扣除跟隨該高手盈利部分的20%作為該高手的分成；每月10日，系統將對高手進行分成結算。"
     },
     tradeFee19: {
         zh: "当您取消复制关系并选择强制平仓时，系统将对跟随该高手的所有订单进行统计并结算，扣除未结算盈利部分的20%作为该高手佣金。",
         en: "When you chose 'Unfollow and force close the orders', the system will calculation and settle all orders following the master, and deducts 20% of the profit portion as a high commission.",
-        vi: "Khi bạn chọn 'Hủy theo dõi và buộc đóng các đơn đặt hàng', hệ thống sẽ tính toán và thanh toán tất cả các đơn đặt hàng theo quy tắc chính và khấu trừ 20% phần lợi nhuận dưới dạng hoa hồng cao.",
+        vi: "Khi bạn chọn 'Hủy sao chép và buộc đóng các đơn đặt hàng', hệ thống sẽ tính toán và thanh toán tất cả các đơn đặt hàng theo quy tắc chính và khấu trừ 20% phần lợi nhuận dưới dạng hoa hồng cao.",
         "zh-Hant": "當您取消復制關系並選擇強制平倉時，系統將對跟隨該高手的所有訂單進行統計並結算，扣除未結算盈利部分的20%作為該高手傭金。"
     },
     tradeFee20: {
         zh: "当您取消复制关系并选择跟随高手平仓时，系统将在跟随该高手的所有订单全部平仓后，对跟随该高手的所有订单进行统计并结算，扣除未结算盈利的20%作为该高手分成。",
         en: "When you chose 'Cancel follow master but follow to close', the system will calculation and settle when all orders following the master are fully closed, and deducts 20% of the profit portion as a high commission.",
-        vi: "Khi bạn chọn 'Hủy theo dõi nhà giao dịch chính, nhưng theo sau để đóng', hệ thống sẽ tính toán và giải quyết khi tất cả các đơn đặt hàng sau tổng thể được đóng hoàn toàn và khấu trừ 20% phần lợi nhuận là hoa hồng cao.",
+        vi: "Khi bạn chọn 'Hủy sao chép bậc thầy, nhưng theo sau để đóng', hệ thống sẽ tính toán và giải quyết khi tất cả các đơn đặt hàng sau tổng thể được đóng hoàn toàn và khấu trừ 20% phần lợi nhuận là hoa hồng cao.",
         "zh-Hant": "當您取消復制關系並選擇跟隨高手平倉時，系統將在跟隨該高手的所有訂單全部平倉後，對跟隨該高手的所有訂單進行統計並結算，扣除未結算盈利的20%作為該高手分成。"
     },
     tradeFee21: {
         zh: "只要跟随高手开仓的订单，都会进行分成结算。",
         en: "As long as the opened order is follow the master, the settlement will be carried out.",
-        vi: "Miễn là lệnh mở được thực hiện theo nhà giao dịch chính, việc thanh toán sẽ được thực hiện.",
+        vi: "Miễn là lệnh mở được thực hiện theo bậc thầy, việc thanh toán sẽ được thực hiện.",
         "zh-Hant": "只要跟隨高手開倉的訂單，都會進行分成結算。"
     },
     tradeFee22: {

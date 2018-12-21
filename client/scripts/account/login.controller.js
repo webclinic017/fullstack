@@ -80,7 +80,7 @@
             }
         }
         // 根据域名判断是否为cn
-        if('cn.tigerwit.com,cndemo.tigerwit.com,w.dev.tigerwit.com'.indexOf(location.host)!= -1){
+        if(lang.hostIsCn()){
             selectArea({phone_code: 86})
         }
         var token;

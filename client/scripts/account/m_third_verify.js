@@ -30,7 +30,7 @@ $(document).ready(function () {
         card: ".m_third .m_third_card",
         cardType: ".m_third .m_third_card .m_third_card__tip span",
         cardBtn: ".m_third .m_third_card .m_third_card__btn .btn",
-        cardFile: ".m_third .m_third_card .m_third_card__pic .form input",
+        cardFile: ".m_third .m_third_card__pic .form input",
         cardBack: ".m_third .m_third_card .m_third_card__pic.back",
         cardFrontTip: ".m_third .m_third_card .m_third_card__pic.front .tip",
         cardBackTip: ".m_third .m_third_card .m_third_card__pic.back .tip",
@@ -39,19 +39,18 @@ $(document).ready(function () {
         successPassword: ".m_third .m_third_success input.info",
         successBtn: ".m_third .m_third_success .m_third_success__btn .btn",
         complete: ".m_third .m_third_complete",
-        completeMT4Id: ".m_third .m_third_complete .m_third_complete__id span",
         completeBtn: ".m_third .m_third_complete .m_third_complete__btn .btn"
     };
     var eleIndex = {
-        "0": "index",       // 未注册 -> 首页
-        "1": "kyc",         // 已注册 -> kyc 页面
-        "2": "userinfo",    // 已经kyc认证 -> 填写完邮箱国家页面
-        "3": "card",        // 已经填写真实姓名和身份证号 -> 身份证图片页面
-        "4": "userinfo",    // 审核拒绝 -> 填写完邮箱国家页面
-        "5": "verify",      // 待审核 -> 审核中页面
-        "6": "success",     // 审核通过 -> 审核成功，设置MT4密码页面
-        "7": "complete",    // 已经开户 -> MT4 账号设置成功页面
-        "8": "username",    // 已经填写完邮箱国家 -> 姓名、身份证号页面 (新增逻辑)
+        "0": "index",       // 未开户
+        "1": "kyc",         // 未填KYC
+        "2": "userinfo",    // 未填邮箱、地址、未选国家
+        "3": "username",    // 未填真实姓名等
+        "4": "userinfo",    // 审核拒绝
+        "5": "verify",      // 待审核
+        "6": "verify",     // 审核通过
+        "7": "complete",    // GLOBAL未上传地址证明
+        "20": "card",       // 未上传身份证
     };
     var kycInfo = {};
     var kycInfoTmp = {};
@@ -64,6 +63,7 @@ $(document).ready(function () {
     var cardBaseFile = {    //证件
         front: false,
         back: false,
+        address: false,
     };
     var cardStatus = {      //证件上传状态
         front: false,
@@ -73,7 +73,7 @@ $(document).ready(function () {
     var bt=baidu.template;
     var mt4Id = '';
     var company = '';
-    var userCacheInfo = null;   //用户缓存信息
+    var userCacheInfo = {};   //用户缓存信息
     var isSetCountryCache = false;  //是否设置国家缓存
     var countryList = {
         data: null
@@ -94,6 +94,14 @@ $(document).ready(function () {
             {
                 key: lang.text('third.third_username10'),
                 value: 1
+            },
+            {
+                key: lang.text('third.third_username11'),
+                value: 3
+            },
+            {
+                key: lang.text('third.third_username12'),
+                value: 4
             }
         ],
         en: [
@@ -143,7 +151,6 @@ $(document).ready(function () {
             getUserStatus();
             getKycList();
             getCountries();
-            getUserCacheInfo();
 
         }, 300);
     }
@@ -154,7 +161,26 @@ $(document).ready(function () {
             layer.closeAll();
             if (!data) return;
             if (data.is_succ) {
-                step = data.data.status > 5 ? 5 : data.data.status;
+                step = data.data.status === 3 ? 2 : data.data.status;//若是返回3，从第二步开始
+                //加载缓存
+                if (step != 0) {
+                    getUserCacheInfo();
+                } else {
+                    // console.log(countryList.data);
+                    if (countryList.data) {
+                        if (lang.curLang() == 'cn') {
+                            $(".m_third_userinfo select").find("option[value=CN]").first().attr("selected", true);
+                            $(ele.userinfoCountry).val('中国');
+                            $(ele.userinfoCountry).attr("data-country", "CN");
+                        }
+                    } else {
+                        isSetCountryCache = true;
+                    }
+                    laydate.render({
+                        elem: '#birth',
+                        lang: lang.curLang() !== 'cn' ? 'en' : 'cn'
+                    });
+                }
                 $(ele.wrapper).addClass("active");
                 goStepPage();
             } else {
@@ -182,16 +208,12 @@ $(document).ready(function () {
                     if (userCacheInfo.world_code) {
                         $.each(countryList.data, function (index, value) {
                             if (userCacheInfo.world_code == value.code) {
-                                if (lang.curLang() != 'en') {
-                                    $(ele.userinfoCountry).val(value.name_cn);
-                                } else {
-                                    $(ele.userinfoCountry).val(value.name_en);
-                                }
+                                $(ele.userinfoCountry).val(value.name);
                             }
                         });
                         $(".m_third_userinfo select").find("option[value="+userCacheInfo.world_code+"]").first().attr("selected", true);
                         $(ele.userinfoCountry).attr("data-country", userCacheInfo.world_code);
-                    } else if (lang.curLang() != 'en') {
+                    } else if (lang.curLang() == 'cn') {
                         $(".m_third_userinfo select").find("option[value=CN]").first().attr("selected", true);
                         $(ele.userinfoCountry).val('中国');
                         $(ele.userinfoCountry).attr("data-country", "CN");
@@ -209,7 +231,7 @@ $(document).ready(function () {
                 $(ele.usernameIdNo).val(userCacheInfo.id_no);
                 laydate.render({
                     elem: '#birth',
-                    lang: lang.curLang() === 'en' ? 'en' : 'cn',
+                    lang: lang.curLang() !== 'cn' ? 'en' : 'cn',
                     value: userCacheInfo.birth ? userCacheInfo.birth.substring(0,4)+'-'+userCacheInfo.birth.substring(4,6)+'-'+userCacheInfo.birth.substring(6,8) : ''
                 });
                 //card
@@ -228,7 +250,7 @@ $(document).ready(function () {
     //     layer.closeAll();
     //     // getKycList();
     //     // getCountries();
-    //     step = 3;
+    //     step = 8;
     //     $(ele.wrapper).addClass("active");
     //     goStepPage();
 
@@ -283,7 +305,7 @@ $(document).ready(function () {
                 layer.closeAll();
                 if (!data) return;
                 if (data.is_succ) {
-                    step = 2;
+                    step = data.data.status;
                     goStepPage();
                     // 神策统计
                     sa.track('New_information');
@@ -386,7 +408,7 @@ $(document).ready(function () {
                 if (!data) return;
                 if (data.is_succ) {
                     cardCountry = $(ele.userinfoCountry).attr("data-country");
-                    step = 8;
+                    step = data.data.status;
                     initCardTypeInfo();
                     //加载证件类型缓存
                     try {
@@ -450,16 +472,12 @@ $(document).ready(function () {
                 if (userCacheInfo.world_code) {
                     $.each(countryList.data, function (index, value) {
                         if (userCacheInfo.world_code == value.code) {
-                            if (lang.curLang() != 'en') {
-                                $(ele.userinfoCountry).val(value.name_cn);
-                            } else {
-                                $(ele.userinfoCountry).val(value.name_en);
-                            }
+                            $(ele.userinfoCountry).val(value.name);
                         }
                     });
                     $(".m_third_userinfo select").find("option[value="+userCacheInfo.world_code+"]").first().attr("selected", true);
                     $(ele.userinfoCountry).attr("data-country", userCacheInfo.world_code);
-                } else if (lang.curLang() != 'en') {
+                } else if (lang.curLang() == 'cn') {
                     $(".m_third_userinfo select").find("option[value=CN]").first().attr("selected", true);
                     $(ele.userinfoCountry).val('中国');
                     $(ele.userinfoCountry).attr("data-country", "CN");
@@ -489,7 +507,7 @@ $(document).ready(function () {
                         key: $(ele.usernameCardType).val(),
                         value: $(ele.usernameCardType).attr("data-type")
                     };
-                    step = 3;
+                    step = 20;
                     initCardInfo();
                     goStepPage();
                     // 神策统计
@@ -529,6 +547,7 @@ $(document).ready(function () {
     });
     // 初始化证件类型
     function initCardTypeInfo () {
+        console.log(cardTypeListTemp.cn);
         cardTypeList = {
             data: cardCountry === 'CN' ? cardTypeListTemp.cn : cardTypeListTemp.en
         };
@@ -551,10 +570,11 @@ $(document).ready(function () {
             front: false,
             back: false,
         };
-
-        if (cardType.value != '0') {  //只需传一张
+        var needTwo = true;    //是否需要两张图片
+        if (cardType.value != '0' && cardType.value != '4' && cardType.value != '5') {  //只需传一张
             cardBaseFile.back = true;
             cardStatus.back = true;
+            needTwo = false;
         }
         /*
          * 上传图片逻辑 先判断是否有主动上传图片，再判断是否有缓存图片信息
@@ -563,13 +583,13 @@ $(document).ready(function () {
             layer.open({type: 2, shadeClose: false});
 
             uploadCard('front');
-            if (cardType.value == '0') {  //只需传一张
+            if (needTwo) {  //只需传一张
                 uploadCard('back');
             }
             // console.log(cardBaseFile.front, cardBaseFile.back);
             
         } else {
-            if (cardType.value == '0' && !userCacheInfo.id_back) {
+            if (needTwo && !userCacheInfo.id_back) {
                 //需要上传背面且背面图片无缓存
                 layer.open({
                     content: lang.text('third.uploadCard'),
@@ -580,7 +600,7 @@ $(document).ready(function () {
                 layer.open({type: 2, shadeClose: false});
 
                 uploadCard('front');
-                if (cardType.value == '0') {  //只需传一张
+                if (needTwo) {  //只需传一张
                     uploadCard('back');
                 }
             } else {
@@ -597,13 +617,44 @@ $(document).ready(function () {
     function initCardInfo () {
         $(ele.cardType).html(cardType.key);
 
-        if (cardType.value == '0') {
+        if (cardType.value == '0' || cardType.value == '4' || cardType.value == '5') {
             $(ele.cardFrontTip).html(lang.text('third.frontCardTip'));
             $(ele.cardBackTip).html(lang.text('third.backCardTip'));
         } else {
             $(ele.cardBack).css("display", "none");
             $(ele.cardFrontTip).html(lang.text('third.cardTip'));
         }
+    }
+
+    function uploadCard (type) {
+        publicRequest('thirdUploadIdCard', 'POST', {
+            face: type,
+            file: cardBaseFile[type] ? cardBaseFile[type].src.split(',')[1] : ''
+        }).then(function (data) {
+            // console.log(data);
+            layer.closeAll();
+            if (!data) {
+                // layer.closeAll();
+                return;
+            }
+            if (data.is_succ) {
+                cardStatus[type] = true;
+
+                if (cardStatus.front && cardStatus.back) {
+                    layer.closeAll();
+                    step = data.data.status;
+                    goStepPage();
+                    // 神策统计
+                    sa.track('New_uploadcard');
+                }
+            } else {
+                layer.open({
+                    content: data.message,
+                    skin: 'msg',
+                    time: 2
+                });
+            }
+        });
     }
 
     // set Mt4 password
@@ -642,44 +693,37 @@ $(document).ready(function () {
 
     $(ele.completeBtn).on("tap", function (e) {
         e.preventDefault();
-        // var iframe = document.createElement('iframe');
-        // iframe.style.display = 'none';
-        // iframe.src = window.location.protocol+'//'+window.location.hostname+'/third/complete/openAccount';
-        // document.body.appendChild(iframe);
-        var r_href = window.location.protocol+'//'+window.location.hostname+'/third/complete/openAccount';
-        window.location = r_href;
-    });
-
-    function uploadCard (type) {
-        publicRequest('thirdUploadIdCard', 'POST', {
-            face: type,
-            file: cardBaseFile[type] ? cardBaseFile[type].src.split(',')[1] : ''
-        }).then(function (data) {
-            // console.log(data);
-            layer.closeAll();
-            if (!data) {
-                // layer.closeAll();
-                return;
-            }
-            if (data.is_succ) {
-                cardStatus[type] = true;
-
-                if (cardStatus.front && cardStatus.back) {
-                    layer.closeAll();
-                    step = 5;
-                    goStepPage();
-                    // 神策统计
-                    sa.track('New_uploadcard');
+        if (cardBaseFile.address) {
+            layer.open({type: 2, shadeClose: false});
+            publicRequest('thirdUploadAddress', 'POST', {
+                file: cardBaseFile.address.src.split(',')[1]
+            }).then(function (data) {
+                // console.log(data);
+                layer.closeAll();
+                if (!data) {
+                    // layer.closeAll();
+                    return;
                 }
-            } else {
-                layer.open({
-                    content: data.message,
-                    skin: 'msg',
-                    time: 2
-                });
-            }
-        });
-    }
+                if (data.is_succ) {
+                    layer.closeAll();
+                    step = data.data.status;
+                    goStepPage();
+                } else {
+                    layer.open({
+                        content: data.message,
+                        skin: 'msg',
+                        time: 2
+                    });
+                }
+            });
+        } else {
+            layer.open({
+                content: lang.text('third_address_7'),
+                skin: 'msg',
+                time: 2
+            });
+        }
+    });
 
     function preview(file, pageClass) {
         var img = new Image(), url = img.src = URL.createObjectURL(file);
@@ -796,7 +840,7 @@ $(document).ready(function () {
     }
 
     function goStepPage () {
-
+        // console.log(step);
         $.each(eleIndex, function (index, value) {
             $(ele[eleIndex[index]]).removeClass("active");
         });
@@ -815,7 +859,7 @@ $(document).ready(function () {
         if (step === 2) {
             $(ele.navbarStep2).addClass("active");
         }
-        if (step === 3) {
+        if (step === 20) {
             var userAgent = navigator.userAgent.toLowerCase();
             var index = userAgent.indexOf("android");
             if(index >= 0){  
@@ -846,9 +890,8 @@ $(document).ready(function () {
         if (step === 7) {
             $(ele.navbarStep2).addClass("active");
             $(ele.navbarStep3).addClass("active");
-            $(ele.navbarStep4).addClass("active");
         }
-        if (step === 8) {
+        if (step === 3) {
             $(ele.navbarStep2).addClass("active");
             $(ele.navbarStep3).addClass("active");
         }

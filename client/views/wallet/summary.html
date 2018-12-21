@@ -1,7 +1,6 @@
-<div tw-loading-img></div>
+<div tw-loading-img ng-show="!lang.isThird()"></div>
 <div class="history">
-
-    <table class="table table-personalF table-hover table-bordered">
+    <table class="table table-hover table-bordered" ng-class="{'table-personal': lang.isThird(), 'table-personalF': !lang.isThird()}">
         <colgroup>
             <col width="25%">
             <col width="35%">
@@ -23,7 +22,10 @@
                 <span>{{ history.type }}</span>
                 <span class="tw-btn font-info font-size-14" ng-click="backout(history.id)" ng-if="history.is_cancel === 1">{{lang.text('tigerWitID.revocation')}}</span>
             </td>
-            <td ng-class="{'font-danger': history.amount.indexOf('-') < 0, 'font-success': history.amount.indexOf('-') >= 0}">
+            <td ng-class="{'font-danger': history.amount.indexOf('-') < 0, 'font-success': history.amount.indexOf('-') >= 0}" ng-if="lang.hostIsCn()">
+                ${{ history.amount }}
+            </td>
+            <td ng-class="{'font-success': history.amount.indexOf('-') < 0, 'font-danger': history.amount.indexOf('-') >= 0}" ng-if="!lang.hostIsCn()">
                 ${{ history.amount }}
             </td>
             <td>${{ history.wallet_balance }}</td>

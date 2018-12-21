@@ -20,7 +20,7 @@ module.exports = {
     newhome_2: {
         zh: "打开官网或APP，开始交易。",
         en: "Open an account in minutes - online or on the app – and start to trade.",
-        vi: "Mở một tài khoản chỉ trong vòng vài phút- mở trực tuyến hoặc trên app-và bắt đầu giao dịch.",
+        vi: "Mở tài khoản trong vài phút – online hoặc app – bắt đầu giao dịch.",
         "zh-Hant": "打開官網或APP，開始交易。"
     },
     newhome_4: {
@@ -56,7 +56,7 @@ module.exports = {
     link_register: {
         zh: "注册交易账户",
         en: "Open an account",
-        vi: "Mở một tài khoản",
+        vi: "Mở tài khoản",
         "zh-Hant": "註冊交易賬戶"
     },
     newhome_10: {
@@ -68,19 +68,19 @@ module.exports = {
     newhome_11: {
         zh: "一键点击跟随TigerWit高手，立享高手同步交易策略。你仅需付给高手20%的佣金。",
         en: "Follow a TigerWit Master with a single click and trade using their strategies. Pay just 20% commission to your Master.",
-        vi: "Theo dõi Nhà Giao Dịch Chính của TigerWit với chỉ một click và giao dịch bằng cách sử dụng các chiến thuật của họ.",
+        vi: "Click để sao chép các chiến thuật của Bậc thầy TigerWit để giao dịch. Bạn chỉ phải trả 20% hoa hồng cho Bậc thầy của bạn.",
         "zh-Hant": "壹鍵點擊跟隨TigerWit高手，立享高手同步交易策略。妳僅需付給高手20%的傭金。"
     },
     newhome_12: {
         zh: "在高手榜单中选择一位高手。",
         en: "Select a Master from the ranking table.",
-        vi: "Chọn một Nhà Giao Dịch chính từ bảng xếp hạng.",
+        vi: "Chọn một Bậc thầy từ bảng xếp hạng.",
         "zh-Hant": "在高手榜單中選擇壹位高手。"
     },
     newhome_13: {
         zh: "选择你想跟随的高手进行交易。",
         en: "Select the Master’s trade you want to follow.",
-        vi: "Chọn giao dịch của Nhà Giao Dịch bạn muốn theo dõi.",
+        vi: "Tiến hành sao chép giao dịch từ Bậc Thầy.",
         "zh-Hant": "選擇妳想跟隨的高手進行交易。"
     },
     newhome_14: {
@@ -92,19 +92,19 @@ module.exports = {
     newhome_15: {
         zh: "成为TigerWit高手，你将获得跟随者盈利的20%。",
         en: "Become a TigerWit Master and earn 20% commission on your followers’ profits.",
-        vi: "Trở thành Nhà Giao Dịch Chính TigerWit và nhận 20% hoa hồng lợi nhuận từ người theo dõi.",
+        vi: "Trở thành Bậc thầy TigerWit và nhận 20% hoa hồng lợi nhuận từ người sao chép.",
         "zh-Hant": "成為TigerWit高手，妳將獲得跟隨者盈利的20%。"
     },
     newhome_16: {
         zh: "选择高手",
         en: "Select a Master",
-        vi: "Chọn Nhà Giao Dịch Chính",
+        vi: "Chọn Bậc thầy",
         "zh-Hant": "選擇高手"
     },
     newhome_17: {
         zh: "你需要的交易市场",
         en: "The markets you want",
-        vi: "Các thị trường bạn muốn",
+        vi: "Các sản phẩm giao dịch bạn muốn",
         "zh-Hant": "妳需要的交易市場"
     },
     newhome_17_1: {
@@ -140,19 +140,19 @@ module.exports = {
     newhome_22: {
         zh: "开户仅需$50",
         en: "Open a Live account with",
-        vi: "Mở tài khoản Thực với",
+        vi: "Mở tài khoản thực với",
         "zh-Hant": "開戶僅需$50"
     },
     newhome_23: {
         zh: " ",
         en: "an initial deposit of as little as USD50",
-        vi: "khoản kí gửi ban đầu chỉ 50 USD",
+        vi: "tiền nạp ban đầu chỉ 50 USD.",
         "zh-Hant": " "
     },
     newhome_24: {
         zh: "最低交易手数0.01手",
         en: "Trade from a minimum of just 0.01 Lot",
-        vi: "Giao dịch từ mức tối thiểu chỉ 0.01 Lot",
+        vi: "Giao dịch mức tối thiểu chỉ từ 0.01Lot",
         "zh-Hant": "最低交易手數0.01手"
     },
     newhome_25: {
@@ -314,13 +314,13 @@ module.exports = {
     newhome_45: {
         zh: "开设一个真实账户，最多可使用七个子账户进行自主交易和复制跟单交易。",
         en: "Open a Live account and use up to seven sub-accounts for self-directed and copy-trading.",
-        vi: "Mở tài khoản Thực và sử dụng tối đa bảy tài khoản phụ để tự định hướng và sao chép giao dịch.",
+        vi: "Mở tài khoản Thực và sử dụng tối đa bảy tài khoản phụ để tự giao dịch và sao chép giao dịch.",
         "zh-Hant": "開設壹個真實賬戶，最多可使用七個子賬戶進行自主交易和復制跟單交易。"
     },
     newhome_46: {
         zh: "立即注册",
         en: "Open an Account",
-        vi: "Mở một tài khoản",
+        vi: "Mở tài khoản",
         "zh-Hant": "立即註冊"
     }
   };  

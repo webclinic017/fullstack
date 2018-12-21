@@ -1,4 +1,4 @@
-<div tw-loading-img></div>
+<div tw-loading-img ng-show="!lang.isThird()"></div>
 <div class="invest_content history" ng-if="historyList.length > 0">
     <table class="table table-traffic table-hover">
         <colgroup>
@@ -20,24 +20,12 @@
         <tbody>
         <tr ng-repeat="history in historyList">
             <td>{{ history.order_date | dateFormatter }}</td>
-            <td>{{ history.status_type }}</td>
-            <td ng-class="{'font-danger': history.status === 2, 'font-success': history.status === 4, 'font-base': history.status === -2}">
+            <td>{{ history.status_type }}</td> 
+            <td ng-class="{'font-danger': history.status === 2, 'font-success': history.status === 1, 'font-base': history.status=== 0}">
                 ${{ history.amount }}
             </td>
             <td>
                 <span>{{ history.status_explain }}</span>
-                <!-- <span ng-if="history.pay_again === 1 && history.type === 1">
-                    <a class="font-info" href="/action/public/v4/pay_order/{{history.code}}" target="_blank">继续充值</a>
-                </span> -->
-                 <!-- <span ng-if="history.withdraw === 1">
-                    <a class="deposit__pointer font-info" ng-click="cancelWithdraw(history.order_no)">撤销申请</a>
-                </span> -->
-                <!--<span ng-if="history.status === 99">订单已超时</span>-->
-                <!--<span ng-if="history.status === 4">充值成功</span>-->
-                <!--<span ng-if="history.status === 5">开户赠金</span>-->
-                <!--<span ng-if="history.status === -2">提现已撤销</span>-->
-                <!--<span ng-if="history.status === -4">拒绝提现</span>-->
-                <!--<span ng-if="history.status === -5">提现处理完毕</span>-->
             </td>
             <!-- <td></td> -->
         </tr>

@@ -32,7 +32,6 @@
         // $scope.currentWorld = {}; ---| -- 选择国家
         // $scope.entryWorld = '';  ----|
         $scope.logout = logout;
-        $scope.reloadLanguage = reloadLanguage;
         $scope.openDredgeMdl = openDredgeMdl;
         $scope.getEmailPhone = getEmailPhone;
         var globalScope = $scope;
@@ -95,7 +94,8 @@
                 templateUrl: '/views/account/account_Initializer_tip.html',
                 size: 'sm',
                 backdrop: true,
-                controller: function ($scope, $modalInstance) {
+                controller: function ($scope, $modalInstance, lang) {
+                    $scope.lang = lang;
                     $scope.historyType = type;
                     $scope.closeModal = closeModal;
                     function closeModal() {
@@ -218,15 +218,6 @@
 
                 }
             });
-        }
-
-        // change language into English or Chinese
-        function reloadLanguage(lang) {
-            var d = new Date();
-            d.setTime(d.getTime() + (-1*24*60*60*1000));
-            document.cookie = 'lang=' + lang + '; path=/; expires='+d.toUTCString();
-            document.cookie = 'lang=' + lang + '; path=/; domain=.tigerwit.com';
-            location.reload();
         }
         //设置允许使用cookie
         $scope.getAllowCookie = function () {
@@ -391,7 +382,7 @@
         }
 
         // 获取认证状态
-        // status 1:没填kyc,2:没填写昵称邮箱,3:未上传过身份证,4:审核拒绝,5:待审核,6:审核通过,10:开户完成
+        // status 1:没填kyc,2:没填写昵称邮箱,3:未上传过身份证,4:审核拒绝,5:待审核,6:审核通过,7:上传真实地址, 10:开户完成
         // account_status 0:没开通,1:真实,2:模拟
         // status=10只有在添加认证信息结束的时候我会返回10，app主动请求获取用户认证状态的最终状态是6(审核通过)不会有10
         function getAuthStatus(para) {

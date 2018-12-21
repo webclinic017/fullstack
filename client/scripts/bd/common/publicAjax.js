@@ -54,6 +54,7 @@
         thirdChangePassword: origin_third + '/user/passwd', //put
         thirdCountries: origin_third + '/region/countries', // get
         thirdGetCacheInfo: origin_third + '/user/auth_info', // get
+        thirdUploadAddress: origin_third + '/user/upload_address_prove', //post
 
         // 获取交易月报
         getMonReport: origin_app + '/user/monthly_report',     // get
@@ -96,7 +97,13 @@
         getThirdCities: origin + '/region/cities', //get
         uploadThirdBankInfo: origin + '/user/bank_card', //put
         checkThirdWithdrawLimit: origin + '/payment/withdraw/limits', //get
-        withdrawThird: origin + '/payment/withdraw' //post
+        withdrawThird: origin + '/payment/withdraw', //post
+        getDefaultThirdAccount: origin + '/third/account',  //get
+        getThirdPlatforms: origin + '/third/platforms', //get
+        setThirdBindAccount: origin + '/third/accounts/bind',   //post
+        getThirdAccountList: origin + '/third/accounts/lists',  //get
+        destroyThirdAccount: origin + '/third/accounts/destroy',  //post
+        bindCardPhone: origin + '/user/bank_card/phone'  //post
     };
 
     w.publicRequest = publicRequest;

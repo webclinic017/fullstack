@@ -15,6 +15,7 @@
       getDealAccountList();
     })
 
+    // 交易成功隐藏卡片
     $scope.$on('$stateChangeSuccess', function (event, toState, toParams) {
       $scope.stateParamsSubpage = toParams.subpage;
     })
@@ -52,12 +53,14 @@
             alert($scope.lang.text("tigerWitID.myAccount.loginAgain"))
             return;
           }
-          angular.forEach(list, function (value, index) {
+          if($scope.accountItem.mt4_id) {
+            angular.forEach(list, function (value, index) {
               if(value.mt4_id == $scope.accountItem.mt4_id){
                 $scope.accountItem.account_name = value.account_name;
                 $scope.isMt4ID = true;
               }
-          });
+            });
+          }
           if(!$scope.isMt4ID){
             $scope.accountItem.mt4_id = list[0].mt4_id;
             $scope.accountItem.account_name = list[0].account_name;

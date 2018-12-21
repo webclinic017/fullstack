@@ -39,7 +39,12 @@
             cancelPaymentEvidence: cancelPaymentEvidence,
             checkEvidenceStatus: checkEvidenceStatus,
             checkInvestBank: checkInvestBank,
-            bindInvestBank: bindInvestBank
+            bindInvestBank: bindInvestBank,
+            getDefaultThirdAccount: getDefaultThirdAccount,
+            getThirdPlatforms: getThirdPlatforms,
+            setThirdBindAccount: setThirdBindAccount,
+            getThirdAccountList: getThirdAccountList,
+            destroyThirdAccount: destroyThirdAccount
         };
         return service;
 
@@ -412,6 +417,51 @@
             return publicHttp.dealPublicRequest(o.checkInvestBankApi, 'PUT', {
                 card_no: depositCard
             });
+        }
+        /**
+         * Asset Service 获取默认第三方账号
+         *
+         * @method getDefaultThirdAccount
+         * 
+         */
+        function getDefaultThirdAccount () {
+            return publicHttp.dealPublicRequest(o.getDefaultThirdAccountApi, 'GET', {});
+        }
+        /**
+         * Asset Service 获取用户可添加的第三方平台类型
+         *
+         * @method getThirdPlatforms
+         * 
+         */
+        function getThirdPlatforms () {
+            return publicHttp.dealPublicRequest(o.getThirdPlatformsApi, 'GET');
+        }
+        /**
+         * Asset Service 绑定第三方账户
+         *
+         * @method setThirdBindAccount
+         * 
+         */
+        function setThirdBindAccount (param) {
+            return publicHttp.dealPublicRequest(o.setThirdBindAccountApi, 'POST', param);
+        }
+        /**
+         * Asset Service 获取用户绑定的第三方账户
+         *
+         * @method getThirdAccountList
+         * 
+         */
+        function getThirdAccountList (param) {
+            return publicHttp.dealPublicRequest(o.getThirdAccountListApi, 'GET', param);
+        }
+        /**
+         * Asset Service 删除第三方账户
+         *
+         * @method destroyThirdAccount
+         * 
+         */
+        function destroyThirdAccount (param) {
+            return publicHttp.dealPublicRequest(o.destroyThirdAccountApi, 'POST', param);
         }
     }
 })();

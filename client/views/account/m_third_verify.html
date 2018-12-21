@@ -227,22 +227,51 @@
         </div>
     </div>
     <div class="m_third_complete">
-        <div class="m_third_complete__tit">
-            <span class="icon">
-                <img src="/images/icon-right.png">
-            </span>
-            <span class="tip">用户注册成功</span>
+        <div class="m_third_card__tip">
+            <%=lang.text('third_address_1')%>
         </div>
-        <div class="m_third_complete__id">
-            MT4账号：<span>xxx</span>
+        <div class="m_third_complete__tip mg-tp-10">
+            <p><%=lang.text('third_address_2')%></p>
+            <p><%=lang.text('third_address_3')%></p>
+            <p><%=lang.text('third_address_4')%></p>
+            <p><%=lang.text('third_address_5')%></p>
+            <p><%=lang.text('third_address_6')%></p>
         </div>
-        <div class="m_third_complete__server">
-            MT4服务器：<span>TigerWit-Live</span>服务器
+        <div class="m_third_card__pic">
+            <div class="img address">
+                
+            </div>
+            <form class="form">
+                <input type="file" data-page="address" name="file" accept="image/*" />
+            </form>
+
+            <div class="plus"></div>
+            <div class="tip"></div>
+        </div>
+        <div class="m_third_card__eg">
+            <p class="tit"><%=lang.text('third_cardEgTitle')%></p>
+            <ul class="clearfix">
+                <li class="item fl text-center">
+                    <img src="/white_label/icons/authen-address-1.png" alt="">
+                    <p><%=lang.text('third_cardEgTip1')%></p>
+                </li>
+                <li class="item fl text-center">
+                    <img src="/white_label/icons/authen-address-2.png" alt="">
+                    <p><%=lang.text('third_cardEgTip2')%></p>
+                </li>
+                <li class="item fl text-center">
+                    <img src="/white_label/icons/authen-address-3.png" alt="">
+                    <p><%=lang.text('third_cardEgTip3')%></p>
+                </li>
+                <li class="item fl text-center">
+                    <img src="/white_label/icons/authen-address-4.png" alt="">
+                    <p><%=lang.text('third_cardEgTip4')%></p>
+                </li>
+            </ul>
         </div>
         <div class="m_third_complete__btn">
-            <p class="tip">请牢记您的账号和密码，用于登陆MT4客户端</p>
             <button class="btn btn-primary">
-                完成
+                <%=lang.text('third_submit')%>
             </button>
         </div>
     </div>
@@ -302,7 +331,7 @@
 <script id="template_country_info" type="text/html">
     <option value=""><%=lang.text('third_select')%></option>
     <$for(var i=0;i<data.length;i++){$>
-    <option value="<$= data[i].code$>"><% if (!lang.isEnglishArea()) {%><$= data[i].name_cn$><%} else {%><$= data[i].name_en$><%}%></option>
+    <option value="<$= data[i].code$>"><$= data[i].name$></option>
     <$}$>
 </script>
 <script id="template_card_info" type="text/html">

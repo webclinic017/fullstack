@@ -23,9 +23,14 @@ $(".third_app_bank__item select").on("change", function () {
 });
 $(".third_app_bank__item select[name=city]").on("tap", function () {
   if (!$(".third_app_bank__item select[name=province]").val()) {
-    openMessageMdl('请选择您的开户省');
+    openMessageMdl(thirdH5.selectAccountPro);
     return false;
   }
+});
+
+$("#third_app_bank_cancel").on("tap", function () {
+  window.location.href="/m/third/asset";
+  return false;
 });
 
 $("#third_app_bank_btn").on("tap", function () {
@@ -36,27 +41,27 @@ $("#third_app_bank_btn").on("tap", function () {
   var address = $(".third_app_bank__item input[name=address]").val();
   var phone = $(".third_app_bank__item input[name=phone]").val();
   if (!card) {
-    openMessageMdl('请填写银行卡号');
+    openMessageMdl(thirdH5.enterCardNumber);
     return false;
   }
   if (!bank_name) {
-    openMessageMdl('请选择您的银行名称');
+    openMessageMdl(thirdH5.enterBankName);
     return false;
   }
   if (!province) {
-    openMessageMdl('请选择您的开户省');
+    openMessageMdl(thirdH5.selectAccountPro);
     return false;
   }
   if (!city) {
-    openMessageMdl('请选择您的开户市');
+    openMessageMdl(thirdH5.selectAccountCity);
     return false;
   }
   if (!address) {
-    openMessageMdl('请填写支行名称');
+    openMessageMdl(thirdH5.enterBranchBankName);
     return false;
   }
   if (!phone) {
-    openMessageMdl('请填写银行卡预留手机号');
+    openMessageMdl(thirdH5.enterReservedPhoneNumber);
     return false;
   }
   // console.log(card, bank_name, province, city, address, phone);
@@ -72,13 +77,14 @@ $("#third_app_bank_btn").on("tap", function () {
   }).then(function (data) {
     closeAllMdl();
     if (!data) return;
-    if (!data.is_succ) {
-      openMessageMdl('添加成功');
+    if (data.is_succ) {
+      openMessageMdl(thirdH5.addSuccess);
       setTimeout(function () {
-        console.log('backPrev');
-        openThirdNative({
-          type: "backPrev"
-        });
+        // console.log('backPrev');
+        // openThirdNative({
+        //   type: "backPrev"
+        // });
+        window.location.href="/m/third/asset";
       }, 1000);
     } else {
       openMessageMdl(data.message);

@@ -54,7 +54,27 @@
     <div class="tw-space-layout__con">
         <div class="tw-space-layout__con-info">
             <div class="logout"> 
-                <span ng-click="main.thirdLogout()" title="退出登录"><i class="fa fa-sign-out"></i> 退出</span>
+                <div class="account_login__switch_lang relative">
+                    <div class="lang-toggle">
+                        {{ lang.text("footlang") }}
+                        <i class="fa fa-sort-down"></i>
+                    </div>
+                    <ul class="lang-menu">
+                        <li>
+                            <a href="" ng-click="lang.reloadLanguage('en')">English</a>
+                        </li>
+                        <li>
+                            <a href="" ng-click="lang.reloadLanguage('cn')">简体中文</a>
+                        </li>
+                        <li>
+                            <a href="" ng-click="lang.reloadLanguage('vi')">Tiếng Việt</a>
+                        </li>
+                        <li>
+                            <a href="" ng-click="lang.reloadLanguage('zh-Hant')">繁體中文</a>
+                        </li>
+                    </ul>
+                </div>
+                <span ng-click="main.thirdLogout()" title="{{lang.text('tigerWitID.signOut')}}"><i class="fa fa-sign-out"></i> {{lang.text('tigerWitID.myAccount.exit')}}</span>
             </div>
             <div class="info_box">
                 <!-- <div class="info_box__avatar">
@@ -67,7 +87,7 @@
                             {{ main.accountStatus == 1 ? main.trade_account.mt4_id : '-' }}
                         </div>
                         <div class="item__text">
-                            <span>MT4账户</span>
+                            <span>{{lang.text('tigerWitID.login.mt4Account')}}</span>
                         </div>
                     </li>
                     <li>
@@ -75,7 +95,7 @@
                             {{ main.accountStatus == 1 ? main.trade_balance : '-' }}
                         </div>
                         <div class="item__text">
-                            <span>账户余额</span>
+                            <span>{{lang.text('tigerWitID.tradingAccount.accountBalance')}}</span>
                         </div>
                     </li>
                     <li>
@@ -83,7 +103,7 @@
                             {{ main.accountStatus == 1 ? main.wallet_balance : '-' }}
                         </div>
                         <div class="item__text">
-                            <span>钱包账户</span>
+                            <span>{{lang.text('tigerWitID.wallet.walletBalance')}}</span>
                         </div>
                     </li>
                 </ul>
@@ -94,36 +114,52 @@
                 <div class="space_nav">
                     <ul class="space_nav__box">
                         <li class="space_nav__box-item" ng-class="{'active': main.pageCtrl == 'deposit'}">
-                            <a ng-click="main.switchPage('deposit')">充值</a>
+                            <a ng-click="main.switchPage('deposit')">{{lang.text('tigerWitID.depositWithdrawal.deposit')}}</a>
                         </li>
                         <li class="space_nav__box-item" ng-class="{'active': main.pageCtrl == 'withdraw'}">
-                            <a ng-click="main.switchPage('withdraw')">提现</a>
+                            <a ng-click="main.switchPage('withdraw')">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</a>
                         </li>
                         <li class="space_nav__box-item" ng-class="{'active': main.pageCtrl == 'record'}">
-                            <a ng-click="main.switchPage('record')">资金记录</a>
+                            <a ng-click="main.switchPage('record')">{{lang.text('tigerWitID.fundRecords.title')}}</a>
                         </li>
                         <li class="space_nav__box-item" ng-class="{'active': main.pageCtrl == 'evidence'}">
-                            <a ng-click="main.switchPage('evidence')">凭证记录</a>
+                            <a ng-click="main.switchPage('evidence')">{{lang.text('tigerWitID.depositWithdrawal.voucher')}}</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="tw-space-layout__con-content">
-            <div class="content-view" ng-if="main.pageCtrl == 'deposit'">
-                <div ng-include="'/views/third/asset/deposit.html'"></div>
-            </div>
-            <div class="content-view" ng-if="main.pageCtrl == 'withdraw'">
-                <div ng-include="'/views/third/asset/withdraw.html'"></div>
-            </div>
-            <div class="content-view relative" ng-if="main.pageCtrl == 'record'">
-                <div ng-include="'/views/third/asset/record.html'"></div>
-            </div>
-            <div class="content-view relative" ng-if="main.pageCtrl == 'evidence'">
-                <div ng-include="'/views/third/asset/evidence.html'"></div>
-            </div>
-            <div class="content-view relative" ng-if="main.pageCtrl == 'wallet'">
-                <div ng-include="'/views/third/asset/wallet_record.html'"></div>
+        <div class="tw-space-layout__con-content" ng-controller="AssetIndexController">
+            <div ng-controller="CommonAccountxController">
+                <div class="content-view" ng-if="main.pageCtrl == 'deposit'">
+                    <div class="space_block" ng-controller="AssetDepositController">
+                        <div ng-include="'/views/third/asset/common_account.html'" ng-show="!walletDepositSucc && !teleDepositSucc"></div>
+                        <div class="mg-tp-40" ng-include="'/views/asset/deposit.html'"></div>
+                    </div>
+                </div>
+                <div class="content-view" ng-if="main.pageCtrl == 'withdraw'">
+                    <div class="space_block" ng-controller="AssetWithdrawController">
+                        <div ng-include="'/views/third/asset/common_account.html'"></div>
+                        <div class="mg-tp-40" ng-include="'/views/asset/withdraw.html'"></div>
+                    </div>
+                </div>
+                <div class="content-view relative" ng-if="main.pageCtrl == 'record'">
+                    <div ng-controller="InvestRecordController">
+                        <div tw-loading-img></div>
+                        <div ng-include="'/views/invest/record.html'"></div>
+                    </div>
+                </div>
+                <div class="content-view relative" ng-if="main.pageCtrl == 'evidence'">
+                    <div ng-controller="AssetEvidenceController">
+                        <div ng-include="'/views/asset/evidence.html'"></div>
+                    </div>
+                </div>
+                <div class="content-view relative" ng-if="main.pageCtrl == 'wallet'">
+                    <div ng-controller="WalletSummaryController">
+                        <div tw-loading-img></div>
+                        <div ng-include="'/views/wallet/summary.html'"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

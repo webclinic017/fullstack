@@ -26,9 +26,10 @@
                 templateUrl: '/views/template/$layer_modal.html',
                 size: params.size || 'sm',
                 backdrop: true,
-                controller: ['$scope', '$modalInstance',function ($scope, $modalInstance) {
+                controller: ['$scope', '$modalInstance', 'lang', function ($scope, $modalInstance, lang) {
                     // 绑定参数
                     angular.extend($scope, params)
+                    $scope.lang = lang;
                     //$scope.loading = 0;   0 未loading；1 正在loading；2 loading完毕
                     $scope.loading = 0;
                     $scope.handler = function (value) {

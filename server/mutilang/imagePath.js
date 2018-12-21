@@ -26,16 +26,16 @@
         "zh-Hant": indexBasePath + "/basic_logo_tiger_white.png"
     },
     homeFocusCn: {
-        en: indexBasePath + "/home/focus-cnEn.png",
-        zh: indexBasePath + "/home/focus-cnCn.png",
-        vi: indexBasePath + "/home/focus-globalVi.png",
-        "zh-Hant": indexBasePath + "/home/focus-globalZhHant.png"
+        en: indexBasePath + "/home/focus-cnEn-1.0.png",
+        zh: indexBasePath + "/home/focus-cnCn-1.0.png",
+        vi: indexBasePath + "/home/focus-globalVi-1.0.png",
+        "zh-Hant": indexBasePath + "/home/focus-globalZhHant-1.0.png"
     },
     homeFocusGlobal: {
-        en: indexBasePath + "/home/focus-globalEn.png",
-        zh: indexBasePath + "/home/focus-globalCn.png",
-        vi: indexBasePath + "/home/focus-globalVi.png",
-        "zh-Hant": indexBasePath + "/home/focus-globalZhHant.png"
+        en: indexBasePath + "/home/focus-globalEn-1.0.png",
+        zh: indexBasePath + "/home/focus-globalCn-1.0.png",
+        vi: indexBasePath + "/home/focus-globalVi-1.0.png",
+        "zh-Hant": indexBasePath + "/home/focus-globalZhHant-1.0.png"
     },
     homeAppIos: {
         en: indexBasePath + "/home/focus-icon-ios-en.png",

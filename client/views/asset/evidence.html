@@ -30,8 +30,11 @@
               {{lang.text('tigerWitID.depositWithdrawal.tip40')}}<br>
               {{lang.text('tigerWitID.depositWithdrawal.tip41')}}
           </p>
-          <div class="desc" ng-if="personal.region.world_code == 'CN'">
-            <a href="/web/deposit/evidence" target="_blank">{{lang.text('tigerWitID.depositWithdrawal.vouchersInstance')}}</a>
+          <div class="desc" ng-if="lang.isThird() && main.region.world_code == 'CN'">
+              <a href="/payment/evidence" target="_blank">{{lang.text('tigerWitID.depositWithdrawal.vouchersInstance')}}</a>
+          </div>
+          <div class="desc" ng-if="!lang.isThird() && personal.region.world_code == 'CN'">
+              <a href="/web/deposit/evidence" target="_blank">{{lang.text('tigerWitID.depositWithdrawal.vouchersInstance')}}</a>
           </div>
         </div>        
         <ul class="asset_evidence__content-lst">
@@ -58,11 +61,11 @@
                 </div>
               </div>
               <div class="fr">
-                  <button ng-if="!evidence.files.length" class="tw-btn tw-btn-capsule-gradient">
+                  <button ng-if="!evidence.files.length" class="tw-btn tw-btn-sm130 tw-btn-capsule-gradient relative">
                       {{lang.text('tigerWitID.depositWithdrawal.uploadVoucher')}}
                     <div tw-upload-file-base64 data-file-name="evidence.files[0]"></div>
                   </button>
-                  <button ng-if="evidence.files.length" class="tw-btn tw-btn-capsule-bordered" ng-click="uploadEvidence(evidence, $index)">
+                  <button ng-if="evidence.files.length" class="tw-btn tw-btn-sm130 tw-btn-capsule-bordered" ng-click="uploadEvidence(evidence, $index)">
                     {{lang.text('tigerWitID.depositWithdrawal.submitAudition')}}  
                   </button>
               </div>
