@@ -670,8 +670,8 @@
             return publicHttp.dealPublicRequest(o.setUploadAddressProveApi, 'post', params);
         }
         //获取邮箱电话等信息
-        function getEmailPhone () {
-            return publicHttp.dealPublicRequest(o.getEmailPhone, 'GET');
+        function getEmailPhone (params) {
+            return publicHttp.dealPublicRequest(o.getEmailPhone, 'GET', params);
         }
     }
 })();

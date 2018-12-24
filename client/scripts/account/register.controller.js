@@ -225,6 +225,7 @@
                         if (user_id) {
                             sa.login(user_id);
                         }
+                        $scope.getEmailPhone(true);
                     }, 100);
                     $timeout(function () {
                         sa.track('login', {

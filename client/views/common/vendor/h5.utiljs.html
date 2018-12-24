@@ -51,9 +51,14 @@
     }
 
     //设置邮箱
-    function getEmailPhone (ele) {
+    function getEmailPhone (ele, emailOrPhone) {
+        //emailOrPhone 默认邮箱
         if ($.cookie('sysMessage')) {
-            $(ele).html(JSON.parse($.cookie('sysMessage')).email);
+            if (emailOrPhone && emailOrPhone == 'phone') {
+                $(ele).html(JSON.parse($.cookie('sysMessage')).phone_list[0].phone);
+            } else {
+                $(ele).html(JSON.parse($.cookie('sysMessage')).email_list[0].email);
+            }
         } else {
             var d = new Date();
             d.setTime(d.getTime() + (1*24*60*60*1000));
@@ -61,7 +66,11 @@
                 // console.log(data);
                 if (!data) return;
                 if (data.is_succ) {
-                  $(ele).html(data.data.email);
+                    if (emailOrPhone && emailOrPhone == 'phone') {
+                        $(ele).html(data.data.phone_list[0].phone);
+                    } else {
+                        $(ele).html(data.data.email_list[0].email);
+                    }
                   document.cookie = 'sysMessage=' + JSON.stringify(data.data) + '; path=/; domain=.tigerwit.com; expires='+d.toUTCString();
                 }
             });

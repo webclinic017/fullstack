@@ -83,13 +83,13 @@
                     <ul>
                         <li class="mg-bt-15">
                             <h3>
-                                <a class="font-dark" ng-href='mailto:{{sysMessage.email}}'>
-                                    &nbsp;{{sysMessage.email}}
+                                <a class="font-dark" ng-href='mailto:{{sysMessage.email_list[0].email}}'>
+                                    &nbsp;{{sysMessage.email_list[0].email}}
                                 </a>
                             </h3>
                             <h3>
-                                <a class="font-dark">
-                                    &nbsp;{{sysMessage.phone}}
+                                <a class="font-dark" ng-href='tel:{{sysMessage.phone_list[0].phone}}'>
+                                    {{sysMessage.phone_list[0].phone}}
                                 </a>
                             </h3>
                         </li>
@@ -99,8 +99,15 @@
                     <div class="contact-us pd-tp-5">
                         <div class="">
                             <p>
-                                <a class="font-dark" ng-href='mailto:{{sysMessage.email}}'>
-                                    {{sysMessage.email}}
+                                <a class="font-dark" ng-href='mailto:{{sysMessage.email_list[0].email}}'>
+                                    {{sysMessage.email_list[0].email}}
+                                </a>
+                            </p>
+                        </div>
+                        <div class="pd-tp-5">
+                            <p>
+                                <a class="font-dark" ng-href='tel:{{sysMessage.phone_list[0].phone}}'>
+                                    {{sysMessage.phone_list[0].phone}}
                                 </a>
                             </p>
                         </div>
