@@ -240,7 +240,7 @@
             }
         })
         function getEmailPhone(force_update) {
-            force_update = true;    //上线时去掉
+            // force_update = true;    //上线时去掉
             // console.log($cookies["sysMessage"]);
             if (!force_update && $cookies["sysMessage"]) {
                 $rootScope.sysMessage = JSON.parse($cookies["sysMessage"]);
