@@ -26,1426 +26,1546 @@ module.exports = function () {
             en:"TigerWit",
             vi:"TigerWit",
             "zh-Hant":"小老虎",
-            id:"__id__"
+            id:"TigerWit"
         },
         companyZhName:{
             zh:"TigerWit",
             en:"TigerWit",
             vi:"TigerWit",
             "zh-Hant":"TigerWit",
-            id:"__id__"
+            id:"TigerWit"
         },
         companyEnName:{
             zh:"TigerWit",
             en:"TigerWit",
             vi:"TigerWit",
             "zh-Hant":"TigerWit",
-            id:"__id__"
+            id:"TigerWit"
         },
         title:{
             zh:"TigerWit",
             en:"TigerWit",
             vi:"TigerWit",
             "zh-Hant":"TigerWit",
-            id:"__id__"
+            id:"TigerWit"
         },
         supportEmail:{
             zh:"support@tigerwit.com",
             en:"support@tigerwit.com",
             vi:"support@tigerwit.com",
             "zh-Hant":"support@tigerwit.com",
-            id:"__id__"
+            id:"support@tigerwit.com"
         },
         ibEmail:{
             zh:"support@tigerwit.com",
             en:"support@tigerwit.com",
             vi:"support@tigerwit.com",
             "zh-Hant":"support@tigerwit.com",
-            id:"__id__"
+            id:"support@tigerwit.com"
         },
         telephone:{
             zh:"400-809-8509",
             en:"400-809-8509",
             vi:"400-809-8509",
             "zh-Hant":"400-809-8509",
-            id:"__id__"
+            id:"400-809-8509"
         },
         webSite:{
             zh:"www.tigerwit.com",
             en:"www.tigerwit.com",
             vi:"www.tigerwit.com",
             "zh-Hant":"www.tigerwit.com",
-            id:"__id__"
+            id:"www.tigerwit.com"
         },
         webMt4Download:{
             zh:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
             en:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
             vi:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
             "zh-Hant":"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe",
-            id:"__id__"
+            id:"https://download.mql5.com/cdn/web/tiger.wit.group/mt4/tigerwit4setup.exe"
         },
         androidApp: {
             zh: versionAndroidApp,
             en: versionAndroidApp,
             vi: versionAndroidApp,
-            "zh-Hant": versionAndroidApp
+            "zh-Hant": versionAndroidApp,
+            "id": versionAndroidApp
         },
         download:{
             zh:"http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
             en:"http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
             vi:"http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
             "zh-Hant":"http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex",
-            id:"__id__"
+            id:"http://android.myapp.com/myapp/detail.htm?apkName=com.tigerwit.forex"
         },
         downloadGlobalIos:{
             zh:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
             en:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
             vi:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
             "zh-Hant":"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
-            id:"__id__"
+            id:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton"
         },
         downloadGlobalAndroid:{
             zh:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
             en:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
             vi:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
             "zh-Hant":"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
-            id:"__id__"
+            id:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex"
         },
         fuzhirenshu:{
             en:"Copiers",
             zh:"复制人数",
             vi:"Những người sao chép",
             "zh-Hant":"復制人數",
-            id:"__id__"
+            id:"Pengikut"
         },
         waihui:{
             en:"Forex",
             zh:"外汇",
             vi:"Sàn giao dịch Forex",
             "zh-Hant":"外匯",
-            id:"__id__"
+            id:"Valas"
         },
         guijinshu:{
             en:"Precious metal",
             zh:"贵金属",
             vi:"Kim loại quý",
             "zh-Hant":"貴金屬",
-            id:"__id__"
+            id:"Logam Mulia"
         },
         nengyuan:{
             en:"Energy",
             zh:"能源",
             vi:"Năng lượng",
             "zh-Hant":"能源",
-            id:"__id__"
+            id:"Energi"
         },
         CFD:{
             en:"CFD",
             zh:"差价合约",
             vi:"CFD",
             "zh-Hant":"差價合約",
-            id:"__id__"
+            id:"CFD"
         },
         faq:{
             en:"FAQ",
             zh:"常见问题",
             vi:"Câu hỏi thường gặp",
             "zh-Hant":"常見問題",
-            id:"__id__"
+            id:"FAQ"
         },
         login:{
             en:"Login",
             zh:"登录",
             vi:"Đăng nhập",
             "zh-Hant":"登錄",
-            id:"__id__"
+            id:"Masuk"
         },
         register:{
             en:"Open an account",
             zh:"注册",
             vi:"Mở tài khoản",
             "zh-Hant":"註冊",
-            id:"__id__"
+            id:"Buka Akun"
         },
         signout:{
             en:"sign out",
             zh:"退出",
             vi:"Thoát ra",
             "zh-Hant":"退出",
-            id:"__id__"
+            id:"Keluar"
         },
         password:{
             en:"Password",
             zh:"密码",
             vi:"Mật khẩu",
             "zh-Hant":"密碼",
-            id:"__id__"
+            id:"Kata Sandi"
         },
         username:{
             en:"Username",
             zh:"昵称",
             vi:"Tên người dùng",
             "zh-Hant":"昵稱",
-            id:"__id__"
+            id:"Nama Pengguna"
         },
         phone:{
             en:"Phone",
             zh:"手机号码",
             vi:"Điện thoại",
             "zh-Hant":"手機號碼",
-            id:"__id__"
+            id:"Telepon"
         },
         email:{
             en:"E-mail",
             zh:"电子邮箱",
             vi:"E-mail",
             "zh-Hant":"電子郵箱",
-            id:"__id__"
+            id:"mail"
         },
         verifycode:{
             en:"Verification code",
             zh:"验证码",
             vi:"Mã xác nhận",
             "zh-Hant":"驗證碼",
-            id:"__id__"
+            id:"Kode Verifikasi"
         },
         openAccount:{
             en:"Opening an account",
             zh:"开立账户",
             vi:"Mở một tài khoản",
             "zh-Hant":"開立賬戶",
-            id:"__id__"
+            id:"Pembukaan Akun"
         },
         depAndWith:{
             en:"Deposit and withdrawal",
             zh:"出入金",
             vi:"Nạp và rút tiền",
             "zh-Hant":"出入金",
-            id:"__id__"
+            id:"Setor dan Tarik"
         },
         trading:{
             en:"Trading",
             zh:"交易",
             vi:"Giao dịch",
             "zh-Hant":"交易",
-            id:"__id__"
+            id:"Transaksi"
         },
         platform:{
             en:"Platform",
             zh:"平台",
             vi:"Sân ga",
             "zh-Hant":"平臺",
-            id:"__id__"
+            id:"Platform"
         },
         swapRate:{
             en:"Swaps",
             zh:"隔夜利息",
             vi:"Phí qua đêm",
             "zh-Hant":"隔夜利息",
-            id:"__id__"
+            id:"Swap"
         },
         nodata:{
             en:"No data",
             zh:"暂无数据",
             vi:"Không có dữ liệu",
             "zh-Hant":"暫無數據",
-            id:"__id__"
+            id:"Data tidak tersedia"
         },
         more:{
             en:"Click for More",
             zh:"点击查看更多信息",
             vi:"Nhấp để biết chi tiết",
             "zh-Hant":"點擊查看更多信息",
-            id:"__id__"
+            id:"Klik untuk lebih lanjut"
         },
         fold:{
             en:"Fold",
             zh:"收起",
             vi:"Gặp lại",
             "zh-Hant":"收起",
-            id:"__id__"
+            id:"Kelipatan"
         },
         navbar1:{
             en:"Home",
             zh:"首页",
             vi:"Home",
             "zh-Hant":"首頁",
-            id:"__id__"
+            id:"Beranda"
         },
         navbar2:{
             en:"Copy trading",
             zh:"复制跟单",
             vi:"Copy giao dịch",
             "zh-Hant":"復制跟單",
-            id:"__id__"
+            id:"Copy Trading"
         },
         navbar3:{
             en:"Follow a Master",
             zh:"高手跟单",
             vi:"Sao chép Bậc thầy",
             "zh-Hant":"高手跟單",
-            id:"__id__"
+            id:"Ikuti seorang Master"
         },
         navbar4:{
             en:"Follow masters' move regularly",
             zh:"定期跟单",
             vi:"Follow masters' move regularly",
             "zh-Hant":"定期跟單",
-            id:"__id__"
+            id:"Ikuti transaksi master secara teratur"
         },
         navbar5:{
             en:"Products",
             zh:"产品介绍",
             vi:"Sản phẩm",
             "zh-Hant":"產品介紹",
-            id:"__id__"
+            id:"Produk"
         },
         navbar6:{
             en:"Foreign Exchange",
             zh:"外汇交易",
             vi:"Ngoại hối",
             "zh-Hant":"外匯交易",
-            id:"__id__"
+            id:"Valuta Asing"
         },
         navbar7:{
             en:"Crude Oil",
             zh:"原油交易",
             vi:"Dầu thô",
             "zh-Hant":"原油交易",
-            id:"__id__"
+            id:"Minyak Mentah"
         },
         navbar8:{
             en:"Precious Metals",
             zh:"贵金属交易",
             vi:"Kim loại quý",
             "zh-Hant":"貴金屬交易",
-            id:"__id__"
+            id:"Logam Mulia"
         },
         navbar9:{
             en:"Contracts for Difference",
             zh:"指数差价合约",
             vi:"Hợp đồng chênh lệch",
             "zh-Hant":"指數差價合約",
-            id:"__id__"
+            id:"Contracts for Difference"
         },
         navbar10:{
             en:"About us",
             zh:"关于TigerWit",
             vi:"Chúng tôi",
             "zh-Hant":"關於TigerWit",
-            id:"__id__"
+            id:"Tentang Kami"
         },
         navbar11:{
             en:"About TigerWit",
             zh:"关于TigerWit",
             vi:"Về TigerWit",
             "zh-Hant":"關於TigerWit",
-            id:"__id__"
+            id:"Tentang TigerWit"
         },
         navbar11_f:{
             en:"Company information",
             zh:"关于TigerWit",
             vi:"Về TigerWit",
             "zh-Hant":"關於TigerWit",
-            id:"__id__"
+            id:"Informasi Perusahaan"
         },
         navbar16:{
             en:"App",
             zh:"下载APP",
             vi:"App",
             "zh-Hant":"下載APP",
-            id:"__id__"
+            id:"App"
         },
         navbar_setCookie1:{
             en:"How we use cookies",
             zh:"我们如何使用cookies",
             vi:"Cách chúng tôi sử dụng Cookies",
             "zh-Hant":"我們如何使用cookies",
-            id:"__id__"
+            id:"Bagaimana cara kami menggunakan cookie"
         },
         navbar_setCookie2:{
             en:"We use cookies for a number of reasons, such as keeping TigerWit sites reliable and secure, personalising content and ads, providing social media features and to analyse how our sites are used. See our ",
             zh:"我们使用网站功能所需的cookie，增强TigerWit官网的可靠性和安全性、展示个性化的内容和广告、提供社交媒体功能以及分析我们网站的使用方式。请参阅我们的",
             vi:"Chúng tôi sử dụng cookie vì một số lý do, chẳng hạn như giữ các trang TigerWit đáng tin cậy và bảo mật, cá nhân hóa nội dung và quảng cáo, cung cấp các tính năng truyền thông xã hội và phân tích cách trang web của chúng tôi được sử dụng ",
             "zh-Hant":"我們使用網站功能所需的cookie，增強TigerWit官網的可靠性和安全性、展示個性化的內容和廣告、提供社交媒體功能以及分析我們網站的使用方式。請參閱我們的",
-            id:"__id__"
+            id:"Kami menggunakan cookie dengan berbagai alasan, seperti menjaga situs TigerWit tetap aman dan dapat dipercaya, menyesuaikan konten dan iklan, menyediakan fitur sosial media dan menganalisa bagaimana situs kami digunakan. Lihat…"
         },
         navbar_setCookie3:{
             en:"Cookie Policy",
             zh:"Cookie政策",
             vi:"Chính sách Cookies",
             "zh-Hant":"Cookie政策",
-            id:"__id__"
+            id:"Kebijakan Cookie"
         },
         navbar_setCookie4:{
             en:" for more details",
             zh:"了解更多详情",
             vi:" nhiều chi tiết hơn",
             "zh-Hant":"了解更多詳情",
-            id:"__id__"
+            id:"Untuk lebih jelasnya"
         },
         navbar_setCookie5:{
             en:"ACCEPT AND CONTINUE",
             zh:"接受并继续",
             vi:"Chấp nhận và tiếp tục",
             "zh-Hant":"接受並繼續",
-            id:"__id__"
+            id:"Terima dan Lanjutkan"
         },
         foot1:{
             en:"Trading software",
             zh:"交易工具",
             vi:"Phần mềm giao dịch",
             "zh-Hant":"交易工具",
-            id:"__id__"
+            id:"Platform Trading"
         },
         foot2:{
             en:"MT4 download",
             zh:"MT4 下载",
             vi:"Tải xuống MT4",
             "zh-Hant":"MT4 下載",
-            id:"__id__"
+            id:"Unduh MT4"
         },
         foot3:{
             en:"MT4 web version",
             zh:"MT4 网页版",
             vi:"Phiên bản MT4 web",
             "zh-Hant":"MT4 網頁版",
-            id:"__id__"
+            id:"MT4 versi situs web"
         },
         foot4:{
             en:"Learning center",
             zh:"学习中心",
             vi:"Hướng dẫn",
             "zh-Hant":"學習中心",
-            id:"__id__"
+            id:"Pusat Edukasi"
         },
         foot7:{
             en:"Important information",
             zh:"条件和条款",
             vi:"Thông tin quan trọng",
             "zh-Hant":"條件和條款",
-            id:"__id__"
+            id:"Informasi Penting"
         },
         foot8:{
             en:"Risk Disclosure Statement",
             zh:"风险披露书",
             vi:"^^-^^",
             "zh-Hant":"風險披露書",
-            id:"__id__"
+            id:"Pernyataan Pemberitahuan Risiko"
         },
         foot9:{
             en:"Declaration by Client",
             zh:"客户声明",
             vi:"^^-^^",
             "zh-Hant":"客戶聲明",
-            id:"__id__"
+            id:"Penyataan Klien"
         },
         foot10:{
             en:"User Instructions",
             zh:"用户交易须知",
             vi:"^^-^^",
             "zh-Hant":"用戶交易須知",
-            id:"__id__"
+            id:"Instruksi Pengguna"
         },
         foot11:{
             en:"Contact us",
             zh:"联系我们",
             vi:"Liên hệ chúng tôi",
             "zh-Hant":"聯系我們",
-            id:"__id__"
+            id:"Hubungi Kami"
         },
         foot14:{
             en:"Support documents",
             zh:"帮助文档",
             vi:"Tài liệu hỗ trợ",
             "zh-Hant":"幫助文檔",
-            id:"__id__"
+            id:"Dokumen pendukung"
         },
         foot15:{
             en:"Trade fees",
             zh:"交易费用",
             vi:"Phí giao dịch",
             "zh-Hant":"交易費用",
-            id:"__id__"
+            id:"Biaya transaksi"
         },
         footlang:{
             en:"English",
             zh:"简体中文",
             vi:"Tiếng Việt",
             "zh-Hant":"繁體中文",
-            id:"__id__"
+            id:"Bahasa Inggris"
         },
         foot_38:{
             zh:"风险警告：",
             en:"Risk Warning: ",
             vi:"Cảnh báo rủi ro:",
             "zh-Hant":"風險警告：",
-            id:"__id__"
+            id:"Peringatan Resiko: "
         },
         foot_39_1:{
             zh:"差价合约交易涉及风险，可能导致你的资本损失。TigerWit有限公司(巴哈马)由巴哈马证券委员会(SCB)监管，牌照号码SIA-F185。要访问TigerWit 有限公司(英国)的网站，请点击这里：",
             en:"Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: ",
             vi:" Giao dịch CFD liên quan đến rủi ro và có thể dẫn đến mất vốn của bạn. TigerWit Limited (Bahamas) được quản lý bởi Ủy ban Chứng khoán Bahamas (SCB), số giấy phép SIA-F185. Để truy cập trang web cho TigerWit Limited (UK), được ủy quyền và quản lý tại Vương quốc Anh bởi Cơ quan quản lý tài chính (FCA), vui lòng bấm vào đây: ",
             "zh-Hant":"差價合約交易涉及風險，可能導致妳的資本損失。TigerWit有限公司(巴哈馬)由巴哈馬證券委員會(SCB)監管，牌照號碼SIA-F185。要訪問TigerWit 有限公司(英國)的網站，請點擊這裏：",
-            id:"__id__"
+            id:"Perdagangan CFD memiliki resiko dan dapat mengakibatkan anda kehilangan modal. TigerWit Limited (Bahamas) teregulasi oleh Securities Commission of The Bahamas (SCB) dengan Nomor lisensi SIA-F185. Untuk mengakses situs TigerWit Limited (UK) yang juga telah diakui dan teregulasi oleh Financial Conduct Authority (FCA) silahkan klik: "
         },
         foot_39_2:{
             zh:"，TigerWit有限公司（英国）由英国金融市场行为监管局(FCA)授权和监管。",
             en:" ",
             vi:" ",
             "zh-Hant":"，TigerWit有限公司（英國）由英國金融市場行為監管局(FCA)授權和監管。",
-            id:"__id__"
+            id:" "
         },
         foot_42:{
             zh:"你要在线咨询",
             en:"Which kind of consultation do you need?",
             vi:"Bạn cần loại tư vấn nào?",
             "zh-Hant":"妳要在線咨詢",
-            id:"__id__"
+            id:"Konsultasi apa yang anda butuhkan?"
         },
         foot_43:{
             zh:"普通咨询",
             en:"Normal consultation",
             vi:"Tư vấn thông thường",
             "zh-Hant":"普通咨詢",
-            id:"__id__"
+            id:"Konsultasi biasa"
         },
         foot_44:{
             zh:"我是普通用户，咨询交易相关的问题",
             en:"I'm a normal user,",
             vi:"Tôi là người dùng thông thường",
             "zh-Hant":"我是普通用戶，咨詢交易相關的問題",
-            id:"__id__"
+            id:"Saya ada pengguna biasa"
         },
         foot_44_2:{
             zh:" ",
             en:"asking questions about transactions",
             vi:"Hỏi những câu hỏi về quá trình giao dịch",
             "zh-Hant":" ",
-            id:"__id__"
+            id:"Bertanya mengenai transaksi"
         },
         foot_45:{
             zh:"代理商咨询",
             en:"Agent consultation",
             vi:"Đại lý tư vấn",
             "zh-Hant":"代理商咨詢",
-            id:"__id__"
+            id:"Konsultasi Agen"
         },
         foot_46:{
             zh:"我是代理商或需要代理服务",
             en:"I’m a agent or need to consult ",
             vi:"tôi là một đại lý hoặc cần tham khảo ý kiến",
             "zh-Hant":"我是代理商或需要代理服務",
-            id:"__id__"
+            id:"Saya adalah Agen atau saya ingin konsultasi"
         },
         foot_47:{
             zh:"咨询代理相关的问题",
             en:"the proxy service related questions",
             vi:"Các câu hỏi liên quan đến dịch vụ proxy",
             "zh-Hant":"咨詢代理相關的問題",
-            id:"__id__"
+            id:"Pertanyaan terkait layanan proxy"
         },
         home64:{
             en:"Markets",
             zh:"交易产品",
             vi:"Các thị trường",
             "zh-Hant":"交易產品",
-            id:"__id__"
+            id:"Pasar"
         },
         home65:{
             en:"Sell",
             zh:"卖出价",
             vi:"Bán",
             "zh-Hant":"賣出價",
-            id:"__id__"
+            id:"Jual"
         },
         home66:{
             en:"Buy",
             zh:"买入价",
             vi:"Mua",
             "zh-Hant":"買入價",
-            id:"__id__"
+            id:"Beli"
         },
         home67:{
             en:"Prices are indicative. No quotations are updated over Saturdays and Sundays.",
             zh:"订单报价实时更新，周六日停盘无报价。",
             vi:"Các mức giá đều mang tính biểu trưng. Không có chào giá nào được đưa ra vào Thứ 7 và Chủ nhật.",
             "zh-Hant":"訂單報價實時更新，周六日停盤無報價。",
-            id:"__id__"
+            id:"Harga selalu berubah. Harga tidak akan diperbarui di hari sabtu dan minggu."
         },
         forex1:{
             en:"The Foreign Exchange Market is one of the world's largest single markets. In 2013, trading volumes reached $5.3 trillion dollars. Foreign exchange rate is mainly affected by international trade, national economy and the policy and influence of investment flows. As a result, the foreign exchange market information is more transparent, liquidity is better and there are more fair prices. Buy or sell transactions can be completed for 24 hours on weekdays. All the above advantages make Foreign Exchange Transaction deeply affected by large investment institutions and investors.",
             zh:"外汇市场是全球最大的单一市场之一。2013年交易量达5.3万亿美元。由于外汇汇率主要受国际间贸易、各国经济和政策以及投资流向的影响，所以外汇市场的信息更透明、流通性更好、价格更公平。其具有在工作日的所有24小时内双向交易的特点，深受大型投资机构和投资者的喜爱。",
             vi:"Thị trường ngoại hối là một trong những thị trường đơn lẻ lớn nhất thế giới. Trong năm 2013, khối lượng giao dịch đạt 5,3 nghìn tỷ đô la. Tỷ giá hối đoái chủ yếu bị ảnh hưởng bởi tình hình thương mại quốc tế, nền kinh tế quốc dân và chính sách và ảnh hưởng của dòng vốn đầu tư. Kết quả là, thông tin thị trường ngoại hối minh bạch hơn, thanh khoản tốt hơn và có giá hợp lý hơn. Thực hiện mua hoặc bán các giao dịch có thể được hoàn thành trong 24 giờ vào các ngày trong tuần. Tất cả những lợi thế trên làm cho giao dịch ngoại hối bị ảnh hưởng sâu sắc bởi các tổ chức đầu tư lớn và các nhà đầu tư.",
             "zh-Hant":"外匯市場是全球最大的單壹市場之壹。2013年交易量達5.3萬億美元。由於外匯匯率主要受國際間貿易、各國經濟和政策以及投資流向的影響，所以外匯市場的信息更透明、流通性更好、價格更公平。其具有在工作日的所有24小時內雙向交易的特點，深受大型投資機構和投資者的喜愛。",
-            id:"__id__"
+            id:"Pasar valuta asing merupakan pasar keuangan terbesar di dunia. Pada tahun 2013, volume transaksi mencapai 5,3 triliun dolar. Nilai tukar pada valas banyak dipengaruhi oleh perdagangan internasional, ekonomi nasional dan kebijakan-kebijakan serta arah investasi. Hasilnya, pasar valuta asing menjadi pasar dengan informasi yang paling terbuka, transparan, dan sangat likuid. Transaksi Beli dan Jual dapat dilakukan selama 24 jam pada hari kerja. Karena itulah, perdagangan valuta asing menjadi sangat dipengaruhi oleh lembaga keuangan besar dan para investor."
         },
         forex3:{
             en:"Why trade foreign exchange in TigerWit?",
             zh:"为什么选择TigerWit？",
             vi:"Tại sao giao dịch ngoại hối trong TigerWit?",
             "zh-Hant":"為什麽選擇TigerWit？",
-            id:"__id__"
+            id:"Mengapa memilih TigerWit sebagai tempat untuk bertransaksi valuta asing?"
         },
         forex4:{
             en:"TigerWit with simple, quick, efficient and safe cash depositing and withdrawal mode, TigerWit renders services of all major currency pairs and cross currency pairs. With the provision of more flexible, transparent and competitive foreign exchange agreement, TigerWit also provides a creative order following mode and serves as a bond to link investment masters and common investors.",
             zh:"TigerWit密切关注全球市场。出入金模式简单、快捷、高效、安全，涵盖所有主流货币对及交叉货币对。我们提供更灵活、更透明、更具竞争力的外汇合约，同时您还可以享受到TigerWit所提供的创新性的跟单交易模式，是连接高手和普通投资者的纽带。",
             vi:"TigerWit với chế độ rút tiền và kí quỹ đơn giản, nhanh chóng, hiệu quả và an toàn, TigerWit hiển thị các dịch vụ của tất cả các cặp tiền tệ chính và cặp tiền tệ chéo. Với việc cung cấp thỏa thuận ngoại hối linh hoạt, minh bạch và cạnh tranh hơn, TigerWit cũng mang đến bước đột phá khi đặt lệnh một cách sáng tạo theo trạng thái và đóng vai trò như một sợi dây để kết nối các bậc thầy và các nhà đầu tư phổ biến.",
             "zh-Hant":"TigerWit密切關註全球市場。出入金模式簡單、快捷、高效、安全，涵蓋所有主流貨幣對及交叉貨幣對。我們提供更靈活、更透明、更具競爭力的外匯合約，同時您還可以享受到TigerWit所提供的創新性的跟單交易模式，是連接高手和普通投資者的紐帶。",
-            id:"__id__"
+            id:"TigerWit memiliki metode penyetoran dan penarikan dana yang sederhana, cepat, efisien dan aman, selain itu TigerWit juga menyediakan berbagai pilihan mata yang yang dapat ditransaksikan. Perjanjian dan ketentuan perdagangan valuta asing di TigerWit juga sangat fleksibel, transparan dan kompetitif. Dan terobosan terbaru dari TigerWit adalah memberikan layanan yang menghubungkan antara Investor dengan seorang Master trader."
         },
         forex5:{
             en:"TigerWit's advantages in foreign exchange trading",
             zh:"在TigerWit交易外汇的优势",
             vi:"Lợi thế của TigerWit trong giao dịch ngoại hối",
             "zh-Hant":"在TigerWit交易外匯的優勢",
-            id:"__id__"
+            id:"Keunggulan bertransaksi valuta asing di TigerWit"
         },
         forex6:{
             en:"3 kinds of leverage are offered.",
             zh:"同时享受 3 种杠杆",
             vi:"3 loại đòn bẩy chúng tôi cung cấp.",
             "zh-Hant":"同時享受 3 種杠桿",
-            id:"__id__"
+            id:"Memiiliki 3 pilihan daya ungkit."
         },
         forex7:{
             en:"We provide three different kinds of leverage, 50 times, 100 times, 200 times, allowing more flexibility for risk control and cash management requirements.",
             zh:"我们同时提供 50 倍，100 倍，200 倍三种不同的杠杆，更灵活的满足您对于风险把控，资金管理的需求。",
             vi:"Chúng tôi cung cấp ba loại đòn bẩy khác nhau, 50 lần, 100 lần, 200 lần, cho phép tính linh hoạt hơn khi có các yêu cầu quản lý rủi ro và quản lý tiền mặt.",
             "zh-Hant":"我們同時提供 50 倍，100 倍，200 倍三種不同的杠桿，更靈活的滿足您對於風險把控，資金管理的需求。",
-            id:"__id__"
+            id:"Kami memiliki 3 jenis daya ungkit, yaitu 50, 100 dan 200. Yang membantu anda dalam menjaga resiko dan keuangan anda."
         },
         forex9:{
             en:"Follow masters' move",
             zh:"复制跟单交易",
             vi:"Sao chép hành động của bậc thầy",
             "zh-Hant":"復制跟單交易",
-            id:"__id__"
+            id:"Ikuti transaksi Master"
         },
         forex10:{
             en:"TigerWit provides advanced and creative full-automatic order following system and gathers numerous investment masters with great profit-making capabilities. The investors have the ability to gain the earnings of the same proportion with the masters through following them. Masters can also gain more earnings through increasing their followers continuously.",
             zh:"TigerWit提供业内最先进，最具创新性的全自动复制跟单系统，并且汇聚众多颇具盈利能力的投资高手，投资者可通过复制高手交易获得同比例投资收益。高手也可通过不断增加跟随者而获得更多收益。",
             vi:"TigerWit cung cấp hệ thống theo thứ tự hoàn toàn tiên tiến, đầy sáng tạo và tập hợp nhiều nhà đầu tư chuyên nghiệp với khả năng tạo lợi nhuận lớn. Các nhà đầu tư có khả năng để đạt được thu nhập của cùng một tỷ lệ với các nhà đầu tư chính thông qua việc Sao chép họ. Các nhà đầu tư chính cũng có thể có được nhiều thu nhập hơn thông qua việc tăng số lượng người Sao chép của họ liên tục.",
             "zh-Hant":"TigerWit提供業內最先進，最具創新性的全自動復制跟單系統，並且匯聚眾多頗具盈利能力的投資高手，投資者可通過復制高手交易獲得同比例投資收益。高手也可通過不斷增加跟隨者而獲得更多收益。",
-            id:"__id__"
+            id:"TigerWit menyediakan sistem copy-trading yang sangat mutakhir dan serba otomatis, serta menghadirkan banyak pilihan Master yang memiliki kemampuan untuk menghasilkan keuntungan. Investor dapat meraup keuntungan hanya dengan mengikuti setiap posisi Master. Sedangkan Master juga mendapat keuntungan dari jumlah pengikut yang terus bertambah."
         },
         forex13:{
             en:"Trading time",
             zh:"交易时间段",
             vi:"Thời gian giao dịch",
             "zh-Hant":"交易時間段",
-            id:"__id__"
+            id:"Waktu transaksi"
         },
         forex14:{
             en:"TigerWit offers global trading and also provides financial services for clients continuously except the necessary inter-bank maintenance period per day.",
             zh:"TigerWit提供全球交易，除去每日必要的银行间维护时段，不间断的为我们的客户提供金融服务。",
             vi:"TigerWit cung cấp giao dịch toàn cầu và cũng cung cấp các dịch vụ tài chính cho khách hàng liên tục trừ thời gian bảo trì liên ngân hàng cần thiết mỗi ngày.",
             "zh-Hant":"TigerWit提供全球交易，除去每日必要的銀行間維護時段，不間斷的為我們的客戶提供金融服務。",
-            id:"__id__"
+            id:"Setiap hari TigerWit aktif memberikan layanan transaksi keuangan global kepada klien, kecuali pada hari dimana ada penutupan layanan perbankan di negara tertentu."
         },
         forex15:{
             en:"How to achieve foreign exchange trade in TigerWit?",
             zh:"在TigerWit怎么做外汇交易?",
             vi:"Làm thế nào để đạt được giao dịch ngoại hối trong TigerWit?",
             "zh-Hant":"在TigerWit怎麽做外匯交易?",
-            id:"__id__"
+            id:"Bagaimana cara kerja transaksi valuta asing di TigerWit?"
         },
         forex16:{
             en:"An investor of TigerWit sold one lot (eur/usd) around 10:00 on October 22, platform time of TigerWit at the position of 1.13450 by USD1000. ",
             zh:"某位TigerWit的投资者在TigerWit的平台时间 10 月 22 号 10 点左右，于 1.13450 位置左右动用 1000 美金卖出 1 手欧美（eur/usd）。",
             vi:"Một nhà đầu tư của TigerWit đã bán một lot (€ / usd) vào khoảng 10:00 ngày 22 tháng 10, thời gian nền tảng của TigerWit ở lệnh 1.13450 USD1000.",
             "zh-Hant":"某位TigerWit的投資者在TigerWit的平臺時間 10 月 22 號 10 點左右，於 1.13450 位置左右動用 1000 美金賣出 1 手歐美（eur/usd）。",
-            id:"__id__"
+            id:"Seorang investor di TigerWit membuka posisi Jual pada mata uang EUR/USD sebesar 1 lot pada tanggal 22 oktober, jam 10:00. Pada jam tersebut platform TigerWit menunjukkan harga 1.13450 dengan saldo 1000 $."
         },
         forex17:{
             en:"On the second day, the trade was closed at the position of 1.1100 around 10:00 on October 23. ",
             zh:"到了第二日，10 月 23 日 10 点左右，于 1.1100 位置平仓了结，",
-            vi:"Vào ngày thứ hai, giao dịch đóng cửa ở mức 1.1100 vào khoảng 10:00 ngày 23 tháng 10. Thu nhập của khách hàng là (1.13450-1.1100) * 100000 = USD2450, tỷ lệ lợi nhuận là 245%.",
+            vi:"Vào ngày thứ hai, giao dịch đóng cửa ở mức 1.1100 vào khoảng 10:00 ngày 23 tháng 10.",
             "zh-Hant":"到了第二日，10 月 23 日 10 點左右，於 1.1100 位置平倉了結，",
-            id:"__id__"
+            id:"Keesokan harinya, transaksi Jual tersebut ditutup di harga 1.1100 pada tanggal 23 oktober, pukul 10:00."
         },
         forex18:{
             en:"The earnings obtained by the client is (1.13450-1.1100)*100000=USD2450, ",
             zh:"客户收益（1.13450-1.1100）*100000=2450 美元，",
-            vi:" ",
+            vi:" Thu nhập của khách hàng là (1.13450-1.1100) * 100000 = USD2450,",
             "zh-Hant":"客戶收益（1.13450-1.1100）*100000=2450 美元，",
-            id:"__id__"
+            id:" Keuntungan yang dihasilkan oleh investor tersebut adalah (1.13450 - 1.100) * 100000 = 2,450 $"
         },
         forex19:{
             en:"the yield rate of which is 245%.",
             zh:"收益率 245%。",
-            vi:" ",
+            vi:" tỷ lệ lợi nhuận là 245%.",
             "zh-Hant":"收益率 245%。",
-            id:"__id__"
+            id:" dimana persentase keuntungan mencapai 245%"
         },
         forex20:{
             en:"Introduction to TigerWit currency pairs",
             zh:"TigerWit货币对介绍",
             vi:"Giới thiệu về cặp tiền tệ TigerWit",
             "zh-Hant":"TigerWit貨幣對介紹",
-            id:"__id__"
+            id:"Mengenal pasangan mata uang di TigerWit"
         },
         forex21:{
             en:"Product code",
             zh:"产品代码",
             vi:"Mã sản phẩm",
             "zh-Hant":"產品代碼",
-            id:"__id__"
+            id:"Kode Produk"
         },
         forex22:{
             en:"Chinese name",
             zh:"中文名称",
             vi:" ",
             "zh-Hant":"中文名稱",
-            id:"__id__"
+            id:"Nama"
         },
         forex23:{
             en:"Average spread",
             zh:"点差",
             vi:"Tỷ lệ chênh lệch giữa giá mua và bán",
             "zh-Hant":"點差",
-            id:"__id__"
+            id:"Spread rata-rata"
         },
         forex24:{
             en:"points",
             zh:"平均点差",
             vi:"Đánh dấu",
             "zh-Hant":"平均點差",
-            id:"__id__"
+            id:"Poin"
         },
         forex25:{
             en:"Leverage",
             zh:"杠杆",
             vi:"Đòn bẩy",
             "zh-Hant":"杠桿",
-            id:"__id__"
+            id:"Daya Ungkit"
         },
         forex26:{
             en:"Quoted price",
             zh:"报价位",
             vi:"Báo giá",
             "zh-Hant":"報價位",
-            id:"__id__"
+            id:"Harga Penawaran"
         },
         forex27:{
             en:"Minimum trading volume",
             zh:"最小交易量",
             vi:"Giao dịch tối thiểu",
             "zh-Hant":"最小交易量",
-            id:"__id__"
+            id:"Volume transaksi minimum"
         },
         forex28:{
             en:"Per standard lot",
             zh:"每标准手",
             vi:"Theo lot chuẩn Giá trị hợp đồng",
             "zh-Hant":"每標準手",
-            id:"__id__"
+            id:"Per lot standar"
         },
         forex29:{
             en:"Contract volume",
             zh:"合约量",
             vi:"Kích thước hợp đồng",
             "zh-Hant":"合約量",
-            id:"__id__"
+            id:"Volume kontrak"
         },
         forex30:{
             en:"Trading time",
             zh:"交易时间",
             vi:"Thời gian giao dịch",
             "zh-Hant":"交易時間",
-            id:"__id__"
+            id:"Waktu transaksi"
         },
         forex31:{
             en:"Five digits after the decimal point",
             zh:"小数点后五位",
             vi:"Năm chữ số sau dấu thập phân",
             "zh-Hant":"小數點後五位",
-            id:"__id__"
+            id:"5 angka dibelakang koma"
         },
         forex32:{
             en:"Three digits after the decimal point",
             zh:"小数点后三位",
             vi:"Ba chữ số sau dấu thập phân",
             "zh-Hant":"小數點後三位",
-            id:"__id__"
+            id:"3 angka dibelakang koma"
         },
         forex33:{
             en:"Floating point difference",
             zh:"浮动点差",
             vi:"Điểm chênh lệch tự do",
             "zh-Hant":"浮動點差",
-            id:"__id__"
+            id:"Perbedaan poin floating"
         },
         forex34:{
             en:"24h quotation on trading day",
             zh:"交易日24小时报价",
             vi:"Báo giá 24h trong ngày giao dịch ",
             "zh-Hant":"交易日24小時報價",
-            id:"__id__"
+            id:"24 jam penawaran di hari kerja"
         },
         forex35:{
             en:"Trading period: ",
             zh:"交易时段",
             vi:"Trading period",
             "zh-Hant":"交易時段",
-            id:"__id__"
+            id:"Periode transaksi"
         },
         forex36:{
             en:"TigerWit also provides the trading products of cross currency pairs of the above major currency pairs.",
             zh:"TigerWit同时提供以上主流货币对的交叉货币对交易产品",
             vi:"TigerWit cũng cung cấp các sản phẩm giao dịch của các cặp tiền tệ chéo của các cặp tiền tệ chính trên.",
             "zh-Hant":"TigerWit同時提供以上主流貨幣對的交叉貨幣對交易產品",
-            id:"__id__"
+            id:"Selain menyediakan pasangan mata uang utama, TigerWit juga menyediakan produk pasangan mata uang silang (Cross Currency pair)."
         },
         forex37:{
             en:"(next day)",
             zh:"(次日)",
             vi:"(ngày hôm sau)",
             "zh-Hant":"(次日)",
-            id:"__id__"
+            id:"(Hari berikutnya)"
         },
         oil1:{
             en:"Crude oil, also known as 'black gold' is the main raw material in fuel and gasoline.Fuel and gasoline are the most important energy sources in the world. At present, oil is not only the largest in the global trade of goods, it is one of the most important global financial assets.",
             zh:"原油即石油，也称“黑色金子”，原油是燃油和汽油的主要原材料，是世界上最重要的一次能源之一。目前，原油不仅成为全球贸易中最大宗的商品，同时也是全球金融资产中最重要的交易标的物之一。",
             vi:"Dầu thô, còn được gọi là 'vàng đen' là nguyên liệu chính trong nhiên liệu và xăng. Nhiên liệu và xăng là nguồn năng lượng quan trọng nhất trên thế giới. Hiện tại, dầu mỏ không chỉ là lớn nhất trong thương mại toàn cầu của hàng hóa, đây là một trong những tài sản tài chính toàn cầu quan trọng nhất.",
             "zh-Hant":"原油即石油，也稱“黑色金子”，原油是燃油和汽油的主要原材料，是世界上最重要的壹次能源之壹。目前，原油不僅成為全球貿易中最大宗的商品，同時也是全球金融資產中最重要的交易標的物之壹。",
-            id:"__id__"
+            id:"Minyak mentah, yang juga sering dikenal dengan nama “Emas Hitam” ini merupakan material yang sangat penting untuk bahan bakar dan bensin dimana keduanya merupakan sumber energi utama yang digunakan diseluruh dunia. Saat ini, minyak bukan hanya menjadi barang dagangan dengan transaksi terbesar di dunia saja, namun juga berperan penting sebagai aset keuangan global."
         },
         oil2:{
             en:"Why trade crude oil in TigerWit?",
             zh:"为什么在TigerWit原油交易",
             vi:"Vì sao giao dịch với dầu thô ở TigerWit?",
             "zh-Hant":"為什麽在TigerWit原油交易",
-            id:"__id__"
+            id:"Kenapa bertransaksi Minyak Mentah di TigerWit?"
         },
         oil3:{
             en:"In addition to Brent crude oil and West Texas crude oil, both of which sees the largest trading volume in the world, TigerWit also provides US natural gas contracts.TigerWit wholeheartedly provides the clients with the flexible leverage, competitive point difference advantages and also obtains the quotation data sources from world-leading banks in the financial sector. Meanwhile, it also renders an innovative order following system.",
             zh:"TigerWit除了提供两大全球交易量最大的原油：布伦特原油和西德州原油合约以外，同时提供美国天然气合约。TigerWit竭诚为客户提供灵活的杠杆、具有竞争优势的点差，来源于全球金融界领先银行的报价。同时也提供创新性的跟单系统服务。",
             vi:"Ngoài dầu thô Brent và dầu thô Tây Texas, cả hai đều có khối lượng giao dịch lớn nhất trên thế giới, TigerWit cũng cung cấp các hợp đồng khí đốt tự nhiên của Mỹ.TigerWit luôn cố gắng cung cấp cho khách hàng mức đòn bẩy linh hoạt, điểm chênh lệch thấp và cũng có được báo giá với nguồn dữ liệu từ các ngân hàng hàng đầu thế giới trong lĩnh vực tài chính. Trong khi đó, điều này cũng cho thấy một hệ thống sao chép lệnh tiên tiến hơn.",
             "zh-Hant":"TigerWit除了提供兩大全球交易量最大的原油：布倫特原油和西德州原油合約以外，同時提供美國天然氣合約。TigerWit竭誠為客戶提供靈活的杠桿、具有競爭優勢的點差，來源於全球金融界領先銀行的報價。同時也提供創新性的跟單系統服務。",
-            id:"__id__"
+            id:"Selain minyak mentah Brent dan Texas Barat, dimana keduanya memiliki volume transaksi terbesar di dunia. TigerWit juga menyediakan daya ungkit yang fleksibel, perbedaan selisih poin yang bersaing, dan memperoleh sumber harga penawaran dari bank-bank terkemuka di dunia dalam bidang keuangan kepada klien. Sementara itu, TigerWit juga menciptakan sistem transaksi salinan yang inovatif."
         },
         oil4:{
             en:"Advantages of TigerWit in crude oil trading",
             zh:"在TigerWit做原油交易的优势",
             vi:"Ưu điểm của TigerWit trong giao dịch với dầu thô",
             "zh-Hant":"在TigerWit做原油交易的優勢",
-            id:"__id__"
+            id:"Keunggulan bertransaksi Minyak Mentah di TigerWit"
         },
         oil7:{
             en:"Low margin but high earnings",
             zh:"保证金低，收益高",
             vi:"Kí quỹ thấp nhưng thu nhập cao",
             "zh-Hant":"保證金低，收益高",
-            id:"__id__"
+            id:"Margin yang rendah namun penghasilan tinggi"
         },
         oil8:{
             en:"The trading leverage of crude oil in TigerWit is as high as 50 times, thus consuming less margin. As a result, less investment cost is required, while the leverage can double that of the spot crude oil in China. The formula mode of international spot crude oil per ton is roughly USD 50 *current rate / (converted by 1000*weights and measures), while the cost formula mode of domestic spot crude oil is point difference + current price * 0.12%",
             zh:"在TigerWit做原油交易杠杆高达 50 倍以上，占用保证金更低。所以TigerWit所需的投资成本更低，而杠杆可超过国内现货原油的一倍以上。国际现货原油的成本折合到每吨的计算方式是：50 美金左右 * 当日汇率 / (1000 * 度量衡折换)。而国内现货原油的陈本计算方式是：点差 + 当日价格 * 0.12% 。",
             vi:"Đòn bẩy giao dịch dầu thô ở TigerWit cao tới 50 lần, do đó đòi hỏi ít số tiền kí quỹ hơn. Kết quả là, chi phí đầu tư cần thiết ít hơn, trong khi đòn bẩy có thể tăng gấp đôi so với dầu thô tại Trung Quốc. Công thức dầu thô giao ngay trên thị trường quốc tế tính theo tấn là 50 USD * tỷ giá hiện hành / (chuyển đổi bằng 1000 * trọng lượng và biện pháp), trong khi phương thức giá dầu thô tại chỗ là chênh lệch điểm + giá hiện tại * 0.12%",
             "zh-Hant":"在TigerWit做原油交易杠桿高達 50 倍以上，占用保證金更低。所以TigerWit所需的投資成本更低，而杠桿可超過國內現貨原油的壹倍以上。國際現貨原油的成本折合到每噸的計算方式是：50 美金左右 * 當日匯率 / (1000 * 度量衡折換)。而國內現貨原油的陳本計算方式是：點差 + 當日價格 * 0.12% 。",
-            id:"__id__"
+            id:"Daya ungkit untuk Minyak Mentah di TigerWit adalah 50, sehingga margin yang dibutuhkan untuk trading lebih kecil, yang artinya biaya investasi yang diperlukan menjadi lebih rendah. Rumus untuk menghitung harga Minyak Mentah di pasar internasional adalah harga per ton kira-kira 50$ dikalikan dengan harga saat ini / (konversi 1000 x berat dan ukuran). Sedangka n rumus untuk menghitung harga minyak mentah lokal adalah selisih poin + harga saat ini x 0.12 %"
         },
         oil9:{
             en:"No commission charge",
             zh:"无手续费",
             vi:"Không phí hoa hồng",
             "zh-Hant":"無手續費",
-            id:"__id__"
+            id:"Tidak dikenakan komisi"
         },
         oil10:{
             en:"No commission charge will be required for crude oil in TigerWit and only point difference will be charged. One lot is equivalent to about USD 50, equaling to 1000 barrels. Then 7.5 barrels equals to 1ton. Thus, it is converted as USD 0.37 /ton, equivalent to RMB 2.3/ton(Real time exchange rate).",
             zh:"在TigerWit做原油交易是不收取手续费的，仅收取点差，一手 50 美金左右等于 1000 桶，那 7.5 桶等于 1 吨，因此我们的折合到吨就是 0.37 美金/吨，差不多就是 2.3 人民币/吨（以实时汇率为准）。",
             vi:"TigerWit sẽ không yêu cầu phí hoa hồng khi giao dịch với dầu thô và chỉ điểm chênh lệch sẽ được tính phí. Một lot tương đương với khoảng 50 USD, tương đương với 1000 thùng. Sau đó 7,5 thùng bằng 1ton. Như vậy, nó được chuyển đổi thành 0,37 USD / tấn, tương đương với 2,3 NDT / tấn (tỷ giá hối đoái theo thời gian thực).",
             "zh-Hant":"在TigerWit做原油交易是不收取手續費的，僅收取點差，壹手 50 美金左右等於 1000 桶，那 7.5 桶等於 1 噸，因此我們的折合到噸就是 0.37 美金/噸，差不多就是 2.3 人民幣/噸（以實時匯率為準）。",
-            id:"__id__"
+            id:"TigerWit tidak membebankan biaya komisi untuk setiap transaksi di Minyak Mentah (Crude Oil). 1 lot di Minyak Mentah setara dengan 50 $, sama dengan 1000 barel. Jika 7,5 barel memiliki berat 1 ton, maka harganya sekitar 0.37 $ / ton, yang setara dengan Rp. 5.365/ton (kurs Rp. 14.500)."
         },
         oil11:{
             en:"Easy loss stop",
             zh:"止损简便",
             vi:"Dừng lỗ dễ dàng",
             "zh-Hant":"止損簡便",
-            id:"__id__"
+            id:"Mudah menutup posisi"
         },
         oil12:{
             en:"Loss can be stopped by only one-time setting, which will remain effective on the following day. As a result losses caused by forgetting setting will be greatly reduced.",
             zh:"TigerWit可以做到只需设置一次止损，隔天仍然有效，这样很大程度上避免了因忘记设置止损产生的亏损。",
             vi:"Dừng lỗ dễ dàng chỉ trong một lần cài đặt, và duy trì hiệu lực trong ngày tiếp theo. Kết quả là, các khoản lỗ do việc quên cài đặt sẽ được giảm thiểu đáng kể.",
             "zh-Hant":"TigerWit可以做到只需設置壹次止損，隔天仍然有效，這樣很大程度上避免了因忘記設置止損產生的虧損。",
-            id:"__id__"
+            id:"Anda dapat mengatur S/L sesuai dengan strategi trading anda, agar terhindar dari kerugian yang lebih banyak."
         },
         oil13:{
             en:"Enter swap processing by data smoothing method.",
             zh:"采用数据平滑方式进行掉期处理",
             vi:"Thực hiện quá trình xử lí swap bằng phương pháp làm phẳng dữ liệu.",
             "zh-Hant":"采用數據平滑方式進行掉期處理",
-            id:"__id__"
+            id:"Metode Data Smoothing untuk menghitung bunga."
         },
         oil14:{
             en:"Through cooperation with the most authoritative data provider, TigerWit applies the most advanced data smoothing mode in case of swap extension in dominant contract of international crude oil without water loss fees, rather than mandatory liquidation and position opening in China.",
             zh:"TigerWit与业内最权威的数据提供商合作，在国际原油主力合约发生掉期展期时，采用最先进的数据平滑处理，而非国内原油采用的强行平仓，开仓，无掉水费用。",
             vi:"Thông qua hợp tác với nhà cung cấp dữ liệu có thẩm quyền nhất, TigerWit áp dụng chế độ làm mịn dữ liệu tiên tiến nhất trong trường hợp gia hạn hoán đổi trong hợp đồng dầu thô quốc tế phổ biến mà không mất phí, thay vì bắt buộc thanh khoản và mở vị thế mở tại Trung Quốc.",
             "zh-Hant":"TigerWit與業內最權威的數據提供商合作，在國際原油主力合約發生掉期展期時，采用最先進的數據平滑處理，而非國內原油采用的強行平倉，開倉，無掉水費用。",
-            id:"__id__"
+            id:"Di China, TigerWit bekerjasama dengan salah satu penyedia data terbesar untuk menerapkan metode data smoothing apabila terjadi penambahan beban bunga di kontrak Minyak Mentah. Dengan metode tersebut, klien tidak perlu takut akan adanya penambahan biaya baru."
         },
         oil15:{
             en:"Follow masters' move",
             zh:"复制跟单交易",
             vi:"Sao chép hành động của bậc thầy",
             "zh-Hant":"復制跟單交易",
-            id:"__id__"
+            id:"Ikuti transaksi Master"
         },
         oil16:{
             en:"For inexperienced investors in crude oil trading, the move of the masters in crude oil trading can be followed directly, through which earnings of the same proportion can be realized and the trading risks of beginner investors are also reduced.",
             zh:"针对于一些对原油交易不熟悉的投资者，可选择原油交易的高手直接复制，即可同比例盈利，降低了初级投资者的交易风险。",
             vi:"Đối với các nhà đầu tư thiếu kinh nghiệm trong giao dịch với dầu thô, các hành động của các chủ đầu tư trong giao dịch dầu thô có thể được sao chép trực tiếp, qua đó giúp tạo ra thu nhập với cùng một tỷ lệ và rủi ro giao dịch của các nhà đầu tư mới bắt đầu cũng giảm.",
             "zh-Hant":"針對於壹些對原油交易不熟悉的投資者，可選擇原油交易的高手直接復制，即可同比例盈利，降低了初級投資者的交易風險。",
-            id:"__id__"
+            id:"Untuk investor yang kurang memiliki pengalaman bertransaksi di Minyak Mentah, mereka tetap memiliki kesempatan untuk menghasilkan keuntungan dari transaksi Minyak Mentah dengan cara mengikuti Master yang memang ahli di bidangnya sehingga membantu meminimalkan resiko untuk investor pemula."
         },
         oil17:{
             en:"How to achieve crude oil trade in TigerWit?",
             zh:"在TigerWit怎么做原油交易？",
             vi:"Làm thế nào để đạt được thương mại dầu thô trong TigerWit?",
             "zh-Hant":"在TigerWit怎麽做原油交易？",
-            id:"__id__"
+            id:"Bagaimana perhitungan transaksi Minyak Mentah di TigerWit?"
         },
         oil18:{
             en:"An investor of TigerWit sold one lot of West Texas crude oil (xti/usd) around 15:00 on October 23, platform time of TigerWit at the position of 45.890 by USD 1000.",
             zh:"某位TigerWit的投资者在TigerWit的平台时间 10 月 23 号 15 点左右，于 45.890位置左右动用 1000 美金卖出 1 手西德州原油（xti/usd）。",
             vi:"Một nhà đầu tư của TigerWit đã bán một lô dầu thô Tây Texas (xti / usd) vào khoảng 15:00 ngày 23 tháng 10, thời gian trên nền tảng của TigerWit ở vị thế 45.890 USD 1000.",
             "zh-Hant":"某位TigerWit的投資者在TigerWit的平臺時間 10 月 23 號 15 點左右，於 45.890位置左右動用 1000 美金賣出 1 手西德州原油（xti/usd）。",
-            id:"__id__"
+            id:"Seorang investor di TigerWit membuka posisi Jual sebanyak 1 lot di Minyak Mentah Texas Barat (XTI/USD) pada tanggal 23, pukul 15:00. Pada saat itu harga berada di posisi 45.890 dengan saldo 1,000$. "
         },
         oil19:{
             en:"Around one hour later, the trade was closed at the position of 44.50 around 16:00 on October 23.",
             zh:"一个多小时后，10 月 23 日 16 点左右，于 44.50 位置平仓了结，",
             vi:"Khoảng một giờ sau đó, giao dịch đã đóng cửa ở vị thế 44.50 vào khoảng 16:00 ngày 23 tháng 10. ",
             "zh-Hant":"壹個多小時後，10 月 23 日 16 點左右，於 44.50 位置平倉了結，",
-            id:"__id__"
+            id:"1 jam kemudian, transaksi tersebut ditutup di harga 44.50 pada tanggal 23 oktober, pukul 16:00. "
         },
         oil20:{
             en:"The earnings obtained by the client is (45.89-44.50)*1000=USD1390, ",
             zh:"客户收益（45.89-44.50）*1000=1390 美元，",
             vi:"Lợi nhuận của khách hàng là (45.89-44.50) * 1000 = USD1390, ",
             "zh-Hant":"客戶收益（45.89-44.50）*1000=1390 美元，",
-            id:"__id__"
+            id:"Keuntungan yang didapatkan oleh klien tersebut adalah (45.89-44.50) * 1000 = 1,390 $ "
         },
         oil21:{
             en:"the yield rate of which is 139%.",
             zh:"收益率 139%。",
             vi:"tỷ lệ lãi suất là 139%.",
             "zh-Hant":"收益率 139%。",
-            id:"__id__"
+            id:"dimana persentase keuntungan mencapai 139%."
         },
         oil22:{
             en:"Introduction to TigerWit energy products",
             zh:"TigerWit能源类交易产品介绍",
             vi:"Giới thiệu sản phẩm năng lượng TigerWit",
             "zh-Hant":"TigerWit能源類交易產品介紹",
-            id:"__id__"
+            id:"Mengenal Produk-produk energi di TigerWit"
         },
         oil23:{
             en:"Product code",
             zh:"产品代码",
             vi:"Mã sản phẩm",
             "zh-Hant":"產品代碼",
-            id:"__id__"
+            id:"Kode Produk"
         },
         oil24:{
             en:"Chinese name",
             zh:"中文名称",
             vi:"Chinese name",
             "zh-Hant":"中文名稱",
-            id:"__id__"
+            id:"Nama"
         },
         oil25:{
             en:"Contract volume",
             zh:"合约量",
             vi:"Kích thước hợp đồng",
             "zh-Hant":"合約量",
-            id:"__id__"
+            id:"Volume Kontrak"
         },
         oil26:{
             en:"Measurement unit",
             zh:"计量单位",
             vi:"Đơn vị đo",
             "zh-Hant":"計量單位",
-            id:"__id__"
+            id:"Unit Pengukuran"
         },
         oil27:{
             en:"Minimum contract unit (standard lot)",
             zh:"最小合约单位(标准手)",
             vi:"Đơn vị nhỏ nhất hợp đồng (Lot tiêu chuẩn)",
             "zh-Hant":"最小合約單位(標準手)",
-            id:"__id__"
+            id:"Unit kontrak minimum (lot standar)"
         },
         oil28:{
             en:"Maximum trading volume (lot)",
             zh:"最大交易量(手)",
             vi:"Giao dịch tối đa(lot)",
             "zh-Hant":"最大交易量(手)",
-            id:"__id__"
+            id:"Volume transaksi maksimum (lot)"
         },
         oil29:{
             en:"Commission charge ($)",
             zh:"手续费($)",
             vi:"Phí hoa hồng($)",
             "zh-Hant":"手續費($)",
-            id:"__id__"
+            id:"Biaya komisi"
         },
         oil30:{
             en:"Trading time (Beijing time)",
             zh:"交易时间(北京时间)",
             vi:"Thời gian giao dịch (Giờ Bắc Kinh)",
             "zh-Hant":"交易時間(北京時間)",
-            id:"__id__"
+            id:"Waktu transaksi"
         },
         oil31:{
             en:"Quotation time (Beijing time)",
             zh:"报价时间(北京时间)",
             vi:"Thời gian Chào giá (Giờ Bắc Kinh)",
             "zh-Hant":"報價時間(北京時間)",
-            id:"__id__"
+            id:"Jam Penawaran (Waktu Beijing)"
         },
         oil32:{
             en:"Product introduction",
             zh:"产品简介",
             vi:"Giới thiệu sản phẩm",
             "zh-Hant":"產品簡介",
-            id:"__id__"
+            id:"Informasi Produk"
         },
         oil33:{
             en:"MBTU",
             zh:"百万英国热量单位",
             vi:"MBTU",
             "zh-Hant":"百萬英國熱量單位",
-            id:"__id__"
+            id:"MBTU"
         },
         oil34:{
             en:"barrels",
             zh:"桶",
             vi:"thùng",
             "zh-Hant":"桶",
-            id:"__id__"
+            id:"Barel"
         },
         oil35:{
             en:"USD",
             zh:"美元",
             vi:"USD",
             "zh-Hant":"美元",
-            id:"__id__"
+            id:"USD"
         },
         metal1:{
             en:"They belong to the traditional safe-haven assets and with the progress of science and technology occupies an important position in the industrial market and also represents a safe commodity.",
             zh:"黄金和白银作为人类文明最古老、最传统、最被广泛认可的货币符号，属于传统的避险资产，随着科技的进步，其在工业生产中占据了重要的地位，同时具有避险兼商品的属性。",
             vi:"Các sản phẩm này thuộc về tài sản an toàn truyền thống và với sự tiến bộ của khoa học và công nghệ chiếm một vị trí quan trọng trong thị trường công nghiệp và cũng đại diện cho một mặt hàng an toàn.",
             "zh-Hant":"黃金和白銀作為人類文明最古老、最傳統、最被廣泛認可的貨幣符號，屬於傳統的避險資產，隨著科技的進步，其在工業生產中占據了重要的地位，同時具有避險兼商品的屬性。",
-            id:"__id__"
+            id:"Sering dianggap sebagai aset berharga dan komoditas yang aman. Logam mulia juga berperan penting dalam teknologi dan industri."
         },
         metal2:{
             en:"What is spot gold and silver trading? ",
             zh:"什么是现货黄金、白银交易",
             vi:"Giao dịch vàng và bạc giao ngay là gì?",
             "zh-Hant":"什麽是現貨黃金、白銀交易",
-            id:"__id__"
+            id:"Apa yang dimaksud dengan pasar fisik Emas dan Perak?"
         },
         metal3:{
             en:"Margin trade of spot gold and silver is also known as London gold and silver exchange. London gold and silver per standard lot is 100 ounces and 5000 ounces separately. What is different from New York gold futures period is spot gold. Swap and extension are not needed for spot silver. contract value and leverage are more flexible and the fund utilization rate is much higher. ",
             zh:"现货黄金与现货白银保证金交易亦称之为伦敦金，伦敦银。每标准手伦敦金为 100 盎司，每标准手白银为 5000 盎司，与纽约期金期银不同的是现货金，现货银无需掉期，展期，同时合约大小，杠杆更为灵活，资金利用率更高。",
             vi:"Giao dịch ký quỹ vàng giao ngay và bạc cũng được gọi là giao dịch vàng và bạc London. Giá Vàng và bạc của London trên mỗi lot tiêu chuẩn lần lượt là 100 ounce và 5000 ounce. Điều khác biệt so với hợp đồng kì hạn tương lai Vàng của New York là đây là giao dịch vàng giao ngay. Mức Swap và spread là không cần thiết cho giao dịch bạc giao ngay. Giá trị hợp đồng và đòn bẩy linh hoạt hơn và tỷ lệ sử dụng quỹ cao hơn nhiều.",
             "zh-Hant":"現貨黃金與現貨白銀保證金交易亦稱之為倫敦金，倫敦銀。每標準手倫敦金為 100 盎司，每標準手白銀為 5000 盎司，與紐約期金期銀不同的是現貨金，現貨銀無需掉期，展期，同時合約大小，杠桿更為靈活，資金利用率更高。",
-            id:"__id__"
+            id:"Perdagangan fisik untuk emas dan perak sering kita ketahui dengan nama loco london gold and silver yaitu basis perdagangan dan penyelesaian emas dan perak internasional di London. Fisik emas dan perak London ini memiliki standar per lot masing-masing untuk kategori 100 ons dan 5000 ons. Yang membedakan antara perdagangan futures emas di New york dengan loco london ini adalah fisik emas. Dimana perdagangan emas di New York hanya akan berupa kontrak saja. Dengan begitu, daya ungkit dan nilai kontrak menjadi lebih fleksibel, otomatis dana yang diperdagangkan menjadi lebih tinggi. Untuk perak sendiri tidak akan dikenakan biaya bunga."
         },
         metal4:{
             en:"TigerWit's advantages in foreign exchange trading",
             zh:"在TigerWit交易黄金、白银的优势",
             vi:"Lợi thế của TigerWit trong giao dịch ngoại hối",
             "zh-Hant":"在TigerWit交易黃金、白銀的優勢",
-            id:"__id__"
+            id:"Keunggulan bertransaksi valuta asing di TigerWit"
         },
         metal5:{
             en:"High leverage",
             zh:"杠杆高",
             vi:"Đòn bẩy cao",
             "zh-Hant":"杠桿高",
-            id:"__id__"
+            id:"Daya ungkit yang tinggi"
         },
         metal6:{
             en:"TigerWit offers three kinds of leverage for flexible option and the leverage of spot silver is as high as 200 times.",
             zh:"TigerWit提供三种杠杆灵活选择，现货白银杠杆可高达 200 倍以上。",
             vi:"TigerWit cung cấp ba loại đòn bẩy cho tùy chọn linh hoạt và đòn bẩy của hợp đồng bạc giao ngay cao tới 200 lần.",
             "zh-Hant":"TigerWit提供三種杠桿靈活選擇，現貨白銀杠桿可高達 200 倍以上。",
-            id:"__id__"
+            id:"TigerWit Menyediakan 3 jenis daya ungkit yang dapat dipilih. Untuk daya ungkit perak dapat mencapai hingga 1:200."
         },
         metal7:{
             en:"Low trading cost",
             zh:"交易成本低",
             vi:"Chi phí giao dịch thấp",
             "zh-Hant":"交易成本低",
-            id:"__id__"
+            id:"Biaya trading yang rendah"
         },
         metal8:{
             en:"The cost of trading spot silver in TigerWit is as low as USD 1.29 / kg, equivalent to RMB 8.7 /kg. (the currency conversion will be subject to real-time rate)",
             zh:"TigerWit交易现货白银成本低至约1.29美元/千克，约8.7元人民币/千克。（人民币换算以实时汇率为准）",
             vi:"Chi phí giao dịch bạc tại TigerWit thấp tới 1,29 USD / kg, tương đương 8,7 NDT / kg. (tỷ giá chuyển đổi tiền tệ sẽ phải chịu lãi suất theo thời gian thực)",
             "zh-Hant":"TigerWit交易現貨白銀成本低至約1.29美元/千克，約8.7元人民幣/千克。（人民幣換算以實時匯率為準）",
-            id:"__id__"
+            id:"Biaya untuk bertransaksi perak di TigerWit hanya berkisar 1.29 $/kg atau setara dengan Rp. 18.705/kg (kurs Rp. 14.500)"
         },
         metal9:{
             en:"Low threshold",
             zh:"低门槛",
             vi:"Mức kí quỹ ban đầu thấp",
             "zh-Hant":"低門檻",
-            id:"__id__"
+            id:"Margin awal yang rendah"
         },
         metal10:{
             en:"Margin level than the domestic spot silver is 300 RMB, while the minimum trading margin for spot silver trading in TigerWit is as low as USD10.",
             zh:"比起国内现货白银300人民币保证金水平，TigerWit现货白银交易最小交易保证金仅为 10 美金。",
             vi:"Mức ký quỹ so với giao dịch bạc nội địa giao ngay là 300 RMB, trong khi margin giao dịch tối thiểu cho giao dịch bạc giao ngay tại TigerWit thấp chỉ còn 10 USD.",
             "zh-Hant":"比起國內現貨白銀300人民幣保證金水平，TigerWit現貨白銀交易最小交易保證金僅為 10 美金。",
-            id:"__id__"
+            id:"Margin yang dibutuhkan untuk transaksi di pasar perak lokal adalah sekitar Rp. 635.200 (kurs yuan = Rp. 2.117) atau 43,80 $ (kurs Rp. 14.500). Sementara minimal margin untuk trading pasar perak hanya 10 $ saja."
         },
         metal11:{
             en:"Achieve gold and silver trading by one account",
             zh:"一个账户交易黄金、白银",
             vi:"Giao dịch với vàng và bạc bằng một tài khoản",
             "zh-Hant":"壹個賬戶交易黃金、白銀",
-            id:"__id__"
+            id:"Trading Emas dan Perak hanya dengan 1 akun"
         },
         metal12:{
             en:"Given the restrictions of China's national conditions, most domestic exchanges can only trade spot silver but fail to trade gold. However, gold products fall into the trade category of greater importance in the international market. Given such situations, TigerWit can provide both silver and gold trading, rendering more independent choices for investors.",
             zh:"由于国内相关国情限制，国内大多数交易所仅能交易现货白银，而无法交易现货黄金，但黄金产品是国际市场上更为关注与重要的交易品种，而TigerWit同时提供白银与黄金交易，给广大投资者更为自主的选择。",
             vi:"Với những hạn chế về điều kiện quốc gia của Trung Quốc, hầu hết các sàn giao dịch trong nước chỉ có thể giao dịch bạc nhưng không giao dịch vàng. Tuy nhiên, các sản phẩm vàng rơi vào loại thương mại có tầm quan trọng lớn hơn trên thị trường quốc tế. Với những tình huống như vậy, TigerWit có thể cung cấp cả giao dịch bạc và vàng, thể hiện sự lựa chọn độc lập hơn cho các nhà đầu tư.",
             "zh-Hant":"由於國內相關國情限制，國內大多數交易所僅能交易現貨白銀，而無法交易現貨黃金，但黃金產品是國際市場上更為關註與重要的交易品種，而TigerWit同時提供白銀與黃金交易，給廣大投資者更為自主的選擇。",
-            id:"__id__"
+            id:"Berdasarkan peraturan di China, kebanyakan bursa lokal hanya memperbolehkan transaksi perak. Sedangkan, produk emas di pasar internasional sangat penting dan sering diperdagangkan. Oleh karena itu, TigerWit menyediakan kesempatan untuk bertransaksi Perak dan Emas sekaligus sehingga dapat mempermudah investor."
         },
         metal13:{
             en:"Trading by MT4",
             zh:"使用 MT4 交易",
             vi:"Giao dịch bằng MT4",
             "zh-Hant":"使用 MT4 交易",
-            id:"__id__"
+            id:"Trading menggunakan MT4"
         },
         metal14:{
             en:"TigerWit has adopted an extensively used and mature MT4 platform and launched an intelligent trading module, closely following the trend of the world’s financial market.",
             zh:"TigerWit采用全球广泛使用的成熟的MT4平台，开会智能交易模块，紧跟世界金融市场潮流。",
             vi:"TigerWit đã áp dụng nền tảng MT4 tiên tiến và được sử dụng rộng rãi và ra mắt một phương thức giao dịch thông minh, bắt kịp chặt chẽ xu thế của thị trường tài chính thế giới.",
             "zh-Hant":"TigerWit采用全球廣泛使用的成熟的MT4平臺，開會智能交易模塊，緊跟世界金融市場潮流。",
-            id:"__id__"
+            id:"TigerWit telah ikut mengadopsi penggunaan platform MT4 yang saat ini telah digunakan secara luas dan menjadi platform favorit di pasar keuangan di dunia."
         },
         metal15:{
             en:"Follow masters' move",
             zh:"复制跟单交易",
             vi:"Sao chép hành động của bậc thầy",
             "zh-Hant":"復制跟單交易",
-            id:"__id__"
+            id:"Ikuti transaksi Master"
         },
         metal16:{
             en:"TigerWit provides advanced and creative full-automatic order following system and gathers numerous investment masters with great profit-making capabilities. The investors have the ability to gain the earnings of the same proportion with the masters through following them. Masters can also gain more earnings through increasing their followers continuously.",
             zh:"TigerWit提供业内先进创新的全自动订单复制跟单系统，并且汇聚众多颇具盈利能力的投资高手，投资者可通过复制高手交易获得同比例投资收益。高手也可以通过不断增加跟随者而获得更多收益。",
             vi:"TigerWit cung cấp hện thống sao chép lệnh toàn diện, cao cấp và hoàn toàn tự động, cùng với việc tập hợp hàng loạt các nhà đầu tư chính với khả năng sinh lời lớn. Các nhà đầu tư có khả năng kiếm được lợi nhuận với mức tỷ lệ tương tụ như các bậc thầy thông qua việc sao chép họ. Các bậc thầy cũng có thể kiếm được nhiều lợi nhuận thông qua việc liên tục tăng số lượng người sao chép của họ.",
             "zh-Hant":"TigerWit提供業內先進創新的全自動訂單復制跟單系統，並且匯聚眾多頗具盈利能力的投資高手，投資者可通過復制高手交易獲得同比例投資收益。高手也可以通過不斷增加跟隨者而獲得更多收益。",
-            id:"__id__"
+            id:"TigerWit menyediakan sistem copy-trading yang sangat mutakhir dan serba otomatis, serta menghadirkan banyak pilihan Master yang memiliki kemampuan untuk menghasilkan keuntungan. Investor dapat meraup keuntungan hanya dengan mengikuti setiap posisi Master. Sedangkan Master juga mendapat keuntungan dari jumlah pengikut yang terus bertambah."
         },
         metal17:{
             en:"Introduction to TigerWit precious metal products",
             zh:"TigerWit贵金属交易产品介绍",
             vi:"Giới thiệu các sản phẩm với kim loại quý từ TigerWit",
             "zh-Hant":"TigerWit貴金屬交易產品介紹",
-            id:"__id__"
+            id:"Mengenal Produk-produk logam mulia di TigerWit"
         },
         metal18:{
             en:"Product code",
             zh:"产品代码",
             vi:"Mã sản phẩm",
             "zh-Hant":"產品代碼",
-            id:"__id__"
+            id:"Kode Produk"
         },
         metal19:{
             en:"Chinese name",
             zh:"中文名称",
             vi:"Chinese name",
             "zh-Hant":"中文名稱",
-            id:"__id__"
+            id:"Nama"
         },
         metal20:{
             en:"Point difference",
             zh:"点差",
             vi:"Điểm chênh lệch",
             "zh-Hant":"點差",
-            id:"__id__"
+            id:"Selisih Poin"
         },
         metal21:{
             en:"average point difference",
             zh:"平均点差",
             vi:"điểm chênh lệch trung bình",
             "zh-Hant":"平均點差",
-            id:"__id__"
+            id:"Selisih poin rata-rata"
         },
         metal22:{
             en:"Leverage",
             zh:"杠杆",
             vi:"Điểm chênh lệch (điểm chênh lệch trung bình)",
             "zh-Hant":"杠桿",
-            id:"__id__"
+            id:"Daya Ungkit"
         },
         metal23:{
             en:"Quoted price",
             zh:"报价位",
             vi:"Báo giá",
             "zh-Hant":"報價位",
-            id:"__id__"
+            id:"Harga Penawaran"
         },
         metal24:{
             en:"Minimum trading lots",
             zh:"最小交易手数",
             vi:"Giao dịch tối thiểu",
             "zh-Hant":"最小交易手數",
-            id:"__id__"
+            id:"Lot Transaksi Minimum"
         },
         metal25:{
             en:"Contract volume per standard lot",
             zh:"每标准手合约量",
             vi:"Kích thước hợp đồng/lot tiêu chuẩn",
             "zh-Hant":"每標準手合約量",
-            id:"__id__"
+            id:"Volume kontrak per lot standar"
         },
         metal26:{
             en:"Trading time",
             zh:"交易时间",
             vi:"Thời gian giao dịch",
             "zh-Hant":"交易時間",
-            id:"__id__"
+            id:"Waktu transaksi"
         },
         metal27:{
             en:"Two digits after the decimal point",
             zh:"小数点后两位",
             vi:"Hai chữ số sau dấu thập phân",
             "zh-Hant":"小數點後兩位",
-            id:"__id__"
+            id:"2 angka dibelakang koma"
         },
         metal28:{
             en:"Three digits after the decimal point",
             zh:"小数点后三位",
             vi:"Ba chữ số sau dấu phẩy thập phân",
             "zh-Hant":"小數點後三位",
-            id:"__id__"
+            id:"3 angka dibelakang koma"
         },
         metal29:{
             en:"ounces",
             zh:"盎司",
             vi:"ounces",
             "zh-Hant":"盎司",
-            id:"__id__"
+            id:"ons"
         },
         metal30:{
             en:"Trading period on the trading day",
             zh:"交易日交易时段",
             vi:"Thời gian giao dịch vào ngày giao dịch 06:00-05:00",
             "zh-Hant":"交易日交易時段",
-            id:"__id__"
+            id:"Periode transaksi pada hari kerja"
         },
         platformTimeNote:{
             en:"Note: MT4 platform time is GMT + 3 time",
             zh:"注：MT4平台时间为GMT+3时间",
             vi:"Ghi chú: Thời gian nền tảng MT4 là GMT + 3 lần",
             "zh-Hant":"註：MT4平臺時間為GMT+3時間",
-            id:"__id__"
+            id:"Catatan : Waktu Platform MT4 adalah GMT + 3"
         },
         cfd1:{
             en:"Stock index",
             zh:"股指",
             vi:"Chỉ số chứng khoán của",
             "zh-Hant":"股指",
-            id:"__id__"
+            id:"Indeks saham"
         },
         cfd2:{
             en:"Contracts for differences",
             zh:"指数差价合约",
             vi:"Hợp đồng chênh lệch",
             "zh-Hant":"指數差價合約",
-            id:"__id__"
+            id:"Contracts for differences"
         },
         cfd4:{
             en:"Contracts for Difference (CFD) can reflect the price changes of stock or index and offer the profits or losses caused by price changes. Contracts for difference is the most familiar trading tool to Chinese residents and in Reuter's Financial Glossary it is defined as trading mode in which exchange of physical commodities or securities is not involved and only the balance between settlement price and contract price is used for cash settlement.",
             zh:"差价合约（Contracts for Difference ，CFD）可以反映股票或指数的价格变化并提供价格变动所带来的盈利或亏损。路透金融词典中对差价合约的定义如下：泛指不涉及实物商品或证券的交换、仅以结算价与合约价的差额作现金结算的交易方式。",
             vi:"Hợp đồng chênh lệch (CFD) có thể phản ánh các thay đổi giá của cổ phiếu và chỉ số và đưa ra các mức lợi nhuận hoặc lỗ do thay đổi giá. Các hợp đồng chênh lệch là công cụ giao dịch phổ biến nhất với các cư dân Trung Quốc và trong phụ lục Từ Ngữ Tài Chính của Reuter đã định nghĩa chính là hình thái giao dịch trong đó không bao gồm việc trao đổi vật lý các loại hàng hóa hay chứng khoán và chỉ là số dư giữa giá hoán đổi và giá hợp đồng được sử dụng để hoán đổi tiền mặt.",
             "zh-Hant":"差價合約（Contracts for Difference ，CFD）可以反映股票或指數的價格變化並提供價格變動所帶來的盈利或虧損。路透金融詞典中對差價合約的定義如下：泛指不涉及實物商品或證券的交換、僅以結算價與合約價的差額作現金結算的交易方式。",
-            id:"__id__"
+            id:"Contracts for Difference (CFD) dapat mencerminkan perubahan harga pada saham atau indeks dan menawarkan keuntungan atau kerugian akibat dari perubahan harga tersebut. Contracts for Difference merupakan alat perdagangan yang paling akrab bagi para investor dan dalam istilah Keuangan Reuter, didefinisikan sebagai mode perdagangan yang tidak melibatkan fisik komoditas atau sekuritas dan untuk penyelesaian tunai akan menghitung saldo antara penyelesaian harga dan harga kontrak "
         },
         cfd5:{
             en:"TigerWit's advantages in stock index and contracts for difference",
             zh:"在TigerWit做指数差价合约的优势",
             vi:"Lợi thế của TigerWit về các chỉ số chứng khoán và hợp đồng chênh lệch",
             "zh-Hant":"在TigerWit做指數差價合約的優勢",
-            id:"__id__"
+            id:"Keunggulan dari TigerWit adalah Indeks Saham dan contracts for difference"
         },
         cfd6:{
             en:"Extensive products",
             zh:"产品丰富",
             vi:"Các sản phẩm đa dạng",
             "zh-Hant":"產品豐富",
-            id:"__id__"
+            id:"Berbagai jenis produk"
         },
         cfd7:{
             en:"TigerWit offers the trading categories on global mainstream stock markets, including such mainstream stock index products as US Dollar Index, Nikkei and European blue chip index.",
             zh:"TigerWit提供全球主流股市交易品种，包含三大美指，日经，欧洲优选等等主流股指产品。",
             vi:"TigerWit mang đến các hạng mục giao dịch với các sản phẩm chính trên thị trường chứng khoán toàn cầu, bao gồm các sản phẩm chỉ số chứng khoán chính như chỉ số đô-la Mỹ, chỉ số Nikkei và chỉ số chứng khoán blue chip.",
             "zh-Hant":"TigerWit提供全球主流股市交易品種，包含三大美指，日經，歐洲優選等等主流股指產品。",
-            id:"__id__"
+            id:"TigerWit menyediakan berbagai jenis kategori produk seperti pasar saham, indeks saham, indeks dolar amerika, Nikkei, dan indeks blue chip eropa."
         },
         cfd8:{
             en:"High fund utilization rate",
             zh:"资金利用率高",
             vi:"Tỷ lệ sử dụng quỹ cao",
             "zh-Hant":"資金利用率高",
-            id:"__id__"
+            id:"Pemanfaatan dana yang tinggi"
         },
         cfd9:{
             en:"Margin level as low as 2% is offered",
             zh:"提供低至 2% 的保证金水平。",
             vi:"Mang đến mức margin thấp chỉ còn 2%",
             "zh-Hant":"提供低至 2% 的保證金水平。",
-            id:"__id__"
+            id:"Margin yang dibutuhkan hanya sekitar 2%"
         },
         cfd10:{
             en:"Low threshold",
             zh:"门槛较低",
             vi:"Mức kí quỹ ban đầu thấp",
             "zh-Hant":"門檻較低",
-            id:"__id__"
+            id:"Margin awal yang rendah"
         },
         cfd11:{
             en:"The extremely low entry threshold enables investors to take part without the need of tens of thousands of dollars that are needed by stock index futures.",
             zh:"参与门槛极低，无需如股指期货般需要数万美元计的入市门槛。",
             vi:"Mức kí quỹ ban đầu cực kì thấp giúp cho nhà đầu tư tham gia mà không cần hàng nghìn đô-la, vốn cần có khi tham gia vào thị trường chỉ số chứng khoán.",
             "zh-Hant":"參與門檻極低，無需如股指期貨般需要數萬美元計的入市門檻。",
-            id:"__id__"
+            id:"Investor dapat melakukan transaksi di indeks saham berjangka dengan modal yang sangat rendah."
         },
         cfd12:{
             en:"Transparent quotation",
             zh:"报价透明",
             vi:"Chào giá minh bạch",
             "zh-Hant":"報價透明",
-            id:"__id__"
+            id:"Penawaran harga yang transparan"
         },
         cfd13:{
             en:"TigerWit provides quotation of top banks, thus helping investors achieve price discovering.",
             zh:"TigerWit提供来顶级银行的报价，帮助投资者进行最优价格发现。",
             vi:"TigerWit cung cấp mức chào giá từ các ngân hàng hàng đầu, từ đó giúp các nhà đầu tư đạt được mức giá thiết lập.",
             "zh-Hant":"TigerWit提供來頂級銀行的報價，幫助投資者進行最優價格發現。",
-            id:"__id__"
+            id:"TigerWit memberikan penawaran harga yang kompetitif dari bank-bank terkenal di dunia, agar investor mendapatkan harga terbaik."
         },
         cfd14:{
             en:"Follow masters' move",
             zh:"复制跟单交易",
             vi:"Sao chép hành động của bậc thầy",
             "zh-Hant":"復制跟單交易",
-            id:"__id__"
+            id:"Ikuti transaksi Master"
         },
         cfd15:{
             en:"TigerWit provides advanced and creative full-automatic order following system and gathers numerous investment masters with great profit-making capabilities. The investors have the ability to gain the earnings of the same proportion with the masters through following them. Masters can also gain more earnings through increasing their followers continuously.",
             zh:"TigerWit提供业内先进创新的全自动订单复制跟单系统，并且汇聚众多颇具盈利能力的投资高手，投资者可通过复制高手交易获得同比例投资收益。高手也可以通过不断增加跟随者而获得更多收益。",
             vi:"TigerWit cung cấp một hệ thống sao chép lệnh tiên tiến và đột phá hoàn toàn tự động và tập hợp nhiều bậc thầy với khả năng sinh lời lớn. Các nhà đầu tư có khả năng đạt được mức lợi nhuận với cùng một tỷ lệ với bậc thầy thông qua việc sao chép họ. Những bậc thầy cũng có thể tăng thu nhập của mình thông qua việc liên tục tăng số lượng người sao chép của họ.",
             "zh-Hant":"TigerWit提供業內先進創新的全自動訂單復制跟單系統，並且匯聚眾多頗具盈利能力的投資高手，投資者可通過復制高手交易獲得同比例投資收益。高手也可以通過不斷增加跟隨者而獲得更多收益。",
-            id:"__id__"
+            id:"TigerWit menyediakan sistem copy-trading yang sangat mutakhir dan serba otomatis, serta menghadirkan banyak pilihan Master yang memiliki kemampuan untuk menghasilkan keuntungan. Investor dapat meraup keuntungan hanya dengan mengikuti setiap posisi Master. Sedangkan Master juga mendapat keuntungan dari jumlah pengikut yang terus bertambah."
         },
         cfd16:{
             en:"How to achieve stock index trade in TigerWit?",
             zh:"在TigerWit怎么做股指交易?",
             vi:"Làm thế nào để giao dịch chỉ số chứng khoán với TigerWit?",
             "zh-Hant":"在TigerWit怎麽做股指交易?",
-            id:"__id__"
+            id:"Bagaimana perhitungan transaksi indeks saham di TigerWit?"
         },
         cfd17:{
             en:"An investor of TigerWit bought one lot of European blue chip index (eusbx50) around 10:00 am EST on October 22, platform time of TigerWit at the position of 3260 by EUR 65.",
             zh:"某位TigerWit的投资者在TigerWit的平台时间 10 月 22 号 10 点左右，于 3260 位置左右动用 65 欧元买入 1 手欧洲绩优指数（eustx50）。",
             vi:"Một nhà đầu tư của TigerWit đã mua rất nhiều chỉ số chứng khoán blue chip châu Âu (eusbx50) vào khoảng 10:00 sáng EST vào ngày 22 tháng 10, thời gian trên nền tảng của TigerWit với vị thế 3260 65 EUR. ",
             "zh-Hant":"某位TigerWit的投資者在TigerWit的平臺時間 10 月 22 號 10 點左右，於 3260 位置左右動用 65 歐元買入 1 手歐洲績優指數（eustx50）。",
-            id:"__id__"
+            id:"Seorang investor di TigerWit membuka posisi Beli di indeks saham blue chip eropa (EUSBX50) pada tanggal 22 oktober, pukul 10:00 pagi EST, pada saat itu posisi harga ada di 3260 EUR65."
         },
         cfd18:{
             en:"On the second day, the trade was closed at the position of 3440 around 14:00 pm EST on October 23.",
             zh:"到了第二日，10 月 23 日 14 点左右，于 3440 位置平仓了结，",
             vi:"Vào ngày thứ hai, giao dịch đã đóng cửa ở vị thế 3440 vào khoảng 14:00 pm EST vào ngày 23 tháng 10.",
             "zh-Hant":"到了第二日，10 月 23 日 14 點左右，於 3440 位置平倉了結，",
-            id:"__id__"
+            id:"Keesokan harinya, transaksi tersebut ditutup di harga 3440 pada tanggal 23 oktober, pukul 14:00 EST. "
         },
         cfd19:{
             en:"The earnings obtained by the client is 3440 – 3260 = EUR180 ",
             zh:"客户收益 3440-3260=180 欧元，",
             vi:"Thu nhập của khách hàng là 3440 - 3260 = EUR180,",
             "zh-Hant":"客戶收益 3440-3260=180 歐元，",
-            id:"__id__"
+            id:"Keuntungan yang dihasilkan oleh klien tersebut adalah 3440-3260 = 180 EUR. "
         },
         cfd20:{
             en:"the yield rate of which is 180/65/100% = 276%. ",
             zh:"收益率 180/65/100%=276%。",
             vi:" tỷ lệ lãi suất là 180/65/100% = 276 %.",
             "zh-Hant":"收益率 180/65/100%=276%。",
-            id:"__id__"
+            id:"dimana persentase keuntungannya adalah 180/65/100% = 276%."
         },
         cfd21:{
             en:"Introduction to TigerWit financial stock index",
             zh:"TigerWit股指产品介绍",
             vi:"Giới thiệu về chỉ số chứng khoán tài chính TigerWit",
             "zh-Hant":"TigerWit股指產品介紹",
-            id:"__id__"
+            id:"Mengenal indeks saham di TigerWit"
         },
         cfd22:{
             en:"Product code",
             zh:"产品代码",
             vi:"Mã sản phẩm",
             "zh-Hant":"產品代碼",
-            id:"__id__"
+            id:"Kode Produk"
         },
         cfd23:{
             en:"Chinese name",
             zh:"中文名称",
             vi:"Chinese name",
             "zh-Hant":"中文名稱",
-            id:"__id__"
+            id:"Nama"
         },
         cfd24:{
             en:"Contract volume",
             zh:"合约量",
             vi:"Kích thước hợp đồng",
             "zh-Hant":"合約量",
-            id:"__id__"
+            id:"Volume Kontrak"
         },
         cfd26:{
             en:"Minimum contract unit (standard lot)",
             zh:"最小合约单位(标准手)",
             vi:"Đơn vị hợp đồng tối thiểu (lot tiêu chuẩn)",
             "zh-Hant":"最小合約單位(標準手)",
-            id:"__id__"
+            id:"Unit kontrak minimum (lot standar)"
         },
         cfd27:{
             en:"Maximum trading volume (lot)",
             zh:"最大交易量(手)",
             vi:"Kích thước giao dịch tối đa (lot)",
             "zh-Hant":"最大交易量(手)",
-            id:"__id__"
+            id:"Volume transaksi maksimum (lot)"
         },
         cfd28:{
             en:"Trading time (Beijing time)",
             zh:"交易时间(北京时间)",
             vi:"Kích thước giao dịch tối đa (lot)",
             "zh-Hant":"交易時間(北京時間)",
-            id:"__id__"
+            id:"Waktu transaksi (Waktu Beijing)"
         },
         cfd29:{
             en:"Quotation time (Beijing time)",
             zh:"报价时间(北京时间)",
             vi:"Thời gian chào giá (Giờ Bắc Kinh)",
             "zh-Hant":"報價時間(北京時間)",
-            id:"__id__"
+            id:"Waktu Penawaran (Waktu Beijing)"
         },
         cfd30:{
             en:"Product introduction",
             zh:"产品简介",
             vi:"Thời gian chào giá (Giờ Bắc Kinh)",
             "zh-Hant":"產品簡介",
+            id:"Informasi Produk"
+        },
+        aboutb_1: {
+            zh:"",
+            en:"About Us",
+            vi:"Về chúng tôi",
+            "zh-Hant":"",
+            id:"Tentang Kami"
+        },
+        aboutb_2: {
+            zh:"",
+            en:"Business name: TigerWit Limited",
+            vi:"Tên Doanh Nghiệp: TigerWit Limited",
+            "zh-Hant":"",
+            id:"Nama Bisnis : TigerWit Limited"
+        },
+        aboutb_3: {
+            zh:"",
+            en:"Registration: The Bahamas, company number 198255 B",
+            vi:"Đăng Ký: Tập đoàn Bahamas, số hiệu công ty 198255 B",
+            "zh-Hant":"",
+            id:"Registrasi: The Bahamas, Nomor Perusahaan 198255"
+        },
+        aboutb_4: {
+            zh:"",
+            en:"Financial Services Licence: TigerWit has obtained authoritative regulatory license from Financial Conduct Authority (FCA) and Securities Commission of The Bahamas (SCB), which authorises TigerWit to carry on a financial services business in British and Bahamas and other areas.TigerWit Limited (UK) and TigerWit Limited (Bahamas) are subsidiaries of TigerWit Holding Limited.TigerWit Limited (UK) is regulated by Financial Conduct Authority (FCA), license number 679941. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185.",
+            vi:"Giấy phép Dịch vụ Tài chính: TigerWit đã nhận được giấy phép quản lý có thẩm quyền từ Cơ quan Quản lý Tài chính (FCA) và Ủy ban Chứng khoán của Bahamas (SCB), ủy quyền cho TigerWit thực hiện một doanh nghiệp dịch vụ tài chính ở Anh và Bahamas và các khu vực khác.TigerWit Limited (Anh) và TigerWit Limited (Bahamas) là các công ty con của TigerWit Holding Limited.TigerWit Limited (Anh) được quản lý bởi Cơ quan quản lý tài chính (FCA), số giấy phép 679941. TigerWit Limited (Bahamas) được quy định bởi Ủy ban chứng khoán của Bahamas (SCB), giấy phép số SIA-F185.",
+            "zh-Hant":"",
+            id:"Lisensi Layanan Keuangan: TigerWit telah memperoleh lisensi layanan keuangan dari Financial Conduct Authority (FCA) dan Securities Commission of The Bahamas (SCB), dimana kedua regulator tersebut memberikan wewenang kepada TigerWit untuk menjalankan bisnis layanan keuangan di Inggris dan Bahama dan daerah-daerah lainnya. TigerWit Limited (Inggris) dan TigerWit Limited (Bahamas) merupakan anak perusahaan dari TigerWit Holding Limited. TigerWit Limited (Inggris) diregulasi oleh Financial Conduct Authority (FCA) dengan nomor lisensi 679941. Sedangkan TigerWit Limited (Bahamas) diregulasi oleh Securities Commission of The Bahamas (SCB) dengan nomor lisensi SIA-F185."
+        },
+        aboutb_5: {
+            zh:"",
+            en:"Website: ",
+            vi:"Trang Web: ",
+            "zh-Hant":"",
+            id:"Situs Web: "
+        },
+        aboutb_6: {
+            zh:"",
+            en:"Who We Are",
+            vi:"Chúng tôi là ai",
+            "zh-Hant":"",
+            id:"Siapa Kami"
+        },
+        aboutb_7: {
+            zh:"",
+            en:"With a strong technological core built upon a philosophy of transparency, credibility and integrity, TigerWit offers its clients exceptional capabilities to trade in the markets.",
+            vi:"Với cốt lõi công nghệ mạnh mẽ được xây dựng dựa trên triết lý về tính minh bạch, uy tín và tính toàn vẹn, TigerWit mang đến cho khách hàng của mình khả năng đặc biệt để giao dịch trên thị trường.",
+            "zh-Hant":"",
+            id:"Dengan menggunakan teknologi yang kuat dan dirancang atas dasar keterbukaan, kredibilitas dan Integritas, TigerWIt menawarkan pengalaman transaksi di pasar dengan kemampuan yang berbeda dengan yang lainna"
+        },
+        aboutb_8: {
+            zh:"",
+            en:"TigerWit’s founders are experienced individuals with successful backgrounds and a long history of achievement, who bring together a team of professionals with diverse academic and applied backgrounds experienced in trading Forex, CFD and spread betting, regulatory compliance, investment management, research & development of online platforms and global sales & marketing.",
+            vi:"Những người sáng lập TigerWit là những cá nhân có kinh nghiệm với nền tảng thành công và lịch sử thành tích lâu đời, họ tập hợp một nhóm các chuyên gia với nền tảng học thuật và ứng dụng đa dạng có kinh nghiệm trong giao dịch Forex, CFD và đặt cược lan truyền, tuân thủ quy định, quản lý đầu tư, nghiên cứu & phát triển nền tảng bán hàng trực tuyến và tiếp thị toàn cầu.",
+            "zh-Hant":"",
+            id:"Para pendiri TigerWit merupakan individu yang memiliki latar belakang dan pengalaman yang sukses serta perjalanan yang panjang dimana mereka berhasil menggabungkan sekelompok tim yang profesional dan berpengalaman di dunia valuta asing, CFD, spread betting, peraturan, manajemen investasi, penelitian dan pengembangan platform online dan penjualan dan pemasaran global."
+        },
+        aboutb_9: {
+            zh:"关于我们",
+            en:"",
+            vi:"^^-^^",
+            "zh-Hant":"關於我們",
+            id:"__id__"
+        },
+        aboutb_10: {
+            zh:"TigerWit是一家全球性的外汇交易服务科技创新平台，面向全球个人交易者、机构交易者提供科技智能化的在线交易解决方案。致力于「以科技升级为核心驱动力，不断革新外汇交易服务，打造公平透明、低成本、高效的优质交易环境，不断降低用户参与全球外汇市场的门槛，提升交易服务效率和用户参与体验。」",
+            en:"",
+            vi:"^^-^^",
+            "zh-Hant":"TigerWit是壹家全球性的外匯交易服務科技創新平臺，面向全球個人交易者、機構交易者提供科技智能化的在線交易解抉方案。致力於「以科技升級為核心驅動力，不斷革新外匯交易服務，打造公平透明、低成本、高效的優質交易環境，不斷降低用護慘與全球外匯市場的門檻，提升交易服務效率和用護慘與體驗。」",
+            id:"__id__"
+        },
+        aboutb_11: {
+            zh:"管理团队",
+            en:"",
+            vi:"^^-^^",
+            "zh-Hant":"管理團隊",
+            id:"__id__"
+        },
+        aboutb_12: {
+            zh:"TigerWit创始人具有丰富的外汇交易行业经验和行业成功背景，他们汇集了具有不同学术和应用背景的专业人士，分别在外汇交易、差价合约、监管合规性、投资管理、在线平台研发和全球营销等方面拥有丰富的经验。",
+            en:"",
+            vi:"^^-^^",
+            "zh-Hant":"TigerWit創始人具有豐富的外匯交易行業經驗和行業成功背景，他們匯集了具有不同學術和應用背景的專業人士，分別在外匯交易、差價合約、監管合規性、投資管理、在線平臺研發和全球營銷等方面擁有豐富的經驗。",
+            id:"__id__"
+        },
+        aboutb_13: {
+            zh:"所受监管",
+            en:"",
+            vi:"^^-^^",
+            "zh-Hant":"所受監管",
+            id:"__id__"
+        },
+        aboutb_14: {
+            zh:"TigerWit受巴哈马证券交易委员会（SCB）的授权和监管。",
+            en:"",
+            vi:"^^-^^",
+            "zh-Hant":"TigerWit受巴哈馬證券交易委員會（SCB）的授權和監管。",
+            id:"__id__"
+        },
+        aboutb_15: {
+            zh:"监管号：SIA-F185",
+            en:"",
+            vi:"^^-^^",
+            "zh-Hant":"監管號：SIA-F185",
+            id:"__id__"
+        },
+        aboutb_16: {
+            zh:"TigerWit受英国金融行为监管局（FCA）的授权和监管。",
+            en:"",
+            vi:"^^-^^",
+            "zh-Hant":"TigerWit受英國金融行為監管局（FCA）的授權和監管。",
+            id:"__id__"
+        },
+        aboutb_17: {
+            zh:"授权编号为：679941",
+            en:"",
+            vi:"^^-^^",
+            "zh-Hant":"授權編號為：679941",
             id:"__id__"
         },
         about_1:{
@@ -1453,476 +1573,476 @@ module.exports = function () {
             en:"What we do",
             vi:"^^-^^",
             "zh-Hant":"為何選擇TigerWit",
-            id:"__id__"
+            id:"Apa yang kami kerjakan"
         },
         about_2:{
             zh:"创新的交易系统",
             en:"Trading Platforms",
             vi:"^^-^^",
             "zh-Hant":"創新的交易系統",
-            id:"__id__"
+            id:"Platform Trading"
         },
         about_3:{
             zh:"TigerWit为客户提供独一无二的交易体验，当用户的交易订单通过专有的在线和移动交易系统交付到市场，与其他经纪商相比，TigerWit更具优势。",
             en:"TigerWit provides its clients with an extraordinary trading experience delivered through its proprietary online and mobile trading platforms. This experience is unique and gives TigerWit an advantage in comparison to other brokers.",
             vi:"^^-^^",
             "zh-Hant":"TigerWit為客戶提供獨壹無二的交易體驗，當用戶的交易訂單通過專有的在線和移動交易系統交付到市場，與其他經紀商相比，TigerWit更具優勢。",
-            id:"__id__"
+            id:"TigerWit menyediakan pengalaman transaksi yang berbeda kepada klien yang disampaikan melalui platform perdagangan online dan seluler. Pengalaman unik ini memberikan keunggulan kepada TigerWit dibandingkan dengan broker lainnya"
         },
         about_4:{
             zh:"TigerWit通过自主研发的移动端交易系统，极大地简化了客户的操作，同时最大限度地保留用户使用习惯，从而使TigerWit将投资和开发全部集中在一个创新的交易环境中，避免为多个受众开发多个接口。",
             en:"TigerWit’s Apps simplify and streamline the client journey and minimise variability of user experience. This enables TigerWit to focus investment and development wholly on innovation within one dealing environment rather than having to maintain and develop multiple interfaces for multiple audiences.",
             vi:"^^-^^",
             "zh-Hant":"TigerWit通過自主研發的移動端交易系統，極大地簡化了客戶的操作，同時最大限度地保留用戶使用習慣，從而使TigerWit將投資和開發全部集中在壹個創新的交易環境中，避免為多個受眾開發多個接口。",
-            id:"__id__"
+            id:"Aplikasi TigerWit menyederhanakan dan mempermudah penggunaan klien dan menimimalisir variabilias pengalaman klien. Dengan hal itu, TigerWit dapat fokus pada pengembangan dan pengelolaan investasi dan transaksi hanya dalam 1 lingkungan saja dtanpa harus mengelola dan mengelola dan mengembangkan berbagai jenis lingkungan untuk berbagai jenis klien."
         },
         about_5:{
             zh:"TigerWit金融服务",
             en:"Financial Services",
             vi:"^^-^^",
             "zh-Hant":"TigerWit金融服務",
-            id:"__id__"
+            id:"Layanan Keuangan"
         },
         about_6:{
             zh:"TigerWit提供自主交易账户，一般咨询和交易执行服务通过在线交易平台与流动性提供商提供。TigerWit的特定授权金融服务业务活动包括：",
             en:"TigerWit offers self-directed trading accounts, general advisory and trade execution services made through the online trading platform via liquidity providers. TigerWit’s specific authorised financial services business activities include: ",
             vi:"^^-^^",
             "zh-Hant":"TigerWit提供自主交易賬戶，壹般咨詢和交易執行服務通過在線交易平臺與流動性提供商提供。TigerWit的特定授權金融服務業務活動包括：",
-            id:"__id__"
+            id:"TigerWit menawarkan akun transaksi mandiri, penasehat umum dan layanan eksekusi transaksi yang diberikan melalui platform trading online via penyedia likuiditas.  "
         },
         about_7:{
             zh:"1.作为代理人或委托人处理外汇、差价合约、指数、大宗商品和衍生品；",
             en:"Dealing as agent or principal, in Forex, CFDs, indices, commodities and derivatives;",
             vi:"^^-^^",
             "zh-Hant":"1.作為代理人或委托人處理外匯、差價合約、指數、大宗商品和衍生品；",
-            id:"__id__"
+            id:"Berdagang sebagai agen atau prinsipal di Valas, CFD, indeks, komoditas dan turunannya;"
         },
         about_8:{
             zh:"2.安排包含外汇、差价合约、指数、大宗商品和衍生品在内的证券交易；",
             en:"Arranging deals in securities including Forex, CFDs, indices, commodities and derivatives;",
             vi:"^^-^^",
             "zh-Hant":"2.安排包含外匯、差價合約、指數、大宗商品和衍生品在內的證券交易；",
-            id:"__id__"
+            id:"Atur transaksi di dalam sekuritas termasuk Valas, CFD, indeks, komoditas dan turunannya; "
         },
         about_9:{
             zh:"3.酌情管理证券；",
             en:"Managing securities on a discretionary basis;",
             vi:"^^-^^",
             "zh-Hant":"3.酌情管理證券；",
-            id:"__id__"
+            id:"Mengelola sekuritas dengan bijaksana"
         },
         about_10:{
             zh:"4.证券咨询。",
             en:"Advising on securities.",
             vi:"^^-^^",
             "zh-Hant":"4.證券咨詢。",
-            id:"__id__"
+            id:"Memberikan nasihat di sekuritas"
         },
         about_11:{
             zh:"外汇、衍生品和差价合约交易的一般建议",
             en:"General advice in Forex, Derivatives and Contracts for Difference (CFDs)",
             vi:"^^-^^",
             "zh-Hant":"外匯、衍生品和差價合約交易的壹般建議",
-            id:"__id__"
+            id:"Nasihat umum di Valas, Derivatif dan Contracts for Difference (CFD)"
         },
         about_12:{
             zh:"TigerWit在非个性化的基础上为批发和零售客户提供一般建议。活动包括一般产品信息，研讨会/网络研讨会，通讯，一般知识和教育。",
             en:"TigerWit provides general advice to wholesale or retail clients on a non-personalised basis. Activities include general product information, seminars, webinars, newsletters, general knowledge and education.",
             vi:"^^-^^",
             "zh-Hant":"TigerWit在非個性化的基礎上為批發和零售客戶提供壹般建議。活動包括壹般產品信息，研討會/網絡研討會，通訊，壹般知識和教育。",
-            id:"__id__"
+            id:"TigerWit menyediakan rekomendasi atau saran umum kepada para klien pribadi atau klien besar dalam bentuk laporan informasi produk, seminar, webinar, buletin, pengetahuan umum dan edukasi"
         },
         about_13:{
             zh:"外汇、衍生品和差价合约的安排和交易",
             en:"Arranging and dealing Forex, Derivatives and Contracts for Difference (CFDs)",
             vi:"^^-^^",
             "zh-Hant":"外匯、衍生品和差價合約的安排和交易",
-            id:"__id__"
+            id:"Atur dan transaksi di Valas, Derivatif, dan Contracts for Difference (CFD)"
         },
         about_14:{
             zh:"TigerWit的在线交易平台通过场外交易代表客户执行交易。差价合约是使用交易平台提供买入和卖出价格的基础资产的金融工具。差价合约以主要货币，指数，贵金属和商品交易。",
             en:"TigerWit’s online trading platform executes a client’s trade on behalf of the client through an over-the-counter market transaction. CFDs are financial instruments using underlying assets with the buy and sell prices offered through the trading platform. CFDs are transacted in major currencies, Indices, precious metals and commodities.",
             vi:"^^-^^",
             "zh-Hant":"TigerWit的在線交易平臺通過場外交易代表客戶執行交易。差價合約是使用交易平臺提供買入和賣出價格的基礎資產的金融工具。差價合約以主要貨幣，指數，貴金屬和商品交易。",
-            id:"__id__"
+            id:"Platform perdagangan online TigerWit akan melakukan transaksi perdagangan klien dengan atas nama klien melalui transaksi di pasar OTC. CFD adalah instrumen keuangan yang menawarkan harga beli dan harga jual melalui platform perdagangan. CFD ditransaksikan dalam bentuk Mata Uang utama, indeks, logam mulia dan komoditas"
         },
         about_15:{
             zh:"当市场开放时，每天24小时提供交易，并提供客户支持，语言，电话，聊天和电子邮件。",
             en:"Trading is offered 24 hours a day when markets are open.",
             vi:"^^-^^",
             "zh-Hant":"當市場開放時，每天24小時提供交易，並提供客戶支持，語言，電話，聊天和電子郵件。",
-            id:"__id__"
+            id:"Transaksi dapat dilakukan selama 24 jam sehari ketika pasar buka"
         },
         about_16:{
             zh:"客户在线登录",
             en:"Client on-boarding",
             vi:"^^-^^",
             "zh-Hant":"客戶在線登錄",
-            id:"__id__"
+            id:"Orientasi Klien"
         },
         about_17:{
             zh:"客户在线使用过程中收集客户的姓名和身份进行KYC和MAL检查。将手机有关客户的信息，以确保产品符合客户的经验和风险特征。该过程可通过网站https://www.tigerwit.com查看。当客户被接受时，系统将在客户端建立账户，并为用户提供登录凭证。",
             en:"Clients are on-boarded using an on-line process that gathers the client’s name and identification in order to perform KYC and AML checks. Information about the client will be collected to ensure the product suits the client’s level of experience and risk profile. The process is available for viewing through the website https://global.tigerwit.com/",
             vi:"^^-^^",
             "zh-Hant":"客戶在線使用過程中收集客戶的姓名和身份進行KYC和MAL檢查。將手機有關客戶的信息，以確保產品符合客戶的經驗和風險特征。該過程可通過網站https://www.tigerwit.com查看。當客戶被接受時，系統將在客戶端建立賬戶，並為用戶提供登錄憑證。",
-            id:"__id__"
+            id:"Klien meggunakan proses online untuk mengumpulkan nama dan identifikasi klien untuk dilakukan pemeriksaan KYC dan AML. Informasi mengenai klien akan dikumpulkan guna memastikan produk yang diberikan kepada klien sesuai dengan tingkat pengalaman dan profil risiko klien tersebut. Proses tersebut dapat dilihat secara online di Situs web https://global.tigerwit.com/"
         },
         about_17_1:{
             zh:" ",
             en:"When the client is accepted, the client’s account is established and login credentials are provided to the client.",
             vi:"^^-^^",
             "zh-Hant":" ",
-            id:"__id__"
+            id:"Ketika klien diterima, maka informasi rahasia akan dikirimkan kepada klien dan akun akan dibuat secara otomatis."
         },
         about_18:{
             zh:"客户资金安全",
             en:"Safety of Client Funds",
             vi:"^^-^^",
             "zh-Hant":"客戶資金安全",
-            id:"__id__"
+            id:"Keamanan dana klien"
         },
         about_19:{
             zh:"当客户向TigerWit存入资金时，这些资金与TigerWit的资金完全隔离，并存放在独立的银行账户。保护客户的资金不被用于任何其他目的，并确保客户发起提现请求时可以快速无缝地提款。",
             en:"When clients deposit funds with TigerWit, those funds are segregated from TigerWit’s operating accounts. Client Segregated Accounts safeguard client funds and ensure quick and seamless withdrawals when requested by a client.",
             vi:"^^-^^",
             "zh-Hant":"當客戶向TigerWit存入資金時，這些資金與TigerWit的資金完全隔離，並存放在獨立的銀行賬戶。保護客戶的資金不被用於任何其他目的，並確保客戶發起提現請求時可以快速無縫地提款。",
-            id:"__id__"
+            id:"Ketika klien melakukan pengisian dana dengan TigerWit, maka dana tersebut akan dimasukkan ke rekening terpisah dari rekening TigerWit. Rekening terpisah Klien akan dilindungi dan memastikan bahwa semua permohonan penarikan dana oleh klien dapat berjalan dengan cepat dan mulus"
         },
         about_20:{
             zh:"更多服务",
             en:"Why we do it",
             vi:"^^-^^",
             "zh-Hant":"更多服務",
-            id:"__id__"
+            id:"Mengapa kami mengerjakannya"
         },
         about_21:{
             zh:"由于交易者有机会获利，自主交易者欣赏投机者对基础资产价格的变动。开户时，客户对账户内的所有资产保留合法和实益的所有权，并自行结算账户。TigerWit的交易平台允许客户访问与传统投资相比相关性较低的工具。",
             en:"Self-directed traders appreciate speculating on movements in the price of underlying assets. When opening an account, the client retains legal and beneficial ownership of all assets within the account and trades their account on their own discretionary basis. TigerWit’s trading platforms allows the client to access instruments with low correlation in comparison with traditional investing.",
             vi:"^^-^^",
             "zh-Hant":"由於交易者有機會獲利，自主交易者欣賞投機者對基礎資產價格的變動。開戶時，客戶對賬戶內的所有資產保留合法和實益的所有權，並自行結算賬戶。TigerWit的交易平臺允許客戶訪問與傳統投資相比相關性較低的工具。",
-            id:"__id__"
+            id:"Biasanya seorang pedagang pribadi senang berspekulasi dengan pergerakan harga. Oleh karena itu, ketika mereka membuka sebuah akun, klien akan langsung memiliki semua produk untuk ditransaksikan di dalam sehingga klien bebas bertransaksi sesuai keinginannya. Platform perdagangan TigerWit memungkinkan klien untuk mengakses instrumen dengan korelasi yang rendah dibandingkan dengan investasi tradisional"
         },
         about_22:{
             zh:"TigerWit提供的主要功能包括：",
             en:"Key features of TigerWit’s offering includes: ",
             vi:"^^-^^",
             "zh-Hant":"TigerWit提供的主要功能包括：",
-            id:"__id__"
+            id:"Fitur utama dari TigerWIt menawarkan :"
         },
         about_23:{
             zh:"波动性风险",
             en:"Exposure to volatility",
             vi:"^^-^^",
             "zh-Hant":"波動性風險",
-            id:"__id__"
+            id:"Risiko Volatilitas"
         },
         about_24:{
             zh:"在当今的市场投资波动性是很重要的。",
             en:"Investments that can navigate volatility are important in today’s markets.",
             vi:"^^-^^",
             "zh-Hant":"在當今的市場投資波動性是很重要的。",
-            id:"__id__"
+            id:"Investasi yang dapat mengikuti volatilitas sangat penting dalam kondisi pasar saat ini"
         },
         about_25:{
             zh:"金融工具",
             en:"Exposure to financial instruments",
             vi:"^^-^^",
             "zh-Hant":"金融工具",
-            id:"__id__"
+            id:"Instrumen Keuangan"
         },
         about_26:{
             zh:"货币，商品和指数享有高流动性，低成本，能在在上涨和下跌的市场中获利。",
             en:"Currencies, commodities and indices enjoy high liquidity, low cost and the ability to achieve results in both rising and falling markets.",
             vi:"^^-^^",
             "zh-Hant":"貨幣，商品和指數享有高流動性，低成本，能在在上漲和下跌的市場中獲利。",
-            id:"__id__"
+            id:"Mata uang, Komoditas dan indeks saham memiliki likuiditas yang tinggi, biaya yang rendah dan kemampuan dalam mendapakan hasil saat pasar sedang naik ataupun turun"
         },
         about_27:{
             zh:"杠杆作用",
             en:"Leverage",
             vi:"^^-^^",
             "zh-Hant":"杠桿作用",
-            id:"__id__"
+            id:"Daya Ungkit"
         },
         about_28:{
             zh:"客户可采取与收益递增的目标杠杆头寸，但杠杆作用也可能导致损失增加。",
             en:"The client may take leveraged positions with the aim of increasing returns, but leverage can also lead to increased losses.",
             vi:"^^-^^",
             "zh-Hant":"客戶可采取與收益遞增的目標杠桿頭寸，但杠桿作用也可能導致損失增加。",
-            id:"__id__"
+            id:"Klien dapat memanfaatkan Daya Ungkit untuk meningkatkan keuntungan, akan tetapi perlu dicatat bahwa daya ungkit juga dapat meningkatkan kerugian"
         },
         about_29:{
             zh:"多样化的方法",
             en:"Diversified approach",
             vi:"^^-^^",
             "zh-Hant":"多樣化的方法",
-            id:"__id__"
+            id:"Berbagai jenis pendekatan"
         },
         about_30:{
             zh:"广泛的交易方式和策略。",
             en:"A wide range of trading methods and strategies.",
             vi:"^^-^^",
             "zh-Hant":"廣泛的交易方式和策略。",
-            id:"__id__"
+            id:"Berbagai pilihan Metode dan strategi"
         },
         about_31:{
             zh:"一般市场风险因素的相关性较低",
             en:"Low correlation to general market risk factors",
             vi:"^^-^^",
             "zh-Hant":"壹般市場風險因素的相關性較低",
-            id:"__id__"
+            id:"Korelasi yang rendah dengan faktor risiko pasar"
         },
         about_32:{
             zh:"与传统资产类别（如股票和债券）相比绝对回报。",
             en:"Absolute returns compared to traditional asset classes such as equities and bonds.",
             vi:"^^-^^",
             "zh-Hant":"與傳統資產類別（如股票和債券）相比絕對回報。",
-            id:"__id__"
+            id:"Keuntungan yang lebih tinggi dibandingkan dengan kelas aset seperti ekuitas dan obligasi"
         },
         about_33:{
             zh:"投资主体多元化",
             en:"Investment diversification",
             vi:"^^-^^",
             "zh-Hant":"投資主體多元化",
-            id:"__id__"
+            id:"Diversifikasi Investasi"
         },
         about_34:{
             zh:"上涨和下跌市场均有正回报潜力。",
             en:"Potential for positive returns in both rising and falling markets.",
             vi:"^^-^^",
             "zh-Hant":"上漲和下跌市場均有正回報潛力。",
-            id:"__id__"
+            id:"Potensi mendapatkan keuntungan positif dari naik dan turunnya pasar"
         },
         about_35:{
             zh:"透明灵活",
             en:"Transparent and flexible",
             vi:"^^-^^",
             "zh-Hant":"透明靈活",
-            id:"__id__"
+            id:"Transparan dan Fleksibel"
         },
         about_36:{
             zh:"客户可以完全访问和保留对其资金的控制权。",
             en:"Clients have full access to and retain control of their funds.",
             vi:"^^-^^",
             "zh-Hant":"客戶可以完全訪問和保留對其資金的控制權。",
-            id:"__id__"
+            id:"Klien memiliki akses penuh dan mengontrol dana mereka"
         },
         copyRule1:{
             zh:"TigerWit复制规则",
             en:"TigerWit copy rules",
             vi:"Quy chế sao chép của TigerWit",
             "zh-Hant":"TigerWit復制規則",
-            id:"__id__"
+            id:"Peraturan Copy di TigerWit"
         },
         copyRule2:{
             zh:"复制账号",
             en:"Copy account",
             vi:"Tài khoản sao chép",
             "zh-Hant":"復制賬號",
-            id:"__id__"
+            id:"Akun Copy"
         },
         copyRule2M:{
             zh:"复制账号：",
             en:"Copy account: ",
             vi:"Tài khoản sao chép: ",
             "zh-Hant":"復制賬號：",
-            id:"__id__"
+            id:"Akun Copy: "
         },
         copyRule2_1:{
             zh:"系统将使用跟单专用账号复制高手，无跟单账号复制时将自动生成，所有复制操作均使用该跟单账号进行；",
             en:"The system will use the specific account to copy Master, will be automatically generated when no copy account, all copy operations are performed using the specific copy account;",
             vi:"Hệ thống sẽ sử dụng tài khoản cụ thể để sao chép bậc thầy, sẽ được tạo tự động khi không có tài khoản sao chép, tất cả các thao tác sao chép được thực hiện bằng tài khoản sao chép cụ thể;",
             "zh-Hant":"系統將使用跟單專用賬號復制高手，無跟單賬號復制時將自動生成，所有復制操作均使用該跟單賬號進行；",
-            id:"__id__"
+            id:"Sistem akan membuatkan akun khusus secara otomatis, untuk mengikuti seorang Master (apabila belum ada akun yang telah dibuka sebelumnya). Semua transaksi copy-trading akan menggunakan akun khusus tersebut;"
         },
         copyRule2_2:{
             zh:"复制高手",
             en:"Follow the Master",
             vi:"Sao chép bậc thầy",
             "zh-Hant":"復制高手",
-            id:"__id__"
+            id:"Ikuti Master."
         },
         copyRule2_2M:{
             zh:"复制高手：",
             en:"Follow the Master: ",
             vi:"Sao chép bậc thầy: ",
             "zh-Hant":"復制高手：",
-            id:"__id__"
+            id:"Ikuti Master: "
         },
         copyRule2_3:{
             zh:"您最多可以复制 10 位高手。每位交易高手的复制金额不同，您可以根据自己的账户情况选择高手进行复制。",
             en:"You can follow up to 10 masters. Each master has a different level of copying, and you can choose to copy it according to your account.",
             vi:"Bạn có thể sao chép tối đa 10 bậc thầy. Mỗi tổng thể có một mức sao chép khác nhau và bạn có thể chọn sao chép theo tài khoản của mình.",
             "zh-Hant":"您最多可以復制 10 位高手。每位交易高手的復制金額不同，您可以根據自己的賬戶情況選擇高手進行復制。",
-            id:"__id__"
+            id:"Anda dapat mengikuti Master hingga 10 orang. Setiap master memiliki strategi yang berbeda-beda. Oleh karena itu anda dapat memilih Master dan menyesuaikannya dengan akun yang anda miliki."
         },
         copyRule3:{
             zh:"复制资金",
             en:"Copy funds",
             vi:"Sao chép quỹ",
             "zh-Hant":"復制資金",
-            id:"__id__"
+            id:"Dana Copy"
         },
         copyRule3M:{
             zh:"复制资金：",
             en:"Copy funds: ",
             vi:"Sao chép quỹ: ",
             "zh-Hant":"復制資金：",
-            id:"__id__"
+            id:"Dana Copy: "
         },
         copyRule4:{
             zh:"复制资金可自行设置，最小值不可低于高手的最低复制金额，最大值不可超过您账户的可用复制金额。",
             en:"The copy funds can be set by themselves. The minimum value cannot be lower than the minimum copy amount of the master. The maximum value cannot exceed the available copy amount of your account.",
             vi:"Các quỹ sao chép có thể được thiết lập một mình. Giá trị tối thiểu không thể thấp hơn số tiền bản sao tối thiểu của bản gốc. Giá trị tối đa không thể vượt quá số tiền bản sao có sẵn của tài khoản của bạn.",
             "zh-Hant":"復制資金可自行設置，最小值不可低於高手的最低復制金額，最大值不可超過您賬戶的可用復制金額。",
-            id:"__id__"
+            id:"Modal yang dimasukkan tidak boleh lebih kecil daripada yang telah ditentukan oleh Master dan tidak boleh melebihi saldo yang tersedia di akun anda."
         },
         copyRule5:{
             zh:"* 可用复制资金=余额-已复制高手资金",
             en:"* Available copy funds = balance - copied master funds",
             vi:"* Các quỹ sao chép có sẵn = Số dư – sao chép quỹ bậc thầy",
             "zh-Hant":"* 可用復制資金=余額-已復制高手資金",
-            id:"__id__"
+            id:"Saldo yang tersedia = Saldo - dana yang sudah dipakai untuk mengikuti Master"
         },
         copyRule6:{
             zh:"复制高手开仓",
             en:"Follow master open positions",
             vi:"Sao chép các lệnh đang mở của bậc thầy",
             "zh-Hant":"復制高手開倉",
-            id:"__id__"
+            id:"Ikuti Posisi Master"
         },
         copyRule7:{
             zh:"1. 复制成功后，高手开仓，账户跟随高手同步开仓。",
             en:"1. Once the user has successfully followed the master, the master will open position and the user's account will begin to copy the master.",
             vi:"1. Sau khi người dùng đã sao chép thành công bậc thầy, bậc thầy sẽ mở các lệnh mở và tài khoản của người dùng sẽ bắt đầu sao chép bậc thầy.",
             "zh-Hant":"1. 復制成功後，高手開倉，賬戶跟隨高手同步開倉。",
-            id:"__id__"
+            id:"1. Apabila anda telah berhasil mengikuti master, maka setiap posisi yang dibuka oleh Master akan terbuka juga di akun anda."
         },
         copyRule8:{
             zh:"* 用户跟单手数=（高手订单手数*跟单者资金）/高手余额",
             en:"* User open positions = (master's orders lot * follower funds) / master's balance",
             vi:"* Các vị thế mở của người dùng = (số lượng đơn đặt hàng của bậc thầy* số tiền sao chép) / số dư của tổng thể",
             "zh-Hant":"* 用戶跟單手數=（高手訂單手數*跟單者資金）/高手余額",
-            id:"__id__"
+            id:"Posisi terbuka anda = (lot transaksi Master & saldo anda) / saldo Master"
         },
         copyRule9:{
             zh:"用户开仓可用保证金=跟单者资金-跟随高手的持仓单占用保证金+跟随高手持仓单的浮动的盈亏，",
             en:"User open trading available margin = follower funds - follow margin + follow profit and loss.",
             vi:"Người dùng mở giao dịch ký quỹ có sẵn = quỹ đi sao chép - theo margin + theo lãi và lỗ.",
             "zh-Hant":"用戶開倉可用保證金=跟單者資金-跟隨高手的持倉單占用保證金+跟隨高手持倉單的浮動的盈虧，",
-            id:"__id__"
+            id:"Margin anda = Saldo anda - margin yang terpakai + Laba/rugi saat ini."
         },
         copyRule10:{
             zh:"当复制资金不足时，将不再跟随高手下单。",
             en:"when the copy of funds is insufficient, will no longer follow the master orders.",
             vi:"khi bản sao của quỹ không đủ, sẽ không còn tuân theo các lệnh chính.",
             "zh-Hant":"當復制資金不足時，將不再跟隨高手下單。",
-            id:"__id__"
+            id:"ketika saldo untuk copy sudah tidak mencukupi, anda tidak dapat lagi mengikuti posisi Master."
         },
         copyRule11:{
             zh:"2. 高手极短时间内开仓后立即平仓，可能会导致跟单失败。",
             en:"2. If the master closes immediately after opening the position in a very short time, this may cause the order to fail.",
             vi:"2. Nếu tổng thể đóng ngay lập tức sau khi mở vị trí trong một thời gian rất ngắn, điều này có thể khiến cho lệnh thất bại.",
             "zh-Hant":"2. 高手極短時間內開倉後立即平倉，可能會導致跟單失敗。",
-            id:"__id__"
+            id:"2. Kesalahan dapat terjadi apabila Master membuka dan menutup posisi dalam waktu yang singkat."
         },
         copyRule12:{
             zh:"3. 账户只复制高手开仓订单，高手的挂单交易不会复制，挂单成交会跟随开仓。",
             en:"3. User's account only follows the master's open positions, the master's pending order transaction will not be copied. When the pending order becomes position, the user's account will follow the open position.",
             vi:"3. Tài khoản của người dùng chỉ theo vị thế mở của bậc thầy, giao dịch lệnh chờ của bậc thầy sẽ không được sao chép. Khi lệnh chờ trở thành vị trí, tài khoản của người dùng sẽ theo vị thế mở.",
             "zh-Hant":"3. 賬戶只復制高手開倉訂單，高手的掛單交易不會復制，掛單成交會跟隨開倉。",
-            id:"__id__"
+            id:"3. Semua transaksi Pending oleh Master tidak akan tercatat ke dalam akun anda, namun apabila transaksi Pending tersebut berubah menjadi posisi aktif, maka akun anda akan secara otomatis mengikuti posisi aktif tersebut."
         },
         copyRule13:{
             zh:"跟随高手平仓",
             en:"Follow the master to close the position",
             vi:"Thực hiện theo các bậc thầy để đóng vị thế",
             "zh-Hant":"跟隨高手平倉",
-            id:"__id__"
+            id:"Ikuti Master"
         },
         copyRule14:{
             zh:"1. 复制成功后，高手平仓，账户会跟随高手同步平仓，该笔订单盈亏将会记入复制金额内。",
             en:"1. After successfully follow the master, when the master closes the position, the user's account will follow to close the position, and the order profit and loss will be recorded in the copy amount.",
             vi:"1. Sau khi thực hiện thành công bậc thầy, khi bậc thầy đóng vị trí, tài khoản của người dùng sẽ theo sau để đóng vị trí, và số tiền lãi và thua lỗ sẽ được ghi vào số tiền sao chép.",
             "zh-Hant":"1. 復制成功後，高手平倉，賬戶會跟隨高手同步平倉，該筆訂單盈虧將會記入復制金額內。",
-            id:"__id__"
+            id:"1. Apabila anda telah berhasil mengikuti master, maka setiap posisi yang ditutup oleh Master akan tertutup juga di akun anda. Selanjutnya perhitungan laba atau rugi akan tercatat ke dalam sistem."
         },
         copyRule15:{
             zh:"2. 您可以手动平仓复制高手的订单，不会取消复制关系。",
             en:"2. You can manually close the follow position without canceling the following relationship.",
             vi:"2. Bạn có thể đóng vị trí sao chép theo cách thủ công mà không hủy bỏ mối quan hệ sau.",
             "zh-Hant":"2. 您可以手動平倉復制高手的訂單，不會取消復制關系。",
-            id:"__id__"
+            id:"2. Anda juga dapat menutup posisi anda secara manual."
         },
         copyRule16:{
             zh:"3. 您可以修改订单状态，跟随高手开仓的订单可在APP中修改为：不跟随高手平仓。状态修改成功后，高手平仓，该笔订单将不会跟随平仓，由您手动平仓或设置止盈/止损平仓。",
             en:"3. You can modify the position status, the follow position can be modified in the APP as: Do not follow to close. After the status is successfully modified, the master closes the position, the order will not be closed, and you can manually close the position or set the take profit/stop loss to close the position.",
             vi:"3. Bạn có thể sửa đổi trạng thái vị trí, vị trí sau có thể được sửa đổi trong APP như sau: Không theo sau để đóng. Sau khi trạng thái được sửa đổi thành công, tổng thể đóng vị trí, thứ tự sẽ không bị đóng và bạn có thể đóng vị trí theo cách thủ công hoặc đặt mất lợi nhuận / dừng lỗ để đóng vị trí.",
             "zh-Hant":"3. 您可以修改訂單狀態，跟隨高手開倉的訂單可在APP中修改為：不跟隨高手平倉。狀態修改成功後，高手平倉，該筆訂單將不會跟隨平倉，由您手動平倉或設置止盈/止損平倉。",
-            id:"__id__"
+            id:"3. Anda juga dapat mengubah status anda ke : tidak mengikuti penutupan posisi. Jika anda memilih status tersebut, maka setiap posisi yang terbuka oleh Master, harus ditutup oleh anda sendiri secara manual atau dengan cara memasang Stop Loss atau Take Profit."
         },
         copyRule17:{
             zh:"4. 您取消复制关系时，可自主选择强行平仓或者跟随高手平仓正在持仓中订单。",
             en:"4. When you cancel the follow relationship, you can choose to force the position to close or follow the master to close the order in the position.",
             vi:"4. Khi bạn hủy bỏ mối quan hệ tiếp theo, bạn có thể chọn để buộc vị trí đóng hoặc theo bậc thầy để đóng lệnh ở vị trí đó.",
             "zh-Hant":"4. 您取消復制關系時，可自主選擇強行平倉或者跟隨高手平倉正在持倉中訂單。",
-            id:"__id__"
+            id:"4. Jika anda tidak lagi mengikuti Master, anda tetap dapat menutup posisi secara manual atau tetap menunggu posisi itu ditutup oleh Master."
         },
         copyRule18:{
             zh:"5. 用户复制高手所产生的盈利或亏损，网站不承担任何责任。",
             en:"5. TigerWit does not bear any responsibility for the profit or loss generated by the user following the master.",
             vi:"5. TigerWit không chịu bất kỳ trách nhiệm nào về lợi nhuận hoặc thua lỗ do người dùng tạo ra theo bậc thầy.",
             "zh-Hant":"5. 用戶復制高手所產生的盈利或虧損，網站不承擔任何責任。",
-            id:"__id__"
+            id:"5. TigerWit tidak bertanggung jawab terhadap segala keuntungan dan kerugian yang ditimbulkan dari hasil transaksi antara anda dengan Master."
         },
         copyRule19:{
             zh:"复制高手盈利分成",
             en:"Following master profit commission",
             vi:"Sao chép lợi nhuận hoa hồng của bậc thầy",
             "zh-Hant":"復制高手盈利分成",
-            id:"__id__"
+            id:"Komisi Master"
         },
         copyRule20:{
             zh:"1. 每月1日，系统对您跟随高手的情况进行统计并结算，扣除跟随该高手盈利部分的20%作为该高手的分成；每月10日，系统对高手进行分成结算。",
             en:"1. On the 1st of each month, the system counts and settles the user's follow situation, deducting 20% of the profit part as the commission of the master; on the 10th of each month, the system settles the commission for the master.",
             vi:"1. Vào ngày đầu tiên của mỗi tháng, hệ thống sẽ đếm và giải quyết tình huống sao chép của người dùng, trừ 20% phần lợi nhuận là hoa hồng của bậc thầy; vào ngày 10 mỗi tháng, hệ thống sẽ thanh toán hoa hồng cho bậc thầy.",
             "zh-Hant":"1. 每月1日，系統對您跟隨高手的情況進行統計並結算，扣除跟隨該高手盈利部分的20%作為該高手的分成；每月10日，系統對高手進行分成結算。",
-            id:"__id__"
+            id:"1. Setiap tanggal 1, sistem akan otomatis menghitung dan membagikan komisi kepada Master sebesar 20% yang diambil dari total keuntungan yang anda dapatkan dari mengikuti Master tersebut. Kemudian setiap tanggal 10 sistem akan menyelesaikan seluruh komisi Master."
         },
         copyRule21:{
             zh:"2. 您取消复制关系选择强制平仓时，系统将对跟随该高手的所有订单进行统计并结算，扣除盈利部分的20%作为该高手分成。",
             en:"2. If the user cancels the follow relationship and selects 'Cancel following and force-close your order', the system will count and settle all orders following the master, deducting 20% of the profit portion as the commission of the master.",
             vi:"2. Nếu người dùng hủy bỏ mối quan hệ tiếp theo và chọn 'Huỷ theo sau và buộc đóng lệnh của bạn', hệ thống sẽ tính và thanh toán tất cả các đơn đặt hàng theo chủ, trừ 20% phần lợi nhuận như hoa hồng của bậc thầy.",
             "zh-Hant":"2. 您取消復制關系選擇強制平倉時，系統將對跟隨該高手的所有訂單進行統計並結算，扣除盈利部分的20%作為該高手分成。",
-            id:"__id__"
+            id:"2. Apabila anda tidak ingin lagi mengikuti Master dan memilih “berhenti mengikuti dan tutup semua posisi terbuka”, sistem akan langsung menghitung dan membagikan komisi kepada Master sebesar 20% yang diambil dari total keuntungan yang anda dapatkan dari hasil mengikuti Master tersebut."
         },
         copyRule22:{
             zh:"3. 您取消复制关系选择跟随高手平仓时，系统将在跟随该高手的所有订单全部平仓后，对跟随该高手所有订单进行统计并结算，扣除总盈利的20%作为该高手分成。",
             en:"3. If the user cancels the following relationship and selects 'Cancel following but do not close order', when all the positions of following the master are closed, the system will count all the orders following the master and settle, deducting 20% of the profit portion as the commission of the master.",
             vi:"3. Nếu người dùng hủy bỏ mối quan hệ sau và chọn 'Hủy sao chép nhưng không đóng thứ tự', khi tất cả các vị trí theo sau tổng thể được đóng, hệ thống sẽ tính tất cả các đơn đặt hàng theo bậc thầy và thanh toán, trừ 20% phần lợi nhuận như ủy ban của bậc thầy.",
             "zh-Hant":"3. 您取消復制關系選擇跟隨高手平倉時，系統將在跟隨該高手的所有訂單全部平倉後，對跟隨該高手所有訂單進行統計並結算，扣除總盈利的20%作為該高手分成。",
-            id:"__id__"
+            id:"3. Apabila anda tidak ingin lagi mengikuti Master dan memilih “berhenti mengikuti namun jangan tutup posisi terbuka”, sistem akan menunggu hingga seluruh posisi ditutup oleh master dan membagikan komisi kepada Master sebesar 20% yang diambil dari total keuntungan yang anda dapatkan dari mengikuti Master tersebut."
         },
         copyRule23:{
             zh:"4. 只要跟随高手开仓的订单，都会进行分成结算。",
             en:"4. As long as you open the position follow the master, the commission will be settled.",
             vi:"4. Miễn là bạn mở vị trí theo chủ, hoa hồng sẽ được giải quyết.",
             "zh-Hant":"4. 只要跟隨高手開倉的訂單，都會進行分成結算。",
-            id:"__id__"
+            id:"4. Selama anda memiliki posisi yang dihasilkan dari mengikuti seorang Master, komisi akan dipotong secara otomatis."
         },
         copyRule24:{
             zh:"在决定复制高手时，您确认已经考虑了您的整体财务状况，包括财务承诺，并且您了解使用复制跟单服务具有高度投机性并且您可以承受巨大的损失用于复制高手。请注意，我们无法就任何特定投资，账户，投资组合或策略的表现提供任何保证。",
             en:"When deciding to follow masters, you confirm that you have considered your overall financial situation, including financial commitments, and that you understand that using copy-to-order services is highly speculative and you can afford potential losses for copying masters. Please note that we are unable to provide any guarantees regarding the performance of any particular investment, account, portfolio or strategy.",
             vi:"Khi quyết định sao chép bậc thầy, bạn xác nhận rằng bạn đã xem xét tình hình tài chính tổng thể của mình, bao gồm các cam kết tài chính và bạn hiểu rằng việc sử dụng dịch vụ sao chép theo đơn đặt hàng mang tính đầu cơ cao và bạn có khả năng thua lỗ. Xin lưu ý rằng chúng tôi không thể cung cấp bất kỳ đảm bảo nào về hiệu suất của bất kỳ khoản đầu tư, tài khoản, danh mục đầu tư hoặc chiến lược cụ thể nào.",
             "zh-Hant":"在決定復制高手時，您確認已經考慮了您的整體財務狀況，包括財務承諾，並且您了解使用復制跟單服務具有高度投機性並且您可以承受巨大的損失用於復制高手。請註意，我們無法就任何特定投資，賬戶，投資組合或策略的表現提供任何保證。",
-            id:"__id__"
+            id:"Ketika anda memutuskan untuk mengikuti Master, artinya anda telah memperhitungkan kondisi dan situasi keuangan anda. Serta mengerti bahwa menggunakan jasa copy-trading memiliki resiko dan berpotensi kehilangan modal. TigerWit tidak menjamin segala hasil investasi, akun, portofolio maupun strategi."
         },
         copyRule25:{
             zh:"如您对规则有任何疑问，可发邮件至",
             en:"If you have any questions about the rules, please contact customer service or send e-mail to ",
             vi:"Nếu bạn có bất kỳ câu hỏi nào về quy tắc, vui lòng liên hệ với bộ phận dịch vụ khách hàng hoặc gửi e-mail đến ",
             "zh-Hant":"如您對規則有任何疑問，可發郵件至",
-            id:"__id__"
+            id:"Apabila anda memiliki pertanyaan mengenai peraturan-peraturan tersebut, silahkan hubungi layanan pelanggan kami atau kirimkan email anda ke"
         },
         copyRule26:{
             zh:"进行咨询。",
@@ -1936,413 +2056,413 @@ module.exports = function () {
             zh:"MT4 交易软件下载",
             vi:"Tải Xuống Phần Mềm MT4",
             "zh-Hant":"MT4 交易軟件下載",
-            id:"__id__"
+            id:"Unduh platform MT4"
         },
         "mt4-2":{
             en:" ",
             zh:"操作方便，高效易用",
             vi:" ",
             "zh-Hant":"操作方便，高效易用",
-            id:"__id__"
+            id:" "
         },
         "mt4-3":{
             en:"MT4 trading platform can instantly view of gold, silver, foreign exchange, stock and futures market, and can be simulated trading. Powerful MT4 trading platform, the page is simple, easy to operate, the most important feature is easy to use opening positions, investors can only make a stop set for risk control. MT4 trading platform in addition to providing real-time quotes and trading functions, including 18 kinds of line drawing tool, 9 trading session chart options, 30 kinds of international popular technical indicators and sound warning prompt. Users can be the next single, open, limit orders, stop, only to win, view real-time news, announcements, warning, view the report, as well as data analysis and processing operations.",
             zh:"MT4 交易平台可以即时查看黄金、白银、外汇、股票、期货等行情，同时可以进行模拟交易。MT4 交易平台功能强大，页面简洁，操作方便，最主要的开仓平仓功能简单易用，投资者可以通过设置止赚止损来进行风险控制。MT4 交易平台除了提供实时行情和交易功能外，还包括 18 种画线工具、9 个交易时段图表选项、30 种国际流行技术指标和声音预警提示。用户可进行下单、平仓、限价单、止损、止赢、查看实时新闻、公告、预警、查看报表，以及数据分析和处理等操作。",
             vi:"Nền tảng giao dịch MT4 có thể hiển thị ngay lập tức thị trường vàng, bạc, ngoại hối, chứng khoán và thị trường kỳ hạn, và có thể tăng trưởng giao dịch. Nền tảng giao dịch MT4 mạnh mẽ, trang giao diện rất đơn giản, dễ vận hành, tính năng quan trọng nhất là dễ sử dụng các vị thế mở, nhà đầu tư chỉ có thể thiết lập cài đặt dừng lỗ để kiểm soát rủi ro. Nền tảng giao dịch MT4 ngoài việc cung cấp các báo giá và chức năng giao dịch theo thời gian thực, bao gồm 18 loại công cụ vẽ phân tích, 9 lựa chọn biểu đồ phiên giao dịch, 30 loại chỉ báo kỹ thuật phổ biến quốc tế và dấu nhắc cảnh báo âm thanh nhanh chóng. Người dùng có thể thực hiện mở, giới hạn dừng lỗ lệnh tiếp theo, chỉ để giành chiến thắng, xem tin tức trong thời gian thực, thông báo, cảnh báo, xem báo cáo, cũng như phân tích dữ liệu và xử lý hoạt động.",
             "zh-Hant":"MT4 交易平臺可以即時查看黃金、白銀、外匯、股票、期貨等行情，同時可以進行模擬交易。MT4 交易平臺功能強大，頁面簡潔，操作方便，最主要的開倉平倉功能簡單易用，投資者可以通過設置止賺止損來進行風險控制。MT4 交易平臺除了提供實時行情和交易功能外，還包括 18 種畫線工具、9 個交易時段圖表選項、30 種國際流行技術指標和聲音預警提示。用戶可進行下單、平倉、限價單、止損、止贏、查看實時新聞、公告、預警、查看報表，以及數據分析和處理等操作。",
-            id:"__id__"
+            id:"Platform MT4 selain menampilkan harga pasar mata uang, emas, perak, saham dan futures juga dapat dipakai untuk virtual trading. Keunggulan dari platform MT4 adalah mudah digunakan, sederhana, mudah membuka posisi, dan investor dapat mengatur resiko. Selain itu juga terdapat banyak fungsi lainnya seperti 18 jenis alat gambar, 9 pilihan grafik, 30 jenis indikator teknikal yang populer di kalangan internasional, serta suara pesan pemberitahuan. Melalui platform MT4, pengguna dapat membuka dan menutup posisi, memasang posisi pending, mengatur stop loss dan take profit, membaca berita, mendapat pemberitahuan, peringatan, laporan, analisis data dan transaksi."
         },
         "mt4-4":{
             en:"MT4 For iPhone",
             zh:"iOS 下载",
             vi:"MT4 cho iPhone",
             "zh-Hant":"iOS 下載",
-            id:"__id__"
+            id:"MT4 untuk iPhone"
         },
         "mt4-5":{
             en:"MT4 For Android",
             zh:"Android 下载",
             vi:"MT4 cho Android",
             "zh-Hant":"Android 下載",
-            id:"__id__"
+            id:"MT4 untuk Android"
         },
         "mt4-6":{
             en:"MT4 For PC",
             zh:"PC端下载",
             vi:"MT4 cho PC",
             "zh-Hant":"PC端下載",
-            id:"__id__"
+            id:"MT4 untuk PC"
         },
         trade_tool:{
             en:"en",
             zh:"zh",
             vi:"vi",
             "zh-Hant":"zh-Hant",
-            id:"__id__"
+            id:"id"
         },
         sidebar1:{
             en:"Learning Center",
             zh:"学习中心",
             vi:"Trung tâm học tập",
             "zh-Hant":"學習中心",
-            id:"__id__"
+            id:"Pusat Edukasi"
         },
         sidebar3:{
             en:"FAQ",
             zh:"常见问题",
             vi:"Câu hỏi thường gặp",
             "zh-Hant":"常見問題",
-            id:"__id__"
+            id:"FAQ"
         },
         sidebar4:{
             en:"Open a virtual account",
             zh:"开立模拟账户",
             vi:"^^-^^",
             "zh-Hant":"開立模擬賬戶",
-            id:"__id__"
+            id:"Buka akun virtual"
         },
         sidebar5:{
             en:"Open an account",
             zh:"开立账户",
             vi:"Mở tài khoản",
             "zh-Hant":"開立賬戶",
-            id:"__id__"
+            id:"Buka Akun"
         },
         sidebar6:{
             en:"Deposit and withdrawal",
             zh:"出入金",
             vi:"Nạp và rút tiền",
             "zh-Hant":"出入金",
-            id:"__id__"
+            id:"Setor dan Tarik"
         },
         sidebar7:{
             en:"Types of accounts",
             zh:"账户类型",
             vi:"^^-^^",
             "zh-Hant":"賬戶類型",
-            id:"__id__"
+            id:"Tipe Akun"
         },
         sidebar8:{
             en:"Trading",
             zh:"交易",
             vi:"^^-^^",
             "zh-Hant":"交易",
-            id:"__id__"
+            id:"Transaksi"
         },
         sidebar9:{
             en:"Platform",
             zh:"平台",
             vi:"^^-^^",
             "zh-Hant":"平臺",
-            id:"__id__"
+            id:"Platform"
         },
         sidebar10:{
             en:"Swap Rate",
             zh:"隔夜利息",
             vi:"^^-^^",
             "zh-Hant":"隔夜利息",
-            id:"__id__"
+            id:"Tingkat Swap"
         },
         sidebar11:{
             en:"Videos",
             zh:"学习视频",
             vi:"^^-^^",
             "zh-Hant":"學習視頻",
-            id:"__id__"
+            id:"Video"
         },
         sidebar12:{
             en:"Partner",
             zh:"合作伙伴",
             vi:"^^-^^",
             "zh-Hant":"合作夥伴",
-            id:"__id__"
+            id:"Mitra"
         },
         sidebar13:{
             en:"Agent",
             zh:"代理合作",
             vi:"^^-^^",
             "zh-Hant":"代理合作",
-            id:"__id__"
+            id:"Agen"
         },
         sidebar14:{
             en:"Become Master",
             zh:"成为高手",
             vi:"^^-^^",
             "zh-Hant":"成為高手",
-            id:"__id__"
+            id:"Menjadi Master"
         },
         video1:{
             en:"Video",
             zh:"学习视频",
             vi:"Video",
             "zh-Hant":"學習視頻",
-            id:"__id__"
+            id:"Video"
         },
         video2:{
             en:"TigerWit on CCTV",
             zh:"TigerWit首席策略分析师李彭为您解盘。",
             vi:"TigerWit on CCTV",
             "zh-Hant":"TigerWit首席策略分析師李彭為您解盤。",
-            id:"__id__"
+            id:"TigerWit di CCTV"
         },
         traderIndex1:{
             en:"Follow",
             zh:"复制",
             vi:"Làm Theo",
             "zh-Hant":"復制",
-            id:"__id__"
+            id:"Ikuti"
         },
         traderIndex2:{
             en:"COPIED",
             zh:"已复制",
             vi:"Sao chép",
             "zh-Hant":"已復制",
-            id:"__id__"
+            id:"Ikuti"
         },
         traderIndex17:{
             en:"Statistics",
             zh:"数据统计",
             vi:"Số liệu thống kê",
             "zh-Hant":"數據統計",
-            id:"__id__"
+            id:"Statistik"
         },
         traderIndex18:{
             en:"Open trades",
             zh:"当前交易",
             vi:"Các giao dịch mở",
             "zh-Hant":"當前交易",
-            id:"__id__"
+            id:"Posisi terbuka"
         },
         traderIndex19:{
             en:"Trade history",
             zh:"历史交易",
             vi:"Lịch sử giao dịch",
             "zh-Hant":"歷史交易",
-            id:"__id__"
+            id:"Riwayat transaksi"
         },
         amtCommon1:{
             zh:"可供下载的法律文件：",
             en:"Download Legal Documents: ",
             vi:"Tải về tài liệu pháp lý",
             "zh-Hant":"可供下載的法律文件：",
-            id:"__id__"
+            id:"Download Legal Documents: "
         },
         amtIndex1:{
             zh:"条件和条款",
             en:"Conditions and Clauses",
             vi:"Điều kiện và điều khoản",
             "zh-Hant":"條件和條款",
-            id:"__id__"
+            id:"Syarat dan Ketentuan"
         },
         amtIndex2:{
             zh:"版本生效日期：",
             en:"Valid from: ",
             vi:"Có giá trị từ: ",
             "zh-Hant":"版本生效日期：",
-            id:"__id__"
+            id:"Berlaku sejak: "
         },
         amtIndex3:{
             zh:"2017年10月30日",
             en:"Oct. 30th, 2017",
             vi:"Ngày 30 tháng 10 năm 2017",
             "zh-Hant":"2017年10月30日",
-            id:"__id__"
+            id:"30 Oktober 2017"
         },
         amtIndex4:{
             zh:"法律声明",
             en:"Legal Notices",
             vi:"Thông báo pháp lý",
             "zh-Hant":"法律聲明",
-            id:"__id__"
+            id:"Pemberitahuan Hukum"
         },
         amtIndex5:{
             zh:"阅读有关使用本网站应遵守的条款和条件、声明及通知。",
             en:"Read the terms, conditions and notices regarding the use of this website.",
             vi:"Đọc các điều khoản, điều kiện và thông báo liên quan đến việc sử dụng trang web này.",
             "zh-Hant":"閱讀有關使用本網站應遵守的條款和條件、聲明及通知。",
-            id:"__id__"
+            id:"Silahkan baca syarat dan ketentuan penggunaan website ini"
         },
         amtIndex6:{
             zh:"客户协议",
             en:"Client Agreement",
             vi:"Thỏa thuận khách hàng",
             "zh-Hant":"客戶協議",
-            id:"__id__"
+            id:"Perjanjian Klien"
         },
         amtIndex7:{
             zh:"客户协议将约束TigerWit与您之间的关系。",
             en:"The Client Agreement will constrain the relationship between TigerWit and you.",
             vi:"Thỏa thuận khách hàng sẽ hạn chế mối quan hệ giữa TigerWit và bạn.",
             "zh-Hant":"客戶協議將約束TigerWit與您之間的關系。",
-            id:"__id__"
+            id:"Perjanjian Klien akan menjembatani hubungan antara TigerWit dengan anda."
         },
         amtIndex8:{
             zh:"风险披露声明",
             en:"Risk Disclosure Notice",
             vi:"Thông báo tiết lộ rủi ro",
             "zh-Hant":"風險披露聲明",
-            id:"__id__"
+            id:"Peringatan Resiko"
         },
         amtIndex9:{
             zh:"在您使用TigerWit服务之前，您必须根据您的情况和财务情况，慎重考虑您是否适合进行CFD交易。",
             en:"Before you use the TigerWit’s service, you must consider carefully whether you are suitable for CFD trading based on your circumstances and financial situation.",
             vi:"Trước khi bạn sử dụng dịch vụ của TigerWit, bạn phải cân nhắc kỹ liệu bạn có phù hợp với giao dịch CFD dựa trên hoàn cảnh và tình hình tài chính của bạn hay không.",
             "zh-Hant":"在您使用TigerWit服務之前，您必須根據您的情況和財務情況，慎重考慮您是否適合進行CFD交易。",
-            id:"__id__"
+            id:"Sebelum anda menggunakan layanan TigerWit, anda harus mempertimbangkan apakah anda memenuhi syarat untuk bertransaksi di CFD berdasarkan kondisi dan situasi keuangan anda."
         },
         amtIndex10:{
             zh:"隐私政策和Cookie披露声明",
             en:"Privacy Policy and Cookie Disclosure",
             vi:"Chính sách bảo mật và tiết lộ cookie",
             "zh-Hant":"隱私政策和Cookie披露聲明",
-            id:"__id__"
+            id:"Kebijakan Privasi dan Penggunaan Cookie"
         },
         amtIndex11:{
             zh:"本文档详述有关TigerWit管理个人资料的政策。",
             en:"This document describes the management of TigerWit Personal Data Policy in detail.",
             vi:"Tài liệu này mô tả chi tiết việc quản lý Chính sách dữ liệu cá nhân của TigerWit.",
             "zh-Hant":"本文檔詳述有關TigerWit管理個人資料的政策。",
-            id:"__id__"
+            id:"Dokumen ini memaparkan secara rinci mengenai kebijakan pengelolaan data pribadi oleh TigerWit."
         },
         amtIndex12:{
             zh:"商业条件及条款",
             en:"Terms and Conditions of Business",
             vi:"Điều khoản và Điều kiện kinh doanh",
             "zh-Hant":"商業條件及條款",
-            id:"__id__"
+            id:"Syarat dan Ketentuan Bisnis"
         },
         amtIndex13:{
             zh:"本文档详述TigerWit的金融服务指南，旨在帮助您决定是否使用我们提供的服务。",
             en:"This document describes TigerWit Limited Services Guide in detail, designed to help you decide whether to use the services we provide or not.",
             vi:"Tài liệu này mô tả chi tiết Hướng dẫn Dịch vụ Giới hạn TigerWit, được thiết kế để giúp bạn quyết định có sử dụng các dịch vụ chúng tôi cung cấp hay không.",
             "zh-Hant":"本文檔詳述TigerWit的金融服務指南，旨在幫助您決定是否使用我們提供的服務。",
-            id:"__id__"
+            id:"Dokumen ini memaparkan secara rinci mengenai panduan layanan TigerWit Limited yang dirancang untuk membantu anda memutuskan apakah akan menggunakan layanan kami atau tidak."
         },
         amtIndex14:{
             zh:"负责任交易声明",
             en:"Trade Responsibly Notice",
             vi:"Thông báo trách nhiệm",
             "zh-Hant":"負責任交易聲明",
-            id:"__id__"
+            id:"Peringatan Transaksi"
         },
         amtIndex15:{
             zh:"本文档旨在提醒您了解市场和知晓相关风险以及有效地利用杠杆优势。",
             en:"This document is designed to remind you of knowing the market, knowing the relative and using leverage advantage effectively.",
             vi:"Tài liệu này được thiết kế để nhắc nhở bạn về việc biết thị trường, biết mối quan hệ và sử dụng lợi thế đòn bẩy một cách hiệu quả.",
             "zh-Hant":"本文檔旨在提醒您了解市場和知曉相關風險以及有效地利用杠桿優勢。",
-            id:"__id__"
+            id:"Dokumen ini dibuat untuk mengingatkan anda untuk memahami tentang pasar, dan pemanfaatan daya ungkit secara efektif."
         },
         amtIndex16:{
             zh:"交易条件声明",
             en:"Trading Conditions Notice",
             vi:"Điều kiện giao dịch",
             "zh-Hant":"交易條件聲明",
-            id:"__id__"
+            id:"Peringatan Ketentuan Trading"
         },
         amtIndex17:{
             zh:"本文档详述不同的投资策略涉及不同程度的风险，旨在帮助您决定是否使用我们提供的服务。",
             en:"This document describes different investment strategies that involve varying degrees of risk in detail, designed to help you decide whether to use the services we provide or not.",
             vi:"Tài liệu này mô tả các chiến lược đầu tư khác nhau liên quan đến mức độ rủi ro khác nhau một cách chi tiết, được thiết kế để giúp bạn quyết định có nên sử dụng các dịch vụ mà chúng tôi cung cấp hay không.",
             "zh-Hant":"本文檔詳述不同的投資策略涉及不同程度的風險，旨在幫助您決定是否使用我們提供的服務。",
-            id:"__id__"
+            id:"Dokumen ini memaparkan secara rinci mengenai berbagai jenis strategi investasi serta resiko yang dimilikinya, agar membantu anda memutuskan apakah akan menggunakannya atau tidak."
         },
         amtIndex18:{
             zh:"客户声明",
             en:"Declaration by Client",
             vi:"Tuyên bố của khách hàng",
             "zh-Hant":"客戶聲明",
-            id:"__id__"
+            id:"Penyataan Klien"
         },
         amtIndex19:{
             zh:"阅读并了解TigerWit交易平台风险提示及免责条款。",
             en:"Read and understand the TigerWit Trading Risk Reminder and Exemption Clauses.",
             vi:"Đọc và hiểu các Nhắc nhở Rủi ro Giao dịch TigerWit và các Điều khoản Miễn.",
             "zh-Hant":"閱讀並了解TigerWit交易平臺風險提示及免責條款。",
-            id:"__id__"
+            id:"Baca dan pahami Peringatan Resiko Trading dan Klausul Pengecualian TigerWit."
         },
         amtIndex20:{
             zh:"客户分类通知",
             en:"Client Categorization Notice",
             vi:"Thông báo Phân loại Khách hàng",
             "zh-Hant":"客戶分類通知",
-            id:"__id__"
+            id:"Pemberitahuan Klasifikasi Klien"
         },
         amtIndex21:{
             zh:"查阅我们对客户的定义以及分类标准。",
             en:"Check the Definition of Client and Client Categorization Criteria.",
             vi:"Kiểm tra các tiêu chí phân loại khách hàng và định nghĩa.",
             "zh-Hant":"查閱我們對客戶的定義以及分類標準。",
-            id:"__id__"
+            id:"Baca Definisi Klien dan Kriteria Klasifikasi Klien."
         },
         amtIndex22:{
             zh:"保护客户资金",
             en:"Protecting Client Funds",
             vi:"Bảo vệ quỹ khách hàng",
             "zh-Hant":"保護客戶資金",
-            id:"__id__"
+            id:"Perlindungan Dana Klien"
         },
         amtIndex23:{
             zh:"本文档详述有关TigerWit保护您的资金所采取的措施。",
             en:"This document describes the measures taken by TigerWit to protect your funds in detail.",
             vi:"Tài liệu này mô tả các biện pháp được thực hiện bởi TigerWit để bảo vệ chi tiết tiền của bạn.",
             "zh-Hant":"本文檔詳述有關TigerWit保護您的資金所采取的措施。",
-            id:"__id__"
+            id:"Dokumen ini memaparkan secara rinci mengenai bagaimana cara TigerWit melindungi dana anda."
         },
         amtIndex24:{
             zh:"订单执行政策",
             en:"Order Execution Policy",
             vi:"Chính sách thực thi lệnh",
             "zh-Hant":"訂單執行政策",
-            id:"__id__"
+            id:"Kebijakan Eksekusi Order"
         },
         amtIndex25:{
             zh:"阅读并了解我们提供的与金融工具有关的执行政策的条款。此文档构成客户协议的一部分。 ",
             en:"Read and understand the terms which are about the Execution Policy of our financial instruments. This document is a part of the Client Agreement.",
             vi:"Đọc và hiểu các điều khoản về Chính sách thực thi của các công cụ tài chính của chúng tôi. Tài liệu này là một phần của Thỏa thuận khách hàng.",
             "zh-Hant":"閱讀並了解我們提供的與金融工具有關的執行政策的條款。此文檔構成客戶協議的壹部分。 ",
-            id:"__id__"
+            id:"Baca dan pahami persyaratan dan kebijakan eksekusi instrumen keuangan kami. Dokumen ini merupakan bagian dari Perjanjian Klien."
         },
         amtIndex26:{
             zh:"利益冲突政策",
             en:"Conflicts of Interest Policy",
             vi:"Xung đột lợi ích chính sách",
             "zh-Hant":"利益沖突政策",
-            id:"__id__"
+            id:"Kebijakan Konflik Kepentingan"
         },
         amtIndex27:{
             zh:"本文档详述当发现利益冲突时我们将采取的有效预防措施。",
             en:"This document describes the effective precautions we will take when Conflicts of Interest are found in detail.",
             vi:"Tài liệu này mô tả các biện pháp phòng ngừa hiệu quả mà chúng tôi sẽ thực hiện khi có Xung đột lợi ích được tìm thấy chi tiết.",
             "zh-Hant":"本文檔詳述當發現利益沖突時我們將采取的有效預防措施。",
-            id:"__id__"
+            id:"Dokumen ini memaparkan secara rinci mengenai tindakan pencegahan yang akan diambil ketika terjadi Konflik Kepentingan."
         },
         amtIndex28:{
             zh:"投诉处理流程",
             en:"Complaint Handling Procedure",
             vi:"Thủ tục xử lý khiếu nại",
             "zh-Hant":"投訴處理流程",
-            id:"__id__"
+            id:"Prosedur Penanganan Keluhan"
         },
         amtIndex29:{
             zh:"了解投诉处理的程序。",
             en:"Understand the Complaint Handling Procedure.",
             vi:"Hiểu thủ tục xử lý khiếu nại.",
             "zh-Hant":"了解投訴處理的程序。",
-            id:"__id__"
+            id:"Memahami Prosedur Penanganan Keluhan."
         },
         amtIndex30:{
             zh:"复制交易说明",
             en:"Trade Copying Declaration",
             vi:"Tuyên bố sao chép thương mại",
             "zh-Hant":"復制交易說明",
-            id:"__id__"
+            id:"Pernyataan Copy Trading"
         },
         amtIndex31:{
             zh:"阅读并了解TigerWit交易平台的跟单交易声明。",
             en:"Read and understand the TigerWit Trading Trade Copying Declaration.",
             vi:"Đọc và hiểu Tuyên bố sao chép thương mại TigerWit.",
             "zh-Hant":"閱讀並了解TigerWit交易平臺的跟單交易聲明。",
-            id:"__id__"
+            id:"Baca dan pahami Pernyataan Copy Trading TigerWit."
         },
         amtLegal1:{
             zh:"声明",
@@ -2461,7 +2581,7 @@ module.exports = function () {
             en:"Security",
             vi:"Bảo mật",
             "zh-Hant":"安全",
-            id:"__id__"
+            id:"Keamanan"
         },
         amtLegal18:{
             zh:"如果您使用电子邮件与本公司联系，您应当注意互联网电子邮件的安全性是不确定的。您用未经加密的电子邮件发送敏感或保密信息，即接受互联网此类保密性的不确定和可能不足的风险。互联网并不100%的安全，某些人或许能够拦截和阅读您的详细资料。",
@@ -3861,7 +3981,7 @@ module.exports = function () {
             en:"FAQs",
             vi:"FAQs",
             "zh-Hant":"常見問題解答",
-            id:"__id__"
+            id:"FAQs"
         },
         amtClient196:{
             zh:"1.涉及本客户协议或 TigerWit 条款与条件的问题首先应向客户服务部咨询。",
@@ -3882,14 +4002,14 @@ module.exports = function () {
             en:"Phone: +86 400 809 8509",
             vi:"Điện thoại: +86 400 809 8509",
             "zh-Hant":"電話：+86 400 809 8509",
-            id:"__id__"
+            id:"Telepon: +86 400 809 8509"
         },
         amtClient199:{
             zh:"电邮：support@tigerwit.com",
             en:"Email: support@tigerwit.com",
             vi:"Email: support@tigerwit.com",
             "zh-Hant":"電郵：support@tigerwit.com",
-            id:"__id__"
+            id:"Email: support@tigerwit.com"
         },
         amtClient200:{
             zh:"其他联系人",
@@ -3910,14 +4030,14 @@ module.exports = function () {
             en:"Phone: +86 400 809 8509",
             vi:"Điện thoại: +86 400 809 8509",
             "zh-Hant":"電話：+86 400 809 8509",
-            id:"__id__"
+            id:"Telepon: +86 400 809 8509"
         },
         amtClient203:{
             zh:"电邮：dealing@tigerwit.com",
             en:"Email: dealing@tigerwit.com",
             vi:"Email: dealing@tigerwit.com",
             "zh-Hant":"電郵：dealing@tigerwit.com",
-            id:"__id__"
+            id:"Email: dealing@tigerwit.com"
         },
         amtClient204:{
             zh:"2.合规部门",
@@ -3931,14 +4051,14 @@ module.exports = function () {
             en:"Phone: +1 (242) 676 7306",
             vi:"Điện thoại: +1 (242) 676 7306",
             "zh-Hant":"電話：+1 (242) 676 7306",
-            id:"__id__"
+            id:"Telepon: +1 (242) 676 7306"
         },
         amtClient206:{
             zh:"电邮：compliance@tigerwit.com",
             en:"Email: compliance@tigerwit.com",
             vi:"Email: compliance@tigerwit.com",
             "zh-Hant":"電郵：compliance@tigerwit.com",
-            id:"__id__"
+            id:"Email: compliance@tigerwit.com"
         },
         amtRisk1:{
             zh:"风险警告：差价合约（CFD）是复杂的金融产品，其中大部分没有设定到期日。因此，CFD 头寸在您选择关闭现有未平仓头寸之日到期。CFD是一种杠杆产品，会产生较高的风险并可能导致您损失全部的投资资本。因此，CFD 可能并不适合所有人士。您所承担的风险不应超过已经做好准备承担的损失。在决定进行交易之前，您应该确保了解所涉及的风险，并考虑自己的经验水平。如果有必要，您应该寻求独立建议。",
@@ -5247,7 +5367,7 @@ module.exports = function () {
             en:"FAQs",
             vi:"FAQs",
             "zh-Hant":"常見問題",
-            id:"__id__"
+            id:"FAQs"
         },
         amtBusiness111:{
             zh:"1.关于条款和条件的问题，首先应该提交给客服部门。",
@@ -5268,7 +5388,7 @@ module.exports = function () {
             en:"Email: support@tigerwit.com",
             vi:"Email: support@tigerwit.com",
             "zh-Hant":"電子郵件：support@tigerwit.com",
-            id:"__id__"
+            id:"Email: support@tigerwit.com"
         },
         amtBusiness114:{
             zh:"其他联系人",
@@ -5289,14 +5409,14 @@ module.exports = function () {
             en:"Phone: +86 400 809 8509",
             vi:"Điện thoại: +86 400 809 8509",
             "zh-Hant":"電話：+86 400 809 8509",
-            id:"__id__"
+            id:"Telepon: +86 400 809 8509"
         },
         amtBusiness117:{
             zh:"电子邮件：dealing@tigerwit.com",
             en:"Email: dealing@tigerwit.com",
             vi:"Email: deal@tigerwit.com",
             "zh-Hant":"電子郵件：dealing@tigerwit.com",
-            id:"__id__"
+            id:"Email: dealing@tigerwit.com"
         },
         amtBusiness118:{
             zh:"合规管理部门电话：+1(242) 676 7306",
@@ -5310,7 +5430,7 @@ module.exports = function () {
             en:"Email: compliance@tigerwit.com",
             vi:"Email: compliance@tigerwit.com",
             "zh-Hant":"電子郵件：compliance@tigerwit.com",
-            id:"__id__"
+            id:"Email: compliance@tigerwit.com"
         },
         amtResponsibly1:{
             zh:"负责任地交易——理解涉及的风险",
@@ -5716,7 +5836,7 @@ module.exports = function () {
             en:"FAQs",
             vi:"FAQs",
             "zh-Hant":"常見問題解答",
-            id:"__id__"
+            id:"FAQs"
         },
         amtConditions53:{
             zh:"关于交易条件的问题首先传达给客户服务部。",
@@ -5737,14 +5857,14 @@ module.exports = function () {
             en:"Phone: +86 400 809 8509",
             vi:"Điện thoại: +86 400 809 8509",
             "zh-Hant":"電話：+86 400 809 8509",
-            id:"__id__"
+            id:"Telepon: +86 400 809 8509"
         },
         amtConditions56:{
             zh:"电子邮件：support@tigerwit.com",
             en:"Email: support@tigerwit.com",
             vi:"Email: support@tigerwit.com",
             "zh-Hant":"電子郵件：support@tigerwit.com",
-            id:"__id__"
+            id:"Email: support@tigerwit.com"
         },
         amtConditions57:{
             zh:"其他联系人",
@@ -5765,21 +5885,21 @@ module.exports = function () {
             en:"Phone: +1 (242) 676 7306",
             vi:"Điện thoại: +1 (242) 676 7306",
             "zh-Hant":"電話：+1 (242) 676 7306",
-            id:"__id__"
+            id:"Telepon: +1 (242) 676 7306"
         },
         amtConditions60:{
             zh:"电子邮件：compliance@tigerwit.com",
             en:"Email: compliance@tigerwit.com",
             vi:"Email: compliance@tigerwit.com",
             "zh-Hant":"電子郵件：compliance@tigerwit.com",
-            id:"__id__"
+            id:"Email: compliance@tigerwit.com"
         },
         amtStatement1:{
             zh:"客户声明",
             en:"Declaration by Client",
             vi:"Tuyên bố của khách hàng",
             "zh-Hant":"客戶聲明",
-            id:"__id__"
+            id:"Penyataan Klien"
         },
         amtStatement2:{
             zh:"本人已阅读跟随外汇交易的相关《风险披露书》、《TigerWit交易平台风险提示免责条款》，并已完全理解和接受上述文件的全部内容，清楚了解跟单交易的内容及可能出现的风险。本人的投资决策完全基于本人的独立自主判断做出，并自愿承担因此产生的相关风险和全部后果。",
@@ -5947,7 +6067,7 @@ module.exports = function () {
             en:"Declaration by Client",
             vi:"Tuyên bố của khách hàng",
             "zh-Hant":"客戶聲明",
-            id:"__id__"
+            id:"Penyataan Klien"
         },
         copytransaction2:{
             zh:"本人已阅读跟随外汇交易的相关《风险披露书》、《TigerWit交易平台风险提示免责条款》，并已完全理解和接受上述文件的全部内容，清楚了解跟单交易的内容及可能出现的风险。本人的投资决策完全基于本人的独立自主判断做出，并自愿承担因此产生的相关风险和全部后果。",
@@ -6661,7 +6781,7 @@ module.exports = function () {
             en:"FAQs",
             vi:"FAQs",
             "zh-Hant":"常見問題解答",
-            id:"__id__"
+            id:"FAQs"
         },
         amtCategorization99:{
             zh:"1.关于此工作程序的问题首先传达给客户服务部。",
@@ -6689,14 +6809,14 @@ module.exports = function () {
             en:"Phone: +86 400 809 8509",
             vi:"Điện thoại: +86 400 809 8509",
             "zh-Hant":"電話：+86 400 809 8509",
-            id:"__id__"
+            id:"Telepon: +86 400 809 8509"
         },
         amtCategorization103:{
             zh:"电邮：support@tigerwit.com",
             en:"Email: support@tigerwit.com",
             vi:"Email: support@tigerwit.com",
             "zh-Hant":"電郵：support@tigerwit.com",
-            id:"__id__"
+            id:"Email: support@tigerwit.com"
         },
         amtCategorization104:{
             zh:"合规部：",
@@ -6710,14 +6830,14 @@ module.exports = function () {
             en:"Phone: +1 (242) 676 7306",
             vi:"Điện thoại: +1 (242) 676 7306",
             "zh-Hant":"電話：+1 (242) 676 7306",
-            id:"__id__"
+            id:"Telepon: +1 (242) 676 7306"
         },
         amtCategorization106:{
             zh:"电邮：compliance@tigerwit.com",
             en:"Email: compliance@tigerwit.com",
             vi:"Email: compliance@tigerwit.com",
             "zh-Hant":"電郵：compliance@tigerwit.com",
-            id:"__id__"
+            id:"Email: compliance@tigerwit.com"
         },
         amtFunds1:{
             zh:"作为一家受监管的实体，TigerWit Limited 符合下列有关客户资金的监管要求：",
@@ -6871,7 +6991,7 @@ module.exports = function () {
             en:"Commission",
             vi:"Hoa hồng",
             "zh-Hant":"傭金",
-            id:"__id__"
+            id:"Komisi"
         },
         amtExecution17:{
             zh:"客户在通过本平台交易基于外汇和金属的 CFD时，可能被收取佣金。更多信息可在本网页在线获取：http://global.tigerwit.com。",
@@ -7788,7 +7908,7 @@ module.exports = function () {
             en:"FAQs",
             vi:"FAQs",
             "zh-Hant":"常見問題",
-            id:"__id__"
+            id:"FAQs"
         },
         amtExecution148:{
             zh:"1.关于政策问题首先传达给客户服务部。",
@@ -7809,14 +7929,14 @@ module.exports = function () {
             en:"Phone: +86 400 809 8509",
             vi:"Điện thoại: +86 400 809 8509",
             "zh-Hant":"電話：+86 400 809 8509",
-            id:"__id__"
+            id:"Telepon: +86 400 809 8509"
         },
         amtExecution151:{
             zh:"电子邮件：support@tigerwit.com",
             en:"Email: support@tigerwit.com",
             vi:"Email: support@tigerwit.com",
             "zh-Hant":"電子郵件：support@tigerwit.com",
-            id:"__id__"
+            id:"Email: support@tigerwit.com"
         },
         amtExecution152:{
             zh:"其他联系人",
@@ -7837,14 +7957,14 @@ module.exports = function () {
             en:"Phone: +1 (242) 676 7306",
             vi:"Điện thoại: +1 (242) 676 7306",
             "zh-Hant":"電話：+1 (242) 676 7306",
-            id:"__id__"
+            id:"Telepon: +1 (242) 676 7306"
         },
         amtExecution155:{
             zh:"电子邮件：compliance@tigerwit.com",
             en:"Email: compliance@tigerwit.com",
             vi:"Email: compliance@tigerwit.com",
             "zh-Hant":"電子郵件：compliance@tigerwit.com",
-            id:"__id__"
+            id:"Email: compliance@tigerwit.com"
         },
         amtConflicts1:{
             zh:"序言",
@@ -8194,14 +8314,14 @@ module.exports = function () {
             en:"Phone: +86 400 809 8509",
             vi:"Điện thoại: +86 400 809 8509",
             "zh-Hant":"電話：+86 400 809 8509",
-            id:"__id__"
+            id:"Telepon: +86 400 809 8509"
         },
         amtConflicts51:{
             zh:"电子邮件：support@tigerwit.com",
             en:"Email: support@tigerwit.com",
             vi:"Email: support@tigerwit.com",
             "zh-Hant":"電子郵件：support@tigerwit.com",
-            id:"__id__"
+            id:"Email: support@tigerwit.com"
         },
         amtConflicts52:{
             zh:"其他联系人",
@@ -8222,14 +8342,14 @@ module.exports = function () {
             en:"Phone: +1 (242) 676 7306",
             vi:"Điện thoại: +1 (242) 676 7306",
             "zh-Hant":"電話：+1 (242) 676 7306",
-            id:"__id__"
+            id:"Telepon: +1 (242) 676 7306"
         },
         amtConflicts55:{
             zh:"电子邮件：compliance@tigerwit.com",
             en:"Email: compliance@tigerwit.com",
             vi:"Email: compliance@tigerwit.com",
             "zh-Hant":"電子郵件：compliance@tigerwit.com",
-            id:"__id__"
+            id:"Email: compliance@tigerwit.com"
         },
         amtComplaint1:{
             zh:"投诉程序概述",
@@ -8313,14 +8433,14 @@ module.exports = function () {
             en:"Phone: +1 (242) 397 4100",
             vi:"Điện thoại: +1 (242) 397 4100",
             "zh-Hant":"電話：+1 (242) 397 4100",
-            id:"__id__"
+            id:"Telepon: +1 (242) 397 4100"
         },
         amtComplaint13:{
             zh:"电邮：info@scb.gov.bs",
             en:"Email: info@scb.gov.bs",
             vi:"Email: info@scb.gov.bs",
             "zh-Hant":"電郵：info@scb.gov.bs",
-            id:"__id__"
+            id:"Email: info@scb.gov.bs"
         },
         amtComplaint14:{
             zh:"您必须在收到最终答复之日起六（6）个月内向金融申诉服务机构提交投诉。",
@@ -8474,7 +8594,7 @@ module.exports = function () {
             en:"FAQs",
             vi:"FAQs",
             "zh-Hant":"常見問題",
-            id:"__id__"
+            id:"FAQs"
         },
         amtComplaint36:{
             zh:"1.关于此程序的问题首先传达给客户服务部。",
@@ -8502,7 +8622,7 @@ module.exports = function () {
             en:"Phone: +86 400 809 8509",
             vi:"Điện thoại: +86 400 809 8509",
             "zh-Hant":"電話：+86 400 809 8509",
-            id:"__id__"
+            id:"Telepon: +86 400 809 8509"
         },
         amtComplaint40:{
             zh:"电子邮件：support@tigerwit.com",
@@ -8523,7 +8643,7 @@ module.exports = function () {
             en:"Phone: +1 (242) 676 7306",
             vi:"Điện thoại: +1 (242) 676 7306",
             "zh-Hant":"電話：+1 (242) 676 7306",
-            id:"__id__"
+            id:"Telepon: +1 (242) 676 7306"
         },
         amtComplaint43:{
             zh:"电子邮件：compliance@tigerwit.com",
@@ -8538,133 +8658,133 @@ module.exports = function () {
                 en:"Download APP",
                 vi:"Download APP",
                 "zh-Hant":"下載APP",
-                id:"__id__"
+                id:"Unduh APP"
             },
             tip1:{
                 zh:"复制跟单",
                 en:"Follow a master to trade",
                 vi:"Làm theo một bậc thầy để giao dịch",
                 "zh-Hant":"復制跟單",
-                id:"__id__"
+                id:"Ikuti Master"
             },
             tip2:{
                 zh:"无需精通外汇知识，跟着高手坐享其成",
                 en:"No need to master forex knowledge, just follow a master and enjoy the profit.",
                 vi:"Không cần thành thạo kiến thức forex, chỉ cần làm theo một bậc thầy và hưởng lợi nhuận.",
                 "zh-Hant":"無需精通外匯知識，跟著高手坐享其成",
-                id:"__id__"
+                id:"Anda tidak perlu menguasai semua pengetahuan tentang valas, cukup ikuti seorang Master dan nikmati hasilnya."
             },
             tip3:{
                 zh:"支持Android2.3.3及以上",
                 en:"Support Android2.3.3 and above",
                 vi:"Phiên bản android hỗ trợ Android2.3.3 trở lên",
                 "zh-Hant":"支持Android2.3.3及以上",
-                id:"__id__"
+                id:"Mendukung versi Android 2.3.3 dan yang lebih baru"
             },
             tip4:{
                 zh:"支持苹果iOS7.0及以上",
                 en:"Support apple iOS7.0 and above",
                 vi:"Hỗ trợ apple iOS7.0 trở lên",
                 "zh-Hant":"支持蘋果iOS7.0及以上",
-                id:"__id__"
+                id:"Mendukung versi iOS7.0 dan yang lebih baru"
             },
             tip5:{
                 zh:"扫码轻松赚收益",
                 en:"Scan QR code and take profit easily",
                 vi:"Quét mã QR và nhận lợi nhuận dễ dàng",
                 "zh-Hant":"掃碼輕松賺收益",
-                id:"__id__"
+                id:"Pindai kode QR dan hasilkan uang dengan mudah"
             },
             tip6:{
                 zh:"请使用手机浏览器扫描功能",
                 en:"Please use the mobile browser scan function",
                 vi:"Vui lòng sử dụng chức năng quét trình duyệt di động",
                 "zh-Hant":"請使用手機瀏覽器掃描功能",
-                id:"__id__"
+                id:"Mohon gunakan pemindai browser seluler"
             },
             tip15:{
                 zh:"APP 链接全球金融市场",
                 en:"APP Link to global financial markets",
                 vi:"APP Liên kết với các thị trường tài chính toàn cầu",
                 "zh-Hant":"APP 鏈接全球金融市場",
-                id:"__id__"
+                id:"tautan APP ke pasar keuangan global"
             },
             tip16:{
                 zh:"人人都是投资高手—你准备好了吗？",
                 en:"Trade like a master—Are you ready for it?",
                 vi:"Giao dịch như một bậc thầy - Bạn đã sẵn sàng chưa?",
                 "zh-Hant":"人人都是投資高手—妳準備好了嗎？",
-                id:"__id__"
+                id:"Trading layaknya seorang Master - Anda sudah siap?"
             },
             howChooseMaster:{
                 zh:"如何选择高手",
                 en:"How to choose a master",
                 vi:"How to choose a master",
                 "zh-Hant":"如何選擇高手",
-                id:"__id__"
+                id:"Bagaimana cara memilih Master"
             },
             analysis:{
                 zh:"每日汇评",
                 en:"Analysis",
                 vi:"Analysis",
                 "zh-Hant":"每日匯評",
-                id:"__id__"
+                id:"Analisis"
             },
             calendar:{
                 zh:"财经日历",
                 en:"Calendar",
                 vi:"Calendar",
                 "zh-Hant":"財經日歷",
-                id:"__id__"
+                id:"Kalender"
             },
             guides:{
                 zh:"交易指南",
                 en:"Guides",
                 vi:"Chỉ dẫn",
                 "zh-Hant":"交易指南",
-                id:"__id__"
+                id:"Panduan"
             },
             partners:{
                 zh:"合作伙伴",
                 en:"Partners",
                 vi:"Đối tác",
                 "zh-Hant":"合作夥伴",
-                id:"__id__"
+                id:"Mitra"
             },
             agencies:{
                 zh:"代理合作",
                 en:"Partners",
                 vi:"Các đại lý",
                 "zh-Hant":"代理合作",
-                id:"__id__"
+                id:"Mitra"
             },
             becomeMaster:{
                 zh:"成为高手",
                 en:"Become a master",
                 vi:"Trở Thành Master",
                 "zh-Hant":"成為高手",
-                id:"__id__"
+                id:"Menjadi Master"
             },
             eliteTeam:{
                 zh:"精英团队",
                 en:"Elite team",
                 vi:"Elite team",
                 "zh-Hant":"精英團隊",
-                id:"__id__"
+                id:"Tim Elit"
             },
             mediaReports:{
                 zh:"媒体报道",
                 en:"Media reports",
                 vi:"Media reports",
                 "zh-Hant":"媒體報道",
-                id:"__id__"
+                id:"Laporan Media"
             },
             copyRegulations:{
                 zh:"复制规则",
                 en:"Copy Regulations",
                 vi:"Quy chế sao chép",
                 "zh-Hant":"復制規則",
-                id:"__id__"
+                id:"Peraturan Copy"
             }
         },
         header:{
@@ -8673,14 +8793,14 @@ module.exports = function () {
                 en:"Education",
                 vi:"Hỏi đáp",
                 "zh-Hant":"教育",
-                id:"__id__"
+                id:"Edukasi"
             },
             course:{
                 zh:"教程",
                 en:"Course",
                 vi:"Khóa học",
                 "zh-Hant":"教程",
-                id:"__id__"
+                id:"Pelatihan"
             }
         },
         footer:{
@@ -8689,28 +8809,28 @@ module.exports = function () {
                 en:"Customer service telephone (service time from 8:00 to 22:00)",
                 vi:"Số điện thoại dịch vụ chăm sóc khách hàng ( thời gian phục vụ từ 8:00 đến 22:00)",
                 "zh-Hant":"客服電話（服務時間 8:00-22:00）",
-                id:"__id__"
+                id:"Nomor telepon Layanan Pelanggan ( Waktu layanan dari jam 8:00 hingga 22:00)"
             },
             subscribeArticle:{
                 zh:"订阅每日必读的投资干货",
                 en:"Subscribe daily investment article",
                 vi:"Sao chép bài viết đầu tư hàng ngày",
                 "zh-Hant":"訂閱每日必讀的投資幹貨",
-                id:"__id__"
+                id:"Langganan artikel investasi"
             },
             scb:{
                 zh:"TigerWit受巴哈马证券交易委员会（SCB）的授权和监管，监管号：SIA-F185。",
                 en:"TigerWit is authorized and supervised by Securities Commission of the Bahamas (SCB), the regulation number SIA-F185.",
                 vi:"TigerWit is authorized and supervised by Securities Commission of the Bahamas (SCB), the regulation number SIA-F185.",
                 "zh-Hant":"TigerWit受巴哈馬證券交易委員會（SCB）的授權和監管，監管號：SIA-F185。",
-                id:"__id__"
+                id:"TigerWit disahkan dan diawasi oleh Securities Commission of the Bahamas (SCB) dengan nomor peraturan SIA-F185. "
             },
             fca:{
                 zh:"TigerWit受英国金融行为监管局（FCA）的授权和监管，授权编号为：679941。",
                 en:"TigerWit is authorized and supervised by Financial Conduct Authority (FCA), the authorization number 679941.",
                 vi:"TigerWit is authorized and supervised by Financial Conduct Authority (FCA), the authorization number 679941.",
                 "zh-Hant":"TigerWit受英國金融行為監管局（FCA）的授權和監管，授權編號為：679941。",
-                id:"__id__"
+                id:"TigerWit disahkan dan diawasi oleh Financial Conduct Authority (FCA) dengan nomor otorisasi 679941."
             }
         },
         partner:{
@@ -8719,245 +8839,245 @@ module.exports = function () {
                 en:"Become a TigerWit partner today",
                 vi:"Trở thành đối tác của TigerWit hôm nay",
                 "zh-Hant":"誠招合作夥伴",
-                id:"__id__"
+                id:"Bergabunglah menjadi mitra TigerWit sekarang juga"
             },
             becomePartner_1:{
                 zh:"运用新的技术建立和推广一个成功的本地或全球品牌是我们的愿景，这需要TigerWit与您共同实现。成为我们的代理商，您可以获得TigerWit所有工具支持，同时享受多项优秀代理商扶持计划，轻松实现合作共赢、财富共享。与我们合作，利用您富余的资源创造意想不到的价值！",
                 en:"With TigerWit, the success of our partners comes from developing long-term profitable relationships. We aim to bring a fresh technological approach to an industry in need of change that benefits both partners and traders. Our innovative ‘Distributed Ledger Technology’ can provide you with an unique and significant advantage over your competitors. TigerWit’s distributed trading ledger is just the first step. Visit tech.tigerwit.com for more information on our blockchain technology.",
                 vi:"Với TigerWit, sự thành công của các đối tác của chúng tôi đến từ việc phát triển các mối quan hệ có lợi nhuận lâu dài. Chúng tôi mong muốn mang đến một phương pháp tiếp cận công nghệ mới cho một ngành công nghiệp có nhu cầu thay đổi mang lại lợi ích cho cả đối tác và thương nhân. Công nghệ Ledger phân phối sáng tạo của chúng tôi có thể cung cấp cho bạn một lợi thế độc đáo và đáng kể so với các đối thủ cạnh tranh của bạn. Sổ cái giao dịch phân phối của TigerWit chỉ là bước đầu tiên. Truy cập tech.tigerwit.com để biết thêm thông tin về công nghệ blockchain của chúng tôi.",
                 "zh-Hant":"運用新的技術建立和推廣壹個成功的本地或全球品牌是我們的願景，這需要TigerWit與您共同實現。成為我們的代理商，您可以獲得TigerWit所有工具支持，同時享受多項優秀代理商扶持計劃，輕松實現合作共贏、財富共享。與我們合作，利用您富余的資源創造意想不到的價值！",
-                id:"__id__"
+                id:"Kesuksesan dari seluruh mitra kami berasal dari hubungan yang saling percaya dan menguntungkan.Kami hadir disini untuk memberikan perubahan dengan membawa teknologi baru yang dapat membantu seluruh pihak baik mitra, trader maupun investor.Inovasi yang membedakan kami dari kompetitor lainnya bernama “Teknologi Distributed Trading Ledger”.Teknologi ‘Distributed Trading Ledger’ merupakan langkah pertama kami untuk membawa perubahan. Untuk informasi lebih lengkap mengenai teknologi blockchain kami, silahkan kunjungi situs kami di tech.tigerwit.com."
             },
             joinUs:{
                 zh:"加入我们",
                 en:"Join us",
                 vi:"Tham gia với chúng tôi",
                 "zh-Hant":"加入我們",
-                id:"__id__"
+                id:"Bergabunglah dengan Kami"
             },
             whyPartner:{
                 zh:"为什么选择我们？",
                 en:"Why partner with TigerWit?",
                 vi:"Tại sao hợp tác với TigerWit?",
                 "zh-Hant":"為什麽選擇我們？",
-                id:"__id__"
+                id:"Mengapa harus bermitra dengan TigerWit?"
             },
             whyPartner_1:{
                 zh:"让TigerWit的专家为您提供量身定制的解决方案",
                 en:"Looking to grow your business? Let TigerWit’s experts deliver a solution tailored to you.",
                 vi:"Bạn đang tìm kiếm cơ hội phát triển sự nghiệp của bạn? Hãy để những chuyên gia của TigerWit mang đến giải pháp phù hợp với bạn.",
                 "zh-Hant":"讓TigerWit的專家為您提供量身定制的解決方案",
-                id:"__id__"
+                id:"Ingin mengembangkan bisnis anda?Para ahli di TigerWit siap memberikan solusi terbaik untuk anda."
             },
             supportPlan:{
                 zh:"优秀代理商扶持计划",
                 en:"Excellent agency support plan",
                 vi:"Một đối tác xuất sắc để hỗ trợ kế hoạch của bạn",
                 "zh-Hant":"優秀代理商扶持計劃",
-                id:"__id__"
+                id:"Dukungan penuh"
             },
             supportPlan_1:{
                 zh:"薪资支持、客户服务支持、激励支持、返佣支持、培训支持、公关支持等丰富的扶持成长体系，帮您快速成为专业代理人，实现人生小目标！",
                 en:"Rich support and growth systems, such as salary support, customer service support, incentive support, commission return support, training support, and public relations support, help you quickly become a professional agent to achieve your life goals!",
                 vi:"Các hệ thống hỗ trợ và tăng trưởng phong phú, như hỗ trợ tiền lương, hỗ trợ dịch vụ khách hàng, hỗ trợ khuyến khích, hỗ trợ hoa hồng, hỗ trợ đào tạo và hỗ trợ quan hệ công chúng, giúp bạn nhanh chóng trở thành một đại lý chuyên nghiệp để đạt được mục tiêu cuộc sống của bạn!",
                 "zh-Hant":"薪資支持、客戶服務支持、激勵支持、返傭支持、培訓支持、公關支持等豐富的扶持成長體系，幫您快速成為專業代理人，實現人生小目標！",
-                id:"__id__"
+                id:"Dengan memberikan dukungan dan sistem yang mumpuni, seperti fasilitas gaji, layanan pelanggan, insentif, komisi, rebate, pelatihan, dan lain sebagainya. Semua fasilitas tersebut diberikan agar anda dapat menjadi seorang agen yang profesional."
             },
             customerPromotionSystem:{
                 zh:"客户推广系统",
                 en:"Customer promotion system",
                 vi:"Hệ thống khuyến mãi khách hàng",
                 "zh-Hant":"客戶推廣系統",
-                id:"__id__"
+                id:"Bahan promosi"
             },
             customerPromotionSystem_1:{
                 zh:"节庆日宣传图、二维码及推广链接、汇评咨询推文等一键获取，满足您多种推广需求，简单快捷！",
                 en:"Get designed promotion photo, QR code, promotion link, strategy comments, and tweets to meet your needs, simple and fast!",
                 vi:"Hệ thống khuyến mãi của khách hàngNhận ảnh quảng cáo được thiết kế, mã QR, liên kết quảng cáo, nhận xét chiến lược và tweet để đáp ứng nhu cầu của bạn, đơn giản và nhanh chóng!",
                 "zh-Hant":"節慶日宣傳圖、二維碼及推廣鏈接、匯評咨詢推文等壹鍵獲取，滿足您多種推廣需求，簡單快捷！",
-                id:"__id__"
+                id:"Anda dapat mendapatkan konten dan materi promosi seperti foto, kode promosi, kode QR, strategi promosi, dan lain sebagainya sesuai dengan kebutuhan anda."
             },
             safeReliable:{
                 zh:"安全可靠",
                 en:"Safe and reliable",
                 vi:"An toàn và đáng tin cậy",
                 "zh-Hant":"安全可靠",
-                id:"__id__"
+                id:"Aman dan Terpercaya"
             },
             safeReliable_1:{
                 zh:"团队汇集了具有不同学术和应用背景的专业人士，分别在外汇交易、差价合约、监管合规性、投资管理、在线平台研发和全球营销等方面拥有丰富的经验，为您的资金保驾护航！",
                 en:"With a strong technological core built upon a philosophy of transparency, credibility and integrity, TigerWit offers its clients exceptional capabilities to trade in the markets.",
                 vi:"Với cốt lõi công nghệ mạnh mẽ được xây dựng dựa trên triết lý minh bạch, uy tín và toàn vẹn, TigerWit mang đến cho khách hàng những khả năng đặc biệt để giao dịch trên thị trường. Những người sáng lập của TigerWit là những cá nhân có kinh nghiệm với thành công và lịch sử lâu dài, mang đến một đội ngũ chuyên gia với nhiều nền tảng học thuật và ứng dụng đa dạng. và bán hàng & tiếp thị toàn cầu.",
                 "zh-Hant":"團隊匯集了具有不同學術和應用背景的專業人士，分別在外匯交易、差價合約、監管合規性、投資管理、在線平臺研發和全球營銷等方面擁有豐富的經驗，為您的資金保駕護航！",
-                id:"__id__"
+                id:"Dengan menggunakan teknologi yang kuat dan dirancang atas dasar keterbukaan, kredibilitas dan Integritas, TigerWIt menawarkan pengalaman transaksi di pasar dengan kemampuan yang berbeda dengan yang lainnya."
             },
             whatOffer:{
                 zh:"我们提供什么？",
                 en:"What do we offer?",
                 vi:"Chúng tôi cung cấp những gì?",
                 "zh-Hant":"我們提供什麽？",
-                id:"__id__"
+                id:"Apa yang kami berikan?"
             },
             whatOffer_1:{
                 zh:"获得所有的工具和支持，以建立和推广一个成功的本地或全球品牌",
                 en:"Access to all the tools and support your business needs to build and market a successful local or global brand.",
                 vi:"Truy cập vào tất cả các công cụ và hỗ trợ doanh nghiệp của bạn cần xây dựng và quảng bá cho một thương hiệu địa phương và toàn cầu thành công.",
                 "zh-Hant":"獲得所有的工具和支持，以建立和推廣壹個成功的本地或全球品牌",
-                id:"__id__"
+                id:"Anda akan mendapatkan semua dukungan untuk keperluan membangun bisnis anda dengan sukses."
             },
             offer_1:{
                 zh:"区块链技术",
                 en:"Innovative distributed trading ledger",
                 vi:"Sổ cái giao dịch phân phối cải tiến",
                 "zh-Hant":"區塊鏈技術",
-                id:"__id__"
+                id:"Teknologi inovatif “Distributed Trading Ledger”"
             },
             offer_2:{
                 zh:"复制跟单模式",
                 en:"Copy-trading technology",
                 vi:"Công nghệ sao chép giao dịch",
                 "zh-Hant":"復制跟單模式",
-                id:"__id__"
+                id:"Fitur Copy-Trading"
             },
             offer_3:{
                 zh:"24/5客户及技术支持",
                 en:"24/5 client and technology support",
                 vi:"24 giờ trên 5 ngày hỗ trợ khách hàng và công nghệ",
                 "zh-Hant":"24/5客戶及技術支持",
-                id:"__id__"
+                id:"Dukungan klien dan layanan pelanggan 24/5"
             },
             offer_4:{
                 zh:"智能便捷的交易APP",
                 en:"An easy-to-use, highly intuitive mobile trading app",
                 vi:"Ứng dụng giao dịch di động trực quan, dễ sử dụng",
                 "zh-Hant":"智能便捷的交易APP",
-                id:"__id__"
+                id:"Aplikasi yang mudah digunakan dan intuitif"
             },
             offer_5:{
                 zh:"快速简易传播",
                 en:"Competitive spreads",
                 vi:"Spreads cạnh tranh",
                 "zh-Hant":"快速簡易傳播",
-                id:"__id__"
+                id:"Spread yang bersaing"
             },
             offer_6:{
                 zh:"深度市场流动性",
                 en:"Deep market liquidity",
                 vi:"Thanh khoản thị trường sâu",
                 "zh-Hant":"深度市場流動性",
-                id:"__id__"
+                id:"Likuiditas pasar yang tinggi"
             },
             offer_7:{
                 zh:"独家合作伙伴英超利物浦",
                 en:"Exclusive promotions with our partner, Liverpool FC",
                 vi:"Chương trình khuyến mãi độc quyền với đối tác của chúng tôi, Liverpool FC",
                 "zh-Hant":"獨家合作夥伴英超利物浦",
-                id:"__id__"
+                id:"Promosi eksklusif dengan mitra kami yaitu Liverpool FC"
             },
             offer_8:{
                 zh:"直观数据报告",
                 en:"Advanced reporting",
                 vi:"Báo cáo nâng cao",
                 "zh-Hant":"直觀數據報告",
-                id:"__id__"
+                id:"Laporan yang lengkap"
             },
             offer_9:{
                 zh:"FCA、SCB监管",
                 en:"Regulation by FCA and SCB",
                 vi:"Quy định của FCA và SCB",
                 "zh-Hant":"FCA、SCB監管",
-                id:"__id__"
+                id:"Terdaftar dan Teregulasi oleh FCA dan SCB"
             },
             becomePartnerFlow:{
                 zh:"成为合作伙伴流程",
                 en:"Become a partner",
                 vi:"Trở thành đối tác ",
                 "zh-Hant":"成為合作夥伴流程",
-                id:"__id__"
+                id:"Menjadi Mitra"
             },
             signUpAccount:{
                 zh:"注册账户",
                 en:"Sign up for an account",
                 vi:"Đăng ký một tài khoản",
                 "zh-Hant":"註冊賬戶",
-                id:"__id__"
+                id:"Daftarkan akun"
             },
             overProbationPeriod:{
                 zh:"完成磨合期条件",
                 en:"Over the probation period",
                 vi:"Trong thời gian chạy thử",
                 "zh-Hant":"完成磨合期條件",
-                id:"__id__"
+                id:"Masa Percobaan"
             },
             endTrial:{
                 zh:"磨合结束，成为代理",
                 en:"End of trial, become an official agent",
                 vi:"Kết thúc thời gian chạy thử, trở thành đại lý chính thức",
                 "zh-Hant":"磨合結束，成為代理",
-                id:"__id__"
+                id:"Telah melewati masa percobaan, jadi Mitra resmi"
             },
             becomePartnerFlow_1:{
                 zh:"请填写以下表格，我们将联系您提供更多的信息和回答任何问题。",
                 en:"Please complete the form below and we will be in touch to provide more information and answer any questions.",
                 vi:"Vui lòng điền vào mẫu dưới đây và chúng tôi sẽ liên hệ để cung cấp thêm thông tin và trả lời bất kỳ câu hỏi nào.",
                 "zh-Hant":"請填寫以下表格，我們將聯系您提供更多的信息和回答任何問題。",
-                id:"__id__"
+                id:"Mohon lengkapi formulir dibawah ini. "
             },
             becomePartnerFlow_2:{
                 zh:"我们期待着您的信息。",
                 en:"We look forward to hearing from you.",
                 vi:"Chúng tôi mong muốn được nghe từ bạn.",
                 "zh-Hant":"我們期待著您的信息。",
-                id:"__id__"
+                id:"Kami siap menjawab semua pertanyaan dan memberikan informasi yang lebih baik untuk anda."
             },
             name:{
                 zh:"姓名",
                 en:"Name",
                 vi:"Tên",
                 "zh-Hant":"姓名",
-                id:"__id__"
+                id:"Nama"
             },
             country:{
                 zh:"国家",
                 en:"Country",
                 vi:"Quốc gia",
                 "zh-Hant":"國家",
-                id:"__id__"
+                id:"Negara"
             },
             email:{
                 zh:"邮箱",
                 en:"Email",
                 vi:"Thư điện tử",
                 "zh-Hant":"郵箱",
-                id:"__id__"
+                id:"Email"
             },
             phone:{
                 zh:"手机号",
                 en:"Phone",
                 vi:"Số điện thoại",
                 "zh-Hant":"手機號",
-                id:"__id__"
+                id:"Telepon"
             },
             message:{
                 zh:"备注信息（选填）",
                 en:"Message(optional)",
                 vi:"Tin nhắn (tùy chon)",
                 "zh-Hant":"備註信息（選填）",
-                id:"__id__"
+                id:"Pesan"
             },
             complusoryInformation:{
                 zh:"以下信息中邮箱和手机号必选一项填写",
-                en:"You should fill in one of email address or phone number as complusory information",
+                en:"You should fill in one of email address or phone number as complusory information.",
                 vi:"Bạn nên điền vào một trong các địa chỉ email hoặc số điện thoại như thông tin bắt buộc.",
                 "zh-Hant":"以下信息中郵箱和手機號必選壹項填寫",
-                id:"__id__"
+                id:"anda harus mengisi alamat email atau nomor telepon."
             },
             sendAgent:{
                 zh:"申请代理",
                 en:"Send",
                 vi:"Gửi",
                 "zh-Hant":"申請代理",
-                id:"__id__"
+                id:"Kirim"
             }
         }
       };

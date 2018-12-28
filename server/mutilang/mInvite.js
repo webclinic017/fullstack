@@ -88,7 +88,7 @@ module.exports = {
         en:"Invite Friends",
         vi:"^^-^^",
         "zh-Hant":"邀請好友",
-        id:"__id__"
+        id:"Ajak teman"
     },
     mInvite14:{
         zh:"赢取10美金",
