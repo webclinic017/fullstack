@@ -126,10 +126,10 @@ module.exports = {
         "zh-Hant": "4.任何通過第三方作弊軟件刷取好友邀請獎勵，壹經發現老虎外匯有權取消紅包兌現獎勵。"
     },
     mInvite22: {
-        zh: "5.本活动最终解释权归老虎外汇所有。如有疑问，请咨询客服400 - 809 - 8509。",
+        zh: "5.本活动最终解释权归老虎外汇所有。如有疑问，请咨询客服",
         en: "5. The final interpretation of this activity owned by TigerWit. If you have other questions，please contact TigerWit customer service.",
         vi: "^^-^^",
-        "zh-Hant": "5.本活動最終解釋權歸老虎外匯所有。如有疑問，請咨詢客服400 - 809 - 8509。"
+        "zh-Hant": "5.本活動最終解釋權歸老虎外匯所有。如有疑問，請咨詢客服"
     },
     mInvite23: {
         zh: "发送邀请给好友",

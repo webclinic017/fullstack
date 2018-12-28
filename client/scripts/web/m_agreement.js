@@ -85,6 +85,7 @@
     var tabList=[];
     var listType = $(".m_agreement_common").attr("data-list-type");
 
+    getEmailPhone(".sys_message_email");
     setTabList();
     var html=bt('template_tab_list',{
         tabList: tabList

@@ -28,7 +28,7 @@
         };
         $scope.area_id = ''; // 1为国内，2为国际区
         // test
-        // openWebAgmentModal(100403, function(resolve, e){
+        // openWebAgmentModal(100402, function(resolve, e){
         //     // this 当前点击按钮
         //     console.log(this, resolve, e)
         //     layer.close(resolve.layIndex)
@@ -225,6 +225,7 @@
                         if (user_id) {
                             sa.login(user_id);
                         }
+                        $scope.getEmailPhone(true);
                     }, 100);
                     $timeout(function () {
                         sa.track('login', {

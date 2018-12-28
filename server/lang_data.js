@@ -57,12 +57,6 @@ module.exports = function () {
             vi: "support@tigerwit.com",
             "zh-Hant": "support@tigerwit.com"
         },
-        telephone: {
-            zh: "400-809-8509",
-            en: "400-809-8509",
-            vi: "400-809-8509",
-            "zh-Hant": "400-809-8509"
-        },
         webSite: {
             zh: "www.tigerwit.com",
             en: "www.tigerwit.com",
@@ -3955,17 +3949,11 @@ module.exports = function () {
             vi: "2.Bộ Phận Hỗ Trợ Khách Hàng",
             "zh-Hant": "2.客戶服務部"
         },
-        amtClient198: {
-            zh: "电话：+86 400 809 8509",
-            en: "Phone: +86 400 809 8509",
-            vi: "Điện thoại: +86 400 809 8509",
-            "zh-Hant": "電話：+86 400 809 8509"
-        },
         amtClient199: {
-            zh: "电邮：support@tigerwit.com",
-            en: "Email: support@tigerwit.com",
-            vi: "Email: support@tigerwit.com",
-            "zh-Hant": "電郵：support@tigerwit.com"
+            zh: "电邮：",
+            en: "Email: ",
+            vi: "Email: ",
+            "zh-Hant": "電郵："
         },
         amtClient200: {
             zh: "其他联系人",
@@ -3979,17 +3967,11 @@ module.exports = function () {
             vi: "1.Phòng Xử Lý",
             "zh-Hant": "1.交易部門"
         },
-        amtClient202: {
-            zh: "电话：+86 400 809 8509",
-            en: "Phone: +86 400 809 8509",
-            vi: "Điện thoại: +86 400 809 8509",
-            "zh-Hant": "電話：+86 400 809 8509"
-        },
         amtClient203: {
-            zh: "电邮：dealing@tigerwit.com",
-            en: "Email: dealing@tigerwit.com",
-            vi: "Email: dealing@tigerwit.com",
-            "zh-Hant": "電郵：dealing@tigerwit.com"
+            zh: "电邮：",
+            en: "Email: ",
+            vi: "Email: ",
+            "zh-Hant": "電郵："
         },
         amtClient204: {
             zh: "2.合规部门",
@@ -3997,17 +3979,11 @@ module.exports = function () {
             vi: "2.Phòng  Giám Sát",
             "zh-Hant": "2.合規部門"
         },
-        amtClient205: {
-            zh: "电话：+1 (242) 676 7306",
-            en: "Phone: +1 (242) 676 7306",
-            vi: "Điện thoại: +1 (242) 676 7306",
-            "zh-Hant": "電話：+1 (242) 676 7306"
-        },
         amtClient206: {
-            zh: "电邮：compliance@tigerwit.com",
-            en: "Email: compliance@tigerwit.com",
-            vi: "Email: compliance@tigerwit.com",
-            "zh-Hant": "電郵：compliance@tigerwit.com"
+            zh: "电邮：",
+            en: "Email: ",
+            vi: "Email: ",
+            "zh-Hant": "電郵："
         },
         amtRisk1: {
             zh: "风险警告：差价合约（CFD）是复杂的金融产品，其中大部分没有设定到期日。因此，CFD 头寸在您选择关闭现有未平仓头寸之日到期。CFD是一种杠杆产品，会产生较高的风险并可能导致您损失全部的投资资本。因此，CFD 可能并不适合所有人士。您所承担的风险不应超过已经做好准备承担的损失。在决定进行交易之前，您应该确保了解所涉及的风险，并考虑自己的经验水平。如果有必要，您应该寻求独立建议。",
@@ -4424,10 +4400,10 @@ module.exports = function () {
             "zh-Hant": "訪問個人身份信息"
         },
         amtCookie29: {
-            zh: "如果您的个人身份信息发生变更，您必须知会我们，请发送邮件至(support@tigerwit.com)或致电+86 400 809 8509。",
-            en: "If your personally identifiable information changes, you must inform us accordingly; please e-mail us (support@tigerwit.com) or call us +86 400 809 8509.",
-            vi: "Nếu thông tin cá nhân của bạn thay đổi, bạn phải thông báo cho chúng tôi; xin vui lòng gửi e-mail cho chúng tôi đến địa chỉ (support@tigerwit.com) hoặc gọi cho chúng tôi tại +86 400 809 8509.",
-            "zh-Hant": "如果您的個人身份信息發生變更，您必須知會我們，請發送郵件至(support@tigerwit.com)或致電+86 400 809 8509。"
+            zh: "如果您的个人身份信息发生变更，您必须知会我们，请发送邮件至",
+            en: "If your personally identifiable information changes, you must inform us accordingly; please e-mail us ",
+            vi: "Nếu thông tin cá nhân của bạn thay đổi, bạn phải thông báo cho chúng tôi; xin vui lòng gửi e-mail cho chúng tôi đến địa chỉ ",
+            "zh-Hant": "如果您的個人身份信息發生變更，您必須知會我們，請發送郵件至"
         },
         amtCookie30: {
             zh: "法律免责声明",
@@ -4466,10 +4442,10 @@ module.exports = function () {
             "zh-Hant": "查詢"
         },
         amtCookie36: {
-            zh: "如果您对隐私政策有何问题，请发送邮件至(support@tigerwit.com)或致电+86 400 809 8509。",
-            en: "If you have any enquiries regarding the ‘Privacy Policy’ please e-mail (support@tigerwit.com) or call +86 400 809 8509.",
-            vi: "Nếu bạn có bất kỳ câu hỏi nào liên quan đến ‘Chính sách bảo mật’, vui lòng gửi e-mail (support@tigerwit.com) hoặc gọi +86 400 809 8509.",
-            "zh-Hant": "如果您對隱私政策有何問題，請發送郵件至(support@tigerwit.com)或致電+86 400 809 8509。"
+            zh: "如果您对隐私政策有何问题，请发送邮件至",
+            en: "If you have any enquiries regarding the ‘Privacy Policy’ please e-mail ",
+            vi: "Nếu bạn có bất kỳ câu hỏi nào liên quan đến ‘Chính sách bảo mật’, vui lòng gửi e-mail ",
+            "zh-Hant": "如果您對隱私政策有何問題，請發送郵件至"
         },
         amtBusiness1: {
             zh: "序言",
@@ -4814,10 +4790,10 @@ module.exports = function () {
             "zh-Hant": "12.客戶接受，TigerWit 並不是互聯網服務或電力供應商；因此客戶承認，根據客戶協議第 6.1 款，如果由於互聯網服務或電力故障直接或間接導致TigerWit 無法提供投資或輔助服務，本公司概不負責。"
         },
         amtBusiness58: {
-            zh: "13.如果由于任何原因，导致客户无法访问交易平台从而发送交易金融工具的指令，他/她可以通过电话 +86 400 809 8509 联系交易部门提出口头指令 ，但须遵守客户协议“电话录音”部分所述的限制。应当注意的是，如果客户的身份或指令的明确性未满足交易部操作员的要求，本公司保留拒绝此类口头指令的权利；在这种情况下，TigerWit 保留要求客户通过其他方式发送指令的权利。客户接受，在交易流量过大的时候，通过电话方式联系交易部门的人员可能会有一些延迟，特别是当发布重要市场公告的时候。",
-            en: "13.If for any reason the client is unable to access the trading platform(s) in order to send an instruction for the purposes of trading financial instruments he/she may contact the Dealing Department by telephone on +86 400 809 8509 to place a verbal instruction, subject to the restrictions referred to in the ‘Recordings of Telephone Calls’ section of the Client Agreement. It should be noted that the Firm reserves the right to reject such verbal instruction when the operator of the Dealing Department is not satisfied with the client’s identity or clarity of instructions; under such circumstances, TigerWit reserves the right to request from the client to transmit an instruction through another mean. The client accepts that at times of excessive transaction flow there might be some delay in connecting over the telephone with a member of the Dealing Department, especially when there are important market announcements.",
-            vi: "13.Nếu vì lý do nào đó, khách hàng không thể truy cập (các) sàn giao dịch để gửi hướng dẫn cho mục đích giao dịch công cụ tài chính, họ có thể liên hệ với Phòng Xử lý qua điện thoại theo số +86 400 809 8509 để đặt hướng dẫn bằng lời nói, tùy thuộc vào các hạn chế được đề cập trong phần 'Bản ghi cuộc gọi điện thoại' của Hợp Đồng Khách Hàng. Cần lưu ý rằng Công ty bảo lưu quyền từ chối chỉ dẫn bằng lời nói đó khi người điều hành Bộ phận Xử lý không hài lòng với danh tính của khách hàng hoặc sự rõ ràng của các hướng dẫn; trong những trường hợp như vậy, TigerWit bảo lưu quyền yêu cầu từ khách hàng để truyền tải một hướng dẫn thông qua một phương tiện khác. Khách hàng chấp nhận rằng vào những thời điểm luồng giao dịch quá mức có thể có sự chậm trễ trong việc kết nối qua điện thoại với một thành viên của Phòng Xử lý, đặc biệt khi có thông báo thị trường quan trọng.",
-            "zh-Hant": "13.如果由於任何原因，導致客戶無法訪問交易平臺從而發送交易金融工具的指令，他/她可以通過電話 +86 400 809 8509 聯系交易部門提出口頭指令 ，但須遵守客戶協議“電話錄音”部分所述的限制。應當註意的是，如果客戶的身份或指令的明確性未滿足交易部操作員的要求，本公司保留拒絕此類口頭指令的權利；在這種情況下，TigerWit 保留要求客戶通過其他方式發送指令的權利。客戶接受，在交易流量過大的時候，通過電話方式聯系交易部門的人員可能會有壹些延遲，特別是當發布重要市場公告的時候。"
+            zh: "13.如果由于任何原因，导致客户无法访问交易平台从而发送交易金融工具的指令，他/她可以通过电话联系交易部门提出口头指令 ，但须遵守客户协议“电话录音”部分所述的限制。应当注意的是，如果客户的身份或指令的明确性未满足交易部操作员的要求，本公司保留拒绝此类口头指令的权利；在这种情况下，TigerWit 保留要求客户通过其他方式发送指令的权利。客户接受，在交易流量过大的时候，通过电话方式联系交易部门的人员可能会有一些延迟，特别是当发布重要市场公告的时候。",
+            en: "13.If for any reason the client is unable to access the trading platform(s) in order to send an instruction for the purposes of trading financial instruments he/she may contact the Dealing Department by telephone on to place a verbal instruction, subject to the restrictions referred to in the ‘Recordings of Telephone Calls’ section of the Client Agreement. It should be noted that the Firm reserves the right to reject such verbal instruction when the operator of the Dealing Department is not satisfied with the client’s identity or clarity of instructions; under such circumstances, TigerWit reserves the right to request from the client to transmit an instruction through another mean. The client accepts that at times of excessive transaction flow there might be some delay in connecting over the telephone with a member of the Dealing Department, especially when there are important market announcements.",
+            vi: "13.Nếu vì lý do nào đó, khách hàng không thể truy cập (các) sàn giao dịch để gửi hướng dẫn cho mục đích giao dịch công cụ tài chính, họ có thể liên hệ với Phòng Xử lý qua điện thoại theo số để đặt hướng dẫn bằng lời nói, tùy thuộc vào các hạn chế được đề cập trong phần 'Bản ghi cuộc gọi điện thoại' của Hợp Đồng Khách Hàng. Cần lưu ý rằng Công ty bảo lưu quyền từ chối chỉ dẫn bằng lời nói đó khi người điều hành Bộ phận Xử lý không hài lòng với danh tính của khách hàng hoặc sự rõ ràng của các hướng dẫn; trong những trường hợp như vậy, TigerWit bảo lưu quyền yêu cầu từ khách hàng để truyền tải một hướng dẫn thông qua một phương tiện khác. Khách hàng chấp nhận rằng vào những thời điểm luồng giao dịch quá mức có thể có sự chậm trễ trong việc kết nối qua điện thoại với một thành viên của Phòng Xử lý, đặc biệt khi có thông báo thị trường quan trọng.",
+            "zh-Hant": "13.如果由於任何原因，導致客戶無法訪問交易平臺從而發送交易金融工具的指令，他/她可以通過電話聯系交易部門提出口頭指令 ，但須遵守客戶協議“電話錄音”部分所述的限制。應當註意的是，如果客戶的身份或指令的明確性未滿足交易部操作員的要求，本公司保留拒絕此類口頭指令的權利；在這種情況下，TigerWit 保留要求客戶通過其他方式發送指令的權利。客戶接受，在交易流量過大的時候，通過電話方式聯系交易部門的人員可能會有壹些延遲，特別是當發布重要市場公告的時候。"
         },
         amtBusiness59: {
             zh: "14.客户理解并同意，TigerWit 是唯一的交易对手方，对于产品和服务旨在协助为客户提供平台的任何第三方软件和/或技术提供商，客户不会提出任何（包括因疏忽、违约或其他相关问题）法律诉讼（无论是否侵权）。",
@@ -5137,17 +5113,11 @@ module.exports = function () {
             vi: "1. Các câu hỏi liên quan đến các Điều khoản và Điều kiện cần được giải quyết, trong trường hợp đầu tiên, đến Bộ phận Hỗ trợ Khách hàng.",
             "zh-Hant": "1.關於條款和條件的問題，首先應該提交給客服部門。"
         },
-        amtBusiness112: {
-            zh: "2.客服部门电话：+86 400 809 8509",
-            en: "2.Customer Support Department Phone: +86 400 809 8509",
-            vi: "2. Bộ phận hỗ trợ khách hàng Điện thoại: +86 400 809 8509",
-            "zh-Hant": "2.客服部門電話：+86 400 809 8509"
-        },
         amtBusiness113: {
-            zh: "电子邮件：support@tigerwit.com",
-            en: "Email: support@tigerwit.com",
-            vi: "Email: support@tigerwit.com",
-            "zh-Hant": "電子郵件：support@tigerwit.com"
+            zh: "2.电子邮件：",
+            en: "2.Email: ",
+            vi: "2.Email: ",
+            "zh-Hant": "2.電子郵件："
         },
         amtBusiness114: {
             zh: "其他联系人",
@@ -5161,29 +5131,17 @@ module.exports = function () {
             vi: "1. Bộ phận kinh doanh",
             "zh-Hant": "1.交易部"
         },
-        amtBusiness116: {
-            zh: "电话：+86 400 809 8509",
-            en: "Phone: +86 400 809 8509",
-            vi: "Điện thoại: +86 400 809 8509",
-            "zh-Hant": "電話：+86 400 809 8509"
-        },
         amtBusiness117: {
-            zh: "电子邮件：dealing@tigerwit.com",
-            en: "Email: dealing@tigerwit.com",
-            vi: "Email: deal@tigerwit.com",
-            "zh-Hant": "電子郵件：dealing@tigerwit.com"
-        },
-        amtBusiness118: {
-            zh: "合规管理部门电话：+1(242) 676 7306",
-            en: "Compliance Department Phone: +1 (242) 676 7306",
-            vi: "Bộ phận Giám Sát Điện thoại: +1 (242) 676 7306",
-            "zh-Hant": "合規管理部門電話：+1(242) 676 7306"
+            zh: "电子邮件：",
+            en: "Email: ",
+            vi: "Email: ",
+            "zh-Hant": "電子郵件："
         },
         amtBusiness119: {
-            zh: "电子邮件：compliance@tigerwit.com",
-            en: "Email: compliance@tigerwit.com",
-            vi: "Email: compliance@tigerwit.com",
-            "zh-Hant": "電子郵件：compliance@tigerwit.com"
+            zh: "合规管理部门电子邮件：",
+            en: "Compliance Department Email: ",
+            vi: "Bộ phận Giám Sát Điện Email: ",
+            "zh-Hant": "合規管理部門電子郵件："
         },
         amtResponsibly1: {
             zh: "负责任地交易——理解涉及的风险",
@@ -5545,17 +5503,11 @@ module.exports = function () {
             vi: "Bộ Phận Hỗ Trợ Khách Hàng",
             "zh-Hant": "客戶服務部"
         },
-        amtConditions55: {
-            zh: "电话：+86 400 809 8509",
-            en: "Phone: +86 400 809 8509",
-            vi: "Điện thoại: +86 400 809 8509",
-            "zh-Hant": "電話：+86 400 809 8509"
-        },
         amtConditions56: {
-            zh: "电子邮件：support@tigerwit.com",
-            en: "Email: support@tigerwit.com",
-            vi: "Email: support@tigerwit.com",
-            "zh-Hant": "電子郵件：support@tigerwit.com"
+            zh: "电子邮件：",
+            en: "Email: ",
+            vi: "Email: ",
+            "zh-Hant": "電子郵件："
         },
         amtConditions57: {
             zh: "其他联系人",
@@ -5569,17 +5521,11 @@ module.exports = function () {
             vi: "Bộ Phận Giám Sát của TigerWit",
             "zh-Hant": "TigerWit 合規部門"
         },
-        amtConditions59: {
-            zh: "电话：+1 (242) 676 7306",
-            en: "Phone: +1 (242) 676 7306",
-            vi: "Điện thoại: +1 (242) 676 7306",
-            "zh-Hant": "電話：+1 (242) 676 7306"
-        },
         amtConditions60: {
-            zh: "电子邮件：compliance@tigerwit.com",
-            en: "Email: compliance@tigerwit.com",
-            vi: "Email: compliance@tigerwit.com",
-            "zh-Hant": "電子郵件：compliance@tigerwit.com"
+            zh: "电子邮件：",
+            en: "Email: ",
+            vi: "Email: ",
+            "zh-Hant": "電子郵件："
         },
         amtStatement1: {
             zh: "客户声明",
@@ -6362,17 +6308,11 @@ module.exports = function () {
             vi: "Bộ Phận Hỗ Trợ Khách Hàng: ",
             "zh-Hant": "客戶服務部："
         },
-        amtCategorization102: {
-            zh: "电话：+86 400 809 8509",
-            en: "Phone: +86 400 809 8509",
-            vi: "Điện thoại: +86 400 809 8509",
-            "zh-Hant": "電話：+86 400 809 8509"
-        },
         amtCategorization103: {
-            zh: "电邮：support@tigerwit.com",
-            en: "Email: support@tigerwit.com",
-            vi: "Email: support@tigerwit.com",
-            "zh-Hant": "電郵：support@tigerwit.com"
+            zh: "电邮：",
+            en: "Email: ",
+            vi: "Email: ",
+            "zh-Hant": "電郵："
         },
         amtCategorization104: {
             zh: "合规部：",
@@ -6380,17 +6320,11 @@ module.exports = function () {
             vi: "Bộ Phận Giám Sát: ",
             "zh-Hant": "合規部："
         },
-        amtCategorization105: {
-            zh: "电话：+1 (242) 676 7306",
-            en: "Phone: +1 (242) 676 7306",
-            vi: "Điện thoại: +1 (242) 676 7306",
-            "zh-Hant": "電話：+1 (242) 676 7306"
-        },
         amtCategorization106: {
-            zh: "电邮：compliance@tigerwit.com",
-            en: "Email: compliance@tigerwit.com",
-            vi: "Email: compliance@tigerwit.com",
-            "zh-Hant": "電郵：compliance@tigerwit.com"
+            zh: "电邮：",
+            en: "Email: ",
+            vi: "Email: ",
+            "zh-Hant": "電郵："
         },
         amtFunds1: {
             zh: "作为一家受监管的实体，TigerWit Limited 符合下列有关客户资金的监管要求：",
@@ -7322,17 +7256,11 @@ module.exports = function () {
             vi: "2.Bộ Phận Hỗ Trợ Khách Hàng",
             "zh-Hant": "2.客戶服務部"
         },
-        amtExecution150: {
-            zh: "电话：+86 400 809 8509",
-            en: "Phone: +86 400 809 8509",
-            vi: "Điện thoại: +86 400 809 8509",
-            "zh-Hant": "電話：+86 400 809 8509"
-        },
         amtExecution151: {
-            zh: "电子邮件：support@tigerwit.com",
-            en: "Email: support@tigerwit.com",
-            vi: "Email: support@tigerwit.com",
-            "zh-Hant": "電子郵件：support@tigerwit.com"
+            zh: "电子邮件：",
+            en: "Email: ",
+            vi: "Email: ",
+            "zh-Hant": "電子郵件："
         },
         amtExecution152: {
             zh: "其他联系人",
@@ -7346,17 +7274,11 @@ module.exports = function () {
             vi: "1.Bộ Phận Giám Sát TigerWIt",
             "zh-Hant": "1.TigerWit 合規部門"
         },
-        amtExecution154: {
-            zh: "电话：+1 (242) 676 7306",
-            en: "Phone: +1 (242) 676 7306",
-            vi: "Điện thoại: +1 (242) 676 7306",
-            "zh-Hant": "電話：+1 (242) 676 7306"
-        },
         amtExecution155: {
-            zh: "电子邮件：compliance@tigerwit.com",
-            en: "Email: compliance@tigerwit.com",
-            vi: "Email: compliance@tigerwit.com",
-            "zh-Hant": "電子郵件：compliance@tigerwit.com"
+            zh: "电子邮件：",
+            en: "Email: ",
+            vi: "Email: ",
+            "zh-Hant": "電子郵件："
         },
         amtConflicts1: {
             zh: "序言",
@@ -7652,17 +7574,11 @@ module.exports = function () {
             vi: "2.Bộ Phận Hỗ Trợ Khách Hàng",
             "zh-Hant": "2.客戶服務部"
         },
-        amtConflicts50: {
-            zh: "电话：+86 400 809 8509",
-            en: "Phone: +86 400 809 8509",
-            vi: "Điện thoại: +86 400 809 8509",
-            "zh-Hant": "電話：+86 400 809 8509"
-        },
         amtConflicts51: {
-            zh: "电子邮件：support@tigerwit.com",
-            en: "Email: support@tigerwit.com",
-            vi: "Email: support@tigerwit.com",
-            "zh-Hant": "電子郵件：support@tigerwit.com"
+            zh: "电子邮件：",
+            en: "Email: ",
+            vi: "Email: ",
+            "zh-Hant": "電子郵件："
         },
         amtConflicts52: {
             zh: "其他联系人",
@@ -7676,17 +7592,11 @@ module.exports = function () {
             vi: "Bộ Phận Giám Sát của TigerWit",
             "zh-Hant": "TigerWit 合規部門"
         },
-        amtConflicts54: {
-            zh: "电话：+1 (242) 676 7306",
-            en: "Phone: +1 (242) 676 7306",
-            vi: "Điện thoại: +1 (242) 676 7306",
-            "zh-Hant": "電話：+1 (242) 676 7306"
-        },
         amtConflicts55: {
-            zh: "电子邮件：compliance@tigerwit.com",
-            en: "Email: compliance@tigerwit.com",
-            vi: "Email: compliance@tigerwit.com",
-            "zh-Hant": "電子郵件：compliance@tigerwit.com"
+            zh: "电子邮件：",
+            en: "Email: ",
+            vi: "Email: ",
+            "zh-Hant": "電子郵件："
         },
         amtComplaint1: {
             zh: "投诉程序概述",
@@ -7754,17 +7664,11 @@ module.exports = function () {
             vi: "Nassau, Bahamas",
             "zh-Hant": "Nassau, Bahamas"
         },
-        amtComplaint12: {
-            zh: "电话：+1 (242) 397 4100",
-            en: "Phone: +1 (242) 397 4100",
-            vi: "Điện thoại: +1 (242) 397 4100",
-            "zh-Hant": "電話：+1 (242) 397 4100"
-        },
         amtComplaint13: {
-            zh: "电邮：info@scb.gov.bs",
-            en: "Email: info@scb.gov.bs",
-            vi: "Email: info@scb.gov.bs",
-            "zh-Hant": "電郵：info@scb.gov.bs"
+            zh: "电邮：",
+            en: "Email: ",
+            vi: "Email: ",
+            "zh-Hant": "電郵："
         },
         amtComplaint14: {
             zh: "您必须在收到最终答复之日起六（6）个月内向金融申诉服务机构提交投诉。",
@@ -7851,10 +7755,10 @@ module.exports = function () {
             "zh-Hant": "程序"
         },
         amtComplaint28: {
-            zh: "1.所有投诉必须书面进行，且应当首先传达给客户服务部。如果客户收到客户服务部的答复，但认为应当进一步投诉，客户可要求客户服务部将投诉提交合规部，或直接联系合规部（compliance@tigerwit.com），该部门将独立和公正地展开调查。",
-            en: "1.All complaints must be in writing and shall be addressed, in the first instance, to the Customer Support Department. If the client receives a response from Customer Support but deems that the complaint needs to be raised further the client may either ask Customer Support to escalate it to the Compliance Department or directly contact Compliance (compliance@tigerwit.com), which will independently and impartially investigate it.",
-            vi: "1.Tất cả các khiếu nại phải bằng văn bản và sẽ được giải quyết, trong trường hợp đầu tiên, đến Bộ phận hỗ trợ khách hàng. Nếu khách hàng nhận được phản hồi từ bộ phận Hỗ trợ Khách hàng nhưng cho rằng khiếu nại cần được đưa lên cấp cao hơn, khách hàng có thể yêu cầu Bộ phận Hỗ trợ Khách hàng chuyển nó đến Phòng Kiểm Soát hoặc liên hệ trực tiếp với Bộ phận Kiểm Soát(compliance@tigerwit.com), sẽ là nơi điều tra công tâm và độc lập.",
-            "zh-Hant": "1.所有投訴必須書面進行，且應當首先傳達給客戶服務部。如果客戶收到客戶服務部的答復，但認為應當進壹步投訴，客戶可要求客戶服務部將投訴提交合規部，或直接聯系合規部（compliance@tigerwit.com），該部門將獨立和公正地展開調查。"
+            zh: "1.所有投诉必须书面进行，且应当首先传达给客户服务部。如果客户收到客户服务部的答复，但认为应当进一步投诉，客户可要求客户服务部将投诉提交合规部，或直接联系合规部，该部门将独立和公正地展开调查。",
+            en: "1.All complaints must be in writing and shall be addressed, in the first instance, to the Customer Support Department. If the client receives a response from Customer Support but deems that the complaint needs to be raised further the client may either ask Customer Support to escalate it to the Compliance Department or directly contact Compliance , which will independently and impartially investigate it.",
+            vi: "1.Tất cả các khiếu nại phải bằng văn bản và sẽ được giải quyết, trong trường hợp đầu tiên, đến Bộ phận hỗ trợ khách hàng. Nếu khách hàng nhận được phản hồi từ bộ phận Hỗ trợ Khách hàng nhưng cho rằng khiếu nại cần được đưa lên cấp cao hơn, khách hàng có thể yêu cầu Bộ phận Hỗ trợ Khách hàng chuyển nó đến Phòng Kiểm Soát hoặc liên hệ trực tiếp với Bộ phận Kiểm Soát, sẽ là nơi điều tra công tâm và độc lập.",
+            "zh-Hant": "1.所有投訴必須書面進行，且應當首先傳達給客戶服務部。如果客戶收到客戶服務部的答復，但認為應當進壹步投訴，客戶可要求客戶服務部將投訴提交合規部，或直接聯系合規部，該部門將獨立和公正地展開調查。"
         },
         amtComplaint29: {
             zh: "2.客户服务部和合规部都应当按要求彻底调查所有投诉（对本公司文书和记录所含的所有信息进行考察，包括但不限于客户交易账户的日志），以获得公平的结论。",
@@ -7916,17 +7820,11 @@ module.exports = function () {
             vi: "1.Bộ Phận Hỗ Trỡ Khách Hàng",
             "zh-Hant": "1.客戶服務部"
         },
-        amtComplaint39: {
-            zh: "电话：+86 400 809 8509",
-            en: "Phone: +86 400 809 8509",
-            vi: "Điện thoại: +86 400 809 8509",
-            "zh-Hant": "電話：+86 400 809 8509"
-        },
         amtComplaint40: {
-            zh: "电子邮件：support@tigerwit.com",
-            en: "E-mail: support@tigerwit.com",
-            vi: "E-mail: support@tigerwit.com",
-            "zh-Hant": "電子郵件：support@tigerwit.com"
+            zh: "电子邮件：",
+            en: "E-mail: ",
+            vi: "E-mail: ",
+            "zh-Hant": "電子郵件："
         },
         amtComplaint41: {
             zh: "2.合规部门",
@@ -7934,17 +7832,11 @@ module.exports = function () {
             vi: "2.Phòng Kiểm Soát",
             "zh-Hant": "2.合規部門"
         },
-        amtComplaint42: {
-            zh: "电话：+1 (242) 676 7306",
-            en: "Phone: +1 (242) 676 7306",
-            vi: "Điện thoại: +1 (242) 676 7306",
-            "zh-Hant": "電話：+1 (242) 676 7306"
-        },
         amtComplaint43: {
-            zh: "电子邮件：compliance@tigerwit.com",
-            en: "E-mail: compliance@tigerwit.com",
-            vi: "E-mail: compliance@tigerwit.com",
-            "zh-Hant": "電子郵件：compliance@tigerwit.com"
+            zh: "电子邮件：",
+            en: "E-mail: ",
+            vi: "E-mail: ",
+            "zh-Hant": "電子郵件："
         },
         downloadApp: {
             title: {
