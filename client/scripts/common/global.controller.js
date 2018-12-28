@@ -210,11 +210,15 @@
                 if (data.is_succ) {
                     // 神策数据统计
                     sa.logout(true);
-                    getEmailPhone(true);
                     account.hasChecked = false;
                     $window.location.href = '/space/#/account/login';
 
                     $scope.$emit('refresh_personal_cookies_info');
+
+                    $timeout(function () {
+                        $scope.personal.region = null;
+                        getEmailPhone(true);
+                    }, 30);
 
                 }
             });
@@ -241,19 +245,15 @@
         })
         function getEmailPhone(force_update) {
             // force_update = true;    //上线时去掉
-            // console.log($cookies["sysMessage"]);
-            if (!force_update && $cookies["sysMessage"]) {
-                $rootScope.sysMessage = JSON.parse($cookies["sysMessage"]);
+            if (!force_update && sessionStorage["sysMessage"]) {
+                $rootScope.sysMessage = JSON.parse(sessionStorage["sysMessage"]);
             } else {
-                var d = new Date();
-                d.setTime(d.getTime() + (1*24*60*60*1000));
                 account.getEmailPhone({
                     world_code: $scope.personal.region ? $scope.personal.region.world_code : undefined
                 }).then(function (data) {
-                    // console.log(data);
                     if (data.is_succ) {
                         $rootScope.sysMessage = data.data;
-                        document.cookie = 'sysMessage=' + JSON.stringify(data.data) + '; path=/; domain=.tigerwit.com; expires='+d.toUTCString();
+                        sessionStorage["sysMessage"] = JSON.stringify(data.data);
                     }
                 });
             }
