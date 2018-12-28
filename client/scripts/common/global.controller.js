@@ -33,6 +33,7 @@
         // $scope.entryWorld = '';  ----|
         $scope.logout = logout;
         $scope.openDredgeMdl = openDredgeMdl;
+        $scope.getEmailPhone = getEmailPhone;
         var globalScope = $scope;
 
         window.$scope = $scope;
@@ -42,6 +43,7 @@
         setInterval(function () {
             getUnreadLength();
         }, 30000);
+        getEmailPhone();
         // 获取国家列表
         getWorlds();
         function getWorlds() {
@@ -208,7 +210,7 @@
                 if (data.is_succ) {
                     // 神策数据统计
                     sa.logout(true);
-
+                    getEmailPhone(true);
                     account.hasChecked = false;
                     $window.location.href = '/space/#/account/login';
 
@@ -229,6 +231,32 @@
         $scope.setAllowCookie = function () {
             $scope.allowUseCookie = false;
             localStorage["allowUserCookie"] = 'allow';
+        }
+        //获取邮箱电话等信息
+        $scope.$watch('personal.region.world_code', function (newVal, oldVal) {
+            // console.log(newVal, oldVal);
+            if (newVal && newVal != oldVal) {
+                getEmailPhone(true);
+            }
+        })
+        function getEmailPhone(force_update) {
+            // force_update = true;    //上线时去掉
+            // console.log($cookies["sysMessage"]);
+            if (!force_update && $cookies["sysMessage"]) {
+                $rootScope.sysMessage = JSON.parse($cookies["sysMessage"]);
+            } else {
+                var d = new Date();
+                d.setTime(d.getTime() + (1*24*60*60*1000));
+                account.getEmailPhone({
+                    world_code: $scope.personal.region ? $scope.personal.region.world_code : undefined
+                }).then(function (data) {
+                    // console.log(data);
+                    if (data.is_succ) {
+                        $rootScope.sysMessage = data.data;
+                        document.cookie = 'sysMessage=' + JSON.stringify(data.data) + '; path=/; domain=.tigerwit.com; expires='+d.toUTCString();
+                    }
+                });
+            }
         }
 
         /*

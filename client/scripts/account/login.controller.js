@@ -274,6 +274,7 @@
                         if (user_id) {
                             sa.login(user_id);
                         }
+                        $scope.getEmailPhone(true);
                     }, 100);
                     // if (($scope.loginType == 'code') && data.data.initial && (data.data.initial == 1)) {
                     //     // 新用户
