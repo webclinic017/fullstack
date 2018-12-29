@@ -1564,259 +1564,259 @@ module.exports = function () {
         about_1:{
             zh:"为何选择TigerWit",
             en:"What we do",
-            vi:"^^-^^",
+            vi:"Chúng ta làm gì",
             "zh-Hant":"為何選擇TigerWit",
             id:"Apa yang kami kerjakan"
         },
         about_2:{
             zh:"创新的交易系统",
             en:"Trading Platforms",
-            vi:"^^-^^",
+            vi:"Nền tảng giao dịch",
             "zh-Hant":"創新的交易系統",
             id:"Platform Trading"
         },
         about_3:{
             zh:"TigerWit为客户提供独一无二的交易体验，当用户的交易订单通过专有的在线和移动交易系统交付到市场，与其他经纪商相比，TigerWit更具优势。",
             en:"TigerWit provides its clients with an extraordinary trading experience delivered through its proprietary online and mobile trading platforms. This experience is unique and gives TigerWit an advantage in comparison to other brokers.",
-            vi:"^^-^^",
+            vi:"TigerWit cung cấp cho khách hàng của mình một trải nghiệm giao dịch bất thường được phân phối thông qua các nền tảng giao dịch trực tuyến và di động độc quyền của mình. Trải nghiệm này là duy nhất và mang lại lợi thế cho TigerWit so với các nhà môi giới khác.",
             "zh-Hant":"TigerWit為客戶提供獨壹無二的交易體驗，當用戶的交易訂單通過專有的在線和移動交易系統交付到市場，與其他經紀商相比，TigerWit更具優勢。",
             id:"TigerWit menyediakan pengalaman transaksi yang berbeda kepada klien yang disampaikan melalui platform perdagangan online dan seluler. Pengalaman unik ini memberikan keunggulan kepada TigerWit dibandingkan dengan broker lainnya"
         },
         about_4:{
             zh:"TigerWit通过自主研发的移动端交易系统，极大地简化了客户的操作，同时最大限度地保留用户使用习惯，从而使TigerWit将投资和开发全部集中在一个创新的交易环境中，避免为多个受众开发多个接口。",
             en:"TigerWit’s Apps simplify and streamline the client journey and minimise variability of user experience. This enables TigerWit to focus investment and development wholly on innovation within one dealing environment rather than having to maintain and develop multiple interfaces for multiple audiences.",
-            vi:"^^-^^",
+            vi:"Ứng dụng của TigerWit đơn giản hóa và hợp lý hóa hành trình của khách hàng và giảm thiểu sự thay đổi trải nghiệm người dùng. Điều này cho phép TigerWit tập trung đầu tư và phát triển hoàn toàn vào sự đổi mới trong một môi trường giao dịch thay vì phải duy trì và phát triển nhiều giao diện cho nhiều đối tượng.",
             "zh-Hant":"TigerWit通過自主研發的移動端交易系統，極大地簡化了客戶的操作，同時最大限度地保留用戶使用習慣，從而使TigerWit將投資和開發全部集中在壹個創新的交易環境中，避免為多個受眾開發多個接口。",
             id:"Aplikasi TigerWit menyederhanakan dan mempermudah penggunaan klien dan menimimalisir variabilias pengalaman klien. Dengan hal itu, TigerWit dapat fokus pada pengembangan dan pengelolaan investasi dan transaksi hanya dalam 1 lingkungan saja dtanpa harus mengelola dan mengelola dan mengembangkan berbagai jenis lingkungan untuk berbagai jenis klien."
         },
         about_5:{
             zh:"TigerWit金融服务",
             en:"Financial Services",
-            vi:"^^-^^",
+            vi:"Các dịch vụ tài chính",
             "zh-Hant":"TigerWit金融服務",
             id:"Layanan Keuangan"
         },
         about_6:{
             zh:"TigerWit提供自主交易账户，一般咨询和交易执行服务通过在线交易平台与流动性提供商提供。TigerWit的特定授权金融服务业务活动包括：",
             en:"TigerWit offers self-directed trading accounts, general advisory and trade execution services made through the online trading platform via liquidity providers. TigerWit’s specific authorised financial services business activities include: ",
-            vi:"^^-^^",
+            vi:"TigerWit cung cấp các tài khoản giao dịch tự điều khiển, các dịch vụ tư vấn chung và giao dịch được thực hiện thông qua sàn giao dịch trực tuyến thông qua các nhà cung cấp thanh khoản. Các hoạt động kinh doanh dịch vụ tài chính được ủy quyền cụ thể của TigerWit bao gồm:",
             "zh-Hant":"TigerWit提供自主交易賬戶，壹般咨詢和交易執行服務通過在線交易平臺與流動性提供商提供。TigerWit的特定授權金融服務業務活動包括：",
             id:"TigerWit menawarkan akun transaksi mandiri, penasehat umum dan layanan eksekusi transaksi yang diberikan melalui platform trading online via penyedia likuiditas.  "
         },
         about_7:{
             zh:"1.作为代理人或委托人处理外汇、差价合约、指数、大宗商品和衍生品；",
             en:"Dealing as agent or principal, in Forex, CFDs, indices, commodities and derivatives;",
-            vi:"^^-^^",
+            vi:"Hoạt động như đại lý hoặc người giám sát chính, trong Forex, CFD, chỉ số, hàng hóa và các loại phái sinh;",
             "zh-Hant":"1.作為代理人或委托人處理外匯、差價合約、指數、大宗商品和衍生品；",
             id:"Berdagang sebagai agen atau prinsipal di Valas, CFD, indeks, komoditas dan turunannya;"
         },
         about_8:{
             zh:"2.安排包含外汇、差价合约、指数、大宗商品和衍生品在内的证券交易；",
             en:"Arranging deals in securities including Forex, CFDs, indices, commodities and derivatives;",
-            vi:"^^-^^",
+            vi:"Sắp xếp các giao dịch chứng khoán bao gồm Forex, CFD, chỉ số, hàng hóa và phái sinh;",
             "zh-Hant":"2.安排包含外匯、差價合約、指數、大宗商品和衍生品在內的證券交易；",
             id:"Atur transaksi di dalam sekuritas termasuk Valas, CFD, indeks, komoditas dan turunannya; "
         },
         about_9:{
             zh:"3.酌情管理证券；",
             en:"Managing securities on a discretionary basis;",
-            vi:"^^-^^",
+            vi:"Quản lý chứng khoán trên cơ sở tùy ý;",
             "zh-Hant":"3.酌情管理證券；",
             id:"Mengelola sekuritas dengan bijaksana"
         },
         about_10:{
             zh:"4.证券咨询。",
             en:"Advising on securities.",
-            vi:"^^-^^",
+            vi:"Tư vấn về chứng khoán.",
             "zh-Hant":"4.證券咨詢。",
             id:"Memberikan nasihat di sekuritas"
         },
         about_11:{
             zh:"外汇、衍生品和差价合约交易的一般建议",
             en:"General advice in Forex, Derivatives and Contracts for Difference (CFDs)",
-            vi:"^^-^^",
+            vi:"Tư vấn chung trong Forex, phái sinh và hợp đồng chênh lệch (CFDs)",
             "zh-Hant":"外匯、衍生品和差價合約交易的壹般建議",
             id:"Nasihat umum di Valas, Derivatif dan Contracts for Difference (CFD)"
         },
         about_12:{
             zh:"TigerWit在非个性化的基础上为批发和零售客户提供一般建议。活动包括一般产品信息，研讨会/网络研讨会，通讯，一般知识和教育。",
             en:"TigerWit provides general advice to wholesale or retail clients on a non-personalised basis. Activities include general product information, seminars, webinars, newsletters, general knowledge and education.",
-            vi:"^^-^^",
+            vi:"TigerWit cung cấp tư vấn chung cho khách hàng bán buôn hoặc bán lẻ trên cơ sở không được cá nhân hóa. Các hoạt động bao gồm thông tin sản phẩm chung, hội thảo, hội thảo trên web, bản tin, kiến thức chung và giáo dục.",
             "zh-Hant":"TigerWit在非個性化的基礎上為批發和零售客戶提供壹般建議。活動包括壹般產品信息，研討會/網絡研討會，通訊，壹般知識和教育。",
             id:"TigerWit menyediakan rekomendasi atau saran umum kepada para klien pribadi atau klien besar dalam bentuk laporan informasi produk, seminar, webinar, buletin, pengetahuan umum dan edukasi"
         },
         about_13:{
             zh:"外汇、衍生品和差价合约的安排和交易",
             en:"Arranging and dealing Forex, Derivatives and Contracts for Difference (CFDs)",
-            vi:"^^-^^",
+            vi:"Sắp xếp và xử lý Forex, phái sinh và hợp đồng chênh lệch (CFDs)",
             "zh-Hant":"外匯、衍生品和差價合約的安排和交易",
             id:"Atur dan transaksi di Valas, Derivatif, dan Contracts for Difference (CFD)"
         },
         about_14:{
             zh:"TigerWit的在线交易平台通过场外交易代表客户执行交易。差价合约是使用交易平台提供买入和卖出价格的基础资产的金融工具。差价合约以主要货币，指数，贵金属和商品交易。",
             en:"TigerWit’s online trading platform executes a client’s trade on behalf of the client through an over-the-counter market transaction. CFDs are financial instruments using underlying assets with the buy and sell prices offered through the trading platform. CFDs are transacted in major currencies, Indices, precious metals and commodities.",
-            vi:"^^-^^",
+            vi:"Nền tảng giao dịch trực tuyến của TigerWit thực hiện giao dịch của khách hàng thay mặt cho khách hàng thông qua giao dịch thị trường không theo toa. CFD là công cụ tài chính sử dụng tài sản cơ bản với giá mua và bán được cung cấp thông qua sàn giao dịch. CFD được giao dịch bằng các đồng tiền chính, chỉ số, kim loại quý và hàng hóa.",
             "zh-Hant":"TigerWit的在線交易平臺通過場外交易代表客戶執行交易。差價合約是使用交易平臺提供買入和賣出價格的基礎資產的金融工具。差價合約以主要貨幣，指數，貴金屬和商品交易。",
             id:"Platform perdagangan online TigerWit akan melakukan transaksi perdagangan klien dengan atas nama klien melalui transaksi di pasar OTC. CFD adalah instrumen keuangan yang menawarkan harga beli dan harga jual melalui platform perdagangan. CFD ditransaksikan dalam bentuk Mata Uang utama, indeks, logam mulia dan komoditas"
         },
         about_15:{
             zh:"当市场开放时，每天24小时提供交易，并提供客户支持，语言，电话，聊天和电子邮件。",
             en:"Trading is offered 24 hours a day when markets are open.",
-            vi:"^^-^^",
+            vi:"Giao dịch được cung cấp 24 giờ mỗi ngày khi thị trường mở cửa.",
             "zh-Hant":"當市場開放時，每天24小時提供交易，並提供客戶支持，語言，電話，聊天和電子郵件。",
             id:"Transaksi dapat dilakukan selama 24 jam sehari ketika pasar buka"
         },
         about_16:{
             zh:"客户在线登录",
             en:"Client on-boarding",
-            vi:"^^-^^",
+            vi:"Khách hàng tham gia",
             "zh-Hant":"客戶在線登錄",
             id:"Orientasi Klien"
         },
         about_17:{
             zh:"客户在线使用过程中收集客户的姓名和身份进行KYC和MAL检查。将手机有关客户的信息，以确保产品符合客户的经验和风险特征。该过程可通过网站https://www.tigerwit.com查看。当客户被接受时，系统将在客户端建立账户，并为用户提供登录凭证。",
             en:"Clients are on-boarded using an on-line process that gathers the client’s name and identification in order to perform KYC and AML checks. Information about the client will be collected to ensure the product suits the client’s level of experience and risk profile. The process is available for viewing through the website https://global.tigerwit.com/",
-            vi:"^^-^^",
+            vi:"Khách hàng tham gia bằng cách sử dụng bộ xử lý trực tuyến thu thập tên và nhận dạng của khách hàng để thực hiện kiểm tra KYC và AML. Thông tin về khách hàng sẽ được thu thập để đảm bảo sản phẩm phù hợp với cấp độ kinh nghiệm và hồ sơ rủi ro của khách hàng. Quá trình này có sẵn để xem qua trang web https://global.tigerwit.com/",
             "zh-Hant":"客戶在線使用過程中收集客戶的姓名和身份進行KYC和MAL檢查。將手機有關客戶的信息，以確保產品符合客戶的經驗和風險特征。該過程可通過網站https://www.tigerwit.com查看。當客戶被接受時，系統將在客戶端建立賬戶，並為用戶提供登錄憑證。",
             id:"Klien meggunakan proses online untuk mengumpulkan nama dan identifikasi klien untuk dilakukan pemeriksaan KYC dan AML. Informasi mengenai klien akan dikumpulkan guna memastikan produk yang diberikan kepada klien sesuai dengan tingkat pengalaman dan profil risiko klien tersebut. Proses tersebut dapat dilihat secara online di Situs web https://global.tigerwit.com/"
         },
         about_17_1:{
             zh:" ",
             en:"When the client is accepted, the client’s account is established and login credentials are provided to the client.",
-            vi:"^^-^^",
+            vi:"Khi khách hàng được chấp nhận, tài khoản của khách hàng được thiết lập và thông tin xác thực đăng nhập được cung cấp cho khách hàng.",
             "zh-Hant":" ",
             id:"Ketika klien diterima, maka informasi rahasia akan dikirimkan kepada klien dan akun akan dibuat secara otomatis."
         },
         about_18:{
             zh:"客户资金安全",
             en:"Safety of Client Funds",
-            vi:"^^-^^",
+            vi:"An toàn của Quỹ khách hàng",
             "zh-Hant":"客戶資金安全",
             id:"Keamanan dana klien"
         },
         about_19:{
             zh:"当客户向TigerWit存入资金时，这些资金与TigerWit的资金完全隔离，并存放在独立的银行账户。保护客户的资金不被用于任何其他目的，并确保客户发起提现请求时可以快速无缝地提款。",
             en:"When clients deposit funds with TigerWit, those funds are segregated from TigerWit’s operating accounts. Client Segregated Accounts safeguard client funds and ensure quick and seamless withdrawals when requested by a client.",
-            vi:"^^-^^",
+            vi:"Khi khách hàng gửi tiền với TigerWit, các khoản tiền này được tách biệt khỏi tài khoản hoạt động của TigerWit. Tài khoản khách hàng tách biệt bảo vệ quỹ của khách hàng và đảm bảo rút tiền nhanh chóng và liền mạch khi khách hàng yêu cầu.",
             "zh-Hant":"當客戶向TigerWit存入資金時，這些資金與TigerWit的資金完全隔離，並存放在獨立的銀行賬戶。保護客戶的資金不被用於任何其他目的，並確保客戶發起提現請求時可以快速無縫地提款。",
             id:"Ketika klien melakukan pengisian dana dengan TigerWit, maka dana tersebut akan dimasukkan ke rekening terpisah dari rekening TigerWit. Rekening terpisah Klien akan dilindungi dan memastikan bahwa semua permohonan penarikan dana oleh klien dapat berjalan dengan cepat dan mulus"
         },
         about_20:{
             zh:"更多服务",
             en:"Why we do it",
-            vi:"^^-^^",
+            vi:"Tại sao chúng ta làm điều này",
             "zh-Hant":"更多服務",
             id:"Mengapa kami mengerjakannya"
         },
         about_21:{
             zh:"由于交易者有机会获利，自主交易者欣赏投机者对基础资产价格的变动。开户时，客户对账户内的所有资产保留合法和实益的所有权，并自行结算账户。TigerWit的交易平台允许客户访问与传统投资相比相关性较低的工具。",
             en:"Self-directed traders appreciate speculating on movements in the price of underlying assets. When opening an account, the client retains legal and beneficial ownership of all assets within the account and trades their account on their own discretionary basis. TigerWit’s trading platforms allows the client to access instruments with low correlation in comparison with traditional investing.",
-            vi:"^^-^^",
+            vi:"Các nhà giao dịch tự định hướng đánh giá cao sự đầu cơ vào giá của các tài sản cơ bản. Khi mở một tài khoản, khách hàng giữ quyền sở hữu hợp pháp và hưởng lợi của tất cả các tài sản trong tài khoản và giao dịch tài khoản của họ trên cơ sở tùy ý của riêng họ. Nền tảng giao dịch của TigerWit cho phép khách hàng truy cập các công cụ có tương quan thấp so với đầu tư truyền thống.",
             "zh-Hant":"由於交易者有機會獲利，自主交易者欣賞投機者對基礎資產價格的變動。開戶時，客戶對賬戶內的所有資產保留合法和實益的所有權，並自行結算賬戶。TigerWit的交易平臺允許客戶訪問與傳統投資相比相關性較低的工具。",
             id:"Biasanya seorang pedagang pribadi senang berspekulasi dengan pergerakan harga. Oleh karena itu, ketika mereka membuka sebuah akun, klien akan langsung memiliki semua produk untuk ditransaksikan di dalam sehingga klien bebas bertransaksi sesuai keinginannya. Platform perdagangan TigerWit memungkinkan klien untuk mengakses instrumen dengan korelasi yang rendah dibandingkan dengan investasi tradisional"
         },
         about_22:{
             zh:"TigerWit提供的主要功能包括：",
             en:"Key features of TigerWit’s offering includes: ",
-            vi:"^^-^^",
+            vi:"Các tính năng chính của chương trình TigerWit bao gồm",
             "zh-Hant":"TigerWit提供的主要功能包括：",
             id:"Fitur utama dari TigerWIt menawarkan :"
         },
         about_23:{
             zh:"波动性风险",
             en:"Exposure to volatility",
-            vi:"^^-^^",
+            vi:"Rủi ro so với độ biến động",
             "zh-Hant":"波動性風險",
             id:"Risiko Volatilitas"
         },
         about_24:{
             zh:"在当今的市场投资波动性是很重要的。",
             en:"Investments that can navigate volatility are important in today’s markets.",
-            vi:"^^-^^",
+            vi:"Các khoản đầu tư có thể điều khiển hướng biến động là điều quan trọng trong các thị trường hiện nay.",
             "zh-Hant":"在當今的市場投資波動性是很重要的。",
             id:"Investasi yang dapat mengikuti volatilitas sangat penting dalam kondisi pasar saat ini"
         },
         about_25:{
             zh:"金融工具",
             en:"Exposure to financial instruments",
-            vi:"^^-^^",
+            vi:"Khả năng rủi ro với các công cụ tài chính",
             "zh-Hant":"金融工具",
             id:"Instrumen Keuangan"
         },
         about_26:{
             zh:"货币，商品和指数享有高流动性，低成本，能在在上涨和下跌的市场中获利。",
             en:"Currencies, commodities and indices enjoy high liquidity, low cost and the ability to achieve results in both rising and falling markets.",
-            vi:"^^-^^",
+            vi:"Các loại tiền tệ, hàng hóa và chỉ số có tính thanh khoản cao, chi phí thấp và khả năng đạt được kết quả ở cả thị trường tăng và giảm.",
             "zh-Hant":"貨幣，商品和指數享有高流動性，低成本，能在在上漲和下跌的市場中獲利。",
             id:"Mata uang, Komoditas dan indeks saham memiliki likuiditas yang tinggi, biaya yang rendah dan kemampuan dalam mendapakan hasil saat pasar sedang naik ataupun turun"
         },
         about_27:{
             zh:"杠杆作用",
             en:"Leverage",
-            vi:"^^-^^",
+            vi:"Đòn bẩy",
             "zh-Hant":"杠桿作用",
             id:"Daya Ungkit"
         },
         about_28:{
             zh:"客户可采取与收益递增的目标杠杆头寸，但杠杆作用也可能导致损失增加。",
             en:"The client may take leveraged positions with the aim of increasing returns, but leverage can also lead to increased losses.",
-            vi:"^^-^^",
+            vi:"Khách hàng có thể nắm giữ các vị thế đòn bẩy với mục đích tăng lợi nhuận, nhưng đòn bẩy cũng có thể dẫn đến tổn thất tăng lên.",
             "zh-Hant":"客戶可采取與收益遞增的目標杠桿頭寸，但杠桿作用也可能導致損失增加。",
             id:"Klien dapat memanfaatkan Daya Ungkit untuk meningkatkan keuntungan, akan tetapi perlu dicatat bahwa daya ungkit juga dapat meningkatkan kerugian"
         },
         about_29:{
             zh:"多样化的方法",
             en:"Diversified approach",
-            vi:"^^-^^",
+            vi:"Cách tiếp cận đa dạng",
             "zh-Hant":"多樣化的方法",
             id:"Berbagai jenis pendekatan"
         },
         about_30:{
             zh:"广泛的交易方式和策略。",
             en:"A wide range of trading methods and strategies.",
-            vi:"^^-^^",
+            vi:"Một loạt các phương thức giao dịch và chiến lược.",
             "zh-Hant":"廣泛的交易方式和策略。",
             id:"Berbagai pilihan Metode dan strategi"
         },
         about_31:{
             zh:"一般市场风险因素的相关性较低",
             en:"Low correlation to general market risk factors",
-            vi:"^^-^^",
+            vi:"Tương quan thấp với các yếu tố rủi ro thị trường chung",
             "zh-Hant":"壹般市場風險因素的相關性較低",
             id:"Korelasi yang rendah dengan faktor risiko pasar"
         },
         about_32:{
             zh:"与传统资产类别（如股票和债券）相比绝对回报。",
             en:"Absolute returns compared to traditional asset classes such as equities and bonds.",
-            vi:"^^-^^",
+            vi:"Lợi nhuận tuyệt đối so với các loại tài sản truyền thống như cổ phiếu và trái phiếu.",
             "zh-Hant":"與傳統資產類別（如股票和債券）相比絕對回報。",
             id:"Keuntungan yang lebih tinggi dibandingkan dengan kelas aset seperti ekuitas dan obligasi"
         },
         about_33:{
             zh:"投资主体多元化",
             en:"Investment diversification",
-            vi:"^^-^^",
+            vi:"Đa dạng hóa đầu tư",
             "zh-Hant":"投資主體多元化",
             id:"Diversifikasi Investasi"
         },
         about_34:{
             zh:"上涨和下跌市场均有正回报潜力。",
             en:"Potential for positive returns in both rising and falling markets.",
-            vi:"^^-^^",
+            vi:"Tiềm năng lợi nhuận dương ở cả thị trường tăng và giảm.",
             "zh-Hant":"上漲和下跌市場均有正回報潛力。",
             id:"Potensi mendapatkan keuntungan positif dari naik dan turunnya pasar"
         },
         about_35:{
             zh:"透明灵活",
             en:"Transparent and flexible",
-            vi:"^^-^^",
+            vi:"Minh bạch và linh hoạt",
             "zh-Hant":"透明靈活",
             id:"Transparan dan Fleksibel"
         },
         about_36:{
             zh:"客户可以完全访问和保留对其资金的控制权。",
             en:"Clients have full access to and retain control of their funds.",
-            vi:"^^-^^",
+            vi:"Khách hàng có toàn quyền truy cập và giữ quyền kiểm soát tiền của họ.",
             "zh-Hant":"客戶可以完全訪問和保留對其資金的控制權。",
             id:"Klien memiliki akses penuh dan mengontrol dana mereka"
         },
@@ -2107,13 +2107,6 @@ module.exports = function () {
             "zh-Hant":"常見問題",
             id:"FAQ"
         },
-        sidebar4:{
-            en:"Open a virtual account",
-            zh:"开立模拟账户",
-            vi:"^^-^^",
-            "zh-Hant":"開立模擬賬戶",
-            id:"Buka akun virtual"
-        },
         sidebar5:{
             en:"Open an account",
             zh:"开立账户",
@@ -2131,7 +2124,7 @@ module.exports = function () {
         sidebar7:{
             en:"Types of accounts",
             zh:"账户类型",
-            vi:"^^-^^",
+            vi:"Loại tài khoản",
             "zh-Hant":"賬戶類型",
             id:"Tipe Akun"
         },
@@ -8954,7 +8947,7 @@ module.exports = function () {
                 id:"Kirim"
             }
         }
-      };
+    };
 
     function replaceTiger(str) {
         return JSON.parse(
