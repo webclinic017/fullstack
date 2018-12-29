@@ -94,7 +94,7 @@
         }
         // 如果处于待更新证件的情况跳入上传身份证页面
         function setVerifyStatus() {
-            if($scope.personal.updatePapers.hint == 1 && $scope.personal.updatePapers.personal == 3) {
+            if($scope.personal.updatePapers.hint == 1 && $scope.personal.updatePapers.profile_check == 3) {
                 $scope.personal.verify_status = 3;
             }
         }
