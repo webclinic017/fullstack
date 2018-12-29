@@ -151,7 +151,8 @@
         };
         // 选择倍数金额
         $scope.selectMoney = function(money){
-            $scope.deposit.amount = money;
+            console.log(money)
+            $scope.deposit.amount = Number(money);
             checkInputAmount();
         }
         //判断按钮 deposit.submitBtn
@@ -216,6 +217,9 @@
             $scope.deposit.isNeedBank = $scope.depositTypeLst[$scope.deposit.type].check_card;
             $scope.deposit.isAbleDeposit = $scope.depositTypeLst[$scope.deposit.type].evidence_status;
             $scope.deposit.currency = $scope.depositTypeLst[$scope.deposit.type].currency.length ? $scope.depositTypeLst[$scope.deposit.type].currency[0] : null;
+            if ($scope.depositTypeLst[$scope.deposit.type].amount_list.length) {
+                $scope.deposit.amount = undefined;
+            }
             checkInvestLimit();
             checkInputAmount();
             checkInvestBank();

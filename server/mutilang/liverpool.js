@@ -47,14 +47,14 @@ module.exports = {
             en:"Tim Hughes",
             vi:"Tim Hughes",
             "zh-Hant":"Tim Hughes",
-            id:"__id__"
+            id:"Tim Hughes"
         },
         liverpool7:{
             zh:"TigerWit CEO",
             en:"TigerWit CEO",
             vi:"Giám Đốc Điều Hàng TigerWit",
             "zh-Hant":"TigerWit CEO",
-            id:"__id__"
+            id:"CEO TigerWIt"
         },
         liverpool8:{
             zh:"As our official Online Foreign Exchange Trading Partner, we are very excited to develop our partnership with TigerWit. Liverpool FC has a large number of fans across the globe, particularly in TigerWit’s core markets in the UK, Europe and Asia. Through this new partnership with TigerWit, we look forward to marketing activations, which help bring our fans around the world even closer to the Club.",
@@ -75,14 +75,14 @@ module.exports = {
             en:"Managing Director and Chief",
             vi:"Giám đốc điều hành và Giám đốc",
             "zh-Hant":"Managing Director and Chief",
-            id:"__id__"
+            id:"Direktur Utama dan Ketua"
         },
         liverpool11:{
             zh:"Commercial Officer,Liverpool FC",
             en:"Commercial Officer,Liverpool FC",
             vi:"thương mại, Liverpool FC",
             "zh-Hant":"Commercial Officer,Liverpool FC",
-            id:"__id__"
+            id:"Pejabat Komersial. Liverpool FC"
         },
         liverpool12:{
             zh:"Visit Liverpool FC",

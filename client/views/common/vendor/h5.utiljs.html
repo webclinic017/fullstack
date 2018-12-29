@@ -50,6 +50,33 @@
 
     }
 
+    //设置邮箱
+    function getEmailPhone (ele, emailOrPhone) {
+        //emailOrPhone 默认邮箱
+        if ($.cookie('sysMessage')) {
+            if (emailOrPhone && emailOrPhone == 'phone') {
+                $(ele).html(JSON.parse($.cookie('sysMessage')).phone_list[0].phone);
+            } else {
+                $(ele).html(JSON.parse($.cookie('sysMessage')).email_list[0].email);
+            }
+        } else {
+            var d = new Date();
+            d.setTime(d.getTime() + (1*24*60*60*1000));
+            publicRequest('getEmailPhone', 'GET').then(function (data) {
+                // console.log(data);
+                if (!data) return;
+                if (data.is_succ) {
+                    if (emailOrPhone && emailOrPhone == 'phone') {
+                        $(ele).html(data.data.phone_list[0].phone);
+                    } else {
+                        $(ele).html(data.data.email_list[0].email);
+                    }
+                  document.cookie = 'sysMessage=' + JSON.stringify(data.data) + '; path=/; domain=.tigerwit.com; expires='+d.toUTCString();
+                }
+            });
+        }
+    }
+
     /*判断是否在APP中*/
     function isInTiger() {
         var userPlatForm = window.navigator.userAgent;
@@ -419,7 +446,7 @@
                 en:"Please fill in the reserved phone number of the bank card",
                 vi:"Vui lòng điền số điện thoại dự phòng của thẻ ngân hàng theo yêu cầu",
                 "zh-Hant":"請填寫該銀行卡的預留手機號",
-                id:"__id__"
+                id:"Mohon isi nomor telepon yang terdaftar di bank"
             },
             enterBankName:{
                 zh:"请填写您的银行名称",

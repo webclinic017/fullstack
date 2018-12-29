@@ -86,5 +86,5 @@
     <p class="copy_rules__tip-detail mg-tp-30">
         <%= lang.text("copyRule24")%>
     </p>
-    <p class="copy_rules__tip-detail"><%= lang.text("copyRule25")%> <a class="font-info" href="mailto:<%= lang.text("supportEmail")%>"><%= lang.text("supportEmail")%></a><%= lang.text("copyRule26")%></p>
+    <p class="copy_rules__tip-detail"><%= lang.text("copyRule25")%> <a class="font-info" ng-href="mailto:{{sysMessage.email_list[0].email}}">{{sysMessage.email_list[0].email}}</a><%= lang.text("copyRule26")%></p>
 </div>

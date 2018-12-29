@@ -28,7 +28,9 @@ var eleDeposit = {
   payDepositAmount: '#third_app_deposit_amount',
   payDepositBtn: '#third_app_deposit_btn',
   payDepositBtnTip: '#third_app_deposit_btn_tip',
-  payDepositSubmitBtn: '#deposit_submit_btn'
+  payDepositSubmitBtn: '#deposit_submit_btn',
+  payDepositAmountWrapper: '#third_app_deposit_amount_wrapper',
+  payDepositAmountWrapperMull: '#third_app_deposit_amount_wrapper_mull'
 };
 var depositTypeDetail = {
   bank: {
@@ -218,6 +220,14 @@ $(eleDeposit.payTypeDetail).on("tap", function () {
 $(eleDeposit.payOmipay).find("span").on("tap", function () {
   $(eleDeposit.payDepositAmount).val($(this).attr("data-amount"));
   setDepositBtnStatus();
+  return false;
+});
+$(eleDeposit.payDepositAmountWrapperMull).on("tap", "span", function () {
+  $(eleDeposit.payDepositAmountWrapperMull).find("span").removeClass('active');
+  $(this).addClass('active');
+  $(eleDeposit.payDepositAmount).val($(this).attr("data-amount"));
+  setDepositBtnStatus();
+  return false;
 });
 $(eleDeposit.payTransferPic).find("input[name=file]").on('change', function(e) {
     var file = e.target.files[0];
@@ -403,6 +413,19 @@ function changeDepositType (cType) {
     var html=bt('template_deposit_upload_evidence',depositTemplate);
     $("#third_app_middle_template").html(html);
     openMiddleMdl();
+  }
+  //固定金额
+  if (selectKeyFromType('amount_list').length) {
+    $(eleDeposit.payDepositAmountWrapper).css({display: 'none'});
+    $(eleDeposit.payDepositAmountWrapperMull).addClass('active');
+    var html=bt('template_deposit_amount_list', {
+      data: selectKeyFromType('amount_list')
+    });
+    $(eleDeposit.payDepositAmountWrapperMull).html(html);
+    $(eleDeposit.payDepositAmount).val('');
+  } else {
+    $(eleDeposit.payDepositAmountWrapper).css({display: 'block'});
+    $(eleDeposit.payDepositAmountWrapperMull).removeClass('active');
   }
   setDepositBtnStatus();
 }

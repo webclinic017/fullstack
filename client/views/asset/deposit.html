@@ -3,7 +3,7 @@
     <div ng-show="!walletDepositSucc && !teleDepositSucc">
         <div class="row">
             <div class="col-xs-2 text-right deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.depositAmountJ')}}</div>
-            <div class="col-xs-7 deposit__input">
+            <div class="col-xs-7 deposit__input" ng-show="!depositTypeLst[deposit.type].amount_list.length">
                 <form name="depositForm" novalidate autocomplete="off">
                     <div class="form-control-wrapper">
                         <input class="form-control form-control-size-lg form-control-shape-capsule"
@@ -22,6 +22,9 @@
                     </div>
                 </form>
             </div>
+            <ul class="col-xs-7 deposit__list2" ng-show="depositTypeLst[deposit.type].amount_list.length">
+                <li class="deposit__list2-item" ng-class="{active: deposit.amount == item}" ng-repeat="item in depositTypeLst[deposit.type].amount_list track by $index" ng-click="selectMoney(item)">${{item}}</li>
+            </ul>
         </div>
 
         <div class="row" ng-if="depositTypeLst[deposit.type].key === 'omipay'">

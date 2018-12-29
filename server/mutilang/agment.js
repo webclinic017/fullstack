@@ -84,11 +84,11 @@ module.exports = {
         id:"• Peraturan-peraturan lain yang digarisbawahi"
     },
     agment_tip4:{
-        zh:"如您对协议有任何疑问，可拨打客服热线400 - 809 - 8509进行咨询。",
-        en:"If you have any questions about the Registration Agreement please contact us at customersupport@tigerwit.com.",
-        vi:"Nếu bạn có bất kỳ câu hỏi nào về Thỏa thuận Đăng ký, vui lòng liên hệ với chúng tôi theo địa chỉ customersupport@tigerwit.com.",
-        "zh-Hant":"如您對協議有任何疑問，可撥打客服熱線400 - 809 - 8509進行咨詢。",
-        id:"apabila anda memiliki pertanyaan mengenai Perjanjian Pendafttaran silahkan hubungi kami di customersupport@tigerwit.com."
+        zh:"如您对协议有任何疑问，可联系客服进行咨询",
+        en:"If you have any questions about the Registration Agreement please contact us at ",
+        vi:"Nếu bạn có bất kỳ câu hỏi nào về Thỏa thuận Đăng ký, vui lòng liên hệ với chúng tôi theo địa chỉ ",
+        "zh-Hant":"如您對協議有任何疑問，可聯系客服進行咨詢",
+        id:"apabila anda memiliki pertanyaan mengenai Perjanjian Pendafttaran silahkan hubungi kami di "
     },
     agment_tip5:{
         zh:"【特别提示】",

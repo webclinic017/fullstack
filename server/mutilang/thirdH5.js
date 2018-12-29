@@ -530,7 +530,7 @@ module.exports = {
             en:"Please fill in the reserved phone number of the bank card",
             vi:"Vui lòng điền số điện thoại dự phòng của thẻ ngân hàng theo yêu cầu",
             "zh-Hant":"請填寫該銀行卡的預留手機號",
-            id:"__id__"
+            id:"Mohon isi nomor telepon yang terdaftar di bank"
         },
         submit:{
             zh:"提交",
@@ -838,7 +838,7 @@ module.exports = {
             en:"Is the CSE account number?",
             vi:"Đây có phải là CSE Số tài khoản",
             "zh-Hant":"是否有CSE帳號？",
-            id:"__id__"
+            id:"Apakah ini adalah nomor rekening CSE?"
         },
         yes:{
             zh:"是",
