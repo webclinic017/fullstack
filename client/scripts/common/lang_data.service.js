@@ -8,7 +8,7 @@
 
     function langData ($cookies) {
         var language = 'zh';
-        var langArr = ['cn', 'en', 'vi', 'zh-Hant'];
+        var langArr = ['cn', 'en', 'vi', 'zh-Hant', 'id'];
         
         angular.forEach($cookies, function (value, index) {
 
