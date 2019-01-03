@@ -44,9 +44,8 @@
                     <span class="fr" style="font-family: initial; text-decoration: line-through; color: #f23244;">{{msgInfo.currency.currency_symbol}} {{msgInfo.amountFee}}</span>
                 </li>
             </ul>
-            <p class="deposit_modal__tip">
-                {{msgInfo.desc}}
-            </p>
+            <!-- <p class="deposit_modal__tip" ng-bind-html="formatText(msgInfo.desc) | bindhtml"></p> -->
+            <pre class="deposit_modal__tip" ng-bind="formatText(msgInfo.desc)"></pre>
         </div>
 
         <p class="btn_wrapper mg-bt-15">

@@ -281,6 +281,8 @@
         text-decoration: line-through;
       }
       .common_confirm_desc {
+        white-space: pre-wrap;
+        word-wrap: break-word;
         padding: 10px 0px;
         color: #999;
         font-family: initial;

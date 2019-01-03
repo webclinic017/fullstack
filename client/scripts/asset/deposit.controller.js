@@ -484,6 +484,11 @@
                         $modalInstance.dismiss();
                     }
 
+                    $scope.formatText = function (text) {
+                        if (!text) return '';
+                        var newText = text.replace(/(^\s*)|(\s*$)/g, "");
+                        return newText;
+                    }
                 }
             });
         }

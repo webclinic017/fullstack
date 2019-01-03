@@ -124,9 +124,9 @@
         <span class="common_confirm_fee"><code><$= data.currencySymbol$></code><$= data.amountFee || '0.00'$></span>
       </p>
     <$}$>
-    <p class="common_confirm_desc">
+    <pre class="common_confirm_desc">
       <$= data.desc || ''$>
-    </p>
+    </pre>
     <div class="common_confirm_btn_wrapper">
       <$if (data.type === 'deposit') {$>
         <button class="btn btn-primary-gradient" id="deposit_submit_btn"><%=lang.text('thirdH5.confirm')%></button>

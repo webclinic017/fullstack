@@ -132,6 +132,7 @@ function computeAmount () {
   var amount = Number($(eleDeposit.payDepositAmount).val()).toFixed(2);
   var amountCur = (amount*deoisitCurrency.rate_in).toFixed(2);
   var amountFee = (amountCur*(selectKeyFromType('poundage').replace(/%/,'')*0.01)).toFixed(2);
+  var desc = selectKeyFromType('poundage_desc').replace(/(^\s*)|(\s*$)/img, "");
   var depositTemplate = {
     data: {
       type: 'deposit',
@@ -139,7 +140,7 @@ function computeAmount () {
       currencySymbol: deoisitCurrency.currency_symbol,
       currencyName: deoisitCurrency.currency_name,
       isFee: selectKeyFromType('poundage_status'),
-      desc: selectKeyFromType('poundage_desc'),
+      desc: desc,
       amountDollar: amount,
       amountCur: amountCur,
       amountFee: amountFee,
