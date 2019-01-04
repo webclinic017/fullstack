@@ -39,17 +39,25 @@
         <p class="name" data-name="card"><%=lang.text('thirdH5.cardNumber')%></p>
         <input type="text" class="cont" name="card" placeholder="<%=lang.text('thirdH5.enterCardNumber')%>">
       </div>
-      <div class="third_app_bank__item">
+      <div class="third_app_bank__item is_global">
+        <p class="name" data-name="bankOther">Fill in the opening account bank</p>
+        <input type="text" class="cont" name="bankOther" placeholder="Fill in the opening account bank">
+      </div>
+      <div class="third_app_bank__item is_global">
+        <p class="name" data-name="swift_code">Bank identification code</p>
+        <input type="text" class="cont" name="swift_code" placeholder="Please fill in the bank identification code">
+      </div>
+      <div class="third_app_bank__item is_cn">
         <p class="name" data-name="bank_name"><%=lang.text('thirdH5.bankName')%></p>
         <input type="text" class="cont" name="bank_name" placeholder="<%=lang.text('thirdH5.enterBankName')%>">
         <select name="bank_name" id="third_app_bank_bank_name"></select>
       </div>
-      <div class="third_app_bank__item">
+      <div class="third_app_bank__item is_cn">
         <p class="name" data-name="province"><%=lang.text('thirdH5.provinces')%></p>
         <input type="text" class="cont" name="province" placeholder="<%=lang.text('thirdH5.selectAccountPro')%>">
         <select name="province" id="third_app_bank_province"></select>
       </div>
-      <div class="third_app_bank__item">
+      <div class="third_app_bank__item is_cn">
         <p class="name" data-name="city"><%=lang.text('thirdH5.city')%></p>
         <input type="text" class="cont" name="city" placeholder="<%=lang.text('thirdH5.selectAccountCity')%>">
         <select name="city" id="third_app_bank_city"></select>
@@ -58,7 +66,7 @@
         <p class="name" data-name="address"><%=lang.text('thirdH5.branch')%></p>
         <input type="text" class="cont" name="address" placeholder="<%=lang.text('thirdH5.enterBranchBankName')%>">
       </div>
-      <div class="third_app_bank__item">
+      <div class="third_app_bank__item is_cn">
         <p class="name" data-name="phone"><%=lang.text('thirdH5.reservedPhoneNumber')%></p>
         <input type="text" class="cont" name="phone" placeholder="<%=lang.text('thirdH5.enterReservedPhoneNumber')%>">
       </div>
