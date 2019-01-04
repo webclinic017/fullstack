@@ -132,7 +132,7 @@ function computeAmount () {
   var amount = Number($(eleDeposit.payDepositAmount).val()).toFixed(2);
   var amountCur = (amount*deoisitCurrency.rate_in).toFixed(2);
   var amountFee = (amountCur*(selectKeyFromType('poundage').replace(/%/,'')*0.01)).toFixed(2);
-  var desc = selectKeyFromType('poundage_desc').replace(/(^\s*)|(\s*$)/img, "");
+  var desc = selectKeyFromType('poundage_desc').replace(/(^\s*)|(\s*$)/g, "");
   var depositTemplate = {
     data: {
       type: 'deposit',
