@@ -62,7 +62,7 @@ module.exports = function () {
              * 非英语地区 cn, zh-Hant
              *  */
             var isEngArea = false;
-            if (this.language === 'en' || this.language === 'vi') {
+            if (this.language !== 'zh' && this.language !== 'zh-Hant') {
                 isEngArea = true;
             }
             return isEngArea;
