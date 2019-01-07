@@ -121,7 +121,7 @@ function uploadEvidence (id) {
     // console.log(data);
     if (data.is_succ) {
       changeEvidencePageIndex('1');
-      openMessageMdl(thirdH5.submitSuccess);
+      openMessageMdl(lang.text("thirdH5.submitSuccess"));
     } else {
       openMessageMdl(data.message);
     }
@@ -137,7 +137,7 @@ function cancelEvidence (id) {
     console.log(data);
     if (data.is_succ) {
       changeEvidencePageIndex('2');
-      openMessageMdl(thirdH5.unsuccessful);
+      openMessageMdl(lang.text("thirdH5.unsuccessful"));
     } else {
       openMessageMdl(data.message);
     }

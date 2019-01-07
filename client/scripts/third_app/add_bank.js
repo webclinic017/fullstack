@@ -23,7 +23,7 @@ $(".third_app_bank__item select").on("change", function () {
 });
 $(".third_app_bank__item select[name=city]").on("tap", function () {
   if (!$(".third_app_bank__item select[name=province]").val()) {
-    openMessageMdl(thirdH5.selectAccountPro);
+    openMessageMdl(lang.text("thirdH5.selectAccountPro"));
     return false;
   }
 });
@@ -41,27 +41,27 @@ $("#third_app_bank_btn").on("tap", function () {
   var address = $(".third_app_bank__item input[name=address]").val();
   var phone = $(".third_app_bank__item input[name=phone]").val();
   if (!card) {
-    openMessageMdl(thirdH5.enterCardNumber);
+    openMessageMdl(lang.text("thirdH5.enterCardNumber"));
     return false;
   }
   if (!bank_name) {
-    openMessageMdl(thirdH5.enterBankName);
+    openMessageMdl(lang.text("thirdH5.enterBankName"));
     return false;
   }
   if (!province) {
-    openMessageMdl(thirdH5.selectAccountPro);
+    openMessageMdl(lang.text("thirdH5.selectAccountPro"));
     return false;
   }
   if (!city) {
-    openMessageMdl(thirdH5.selectAccountCity);
+    openMessageMdl(lang.text("thirdH5.selectAccountCity"));
     return false;
   }
   if (!address) {
-    openMessageMdl(thirdH5.enterBranchBankName);
+    openMessageMdl(lang.text("thirdH5.enterBranchBankName"));
     return false;
   }
   if (!phone) {
-    openMessageMdl(thirdH5.enterReservedPhoneNumber);
+    openMessageMdl(lang.text("thirdH5.enterReservedPhoneNumber"));
     return false;
   }
   // console.log(card, bank_name, province, city, address, phone);
@@ -78,7 +78,7 @@ $("#third_app_bank_btn").on("tap", function () {
     closeAllMdl();
     if (!data) return;
     if (data.is_succ) {
-      openMessageMdl(thirdH5.addSuccess);
+      openMessageMdl(lang.text("thirdH5.addSuccess"));
       setTimeout(function () {
         // console.log('backPrev');
         // openThirdNative({
