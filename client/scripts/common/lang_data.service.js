@@ -856,73 +856,73 @@
                     },
                     tip6_1:{
                         zh:"我们已将验证码发送至",
-                        en:"We have sent the verification code to",
-                        vi:"Chúng tôi đã gửi mã xác nhận đến",
+                        en:"We have sent the verification code to ",
+                        vi:"Chúng tôi đã gửi mã xác nhận đến ",
                         "zh-Hant":"我們已將驗證碼發送至",
-                        id:"Kami telah mengirim Kode verifikasi"
+                        id:"Kami telah mengirim Kode verifikasi "
                     },
                     tip6_2:{
                         zh:"邮箱",
                         en:" ",
                         vi:" ",
                         "zh-Hant":"郵箱",
-                        id:"--"
+                        id:" "
                     },
                     tip6_21:{
                         zh:"手机号：",
                         en:"phone number: ",
                         vi:"Số điện thoại: ",
                         "zh-Hant":"手機號：",
-                        id:"Telepon: "
+                        id:"telepon: "
                     },
                     tip6_3:{
                         zh:" 请注意查收。",
                         en:", please check.",
-                        vi:"Vui lòng kiểm tra",
+                        vi:", Vui lòng kiểm tra.",
                         "zh-Hant":" 請註意查收。",
-                        id:"Vui lòng kiểm tra"
+                        id:", silahkan cek."
                     },
                     tip7_1:{
                         zh:" ",
                         en:"The ",
                         vi:" ",
                         "zh-Hant":" ",
-                        id:"--"
+                        id:" "
                     },
                     tip7_2:{
                         zh:"手机号",
                         en:"phone number ",
                         vi:"Số điện thoại ",
                         "zh-Hant":"手機號",
-                        id:"Telepon"
+                        id:"Telepon "
                     },
                     tip7_21:{
                         zh:"邮箱",
                         en:"email ",
                         vi:"Thư điện tử ",
                         "zh-Hant":"郵箱",
-                        id:"email"
+                        id:"email "
                     },
                     tip7_3:{
                         zh:"未注册",
                         en:"is not registered",
                         vi:"Không được đăng ký",
                         "zh-Hant":"未註冊",
-                        id:"Belum terdaftar"
+                        id:"belum terdaftar"
                     },
                     tip9_1:{
                         zh:"该",
                         en:"This ",
                         vi:"Đây là ",
                         "zh-Hant":"該",
-                        id:"ini"
+                        id:" "
                     },
                     tip9_3:{
                         zh:"没有注册过 TigerWit 账号，前往注册？",
                         en:"has not been registered",
                         vi:"Đã không được đăng ký",
                         "zh-Hant":"沒有註冊過 TigerWit 帳號，前往註冊？",
-                        id:"Belum terdaftar"
+                        id:"ini belum terdaftar"
                     },
                     goRegister:{
                         zh:"去注册",
@@ -1738,14 +1738,14 @@
                         en:"Unable to operate ",
                         vi:"Không thể hoạt động ",
                         "zh-Hant":"無法進行",
-                        id:"Tidak dapat melakukan transaksi"
+                        id:"Tidak dapat melakukan transaksi "
                     },
                     unableOperate_2:{
                         zh:"操作",
                         en:" ",
                         vi:" ",
                         "zh-Hant":"操作",
-                        id:"--"
+                        id:" "
                     },
                     agentManagement:{
                         zh:"代理商管理后台",
@@ -1922,14 +1922,14 @@
                         en:"Please complete question ",
                         vi:"Vui lòng hoàn thành câu hỏi ",
                         "zh-Hant":"請完成第",
-                        id:"Silahkan jawab semua pertanyaan"
+                        id:"Silahkan jawab semua pertanyaan "
                     },
                     tip12_2:{
                         zh:"题：",
                         en:": ",
                         vi:": ",
                         "zh-Hant":"題：",
-                        id:"--"
+                        id:": "
                     },
                     tip13_1:{
                         zh:"是否有",
@@ -6095,7 +6095,7 @@
                         en:"Direct access to global capital markets",
                         vi:"Truy cập trực tiếp vào thị trường vốn toàn cầu",
                         "zh-Hant":"直通全球資本市場",
-                        id:" Akses langsung ke pasar keuangan global "
+                        id:"Akses langsung ke pasar keuangan global "
                     },
                     tradeLikeMaster:{
                         zh:"人人都是投资高手",

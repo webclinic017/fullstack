@@ -9,31 +9,17 @@ module.exports = {
       },
       about2:{
           zh:"",
-          en:"TigerWit was founded with one clear purpose; to bring fresh technological solutions to an industry stuck in its ways and in ",
-          vi:"TigerWit được thành lập với một mục đích rõ ràng; để mang lại các giải pháp công nghệ mới cho các nhà giao dịch đang bị kẹt ",
+          en:"TigerWit was founded with one clear purpose; to bring fresh technological solutions to an industry stuck in its ways and in need of reimagination and new vision.",
+          vi:"TigerWit được thành lập với một mục đích rõ ràng; để mang lại các giải pháp công nghệ mới cho các nhà giao dịch đang bị kẹt lại và đang cần một sự đổi mới và một phiên bản mới.",
           "zh-Hant":"",
-          id:"We focus all our energy on opportunities where design, systems and processes can be upgraded and reinvented for the"
-      },
-      about3:{
-          zh:"",
-          en:"need of reimagination and new vision.",
-          vi:"lại và đang cần một sự đổi mới và một phiên bản mới.",
-          "zh-Hant":"",
-          id:"benefit of traders today and tomorrow."
+          id:"TigerWit didirikan dengan 1 tujuan yang jelas; yaitu memberikan solusi teknologi yang baru dalam industri yang masih kurang berinovasi dan memerlukan imaginasi dan visi yang baru."
       },
        about4:{
           zh:"",
-          en:"We focus all our energy on opportunities where design, systems and processes can be upgraded and reinvented for the ",
-          vi:"Chúng tôi tập trung tất cả năng lượng của mình vào các cơ hội mà các khâu thiết kế, hệ thống và quy trình có thể được ",
+          en:"We focus all our energy on opportunities where design, systems and processes can be upgraded and reinvented for the benefit of traders today and tomorrow.",
+          vi:"Chúng tôi tập trung tất cả năng lượng của mình vào các cơ hội mà các khâu thiết kế, hệ thống và quy trình có thể được nâng cấp và tái cấu trúc nhằm mục đích tạo ra lợi ích của các nhà giao dịch ngày hôm nay và tương lai.",
           "zh-Hant":"",
-          id:"Kami memfokuskan semua energi kami pada rancangan, sistem dan proses yang diperbarui dan diciptakan kembali untuk memberikan"
-      },
-      about5:{
-          zh:"",
-          en:"benefit of traders today and tomorrow.",
-          vi:"nâng cấp và tái cấu trúc nhằm mục đích tạo ra lợi ích của các nhà giao dịch ngày hôm nay và tương lai.",
-          "zh-Hant":"",
-          id:"manfaat untuk para trader hari ini dan hari esok"
+          id:"Kami memfokuskan semua energi kami pada rancangan, sistem dan proses yang diperbarui dan diciptakan kembali untuk memberikan manfaat untuk para trader hari ini dan hari esok."
       },
       about6:{
           zh:"",

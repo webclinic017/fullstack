@@ -235,7 +235,7 @@ module.exports = {
         en:"Find out more about blockchain technology",
         vi:"Tìm hiểu thêm về công nghệ blockchain",
         "zh-Hant":"了解更多關於區塊鏈技術的信息",
-        id:"Cari tahu lebih lanjut mengenai teknologi blockchain"
+        id:"Cari tahu mengenai Teknologi Blockchain"
     },
     newhome_32:{
         zh:"你需要的交易方式",

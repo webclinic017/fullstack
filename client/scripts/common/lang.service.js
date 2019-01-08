@@ -17,7 +17,7 @@
                  * 非英语地区 cn, zh-Hant
                  *  */
                 var isEngArea = false;
-                if (langData["language"] === 'en' || langData["language"] === 'vi') {
+                if (langData["language"] === 'en' || langData["language"] === 'vi' || langData["language"] === 'id') {
                     isEngArea = true;
                 }
                 return isEngArea;
