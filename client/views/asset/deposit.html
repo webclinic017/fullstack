@@ -72,6 +72,31 @@
                 </ul>
             </div>
         </div>
+
+        <div class="row mg-tp-30" ng-if="deposit.type && depositTypeLst[deposit.type].channel_type === 2" ng-controller="ManageCardController">
+            <div class="col-xs-2 text-right deposit__title-money">
+                {{lang.text('tigerWitID.depositWithdrawal.bankCard')}}
+            </div>
+    
+            <div class="col-xs-10 pd-tp-10" ng-show="!deposit.card.id">
+                <span class="deposit__pointer font-info" ng-click="openCardMdl('deposit')">{{lang.text('tigerWitID.wallet.bindBankCard')}} ></span>
+            </div>
+    
+            <div class="col-xs-9 withdraw__card_handler" ng-show="deposit.card.id">
+                <div class="widthdraw__card_bg">
+                    <img ng-show="deposit.card.bank_img" ng-src="{{ deposit.card.bank_img }}">
+                    <span>{{ deposit.card.bank_name ||  deposit.card.bank_code }}</span>
+                </div>
+                <span class="card_number">
+                    <span>
+                        {{deposit.card.number}} 
+                    </span>
+                    <span class="deposit__pointer font-info btn-text card_switch" ng-click="openManageCardMdl({type: 'switch', page: 'deposit', parentScope: parentScope, getCard: getCard})">{{lang.text('tigerWitID.wallet.switchBankCard')}} ></span>
+                </span>
+                <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl({type: 'manage', page: 'deposit', parentScope: parentScope, getCard: getCard})" ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">{{lang.text('tigerWitID.wallet.manageBankCards')}}</span>
+            </div>
+        </div>
+
         <div ng-if="deposit.isNeedBank && deposit.depositCard" class="mg-tp-30">
             <div class="row" style="padding-left: 65px;">
                 <div class="deposit__title-money">{{lang.text('tigerWitID.depositWithdrawal.useBankPay')}}</div>
@@ -108,12 +133,14 @@
             <div class="col-xs-7 text-center">
                 <div ng-if="!isLoading" class="deposit__btn_wrapper">
                     <button ng-if="deposit.submitBtn" class="tw-btn tw-btn-capsule-gradient tw-btn-full" ng-click="toDeposit()">
-                        <span ng-show="deposit.type !== 'tele'">{{lang.text('tigerWitID.depositWithdrawal.deposit')}}</span>
-                        <span ng-show="deposit.type === 'tele'">{{lang.text('tigerWitID.submit')}}</span>
+                        <span ng-show="depositTypeLst[deposit.type].channel_type !== 2 && deposit.type !== 'tele'">{{lang.text('tigerWitID.depositWithdrawal.deposit')}}</span>
+                        <span ng-show="depositTypeLst[deposit.type].channel_type !== 2 && deposit.type === 'tele'">{{lang.text('tigerWitID.submit')}}</span>
+                        <span ng-show="depositTypeLst[deposit.type].channel_type === 2">{{lang.text('actLogin29')}}</span>
                     </button>
                     <button ng-if="!deposit.submitBtn" class="tw-btn tw-btn-capsule-gradient tw-btn-full tw-btn-disabled disabled">
-                        <span ng-show="deposit.type !== 'tele'">{{lang.text('tigerWitID.depositWithdrawal.deposit')}}</span>
-                        <span ng-show="deposit.type === 'tele'">{{lang.text('tigerWitID.submit')}}</span>
+                        <span ng-show="depositTypeLst[deposit.type].channel_type !== 2 && deposit.type !== 'tele'">{{lang.text('tigerWitID.depositWithdrawal.deposit')}}</span>
+                        <span ng-show="depositTypeLst[deposit.type].channel_type !== 2 && deposit.type === 'tele'">{{lang.text('tigerWitID.submit')}}</span>
+                        <span ng-show="depositTypeLst[deposit.type].channel_type === 2">{{lang.text('actLogin29')}}</span>
                     </button>
                 </div>
                 <div ng-if="isLoading" class="deposit__btn_wrapper">

@@ -9,9 +9,9 @@
 
     function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, $cookies, $layer, $document) {
         // 缓存当前父scope 给弹窗控制器使用
+        $scope.parentScope = $scope;
         var parentScope = $scope;
         parentScope.hasChooseedCard = false
-        parentScope.cardList = undefined;   // 银行卡列表
         parentScope.ThirdList = undefined;   // 第三方列表
         parentScope.manageCardModalInstance = undefined;
         var codeRage = [100602, 100605, 100608];
@@ -86,9 +86,7 @@
         $scope.hideErr = hideErr;
         $scope.toWithdraw = toWithdraw;
         $scope.openWithdrawMdl = openWithdrawMdl;
-        $scope.openCardMdl = openCardMdl;
         $scope.openThirdMdl = openThirdMdl;
-        $scope.openManageCardMdl = openManageCardMdl;
         $scope.openManageThirdMdl = openManageThirdMdl;
         // $scope.changeWithdrawType = changeWithdrawType;
         $scope.openChangeWithTypeMdl = openChangeWithTypeMdl;
@@ -96,6 +94,7 @@
         $scope.selcetCurrency = selcetCurrency;
 
         // 获取默认银行卡
+        $scope.getCard = getCard;
         getCard();
         // 获取默认第三方
         getThird();
@@ -321,36 +320,7 @@
                 return true
             }
         }
-        // 添加银行卡
-        function openCardMdl() {
-            if (parentScope.manageCardModalInstance) {
-                parentScope.manageCardModalInstance.dismiss()
-            }
-            // 检测认证状态
-            $scope.$emit('global.checkAuthenFlow', {
-                ctrlName: 'AssetWithdrawController',
-                callback: function () {
-                    // var personal = {
-                    //     verified: $scope.personal.verified,
-                    //     realname: $scope.personal.realname,
-                    //     profile_check: $scope.personal.profile_check,
-                    // };
-                    $modal.open({
-                        templateUrl: '/views/asset/card_modal.html',
-                        size: 'md',
-                        controller: 'AssetCardController',
-                        resolve: {
-                            passedScope: function () {
-                                return {
-                                    personal: $scope.lang.isThird() ? $scope.main : $scope.personal,
-                                    card: $scope.withdraw.card
-                                };
-                            }
-                        }
-                    });
-                }
-            })
-        }
+        
 
         // 添加第三方
         function openThirdMdl() {
@@ -374,70 +344,7 @@
                 }
             })
         }
-        // 管理银行账号
-        function openManageCardMdl(type, card) {
-            $modal.open({
-                templateUrl: '/views/asset/manage_card_modal.html',
-                size: 'md',
-                backdrop: 'true',
-                controller: ['$scope', '$modalInstance', '$state', 'asset', '$timeout', 'lang', function ($scope, $modalInstance, $state, asset, $timeout, lang) {
-                    parentScope.manageCardModalInstance = $modalInstance
-                    $timeout(function () {
-                        $scope.$broadcast('hideLoadingImg');
-                    }, 0)
-                    $scope.closeModal = closeModal;
-                    $scope.manageType = type;
-                    $scope.lang = lang;
-                    $scope.openAddCardModal = openCardMdl
-                    //刷新列表 
-                    getCardList($scope).then(function () {
-                        $scope.cardList = parentScope.cardList
-                    })
-
-                    $scope.chooseCard = function (card) {
-                        // console.log(card)
-                        parentScope.withdraw.card.id = card.id;
-                        parentScope.withdraw.card.number = card.card_no;
-                        parentScope.withdraw.card.address = card.bank_addr;
-                        parentScope.withdraw.card.province = card.province;
-                        parentScope.withdraw.card.bank_name = card.bank_name;
-                        parentScope.withdraw.card.bank_name_cn = card.bank_name_cn;
-                        parentScope.withdraw.card.city = card.city;
-                        parentScope.withdraw.card.bank_code = card.bank_code;
-                        parentScope.withdraw.card.bank_img = card.bank_img;
-                        parentScope.withdraw.card.phone = card.phone;
-                        parentScope.withdraw.card.country = card.country_code;
-                        // 更改选中状态
-                        parentScope.hasChooseedCard = true;
-                        closeModal()
-                    }
-
-                    $scope.confirmDeleteCard = function (card) {
-                        closeModal()
-                        openManageCardMdl('delete', card)
-                    }
-
-                    $scope.deleteCard = function () {
-                        asset.deleteCard(card.id).then(function (data) {
-                            if (data.is_succ) {
-                                getCardList($scope).then(function () {
-                                    $scope.cardList = parentScope.cardList
-                                    if ($scope.cardList.length == 0) {
-                                        parentScope.withdraw.card = {}
-                                    }
-                                })
-                                getCard()
-                                closeModal()
-                            }
-                        })
-                    }
-
-                    function closeModal() {
-                        $modalInstance.dismiss();
-                    }
-                }]
-            });
-        }
+        
         // 管理第三方账号
         function openManageThirdMdl(type, third) {
             $modal.open({
@@ -502,17 +409,7 @@
                 }]
             });
         }
-        function getCardList(_scope) {
-            _scope.$emit('showLoadingImg');
-            return asset.getCardList().then(function (data) {
-                _scope.$broadcast('hideLoadingImg');
-                if (!data) {
-                    console.info('获取银行卡列表失败！')
-                    return
-                }
-                parentScope.cardList = data.data
-            })
-        }
+        
         // 第三方列表
         function getThirdList(_scope) {
             _scope.$emit('showLoadingImg');
@@ -545,7 +442,7 @@
                     // 绑定银行卡
                     function bindCard() {
                         closeModal();
-                        openCardMdl();
+                        // openCardMdl();
                     }
 
                     function closeModal(r) {

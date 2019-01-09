@@ -1029,5 +1029,26 @@ module.exports = {
             "zh-Hant": "預留手機號",
             id:"Nomor telepon"
         },
+        bankCardName: {
+            zh: "银行卡",
+            en: "Bank card",
+            vi: "Ngân hàng",
+            "zh-Hant": "銀行卡",
+            id:"Nomor rekening"
+        },
+        bankCardTip: {
+            zh: "请选择银行卡",
+            en: "Please choose a bank card",
+            vi: "‘Vui lòng chọn thẻ ngân hàng.",
+            "zh-Hant": "請選擇銀行卡",
+            id:"Silahkan Pilih nomor rekening"
+        },
+        bankCardTransferTip: {
+            zh: "注意：必须使用所选择的银行卡进行转账",
+            en: "Notice: The selected bank card must be used for transfer.",
+            vi: "Chú ý: Thẻ ngân hàng được chọn phải được sử dụng để chuyển khoản.",
+            "zh-Hant": "注意：必須使用所選擇的銀行卡進行轉賬",
+            id:"Pemberitahuan. Rekening bank yang dipilih harus digunakan untuk pengiriman dana"
+        }
     }
 };
