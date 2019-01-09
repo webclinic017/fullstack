@@ -8,17 +8,6 @@
 <!-- endbuild -->
 <% include /common/vendor/h5.utiljs.html %>
 <% include /common/statistic/main.html %>
-<script>
-    var thirdH5 = {
-      selectAccountPro: '<%= lang.text("thirdH5.selectAccountPro") %>',
-      enterCardNumber: '<%= lang.text("thirdH5.enterCardNumber") %>',
-      enterBranchBankName: '<%= lang.text("thirdH5.enterBranchBankName") %>',
-      selectAccountCity: '<%= lang.text("thirdH5.selectAccountCity") %>',
-      enterReservedPhoneNumber: '<%= lang.text("thirdH5.enterReservedPhoneNumber") %>',
-      enterBankName: '<%= lang.text("thirdH5.enterBankName") %>',
-      addSuccess: '<%= lang.text("thirdH5.addSuccess") %>',
-    };
-</script>
 <body>
   <div class="third_app_bank">
     <h3 class="third_app_bank__title">
@@ -40,12 +29,12 @@
         <input type="text" class="cont" name="card" placeholder="<%=lang.text('thirdH5.enterCardNumber')%>">
       </div>
       <div class="third_app_bank__item is_global">
-        <p class="name" data-name="bankOther">Fill in the opening account bank</p>
-        <input type="text" class="cont" name="bankOther" placeholder="Fill in the opening account bank">
+        <p class="name" data-name="bankOther"><%=lang.text('thirdH5.fillBank')%></p>
+        <input type="text" class="cont" name="bankOther" placeholder="<%=lang.text('thirdH5.fillBank')%>">
       </div>
       <div class="third_app_bank__item is_global">
-        <p class="name" data-name="swift_code">Bank identification code</p>
-        <input type="text" class="cont" name="swift_code" placeholder="Please fill in the bank identification code">
+        <p class="name" data-name="swift_code"><%=lang.text('thirdH5.bankIdentificationCode')%></p>
+        <input type="text" class="cont" name="swift_code" placeholder="<%=lang.text('thirdH5.fillBankIdentificationCode')%>">
       </div>
       <div class="third_app_bank__item is_cn">
         <p class="name" data-name="bank_name"><%=lang.text('thirdH5.bankName')%></p>

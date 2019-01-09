@@ -23,7 +23,7 @@ $(".third_app_bank__item select").on("change", function () {
 });
 $(".third_app_bank__item select[name=city]").on("tap", function () {
   if (!$(".third_app_bank__item select[name=province]").val()) {
-    openMessageMdl(thirdH5.selectAccountPro);
+    openMessageMdl(lang.text("thirdH5.selectAccountPro"));
     return false;
   }
 });
@@ -44,27 +44,27 @@ $("#third_app_bank_btn").on("tap", function () {
   var bankOther = $(".third_app_bank__item input[name=bankOther]").val();
   var swift_code = $(".third_app_bank__item input[name=swift_code]").val();
   if (!card) {
-    openMessageMdl(thirdH5.enterCardNumber);
+    openMessageMdl(lang.text("thirdH5.enterCardNumber"));
     return false;
   }
   if (personalInfo.region.world_code === 'CN' && !bank_name) {
-    openMessageMdl(thirdH5.enterBankName);
+    openMessageMdl(lang.text("thirdH5.enterBankName"));
     return false;
   }
   if (personalInfo.region.world_code === 'CN' && !province) {
-    openMessageMdl(thirdH5.selectAccountPro);
+    openMessageMdl(lang.text("thirdH5.selectAccountPro"));
     return false;
   }
   if (personalInfo.region.world_code === 'CN' && !city) {
-    openMessageMdl(thirdH5.selectAccountCity);
+    openMessageMdl(lang.text("thirdH5.selectAccountCity"));
     return false;
   }
   if (!address) {
-    openMessageMdl(thirdH5.enterBranchBankName);
+    openMessageMdl(lang.text("thirdH5.enterBranchBankName"));
     return false;
   }
   if (personalInfo.region.world_code === 'CN' && !phone) {
-    openMessageMdl(thirdH5.enterReservedPhoneNumber);
+    openMessageMdl(lang.text("thirdH5.enterReservedPhoneNumber"));
     return false;
   }
   if (personalInfo.region.world_code !== 'CN' && !bankOther) {
@@ -95,7 +95,7 @@ $("#third_app_bank_btn").on("tap", function () {
     closeAllMdl();
     if (!data) return;
     if (data.is_succ) {
-      openMessageMdl(thirdH5.addSuccess);
+      openMessageMdl(lang.text("thirdH5.addSuccess"));
       setTimeout(function () {
         // console.log('backPrev');
         // openThirdNative({

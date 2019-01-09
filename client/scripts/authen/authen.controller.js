@@ -92,7 +92,7 @@
                 })
             }
         }
-        // 如果处于待更新证件的情况跳入上传身份证页面
+        // 如果处于待更新证件且认证成功过的情况跳入上传身份证页面
         function setVerifyStatus() {
             if($scope.personal.updatePapers.hint == 1 && $scope.personal.updatePapers.personal == 3) {
                 $scope.personal.verify_status = 3;

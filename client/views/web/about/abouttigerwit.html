@@ -1,3 +1,7 @@
+<%if(!lang.isEnglishArea()){%>
+    <%- include('./companyinformation.html') %>
+<%}%>  
+<%if(lang.isEnglishArea()){%>
 <div class="about mg-200__bg">
     <div class="abouts_conter">
         <div class="center">
@@ -100,3 +104,4 @@
         </div>
     </div>
 </div>
+<%}%>  
