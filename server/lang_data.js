@@ -8760,7 +8760,7 @@ module.exports = function () {
             customerPromotionSystem_1:{
                 zh:"节庆日宣传图、二维码及推广链接、汇评咨询推文等一键获取，满足您多种推广需求，简单快捷！",
                 en:"Get designed promotion photo, QR code, promotion link, strategy comments, and tweets to meet your needs, simple and fast!",
-                vi:"Hệ thống khuyến mãi của khách hàngNhận ảnh quảng cáo được thiết kế, mã QR, liên kết quảng cáo, nhận xét chiến lược và tweet để đáp ứng nhu cầu của bạn, đơn giản và nhanh chóng!",
+                vi:"Nhận ảnh quảng cáo được thiết kế, mã QR, liên kết quảng cáo, nhận xét chiến lược và tweet để đáp ứng nhu cầu của bạn, đơn giản và nhanh chóng!",
                 "zh-Hant":"節慶日宣傳圖、二維碼及推廣鏈接、匯評咨詢推文等壹鍵獲取，滿足您多種推廣需求，簡單快捷！",
                 id:"Anda dapat mendapatkan konten dan materi promosi seperti foto, kode promosi, kode QR, strategi promosi, dan lain sebagainya sesuai dengan kebutuhan anda."
             },
