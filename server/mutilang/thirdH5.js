@@ -1015,6 +1015,27 @@ module.exports = {
             "zh-Hant":"1 美元 =",
             id:"1$ ="
         },
+        fillBank:{
+            zh:"填写开户行",
+            en:"Fill in the opening account bank",
+            vi:"Điền thông tin vào tài khoản ngân hàng mở",
+            "zh-Hant":"填寫開護行",
+            id:"Isi data pembukaan rekening bank"
+        },
+        bankIdentificationCode:{
+            zh:"银行机构鉴定代码",
+            en:"Bank identification code",
+            vi:"Mã nhận dạng ngân hàng",
+            "zh-Hant":"銀行機構鑒定代碼",
+            id:"Kode identifikasi bank"
+        },
+        fillBankIdentificationCode:{
+            zh:"请填写您的银行机构鉴定代码",
+            en:"Please fill in the bank identification code",
+            vi:"Vui lòng điền vào mã nhận dạng ngân hàng",
+            "zh-Hant":"請填寫您的銀行機構鑒定代碼",
+            id:"Silahkan masukkan kode identifikasi bank"
+        },
         bindBankPhoneTip: {
             zh: "因要求，请填写该银行卡的预留手机号",
             en: "Please fill in the reserved phone number of the bank card as required",
