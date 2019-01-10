@@ -94,6 +94,10 @@
       left: 0;
       opacity: 0;
     }
+
+    &.is_cn, &.is_global {
+      display: none;
+    }
   }
   @include e(btn_wrapper) {
     position: fixed;

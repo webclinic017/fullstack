@@ -99,9 +99,7 @@
                     <span class="fr" style="font-family: initial;">{{params.currency.currency_symbol}} {{params.amountRMB}}</span>
                 </li>
             </ul>
-            <p class="deposit_modal__tip" style="font-family: initial;">
-                {{params.desc}}
-            </p>
+            <pre class="deposit_modal__tip" style="font-family: initial;" ng-bind="delSpace(params.desc)"></pre>
         </div>
 
         <p class="btn_wrapper mg-bt-15">

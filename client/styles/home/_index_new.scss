@@ -222,7 +222,8 @@
     @include m(title) {
       font-size: 56px;
       color: rgb(11,11,11);
-      padding: 320px 0px 30px;
+      padding: 300px 0px 30px;
+      width: 62%;
     }
     @include m(sub_tit) {
       color: rgba(11,11,11,0.7);

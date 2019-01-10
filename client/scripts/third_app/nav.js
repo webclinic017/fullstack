@@ -12,7 +12,7 @@ var pageLoadStatus = {  //页面脏检测
   withdraw: false,
   evidence: false,
 };
-var tradeAccountType = [thirdH5.experienceAccount, thirdH5.tradingAccount, thirdH5.copyAccounts, thirdH5.masterAccount];
+var tradeAccountType = [lang.text("thirdH5.experienceAccount"), lang.text("thirdH5.tradingAccount"), lang.text("thirdH5.copyAccounts"), lang.text("thirdH5.masterAccount")];
 var walletBalance = 0;
 var tradeAccountLst = [];
 $(document).on("tap", '#third_app_bottom_template, #third_app_middle_template, #third_app_loading_template, #third_app_message_template', function (e) {
@@ -59,7 +59,7 @@ function selectAccount(cType, cAccount, cName, cTag, cAmount) {
   }
   if (cType === 'withdraw') {
     withdrawAccount = cAccount;
-    var aName = cAccount === 'wallet' ? thirdH5.wallet : thirdH5.account;
+    var aName = cAccount === 'wallet' ? lang.text("thirdH5.wallet") : lang.text("thirdH5.account");
     $(eleWithdraw.payAccountName).html(cName);
     $(eleWithdraw.payAccountTag).html(cTag);
     $(eleWithdraw.payAccountAmout).addClass('active');

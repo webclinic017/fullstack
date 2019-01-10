@@ -111,7 +111,7 @@ function submitWithdraw () {
 $(eleWithdraw.payAccountBtn).on("tap", function (e) {
   openChangeAccountMdl({
     type: 'withdraw',
-    title: thirdH5.withdrawAccountJ,
+    title: lang.text("thirdH5.withdrawAccountJ"),
     currentAccount: withdrawAccount
   });
   return false;
@@ -172,7 +172,7 @@ $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank",
     $("#third_app_loading_template").removeClass('active');
     if (!data) return;
     if (data.is_succ) {
-      openMessageMdl(thirdH5.deleteSuccessful, true);
+      openMessageMdl(lang.text("thirdH5.deleteSuccessful"), true);
       $("#third_app_bottom_template .bank_item[data-id="+cId+"]").remove();
       if (cId == withdrawBankId) {
         withdrawType = undefined;
@@ -273,7 +273,7 @@ $(document).on('tap', '#bind_bank_phone_btn', function () {
     // console.log(data);
     if (!data) return;
     if (data.is_succ) {
-      openMessageMdl(thirdH5.addSuccess);
+      openMessageMdl(lang.text("thirdH5.addSuccess"));
       getBankLst(withdrawType, true);
     } else {
       openMessageMdl(data.message);

@@ -34,15 +34,15 @@ var eleDeposit = {
 };
 var depositTypeDetail = {
   bank: {
-    text: thirdH5.paymentRule,
+    text: lang.text("thirdH5.paymentRule"),
     url: window.location.origin + '/m/third/bank_rule'
   },
   cse_wallet: {
-    text: thirdH5.thirdParty,
+    text: lang.text("thirdH5.thirdParty"),
     url: window.location.origin + '/third_usage'
   },
   transfer: {
-    text: thirdH5.detailsRemittance,
+    text: lang.text("thirdH5.detailsRemittance"),
     url: window.location.origin + '/m/third/transfer'
   },
 };
@@ -132,6 +132,7 @@ function computeAmount () {
   var amount = Number($(eleDeposit.payDepositAmount).val()).toFixed(2);
   var amountCur = (amount*deoisitCurrency.rate_in).toFixed(2);
   var amountFee = (amountCur*(selectKeyFromType('poundage').replace(/%/,'')*0.01)).toFixed(2);
+  var desc = selectKeyFromType('poundage_desc') ? selectKeyFromType('poundage_desc').replace(/(^\s*)|(\s*$)/g, "") : "";
   var depositTemplate = {
     data: {
       type: 'deposit',
@@ -139,7 +140,7 @@ function computeAmount () {
       currencySymbol: deoisitCurrency.currency_symbol,
       currencyName: deoisitCurrency.currency_name,
       isFee: selectKeyFromType('poundage_status'),
-      desc: selectKeyFromType('poundage_desc'),
+      desc: desc,
       amountDollar: amount,
       amountCur: amountCur,
       amountFee: amountFee,
@@ -179,7 +180,7 @@ function submitDeposit () {
 $(eleDeposit.payAccountBtn).on("tap", function (e) {
   openChangeAccountMdl({
     type: 'deposit',
-    title: thirdH5.rechargeTo,
+    title: lang.text("thirdH5.rechargeTo"),
     currentAccount: depositAccount
   });
   return false;
@@ -322,7 +323,7 @@ function getDepositPlatform() {
 function openChangeDepositTypeMdl () {
   var depositTemplate = {
     data: {
-      title: thirdH5.depositOptionsJ,
+      title: lang.text("thirdH5.depositOptionsJ"),
       depositType: depositType,
       isToWallet: depositAccount === 'wallet' ? true : false,
       lst: depositTypeLst
@@ -338,7 +339,7 @@ function changeDepositType (cType) {
   var desc = '', placeholder = '';
   depositType = cType;
   if (!cType) {
-    $(eleDeposit.payTypeName).html(thirdH5.pleaseSelect);
+    $(eleDeposit.payTypeName).html(lang.text("thirdH5.pleaseSelect"));
     $(eleDeposit.payTypeTip).html(desc);
     $(eleDeposit.payDepositAmount).attr("placeholder", placeholder);
     setDepositBtnStatus();
@@ -349,14 +350,14 @@ function changeDepositType (cType) {
   if (selectKeyFromType('min') > 0 && selectKeyFromType('max') > 0) {
     placeholder = selectKeyFromType('min')+"-"+selectKeyFromType('max')+"$";
   } else if (selectKeyFromType('min') > 0) {
-    placeholder = thirdH5.minimum+selectKeyFromType('min')+"$";
+    placeholder = lang.text("thirdH5.minimum")+selectKeyFromType('min')+"$";
   } else if (selectKeyFromType('max') > 0) {
-    placeholder = thirdH5.highest+selectKeyFromType('max')+"$";
+    placeholder = lang.text("thirdH5.highest")+selectKeyFromType('max')+"$";
   }
   $(eleDeposit.payDepositAmount).attr("placeholder", placeholder);
   //支付方式name&tip
   if (depositType === 'wallet') {
-    desc = thirdH5.walletBalanceM + '$'+walletBalance;
+    desc = lang.text("thirdH5.walletBalanceM") + '$'+walletBalance;
   } else {
     desc = selectKeyFromType('describe');
   }
@@ -407,7 +408,7 @@ function changeDepositType (cType) {
     var depositTemplate = {
       data: {
         tip: selectKeyFromType('evidence_desc'),
-        btnMsg: selectKeyFromType('evidence_status') === 1 ? thirdH5.uploadVoucher : thirdH5.viewVoucher
+        btnMsg: selectKeyFromType('evidence_status') === 1 ? lang.text("thirdH5.uploadVoucher") : lang.text("thirdH5.viewVoucher")
       }
     };
     var html=bt('template_deposit_upload_evidence',depositTemplate);
