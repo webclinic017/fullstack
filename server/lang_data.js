@@ -2226,6 +2226,13 @@ module.exports = function () {
             "zh-Hant":"歷史交易",
             id:"Riwayat transaksi"
         },
+        mDepositSuccess: {
+            zh: "充值确认中，请耐心等待", 
+            en: "Deposit is being confirmed, please wait patiently",
+            vi:"Hãy kiên nhẫn chờ xác nhận tăng lên trong",
+            "zh-Hant":"充值確認中，請耐心等待",
+            id:"Konfirmasi penuh, harap bersabar"
+        },
         amtCommon1:{
             zh:"可供下载的法律文件：",
             en:"Download Legal Documents: ",
