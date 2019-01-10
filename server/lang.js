@@ -11,7 +11,7 @@ module.exports = function () {
         var querystring = require('querystring');
         var cookieList = querystring.parse(req.headers.cookie, '; ');
         var language = 'zh', languageTemp = 'zh';
-        var langArr = ['cn', 'en', 'vi', 'zh-Hant'];
+        var langArr = ['cn', 'en', 'vi', 'zh-Hant', 'id'];
         var parseCookie = function(cookie){
             var cookies = {};
             if(!cookie){
@@ -62,7 +62,7 @@ module.exports = function () {
              * 非英语地区 cn, zh-Hant
              *  */
             var isEngArea = false;
-            if (this.language === 'en' || this.language === 'vi') {
+            if (this.language !== 'zh' && this.language !== 'zh-Hant') {
                 isEngArea = true;
             }
             return isEngArea;

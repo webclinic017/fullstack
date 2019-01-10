@@ -28,11 +28,11 @@ $("#third_app_bank_btn").on("tap", function () {
   var platform = $(".third_app_bank__item select[name=platform]").val();
   var account = $(".third_app_bank__item input[name=account]").val();
   if (!platform) {
-    openMessageMdl(thirdH5.completeInfo);
+    openMessageMdl(lang.text("thirdH5.completeInfo"));
     return false;
   }
   if (!account) {
-    openMessageMdl(thirdH5.fillAccount);
+    openMessageMdl(lang.text("thirdH5.fillAccount"));
     return false;
   }
   // console.log(account, platform);
@@ -44,7 +44,7 @@ $("#third_app_bank_btn").on("tap", function () {
     closeAllMdl();
     if (!data) return;
     if (data.is_succ) {
-      openMessageMdl(thirdH5.addSuccess);
+      openMessageMdl(lang.text("thirdH5.addSuccess"));
       setTimeout(function () {
         // console.log('backPrev');
         // openThirdNative({

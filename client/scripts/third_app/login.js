@@ -5,7 +5,7 @@
   function loginMt4 () {
     if (!isReady) return;
     if (!$("#third_app_login_account").val() || !$("#third_app_login_password").val()) {
-      alert(thirdH5.enterNumPassword);
+      alert(lang.text("thirdH5.enterNumPassword"));
     }
     isReady = false;
     $("#third_app_login_btn").css({opacity: 0.5});
