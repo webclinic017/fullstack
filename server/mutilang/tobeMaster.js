@@ -60,7 +60,7 @@ module.exports = {
         en:"Make minimum initial deposit and self-trade for at least 20 trading days;",
         vi:"Gửi tối thiểu tiền gửi ban đầu và tự giao dịch trong ít nhất 20 ngày giao dịch;",
         "zh-Hant":"在老虎外匯交易平臺入金並連續自主交易20個以上工作日；",
-        id:"Mengisi dana dan melakukan transaksi selama minimal 20 hari hari kerja;"
+        id:"Mengisi dana dan melakukan transaksi selama minimal 20 hari kerja;"
     },
     tobeMaster7:{
         zh:"近30日收益率大于20%；",

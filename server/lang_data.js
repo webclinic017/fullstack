@@ -467,7 +467,7 @@ module.exports = function () {
             zh:"简体中文",
             vi:"Tiếng Việt",
             "zh-Hant":"繁體中文",
-            id:"Bahasa Inggris"
+            id:"Bahasa Indonesia"
         },
         foot_38:{
             zh:"风险警告：",
@@ -8570,11 +8570,11 @@ module.exports = function () {
                 id:"Mohon gunakan pemindai browser seluler"
             },
             tip15:{
-                zh:"APP 链接全球金融市场",
-                en:"APP Link to global financial markets",
-                vi:"APP Liên kết với các thị trường tài chính toàn cầu",
-                "zh-Hant":"APP 鏈接全球金融市場",
-                id:"tautan APP ke pasar keuangan global"
+                zh:"TigerWit APP 链接全球金融市场",
+                en:"TigerWit APP Link to global financial markets",
+                vi:"TigerWit APP Liên kết với các thị trường tài chính toàn cầu",
+                "zh-Hant":"TigerWit APP 鏈接全球金融市場",
+                id:"APP TigerWit menghubungkan anda ke pasar keuangan global"
             },
             tip16:{
                 zh:"人人都是投资高手—你准备好了吗？",
@@ -8706,21 +8706,21 @@ module.exports = function () {
                 en:"Become a TigerWit partner today",
                 vi:"Trở thành đối tác của TigerWit hôm nay",
                 "zh-Hant":"誠招合作夥伴",
-                id:"Bergabunglah menjadi mitra TigerWit sekarang juga"
+                id:"Bergabunglah menjadi mitra TigerWit sekarang"
             },
             becomePartner_1:{
                 zh:"运用新的技术建立和推广一个成功的本地或全球品牌是我们的愿景，这需要TigerWit与您共同实现。成为我们的代理商，您可以获得TigerWit所有工具支持，同时享受多项优秀代理商扶持计划，轻松实现合作共赢、财富共享。与我们合作，利用您富余的资源创造意想不到的价值！",
                 en:"With TigerWit, the success of our partners comes from developing long-term profitable relationships. We aim to bring a fresh technological approach to an industry in need of change that benefits both partners and traders. Our innovative ‘Distributed Ledger Technology’ can provide you with an unique and significant advantage over your competitors. TigerWit’s distributed trading ledger is just the first step. Visit tech.tigerwit.com for more information on our blockchain technology.",
                 vi:"Với TigerWit, sự thành công của các đối tác của chúng tôi đến từ việc phát triển các mối quan hệ có lợi nhuận lâu dài. Chúng tôi mong muốn mang đến một phương pháp tiếp cận công nghệ mới cho một ngành công nghiệp có nhu cầu thay đổi mang lại lợi ích cho cả đối tác và thương nhân. Công nghệ Ledger phân phối sáng tạo của chúng tôi có thể cung cấp cho bạn một lợi thế độc đáo và đáng kể so với các đối thủ cạnh tranh của bạn. Sổ cái giao dịch phân phối của TigerWit chỉ là bước đầu tiên. Truy cập tech.tigerwit.com để biết thêm thông tin về công nghệ blockchain của chúng tôi.",
                 "zh-Hant":"運用新的技術建立和推廣壹個成功的本地或全球品牌是我們的願景，這需要TigerWit與您共同實現。成為我們的代理商，您可以獲得TigerWit所有工具支持，同時享受多項優秀代理商扶持計劃，輕松實現合作共贏、財富共享。與我們合作，利用您富余的資源創造意想不到的價值！",
-                id:"Kesuksesan dari seluruh mitra kami berasal dari hubungan yang saling percaya dan menguntungkan.Kami hadir disini untuk memberikan perubahan dengan membawa teknologi baru yang dapat membantu seluruh pihak baik mitra, trader maupun investor.Inovasi yang membedakan kami dari kompetitor lainnya bernama “Teknologi Distributed Trading Ledger”.Teknologi ‘Distributed Trading Ledger’ merupakan langkah pertama kami untuk membawa perubahan. Untuk informasi lebih lengkap mengenai teknologi blockchain kami, silahkan kunjungi situs kami di tech.tigerwit.com."
+                id:"Kesuksesan dari seluruh mitra kami berasal dari hubungan yang saling percaya dan menguntungkan. Kami hadir disini untuk memberikan perubahan dengan membawa teknologi baru yang dapat membantu seluruh pihak baik mitra, trader maupun investor. Inovasi yang membedakan kami dari kompetitor lainnya bernama “Teknologi Distributed Trading Ledger”. Teknologi ‘Distributed Trading Ledger’ merupakan langkah pertama kami untuk membawa perubahan. Untuk informasi lebih lengkap mengenai teknologi blockchain kami, silahkan kunjungi situs kami di tech.tigerwit.com."
             },
             joinUs:{
                 zh:"加入我们",
                 en:"Join us",
                 vi:"Tham gia với chúng tôi",
                 "zh-Hant":"加入我們",
-                id:"Bergabunglah dengan Kami"
+                id:"GABUNG SEKARANG"
             },
             whyPartner:{
                 zh:"为什么选择我们？",
@@ -8760,7 +8760,7 @@ module.exports = function () {
             customerPromotionSystem_1:{
                 zh:"节庆日宣传图、二维码及推广链接、汇评咨询推文等一键获取，满足您多种推广需求，简单快捷！",
                 en:"Get designed promotion photo, QR code, promotion link, strategy comments, and tweets to meet your needs, simple and fast!",
-                vi:"Hệ thống khuyến mãi của khách hàngNhận ảnh quảng cáo được thiết kế, mã QR, liên kết quảng cáo, nhận xét chiến lược và tweet để đáp ứng nhu cầu của bạn, đơn giản và nhanh chóng!",
+                vi:"Nhận ảnh quảng cáo được thiết kế, mã QR, liên kết quảng cáo, nhận xét chiến lược và tweet để đáp ứng nhu cầu của bạn, đơn giản và nhanh chóng!",
                 "zh-Hant":"節慶日宣傳圖、二維碼及推廣鏈接、匯評咨詢推文等壹鍵獲取，滿足您多種推廣需求，簡單快捷！",
                 id:"Anda dapat mendapatkan konten dan materi promosi seperti foto, kode promosi, kode QR, strategi promosi, dan lain sebagainya sesuai dengan kebutuhan anda."
             },
