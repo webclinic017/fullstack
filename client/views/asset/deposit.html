@@ -96,6 +96,11 @@
                 <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl({type: 'manage', page: 'deposit', parentScope: parentScope, getCard: getCard})" ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">{{lang.text('tigerWitID.wallet.manageBankCards')}}</span>
             </div>
         </div>
+        <div class="row" ng-if="deposit.type && depositTypeLst[deposit.type].channel_type === 2">
+            <div class="col-xs-7 col-xs-offset-2 deposit__rate mg-tp-15">
+                <span class="font-danger">＊{{lang.text('tigerWitID.depositWithdrawal.bankCardTransferTip')}}</span>
+            </div>
+        </div>
 
         <div ng-if="deposit.isNeedBank && deposit.depositCard" class="mg-tp-30">
             <div class="row" style="padding-left: 65px;">
