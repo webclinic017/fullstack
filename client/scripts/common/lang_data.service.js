@@ -8075,10 +8075,10 @@
                 },
                 revocation:{
                     zh:"撤销",
-                    en:"Revocation",
-                    vi:"Thu hồi",
+                    en:"withdrawal cancelation",
+                    vi:"Hủy rút tiền",
                     "zh-Hant":"撤銷",
-                    id:"Pembatalan"
+                    id:"Pembatalan penarikan"
                 },
                 select:{
                     zh:"选择",
