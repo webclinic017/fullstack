@@ -209,6 +209,7 @@
                         return;
                     }
                     para = angular.extend({
+                        account_type: 2,
                         account: $scope.account.emailEmali,
                         password: $scope.account.emailVeCode,
                     }, para);
@@ -222,6 +223,7 @@
                     }
 
                     para = angular.extend({
+                        account_type: 1,
                         account: $scope.account.phonePhone,
                         password: $scope.account.phoneVeCode,
                         phone_code: $scope.account.phoneArea.value,
@@ -238,6 +240,7 @@
                         return;
                     }
                     para = angular.extend({
+                        account_type: 2,
                         account: $scope.account.emailEmali,
                         password: account.encrypt($scope.account.step1Password),
                     }, para);
@@ -250,6 +253,7 @@
                         return;
                     }
                     para = angular.extend({
+                        account_type: 1,
                         account: $scope.account.phonePhone,
                         password: account.encrypt($scope.account.step2Password),
                         phone_code: $scope.account.phoneArea.value,
