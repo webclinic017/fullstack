@@ -130,6 +130,7 @@
             layer.open({ type: 2, shadeClose: false });
             publicRequest('getPhoneCode', 'POST', {
                 account: $("#telephone").val(),
+                account_type: 1,
                 phone_code: areaCode,
                 code_token: $.cookie("code_token"),
                 type: 1
@@ -405,6 +406,7 @@
                     ib_pid: $.cookie('ib_pid') || null,
                     invite_status: $.cookie('invite_status') || null,
                     account: $("#telephone").val() || null,
+                    account_type: 1,
                     phone_code: areaCode || null,
                     world_code: world_code,
                     // password: $("#password").val() || null,

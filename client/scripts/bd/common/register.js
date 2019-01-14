@@ -47,6 +47,7 @@
             layer.load(1, {shade: false});
             publicRequest('getPhoneCode', 'POST', {
                 account: $("#telephone").val(),
+                account_type: 1,
                 code_token: $.cookie("code_token"),
                 type: 1
             }).then(function (data) {
@@ -273,6 +274,7 @@
                     ib_pid: $.cookie('ib_pid') || null,
                     invite_status: $.cookie('invite_status') || null,
                     account: $("#telephone").val() || null,
+                    account_type: 1,
                     // password: $("#password").val() || null,
                     password: $("#verify_code").val() || null,
                     login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录
