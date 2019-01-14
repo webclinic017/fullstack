@@ -145,7 +145,7 @@
   </h3>
   <ul class="content bank_content">
     <$ for(var i=0;i<data.lst.length;i++) {$>
-      <li class="clearfix deposit_template_item bank_item <$= data.lst[i].id == data.id ? 'active' : ''$>" data-id="<$= data.lst[i].id$>" data-name="<$= data.lst[i].bank_name || ''$>" data-no="<$= data.lst[i].card_no$>" data-type="<$= data.type$>">
+      <li class="clearfix deposit_template_item bank_item <$= data.lst[i].id == data.id ? 'active' : ''$>" data-page="<$= data.pageType$>" data-select-id="<$= data.id$>" data-id="<$= data.lst[i].id$>" data-name="<$= data.lst[i].bank_name || ''$>" data-no="<$= data.lst[i].card_no$>" data-type="<$= data.type$>">
         <div class="item-icon"><span></span></div>
         <div class="item-info">
           <p class="name">
@@ -153,7 +153,7 @@
           </p>
           <p class="desc col"><$= data.lst[i].bank_name || ''$></p>
         </div>
-        <span class="del third_app_template_del_bank" data-id="<$= data.lst[i].id$>" data-type="<$= data.type$>"><%=lang.text('thirdH5.delete')%></span>
+        <span class="del third_app_template_del_bank" data-page="<$= data.pageType$>" data-select-id="<$= data.id$>" data-id="<$= data.lst[i].id$>" data-type="<$= data.type$>"><%=lang.text('thirdH5.delete')%></span>
       </li>
     <$}$>
     <$ if (!data.lst.length) {$>
@@ -172,7 +172,7 @@
   </h3>
   <ul class="content bank_content">
     <$ for(var i=0;i<data.lst.records.length;i++) {$>
-      <li class="clearfix deposit_template_item bank_item <$= data.lst.records[i].id == data.id ? 'active' : ''$>" data-id="<$= data.lst.records[i].id$>" data-name="<$= data.lst.records[i].platform || ''$>" data-no="<$= data.lst.records[i].account_f$>" data-type="<$= data.type$>" data-third-type="<$= data.lst.records[i].third_type$>" data-third-account="<$= data.lst.records[i].account_f$>">
+      <li class="clearfix deposit_template_item bank_item <$= data.lst.records[i].id == data.id ? 'active' : ''$>" data-page="<$= data.pageType$>" data-select-id="<$= data.id$>" data-id="<$= data.lst.records[i].id$>" data-name="<$= data.lst.records[i].platform || ''$>" data-no="<$= data.lst.records[i].account_f$>" data-type="<$= data.type$>" data-third-type="<$= data.lst.records[i].third_type$>" data-third-account="<$= data.lst.records[i].account_f$>">
         <div class="item-icon"><span></span></div>
         <div class="item-info">
           <p class="name">
@@ -180,7 +180,7 @@
           </p>
           <p class="desc col"><$= data.lst.records[i].platform || ''$></p>
         </div>
-        <span class="del third_app_template_del_bank" data-id="<$= data.lst.records[i].id$>" data-type="<$= data.type$>"><%=lang.text('thirdH5.delete')%></span>
+        <span class="del third_app_template_del_bank" data-page="<$= data.pageType$>" data-select-id="<$= data.id$>" data-id="<$= data.lst.records[i].id$>" data-type="<$= data.type$>"><%=lang.text('thirdH5.delete')%></span>
       </li>
     <$}$>
     <$ if (!data.lst.records.length) {$>

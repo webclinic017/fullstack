@@ -90,6 +90,12 @@
       display: block;
     }
   }
+  @include e(select_bank_info) {
+    display: none;
+    &.active {
+      display: block;
+    }
+  }
   @include e(transfer_info) {
     display: none;
     .transfer_tit {

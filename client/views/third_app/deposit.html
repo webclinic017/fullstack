@@ -44,7 +44,7 @@
       <input type="number" class="info" placeholder="<%=lang.text('thirdH5.enterBankCardNum')%>" id="third_app_deposit_bank_no">
     </div>
   </div>
-  <div class="third_app_deposit__transfer_info">
+  <div class="third_app_deposit__transfer_info mg-bt-15">
     <div class="third_app_deposit__transfer_pic" id="third_app_deposit_transfer">
       <div class="img"></div>
       <form class="form">
@@ -53,10 +53,18 @@
       <div class="tip"><%=lang.text('thirdH5.clickUpload')%></div>
     </div>
   </div>
+  <div class="third_app_deposit__select_bank_info clearfix mg-bt-15">
+    <div class="third_app_common__item"><%=lang.text('thirdH5.bankCardName')%></div>
+    <div class="third_app_common__select" id="third_app_deposit_bank_select_btn">
+      <span class="info" id="third_app_deposit_bank_select_name"><%=lang.text('thirdH5.bankCardTip')%></span>
+      <p class="tip font-danger font-size-12">*<%=lang.text('thirdH5.bankCardTransferTip')%></p>
+    </div>
+  </div>
   <div class="btn-wrapper third_app_common__btn mg-tp-25">
     <p class="btn-tip" id="third_app_deposit_btn_tip"></p>
     <button class="btn btn-primary-gradient disabled" id="third_app_deposit_btn"><%=lang.text('thirdH5.confirmRecharge')%></button>
   </div>
+  
   <div class="third_app_deposit__invest_info">
     <h5 class="invest_tit"><%=lang.text('thirdH5.precautions')%></h5>
     <p class="invest_tip">
