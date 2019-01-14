@@ -4415,6 +4415,13 @@
                     }
                 },
                 depositWithdrawal:{
+                    bankCardTransferTip: {
+                        zh: "注意：必须使用所选择的银行卡进行转账",
+                        en: "Notice: The selected bank card must be used for transfer.",
+                        vi: "Chú ý: Thẻ ngân hàng được chọn phải được sử dụng để chuyển khoản.",
+                        "zh-Hant": "注意：必須使用所選擇的銀行卡進行轉賬",
+                        id:"Pemberitahuan. Rekening bank yang dipilih harus digunakan untuk pengiriman dana"
+                    },
                     title:{
                         zh:"充值提现",
                         en:"Deposit/Withdrawal",
@@ -8075,10 +8082,10 @@
                 },
                 revocation:{
                     zh:"撤销",
-                    en:"Revocation",
-                    vi:"Thu hồi",
+                    en:"withdrawal cancelation",
+                    vi:"Hủy rút tiền",
                     "zh-Hant":"撤銷",
-                    id:"Pembatalan"
+                    id:"Pembatalan penarikan"
                 },
                 select:{
                     zh:"选择",

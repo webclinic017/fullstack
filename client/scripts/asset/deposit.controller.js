@@ -5,12 +5,19 @@
     angular.module('fullstackApp')
         .controller('AssetDepositController', AssetDepositController);
 
-    AssetDepositController.$inject = ['$scope', '$window', '$document', '$cookies', '$modal', '$state', '$timeout', 'asset', 'validator', 'account', '$layer', 'previewImage'];
+    AssetDepositController.$inject = ['$rootScope', '$scope', '$window', '$document', '$cookies', '$modal', '$state', '$timeout', 'asset', 'validator', 'account', '$layer', 'previewImage'];
 
-    function AssetDepositController($scope, $window, $document, $cookies, $modal, $state, $timeout, asset, validator, account, $layer, previewImage) {
+    function AssetDepositController($rootScope, $scope, $window, $document, $cookies, $modal, $state, $timeout, asset, validator, account, $layer, previewImage) {
+
+        // 缓存当前父scope 给弹窗控制器使用
+        $scope.parentScope = $scope;
+        var parentScope = $scope;
+        parentScope.hasChooseedCard = false
+        parentScope.manageCardModalInstance = undefined;
 
         $scope.depositTypeLst = {}; // 支付方式列表
         $scope.deposit = {
+            card: {},
             currency: null,     // 支付币种
             type: null,   // 支付方式
             amount: undefined,                  // 充值金额
@@ -57,6 +64,17 @@
         $scope.toHelp = toHelp;
         $scope.openCurrency = openCurrency;
         $scope.selcetCurrency = selcetCurrency;
+        // 获取默认银行卡
+        $scope.getCard = getCard;
+        getCard();
+
+        //绑定银行卡后获取银行卡信息
+        $rootScope.$on('bindCardSuccess', function () {
+            // 通知所有子控器 
+            if (!parentScope.hasChooseedCard) {
+                getCard()
+            }
+        });
         // 获取支付方式列表
         asset.getDepositPlatform().then(function (data) {
             if (data.is_succ) {
@@ -86,6 +104,27 @@
                 }
             }
         });
+        // 获取银行卡信息
+        function getCard() {
+            asset.getCard().then(function (data) {
+                if (!data) return;
+                // console.log(data);
+                if (data.is_succ && data.data) {
+                    $scope.deposit.card.id = data.data.id;
+                    $scope.deposit.card.number = data.data.card_no;
+                    $scope.deposit.card.bank_name = data.data.bank_name;
+                    $scope.deposit.card.address = data.data.bank_addr;
+                    $scope.deposit.card.province = data.data.province;
+                    $scope.deposit.card.city = data.data.city;
+                    $scope.deposit.card.bank_img = data.data.bank_img;
+                    $scope.deposit.card.bank_code = data.data.bank_code;
+                    $scope.deposit.card.phone = data.data.phone;
+                    $scope.deposit.card.country = data.data.country_code;
+                    // 判断是否为英文简称
+                    $scope.deposit.card.is_short = /^[A-Za-z]/.test(data.data.bank_name);
+                }
+            });
+        }
 
         // 获取入金限制
         // 此接口限制合并到入金方式列表中，不再单独获取 2018.7.20
@@ -199,6 +238,15 @@
             // 是否需要添加银行卡
             if ($scope.deposit.isNeedBank) {
                 if ($scope.deposit.depositCard) {
+                    $scope.deposit.submitBtn = true;
+                } else {
+                    $scope.deposit.submitBtn = false;
+                }
+                return;
+            }
+            // 转账or网银
+            if (type.channel_type === 2) {
+                if ($scope.deposit.card.id) {
                     $scope.deposit.submitBtn = true;
                 } else {
                     $scope.deposit.submitBtn = false;
@@ -348,15 +396,32 @@
                                     isFree: $scope.depositTypeLst[$scope.deposit.type].poundage_status,
                                     desc: $scope.depositTypeLst[$scope.deposit.type].poundage_desc,
                                     currency: $scope.deposit.currency,
-                                    msgBtn: $scope.lang.text("tigerWitID.confirm")
+                                    msgBtn: $scope.depositTypeLst[$scope.deposit.type].channel_type === 1 ? $scope.lang.text("tigerWitID.confirm") : $scope.lang.text("actLogin29")
                                 });
                             }
 
                             function submitDeposit() {
                                 var p = $scope.depositTypeLst[$scope.deposit.type].platform || undefined;
                                 var c = $scope.deposit.currency ? $scope.deposit.currency.currency : undefined;
+                                var token = $cookies["token"] || '';
+                                var lang = $cookies["lang"] || '';
+                                var m = mt4_id ? mt4_id : '';
                                 if($scope.deposit.type !== 'wallet'){
                                     var w = $window.open('/waiting');
+                                }
+                                if ($scope.depositTypeLst[$scope.deposit.type].channel_type === 2) {
+                                    openDepositMdl('depositFinish');
+                                    var params = [
+                                        'amount='+amount,
+                                        'platform='+p,
+                                        'mt4_id='+m,
+                                        'bank_card_id='+$scope.deposit.card.id,
+                                        'currency='+c,
+                                        'lang='+lang,
+                                        'token='+token
+                                    ];
+                                    w.location = $scope.depositTypeLst[$scope.deposit.type].url+'?'+params.join('&');
+                                    return;
                                 }
                                 asset.deposit(amount, p, c, mt4_id).then(function (data) {
                                     $scope.isLoading = false;
@@ -366,7 +431,6 @@
                                             $scope.$emit('asset.transfer')
                                             $scope.walletDepositSucc = true;
                                         } else {
-                                            var token = $cookies["token"] || '';
                                             var url = data.data.url + '?token=' + token;
                                             openDepositMdl('depositFinish');
                                             w.location = url;
@@ -443,7 +507,7 @@
                     // 支付成功
                     function depositSucc() {
                         // umeng
-                        _czc.push(["_trackEvent", lang.text("tigerWitID.depositWithdrawal.depositPage"), lang.text("tigerWitID.depositWithdrawal.deposit")]);
+                        // _czc.push(["_trackEvent", lang.text("tigerWitID.depositWithdrawal.depositPage"), lang.text("tigerWitID.depositWithdrawal.deposit")]);
 
                         closeModal();
                     }

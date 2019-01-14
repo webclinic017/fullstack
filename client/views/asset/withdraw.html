@@ -14,13 +14,14 @@
             <!-- <p class="deposit__way-tip" ng-class="{active: withdraw.accountType === 'third_account'}">提示</p> -->
         </div>
     </div>
-    <div class="row mg-bt-30" ng-show="withdraw.accountType === 'bank'">
+
+    <div class="row mg-bt-30" ng-show="withdraw.accountType === 'bank'" ng-controller="ManageCardController">
         <div class="col-xs-2 text-right deposit__title-money">
             {{lang.text('tigerWitID.depositWithdrawal.bankCard')}}
         </div>
 
         <div class="col-xs-10 pd-tp-10" ng-show="!withdraw.card.id">
-            <span class="deposit__pointer font-info" ng-click="openCardMdl()">{{lang.text('tigerWitID.wallet.bindBankCard')}} ></span>
+            <span class="deposit__pointer font-info" ng-click="openCardMdl('withdraw')">{{lang.text('tigerWitID.wallet.bindBankCard')}} ></span>
         </div>
 
         <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.card.id">
@@ -32,11 +33,12 @@
                 <span>
                     {{withdraw.card.number}} 
                 </span>
-                <span class="deposit__pointer font-info btn-text card_switch" ng-click="openManageCardMdl('switch')">{{lang.text('tigerWitID.wallet.switchBankCard')}} ></span>
+                <span class="deposit__pointer font-info btn-text card_switch" ng-click="openManageCardMdl({type: 'switch', page: 'withdraw', parentScope: parentScope, getCard: getCard})">{{lang.text('tigerWitID.wallet.switchBankCard')}} ></span>
             </span>
-            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl('manage')" ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">{{lang.text('tigerWitID.wallet.manageBankCards')}}</span>
+            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageCardMdl({type: 'manage', page: 'withdraw', parentScope: parentScope, getCard: getCard})" ng-style="{width: lang.isEnglishArea() ? '170px' : ''}">{{lang.text('tigerWitID.wallet.manageBankCards')}}</span>
         </div>
     </div>
+
     <div class="row mg-bt-30" ng-show="withdraw.accountType === 'third_account'">
         <div class="col-xs-2 text-right deposit__title-money"></div>
 

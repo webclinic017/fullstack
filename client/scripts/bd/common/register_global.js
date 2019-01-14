@@ -87,6 +87,7 @@ $(document).ready(function () {
       ib_pid: $.cookie('ib_pid') || null,
       invite_status: $.cookie('invite_status') || null,
       account: $("#email").val(),
+      account_type: 2,
       password: $("#verify_code").val(),
       login_type: 2,
       pid: oReg.search_arr.pid || null,

@@ -446,6 +446,8 @@
         }
     }
     @include e(tip) {
+        white-space: pre-wrap;
+        word-wrap: break-word;
         margin-top: 25px;
         color: #999;
     }

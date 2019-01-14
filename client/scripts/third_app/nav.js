@@ -158,3 +158,142 @@ function openChangeAccountMdl (msg) {
   openBottomMdl();
   return false;
 }
+//获取银行列表
+function getBankLst (params) {
+  /**
+   * params
+   *  listType      列表类型 bank_account、third_account
+   *  pageType      页面类型  deposit、withdraw
+   *  bankId        已选中的银行卡ID
+   *  notInsertTemp 是否加载弹窗 true、false
+   *  */
+  var listType = params.listType || '';
+  var different = {
+    'bank_account': {
+      id: 'template_withdraw_bank_list',
+      params: ['getThirdBankLst', 'GET']
+    },
+    // 获取第三方账号列表
+    'third_account': {
+      id: 'template_withdraw_third_list',
+      params: ['getThirdAccountList', 'GET', {limit: 100}]
+    }
+  }
+  // apply将数组转为参数传递
+  publicRequest.apply(this, different[listType].params).then(function (data) {
+    // console.log(data);
+    closeAllMdl();
+    if (!data) return;
+    if (data.is_succ) {
+      var bankLstTemplate = {
+        data: {
+          type: listType,
+          pageType: params.pageType,
+          id: params.bankId,
+          lst: data.data
+        }
+      };
+      if (listType === 'bank_account') {
+        withdrawBankList = data.data;
+      }
+
+      if (params.notInsertTemp) return;
+      var html=bt(different[listType].id, bankLstTemplate);
+      $("#third_app_bottom_template").html(html);
+      openBottomMdl();
+    } else {
+      openMessageMdl(data.message);
+    }
+  });
+}
+//银行卡or第三方 选择、删除、添加
+$(document).on("tap", "#third_app_bottom_template .bank_item", function () {
+  var cId = $(this).attr("data-id");
+  var cNo = $(this).attr("data-no");
+  var cName = $(this).attr("data-name");
+  var cType = $(this).attr("data-type");
+  var cSelectId = $(this).attr("data-select-id");
+  var cPageType = $(this).attr("data-page");
+  if (cId == cSelectId) return;
+  $("#third_app_bottom_template .bank_item").removeClass('active');
+  $(this).addClass('active');
+  closeAllMdl();
+  if (cPageType == 'withdraw') {
+    withdrawType = cType;
+    withdrawBankId = cId;
+    if(withdrawType == 'third_account') {
+      thirdThirdType = $(this).attr("data-third-type");
+      thirdThirdAccount = $(this).attr("data-third-account");
+    }
+    var tp = '<li class="s-select" data-select="bank_chosen" data-type="'+ cType +'"><p>'+cName+'('+cNo.substring(cNo.length-4)+')'+'</p></li>';
+    $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
+    $(eleWithdraw.payAccountLst).find("li").removeClass('active');
+    $(eleWithdraw.payAccountLst).find("li[data-type="+ withdrawType +"]").addClass('active').after(tp);
+    setWithdrawBtnStatus();
+  }
+  if (cPageType == 'deposit') {
+    depositBankId = cId;
+    var tp = cName+'('+cNo.substring(cNo.length-4)+')';
+    $(eleDeposit.paySelectBankName).html(tp);
+    setDepositBtnStatus();
+  }
+  return false;
+});
+$(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank", function () {
+  var cId = $(this).attr("data-id");
+  var cSelectId = $(this).attr("data-select-id");
+  var cType = $(this).attr("data-type");
+  var cPageType = $(this).attr("data-page");
+  openLoadingMdl();
+  var different = {
+    'bank_account': {
+      params: ['delThirdBank', 'POST', {id: cId}]
+    },
+    'third_account': {
+      params: ['destroyThirdAccount', 'POST', {id: cId}]
+    }
+  }
+  publicRequest.apply(this, different[cType].params).then(function (data) {
+    // console.log(data);
+    $("#third_app_loading_template").removeClass('active');
+    if (!data) return;
+    if (data.is_succ) {
+      openMessageMdl(lang.text("thirdH5.deleteSuccessful"), true);
+      $("#third_app_bottom_template .bank_item[data-id="+cId+"]").remove();
+      if (cPageType === 'withdraw' && cId == cSelectId) {
+        withdrawType = undefined;
+        withdrawBankId = undefined;
+        $(eleWithdraw.payAccountLst).find("li").removeClass('active');
+        $(eleWithdraw.payAccountLst).find("li[data-select=bank_chosen]").remove();
+        setWithdrawBtnStatus();
+      }
+      if (cPageType === 'deposit' && cId == cSelectId) {
+        depositBankId = undefined;
+        $(eleDeposit.paySelectBankName).html(lang.text("thirdH5.bankCardTip"));
+        setDepositBtnStatus();
+      }
+    } else {
+      openMessageMdl(data.message, true);
+    }
+  });
+  return false;
+});
+$(document).on("tap", "#third_app_bottom_template .third_app_add_card", function () {
+  var cType = $(this).attr("data-type");
+  closeAllMdl();
+  var different = {
+    'bank_account': {
+      link: '/m/third/add_bank'
+    },
+    'third_account': {
+      link: '/m/third/add_third'
+    }
+  }
+  // openThirdNative({
+  //   type: "openUrl",
+  //   title: "添加银行卡",
+  //   url: window.location.origin + '/m/third/add_bank'
+  // });
+  window.location.href= different[cType].link;
+  return false;
+});
