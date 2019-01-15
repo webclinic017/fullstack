@@ -98,7 +98,7 @@
                         description: "This update: \n1. Add Indonesian;\n2. Add a new deposit way;\n3. Fix known bugs and optimize user experience.",
                         updated_description: "70% users are using new version",
                         url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.1.0.apk",
-                        force_update : false
+                        force_update : true
                     }
                 }
             },
@@ -117,7 +117,7 @@
                         description: "本次更新：\n1.新增印尼语语言包；\n2.新增充值方式；\n3.修复已知bug，优化用户体验。",
                         updated_description: "70%的用户正在使用新版本",
                         url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.1.0.apk",
-                        force_update : false
+                        force_update : true
                     }
                 }
             }
