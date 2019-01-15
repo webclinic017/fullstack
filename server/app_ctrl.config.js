@@ -86,8 +86,8 @@
             en: {
                 ios: {
                     app_info: {
-                        version_name : "V4.0.5",
-                        description: "New version content:\n1.Add the cash withdrawal progress, clearly understand the withdrawal process.\n2.Add function that make withdrawals when have open positions.\n3.The experience account mechanism modification, use  deadline is changed to 30 days, experience funds are changed to $10000.\n4.Repair known BUG and optimize user experience.",
+                        version_name : "V4.1.2",
+                        description: "This update: \n1. Add Indonesian;\n2. Add a new deposit way;\n3. Fix known bugs and optimize user experience.",
                         updated_description: "70% users are using new version",
                         force_update : true
                     }
@@ -105,8 +105,8 @@
             cn: {
                 ios: {
                     app_info: {
-                        version_name : "V4.0.5",
-                        description: "新版本内容：\n1.增加提现进度，清楚了解提现进程；\n2.增加持仓可提现功能；\n3.体验金账户机制修改，使用期限更改为30天，体验金额更改为10000美金；\n4.修复已知BUG，优化用户体验；",
+                        version_name : "V4.1.2",
+                        description: "本次更新：\n1.新增印尼语语言包；\n2.新增充值方式；\n3.修复已知bug，优化用户体验。",
                         updated_description: "70%的用户正在使用新版本",
                         force_update : true
                     }
