@@ -909,6 +909,7 @@ module.exports = function (app) {
             var appType;   // global, uk, pandafx, old
             var appLanguage = req.query.lang || 'cn';
             appLanguage == 'zh' && (appLanguage = 'cn');
+            appLanguage != 'cn' && (appLanguage = 'en');
             if (req.query.type) {
                 appType = req.query.type;
             } else {
