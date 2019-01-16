@@ -98,7 +98,7 @@
                         description: "This update: \nRepair known BUG and optimize user experience.",
                         updated_description: "70% users are using new version",
                         url: "https://static.tigerwitfx.com/downloads/apk/tigerwit_v3.1.1.apk",
-                        force_update : true
+                        force_update : false
                     }
                 }
             },
