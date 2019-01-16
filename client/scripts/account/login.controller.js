@@ -267,6 +267,13 @@
                 $scope.loginBtnStatus = true;
 
                 if (data.is_succ) {
+                    $scope.writeCookie({nameKey: 'token', nameValue: data.data.token});
+                    $scope.writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
+                    $scope.writeCookie({nameKey: 'username', nameValue: data.data.username});
+                    $scope.writeCookie({nameKey: 'username_en', nameValue: data.data.username_en});
+                    // $scope.writeCookie({nameKey: 'user_code', nameValue: '1234'});
+                    // $scope.writeCookie({nameKey: 'username', nameValue: '123k'});
+                    // $scope.writeCookie({nameKey: 'username_en', nameValue: '22asd'});
                     $timeout(function () {
                         // console.log($cookies['user_code']);
                         var user_id = $cookies['user_code'];
@@ -298,11 +305,6 @@
                         });
 
                         account.hasChecked = false;
-                        $scope.writeCookie({nameKey: 'token', nameValue: data.data.token});
-                        $scope.writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
-                        $scope.writeCookie({nameKey: 'username', nameValue: data.data.username});
-                        $scope.writeCookie({nameKey: 'username_en', nameValue: data.data.username_en});
-                        // $scope.writeCookie({nameKey: 'username_en', nameValue: '22asd'});
                         // lang.globalOrCn(data.data.area_id);
                         $scope.$emit('relogin_info');
                         window.location.href="/space/#/center";
