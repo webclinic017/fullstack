@@ -64,16 +64,26 @@
             // 100103,  // 令牌验证失败  
             // 100104,  // 令牌未定义
             if (data.code >= 100100 && data.code <= 100199) {
+                var path, u;
                 if($window.location.host.indexOf('ibonline') != -1){
-                    $window.location.href='/payment/login';
+                    path = '/payment';
+                    u='/payment/login';
                 }
                 else if($window.location.host.indexOf('dp') != -1){
-                    $window.location.href='/payment/login';
+                    path = '/payment';
+                    u='/payment/login';
                 }
                 else {
-                    $window.location.href='/space/#/account/login';
+                    // $state.go('account.subpage', {params: 'login'});
+                    path = '/';
+                    u='/space/#/account/login';
                     $rootScope.personalCookiesInfo.userCode = undefined;
                 }
+                $rootScope.writeCookie({nameKey: 'token', nameValue: '', expires: -1, path: path});
+                $rootScope.writeCookie({nameKey: 'user_code', nameValue: '', expires: -1, path: path});
+                $rootScope.writeCookie({nameKey: 'username', nameValue: '', expires: -1, path: path});
+                $rootScope.writeCookie({nameKey: 'username_en', nameValue: '', expires: -1, path: path});
+                $window.location.href=u;
                 
             } else {
                 return data;

@@ -72,11 +72,11 @@ $(document).ready(function () {
         var expiresDate = new Date();
         expiresDate.setTime(expiresDate.getTime() + (30 * 60 * 1000));  // 30分钟过期
         
-        $.cookie("third_user_id", user_id , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
-        $.cookie("third_mt4_id", mt4_id , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
-        $.cookie("private_key", private_key , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
-        $.cookie("action", action , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
-        $.cookie("sign", sign , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
+        $.cookie("third_user_id", user_id , { path: '/', domain: getDomain(), expires: expiresDate });
+        $.cookie("third_mt4_id", mt4_id , { path: '/', domain: getDomain(), expires: expiresDate });
+        $.cookie("private_key", private_key , { path: '/', domain: getDomain(), expires: expiresDate });
+        $.cookie("action", action , { path: '/', domain: getDomain(), expires: expiresDate });
+        $.cookie("sign", sign , { path: '/', domain: getDomain(), expires: expiresDate });
     }
 
     function getUrlParam(name) {

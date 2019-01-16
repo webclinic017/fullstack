@@ -15,15 +15,21 @@
         setInviteFriendsLink();
 
         function setInviteFriendsLink () {
-            invite.setInviteFriendsLink(usercode).then(function (data) {
+            $scope.writeCookie({nameKey: 'invite_code', nameValue: usercode, expires: 1});
+            if ($scope.userstatus.logined) {
+                $location.url("/space/invest/current");
+            } else {
+                $location.url("/account/login");
+            }
+            // invite.setInviteFriendsLink(usercode).then(function (data) {
 
-                console.info($location.url());
-                if ($scope.userstatus.logined) {
-                    $location.url("/space/invest/current");
-                } else {
-                    $location.url("/account/login");
-                }
-            });
+            //     console.info($location.url());
+            //     if ($scope.userstatus.logined) {
+            //         $location.url("/space/invest/current");
+            //     } else {
+            //         $location.url("/account/login");
+            //     }
+            // });
         }
     }
 })();

@@ -9,6 +9,7 @@
     AgentProxyController.$inject = ['$scope', "$location", "account", "fun"];
 
     function AgentProxyController ($scope, $location, account, fun) {
+        // console.log($scope.getDomain());
         $scope.spread = false;
         var ib_pid = fun.getSearch().ib_pid;
         var link = '/space/#/account/register';
@@ -16,8 +17,8 @@
             $scope.spread = true;
             var d = new Date();
             d.setTime(d.getTime() + (1*24*60*60*1000));
-            document.cookie = 'ib_pid=' + ib_pid + '; path=/; domain=.tigerwit.com; expires=' + d.toUTCString();
-            document.cookie = 'invite_status=0; path=/; domain=.tigerwit.com; expires=' + d.toUTCString();
+            document.cookie = 'ib_pid=' + ib_pid + '; path=/; domain='+$scope.getDomain()+'; expires=' + d.toUTCString();
+            document.cookie = 'invite_status=0; path=/; domain='+$scope.getDomain()+'; expires=' + d.toUTCString();
             account.checkLogined().then(function (logined) {
                 if (logined) {
                     account.setAgentPromotion(ib_pid).then(function (data) {

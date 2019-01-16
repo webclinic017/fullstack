@@ -6,9 +6,9 @@
         .module('fullstackApp')
         .controller('ThirdLoginController', ThirdLoginController);
 
-    ThirdLoginController.$inject = ['$scope', '$interval', '$timeout', '$window', '$state', 'account', 'validator', '$cookies'];
+    ThirdLoginController.$inject = ['$scope', '$rootScope', '$timeout', '$window', '$state', 'account', 'validator', '$cookies'];
 
-    function ThirdLoginController($scope, $interval, $timeout, $window, $state, account, validator, $cookies) {
+    function ThirdLoginController($scope, $rootScope, $timeout, $window, $state, account, validator, $cookies) {
         $scope.account = {
             mt4: '',
             password: '',
@@ -49,6 +49,10 @@
                 if (data.is_succ) {
                     $timeout(function () {
                         account.hasChecked = false;
+                        $scope.writeCookie({nameKey: 'token', nameValue: data.data.token, path: '/payment'});
+                        $scope.writeCookie({nameKey: 'user_code', nameValue: data.data.user_code, path: '/payment'});
+                        $scope.writeCookie({nameKey: 'username', nameValue: data.data.username, path: '/payment'});
+                        $scope.writeCookie({nameKey: 'username_en', nameValue: data.data.username_en, path: '/payment'});
                         $window.location.href = '/payment/asset';
                     }, 100);
                 } else {

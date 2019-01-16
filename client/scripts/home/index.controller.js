@@ -164,7 +164,7 @@
             requestSymbols.push(key);
         });
         var socketPara = {
-            websocketTigerUrl: (location.hostname === 'cn.tigerwit.com' || location.hostname === 'global.tigerwit.com') ? 'wss://quotephp.tigerwit.com:4567' : 'wss://demo.tigerwit.com:4567',
+            websocketTigerUrl: (location.hostname === 'cndemo.tigerwit.com' || location.hostname === 'globaldemo.tigerwit.com') ? 'wss://demo.tigerwit.com:4567' : 'wss://quotephp.tigerwit.com:4567',
             request_symbols: requestSymbols,
             request_symbols_zh: isCloned ? forCloneSymbolZh : forNormalSymbolZh,
             user_name: "tiger",
