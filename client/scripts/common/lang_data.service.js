@@ -3447,7 +3447,7 @@
                     shortsWon:{
                         zh:"成功做空交易",
                         en:"Shorts won",
-                        vi:"lệnh bán thắng",
+                        vi:"Lệnh bán thắng",
                         "zh-Hant":"成功做空交易",
                         id:"Posisi Sell Menang"
                     },
@@ -4041,7 +4041,7 @@
                     available:{
                         zh:"可用红包",
                         en:"Available",
-                        vi:"Có áp dụng",
+                        vi:"Khả dụng",
                         "zh-Hant":"可用紅包",
                         id:"Tersedia"
                     },
@@ -4211,21 +4211,21 @@
                     tip5_1:{
                         zh:"5、本活动最终解释权归",
                         en:"5. The final interpretation of this activity owned by ",
-                        vi:"5. Giải thích cuối cùng về hoạt động này thuộc thuộc về",
+                        vi:"5. ",
                         "zh-Hant":"5、本活動最終解釋權歸",
                         id:"5. "
                     },
                     tip5_2:{
                         zh:"所有。如有疑问，请咨询客服",
                         en:". If you have other questions，please contact ",
-                        vi:"bảo lưu tất cả các quyền đưa ra lời giải thích cuối cùng. Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với trung tâm dịch vụ khách hàng của chúng tôi ",
+                        vi:" bảo lưu quyền đưa ra giải thích cuối cùng về hoạt động giao dịch. Nếu bạn có bất kì câu hỏi nào, vui lòng liên hệ với số điện thoại bộ phận dịch vụ khách hàng của chúng tôi ",
                         "zh-Hant":"所有。如有疑問，請咨詢客服",
                         id:" memliki semua hak dalam memutuskan keputusan yang mutlak dan tidak dapat diganggu gugat. Jika anda memiliki pertanyaan, silahkan hubungi pusat layanan pelanggan kami "
                     },
                     tip5_3:{
                         zh:"。",
                         en:" customer service.",
-                        vi:" dịch vụ khách hàng.",
+                        vi:".",
                         "zh-Hant":"。",
                         id:"."
                     },
