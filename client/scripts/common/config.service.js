@@ -73,13 +73,6 @@
                 main: ''
             };
 
-            if (server === 'dev') {
-                urlPrefix.main = 'https://cndemo.tigerwit.com';
-            }
-
-            if (server === 'www') {
-                urlPrefix.main = 'https://cn.tigerwit.com';
-            }
             return urlPrefix;
         }
     }

@@ -20,11 +20,38 @@
 
         main.thirdLogout = thirdLogout;
 
+        //获取domain
+        $scope.getDomain = function () {
+            var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+            // console.log(url.match(/\.\w+\.com/)[0]);
+            return domain;
+        }
+
+        $scope.writeCookie = writeCookie;
+        function writeCookie (params) {
+            params.expires = params.expires || 30;
+            params.path = params.path || '/';
+            /**
+             * params
+             *      nameKey: 名字
+             *      nameValue: 
+             *      expires: 过期时间 单位天
+             *      path
+             *  */
+            var oDate = new Date();
+            oDate.setTime(oDate.getTime() + (params.expires * 24 * 60 * 60 * 1000));
+            document.cookie = params.nameKey+'='+params.nameValue+';path='+params.path+';domain='+$scope.getDomain()+';expires='+oDate.toUTCString();
+        } 
+
         function thirdLogout() {
             account.logout().then(function (data) {
                 if (!data) return;
                 if (data.is_succ) {
                     account.hasChecked = false;
+                    writeCookie({nameKey: 'token', nameValue: '', expires: -1, path: '/payment'});
+                    writeCookie({nameKey: 'user_code', nameValue: '', expires: -1, path: '/payment'});
+                    writeCookie({nameKey: 'username', nameValue: '', expires: -1, path: '/payment'});
+                    writeCookie({nameKey: 'username_en', nameValue: '', expires: -1, path: '/payment'});
                     $window.location.href = '/payment/login';
                 }
             });

@@ -4,31 +4,12 @@
     layer.open({ type: 2, shadeClose: false });
 
     $(function () {
-        ; (function () {
-            /*根据当前地址和操作系统更改下载链接*/
-            var hrefIOS = '/',
-                hrefAn = 'https://www.tigerwit.com/downloads/apk/tigerwit_v2.2.1.apk';
-            if (window.location.href.indexOf("download_t") != -1) {
-                var platform = 'Android';
-                if (isIOS()) {
-                    $(".download_btn").attr("href", hrefIOS);
-                    platform = 'IOS'
-                } else {
-                    $(".download_btn").attr("href", hrefAn);
-                }
-            }
-        }());
-
         (function () {
             $(".download_btn").on('touchend', function (e) {
-                if (window.location.href.indexOf("download_t") != -1) {
-                    _czc.push(["_trackEvent", "PID=JRTT&platform=" + platform, "下载APP"]);
-                } else {
-                    sa.track('DI_click', {
-                        page: window.location.href
-                    });
-                    window.location.href = $(e.target).attr('data-url');
-                }
+                sa.track('DI_click', {
+                    page: window.location.href
+                });
+                window.location.href = $(e.target).attr('data-url');
             });
         }());
 

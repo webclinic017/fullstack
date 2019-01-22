@@ -136,11 +136,11 @@ $(document).ready(function () {
         var expiresDate = new Date();
         expiresDate.setTime(expiresDate.getTime() + (30 * 60 * 1000));  // 30分钟过期
         
-        $.cookie("third_user_id", user_id , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
-        $.cookie("third_phone", phone , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
-        $.cookie("private_key", private_key , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
-        $.cookie("action", action , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
-        $.cookie("sign", sign , { path: '/', domain: '.tigerwit.com', expires: expiresDate });
+        $.cookie("third_user_id", user_id , { path: '/', domain: getDomain(), expires: expiresDate });
+        $.cookie("third_phone", phone , { path: '/', domain: getDomain(), expires: expiresDate });
+        $.cookie("private_key", private_key , { path: '/', domain: getDomain(), expires: expiresDate });
+        $.cookie("action", action , { path: '/', domain: getDomain(), expires: expiresDate });
+        $.cookie("sign", sign , { path: '/', domain: getDomain(), expires: expiresDate });
 
         // 需要去掉200体验金的三方：tubiaojia、juyoulicai
         if (private_key === 'tubiaojia' || private_key === 'juyoulicai') {
@@ -237,9 +237,9 @@ $(document).ready(function () {
                 //card
                 var o;
                 if (window.location.hostname === 'h5dev.open.tigerwit.com' || window.location.hostname === 'w.dev.tigerwit.com') {
-                    o = 'https://cndemo.tigerwit.com/id_pic/';
+                    o = 'https://staticdemo.tigerwitfx.com/id_pic/';
                 } else {
-                    o = 'https://cn.tigerwit.com/id_pic/'
+                    o = 'https://static.tigerwitfx.com/id_pic/'
                 }
                 userCacheInfo.id_front !== '' && $('.m_third_card__pic.front .front').append('<img src="'+o+userCacheInfo.id_front+'">');
                 userCacheInfo.id_back !== '' && $('.m_third_card__pic.back .back').append('<img src="'+o+userCacheInfo.id_back+'">');

@@ -77,10 +77,6 @@
         }
         var token;
         // console.log(lang.text("actLogin1"));
-        account.setToken();
-        $interval(function () {
-            account.setToken();
-        }, 300000);
 
         // 从 landing page 进入时
         $scope.account.step1Phone = $state.params.phone;
@@ -215,6 +211,10 @@
                 $scope.registerBtnStatus = true;
 
                 if (data.is_succ) {
+                    $scope.writeCookie({nameKey: 'token', nameValue: data.data.token});
+                    $scope.writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
+                    $scope.writeCookie({nameKey: 'username', nameValue: data.data.username});
+                    $scope.writeCookie({nameKey: 'username_en', nameValue: data.data.username_en});
                     // 新用户
                     $scope.registerStep1 = 2;
                     $scope.area_id = data.data.area_id;
@@ -285,7 +285,9 @@
                 if (data.is_succ) {
                     $timeout(function () {
                         $scope.$emit('global.openDredgeMdl', {position: 'register'});
-                        lang.globalOrCn($scope.area_id);
+                        // lang.globalOrCn($scope.area_id);
+                        // $state.go('space.center');
+                        window.location.href="/space/#/center";
                     }, 100);
                     
                 } else {
@@ -298,7 +300,9 @@
                 sa.track('skip_register');
             }, 150);
             $scope.$emit('global.openDredgeMdl', {position: 'register'});
-            lang.globalOrCn($scope.area_id);
+            // lang.globalOrCn($scope.area_id);
+            // $state.go('space.center');
+            window.location.href="/space/#/center";
         }
 
         // 获取验证码倒计时
