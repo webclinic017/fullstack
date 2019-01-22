@@ -2137,10 +2137,10 @@
                         id:"Tidak lagi mengikuti Master"
                     },
                     tip4:{
-                        zh:"成为老虎外汇高手，获取20%盈利分成",
+                        zh:"成为TigerWit高手，获取20%盈利分成",
                         en:"Become a tigerwit’s master, get 20% profit share",
                         vi:"Để trở thành bậc thầy của TigerWit, nhận 20% chia sẻ lợi nhuận",
-                        "zh-Hant":"成為老虎外匯高手，獲取20%盈利分成",
+                        "zh-Hant":"成為TigerWit高手，獲取20%盈利分成",
                         id:"Jadilah seorang Master di TigerWit dan hasilkan keuntungan hingga 20% "
                     },
                     help:{
@@ -4415,6 +4415,13 @@
                     }
                 },
                 depositWithdrawal:{
+                    bankCardTransferTip: {
+                        zh: "注意：必须使用所选择的银行卡进行转账",
+                        en: "Notice: The selected bank card must be used for transfer.",
+                        vi: "Chú ý: Thẻ ngân hàng được chọn phải được sử dụng để chuyển khoản.",
+                        "zh-Hant": "注意：必須使用所選擇的銀行卡進行轉賬",
+                        id:"Pemberitahuan. Rekening bank yang dipilih harus digunakan untuk pengiriman dana"
+                    },
                     title:{
                         zh:"充值提现",
                         en:"Deposit/Withdrawal",
@@ -4878,10 +4885,10 @@
                         id:" Hadiah akan dibagikan dan dikirim ke dompet masing-masing pemenang yang dapat ditarik atau dimasukkan ke akun transaksi "
                     },
                     telegraphicTransferTip1:{
-                        zh:"不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，老虎外汇不收取电汇入金手续费，入金金额将以实际到账为准。",
+                        zh:"不同银行在购汇和汇款中会收取不同的手续费（一般为手续费、电报费和中转行费用），对于购汇和汇款中产生的费用由客户自行承担，TigerWit不收取电汇入金手续费，入金金额将以实际到账为准。",
                         en:"Different banks in the purchase of foreign exchange and remittances will charge different fees (usually fee, telegraph fee and transit costs), the costs incurred in the purchase of foreign exchange and remittance shall be borne by the customer, TigerWit does not charge wire transfer fees, deposit amount will be the actual account.",
                         vi:"Các ngân hàng khác nhau trong việc mua ngoại tệ và kiều hối sẽ tính các khoản phí khác nhau (thường là phí, phí điện báo và chi phí quá cảnh), chi phí phát sinh khi mua ngoại tệ và chuyển tiền sẽ do khách hàng chịu, TigerWit không tính phí chuyển khoản ngân hàng , số tiền gửi sẽ là tài khoản thực.",
-                        "zh-Hant":"不同銀行在購匯和匯款中會收取不同的手續費（壹般為手續費、電報費和中轉行費用），對於購匯和匯款中產生的費用由客護自行承擔，老虎外匯不收取電匯入金手續費，入金金額將以實際到帳為準。",
+                        "zh-Hant":"不同銀行在購匯和匯款中會收取不同的手續費（壹般為手續費、電報費和中轉行費用），對於購匯和匯款中產生的費用由客護自行承擔，TigerWit不收取電匯入金手續費，入金金額將以實際到帳為準。",
                         id:" TigerWit tidak membebankan biaya transfer apapun, namun pembelian valutas asing dan pengiriman dana melalui bank akan dikenakan biaya yang berbeda-beda tergantung kebijakan bank tersebut, biaya akan ditanggung oleh nasabah. Dana yang diterima oleh TigerWit adalah dana yang telah dipotong biaya-biaya bank. "
                     },
                     telegraphicTransferTip2:{
@@ -4892,24 +4899,24 @@
                         id:" Kami tidak menerima pengisian dana secara tunai. Untuk memastikan bahwa pengisian dana anda berjalan dengan lancar, mohon masukkan nomor akun dan nomor telepon anda di dalam formulir pengisian dana. "
                     },
                     telegraphicTransferTip3:{
-                        zh:"老虎外汇接受美元汇款，汇款详情如下：",
+                        zh:"TigerWit接受美元汇款，汇款详情如下：",
                         en:"TigerWit to receive US dollar remittance, remittance details are as follows：",
                         vi:"TigerWit nhận tiền chuyển đô la Mỹ, chi tiết chuyển tiền như sau: ",
-                        "zh-Hant":"老虎外匯接受美元匯款，匯款詳情如下：",
+                        "zh-Hant":"TigerWit接受美元匯款，匯款詳情如下：",
                         id:"TigerWit menerima pengiriman dalam bentuk dolar, detail pengiriman adalah sebagai berikut: "
                     },
                     telegraphicTransferTip4:{
-                        zh:"老虎外汇将根据各国适用法律尽最大努力以实际行动配合反洗钱及反恐怖方面的所有法律法规，具体包括报告及冻结可疑资产等。老虎外汇将不定期地查看账户记录以获取有洗钱嫌疑的交易证据，包括对如下几项的监控：",
+                        zh:"TigerWit将根据各国适用法律尽最大努力以实际行动配合反洗钱及反恐怖方面的所有法律法规，具体包括报告及冻结可疑资产等。TigerWit将不定期地查看账户记录以获取有洗钱嫌疑的交易证据，包括对如下几项的监控：",
                         en:"TigerWit will do its best to cooperate with all laws and regulations on anti-money laundering and anti-terrorism, including reporting and freezing of suspicious assets, in accordance with the applicable laws of each country. TigerWit will view the account records from time to time to obtain evidence of transaction evidence of money laundering, including the following: ",
                         vi:"TigerWit sẽ cố hết sức hợp tác với tất cả các luật và quy định về chống rửa tiền và chống khủng bố, bao gồm báo cáo và đóng băng các tài sản đáng ngờ, phù hợp với luật áp dụng của mỗi quốc gia. TigerWit sẽ xem hồ sơ tài khoản theo thời gian để có được bằng chứng về bằng chứng giao dịch về rửa tiền, bao gồm những điều sau đây: ",
-                        "zh-Hant":"老虎外匯將根據各國這用法律盡最大努力以實際行動配合反洗錢及反恐怖方面的所有法律法規，具體包括報告及凍結可疑資產等。老虎外匯將不定期地查看帳護記錄以獲取有洗錢嫌疑的交易證據，包括對如下幾項的監控：",
+                        "zh-Hant":"TigerWit將根據各國這用法律盡最大努力以實際行動配合反洗錢及反恐怖方面的所有法律法規，具體包括報告及凍結可疑資產等。TigerWit將不定期地查看帳護記錄以獲取有洗錢嫌疑的交易證據，包括對如下幾項的監控：",
                         id:"TigerWit selalu berkomitmen untuk mentaati seluruh peraturan dan hukum terutama mengenai anti pencucian uang dan anti teroris, dengan melaporkan dan membekukan aset yang mencurigakan. Sesuai dengan hukum di masing-masing negara, TigerWit akan memantau seluruh transaksi keuangan yang terjadi, dan untuk mencegah terjadi tindak pencucian uang dengan peraturan sebagai berikut:"
                     },
                     telegraphicTransferTip5:{
-                        zh:"账户资金出入情况。电汇入金的用户，提现时若金额低于电汇入金时金额，老虎外汇只支持将提现金额提现至入金银行卡。",
+                        zh:"账户资金出入情况。电汇入金的用户，提现时若金额低于电汇入金时金额，TigerWit只支持将提现金额提现至入金银行卡。",
                         en:"Account funds access situation. If the deposit was made by wire transfer, funds may be withdrawn only by wire transfer to the same bank and to the same account from which it originated.",
                         vi:"Tình trạng truy cập quỹ tài khoản. Nếu khoản tiền gửi được thực hiện bằng chuyển khoản ngân hàng, tiền có thể được rút chỉ bằng chuyển khoản ngân hàng đến cùng một ngân hàng và cho cùng một tài khoản mà từ đó nó được bắt nguồn.",
-                        "zh-Hant":"帳護資金出入情況。電匯入金的用護，提現時若金額低於電匯入金時金額，老虎外匯只支持將提現金額提現至入金銀行卡。",
+                        "zh-Hant":"帳護資金出入情況。電匯入金的用護，提現時若金額低於電匯入金時金額，TigerWit只支持將提現金額提現至入金銀行卡。",
                         id:"Dana masuk dan dana keluar. Apabila pengisian dana dilakukan melalui transfer antar bank, maka dana hanya boleh ditarik ke rekening yang sama dengan rekening pengirim di awal . "
                     },
                     telegraphicTransferTip6:{
@@ -5839,10 +5846,10 @@
                         id:"Panduan Tingkat Master"
                     },
                     tip1:{
-                        zh:"为了最大限度地规避交易风险，老虎外汇根据高手等级限制可复制总额范围：",
+                        zh:"为了最大限度地规避交易风险，TigerWit根据高手等级限制可复制总额范围：",
                         en:"In order to maximize the risk of dealing with the transaction, the TigerWit according master’s level limit to be followed Total range: ",
                         vi:"Để tối đa hóa rủi ro giao dịch với giao dịch, TigerWit theo cấp độ của bậc thầy giới hạn theo phạm vi Tổng:",
-                        "zh-Hant":"為了最大限度地規避交易風險，老虎外匯根據高手等級限制可復制總額範圍：",
+                        "zh-Hant":"為了最大限度地規避交易風險，TigerWit根據高手等級限制可復制總額範圍：",
                         id:" Untuk mengendalikan resiko, TigerWit akan membatasi tingkat serta dana yang dapat dikelola oleh master sesuai dengan kemampuannya:"
                     },
                     tip2:{
@@ -5902,10 +5909,10 @@
                         id:"Sisa dana yang masih dimasukkan untuk Copy"
                     },
                     tip9:{
-                        zh:"成为老虎外汇高手 获取更多收益",
+                        zh:"成为TigerWit高手 获取更多收益",
                         en:"Become a TigerWit’s master to get more income",
                         vi:"Trở Thành Bậc Thầy của TigerWit để có thêm thu nhập",
-                        "zh-Hant":"成為老虎外匯高手 獲取更多收益",
+                        "zh-Hant":"成為TigerWit高手 獲取更多收益",
                         id:" Jadilah seorang Master di TigerWit dan dapatkan penghasilan tambahan "
                     },
                     tip10:{
@@ -5923,17 +5930,17 @@
                         id:" Untuk menjadi master, anda harus memenuhi kriteria sebagai berikut "
                     },
                     tip12:{
-                        zh:"开通老虎外汇真实账户并完成实名认证",
+                        zh:"开通TigerWit真实账户并完成实名认证",
                         en:"Open the real account of the TigerWit and complete the verification",
                         vi:"Mở tài khoản thực của TigerWit và hoàn thành xác minh",
-                        "zh-Hant":"開通老虎外匯真實帳護並完成實名認證",
+                        "zh-Hant":"開通TigerWit真實帳護並完成實名認證",
                         id:" Buka akun Live di TigerWit dan selesaikan verifikasi"
                     },
                     tip13:{
-                        zh:"在老虎外汇交易平台真实入金并连续自主交易20个以上工作日",
+                        zh:"在TigerWit交易平台真实入金并连续自主交易20个以上工作日",
                         en:"In the TigerWit trading platform deposit and continuous self-trading more than 20 working days",
                         vi:"Trong nền tảng giao dịch TigerWit tiền gửi và tự giao dịch liên tục hơn 20 ngày làm việc",
-                        "zh-Hant":"在老虎外匯交易平臺真實入金並連續自主交易20個以上工作日",
+                        "zh-Hant":"在TigerWit交易平臺真實入金並連續自主交易20個以上工作日",
                         id:" Masukkan dana di platform trading TigerWit dan melakukan transaksi selama 20 hari kerja "
                     },
                     tip14:{
@@ -6063,10 +6070,10 @@
                         id:"Terakhir transaksi"
                     },
                     tip6:{
-                        zh:"为了最大限度地规避交易风险，老虎外汇根据高手的当前跟随金额调整杠杆使用范围：",
+                        zh:"为了最大限度地规避交易风险，TigerWit根据高手的当前跟随金额调整杠杆使用范围：",
                         en:"In order to maximize the risk of dealing with the transaction, the tiger foreign exchange according to the current amount of the master to adjust the use of leverage range: ",
                         vi:"để tối đa hóa rủi ro giao dịch với giao dịch, sàn giao dịch ngoại hối tiger theo số tiền hiện tại của bậc thầy để điều chỉnh việc sử dụng phạm vi đòn bẩy: ",
-                        "zh-Hant":"為了最大限度地規避交易風險，老虎外匯根據高手的當前跟隨金額調整杠桿使用範圍：",
+                        "zh-Hant":"為了最大限度地規避交易風險，TigerWit根據高手的當前跟隨金額調整杠桿使用範圍：",
                         id:" Untuk mengendalikan resiko, TigerWit akan membatasi tingkat serta dana yang dapat dikelola oleh master sesuai dengan kemampuannya:"
                     },
                     tip7:{
@@ -7301,10 +7308,10 @@
                         id:"Kode Verifikasi"
                     },
                     tip4:{
-                        zh:"如有其它疑问，请联系老虎外汇客服",
+                        zh:"如有其它疑问，请联系TigerWit客服",
                         en:"If you have other questions，please contact TigerWit customer service",
                         vi:"Nếu bạn có câu hỏi khác, vui lòng liên hệ với dịch vụ khách hàng TigerWit",
-                        "zh-Hant":"如有其它疑問，請聯系老虎外匯客服",
+                        "zh-Hant":"如有其它疑問，請聯系TigerWit客服",
                         id:" Jika anda memiliki pertanyaan lain, silahkan hubungi layanan pelanggan TigerWit "
                     },
                     editEmail:{
@@ -8075,10 +8082,10 @@
                 },
                 revocation:{
                     zh:"撤销",
-                    en:"Revocation",
-                    vi:"Thu hồi",
+                    en:"withdrawal cancelation",
+                    vi:"Hủy rút tiền",
                     "zh-Hant":"撤銷",
-                    id:"Pembatalan"
+                    id:"Pembatalan penarikan"
                 },
                 select:{
                     zh:"选择",
