@@ -97,7 +97,7 @@
 
       // 添加银行卡
       function openCardMdl(page, parentScope) {
-        if (parentScope.manageCardModalInstance) {
+        if (parentScope && parentScope.manageCardModalInstance) {
             parentScope.manageCardModalInstance.dismiss()
         }
         // 检测认证状态
