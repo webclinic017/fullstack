@@ -1,4 +1,12 @@
 
+if (getUrlParam('world_code') === 'CN') {
+  getBankNames();
+  getProvinces();
+  $(".third_app_bank__item.is_cn").css("display", "block");
+} else {
+  $(".third_app_bank__item.is_global").css("display", "block");
+}
+
 $(".third_app_bank__item input").on("input propertychange", function () {
   var info = $(this).val();
   // console.log(info, $(this).attr("name"));
@@ -169,11 +177,4 @@ function setOptions (id, key, value, lst) {
 function refreshBankInfo () {
   $(".third_app_bank__item input[name=realname]").val(personalInfo.realname);
   $(".third_app_bank__item input[name=country]").val(personalInfo.region.world_name);
-  if (personalInfo.region.world_code === 'CN') {
-    getBankNames();
-    getProvinces();
-    $(".third_app_bank__item.is_cn").css("display", "block");
-  } else {
-    $(".third_app_bank__item.is_global").css("display", "block");
-  }
 }

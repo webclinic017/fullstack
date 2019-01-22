@@ -283,7 +283,7 @@ $(document).on("tap", "#third_app_bottom_template .third_app_add_card", function
   closeAllMdl();
   var different = {
     'bank_account': {
-      link: '/m/third/add_bank'
+      link: '/m/third/add_bank?world_code='+personalInfo.region.world_code
     },
     'third_account': {
       link: '/m/third/add_third'
