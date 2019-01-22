@@ -50,8 +50,19 @@
 
     }
 
+    /*
+        获取domain
+    */
+    function getDomain() {
+        var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+        // console.log(url.match(/\.\w+\.com/)[0]);
+        return domain;
+    }
+    // console.log(getDomain());
+
     //设置邮箱
     function getEmailPhone (ele, emailOrPhone) {
+        console.log(getDomain());
         //emailOrPhone 默认邮箱
         if ($.cookie('sysMessage')) {
             if (emailOrPhone && emailOrPhone == 'phone') {
@@ -71,7 +82,7 @@
                     } else {
                         $(ele).html(data.data.email_list[0].email);
                     }
-                  document.cookie = 'sysMessage=' + JSON.stringify(data.data) + '; path=/; domain=.tigerwit.com; expires='+d.toUTCString();
+                  document.cookie = 'sysMessage=' + JSON.stringify(data.data) + '; path=/; domain='+getDomain()+'; expires='+d.toUTCString();
                 }
             });
         }

@@ -540,9 +540,6 @@
             }
         }
 
-        // 生成token
-        account.setToken();
-
         $scope.sendCode = function(type) {
             if(type == 'phone' && !$scope.completeInfo.areaCode.value){
                 $scope.showErr('areaCode');

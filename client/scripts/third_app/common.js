@@ -5,7 +5,7 @@ var thirdToken = getUrlParam("token") || '';
 var os = getUrlParam("os") || '';
 
 if (thirdToken) {
-  $.cookie("token", thirdToken , { path: '/', domain: '.tigerwit.com'});
+  $.cookie("token", thirdToken , { path: '/', domain: getDomain()});
 }
 
 setTimeout(function () {

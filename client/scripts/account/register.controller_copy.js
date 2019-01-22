@@ -57,7 +57,6 @@
         var token;
 
         // 设置 token 在获取手机验证码时提交该 token 解决更换 ip 批量注册的问题
-        account.setToken();
         // 从 landing page 进入时
         // $scope.account.username = $state.params.name;
         $scope.account.phone = $state.params.phone;

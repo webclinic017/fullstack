@@ -14,6 +14,14 @@
             }
         });
     }
+    /*
+        获取domain
+    */
+   function getDomain() {
+    var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+    // console.log(url.match(/\.\w+\.com/)[0]);
+    return domain;
+   }
 
     // set_token();
 
@@ -202,9 +210,7 @@
 
             /*设置邀请源INVITE_CODE*/
             if (oReg.search_arr.user_code) {
-                publicRequest('setInviteCode', 'POST', {
-                    user_code: oReg.search_arr.user_code
-                });
+                $.cookie('invite_code', oReg.search_arr.user_code, {expires: 1, path: '/', domain: getDomain()});
             }
 
             if (window.location.hostname === 'lonfx.tigerwit.com') {
@@ -316,8 +322,8 @@
             }
             // 客户推广
             if(oReg.search_arr.ib_pid) {
-                $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '/', domain: '.tigerwit.com'});
-                $.cookie('invite_status', 1, {expires: 1, path: '/', domain: '.tigerwit.com'});
+                $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '/', domain: getDomain()});
+                $.cookie('invite_status', 1, {expires: 1, path: '/', domain: getDomain()});
             }
             $("#submit_form").on("click", toLogin);
 

@@ -62,7 +62,6 @@
         $scope.submitForm = submitForm;
         $scope.selectWorld = selectWorld;
         var token;
-        account.setToken();
         getWorlds();
 
         function getCaptcha() {

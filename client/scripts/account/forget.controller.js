@@ -64,7 +64,6 @@
         $scope.submitStep2Form = submitStep2Form;
         $scope.getCaptcha = getCaptcha;
         var token;
-        account.setToken();
 
         function submitStep1Form(formName) {
             showErr(formName, 'phone');
