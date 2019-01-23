@@ -73,7 +73,8 @@
             },
             isDemo: function () {
                 // console.log($location.host());
-                if (($location.host().indexOf('demo.tigerwit.com') != -1) || ($location.host().indexOf('w.dev.tigerwit.com') != -1)) {
+                if (($location.host().indexOf('demo'+location.hostname.match(/\.\w+\.com/)[0]) != -1) ||
+                    ($location.host().indexOf('w.dev'+location.hostname.match(/\.\w+\.com/)[0]) != -1)) {
                     return true;
                 } else {
                     return false;
@@ -87,7 +88,7 @@
                 var d = new Date();
                 d.setTime(d.getTime() + (-1*24*60*60*1000));
                 document.cookie = 'lang=' + lang + '; path=/; expires='+d.toUTCString();
-                document.cookie = 'lang=' + lang + '; path=/; domain=.tigerwit.com';
+                document.cookie = 'lang=' + lang + '; path=/; domain='+location.hostname.match(/\.\w+\.com/)[0];
                 location.reload();
             },
             // 为合并第三方充值提现判断
