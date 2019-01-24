@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<body>
+  <div class="third_app_bank">
+    <h3 class="third_app_bank__title">
+      <%=lang.text('thirdH5.addWireTransfer')%>
+      <span class="cancel" id="third_app_bank_cancel"><%=lang.text('thirdH5.cancel')%></span>
+    </h3>
+    <p class="third_app_bank__sub_tit"></p>
+    <form action="">
+      <div class="third_app_bank__item">
+        <p class="name active" data-name="country"><%=lang.text('partner.country')%></p>
+        <input type="text" class="cont" name="country" placeholder="<%=lang.text('partner.country')%>">
+        <select name="country" id="third_app_country"></select>
+      </div>
+      <div class="third_app_bank__item">
+        <p class="name active" data-name="realname"><%=lang.text('partner.name')%></p>
+        <input type="text" class="cont" disabled name="realname" placeholder="<%=lang.text('partner.name')%>">
+      </div>
+      <div class="third_app_bank__item">
+        <p class="name" data-name="card"><%=lang.text('thirdH5.wireTransfer')%></p>
+        <input type="text" class="cont" name="card" placeholder="<%=lang.text('thirdH5.fillWithdrawAccount')%>">
+      </div>
+      <div class="third_app_bank__item">
+        <p class="name" data-name="bankOther"><%=lang.text('thirdH5.bankName')%></p>
+        <input type="text" class="cont" name="bankOther" placeholder="<%=lang.text('thirdH5.fillBankName')%>">
+      </div>
+      <div class="third_app_bank__item">
+        <p class="name" data-name="swift_code"><%=lang.text('thirdH5.bicSwiftCode')%></p>
+        <input type="text" class="cont" name="swift_code" placeholder="<%=lang.text('thirdH5.fillBicSwiftCode')%>">
+      </div>
+    </form>
+    <div class="btn-wrapper third_app_bank__btn_wrapper">
+      <button class="btn btn-primary-gradient" id="third_app_bank_btn"><%=lang.text('thirdH5.submit')%></button>
+    </div>
+  </div>
+</body>
+<script id="template_add_bank_lst" type="text/html">
+  <option value=""></option>
+<$ for(var i=0;i<data.lst.length;i++) {$>
+  <option value="<$= data.lst[i][data.value]$>"><$= data.lst[i][data.key]$></option>
+<$}$>
+</script>
+<% include /common/vendor/h5.js.html %>
+<% include /third_app/template_modal.html %>
+<!-- 注册协议相关弹窗 -->
+<%include /common/component/agment_mdl.html %>
+<!-- build:js(client) /scripts/third_app_bank.js -->
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/third_app/common.js"></script>
+<script src="/scripts/third_app/add_transfer.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

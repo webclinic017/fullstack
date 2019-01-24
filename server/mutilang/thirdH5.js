@@ -1070,6 +1070,48 @@ module.exports = {
             vi: "Chú ý: Thẻ ngân hàng được chọn phải được sử dụng để chuyển khoản.",
             "zh-Hant": "注意：必須使用所選擇的銀行卡進行轉賬",
             id:"Pemberitahuan. Rekening bank yang dipilih harus digunakan untuk pengiriman dana"
-        }
+        },
+        wireTransfer:{
+            zh:"电汇账户",
+            en:"Wire transfer",
+            vi:"Chuyển tiền",
+            "zh-Hant":"電匯賬戶",
+            id:"Pengiriman antar bank"
+        },
+        addWireTransfer:{
+            zh:"添加电汇账户",
+            en:"Add wire transfer account",
+            vi:"Thêm TK chuyển khoản NH",
+            "zh-Hant":"添加電匯賬戶",
+            id:"Tambah rekening pengiriman uang"
+        },
+        bicSwiftCode:{
+            zh:"BIC/Swift code",
+            en:"BIC/Swift code",
+            vi:"Mã BIC/Swift",
+            "zh-Hant":"BIC/Swift code",
+            id:"BIC/Kode Swift"
+        },
+        fillBicSwiftCode:{
+            zh:"请填写 BIC/Swift code",
+            en:"Please fill in BIC/Swift code",
+            vi:"Xin điền vào Mã BIC/Swift",
+            "zh-Hant":"請填寫 BIC/Swift code",
+            id:"Silahkan isi BIC/Kode Swift"
+        },
+        fillBankName:{
+            zh:"请输入银行的英文全称（包括支行名称）",
+            en:"Fill bank English full name (include branch name)",
+            vi:"Xin điền tên Tiếng Anh đầy đủ (gồm tên chi nhánh)",
+            "zh-Hant":"請輸入銀行的英文全稱（包括支行名稱）",
+            id:"Silahkan isi nama bank (termasuk nama cabang)"
+        },
+        fillWithdrawAccount:{
+            zh:"请填写电汇账号",
+            en:"Please fill in withdraw account",
+            vi:"Vui lòng điền tài khoản rút tiền",
+            "zh-Hant":"請填寫電匯賬號",
+            id:"Silahkan isi akun penarikan"
+        },
     }
 };

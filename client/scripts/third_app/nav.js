@@ -179,9 +179,9 @@ function getBankLst (params) {
       params: ['getThirdAccountList', 'GET', {limit: 100}]
     },
     // 获取电汇列表
-    'transfer_account': {
+    'transfer': {
       id: 'template_withdraw_transfer_list',
-      params: ['getThirdAccountList', 'GET', {limit: 100}]
+      params: ['getThirdBankLst', 'GET', {type: 2}]
     }
   }
   // apply将数组转为参数传递
@@ -256,7 +256,10 @@ $(document).on("tap", "#third_app_bottom_template .third_app_template_del_bank",
     },
     'third_account': {
       params: ['destroyThirdAccount', 'POST', {id: cId}]
-    }
+    },
+    'transfer': {
+      params: ['delThirdBank', 'POST', {id: cId, type: 2}]
+    },
   }
   publicRequest.apply(this, different[cType].params).then(function (data) {
     // console.log(data);
@@ -289,6 +292,9 @@ $(document).on("tap", "#third_app_bottom_template .third_app_add_card", function
   var different = {
     'bank_account': {
       link: '/m/third/add_bank?world_code='+personalInfo.region.world_code
+    },
+    'transfer': {
+      link: '/m/third/add_transfer'
     },
     'third_account': {
       link: '/m/third/add_third'

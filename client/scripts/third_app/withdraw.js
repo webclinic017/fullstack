@@ -83,7 +83,11 @@ function submitWithdraw () {
   } else if(withdrawType === 'third_account'){
     params.third_type = thirdThirdType;
     params.third_account = thirdThirdAccount;
+  }else if(withdrawType === 'transfer'){
+    params.third_type = selectKeyFromTypeForWithdraw('platform');
+    params.bank_card_id = withdrawBankId;
   }
+  console.log(params)
   publicRequest('withdrawThird', 'POST', params).then(function (data) {
     // console.log(data);
     closeAllMdl();
@@ -95,7 +99,7 @@ function submitWithdraw () {
         $(eleWithdraw.payWithdrawMsg).find('.bank').removeClass('active');
         $(eleWithdraw.payWithdrawMsg).find('.wallet').addClass('active');
       }
-      if (withdrawType === 'bank_account' || withdrawType === 'third_account') {
+      if (withdrawType === 'bank_account' || withdrawType === 'third_account' || withdrawType === 'transfer') {
         $(eleWithdraw.payWithdrawMsg).find('.wallet').removeClass('active');
         $(eleWithdraw.payWithdrawMsg).find('.bank').addClass('active');
       }
