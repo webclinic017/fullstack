@@ -4030,6 +4030,120 @@
                         id:" telah berhasil didaftarkan"
                     }
                 },
+                transfer: {
+                    wireTransfer:{
+                        zh:"电汇账户",
+                        en:"Wire transfer",
+                        vi:"Chuyển tiền",
+                        "zh-Hant":"電匯賬戶",
+                        id:"Pengiriman antar bank"
+                    },
+                    addWireTransfer:{
+                        zh:"添加电汇账户",
+                        en:"Add wire transfer account",
+                        vi:"Thêm TK chuyển khoản NH",
+                        "zh-Hant":"添加電匯賬戶",
+                        id:"Tambah rekening pengiriman uang"
+                    },
+                    clickDelete:{
+                        zh:"点击删除账户",
+                        en:"Click to delete",
+                        vi:"Nhấp để hủy",
+                        "zh-Hant":"點擊删除帳戶",
+                        id:"Klik untuk hapus"
+                    },
+                    deleteWireTransfer:{
+                        zh:"删除电汇账户",
+                        en:"Delete wire transfer account",
+                        vi:"Xóa TK chuyển khoản ngân hàng",
+                        "zh-Hant":"刪除電匯賬戶",
+                        id:"Hapus rekening pengiriman dana"
+                    },
+                    deleteThisAccount:{
+                        zh:"确认删除此账户？",
+                        en:"Delete this account?",
+                        vi:"Xóa tài khoản?",
+                        "zh-Hant":"確認删除此帳戶？",
+                        id:"Hapus akun ini？"
+                    },
+                    clickAddWireTransfer:{
+                        zh:"点击添加电汇账户",
+                        en:"Click to add wire transfer account",
+                        vi:"Thêm TK chuyển khoản NH",
+                        "zh-Hant":"點擊添加電匯賬戶",
+                        id:"Klik untuk tambah rekening"
+                    },
+                    manageWireTransfer:{
+                        zh:"管理电汇账户",
+                        en:"Manage",
+                        vi:"Quản lý",
+                        "zh-Hant":"管理電匯賬戶",
+                        id:"Kelola"
+                    },
+                    cardNumber:{
+                        zh:"电汇账号",
+                        en:"Card number",
+                        vi:"Số Thẻ",
+                        "zh-Hant":"電匯賬號",
+                        id:"Nomor rekening"
+                    },
+                    cardNumberM:{
+                        zh:"电汇账号：",
+                        en:"Card number:",
+                        vi:"Số Thẻ:",
+                        "zh-Hant":"電匯賬號：",
+                        id:"Nomor rekening:"
+                    },
+                    bicSwiftCode:{
+                        zh:"BIC/Swift code",
+                        en:"BIC/Swift code",
+                        vi:"Mã BIC/Swift",
+                        "zh-Hant":"BIC/Swift code",
+                        id:"BIC/Kode Swift"
+                    },
+                    bicSwiftCodeM:{
+                        zh:"BIC/Swift code：",
+                        en:"BIC/Swift code:",
+                        vi:"Mã BIC/Swift:",
+                        "zh-Hant":"BIC/Swift code：",
+                        id:"BIC/Kode Swift:"
+                    },
+                    fillBicSwiftCode:{
+                        zh:"请填写 BIC/Swift code",
+                        en:"Please fill in BIC/Swift code",
+                        vi:"Xin điền vào Mã BIC/Swift",
+                        "zh-Hant":"請填寫 BIC/Swift code",
+                        id:"Silahkan isi BIC/Kode Swift"
+                    },
+                    chooseCountry:{
+                        zh:"请选择银行所在的国家",
+                        en:"Please choose country",
+                        vi:"Vui lòng chọn quốc gia",
+                        "zh-Hant":"請選擇銀行所在的國家",
+                        id:"Silahkan pilih Negara"
+                    },
+                    fillWithdrawAccount:{
+                        zh:"请填写电汇账号",
+                        en:"Please fill in withdraw account",
+                        vi:"Vui lòng điền tài khoản rút tiền",
+                        "zh-Hant":"請填寫電匯賬號",
+                        id:"Silahkan isi akun penarikan"
+                    },
+                    fillBankName:{
+                        zh:"请输入银行的英文全称（包括支行名称）",
+                        en:"Fill bank English full name (include branch name)",
+                        vi:"Xin điền tên Tiếng Anh đầy đủ (gồm tên chi nhánh)",
+                        "zh-Hant":"請輸入銀行的英文全稱（包括支行名稱）",
+                        id:"Silahkan isi nama bank (termasuk nama cabang)"
+                    },
+                    switchTransferAccount:{
+                        zh:"切换电汇账户",
+                        en:"Switch wire transfer account",
+                        vi:"Đổi TK chuyển khoản",
+                        "zh-Hant":"切換電匯賬戶",
+                        id:"Pindah rekening transfer"
+                    }
+                },
                 coupon:{
                     title:{
                         zh:"我的红包",
@@ -4667,6 +4781,13 @@
                         "zh-Hant":"姓名",
                         id:"Nama"
                     },
+                    nameM:{
+                        zh:"姓名：",
+                        en:"Name:",
+                        vi:"Tên:",
+                        "zh-Hant":"姓名：",
+                        id:"Nama:"
+                    },
                     informationBankAccount:{
                         zh:"添加银行卡",
                         en:"The information of bank account",
@@ -4827,6 +4948,13 @@
                         vi:"Ngân hàng",
                         "zh-Hant":"銀行名稱",
                         id:"Bank"
+                    },
+                    bankNameM:{
+                        zh:"银行名称：",
+                        en:"Bank:",
+                        vi:"Ngân hàng:",
+                        "zh-Hant":"銀行名稱：",
+                        id:"Bank:"
                     },
                     branch:{
                         zh:"支行名称",

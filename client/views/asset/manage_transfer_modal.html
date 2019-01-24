@@ -1,0 +1,51 @@
+<div class="sys_modal_v2 mid_case">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <!-- 选择电汇列表/管理电汇列表 -->
+    <div class="sys_modal_v2__content" ng-if="manageType == 'switch' || manageType == 'manage'">
+        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'switch'">{{lang.text('tigerWitID.transfer.switchTransferAccount')}}</h3>
+        <h3 class="sys_modal_v2__title text-left" ng-if="manageType == 'manage'">{{lang.text('tigerWitID.transfer.manageWireTransfer')}}</h3>
+        <div tw-loading-img></div>
+        <table class="manage_card_list">
+            <colgroup>
+                <col width="40%">
+                <col width="30%">
+                <col width="30%">
+            </colgroup>
+            <tbody>
+                <tr class="manage_card_list__item" ng-repeat="li in transferList track by $index">
+                    <td>
+                        <div class="widthdraw__card_font" style="width: 80%;">
+                            <img ng-show="li.bank_img" ng-src="{{ li.bank_img }}">
+                            <span>{{ li.bank_name || li.bank_code }}</span>
+                        </div>
+                    </td>
+                    <td>
+                        <p class="card_number text-center">{{ li.card_no }}</p>
+                    </td>
+                    <td>
+                        <p class="text-center" ng-if="manageType == 'switch'">
+                            <a class="btn-text card_btn" ng-click="chooseTransfer(li)">{{lang.text('tigerWitID.select')}}</a>
+                        </p>
+                        <p class="text-center" ng-if="manageType == 'manage'">
+                            <a class="btn-text card_btn" ng-click="confirmDeleteTransfer(li)">{{lang.text('tigerWitID.delete')}}</a>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="mg-tp-10 text-left" ng-if="manageType == 'manage'">
+            <a class="btn-text" ng-click="openAddTransferModal()">{{lang.text('tigerWitID.transfer.clickAddWireTransfer')}}</a>
+        </div>
+    </div>
+
+    <!-- 删除电汇列表 -->
+    <div class="sys_modal_v2__content" ng-if="manageType == 'delete'">
+        <h3 class="sys_modal_v2__title text-left">{{lang.text('tigerWitID.transfer.deleteWireTransfer')}}</h3>
+        <p class="sys_modal_v2__desp mg-tp-20">{{lang.text('tigerWitID.transfer.deleteThisAccount')}}</p>
+        <div class="btn_wrapper text-right clearfix">
+            <a class="btn-text fr mg-lf-20" ng-click="closeModal()">{{lang.text('tigerWitID.cancel')}}</a>
+            <a class="btn-text fr" ng-click="deleteTransfer()">{{lang.text('tigerWitID.delete')}}</a>
+        </div>
+    </div>
+</div>

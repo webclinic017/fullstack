@@ -62,18 +62,20 @@
 
 
         /**
-         * Asset Service 获取绑定的银行卡信息
+         * Asset Service 获取绑定卡信息
          *
          * @method getCard
+         * 0：银行账户 2：电汇账户，传2
          */
-        function getCard() {
-            return publicHttp.dealPublicRequest(o.getCardApi, 'GET');
+        function getCard(params) {
+            return publicHttp.dealPublicRequest(o.getCardApi, 'GET', params);
         }
 
         /**
          * Asset Service 绑定银行卡
          *
          * @method bindCard
+         * 0：银行账户 2：电汇账户，传2
          */
         function bindCard(oParams) {
             return publicHttp.dealPublicRequest(o.bindCardApi, 'PUT', oParams);
@@ -91,21 +93,24 @@
 
         /**
          * Asset Service 获取银行卡list
+         * 0：银行账户 2：电汇账户，传2
          *
          * @method getCardList
          */
-        function getCardList() {
-            return publicHttp.dealPublicRequest(o.getCardListApi, 'GET');
+        function getCardList(params) {
+            return publicHttp.dealPublicRequest(o.getCardListApi, 'GET', params);
         }
 
         /**
          * Asset Service 删除银行卡
+         * 0：银行账户 2：电汇账户，传2
          *
          * @method deleteCard
          */
-        function deleteCard(id) {
+        function deleteCard(id, type) {
             return publicHttp.dealPublicRequest(o.deleteCardApi, 'POST', {
-                id: id
+                id: id,
+                type: type
             });
         }
 

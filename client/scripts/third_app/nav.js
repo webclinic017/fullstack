@@ -177,6 +177,11 @@ function getBankLst (params) {
     'third_account': {
       id: 'template_withdraw_third_list',
       params: ['getThirdAccountList', 'GET', {limit: 100}]
+    },
+    // 获取电汇列表
+    'transfer_account': {
+      id: 'template_withdraw_transfer_list',
+      params: ['getThirdAccountList', 'GET', {limit: 100}]
     }
   }
   // apply将数组转为参数传递

@@ -60,7 +60,28 @@
             <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageThirdMdl('manage')">{{lang.text('tigerWitID.wallet.manageThird')}}</span>
         </div>
     </div>
-    <div class="row" ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet' && withdraw.accountType !== 'third_account'">
+    <div class="row mg-bt-30" ng-show="withdraw.accountType === 'transfer'">
+        <div class="col-xs-2 text-right deposit__title-money"></div>
+
+        <div class="col-xs-10 pd-bt-10" ng-show="!withdraw.transfer.id">
+            <span class="deposit__pointer font-info" ng-click="openTransferMdl()">{{lang.text('tigerWitID.transfer.clickAddWireTransfer')}} ></span>
+        </div>
+
+        <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.transfer.id">
+            <div class="widthdraw__card_font">
+                <img ng-show="withdraw.transfer.bank_img" ng-src="{{ withdraw.transfer.bank_img }}">
+                <span>{{ withdraw.transfer.bank_name ||  withdraw.transfer.bank_code}}</span>
+            </div>
+            <span class="card_number">
+                <span>
+                    {{withdraw.transfer.card_no}} 
+                </span>
+                <span class="deposit__pointer font-info btn-text card_switch" ng-click="openManageTransferMdl('switch')">{{lang.text('tigerWitID.transfer.switchTransferAccount')}} ></span>
+            </span>
+            <span class="tw-btn tw-btn-md tw-btn-capsule-bordered card_manage" ng-click="openManageTransferMdl('manage')">{{lang.text('tigerWitID.transfer.manageWireTransfer')}}</span>
+        </div>
+    </div>
+    <div class="row" ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet' && withdraw.accountType !== 'third_account' && withdraw.accountType !== 'transfer'">
         <div class="col-xs-2 text-right deposit__title-money">
             {{lang.text('tigerWitID.depositWithdrawal.name')}}
         </div>
@@ -80,7 +101,7 @@
             </div>  
         </div>      
     </div>
-    <div class="row" ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet' && withdraw.accountType !== 'third_account'">
+    <div class="row" ng-show="withdraw.accountType !== 'bank' && withdraw.accountType !== 'wallet' && withdraw.accountType !== 'third_account' && withdraw.accountType !== 'transfer'">
         <div class="col-xs-2 text-right deposit__title-money">
             {{lang.text('tigerWitID.myAccount.accountNumber')}}
         </div>
