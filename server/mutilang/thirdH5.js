@@ -926,7 +926,7 @@ module.exports = {
         },
         experienceAccount:{
             zh:"体验金账号",
-            en:"Experience account",
+            en:"Trail account",
             vi:"Tài khoản trải nghiệm",
             "zh-Hant":"體驗金帳號",
             id:"Akun Pengalaman"

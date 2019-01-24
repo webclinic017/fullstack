@@ -205,7 +205,7 @@
                 zh:"开仓价",
                 vi:"Giá Mở",
                 "zh-Hant":"開倉價",
-                id:"Harga pembukaan posisi"
+                id:"Harga buka"
             },
             HoldingTrades3:{
                 en:"Current Price",
@@ -261,7 +261,7 @@
                 zh:"开仓价",
                 vi:"Giá Mở",
                 "zh-Hant":"開倉價",
-                id:"Harga pembukaan posisi"
+                id:"Harga buka"
             },
             TradingHistory3:{
                 en:"Close price",
@@ -1238,21 +1238,21 @@
                     },
                     tip2:{
                         zh:"恭喜您已开通TigerWit体验金账户",
-                        en:"Congratulations on opening the TigerWit experience account",
+                        en:"Congratulations on opening the TigerWit trail account",
                         vi:"Chúc mừng bạn đã mở thành công tài khoản trải nghiệm trên TigerWit",
                         "zh-Hant":"恭喜您已開通TigerWit體驗金帳護",
                         id:"Selamat, anda telah membuka Akun Pengalaman"
                     },
                     tip3:{
                         zh:"体验金账户体验期限为30天，过期后账户资金将被清除，建议尽快升级到真实账户。",
-                        en:"Your experience account is valid for 30 days. Virtual funds will be cleared from this account 30 days after opening. You can upgrade to a live account at any time.",
+                        en:"Your trail account is valid for 30 days. Virtual funds will be cleared from this account 30 days after opening. You can upgrade to a live account at any time.",
                         vi:"Tài khoản trải nghiệm của bạn sẽ có hiệu lực trong 30 ngày. Tiền ảo sẽ bị xóa khỏi tài khoản này 30 ngày sau khi mở. Bạn có thể nâng cấp lên tài khoản thực bất kỳ lúc nào.",
                         "zh-Hant":"體驗金帳護體驗期限為30天，過期後帳護資金將被清除，建議盡快升級到真實帳護。",
                         id:"Akun pengelaman anda akan berlaku selama 30 hari. Dana virtual akan dihapus secara otomatis setelah 30 hari. Anda dapat membuka Akun Live kapanpun anda inginkan."
                     },
                     tip4:{
                         zh:"请注意：体验金账户资金及盈利不可提现。",
-                        en:"Please note: experience account funds and profits are not available.",
+                        en:"Please note: trail account funds and profits are not available.",
                         vi:"Vui lòng chú ý: Quỹ và lợi nhuận của tài khoản trải nghiệm sẽ không có thực.",
                         "zh-Hant":"請註意：體驗金帳護資金及盈利不可提現。",
                         id:"Catatan: Saldo di akun pengalaman tidak tersedia."
@@ -1693,14 +1693,14 @@
                     },
                     tip38:{
                         zh:"开通真实账户后，将不再支持开通体验金账户",
-                        en:"After opening live account, it will no longer be supported to open experience account",
+                        en:"After opening live account, it will no longer be supported to open trail account",
                         vi:"Sau khi mở tài khoản thực, tài khoản sẽ không còn được hỗ trợ để mở tài khoản trải nghiệm",
                         "zh-Hant":"開通真實帳護後，將不再支持開通體驗金帳護",
                         id:" Setelah membuka Akun Live, akun pengalaman anda tidak dapat lagi digunakan "
                     },
                     experienceAccount:{
                         zh:"体验金账户",
-                        en:"Experience account",
+                        en:"Trail account",
                         vi:"Tài khoản trải nghiệm",
                         "zh-Hant":"體驗金帳護",
                         id:"Akun Pengalaman"
@@ -2530,7 +2530,7 @@
                     },
                     experienceAccount:{
                         zh:"体验金账号",
-                        en:"Experience account",
+                        en:"Trail account",
                         vi:"Tài khoản trải nghiệm",
                         "zh-Hant":"體驗金帳號",
                         id:"Akun Pengalaman"
@@ -2696,7 +2696,7 @@
                         en:"Open price",
                         vi:"Giá Mở",
                         "zh-Hant":"開倉價",
-                        id:"Harga pembukaan posisi"
+                        id:"Harga buka"
                     },
                     currentPrice:{
                         zh:"现价",
@@ -2843,7 +2843,7 @@
                         en:"Open Price",
                         vi:"Giá Mở",
                         "zh-Hant":"開倉價格",
-                        id:"Harga pembukaan posisi"
+                        id:"Harga buka"
                     },
                     currentPriceg:{
                         zh:"现在价格",
@@ -7234,14 +7234,14 @@
                     },
                     openExperienceAccount:{
                         zh:"开通体验金账户",
-                        en:"Open an experience account",
+                        en:"Open an trail account",
                         vi:"Mở tài khoản trải nghiệm",
                         "zh-Hant":"開通體驗金帳護",
                         id:"Buka Akun Pengalaman"
                     },
                     openExperienceAccountTip1:{
                         zh:"开户即送$10000交易体验金。",
-                        en:"Open the experience account and receive a $10000 virtual balance.",
+                        en:"Open the trail account and receive a $10000 virtual balance.",
                         vi:"Mở tài khoản trải nghiệm và nhận số dư ảo 10.000 đô la.",
                         "zh-Hant":"開護即送$10000交易體驗金。",
                         id:" Buka Akun pengalaman dan dapatkan dana virtual senilai 10,000$ "
@@ -7325,14 +7325,14 @@
                     },
                     openAcount9:{
                         zh:"",
-                        en:"Experience account",
+                        en:"Trail account",
                         vi:"Tài khoản Trải Nghiệm",
                         "zh-Hant":"",
                         id:"Akun Pengalaman"
                     },
                     openAcount10:{
                         zh:"",
-                        en:"Open an Experience account and practice trading in a risk-free environment with USD10,000of virtual funds.",
+                        en:"Open an trail account and practice trading in a risk-free environment with USD10,000of virtual funds.",
                         vi:"Mở một tài khoản Trải nghiệm và thực hành giao dịch trong một môi trường phi rủi ro với 10,000 USD trong quỹ ảo.",
                         "zh-Hant":"",
                         id:"Buka akun Pengalaman dan berlatihlah transaksi tanpa risiko menggunakan dana virtual sebesar 10,000$"
@@ -7360,7 +7360,7 @@
                     },
                     openAcount14:{
                         zh:"",
-                        en:"Open an Experience account",
+                        en:"Open an trail account",
                         vi:"Mở một tài khoản Trải Nghiệm",
                         "zh-Hant":"",
                         id:"Buka akun Pengalaman"
@@ -7485,10 +7485,10 @@
                         id:"Atur Nama Pengguna"
                     },
                     tip7:{
-                        zh:"请为账户设置昵称，有助于您登上高手榜",
+                        zh:"请设置昵称",
                         en:"Please set a nickname for your account to help you get on the list",
                         vi:"Vui lòng đặt biệt hiệu cho tài khoản của bạn để giúp bạn có được danh sách",
-                        "zh-Hant":"請為帳護設置昵稱，有助於您登上高手榜",
+                        "zh-Hant":"請設置昵稱",
                         id:" Silahkan masukkan nama pengguna untuk akun anda "
                     },
                     pleaseSetNickname:{
