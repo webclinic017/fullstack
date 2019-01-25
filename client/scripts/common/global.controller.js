@@ -71,7 +71,7 @@
                     account.getPersonalInfo().then(function (data) {
                         // console.log('info', data);
                         if (!data) return;
-                        if(data.user_type){
+                        if (data.user_type) {
                             accountInitializerTip(data.user_type);
                         }
                         angular.extend($scope.personal, data, {
@@ -89,7 +89,7 @@
         });
         // 账号合并提醒
         // accountInitializerTip(1);
-        function accountInitializerTip(type){
+        function accountInitializerTip(type) {
             $modal.open({
                 templateUrl: '/views/account/account_Initializer_tip.html',
                 size: 'sm',
@@ -149,7 +149,7 @@
             if (resolve && resolve.ctrlName) {
                 // console.log('global.getAuthStatus called by ' + resolve.ctrlName)
                 getAuthStatus({
-                    callback:resolve.callback
+                    callback: resolve.callback
                 })
             } else {
                 console.warn('call global.getAuthStatus error, due to no ctrlName')
@@ -168,10 +168,10 @@
                 console.warn('call global.checkAuthenFlow error, due to no ctrlName')
             }
         })
-        $scope.$on('global.getUnReadMsgLength', function(e, resolve){
+        $scope.$on('global.getUnReadMsgLength', function (e, resolve) {
             if (resolve && resolve.ctrlName) {
                 // console.log('global.getUnReadMsgLength called by ' + resolve.ctrlName)
-                getUnreadLength(function(){
+                getUnreadLength(function () {
                     resolve.callback && resolve.callback()
                     $scope.$broadcast('global.getUnReadMsgLength.done', $scope.personal.unreadMsg)
                 })
@@ -210,10 +210,10 @@
                 if (data.is_succ) {
                     // 神策数据统计
                     sa.logout(true);
-                    writeCookie({nameKey: 'token', nameValue: '', expires: -1});
-                    writeCookie({nameKey: 'user_code', nameValue: '', expires: -1});
-                    writeCookie({nameKey: 'username', nameValue: '', expires: -1});
-                    writeCookie({nameKey: 'username_en', nameValue: '', expires: -1});
+                    writeCookie({ nameKey: 'token', nameValue: '', expires: -1 });
+                    writeCookie({ nameKey: 'user_code', nameValue: '', expires: -1 });
+                    writeCookie({ nameKey: 'username', nameValue: '', expires: -1 });
+                    writeCookie({ nameKey: 'username_en', nameValue: '', expires: -1 });
                     account.hasChecked = false;
                     $window.location.href = '/space/#/account/login';
                     // $state.go('account.subpage', {params: 'login'});
@@ -271,7 +271,7 @@
         }
         //写入cookie
         $rootScope.writeCookie = writeCookie;
-        function writeCookie (params) {
+        function writeCookie(params) {
             params.expires = params.expires || 30;
             params.path = params.path || '/';
             /**
@@ -283,8 +283,8 @@
              *  */
             var oDate = new Date();
             oDate.setTime(oDate.getTime() + (params.expires * 24 * 60 * 60 * 1000));
-            document.cookie = params.nameKey+'='+params.nameValue+';path='+params.path+';domain='+$scope.getDomain()+';expires='+oDate.toUTCString();
-        } 
+            document.cookie = params.nameKey + '=' + params.nameValue + ';path=' + params.path + ';domain=' + $scope.getDomain() + ';expires=' + oDate.toUTCString();
+        }
 
         /*
          * 神策数据 统计
@@ -295,14 +295,14 @@
         };
         $scope.toTrackBannerSensorsdata = toTrackBannerSensorsdata;
         window.toTrackBannerSensorsdata = toTrackBannerSensorsdata; //弹窗调用 index.controller.js
-        function toTrackBannerSensorsdata (type, name, index) { // 点击广告位
+        function toTrackBannerSensorsdata(type, name, index) { // 点击广告位
             var param = {
                 banner_client: 'pc',
                 banner_name: name
             };
             if (type == 'focus') {      //轮播图
                 param.banner_type = '顶部轮播图';
-                param.banner_location = index+1;
+                param.banner_location = index + 1;
             } else if (type == 'modal') {   //弹窗图
                 param.banner_type = '弹窗图';
             }
@@ -328,7 +328,7 @@
             sa.track('inp_email_code');
         };
         $scope.toAuthenTypeSensorsdata = toAuthenTypeSensorsdata;
-        function toAuthenTypeSensorsdata (type) {  // 选择开户类型
+        function toAuthenTypeSensorsdata(type) {  // 选择开户类型
             sa.track('New_Selectiontype', {
                 account_type: type
             });
@@ -367,24 +367,44 @@
                         demo: false
                     }
                     if (!window.location.origin) {
-                        window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+                        window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
                     }
 
-                    $scope.openDemo = function(){
+                    $scope.openDemo = function () {
                         globalScope.personal.is_live = '2'
                         $scope.loading.demo = true
                         getAuthStatus({
                             is_live: globalScope.personal.is_live
-                        }).then(function(){
-                            $scope.loading.demo = false
-                            window.location.href = window.location.origin + '/space/#/authen/complete'
-                            closeModal()
-                            toAuthenTypeSensorsdata('体验金账户');
+                        }).then(function (data) {
+                            if (!data) return;
+                            // console.log(data);
+                            if (data.is_succ) {
+                                if (data.data.status == 0) {
+                                    account.openTrialAccount().then(function (data) {
+                                        if (!data) return;
+                                        // console.log(data);
+                                        if (data.is_succ) {
+                                            $scope.loading.demo = false;
+                                            globalScope.personal.verify_status = data.data.status;
+                                            $state.go('authen.subpage')
+                                            closeModal()
+                                            toAuthenTypeSensorsdata('体验金账户');
+                                        }
+                                    })
+                                } else {
+                                    $scope.loading.demo = false
+                                }
+                            }
+
+
                         })
+
+
+
                     }
                     $scope.confirmLive = function () {
                         $modalInstance.dismiss()
-                        $timeout(function(){
+                        $timeout(function () {
                             var obj = {
                                 title: lang.text('tigerWitID.prompt'),
                                 // msgClass: 'font-danger',
@@ -394,15 +414,15 @@
                                 autoClose: false,
                                 btns: {}
                             }
-                            obj.btns[lang.text("tigerWitID.cancel")] = function(){}
+                            obj.btns[lang.text("tigerWitID.cancel")] = function () { }
                             obj.btns[lang.text("tigerWitID.continue")] = function (oScope) {
                                 globalScope.personal.is_live = '1'
                                 oScope.loading = 1
                                 getAuthStatus({
                                     is_live: globalScope.personal.is_live
-                                }).then(function(){
+                                }).then(function () {
                                     oScope.loading = 2
-                                    window.location.href = window.location.origin + '/space/#/authen/'
+                                    $state.go('authen.subpage')
                                     toAuthenTypeSensorsdata('真实账户');
                                 })
                             }
@@ -444,10 +464,11 @@
                         verify_status: verify_status,
                         // 开通类型
                         dredged_type: accountStatusMap[accountStatus],
-                        passedAuthen: passedAuthen
+                        passedAuthen: passedAuthen,
+                        account_status: accountStatus
                     }
                     angular.extend($scope.personal, params);
-                    if(accountStatus == '1'){
+                    if (accountStatus == '1') {
                         account.getIdcard().then(function (data) {
                             if (!data) return;
                             if (data.is_succ) {
@@ -500,7 +521,7 @@
                             msg: reviewMsgMap[ctrlName] || lang.text("tigerWitID.tradingAccount.tip24"),
                             btns: {}
                         }
-                        obj.btns[lang.text("tigerWitID.confirm")] = function(){}
+                        obj.btns[lang.text("tigerWitID.confirm")] = function () { }
                         $layer(obj)
                     } else {
                         // 没有完成实名认证

@@ -78,7 +78,7 @@
                         '0': 'unknow',
                         '1': 'live',
                         '2': 'demo',
-                    }[$scope.personal.verify_status]
+                    }[$scope.personal.account_status]
                 });
                 showErr4()
             } else {
