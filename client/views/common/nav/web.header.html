@@ -1,6 +1,6 @@
 <%if (req.host.indexOf('global') != -1) {%>
 <!--增加 cookie 提示-->
-<div class="clearfix navbar-fixed-top" style="position: fixed; background: #eee;width: 100%;height: 110px;z-index: 1060;padding: 20px 0px;top:-110px;left: 0;transition: all .4s;" ng-style="{top: allowUseCookie ? '0px' : '-110px'}" ng-init="getAllowCookie()">
+<div class="clearfix navbar-fixed-top" style="position: fixed; background: #eee;width: 100%;height: 110px;z-index: 1060;padding: 20px 0px; display: none; left: 0;transition: all .4s;" ng-style="{display: allowUseCookie ? 'block' : 'none'}" ng-init="getAllowCookie()">
     <div class="header-container">
         <div class="fl" style="width: 70%">
             <h3 style="margin: 0px;"><%= lang.text("navbar_setCookie1")%></h3>
