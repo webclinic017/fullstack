@@ -7,7 +7,6 @@
     api.$inject = ['$cookies'];
 
     function api($cookies) {
-        // php接口要用http://proxy.tigerwit.com请求
 
         var urlOrigin = $cookies["access_origin"] || '';    // node 中写入cookie
         var urlOrigin2 = $cookies["access_origin2"] || '/api';    // node 中写入cookie

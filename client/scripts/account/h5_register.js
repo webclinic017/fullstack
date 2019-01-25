@@ -319,9 +319,7 @@
 
             /*设置邀请源INVITE_CODE*/
             if (oReg.search_arr.user_code) {
-                publicRequest('setInviteCode', 'POST', {
-                    user_code: oReg.search_arr.user_code
-                });
+                $.cookie('invite_code', oReg.search_arr.user_code, {expires: 1, path: '/', domain: getDomain()});
             }
 
             if (window.location.hostname === 'lonfx.tigerwit.com') {
@@ -331,7 +329,7 @@
                 oReg.search_arr.pid = 'pandafx';
             }
 
-            console.log(oReg);
+            // console.log(oReg);
         }());
         
         //神策统计
@@ -376,7 +374,6 @@
         /*提交按钮*/
         ;
         (function () {
-
             function toRegister (e, is_agree) {
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
@@ -419,7 +416,7 @@
                     email: oReg.search_arr.email || null,
                     is_agree: is_agree == 'is_agree' ? 1 : 0
                 }).then(function (data) {
-                    console.log(data);
+                    // console.log(data);
                     if (!data) return;
                     if (data.is_succ) {
                         // 神策统计 - 登录
@@ -461,8 +458,8 @@
             }
             // 客户推广
             if(oReg.search_arr.ib_pid) {
-                $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '/', domain: '.tigerwit.com'});
-                $.cookie('invite_status', 1, {expires: 1, path: '/', domain: '.tigerwit.com'});
+                $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '/', domain: getDomain()});
+                $.cookie('invite_status', 1, {expires: 1, path: '/', domain: getDomain()});
             }
             $("#submit_form").on("touchend", function (e) {
                 toRegister(e);
@@ -490,7 +487,7 @@
                 var ad = $(this).attr("data-address");
                 var action_address = window.location.origin +
                              "/agreement/"+ad;
-                console.info(action_address);
+                // console.info(action_address);
 
                 if (isInTiger()) {
                     callNative({

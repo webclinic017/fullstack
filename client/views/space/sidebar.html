@@ -50,7 +50,7 @@
                 </div>
             </div> -->
             <div ng-if="personal.is_agent" class="space_sidebar__real mg-bt-40">
-                <a ng-href="{{lang.isDemo()?'https://ibdev.tigerwit.com':'https://ib.tigerwit.com'}}" target="_blank" class="tw-btn tw-btn-lg200 tw-btn-capsule-bordered">{{lang.text('tigerWitID.myAccount.agentManagement')}}</a>
+                <a ng-href="{{lang.isDemo()?'https://ibdev'+getDomain():'https://ib'+getDomain()}}" target="_blank" class="tw-btn tw-btn-lg200 tw-btn-capsule-bordered">{{lang.text('tigerWitID.myAccount.agentManagement')}}</a>
             </div>
             <!-- TODO 缺参数 -->
             <div ng-if="personal.trade_user_status !== '0'" class="space_sidebar__real">

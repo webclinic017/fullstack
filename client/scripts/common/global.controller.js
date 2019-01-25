@@ -210,8 +210,13 @@
                 if (data.is_succ) {
                     // 神策数据统计
                     sa.logout(true);
+                    writeCookie({nameKey: 'token', nameValue: '', expires: -1});
+                    writeCookie({nameKey: 'user_code', nameValue: '', expires: -1});
+                    writeCookie({nameKey: 'username', nameValue: '', expires: -1});
+                    writeCookie({nameKey: 'username_en', nameValue: '', expires: -1});
                     account.hasChecked = false;
                     $window.location.href = '/space/#/account/login';
+                    // $state.go('account.subpage', {params: 'login'});
 
                     $scope.$emit('refresh_personal_cookies_info');
 
@@ -258,6 +263,28 @@
                 });
             }
         }
+        //获取domain
+        $scope.getDomain = function () {
+            var domain = location.hostname.match(/\.\w+\.com/) ? location.hostname.match(/\.\w+\.com/)[0] : '.tigerwit.com';
+            // console.log(url.match(/\.\w+\.com/)[0]);
+            return domain;
+        }
+        //写入cookie
+        $rootScope.writeCookie = writeCookie;
+        function writeCookie (params) {
+            params.expires = params.expires || 30;
+            params.path = params.path || '/';
+            /**
+             * params
+             *      nameKey: 名字
+             *      nameValue: 
+             *      expires: 过期时间 单位天
+             *      path
+             *  */
+            var oDate = new Date();
+            oDate.setTime(oDate.getTime() + (params.expires * 24 * 60 * 60 * 1000));
+            document.cookie = params.nameKey+'='+params.nameValue+';path='+params.path+';domain='+$scope.getDomain()+';expires='+oDate.toUTCString();
+        } 
 
         /*
          * 神策数据 统计
