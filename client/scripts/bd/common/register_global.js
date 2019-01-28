@@ -26,6 +26,20 @@ $(document).ready(function () {
     // console.log(url.match(/\.\w+\.com/)[0]);
     return domain;
   }
+  function writeCookie (params) {
+       params.expires = params.expires || 30;
+       params.path = params.path || '/';
+       /**
+        * params
+        *      nameKey: 名字
+        *      nameValue: 
+        *      expires: 过期时间 单位天
+        *      path
+        *  */
+       var oDate = new Date();
+       oDate.setTime(oDate.getTime() + (params.expires * 24 * 60 * 60 * 1000));
+       document.cookie = params.nameKey+'='+params.nameValue+';path='+params.path+';domain='+getDomain()+';expires='+oDate.toUTCString();
+   }
 
   oReg.search_arr = getSearch();
 
@@ -106,6 +120,15 @@ $(document).ready(function () {
       if (data.is_succ) {
         layer.closeAll();
         openLayer("Register Successful");
+        if (!isMobile()) {
+          writeCookie({nameKey: 'token', nameValue: data.data.token});
+          writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
+          writeCookie({nameKey: 'username', nameValue: data.data.username});
+          writeCookie({nameKey: 'username_en', nameValue: data.data.username_en});
+          setTimeout(function () {
+              window.location.href = '/space/#/center?type=new';
+          }, 100);
+        }
       } else {
           if ((data.code == 100402) || (data.code == 100403)) {
             if (isMobile()) {
