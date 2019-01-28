@@ -320,6 +320,7 @@
             /*设置邀请源INVITE_CODE*/
             if (oReg.search_arr.user_code) {
                 $.cookie('invite_code', oReg.search_arr.user_code, {expires: 1, path: '/', domain: getDomain()});
+                $.cookie('invite_status', 2, {expires: 1, path: '/', domain: getDomain()});
             }
 
             if (window.location.hostname === 'lonfx.tigerwit.com') {
