@@ -4137,8 +4137,8 @@
                         id:"Silahkan isi nama bank (termasuk nama cabang)"
                     },
                     switchTransferAccount:{
-                        zh:"切换电汇账户",
-                        en:"Switch wire transfer account",
+                        zh:"切换账户",
+                        en:"Switch account",
                         vi:"Đổi TK chuyển khoản",
                         "zh-Hant":"切換電匯賬戶",
                         id:"Pindah rekening transfer"
