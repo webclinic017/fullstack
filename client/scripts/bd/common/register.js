@@ -22,6 +22,20 @@
     // console.log(url.match(/\.\w+\.com/)[0]);
     return domain;
    }
+   function writeCookie (params) {
+        params.expires = params.expires || 30;
+        params.path = params.path || '/';
+        /**
+         * params
+         *      nameKey: 名字
+         *      nameValue: 
+         *      expires: 过期时间 单位天
+         *      path
+         *  */
+        var oDate = new Date();
+        oDate.setTime(oDate.getTime() + (params.expires * 24 * 60 * 60 * 1000));
+        document.cookie = params.nameKey+'='+params.nameValue+';path='+params.path+';domain='+getDomain()+';expires='+oDate.toUTCString();
+    } 
 
     // set_token();
 
@@ -305,7 +319,10 @@
                             login_type: '验证码登录'
                         });
                         window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
-
+                        writeCookie({nameKey: 'token', nameValue: data.data.token});
+                        writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
+                        writeCookie({nameKey: 'username', nameValue: data.data.username});
+                        writeCookie({nameKey: 'username_en', nameValue: data.data.username_en});
                         setTimeout(function () {
                             window.location.href = '/space/#/center?type=new';
                         }, 100);
