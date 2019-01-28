@@ -15,9 +15,9 @@
             <tbody>
                 <tr class="manage_card_list__item" ng-repeat="li in transferList track by $index">
                     <td>
-                        <div class="widthdraw__card_font" style="width: 80%;">
+                        <div class="widthdraw__card_font text-inline" style="width: 200px;">
                             <img ng-show="li.bank_img" ng-src="{{ li.bank_img }}">
-                            <span>{{ li.bank_name || li.bank_code }}</span>
+                            <span class="">{{ li.bank_name || li.bank_code }}</span>
                         </div>
                     </td>
                     <td>

@@ -70,12 +70,12 @@
                     </li>
                 </ul>
             </div>
-            <div class="text-center today-data">
-                <div><img src="<%= lang.image('recordForm')%>" alt=""></div>
-                <a ng-if="spread" class="btn btn-primary-gradient  h5-btn mg-tp-20" ng-click="agentPromotion()"><%=lang.text('partner.sendAgent')%></a>
+            <div class="text-center today-data" ng-if="spread">
+                <!-- <div><img src="<%= lang.image('recordForm')%>" alt=""></div> -->
+                <a class="btn btn-primary-gradient h5-btn" ng-click="agentPromotion()"><%=lang.text('partner.sendAgent')%></a>
             </div>
             <div ng-if="!spread">
-                <div class="text-center">
+                <div class="text-center pd-tp-20">
                     <h4 class="tit"><%=lang.text('partner.becomePartnerFlow')%></h4>
                     <ul class="agent__proxy-flow clearfix pd-tp-15">
                         <li class="fl active">

@@ -4020,7 +4020,7 @@
                         en:"The bank card ",
                         vi:"Thẻ ngân hàng ",
                         "zh-Hant":"銀行卡 ",
-                        id:"rekening bank"
+                        id:"Rekening bank "
                     },
                     tip4_2:{
                         zh:" 绑定成功",
@@ -4141,7 +4141,7 @@
                         en:"Switch account",
                         vi:"Đổi TK chuyển khoản",
                         "zh-Hant":"切換電匯賬戶",
-                        id:"Pindah rekening transfer"
+                        id:"Alihkan akun"
                     }
                 },
                 coupon:{
@@ -4674,7 +4674,7 @@
                         en:"Extractable amount: ",
                         vi:"Số lượng có thể trích: ",
                         "zh-Hant":"可提取金額：",
-                        id:"Jumlah dana yang dapat digunakan"
+                        id:"Jumlah dana yang dapat digunakan："
                     },
                     tip1:{
                         zh:"提示：您还有持仓订单，请平仓后再提现如有疑问，请联系您的客户经理或联系客服",

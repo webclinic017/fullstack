@@ -47,9 +47,9 @@
         </div>
 
         <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.third.id">
-            <div class="widthdraw__card_font">
+            <div class="widthdraw__card_font text-inline">
                 <!-- <img ng-show="withdraw.card.bank_img" ng-src="{{ withdraw.card.bank_img }}"> -->
-                <span>{{ withdraw.third.platform }}</span>
+                <span class="">{{ withdraw.third.platform }}</span>
             </div>
             <span class="card_number">
                 <span>
@@ -68,9 +68,9 @@
         </div>
 
         <div class="col-xs-9 withdraw__card_handler" ng-show="withdraw.transfer.id">
-            <div class="widthdraw__card_font">
+            <div class="widthdraw__card_font text-inline">
                 <img ng-show="withdraw.transfer.bank_img" ng-src="{{ withdraw.transfer.bank_img }}">
-                <span>{{ withdraw.transfer.bank_name ||  withdraw.transfer.bank_code}}</span>
+                <span class="">{{ withdraw.transfer.bank_name ||  withdraw.transfer.bank_code}}</span>
             </div>
             <span class="card_number">
                 <span>

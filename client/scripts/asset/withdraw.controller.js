@@ -711,6 +711,7 @@
                                     type: "withdrawSucc",
                                     message: ''
                                 });
+                                $scope.$emit('main.getAssetInfo')
                             } else {
                                 if ($scope.withdraw.accountType === 'wallet') {
                                     openWithdrawMdl({

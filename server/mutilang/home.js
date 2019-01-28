@@ -372,7 +372,7 @@ module.exports = {
     },
     newhome_46:{
         zh:"立即注册",
-        en:"Open an Account",
+        en:"Open an account",
         vi:"Mở tài khoản",
         "zh-Hant":"立即註冊",
         id:"Buka Akun"

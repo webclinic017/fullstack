@@ -127,13 +127,13 @@
         vi: indexBasePath + "/footer-layer/global-vi.png",
         "zh-Hant": indexBasePath + "/footer-layer/global-zh-hant.png"
     },
-    recordForm: {
-        en: indexBasePath + "/agent/proxy/record-form-en.png",
-        id: indexBasePath + "/agent/proxy/record-form-en.png",
-        zh: indexBasePath + "/agent/proxy/record-form-cn.png",
-        vi: indexBasePath + "/agent/proxy/record-form-vi.png",
-        "zh-Hant": indexBasePath + "/agent/proxy/record-form-zh-hant.png"
-    },
+    // recordForm: {
+    //     en: indexBasePath + "/agent/proxy/record-form-en.png",
+    //     id: indexBasePath + "/agent/proxy/record-form-en.png",
+    //     zh: indexBasePath + "/agent/proxy/record-form-cn.png",
+    //     vi: indexBasePath + "/agent/proxy/record-form-vi.png",
+    //     "zh-Hant": indexBasePath + "/agent/proxy/record-form-zh-hant.png"
+    // },
     agentBgH5: {
         en: indexBasePath + "/background/agent-bg-h5-en.png",
         id: indexBasePath + "/background/agent-bg-h5-en.png",
