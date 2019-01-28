@@ -59,7 +59,7 @@ function isMobile(req) {
 
 function checkGlobalOrCN (req, res, u) {
     // u 是正常跳转的域名 cn/global
-    // console.log(req.protocol);
+    console.log(req.protocol, req.host);
     var ou = u === 'cn' ? 'cn' : 'global';
     if (req.host.indexOf(ou) == -1) {
         res.redirect(req.protocol+'://'+req.host+'/404');
