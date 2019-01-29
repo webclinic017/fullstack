@@ -42,7 +42,7 @@
                 <p>3.本活动红包兑现条件中的交易手数仅适用于外汇、贵金属以及能源类产品，美元/人民币以及CFD类产品交易手数不计入统计范围；</p>
                 <p>4. 本活动仅限活动开始后新注册用户，用户提取资金前，需完成完整个人信息的提交并通过审核；</p>
                 <p>5. 本活动允许EA但禁止EA剥头皮交易，违反规则的用户将取消参与本次活动的权利；</p>
-                <p>6.<%= lang.text('companyEnName')%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打 <a class="connect_us" style="text-decoration: underline;" href="tel:<%= lang.text('telephone')%>"><%= lang.text('telephone')%></a>。
+                <p>6.<%= lang.text('companyEnName')%>享有最终解释权，若有疑问，请咨询在线客服，或者拨打 <a class="connect_us" style="text-decoration: underline;" href="tel:+86 400-809-8509">+86 400-809-8509</a>。
                 </p>
                 
             </div>
@@ -78,57 +78,46 @@
         </div>
     </div>
     <div class="m_t42">
-      <%if(lang.text('companyEnName') == 'TigerWit'){%>
         <img src="/images/bd_t42/logo.png" alt="" class="m_t42__logo">
-      <%}%>
-      <%if(lang.text('companyEnName') == 'pandafx'){%>
-          <img src="/images/basic_logo_panda.png" alt="" class="m_t42__logo panda">
-      <%}%>
-      <div class="m_t42__detail_btn">
-          <img data-action="matters" src="/images/bd_t42/h5_detail_btn.png" alt="">
-      </div>
-      <p class="m_t42__title">你离梦想只差一个 <%= lang.text('companyEnName')%></p>
+        <div class="m_t42__detail_btn" data-action="matters">
+            活动详情
+        </div>
       <div class="m_t42__btn_wrapper b1">
-        <a href="#m_t42_form" target="_parent"><img src="/images/bd_t42/h5_btn.png" alt=""></a>
-      </div>
-      <div class="m_t42__box">
-        <div class="h200"><span data-action="rule1">200美金兑换规则</span></span><img src="/images/bd_t42/h5_200.png" alt=""></div>
-        <div class="h_plus"><img src="/images/bd_t42/h5_plus.png" alt=""></div>
-        <div class="h800"><span data-action="rule2">800美金兑换规则</span><img src="/images/bd_t42/h5_800.png" alt=""></div>
+        <a href="#m_t42_form" target="_parent">点我领红包</a>
       </div>
       <div class="m_t42__btn_wrapper b2">
-        <a href="#m_t42_form" target="_parent"><img src="/images/bd_t42/h5_btn.png" alt=""></a>
+        <a href="#m_t42_form" target="_parent">点我领红包</a>
       </div>
+      <div class="m_t42__box">
+        <div class="h200"><span data-action="rule1">200美金红包规则</span></div>
+        <div class="h800"><span data-action="rule2">800美金红包规则</span></div>
+      </div>
+
       <div class="m_t42__form" id="m_t42_form">
-          <div class="form-control-wrapper">
-              <input type="text" class="form-control" name="telephone" id="telephone" placeholder="+86">
-          </div>
-          <div class="form-control-wrapper relative">
-              <input type="number" class="form-control" id="verify_code" placeholder="验证码">
-              <p class="verify_code_btn_wrapper">
-                  <span class="verify_code_btn" id="verify_code_btn">验证码</span>
-              </p>
-          </div>
-          <div class="m_t42__btn_wrapper b3">
-              <span id="submit_form"><img src="/images/bd_t42/h5_btn.png" alt=""></span>
-          </div>
+        <div class="form-control-wrapper">
+            <input type="text" class="form-control" name="telephone" id="telephone" placeholder="+86">
+        </div>
+        <div class="form-control-wrapper relative">
+            <input type="number" class="form-control" id="verify_code" placeholder="验证码">
+            <p class="verify_code_btn_wrapper">
+                <span class="verify_code_btn" id="verify_code_btn">验证码</span>
+            </p>
+        </div>
+        <div class="m_t42__btn_wrapper b3">
+            <span id="submit_form">点我领红包</span>
+        </div>
       </div>
       <div class="m_t42__center">
-        <p>如有疑问 请拨打客服电话</p>
-        <p>+86 400-809-8509</p>
+        <p>如有任何疑问</p>
+        <p>请拨打客服电话: +86 400-809-8509</p>
       </div>
       <div class="m_t42__footer">
-          <p>风险警示：</p>
-          <p>
-              市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。
-              <%= lang.text("companyEnName")%>交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
-          </p>
-          <%if(lang.text('companyEnName') == 'TigerWit'){%>
-            <p class="section4_ltd">Tiger Financial Technology PTY. Ltd.版权所有</p>  
-          <%}%>
-      </div>
-      <div class="m_t42__float_box">
-        <a href="#m_t42_form" target="_parent">点我领红包</a>
+        <p>风险警示：</p>
+        <p>
+            市场有风险，投资需谨慎。金融市场的保证金交易存在较高风险， 可能并不适合所有投资者，增大杠杆意味着高风险与高收益并存。在您决定交易前， 应当谨慎考虑您的投资目标、投资经验及风险承受能力，并选择适合自己的投资方式。
+            <%= lang.text("companyEnName")%>交易平台为广大交易高手及普通投资者提供复制交易服务， 交易高手的历史交易数据不代表未来操作能力，用户因此所产生的任何风险需自己承担。
+        </p>
+        <p class="section4_ltd">Tiger Financial Technology PTY. Ltd.版权所有</p>  
       </div>
     </div>
 </div>

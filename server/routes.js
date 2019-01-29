@@ -697,7 +697,7 @@ module.exports = function (app) {
     
     // 11月份活动
     app.route('/bd/t35').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'cn');
+        // checkGlobalOrCN(req, res, 'cn');
         setEnvCf(req, res);
         if (isMobile(req)) {
             res.render('bd/t42/h5.html', extendPublic({}, req))

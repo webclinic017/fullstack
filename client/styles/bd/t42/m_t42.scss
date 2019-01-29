@@ -1,9 +1,9 @@
 .layui-m-layercont {
   .layer_bdt42 {
-      background: -webkit-linear-gradient(#0d5dcb, #4920a0); /* Safari 5.1 - 6.0 */
-      background: -o-linear-gradient(#0d5dcb, #4920a0); /* Opera 11.1 - 12.0 */
-      background: -moz-linear-gradient(#0d5dcb, #4920a0); /* Firefox 3.6 - 15 */
-      background: linear-gradient(#0d5dcb, #4920a0); /* 标准的语法 */
+      background: -webkit-linear-gradient(#e97e5a, #cb493b); /* Safari 5.1 - 6.0 */
+      background: -o-linear-gradient(#e97e5a, #cb493b); /* Opera 11.1 - 12.0 */
+      background: -moz-linear-gradient(#e97e5a, #cb493b); /* Firefox 3.6 - 15 */
+      background: linear-gradient(#e97e5a, #cb493b); /* 标准的语法 */
       color: #fff;
       position: relative;
       font-size: px2rem(24);
@@ -34,12 +34,12 @@
   }
 }
 @include b(m_t42_layout) {
-  background: url("/images/bd_t42/h5_bg_0831.png") no-repeat;
+  background: url("/images/bd_t42/h5_bg_20190129.png") no-repeat;
   
   background-position: center top;
   background-size: 100% 100%;
   position: relative;
-  height: px2rem(5825);
+  height: px2rem(4227);
 
   .layer_contentBox {
     display: block;
@@ -61,14 +61,19 @@
     }
   }
   @include e(detail_btn) {
+    width: px2rem(220);
+    height: px2rem(55);
+    background: url("/images/bd_t42/h5_btn_20190129.png") no-repeat;
+    background-size: 100%;
+    text-align: center;
+    line-height: px2rem(55);
+    color: #333;
+    font-weight: 500;
+    font-size: px2rem(24);
     position: absolute;
-    width: px2rem(140);
-    right: 0;
-    top: px2rem(600);
-    img {
-      width: 100%;
-      vertical-align: top;
-    }
+    top: px2rem(400);
+    left: 50%;
+    margin-left: px2rem(-110);
   }
   @include e(title) {
     color: #fff;
@@ -81,59 +86,55 @@
     top: px2rem(1290);
   }
   @include e(btn_wrapper) {
+    width: px2rem(220);
+    height: px2rem(55);
+    background: url("/images/bd_t42/h5_btn_20190129.png") no-repeat;
+    background-size: 100%;
     text-align: center;
+    line-height: px2rem(55);
+    font-weight: 500;
+    font-size: px2rem(24);
+    position: absolute;
+    left: 50%;
+    margin-left: px2rem(-110);
 
-    img {
-      width: 50%;
-      vertical-align: top;
+    a {
+      display: block;
+      color: #333;
     }
     &.b1 {
-      padding-top: px2rem(3200);
-      margin-bottom: px2rem(48);
+      top: px2rem(1488);
     }
     &.b2 {
-      margin-top: px2rem(48);
+      top: px2rem(2976);
     }
     &.b3 {
-      margin: px2rem(48) 0;
-
-      img {
-        width: 60%;
-      }
+      top: px2rem(3472);
     }
   }
   @include e(box) {
-    .h200, .h800 {
-      position: relative;
-      width: 96%;
-      margin: 0 auto;
-      span {
-        position: absolute;
-        bottom: px2rem(6.4);
-        right: px2rem(32);
-        color: #fff;
-        font-size: px2rem(28);
-      }
-      img {
-        width: 100%;
-        vertical-align: top;
-      }
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #ffe082;
+    width: 100%;
+    .h200 {
+      position: absolute;
+      top: px2rem(2240);
+      left: 50%;
+      margin-left: px2rem(-96);
     }
-    .h_plus {
-      text-align: center;
-      margin: px2rem(24) 0;
-      img {
-        width: px2rem(80);
-      }
+    .h800 {
+      position: absolute;
+      top: px2rem(2800);
+      left: 50%;
+      margin-left: px2rem(-96);
     }
   }
   @include e(form) {
     width: px2rem(576);
-    margin: px2rem(96) auto 0;
-    background: rgba(255,255,255,0.2);
-    border: 1px solid rgba(255,255,255,0.4);
-    border-radius: px2rem(4);
-    padding: 0 px2rem(48);
+    margin: 0 auto;
+    padding: px2rem(3160) px2rem(48) 0;
 
     .verify_code_btn_wrapper {
         position: absolute;
@@ -170,15 +171,16 @@
     }
   }
   @include e(center) {
-    color: #fff;
+    color: #ffe082;
     text-align: center;
-    margin-top: px2rem(64);
-    font-size: px2rem(32);
+    margin-top: px2rem(224);
+    font-size: px2rem(28);
   }
   @include e(footer) {
     color: #fff;
-    font-size: px2rem(24);
-    margin-top: px2rem(96);
+    font-size: px2rem(20);
+    margin-top: px2rem(192);
+    line-height: px2rem(32);
 
     .section4_ltd {
       margin-top: px2rem(16);
