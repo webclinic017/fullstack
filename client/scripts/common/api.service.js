@@ -53,6 +53,8 @@
             getAgentAuthStatusApi: urlOrigin2 + '/user/agent_auth_status',
             setAgentPromotionApi: urlOrigin2 + '/user/ib_agent',
             setUploadAddressProveApi: urlOrigin2 + '/user/upload_address_prove',
+            openTrialAccountApi: urlOrigin2 + '/user/account/trial',
+
 
             // getRCaptchaApi: urlOrigin2 + '/validation/send_phone_code',
             // sendEmailCodeApi: urlOrigin2 + '/validation/send_email_code',
