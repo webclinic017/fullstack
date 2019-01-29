@@ -66,7 +66,8 @@
             getIdcard: getIdcard,
             setAgentPromotion: setAgentPromotion,
             setUploadAddressProve: setUploadAddressProve,
-            getEmailPhone: getEmailPhone
+            getEmailPhone: getEmailPhone,
+            openTrialAccount: openTrialAccount
         };
         var resolveValue;
         return service;
@@ -673,5 +674,10 @@
         function getEmailPhone (params) {
             return publicHttp.dealPublicRequest(o.getEmailPhone, 'GET', params);
         }
+        // 开通体验金账户
+        function openTrialAccount(params) {
+            return publicHttp.dealPublicRequest(o.openTrialAccountApi, 'POST', params);
+        }
+
     }
 })();
