@@ -58,10 +58,10 @@ function isMobile(req) {
 }
 
 function checkGlobalOrCN (req, res, u) {
-    // u 是正常跳转的域名 cn/global
-    console.log(req.protocol, req.host);
-    var ou = u === 'cn' ? 'cn' : 'global';
-    if (req.host.indexOf(ou) == -1) {
+    // u 是需要跳转404的域名 cn/global
+    // console.log(req.protocol);
+    var ou = u === 'cn' ? 'cn.tigerwit.com,cndemo.tigerwit.com' : 'globaldemo.tigerwit.com,global.tigerwit.com';
+    if (ou.indexOf(req.host) != -1) {
         res.redirect(req.protocol+'://'+req.host+'/404');
     }
 }
@@ -679,7 +679,7 @@ module.exports = function (app) {
     });
     // 直播落地页
     app.route('/bd/live').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'cn');
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (isMobile(req)) {
             res.render('bd/live/h5', extendPublic({}, req));
@@ -690,7 +690,7 @@ module.exports = function (app) {
 
     // t33 作为固定推广链接，要更新最新的落地页到这个地址
     app.route('/bd/t33').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'cn');
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (isMobile(req)) {
             res.render('bd/t42/h5.html', extendPublic({}, req))
@@ -701,7 +701,7 @@ module.exports = function (app) {
     
     // 11月份活动
     app.route('/bd/t35').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'cn');
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         if (isMobile(req)) {
             res.render('bd/t42/h5.html', extendPublic({}, req))
@@ -711,7 +711,7 @@ module.exports = function (app) {
     });
     // global活动页
     app.route('/bonus').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
+        checkGlobalOrCN(req, res, 'cn');
         setEnvCf(req, res);
         if (isMobile(req)) {
             res.render('bd/g35/h5.html', extendPublic({}, req))
@@ -721,7 +721,7 @@ module.exports = function (app) {
     });
     // 新增邮件-海外种子用户加群 
     app.route('/whatsapp').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'global');
+        checkGlobalOrCN(req, res, 'cn');
         setEnvCf(req, res);
         if (isMobile(req)) {
             res.render('bd/g36/h5.html', extendPublic({}, req))
@@ -733,7 +733,7 @@ module.exports = function (app) {
     
     // 市场部 - 月报生成
     app.route('/bd/mon_report').get(function (req, res) {
-        checkGlobalOrCN(req, res, 'cn');
+        checkGlobalOrCN(req, res, 'global');
         setEnvCf(req, res);
         res.render('bd/mon_report/index', extendPublic({}, req));
     });

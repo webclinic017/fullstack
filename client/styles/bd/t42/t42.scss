@@ -1,16 +1,16 @@
 .bd_t39_layer.bd_t42_layer {
   .bd_t39_detail_con__text {
-      background: -webkit-linear-gradient(#0d5dcb, #4920a0) !important; /* Safari 5.1 - 6.0 */
-      background: -o-linear-gradient(#0d5dcb, #4920a0) !important; /* Opera 11.1 - 12.0 */
-      background: -moz-linear-gradient(#0d5dcb, #4920a0) !important; /* Firefox 3.6 - 15 */
-      background: linear-gradient(#0d5dcb, #4920a0) !important; /* 标准的语法 */
+      background: -webkit-linear-gradient(#e97e5a, #cb493b) !important; /* Safari 5.1 - 6.0 */
+      background: -o-linear-gradient(#e97e5a, #cb493b) !important; /* Opera 11.1 - 12.0 */
+      background: -moz-linear-gradient(#e97e5a, #cb493b) !important; /* Firefox 3.6 - 15 */
+      background: linear-gradient(#e97e5a, #cb493b) !important; /* 标准的语法 */
       border-radius: 10px;
   }
 }
 @include b(bd_t42) {
   margin-top: 69px;
-  height: 3695px;
-  background: url("/images/bd_t42/web_bg_0831.png") no-repeat;
+  height: 2307px;
+  background: url("/images/bd_t42/web_bg_20190129.png") no-repeat;
   background-position: center top;
   background-size: auto 100%;
   position: relative;
@@ -24,24 +24,26 @@
     left: 740px;
   }
   @include e(btn) {
-    width: 180px;
-    height: 40px;
-    background: url("/images/bd_t42/web_btn.png") no-repeat;
+    width: 148px;
+    height: 34px;
+    background: url("/images/bd_t42/web_btn_20190129.png") no-repeat;
     text-align: center;
-    line-height: 40px;
-    color: #fff;
-    font-size: 20px;
+    line-height: 34px;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
     cursor: pointer;
     margin: 0 auto;
   }
   @include e(details_btn) {
-    width: 180px;
-    height: 40px;
-    background: url("/images/bd_t42/web_btn.png") no-repeat;
+    width: 148px;
+    height: 34px;
+    background: url("/images/bd_t42/web_btn_20190129.png") no-repeat;
     text-align: center;
-    line-height: 40px;
-    color: #fff;
-    font-size: 20px;
+    line-height: 34px;
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
     position: absolute;
     top: 405px;
     left: 318px;
@@ -49,11 +51,22 @@
   }
   @include e(btn_wrapper) {
     text-align: center;
+    a {
+      display: inline-block;
+      width: 148px;
+      height: 34px;
+      background: url("/images/bd_t42/web_btn_20190129.png") no-repeat;
+      text-align: center;
+      line-height: 34px;
+      color: #333;
+      font-weight: 500;
+      font-size: 16px;
+    }
     &.b1 {
-      margin-top: 2350px;
+      margin-top: 1070px;
     }
     &.b2 {
-      margin-top: 62px;
+      margin-top: 560px;
     }
   }
   @include e(title) {
@@ -70,30 +83,34 @@
     margin-top: 70px;
   }
   @include e(bag) {
-    margin-top: 64px;
-    .bag {
-      float: left;
-      width: 50%;
-      text-align: center;
-      position: relative;
-    }
-    .rule {
-      color: #fff;
+    position: absolute;
+    top: 1570px;
+    left: 0px;
+    width: 100%;
+    span {
+      color: #fbe08f;
       position: absolute;
-      bottom: 14px;
-      right: 68px;
       cursor: pointer;
+      font-weight: 500;
+      &.bd_t42_rule-1 {
+        left: 234px;
+      }
+      &.bd_t42_rule-2 {
+        left: 726px;
+      }
     }
   }
   @include e(client) {
-    color: #fff;
-    font-size: 22px;
-    text-align: center;
-    margin-top: 60px;
+    color: #fbe091;
+    font-size: 16px;
+    margin-top: 200px;
+    font-weight: 500;
   }
   @include e(footer) {
     color: #fff;
-    margin-top: 100px;
+    margin-top: 80px;
+    line-height: 30px;
+    font-weight: 500;
   }
   @include e(ltd) {
     color: #fff;
