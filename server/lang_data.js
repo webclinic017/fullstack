@@ -990,14 +990,14 @@ module.exports = function () {
         oil30:{
             en:"Trading time (Beijing time)",
             zh:"交易时间(北京时间)",
-            vi:"Thời gian giao dịch (Giờ Bắc Kinh)",
+            vi:"Thời gian giao dịch",
             "zh-Hant":"交易時間(北京時間)",
             id:"Waktu transaksi"
         },
         oil31:{
             en:"Quotation time (Beijing time)",
             zh:"报价时间(北京时间)",
-            vi:"Thời gian Chào giá (Giờ Bắc Kinh)",
+            vi:"Thời gian chào giá",
             "zh-Hant":"報價時間(北京時間)",
             id:"Jam Penawaran (Waktu Beijing)"
         },
@@ -1417,28 +1417,28 @@ module.exports = function () {
         cfd27:{
             en:"Maximum trading volume (lot)",
             zh:"最大交易量(手)",
-            vi:"Kích thước giao dịch tối đa (lot)",
+            vi:"Giao dịch tối đa(lot)",
             "zh-Hant":"最大交易量(手)",
             id:"Volume transaksi maksimum (lot)"
         },
         cfd28:{
             en:"Trading time (Beijing time)",
             zh:"交易时间(北京时间)",
-            vi:"Kích thước giao dịch tối đa (lot)",
+            vi:"Thời gian giao dịch",
             "zh-Hant":"交易時間(北京時間)",
             id:"Waktu transaksi (Waktu Beijing)"
         },
         cfd29:{
             en:"Quotation time (Beijing time)",
             zh:"报价时间(北京时间)",
-            vi:"Thời gian chào giá (Giờ Bắc Kinh)",
+            vi:"Thời gian chào giá",
             "zh-Hant":"報價時間(北京時間)",
             id:"Waktu Penawaran (Waktu Beijing)"
         },
         cfd30:{
             en:"Product introduction",
             zh:"产品简介",
-            vi:"Thời gian chào giá (Giờ Bắc Kinh)",
+            vi:"Giới thiệu sản phẩm",
             "zh-Hant":"產品簡介",
             id:"Informasi Produk"
         },
@@ -8718,14 +8718,14 @@ module.exports = function () {
             becomePartner_1:{
                 zh:"运用新的技术建立和推广一个成功的本地或全球品牌是我们的愿景，这需要TigerWit与您共同实现。成为我们的代理商，您可以获得TigerWit所有工具支持，同时享受多项优秀代理商扶持计划，轻松实现合作共赢、财富共享。与我们合作，利用您富余的资源创造意想不到的价值！",
                 en:"With TigerWit, the success of our partners comes from developing long-term profitable relationships. We aim to bring a fresh technological approach to an industry in need of change that benefits both partners and traders. Our innovative ‘Distributed Ledger Technology’ can provide you with an unique and significant advantage over your competitors. TigerWit’s distributed trading ledger is just the first step. Visit tech.tigerwit.com for more information on our blockchain technology.",
-                vi:"Với TigerWit, sự thành công của các đối tác của chúng tôi đến từ việc phát triển các mối quan hệ có lợi nhuận lâu dài. Chúng tôi mong muốn mang đến một phương pháp tiếp cận công nghệ mới cho một ngành công nghiệp có nhu cầu thay đổi mang lại lợi ích cho cả đối tác và thương nhân. Công nghệ Ledger phân phối sáng tạo của chúng tôi có thể cung cấp cho bạn một lợi thế độc đáo và đáng kể so với các đối thủ cạnh tranh của bạn. Sổ cái giao dịch phân phối của TigerWit chỉ là bước đầu tiên. Truy cập tech.tigerwit.com để biết thêm thông tin về công nghệ blockchain của chúng tôi.",
+                vi:"Với TigerWit, sự thành công của các đối tác của chúng tôi đến từ việc phát triển các mối quan hệ thành công lâu dài. Chúng tôi mong muốn mang đến một phương pháp tiếp cận công nghệ mới cho một ngành công nghiệp có nhu cầu thay đổi mang lại lợi ích cho cả đối tác và các nhà giao dịch.“Công nghệ Sổ Cái phân tán” sáng tạo của chúng tôi có thể mang đến cho bạn một lợi thế độc đáo và đáng kể so với các đối thủ cạnh tranh của bạn.",
                 "zh-Hant":"運用新的技術建立和推廣壹個成功的本地或全球品牌是我們的願景，這需要TigerWit與您共同實現。成為我們的代理商，您可以獲得TigerWit所有工具支持，同時享受多項優秀代理商扶持計劃，輕松實現合作共贏、財富共享。與我們合作，利用您富余的資源創造意想不到的價值！",
                 id:"Kesuksesan dari seluruh mitra kami berasal dari hubungan yang saling percaya dan menguntungkan. Kami hadir disini untuk memberikan perubahan dengan membawa teknologi baru yang dapat membantu seluruh pihak baik mitra, trader maupun investor. Inovasi yang membedakan kami dari kompetitor lainnya bernama “Teknologi Distributed Trading Ledger”. Teknologi ‘Distributed Trading Ledger’ merupakan langkah pertama kami untuk membawa perubahan. Untuk informasi lebih lengkap mengenai teknologi blockchain kami, silahkan kunjungi situs kami di tech.tigerwit.com."
             },
             joinUs:{
                 zh:"加入我们",
                 en:"Join us",
-                vi:"Tham gia với chúng tôi",
+                vi:"Tham gia cùng chúng tôi",
                 "zh-Hant":"加入我們",
                 id:"GABUNG SEKARANG"
             },
@@ -8753,7 +8753,7 @@ module.exports = function () {
             supportPlan_1:{
                 zh:"薪资支持、客户服务支持、激励支持、返佣支持、培训支持、公关支持等丰富的扶持成长体系，帮您快速成为专业代理人，实现人生小目标！",
                 en:"Rich support and growth systems, such as salary support, customer service support, incentive support, commission return support, training support, and public relations support, help you quickly become a professional agent to achieve your life goals!",
-                vi:"Các hệ thống hỗ trợ và tăng trưởng phong phú, như hỗ trợ tiền lương, hỗ trợ dịch vụ khách hàng, hỗ trợ khuyến khích, hỗ trợ hoa hồng, hỗ trợ đào tạo và hỗ trợ quan hệ công chúng, giúp bạn nhanh chóng trở thành một đại lý chuyên nghiệp để đạt được mục tiêu cuộc sống của bạn!",
+                vi:"Các hệ thống hỗ trợ và tăng trưởng phong phú, như hỗ trợ tiền lương, hỗ trợ dịch vụ khách hàng, hỗ trợ khuyến mãi, hỗ trợ lợi nhuận hoa hồng, hỗ trợ đào tạo và quan hệ công chúng, giúp bạn nhanh chóng trở thành một đối tác chuyên nghiệp để đạt được mục tiêu của mình!",
                 "zh-Hant":"薪資支持、客戶服務支持、激勵支持、返傭支持、培訓支持、公關支持等豐富的扶持成長體系，幫您快速成為專業代理人，實現人生小目標！",
                 id:"Dengan memberikan dukungan dan sistem yang mumpuni, seperti fasilitas gaji, layanan pelanggan, insentif, komisi, rebate, pelatihan, dan lain sebagainya. Semua fasilitas tersebut diberikan agar anda dapat menjadi seorang agen yang profesional."
             },
@@ -8767,7 +8767,7 @@ module.exports = function () {
             customerPromotionSystem_1:{
                 zh:"节庆日宣传图、二维码及推广链接、汇评咨询推文等一键获取，满足您多种推广需求，简单快捷！",
                 en:"Get designed promotion photo, QR code, promotion link, strategy comments, and tweets to meet your needs, simple and fast!",
-                vi:"Nhận ảnh quảng cáo được thiết kế, mã QR, liên kết quảng cáo, nhận xét chiến lược và tweet để đáp ứng nhu cầu của bạn, đơn giản và nhanh chóng!",
+                vi:"Thiết kế hình ảnh khuyến mãi, mã QR, link khuyến mãi, các bình luận chiến lược, và gửi tin nhắn cho khách hàng để đáp ứng các nhu cầu của bạn, đơn giản và nhanh chóng!",
                 "zh-Hant":"節慶日宣傳圖、二維碼及推廣鏈接、匯評咨詢推文等壹鍵獲取，滿足您多種推廣需求，簡單快捷！",
                 id:"Anda dapat mendapatkan konten dan materi promosi seperti foto, kode promosi, kode QR, strategi promosi, dan lain sebagainya sesuai dengan kebutuhan anda."
             },
@@ -8781,14 +8781,14 @@ module.exports = function () {
             safeReliable_1:{
                 zh:"团队汇集了具有不同学术和应用背景的专业人士，分别在外汇交易、差价合约、监管合规性、投资管理、在线平台研发和全球营销等方面拥有丰富的经验，为您的资金保驾护航！",
                 en:"With a strong technological core built upon a philosophy of transparency, credibility and integrity, TigerWit offers its clients exceptional capabilities to trade in the markets.",
-                vi:"Với cốt lõi công nghệ mạnh mẽ được xây dựng dựa trên triết lý minh bạch, uy tín và toàn vẹn, TigerWit mang đến cho khách hàng những khả năng đặc biệt để giao dịch trên thị trường. Những người sáng lập của TigerWit là những cá nhân có kinh nghiệm với thành công và lịch sử lâu dài, mang đến một đội ngũ chuyên gia với nhiều nền tảng học thuật và ứng dụng đa dạng. và bán hàng & tiếp thị toàn cầu.",
+                vi:"Với nền tảng công nghệ vững chắc được xây dựng trên triết lý của sự minh bạch, uy tín và liêm chính, TigerWit mang đến cho khách hàng của mình khả năng phi thường để giao dịch với các thị trường.",
                 "zh-Hant":"團隊匯集了具有不同學術和應用背景的專業人士，分別在外匯交易、差價合約、監管合規性、投資管理、在線平臺研發和全球營銷等方面擁有豐富的經驗，為您的資金保駕護航！",
                 id:"Dengan menggunakan teknologi yang kuat dan dirancang atas dasar keterbukaan, kredibilitas dan Integritas, TigerWIt menawarkan pengalaman transaksi di pasar dengan kemampuan yang berbeda dengan yang lainnya."
             },
             whatOffer:{
                 zh:"我们提供什么？",
                 en:"What do we offer?",
-                vi:"Chúng tôi cung cấp những gì?",
+                vi:"Chúng tôi mang đến điều gì?",
                 "zh-Hant":"我們提供什麽？",
                 id:"Apa yang kami berikan?"
             },
@@ -8802,7 +8802,7 @@ module.exports = function () {
             offer_1:{
                 zh:"区块链技术",
                 en:"Innovative distributed trading ledger",
-                vi:"Sổ cái giao dịch phân phối cải tiến",
+                vi:"Sổ cái giao dịch phân tán đột phá",
                 "zh-Hant":"區塊鏈技術",
                 id:"Teknologi inovatif “Distributed Trading Ledger”"
             },
@@ -8816,7 +8816,7 @@ module.exports = function () {
             offer_3:{
                 zh:"24/5客户及技术支持",
                 en:"24/5 client and technology support",
-                vi:"24 giờ trên 5 ngày hỗ trợ khách hàng và công nghệ",
+                vi:"Hỗ trợ khách hàng và kĩ thuật 24/5",
                 "zh-Hant":"24/5客戶及技術支持",
                 id:"Dukungan klien dan layanan pelanggan 24/5"
             },
@@ -8865,7 +8865,7 @@ module.exports = function () {
             becomePartnerFlow:{
                 zh:"成为合作伙伴流程",
                 en:"Become a partner",
-                vi:"Trở thành đối tác ",
+                vi:"Trở thành một đối tác",
                 "zh-Hant":"成為合作夥伴流程",
                 id:"Menjadi Mitra"
             },
@@ -8879,14 +8879,14 @@ module.exports = function () {
             overProbationPeriod:{
                 zh:"完成磨合期条件",
                 en:"Over the probation period",
-                vi:"Trong thời gian chạy thử",
+                vi:"Qua thời gian thử nghiệm",
                 "zh-Hant":"完成磨合期條件",
                 id:"Masa Percobaan"
             },
             endTrial:{
                 zh:"磨合结束，成为代理",
                 en:"End of trial, become an official agent",
-                vi:"Kết thúc thời gian chạy thử, trở thành đại lý chính thức",
+                vi:"Kết thúc thời gian thử nghiệm, trở thành một đại lý chính thức",
                 "zh-Hant":"磨合結束，成為代理",
                 id:"Telah melewati masa percobaan, jadi Mitra resmi"
             },

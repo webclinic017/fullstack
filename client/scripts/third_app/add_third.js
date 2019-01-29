@@ -71,21 +71,3 @@ function getThirdPlatforms () {
     }
   });
 }
-/*
- * 设置select模版
- *   id      select ID
- *   key     显示key
- *   value   用于提交的value
- *   lst     数据列表
- */
-function setOptions (id, key, value, lst) {
-  var optionTemplate = {
-    data: {
-      key: key,
-      value: value,
-      lst: lst
-    }
-  }
-  var html=bt('template_add_bank_lst',optionTemplate);
-  $("#"+id).html(html);
-}

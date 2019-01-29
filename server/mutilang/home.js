@@ -267,7 +267,7 @@ module.exports = {
     },
     newhome_35_1:{
         zh:"现在立刻下载APP，",
-        en:"Download the app and open a USD10,000 Experience account instantly.",
+        en:"Download the app and open a USD10,000 trail account instantly.",
         vi:"Tải xuống ứng dụng và mở tài khoản Trải nghiệm USD10,000 ngay lập tức.",
         "zh-Hant":"現在立刻下載APP，",
         id:"Unduh aplikasi dan buka akun Pengalaman untuk mendapatkan 10,000$ sekarang juga."
@@ -358,7 +358,7 @@ module.exports = {
     },
     newhome_44:{
         zh:"使用一个10000美元的体验金账户，即可零风险参与市场实时交易。",
-        en:"Open an Experience account with USD10,000 of virtual funds and test your strategies with real-time prices in a risk-free environment.",
+        en:"Open an trail account with USD10,000 of virtual funds and test your strategies with real-time prices in a risk-free environment.",
         vi:"Mở một tài khoản Trải nghiệm với 10.000 USD trong quỹ ảo và kiểm tra chiến lược của bạn với giá trong thời gian thực trong một môi trường không có rủi ro.",
         "zh-Hant":"使用壹個10000美元的體驗金賬戶，即可零風險參與市場實時交易。",
         id:"Buka Akun Pengalaman dan dapatkan 10,000 $ uang virtual untuk mencoba strategi anda di pasar real tanpa takut akan resiko."
@@ -372,7 +372,7 @@ module.exports = {
     },
     newhome_46:{
         zh:"立即注册",
-        en:"Open an Account",
+        en:"Open an account",
         vi:"Mở tài khoản",
         "zh-Hant":"立即註冊",
         id:"Buka Akun"

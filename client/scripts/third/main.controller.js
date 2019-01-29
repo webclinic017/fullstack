@@ -61,6 +61,19 @@
             status: false,
             msg: '网络错误，请联系客服'
         };
+        // 获取summary
+        $scope.$on('main.getAssetInfo', function (e, resolve) {
+            account.getAssetInfo().then(function (data) {
+                if (!data) return;
+                if (data.is_succ) {
+                    angular.extend($scope.main, data.data);
+                    // var my_total_balance = (Number(data.data.balance) + Number(data.data.wallet_balance)).toFixed(2);
+                    // angular.extend($scope.main, {
+                    //     my_total_balance: my_total_balance
+                    // });
+                }
+            });
+        })
         account.checkLogined().then(function (logined) {
             if (logined) {
                 // 获取资产信息、个人信息
@@ -70,16 +83,7 @@
                     angular.extend($scope.main, data);
                 });
 
-                account.getAssetInfo().then(function (data) {
-                    if (!data) return;
-                    if (data.is_succ) {
-                        angular.extend($scope.main, data.data);
-                        var my_total_balance = (Number(data.data.balance) + Number(data.data.wallet_balance)).toFixed(2);
-                        angular.extend($scope.main, {
-                            my_total_balance: my_total_balance
-                        });
-                    }
-                });
+                $scope.$emit('main.getAssetInfo')
 
                 //获取认证状态
                 account.getAuthStatus().then(function (data) {
