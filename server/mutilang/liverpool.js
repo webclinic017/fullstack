@@ -52,7 +52,7 @@ module.exports = {
         liverpool7:{
             zh:"TigerWit CEO",
             en:"TigerWit CEO",
-            vi:"Giám Đốc Điều Hàng TigerWit",
+            vi:"Giám Đốc Điều Hành TigerWit",
             "zh-Hant":"TigerWit CEO",
             id:"CEO TigerWIt"
         },

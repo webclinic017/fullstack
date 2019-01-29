@@ -341,7 +341,6 @@
             $scope.currencyStatus = false;
             $scope.deposit.currency = item;
         }
-
         // 充值  还未完成
         function toDeposit() {
             $scope.$emit('global.checkAuthenFlow', {
@@ -434,6 +433,9 @@
                                             var url = data.data.url + '?token=' + token;
                                             openDepositMdl('depositFinish');
                                             w.location = url;
+                                        }
+                                        if ($scope.lang.isThird()) {
+                                            $scope.$emit('main.getAssetInfo')
                                         }
                                     } else {
                                         layer.msg(data.message);

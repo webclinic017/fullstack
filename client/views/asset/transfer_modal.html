@@ -1,0 +1,183 @@
+<div class="sys_modal_v2 slim_case card_modal">
+    <button class="close" ng-click="closeModal()">&times;</button>
+
+    <div>
+        <h5 class="sys_modal_v2__title">
+            {{lang.text('tigerWitID.transfer.addWireTransfer')}}
+            <br>
+            <br>
+        </h5>
+        <div class="sys_modal_v2__content" ng-show="!card.binding">
+            <form name="cardForm" novalidate autocomplete="off">
+
+                <div class="row">
+                    <div class="col-xs-3 text-left">
+                        <label>{{lang.text('tigerWitID.settings.countryM')}}</label>
+                    </div>
+
+                    <div class="col-xs-9">
+                        <div class="form-control-wrapper">
+                            <select class="form-control"
+                                    name="world"
+                                    required
+                                    ng-class="{'form-control-error': frontErr.world.show && cardForm.world.$invalid}"
+                                    ng-model="card.world"
+                                    ng-options="world.name for world in worlds"
+                                    ng-focus="hideErr('world')"
+                                    ng-blur="showErr('world')">
+                                <option value="">{{lang.text('tigerWitID.pleaseSelect')}}</option>
+                            </select>
+
+                            <div ng-show="frontErr.world.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.world.$error.required">
+                                    {{lang.text('tigerWitID.transfer.chooseCountry')}}
+                                </p>
+                            </div>
+                        </div>
+                        <!-- <div class="form-control-wrapper">
+                            <input class="form-control"
+                                name="world"
+                                type="text"
+                                required
+                                ng-model="card.world.world_name"
+                                ng-disabled="card.world.world_name != ''">
+                        </div> -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-3 text-left">
+                        <label>{{lang.text('tigerWitID.depositWithdrawal.nameM')}}</label>
+                    </div>
+
+                    <div class="col-xs-9">
+                        <!-- <label>{{personal.realname}}</label> -->
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                   name="realname"
+                                   type="text"
+                                   required
+                                   placeholder="{{lang.text('tigerWitID.wallet.cardholderName')}}"
+                                   ng-class="{'form-control-error': frontErr.realname.show && cardForm.realname.$invalid}"
+                                   ng-model="card.realname"
+                                   ng-disabled="card.realname != ''"
+                                   ng-focus="hideErr('realname')"
+                                   ng-init="card.realname = personal.realname"
+                                   ng-blur="showErr('realname')">
+                            <div ng-show="frontErr.realname.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.realname.$error.required">
+                                    {{lang.text('tigerWitID.wallet.cardholderName')}}
+                                </p>
+                                <!-- <p class="alert alert-arrow_tp_lf" ng-show="cardForm.realname.$error.pattern">
+                                    {{frontErr.realname.tip}}
+                                </p> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3 text-left">
+                        <label>{{lang.text('tigerWitID.transfer.cardNumberM')}}</label>
+                    </div>
+
+                    <div class="col-xs-9">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                   name="number"
+                                   type="text"
+                                   required
+                                   ng-class="{'form-control-error': frontErr.number.show && cardForm.number.$invalid}"
+                                   ng-model="card.number"
+                                   placeholder="{{lang.text('tigerWitID.transfer.fillWithdrawAccount')}}"
+                                   ng-focus="hideErr('number')"
+                                   ng-blur="showErr('number')">
+
+                            <div ng-show="frontErr.number.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.required">
+                                    {{lang.text('tigerWitID.transfer.fillWithdrawAccount')}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" >
+                    <div class="col-xs-3 text-left">
+                        <label>{{lang.text('tigerWitID.depositWithdrawal.bankName')}}</label>
+                    </div>
+
+                    <div class="col-xs-9">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                    name="bankOther"
+                                    type="text"
+                                    required
+                                    ng-class="{'form-control-error': frontErr.bankOther.show && cardForm.bankOther.$invalid}"
+                                    ng-model="card.bankOther"
+                                    placeholder="{{lang.text('tigerWitID.transfer.fillBankName')}}"
+                                    ng-focus="hideErr('bankOther')"
+                                    ng-blur="showErr('bankOther')">
+
+                            <div ng-show="frontErr.bankOther.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.bankOther.$error.required">
+                                    {{lang.text('tigerWitID.transfer.fillBankName')}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-3 text-left">
+                        <label>{{lang.text('tigerWitID.transfer.bicSwiftCodeM')}}</label>
+                    </div>
+
+                    <div class="col-xs-9">
+                        <div class="form-control-wrapper">
+                            <input class="form-control"
+                                    name="swift_code"
+                                    type="text"
+                                    required
+                                    ng-class="{'form-control-error': frontErr.swift_code.show && cardForm.swift_code.$invalid}"
+                                    ng-model="card.swift_code"
+                                    placeholder="{{lang.text('tigerWitID.transfer.fillBicSwiftCode')}}"
+                                    ng-focus="hideErr('swift_code')"
+                                    ng-blur="showErr('swift_code')">
+
+                            <div ng-show="frontErr.swift_code.show">
+                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.swift_code.$error.required">
+                                    {{lang.text('tigerWitID.transfer.fillBicSwiftCode')}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </form>
+            <!-- <p>
+                <span class="font-danger">*</span>
+                开户行全称请精确到支行，如：中国工商银行 北京分行 清华园支行
+            </p> -->
+            <p class="btn_wrapper mg-bt-15">
+                <button class="btn btn-primary-gradient" ng-if="clickable" ng-click="submitForm()">
+                    {{lang.text('tigerWitID.confirm')}}
+                </button>
+                <button class="btn btn-primary-gradient" ng-if="!clickable">
+                    <i class="loading_spinner fa fa-spinner"></i>
+                    {{lang.text('tigerWitID.wallet.adding')}}
+                </button>
+            </p>
+        </div>
+
+        <div class="sys_modal_v2__content" ng-if="card.binding">
+            <p class="system_modal__info">
+                {{lang.text('tigerWitID.transfer.cardNumber')}}{{ card.number }}{{lang.text('tigerWitID.wallet.tip4_2')}}
+            </p>
+            <p class="btn_wrapper mg-bt-15">
+                <button class="btn btn-primary-gradient" ng-click="closeModal()">
+                    {{lang.text('tigerWitID.confirm')}}
+                </button>
+            </p>
+        </div>
+    </div>
+</div>

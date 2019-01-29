@@ -118,3 +118,23 @@ function getUrlParam(name) {
     var r = window.location.search.substring(1).match(reg);  //匹配目标参数
     if (r != null) return decodeURIComponent(r[2]); return null; //返回参数值
 }
+
+
+/*
+ * 设置添加卡列表select模版
+ *   id      select ID
+ *   key     显示key
+ *   value   用于提交的value
+ *   lst     数据列表
+ */
+function setOptions (id, key, value, lst) {
+  var optionTemplate = {
+    data: {
+      key: key,
+      value: value,
+      lst: lst
+    }
+  }
+  var html=bt('template_add_bank_lst',optionTemplate);
+  $("#"+id).html(html);
+}

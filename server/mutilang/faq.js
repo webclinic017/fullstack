@@ -15,7 +15,7 @@ module.exports = {
     },
     faqAccount2:{
         zh:"A：在TigerWit注册成功后，点击交易，系统会提醒您选择开立体验金账户或真实交易账户，按照流程完善资料后即可开立对应账户。",
-        en:"A: Register successfully at TigerWit, the system will remind you to choose to open an Experience Accountor Real Account before you transaction, after completing the relevant process can open an account.",
+        en:"A: Register successfully at TigerWit, the system will remind you to choose to open an trail accountor Real Account before you transaction, after completing the relevant process can open an account.",
         vi:"^^-^^",
         "zh-Hant":"A：在TigerWit註冊成功後，點擊交易，系統會提醒您選擇開立體驗金賬戶或真實交易賬戶，按照流程完善資料後即可開立對應賬戶。",
         id:"__id__"
@@ -799,10 +799,10 @@ module.exports = {
             id:"Jenis akun apa yang tersedia?"
         },
         real1A:{
-            zh:"TigerWit offers an Experience account on which to practice trading with virtual funds, and a Live account on which to trade with real funds.",
-            en:"TigerWit offers an Experience account on which to practice trading with virtual funds, and a Live account on which to trade with real funds.",
+            zh:"TigerWit offers an trail account on which to practice trading with virtual funds, and a Live account on which to trade with real funds.",
+            en:"TigerWit offers an trail account on which to practice trading with virtual funds, and a Live account on which to trade with real funds.",
             vi:"TigerWit giới thiệu khách hàng mở một tài khoản trải nghiệm để có thể luyện tập giao dịch với các quỹ ảo và một tài khoản Thực để giao dịch với các quỹ thực tế.",
-            "zh-Hant":"TigerWit offers an Experience account on which to practice trading with virtual funds, and a Live account on which to trade with real funds.",
+            "zh-Hant":"TigerWit offers an trail account on which to practice trading with virtual funds, and a Live account on which to trade with real funds.",
             id:"TigerWIt menyediakan Akun Pengalaman yang dapat digunakan untuk latihan trading dengan menggunakan uang virtual, dan Akun Live untuk trading menggunakan uang asli."
         },
         real2Q:{
@@ -827,10 +827,10 @@ module.exports = {
             id:"Berapa lama waktu yang diperlukan untuk membuka sebuah Akun?"
         },
         real3A:{
-            zh:"Experience accounts are opened immediately. A Live account will normally be approved within minutes; however, we may request copies of ID to complete the process.",
-            en:"Experience accounts are opened immediately. A Live account will normally be approved within minutes; however, we may request copies of ID to complete the process.",
+            zh:"Trail account are opened immediately. A Live account will normally be approved within minutes; however, we may request copies of ID to complete the process.",
+            en:"Trail account are opened immediately. A Live account will normally be approved within minutes; however, we may request copies of ID to complete the process.",
             vi:"Những tài khoản kinh nghiệm sẽ được mở ngay lập tức. Tài khoản thực thường sẽ được chấp thuận trong một vài phút, tuy nhiên, chúng tôi có thể yêu cầu bản sao Chứng minh nhân dân hoặc Căn Cước Công Dân để hoàn tất quy trình.",
-            "zh-Hant":"Experience accounts are opened immediately. A Live account will normally be approved within minutes; however, we may request copies of ID to complete the process.",
+            "zh-Hant":"Trail account are opened immediately. A Live account will normally be approved within minutes; however, we may request copies of ID to complete the process.",
             id:"Untuk membuka Akun Live anda harus terlebih dahulu melengkapi dokumen yang diperlukan, sedangkan Akun Pengalaman dapat dibuka secara langsung/instan"
         },
         real4Q:{
@@ -1191,10 +1191,10 @@ module.exports = {
             id:"Bagaimana cara masuk ke platform trading MT4?"
         },
         protect2A_1:{
-            zh:"When you open a TigerWit Experience account or a TigerWit Live account we will email you TigerWit MT4 login details and a temporary password. To change your temporary password please visit the ",
-            en:"When you open a TigerWit Experience account or a TigerWit Live account we will email you TigerWit MT4 login details and a temporary password. To change your temporary password please visit the ",
+            zh:"When you open a TigerWit trail account or a TigerWit Live account we will email you TigerWit MT4 login details and a temporary password. To change your temporary password please visit the ",
+            en:"When you open a TigerWit trail account or a TigerWit Live account we will email you TigerWit MT4 login details and a temporary password. To change your temporary password please visit the ",
             vi:"Khi bạn mở tài khoản Trải Nghiệm tại TigerWit hoặc tài khoản TigerWit Thực, chúng tôi sẽ gửi cho bạn chi tiết đăng nhập TigerWit MT4 và một mật khẩu tạm thời. Để thay đổi mật khẩu tạm thời của bạn, vui lòng truy cập ",
-            "zh-Hant":"When you open a TigerWit Experience account or a TigerWit Live account we will email you TigerWit MT4 login details and a temporary password. To change your temporary password please visit the ",
+            "zh-Hant":"When you open a TigerWit trail account or a TigerWit Live account we will email you TigerWit MT4 login details and a temporary password. To change your temporary password please visit the ",
             id:"Ketika anda membuka akun Pengalaman atau Akun Live TigerWit, kami akan mengirimkan Informasi detail MT4 ke email anda. Untuk mengubah kata sandi, silahkan masuk ke bagian "
         },
         protect2A_2:{
@@ -1226,10 +1226,10 @@ module.exports = {
             id:"Dimana saya bisa melihat Informasi MT4 saya?"
         },
         protect3A:{
-            zh:"When you open a TigerWit Experience account or a TigerWit Live account we will email you login details. You can also see your TigerWit MT4 ID by logging onto the 'Trading Account' section of your account on the website or app.",
-            en:"When you open a TigerWit Experience account or a TigerWit Live account we will email you login details. You can also see your TigerWit MT4 ID by logging onto the 'Trading Account' section of your account on the website or app.",
+            zh:"When you open a TigerWit trail account or a TigerWit Live account we will email you login details. You can also see your TigerWit MT4 ID by logging onto the 'Trading Account' section of your account on the website or app.",
+            en:"When you open a TigerWit trail account or a TigerWit Live account we will email you login details. You can also see your TigerWit MT4 ID by logging onto the 'Trading Account' section of your account on the website or app.",
             vi:"Khi bạn mở tài khoản TigerWit Trải Nghiệm hoặc tài khoản TigerWit Thực, chúng tôi sẽ gửi email cho bạn chi tiết đăng nhập. Bạn cũng có thể xem ID MT4 của TigerWit bằng cách đăng nhập vào phần ‘Tài khoản giao dịch’ trong tài khoản của bạn trên trang web hoặc ứng dụng.",
-            "zh-Hant":"When you open a TigerWit Experience account or a TigerWit Live account we will email you login details. You can also see your TigerWit MT4 ID by logging onto the 'Trading Account' section of your account on the website or app.",
+            "zh-Hant":"When you open a TigerWit trail account or a TigerWit Live account we will email you login details. You can also see your TigerWit MT4 ID by logging onto the 'Trading Account' section of your account on the website or app.",
             id:"Ketika anda membuka akun Pengalaman atau Akun Live TigerWit, kami akan mengirimkan Informasi detail MT4 ke email anda. Anda juga dapat melihat informasi MT4 TigerWit anda dengan masuk ke bagian “Akun Transaksi” melalui website atau aplikasi."
         },
         protect4Q:{

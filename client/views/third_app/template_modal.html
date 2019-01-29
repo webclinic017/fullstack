@@ -164,6 +164,33 @@
     <button class="btn btn-primary-gradient third_app_add_card" data-type="<$= data.type$>"><%=lang.text('thirdH5.addBankCards')%></button>
   </div>
 </script>
+<!-- 添加电汇账户 -->
+<script id="template_withdraw_transfer_list" type="text/html">
+  <h3 class="title">
+    <span><%=lang.text('thirdH5.wireTransfer')%></span>
+    <span class="cancel third_app_template_cancel"><%=lang.text('thirdH5.cancel')%></span>
+  </h3>
+  <ul class="content bank_content">
+    <$ for(var i=0;i<data.lst.length;i++) {$>
+      <li class="clearfix deposit_template_item bank_item <$= data.lst[i].id == data.id ? 'active' : ''$>" data-page="<$= data.pageType$>" data-select-id="<$= data.id$>" data-id="<$= data.lst[i].id$>" data-name="<$= data.lst[i].bank_name || ''$>" data-no="<$= data.lst[i].card_no$>" data-type="<$= data.type$>">
+        <div class="item-icon"><span></span></div>
+        <div class="item-info">
+          <p class="name">
+            <$= data.lst[i].card_no$>
+          </p>
+          <p class="desc col"><$= data.lst[i].bank_name || ''$></p>
+        </div>
+        <span class="del third_app_template_del_bank" data-page="<$= data.pageType$>" data-select-id="<$= data.id$>" data-id="<$= data.lst[i].id$>" data-type="<$= data.type$>"><%=lang.text('thirdH5.delete')%></span>
+      </li>
+    <$}$>
+    <$ if (!data.lst.length) {$>
+      <li class="text-center"><%=lang.text('thirdH5.noBankCard')%></li>
+    <$}$>
+  </ul>
+  <div class="btn-wrapper third_app_template_btn">
+    <button class="btn btn-primary-gradient third_app_add_card" data-type="<$= data.type$>"><%=lang.text('thirdH5.addWireTransfer')%></button>
+  </div>
+</script>
 <!-- 添加第三方账户 -->
 <script id="template_withdraw_third_list" type="text/html">
   <h3 class="title">

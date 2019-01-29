@@ -205,7 +205,7 @@
                 zh:"开仓价",
                 vi:"Giá Mở",
                 "zh-Hant":"開倉價",
-                id:"Harga pembukaan posisi"
+                id:"Harga buka"
             },
             HoldingTrades3:{
                 en:"Current Price",
@@ -261,7 +261,7 @@
                 zh:"开仓价",
                 vi:"Giá Mở",
                 "zh-Hant":"開倉價",
-                id:"Harga pembukaan posisi"
+                id:"Harga buka"
             },
             TradingHistory3:{
                 en:"Close price",
@@ -1238,21 +1238,21 @@
                     },
                     tip2:{
                         zh:"恭喜您已开通TigerWit体验金账户",
-                        en:"Congratulations on opening the TigerWit experience account",
+                        en:"Congratulations on opening the TigerWit trail account",
                         vi:"Chúc mừng bạn đã mở thành công tài khoản trải nghiệm trên TigerWit",
                         "zh-Hant":"恭喜您已開通TigerWit體驗金帳護",
                         id:"Selamat, anda telah membuka Akun Pengalaman"
                     },
                     tip3:{
                         zh:"体验金账户体验期限为30天，过期后账户资金将被清除，建议尽快升级到真实账户。",
-                        en:"Your experience account is valid for 30 days. Virtual funds will be cleared from this account 30 days after opening. You can upgrade to a live account at any time.",
+                        en:"Your trail account is valid for 30 days. Virtual funds will be cleared from this account 30 days after opening. You can upgrade to a live account at any time.",
                         vi:"Tài khoản trải nghiệm của bạn sẽ có hiệu lực trong 30 ngày. Tiền ảo sẽ bị xóa khỏi tài khoản này 30 ngày sau khi mở. Bạn có thể nâng cấp lên tài khoản thực bất kỳ lúc nào.",
                         "zh-Hant":"體驗金帳護體驗期限為30天，過期後帳護資金將被清除，建議盡快升級到真實帳護。",
                         id:"Akun pengelaman anda akan berlaku selama 30 hari. Dana virtual akan dihapus secara otomatis setelah 30 hari. Anda dapat membuka Akun Live kapanpun anda inginkan."
                     },
                     tip4:{
                         zh:"请注意：体验金账户资金及盈利不可提现。",
-                        en:"Please note: experience account funds and profits are not available.",
+                        en:"Please note: trail account funds and profits are not available.",
                         vi:"Vui lòng chú ý: Quỹ và lợi nhuận của tài khoản trải nghiệm sẽ không có thực.",
                         "zh-Hant":"請註意：體驗金帳護資金及盈利不可提現。",
                         id:"Catatan: Saldo di akun pengalaman tidak tersedia."
@@ -1693,14 +1693,14 @@
                     },
                     tip38:{
                         zh:"开通真实账户后，将不再支持开通体验金账户",
-                        en:"After opening live account, it will no longer be supported to open experience account",
+                        en:"After opening live account, it will no longer be supported to open trail account",
                         vi:"Sau khi mở tài khoản thực, tài khoản sẽ không còn được hỗ trợ để mở tài khoản trải nghiệm",
                         "zh-Hant":"開通真實帳護後，將不再支持開通體驗金帳護",
                         id:" Setelah membuka Akun Live, akun pengalaman anda tidak dapat lagi digunakan "
                     },
                     experienceAccount:{
                         zh:"体验金账户",
-                        en:"Experience account",
+                        en:"Trail account",
                         vi:"Tài khoản trải nghiệm",
                         "zh-Hant":"體驗金帳護",
                         id:"Akun Pengalaman"
@@ -2530,7 +2530,7 @@
                     },
                     experienceAccount:{
                         zh:"体验金账号",
-                        en:"Experience account",
+                        en:"Trail account",
                         vi:"Tài khoản trải nghiệm",
                         "zh-Hant":"體驗金帳號",
                         id:"Akun Pengalaman"
@@ -2696,7 +2696,7 @@
                         en:"Open price",
                         vi:"Giá Mở",
                         "zh-Hant":"開倉價",
-                        id:"Harga pembukaan posisi"
+                        id:"Harga buka"
                     },
                     currentPrice:{
                         zh:"现价",
@@ -2843,7 +2843,7 @@
                         en:"Open Price",
                         vi:"Giá Mở",
                         "zh-Hant":"開倉價格",
-                        id:"Harga pembukaan posisi"
+                        id:"Harga buka"
                     },
                     currentPriceg:{
                         zh:"现在价格",
@@ -3447,7 +3447,7 @@
                     shortsWon:{
                         zh:"成功做空交易",
                         en:"Shorts won",
-                        vi:"lệnh bán thắng",
+                        vi:"Lệnh bán thắng",
                         "zh-Hant":"成功做空交易",
                         id:"Posisi Sell Menang"
                     },
@@ -4020,7 +4020,7 @@
                         en:"The bank card ",
                         vi:"Thẻ ngân hàng ",
                         "zh-Hant":"銀行卡 ",
-                        id:"rekening bank"
+                        id:"Rekening bank "
                     },
                     tip4_2:{
                         zh:" 绑定成功",
@@ -4028,6 +4028,120 @@
                         vi:" đã được liên kết thành công",
                         "zh-Hant":" 邦定成功",
                         id:" telah berhasil didaftarkan"
+                    }
+                },
+                transfer: {
+                    wireTransfer:{
+                        zh:"电汇账户",
+                        en:"Wire transfer",
+                        vi:"Chuyển tiền",
+                        "zh-Hant":"電匯賬戶",
+                        id:"Pengiriman antar bank"
+                    },
+                    addWireTransfer:{
+                        zh:"添加电汇账户",
+                        en:"Add wire transfer account",
+                        vi:"Thêm TK chuyển khoản NH",
+                        "zh-Hant":"添加電匯賬戶",
+                        id:"Tambah rekening pengiriman uang"
+                    },
+                    clickDelete:{
+                        zh:"点击删除账户",
+                        en:"Click to delete",
+                        vi:"Nhấp để hủy",
+                        "zh-Hant":"點擊删除帳戶",
+                        id:"Klik untuk hapus"
+                    },
+                    deleteWireTransfer:{
+                        zh:"删除电汇账户",
+                        en:"Delete wire transfer account",
+                        vi:"Xóa TK chuyển khoản ngân hàng",
+                        "zh-Hant":"刪除電匯賬戶",
+                        id:"Hapus rekening pengiriman dana"
+                    },
+                    deleteThisAccount:{
+                        zh:"确认删除此账户？",
+                        en:"Delete this account?",
+                        vi:"Xóa tài khoản?",
+                        "zh-Hant":"確認删除此帳戶？",
+                        id:"Hapus akun ini？"
+                    },
+                    clickAddWireTransfer:{
+                        zh:"点击添加电汇账户",
+                        en:"Click to add wire transfer account",
+                        vi:"Thêm TK chuyển khoản NH",
+                        "zh-Hant":"點擊添加電匯賬戶",
+                        id:"Klik untuk tambah rekening"
+                    },
+                    manageWireTransfer:{
+                        zh:"管理电汇账户",
+                        en:"Manage",
+                        vi:"Quản lý",
+                        "zh-Hant":"管理電匯賬戶",
+                        id:"Kelola"
+                    },
+                    cardNumber:{
+                        zh:"电汇账号",
+                        en:"Card number",
+                        vi:"Số Thẻ",
+                        "zh-Hant":"電匯賬號",
+                        id:"Nomor rekening"
+                    },
+                    cardNumberM:{
+                        zh:"电汇账号：",
+                        en:"Card number:",
+                        vi:"Số Thẻ:",
+                        "zh-Hant":"電匯賬號：",
+                        id:"Nomor rekening:"
+                    },
+                    bicSwiftCode:{
+                        zh:"BIC/Swift code",
+                        en:"BIC/Swift code",
+                        vi:"Mã BIC/Swift",
+                        "zh-Hant":"BIC/Swift code",
+                        id:"BIC/Kode Swift"
+                    },
+                    bicSwiftCodeM:{
+                        zh:"BIC/Swift code：",
+                        en:"BIC/Swift code:",
+                        vi:"Mã BIC/Swift:",
+                        "zh-Hant":"BIC/Swift code：",
+                        id:"BIC/Kode Swift:"
+                    },
+                    fillBicSwiftCode:{
+                        zh:"请填写 BIC/Swift code",
+                        en:"Please fill in BIC/Swift code",
+                        vi:"Xin điền vào Mã BIC/Swift",
+                        "zh-Hant":"請填寫 BIC/Swift code",
+                        id:"Silahkan isi BIC/Kode Swift"
+                    },
+                    chooseCountry:{
+                        zh:"请选择银行所在的国家",
+                        en:"Please choose country",
+                        vi:"Vui lòng chọn quốc gia",
+                        "zh-Hant":"請選擇銀行所在的國家",
+                        id:"Silahkan pilih Negara"
+                    },
+                    fillWithdrawAccount:{
+                        zh:"请填写电汇账号",
+                        en:"Please fill in withdraw account",
+                        vi:"Vui lòng điền tài khoản rút tiền",
+                        "zh-Hant":"請填寫電匯賬號",
+                        id:"Silahkan isi akun penarikan"
+                    },
+                    fillBankName:{
+                        zh:"请输入银行的英文全称（包括支行名称）",
+                        en:"Fill bank English full name (include branch name)",
+                        vi:"Xin điền tên Tiếng Anh đầy đủ (gồm tên chi nhánh)",
+                        "zh-Hant":"請輸入銀行的英文全稱（包括支行名稱）",
+                        id:"Silahkan isi nama bank (termasuk nama cabang)"
+                    },
+                    switchTransferAccount:{
+                        zh:"切换账户",
+                        en:"Switch account",
+                        vi:"Đổi TK chuyển khoản",
+                        "zh-Hant":"切換電匯賬戶",
+                        id:"Alihkan akun"
                     }
                 },
                 coupon:{
@@ -4041,7 +4155,7 @@
                     available:{
                         zh:"可用红包",
                         en:"Available",
-                        vi:"Có áp dụng",
+                        vi:"Khả dụng",
                         "zh-Hant":"可用紅包",
                         id:"Tersedia"
                     },
@@ -4211,21 +4325,21 @@
                     tip5_1:{
                         zh:"5、本活动最终解释权归",
                         en:"5. The final interpretation of this activity owned by ",
-                        vi:"5. Giải thích cuối cùng về hoạt động này thuộc thuộc về",
+                        vi:"5. ",
                         "zh-Hant":"5、本活動最終解釋權歸",
                         id:"5. "
                     },
                     tip5_2:{
                         zh:"所有。如有疑问，请咨询客服",
                         en:". If you have other questions，please contact ",
-                        vi:"bảo lưu tất cả các quyền đưa ra lời giải thích cuối cùng. Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ với trung tâm dịch vụ khách hàng của chúng tôi ",
+                        vi:" bảo lưu quyền đưa ra giải thích cuối cùng về hoạt động giao dịch. Nếu bạn có bất kì câu hỏi nào, vui lòng liên hệ với số điện thoại bộ phận dịch vụ khách hàng của chúng tôi ",
                         "zh-Hant":"所有。如有疑問，請咨詢客服",
                         id:" memliki semua hak dalam memutuskan keputusan yang mutlak dan tidak dapat diganggu gugat. Jika anda memiliki pertanyaan, silahkan hubungi pusat layanan pelanggan kami "
                     },
                     tip5_3:{
                         zh:"。",
                         en:" customer service.",
-                        vi:" dịch vụ khách hàng.",
+                        vi:".",
                         "zh-Hant":"。",
                         id:"."
                     },
@@ -4560,7 +4674,7 @@
                         en:"Extractable amount: ",
                         vi:"Số lượng có thể trích: ",
                         "zh-Hant":"可提取金額：",
-                        id:"Jumlah dana yang dapat digunakan"
+                        id:"Jumlah dana yang dapat digunakan："
                     },
                     tip1:{
                         zh:"提示：您还有持仓订单，请平仓后再提现如有疑问，请联系您的客户经理或联系客服",
@@ -4666,6 +4780,13 @@
                         vi:"Tên",
                         "zh-Hant":"姓名",
                         id:"Nama"
+                    },
+                    nameM:{
+                        zh:"姓名：",
+                        en:"Name:",
+                        vi:"Tên:",
+                        "zh-Hant":"姓名：",
+                        id:"Nama:"
                     },
                     informationBankAccount:{
                         zh:"添加银行卡",
@@ -4827,6 +4948,13 @@
                         vi:"Ngân hàng",
                         "zh-Hant":"銀行名稱",
                         id:"Bank"
+                    },
+                    bankNameM:{
+                        zh:"银行名称：",
+                        en:"Bank:",
+                        vi:"Ngân hàng:",
+                        "zh-Hant":"銀行名稱：",
+                        id:"Bank:"
                     },
                     branch:{
                         zh:"支行名称",
@@ -7106,14 +7234,14 @@
                     },
                     openExperienceAccount:{
                         zh:"开通体验金账户",
-                        en:"Open an experience account",
+                        en:"Open an trail account",
                         vi:"Mở tài khoản trải nghiệm",
                         "zh-Hant":"開通體驗金帳護",
                         id:"Buka Akun Pengalaman"
                     },
                     openExperienceAccountTip1:{
                         zh:"开户即送$10000交易体验金。",
-                        en:"Open the experience account and receive a $10000 virtual balance.",
+                        en:"Open the trail account and receive a $10000 virtual balance.",
                         vi:"Mở tài khoản trải nghiệm và nhận số dư ảo 10.000 đô la.",
                         "zh-Hant":"開護即送$10000交易體驗金。",
                         id:" Buka Akun pengalaman dan dapatkan dana virtual senilai 10,000$ "
@@ -7197,14 +7325,14 @@
                     },
                     openAcount9:{
                         zh:"",
-                        en:"Experience account",
+                        en:"Trail account",
                         vi:"Tài khoản Trải Nghiệm",
                         "zh-Hant":"",
                         id:"Akun Pengalaman"
                     },
                     openAcount10:{
                         zh:"",
-                        en:"Open an Experience account and practice trading in a risk-free environment with USD10,000of virtual funds.",
+                        en:"Open an trail account and practice trading in a risk-free environment with USD10,000of virtual funds.",
                         vi:"Mở một tài khoản Trải nghiệm và thực hành giao dịch trong một môi trường phi rủi ro với 10,000 USD trong quỹ ảo.",
                         "zh-Hant":"",
                         id:"Buka akun Pengalaman dan berlatihlah transaksi tanpa risiko menggunakan dana virtual sebesar 10,000$"
@@ -7232,7 +7360,7 @@
                     },
                     openAcount14:{
                         zh:"",
-                        en:"Open an Experience account",
+                        en:"Open an trail account",
                         vi:"Mở một tài khoản Trải Nghiệm",
                         "zh-Hant":"",
                         id:"Buka akun Pengalaman"
@@ -7357,10 +7485,10 @@
                         id:"Atur Nama Pengguna"
                     },
                     tip7:{
-                        zh:"请为账户设置昵称，有助于您登上高手榜",
+                        zh:"请设置昵称",
                         en:"Please set a nickname for your account to help you get on the list",
                         vi:"Vui lòng đặt biệt hiệu cho tài khoản của bạn để giúp bạn có được danh sách",
-                        "zh-Hant":"請為帳護設置昵稱，有助於您登上高手榜",
+                        "zh-Hant":"請設置昵稱",
                         id:" Silahkan masukkan nama pengguna untuk akun anda "
                     },
                     pleaseSetNickname:{

@@ -146,6 +146,10 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('third_app/add_third.html', extendPublic({}, req));
     });
+    app.route('/m/third/add_transfer').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('third_app/add_transfer.html', extendPublic({}, req));
+    });
 
     /*
      * 三方相关页面 end
