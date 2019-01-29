@@ -385,6 +385,7 @@
                                         // console.log(data);
                                         if (data.is_succ) {
                                             $scope.loading.demo = false;
+                                            globalScope.personal.is_live = 1;
                                             globalScope.personal.verify_status = data.data.status;
                                             $state.go('authen.subpage')
                                             closeModal()
