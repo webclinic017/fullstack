@@ -34,10 +34,21 @@
                         <div class="redbag_single__top-bw" ng-init="N=[];N.length=30">
                             <span class="one" ng-repeat="n in N track by $index"></span>
                         </div>
+                        <div class="redbag_single__top-mark unable" ng-if="bag.status != 2">
+                            <span class="cont">{{ bag.status_name }}</span>
+                        </div>
+                        <div class="redbag_single__top-mark able" ng-if="bag.status == 2">
+                            <span class="cont able" ng-click="exchangeRedbag(bag)" ng-show="!bag.exchangeLoading">
+                                {{ bag.status_name }}
+                            </span>
+                            <span class="cont" disabled ng-show="bag.exchangeLoading">
+                                {{lang.text('tigerWitID.coupon.exchanging')}}
+                            </span>
+                        </div>
                     </div>
                     <div class="redbag_single__bottom">
                         <p class="redbag_single__bottom-tip">{{ bag.pay_condition_desc || '-' }}</p>
-                        <div class="redbag_single__bottom-btn" ng-if="bag.status == 2">
+                        <!-- <div class="redbag_single__bottom-btn" ng-if="bag.status == 2">
                             <button class="btn" ng-click="exchangeRedbag(bag)" ng-show="!bag.exchangeLoading">
                                 {{ bag.status_name }}
                             </button>
@@ -54,7 +65,7 @@
                             <span class="mark">
                                 {{ bag.status_name }}
                             </span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
