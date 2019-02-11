@@ -91,7 +91,6 @@
                                    ng-class="{'form-control-error': frontErr.number.show && cardForm.number.$invalid}"
                                    ng-model="card.number"
                                    placeholder="{{lang.text('tigerWitID.depositWithdrawal.enterCardNumber')}}"
-                                   ng-pattern="frontErr.number.reg"
                                    ng-focus="hideErr('number')"
                                    ng-blur="showErr('number')">
 
@@ -99,9 +98,9 @@
                                 <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.required">
                                     {{lang.text('tigerWitID.depositWithdrawal.enterCardNumber')}}
                                 </p>
-                                <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.pattern">
+                                <!-- <p class="alert alert-arrow_tp_lf" ng-show="cardForm.number.$error.pattern">
                                     {{frontErr.number.tip}}
-                                </p>
+                                </p> -->
                             </div>
                         </div>
                     </div>
