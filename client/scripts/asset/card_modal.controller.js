@@ -20,7 +20,7 @@
         $scope.lang = lang;
         $scope.banks = [];
         $scope.clickable = true;
-        
+
         $scope.worlds = [];
         $scope.provinces = [];
         $scope.citys = [];
@@ -97,7 +97,7 @@
             });
         }
 
-        function getWorlds () {
+        function getWorlds() {
             account.getWorlds().then(function (data) {
                 if (data.is_succ) {
                     $scope.worlds = data.data;
@@ -151,7 +151,7 @@
             showErr('world');
             showErr('number');
             showErr('address');
-            
+
             if ($scope.card.world && $scope.card.world.world_code === 'CN') {
                 showErr('bank');
                 showErr('province');
@@ -160,7 +160,10 @@
             }
             if ($scope.card.world && $scope.card.world.world_code !== 'CN') {
                 showErr('bankOther');
-                showErr('swift_code');
+                if ($scope.card.world.world_code !== 'VN') {
+                    showErr('swift_code');
+                }
+
             }
 
             if ($scope.cardForm.$invalid) {
@@ -179,24 +182,26 @@
                 oParams.phone = $scope.card.phone;
             } else {
                 oParams.bank_name = $scope.card.bankOther;
-                oParams.swift_code = $scope.card.swift_code;
+                if ($scope.card.world.world_code !== 'VN') {
+                    oParams.swift_code = $scope.card.swift_code;
+                }
             }
-            
+
             $scope.clickable = false;
 
             // 如果是第一次绑卡()
             // if (typeof $scope.card.id === 'undefined') {
-                asset.bindCard(oParams).then(function (data) {
-                    $scope.clickable = true
-                    if (!data) return;
-                    if (data.is_succ) {
-                        $scope.card.binding = true;
-                        $scope.$emit('bindCardSuccess');
-                    } else {
-                        // $scope.$emit('bindCardFail');
-                        alert(data.message);
-                    }
-                });
+            asset.bindCard(oParams).then(function (data) {
+                $scope.clickable = true
+                if (!data) return;
+                if (data.is_succ) {
+                    $scope.card.binding = true;
+                    $scope.$emit('bindCardSuccess');
+                } else {
+                    // $scope.$emit('bindCardFail');
+                    alert(data.message);
+                }
+            });
             // }
         }
         // 去实名认证
