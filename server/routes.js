@@ -401,6 +401,16 @@ module.exports = function (app) {
             banklistStatus: banklistStatus
         }, req));
     });
+    app.route('/m/deposit/avoda').get(function (req, res) {
+        setEnvCf(req, res);
+        var platform = 'pc';
+        if (isMobile(req)) {
+            platform = 'mobile';
+        }
+        res.render('m_vue/m_deposit_avoda', extendPublic({
+            platform: platform,
+        }, req));
+    });
     app.route('/m/deposit/pay_select').get(function (req, res) {
         setEnvCf(req, res);
         var banklistStatus = 'select';

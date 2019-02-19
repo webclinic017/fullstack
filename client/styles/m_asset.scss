@@ -611,6 +611,66 @@
     }
 }
 
+// 支付 avoda页面
+@include b(m_deposit_avoda){
+    color: rgba(36, 42, 54, 1);
+    padding: 30px 20px 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    .btn{
+        border-radius: 20px;
+        cursor: pointer;
+        min-width: 160px;
+    }
+    @include e(logo){
+        height: 44px;
+    }
+    @include e(tip){
+        margin: 26px 0;
+    }
+    @include e(register){
+        
+    }
+    @include e(input){
+        margin-top: 40px;
+        > label{
+            display: block;
+            padding-bottom: 30px; 
+            @include displayFlex();
+
+            > input[type='text'] {
+                @include flex(1);
+                border-bottom: 1px solid rgba(151, 151, 151, 1);
+            }
+            .input-name{
+                width: 84px;
+                margin-right: 5px;
+            }
+            .get-code{
+                margin-left: 3px;
+            }
+        }
+    }
+    @include e(submit){
+        text-align: center;
+        margin-top: 40px;
+    }
+    &.pc{
+        padding: 65px;
+        .m_deposit_avoda__input{
+            margin-top: 90px;
+        }
+        .m_deposit_avoda__submit{
+            margin-top: 90px;
+        }
+        .btn{
+            padding: 12px;
+
+        }
+    }
+
+}
+
 /* H5 支付成功*/
 @include b(m_deposit_succ) {
     padding: 0 15px;
