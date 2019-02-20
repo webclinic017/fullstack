@@ -32,11 +32,22 @@
         function activePage1() {
             $('.section1 p').addClass("active");
         }
-        activePage1();
-
+        function setLang() {
+            $("#switchLang").val(language == 'zh' ? 'cn' : language);
+        }
+        $("#switchLang").on('change', function () {
+            lang.reloadLanguage($("#switchLang").val())
+        })
         $("#next").on("touchend", function () {
             $.fn.fullpage.moveSectionDown();
         });
+        function contentInit(){
+            activePage1();
+            setLang();
+            getEmailPhone($("#footerEmail"), 'email')
+            // $("#footerEmail").attr("href", 'mailto:' + '').text('support@t2igerwit.com')
+        }
+        contentInit();
         // 回到电脑版，写入一个cookie
         $(".turn_pc").on("touchend", function () {
             document.cookie = "turnPC=true";
@@ -48,7 +59,7 @@
         // function hide_btn(index) {
         //     $("#download_btn" + index).fadeOut(500);
         // }
-        $(".more").on("click",'span', function(){
+        $(".more").on("click", 'span', function () {
             $('.more').show();
             $('.limit_line').hide();
             $('.ellipsis').show();

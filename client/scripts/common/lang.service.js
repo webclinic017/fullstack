@@ -1,13 +1,39 @@
 ;
 (function () {
     'use strict';
-    
+
     angular.module('fullstackApp').factory('lang', lang);
 
-    lang.$inject = ['langData', '$location', '$timeout'];
+    lang.$inject = ['langData', '$location', '$timeout', '$cookies'];
 
-    function lang (langData, $location, $timeout) {
+    function lang(langData, $location, $timeout, $cookies) {
 
+        var language = 'zh';
+        var langArr = ['cn', 'en', 'vi', 'zh-Hant', 'id'];
+        var cookieLang = $cookies.lang;
+        var bowerLang = (navigator.language || navigator.userLanguage).toLowerCase().slice(0, 2);
+        if (cookieLang) {
+            angular.forEach(langArr, function (value, index) {
+                if (cookieLang === value) {
+                    language = cookieLang === 'cn' ? 'zh' : cookieLang;
+                }
+            });
+        } else {
+            angular.forEach(langArr, function (value, index) {
+                if ((bowerLang == 'zh' ? 'cn' : bowerLang) === value) {
+                    language = bowerLang;
+                    setCookieLang(language === 'zh' ? 'cn' : language)
+                }
+            });
+        }
+        langData["language"] = language;
+        function setCookieLang(lang) {
+            var d = new Date();
+            d.setTime(d.getTime() + (-1 * 24 * 60 * 60 * 1000));
+            document.cookie = 'lang=' + lang + '; path=/; expires=' + d.toUTCString();
+            document.cookie = 'lang=' + lang + '; path=/; domain=' + location.hostname.match(/\.\w+\.com/)[0];
+            location.reload();
+        }
         var lang = {
             isEnglishArea: function () {
                 /**
@@ -25,17 +51,17 @@
             currentLanguage: function () {  //此方法只用来调整单个语言的特殊性，一般情况优先使用 isEnglishArea 方法
                 return langData["language"];
             },
-            text: function(name){
+            text: function (name) {
                 var keys = name.split('.');
                 var key = langData;
                 for (var index = 0; index < keys.length; index++) {
-                    key = key[keys[index]]       
+                    key = key[keys[index]]
                 }
                 var text;
                 text = !key ? name : (key[langData["language"]] || name);
                 return text;
             },
-            image: function(name){
+            image: function (name) {
                 //暂时未用到，不做处理，若后期有涉及到angular目录中图片语言问题，此方法请参照node中修改 2018.11.20
                 return langData["language"] == 'zh' ? name : name + '-en';
             },
@@ -49,11 +75,11 @@
                     global: 'global.tigerwit.com,globaldemo.tigerwit.com',
                     local: 'w.tigerwit.com,w.dev.tigerwit.com'
                 };
-                
+
                 if (url.local.indexOf($location.host()) != -1 || (area_id == 1 && url.cn.indexOf($location.host()) != -1) || (area_id == 2 && url.global.indexOf($location.host()) != -1)) {
                     // state.go('space.center.index', {reload: true});
                     $timeout(function () {
-                        window.location.href="/space/#/center";
+                        window.location.href = "/space/#/center";
                     }, 100)
                 } else {
                     if (area_id == 1) {
@@ -73,8 +99,8 @@
             },
             isDemo: function () {
                 // console.log($location.host());
-                if (($location.host().indexOf('demo'+location.hostname.match(/\.\w+\.com/)[0]) != -1) ||
-                    ($location.host().indexOf('w.dev'+location.hostname.match(/\.\w+\.com/)[0]) != -1)) {
+                if (($location.host().indexOf('demo' + location.hostname.match(/\.\w+\.com/)[0]) != -1) ||
+                    ($location.host().indexOf('w.dev' + location.hostname.match(/\.\w+\.com/)[0]) != -1)) {
                     return true;
                 } else {
                     return false;
@@ -84,19 +110,13 @@
                 return langData["company"];
             },
             // global与第三方设置语言
-            reloadLanguage: function(lang) {
-                var d = new Date();
-                d.setTime(d.getTime() + (-1*24*60*60*1000));
-                document.cookie = 'lang=' + lang + '; path=/; expires='+d.toUTCString();
-                document.cookie = 'lang=' + lang + '; path=/; domain='+location.hostname.match(/\.\w+\.com/)[0];
-                location.reload();
-            },
+            reloadLanguage: setCookieLang,
             // 为合并第三方充值提现判断
-            isThird: function() {
+            isThird: function () {
                 return ($location.absUrl().indexOf('payment/asset') !== -1)
             },
-            hostIsCn: function() {
-               return 'cn.tigerwit.com,cndemo.tigerwit.com,w.dev.tigerwit.com'.indexOf($location.host())!= -1;
+            hostIsCn: function () {
+                return 'cn.tigerwit.com,cndemo.tigerwit.com,w.dev.tigerwit.com'.indexOf($location.host()) != -1;
             }
         };
         return lang;

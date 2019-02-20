@@ -29,9 +29,19 @@
     <div class="full_page" id="dowebok_global">
 
         <div class="section section1">
-            <%- include('/common/component/h5.navbar.html') %>
+            <!-- <%- include('/common/component/h5.navbar.html') %> 不能再公用-->
+            <div class="h5_nav clearfix">
+                <a href="/"><img class="h5_nav_logo" src="<%= lang.image('logo')%>" alt="logo"></a>
+                <select name="" id="switchLang" class="switch_lang">
+                    <option value="en">English</option>
+                    <option value="cn">简体中文</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="zh-Hant">繁體中文</option>
+                    <option value="id">Bahasa Indonesia</option>
+                </select>
+            </div>
             <h5>
-                Trade the markets you want The way you want to trade Powered by blockchain
+                <%= lang.text("newhome_1")%> <%= lang.text("newhome_1_1")%> <%= lang.text("newhome_1_2")%>
             </h5>
             <p class="line1">Open an account in minutes - online</p>
             <p class="line2">or on the app – and start to trade.</p>
@@ -42,29 +52,29 @@
             <p class="next" id="next">∨</p>
         </div>
         <div class="section section2">
-            <h5>Self-directed and copy trading</h5>
-            <p class="line1">Follow a TigerWit Master with a single click and trade using their strategies. Pay just 20% commission to your Master.</p>
+            <h5><%= lang.text("newhome_10")%></h5>
+            <p class="line1"><%= lang.text("newhome_11")%></p>
 
             <ul class="self_directed">
                 <li>
                     <img src="/white_label/m_download_global/section2-icon-1.png">
                     <p class="sequence">1</p>
-                    <p class="content">Select a Master from the ranking table.</p>
+                    <p class="content"><%= lang.text("newhome_12")%></p>
                 </li>
                 <li>
                     <img src="/white_label/m_download_global/section2-icon-2.png">
                     <p class="sequence">2</p>
-                    <p class="content">Select the Master’s trade you want to follow.</p>
+                    <p class="content"><%= lang.text("newhome_13")%></p>
                 </li>
                 <li>
                     <img src="/white_label/m_download_global/section2-icon-3.png">
                     <p class="sequence">3</p>
-                    <p class="content">Set your order value.</p>
+                    <p class="content"><%= lang.text("newhome_14")%></p>
                 </li>
                 <li>
                     <img src="/white_label/m_download_global/section2-icon-4.png">
                     <p class="sequence">4</p>
-                    <p class="content">Become a TigerWit Master and earn 20% commission on your followers’ profits.</p>
+                    <p class="content"><%= lang.text("newhome_15")%></p>
                 </li>
             </ul>
             <div class="download_app">
@@ -74,29 +84,29 @@
             
         </div>
         <div class="section section3">
-            <h5>The markets you want</h5>
-            <p class="line1">TigerWit offers the most heavily-traded global products, delivering immediate access to the most liquid markets. FX, precious metals, commodities and indices, all by CFD.</p>
+            <h5><%= lang.text("newhome_17")%></h5>
+            <p class="line1"><%= lang.text("newhome_17_1")%> <%= lang.text("newhome_17_2")%></p>
 
             <ul class="self_directed">
                 <li>
                     <img src="/white_label/m_download_global/section3-icon-1.png">
-                    <p class="title">Flexible leverage</p>
-                    <p class="content">Choose 50/100/200:1</p>
+                    <p class="title"><%= lang.text("newhome_18")%></p>
+                    <p class="content"><%= lang.text("newhome_20")%></p>
                 </li>
                 <li>
                     <img src="/white_label/m_download_global/section3-icon-2.png">
-                    <p class="title">USD50 minimum deposit</p>
-                    <p class="content">Open a Live account with an initial deposit of as little as USD50</p>
+                    <p class="title"><%= lang.text("newhome_21")%></p>
+                    <p class="content"><%= lang.text("newhome_22")%> <%= lang.text("newhome_23")%></p>
                 </li>
                 <li>
                     <img src="/white_label/m_download_global/section3-icon-3.png">
-                    <p class="title">Low minimum order value</p>
-                    <p class="content">Trade from a minimum of just 0.1 Lot</p>
+                    <p class="title"><%= lang.text("newhome_27")%></p>
+                    <p class="content"><%= lang.text("newhome_24")%></p>
                 </li>
                 <li>
                     <img src="/white_label/m_download_global/section3-icon-4.png">
-                    <p class="title">Multiple product options</p>
-                    <p class="content">FX, precious metals, commoditiesand indices</p>
+                    <p class="title"><%= lang.text("newhome_28")%></p>
+                    <p class="content"><%= lang.text("newhome_25")%> <%= lang.text("newhome_26")%></p>
                 </li>
             </ul>
             <div class="download_app">
@@ -105,31 +115,31 @@
             </div>
         </div>
         <div class="section section4">
-            <h5>The way you want to trade</h5>
-            <p class="line1">On a sleeker, smarter, highly-intuitive app.</p>
-            <p class="line1">Nimble, sophisticated but easy to use.</p>
-            <p class="line1">Built around you. Personalised by you.</p>
-            <p class="line1"> Download the app and open an USD10,000 trail account instantly. Open a Live account within minutes.</p>
+            <h5><%= lang.text("newhome_32")%></h5>
+            <p class="line1"><%= lang.text("newhome_33")%></p>
+            <p class="line1"><%= lang.text("newhome_34")%></p>
+            <p class="line1"><%= lang.text("newhome_35")%></p>
+            <p class="line1"><%= lang.text("newhome_35_1")%> <%= lang.text("newhome_35_2")%></p>
             <div class="download_app">
                 <a class="download_btn" href="<%= lang.text('downloadGlobalIos')%>"><img src="/white_label/m_download_global/focus-icon-ios-en.png" alt=""></a>
                 <a class="download_btn" href="<%= lang.text('downloadGlobalAndroid')%>"><img src="/white_label/m_download_global/focus-icon-google-en.png" alt=""></a>
             </div>
         </div>
         <div class="section section5">
-            <h5>Reliable and Trustworthy</h5>
+            <h5><%= lang.text("newhome_36")%></h5>
             <ul class="self_directed">
                 <li>
-                    <p class="title">Secured by blockchain</p>
+                    <p class="title"><%= lang.text("newhome_37_1")%></p>
                     <p class="content">To ensure the highest levels of data security and privacy only the summary of transactions <span class="ellipsis">...</span><span class="limit_line"> - also known as a digital digest - will be recorded onto the blockchain ledger. The digest is generated by a hash-based algorithm. Any change to the ledger will lead to a new value of the digest being displayed for verification, ensuring the immutability of the original transaction data.</span></p>
                     <p class="more"><span>More</span></p>
                 </li>
                 <li>
-                    <p class="title">Client protection</p>
+                    <p class="title"><%= lang.text("newhome_37")%></p>
                     <p class="content">TigerWit Limited is regulated by Securities Commission of The Bahamas (SCB), license number <span class="ellipsis">...</span><span class="limit_line"> SIA-F185. We provide protection to our clients in accordance with the highest global regulatory standards. All client funds are held in a segregated client trust accounts.</span></p>
                     <p class="more"><span>More</span></p>
                 </li>
                 <li>
-                    <p class="title">Negative balance protection</p>
+                    <p class="title"><%= lang.text("newhome_39")%></p>
                     <p class="content">When you trade with TigerWit you are covered by our Negative Balance Protection policy <span class="ellipsis">...</span><span class="limit_line">. This means that even if your trading performance is unsuccessful, you will never owe TigerWit any monies. You cannot lose any more than your account equity. All client funds are stored in a segregated trust account.</span></p>
                     <p class="more"><span>More</span></p>
                 </li>
@@ -141,22 +151,25 @@
         </div>
 
         <div class="section section6">
-            <h5>Trading with TigerWit</h5>
-            <p class="line1">TigerWit clients worldwide invest in the most heavily-traded global products with immediate access to the most liquid markets.</p>
+            <h5><%= lang.text("newhome_42")%></h5>
+            <p class="line1"><%= lang.text("newhome_42_1")%></p>
             <div class="download_app">
                 <a class="download_btn" href="<%= lang.text('downloadGlobalIos')%>"><img src="/white_label/m_download_global/focus-icon-ios-en.png" alt=""></a>
                 <a class="download_btn" href="<%= lang.text('downloadGlobalAndroid')%>"><img src="/white_label/m_download_global/focus-icon-google-en.png" alt=""></a>
             </div>
         </div>
         <div class="section section7">
-            <h5>Download the app to open an account</h5>
-            <p class="line1">Open an trail account with USD10,000 of virtual funds and test your strategies with real-time prices in a risk-free environment.</p>
-            <p class="line1">Open a Live account and use up to seven sub-accounts for self-directed and copy-trading.</p>
+            <h5><%= lang.text("newhome_9_1")%></h5>
+            <p class="line1"><%= lang.text("newhome_44")%></p>
+            <p class="line1"><%= lang.text("newhome_45")%></p>
             <div class="download_app">
                 <a class="download_btn" href="<%= lang.text('downloadGlobalIos')%>"><img src="/white_label/m_download_global/focus-icon-ios-en.png" alt=""></a>
                 <a class="download_btn" href="<%= lang.text('downloadGlobalAndroid')%>"><img src="/white_label/m_download_global/focus-icon-google-en.png" alt=""></a>
             </div>
-            <p class="footer">Risk Warning: Trading CFDs involves risk and can result in loss of your capital. TigerWit Limited (Bahamas) is regulated by Securities Commission of The Bahamas (SCB), license number SIA-F185. To access the website for TigerWit Limited (UK), which is authorised and regulated in the UK by the Financial Conduct Authority (FCA), please click here: <a href="https://uk.tigerwit.com">https://uk.tigerwit.com</a></p>
+            <p class="footer">
+                <%= lang.text("foot_38")%><%= lang.text("foot_39_1")%><a href="https://uk.tigerwit.com">https://uk.tigerwit.com</a><%= lang.text("foot_39_2")%>
+            </p>
+           <p class="h5_footer_email" id="footerEmail"></p>
         </div>
     </div>
 </div>

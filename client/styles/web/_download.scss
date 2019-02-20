@@ -667,6 +667,17 @@
       font-size: px2rem(24);
       line-height: px2rem(34);
     }
+
+    .switch_lang{
+      color: #fff;
+      background: none;
+      border: none !important;
+      padding: 0;
+      float: right;
+      height: px2rem(64);
+      text-align: right;
+      direction: rtl;
+    }
     .section {
       position: relative;
       .download_app{
@@ -1243,6 +1254,13 @@
         a{
           color: inherit;
         }
+      }
+      .h5_footer_email{
+        position: absolute;
+        bottom: px2rem(20);
+        text-align: center;
+        width: 100%;
+        color: #fad802;
       }
       h5 {
         opacity: 0;
