@@ -42,13 +42,20 @@
         <img src="/ngsrc/loading.gif">
     </div>
     <div class="space_apply__content" ng-if="!applyInfo.loading">
-        <div class="space_apply__tip" ng-if="applyInfo.data.status == -1">
+        <div class="space_apply__tip" ng-if="applyInfo.data.status == -1 && applyInfo.condition">
+            <!-- 未申请过且满足条件 -->
+            {{lang.text('tigerWitID.master.masterRequirements')}}
+        </div>
+        <div class="space_apply__tip" ng-if="applyInfo.data.status == -1 && !applyInfo.condition">
+            <!-- 未申请过且不满足条件 -->
             {{lang.text('tigerWitID.master.masterRequirements')}}
         </div>
         <div class="space_apply__tip" ng-if="applyInfo.data.status == 0">
+            <!-- 待审核 -->
             {{lang.text('tigerWitID.master.tip19')}}
         </div>
         <div class="space_apply__tip" ng-if="applyInfo.data.status == 2">
+            <!-- 驳回 -->
             {{applyInfo.data.status_desc}}
         </div>
         <ul class="space_apply__lst" ng-if="(applyInfo.data.status == 0) || (applyInfo.data.status == -1)">

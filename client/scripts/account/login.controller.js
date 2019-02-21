@@ -79,7 +79,7 @@
                 value: target.phone_code
             }
         }
-        // 根据域名判断是否为cn
+        // 根据域名判断是否为cn 无用
         if(lang.hostIsCn()){
             selectArea({phone_code: 86})
         }

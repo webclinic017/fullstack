@@ -43,7 +43,7 @@
                     }
                 })
                 .state('authen.subpage',{
-                    url: '/authen/:subpage?dredge_type&isAgent',
+                    url: '/authen/:subpage?isAgent',
                     views: {
                         // 'nav@authen':{
                         //     templateUrl: '/views/authen/nav.html'

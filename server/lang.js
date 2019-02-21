@@ -104,7 +104,7 @@ module.exports = function () {
             } else {
                 return false;
             }
-        },
+        }, //没用
         isVersion: function(version){
             var vMap = {
                 global: 'tigerwell_global',

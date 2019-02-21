@@ -69,7 +69,7 @@
             }
             selectPhoneArea(target);
         }
-        // 根据域名判断是否为cn
+        // 根据域名判断是否为cn 无用
         if(lang.hostIsCn()){
             $scope.account.country.key = lang.text("china");
             $scope.account.country.value = 'CN';

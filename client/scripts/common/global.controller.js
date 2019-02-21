@@ -361,8 +361,7 @@
                     $scope.closeModal = closeModal;
                     $scope.position = passedScope.position;
                     $scope.lang = lang;
-
-                    $scope.dredge_type = 'all';
+                    $scope.open_account_type = globalScope.personal.open_account_type; //判断是否显示开通体验金
                     $scope.loading = {
                         demo: false
                     }
@@ -466,7 +465,8 @@
                         // 开通类型
                         dredged_type: accountStatusMap[accountStatus],
                         passedAuthen: passedAuthen,
-                        account_status: accountStatus
+                        account_status: accountStatus,
+                        open_account_type: data.data.open_account_type // 1 为只能开通真实账户
                     }
                     angular.extend($scope.personal, params);
                     if (accountStatus == '1') {

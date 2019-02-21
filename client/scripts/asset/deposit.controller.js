@@ -469,7 +469,8 @@
         }
 
         function toHelp() {
-            OpenChat();
+            // OpenChat();
+            zE.activate();
         }
         // 入金相关的各种弹窗提示
         function openDepositMdl(type, callback, msgInfo) {
