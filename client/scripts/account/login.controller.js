@@ -331,6 +331,9 @@
                             layer.close(resolve.layIndex)
                         })
                     } else {
+                        if(data.code == 100505){
+                            
+                        }
                         layer.msg(data.message);
                     }
                 }
