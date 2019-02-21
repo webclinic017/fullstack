@@ -382,6 +382,9 @@
                 show: false,
                 reg: new RegExp()
             },
+            country: {
+                show: false
+            },
             phoneCode: {
                 show: false
             },
@@ -583,6 +586,7 @@
                 $scope.showErr('emailCode');
             }
             $scope.showErr('username');
+            $scope.showErr('country')
             if($scope.completeInfo.country.value == 'CN'){
                 $scope.showErr('province');
                 $scope.showErr('city');
@@ -625,7 +629,7 @@
             function confirmSubmit(){
                 var params = {
                     username: $scope.completeInfo.username,
-                    world_code: $scope.personal.region.world_code,
+                    world_code: $scope.completeInfo.country.value,
                     state_code: $scope.completeInfo.province.value,
                     city_code: $scope.completeInfo.city.value,
                     address: $scope.completeInfo.address,
