@@ -361,7 +361,9 @@
                     $scope.closeModal = closeModal;
                     $scope.position = passedScope.position;
                     $scope.lang = lang;
-                    $scope.open_account_type = globalScope.personal.open_account_type; //判断是否显示开通体验金
+                    if($scope.position != "register" && globalScope.personal.open_account_type >= 0){
+                        $scope.open_account_type = globalScope.personal.open_account_type; //判断是否显示开通体验金
+                    }
                     $scope.loading = {
                         demo: false
                     }

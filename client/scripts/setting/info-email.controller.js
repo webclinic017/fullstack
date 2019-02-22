@@ -33,10 +33,6 @@
                 show: false
             }
         };
-        $scope.backErr = {
-            show: false,
-            msg: ''
-        };
         $scope.clickable = {
             oldCode: true,
             oldSubmit: true,
