@@ -4,22 +4,9 @@
 
     angular.module('fullstackApp').factory('langData', langData);
 
-    langData.$inject = ['$cookies'];
+    langData.$inject = [];
 
-    function langData($cookies) {
-        var language = 'zh';
-        var langArr = ['cn', 'en', 'vi', 'zh-Hant', 'id'];
-
-        angular.forEach($cookies, function (value, index) {
-
-            if (index === 'lang') {
-                angular.forEach(langArr, function (value2, index2) {
-                    if (value === value2) {
-                        language = value === 'cn' ? 'zh' : value;
-                    }
-                });
-            }
-        });
+    function langData() {
 
         var lang_data = {
             "_comment_data": {
@@ -8543,7 +8530,7 @@
         };
         var data = Object.assign({
             "company": "tigerwit",
-            "language": language,
+            "language": '',
 
             "companyCopyRules": {
                 "zh": "https://www.tigerwit.com/web/copy/rules",
