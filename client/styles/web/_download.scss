@@ -696,7 +696,9 @@
       }
     }
     .section1 {
-      background: url("/white_label/m_download_global/section1-bg.png") no-repeat;
+      background-image: url("/white_label/m_download_global/section1-bg.png");
+      background-repeat: no-repeat;
+      background-color: #000;
       background-size: 100% 100%;
       .line1 {
         position: absolute;
@@ -773,7 +775,8 @@
       h5{
         color:rgba(33,44,63,1);
       }
-      background: url("/white_label/m_download_global/section2-bg.png") no-repeat;
+      background-image: url("/white_label/m_download_global/section2-bg.png");
+      background-repeat: no-repeat;
       background-size: 100% 100%;
       .self_directed{
         overflow: hidden;
@@ -875,7 +878,8 @@
       h5{
         color:rgba(33,44,63,1);
       }
-      background: url("/white_label/m_download_global/section3-bg.png") no-repeat;
+      background-image: url("/white_label/m_download_global/section3-bg.png");
+      background-repeat: no-repeat;
       background-size: 100% 100%;
       .self_directed{
         overflow: hidden;
@@ -974,7 +978,8 @@
       h5{
         color:rgba(33,44,63,1);
       }
-      background: url("/white_label/m_download_global/section4-bg.png") no-repeat;
+      background-image: url("/white_label/m_download_global/section4-bg.png");
+      background-repeat: no-repeat;
       background-size: 100% 100%;
       .download_app{
         position: static;
@@ -1052,7 +1057,8 @@
       h5{
         color:rgba(33,44,63,1);
       }
-      background: url("/white_label/m_download_global/section5-bg.png") no-repeat;
+      background-image: url("/white_label/m_download_global/section5-bg.png");
+      background-repeat: no-repeat;
       background-size: 100% 100%;
       .self_directed{
         overflow: hidden;
@@ -1159,7 +1165,8 @@
 
     }
     .section6 {
-      background: url("/white_label/m_download_global/section6-bg.png") no-repeat;
+      background-image: url("/white_label/m_download_global/section6-bg.png");
+      background-repeat: no-repeat;
       background-size: 100%;
       opacity: 0;
       h5 {
@@ -1237,7 +1244,8 @@
       h5{
         color:rgba(33,44,63,1);
       }
-      background: url("/white_label/m_download_global/section7-bg.png") no-repeat;
+      background-image: url("/white_label/m_download_global/section7-bg.png");
+      background-repeat: no-repeat;
       background-size: 100% 100%;
       .download_app{
         position: static;
