@@ -5,27 +5,18 @@
     </div>
     <!--<div tw-loading-img></div>-->
     <div class="mg-tp-40 kyc">
-       <form name="completeForm" novalidate autocomplete="off">
+        <form name="completeForm" novalidate autocomplete="off">
             <div class="row">
                 <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
                     <label>{{lang.text('tigerWitID.settings.setNickname')}}</label>
-                </div>        
+                </div>
                 <div class="col-xs-8">
                     <div class="form-control-wrapper">
-                        <input class="form-control" 
-                                name="username"
-                                type="text"
-                                placeholder="{{lang.text('tigerWitID.settings.tip7')}}"
-                                required
-                                ng-class="{'form-control-error': (frontErr.username.show && completeForm.username.$invalid)}"
-                                ng-model="completeInfo.username"
-                                twform-valid-txt
-                                data-txt-type="username"
-                                data-min-len="2"
-                                data-max-len="16"
-                                ng-focus="hideErr('username')"
-                                ng-blur="[showErr('username'),checkExsit(1)]">
-        
+                        <input class="form-control" name="username" type="text" placeholder="{{lang.text('tigerWitID.settings.tip7')}}"
+                            required ng-class="{'form-control-error': (frontErr.username.show && completeForm.username.$invalid)}"
+                            ng-model="completeInfo.username" twform-valid-txt data-txt-type="username" data-min-len="2"
+                            data-max-len="16" ng-focus="hideErr('username')" ng-blur="[showErr('username'),checkExsit(1)]">
+
                         <div ng-show="frontErr.username.show">
                             <p class="alert-arrow_tp_lf" ng-show="completeForm.username.$error.required">
                                 {{lang.text('tigerWitID.settings.pleaseSetNickname')}}
@@ -34,7 +25,7 @@
                                 {{frontErr.username.tip}}
                             </p>
                         </div>
-        
+
                         <div ng-show="exsit.username.show">
                             <p class="alert-arrow_tp_lf" ng-show="exsit.username.show">
                                 {{lang.text('tigerWitID.settings.nicknameHasBeenTaken')}}
@@ -47,22 +38,14 @@
             <div class="row">
                 <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
                     <label>{{lang.text('tigerWitID.settings.editEmail')}}</label>
-                </div>        
+                </div>
                 <div class="col-xs-8">
                     <div class="form-control-wrapper">
-                        <input class="form-control"
-                                name="email"
-                                type="text"
-                                placeholder="{{lang.text('tigerWitID.settings.pEnterYourMail')}}"
-                                required
-                                ng-disabled="personal.email"
-                                ng-class="{'disabled': personal.email, 'form-control-error': (frontErr.email.show && completeForm.email.$invalid)}"
-                                ng-model="completeInfo.email"
-                                ng-pattern="frontErr.email.reg"
-                                on-enter="sendCode('email')"
-                                ng-blur="[showErr('email'), checkExsit(2)]"
-                                ng-focus="[hideErr('email')]">
-        
+                        <input class="form-control" name="email" type="text" placeholder="{{lang.text('tigerWitID.settings.pEnterYourMail')}}"
+                            required ng-disabled="personal.email" ng-class="{'disabled': personal.email, 'form-control-error': (frontErr.email.show && completeForm.email.$invalid)}"
+                            ng-model="completeInfo.email" ng-pattern="frontErr.email.reg" on-enter="sendCode('email')"
+                            ng-blur="[showErr('email'), checkExsit(2)]" ng-focus="[hideErr('email')]">
+
                         <div ng-show="frontErr.email.show">
                             <p class="alert-arrow_tp_lf" ng-show="completeForm.email.$error.required">
                                 {{lang.text('tigerWitID.settings.PEnterYourMailg')}}
@@ -71,7 +54,7 @@
                                 {{lang.text('tigerWitID.settings.emailFormatErr')}}
                             </p>
                         </div>
-        
+
                         <div ng-show="exsit.email.show">
                             <p class="alert-arrow_tp_lf">
                                 {{lang.text('tigerWitID.settings.emailExists')}}
@@ -83,21 +66,16 @@
             <div class="row" ng-if="!personal.email">
                 <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
                     <label>{{lang.text('tigerWitID.settings.verifyEmail')}}</label>
-                </div>        
+                </div>
                 <div class="col-xs-8">
                     <div class="form-control-wrapper contact_way inputor">
-                        <input class="form-control"
-                                name="emailCode"
-                                type="text"
-                                placeholder="{{lang.text('tigerWitID.settings.enterVerificationCode')}}"
-                                required
-                                ng-class="{'form-control-error': (frontErr.emailCode.show && completeForm.emailCode.$invalid)}"
-                                ng-model="completeInfo.emailCode"
-                                ng-blur="[showErr('emailCode')]"
-                                ng-focus="[hideErr('emailCode')]">
-                        
+                        <input class="form-control" name="emailCode" type="text" placeholder="{{lang.text('tigerWitID.settings.enterVerificationCode')}}"
+                            required ng-class="{'form-control-error': (frontErr.emailCode.show && completeForm.emailCode.$invalid)}"
+                            ng-model="completeInfo.emailCode" ng-blur="[showErr('emailCode')]" ng-focus="[hideErr('emailCode')]">
+
                         <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="sendCode('email')">{{lang.text('tigerWitID.settings.sendVerificationToEmail')}}</span>
-                        <span class="sender_btn" ng-show="completeInfo.hasSendCode" >{{lang.text('tigerWitID.myAccount.tip39_1')}}{{ completeInfo.waitTime }}{{lang.text('tigerWitID.myAccount.tip39_2')}}</span>
+                        <span class="sender_btn" ng-show="completeInfo.hasSendCode">{{lang.text('tigerWitID.myAccount.tip39_1')}}{{
+                            completeInfo.waitTime }}{{lang.text('tigerWitID.myAccount.tip39_2')}}</span>
 
                         <div ng-show="frontErr.emailCode.show">
                             <p class="alert-arrow_tp_lf" ng-show="completeForm.emailCode.$error.required">
@@ -118,32 +96,29 @@
                 <div class="row">
                     <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
                         <label>{{lang.text('tigerWitID.settings.verifyPhone')}}</label>
-                    </div>        
+                    </div>
                     <div class="col-xs-8 bind_phone">
                         <div class="form-control-wrapper area_code">
                             <div class="select">
-                                <input class="select__input"
-                                    name="areaCode"
-                                    type="text"
-                                    placeholder="{{lang.text('tigerWitID.areaCode')}}"
-                                    required
-                                    readonly
-                                    ng-model="completeInfo.areaCode.value"
-                                    ng-class="{'form-control-error': frontErr.areaCode.show && completeForm.areaCode.$invalid, 'disabled': personal.phone }"
-                                    ng-blur="showErr('areaCode')"
-                                    ng-focus="hideErr('areaCode')">
-                                
+                                <input class="select__input" name="areaCode" type="text" placeholder="{{lang.text('tigerWitID.areaCode')}}"
+                                    required readonly ng-model="completeInfo.areaCode.value" ng-class="{'form-control-error': frontErr.areaCode.show && completeForm.areaCode.$invalid, 'disabled': personal.phone }"
+                                    ng-blur="showErr('areaCode')" ng-focus="hideErr('areaCode')">
+
                                 <i ng-if="!personal.phone" class="select__icon fa fa-angle-down"></i>
-    
-                                <ul style="width: 150%;" ng-if="!personal.phone" class="select__dropdown" twform-select data-bind-model="completeInfo.areaCode">
-                                    
-                                    <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderArea"><i class="fa fa-search"></i></li>
+
+                                <ul style="width: 150%;" ng-if="!personal.phone" class="select__dropdown" twform-select
+                                    data-bind-model="completeInfo.areaCode">
+
+                                    <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}"
+                                            ng-model="placeholderArea"><i class="fa fa-search"></i></li>
                                     <li ng-repeat="areaCode in areaCodes | filter : placeholderArea" ng-class="{'selected': areaCode.value == completeInfo.areaCode.value}">
-                                        <span data-value="{{ areaCode.value }}" data-disabled='{"disabled": {{areaCode.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}' ng-class="{'font-light': areaCode.disabled}">{{ areaCode.value }}({{ areaCode.name }})</span>
+                                        <span data-value="{{ areaCode.value }}" data-disabled='{"disabled": {{areaCode.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}'
+                                            ng-class="{'font-light': areaCode.disabled}">{{ areaCode.value }}({{
+                                            areaCode.name }})</span>
                                     </li>
                                 </ul>
                             </div>
-                        
+
                             <div ng-show="frontErr.areaCode.show">
                                 <p class="alert alert-arrow_tp_lf" ng-show="completeForm.areaCode.$error.required">
                                     {{lang.text('tigerWitID.login.selectAreaCode')}}
@@ -151,19 +126,11 @@
                             </div>
                         </div>
                         <div class="form-control-wrapper phone">
-                            <input class="form-control"
-                                    name="phone"
-                                    type="text"
-                                    placeholder="{{lang.text('tigerWitID.settings.enterPhoneNum')}}"
-                                    required
-                                    ng-disabled="personal.phone"
-                                    ng-class="{'disabled': personal.phone, 'form-control-error': (frontErr.phone.show && completeForm.phone.$invalid) || codeErr.phone.show}"
-                                    ng-model="completeInfo.phone"
-                                    ng-pattern="frontErr.phone.reg"
-                                    on-enter="sendCode('phone')"
-                                    ng-blur="[showErr('phone'), checkExsit(3)]"
-                                    ng-focus="[hideErr('phone')]">
-            
+                            <input class="form-control" name="phone" type="text" placeholder="{{lang.text('tigerWitID.settings.enterPhoneNum')}}"
+                                required ng-disabled="personal.phone" ng-class="{'disabled': personal.phone, 'form-control-error': (frontErr.phone.show && completeForm.phone.$invalid) || codeErr.phone.show}"
+                                ng-model="completeInfo.phone" ng-pattern="frontErr.phone.reg" on-enter="sendCode('phone')"
+                                ng-blur="[showErr('phone'), checkExsit(3)]" ng-focus="[hideErr('phone')]">
+
                             <div ng-show="frontErr.phone.show">
                                 <p class="alert-arrow_tp_lf" ng-show="completeForm.phone.$error.required">
                                     {{lang.text('tigerWitID.settings.enterPhoneNum')}}
@@ -172,7 +139,7 @@
                                     {{lang.text('tigerWitID.settings.phoneNumErr')}}
                                 </p>
                             </div>
-            
+
                             <div ng-show="exsit.phone.show">
                                 <p class="alert-arrow_tp_lf">
                                     {{lang.text('tigerWitID.settings.phoneNumExists')}}
@@ -190,22 +157,17 @@
                 <div class="row" ng-if="!personal.phone">
                     <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
                         <label>{{lang.text('tigerWitID.settings.verifyPhoneg')}}</label>
-                    </div>        
+                    </div>
                     <div class="col-xs-8">
                         <div class="form-control-wrapper contact_way inputor">
-                            <input class="form-control"
-                                    name="phoneCode"
-                                    type="text"
-                                    placeholder="{{lang.text('tigerWitID.settings.enterVerificationCode')}}"
-                                    required
-                                    ng-class="{'form-control-error': (frontErr.phoneCode.show && completeForm.phoneCode.$invalid)}"
-                                    ng-model="completeInfo.phoneCode"
-                                    ng-blur="[showErr('phoneCode')]"
-                                    ng-focus="[hideErr('phoneCode')]">
-                            
+                            <input class="form-control" name="phoneCode" type="text" placeholder="{{lang.text('tigerWitID.settings.enterVerificationCode')}}"
+                                required ng-class="{'form-control-error': (frontErr.phoneCode.show && completeForm.phoneCode.$invalid)}"
+                                ng-model="completeInfo.phoneCode" ng-blur="[showErr('phoneCode')]" ng-focus="[hideErr('phoneCode')]">
+
                             <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="sendCode('phone')">{{lang.text('tigerWitID.settings.sendVerificationCode')}}</span>
-                            <span class="sender_btn" ng-show="completeInfo.hasSendCode" >{{lang.text('tigerWitID.myAccount.tip39_1')}}{{ completeInfo.waitTime }}{{lang.text('tigerWitID.myAccount.tip39_2')}}</span>
-    
+                            <span class="sender_btn" ng-show="completeInfo.hasSendCode">{{lang.text('tigerWitID.myAccount.tip39_1')}}{{
+                                completeInfo.waitTime }}{{lang.text('tigerWitID.myAccount.tip39_2')}}</span>
+
                             <div ng-show="frontErr.phoneCode.show">
                                 <p class="alert-arrow_tp_lf" ng-show="completeForm.phoneCode.$error.required">
                                     {{lang.text('tigerWitID.settings.enterVerificationCode')}}
@@ -216,34 +178,63 @@
                 </div>
             </div>
 
+            <!-- 国家 -->
+            <div class="row">
+                <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
+                    <label>{{lang.text("tigerWitID.login.countryRegion")}}</label>
+                </div>
+                <div class="col-xs-8">
+
+                    <div class="form-control-wrapper">
+
+                            <div class="select">
+                        <input class="select__input" readonly name="country" type="text"
+                            placeholder="{{lang.text('tigerWitID.login.countryRegion')}}" required ng-model="completeInfo.country.key">
+
+                        <i class="select__icon fa fa-angle-down"></i>
+
+                        <ul class="select__dropdown" twform-select data-bind-model="completeInfo.country">
+
+                            <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}"
+                                    ng-model="placeholderCountry"><i class="fa fa-search"></i></li>
+                            <li ng-repeat="world in worldList | filter : placeholderCountry" ng-class="{'selected': world.code == completeInfo.country.value}">
+                                <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}'
+                                    ng-click="[world.disabled || selectWorld(world), selectRegion('country', world.code)]" ng-class="{'font-light': world.disabled}">{{world.name}}</span>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+
+                    <div ng-show="frontErr.country.show">
+                            <p class="alert alert-arrow_tp_lf" ng-show="completeForm.country.$error.required">
+                                {{lang.text('tigerWitID.login.selectCountry')}}
+                            </p>
+                        </div>
+                </div>
+
+            </div>
             <div class="row" ng-if="completeInfo.country.value == 'CN'">
                 <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
                     <label>{{lang.text('tigerWitID.settings.residentialAddress')}}</label>
-                </div>        
+                </div>
                 <div class="col-xs-4">
                     <div class="form-control-wrapper">
                         <div class="select">
-                            <input class="select__input"
-                                name="province"
-                                type="text"
-                                placeholder="{{lang.text('tigerWitID.provinces')}}"
-                                required
-                                readonly
-                                ng-model="completeInfo.province.key"
-                                ng-class="{'form-control-error': frontErr.province.show && completeForm.province.$invalid}"
-                                ng-blur="showErr('province')"
-                                ng-focus="hideErr('province')">
-                            
+                            <input class="select__input" name="province" type="text" placeholder="{{lang.text('tigerWitID.provinces')}}"
+                                required readonly ng-model="completeInfo.province.key" ng-class="{'form-control-error': frontErr.province.show && completeForm.province.$invalid}"
+                                ng-blur="showErr('province')" ng-focus="hideErr('province')">
+
                             <i class="select__icon fa fa-angle-down"></i>
 
                             <ul class="select__dropdown" twform-select data-bind-model="completeInfo.province">
-                                
+
                                 <li ng-repeat="province in address.provinces" ng-class="{'selected': province.code === completeInfo.province.value}">
-                                    <span data-value="{{province.code}}" ng-click="selectRegion('province', province.code)">{{ province.name }}</span>
+                                    <span data-value="{{province.code}}" ng-click="selectRegion('province', province.code)">{{
+                                        province.name }}</span>
                                 </li>
                             </ul>
                         </div>
-                    
+
                         <div ng-show="frontErr.province.show">
                             <p class="alert alert-arrow_tp_lf" ng-show="completeForm.province.$error.required">
                                 {{lang.text('tigerWitID.settings.selectProvincesCities')}}
@@ -254,27 +245,21 @@
                 <div class="col-xs-4">
                     <div class="form-control-wrapper">
                         <div class="select">
-                            <input class="select__input"
-                                name="city"
-                                type="text"
-                                placeholder="{{lang.text('tigerWitID.city')}}"
-                                required
-                                readonly
-                                ng-model="completeInfo.city.key"
-                                ng-class="{'form-control-error': frontErr.province.show && completeForm.city.$invalid}"
-                                ng-blur="showErr('city')"
-                                ng-focus="hideErr('city')">
-                            
+                            <input class="select__input" name="city" type="text" placeholder="{{lang.text('tigerWitID.city')}}"
+                                required readonly ng-model="completeInfo.city.key" ng-class="{'form-control-error': frontErr.province.show && completeForm.city.$invalid}"
+                                ng-blur="showErr('city')" ng-focus="hideErr('city')">
+
                             <i class="select__icon fa fa-angle-down"></i>
 
                             <ul class="select__dropdown" twform-select data-bind-model="completeInfo.city">
-                                
+
                                 <li ng-repeat="city in address.cities" ng-class="{'selected': city.code === completeInfo.city.value}">
-                                    <span data-value="{{city.code}}" ng-click="selectRegion('city', city.code)">{{ city.name }}</span>
+                                    <span data-value="{{city.code}}" ng-click="selectRegion('city', city.code)">{{
+                                        city.name }}</span>
                                 </li>
                             </ul>
                         </div>
-                        
+
                         <div ng-show="frontErr.city.show">
                             <p class="alert alert-arrow_tp_lf" ng-show="completeForm.city.$error.required">
                                 {{lang.text('tigerWitID.settings.selectCityDistrict')}}
@@ -286,20 +271,15 @@
 
             <div class="row">
                 <div class="col-xs-2" ng-class="{'col-xs-3': lang.isEnglishArea()}">
-                    <label>{{completeInfo.country.value == 'CN' ? '&nbsp;' : lang.text('tigerWitID.settings.residentialAddress')}}</label>
+                    <label>{{completeInfo.country.value == 'CN' ? '&nbsp;' :
+                        lang.text('tigerWitID.settings.residentialAddress')}}</label>
                 </div>
                 <div class="col-xs-8">
                     <div class="form-control-wrapper">
-                        <input class="form-control" 
-                            name="address"
-                            type="text"
-                            placeholder="{{lang.text('tigerWitID.settings.enterAddress')}}"
-                            required
-                            ng-class="{'form-control-error': (frontErr.address.show && completeForm.address.$invalid)}"
-                            ng-model="completeInfo.address"
-                            ng-focus="hideErr('address')"
-                            ng-blur="[showErr('address')]">
-        
+                        <input class="form-control" name="address" type="text" placeholder="{{lang.text('tigerWitID.settings.enterAddress')}}"
+                            required ng-class="{'form-control-error': (frontErr.address.show && completeForm.address.$invalid)}"
+                            ng-model="completeInfo.address" ng-focus="hideErr('address')" ng-blur="[showErr('address')]">
+
                         <div ng-show="frontErr.address.show">
                             <p class="alert-arrow_tp_lf" ng-show="completeForm.address.$error.required">
                                 {{lang.text('tigerWitID.settings.enterAddress')}}
@@ -309,19 +289,19 @@
                 </div>
             </div>
 
-            
+
             <div class="text-center" ng-show="backErr.system.show">
                 <p class="alert-system">
                     {{ backErr.system.msg || lang.text('tigerWitID.unknownError') }}
                 </p>
             </div>
-            
+
             <div class="text-center font-danger mg-tp-40" ng-if="backErr.show">
                 <p>{{ backErr.msg }}</p>
             </div>
 
             <div class="text-left mg-tp-50 mg-bt-30">
-                <button class="btn btn-primary-gradient btn-sm" ng-if="completeInfo.clickable"  ng-click="submitCompleteForm()">
+                <button class="btn btn-primary-gradient btn-sm" ng-if="completeInfo.clickable" ng-click="submitCompleteForm()">
                     {{lang.text('actLogin29')}}
                 </button>
 
