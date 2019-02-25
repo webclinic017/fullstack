@@ -1,0 +1,132 @@
+.bd_vi {
+  width: 1366px;
+  margin: 0 auto;
+}
+.bd_vi_focus {
+  height: 719px;
+  background: url("/images/bd_vietnam/web_focus.jpg") no-repeat;
+  background-position: center top;
+  background-size: auto 100%;
+  position: relative;
+
+  .focus_wrapper {
+    position: absolute;
+    top: 28px;
+    right: 24px;
+    img {
+      height: 260px;
+    }
+  }
+  .focus_cont {
+    font-size: 42px;
+    line-height: 50px;
+    color: #fff;
+    padding-left: 536px;
+    padding-right: 122px;
+    padding-top: 358px;
+  }
+}
+.bd_vi_second {
+  height: 456px;
+  background: url("/images/bd_vietnam/web_second.jpg") no-repeat;
+  background-position: center top;
+  background-size: auto 100%;
+  position: relative;
+  .second_tit {
+    font-size: 42px;
+    line-height: 50px;
+    font-weight: 500;
+    padding: 65px 203px 52px;
+    text-align: center;
+  }
+  .second_tip {
+    font-size: 26px;
+    line-height: 30px;
+    width: 530px;
+    margin-left: 196px;
+    font-weight: 200;
+  }
+}
+.bd_vi_form {
+  height: 1390px;
+  background: url("/images/bd_vietnam/web_form.jpg") no-repeat;
+  background-position: center top;
+  background-size: auto 100%;
+  position: relative;
+  padding: 44px 135px 0px;
+  .form_tit {
+    font-size: 42px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 500;
+  }
+  .icon-left {
+    float: left;
+    width: 60%;
+    text-align: center;
+    margin-top: 10px;
+    .icon-wrapper {
+      margin-top: 70px;
+    }
+    .icon-pic {
+      img {
+        height: 70px;
+      }
+    }
+    .icon-tit {
+      font-size: 28px;
+      padding-top: 30px;
+    }
+    .icon-tip {
+      font-size: 18px;
+      font-weight: 200;
+    }
+  }
+  .icon-right {
+    float: left;
+    width: 40%;
+    margin-top: 80px;
+    margin-left: -100px;
+    img {
+      height: 732px;
+    }
+  }
+  .form-box {
+    .title {
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 40px;
+      margin-top: 40px;
+    }
+    .form-item {
+      width: 50%;
+      float: left;
+      &.btn-wrapper {
+        margin-top: 20px;
+        text-align: center;
+      }
+      p {
+        font-size: 18px;
+        padding-left: 15px;
+      }
+      .form-control-wrapper {
+        width: 90%;
+        .form-control {
+          background-color: #fff;
+          border-radius: 10px;
+        }
+      }
+      .btn {
+        background: #00c86b;
+        border-radius: 10px;
+        color: #fff;
+        font-size: 20px;
+      }
+    }
+  }
+}
+.bd_vi_fotter {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 80px 10px;
+}
