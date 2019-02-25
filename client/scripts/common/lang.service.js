@@ -115,8 +115,10 @@
             isThird: function () {
                 return ($location.absUrl().indexOf('payment/asset') !== -1)
             },
+            // 区分大区area_id 1：中国区
             hostIsCn: function () {
-                return 'cn.tigerwit.com,cndemo.tigerwit.com,w.dev.tigerwit.com'.indexOf($location.host()) != -1;
+                return $cookies.area_id == 1;
+                // return 'cn.tigerwit.com,cndemo.tigerwit.com,w.dev.tigerwit.com'.indexOf($location.host()) != -1;
             }
         };
         return lang;
