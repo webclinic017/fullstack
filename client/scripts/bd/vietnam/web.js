@@ -1,4 +1,8 @@
 ;(function () {
+  var reg = {
+    email: /^\w+@\w+\.+\w+$/,
+    phone: /^[\d+|+]?\d+?-?\d+$/
+  };
   //lp unit key pid
   var pid = getUrlParam('pid') || '';
   var unit = getUrlParam('unit') || '';
@@ -9,8 +13,17 @@
     var name = $(".form-item input[data-name=name]").val();
     var phone = $(".form-item input[data-name=phone]").val();
     var email = $(".form-item input[data-name=email]").val();
+    console.log(phone, email)
     if (!name || !phone || !email) {
       layer.msg('Hãy điền đầy đủ thông tin');
+      return;
+    }
+    if (!reg.email.test(email)) {
+      layer.msg('Hộp thư định dạng sai lầm');
+      return;
+    }
+    if (!reg.phone.test(phone)) {
+      layer.msg('Định dạng sai số điện thoại di động');
       return;
     }
     layer.load(2);
