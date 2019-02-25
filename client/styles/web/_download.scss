@@ -696,10 +696,9 @@
       }
     }
     .section1 {
-      background-image: url("/white_label/m_download_global/section1-bg.png");
       background-repeat: no-repeat;
-      background-color: #000;
-      background-size: 100% 100%;
+      background-size: 100%;
+      transition: background-position 0.8s linear;
       .line1 {
         position: absolute;
         left: -25rem;
@@ -716,6 +715,9 @@
       .line2.active {
         transition: right 1s 1s ease;
         right: 6rem;
+      }
+      &.active{
+        background-position: bottom center;
       }
 
       .next {
@@ -978,9 +980,9 @@
       h5{
         color:rgba(33,44,63,1);
       }
-      background-image: url("/white_label/m_download_global/section4-bg.png");
       background-repeat: no-repeat;
-      background-size: 100% 100%;
+      background-size: 100%;
+      transition: background-position 0.8s linear;
       .download_app{
         position: static;
         margin-top: px2rem(36);
@@ -998,6 +1000,9 @@
       }
       .line1.active {
         animation: lightSpeedIn 1s 0.5s linear forwards;
+      }
+      &.active{
+        background-position: bottom center; 
       }
       @-webkit-keyframes lightSpeedIn {
         from {
@@ -1165,7 +1170,6 @@
 
     }
     .section6 {
-      background-image: url("/white_label/m_download_global/section6-bg.png");
       background-repeat: no-repeat;
       background-size: 100%;
       opacity: 0;

@@ -71,7 +71,7 @@
             navigation: true,
             navigationColor: "#fbd71f",
             navigationPosition: "right",
-            sectionsColor: ['#121212', '#fff', '#fff', '#FEE900', '#fff', '#212C3F', '#fff'],
+            sectionsColor: ['#1A1E29', '#fff', '#fff', 'rgb(248, 226, 0)', '#fff', '#212C3F', '#fff'],
             verticalCentered: false,
             afterRender: function () {
                 layer.closeAll();
