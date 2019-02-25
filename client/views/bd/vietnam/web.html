@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <% include /common/meta/web.html %>
+  <title><%=lang.text("companyEnName")%></title>
+    <% include /common/vendor/web.css.html %>
+    <!-- build:css(.tmp) /styles/web.css -->
+    <link rel="stylesheet" href="/styles/web.css">
+    <!-- endbuild -->
+    <% include /common/statistic/main.html %>
+    <% include /common/vendor/web.js.html %>
+</head>
+
+<body>
+  <div class="bd_vi">
+    <div class="bd_vi_focus">
+      <span class="focus_wrapper">
+        <img src="/images/bd_vietnam/web_logo.png" alt="">
+      </span>
+      <p class="focus_cont">
+          Đây là cơ hội để bạn giành được trải 
+          nghiệm VIP độc quyền với Câu lạc bộ 
+          bóng đá Liverpool.
+      </p>
+    </div>
+    <div class="bd_vi_second">
+      <p class="second_tit">Nhận trải nghiệm VIP và xem Liverpool thi đấu với Chelsea vào ngày 14 tháng 4 năm2019.</p>
+      <p class="second_tip">
+          Bạn sẽ có quyền tham gia độc quyền vào buổi đào tạo và xem các cầu thủ tập luyện, Tham dự vào Legends Lounge nơi bạn sẽ dùng bữa và giao lưu với các huyền thoại của Liverpool.
+      </p>
+    </div>
+    <div class="bd_vi_form">
+      <p class="form_tit">Chỉ với ba bước, bạn có thể giành được cơ hội VIP</p>
+      <p class="form_tit">trải nghiệm độc quyền trọn đời với Câu</p>
+      <p class="form_tit">lạc bộ bóng đá Liverpool.</p>
+      <div class="clearfix">
+        <div class="icon-left">
+          <div class="icon-wrapper">
+            <p class="icon-pic"><img src="/images/bd_vietnam/icon1.png" alt=""></p>
+            <p class="icon-tit">BƯỚC 1</p>
+            <p class="icon-tip">Đăng ký IB hoặc Khách hàng của Tigerwit</p>
+          </div>
+          <div class="icon-wrapper">
+            <p class="icon-pic"><img src="/images/bd_vietnam/icon2.png" alt=""></p>
+            <p class="icon-tit">BƯỚC 2</p>
+            <p class="icon-tip">Nạp tiền và giao dịch</p>
+          </div>
+          <div class="icon-wrapper">
+            <p class="icon-pic"><img src="/images/bd_vietnam/icon3.png" alt=""></p>
+            <p class="icon-tit">BƯỚC 3</p>
+            <p class="icon-tip"> Trở thành 2 IBs hoặc 2 khách</p>
+            <p class="icon-tip">hàng đầu tiên nạp 300 nghìn USD</p>
+          </div>
+        </div>
+        <div class="icon-right">
+          <img src="/images/bd_vietnam/icon-phone.png" alt="">
+        </div>
+      </div>
+      <div class="form-box">
+        <p class="title">Tham Gia Ngay Kẻo Trễ !</p>
+        <div class="clearfix">
+          <div class="form-item">
+            <p>Họ Tên</p>
+            <div class="form-control-wrapper">
+              <input type="text" class="form-control" data-name="name">
+            </div>
+          </div>
+          <div class="form-item">
+            <p>Số Điện Thoại</p>
+            <div class="form-control-wrapper">
+              <input type="text" class="form-control" data-name="phone">
+            </div>
+          </div>
+          <div class="form-item">
+            <p>Email</p>
+            <div class="form-control-wrapper">
+              <input type="text" class="form-control" data-name="email">
+            </div>
+          </div>
+          <div class="form-item btn-wrapper">
+            <button class="btn btn-green" id="btn-form">gửi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bd_vi_fotter">
+      <p>Điều Khoản và Điều Kiện</p>
+      <p>Trở thành 2 IBs hoặc 2 khách hàng đầu tiên nạp 300 nghìn USD </p>
+      <p class="text-center mg-tp-20">Trading CFDs involves risk and can result in loss of your capital.</p>
+    </div>
+  </div>
+  <%- include('/common/statistic/_all.html') %>
+</body>
+
+<!-- build:js(client) /scripts/bd_vietnam.js -->
+<script src="/scripts/bd/common/publicAjax.js"></script>
+<script src="/scripts/plugins/plugins.js"></script>
+<script src="/scripts/plugins/layer.js"></script>
+<script src="/scripts/bd/vietnam/web.js"></script>
+<!-- endbuild -->
+</html>
