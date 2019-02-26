@@ -465,6 +465,28 @@
                         "zh-Hant": "登錄",
                         "id": "Masuk"
                     },
+                    "resetPasswordTip":{
+                        "zh": "为了你的账号安全，TigerWit建议您定期重置登录密码",
+                        "en": "Consider your account security, TigerWit suggests you reset your login password regularly.",
+                        "vi": "Do vấn đề bảo mật tài khoản của bạn, TigerWit khuyến nghị bạn đặt lại mật khẩu của mình thường xuyên.",
+                        "zh-Hant": "為了您的賬戶安全，TigerWit建議您定期重置登錄密碼",
+                        "id": "Demi menjaga keamanan akun anda. TigerWit menyarankan anda untuk mengubah kata sandi anda secara berkala."
+                    },
+                    "resetPassword":{
+                        "zh": "重置密码",
+                        "en": "Reset password",
+                        "vi": "Đặt lại mật khẩu",
+                        "zh-Hant": "重置密碼",
+                        "id": "Atur ulang kata sandi"
+                    },
+                    "doResetPassword":{
+                        "zh": "是否重置密码？",
+                        "en": "Do you want to reset your password?",
+                        "vi": "Bạn có muốn cài đặt lại mật khẩu của mình?",
+                        "zh-Hant": "是否重置密碼？",
+                        "id": "Atur Ulang kata sandi anda?"
+                    },
+                        
                     "walletRecord": {
                         "zh": "钱包记录",
                         "en": "Wallet record",
@@ -6318,6 +6340,13 @@
                         "vi": "Không đáp ứng các yêu cầu, hãy tiếp tục làm việc chăm chỉ.",
                         "zh-Hant": "未達成以下高手申請條件，請繼續努力",
                         "id": " Tidak memenuhi kriteria. Teruslah mencoba "
+                    },
+                    "satisfiedConditions":{
+                        "zh": "已满足条件",
+                        "en": "Satisfied conditions",
+                        "vi": "Các điều kiện thỏa mãn",
+                        "zh-Hant": "已滿足條件",
+                        "id": "Syarat terpenuhi"
                     },
                     "masterRequirements1": {
                         "zh": "图片大小超过 2MB 请重新选择",

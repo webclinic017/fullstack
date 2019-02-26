@@ -678,6 +678,9 @@
       text-align: right;
       direction: rtl;
     }
+    .h5_nav{
+      background-color: #1A1E29;
+    }
     .section {
       position: relative;
       .download_app{
@@ -700,21 +703,19 @@
       background-size: 100%;
       transition: background-position 0.8s linear;
       .line1 {
-        position: absolute;
-        left: -25rem;
+        opacity: 0;
       }
       .line1.active {
-        transition: left 1s ease;
-        left: 5.6rem;
+        transition: opacity 1s ease;
+        opacity: 1;
       }
       .line2 {
-        position: absolute;
-        right: -25rem;
+        opacity: 0;
         margin-top: 1.2rem;
       }
       .line2.active {
-        transition: right 1s 1s ease;
-        right: 6rem;
+        transition: opacity 1s 1s ease;
+        opacity: 1;
       }
       &.active{
         background-position: bottom center;
@@ -896,7 +897,6 @@
             height: px2rem(80);
           }
           .title{
-            height: px2rem(28);
             font-size: px2rem(22);
             color: $main-char-color-100;
             line-height: px2rem(28);

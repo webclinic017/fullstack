@@ -149,11 +149,18 @@
         "zh-Hant": indexBasePath + "/m_download_global/section1-phone.png"
     },
     downloadGlobalH5Section4: {
-        en: indexBasePath + "/m_download_global/section4-phone.png",
-        id: indexBasePath + "/m_download_global/section4-phone.png",
-        zh: indexBasePath + "/m_download_global/section4-phone.png",
-        vi: indexBasePath + "/m_download_global/section4-phone.png",
-        "zh-Hant": indexBasePath + "/m_download_global/section4-phone.png"
+
+        en: indexBasePath + "/m_download_global/section4-phone-en.png",
+        id: indexBasePath + "/m_download_global/section4-phone-en.png",
+        zh: indexBasePath + "/m_download_global/section4-phone-en.png",
+        vi: indexBasePath + "/m_download_global/section4-phone-en.png",
+        "zh-Hant": indexBasePath + "/m_download_global/section4-phone-en.png"
+
+        // en: indexBasePath + "/m_download_global/section4-phone-en.png",
+        // id: indexBasePath + "/m_download_global/section4-phone-id.png",
+        // zh: indexBasePath + "/m_download_global/section4-phone-zh.png",
+        // vi: indexBasePath + "/m_download_global/section4-phone-vi.png",
+        // "zh-Hant": indexBasePath + "/m_download_global/section4-phone-zh-Hant.png"
     },
 
     downloadGlobalH5Section6: {

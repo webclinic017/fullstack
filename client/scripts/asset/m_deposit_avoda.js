@@ -18,11 +18,11 @@ $(document).ready(function () {
     getCode.on('click', function () {
         if (!codeSent) {
             if(!params.order_no){
-                layerMsg('请重新创建订单')
+                layerMsg(lang.text('thirdH5.recreate_order'))
                 return
             }
            if(!params.aname.val()){
-                layerMsg('请填写姓名')
+                layerMsg(lang.text('thirdH5.fill_name'))
                 return
             }
             if(!params.card.val()){
@@ -30,15 +30,15 @@ $(document).ready(function () {
                 return
             }
             if(!params.id_card.val()){
-                layerMsg('请填写身份证号')
+                layerMsg(lang.text('thirdH5.fill_id_num'))
                 return
             }
             if(!params.phone.val()){
-                layerMsg('请填写手机号')
+                layerMsg(lang.text('thirdH5.fill_phone'))
                 return
             }
             if(!reg.test(params.phone.val())){
-                layerMsg('请填写正确的手机号')
+                layerMsg(lang.text('thirdH5.fill_correct_phone'))
                 return
             }
             codeSent = true;
@@ -53,7 +53,7 @@ $(document).ready(function () {
                 if (data.is_succ) {
                     window.clearInterval(InterValObj);
                     curCount = count;
-                    getCode.text('验证码已发送（' + curCount + '）')
+                    getCode.text(lang.text('thirdH5.verificationCodeSent') + '（' + curCount + '）')
                     InterValObj = setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
                 }
                 else {
@@ -66,11 +66,11 @@ $(document).ready(function () {
     submitAvoda.on('click', function () {
         if (!submitMis) {
             if(!params.order_no){
-                layerMsg('请重新创建订单')
+                layerMsg(lang.text('thirdH5.recreate_order'))
                 return
             }
             if(!params.code.val()){
-                layerMsg('请填写验证码')
+                layerMsg(lang.text('thirdH5.fill_ver_code'))
                 return
             }
             submitMis = true;
@@ -105,12 +105,12 @@ $(document).ready(function () {
     function SetRemainTime() {
         if (curCount == 0) {
             window.clearInterval(InterValObj);//停止计时器
-            getCode.text("获取验证码");
+            getCode.text(lang.text('thirdH5.mRegister05'));
             codeSent = false;
         }
         else {
             curCount--;
-            getCode.text('验证码已发送（' + curCount + '）');
+            getCode.text(lang.text('thirdH5.verificationCodeSent') + '（' + curCount + '）');
         }
     }
 });

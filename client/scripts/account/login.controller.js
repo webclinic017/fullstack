@@ -303,12 +303,12 @@
                         var obj = {
                             title: null,
                             titleClass: 'account_login__layer-title',
-                            msg: "为了你的账号安全，TigerWit建议您定期重置登录密码",
+                            msg: lang.text('tigerWitID.login.resetPasswordTip'),
                             msgClass: 'account_login__layer-msg',
                             btns: {},
                             btnsClass: 'account_login__layer-btns'
                         }
-                        obj.btns["重置密码"] = function(){
+                        obj.btns[lang.text('tigerWitID.login.resetPassword')] = function(){
                             $state.go('space.setting.subpage', {subpage: 'secure'});
                         }
                         obj.btns[lang.text("tigerWitID.cancel")] = function(){};
@@ -365,7 +365,7 @@
                                 var obj = {
                                     title: null,
                                     titleClass: 'account_login__layer-title',
-                                    msg: '是否重置密码',
+                                    msg: lang.text('tigerWitID.login.doResetPassword'),
                                     msgClass: 'account_login__layer-msg',
                                     btns: {},
                                     btnsClass: 'account_login__layer-btns'
