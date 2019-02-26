@@ -158,7 +158,7 @@
                     </div>
                 </div>
 
-                <div class="row" ng-if="card.world && card.world.world_code !== 'CN'">
+                <div class="row" ng-if="card.world && (card.world.world_code !== 'CN' && card.world.world_code !== 'VN')">
                     <div class="col-xs-3 text-left">
                         <label>{{lang.text('tigerWitID.wallet.bankIdentificationCodeM')}}</label>
                     </div>

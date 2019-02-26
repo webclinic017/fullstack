@@ -29,6 +29,9 @@
         setClueCustomer: origin + '/auth/page_signup', // post
         setInviteCode: origin + '/invite_code', // post
         // setCustomerPromotion: origin + '/user/ib_agent', // post
+        getAvodaCode: origin + '/avoda/code', // post
+        getAvodaPay: origin + '/avoda/pay', // post
+
         //交易品种
         getSymbols: origin_app + '/symbol/list', //get
         // 荣耀王者活动

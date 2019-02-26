@@ -79,7 +79,7 @@
                 value: target.phone_code
             }
         }
-        // 根据域名判断是否为cn
+        // 根据域名判断是否为cn 无用
         if(lang.hostIsCn()){
             selectArea({phone_code: 86})
         }
@@ -267,6 +267,7 @@
                 $scope.loginBtnStatus = true;
 
                 if (data.is_succ) {
+                    sessionStorage.removeItem("passErrThree");
                     $scope.writeCookie({nameKey: 'token', nameValue: data.data.token});
                     $scope.writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
                     $scope.writeCookie({nameKey: 'username', nameValue: data.data.username});
@@ -297,6 +298,22 @@
                     //     }, 150);
                     //     return;
                     // }
+                    // 三个月定期修改密码
+                    if(data.data.pwd_tip == 1){
+                        var obj = {
+                            title: null,
+                            titleClass: 'account_login__layer-title',
+                            msg: lang.text('tigerWitID.login.resetPasswordTip'),
+                            msgClass: 'account_login__layer-msg',
+                            btns: {},
+                            btnsClass: 'account_login__layer-btns'
+                        }
+                        obj.btns[lang.text('tigerWitID.login.resetPassword')] = function(){
+                            $state.go('space.setting.subpage', {subpage: 'secure'});
+                        }
+                        obj.btns[lang.text("tigerWitID.cancel")] = function(){};
+                        $layer(obj)
+                    }
                     $timeout(function () {
                         // 神策统计 - 登录
                         sa.track('login', {
@@ -307,7 +324,7 @@
                         account.hasChecked = false;
                         // lang.globalOrCn(data.data.area_id);
                         $scope.$emit('relogin_info');
-                        window.location.href="/space/#/center";
+                        $state.go('space.center.index');
                     }, 150);
                 } else {
                     // 登录时，用户不存在，返回 code 为 100504
@@ -330,6 +347,38 @@
                             $scope.login(formName, 'is_agree');
                             layer.close(resolve.layIndex)
                         })
+                    } else if(data.code == 100505){
+                            // 密码输错三次验证
+                            // 邮箱
+                            var passErrThree = JSON.parse(sessionStorage['passErrThree'] || '{}');
+                            var passErrThreeKey;
+                            var passErrThreeVal;
+                            if($scope.loginStep3 == 1) {
+                                passErrThreeKey = $scope.account.emailEmali;
+                            }else {
+                                passErrThreeKey = $scope.account.phoneArea.value + '' + $scope.account.phonePhone
+                            }
+                            passErrThreeVal = parseInt(passErrThree[passErrThreeKey]) || 0;
+                            passErrThree[passErrThreeKey] = passErrThreeVal + 1;
+                            sessionStorage['passErrThree'] = JSON.stringify(passErrThree)
+                            if((passErrThreeVal + 1) == 3){
+                                var obj = {
+                                    title: null,
+                                    titleClass: 'account_login__layer-title',
+                                    msg: lang.text('tigerWitID.login.doResetPassword'),
+                                    msgClass: 'account_login__layer-msg',
+                                    btns: {},
+                                    btnsClass: 'account_login__layer-btns'
+                                }
+                                obj.btns[lang.text('tigerWitID.yes')] = function(){
+                                    $scope.loginStep2 = 2;
+                                    sessionStorage.removeItem("passErrThree");
+                                };
+                                obj.btns[lang.text('tigerWitID.no')] = function(){}
+                                $layer(obj)
+                            }else {
+                                layer.msg(data.message);
+                            }
                     } else {
                         layer.msg(data.message);
                     }

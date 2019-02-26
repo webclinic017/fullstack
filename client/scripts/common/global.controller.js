@@ -214,6 +214,7 @@
                     writeCookie({ nameKey: 'user_code', nameValue: '', expires: -1 });
                     writeCookie({ nameKey: 'username', nameValue: '', expires: -1 });
                     writeCookie({ nameKey: 'username_en', nameValue: '', expires: -1 });
+                    writeCookie({nameKey: 'area_id', nameValue: '', expires: -1 });
                     account.hasChecked = false;
                     $window.location.href = '/space/#/account/login';
                     // $state.go('account.subpage', {params: 'login'});
@@ -246,7 +247,14 @@
             // console.log(newVal, oldVal);
             if (newVal && newVal != oldVal) {
                 getEmailPhone(true);
+                // 区分cn与其他，例如红涨绿跌
+                if(newVal == 'CN'){
+                    writeCookie({nameKey: 'area_id', nameValue: 1 });
+                }else{
+                    writeCookie({nameKey: 'area_id', nameValue: '', expires: -1 });
+                }
             }
+            
         })
         function getEmailPhone(force_update) {
             // force_update = true;    //上线时去掉
@@ -361,8 +369,9 @@
                     $scope.closeModal = closeModal;
                     $scope.position = passedScope.position;
                     $scope.lang = lang;
-
-                    $scope.dredge_type = 'all';
+                    if($scope.position != "register" && globalScope.personal.open_account_type >= 0){
+                        $scope.open_account_type = globalScope.personal.open_account_type; //判断是否显示开通体验金
+                    }
                     $scope.loading = {
                         demo: false
                     }
@@ -466,7 +475,8 @@
                         // 开通类型
                         dredged_type: accountStatusMap[accountStatus],
                         passedAuthen: passedAuthen,
-                        account_status: accountStatus
+                        account_status: accountStatus,
+                        open_account_type: data.data.open_account_type // 1 为只能开通真实账户
                     }
                     angular.extend($scope.personal, params);
                     if (accountStatus == '1') {

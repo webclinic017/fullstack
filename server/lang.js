@@ -26,17 +26,19 @@ module.exports = function () {
         }
         for (var name in cookieList) {
             // console.info(name);
+            // 获取cookie中的lang
             if (name === 'lang') {
                 if(cookieList[name] instanceof Array){
                     languageTemp = cookieList[name][0];
                 } else {
                     languageTemp = cookieList[name];
                 }
+                break;
             }
         }
-        if (!parseCookie(req.headers.cookie).lang && (req.host.indexOf('global.tigerwit.com') != -1 || req.host.indexOf('globaldemo.tigerwit.com') != -1)) {
-            languageTemp = 'en';
-        }
+        // if (!parseCookie(req.headers.cookie).lang && (req.host.indexOf('global.tigerwit.com') != -1 || req.host.indexOf('globaldemo.tigerwit.com') != -1)) {
+        //     languageTemp = 'en';
+        // }
         if (url.parse(req.url, true).query.lang) {
             languageTemp = url.parse(req.url, true).query.lang;
         }
@@ -51,6 +53,9 @@ module.exports = function () {
         this.req = req;
         this.company_name = company_name;
         this.clonedBaidu = clonedBaidu;
+        // 根据areaId大区显示({"key": "中国区","value": 1},{"key": "国际区","value": 2},{"key": "英国区","value": 3})
+        this.areaId = parseCookie(req.headers.cookie).area_id;
+        // console.log(this.areaId, 'areaId')
         // return this;         
     }
     Lang.prototype = {
@@ -104,7 +109,7 @@ module.exports = function () {
             } else {
                 return false;
             }
-        },
+        }, //没用
         isVersion: function(version){
             var vMap = {
                 global: 'tigerwell_global',

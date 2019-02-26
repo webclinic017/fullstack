@@ -1,5 +1,5 @@
 <div class="index_new">
-  <%if (req.host.indexOf('global') != -1) {%>
+  <%if (lang.areaId != 1) {%>
   <div class="index_new__focus" style='background-image: url("<%= lang.image('homeFocusGlobal')%>")'>
   <%} else {%>
     <div class="index_new__focus" style='background-image: url("<%= lang.image('homeFocusCn')%>")'>
@@ -35,7 +35,7 @@
       </div>
       <div class="index_new__focus-download">
         <a href="<%= lang.text('downloadGlobalIos') %>"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
-        <%if (req.host.indexOf('global') != -1) {%>
+        <%if (lang.areaId != 1) {%>
           <a href="<%= lang.text('downloadGlobalAndroid') %>"><img src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
         <%} else {%>
           <a href="<%= lang.text('androidApp') %>"><img src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
@@ -116,7 +116,7 @@
                         {{ quoteSymbol.symbol }}
                         <%}%>
                     </li>
-                    <%if (req.host.indexOf('global') != -1) {%>
+                    <%if (lang.areaId != 1) {%>
                     <li class="sell" ng-class="{down: quoteSymbol.type === 'up', up: quoteSymbol.type === 'down'}">
                         <span>
                             {{ quoteSymbol.sell }}
@@ -193,7 +193,7 @@
       </div>
     </div>
   </div>
-  <%if (req.host.indexOf('global') != -1) {%>
+  <%if (lang.areaId != 1) {%>
     <div class="index_new__tools" style='background-image: url("<%= lang.image('homeToolsBgGlobal')%>")'>
   <%} else {%>
     <div class="index_new__tools" style='background-image: url("<%= lang.image('homeToolsBgCn')%>")'>
@@ -207,7 +207,7 @@
       <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35_2")%></p>
       <div class="index_new__tools-download">
         <a href="<%= lang.text('downloadGlobalIos') %>"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
-        <%if (req.host.indexOf('global') != -1) {%>
+        <%if (lang.areaId != 1) {%>
           <a href="<%= lang.text('downloadGlobalAndroid') %>"><img src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
         <%} else {%>
           <a href="<%= lang.text('androidApp') %>"><img src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>

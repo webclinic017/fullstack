@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<!--引入公用头部-->
+<% include /common/meta/h5.html %>
+<!-- 引入H5 CSS -->
+<!-- build:css(.tmp) /styles/h5_common.css -->
+<link rel="stylesheet" href="/styles/h5_common.css">
+<!-- endbuild -->
+<% include /common/vendor/h5.utiljs.html %>
+<% include /common/statistic/main.html %>
+<script>
+    var platform = '<%= platform%>';
+</script>
+
+<body>
+
+<div class="m_deposit_avoda <%= platform%>">
+    <div class="m_deposit_avoda__logo">
+        <img src="/white_label/deposit/avoda-logo.png" alt="">
+    </div>
+    <p class="m_deposit_avoda__tip">
+        *<%= lang.text("avoda_pay_tip")%>
+    </p>
+    <div class="m_deposit_avoda__register">
+        <a class="btn btn-primary-gradient" href="https://secure.avodapay.com"><%= lang.text("go_registration")%></a>
+    </div>
+    <div class="m_deposit_avoda__input">
+        <label for="">
+            <span class="input-name"><%= lang.text("third_username4")%></span>
+            <input type="text" name="name">
+        </label>
+
+        <label for="">
+            <span class="input-name"><%= lang.text("thirdH5.bankCardName")%></span>
+            <input type="text" name="card">
+        </label>
+
+        <label for="">
+            <span class="input-name"><%= lang.text("third_username13")%></span>
+            <input type="text" name="id_card">
+        </label>
+
+        <label for="">
+            <span class="input-name"><%= lang.text("mRegister02")%></span>
+            <input type="text" name="phone">
+            <span class="get-code" id="getCode"><%= lang.text("mRegister05")%></span>
+        </label>
+
+        <label for="">
+            <span class="input-name"><%= lang.text("mRegister03")%></span>
+            <input type="text" name="code">
+        </label>
+    </div>
+    <div class="m_deposit_avoda__submit">
+        <span class="btn btn-primary-gradient" id="submitAvoda">
+            <%= lang.text("thirdH5.confirm")%>
+        </span>
+    </div>
+</div>
+
+</body>
+<% include /common/vendor/h5.js.html %>
+<!-- build:js(client) /scripts/m_deposit_avoda.js -->
+<script src="/scripts/plugins/baiduTemplate.js"></script>
+<script src="/scripts/asset/m_deposit_avoda.js"></script>
+<!-- endbuild -->
+
+<%- include('/common/statistic/all.html') %>
+</html>

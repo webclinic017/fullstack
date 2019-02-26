@@ -13,7 +13,7 @@
             loading: true,
             loading2: false,
             data: {},
-            condition: false
+            condition: false // 是否满足申请高手条件
         };
         $scope.applyMaster = applyMaster;
         $scope.comfirmApplyMaster = comfirmApplyMaster;
