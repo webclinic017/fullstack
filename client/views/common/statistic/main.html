@@ -1,4 +1,4 @@
-<%if (req.host.indexOf('global') != -1) {%>
+<%if (lang.areaId != 1) {%>
 <!-- Facebook Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -48,7 +48,7 @@ src="https://www.facebook.com/tr?id=2082695268476120&ev=PageView&noscript=1"
         'global.tigerwit.com',
         'cn.tigerwit.com',
         'bd.tigerwitfx.com'
-    ];
+    ]; // cn无用需删
     var allowStatus = false;
     for (var i=0;i<allowPath.length;i++) {
         if (window.location.href.indexOf(allowPath[i]) != -1) {

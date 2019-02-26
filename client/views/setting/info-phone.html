@@ -1,10 +1,76 @@
 <div ng-controller="SettingInfoPhoneController">
-    <p class="pd-tp-20 pd-bt-30 setting_info_zero__list-title">
+    <p ng-if="settingInfo.phone" class="pd-tp-20 pd-bt-30 setting_info_zero__list-title">
         <span class="line">{{lang.text('tigerWitID.settings.phoneNumberSettings')}}</span>
         <span>{{lang.text('tigerWitID.settings.boundPhoneXXX')}}</span>
         <span class="font-info">{{settingInfo.phone}}</span>
     </p>
-    <div class="row setting_info_zero__list-input">
+    <p ng-if="!settingInfo.phone" class="pd-tp-20 pd-bt-10 setting_info_zero__list-title">
+        <span class="line">{{lang.text('tigerWitID.settings.phoneNumberSettings')}}</span>
+        <span>你暂没有绑定手机号</span>
+    </p>
+    <div class="row setting_info_zero__list-input" ng-show="step === 1">
+            <form name="oldPhoneForm" novalidate autocomplete="off">
+
+                <div class="col-xs-3 text-center">
+                    <div class="relative">
+                        <div class="captcha_btn" 
+                                tw-captcha-timer 
+                                start-timer="oldStartTimer" 
+                                voice-captcha="oldVoiceCaptcha" 
+                                captcha-btn-clickable="clickable.oldCaptcha" 
+                                ng-disabled="!clickable.oldCaptcha" 
+                                ng-click="getCaptcha('old')">
+                            {{lang.text('tigerWitID.settings.getVerificationCode')}}
+                        </div>
+    
+                        <div ng-show="backErr.oldCaptchaBtn.show">
+                            <p class="alert-arrow_tp_lf">
+                                {{ backErr.oldCaptchaBtn.msg }}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-xs-3">
+                    <div class="form-control-wrapper">
+                        <input class="form-control" 
+                               name="oldCaptcha" 
+                               type="text"
+                               placeholder="{{lang.text('tigerWitID.settings.verificationCode')}}"
+                               required
+                               ng-class="{'form-control-error': (frontErr.oldCaptcha.show && oldPhoneForm.oldCaptcha.$invalid) || (backErr.oldCaptcha.show && backErr.oldCaptcha.status > 0)}"
+                               ng-model="phone.oldCaptcha"
+                               ng-focus="hideErr('oldPhoneForm', 'oldCaptcha')"
+                               ng-blur="showErr('oldPhoneForm', 'oldCaptcha')">
+    
+                        <div ng-show="frontErr.oldCaptcha.show">
+                            <p class="alert-arrow_tp_lf" ng-show="oldPhoneForm.oldCaptcha.$error.required" ng-style="{padding: lang.isEnglishArea() ? '8px 7px' : ''}">
+                                {{lang.text('tigerWitID.settings.enterVerificationCode')}}
+                            </p>
+                        </div>
+    
+                        <div ng-show="backErr.oldCaptcha.show">
+                            <p class="alert-arrow_tp_lf" ng-show="backErr.oldCaptcha.status === 1">
+                                {{lang.text('tigerWitID.settings.verificationCodeNo')}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-xs-6 text-right pd-lf-0">
+                    <button class="tw-btn tw-btn-md tw-btn-capsule-gradient mg-lf-0" type="submit" ng-if="clickable.oldSubmit" ng-click="checkPhoneCode('oldPhoneForm')">
+                        {{lang.text('tigerWitID.submit')}}
+                    </button>
+    
+                    <button class="tw-btn tw-btn-md tw-btn-capsule-gradient mg-lf-0" ng-if="!clickable.oldSubmit">
+                        <i class="loading_spinner fa fa-spinner"></i>
+                        {{lang.text('tigerWitID.submitting')}}
+                    </button>
+                </div>
+            </form>
+        </div>
+
+    <div class="row setting_info_zero__list-input" ng-show="step === 2">
         <form name="phoneForm" novalidate autocomplete="off">
             <div class="col-xs-2">
                 <div class="form-control-wrapper">
@@ -22,7 +88,7 @@
                         <ul class="select__dropdown" twform-select data-bind-model="phone_test">
                             
                             <li class="first_li"><input type="text" placeholder="{{lang.text('tigerWitID.login.countryCode')}}" ng-model="placeholderArea"><i class="fa fa-search"></i></li>
-                            <li ng-repeat="world in worlds | filter : placeholderArea" ng-class="{'selected': world.code == phone.phone_code.value}">
+                            <li ng-repeat="world in worlds | filter : placeholderArea" ng-class="{'selected': world.phone_code == phone.phone_code.value}">
                                 <span data-value="{{world.code}}" data-disabled='{"disabled": {{world.disabled}}, "msg": "{{lang.text("tigerWitID.myAccount.unableCountry")}}"}' ng-click="world.disabled || selectWorld(world)" ng-class="{'font-light': world.disabled}">+{{world.phone_code}}({{world.name}})</span>
                             </li>
                         </ul>
@@ -94,7 +160,7 @@
                             voice-captcha="voiceCaptcha" 
                             captcha-btn-clickable="clickable.captcha" 
                             ng-disabled="!clickable.captcha" 
-                            ng-click="getCaptcha()">
+                            ng-click="getCaptcha('new')">
                         {{lang.text('tigerWitID.settings.getVerificationCode')}}
                     </div>
 

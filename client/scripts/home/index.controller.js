@@ -170,7 +170,7 @@
             user_name: "tiger",
             key: "WjIABSkfG96GL0z2",
             logined: false
-        };
+        }; // cn无用需删
         var ws;
         initDefalutSymbol();
         function initDefalutSymbol() {

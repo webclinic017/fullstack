@@ -5,24 +5,27 @@ if (getUrlParam('world_code') === 'CN') {
   $(".third_app_bank__item.is_cn").css("display", "block");
 } else {
   $(".third_app_bank__item.is_global").css("display", "block");
+  if (getUrlParam('world_code') !== 'VN') {
+    $(".third_app_bank__item.is_vn").css("display", "block");
+  }
 }
 
 $(".third_app_bank__item input").on("input propertychange", function () {
   var info = $(this).val();
   // console.log(info, $(this).attr("name"));
   if (info) {
-    $(".third_app_bank__item .name[data-name="+$(this).attr("name")+"]").addClass('active');
+    $(".third_app_bank__item .name[data-name=" + $(this).attr("name") + "]").addClass('active');
   } else {
-    $(".third_app_bank__item .name[data-name="+$(this).attr("name")+"]").removeClass('active');
+    $(".third_app_bank__item .name[data-name=" + $(this).attr("name") + "]").removeClass('active');
   }
 });
 $(".third_app_bank__item select").on("change", function () {
   // console.log($(this).find("option:selected").val());
-  $(".third_app_bank__item input[name="+$(this).attr("name")+"]").val($(this).find("option:selected").text());
+  $(".third_app_bank__item input[name=" + $(this).attr("name") + "]").val($(this).find("option:selected").text());
   if ($(this).val()) {
-    $(".third_app_bank__item .name[data-name="+$(this).attr("name")+"]").addClass('active');
+    $(".third_app_bank__item .name[data-name=" + $(this).attr("name") + "]").addClass('active');
   } else {
-    $(".third_app_bank__item .name[data-name="+$(this).attr("name")+"]").removeClass('active');
+    $(".third_app_bank__item .name[data-name=" + $(this).attr("name") + "]").removeClass('active');
   }
 
   if ($(this).attr("name") === 'province') {
@@ -37,7 +40,7 @@ $(".third_app_bank__item select[name=city]").on("tap", function () {
 });
 
 $("#third_app_bank_cancel").on("tap", function () {
-  window.location.href="/m/third/asset";
+  window.location.href = "/m/third/asset";
   return false;
 });
 
@@ -79,7 +82,7 @@ $("#third_app_bank_btn").on("tap", function () {
     openMessageMdl("Fill in the opening account bank");
     return false;
   }
-  if (personalInfo.region.world_code !== 'CN' && !swift_code) {
+  if (personalInfo.region.world_code !== 'CN' && personalInfo.region.world_code !== 'VN' && !swift_code) {
     openMessageMdl("Please fill in the bank identification code");
     return false;
   }
@@ -96,7 +99,9 @@ $("#third_app_bank_btn").on("tap", function () {
     oParams.phone = phone;
   } else {
     oParams.bank_name = bankOther;
-    oParams.swift_code = swift_code;
+    if (personalInfo.region.world_code !== 'VN') {
+      oParams.swift_code = swift_code;
+    }
   }
   openLoadingMdl();
   publicRequest('uploadThirdBankInfo', 'PUT', oParams).then(function (data) {
@@ -109,7 +114,7 @@ $("#third_app_bank_btn").on("tap", function () {
         // openThirdNative({
         //   type: "backPrev"
         // });
-        window.location.href="/m/third/asset";
+        window.location.href = "/m/third/asset";
       }, 1000);
     } else {
       openMessageMdl(data.message);
@@ -118,7 +123,7 @@ $("#third_app_bank_btn").on("tap", function () {
   return false;
 });
 
-function getBankNames () {
+function getBankNames() {
   publicRequest('getThirdBankNames', 'GET', {
     type: 1
   }).then(function (data) {
@@ -128,7 +133,7 @@ function getBankNames () {
     }
   });
 }
-function getProvinces () {
+function getProvinces() {
   publicRequest('getThirdProvinces', 'GET', {
     country_code: 'CN'
   }).then(function (data) {
@@ -138,7 +143,7 @@ function getProvinces () {
     }
   });
 }
-function getCities (parent_code) {
+function getCities(parent_code) {
   // console.log(parent_code);
   $('#third_app_bank_city').html('');
   if (!parent_code) {
@@ -156,7 +161,7 @@ function getCities (parent_code) {
   });
 }
 
-function refreshBankInfo () {
+function refreshBankInfo() {
   $(".third_app_bank__item input[name=realname]").val(personalInfo.realname);
   $(".third_app_bank__item input[name=country]").val(personalInfo.region.world_name);
 }

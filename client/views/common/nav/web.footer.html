@@ -79,7 +79,7 @@
                             <span><%= lang.text("foot11")%></span>
                         </p>
                     </h2>
-                <%if (req.host.indexOf('global') != -1) {%>
+                <%if (lang.areaId != 1) {%>
                     <ul>
                         <li class="mg-bt-15">
                             <h3>
@@ -95,7 +95,7 @@
                         </li>
                     </ul>
                 <%}%>
-                <%if (req.host.indexOf('global') == -1) {%>
+                <%if (lang.areaId == 1) {%>
                     <div class="contact-us pd-tp-5">
                         <div class="">
                             <p>
@@ -234,7 +234,7 @@ zE(function() {
      <span style="position: absolute; top: -2px; left: -10px; width: 25px; height: 25px; cursor: pointer;" onclick="setPositioningQRCode()">
          <img src="/images/footer-customer-close-icon.png">
      </span>
-     <%if (req.host.indexOf('global') != -1) {%>
+     <%if (lang.areaId != 1) {%>
         <img style="cursor: pointer;" src="<%= lang.image('footerCustomerGloabal')%>" onclick="OpenChat();">
      <%} else {%>
         <img style="cursor: pointer;" src="<%= lang.image('footerCustomerCn')%>" onclick="OpenChat();">

@@ -32,9 +32,9 @@
         ];
         // console.log(cArr);
         //global未设置语言时默认英文
-        if (!lang && !parseCookie(req.headers.cookie).lang && (req.host.indexOf('global.tigerwit.com') != -1 || req.host.indexOf('globaldemo.tigerwit.com') != -1)) {
-            cArr.push('lang=en; path=/; domain='+domain);
-        }
+        // if (!lang && !parseCookie(req.headers.cookie).lang && (req.host.indexOf('global.tigerwit.com') != -1 || req.host.indexOf('globaldemo.tigerwit.com') != -1)) {
+        //     cArr.push('lang=en; path=/; domain='+domain);
+        // }
         if (lang) {
             // cArr.push('lang=en; path=/; domain='+domain);
             cArr.push('lang='+lang+'; path=/; domain='+domain);

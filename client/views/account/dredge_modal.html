@@ -1,7 +1,7 @@
 <div class="sys_modal_v2 slim_case">
   <button class="close" ng-click="closeModal()">&times;</button>
   <div class="sys_modal_v2__content" ng-if="!lang.isEnglishArea()">
-    <div class="dredge_box mg-bt-40" ng-show="dredge_type == 'live' || dredge_type == 'all'">
+    <div class="dredge_box mg-bt-40">
       <h3 class="sys_modal_v2__title text-center">{{lang.text('tigerWitID.settings.openLiveAccount')}}</h3>
       <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.settings.openLiveAccountTip1')}}</p>
       <p class="sys_modal_v2__desp pd-tp-10">{{lang.text('tigerWitID.settings.openLiveAccountTip2')}}</p>
@@ -14,7 +14,7 @@
           </a>
       </div>
     </div>
-    <div class="text-left" ng-show="dredge_type == 'demo' || dredge_type == 'all'">
+    <div class="text-left" ng-show="open_account_type != 1">
       <h3 class="sys_modal_v2__title text-center">{{lang.text('tigerWitID.settings.openExperienceAccount')}}</h3>
       <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.settings.openExperienceAccountTip1')}}</p>
       <p class="sys_modal_v2__desp pd-tp-10">{{lang.text('tigerWitID.settings.openExperienceAccountTip2')}}</p>
@@ -29,7 +29,7 @@
     </div>
   </div>
   <div class="sys_modal_v2__content" ng-if="lang.isEnglishArea()">
-    <div class="dredge_box mg-bt-40" ng-show="dredge_type == 'live' || dredge_type == 'all'">
+    <div class="dredge_box mg-bt-40">
       <h3 class="sys_modal_v2__title text-center">{{lang.text('tigerWitID.settings.openAcount1')}}</h3>
       <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.settings.openAcount2')}}</p>
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount3')}}</p>
@@ -43,7 +43,7 @@
           </a>
       </div>
     </div>
-    <div class="text-left" ng-show="dredge_type == 'demo' || dredge_type == 'all'">
+    <div class="text-left" ng-show="open_account_type != 1">
       <h3 class="sys_modal_v2__title text-center">{{lang.text('tigerWitID.settings.openAcount9')}}</h3>
       <p class="sys_modal_v2__desp">{{lang.text('tigerWitID.settings.openAcount10')}}</p>
       <p class="sys_modal_v2__desp pd-tp-5">&nbsp; <span class="font-danger">*</span> {{lang.text('tigerWitID.settings.openAcount11')}}</p>

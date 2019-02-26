@@ -9,14 +9,30 @@
     SettingInfoPhoneController.$inject = ['$scope', '$timeout', '$cookies', 'validator', 'account'];
 
     function SettingInfoPhoneController($scope, $timeout, $cookies, validator, account) {
+        // step1 => binding old Phone , step2 => binding new Phone
+        $scope.step = 1;
+
         $scope.phone = {
+            oldCaptcha: '',
             phone_code: {
                 key: '+86',
                 value: '86'
             },
-            phoneNew: undefined,
-            captcha: undefined
+            phoneNew: '',
+            captcha: ''
         };
+        $scope.$watch('settingInfo.phone', function (newVal, oldVal) {
+
+            $scope.step = newVal ? 1 : 2;
+            if (newVal) {
+                $scope.phone.phone_code = {
+                    key: '+' + $scope.settingInfo.phone_code,
+                    value: $scope.settingInfo.phone_code
+                }
+            }
+
+        });
+        // 为兼容下拉组件
         $scope.phone_test = {
             key: undefined,
             value: undefined
@@ -29,10 +45,21 @@
             },
             captcha: {
                 show: false
+            },
+            oldCaptcha: {
+                show: false
             }
         };
 
         $scope.backErr = {
+            oldCaptcha: {
+                show: false,
+                status: 0
+            },
+            oldCaptchaBtn: {
+                show: false,
+                msg: ''
+            },
             phoneNew: {
                 show: false,
                 status: 0
@@ -52,51 +79,75 @@
             }
         };
         $scope.clickable = {
+            oldCaptcha: true,  // 获取验证码按钮
+            oldSubmit: true,      // 提交按钮
             captcha: true,  // 获取验证码按钮
             submit: true,      // 提交按钮
         };
-        $scope.voiceCaptcha = false;
+        $scope.voiceCaptcha = false;  // 语音验证码
+        $scope.oldVoiceCaptcha = false;  // 语音验证码
         $scope.hideErr = hideErr;
         $scope.showErr = showErr;
         $scope.getCaptcha = getCaptcha;
+        $scope.checkPhoneCode = checkPhoneCode;
         $scope.submitForm = submitForm;
         $scope.selectWorld = selectWorld;
         var token;
         getWorlds();
 
-        function getCaptcha() {
-            showErr('phoneForm', 'phoneNew');
-
-            if ($scope['phoneForm']['phoneNew'].$invalid) {
-                return;
-            }
-            $scope.clickable.captcha = false;
+        function getCaptcha(type) {
             token = $cookies['code_token'];
-            var tmp;
-            if ($scope.voiceCaptcha) {
-                tmp = account.sendCode($scope.phone.phoneNew, token, 3, '', 1);
-            } else {
-                tmp = account.sendCode($scope.phone.phoneNew, token, 3, '', 1);  
+
+            if (type == 'new') {
+                showErr('phoneForm', 'phoneNew');
+
+                if ($scope['phoneForm']['phoneNew'].$invalid) {
+                    return;
+                }
+
+                $scope.clickable.captcha = false;
+                var tmp = account.sendCode($scope.phone.phoneNew, token, 3, '', 1);
+                tmp.then(function (data) {
+                    if (!data) return;
+                    if (data.is_succ) {
+                        $scope.startTimer();
+                    } else {
+
+                        $scope.backErr.captchaBtn.show = true;
+                        $scope.backErr.captchaBtn.msg = data.message;
+
+                        $timeout(function () {
+                            $scope.backErr.captchaBtn.show = false;
+                            $scope.backErr.captchaBtn.msg = 0;
+                            $scope.clickable.captcha = true;
+                        }, 3000);
+                    }
+                });
+            }
+            if (type == 'old') {
+                $scope.clickable.oldCaptcha = false;
+                var tmp = account.sendCode('', token, 3, '', 1);
+
+                tmp.then(function (data) {
+                    if (!data) return;
+                    if (data.is_succ) {
+                        $scope.oldStartTimer();
+                    } else {
+
+                        $scope.backErr.oldCaptchaBtn.show = true;
+                        $scope.backErr.oldCaptchaBtn.msg = data.message;
+
+                        $timeout(function () {
+                            $scope.backErr.oldCaptchaBtn.show = false;
+                            $scope.backErr.oldCaptchaBtn.msg = 0;
+                            $scope.clickable.oldCaptcha = true;
+                        }, 3000);
+                    }
+                });
             }
 
-            tmp.then(function (data) {
-                if (!data) return;
-                if (data.is_succ) {
-                    $scope.startTimer();
-                } else {
 
-                    $scope.backErr.captchaBtn.show = true;
-                    $scope.backErr.captchaBtn.msg = data.message;
-
-                    $timeout(function () {
-                        $scope.backErr.captchaBtn.show = false;
-                        $scope.backErr.captchaBtn.msg = 0;
-                        $scope.clickable.captcha = true;
-                    }, 3000);
-                }
-            });
         }
-
         function getWorlds() {
             account.getWorlds().then(function (data) {
                 if (!data) return;
@@ -108,11 +159,33 @@
             });
         }
 
-        function selectWorld (target) {
+        function selectWorld(target) {
             $scope.phone.phone_code = {
-                key: '+'+target.phone_code,
+                key: '+' + target.phone_code,
                 value: target.phone_code
             }
+        }
+
+        function checkPhoneCode(formName) {
+            showErr(formName, 'oldCaptcha');
+
+            if ($scope.oldPhoneForm.oldCaptcha.$invalid) {
+                return;
+            }
+            $scope.clickable.oldSubmit = false;
+
+            account.checkCode(null, $scope.phone.oldCaptcha, 1).then(function (data) {
+                // console.info(data);
+                $scope.clickable.oldSubmit = true;
+                if (!data) return;
+                if (data.is_succ) {
+                    $scope.step++;
+                } else {
+                    layer.msg(data.message, {
+                        time: 2000
+                    });
+                }
+            });
         }
 
         function submitForm(formName) {
@@ -134,23 +207,23 @@
                     // sa.setProfile({
                     //     phone: $scope.phone.phoneNew
                     // });
-                    
-                    $scope.settingInfo.phone = $scope.phone.phoneNew; 
+
+                    $scope.settingInfo.phone = $scope.phone.phoneNew;
 
                     $timeout(function () {
                         window.location.reload();
-                    }, 1000); 
+                    }, 1000);
                 } else {
                     $scope.backErr.system.status = 2;
                     $scope.backErr.system.msg = data.message;
-                    $scope.clickable.submit = true;  
+                    $scope.clickable.submit = true;
                 }
                 $timeout(function () {
                     $scope.backErr.system.show = false;
                     $scope.backErr.system.status = 0;
                     $scope.clickable.submit = true;
-                }, 3000);  
-                  
+                }, 3000);
+
             });
         }
 
