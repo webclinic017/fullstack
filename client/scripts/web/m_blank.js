@@ -8,17 +8,18 @@
             $(".weixinTip").css("display", "block");
             return;
         }
-        if (isCn) {
-            window.location.href = nodeResponseInfo.android;
-        } else {
-            window.location.href = nodeResponseInfo.androidGlobal;
-        }
+        window.location.href = nodeResponseInfo.android;
+        // if (isCn) {
+            
+        // } else {
+        //     window.location.href = nodeResponseInfo.androidGlobal;
+        // }
         
     } else {
-        if (isCn) {
-            window.location.href = "https://itunes.apple.com/cn/app/id1091437876";
-        } else {
-            window.location.href = nodeResponseInfo.ios;
-        }
+        // if (isCn) {
+        //     window.location.href = "https://itunes.apple.com/cn/app/id1091437876";
+        // } else {
+        //     window.location.href = nodeResponseInfo.ios;
+        // }
     }
 });

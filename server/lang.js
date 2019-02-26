@@ -36,9 +36,9 @@ module.exports = function () {
                 break;
             }
         }
-        if (!parseCookie(req.headers.cookie).lang && (req.host.indexOf('global.tigerwit.com') != -1 || req.host.indexOf('globaldemo.tigerwit.com') != -1)) {
-            languageTemp = 'en';
-        }
+        // if (!parseCookie(req.headers.cookie).lang && (req.host.indexOf('global.tigerwit.com') != -1 || req.host.indexOf('globaldemo.tigerwit.com') != -1)) {
+        //     languageTemp = 'en';
+        // }
         if (url.parse(req.url, true).query.lang) {
             languageTemp = url.parse(req.url, true).query.lang;
         }

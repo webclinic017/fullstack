@@ -78,6 +78,13 @@ module.exports = function () {
             "zh-Hant":"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton",
             id:"http://20805457p.rfihub.com/ca.gif?rb=36314&ca=20805457&_o=36314&_t=20805457&rd=http://hyperurl.co/4roggv?utm_source=website&utm_medium=appstorebutton"
         },
+        downloadCnIos:{
+            zh:"https://itunes.apple.com/cn/app/id1091437876",
+            en:"https://itunes.apple.com/cn/app/id1091437876",
+            vi:"https://itunes.apple.com/cn/app/id1091437876",
+            "zh-Hant":"https://itunes.apple.com/cn/app/id1091437876",
+            id:"https://itunes.apple.com/cn/app/id1091437876"
+        },
         downloadGlobalAndroid:{
             zh:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
             en:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
