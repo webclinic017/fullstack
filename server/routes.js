@@ -256,7 +256,7 @@ module.exports = function (app) {
                 }
             }
             // TODO 可能需要改
-            if (req.host.indexOf('global') != -1) {
+            if (req.host.indexOf('global') == -1) {
                 res.render('m_vue/download.html', extendPublic(extendObj, req));
             }else{
                 res.render('m_vue/download_global.html', extendPublic(extendObj, req));
