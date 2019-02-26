@@ -30,7 +30,7 @@
                                 <div class="download">
                                     <ul class="plat">
                                         <li class="phone">
-                                            <%if (req.host.indexOf('global') != -1) {%>
+                                            <%if (lang.areaId != 1) {%>
                                                 <a href="<%= lang.text('downloadGlobalAndroid') %>">
                                                     <img src="<%= lang.image('downloadAppAndroidGlobal')%>" alt="">
                                                 </a>
@@ -48,7 +48,7 @@
                                             <!-- <p><%= lang.text('downloadApp.tip4')%></p> -->
                                         </li>
                                     </ul>
-                                    <% if (req.host.indexOf('global') != -1) {%>
+                                    <% if (lang.areaId != 1) {%>
                                     <div class="code global">
                                         <div class="img_box">
                                             <img src="/white_label/download/download_andriod_global.png" alt="code" draggable=false>

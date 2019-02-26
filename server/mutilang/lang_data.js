@@ -5,9 +5,9 @@ module.exports = {
     "h5_more": {
         "zh": "更多",
         "en": "More",
-        "vi": "Nhiều hơn nữa",
+        "vi": "Tiếp theo",
         "zh-Hant": "更多",
-        "id": "Tampilkan lebih banyak"
+        "id": "Lebih lanjut"
     },
     "fuzhirenshu": {
         "en": "Copiers",
@@ -10111,10 +10111,10 @@ module.exports = {
     },
     "go_registration":{
         "zh": "前往注册",
-        "en": "Go to registration",
-        "vi": "Đến đăng ký",
-        "zh-Hant": "前往注册",
-        "id": "Buka pendaftaran"
+        "en": "Go to register",
+        "vi": "Vào mục đăng kí",
+        "zh-Hant": "前往註冊",
+        "id": "Masuk ke Pendaftaran"
     },
     "third_username1": {
         "zh": "因监管要求，请您提供相关信息。请确认是您本人，审核通过后不可修改",

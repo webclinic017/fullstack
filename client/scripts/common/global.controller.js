@@ -214,6 +214,7 @@
                     writeCookie({ nameKey: 'user_code', nameValue: '', expires: -1 });
                     writeCookie({ nameKey: 'username', nameValue: '', expires: -1 });
                     writeCookie({ nameKey: 'username_en', nameValue: '', expires: -1 });
+                    writeCookie({nameKey: 'area_id', nameValue: '', expires: -1 });
                     account.hasChecked = false;
                     $window.location.href = '/space/#/account/login';
                     // $state.go('account.subpage', {params: 'login'});
@@ -246,7 +247,14 @@
             // console.log(newVal, oldVal);
             if (newVal && newVal != oldVal) {
                 getEmailPhone(true);
+                // 区分cn与其他，例如红涨绿跌
+                if(newVal == 'CN'){
+                    writeCookie({nameKey: 'area_id', nameValue: 1 });
+                }else{
+                    writeCookie({nameKey: 'area_id', nameValue: '', expires: -1 });
+                }
             }
+            
         })
         function getEmailPhone(force_update) {
             // force_update = true;    //上线时去掉
