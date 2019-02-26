@@ -30,46 +30,28 @@
                                 <div class="download">
                                     <ul class="plat">
                                         <li class="phone">
-                                            <%if (lang.areaId != 1) {%>
-                                                <a href="<%= lang.text('downloadGlobalAndroid') %>">
-                                                    <img src="<%= lang.image('downloadAppAndroidGlobal')%>" alt="">
-                                                </a>
-                                            <%} else {%>
-                                                <a href="<%= lang.text('androidApp') %>">
-                                                    <img src="<%= lang.image('downloadAppAndroidCn')%>" alt="">
-                                                </a>
-                                            <%}%>
-                                            <!-- <p><%= lang.text('downloadApp.tip3')%></p> -->
+                                            <a href="/m/blank?system=global">
+                                                <img src="<%= lang.image('downloadAppAndroidGlobal')%>" alt="">
+                                            </a>
                                         </li>
                                         <li class="phone">
-                                            <a href="<%= lang.text('downloadGlobalIos')%>">
+                                            <a href="/m/blank?system=cn">
                                                 <img src="<%= lang.image('downloadAppIos')%>" alt="">
                                             </a>
-                                            <!-- <p><%= lang.text('downloadApp.tip4')%></p> -->
                                         </li>
                                     </ul>
-                                    <% if (lang.areaId != 1) {%>
                                     <div class="code global">
                                         <div class="img_box">
-                                            <img src="/white_label/download/download_andriod_global.png" alt="code" draggable=false>
-                                            <span>Andriod</span>
+                                            <img src="/images/web/download_m_blank_global_20190226.png" alt="code" draggable=false>
+                                            <span>Global</span>
                                         </div>
                                         <div class="img_box">
-                                            <img src="/white_label/download/download_ios_global.png" alt="code" draggable=false>
-                                            <span>iOS</span>
+                                            <img src="/images/web/download_m_blank_cn_20190226.png" alt="code" draggable=false>
+                                            <span>Ohter</span>
                                         </div>
                                         <p><%= lang.text('downloadApp.tip5')%></p>
                                         <p><%= lang.text('downloadApp.tip6')%></p>
                                     </div>
-                                    <%} else {%>
-                                    <div class="code">
-                                        <div class="img_box">
-                                            <img src="/images/web/download_m_blank_new.png" alt="code" draggable=false>
-                                        </div>
-                                        <p><%= lang.text('downloadApp.tip5')%></p>
-                                        <p><%= lang.text('downloadApp.tip6')%></p>
-                                    </div>
-                                    <%}%>
                                 </div>
                             </div>
                         </div>
