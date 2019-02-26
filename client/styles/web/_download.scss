@@ -92,7 +92,7 @@
         .content{
           display: inline-block;
           text-align: left;
-          max-width: 660px;
+          max-width: 710px;
           .title {
             margin-bottom: 55px;
             h2 {
@@ -110,18 +110,33 @@
             .plat {
               float: left;
               li {
-                margin-bottom: 27px;
+                margin-bottom: 17px;
                 a {
                   display: inline-block;
-                  img {
-                    width: 200px;
-                  }
+                }
+                .btn_big {
+                  width: 200px;
                 }
                 p {
                   margin-top: 5px;
                   line-height: 12px;
                   font-size: 12px;
                   font-weight: 200;
+                }
+                &.iosPosition{
+                  &:hover {
+                    .iosChildren{
+                      display: block;
+                    }
+                  }
+                  .iosChildren{
+                    padding-top: 17px;
+                    display: none;
+                    .btn_small{
+                      width: 150px;
+                      margin-bottom: 10px;
+                    }
+                  }
                 }
               }
             }

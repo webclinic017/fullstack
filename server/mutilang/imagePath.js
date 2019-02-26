@@ -92,6 +92,21 @@
         vi: indexBasePath + "/download/focus-icon-ios-vi.png",
         "zh-Hant": indexBasePath + "/download/focus-icon-ios-cn-1.0.png"
     },
+    downloadAppIosGlobal: {
+        en: indexBasePath + "/download/focus-icon-ios-global-en.png",
+        id: indexBasePath + "/download/focus-icon-ios-global-id.png",
+        zh: indexBasePath + "/download/focus-icon-ios-global-cn.png",
+        vi: indexBasePath + "/download/focus-icon-ios-global-vi.png",
+        "zh-Hant": indexBasePath + "/download/focus-icon-ios-global-zh-Hant.png"
+    },
+    downloadAppIosCn: {
+        en: indexBasePath + "/download/focus-icon-ios-cn-en.png",
+        id: indexBasePath + "/download/focus-icon-ios-cn-id.png",
+        zh: indexBasePath + "/download/focus-icon-ios-cn-cn.png",
+        vi: indexBasePath + "/download/focus-icon-ios-cn-vi.png",
+        "zh-Hant": indexBasePath + "/download/focus-icon-ios-cn-zh-Hant.png"
+    },
+
     downloadAppAndroidCn: {
         en: indexBasePath + "/download/focus-icon-android-en.png",
         id: indexBasePath + "/download/focus-icon-android-id.png",
