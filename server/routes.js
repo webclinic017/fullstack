@@ -724,6 +724,11 @@ module.exports = function (app) {
         setEnvCf(req, res);
         res.render('bd/vietnam/web.html', extendPublic({}, req));
     });
+    //印尼推广活动 2019.02.27
+    app.route('/bd/indonesia').get(function (req, res) {
+        setEnvCf(req, res);
+        res.render('bd/indonesia/web.html', extendPublic({}, req));
+    });
     // global活动页
     app.route('/bonus').get(function (req, res) {
         // checkGlobalOrCN(req, res, 'cn');
