@@ -22,6 +22,14 @@
                     }
                 }
                 return theRequest;
+            },
+            // 判断url是否含有参数
+            setUrlParam: function(url) {
+                if(url.split('?').length == 1){
+                    return url + '?'
+                }else{
+                    return url + '&'
+                }
             }
         };
         return fun;

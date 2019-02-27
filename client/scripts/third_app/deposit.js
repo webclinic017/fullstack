@@ -169,7 +169,7 @@ function submitDeposit () {
       'lang='+lang,
       'token='+token
     ];
-    window.location.href = selectKeyFromType('url') + '?' + params.join('&');
+    window.location.href = setUrlParam(selectKeyFromType('url')) + params.join('&');
     return;
   }
   publicRequest('depositThird', 'POST', {
@@ -188,7 +188,7 @@ function submitDeposit () {
         $(eleDeposit.payDepositMsg).find('.wallet').addClass('active');
       } else {
         openLoadingMdl();
-        window.location.href = data.data.url + '?token=' + token;
+        window.location.href = setUrlParam(data.data.url) + 'token=' + token;
       }
     } else {
       showBackErr(data.message);

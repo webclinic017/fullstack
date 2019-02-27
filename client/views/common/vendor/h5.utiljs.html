@@ -94,6 +94,15 @@
         }
     }
 
+    // 判断url是否含有参数
+    function setUrlParam(url) {
+        if(url.split('?').length == 1){
+            return url + '?'
+        }else{
+            return url + '&'
+        }
+    }
+
     /*判断是否在APP中*/
     function isInTiger() {
         var userPlatForm = window.navigator.userAgent;
