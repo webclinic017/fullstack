@@ -36,7 +36,7 @@
                                    type="text"
                                    placeholder="{{lang.text('tigerWitID.login.enterPhoneNumber')}}"
                                    required
-                                   ng-click="toTrackPhoneSensorsdata()"
+                                   ng-click="toTrackEvent('Login and register', 'inp_account')"
                                    on-enter="login('loginFormPhonePw')"
                                    ng-model="account.phonePhone">
                             <span class="account-form-control-tip-new" ng-show="account.phonePhone">{{lang.text('tigerWitID.login.phoneNumber')}}</span>
@@ -53,6 +53,7 @@
                                    placeholder="{{lang.text('tigerWitID.login.enterPassword')}}"
                                    on-enter="login('loginFormPhonePw')"
                                    required
+                                   ng-click="toTrackEvent('Login and register', 'inp_password')"
                                    ng-model="account.step2Password">
                             <span class="account-form-control-tip-new" ng-show="account.step2Password">{{ lang.text('actLogin22') }}</span>
                             <!-- <span class="account_login__close" ng-click="changePasswordStatus('step2PasswordStatus')">
@@ -87,7 +88,7 @@
                         </div>
                     </form>
                     <div class="account_login__btn_wrapper pd-tp-15">
-                        <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="login('loginFormPhonePw')">{{ lang.text('tigerWitID.login.login') }}</button>
+                        <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="[login('loginFormPhonePw'), toTrackEvent('Login and register', 'click_login')]">{{ lang.text('tigerWitID.login.login') }}</button>
                     </div>
                 </div>
                 <!-- 邮箱密码登录页 -->
@@ -99,7 +100,7 @@
                                     type="text"
                                     placeholder="{{lang.text('tigerWitID.login.enterEmail')}}"
                                     required
-                                    ng-click="toTrackEmailSensorsdata()"
+                                    ng-click="toTrackEvent('Login and register', 'inp_account')"
                                     on-enter="login('loginFormEmailPw')"
                                     ng-model="account.emailEmali">
                             <span class="account-form-control-tip-new" ng-show="account.emailEmali">{{lang.text('tigerWitID.login.email')}}</span>
@@ -116,6 +117,7 @@
                                     placeholder="{{lang.text('tigerWitID.login.enterPassword')}}"
                                     on-enter="login('loginFormEmailPw')"
                                     required
+                                    ng-click="toTrackEvent('Login and register', 'inp_password')"
                                     ng-model="account.step1Password">
                             <span class="account-form-control-tip-new" ng-show="account.step1Password">{{ lang.text('actLogin22') }}</span>
                             <!-- <span class="account_login__close" ng-click="changePasswordStatus('step2PasswordStatus')">
@@ -149,7 +151,7 @@
                         </div>
                     </form>
                     <div class="account_login__btn_wrapper pd-tp-15">
-                        <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="login('loginFormEmailPw')">{{ lang.text('tigerWitID.login.login') }}</button>
+                        <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="[login('loginFormEmailPw'), toTrackEvent('Login and register', 'click_login')]">{{ lang.text('tigerWitID.login.login') }}</button>
                     </div>
                 </div>
                 <!-- 忘记密码页 -->
@@ -173,6 +175,7 @@
                                    name="forgetPhone"
                                    type="text"
                                    placeholder="{{lang.text('tigerWitID.login.enterPhoneNumber')}}"
+                                   ng-click="toTrackEvent('Login and register', 'inp_account')"
                                    on-enter="getCaptcha('loginFormforgetPhonePw', 'forgetPhone')"
                                    required
                                    ng-model="account.phonePhone">
@@ -213,6 +216,7 @@
                                     name="forgetEmail"
                                     type="text"
                                     placeholder="{{lang.text('tigerWitID.login.enterEmail')}}"
+                                    ng-click="toTrackEvent('Login and register', 'inp_account')"
                                     on-enter="getCaptcha('loginFormforgetEmailPw', 'forgetEmail')"
                                     required
                                     ng-model="account.emailEmali">
@@ -256,6 +260,7 @@
                                    placeholder="{{ lang.text('tigerWitID.login.enterPassword') }}"
                                    on-enter="setForgetPassword('loginFormSetPw')"
                                    required
+                                   ng-click="toTrackEvent('Login and register', 'inp_password')"
                                    ng-model="account.forgetPassword">
                             <span class="account-form-control-tip-new" ng-show="account.forgetPassword">{{ lang.text('actLogin22') }}</span>
                             <!-- <span class="account_login__close" ng-click="changePasswordStatus('forgetPasswordStatus')">
@@ -284,6 +289,7 @@
                                    placeholder="{{ lang.text('tigerWitID.login.confirmPassword') }}"
                                    on-enter="setForgetPassword('loginFormSetPw')"
                                    required
+                                   ng-click="toTrackEvent('Login and register', 'confirm_password')"
                                    ng-model="account.forgetPassword2">
                             <span class="account-form-control-tip-new" ng-show="account.forgetPassword2">{{ lang.text('tigerWitID.login.confirmPasswordj') }}</span>
                             <!-- <span class="account_login__close" ng-click="changePasswordStatus('forgetPasswordStatus')">
@@ -342,7 +348,7 @@
                                    placeholder="{{lang.text('tigerWitID.login.enterPhoneNumber')}}"
                                    on-enter="getCaptcha('loginFormPhoneV', 'phoneVePhone')"
                                    required
-                                   ng-click="toTrackPhoneSensorsdata()"
+                                   ng-click="toTrackEvent('Login and register', 'inp_account')"
                                    ng-model="account.phonePhone">
                             <span class="account-form-control-tip-new" ng-show="account.phonePhone">{{ lang.text("actLogin17") }}</span>
                             <span class="account_login__close" ng-show="account.phonePhone" ng-click="clearPhone('phonePhone')">
@@ -357,10 +363,10 @@
                                    placeholder="{{ lang.text('actLogin4') }}"
                                    on-enter="login('loginFormPhoneV')"
                                    required
-                                   ng-click="toTrackCodeSensorsdata()"
+                                   ng-click="toTrackEvent('Login and register', 'inp_code')"
                                    ng-model="account.phoneVeCode">
                             <span class="account-form-control-tip-new" ng-if="account.phoneVeCode">{{ lang.text('tigerWitID.login.verificationCodej') }}</span>
-                            <span class="account_login__code_btn" ng-show="!codeBtnStatus.phoneVePhone.count" ng-click="getCaptcha('loginFormPhoneV', 'phoneVePhone')">
+                            <span class="account_login__code_btn" ng-show="!codeBtnStatus.phoneVePhone.count" ng-click="[getCaptcha('loginFormPhoneV', 'phoneVePhone'), toTrackEvent('Login and register', 'get_code')]">
                                 {{lang.text('tigerWitID.login.sendSMS')}}
                             </span>
                             <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.phoneVePhone.count">
@@ -379,7 +385,7 @@
                         </div>
                     </form>
                     <div class="account_login__btn_wrapper pd-tp-15">
-                        <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="login('loginFormPhoneV')">{{ lang.text('tigerWitID.login.login') }}</button>
+                        <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="[login('loginFormPhoneV'), toTrackEvent('Login and register', 'click_login')]">{{ lang.text('tigerWitID.login.login') }}</button>
                     </div>
                 </div> 
                 <!-- 邮箱登录    -->
@@ -393,7 +399,7 @@
                                    placeholder="{{lang.text('tigerWitID.login.enterEmail')}}"
                                    on-enter="getCaptcha('loginFormEmailV', 'emailVeEmail')"
                                    required
-                                   ng-click="toTrackEmailSensorsdata()"
+                                   ng-click="toTrackEvent('Login and register', 'inp_account')"
                                    ng-model="account.emailEmali">
                             <span class="account-form-control-tip-new" ng-show="account.emailEmali">{{lang.text('tigerWitID.login.email')}}</span>
                             <span class="account_login__close" ng-show="account.emailEmali" ng-click="clearPhone('emailEmali')">
@@ -408,10 +414,10 @@
                                    placeholder="{{ lang.text('actLogin4') }}"
                                    on-enter="login('loginFormEmailV')"
                                    required
-                                   ng-click="toTrackEmailCodeSensorsdata()"
+                                   ng-click="toTrackEvent('Login and register', 'inp_code')"
                                    ng-model="account.emailVeCode">
                             <span class="account-form-control-tip-new" ng-if="account.emailVeCode">{{ lang.text('tigerWitID.login.verificationCodej') }}</span>
-                            <span class="account_login__code_btn" ng-show="!codeBtnStatus.emailVeEmail.count" ng-click="getCaptcha('loginFormEmailV', 'emailVeEmail')">
+                            <span class="account_login__code_btn" ng-show="!codeBtnStatus.emailVeEmail.count" ng-click="[getCaptcha('loginFormEmailV', 'emailVeEmail'), toTrackEvent('Login and register', 'get_code')]">
                                 {{lang.text('tigerWitID.login.sendCode')}}
                             </span>
                             <span class="account_login__code_btn notAllowed" ng-show="codeBtnStatus.emailVeEmail.count">
@@ -430,7 +436,7 @@
                         </div>
                     </form>
                     <div class="account_login__btn_wrapper pd-tp-15">
-                        <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="login('loginFormEmailV')">{{ lang.text('tigerWitID.login.login') }}</button>
+                        <button class="tw-btn-md tw-btn-capsule-gradient" ng-click="[login('loginFormEmailV'), toTrackEvent('Login and register', 'click_login')]">{{ lang.text('tigerWitID.login.login') }}</button>
                     </div>
                 </div>
                 <!-- 新用户 -->

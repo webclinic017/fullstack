@@ -68,18 +68,6 @@
         function isRegSucceed() {
             var location = window.location.href.indexOf("/succ") >= 0;
             if (!!document.getElementById("regist_btn3") && location) {
-                /*统计注册成功*/
-                sa.track('btn_register_finish');
-                window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
-
-                setTimeout(function () {
-                    var user_id = $.cookie("user_code");
-                    // console.log(user_code);
-                    if (user_id) {
-                        sa.login(user_id);
-                    }
-                }, 100);
-
                 return true;
             }
         }
@@ -110,7 +98,6 @@
             var interval = null;
             
             // if (!token) {
-            //     sa.track('set_token_failed');
             //     layer.open({
             //         content: lang.text('register.networkErr'),
             //         skin: 'msg',
@@ -145,10 +132,6 @@
                         anim: false,
                         time: 1.2 /*1.2秒后自动关闭*/
                     });
-
-                    /*统计代码*/
-                    sa.track('btn_register_code');
-                    _czc.push(["_trackEvent", "注册页", "获取验证码"]);
 
                     /*倒计时*/
                     if (Boolean(interval) == false) {
@@ -332,14 +315,6 @@
 
             // console.log(oReg);
         }());
-        
-        //神策统计
-        $("#telephone").on("click", function () {
-            sa.track('inp_PN');
-        });
-        $("#verify_code").on("click", function () {
-            sa.track('inp_code');
-        });
 
         /*发送验证码*/
         ;
@@ -364,7 +339,6 @@
                                 });
                             } else {
                                 sendVerifyCode();
-                                sa.track('btn_register_code');
                             }
                         }
                     });
@@ -392,13 +366,6 @@
                 if (window.location.pathname.indexOf('t35') != -1) {
                     _taq.push({ convert_id: "81431259366", event_type: "form" })
                 }
-
-                // 神策统计 - 点击登录
-                if(!is_agree) {
-                    sa.track('click_login', {
-                        login_type: '验证码登录'
-                    });
-                }
                 
                 publicRequest('regOrLogin', 'POST', {
                     ib_pid: $.cookie('ib_pid') || null,
@@ -420,11 +387,6 @@
                     // console.log(data);
                     if (!data) return;
                     if (data.is_succ) {
-                        // 神策统计 - 登录
-                        sa.track('login', {
-                            login_isNew: true,
-                            login_type: '验证码登录'
-                        });
 
                         /*跳转到注册成功页面*/
                         if (window.location.pathname.indexOf('t35') >= 0) {
@@ -505,9 +467,6 @@
         }
 
         $('#regist_btn3').on('touchend',function(e){
-            sa.track('DI_click', {
-                page: window.location.href
-            });
             if (oReg.search_arr.panda_download_url && oReg.search_arr.panda_download_url === 'oppo') {
                 // pandafx download url of oppo
                 window.location.href = "http://adsfs.oppomobile.com/mp/app/B/detail.html?im=$im1$&pkg=com.pandaforex.forex";

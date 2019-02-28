@@ -60,11 +60,6 @@
 
             var interval = null;
 
-            // if (!token) {
-            //     sa.track('set_token_failed');
-            //     layer.msg('网络异常,请刷新重试!');
-            // }
-
             /*loading层*/
             layer.load(1, {shade: false});
             publicRequest('getPhoneCode', 'POST', {
@@ -78,10 +73,6 @@
                 if (data.is_succ) {
                     /*提示*/
                     layer.msg('验证码已发送!');
-
-                    /*统计代码*/
-                    sa.track('btn_register_code');
-                    _czc.push(["_trackEvent", "注册页", "获取验证码"]);
 
                     /*倒计时*/
                     if (Boolean(interval) == false) {
@@ -238,14 +229,6 @@
             // console.log(oReg);
         }());
 
-        //神策统计
-        $("#telephone").on("click", function () {
-            sa.track('inp_PN');
-        });
-        $("#verify_code").on("click", function () {
-            sa.track('inp_code');
-        });
-
         /*发送验证码*/
         ;
         (function () {
@@ -264,7 +247,6 @@
                                 layer.msg('此号码已注册!');
                             } else {
                                 sendVerifyCode();
-                                sa.track('btn_register_code');
                             }
                         }
                     });
@@ -283,13 +265,6 @@
 
                 /*loading层*/
                 layer.load(1, {shade: false});
-
-                // 神策统计 - 点击登录
-                if(!is_agree) {
-                    sa.track('click_login', {
-                        login_type: '验证码登录'
-                    });
-                }
 
                 publicRequest('regOrLogin', 'POST', {
                     ib_pid: $.cookie('ib_pid') || null,
@@ -311,14 +286,6 @@
                     if (data.is_succ) {
                         /*跳转到注册成功页面*/
                         layer.msg('注册成功!');
-                        /*统计注册成功*/
-                        sa.track('btn_register_finish');
-                        // 神策统计 - 登录
-                        sa.track('login', {
-                            login_isNew: true,
-                            login_type: '验证码登录'
-                        });
-                        window._czc && _czc.push(["_trackEvent", "注册页", "立即注册且成功"]);
                         writeCookie({nameKey: 'token', nameValue: data.data.token});
                         writeCookie({nameKey: 'user_code', nameValue: data.data.user_code});
                         writeCookie({nameKey: 'username', nameValue: data.data.username});

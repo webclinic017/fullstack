@@ -73,7 +73,7 @@
                             required ng-class="{'form-control-error': (frontErr.emailCode.show && completeForm.emailCode.$invalid)}"
                             ng-model="completeInfo.emailCode" ng-blur="[showErr('emailCode')]" ng-focus="[hideErr('emailCode')]">
 
-                        <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="sendCode('email')">{{lang.text('tigerWitID.settings.sendVerificationToEmail')}}</span>
+                        <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="[sendCode('email'), toTrackEvent('Open live account', 'your_details_getcode')]">{{lang.text('tigerWitID.settings.sendVerificationToEmail')}}</span>
                         <span class="sender_btn" ng-show="completeInfo.hasSendCode">{{lang.text('tigerWitID.myAccount.tip39_1')}}{{
                             completeInfo.waitTime }}{{lang.text('tigerWitID.myAccount.tip39_2')}}</span>
 
@@ -160,6 +160,7 @@
                     </div>
                     <div class="col-xs-8">
                         <div class="form-control-wrapper contact_way inputor">
+<<<<<<< Updated upstream
                             <input class="form-control" name="phoneCode" type="text" placeholder="{{lang.text('tigerWitID.settings.enterVerificationCode')}}"
                                 required ng-class="{'form-control-error': (frontErr.phoneCode.show && completeForm.phoneCode.$invalid)}"
                                 ng-model="completeInfo.phoneCode" ng-blur="[showErr('phoneCode')]" ng-focus="[hideErr('phoneCode')]">
@@ -168,6 +169,21 @@
                             <span class="sender_btn" ng-show="completeInfo.hasSendCode">{{lang.text('tigerWitID.myAccount.tip39_1')}}{{
                                 completeInfo.waitTime }}{{lang.text('tigerWitID.myAccount.tip39_2')}}</span>
 
+=======
+                            <input class="form-control"
+                                    name="phoneCode"
+                                    type="text"
+                                    placeholder="{{lang.text('tigerWitID.settings.enterVerificationCode')}}"
+                                    required
+                                    ng-class="{'form-control-error': (frontErr.phoneCode.show && completeForm.phoneCode.$invalid)}"
+                                    ng-model="completeInfo.phoneCode"
+                                    ng-blur="[showErr('phoneCode')]"
+                                    ng-focus="[hideErr('phoneCode')]">
+                            
+                            <span class="sender_btn" ng-show="!completeInfo.hasSendCode" ng-click="[sendCode('phone'), toTrackEvent('Open live account', 'your_details_getcode')]">{{lang.text('tigerWitID.settings.sendVerificationCode')}}</span>
+                            <span class="sender_btn" ng-show="completeInfo.hasSendCode" >{{lang.text('tigerWitID.myAccount.tip39_1')}}{{ completeInfo.waitTime }}{{lang.text('tigerWitID.myAccount.tip39_2')}}</span>
+    
+>>>>>>> Stashed changes
                             <div ng-show="frontErr.phoneCode.show">
                                 <p class="alert-arrow_tp_lf" ng-show="completeForm.phoneCode.$error.required">
                                     {{lang.text('tigerWitID.settings.enterVerificationCode')}}
@@ -301,7 +317,11 @@
             </div>
 
             <div class="text-left mg-tp-50 mg-bt-30">
+<<<<<<< Updated upstream
                 <button class="btn btn-primary-gradient btn-sm" ng-if="completeInfo.clickable" ng-click="submitCompleteForm()">
+=======
+                <button class="btn btn-primary-gradient btn-sm" ng-if="completeInfo.clickable"  ng-click="[submitCompleteForm(), toTrackEvent('Open live account', 'your_details')]">
+>>>>>>> Stashed changes
                     {{lang.text('actLogin29')}}
                 </button>
 

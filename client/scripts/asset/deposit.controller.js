@@ -509,9 +509,6 @@
 
                     // 支付成功
                     function depositSucc() {
-                        // umeng
-                        // _czc.push(["_trackEvent", lang.text("tigerWitID.depositWithdrawal.depositPage"), lang.text("tigerWitID.depositWithdrawal.deposit")]);
-
                         closeModal();
                     }
 
