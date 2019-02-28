@@ -85,41 +85,19 @@
         vi: indexBasePath + "/home/client-map-vi-vi.png",
         "zh-Hant": indexBasePath + "/home/client-map-cn-ht.png"
     },
-    downloadAppIos: {
-        en: indexBasePath + "/download/focus-icon-ios-en.png",
-        id: indexBasePath + "/download/focus-icon-ios-id.png",
-        zh: indexBasePath + "/download/focus-icon-ios-cn-1.0.png",
-        vi: indexBasePath + "/download/focus-icon-ios-vi.png",
-        "zh-Hant": indexBasePath + "/download/focus-icon-ios-cn-1.0.png"
+    downloadAppCn: {
+        en: indexBasePath + "/download/focus-icon-cn-en.png",
+        id: indexBasePath + "/download/focus-icon-cn-id.png",
+        zh: indexBasePath + "/download/focus-icon-cn-cn.png",
+        vi: indexBasePath + "/download/focus-icon-cn-vi.png",
+        "zh-Hant": indexBasePath + "/download/focus-icon-cn-zh-Hant.png"
     },
-    downloadAppIosGlobal: {
-        en: indexBasePath + "/download/focus-icon-ios-global-en.png",
-        id: indexBasePath + "/download/focus-icon-ios-global-id.png",
-        zh: indexBasePath + "/download/focus-icon-ios-global-cn.png",
-        vi: indexBasePath + "/download/focus-icon-ios-global-vi.png",
-        "zh-Hant": indexBasePath + "/download/focus-icon-ios-global-zh-Hant.png"
-    },
-    downloadAppIosCn: {
-        en: indexBasePath + "/download/focus-icon-ios-cn-en.png",
-        id: indexBasePath + "/download/focus-icon-ios-cn-id.png",
-        zh: indexBasePath + "/download/focus-icon-ios-cn-cn.png",
-        vi: indexBasePath + "/download/focus-icon-ios-cn-vi.png",
-        "zh-Hant": indexBasePath + "/download/focus-icon-ios-cn-zh-Hant.png"
-    },
-
-    downloadAppAndroidCn: {
-        en: indexBasePath + "/download/focus-icon-android-en.png",
-        id: indexBasePath + "/download/focus-icon-android-id.png",
-        zh: indexBasePath + "/download/focus-icon-android-cn.png",
-        vi: indexBasePath + "/download/focus-icon-android-vi.png",
-        "zh-Hant": indexBasePath + "/download/focus-icon-android-cn.png"
-    },
-    downloadAppAndroidGlobal: {
-        en: indexBasePath + "/download/focus-icon-google-en.png",
-        id: indexBasePath + "/download/focus-icon-google-id.png",
-        zh: indexBasePath + "/download/focus-icon-google-cn.png",
-        vi: indexBasePath + "/download/focus-icon-google-vi.png",
-        "zh-Hant": indexBasePath + "/download/focus-icon-google-cn.png"
+    downloadAppGlobal: {
+        en: indexBasePath + "/download/focus-icon-global-en.png",
+        id: indexBasePath + "/download/focus-icon-global-id.png",
+        zh: indexBasePath + "/download/focus-icon-global-cn.png",
+        vi: indexBasePath + "/download/focus-icon-global-vi.png",
+        "zh-Hant": indexBasePath + "/download/focus-icon-global-zh-Hant.png"
     },
     downloadFocus: {
         en: indexBasePath + "/download/download_banner-en.png",
@@ -186,19 +164,19 @@
         "zh-Hant": indexBasePath + "/m_download_global/section6-bg-zh-Hant.png"
     },
 
-    downloadGlobalH5ios: {
-        en: indexBasePath + "/m_download_global/focus-icon-ios-en.png",
-        id: indexBasePath + "/m_download_global/focus-icon-ios-id.png",
-        zh: indexBasePath + "/m_download_global/focus-icon-ios-zh.png",
-        vi: indexBasePath + "/m_download_global/focus-icon-ios-vi.png",
-        "zh-Hant": indexBasePath + "/m_download_global/focus-icon-ios-zh-Hant.png"
+    downloadCnH5App: {
+        en: indexBasePath + "/m_download_global/focus-icon-cn-en.png",
+        id: indexBasePath + "/m_download_global/focus-icon-cn-id.png",
+        zh: indexBasePath + "/m_download_global/focus-icon-cn-zh.png",
+        vi: indexBasePath + "/m_download_global/focus-icon-cn-vi.png",
+        "zh-Hant": indexBasePath + "/m_download_global/focus-icon-cn-zh-Hant.png"
     },
-    downloadGlobalH5google: {
-        en: indexBasePath + "/m_download_global/focus-icon-google-en.png",
-        id: indexBasePath + "/m_download_global/focus-icon-google-id.png",
-        zh: indexBasePath + "/m_download_global/focus-icon-google-zh.png",
-        vi: indexBasePath + "/m_download_global/focus-icon-google-vi.png",
-        "zh-Hant": indexBasePath + "/m_download_global/focus-icon-google-zh-Hant.png"
+    downloadGlobalH5App: {
+        en: indexBasePath + "/m_download_global/focus-icon-global-en.png",
+        id: indexBasePath + "/m_download_global/focus-icon-global-id.png",
+        zh: indexBasePath + "/m_download_global/focus-icon-global-zh.png",
+        vi: indexBasePath + "/m_download_global/focus-icon-global-vi.png",
+        "zh-Hant": indexBasePath + "/m_download_global/focus-icon-global-zh-Hant.png"
     }
   };
   module.exports = data;

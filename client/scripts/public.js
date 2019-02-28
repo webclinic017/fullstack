@@ -4,9 +4,9 @@
 
     angular.module('fullstackApp').factory('publicHttp', publicHttp);
 
-    publicHttp.$inject = ['$http', '$rootScope', '$state', '$cookies', '$cookieStore', '$window', 'lang', '$location'];
+    publicHttp.$inject = ['$http', '$rootScope', '$state', '$cookies', '$cookieStore', '$window', 'lang', '$location', 'fun'];
 
-    function publicHttp($http, $rootScope, $state, $cookies, $cookieStore, $window, lang, $location) {
+    function publicHttp($http, $rootScope, $state, $cookies, $cookieStore, $window, lang, $location, fun) {
         var service = {
             dealPublicRequest: dealPublicRequest
         };
@@ -15,7 +15,7 @@
         function dealPublicRequest ($url, $method, $params) {
             $params = $params ? $params : {};
             var token = $cookies["token"] || '';
-            $url = $url+"?token="+token;
+            $url = fun.setUrlParam($url) + "token="+token;
             
             if ($method.toUpperCase() === 'GET') {
                 return $http.get($url, {

@@ -92,6 +92,20 @@ module.exports = function () {
             "zh-Hant":"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex",
             id:"http://20805458p.rfihub.com/ca.gif?rb=36314&ca=20805458&_o=36314&_t=20805458&rd=https://play.google.com/store/apps/details?id=com.tigerwit.forex"
         },
+        downloadGlobalApp:{
+            zh: "/m/blank?system=global",
+            en: "/m/blank?system=global",
+            vi: "/m/blank?system=global",
+            "zh-Hant": "/m/blank?system=global",
+            "id": "/m/blank?system=global"
+        },
+        downloadCnApp:{
+            zh: "/m/blank?system=cn",
+            en: "/m/blank?system=cn",
+            vi: "/m/blank?system=cn",
+            "zh-Hant": "/m/blank?system=cn",
+            "id": "/m/blank?system=cn"
+        }
     };
 
     function replaceTiger(str) {

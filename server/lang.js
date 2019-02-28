@@ -3,16 +3,13 @@
 module.exports = function () {
 
     function Lang(req) {
-        var url = require('url');
         var envConfig = require('./get_env_config').envConfig;
         var company_name = envConfig.company_name;
         var clonedBaidu = envConfig.isCloned;
         var data = require('./lang_data.js')();
-        var querystring = require('querystring');
-        var cookieList = querystring.parse(req.headers.cookie, '; ');
-        var language = 'zh', languageTemp = 'zh';
-        var langArr = ['cn', 'en', 'vi', 'zh-Hant', 'id'];
-        var parseCookie = function(cookie){
+        var decideLang = require('./get_lang')(req).decideLang();
+        var language = decideLang === 'cn' ? 'zh' : decideLang;
+        function parseCookie(cookie){
             var cookies = {};
             if(!cookie){
                 return cookies;
@@ -24,31 +21,7 @@ module.exports = function () {
             }
             return cookies;
         }
-        for (var name in cookieList) {
-            // console.info(name);
-            // 获取cookie中的lang
-            if (name === 'lang') {
-                if(cookieList[name] instanceof Array){
-                    languageTemp = cookieList[name][0];
-                } else {
-                    languageTemp = cookieList[name];
-                }
-                break;
-            }
-        }
-        // if (!parseCookie(req.headers.cookie).lang && (req.host.indexOf('global.tigerwit.com') != -1 || req.host.indexOf('globaldemo.tigerwit.com') != -1)) {
-        //     languageTemp = 'en';
-        // }
-        if (url.parse(req.url, true).query.lang) {
-            languageTemp = url.parse(req.url, true).query.lang;
-        }
-        for (var i=0;i<langArr.length;i++) {    //判断是否在语言包内
-            // console.log(langArr[i], '-----language-----');
-            if (langArr[i] === languageTemp) {
-                language = languageTemp;
-            }
-        }
-        this.language = language === 'cn' ? 'zh' : language;
+        this.language = language;
         this.data = data;
         this.req = req;
         this.company_name = company_name;
@@ -85,7 +58,7 @@ module.exports = function () {
             }
             if (key) {
                 //console.info('langData load successful!',data[name][this.language])
-                text = key[this.language] || 'NODE-loadERR';
+                text = key[_this.language] || 'NODE-loadERR';
             } else {
                 console.error(' - - - langData load error! in word - ', name);
                 text = 'NODE-loadERR'
@@ -96,7 +69,7 @@ module.exports = function () {
             var _this = this;
             var path;
             if (_this.data["image"][name]) {
-                path = _this.data["image"][name][this.language];
+                path = _this.data["image"][name][_this.language];
             } else {
 
             }
