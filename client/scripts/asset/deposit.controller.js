@@ -5,9 +5,9 @@
     angular.module('fullstackApp')
         .controller('AssetDepositController', AssetDepositController);
 
-    AssetDepositController.$inject = ['$rootScope', '$scope', '$window', '$document', '$cookies', '$modal', '$state', '$timeout', 'asset', 'validator', 'account', '$layer', 'previewImage'];
+    AssetDepositController.$inject = ['$rootScope', '$scope', '$window', '$document', '$cookies', '$modal', '$state', '$timeout', 'asset', 'validator', 'account', '$layer', 'previewImage', 'fun'];
 
-    function AssetDepositController($rootScope, $scope, $window, $document, $cookies, $modal, $state, $timeout, asset, validator, account, $layer, previewImage) {
+    function AssetDepositController($rootScope, $scope, $window, $document, $cookies, $modal, $state, $timeout, asset, validator, account, $layer, previewImage, fun) {
 
         // 缓存当前父scope 给弹窗控制器使用
         $scope.parentScope = $scope;
@@ -419,7 +419,7 @@
                                         'lang='+lang,
                                         'token='+token
                                     ];
-                                    w.location = $scope.depositTypeLst[$scope.deposit.type].url+'?'+params.join('&');
+                                    w.location = fun.setUrlParam($scope.depositTypeLst[$scope.deposit.type].url) + params.join('&');
                                     return;
                                 }
                                 asset.deposit(amount, p, c, mt4_id).then(function (data) {
@@ -430,7 +430,7 @@
                                             $scope.$emit('asset.transfer')
                                             $scope.walletDepositSucc = true;
                                         } else {
-                                            var url = data.data.url + '?token=' + token;
+                                            var url = fun.setUrlParam(data.data.url) + 'token=' + token;
                                             openDepositMdl('depositFinish');
                                             w.location = url;
                                         }

@@ -9,22 +9,9 @@
     function lang(langData, $location, $timeout, $cookies) {
 
         var language = 'zh';
-        var langArr = ['cn', 'en', 'vi', 'zh-Hant', 'id'];
-        var cookieLang = $cookies.lang;
-        var bowerLang = (navigator.language || navigator.userLanguage).toLowerCase().slice(0, 2);
+        var cookieLang = $cookies.lang; // cookieLang肯定会有值
         if (cookieLang) {
-            angular.forEach(langArr, function (value, index) {
-                if (cookieLang === value) {
-                    language = cookieLang === 'cn' ? 'zh' : cookieLang;
-                }
-            });
-        } else {
-            angular.forEach(langArr, function (value, index) {
-                if ((bowerLang == 'zh' ? 'cn' : bowerLang) === value) {
-                    language = bowerLang;
-                    setCookieLang(language === 'zh' ? 'cn' : language)
-                }
-            });
+            language = cookieLang === 'cn' ? 'zh' : cookieLang;
         }
         langData["language"] = language;
         function setCookieLang(lang) {
