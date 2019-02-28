@@ -10,20 +10,35 @@
   var lp = getUrlParam('lp') || '';
 
   $("#btn-form").on("click", function () {
+    var type = $(this).attr("data-type") || 'vi';
     var name = $(".form-item input[data-name=name]").val();
     var phone = $(".form-item input[data-name=phone]").val();
     var email = $(".form-item input[data-name=email]").val();
-    console.log(phone, email)
+    // console.log(phone, email)
+    var msgFront = {
+      none: {
+        vi: 'Hãy điền đầy đủ thông tin',
+        id: 'Silakan isi informasinya'
+      },
+      email: {
+        vi: 'Hộp thư định dạng sai lầm',
+        id: 'Format kotak surat salah'
+      },
+      phone: {
+        vi: 'Định dạng sai số điện thoại di động',
+        id: 'Format nomor ponsel salah'
+      },
+    };
     if (!name || !phone || !email) {
-      layer.msg('Hãy điền đầy đủ thông tin');
+      layer.msg(msgFront.none[type]);
       return;
     }
     if (!reg.email.test(email)) {
-      layer.msg('Hộp thư định dạng sai lầm');
+      layer.msg(msgFront.email[type]);
       return;
     }
     if (!reg.phone.test(phone)) {
-      layer.msg('Định dạng sai số điện thoại di động');
+      layer.msg(msgFront.phone[type]);
       return;
     }
     layer.load(2);
@@ -31,7 +46,7 @@
       username: name,
       phone: phone,
       email: email,
-      lang: 'vi',
+      lang: type,
       pid: pid,
       unit: unit,
       key: key,
