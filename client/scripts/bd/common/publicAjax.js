@@ -18,9 +18,9 @@
         getBankCard: origin_app + '/user/bank_card', // get
         withdraw: origin_app + '/payment/withdraw',  // post
         bindBankCard: origin_app + '/user/bank_card',  // put
-        getCountries: origin_app + '/region/countries', // get
-        getStateList: origin_app + '/region/provinces', // get
-        getCitiesList: origin_app + '/region/cities', // get
+        getCountries: origin + '/region/countries', // get
+        getStateList: origin + '/region/provinces', // get
+        getCitiesList: origin + '/region/cities', // get
         setToken: origin + '/validation/code_token', // post
         checkExists: origin + '/user/check_exists', // get
         getPhoneCode: origin + '/validation/send_code', // post

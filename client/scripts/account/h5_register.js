@@ -405,8 +405,8 @@
                     invite_status: $.cookie('invite_status') || null,
                     account: $("#telephone").val() || null,
                     account_type: 1,
-                    phone_code: areaCode || null,
-                    world_code: world_code,
+                    phone_code: '86',
+                    world_code: 'CN',
                     // password: $("#password").val() || null,
                     password: $("#verify_code").val() || $("#password").val() || null,
                     login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录
