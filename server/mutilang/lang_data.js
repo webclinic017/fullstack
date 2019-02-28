@@ -13315,7 +13315,7 @@ module.exports = {
         "addBankCards": {
             "zh": "添加银行卡",
             "en": "Add Bank Cards",
-            "vi": "Thêm Tài khoản Ngân hàng",
+            "vi": "Thêm Tài khoản \"Ngân hàng\"",
             "zh-Hant": "添加銀行卡",
             "id": "Tambah rekening bank",
             "es": "Añadir Tarjetas Banco"

@@ -4192,7 +4192,7 @@
                     "addBankCards": {
                         "zh": "添加银行卡",
                         "en": "Add Bank Cards",
-                        "vi": "Thêm Tài khoản Ngân hàng",
+                        "vi": "Thêm Tài khoản \"Ngân hàng\"",
                         "zh-Hant": "添加銀行卡",
                         "id": "Tambah rekening bank",
                         "es": "Añadir Tarjetas Banco "
@@ -5620,7 +5620,7 @@
                         "en": "Please bind the user’s own bank card",
                         "vi": "Vui lòng liên kết thẻ ngân hàng của riêng người dùng",
                         "zh-Hant": "請邦定認證用護本人的銀行卡",
-                        "id": " Mohon daftarkan nomor rekening anda ",
+                        "id": "Mohon daftarkan nomor rekening anda",
                         "es": "Por favor, asocie la propia tarjeta bancaria del usuario."
                     },
                     "enterCardNumber": {
@@ -7370,28 +7370,28 @@
                         "es": "Seleccione los trades del Master que desee seguir comparando su rendimiento empleando tres métricas diferentes: "
                     },
                     "selectMaster_1": {
-                        "zh": "收益率——高手的整体收益率。",
+                        "zh": "收益率--高手的整体收益率。",
                         "en": "Profitability – a Master’s overall return on investment. The top-ranked Master has generated the greatest overall profit over the selected time-period.",
                         "vi": "Khả năng sinh lời - lợi tức đầu tư tổng thể của Bậc Thầy. Bậc Thầy hàng đầu đã tạo ra lợi nhuận tổng thể lớn nhất trong khoảng thời gian đã chọn.",
-                        "zh-Hant": "收益率——高手的整體收益率。",
+                        "zh-Hant": "收益率--高手的整體收益率。",
                         "id": "Profitabilitas - Master dengan total keuntungan investasi. Master dengan peringkat teratas menghasilkan pengembalian investasi terbesar dalam rentang waktu yang dipilih.",
                         "es": "Rentabilidad – Retorno sobre inversión medio del Master. El Master en el top del ranking ha generado el mayor beneficio en el período de tiempo seleccionado."
                     },
                     "selectMaster_2": {
-                        "zh": "最大跌幅-高手的最大浮动亏损占比。",
+                        "zh": "最大跌幅--高手的最大浮动亏损占比。",
                         "en": "Stability – a Master’s averaged rate of return. The top-ranked Master has created the greatest profit averaged over the selected time period.",
                         "vi": "Tính ổn định - tỷ lệ hoàn vốn trung bình của Bậc Thầy. Bậc Thầy hàng đầu đã tạo ra lợi nhuận lớn nhất được tính trung bình trong khoảng thời gian đã chọn.",
-                        "zh-Hant": "最大跌幅-高手的最大浮動虧損占比。",
+                        "zh-Hant": "最大跌幅--高手的最大浮動虧損占比。",
                         "id": "Stabilitas - Master dengan tingkat keuntungan investasi rata-rata. Master dengan peringkat teratas menghasilkan pengembalian investasi terbesar secara rata-rata dalam rentang waktu yang dipilih.",
                         "es": "Estabilidad –  a Master’s averaged rate of return. The top-ranked Master has created the greatest profit averaged over the selected time period."
                     },
                     "selectMaster_3": {
-                        "zh": "准确率：高手平仓的订单中盈利订单的占比。",
-                        "en": "Consistency: a Master’s overall ratio of winning to losing trades. The top-ranked Master has the highest ratio of winning to losing trades over the selected time-period.",
-                        "vi": "Tính nhất quán: tỷ lệ thắng của tổng thể để thua các giao dịch. Bậc Thầy được xếp hạng cao nhất có tỷ lệ thắng thua cao nhất trong khoảng thời gian đã chọn.",
-                        "zh-Hant": "準確率：高手平倉的訂單中盈利訂單的占比。",
+                        "zh": "准确率--高手平仓的订单中盈利订单的占比。",
+                        "en": "Consistency - a Master’s overall ratio of winning to losing trades. The top-ranked Master has the highest ratio of winning to losing trades over the selected time-period.",
+                        "vi": "Tính nhất quán - tỷ lệ thắng của tổng thể để thua các giao dịch. Bậc Thầy được xếp hạng cao nhất có tỷ lệ thắng thua cao nhất trong khoảng thời gian đã chọn.",
+                        "zh-Hant": "準確率--高手平倉的訂單中盈利訂單的占比。",
                         "id": "Konsistensi - Master dengan total rasio transaksi menang dibandingkan dengan transaksi yang kalah. Master dengan peringkat teratas memiliki rasio transaksi menang yang paling tinggi dalam rentang waktu yang dipilih.",
-                        "es": "Consistencia: el ratio de posiciones ganadoras frente a perdedoras del Master. El Master en el top del ranking tiene el mayor ratio de trades ganadores frente a perdedores en el período de tiempo seleccionado."
+                        "es": "Consistencia - el ratio de posiciones ganadoras frente a perdedoras del Master. El Master en el top del ranking tiene el mayor ratio de trades ganadores frente a perdedores en el período de tiempo seleccionado."
                     },
                     "qualifyMaster": {
                         "zh": "成为高手，你将满足以下条件：",
@@ -7402,10 +7402,10 @@
                         "es": "Para calificar como Master estatus debe cumplir los siguientes requisitos: "
                     },
                     "qualifyMaster_1": {
-                        "zh": "入金并连续自主交易20个工作日以上；",
+                        "zh": "入金并连续自主交易20个工作日以上",
                         "en": "Self-trade more than 20 days",
                         "vi": "Tự giao dịch hơn 20 ngày",
-                        "zh-Hant": "入金並連續自主交易20個工作日以上；",
+                        "zh-Hant": "入金並連續自主交易20個工作日以上",
                         "id": "Telah melakukan transaksi dalam kurun waktu lebih dari 20 hari",
                         "es": "Operar directamente más de 20 días"
                     },
