@@ -429,7 +429,7 @@ module.exports = {
         "vi": "Tiếng Việt",
         "zh-Hant": "繁體中文",
         "id": "Bahasa Indonesia",
-        "es": "Inglés"
+        "es": "Español"
     },
     "foot_38": {
         "zh": "风险警告：",
@@ -11691,7 +11691,7 @@ module.exports = {
         "vi": "Thẻ ID",
         "zh-Hant": "身份證",
         "id": "Nomor KTP",
-        "es": "Tarjeta de identificación"
+        "es": "Tarjeta ID"
     },
     "third_uploadCard": {
         "zh": "证件类型：",

@@ -9789,28 +9789,32 @@
                 "en": "https://www.tigerwit.com/web/copy/rules",
                 "vi": "https://www.tigerwit.com/web/copy/rules",
                 "zh-Hant": "https://www.tigerwit.com/web/copy/rules",
-                "id": "https://www.tigerwit.com/web/copy/rules"
+                "id": "https://www.tigerwit.com/web/copy/rules",
+                "es": "https://www.tigerwit.com/web/copy/rules"
             },
             "companyNameEn": {
                 "zh": "TigerWit",
                 "en": "TigerWit",
                 "vi": "TigerWit",
                 "zh-Hant": "TigerWit",
-                "id": "TigerWit"
+                "id": "TigerWit",
+                "es": "TigerWit"
             },
             "companyNameZh": {
                 "zh": "TigerWit",
                 "en": "TigerWit",
                 "vi": "TigerWit",
                 "zh-Hant": "TigerWit",
-                "id": "TigerWit"
+                "id": "TigerWit",
+                "es": "TigerWit"
             },
             "webSite": {
                 "zh": "www.tigerwit.com",
                 "en": "www.tigerwit.com",
                 "vi": "www.tigerwit.com",
                 "zh-Hant": "www.tigerwit.com",
-                "id": "www.tigerwit.com"
+                "id": "www.tigerwit.com",
+                "es": "www.tigerwit.com"
             },
         }, lang_data);
 
