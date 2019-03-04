@@ -552,7 +552,7 @@
                         "en": "Reset password",
                         "vi": "Đặt lại mật khẩu",
                         "zh-Hant": "重置密碼",
-                        "id": "Atur ulang kata sandi",
+                        "id": "Atur ulang",
                         "es": "Resetear contraseña"
                     },
                     "doResetPassword":{
