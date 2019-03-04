@@ -89,8 +89,23 @@ $(document).ready(function () {
     $.cookie('ib_pid', oReg.search_arr.ib_pid, {expires: 1, path: '/', domain: getDomain()});
     $.cookie('invite_status', 1, {expires: 1, path: '/', domain: getDomain()});
   }
+
+  publicRequest('getCountries', 'GET').then(function (data) {
+      // console.log(data);
+      if (data.is_succ) {
+          var optionStr = ''
+          for (var i=0; i<data.data.length;i++) {
+              optionStr += '<option value="'+data.data[i].code+'">'+data.data[i].name_en+'</option>';
+          }
+          $("#country").append(optionStr);
+      }
+  });
  
   function toRegister (is_agree) {
+    if (!$("#country").val()) {
+        openLayer('Please select your country/area');
+        return;
+    }
     if (!checkEmail()) return;
     if (!checkVerifyCode()) return;
 
@@ -108,13 +123,15 @@ $(document).ready(function () {
       invite_status: $.cookie('invite_status') || null,
       account: $("#email").val(),
       account_type: 2,
+      world_code: $("#country").val(),
       password: $("#verify_code").val(),
       login_type: 2,
       pid: oReg.search_arr.pid || null,
       unit: oReg.search_arr.unit || null,
       lp: oReg.search_arr.lp || null,
       key: oReg.search_arr.key || null,
-      is_agree: is_agree == 'is_agree' ? 1 : 0
+      is_agree: is_agree == 'is_agree' ? 1 : 0,
+      lang: 'en'
     }).then(function (data) {
       if (!data) return;
       if (data.is_succ) {

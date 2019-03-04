@@ -276,8 +276,22 @@
         ;
         (function () {
 
+            // publicRequest('getCountries', 'GET').then(function (data) {
+            //     // console.log(data);
+            //     if (data.is_succ) {
+            //         var optionStr = ''
+            //         for (var i=0; i<data.data.length;i++) {
+            //             optionStr += '<option value="'+data.data[i].code+'">'+data.data[i].name+'</option>';
+            //         }
+            //         $("#country").append(optionStr);
+            //     }
+            // });
+
             function toLogin (e, is_agree) {
-                
+                // if (!$("#country").val()) {
+                //     layer.msg('请选择国家/大区!');
+                //     return;
+                // }
                 if (!checkTel()) return;
                 if (!checkVerifyCode()) return;
 
@@ -296,6 +310,8 @@
                     invite_status: $.cookie('invite_status') || null,
                     account: $("#telephone").val() || null,
                     account_type: 1,
+                    phone_code: '86',
+                    world_code: 'CN',
                     // password: $("#password").val() || null,
                     password: $("#verify_code").val() || null,
                     login_type: 2, // 登录验证方式，1-密码登录，2-验证码登录
