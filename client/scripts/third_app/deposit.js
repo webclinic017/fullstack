@@ -92,7 +92,7 @@ $(document).on("tap", "#third_app_deposit_cse_btn .btn", function () {
 });
 $(document).on("tap", eleDeposit.payDepositSubmitBtn, function () {
   closeAllMdl();
-  if(depositType === 'Hot'){
+  if(depositType === 'bank'){
     var depositTemplate = {
       data: {
         tip: lang.text("thirdH5.isHasAvodaAccount"),
