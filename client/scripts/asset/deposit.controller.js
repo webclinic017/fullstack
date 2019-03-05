@@ -400,7 +400,8 @@
                             }
 
                             function isAccount(){
-                                if($scope.deposit.type === 'Hot'){
+                                // avoda
+                                if($scope.deposit.type === 'invest'){
                                     openDepositRuleMdl({
                                         type: 'HotMessage',
                                         tit: $scope.lang.text("tigerWitID.depositWithdrawal.isHasAvodaAccount"),
