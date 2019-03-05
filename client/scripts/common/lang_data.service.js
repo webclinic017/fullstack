@@ -5159,6 +5159,30 @@
                     }
                 },
                 "depositWithdrawal": {
+                    "isHasAvodaAccount": {
+                        "zh": "是否拥有AVODA Pay账号",
+                        "en": "Do you have an AVODA Pay account",
+                        "vi": "Do you have an AVODA Pay account",
+                        "zh-Hant": "是否擁有AVODA Pay賬號",
+                        "id": "Do you have an AVODA Pay account",
+                        "es": "Do you have an AVODA Pay account"
+                    },
+                    "hasAvodaAccount": {
+                        "zh": "是 — 直接填写基本信息进行充值",
+                        "en": "Yes - Fill in the basic information directly to deposit",
+                        "vi": "Yes - Fill in the basic information directly to deposit",
+                        "zh-Hant": "是 — 直接填寫基本信息進行充值",
+                        "id": "Yes - Fill in the basic information directly to deposit",
+                        "es": "Yes - Fill in the basic information directly to deposit"
+                    },
+                    "noAvodaAccount": {
+                        "zh": "否 — 跳转AVODA Pay平台注册并充值",
+                        "en": "No - Jump to AVODA Pay platform to register and deposit",
+                        "vi": "No - Jump to AVODA Pay platform to register and deposit",
+                        "zh-Hant": "否 — 跳轉AVODA Pay平臺註冊並充值",
+                        "id": "No - Jump to AVODA Pay platform to register and deposit",
+                        "es": "No - Jump to AVODA Pay platform to register and deposit"
+                    },
                     "bankCardTransferTip": {
                         "zh": "注意：必须使用所选择的银行卡进行转账",
                         "en": "Notice: The selected bank card must be used for transfer.",

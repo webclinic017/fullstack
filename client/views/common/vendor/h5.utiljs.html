@@ -94,6 +94,13 @@
         }
     }
 
+    function layerMsg(message){
+        layer.open({
+            skin: 'msg',
+            content: message,
+            time: 2
+        })
+    }
     // 判断url是否含有参数
     function setUrlParam(url) {
         if (url.split('?').length == 1) {
@@ -367,6 +374,14 @@
             "es": ""
         },
         "third": {
+            "loginAgain": {
+                "zh": "请重新登录",
+                "en": "Please login again",
+                "vi": "Vui lòng đăng nhập lại",
+                "zh-Hant": "請重新登錄",
+                "id": "Silahkan masuk kembali",
+                "es": "Por favor, vuelva a iniciar sesión"
+            },
             "fillInfoTip": {
                 "zh": "请填写完整信息",
                 "en": "Please fill in the complete information",
@@ -473,6 +488,30 @@
             }
         },
         "thirdH5": {
+            "isHasAvodaAccount": {
+                "zh": "是否拥有AVODA Pay账号",
+                "en": "Do you have an AVODA Pay account",
+                "vi": "Do you have an AVODA Pay account",
+                "zh-Hant": "是否擁有AVODA Pay賬號",
+                "id": "Do you have an AVODA Pay account",
+                "es": "Do you have an AVODA Pay account"
+            },
+            "hasAvodaAccount": {
+                "zh": " 是 — 直接填写基本信息进行充值",
+                "en": "Yes - Fill in the basic information directly to deposit",
+                "vi": "Yes - Fill in the basic information directly to deposit",
+                "zh-Hant": "是 — 直接填寫基本信息進行充值",
+                "id": "Yes - Fill in the basic information directly to deposit",
+                "es": "Yes - Fill in the basic information directly to deposit"
+            },
+            "noAvodaAccount": {
+                "zh": " 否 — 跳转AVODA Pay平台注册并充值",
+                "en": "No - Jump to AVODA Pay platform to register and deposit",
+                "vi": "No - Jump to AVODA Pay platform to register and deposit",
+                "zh-Hant": "否 — 跳轉AVODA Pay平臺註冊並充值",
+                "id": "No - Jump to AVODA Pay platform to register and deposit",
+                "es": "No - Jump to AVODA Pay platform to register and deposit"
+            },
             "recreate_order":{
                 "zh": "请重新创建订单",
                 "en": "Please recreate the order",

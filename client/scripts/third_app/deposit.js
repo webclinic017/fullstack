@@ -92,8 +92,33 @@ $(document).on("tap", "#third_app_deposit_cse_btn .btn", function () {
 });
 $(document).on("tap", eleDeposit.payDepositSubmitBtn, function () {
   closeAllMdl();
-  openLoadingMdl();
-  submitDeposit();
+  if(depositType === 'Hot'){
+    var depositTemplate = {
+      data: {
+        tip: lang.text("thirdH5.isHasAvodaAccount"),
+        content1: lang.text("thirdH5.hasAvodaAccount"),
+        content2: lang.text("thirdH5.noAvodaAccount")
+      }
+    };
+    var html=bt('template_deposit_is_account',depositTemplate);
+    $("#third_app_middle_template").html(html);
+    openMiddleMdl();
+  }else{
+    openLoadingMdl();
+    submitDeposit();
+  }
+  return false;
+});
+// 判断是否存在账号
+$(document).on("tap", "#third_app_deposit_is_account_btn .but", function () {
+  var cAction = $(this).attr("data-action");
+  if(cAction === 'yes'){
+    closeAllMdl();
+    openLoadingMdl();
+    submitDeposit()
+  }else{
+    window.location.href = selectKeyFromType('url');
+  }
   return false;
 });
 function confirmDeposit () {
