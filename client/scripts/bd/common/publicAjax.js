@@ -115,7 +115,7 @@
     w.publicUploadFile = publicUploadFile;
 
     function publicRequest ($url, $method, $params) {
-        var token = $.cookie("token") || '';
+        var token = $.cookie("token") || getSearch().token || '';
         $url = apiUrl[$url] + '?token='+token;
         $params = $params ? $params : {};
         
