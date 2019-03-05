@@ -95,7 +95,7 @@ $(document).ready(function () {
       if (data.is_succ) {
           var optionStr = ''
           for (var i=0; i<data.data.length;i++) {
-              optionStr += '<option value="'+data.data[i].code+'">'+data.data[i].name_en+'</option>';
+              optionStr += '<option value="'+data.data[i].code+'">'+data.data[i].name+'</option>';
           }
           $("#country").append(optionStr);
       }

@@ -552,7 +552,7 @@
                         "en": "Reset password",
                         "vi": "Đặt lại mật khẩu",
                         "zh-Hant": "重置密碼",
-                        "id": "Atur ulang kata sandi",
+                        "id": "Atur ulang",
                         "es": "Resetear contraseña"
                     },
                     "doResetPassword":{
@@ -5159,6 +5159,30 @@
                     }
                 },
                 "depositWithdrawal": {
+                    "isHasAvodaAccount": {
+                        "zh": "是否拥有AVODA Pay账号",
+                        "en": "Do you have an AVODA Pay account",
+                        "vi": "Bạn có tài khoản AVODA Pay không?",
+                        "zh-Hant": "是否擁有AVODA Pay賬號",
+                        "id": "Apakah anda memiliki rekening AVODA PAY",
+                        "es": "Do you have an AVODA Pay account"
+                    },
+                    "hasAvodaAccount": {
+                        "zh": "是 — 直接填写基本信息进行充值",
+                        "en": "Yes - Fill in the basic information directly to deposit",
+                        "vi": "Có - Điền thông tin cơ bản để nạp tiền trực tiếp",
+                        "zh-Hant": "是 — 直接填寫基本信息進行充值",
+                        "id": "Ya - Masukkan informasi deposit",
+                        "es": "Yes - Fill in the basic information directly to deposit"
+                    },
+                    "noAvodaAccount": {
+                        "zh": "否 — 跳转AVODA Pay平台注册并充值",
+                        "en": "No - Jump to AVODA Pay platform to register and deposit",
+                        "vi": "Không - Đi đến nền tảng AVODA Pay để đăng kí và nạp tiền",
+                        "zh-Hant": "否 — 跳轉AVODA Pay平臺註冊並充值",
+                        "id": "Tidak - Masuk ke platform AVODA PAY untuk daftar dan deposit",
+                        "es": "No - Jump to AVODA Pay platform to register and deposit"
+                    },
                     "bankCardTransferTip": {
                         "zh": "注意：必须使用所选择的银行卡进行转账",
                         "en": "Notice: The selected bank card must be used for transfer.",
@@ -9789,28 +9813,32 @@
                 "en": "https://www.tigerwit.com/web/copy/rules",
                 "vi": "https://www.tigerwit.com/web/copy/rules",
                 "zh-Hant": "https://www.tigerwit.com/web/copy/rules",
-                "id": "https://www.tigerwit.com/web/copy/rules"
+                "id": "https://www.tigerwit.com/web/copy/rules",
+                "es": "https://www.tigerwit.com/web/copy/rules"
             },
             "companyNameEn": {
                 "zh": "TigerWit",
                 "en": "TigerWit",
                 "vi": "TigerWit",
                 "zh-Hant": "TigerWit",
-                "id": "TigerWit"
+                "id": "TigerWit",
+                "es": "TigerWit"
             },
             "companyNameZh": {
                 "zh": "TigerWit",
                 "en": "TigerWit",
                 "vi": "TigerWit",
                 "zh-Hant": "TigerWit",
-                "id": "TigerWit"
+                "id": "TigerWit",
+                "es": "TigerWit"
             },
             "webSite": {
                 "zh": "www.tigerwit.com",
                 "en": "www.tigerwit.com",
                 "vi": "www.tigerwit.com",
                 "zh-Hant": "www.tigerwit.com",
-                "id": "www.tigerwit.com"
+                "id": "www.tigerwit.com",
+                "es": "www.tigerwit.com"
             },
         }, lang_data);
 

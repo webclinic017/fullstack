@@ -387,7 +387,7 @@
                                 var poundage = $scope.depositTypeLst[$scope.deposit.type].poundage.substring(0, $scope.depositTypeLst[$scope.deposit.type].poundage.length-1)*0.01;
                                 var amountRMB = Number(amount*$scope.deposit.currency.rate_in).toFixed(2);
                                 var amountFee = Number(amountRMB*poundage).toFixed(2);
-                                openDepositMdl('confirmDeposit', submitDeposit, {
+                                openDepositMdl('confirmDeposit', isAccount, {
                                     amountDollar: amount,
                                     amountRMB: amountRMB,
                                     amountFee: amountFee,
@@ -399,6 +399,22 @@
                                 });
                             }
 
+                            function isAccount(){
+                                // avoda
+                                if($scope.deposit.type === 'invest'){
+                                    openDepositRuleMdl({
+                                        type: 'HotMessage',
+                                        tit: $scope.lang.text("tigerWitID.depositWithdrawal.isHasAvodaAccount"),
+                                        pop: {
+                                            content: $scope.lang.text("tigerWitID.depositWithdrawal.hasAvodaAccount") + '\n\r' + $scope.lang.text("tigerWitID.depositWithdrawal.noAvodaAccount")
+                                        },
+                                        url: $scope.depositTypeLst[$scope.deposit.type].url,
+                                        callback: submitDeposit
+                                    });
+                                }else {
+                                    submitDeposit()
+                                }
+                            }
                             function submitDeposit() {
                                 var p = $scope.depositTypeLst[$scope.deposit.type].platform || undefined;
                                 var c = $scope.deposit.currency ? $scope.deposit.currency.currency : undefined;
@@ -576,7 +592,7 @@
                     };
                     $scope.callback = params.callback || null;
                     $scope.closeModal = closeModal;
-                    $scope.toCse = function () {
+                    $scope.toUrl = function () {
                         window.open($scope.msgInfo.msgUrl);
                     };
                     function closeModal() {

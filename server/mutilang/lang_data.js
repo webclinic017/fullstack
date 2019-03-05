@@ -429,7 +429,7 @@ module.exports = {
         "vi": "Tiếng Việt",
         "zh-Hant": "繁體中文",
         "id": "Bahasa Indonesia",
-        "es": "Inglés"
+        "es": "Español"
     },
     "foot_38": {
         "zh": "风险警告：",
@@ -11691,7 +11691,7 @@ module.exports = {
         "vi": "Thẻ ID",
         "zh-Hant": "身份證",
         "id": "Nomor KTP",
-        "es": "Tarjeta de identificación"
+        "es": "Tarjeta ID"
     },
     "third_uploadCard": {
         "zh": "证件类型：",
@@ -14095,6 +14095,224 @@ module.exports = {
             "zh-Hant": "請填寫電匯賬號",
             "id": "Silahkan isi akun penarikan",
             "es": "Por favor, rellene la cuenta de reembolso"
+        }
+    },
+    "bonusBd": {
+        "confirmNow":{
+            "zh": "Confirm Now!",
+            "en": "Confirm Now!",
+            "vi": "Confirm Now!",
+            "zh-Hant": "Confirm Now!",
+            "id": "Confirm Now!",
+            "es": "Confirm Now!"
+        },
+        "gainRebateUs":{
+            "zh": "You can gain rebate US ",
+            "en": "You can gain rebate US ",
+            "vi": "You can gain rebate US ",
+            "zh-Hant": "You can gain rebate US ",
+            "id": "You can gain rebate US ",
+            "es": "You can gain rebate US "
+        },
+        "onceRegistered":{
+            "zh": " once registered",
+            "en": " once registered",
+            "vi": " once registered",
+            "zh-Hant": " once registered",
+            "id": " once registered",
+            "es": " once registered"
+        },
+        "us":{
+            "zh": "US",
+            "en": "US",
+            "vi": "US",
+            "zh-Hant": "US",
+            "id": "US",
+            "es": "US"
+        },
+        "lot":{
+            "zh": "lot",
+            "en": "lot",
+            "vi": "lot",
+            "zh-Hant": "lot",
+            "id": "lot",
+            "es": "lot"
+        },
+        "within":{
+            "zh": "within ",
+            "en": "within ",
+            "vi": "within ",
+            "zh-Hant": "within ",
+            "id": "within ",
+            "es": "within "
+        },
+        "days":{
+            "zh": " days",
+            "en": " days",
+            "vi": " days",
+            "zh-Hant": " days",
+            "id": " days",
+            "es": " days"
+        },
+        "whyChoose1":{
+            "zh": "Authority Supervision Regulation by FCA,  license number 679941",
+            "en": "Authority Supervision Regulation by FCA,  license number 679941",
+            "vi": "Authority Supervision Regulation by FCA,  license number 679941",
+            "zh-Hant": "Authority Supervision Regulation by FCA,  license number 679941",
+            "id": "Authority Supervision Regulation by FCA,  license number 679941",
+            "es": "Authority Supervision Regulation by FCA,  license number 679941"
+        },
+        "whyChoose2":{
+            "zh": "Copy trading with TigerWit Trading easier & faster",
+            "en": "Copy trading with TigerWit Trading easier & faster",
+            "vi": "Copy trading with TigerWit Trading easier & faster",
+            "zh-Hant": "Copy trading with TigerWit Trading easier & faster",
+            "id": "Copy trading with TigerWit Trading easier & faster",
+            "es": "Copy trading with TigerWit Trading easier & faster"
+        },
+        "whyChoose3":{
+            "zh": "Min. deposit $50 Min. deposit trading $5 Max. Leverage 1:200",
+            "en": "Min. deposit $50 Min. deposit trading $5 Max. Leverage 1:200",
+            "vi": "Min. deposit $50 Min. deposit trading $5 Max. Leverage 1:200",
+            "zh-Hant": "Min. deposit $50 Min. deposit trading $5 Max. Leverage 1:200",
+            "id": "Min. deposit $50 Min. deposit trading $5 Max. Leverage 1:200",
+            "es": "Min. deposit $50 Min. deposit trading $5 Max. Leverage 1:200"
+        },
+        "whyChoose4":{
+            "zh": "Buy & Sell are available  at 24 hours per day",
+            "en": "Buy & Sell are available  at 24 hours per day",
+            "vi": "Buy & Sell are available  at 24 hours per day",
+            "zh-Hant": "Buy & Sell are available  at 24 hours per day",
+            "id": "Buy & Sell are available  at 24 hours per day",
+            "es": "Buy & Sell are available  at 24 hours per day"
+        },
+        "eventDetails1":{
+            "zh": "You can gain the rebate once registered.",
+            "en": "You can gain the rebate once registered.",
+            "vi": "You can gain the rebate once registered.",
+            "zh-Hant": "You can gain the rebate once registered.",
+            "id": "You can gain the rebate once registered.",
+            "es": "You can gain the rebate once registered."
+        },
+        "eventDetails2":{
+            "zh": "You must meet the requirements before the specified date to claim the rebate.",
+            "en": "You must meet the requirements before the specified date to claim the rebate.",
+            "vi": "You must meet the requirements before the specified date to claim the rebate.",
+            "zh-Hant": "You must meet the requirements before the specified date to claim the rebate.",
+            "id": "You must meet the requirements before the specified date to claim the rebate.",
+            "es": "You must meet the requirements before the specified date to claim the rebate."
+        },
+        "eventDetails3":{
+            "zh": "The rebate promotion will be applied only once, which will be deposited into the user’s account after redemption.",
+            "en": "The rebate promotion will be applied only once, which will be deposited into the user’s account after redemption.",
+            "vi": "The rebate promotion will be applied only once, which will be deposited into the user’s account after redemption.",
+            "zh-Hant": "The rebate promotion will be applied only once, which will be deposited into the user’s account after redemption.",
+            "id": "The rebate promotion will be applied only once, which will be deposited into the user’s account after redemption.",
+            "es": "The rebate promotion will be applied only once, which will be deposited into the user’s account after redemption."
+        },
+        "eventDetails4":{
+            "zh": "The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign.",
+            "en": "The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign.",
+            "vi": "The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign.",
+            "zh-Hant": "The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign.",
+            "id": "The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign.",
+            "es": "The number of lots required hereunder only applies to forex, precious metals, and energies. USD/CNY and CFD products are not eligible for this campaign."
+        },
+        "eventDetails5":{
+            "zh": "While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification.",
+            "en": "While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification.",
+            "vi": "While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification.",
+            "zh-Hant": "While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification.",
+            "id": "While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification.",
+            "es": "While EA trading is allowed, the use of EAs for scalping is prohibited. Failure to comply with this rule will result in disqualification."
+        },
+        "eventDetails6":{
+            "zh": "TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com.",
+            "en": "TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com.",
+            "vi": "TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com.",
+            "zh-Hant": "TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com.",
+            "id": "TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com.",
+            "es": "TigerWit reserves the right of final decision and interpretation in the case of any dispute. For questions, please contact us: customerservice@tigerwit.com."
+        },
+        "eventDetails7":{
+            "zh": "High Risk Warning: ",
+            "en": "High Risk Warning: ",
+            "vi": "High Risk Warning: ",
+            "zh-Hant": "High Risk Warning: ",
+            "id": "High Risk Warning: ",
+            "es": "High Risk Warning: "
+        },
+        "eventDetails8":{
+            "zh": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. ",
+            "en": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. ",
+            "vi": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. ",
+            "zh-Hant": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. ",
+            "id": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. ",
+            "es": "Margin transactions in financial markets have a high level of risk and are not suitable for every investor. Investors should take into consideration their investment goals, ability to withstand losing part or all their investment and their investment experience and knowledge. Past results cannot be taken as a guarantee of future results. "
+        },
+        "copyright":{
+            "zh": "Copyright  2017 TigerWit. All rights reserved.",
+            "en": "Copyright  2017 TigerWit. All rights reserved.",
+            "vi": "Copyright  2017 TigerWit. All rights reserved.",
+            "zh-Hant": "Copyright  2017 TigerWit. All rights reserved.",
+            "id": "Copyright  2017 TigerWit. All rights reserved.",
+            "es": "Copyright  2017 TigerWit. All rights reserved."
+        },
+        "getRebateNow":{
+            "zh": "Get Rebate Now",
+            "en": "Get Rebate Now",
+            "vi": "Get Rebate Now",
+            "zh-Hant": "Get Rebate Now",
+            "id": "Get Rebate Now",
+            "es": "Get Rebate Now"
+        },
+        "resend":{
+            "zh": "Resend",
+            "en": "Resend",
+            "vi": "Resend",
+            "zh-Hant": "Resend",
+            "id": "Resend",
+            "es": "Resend"
+        },
+        "resendTip1":{
+            "zh": "You have registered successfully, ",
+            "en": "You have registered successfully, ",
+            "vi": "You have registered successfully, ",
+            "zh-Hant": "You have registered successfully, ",
+            "id": "You have registered successfully, ",
+            "es": "You have registered successfully, "
+        },
+        "resendTip2":{
+            "zh": "please click the verify account button in your email to verify.",
+            "en": "please click the verify account button in your email to verify.",
+            "vi": "please click the verify account button in your email to verify.",
+            "zh-Hant": "please click the verify account button in your email to verify.",
+            "id": "please click the verify account button in your email to verify.",
+            "es": "please click the verify account button in your email to verify."
+        },
+        "modifyAddress":{
+            "zh": "Modify Your Email Address",
+            "en": "Modify Your Email Address",
+            "vi": "Modify Your Email Address",
+            "zh-Hant": "Modify Your Email Address",
+            "id": "Modify Your Email Address",
+            "es": "Modify Your Email Address"
+        },
+        "downloadMobileApp":{
+            "zh": "Download TigerWit Mobile App",
+            "en": "Download TigerWit Mobile App",
+            "vi": "Download TigerWit Mobile App",
+            "zh-Hant": "Download TigerWit Mobile App",
+            "id": "Download TigerWit Mobile App",
+            "es": "Download TigerWit Mobile App"
+        },
+        "login":{
+            "zh": "登录",
+            "en": "LOGIN",
+            "vi": "Đăng nhập",
+            "zh-Hant": "登錄",
+            "id": "Masuk",
+            "es": "Ingreso"
         }
     }
 };
