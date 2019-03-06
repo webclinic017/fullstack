@@ -3,7 +3,7 @@
             <div class="agent_banner__con">
                 <h3><%=lang.text('partner.becomePartner')%></h3>
                 <p><%=lang.text('partner.becomePartner_1')%></p>
-                <button class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" ng-click="goInto()"><%=lang.text('partner.joinUs')%></button>
+                <button class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" ng-click="[goInto(), toTrackEvent('partner page', 'global_ib_click_joinus')]"><%=lang.text('partner.joinUs')%></button>
             </div>
         </div>    
         <div class="agent__proxy">
@@ -145,7 +145,7 @@
                             </div>
                         </form>
                         <div class="btn-wrapper text-center">
-                            <button class="btn tw-btn-lg200 tw-btn-capsule-gradient" ng-show="!loading" ng-click="submitForm()"><%=lang.text('partner.sendAgent')%></button>
+                            <button class="btn tw-btn-lg200 tw-btn-capsule-gradient" ng-show="!loading" ng-click="[submitForm(), toTrackEvent('partner page', 'global_ib_click_send')]"><%=lang.text('partner.sendAgent')%></button>
                             <button class="btn tw-btn-lg200 tw-btn-capsule-gradient disabled" disabled style="opacity: 0.5;" ng-show="loading"><%=lang.text('partner.sendAgent')%></button>
                             <span class="global_proxy_err_tip" ng-class="{'font-success' : error.success, 'font-warning': !error.success}" ng-show="error.is_succ">{{error.message}}</span>
                         </div>

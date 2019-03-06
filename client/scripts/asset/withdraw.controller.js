@@ -8,6 +8,11 @@
     AssetWithdrawController.$inject = ['$rootScope', '$scope', '$modal', '$state', 'asset', 'validator', '$cookies', '$layer', '$document'];
 
     function AssetWithdrawController($rootScope, $scope, $modal, $state, asset, validator, $cookies, $layer, $document) {
+        
+        if ($cookies["d&w_czc"] && (!localStorage["withdraw_czc"] || localStorage["withdraw_czc"] !== $cookies["d&w_czc"])) {
+            $scope.toTrackEvent('Deposit/withdrawal', 'withdrawal');
+            localStorage["withdraw_czc"] = $cookies["d&w_czc"];
+        }
         // 缓存当前父scope 给弹窗控制器使用
         $scope.parentScope = $scope;
         var parentScope = $scope;

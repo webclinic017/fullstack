@@ -148,7 +148,7 @@
 
                             <ul class="select__dropdown" twform-select data-bind-model="realnameInfo.gender">
                                 
-                                <li ng-repeat="gender in genders" ng-class="{'selected': gender.value === realnameInfo.gender.value}">
+                                <li ng-repeat="gender in genders" ng-class="{'selected': gender.value === realnameInfo.gender.value}" ng-click="toTrackEvent('Open live account', 'id_verification_gender')">
                                     <span data-value="{{gender.value}}">{{ gender.key }}</span>
                                 </li>
                             </ul>
@@ -287,7 +287,7 @@
             </div>
 
             <div class="btn_wrapper text-left">
-                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="toState.name.indexOf('space.update') != -1 && clickable" ng-click="updatePaper()">
+                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="toState.name.indexOf('space.update') != -1 && clickable" ng-click="[updatePaper(), toTrackEvent('Open live account', 'id_verification')]">
                     {{lang.text('actLogin29')}}
                 </button>
                 <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="toState.name.indexOf('space.update') == -1 && clickable" ng-click="submitForm()">

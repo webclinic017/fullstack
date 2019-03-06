@@ -28,7 +28,7 @@
         </li>
       </ul>
       <div class="index_new__focus-btn_box">
-        <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient focus_btn"><%= lang.text("link_register")%></a>
+        <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient focus_btn" ng-click="toTrackEvent('home page', 'global_home_first_open_account')"><%= lang.text("link_register")%></a>
       </div>
       <div class="index_new__focus-btn_box pd-tp-30">
           <%= lang.text("newhome_9_1")%>
@@ -70,7 +70,7 @@
         </li>
       </ul>
       <div class="index_new__copy-btn_box">
-        <a href="/ranklist/#/ranklist/masters" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" style="width: 220px;"><%= lang.text("newhome_16")%></a>
+        <a href="/ranklist/#/ranklist/masters" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" style="width: 220px" ng-click="toTrackEvent('home page', 'global_home_click_select_master')"><%= lang.text("newhome_16")%></a>
       </div>
     </div>
   </div>
@@ -172,7 +172,7 @@
         </li>
       </ul>
       <div class="index_new__flexible-btn_box">
-        <a href="/web/product/forex" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%= lang.text("newhome_29")%></a>
+        <a href="/web/product/forex" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" ng-click="toTrackEvent('home page', 'global_home_click_find_out_more')"><%= lang.text("newhome_29")%></a>
       </div>
     </div>
   </div>
@@ -189,7 +189,7 @@
         </video>
       </div>
       <div class="index_new__flexible-btn_box">
-        <a href="https://tech.tigerwit.com" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient flexible_btn"><%= lang.text("newhome_31_1")%></a>
+        <a href="https://tech.tigerwit.com" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient flexible_btn" ng-click="toTrackEvent('home page', 'global_home_click_blockchain')"><%= lang.text("newhome_31_1")%></a>
       </div>
     </div>
   </div>
@@ -206,11 +206,11 @@
       <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35_1")%></p>
       <p class="index_new__tools-sub_tit"><%= lang.text("newhome_35_2")%></p>
       <div class="index_new__tools-download">
-        <a href="<%= lang.text('downloadGlobalIos') %>"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
+        <a href="<%= lang.text('downloadGlobalIos') %>" ng-click="toTrackEvent('home page', 'global_home_click_appstore')"><img src="<%= lang.image('homeAppIos')%>" alt=""></a>
         <%if (lang.areaId != 1) {%>
-          <a href="<%= lang.text('downloadGlobalAndroid') %>"><img src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
+          <a href="<%= lang.text('downloadGlobalAndroid') %>" ng-click="toTrackEvent('home page', 'global_home_click_googleplay')"><img src="<%= lang.image('homeAppAndroidGlobal')%>" alt=""></a>
         <%} else {%>
-          <a href="<%= lang.text('androidApp') %>"><img src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
+          <a href="<%= lang.text('androidApp') %>" ng-click="toTrackEvent('home page', 'global_home_click_googleplay')"><img src="<%= lang.image('homeAppAndroidCn')%>" alt=""></a>
         <%}%>
       </div>
     </div>
@@ -254,7 +254,7 @@
           <p><%= lang.text("newhome_45")%></p>
         </div>
         <div class="b text-center">
-          <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient"><%= lang.text("newhome_46")%></a>
+          <a href="/space/#/account/register" class="tw-btn tw-btn-lg200 tw-btn-capsule-gradient" ng-click="toTrackEvent('home page', 'global_home_last_open_account')"><%= lang.text("newhome_46")%></a>
         </div>
       </div>
     </div>
