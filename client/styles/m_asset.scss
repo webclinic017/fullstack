@@ -615,7 +615,7 @@
 // 支付 avoda页面
 @include b(m_deposit_avoda){
     color: rgba(36, 42, 54, 1);
-    padding: 30px 20px 20px;
+    padding: 30px 40px 20px;
     max-width: 600px;
     margin: 0 auto;
     .btn{
@@ -624,7 +624,7 @@
         min-width: 160px;
     }
     @include e(logo){
-        height: 44px;
+        padding: 30px 0 30px;
     }
     @include e(tip){
         margin: 26px 0;
@@ -633,7 +633,7 @@
         
     }
     @include e(input){
-        margin-top: 40px;
+        margin-top: 20px;
         > label{
             display: block;
             padding-bottom: 30px; 
@@ -641,14 +641,17 @@
 
             > input[type='text'] {
                 @include flex(1);
-                border-bottom: 1px solid rgba(151, 151, 151, 1);
+                min-width: 0;
+                font-size: 16px;
+                border-bottom: 1px solid rgba(151, 151, 151, 0.3);
             }
             .input-name{
                 width: 84px;
                 margin-right: 5px;
             }
             .get-code{
-                margin-left: 3px;
+                margin-left: 13px;
+                color: rgba(74, 144, 226, 1);
             }
         }
     }

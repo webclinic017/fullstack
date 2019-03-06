@@ -322,7 +322,7 @@
     top: 100%;
     transition: all 0.2s;
     background: #fff;
-    padding: 20px 20px 40px;
+    padding: 20px;
     border-radius: 16px;
     .title {
       margin: 0;
@@ -342,6 +342,11 @@
         color: #999;
         padding: 15px 0px 30px;
       }
+      .tip1 {
+        color: rgba(62, 74, 89, 0.5);
+        font-size: px2rem(24);
+        padding: 20px 0px 18px;
+      }
       .btn_wrapper {
         .btn {
           width: 100%;
@@ -349,6 +354,22 @@
           &.btn-info {
             background-color: transparent;
             border-color: #ccc;
+          }
+        }
+      }
+      // 弹窗并排按钮样式
+      .btn_line{
+        border-top: 1px solid rgba(211, 223, 239, 1);
+        .but{
+          padding-top: 15px;
+          font-size: px2rem(24);
+          color: rgba(62, 74, 89, 0.5);
+          width:50%;
+          background-color: transparent;
+          border: none;
+          float: left;
+          &.but-yes {
+            color: rgba(62, 74, 89, 1);
           }
         }
       }

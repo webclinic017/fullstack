@@ -1,5 +1,5 @@
 module.exports = function (req, res) {
-    var langArr = ['zh', 'cn', 'en', 'vi', 'zh-Hant', 'id'];
+    var langArr = ['zh', 'cn', 'en', 'vi', 'zh-Hant', 'id', 'es'];
     var querystring = require("querystring");
     var defaultLang = {
         browserLang: browserLang,

@@ -7,6 +7,8 @@ $(document).ready(function () {
     var submitMis = false; // 不可重复点击提交
     var count = 6; //重新获取时间
     var reg = /^[0-9]*$/;
+    var layerIndex;
+    var osBlo = getSearch().os == 'web' ? true : false; // 判断来自web端还是app端
     var params = {
         order_no: getSearch().order_no,
         aname: $("input[name='name']"),
@@ -42,21 +44,24 @@ $(document).ready(function () {
                 return
             }
             codeSent = true;
-            publicRequest('getAvodaCode', 'post', {
+            layerIndex = layer.open({type: 2})
+            publicRequest(osBlo ? 'getAvodaCode' : 'getAvodaCodeApp', 'post', {
                 order_no: params.order_no,
                 name: params.aname.val(),
                 card: params.card.val(),
                 id_card: params.id_card.val(),
                 phone: params.phone.val(),
             }).then(function (data) {
-
+                layer.close(layerIndex)
+                if(!data){
+                    codeSent = false;
+                }
                 if (data.is_succ) {
                     window.clearInterval(InterValObj);
                     curCount = count;
                     getCode.text(lang.text('thirdH5.verificationCodeSent') + '（' + curCount + '）')
                     InterValObj = setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
-                }
-                else {
+                } else {
                     codeSent = false;
                     layerMsg(data.message)
                 }
@@ -74,11 +79,12 @@ $(document).ready(function () {
                 return
             }
             submitMis = true;
-            publicRequest('getAvodaPay', 'post', {
+            layerIndex = layer.open({type: 2})
+            publicRequest(osBlo ? 'getAvodaPay' : 'getAvodaPayApp', 'post', {
                 order_no: params.order_no,
                 code: params.code.val()
             }).then(function (data) {
-
+                layer.close(layerIndex)
                 submitMis = false;
                 if (data.is_succ) {
                     if(platform == 'pc'){
@@ -94,13 +100,6 @@ $(document).ready(function () {
 
     })
 
-    function layerMsg(message){
-        layer.open({
-            skin: 'msg',
-            content: message,
-            time: 2
-        })
-    }
     //timer处理函数
     function SetRemainTime() {
         if (curCount == 0) {

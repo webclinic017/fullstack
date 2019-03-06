@@ -1,7 +1,7 @@
 <div class="sys_modal_v2 slim_case">
-    <button class="close" ng-click="closeModal()">&times;</button>
+    <button class="close" ng-click="closeModal()" ng-if="type !== 'HotMessage'">&times;</button>
 
-    <h5 class="sys_modal_v2__title">
+    <h5 class="sys_modal_v2__title" >
         {{msgInfo.msgTitle || lang.text('tigerWitID.depositWithdrawal.notice')}}
     </h5>
 
@@ -115,12 +115,26 @@
             <button class="btn btn-primary-gradient btn-sm mg-rg-15" ng-click="[callback(), closeModal()]">
                 {{lang.text('tigerWitID.yes')}}
             </button>
-            <button class="btn btn-primary-gradient btn-sm" ng-click="[toCse(), closeModal()]">
+            <button class="btn btn-primary-gradient btn-sm" ng-click="[toUrl(), closeModal()]">
                 {{lang.text('tigerWitID.no')}}
             </button>
         </p>
     </div>
 
+    <div class="sys_modal_v2__content" ng-if="type === 'HotMessage'">
+        <div class="sys_modal_v2__info pd-tp-10 text-center">
+            <pre>{{msgInfo.msgPopContent}}</pre>
+        </div>
+
+        <p class="btn_wrapper mg-bt-15">
+            <button class="btn btn-primary-gradient btn-sm mg-rg-15" ng-click="[callback(), closeModal()]">
+                {{lang.text('tigerWitID.yes')}}
+            </button>
+            <button class="btn btn-primary-gradient btn-sm" ng-click="[toUrl(), closeModal()]">
+                {{lang.text('tigerWitID.no')}}
+            </button>
+        </p>
+    </div>
     <div class="sys_modal_v2__content" ng-if="type === 'bindBankCard'">
         <div class="sys_modal_v2__info mg-bt-15 deposit_modal__bank_card">
            <p class="mg-bt-10"><span class="tit">{{lang.text('tigerWitID.wallet.name')}}</span><span class="name">{{msgInfo.cardName}}</span></p>

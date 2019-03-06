@@ -78,6 +78,22 @@
     </div>
   </div>
 </script>
+<script id="template_deposit_is_account" type="text/html">
+  <h3 class="title">
+    <span><$= data.tip || '<%=lang.text('thirdH5.notice')%>'$></span>
+    <!-- <span class="cancel third_app_template_cancel">×</span> -->
+  </h3>
+  <div class="detail">
+    <div class="tip1 text-center">
+      <p class="mg-bt-10"><$= data.content1 || ''$></p>
+      <p class=""><$= data.content2 || ''$></p>
+    </div>
+    <div class="btn_line clearfix" id="third_app_deposit_is_account_btn">
+      <button class="but" data-action="no"><%= lang.text('thirdH5.no')%></button>
+      <button class="but but-yes" data-action="yes"><%= lang.text('thirdH5.yes')%></button>
+    </div>
+  </div>
+</script>
 <script id="template_deposit_cse_wallet" type="text/html">
   <h3 class="title">
     <span><%=lang.text('thirdH5.cseAccount')%></span>

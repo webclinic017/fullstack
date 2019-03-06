@@ -31,6 +31,8 @@
         // setCustomerPromotion: origin + '/user/ib_agent', // post
         getAvodaCode: origin + '/avoda/code', // post
         getAvodaPay: origin + '/avoda/pay', // post
+        getAvodaCodeApp: origin_app + '/avoda/code', // post
+        getAvodaPayApp: origin_app + '/avoda/pay', // post
 
         //交易品种
         getSymbols: origin_app + '/symbol/list', //get
@@ -113,7 +115,7 @@
     w.publicUploadFile = publicUploadFile;
 
     function publicRequest ($url, $method, $params) {
-        var token = $.cookie("token") || '';
+        var token = $.cookie("token") || getSearch().token || '';
         $url = apiUrl[$url] + '?token='+token;
         $params = $params ? $params : {};
         
@@ -160,7 +162,7 @@
             if (data.code >= 100100 && data.code <= 100199) {
                 layer.open({
                     skin: 'msg',
-                    content: "请重新登陆",
+                    content: lang.text('third.loginAgain'),
                     time: 2
                 });
                 toLogin();
@@ -214,7 +216,7 @@
                     // console.log(data.message);
                     layer.open({
                         skin: 'msg',
-                        content: "请重新登陆",
+                        content: lang.text('third.loginAgain'),
                         time: 2
                     });
                 } else {

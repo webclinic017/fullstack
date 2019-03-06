@@ -513,7 +513,7 @@
                     };
                     $scope.callback = params.callback || null;
                     $scope.closeModal = closeModal;
-                    $scope.toCse = function () {
+                    $scope.toUrl = function () {
                         window.open($scope.msgInfo.msgUrl);
                     };
                     function closeModal() {
