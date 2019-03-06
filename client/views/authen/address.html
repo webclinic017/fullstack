@@ -53,7 +53,7 @@
                 </p>
             </div>
             <div class="btn_wrapper text-left">
-                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="clickable" ng-click="uploadAddress()">
+                <button class="btn btn-sm tw-btn-capsule-gradient" ng-if="clickable" ng-click="[uploadAddress(), toTrackEvent('Open live account', 'upload_por')]">
                     {{lang.text('tigerWitID.submit')}}
                 </button>
 

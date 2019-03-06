@@ -294,6 +294,15 @@
             document.cookie = params.nameKey + '=' + params.nameValue + ';path=' + params.path + ';domain=' + $scope.getDomain() + ';expires=' + oDate.toUTCString();
         }
 
+        /**
+         * 友盟统计
+         * 2019.02.18
+         */
+        $scope.toTrackEvent = function (category, action) {
+            console.log(category, action);
+            _czc.push(["_trackEvent", category, action]);
+        };
+
         /*
          * 神策数据 统计
          * 2018.01.03 update

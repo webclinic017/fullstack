@@ -137,10 +137,6 @@
                     }
                     obj.btns[lang.text("tigerWitID.confirm2")] = function(){};
                     $layer(obj);
-                    if( $scope.registerStep3 == 2){
-                        sa.track('email_code')
-                    }
-                    sa.track('btn_register_code');
                 } else {
                     layer.msg(data.message);
                 }
@@ -158,12 +154,6 @@
             //     return;
             // }
             var msg;
-            // // 神策统计 - 点击登录
-            // if(!is_agree) {
-            //     sa.track('click_login', {
-            //         login_type: $scope.loginType == 'code' ? '验证码登录' : lang.text("actLogin2")
-            //     });
-            // }
             var para = {
                 login_type: 2,
                 lp: $state.params.lp,
@@ -221,19 +211,10 @@
                     $scope.$emit('relogin_info', 'is_register');
                     // 神策统计 - 注册
                     $timeout(function () {
-                        // console.log($cookies['user_code']);
-                        var user_id = $cookies['user_code'];
-                        // console.log(user_id);
-                        if (user_id) {
-                            sa.login(user_id);
-                        }
                         $scope.getEmailPhone(true);
                     }, 100);
                     $timeout(function () {
-                        sa.track('login', {
-                            login_isNew: true,
-                            registration_type: $scope.registerStep3 == 1 ? "手机注册" : "邮箱注册"
-                        });
+                        $scope.toTrackEvent('Login and register', 'login_success');
                     }, 150);
                     return;
                 }else {
@@ -296,9 +277,6 @@
             });
         };
         $scope.skipSetPass = function(){
-            $timeout(function () {
-                sa.track('skip_register');
-            }, 150);
             $scope.$emit('global.openDredgeMdl', {position: 'register'});
             // lang.globalOrCn($scope.area_id);
             // $state.go('space.center');

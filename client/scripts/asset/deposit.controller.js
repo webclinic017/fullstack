@@ -9,6 +9,10 @@
 
     function AssetDepositController($rootScope, $scope, $window, $document, $cookies, $modal, $state, $timeout, asset, validator, account, $layer, previewImage, fun) {
 
+        if ($cookies["d&w_czc"] && (!localStorage["deposit_czc"] || localStorage["deposit_czc"] !== $cookies["d&w_czc"])) {
+            $scope.toTrackEvent('Deposit/withdrawal', 'deposit');
+            localStorage["deposit_czc"] = $cookies["d&w_czc"];
+        }
         // 缓存当前父scope 给弹窗控制器使用
         $scope.parentScope = $scope;
         var parentScope = $scope;
@@ -258,7 +262,7 @@
 
         // 切换充值方式
         function changeDepositType(type) {
-            console.log($scope.depositTypeLst, type)
+            // console.log($scope.depositTypeLst, type)
             if (!type) return;
             $scope.deposit.depositCard = undefined;
             $scope.deposit.type = type;
@@ -509,9 +513,6 @@
 
                     // 支付成功
                     function depositSucc() {
-                        // umeng
-                        // _czc.push(["_trackEvent", lang.text("tigerWitID.depositWithdrawal.depositPage"), lang.text("tigerWitID.depositWithdrawal.deposit")]);
-
                         closeModal();
                     }
 

@@ -50,15 +50,15 @@
         <div class="ranklist">
             <div class="ranklist__navbar">
                 <ul class="ranklist__navbar-lst clearfix">
-                    <li ng-class="{active: rankOrder == 'thirty_profit_rate'}" ng-click="changeRankOrder('thirty_profit_rate')">
+                    <li ng-class="{active: rankOrder == 'thirty_profit_rate'}" ng-click="[changeRankOrder('thirty_profit_rate'), toTrackEvent('master page', 'global_master_profitability')]">
                         {{ lang.text("tigerWitID.master.highIncome") }}
                         <i class="fa fa-caret-down"></i>
                     </li>
-                    <li ng-class="{active: rankOrder == 'thirty_max_retract'}" ng-click="changeRankOrder('thirty_max_retract')">
+                    <li ng-class="{active: rankOrder == 'thirty_max_retract'}" ng-click="[changeRankOrder('thirty_max_retract'), toTrackEvent('master page', 'global_master_stability')]">
                         {{ lang.text("tigerWitID.dataStatistics.steadyg") }}
                         <i class="fa fa-caret-down"></i>
                     </li>
-                    <li ng-class="{active: rankOrder == 'thirty_win_rate'}" ng-click="changeRankOrder('thirty_win_rate')">
+                    <li ng-class="{active: rankOrder == 'thirty_win_rate'}" ng-click="[changeRankOrder('thirty_win_rate'), toTrackEvent('master page', 'global_master_consistency')]">
                         {{ lang.text("tigerWitID.master.exact") }}
                         <i class="fa fa-caret-down"></i>
                     </li>

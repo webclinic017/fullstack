@@ -86,12 +86,6 @@
             if ($scope[formName]['phone'].$invalid) {
                 return;
             }
-
-            // umeng
-            _czc.push(["_trackEvent","注册页","获取验证码"]);
-            
-            // 神策数据统计
-            sa.track('btn_register_code');
             
             $scope.clickable.captcha = false;
             token = $cookies['code_token'];
@@ -187,9 +181,6 @@
                 return;
             }
 
-            // 神策数据统计
-            sa.track('btn_register_submit');
-
             $scope.clickable.submit = false;
             account.register({
                 phone: $scope.account.phone,
@@ -204,20 +195,8 @@
                 if (!data) return;
                 if (data.is_succ) {
                     $scope.$emit('relogin_info', 'is_register');
-
-                    // umeng
-                    _czc.push(["_trackEvent","注册页","立即注册且成功"]);
-
-                    // 神策数据统计
-                    sa.track('btn_register_finish');
                     
                     $timeout(function () {
-                        var user_id = $cookies['user_code'];
-                        // console.log(user_id);
-                        if (user_id) {
-                            sa.login(user_id);
-                        }
-
                         // 成功
                         goNextStep();
                     }, 300);

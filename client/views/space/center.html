@@ -31,7 +31,7 @@
                 <p class="summary_btn" ng-if="assetInfo.trade_user_status === 0"><a ng-click="openDredgeMdl({position: 'sidebar'})"><i class="add-o" ng-style="{marginRight: lang.isEnglishArea() ? '5px' : ''}"></i>{{lang.text('tigerWitID.myAccount.quickOpenAccount')}}</a></p>
                 <span ng-if="assetInfo.trade_user_status !== 0">
                     <p class="summary_amount">${{ assetInfo.trade_balance || '--' }}</p>
-                    <p class="summary_btn" ng-if="assetInfo.trade_user_status === 2"><span><a ui-sref="authen.subpage({subpage: 'investInfo'})">{{lang.text('tigerWitID.myAccount.upgradeToLiveAccount')}} &gt;</a></span></p>
+                    <p class="summary_btn" ng-if="assetInfo.trade_user_status === 2"><span><a ui-sref="authen.subpage({subpage: 'investInfo'})" ng-click="toTrackEvent('Open live account', 'upgrade_to_live')">{{lang.text('tigerWitID.myAccount.upgradeToLiveAccount')}} &gt;</a></span></p>
                     <p class="summary_btn" ng-if="assetInfo.trade_user_status === 1">
                         <span class="line" ng-class="{'en': lang.isEnglishArea()}"><a ui-sref="space.asset.subpage({ subpage: 'deposit' })">{{lang.text('tigerWitID.depositWithdrawal.deposit')}}</a></span>
                         <span class="line" ng-class="{'en': lang.isEnglishArea()}"><a ui-sref="space.asset.subpage({ subpage: 'withdraw' })">{{lang.text('tigerWitID.depositWithdrawal.withdrawal')}}</a></span>

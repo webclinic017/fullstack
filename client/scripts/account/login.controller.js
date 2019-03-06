@@ -164,10 +164,6 @@
                     }
                     obj.btns[lang.text("tigerWitID.confirm2")] = function(){};
                     $layer(obj);
-                    if( $scope.loginStep3 == 1){
-                        sa.track('email_code')
-                    }
-                    sa.track('btn_register_code');
                 } else {
                     layer.msg(data.message);
                 }
@@ -180,13 +176,6 @@
             //     layer.msg(lang.text("actLogin19"));       //请填写完整信息
             //     return;
             // }
-
-            // 神策统计 - 点击登录
-            if(!is_agree) {
-                sa.track('click_login', {
-                    login_type: $scope.loginType == 'code' ? '验证码登录' : lang.text("actLogin2")
-                });
-            }
             
             var msg;
             var para = {
@@ -275,27 +264,21 @@
                     // $scope.writeCookie({nameKey: 'user_code', nameValue: '1234'});
                     // $scope.writeCookie({nameKey: 'username', nameValue: '123k'});
                     // $scope.writeCookie({nameKey: 'username_en', nameValue: '22asd'});
+
+                    /**
+                     * 为了deposit&withdraw页面的友盟统计
+                     * 登录用户进入这两个页面统计一次，退出后在进入才重新统计一次
+                     * */
+                    var ran = Math.ceil(Math.random() * 1000) * Math.ceil(Math.random() * 1000);
+                    $scope.writeCookie({nameKey: 'd&w_czc', nameValue: ran});
+                    
                     $timeout(function () {
-                        // console.log($cookies['user_code']);
-                        var user_id = $cookies['user_code'];
-                        // console.log(user_id);
-                        if (user_id) {
-                            sa.login(user_id);
-                        }
                         $scope.getEmailPhone(true);
                     }, 100);
                     // if (($scope.loginType == 'code') && data.data.initial && (data.data.initial == 1)) {
                     //     // 新用户
                     //     $scope.loginStep1 = 2;
                     //     $scope.$emit('relogin_info', 'is_register');
-
-                    //     // 神策统计 - 登录
-                    //     $timeout(function () {
-                    //         sa.track('login', {
-                    //             login_isNew: true,
-                    //             login_type: '验证码登录'
-                    //         });
-                    //     }, 150);
                     //     return;
                     // }
                     // 三个月定期修改密码
@@ -315,12 +298,7 @@
                         $layer(obj)
                     }
                     $timeout(function () {
-                        // 神策统计 - 登录
-                        sa.track('login', {
-                            login_isNew: false,
-                            login_type: $scope.loginType == 'code' ? '验证码登录' : lang.text("actLogin2")
-                        });
-
+                        $scope.toTrackEvent('Login and register', 'login_success');
                         account.hasChecked = false;
                         // lang.globalOrCn(data.data.area_id);
                         $scope.$emit('relogin_info');
